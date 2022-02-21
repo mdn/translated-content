@@ -3,34 +3,35 @@ title: performance.getEntries()
 slug: Web/API/Performance/getEntries
 tags:
   - API
-  - Web パフォーマンス
   - メソッド
   - リファレンス
+  - ウェブパフォーマンス
+browser-compat: api.Performance.getEntries
 translation_of: Web/API/Performance/getEntries
 ---
-<div>{{APIRef("Performance Timeline API")}}</div>
+{{APIRef("Performance Timeline API")}}
 
-<p><strong><code>getEntries()</code></strong> メソッドは、そのページのすべての {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。リストのメンバ (エントリ) は、明示的な時点でパフォーマンスマークまたはメジャーを作成することで (たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すことで) 作成できます。特定の種類のパフォーマンスエントリや特定の名前のパフォーマンスエントリにのみ関心がある場合は、{{domxref("Performance.getEntriesByType", "getEntriesByType()")}} と {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} を参照してください。</p>
+**`getEntries()`** メソッドは、そのページのすべての {{domxref("PerformanceEntry")}} オブジェクトのリストを返します。リストのメンバー（エントリー）は、明示的な時点でパフォーマンスマークまたはメジャーを作成することで（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すことで）作成できます。特定の種類のパフォーマンスエントリーや特定の名前のパフォーマンスエントリーにのみ関心がある場合は、 {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} と {{domxref("Performance.getEntriesByName", "getEntriesByName()")}} を参照してください。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<p>一般的な構文:</p>
+一般的な構文:
 
-<pre class="syntaxbox"><em>entries</em> = window.performance.getEntries();
-</pre>
+```js
+entries = window.performance.getEntries();
+```
 
-<h3 id="Return_Value" name="Return_Value">戻り値</h3>
+### 返値
 
-<dl>
- <dt>entries</dt>
- <dd>{{domxref("PerformanceEntry")}} オブジェクトの配列。項目はエントリ '{{domxref("PerformanceEntry.startTime","startTime")}} に基づいて時系列に並んでいます。</dd>
-</dl>
+- entries
+  - : {{domxref("PerformanceEntry")}} オブジェクトの配列。項目はエントリー '{{domxref("PerformanceEntry.startTime","startTime")}} に基づいて時系列に並んでいます。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">function use_PerformanceEntry_methods() {
+```js
+function use_PerformanceEntry_methods() {
   console.log("PerformanceEntry tests ...");
 
   if (performance.mark === undefined) {
@@ -50,14 +51,14 @@ translation_of: Web/API/Performance/getEntries
 
   // Use getEntries() to iterate through the each entry
   let p = performance.getEntries();
-  for (var i=0; i &lt; p.length; i++) {
+  for (var i=0; i < p.length; i++) {
     console.log("Entry[" + i + "]");
     check_PerformanceEntry(p[i]);
   }
 
   // Use getEntriesByType() to get all "mark" entries
   p = performance.getEntriesByType("mark");
-  for (let i=0; i &lt; p.length; i++) {
+  for (let i=0; i < p.length; i++) {
     console.log ("Mark only entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);
@@ -65,38 +66,18 @@ translation_of: Web/API/Performance/getEntries
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
   p = performance.getEntriesByName("Begin", "mark");
-  for (let i=0; i &lt; p.length; i++) {
+  for (let i=0; i < p.length; i++) {
     console.log ("Mark and Begin entry[" + i + "]: name = " + p[i].name +
          "; startTime = " + p[i].startTime +
          "; duration  = " + p[i].duration);
   }
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline Level 2', '#dom-performance-getentries', 'getEntries()')}}</td>
-   <td>{{Spec2('Performance Timeline Level 2')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Performance Timeline', '#dom-performance-getentries', 'getEntries()')}}</td>
-   <td>{{Spec2('Performance Timeline')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance.getEntries")}}</p>
-</div>
+{{Compat}}

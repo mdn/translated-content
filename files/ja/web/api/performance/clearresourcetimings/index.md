@@ -3,39 +3,38 @@ title: performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
 tags:
   - API
-  - Web パフォーマンス
   - メソッド
   - リファレンス
+  - ウェブパフォーマンス
+browser-compat: api.Performance.clearResourceTimings
 translation_of: Web/API/Performance/clearResourceTimings
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p><strong><code>clearResourceTimings()</code></strong> メソッドは、{{domxref("PerformanceEntry.entryType","entryType")}} が "<code>resource</code>" のすべての{{domxref("PerformanceEntry","パフォーマンスエントリ")}}をブラウザのパフォーマンスデータバッファから削除し、パフォーマンスデータバッファのサイズをゼロに設定します。ブラウザのパフォーマンスデータバッファのサイズを設定するには、{{domxref("Performance.setResourceTimingBufferSize()")}} メソッドを使用します。</p>
+**`clearResourceTimings()`** メソッドは、{{domxref("PerformanceEntry.entryType","entryType")}} が "`resource`" のすべての {{domxref("PerformanceEntry","パフォーマンスエントリー")}}をブラウザーのパフォーマンスデータバッファーから削除し、パフォーマンスデータバッファーのサイズをゼロに設定します。ブラウザーのパフォーマンスデータバッファーのサイズを設定するには、{{domxref("Performance.setResourceTimingBufferSize()")}} メソッドを使用してください。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>performance</em>.clearResourceTimings();
-</pre>
+```js
+performance.clearResourceTimings();
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt>void</dt>
- <dd> </dd>
-</dl>
+- void
+  - :
 
-<h3 id="Return_Value" name="Return_Value">戻り値</h3>
+### 返値
 
-<dl>
- <dt>なし</dt>
- <dd>このメソッドには戻り値はありません。</dd>
-</dl>
+- なし
+  - : このメソッドに返値はありません。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">function load_resource() {
+```js
+function load_resource() {
   var image = new Image();
   image.src = "https://developer.mozilla.org/static/img/opengraph-logo.png";
 }
@@ -62,27 +61,12 @@ function clear_performance_timings() {
   else
     console.log("... Performance data buffer NOT cleared!");
 }
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing', '#dom-performance-clearresourcetimings', 'clearResourceTimings()')}}</td>
-   <td>{{Spec2('Resource Timing')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance.clearResourceTimings")}}</p>
-</div>
+{{Compat}}

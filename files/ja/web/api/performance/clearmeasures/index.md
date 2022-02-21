@@ -3,42 +3,41 @@ title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
 tags:
   - API
-  - Web パフォーマンス
   - メソッド
   - リファレンス
+  - ウェブパフォーマンス
+browser-compat: api.Performance.clearMeasures
 translation_of: Web/API/Performance/clearMeasures
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p><strong><code>clearMeasures()</code></strong> メソッドは、ブラウザのパフォーマンスエントリバッファから<em>名前付きメジャー</em>を削除します。<br>
- メソッドが引数なしで呼び出された場合、エントリタイプが  "measure" の{{domxref("PerformanceEntry","パフォーマンスエントリ")}} はすべてパフォーマンスエントリバッファから削除されます。</p>
+**`clearMeasures()`** メソッドは、ブラウザーのパフォーマンスエントリーバッファーから*名前付きメジャー*を削除します。このメソッドが引数なしで呼び出された場合、{{domxref("PerformanceEntry.entryType","エントリー種別", "", 1)}}が "`measure`" の{{domxref("PerformanceEntry","パフォーマンスエントリー", "", 1)}}がすべてパフォーマンスエントリーバッファーから削除されます。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>performance</em>.clearMeasures();
-<em>performance</em>.clearMeasures(name);
-</pre>
+```js
+performance.clearMeasures();
+performance.clearMeasures(name);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt>name {{optional_inline}}</dt>
- <dd>タイムスタンプの名前を表す {{domxref("DOMString")}}。この引数を省略すると、{{domxref("PerformanceEntry.entryType","エントリタイプ")}}が  "<code>measure</code>" の{{domxref("PerformanceEntry","パフォーマンスエントリ")}}がすべて削除されます。</dd>
-</dl>
+- name {{optional_inline}}
+  - : タイムスタンプの名前を表す {{domxref("DOMString")}} です。 この引数を省略すると、{{domxref("PerformanceEntry.entryType","エントリー種別", "", 1)}}が "`measure`" であるすべての{{domxref("PerformanceEntry","パフォーマンスエントリー", "", 1)}}が削除されます。
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<dl>
- <dt>void</dt>
-</dl>
+- void
+  - :
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次の例は、<code>clearMeasures()</code> メソッドの両方の使用方法を示しています。</p>
+次の例は、`clearMeasures()` メソッドの両方の使用方法を示しています。
 
-<pre class="brush: js">// Create a small helper to show how many PerformanceMeasure entries there are.
+```js
+// Create a small helper to show how many PerformanceMeasure entries there are.
 function logMeasureCount() {
   console.log(
     "Found this many entries: " + performance.getEntriesByType("measure").length
@@ -63,32 +62,12 @@ logMeasureCount() // "Found this many entries: 3"
 // Delete all of the PerformanceMeasure entries.
 performance.clearMeasures();
 logMeasureCount() // "Found this many entries: 0"
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing Level 2', '#dom-performance-clearmeasures', 'clearMeasures()')}}</td>
-   <td>{{Spec2('User Timing Level 2')}}</td>
-   <td><code>clearMeasures()</code> を明確にします。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing', '#dom-performance-clearmeasures', 'clearMeasures()')}}</td>
-   <td>{{Spec2('User Timing')}}</td>
-   <td>基本的な定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance.clearMeasures")}}</p>
-</div>
+{{Compat}}
