@@ -26,7 +26,7 @@ cookieStore.onchange = event => { }
 
 ## 例
 
-Cookieが変更されたときに通知を受けるには、以下のように {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使って `cookieStore` インスタンスにハンドラを追加することが可能です。
+Cookie が変更されたときに通知を受けるには、以下のように {{domxref("EventTarget.addEventListener", "addEventListener()")}} を使って `cookieStore` インスタンスにハンドラを追加可能です。
 
 ```js
 cookieStore.addEventListener('change', function(event) {
@@ -34,7 +34,7 @@ cookieStore.addEventListener('change', function(event) {
 });
 ```
 
-あるいは、`CookieStore.onchange` イベントハンドラープロパティを使用して、`change` イベントのハンドラを定義することもできます。
+あるいは、`CookieStore.onchange` イベントハンドラープロパティを使用して、`change` イベントのハンドラを定義できます。
 
 ```js
 cookieStore.onchange = function(event) {

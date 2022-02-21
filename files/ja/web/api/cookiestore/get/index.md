@@ -11,7 +11,7 @@ browser-compat: api.CookieStore.get
 ---
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
-{{Domxref("CookieStore")}} インターフェイスの **`get()`** メソッドは、与えられた名前またはオプションオブジェクトを持つ一つの Cookie を返します（下記参照）。このメソッドは渡されたパラメータに最初にマッチする Cookie を返します。
+{{Domxref("CookieStore")}} インターフェイスの **`get()`** メソッドは、与えられた名前またはオプションオブジェクトを持つ1つの Cookie を返します（下記参照）。このメソッドは渡されたパラメータに最初にマッチする Cookie を返します。
 
 ## 構文
 
@@ -62,7 +62,7 @@ var cookie = CookieStore.get(options);
     - `"lax"`
       - : Cookie は、通常のクロスサイト・サブクエスト（例えば、画像やフレームをサードパーティのサイトにロードするため）には送信されませんが、ユーザーが元のサイト内を移動しているとき（すなわち、リンクをたどっているとき）には送信されます。
     - `"none"`
-      - : クッキーは、すべてのコンテキストで送信されます。
+      - : Cookie は、すべてのコンテキストで送信されます。
 
     > **Note:** SameSite cookies の詳細については、 [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) をご覧ください。
 
@@ -73,7 +73,7 @@ var cookie = CookieStore.get(options);
 
 ## 例
 
-この例では、"cookie1" という名前の Cookie を返します。もし Cookie が見つかれば、プロミスの結果は一つの Cookie の詳細を含むオブジェクトになります。
+この例では、"cookie1" という名前の Cookie を返します。もし Cookie が見つかれば、プロミスの結果は1つの Cookie の詳細を含むオブジェクトになります。
 
 ```js
 let cookie = cookieStore.get('cookie1');
