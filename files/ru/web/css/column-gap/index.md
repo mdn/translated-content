@@ -124,7 +124,7 @@ column-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
+{{EmbedLiveSample("Грид-раскладка", "auto", "120px")}}
 
 ### Многоколоночная раскладка
 
