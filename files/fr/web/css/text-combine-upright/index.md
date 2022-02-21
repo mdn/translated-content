@@ -1,16 +1,12 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-combine-upright
+browser-compat: css.properties.text-combine-upright
 ---
 {{CSSRef}}
 
-La propriété **`text-combine-upright`** définit comment intégrer une combinaison de plusieurs caractères dans l'espace normalement alloué à un seul caractère. Si la combinaison obtenue est plus large qu'`1em`, l'agent utilisateur devra compresser le contenu afin qu'il tienne sur `1em`. La combinaison est ensuite manipulée comme un seul glyphe pour la disposition et pour la décoration. Enfin, cette propriété n'a d'effet que sur les modes d'écriture verticaux.
+La propriété [CSS](/fr/docs/Web/CSS) **`text-combine-upright`** définit comment intégrer une combinaison de plusieurs caractères dans l'espace normalement alloué à un seul caractère. Si la combinaison obtenue est plus large qu'`1em`, l'agent utilisateur devra compresser le contenu afin qu'il tienne sur `1em`. La combinaison est ensuite manipulée comme un seul glyphe pour la disposition et pour la décoration. Enfin, cette propriété n'a d'effet que sur les modes d'écriture verticaux.
 
 Cela permet d'obtenir un effet appelé tate-chū-yoko (縦中横) en japonais ou 直書橫向 en chinois.
 
@@ -31,6 +27,7 @@ text-combine-upright: digits 4;
 /* Valeurs globales */
 text-combine-upright: inherit;
 text-combine-upright: initial;
+text-combine-upright: revert;
 text-combine-upright: unset;
 ```
 
@@ -43,9 +40,13 @@ text-combine-upright: unset;
 - `all`
   - : L'agent utilisateur tente de compresser tous les caractères consécutifs dans une même boîte afin qu'ils occupent l'espace d'un seul caractère sur l'axe vertical de la boîte.
 - `digits <n>?`
-  - : L'agent utilisateur tente d'afficher une suite de chiffres ASCII (U+0030–U+0039) avec au plus n caractères afin que cette suite occupe l'espace d'un seul caractère sur l'axe vertical de la boîte. La valeur par défaut (lorsque l'entier n'est pas indiqué) vaut 2. Les entiers en dehors de l'intervalle `[2;4]` sont considérés comme invalides.
+  - : L'agent utilisateur tente d'afficher une suite de chiffres ASCII (U+0030-U+0039) avec au plus n caractères afin que cette suite occupe l'espace d'un seul caractère sur l'axe vertical de la boîte. La valeur par défaut (lorsque l'entier n'est pas indiqué) vaut 2. Les entiers en dehors de l'intervalle `[2;4]` sont considérés comme invalides.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
@@ -55,23 +56,38 @@ text-combine-upright: unset;
 
 Utiliser ` digit``s ` nécessite moins de règles et déclarations mais n'est pas encore largement pris en charge par les navigateurs.
 
-```html
-<p lang="ja" class="exempleText">平成20年4月16日に</p>
-```
+#### CSS
 
 ```css
-.exempleText {
+.texteExemple {
   writing-mode: vertical-lr;
   text-combine-upright: digits 2;
   font: 36px serif;
 }
 ```
 
-{{EmbedLiveSample("Exemple_avec_digits", 100, 350, "https://mdn.mozillademos.org/files/12127/tate-chu-yoko.png")}}
+#### HTML
+
+```html
+<p lang="ja" class="texteExemple">平成20年4月16日に</p>
+```
+
+#### Résultat
+
+{{EmbedLiveSample('', 100, 350, "tate-chu-yoko.png")}}
 
 ### Exemple avec `all`
 
 Pour utiliser `all`, on devra baliser chaque fragment de texte horizontal mais cette valeur est actuellement mieux prise en charge que `digits`.
+
+#### CSS
+
+```css
+html { writing-mode: vertical-rl; font: 24px serif }
+.num { text-combine-upright: all }
+```
+
+#### HTML
 
 ```html
 <p lang="zh-Hant">民國<span class="num">105</span
@@ -79,27 +95,19 @@ Pour utiliser `all`, on devra baliser chaque fragment de texte horizontal mais c
 >月<span class="num">29</span>日</p>
 ```
 
-```css
-html { writing-mode: vertical-rl; font: 24px serif }
-.num { text-combine-upright: all }
-```
+#### Résultat
 
-{{EmbedLiveSample("Exemple_avec_all", 250, 300, "https://mdn.mozillademos.org/files/13096/text-combine-upright-all.png")}}
+{{EmbedLiveSample('', 250, 300, "text-combine-upright-all.png")}}
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                     | Commentaires                 |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------- |
-| {{SpecName("CSS3 Writing Modes", "#propdef-text-combine-upright", "text-combine-upright")}} | {{Spec2("CSS3 Writing Modes")}} | Définition initiale.         |
-| {{SpecName("CSS4 Writing Modes", "#propdef-text-combine-upright", "text-combine-upright")}} | {{Spec2("CSS4 Writing Modes")}} | Ajout de la valeur `digits`. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-combine-upright")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("writing-mode")}},
-- {{cssxref("text-orientation")}}
+- [`writing-mode`](/fr/docs/Web/CSS/writing-mode),
+- [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
