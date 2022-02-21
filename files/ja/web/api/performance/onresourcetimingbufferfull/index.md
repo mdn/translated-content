@@ -3,71 +3,56 @@ title: Performance.onresourcetimingbufferfull
 slug: Web/API/Performance/onresourcetimingbufferfull
 tags:
   - API
-  - Web パフォーマンス
   - プロパティ
   - リファレンス
+  - ウェブパフォーマンス
+browser-compat: api.Performance.onresourcetimingbufferfull
 translation_of: Web/API/Performance/onresourcetimingbufferfull
 ---
-<div>{{APIRef("Resource Timing API")}}</div>
+{{APIRef("Resource Timing API")}}
 
-<p><strong><code>onresourcetimingbufferfull</code></strong> プロパティは、{{event("resourcetimingbufferfull")}} イベントが発生したときに呼び出されるイベントハンドラです。このイベントは、ブラウザのリソースタイミングパフォーマンスバッファがいっぱいになったときに発生します。</p>
+**`onresourcetimingbufferfull`** プロパティは、 {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベントが発生したときに呼び出されるイベントハンドラーです。このイベントは、ブラウザーのリソースタイミングパフォーマンスバッファーがいっぱいになったときに発生します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">callback = <em>performance</em>.onresourcetimingbufferfull = buffer_full_cb;
-</pre>
+```js
+callback = performance.onresourcetimingbufferfull = buffer_full_cb;
+```
 
-<h3 id="Return_Value" name="Return_Value">戻り値</h3>
+### 返値
 
-<dl>
- <dt>callback</dt>
- <dd>{{event("resourcetimingbufferfull")}} イベントが発生したときに呼び出される {{event("Event_handlers", "event handler")}}。</dd>
+- callback
+  - : [イベントハンドラー](/ja/docs/Web/Events/Event_handlers)で、 {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベントが発生したときに呼び出されるものです。
 </dl>
 
-<h2 id="例">例</h2>
+## 例
 
-<p>次の例では、<code>onresourcetimingbufferfull</code> プロパティにコールバック関数を設定します。</p>
+次の例では、 `onresourcetimingbufferfull` プロパティにコールバック関数を設定します。
 
-<pre class="brush: js">function buffer_full(event) {
+```js
+function buffer_full(event) {
   console.log("WARNING: Resource Timing Buffer is FULL!");
   performance.setResourceTimingBufferSize(200);
 }
 function init() {
-  // Set a callback if the resource buffer becomes filled
+  // リソースバッファーが一杯になったときのコールバックを設定
   performance.onresourcetimingbufferfull = buffer_full;
 }
-&lt;body onload="init()"&gt;
-</pre>
+<body onload="init()">
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Resource Timing', '#dom-performance-onresourcetimingbufferfull', 'onresourcetimingbufferfull')}}</td>
-   <td>{{Spec2('Resource Timing')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance.onresourcetimingbufferfull")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## 関連情報
 
-<ul>
- <li>{{event("resourcetimingbufferfull")}} event</li>
- <li>{{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}</li>
- <li>{{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}</li>
-</ul>
+- {{domxref("Performance/resourcetimingbufferfull_event", "resourcetimingbufferfull")}} イベント
+- {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
+- {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}
