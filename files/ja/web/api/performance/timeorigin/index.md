@@ -3,45 +3,34 @@ title: Performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
 tags:
   - API
-  - Experimental
-  - High Resolution Time API
-  - timeOrigin
+  - 実験的
+  - 高解像度時間 API
   - パフォーマンス
   - プロパティ
   - リファレンス
+  - timeOrigin
 translation_of: Web/API/Performance/timeOrigin
 ---
-<p>{{SeeCompatTable}}{{APIRef("High Resolution Time")}}</p>
+{{SeeCompatTable}}{{APIRef("High Resolution Time")}}
 
-<p>{{domxref("Performance")}} インターフェイスの <strong><code>timeOrigin</code></strong> 読み取り専用プロパティは、パフォーマンス測定の開始時刻のハイレゾリューションタイムスタンプを返します。</p>
+**`timeOrigin`** は {{domxref("Performance")}} インターフェイスの読み取り専用プロパティで、パフォーマンス測定の開始時刻の高解像度タイムスタンプを返します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>timeOrigin</em> = performance.timeOrigin</pre>
+```js
+var timeOrigin = performance.timeOrigin
+```
 
-<h3 id="値">値</h3>
+### 値
 
-<p>ハイレゾリューションのタイムスタンプ</p>
+高解像度のタイムスタンプです。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Highres Time Level 2','#dom-performance-timeorigin','timeOrigin')}}</td>
-   <td>{{Spec2('Highres Time Level 2')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance.timeOrigin")}}</p>
-</div>
+{{Compat}}

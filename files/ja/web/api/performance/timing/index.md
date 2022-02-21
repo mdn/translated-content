@@ -3,54 +3,39 @@ title: Performance.timing
 slug: Web/API/Performance/timing
 tags:
   - API
-  - legacy
+  - 後方互換性
+  - 非推奨
   - ナビゲーションタイミング
   - パフォーマンス
   - プロパティ
-  - 後方互換性
   - 読み取り専用
-  - 非推奨
+  - legacy
+browser-compat: api.Performance.timing
 translation_of: Web/API/Performance/timing
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}{{deprecated_header}}
 
-<div class="warning">
-<p>このプロパティは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。代わりに {{domxref("Performance.timeOrigin")}} プロパティを使用してください。</p>
-</div>
+古い **`Performance.timing`** 読み取り専用プロパティは、遅延時間に関するパフォーマンス情報を含む {{domxref("PerformanceTiming")}} オブジェクトを返します。
 
-<p>従来の <code><strong>Performance</strong></code><strong><code>.timing</code></strong> 読み取り専用プロパティは、待ち時間に関連するパフォーマンス情報を含む {{domxref("PerformanceTiming")}} オブジェクトを返します。</p>
+このプロパティはワーカーでは使用できません。
 
-<p>このプロパティは Worker には使用できません。</p>
+> **Warning:** このプロパティは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} を使用してください。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>timingInfo</em> = <em>performance</em>.timing;</pre>
+```js
+timingInfo = performance.timing;
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance.timing')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+この機能は標準化路線上にはありません。 [Navigation Timing 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨としています。
+代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance.timing")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## 関連情報
 
-<ul>
- <li>属している {{domxref("Performance")}} インターフェイス</li>
-</ul>
+- 所属先の {{domxref("Performance")}} インターフェイス
