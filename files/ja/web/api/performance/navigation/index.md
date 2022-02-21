@@ -3,55 +3,40 @@ title: Performance.navigation
 slug: Web/API/Performance/navigation
 tags:
   - API
-  - Deprecated
+  - 後方互換性
+  - 非推奨
   - HTTP
-  - legacy
   - ナビゲーションタイミング
   - パフォーマンス
   - プロパティ
-  - 後方互換性
   - 読み取り専用
+  - legacy
+browser-compat: api.Performance.navigation
 translation_of: Web/API/Performance/navigation
 ---
-<p>{{APIRef("Navigation Timing")}}</p>
+{{APIRef("Navigation Timing")}}{{Deprecated_Header}}
 
-<div class="warning">
-<p>このプロパティは <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2 仕様</a>では非推奨です。</p>
-</div>
+古い **`Performance.navigation`** は読み取り専用プロパティで、指定された閲覧コンテキスト内で発生するナビゲーションの種類を表す {{domxref("PerformanceNavigation")}} オブジェクトを返します。リソースを取得するまでに必要なリダイレクトの数などです。
 
-<p>従来の <code><strong>Performance</strong></code><strong><code>.navigation</code></strong> 読み取り専用プロパティは、リソースの取得に必要なリダイレクト数など、特定のブラウジングコンテキストで発生したナビゲーションの種類を表す {{domxref("PerformanceNavigation")}} オブジェクトを返します。</p>
+このプロパティはワーカーでは利用できません。
 
-<p>このプロパティは Worker では使用できません。</p>
+> **Warning:** このプロパティは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} を使用してください。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>navObject</em> = <em>performance</em>.navigation;</pre>
+```js
+navObject = performance.navigation;
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Navigation Timing', '#sec-window.performance-attribute', 'Performance.navigation')}}</td>
-   <td>{{Spec2('Navigation Timing')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+この機能は標準化路線上にはありません。 [Navigation Timing 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨としています。
+代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance.navigation")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="あわせて参照">あわせて参照</h2>
+## 関連情報
 
-<ul>
- <li>The {{domxref("Performance")}} interface it belongs to.</li>
-</ul>
+- 所属先の {{domxref("Performance")}} インターフェイス
