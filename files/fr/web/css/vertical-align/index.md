@@ -1,24 +1,21 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/vertical-align
+browser-compat: css.properties.vertical-align
 ---
 {{CSSRef}}
 
-La propriété **`vertical-align`** définit l'alignement vertical d'une boîte en ligne (_inline_) ou d'une cellule de tableau.
+La propriété [CSS](/fr/docs/Web/CSS) **`vertical-align`** définit l'alignement vertical d'une boîte en ligne (<i lang="en">inline</i>), en ligne / bloc (<i lang="en">inline-block</i>) ou d'une boîte de cellule de tableau.
 
 {{EmbedInteractiveExample("pages/css/vertical-align.html")}}
 
-La propriété `vertical-align` peut être utilisée dans deux contextes :
+La propriété `vertical-align` peut être utilisée dans deux contextes&nbsp;:
 
-- Afin d'aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur (par exemple pour aligner verticalement une image ({{HTMLElement("img")}} sur une ligne de texte)
+- Afin d'aligner verticalement la boîte d'un élément en ligne à l'intérieur de la boîte en ligne de son conteneur (par exemple pour aligner verticalement une image ([`<img>`](/fr/docs/Web/HTML/Element/Img) sur une ligne de texte)
 - ou pour aligner verticalement le contenu d'une cellule dans un tableau
 
-`vertical-align` ne s'applique qu'aux cellules de tableaux et aux éléments en ligne (_inline_), elle ne peut pas être utilisée pour aligner verticalement [les éléments de bloc](/fr/docs/Web/HTML/Éléments_en_bloc).
+`vertical-align` ne s'applique qu'aux cellules de tableaux, aux éléments en ligne (<i lang="en">inline</i>) ou en ligne / bloc (<i lang="en">inline-block</i>), elle ne peut pas être utilisée pour aligner verticalement [les éléments de bloc](/fr/docs/Web/HTML/Block-level_elements).
 
 ## Syntaxe
 
@@ -45,17 +42,19 @@ vertical-align: 20%;
 /* Valeurs globales */
 vertical-align: inherit;
 vertical-align: initial;
+vertical-align: revert;
 vertical-align: unset;
 ```
+La propriété `vertical-align` s'utilise avec une des valeurs suivantes.
 
-### Valeurs
+### Valeurs pour les éléments en lignes
 
-#### Pour les éléments _inline_
+#### Valeurs relatives au parent
 
-> **Note :** La plupart des valeurs alignent l'élément verticalement, relativement à son élément parent.
+Ces valeurs alignent l'élément verticalement, relativement à son élément parent.
 
 - `baseline`
-  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé), comme {{HTMLElement("textarea")}}, n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
+  - : Aligne la ligne de base de l'élément avec celle de son parent. La ligne de base de certains [éléments remplacés](/fr/docs/Web/CSS/Replaced_element), comme [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea), n'est pas définie par la spécification HTML et le comportement de ce mot-clé peut donc changer d'un navigateur à un autre.
 - `sub`
   - : Aligne la ligne de base sur la ligne de base inférieure (celle utilisée pour les indices) de l'élément parent.
 - `super`
@@ -65,13 +64,15 @@ vertical-align: unset;
 - `text-bottom`
   - : Aligne le bas de l'élément avec le bas de la police de l'élément parent.
 - `middle`
-  - : Aligne le milieu de l'élément avec la hauteur donnée par la ligne de base de l'élément parent à laquelle on ajoute la moitié de sa hauteur.
-- {{cssxref("&lt;length&gt;")}}
+  - : Aligne le milieu de l'élément avec la hauteur donnée par la ligne de base de l'élément parent à laquelle on ajoute la moitié de sa hauteur en x (<i lang="en">x-height</i>).
+- [`<length>`](/fr/docs/Web/CSS/length)
   - : Aligne la ligne de base de l'élément à la hauteur de la ligne de base de l'élément parent à laquelle on ajoute la hauteur donnée. Les valeurs négatives sont autorisées.
-- {{cssxref("&lt;percentage&gt;")}}
-  - : Fonctionne comme avec les valeurs de type {{cssxref("&lt;length&gt;")}}, le pourcentage indique une fraction de la propriété {{cssxref("line-height")}}. Les valeurs négatives sont autorisées.
+- [`<percentage>`](/fr/docs/Web/CSS/percentage)
+  - : Fonctionne comme avec les valeurs de type [`<length>`](/fr/docs/Web/CSS/length), le pourcentage indique une fraction de la propriété [`line-height`](/fr/docs/Web/CSS/line-height). Les valeurs négatives sont autorisées.
 
-Les valeurs suivantes alignent l'élément par rapport à la ligne entière (absolu) plutôt que par rapport à leur parent (relatif) :
+#### Valeurs relatives à la ligne
+
+Les valeurs suivantes alignent l'élément par rapport à la ligne entière plutôt que par rapport à leur parent&nbsp;:
 
 - `top`
   - : Aligne le haut de l'élément et de ses descendants avec le haut de la ligne entière.
@@ -80,78 +81,171 @@ Les valeurs suivantes alignent l'élément par rapport à la ligne entière (abs
 
 Pour les éléments qui n'ont pas de ligne de base définie, c'est le bord de la marge basse qui est utilisée.
 
-#### Pour les cellules de tableau
+### Pour les cellules de tableau
 
 - `baseline`, `sub`, `super`, `text-top`, `text-bottom`, `<length>` et `<percentage>`
-  - : La ligne de base de la cellule est alignée avec celle de toutes les autres cellules de la ligne courante qui sont alignées par rapport à la ligne de base. Les valeurs négatives sont autorisées.
+  - : La ligne de base de la cellule est alignée avec celle de toutes les autres cellules de la ligne courante qui sont alignées par rapport à la ligne de base.
 - `top`
-  - : Aligne le bord haut de la boîte de remplissage (_padding_) de la cellule avec le haut de la ligne.
+  - : Aligne le bord haut de la boîte de remplissage (<i lang="en">padding</i>) de la cellule avec le haut de la ligne.
 - `middle`
-  - : Centre la boîte de remplissage (_padding_) de la cellule avec la ligne.
+  - : Centre la boîte de remplissage (<i lang="en">padding</i>) de la cellule avec la ligne.
 - `bottom`
-  - : Aligne le bord bas de la boîte de remplissage (_padding_) avec le bas de la ligne.
+  - : Aligne le bord bas de la boîte de remplissage (<i lang="en">padding</i>) avec le bas de la ligne.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
-## Exemple
+## Exemples
+
+### Exemple simple
+
+#### CSS
+
+```css
+img.top { vertical-align: text-top; }
+img.bottom { vertical-align: text-bottom; }
+img.middle { vertical-align: middle; }
+```
 
 #### HTML
 
 ```html
 <div>
-  Une <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="une icone générique" width="32" height="32" />
-  image alignée par défaut.
+  Une
+  <img src="frame_image.svg" alt="link" width="32" height="32"/>
+  image avec un alignement par défaut.
 </div>
 <div>
-  Une <img class="haut" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" />
-  image alignée avec text-top.
-</div>
+  Une
+  <img class="top" src="frame_image.svg" alt="link" width="32" height="32"/>
+  image avec un alignement en haut du texte.</div>
 <div>
-  Une <img class="bas" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" />
-  image alignée avec text-bottom.</div>
+  Une
+  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32"/>
+  image avec un alignement en bas du texte.</div>
 <div>
-  Une <img class="pourcents" src="https://mdn.mozillademos.org/files/12245/frame_image.svg" alt="link" width="32" height="32" />
-  image alignée avec 200%.
+  Une
+  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32"/>
+  image avec un alignement au milieu.
 </div>
 ```
 
-#### CSS
+#### Résultat
 
-```css
-img.haut {
-  vertical-align: text-top;
+{{EmbedLiveSample("")}}
+
+### Alignement vertical sur une boîte de ligne
+
+#### HTML
+
+```html
+<p>
+top:         <img style="vertical-align: top" src="star.png"/>
+middle:      <img style="vertical-align: middle" src="star.png"/>
+bottom:      <img style="vertical-align: bottom" src="star.png"/>
+super:       <img style="vertical-align: super" src="star.png"/>
+sub:         <img style="vertical-align: sub" src="star.png"/>
+</p>
+
+<p>
+text-top:    <img style="vertical-align: text-top" src="star.png"/>
+text-bottom: <img style="vertical-align: text-bottom" src="star.png"/>
+0.2em:       <img style="vertical-align: 0.2em" src="star.png"/>
+-1em:        <img style="vertical-align: -1em" src="star.png"/>
+20%:         <img style="vertical-align: 20%" src="star.png"/>
+-100%:       <img style="vertical-align: -100%" src="star.png"/>
+</p>
+```
+
+```css hidden
+#* {
+  box-sizing: border-box;
 }
-img.bas {
-  vertical-align: text-bottom;
+
+img {
+  margin-right: 0.5em;
 }
-img.pourcents {
-  vertical-align: 200%;
+
+p {
+  height: 3em;
+  padding: 0 .5em;
+  font-family: monospace;
+  text-decoration: underline overline;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 ```
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple")}}
+{{EmbedLiveSample("", '100%', 160, "", "")}}
+
+### Alignement vertical d'une cellule de tableau
+
+#### CSS
+
+```css
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  padding: 0.5em;
+  font-family: monospace;
+}
+```
+
+#### HTML
+
+```html
+<table>
+  <tr>
+    <td style="vertical-align: baseline">baseline</td>
+    <td style="vertical-align: top">top</td>
+    <td style="vertical-align: middle">middle</td>
+    <td style="vertical-align: bottom">bottom</td>
+    <td>
+      <p>Elle voulait savoir si elle grandissait ou rapetissait, et fut
+         tout étonnée de rester la même; franchement, c'est ce qui
+         arrive le plus souvent lorsqu'on mange du gâteau; mais Alice
+         avait tellement pris l'habitude de s'attendre à des choses
+         extraordinaires, que cela lui paraissait ennuyeux et stupide
+         de vivre comme tout le monde.</p>
+      <p>Aussi elle se remit à l'œuvre, et eut bien vite fait
+         disparaître le gâteau.</p>
+    </td>
+  </tr>
+</table>
+```
+
+#### Résultat
+
+{{EmbedLiveSample("", '100%', 230, "", "")}}
+
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'vertical-align')}}             | {{Spec2('CSS3 Transitions')}} | `vertical-align` peut désormais être animée.                                                                                                                          |
-| {{SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align')}} | {{Spec2('CSS2.1')}}                 | Ajoute la valeur {{cssxref("&lt;length&gt;")}} et permet d'appliquer la propriété aux éléments dont {{cssxref("display")}} est de type `table-cell`. |
-| {{SpecName('CSS1', '#vertical-align', 'vertical-align')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.vertical-align")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("line-height")}}, {{cssxref("text-align")}}, {{cssxref("margin")}}
+- [Centrer des éléments avec _flexbox_](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#centrer_des_éléments)
+- [`line-height`](/fr/docs/Web/CSS/line-height), [`text-align`](/fr/docs/Web/CSS/text-align), [`margin`](/fr/docs/Web/CSS/margin)
 - [Comprendre `vertical-align` ou comment (ne pas) centrer des éléments verticalement](https://phrogz.net/css/vertical-align/index.html) (en anglais)
 - [Tout ce qu'il y a à savoir sur `vertical-align`](https://christopheraue.net/design/vertical-align) (en anglais)
-- [Centrer des éléments avec _flexbox_](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Cas_utilisation_flexbox#Centrer_des_éléments)
