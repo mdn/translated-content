@@ -19,7 +19,7 @@ Esta interfaz hereda propiedades de {{domxref("MouseEvent")}} y {{domxref("Event
 
 ## Constructores
 
-A pesar que esta interfaz tiene un constructor, no es posible crear un objeto DataTransfer útil desde código, ya que los objetos {{domxref("DataTransfer")}} tienen un modelo de procesamiento y seguridad que está coordinado por el navegador durante el arrastrar y soltar.
+A pesar que esta interfaz tiene un constructor, no es posible crear un objeto `DataTransfer` útil desde código, ya que los objetos {{domxref("DataTransfer")}} tienen un modelo de procesamiento y seguridad que está coordinado por el navegador durante el arrastrar y soltar.
 
 - {{domxref("DragEvent.DragEvent", "DragEvent()")}}
   - : Crea un evento de arrastrado sintético y no confiable.
