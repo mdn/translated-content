@@ -28,9 +28,9 @@ El objecto **`Intl.NumberFormat`** habilita el formato numérico de acuerdo al l
 - {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
   - : Función de acceso que formatea un número de acuerdo al lenguaje y a las opciones de formato de este objeto {{jsxref("Intl.NumberFormat")}}.
 - {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
-  - : Devuelve un {{jsxref("Array")}} de objectos que representan la cadena de números en partes que se pueden usar para el formato personalizado que reconoce la configuración regional.
+  - : Devuelve un {{jsxref("Array")}} de objetos que representan la cadena de números en partes que se pueden usar para el formato personalizado que reconoce la configuración regional.
 - {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
-  - : Función de acceso que formatea un rango de números de acuerdo a la configuración region y a las opciones de formato del objecto {{jsxref("Intl.NumberFormat")}} desde el que se llama al método.
+  - : Función de acceso que formatea un rango de números de acuerdo a la configuración region y a las opciones de formato del objeto {{jsxref("Intl.NumberFormat")}} desde el que se llama al método.
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
   - : Devuelve un {{jsxref("Array")}} de objectos que representan el rango de cadenas de números en partes que se pueden usar para el formato personalizado que reconoce la configuración regional.
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
