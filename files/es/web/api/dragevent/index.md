@@ -60,7 +60,7 @@ A pesar que esta interfaz tiene un constructor, no es posible crear un objeto Da
 
 ## Ejemplo
 
-Ejemplos para cada propiedad, constructor, tipo de evento y manejadores de eventos globales es incluido en su respectiva página de referencia.
+Ejemplos para cada propiedad, constructor, tipo de evento y manejadores de eventos globales son incluidos en su respectiva página de referencia.
 
 ## Especificaciones
 
