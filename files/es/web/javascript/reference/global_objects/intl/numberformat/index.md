@@ -70,7 +70,7 @@ console.log(new Intl.NumberFormat('ar-EG').format(number));
 console.log(new Intl.NumberFormat('en-IN').format(number));
 // → 1,23,456.789
 
-// Use de nu para establecer un sistema numérico, el sistema decimal chino por ejemplo
+// La clave de extensión nu requiere un sistema de numeración, p.ej. el decimal chino
 console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
 // → 一二三,四五六.七八九
 
