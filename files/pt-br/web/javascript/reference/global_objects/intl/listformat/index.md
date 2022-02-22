@@ -2,15 +2,16 @@
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 tags:
-  - Class
+  - Classe
   - Experimental
-  - Internationalization
+  - Internacionalização
   - Intl
   - JavaScript
   - ListFormat
-  - Reference
+  - Referência
 browser-compat: javascript.builtins.Intl.ListFormat
 ---
+
 {{JSRef}}
 
 O objeto **`Intl.ListFormat`** habilita a formatação de lista de acordo com o idioma.
@@ -40,28 +41,43 @@ O objeto **`Intl.ListFormat`** habilita a formatação de lista de acordo com o 
 
 ### Utilizando format
 
-O exemplo a seguir mostra como criar o List formartter utilizando o idioma Português.
+O exemplo a seguir mostra como criar o List formarter utilizando o idioma Português.
 
 ```js
-const list = ['Moto', 'Ônibus', 'Carro'];
+const list = ["Moto", "Ônibus", "Carro"];
 
- console.log(new Intl.ListFormat('pt-BR', { style: 'long', type: 'conjunction' }).format(list));
+console.log(
+  new Intl.ListFormat("pt-BR", { style: "long", type: "conjunction" }).format(
+    list
+  )
+);
 // > Moto, Ônibus e Carro
 
- console.log(new Intl.ListFormat('en-GB', { style: 'short', type: 'disjunction' }).format(list));
-// > Motorcycle, Bus ou Car
+console.log(
+  new Intl.ListFormat("pt-BR", { style: "short", type: "disjunction" }).format(
+    list
+  )
+);
+// > Moto, Ônibus ou Carro
 
- console.log(new Intl.ListFormat('en-GB', { style: 'narrow', type: 'unit' }).format(list));
-// > Motorcycle Bus Car
+console.log(
+  new Intl.ListFormat("pt-BR", { style: "narrow", type: "unit" }).format(list)
+);
+// > Moto Ônibus Carro
 ```
 
-### Using formatToParts
+### Utilizando formatToParts
 
-O exemplo a seguir mostra como criar o List formartter retornando formatted parts.
+O exemplo a seguir mostra como criar o List formarter retornando as partes formatadas.
 
 ```js
-const list = ['Moto', 'Ônibus', 'Carro'];
-console.log(new Intl.ListFormat('pt-BR', { style: 'long', type: 'conjunction' }).formatToParts(list));
+const list = ["Moto", "Ônibus", "Carro"];
+console.log(
+  new Intl.ListFormat("pt-BR", {
+    style: "long",
+    type: "conjunction",
+  }).formatToParts(list)
+);
 
 // [ { "type": "element", "value": "Moto" },
 //   { "type": "literal", "value": ", " },
@@ -74,7 +90,7 @@ console.log(new Intl.ListFormat('pt-BR', { style: 'long', type: 'conjunction' })
 
 [formatjs Intl.ListFormat polyfill](https://formatjs.io/docs/polyfills/intl-listformat)
 
-## Especificaçoes
+## Especificações
 
 {{Specifications}}
 
