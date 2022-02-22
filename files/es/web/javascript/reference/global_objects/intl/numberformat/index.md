@@ -117,7 +117,7 @@ console.log((16).toLocaleString('en-GB', {
 // → 16 litros
 ```
 
-## Polyfill
+## [Polyfill](/es/docs/Glossary/Polyfill)
 
 [formatjs Intl.NumberFormat polyfill](https://formatjs.io/docs/polyfills/intl-numberformat)
 
