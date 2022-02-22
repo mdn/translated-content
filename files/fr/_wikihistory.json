@@ -13579,6 +13579,13 @@
       "loella16"
     ]
   },
+  "Web/API/Document/afterscriptexecute_event": {
+    "modified": "2019-03-18T21:16:44.711Z",
+    "contributors": [
+      "wbamberg",
+      "loella16"
+    ]
+  },
   "Web/API/Document/alinkColor": {
     "modified": "2020-10-15T22:21:17.154Z",
     "contributors": [
@@ -13600,6 +13607,13 @@
       "fscholz",
       "jsx",
       "fmasy"
+    ]
+  },
+  "Web/API/Document/beforescriptexecute_event": {
+    "modified": "2019-03-18T21:39:17.231Z",
+    "contributors": [
+      "wbamberg",
+      "loella16"
     ]
   },
   "Web/API/Document/bgColor": {
@@ -14191,20 +14205,6 @@
   "Web/API/Document/mozSyntheticDocument": {
     "modified": "2019-03-18T21:39:15.573Z",
     "contributors": [
-      "loella16"
-    ]
-  },
-  "Web/API/Document/onafterscriptexecute": {
-    "modified": "2019-03-18T21:16:44.711Z",
-    "contributors": [
-      "wbamberg",
-      "loella16"
-    ]
-  },
-  "Web/API/Document/onbeforescriptexecute": {
-    "modified": "2019-03-18T21:39:17.231Z",
-    "contributors": [
-      "wbamberg",
       "loella16"
     ]
   },
