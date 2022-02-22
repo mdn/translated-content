@@ -3,52 +3,53 @@ title: performance.mark()
 slug: Web/API/Performance/mark
 tags:
   - API
-  - Webパフォーマンス
   - メソッド
   - リファレンス
+  - ウェブパフォーマンス
+browser-compat: api.Performance.mark
 translation_of: Web/API/Performance/mark
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p><strong><code>mark()</code></strong> メソッドは、ブラウザの<em>パフォーマンスエントリバッファ</em>に、指定された名前で{{domxref("DOMHighResTimeStamp","timestamp")}} を作成します。アプリケーション定義のタイムスタンプは、{{domxref("Performance")}} インタフェースの <code>getEntries*()</code> メソッド ({{domxref("Performance.getEntries","getEntries()")}}、{{domxref("Performance.getEntriesByName","getEntriesByName()")}} または{{domxref("Performance.getEntriesByType","getEntriesByType()")}}) のいずれかによって取得できます。</p>
+**`mark()`** メソッドは、ブラウザーのパフォーマンスエントリーバッファーに、指定された名前で{{domxref("DOMHighResTimeStamp","timestamp")}} を作成します。
 
-<p>{{AvailableInWorkers}}</p>
+アプリケーション定義のタイムスタンプは、{{domxref("Performance")}} インタフェースの `getEntries*()` メソッド ({{domxref("Performance.getEntries","getEntries()")}}、{{domxref("Performance.getEntriesByName","getEntriesByName()")}} または{{domxref("Performance.getEntriesByType","getEntriesByType()")}}) のいずれかによって取得できます。
 
-<p><code>mark</code> の {{domxref("PerformanceEntry","performance entry")}} は、次のプロパティ値を持ちます。</p>
+`mark()` は内部的にデータを {{domxref("PerformanceEntry")}} として格納します。
 
-<ul>
- <li>{{domxref("PerformanceEntry.entryType","entryType")}} - "<code>mark</code>" に設定されます</li>
- <li>{{domxref("PerformanceEntry.name","name")}} - mark が作成されたときに与えられた "<code>name</code>" に設定されます</li>
- <li>{{domxref("PerformanceEntry.startTime","startTime")}} - <code>mark()</code> が呼び出されたときに {{domxref("DOMHighResTimeStamp","timestamp")}} に設定されます</li>
- <li>{{domxref("PerformanceEntry.duration","duration")}} -  "<code>0</code>" に設定します (mark には<em>長さ</em>がありません)</li>
-</ul>
+{{AvailableInWorkers}}
 
-<p>このメソッドに与えられた <code>name</code> が {{domxref("PerformanceTiming")}} インターフェイスにすでに存在する場合、{{jsxref("SyntaxError")}} がスローされます。</p>
+## 構文
 
-<h2 id="構文">構文</h2>
+```js
+performance.mark(name);
+performance.mark(measureName, markOptions)
+```
 
-<pre class="syntaxbox"><em>performance</em>.mark(name);
-</pre>
+### 引数
 
-<h3 id="引数">引数</h3>
+- name
+  - : {{domxref("DOMString")}} で、マークの名前を表します。このメソッドで指定された `name` がすでに {{domxref("PerformanceTiming")}} インターフェイスに存在していた場合は、 {{jsxref("SyntaxError")}} が発生します。
 
-<dl>
- <dt>name</dt>
- <dd>マークの名前を表す {{domxref("DOMString")}}。</dd>
-</dl>
+- `markOptions` {{optional_inline}}
+  - : このマークのためにタイムスタンプと追加のメタデータを指定するためのオブジェクトです。
 
-<h3 id="戻り値">戻り値</h3>
+    - `detail`
+      - : マークに含める任意のメタデータです。
+    - `startTime`
+      - : マークの時刻として使用する {{domxref("DOMHighResTimeStamp")}} desu.
 
-<dl>
- <dt>void</dt>
- <dd> </dd>
-</dl>
+### 返値
 
-<h2 id="例">例</h2>
+- entry
+  - : 生成された {{domxref("PerformanceMark")}} エントリーです。
 
-<p>次の例は、<code>mark()</code> を使用して {{domxref("PerformanceMark")}} エントリを作成および取得する方法を示しています。</p>
+## 例
 
-<pre class="brush:js">// たくさんの mark を作成します。
+次の例は、`mark()` を使用して {{domxref("PerformanceMark")}} エントリーを作成および取得する方法を示しています。
+
+```js
+// たくさんの mark を作成します。
 performance.mark("squirrel");
 performance.mark("squirrel");
 performance.mark("monkey");
@@ -56,46 +57,24 @@ performance.mark("monkey");
 performance.mark("dog");
 performance.mark("dog");
 
-// PerformanceMark エントリをすべて取得します。
+// PerformanceMark エントリーをすべて取得します。
 const allEntries = performance.getEntriesByType("mark");
 console.log(allEntries.length);
 // 6
 
-// "monkey" PerformanceMark エントリをすべて入手します。
+// "monkey" PerformanceMark エントリーをすべて入手します。
 const monkeyEntries = performance.getEntriesByName("monkey");
 console.log(monkeyEntries.length);
 // 2
 
 // すべての mark を消去します。
 performance.clearMarks();
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing Level 2', '#dom-performance-mark', 'mark()')}}</td>
-   <td>{{Spec2('User Timing Level 2')}}</td>
-   <td>
-    <p><code>mark()</code> 処理モデルを明確にします。</p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing', '#dom-performance-mark', 'mark()')}}</td>
-   <td>{{Spec2('User Timing')}}</td>
-   <td>基本的な定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance.mark")}}</p>
-</div>
+{{Compat}}
