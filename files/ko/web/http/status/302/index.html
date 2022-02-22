@@ -14,7 +14,7 @@ translation_of: Web/HTTP/Status/302
 
 <div>명세는 리다이렉션이 수행되었을 때 메서드 (그리고 몸체) 가 변경되어서는 안된다고 명시했지만, 모든 사용자 에이전트들이 이를 따르는 것은 아니다 - 이러한 종류의 버그가 있는 소프트웨어를 쉽게 찾아볼 수도 있다. 따라서, 리다이렉트할 때에도 메서드 변경이 되지 않는 {{HTTPStatus("307", "307 Temporary Redirect")}} 을 대신 사용하고고 {{HTTPMethod("GET")}} 또는 {{HTTPMethod("HEAD")}} 요청에 대한 응답으로는 <code>302</code> 코드를 설정하는 것이 권장된다.</div>
 
-<div></div>
+
 
 <div>메서드가 {{HTTPMethod("GET")}} 으로 변경되도록 하고 싶은 경우에는, {{HTTPStatus("303", "303 See Other")}} 를 대신 사용하라. 이 응답 코드는 {{HTTPMethod("PUT")}} 을 통해 리소스를 업로드하고 나서 업로드된 리소스 대신 '성공적으로 XYZ'를 업로드했습니다' 와 같은 메시지를 보여주는 응답을 할 때 유용하다.</div>
 

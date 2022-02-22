@@ -50,7 +50,7 @@ Dans l'exemple qui suit, on dispose deux boutons classiques auxquels on associe,
 <button onclick="delayedAlert();">
   Affiche une alerte après deux secondes
 </button>
-<p></p>
+
 <button onclick="clearAlert();">
   Annuler l'alerte avant qu'elle ne se déclenche
 </button>
