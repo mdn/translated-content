@@ -3,59 +3,61 @@ title: performance.now()
 slug: Web/API/Performance/now
 tags:
   - API
-  - Method
-  - Performance
-  - Reference
-  - Web Performance API
+  - メソッド
+  - パフォーマンス
+  - リファレンス
+  - ウェブパフォーマンス API
+browser-compat: api.Performance.now
 translation_of: Web/API/Performance/now
 ---
-<div>{{APIRef("High Resolution Timing")}}</div>
+{{APIRef("High Resolution Timing")}}
 
-<p><code><strong>performance.now()</strong></code> メソッドは、ミリ秒単位で計測された {{domxref("DOMHighResTimeStamp")}} を返します。</p>
+**`performance.now()`** メソッドは、ミリ秒単位で計測された {{domxref("DOMHighResTimeStamp")}} を返します。
 
-<div class="warning">
-<p>タイムスタンプは実際には高解像度ではありません。<a href="https://spectreattack.com/">Spectre</a> のようなセキュリティ上の脅威を軽減するために、ブラウザは現在、さまざまな程度まで結果を丸めています (Firefox は Firefox 59 から 2 ミリ秒に丸めています)。ブラウザによっては、タイムスタンプを少しランダム化するものもあります。 精度は将来のリリースで改善されることでしょう。ブラウザの開発者は、これらのタイミング攻撃と、それを軽減する最善策について調査しています。</p>
-</div>
+{{AvailableInWorkers}}
 
-<p>{{AvailableInWorkers}}</p>
+返値は[時刻原点](/ja/docs/Web/API/DOMHighResTimeStamp#the_time_origin)からの経過時間を表します。
 
-<p>戻り値は、<a href="/ja/docs/Web/API/DOMHighResTimeStamp#The_time_origin">time origin</a> からの経過時間を表します。</p>
+次の点に留意してください。
 
-<p>次の点に留意してください:</p>
+- {{domxref("Window")}} コンテキストから生成された専用ワーカー (dedicated worker) では、この値は生成元の window における`performance.now()` の値よりも小さい値になります。従来はメインコンテキストの `t0` と同じでしたが、変更されました。
+- 共有ワーカー (shared worker) またはサービスワーカー (service worker) では、この値はメインコンテキストでの値よりも大きくなるかもしれません。 window はワーカーよりも後に生成される可能性があるからです。
 
-<ul>
- <li>{{domxref("Window")}} コンテキストから生成された Dedicated Worker (専用ワーカー) では、この値は生成元の window における<code>performance.now()</code> の値よりも小さい値となるでしょう。従来はメインコンテキストの <code>t0</code> と同じでしたが、これは変わりました。</li>
- <li>Shared Worker または Service Worker では、この値はメインコンテキストでの値よりも大きくなるかもしれません。そのウィンドウは、それらワーカー以後に生成され得るためです。</li>
-</ul>
+ブラウザーは通常、 [Spectre](https://spectreattack.com/) のような潜在的なセキュリティ脅威を軽減するために、予測可能性を低下させる目的で、返される値をある量で丸めることを覚えておくことが重要です。これは、タイマーの解像度や精度を制限することで、意図的にある程度不正確にします。例えば、 Firefox は返される時刻を 1 ミリ秒単位で丸めます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+返される値の精度は、セキュリティ上の懸念が他の手段で軽減された場合、またはされた場合に変更される可能性があります。
 
-<pre class="syntaxbox"><em>t</em> = performance.now();</pre>
+## 構文
 
-<h2 id="Example" name="Example">例</h2>
+```js
+t = performance.now();
+```
 
-<pre class="brush: js">var t0 = performance.now();
+## 例
+
+```js
+const t0 = performance.now();
 doSomething();
-var t1 = performance.now();
-console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
-</pre>
+const t1 = performance.now();
+console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
+```
 
-<p>JavaScript で利用できる他のタイミングデータ (例えば <a href="/ja/docs/JavaScript/Reference/Global_Objects/Date/now"><code>Date.now</code></a>) とは違い、 <code>performance.now()</code> が返すタイムスタンプは、1ミリ秒の分解能に制限されません。その代わりに、マイクロ秒までの精度を持った浮動小数点の値で表します。</p>
+JavaScript で利用できる他の時刻のデータ（例えば [`Date.now`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/now)）とは異なり、 `performance.now()` が返すタイムスタンプは、 1 ミリ秒の分解能に制限されません。代わりに、マイクロ秒までの精度を持った浮動小数点の値で時刻を表します。
 
-<p>また、<code>Date.now()</code> とは違い、<code>performance.now()</code> が返す値は、常に一定の割合で増加します。システムクロック (これはマニュアルで調整、またはNTPのようなソフトウェアで変えられているかもしれません) から独立しているのです。他方で <code>performance.timing.navigationStart + performance.now()</code> は、おおよそ <code>Date.now()</code> と同じになるでしょう。</p>
+また、`Date.now()` とは違い、`performance.now()` が返す値は、（手動で調整、または NTP のようなソフトウェアで変更される可能性がある）システムクロックから独立しており、常に一定の割合で増加します。一方、 `performance.timing.navigationStart + performance.now()` は、おおよそ `Date.now()` と等しくなります。
 
-<h2 id="Reduced_time_precision" name="Reduced_time_precision">時間精度の引き下げ</h2>
+## 時間精度の引き下げ
 
-<p>タイミング攻撃やフィンガープリンティングから保護するため、ブラウザの設定によっては、<code>performance.now()</code> の精度が丸められることがあります。<br>
-Firefoxでは、<code>privacy.reduceTimerPrecision</code> の設定がデフォルトで有効になっており、Firefox 59 ではデフォルトで 20 us (マイクロ秒) に設定されています。 Firefox 60 では 2 ms (ミリ秒) になります。</p>
+タイミング攻撃やフィンガープリンティングから保護するため、ブラウザーの設定によっては、 `performance.now()` の精度が丸められることがあります。
+Firefox では、 `privacy.reduceTimerPrecision` の設定が既定で有効になっており、既定で 1 ミリ秒となっています。
 
-<pre class="brush: js">// Firefox 60 での時間精度の引き下げ (2ms)
+```js
+// Firefox 60 での時間精度の引き下げ (1ms)
 performance.now();
 // 8781416
-// 8781814
+// 8781815
 // 8782206
 // ...
-
 
 // `privacy.resistFingerprinting` 有効化による時間精度の引き下げ`
 performance.now();
@@ -63,9 +65,18 @@ performance.now();
 // 8866200
 // 8866700
 // ...
-</pre>
+```
 
-<p>Firefoxでは <code>privacy.resistFingerprinting</code> も有効にできます。これは、精度を 100 ms か <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code> のどちらか大きい方へ変更します。</p>
+Firefox では `privacy.resistFingerprinting` も有効にすることができます。これは、精度を 100 ミリ秒または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` のどちらか大きい方へ変更します。
+
+Firefox 79 以降では、高精度タイマーは文書が {{HTTPHeader("Cross-Origin-Opener-Policy")}} および {{HTTPHeader("Cross-Origin-Embedder-Policy")}} ヘッダーを使用してクロスオリジン分離を行っている場合に使用することができるようになりました。
+
+```plain
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+```
+
+これらのヘッダーは、最上位の文書がクロスオリジン文書と閲覧コンテキストグループを共有しないことを保証します。 COOP プロセスは、文書を分離し、潜在的な攻撃者がポップアップでそれを開いていたとしても、グローバルオブジェクトにアクセスできないようにし、 [XS-Leaks](https://github.com/xsleaks/xsleaks) と呼ばれる一連のクロスオリジン攻撃を防止しています。
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
 
@@ -89,15 +100,14 @@ performance.now();
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## 仕様書
 
+{{Specifications}}
 
+## ブラウザーの互換性
 
-<p>{{Compat("api.Performance.now")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>Web Fundamentals の記事: <a href="https://developers.google.com/web/updates/2012/08/When-milliseconds-are-not-enough-performance-now">
-When milliseconds are not enough: performance.now</a></li>
-</ul>
+- [When milliseconds are not enough: performance.now()](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) (HTML5 Rocks)
