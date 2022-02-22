@@ -34,7 +34,7 @@ El objecto **`Intl.NumberFormat`** habilita el formato numérico de acuerdo al l
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
   - : Devuelve un {{jsxref("Array")}} de objetos que representan el rango de cadenas de números en partes que se pueden usar para el formato personalizado que reconoce la configuración regional.
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : Devuelve un nuevo objecto con propiedades que reflejan la configuración regional y las opciones de intercalación calculadas durante la inicialización del objecto.
+  - : Devuelve un nuevo objeto con propiedades que reflejan la configuración regional y las opciones de intercalación calculadas durante la inicialización del objeto.
 
 ## Ejemplo
 
