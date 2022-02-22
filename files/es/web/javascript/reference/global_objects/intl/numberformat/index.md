@@ -91,7 +91,7 @@ var number = 123456.789;
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
 // → 123.456,79 €
 
-// El yen japonés no tiene ninguna subdivisión
+// El yen japonés no tiene ninguna unidad menor
 console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number));
 // → ￥123,457
 
