@@ -53,7 +53,7 @@ console.log(new Intl.NumberFormat().format(number));
 
 
 Este ejemplo muestra algunas de las variaciones en los formatos de números por región.
-asegúrese de especificar dicho idioma (y de ser posible alternativas) utilizando el argumento `locales`:
+Para obtener el formato del idioma usado en la interfaz de usuario de tu aplicación, asegúrate de especificar dicho idioma (y de ser posible alternativas) utilizando el argumento `locales`:
 
 ```js
 var number = 123456.789;
