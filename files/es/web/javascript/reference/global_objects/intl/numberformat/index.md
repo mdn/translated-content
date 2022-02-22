@@ -114,7 +114,7 @@ console.log((16).toLocaleString('en-GB', {
     unit: 'liter',
     unitDisplay: 'long'
 }));
-// → 16 litres
+// → 16 litros
 ```
 
 ## Polyfill
