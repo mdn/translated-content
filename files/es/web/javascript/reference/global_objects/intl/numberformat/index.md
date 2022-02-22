@@ -80,7 +80,7 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 // → 123.456,789
 ```
 
-### Usando opciónes
+### Usando opciones
 
 Los resultados se pueden personalizar usando el argumento `opciones`:
 
