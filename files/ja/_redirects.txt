@@ -80,8 +80,8 @@
 /ja/docs/API/Document/linkColor	/ja/docs/Web/API/Document/linkColor
 /ja/docs/API/Document/links	/ja/docs/Web/API/Document/links
 /ja/docs/API/Document/location	/ja/docs/Web/API/Document/location
-/ja/docs/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/onafterscriptexecute
-/ja/docs/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/onbeforescriptexecute
+/ja/docs/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/afterscriptexecute_event
+/ja/docs/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
 /ja/docs/API/Document/onfullscreenchange	/ja/docs/conflicting/Web/API/Document/fullscreenchange_event
 /ja/docs/API/Document/onfullscreenerror	/ja/docs/conflicting/Web/API/Document/fullscreenerror_event
 /ja/docs/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
@@ -1357,8 +1357,8 @@
 /ja/docs/DOM/element.nodeValue	/ja/docs/Web/API/Node/nodeValue
 /ja/docs/DOM/element.normalize	/ja/docs/Web/API/Node/normalize
 /ja/docs/DOM/element.offsetTop	/ja/docs/Web/API/HTMLElement/offsetTop
-/ja/docs/DOM/element.onafterscriptexecute	/ja/docs/Web/API/Document/onafterscriptexecute
-/ja/docs/DOM/element.onbeforescriptexecute	/ja/docs/Web/API/Document/onbeforescriptexecute
+/ja/docs/DOM/element.onafterscriptexecute	/ja/docs/Web/API/Document/afterscriptexecute_event
+/ja/docs/DOM/element.onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
 /ja/docs/DOM/element.oncopy	/ja/docs/Web/API/HTMLElement/oncopy
 /ja/docs/DOM/element.oncut	/ja/docs/Web/API/HTMLElement/oncut
 /ja/docs/DOM/element.onkeypress	/ja/docs/Web/API/GlobalEventHandlers/onkeypress
@@ -3040,10 +3040,14 @@
 /ja/docs/Web/API/AudioContext/decodeAudioData	/ja/docs/Web/API/BaseAudioContext/decodeAudioData
 /ja/docs/Web/API/AudioContext/destination	/ja/docs/Web/API/BaseAudioContext/destination
 /ja/docs/Web/API/AudioContext/listener	/ja/docs/Web/API/BaseAudioContext/listener
-/ja/docs/Web/API/AudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/onstatechange
+/ja/docs/Web/API/AudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/statechange_event
 /ja/docs/Web/API/AudioContext/sampleRate	/ja/docs/Web/API/BaseAudioContext/sampleRate
 /ja/docs/Web/API/AudioContext/state	/ja/docs/Web/API/BaseAudioContext/state
 /ja/docs/Web/API/AudioScheduledSourceNode/onended	/ja/docs/Web/API/AudioScheduledSourceNode/ended_event
+/ja/docs/Web/API/AudioTrackList/onaddtrack	/ja/docs/conflicting/Web/API/AudioTrackList/addtrack_event
+/ja/docs/Web/API/AudioTrackList/onchange	/ja/docs/conflicting/Web/API/AudioTrackList/change_event
+/ja/docs/Web/API/AudioTrackList/onremovetrack	/ja/docs/conflicting/Web/API/AudioTrackList/removetrack_event
+/ja/docs/Web/API/BaseAudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/statechange_event
 /ja/docs/Web/API/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ja/docs/Web/API/BroadcastChannel/onmessage	/ja/docs/conflicting/Web/API/BroadcastChannel/message_event
 /ja/docs/Web/API/BroadcastChannel/onmessageerror	/ja/docs/conflicting/Web/API/BroadcastChannel/messageerror_event
@@ -3064,6 +3068,8 @@
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/Web/API/Document/characterSet
+/ja/docs/Web/API/Document/onafterscriptexecute	/ja/docs/Web/API/Document/afterscriptexecute_event
+/ja/docs/Web/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
 /ja/docs/Web/API/Document/onfullscreenchange	/ja/docs/conflicting/Web/API/Document/fullscreenchange_event
 /ja/docs/Web/API/Document/onfullscreenerror	/ja/docs/conflicting/Web/API/Document/fullscreenerror_event
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
@@ -3455,8 +3461,8 @@
 /ja/docs/Web/API/element.innerHTML	/ja/docs/Web/API/Element/innerHTML
 /ja/docs/Web/API/element.insertAdjacentHTML	/ja/docs/Web/API/Element/insertAdjacentHTML
 /ja/docs/Web/API/element.offsetTop	/ja/docs/Web/API/HTMLElement/offsetTop
-/ja/docs/Web/API/element.onafterscriptexecute	/ja/docs/Web/API/Document/onafterscriptexecute
-/ja/docs/Web/API/element.onbeforescriptexecute	/ja/docs/Web/API/Document/onbeforescriptexecute
+/ja/docs/Web/API/element.onafterscriptexecute	/ja/docs/Web/API/Document/afterscriptexecute_event
+/ja/docs/Web/API/element.onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
 /ja/docs/Web/API/element.onkeypress	/ja/docs/Web/API/GlobalEventHandlers/onkeypress
 /ja/docs/Web/API/element.onmousedown	/ja/docs/Web/API/GlobalEventHandlers/onmousedown
 /ja/docs/Web/API/element.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup

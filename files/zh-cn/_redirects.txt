@@ -382,8 +382,8 @@
 /zh-CN/docs/DOM/element.insertAdjacentHTML	/zh-CN/docs/Web/API/Element/insertAdjacentHTML
 /zh-CN/docs/DOM/element.isContentEditable	/zh-CN/docs/Web/API/HTMLElement/isContentEditable
 /zh-CN/docs/DOM/element.mozmatchesselector	/zh-CN/docs/Web/API/Element/matches
-/zh-CN/docs/DOM/element.onafterscriptexecute	/zh-CN/docs/Web/API/Document/onafterscriptexecute
-/zh-CN/docs/DOM/element.onbeforescriptexecute	/zh-CN/docs/Web/API/Document/onbeforescriptexecute
+/zh-CN/docs/DOM/element.onafterscriptexecute	/zh-CN/docs/Web/API/Document/afterscriptexecute_event
+/zh-CN/docs/DOM/element.onbeforescriptexecute	/zh-CN/docs/Web/API/Document/beforescriptexecute_event
 /zh-CN/docs/DOM/element.onblur	/zh-CN/docs/Web/API/GlobalEventHandlers/onblur
 /zh-CN/docs/DOM/element.onchange	/zh-CN/docs/Web/API/GlobalEventHandlers/onchange
 /zh-CN/docs/DOM/element.oncopy	/zh-CN/docs/Web/API/HTMLElement/oncopy
@@ -1233,10 +1233,11 @@
 /zh-CN/docs/Web/API/AudioContext/decodeAudioData	/zh-CN/docs/Web/API/BaseAudioContext/decodeAudioData
 /zh-CN/docs/Web/API/AudioContext/destination	/zh-CN/docs/Web/API/BaseAudioContext/destination
 /zh-CN/docs/Web/API/AudioContext/listener	/zh-CN/docs/Web/API/BaseAudioContext/listener
-/zh-CN/docs/Web/API/AudioContext/onstatechange	/zh-CN/docs/Web/API/BaseAudioContext/onstatechange
+/zh-CN/docs/Web/API/AudioContext/onstatechange	/zh-CN/docs/Web/API/BaseAudioContext/statechange_event
 /zh-CN/docs/Web/API/AudioContext/sampleRate	/zh-CN/docs/Web/API/BaseAudioContext/sampleRate
 /zh-CN/docs/Web/API/AudioContext/state	/zh-CN/docs/Web/API/BaseAudioContext/state
 /zh-CN/docs/Web/API/AudioNodeOptions	/zh-CN/docs/conflicting/Web/API/AudioNode
+/zh-CN/docs/Web/API/BaseAudioContext/onstatechange	/zh-CN/docs/Web/API/BaseAudioContext/statechange_event
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
@@ -1267,6 +1268,8 @@
 /zh-CN/docs/Web/API/Document/mozFullScreen	/zh-CN/docs/Web/API/Document/fullscreen
 /zh-CN/docs/Web/API/Document/mozFullScreenElement	/zh-CN/docs/Web/API/Document/fullscreenElement
 /zh-CN/docs/Web/API/Document/mozFullScreenEnabled	/zh-CN/docs/Web/API/Document/fullscreenEnabled
+/zh-CN/docs/Web/API/Document/onafterscriptexecute	/zh-CN/docs/Web/API/Document/afterscriptexecute_event
+/zh-CN/docs/Web/API/Document/onbeforescriptexecute	/zh-CN/docs/Web/API/Document/beforescriptexecute_event
 /zh-CN/docs/Web/API/Document/onfullscreenchange	/zh-CN/docs/conflicting/Web/API/Document/fullscreenchange_event
 /zh-CN/docs/Web/API/Document/onfullscreenerror	/zh-CN/docs/Web/API/Document/fullscreenerror_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
@@ -1297,8 +1300,8 @@
 /zh-CN/docs/Web/API/Element.innerHTML	/zh-CN/docs/Web/API/Element/innerHTML
 /zh-CN/docs/Web/API/Element.insertAdjacentHTML	/zh-CN/docs/Web/API/Element/insertAdjacentHTML
 /zh-CN/docs/Web/API/Element.matches	/zh-CN/docs/Web/API/Element/matches
-/zh-CN/docs/Web/API/Element.onafterscriptexecute	/zh-CN/docs/Web/API/Document/onafterscriptexecute
-/zh-CN/docs/Web/API/Element.onbeforescriptexecute	/zh-CN/docs/Web/API/Document/onbeforescriptexecute
+/zh-CN/docs/Web/API/Element.onafterscriptexecute	/zh-CN/docs/Web/API/Document/afterscriptexecute_event
+/zh-CN/docs/Web/API/Element.onbeforescriptexecute	/zh-CN/docs/Web/API/Document/beforescriptexecute_event
 /zh-CN/docs/Web/API/Element.oncopy	/zh-CN/docs/Web/API/HTMLElement/oncopy
 /zh-CN/docs/Web/API/Element.oncut	/zh-CN/docs/Web/API/HTMLElement/oncut
 /zh-CN/docs/Web/API/Element.onpaste	/zh-CN/docs/Web/API/HTMLElement/onpaste
@@ -1313,8 +1316,8 @@
 /zh-CN/docs/Web/API/Element/Activate_event	/zh-CN/docs/Web/API/Element/DOMActivate_event
 /zh-CN/docs/Web/API/Element/accessKey	/zh-CN/docs/Web/API/HTMLElement/accessKey
 /zh-CN/docs/Web/API/Element/addEventListener	/zh-CN/docs/Web/API/EventTarget/addEventListener
-/zh-CN/docs/Web/API/Element/onafterscriptexecute	/zh-CN/docs/Web/API/Document/onafterscriptexecute
-/zh-CN/docs/Web/API/Element/onbeforescriptexecute	/zh-CN/docs/Web/API/Document/onbeforescriptexecute
+/zh-CN/docs/Web/API/Element/onafterscriptexecute	/zh-CN/docs/Web/API/Document/afterscriptexecute_event
+/zh-CN/docs/Web/API/Element/onbeforescriptexecute	/zh-CN/docs/Web/API/Document/beforescriptexecute_event
 /zh-CN/docs/Web/API/Element/oncopy	/zh-CN/docs/Web/API/HTMLElement/oncopy
 /zh-CN/docs/Web/API/Element/oncut	/zh-CN/docs/Web/API/HTMLElement/oncut
 /zh-CN/docs/Web/API/Element/onfullscreenchange	/zh-CN/docs/Web/API/Element/fullscreenchange_event
