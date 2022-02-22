@@ -42,9 +42,9 @@ Obtener valores del mapa implicaría iterar a través de todas las llaves hasta 
 Tal implementación tendría dos inconvenientes principales:
 
 1. El primero es una búsqueda *O(*n*)* (siendo _n_ el número de claves en el mapa) ya que ambas operaciones deben iterar a través de la lista de llaves para encontrar un valor coincidente.
-2. El segundo inconveniente es un problema de pérdida de memoria por que los arreglos se aseguran que las referencias a cada llave y cada valor se manengan indefinidamente. Estas referencias evitan que las llaves se recopilen como basura, incluso si no hay otras referencias al objeto. Esto también evitaría que los valores correspondientes se recopilen como basura.
+2. El segundo inconveniente es un problema de pérdida de memoria por que los arreglos se aseguran que las referencias a cada llave y cada valor se mantengan indefinidamente. Estas referencias evitan que las llaves se recopilen como basura, incluso si no hay otras referencias al objeto. Esto también evitaría que los valores correspondientes se recopilen como basura.
 
-Por el contrario, en un `WeakMap`, un objecto llave se refiere fuertemente a su contenido siempre que la llave no se recolecte como basura, pero débilmente a partir de ese momento. Como tal, un `WeakMap`:
+Por el contrario, en un `WeakMap`, un objeto llave se refiere fuertemente a su contenido siempre que la llave no se recolecte como basura, pero débilmente a partir de ese momento. Como tal, un `WeakMap`:
 
 - No evita la recolección de elementos no utilizados, lo que eventialmente elimina las referencias a la llave del objecto.
 - Permite la recolección de basura de cualquier valor si no se hace referencia a sus objectos llave desde otro lugar que no sea un `WeakMap`.
@@ -58,7 +58,7 @@ Pero debido a que un `WeakMap` no permite observar la vida de sus llaves, sus ll
 - {{jsxref("WeakMap/WeakMap", "WeakMap()")}}
   - : Crea un nuevo objeto `WeakMap`.
 
-## Métodos de instancia
+## Métodos de instanciación
 
 - {{jsxref("WeakMap.delete", "WeakMap.prototype.delete(<var>key</var>)")}}
   - : Elimina cualquier valor asociado a la `key`. `WeakMap.prototype.has(key)` regresará `false` después.
