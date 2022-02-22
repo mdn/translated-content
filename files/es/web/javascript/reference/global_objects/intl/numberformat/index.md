@@ -100,7 +100,7 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 // → 1,23,000
 ```
 
-### Usando estilo y unidad
+### Usando estilos y unidades
 
 ```js
 console.log(new Intl.NumberFormat('pt-PT',  {
