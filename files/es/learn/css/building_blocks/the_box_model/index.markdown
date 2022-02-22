@@ -1,0 +1,413 @@
+---
+title: El modelo de caja
+slug: Learn/CSS/Building_blocks/The_box_model
+translation_of: Learn/CSS/Building_blocks/The_box_model
+original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
+tags:
+  - principiante
+  - CSS
+  - aprender
+  - borde                                
+  - modelo de cajas
+  - visualización
+  - margen
+  - relleno
+---
+
+<div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", 
+  "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}</div>
+
+<p>Todo en CSS tiene una caja alrededor, y comprender estas cajas es clave para poder crear diseños con CSS o para 
+  alinear elementos con otros elementos. En este artículo, echaremos un vistazo más de cerca al <em>modelo de cajas</em> 
+  en CSS con el que vas a poder crear diseños de compaginación más complejos con una comprensión de cómo funciona y la 
+  terminología relacionada.</p>
+
+<table class="learn-box standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">Prerrequisitos:</th>
+        <td>
+          Conocimientos básicos de informática, tener el 
+          <a href="/es/docs/Learn/Getting_started_with_the_web/Instalacion_de_software_basico">software básico instalado</a> , conocimientos básicos de cómo 
+          <a href="/es/docs/Learn/Getting_started_with_the_web/Manejando_los_archivos">trabajar con archivos</a>
+          , conocimientos básicos de HTML (véase 
+          <a href="/es/docs/Learn/HTML/Introduccion_a_HTML">Introducción al HTML</a>
+          ) y nociones de CSS (véase 
+          <a href="/es/docs/Learn/CSS/First_steps">Primeros pasos con CSS</a>).
+        </td>
+  </tr>
+  <tr>
+    <th scope="row">Objetivo:</th>
+    <td>
+     Aprender sobre el modelo de cajas en CSS, en qué consiste el modelo de cajas y cómo cambiar al modelo alternativo.
+    </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Cajas_en_bloque_y_en_línea">Cajas en bloque y en línea</h2>
+
+<p>En CSS, en general, hay dos tipos de cajas: <strong>cajas en bloque</strong> y <strong>cajas en línea</strong>. 
+  Estas características se refieren al modo como se comporta la caja en términos de flujo de página y en relación con otras 
+  cajas de la página. Las cajas poseen también un <strong>tipo de visualización interna</strong> y un 
+  <strong>tipo de visualizacion externa</strong>. Primero explicaremos qué se entiende por caja en bloque y caja en línea.
+  Posteriormente explicaremos qué se entiende por tipo de visualizacion interna o externa.</p>
+
+<p>Si una caja tiene una visualización externa de tipo bloque (<code>block</code>),se comportará de la manera siguiente:</p>  <!-- -->
+
+  <ul>
+   <li>La caja fuerza un salto de línea al llegar al final de la línea.</li>
+   <li>La caja se extenderá en la dirección de la línea para llenar todo el espacio disponible que haya en su contenedor.
+      En la mayoría de los casos, esto significa que la caja será tan ancha como su contenedor, y llenará el 100% del 
+      espacio disponible.</li>
+   <li>Se respetan las propiedades {{cssxref ("width")}} y {{cssxref ("height")}}.</li>
+   <li>El relleno, el margen y el borde mantienen a los otros elementos alejados de la caja.</li>
+  </ul>
+
+<p>A menos que decidamos cambiar el tipo de visualización a en línea, elementos en HTML tales como los encabezados 
+  (por ejemplo, <code>&lt;h1&gt;</code>) y todos los elementos <code>&lt;p&gt;</code> usan por defecto 
+  <code>block</code> como tipo de visualización externa.</p>
+
+<p>Si una caja tiene una visualización externa de tipo en línea (<code>inline</code>), entonces:</p>
+
+<ul>
+ <li>La caja no fuerza ningún salto de línea al llegar al final de la línea.</li>
+ <li>Las propiedades {{cssxref ("width")}} y {{cssxref ("height")}} no se aplican.</li>
+ <li>Se aplican relleno, margen y bordes verticales, pero no mantienen alejadas otras cajas en línea.</li>
+ <li>Se aplican relleno, margen y bordes horizontales, y mantienen alejadas otras cajas en línea.</li>
+</ul>
+
+<p>Algunos elementos en HTML, como <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;em&gt;</code> 
+  y <code>&lt;strong&gt;</code> ,son ejemplos de elementos que tienen una visualización <code>inline</code> por defecto.</p>
+
+<p>El tipo de caja que se aplica a un elemento está definido por los valores asignados a la propiedad {{cssxref ("display")}}, valores 
+  como <code>block</code> e <code>inline</code>, y se relaciona con el valor <strong>externo</strong> (<em>outer</em>) de visualización (<code>display</code>).</p>
+
+<h2 id="Aparte_tipos_de_visualización_interna_y_externa">Aparte: tipos de visualización interna y externa</h2>
+
+<p>En este punto, será mejor que también expliquemos los tipos de visualización <strong>interna</strong> y <strong>externa</strong>. 
+  Como se mencionó anteriormente, las cajas en CSS tienen un tipo de visualización <em>externa</em>, que define si se trata de una caja en bloque o en línea.</p>
+
+<p>Las cajas tienen también un tipo de visualización <em>interna</em>, que determina cómo se disponen los elementos 
+  dentro de esa caja. De forma predeterminada, los elementos dentro de una caja se presentan en <strong><a href="/es/docs/Learn/CSS/CSS_layout/Flujo_normal">flujo normal</a></strong>, 
+  lo que significa que se comportan como cualquier otro elemento de tipo en bloque o en línea (como se explicó anteriormente).</p>
+
+<p>Sin embargo, podemos cambiar el tipo de visualización interna utilizando valores de <code>display</code>, 
+  como <code>flex</code>. Si en un elemento establecemos <code>display: flex;</code>, el tipo de visualización externa es 
+  de tipo bloque (<code>block</code>), pero el tipo de visualización interna cambia a flexible (<code>flex</code>). 
+  Cualquier elemento que sea hijo directo de esta caja pasará a comportarse como un elemento de tipo flex, de acuerdo 
+  con las reglas que se establecen en la especificación de <a href="/es/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a>, 
+  tema que veremos más adelante.</p>
+
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: Para obtener más información acerca de los valores de visualización y el modo como funcionan 
+  las cajas en las disposiciones en bloque y en línea, echa un vistazo a la guía <a href="/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Disposiciones en bloque y en línea</a> de MDN.</p>
+</div>
+
+<p>A medida que vayas aprendiendo más detalles sobre el diseño CSS, te irás encontrando con el valor <code>flex</code> y 
+  con otros valores internos que pueden presentar tus cajas, por ejemplo, <code><a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">grid</a></code>.</p>
+
+<p>Sin embargo, la disposición en bloque y en línea es la forma predeterminada como se comportan las cosas en la web; 
+  como dijimos anteriormente, a veces esto se conoce como <em>flujo normal</em>, porque nuestras cajas se dispondrán en 
+  bloque o en línea, si no reciben ninguna otra instrucción.</p>
+
+<h2 id="Ejemplos_de_diferentes_tipos_de_visualización">Ejemplos de diferentes tipos de visualización</h2>
+
+<p>Sigamos adelante y veamos algunos ejemplos. A continuación tenemos tres elementos HTML diferentes, todos con 
+  visualización externa de tipo <code>block</code>. El primero es un párrafo, que tiene un borde añadido con CSS. 
+  El navegador representa esto como una caja en bloque, por lo que el párrafo comienza en una línea nueva y se expande 
+  ocupando todo el ancho disponible.</p>
+
+<p>El segundo es una lista, que se representa usando <code>display: flex</code>. Esto establece una disposición flexible 
+  para los elementos que están dentro del contenedor; sin embargo, la lista en sí misma es una caja que se comporta en 
+  bloque y, como el párrafo, se expande por todo el ancho del contenedor y fuerza un salto de línea al llegar al final 
+  de línea.</p>
+
+<p>Debajo hay un párrafo a nivel de bloque, dentro del cual hay dos elementos <code>&lt;span&gt;</code>. Estos elementos 
+  normalmente serían de tipo <code>inline</code>; sin embargo, uno de los elementos tiene una clase de bloque, y lo hemos 
+  establecido como <code>display: block</code>.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1050)}} </p>
+
+<p>Podemos ver cómo se comportan los elementos <code>inline</code> en el siguiente ejemplo. Los elementos <code>&lt;span&gt;</code> 
+  del primer párrafo están en línea de manera predeterminada y, por lo tanto, no fuerzan ningún salto de línea.</p>
+
+<p>También hay un elemento <code>&lt;ul&gt;</code> que se establece como <code>display: inline-flex</code>, que crea una 
+  caja con un comportamiento de tipo en línea alrededor de algunos elementos de tipo <code>flex</code>.</p>
+
+<p>Finalmente, hay dos párrafos configurados con <code>display: inline</code>. El contenedor flexible en línea y los 
+  párrafos fluyen todos juntos en línea, en lugar de forzar saltos de línea como harían si se mostraran como elementos 
+  de tipo bloque.</p>
+
+<p><strong>En el ejemplo puedes cambiar <code>display: inline</code> por <code>display: block</code> o <code>display: inline-flex</code> 
+  y por <code>display: flex</code> para alternar entre estos modos de visualización.</strong></p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1000)}} </p>
+
+<p>En artículos posteriores encontrarás cosas como el diseño flexible. El aspecto clave a recordar aquí es que cambiar el 
+  valor de la propiedad <code>display</code> puede cambiar entre el modo de visualización externa en bloque y en línea de 
+  una caja, cambiando la forma en que se representa junto con otros elementos en la disposición en pantalla.</p>
+
+<p>En el resto de este artículo, nos concentraremos en el tipo de visualización externa.</p>
+
+<h2 id="¿Qué_es_el_modelo_de_cajas_CSS">¿Qué es el modelo de cajas CSS?</h2>
+
+<p>El modelo de cajas CSS completo, se aplica a cajas que presentan comportamiento en bloque; las cajas con 
+  comportamiento en línea solo usan <em>una parte</em> del comportamiento definido en el modelo de cajas. 
+  El modelo define cómo funcionan juntas las diferentes partes de una caja (margen, borde, relleno y contenido) para crear 
+  una caja que puedas ver en tu página. Para complicarlo un poco más, hay un modelo de cajas estándar y un modelo de cajas 
+  alternativo.</p>
+
+<h3 id="Partes_de_una_caja">Partes de una caja</h3>
+
+<p>Al hacer una caja de tipo bloque en CSS tenemos los elementos siguientes:</p>
+
+<ul>
+ <li>El <strong>contenido de la caja</strong> (o <em>content box</em>): El área donde se muestra el contenido, cuyo tamaño puede cambiarse utilizando propiedades como {{cssxref ("width")}} y {{cssxref ("height")}}.</li>
+ <li>El <strong>relleno de la caja</strong> (o <em>padding box</em>): El relleno es espacio en blanco alrededor del contenido; es posible controlar su tamaño usando la propiedad {{cssxref ("padding")}} y otras propiedades relacionadas.</li>
+ <li>El <strong>borde de la caja</strong> (o <em>border box</em>): El borde de la caja envuelve el contenido y el de relleno. Es posible controlar su tamaño y estilo utilizando la propiedad {{cssxref ("border")}} y otras propiedades relacionadas.</li>
+ <li>El <strong>margen de la caja</strong> (o <em>margin box</em>): El margen es la capa más externa. Envuelve el contenido, el relleno y el borde como espacio en blanco entre la caja y otros elementos. Es posible controlar su tamaño usando la propiedad {{cssxref ("margin")}} y otras propiedades relacionadas.</li>
+</ul>
+
+<p>El diagrama siguiente muestra estas capas:</p>
+
+<p><img alt="Diagrama del modelo de cajas" src="https://mdn.mozillademos.org/files/16558/box-model.png" style="height: 300px; width: 544px;"></p>
+
+<h3 id="El_modelo_de_cajas_CSS_estándar">El modelo de cajas CSS estándar</h3>
+
+<p>En el modelo de cajas estándar, cuando estableces los atributos <code>width</code> y <code>height</code> para una caja, defines el ancho y el alto del <em>contenido de la caja</em>. Cualquier área de relleno y borde se añade a ese ancho y alto para obtener el tamaño total que ocupa la caja. Esto se muestra en la imagen que encontrarás a continuación.</p>
+
+<p>Si suponemos que la caja tiene el CSS siguiente, que establece los valores para las propiedades <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code>, y <code>padding</code>:</p>
+
+<pre class="brush: css notranslate">.box {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  padding: 25px;
+  border: 5px solid black;
+}
+</pre>
+
+<p>El espacio que ocupa nuestra caja usando el modelo de cajas estándar será <em>en realidad</em> de 410 px (350 + 25 + 25 + 5 + 5); y su altura, de 210 px (150 + 25 + 25 + 5 + 5), porque el área de relleno y el borde se añaden al ancho que se utiliza para el contenido de la caja.</p>
+
+<p><img alt="Mostrar el tamaño de la caja cuando se usa el modelo de cajas estándar." src="https://mdn.mozillademos.org/files/16559/standard-box-model.png" style="height: 300px; width: 500px;"></p>
+
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: El margen no se cuenta para el tamaño real de la caja; por supuesto, afecta al espacio total que la caja ocupa en la página, pero solo al espacio de fuera de la caja. El área de la caja se termina en el borde, no se extiende hasta el margen.</p>
+</div>
+
+<h3 id="El_modelo_de_cajas_CSS_alternativo">El modelo de cajas CSS alternativo</h3>
+
+<p>Podrías pensar que es más bien incómodo tener que sumar el borde y el área de relleno para obtener el tamaño real de la caja, ¡y tienes razón! Por este motivo, CSS introdujo un modelo de caja alternativo algún tiempo después del modelo de cajas estándar. Con este modelo, cualquier ancho es el ancho de la caja visible en la página, por lo tanto, el ancho del área de contenido es ese ancho menos el ancho para el relleno y el borde. El mismo CSS que hemos usado antes daría entonces el resultado siguiente (ancho = 350 px, altura = 150 px).</p>
+
+<p><img alt="Mostrar el tamaño de la caja cuando se usa el modelo de cajas alternativo." src="https://mdn.mozillademos.org/files/16557/alternate-box-model.png" style="height: 240px; width: 440px;"></p>
+
+<p>Por defecto, los navegadores usan el modelo de cajas estándar. Si deseas activar el modelo de cajas alternativo para un elemento, hazlo configurando <code>box-sizing: border-box</code>. Con ello, le dices al navegador que tome como el borde de la caja como el área que tú defines.</p>
+
+<pre class="brush: css notranslate"><code>.box {
+  box-sizing: border-box;
+} </code></pre>
+
+<p>Si quieres que todos tus elementos usen el modelo de cajas alternativo (opción común entre los desarrolladores) debes establecer la propiedad <code>box-sizing</code> en el elemento <code>&lt;html&gt;</code>. Luego debes configurar todos los demás elementos para que hereden ese valor, como se ve en el fragmento de código siguiente. Si deseas comprender qué hay detrás, consulta el <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">artículo de <em>CSS-Tricks</em> sobre el tamaño de las cajas</a>.</p>
+
+<pre class="brush: css notranslate"><code class="language-css"><span class="selector token">html</span> <span class="punctuation token">{</span>
+  <span class="property token">box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
+<span class="punctuation token">}</span>
+<span class="selector token">*, *<span class="pseudo-element token">::before</span>, *<span class="pseudo-element token">::after</span></span> <span class="punctuation token">{</span>
+  <span class="property token">box-sizing</span><span class="punctuation token">:</span> inherit<span class="punctuation token">;</span>
+<span class="punctuation token">}</span></code></pre>
+
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: Un dato curioso es que Internet Explorer usaba por defecto el modelo de cajas alternativo, y no disponía de ningún mecanismo para cambiarlo.</p>
+</div>
+
+<h2 id="Jugar_con_los_modelos_de_cajas">Jugar con los modelos de cajas</h2>
+
+<p>En el ejemplo siguiente puedes ver dos cajas. Ambas tienen una clase <code>.box</code>, lo que les da los mismos atributos <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code> y <code>padding</code>. La única diferencia es que la segunda caja se ha configurado para utilizar el modelo de cajas alternativo.</p>
+
+<p><strong>¿Puedes cambiar el tamaño de la segunda caja (añadiendo CSS a la clase <code>.alternate</code>) para que su anchura y altura coincidan con las de la primera caja?</strong></p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1000)}} </p>
+
+<div class="blockIndicator note">
+<p><strong>Nota</strong>: Puedes encontrar la solución <a href="https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model">aquí</a>.</p>
+</div>
+
+<h3 id="Utilizar_las_DevTools_del_navegador_para_ver_el_modelo_de_cajas">Utilizar las DevTools del navegador para ver el modelo de cajas</h3>
+
+<p>Las <a href="/es/docs/Learn/Common_questions/What_are_browser_developer_tools">herramientas del desarrollador de tu navegador</a> pueden facilitar la comprensión del modelo de cajas. Si inspeccionas un elemento con las DevTools de Firefox, puedes ver el tamaño del elemento más su margen, área de relleno y borde. Inspeccionar un elemento de esta manera es un modo excelente de descubrir si tu caja es en realidad del tamaño que crees que es.</p>
+
+<p><img alt="Inspeccionar el modelo de cajas de un elemento utilizando Firefox DevTools" src="https://mdn.mozillademos.org/files/16560/box-model-devtools.png" style="height: 683px; width: 1150px;"></p>
+
+<h2 id="Márgenes_relleno_y_bordes">Márgenes, relleno y bordes</h2>
+
+<p>Ya has visto las propiedades {{cssxref ("margin")}}, {{cssxref ("padding")}} y {{cssxref ("border")}} que usamos en el ejemplo anterior. Las propiedades que hemos usado en ese ejemplo son <strong>propiedades abreviadas</strong> y nos permiten establecer los cuatro lados de la caja a la vez. Estas propiedades abreviadas también tienen propiedades sin abreviar equivalentes, que permiten tener control sobre los diferentes lados de la caja de forma individual.</p>
+
+<p>Vamos a explorar estas propiedades más detalladamente.</p>
+
+<h3 id="Margen">Margen</h3>
+
+<p>El margen es un espacio invisible que hay alrededor de la caja. Aleja al resto de elementos de la caja. Los márgenes pueden tener valores positivos o negativos. Establecer un margen negativo para un lado de tu caja puede hacer que se superponga con otros elementos de la página. Tanto si utilizas el modelo de cajas estándar como el alternativo, el margen siempre se añade después de haber calculado el tamaño de la caja que se ve.</p>
+
+<p>Podemos controlar todos los márgenes de un elemento a la vez usando la propiedad {{cssxref ("margin")}}, o cada lado individualmente usando las propiedades equivalentes sin abreviar:</p>
+
+<ul>
+ <li>{{cssxref("margin-top")}}</li>
+ <li>{{cssxref("margin-right")}}</li>
+ <li>{{cssxref("margin-bottom")}}</li>
+ <li>{{cssxref("margin-left")}}</li>
+</ul>
+
+<p><strong>En el ejemplo siguiente, cambia los valores de margen para ver cómo se empuja la caja debido al espacio que el margen crea o se elimina (si es un margen negativo) entre este elemento y el elemento que lo contiene.</strong></p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/margin.html", '100%', 700)}} </p>
+
+<h4 id="Colapso_del_margen">Colapso del margen</h4>
+
+<p>Un punto clave a la hora de entender los márgenes es el concepto de <strong>colapso del margen</strong>. Si tienes dos elementos cuyos márgenes se tocan y ambos tienen valores positivos, esos márgenes se combinarán para convertirse en un solo margen, cuyo tamaño es el del margen más grande.
+Si uno de los márgenes es negativo, su valor será <em>restado</em> del total. Cuando ambos tengan un valor negativo, los 
+márgenes colapsarán y se utilizará el de menor valor (mas alejado del cero)</p>
+
+<p>En el ejemplo siguiente hay dos párrafos. El párrafo superior tiene un atributo <code>margin-bottom</code> de 50 píxeles. El segundo párrafo tiene un atributo <code>margin-top</code> de 30 píxeles. Los márgenes colapsan, por lo que el margen real entre las cajas es de 50 píxeles, y no el total de ambos márgenes.</p>
+
+<p><strong>Pruébalo ajustando el atributo <code>margin-top</code> del segundo párrafo a 0. El margen visible entre los dos párrafos no cambiará, sino que conservará los 50 píxeles fijados en el atributo <code>bottom-margin</code> del primer párrafo.
+Si lo ajustas a -10px, verás que el total serán 40px; se resta a los 50px.</strong></p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 700)}} </p>
+
+<p>Hay una serie de reglas que establecen cuándo los márgenes colapsan y cuándo no. Para obtener más información, consulta la página web sobre <a href="/es/docs/Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing">entender el colapso de márgenes</a>. Por ahora solo debes recordar que el colapso de los márgenes es algo que puede suceder. Si creas un espacio con márgenes y no obtienes el espacio que esperas, probablemente es que se haya producido algún colapso de márgenes.</p>
+
+<h3 id="Bordes">Bordes</h3>
+
+<p>El borde se dibuja entre el margen y el área de relleno de una caja. Si utilizas el modelo de cajas estándar, el tamaño del borde se añade a los elementos <code>width</code> y <code>height</code> que establecen el alto y el ancho de la caja. Si utilizas el modelo de cajas alternativo, el tamaño del borde reduce el tamaño de la caja de contenido, porque ocupa una parte del alto y el ancho disponibles.</p>
+
+<p>Hay una gran cantidad de propiedades que sirven para aplicar estilo a los bordes: hay cuatro bordes y cada borde tiene un estilo, un ancho y un color que podemos modificar.</p>
+
+<p>Puedes establecer el ancho, el estilo o el color de los cuatro bordes a la vez utilizando la propiedad {{cssxref ("border")}}.</p>
+
+<p>Para establecer las propiedades de cada lado de forma individual, puedes utilizar:</p>
+
+<ul>
+ <li>{{cssxref("border-top")}}</li>
+ <li>{{cssxref("border-right")}}</li>
+ <li>{{cssxref("border-bottom")}}</li>
+ <li>{{cssxref("border-left")}}</li>
+</ul>
+
+<p>Para establecer el ancho, el estilo o el color de todos los lados, usa lo siguiente:</p>
+
+<ul>
+ <li>{{cssxref("border-width")}}</li>
+ <li>{{cssxref("border-style")}}</li>
+ <li>{{cssxref("border-color")}}</li>
+</ul>
+
+<p>Para establecer el ancho, el estilo o el color de un solo lado, puedes usar una de las propiedades no abreviadas:</p>
+
+<ul>
+ <li>{{cssxref("border-top-width")}}</li>
+ <li>{{cssxref("border-top-style")}}</li>
+ <li>{{cssxref("border-top-color")}}</li>
+ <li>{{cssxref("border-right-width")}}</li>
+ <li>{{cssxref("border-right-style")}}</li>
+ <li>{{cssxref("border-right-color")}}</li>
+ <li>{{cssxref("border-bottom-width")}}</li>
+ <li>{{cssxref("border-bottom-style")}}</li>
+ <li>{{cssxref("border-bottom-color")}}</li>
+ <li>{{cssxref("border-left-width")}}</li>
+ <li>{{cssxref("border-left-style")}}</li>
+ <li>{{cssxref("border-left-color")}}</li>
+</ul>
+
+<p><strong>En el ejemplo siguiente, hemos utilizado varios ejemplos de la lista anterior para crear bordes. Juega con las diferentes propiedades para comprobar que entiendes cómo funcionan. Las páginas de MDN sobre las propiedades de los bordes te proporcionan información sobre los diferentes estilos entre los que puedes elegir para los bordes.</strong></p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 700)}} </p>
+
+<h3 id="Relleno">Relleno</h3>
+
+<p>El relleno se encuentra entre el borde y el área de contenido. A diferencia de los márgenes, el relleno no puede tomar valores negativos, por lo que el valor debe ser 0 o positivo. Cualquier fondo aplicado a tu elemento se mostrará detrás del área de relleno y, generalmente, se usa para mantener el contenido alejado del borde.</p>
+
+<p>Podemos controlar el área de relleno para todos los lados de un mismo elemento usando la propiedad {{cssxref ("padding")}}, o para cada lado uno de los lados usando las propiedades equivalentes:</p>
+
+<ul>
+ <li>{{cssxref("padding-top")}}</li>
+ <li>{{cssxref("padding-right")}}</li>
+ <li>{{cssxref("padding-bottom")}}</li>
+ <li>{{cssxref("padding-left")}}</li>
+</ul>
+
+<p><strong>Si cambias los valores para el elleno en la clase <code>.box</code> del ejemplo siguiente, puedes ver que cambia dónde comienza el texto en relación con la caja.</strong></p>
+
+<p><strong>También puedes cambiar el relleno en la clase <code>.container</code>, que abrirá el espacio entre el contenedor y la caja. El área de relleno se puede cambiar para cualquier elemento y abrirá espacio entre su borde y lo que esté dentro del elemento.</strong></p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 600)}} </p>
+
+<h2 id="El_modelo_de_cajas_y_las_cajas_en_línea">El modelo de cajas y las cajas en línea</h2>
+
+<p>Todo lo anterior se aplica por completo a las cajas en bloque. Algunas de las propiedades también pueden aplicarse a las cajas en línea, como las que crea un elemento <code>&lt;span&gt;</code>.</p>
+
+<p>En el ejemplo siguiente hay un elemento <code>&lt;span&gt;</code> dentro de un párrafo al que hemos aplicado las propiedades <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code>, y <code>padding</code>. Puedes ver que la anchura y la altura se ignoran. Se respetan el margen, el relleno y el borde verticales, pero no cambian la relación de otro contenido con respecto a nuestra caja en línea, por lo que el relleno y el borde se superponen a otras palabras en el párrafo. 
+  El relleno, margen y borde horizontales son respetados, lo que hará que otro contenido se separe de la caja.</p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 600)}} </p>
+
+<h2 id="El_uso_de_display_inline-block">El uso de display: inline-block</h2>
+
+<p>Hay un valor especial de <code>display</code> que proporciona un punto medio entre <code>inline</code> y <code>block</code>. Esto es útil para situaciones en las que no deseas que un elemento fuerce un salto de línea, pero sí deseas que se respeten las propiedades <code>width</code> y <code>height</code> para evitar superposiciones como la que se ve arriba.</p>
+
+<p>Un elemento con <code>display: inline-block</code> realiza solamente una parte del comportamiento que presentan los elementos en bloque que ya conocemos:</p>
+
+<ul>
+ <li>Se respetan las propiedades de ancho y alto.</li>
+ <li>El relleno, el margen y el borde mantienen a los otros elementos alejados de la caja.</li>
+</ul>
+
+<p>Sin embargo, no se fuerza un salto de línea, y solo se hace más grande que su contenido si añades las propiedades <code>width</code> y <code>height</code> explícitamente.</p>
+
+<p><strong>En el ejemplo siguiente hemos añadido <code>display: inline-block</code> a nuestro elemento <code>&lt;span&gt;</code>. Cámbialo por <code>display: block</code> o elimina la línea para ver la diferencia entre ambos modelos de visualización.</strong></p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 700)}} </p>
+
+<p>Esto puede ser útil cuando deseas dar a un enlace un área de impacto más grande añadiendo <code>padding</code>. <code>&lt;a&gt;</code> es un elemento en línea como <code>&lt;span&gt;</code>; puedes usar <code>display: inline-block</code> para configurar el área de relleno para facilitar al usuario hacer clic en el enlace.</p>
+
+<p>Esto se ve con bastante frecuencia en las barras de navegación. La navegación siguiente se muestra en una fila usando <code>flexbox</code> y hemos añadido una área de relleno al elemento <code>&lt;a&gt;</code> porque queremos poder cambiar su color de fondo (<code>background-color</code>) cuando se pasa el ratón por encima de <code>&lt;a&gt;</code>. El área de relleno parece superponerse al borde del elemento <code>&lt;ul&gt;</code>. Esto se debe a que <code>&lt;a&gt;</code> es un elemento en línea.</p>
+
+<p><strong>Añade <code>display: inline-block</code> a la regla con el selector <code>.links-list a</code> y verás cómo se soluciona este problema, al hacer que otros elementos respeten el área de relleno.</strong></p>
+
+<p>{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block-nav.html", '100%', 600)}} </p>
+
+<h2 id="Pon_a_prueba_tus_habilidades">Pon a prueba tus habilidades</h2>
+
+<p>Hemos cubierto mucho terreno en este artículo. ¿Recuerdas la información más relevante? Encontrarás más pruebas para verificar que has retenido esa información en <a href="/es/docs/Learn/CSS/Building_blocks/Box_Model_Tasks">Test your skills: The Box Model</a>.</p>
+
+<h2 id="Resumen">Resumen</h2>
+
+<p>Esto es la mayoría de lo que hay que entender sobre el modelo de cajas. Es posible que en el futuro desees volver a este artículo si alguna vez te lías con los tamaños de las cajas en la disposición de tu página web.</p>
+
+<p>En el artículo siguiente veremos cómo se pueden usar los <a href="/es/docs/Learn/CSS/Building_blocks/Fondos_y_bordes">fondos y bordes</a> para hacer que tus simples cajas presenten un aspecto más interesante.</p>
+
+<p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}</p>
+
+<h2 id="En_este_módulo">En este módulo</h2>
+
+<ol>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascada y herencia</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">Selectores CSS</a>
+  <ul>
+   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Selectores de tipo, de clase y de ID</a></li>
+   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Selectores de atributo</a></li>
+   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Las pseudoclases y los pseudoelementos</a></li>
+   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Selectores de combinación</a></li>
+  </ul>
+ </li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">El modelo de cajas</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Fondos y bordes</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">El uso de diferentes direcciones de texto</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">El desbordamiento de los contenidos</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Los valores y las unidades</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Elementos de dimensionado en CSS </a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Imágenes, media y elementos de formulario</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Aplicar estilo a las tablas</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Depurar el CSS</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizar el CSS</a></li>
+</ol>
