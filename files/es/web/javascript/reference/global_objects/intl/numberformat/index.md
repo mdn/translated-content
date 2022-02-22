@@ -51,7 +51,6 @@ console.log(new Intl.NumberFormat().format(number));
 
 ### Utilizando la configuración regional
 
-In order to get the format of the language used in the user interface of your application, make sure to specify that language (and possibly some fallback languages) using the `locales` argument:
 
 Este ejemplo muestra algunas de las variaciones en los formatos de números por región.
 asegúrese de especificar dicho idioma (y de ser posible alternativas) utilizando el argumento `locales`:
