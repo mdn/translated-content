@@ -46,7 +46,7 @@ Tal implementación tendría dos inconvenientes principales:
 
 Por el contrario, en un `WeakMap`, un objeto llave se refiere fuertemente a su contenido siempre que la llave no se recolecte como basura, pero débilmente a partir de ese momento. Como tal, un `WeakMap`:
 
-- No evita la recolección de elementos no utilizados, lo que eventialmente elimina las referencias a la llave del objecto.
+- No evita la recolección de elementos no utilizados, lo que eventualmente elimina las referencias a la llave del objeto.
 - Permite la recolección de basura de cualquier valor si no se hace referencia a sus objectos llave desde otro lugar que no sea un `WeakMap`.
 
 `WeakMap` puede ser una construcción particularmente útil cuando se asignan llaves a información sobre la llave que es valiosa _solo si_ la llave no ha sido recolectada como basura.
