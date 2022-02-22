@@ -32,7 +32,7 @@ El objecto **`Intl.NumberFormat`** habilita el formato numérico de acuerdo al l
 - {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}}
   - : Función de acceso que formatea un rango de números de acuerdo a la configuración region y a las opciones de formato del objeto {{jsxref("Intl.NumberFormat")}} desde el que se llama al método.
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}}
-  - : Devuelve un {{jsxref("Array")}} de objectos que representan el rango de cadenas de números en partes que se pueden usar para el formato personalizado que reconoce la configuración regional.
+  - : Devuelve un {{jsxref("Array")}} de objetos que representan el rango de cadenas de números en partes que se pueden usar para el formato personalizado que reconoce la configuración regional.
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
   - : Devuelve un nuevo objecto con propiedades que reflejan la configuración regional y las opciones de intercalación calculadas durante la inicialización del objecto.
 
