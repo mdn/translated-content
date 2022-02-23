@@ -32,7 +32,7 @@ translation_of: Web/CSS/@namespace
 
 定義された名前空間は、[全称](/ja/docs/Web/CSS/Universal_selectors)、[型](/ja/docs/Web/CSS/Type_selectors)、[属性](/ja/docs/Web/CSS/Attribute_selectors)[セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)において、選択する要素をその名前空間に制限するために使用することができます。 `@namespace` ルールは一般に、複数の名前空間を含む文書を扱う場合—例えば、HTML5 でインラインの SVG や MathML を併用する場合や、複数の語彙が混在する XML などでのみ役立ちます。
 
-`@namespace` ルールは、スタイルシート内ですべての {{cssxref("@charset")}} および [@import]{{cssxref("@import")}} ルールより後、また他のアットルールや[スタイル宣言](/ja/docs/Web/API/CSSStyleDeclaration)より前に配置しなければなりません。
+`@namespace` ルールは、スタイルシート内ですべての {{cssxref("@charset")}} および {{cssxref("@import")}} ルールより後、また他のアットルールや[スタイル宣言](/ja/docs/Web/API/CSSStyleDeclaration)より前に配置しなければなりません。
 
 `@namespace` は、スタイルシートの**既定の名前空間**が定義できます。既定の名前空間を定義するとすべての全称セレクターや要素型セレクター（属性セレクターは除く。後述のメモを参照）は、既定の名前空間内の要素にのみ適用されます。
 
