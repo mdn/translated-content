@@ -27,21 +27,21 @@ A pesar que esta interfaz tiene un constructor, no es posible crear un objeto `D
 ## Tipos de eventos
 
 - {{event('drag')}}
-  - : Este evento es disparado al arrastrar un elemento o texto selecionado.
+  - : Este evento se activa al arrastrar un elemento o texto selecionado.
 - {{event('dragend')}}
-  - : La acción que dispara éste evento es cuano una operación de arrastrado concluye (al dejar de presionar el punto del mouse o presioando la tecla `Esc`).
+  - : La acción que activa éste evento es cuando una operación de arrastrado concluye (al dejar de presionar el punto del mouse o presioando la tecla `Esc`).
 - {{event('dragenter')}}
-  - : Este evento es disparado cuando un elemento o texto selecionado y arrastrado entra a una área valid drop target(objetivo de soltado válido).
+  - : Este evento es activado cuando un elemento o texto selecionado y arrastrado entra a una área de soltado válida.
 - {{event('dragleave')}}
-  - : Este evento se dispara cuando un elemento o texto seleccionado sale de una área valid drop target(objetivo de soltado válido).
+  - : Este evento se activa cuando un elemento o texto seleccionado sale de una área de soltado válida.
 - {{event('dragover')}}
-  - : Este evento es disparado continuamente cuando un elemento o texto selecionado es arrrastrado y el punterose pocisiona sobre una valid drop target (cada 50ms WHEN el puntero no se encuentra en movimiento, ELSE 5ms cuando el puntero se mueve lentamente y 1ms cuando el movimiento es rápido. Este patrón de activación es diferente de {{Event("mouseover")}} ).
+  - : Este evento es activado continuamente cuando un elemento o texto selecionado es arrrastrado y el punterose pocisiona sobre una área de soltado válido (cada 50ms WHEN el puntero no se encuentra en movimiento, ELSE 5ms cuando el puntero se mueve lentamente y 1ms cuando el movimiento es rápido. Este patrón de activación es diferente de {{Event("mouseover")}} ).
 - {{event('dragstart')}}
   - : Este evento se activa cuando el usuario comienza a hacer un arrastre sobre un elemento o texto seleccionado.
 - {{event('drop')}}
-  - : Este evento se activa cuando un elemento o texto selecionado es soltado en un objetivo válido.
+  - : Este evento se activa cuando un elemento o texto selecionado es soltado en un área de soltado válida.
 
-## GlobalEventHandlers
+## Administrador de eventos globales
 
 - {{domxref('GlobalEventHandlers.ondrag')}}
   - : Un {{domxref('GlobalEventHandlers','global event handler')}} para el evento {{event('drag')}}.
