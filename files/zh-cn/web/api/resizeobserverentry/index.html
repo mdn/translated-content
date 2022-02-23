@@ -29,7 +29,7 @@ translation_of: Web/API/ResizeObserverEntry
 
 <p>以下示例通过观察box的宽度变化从而改变其边框圆角半径。</p>
 
-<pre class="brush: js">const resizeOserver = new ResizeObserver(entries =&gt; {
+<pre class="brush: js">const resizeObserver = new ResizeObserver(entries =&gt; {
   for (let entry of entries) {
     entry.target.style.borderRadius = Math.max(0, 250 - entry.contentRect.width) + 'px';
   }
