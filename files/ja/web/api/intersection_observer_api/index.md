@@ -577,7 +577,7 @@ function handleIntersect(entries, observer) {
 
 {{EmbedLiveSample('A_simple_example', 400, 400)}}
 
-より応用的な例は [交差オブザーバー API を使用したタイミング要素の可視性](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility) のセクションを見てください。
+より応用的な例は[交差オブザーバー API を使用したタイミング要素の可視性](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)のセクションを見てください。
 
 ## 仕様書
 
