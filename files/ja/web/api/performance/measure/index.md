@@ -3,60 +3,118 @@ title: performance.measure()
 slug: Web/API/Performance/measure
 tags:
   - API
-  - Web Workers
-  - Web パフォーマンス
   - メソッド
   - リファレンス
+  - ウェブパフォーマンス
+  - ウェブワーカー
+browser-compat: api.Performance.measure
 translation_of: Web/API/Performance/measure
 ---
-<div>{{APIRef("User Timing API")}}</div>
+{{APIRef("User Timing API")}}
 
-<p><strong><code>measure()</code></strong> メソッドは、マーク間、ナビゲーション開始時刻、または現在時刻の間に、ブラウザの<em>パフォーマンスエントリバッファ</em>に名前付き {{domxref("DOMHighResTimeStamp","timestamp")}} を作成します。2つのマーク間を測定するときは、それぞれ<em>開始マーク</em>と<em>終了マーク</em>があります。名前付きタイムスタンプは、<em>メジャー</em>と呼ばれます。</p>
+**`measure()`** メソッドは、マーク間、ナビゲーション開始時刻、または現在時刻の間に、ブラウザーの*パフォーマンスエントリーバッファー*に名前付き {{domxref("DOMHighResTimeStamp","timestamp")}} を作成します。
 
-<p><code>measure</code> は、{{domxref("Performance")}} インターフェイスの1つで取得できます。({{domxref("Performance.getEntries","getEntries()")}}、{{domxref("Performance.getEntriesByName","getEntriesByName()")}}または{{domxref("Performance.getEntriesByType","getEntriesByType()")}})</p>
+2 つのマーク間を測定するときは、それぞれ*開始マーク*と*終了マーク*があります。名前付きタイムスタンプは、*メジャー*と呼ばれます。
 
-<p><code>measure</code> の {{domxref("PerformanceEntry","performance entry")}} は、次のプロパティ値を持ちます。</p>
+`measure` は、{{domxref("Performance")}} インターフェイスのうち、
+({{domxref("Performance.getEntries","getEntries()")}},
+{{domxref("Performance.getEntriesByName","getEntriesByName()")}},
+{{domxref("Performance.getEntriesByType","getEntriesByType()")}}) のいずれかを使用して取得できます。
 
-<ul>
- <li>{{domxref("PerformanceEntry.entryType","entryType")}} - "<code>measure</code>" に設定します</li>
- <li>{{domxref("PerformanceEntry.name","name")}} - measure が作成されたときに指定された "<code>name</code>" に設定します</li>
- <li>{{domxref("PerformanceEntry.startTime","startTime")}} - 開始マークに {{domxref("DOMHighResTimeStamp","timestamp")}} を設定します</li>
- <li>{{domxref("PerformanceEntry.duration","duration")}} - 小節の長さである {{domxref("DOMHighResTimeStamp")}} に設定します (通常、終了マークのタイムスタンプから開始マークのタイムスタンプを引いたもの)</li>
-</ul>
+{{AvailableInWorkers}}
 
-<p>{{AvailableInWorkers}}</p>
+## 構文
 
-<h2 id="構文">構文</h2>
+```js
+measure(measureName)
+measure(measureName, MeasureOptions)
+measure(measureName, startMark)
+measure(measureName, startMark, endMark)
+```
 
-<pre class="syntaxbox"><em>performance</em>.measure(name);
-<em>performance</em>.measure(name, startMark);
-<em>performance</em>.measure(name, startMark, endMark);
-<em>performance</em>.measure(name, undefined, endMark);
-</pre>
+`measureName` のみが指定された場合、開始タイムスタンプはゼロに設定され、（時間を計算するために使用される）終了タイムスタンプは {{domxref("Performance.now()")}} から返される値になります。
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt>name</dt>
- <dd>メジャーの名前を表す {{domxref("DOMString")}}。</dd>
- <dt>startMark {{optional_inline}}</dt>
- <dd>メジャーの開始マークの名前を表す {{domxref("DOMString")}}。{{domxref("PerformanceTiming")}} プロパティの名前になることもあります。省略した場合は、開始時間がナビゲーション開始時間になります。</dd>
- <dt>endMark {{optional_inline}}</dt>
- <dd>メジャーの終了マークの名前を表す {{domxref("DOMString")}}。{{domxref("PerformanceTiming")}} プロパティの名前になることもあります。省略した場合は、現在時刻が使用されます。</dd>
-</dl>
+- `measureName`
+  - : {{domxref("DOMString")}} で、メジャーの名前を表します。
 
-<h3 id="戻り値">戻り値</h3>
+- `MeasureOptions` {{optional_inline}}
+  - : メジャーのすべてのオプションを含むオブジェクトです（`startMark` と `endMark` はこのオブジェクト内で指定することも、独自の引数で指定することもできます）。
 
-<dl>
- <dt>void</dt>
- <dd> </dd>
-</dl>
+    - `detail`
+      - : メジャーに含める任意のメタデータです。
+    - `start`
+      - : 開始時刻として使用される {{domxref("DOMHighResTimeStamp")}} のタイムスタンプ、または開始マークとして使用される {{domxref("DOMString")}} です。
+          これが開始マークの名前を表す場合は、 `startMark` の場合と同じように定義します（すなわち、既存のマークまたは {{domxref("PerformanceTiming")}} プロパティの名前でなければなりません）。
+    - `duration`
+      - : 開始マークと終了マークのそれぞれの時刻 ({{domxref("DOMHighResTimeStamp")}}) 間の時間.
+    - `end`
+      - : 終了時刻として使用される {{domxref("DOMHighResTimeStamp")}} のタイムスタンプ、または終了マークとして使用される {{domxref("DOMString")}} です。
+          これが終了マークの名前を表す場合は、 `endMark` の場合と同じように定義します（すなわち、既存のマークまたは {{domxref("PerformanceTiming")}} プロパティの名前でなければなりません）。
 
-<h2 id="例">例</h2>
+- `startMark` {{optional_inline}}
+  - : {{domxref("DOMString")}} で、このメジャーの開始マークの名前を表します。
+    {{domxref("PerformanceTiming")}} プロパティの名前にすることもできます。
+    既存の {{domxref('PerformanceMark')}} または {{domxref("PerformanceTiming")}} を表していない名前を指定すると `SyntaxError` の {{domxref("DOMException")}} が発生します。
 
-<p>次の例は、ブラウザのパフォーマンスエントリバッファに <code>measure()</code> を使用して新しい<em>メジャー</em>{{domxref("PerformanceEntry","パフォーマンスエントリ")}}を作成する方法を示しています。</p>
+- `endMark` {{optional_inline}}
+  - : {{domxref("DOMString")}} で、このメジャーの終了マークの名前を表します。
+    {{domxref("PerformanceTiming")}} プロパティの名前にすることもできます。
+    既存の {{domxref('PerformanceMark')}} または {{domxref("PerformanceTiming")}} を表していない名前を指定すると `SyntaxError` の {{domxref("DOMException")}} が発生します。
 
-<pre class="brush: js">const markerNameA = "example-marker-a"
+### 返値
+
+生成された {{domxref("PerformanceMeasure")}} のエントリーです。
+
+返される*メジャー*には、以下のプロパティ値になります。
+
+- {{domxref("PerformanceEntry.entryType","entryType")}} - "`measure`" が設定されます。
+- {{domxref("PerformanceEntry.name","name")}} - "`name`" 引数が設定されます。
+- {{domxref("PerformanceEntry.startTime","startTime")}} - 以下のように設定されます。
+  - `MeasureOptions.start` で指定された場合は {{domxref("DOMHighResTimeStamp","timestamp")}}。
+  - `MeasureOptions.start` または `startMark` で指定された場合は、開始マークの{{domxref("DOMHighResTimeStamp","タイムスタンプ", "", 1)}}。
+  - `MeasureOptions.end` と `MeasureOptions.duration` から計算されたタイムスタンプ（`MeasureOptions.start` が指定されていない場合）。
+  - 指定されておらず、他の値から特定することができない場合は 0。
+  
+- {{domxref("PerformanceEntry.duration","duration")}} - {{domxref("DOMHighResTimeStamp")}} で、終了タイムスタンプから `startTime` を引いて計算されたメジャーの時間を設定します。
+
+  終了タイムスタンプは以下のいずれかになります。
+  - `MeasureOptions.end` で指定された場合は {{domxref("DOMHighResTimeStamp","timestamp")}}。
+  - `MeasureOptions.end` または `endMark` で指定された場合は、終了マークの{{domxref("DOMHighResTimeStamp","タイムスタンプ", "", 1)}}。
+  - `MeasureOptions.start` と `MeasureOptions.duration` から計算されたタイムスタンプ（`MeasureOptions.end` が指定されていない場合）。
+  - 終了マークが指定されていないか、他の値から特定することができない場合は、 {{domxref("Performance.now()")}} で返される値。
+- {{domxref("PerformanceMeasure","detail")}} - `MeasureOptions` で渡された値に設定されます。
+
+## 例外
+
+- `TypeError` {{domxref("DOMException")}}
+  - : start, end, duration の何れかが曖昧になる場合に発生します。
+
+    - `endMark` と `MeasureOptions` の両方が指定された。
+    - `MeasureOptions` が指定されたが、 `start` および `end` メンバーが指定されなかった。
+    - `MeasureOptions` が `start`, `end`, `duration` のメンバーすべてある状態（そして不整合な状態）で指定された。
+
+- `SyntaxError` {{domxref("DOMException")}}
+  - : その名前のマークが存在しない場合に発生します。
+
+    - `endMark` または `MeasureOptions.end` のどちらかを使用してエンドマークが指定されたが、一致する名前のパフォーマンスバッファーに {{domxref('PerformanceMark')}}がない。
+    - `endMark` または `MeasureOptions.end` のどちらかを使用してエンドマークが指定されたが、 {{domxref("PerformanceTiming")}} インターフェイスの読み取り専用属性に変換することができない。
+    - 開始マークが `startMark` または `MeasureOptions.start` のどちらかで指定されているが、一致する名前のパフォーマンスバッファーに {{domxref('PerformanceMark')}}がない。
+    - 開始マークが `startMark` または `MeasureOptions.start` のどちらかで指定されているが、 {{domxref("PerformanceTiming")}} インターフェイスの読み取り専用属性に変換することができない。
+
+- `DataCloneError` {{domxref("DOMException")}}
+  - : `MeasureOptions.detail` が `null` 以外の値であり、 HTML の "StructuredSerialize" アルゴリズムでシリアライズできない場合です。
+
+- `RangeError`
+  - : `MeasureOptions.detail` が `null` 以外の値であり、 HTML の "StructuredSerialize" アルゴリズムでシリアライズする際にメモリーが割り当てられなかった場合です。
+
+## 例
+
+次の例は、ブラウザーのパフォーマンスエントリーバッファーに `measure()` を使用して新しい*メジャー*{{domxref("PerformanceEntry","パフォーマンスエントリー")}}を作成する方法を示しています。
+
+```js
+const markerNameA = "example-marker-a"
 const markerNameB = "example-marker-b"
 
 // いくつかのネストしたタイムアウトを実行し、それぞれに対して PerformanceMark を作成します。
@@ -74,37 +132,18 @@ setTimeout(function() {
     // すべての測定値を引き出します。
     console.log(performance.getEntriesByType("measure"));
 
-    // 最後に、エントリを整理します。
+    // 最後に、エントリ-
+    を整理します。
     performance.clearMarks();
     performance.clearMeasures();
   }, 1000);
 }, 1000);
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing Level 2', '#dom-performance-measure', 'measure()')}}</td>
-   <td>{{Spec2('User Timing Level 2')}}</td>
-   <td><code>measure()</code> 処理モデルを明確にします。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('User Timing', '#dom-performance-measure', 'measure()')}}</td>
-   <td>{{Spec2('User Timing')}}</td>
-   <td>基本的な定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Performance.measure")}}</p>
-</div>
+{{Compat}}
