@@ -1,17 +1,16 @@
 ---
 title: image-rendering
 slug: Web/CSS/Image-rendering
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/image-rendering
+browser-compat: css.properties.image-rendering
 ---
 {{CSSRef}}
 
-La propriété **`image-rendering`** fournit une indication au navigateur à propos de l'algorithme qui devrait être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies via les autres propriétés CSS et aux éléments fils.
+La propriété [CSS](/fr/docs/Web/CSS) **`image-rendering`** fournit une indication au navigateur à propos de l'algorithme qui devrait être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies via les autres propriétés CSS et aux éléments descendants de l'élément ciblé.
 
-L'agent utilisateur redimensionnera une image si l'auteur de la page indique des dimensions différentes que la taille naturelle de l'image ou si l'utilisateur interagit en zoomant par exemple. Cette propriété n'a aucun effet sur les images qui ne sont pas redimensionnées. Si, par exemple, la taille naturelle de l'image est `100px` par `100px` et que l'auteur indique les dimensions `200px` par `200px` (ou `50px` par `50px`), l'image sera agrandie (ou réduite) aux nouvelles dimensions via l'algorithme indiqué. Le redimensionnement peut aussi avoir lieu suite aux interactions utilisateurs (avec un zoom par exemple).
+{{EmbedInteractiveExample("pages/css/image-rendering.html")}}
+
+L'agent utilisateur redimensionnera une image si l'auteur de la page indique des dimensions différentes de la taille naturelle de l'image ou si l'utilisateur interagit en zoomant par exemple. Si, par exemple, la taille naturelle de l'image est `100×100px` et que l'auteur indique les dimensions `200×200px` (ou `50×50px`), l'image sera agrandie (ou réduite) aux nouvelles dimensions via l'algorithme indiqué. Le redimensionnement peut aussi avoir lieu suite aux interactions utilisateurs (avec un zoom par exemple). Cette propriété n'a aucun effet sur les images qui ne sont pas redimensionnées.
 
 ## Syntaxe
 
@@ -24,86 +23,87 @@ image-rendering: pixelated;
 /* Valeurs globales */
 image-rendering: inherit;
 image-rendering: initial;
+image-rendering: revert;
 image-rendering: unset;
 ```
 
 ### Valeurs
 
-- **`auto`**
-  - : L'image devrait être redimensionnée grâce à un algorithme qui optimise l'apparence de l'image. Les algorithmes de redimensionnement « doux » comme l'interpolation bilinéaire, sont acceptables. Ces algorithmes sont destinés à être utilisés sur des images comme des photos. Depuis la version 1.9 (Firefox 3.0), Gecko utilise un algorithme de rééchantillonnage bilinéaire.
-- **`crisp-edges`**
-  - : L'algorithme utilisé doit avant tout préserver le contraste et les bords de l'image, il ne doit pas ajouter de couleur intermédiaire ou de flou. Cette valeur est conçue pour être utilisée sur du _pixel art_. Les algorithmes éligibles sont par exemple l'interpolation au plus proche voisin, les familles d'algorithmes 2×SaI et [hqx](https://en.wikipedia.org/wiki/Hqx).
-- `high-quality`{{Experimental_inline}}
+- `auto`
+  - : L'algorithme utilisé dépend de l'agent utilisateur. Depuis la version 1.9 (Firefox 3.0), Gecko utilise un algorithme de rééchantillonnage bilinéaire.
+- `crisp-edges`
+  - : L'algorithme utilisé est l'interpolation au plus proche voisin.
+- `high-quality` {{Experimental_inline}}
   - : Cette valeur est proche de `smooth` mais favorise un redimensionnement avec une qualité élevée. Si les ressources du système sont limitées, ce sont les images ciblées avec `high-quality` qui devraient être priorisées par rapport aux autres s'il est nécessaire de dégrader la qualité.
-- **`pixelated`**
-  - : Lorsque l'image est agrandie c'est l'algorithme « du plus proche voisin » qui doit être utilisé afin que l'image apparaisse comme composée de grands pixels. Lorsque l'image est réduite, le comportement est le même que `auto`.
+- `pixelated`
+  - : L'algorithme utilisé est l'interpolation au plus proche voisin. L'image est agrandie au multiple entier de taille qui est supérieur ou égal à sa taille originale puis réduite à la taille cible, comme pour `smooth`. Lorsque l'agrandissement demandé est un multiple entier de la taille originale, l'effet obtenu sera le même qu'avec `crisp-edges`
 - `smooth`{{Experimental_inline}}
   - : L'algorithme utilisé pour le redimensionnement doit maximiser l'apparence de l'image. Les algorithmes qui adoucissent les couleurs (ex. l'interpolation bilinéaire) sont acceptables. Cette valeur est destinée aux images telles que les photos.
 
 > **Note :** Les valeurs `optimizeQuality` et `optimizeSpeed` qui étaient présentes dans un brouillon de la spécification (et qui provenaient de la spécification équivalente pour SVG) sont synonymes respectifs de `smooth` et `pixelated`.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Paramétrer l'algorithme de redimensionnement des images
+
+En pratique, les valeurs `pixelated` et `crisp-edges` peuvent être combinées afin de fournir des alternatives l'une à l'autre. L'API [Canvas](/fr/docs/Web/API/Canvas_API) peut fournir [une solution alternative pour `pixelated`](http://phrogz.net/tmp/canvas_image_zoom.html) via une manipulation manuelle des données de l'image ou avec [`imageSmoothingEnabled`](/fr/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled).
+
+```html hidden
+<div>
+  <img class="auto" alt="auto" src="blumen.jpg" />
+  <img class="pixelated" alt="pixelated" src="blumen.jpg" />
+  <img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" />
+</div>
+```
+
+```css hidden
+img {
+  height: 200px;
+}
+```
+
+#### CSS
 
 ```css
-.pixels_petits {
-  height: 50px;
-  width: 50px;
-}
-
-.pixels_grands {
-  height: 69px;
-  width: 69px;
-}
-
-.chapeau_petit {
-  height: 89px;
-  width: 89px;
-}
-.defaut {
+.auto {
   image-rendering: auto;
 }
 
-.contraste {
+.pixelated {
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: pixelated;
+}
+
+.crisp-edges {
+  image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 ```
 
-### HTML
+#### Résultat
 
-```html
-<p>Avec <code>auto</code> :</p>
-<img class="pixels_petits defaut" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/>
-<img class="pixels_grands defaut" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/>
-<img class="chapeau_petit defaut" alt="chapeau" src="https://mdn.mozillademos.org/files/2767/hut.jpg"/>
-
-<p>Avec <code>crisp-edges</code> :</p>
-<img class="pixels_petits contraste" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/>
-<img class="pixels_grands contraste" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/>
-<img class="chapeau_petit contraste" alt="chapeau" src="https://mdn.mozillademos.org/files/2767/hut.jpg"/>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples","100%","100%")}}
-
-> **Note :** En pratique, les règles `pixelated` et `crisp-edges` peuvent être combinées en cas de besoin (l'une pouvant combler les éventuelles manques de l'autre et _vice versa_). Si besoin, un {{HTMLElement("canvas")}} peut fournir [une alternative pour les valeurs `crisp-edge` et `optimize-contrast`](http://phrogz.net/tmp/canvas_image_zoom.html) via la manipulation manuelle des données de l'image ou avec [`imageSmoothingEnabled`](/fr/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled).
+{{EmbedLiveSample('',200,250)}}
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Images', '#the-image-rendering', 'image-rendering')}} | {{Spec2('CSS3 Images')}} | Définition initiale. |
-
-> **Note :** Cette valeur était, initialement, proche de la propriété SVG `image-rendering`. Cependant, ces valeurs ont « divergé » et sont assez différentes désormais.
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.image-rendering")}}
+{{Compat}}
+
+## Voir aussi
+
+- D'autres propriétés CSS utilisées avec les images
+  - [`object-fit`](/fr/docs/Web/CSS/object-fit)
+  - [`object-position`](/fr/docs/Web/CSS/object-position)
+  - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
+  - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)
