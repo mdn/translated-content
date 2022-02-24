@@ -12,13 +12,13 @@ La propriété **`BatteryManager.dischargingTime`** indique le temps, en seconde
 
 ## Exemple
 
-### Code HTML
+### HTML
 
 ```html
 <div id="dischargingTime">(temps de décharge inconnu)</div>
 ```
 
-### Code JavaScript
+### JavaScript
 
 ```js
 navigator.getBattery().then(battery => {
@@ -28,7 +28,9 @@ navigator.getBattery().then(battery => {
 });
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 30)}}
+### Résultat
+
+{{EmbedLiveSample('', '100%', 30)}}
 
 ## Spécifications
 

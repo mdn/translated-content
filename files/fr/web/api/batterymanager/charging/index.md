@@ -12,13 +12,13 @@ Si la batterie est en charge, la variable a la valeur `true`. Sinon, dans le cas
 
 ## Exemple
 
-### Code HTML
+### HTML
 
 ```html
 <div id="charging">(état de charge inconnu)</div>
 ```
 
-### Code JavaScript
+### JavaScript
 
 ```js
 navigator.getBattery().then(battery => {
@@ -28,7 +28,9 @@ navigator.getBattery().then(battery => {
 });
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 30)}}
+### Résultat
+
+{{EmbedLiveSample('', '100%', 30)}}
 
 ## Spécifications
 

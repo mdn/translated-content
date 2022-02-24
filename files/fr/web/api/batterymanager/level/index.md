@@ -10,13 +10,13 @@ La propriété **`BatteryManager.level`** indique le niveau de charge de la batt
 
 ## Exemple
 
-### Code HTML
+### HTML
 
 ```html
 <div id="level">(niveau de batterie inconnu)</div>
 ```
 
-### Code JavaScript
+### JavaScript
 
 ```js
 navigator.getBattery().then(battery => {
@@ -26,7 +26,9 @@ navigator.getBattery().then(battery => {
 });
 ```
 
-{{EmbedLiveSample('Exemple', '100%', 30, '', 'Web/API/BatteryManager/level')}}
+### Résultat
+
+{{EmbedLiveSample('', '100%', 30, '', 'Web/API/BatteryManager/level')}}
 
 ## Spécifications
 

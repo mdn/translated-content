@@ -12,7 +12,7 @@ L'**API <i lang="en">Battery Status</i>**, souvent mentionnée sous le nom **<i 
 
 ## Interfaces
 
-- [`BatteryManager`](/fr/docs/Web/API/WorkerNavigator)
+- [`BatteryManager`](/fr/docs/Web/API/BatteryManager)
   - : Fournit des informations sur le niveau de charge du système.
 - [`navigator.getBattery()`](/fr/docs/Web/API/Navigator/getBattery) {{ReadOnlyInline}}
   - : Renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution est un objet `BatteryManager`.
