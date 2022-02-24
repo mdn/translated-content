@@ -52,7 +52,7 @@ translation_of: Learn/JavaScript/Asynchronous/Timeouts_and_intervals
 <p><strong>Note:</strong> 타임아웃 콜백은 단독으로 실행되지 않기 때문에 지정된 시간이 지난 그 시점에 정확히  콜백 될 것이라는 보장은 없다. 그보다는 최소한 그 정도의 시간이 지난 후에 호출된다. 메인 스레드가 실행해야 할 핸들러를 찾기 위해 이런 핸들러들을 살펴보는 시점에 도달할 때까지 타임아웃 핸들러를 실행할 수 없다.</p>
 </div>
 
-<p>아래 예제에서 브라우저는 2분이 지나면 익명의 함수를 실행하고 경보 메시지를 띄울 것이다. (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see it running live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see the source code</a>):</p>
+<p>아래 예제에서 브라우저는 2초가 지나면 익명의 함수를 실행하고 경보 메시지를 띄울 것이다. (<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see it running live</a>, and <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see the source code</a>):</p>
 
 <pre class="brush: js">let myGreeting = setTimeout(function() {
   alert('Hello, Mr. Universe!');
