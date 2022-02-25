@@ -638,7 +638,7 @@ This guideline relates to making sure core content is easy to discernable from b
         <ul>
           <li>
             No horizontal scrolling for right-to-left languages (like English)
-            or left-to-right languages (like Arabic)  
+            or left-to-right languages (like Arabic)
           </li>
           <li>
             No vertical scrolling for top-to-bottom languages (like Japanese)
