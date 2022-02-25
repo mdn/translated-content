@@ -20,7 +20,7 @@ TTI est calculé en exploitant les informations de l'API [<i lang="en">Long Task
 
   (en anglais)
 
-- <i lang="en">Time to Interactive — focusing on human-centric metrics</i>
+- <i lang="en">Time to Interactive — focusing on human-centric metrics</i>
 
   <i lang="en"> par Radimir Bitsov</i>
 
