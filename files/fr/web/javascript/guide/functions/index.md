@@ -597,7 +597,7 @@ var a = [
   "Hydrogen",
   "Helium",
   "Lithium",
-  "Beryl­lium"
+  "Beryllium"
 ];
 
 var a2 = a.map(function(s){ return s.length });

@@ -85,7 +85,7 @@ tabbed-custom-element::part(active tab) {
 
 ## Spécifications
 
-| Spécification                                                        | ­État                                    | Commentaires         |
+| Spécification                                                        | État                                    | Commentaires         |
 | -------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
 | {{SpecName("CSS Shadow Parts", "#part", "::part")}} | {{Spec2("CSS Shadow Parts")}} | Définition initiale. |
 
