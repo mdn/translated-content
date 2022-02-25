@@ -10,7 +10,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valu
 ---
 L'attribut `aria-valuenow` est utilisé pour définir la valeur courante de l'intervalle d'un composant tel qu'un curseur, un bouton tournant (potentiomètre) ou une barre de progression. Si la valeur courante n'est pas connue, l'attribut `aria-valuenow` ne devrait pas être défini. Si `aria-valuenow` a des valeurs minimale et maximale connues, on devrait définir les attributs [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute) et [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute).
 
-Lorsque la valeur rendue ne peut être précisément représentée par un nombre, les développeuses et développeurs **DEVRAIENT** utiliser l'attribut [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute) en conjonction avec `aria-valuenow` pour fournir une représentation humainement lisible de la valeur courante. Par exemple, un curseur peut avoir des valeurs retournées comme `"petite"`, `"moyenne"` et `"grande"`. Dans ce cas, les valeurs de `aria-valuenow` peuvent varier de 1 à 3, ce qui indique la position de chaque valeur dans l'espace de valeurs, mais la valeur de [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute) sera l'une des chaînes : `"petite"`, `"moyenne"` ou `"grande"`.
+Lorsque la valeur rendue ne peut être précisément représentée par un nombre, les développeuses et développeurs **DEVRAIENT** utiliser l'attribut [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute) en conjonction avec `aria-valuenow` pour fournir une représentation humainement lisible de la valeur courante. Par exemple, un curseur peut avoir des valeurs retournées comme `"petite"`, `"moyenne"` et `"grande"`. Dans ce cas, les valeurs de `aria-valuenow` peuvent varier de 1 à 3, ce qui indique la position de chaque valeur dans l'espace de valeurs, mais la valeur de [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute) sera l'une des chaînes&nbsp;: `"petite"`, `"moyenne"` ou `"grande"`.
 
 L'attribut `aria-valuenow` est **obligatoire** pour les rôles [`slider`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role), [`scrollbar`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_scrollbar_role) et [`spinbutton`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_spinbutton_role).
 
@@ -69,7 +69,7 @@ L'extrait de code ci-dessous affiche un curseur simple avec une valeur courante 
 
 ## Compatibilité
 
-À définir : ajouter les informations de prise en charge pour les combinaisons les plus courantes d'agents utilisateurs et de produits de technologies d'assistance.
+À définir&nbsp;: ajouter les informations de prise en charge pour les combinaisons les plus courantes d'agents utilisateurs et de produits de technologies d'assistance.
 
 ## Autres ressources
 

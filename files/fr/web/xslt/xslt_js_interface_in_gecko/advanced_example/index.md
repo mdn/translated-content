@@ -14,9 +14,9 @@ La fichier XSLT a un paramètre appelé `myOrder` que le JavaScript définit pou
 
 Une fois la transformation complétée, le résultat est ajouté au document, comme indiqué dans l'exemple.
 
-**Figure 7 : Tri selon le contenu des divvoir l'exemple**
+**Figure 7&nbsp;: Tri selon le contenu des divvoir l'exemple**
 
-_Fragment XHTML :_
+_Fragment XHTML&nbsp;:_
 
     <div id="example">
       <div>1</div>
@@ -82,7 +82,7 @@ _JavaScript_
       document.getElementById("example").appendChild(fragment)
     }
 
-_Feuille de style XSL :_
+_Feuille de style XSL&nbsp;:_
 
     <?xml version="1.0" encoding="UTF-8"?>
     <xsl:stylesheet version="1.0" xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">

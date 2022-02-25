@@ -385,7 +385,7 @@ Dans l'exemple ci-dessus, nous modifions le code de l'exemple {{anch('Add_a_simp
 
 ### Pourquoi utiliser addEventListener() ?
 
-`addEventListener` est la manière d'enregistrer un écouteur d'évènements telle que spécifiée dans le DOM du W3C. Ses avantages sont les suivants :
+`addEventListener` est la manière d'enregistrer un écouteur d'évènements telle que spécifiée dans le DOM du W3C. Ses avantages sont les suivants&nbsp;:
 
 - Elle permet d'ajouter plus d'un seul gestionnaire pour un évènement. Cela peut s'avérer particulièrement utile pour les bibliothèques {{Glossary("AJAX")}}, les modules JavaScript ou tout autre sorte de code qui a besoin de fonctionner correctement avec d'autres bibliothèques/extensions.
 - Elle donne un contrôle plus fin sur la phase d'activation de l'écouteur (capture contre propagation)

@@ -34,7 +34,7 @@ On peut également créer des styles particuliers pour une portion spécifique d
 
 ## Cibler tous les éléments
 
-Si le but est de créer un style commun qui s'appliquera à tous les éléments lorsque ceux-ci seront ciblés, un sélecteur universel utilisant seulement la pseudo-classe s'avèrera très pratique :
+Si le but est de créer un style commun qui s'appliquera à tous les éléments lorsque ceux-ci seront ciblés, un sélecteur universel utilisant seulement la pseudo-classe s'avèrera très pratique&nbsp;:
 
 ```css
 :target {

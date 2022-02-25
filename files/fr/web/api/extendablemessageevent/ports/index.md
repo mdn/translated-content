@@ -59,5 +59,5 @@ self.onmessage = function(e) {
 
 - [Utilisation des Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Exemple simple des service workers](https://github.com/mdn/sw-test)
-- [Est-ce que les service workers sont prêts ?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Est-ce que les service workers sont prêts&nbsp;?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Canal de messages](/en-US/docs/Web/API/Channel_Messaging_API)

@@ -51,7 +51,7 @@ function collisionDetection() {
 }
 ```
 
-Appelez la fonction `drawScore()` dans la fonction `draw()` pour garder le score à jour à chaque nouvelle frame — ajoutez la ligne suivante dans la fonction `draw()`, en dessous de l'appel à `drawPaddle()` :
+Appelez la fonction `drawScore()` dans la fonction `draw()` pour garder le score à jour à chaque nouvelle frame — ajoutez la ligne suivante dans la fonction `draw()`, en dessous de l'appel à `drawPaddle()`&nbsp;:
 
 ```js
 drawScore();

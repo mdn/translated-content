@@ -151,7 +151,7 @@ isNaN([1]) // false
 isNaN([1,2]) // true
 ```
 
-JavaScript dispose également de valeur spéciales pour l'infini [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) et l'infini négatif (`-Infinity`) :
+JavaScript dispose également de valeur spéciales pour l'infini [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) et l'infini négatif (`-Infinity`)&nbsp;:
 
 ```js
 1 / 0; // Infinity
@@ -259,7 +259,7 @@ for (var variableVar = 0; variableVar < 5; variableVar++) {
 
 Si on déclare une variable sans lui affecter aucune valeur, son type sera alors `undefined`.
 
-JavaScript possède une différence importante quant aux autres langages de programmation comme Java : en JavaScript, les blocs ne créent pas de portées pour les variables déclarées avec `var`, c'est la fonction qui gère la portée d'une variable déclarée avec `var`. Aussi, si une variable est définie avec `var` au sein d'une instruction conditionnelle avec `if`, cette variable sera visible depuis l'ensemble de la fonction. Avec ECMAScript 2015, les instructions de déclarations, [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) permettent de créer des variables dont la portée est limitée à celle du bloc qui l'englobe.
+JavaScript possède une différence importante quant aux autres langages de programmation comme Java&nbsp;: en JavaScript, les blocs ne créent pas de portées pour les variables déclarées avec `var`, c'est la fonction qui gère la portée d'une variable déclarée avec `var`. Aussi, si une variable est définie avec `var` au sein d'une instruction conditionnelle avec `if`, cette variable sera visible depuis l'ensemble de la fonction. Avec ECMAScript 2015, les instructions de déclarations, [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) permettent de créer des variables dont la portée est limitée à celle du bloc qui l'englobe.
 
 ## Les opérateurs
 

@@ -224,7 +224,7 @@ En l'état, la fonction n'est pas très utile — on ne veut pas montrer le mê
     msg.textContent = msgText;
     ```
 
-3.  Vous devez maintenant mettre à jour votre appel de fonction pour inclure un texte de message mis à jour. Modifiez la ligne suivante :
+3.  Vous devez maintenant mettre à jour votre appel de fonction pour inclure un texte de message mis à jour. Modifiez la ligne suivante&nbsp;:
 
     ```js
     btn.onclick = displayMessage;
@@ -262,7 +262,7 @@ Passons au paramètre suivant. Celui-ci va demander un peu plus de travail —�
     width: 242px;
     ```
 
-3.  Ensuite, ajoutez les lignes à l'intérieur de la règle CSS `.msgBox p { ... }` :
+3.  Ensuite, ajoutez les lignes à l'intérieur de la règle CSS `.msgBox p { ... }`&nbsp;:
 
     ```css
     padding-left: 82px;
@@ -284,7 +284,7 @@ Passons au paramètre suivant. Celui-ci va demander un peu plus de travail —�
     }
     ```
 
-    Ici, quand `msgType` a la valeur `'warning'`, l'icône d'avertissement est affichée et le fond du panneau prend la couleur rouge. Si `msgType` a la valeur `'chat'`, l'icône de chat est affichée et l'arrière-plan du panneau est bleu. Si le paramètre `msgType` n'a pas de valeur du tout (ou s'il a une valeur totalement différente), alors la partie du code contenue dans `else { ... }` est exécutée : le paragraphe prend un padding par défaut et il n'y a ni icône ni couleur d'arrière-plan. En fait, on fournit un état par défaut si aucun paramètre `msgType` n'est fourni, ce qui signifie qu'il s'agit d'un paramètre facultatif !
+    Ici, quand `msgType` a la valeur `'warning'`, l'icône d'avertissement est affichée et le fond du panneau prend la couleur rouge. Si `msgType` a la valeur `'chat'`, l'icône de chat est affichée et l'arrière-plan du panneau est bleu. Si le paramètre `msgType` n'a pas de valeur du tout (ou s'il a une valeur totalement différente), alors la partie du code contenue dans `else { ... }` est exécutée&nbsp;: le paragraphe prend un padding par défaut et il n'y a ni icône ni couleur d'arrière-plan. En fait, on fournit un état par défaut si aucun paramètre `msgType` n'est fourni, ce qui signifie qu'il s'agit d'un paramètre facultatif !
 
 5.  Nous allons tester notre fonction mise à jour, essayez de mettre à jour l'appel `displayMessage()` :
 
@@ -305,6 +305,6 @@ Passons au paramètre suivant. Celui-ci va demander un peu plus de travail —�
 
 ## Conclusion
 
-Vous êtes venu à bout de cette activité, félicitations ! Cet article vous a amené à travers tout le processus de construction d'une fonction pratique personnalisée, qui avec un peu plus de travail pourrait être transposée dans un projet réel. Dans l'article suivant, nous allons conclure l'apprentissage des fonctions en expliquant un autre concept connexe essentiel — les valeurs de retour.
+Vous êtes venu à bout de cette activité, félicitations&nbsp;! Cet article vous a amené à travers tout le processus de construction d'une fonction pratique personnalisée, qui avec un peu plus de travail pourrait être transposée dans un projet réel. Dans l'article suivant, nous allons conclure l'apprentissage des fonctions en expliquant un autre concept connexe essentiel — les valeurs de retour.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}

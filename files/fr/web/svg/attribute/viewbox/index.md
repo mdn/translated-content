@@ -43,11 +43,11 @@ Les valeurs négatives de `width` et `height` ne sont pas autorisées et une va
 
 ## Exemple
 
-Nous créons ici un viewport de 300×200 unités, ce qui fait que chaque unité de l'élément SVG correspondra à une unité du viewport. On aura donc un élément SVG dont le système de coordonnée ira de 0 à 300 en largeur et de 0 à 200 en hauteur :
+Nous créons ici un viewport de 300×200 unités, ce qui fait que chaque unité de l'élément SVG correspondra à une unité du viewport. On aura donc un élément SVG dont le système de coordonnée ira de 0 à 300 en largeur et de 0 à 200 en hauteur&nbsp;:
 
 `<svg width="300" height="200"></svg>`
 
-En ajoutant une notion de viewbox, nous transformons ce système de coordonnées afin qu'il aille de 0 à w à l'horizontale et de 0 à h à la verticale. Ici, ce sera donc 300/30 (=10) en x ce qui équivaut à 10 unités d'élément SVG pour 1 unité du viewport :
+En ajoutant une notion de viewbox, nous transformons ce système de coordonnées afin qu'il aille de 0 à w à l'horizontale et de 0 à h à la verticale. Ici, ce sera donc 300/30 (=10) en x ce qui équivaut à 10 unités d'élément SVG pour 1 unité du viewport&nbsp;:
 
 `<svg width="300" height="200" viewBox="0 0 30 20"></svg>`
 

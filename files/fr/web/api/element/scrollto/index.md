@@ -35,7 +35,7 @@ En utilisant des coordonnées :
 element.scrollTo(0, 1000);
 ```
 
-Ou en utilisant `options` :
+Ou en utilisant `options`&nbsp;:
 
 ```js
 element.scrollTo({

@@ -18,7 +18,7 @@ Un objet de l'arbre d'accessibilité contient quatre éléments :
 - **name**
   - : Comment peut-on faire référence à cet élément ? Par exemple, pour un lien contenant le texte "Lire la suite" name contiendra 'Lire la suite' (pour en savoir plus sur la façon dont la valeur de name est déterminée voir la spécification suivante : [Accessible Name and Description Computation](https://www.w3.org/TR/accname-1.1/)).
 - **description**
-  - : Comment peut-on décrire cet élément si l'on veut apporter une information en plus de son nom ? La description d'un tableau pourrait expliquer quel genre d'information ce tableau apporte.
+  - : Comment peut-on décrire cet élément si l'on veut apporter une information en plus de son nom&nbsp;? La description d'un tableau pourrait expliquer quel genre d'information ce tableau apporte.
 - **role**
   - : Quel genre de chose est cet élément ? Par exemple est-ce un bouton, une barre de navigation ou une liste d'éléments ?
 - **state**

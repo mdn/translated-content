@@ -74,7 +74,7 @@ Nous allons explorer les fonctionnalités de base de JavaScript pour que vous pu
 
 ### Variables
 
-Les {{Glossary("Variable", "variables")}} sont des conteneurs dans lesquels on peut stocker des valeurs. Pour commencer, il faut déclarer une variable avec le mot-clé `let` en le faisant suivre de son nom :
+Les {{Glossary("Variable", "variables")}} sont des conteneurs dans lesquels on peut stocker des valeurs. Pour commencer, il faut déclarer une variable avec le mot-clé `let` en le faisant suivre de son nom&nbsp;:
 
 ```js
 let myVariable;
@@ -111,7 +111,7 @@ let myVariable = 'Bob';
 myVariable = 'Étienne';
 ```
 
-Notez que les variables peuvent contenir des[ types différents de données](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives) :
+Notez que les variables peuvent contenir des[ types différents de données](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives)&nbsp;:
 
 <table class="standard-table">
   <thead>

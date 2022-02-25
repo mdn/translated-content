@@ -119,7 +119,7 @@ const classes = `header ${ isLargeScreen() ? '' :
     (item.isCollapsed ? 'icon-expander' : 'icon-collapser') }`;
 ```
 
-En ES2015 avec des gabarits imbriqués :
+En ES2015 avec des gabarits imbriqués&nbsp;:
 
 ```js
 const classes = `header ${ isLargeScreen() ? '' :
@@ -174,7 +174,7 @@ etiquette`ligne de texte 1 \n ligne de texte 2`;
 // "ligne de texte 1 \n ligne de texte 2"
 ```
 
-En outre, la méthode {{jsxref("String.raw()")}} a pour fonction de créer des chaînes de caractères brutes, exactement comme la fonction de gabarit et de concaténation de chaînes par défaut le ferait :
+En outre, la méthode {{jsxref("String.raw()")}} a pour fonction de créer des chaînes de caractères brutes, exactement comme la fonction de gabarit et de concaténation de chaînes par défaut le ferait&nbsp;:
 
 ```js
 let chn = String.raw`Salut\n${2+3}!`;
@@ -222,7 +222,7 @@ latex`\unicode`
 // { bidouillee: undefined, brute: "\\unicode" }
 ```
 
-Notez que la restriction sur les séquences d'échappement est uniquement supprimée pour les gabarits _étiquetés_, et non pour les gabarits de libellés *non étiquetés* :
+Notez que la restriction sur les séquences d'échappement est uniquement supprimée pour les gabarits _étiquetés_, et non pour les gabarits de libellés *non étiquetés*&nbsp;:
 
 ```js example-bad
 let mauvaise = `mauvaise séquence d'échappement : \unicode`;

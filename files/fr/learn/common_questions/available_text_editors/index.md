@@ -17,7 +17,7 @@ Dans cet article, nous présentons les éléments principaux à connaître pour 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez déjà connaître
         <a href="/fr/Learn/What_software_do_I_need"

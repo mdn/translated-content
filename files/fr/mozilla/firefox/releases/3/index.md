@@ -241,7 +241,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 ### Sécurité et vie privée
 
-- **Informations sur un site en un clic.** Vous voulez en savoir plus sur le site affiché ? Cliquez sur son icône dans la Barre d'adresse pour en connaître le propriétaire. Les informations d'identité sont affichées plus clairement et plus faciles à comprendre.
+- **Informations sur un site en un clic.** Vous voulez en savoir plus sur le site affiché&nbsp;? Cliquez sur son icône dans la Barre d'adresse pour en connaître le propriétaire. Les informations d'identité sont affichées plus clairement et plus faciles à comprendre.
 - **Protection contre les logiciels malveillants.** Firefox 3 vous avertit si vous vous rendez sur un site connu pour installer des virus, spywares, troyens ou d'autres logiciels dangereux. Vous pouvez voir à quoi cet avertissement ressemble en [visitant cette page](https://www.mozilla.com/firefox/its-an-attack.html).
 - **Protection contre les sites contrefaits améliorée.** Lorsque vous visitez une page suspectée d'être une contrefaçon, une page spéciale s'affiche au lieu du contenu de la page avec un avertissement. [Visitez cette page](https://www.mozilla.com/firefox/its-a-trap.html) pour voir à quoi elle ressemble.
 - **Erreurs SSL plus faciles à comprendre.** Les erreurs présentées lorsqu'un certificat SSL invalide est rencontré ont été clarifiées pour qu'il soit plus facile de comprendre la nature du problème.

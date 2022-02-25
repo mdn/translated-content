@@ -48,17 +48,17 @@ La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/doc
 
   - : Un {{domxref("GLenum")}} indiquant le modèle d'utilisation du magasin de données. Valeurs possibles :
 
-    - `gl.STATIC_DRAW` : le contenu du tampon est susceptible d'être utilisé souvent mais de ne pas changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
-    - `gl.DYNAMIC_DRAW` : le contenu du tampon est susceptible d'être souvent utilisé et de changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
+    - `gl.STATIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent mais de ne pas changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
+    - `gl.DYNAMIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être souvent utilisé et de changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
     - `gl.STREAM_DRAW` : le contenu du tampon est susceptible de ne pas être utilisé souvent ; du contenu est écrit dans le tampon, mais non lu ;
     - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes the following values sont en outre disponibles :
 
-      - `gl.STATIC_READ` : le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
-      - `gl.DYNAMIC_READ` : le contenu du tampon est susceptible d'être utilisé souvent et de changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
-      - `gl.STREAM_READ` : le contenu du tampon est susceptible de ne pas être utilisé souvent ; du contenu est lu depuis le tampon, mais non écrit ;
+      - `gl.STATIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
+      - `gl.DYNAMIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;
+      - `gl.STREAM_READ`&nbsp;: le contenu du tampon est susceptible de ne pas être utilisé souvent ; du contenu est lu depuis le tampon, mais non écrit ;
       - `gl.STATIC_COPY` : le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; aucun contenu n'est écrit ou lu par l'utilisateur ;
-      - `gl.DYNAMIC_COPY` : le contenu du tampon est susceptible d'être utilisé souvent et de changer souvent ; aucun contenu n'est écrit ou lu par l'utilisateur ;
-      - `gl.STREAM_COPY` : le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; aucun contenu n'est écrit ou lu par l'utilisateur.
+      - `gl.DYNAMIC_COPY`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de changer souvent ; aucun contenu n'est écrit ou lu par l'utilisateur ;
+      - `gl.STREAM_COPY`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; aucun contenu n'est écrit ou lu par l'utilisateur.
 
 - decalageSrc
   - : Un {{domxref("GLuint")}} indiquant le décalage d'indice d'élément où commencer à lire dans le tampon.

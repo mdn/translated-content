@@ -41,7 +41,7 @@ let nestedProp = obj.premier && obj.premier.second;
 
 La valeur de `obj.premier` est confirmée comme n'étant pas `null` (ni `undefined`) avant que d'accéder à la valeur de `obj.premier.second`. Ceci prévient l'erreur qui pourrait survenir si vous accédiez simplement `obj.premier.second` directement sans vérifier `obj.premier`.
 
-Avec l'opérateur de chaînage optionnel (`?.`), vous n'avez pas besoin de vérifier explicitement et de court-circuiter la vérification selon l'état de `obj.premier` avant que d'accéder à `obj.premier.second` :
+Avec l'opérateur de chaînage optionnel (`?.`), vous n'avez pas besoin de vérifier explicitement et de court-circuiter la vérification selon l'état de `obj.premier` avant que d'accéder à `obj.premier.second`&nbsp;:
 
 ```js
 let nestedProp = obj.premier?.second;

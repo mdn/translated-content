@@ -25,12 +25,12 @@ Pour des raisons historiques, des arguments différents sont passés aux gestio
 window.onerror = function(messageOrEvent, source, noligne, nocolonne, erreur) { ... }
 ```
 
-Paramètres de la fonction :
+Paramètres de la fonction&nbsp;:
 
 - `message `: message d'erreur (chaîne ou objet évènement). Disponible comme `event` (sic !) dans le gestionnaire de HTML `onerror=""` et aussi comme objet évènement lors de l'envoi d'un [Event](/en-US/docs/Web/API/Event) à `window,` auquel cas les autres arguments ne seront pas fournis (au contraire de [ErrorEvent](/en-US/docs/Web/API/ErrorEvent), qui amène le passage de l'ensemble complet des arguments à `window.onerror`, tandis que seul l'objet d'évènement d'erreur est  passé aux gestionnaires de` window.addEventListener('error'))`
 - source : l'URL du script où l'erreur a été déclenchée (chaîne)
-- noligne : le numéro de ligne où l'erreur a été déclenchée (nombre)
-- nocolonne : le numéro de colonne où l'erreur a été déclenchée (nombre)
+- noligne&nbsp;: le numéro de ligne où l'erreur a été déclenchée (nombre)
+- nocolonne&nbsp;: le numéro de colonne où l'erreur a été déclenchée (nombre)
 - erreur : un [Error Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) (objet) {{gecko_minversion_inline("31.0")}}
 
 ### element.onerror (et `window.addEventListener('error')`)

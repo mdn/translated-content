@@ -51,7 +51,7 @@ Il est bon de garder cette distinction à l'esprit pour choisir la façon de par
 
 ## Exemple
 
-Il est possible de boucler sur les éléments d'une `NodeList` en utilisant :
+Il est possible de boucler sur les éléments d'une `NodeList` en utilisant&nbsp;:
 
 ```js
 for (var i = 0; i < myNodeList.length; ++i) {

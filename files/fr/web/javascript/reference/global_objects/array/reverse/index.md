@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reverse
 ---
 {{JSRef}}
 
-La méthode **`reverse()`** transpose les éléments d'un tableau : le premier élément devient le dernier et le dernier devient le premier et ainsi de suite.
+La méthode **`reverse()`** transpose les éléments d'un tableau&nbsp;: le premier élément devient le dernier et le dernier devient le premier et ainsi de suite.
 
 {{EmbedInteractiveExample("pages/js/array-reverse.html")}}
 

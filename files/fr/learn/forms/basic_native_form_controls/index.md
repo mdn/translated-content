@@ -61,7 +61,7 @@ Les champs {{htmlelement("input")}} de saisie de texte sont les widgets de formu
 
 > **Note :** Les champs textuels dans les formulaires HTML sont des contrôles de saisie de texte brut. Cela signifie que vous ne pouvez pas les utiliser pour réaliser de la [mise en forme riche](/fr/docs/Rich-Text_Editing_in_Mozilla "/en-US/docs/Rich-Text_Editing_in_Mozilla") (gras, italique, etc.). Tous les éditeurs de textes évolués que vous rencontrez utilisent des widgets personnalisés créés avec HTML, CSS et JavaScript.
 
-Tous les champs textuels ont des comportement en commun :
+Tous les champs textuels ont des comportement en commun&nbsp;:
 
 - Il peuvent être définis comme {{htmlattrxref("readonly","input")}} (l'utilisateur ne peut pas modifier la valeur) voire {{htmlattrxref("disabled","input")}} (la valeur n'est pas envoyé avec le restant des données du formulaire).
 - Ils peuvent avoir un {{htmlattrxref("placeholder","input")}}. Ce texte apparaît dans le champs de saisie et décrit brièvement le rôle de cette boîte.
@@ -90,7 +90,7 @@ HTML5 améliore le champ texte élémentaire sur une ligne par ajout de valeurs 
 
 #### Champ d'adresse électronique
 
-Ce type de champ est défini en donnant la valeur `email` à l'attribut {{htmlattrxref("type","input")}} :
+Ce type de champ est défini en donnant la valeur `email` à l'attribut {{htmlattrxref("type","input")}}&nbsp;:
 
 ```html
     <input type="email" id="email" name="email" multiple>
@@ -108,7 +108,7 @@ Sur certains périphériques (les mobiles en particulier), un clavier virtuel di
 
 #### Champ pour mot de passe
 
-Ce type de champ est défini en donnant la valeur `password` à l'attribut {{htmlattrxref("type","input")}} :
+Ce type de champ est défini en donnant la valeur `password` à l'attribut {{htmlattrxref("type","input")}}&nbsp;:
 
 ```html
     <input type="password" id="pwd" name="pwd">
@@ -122,19 +122,19 @@ Les navigateurs modernes reconnaissent les risques courus lors de l'envoi de for
 
 #### Champ de recherche
 
-Ce type de champ se définit avec la valeur `search` de l'attribut {{htmlattrxref("type","input")}} :
+Ce type de champ se définit avec la valeur `search` de l'attribut {{htmlattrxref("type","input")}}&nbsp;:
 
 ```html
     <input type="search" id="search" name="search">
 ```
 
-La principale différence entre un champ textuel et un champ de recherche est dans l'apparence — souvent, les champs de recherche sont affichés avec des coins arrondis, et/ou avec une «&nbsp;×&nbsp;» à cliquer pour effacer la valeur entrée. Toutefois, une fonction est aussi ajoutée : les valeurs saisies peuvent être automatiquement enregistrées afin d'être utilisées pour compléter des recherches sur plusieurs pages du même site.
+La principale différence entre un champ textuel et un champ de recherche est dans l'apparence — souvent, les champs de recherche sont affichés avec des coins arrondis, et/ou avec une «&nbsp;×&nbsp;» à cliquer pour effacer la valeur entrée. Toutefois, une fonction est aussi ajoutée&nbsp;: les valeurs saisies peuvent être automatiquement enregistrées afin d'être utilisées pour compléter des recherches sur plusieurs pages du même site.
 
 ![Screenshots of search fields on several platforms.](all-search-field.png)
 
 #### Champ pour numéro de téléphone
 
-Ce type de champ se définit en donnant la valeur `tel` à l'attribut {{htmlattrxref("type","input")}} :
+Ce type de champ se définit en donnant la valeur `tel` à l'attribut {{htmlattrxref("type","input")}}&nbsp;:
 
 ```html
     <input type="tel" id="tel" name="tel">
@@ -144,7 +144,7 @@ Ce type de champ se définit en donnant la valeur `tel` à l'attribut {{htmlattr
 
 #### Champ d'URL
 
-Ce type de champ se définit en donnant la valeur `url` à l'attribut {{htmlattrxref("type","input")}} :
+Ce type de champ se définit en donnant la valeur `url` à l'attribut {{htmlattrxref("type","input")}}&nbsp;:
 
 ```html
     <input type="url" id="url" name="url">
@@ -251,7 +251,7 @@ La liste de données est alors liée à un champ texte (généralement un élém
 Une fois la liste de données affiliée au widget de formulaire, ses options s'utilisent comme complémentation du texte saisi par l'utilisateur ; cela se présente généralement à l'utilisateur sous forme d'une boîte déroulante listant des correspondances possibles avec ce qui doit être saisi dans la boîte.
 
 ```html
-    <label for="onFruit">Quel est votre fruit préféré ?</label>
+    <label for="onFruit">Quel est votre fruit préféré&nbsp;?</label>
     <input type="text" id="onFruit" list="maSuggestion" />
     <datalist id="maSuggestion">
       <option>Pomme</option>
@@ -321,7 +321,7 @@ Les navigateurs qui prennent en charge l'élément {{HTMLElement("datalist")}} i
 
 ## Éléments à cocher
 
-Les éléments à cocher sont des widgets dont l'état se modifie en cliquant sur eux. Il existe deux types d'éléments à cocher : la case à cocher et le bouton radio. Les deux utilisent l'attribut {{htmlattrxref("checked","input")}} pour indiquer si le widget est coché par défaut ou non.
+Les éléments à cocher sont des widgets dont l'état se modifie en cliquant sur eux. Il existe deux types d'éléments à cocher&nbsp;: la case à cocher et le bouton radio. Les deux utilisent l'attribut {{htmlattrxref("checked","input")}} pour indiquer si le widget est coché par défaut ou non.
 
 Il est important de noter que ces widgets ne se comportent pas tout à fait comme les autres widgets de formulaires. Pour la plupart des widgets, une fois que le formulaire est envoyé, tous les widgets dont l'attribut {{htmlattrxref("name","input")}} est défini sont envoyés, même s'ils ne sont pas renseignés. Dans le cas des éléments à cocher, leurs valeurs ne sont envoyées que s'ils sont cochés. S'ils ne sont pas cochés, rien n'est envoyé, pas même la valeur de leur attribut `name`.
 
@@ -377,7 +377,7 @@ Plusieurs boutons radio peuvent être liés ensemble. S'ils partagent la même v
 
 ## Boutons
 
-Dans les formulaires HTML, il existe trois types de boutons :
+Dans les formulaires HTML, il existe trois types de boutons&nbsp;:
 
 - Submit
   - : Envoie les données du formulaire au serveur.
@@ -386,7 +386,7 @@ Dans les formulaires HTML, il existe trois types de boutons :
 - Anonymous
   - : Type de bouton n'ayant pas d'effet prédéfini mais qui peut être personnalisé grâce à du code JavaScript.
 
-Un bouton se crée avec un élément {{HTMLElement("button")}} ou un élément {{HTMLElement("input")}}. C'est la valeur de l'attribut {{htmlattrxref("type","input")}} qui définit le type de bouton affiché :
+Un bouton se crée avec un élément {{HTMLElement("button")}} ou un élément {{HTMLElement("input")}}. C'est la valeur de l'attribut {{htmlattrxref("type","input")}} qui définit le type de bouton affiché&nbsp;:
 
 ### submit
 
@@ -528,7 +528,7 @@ Cette valeur d'attribut crée un widget pour afficher et sélectionner une sema
 Tous les contrôles de sélection de date et heure peuvent être contraints à l'aide des attributs {{htmlattrxref("min","input")}} et {{htmlattrxref("max","input")}}.
 
 ```html
-    <label for="maDate">Quand êtes vous disponible cet été ?</label>
+    <label for="maDate">Quand êtes vous disponible cet été&nbsp;?</label>
     <input type="date" min="2013-06-01" max="2013-08-31" id="maDate">
 ```
 
@@ -536,7 +536,7 @@ Tous les contrôles de sélection de date et heure peuvent être contraints à l
 
 ### Sélecteur de couleur
 
-Les couleurs sont toujours compliquées à manier. Il existe plusieurs façons de les exprimer : valeurs RGB (décimale ou hexadécimale), valeurs HSL, mots-clés, etc. Les widgets de sélection de couleur permettent aux utilisateurs de sélectionner une couleur dans un contexte textuel et visuel.
+Les couleurs sont toujours compliquées à manier. Il existe plusieurs façons de les exprimer&nbsp;: valeurs RGB (décimale ou hexadécimale), valeurs HSL, mots-clés, etc. Les widgets de sélection de couleur permettent aux utilisateurs de sélectionner une couleur dans un contexte textuel et visuel.
 
 Un widget de sélection de couleur se crée avec un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur `color`.
 
@@ -570,7 +570,7 @@ Dans cet exemple, le widget de sélection de fichiers permet de sélectionner de
 
 Il est parfois pratique pour des raisons techniques d'avoir des morceaux d'informations qui soient envoyés au serveur sans être montrées à l'utilisateur. Pour ce faire, vous pouvez ajouter un élément invisible dans votre formulaire. Cela est possible en utilisant un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur `hidden`.
 
-Si vous créez un tel élément, il est obligatoire de définir ses attributs `name` et `value` :
+Si vous créez un tel élément, il est obligatoire de définir ses attributs `name` et `value`&nbsp;:
 
 ```html
     <input type="hidden" id="timestamp" name="timestamp" value="1286705410">
@@ -615,9 +615,9 @@ Le contenu dans l'élément {{HTMLElement("progress")}} est un affichage informa
 
 #### Meter
 
-Un étalon est une valeur fixe dans une plage délimitée par une valeur minimale {{htmlattrxref("min","meter")}} et une valeur maximale {{htmlattrxref("max","meter")}}. Cette valeur est affichée dans une barre, et pour savoir à quoi cette barre ressemble, nous comparons certaines valeurs :
+Un étalon est une valeur fixe dans une plage délimitée par une valeur minimale {{htmlattrxref("min","meter")}} et une valeur maximale {{htmlattrxref("max","meter")}}. Cette valeur est affichée dans une barre, et pour savoir à quoi cette barre ressemble, nous comparons certaines valeurs&nbsp;:
 
-- les valeurs {{htmlattrxref("low","meter")}} et {{htmlattrxref("high","meter")}} divisent l'intervalle en trois parties :
+- les valeurs {{htmlattrxref("low","meter")}} et {{htmlattrxref("high","meter")}} divisent l'intervalle en trois parties&nbsp;:
 
   - la partie basse de l'intervalle est comprise entre les valeurs {{htmlattrxref("min","meter")}} et {{htmlattrxref("low","meter")}} (les deux valeurs sont incluses)
   - la partie médiane de l'intervalle est comprise entre les valeurs {{htmlattrxref("low","meter")}} et {{htmlattrxref("high","meter")}} (les deux valeurs sont exclues)
@@ -629,7 +629,7 @@ Un étalon est une valeur fixe dans une plage délimitée par une valeur minimal
   - Si la valeur {{htmlattrxref("optimum","meter")}} est dans la partie médiane, la partie basse est considérée comme la partie moyenne, la partie médiane comme la partie préférée et la partie haute comme moyenne également.
   - Si la valeur {{htmlattrxref("optimum","meter")}} est dans la partie haute, la partie basse est considérée comme la moins favorable, la partie médiane comme moyenne et la partie haute comme la partie préférée.
 
-Tous les navigateurs compatibles avec l'élément {{HTMLElement("meter")}} utilisent ces valeurs pour modifier la couleur de la barre :
+Tous les navigateurs compatibles avec l'élément {{HTMLElement("meter")}} utilisent ces valeurs pour modifier la couleur de la barre&nbsp;:
 
 - Si la valeur actuelle est dans la partie préférée, la barre est verte.
 - Si la valeur actuelle est dans la partie moyenne, la barre est jaune.
@@ -651,7 +651,7 @@ Comme nous venons de le voir, il y a pas mal d'éléments de formulaire différe
 
 ## Voir également
 
-Pour entrer plus en détails des différents widgets de formulaires, voici quelques ressources externes très utiles que vous pouvez visiter :
+Pour entrer plus en détails des différents widgets de formulaires, voici quelques ressources externes très utiles que vous pouvez visiter&nbsp;:
 
 - [L'état actuelle des formulaires HTML5](http://wufoo.com/html5/) par Wufoo (en anglais)
 - [Tests HTML5 - inputs](http://www.quirksmode.org/html5/inputs.html) sur Quirksmode (en anglais) (et [pour les navigateurs mobiles](http://www.quirksmode.org/html5/inputs_mobile.html))

@@ -75,6 +75,6 @@ if ('serviceWorker' in navigator) {
 
 - [Utiliser les Service Workers](/fr/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Service workers : exemple basique](https://github.com/mdn/sw-test)
-- [Le ServiceWorker est-il prêt ?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Le ServiceWorker est-il prêt&nbsp;?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
 - [Utiliser les web workers](/fr/docs/Web/Guide/Performance/Using_web_workers)

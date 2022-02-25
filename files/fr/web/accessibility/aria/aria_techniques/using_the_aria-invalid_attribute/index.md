@@ -39,7 +39,7 @@ Les agents utilisateurs devraient informer l’utilisateur lorsqu’un champ n�
 
 ### Exemples
 
-#### Exemple 1 : validation d’un formulaire de base
+#### Exemple 1&nbsp;: validation d’un formulaire de base
 
 L’extrait de code suivant décrit une version simplifiée de deux champs de formulaire avec une fonction de validation de la saisie attachée à la perte de focus. Notez que la valeur par défaut de `aria-required` étant `false`, il n’est pas strictement nécessaire d’ajouter à entrer.
 
@@ -53,7 +53,7 @@ L’extrait de code suivant décrit une version simplifiée de deux champs de fo
 
 Remarquez qu’il n’est pas nécessaire de valider les champs de saisie immédiatement à la perte de focus ; l’application peut attendre jusqu’à la soumission du formulaire (bien que ce ne soit pas particulièrement recommandé).
 
-L’extrait de code ci-dessous décrit une fonction de validation très simple qui ne vérifie que la présence d’un caractère particulier (en réalité, la validation sera un peu plus sophistiquée) :
+L’extrait de code ci-dessous décrit une fonction de validation très simple qui ne vérifie que la présence d’un caractère particulier (en réalité, la validation sera un peu plus sophistiquée)&nbsp;:
 
 ```js
 function checkValidity(aID, aSearchTerm, aMsg){
@@ -69,7 +69,7 @@ function checkValidity(aID, aSearchTerm, aMsg){
 }
 ```
 
-L’extrait de code ci-dessous décrit des fonctions d’alertes, qui ajoutent (ou suppriment) le message d’erreur :
+L’extrait de code ci-dessous décrit des fonctions d’alertes, qui ajoutent (ou suppriment) le message d’erreur&nbsp;:
 
 ```js
 function updateAlert(msg) {

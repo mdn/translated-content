@@ -22,12 +22,12 @@ Avec les privilèges chrome, la propriété est modifiable ; autrement elle est
 ### Valeur de retour
 
 - `isInFullScreen`
-  - : Une valeur booléenne. Signification des valeurs :
+  - : Une valeur booléenne. Signification des valeurs&nbsp;:
 
 <!---->
 
-- `true` : La fenêtre est en mode plein écran.
-- `false` : La fenêtre n'est pas en mode plein écran.
+- `true`&nbsp;: La fenêtre est en mode plein écran.
+- `false`&nbsp;: La fenêtre n'est pas en mode plein écran.
 
 ### Exemples
 

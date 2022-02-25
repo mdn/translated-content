@@ -89,7 +89,7 @@ p {
 </p>
 
 <p class="dix">
-  Voyons si je me souviendrai de tout ce que je savais : quatre fois
+  Voyons si je me souviendrai de tout ce que je savais&nbsp;: quatre fois
   cinq font douze, quatre fois six font treize, quatre fois sept font
   — je n’arriverai jamais à vingt de ce train-là.
 </p>

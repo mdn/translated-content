@@ -112,7 +112,7 @@ Voici tout le code source de cette première leçon, fonctionnant avec JSFiddle
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
 
-**Exercice** : essayez de changer la taille et la couleur des formes géométriques.
+**Exercice**&nbsp;: essayez de changer la taille et la couleur des formes géométriques.
 
 ## Prochaines étapes
 

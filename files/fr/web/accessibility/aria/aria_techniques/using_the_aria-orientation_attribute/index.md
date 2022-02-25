@@ -29,7 +29,7 @@ Vocabulaire
 
 ### Exemples
 
-#### Exemple 1 :
+#### Exemple 1&nbsp;:
 
 L’extrait de code ci-dessous présente un curseur simple orienté verticalement.
 

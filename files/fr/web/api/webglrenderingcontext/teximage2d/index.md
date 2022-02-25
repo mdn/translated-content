@@ -41,7 +41,7 @@ La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/doc
 
     - `gl.TEXTURE_2D` : une texture bidimensionnelle ;
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_X` : face X positive pour une texture mappée sur un cube ;
-    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X` : face X négative pour une texture mappée sur un cube ;
+    - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`&nbsp;: face X négative pour une texture mappée sur un cube ;
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_Y` : face Y positive pour une texture mappée sur un cube ;
     - `gl.TEXTURE_CUBE_MAP_NEGATIVE_Y` : face Y négative pour une texture mappée sur un cube ;
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_Z` : face Z positive pour une texture mappée sur un cube ;
@@ -54,10 +54,10 @@ La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/doc
   - : Un {{domxref ("GLint")}} indiquant les composantes de couleur dans la texture. Valeurs possibles :
 
     - `gl.ALPHA` : ignore les composantes rouge, vert et bleu, et lit la composante alpha ;
-    - `gl.RGB` : ignore la composante alpha et lit les composantes rouge, vert et bleu ;
-    - `gl.RGBA` : les composantes rouge, vert, bleu et alpha sont lues à partir du tampon des couleurs ;
-    - `gl.LUMINANCE` : chaque composante de couleur est une composante de luminance, alpha vaut 1,0 ;
-    - `gl.LUMINANCE_ALPHA` : chaque composante est une composante de luminance/alpha ;
+    - `gl.RGB`&nbsp;: ignore la composante alpha et lit les composantes rouge, vert et bleu ;
+    - `gl.RGBA`&nbsp;: les composantes rouge, vert, bleu et alpha sont lues à partir du tampon des couleurs ;
+    - `gl.LUMINANCE`&nbsp;: chaque composante de couleur est une composante de luminance, alpha vaut 1,0 ;
+    - `gl.LUMINANCE_ALPHA`&nbsp;: chaque composante est une composante de luminance/alpha ;
     - lors de l'utilisation de l'extension {{domxref("WEBGL_depth_texture")}} :
 
       - `gl.DEPTH_COMPONENT`
@@ -109,10 +109,10 @@ La méthode **`WebGLRenderingContext.texImage2D()`** de l'[API WebGL](/fr-FR/doc
 
   - : Un {{domxref("GLenum")}} indiquant le type de données des données de texel. Valeurs possibles :
 
-    - `gl.UNSIGNED_BYTE` : 8 bits par canal pour `gl.RGBA` ;
-    - `gl.UNSIGNED_SHORT_5_6_5` : 5 bits de rouge, 6 bits de vert, 5 bits de bleu ;
-    - `gl.UNSIGNED_SHORT_4_4_4_4` : 4 bits de rouge, 4 bits de vert, 4 bits de bleu, 4 bits d'alpha ;
-    - `gl.UNSIGNED_SHORT_5_5_5_1` : 5 bits de rouge, 5 bits de vert, 5 bits de bleu, 1 bit d'alpha ;
+    - `gl.UNSIGNED_BYTE`&nbsp;: 8 bits par canal pour `gl.RGBA` ;
+    - `gl.UNSIGNED_SHORT_5_6_5`&nbsp;: 5 bits de rouge, 6 bits de vert, 5 bits de bleu ;
+    - `gl.UNSIGNED_SHORT_4_4_4_4`&nbsp;: 4 bits de rouge, 4 bits de vert, 4 bits de bleu, 4 bits d'alpha ;
+    - `gl.UNSIGNED_SHORT_5_5_5_1`&nbsp;: 5 bits de rouge, 5 bits de vert, 5 bits de bleu, 1 bit d'alpha ;
     - lors de l'utilisation de l'extension {{domxref ("WEBGL_depth_texture")}} :
 
       - `gl.UNSIGNED_SHORT`

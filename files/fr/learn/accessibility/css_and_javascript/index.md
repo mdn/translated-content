@@ -123,7 +123,7 @@ Un élément permettant d'associer une abréviation, un acronyme ou un sigle à
 <p> Le contenu web est marqué à l'aide de  <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
 ```
 
-Encore une fois, vous voudrez peut-être appliquer une mise en forme simple sur ces éléments :
+Encore une fois, vous voudrez peut-être appliquer une mise en forme simple sur ces éléments&nbsp;:
 
 ```css
 abbr {
@@ -261,7 +261,7 @@ Ce type de validation de formulaire est discret — vous pouvez toujours utilis
 
 > **Note :** La validation côté serveur n'a pas été implémentée dans cette simple démonstration.
 
-Nous avons également rendu cette validation de formulaire assez accessible. Nous avons utilisé des éléments {{htmlelement("label")}} pour nous assurer que les libellés des formulaires sont liés de manière non équivoque à leurs entrées, afin que les lecteurs d'écran puissent les lire au fur et à mesure :
+Nous avons également rendu cette validation de formulaire assez accessible. Nous avons utilisé des éléments {{htmlelement("label")}} pour nous assurer que les libellés des formulaires sont liés de manière non équivoque à leurs entrées, afin que les lecteurs d'écran puissent les lire au fur et à mesure&nbsp;:
 
 ```html
 <label for="name"> Entrez votre nom :</label>

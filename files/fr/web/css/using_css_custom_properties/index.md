@@ -39,7 +39,7 @@ Le deuxième avantage de ces variables vient du fait que le nom lui-même contie
 
 Les propriétés personnalisées ont actuellement deux formes :
 
-- les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle `var()` : `var(--example-variable)` retourne la valeur de `--example-variable`.
+- les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle `var()`&nbsp;: `var(--example-variable)` retourne la valeur de `--example-variable`.
 - les propriétés personnalisées, qui sont des propriétés spéciales notées `--*` où `*` représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : `--example-variable: 20px;` est une déclaration en CSS, utilisant la propriété personnalisée `--*` pour initialiser la valeur de la variable CSS `--example-variable` à `20px`.
 
 > **Note :** Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ({{bug(985838)}})

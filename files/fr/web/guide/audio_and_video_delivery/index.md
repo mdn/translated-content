@@ -7,12 +7,12 @@ On peut distribuer de l'audio et de la vidéo sur le web de plusieurs manières,
 
 ## Les éléments audio et vidéo
 
-Que l'on traite des fichiers audio pré-enregistrés ou des flux en directs, le mécanisme pour les rendre disponibles à travers un navigateur reste à peu près le même — via les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video). Actuellement, pour prendre en charge tous les navigateurs, il est nécessaire de définir deux formats — bien qu'avec l'adoption des formats MP3 et MP4 dans Firefox et Opera, cela change rapidement. Vous pouvez trouver les informations de compatibilité des navigateurs aux endroits suivants :
+Que l'on traite des fichiers audio pré-enregistrés ou des flux en directs, le mécanisme pour les rendre disponibles à travers un navigateur reste à peu près le même — via les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video). Actuellement, pour prendre en charge tous les navigateurs, il est nécessaire de définir deux formats — bien qu'avec l'adoption des formats MP3 et MP4 dans Firefox et Opera, cela change rapidement. Vous pouvez trouver les informations de compatibilité des navigateurs aux endroits suivants&nbsp;:
 
 - [Tableau de compatibilité des codecs audio](/fr/docs/Web/Apps/Build/Manipulating_media/Cross-browser_audio_basics#audio_codec_support)
 - [Guide sur les codecs pour les vidéos](/fr/docs/Web/Media/Formats/Video_codecs)
 
-Pour distribuer du contenu audio et vidéo, le processus général se déroule comme suit :
+Pour distribuer du contenu audio et vidéo, le processus général se déroule comme suit&nbsp;:
 
 1.  Vérifier quels formats sont pris en charge par le navigateur via la détection de fonctionnalité ;
 2.  Si le navigateur ne lit pas nativement les formats fournis, utiliser un contenu de secours dans un autre format ;
@@ -82,7 +82,7 @@ On définit la source de l'audio en fonction du type de fichier audio pris en ch
 
 > **Note :** `play()` sera ignoré par certains navigateurs mobiles à moins que l'événement ne soit initié par une action de la personne visitant le site.
 
-Il est également possible de donner un fichier WAV encodé en base64 à l'élément [`<audio>`](/fr/docs/Web/HTML/Element/audio), permettant ainsi de générer de l'audio à la volée :
+Il est également possible de donner un fichier WAV encodé en base64 à l'élément [`<audio>`](/fr/docs/Web/HTML/Element/audio), permettant ainsi de générer de l'audio à la volée&nbsp;:
 
 ```html
 <audio id="player" src="data:audio/x-wav;base64,UklGRvC..."></audio>
@@ -143,13 +143,13 @@ Dans cet exemple, on récupère un fichier MP3 via XHR, on le charge et on le li
 
 Il est également possible de récupérer un <i lang="en">live stream</i> de la webcam et/ou du microphone de la personne consultant le site avec `getUserMedia` et l'API Stream. Cela fait partie d'une technologie plus largement connue sous le nom de WebRTC (Web Real-Time Communications) et est compatible avec les dernières versions de Chrome, Firefox et Opera.
 
-Pour récupérer un flux de la webcam, commençons par créer un élément [`<video>`](/fr/docs/Web/HTML/Element/video) :
+Pour récupérer un flux de la webcam, commençons par créer un élément [`<video>`](/fr/docs/Web/HTML/Element/video)&nbsp;:
 
 ```html
 <video id="webcam" width="480" height="360"></video>
 ```
 
-Ensuite, si cette opération est prise en charge, nous connectons la webcam à l'élément video :
+Ensuite, si cette opération est prise en charge, nous connectons la webcam à l'élément video&nbsp;:
 
 ```js
 if (navigator.mediaDevices) {
@@ -173,7 +173,7 @@ Pour en savoir plus, lisez la page [`MediaDevices.getUserMedia`](/fr/docs/Web/AP
 
 De nouveaux standards sont en cours de déploiement pour permettre au navigateur de récupérer le flux du micro ou de la webcam — en utilisant `getUserMedia` — et l'enregistrer directement avec la nouvelle API MediaRecorder. Pour ce faire, on prend le stream retourné par `getUserMedia`, on le donne en paramètre à un objet `MediaRecorder`, puis on utilise le résultat obtenu comme source audio ou video.
 
-Le principe de base est décrit ci-après :
+Le principe de base est décrit ci-après&nbsp;:
 
 ```js
 navigator.mediaDevices.getUserMedia({audio:true})
@@ -335,12 +335,12 @@ Vous rencontrez des problèmes de lecture audio ou vidéo ? Vérifiez les diffé
 
 Utilisez les fichiers suivants pour vérifier le support de votre format:
 
-- Audio MP3 (`type="audio/mpeg"`) : <https://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3> ([audio MP3 en direct](https://jsbin.com/gekatoge/1/edit))
-- Audio MP4 (`type="audio/mp4"`) : <https://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a> ([audio MP4 en direct](https://jsbin.com/gekatoge/2/edit))
-- Audio Ogg (`type="audio/ogg"`) : <https://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg> ([audio OGG en direct](https://jsbin.com/gekatoge/4/edit))
-- Video MP4 (`type="video/mp4"`) : <https://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v> ([vidéo MP4 en direct](https://jsbin.com/gekatoge/5/edit))
-- Video WebM (`type="video/webm"`) : <https://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm> ([vidéo WebM en direct](https://jsbin.com/gekatoge/6/edit))
-- Video Ogg (`type="video/ogg"`) : <https://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv> ([vidéo OGG en direct](https://jsbin.com/gekatoge/7/edit))
+- Audio MP3 (`type="audio/mpeg"`)&nbsp;: <https://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3> ([audio MP3 en direct](https://jsbin.com/gekatoge/1/edit))
+- Audio MP4 (`type="audio/mp4"`)&nbsp;: <https://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a> ([audio MP4 en direct](https://jsbin.com/gekatoge/2/edit))
+- Audio Ogg (`type="audio/ogg"`)&nbsp;: <https://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg> ([audio OGG en direct](https://jsbin.com/gekatoge/4/edit))
+- Video MP4 (`type="video/mp4"`)&nbsp;: <https://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v> ([vidéo MP4 en direct](https://jsbin.com/gekatoge/5/edit))
+- Video WebM (`type="video/webm"`)&nbsp;: <https://jPlayer.org/video/webm/Big_Buck_Bunny_Trailer.webm> ([vidéo WebM en direct](https://jsbin.com/gekatoge/6/edit))
+- Video Ogg (`type="video/ogg"`)&nbsp;: <https://jPlayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv> ([vidéo OGG en direct](https://jsbin.com/gekatoge/7/edit))
 
 Si un de ces fichiers n'est pas lu, c'est que le navigateur que vous testez ne prend pas en charge le format correspondant. Vous pouvez utiliser un format différent ou un contenu de secours.
 
@@ -348,7 +348,7 @@ Si ces fichiers fonctionnent mais que votre fichier ne fonctionne pas, il y a de
 
 #### 1. Le serveur ne fournit pas le type MIME correct du fichier
 
-Bien que les serveurs les prennent généralement en charge, vous allez peut-être avoir besoin d'ajouter ce qui suit à votre fichier `.htaccess` :
+Bien que les serveurs les prennent généralement en charge, vous allez peut-être avoir besoin d'ajouter ce qui suit à votre fichier `.htaccess`&nbsp;:
 
     # AddType TYPE/SUBTYPE EXTENSION
 
@@ -365,7 +365,7 @@ Bien que les serveurs les prennent généralement en charge, vous allez peut-êt
 
 #### 2. Votre fichier n'est pas encodé correctement
 
-Votre fichier n'a peut-être pas été encodé correctement — essayez de l'encoder en utilisant un des outils suivants, qui sont plutôt fiables :
+Votre fichier n'a peut-être pas été encodé correctement — essayez de l'encoder en utilisant un des outils suivants, qui sont plutôt fiables&nbsp;:
 
 - [Audacity](https://audacity.sourceforge.net/) - Éditeur et enregistreur audio gratuit
 - [Miro](https://www.getmiro.com/) - Lecteur audio et vidéo open-source et gratuit
@@ -413,19 +413,19 @@ Un certain nombre de bibliothèques JavaScript audio et vidéo existent. Les plu
 
 ### Vidéo uniquement
 
-- [flowplayer](https://flowplayer.org/) : Gratuit, avec un filigrane du logo flowplayer. open source (licence GPL)
-- [JWPlayer](https://www.jwplayer.com) : Nécessite de s'inscrire pour télécharger. open source (licence Creative Commons)
-- [SublimeVideo](https://www.sublimevideo.net/) : Nécessite de s'inscrire. Configuration par formulaire avec lien vers des bibliothèques hébergées via CDN.
-- [Video.js](https://www.videojs.com/) : Gratuit et open source (licence Apache 2)
+- [flowplayer](https://flowplayer.org/)&nbsp;: Gratuit, avec un filigrane du logo flowplayer. open source (licence GPL)
+- [JWPlayer](https://www.jwplayer.com)&nbsp;: Nécessite de s'inscrire pour télécharger. open source (licence Creative Commons)
+- [SublimeVideo](https://www.sublimevideo.net/)&nbsp;: Nécessite de s'inscrire. Configuration par formulaire avec lien vers des bibliothèques hébergées via CDN.
+- [Video.js](https://www.videojs.com/)&nbsp;: Gratuit et open source (licence Apache 2)
 
 ### Audio et vidéo
 
-- [jPlayer](https://jPlayer.org) : Gratuit et open source (Licence MIT)
-- [mediaelement.js](https://mediaelementjs.com/) : Gratuit et open source (Licence MIT)
+- [jPlayer](https://jPlayer.org)&nbsp;: Gratuit et open source (Licence MIT)
+- [mediaelement.js](https://mediaelementjs.com/)&nbsp;: Gratuit et open source (Licence MIT)
 
 ### Web Audio API
 
-- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch) : Une prothèse open source (licence Apache 2) pour les anciennes versions de l'API Web Audio
+- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch)&nbsp;: Une prothèse open source (licence Apache 2) pour les anciennes versions de l'API Web Audio
 
 ## Tutoriels pour apprendre les bases
 

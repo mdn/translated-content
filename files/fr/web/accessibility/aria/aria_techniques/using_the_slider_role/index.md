@@ -16,7 +16,7 @@ Le rôle `slider` est utilisé pour des balises qui permettent à l'utilisateur 
 
 #### Clavier et focus
 
-Le curseur doit pouvoir recevoir le focus et être manipulable au clavier. Lorsque l'utilisateur tabule pour amener le focus sur le curseur, il doit arriver sur la molette : le contrôle qu'un utilisateur de souris fera glisser. Les touches flèches doivent agir de la façon suivante (attention toutefois, dans les applications, aux directions de flèches pour les langues s'écrivant de droite à gauche) :
+Le curseur doit pouvoir recevoir le focus et être manipulable au clavier. Lorsque l'utilisateur tabule pour amener le focus sur le curseur, il doit arriver sur la molette&nbsp;: le contrôle qu'un utilisateur de souris fera glisser. Les touches flèches doivent agir de la façon suivante (attention toutefois, dans les applications, aux directions de flèches pour les langues s'écrivant de droite à gauche)&nbsp;:
 
 | Touche(s)              | Action                                                                                                                      |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -30,7 +30,7 @@ Le curseur doit pouvoir recevoir le focus et être manipulable au clavier. Lorsq
 
 ### Exemples
 
-#### Exemple 1 : Intervalle numérique simple
+#### Exemple 1&nbsp;: Intervalle numérique simple
 
 Dans l'exemple ci-dessous, un simple curseur est utilisé pour sélectionner une valeur entre 1 et 100. Le volume courant est 60. L'application actualisera programmatiquement la valeur de `aria-valuenow` en réponse à l'action de l'utilisateur.
 
@@ -46,12 +46,12 @@ Dans l'exemple ci-dessous, un simple curseur est utilisé pour sélectionner une
 </div>
 ```
 
-#### Exemple 2 : Valeurs texte
+#### Exemple 2&nbsp;: Valeurs texte
 
 Parfois, un slider est utilisé pour choisir une valeur qui n'est pas, sémantiquement , un nombre. Dans ces cas là, l'attribut `aria-valuetext` est utilisé pour donner le texte approprié pour la valeur sélectionnée. Dans l'exemple ci-dessous, le slider est utilisé pour sélectionner un jour de la semaine .
 
 ```html
-<div id="slider-label">Jour de la semaine :</div>
+<div id="slider-label">Jour de la semaine&nbsp;:</div>
 
 <div class="day-slider">
   <a href="#" id="day-handle" class="day-slider-handle" role="slider" aria-labelledby="slider-label"
@@ -63,7 +63,7 @@ Parfois, un slider est utilisé pour choisir une valeur qui n'est pas, sémanti
 </div>
 ```
 
-L'extrait de code ci-dessous décrit une fonction qui répond à l'action de l'utilisateur et actualise les attributs `aria-valuenow` et `aria-valuetext` :
+L'extrait de code ci-dessous décrit une fonction qui répond à l'action de l'utilisateur et actualise les attributs `aria-valuenow` et `aria-valuetext`&nbsp;:
 
 ```js
 var dayNames = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];

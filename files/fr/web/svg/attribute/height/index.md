@@ -83,7 +83,7 @@ Cet attribut doit être spécifié, hormis pour les éléments {{ SVGElement("sv
 
 ## Eléments
 
-Les éléments suivants peuvent utiliser l'attribut `height` :
+Les éléments suivants peuvent utiliser l'attribut `height`&nbsp;:
 
 - [Filter primitive elements](/fr/SVG/Element#FilterPrimitive "en/SVG/Element#FilterPrimitive") »
 - {{ SVGElement("filter") }}

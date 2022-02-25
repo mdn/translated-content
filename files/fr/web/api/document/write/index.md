@@ -38,7 +38,7 @@ function nouveauContenu()
 {
 alert("chargement du nouveau contenu");
 document.open();
-document.write("<h1>Assez de l'ancien contenu, passons au nouveau !</h1>");
+document.write("<h1>Assez de l'ancien contenu, passons au nouveau&nbsp;!</h1>");
 document.close();
 }
 
@@ -55,7 +55,7 @@ document.close();
 
 Écrire dans un document qui a déjà été chargé sans appeler [document.open()](/fr/docs/Web/API/Document/open) provoquera un appel automatique à `document.open`. Une fois l'écriture terminée, il est recommandé d'appeler [document.close()](/fr/docs/Web/API/Document/close) pour indiquer au navigateur qu'il peut terminer de charger la page. Le texte fourni est analysé et intégré à la structure du modèle de document. Dans l'exemple ci-dessus, l'élément `h1` devient un nœud dans le document.
 
-Si l'appel à `document.write()` est intégré directement dans le code HTML, il n'appellera pas `document.open()`. Par exemple :
+Si l'appel à `document.write()` est intégré directement dans le code HTML, il n'appellera pas `document.open()`. Par exemple&nbsp;:
 
 ```html
 <script>

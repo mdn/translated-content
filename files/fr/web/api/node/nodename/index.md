@@ -36,12 +36,12 @@ Les valeurs retournées pour les différents types de noeuds sont :
 
 ## Exemple
 
-Avec le balisage suivant :
+Avec le balisage suivant&nbsp;:
 
     <div id="d1">hello world</div>
     <input type="text" id="t"/>
 
-et le script suivant :
+et le script suivant&nbsp;:
 
     var div1 = document.getElementById("d1");
     var text_field = document.getElementById("t");

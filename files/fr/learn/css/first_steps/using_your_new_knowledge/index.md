@@ -62,7 +62,7 @@ Vous devriez obtenir un rendu qui ressemble à cela :
 
 ![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
 
-Une fois cette tâche accomplie, n'hésitez pas à explorer des propriétés rencontrées dans la [référence CSS sur MDN](/fr/docs/Web/CSS/Reference) !
+Une fois cette tâche accomplie, n'hésitez pas à explorer des propriétés rencontrées dans la [référence CSS sur MDN](/fr/docs/Web/CSS/Reference)&nbsp;!
 
 À ce stade, il n'y a pas de réponse incorrecte — autorisez vous un peu de fantaisie.
 

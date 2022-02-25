@@ -85,7 +85,7 @@ Les changements représentationnels incluent l'utilisation du CSS pour changer l
 
 #### Les Changements d'états
 
-Les attributs pour décrire l’état actuel d'un widget sont fournis, par exemple :
+Les attributs pour décrire l’état actuel d'un widget sont fournis, par exemple&nbsp;:
 
 - **`aria-checked`** indique l’état d'une case à cocher ou d'un bouton radio,
 - **`aria-disabled`** indique qu’un élément est visible, mais désactivé,

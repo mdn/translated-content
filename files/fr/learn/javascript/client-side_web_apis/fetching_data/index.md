@@ -110,7 +110,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
 
 4.  Nous allons commencer notre fonction en construisant une URL relative qui pointe vers le fichier texte que nous voulons charger, nous en aurons besoin plus tard. La valeur de l'élément {{htmlelement("select")}} à tout instant est la même que l'élément {{htmlelement("option")}} sélectionné (c'est à dire le texte de l'élément sélectionné, ou son attribut `value` s'il est spécifié) — par exemple "Verse 1". Le fichier correspondant est "verse1.txt" et il est situé dans le même répertoire que le fichier HTML, le nom du fichier seul suffira donc.
 
-    Les serveurs web sont généralement sensibles à la casse, le nom de fichier n'a pas d'espace et a une extension de fichier. Pour convertir "Verse 1" en "verse1.txt" nous allons convertir le "V" en minuscles avec {{jsxref("String.toLowerCase", "toLowerCase()")}}, supprimer l'espace avec {{jsxref("String.replace", "replace()")}} et ajouter ".txt" à la fin avec une simple [concaténation de chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#Concaténation_de_chaînes). Ajoutez les lignes suivantes à l'intérieur de la fonction `updateDisplay()` :
+    Les serveurs web sont généralement sensibles à la casse, le nom de fichier n'a pas d'espace et a une extension de fichier. Pour convertir "Verse 1" en "verse1.txt" nous allons convertir le "V" en minuscles avec {{jsxref("String.toLowerCase", "toLowerCase()")}}, supprimer l'espace avec {{jsxref("String.replace", "replace()")}} et ajouter ".txt" à la fin avec une simple [concaténation de chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#Concaténation_de_chaînes). Ajoutez les lignes suivantes à l'intérieur de la fonction `updateDisplay()`&nbsp;:
 
     ```js
     verse = verse.replace(" ", "");
@@ -146,7 +146,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
     };
     ```
 
-9.  Les étapes précédentes nous ont permis de configurer la requête XHR, mais celle-ci n'est exécutée que lorsqu'on le demande explicitement. Pour ce faire, il faut appeler la méthode {{domxref("XMLHttpRequest.send","send()")}}. Ajoutez la ligne suivante à la suite du code déjà écrit :
+9.  Les étapes précédentes nous ont permis de configurer la requête XHR, mais celle-ci n'est exécutée que lorsqu'on le demande explicitement. Pour ce faire, il faut appeler la méthode {{domxref("XMLHttpRequest.send","send()")}}. Ajoutez la ligne suivante à la suite du code déjà écrit&nbsp;:
 
     ```js
     request.send();
@@ -228,7 +228,7 @@ fetch(url).then(function(response) {
 
 Si l'on traduit en bon français les instructions JavaScript, on pourrait dire
 
-- `fetch(url)` : récupérer la ressource située à l'adresse `url`
+- `fetch(url)`&nbsp;: récupérer la ressource située à l'adresse `url`
 - `.then(function() { ... })`: quand c'est fait, exécuter la fonction spécifiée
 
 On dit qu'une promesse est "résolue" (resolved) lorsque l'opération spécifiée à un moment donné est terminée. En l'occurence, l'opération spécifiée est de récupérer une ressource à une URL donnée (en utilisant une requête HTTP) et de retourner la réponse reçue du serveur.

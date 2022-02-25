@@ -21,7 +21,7 @@ Dans notre premier module consacré à JavaScript, nous allons tout d'abord rép
 
 ## **Prérequis**
 
-Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable en JavaScript, mais vous devriez être familier avec HTML et CSS. Nous vous conseillons de lire les modules suivants avant d'aller plus loin :
+Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable en JavaScript, mais vous devriez être familier avec HTML et CSS. Nous vous conseillons de lire les modules suivants avant d'aller plus loin&nbsp;:
 
 - [Commencer avec le Web](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
 - [Introduction au langage HTML](/fr/docs/Web/Guide/HTML/Introduction).
@@ -38,7 +38,7 @@ Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable e
 - [Qu'est-ce qui n'a pas fonctionné&nbsp;? Déboguer du code JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)
   - : Quand vous développiez le jeu de devinette dans le cadre du tutoriel précédent, vous avez pu constater que notre programme ne fonctionnait pas. Pas de panique — cet article est là pour vous éviter de vous arracher les cheveux sur de tels problèmes en vous donnant quelques conseils simples sur la manière de trouver et résoudre les erreurs dans vos programmes JavaScript.
 - [Stocker les informations dont vous avez besoin — les variables](/fr/docs/Learn/JavaScript/First_steps/Variables)
-  - : Après avoir lu les articles précédents, vous devriez maintenant mieux comprendre ce qu'est JavaScript, ce qu'il peut faire pour vous, comment l'utiliser de pair avec d'autres technologies du Web, et à quoi ressemblent ses principales fonctionnalités d'un point de vue global. Dans cet article, nous allons aborder les véritables fondements, en présentant l'une des pierres angulaires du langage : les variables.
+  - : Après avoir lu les articles précédents, vous devriez maintenant mieux comprendre ce qu'est JavaScript, ce qu'il peut faire pour vous, comment l'utiliser de pair avec d'autres technologies du Web, et à quoi ressemblent ses principales fonctionnalités d'un point de vue global. Dans cet article, nous allons aborder les véritables fondements, en présentant l'une des pierres angulaires du langage&nbsp;: les variables.
 - [Mathématiques de base en JavaScript — nombres et opérateurs](/fr/docs/Learn/JavaScript/First_steps/Math)
   - : À ce stade du cours, nous allons parler de mathématiques en JavaScript, à savoir comment combiner des opérateurs arithmétiques avec d'autres fonctionnalités du langage pour arriver à nos fins.
 - [Gérer du texte — les chaînes de caractères en JavaScript](/fr/docs/Learn/JavaScript/First_steps/Strings)

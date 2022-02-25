@@ -14,7 +14,7 @@ Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre e
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez déjà connaître
         <a href="/fr/Apprendre/page_vs_site_vs_serveur_vs_moteur_recherche"
@@ -24,7 +24,7 @@ Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre e
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Connaître les logiciels qui sont nécessaires pour créer, éditer, mettre
         en ligne ou consulter un site web.

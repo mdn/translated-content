@@ -20,12 +20,12 @@ Lorsqu’un champ texte est en lecture seule, cela devrait être indiqué en uti
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-Lorsque le rôle `textbox` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes :
+Lorsque le rôle `textbox` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
 - Présenter l’élément comme ayant un rôle `textbox` à l’API d’accessibilité du système d’exploitation ;
 - Déclencher un événement `textbox` accessible à l’aide de l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
-Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence :
+Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence&nbsp;:
 
 - Les lecteurs d’écran devraient annoncer son label et son rôle lorsque le focus est sur la boite de texte. Si elle contient également du contenu, il devrait être annoncé comme avec une boite de texte régulière ;
 - Les loupes d’écran devraient agrandir la boite de texte.
@@ -34,7 +34,7 @@ Les technologies d’assistance devraient être à l’écoute de tels événeme
 
 ### Exemples
 
-#### Exemple 1 : ajout du rôle `textbox` dans le code HTML d’un champ de saisie monoligne `<input>`
+#### Exemple 1&nbsp;: ajout du rôle `textbox` dans le code HTML d’un champ de saisie monoligne `<input>`
 
 L’extrait de code ci-dessous montre comment le rôle `textbox` est ajouté directement dans le code source HTML.
 
@@ -42,7 +42,7 @@ L’extrait de code ci-dessous montre comment le rôle `textbox` est ajouté dir
 <input type="text" role="textbox" value="Voici du texte" />
 ```
 
-#### Exemple 2 : ajout du rôle `textbox` dans le code HTML d’un champ de saisie multilignes `<textarea>`
+#### Exemple 2&nbsp;: ajout du rôle `textbox` dans le code HTML d’un champ de saisie multilignes `<textarea>`
 
 L’extrait de code ci-dessous montre comment le rôle `textbox` est ajouté directement dans le code source HTML.
 
@@ -54,7 +54,7 @@ L’extrait de code ci-dessous montre comment le rôle `textbox` est ajouté dir
 </textarea>
 ```
 
-#### Exemples concrets :
+#### Exemples concrets&nbsp;:
 
 ### Notes
 

@@ -16,13 +16,13 @@ Pour [chaque propriété CSS](fr/R%c3%a9f%c3%a9rence_CSS), la spécification ind
 
 Lorsqu'aucune valeur n'est spécifiée pour une _propriété héritée_ sur un élément, l'élément récupère la [valeur calculée](/fr/docs/Web/CSS/Valeur_calculée) de cette propriété appliquée à son élément parent. Seul l'élément racine du document possède [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale) donnée via la spécification.
 
-Un exemple caractéristique d'une propriété héritée est la propriété {{cssxref("color")}}. En définissant la règle de style :
+Un exemple caractéristique d'une propriété héritée est la propriété {{cssxref("color")}}. En définissant la règle de style&nbsp;:
 
 ```css
  p { color: green; }
 ```
 
-Sur le fragment HTML suivant :
+Sur le fragment HTML suivant&nbsp;:
 
 ```html
  <p>Ce paragraphe contient du <em>texte mis en emphase text</em>.</p>
@@ -38,7 +38,7 @@ Les mots « texte mis en emphase » apparaîtront en vert, car l'élément `em
 
 Lorsqu'aucune valeur n'est définie pour un élément, pour une _propriété non héritée_, l'élément prendra [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale) de cette propriété (telle qu'indiquée par la spécification).
 
-Un exemple caractéristique de propriété non héritée est la propriété {{cssxref("border")}}. En définissant la règle de style :
+Un exemple caractéristique de propriété non héritée est la propriété {{cssxref("border")}}. En définissant la règle de style&nbsp;:
 
 ```css
  p { border: medium solid; }

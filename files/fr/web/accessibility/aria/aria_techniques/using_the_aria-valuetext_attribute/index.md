@@ -14,7 +14,7 @@ L’attribut `aria-valuetext` est utilisé pour définir un texte alternatif, li
 
 Les développeurs **DEVRAIENT** uniquement définir l’attribut `aria-valuetext` lorsque la valeur retournée ne peut pas être précisément représentée sous forme de nombre.
 
-Par exemple, dans le cas d'un curseur qui peut retourner les valeurs `petite`, `moyenne`et `grand`, les valeurs de [`aria-valuenow`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow) pourraient aller de 1 à 3, indiquant ainsi la position de chaque valeur dans l’intervalle, mais la valeur de `aria-valuetext` sera l'une des chaînes suivantes : `petite`, `moyenne` ou `grande`.
+Par exemple, dans le cas d'un curseur qui peut retourner les valeurs `petite`, `moyenne`et `grand`, les valeurs de [`aria-valuenow`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow) pourraient aller de 1 à 3, indiquant ainsi la position de chaque valeur dans l’intervalle, mais la valeur de `aria-valuetext` sera l'une des chaînes suivantes&nbsp;: `petite`, `moyenne` ou `grande`.
 
 ### Valeurs
 
@@ -28,7 +28,7 @@ Si l’attribut `aria-valuetext` est absent, les technologies d’assistance com
 
 ### Exemples
 
-#### Exemple 1 :
+#### Exemple 1&nbsp;:
 
 L’extrait de code ci-dessous montre un curseur simple de sélection d’un jour de la semaine. La valeur du curseur est numérique, et l’attribut `aria-valuetext` est utilisé pour fournir le nom de jour. L’application actualisera programmatiquement `aria-valuetext` selon la valeur de `aria-valuenow`.
 
@@ -38,7 +38,7 @@ L’extrait de code ci-dessous montre un curseur simple de sélection d’un jou
     aria-valuetext="Dimanche">
 ```
 
-#### Exemples concrets :
+#### Exemples concrets&nbsp;:
 
 ### Notes
 

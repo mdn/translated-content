@@ -93,7 +93,7 @@ Chaque trame (dans un sens ou dans un autre) suit le schéma suivant :
     +-------------------------------+-------------------------------+
     | Masking-key (continued)       |          Payload Data         |
     +-------------------------------- - - - - - - - - - - - - - - - +
-    :                     Payload Data continued ...                :
+    :                     Payload Data continued ...               &nbsp;:
     + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
     |                     Payload Data continued ...                |
     +---------------------------------------------------------------+
@@ -132,7 +132,7 @@ Si le bit MASK a été fixé (et il devrait l'être, pour les messages client-se
 
 Les champs FIN et opcodes fonctionnent ensemble pour envoyer un message découpé en une multitude de trames. C'est ce que l'on appele la _fragmentation des messages_. La fragmentation est seulement possible avec les opcodes de `0x0 `à `0x2`.
 
-Souvenez-vous de l'intérêt de l'opcode et ce qu'il implique dans l'échange des trames. Pour _0x1_ c'est du texte, pour _0x2_ des données binaires, etc. Toutefois pour _0x0_, la frame est dite "continue" (elle s'ajoute à la précédente). En voici un exemple plus clair, où il y a en réalité deux textes de message (sur 4 trames différentes) :
+Souvenez-vous de l'intérêt de l'opcode et ce qu'il implique dans l'échange des trames. Pour _0x1_ c'est du texte, pour _0x2_ des données binaires, etc. Toutefois pour _0x0_, la frame est dite "continue" (elle s'ajoute à la précédente). En voici un exemple plus clair, où il y a en réalité deux textes de message (sur 4 trames différentes)&nbsp;:
 
     Client: FIN=1, opcode=0x1, msg="hello"
     Server: (process complete message immediately) Hi.
@@ -198,7 +198,7 @@ Le serveur doit désormais choisir l'un des protocoles suggérés par le client 
 
 Si vous souhaitez que votre serveur puisse supporter certains sous-protocoles, vous pourriez avoir besoin d'une application ou de scripts supplémentaires sur le serveur. Imaginons par exemple que vous utilisiez le sous-protocole json - où toutes les données échangées par WebSockets sont donc formatés suivant le format [JSON](https://fr.wikipedia.org/wiki/JavaScript_Object_Notation). Si le client sollicite ce sous-protocole et que le serveur souhaite l'accepter, vous **devez disposer** d'un parseur (d'un décodeur) JSON et décoder les données par celui-ci.
 
-> **Note :** Pour éviter des conflits d'espaces de noms, il est recommandé d'utiliser le sous-protocole comme un sous-domaine de celui utilisé. Par exemple si vous utilisez un sous-protocole propriétaire qui utilise un format d'échange de données non-standard pour une application de _chat_ sur le domaine _exemple.com_, vous devrirez utiliser : `Sec-WebSocket-Protocol: chat.exemple.com`. S'il y a différentes versions possibles, modifiez le chemin pour faire correspondre le path à votre version comme ceci : `chat.exemple.com/2.0`. Notez que ce n'est pas obligatoire, c'est une convention d'écriture optionnel et qui peut être utilisée d'une toute autre façon.
+> **Note :** Pour éviter des conflits d'espaces de noms, il est recommandé d'utiliser le sous-protocole comme un sous-domaine de celui utilisé. Par exemple si vous utilisez un sous-protocole propriétaire qui utilise un format d'échange de données non-standard pour une application de _chat_ sur le domaine _exemple.com_, vous devrirez utiliser&nbsp;: `Sec-WebSocket-Protocol: chat.exemple.com`. S'il y a différentes versions possibles, modifiez le chemin pour faire correspondre le path à votre version comme ceci : `chat.exemple.com/2.0`. Notez que ce n'est pas obligatoire, c'est une convention d'écriture optionnel et qui peut être utilisée d'une toute autre façon.
 
 ## Contenus associés
 

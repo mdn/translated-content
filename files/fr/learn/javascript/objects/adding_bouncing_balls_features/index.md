@@ -59,7 +59,7 @@ Cette section décrit ce que vous aurez à faire.
 
 ### Créons nos nouveaux objets
 
-Pour commencer, modifions le constructeur de l'objet `Ball()` pour qu'il devienne le constructeur de `Shape()` puis créons en un nouveau pour `Ball()` :
+Pour commencer, modifions le constructeur de l'objet `Ball()` pour qu'il devienne le constructeur de `Shape()` puis créons en un nouveau pour `Ball()`&nbsp;:
 
 1.  Le constructeur `Shape()` devra définir les propriétés `x`, `y`, `velX`, et `velY` de la même manière que le constructeur `Ball()` auparavent, mais sans les propriétés `color` et `size`.
 2.  `Shape()` doit aussi définir une nouvelle propriété `exists`, qui servira à identifier les balles qu'il reste à détruire dans la fenêtre (celles qui n'on pas encore été détruites). Elle doit retourner un booléen (`true`/`false`).

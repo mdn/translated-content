@@ -23,13 +23,13 @@ La propriété `data` retourne un tableau {{jsxref("Uint8ClampedArray")}} auque
 
 Le {{jsxref("Uint8ClampedArray")}} contient `height`_(hauteur)_ × `width`*(largeur)*  × 4 octets, dont les valeurs d'indices vont de 0 à (`height`×`width`×4)-1.
 
-Par exemple, pour lire la valeur de la composante bleue d'un pixel situé en colonne 200, ligne 50  de l'image, vous pouvez faire ce qui suit :
+Par exemple, pour lire la valeur de la composante bleue d'un pixel situé en colonne 200, ligne 50  de l'image, vous pouvez faire ce qui suit&nbsp;:
 
 ```js
 composanteBleue = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
 ```
 
-Vous pouvez accéder à la taille en octets du tableau de pixels en lisant l'attribut `Uint8ClampedArray.length` :
+Vous pouvez accéder à la taille en octets du tableau de pixels en lisant l'attribut `Uint8ClampedArray.length`&nbsp;:
 
 ```js
 var nbOctets = imageData.data.length;
@@ -45,7 +45,7 @@ var monImageData = ctx.createImageData(largeur, hauteur);
 
 Cela crée un nouvel objet `ImageData` avec les dimensions spécifiées. Tous les pixels sont prédéfinis comme étant noirs transparents.
 
-Vous pouvez aussi créer un nouvel objet `ImageData` ayant les mêmes dimensions que celles de l'objet indiqué par `autreImageData`. Les pixels du nouvel objet sont tous prédéfinis comme étant noirs transparents. **Cela ne copie pas les données d'image !**
+Vous pouvez aussi créer un nouvel objet `ImageData` ayant les mêmes dimensions que celles de l'objet indiqué par `autreImageData`. Les pixels du nouvel objet sont tous prédéfinis comme étant noirs transparents. **Cela ne copie pas les données d'image&nbsp;!**
 
 ```js
 var monImageData = ctx.createImageData(autreImageData);

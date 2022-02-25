@@ -162,7 +162,7 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 </p>
 <p class=exemple>
   Alice s’avança pour les regarder, et, au moment où
-  elle approchait, elle en entendit un qui disait :
+  elle approchait, elle en entendit un qui disait&nbsp;:
   « Fais donc attention, Cinq, et ne m’éclabousse pas
   ainsi avec ta peinture. »
 </p>

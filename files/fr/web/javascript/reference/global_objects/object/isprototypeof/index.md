@@ -63,7 +63,7 @@ console.log(Object.prototype.isPrototypeOf(bidule)); // true
 
 La méthode `isPrototypeOf()`, avec l'opérateur {{jsxref("Operators/instanceof", "instanceof")}} en particulier, s'avère particulièrement utile si vous avez du code qui ne peut fonctionner que lorsqu'il traite des objets descendant d'une chaîne de prototypes donnée, par ex., pour garantir que certaines méthodes ou propriétés seront présentes dans cet objet.
 
-Par exemple, vérifier que `bidule` descend bien de `Machin.prototype` :
+Par exemple, vérifier que `bidule` descend bien de `Machin.prototype`&nbsp;:
 
 ```js
 if (Toto.prototype.isPrototypeOf(bidule)) {

@@ -115,7 +115,7 @@ Ceci règle le problème des propriétés mais qu'en est il des méthodes ? Nous
 
 ### Dessiner la balle
 
-En premier lieu ajoutez la méthode `draw()` au `prototype` de `Ball()` :
+En premier lieu ajoutez la méthode `draw()` au `prototype` de `Ball()`&nbsp;:
 
 ```js
 Ball.prototype.draw = function() {
@@ -282,7 +282,7 @@ Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notr
     }
     ```
 
-    Cette méthode est un peu complexe, donc ne vous inquiétez pas si vous ne comprenez pas exactement comment cela fonctionne pour le moment. Regardons cela pas-à-pas :
+    Cette méthode est un peu complexe, donc ne vous inquiétez pas si vous ne comprenez pas exactement comment cela fonctionne pour le moment. Regardons cela pas-à-pas&nbsp;:
 
     - Pour chaque balle _b_, nous devons vérifier chaque autre balle pour voir si elle est entrée en collision avec *b*. Pour ce faire, on inspecte toutes les balles du tableau `balls[]` dans une boucle `for`.
     - Immédiatement à l'intérieur de cette boucle `for`, une instruction `if` vérifie si la balle courante  *b'* , inspectée dans la boucle, n'est égale à la balle *b. Le code correspondant est :*  `b'!== b`_._ En effet, nous ne voulons pas vérifier si une balle _b_ est entrée en collision avec elle-même ! Nous contrôlons donc si la balle actuelle _b_—dont la méthode `collisionDetect()` est invoquée—est distincte de la balle _b'_ inspectée dans la boucle*.* Ainsi le bloc de code venant après l'instruction `if` ne s'exécutera que si les balles _b_ et _b'_ ne sont pas identiques.

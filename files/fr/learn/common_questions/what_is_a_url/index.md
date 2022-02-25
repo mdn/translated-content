@@ -15,7 +15,7 @@ Cet article aborde les _Uniform Resource Locators_ (URL) en expliquant leur rôl
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devez au préalable savoir
         <a href="/fr/Apprendre/Fonctionnement_Internet"
@@ -31,7 +31,7 @@ Cet article aborde les _Uniform Resource Locators_ (URL) en expliquant leur rôl
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>Savoir ce qu'est une URL et comprendre son rôle sur le Web.</td>
     </tr>
   </tbody>

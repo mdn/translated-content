@@ -40,7 +40,7 @@ C'est pourquoi, dans tous les navigateurs sauf Internet Explorer Windows, les ma
 
 ### Obtenir une double indentation
 
-Comment cela va-t-il être rendu dans un document ? Pour le moment, nous avons un résultat équivalent à ces styles :
+Comment cela va-t-il être rendu dans un document&nbsp;? Pour le moment, nous avons un résultat équivalent à ces styles&nbsp;:
 
 ```css
 ul, li {
@@ -71,7 +71,7 @@ Comme nous pouvons le voir, les marqueurs restent attachés aux éléments `li`,
 
 ## Obtenir un rendu homogène
 
-Après ces observations, nous obtenons la conclusion suivante : si on souhaite obtenir un rendu de liste homogène entre Gecko, Internet Explorer et Opera, il est nécessaire de spécifier _à la fois_ la marge gauche et le _padding_ gauche de l'élément `ul`. L'élément `li` peut être ignoré ici. Si vous voulez reproduire le rendu par défaut de Netscape 6.x, vous écrirez :
+Après ces observations, nous obtenons la conclusion suivante : si on souhaite obtenir un rendu de liste homogène entre Gecko, Internet Explorer et Opera, il est nécessaire de spécifier _à la fois_ la marge gauche et le _padding_ gauche de l'élément `ul`. L'élément `li` peut être ignoré ici. Si vous voulez reproduire le rendu par défaut de Netscape 6.x, vous écrirez&nbsp;:
 
 ```css
 ul {
@@ -80,7 +80,7 @@ ul {
 }
 ```
 
-Si vous préférez suivre le modèle Internet Explorer/Opera, vous écrirez alors :
+Si vous préférez suivre le modèle Internet Explorer/Opera, vous écrirez alors&nbsp;:
 
 ```css
 ul {
@@ -89,7 +89,7 @@ ul {
 }
 ```
 
-Naturellement, vous pouvez utiliser les valeurs de votre choix. Les fixer toutes deux à `1.25em` si vous en avez envie - il n'y a aucune raison de s'en tenir uniquement à des valeurs en pixels. Et si vous voulez obtenir des listes sans indentation, vous devrez alors, là encore, spécifier à la fois un _padding_ et une marge nuls :
+Naturellement, vous pouvez utiliser les valeurs de votre choix. Les fixer toutes deux à `1.25em` si vous en avez envie - il n'y a aucune raison de s'en tenir uniquement à des valeurs en pixels. Et si vous voulez obtenir des listes sans indentation, vous devrez alors, là encore, spécifier à la fois un _padding_ et une marge nuls&nbsp;:
 
 ```css
 ul {

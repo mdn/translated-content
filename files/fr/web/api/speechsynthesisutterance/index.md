@@ -52,7 +52,7 @@ Dans notre exemple basique de [démonstration de synthèse vocale](https://githu
 Après avoir définit les variables nécessaires, nous récupérons une liste des voix disponibles en utilisant {{domxref("SpeechSynthesis.getVoices()")}} puis nous alimentons un menu avec celle-ci.
 L'utilisateur pourra ensuite choisir la voix qu'il souhaite.
 
-À l'intérieur du handler `inputForm.onsubmit` :
+À l'intérieur du handler `inputForm.onsubmit`&nbsp;:
 
 - Nous stoppons la soumission du formulaire avec [preventDefault()](/en-US/docs/Web/API/Event/preventDefault);
 - Nous utilisons le constructeur {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} pour créer une nouvelle instance contenant le texte de l'{{htmlelement("input")}};

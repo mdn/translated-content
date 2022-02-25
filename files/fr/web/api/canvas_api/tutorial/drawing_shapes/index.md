@@ -106,7 +106,7 @@ La troisième méthode, optionnelle, est l'appel à `closePath()`. Cette méth
 
 ### Dessin d'un triangle
 
-Par exemple, le code pour dessiner un triangle peut ressembler à ce qui suit :
+Par exemple, le code pour dessiner un triangle peut ressembler à ce qui suit&nbsp;:
 
 ```html hidden
 <html>
@@ -173,7 +173,7 @@ function draw() {
 }
 ```
 
-Le résultat ressemble à ce qui suit :
+Le résultat ressemble à ce qui suit&nbsp;:
 
 {{EmbedLiveSample("Déplacement_du_stylo", 160, 160, "canvas_smiley.png")}}
 
@@ -486,7 +486,7 @@ function rectArrondi(ctx, x, y, largeur, hauteur, rayon) {
 }
 ```
 
-L'image résultante ressemble à ce qui suit :
+L'image résultante ressemble à ce qui suit&nbsp;:
 
 {{EmbedLiveSample("Combiner_les_possibilités", 160, 160)}}
 

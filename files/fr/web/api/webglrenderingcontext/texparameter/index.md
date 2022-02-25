@@ -25,12 +25,12 @@ Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](
 
   - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
 
-    - `gl.TEXTURE_2D` : une texture bi-dimensionelle.
-    - `gl.TEXTURE_CUBE_MAP` : une texte appliquée sur un cube.
+    - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionelle.
+    - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texte appliquée sur un cube.
     - Lorsqu'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
 
-      - `gl.TEXTURE_3D` : une texture tri-dimensionnelle.
-      - `gl.TEXTURE_2D_ARRAY` : une texture bi-dimensionnelle en tableau.
+      - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
+      - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture bi-dimensionnelle en tableau.
 
 Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de texture à définir. Le paramètre `param` est un {{domxref("GLfloat")}} ou un {{domxref("GLint")}} indiquant la valeur pour le paramètre `nomp` indiqué.
 

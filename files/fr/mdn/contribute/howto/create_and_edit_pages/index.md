@@ -44,4 +44,4 @@ Pour créer une nouvelle page, consultez les instructions fournies sur la [docum
 ## Voir aussi
 
 - [Guide stylistique de MDN](/fr/docs/MDN/Guidelines/Writing_style_guide)
-- [MDN sur GitHub : comment contribuer ?](https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer)
+- [MDN sur GitHub&nbsp;: comment contribuer&nbsp;?](https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer)

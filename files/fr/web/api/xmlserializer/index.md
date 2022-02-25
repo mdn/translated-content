@@ -28,16 +28,16 @@ original_slug: XMLSerializer
 
      var s = new XMLSerializer();
      var stream = {
-       close : function()
+       close&nbsp;: function()
        {
          alert("Flux fermé");
        },
-       flush : function()
+       flush&nbsp;: function()
        {
        },
-       write : function(string, count)
+       write&nbsp;: function(string, count)
        {
-         alert("'" + string + "'\n nb d'octets : " + count + "");
+         alert("'" + string + "'\n nb d'octets&nbsp;: " + count + "");
        }
      };
      s.serializeToStream(document, stream, "UTF-8");

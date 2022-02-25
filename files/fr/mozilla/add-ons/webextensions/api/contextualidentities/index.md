@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 ---
 {{AddonSidebar}}
 
-Travailler avec des identités contextuelles : lister, créer, supprimer et mettre à jour des identités contextuelles.
+Travailler avec des identités contextuelles&nbsp;: lister, créer, supprimer et mettre à jour des identités contextuelles.
 
 Les «&nbsp;identités contextuelles », également appelées « conteneurs », sont des fonctions de navigation qui répondent à l’idée que les utilisateurs assument plusieurs identités lorsqu’ils naviguent sur le web, et souhaitent maintenir une certaine séparation entre ces identités. Par exemple, un utilisateur peut considérer que son « identité de travail&nbsp;» est distincte de son «&nbsp;identité personnelle&nbsp;» et ne veut pas partager les cookies entre ces deux contextes.
 

@@ -290,7 +290,7 @@ Ensuite, nous établissons la position du carré 2D en chargeant la position de 
 
 Les opérations matricielles peuvent sembler compliquées, mais [elles sont en fait assez simples si vous en prenez une à la fois](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html). En général, les gens utilisent une bibliothèque matricielle plutôt que d'écrire la leur. Dans notre cas, nous utilisons la bibliothèque populaire [glMatrix](http://glmatrix.net/).
 
-Voir aussi :
+Voir aussi&nbsp;:
 
 - les [matrices](https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html) sur WebGLFundamentals ;
 - les [matrices](http://mathworld.wolfram.com/Matrix.html) sur Wolfram MathWorld ;

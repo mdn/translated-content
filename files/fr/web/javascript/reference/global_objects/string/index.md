@@ -71,7 +71,7 @@ if (a < b) { // true
 
 On peut obtenir un résultat semblable avec la méthode [`localeCompare()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) qui permet de prendre en compte la locale utilisée et qui est héritée par toutes les instances de `String`.
 
-On notera que `a == b` compare les chaînes de caractères `a` et `b` de façon sensible à la casse. Si on souhaite comparer des chaînes sans être sensible à la casse, on pourra utiliser une fonction semblable à :
+On notera que `a == b` compare les chaînes de caractères `a` et `b` de façon sensible à la casse. Si on souhaite comparer des chaînes sans être sensible à la casse, on pourra utiliser une fonction semblable à&nbsp;:
 
 ```js
 function isEqual(str1, str2) {

@@ -18,7 +18,7 @@ Le type {{Glossary("String")}} de JavaScript est utilisé pour représenter des
 
 ### Les littéraux de chaînes de caractères
 
-Vous pouvez créer des chaînes de caractères simple en utilisant des apostrophes simples ou doubles :
+Vous pouvez créer des chaînes de caractères simple en utilisant des apostrophes simples ou doubles&nbsp;:
 
 ```js
 'machin'
@@ -64,9 +64,9 @@ L'objet {{jsxref("String")}} est un conteneur autour du type de donnée primiti
     console.log(s); // affiche : {'0': 'f', '1': 'o', '2': 'o'}
     typeof s; // retourne 'object'
 
-Vous pouvez appeler chacune des méthodes de l'objet `String` avec une valeur littérale de chaîne de caractères : JavaScript convertira automatiquement le littéral en un objet `String` temporaire, appellera la méthode, puis supprimera l'objet `String` temporaire. Vous pouvez aussi utiliser la propriété `String.length` sur un littéral de chaîne de caractères.
+Vous pouvez appeler chacune des méthodes de l'objet `String` avec une valeur littérale de chaîne de caractères&nbsp;: JavaScript convertira automatiquement le littéral en un objet `String` temporaire, appellera la méthode, puis supprimera l'objet `String` temporaire. Vous pouvez aussi utiliser la propriété `String.length` sur un littéral de chaîne de caractères.
 
-Vous devriez utiliser des littéraux de chaîne de caractères, à moins que vous n'ayez spécifiquement besoin d'un objet `String`, parce que les objets `String` peuvent avoir un comportement contre-intuitif :
+Vous devriez utiliser des littéraux de chaîne de caractères, à moins que vous n'ayez spécifiquement besoin d'un objet `String`, parce que les objets `String` peuvent avoir un comportement contre-intuitif&nbsp;:
 
 ```js
 var s1 = '2 + 2'; // crée une valeur de chaîne de caractères

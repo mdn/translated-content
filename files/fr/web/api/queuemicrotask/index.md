@@ -58,7 +58,7 @@ self.queueMicrotask(() => {
 })
 ```
 
-Tiré de la [spécification de queueMicrotask](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing) :
+Tiré de la [spécification de queueMicrotask](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#microtask-queuing)&nbsp;:
 
 ```js
 MyElement.prototype.loadData = function (url) {

@@ -23,13 +23,13 @@ La méthode **`WebGLRenderingContext.drawArrays()`** de l'[API WebGL](/fr-FR/doc
 
   - : Un {{domxref ("GLenum")}} indiquant la primitive de type à dessiner. Les valeurs possibles sont :
 
-    - `gl.POINTS` : dessine un seul point ;
-    - `gl.LINE_STRIP` : dessine une ligne droite jusqu'au sommet suivant ;
-    - `gl.LINE_LOOP` : dessine une ligne droite jusqu'au sommet suivant, et relie le dernier sommet au premier ;
-    - `gl.LINES` : dessine une ligne entre une paire de sommets ;
+    - `gl.POINTS`&nbsp;: dessine un seul point ;
+    - `gl.LINE_STRIP`&nbsp;: dessine une ligne droite jusqu'au sommet suivant ;
+    - `gl.LINE_LOOP`&nbsp;: dessine une ligne droite jusqu'au sommet suivant, et relie le dernier sommet au premier ;
+    - `gl.LINES`&nbsp;: dessine une ligne entre une paire de sommets ;
     - [`gl.TRIANGLE_STRIP`](https://en.wikipedia.org/wiki/Triangle_strip)
     - [`gl.TRIANGLE_FAN`](https://en.wikipedia.org/wiki/Triangle_fan)
-    - `gl.TRIANGLES` : dessine un triangle pour un groupe de trois sommets.
+    - `gl.TRIANGLES`&nbsp;: dessine un triangle pour un groupe de trois sommets.
 
 - `premier`
   - : Un {{domxref("GLint")}} indiquant de l'indice de départ dans le tableau des points des vecteurs.

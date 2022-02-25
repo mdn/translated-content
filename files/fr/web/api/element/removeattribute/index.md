@@ -22,9 +22,9 @@ translation_of: Web/API/Element/removeAttribute
 
 ## Exemple
 
-    // avant : <div id="div1" align="left" width="200">
+    // avant&nbsp;: <div id="div1" align="left" width="200">
     document.getElementById("div1").removeAttribute("align");
-    // maintenant : <div id="div1" width="200">
+    // maintenant&nbsp;: <div id="div1" width="200">
 
 ## Notes
 
@@ -38,4 +38,4 @@ Tenter d'effacer un attribut que l'élément ne possède pas ne provoque aucune 
 
 ## Spécification
 
-- [DOM Level 2 Core : removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-6D6AC0F9) (non normative)
+- [DOM Level 2 Core&nbsp;: removeAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6D6AC0F9) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-6D6AC0F9) (non normative)

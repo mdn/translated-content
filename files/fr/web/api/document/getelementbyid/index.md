@@ -107,7 +107,7 @@ var el = document.getElementById('testqq'); // el vaudra null !
 | {{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}                     | {{Spec2('DOM3 Core')}}     | Remplace DOM 2                     |
 | {{SpecName('DOM WHATWG','#interface-nonelementparentnode','getElementById')}}     | {{Spec2('DOM WHATWG')}} | Remplacera DOM 3                   |
 
-Traduction en français (non normative) : [getElementById](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-getElBId)
+Traduction en français (non normative)&nbsp;: [getElementById](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-getElBId)
 
 ## Compatibilité des navigateurs
 

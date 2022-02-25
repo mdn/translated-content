@@ -38,7 +38,7 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 ```
 
-> **Note :** Les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode [`FormData.append()`](</en/DOM/XMLHttpRequest/FormData#append()>) (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne : **s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne**).
+> **Note :** Les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode [`FormData.append()`](</en/DOM/XMLHttpRequest/FormData#append()>) (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne&nbsp;: **s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne**).
 
 Dans cet exemple, une instance `FormData` contenant les valeurs des champs « username », « accountnum », « userfile » et « webmasterfile » est créée, puis la méthode `XMLHttpRequest` [`send()`](</en/DOM/XMLHttpRequest#send()>) est utilisée pour envoyer les données du formulaire. Le champ « webmasterfile » est un objet {{domxref("Blob")}}. Un objet `Blob` représente un objet-fichier de données brutes immuables. Les Blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L’interface {{ domxref("File") }} se base sur l’objet `Blob`, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système de l’utilisateur. Pour construire un `Blob`, vous pouvez invoquer le {{domxref("Blob.Blob","constructeur Blob()")}}.
 
@@ -78,18 +78,18 @@ L’objet `FormData` vous permet également d’envoyer des fichiers. Il vous 
 
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
-  <label>Votre adresse électronique :</label>
+  <label>Votre adresse électronique&nbsp;:</label>
   <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32" maxlength="64" /><br />
-  <label>Étiquette du fichier personnalisé :</label>
+  <label>Étiquette du fichier personnalisé&nbsp;:</label>
   <input type="text" name="filelabel" size="12" maxlength="32" /><br />
-  <label>Fichier à mettre de côté :</label>
+  <label>Fichier à mettre de côté&nbsp;:</label>
   <input type="file" name="file" required />
   <input type="submit" value="Mettez le fichier de côté." />
 </form>
 <div></div>
 ```
 
-Vous pouvez ensuite l’envoyer à l’aide du code suivant :
+Vous pouvez ensuite l’envoyer à l’aide du code suivant&nbsp;:
 
 ```js
 var form = document.forms.namedItem("fileinfo");
@@ -104,7 +104,7 @@ form.addEventListener('submit', function(ev) {
   oReq.open("POST", "stash.php", true);
   oReq.onload = function(oEvent) {
     if (oReq.status == 200) {
-      oOutput.innerHTML = "Envoyé !";
+      oOutput.innerHTML = "Envoyé&nbsp;!";
     } else {
       oOutput.innerHTML = "Erreur " + oReq.status + " lors de la tentative d’envoi du fichier.<br \/>";
     }
@@ -117,7 +117,7 @@ form.addEventListener('submit', function(ev) {
 
 > **Note :** Si vous passez une référence dans le formulaire, la méthode spécifiée dans ce dernier sera utilisée au lieu de celle définie dans l’appel de la méthode open().
 
-Vous pouvez également ajouter un objet {{ domxref("File") }} ou {{ domxref("Blob") }} directement dans l’objet {{ domxref("FormData") }} :
+Vous pouvez également ajouter un objet {{ domxref("File") }} ou {{ domxref("Blob") }} directement dans l’objet {{ domxref("FormData") }}&nbsp;:
 
 ```js
 data.append("myfile", myBlob, "filename.txt");
@@ -125,7 +125,7 @@ data.append("myfile", myBlob, "filename.txt");
 
 Avec la méthode {{domxref("FormData.append","append()")}}, vous pouvez utiliser le troisième paramètre facultatif pour passer un nom de fichier dans l’en-tête `Content-Disposition` envoyé au serveur. Si aucun nom de fichier n’est spécifié (ou si le paramètre n’est pas pris en charge), le nom « blob » est utilisé.
 
-Vous pouvez utiliser l’objet `FormData` avec jQuery si vous définissez les options appropriées :
+Vous pouvez utiliser l’objet `FormData` avec jQuery si vous définissez les options appropriées&nbsp;:
 
 ```js
 var fd = new FormData(document.querySelector("form"));

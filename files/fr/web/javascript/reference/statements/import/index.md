@@ -53,7 +53,7 @@ Ce qui suit insère `monModule` dans la portée courante, contenant tous les e
 import * as monModule from '/modules/mon-module.js';
 ```
 
-Ici, accéder aux exports signifie utiliser le nom du module (ici `monModule`) comme un espace de noms. Par exemple, si le module importé ci-dessus incluait un export `faireToutesLesChosesIncroyables()`, vous l'écririez comme ceci :
+Ici, accéder aux exports signifie utiliser le nom du module (ici `monModule`) comme un espace de noms. Par exemple, si le module importé ci-dessus incluait un export `faireToutesLesChosesIncroyables()`, vous l'écririez comme ceci&nbsp;:
 
 ```js
 monModule.faireToutesLesChosesIncroyables();

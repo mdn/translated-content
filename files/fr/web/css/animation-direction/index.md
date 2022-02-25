@@ -93,7 +93,7 @@ p {
 
 <p class="retour">
   « Revenez, » lui cria la Chenille. « J’ai quelque chose
-  d’important à vous dire ! »
+  d’important à vous dire&nbsp;! »
 </p>
 ```
 

@@ -39,9 +39,9 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ### Résultat attendu
 
-L'exemple précédent devrait faire apparaître des images semblables (en utilisant la touche <kbd>tab</kbd> de votre clavier) :
+L'exemple précédent devrait faire apparaître des images semblables (en utilisant la touche <kbd>tab</kbd> de votre clavier)&nbsp;:
 
-_Pour le lien `left.html` :_
+_Pour le lien `left.html`&nbsp;:_
 ![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
 _Pour le lien `right.html` _

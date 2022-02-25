@@ -34,7 +34,7 @@ Il n'y a pas de code "réel" dans la suite de cette présentation parce que nous
 
 Les navigateurs web communiquent avec les serveurs web avec le protocole [HTTP](/fr/docs/Web/HTTP) **: H**yper**T**ext**T**ransfer **P**rotocol. Quand vous cliquez un lien sur une page, soumettez un formulaire ou lancez une recherche, le navigateur envoie une requête HTTP (_HTTP Request)_ au serveur.
 
-Cette requête inclut :
+Cette requête inclut&nbsp;:
 
 - Une URL identifiant la cible et la ressource (un fichier HTML, un point particulier de données sur le serveur ou un outil à lancer).
 - Une méthode qui définit l'action requise ( par exemple récupérer un fichier ou sauvegarder certaines données ou mises à jour). Les différentes méthodes/verbes et les actions associées sont listées ci-dessous :

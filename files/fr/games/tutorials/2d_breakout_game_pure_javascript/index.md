@@ -46,6 +46,6 @@ Commencer avec du Javascript pur et dur est le meilleur moyen d'acquérir des co
 
 ## Prochaines étapes
 
-Ok, c'est parti ! Rendez-vous au premier chapitre pour commencer — Créer l'élément canvas et dessiner dessus
+Ok, c'est parti&nbsp;! Rendez-vous au premier chapitre pour commencer — Créer l'élément canvas et dessiner dessus
 
 {{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher")}}

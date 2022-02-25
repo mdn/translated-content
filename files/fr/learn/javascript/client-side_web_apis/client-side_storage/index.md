@@ -323,7 +323,7 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
 
     > **Note :** Le numéro de version est important. Si vous voulez mettre à jour votre base de données (par exemple, pour modifier la structure de la table), vous devez ré-exécuter votre code avec un numéro de version supérieur et spécifier le schéma de la base de données avec le gestionnaire d'événement `onupgradeneeded`. Nous ne verrons pas la mise à jour de base de données dans ce tutoriel.
 
-4.  Maintenant, ajoutez les gestionnaires d'événement suivants, juste en dessous des lignes précédentes — toujours à l'intérieur de `window.onload` :
+4.  Maintenant, ajoutez les gestionnaires d'événement suivants, juste en dessous des lignes précédentes — toujours à l'intérieur de `window.onload`&nbsp;:
 
     ```js
     // la base de données n'a pas pu être ouverte avec succès
@@ -754,7 +754,7 @@ C'est tout pour l'instant, l'installation est terminée.
 
 Avec le service worker enregistré et installé pour notre page HTML, et les ressources pertinentes ajoutées au cache, on est presque prêts. Il n'y a plus qu'une chose à faire: écrire du code pour répondre aux prochaines requêtes réseau.
 
-C'est ce que fait le second bloc de code dans `sw.js` :
+C'est ce que fait le second bloc de code dans `sw.js`&nbsp;:
 
 ```js
 self.addEventListener('fetch', function(e) {

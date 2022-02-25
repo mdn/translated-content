@@ -70,7 +70,7 @@ self.addEventListener("message", function(e) {
 
 - [Utiliser les Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)
-- [Est ce que le ServiceWorker est prêt ?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Est ce que le ServiceWorker est prêt&nbsp;?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promesses](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Utilisation performante des web workers](/en-US/docs/Web/Guide/Performance/Using_web_workers)
 - [Channel Messaging API](/en-US/docs/Web/API/Channel_Messaging_API)

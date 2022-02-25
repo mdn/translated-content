@@ -96,7 +96,7 @@ La chaîne de caractère de remplacement peut inclure les modèles de remplace
 
 Vous pouvez indiquer une fonction comme second paramètre. Dans ce cas, cette fonction sera appelée après que la recherche a été effectuée. Le résultat de la fonction (valeur retournée) sera utilisé comme chaîne de remplacement. (Note : les modèles de remplacement spéciaux mentionnés ci-dessus ne s'appliquent _pas_ dans ce cas). Notez que cette fonction sera appelée plusieurs fois, pour chaque correspondance complète à remplacer si l'expression régulière dans le premier paramètre est globale.
 
-Les arguments de cette fonction sont les suivants :
+Les arguments de cette fonction sont les suivants&nbsp;:
 
 <table class="standard-table">
   <tbody>
@@ -144,7 +144,7 @@ Les arguments de cette fonction sont les suivants :
 
 (Le nombre exact d'arguments varie suivant que le premier paramètre est ou non un objet {{jsxref("RegExp")}} et, dans ce cas, du nombre de sous-correspondances entre parenthèses qu'il indique.)
 
-L'exemple suivant affectera `'abc - 12345 - #$*%'` à la variable `nouvelleChaine` :
+L'exemple suivant affectera `'abc - 12345 - #$*%'` à la variable `nouvelleChaine`&nbsp;:
 
 ```js
 function remplaceur(correspondance, p1, p2, p3, decalage, chaine) {

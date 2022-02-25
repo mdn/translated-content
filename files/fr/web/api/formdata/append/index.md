@@ -21,7 +21,7 @@ La différence entre {{domxref("FormData.set")}} et `append()` est que, quand la
 
 ## Syntaxe
 
-Il y a deux versions de cette méthode : avec deux ou trois paramètres
+Il y a deux versions de cette méthode&nbsp;: avec deux ou trois paramètres
 
 ```js
 formData.append(name, value);

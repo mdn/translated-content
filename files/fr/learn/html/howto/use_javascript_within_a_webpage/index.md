@@ -14,7 +14,7 @@ Dans cet article, nous verrons comment améliorer les pages web en ajoutant du c
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez au préalable savoir comment
         <a href="/fr/Learn/HTML/Write_a_simple_page_in_HTML"
@@ -23,7 +23,7 @@ Dans cet article, nous verrons comment améliorer les pages web en ajoutant du c
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Savoir comment utiliser du code JavaScript dans un fichier HTML et
         apprendre les bonnes pratiques afin que le code JavaScript utilisé soit

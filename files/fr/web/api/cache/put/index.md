@@ -17,7 +17,7 @@ translation_of: Web/API/Cache/put
 
 La méthode **`put()`** de l'interface {{domxref("Cache")}} permet d'ajouter des paires clé/valeur à l'objet {{domxref("Cache")}} en cours.
 
-Souvent, le comportement voulu est juste de {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser  {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations :
+Souvent, le comportement voulu est juste de {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser  {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations&nbsp;:
 
 ```js
 fetch(url).then(function(response) {
@@ -57,7 +57,7 @@ Une {{jsxref("Promise", "Promesse")}} est retournée avec void.
 
 ## Exemples
 
-Cet extrait de code est tiré du MDN [sw-test example](https://github.com/mdn/sw-test/) (lancez [sw-test dans votre navigateur](https://mdn.github.io/sw-test/)). On attend le déclenchement d'un {{domxref("FetchEvent")}}, puis l'on va retourner une réponse spéciale d'après la procédure suivante :
+Cet extrait de code est tiré du MDN [sw-test example](https://github.com/mdn/sw-test/) (lancez [sw-test dans votre navigateur](https://mdn.github.io/sw-test/)). On attend le déclenchement d'un {{domxref("FetchEvent")}}, puis l'on va retourner une réponse spéciale d'après la procédure suivante&nbsp;:
 
 1.  Vérifier si un match pour la requête a été trouvé dans le {{domxref("CacheStorage")}} grâce à  {{domxref("CacheStorage.match","CacheStorage.match()")}} . Si oui, servir cette réponse.
 2.  Sinon, ouvrir le cache `v1` avec `open()`, insérer la requête réseau par défaut dans le cache via {{domxref("Cache.put","Cache.put()")}} , et retourner un clone de cette requête avec `return response.clone()` — nécessaire car `put()` détruit le corps de la réponse.

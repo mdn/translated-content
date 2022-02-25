@@ -86,7 +86,7 @@ console.log(objet[1]);
 Ceci affichera « valeur », étant donné que le nombre `1` sera converti en une chaîne `"1"`.
 
 ```js
-var toto = {propriété_unique : 1}, truc = {propriété_unique : 2}, objet = {};
+var toto = {propriété_unique&nbsp;: 1}, truc = {propriété_unique&nbsp;: 2}, objet = {};
 objet[toto] = 'valeur';
 console.log(objet[truc]);
 ```
@@ -107,7 +107,7 @@ Les nouveaux venus en JavaScript font souvent l'erreur d'utiliser {{jsxref("eval
 x = eval('document.formulaire.' + controle + '.value');
 ```
 
-`eval` est lente et insécurisée et devrait être évitée dès que possible. Il est préférable d'utiliser la notation avec crochets :
+`eval` est lente et insécurisée et devrait être évitée dès que possible. Il est préférable d'utiliser la notation avec crochets&nbsp;:
 
 ```js
 x = document.formulaire[controle].value;

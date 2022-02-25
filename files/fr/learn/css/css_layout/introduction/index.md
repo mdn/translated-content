@@ -70,7 +70,7 @@ Le cours normal est la manière dont le navigateur présente les pages HTML par 
   <li>Haut les cœurs, ami</li>
 </ul>
 
-<p>La fin !</p>
+<p>La fin&nbsp;!</p>
 ```
 
 Par défaut, le navigateur affichera ce code ainsi&nbsp;:

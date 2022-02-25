@@ -24,7 +24,7 @@ Ces éléments théoriques ne sont pas strictement nécessaires pour commencer �
 
 ## Des clients et des serveurs
 
-Les ordinateurs qui se connectent au Web sont appelés des **clients** et des **serveurs**. Voici un diagramme simplifié qui illustre comment ils interagissent :
+Les ordinateurs qui se connectent au Web sont appelés des **clients** et des **serveurs**. Voici un diagramme simplifié qui illustre comment ils interagissent&nbsp;:
 
 ![](Client-server.jpg)
 

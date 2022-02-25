@@ -14,7 +14,7 @@ Il est lancé après :
 1.  [beforeunload](/en-US/docs/Mozilla_event_reference/beforeunload) (événement annulable)
 2.  [pagehide](/en-US/docs/Mozilla_event_reference/pagehide)
 
-Le document se trouve alors dans un état particulier :
+Le document se trouve alors dans un état particulier&nbsp;:
 
 - Toutes les ressources existent encore (img, iframe etc.)
 - Plus rien n'est encore visible par l'utilisateur final

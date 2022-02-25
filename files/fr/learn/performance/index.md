@@ -36,9 +36,9 @@ Cette rubrique contient les guides suivants. Voici un ordre suggéré pour les p
 
 - [Le "pourquoi" des performances Web](/fr/docs/Learn/Performance/pourquoi_performance_web)
   - : Cet article explique pourquoi les performances Web sont importantes pour l'accessibilité, l'expérience utilisateur et vos objectifs commerciaux.
-- [Qu'est-ce que la performance Web ?](/fr/docs/Learn/Performance/What_is_web_performance)
-  - : Vous savez que les performances Web sont importantes, mais en quoi consistent les performances Web ? Cet article présente les composants de la performance, du chargement et du rendu de la page Web, en passant par la manière dont votre contenu est intégré dans le navigateur de votre utilisateur pour être visualisé, aux groupes de personnes dont nous devons tenir compte lors de la réflexion sur les performances.
-- [Comment les utilisateurs perçoivent-ils les performances ?](/fr/docs/Learn/Performance/Perceived_performance)
+- [Qu'est-ce que la performance Web&nbsp;?](/fr/docs/Learn/Performance/What_is_web_performance)
+  - : Vous savez que les performances Web sont importantes, mais en quoi consistent les performances Web&nbsp;? Cet article présente les composants de la performance, du chargement et du rendu de la page Web, en passant par la manière dont votre contenu est intégré dans le navigateur de votre utilisateur pour être visualisé, aux groupes de personnes dont nous devons tenir compte lors de la réflexion sur les performances.
+- [Comment les utilisateurs perçoivent-ils les performances&nbsp;?](/fr/docs/Learn/Performance/Perceived_performance)
   - : La vitesse à laquelle vos utilisateurs perçoivent votre site est plus importante que la vitesse de votre site Web en millisecondes. Ces perceptions sont affectées par le temps de chargement réel de la page, l'inactivité, la réactivité à l'interaction de l'utilisateur et la fluidité du défilement et d'autres animations. Dans cet article, nous discutons des différentes métriques de chargement, de l'animation et de la réactivité, ainsi que des meilleures pratiques pour améliorer la perception de l'utilisateur, sinon les timings réels.
 
 <!---->

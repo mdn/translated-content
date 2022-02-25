@@ -45,7 +45,7 @@ var ma_chaine = new String("corail");
 "length" in ma_chaine  // renvoie true
 
 // Objets personnalisés
-var voiture = {marque : "Honda", modèle : "Accord", année : 1998};
+var voiture = {marque&nbsp;: "Honda", modèle&nbsp;: "Accord", année&nbsp;: 1998};
 "marque" in voiture  // renvoie true
 "modèle" in voiture  // renvoie true
 "marque" in voiture // renvoie true
@@ -66,7 +66,7 @@ var couleur2 = "corail";
 Si une propriété est supprimée avec l'opérateur [`delete`](fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Op%c3%a9rateurs/Op%c3%a9rateurs_sp%c3%a9ciaux/L'op%c3%a9rateur_delete), l'opérateur `in` renvoie `false` pour cette propriété.
 
 ```js
-var voiture = {marque : "Honda", modèle : "Accord", année : 1998};
+var voiture = {marque&nbsp;: "Honda", modèle&nbsp;: "Accord", année&nbsp;: 1998};
 delete voiture.marque;
 "marque" in voiture  // renvoie false
 
@@ -78,7 +78,7 @@ delete arbres[3];
 Si une propriété est définie à {{jsxref("Objets_globaux/undefined", "undefined")}} mais n'est pas supprimée, l'opérateur `in` renverra `true` pour cette propriété.
 
 ```js
-var voiture = {marque : "Honda", modèle : "Accord", année : 1998};
+var voiture = {marque&nbsp;: "Honda", modèle&nbsp;: "Accord", année&nbsp;: 1998};
 voiture.marque = undefined;
 "marque" in voiture  // renvoie true
 

@@ -61,7 +61,7 @@ function generate_table() {
 
 {{ EmbedLiveSample('Création_d\'un_tableau_HTML_dynamiquement') }}
 
-Remarquez l'ordre dans lequel les éléments et le nœud texte sont créés :
+Remarquez l'ordre dans lequel les éléments et le nœud texte sont créés&nbsp;:
 
 1.  On crée d'abord l'élément \<table>.
 2.  Ensuite, l'élément \<tbody> qui est un enfant de l'élément \<table>.
@@ -69,7 +69,7 @@ Remarquez l'ordre dans lequel les éléments et le nœud texte sont créés :
 4.  Pour chaque élément \<tr>, on emploie une boucle pour créer les éléments enfants \<td>.
 5.  Enfin pour chaque élément \<td>, on crée le nœud texte contenant le texte de la cellule du tableau.
 
-Après avoir créé les éléments \<table>, \<tbody>, \<tr>, \<td> et le nœud texte, on ajoute chaque objet à son parent dans l'ordre inverse :
+Après avoir créé les éléments \<table>, \<tbody>, \<tr>, \<td> et le nœud texte, on ajoute chaque objet à son parent dans l'ordre inverse&nbsp;:
 
 1.  On attache d'abord chaque nœud texte à son élément parent \<td> en utilisant
 
@@ -93,7 +93,7 @@ Après avoir créé les éléments \<table>, \<tbody>, \<tr>, \<td> et le nœud 
 
 Souvenez-vous de cette technique, vous l'utiliserez souvent en programmant pour le DOM W3C. On crée d'abord les éléments du haut vers le bas, puis on attache les enfants aux parents dans l'ordre inverse.
 
-Voici l'HTML généré par ce code JavaScript :
+Voici l'HTML généré par ce code JavaScript&nbsp;:
 
     ...
     <table border="2">
@@ -102,7 +102,7 @@ Voici l'HTML généré par ce code JavaScript :
     </table>
     ...
 
-Voici l'arborescence objet DOM créée par le code, pour l'élément TABLE et ses enfants :
+Voici l'arborescence objet DOM créée par le code, pour l'élément TABLE et ses enfants&nbsp;:
 
 ![](sample1-tabledom.jpg)
 
@@ -165,7 +165,7 @@ Dans cet exemple, on assigne à la variable `myP` l'objet DOM du second élémen
 
 ![](sample2a2.jpg)
 
-Une fois que vous avez l'objet DOM pour un élément HTML, vous pouvez modifier ses propriétés. Si par exemple vous voulez définir la propriété couleur d'arrière-plan du style, ajoutez simplement :
+Une fois que vous avez l'objet DOM pour un élément HTML, vous pouvez modifier ses propriétés. Si par exemple vous voulez définir la propriété couleur d'arrière-plan du style, ajoutez simplement&nbsp;:
 
     myP.style.background = "rgb(255,0,0)";
     // ajoute une propriété de style inline
@@ -186,7 +186,7 @@ En invoquant `myP.appendChild` ({{mediawiki.external('node_element')}}) , vous d
 
     myP.appendChild(noeudTexte);
 
-En exécutant cet exemple, vous pouvez remarquer que les mots « hello » et « world » ne sont pas séparés : `helloworld`. Quand vous parcourez la page HTML les deux nœuds semblent donc n'en former qu'un seul, rappelez-vous cependant qu'ils sont bien distincts dans le modèle de document. Le second nœud est de type TEXT_NODE, et est le second enfant de la seconde balise \<p>. Le schéma suivant situe ce nouvel objet dans l'arborescence du document :
+En exécutant cet exemple, vous pouvez remarquer que les mots « hello » et « world » ne sont pas séparés&nbsp;: `helloworld`. Quand vous parcourez la page HTML les deux nœuds semblent donc n'en former qu'un seul, rappelez-vous cependant qu'ils sont bien distincts dans le modèle de document. Le second nœud est de type TEXT_NODE, et est le second enfant de la seconde balise \<p>. Le schéma suivant situe ce nouvel objet dans l'arborescence du document&nbsp;:
 
 ![](sample2b2.jpg)
 
@@ -194,7 +194,7 @@ En exécutant cet exemple, vous pouvez remarquer que les mots « hello » et �
 
 ### Création de nouveaux éléments avec l'objet document et la méthode `createElement(...)`
 
-Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `createElement`. Pour créer un élément \<p> enfant de l'élément \<body>, vous pouvez vous servir de `body` défini dans l'exemple précédent et lui greffer un nouvel élément nœud. Pour ce faire, invoquez `document.createElement("nombalise")`. Voici un exemple :
+Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `createElement`. Pour créer un élément \<p> enfant de l'élément \<body>, vous pouvez vous servir de `body` défini dans l'exemple précédent et lui greffer un nouvel élément nœud. Pour ce faire, invoquez `document.createElement("nombalise")`. Voici un exemple&nbsp;:
 
     nouveauNoeudBALISEP = document.createElement("p");
     body.appendChild(nouveauNoeudBALISEP);
@@ -203,15 +203,15 @@ Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `creat
 
 ### Suppression de nœuds avec la méthode `removeChild(...)`
 
-Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de `myP` (deuxième élément \<p>) le nœud texte contenant le mot « world » :
+Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de `myP` (deuxième élément \<p>) le nœud texte contenant le mot « world »&nbsp;:
 
     myP.removeChild(noeudTexte);
 
-Vous pouvez ensuite ajouter `monNoeudTexte` (contenant `"world"`) dans l'élément \<p> récemment créé :
+Vous pouvez ensuite ajouter `monNoeudTexte` (contenant `"world"`) dans l'élément \<p> récemment créé&nbsp;:
 
     nouveauNoeudBALISEP.appendChild(noeudTexte);
 
-L'arborescence des objets se présente désormais comme ceci :
+L'arborescence des objets se présente désormais comme ceci&nbsp;:
 
 ![](sample2d.jpg)
 
@@ -225,7 +225,7 @@ Jusqu'à la fin de cet article, nous travaillons de nouveau sur Exemple1.html. L
 
 ### Création et insertion des éléments dans l'arborescence
 
-On peut décomposer la création du tableau de Exemple1.html en trois étapes :
+On peut décomposer la création du tableau de Exemple1.html en trois étapes&nbsp;:
 
 - Récupérer l'objet body (c'est le premier élément de l'objet document).
 - Créer tous les éléments.
@@ -233,7 +233,7 @@ On peut décomposer la création du tableau de Exemple1.html en trois étapes :
 
 Le code source qui suit est un exemple commenté qui crée le tableau de Exemple1.
 
-> **Note :** Il y a une ligne de code supplémentaire à la fin de la fonction `start()`, qui définit la propriété bordure du tableau en employant la méthode `setAttribute`. `setAttribute` utilise deux arguments : le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.
+> **Note :** Il y a une ligne de code supplémentaire à la fin de la fonction `start()`, qui définit la propriété bordure du tableau en employant la méthode `setAttribute`. `setAttribute` utilise deux arguments&nbsp;: le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.
 
 ```html
 <head>
@@ -305,7 +305,7 @@ mybody.appendChild(currenttext);
 
 ### Récupérer la valeur d'un attribut
 
-A la fin d'Exemple1, l'appel à `setAttribute` sur l'objet `table` définit la propriété `border` du tableau. Si vous désirez simplement récupérez la valeur de cet attribut, vous pouvez employer la méthode `getAttribute` :
+A la fin d'Exemple1, l'appel à `setAttribute` sur l'objet `table` définit la propriété `border` du tableau. Si vous désirez simplement récupérez la valeur de cet attribut, vous pouvez employer la méthode `getAttribute`&nbsp;:
 
 ```html
 mytable.getAttribute("border");
@@ -328,7 +328,7 @@ Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez défini
                row = document.createElement("tr");
                for(var i = 0; i < 2; i++) {
                    cell = document.createElement("td");
-                   text = document.createTextNode("la cellule est :" + i + j);
+                   text = document.createTextNode("la cellule est&nbsp;:" + i + j);
                    cell.appendChild(text);
                    row.appendChild(cell);
                    // change la couleur de fond de la cellule

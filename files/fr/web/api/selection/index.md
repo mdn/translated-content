@@ -11,7 +11,7 @@ La classe de l'objet retourné par [`window.getSelection()`](Window/getSelection
 
 ### Description
 
-Un objet `selection` représente les [plages](range) sélectionnées par l'utilisateur. Habituellement, il ne contient qu'une seule plage accessible comme ceci :
+Un objet `selection` représente les [plages](range) sélectionnées par l'utilisateur. Habituellement, il ne contient qu'une seule plage accessible comme ceci&nbsp;:
 
     range = sel.getRangeAt(0);
 

@@ -93,7 +93,7 @@ parentDiv.insertBefore(sp1, sp2)
 
 Il n'existe pas de méthode `insertAfter`. Il peut être émulé avec une combinaison des méthodes `insertBefore`[ ](/fr/docs/Web/API/Node/insertBefore)et [`nextSibling`](/fr/docs/Web/API/Node/nextSibling).
 
-Dans l'exemple ci-dessus, `sp1` pourrait être inséré après `sp2` en utilisant :
+Dans l'exemple ci-dessus, `sp1` pourrait être inséré après `sp2` en utilisant&nbsp;:
 
 ```js
 parentDiv.insertBefore(sp1, sp2.nextSibling);

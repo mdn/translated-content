@@ -18,7 +18,7 @@ L’attribut `aria-required` est utilisé pour indiquer que l’utilisateur doit
 
 ### Valeurs
 
-`true` ou `false` (Valeur par défaut : `false`)
+`true` ou `false` (Valeur par défaut&nbsp;: `false`)
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
@@ -30,7 +30,7 @@ Remarquez que cet attribut ne changera pas automatiquement la présentation du c
 
 ### Exemples
 
-#### Exemple 1 : un formulaire simple
+#### Exemple 1&nbsp;: un formulaire simple
 
 ```html
 <form action="post">

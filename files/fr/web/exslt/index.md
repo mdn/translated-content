@@ -8,7 +8,7 @@ tags:
 translation_of: Web/EXSLT
 ---
 {{ XsltRef() }}
-EXSLT est un ensemble d'extensions à [XSLT](fr/XSLT). Un certain nombre de modules existent ; ceux qui sont supportés par Firefox sont listés ci-dessous :
+EXSLT est un ensemble d'extensions à [XSLT](fr/XSLT). Un certain nombre de modules existent ; ceux qui sont supportés par Firefox sont listés ci-dessous&nbsp;:
 
 - [Common](#Common) (`exsl`)
   - : Fournit des éléments et des fonctions basiques d'extension.
@@ -23,7 +23,7 @@ EXSLT est un ensemble d'extensions à [XSLT](fr/XSLT). Un certain nombre de modu
 
 ### Utilisation de EXSLT
 
-Pour utiliser une fonction EXSLT, il faut déclarer son espace de noms comme espace de noms d'extension dans votre feuille de style. Par exemple, pour utiliser le package regexp :
+Pour utiliser une fonction EXSLT, il faut déclarer son espace de noms comme espace de noms d'extension dans votre feuille de style. Par exemple, pour utiliser le package regexp&nbsp;:
 
     <xsl:stylesheet version="1.0"
                     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"

@@ -55,13 +55,13 @@ Une **expression de fonction fléchée** (_arrow function_ en anglais) permet d�
 
 ## Description
 
-Deux facteurs sont à l’origine de la conception des fonctions fléchées : une syntaxe plus courte et l’absence de `this` spécifique à la fonction. Sur ce dernier point, cela signifie qu’une fonction fléchée ne lie pas son propre {{jsxref("Opérateurs/L_opérateur_this","this")}} au sein de la fonction (il en va de même avec {{jsxref("Fonctions/arguments","arguments")}}, {{jsxref("Opérateurs/super","super")}} ou {{jsxref("Opérateurs/new.target","new.target")}}).
+Deux facteurs sont à l’origine de la conception des fonctions fléchées&nbsp;: une syntaxe plus courte et l’absence de `this` spécifique à la fonction. Sur ce dernier point, cela signifie qu’une fonction fléchée ne lie pas son propre {{jsxref("Opérateurs/L_opérateur_this","this")}} au sein de la fonction (il en va de même avec {{jsxref("Fonctions/arguments","arguments")}}, {{jsxref("Opérateurs/super","super")}} ou {{jsxref("Opérateurs/new.target","new.target")}}).
 
 > **Note :** Voir aussi l’article sur les fonctions fléchées présent sur <https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees> (l’article original en anglais est disponible [ici](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)).
 
 ### Syntaxe plus courte
 
-Pour des aspects fonctionnels, la légèreté de la syntaxe est bienvenue. Par exemple :
+Pour des aspects fonctionnels, la légèreté de la syntaxe est bienvenue. Par exemple&nbsp;:
 
 ```js
 var a = [
@@ -106,7 +106,7 @@ function Personne () {
 var p = new Personne();
 ```
 
-Avec ECMAScript 3/5, ce problème a pu être résolu en affectant la valeur de `this` à une autre variable :
+Avec ECMAScript 3/5, ce problème a pu être résolu en affectant la valeur de `this` à une autre variable&nbsp;:
 
 ```js
 function Personne () {
@@ -180,7 +180,7 @@ console.log(ajouter.addViaCall(1));
 
 #### Pas de liaison pour `arguments`
 
-Les fonctions fléchées n’exposent pas d’objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) : `arguments.length`, `arguments[0]`, `arguments[1]`, et autres ne font donc pas référence aux arguments passés à la fonction fléchés. Dans ce cas `arguments` est simplement une référence à la variable de même nom si elle est présente dans la portée englobante :
+Les fonctions fléchées n’exposent pas d’objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) : `arguments.length`, `arguments[0]`, `arguments[1]`, et autres ne font donc pas référence aux arguments passés à la fonction fléchés. Dans ce cas `arguments` est simplement une référence à la variable de même nom si elle est présente dans la portée englobante&nbsp;:
 
 ```js
 var arguments = [1, 2, 3];
@@ -197,7 +197,7 @@ function toto () {
 toto(3); // 5
 ```
 
-Les fonctions fléchées n’ont donc pas leur propre objet `arguments`, mais dans la plupart des cas, [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste) représentent une bonne alternative :
+Les fonctions fléchées n’ont donc pas leur propre objet `arguments`, mais dans la plupart des cas, [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste) représentent une bonne alternative&nbsp;:
 
 ```js
 function toto () {
@@ -231,7 +231,7 @@ objet.c();
 
 #### Utiliser `prototype`
 
-Les fonctions fléchées ne possèdent pas de prototype :
+Les fonctions fléchées ne possèdent pas de prototype&nbsp;:
 
 ```js
 var Toto = () => {};
@@ -266,7 +266,7 @@ var fonction = (x, y) => { return x + y; }
 
 ## Renvoyer des littéraux objets
 
-Attention à bien utiliser les parenthèses lorsqu’on souhaite renvoyer des objets avec des littéraux :
+Attention à bien utiliser les parenthèses lorsqu’on souhaite renvoyer des objets avec des littéraux&nbsp;:
 
 ```js
 // fonction() renverra undefined !
@@ -276,7 +276,7 @@ var fonction = () => { toto: 1 };
 var fonction2 = () =>  { toto: function () {} };
 ```
 
-En effet, ici, l’analyse de l’expression trouve des blocs d’instructions au lieu de littéraux objets. Pour éviter cet effet indésirable, on pourra encadrer le littéral objet :
+En effet, ici, l’analyse de l’expression trouve des blocs d’instructions au lieu de littéraux objets. Pour éviter cet effet indésirable, on pourra encadrer le littéral objet&nbsp;:
 
 ```js
 var fonction = () => ({ toto: 1 });
@@ -294,7 +294,7 @@ var func = ()
 
 ## Ordre syntaxique
 
-La flèche utilisée pour une fonction fléchée n’est pas un opérateur. Les fonctions fléchées ont des règles spécifiques quant à leur place dans la syntaxe et interagissent différemment de la précédence des opérateurs par rapport à une fonction classique :
+La flèche utilisée pour une fonction fléchée n’est pas un opérateur. Les fonctions fléchées ont des règles spécifiques quant à leur place dans la syntaxe et interagissent différemment de la précédence des opérateurs par rapport à une fonction classique&nbsp;:
 
 ```js
 let fonctionRappel;
@@ -374,4 +374,4 @@ setTimeout( () => {
 
 ## Voir aussi
 
-- L’article sur les fonctions fléchées présent sur [https ://tech.mozfr.org](https://tech.mozfr.org) (l’article original en anglais est disponible [ici](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)).
+- L’article sur les fonctions fléchées présent sur [https&nbsp;://tech.mozfr.org](https://tech.mozfr.org) (l’article original en anglais est disponible [ici](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)).

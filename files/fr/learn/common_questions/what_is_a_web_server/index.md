@@ -13,7 +13,7 @@ Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctio
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez au préalable savoir<a
           href="/fr/docs/Apprendre/Fonctionnement_Internet"
@@ -27,7 +27,7 @@ Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctio
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Vous apprendrez ce qu'est un serveur web et comprendrez son
         fonctionnement général.

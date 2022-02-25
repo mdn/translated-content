@@ -48,7 +48,7 @@ La méthode **`some()`** teste si au moins un élément du tableau passe le test
 
 La méthode `some()` exécute la fonction `callback` une seule fois pour chaque élément présent dans le tableau jusqu'à ce qu'elle en trouve un pour lequel `callback` renvoie une valeur équivalente à `true` dans un contexte booléen. Si un tel élément est trouvé, `some()` renvoie immédiatement `true`. Dans le cas contraire, `some` renvoie `false`. `callback` n'est invoquée que pour les indices du tableau auxquels des valeurs sont assignées ; elle n'est pas invoquée pour les indices qui ont été supprimés ou auxquels aucune valeur n'a jamais été assignée.
 
-La fonction `callback` est invoquée avec trois paramètres : la valeur de l'élément, l'indice de l'élément et l'objet `Array` parcouru.
+La fonction `callback` est invoquée avec trois paramètres&nbsp;: la valeur de l'élément, l'indice de l'élément et l'objet `Array` parcouru.
 
 Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur  {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 

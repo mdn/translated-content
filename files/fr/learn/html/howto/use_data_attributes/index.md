@@ -14,7 +14,7 @@ original_slug: Apprendre/HTML/Comment/Utiliser_attributs_donnes
 
 ## Syntaxe HTML
 
-La syntaxe est simple. Tout attribut d'un élément dont le nom commence par `data-` est un attribut de données (_data attribute_). Si par exemple vous avez un article pour lequel vous souhaitez stocker des informations supplémentaires et qui n'ont pas de représentation visuelle, il vous suffit d'utiliser des attributs de données pour cela :
+La syntaxe est simple. Tout attribut d'un élément dont le nom commence par `data-` est un attribut de données (_data attribute_). Si par exemple vous avez un article pour lequel vous souhaitez stocker des informations supplémentaires et qui n'ont pas de représentation visuelle, il vous suffit d'utiliser des attributs de données pour cela&nbsp;:
 
 ```html
 <article

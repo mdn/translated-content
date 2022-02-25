@@ -35,7 +35,7 @@ La plupart des API utilisées pour WebExtension sont également disponibles pour
 
 ### L'atelier des extensions Firefox _(Extension Workshop)_
 
-L'[atelier des extensions firefox _(Extension Workshop)_](https://extensionworkshop.com/) est utile pour aider à développer une extension pour Firefox en offrant à l'utilisateur une façon simple et efficace de personnaliser sa navigatrion sur internet. On peut notamment y trouver :
+L'[atelier des extensions firefox _(Extension Workshop)_](https://extensionworkshop.com/) est utile pour aider à développer une extension pour Firefox en offrant à l'utilisateur une façon simple et efficace de personnaliser sa navigatrion sur internet. On peut notamment y trouver&nbsp;:
 
 - [Une vue d'ensemble des fonctionnalités des extensions Firefox](https://extensionworkshop.com/#about)
 - [Les outils et les procédés pour développer et tester son application](https://extensionworkshop.com/documentation/develop/)

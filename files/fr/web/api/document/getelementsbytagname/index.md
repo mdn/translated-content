@@ -94,7 +94,7 @@ Lorsqu'elle est appelée sur un document HTML, `getElementsByTagName()` classe s
 
 ## Spécifications
 
-- [DOM Level 2 Core : getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-A6C9094) (non normative)
+- [DOM Level 2 Core&nbsp;: getElementsByTagName](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094) — [traduction](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-A6C9094) (non normative)
 - [HTML 5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)
 
 ## Voir aussi

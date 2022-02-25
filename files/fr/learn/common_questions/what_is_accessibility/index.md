@@ -15,11 +15,11 @@ Cet article aborde les concepts de base qui forment l'accessibilité pour le Web
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>Aucun.</td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Comprendre ce qu'est l'accessibilité et pourquoi elle est importante.
       </td>

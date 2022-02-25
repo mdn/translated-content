@@ -38,7 +38,7 @@ Cette méthode n'est pas exploitable pour les objets dont la propriété `lengt
 
 ### Supprimer un élément d'un tableau
 
-Le code suivant affiche le tableau `mesPoissons` avant et après avoir enlevé le premier élément. Il affiche aussi l'élément supprimé :
+Le code suivant affiche le tableau `mesPoissons` avant et après avoir enlevé le premier élément. Il affiche aussi l'élément supprimé&nbsp;:
 
 ```js
 var mesPoissons = ["ange", "clown", "mandarin", "chirurgien"];

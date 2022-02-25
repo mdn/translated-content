@@ -28,7 +28,7 @@ La valeur primitive de l'objet appelant.
 
 JavaScript appelle la méthode `valueOf` pour convertir un objet en une valeur primitive. Il est rarement nécessaire d'appeler soi-même la méthode `valueOf` ; JavaScript l'invoque automatiquement lorsqu'il rencontre un objet alors qu'il attend une valeur primitive.
 
-Par défaut, la méthode `valueOf` est héritée par tout objet descendant d'{{jsxref("Object")}}. Tous les objets globaux natifs redéfinissent cette méthode pour renvoyer une valeur appropriée. Si un objet n'a pas de valeur primitive, `valueOf` renvoie l'objet lui-même, ce qui sera affiché comme :
+Par défaut, la méthode `valueOf` est héritée par tout objet descendant d'{{jsxref("Object")}}. Tous les objets globaux natifs redéfinissent cette méthode pour renvoyer une valeur appropriée. Si un objet n'a pas de valeur primitive, `valueOf` renvoie l'objet lui-même, ce qui sera affiché comme&nbsp;:
 
 ```js
 [object Object]

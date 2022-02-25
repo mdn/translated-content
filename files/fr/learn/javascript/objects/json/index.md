@@ -106,7 +106,7 @@ superHeroes.hometown
 superHeroes['active']
 ```
 
-Pour accéder aux données plus profondes de la hiérarchie, vous n'avez qu'à enchaîner à la fois les noms des propriétés et les indexes des tableaux. Par exemple, l'expression suivante pointe vers le troisième superpouvoir du second super héros présent dans la liste :
+Pour accéder aux données plus profondes de la hiérarchie, vous n'avez qu'à enchaîner à la fois les noms des propriétés et les indexes des tableaux. Par exemple, l'expression suivante pointe vers le troisième superpouvoir du second super héros présent dans la liste&nbsp;:
 
 ```js
 superHeroes['members'][1]['powers'][2]
@@ -215,7 +215,7 @@ Pour charger nos données JSON, nous allons utiliser l'API {{domxref("XMLHttpReq
     - La méthode HTTP à utiliser sur le réseau pour notre requête. Dans notre cas, la méthode [`GET`](/fr/docs/Web/HTTP/Methods/GET) est appropriée dans la mesure où nous voulons simplement récupérer quelques données.
     - L'URL où adresser notre requête — il s'agit de l'URL du fichier JSON dont nous parlions tout à l'heure.
 
-4.  Ensuite, ajoutez les deux lignes suivantes — ici, nous attribuons la valeur `'json'` à [`responseType`](/fr/docs/Web/API/XMLHttpRequest/responseType), signalant ainsi au serveur que nous attendons une réponse au format JSON. Puis, nous envoyons notre requête à l'aide de la méthode [`send()`](/fr/docs/Web/API/XMLHttpRequest/send) :
+4.  Ensuite, ajoutez les deux lignes suivantes — ici, nous attribuons la valeur `'json'` à [`responseType`](/fr/docs/Web/API/XMLHttpRequest/responseType), signalant ainsi au serveur que nous attendons une réponse au format JSON. Puis, nous envoyons notre requête à l'aide de la méthode [`send()`](/fr/docs/Web/API/XMLHttpRequest/send)&nbsp;:
 
     ```js
     request.responseType = 'json';
@@ -256,7 +256,7 @@ Nous avons appelé le paramètre de cette fonction `jsonObj`  afin de garder 
 
 ### Création des fiches des héros
 
-Maintenant, ajoutons la fonction suivante qui crée et affiche les fiches de nos super-héros en dessous de notre code :
+Maintenant, ajoutons la fonction suivante qui crée et affiche les fiches de nos super-héros en dessous de notre code&nbsp;:
 
 ```js
 function showHeroes(jsonObj) {

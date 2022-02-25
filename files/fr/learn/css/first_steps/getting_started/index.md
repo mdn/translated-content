@@ -248,7 +248,7 @@ Dans l'exemple live ci-dessous, vous pouvez explorer les valeurs des différents
 
 Nous avons supprimé le soulignement quand le lien est survolé.Vous pourriez supprimer le soulignement quel que soit l'état du lien. Dans un vrai site, il est quand même important que le visiteur sache qu'un lien est un lien. Le soulignement donne un indice important aux visiteurs pour réaliser qu'un bout de texte dans un paragraphe est cliquable — c'est le comportement auquel ils sont habitués. Avec le contrôle que donne CSS, les changements de style peuvent parfois rendre le document moins accessible — à chaque fois que nécessaire nous nous efforcerons de signaler les pièges classiques dans cette direction.
 
-> **Note :** dans ce cours et à travers le site MDN, vous rencontrerez souvent la notion d'[accessibilité](/fr/docs/Apprendre/a11y) : les règles pour que nos pages soient compréhensibles et utilisables par tous.
+> **Note :** dans ce cours et à travers le site MDN, vous rencontrerez souvent la notion d'[accessibilité](/fr/docs/Apprendre/a11y)&nbsp;: les règles pour que nos pages soient compréhensibles et utilisables par tous.
 >
 > Vos visiteurs peuvent consulter votre page depuis un ordinateur équipé d'une souris ou d'un trackpad, ou depuis un téléphone avec un écran tactile. Ils peuvent aussi utiliser un lecteur d'écran qui parcourt le contenu du document. Ils pourraient avoir besoin d'un affichage en grands caractères, ou parcourir votre site en ne naviguant qu'avec le clavier.
 >
@@ -266,7 +266,7 @@ article p span { ... }
 h1 + ul + p { ... }
 ```
 
-On peut aussi combiner les types multiples. Essayez d'ajouter les règles suivantes à votre feuille de style :
+On peut aussi combiner les types multiples. Essayez d'ajouter les règles suivantes à votre feuille de style&nbsp;:
 
 ```css
 body h1 + p .special {

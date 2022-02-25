@@ -33,4 +33,4 @@ Permet de déterminer si une ressource donnée est disponible.
 
 ### Spécification
 
-Aucune ; cependant certaines informations sont disponibles : [Marking Resources for Offline Use](http://www.campd.org/stuff/Offline%20Cache.html)
+Aucune ; cependant certaines informations sont disponibles&nbsp;: [Marking Resources for Offline Use](http://www.campd.org/stuff/Offline%20Cache.html)

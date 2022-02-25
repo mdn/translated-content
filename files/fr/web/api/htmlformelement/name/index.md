@@ -19,7 +19,7 @@ Si votre {{HTMLElement("Form")}} contient un élément appelé *name*, alors 
 ```js
 var form1name = document.getElementById("form1").name;
 
-if (form1name != document.form.form1) {
+if (form1name&nbsp;!= document.form.form1) {
    // browser doesn't support this form of reference
 }
 ```

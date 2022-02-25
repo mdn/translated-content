@@ -60,7 +60,7 @@ Maintenant, à chaque requête vers le serveur, le navigateur va renvoyer au ser
 
 ### Cookies de session
 
-Le cookie créé ci-dessus est un *cookie de session* : il est effacé quand le navigateur est fermé, puisqu'on n'a pas spécifié de directive `Expires` ou `Max-Age`. Notons cependant que les navigateurs web peuvent utiliser la **restauration de session**, ce qui fait de la plupart des cookies des cookies permanents, comme si le navigateur n'avait jamais été fermé.
+Le cookie créé ci-dessus est un *cookie de session*&nbsp;: il est effacé quand le navigateur est fermé, puisqu'on n'a pas spécifié de directive `Expires` ou `Max-Age`. Notons cependant que les navigateurs web peuvent utiliser la **restauration de session**, ce qui fait de la plupart des cookies des cookies permanents, comme si le navigateur n'avait jamais été fermé.
 
 ### Cookies permanents
 

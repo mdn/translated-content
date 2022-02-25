@@ -20,7 +20,7 @@ La plupart des navigateurs, dont Mozilla, offrent un outil de validation qui inf
 
 #### Exemple
 
-Voici un exemple de document mal formé : un des éléments possédant une balise d'ouverture, `<warning>`, n'a pas de balise de fermeture et ce n'est pas un élément vide (ou auto-fermant comme les balises \<br /> ou \<img /> en XHTML).
+Voici un exemple de document mal formé&nbsp;: un des éléments possédant une balise d'ouverture, `<warning>`, n'a pas de balise de fermeture et ce n'est pas un élément vide (ou auto-fermant comme les balises \<br /> ou \<img /> en XHTML).
 
     <code>
       <message>
@@ -29,7 +29,7 @@ Voici un exemple de document mal formé : un des éléments possédant une bali
       </message>
     </code>
 
-L'exemple qui suit est correct et « bien formé » :
+L'exemple qui suit est correct et « bien formé »&nbsp;:
 
     <code>
       <message>
@@ -43,7 +43,7 @@ Pour être valide, un document doit se conformer à des règles sémantiques qui
 
 ### Entités
 
-Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe « plus grand que » utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux :
+Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe « plus grand que » utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux&nbsp;:
 
 <table class="standard-table">
   <tbody>
@@ -80,11 +80,11 @@ Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) 
   </tbody>
 </table>
 
-Même s'il n'y a que 5 entités déclarées, il est possible d'en ajouter d'autres grâce à la [Document Type Definition](fr/DTD), comme décrit ci-dessous :
+Même s'il n'y a que 5 entités déclarées, il est possible d'en ajouter d'autres grâce à la [Document Type Definition](fr/DTD), comme décrit ci-dessous&nbsp;:
 
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE body [
-        <!ENTITY warning "Avertissement : Quelque chose ne fonctionne pas correctement…
+        <!ENTITY warning "Avertissement&nbsp;: Quelque chose ne fonctionne pas correctement…
                           Veuillez rafraîchir et réessayer.">
     ]>
     <body>
@@ -111,7 +111,7 @@ Cet article n'est qu'une introduction rapide à XML ; pour plus de détails, pa
 
 L'apprentissage du langage de balisage HTML vous aidera à mieux comprendre XML. Vous trouverez également plus d'informations en explorant le Mozilla Developer Center.
 
-Voici une liste d'articles de référence sur le Web :
+Voici une liste d'articles de référence sur le Web&nbsp;:
 
 - [W3Schools: DTD Tutorial (en)](http://www.w3schools.com/dtd/)
 - [W3Schools: XML Tutorial (en)](http://www.w3schools.com/xml/default.asp)
@@ -124,5 +124,5 @@ L'article [Using XML (en)](http://www.alistapart.com/articles/usingxml/) est une
 
 ### Informations sur le document
 
-- Auteur(s) : [Justin G. Shreve](http://justinshreve.com)
-- Dernière mise à jour : le 4 août 2007
+- Auteur(s)&nbsp;: [Justin G. Shreve](http://justinshreve.com)
+- Dernière mise à jour&nbsp;: le 4 août 2007

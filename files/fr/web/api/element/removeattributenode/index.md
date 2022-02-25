@@ -39,4 +39,4 @@ Il n'y a pas de `removeAttributeNodeNS` (contrairement à la paire `setAttribute
 
 ## Spécification
 
-- [DOM Level 2 Core : removeAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-D589198) (non normative)
+- [DOM Level 2 Core&nbsp;: removeAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-D589198) (non normative)

@@ -97,7 +97,7 @@ La propriété `color` est définie grâce à une valeur de type {{cssxref("&lt;
   <span class="confiture">
     « MARMELADE D’ORANGES. »
   </span>
-  Mais, à son grand regret, le pot était vide :
+  Mais, à son grand regret, le pot était vide&nbsp;:
   elle n’osait le laisser tomber dans la crainte
   de tuer quelqu’un ; aussi s’arrangea-t-elle de
   manière à le déposer en passant dans une

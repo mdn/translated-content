@@ -23,7 +23,7 @@ Permet aux sites web de s'enregistrer en tant que gestionnaires possibles pour d
 
 ### Exemple
 
-Si votre application web est située à `http://www.example.com`, vous pouvez enregistrer un gestionnaire de protocole lui permettant de gérer « mailto » comme ceci :
+Si votre application web est située à `http://www.example.com`, vous pouvez enregistrer un gestionnaire de protocole lui permettant de gérer « mailto » comme ceci&nbsp;:
 
     navigator.registerProtocolHandler("mailto",
                                      "https://www.example.com/?to=%s",

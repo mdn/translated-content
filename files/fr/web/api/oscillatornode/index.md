@@ -9,11 +9,11 @@ L'interface `OscillatorNode` représente un signal périodique, une sinusoïd
 
 On crée un `OscillatorNode` en utilisant la méthode {{domxref("AudioContext.createOscillator")}}. Il a toujours exactement une sortie, et aucune entrée. Ses propriétés par défaut (voir {{domxref("AudioNode")}} pour la définition) sont :
 
-- Nombre d'entrées : `0`
-- Nombre de sorties : `1`
-- Mode de calcul des canaux : `max`
-- Nombre de canaux : `2` (propriété ignorée dans le mode de calcul par défaut)
-- Interprétation des canaux : `speakers`
+- Nombre d'entrées&nbsp;: `0`
+- Nombre de sorties&nbsp;: `1`
+- Mode de calcul des canaux&nbsp;: `max`
+- Nombre de canaux&nbsp;: `2` (propriété ignorée dans le mode de calcul par défaut)
+- Interprétation des canaux&nbsp;: `speakers`
 
 ## Propriétés
 

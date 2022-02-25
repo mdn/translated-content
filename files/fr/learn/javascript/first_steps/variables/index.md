@@ -10,14 +10,14 @@ Après lecture des deux articles précédents, vous savez maintenant ce qu'est J
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vocabulaire courant de l'informatique, bases de HTML et CSS,
         compréhension de ce que fait JavaScript.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Se familiariser avec l'usage élémentaire des variables en JavaScript.
       </td>
@@ -33,7 +33,7 @@ Toutefois, nous avons aussi incorporé une console JavaScript dans cette page po
 
 ## Qu'est ce qu'une variable&nbsp;?
 
-Une variable est un conteneur pour une valeur, tel un nombre à utiliser pour une addition, ou une chaîne devant faire partie d'une phrase. Mais un aspect spécial des variables est que les valeurs contenues peuvent changer. Voyons un exemple simple :
+Une variable est un conteneur pour une valeur, tel un nombre à utiliser pour une addition, ou une chaîne devant faire partie d'une phrase. Mais un aspect spécial des variables est que les valeurs contenues peuvent changer. Voyons un exemple simple&nbsp;:
 
 ```html
 <button>Pressez moi</button>
@@ -76,7 +76,7 @@ Peut-être ne comprenez‑vous pas (encore&nbsp;!) la syntaxe utilisée, mais vo
 
 Les variables sont essentielles et à mesure que vous en apprendrez plus sur JavaScript, elles deviendront une seconde nature pour vous.
 
-Une autre particularité des variables : elle peuvent contenir pratiquement de tout — pas uniquement des chaînes ou des nombres. Elles peuvent aussi contenir des données complexes et même des fonctions, ce qui permet de réaliser des choses étonnantes. Vous en apprendrez plus à ce propos au long de ce parcours.
+Une autre particularité des variables&nbsp;: elle peuvent contenir pratiquement de tout — pas uniquement des chaînes ou des nombres. Elles peuvent aussi contenir des données complexes et même des fonctions, ce qui permet de réaliser des choses étonnantes. Vous en apprendrez plus à ce propos au long de ce parcours.
 
 > **Note :** Nous disons que les variables contiennent des valeurs. C'est un distingo important. Les variables ne sont pas les valeurs elles‑mêmes : ce sont des conteneurs pour ces valeurs. Vous pouvez vous les représenter comme une boîte en carton dans laquelle il est possible de ranger des choses.
 
@@ -84,7 +84,7 @@ Une autre particularité des variables : elle peuvent contenir pratiquement de 
 
 ## Déclarer une variable
 
-Avant de se servir d'une variable, il faut d'abord la créer — plus précisément, nous disons _déclarer la variable_. Pour ce faire, nous saisissons le mot‑clé `var` ou `let` suivi du nom que vous voulez donner à la variable :
+Avant de se servir d'une variable, il faut d'abord la créer — plus précisément, nous disons _déclarer la variable_. Pour ce faire, nous saisissons le mot‑clé `var` ou `let` suivi du nom que vous voulez donner à la variable&nbsp;:
 
 ```js
 let myName;
@@ -222,21 +222,21 @@ scoobyDoo;
 
 ## Initialisation d'une variable
 
-Une fois la variable déclarée, vous pouvez l'initialiser avec une valeur. On réalise cela en saisissant le nom de la variable, suivi d'un signe égale (`=`), lui-même suivi de la valeur souhaitée pour la variable. Par exemple :
+Une fois la variable déclarée, vous pouvez l'initialiser avec une valeur. On réalise cela en saisissant le nom de la variable, suivi d'un signe égale (`=`), lui-même suivi de la valeur souhaitée pour la variable. Par exemple&nbsp;:
 
 ```js
 myName = 'Chris';
 myAge = 37;
 ```
 
-Revenez à la console maintenant et saisissez‑y ces deux lignes. Constatez que la console renvoie en confirmation la  valeur assignée à la variable dans chaque cas. Vous pouvez, à nouveau, faire renvoyer par la console les valeurs de variable en saisissant simplement son nom dans la console — essayez encore :
+Revenez à la console maintenant et saisissez‑y ces deux lignes. Constatez que la console renvoie en confirmation la  valeur assignée à la variable dans chaque cas. Vous pouvez, à nouveau, faire renvoyer par la console les valeurs de variable en saisissant simplement son nom dans la console — essayez encore&nbsp;:
 
 ```js
 myName;
 myAge;
 ```
 
-Il est possible de déclarer et initialiser une variable en même temps, comme ceci :
+Il est possible de déclarer et initialiser une variable en même temps, comme ceci&nbsp;:
 
 ```js
 let myDog = 'Rover';
@@ -279,7 +279,7 @@ var myName = 'Chris';
 var myName = 'Bob';
 ```
 
-Celui là produit une erreur sur la seconde ligne :
+Celui là produit une erreur sur la seconde ligne&nbsp;:
 
 ```js
 let myName = 'Chris';
@@ -300,7 +300,7 @@ Pour ces raisons, et d'autres, nous recommandons d'utiliser `let` plutôt que `v
 
 ## Mise à jour d'une variable
 
-Une fois la variable initialisée avec une valeur, vous pouvez simplement modifier (ou mettre à jour) cette valeur en lui assignant une nouvelle valeur. Entrez ces deux lignes dans la console :
+Une fois la variable initialisée avec une valeur, vous pouvez simplement modifier (ou mettre à jour) cette valeur en lui assignant une nouvelle valeur. Entrez ces deux lignes dans la console&nbsp;:
 
 ```js
 myName = 'Bob';
@@ -321,7 +321,7 @@ Vous pouvez nommer une variable comme vous l'entendez, mais il y a des restricti
 
 > **Note :** Une liste exhaustive des mots réservés est proposée dans la page [Lexical grammar — keywords](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
 
-Exemples de noms corrects :
+Exemples de noms corrects&nbsp;:
 
 ```plain example-good
 age
@@ -347,7 +347,7 @@ skjfndskjfnbdskjfb
 thisisareallylongstupidvariablenameman
 ```
 
-Parmi ces noms, les suivants déclenchent une `SyntaxError`  :
+Parmi ces noms, les suivants déclenchent une `SyntaxError` &nbsp;:
 
 ```js example-bad
 1 //la variable commence par un chiffre
@@ -381,13 +381,13 @@ var dolphinGoodbye = 'So long and thanks for all the fish';
 
 ### Booléens
 
-Les booléens sont des valeurs true/false (vrai/faux) — elles ne peuvent prendre que deux valeurs: `true` ou `false`. Elles sont généralement utilisées pour tester une condition, à la suite de laquelle le code est exécuté de manière appropriée. Ainsi, par exemple, un cas simple pourrait être :
+Les booléens sont des valeurs true/false (vrai/faux) — elles ne peuvent prendre que deux valeurs: `true` ou `false`. Elles sont généralement utilisées pour tester une condition, à la suite de laquelle le code est exécuté de manière appropriée. Ainsi, par exemple, un cas simple pourrait être&nbsp;:
 
 ```js
 var iAmAlive = true;
 ```
 
-Toutefois, en réalité, un booléen sera plutôt utilisé ainsi :
+Toutefois, en réalité, un booléen sera plutôt utilisé ainsi&nbsp;:
 
 ```js
 var test = 6 < 3;
@@ -397,21 +397,21 @@ Cette expression utilise l'opérateur  «&nbsp;inférieur à&nbsp;» (`<`) pour
 
 ### Tableaux
 
-Une tableau est un objet unique contenant plusieurs valeurs entre crochets séparées par des virgules. Saisissez les lignes suivantes dans la console :
+Une tableau est un objet unique contenant plusieurs valeurs entre crochets séparées par des virgules. Saisissez les lignes suivantes dans la console&nbsp;:
 
 ```js
 var myNameArray = ['Chris', 'Bob', 'Jim'];
 var myNumberArray = [10,15,40];
 ```
 
-Un fois ces tableaux définis, vous pouvez avoir accès à chaque valeur en fonction de leur emplacement dans le tableau. Voyez ces lignes :
+Un fois ces tableaux définis, vous pouvez avoir accès à chaque valeur en fonction de leur emplacement dans le tableau. Voyez ces lignes&nbsp;:
 
 ```js
 myNameArray[0]; // renverra 'Chris'
 myNumberArray[2]; // renverra 40
 ```
 
-La valeur entre crochets précise l'index correspondant à la position de la valeur que vous souhaitez voir renvoyée. Vous remarquerez que les tableaux en JavaScript sont indexés à partir de zéro : le premier élément a l'index 0.
+La valeur entre crochets précise l'index correspondant à la position de la valeur que vous souhaitez voir renvoyée. Vous remarquerez que les tableaux en JavaScript sont indexés à partir de zéro&nbsp;: le premier élément a l'index 0.
 
 Vous en apprendrez beaucoup plus au sujet des tableaux dans un article suivant.
 
@@ -419,13 +419,13 @@ Vous en apprendrez beaucoup plus au sujet des tableaux dans un article suivant.
 
 En programmation, un objet est une structure de code qui modélise un objet du réel. Vous pouvez avoir un objet simple représentant une place de parking avec sa largeur et sa profondeur ou bien un objet représentant une personne avec comme données son nom, sa taille, son poids, son vernaculaire, comment le contacter, et plus encore.
 
-Entrez la ligne suivant dans la console de votre explorateur :
+Entrez la ligne suivant dans la console de votre explorateur&nbsp;:
 
 ```js
 var dog = { name : 'Spot', breed : 'Dalmatian' };
 ```
 
-Pour récupérer une information stockée dans un objet, vous pouvez utiliser la syntaxe suivante :
+Pour récupérer une information stockée dans un objet, vous pouvez utiliser la syntaxe suivante&nbsp;:
 
 ```js
 dog.name
@@ -437,13 +437,13 @@ Nous en resterons là avec les objets pour le moment — vous en saurez plus à 
 
 JavaScript est un «&nbsp;langage faiblement typé&nbsp;», ce qui veut dire que, contrairement à d'autres langages, vous n'êtes pas obligé de préciser quel est le type de donnée que doit contenir une variable (par ex. nombres, chaînes, tableaux, etc).
 
-Par exemple, si vous déclarez une variable et si vous y placez une valeur entre guillemets, le navigateur la traitera comme étant une chaîne :
+Par exemple, si vous déclarez une variable et si vous y placez une valeur entre guillemets, le navigateur la traitera comme étant une chaîne&nbsp;:
 
 ```js
 var myString = 'Hello';
 ```
 
-Ce sera toujours une chaîne, même si ce sont des nombres, donc soyez prudents :
+Ce sera toujours une chaîne, même si ce sont des nombres, donc soyez prudents&nbsp;:
 
 ```js
 var myNumber = '500'; // oops, c'est toujours une chaîne

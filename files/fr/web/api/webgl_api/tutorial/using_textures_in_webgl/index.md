@@ -17,7 +17,7 @@ La première chose à faire est d'ajouter le code pour charger les textures. 
 
 > **Note :** il est important de noter que le chargement des textures suit les [règles inter-domaines](/fr-FR/docs/Web/HTTP/CORS) ; donc vous pouvez seulement charger des textures depuis les sites pour lesquels votre contenu a l'approbation CORS. Voir les textures inter-domaines ci-dessous pour plus de détails.
 
-Le code qui charge la texture ressemble à ce qui suit :
+Le code qui charge la texture ressemble à ce qui suit&nbsp;:
 
     //
     // Initialiser une texture et charger une image.

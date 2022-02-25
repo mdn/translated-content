@@ -39,14 +39,14 @@ Internet Explorer a introduit une propriété {{domxref("node.innerText")}}. L'i
 
 ## Exemple
 
-    // Étant donné le fragment de HTML suivant :
+    // Étant donné le fragment de HTML suivant&nbsp;:
     //   <div id="divA">Ceci est un <span>exemple de</span> texte</div>
 
-    // On obtient le contenu textuel :
+    // On obtient le contenu textuel&nbsp;:
     var text = document.getElementById("divA").textContent;
     // |text| vaut "Ceci est un exemple de texte".
 
-    // On définit le contenu textuel :
+    // On définit le contenu textuel&nbsp;:
     document.getElementById("divA").textContent = "Ceci est un exemple de texte";
     // Le HTML pour divA est à présent <div id="divA">Ceci est un exemple de texte</div>
 

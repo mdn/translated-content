@@ -41,7 +41,7 @@ Après avoir créé le jeu "Devinez le nombre" de l'article précédent, vous av
 
 ## Types d' erreurs
 
-En règle générale, les erreurs dans un code sont à ranger dans deux catégories :
+En règle générale, les erreurs dans un code sont à ranger dans deux catégories&nbsp;:
 
 - **Erreurs de syntaxe&nbsp;:** Ce sont les fautes d'orthographe. Elles empêchent réellement le programme de fonctionner ou l'arrêtent en cours de chemin — elles sont accompagnées de messages d'erreur. Ces erreurs sont généralement simple à corriger, pour autant que vous connaissiez les bons outils et sachiez ce que signifient les messages&nbsp;!
 - **Erreurs logiques&nbsp;:** La syntaxe est correcte, mais le code n'est pas ce que vous attendiez&nbsp;: le programme tourne sans planter mais donne des résultats inattendus. Ces erreurs sont souvent plus difficiles à corriger que les erreurs de syntaxe, car il n'y a pas, en général, de message d'erreur pour vous diriger vers la source de l'erreur.

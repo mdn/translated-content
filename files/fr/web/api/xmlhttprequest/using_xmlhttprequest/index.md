@@ -153,7 +153,7 @@ oReq.open();
 
 > **Note :** Dans {{Gecko("12.0")}}, si votre évènement de progression est appelé avec un `responseType` "moz-blob", la valeur de la réponse est un {{domxref("Blob")}} contenant les données reçues jusqu'à présent.
 
-Une fonction peut aussi être appelée peu importe le status de fin de la requête (`abort`, `load`, ou `error`) en utilisant l'évènement `loadend` :
+Une fonction peut aussi être appelée peu importe le status de fin de la requête (`abort`, `load`, ou `error`) en utilisant l'évènement `loadend`&nbsp;:
 
 ```js
 req.addEventListener("loadend", loadEnd, false);
@@ -632,7 +632,7 @@ function AJAXSubmit (oFormElement) {
 </html>
 ```
 
-> **Note :** Comme déjà dit, les objets **{{domxref("FormData")}} ne sont pas des objets [chainifiables](/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si vous voulez chainifier les données soumises, utilisez [l'exemple précédent en *pure*-AJAX](#A_little_vanilla_framework). Notez également que, bien que dans cet exemple il y a quelques champs `file` {{ HTMLElement("input") }}, **quand vous soumettez un formulaire via l'API `FormData` vous n'avez pas besoin d'utiliser l'API [`FileReader`](/en-US/docs/DOM/FileReader) également** : les fichiers sont automatiquement chargés et transférés.
+> **Note :** Comme déjà dit, les objets **{{domxref("FormData")}} ne sont pas des objets [chainifiables](/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify)**. Si vous voulez chainifier les données soumises, utilisez [l'exemple précédent en *pure*-AJAX](#A_little_vanilla_framework). Notez également que, bien que dans cet exemple il y a quelques champs `file` {{ HTMLElement("input") }}, **quand vous soumettez un formulaire via l'API `FormData` vous n'avez pas besoin d'utiliser l'API [`FileReader`](/en-US/docs/DOM/FileReader) également**&nbsp;: les fichiers sont automatiquement chargés et transférés.
 
 ## Récupérer la date de modification
 

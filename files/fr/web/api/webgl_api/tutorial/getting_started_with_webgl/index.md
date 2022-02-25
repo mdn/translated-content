@@ -65,7 +65,7 @@ A ce stade, votre code est suffisant pour que le contexte WebGL puisse s'initia
 
 ## Voir aussi
 
-- [An introduction to WebGL](https://dev.opera.com/articles/introduction-to-webgl-part-1/) : écrite par Luz Caballero, publiée sur dev.opera.com. Cet article traite de ce qu'est WebGL, explique comment WebGL fonctionne (incluant le concept de pipeline de rendu), et présente quelques bibliothèques WebGL.
+- [An introduction to WebGL](https://dev.opera.com/articles/introduction-to-webgl-part-1/)&nbsp;: écrite par Luz Caballero, publiée sur dev.opera.com. Cet article traite de ce qu'est WebGL, explique comment WebGL fonctionne (incluant le concept de pipeline de rendu), et présente quelques bibliothèques WebGL.
 - [WebGL Fundamentals](http://webglfundamentals.org/)
 - [An intro to modern OpenGL :](http://duriansoftware.com/joe/An-intro-to-modern-OpenGL.-Table-of-Contents.html) une série de bons articles sur OpenGL écrits par Joe Groff, fournissant une introduction claire à OpenGL, depuis son histoire jusqu'au concept important de pipeline de graphismes, qui comprend aussi quelques exemples montrant comment OpenGL fonctionne. Si vous n'avez aucune idée de ce qu'est OpenGL, c'est un bon endroit pour commencer.
 

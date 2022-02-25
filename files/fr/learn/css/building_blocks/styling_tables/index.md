@@ -32,7 +32,7 @@ Styliser un tableau HTML n'est pas le travail le plus passionnant au monde, mais
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Apprendre à donner effectivement un style aux tableaux HTML.</td>
     </tr>
   </tbody>

@@ -137,7 +137,7 @@ Notez que nous n'avons spécifié que `this` au sein de `call()` — Aucun 
 
 Pour le moment tout va bien, mais nous avons un petit problème. Nous avons défini un  nouveau constructeur et ce dernier possède une propriété `prototype`, qui par défaut ne contient qu'une référence à la fonction constructrice elle même. En revanche il ne contient pas les méthodes de la propriété `prototype` du constructeur `Personne()`. Pour le constater, vous pouvez par exemple entrer `Professeur.prototype.constructor` dans la console JavaScript pour voir ce qu'il en est. Le nouveau constructeur n'a en aucun cas hérité de ces méthodes. Pour le constater, comparez les sorties de `Personne.prototype.saluer` et de `Professeur.prototype.saluer`
 
-Notre classe `Professeur()` doit hériter des méthodes définies dans le prototype de `Personne()`. Aussi comment procéder pour obtenir ce résultat ?
+Notre classe `Professeur()` doit hériter des méthodes définies dans le prototype de `Personne()`. Aussi comment procéder pour obtenir ce résultat&nbsp;?
 
 Ajoutez la ligne suivante à la suite du bloc de code que nous venons d'ajouter :
 
@@ -149,7 +149,7 @@ Ajoutez la ligne suivante à la suite du bloc de code que nous venons d'ajouter 
 
         Professeur.prototype.constructor = Professeur;
 
-4.  A présent, si vous sauvegardez et rafraichissez après avoir écrit `Professeur.prototype.constructor`, cela devrait retourner `Professeur()`, et en plus nous héritons maintenant de `Personne()` !
+4.  A présent, si vous sauvegardez et rafraichissez après avoir écrit `Professeur.prototype.constructor`, cela devrait retourner `Professeur()`, et en plus nous héritons maintenant de `Personne()`&nbsp;!
 
 ## Donner au prototype de Professeur() une nouvelle fonction saluer()
 

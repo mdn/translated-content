@@ -81,7 +81,7 @@ _Exemple 3. Un bouton décrit par un élément séparé._
 
 ## Champs obligatoires et invalides
 
-Les développeur Web utilisent souvant des éléments de présentation visuels pour indiquer les champs obligatoires ou invalides, mais les technologies d’assistance ne peuvent pas toujours déduire ces informations à partir de la présentation. ARIA fournit des attributs pour indiquer l’obligation de renseigner un contrôle de formulaire ou la validité de son contenu :
+Les développeur Web utilisent souvant des éléments de présentation visuels pour indiquer les champs obligatoires ou invalides, mais les technologies d’assistance ne peuvent pas toujours déduire ces informations à partir de la présentation. ARIA fournit des attributs pour indiquer l’obligation de renseigner un contrôle de formulaire ou la validité de son contenu&nbsp;:
 
 - La propriété [`aria-required`](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required) peut être appliquée à un élément de formulaire pour indiquer à une technologie d’assistance qu’il est obligatoire pour compléter le formulaire.
 - L’état [`aria-invalid`](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid) peut être programmatiquement appliquée pour indiquer à une technologie d’assistance quel champ contient des données incorrectes, afin que l’utilisateur sache qu’il a saisi des données invalides.
@@ -93,15 +93,15 @@ _Exemple 4a. Un formulaire avec des champs obligatoires._
 ```html
 <form>
   <div>
-    <label for="nom">* Nom :</label>
+    <label for="nom">* Nom&nbsp;:</label>
     <input type="text" value="nom" id="nom" aria-required="true"/>
   </div>
   <div>
-    <label for="telephone">Téléphone :</label>
+    <label for="telephone">Téléphone&nbsp;:</label>
     <input type="text" value="telephone" id="telephone" aria-required="false"/>
   </div>
   <div>
-    <label for="courriel">* Courriel :</label>
+    <label for="courriel">* Courriel&nbsp;:</label>
     <input type="text" value="courriel" id="courriel" aria-required="true"/>
   </div>
 </form>

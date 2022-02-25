@@ -8,7 +8,7 @@ original_slug: MDN/A_propos
 ---
 {{MDNSidebar}}
 
-Le _Mozilla Developer Network_ (MDN) est une plateforme évoluée d’apprentissage des technologies web et des logiciels qui animent le Web, notamment :
+Le _Mozilla Developer Network_ (MDN) est une plateforme évoluée d’apprentissage des technologies web et des logiciels qui animent le Web, notamment&nbsp;:
 
 - les standards du Web, tels que [CSS](/fr/docs/CSS), [HTML](/fr/docs/Web/HTML) et [JavaScript](/fr/docs/JavaScript)
 - le [développement d’applications web ouvertes](/fr/Apps)

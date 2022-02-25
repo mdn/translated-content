@@ -24,12 +24,12 @@ La méthode **`WebGLRenderingContext.bindTexture()`** de l'API WebGL lie la {{d
 
   - : Un {{domxref ("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
 
-    - `gl.TEXTURE_2D` : une texture bidimensionnelle ;
+    - `gl.TEXTURE_2D`&nbsp;: une texture bidimensionnelle ;
     - `gl.TEXTURE_CUBE_MAP` : une texture mappée sur un cube ;
     - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes sont en outre disponibles :
 
       - `gl.TEXTURE_3D` : une texture tridimensionnelle ;
-      - `gl.TEXTURE_2D_ARRAY` : une texture en tableau bidimensionnelle.
+      - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture en tableau bidimensionnelle.
 
 - texture
   - : Un objet {{domxref ("WebGLTexture")}} à lier.

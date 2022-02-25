@@ -50,7 +50,7 @@ Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, po
 
 Dans la plupart des navigateurs, l'appel de `btoa()` sur une chaîne Unicode engendrera une exception `InvalidCharacterError`.
 
-Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html) :
+Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par [Johan Sundström](http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html)&nbsp;:
 
     // Chaîne ucs-2 en ascii encodé en base64
     function uena(chn) {

@@ -26,7 +26,7 @@ original_slug: Apprendre/CSS/CSS_layout
 
 > **Remarque :**
 >
-> Vous cherchez à devenir développeuse ou développeur web front-end ?
+> Vous cherchez à devenir développeuse ou développeur web front-end&nbsp;?
 >
 > Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
 >

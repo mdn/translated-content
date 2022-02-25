@@ -17,7 +17,7 @@ Dans cet article, nous présenterons les différentes étapes permettant de diag
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devez au préalable savoir
         <a href="/fr/Apprendre/Transférer_des_fichiers_vers_un_serveur_web"
@@ -26,7 +26,7 @@ Dans cet article, nous présenterons les différentes étapes permettant de diag
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Apprendre à diagnostiquer et à résoudre certains problèmes simples qui
         peuvent se produire lors du développement ou de la maintenance d'un site

@@ -26,7 +26,7 @@ où
 - `retour` est un variant, indiquant la propriété returnValue telle que définie par la fenêtre du document spécifié par `uri`.
 - `uri` est l'URI du document à afficher dans la boîte de dialogue.
 - `arguments` est un variant optionnel contenant les valeurs à passer à la boîte de dialogue ; celles-ci sont disponibles dans la propriété [`window.dialogArguments`](fr/DOM/window.dialogArguments) de son objet [`window`](fr/DOM/window).
-- `options` est une chaîne optionnelle spécifiant les décorations de la fenêtre de dialogue, avec une ou plusieurs valeurs séparées par des points-virgules :
+- `options` est une chaîne optionnelle spécifiant les décorations de la fenêtre de dialogue, avec une ou plusieurs valeurs séparées par des points-virgules&nbsp;:
 
 | Syntaxe                                          | Description                                                                                                                                                            |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -52,4 +52,4 @@ Introduit par Microsoft Internet Explorer 4. Support ajouté à Firefox dans Fir
 
 ### Spécification
 
-Microsoft MSDN : [showModalDialog](http://msdn2.microsoft.com/en-us/library/ms536759.aspx)
+Microsoft MSDN&nbsp;: [showModalDialog](http://msdn2.microsoft.com/en-us/library/ms536759.aspx)

@@ -20,11 +20,11 @@ Plusieurs outils et extensions sont disponibles pour aider les développeurs à 
 - L'affichage du code source d'une page avec coloration syntaxique et recherche intégrée.
 - Des [extensions](https://addons.mozilla.org/extensions/showlist.php?application=firefox&category=Developer%20Tools) comme [Firebug](http://www.joehewitt.com/software/firebug/), [la barre d'outils Web Developer](</fr/Extension_Firefox_Web_Developer_(externe)>), [Live HTTP Headers](</fr/Live_HTTP_Headers_(externe)>), [un validateur HTML](</fr/Validateur_HTML_en_français_(externe)>), [une extension pour les développeurs d'extensions](</fr/Extension_Developer's_Extension_(externe)>) et bien d'autres.
 
-**Note :** Certaines extensions ne sont pas encore supportées par Firefox 1.5 et seront automatiquement désactivées.
+**Note&nbsp;:** Certaines extensions ne sont pas encore supportées par Firefox 1.5 et seront automatiquement désactivées.
 
 ## Fonctionnalités
 
-Voici certaines des nouvelles fonctionnalités de Firefox 1.5 :
+Voici certaines des nouvelles fonctionnalités de Firefox 1.5&nbsp;:
 
 ### Site Web et développeurs d'applications
 
@@ -96,7 +96,7 @@ Voici certaines des nouvelles fonctionnalités de Firefox 1.5 :
 
 ### Support des standards Web ouverts
 
-Le support des standards Web de Firefox garde une longueur d'avance avec des implémentations fonctionnelles et multiplateformes pour :
+Le support des standards Web de Firefox garde une longueur d'avance avec des implémentations fonctionnelles et multiplateformes pour&nbsp;:
 
 - Hypertext Markup Language ([HTML](/fr/HTML)) et Extensible Hypertext Markup Language ([XHTML](/fr/XHTML)): [HTML 4.01](http://www.w3.org/TR/html401/) et [XHTML 1.0/1.1](http://www.w3.org/TR/xhtml1/)
 - Cascading Style Sheets ([CSS](/fr/CSS)): [CSS niveau 1](http://www.w3.org/TR/REC-CSS1), [CSS niveau 2](http://www.w3.org/TR/REC-CSS2) et quelques parties de [CSS niveau 3](http://www.w3.org/Style/CSS/current-work.html)
@@ -107,7 +107,7 @@ Le support des standards Web de Firefox garde une longueur d'avance avec des imp
 - XML Path Language ([XPath](/fr/XPath)): [XPath 1.0](http://www.w3.org/TR/xpath)
 - Resource Description Framework ([RDF](/fr/RDF)): [RDF](http://www.w3.org/RDF/)
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](http://www.w3.org/TR/SOAP/)
-- [JavaScript](/fr/JavaScript) 1.6, basé sur [ECMA-262](/fr/ECMAScript), révision 3 : [ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- [JavaScript](/fr/JavaScript) 1.6, basé sur [ECMA-262](/fr/ECMAScript), révision 3&nbsp;: [ECMA-262](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
 
 Firefox 1.5 supporte un bon nombre de protocoles de transport de données (HTTP, FTP, SSL, TLS et d'autres), les caractères multi-langages (Unicode), plusieurs formats graphiques (GIF, JPEG, PNG, SVG et d'autres) et la dernière version du langage de script le plus populaire au monde, [JavaScript 1.6](/fr/Nouveautés_dans_JavaScript_1.6).
 

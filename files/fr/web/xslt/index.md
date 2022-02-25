@@ -42,7 +42,7 @@ XSLT est lui-même un dialecte [XML](/fr/XML "fr/XML"). Un programme XSLT est do
           <dd>
             <small
               >XSLT permet à un auteur de feuille de style de transformer un
-              document XML primaire de deux manières significatives : en
+              document XML primaire de deux manières significatives&nbsp;: en
               manipulant et triant le contenu, en le réordonnant si désiré, et
               en le transformant en un format différent.</small
             >

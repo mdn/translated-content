@@ -13,7 +13,7 @@ Ces dernières années cependant, le CSS a évolué pour supporter du contenu or
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions informatiques de base,
         <a
@@ -30,7 +30,7 @@ Ces dernières années cependant, le CSS a évolué pour supporter du contenu or
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Comprendre l'importance des modes d'écriture pour le CSS moderne.</td>
     </tr>
   </tbody>
@@ -44,11 +44,11 @@ Dans l'exemple ci-dessous nous avons un titre affiché qui utilise `writing-mode
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-Les trois valeurs possibles pour la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) sont :
+Les trois valeurs possibles pour la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) sont&nbsp;:
 
-- `horizontal-tb` : Direction de bloc allant du haut vers le bas, les phrases sont écrites horizontalement.
-- `vertical-rl` : Direction de bloc allant de droite à gauche, les phrases sont écrites verticalement.
-- `vertical-lr` : Direction de bloc allant de gauche à droite, les phrases sont écrites verticalement.
+- `horizontal-tb`&nbsp;: Direction de bloc allant du haut vers le bas, les phrases sont écrites horizontalement.
+- `vertical-rl`&nbsp;: Direction de bloc allant de droite à gauche, les phrases sont écrites verticalement.
+- `vertical-lr`&nbsp;: Direction de bloc allant de gauche à droite, les phrases sont écrites verticalement.
 
 La propriété `writing-mode` définit d'abord la direction selon laquelle les éléments de bloc sont affichés sur la page : de haut en bas, de droite à gauche ou de gauche à droite. Elle indique ensuite la direction selon laquelle le texte est écrit au sein des phrases.
 
@@ -74,7 +74,7 @@ Lorsqu'on commence à travailler sur des dispositions CSS, notamment avec les m�
 
 ### Direction
 
-En plus des modes d'écriture, il existe également la direction du texte. Comme mentionné avant, certaines langues comme l'arabe sont écrites horizontalement mais de droite à gauche. Il ne s'agit probablement pas là d'un aspect qui sera utilisé à des fins artistiques (si on souhaite aligner quelque chose à droite, il existe d'autres façons de faire) mais il est important de comprendre que cela fait partie de la nature de CSS. Le Web ne concerne pas uniquement les langues écrites de gauches à droite !
+En plus des modes d'écriture, il existe également la direction du texte. Comme mentionné avant, certaines langues comme l'arabe sont écrites horizontalement mais de droite à gauche. Il ne s'agit probablement pas là d'un aspect qui sera utilisé à des fins artistiques (si on souhaite aligner quelque chose à droite, il existe d'autres façons de faire) mais il est important de comprendre que cela fait partie de la nature de CSS. Le Web ne concerne pas uniquement les langues écrites de gauches à droite&nbsp;!
 
 Étant donné que les modes d'écritures et les directions du texte peuvent varier, les nouvelles méthodes de disposition CSS ne font pas référence à la gauche, la droite, le haut ou le bas. À la place, elles utilisent les notions de _début_ et de _fin_, combinées aux notions bloc et en ligne. Ne vous souciez pas trop de ça pour le moment, mais gardez ces idées en tête lorsque vous verrez ces notions pour les méthodes de disposition, cela vous sera utile pour une bonne compréhension de CSS.
 
@@ -82,15 +82,15 @@ En plus des modes d'écriture, il existe également la direction du texte. Comme
 
 Nous abordons maintenant les modes d'écriture et la direction du texte maintenant, car les propriétés que nous avons vues jusqu'à présent étaient plutôt liées aux dimensions physiques de l'écran et à un mode d'écriture horizontal.
 
-Reprenons nos deux boîtes : celle avec le mode d'écriture `horizontal-tb` et celle avec le mode d'écriture `vertical-rl`. Pour ces deux boîtes, on a défini [`width`](/fr/docs/Web/CSS/width). Pour la boîte avec le mode d'écriture vertical, cela provoque un dépassement du texte.
+Reprenons nos deux boîtes&nbsp;: celle avec le mode d'écriture `horizontal-tb` et celle avec le mode d'écriture `vertical-rl`. Pour ces deux boîtes, on a défini [`width`](/fr/docs/Web/CSS/width). Pour la boîte avec le mode d'écriture vertical, cela provoque un dépassement du texte.
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}
 
-Ce qu'on veut plus probablement dans ce scénario, c'est de passer de la largeur à la hauteur selon le mode d'écriture : quand on utilise un mode d'écriture vertical, on souhaite que la boîte soit redimensionnée selon l'axe de bloc, comme pour le mode horizontal.
+Ce qu'on veut plus probablement dans ce scénario, c'est de passer de la largeur à la hauteur selon le mode d'écriture&nbsp;: quand on utilise un mode d'écriture vertical, on souhaite que la boîte soit redimensionnée selon l'axe de bloc, comme pour le mode horizontal.
 
 Pour faciliter cela, CSS est désormais doté d'un ensemble de propriétés correspondantes. Dans l'ensemble, ces propriétés remplacent les propriétés physiques comme `width` ou `height` par des versions **logiques** ou **relatives au flux**.
 
-La propriété logique qui correspond à `width` lorsqu'on utilise un mode d'écriture horizontal est appelée [`inline-size`](/fr/docs/Web/CSS/inline-size) : elle fait référence à la dimension selon l'axe en ligne. La propriété correspondant à `height` est quant à elle intitulée [`block-size`](/fr/docs/Web/CSS/block-size) et représente la taille selon la dimension de bloc. Vous pouvez observer leur fonctionnement dans l'exemple qui suit où nous avons remplacé `width` par `inline-size`.
+La propriété logique qui correspond à `width` lorsqu'on utilise un mode d'écriture horizontal est appelée [`inline-size`](/fr/docs/Web/CSS/inline-size)&nbsp;: elle fait référence à la dimension selon l'axe en ligne. La propriété correspondant à `height` est quant à elle intitulée [`block-size`](/fr/docs/Web/CSS/block-size) et représente la taille selon la dimension de bloc. Vous pouvez observer leur fonctionnement dans l'exemple qui suit où nous avons remplacé `width` par `inline-size`.
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 950)}}
 
@@ -106,7 +106,7 @@ Vous pouvez voir une comparaison entre les propriétés physiques et logiques ci
 
 **Si vous changez le mode d'écriture des boîtes en modifiant la valeur de `writing-mode` sur le sélecteur `.box` afin de la passer à `vertical-rl`, vous pourrez voir que les propriétés physiques restent liées aux directions physiques tandis que les propriétés logiques s'adaptent en fonction du mode d'écriture.**
 
-**Vous pouvez également voir que [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements) a une bordure avec `border-bottom`. Pouvez-vous adapter le code afin que la bordure sous le texte suive cette direction, quel que soit le mode d'écriture ?**
+**Vous pouvez également voir que [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements) a une bordure avec `border-bottom`. Pouvez-vous adapter le code afin que la bordure sous le texte suive cette direction, quel que soit le mode d'écriture&nbsp;?**
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
@@ -114,7 +114,7 @@ Il existe de nombreuses propriétés détaillées pour gérer les différents as
 
 ### Valeurs logiques
 
-Jusqu'à présent, nous avons étudié les noms des propriétés logiques. Il existe également des propriétés dont les valeurs sont caractérisées physiquement comme `top`, `right`, `bottom`, et `left`. Ces valeurs disposent également d'équivalences logiques : `block-start`, `inline-end`, `block-end`, et `inline-start`.
+Jusqu'à présent, nous avons étudié les noms des propriétés logiques. Il existe également des propriétés dont les valeurs sont caractérisées physiquement comme `top`, `right`, `bottom`, et `left`. Ces valeurs disposent également d'équivalences logiques&nbsp;: `block-start`, `inline-end`, `block-end`, et `inline-start`.
 
 Ainsi, on peut faire flotter une image à gauche pour que le texte soit écrit autour de l'image. Dans l'exemple qui suit, vous pouvez remplacer `left` avec `inline-start`.
 
@@ -126,13 +126,13 @@ Ici, on utilise aussi les valeurs logiques pour les marges afin de s'assurer que
 
 > **Note :** Actuellement, seul Firefox prend en charge les valeurs relatives de flux pour `float`. Si vous utilisez **Google Chrome** ou **Microsoft Edge**, vous obtiendrez vraisemblablement un résultat où l'image ne flotte pas.
 
-### Faut-il utiliser les propriétés physiques ou logiques ?
+### Faut-il utiliser les propriétés physiques ou logiques&nbsp;?
 
 Les propriétés logiques et les valeurs correspondantes sont plus récentes que leurs équivalents physiques et l'implémentation de ces premières est donc également plus récente. Vous pouvez consulter la page de chaque propriété sur MDN pour vérifier le tableau de compatibilité des navigateurs. Si vous n'utilisez pas plusieurs modes d'écriture, vous pourrez préférer les versions physiques. Toutefois, on s'attend à terme que les personnes utilisent les versions logiques dans la majorité des cas étant donné leur pertinence pour certaines méthodes de dispositions comme les grilles CSS ou <i lang="en">flexbox</i>.
 
-## Testez vos compétences !
+## Testez vos compétences&nbsp;!
 
-Nous avons abordé de nombreux concepts dans cet article, mais avez-vous retenu les informations fondamentales ? Vous pourrez trouver différents tests sur le sujet pour vérifier que vous avez assimilé les bonnes informations : voir [Testez vos compétences : les modes d'écriture](/fr/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks).
+Nous avons abordé de nombreux concepts dans cet article, mais avez-vous retenu les informations fondamentales ? Vous pourrez trouver différents tests sur le sujet pour vérifier que vous avez assimilé les bonnes informations&nbsp;: voir [Testez vos compétences&nbsp;: les modes d'écriture](/fr/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks).
 
 ## Résumé
 

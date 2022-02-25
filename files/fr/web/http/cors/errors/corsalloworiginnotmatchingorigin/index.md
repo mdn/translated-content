@@ -16,7 +16,7 @@ original_slug: Web/HTTP/CORS/Errors/CORSAllowOriginNeCorrespondPas
 
 ## Symptomes
 
-    Raison : l’en-tête CORS « Access-Control-Allow-Origin » ne correspond pas à « xyz »
+    Raison&nbsp;: l’en-tête CORS « Access-Control-Allow-Origin » ne correspond pas à « xyz »
 
 ## Quel est le problème ?
 

@@ -12,7 +12,7 @@ Cet article explique comment utiliser les éléments [`<template>`](/fr/docs/Web
 
 Lorsqu'une structure de balises se répète sur une page web, il est judicieux d'utiliser un modèle plutôt que d'écrire cette même structure encore et encore. Il était déjà possible de le faire, mais l'élément HTML [`<template>`](/fr/docs/Web/HTML/Element/template) (pris en charge par les navigateurs modernes) nous facilite la tâche. Cet élément et ce qu'il renferme n'est pas directement retranscrit dans le DOM, mais peut par contre toujours être manipulé avec JavaScript.
 
-Voyons un exemple simple :
+Voyons un exemple simple&nbsp;:
 
 ```html
 <template id="my-paragraph">
@@ -20,7 +20,7 @@ Voyons un exemple simple :
 </template>
 ```
 
-Ceci restera invisible sur la page tant qu'aucune référence n'y sera faite dans le code JavaScript puis ajouté au DOM, en utilisant par exemple :
+Ceci restera invisible sur la page tant qu'aucune référence n'y sera faite dans le code JavaScript puis ajouté au DOM, en utilisant par exemple&nbsp;:
 
 ```js
 let template = document.getElementById('my-paragraph');
@@ -32,7 +32,7 @@ Quoique trivial, cet exemple vous permet d'entrevoir l'interêt d'utiliser des m
 
 ## Accorder modèles et composants web
 
-Les modèles sont utiles en eux-mêmes, mais ils fonctionnent encore mieux avec des composants web. Créons un composant web qui utilise notre modèle comme contenu de son Shadow DOM. Nous l'appellerons `<my-paragraph>` :
+Les modèles sont utiles en eux-mêmes, mais ils fonctionnent encore mieux avec des composants web. Créons un composant web qui utilise notre modèle comme contenu de son Shadow DOM. Nous l'appellerons `<my-paragraph>`&nbsp;:
 
 ```js
 customElements.define('my-paragraph',
@@ -52,7 +52,7 @@ Le point important à noter est que l'on ajoute un clone du contenu du modèle �
 
 Et parce que nous ajoutons son contenu à un Shadow DOM, on peut inclure des informations de mise en forme à l'intérieur de l'élément `<template>` dans un élément [`<style>`](/fr/docs/Web/HTML/Element/style), qui est ensuite encapsulé à l'intérieur de l'élément personnalisé. Cette procédure n'aurait pas fonctionné si on avait ajouté le contenu à un DOM standard.
 
-Par exemple :
+Par exemple&nbsp;:
 
 ```html
 <template id="my-paragraph">
@@ -77,11 +77,11 @@ On peut maintenant utiliser le modèle dans le document HTML:
 
 ## Plus de flexibilité avec les slots
 
-Jusque-là, nous avons vu une première utilisation de l'élément `<template>`. Cette implémentation n'est pas très flexible ; elle ne permet d'afficher que du texte, c'est-à-dire qu'il est aussi utile qu'un paragraphe classique ! Il est possible d'insérer du texte dans chaque instance d'élément de façon déclarative grâce à [`<slot>`](/fr/docs/Web/HTML/Element/slot). Cette fonction est moins bien prise en charge que [`<template>`](/fr/docs/Web/HTML/Element/template), disponible sur Chrome 53, Opera 40, Safari 10, Firefox 59 et Edge 79.
+Jusque-là, nous avons vu une première utilisation de l'élément `<template>`. Cette implémentation n'est pas très flexible ; elle ne permet d'afficher que du texte, c'est-à-dire qu'il est aussi utile qu'un paragraphe classique&nbsp;! Il est possible d'insérer du texte dans chaque instance d'élément de façon déclarative grâce à [`<slot>`](/fr/docs/Web/HTML/Element/slot). Cette fonction est moins bien prise en charge que [`<template>`](/fr/docs/Web/HTML/Element/template), disponible sur Chrome 53, Opera 40, Safari 10, Firefox 59 et Edge 79.
 
 Les emplacements (<i lang="en">slots</i>) sont identifiés par leur attribut `name`, et permettent de définir des emplacements dans le modèle qui peuvent être alimentés avec n'importe quelle structure HTML.
 
-Donc, si on souhaite ajouter un emplacement dans le précédent exemple, on peut modifier l'élément de cette façon :
+Donc, si on souhaite ajouter un emplacement dans le précédent exemple, on peut modifier l'élément de cette façon&nbsp;:
 
 ```html
 <p><slot name="my-text">Texte par défaut</slot></p>
@@ -89,7 +89,7 @@ Donc, si on souhaite ajouter un emplacement dans le précédent exemple, on peut
 
 Si le contenu de l'emplacement n'est pas défini quand l'élément est inclus dans la page, ou si les emplacements ne sont pas pris en charge par le navigateur, `<my-paragraph>` contiendra simplement le texte statique précisé dans le modèle.
 
-Pour définir le contenu de l'emplacement, on insère une structure HTML dans `<my-paragraph>` avec un attribut [`slot`](/fr/docs/Web/HTML/Global_attributes#slot) dont la valeur est égale au nom de l'emplacement que l'on veut alimenter. Comme précédemment, on peut utiliser n'importe quelle structure HTML, par exemple :
+Pour définir le contenu de l'emplacement, on insère une structure HTML dans `<my-paragraph>` avec un attribut [`slot`](/fr/docs/Web/HTML/Global_attributes#slot) dont la valeur est égale au nom de l'emplacement que l'on veut alimenter. Comme précédemment, on peut utiliser n'importe quelle structure HTML, par exemple&nbsp;:
 
 ```html
 <my-paragraph>
@@ -116,7 +116,7 @@ Et c'est tout pour ce premier exemple. Si vous souhaitez manipuler les emplaceme
 
 Pour finir, voyons un exemple un peu moins trivial.
 
-L'ensemble de fragments de code qui suit illustre comment utiliser [`<slot>`](/fr/docs/Web/HTML/Element/slot) avec [`<template>`](/fr/docs/Web/HTML/Element/template) et un peu de JavaScript afin de :
+L'ensemble de fragments de code qui suit illustre comment utiliser [`<slot>`](/fr/docs/Web/HTML/Element/slot) avec [`<template>`](/fr/docs/Web/HTML/Element/template) et un peu de JavaScript afin de&nbsp;:
 
 - Créer un élément **`<element-details>`** avec des [emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) à [la racine virtuelle (`ShadowRoot`)](/fr/docs/Web/API/ShadowRoot)
 - Concevoir l'élément **`<element-details>`** afin que, lorsqu'il est utilisé dans les documents, il soit rendu en composant le contenu de l'élément avec le contenu de [la racine virtuelle](/fr/docs/Web/API/ShadowRoot). Autrement dit, les parties du contenu de l'élément seront utilisées afin de remplir [les emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) dans sa [racine virtuelle](/fr/docs/Web/API/ShadowRoot)
@@ -129,7 +129,7 @@ De plus, même si l'élément n'est pas déjà rendu, le rôle de conteneur port
 
 ### Créer un modèle avec des emplacements
 
-Tout d'abord, on utilise l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) au sein d'un élément [`<template>`](/fr/docs/Web/HTML/Element/template) afin de créer notre nouveau [fragment de document](/fr/docs/Web/API/DocumentFragment) "element-details-template" qui contient quelques [emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) :
+Tout d'abord, on utilise l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) au sein d'un élément [`<template>`](/fr/docs/Web/HTML/Element/template) afin de créer notre nouveau [fragment de document](/fr/docs/Web/API/DocumentFragment) "element-details-template" qui contient quelques [emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot)&nbsp;:
 
 ```html
 <template id="element-details-template">
@@ -159,10 +159,10 @@ Tout d'abord, on utilise l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) 
 </template>
 ```
 
-Voyons les caractéristiques de cet élément [`<template>`](/fr/docs/Web/HTML/Element/template) :
+Voyons les caractéristiques de cet élément [`<template>`](/fr/docs/Web/HTML/Element/template)&nbsp;:
 
 - Ce [`<template>`](/fr/docs/Web/HTML/Element/template) contient un élément [`<style>`](/fr/docs/Web/HTML/Element/style) avec un ensemble de règles CSS dont la portée est celle du fragment de document créé par l'élément [`<template>`](/fr/docs/Web/HTML/Element/template).
-- Ce [`<template>`](/fr/docs/Web/HTML/Element/template) utilise un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) et l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#attr-name) correspondant afin d'avoir trois [emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) :
+- Ce [`<template>`](/fr/docs/Web/HTML/Element/template) utilise un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) et l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#attr-name) correspondant afin d'avoir trois [emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot)&nbsp;:
 
   - `<slot name="element-name">`
   - `<slot name="description">`
@@ -191,7 +191,7 @@ customElements.define('element-details',
 
 ### Utiliser l'élément element-details avec les emplacements nommés
 
-Prenons maintenant un élément **`<element-details>`** et utilisons le dans notre document :
+Prenons maintenant un élément **`<element-details>`** et utilisons le dans notre document&nbsp;:
 
 ```html
 <element-details>
@@ -215,7 +215,7 @@ Prenons maintenant un élément **`<element-details>`** et utilisons le dans not
 </element-details>
 ```
 
-En voyant ce fragment, notons quelques points :
+En voyant ce fragment, notons quelques points&nbsp;:
 
 - Ce fragment contient deux exemplaires **`<element-details>`** qui utilisent tous les deux l'attribut [`slot`](/fr/docs/Web/HTML/Global_attributes#slot) afin de référencer [les emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) `"element-name"` et `"description"` qui sont inscrits dans [la racine virtuelle](/fr/docs/Web/API/ShadowRoot) `<element-details>`.
 - Seul le premier élément **`<element-details>`** fait référence à [l'emplacement nommé](/fr/docs/Web/HTML/Element/slot#named-slot) `"attributes"`. Le deuxième élément `<element-details>` n'y fait pas référence.
@@ -223,7 +223,7 @@ En voyant ce fragment, notons quelques points :
 
 ### Mettre le tout en forme
 
-Pour finir, ajoutons un peu de CSS pour les éléments [`<dl>`](/fr/docs/Web/HTML/Element/dl), [`<dt>`](/fr/docs/Web/HTML/Element/dt) et [`<dd>`](/fr/docs/Web/HTML/Element/dd) de notre document :
+Pour finir, ajoutons un peu de CSS pour les éléments [`<dl>`](/fr/docs/Web/HTML/Element/dl), [`<dt>`](/fr/docs/Web/HTML/Element/dt) et [`<dd>`](/fr/docs/Web/HTML/Element/dd) de notre document&nbsp;:
 
 ```css
 dl { margin-left: 6px; }
@@ -242,7 +242,7 @@ Assemblons l'ensemble des fragments pour voir le résultat final.
 
 {{ EmbedLiveSample('Un_exemple_plus_complexe', '300','400','element-details.png','') }}
 
-Quelques notes à propos du résultat affiché :
+Quelques notes à propos du résultat affiché&nbsp;:
 
 - Bien que les exemplaires des éléments **`<element-details>`** du document n'utilisent pas directement d'élément [`<details>`](/fr/docs/Web/HTML/Element/details), ils sont rendus comme celui-ci, car [`<details>`](/fr/docs/Web/HTML/Element/details) [la racine virtuelle](/fr/docs/Web/API/ShadowRoot) les peuple avec ceci.
 - Au sein de l'élément [`<details>`](/fr/docs/Web/HTML/Element/details) affiché, le contenu des éléments **`<element-details>`** remplit [les emplacements nommés](/fr/docs/Web/HTML/Element/slot#named-slot) de [la racine virtuelle](/fr/docs/Web/API/ShadowRoot). Autrement dit, l'arbre du DOM pour les éléments **`<element-details>`** est composé avec le contenu [de la racine virtuelle](/fr/docs/Web/API/ShadowRoot).

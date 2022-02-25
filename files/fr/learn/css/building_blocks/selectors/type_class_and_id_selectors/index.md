@@ -54,7 +54,7 @@ On peut rencontrer ce type de comportement dans les "feuilles de style de réin
 
 ### Utiliser le sélecteur universel pour rendre les sélecteurs plus lisibles
 
-On peut utiliser `*` pour rendre les sélecteurs plus lisibles, pour clarifier leur  fonctionnement. Par exemple, si je veux sélectionner le premier descendant de chaque élément `<article>` pour le mettre en gras, je peux utiliser le sélecteur {{cssxref(":first-child")}}, qu'on verra dans la leçon sur les [pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements) :
+On peut utiliser `*` pour rendre les sélecteurs plus lisibles, pour clarifier leur  fonctionnement. Par exemple, si je veux sélectionner le premier descendant de chaque élément `<article>` pour le mettre en gras, je peux utiliser le sélecteur {{cssxref(":first-child")}}, qu'on verra dans la leçon sur les [pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)&nbsp;:
 
 ```css
 article :first-child {

@@ -8,21 +8,21 @@ tags:
 translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 original_slug: Contrôles_DHTML_personnalisés_navigables_au_clavier
 ---
-### Le problème : les pages DHTML actuelles ne sont pas accessibles au clavier
+### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier
 
 Un nombre croissant d'applications Web utilise [JavaScript](fr/JavaScript) pour imiter des contrôles (
 _widgets_
 ) applicatifs comme des menus, des vues arborescentes, des champs de texte enrichis et des panneaux à onglets. Les développeurs Web innovent constamment et les applications futures contiendront des éléments complexes et interactifs comme des feuilles de calcul, des calendriers, des graphes organisationnels et plus encore. Jusqu'à présent, les développeurs désirant rendre leurs contrôles basés sur des `<div>` et autres `<span>` stylés ne disposaient pas des techniques nécessaires. Pourtant, l'accessibilité au clavier fait partie des nécessités dont tout développeur Web devrait tenir compte.
 
-Prenons un exemple concret : la plupart des menus [DHTML](fr/DHTML) ne se comportent pas comme des menus normaux en ce qui concerne l'accès au clavier. Même s'il y a moyen d'accéder au menu avec le clavier, une erreur courante est de placer chaque élément du menu dans l'ordre de tabulation (souvent réalisé implicitement en faisant de chaque choix du menu un élément `<a>`). En réalité, le comportement correct d'un menu est que le menu entier doit figurer une seule fois dans l'ordre de tabulation, et les flèches doivent être utilisées pour se déplacer de choix en choix au sein du menu. Ceci vaut également pour les autres contrôles de « navigation groupée » comme les vues arborescentes, tableaux et panneaux à onglets.
+Prenons un exemple concret&nbsp;: la plupart des menus [DHTML](fr/DHTML) ne se comportent pas comme des menus normaux en ce qui concerne l'accès au clavier. Même s'il y a moyen d'accéder au menu avec le clavier, une erreur courante est de placer chaque élément du menu dans l'ordre de tabulation (souvent réalisé implicitement en faisant de chaque choix du menu un élément `<a>`). En réalité, le comportement correct d'un menu est que le menu entier doit figurer une seule fois dans l'ordre de tabulation, et les flèches doivent être utilisées pour se déplacer de choix en choix au sein du menu. Ceci vaut également pour les autres contrôles de « navigation groupée » comme les vues arborescentes, tableaux et panneaux à onglets.
 
-Il est à présent possible pour les auteurs HTML de faire les choses correctement. La manière de rendre ces contrôles compatibles avec les technologies d'assistance est détaillée dans : [ARIA : Applications riches Internet accessibles](fr/ARIA/Applications_riches_Internet_accessibles).
+Il est à présent possible pour les auteurs HTML de faire les choses correctement. La manière de rendre ces contrôles compatibles avec les technologies d'assistance est détaillée dans&nbsp;: [ARIA : Applications riches Internet accessibles](fr/ARIA/Applications_riches_Internet_accessibles).
 
-### La solution : modifier le comportement standard de `tabindex`
+### La solution&nbsp;: modifier le comportement standard de `tabindex`
 
 Firefox 1.5 suit l'exemple de Microsoft Internet Explorer en étendant l'attribut `tabindex` pour permettre à n'importe quel élément d'obtenir ou non le focus. En suivant le [système d'IE pour `tabindex`](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/tabindex.asp), il devient possible de permettre aux contrôles [DHTML](fr/DHTML), déjà accessibles au clavier dans IE, de l'être également dans Firefox 1.5. Les règles doivent subir quelques petites entorses afin de permettre aux auteurs de rendre leurs contrôles personnalisés accessibles.
 
-Le tableau qui suit décrit le nouveau comportement de `tabindex` :
+Le tableau qui suit décrit le nouveau comportement de `tabindex`&nbsp;:
 
 | Attribut `tabindex`                   | Focus disponible à la souris ou par JavaScript via `element.focus()`                                  | Navigable avec tabulation                                                                                                                                                                                                                           |
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -55,7 +55,7 @@ Ceci peut être utile à réaliser si un contrôle personnalisé devient actif o
 
 #### Utilisation de `setTimeout` avec `element.focus()` pour donner le focus
 
-N'utilisez pas `createEvent()`, `initEvent()` et `dispatchEvent()` pour donner le focus à un élément, parce que les évènements DOM `focus` sont seulement considérés comme informels — générés par le système après que quelque chose ait reçu le focus, mais pas réellement pour donner le focus. Le retardateur est nécessaire, tant dans IE que dans Firefox 1.5, pour empêcher les scripts de faire des choses étranges et inattendues si l'utilisateur clique sur des boutons ou d'autres contrôles. Concrètement, le code pour donner le focus à un élément ressemblera à quelque chose comme ceci :
+N'utilisez pas `createEvent()`, `initEvent()` et `dispatchEvent()` pour donner le focus à un élément, parce que les évènements DOM `focus` sont seulement considérés comme informels — générés par le système après que quelque chose ait reçu le focus, mais pas réellement pour donner le focus. Le retardateur est nécessaire, tant dans IE que dans Firefox 1.5, pour empêcher les scripts de faire des choses étranges et inattendues si l'utilisateur clique sur des boutons ou d'autres contrôles. Concrètement, le code pour donner le focus à un élément ressemblera à quelque chose comme ceci&nbsp;:
 
     setTimeout("gFocusItem.focus();",0);  // gFocusItem doit être une variable globale
 
@@ -73,7 +73,7 @@ IE ne déclenchera pas les évènements `keypress` pour les touches non alphanum
 
 #### Empêcher les évènements clavier d'effectuer des fonctions du navigateur
 
-Si une touche comme une flèche directionnelle est utilisée, empêchez le navigateur d'utiliser cette touche pour faire quelque chose d'autre (comme faire défiler la page) en utilisant un code similaire à ce qui suit :
+Si une touche comme une flèche directionnelle est utilisée, empêchez le navigateur d'utiliser cette touche pour faire quelque chose d'autre (comme faire défiler la page) en utilisant un code similaire à ce qui suit&nbsp;:
 
     <span tabindex="-1" onkeydown="return handleKeyDown();">
 

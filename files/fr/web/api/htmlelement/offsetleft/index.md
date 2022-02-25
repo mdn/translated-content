@@ -29,7 +29,7 @@ de l'élément courant est décalé vers là gauche au sein du nœud [`offsetPar
     var tOLeft = colorTable.offsetLeft;
 
     if (tOLeft > 5) {
-      // grand décalage à gauche : faire quelque chose ici
+      // grand décalage à gauche&nbsp;: faire quelque chose ici
     }
 
 ### Exemple
@@ -38,7 +38,7 @@ Comme noté plus haut, cet exemple montre une « longue » phrase qui déborde
 
 ![](offsetleft.jpg)
 
-Note : il s'agit d'une image de l'exemple, pas d'un rendu direct dans le navigateur. En effet, il n'est pas possible d'intégrer des scripts dans la page du wiki.
+Note&nbsp;: il s'agit d'une image de l'exemple, pas d'un rendu direct dans le navigateur. En effet, il n'est pas possible d'intégrer des scripts dans la page du wiki.
 
 ```html
 <div style="width: 300px; border-color:blue;

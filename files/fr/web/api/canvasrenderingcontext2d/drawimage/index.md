@@ -49,7 +49,7 @@ La méthode **`CanvasRenderingContext2D.drawImage()`** de l'API 2D des Canvas 
 
 ### Utiliser la méthode `drawImage`
 
-Ceci est un extrait de code utilisant la méthode `drawImage` :
+Ceci est un extrait de code utilisant la méthode `drawImage`&nbsp;:
 
 #### HTML
 

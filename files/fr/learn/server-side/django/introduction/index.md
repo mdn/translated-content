@@ -235,11 +235,11 @@ L'extrait de code ci-dessous montre à quoi pourrait ressembler le template HTML
 
 Les sections précédentes présentent les caractéristiques principales que vous utiliserez dans presque toutes vos applications web : mapping URL, vues, modèles et templates. Parmi les autres caractéristiques offertes par Django, on peut aussi trouver :
 
-- **Formulaires** : Les formulaires HTML sont utilisés pour collecter des données utilisateurs qui seront traitées sur le serveur. Django simplifie la création, la validation et le traitement des formulaires.
+- **Formulaires**&nbsp;: Les formulaires HTML sont utilisés pour collecter des données utilisateurs qui seront traitées sur le serveur. Django simplifie la création, la validation et le traitement des formulaires.
 - **Authentification et permissions des utilisateurs**: Django inclut un système d'authentification utilisateur et de gestion des permissions robuste créé avec la sécurité comme priorité lors de sa conception.
-- **Cache** : Générer du contenu en dynamique demande bien plus de ressources computationnelles (et est plus lent) que de servir du contenu statique. Django fournit un système de cache flexible qui vous permet de stocker toute ou une partie d'une page afin qu'elle ne soit re-générée que lorsque c'est nécessaire.
-- **Administration du site** : L'administration du site avec Django est incluse par défaut lorsque vous créez une application en utilisant le squelette de base. Django permet de créer très simplement une page d'administration où les administrateurs peuvent créer, éditer et voir n'importe quel modèle de données sur votre site.
-- **Sérialisation des données** : Django permet de simplifier la sérialisation et de servir vos données en XML ou en JSON. Cela peut être utile si vous créez un service web (un site web dont le seul but est de servir des données qui seront utilisées par d'autres applications ou sites, mais n'affiche rien par lui-même), ou quand vous créez un site web où le code côté client s'occupe d'afficher les données.
+- **Cache**&nbsp;: Générer du contenu en dynamique demande bien plus de ressources computationnelles (et est plus lent) que de servir du contenu statique. Django fournit un système de cache flexible qui vous permet de stocker toute ou une partie d'une page afin qu'elle ne soit re-générée que lorsque c'est nécessaire.
+- **Administration du site**&nbsp;: L'administration du site avec Django est incluse par défaut lorsque vous créez une application en utilisant le squelette de base. Django permet de créer très simplement une page d'administration où les administrateurs peuvent créer, éditer et voir n'importe quel modèle de données sur votre site.
+- **Sérialisation des données**&nbsp;: Django permet de simplifier la sérialisation et de servir vos données en XML ou en JSON. Cela peut être utile si vous créez un service web (un site web dont le seul but est de servir des données qui seront utilisées par d'autres applications ou sites, mais n'affiche rien par lui-même), ou quand vous créez un site web où le code côté client s'occupe d'afficher les données.
 
 ## Sommaire
 

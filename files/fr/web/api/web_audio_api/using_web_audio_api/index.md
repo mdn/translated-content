@@ -23,7 +23,7 @@ Notre premier exemple est [Voice-change-O-matic](http://github.com/mdn/voice-cha
 
 La Web Audio API impliqe de réaliser les opérations de traitement audio dans un **contexte audio**, et elle a été conçue pour permettre le **routage modulaire**. Les opérations de traitement de base sont réalisées par des **noeuds audio**, qui sont reliés entre eux pour former un **graphe de routage audio**. Plusieurs sources — avec différentes configuration de canaux — peuvent cohabiter dans un seul contexte. Ce design modulaire offre la flexibilité nécessaire pour créer des fonctions complexes avec des effets dynamiques.
 
-Les noeuds audio sont reliés au niveau de leurs entrées et sorties. Ils forment une chaîne qui commence avec une ou plusieurs sources, traverse un ou plusieurs noeuds de traitement, et se termine par une destination (bien qu'il ne soit pas néessaire d'avoir une destination si l'on souhaite simplement visualiser des données audio). Un scénario simple, représentatif de la Web Audio API, pourrait ressembler à ceci :
+Les noeuds audio sont reliés au niveau de leurs entrées et sorties. Ils forment une chaîne qui commence avec une ou plusieurs sources, traverse un ou plusieurs noeuds de traitement, et se termine par une destination (bien qu'il ne soit pas néessaire d'avoir une destination si l'on souhaite simplement visualiser des données audio). Un scénario simple, représentatif de la Web Audio API, pourrait ressembler à ceci&nbsp;:
 
 1.  Création d'un contexte audio
 2.  Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux

@@ -13,7 +13,7 @@ Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Aucun, mais nous vous encourageons à lire l'article
         <a href="/fr/Apprendre/Commencez_votre_projet_web"
@@ -23,7 +23,7 @@ Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Vous apprendrez les rudiments de l'infrastructure technique du Web et
         vous serez en mesure de distinguer « Internet » et « Web ».
@@ -34,13 +34,13 @@ Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.
 
 ## Résumé
 
-L'**Internet** est l'épine dorsale du Web : il s'agit de l'infrastructure technique qui sous-tend le Web. De façon simple, l'Internet est un vaste réseau d'ordinateurs qui communiquent les uns avec les autres.
+L'**Internet** est l'épine dorsale du Web&nbsp;: il s'agit de l'infrastructure technique qui sous-tend le Web. De façon simple, l'Internet est un vaste réseau d'ordinateurs qui communiquent les uns avec les autres.
 
 [L'histoire des débuts de l'Internet est quelque peu nébuleuse](https://fr.wikipedia.org/wiki/Internet#Historique). Tout aurait commencé dans les années 1960 par un projet de recherche subventionné par le département de la Défense des États-Unis. L'Internet serait ensuite devenu, dans les années 1980, une infrastructure publique grâce au soutien de nombreuses universités publiques et entreprises privées. Les diverses technologies qui sous-tendent l'Internet ont évolué au fil du temps, mais son fonctionnement de base a, quant à lui, peu changé. L'Internet demeure un moyen de relier tous les ordinateurs entre eux et de s'assurer que ce lien perdure, peu importe les problèmes qui pourraient toucher le réseau.
 
 ## Pédagogie active
 
-- [How the internet Works in 5 minutes](https://www.youtube.com/watch?v=7_LPdttKXPc) : Une vidéo d'une durée de 5 minutes réalisée par Aaron Titus afin d'expliquer les rudiments du fonctionnement de l'Internet. (_en anglais seulement_)
+- [How the internet Works in 5 minutes](https://www.youtube.com/watch?v=7_LPdttKXPc)&nbsp;: Une vidéo d'une durée de 5 minutes réalisée par Aaron Titus afin d'expliquer les rudiments du fonctionnement de l'Internet. (_en anglais seulement_)
 
 ## Allons plus loin
 
@@ -56,7 +56,7 @@ Un réseau comme celui illustré ci-haut n'est pas limité à deux ordinateurs. 
 
 ![Ten computers all together](internet-schema-2.png)
 
-Afin de résoudre ce problème, chaque ordinateur du réseau est relié à un petit ordinateur bien spécial que l'on appelle _routeur_. Ce _routeur_ n'a qu'une seule fonction : tout comme un signaleur de gare de train, il s'assure que les messages transmis par un ordinateur donné se rendent au bon ordinateur destinataire. Ainsi, pour envoyer un message à l'ordinateur B, l'ordinateur A transmet d'abord le message au routeur, qui s'assure alors de transférer le message à l'ordinateur B et non à l'ordinateur C.
+Afin de résoudre ce problème, chaque ordinateur du réseau est relié à un petit ordinateur bien spécial que l'on appelle _routeur_. Ce _routeur_ n'a qu'une seule fonction&nbsp;: tout comme un signaleur de gare de train, il s'assure que les messages transmis par un ordinateur donné se rendent au bon ordinateur destinataire. Ainsi, pour envoyer un message à l'ordinateur B, l'ordinateur A transmet d'abord le message au routeur, qui s'assure alors de transférer le message à l'ordinateur B et non à l'ordinateur C.
 
 Vous voyez donc que lorsque nous ajoutons un routeur dans notre structure, notre réseau de dix ordinateurs ne requiert alors que de dix câbles, d'une prise par ordinateur et d'un routeur de 10 ports.
 
@@ -82,7 +82,7 @@ Notre réseau est donc lié à l'infrastructure téléphonique. La prochaine ét
 
 ### Localiser un ordinateur
 
-Lorsque nous souhaitons transmettre un message à un ordinateur, nous devons préciser de quel ordinateur il s'agit. Par conséquent, chaque ordinateur lié à un réseau possède une adresse unique appelée « adresse IP » (où « IP » signifie _Internet Protocol_) qui sert à localiser l'ordinateur. Cette adresse est composée d'une série de nombres séparés par des points, par exemple : `192.168.2.10`  ou de lettres et de chiffres séparés par deux points. `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
+Lorsque nous souhaitons transmettre un message à un ordinateur, nous devons préciser de quel ordinateur il s'agit. Par conséquent, chaque ordinateur lié à un réseau possède une adresse unique appelée « adresse IP » (où « IP » signifie _Internet Protocol_) qui sert à localiser l'ordinateur. Cette adresse est composée d'une série de nombres séparés par des points, par exemple&nbsp;: `192.168.2.10`  ou de lettres et de chiffres séparés par deux points. `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
 
 C'est une méthode très efficace pour les ordinateurs, mais les humains ont un peu plus de difficulté à retenir de telles adresses numériques. Afin de se faciliter la tâche, un libellé alphabétique, appelé _nom de domaine,_ est souvent associé aux adresses IP. Par example, `google.com` est le nom de domaine associé à l'adresse IP `173.194.121.32`. L'utilisation d'un nom de domaine est ainsi le moyen le plus facile d'atteindre un ordinateur via l'Internet.
 

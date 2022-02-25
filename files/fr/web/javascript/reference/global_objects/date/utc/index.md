@@ -63,7 +63,7 @@ Comme `UTC` est une méthode statique de `Date`, on l'utilise toujours sous la f
 
 ### Utiliser `Date.UTC()`
 
-L'instruction qui suit crée un objet `Date` en utilisant l'heure UTC plutôt que l'heure locale :
+L'instruction qui suit crée un objet `Date` en utilisant l'heure UTC plutôt que l'heure locale&nbsp;:
 
 ```js
 var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));

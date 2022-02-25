@@ -516,7 +516,7 @@ window.addEventListener('load', updateCode);
 
 ## Testez vos compétences !
 
-Vous avez atteint la fin de cet article, mais vous souvenez-vous des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien fixé ces connaissances avant de continuer — voir [Test de compétences : les tableaux](/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays).
+Vous avez atteint la fin de cet article, mais vous souvenez-vous des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien fixé ces connaissances avant de continuer — voir [Test de compétences&nbsp;: les tableaux](/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays).
 
 ## Conclusion
 

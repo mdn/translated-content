@@ -26,7 +26,7 @@ Si `aria-valuemin` n’est pas inférieure ou égale à la valeur de `aria-value
 
 ### Exemples
 
-#### Exemple 1 :
+#### Exemple 1&nbsp;:
 
 L’extrait de code ci-dessous montre un curseur basique avec une valeur minimale de 1.
 

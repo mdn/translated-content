@@ -93,7 +93,7 @@ original_slug: Outils/Memory/Aggregate_view
 
 <p>Il est plus simple d'expliquer ce comportement avec un exemple. <a href="/fr/docs/Tools/Memory/DOM_allocation_example">Cette page contient</a> contient simplement un script qui génère un grand nombre de nœuds DOM (200 objets <code><a href="/fr/docs/Web/API/HTMLDivElement">HTMLDivElement</a></code> et 4000 objets <code><a href="/fr/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code>) :</p>
 
-<p>Réalisons maintenant une allocation trace. Pour cela, il faut :</p>
+<p>Réalisons maintenant une allocation trace. Pour cela, il faut&nbsp;:</p>
 
 <ol>
  <li>Ouvrir l'outil Mémoire</li>
@@ -106,13 +106,13 @@ original_slug: Outils/Memory/Aggregate_view
 
 <p>{{EmbedYouTube("aZ5Rq9lXD80")}}</p>
 
-<p>Quelque chose comme ceci devrait apparaitre :</p>
+<p>Quelque chose comme ceci devrait apparaitre&nbsp;:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13040/memory-tool-call-stack.png" style="display: block; height: 322px; margin-left: auto; margin-right: auto; width: 762px;"></p>
 
 <p>Cela révèle que 93% sont allouées par des fonctions appelées depuis "alloc.js", à la ligne 35 (le premier appel à <code>createToolbars()</code>).</p>
 
-<p>Afin de savoir exactement d'où est allouée la mémoire, il est possible de développer la ligne :</p>
+<p>Afin de savoir exactement d'où est allouée la mémoire, il est possible de développer la ligne&nbsp;:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13042/memory-tool-call-stack-expanded.png" style="display: block; height: 530px; margin-left: auto; margin-right: auto; width: 762px;"></p>
 
@@ -140,7 +140,7 @@ original_slug: Outils/Memory/Aggregate_view
 
 <p>Dans l'exemple ci-dessus, il y a une ligne nommée "(no stack available)" qui correspond à 7% de la heap. La présence de cette ligne s'explique par le fait que toute l'utilisation de la heap n'est pas due au script JavaScript.</p>
 
-<p>Exemples d'usage de la heap non alloué par un script :</p>
+<p>Exemples d'usage de la heap non alloué par un script&nbsp;:</p>
 
 <ul>
  <li>Tous les scripts que la page charge occupent de l'espace dans la heap</li>

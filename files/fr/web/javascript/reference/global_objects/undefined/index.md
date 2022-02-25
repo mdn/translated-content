@@ -50,7 +50,7 @@ var x;
 if (x === undefined) {
    // ces instructions seront exécutées
 }
-if (x !== undefined) {
+if (x&nbsp;!== undefined) {
    // ces instructions ne seront pas exécutées
 }
 ```
@@ -59,7 +59,7 @@ if (x !== undefined) {
 
 ### L'opérateur `typeof` et `undefined`
 
-L'opérateur {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}} peut également être utilisé :
+L'opérateur {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}} peut également être utilisé&nbsp;:
 
 ```js
 var x;

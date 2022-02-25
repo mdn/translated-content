@@ -37,7 +37,7 @@ window.addEventListener("message", receiveMessage, false);
 
 function receiveMessage(event)
 {
-  if (event.origin !== "http://example.org:8080")
+  if (event.origin&nbsp;!== "http://example.org:8080")
     return;
 
   // ...
@@ -86,7 +86,7 @@ function receiveMessage(event)
 {
   // Faisons-nous confiance à l'expéditeur de ce message ?  (il pourrait être
   // différent de la fenêtre que nous avons ouverte au départ, par exemple).
-  if (event.origin !== "http://example.org")
+  if (event.origin&nbsp;!== "http://example.org")
     return;
 
   // event.source est la popup
@@ -104,7 +104,7 @@ window.addEventListener("message", receiveMessage, false);
 function receiveMessage(event)
 {
   // Faisons-nous confiance à l'expéditeur de ce message ?
-  if (event.origin !== "http://example.com:8080")
+  if (event.origin&nbsp;!== "http://example.com:8080")
     return;
 
   // event.source est window.opener

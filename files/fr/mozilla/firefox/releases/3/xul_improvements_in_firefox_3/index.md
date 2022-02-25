@@ -13,7 +13,7 @@ Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi
 
 ### Nouveaux éléments
 
-- [Contrôles numériques](/fr/Tutoriel_XUL/Les_contrôles_numériques) :
+- [Contrôles numériques](/fr/Tutoriel_XUL/Les_contrôles_numériques)&nbsp;:
 
   - Le nouvel élément [`<scale>`](/fr/XUL/scale) permet de créer des échelles glissantes permettant à l'utilisateur de sélectionner une valeur dans un intervalle donné. Ce contrôle serait typiquement utilisé, par exemple, pour créer un contrôle de volume. {{ interwiki('wikimo', 'XUL:Slider_Tag', 'Plus d\'informations sur scale') }} [Référence de `scale`](/fr/XUL/scale) ({{ Bug(290255) }})
   - Une nouvelle valeur `'number'` pour l'attribut `type` des élément `textbox` crée une boîte de texte dans laquelle seuls des nombres peuvent être entrés. De plus, des boutons fléchés apparaissent sur le côté permettant de se déplacer parmi les valeurs. {{ interwiki('wikimo', 'XUL:Specs:NumberBox', 'Plus d\'informations sur les boîtes de texte numériques') }} ({{ Bug(345510) }})
@@ -49,7 +49,7 @@ Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi
 - En définissant l'attribut `spellcheck` d'une boîte de texte à `'true'`, la correction orthographique sera activée pour cette boîte de texte. ({{ Bug(346787) }})
 - L'élément `<textbox>` dispose d'une méthode `reset()` pour réinitialiser la valeur de la boîte de texte à sa valeur par défaut. La propriété `defaultValue` peut être utilisée pour retrouver et modifier cette valeur par défaut. ({{ Bug(312867) }})
 - Une propriété `editor` permet d'obtenir le [nsIEditor](/fr/NsIEditor) internet pour le champ texte. ({{ Bug(312867) }})
-- textbox dispose d'un attribut `newlines` spécifiant comment les retours à la ligne dans les textes collés seront traités. ({{ Bug(253481) }}) Les valeurs possibles sont :
+- textbox dispose d'un attribut `newlines` spécifiant comment les retours à la ligne dans les textes collés seront traités. ({{ Bug(253481) }}) Les valeurs possibles sont&nbsp;:
 
   - `pasteintact` — tout coller tel quel
   - `pastetofirst` — (valeur par défaut) coller uniquement ce qui précède le premier retour à la ligne

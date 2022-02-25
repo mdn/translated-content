@@ -130,7 +130,7 @@ Par exemple :
 
 1.  Le deuxième item de la liste est dans la classe `my-class-1`. Cela définit la couleur de l'élément `<a>` qu'il contient à `inherit`. Si vous supprimez cette règle, quelle est la couleur du lien ?
 2.  Comprenez vous pourquoi les troisième et quatrième liens sont de la couleur qu'ils sont ? Dans la négative, relisez la description des valeurs spéciales ci-dessus.
-3.  Quels liens changeront de couleur si on redéfinit la couleur de l'élément  `<a>` — par exemple `a { color: red; }` ?
+3.  Quels liens changeront de couleur si on redéfinit la couleur de l'élément  `<a>` — par exemple `a { color: red; }`&nbsp;?
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}}
 
@@ -176,10 +176,10 @@ Voyons maintenant comment le navigateur calcule la spécificité. Nous savons d
 
 Le score de spécificité d'un sélecteur est codé par quatre valeurs (ou composants) différentes, qui peuvent être considérées comme des milliers, des centaines, des dizaines et des unités — quatre chiffres simples dans quatre colonnes :
 
-1.  **Milliers** : ajouter 1 dans cette colonne si la déclaration apparaît dans un  {{htmlattrxref("style")}} , (style inline). De telles déclarations n'ont pas de sélecteurs, leur spécificité est toujours simplement 1000.
-2.  **Centaines** : ajouter 1 dans cette colonne pour chaque sélecteur d'ID contenu à l'intérieur du sélecteur global.
-3.  **Dizaines** : ajouter 1 dans cette colonne pour chaque sélecteur de classe, d'attribut ou de pseudo-classe contenu à l'intérieur du sélecteur global.
-4.  **Unités** : ajouter 1 dans cette colonne pour chaque sélecteur d'élément ou pseudo-élément contenu à l'intérieur du sélecteur global.
+1.  **Milliers**&nbsp;: ajouter 1 dans cette colonne si la déclaration apparaît dans un  {{htmlattrxref("style")}} , (style inline). De telles déclarations n'ont pas de sélecteurs, leur spécificité est toujours simplement 1000.
+2.  **Centaines**&nbsp;: ajouter 1 dans cette colonne pour chaque sélecteur d'ID contenu à l'intérieur du sélecteur global.
+3.  **Dizaines**&nbsp;: ajouter 1 dans cette colonne pour chaque sélecteur de classe, d'attribut ou de pseudo-classe contenu à l'intérieur du sélecteur global.
+4.  **Unités**&nbsp;: ajouter 1 dans cette colonne pour chaque sélecteur d'élément ou pseudo-élément contenu à l'intérieur du sélecteur global.
 
 > **Note :** Le sélecteur  universel (`*`), les combinateurs (`+`, `>`, `~`, ' '), et la pseudo-class de négation (`:not`) n'affectent en rien la spécificité.
 
@@ -199,7 +199,7 @@ Avant de continuer, regardons un exemple en action.
 
 Alors qu'est-ce qui se passe ici ? Tout d'abord, nous ne sommes intéressés que par les sept premières règles de cet exemple, et comme vous le remarquerez, nous avons inclus leurs valeurs de spécificité dans un commentaire avant chacune.
 
-- Les deux premiers sélecteurs se disputent le style de la couleur d'arrière-plan du lien — le deux gagne et rend la couleur d'arrière-plan bleue car il a un sélecteur d'ID supplémentaire : sa spécificité est de 201 contre 101 pour le sélecteur un.
+- Les deux premiers sélecteurs se disputent le style de la couleur d'arrière-plan du lien — le deux gagne et rend la couleur d'arrière-plan bleue car il a un sélecteur d'ID supplémentaire&nbsp;: sa spécificité est de 201 contre 101 pour le sélecteur un.
 - Les sélecteurs trois et quatre se disputent le style de la couleur du texte du lien — le quatre gagne et rend le texte blanc car bien qu'il ait un sélecteur d'élément en moins, le sélecteur manquant est remplacé par un sélecteur de classe, qui vaut dix au lieu de un. La spécificité gagnante est donc de 113 contre 104.
 - Les sélecteurs cinq, six et sept se disputent le style de la bordure du lien en survol. Le six perd clairement devant le cinq avec une spécificité de 23 contre 24 — il a un sélecteur d'éléments en moins dans la chaîne. Le sept, cependant, bat à la fois cinq et six — il a le même nombre de sous-sélecteurs dans la chaîne que cinq, mais un sélectecur d'élément a été échangé contre un sélecteur de classe. La spécificité gagnante est donc de 33 contre 23 et 24.
 
@@ -244,7 +244,7 @@ Les déclarations en conflit seront appliquées dans l'ordre suivant, les décla
 
 Il est logique que les feuilles de style des développeurs web remplacent les feuilles de style utilisateur, de sorte que la conception peut être conservée comme prévu, mais parfois, les utilisateurs ont de bonnes raisons de remplacer les styles des développeur web, comme mentionné ci-dessus — cela peut être réalisé en utilisant `!important` dans leurs règles.
 
-## Activité : jouer dans la cascade
+## Activité&nbsp;: jouer dans la cascade
 
 Dans cette activité, nous vous engageons à tenter l'expérience suivante : écrire une règle redéfinissant les couleurs de police et de fond pour les liens par défaut. La contrainte est de réinitialiser la couleur d'arrière-plan en blanc sans utiliser de valeur `<color>`. Vous pouvez par contre utiliser l'une des valeurs spéciales que nous avons examinées dans la section {{anch("Contrôler_lhéritage")}} dans une nouvelle règle.
 
@@ -256,7 +256,7 @@ Si vous faites une erreur, vous pouvez toujours remettre à zéro l'exemple liv
 
 Si vous avez compris cet article, alors, bravo — vous commencez à appréhender les mécanismes fondamentaux de CSS. L'étape suivante est une étude détaillée des sélecteurs.
 
-Si la cascade, la spécificité et l'héritage gardent encore de leur mystère, pas de panique ! C'est vraiment le point le plus compliqué qu'on ait abordé depuis le début de ce cours, et même les web developers professionnels s'y cassent parfois les dents. Notre avis : poursuivez le cours et revenez régulièrement lire cet article, continuez à y réfléchir.
+Si la cascade, la spécificité et l'héritage gardent encore de leur mystère, pas de panique&nbsp;! C'est vraiment le point le plus compliqué qu'on ait abordé depuis le début de ce cours, et même les web developers professionnels s'y cassent parfois les dents. Notre avis : poursuivez le cours et revenez régulièrement lire cet article, continuez à y réfléchir.
 
 En particulier quand vous rencontrez des comportements étranges où vos règles de style ne s'appliquent pas, revenez ici. Ce pourrait être un problème de spécificité.
 

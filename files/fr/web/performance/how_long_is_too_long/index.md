@@ -7,7 +7,7 @@ Il n'y a pas de règle stricte définissant ce qui constitue un site trop long �
 
 ## Objectifs de chargement
 
-La durée optimale de temps de chargement est souvent définie comme étant « inférieure à une seconde », mais qu'est-ce que cela signifie ? Ce temps d'une seconde devrait être considéré comme le temps maximal pour indiquer à une personne visitant le site que la demande à été traitée et que le nouveau contenu a été chargé, ce qui signifie par exemple que le navigateur affiche le titre de la page et sa couleur de fond.
+La durée optimale de temps de chargement est souvent définie comme étant « inférieure à une seconde », mais qu'est-ce que cela signifie&nbsp;? Ce temps d'une seconde devrait être considéré comme le temps maximal pour indiquer à une personne visitant le site que la demande à été traitée et que le nouveau contenu a été chargé, ce qui signifie par exemple que le navigateur affiche le titre de la page et sa couleur de fond.
 
 La première ressource récupérée après une demande est généralement un document HTML, qui appelle lui-même par la suite des ressources additionnelles. Comme noté dans la description du [chemin critique de rendu (en anglais <i lang="en">critical rendering path</i>)](/fr/docs/Web/Performance/Critical_rendering_path), lorsque la ressource est reçue alors les navigateurs commencent à traiter le HTML et affichent son rendu au fur et à mesure qu'il est reçu plutôt que d'attendre le chargement des ressources additionnelles.
 

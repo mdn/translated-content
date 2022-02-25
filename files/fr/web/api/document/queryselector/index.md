@@ -50,7 +50,7 @@ Les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) CSS ne retourneront ja
 
 ### Caractère spécial d'échappement
 
-Pour faire correspondre un ID (_identifiant_) ou un sélecteur qui ne respecte pas la syntaxe CSS (en utilisant un point virgule ou un espace par exemple), vous devez échapper le caractère avec un antislash (\\). Comme l'antislash est un caractère d'échappement en JavaScript, si vous entrez une chaîne de caractères littérale, vous devez donc l'échapper _deux fois_ (une pour la chaîne de caractères JavaScript et une autre fois pour `querySelector`) :
+Pour faire correspondre un ID (_identifiant_) ou un sélecteur qui ne respecte pas la syntaxe CSS (en utilisant un point virgule ou un espace par exemple), vous devez échapper le caractère avec un antislash (\\). Comme l'antislash est un caractère d'échappement en JavaScript, si vous entrez une chaîne de caractères littérale, vous devez donc l'échapper _deux fois_ (une pour la chaîne de caractères JavaScript et une autre fois pour `querySelector`)&nbsp;:
 
 ```html
 <div id="machin\bidule"></div>
@@ -73,7 +73,7 @@ Pour faire correspondre un ID (_identifiant_) ou un sélecteur qui ne respecte p
 
 ### Trouver le premier élément correspondant à une classe
 
-Dans cet exemple, le premier élément dans le document qui contient la classe "`maclasse`" est retourné :
+Dans cet exemple, le premier élément dans le document qui contient la classe "`maclasse`" est retourné&nbsp;:
 
 ```js
 var el = document.querySelector(".maclasse");

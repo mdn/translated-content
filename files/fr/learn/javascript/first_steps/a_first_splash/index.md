@@ -34,7 +34,7 @@ Maintenant que vous avez appris quelques éléments théoriques sur le JavaScri
   </tbody>
 </table>
 
-Ne vous attendez pas à comprendre tout le code en détail immédiatement — nous voulons simplement vous présenter les grands concepts pour le moment, et vous donner une idée de la façon dont JavaScript (et d'autres langages de programmation) fonctionne. Dans les articles suivants, vous reviendrez plus en détails sur toutes ces fonctionnalités !
+Ne vous attendez pas à comprendre tout le code en détail immédiatement — nous voulons simplement vous présenter les grands concepts pour le moment, et vous donner une idée de la façon dont JavaScript (et d'autres langages de programmation) fonctionne. Dans les articles suivants, vous reviendrez plus en détails sur toutes ces fonctionnalités&nbsp;!
 
 > **Note :** De nombreuses fonctionnalités que vous allez voir en JavaScript sont identiques à celles d'autres langages de programmation — fonctions, boucles, etc. La syntaxe du code est différente mais les concepts sont globalement identiques.
 
@@ -254,7 +254,7 @@ Dans notre exemple&nbsp;:
 
 ### Fonctions
 
-Ajoutez maintenant ce qui suit dans votre code JavaScript :
+Ajoutez maintenant ce qui suit dans votre code JavaScript&nbsp;:
 
 ```js
 function checkGuess() {
@@ -530,7 +530,7 @@ function setGameOver() {
 - Les trois lignes suivantes génèrent un nouvel {{htmlelement("button")}} élément, avec le libellé "Démarrer une nouvelle partie" et l'ajoute au bas du HTML existant.
 - La dernière ligne définit un écouteur d'événement sur ce nouveau bouton : un click sur le bouton déclenchera un appel de la fonction  `resetGame()`.
 
-Reste à définir cette fonction ! Ajoutez le code suivant, tout en bas de votre JavaScript :
+Reste à définir cette fonction&nbsp;! Ajoutez le code suivant, tout en bas de votre JavaScript :
 
 ```js
 function resetGame() {
@@ -554,7 +554,7 @@ function resetGame() {
 }
 ```
 
-Ce bloc de code assez long réinitialise complètement les paramètres du jeu (le joueur pourra commencer une nouvelle partie). Il permet de  :
+Ce bloc de code assez long réinitialise complètement les paramètres du jeu (le joueur pourra commencer une nouvelle partie). Il permet de &nbsp;:
 
 - Remettre le compteur `guessCount` à 1.
 - Effacer tous les paragraphes d'information.
@@ -577,7 +577,7 @@ Pour commencer, allez sur votre [console developpeur Javascript](/fr/Apprendre/D
 for (let i = 1 ; i < 21 ; i++) { console.log(i) }
 ```
 
-Que s'est-il passé ? Les nombres de 1 à 20 s'affichent dans la console. C'est à cause de la boucle. Une boucle : `for`  prend trois valeurs d'entrée (arguments)
+Que s'est-il passé&nbsp;? Les nombres de 1 à 20 s'affichent dans la console. C'est à cause de la boucle. Une boucle : `for`  prend trois valeurs d'entrée (arguments)
 
 1.  **Une valeur de départ** : Dans ce cas, nous commençons un compte à 1, mais cela pourrait être n'importe quel nombre. Vous pouvez remplacer `i` par n'importe quel nom (ou presque...) , mais `i` est utilisé par convention car il est court et facile à retenir.
 2.  **Une condition de fin** : Ici, nous avons spécifié  `i < 21` la boucle continuera jusqu'à ce que  `i`  ne soit plus inférieur à 21. Quand `i` atteindra ou dépassera 21, la boucle s'arrêtera.

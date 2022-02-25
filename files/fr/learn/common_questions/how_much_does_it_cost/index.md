@@ -13,7 +13,7 @@ Se lancer sur le Web n'est pas aussi bon marché qu'il y paraît à première vu
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devez au préalable connaître<a
           href="/fr/Apprendre/Quels_logiciels_sont_nécessaires_pour_construire_un_site_web"
@@ -29,7 +29,7 @@ Se lancer sur le Web n'est pas aussi bon marché qu'il y paraît à première vu
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Revoir le processus de création complet d'un site web et analyser le
         coût éventeul de chaque étape.

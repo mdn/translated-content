@@ -5,7 +5,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 ---
 ### Introduction
 
-Il est relativement courant de voir des pages web lier des ressources utilisant des protocoles non-`http`. Prenons par exemple le protocole `mailto:` :
+Il est relativement courant de voir des pages web lier des ressources utilisant des protocoles non-`http`. Prenons par exemple le protocole `mailto:`&nbsp;:
 
     <a href="mailto:webmaster@example.com">Webmestre</a>
 
@@ -15,19 +15,19 @@ Les gestionnaires de protocoles web permettent à des applications web de partic
 
 ### Enregistrement
 
-La définition d'une application web comme gestionnaire de protocole n'est pas un processus difficile. En gros, l'application web utilise [`registerProtocolHandler()`](/fr/DOM/window.navigator.registerProtocolHandler) pour s'enregistrer auprès du navigateur comme gestionnaire potentiel pour un protocole donné. Par exemple :
+La définition d'une application web comme gestionnaire de protocole n'est pas un processus difficile. En gros, l'application web utilise [`registerProtocolHandler()`](/fr/DOM/window.navigator.registerProtocolHandler) pour s'enregistrer auprès du navigateur comme gestionnaire potentiel pour un protocole donné. Par exemple&nbsp;:
 
     navigator.registerProtocolHandler("mailto",
                                       "https://www.example.com/?uri=%s",
                                       "Example Mail");
 
-Où les paramètres sont :
+Où les paramètres sont&nbsp;:
 
 - Le protocole.
 - Le modèle d'URL, utilisé comme gestionnaire. Le « %s » sera remplacé par le `href` du lien et une requête GET sera exécutée sur l'URL résultante.
 - Le nom du gestionnaire de protocole tel que présenté à l'utilisateur.
 
-Lorsqu'un navigateur exécutera ce code, il devra demander à l'utilisateur la permission d'autoriser l'application web à s'enregistrer comme gestionnaire du protocole. Firefox affichera une question dans une barre de notification :
+Lorsqu'un navigateur exécutera ce code, il devra demander à l'utilisateur la permission d'autoriser l'application web à s'enregistrer comme gestionnaire du protocole. Firefox affichera une question dans une barre de notification&nbsp;:
 
 ![](protocolregister.png)
 
@@ -64,14 +64,14 @@ Lorsqu'un navigateur exécutera ce code, il devra demander à l'utilisateur la p
   <title>Exemple de gestionnaire de protocole web — test</title>
 </head>
 <body>
-  <p>Hola, avez-vous déjà vu <a href="fake:ceci%20est%20un%20faux%20protocole">ceci</a> auparavant ?</p>
+  <p>Hola, avez-vous déjà vu <a href="fake:ceci%20est%20un%20faux%20protocole">ceci</a> auparavant&nbsp;?</p>
 </body>
 </html>
 ```
 
 ### Traitement
 
-La phase suivante est le traitement de l'action. Le navigateur extrait le `href` du lien activé, le combine avec le modèle d'URL fourni lors de l'enregistrement et effectue une requête HTTP GET sur l'URL. Ainsi, avec les exemples précédents, le navigateur effectuerait une requête GET sur cette URL :
+La phase suivante est le traitement de l'action. Le navigateur extrait le `href` du lien activé, le combine avec le modèle d'URL fourni lors de l'enregistrement et effectue une requête HTTP GET sur l'URL. Ainsi, avec les exemples précédents, le navigateur effectuerait une requête GET sur cette URL&nbsp;:
 
     http://starkravingfinkle.org/projects/wph/handler.php?value=fake:ceci%20est%20un%20faux%20protocole
 
@@ -96,9 +96,9 @@ if ( isset ( $_GET["value"] ) ) {
 </head>
 <body>
   <h1>Exemple de gestionnaire de protocole web — Gestionnaire</h1>
-  <p>Cette page est appelée lors de la gestion d'une action utilisant le protocole <code>fake:</code>. Voici les données reçues :</p>
+  <p>Cette page est appelée lors de la gestion d'une action utilisant le protocole <code>fake:</code>. Voici les données reçues&nbsp;:</p>
   <textarea>
-<?php echo(urldecode($value)) ?>
+<?php echo(urldecode($value))&nbsp;?>
   </textarea>
 </body>
 </html>

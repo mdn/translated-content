@@ -29,7 +29,7 @@ Il y a un certain nombre de logiciels de dessin disponibles qui utilisent SVG co
 
 > **Note :** Tous les visionneurs SVG ne sont pas égaux, il est donc probable que quelque chose écrit pour une application ne s'affiche pas exctement de la même manière dans une autre, simplement parce qu'ils prennent en charge différentes spécifications SVG, CSS ou JavaScript.
 
-Avant de commencer, vous devez avoir une compréhension basique du XML ou d'un autre langage de balisage comme le [HTML](/fr/HTML "fr/HTML"). Si vous n'êtes pas à l'aise avec le XML, voici quelques règles à garder en-tête :
+Avant de commencer, vous devez avoir une compréhension basique du XML ou d'un autre langage de balisage comme le [HTML](/fr/HTML "fr/HTML"). Si vous n'êtes pas à l'aise avec le XML, voici quelques règles à garder en-tête&nbsp;:
 
 - Les éléments et attributs SVG sont sensibles à la casse (contrairement au HTML et doivent donc tous être entrés avec la casse indiquée ici).
 - Les valeurs des attributs en SVG doivent être placées entre guillemets même si ce sont des nombres.

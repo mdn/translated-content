@@ -50,7 +50,7 @@ Les modules exportés sont interprétés en [mode strict](/fr/docs/Web/JavaScrip
 
 ## Description
 
-Il existe deux types d'export différents : les exports **nommés** et les exports **par défaut**. Il est possible d'avoir plusieurs exports nommés mais un seul export par défaut. Chaque type correspond à une des syntaxes ci-dessus :
+Il existe deux types d'export différents : les exports **nommés** et les exports **par défaut**. Il est possible d'avoir plusieurs exports nommés mais un seul export par défaut. Chaque type correspond à une des syntaxes ci-dessus&nbsp;:
 
 - Les exports nommés :
 
@@ -119,7 +119,7 @@ import { maFonction, maVariable, maClasse } from 'moduleParent.js';
 
 ### Utilisation d'exports nommés
 
-Dans le module, on pourra utiliser le code suivant :
+Dans le module, on pourra utiliser le code suivant&nbsp;:
 
 ```js
 // module "mon-module.js"

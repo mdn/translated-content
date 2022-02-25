@@ -36,7 +36,7 @@ Vous pouvez également atténuer ces risques en utilisant :
 - L’attribut `rel` défini à `noreferrer` sur les éléments HTML à risques (comme `<img>` et \<a>). Voir Types de liens et rechercher `noreferrer` pour plus d’informations.
 - La technique de la [page de sortie](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect).
 
-Les frameworks soucieux de la sécurité employés côté serveur ont tendance à inclure d'emblée des mesures d’atténuation pour résoudre ces problèmes, par exemple :
+Les frameworks soucieux de la sécurité employés côté serveur ont tendance à inclure d'emblée des mesures d’atténuation pour résoudre ces problèmes, par exemple&nbsp;:
 
 - La sécurité dans Django (voir notamment Cross Site Request Forgery (CSRF) protection).
 - helmet referrer-policy — middleware pour configurer l'entête Referrer-Policy dans les applications Node.js/Express (voir aussi helmet pour plus d'aménagements liés à la sécurité).

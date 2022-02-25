@@ -43,4 +43,4 @@ Cette méthode est peu utilisée. On lui préfère souvent  {{domxref("Element.
 
 ## Spécification
 
-- [DOM Level 2 Core : setAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-887236154) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-887236154) (non normative (Introduit dans [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode))
+- [DOM Level 2 Core&nbsp;: setAttributeNode](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-887236154) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-887236154) (non normative (Introduit dans [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttributeNode))

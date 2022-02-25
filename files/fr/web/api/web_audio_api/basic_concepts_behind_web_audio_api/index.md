@@ -9,7 +9,7 @@ Cet article explique une partie de la théorie sur laquelle s'appuient les fonct
 
 La Web Audio API implique d'effectuer le traitement du son dans un **contexte** **audio**; elle a été conçue sur le principe de **routage modulaire**. Les opérations basiques sont effectuées dans **noeuds audio**, qui sont liés entre eux pour former un **graphe de routage audio**. Un seul contexte peut supporter plusieurs sources — avec différentes configurations de canaux. Cette architecture modulaire assure la flexibilité nécessaire pour créer des fonctions audio complexes avec des effets dynamiques.
 
-Les noeuds audio sont liés au niveau de leur entrée et leur sortie, formant une chaîne qui commence avec une ou plusieurs sources, traverse un ou plusieurs noeuds, et se termine avec une sortie spécifique (bien qu'il ne soit pas nécessaire de spécifier une sortie si, par exemple, vous souhaitez seulement visualiser des données audio). Un scénario simple, représentatif de la Web Audio API, pourrait ressembler à ceci :
+Les noeuds audio sont liés au niveau de leur entrée et leur sortie, formant une chaîne qui commence avec une ou plusieurs sources, traverse un ou plusieurs noeuds, et se termine avec une sortie spécifique (bien qu'il ne soit pas nécessaire de spécifier une sortie si, par exemple, vous souhaitez seulement visualiser des données audio). Un scénario simple, représentatif de la Web Audio API, pourrait ressembler à ceci&nbsp;:
 
 1.  Création d'un contexte audio
 2.  Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
@@ -23,7 +23,7 @@ Chaque entrée ou sortie est composée de plusieurs **canaux,** chacun corres
 
 ![Diagramme qui montre comment les AudioNodes sont reliés par leurs entrées et sorties, et la configuration des canaux à l'intérieur de ces entrées/sorties.](audionodes.svg)
 
-Les sources audio peuvent être de provenance variée :
+Les sources audio peuvent être de provenance variée&nbsp;:
 
 - générées directement en JavaScript avec un noeud audio (tel qu'un oscillateur)
 - créées à partir de données PCM brutes (le contexte audio a des méthodes pour décoder les formats audio supportés)
@@ -36,7 +36,7 @@ Lors du traitement d'un signal audio, **l'échantillonage** désigne la conversi
 
 On peut trouver davantage de détails sur la page Wikipedia [Echantillonage (signal)](<https://fr.wikipedia.org/wiki/%C3%89chantillonnage_(signal)>).
 
-## Mémoire tampon : trames, échantillons et canaux
+## Mémoire tampon&nbsp;: trames, échantillons et canaux
 
 Un {{ domxref("AudioBuffer") }} prend comme paramètres un nombre de canaux (1 pour mono, 2 pour stéréo, etc), une longueur, qui correspond au nombre de trames d'échantillon dans la mémoire tampon, et un taux d'échantillonage, qui indique le nombre de trames d'échantillons lues par seconde.
 
@@ -77,7 +77,7 @@ var memoireTampon = context.createBuffer(1, 22050, 22050);
 
 Ce code génère une mémoire tampon mono (un seul canal) qui, lorsqu'elle est lue dans un AudioContext à 44100Hzz, est automatiquement \*rééchantillonnée\* à 44100Hz (et par conséquent produit 44100 trames), et dure 1.0 seconde: 44100 frames / 44100Hz = 1 seconde.
 
-> **Note :** le rééchantillonnage audio est très similaire à la redimension d'une image : imaginons que vous ayiez une image de 16 x 16, mais que vous vouliez remplir une surface de 32x32: vous la redimensionnez (rééchantillonnez). Le résultat est de qualité inférieure (il peut être flou ou crénelé, en fonction de l'algorithme de redimensionnement), mais cela fonctionne, et l'image redimensionnée prend moins de place que l'originale. C'est la même chose pour le rééchantillonnage audio — vous gagnez de la place, mais en pratique il sera difficle de reproduire correctement des contenus de haute fréquence (c'est-à-dire des sons aigus).
+> **Note :** le rééchantillonnage audio est très similaire à la redimension d'une image&nbsp;: imaginons que vous ayiez une image de 16 x 16, mais que vous vouliez remplir une surface de 32x32: vous la redimensionnez (rééchantillonnez). Le résultat est de qualité inférieure (il peut être flou ou crénelé, en fonction de l'algorithme de redimensionnement), mais cela fonctionne, et l'image redimensionnée prend moins de place que l'originale. C'est la même chose pour le rééchantillonnage audio — vous gagnez de la place, mais en pratique il sera difficle de reproduire correctement des contenus de haute fréquence (c'est-à-dire des sons aigus).
 
 ### Mémoire tampon linéaire ou entrelacée
 

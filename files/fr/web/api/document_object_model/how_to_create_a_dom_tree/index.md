@@ -12,7 +12,7 @@ Cet article décrit comment utiliser l'API [DOM Core (en)](https://www.w3.org/TR
 
 ### Créer dynamiquement un arbre DOM
 
-Considérons le document XML suivant :
+Considérons le document XML suivant&nbsp;:
 
     <?xml version="1.0"?>
     <people>
@@ -28,7 +28,7 @@ Considérons le document XML suivant :
       </person>
     </people>
 
-L'API DOM du W3C, supportée par Mozilla, peut être utilisée pour créer une représentation en mémoire de ce document comme cela :
+L'API DOM du W3C, supportée par Mozilla, peut être utilisée pour créer une représentation en mémoire de ce document comme cela&nbsp;:
 
     var doc = document.implementation.createDocument("", "", null);
     var peopleElem = doc.createElement("people");
