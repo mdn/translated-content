@@ -2,41 +2,74 @@
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
 tags:
-  - DOM
-  - Gecko
-  - Node
+  - プロパティ
+  - リファレンス
+  - 読み取り専用
+browser-compat: api.Node.previousSibling
 translation_of: Web/API/Node/previousSibling
 ---
-<div>{{ApiRef}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`previousSibling`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、指定されたノードの親ノードの {{domxref("Node.childNodes", "childNodes")}} リスト内で、直前にある ノードを返します。指定されたノードがリストの先頭にあった倍は `null` を返します。
 
-<p>指定のノードの親ノードの <a href="/ja/docs/Web/API/Node.childNodes"><code>childNodes</code></a> リストの中で直前のノードを返します。また、指定のノードがそのリストの中で先頭の場合は <code>null</code> を返します。</p>
+> **Note:** ブラウザーはソースのマークアップにあるホワイトスペースを表すために、文書にテキストノードを挿入します。
+> そのため、例えば [`Node.firstChild`](/ja/docs/Web/API/Node/firstChild) や `Node.previousSibling` を使用して得たノードが、取得しようとした実際のノードではなく、ホワイトスペースのテキストノードであることがあります。
+>
+> [DOM でのホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)の記事に、この動作に関する詳しい情報があります。
+>
+> [`previousElementSibling`](/ja/docs/Web/API/Element/previousElementSibling) を使用すると、（テキストノードやその他の要素以外のノードを飛ばして）次の要素を取得することができます。
+>
+> 子ノードのリストで反対方向に移動する場合は、 [Node.nextSibling](/ja/docs/Web/API/Node/nextSibling) を使用してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><var>previousNode</var> = <var>node</var>.previousSibling;
-</pre>
+現在のノードの直前のノードを表す {{domxref("Node")}} です。
+存在しない場合は `null` です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush:js">// &lt;a&gt;&lt;b1 id="b1"/&gt;&lt;b2 id="b2"/&gt;&lt;/a&gt;
+次の例では、要素にテキストノードがある場合とない場合の `previousSibling` の動作を示しています。
 
-alert( document.getElementById("b1").previousSibling ); // null
-alert( document.getElementById("b2").previousSibling.id ); // "b1"
-</pre>
+### 最初の例
 
-<h2 id="Notes" name="Notes">注記</h2>
+この例では、一連の `img` 要素が互いに隣り合っており、その間にホワイトスペースがありません。
 
- <p>Geckoベースのブラウザーはソースマークアップの中で空白を表現するためにテキストノードをドキュメントに挿入します。ですので、例えば <a href="/ja/docs/Web/API/Node/firstChild" title="ノードのツリーの中で最初の子ノード、もしくは子ノードがなければ null を返します。ノードが Document の場合は、その直接の子のリスト内の最初のノードを返します。"><code>Node.firstChild</code></a> や <a href="/ja/docs/Web/API/Node/previousSibling" title="指定のノードの親ノードの childNodes リストの中で直前のノードを返します。また、指定のノードがそのリストの中で先頭の場合は null を返します。"><code>Node.previousSibling</code></a> で得られるノードが、作者が取得しようとした実際の要素ではなく、空白のテキストノードを参照していることがあります。</p>
-    <p>より多くの情報を得るには『<a href="/ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM">DOM 中の空白文字</a>』と『<a class="external" href="http://www.w3.org/DOM/faq.html#emptytext" rel="noopener">W3C DOM 3 FAQ: Why are some Text nodes empty?</a>』を参照してください。</p>
+```html
+<img id="b0"><img id="b1"><img id="b2">
+```
 
-<p><code>childNode</code> リスト内の、指定ノードの次のノードの取得には {{domxref("Node.nextSibling")}} を用います。</p>
+```js
+document.getElementById("b1").previousSibling;    // <img id="b0">
+document.getElementById("b2").previousSibling.id; // "b1"
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+### 2 番目の例
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">DOM Level 1 Core: previousSibling</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-640FB3C8">DOM Level 2 Core: previousSibling</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-640FB3C8">DOM Level 3 Core: previousSibling</a></li>
-</ul>
+この例では、 `img` 要素の間にホワイトスペースのテキストノード（改行）があります。
+
+```html
+<img id="b0">
+<img id="b1">
+<img id="b2">
+```
+
+```js
+document.getElementById("b1").previousSibling;                 // #text
+document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
+document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
+document.getElementById("b2").previousSibling;                 // #text
+document.getElementById("b2").previousSibling.id;              // undefined
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Node.nextSibling")}}
+- {{domxref("Element.previousElementSibling")}}
