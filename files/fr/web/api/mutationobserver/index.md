@@ -110,7 +110,7 @@ Vide la file des mutations enregistrées du `MutationObserver` et retourne son c
     <tr>
       <td><code>characterData</code></td>
       <td>
-        <code>true</code> si les mutation de texte du nœud visé sont à observer.
+        <code>true</code> si les mutations de texte du nœud visé sont à observer.
       </td>
     </tr>
     <tr>
