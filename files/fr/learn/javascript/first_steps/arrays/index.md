@@ -124,8 +124,8 @@ Comme précédemment, initions‑nous aux bases pratiques des tableaux en entran
       document.body.appendChild(inputDiv);
 
       if(document.querySelectorAll('div').length > 1) {
-        inputForm.focus();
-      }
+        inputForm.focus();
+      }
 
       inputForm.addEventListener('change', executeCode);
     }

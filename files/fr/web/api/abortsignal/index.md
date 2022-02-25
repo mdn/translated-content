@@ -56,7 +56,7 @@ function fetchVideo() {
   fetch(url, {signal}).then(function(response) {
     ...
   }).catch(function(e) {
-    reports.textContent = 'Download error: ' + e.message;
+    reports.textContent = 'Download error: ' + e.message;
   })
 }
 ```

@@ -319,11 +319,11 @@ function Archiviste() {
   var archive = [];
 
   Object.defineProperty(this, "température",{
-    get: function() {
+    get: function() {
       console.log("accès !");
       return température;
     },
-    set: function(value) {
+    set: function(value) {
       température = value;
       archive.push({val: température});
     }

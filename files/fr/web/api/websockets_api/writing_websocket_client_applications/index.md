@@ -89,10 +89,10 @@ function sendText() {
   // Création d'un objet msg qui contient les données
   // dont le serveur a besoin pour traiter le message
   var msg = {
-    type: "message",
-    text: document.getElementById("text").value,
-    id:   clientID,
-    date: Date.now()
+    type: "message",
+    text: document.getElementById("text").value,
+    id:   clientID,
+    date: Date.now()
   };
 
   // Envoi de l'objet msg à travers une chaîne formatée en JSON

@@ -66,7 +66,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ```html
 <object data="https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf" type="application/pdf"
-        width="500" height="500" typemustmatch>
+        width="500" height="500" typemustmatch>
   <p>Vous n'avez pas de plugin PDF mais vous pouvez <a href="https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf">télécharger le fichier.</a></p>
 </object>
 

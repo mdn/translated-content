@@ -30,7 +30,7 @@ Les champs publics, tant statiques que d'instance, sont des propriétés qui peu
 
     class ClasseAvecMethodeDInstancePublique {
       methodePublique() {
-        return 'hello world'
+        return 'hello world'
       }
     }
 
@@ -44,7 +44,7 @@ Les champs statiques publics sont déclarés en utilisant le mot-clé `static`. 
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatique = 'champ statique'
+  static champStatique = 'champ statique'
 }
 
 console.log(ClasseAvecChampStatique.champStatique)

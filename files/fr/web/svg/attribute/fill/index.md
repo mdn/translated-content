@@ -27,19 +27,19 @@ html,body,svg { height:100% }
 
   <!-- Remplir avec un dégradé -->
   <defs>
-    <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
-      <stop offset="100%" stop-color="black" />
-    </radialGradient>
+    <radialGradient id="myGradient">
+      <stop offset="0%"   stop-color="pink" />
+      <stop offset="100%" stop-color="black" />
+    </radialGradient>
   </defs>
   <circle cx="150" cy="50" r="40" fill="url(#myGradient)" />
 
   <!-- Définit l'état final d'un cercle animé -->
   <circle cx="250" cy="50" r="20">
-    <animate attributeType="XML"
-             attributeName="r"
-             from="0" to="40" dur="5s"
-             fill="freeze" />
+    <animate attributeType="XML"
+             attributeName="r"
+             from="0" to="40" dur="5s"
+             fill="freeze" />
   </circle>
 </svg>
 ```

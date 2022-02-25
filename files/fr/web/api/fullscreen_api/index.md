@@ -92,7 +92,7 @@ Quand la page est chargée, ce code est exécuté pour mettre en place un évè
 ```js
 document.addEventListener("keydown", function(e) {
   if (e.keyCode == 13) {
-    toggleFullScreen();
+    toggleFullScreen();
   }
 }, false);
 ```

@@ -168,14 +168,14 @@ var filtreAccordable = contexteAudio.createBiquadFilter();
 
 function creerCourbeDistorsion(taille) { // fonction qui crée une forme de courbe qui sera utilisée par le générateur de l'onde de distorsion
   var k = typeof taille === 'number' ? taille : 50,
-    nombre_echantillons = 44100,
-    courbe = new Float32Array(nombre_echantillons),
-    angle = Math.PI / 180,
-    i = 0,
-    x;
-  for ( ; i < nombre_echantillons; ++i ) {
-    x = i * 2 / nombre_echantillons - 1;
-    courbe[i] = ( 3 + k ) * x * 20 * angle / ( Math.PI + k * Math.abs(x) );
+    nombre_echantillons = 44100,
+    courbe = new Float32Array(nombre_echantillons),
+    angle = Math.PI / 180,
+    i = 0,
+    x;
+    r ( ; i < nombre_echantillons; ++i )
+       x = i * 2 / nombre_echantillons - 1;
+    courbe[i] = ( 3 + k ) * x * 20 * angle / ( Math.PI + k * Math.abs(x) );
   }
   return courbe;
 };
@@ -183,26 +183,26 @@ function creerCourbeDistorsion(taille) { // fonction qui crée une forme de cour
 navigator.getUserMedia (
   // contraintes - uniquement audio dans cet exemple
   {
-    audio: true
+    audio: true
   },
 
   // callback de succès
   function(flux) {
-    source = contexteAudio.createMediaStreamSource(flux);
-    source.connect(analyseur);
-    analyseur.connect(distorsion);
-    distorsion.connect(filtreAccordable);
-    filtreAccordable.connect(gainVolume);
-    gainVolume.connect(contexteAudio.destination); // connecte les différents noeuds de graphes audio entre eux
-
-    genererVisualisation(flux);
-    voiceChange();
+    source = contexteAudio.createMediaStreamSource(flux);
+    source.connect(analyseur);
+    analyseur.connect(distorsion);
+    distorsion.connect(filtreAccordable);
+    filtreAccordable.connect(gainVolume);
+    gainVolume.connect(contexteAudio.destination); // connecte les différents noeuds de graphes audio entre eux
+ 
+    genererVisualisation(flux);
+    voiceChange();
 
   },
 
   // callback d'erreur
   function(err) {
-    console.log("L'erreur GUM suivante a eu lieu : " + err);
+    console.log("L'erreur GUM suivante a eu lieu : " + err);
   }
 );
 
@@ -214,53 +214,53 @@ function genererVisualisation(flux) {
   console.log(parametreVisualisation);
 
   if(parametreVisualisation == "sinewave") {
-    analyseur.fftSize = 2048;
-    var tailleBuffer = analyseur.frequencyBinCount; // la moitié de la valeur FFT (Transformation de Fourier rapide)
-    var tableauDonnees = new Uint8Array(tailleBuffer); // crée un tableau pour stocker les données
-
-    canvasCtx.clearRect(0, 0, LARGEUR, HAUTEUR);
-
-    function draw() {
-
-      renduVisuel = requestAnimationFrame(draw);
-
-      analyseur.getByteTimeDomainData(tableauDonnees); // récupère les données de l'onde de forme et les met dans le tableau créé
-
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)'; // dessine une onde dans le canvas
-      canvasCtx.fillRect(0, 0, LARGEUR, HAUTEUR);
-
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
-
-      canvasCtx.beginPath();
-
-      var sliceWidth = LARGEUR * 1.0 / tailleBuffer;
-      var x = 0;
-
-      for(var i = 0; i < tailleBuffer; i++) {
-
-        var v = tableauDonnees[i] / 128.0;
-        var y = v * HAUTEUR/2;
-
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-      }
-
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
-
-    draw();
+    analyseur.fftSize = 2048;
+    var tailleBuffer = analyseur.frequencyBinCount; // la moitié de la valeur FFT (Transformation de Fourier rapide)
+    var tableauDonnees = new Uint8Array(tailleBuffer); // crée un tableau pour stocker les données
+    
+    canvasCtx.clearRec
+    
+    function draw() {
+    
+      renduVisuel =
+      
+      analyseur.getByteTi
+      
+      canvasCtx.fillStyle
+      canvas
+   
+    canvasCtx.lineWidth
+    can
+   
+         canvasCtx.beginPath
+         
+           var sliceWi
+           var 
+         
+        fo
+            
+             
+               
+                
+               
+               
+                      
+                  canvasCtx.line
+           
+                                
+                                        x += sliceWidth;
+                   }
+                                   
+                                        
+    c
+                                      };
+                                      
+    draw();
 
   } else if(parametreVisualisation == "off") {
-    canvasCtx.clearRect(0, 0, LARGEUR, HAUTEUR);
-    canvasCtx.fillStyle = "red";
-    canvasCtx.fillRect(0, 0, LARGEUR, HAUTEUR);
+    canvasCtx.clearRect(0, 0, LARGEUR, HAUTEUR);
+    canvasCtx.fillStyle = "red";
+    canvasCtx.fillRect(0, 0, LARGEUR, HAUTEUR);
   }
 
 }
@@ -273,13 +273,13 @@ function modifierVoix() {
   console.log(choixVoix);
 
   if(choixVoix == "distortion") {
-    distorsion.curve = creerCourbeDistorsion(400); // applique la distorsion au son en utilisant le noeud d'onde de forme
-  } else if(choixVoix == "biquad") {
-    filtreAccordable.type = "lowshelf";
-    filtreAccordable.frequency.value = 1000;
-    filtreAccordable.gain.value = 25; // applique le filtre lowshelf aux sons qui utilisent le filtre accordable
-  } else if(choixVoix == "off") {
-    console.log("Choix de la voix désactivé"); // ne fait rien, quand l'option off est sélectionnée
+    distorsion.curve = creerCourbeDistorsion(400); // applique la distorsion au son en utilisant le noeud d'onde de forme
+    else if(choixVoix == "biquad") {
+    filtreAccordable.type = "lowshelf";
+    filtreAccordable.frequency.value = 1000;
+       filtreAccordable.gain.value = 25; // applique le filtre lowshelf aux sons qui utilisent le filtre accordable
+        } else if(choixVoix == "off") {
+    console.log("Choix de la voix désactivé"); // ne fait rien, quand l'option off est sélectionnée
   }
 
 }
@@ -299,13 +299,13 @@ silence.onclick = muterVoix;
 
 function muterVoix() { // allumer / éteindre le son
   if(silence.id == "") {
-    gainVolume.gain.value = 0; // gain à 0 pour éteindre le son
-    silence.id = "activated";
-    silence.innerHTML = "Unmute";
-  } else {
-    gainVolume.gain.value = 1; // gain à 1 pour allumer le son
-    silence.id = "";
-    silence.innerHTML = "Mute";
+    gainVolume.gain.value = 0; // gain à 0 pour éteindre le son
+    silence.id = "activated";
+    silence.innerHTML = "Unmute";
+    else {
+    gainVolume.gain.
+       silence.id = "";
+    silence.innerHTML = "Mute";
   }
 }
 ```

@@ -133,8 +133,8 @@ Il y a possibilité d'inclure d'autres fonctionnalités dans une vidéo HTML5. R
 
 ```html
 <video controls width="400" height="400"
-       autoplay loop muted
-       poster="poster.png">
+       autoplay loop muted
+       poster="poster.png">
   <source src="rabbit320.mp4" type="video/mp4">
   <source src="rabbit320.webm" type="video/webm">
   <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.mp4">lien à la vidéo</a>.</p>

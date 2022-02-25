@@ -36,21 +36,21 @@ function getData() {
 
 
   requete.onload = function() {
-    var donneesAudio = requete.response;
-
-    contexteAudio.decodeAudioData(donneesAudio, function(buffer) {
-        maMemoireTampon = buffer;
-        dureeMorceau = buffer.duration;
-        source.buffer = maMemoireTampon;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(contexteAudio.destination);
-        source.loop = true;
-
-        loopstartControl.setAttribute('max', Math.floor(dureeMorceau));
-        loopendControl.setAttribute('max', Math.floor(dureeMorceau));
-      },
-
-      function(e){"Erreur lors du décodage des données audio " + e.err});
+    var donneesAudio = requete.response;
+    
+    contexteAudio.decodeAudioData
+        maMemoireTampon = buffer;
+        dureeMorceau = buffer.duration;
+        source.buffer = maMemoireTampon;
+        source.playbackRate.
+        source.connect(conte
+        s
+     
+        
+           
+             },
+                            
+      function(e){"Erreur lors du décodage des données audio " + e.err});
 
   }
 

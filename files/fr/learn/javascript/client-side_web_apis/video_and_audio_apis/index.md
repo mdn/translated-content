@@ -91,19 +91,19 @@ Ouvrez le fichier HTML d'index. Vous allez voir que le HTML contient majoritaire
 ```html
 <div class="player">
   <video controls>
-    <source src="video/sintel-short.mp4" type="video/mp4">
-    <source src="video/sintel-short.mp4" type="video/webm">
-    <!-- fallback contenu ici -->
+    <source src="video/sintel-short.mp4" type="video/mp4">
+    <source src="video/sintel-short.mp4" type="video/webm">
+    <!-- fallback contenu ici -->
   </video>
   <div class="controls">
-    <button class="play" data-icon="P" aria-label="bascule lecture pause"></button>
-    <button class="stop" data-icon="S" aria-label="stop"></button>
-    <div class="timer">
+    <button class="play" data-icon="P" aria-label="bascule lecture pause"></button>
+    <button class="stop" data-icon="S" aria-label="stop"></button>
+    <div class="timer">
       <div></div>
       <span aria-label="timer">00:00</span>
     </div>
-    <button class="rwd" data-icon="B" aria-label="retour arrière"></button>
-    <button class="fwd" data-icon="F" aria-label="avance rapide"></button>
+    <button class="rwd" data-icon="B" aria-label="retour arrière"></button>
+    <button class="fwd" data-icon="F" aria-label="avance rapide"></button>
   </div>
 </div>
 ```

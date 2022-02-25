@@ -23,7 +23,7 @@ html,body,svg { height:100% }
                 translate(-36 45.5)
                 skewX(40)
                 scale(1 0.5)">
-    <path id="heart" d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
+    <path id="heart" d="M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z" />
   </g>
 
   <use xlink:href="#heart" fill="none" stroke="red"/>
@@ -131,15 +131,15 @@ html,body,svg { height:100% }
 
   <!-- Translation horizontale -->
   <rect x="5" y="5" width="40" height="40" fill="blue"
-        transform="translate(50)" />
+        transform="translate(50)" />
 
   <!-- Translation verticale -->
   <rect x="5" y="5" width="40" height="40" fill="red"
-        transform="translate(0 50)" />
+        transform="translate(0 50)" />
 
   <!-- Translation horizontale et verticale -->
   <rect x="5" y="5" width="40" height="40" fill="yellow"
-         transform="translate(50,50)" />
+         transform="translate(50,50)" />
 </svg>
 ```
 
@@ -159,15 +159,15 @@ html,body,svg { height:100% }
 <svg viewBox="-50 -50 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- uniform scale -->
   <circle cx="0" cy="0" r="10" fill="red"
-          transform="scale(4)" />
+          transform="scale(4)" />
 
   <!-- vertical scale -->
   <circle cx="0" cy="0" r="10" fill="yellow"
-          transform="scale(1,4)" />
+          transform="scale(1,4)" />
 
   <!-- horizontal scale -->
   <circle cx="0" cy="0" r="10" fill="pink"
-          transform="scale(4,1)" />
+          transform="scale(4,1)" />
 
   <!-- No scale -->
   <circle cx="0" cy="0" r="10" fill="black" />
@@ -192,11 +192,11 @@ html,body,svg { height:100% }
 
   <!-- rotation is done around the point 0,0 -->
   <rect x="0" y="0" width="10" height="10" fill="red"
-        transform="rotate(100)" />
+        transform="rotate(100)" />
 
   <!-- rotation is done around the point 10,10 -->
   <rect x="0" y="0" width="10" height="10" fill="green"
-        transform="rotate(100,10,10)" />
+        transform="rotate(100,10,10)" />
 </svg>
 ```
 
@@ -217,7 +217,7 @@ html,body,svg { height:100% }
   <rect x="-3" y="-3" width="6" height="6" />
 
   <rect x="-3" y="-3" width="6" height="6" fill="red"
-        transform="skewX(30)" />
+        transform="skewX(30)" />
 </svg>
 ```
 
@@ -238,7 +238,7 @@ html,body,svg { height:100% }
   <rect x="-3" y="-3" width="6" height="6" />
 
   <rect x="-3" y="-3" width="6" height="6" fill="red"
-        transform="skewY(30)" />
+        transform="skewY(30)" />
 </svg>
 ```
 

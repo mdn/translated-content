@@ -183,26 +183,26 @@ select {
 <div class="row">
   <label for="values">place-items: </label>
   <select id="values">
-    <option value="start">start</option>
-    <option value="center">center</option>
-    <option value="end">end</option>
-    <option value="left">left</option>
-    <option value="right">right</option>
-    <option value="auto center">auto center</option>
-    <option value="normal start">normal start</option>
-    <option value="center normal">center normal</option>
-    <option value="start auto">start auto</option>
-    <option value="end normal">end normal</option>
-    <option value="self-start auto">self-start auto</option>
-    <option value="self-end normal">self-end normal</option>
-    <option value="flex-start auto">flex-start auto</option>
-    <option value="flex-end normal">flex-end normal</option>
-    <option value="left auto">left auto</option>
-    <option value="right normal">right normal</option>
-    <option value="baseline normal">baseline normal</option>
-    <option value="first baseline auto">first baseline auto</option>
-    <option value="last baseline normal">last baseline normal</option>
-    <option value="stretch auto">stretch auto</option>
+    <option value="start">start</option>
+    <option value="center">center</option>
+    <option value="end">end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
+    <option value="auto center">auto center</option>
+    <option value="normal start">normal start</option>
+    <option value="center normal">center normal</option>
+    <option value="start auto">start auto</option>
+    <option value="end normal">end normal</option>
+    <option value="self-start auto">self-start auto</option>
+    <option value="self-end normal">self-end normal</option>
+    <option value="flex-start auto">flex-start auto</option>
+    <option value="flex-end normal">flex-end normal</option>
+    <option value="left auto">left auto</option>
+    <option value="right normal">right normal</option>
+    <option value="baseline normal">baseline normal</option>
+    <option value="first baseline auto">first baseline auto</option>
+    <option value="last baseline normal">last baseline normal</option>
+    <option value="stretch auto">stretch auto</option>
   </select>
 </div>
 ```

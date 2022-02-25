@@ -36,9 +36,9 @@ Un avertissement uniquement affiché en mode strict qui prend la forme d'une {{j
 
 function myFunc() {
   if (myFunc.caller == null) {
-    return 'La fonction a été appelée depuis la portée globale !';
-  } else {
-    return 'L\'appelant est ' + myFunc.caller;
+    return 'La fonction a été appelée depuis la portée globale !';
+     } else {
+    return 'L\'appelant est ' + myFunc.caller;
   }
 }
 

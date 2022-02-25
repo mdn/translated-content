@@ -95,15 +95,15 @@ async function saveCollectedBlobs(collectionName, collectedBlobs) {
 
 ```js
 export async function loadStoredImages(filter) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- let listOptions = filter ? {includes: filter} : undefined;
- const imagesList = await imagesStore.list(listOptions);
- let storedImages = [];
- for (const storedName of imagesList) {
-    const blob = await imagesStore.get(storedName);
-    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
- }
- return storedImages;
+ const imagesStore = await getFileStorage({name: "stored-images"});
+ let listOptions = filter ? {includes: filter} : undefined;
+ const imagesList = await imagesStore.list(listOptions);
+ let storedImages = [];
+ for (const storedName of imagesList) {
+    const blob = await imagesStore.get(storedName);
+    storedImages.push({storedName, blobUrl: URL.createObjectURL(blob)});
+ }
+ return storedImages;
 }
 ```
 
@@ -115,11 +115,11 @@ Notez l'utilisation de [URL.createObjectURL(blob)](/fr/docs/Web/API/URL/createOb
 
 ```js
 async function removeStoredImages(storedImages) {
- const imagesStore = await getFileStorage({name: "stored-images"});
- for (const storedImage of storedImages) {
-    URL.revokeObjectURL(storedImage.blobUrl);
-    await imagesStore.remove(storedImage.storedName);
- }
+ const imagesStore = await getFileStorage({name: "stored-images"});
+ for (const storedImage of storedImages) {
+    URL.revokeObjectURL(storedImage.blobUrl);
+    await imagesStore.remove(storedImage.storedName);
+ }
 }
 ```
 

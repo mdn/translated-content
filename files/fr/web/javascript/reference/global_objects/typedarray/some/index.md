@@ -83,7 +83,7 @@ Il n'existe pas d'objet global intitulé _TypedArray_, la prothèse doit donc un
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.slice
 if (!Uint8Array.prototype.some) {
   Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
+    value: Array.prototype.some
   });
 }
 ```

@@ -30,8 +30,8 @@ Rendu dans votre navigateur: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 <math>
 
   <msub>
-    <mi>X</mi>
-    <mn>1</mn>
+    <mi>X</mi>
+    <mn>1</mn>
   </msub>
 
 </math>

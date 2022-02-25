@@ -25,15 +25,15 @@ html,body,svg { height:100% }
 
   <!-- Effet de la valeur "butt" (valeur par défaut) -->
   <line x1="1" y1="1" x2="5" y2="1" stroke="black"
-        stroke-linecap="butt" />
+        stroke-linecap="butt" />
 
   <!-- Effet de la valeur "round" -->
   <line x1="1" y1="3" x2="5" y2="3" stroke="black"
-        stroke-linecap="round" />
+        stroke-linecap="round" />
 
   <!-- Effet de la valeur "square" -->
   <line x1="1" y1="5" x2="5" y2="5" stroke="black"
-        stroke-linecap="square" />
+        stroke-linecap="square" />
 
   <!--
   Les lignes roses indiquent la position
@@ -79,11 +79,11 @@ html,body,svg { height:100% }
 
   <!-- Effet de la valeur "butt" -->
   <path d="M1,1 h4" stroke="black"
-        stroke-linecap="butt" />
+        stroke-linecap="butt" />
 
   <!-- Effet de la valeur "butt" sur un chemin de longueur zéro -->
   <path d="M3,3 h0" stroke="black"
-        stroke-linecap="butt" />
+        stroke-linecap="butt" />
 
 
   <!--
@@ -114,11 +114,11 @@ html,body,svg { height:100% }
 
   <!-- Effet de la valeur "round" -->
   <path d="M1,1 h4" stroke="black"
-        stroke-linecap="round" />
+        stroke-linecap="round" />
 
   <!-- Effet de la valeur "round" sur un chemin de longueur zéro -->
   <path d="M3,3 h0" stroke="black"
-        stroke-linecap="round" />
+        stroke-linecap="round" />
 
 
   <!--
@@ -149,11 +149,11 @@ html,body,svg { height:100% }
 
   <!-- Effet de la valeur "square" -->
   <path d="M1,1 h4" stroke="black"
-        stroke-linecap="square" />
+        stroke-linecap="square" />
 
   <!-- Effet de la valeur "square" sur un chemin de longueur zéro -->
   <path d="M3,3 h0" stroke="black"
-        stroke-linecap="square" />
+        stroke-linecap="square" />
 
   <!--
   Les lignes roses indiquent la position

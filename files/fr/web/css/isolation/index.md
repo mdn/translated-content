@@ -74,10 +74,10 @@ La propriété `isolation` est définie avec l'un des mots-clés suivants.
 ```html
 <div id="b" class="a">
   <div id="d">
-    <div class="a c">auto</div>
+    <div class="a c">auto</div>
   </div>
   <div id="e">
-    <div class="a c">isolate</div>
+    <div class="a c">isolate</div>
   </div>
 </div>
 ```

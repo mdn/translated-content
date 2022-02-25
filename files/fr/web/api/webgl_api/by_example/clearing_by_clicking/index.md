@@ -92,8 +92,8 @@ window.addEventListener("load", function setupWebGL (evt) {
         || canvas.getContext("experimental-webgl");
       if (!gl) {
         alert("Échec de la récupération du \n"
-          + "contexte WebGL. Votre navigateur peut ne pas \n"
-          + " supporter WebGL.");
+          + "contexte WebGL. Votre navigateur peut ne pas \n"
+          + " supporter WebGL.");
         return;
       }
       gl.viewport(0, 0,

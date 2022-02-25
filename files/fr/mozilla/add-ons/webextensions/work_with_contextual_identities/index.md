@@ -50,22 +50,22 @@ Les principales caractéristiques du fichier [manifest.json](https://github.com/
 - La demande de permissions :
 
   ```json
-    "permissions": [
-        "contextualIdentities",
-        "cookies"
-    ],
+    "permissions": [
+        "contextualIdentities",
+        "cookies"
+    ],
   ```
 
 - spécification du bouton de la barre d'outils (browseAction) donnant accès aux fonctionnalités de l'extension :
 
   ```json
-    "browser_action": {
-      "browser_style": true,
-      "default_title": "Contextual Identities",
-      "default_popup": "context.html",
-      "default_icon": {
-        "128": "identity.svg"
-      }
+    "browser_action": {
+      "browser_style": true,
+      "default_title": "Contextual Identities",
+      "default_popup": "context.html",
+      "default_icon": {
+        "128": "identity.svg"
+      }
   ```
 
 ## context.html
@@ -73,12 +73,12 @@ Les principales caractéristiques du fichier [manifest.json](https://github.com/
 Une fenêtre contextuelle sur le bouton de la barre d'outils fournit l'interface utilisateur de l'extension. [context.html](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.html) implémente ce popup, mais c'est juste un shell dans lequel le script context.js écrit la liste des identités contextuelles et leurs options associées.
 
 ```html
-  <body>
-    <div class="panel">
-      <div id="identity-list"></div>
-    </div>
-  <script src="context.js"></script>
-  </body>
+  <body>
+    <div class="panel">
+      <div id="identity-list"></div>
+    </div>
+  <script src="context.js"></script>
+  </body>
 ```
 
 ## context.js
@@ -95,7 +95,7 @@ Il vérifie ensuite si la fonction d'identités contextuelles est activée dans 
 
 ```json
 if (browser.contextualIdentities === undefined) {
-  div.innerText = 'browser.contextualIdentities not available. Check that the privacy.userContext.enabled pref is set to true, and reload the add-on.';
+  div.innerText = 'browser.contextualIdentities not available. Check that the privacy.userContext.enabled pref is set to true, and reload the add-on.';
 } else {
 ```
 
@@ -104,41 +104,41 @@ Firefox s'installe avec la fonctionnalité d'identité contextuelle désactivée
 Le script utilise maintenant contextualIdentities.query pour déterminer s'il existe des identités contextuelles définies dans le navigateur. S'il n'y en a pas, un message est ajouté au popup et le script s'arrête.
 
 ```json
-  browser.contextualIdentities.query({})
-    .then((identities) => {
-      if (!identities.length) {
-        div.innerText = 'No identities returned from the API.';
-        return;
-      }
+  browser.contextualIdentities.query({})
+    .then((identities) => {
+      if (!identities.length) {
+        div.innerText = 'No identities returned from the API.';
+        return;
+      }
 ```
 
 Si des identités contextuelles sont présentes — Firefox a quatre identités par défaut — le script parcourt chacune d'elles en ajoutant son nom, stylisé dans la couleur choisie, à l'élément \<div>. La fonction `createOptions()` ajoute ensuite les options à “create” ou  “close all” à la \<div> avant qu'elle ne soit ajoutée au popup.
 
 ```json
-     for (let identity of identities) {
-       let row = document.createElement('div');
-       let span = document.createElement('span');
-       span.className = 'identity';
-       span.innerText = identity.name;
-       span.style = `color: ${identity.color}`;
-       console.log(identity);
-       row.appendChild(span);
-       createOptions(row, identity);
-       div.appendChild(row);
-     }
-  });
+     for (let identity of identities) {
+       let row = document.createElement('div');
+       let span = document.createElement('span');
+       span.className = 'identity';
+       span.innerText = identity.name;
+       span.style = `color: ${identity.color}`;
+       console.log(identity);
+       row.appendChild(span);
+       createOptions(row, identity);
+       div.appendChild(row);
+     }
+  });
 }
 
 function createOptions(node, identity) {
-  for (let option of ['Create', 'Close All']) {
-    let a = document.createElement('a');
-    a.href = '#';
-    a.innerText = option;
-    a.dataset.action = option.toLowerCase().replace(' ', '-');
-    a.dataset.identity = identity.cookieStoreId;
-    a.addEventListener('click', eventHandler);
-    node.appendChild(a);
-  }
+  for (let option of ['Create', 'Close All']) {
+    let a = document.createElement('a');
+    a.href = '#';
+    a.innerText = option;
+    a.dataset.action = option.toLowerCase().replace(' ', '-');
+    a.dataset.identity = identity.cookieStoreId;
+    a.addEventListener('click', eventHandler);
+    node.appendChild(a);
+  }
 }
 ```
 
@@ -151,25 +151,25 @@ function eventHandler(event) {
 Si l'utilisateur clique sur l'option permettant de créer un onglet pour une identité, l'un d'entre eux est ouvert à l'aide de tabs.create en transmettant l'ID de cookie de l'identité.
 
 ```json
-  if (event.target.dataset.action == 'create') {
-    browser.tabs.create({
-      url: 'about:blank',
-      cookieStoreId: event.target.dataset.identity
-    });
-  }
+  if (event.target.dataset.action == 'create') {
+    browser.tabs.create({
+      url: 'about:blank',
+      cookieStoreId: event.target.dataset.identity
+    });
+  }
 ```
 
 Si l'utilisateur sélectionne l'option permettant de fermer tous les onglets pour l'identité, le script exécute une tabs.query pour tous les onglets qui utilisent le cookie store de l'identité. Le script passe ensuite cette liste d'onglets à `tabs.remove`.
 
 ```json
-  if (event.target.dataset.action == 'close-all') {
-    browser.tabs.query({
-      cookieStoreId: event.target.dataset.identity
-    }).then((tabs) => {
-      browser.tabs.remove(tabs.map((i) => i.id));
-    });
-  }
-  event.preventDefault();
+  if (event.target.dataset.action == 'close-all') {
+    browser.tabs.query({
+      cookieStoreId: event.target.dataset.identity
+      ).then((tabs) => {
+      browser.tabs.remove(tabs.map((i) => i.id));
+    });
+  }
+  event.preventDefault();
 }
 ```
 

@@ -168,8 +168,8 @@ Dans ces lignes, nous venons de créer deux variables nommées respectivement `m
       document.body.appendChild(inputDiv);
 
       if(document.querySelectorAll('div').length > 1) {
-        inputForm.focus();
-      }
+        inputForm.focus();
+      }
 
       inputForm.addEventListener('change', executeCode);
     }

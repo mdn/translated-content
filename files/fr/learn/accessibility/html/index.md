@@ -305,21 +305,21 @@ Vous obtenez essentiellement ce comportement gratuitement, en utilisant simpleme
 
 <form>
   <div>
-    <label for="name"> Remplis ton nom :</label>
+    <label for="name"> Remplis ton nom :</label>
     <input type="text" id="name" name="name">
   </div>
   <div>
-    <label for="age"> Entrez votre âge :</label>
-    <input type="text" id="age" name="age">
+    <label for="age"> Entrez votre âge :</label>
+    <input type="text" id="age" name="age">
   </div>
   <div>
-    <label for="mood"> Choisissez votre humeur :</label>
-    <select id="mood" name="mood">
-      <option>Heureux</option>
+    <label for="mood"> Choisissez votre humeur :</label>
+    <select id="mood" name="mood">
+      <option>Heureux</option>
       <option> Triste </option>
       <option> Fâché </option>
-      <option> Préoccupé </option>
-    </select>
+      <option> Préoccupé </option>
+    </select>
   </div>
 </form>
 ```

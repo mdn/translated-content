@@ -18,7 +18,7 @@ Lors de cette discussion (en anglais), plusieurs contributeurs au projet MDN reg
 ```
 
 ```css hidden
- body{margin-top:8px;}
+ body{margin-top:8px;}
 ```
 
 {{ EmbedLiveSample('Audio', 'auto', '50px') }}

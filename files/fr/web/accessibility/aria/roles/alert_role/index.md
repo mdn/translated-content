@@ -85,8 +85,8 @@ Si un élément possède déjà `role="alert"` et qu’il est initialement cach�
 
 ```css
 .hidden {
-  display:none;
-  }
+  display:none;
+  }
 ```
 
 ```html

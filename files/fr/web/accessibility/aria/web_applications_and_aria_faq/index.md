@@ -139,7 +139,7 @@ Voici un exemple de code utilisé pour une barre de progression en HTML5&nbsp;:
   <body>
     <progress id="progress-bar" value="0" max="100">0% complété(s)</progress>
     <button id="update-button">Actualiser</button>
- </body>
+ </body>
 </html>
 ```
 

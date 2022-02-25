@@ -42,40 +42,40 @@ analyseur.getByteTimeDomainData(tableauDonnees);
 
 function dessiner() {
 
-      dessin = requestAnimationFrame(dessiner);
-
-      analyseur.getByteTimeDomainData(tableauDonnees);
-
-      contexteCanvas.fillStyle = 'rgb(200, 200, 200)';
-      contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
-
-      contexteCanvas.lineWidth = 2;
-      contexteCanvas.strokeStyle = 'rgb(0, 0, 0)';
-
-      contexteCanvas.beginPath();
-
-      var largeurTranche = LARGEUR * 1.0 / tailleMemoireTampon;
-      var x = 0;
-
-      for(var i = 0; i < tailleMemoireTampon; i++) {
-
-        var v = tableauDonnees[i] / 128.0;
-        var y = v * HAUTEUR/2;
-
-        if(i === 0) {
-          contexteCanvas.moveTo(x, y);
-        } else {
-          contexteCanvas.lineTo(x, y);
-        }
-
-        x += largeurTranche;
-      }
-
-      contexteCanvas.lineTo(canvas.width, canvas.height/2);
-      contexteCanvas.stroke();
-    };
-
-    dessiner();
+      dessin = requestAnimationFrame(dessiner);
+      
+      analyseur.getBy
+      
+      contexteCanvas.
+      contexte
+      
+      contexteCanvas.
+      cont
+      
+      contexteCanvas.beginPa
+      
+      var largeurTran
+      v
+      
+              for(var i = 0; i < tailleMemo
+              
+                var v =
+             
+           
+           
+                              
+                                                                              
+          contexteCanvas.lin
+    
+                             
+                                  
+                                                         
+                                   
+                                  c
+      contexteCanvas.stroke();
+    };
+                                                            
+    dessiner();
 ```
 
 ## Spécifications

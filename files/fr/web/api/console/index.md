@@ -149,7 +149,7 @@ Gecko 9.0 {{geckoRelease("9.0")}} a amené le support des caractères de substit
 Chacun de ceux-ci ira chercher l'argument qui suit la chaîne à formater. Par exemple :
 
     for (var i=0; i<5; i++) {
-      console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+      console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
     }
 
 L'affichage ressemblera à ceci :
@@ -225,7 +225,7 @@ L'objet console supporte aussi l'affichage d'une trace d'appels ; cela montre le
 
     function foo() {
       function bar() {
-        console.trace();
+        console.trace();
       }
       bar();
     }

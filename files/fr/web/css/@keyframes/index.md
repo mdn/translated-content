@@ -73,9 +73,9 @@ Les déclarations qui utilisent `!important` dans une description d'étape sont 
 
 @keyframes important2 {
   from { margin-top: 50px;
-         margin-bottom: 100px; }
-  to   { margin-top: 150px !important; /* ignorée */
-         margin-bottom: 50px; }
+         margin-bottom: 100px; }
+                         to   { margin-top: 150px !important; /* ignorée */
+         margin-bottom: 50px; }
 }
 ```
 

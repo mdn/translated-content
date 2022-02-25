@@ -32,7 +32,7 @@ Une page web ne doit pas contenir plus d'un rôle `banner`, mais il est tout à 
   <p><img src="logo.png" alt="Nom du site"></p>
   <p>Description du site</p>
   <div role="search">
-    ...
+    ...
   </div>
 </header>
 ```

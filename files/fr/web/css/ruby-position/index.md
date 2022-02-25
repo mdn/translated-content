@@ -61,7 +61,7 @@ Ce fragment HTML rendra un résultat différent pour chaque valeur de `ruby-posi
 
 ```css
 ruby {
-    ruby-position:over;
+    ruby-position:over;
 }
 ```
 
@@ -80,7 +80,7 @@ On obtiendra le résultat suivant :
 
 ```css
 ruby {
-    ruby-position:under;
+    ruby-position:under;
 }
 ```
 

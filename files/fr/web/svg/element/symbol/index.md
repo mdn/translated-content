@@ -23,10 +23,10 @@ html,body,svg { height:100% }
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Notre symbol a son propre système de coordonnées -->
   <symbol id="myDot" width="10" height="10" viewBox="0 0 2 2">
-    <circle cx="1" cy="1" r="1" />
+    <circle cx="1" cy="1" r="1" />
   </symbol>
 
-   <!-- Une grille pour matérialiser le positionnement du symbole -->
+   <!-- Une grille pour matérialiser le positionnement du symbole -->
   <path d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20" fill="none" stroke="pink" />
 
   <!-- Multiples instances de notre symbole -->

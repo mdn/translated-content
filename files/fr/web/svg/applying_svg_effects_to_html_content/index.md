@@ -166,19 +166,19 @@ Et encore d'autres filtres :
 <svg height="0">
   <filter id="f3">
     <feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
-      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/>
+      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/>
   </filter>
   <filter id="f4">
     <feSpecularLighting surfaceScale="5" specularConstant="1"
-                        specularExponent="10" lighting-color="white">
-      <fePointLight x="-5000" y="-10000" z="20000"/>
+                        specularExponent="10" lighting-color="white">
+      <fePointLight x="-5000" y="-10000" z="20000"/>
     </feSpecularLighting>
   </filter>
   <filter id="f5">
     <feColorMatrix values="1 0 0 0 0
-                           0 1 0 0 0
-                           0 0 1 0 0
-                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/>
+                           0 1 0 0 0
+                           0 0 1 0 0
+                           0 1 0 0 0" style="color-interpolation-filters:sRGB"/>
   </filter>
 </svg>
 ```

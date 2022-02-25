@@ -225,11 +225,11 @@ document.addEventListener('keydown', (event) => {
   }
 
   if (event.ctrlKey) {
-    // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
-    // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
-    alert(`Combinaison de ctrlKey + ${nomTouche}`);
-  } else {
-    alert(`Touche pressée ${nomTouche}`);
+    // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
+    // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
+    alert(`Combinaison de ctrlKey + ${nomTouche}`);
+     } else {
+    alert(`Touche pressée ${nomTouche}`);
   }
 }, false);
 
@@ -239,7 +239,7 @@ document.addEventListener('keyup', (event) => {
   // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
   // Aussi event.ctrlKey est false.
   if (nomTouche === 'Control') {
-    alert('La touche Control a été relâchée');
+    alert('La touche Control a été relâchée');
   }
 }, false);
 

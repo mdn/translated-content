@@ -212,8 +212,8 @@ La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 
 ```html
 <div id="flex-container">
-    <div class="flex-item" id="flex">Boîte flexible (cliquer pour passer à la boîte « normale »)</div>
-    <div class="raw-item" id="raw">Boîte « normale » </div>
+    <div class="flex-item" id="flex">Boîte flexible (cliquer pour passer à la boîte « normale »)</div>
+    <div class="raw-item" id="raw">Boîte « normale » </div>
 </div>
 ```
 

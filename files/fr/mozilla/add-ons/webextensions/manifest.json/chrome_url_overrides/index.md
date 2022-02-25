@@ -24,7 +24,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
       <td>
         <pre class="brush: json">
   "chrome_url_overrides" : {
-    "newtab": "my-new-tab.html"
+    "newtab": "my-new-tab.html"
   }</pre
         >
       </td>

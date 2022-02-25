@@ -61,7 +61,7 @@ ctx.addHitRegion({id: 'circle'});
 
 canvas.addEventListener('mousemove', function(event) {
   if (event.region) {
-    alert('hit region: ' + event.region);
+    alert('hit region: ' + event.region);
   }
 });
 </script>

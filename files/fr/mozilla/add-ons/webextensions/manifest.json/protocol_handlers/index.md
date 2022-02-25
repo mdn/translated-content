@@ -62,9 +62,9 @@ Chaque gestionnaire de protocole possède trois propriétés, toutes obligatoire
 ```json
 "protocol_handlers": [
   {
-    "protocol": "magnet",
-    "name": "Magnet Extension",
-    "uriTemplate": "https://example.com/#!/%s"
+    "protocol": "magnet",
+    "name": "Magnet Extension",
+    "uriTemplate": "https://example.com/#!/%s"
   }
 ]
 ```

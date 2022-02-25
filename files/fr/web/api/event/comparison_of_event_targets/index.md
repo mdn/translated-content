@@ -119,65 +119,65 @@ Problème : Seulement disponible dans un navigateur basé sur Mozilla ? Problèm
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Comparison of Event Targets</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            height: 150px;
-            width: 100%;
-        }
-        td {
-            border: 1px solid #ccc;
-            font-weight: bold;
-            padding: 5px;
-            min-height: 30px;
-        }
-        .standard {
-            background-color: #99ff99;
-        }
-        .non-standard {
-            background-color: #902D37;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Comparison of Event Targets</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            height: 150px;
+            width: 100%;
+        }
+        td {
+            border: 1px solid #ccc;
+            font-weight: bold;
+            padding: 5px;
+            min-height: 30px;
+        }
+        .standard {
+            background-color: #99ff99;
+        }
+        .non-standard {
+            background-color: #902D37;
+        }
+    </style>
 </head>
 <body>
-    <table>
-    <thead>
-        <tr>
-            <td class="standard">Original target dispatching the event <small>event.target</small></td>
-            <td class="standard">Target who's event listener is being processed <small>event.currentTarget</small></td>
-            <td class="standard">Identify other element (if any) involved in the event <small>event.relatedTarget</small></td>
-            <td class="non-standard">If there was a retargetting of the event for some reason <small> event.explicitOriginalTarget</small> contains the target before retargetting (never contains anonymous targets)</td>
-            <td class="non-standard">If there was a retargetting of the event for some reason <small> event.originalTarget</small> contains the target before retargetting (may contain anonymous targets)</td>
-        </tr>
-    </thead>
-    <tr>
-        <td id="target"></td>
-        <td id="currentTarget"></td>
-        <td id="relatedTarget"></td>
-        <td id="explicitOriginalTarget"></td>
-        <td id="originalTarget"></td>
-    </tr>
+    <table>
+    <thead>
+        <tr>
+            <td class="standard">Original target dispatching the event <small>event.target</small></td>
+            <td class="standard">Target who's event listener is being processed <small>event.currentTarget</small></td>
+            <td class="standard">Identify other element (if any) involved in the event <small>event.relatedTarget</small></td>
+            <td class="non-standard">If there was a retargetting of the event for some reason <small> event.explicitOriginalTarget</small> contains the target before retargetting (never contains anonymous targets)</td>
+            <td class="non-standard">If there was a retargetting of the event for some reason <small> event.originalTarget</small> contains the target before retargetting (may contain anonymous targets)</td>
+        </tr>
+    </thead>
+    <tr>
+        <td id="target"></td>
+        <td id="currentTarget"></td>
+        <td id="relatedTarget"></td>
+        <td id="explicitOriginalTarget"></td>
+        <td id="originalTarget"></td>
+    </tr>
 </table>
 <p>Clicking on the text will show the difference between explicitOriginalTarget, originalTarget and target</p>
 <script>
-    function handleClicks(e) {
-        document.getElementById('target').innerHTML = e.target;
-        document.getElementById('currentTarget').innerHTML = e.currentTarget;
-        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
-        document.getElementById('explicitOriginalTarget').innerHTML = e.explicitOriginalTarget;
-        document.getElementById('originalTarget').innerHTML = e.originalTarget;
-    }
-
-    function handleMouseover(e) {
-        document.getElementById('target').innerHTML = e.target;
-        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
-    }
-
-    document.addEventListener('click', handleClicks, false);
-    document.addEventListener('mouseover', handleMouseover, false);
+    function handleClicks(e) {
+        document.getElementById('target').innerHTML = e.target;
+        document.getElementById('currentTarget').innerHTML = e.currentTarget;
+        document.getElementById('relatedTarget').innerHTML = e.relatedTarget;
+        document.getElementById('explicitOriginalTarget').innerHTML = e.explicitOriginalTarget;
+        document.getElementById('originalTarget').innerHTML = e.originalTarget;
+    }
+    
+    function handleMouseover(e) {
+      
+    
+       }
+      
+    document.addEventListener('click', handleClicks, false);
+    document.addEventListener('mouseover', handleMouseover, false);
 </script>
 </body>
 </html>

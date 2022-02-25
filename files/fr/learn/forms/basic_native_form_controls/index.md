@@ -206,14 +206,14 @@ Si nécessaire, la valeur par défaut de la boîte de sélection peut être déf
 ```html
     <select>
       <optgroup label="Fruits">
-        <option>Banane</option>
-        <option selected>Cerise</option>
-        <option>Citron</option>
+        <option>Banane</option>
+        <option selected>Cerise</option>
+        <option>Citron</option>
       </optgroup>
       <optgroup label="Légumes">
-        <option>Carotte</option>
-        <option>Aubergine</option>
-        <option>Pomme de terre</option>
+        <option>Carotte</option>
+        <option>Aubergine</option>
+        <option>Pomme de terre</option>
       </optgroup>
     </select>
 ```

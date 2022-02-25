@@ -117,12 +117,12 @@ function playerClick (evt) {
   // si le clic est sur un rectangle, on l'attrape.
   // On incrémente donc le score et on crée un nouveau rectangle
   var diffPos = [ position[0] - rainingRect.position[0],
-      position[1] - rainingRect.position[1] ];
-  if ( diffPos[0] >= 0 && diffPos[0] < rainingRect.size[0]
-      && diffPos[1] >= 0 && diffPos[1] < rainingRect.size[1] ) {
-    score += 1;
-    scoreDisplay.innerHTML = score;
-    rainingRect = new Rectangle();
+      position[1] - rainingRect.position[1] ];
+  if ( diffPos[
+    && diffPo
+    score += 1;
+     scoreDisplay.innerHTML = score;
+    rainingRect = new Rectangle();
   }
 }
 

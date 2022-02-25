@@ -359,8 +359,8 @@ Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affi
       inputDiv.focus();
 
       if (document.querySelectorAll('div').length > 1) {
-        inputForm.focus();
-      }
+        inputForm.focus();
+      }
 
       inputForm.addEventListener('change', executeCode);
     }

@@ -225,7 +225,7 @@ Le champ genre représente une relation n à n (`ManyToManyField`) qui ne peut p
 Ajoutez le code ci-dessous dans votre modèle d'objet `Book` (concrètement dans le fichier **locallibrary/catalog/models.py**). Cette fonction génère une chaîne de caractère contenant les trois premières valeurs de tous les genres (s'ils existent) et créer une courte destription (`short_description`) qui sera utilisé par le site d'administration avec cette méthode.
 
 ```python
-    def display_genre(self):
+    def display_genre(self):
         """Create a string for the Genre. This is required to display genre in Admin."""
         return ', '.join(genre.name for genre in self.genre.all()[:3])
 

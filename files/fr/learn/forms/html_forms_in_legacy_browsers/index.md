@@ -49,7 +49,7 @@ Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon 
 
 ```html
 <label for="myColor">
- Choisir une couleur
+ Choisir une couleur
   <input type="color" id="myColor" name="color">
 </label>
 ```

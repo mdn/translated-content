@@ -122,7 +122,7 @@ La clé `options_ui` est un objet avec le contenu suivant :
 
 ```json
   "options_ui": {
-    "page": "options/options.html"
+    "page": "options/options.html"
   }
 ```
 

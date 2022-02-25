@@ -19,8 +19,8 @@ L'élément SVG `feMergeNode` se place à l'intérieur d'un élément {{ SVGElem
 
 ```html
 <svg width="200" height="200"
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink">
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
 
     <filter id="feOffset" x="-40" y="-20" width="100" height="200">
         <feOffset in="SourceGraphic" dx="60" dy="60" />

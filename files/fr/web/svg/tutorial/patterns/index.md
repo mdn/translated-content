@@ -16,20 +16,20 @@ Les motifs (_patterns_ en anglais) sont sans aucun doute les types de remplissag
 ```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
-    </linearGradient>
-    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
-    </linearGradient>
-
-    <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-      <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
-    </pattern>
+    <linearGradient id="Gradient1">
+      <stop offset="5%" stop-color="white"/>
+      <stop offset="95%" stop-color="blue"/>
+    </linearGradient>
+    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" stop-color="red"/>
+      <stop offset="95%" stop-color="orange"/>
+    </linearGradient>
+    
+    <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
+      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
+         <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+    </pattern>
   </defs>
 
   <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
@@ -63,20 +63,20 @@ La chose à retenir est que si l'objet change de taille, le motif lui-même sera
 ```html hidden
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg">
   <defs>
-    <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
-    </linearGradient>
-    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
-    </linearGradient>
-
-    <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-      <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
-    </pattern>
+    <linearGradient id="Gradient1">
+      <stop offset="5%" stop-color="white"/>
+      <stop offset="95%" stop-color="blue"/>
+    </linearGradient>
+    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" stop-color="red"/>
+      <stop offset="95%" stop-color="orange"/>
+    </linearGradient>
+    
+    <pattern id="Pattern" x="0" y="0" width=".25" height=".25">
+      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
+         <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+    </pattern>
   </defs>
 
   <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
@@ -135,20 +135,20 @@ Maintenant, parce le contenu du motif utilise le même système d'unité que le 
 ```html hidden
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg">
   <defs>
-    <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
-    </linearGradient>
-    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
-    </linearGradient>
-
-    <pattern id="Pattern" width=".25" height=".25" patternContentUnits="objectBoundingBox">
-      <rect x="0" y="0" width=".25" height=".25" fill="skyblue"/>
-      <rect x="0" y="0" width=".125" height=".125" fill="url(#Gradient2)"/>
-      <circle cx=".125" cy=".125" r=".1" fill="url(#Gradient1)" fill-opacity="0.5"/>
-    </pattern>
+    <linearGradient id="Gradient1">
+      <stop offset="5%" stop-color="white"/>
+      <stop offset="95%" stop-color="blue"/>
+    </linearGradient>
+    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" stop-color="red"/>
+      <stop offset="95%" stop-color="orange"/>
+    </linearGradient>
+    
+    <pattern id="Pattern" width=".25" height=".25" patternContent
+      <rect x="0" y="0" width=".25" height=".25" fill="skyblue"/>
+      <rect x="0" y="0" width=".125" height=".125" fill="url(#Gradient2)"/>
+         <circle cx=".125" cy=".125" r=".1" fill="url(#Gradient1)" fill-opacity="0.5"/>
+    </pattern>
   </defs>
 
   <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>
@@ -209,20 +209,20 @@ Bien sûr, cela veut dire que le motif ne sera pas mis à l'échelle si vous mod
 ```html hidden
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg">
   <defs>
-    <linearGradient id="Gradient1">
-      <stop offset="5%" stop-color="white"/>
-      <stop offset="95%" stop-color="blue"/>
-    </linearGradient>
-    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="5%" stop-color="red"/>
-      <stop offset="95%" stop-color="orange"/>
-    </linearGradient>
-
-    <pattern id="Pattern" x="10" y="10" width="50" height="50" patternUnits="userSpaceOnUse">
-      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
-      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
-      <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
-    </pattern>
+    <linearGradient id="Gradient1">
+      <stop offset="5%" stop-color="white"/>
+      <stop offset="95%" stop-color="blue"/>
+    </linearGradient>
+    <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="5%" stop-color="red"/>
+      <stop offset="95%" stop-color="orange"/>
+    </linearGradient>
+    
+    <pattern id="Pattern" x="10" y="10" width="50" height="50" 
+      <rect x="0" y="0" width="50" height="50" fill="skyblue"/>
+      <rect x="0" y="0" width="25" height="25" fill="url(#Gradient2)"/>
+         <circle cx="25" cy="25" r="20" fill="url(#Gradient1)" fill-opacity="0.5"/>
+    </pattern>
   </defs>
 
   <rect fill="url(#Pattern)" stroke="black" width="200" height="200"/>

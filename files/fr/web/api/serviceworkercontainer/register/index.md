@@ -52,12 +52,12 @@ if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
   navigator.serviceWorker.register('/sw.js').then(
-    (registration) => {
-      console.log('Service worker registration succeeded:', registration)
-    },
-    /*catch*/ (error) => {
-      console.log('Service worker registration failed:', error)
-    }
+    (registration) => {
+      console.log('Service worker registration succeeded:', registration)
+    },
+      /*catch*/ (error) => {
+         console.log('Service worker registration failed:', error)
+    }
   )
 } else {
   console.log('Service workers are not supported.')
@@ -72,12 +72,12 @@ Sinon, si ce code était inclus dans une page à `example.com/product/descriptio
 if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', { scope: './' }).then(
-    (registration) => {
-      console.log('Service worker registration succeeded:', registration)
-    },
-    /*catch*/ (error) => {
-      console.log('Service worker registration failed:', error)
-    }
+    (registration) => {
+      console.log('Service worker registration succeeded:', registration)
+    },
+    /*catch*/ (error) => {
+      console.log('Service worker registration failed:', error)
+    }
   )
 } else {
   console.log('Service workers are not supported.')
@@ -92,12 +92,12 @@ Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'
 if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', { scope: '/product/' }).then(
-    (registration) => {
-      console.log('Service worker registration succeeded:', registration)
-    },
-    /*catch*/ (error) => {
-      console.log('Service worker registration failed:', error)
-    }
+    (registration) => {
+      console.log('Service worker registration succeeded:', registration)
+    },
+    /*catch*/ (error) => {
+      console.log('Service worker registration failed:', error)
+    }
   )
 } else {
   console.log('Service workers are not supported.')

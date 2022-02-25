@@ -147,9 +147,9 @@ var nodeIterator = document.createNodeIterator(root, whatToShow, filter);
 
 ```js
 var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    function(node) {
+    document.body,
+    NodeFilter.SHOW_ELEMENT,
+    function(node) {
         return node.nodeName.toLowerCase() === 'p' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
     }
 );

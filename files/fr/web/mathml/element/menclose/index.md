@@ -48,9 +48,9 @@ L'élément MathML `<menclose>` permet d'afficher son contenu groupé au sein d'
 <math>
 
   <menclose notation="circle box">
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
+    <mi> x </mi>
+    <mo> + </mo>
+    <mi> y </mi>
   </menclose>
 
 </math>

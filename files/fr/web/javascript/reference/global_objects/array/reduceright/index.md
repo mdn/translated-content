@@ -53,7 +53,7 @@ L'usage de `reduceRight` avec définition d'un `callback` devrait ressembler à 
 
 ```js
 array.reduceRight(function(accumulator, valeurCourante, index, array) {
-    // ...
+    // ...
 });
 ```
 

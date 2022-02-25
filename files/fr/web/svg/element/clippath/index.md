@@ -22,7 +22,7 @@ html,body,svg { height:100% }
 <svg viewBox="0 0 100 100">
   <clipPath id="myClip">
     <!-- La forme créée par le détourage est un simple cercle. -->
-    <circle cx="40" cy="35" r="35" />
+    <circle cx="40" cy="35" r="35" />
   </clipPath>
 
   <!-- Le coeur sans détourage, pour référence -->

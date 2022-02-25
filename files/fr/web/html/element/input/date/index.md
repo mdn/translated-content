@@ -348,7 +348,7 @@ function populateDays(month) {
   // Si le mois est février, on calcule si l'année est bissextile
     var year = yearSelect.value;
     var leap = new Date(year, 1, 29).getMonth() == 1;
-    dayNum = leap ? 29 : 28;
+    dayNum = leap ? 29 : 28;
   }
 
   // on ajoute le bon nombre de jours dans autant

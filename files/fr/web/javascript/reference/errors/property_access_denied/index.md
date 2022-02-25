@@ -29,13 +29,13 @@ Il y a eu une tentative d'accès non-autorisée à un objet sur lequel vous n'av
 <!DOCTYPE html>
 <html>
   <head>
-    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
-    <script>
-      onload = function() {
+    <iframe id="myframe" src="http://www1.w3c-test.org/common/blank.html"></iframe>
+    <script>
+      onload = function() {
         console.log(frames[0].document);
         // Error: Permission denied to access property "document"
       }
-    </script>
+    </script>
   </head>
   <body></body>
 </html>

@@ -126,10 +126,10 @@ Cet exemple utilise également les API Tabs et Runtime, mais nous ne discuterons
 The key feature of the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/manifest.json) file relating to the use of the Cookies API is the permissions request:
 
 ```json
-  "permissions": [
-      "tabs",
-      "cookies",
-      "<all_urls>"
+  "permissions": [
+      "tabs",
+      "cookies",
+      "<all_urls>"
 ],
 ```
 
@@ -151,32 +151,32 @@ Il boucle ensuite à travers tous les boutons en leur assignant leur image et en
 
 ```js
 for(var i = 0; i < bgBtns.length; i++) {
-  var imgName = bgBtns[i].getAttribute('class');
-  var bgImg = 'url(\'images/' + imgName + '.png\')';
-  bgBtns[i].style.backgroundImage = bgImg;
-
-  bgBtns[i].onclick = function(e) {
+  var imgName = bgBtns[i].getAttribute('class');
+  var bgImg = 'url(\'images/' + imgName + '.png\')';
+  bgBtns[i].style.backgroundImage = bgImg;
+  
+  bgBtns[i].onclick = function(e) {
 ```
 
 Quand un bouton est cliqué, sa fonction d'écouteur correspondante obtient le nom de classe de bouton et ensuite le chemin d'icône qu'il passe au script de contenu de la page ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js)) en utilisant un message. Le script de contenu applique ensuite l'icône à l'arrière-plan de la page Web. Pendant ce temps, [bgpicker.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/popup/bgpicker.js) stocke les détails de l'icône appliquée à l'arrière-plan dans un cookie :
 
 ```js
-    cookieVal.image = fullURL;
-    browser.cookies.set({
-    url: tabs[0].url,
-    name: "bgpicker",
-    value: JSON.stringify(cookieVal)
-  })
+    cookieVal.image = fullURL;
+    browser.cookies.set({
+    url: tabs[0].url,
+    name: "bgpicker",
+    value: JSON.stringify(cookieVal)
+  })
 ```
 
 Le paramètre de couleur est traité de la même manière, déclenché par un écouteur dans le champ de saisie de couleur. Lorsqu'une couleur est entrée, l'onglet actif est découvert et les détails de sélection de couleur envoyés, à l'aide d'un message, au script de contenu de la page à appliquer à l'arrière-plan de la page Web. Ensuite, la sélection de couleur est ajoutée au cookie :
 
 ```js
-    cookieVal.color = currColor;
-    browser.cookies.set({
-    url: tabs[0].url,
-    name: "bgpicker",
-    value: JSON.stringify(cookieVal)
+    cookieVal.color = currColor;
+    browser.cookies.set({
+    url: tabs[0].url,
+    name: "bgpicker",
+    value: JSON.stringify(cookieVal)
 ```
 
 Lorsque l'utilisateur clique sur le bouton de réinitialisation qui a été affecté à la réinitialisation de la variable :
@@ -188,22 +188,22 @@ var reset = document.querySelector('.color-reset button');
 `reset.onclick` trouve d'abord l'onglet actif. Ensuite, en utilisant l'ID de l'onglet, il transmet un message au script de contenu de la page ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js)) pour qu'il supprime l'icône et la couleur de la page. La fonction efface ensuite les valeurs de cookie (de sorte que les anciennes valeurs ne sont pas reportées et écrites sur un cookie créé pour une nouvelle icône ou sélection de couleur sur la même page) avant de supprimer le cookie :
 
 ```js
-    cookieVal = { image : '',
-                  color : '' };
-    browser.cookies.remove({
-    url: tabs[0].url,
-    name: "bgpicker"
+    cookieVal = { image : '',
+                  color : '' };
+    browser.cookies.remove({
+    url: tabs[0].url,
+    name: "bgpicker"
 ```
 
 Aussi, afin que vous puissiez voir ce qui se passe avec les cookies, le script rend compte de toutes les modifications apportées aux cookies dans la console :
 
 ```js
 browser.cookies.onChanged.addListener((changeInfo) => {
-  console.log(`Cookie changed:\n
-    * Cookie: ${JSON.stringify(changeInfo.cookie)}\n
-    * Cause: ${changeInfo.cause}\n
-    * Removed: ${changeInfo.removed}`);
-  });
+  console.log(`Cookie changed:\n
+    * Cookie: ${JSON.stringify(changeInfo.cookie)}\n
+    * Cause: ${changeInfo.cause}\n
+    * Removed: ${changeInfo.removed}`);
+  });
 ```
 
 ### Scripts—background.js
@@ -211,22 +211,22 @@ browser.cookies.onChanged.addListener((changeInfo) => {
 Un script d'arrière-plan ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) permet à l'utilisateur de choisir une icône d'arrière-plan et une couleur pour le site Web dans une session antérieure. Le script est à l'écoute des changements dans l'onglet actif, que ce soit l'utilisateur qui passe d'un onglet à l'autre ou modifie l'URL de la page affichée dans l'onglet. Lorsque l'un de ces événements se produit, `cookieUpdate()` est appelée.  `cookieUpdate()` utilise à son tour `getActiveTab()` pour obtenir l'ID de l'onglet actif. La fonction peut ensuite vérifier si un cookie existe pour l'extension, en utilisant l'URL de l'onglet :
 
 ```js
-    var gettingCookies = browser.cookies.get({
-      url: tabs[0].url,
-      name: "bgpicker"
-    });
+    var gettingCookies = browser.cookies.get({
+      url: tabs[0].url,
+      name: "bgpicker"
+    });
 ```
 
 Si le cookie `"bgpicker"` existe pour le site Web, les détails de l'icône et de la couleur sélectionnés précédemment sont récupérés et transmis au script de contenu [updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js) à l'aide de messages :
 
 ```js
-    gettingCookies.then((cookie) => {
-      if (cookie) {
-        var cookieVal = JSON.parse(cookie.value);
-        browser.tabs.sendMessage(tabs[0].id, {image: cookieVal.image});
-        browser.tabs.sendMessage(tabs[0].id, {color: cookieVal.color});
-      }
-    });
+    gettingCookies.then((cookie) => {
+      if (cookie) {
+        var cookieVal = JSON.parse(cookie.value);
+        browser.tabs.sendMessage(tabs[0].id, {image: cookieVal.image});
+        browser.tabs.sendMessage(tabs[0].id, {color: cookieVal.color});
+      }
+    });
 ```
 
 ## Autres caractéristiques

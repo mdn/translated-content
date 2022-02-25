@@ -35,11 +35,11 @@ La limitation des variables statiques ne pouvant être appelées que par des mé
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD
 
-  static publicStaticMethod() {
+  static publicStaticMethod() {
     ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
   }
 }
 
@@ -54,12 +54,12 @@ Ceci peut conduire à un comportement inattendu lors de l'utilisation de **`this
 
 ```js
 class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42
-    return this.#PRIVATE_STATIC_FIELD
-  }
+  static basePublicStaticMethod() {
+    this.#PRIVATE_STATIC_FIELD = 42
+    return this.#PRIVATE_STATIC_FIELD
+  }
 }
 
 class SubClass extends BaseClassWithPrivateStaticField { }
@@ -81,11 +81,11 @@ L'encapsulation est forcée par le langage. C'est une erreur de syntaxe que de f
 
 ```js
 class ClassWithPrivateField {
-  #privateField
+  #privateField
 
-  constructor() {
+  constructor() {
     this.#privateField = 42
-    this.#randomField = 666 // Erreur de syntaxe
+    this.#randomField = 666 // Erreur de syntaxe
   }
 }
 

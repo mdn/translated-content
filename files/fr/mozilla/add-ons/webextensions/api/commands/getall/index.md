@@ -44,7 +44,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 ```js
 function logCommands(commands) {
   commands.forEach(function(command) {
-    console.log(command);
+    console.log(command);
   });
 }
 

@@ -44,32 +44,32 @@ Ce fragment de code provient d'[un exemple d'enregistrement d'évènement pour l
 ```js
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('service-worker.js', {
-      scope: './'
-    })
-    .then(({ installing, waiting, active }) => {
-      let serviceWorker
-      if (installing) {
-        serviceWorker = installing
-        document.querySelector('#kind').textContent = 'installé'
-      } else if (waiting) {
-        serviceWorker = waiting
-        document.querySelector('#kind').textContent = 'en attente'
-      } else if (active) {
-        serviceWorker = active
-        document.querySelector('#kind').textContent = 'actif'
-      }
-      if (serviceWorker) {
-        // logState(serviceWorker.state);
-        serviceWorker.addEventListener('statechange', (e) => {
-          // logState(e.target.state);
-        })
-      }
-    })
-    .catch((error) => {
-      // L'enregistrement s'est mal déroulé. Le fichier service-worker.js
-      // est peut-être indisponible ou contient une erreur.
-    })
+    .register('service-worker.js', {
+      scope: './'
+    })
+    .then(({ installing, waiting, active }) => {
+      let serviceWorker
+      if (installing) {
+        serviceWorker = installing
+        document.querySelector('#kind').textContent = 'installé'
+        else if (waiting) {
+        serviceWorker = waiting
+           document.querySelector
+               } else if (active) {
+        serviceWorker = active
+        document.querySelector('#kind').textContent = 'actif'
+      }
+      if (serviceWorker) {
+        // logState(serviceWorker.state);
+        serviceWorker.addEventListener('statechange', (e) => {
+          // logState(e.target.state);
+        })
+      }
+    })
+    .catch((error) => {
+      // L'enregistrement s'est mal déroulé. Le fichier service-worker.js
+      // est peut-être indisponible ou contient une erreur.
+    })
 } else {
   // Le navigateur ne supporte pas les service workers.
 }

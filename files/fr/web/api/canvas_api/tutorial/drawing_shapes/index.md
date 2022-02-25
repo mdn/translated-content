@@ -43,9 +43,9 @@ Ci-dessous la fonction `draw()` de la page précédente, mais utilisant mainten
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
 </html>
 ```
 
@@ -53,11 +53,11 @@ Ci-dessous la fonction `draw()` de la page précédente, mais utilisant mainten
 function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-
-    ctx.fillRect(25, 25, 100, 100);
-    ctx.clearRect(45, 45, 60, 60);
-    ctx.strokeRect(50, 50, 50, 50);
+    var ctx = canvas.getContext('2d');
+    
+    ctx.fillRect(25, 25, 100, 100)
+       ctx.clearRect(45, 45, 60, 60);
+    ctx.strokeRect(50, 50, 50, 50);
   }
 }
 ```
@@ -110,9 +110,9 @@ Par exemple, le code pour dessiner un triangle peut ressembler à ce qui suit&n
 
 ```html hidden
 <html>
- <body onload="dessiner();">
-   <canvas id="canevas" width="150" height="150"></canvas>
- </body>
+ <body onload="dessiner();">
+   <canvas id="canevas" width="150" height="150"></canvas>
+ </body>
 </html>
 ```
 
@@ -120,7 +120,7 @@ Par exemple, le code pour dessiner un triangle peut ressembler à ce qui suit&n
 function dessiner() {
   var canevas = document.getElementById('canevas');
   if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
+    var ctx = canevas.getContext('2d');
 
     ctx.beginPath();
     ctx.moveTo(75, 50);
@@ -148,9 +148,9 @@ Pour essayer par vous-même, vous pouvez utiliser le fragment de code ci-dessou
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+ </body>
 </html>
 ```
 
@@ -158,7 +158,7 @@ Pour essayer par vous-même, vous pouvez utiliser le fragment de code ci-dessou
 function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext('2d');
 
     ctx.beginPath();
     ctx.arc(75, 75, 50, 0, Math.PI * 2, true);  // Cercle extérieur
@@ -194,9 +194,9 @@ L'exemple ci-dessous dessine deux triangles, un rempli et un filaire.
 
 ```html hidden
 <html>
- <body onload="dessiner();">
-   <canvas id="canevas" width="150" height="150"></canvas>
- </body>
+ <body onload="dessiner();">
+   <canvas id="canevas" width="150" height="150"></canvas>
+ </body>
 </html>
 ```
 
@@ -204,22 +204,22 @@ L'exemple ci-dessous dessine deux triangles, un rempli et un filaire.
 function dessiner() {
   var canevas = document.getElementById('canevas');
   if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
-
-    // Triangle plein
-    ctx.beginPath();
-    ctx.moveTo(25, 25);
-    ctx.lineTo(105, 25);
-    ctx.lineTo(25, 105);
-    ctx.fill();
-
-    // Triangle filaire
-    ctx.beginPath();
-    ctx.moveTo(125, 125);
-    ctx.lineTo(125, 45);
-    ctx.lineTo(45, 125);
-    ctx.closePath();
-    ctx.stroke();
+    var ctx = canevas.getContext('2d');
+    
+    // Triangle plei
+    ctx.beginPath();
+    ctx.moveTo(25, 25);
+    ctx.lineTo(1
+    ctx.lineTo(2
+    ctx.fill();
+    
+    // Triangle filaire
+    ctx.beginPath();
+    ctx.moveTo(125, 125)
+       ctx.lineTo(125, 
+       ctx.lineTo(45, 125);
+    ctx.closePath();
+    ctx.stroke();
   }
 }
 ```
@@ -255,9 +255,9 @@ L'instruction pour le paramètre `antihoraire` a pour résultat que la premi�
 
 ```html hidden
 <html>
- <body onload="dessiner();">
-   <canvas id="canevas" width="150" height="200"></canvas>
- </body>
+ <body onload="dessiner();">
+   <canvas id="canevas" width="150" height="200"></canvas>
+ </body>
 </html>
 ```
 
@@ -265,27 +265,27 @@ L'instruction pour le paramètre `antihoraire` a pour résultat que la premi�
 function dessiner() {
   var canevas = document.getElementById('canevas');
   if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
-
-    for(var i = 0; i < 4; i++) {
-      for(var j = 0; j < 3; j++) {
-        ctx.beginPath();
-        var x = 25 + j * 50; // Coordonnée x
-        var y = 25 + i * 50; // Coordonnée y
-        var rayon = 20; // Rayon de l'arc
-        var angleInitial = 0; // Point de départ sur le cercle
-        var angleFinal = Math.PI + (Math.PI * j) / 2; // Point d'arrivée sur le cercle
-        var antihoraire = i % 2 != 0; // Horaire ou antihoraire
-
-        ctx.arc(x, y, rayon, angleInitial, angleFinal, antihoraire);
-
-        if (i>1) {
-          ctx.fill();
-        } else {
-          ctx.stroke();
-        }
-      }
-    }
+    var ctx = canevas.getContext('2d');
+    
+    for(var i = 0; i < 4
+      for(var j = 0; j <
+        ctx.beginPath();
+        var x = 25 + j * 50; // Coordonné
+        var y = 25 + i * 50; // Coordonné
+        var rayon = 20; // Rayon de l'arc
+        var angleInitial = 0; // Point de départ sur le cercle
+        var angleFinal = Math.PI + (Math.PI * j) / 2; // Point d
+        var antihoraire
+      
+      
+      
+      f
+        
+             
+            
+             
+    }
+    }
   }
 }
 ```
@@ -317,9 +317,9 @@ Cet exemple utilise plusieurs courbes quadratiques de Bézier pour rendre une bu
 
 ```html hidden
 <html>
- <body onload="dessiner();">
-   <canvas id="canevas" width="150" height="150"></canvas>
- </body>
+ <body onload="dessiner();">
+   <canvas id="canevas" width="150" height="150"></canvas>
+ </body>
 </html>
 ```
 
@@ -327,18 +327,18 @@ Cet exemple utilise plusieurs courbes quadratiques de Bézier pour rendre une bu
 function dessiner() {
   var canevas = document.getElementById('canevas');
   if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
-
-    // Exemples de courbes quadratiques
-    ctx.beginPath();
-    ctx.moveTo(75, 25);
-    ctx.quadraticCurveTo(25, 25, 25, 62.5);
-    ctx.quadraticCurveTo(25, 100, 50, 100);
-    ctx.quadraticCurveTo(50, 120, 30, 125);
-    ctx.quadraticCurveTo(60, 120, 65, 100);
-    ctx.quadraticCurveTo(125, 100, 125, 62.5);
-    ctx.quadraticCurveTo(125, 25, 75, 25);
-    ctx.stroke();
+    var ctx = canevas.getContext('2d');
+    
+    // Exemples de c
+    ctx.beginPath();
+    ctx.moveTo(75, 25);
+    ctx.quadraticCurveTo(25, 25, 25, 62.5);
+    ctx.quadraticCurveTo(25, 100, 50, 100);
+    ctx.quadraticCurveTo(50, 120, 30, 125);
+    ctx.quadraticCurveTo(60, 120, 65, 100)
+    ctx.quadraticCurveTo(125, 100, 125, 62
+       ctx.quadraticCurveTo(125, 25, 75, 25);
+    ctx.stroke();
   }
 }
 ```
@@ -351,9 +351,9 @@ Cet exemple dessine un cœur en utilisant les courbes de Bézier cubiques.
 
 ```html hidden
 <html>
- <body onload="dessiner();">
-   <canvas id="canevas" width="150" height="150"></canvas>
- </body>
+ <body onload="dessiner();">
+   <canvas id="canevas" width="150" height="150"></canvas>
+ </body>
 </html>
 ```
 
@@ -361,18 +361,18 @@ Cet exemple dessine un cœur en utilisant les courbes de Bézier cubiques.
 function dessiner() {
   var canevas = document.getElementById('canevas');
   if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
-
-    // Exemple de courbes cubiques
-    ctx.beginPath();
-    ctx.moveTo(75, 40);
-    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
-    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5);
-    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
-    ctx.bezierCurveTo(110, 102, 130, 80, 130, 62.5);
-    ctx.bezierCurveTo(130, 62.5, 130, 25, 100, 25);
-    ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
-    ctx.fill();
+    var ctx = canevas.getContext('2d');
+    
+    // Exemple de co
+    ctx.beginPath();
+    ctx.moveTo(75, 40);
+    ctx.bezierCurveTo(75, 37, 70, 25, 50, 25);
+    ctx.bezierCurveTo(20, 25, 20, 62.5, 20, 62.5
+    ctx.bezierCurveTo(20, 80, 40, 102, 75, 120);
+    ctx.bezierCurveTo(110, 102, 130, 80, 130, 
+    ctx.bezierCurveTo(130, 62.5, 130, 25, 100,
+       ctx.bezierCurveTo(85, 25, 75, 37, 75, 40);
+    ctx.fill();
   }
 }
 ```
@@ -394,9 +394,9 @@ Jusqu'à présent, chaque exemple de cette page a utilisé un seul type de fon
 
 ```html hidden
 <html>
- <body onload="dessiner();">
-   <canvas id="canevas" width="150" height="150"></canvas>
- </body>
+ <body onload="dessiner();">
+   <canvas id="canevas" width="150" height="150"></canvas>
+ </body>
 </html>
 ```
 
@@ -404,68 +404,68 @@ Jusqu'à présent, chaque exemple de cette page a utilisé un seul type de fon
 function dessiner() {
   var canevas = document.getElementById('canevas');
   if (canevas.getContext) {
-    var ctx = canevas.getContext('2d');
-
-    rectArrondi(ctx, 12, 12, 150, 150, 15);
-    rectArrondi(ctx, 19, 19, 150, 150, 9);
-    rectArrondi(ctx, 53, 53, 49, 33, 10);
-    rectArrondi(ctx, 53, 119, 49, 16, 6);
-    rectArrondi(ctx, 135, 53, 49, 33, 10);
-    rectArrondi(ctx, 135, 119, 25, 49, 10);
-
-    ctx.beginPath();
-    ctx.arc(37, 37, 13, Math.PI/7, -Math.PI/7, false);
-    ctx.lineTo(31, 37);
-    ctx.fill();
-
-    for(var i = 0; i< 8; i++) {
-      ctx.fillRect(51 + i * 16, 35, 4, 4);
-    }
-
-    for(i = 0; i < 6; i++) {
-      ctx.fillRect(115, 51 + i * 16, 4, 4);
-    }
-
-    for(i = 0; i < 8; i++) {
-      ctx.fillRect(51 + i * 16, 99, 4, 4);
-    }
-
-    ctx.beginPath();
-    ctx.moveTo(83, 116);
-    ctx.lineTo(83, 102);
-    ctx.bezierCurveTo(83, 94, 89, 88, 97, 88);
-    ctx.bezierCurveTo(105, 88, 111, 94, 111, 102);
-    ctx.lineTo(111, 116);
-    ctx.lineTo(106.333, 111.333);
-    ctx.lineTo(101.666, 116);
-    ctx.lineTo(97, 111.333);
-    ctx.lineTo(92.333, 116);
-    ctx.lineTo(87.666, 111.333);
-    ctx.lineTo(83, 116);
-    ctx.fill();
-
-    ctx.fillStyle = "white";
-    ctx.beginPath();
-    ctx.moveTo(91, 96);
-    ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
-    ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
-    ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
-    ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
-    ctx.moveTo(103, 96);
-    ctx.bezierCurveTo(100, 96, 99, 99, 99, 101);
-    ctx.bezierCurveTo(99, 103, 100, 106, 103, 106);
-    ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
-    ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
-    ctx.fill();
-
-    ctx.fillStyle = "black";
-    ctx.beginPath();
-    ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
-    ctx.fill();
+    var ctx = canevas.getContext('2d');
+    
+    rectArrondi(ctx, 12, 12, 150, 150, 15
+    rectArrondi(ctx, 19, 19, 150, 150, 9)
+    rectArrondi(ctx, 53, 53, 49, 33, 10);
+    rectArrondi(ctx, 53, 119, 49, 16, 6);
+    rectArrondi(ctx, 1
+    rectArrondi(ctx,
+    
+    ctx.beginPath();
+    ctx.arc(37, 
+    ctx.lineTo(31, 37);
+    ctx.fill();
+    
+    for(var i = 0; i< 8; i++
+      
+    }
+    
+    for(i = 0; i < 6; i++) {
+    
+    }
+    
+    for(i = 0; i < 8; i+
+    ctx.fillRect(51 + i * 
+    }
+    
+    ctx.beginPat
+    ctx.moveTo(83, 116);
+    ctx.lineTo(83, 1
+    ctx.bezierCurveTo(8
+    ctx.bezierCurveTo(105, 88, 1
+    ctx.lineTo(111, 116)
+    ctx.lineTo(1
+    ctx.lineTo(101.666, 
+    ctx.lineTo(97, 1
+    ctx.lineTo(92.333, 
+    ctx.lineTo(87.666, 111.333);
+    ctx.lineTo(83, 116);
+    ctx.fill();
+    
+    ctx.fillStyle = 
+    ctx.beginPath();
+    ctx.moveTo(9
+    ctx.bezierCurveT
+    ctx.bezierCurveTo(87, 103, 88, 106, 91, 10
+    ctx.bezierCu
+       ctx.bezierCurveTo(95, 99
+       ctx.moveTo(103, 
+       ctx.bezierCurveTo(100, 96, 99, 99, 99, 101)
+       ctx.bezierCu
+       ctx.bezierCurveT
+       ctx.bezierCurveTo(107, 99, 106, 96, 103, 9
+       ctx.fill();
+       
+    ctx.fillStyle = 
+    ctx.beginPath();
+    ctx.arc(101,
+    ctx.fill();
+       
+       ctx.beginPath();
+    ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
+    ctx.fill();
   }
 }
 

@@ -103,11 +103,11 @@ form.addEventListener('submit', function(ev) {
   var oReq = new XMLHttpRequest();
   oReq.open("POST", "stash.php", true);
   oReq.onload = function(oEvent) {
-    if (oReq.status == 200) {
-      oOutput.innerHTML = "Envoyé&nbsp;!";
-    } else {
-      oOutput.innerHTML = "Erreur " + oReq.status + " lors de la tentative d’envoi du fichier.<br \/>";
-    }
+    if (oReq.status == 200) {
+      oOutput.innerHTML = "Envoyé&nbsp;!";
+       } else {
+      oOutput.innerHTML = "Erreur " + oReq.status + " lors de la tentative d’envoi du fichier.<br \/>";
+    }
   };
 
   oReq.send(oData);
@@ -131,11 +131,11 @@ Vous pouvez utiliser l’objet `FormData` avec jQuery si vous définissez les 
 var fd = new FormData(document.querySelector("form"));
 fd.append("CustomField", "Données supplémentaires");
 $.ajax({
-  url: "stash.php",
-  type: "POST",
-  data: fd,
-  processData: false,  // dire à jQuery de ne pas traiter les données
-  contentType: false   // dire à jQuery de ne pas définir le contentType
+  url: "stash.php",
+  type: "POST",
+  data: fd,
+  processData: false,  // dire à jQuery de ne pas traiter les données
+  contentType: false   // dire à jQuery de ne pas définir le contentType
 });
 ```
 

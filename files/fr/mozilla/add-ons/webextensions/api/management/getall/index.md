@@ -46,9 +46,9 @@ Enregistrez le nom de toutes les extensions installées :
 ```js
 function gotAll(infoArray) {
   for (info of infoArray) {
-    if (info.type == "extension") {
-      console.log(info.name);
-    }
+    if (info.type == "extension") {
+      console.log(info.name);
+    }
   }
 }
 

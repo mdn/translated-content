@@ -111,8 +111,8 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
       document.body.appendChild(inputDiv);
 
       if(document.querySelectorAll('div').length > 1) {
-        inputForm.focus();
-      }
+        inputForm.focus();
+      }
 
       inputForm.addEventListener('change', executeCode);
     }

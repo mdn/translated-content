@@ -180,7 +180,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
  src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: normal;
+ font-style: normal;
 }
 ```
 
@@ -192,7 +192,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
  src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: oblique 0deg 20deg;
+ font-style: oblique 0deg 20deg;
 }
 ```
 
@@ -206,7 +206,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
  src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: italic;
+ font-style: italic;
 }
 ```
 
@@ -218,7 +218,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
  src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: oblique 0deg 12deg;
+ font-style: oblique 0deg 12deg;
 }
 ```
 

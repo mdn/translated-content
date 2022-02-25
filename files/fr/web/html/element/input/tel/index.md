@@ -112,7 +112,7 @@ Dans l'exemple suivant, on a un contrôle `"tel"` avec un attribut `placeholder`
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       placeholder="01 23 45 67 89">
+       placeholder="01 23 45 67 89">
 ```
 
 {{EmbedLiveSample('Textes_indicatifs_-_placeholders', 600, 40)}}
@@ -127,7 +127,7 @@ La taille physique de la boîte de saisie peut être contrôlée avec l'attribut
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20">
+       size="20">
 ```
 
 {{EmbedLiveSample('La_taille_physique', 600, 40)}}
@@ -140,7 +140,7 @@ Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de larg
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14">
+       size="20" minlength="9" maxlength="14">
 ```
 
 {{EmbedLiveSample("La_longueur_de_la_valeur", 600, 40)}}
@@ -153,7 +153,7 @@ Il est possible de fournir une valeur par défaut en renseignant au préalable l
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       value="01 23 45 67 89">
+       value="01 23 45 67 89">
 ```
 
 {{EmbedLiveSample("Fournir_une_valeur_par_défaut", 600, 40)}}

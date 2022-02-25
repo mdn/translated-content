@@ -49,10 +49,10 @@ En plus des attributs qui suivent, l'élément `<math>` accepte tous les attribu
 ```html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MathML en HTML5</title>
-  </head>
-  <body>
+  <head>
+    <title>MathML en HTML5</title>
+  </head>
+  <body>
 
   <math>
     <mrow>

@@ -131,8 +131,8 @@ function checkReading () {
   checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
   document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
   checkReading.noticeBox.innerHTML = checkReading.read ?
-    "Merci." :
-    "Veuillez faire défiler la page et lire le texte qui suit.";
+    "Merci." :
+    "Veuillez faire défiler la page et lire le texte qui suit.";
 }
 
 onload = function () {

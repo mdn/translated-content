@@ -191,11 +191,11 @@ window.onload = function(){
     var duration =  myAudio.duration;
     if (duration > 0) {
       for (var i = 0; i < myAudio.buffered.length; i++) {
-            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
-                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
-                break;
-            }
-        }
+            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
+                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
+                break;
+            }
+        }
     }
   });
 

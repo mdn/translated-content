@@ -94,7 +94,7 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
 <text>
   <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
-    A curve.
+    A curve.
   </textPath>
 </text>
 ```
@@ -106,7 +106,7 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
 <text>
   <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
-    A curve.
+    A curve.
   </textPath>
 </text>
 

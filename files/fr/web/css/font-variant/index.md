@@ -59,10 +59,10 @@ font-variant: unset;
 
 ```css
 p.normal {
-    font-variant: normal;
+    font-variant: normal;
 }
 p.small {
-    font-variant: small-caps;
+    font-variant: small-caps;
 }
 ```
 

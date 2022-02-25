@@ -375,9 +375,9 @@ var email = document.getElementById("mail");
 
 email.addEventListener("keyup", function (event) {
   if(email.validity.typeMismatch) {
-    email.setCustomValidity("J'attend un e-mail, mon cher&nbsp;!");
+    email.setCustomValidity("J'attend un e-mail, mon cher&nbsp;!");
   } else {
-    email.setCustomValidity("");
+    email.setCustomValidity("");
   }
 });
 ```

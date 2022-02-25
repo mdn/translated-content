@@ -13,22 +13,22 @@ Ceci est l'exemple pour l'article [Mon premier formulaire HTML](/fr/docs/HTML/Fo
 ```html
 <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="post">
   <div>
-    <label for="nom">Nom :</label>
-    <input type="text" id="nom" name="user_name">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="user_name">
   </div>
 
   <div>
-    <label for="courriel">Courriel :</label>
-    <input type="email" id="courriel" name="user_email">
+    <label for="courriel">Courriel :</label>
+    <input type="email" id="courriel" name="user_email">
   </div>
 
   <div>
-    <label for="message">Message :</label>
-    <textarea id="message" name="user_message"></textarea>
+    <label for="message">Message :</label>
+    <textarea id="message" name="user_message"></textarea>
   </div>
 
   <div class="button">
-    <button type="submit">Envoyer le message</button>
+    <button type="submit">Envoyer le message</button>
   </div>
 </form>
 ```
@@ -60,7 +60,7 @@ label {
 
 input, textarea {
   /* Afin de s'assurer que tous les champs textuels utilisent la même police
-     Par défaut, textarea utilise une police à espacement constant */
+     Par défaut, textarea utilise une police à espacement constant */
   font: 1em sans-serif;
 
   /* Pour donner la même dimension à tous les champs textuels */
@@ -86,7 +86,7 @@ textarea {
   height: 5em;
 
   /* Pour permettre aux utilisateurs de redimensionner un champ textuel horizontalement
-     Cela ne marche pas avec tous les navigateurs  */
+     Cela ne marche pas avec tous les navigateurs  */
   resize: vertical;
 }
 
@@ -97,7 +97,7 @@ textarea {
 
 button {
   /* Cette marge représente approximativement le même espace
-     que celui entre les étiquettes et les champs textuels */
+     que celui entre les étiquettes et les champs textuels */
   margin-left: .5em;
 }
 ```

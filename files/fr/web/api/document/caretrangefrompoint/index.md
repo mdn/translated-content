@@ -45,32 +45,32 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 ```js
 function insertBreakAtPoint(e) {
 
-    var range;
-    var textNode;
-    var offset;
-
-    if (document.caretPositionFromPoint) {
-        range = document.caretPositionFromPoint(e.clientX, e.clientY);
-        textNode = range.offsetNode;
-        offset = range.offset;
-
-    } else if (document.caretRangeFromPoint) {
-        range = document.caretRangeFromPoint(e.clientX, e.clientY);
-        textNode = range.startContainer;
-        offset = range.startOffset;
-    }
-
-    // divise seulement les TEXT_NODE (noeuds texte)
-    if (textNode && textNode.nodeType == 3) {
-        var replacement = textNode.splitText(offset);
-        var br = document.createElement('br');
-        textNode.parentNode.insertBefore(br, replacement);
-    }
+    var range;
+    var textNode;
+    var offset;
+    
+    if (document.caretPositionFromPoint) {
+        range = document.caretPositi
+        textNode = range.offset
+        offset = range.offset;
+    
+    } else if (document.caretRangeFromPo
+        range = document.caretRange
+      
+        offset = range.startOffset;
+    }
+    
+    // divise seulement les TEXT_NODE (noeuds 
+    if (textNode && textNode.nodeType == 3) {
+        var replacement = textNode.splitText(offset);
+        var br = document.createElement('br');
+        textNode.parentNode.insertBefore(br, replacement);
+    }
 }
 
 var paragraphs = document.getElementsByTagName("p");
 for (i=0 ; i < paragraphs.length; i++) {
-    paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
+    paragraphs[i].addEventListener("click", insertBreakAtPoint, false);
 }
 ```
 

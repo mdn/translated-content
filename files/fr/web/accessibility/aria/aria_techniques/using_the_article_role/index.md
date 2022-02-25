@@ -38,12 +38,12 @@ Les technologies d'assistance **doivent** fournit une fonctionnalité permettant
   <p>contenu du billet...</p>
 
   <div class="comments">
-    <div role="article">
-      <p>Un premier commentaire</p>
-    </div>
-    <div role="article">
-      <p>Un deuxième commentaire</p>
-    </div>
+    <div role="article">
+      <p>Un premier commentaire</p>
+    </div>
+    <div role="article">
+      <p>Un deuxième commentaire</p>
+    </div>
   </div>
 
 </div>
