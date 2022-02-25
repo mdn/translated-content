@@ -52,7 +52,7 @@ Dans l'autre sens, si vous essayez d'émuler le comportement de WebKit sur Gecko
 
 ### Notification
 
-Quand le mode plein écran est activé, le document qui contient l'élément reçoit un événement de type   {{ event("fullscreenchange") }} . Lors de la sortie du mode plein écran, le document reçoit à nouveau l'événement  {{ event("fullscreenchange") }} . Notez que l'événement  en lui-même {{ event("fullscreenchange") }} ne fournit aucune information si le document est en train d'entrer ou de sortir du mode plein écran, mais si le document a une valeur non nulle {{ domxref("document.fullscreenElement", "fullscreenElement") }} , vous savez que vous êtes en mode plein écran.
+Quand le mode plein écran est activé, le document qui contient l'élément reçoit un événement de type {{ event("fullscreenchange") }} . Lors de la sortie du mode plein écran, le document reçoit à nouveau l'événement  {{ event("fullscreenchange") }} . Notez que l'événement  en lui-même {{ event("fullscreenchange") }} ne fournit aucune information si le document est en train d'entrer ou de sortir du mode plein écran, mais si le document a une valeur non nulle {{ domxref("document.fullscreenElement", "fullscreenElement") }} , vous savez que vous êtes en mode plein écran.
 
 ### Lorsqu'une demande de plein écran échoue
 

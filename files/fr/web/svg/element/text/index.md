@@ -63,8 +63,8 @@ Le texte SVG peut également être stylisé avec du CSS contenant les propriét�
   <text x="10"  y="20"
         style="font-family: Times New Roman;
                font-size  : 24;
-               stroke     : #00ff00;
-               fill       : #0000ff;">
+               stroke     : #00ff00;
+               fill       : #0000ff;">
     SVG text styling
   </text>
 </svg>

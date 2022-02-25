@@ -11,7 +11,7 @@ translation_of: Web/CSS/margin-inline
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`margin-inline`** définit la marge sur les côtés de l'élément qui sont ceux de l'axe en ligne. Cette propriété logique peut correspondre à différentes marges selon le mode d'écriture de l'élément, sa direction ou l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("margin-top")}} et {{cssxref("margin-bottom")}} ou à   {{cssxref("margin-right")}} et {{cssxref("margin-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`margin-inline`** définit la marge sur les côtés de l'élément qui sont ceux de l'axe en ligne. Cette propriété logique peut correspondre à différentes marges selon le mode d'écriture de l'élément, sa direction ou l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("margin-top")}} et {{cssxref("margin-bottom")}} ou à {{cssxref("margin-right")}} et {{cssxref("margin-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 ```css
 /* Valeurs de longueur */

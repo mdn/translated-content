@@ -213,7 +213,7 @@ L'élément arc part du point actuel vers le point d'arrivée (x, y) en parcoura
 <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
   <line x1="10" y1="315" x2="315" y2="10" stroke="black" stroke-width="2" />
 
-  <path d="M110 215       a 30 50   0 0 1 52.55 -52.45" fill="#7FBF7F" stroke="black" stroke-width="2" />
+  <path d="M110 215 a 30 50 0 0 1 52.55 -52.45" fill="#7FBF7F" stroke="black" stroke-width="2" />
   <path d="M172.55 152.45 a 30 50 -45 0 1 42.55 -42.55" fill="#7FBF7F" stroke="black" stroke-width="2" />
 </svg>
 ```

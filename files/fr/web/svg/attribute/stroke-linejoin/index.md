@@ -66,8 +66,8 @@ html,body,svg { height:100% }
   <g id="highlight">
     <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
           stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5"   r="0.05" fill="pink" />
-    <circle cx="3" cy="2"   r="0.05" fill="pink" />
+    <circle cx="1" cy="5"   r="0.05" fill="pink" />
+    <circle cx="3" cy="2"   r="0.05" fill="pink" />
     <circle cx="5" cy="5.5" r="0.05" fill="pink" />
   </g>
   <use xlink:href="#highlight" x="6" />

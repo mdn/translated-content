@@ -166,7 +166,7 @@ Et encore d'autres filtres :
 <svg height="0">
   <filter id="f3">
     <feConvolveMatrix filterRes="100 100" style="color-interpolation-filters:sRGB"
-      order="3" kernelMatrix="0 -1 0   -1 4 -1   0 -1 0" preserveAlpha="true"/>
+      order="3" kernelMatrix="0 -1 0 -1 4 -1 0 -1 0" preserveAlpha="true"/>
   </filter>
   <filter id="f4">
     <feSpecularLighting surfaceScale="5" specularConstant="1"

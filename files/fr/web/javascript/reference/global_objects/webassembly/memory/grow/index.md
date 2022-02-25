@@ -41,7 +41,7 @@ Ensuite, on augmente la taille de l'espace mémoire d'une page grâce à la mét
 ```js
 const bytesPerPage = 64 * 1024;
 console.log(memory.buffer.byteLength / bytesPerPage);  // "1"
-console.log(memory.grow(1));                           // "1"
+console.log(memory.grow(1));                           // "1"
 console.log(memory.buffer.byteLength / bytesPerPage);  // "2"
 ```
 

@@ -17,7 +17,7 @@ La méthode **`get()`**, rattachée à l'interface {{domxref("CredentialsContain
 
 Cette méthode collecte l'ensemble des informations d'authentification stockées dans l'objet {{domxref("CredentialsContainer")}} et qui respectent les critères indiqués (définis grâce à l'argument **`options`**). À partir de cet ensemble, l'agent utilisateur sélectionne la meilleure information d'authentification. Selon les options fournies, l'agent utilisateur pourra afficher une boîte de dialogue et demander à l'utilisateur de sélectionner la bonne information.
 
-Cette méthode récupère les informations d'authentification en appelant la méthode `CollectFromCredentialStore` pour chaque type d'authentification permis par l'argument **`options`**. Ainsi, si la propriété `options.password` existe dans l'argument passé,   {{domxref("PasswordCredential")}}`.[[CollectFromCredentialStore]]` sera appelée.
+Cette méthode récupère les informations d'authentification en appelant la méthode `CollectFromCredentialStore` pour chaque type d'authentification permis par l'argument **`options`**. Ainsi, si la propriété `options.password` existe dans l'argument passé, {{domxref("PasswordCredential")}}`.[[CollectFromCredentialStore]]` sera appelée.
 
 > **Note :** Cette méthode ne peut être utilisé que pour les contextes de navigation les plus hauts. Les appels lancés depuis une {{HTMLElement("iframe")}} résoudront la promesse sans aucun effet.
 

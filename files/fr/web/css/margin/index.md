@@ -86,14 +86,14 @@ Cette propriété peut accepter une, deux, trois ou quatre valeurs avec les type
 
 ```html
 <div class="ex1">
-  margin:     auto;
+  margin: auto;
   background: gold;
-  width:      66%;
+  width: 66%;
 </div>
 <div class="ex2">
-  margin:     20px 0px 0px -20px;
+  margin: 20px 0px 0px -20px;
   background: gold;
-  width:      66%;
+  width: 66%;
 </div>
 ```
 

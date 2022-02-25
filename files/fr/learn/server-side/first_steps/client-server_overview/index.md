@@ -28,7 +28,7 @@ Maintenant que vous connaissez le but et le bénéfice de la programmation côt�
   </tbody>
 </table>
 
-Il n'y a pas de code "réel" dans la suite de cette présentation parce que nous n'avons pas encore choisi un framework web à utiliser pour écrire notre code ! Ce tutoriel est quand même trés pertinent car les comportements décrits doivent être implémentés par votre code côté serveur, sans qu'il ait à se soucier (le serveur...)   de quel langage de programmation ou framework vous vous servez.
+Il n'y a pas de code "réel" dans la suite de cette présentation parce que nous n'avons pas encore choisi un framework web à utiliser pour écrire notre code ! Ce tutoriel est quand même trés pertinent car les comportements décrits doivent être implémentés par votre code côté serveur, sans qu'il ait à se soucier (le serveur...) de quel langage de programmation ou framework vous vous servez.
 
 ## Serveurs Web et HTTP (un avant-goût)
 
@@ -48,7 +48,7 @@ Cette requête inclut&nbsp;:
 
 - Des informations complémentaires peuvent être encodées avec la requête (des données de formulaire HTML par exemple). Ces informations peuvent être encodées comme :
 
-  - Paramètres URL : les requêtes  `GET` encodent les données dans l'URL envoyée au serveur en ajoutant des paires nom/valeur en fin de celle-ci. Exemple : `http://mysite.com?name=Fred&age=11`.    Il y a toujours un point d'interrogation (`?`) séparant le début de l'URL des paramètres passés. Ainsi qu'un signe égal (`=`) séparant le nom de la valeur associée et une esperluette (`&`) séparant chaque paire. Les paramètres URL ne sont pas sécurisés car ils peuvent être changés et soumis une deuxième fois par l'utilisateur. Pour cette raison, les requêtes URL paramètres/`GET` requests ne sont pas utilisées pour des requêtes mettant à jour des données sur un serveur.
+  - Paramètres URL : les requêtes  `GET` encodent les données dans l'URL envoyée au serveur en ajoutant des paires nom/valeur en fin de celle-ci. Exemple : `http://mysite.com?name=Fred&age=11`. Il y a toujours un point d'interrogation (`?`) séparant le début de l'URL des paramètres passés. Ainsi qu'un signe égal (`=`) séparant le nom de la valeur associée et une esperluette (`&`) séparant chaque paire. Les paramètres URL ne sont pas sécurisés car ils peuvent être changés et soumis une deuxième fois par l'utilisateur. Pour cette raison, les requêtes URL paramètres/`GET` requests ne sont pas utilisées pour des requêtes mettant à jour des données sur un serveur.
 
 - `POST` data.  Les requêtes `POST` ajoutent de nouvelles ressources dont les données sont encodées dans le corps de la requête.
 - Cookies côté Client.  Contient les données de session du client, incluant les clés dont peut se servir le serveur pour déterminer le statut de login et les accés/permissions aux ressources.

@@ -28,7 +28,7 @@ html,body,svg { height:100% }
   <!-- Remplir avec un dégradé -->
   <defs>
     <radialGradient id="myGradient">
-      <stop offset="0%"   stop-color="pink" />
+      <stop offset="0%"   stop-color="pink" />
       <stop offset="100%" stop-color="black" />
     </radialGradient>
   </defs>

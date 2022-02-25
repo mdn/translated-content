@@ -193,8 +193,8 @@ Dans l'exemple suivant on utilise la tabulation pour rendre lisible le résultat
 JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // renverra
 // '{
-//     "uno": 1,
-//     "dos": 2
+//   "uno": 1,
+//   "dos": 2
 // }'
 ```
 

@@ -52,7 +52,7 @@ Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés su
 
 ## Exemples
 
-La plupart des méthodes de l'API cookies impliquent qu'un objet `Cookie`    soit utilisé en tant que paramètre d'entrée ou en tant que partie de la valeur retournée. Par exemple, un appel à {{WebExtAPIRef("cookies.getAll()")}} retourne un tableau d'objets `Cookie`.
+La plupart des méthodes de l'API cookies impliquent qu'un objet `Cookie` soit utilisé en tant que paramètre d'entrée ou en tant que partie de la valeur retournée. Par exemple, un appel à {{WebExtAPIRef("cookies.getAll()")}} retourne un tableau d'objets `Cookie`.
 
 Dans l'exemple ci-dessous, nous avons demandé tous les cookies, puis enregistré quelque-unes des valeurs de chacun des objets `Cookie` :
 

@@ -268,7 +268,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 |*|
 |*|  Syntax:
 |*|
-|*|   AJAXSubmit(HTMLFormElement);
+|*| AJAXSubmit(HTMLFormElement);
 \*/
 
 var AJAXSubmit = (function () {
