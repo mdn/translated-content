@@ -440,7 +440,7 @@ Chargez et actualisez pour voir la différence, ou bien vérifiez avec l'exemple
 
 ![](offset-grid-finished.png)
 
-> **Note :** Comme exercice supplémentaire, pouvez‑vous implémenter une classe `offset-by-two` ?
+> **Note :** Comme exercice supplémentaire, pouvez‑vous implémenter une classe `offset-by-two`&nbsp;?
 
 ### Limitations des trames de boîtes flottantes
 
@@ -450,7 +450,7 @@ N'oubliez pas non plus que si le contenu des éléments s'élargit au-delà des 
 
 La plus grande limite de ce système est essentiellement son caractère unidimensionnel. Il s'agit de colonnes et de répartition d'éléments transversaux, mais pas de lignes. Il est très difficile avec ces anciennes méthodes de mise en page de contrôler la hauteur des éléments sans fixer explicitement une hauteur, et c'est aussi une approche très rigide — cela ne fonctionne que si vous pouvez garantir que le contenu est d'une hauteur donnée..
 
-## Trames Flexbox ?
+## Trames Flexbox&nbsp;?
 
 Si vous avez lu le précédent article à propors de Flexbox, vous pourriez penser que Flexbox est la solution idéale pour créer un système de trames. Il existe actuellement nombre de systèmes de grille fondés sur Flexbox et Flexbox peut résoudre beaucoup de problèmes mis en évidence lors de la création de notre trame ci-dessus.
 

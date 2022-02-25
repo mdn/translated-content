@@ -107,7 +107,7 @@ Considérons le formulaire suivant :
 ```html
 <form action="http://foo.com" method="get">
   <div>
-    <label for="say">Quelle salutation voulez-vous adresser ?</label>
+    <label for="say">Quelle salutation voulez-vous adresser&nbsp;?</label>
     <input name="say" id="say" value="Salut">
   </div>
   <div>

@@ -24,7 +24,7 @@ Pour commencer, posez-vous ces questions :
 
 1.  **De quoi va parler mon site web ?** Aimez-vous les chiens, New York ou Pacman ?
 2.  **Quelles informations vais-je présenter sur le sujet ?** Écrivez un titre et quelques paragraphes, et trouvez une image que vous aimeriez mettre sur votre page.
-3.  **Quelle sera l'apparence de mon site web,** en simple termes de survol ? Quelle sera la couleur de l'arrière plan ? Quelle sorte de police de caractères est appropriée : formelle, dessin animé, grasse et lourde, subtile ?
+3.  **Quelle sera l'apparence de mon site web,** en simple termes de survol&nbsp;? Quelle sera la couleur de l'arrière plan ? Quelle sorte de police de caractères est appropriée : formelle, dessin animé, grasse et lourde, subtile ?
 
 > **Note :** Les projets complexes nécessitent des lignes directrices (guidelines) détaillées précisant tout : couleurs, polices, espacement entre éléments de la page, style d'écriture adapté, etc. Ceci est parfois appelé un guide de conception ou une charte graphique, vous pouvez en voir un exemple dans [Firefox OS Guidelines](https://www.mozilla.org/fr/styleguide/products/firefox-os/).
 
@@ -86,7 +86,7 @@ Pour choisir une police :
 ## Dans ce module
 
 - [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web ?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
+- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
 - [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
 - [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
 - [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)

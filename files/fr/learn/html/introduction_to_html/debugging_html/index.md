@@ -61,7 +61,7 @@ HTML n'est pas aussi compliqué à comprendre que le Rust. HTML n'est pas compil
 
 ### Code permissif
 
-Que voulons‑nous dire par permissif ? Et bien, quand vous faites une erreur dans du code, vous rencontrerez deux types principaux d'erreurs&nbsp;:
+Que voulons‑nous dire par permissif&nbsp;? Et bien, quand vous faites une erreur dans du code, vous rencontrerez deux types principaux d'erreurs&nbsp;:
 
 - **Erreurs de syntaxe**&nbsp;: ce sont des «&nbsp;fautes d'orthographe&nbsp;» dans le code qui font que le programme ne fonctionne vraiment pas, comme l'erreur du Rust ci‑dessus. Elles sont généralement faciles à corriger pour autant que vous soyez à l'aise avec la syntaxe du langage et que vous sachiez ce que signifie le message d'erreur.
 - **Erreurs de logique**&nbsp;: ce sont des erreurs dans lesquelles la syntaxe est réellement correcte, mais pour lesquelles le code ne correspond pas à vos souhaits, ce qui veut dire que le programme ne s'exécute pas correctement. Elles sont généralement plus difficiles à corriger que les erreurs de syntaxe, car il n'y a pas de message d'erreur pour vous guider à la source de l'erreur.
@@ -115,9 +115,9 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
 
       ```html
       <strong>caractères gras
-        <em>ou caractères gras et italiques ?</em>
+        <em>ou caractères gras et italiques&nbsp;?</em>
       </strong>
-      <em> qu'est ce ?</em>
+      <em> qu'est ce&nbsp;?</em>
       ```
 
     - Le lien avec les guillemets manquants a été illico détruit. Le dernier élément `li` ressemble à ceci&nbsp;:

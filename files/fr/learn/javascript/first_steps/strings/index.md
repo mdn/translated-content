@@ -190,7 +190,7 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
 2.  Il y a une toute petite différence entre les deux, et celle que vous retenez relève de la préférence personnelle. Prenez-en une, et tenez‑vous y toutefois&nbsp;: du code avec des mises entre guillemets diversifiées peut amener des confusions, en particulier si vous utilisez les deux sortes dans la même chaîne&nbsp;! Ce qui suit renvoie une erreur&nbsp;:
 
     ```js example-bad
-    let badQuotes = 'Quoi sur Terre ?";
+    let badQuotes = 'Quoi sur Terre&nbsp;?";
     ```
 
 3.  L'interpréteur pensera que la chaîne n'a pas été fermée, car le type de guillemet autre ne servant pas à délimiter les chaînes peut y être employé. Par exemple, ces deux assertions sont valables&nbsp;:
@@ -227,12 +227,12 @@ Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de 
 
     ```js
     let one = 'Hello, ';
-    let two = 'comment allez‑vous ?';
+    let two = 'comment allez‑vous&nbsp;?';
     let joined = one + two;
     joined;
     ```
 
-    Il en résulte que la variable nommée `joined` contient la valeur "Hello, comment allez‑vous ?".
+    Il en résulte que la variable nommée `joined` contient la valeur "Hello, comment allez‑vous&nbsp;?".
 
 2.  Dans le dernier exemple, nous avons juste attaché deux chaînes ensemble, mais vous pouvez en attacher autant que vous voulez, pour autant que vous mettiez un signe  `+`  entre chacune. Essayez ceci&nbsp;:
 
@@ -262,7 +262,7 @@ Examinons une concaténation dans une action — voici un exemple tiré en amont
 let button = document.querySelector('button');
 
 button.onclick = function() {
-  let name = prompt('Quel est votre nom ?');
+  let name = prompt('Quel est votre nom&nbsp;?');
   alert('Hello ' + name + ', sympa de vous voir&nbsp;!');
 }
 ```
@@ -273,7 +273,7 @@ Ici nous utilisons en ligne 4 la fonction {{domxref("Window.prompt()", "Window.p
 
 ### Nombres vs chaînes
 
-1.  Que se passe-t-il quand nous essayons d'additionner (ou concaténer) une chaîne et un nombre ? Essayons dans la console&nbsp;:
+1.  Que se passe-t-il quand nous essayons d'additionner (ou concaténer) une chaîne et un nombre&nbsp;? Essayons dans la console&nbsp;:
 
     ```js
     'Front ' + 242;

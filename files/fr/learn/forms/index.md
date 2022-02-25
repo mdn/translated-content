@@ -30,7 +30,7 @@ Le reste du module est toutefois un peu plus difficile — il est facile de plac
 - [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML "/fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML")
   - : Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.
 
-## Quels sont les widgets pour formulaire disponibles ?
+## Quels sont les widgets pour formulaire disponibles&nbsp;?
 
 - [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
   - : Nous examinons maintenant en détail les fonctionnalités des widgets pour formulaire, en regardant quelles sont les options disponibles pour collecter différentes types de données.
@@ -38,7 +38,7 @@ Le reste du module est toutefois un peu plus difficile — il est facile de plac
 ## Validation et soumission des données de formulaires
 
 - [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)
-  - : Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination ? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
+  - : Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination&nbsp;? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
 - [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
   - : Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont de format correct pour pouvoir les traiter correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser nos applications. La validation et la soumission des données des formulaires vous aidera à remplir ces objectifs — cet article indique ce qui est nécessaire de savoir.
 

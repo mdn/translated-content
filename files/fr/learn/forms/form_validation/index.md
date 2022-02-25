@@ -67,7 +67,7 @@ Dans le monde réel, les développeurs ont tendance à utiliser une combinaison 
 
 ## Utiliser la validation intégrée au formulaire
 
-Une des caractéristiques de [HTML5](/fr/docs/orphaned/Web/Guide/HTML/HTML5) est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des [attributs de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) sur les éléments de formulaire&nbsp;; ils vous permettent de spécifier des règles pour une entrée de formulaire comme&nbsp;: une valeur doit‑elle être remplie ? y a-t-il une longueur minimale et/ou maximale des données ? doit‑elle être un nombre, une adresse e-mail ou autre chose ? doit‑elle correspondre à un modèle ? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
+Une des caractéristiques de [HTML5](/fr/docs/orphaned/Web/Guide/HTML/HTML5) est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des [attributs de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) sur les éléments de formulaire&nbsp;; ils vous permettent de spécifier des règles pour une entrée de formulaire comme&nbsp;: une valeur doit‑elle être remplie&nbsp;? y a-t-il une longueur minimale et/ou maximale des données&nbsp;? doit‑elle être un nombre, une adresse e-mail ou autre chose&nbsp;? doit‑elle correspondre à un modèle&nbsp;? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
 Quand un élément est valide&nbsp;:
 
 - l'élément correspond à la pseudo‑classe CSS {{cssxref(":valid")}} &nbsp;; cela vous permet d'appliquer une composition de style distinctive.
@@ -86,7 +86,7 @@ Commençons par un exemple simple — une entrée ouvrant un choix, selon votr
 
 ```html hidden
 <form>
-  <label for="choose">Préférez‑vous la banane ou la cerise ?</label>
+  <label for="choose">Préférez‑vous la banane ou la cerise&nbsp;?</label>
   <input id="choose" name="i_like">
   <button>Soumettre</button>
 </form>
@@ -114,7 +114,7 @@ Ajoutez un attribut `required` à votre saisie, comme montré ci‑dessous&nbsp;
 
 ```html
 <form>
-  <label for="choose">Préférez-vous la banane ou la cerise ?</label>
+  <label for="choose">Préférez-vous la banane ou la cerise&nbsp;?</label>
   <input id="choose" name="i_like" required>
   <button>Soumettre</button>
 </form>
@@ -169,7 +169,7 @@ Voyons un exemple — mettons à jour notre HTML en y ajoutant un attribut `patt
 
 ```html
 <form>
-  <label for="choose">Préférez‑vous la banane ou la cerise ?</label>
+  <label for="choose">Préférez‑vous la banane ou la cerise&nbsp;?</label>
   <input id="choose" name="i_like" required pattern="banane|cerise">
   <button>Soumettre</button>
 </form>
@@ -208,11 +208,11 @@ Supprimez maintenant le contenu de l'élément `<body>` et remplacez-le par le s
 ```html
 <form>
   <div>
-    <label for="choose">Préférez‑vous la banane ou la cerise ?</label>
+    <label for="choose">Préférez‑vous la banane ou la cerise&nbsp;?</label>
     <input id="choose" name="i_like" required minlength="6" maxlength="6">
   </div>
   <div>
-    <label for="number">Combien en voulez‑vous ?</label>
+    <label for="number">Combien en voulez‑vous&nbsp;?</label>
     <input type="number" id="number" name="amount" value="1" min="1" max="10">
   </div>
   <div>
@@ -258,7 +258,7 @@ Voici un exemple complet montrant l'utilisation des fonctionnalités HTML intég
     </fieldset>
   </p>
   <p>
-    <label for="n1">Quel est votre âge ?</label>
+    <label for="n1">Quel est votre âge&nbsp;?</label>
     <!-- L'attribut pattern peut servir de recours pour les navigateurs dont le type number n'est
          pas implémenté pour input mais qui prennent en charge l'attribut pattern. Veuillez noter
          que les navigateurs prenant en charge l'attribut pattern ne signalent pas d'erreur quand
@@ -267,7 +267,7 @@ Voici un exemple complet montrant l'utilisation des fonctionnalités HTML intég
            pattern="\d+">
   </p>
   <p>
-    <label for="t1">Quel est votre fruit favori ?<abbr title="Ce champ est obligatoire">*</abbr></label>
+    <label for="t1">Quel est votre fruit favori&nbsp;?<abbr title="Ce champ est obligatoire">*</abbr></label>
     <input type="text" id="t1" name="fruit" list="l1" required
            pattern="[Bb]anane|[Cc]erise|[Cc]itron|[Ff]raise|[Oo]range|[Pp]omme">
     <datalist id="l1">
@@ -280,7 +280,7 @@ Voici un exemple complet montrant l'utilisation des fonctionnalités HTML intég
     </datalist>
   </p>
   <p>
-    <label for="t2">Quelle est votre adresse électronique ?</label>
+    <label for="t2">Quelle est votre adresse électronique&nbsp;?</label>
     <input type="email" id="t2" name="email">
   </p>
   <p>
@@ -551,9 +551,9 @@ Il arrive parfois, comme c'est le cas avec des navigateurs anciens ou de [widget
 
 Pour valider un formulaire, vous devez vous poser un certain nombre de questions:
 
-- Quel type de validation dois-je réaliser ?
+- Quel type de validation dois-je réaliser&nbsp;?
   - : Vous devez déterminer comment valider vos données&nbsp;: opération sur des chaînes de caractères, conversion de type, expressions rationnelles, etc. C'est comme vous voulez. Mais retenez simplement que les données de formulaire sont toujours du texte et sont toujours fournies à vos scripts sous forme de chaînes de caractères.
-- Que dois-je faire si le formulaire n'est pas valide ?
+- Que dois-je faire si le formulaire n'est pas valide&nbsp;?
   - : C'est clairement une affaire d'interface utilisateur. Vous devez décider comment le formulaire doit se comporter : enverra-t-il quand même les données ? Devriez-vous mettre en évidence les champs qui sont en erreur ? Devriez-vous afficher des messages d'erreur ?
 - Comment puis-je aider l'utilisateur à corriger ses données invalides?
 

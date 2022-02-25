@@ -41,11 +41,11 @@ Dans le dernier article de ce module, nous examinerons les tableaux — une faç
   </tbody>
 </table>
 
-## Qu'est‑ce qu'un tableau ?
+## Qu'est‑ce qu'un tableau&nbsp;?
 
 Les tableaux sont généralement décrits comme des "objets de type liste" ; un tableau est un objet contenant plusieurs valeurs. Les objets tableau peuvent être stockés dans des variables et traités de la même manière que tout autre type de valeur, la différence étant que nous pouvons accéder à chaque valeur du tableau individuellement, et faire des choses super utiles et efficaces avec la liste des valeurs, comme boucler et faire la même chose pour chaque valeur. Peut-être que nous avons une série d'articles et leurs prix stockés dans un tableau, et nous voulons les parcourir tous et les imprimer sur une facture, tout en totalisant tous les prix ensemble et en imprimant le prix total en bas.
 
-Sans tableaux, nous devrions stocker chaque valeur dans une variable séparée, puis appeler le code qui effectue l'affichage ou l'impression, puis ajouter séparément chaque élément. Ce serait plus long à écrire, moins efficace et cela comporterait plus de risques d'erreurs. Si nous avions 10 articles à ajouter à la facture, ce serait déjà assez mauvais, mais qu'en serait-il de 100 articles ou de 1000 ? Nous reviendrons sur cet exemple plus loin dans l'article.
+Sans tableaux, nous devrions stocker chaque valeur dans une variable séparée, puis appeler le code qui effectue l'affichage ou l'impression, puis ajouter séparément chaque élément. Ce serait plus long à écrire, moins efficace et cela comporterait plus de risques d'erreurs. Si nous avions 10 articles à ajouter à la facture, ce serait déjà assez mauvais, mais qu'en serait-il de 100 articles ou de 1000&nbsp;? Nous reviendrons sur cet exemple plus loin dans l'article.
 
 Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés ou utiliser la [console développeur de l'explorateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
 

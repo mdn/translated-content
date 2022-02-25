@@ -45,7 +45,7 @@ Dans tout langage de programmation, le code doit prendre des décisions et agir 
 
 ## Vous l'aurez à une condition !..
 
-Les êtres humains (et d'autres animaux) prennent tout le temps des décisions qui affectent leur vie, de la plus insignifiante («&nbsp;Est‑ce que je devrais prendre un biscuit ou deux ?&nbsp;») à la plus importante («&nbsp;Est‑ce que je dois rester dans mon pays natal et travailler à la ferme de mon père, ou déménager aux États-Unis et étudier l'astrophysique ?&nbsp;»)
+Les êtres humains (et d'autres animaux) prennent tout le temps des décisions qui affectent leur vie, de la plus insignifiante («&nbsp;Est‑ce que je devrais prendre un biscuit ou deux ?&nbsp;») à la plus importante («&nbsp;Est‑ce que je dois rester dans mon pays natal et travailler à la ferme de mon père, ou déménager aux États-Unis et étudier l'astrophysique&nbsp;?&nbsp;»)
 
 Les instructions conditionnelles nous permettent de représenter ce genre de prise de décision en JavaScript, du choix qui doit être fait (par ex. «&nbsp;un biscuit ou deux »), à la conséquence de ces choix (il se peut que la conséquence de «&nbsp;manger un biscuit&nbsp;» soit «&nbsp;avoir encore faim&nbsp;», et celle de «&nbsp;manger deux biscuits&nbsp;» soit «&nbsp;se sentir rassasié, mais se faire gronder par maman pour avoir mangé tous les biscuits&nbsp;».)
 
@@ -68,7 +68,7 @@ La syntaxe élémentaire de `if...else` ressemble à cela en {{glossary("pseud
 Ici nous avons:
 
 1.  Le mot‑clé `if` suivie de parenthèses.
-2.  Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur ? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
+2.  Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur&nbsp;? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
 3.  Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu&nbsp;; il sera exécuté seulement si la condition renvoie `true`.
 4.  Le mot‑clé `else`.
 5.  Une autre paire d'accolades, à l'intérieur de laquelle se trouve du code différent — tout code souhaité et il sera exécuté seulement si la condition ne renvoie pas `true`.
@@ -112,7 +112,7 @@ Avec un tel code, la variable `coursesFaites` renvoie toujours `false`, imagin
 
 ### else if
 
-Il n'y a qu'une alternative dans l'exemple précédent — mais qu'en est‑il si l'on souhaite plus de choix ?
+Il n'y a qu'une alternative dans l'exemple précédent — mais qu'en est‑il si l'on souhaite plus de choix&nbsp;?
 
 Il existe un moyen d'enchaîner des choix / résultats supplémentaires à `if...else` — en utilisant `else if` entre. Chaque choix supplémentaire nécessite un bloc additionnel à placer entre `if() { ... }` et `else { ... }` — regardez l'exemple suivant plus élaboré, qui pourrait faire partie d'une simple application de prévisions météo:
 

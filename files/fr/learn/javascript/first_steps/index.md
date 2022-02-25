@@ -17,7 +17,7 @@ translation_of: Learn/JavaScript/First_steps
 ---
 {{LearnSidebar}}
 
-Dans notre premier module consacré à JavaScript, nous allons tout d'abord répondre à des questions fondamentales comme « qu'est-ce que JavaScript ? », « à quoi ressemble-t-il ? » et « de quoi est-il capable ? ». Nous vous accompagnerons ensuite dans votre première expérience pratique consistant à écrire du code JavaScript. Après cela, nous examinerons en détail quelques briques de base, telles que les variables, les chaînes de caractères, les nombres, et les tableaux.
+Dans notre premier module consacré à JavaScript, nous allons tout d'abord répondre à des questions fondamentales comme « qu'est-ce que JavaScript&nbsp;? », « à quoi ressemble-t-il&nbsp;? » et « de quoi est-il capable&nbsp;? ». Nous vous accompagnerons ensuite dans votre première expérience pratique consistant à écrire du code JavaScript. Après cela, nous examinerons en détail quelques briques de base, telles que les variables, les chaînes de caractères, les nombres, et les tableaux.
 
 ## **Prérequis**
 
@@ -31,11 +31,11 @@ Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable e
 
 ## Guides
 
-- [Qu'est-ce que JavaScript ?](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [Qu'est-ce que JavaScript&nbsp;?](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
   - : Bienvenue dans le cours de JavaScript pour débutants proposé par MDN ! Dans ce premier article, nous aborderons JavaScript sous un angle général afin de comprendre ce qu'il est et à quoi il sert. Nous nous assurerons ici que vous cernez bien le but premier du langage.
 - [Notre premier code JavaScript](/fr/docs/Learn/JavaScript/First_steps/A_first_splash)
   - : Maintenant que vous en savez un peu plus sur la partie théorique de JavaScript et sur ce que vous pouvez réaliser avec, nous allons poursuivre avec un cours accéléré sur les fonctionnalités de base du langage par le biais d'un tutoriel axé sur la pratique. Vous développerez ici, pas à pas, un jeu simple consistant à faire deviner un nombre.
-- [Qu'est-ce qui n'a pas fonctionné ? Déboguer du code JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [Qu'est-ce qui n'a pas fonctionné&nbsp;? Déboguer du code JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)
   - : Quand vous développiez le jeu de devinette dans le cadre du tutoriel précédent, vous avez pu constater que notre programme ne fonctionnait pas. Pas de panique — cet article est là pour vous éviter de vous arracher les cheveux sur de tels problèmes en vous donnant quelques conseils simples sur la manière de trouver et résoudre les erreurs dans vos programmes JavaScript.
 - [Stocker les informations dont vous avez besoin — les variables](/fr/docs/Learn/JavaScript/First_steps/Variables)
   - : Après avoir lu les articles précédents, vous devriez maintenant mieux comprendre ce qu'est JavaScript, ce qu'il peut faire pour vous, comment l'utiliser de pair avec d'autres technologies du Web, et à quoi ressemblent ses principales fonctionnalités d'un point de vue global. Dans cet article, nous allons aborder les véritables fondements, en présentant l'une des pierres angulaires du langage : les variables.

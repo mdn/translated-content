@@ -377,7 +377,7 @@ Améliorons ce tableau.
 
 > **Note :** Vous pouvez trouver notre exemple achevé [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
-### Pourquoi les en-têtes sont-ils utiles ?
+### Pourquoi les en-têtes sont-ils utiles&nbsp;?
 
 Nous avons déjà partiellement répondu à cette question — il vous est plus facile de trouver les données que vous cherchez quand les en-têtes sont marqués clairement, et la conception globale du tableau paraît meilleure.
 

@@ -78,7 +78,7 @@ Le positionnement relatif est le premier type de positionnement que nous allons 
 position: relative;
 ```
 
-Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement dans le résultat. Alors, comment modifier la position de l'élément ? Vous avez besoin d'employer les propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} dont nous parlerons dans le prochain paragraphe.
+Si vous sauvegardez et actualisez à ce stade, vous ne verrez aucun changement dans le résultat. Alors, comment modifier la position de l'élément&nbsp;? Vous avez besoin d'employer les propriétés {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("left")}} et {{cssxref("right")}} dont nous parlerons dans le prochain paragraphe.
 
 ### Présentation de top, bottom, left et right
 

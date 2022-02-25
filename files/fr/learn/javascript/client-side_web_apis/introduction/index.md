@@ -43,7 +43,7 @@ Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API — leur fo
   </tbody>
 </table>
 
-## Qu'est-ce qu'une API ?
+## Qu'est-ce qu'une API&nbsp;?
 
 Les API (_Application Programming Interfaces_ soit « interface de programmation d'application ») sont des constructions disponibles dans les langages de programmation pour permettre aux développeurs de créer plus facilement des fonctionnalités complexes. Elles s'occupent des parties de code plus complexes, fournissant au développeur une syntaxe plus facile à utiliser à la place.
 
@@ -78,7 +78,7 @@ Ci-dessus, nous avons indiqué ce qu'est une API JavaScript côté client et sa 
 - Les _frameworks_ JavaScript — Au‑dessus des bibliothèques, les _frameworks_ JavaScript (par exemple Angular et Ember) sont plutôt des packages de HTML, CSS, JavaScript et autres technologies, que vous installez puis utilisez pour écrire une application web entière.
   La différence essentielle entre une bibliothèque et un _framework_ est «&nbsp;l'Inversion du Contrôle&nbsp;». Avec une bibliothèque, c'est le développeur qui appelle les méthodes de la bibliothèque — il exerce le contrôle. Avec un _framework_, le contrôle est inversé&nbsp;: c'est le _framework_ qui appelle le code du développeur.
 
-## Que peuvent faire les API ?
+## Que peuvent faire les API&nbsp;?
 
 Il y a un beaucoup d'API disponibles dans les navigateurs modernes. Elles permettent de faire un large éventail de choses. Vous pouvez vous en faire une petite idée en jetant un coup d'œil à la [page de l'index des API MDN](/fr/docs/Web/API).
 
@@ -125,7 +125,7 @@ Prenons comme exemple l'API Web Audio. Il s'agit d'une API assez complexe avec p
 - [`MediaElementAudioSourceNode`](/fr/docs/Web/API/MediaElementAudioSourceNode), qui représente un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) contenant du son qu'on veut jouer et manipuler dans le contexte.
 - [`AudioDestinationNode`](/fr/docs/Web/API/AudioDestinationNode), qui représente la destination de l'audio, c'est-à-dire le composant physique qui sera utilisé pour produire le son (il s'agit généralement des hauts-parleurs ou des écouteurs).
 
-Alors comment ces objets interagissent-ils ? Si vous regardez notre exemple [d'élément audio](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html) (regardez‑le [aussi en direct](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), vous verrez le code suivant :
+Alors comment ces objets interagissent-ils&nbsp;? Si vous regardez notre exemple [d'élément audio](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/web-audio/index.html) (regardez‑le [aussi en direct](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), vous verrez le code suivant :
 
 ```html
 <audio src="outfoxing.mp3"></audio>

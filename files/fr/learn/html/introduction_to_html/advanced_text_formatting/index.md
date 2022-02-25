@@ -286,7 +286,7 @@ Le contenu de l'attribut {{htmlattrxref("cite","blockquote")}} semble utile, mal
 
 Les citations sont affichées avec un police italique par défaut. Vous pouvez voir l'affichage de ce code dans l'exemple [quotations.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/quotations.html).
 
-### Apprentissage actif&nbsp;: Qui a dit quoi ?
+### Apprentissage actif&nbsp;: Qui a dit quoi&nbsp;?
 
 Il est temps de faire un autre apprentissage actif&nbsp;! Dans cet exemple, nous souhaiterions que&nbsp;:
 

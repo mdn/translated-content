@@ -276,7 +276,7 @@ L'élément {{HTMLElement("datalist")}} est un ajout très récent aux formulair
 Pour gérer cela, voici une petite astuce offrant une bonne solution de repli pour ces navigateurs :
 
 ```html
-<label for="myFruit">Quel est votre fruit préféré ? (avec repli)</label>
+<label for="myFruit">Quel est votre fruit préféré&nbsp;? (avec repli)</label>
 <input type="text" id="myFruit" name="fruit" list="fruitList">
 
 <datalist id="fruitList">
@@ -355,7 +355,7 @@ Plusieurs boutons radio peuvent être liés ensemble. S'ils partagent la même v
 
 ```html
 <fieldset>
-  <legend>Quel est votre mets préféré ?</legend>
+  <legend>Quel est votre mets préféré&nbsp;?</legend>
   <ul>
     <li>
       <label for="soup">Soupe</label>
@@ -465,7 +465,7 @@ Cet exemple créé un curseur dont les valeurs varient entre 0 et 500, et dont l
 Un problème avec les curseurs est qu'il n'offrent aucun moyen visue de savoir quelle est leur valeur courante. Il est nécessaire d'ajouter cela vous‑même à l'aide de JavaScript, mais c'est assez facile. Dans cet exemple nous ajoutons un élément {{htmlelement("span")}} dans lequel nous écrivons la valeur courante du curseur et la mettons à jour quand elle est modifiée.
 
 ```html
-<label for="beans">Combien de haricots pouvez‑vous manger ?</label>
+<label for="beans">Combien de haricots pouvez‑vous manger&nbsp;?</label>
 <input type="range" name="beans" id="beans" min="0" max="500" step="10">
 <span class="beancount"></span>
 ```

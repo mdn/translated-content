@@ -430,8 +430,8 @@ Lorsque nous exécutons des tests vrai/faux (par exemple, dans des conditions �
 
 | Operator | Name                                            | Example                    |
 | -------- | ----------------------------------------------- | -------------------------- |
-| `===`    | Égalité stricte (est-ce exactement identique ?) | `5 === 2 + 4`              |
-| `!==`    | Non égalité (est-ce différent ?)                | `'Chris' !== 'Ch' + 'ris'` |
+| `===`    | Égalité stricte (est-ce exactement identique&nbsp;?) | `5 === 2 + 4`              |
+| `!==`    | Non égalité (est-ce différent&nbsp;?)                | `'Chris' !== 'Ch' + 'ris'` |
 | `<`      | Inférieur à                                     | `10 < 6`                   |
 | `>`      | Supérieur à                                     | `10 > 20`                  |
 

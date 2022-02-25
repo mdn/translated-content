@@ -31,7 +31,7 @@ Tout au long de cet article, on vous demandera de saisir des lignes de code pour
 
 Toutefois, nous avons aussi incorporé une console JavaScript dans cette page pour vous permettre d'y écrire le code au cas où vous n'utiliseriez pas un navigateur avec une console JavaScript facilement accessible, ou si vous estimez qu'une console incorporée est plus confortable.
 
-## Qu'est ce qu'une variable ?
+## Qu'est ce qu'une variable&nbsp;?
 
 Une variable est un conteneur pour une valeur, tel un nombre à utiliser pour une addition, ou une chaîne devant faire partie d'une phrase. Mais un aspect spécial des variables est que les valeurs contenues peuvent changer. Voyons un exemple simple :
 
@@ -43,7 +43,7 @@ Une variable est un conteneur pour une valeur, tel un nombre à utiliser pour un
 const button = document.querySelector('button');
 
 button.onclick = function() {
-  let name = prompt('Quel est votre nom ?');
+  let name = prompt('Quel est votre nom&nbsp;?');
   alert('Salut ' + name + ', sympa de vous voir&nbsp;!');
 }
 ```
@@ -52,10 +52,10 @@ button.onclick = function() {
 
 Dans cet exemple, presser le bouton déclenche l'exécution de quelques lignes de code. La première ligne affiche à l'écran une boîte priant l'utilisateur de saisir son nom et stocke la valeur entrée dans une variable. La deuxième affiche un message de bienvenue avec la valeur de la variable.
 
-Pour comprendre le pratique de la chose, imaginons comment nous aurions du coder cet exemple sans utiliser de variable. Serait-ce comme cela ?
+Pour comprendre le pratique de la chose, imaginons comment nous aurions du coder cet exemple sans utiliser de variable. Serait-ce comme cela&nbsp;?
 
 ```plain example-bad
-let name = prompt('Quel est votre nom ?');
+let name = prompt('Quel est votre nom&nbsp;?');
 
 if (name === 'Adam') {
   alert('Salut Adam, sympa de vous voir&nbsp;!');

@@ -176,7 +176,7 @@ Le code de votre tableau fini devrait ressembler à quelque chose comme :
         <thead>
           <tr>
             <th>Achats</th>
-            <th>Où ?</th>
+            <th>Où&nbsp;?</th>
             <th>Date</th>
             <th>Avis</th>
             <th>Coût (€)</th>
@@ -368,7 +368,7 @@ Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut {{htmlat
 <thead>
   <tr>
     <th scope="col">Achats</th>
-    <th scope="col">Ou ?</th>
+    <th scope="col">Ou&nbsp;?</th>
     <th scope="col">Date</th>
     <th scope="col">Avis</th>
     <th scope="col">Coût (€)</th>
@@ -407,7 +407,7 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 <thead>
   <tr>
     <th id="purchase">Achats</th>
-    <th id="location">Où ?</th>
+    <th id="location">Où&nbsp;?</th>
     <th id="date">Date</th>
     <th id="evaluation">Avis</th>
     <th id="cost">Coût (€)</th>
