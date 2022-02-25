@@ -42,7 +42,7 @@ Résultat en direct:
 
 ### Attributs Globaux
 
-- [Core attributes](/fr/SVG/Attribute#Core) »
+- [Core attributes](/fr/SVG/Attribute#Core)&nbsp;»
 
 ### Attributs Specifiques
 

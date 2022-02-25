@@ -59,7 +59,7 @@ Modifiez-la pour indiquer la compatibilité avec Firefox 3&nbsp;:
 
 Et réinstallez ensuite votre extension.
 
-Notez que Firefox 3 n'a plus besoin d'un « .0 » supplémentaire dans son numéro de version, donc au lieu d'utiliser « 3.0.0.\* », il ne faut plus indiquer que « 3.0.\* ».
+Notez que Firefox 3 n'a plus besoin d'un «&nbsp;.0&nbsp;» supplémentaire dans son numéro de version, donc au lieu d'utiliser «&nbsp;3.0.0.\*&nbsp;», il ne faut plus indiquer que «&nbsp;3.0.\*&nbsp;».
 
 > **Note :** Notez qu'à ce point, il faut s'attendre à d'autres changements dans Firefox 3. Ceux-ci peuvent poser des problèmes à certaines extensions, il faut donc éviter de publier une extension avec la valeur `3.0.0.*` pour `maxVersion` avant que la RC de Firefox 3 soit disponible. Durant la pariode beta de Firefox 3, il convient d'utiliser `3.0b5` comme valeur de `maxVersion`.
 
@@ -138,7 +138,7 @@ Les interfaces suivantes ont été retirées de Gecko 1.9, sur lequel se base Fi
 
 ### Quatrième étape&nbsp;: vérifier les changements chrome appropriés
 
-Un changement mineur dans le chrome pourrait nécessiter des changements dans votre code. Un nouveau `vbox` a été ajouté, appelé « browser-bottombox », qui comprend la Barre de recherche et la Barre d'état en bas de la fenêtre de navigation. Bien que ceci n'affecte pas l'apparence de l'affichage, votre extension peut être affectée si elle utilise des overlays chrome relatifs à ces éléments.
+Un changement mineur dans le chrome pourrait nécessiter des changements dans votre code. Un nouveau `vbox` a été ajouté, appelé «&nbsp;browser-bottombox&nbsp;», qui comprend la Barre de recherche et la Barre d'état en bas de la fenêtre de navigation. Bien que ceci n'affecte pas l'apparence de l'affichage, votre extension peut être affectée si elle utilise des overlays chrome relatifs à ces éléments.
 
 Par exemple, si vous faisiez précédemment un overlay chrome avant la Barre d'état, comme ceci&nbsp;:
 
@@ -168,7 +168,7 @@ _Ajoutez ici les changements simples que vous avez dû faire à vos extensions p
 
 - `chrome://browser/base/utilityOverlay.js` n'est plus géré pour des raisons de sécurité. Si vous l'utilisiez auparavant, vous devriez passer à `chrome://browser/content/utilityOverlay.js`.
 - Les implémentations de [`nsIAboutModule`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) doivent à présent supporter la méthode `getURIFlags`. Consultez [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) pour la documentation. Ceci affecte les extensions qui fournissent de nouvelles URI `about:`. ([bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746 'FIXED: [FIX]Move "safe about" hardcoding out of security manager'))
-- L'élément [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) ne fait plus partie du « toolkit » ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). Cela signifie qu'il n'est plus disponible pour les applications XUL et extensions. Il continue cependant à être utilisé dans la fenêtre principale de Firefox (browser.xul).
+- L'élément [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) ne fait plus partie du «&nbsp;toolkit&nbsp;» ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). Cela signifie qu'il n'est plus disponible pour les applications XUL et extensions. Il continue cependant à être utilisé dans la fenêtre principale de Firefox (browser.xul).
 - Les changements dans les [proxys nsISupports](/fr/Proxys_nsISupports) et éventuellement aux interfaces liées aux threads doivent être documentés.
 - Si vous utilisez des instructions de traitement XML comme `<?xml-stylesheet ?>` dans vos fichiers XUL, tenez compte des changements effectués dans le [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654)&nbsp;:
 

@@ -148,7 +148,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 #### Nouveaux composants et fonctionnalités
 
 - [Bibliothèque FUEL](/fr/FUEL)
-  - : FUEL sert à améliorer la productivité des développeurs d'extensions en minimisant certaines des formalités XPCOM et en ajoutant certaines idées « modernes » de JavaScript.
+  - : FUEL sert à améliorer la productivité des développeurs d'extensions en minimisant certaines des formalités XPCOM et en ajoutant certaines idées «&nbsp;modernes&nbsp;» de JavaScript.
 
 <!---->
 
@@ -223,12 +223,12 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 - **Enregistrement de votre session.** Firefox 3 vous demande si vous désirez enregistrer vos onglets ouverts lorsque vous quittez Firefox.
 - **Comportement d'ouverture dans des onglets optimisé.** L'ouverture d'un dossier de marque-pages dans des onglets ajoute une série de nouveaux onglets au lieu de remplacer les onglets existants.
 - **Barres d'adresse et de recherche plus faciles à redimensionner.** Il est à présent aisé de redimensionner les barres d'adresse et de recherche grâce à une poignée de redimensionnement située entre les deux.
-- **Améliorations dans la sélection de texte.** Il est à présent possible de sélectionner plusieurs sections de texte à l'aide de la touche Ctrl (Command sur Macintosh). Un double clic avec déplacement sélectionne en mode « mot à mot ». Un triple clic sélectionne tout le paragraphe.
+- **Améliorations dans la sélection de texte.** Il est à présent possible de sélectionner plusieurs sections de texte à l'aide de la touche Ctrl (Command sur Macintosh). Un double clic avec déplacement sélectionne en mode «&nbsp;mot à mot&nbsp;». Un triple clic sélectionne tout le paragraphe.
 - **Barre de recherche.** La barre de recherche dans la page s'ouvre avec le contenu de la sélection courante.
 - **Gestion des plugins.** Les utilisateurs peuvent désactiver des plugins particuliers dans le gestionnaire de modules complémentaires.
 - **Intégration dans Windows Vista.** Les menus de Firefox s'affichent à présent avec le thème natif de Vista.
 - **Intégration dans Mac OS X.** Firefox utilise le correcteur orthographique de Mac OS X et gère [Growl](http://growl.info/) pour les notifications de téléchargements terminés et de mises à jour disponibles.
-- **Bouton « Star ».** Le nouveau bouton en forme d'étoile dans la Barre d'adresse permet d'ajouter rapidement un marque-page en un clic. Un second clic permet de ranger et de mettre des étiquettes sur le nouveau marque-page.
+- **Bouton «&nbsp;Star&nbsp;».** Le nouveau bouton en forme d'étoile dans la Barre d'adresse permet d'ajouter rapidement un marque-page en un clic. Un second clic permet de ranger et de mettre des étiquettes sur le nouveau marque-page.
 - **Étiquettes.** Vous pouvez associer des étiquettes à vos marque-pages pour les trier facilement par sujet.
 - **Barre d'adresse et autocomplétion.** Entrez le titre ou l'étiquette d'une page dans la Barre d'adresse pour retrouver rapidement le site que vous cherchez dans votre historique et vos marque-pages. Des indicateurs reprenant l'icône du site, le marque-page et les étiquettes associés vous aident à savoir d'où viennent les résultats.
 - **Dossier de marque-pages intelligent.** Le nouveau Classeur de Firefox permet d'accéder rapidement à vous pages récemment marquées et étiquetées, ainsi qu'aux pages que vous visitez fréquemment.

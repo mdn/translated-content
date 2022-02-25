@@ -32,7 +32,7 @@ Le nombre de bits à zéro en tête de la représentation binaire sur 32 bits du
 
 ## Description
 
-"`clz32`" est un raccourci pour CountLeadingZeroes32 (en français, « compter les zéros de tête »).
+"`clz32`" est un raccourci pour CountLeadingZeroes32 (en français, « compter les zéros de tête&nbsp;»).
 
 Si `x` n'est pas un nombre, il sera d'abord converti en nombre puis converti en un entier non signé sur 32 bits.
 

@@ -76,7 +76,7 @@ Dans un document HTML5, il faut utiliser `test:foo` pour accéder à l'attribut 
 
 Les espaces de noms sont uniquement pris en charge dans les documents XML, Les documents HTML5 doivent utiliser à la place `getAttribute()` .
 
-La méthode `getAttributeNS` diffère de {{domxref("element.getAttribute()", "getAttribute()")}} en ce qu'elle permet de spécifier les attributs faisant partie d'un espace de noms particulier, comme dans l'exemple précédent, où l'attribut fait partie d'un espace de noms fictif « specialspace » de mozilla.
+La méthode `getAttributeNS` diffère de {{domxref("element.getAttribute()", "getAttribute()")}} en ce qu'elle permet de spécifier les attributs faisant partie d'un espace de noms particulier, comme dans l'exemple précédent, où l'attribut fait partie d'un espace de noms fictif «&nbsp;specialspace&nbsp;» de mozilla.
 
 Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer une chaîne vide plutôt que null pour les attributs inexistants. Cependant, la plupart des navigateurs ont renvoyé null. À partir de DOM4, la spécification dit maintenant de retourner null. Cependant, certains navigateurs plus anciens renvoient une chaîne vide. Pour cette raison, vous devez utiliser {{domxref("element.hasAttributeNS ()","hasAttributeNS ()")}} pour vérifier l'existence d'un attribut avant d'appeler `getAttributeNS()` s'il est possible que l'attribut demandé n'existe pas sur l'élément spécifié.
 

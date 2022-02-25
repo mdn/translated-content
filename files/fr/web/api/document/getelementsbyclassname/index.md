@@ -23,15 +23,15 @@ Renvoie un objet de type tableau de tous les éléments enfants qui ont tous les
 
 ## Exemples
 
-Trouve tous les éléments ayant la classe « test »&nbsp;:
+Trouve tous les éléments ayant la classe «&nbsp;test&nbsp;»&nbsp;:
 
      document.getElementsByClassName('test')
 
-Trouve tous les éléments ayant les classes « rouge » et « test »&nbsp;:
+Trouve tous les éléments ayant les classes «&nbsp;rouge&nbsp;» et «&nbsp;test&nbsp;»&nbsp;:
 
      document.getElementsByClassName('rouge test')
 
-Trouve tous les éléments qui ont la classe « test » à l'intérieur d'un élément ayant l'ID « main »&nbsp;:
+Trouve tous les éléments qui ont la classe «&nbsp;test&nbsp;» à l'intérieur d'un élément ayant l'ID «&nbsp;main&nbsp;»&nbsp;:
 
      document.getElementById('main').getElementsByClassName('test')
 

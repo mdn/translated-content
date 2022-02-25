@@ -32,7 +32,7 @@ obtenir = objet.propriété;
 objet.propriété = définir;
 ```
 
-`propriété` doit être un identifiant JavaScript valide, c'est-à-dire une séquence de caractères alphanumériques, soulignés (« `_` ») et signes dollar (« `$` »), qui ne peut commencer par un nombre. Par exemple, `objet.$1` est valide, mais `objet.1` ne l'est pas.
+`propriété` doit être un identifiant JavaScript valide, c'est-à-dire une séquence de caractères alphanumériques, soulignés («&nbsp;`_`&nbsp;») et signes dollar («&nbsp;`$`&nbsp;»), qui ne peut commencer par un nombre. Par exemple, `objet.$1` est valide, mais `objet.1` ne l'est pas.
 
 ```js
 document.createElement('pre');
@@ -83,7 +83,7 @@ objet['1'] = 'valeur';
 console.log(objet[1]);
 ```
 
-Ceci affichera « valeur », étant donné que le nombre `1` sera converti en une chaîne `"1"`.
+Ceci affichera «&nbsp;valeur&nbsp;», étant donné que le nombre `1` sera converti en une chaîne `"1"`.
 
 ```js
 var toto = {propriété_unique&nbsp;: 1}, truc = {propriété_unique&nbsp;: 2}, objet = {};
@@ -91,11 +91,11 @@ objet[toto] = 'valeur';
 console.log(objet[truc]);
 ```
 
-Ce code affichera également « valeur », étant donné que `toto` et `truc` seront convertis en la même chaîne de caractères. Dans le cas du moteur JavaScript [SpiderMonkey](fr/SpiderMonkey), cette chaîne serait `"['object Object']"`.
+Ce code affichera également «&nbsp;valeur&nbsp;», étant donné que `toto` et `truc` seront convertis en la même chaîne de caractères. Dans le cas du moteur JavaScript [SpiderMonkey](fr/SpiderMonkey), cette chaîne serait `"['object Object']"`.
 
 ### Liaison de méthodes
 
-Une méthode n'est pas liée à l'objet dont elle est une méthode. En particulier, `this` n'est pas défini dans une méthode, c'est-à-dire que `this` ne fait pas nécessairement référence à un objet contenant la méthode. En réalité, `this` est « passé » par l'appel de la fonction.
+Une méthode n'est pas liée à l'objet dont elle est une méthode. En particulier, `this` n'est pas défini dans une méthode, c'est-à-dire que `this` ne fait pas nécessairement référence à un objet contenant la méthode. En réalité, `this` est «&nbsp;passé&nbsp;» par l'appel de la fonction.
 
 Pour plus d'informations, consultez la page sur [l'opérateur `this` et les liaisons de méthodes](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this#Liaison_de_m.C3.A9thodes).
 

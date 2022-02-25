@@ -21,11 +21,11 @@ Pour des raisons de sécurité, certains navigateurs peuvent appliquer la politi
 
 ### Attributs globaux
 
-- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#Conditional_processing_attributes "en/SVG/Attribute#ConditionalProccessing") »
-- [Core attributes](/fr/docs/Web/SVG/Attribute#Core_attributes "en/SVG/Attribute#Core") »
-- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#Graphical_event_attributes "en/SVG/Attribute#GraphicalEvent") »
-- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation_attributes "en/SVG/Attribute#Presentation") »
-- [Xlink attributes](/fr/docs/Web/SVG/Attribute#XLink_attributes "en/SVG/Attribute#XLink") »
+- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#Conditional_processing_attributes "en/SVG/Attribute#ConditionalProccessing")&nbsp;»
+- [Core attributes](/fr/docs/Web/SVG/Attribute#Core_attributes "en/SVG/Attribute#Core")&nbsp;»
+- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#Graphical_event_attributes "en/SVG/Attribute#GraphicalEvent")&nbsp;»
+- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation_attributes "en/SVG/Attribute#Presentation")&nbsp;»
+- [Xlink attributes](/fr/docs/Web/SVG/Attribute#XLink_attributes "en/SVG/Attribute#XLink")&nbsp;»
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

@@ -104,7 +104,7 @@ Voici le résultat en direct :
 
 Construire manuellement une requête HTTP peut devenir fastidieux. Heureusement, une [spécification XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest/) récente fournit un moyen pratique et plus simple pour traiter les demandes de données de formulaire avec l'objet {{domxref("XMLHttpRequest/FormData", "FormData")}}.
 
-L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} peut s'utiliser pour construire des données de formulaire pour la transmission ou pour obtenir les données des élément de formulaire de façon à gérer leur mode d'envoi. Notez que les objets {{domxref("XMLHttpRequest/FormData", "FormData")}} sont en écriture seule (« write only »), ce qui signifie que vous pouvez les modifier, mais pas récupérer leur contenu.
+L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} peut s'utiliser pour construire des données de formulaire pour la transmission ou pour obtenir les données des élément de formulaire de façon à gérer leur mode d'envoi. Notez que les objets {{domxref("XMLHttpRequest/FormData", "FormData")}} sont en écriture seule («&nbsp;write only »), ce qui signifie que vous pouvez les modifier, mais pas récupérer leur contenu.
 
 L'utilisation de cet objet est détaillée dans [Utiliser les objets FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData), mais voici deux exemples :
 

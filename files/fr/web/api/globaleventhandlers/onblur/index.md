@@ -16,7 +16,7 @@ La propriété **onblur** renvoie le gestionnaire de l'évènement `blur` (perte
 
     element.onblur = nomFonctionUtilisateur;
 
-- `nomFonctionUtilisateur` est le nom de la fonction utilisateur préalablement définie, sans les parenthèses ni aucun argument. Il est également possible de déclarer une « fonction anonyme », comme&nbsp;:
+- `nomFonctionUtilisateur` est le nom de la fonction utilisateur préalablement définie, sans les parenthèses ni aucun argument. Il est également possible de déclarer une «&nbsp;fonction anonyme&nbsp;», comme&nbsp;:
 
 <!---->
 
@@ -26,7 +26,7 @@ La propriété **onblur** renvoie le gestionnaire de l'évènement `blur` (perte
 
 ### Exemple
 
-Lorsqu'une zone de saisie n'est plus active suite à une perte du « focus », une boîte de message (alert) est affichée.
+Lorsqu'une zone de saisie n'est plus active suite à une perte du «&nbsp;focus&nbsp;», une boîte de message (alert) est affichée.
 
 ```html
 <form>

@@ -44,7 +44,7 @@ Ce changement améliore tant la compatibilité que la sécurité.
 
 Les valeurs de taille de police (`font-size`) utilisant les unités em et ex étaient auparavant affectées selon la taille de police minimale spécifiée par l'utilisateur&nbsp;: si une police était affichée plus grande à cause de la taille de police minimale, les unités em et ex pour les tailles de police étaient adaptées en fonction. Ce comportement était incohérent avec la manière dont les tailles de police en pourcentage fonctionnaient.
 
-Les valeurs de `font-size` sont à présent basées sur une « taille de police désirée » qui n'est pas affectée par la taille minimale de police de l'utilisateur. Autrement dit, les tailles de police sont toujours calculées selon l'intention du concepteur du site et ne sont ajustées selon la taille de police minimale qu'après coup.
+Les valeurs de `font-size` sont à présent basées sur une «&nbsp;taille de police désirée&nbsp;» qui n'est pas affectée par la taille minimale de police de l'utilisateur. Autrement dit, les tailles de police sont toujours calculées selon l'intention du concepteur du site et ne sont ajustées selon la taille de police minimale qu'après coup.
 
 Consultez le {{ Bug(322943) }} pour une démonstration (doit être visionnée avec une taille de police minimale supérieure ou égale à 6 pour voir la différence&nbsp;: les deux cascades de boîtes se comportent différemment dans Firefox 2, car la taille de police basée sur des unités em est décalée par la taille de police minimale).
 

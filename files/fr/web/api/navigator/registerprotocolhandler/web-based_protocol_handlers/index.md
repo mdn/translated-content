@@ -24,7 +24,7 @@ La définition d'une application web comme gestionnaire de protocole n'est pas u
 Où les paramètres sont&nbsp;:
 
 - Le protocole.
-- Le modèle d'URL, utilisé comme gestionnaire. Le « %s » sera remplacé par le `href` du lien et une requête GET sera exécutée sur l'URL résultante.
+- Le modèle d'URL, utilisé comme gestionnaire. Le «&nbsp;%s&nbsp;» sera remplacé par le `href` du lien et une requête GET sera exécutée sur l'URL résultante.
 - Le nom du gestionnaire de protocole tel que présenté à l'utilisateur.
 
 Lorsqu'un navigateur exécutera ce code, il devra demander à l'utilisateur la permission d'autoriser l'application web à s'enregistrer comme gestionnaire du protocole. Firefox affichera une question dans une barre de notification&nbsp;:

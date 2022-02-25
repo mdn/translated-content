@@ -43,7 +43,7 @@ _Exemple 1. Formulaire basique avec labels_
 
 L’élément HTML {{ HTMLElement("label") }} est approprié pour les éléments liés aux formulaires, mais de nombreux contrôles de formulaires sont implémentés sous forme de composants JavaScript dynamiques et utilisent les éléments {{ HTMLElement("div") }} ou {{ HTMLElement("span") }}. [WAI-ARIA](http://www.w3.org/WAI/intro/aria.php), la spécification **Accessible Rich Internet Applications** (Applications Internet Riches Accessibles) de la [Web Accessibility Initiative](http://www.w3.org/WAI/) (Initiative pour l’Accessibilité du web) du W3C, fournit l’attribut [`aria-labelledby`](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby) dans ces cas de figure.
 
-L’exemple ci-dessous montre un groupe de boutons radio implémenté à l’aide d’une liste non-ordonnée. Remarquez, à la ligne 3, que l’attribut `aria-labelledby` de l’élément {{ HTMLElement("ul") }} est défini comme « rg1_label », et est identique à l’`id` de l’élément {{ HTMLElement("h3") }} de la ligne 1, qui sert de label au groupe de boutons radio.
+L’exemple ci-dessous montre un groupe de boutons radio implémenté à l’aide d’une liste non-ordonnée. Remarquez, à la ligne 3, que l’attribut `aria-labelledby` de l’élément {{ HTMLElement("ul") }} est défini comme «&nbsp;rg1_label&nbsp;», et est identique à l’`id` de l’élément {{ HTMLElement("h3") }} de la ligne 1, qui sert de label au groupe de boutons radio.
 
 _Exemple 2. Un groupe de boutons radio implémenté à l’aide d’une liste non-ordonnée_
 
@@ -86,7 +86,7 @@ Les développeur Web utilisent souvant des éléments de présentation visuels p
 - La propriété [`aria-required`](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-required) peut être appliquée à un élément de formulaire pour indiquer à une technologie d’assistance qu’il est obligatoire pour compléter le formulaire.
 - L’état [`aria-invalid`](http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-invalid) peut être programmatiquement appliquée pour indiquer à une technologie d’assistance quel champ contient des données incorrectes, afin que l’utilisateur sache qu’il a saisi des données invalides.
 
-L’exemple ci-dessous montre un formulaire simple avec 3 champs. Aux lignes 4 et 12, les attributs `aria-required` sont définis à `true` (en plus de l’astérisque en début de champ) indiquant que le nom et l’adresse électronique sont obligatoires. La seconde partie de l’exemple est un snippet JavaScript qui valide le format de l’adresse électronique et qui définit l’attribut `aria-invalid` du champ « Courriel » (ligne 12 du code HTML) selon le résultat (en plus de la modification de la présentation de l’élément).
+L’exemple ci-dessous montre un formulaire simple avec 3 champs. Aux lignes 4 et 12, les attributs `aria-required` sont définis à `true` (en plus de l’astérisque en début de champ) indiquant que le nom et l’adresse électronique sont obligatoires. La seconde partie de l’exemple est un snippet JavaScript qui valide le format de l’adresse électronique et qui définit l’attribut `aria-invalid` du champ «&nbsp;Courriel&nbsp;» (ligne 12 du code HTML) selon le résultat (en plus de la modification de la présentation de l’élément).
 
 _Exemple 4a. Un formulaire avec des champs obligatoires._
 

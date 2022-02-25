@@ -82,7 +82,7 @@ En vérité sur le Web, les développeurs font d'étranges choses avec HTML. Cer
 
 Parfois vous ne pourrez pas vous débarrasser du mauvais balisage — vos pages seront générées par quelque framework côté serveur dont vous n'aurez pas le contrôle total, ou vous aurez des contenus tiers (comme des bannières publicitaires) que nous ne contrôlerez pas.
 
-L'objectif cependant n'est pas « tout ou rien » — toute amélioration que vous pouvez faire aidera la cause de l'accessibilité.
+L'objectif cependant n'est pas « tout ou rien&nbsp;» — toute amélioration que vous pouvez faire aidera la cause de l'accessibilité.
 
 ### Contenus textuels
 
@@ -371,7 +371,7 @@ C’est beaucoup de tracas supplémentaire pour reconstruire la fonctionnalité.
 
 Les étiquettes de texte de contrôle UI sont très utiles pour tous les utilisateurs, mais leur mise au point est particulièrement importante pour les utilisateurs handicapés.
 
-Vous devez vous assurer que les libellés des boutons et des liens sont compréhensibles et distinctifs. Ne vous contentez pas d'utiliser « Cliquez ici » pour vos étiquettes, car les utilisateurs et utilisatrices de lecteur d'écran créent parfois une liste de boutons et de contrôles de formulaire. La capture d'écran suivante montre nos commandes répertoriées par VoiceOver sur Mac.
+Vous devez vous assurer que les libellés des boutons et des liens sont compréhensibles et distinctifs. Ne vous contentez pas d'utiliser « Cliquez ici&nbsp;» pour vos étiquettes, car les utilisateurs et utilisatrices de lecteur d'écran créent parfois une liste de boutons et de contrôles de formulaire. La capture d'écran suivante montre nos commandes répertoriées par VoiceOver sur Mac.
 
 ![](voiceover-formcontrols.png)
 
@@ -472,11 +472,11 @@ Nous avons un exemple simple écrit, [accessible-image.html](http://mdn.github.i
 
     <p id="dino-label"> Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées.</p>
 
-La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image ». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l’utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.
+La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image&nbsp;». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l’utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.
 
 > **Note :** c'est pourquoi vous ne devriez jamais inclure de contenu textuel dans une image. Les lecteurs d'écran ne peuvent tout simplement pas y accéder. Il y a aussi d'autres inconvénients - vous ne pouvez pas le sélectionner et le copier/coller. Juste ne le faite pas !
 
-Quand un lecteur d'écran rencontre la deuxième image, il lit l'intégralité de l'attribut alt – « Un Tyrannosaure Rex rouge : Un dinosaure à deux pattes se tenant droit comme un humain, avec des armes de petit calibre et une grosse tête avec beaucoup de dents acérées. »
+Quand un lecteur d'écran rencontre la deuxième image, il lit l'intégralité de l'attribut alt – « Un Tyrannosaure Rex rouge : Un dinosaure à deux pattes se tenant droit comme un humain, avec des armes de petit calibre et une grosse tête avec beaucoup de dents acérées.&nbsp;»
 
 Cela met en évidence l’importance non seulement d’utiliser des noms de fichiers significatifs au cas où ce qui est appelé **alt text** n’est pas disponible, mais aussi de s’assurer que le texte alternatif est fourni dans les attributs `alt` chaque fois que possible. Notez que le contenu de l'attribut `alt` doit toujours fournir une représentation directe de l'image et de ce qu'elle transmet visuellement. Aucune connaissance personnelle ou description supplémentaire ne devrait être incluse ici, car elle n’est pas utile pour les personnes qui n’ont jamais rencontré l’image auparavant.
 
@@ -530,7 +530,7 @@ Malheureusement, la plupart des lecteurs d’écran ne semblent pas encore assoc
 </h3>
 ```
 
-Il peut arriver qu'une image soit incluse dans la conception d'une page, mais son objectif principal est la décoration visuelle. Vous remarquerez dans l'exemple de code ci-dessus que l'attribut  `alt `de l'image est vide – il s'agit pour que les lecteurs d'écran reconnaissent l'image, mais n'essayent pas de décrire l'image (au lieu de cela, ils diraient simplement « image », ou similaire) .
+Il peut arriver qu'une image soit incluse dans la conception d'une page, mais son objectif principal est la décoration visuelle. Vous remarquerez dans l'exemple de code ci-dessus que l'attribut  `alt `de l'image est vide – il s'agit pour que les lecteurs d'écran reconnaissent l'image, mais n'essayent pas de décrire l'image (au lieu de cela, ils diraient simplement « image&nbsp;», ou similaire) .
 
 La raison d'utiliser un vide `alt` au lieu de ne pas l'inclure est due au fait que de nombreux lecteurs d'écran annoncent l'URL complète de l'image si aucun `alt` n'est fourni. Dans l'exemple ci-dessus, l'image agit comme une décoration visuelle de l'en-tête auquel elle est associée. Dans ce cas, et dans les cas où une image est uniquement une décoration et n'a pas de valeur de contenu, vous devez mettre un vide `alt` sur vos images. Une autre alternative consiste à utiliser l'attribut aria role role = "presentation" – cela empêche également les lecteurs d'écrans de lire du texte alternatif.
 

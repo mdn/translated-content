@@ -375,7 +375,7 @@ Dans cette section, nous allons incorporer une autre image au site en utilisant 
 1.  Tout d'abord, trouvez une autre image à afficher sur le site. Assurez‑vous qu'elle soit de même taille que la première, ou le plus possible approchante.
 2.  Enregistrez cette image dans votre dossier `images`.
 3.  Renommez cette image «&nbsp;firefox2.png&nbsp;» (sans les guillemets).
-4.  Dans le fichier `main.js`, entrez ce code JavaScript (si votre code « Bonjour, monde » est toujours là, supprimez‑le) :
+4.  Dans le fichier `main.js`, entrez ce code JavaScript (si votre code « Bonjour, monde&nbsp;» est toujours là, supprimez‑le) :
 
     ```js
     let myImage = document.querySelector('img');

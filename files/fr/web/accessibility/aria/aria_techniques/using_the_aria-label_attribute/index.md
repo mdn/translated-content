@@ -37,7 +37,7 @@ Une légende sous forme de chaîne de caractère.
 
 ### Un bouton sans contenu textuel explicite
 
-Dans l’exemple ci-dessous, un bouton est stylé pour ressembler à un bouton « *Fermer* » classique, avec un `X` en son centre. Comme il n’existe aucune information indiquant que la fonction du bouton est de fermer la boîte de dialogue, l’attribut `aria-label` est utilisé pour fournir un label aux technologies d’assistance.
+Dans l’exemple ci-dessous, un bouton est stylé pour ressembler à un bouton «&nbsp;*Fermer*&nbsp;» classique, avec un `X` en son centre. Comme il n’existe aucune information indiquant que la fonction du bouton est de fermer la boîte de dialogue, l’attribut `aria-label` est utilisé pour fournir un label aux technologies d’assistance.
 
 ```html
  <button aria-label="Fermer" onclick="myDialog.close()">X</button>

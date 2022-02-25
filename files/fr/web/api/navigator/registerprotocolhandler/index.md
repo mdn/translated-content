@@ -18,12 +18,12 @@ Permet aux sites web de s'enregistrer en tant que gestionnaires possibles pour d
     window.navigator.registerProtocolHandler(protocole,uri,titre);
 
 - `protocole` est le protocole que le site désire gérer, sous la forme d'une chaîne.
-- `uri` est l'URI du gestionnaire sous la forme d'une chaîne. Il peut contenir « %s » pour indiquer où insérer l'URI échappée du document à gérer, comme montré dans l'exemple plus bas.
+- `uri` est l'URI du gestionnaire sous la forme d'une chaîne. Il peut contenir «&nbsp;%s&nbsp;» pour indiquer où insérer l'URI échappée du document à gérer, comme montré dans l'exemple plus bas.
 - `titre` est le titre du gestionnaire présenté à l'utilisateur, sous la forme d'une chaîne.
 
 ### Exemple
 
-Si votre application web est située à `http://www.example.com`, vous pouvez enregistrer un gestionnaire de protocole lui permettant de gérer « mailto » comme ceci&nbsp;:
+Si votre application web est située à `http://www.example.com`, vous pouvez enregistrer un gestionnaire de protocole lui permettant de gérer «&nbsp;mailto&nbsp;» comme ceci&nbsp;:
 
     navigator.registerProtocolHandler("mailto",
                                      "https://www.example.com/?to=%s",

@@ -22,7 +22,7 @@ Ce comportement peut être expliqué en améliorant la liste précédente :
 1.  L'arrière-plan et les bordures de l'élément racine ;
 2.  Les blocs enfants dans le flux normal, dans leur ordre d'apparence (en HTML) ;
 3.  Les blocs flottants ;
-4.  Les éléments « en-ligne » enfants dans le flux normal ;
+4.  Les éléments «&nbsp;en-ligne&nbsp;» enfants dans le flux normal ;
 5.  Les éléments enfants positionnés, dans leur ordre d'apparence (en HTML).
 
 > **Note :** Dans l'exemple qui suit, tous les blocs sont transparents, excepté celui qui n'est pas positionné, montrant ainsi l'ordre d'empilement. Si l'on réduit l'opacité du bloc non positionné (DIV #4), il se produit quelque chose d'étrange&nbsp;: l'arrière-plan et la bordure de cet élément se placent par dessus les blocs flottants et les blocs positionnés. Il s'agit d'une interprétation particulière des spécifications CSS : l'application de l'opacité crée un nouveau contexte d'empilement (voir l'article : [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) de Philip Walton ou son excellente traduction de Vincent De Oliveira, [Ce que personne ne vous a dit sur z-index](https://iamvdo.me/blog/comprendre-z-index-et-les-contextes-dempilement) et, bien-sûr, la [spécification](https://www.w3.org/TR/CSS2/zindex.html)).

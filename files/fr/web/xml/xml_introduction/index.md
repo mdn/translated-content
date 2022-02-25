@@ -12,9 +12,9 @@ XML, pour _e**X**tensible **M**arkup **L**anguage_ (langage de balisage extensib
 
 De nombreux autres langages sont basés sur XML, comme par exemple [XHTML](fr/XHTML), [MathML](fr/MathML), [SVG](fr/SVG), [XUL](fr/XUL), [XBL](fr/XBL), [RSS](fr/RSS) et [RDF](fr/RDF). Vous pouvez créer votre propre langage basé sur XML.
 
-### Du XML « correct » (valide et « bien formé »)
+### Du XML «&nbsp;correct&nbsp;» (valide et «&nbsp;bien formé&nbsp;»)
 
-Pour être correct, un document XML doit être « bien formé », se conformer à toutes les règles de syntaxe du XML, et « valide », se conformer aux règles d'un langage spécifique.
+Pour être correct, un document XML doit être «&nbsp;bien formé&nbsp;», se conformer à toutes les règles de syntaxe du XML, et «&nbsp;valide&nbsp;», se conformer aux règles d'un langage spécifique.
 
 La plupart des navigateurs, dont Mozilla, offrent un outil de validation qui informera souvent lors de la lecture ou de l'affichage de documents mal formés.
 
@@ -29,7 +29,7 @@ Voici un exemple de document mal formé&nbsp;: un des éléments possédant une 
       </message>
     </code>
 
-L'exemple qui suit est correct et « bien formé »&nbsp;:
+L'exemple qui suit est correct et «&nbsp;bien formé&nbsp;»&nbsp;:
 
     <code>
       <message>
@@ -43,7 +43,7 @@ Pour être valide, un document doit se conformer à des règles sémantiques qui
 
 ### Entités
 
-Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe « plus grand que » utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux&nbsp;:
+Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe «&nbsp;plus grand que&nbsp;» utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux&nbsp;:
 
 <table class="standard-table">
   <tbody>
@@ -55,12 +55,12 @@ Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) 
     <tr>
       <td><code>&#x26;lt;</code></td>
       <td><code>&#x3C;</code></td>
-      <td>Un signe « plus petit que ».</td>
+      <td>Un signe «&nbsp;plus petit que&nbsp;».</td>
     </tr>
     <tr>
       <td><code>&#x26;gt;</code></td>
       <td><code>></code></td>
-      <td>Un signe « plus grand que ».</td>
+      <td>Un signe «&nbsp;plus grand que&nbsp;».</td>
     </tr>
     <tr>
       <td><code>&#x26;amp;</code></td>

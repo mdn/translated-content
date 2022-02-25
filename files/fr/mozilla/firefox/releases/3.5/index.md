@@ -33,7 +33,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 - Mise à jour de {{ cssxref(":before") }} et {{ cssxref(":after") }} pour CSS 2.1
   - : Les pseudo-éléments `:before` et `:after` ont été mis à jour pour respecter complètement CSS 2.1, avec l'ajout des propriétés `position`, `float` et `list-style-*`, ainsi que de certaines valeurs de `display`.
 - Unité de longueur `ch`
-  - : L'unité `ch` peut à présent être utilisée à tout endroit où peut être indiquée une [unité de longueur](/fr/CSS/longueur#Unités). `1ch` est la largeur du caractère « 0 » (zéro).
+  - : L'unité `ch` peut à présent être utilisée à tout endroit où peut être indiquée une [unité de longueur](/fr/CSS/longueur#Unités). `1ch` est la largeur du caractère «&nbsp;0&nbsp;» (zéro).
 - {{ cssxref("opacity") }}
   - : L'extension à CSS `-moz-opacity` de Mozilla a été supprimée en faveur de la propriété standard `opacity`.
 - {{ cssxref("text-shadow") }}

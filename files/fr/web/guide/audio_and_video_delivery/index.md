@@ -205,7 +205,7 @@ Voir [l'API MediaRecorder](/fr/docs/Web/API/MediaRecorder_API) pour plus de dét
 
 ## Media Source Extensions (MSE)
 
-[Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) (MSE ou « extensions pour les sources de média ») est un brouillon de travail (<i lang="en">Working Draft</i> en anglais) du W3C qui prévoit d'étendre [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) pour permettre à JavaScript de générer des flux média pour la lecture. Permettre à JavaScript de générer des flux facilite différents cas d'usage comme la diffusion en direct adaptative et le décalage temporel des flux de diffusion en direct.
+[Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) (MSE ou «&nbsp;extensions pour les sources de média&nbsp;») est un brouillon de travail (<i lang="en">Working Draft</i> en anglais) du W3C qui prévoit d'étendre [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) pour permettre à JavaScript de générer des flux média pour la lecture. Permettre à JavaScript de générer des flux facilite différents cas d'usage comme la diffusion en direct adaptative et le décalage temporel des flux de diffusion en direct.
 
 ### Encrypted Media Extensions (EME)
 
@@ -308,7 +308,7 @@ mediaElement.played.end(0);      // Renvoie le nombre de secondes lues par le na
 
 ### Définir des intervalles de lecture
 
-Lors de la définition de l'URI du média d'un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video), il est possible d'ajouter des informations supplémentaires pour indiquer la portion du média qu'on souhaite lire. Pour cela, on ajoutera un dièse/croisillon (« # ») suivi de la description du fragment de média.
+Lors de la définition de l'URI du média d'un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video), il est possible d'ajouter des informations supplémentaires pour indiquer la portion du média qu'on souhaite lire. Pour cela, on ajoutera un dièse/croisillon («&nbsp;#&nbsp;») suivi de la description du fragment de média.
 
 Un intervalle temporel se définit avec la syntaxe suivante :
 
@@ -446,7 +446,7 @@ Un certain nombre de bibliothèques JavaScript audio et vidéo existent. Les plu
 
 - [Diffusion en direct de fichiers audio et vidéo sur le web](/fr/docs/Web/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video)
 
-  - : Les technologies de diffusion en direct sont souvent employées pour diffuser en direct des évènements sportifs, des concerts et plus généralement des programmes télévisuels ou radiophoniques qui se déroulent en direct. Le terme est souvent raccourci en parlant de « direct » ou en anglais de
+  - : Les technologies de diffusion en direct sont souvent employées pour diffuser en direct des évènements sportifs, des concerts et plus généralement des programmes télévisuels ou radiophoniques qui se déroulent en direct. Le terme est souvent raccourci en parlant de «&nbsp;direct&nbsp;» ou en anglais de
 
     <i lang="en">streaming</i>
 

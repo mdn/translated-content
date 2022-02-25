@@ -588,8 +588,8 @@ Une image-bouton se crée avec un élément {{HTMLElement("input")}} dont l'attr
 
 Si l'image-bouton est utilisée pour envoyer un formulaire, ce widget n'envoie pas sa valeur mais les coordonnées X et Y du clic sur l'image (les coordonnées sont relatives à l'image, ce qui veut dire que le coin supérieur gauche représente les coordonnées 0, 0). Les coordonnées sont envoyées sous la forme de deux paires de clé/valeur&nbsp;:
 
-- la valeur X est la valeur de l'attribut {{htmlattrxref("name","input")}} suivie de la chaîne « *.x* »
-- la valeur Y est la valeur de l'attribut {{htmlattrxref("name","input")}} suivie de la chaîne « *.y* ».
+- la valeur X est la valeur de l'attribut {{htmlattrxref("name","input")}} suivie de la chaîne «&nbsp;*.x*&nbsp;»
+- la valeur Y est la valeur de l'attribut {{htmlattrxref("name","input")}} suivie de la chaîne «&nbsp;*.y*&nbsp;».
 
 Lorsque vous cliquez sur l'image dans ce formulaire, vous êtes redirigés une URL du type suivant&nbsp;:
 

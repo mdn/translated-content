@@ -12,7 +12,7 @@ translation_of: Web/HTTP/CORS
 ---
 {{HTTPSidebar}}
 
-Le «  _Cross-origin resource sharing_ » (CORS) ou « partage des ressources entre origines multiples » (en français, moins usité) est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un agent utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un agent utilisateur réalise une requête HTTP **multi-origine (_cross-origin_)** lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
+Le «&nbsp; _Cross-origin resource sharing_ » (CORS) ou « partage des ressources entre origines multiples » (en français, moins usité) est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un agent utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un agent utilisateur réalise une requête HTTP **multi-origine (_cross-origin_)** lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
 
 Prenons un exemple de requête multi-origine : une page HTML est servie depuis `http://domaine-a.com` contient un élément [`<img> src`](/fr/docs/Web/HTML/Element/Img#attr-src) ciblant `http://domaine-b.com/image.jpg`. Aujourd'hui, de nombreuses pages web chargent leurs ressources (feuilles CSS, images, scripts) à partir de domaines séparés (par exemple des CDN (_Content Delivery Network_ en anglais ou « Réseau de diffusion de contenu »).
 

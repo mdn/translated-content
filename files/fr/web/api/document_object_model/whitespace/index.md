@@ -12,7 +12,7 @@ La présence d'espaces et de blancs dans le [DOM](fr/DOM) peut rendre la manipul
 - il y aura certains nœuds texte qui ne contiendront que du vide, et
 - certains nœuds texte commenceront ou se termineront par des blancs.
 
-En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image ci-dessous (où « \n » représente un retour à la ligne)&nbsp;:
+En d'autres termes, l'arbre DOM pour le document qui suit ressemblera à l'image ci-dessous (où «&nbsp;\n&nbsp;» représente un retour à la ligne)&nbsp;:
 
     <!-- My document -->
     <html>

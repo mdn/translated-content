@@ -33,11 +33,11 @@ para.dir = "rtl";
 
 ## Notes
 
-La direction d'écriture du texte sur un élément est celle dans laquelle le texte est disposé (pour permettre le support de systèmes multilingues). Les langues arabes et l'hébreu sont des exemples typiques de langues qui utiliseront la direction « rtl » (de droite à gauche).
+La direction d'écriture du texte sur un élément est celle dans laquelle le texte est disposé (pour permettre le support de systèmes multilingues). Les langues arabes et l'hébreu sont des exemples typiques de langues qui utiliseront la direction «&nbsp;rtl&nbsp;» (de droite à gauche).
 
-Une image peut avoir sont attribut `dir` positionné à « rtl », auquel cas les attributs `title` et `alt` seront formatés et définis comme allant de droite à gauche.
+Une image peut avoir sont attribut `dir` positionné à «&nbsp;rtl&nbsp;», auquel cas les attributs `title` et `alt` seront formatés et définis comme allant de droite à gauche.
 
-Lorsqu'un tableau a sa direction définie comme « rtl », l'ordre des colonnes va de droite à gauche.
+Lorsqu'un tableau a sa direction définie comme «&nbsp;rtl&nbsp;», l'ordre des colonnes va de droite à gauche.
 
 {{ gecko_callout_heading("7.0") }}
 

@@ -36,10 +36,10 @@ Les éléments définis grâce à `defs` ne sont jamais directement générés (
 
 ### Attributs globaux
 
-- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [Core attributes](/fr/docs/Web/SVG/Attribute#Core) »
-- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation) »
+- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#ConditionalProccessing)&nbsp;»
+- [Core attributes](/fr/docs/Web/SVG/Attribute#Core)&nbsp;»
+- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#GraphicalEvent)&nbsp;»
+- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation)&nbsp;»
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

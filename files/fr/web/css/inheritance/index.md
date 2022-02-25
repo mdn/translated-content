@@ -32,7 +32,7 @@ On obtient le résultat suivant :
 
 {{EmbedLiveSample("Propriétés_héritées")}}
 
-Les mots « texte mis en emphase » apparaîtront en vert, car l'élément `em` a hérité de la valeur de la propriété {{cssxref("color")}} de l'élément `p`. Il n'obtient pas la valeur initiale de la propriété (qui est la couleur utilisée par l'élément racine lorsque la page ne spécifie aucune couleur).
+Les mots «&nbsp;texte mis en emphase&nbsp;» apparaîtront en vert, car l'élément `em` a hérité de la valeur de la propriété {{cssxref("color")}} de l'élément `p`. Il n'obtient pas la valeur initiale de la propriété (qui est la couleur utilisée par l'élément racine lorsque la page ne spécifie aucune couleur).
 
 ## Propriétés non héritées
 
@@ -54,7 +54,7 @@ On obtient le résultat suivant :
 
 {{EmbedLiveSample("Propriétés_non_héritées")}}
 
-Les mots « texte mis en emphase » n'auront pas de bordure (car la valeur initiale de la propriété {{cssxref("border-style") }} est `none`).
+Les mots «&nbsp;texte mis en emphase&nbsp;» n'auront pas de bordure (car la valeur initiale de la propriété {{cssxref("border-style") }} est `none`).
 
 ## Notes
 

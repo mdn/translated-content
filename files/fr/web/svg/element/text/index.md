@@ -74,10 +74,10 @@ Le texte SVG peut également être stylisé avec du CSS contenant les propriét�
 
 ### Attributs globaux
 
-- [Conditional processing attributes](/fr/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Core attributes](/fr/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Graphical event attributes](/fr/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Presentation attributes](/fr/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Conditional processing attributes](/fr/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing")&nbsp;»
+- [Core attributes](/fr/SVG/Attribute#Core "en/SVG/Attribute#Core")&nbsp;»
+- [Graphical event attributes](/fr/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent")&nbsp;»
+- [Presentation attributes](/fr/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation")&nbsp;»
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

@@ -11,7 +11,7 @@ original_slug: Web/HTML/Attributs_universels/lang
 ---
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`lang`** permet de définir la langue utilisée pour l'élément. Pour les éléments non-éditables, c'est la langue dans laquelle ils sont écrits. Pour les éléments éditables, c'est la langue dans laquelle devrait écrire l'utilisateur. La valeur de cet attribut est une « balise de langue » dont le format est défini par le document de l'IETF : [_Les balises d'identification de langues (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt). Si cette balise est la chaîne vide, la langue sera définie comme _inconnue_. Si la balise de langue n'est pas valide selon BCP47, la langue sera définie comme _invalide_.
+L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`lang`** permet de définir la langue utilisée pour l'élément. Pour les éléments non-éditables, c'est la langue dans laquelle ils sont écrits. Pour les éléments éditables, c'est la langue dans laquelle devrait écrire l'utilisateur. La valeur de cet attribut est une «&nbsp;balise de langue&nbsp;» dont le format est défini par le document de l'IETF : [_Les balises d'identification de langues (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt). Si cette balise est la chaîne vide, la langue sera définie comme _inconnue_. Si la balise de langue n'est pas valide selon BCP47, la langue sera définie comme _invalide_.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
 

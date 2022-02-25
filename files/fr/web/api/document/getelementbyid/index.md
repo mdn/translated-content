@@ -56,7 +56,7 @@ function changeColor(newColor) {
 
 ## Notes d'utilisation
 
-L'écriture de la lettre capitale de « Id » dans le nom de cette méthode _doit_ être respectée pour que le code fonctionne ; `getElementByID()` n'est pas valide et ne fonctionnera _pas_, même si elle semble naturelle.
+L'écriture de la lettre capitale de «&nbsp;Id&nbsp;» dans le nom de cette méthode _doit_ être respectée pour que le code fonctionne ; `getElementByID()` n'est pas valide et ne fonctionnera _pas_, même si elle semble naturelle.
 
 Contrairement à d'autres méthodes de recherche d'éléments, comme  {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}, `getElementById` est uniquement disponible comme méthode de l'objet global `document` et _n'est pas_ disponible sur tous les objets du DOM. Parce que les valeurs d'ID doivent être uniques dans l'ensemble du document, il n'y pas besoin d'avoir une version "locale" de la fonction.
 
@@ -96,7 +96,7 @@ element.id = 'testqq';
 var el = document.getElementById('testqq'); // el vaudra null !
 ```
 
-**Les documents non-HTML.** Les implémentations du DOM doivent avoir une information qui précise quels attributs sont de type ID. Un attribut portant le nom « id » n'est pas de type ID tant qu'il n'a pas été explicitement défini ainsi (dans la DTD du document). L'attribut `id` est défini comme étant de type ID dans les langages courants comme [XHTML](/fr/XHTML) ou [XUL](/fr/XUL). Les implémentations ne sachant pas déterminer si les attributs sont de type ID ou non sont supposées renvoyer `null`.
+**Les documents non-HTML.** Les implémentations du DOM doivent avoir une information qui précise quels attributs sont de type ID. Un attribut portant le nom «&nbsp;id&nbsp;» n'est pas de type ID tant qu'il n'a pas été explicitement défini ainsi (dans la DTD du document). L'attribut `id` est défini comme étant de type ID dans les langages courants comme [XHTML](/fr/XHTML) ou [XUL](/fr/XUL). Les implémentations ne sachant pas déterminer si les attributs sont de type ID ou non sont supposées renvoyer `null`.
 
 ## Spécification
 

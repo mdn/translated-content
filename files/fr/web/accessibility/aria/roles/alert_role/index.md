@@ -79,7 +79,7 @@ document.getElementById("formInstruction").setAttribute("role", "alert");
 
 #### Exemple 4&nbsp;: Rendre visible un élément avec le rôle `alert`
 
-Si un élément possède déjà `role="alert"` et qu’il est initialement caché par des règles CSS, le rendre visible déclenchera l’alerte comme si elle venait juste d’être ajoutée à la page. Cela signifie qu’une alerte existante peut être « réutilisée » plusieurs fois.
+Si un élément possède déjà `role="alert"` et qu’il est initialement caché par des règles CSS, le rendre visible déclenchera l’alerte comme si elle venait juste d’être ajoutée à la page. Cela signifie qu’une alerte existante peut être «&nbsp;réutilisée&nbsp;» plusieurs fois.
 
 **Note&nbsp;:** dans la plupart des cas cette approche n’est pas recommandée, parce qu'il n'est pas idéal de masquer une erreur ou un texte d’alerte qui n’est pas applicable à ce moment précis. Les utilisateurs de technologies d’assistance plus anciennes pourraient toujours percevoir le texte d’alerte même si l’alerte ne s’applique pas à ce moment, faisant croire de façon erronée aux utilisateurs à l’existence d’un problème.
 

@@ -17,7 +17,7 @@ Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et réca
 
 ## Éléments en ligne
 
-Un élément est une partie d'une page web. Certains éléments sont agissent comme des conteneurs&nbsp;: ils sont grands et contiennent de plus petits éléments. Certains éléments sont plus petits et sont imbriqués dans des éléments plus grands. Par défaut les éléments « en ligne » apparaissent les uns à côté des autres sur une page web. Ils prennent autant de largeur que nécessaire sur une page et s'organisent horizontalement à la façon des mots dans une phrase ou des livres dans une bibliothèque. Tous les éléments en ligne peuvent être placés à l'intérieur de l'élément `<body>`.
+Un élément est une partie d'une page web. Certains éléments sont agissent comme des conteneurs&nbsp;: ils sont grands et contiennent de plus petits éléments. Certains éléments sont plus petits et sont imbriqués dans des éléments plus grands. Par défaut les éléments «&nbsp;en ligne&nbsp;» apparaissent les uns à côté des autres sur une page web. Ils prennent autant de largeur que nécessaire sur une page et s'organisent horizontalement à la façon des mots dans une phrase ou des livres dans une bibliothèque. Tous les éléments en ligne peuvent être placés à l'intérieur de l'élément `<body>`.
 
 <table class="standard-table">
   <thead>

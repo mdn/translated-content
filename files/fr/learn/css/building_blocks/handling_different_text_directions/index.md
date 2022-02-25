@@ -54,7 +54,7 @@ La propriété `writing-mode` définit d'abord la direction selon laquelle les �
 
 ## Modes d'écriture et disposition en bloc ou en ligne
 
-Nous avons déjà abordé [la disposition en ligne et en bloc](/fr/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) et le fait que certains éléments s'affichent en bloc et d'autres en ligne. Dans les descriptions précédentes, on voit que le caractère « de bloc » ou « en ligne » est lié au mode d'écriture du document et pas à l'écran, physique. Les blocs sont uniquement affichés de haut en bas sur la page si on utilise un mode d'écriture qui organise le texte horizontalement, comme celui utilisé pour le français.
+Nous avons déjà abordé [la disposition en ligne et en bloc](/fr/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) et le fait que certains éléments s'affichent en bloc et d'autres en ligne. Dans les descriptions précédentes, on voit que le caractère «&nbsp;de bloc&nbsp;» ou «&nbsp;en ligne&nbsp;» est lié au mode d'écriture du document et pas à l'écran, physique. Les blocs sont uniquement affichés de haut en bas sur la page si on utilise un mode d'écriture qui organise le texte horizontalement, comme celui utilisé pour le français.
 
 Prenons un exemple pour éclaircir tout ça. Ici, on a deux boîtes qui contiennent un titre et un paragraphe. La première boîte utilise `writing-mode: horizontal-tb`, c'est-à-dire un mode d'écriture où le texte est écrit horizontalement et où le contenu s'organise du haut de la page vers le bas. La deuxième boîte utilise `writing-mode: vertical-rl`, c'est-à-dire un mode d'écriture où le texte est écrit verticalement et où le contenu va de droite à gauche.
 

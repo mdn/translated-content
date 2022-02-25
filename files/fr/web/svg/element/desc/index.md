@@ -21,7 +21,7 @@ Quand l'élément contenant une description apparaît à l'utilisateur sous form
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core") »
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")&nbsp;»
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 

@@ -3,7 +3,7 @@ title: AJAX
 slug: Web/Guide/AJAX
 translation_of: Web/Guide/AJAX
 ---
-**AJAX (Asynchronous JavaScript + XML)** n'est pas une technologie en soi, mais un terme désignant une « nouvelle » approche utilisant un ensemble de technologies existantes, dont&nbsp;: [HTML](/fr/HTML "fr/HTML") ou [XHTML](/fr/XHTML "fr/XHTML"), [les feuilles de styles CSS](/fr/CSS "fr/CSS"), [JavaScript](/fr/JavaScript "fr/JavaScript"), [le modèle objet de document](/fr/DOM "fr/DOM") (DOM), [XML](/fr/XML "fr/XML"), [XSLT](/fr/XSLT "fr/XSLT"), et l'[objet XMLHttpRequest](/fr/XMLHttpRequest "fr/XMLHttpRequest"). Lorsque ces technologies sont combinées dans le modèle AJAX, les applications Web sont capables de réaliser des mises à jour rapides et incrémentielles de l'interface utilisateur sans devoir recharger la page entière du navigateur. Les applications fonctionnent plus rapidement et sont plus réactives aux actions de l'utilisateur.
+**AJAX (Asynchronous JavaScript + XML)** n'est pas une technologie en soi, mais un terme désignant une «&nbsp;nouvelle&nbsp;» approche utilisant un ensemble de technologies existantes, dont&nbsp;: [HTML](/fr/HTML "fr/HTML") ou [XHTML](/fr/XHTML "fr/XHTML"), [les feuilles de styles CSS](/fr/CSS "fr/CSS"), [JavaScript](/fr/JavaScript "fr/JavaScript"), [le modèle objet de document](/fr/DOM "fr/DOM") (DOM), [XML](/fr/XML "fr/XML"), [XSLT](/fr/XSLT "fr/XSLT"), et l'[objet XMLHttpRequest](/fr/XMLHttpRequest "fr/XMLHttpRequest"). Lorsque ces technologies sont combinées dans le modèle AJAX, les applications Web sont capables de réaliser des mises à jour rapides et incrémentielles de l'interface utilisateur sans devoir recharger la page entière du navigateur. Les applications fonctionnent plus rapidement et sont plus réactives aux actions de l'utilisateur.
 
 #### **Quand utiliser (ou non) AJAX ?** 
 
@@ -78,11 +78,11 @@ S'il n'y a pas de "bonne réponse", quelques éléments généraux sont à garde
           </dt>
           <dd>
             <small
-              >« Comme on le remarquera, il est assez facile de tirer parti de
+              >«&nbsp;Comme on le remarquera, il est assez facile de tirer parti de
               l'objet XMLHttpRequest pour faire se comporter une application Web
               un peu plus comme une application traditionnelle, tout en
               continuant à utiliser des outils comme des formulaires Web pour
-              collecter les entrées de l'utilisateur. »</small
+              collecter les entrées de l'utilisateur.&nbsp;»</small
             >
           </dd>
         </dl>

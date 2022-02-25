@@ -176,7 +176,7 @@ Voici un exemple. Vous pouvez consulter son [code source sur GitHub](https://git
 
 Dans cet exemple nous incluons les attributs `media` dans notre élément `<link>` pour qu'une image plus fine soit préchargée si la personne visitant le site dispose d'un écran plus petit, et pour qu'une image plus large soit chargée sur les écrans plus larges. Pour cela, nous utilisons {{domxref("Window.matchMedia")}} et {{domxref("MediaQueryList")}} (consultez la page [Tester les requêtes média en JavaScript](/fr/docs/Web/CSS/Media_Queries/Testing_media_queries) pour en savoir plus).
 
-Cela augmente les chances que la police sera disponible lors du rendu de la page, et diminue les risques de <i lang="en">FOUT</i> (pour <i lang="en">flash of unstyled text</i>, soit « flash de texte sans mis en forme » en français).
+Cela augmente les chances que la police sera disponible lors du rendu de la page, et diminue les risques de <i lang="en">FOUT</i> (pour <i lang="en">flash of unstyled text</i>, soit «&nbsp;flash de texte sans mis en forme&nbsp;» en français).
 
 Il sera dommage de limiter le préchargement aux images, voyez plus loin&nbsp;! On pourrait imaginer de précharger l'affichage d'un diagramme SVG si le visiteur se trouve sur un petit écran avec une bande passante ou une disponibilité CPU plus limitée, ou encore de précharger des morceaux de JavaScript complexes utilisés pour faire fonctionner une modélisation 3D interactive uniquement si les ressources du visiteur sont suffisantes.
 

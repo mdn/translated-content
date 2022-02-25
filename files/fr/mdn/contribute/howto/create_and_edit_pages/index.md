@@ -23,7 +23,7 @@ Pour modifier une page, vous devez trouver la page source :
 
 .
 
-La façon la plus rapide de la trouver est d'aller sur la page que vous souhaitez modifier, puis de vous rendre en bas de cette page et enfin de cliquer sur le lien <i lang="en">« Source on GitHub »</i>.
+La façon la plus rapide de la trouver est d'aller sur la page que vous souhaitez modifier, puis de vous rendre en bas de cette page et enfin de cliquer sur le lien <i lang="en">«&nbsp;Source on GitHub&nbsp;»</i>.
 
 Une fois que vous avez trouvé la source à modifier, rendez-vous sur notre fichier <i lang="en">README</i> et parcourez notre [guide sur la contribution (en anglais)](https://github.com/mdn/translated-content/#making-contributions). Vous pouvez également consulter [ce billet en français](https://tech.mozfr.org/post/2021/03/16/MDN-sur-GitHub-comment-contribuer) pour savoir comment contribuer.
 

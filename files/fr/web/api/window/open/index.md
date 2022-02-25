@@ -112,7 +112,7 @@ Si le paramètre _strWindowFeatures_ est utilisé et qu'aucune information de po
 - toolbar
   - : Si cette fonctionnalité est définie à _yes_, la nouvelle fenêtre secondaire disposera d'une barre de navigation (boutons Précédente, Suivante, Actualiser et Arrêter). En plus de la barre de navigation, les navigateurs basés sur Mozilla afficheront également la barre d'onglets si elle est toujours visible et présente dans la fenêtre parente. Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher la barre de navigation en positionnant `dom.disable_window_open_feature.toolbar` à _true_ dans <kbd>about:config</kbd> ou dans leur [fichier user.js](http://www.mozilla.org/support/firefox/edit#user).
 - location
-  - : Si cette fonctionnalité est définie à _yes_, la nouvelle fenêtre secondaire affichera une barre d'adresse (ou d'emplacement).Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher la barre d'adresse en positionnant `dom.disable_window_open_feature.location` à _true_ dans <kbd>about:config</kbd> ou dans leur [fichier user.js](http://www.mozilla.org/support/firefox/edit#user). Notez qu'Internet Explorer 7 force la présence de la barre d'adresse&nbsp;: « Nous pensons que la barre d'adresse est aussi importante pour les utilisateurs **à voir dans les fenêtres pop-up**. Une barre d'adresse manquante crée une opportunité pour un fraudeur de contrefaire une adresse. Pour aider à contrer cela, **IE7 va afficher une barre d'adresse sur toutes les fenêtres de navigation pour aider les utilisateurs à voir où ils sont**. » provenant de [Better Website Identification](http://blogs.msdn.com/ie/archive/2005/11/21.aspx). Il est également dans les intentions de Mozilla de forcer la présence de la Barre d'adresse dans une prochaine version de Firefox&nbsp;: {{bug(337344) }}
+  - : Si cette fonctionnalité est définie à _yes_, la nouvelle fenêtre secondaire affichera une barre d'adresse (ou d'emplacement).Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher la barre d'adresse en positionnant `dom.disable_window_open_feature.location` à _true_ dans <kbd>about:config</kbd> ou dans leur [fichier user.js](http://www.mozilla.org/support/firefox/edit#user). Notez qu'Internet Explorer 7 force la présence de la barre d'adresse&nbsp;: «&nbsp;Nous pensons que la barre d'adresse est aussi importante pour les utilisateurs **à voir dans les fenêtres pop-up**. Une barre d'adresse manquante crée une opportunité pour un fraudeur de contrefaire une adresse. Pour aider à contrer cela, **IE7 va afficher une barre d'adresse sur toutes les fenêtres de navigation pour aider les utilisateurs à voir où ils sont**.&nbsp;» provenant de [Better Website Identification](http://blogs.msdn.com/ie/archive/2005/11/21.aspx). Il est également dans les intentions de Mozilla de forcer la présence de la Barre d'adresse dans une prochaine version de Firefox&nbsp;: {{bug(337344) }}
 - directories
   - : Si cette fonctionnalité est définie à _yes_, la nouvelle fenêtre secondaire affichera la barre personnelle dans les navigateurs Netscape 6.x, Netscape 7.x, Mozilla et Firefox. Dans Internet Explorer 5+, la barre de liens sera affichée. En plus de la barre personnelle, les navigateurs Mozilla afficheront la barre de navigation du site si celle-ci est visible et présente dans la fenêtre parente. Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher leur barre personnelle en positionnant`dom.disable_window_open_feature.directories` à _true_ dans <kbd>about:config</kbd> ou dans leur [fichier user.js](http://www.mozilla.org/support/firefox/edit#user).
 - personalbar
@@ -145,7 +145,7 @@ Si le paramètre _strWindowFeatures_ est utilisé et qu'aucune information de po
 - dialog
   - : La fonctionnalité `dialog` retire toutes les icônes (restaurer, réduire, agrandir) de la barre de titre de la fenêtre, laissant uniquement le bouton de fermeture. Mozilla 1.2+ et Netscape 7.1 afficheront les autres commandes du menu système (dans Firefox 1.0 et Netscape 7.0x, le menu de commandes système n'est pas associé avec l'icône de Firefox/Netscape 7.0x à l'extrémité gauche de la barre de titre, il s'agit probablement d'un bug. Il est possible d'accéder au menu de commandes système avec un clic droit sur la barre de titre). Les fenêtres de dialogue sont des fenêtres qui n'ont pas d'icône de commande système de réduction ni d'agrandissement/restauration dans la barre de titre, ni dans les choix correspondants du menu de commandes système. On les appelle dialogues car leur utilisation normale est uniquement de notifier une information et d'être ensuite immédiatement fermées. Sur les systèmes Mac, les fenêtres de dialogue ont une bordure différente et peuvent prendre la forme de*sheets*.
 - minimizable
-  - : Ce paramètre peut uniquement s'appliquer à des fenêtres de dialogue ; l'utilisation de « minimizable » nécessite `dialog=yes`. Si `minimizable` est défini à _yes_, le nouveau dialogue aura une commande système de réduction dans la barre de titre et il sera possible de le réduire dans la barre des tâches. Toute fenêtre n'étant pas un dialogue est toujours réductible, cette option y sera donc ignorée.
+  - : Ce paramètre peut uniquement s'appliquer à des fenêtres de dialogue ; l'utilisation de «&nbsp;minimizable&nbsp;» nécessite `dialog=yes`. Si `minimizable` est défini à _yes_, le nouveau dialogue aura une commande système de réduction dans la barre de titre et il sera possible de le réduire dans la barre des tâches. Toute fenêtre n'étant pas un dialogue est toujours réductible, cette option y sera donc ignorée.
 - fullscreen
   - : Ce paramètre ne fonctionne plus dans Internet Explorer 6 SP2 de la façon dont il le faisait dans Internet Explorer 5.x. La barre des tâches de Windows, ainsi que la barre de titre et la barre d'état de la fenêtre ne sont ni visibles, ni accessibles lorsque le mode plein écran est activé dans IE 5.x. `fullscreen` ennuie toujours les utilisateurs disposant d'un grand écran ou de plusieurs écrans. Obliger les autres utilisateurs à passer en plein écran avec `fullscreen` est également extrêmement impopulaire et est considéré comme une tentative impolie d'imposer les préférences d'affichage de l'auteur à l'utilisateur. `fullscreen` ne fonctionne plus vraiment dans Internet Explorer 6 SP2.
 
@@ -216,7 +216,7 @@ function openFFPromotionPopup() {
 l'adoption de Firefox</a></p>
 ```
 
-Le code ci-dessus résout un certain nombre de problèmes d'utilisabilité (_usability_ ) relatif aux liens ouvrant des fenêtres secondaires. Le but du `return false` dans le code est d'annuler l'action par défaut du lien&nbsp;: si le gestionnaire d'évènements onclick est exécuté, il n'est pas nécessaire d'exécuter l'action par défaut du lien. Mais si JavaScript est désactivé ou non existant dans le navigateur de l'utilisateur, c'est l'évènement onclick qui est ignoré et le navigateur charge la ressource référencée dans le cadre ou la fenêtre portant le nom « PromoteFirefoxWindowName ». Si aucun cadre ni fenêtre ne porte ce nom, le navigateur créera une nouvelle fenêtre et l'appellera « PromoteFirefoxWindowName ».
+Le code ci-dessus résout un certain nombre de problèmes d'utilisabilité (_usability_ ) relatif aux liens ouvrant des fenêtres secondaires. Le but du `return false` dans le code est d'annuler l'action par défaut du lien&nbsp;: si le gestionnaire d'évènements onclick est exécuté, il n'est pas nécessaire d'exécuter l'action par défaut du lien. Mais si JavaScript est désactivé ou non existant dans le navigateur de l'utilisateur, c'est l'évènement onclick qui est ignoré et le navigateur charge la ressource référencée dans le cadre ou la fenêtre portant le nom «&nbsp;PromoteFirefoxWindowName&nbsp;». Si aucun cadre ni fenêtre ne porte ce nom, le navigateur créera une nouvelle fenêtre et l'appellera «&nbsp;PromoteFirefoxWindowName&nbsp;».
 
 Plus d'informations sur l'utilisation de l'attribut target&nbsp;:
 
@@ -316,8 +316,8 @@ de Firefox</a></p>
   - : Avec les bloqueurs de popups intégrés dans Mozilla/Firefox et Internet Explorer 6 SP2, il est possible de vérifier la valeur renvoyée par `window.open()`&nbsp;: elle sera _null_ si la fenêtre n'a pas été autorisée à s'ouvrir. Cependant, pour la plupart des autres bloqueurs de popups, il n'existe pas de manière fiable.
 - Quelle est la relation JavaScript entre la fenêtre principale et la fenêtre secondaire&nbsp;?
   - : La valeur renvoyée par la méthode `window.open()` est la propriété [opener](fr/DOM/window.opener). La variable _WindowObjectReference_ lie la fenêtre principale (opener) à la fenêtre secondaire qu'elle a ouverte, tandis que le mot-clé `opener` liera la fenêtre secondaire à sa fenêtre principale (celle qui a déclenché son ouverture).
-- Je n'arrive pas à accéder aux propriétés de la nouvelle fenêtre secondaire. J'obtiens toujours une erreur dans la console JavaScript disant « Erreur&nbsp;: uncaught exception: Permission denied to get property \<property_name or method_name> ». Pourquoi cela&nbsp;?
-  - : Ceci est causé par la restriction de sécurité des scripts entre domaines (aussi appelée*Same Origin Policy* , « Politique de même origine »). Un script chargé dans une fenêtre (ou cadre) d'une origine donnée (nom de domaine) **ne peut pas obtenir ou modifier** des propriétés d'une autre fenêtre (ou cadre) ou les propriétés d'aucun de ses objets HTML si celle-ci provient d'une autre origine distincte (nom de domaine). C'est pourquoi, avant d'exécuter un script se référant à une fenêtre secondaire depuis la fenêtre principale, le navigateur vérifiera que la fenêtre secondaire possède le même nom de domaine. Plus d'informations à propos de la restriction de sécurité des scripts entre domaines&nbsp;: [http://www.mozilla.org/projects/secu...me-origin.html](http://www.mozilla.org/projects/security/components/same-origin.html)
+- Je n'arrive pas à accéder aux propriétés de la nouvelle fenêtre secondaire. J'obtiens toujours une erreur dans la console JavaScript disant «&nbsp;Erreur&nbsp;: uncaught exception: Permission denied to get property \<property_name or method_name>&nbsp;». Pourquoi cela&nbsp;?
+  - : Ceci est causé par la restriction de sécurité des scripts entre domaines (aussi appelée*Same Origin Policy* , «&nbsp;Politique de même origine&nbsp;»). Un script chargé dans une fenêtre (ou cadre) d'une origine donnée (nom de domaine) **ne peut pas obtenir ou modifier** des propriétés d'une autre fenêtre (ou cadre) ou les propriétés d'aucun de ses objets HTML si celle-ci provient d'une autre origine distincte (nom de domaine). C'est pourquoi, avant d'exécuter un script se référant à une fenêtre secondaire depuis la fenêtre principale, le navigateur vérifiera que la fenêtre secondaire possède le même nom de domaine. Plus d'informations à propos de la restriction de sécurité des scripts entre domaines&nbsp;: [http://www.mozilla.org/projects/secu...me-origin.html](http://www.mozilla.org/projects/security/components/same-origin.html)
 
 ### Problèmes d'utilisabilité
 
@@ -336,14 +336,14 @@ Si vous voulez permettre l'ouverture d'un lien dans une nouvelle fenêtre, suive
 
 ##### N'utilisez _jamais_ ce format de code pour les liens&nbsp;:<br>`<a href="javascript:window.open(...)" ...>`
 
-Les liens « javascript: » sont toujours mauvais pour l'accessibilité et l'utilisabilité des pages Web dans tous les navigateurs.
+Les liens «&nbsp;javascript:&nbsp;» sont toujours mauvais pour l'accessibilité et l'utilisabilité des pages Web dans tous les navigateurs.
 
-- Les pseudo-liens « javascript:» ne fonctionnent plus du tout lorsque la gestion de JavaScript est désactivée ou inexistante. Certaines sociétés n'autorisent leurs employés à utiliser le Web que suivant des politiques de sécurité très strictes&nbsp;: JavaScript désactivé, pas de Java, pas d'ActiveX, pas de Flash. Pour diverses raisons (sécurité, accès public, navigateurs texte, etc.), environ 5% à 10% des utilisateurs naviguent sur le Web avec JavaScript désactivé.
-- Les liens « javascript: » interfèrent avec les fonctionnalités avancées de la navigation par onglets&nbsp;: entre autres, le clic du milieu sur des liens, le raccourci Ctrl+clic sur un lien, les fonctions de certaines extensions, etc.
-- Les liens « javascript: » interfèrent avec le processus d'indexation des pages Web par les moteurs de recherche.
-- Les liens « javascript: » interfèrent avec les technologies d'assistance (par exemple les lecteurs vocaux) et diverses applications utilisant le Web (par exemple les PDA ou les navigateurs pour mobiles).
-- Les liens « javascript: » interfèrent également avec les fonctionnalités de « mouse gestures » proposées par certains navigateurs.
-- Le schéma de protocole « javascript: » sera rapporté comme une erreur par les validateurs et vérificateurs de liens.
+- Les pseudo-liens «&nbsp;javascript:» ne fonctionnent plus du tout lorsque la gestion de JavaScript est désactivée ou inexistante. Certaines sociétés n'autorisent leurs employés à utiliser le Web que suivant des politiques de sécurité très strictes&nbsp;: JavaScript désactivé, pas de Java, pas d'ActiveX, pas de Flash. Pour diverses raisons (sécurité, accès public, navigateurs texte, etc.), environ 5% à 10% des utilisateurs naviguent sur le Web avec JavaScript désactivé.
+- Les liens «&nbsp;javascript:&nbsp;» interfèrent avec les fonctionnalités avancées de la navigation par onglets&nbsp;: entre autres, le clic du milieu sur des liens, le raccourci Ctrl+clic sur un lien, les fonctions de certaines extensions, etc.
+- Les liens «&nbsp;javascript:&nbsp;» interfèrent avec le processus d'indexation des pages Web par les moteurs de recherche.
+- Les liens «&nbsp;javascript:&nbsp;» interfèrent avec les technologies d'assistance (par exemple les lecteurs vocaux) et diverses applications utilisant le Web (par exemple les PDA ou les navigateurs pour mobiles).
+- Les liens «&nbsp;javascript:&nbsp;» interfèrent également avec les fonctionnalités de «&nbsp;mouse gestures&nbsp;» proposées par certains navigateurs.
+- Le schéma de protocole «&nbsp;javascript:&nbsp;» sera rapporté comme une erreur par les validateurs et vérificateurs de liens.
 
 **Plus d'informations à ce sujet&nbsp;:**
 
@@ -353,7 +353,7 @@ Les liens « javascript: » sont toujours mauvais pour l'accessibilité et l'u
 
 ##### N'utilisez jamais `<a href="#" onclick="window.open(...);">`
 
-Un tel pseudo-lien met également en péril l'accessibilité des liens. **Utilisez toujours une véritable URL pour la valeur de l'attribut href**, afin que si JavaScript s'avère désactivé ou absent, ou si le navigateur ne peut pas ouvrir de fenêtre secondaire (comme Microsoft Web TV, les navigateurs en mode texte, etc.), de tels navigateurs pourront toujours charger la référence référencée dans leur mode de chargement/gestion de nouvelles ressources par défaut. Cette forme de code interfère également avec les fonctionnalités avancées de navigation par onglets de certains navigateurs, comme le clic du milieu et les raccourcis Ctrl+clic et Ctrl+Entrée sur les liens, les « mouse gestures », etc.
+Un tel pseudo-lien met également en péril l'accessibilité des liens. **Utilisez toujours une véritable URL pour la valeur de l'attribut href**, afin que si JavaScript s'avère désactivé ou absent, ou si le navigateur ne peut pas ouvrir de fenêtre secondaire (comme Microsoft Web TV, les navigateurs en mode texte, etc.), de tels navigateurs pourront toujours charger la référence référencée dans leur mode de chargement/gestion de nouvelles ressources par défaut. Cette forme de code interfère également avec les fonctionnalités avancées de navigation par onglets de certains navigateurs, comme le clic du milieu et les raccourcis Ctrl+clic et Ctrl+Entrée sur les liens, les «&nbsp;mouse gestures&nbsp;», etc.
 
 ##### Identifiez toujours les liens qui créeront (ou réutiliseront) une nouvelle fenêtre secondaire
 
@@ -361,15 +361,15 @@ Identifiez les liens qui ouvriront de nouvelles fenêtre de manière à aider le
 
 Le but est d'avertir les utilisateurs à l'avance des changements de contexte pour réduire la confusion de leur part&nbsp;: changer la fenêtre courante ou afficher subitement une nouvelle fenêtre peut être très désorientant pour certains utilisateurs (le bouton Précédent devient inutilisable).
 
-> « Souvent, les utilisateurs ne remarquent pas qu'une nouvelle fenêtre s'est ouverte, particulièrement si ils utilisent un petit écran où les fenêtres sont agrandies pour utiliser toute la surface de l'écran. Ainsi, l'utilisateur voulant retourner à la page initiale sera dérouté par un bouton*Précédente* grisé. »
+> «&nbsp;Souvent, les utilisateurs ne remarquent pas qu'une nouvelle fenêtre s'est ouverte, particulièrement si ils utilisent un petit écran où les fenêtres sont agrandies pour utiliser toute la surface de l'écran. Ainsi, l'utilisateur voulant retourner à la page initiale sera dérouté par un bouton*Précédente* grisé.&nbsp;»
 > citation de [The Top Ten*New* Mistakes of Web Design](http://www.useit.com/alertbox/990530.html): 2. Opening New Browser Windows, Jakob Nielsen, mai 1999
 
 Lorsque des changements complets de contexte sont identifiés explicitement avant qu'ils se produisent, l'utilisateur peut déterminer s'il désire le faire ou s'y préparer&nbsp;: non seulement il ne sera pas perturbé ni désorienté, mais des utilisateurs plus expérimentés pourront eux-mêmes décider comment ouvrir de tels liens (dans une nouvelle fenêtre ou non, dans la même fenêtre, dans un nouvel onglet ou non, en arrière-plan ou non).
 
 **Références**
 
-- « Si votre lien crée une nouvelle fenêtre, ou fait apparaitre d'autres fenêtres sur votre affichage, ou déplace le focus du système vers un autre cadre ou une autre fenêtre, alors la chose sympathique à faire est d'indiquer à l'utilisateur que quelque chose de ce genre va se produire. » [World Wide Web Consortium Accessibility Initiative regarding popups](http://www.w3.org/WAI/wcag-curric/sam77-0.htm)
-- « Utilisez les titres de liens pour donner aux utilisateurs un aperçu d'où chaque lien les emmènera, avant qu'ils aient cliqué dessus. » [Ten Good Deeds in Web Design](http://www.useit.com/alertbox/991003.html), Jakob Nielsen, octobre 1999
+- «&nbsp;Si votre lien crée une nouvelle fenêtre, ou fait apparaitre d'autres fenêtres sur votre affichage, ou déplace le focus du système vers un autre cadre ou une autre fenêtre, alors la chose sympathique à faire est d'indiquer à l'utilisateur que quelque chose de ce genre va se produire.&nbsp;» [World Wide Web Consortium Accessibility Initiative regarding popups](http://www.w3.org/WAI/wcag-curric/sam77-0.htm)
+- «&nbsp;Utilisez les titres de liens pour donner aux utilisateurs un aperçu d'où chaque lien les emmènera, avant qu'ils aient cliqué dessus.&nbsp;» [Ten Good Deeds in Web Design](http://www.useit.com/alertbox/991003.html), Jakob Nielsen, octobre 1999
 - [Using Link Titles to Help Users Predict Where They Are Going](http://www.useit.com/alertbox/980111.html), Jakob Nielsen, janvier 1998
 
 ##### Utilisez toujours l'attribut target
@@ -378,7 +378,7 @@ Si JavaScript est désactivé ou absent, le navigateur créera une fenêtre seco
 
 ##### N'utilisez pas `target="_blank"`
 
-Fournissez toujours un nom significatif dans votre attribut target, et essayez de le réutiliser dans votre page afin qu'un clic sur un autre lien puisse charger la ressource dans une fenêtre déjà utilisée (ce qui rend l'opération beaucoup plus rapide pour l'utilisateur), ce qui justifie la raison (et les ressources système, et le temps dépensé) d'avoir créé une fenêtre secondaire. Utiliser une seule cible et la réutiliser pour plusieurs liens est bien moins gourmand en matière de ressources puisqu'une seule fenêtre est créée et recyclée. D'un autre côté, utiliser « _blank » comme attribut target créera plusieurs nouvelles fenêtre anonymes sur le bureau de l'utilisateur qui ne peuvent ni être recyclées ni réutilisées.
+Fournissez toujours un nom significatif dans votre attribut target, et essayez de le réutiliser dans votre page afin qu'un clic sur un autre lien puisse charger la ressource dans une fenêtre déjà utilisée (ce qui rend l'opération beaucoup plus rapide pour l'utilisateur), ce qui justifie la raison (et les ressources système, et le temps dépensé) d'avoir créé une fenêtre secondaire. Utiliser une seule cible et la réutiliser pour plusieurs liens est bien moins gourmand en matière de ressources puisqu'une seule fenêtre est créée et recyclée. D'un autre côté, utiliser «&nbsp;_blank&nbsp;» comme attribut target créera plusieurs nouvelles fenêtre anonymes sur le bureau de l'utilisateur qui ne peuvent ni être recyclées ni réutilisées.
 
 Dans tous les cas, si votre code est bien fait, il ne devrait pas interférer avec le choix final de l'utilisateur mais lui offrira plutôt des choix supplémentaires, plus de façons d'ouvrir les liens et plus de pouvoir sur l'outil qu'il utilise (son navigateur).
 
@@ -450,11 +450,11 @@ Vous devez vous attendre à ce qu'une large majorité des navigateurs affichent 
 
 Dans Internet Explorer 6 pour XP SP2, pour les fenêtres ouvertes à l'aide de `window.open()`&nbsp;:
 
-> « Pour les fenêtres ouvertes à l'aide de `window.open()`&nbsp;:
-> Attendez-vous à ce que la barre d'état soit présente, et codez en conséquence. **La barre d'état sera activée par défaut** et fait entre 20 et 25 pixels de haut. (...) »
+> «&nbsp;Pour les fenêtres ouvertes à l'aide de `window.open()`&nbsp;:
+> Attendez-vous à ce que la barre d'état soit présente, et codez en conséquence. **La barre d'état sera activée par défaut** et fait entre 20 et 25 pixels de haut. (...)&nbsp;»
 > citation de [Fine-Tune Your Web Site for Windows XP Service Pack 2, Browser Window Restrictions in XP SP2](http://msdn.microsoft.com/security/productinfo/xpsp2/default.aspx?pull=/library/en-us/dnwxp/html/xpsp2web.asp#xpsp_topic5)
 
-> « (...) les fenêtres créées à l'aide de la méthode `window.open()` peuvent être appelées par des scripts et utilisées pour imiter une fausse interface utilisateur ou bureau, ou pour masquer des informations ou des activités malveillantes en dimensionnant la fenêtre de manière à rendre la barre d'état invisible.
+> «&nbsp;(...) les fenêtres créées à l'aide de la méthode `window.open()` peuvent être appelées par des scripts et utilisées pour imiter une fausse interface utilisateur ou bureau, ou pour masquer des informations ou des activités malveillantes en dimensionnant la fenêtre de manière à rendre la barre d'état invisible.
 > Les fenêtres d'Internet Explorer fournissent des informations de sécurité visibles par l'utilisateur pour l'aider à identifier avec certitude la source de la page et le niveau de sécurité de la communication avec cette page. Lorsque ces éléments ne sont pas visibles, les utilisateurs peuvent penser qu'ils sont sur une page plus digne de confiance ou interagissent avec un processus système alors qu'il sont en train d'interagir avec un hôte malveillant. (...)
 > **Les fenêtres lancées par des scripts seront affichées entièrement, avec la barre de titre d'Internet Explorer et sa barre d'état.** (...)
 > Gestion de la barre d'état d'Internet Explorer par les scripts
@@ -467,8 +467,8 @@ Dans Internet Explorer 6 pour XP SP2, pour les fenêtres ouvertes à l'aide de `
 
 Dans Internet Explorer 6 pour XP SP2&nbsp;:
 
-- « `window.open()` avec fullscreen=yes donnera à présent une fenêtre maximisée, et non une fenêtre en mode kiosque. »
-- « La définition de la spécification de fullscreen=yes est modifiée pour signifier "afficher la fenêtre maximisée," ce qui gardera la barre de titre, la barre d'adresse et la barre d'état visibles. »
+- «&nbsp;`window.open()` avec fullscreen=yes donnera à présent une fenêtre maximisée, et non une fenêtre en mode kiosque.&nbsp;»
+- «&nbsp;La définition de la spécification de fullscreen=yes est modifiée pour signifier "afficher la fenêtre maximisée," ce qui gardera la barre de titre, la barre d'adresse et la barre d'état visibles.&nbsp;»
 
 _Références&nbsp;:_
 

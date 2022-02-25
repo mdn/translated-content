@@ -97,7 +97,7 @@ Cet article était destiné à proposer une vue d'ensemble rapide des indicateur
 
 ## Dans ce module
 
-- [Le « pourquoi » des performances web](/fr/docs/Learn/Performance/why_web_performance)
+- [Le «&nbsp;pourquoi&nbsp;» des performances web](/fr/docs/Learn/Performance/why_web_performance)
 - [Qu'est-ce que sont les performances web&nbsp;?](/fr/docs/Learn/Performance/What_is_web_performance)
 - [Comment les visiteurs perçoivent-ils les performances&nbsp;?](/fr/docs/Learn/Performance/Perceived_performance)
 - [Mesurer les performances](/fr/docs/Learn/Performance/Measuring_performance)

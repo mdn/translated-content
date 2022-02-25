@@ -55,7 +55,7 @@ Les propriétés d'un objet qui n'ont pas été affectées auront la valeur [`un
 maVoiture.color; // undefined
 ```
 
-On peut aussi définir ou accéder à des propriétés JavaScript en utilisant une notation avec les crochets (voir la page sur [les accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors) pour plus de détails). Les objets sont parfois appelés « tableaux associatifs ». Cela peut se comprendre, car chaque propriété est associée avec une chaîne de caractères qui permet d'y accéder. Ainsi, par exemple, on peut accéder aux propriétés de l'objet `maVoiture` de la façon suivante :
+On peut aussi définir ou accéder à des propriétés JavaScript en utilisant une notation avec les crochets (voir la page sur [les accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors) pour plus de détails). Les objets sont parfois appelés «&nbsp;tableaux associatifs&nbsp;». Cela peut se comprendre, car chaque propriété est associée avec une chaîne de caractères qui permet d'y accéder. Ainsi, par exemple, on peut accéder aux propriétés de l'objet `maVoiture` de la façon suivante :
 
 ```js
 maVoiture["fabricant"] = "Ford";

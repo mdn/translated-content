@@ -17,7 +17,7 @@ Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise 
     var elements = document.getElementsByTagName(name);
 
 - `elements` est une liste de nœuds (`NodeList`) des éléments trouvés dans l'ordre dans lequel ils apparaissent dans l'arbre.
-- `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente « tous les éléments ».
+- `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente «&nbsp;tous les éléments&nbsp;».
 
 > **Note :** [La dernière spécification W3C](https://dom.spec.whatwg.org/) dit que  `elements` est une   `HTMLCollection` ; cependant cette méthode renvoie une  {{domxref("NodeList")}} dans les navigateurs WebKit. Voir  {{bug(14869)}} pour plus de détails.
 

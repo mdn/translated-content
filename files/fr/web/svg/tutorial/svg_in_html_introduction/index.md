@@ -56,7 +56,7 @@ Voici le code source de cet exemple :
 
 ### Discussion
 
-La page est principalement formée de XHTML, CSS et JavaScript classiques. La seule partie intéressante est le contenu de l'élément \<svg>. Cet élément et ses fils sont déclarés comme étant dans l'espace de nommage SVG. L'élément contient un gradient et deux formes remplies avec le gradient. Les bornes de couleurs du gradient sont définies par une classe CSS. Lorsque l'utilisateur saisit quelque chose d'incorrect dans le formulaire, le script affecte l'attribut `invalid` à la balise \<body> et une règle de style modifie la couleur `end-stop` du gradient en rouge en lui donnant la valeur « red » (Une autre règle de style sert à faire apparaître un message d'erreur).
+La page est principalement formée de XHTML, CSS et JavaScript classiques. La seule partie intéressante est le contenu de l'élément \<svg>. Cet élément et ses fils sont déclarés comme étant dans l'espace de nommage SVG. L'élément contient un gradient et deux formes remplies avec le gradient. Les bornes de couleurs du gradient sont définies par une classe CSS. Lorsque l'utilisateur saisit quelque chose d'incorrect dans le formulaire, le script affecte l'attribut `invalid` à la balise \<body> et une règle de style modifie la couleur `end-stop` du gradient en rouge en lui donnant la valeur «&nbsp;red&nbsp;» (Une autre règle de style sert à faire apparaître un message d'erreur).
 
 Cette approche bénéficie des points suivants en sa faveur&nbsp;:
 

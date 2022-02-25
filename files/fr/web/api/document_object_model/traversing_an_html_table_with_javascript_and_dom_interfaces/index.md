@@ -186,11 +186,11 @@ En invoquant `myP.appendChild` ({{mediawiki.external('node_element')}}) , vous d
 
     myP.appendChild(noeudTexte);
 
-En exécutant cet exemple, vous pouvez remarquer que les mots « hello » et « world » ne sont pas séparés&nbsp;: `helloworld`. Quand vous parcourez la page HTML les deux nœuds semblent donc n'en former qu'un seul, rappelez-vous cependant qu'ils sont bien distincts dans le modèle de document. Le second nœud est de type TEXT_NODE, et est le second enfant de la seconde balise \<p>. Le schéma suivant situe ce nouvel objet dans l'arborescence du document&nbsp;:
+En exécutant cet exemple, vous pouvez remarquer que les mots «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» ne sont pas séparés&nbsp;: `helloworld`. Quand vous parcourez la page HTML les deux nœuds semblent donc n'en former qu'un seul, rappelez-vous cependant qu'ils sont bien distincts dans le modèle de document. Le second nœud est de type TEXT_NODE, et est le second enfant de la seconde balise \<p>. Le schéma suivant situe ce nouvel objet dans l'arborescence du document&nbsp;:
 
 ![](sample2b2.jpg)
 
-> **Note :** L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de « world » placé après « hello ». Pour ajouter un nœud texte entre « hello » et « world » (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
+> **Note :** L'utilisation de `createTextNode` et de `appendChild` permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode `appendChild` ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de «&nbsp;world&nbsp;» placé après «&nbsp;hello&nbsp;». Pour ajouter un nœud texte entre «&nbsp;hello&nbsp;» et «&nbsp;world&nbsp;» (par exemple un espace), utilisez `insertBefore` à la place de `appendChild`.
 
 ### Création de nouveaux éléments avec l'objet document et la méthode `createElement(...)`
 
@@ -203,7 +203,7 @@ Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec `creat
 
 ### Suppression de nœuds avec la méthode `removeChild(...)`
 
-Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de `myP` (deuxième élément \<p>) le nœud texte contenant le mot « world »&nbsp;:
+Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de `myP` (deuxième élément \<p>) le nœud texte contenant le mot «&nbsp;world&nbsp;»&nbsp;:
 
     myP.removeChild(noeudTexte);
 

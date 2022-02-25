@@ -26,4 +26,4 @@ Si le support de SSLv2 doit être activé, vous devrez définir avec la valeur `
 
 ### Détermination du chiffrement disponible
 
-Comme toujours, vous pouvez vérifier le chiffrement supporté — celui qui a été activé ou désactivé — en cherchant « ssl » ou « tls » dans about:config.
+Comme toujours, vous pouvez vérifier le chiffrement supporté — celui qui a été activé ou désactivé — en cherchant «&nbsp;ssl&nbsp;» ou «&nbsp;tls&nbsp;» dans about:config.

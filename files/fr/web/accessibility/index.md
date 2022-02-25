@@ -11,9 +11,9 @@ original_slug: Accessibilité
 ---
 L’accessibilité dans le développement web signifie permettre l'utilisation des sites web par le plus grand nombre de personnes, même lorsque les capacités de ces personnes sont limitées d’une manière ou d'une autre. Voici quelques informations qui vous permettront de développer du contenu accessible.
 
-« **L'accessibilité du web** signifie que les personnes handicapées peuvent l'utiliser. Plus spécifiquement, elle signifie que ces gens peuvent percevoir, comprendre, naviguer, interagir avec le web, et y contribuer. L'accessibilité du web bénéficie également à d'autres, notamment les personnes âgées ayant des capacités diminuées dues au vieillissement. » ( [L'accessibilité du Web définie dans Wikipédia](http://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web))
+«&nbsp;**L'accessibilité du web** signifie que les personnes handicapées peuvent l'utiliser. Plus spécifiquement, elle signifie que ces gens peuvent percevoir, comprendre, naviguer, interagir avec le web, et y contribuer. L'accessibilité du web bénéficie également à d'autres, notamment les personnes âgées ayant des capacités diminuées dues au vieillissement. » ( [L'accessibilité du Web définie dans Wikipédia](http://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web))
 
-« **L'accessibilité numérique est la mise à la disposition de tous les individus** – quels que soient leur matériel ou logiciel, leur infrastructure réseau, leur langue maternelle, leur culture, leur localisation géographique, ou leurs aptitudes physiques ou mentales – des ressources numériques. » [W3C   Accessibility](http://www.w3.org/standards/webdesign/accessibility)
+«&nbsp;**L'accessibilité numérique est la mise à la disposition de tous les individus** – quels que soient leur matériel ou logiciel, leur infrastructure réseau, leur langue maternelle, leur culture, leur localisation géographique, ou leurs aptitudes physiques ou mentales – des ressources numériques. » [W3C   Accessibility](http://www.w3.org/standards/webdesign/accessibility)
 
 ## Tutoriels clefs
 

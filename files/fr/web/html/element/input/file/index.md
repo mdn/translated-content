@@ -80,7 +80,7 @@ Un identifiant de type de fichier est une chaîne de caractères qui décrit le 
 - Une extension de fichier valide, sensible à la casse et qui commence par un point (« . »). Par exemple : `.jpg`, `.pdf` ou `.doc`.
 - Un type MIME valide, sans extension.
 - La chaîne de caractères `audio/*` qui indique « n'importe quel fichier audio »
-- La chaîne de caractères `video/*` qui indique « n'importe quel fichier vidéo »
+- La chaîne de caractères `video/*` qui indique « n'importe quel fichier vidéo&nbsp;»
 - La chaîne de caractères `image/*` qui indique « n'importe quel fichier image ».
 
 L'attribut `accept` prend comme valeur une chaîne de caractères composée d'un ou plusieurs identifiants de type, séparés par des virgules. Ainsi, si un sélecteur de fichier doit permettre de sélectionner des images ou des documents PDF, on pourra écrire :

@@ -96,7 +96,7 @@ Si vous enregistrez et actualisez maintenant, vous verrez ce résultat :
 <p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
 <p class="positioned">Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.</p>
 <p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les nœuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les nœuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -138,7 +138,7 @@ Si vous enregistrez et actualisez maintenant, vous verrez quelque chose comme ce
 <p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
 <p class="positioned">Par défaut, je couvre 100% de la largeur de mon élément parent et je suis aussi haut que mon contenu enfant. Mes largeur et hauteur totales sont égales aux largeur et hauteur du contenu, plus celles du remplissage, plus celles de l'encadrement.</p>
 <p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
 ```
 
 ```css hidden
@@ -338,7 +338,7 @@ Voici l'exemple terminé :
 <p>Je suis élément de base de niveau bloc. Les éléments de niveau de bloc adjacents se trouvent sur de nouvelles lignes en dessous de moi.</p>
 <p class="positioned">Je ne suis plus positionné...</p>
 <p>Entre éléments adjacents, nous sommes séparés par nos marges. En raison de la fusion des marges, nous sommes séparés par la largeur de la plus grande de nos marges, et non par la somme des deux.</p>
-<p>Les éléments « inline » <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments « inline » débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
+<p>Les éléments «&nbsp;inline&nbsp;» <span>comme celui-ci </span>ou <span>cet autre</span> sont sur une même ligne que les noeuds de texte adjacents, s'il y a de la place sur la même ligne. Les éléments «&nbsp;inline&nbsp;» débordants <span>se replient, si possible, sur une nouvelle ligne — comme celle-ci contenant du texte</span> ; sinon, ils passent simplement à une nouvelle ligne, un peu comme cette image le fait : <img src="long.jpg"></p>
 ```
 
 ```css hidden

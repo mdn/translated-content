@@ -109,7 +109,7 @@ Les attributs **media** et **type** du style peuvent être donnés ou non. Notez
     var el = document.getElementById("un-element");
     el.setAttribute("style", "background-color:darkblue;");
 
-Soyez cependant conscient que `setAttribute` écrasera toute propriété de style qui pourrait déjà avoir été définie dans l'objet style de cet élément. Si l'élément « un-element » ci-dessus avait déjà un attribut indiquant par exemple `style="font-size: 18px"`, cette valeur serait supprimée par l'utilisation de `setAttribute`.
+Soyez cependant conscient que `setAttribute` écrasera toute propriété de style qui pourrait déjà avoir été définie dans l'objet style de cet élément. Si l'élément «&nbsp;un-element&nbsp;» ci-dessus avait déjà un attribut indiquant par exemple `style="font-size: 18px"`, cette valeur serait supprimée par l'utilisation de `setAttribute`.
 
 ##### Propriétés
 

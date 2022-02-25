@@ -16,13 +16,13 @@ original_slug: Utilisation_du_cache_de_Firefox_1.5
 
 ### Introduction
 
-[Firefox 1.5](/fr/Firefox_1.5_pour_les_développeurs) met en mémoire cache des pages Web entières, avec leurs états JavaScript, pour une même session de navigation. Revenir ou avancer entre des pages déjà visitées ne nécessite aucun chargement de page et les états JavaScript sont préservés. Cette fonctionnalité parfois appelée **bfcache** (pour « Back-Forward Cache ») rend la navigation très rapide. Ce cache est préservé en mémoire jusqu'à ce que l'utilisateur ferme le navigateur.
+[Firefox 1.5](/fr/Firefox_1.5_pour_les_développeurs) met en mémoire cache des pages Web entières, avec leurs états JavaScript, pour une même session de navigation. Revenir ou avancer entre des pages déjà visitées ne nécessite aucun chargement de page et les états JavaScript sont préservés. Cette fonctionnalité parfois appelée **bfcache** (pour «&nbsp;Back-Forward Cache&nbsp;») rend la navigation très rapide. Ce cache est préservé en mémoire jusqu'à ce que l'utilisateur ferme le navigateur.
 
 Il existe des cas où Firefox ne met pas en cache les pages. Vous trouverez ci-dessous certaines raisons classiques de programmation faisant qu'une page n'est pas mise en cache&nbsp;:
 
 - La page utilise un gestionnaire `unload`
-- La page définit « cache-control: no-store »
-- La page définit « cache-control: no-cache » et le site est sécurisé par HTTPS
+- La page définit «&nbsp;cache-control: no-store&nbsp;»
+- La page définit «&nbsp;cache-control: no-cache&nbsp;» et le site est sécurisé par HTTPS
 - La page n'est pas complètement chargée quand l'utilisateur la quitte pour en charger une autre
 - La page de niveau supérieur de la page contient des cadres qui ne peuvent pas être mis en cache
 - La page est dans un cadre et l'utilisateur charge une nouvelle page dans ce cadre (dans ce cas, lorsque l'utilisateur navigue vers une autre page, le dernier contenu chargé dans les cadres est celui mis en cache)

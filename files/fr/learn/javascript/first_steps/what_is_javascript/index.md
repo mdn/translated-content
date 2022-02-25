@@ -5,7 +5,7 @@ translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
-Bienvenue dans le cours JavaScript pour débutants sur le MDN. Dans ce premier article nous donnons une description générale de JavaScript en présentant le « pourquoi » et le « comment » du JavaScript. L'objectif est que vous compreniez bien son but.
+Bienvenue dans le cours JavaScript pour débutants sur le MDN. Dans ce premier article nous donnons une description générale de JavaScript en présentant le «&nbsp;pourquoi&nbsp;» et le «&nbsp;comment&nbsp;» du JavaScript. L'objectif est que vous compreniez bien son but.
 
 <table>
   <tbody>
@@ -91,11 +91,11 @@ JavaScript peut faire bien plus. Voyons cela plus en détail.
 Le cœur de JavaScript est constitué de fonctionnalités communes de programmation permettant de&nbsp;:
 
 - stocker des valeurs utiles dans des variables. Dans l'exemple plus haut, nous demandons un nouveau nom à l'utilisateur puis le stockons dans une variable appelée `name`.
-- faire des opérations sur des morceaux de texte (appelés en programmation « chaînes de caractères » ou « strings » en anglais). Dans l'exemple plus haut, nous prenons la chaîne de caractères "Player 1: " et lui adjoignons la variable `name` pour créer l'étiquette ''Player 1: Chris".
-- exécuter du code en réponse à certains événements se produisant sur une page web. Dans l'exemple, nous avons utilisé un événement (« event ») {{Event("click")}} pour détecter quand l'utilisateur clique sur le bouton ; on exécute alors le code qui met à jour l'étiquette.
+- faire des opérations sur des morceaux de texte (appelés en programmation «&nbsp;chaînes de caractères&nbsp;» ou «&nbsp;strings&nbsp;» en anglais). Dans l'exemple plus haut, nous prenons la chaîne de caractères "Player 1: " et lui adjoignons la variable `name` pour créer l'étiquette ''Player 1: Chris".
+- exécuter du code en réponse à certains événements se produisant sur une page web. Dans l'exemple, nous avons utilisé un événement («&nbsp;event&nbsp;») {{Event("click")}} pour détecter quand l'utilisateur clique sur le bouton ; on exécute alors le code qui met à jour l'étiquette.
 - Et bien plus encore&nbsp;!
 
-Là où ça devient excitant, c'est que de nombreuses fonctionnalités sont basées sur ce cœur de JavaScript. Les « interfaces de programmation applicatives » (API pour « Application Programming Interfaces ») donnent accès à des fonctionnalités presqu'illimitées dans votre code JavaScript.
+Là où ça devient excitant, c'est que de nombreuses fonctionnalités sont basées sur ce cœur de JavaScript. Les «&nbsp;interfaces de programmation applicatives&nbsp;» (API pour «&nbsp;Application Programming Interfaces&nbsp;») donnent accès à des fonctionnalités presqu'illimitées dans votre code JavaScript.
 
 Les API sont des blocs de code déjà prêts qui permettent à un développeur d'implémenter des programmes qui seraient difficiles voire impossibles à implémenter sans elles. C'est comme du code "en kit" pour la programmation, très pratiques à assembler et à combiner. Les API sont au code ce que les meubles en kits sont aux fournitures de maison — il est beaucoup plus facile de prendre des panneaux prêts à l'emploi et de les visser ensemble pour faire une étagère que de travailler vous-même sur le design, d'aller chercher le bon bois, de couper tous les panneaux à la bonne taille et la bonne forme, de trouver les vis de la bonne taille, puis les assembler pour faire une étagère.
 
@@ -135,7 +135,7 @@ C'est une bonne chose, étant donné qu'un usage fréquent de JavaScript est de 
 
 ### Sécurité du navigateur
 
-Chaque onglet du navigateur constitue un périmètre séparé dans lequel s'exécute le code (en termes techniques ces périmètres sont des « environnements d'exécution ») ce qui signifie que, dans la plupart des cas, le code de chaque onglet est exécuté complètement séparément, et le code d'un onglet ne peut affecter directement le code d'un autre onglet ou d'un autre site. C'est une bonne mesure de sécurité. Si ce n'était pas le cas, des pirates pourraient par exemple écrire du code pour voler des informations sur d'autres sites web.
+Chaque onglet du navigateur constitue un périmètre séparé dans lequel s'exécute le code (en termes techniques ces périmètres sont des «&nbsp;environnements d'exécution&nbsp;») ce qui signifie que, dans la plupart des cas, le code de chaque onglet est exécuté complètement séparément, et le code d'un onglet ne peut affecter directement le code d'un autre onglet ou d'un autre site. C'est une bonne mesure de sécurité. Si ce n'était pas le cas, des pirates pourraient par exemple écrire du code pour voler des informations sur d'autres sites web.
 
 > **Note :** il existe des moyens d'envoyer du code et des données entre différents sites/onglets de façon sécurisée, mais ce sont des techniques avancées que ne nous couvrirons pas dans ce cours.
 
@@ -154,7 +154,7 @@ function updateName() {
 }
 ```
 
-Nous sélectionnons ici un paragraphe de texte (ligne 1), puis lui attachons un « gestionnaire d'évènement »  (<i lang="en">event listener</i>)  ligne 3, pour qu'ensuite, lors d'un clic sur le paragraphe, le bloc de code `updateName()` (lignes 5-8) s'exécute. Le bloc de code `updateName()` (ces blocs de code réutilisables sont appelés « fonctions ») demande à l'utilisateur un nouveau nom, et l'insère dans le paragraphe pour mettre à jour l'affichage.
+Nous sélectionnons ici un paragraphe de texte (ligne 1), puis lui attachons un «&nbsp;gestionnaire d'évènement&nbsp;»  (<i lang="en">event listener</i>)  ligne 3, pour qu'ensuite, lors d'un clic sur le paragraphe, le bloc de code `updateName()` (lignes 5-8) s'exécute. Le bloc de code `updateName()` (ces blocs de code réutilisables sont appelés «&nbsp;fonctions&nbsp;») demande à l'utilisateur un nouveau nom, et l'insère dans le paragraphe pour mettre à jour l'affichage.
 
 Si vous échangiez les deux premières lignes de code, rien ne fonctionnerait plus, vous obtiendriez une erreur dans la console développeur du navigateur&nbsp;: `TypeError: para is undefined`. Cela signifie que l'objet `para` n'existe pas encore, donc nous ne pouvons pas y ajouter de gestionnaire d'évènement.
 

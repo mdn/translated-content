@@ -83,7 +83,7 @@ Voici certaines des nouvelles fonctionnalités de Firefox 1.5&nbsp;:
 - **Navigation plus rapide** avec une performance accrue des boutons permettant de reculer ou d'avancer d'une page.
 - **Réorganisation des onglets par glisser-déposer.**
 - **Le dictionnaire MediaDICO a été ajouté à la liste des moteurs de recherche**.
-- **Une meilleure prise en main** avec des pages d'erreur descriptives, un menu d'options redessiné, la découverte automatique des fils RSS et un « mode sans échec » plus facile à utiliser.
+- **Une meilleure prise en main** avec des pages d'erreur descriptives, un menu d'options redessiné, la découverte automatique des fils RSS et un «&nbsp;mode sans échec&nbsp;» plus facile à utiliser.
 - **Meilleur support de l'accessibilité**, notamment pour les pages DHTML.
 - **Assistant pour les sites Web non fonctionnels** pour rapporter les sites Web qui ne fonctionnent pas avec Firefox.
 - **Meilleur support de Mac OS X** (10.2 et supérieur), avec la migration des profils de Safari et d'Internet Explorer pour Mac.

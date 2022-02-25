@@ -163,12 +163,12 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 <p class=exemple>
   Alice s’avança pour les regarder, et, au moment où
   elle approchait, elle en entendit un qui disait&nbsp;:
-  « Fais donc attention, Cinq, et ne m’éclabousse pas
-  ainsi avec ta peinture. »
+  «&nbsp;Fais donc attention, Cinq, et ne m’éclabousse pas
+  ainsi avec ta peinture.&nbsp;»
 </p>
 <p>
-  « Ce n’est pas de ma faute, » dit Cinq d’un ton
-  bourru, « c’est Sept qui m’a poussé le coude. »
+  «&nbsp;Ce n’est pas de ma faute,&nbsp;» dit Cinq d’un ton
+  bourru, «&nbsp;c’est Sept qui m’a poussé le coude.&nbsp;»
 </p>
 ```
 

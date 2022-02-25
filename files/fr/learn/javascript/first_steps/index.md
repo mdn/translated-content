@@ -17,7 +17,7 @@ translation_of: Learn/JavaScript/First_steps
 ---
 {{LearnSidebar}}
 
-Dans notre premier module consacré à JavaScript, nous allons tout d'abord répondre à des questions fondamentales comme « qu'est-ce que JavaScript&nbsp;? », « à quoi ressemble-t-il&nbsp;? » et « de quoi est-il capable&nbsp;? ». Nous vous accompagnerons ensuite dans votre première expérience pratique consistant à écrire du code JavaScript. Après cela, nous examinerons en détail quelques briques de base, telles que les variables, les chaînes de caractères, les nombres, et les tableaux.
+Dans notre premier module consacré à JavaScript, nous allons tout d'abord répondre à des questions fondamentales comme «&nbsp;qu'est-ce que JavaScript&nbsp;?&nbsp;», «&nbsp;à quoi ressemble-t-il&nbsp;?&nbsp;» et «&nbsp;de quoi est-il capable&nbsp;?&nbsp;». Nous vous accompagnerons ensuite dans votre première expérience pratique consistant à écrire du code JavaScript. Après cela, nous examinerons en détail quelques briques de base, telles que les variables, les chaînes de caractères, les nombres, et les tableaux.
 
 ## **Prérequis**
 

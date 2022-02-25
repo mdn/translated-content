@@ -116,16 +116,16 @@ p:nth-child(2n+1) {
     La Reine devint pourpre de colère ; et après
     l’avoir considérée un moment avec des yeux
     flamboyants comme ceux d’une bête fauve, elle
-    se mit à crier&nbsp;: « Qu’on lui coupe la tête&nbsp;! »
+    se mit à crier&nbsp;: «&nbsp;Qu’on lui coupe la tête&nbsp;!&nbsp;»
   </p>
   <p>
-    « Quelle idée&nbsp;! » dit Alice très-haut et d’un
+    «&nbsp;Quelle idée&nbsp;!&nbsp;» dit Alice très-haut et d’un
     ton décidé. La Reine se tut.
   </p>
   <p>
     Le Roi lui posa la main sur le bras, et lui
-    dit timidement&nbsp;: « Considérez donc, ma chère
-    amie, que ce n’est qu’une enfant. »
+    dit timidement&nbsp;: «&nbsp;Considérez donc, ma chère
+    amie, que ce n’est qu’une enfant.&nbsp;»
   </p>
 </div>
 ```

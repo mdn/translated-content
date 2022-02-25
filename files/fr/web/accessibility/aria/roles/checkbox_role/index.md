@@ -12,7 +12,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_checkbox
 
 Cette technique présente l’utilisation du rôle [checkbox](http://www.w3.org/TR/wai-aria/roles#checkbox).
 
-Le rôle `checkbox` est utilisé pour des contrôles interactifs à cocher. Si un élément utilise `role="checkbox",` il est obligatoire pour cet élément d’avoir également un attribut `aria-checked` qui présente l’état de la case à cocher aux technologies d’assistance. Alors que le contrôle de formulaire HTML natif `checkbox` ne peut avoir que deux états (« coché » ou « décoché »), un élément avec le rôle `role=checkbox` peut présenter trois états pour l'attribut `aria-checked`&nbsp;:
+Le rôle `checkbox` est utilisé pour des contrôles interactifs à cocher. Si un élément utilise `role="checkbox",` il est obligatoire pour cet élément d’avoir également un attribut `aria-checked` qui présente l’état de la case à cocher aux technologies d’assistance. Alors que le contrôle de formulaire HTML natif `checkbox` ne peut avoir que deux états («&nbsp;coché&nbsp;» ou «&nbsp;décoché&nbsp;»), un élément avec le rôle `role=checkbox` peut présenter trois états pour l'attribut `aria-checked`&nbsp;:
 
 - `aria-checked="true"`&nbsp;: la case est cochée ;
 - `aria-checked="false"`&nbsp;: la case est décochée ;

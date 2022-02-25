@@ -24,7 +24,7 @@ L'élément `<title>` est souvent le premier enfant de son parent. Notons que le
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core") »
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")&nbsp;»
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 

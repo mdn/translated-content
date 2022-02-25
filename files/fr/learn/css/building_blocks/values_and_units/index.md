@@ -128,9 +128,9 @@ Le HTML utilisé ci-après est un ensemble de listes imbriquées&nbsp;: il y a t
 
 Pour commencer, on définit la taille de la police à 16px sur l'élément `<html>`.
 
-**Pour récapituler, l'unité `em` signifie « la taille de police de l'élément parent »** pour ce qui concerne la typographie. Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `ems` prendront donc leur taille en fonction de celle de leur parent. Aussi, chaque niveau plus grand que le précédent, car chacun a une taille de police de `1.3em` soit 1,3 fois plus grand que la taille de police pour l'élément parent.
+**Pour récapituler, l'unité `em` signifie «&nbsp;la taille de police de l'élément parent&nbsp;»** pour ce qui concerne la typographie. Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `ems` prendront donc leur taille en fonction de celle de leur parent. Aussi, chaque niveau plus grand que le précédent, car chacun a une taille de police de `1.3em` soit 1,3 fois plus grand que la taille de police pour l'élément parent.
 
-**Pour récapituler, l'unité `rem` signifie « la taille de police de l'élément racine »** (rem est l'acronyme anglais de « <i lang="en">root em</i> » qu'on pourrait traduire par « em racine ».) Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `rems` prendront leur taille à partir de l'élément racine (`<html>`). Cela signifie que les niveaux successifs ne gagneront pas en largeur.
+**Pour récapituler, l'unité `rem` signifie «&nbsp;la taille de police de l'élément racine&nbsp;»** (rem est l'acronyme anglais de «&nbsp;<i lang="en">root em</i>&nbsp;» qu'on pourrait traduire par «&nbsp;em racine&nbsp;».) Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `rems` prendront leur taille à partir de l'élément racine (`<html>`). Cela signifie que les niveaux successifs ne gagneront pas en largeur.
 
 Toutefois, si vous modifier la taille de la police avec `font-size` pour `<html>` dans la feuille CSS, vous pourrez voir que toutes les tailles varient en fonction de celle-ci, tant celles qui utilisent `rem` que celles qui utilisent `em`.
 
@@ -190,7 +190,7 @@ Ces valeurs sont un peu plus complexes et moins faciles à comprendre, mais elle
 
 ### Les valeurs RGB et RGBA
 
-La troisième façon que nous aborderons ici est RGB (pour « <i lang="en">Red, Green, Blue</i> » soit&nbsp;: rouge, vert, bleu en français). Une valeur RGB est une fonction `rgb()` à laquelle on passe trois paramètres qui représentent respectivement les valeurs des canaux rouge, vert, bleu (de la même façon que pour les valeurs hexadécimales). Contrairement aux valeurs hexadécimales, les valeurs des composantes ne sont pas exprimées en hexadécimal (avec des chiffres de 0 à f) mais avec un nombre décimal compris entre 0 et 255. Cela rend la compréhension de la valeur plus simple.
+La troisième façon que nous aborderons ici est RGB (pour «&nbsp;<i lang="en">Red, Green, Blue</i>&nbsp;» soit&nbsp;: rouge, vert, bleu en français). Une valeur RGB est une fonction `rgb()` à laquelle on passe trois paramètres qui représentent respectivement les valeurs des canaux rouge, vert, bleu (de la même façon que pour les valeurs hexadécimales). Contrairement aux valeurs hexadécimales, les valeurs des composantes ne sont pas exprimées en hexadécimal (avec des chiffres de 0 à f) mais avec un nombre décimal compris entre 0 et 255. Cela rend la compréhension de la valeur plus simple.
 
 Réécrivons notre dernier exemple afin d'utiliser les couleurs RGB&nbsp;:
 

@@ -82,7 +82,7 @@ Cet attribut doit être spécifié, hormis pour les éléments {{ SVGElement("sv
 
 Les éléments suivants peuvent utiliser l'attribut `width`&nbsp;:
 
-- [Filter primitive elements](/fr/SVG/Element#FilterPrimitive "en/SVG/Element#FilterPrimitive") »
+- [Filter primitive elements](/fr/SVG/Element#FilterPrimitive "en/SVG/Element#FilterPrimitive")&nbsp;»
 - {{ SVGElement("filter") }}
 - {{ SVGElement("foreignObject") }}
 - {{ SVGElement("image") }}
