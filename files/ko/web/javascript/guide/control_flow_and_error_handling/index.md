@@ -1,38 +1,45 @@
 ---
-title: 제어 흐름과 에러 처리
+title: 제어 흐름과 오류 처리
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
 tags:
-  - 가이드
-  - 자바 스크립트
-  - 초보자
+  - Beginner
+  - Decision making
+  - Error Handling
+  - Flow control
+  - Guide
+  - JavaScript
+  - Logic
+  - control
+  - l10n:priority
+  - statements
 translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
-JavaScript는 어플리케이션 상의 상호작용을 통합하는데 사용할 수 있는 일련의 문법, 특히 제어흐름 문을 지원합니다. 이 장에서는 이러한 문법의 개요를 제공합니다.
+{{jsSidebar("JavaScript Guide")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
-[JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Statements)는 이 장의 문법에 대한 철저하고 자세한 내용은 포함하고 있습니다. 세미콜론 (;) 은 JavaScript 코드 상에서 문장을 나누는데 사용됩니다.
+JavaScript는 애플리케이션에 다양한 상호작용을 추가하기 위한 일련의 명령문, 특히 제어 흐름 명령문을 지원합니다. 이번 장에서는 이 명령문들을 간략하게 살펴보겠습니다.
 
-JavaScript 표현식도 문법입니다. 표현식에 대한 자세한 내용은 [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)를 참조하세요.
+여기서 다룬 명령문들의 자세한 설명은 [JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Statements)에서 읽을 수 있습니다. 세미콜론(`;`)은 두 명령문을 분리하기 위해 사용했습니다.
 
-## Block 문
+모든 JavaScript 표현식은 명령문이기도 합니다. 표현식에 대한 자세한 정보는 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)에서 확인하세요.
 
-Block 문은 코드를 묶는 가장 기본적인 문법입니다. Block 문은 중괄호 ( { } )에 의해 범위가 결정됩니다.
+## 블록문
+
+가장 기본적인 명령문은, 명령문들을 그룹으로 묶을 수 있는 **블록문**입니다. 블록문의 블록은 한 쌍의 중괄호로 감싸는 것으로 나타냅니다.
 
 ```js
 {
   statement_1;
   statement_2;
-  .
-  .
-  .
+  ⋮
   statement_n;
 }
 ```
 
-### 예시
+### 예제
 
-Block 문은 일반적으로 제어 흐름 문(if, for, while)과 함께  사용됩니다.
+블록문은 제어 흐름 명령문과 많이 사용합니다. (`if`, `for`, `while`)
 
 ```js
 while (x < 10) {
@@ -40,29 +47,33 @@ while (x < 10) {
 }
 ```
 
-여기서, `{ x++; }`는 block 문입니다.
+여기서 `{ x++; }`가 블록문입니다.
 
-**중요**: ECMAScript2015 이전의 JavaScript는 **블록 범위를 가지고 있지 않습니다.** Block 내에서 선언한 변수는 블록을 넘어 변수가 위치한 함수 혹은 스크립트에 영향을 끼치게 됩니다.즉, block 문은 변수의 범위를 정의하지 않습니다. 자바스크립트의 "독립" block 은 C 혹은 Java의 그것과 완전히 다른 결과를 가집니다. 예를 들어:
-
-```js
-var x = 1;
-{
-  var x = 2;
-}
-console.log(x); // outputs 2
-```
-
-블록 내에 var x 문이 블록 전에 var x 문과 같은 범위에 있기 때문에 2를 출력합니다. C 나 Java에서 해당 코드는 1을 출력합니다.
-
-ECMAScript2015부터, `let` 그리고 `const` 변수 선언으로 변수의 블록 범위를 제한할 수 있습니다. 자세한 내용은 {{jsxref("Statements/let", "let")}}와 {{jsxref("Statements/const", "const")}} 참조 페이지를 참조하세요.
+> **참고:** ECMA2015 (제6판) 이전의 JavaScript에는 블록 스코프가 **없었습니다**! 구형 JavaScript 코드에서는 블록 내에 정의한 변수의 스코프를 그 블록이 아니라, 변수 선언을 포함한 함수 또는 스크립트로 설정합니다. 때문에 변수 할당의 영향은 블록을 넘어서도 확인할 수 있습니다. 즉, 블록문이 스코프를 정의하지 않습니다.
+>
+> JavaScript의 "독립 블록"은 C나 Java에서 기대할 수 있는 것과는 완전히 다른 결과를 낳습니다. 예를 들어,
+>
+> ```js
+> var x = 1;
+> {
+>   var x = 2;
+> }
+> console.log(x); // 2 출력
+> ```
+>
+> 위 코드가 `2`를 출력하는 이유는, 블록 내의 `var x`가 블록 밖의 `var x`와 같은 스코프를 갖기 때문입니다. C와 Java였다면, 위와 같은 코드에선 `1`을 출력했을 것입니다.
+>
+> **ECMAScript 2015**에 도입된 `let`과 `const` 변수 선언은 블록 스코프를 가집니다. 참고서의 {{jsxref("Statements/let", "let")}}과 {{jsxref("Statements/const", "const")}} 문서에서 더 많은 정보를 확인하세요.
 
 ## 조건문
 
-조건문은 특정 조건이 참인 경우에 실행하는 명령의 집합입니다. JavaScript는 두 가지 조건문을 지원합니다: `if...else` and `switch`.
+조건문은 지정한 조건이 참인 경우에 실행하는 명령 집합입니다. JavaScript는 `if...else`와 `switch` 두 종류의 조건문을 지원합니다.
 
 ### `if...else` 문
 
-특정 조건이 참인 경우 문장을 실행하기 위해 if 문을 사용합니다. 또한 선택적으로 조건이 거짓인 경우 문장을 실행하기 위해서는 else 절을 사용합니다. 다음과 같은 경우 :
+명령문을 논리 조건이 참일 때 실행하려면 `if` 문을 사용하세요. 선택적으로, `else` 절을 추가해서 조건이 거짓인 경우에 실행할 명령문을 지정할 수 있습니다.
+
+`if` 문의 형태는 다음과 같습니다.
 
 ```js
 if (condition) {
@@ -72,23 +83,29 @@ if (condition) {
 }
 ```
 
-조건의 참과 거짓에 따라 수행문이 정해질 때 사용할 수 있습니다.. 무엇이 참과 거짓으로 평가되는 지에 대한 설명은 [Boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#Description)을 참조하세요. 조건이 참으로 평가되면, statement_1은 실행됩니다. 그렇지 않으면, statement_2가 실행됩니다. statement_1과 statement_2는 if문이 더 중첩 된 경우를 포함한 문장이 될 수도 있습니다.
+위 코드에서, `condition`에는 `true`나 `false`로 평가할 수 있는 아무 표현식이나 대입할 수 있습니다. ({{jsxref("Boolean")}} 문서에서 `true`와 `false` 평가에 대해 더 알아보세요.)
 
-다음과 같은 순서대로 나열된 여러 조건을 가지고 else if를 사용하여 문장을 복잡하게 할 수 있습니다:
+`condition`이 `true`로 평가되면 `statement_1`을 실행합니다. 그렇지 않으면 `statement_2`를 실행합니다. `statement_1`과 `statement_2`에는 다른 `if` 문을 포함해 아무 명령문이나 사용할 수 있습니다.
+
+`else if`를 사용해서 다수의 조건을 순차적으로 검사할 수도 있습니다.
 
 ```js
 if (condition_1) {
   statement_1;
 } else if (condition_2) {
-  statement_2;
+  statement_2;
 } else if (condition_n) {
-  statement_n;
+  statement_n;
 } else {
-  statement_last;
+  statement_last;
 }
 ```
 
-여러 줄의 문장을 실행하기 위해, block 문(`{ ... }`)안에 코드들을 작성합니다. 일반적으로, 특히 코드가 중첩할 때, 항상 block 문을 사용하는 것이 좋은 습관입니다:
+이 경우, 처음으로 `true`로 평가되는 조건의 명령문들만 실행됩니다.
+
+#### 모범 사례
+
+일반적으로는 `if`에 항상, 특히 `if` 문을 중첩할 때는 블록문을 함께 사용하는 것이 좋습니다.
 
 ```js
 if (condition) {
@@ -100,346 +117,318 @@ if (condition) {
 }
 ```
 
-조건문 안에서의 변수값 할당은 사용하지 않는 것이 좋습니다. 왜냐하면 그것은 코드를 자세히 보지 않는 경우, 동등비교연산자로 오해할 수 있기 때문입니다. 예를 들어, 다음 코드는 사용하지 마세요.
+또한 `if...else`의 조건에 "`x = y`"와 같은 할당은 지양하세요.
 
-<div class="warning"><p>if (x = y) {<br>     /* statements here */<br>}</p></div>
-
-만약 조건식에 할당을 사용해야하는 경우, 일반적인 관행은 할당 주위에 추가 괄호를 넣는 것입니다. 예를 들어:
-
-```js
+```js example-bad
 if ((x = y)) {
-  /* statements here */
+  /* 명령문 */
 }
 ```
 
-#### 거짓으로 취급하는 값
+그러나 가끔은 조건에서 할당하는 것이 더 편한 경우도 있습니다. 이런 상황에 참고할 수 있도록, [`while`](/ko/docs/Web/JavaScript/Reference/Statements/while) 문서의 ["할당을 조건으로 사용하기"](/ko/docs/Web/JavaScript/Reference/Statements/while#할당을_조건으로_사용하기)에서 일반적인 모범 구문의 안내를 제공하고 있습니다.
 
-다음과 같은 값은 거짓으로 평가됩니다:
+#### 거짓 값
+
+다음 값은 `false`로 평가됩니다. ([거짓](/ko/docs/Glossary/Falsy) 값이라고 부릅니다)
 
 - `false`
 - `undefined`
 - `null`
 - `0`
 - `NaN`
-- the empty string (`""`)
+- 빈 문자열 (`""`)
 
-조건문에 전달되었을 때 모든 개체를 포함하여 다른 모든 값은 참으로 평가합니다.
+객체를 포함해 다른 모든 값은 조건문에 전달했을 때 `true`로 평가됩니다.
 
-{{jsxref("Boolean")}} 개체의 참과 거짓 값으로 원시 boolean 값 true와 false를 혼동하지 마세요. 예를 들어:
+> **참고:** `true`와 `false` 원시 값을 {{jsxref("Boolean")}} 객체의 참과 거짓 값과 혼동하지 마세요!
+>
+> 예를 들어,
+>
+> ```js
+> const b = new Boolean(false);
+> if (b)         // 참으로 평가
+> if (b == true) // 거짓으로 평가
+> ```
 
-```js
-var b = new Boolean(false);
-if (b) // this condition evaluates to true
-```
+#### 예제
 
-#### 예시
-
-다음 예에서, `텍스트` 개체의 문자 수가 3인 경우 함수 `checkData`는 `true`를 반환합니다; 그렇지 않으면 경고를 표시하고 `false`를 반환합니다.
+다음 예제에서, 함수 `checkData`는 `Text` 객체에 포함된 문자의 수가 3이면 `true`를 반환합니다. 그렇지 않으면 경고를 표시한 후 `false`를 반환합니다.
 
 ```js
 function checkData() {
   if (document.form1.threeChar.value.length == 3) {
     return true;
   } else {
-    alert("Enter exactly three characters. " +
-    document.form1.threeChar.value + " is not valid.");
+    alert(
+      '정확히 세 글자를 입력하세요. ' +
+      `${document.form1.threeChar.value}은(는) 유효하지 않습니다.`);
     return false;
   }
 }
 ```
 
-### `switch`문
+### `switch` 문
 
-Switch문은 프로그램이 표현식을 평가하고  값을 조건과 비교합니다. 만약 값이 일치한다면,  프로그램은 각 조건의 하위 문장을 실행합니다. Switch문은 아래와 같이 사용합니다.:
+`switch` 문은 프로그램이 표현식을 평가한 후, 그 값과 `case` 레이블의 값을 비교해 일치하는 `case`의 명령문을 실행합니다.
+
+`switch` 문의 모습은 다음과 같습니다.
 
 ```js
 switch (expression) {
   case label_1:
-    statements_1
-    [break;]
+    statements_1;
+    break;
   case label_2:
-    statements_2
-    [break;]
-    ...
+    statements_2;
+    break;
+    …
   default:
-    statements_def
-    [break;]
+    statements_default;
 }
 ```
 
-프로그램은 주어진 값과 일치하는 case 라벨을 찾습니다. 그리고나서 관련된 구문을 수행합니다. 만약 매치되는 라벨이 없다면 그 default 절을 찾습니다. 찾게되면, 관련된 구문을 수행합니다.  default 절을 못 찾게 된다면 프로그램의 switch문은 종료됩니다. 관례상, default 절은 마지막절입니다. 하지만 꼭 그럴 필요는 없습니다.
+JavaScript는 위의 `switch` 문을 다음의 과정으로 평가합니다.
 
-한번 일치된 문장이 수행되고 switch문을 따라서 계속 수행한다면 각각의 조건절로 연결된 선택적인 break문은 그 프로그램이 switch문을 벗어나게 합니다. 만약 break문이 생략된다면, 그 프로그램은 switch문안에서 다음 문장을 계속 수행합니다.
+- 우선 표현식(`expression`)의 결과와 일치하는 레이블을 가진 `case` 절을 찾아, 관련된 명령문을 실행합니다.
+- 일치하는 레이블을 찾지 못했으면 `default` 절을 탐색합니다.
+  - `default` 절을 찾았으면 관련된 명령문을 실행합니다.
+  - `default` 절을 찾지 못했으면 `switch` 문 바깥의 다음 명령문을 실행합니다.
+  - (`default`를 마지막에 배치하는 것은 관습적인 것으로, 사실 위치는 상관 없습니다.)
 
-#### **예시**
+#### break 문
 
-아래 예에서, 만약 "fruittype"가 "Bananas"라면, 프로그램은 case "Bananas"와 값이 일치합니다. 그리고 관련된 문장을 실행합니다. 프로그램의 switch문은 break문을 만났을 때 종료됩니다. 그리고 switch문 다음에 나오는 문장을 실행합니다. 만약 break문이 생략되면, 조건문 "Cherries" 와 관련된 문장도 실행됩니다.
+각각의 `case`에는 선택적으로 `break` 문을 추가할 수 있습니다. `break`는 `case`의 명령문을 실행한 후에 프로그램이 `switch`의 밖으로 나가도록 합니다. `break`를 생략하면 프로그램은 `switch` 문을 탈출하지 않고, 다음 `case`의 명령문을 실행합니다.
+
+#### 예제
+
+이 예제에서는 `fruitType`이 `'바나나'`라면 `'바나나'` 레이블을 가진 `case`의 명령문을 실행합니다. `break`를 마주치면 프로그램이 `switch` 밖으로 나가서 바로 다음 명령문을 실행합니다. `'바나나'`에 `break`가 없었다면 `case '체리'` 아래의 명령문도 실행했을 것입니다.
 
 ```js
 switch (fruittype) {
-  case "Oranges":
-    console.log("Oranges are $0.59 a pound.");
+  case '오렌지':
+    console.log('오렌지는 파운드 당 $0.59입니다.');
     break;
-  case "Apples":
-    console.log("Apples are $0.32 a pound.");
+  case '사과':
+    console.log('사과는 파운드 당 $0.32입니다.');
     break;
-  case "Bananas":
-    console.log("Bananas are $0.48 a pound.");
+  case '바나나':
+    console.log('바나나는 파운드 당 $0.48입니다.');
     break;
-  case "Cherries":
-    console.log("Cherries are $3.00 a pound.");
+  case '체리':
+    console.log('체리는 파운드 당 $3.00입니다.');
     break;
-  case "Mangoes":
-    console.log("Mangoes are $0.56 a pound.");
+  case '망고':
+    console.log('망고는 파운드 당 $0.56입니다.');
     break;
-  case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
+  case '파파야':
+    console.log('망고와 파파야는 파운드 당 $2.79입니다.');
     break;
   default:
-   console.log("Sorry, we are out of " + fruittype + ".");
+    console.log(`죄송합니다. ${fruitType}은 품절입니다.`);
 }
-console.log("Is there anything else you'd like?");
+console.log('더 필요한게 있으신가요?');
 ```
 
+## 예외 처리 명령문
 
+`throw` 문을 사용하면 예외를 던질 수 있고, 던진 예외는 `try...catch` 문으로 처리할 수 있습니다.
 
-## 예외처리문
-
-여러분은 throw문을 사용하는 예외들을 사용 할 수 있고 try...catch문을 사용하는 예외들 또한 다룰 수 있습니다.
-
-- [`throw` ](#throw_statement)문
-- [`try...catch` ](#try_catch_statement)문
+- [`throw` 문](#throw_문)
+- [`try...catch` 문](#try...catch_문)
 
 ### 예외 유형
 
-대부분 자바스크립트안에서 사용될 수 있습니다. 그럼에도 불구하고, 반드시 사용되는 객체들이 같은 것으로 만들어 지지는 않습니다. 이것들은 에러같은 숫자들이나 문자열들을 사용하는데 흔한 일이지만 특히 이런 목적으로 만들어진 예외 유형중 하나를 사용하는데 더 효과적입니다:
+JavaScript에서는 모든 것을 `throw`로 던질 수 있습니다. 그래서 숫자나 문자열을 오류로 던지는 경우도 많지만, 예외를 나타내기 위해 사전에 정의된 예외 유형을 쓰는 것이 보통 더 효과적입니다.
 
-- [ECMAScript exceptions](/ko/docs/Web/JavaScript/Reference/Global_Objects#Fundamental_objects)
-- {{domxref("DOMException")}} and {{domxref("DOMError")}}
+- [ECMAScript 예외](/ko/docs/Web/JavaScript/Reference/Global_Objects/Error#오류_유형)
+- [`DOMException`](/ko/docs/Web/API/DOMException), [`DOMError`](/ko/docs/Web/API/DOMError)
 
 ### `throw` 문
 
-예외를 사용할 때 `throw` 문을 사용합니다. 여러분이 예외를 사용할 때, 사용되는 값을 포함하는 표현을 명시해야합니다:
-
-    throw expression;
-
-여러분은 구체적 유형의 표현이 아니라도 어떤 표현이든지 사용할 것입니다. 다음 코드는 다양한 유형중의 여러 예외들을 사용합니다:
+예외를 던질 땐 `throw` 문을 사용하세요. `throw`에 던질 값을 지정하면 됩니다.
 
 ```js
-throw "Error2";   // String type
-throw 42;         // Number type
-throw true;       // Boolean type
-throw {toString: function() { return "I'm an object!"; } };
+throw expression;
 ```
 
-<div class="note"><strong>Note:</strong> 여러분은 <em> 예외를 사용할때 </em>객체를 명시할 수 있습니다. 그리고나서  <code>catch</code> 문안에서 객체의 특성들을 참조 할 수 있습니다. 다음 예시는 <code>myUserException</code> of type <code>UserException</code>객체를 만듭니다 그리고 throw문에서 사용합니다.</div>
+특정 타입의 표현식이 아니라 무엇이든 던질 수 있습니다. 아래 코드에서 다양한 타입을 예외로 던지는 모습을 볼 수 있습니다.
 
 ```js
-// Create an object type UserException
-function UserException (message){
-  this.message=message;
-  this.name="UserException";
-}
-
-// Make the exception convert to a pretty string when used as a string
-// (e.g. by the error console)
-UserException.prototype.toString = function () {
-  return this.name + ': "' + this.message + '"';
-}
-
-// Create an instance of the object type and throw it
-throw new UserException("Value too high");
+throw 'Error2'; // String
+throw 42; // Number
+throw true; // Boolean
+throw {
+  toString: function () {
+    return '저는 객체예요';
+  },
+};
 ```
 
-### `try...catch` 문법
+### `try...catch` 문
 
-`try...catch` 문법은 시도할 블록을 표시하고, 예외가 발생하였을때, 하나 이상의 반응을 명시합니다. 만약 예외가 발생하였을때, `try...catch` 문법은 예외를 잡아냅니다.
+`try...catch` 문은 실행을 시도할 블록을 표시하고, 그 안에서 예외가 발생할 경우 처리를 맡을 하나 이상의 반응 명령문을 지정합니다. 예외가 발생하면, `try...catch` 문이 잡아냅니다.
 
-`try...catch` 문법은 하나 이상의 문장을 포함한 `try` 블록과, `try` 블록 에서 예외가 발생하였을때, 어떤 것을 할 것인지 명시된 문장을 포함한 0개 이상의 `catch` 블록으로 구성됩니다. `try` 블록이 성공하길 원하고, `try` 블록이 성공하지 않았다면, 제어를 `catch` 블록으로 넘기고 싶을 것입니다. 만약 `try` 블록(또는 `try` 블록에서 호출하는 함수) 의 문장이 예외를 발생시켰을때, 제어는 즉시 `catch` 블록으로 이동합니다. 만약 `try` 블록에서 예외가 발생하지 않았을 때, `catch` 블록을 건너뜁니다. `finally` 블록은 `try` 블록과 `catch` 블록의 시행이 끝나고 `try...catch` 문법 다음의 문장이 시행 되기 전에 시행됩니다.
+`try...catch` 문은 하나 이상의 명령문을 포함하는 `try` 블록, 그리고 `try`에서 예외가 발생할 경우 그 예외를 처리할 명령문을 담은 하나의 `catch` 블록으로 구성합니다.
 
-다음의 예제는 `try...catch` 문법을 사용합니다. 예제는 함수에 전해진 값을 토대로 달의 이름을 검색하는 함수를 호출합니다. 만약 값이 달 숫자값(1-12) 에 일치하지 않으면,`"InvalidMonthNo"` 라는 값과 함께 예외가 발생하고 `catch` 블록의 문장들이 `monthName` 변수를 `unknown` 값으로 설정합니다.
+다르게 설명해보면, `try...catch`는 성공하길 바라는 코드(`try` 블록)가 만약 실패하면 `catch`로 제어권을 넘겨야 할 때 사용합니다. `try` 블록의 명령문 중 하나에서 예외를 던지면, 실행 제어권은 그 즉시 `catch` 블록으로 넘어갑니다. `try` 블록 내에서 예외가 발생하지 않았으면 `catch` 블록은 실행되지 않습니다.
+
+다음은 `try...catch`의 사용 모습을 보이는 예제입니다. `getMonthName()`은 매개변수의 값을 사용해 `months` 배열에서 영어 월 이름을 가져옵니다. 그런데 유효한 월(`1`-`12`) 범위의 숫자 값을 받은 것이 아니라면 `'InvalidMonthNo'`를 값으로 한 예외를 던집니다. 그러면 `catch` 블록의 명령문이 `monthName` 변수를 `'unknown'`으로 설정합니다.
 
 ```js
-function getMonthName (mo) {
-  mo = mo-1; // Adjust month number for array index (1=Jan, 12=Dec)
-  var months = ["Jan","Feb","Mar","Apr","May","Jun","Jul",
-                "Aug","Sep","Oct","Nov","Dec"];
-  if (months[mo] != null) {
+function getMonthName(mo) {
+  mo = mo - 1; // 배열 인덱스에 맞춰 월 조절 (1 = Jan, 12 = Dec)
+  let months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  if (months[mo]) {
     return months[mo];
   } else {
-    throw "InvalidMonthNo"; //throw keyword is used here
+    throw 'InvalidMonthNo'; // 여기서 throw 키워드 사용
   }
 }
 
-try { // statements to try
-  monthName = getMonthName(myMonth); // function could throw exception
-}
-catch (e) {
-  monthName = "unknown";
-  logMyErrors(e); // pass exception object to error handler
+try {
+  // 시도할 명령문
+  monthName = getMonthName(myMonth); // 예외가 발생할 수 있는 함수
+} catch (e) {
+  monthName = 'unknown';
+  logMyErrors(e); // 오류 처리기에 예외 객체 전달
 }
 ```
 
 #### `catch` 블록
 
-`try` 블록에서 발생할수 있는 모든 예외를 처리하기 위해 `catch` 블록을 사용할 수 있습니다.
-
-    catch (catchID) {
-      statements
-    }
-
-`catch` 블록은 `throw`문장에 의해 명시된 값을 가지고 있는 식별자(앞 구문의 `catchID`)를 명시합니다; 이 식별자를 발생된 예외에 대한 정보를 얻기 위하여 사용할 수 있습니다. 자바스크립트는 `catch` 블록에 진입했을때 식별자를 생성합니다; 식별자는 `catch` 블록에 있는 동안만 유지됩니다; `catch` 블록의 시행이 끝난 후, 식별자는 더이상 사용하실 수 없습니다.
-
-예를 들어, 다음의 코드는 예외를 발생시킵니다. 예외가 발생하였을때, 제어는 `catch` 블록으로 넘어갑니다.
+`try` 블록에서 발생할 수 있는 모든 예외는 `catch` 블록에서 처리할 수 있습니다.
 
 ```js
-try {
-  throw "myException" // generates an exception
-}
-catch (e) {
-  // statements to handle any exceptions
-  logMyErrors(e) // pass exception object to error handler
+catch (catchID) {
+  statements;
 }
 ```
 
+`catch` 블록은 `throw` 명령문이 던진 예외의 값을 담을 식별자(위 코드 블록에서는 `catchID`)를 지정합니다. 이 식별자를 통해, 발생한 예외의 정보를 알아낼 수 있습니다.
+
+JavaScript는 `catch` 블록에 진입해야 예외의 식별자를 생성하고, `catch` 블록의 밖으로 나가면 식별자를 더 이상 유지하지 않습니다. 즉, `catch` 블록의 실행이 끝나면 예외 식별자에 접근할 수 없습니다.
+
+아래는 예외를 던지고 잡는 예제 코드입니다. 예외를 던지면 그 순간 제어권이 `catch` 블록으로 넘어갑니다.
+
+```js
+try {
+  throw 'myException'; // 예외 생성
+} catch (e) {
+  // 모든 예외를 처리하기 위한 명령문
+  logMyErrors(e); // 오류 처리기에 예외 객체 전달
+}
+```
+
+> **참고:** `catch` 블록 안에서 오류를 기록할 땐 `console.log()`보다 `console.error()`를 사용하는 것을 추천합니다. `console.error()`는 출력 형식도 오류에 적합하고, 현재 페이지에서 발생한 오류의 목록도 업데이트합니다.
+
 #### `finally` 블록
 
-`finally` 블록은 `try` 블록과 `catch` 블록이 시행되고, `try...catch` 문법 다음 문장이 시행되기 전에 시행되는 문장들을 포함하고 있습니다. `finally` 블록은 예외가 발생하든 안하든 수행됩니다. 만약 예외가 발생하였을때, `finally` 블록 안의 문장들은 어떤 `catch` 블록도 예외를 처리하지 않더라도 시행됩니다.
+`finally` 블록은 `try`와 `catch` 블록 실행이 끝난 후 이어서, 그리고 `try...catch...finally` 문 이후의 명령문들보다는 먼저 실행할 명령문을 담습니다.
 
-`finally` 블록을 예외가 발생하였을때 여러분의 스크립트가 우아하게 실패하도록 만들기 위하여 사용할 수 있습니다. 예를 들어, 여러분의 스크립트가 묶어둔 자원들을 풀어줄 필요가 있습니다. 다음의 예제는 파일을 열고, 파일을 사용하는 문장(서버 측 자바스크립트는 파일에 접근하는 것을 허가합니다)을 시행합니다. 만약 파일이 열린 동안 예외가 발생했다면, `finally` 블록은 스크립트가 실패하기 전에 파일을 닫아줍니다.
+`finally` 블록은 `try` 블록 안에서 예외가 발생했는지 여부에 관계 없이, `catch` 블록이 따로 존재하지 않더라도 항상 실행됩니다.
+
+`finally` 블록을 활용하면 예외가 발생했을 때 프로그램이 우아하게 실패하도록 방어할 수 있습니다. 예를 들어, 예외의 발생 여부를 따지지 않고 스크립트가 점유한 리소스를 해제해야 할 때 사용하세요.
+
+다음의 코드 예제는 파일을 열어서 그 안의 데이터를 사용하는 함수(`writeMyFile()`)를 호출하는 예시입니다. (서버사이드 JavaScript에서는 파일에 접근할 수 있습니다) 파일이 열려있는 동안 예외가 나타나면, 스크립트가 실패하기 전에 `finally` 블록이 파일을 닫아줍니다. `finally`를 사용함으로써 오류가 발생하더라도 파일이 열린 채 방치되는 일을 방지할 수 있는 것입니다.
 
 ```js
 openMyFile();
 try {
-  writeMyFile(theData); //This may throw a error
-} catch(e) {
-  handleError(e); // If we got a error we handle it
+  writeMyFile(theData); // 오류가 발생할 수 있는 코드
+} catch (e) {
+  handleError(e); // 오류가 발생하면 처리함
 } finally {
-  closeMyFile(); // always close the resource
+  closeMyFile(); // 항상 리소스 해제
 }
 ```
 
-만약 `finally` 블록이 값을 반환하였을 경우, `try` 블록과 `catch`블록의 `return` 문장과 상관없이 전체 `try-catch-finally` 생산물의 반환값이 됩니다:
+만약 `finally` 블록이 값을 반환한다면, 그 값이 전체 `try...catch...finally` 문의 반환 값이 됩니다. `try`와 `catch` 블록에서 반환하는 값은 무시합니다.
 
 ```js
 function f() {
   try {
     console.log(0);
-    throw "bogus";
-  } catch(e) {
+    throw 'bogus';
+  } catch (e) {
     console.log(1);
-    return true; // this return statement is suspended
-                 // until finally block has completed
-    console.log(2); // not reachable
+    return true; // finally 블록의 실행이 끝날 때까지 중단됨
+    console.log(2); // 접근 불가
   } finally {
     console.log(3);
-    return false; // overwrites the previous "return"
-    console.log(4); // not reachable
+    return false; // 앞선 return보다 우선함
+    console.log(4); // 접근 불가
   }
-  // "return false" is executed now
-  console.log(5); // not reachable
+  // return false가 실행됨
+  console.log(5); // 접근 불가
 }
-f(); // alerts 0, 1, 3; returns false
+console.log(f()); // 0, 1, 3, false
 ```
 
-`finally` 블록에 의한 반환값 덮어쓰기는 예외가 발생하거나 다시 예외가 발생했을때 또한 적용됩니다.
+`finally`의 반환 값이 우선하는 것은 `catch` 블록에서 던진 예외에도 적용됩니다.
 
 ```js
 function f() {
   try {
-    throw "bogus";
-  } catch(e) {
-    console.log('caught inner "bogus"');
-    throw e; // this throw statement is suspended until
-             // finally block has completed
+    throw '예외';
+  } catch (e) {
+    console.log('내부 "예외" 포획');
+    throw e; // finally 블록의 실행이 끝날 때까지 중단
   } finally {
-    return false; // overwrites the previous "throw"
+    return false; // 앞선 throw보다 우선함
   }
-  // "return false" is executed now
+  // return false가 실행됨
 }
 
 try {
-  f();
-} catch(e) {
-  // this is never reached because the throw inside
-  // the catch is overwritten
-  // by the return in finally
+  console.log(f());
+} catch (e) {
+  // 도달 불가능한 catch 블록!
+  // f()가 실행되면 `finally`에서 false를 반환함
+  // 반환이 catch의 throw보다 우선했으므로 예외가 없음
   console.log('caught outer "bogus"');
 }
 
-// OUTPUT
-// caught inner "bogus"
+// 출력 결과
+// 내부 "예외" 포획
+// false
 ```
 
-#### try...catch 문법 중첩하기
+#### try...catch 문 중첩하기
 
+`try...catch` 문을 하나 이상 중첩할 수 있습니다.
 
+안쪽 `try` 블록이 `catch` 블록을 가지지 않을 경우,
 
-하나 이상의 `try ... catch` 문을 중첩 할 수 있습니다. 중첩된 안쪽 `try ... catch` 문에 `catch` 블록이 없으면 `finally` 블록이 있어야하고 `try ... catch` 문의 `catch` 블록에 일치하는 항목이 있는지 확인해야합니다. 자세한 내용은 [try...catch](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/try...catch) 참조 페이지의 [nested try-blocks](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/try...catch#Nested_try-blocks)을 참조하십시오.
+1. 이 `try` 블록에는 반드시 `finally` 블록이 있어야 합니다.
+2. 바깥 `try...catch` 문의 `catch` 블록이 안쪽 예외를 처리하게 됩니다.
 
-### `Error` 객체를 도구화 하기
+더 자세한 정보는 [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) 참고서의 [중첩 try 블록](/ko/docs/Web/JavaScript/Reference/Statements/try...catch#중첩_try_블록)을 참고하세요.
 
-오류의 종류에 따라, 더 정제된 메세지를 얻기 위하여 'name'속성과 'message'속성을 사용할수도 있습니다. 'name'속성은 오류의 일반 클래스(e.g., 'DOMException' 또는 'Error')를 제공하고, 'message' 속성이 error 객체를 문자열로 바꿀수 있는 것 보다 더 간결한 메세지를 제공합니다.
+### Error 객체 활용하기
 
-만약 이 속성들에 대하여 이득을 얻기 위해(여러분의 catch 블록이 시스템의 예외와 여러분의 예외를 구분하지 않을 때와 같은 것) 여러분만의 예외를 발생시킨다면, 여러분은 Error 생성자를 사용할 수 있습니다. 예를 들어:
+`Error` 객체의 `name`과 `message` 속성으로부터 오류의 유형에 따라 좀 더 정제된 메시지를 가져올 수 있습니다.
+
+`name`은 `Error`의 일반적인 클래스(`DOMException`, `Error`, 등등)를 제공합니다. `message`는 오류 메시지인데, 대개 오류 객체를 문자열로 변환한 결과보다 더 간결한 형태입니다.
+
+직접 예외를 던지려는 경우에는, 특히 `catch` 블록이 시스템 오류와 직접 던지는 예외를 구분하지 않는다면, `Error` 생성자를 사용해서 두 속성을 제공할 수 있습니다.
 
 ```js
 function doSomethingErrorProne () {
   if (ourCodeMakesAMistake()) {
-    throw (new Error('The message'));
+    throw (new Error('메시지'));
   } else {
     doSomethingToGetAJavascriptError();
   }
 }
-....
+⋮
 try {
   doSomethingErrorProne();
 }
 catch (e) {
-  console.log(e.name); // logs 'Error'
-  console.log(e.message); // logs 'The message' or a JavaScript error message)
+  console.log(e.name); // 'Error' 기록
+  console.log(e.message); // '메시지' 또는 JavaScript 오류 메시지 기록
 }
 ```
 
-## Promises
-
-ECMAScript2015를 시작하면서, 자바스크립트는 지연된 흐름과 비동기식의 연산을 제어할 수 있게 하는 {{jsxref("Promise")}} 객체에 대한 지원을 얻게 되었습니다.
-
-`Promise` 는 다음의 상태중 하나입니다:
-
-- _pending_: 초기상태, fulfilled 되거나 rejected 되지 않음.
-- _fulfilled_: 연산 수행 성공.
-- _rejected_: 연산 수행 실패.
-- _settled_: Promise 가 fulfilled 이거나 rejected 이지만 pending 은 아님.
-
-<img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png">
-
-### XHR 를 통해 이미지 불러오기
-
-이미지를 불러오기 위해 `Promise` 와 [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) 를 사용한 간단한 예제는 MDN GitHub [promise-test](https://github.com/mdn/promises-test/blob/gh-pages/index.html) repository 에 있습니다. [이 예제 가 동작하는 것을 보실 수 있습니다.](http://mdn.github.io/promises-test/) 각 단계는 설명되어있고 Promise 와 XHR 구조를 친밀하게 이해할수 있게 합니다. 여기 Promise 흐름을 보여줘서 아이디어를 얻을 수 있는 설명되지 않은 버전이 있습니다:
-
-```js
-function imgLoad(url) {
-  return new Promise(function(resolve, reject) {
-    var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
-    request.onload = function() {
-      if (request.status === 200) {
-        resolve(request.response);
-      } else {
-        reject(Error('Image didn\'t load successfully; error code:'
-                     + request.statusText));
-      }
-    };
-    request.onerror = function() {
-      reject(Error('There was a network error.'));
-    };
-    request.send();
-  });
-}
-```
-
-더 자세한 정보를 얻기 위해선, {{jsxref("Promise")}} 참고 페이지를 보세요.
-
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
+  "Web/JavaScript/Guide/Loops_and_iteration")}}
