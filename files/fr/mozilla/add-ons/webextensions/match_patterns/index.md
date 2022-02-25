@@ -91,7 +91,7 @@ Le composant du chemin d’accès doit commencer par un `/`.
 
 Ensuite, il peut contenir éventuellement toute combinaison du caractère générique `*` et de l’un des caractères autorisés dans les chemins d’URL ou chaînes de requête. Contrairement à l’_hôte_, le composant du _chemin_ peut contenir le caractère générique `*` au milieu ou à la fin, et le caractère `*` peut apparaître plusieurs fois.
 
-La valeur du _chemin_ matches correspond à la chaîne de caractères qui est le chemin plus la  [chaine de requête URL](https://en.wikipedia.org/wiki/Query_string). Ceci inclut le signe `?` entre les deux, si la chaîne de requête est présente dans l'URL. Par exemple, si vous voulez faire correspondre des URLs sur n'importe quel domaine où le chemin URL se termine par `foo.bar`, alors vous devez utiliser un tableau de Match Patterns comme `['*://*/*foo.bar', '*://*/*foo.bar?*']`. Le `?*` est nécessaire, plutôt que juste la `bar*`, afin d'ancrer la fin `*` comme s'appliquant à la chaîne de requête URL et non à une partie du chemin URL.
+La valeur du _chemin_ matches correspond à la chaîne de caractères qui est le chemin plus la  [chaine de requête URL](https://en.wikipedia.org/wiki/Query_string). Ceci inclut le signe `?` entre les deux, si la chaîne de requête est présente dans l'URL. Par exemple, si vous voulez faire correspondre des URLs sur n'importe quel domaine où le chemin URL se termine par `foo.bar`, alors vous devez utiliser un tableau de Match Patterns comme `['*://*/*foo.bar', '*://*/*foo.bar?*']`. Le `?*` est nécessaire, plutôt que juste la `bar*`, afin d'ancrer la fin `*` comme s'appliquant à la chaîne de requête URL et non à une partie du chemin URL.
 
 Ni l'[identificateur de fragment d'URL](https://en.wikipedia.org/wiki/Fragment_identifier), ni le `#` qui le précède, ne sont considérés comme faisant partie du _chemin_.
 
@@ -207,7 +207,7 @@ La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des sc
       <td>
         <p><code>https://*/path</code></p>
         <p>
-          Correspondance aux URLs  HTTPS sur n'importe quel hôte, dont le chemin
+          Correspondance aux URLs  HTTPS sur n'importe quel hôte, dont le chemin
           est "path".
         </p>
       </td>

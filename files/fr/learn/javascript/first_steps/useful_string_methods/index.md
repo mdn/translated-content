@@ -51,7 +51,7 @@ let string = 'Ceci est une chaîne';
 
 votre variable devient une instance de l'objet `String`, et par conséquent possède un grand nombre de propriétés et de méthodes associées. Allez sur la page de l'objet {{jsxref("String")}} et regardez la liste sur le côté de la page&nbsp;!
 
-**Avant que votre cervelle ne commence à bouillir, pas de panique !** Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous utiliserez  certaines assez souvent. Nous allons les voir maintenant.
+**Avant que votre cervelle ne commence à bouillir, pas de panique !** Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous utiliserez  certaines assez souvent. Nous allons les voir maintenant.
 
 Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés, ou utiliser la [console de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
 
@@ -174,13 +174,13 @@ Cette commande doit renvoyer le nombre 7, parce que «&nbsp;mozilla&nbsp;» comp
 
 ### Retrouver un caractère donné dans une chaîne
 
-Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver&nbsp;; par exemple, pour retrouver le premier caractère, vous devez  écrire ceci&nbsp;:
+Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver&nbsp;; par exemple, pour retrouver le premier caractère, vous devez  écrire ceci&nbsp;:
 
 ```js
 browserType[0];
 ```
 
-Les ordinateurs décomptent à partir de 0, pas de 1&nbsp;! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit&nbsp;; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut&nbsp;:
+Les ordinateurs décomptent à partir de 0, pas de 1&nbsp;! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit&nbsp;; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut&nbsp;:
 
 ```js
 browserType[browserType.length-1];

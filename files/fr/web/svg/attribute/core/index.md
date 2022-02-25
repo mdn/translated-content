@@ -3,7 +3,7 @@ title: Attributs SVG de base
 slug: Web/SVG/Attribute/Core
 translation_of: Web/SVG/Attribute/Core
 ---
-Les _attributs SVG de base_ sont  tous les attributs communs pouvant être spécifiés sur n'importe quel élément SVG.
+Les _attributs SVG de base_ sont  tous les attributs communs pouvant être spécifiés sur n'importe quel élément SVG.
 
 - `id`
 - `lang`
@@ -19,7 +19,7 @@ Les _attributs SVG de base_ sont  tous les attributs communs pouvant être spé
     _Valuer_: Tout ID valide; _Animation_: **Non**
 - {{SVGAttr('lang')}}
 
-  - : Définit le langage de l'élément  — la langue dans laquelle sont écrit les éléments non-éditables et celle dans laquelle devrait être écrits les éléments éditables. L'attribut prend pour valeur l'identifiant de la langue tel que définit dans le [document IETF "Tags for Identifying Languages" (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt).
+  - : Définit le langage de l'élément  — la langue dans laquelle sont écrit les éléments non-éditables et celle dans laquelle devrait être écrits les éléments éditables. L'attribut prend pour valeur l'identifiant de la langue tel que définit dans le [document IETF "Tags for Identifying Languages" (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
     > **Note :** SVG 2 introduit l'attribut `lang`. Si les attributs `lang` et `xml:lang` sont tous les deux définis, `xml:lang` a la priorité sur `lang`.
 

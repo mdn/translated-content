@@ -150,7 +150,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 | Spécification                                                                                                                                                                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-createIndex-IDBIndex-DOMString-name-DOMString-sequence-DOMString--keyPath-IDBIndexParameters-optionalParameters', 'createIndex()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-createIndex-IDBIndex-DOMString-name-DOMString-sequence-DOMString--keyPath-IDBIndexParameters-optionalParameters', 'createIndex()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité avec les navigateurs
 

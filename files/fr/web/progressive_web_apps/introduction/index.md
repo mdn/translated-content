@@ -49,7 +49,7 @@ Il y a des principes clés qu'une application web devrait suivre afin d'être id
 Absolument! Avec relativement peu d'effort pour implémenter l'essentiel des fonctionnalités requises par une PWA, les bénéfices sont énormes. Par exemple:
 
 - Une diminution du temps de chargement après avoir installé l'application, et ceci grâce au système de cache des [Service Workers](/fr/docs/Web/API/Service_Worker_API), s'accompagnant aussi par une économie précieuse de bande passante et de temps.
-- La possibilité de seulement mettre à jour le contenu qui a changé lorsque qu'une mise à jour d'application est disponible. A contrario, avec une  application native, même la plus petite modification peut obliger l'utilisateur à télécharger entièrement l'application à nouveau.
+- La possibilité de seulement mettre à jour le contenu qui a changé lorsque qu'une mise à jour d'application est disponible. A contrario, avec une  application native, même la plus petite modification peut obliger l'utilisateur à télécharger entièrement l'application à nouveau.
 - Une sensation d'utilisation et une apparence plus proche d'une application native— icônes d'applications sur l'écran d'accueil, des applications qui s'ouvrent en plein écran, etc.
 - Les utilisateurs sont plus engagés grâce à un système de notifications et de messages _push_, créant des utlisateurs plus impliqués apportant des taux de conversion plus élevés.
 

@@ -54,11 +54,11 @@ Maintenant que nous sommes à l'aise pour ajouter de simples images dans une pag
 
 Les développeurs ont toujours voulu utiliser la vidéo et l'audio sur le web et ce, dès le début des années 2000, quand nous avons commencé à disposer d'une bande passante suffisamment rapide pour supporter toutes sortes de vidéos (les fichiers vidéo étant beaucoup plus lourds que du texte ou des images). Au départ, les technologies embarquées telles que HTML n'avaient pas la capacité d'intégrer de la vidéo ou de l'audio, donc, les solutions «&nbsp;propriétaires&nbsp;» (ou basées sur des greffons) comme [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash) (puis, plus tard, [Silverlight](https://fr.wikipedia.org/wiki/Silverlight)) sont devenues très populaires pour gérer ce type de contenu. Ces technologies fonctionnaient bien mais avaient de nombreux inconvénients, comme une relation aléatoire avec les fonctionnalités HTML/CSS, des problèmes de sécurité et d'accessibilité.
 
-Une solution embarquée devrait résoudre la plupart de ces problèmes. Heureusement, après quelques années, la spécification {{glossary("HTML5")}} apportait ces améliorations avec les éléments  {{htmlelement("video")}} et {{htmlelement("audio")}} et des {{Glossary("API","APIs")}}{{Glossary("JavaScript")}} flambants neufs pour les contrôler. Nous ne verrons pas JavaScript ici — nous poserons juste les fondamentaux qui peuvent être obtenus avec HTML.
+Une solution embarquée devrait résoudre la plupart de ces problèmes. Heureusement, après quelques années, la spécification {{glossary("HTML5")}} apportait ces améliorations avec les éléments  {{htmlelement("video")}} et {{htmlelement("audio")}} et des {{Glossary("API","APIs")}}{{Glossary("JavaScript")}} flambants neufs pour les contrôler. Nous ne verrons pas JavaScript ici — nous poserons juste les fondamentaux qui peuvent être obtenus avec HTML.
 
-Nous ne vous apprendrons pas à produire des fichiers audio ou vidéo  — cela demande des compétences totalement différentes. Nous vous conseillons ce lien Github [fichiers d'échantillons audio et vidéo et exemples de code](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) pour votre expérience personnelle, au cas où vous ne pourriez pas y accéder par vous-même.
+Nous ne vous apprendrons pas à produire des fichiers audio ou vidéo  — cela demande des compétences totalement différentes. Nous vous conseillons ce lien Github [fichiers d'échantillons audio et vidéo et exemples de code](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) pour votre expérience personnelle, au cas où vous ne pourriez pas y accéder par vous-même.
 
-> **Note :** Avant de commencer, vous devez savoir qu'il existe un grand nombre de fournisseurs de vidéos en ligne {{glossary("OVP","OVPs")}} comme [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com), et [Vimeo](https://vimeo.com/). Pour l'audio, voyez [Soundcloud](https://soundcloud.com/)  par exemple. Ces sociétés offrent un moyen simple d'héberger et de consommer de la vidéo, donc, vous n'avez pas à vous soucier de l'énorme consommation de bande passante. Ils peuvent aussi vous proposer du code "tout-prêt" pour intégrer la vidéo/audio dans vos pages web. Si vous suivez cette procédure, vous vous éviterez quelqu'unes des difficultés abordées dans cet article. Nous parlerons en détails de ces services dans l'article suivant.
+> **Note :** Avant de commencer, vous devez savoir qu'il existe un grand nombre de fournisseurs de vidéos en ligne {{glossary("OVP","OVPs")}} comme [YouTube](https://www.youtube.com/), [Dailymotion](http://www.dailymotion.com), et [Vimeo](https://vimeo.com/). Pour l'audio, voyez [Soundcloud](https://soundcloud.com/)  par exemple. Ces sociétés offrent un moyen simple d'héberger et de consommer de la vidéo, donc, vous n'avez pas à vous soucier de l'énorme consommation de bande passante. Ils peuvent aussi vous proposer du code "tout-prêt" pour intégrer la vidéo/audio dans vos pages web. Si vous suivez cette procédure, vous vous éviterez quelqu'unes des difficultés abordées dans cet article. Nous parlerons en détails de ces services dans l'article suivant.
 
 ### L' élément \<video>
 
@@ -73,9 +73,9 @@ L'élément {{htmlelement("video")}} vous permet d'intégrer de la vidéo très 
 Les fonctionnalités de ce code sont :
 
 - {{htmlattrxref("src","video")}}
-  - : De la même manière que pour l'élément {{htmlelement("img")}}, l'attribut `src` (source) contient le chemin vers la vidéo que vous voulez intégrer.  Cela fonctionne de la même manière.
+  - : De la même manière que pour l'élément {{htmlelement("img")}}, l'attribut `src` (source) contient le chemin vers la vidéo que vous voulez intégrer.  Cela fonctionne de la même manière.
 - {{htmlattrxref("controls","video")}}
-  - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/%C3%89pilepsie).) Vous devez vous servir de l'attribut  `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript ](/fr/docs/Web/API/HTMLMediaElement)adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
+  - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/%C3%89pilepsie).) Vous devez vous servir de l'attribut  `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript ](/fr/docs/Web/API/HTMLMediaElement)adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
 - Le paragraphe dans la balise `<video>`
   - : Cela peut s'appeler solution de repli ou contenu de secours (fallback content) — si le navigateur accédant à la page ne supporte pas l'élément `<video>` , cela offre un texte alternatif qui peut être ce que vous voulez&nbsp;; dans ce cas nous avons mis un lien direct au fichier vidéo, afin que l'utilisateur puisse au moins y accéder sans avoir à se soucier du navigateur qu'il utilise.
 
@@ -133,11 +133,11 @@ Il y a possibilité d'inclure d'autres fonctionnalités dans une vidéo HTML5. R
 
 ```html
 <video controls width="400" height="400"
-       autoplay loop muted
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.mp4">lien à la vidéo</a>.</p>
+       autoplay loop muted
+       poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4">
+  <source src="rabbit320.webm" type="video/webm">
+  <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.mp4">lien à la vidéo</a>.</p>
 </video>
 ```
 
@@ -167,7 +167,7 @@ Voici les nouvelles fonctionnalités&nbsp;:
 
 Vous trouverez cet exemple [prêt pour l'interprétation](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) sur Github ( voir aussi le [ code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)). Notez que nous n'avons pas inséré l'attribut `autoplay` dans la version en direct — si la vidéo débute dès le chargement de la page, vous ne pourrez pas voir le poster&nbsp;!
 
-### L'élément  \<audio>
+### L'élément  \<audio>
 
 L'élément {{htmlelement("audio")}} fonctionne exactement de la même manière que l'élément {{htmlelement("video")}}, mais avec quelques menues différences décrites plus bas. Un exemple classique ressemble à ceci&nbsp;:
 
@@ -230,7 +230,7 @@ Un fichier WebVTT typique ressemblera à&nbsp;:
 Pour qu'il soit affiché avec la diffusion du média HTML, il faut&nbsp;:
 
 1.  Enregistrer le fichier avec l'extension `.vtt` dans un endroit sensé.
-2.  Lier le fichier `.vtt` avec l'élément {{htmlelement("track")}}. `<track>` doit être placé entre les balises `<audio>` ou `<video>`, mais après tous les éléments `<source>`. Utilisez l'attribut {{htmlattrxref("kind","track")}} pour préciser si les marqueurs sont  `subtitles`, `captions` ou `descriptions`. Plus loin, utilisez l'attribut {{htmlattrxref("srclang","track")}} pour indiquer au navigateur la langue dans laquelle sont écrit les sous‑titres.
+2.  Lier le fichier `.vtt` avec l'élément {{htmlelement("track")}}. `<track>` doit être placé entre les balises `<audio>` ou `<video>`, mais après tous les éléments `<source>`. Utilisez l'attribut {{htmlattrxref("kind","track")}} pour préciser si les marqueurs sont  `subtitles`, `captions` ou `descriptions`. Plus loin, utilisez l'attribut {{htmlattrxref("srclang","track")}} pour indiquer au navigateur la langue dans laquelle sont écrit les sous‑titres.
 
 Voici un exemple&nbsp;:
 
@@ -252,16 +252,16 @@ Pour plus de détails, lisez [Ajouter des légendes et des sous‑titres aux vid
 
 ### Apprentissage interactif : intégrer vos propres vidéos et audios
 
-Pour cet exercice, nous aimerions (idéalement) que vous partiez «&nbsp;dans le monde&nbsp;» pour enregistrer vos propres vidéos et pistes audio — la plupart des téléphones actuels vous permettent facilement de le faire, et, à condition que vous puissiez le transférer sur l'ordinateur, vous pouvez l'utiliser. Vous allez devoir convertir dans les formats adaptés, WebM et MP4 pour la vidéo,  MP3 et Ogg pour l'audio. Il y a de nombreux progammes vous permettant de faire ça sans difficulté comme [Miro Video Converter](http://www.mirovideoconverter.com/) et [Audacity](https://sourceforge.net/projects/audacity/). Nous aimerions que vous essayiez !
+Pour cet exercice, nous aimerions (idéalement) que vous partiez «&nbsp;dans le monde&nbsp;» pour enregistrer vos propres vidéos et pistes audio — la plupart des téléphones actuels vous permettent facilement de le faire, et, à condition que vous puissiez le transférer sur l'ordinateur, vous pouvez l'utiliser. Vous allez devoir convertir dans les formats adaptés, WebM et MP4 pour la vidéo,  MP3 et Ogg pour l'audio. Il y a de nombreux progammes vous permettant de faire ça sans difficulté comme [Miro Video Converter](http://www.mirovideoconverter.com/) et [Audacity](https://sourceforge.net/projects/audacity/). Nous aimerions que vous essayiez !
 
-Si vous ne pouvez enregistrer ni vidéo ni audio, alors, n'hésitez pas à vous servir de nos  [échantillons audio et vidéo ](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content)pour réaliser cet exercice. Vous pouvez aussi utiliser notre échantillon-code de référence.
+Si vous ne pouvez enregistrer ni vidéo ni audio, alors, n'hésitez pas à vous servir de nos  [échantillons audio et vidéo ](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content)pour réaliser cet exercice. Vous pouvez aussi utiliser notre échantillon-code de référence.
 
 Il vous faudra :
 
 1.  Préserver vos fichiers audio et vidéo dans un nouveau dossier sur votre ordinateur.
-2.  Créer un nouveau fichier HTML dans le même répertoire nommé :  `index.html`.
-3.  Ajouter des éléments  `<audio>` et  `<video>` dans la page; faire en sorte qu'ils affichent les contrôles par défaut du navigateur.
-4.  Leur attribuer (aux deux) des éléments `<source>` que le navigateur puisse trouver le meilleur format audio et le charger. N'oubliez pas d'inclure les attributs  `type`.
+2.  Créer un nouveau fichier HTML dans le même répertoire nommé :  `index.html`.
+3.  Ajouter des éléments  `<audio>` et  `<video>` dans la page; faire en sorte qu'ils affichent les contrôles par défaut du navigateur.
+4.  Leur attribuer (aux deux) des éléments `<source>` que le navigateur puisse trouver le meilleur format audio et le charger. N'oubliez pas d'inclure les attributs  `type`.
 5.  Donner à l'élément `<video>` une image qui sera affichée avant que la vidéo ne démarre. Amusez-vous à créer votre propre visuel de l'affiche.
 
 En bonus, vous pouvez chercher des textes à intégrer et ajouter des légendes à vos vidéos.

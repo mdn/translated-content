@@ -40,7 +40,7 @@ window.getSelection().collapse(body,0);
 
 | Spécification                                                                                                                                                | Statut                               | Commentaires        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Selection API', '#widl-Selection-collapse-void-Node-node-unsigned-long-offset', 'Selection.collapse()')}} | {{Spec2('Selection API')}} |                     |
+| {{SpecName('Selection API', '#widl-Selection-collapse-void-Node-node-unsigned-long-offset', 'Selection.collapse()')}} | {{Spec2('Selection API')}} |                     |
 | {{SpecName('HTML Editing', '#dom-selection-collapse', 'Selection.collapse()')}}                                                     | {{Spec2('HTML Editing')}}     | Définition initiale |
 
 ## Compatibilité des navigateurs

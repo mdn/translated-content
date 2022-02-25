@@ -19,11 +19,11 @@ La plupart des navigateurs prennent encore en charge cette fonctionnalité via `
 
 ```css
 /* Sélectionne n'importe quel paragraphe survolé
-   qui se trouve au sein d'un header, main, ou
-   footer */
+   qui se trouve au sein d'un header, main, ou
+   footer */
 :is(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 
 /* La notation précédente est équivalente à */
@@ -31,7 +31,7 @@ header p:hover,
 main p:hover,
 footer p:hover {
   color: red;
-  cursor: pointer;
+  cursor: pointer;
 }
 
 
@@ -248,7 +248,7 @@ L'exemple ci-dessus ne sera pas appliqué par les navigateurs qui ne prennent pa
 
 ### Problèmes de performances avec `any():` et la spécificité
 
-{{Bug(561154)}} suit un problème de spécificité relatif à `:-moz-any()`. L'implémentation  place `:-moz-any()` dans la catégorie des règles universelles, ce qui signifie que si on l'utilise comme sélecteur le plus à droite, ce sera plus lent que d'utiliser un sélecteur d'identifiant, de classe ou de balise comme premier sélecteur.
+{{Bug(561154)}} suit un problème de spécificité relatif à `:-moz-any()`. L'implémentation  place `:-moz-any()` dans la catégorie des règles universelles, ce qui signifie que si on l'utilise comme sélecteur le plus à droite, ce sera plus lent que d'utiliser un sélecteur d'identifiant, de classe ou de balise comme premier sélecteur.
 
 Ainsi :
 

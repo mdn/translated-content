@@ -71,13 +71,13 @@ _Cette interface hérite aussi des interfaces {{domxref("Node")}} et {{domxref("
 - {{domxref("Document.inputEncoding")}} {{readonlyinline}} {{Deprecated_inline}}
   - : alias de {{domxref("Document.characterSet")}}. Utilisez cette propriété à la place.
 - {{domxref("Document.lastStyleSheetSet")}} {{readonlyinline}}
-  - : retourne le nom de l'ensemble de feuilles de style qui a été activé en dernier. A la valeur `null` jusqu'à ce que la feuille de style soit modifiée en définissant la valeur de  {{domxref("document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
+  - : retourne le nom de l'ensemble de feuilles de style qui a été activé en dernier. A la valeur `null` jusqu'à ce que la feuille de style soit modifiée en définissant la valeur de  {{domxref("document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
 - {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}} {{gecko_minversion_inline("8.0")}}
   - : retourne un {{jsxref("Boolean")}} qui est `true` _(vrai)_ seulement si le document est synthétique, tel qu'une image autonome, une vidéo, un fichier audio ou similaire.
 - {{domxref("Document.mozFullScreenElement")}} {{readonlyinline}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
   - : L'élément qui est actuellement affiché en mode plein écran pour ce document.
 - {{domxref("Document.mozFullScreenEnabled")}} {{readonlyinline}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
-  - : `true` _(vrai)_ si l'appel  {{domxref("Element.mozRequestFullscreen()")}}  est réussi dans le document courant.
+  - : `true` _(vrai)_ si l'appel  {{domxref("Element.mozRequestFullscreen()")}}  est réussi dans le document courant.
 - {{domxref("Document.pointerLockElement")}} {{readonlyinline}} {{experimental_inline}}
   - : renvoie l'ensemble d'éléments en tant que cible pour les événements de la souris lorsque le pointeur est verrouillé. `null` si le verrouillage est en attente, le pointeur est déverrouillé ou la cible se trouve dans un autre document.
 - {{domxref("Document.preferredStyleSheetSet")}} {{readonlyinline}}
@@ -107,7 +107,7 @@ L'interface Document est étendue avec l'interface {{domxref("ParentNode")}} :
 
 ### Extensions du document HTML
 
-L'interface Document, pour les documents HTML, hérite de l'interface *{{domxref("HTMLDocument")}}*  ou depuis HTML5, est étendue pour eux.
+L'interface Document, pour les documents HTML, hérite de l'interface *{{domxref("HTMLDocument")}}*  ou depuis HTML5, est étendue pour eux.
 
 - {{domxref("Document.activeElement")}} {{readonlyinline}}
   - : Renvoie l'élément courant qui a la focus.
@@ -123,7 +123,7 @@ L'interface Document, pour les documents HTML, hérite de l'interface *{{domxref
 <!---->
 
 - {{domxref("Document.body")}}
-  - : **body** renvoie l'élément  {{HTMLElement("body")}} du document en cours.
+  - : **body** renvoie l'élément  {{HTMLElement("body")}} du document en cours.
 - {{domxref("Document.cookie")}}
   - : Renvoie une liste des cookies du document, séparés par des points virgules, ou définit un cookie.
 
@@ -162,12 +162,12 @@ L'interface Document, pour les documents HTML, hérite de l'interface *{{domxref
   - : Renvoie l'URI (Uniform Ressource Identifier : _identifiant uniforme de ressource_) du document courant.
 - {{domxref("Document.plugins")}} {{readonlyinline}}
   - : Renvoie une liste des plugins disponibles.
-- {{domxref("Document.readyState")}} {{readonlyinline}}  {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Document.readyState")}} {{readonlyinline}}  {{gecko_minversion_inline("1.9.2")}}
   - : retourne l'état du chargement du document.
 - {{domxref("Document.referrer")}} {{readonlyinline}}
   - : Renvoie l'URI de la page qui a amené à cette page.
 - {{domxref("Document.scripts")}} {{readonlyinline}}
-  - : renvoie tous les éléments {{HTMLElement("script")}}  sur le document.
+  - : renvoie tous les éléments {{HTMLElement("script")}}  sur le document.
 - {{domxref("Document.title")}}
   - : Renvoie le titre du document courant.
 - {{domxref("Document.URL")}}  {{readonlyInline}}
@@ -191,12 +191,12 @@ L'interface Document, pour les documents HTML, hérite de l'interface *{{domxref
 - {{domxref("Document.oncut")}} {{non-standard_inline}}
   - : représente le code de gestion d'évènements pour l'évènement {{event("cut")}} .
 - {{domxref("Document.onfullscreenchange")}}
-  - : est un  {{event("Event_handlers", "event handler")}} _( gestionnaire d'évènements)_ représentant le code à appeler quand l'élément {{event("fullscreenchange")}} est relevé.
+  - : est un  {{event("Event_handlers", "event handler")}} _( gestionnaire d'évènements)_ représentant le code à appeler quand l'élément {{event("fullscreenchange")}} est relevé.
 - {{domxref("Document.onfullscreenerror")}}
 
   {{domxref("Document.onfullscreenchange")}}
 
-  - : est un  {{event("Event_handlers", "event handler")}} _( gestionnaire d'évènements)_ représentant le code à appeler quand l'élément {{event("fullscreenerror")}} est relevé.
+  - : est un  {{event("Event_handlers", "event handler")}} _( gestionnaire d'évènements)_ représentant le code à appeler quand l'élément {{event("fullscreenerror")}} est relevé.
 
 - {{domxref("Document.onpaste")}} {{non-standard_inline}}
   - : représente le code de gestion d'évènements pour l'évènement {{event("paste")}} .
@@ -207,9 +207,9 @@ L'interface Document, pour les documents HTML, hérite de l'interface *{{domxref
 - {{domxref("Document.onreadystatechange")}} {{gecko_minversion_inline("1.9.2")}}
   - : représente le code de gestion d'évènements pour l'évènement {{event("readystatechange")}} .
 - {{domxref("Document.onselectionchange")}} {{experimental_inline}}
-  - : est un  {{event("Event_handlers", "event handler")}} _( gestionnaire d'évènements)_ représentant le code à appeler quand l'élément {{event("selectionchange")}} est relevé.
+  - : est un  {{event("Event_handlers", "event handler")}} _( gestionnaire d'évènements)_ représentant le code à appeler quand l'élément {{event("selectionchange")}} est relevé.
 - {{domxref("Document.onvisibilitychange")}}
-  - : est un  {{event("Event_handlers", "event handler")}} _( gestionnaire d'évènements)_ représentant le code à appeler quand l'élément {{event("visibilitychange")}} est relevé.
+  - : est un  {{event("Event_handlers", "event handler")}} _( gestionnaire d'évènements)_ représentant le code à appeler quand l'élément {{event("visibilitychange")}} est relevé.
 - {{domxref("Document.onwheel")}} {{non-standard_inline}}
   - : représente le code de gestion d'évènements pour l'évènement {{event("wheel")}} .
 
@@ -313,7 +313,7 @@ L'interface `Document` est étendue avec l'interface {{domxref("ParentNode")}} :
 - {{domxref("document.querySelectorAll","document.querySelectorAll(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
   - : retourne une liste de tous les noeuds éléments inclus dans le document qui correspondent aux sélecteurs spécifiés.
 
-L'interface Document est étendue avec l'interface  {{domxref("XPathEvaluator")}} :
+L'interface Document est étendue avec l'interface  {{domxref("XPathEvaluator")}} :
 
 - {{domxref("document.createExpression","document.createExpression(String expression, XPathNSResolver resolver)")}}
   - : compile une [`XPathExpression`](/fr/docs/Web/API/XPathExpression) qui peut ensuite être utilisée pour des évaluations (répétées).
@@ -365,7 +365,7 @@ L'interface Document est étendue avec l'interface  {{domxref("XPathEvaluator")
 | {{SpecName('DOM WHATWG','#interface-document','Document')}}                                             | {{Spec2('DOM WHATWG')}}             | en vue de remplacer DOM 3                                                                  |
 | {{SpecName('HTML WHATWG','dom.html#the-document-object','Document')}}                                 | {{Spec2('HTML WHATWG')}}             | Transforme l'interface {{domxref("HTMLDocument")}} en une extension de `Document` |
 | {{SpecName('DOM3 XPath','xpath.html#XPathEvaluator','XPathEvaluator')}}                             | {{Spec2('DOM3 XPath')}}             | Definit l'interface {{domxref("XPathEvaluator")}} qui étend le document.        |
-| {{SpecName('Page Visibility API', '#sec-document-interface', 'Document')}}                         | {{Spec2('Page Visibility API')}} | Étend l'interface `Document`  avec les attributs `visibilityState` et `hidden`.            |
+| {{SpecName('Page Visibility API', '#sec-document-interface', 'Document')}}                         | {{Spec2('Page Visibility API')}} | Étend l'interface `Document`  avec les attributs `visibilityState` et `hidden`.            |
 | {{SpecName('HTML Editing','#dom-document-getselection','Document')}}                                 | {{Spec2('HTML Editing')}}             | Étend l'interface `Document`                                                               |
 | {{SpecName('CSSOM View','#extensions-to-the-document-interface','Document')}}                     | {{Spec2('CSSOM View')}}             | Étend l'interface `Document`                                                               |
 | {{SpecName('CSSOM','#extensions-to-the-document-interface','Document')}}                             | {{Spec2('CSSOM')}}                     | Étend l'interface `Document`                                                               |
@@ -380,7 +380,7 @@ Mozilla définit un ensemble de propriétés non-standard créées seulement pou
 - {{domxref("document.currentScript")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
   - : retourne l'élément {{HTMLElement("script")}} qui est en cours d'exécution.
 - {{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}
-  - : (extensions Mozilla seulement) retourne l'objet  {{Interface("nsIURI")}} représentant l'URI du document. Cette propriété a seulement une signification spéciale dans le code JavaScript privilégié (avec les privilèges UniversalXPConnect).
+  - : (extensions Mozilla seulement) retourne l'objet  {{Interface("nsIURI")}} représentant l'URI du document. Cette propriété a seulement une signification spéciale dans le code JavaScript privilégié (avec les privilèges UniversalXPConnect).
 - {{domxref("document.popupNode")}}
   - : retourne le noeud ouvert lors de l'appel d'une fenêtre contextuelle.
 - {{domxref("document.tooltipNode")}}
@@ -402,7 +402,7 @@ Mozilla a également défini quelques méthodes non standard :
 Microsoft a défini quelques propriétés non standard :
 
 - {{domxref("document.fileSize")}}\* {{non-standard_inline}} {{obsolete_inline}}
-  - : Retourne la taille en octets du document. À partir d'Internet Explorer 11, cette propriété n'est plus prise en charge. Voir  [MSDN](http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx).
+  - : Retourne la taille en octets du document. À partir d'Internet Explorer 11, cette propriété n'est plus prise en charge. Voir  [MSDN](http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx).
 
 Internet Explorer ne prend pas en charge toutes les méthodes de l'interface Node dans l'interface Document :
 

@@ -84,7 +84,7 @@ if ('ab'.substr(-1) != 'b') {
     return function(début, longueur) {
       // Appel de la méthode originale
       return substr.call(this,
-        // Si on a un début négatif, calculer combien il vaut à partir du début de la chaîne
+        // Si on a un début négatif, calculer combien il vaut à partir du début de la chaîne
         // Ajuster le paramètre pour une valeur négative
         début < 0 ? this.length + début : début,
         longueur)

@@ -157,8 +157,8 @@ if (!Array.prototype.copyWithin) {
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ES2016', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ES2016')}}     |                      |
-| {{SpecName('ESDraft', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES2016', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ES2016')}}     |                      |
+| {{SpecName('ESDraft', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -22,7 +22,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding
 ---
 {{LearnSidebar}}
 
-Jusqu'ici, nous avons vu et utilisé beaucoup de texte dans ce cours mais le web serait vraiment ennuyeux s'il n'utilisait que du texte.  Voyons ensemble la manière de le rendre plus vivant avec plus de contenu intéressant&nbsp;! Ce module explore l'utilisation d'HTML pour inclure du contenu multimedia dans vos pages web. Cela comprend les différentes manières d'ajouter des images, d'intégrer de la video, de l'audio et même des pages web entières.
+Jusqu'ici, nous avons vu et utilisé beaucoup de texte dans ce cours mais le web serait vraiment ennuyeux s'il n'utilisait que du texte.  Voyons ensemble la manière de le rendre plus vivant avec plus de contenu intéressant&nbsp;! Ce module explore l'utilisation d'HTML pour inclure du contenu multimedia dans vos pages web. Cela comprend les différentes manières d'ajouter des images, d'intégrer de la video, de l'audio et même des pages web entières.
 
 ## Prérequis
 
@@ -35,7 +35,7 @@ Pour commencer ce module dans de bonnes conditions, vous devriez posséder les 
 Ce module contient les articles suivants, qui vous guideront à travers les fondamentaux de l'intégration multimedia sur une page web.
 
 - **[Images en HTML](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML)**
-  - : Il existe d'autres types de multimedia à prendre en compte mais il est logique de commencer par cet élément si humble qu'est  l'élément {{htmlelement("img")}}. Il est utilisé pour integrér une simple image dans une page web. Au long de cet article, nous verrons son utilisation en détails, des rudiments à l'annotation par légendes en utilisant {{HTMLElement("figure")}}, et de quelle manière il est liè  aux images d'arrière-plan de CSS.
+  - : Il existe d'autres types de multimedia à prendre en compte mais il est logique de commencer par cet élément si humble qu'est  l'élément {{htmlelement("img")}}. Il est utilisé pour integrér une simple image dans une page web. Au long de cet article, nous verrons son utilisation en détails, des rudiments à l'annotation par légendes en utilisant {{HTMLElement("figure")}}, et de quelle manière il est liè  aux images d'arrière-plan de CSS.
 - **[Vidéo et contenu audio](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video)**
   - : Ensuite, nous étudierons la façon d'utiliser les éléments HTML5 {{HTMLElement("video")}} et {{HTMLElement("audio")}}, pour intégrer les videos et pistes audio dans nos pages. Toujours à partir des rudiments, puis comment fournir un accés aux différents formats des différents navigateurs,  enrichir avec des légendes et des sous-titres, et comment proposer des solutions pour les navigateurs plus anciens.
 - [De \<object> à \<iframe> — autres techniques d'intégration](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Other_embedding_technologies)

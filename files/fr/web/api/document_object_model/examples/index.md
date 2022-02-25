@@ -268,7 +268,7 @@ function cStyles() {
 
 ## Exemple 7&nbsp;: affichage des propriétés d'un objet `event`
 
-Cet exemple utilise des méthodes DOM pour afficher les propriétés d'un objet {{domxref("window.onload")}} {{domxref("event")}}   et leurs valeurs dans un tableau. Il montre également une technique utile utilisant une boucle `for..in` pour parcourir les propriétés d'un objet et obtenir leurs valeurs.
+Cet exemple utilise des méthodes DOM pour afficher les propriétés d'un objet {{domxref("window.onload")}} {{domxref("event")}}   et leurs valeurs dans un tableau. Il montre également une technique utile utilisant une boucle `for..in` pour parcourir les propriétés d'un objet et obtenir leurs valeurs.
 
 Les propriétés des objets `event` diffèrent sensiblement entre les différents navigateurs, la [spécification norme DOM](http://www.w3.org/TR/DOM-Level-2-Events/events.html) liste les propriétés standard, mais beaucoup de navigateurs ont ajouté un bon nombre de propriétés supplémentaires.
 

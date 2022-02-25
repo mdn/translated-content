@@ -139,7 +139,7 @@ Ici, le titre secondaire est placé entre parenthèses après le titre principal
 
 | Spécification                                                                                                | État                             | Commentaires |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
 
 ## Compatibilité des navigateurs
 

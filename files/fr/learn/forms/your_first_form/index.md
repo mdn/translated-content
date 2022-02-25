@@ -151,7 +151,7 @@ Nous avons désormais notre formulaire HTML, et si vous le regardez dans votre n
 
 ![](form-no-style.png)
 
-> **Note :** Si vous pensez que vous n'avez pas écrit un code HTML correct, faites la comparaison avec celui de notre exemple terminé — voyez  [first-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form.html) ([ ](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)ou[ également directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
+> **Note :** Si vous pensez que vous n'avez pas écrit un code HTML correct, faites la comparaison avec celui de notre exemple terminé — voyez  [first-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form.html) ([ ](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)ou[ également directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
 
 Les formulaires sont notoirement embêtants à présenter joliment. Apprendre la mise en page ou la décoration des formulaires sort du cadre de cet article, donc pour le moment nous allons simplement ajouter quelques indications au CSS pour lui donner un air convenable.
 

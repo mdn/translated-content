@@ -22,7 +22,7 @@ Lancé lorsqu'une nouvelle fenêtre ou un nouvel onglet dans une fenêtre exista
 
 L'événement n'est pas envoyé si un onglet ou une fenêtre est créé sans cible de navigation (par exemple, si l'utilisateur ouvre un nouvel onglet en appuyant sur Ctrl+T).
 
-Si cet événement est déclenché, il sera déclenché avant  {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.
+Si cet événement est déclenché, il sera déclenché avant  {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}.
 
 ## Syntaxe
 

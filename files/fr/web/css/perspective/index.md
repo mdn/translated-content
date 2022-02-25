@@ -138,7 +138,7 @@ perspective: unset;
     perspective: 500px;
 }
 .pers650 {
-    perspective: 650px;
+    perspective: 650px;
 }
 
 /* On définit le div pour le conteneur, */

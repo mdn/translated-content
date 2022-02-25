@@ -21,7 +21,7 @@ La propriété **`onopen`** de l'interface {{domxref("EventSource")}} est un {
 
 ```js
 evtSource.onopen = function() {
-  console.log("Connexion au serveur établie.");
+  console.log("Connexion au serveur établie.");
 };
 ```
 

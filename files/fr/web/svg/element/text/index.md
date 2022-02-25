@@ -49,7 +49,7 @@ Le texte en SVG peut être pivoté. L'exemple de code suivant démontre la rota
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
-  <text x="10"  y="20"
+  <text x="10"  y="20"
         transform="rotate(30 20,40)">
     SVG Text Rotation example
   </text>
@@ -60,11 +60,11 @@ Le texte SVG peut également être stylisé avec du CSS contenant les propriét�
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
-  <text x="10"  y="20"
-        style="font-family: Times New Roman;
-               font-size  : 24;
-               stroke     : #00ff00;
-               fill       : #0000ff;">
+  <text x="10"  y="20"
+        style="font-family: Times New Roman;
+               font-size  : 24;
+               stroke     : #00ff00;
+               fill       : #0000ff;">
     SVG text styling
   </text>
 </svg>

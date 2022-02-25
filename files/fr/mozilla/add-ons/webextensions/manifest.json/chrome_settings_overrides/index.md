@@ -107,7 +107,7 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
           peuvent être fournies, y compris des URL pour des recherches plus
           spécialisées comme des recherches d'images. Dans l'URL que vous
           fournissez, utilisez "<code>{searchTerms}</code>" pour interpoler le
-          terme de recherche  dans l'URL, comme :
+          terme de recherche  dans l'URL, comme :
           <code>https://www.discogs.com/search/?q={searchTerms}</code>. Vous
           pouvez également fournir des paramètres POST à envoyer avec la
           recherche.

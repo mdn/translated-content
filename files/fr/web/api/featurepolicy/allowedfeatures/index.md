@@ -37,7 +37,7 @@ const featurePolicy = document.featurePolicy
 const permissions = featurePolicy.allowedFeatures()
 
 for (const directive of permissions)
-  console.log(directive)
+  console.log(directive)
 ```
 
 ## Spécifications

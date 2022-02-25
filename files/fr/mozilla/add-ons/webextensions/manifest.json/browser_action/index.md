@@ -85,7 +85,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
           à chrome://browser/content/extension.css, ou
           chrome://browser/content/extension-mac.css sur OS X. Lorsque vous
           définissez les dimensions, sachez que cette feuille de style définit
-          actuellement  <code>box-sizing: border-box</code> (voir
+          actuellement  <code>box-sizing: border-box</code> (voir
           <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).
         </p>
         <p>
@@ -136,7 +136,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
           Firefox se souvient des paramètres <code>default_area</code> d'une
           extension,  même si cette extension est désinstallée et réinstallée
           par la suite. Pour forcer le navigateur à reconnaître une nouvelle
-          valeur pour  <code>default_area</code>, l'identifiant de l'extension
+          valeur pour  <code>default_area</code>, l'identifiant de l'extension
           doit être modifié.
         </p>
         <p>
@@ -299,7 +299,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
 
 L'icône de l'action du navigateur peut devoir être affichée dans différentes tailles dans différents contextes:
 
-- L'icône est affichée par défaut dans la barre d'outils du navigateur, mais l'utilisateur peut la déplacer dans le panneau de menu du navigateur (le panneau qui s'ouvre lorsque l'utilisateur clique sur l'icône  "hamburger"). L'icône dans la barre d'outils est plus petite que l'icône dans le panneau de menu.
+- L'icône est affichée par défaut dans la barre d'outils du navigateur, mais l'utilisateur peut la déplacer dans le panneau de menu du navigateur (le panneau qui s'ouvre lorsque l'utilisateur clique sur l'icône  "hamburger"). L'icône dans la barre d'outils est plus petite que l'icône dans le panneau de menu.
 - Sur un écran haute densité comme un écran Retina, les icônes doivent être deux fois plus grandes.
 
 Si le navigateur ne peut pas trouver une icône de la bonne taille dans une situation donnée, il choisira la meilleure correspondance et la mettra à l'échelle. Cette correction peut donner une apparence floue à l'icône, il est donc important de choisir attentivement les tailles d'icône.

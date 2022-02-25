@@ -27,7 +27,7 @@ var nodes = myContentObject.getDistributedNodes();
 
 | Spécification                                                                    | Status                           | Commentaire |
 | -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
+| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
 
 ## Compatibilité des navigateurs
 

@@ -56,7 +56,7 @@ Dans cet article, nous nous limiterons notre exposé à l'utilisation approprié
 
 Découvrons comment utiliser les boîtes flottantes. Nous commencerons par un exemple très simple consistant à faire flotter un élément dans un bloc de texte. Vous pouvez suivre cela en créant un nouveau fichier `index.html` sur votre ordinateur initialisé avec un [simple modèle HTML](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) et en y insérant le code ci-dessous à la bonne place. Au bas de ce paragraphe vous pouvez directement voir un exemple en direct de ce à quoi le code final doit ressembler.
 
-Tout d'abord, commençons  avec un HTML simple — ajoutez le code ci-dessous dans l'élément `body` en supprimant tout ce qu'il y avait avant&nbsp;:
+Tout d'abord, commençons  avec un HTML simple — ajoutez le code ci-dessous dans l'élément `body` en supprimant tout ce qu'il y avait avant&nbsp;:
 
 ```html
 <h1>Exemple simple de boîte flottante</h1>
@@ -140,7 +140,7 @@ body {
 
 {{ EmbedLiveSample('Faire_flotter_la_boîte', '100%', 500) }}
 
-Voyons comment fonctionne la boîte flottante — l'élément possèdant la propriété `float` (l'élément `box` dans notre cas) est retiré du cours normal de  la mise en page du document et collé du côté gauche (`left`) de son conteneur parent ({{htmlelement("body")}}, dans ce cas). Tout contenu disposé après l'élément flottant dans le cours normal de la mise en page (c'est à dire disposé à la suite dans le code source) va maintenant l'envelopper en remplissant l'espace sur sa droite sur toute sa hauteur. Là, ça s'arrête.
+Voyons comment fonctionne la boîte flottante — l'élément possèdant la propriété `float` (l'élément `box` dans notre cas) est retiré du cours normal de  la mise en page du document et collé du côté gauche (`left`) de son conteneur parent ({{htmlelement("body")}}, dans ce cas). Tout contenu disposé après l'élément flottant dans le cours normal de la mise en page (c'est à dire disposé à la suite dans le code source) va maintenant l'envelopper en remplissant l'espace sur sa droite sur toute sa hauteur. Là, ça s'arrête.
 
 Faire flotter le contenu surla droite a exactement le même effet, mais inversé — l'élément flottant se plaque sur la droite du conteneur et le contenu l'enveloppera en se plaçant à gauche. Donnez la valeur `right` à la propriété `float` et remplacez {{cssxref("margin-right")}} par {{cssxref("margin-left")}} dans le dernier jeu de règles, et observez le résultat.
 
@@ -197,7 +197,7 @@ body {
 
 {{ EmbedLiveSample('Visualiser_le_flottement', '100%', 500) }}
 
-Les lignes du paragraphe  suivant la boîte flottante  ont été raccourcies pour que le texte entoure cette boîte, mais comme elle a été sortie du cours normal, la boîte du contenu du paragraphe reste sur toute la largeur du conteneur.
+Les lignes du paragraphe  suivant la boîte flottante  ont été raccourcies pour que le texte entoure cette boîte, mais comme elle a été sortie du cours normal, la boîte du contenu du paragraphe reste sur toute la largeur du conteneur.
 
 ## Dégagement des boîtes flottantes
 
@@ -249,7 +249,7 @@ body {
 
 {{ EmbedLiveSample('Dégagement_des_boîtes_flottantes', '100%', 600) }}
 
-Vous verrez que le paragraphe suivant s'est dégagé de l'élément flottant et ne remonte plus à côté de ce dernier. La propriété  `clear` accepte les valeurs suivantes&nbsp;:
+Vous verrez que le paragraphe suivant s'est dégagé de l'élément flottant et ne remonte plus à côté de ce dernier. La propriété  `clear` accepte les valeurs suivantes&nbsp;:
 
 - `left`&nbsp;: dégage les élément à gauche de la boîte flottante.
 - `right`&nbsp;: dégage les éléments à droite.

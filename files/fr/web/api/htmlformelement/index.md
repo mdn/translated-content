@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLFormElement
 ---
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLFormElement`** représente un élément  {{HTMLElement("form")}} dans le DOM ; il peut être utilisé pour accéder et, dans quelques cas, modifier l'aspect du formulaire, ainsi que pour accéder à ses éléments composants.
+L'interface **`HTMLFormElement`** représente un élément  {{HTMLElement("form")}} dans le DOM ; il peut être utilisé pour accéder et, dans quelques cas, modifier l'aspect du formulaire, ainsi que pour accéder à ses éléments composants.
 
 {{InheritanceDiagram(600,120)}}
 
@@ -62,7 +62,7 @@ _Cette interface hérite aussi des méthodes de son parent {{domxref("HTMLElemen
 
 ### Obtention d'un objet élément de formulaire
 
-Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) avec {{domxref("ParentNode.querySelector", "querySelector()")}}  ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
+Pour obtenir un objet `HTMLFormElement`, vous pouvez utiliser un [sélecteur CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) avec {{domxref("ParentNode.querySelector", "querySelector()")}}  ou vous pouvez obtenir une liste de tous les formulaires du document utilisant sa propriété {{domxref("Document.forms", "forms")}}.
 
 {{domxref("Document.forms")}} renvoie un tableau des objets `HTMLFormElement` listant chacun des formulaires de la page. Vous pouvez utiliser alors l'une des syntaxes suivantes pour obtenir un formulaire individuel :
 
@@ -79,7 +79,7 @@ Vous pouvez accéder à la liste des éléments contenant des données dans le f
 
 ### Éléments considérés comme des contrôles de formulaire
 
-Les éléments qui sont inclus par `HTMLFormElement.elements` et  `HTMLFormElement.length` sont :
+Les éléments qui sont inclus par `HTMLFormElement.elements` et  `HTMLFormElement.length` sont :
 
 - {{HTMLElement("button")}} (_bouton_)
 - {{HTMLElement("fieldset")}} (*champ*s)

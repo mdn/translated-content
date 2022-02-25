@@ -13,7 +13,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/extension_des_outils_de_developpeme
 ---
 {{AddonSidebar}}
 
-> **Note :** Cette page décrit les API  de devtools telles qu'elles existent dans Firefox 55. Bien que les API soient basées sur les  [API devtools de chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir quelles fonctionnalités sont actuellement manquantes, voir les [Limitations des APIs devtools](/fr/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).
+> **Note :** Cette page décrit les API  de devtools telles qu'elles existent dans Firefox 55. Bien que les API soient basées sur les  [API devtools de chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir quelles fonctionnalités sont actuellement manquantes, voir les [Limitations des APIs devtools](/fr/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).
 
 Vous pouvez utiliser les API WebExtensions pour étendre les outils de développement intégrés du navigateur. Pour créer une extension devtools, incluez la clé "[devtools_page](/fr/Add-ons/WebExtensions/manifest.json/devtools_page)" dans [manifest.json](/fr/Add-ons/WebExtensions/manifest.json):
 
@@ -76,13 +76,13 @@ Cela nécessite trois arguments obligatoires: le titre, l'icône et le contenu d
 
 ## Interaction avec la fenêtre cible
 
-Les outils de développement sont toujours attachés à un onglet de navigateur particulier. Ceci est appelé "target" pour les outils de développement, ou la "fenêtre inspectée". Vous pouvez interagir avec la fenêtre inspectée en utilisant l'API  [`devtools.inspectedWindow`](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow).
+Les outils de développement sont toujours attachés à un onglet de navigateur particulier. Ceci est appelé "target" pour les outils de développement, ou la "fenêtre inspectée". Vous pouvez interagir avec la fenêtre inspectée en utilisant l'API  [`devtools.inspectedWindow`](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow).
 
 ### Code d'exécution dans la fenêtre cible
 
 la fonction [`devtools.inspectedWindow.eval()`](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) fournit une façon d'exécuter le code dans la fenêtre inspectée.
 
-C'est un peu comme utiliser {{WebExtAPIRef("tabs.executeScript()")}}  pour injecter un script de contenu, mais avec une différence importante :
+C'est un peu comme utiliser {{WebExtAPIRef("tabs.executeScript()")}}  pour injecter un script de contenu, mais avec une différence importante :
 
 - Contrairement aux scripts de contenu, les scripts chargés à partir de `devtools.inspectedWindow.eval()` **n'obtiennent pas** [une "vue nette du DOM" ](/fr/Add-ons/WebExtensions/Content_scripts#DOM_access): c'est-à-dire qu'ils peuvent voir des modifications apportées à la page par les scripts de page.
 
@@ -92,7 +92,7 @@ Les scripts chargés à l'aide de `devtools.inspectedWindow.eval()` ne voient pa
 
 ### Travailler avec les scripts de contenus
 
-Un document devtools n'a pas d'accès direct à  {{WebExtAPIRef("tabs.executeScript()")}}, donc, si vous devez injecter un script de contenu, le document devtools doit envoyer un message au script en arrière-plan en lui demandant d'injecter le script. La fonction [`devtools.inspectedWindow.tabId`](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId)  fournit l'ID de l'onglet cible: le document devtools peut passer le script en arrière-plan, et le script de fond peut à son tour passer dans {{WebExtAPIRef("tabs.executeScript()")}}:
+Un document devtools n'a pas d'accès direct à  {{WebExtAPIRef("tabs.executeScript()")}}, donc, si vous devez injecter un script de contenu, le document devtools doit envoyer un message au script en arrière-plan en lui demandant d'injecter le script. La fonction [`devtools.inspectedWindow.tabId`](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId)  fournit l'ID de l'onglet cible: le document devtools peut passer le script en arrière-plan, et le script de fond peut à son tour passer dans {{WebExtAPIRef("tabs.executeScript()")}}:
 
 ```js
 // devtools-panel.js

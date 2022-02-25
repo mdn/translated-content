@@ -71,13 +71,13 @@ Cette propriété peut accepter une, deux, trois ou quatre valeurs avec les type
 
 ```css
 .ex1 {
-  margin: auto;
-  background: gold;
-  width: 66%;
+  margin: auto;
+  background: gold;
+  width: 66%;
 }
 .ex2 {
-  margin: 20px 0px 0 -20px;
-  background: gold;
+  margin: 20px 0px 0 -20px;
+  background: gold;
   width: 66%;
 }
 ```
@@ -86,14 +86,14 @@ Cette propriété peut accepter une, deux, trois ou quatre valeurs avec les type
 
 ```html
 <div class="ex1">
-  margin:     auto;
-  background: gold;
-  width:      66%;
+  margin:     auto;
+  background: gold;
+  width:      66%;
 </div>
 <div class="ex2">
-  margin:     20px 0px 0px -20px;
-  background: gold;
-  width:      66%;
+  margin:     20px 0px 0px -20px;
+  background: gold;
+  width:      66%;
 </div>
 ```
 

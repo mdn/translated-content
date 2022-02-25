@@ -111,7 +111,7 @@ The key here is that text can be converted to other forms people with disabiliti
           Decorative images should be implemented using CSS background images
           (see
           <a href="/fr/docs/Learn/CSS/Styling_boxes/Backgrounds">Backgrounds</a
-          >).  If you have to include an image via an
+          >).  If you have to include an image via an
           {{htmlelement("img")}} element, give it a blank alt
           (<code>alt=""</code>), otherwise screenreaders may try to read out the
           filepath, etc.

@@ -96,7 +96,7 @@ Les cookies `SameSite` laissent les serveurs exiger qu'un cookie ne soit pas env
 
 ### Accès JavaScript en utilisant `Document.cookie`
 
-De nouveaux cookies peuvent également être créés via JavaScript en utilisant la propriété  {{domxref("Document.cookie")}}, et si l'option `HttpOnly` n'est pas définie, les cookies existants peuvent être également accédés via JavaScript.
+De nouveaux cookies peuvent également être créés via JavaScript en utilisant la propriété  {{domxref("Document.cookie")}}, et si l'option `HttpOnly` n'est pas définie, les cookies existants peuvent être également accédés via JavaScript.
 
 ```js
 document.cookie = "yummy_cookie=choco";

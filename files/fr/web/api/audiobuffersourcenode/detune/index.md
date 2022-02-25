@@ -55,7 +55,7 @@ source.start();
 
 | Spécification                                                                                            | Statut                               | Commentaire |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-detune', 'detune')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-detune', 'detune')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

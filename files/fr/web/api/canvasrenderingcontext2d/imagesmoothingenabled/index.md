@@ -66,7 +66,7 @@ img.onload = function() {
 
 | Spécification                                                                                                                                                                    | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-imagesmoothingenabled", "CanvasRenderingContext2D.imageSmoothingEnabled")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-imagesmoothingenabled", "CanvasRenderingContext2D.imageSmoothingEnabled")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

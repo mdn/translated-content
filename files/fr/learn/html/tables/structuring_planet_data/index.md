@@ -58,7 +58,7 @@ Les étapes suivantes décrivent ce que vous devez faire pour complèter l'exemp
 ## Conseils et astuces
 
 - La première cellule de la ligne d'en-tête doit être vierge et couvrir deux colonnes.
-- Les en-têtes regrouppant des lignes (_exemple : les planètes joviennes_) qui sont à gauche des en-têtes de lignes des noms des planètes (exemple :  _Saturne_) sont un peu difficiles à trier — vous devez vous assurer que chacun d'eux couvre le bon nombre de lignes et colonnes.
+- Les en-têtes regrouppant des lignes (_exemple : les planètes joviennes_) qui sont à gauche des en-têtes de lignes des noms des planètes (exemple :  _Saturne_) sont un peu difficiles à trier — vous devez vous assurer que chacun d'eux couvre le bon nombre de lignes et colonnes.
 - une des méthodes d'association des en-têtes avec leurs lignes et colonnes est un peu plus facile que l'autre.
 
 ## Correction

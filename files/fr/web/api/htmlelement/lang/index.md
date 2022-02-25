@@ -43,4 +43,4 @@ Ne marche qu'avec l'attribut `lang`, et non avec `xml:lang`.
 
 | Spécification                                                                | Statut                       | Commentaires |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('DOM2 HTML', 'html.html#ID-59132807', 'id')}} | {{Spec2('DOM2 HTML')}} |              |
+| {{SpecName('DOM2 HTML', 'html.html#ID-59132807', 'id')}} | {{Spec2('DOM2 HTML')}} |              |

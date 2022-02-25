@@ -17,7 +17,7 @@ Les objets **`NodeList`** sont des collections de nœuds comme celles retournée
 >
 > Néanmoins certains vieux navigateurs n'ont pas encore implémenté `NodeList.forEach()` ni `Array.from()`. Mais ces limitations peuvent être contournées en utilisant {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} (plus dans ce document).
 
-Dans certains cas, la `NodeList` est une collection en direct, ce qui signifie que les changements dans le DOM sont reflétés dans la collection. Par exemple,  {{domxref("Node.childNodes")}} est en direct :
+Dans certains cas, la `NodeList` est une collection en direct, ce qui signifie que les changements dans le DOM sont reflétés dans la collection. Par exemple,  {{domxref("Node.childNodes")}} est en direct :
 
 ```js
 var parent = document.getElementById('parent');
@@ -27,7 +27,7 @@ parent.appendChild(document.createElement('div'));
 console.log(child_nodes.length); // devrait afficher "3"
 ```
 
-Dans d'autres cas, la `NodeList` est une collection statique, ce qui signifie que tout changement dans le DOM n'affectera pas le contenu de la collection. {{domxref("document.querySelectorAll()")}}  renvoie une `NodeList` statique.
+Dans d'autres cas, la `NodeList` est une collection statique, ce qui signifie que tout changement dans le DOM n'affectera pas le contenu de la collection. {{domxref("document.querySelectorAll()")}}  renvoie une `NodeList` statique.
 
 Il est bon de garder cette distinction à l'esprit pour choisir la façon de parcourir les éléments de la liste des nœuds et, en particulier, pour mettre en cache la longueur de la liste.
 
@@ -39,7 +39,7 @@ Il est bon de garder cette distinction à l'esprit pour choisir la façon de par
 ## Méthodes
 
 - {{domxref("NodeList.item()")}}
-  - : Retourne un élément de la liste par son index ou `null` si l'index est en dehors des limites. Équivalent à `nodeList[idx]` (qui renvoie à la place `undefined` quand  `idx` est hors des limites).
+  - : Retourne un élément de la liste par son index ou `null` si l'index est en dehors des limites. Équivalent à `nodeList[idx]` (qui renvoie à la place `undefined` quand  `idx` est hors des limites).
 - {{domxref("NodeList.entries()")}}
   - : renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet.
 - {{domxref("NodeList.forEach()")}}
@@ -85,9 +85,9 @@ Array.prototype.forEach.call(list, function (item) {
 
 | Spécification                                                                                | Statut                           | Commentaire          |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}             | {{ Spec2('DOM WHATWG') }} |                      |
-| {{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM3 Core') }} |                      |
-| {{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM2 Core') }} |                      |
+| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}}             | {{ Spec2('DOM WHATWG') }} |                      |
+| {{SpecName('DOM3 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM3 Core') }} |                      |
+| {{SpecName('DOM2 Core', 'core.html#ID-536297177', 'NodeList')}}         | {{ Spec2('DOM2 Core') }} |                      |
 | {{SpecName('DOM1', 'level-one-core.html#ID-536297177', 'NodeList')}} | {{ Spec2('DOM1') }}         | Définition initiale. |
 
 ## Compatibilité des navigateurs

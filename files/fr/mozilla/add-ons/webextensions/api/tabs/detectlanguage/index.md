@@ -58,7 +58,7 @@ browser.browserAction.onClicked.addListener(function() {
 });
 ```
 
-Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite  la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs") :
+Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite  la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabs") :
 
 ```js
 function onLanguageDetected(url, lang) {

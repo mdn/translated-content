@@ -16,7 +16,7 @@ Cet en-tête a été introduit par Microsoft dans IE 8 comme un moyen pour les w
 
 Les testeurs de sécurité du site s'attendent généralement à ce que cet en-tête soit défini.
 
-> **Note :** `X-Content-Type-Options` ne s'appliquent qu'au [blocage des demandes par `nosniff`](https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?) pour les [destinations de demandes](https://fetch.spec.whatwg.org/#concept-request-destination) de  "`script`" et "`style`". Il permet également le [blocage en lecture croisé (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#what-types-of-content-are-protected-by-corb) pour les fichiers HTML, TXT, JSON, et XML (à l'exception des images SVG `image/svg+xml`).
+> **Note :** `X-Content-Type-Options` ne s'appliquent qu'au [blocage des demandes par `nosniff`](https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?) pour les [destinations de demandes](https://fetch.spec.whatwg.org/#concept-request-destination) de  "`script`" et "`style`". Il permet également le [blocage en lecture croisé (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#what-types-of-content-are-protected-by-corb) pour les fichiers HTML, TXT, JSON, et XML (à l'exception des images SVG `image/svg+xml`).
 
 <table class="properties">
   <tbody>

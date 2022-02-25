@@ -79,8 +79,8 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
   <img id="source" src="rhino.jpg" width="300" height="227">
 </div>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);</textarea>
@@ -119,7 +119,7 @@ window.addEventListener("load", drawCanvas);
 
 | Spécification                                                                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawimage", "CanvasRenderingContext2D.drawImage")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

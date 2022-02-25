@@ -22,58 +22,58 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
-  <!--
-  Chemin en haut à gauche:
-  Effet de la valeur "miter"
-  -->
-  <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="miter" />
+  <!--
+  Chemin en haut à gauche:
+  Effet de la valeur "miter"
+  -->
+  <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="miter" />
 
-  <!--
-  Chemin en haut au milieu:
-  Effet de la valeur "round"
-  -->
-  <path d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="round" />
+  <!--
+  Chemin en haut au milieu:
+  Effet de la valeur "round"
+  -->
+  <path d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="round" />
 
-  <!--
-  Chemin en haut à droite:
-  Effet de la valeur "bevel"
-  -->
-  <path d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="bevel" />
+  <!--
+  Chemin en haut à droite:
+  Effet de la valeur "bevel"
+  -->
+  <path d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="bevel" />
 
-  <!--
-  Chemin en bas à gauche:
-  Effet de la valeur "miter-clip"
-  se replit sur la valeur par défaut (miter) si non pris en charge
-  -->
-  <path d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="miter-clip" />
+  <!--
+  Chemin en bas à gauche:
+  Effet de la valeur "miter-clip"
+  se replit sur la valeur par défaut (miter) si non pris en charge
+  -->
+  <path d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="miter-clip" />
 
-  <!--
-  Chemin en bas à droite:
-  Effet de la valeur "arcs"
-  se replit sur la valeur par défaut (miter) si non pris en charge
-  -->
-  <path d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="arcs" />
+  <!--
+  Chemin en bas à droite:
+  Effet de la valeur "arcs"
+  se replit sur la valeur par défaut (miter) si non pris en charge
+  -->
+  <path d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="arcs" />
 
-  <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
-  -->
-  <g id="highlight">
-    <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-          stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5"   r="0.05" fill="pink" />
-    <circle cx="3" cy="2"   r="0.05" fill="pink" />
-    <circle cx="5" cy="5.5" r="0.05" fill="pink" />
-  </g>
-  <use xlink:href="#highlight" x="6" />
-  <use xlink:href="#highlight" x="12" />
-  <use xlink:href="#highlight" x="2" y="6" />
-  <use xlink:href="#highlight" x="8" y="6" />
+  <!--
+  Lignes roses qui indiquent la position
+  du chemin pour chaque trait
+  -->
+  <g id="highlight">
+    <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+          stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5"   r="0.05" fill="pink" />
+    <circle cx="3" cy="2"   r="0.05" fill="pink" />
+    <circle cx="5" cy="5.5" r="0.05" fill="pink" />
+  </g>
+  <use xlink:href="#highlight" x="6" />
+  <use xlink:href="#highlight" x="12" />
+  <use xlink:href="#highlight" x="2" y="6" />
+  <use xlink:href="#highlight" x="8" y="6" />
 </svg>
 ```
 

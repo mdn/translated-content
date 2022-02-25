@@ -25,7 +25,7 @@ Un nombre entier non signé.
 
 ## Exemple
 
-L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
 var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
@@ -42,47 +42,47 @@ analyseur.getByteTimeDomainData(tableauDonnees);
 
 function dessiner() {
 
-      dessin = requestAnimationFrame(dessiner);
+      dessin = requestAnimationFrame(dessiner);
 
-      analyseur.getByteTimeDomainData(tableauDonnees);
+      analyseur.getByteTimeDomainData(tableauDonnees);
 
-      contexteCanvas.fillStyle = 'rgb(200, 200, 200)';
-      contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+      contexteCanvas.fillStyle = 'rgb(200, 200, 200)';
+      contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
 
-      contexteCanvas.lineWidth = 2;
-      contexteCanvas.strokeStyle = 'rgb(0, 0, 0)';
+      contexteCanvas.lineWidth = 2;
+      contexteCanvas.strokeStyle = 'rgb(0, 0, 0)';
 
-      contexteCanvas.beginPath();
+      contexteCanvas.beginPath();
 
-      var largeurTranche = LARGEUR * 1.0 / tailleMemoireTampon;
-      var x = 0;
+      var largeurTranche = LARGEUR * 1.0 / tailleMemoireTampon;
+      var x = 0;
 
-      for(var i = 0; i < tailleMemoireTampon; i++) {
+      for(var i = 0; i < tailleMemoireTampon; i++) {
 
-        var v = tableauDonnees[i] / 128.0;
-        var y = v * HAUTEUR/2;
+        var v = tableauDonnees[i] / 128.0;
+        var y = v * HAUTEUR/2;
 
-        if(i === 0) {
-          contexteCanvas.moveTo(x, y);
-        } else {
-          contexteCanvas.lineTo(x, y);
-        }
+        if(i === 0) {
+          contexteCanvas.moveTo(x, y);
+        } else {
+          contexteCanvas.lineTo(x, y);
+        }
 
-        x += largeurTranche;
-      }
+        x += largeurTranche;
+      }
 
-      contexteCanvas.lineTo(canvas.width, canvas.height/2);
-      contexteCanvas.stroke();
-    };
+      contexteCanvas.lineTo(canvas.width, canvas.height/2);
+      contexteCanvas.stroke();
+    };
 
-    dessiner();
+    dessiner();
 ```
 
 ## Spécifications
 
 | Spécification                                                                                | Statut                               | Commentaire |
 | -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-fftSize', 'fftSize')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AnalyserNode-fftSize', 'fftSize')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

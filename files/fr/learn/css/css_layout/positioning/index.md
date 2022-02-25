@@ -101,8 +101,8 @@ Si vous enregistrez et actualisez maintenant, vous verrez ce résultat :
 
 ```css hidden
 body {
-  width: 500px;
-  margin: 0 auto; }
+  width: 500px;
+  margin: 0 auto; }
 p {
   background: aqua;
   border: 3px solid blue;
@@ -241,7 +241,7 @@ A ce stade, vous verrez le premier paragraphe coloré en vert, déplacé hors du
 
 Est‑il possible de changer l'ordre d'empilement ? Oui, vous le pouvez avec la propriété {{cssxref("z-index")}}. « z-index » est une référence à l'axe **z**. Vous vous souvenez peut-être de points précédents du source où nous avons discuté des pages Web en utilisant des coordonnées horizontales (axe des x) et verticales (axe des y) pour déterminer le positionnement de choses comme les images de fond et les décalages d'ombres portées. (0,0) est en haut à gauche de la page (ou de l'élément), et les axes x et y vont respectivement vers la droite et vers le bas de la page (pour les langues s'écrivant de gauche à droite, en tout cas).
 
-Les pages Web ont aussi un axe z : une ligne imaginaire qui va de la surface de votre écran, vers votre visage (ou tout ce que vous aimez avoir devant l'écran). Les valeurs de {{cssxref("z-index")}}} affectent l'emplacement des éléments positionnés sur cet axe ; les valeurs positives les déplacent vers le haut de la pile, et les valeurs négatives les déplacent vers le bas de la pile. Par défaut, les éléments positionnés ont tous un `z-index`  `auto`, qui est effectivement 0.
+Les pages Web ont aussi un axe z : une ligne imaginaire qui va de la surface de votre écran, vers votre visage (ou tout ce que vous aimez avoir devant l'écran). Les valeurs de {{cssxref("z-index")}}} affectent l'emplacement des éléments positionnés sur cet axe ; les valeurs positives les déplacent vers le haut de la pile, et les valeurs négatives les déplacent vers le bas de la pile. Par défaut, les éléments positionnés ont tous un `z-index`  `auto`, qui est effectivement 0.
 
 Pour modifier l'ordre d'empilement, ajoutez la déclaration suivante à la règle `p:nth-of-type(1)` :
 
@@ -376,7 +376,7 @@ p:nth-of-type(1) {
 
 {{ EmbedLiveSample('Positionnement_fixe', '100%', 400) }}
 
-> **Note :** à ce stade de l'article, vous pouvez voir un exemple en direct ici  [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
+> **Note :** à ce stade de l'article, vous pouvez voir un exemple en direct ici  [`6_fixed-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ### « position: sticky »
 

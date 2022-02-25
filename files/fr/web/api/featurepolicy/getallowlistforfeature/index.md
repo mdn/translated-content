@@ -42,7 +42,7 @@ const featurePolicy = document.featurePolicy
 const listePermissions = featurePolicy.getAllowlistForFeature("camera")
 
 for (const origine of listePermissions)
-  console.log(origine)
+  console.log(origine)
 ```
 
 ## Spécification

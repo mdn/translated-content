@@ -17,7 +17,7 @@ HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action q
 - [`HEAD`](/fr/docs/Web/HTTP/Méthode/HEAD)
   - : La méthode `HEAD` demande une réponse identique à une requête GET pour laquelle on aura omis le corps de la réponse (on a uniquement l'en-tête).
 - [`POST`](/fr/docs/Web/HTTP/Méthode/POST)
-  - : La méthode `POST` est utilisée pour envoyer une entité vers la ressource indiquée. Cela  entraîne généralement un changement d'état ou des effets de bord sur le serveur.
+  - : La méthode `POST` est utilisée pour envoyer une entité vers la ressource indiquée. Cela  entraîne généralement un changement d'état ou des effets de bord sur le serveur.
 - [`PUT`](/fr/docs/Web/HTTP/Méthode/PUT)
   - : La méthode `PUT` remplace toutes les représentations actuelles de la ressource visée par le contenu de la requête.
 - [`DELETE`](/fr/docs/Web/HTTP/Méthode/DELETE)

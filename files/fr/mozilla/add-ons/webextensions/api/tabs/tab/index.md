@@ -47,10 +47,10 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
   - : `boolean`. Si l'onglet est en surbrillance, c'est-à-dire une partie de la sélection de l'onglet en cours. Un onglet actif est toujours mis en surbrillance, mais certains navigateurs peuvent permettre de mettre en surbrillance des onglets supplémentaires, par exemple en cliquant dessus tout en maintenant les touches <kbd>Ctrl</kbd>, <kbd>Shift</kbd> ou <kbd>⌘ Command</kbd> .
 
-    Firefox pour Android ne prend pas en charge la mise en surbrillance de plusieurs onglets, et le bureau Firefox nécessite la préférence  `browser.tabs.multiselect` (activé par défaut).
+    Firefox pour Android ne prend pas en charge la mise en surbrillance de plusieurs onglets, et le bureau Firefox nécessite la préférence  `browser.tabs.multiselect` (activé par défaut).
 
 - `id` {{optional_inline}}
-  - : `integer`. L'ID de l'onglet. Les ID d'onglet sont uniques dans une session de navigateur. L'ID d'onglet peut également être défini sur  {{WebExtAPIRef('tabs.TAB_ID_NONE')}} pour les fenêtres de navigateur qui n'hébergent pas d'onglets de contenu (par exemple, les fenêtres devtools).
+  - : `integer`. L'ID de l'onglet. Les ID d'onglet sont uniques dans une session de navigateur. L'ID d'onglet peut également être défini sur  {{WebExtAPIRef('tabs.TAB_ID_NONE')}} pour les fenêtres de navigateur qui n'hébergent pas d'onglets de contenu (par exemple, les fenêtres devtools).
 - `incognito`
   - : `boolean`. Si l'onglet est dans une fenêtre de navigation privée.
 - `index`
@@ -70,7 +70,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `selected` {{deprecated_inline}}
   - : `boolean`. Si l'onglet est sélectionné. Cette propriété a été remplacée par `active` et `highlighted`.
 - `sessionId` {{optional_inline}}
-  - : `string`. L'identifiant de session utilisé pour identifier de façon unique un `onglet`  obtenu à partir de l'API {{WebExtAPIRef('sessions')}}.
+  - : `string`. L'identifiant de session utilisé pour identifier de façon unique un `onglet`  obtenu à partir de l'API {{WebExtAPIRef('sessions')}}.
 - `status` {{optional_inline}}
   - : `string`. Soit _charger_ ou _compléter_.
 - `successorId` {{optional_inline}}

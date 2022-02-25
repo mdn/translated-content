@@ -17,7 +17,7 @@ original_slug: Apprendre/CSS/CSS_layout/Legacy_Layout_Methods
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-Les systèmes de trames sont courants dans les mises en page avec une CSS, mais avant la création de l'application «&nbsp;CSS Grid Layout&nbsp;», ces mises en page  étaient mises en œuvre à l'aide de boîtes flottantes ou autres. Vous imaginiez votre mise en page sous la forme d'un nombre fixe de colonnes (par exemple 4, 6 ou 12), puis insériez des colonnes de contenu dans ces colonnes imaginaires. Dans cet article, nous allons explorer le fonctionnement de ces méthodes traditionnelles anciennes pour que vous compreniez comment elles sont utilisées si vous travaillez sur un projet ancien.
+Les systèmes de trames sont courants dans les mises en page avec une CSS, mais avant la création de l'application «&nbsp;CSS Grid Layout&nbsp;», ces mises en page  étaient mises en œuvre à l'aide de boîtes flottantes ou autres. Vous imaginiez votre mise en page sous la forme d'un nombre fixe de colonnes (par exemple 4, 6 ou 12), puis insériez des colonnes de contenu dans ces colonnes imaginaires. Dans cet article, nous allons explorer le fonctionnement de ces méthodes traditionnelles anciennes pour que vous compreniez comment elles sont utilisées si vous travaillez sur un projet ancien.
 
 <table class="standard-table">
   <tbody>
@@ -71,7 +71,7 @@ Tout d'abord, nous avons besoin de contenu à mettre dans nos colonnes. Remplace
 </div>
 ```
 
-Chacune de ces colonnes nécessite un élément extérieur conteneur du dit contenu et manipulons‑le en bloc.. Dans notre exemple, nous avons choisi des éléments {{htmlelement("div")}}, mais vous auriez pu choisir n'importe quoi d'autre sémantiquement approprié comme un élément  {{htmlelement("article")}}, {{htmlelement("section")}} ou {{htmlelement("aside")}} ou tout autre.
+Chacune de ces colonnes nécessite un élément extérieur conteneur du dit contenu et manipulons‑le en bloc.. Dans notre exemple, nous avons choisi des éléments {{htmlelement("div")}}, mais vous auriez pu choisir n'importe quoi d'autre sémantiquement approprié comme un élément  {{htmlelement("article")}}, {{htmlelement("section")}} ou {{htmlelement("aside")}} ou tout autre.
 
 Pour la CSS maintenant appliquons ce qui suit au HTML comme base de configuration&nbsp;:
 
@@ -149,13 +149,13 @@ div:nth-of-type(2) {
 
 Notez que nous avons utilisé des pourcentages pour définir les largeurs — c'est la bonne stratégie, cela crée une **disposition fluide**, s'ajustant à diverses tailles d'écran et gardant les mêmes proportions pour les tailles d'écran plus petites. Modifiez la taille de la fenêtre du navigateur pour voir par vous‑même. C'est un outil adapté au désign web adaptatif.
 
-> **Note :** Vous pouvez voir cet exemple en cours à la page [0_two-column-layout.html](http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (voyez aussi son  [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html)).
+> **Note :** Vous pouvez voir cet exemple en cours à la page [0_two-column-layout.html](http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (voyez aussi son  [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html)).
 
 ## Ancienne création d'un cadre de trames
 
 La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le [dégagement des boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats).
 
-Le type de cadre de trames le plus facile à créer est un cadre de largeur fixe — il faut simplement déterminer la largeur totale du désign, le nombre de colonnes voulues et la largeur des gouttières et des colonnes. Si nous décidons plutôt de disposer ce design sur une trame avec des colonnes s'adaptant à la largeur de vue du navigateur, nous devrons  calculer les pourcentages de largeur des colonnes et celui des gouttières entre colonnes.
+Le type de cadre de trames le plus facile à créer est un cadre de largeur fixe — il faut simplement déterminer la largeur totale du désign, le nombre de colonnes voulues et la largeur des gouttières et des colonnes. Si nous décidons plutôt de disposer ce design sur une trame avec des colonnes s'adaptant à la largeur de vue du navigateur, nous devrons  calculer les pourcentages de largeur des colonnes et celui des gouttières entre colonnes.
 
 Dans les paragraphes suivants, nous verrons comment créer ces deux types. Nous allons faire une trame à 12 colonnes — un choix courant considéré comme adaptable à diverses situations étant donné que 12 est bien divisible par 6, 4, 3 et 2.
 
@@ -194,7 +194,7 @@ Le but est d'en faire une trame de démonstration sur deux lignes à partir des 
 
 ![](simple-grid-finished.png)
 
-À l'élément {{htmlelement("style")}}, ajoutons le code ci-après. Il donne une largeur de 980 pixels au conteneur enveloppe avec un remplissage de 20 pixels du côté droit. Cela nous laisse 960 pixels comme largeur totale pour les colonnes et les gouttières — dans ce cas, le remplissage est soustrait à la largeur totale du contenu car nous avons fixé la valeur de  {{cssxref("box-sizing")}} à `border-box` sur tous les éléments du site (voir [Modification totale du modèle de boîte](</fr/docs/Apprendre/CSS/Styling_boxes/Box_model_recap#Modification totale du modèle de boîte>) pour plus d'explications).
+À l'élément {{htmlelement("style")}}, ajoutons le code ci-après. Il donne une largeur de 980 pixels au conteneur enveloppe avec un remplissage de 20 pixels du côté droit. Cela nous laisse 960 pixels comme largeur totale pour les colonnes et les gouttières — dans ce cas, le remplissage est soustrait à la largeur totale du contenu car nous avons fixé la valeur de  {{cssxref("box-sizing")}} à `border-box` sur tous les éléments du site (voir [Modification totale du modèle de boîte](</fr/docs/Apprendre/CSS/Styling_boxes/Box_model_recap#Modification totale du modèle de boîte>) pour plus d'explications).
 
 ```css
 * {
@@ -225,7 +225,7 @@ Les gouttières entre colonnes ont une largeur de 20 px. Ces gouttières sont fa
 
 Il convient de soustraire cela de la largeur totale de 960 pixels, ce qui laisse 720 pixels pour les colonnes. En divisant par 12, nous voyons que chaque colonne aura une largeur de 60 pixels.
 
-L'étape suivante consiste à créer un règle pour la classe `.col` la faisant flotter à gauche lui laissant une marge gauche de {{cssxref("margin-left")}} de 20 pixels formant la gouttière et  une largeur {{cssxref("width")}} de 60 pixels. Ajoutez la règle suivante en fin de la CSS&nbsp;:
+L'étape suivante consiste à créer un règle pour la classe `.col` la faisant flotter à gauche lui laissant une marge gauche de {{cssxref("margin-left")}} de 20 pixels formant la gouttière et  une largeur {{cssxref("width")}} de 60 pixels. Ajoutez la règle suivante en fin de la CSS&nbsp;:
 
 ```css
 .col {
@@ -327,7 +327,7 @@ Ensuite, mettez à jour les quatre règles CSS (du sélecteur `.col`) ainsi&nbsp
 }
 ```
 
-Maintenant vient la partie un peu plus laborieuse — nous devons mettre à jour toutes  les règles `.col.span` en utilisant des largeurs en pourcentage au lieu de pixels. Cela prend un peu de temps avec une calculette&nbsp;; pour vous économiser du travail, nous l'avons fait pour vous.
+Maintenant vient la partie un peu plus laborieuse — nous devons mettre à jour toutes  les règles `.col.span` en utilisant des largeurs en pourcentage au lieu de pixels. Cela prend un peu de temps avec une calculette&nbsp;; pour vous économiser du travail, nous l'avons fait pour vous.
 
 Mettez à jour le bloc bas des règles CSS avec ce qui suit&nbsp;:
 
@@ -380,7 +380,7 @@ Remplacez le bloc de règles le plus bas par le suivant, puis actualisez le navi
 .col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
 ```
 
-> **Note :** Vous pouvez voir la version terminée dans [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) (la voir aussi  [en direct](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
+> **Note :** Vous pouvez voir la version terminée dans [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) (la voir aussi  [en direct](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
 
 > **Note :** Si vous n'arrivez pas à faire fonctionner ce qui précède, cela peut être dû au fait que votre navigateur ne prend pas en charge la fonction `calc()`, même si elle est assez bien prise en charge parmi les navigateurs — au‑delà de IE9.
 
@@ -481,11 +481,11 @@ body {
 }
 ```
 
-Faites ces remplacements dans votre exemple, ou regardez l'exemeple de code [flexbox-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/flexbox-grid.html) (voir aussi en  [exécution directe](http://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html)).
+Faites ces remplacements dans votre exemple, ou regardez l'exemeple de code [flexbox-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/flexbox-grid.html) (voir aussi en  [exécution directe](http://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html)).
 
-Ici, nous transformons chaque rangée en conteneur flexible. Avec une trame fondée sur Flexbox, nous avons encore besoin de rangées  pour avoir des éléments tant que leur somme est inférieure à 100%. Nous avons réglé ce conteneur à `display : flex`.
+Ici, nous transformons chaque rangée en conteneur flexible. Avec une trame fondée sur Flexbox, nous avons encore besoin de rangées  pour avoir des éléments tant que leur somme est inférieure à 100%. Nous avons réglé ce conteneur à `display : flex`.
 
-Pour `.col` nous fixons à 1 la première valeur ({{cssxref("flex-grow")}}) de la propriété  {{cssxref("flex")}}, ainsi nos éléments peuvent s'élargir, la deuxième valeur ({{cssxref("flex-shrink")}}) à 1 également, ainsi les éléments peuvent s'étrécir, et la troisième valeur ({{cssxref("flex-basis")}}) à `auto`. Comme la valeur {{cssxref("width")}} de l'élément est fixée, `auto` utilisera cette valeur en tant que valeur de `flex-basis`.
+Pour `.col` nous fixons à 1 la première valeur ({{cssxref("flex-grow")}}) de la propriété  {{cssxref("flex")}}, ainsi nos éléments peuvent s'élargir, la deuxième valeur ({{cssxref("flex-shrink")}}) à 1 également, ainsi les éléments peuvent s'étrécir, et la troisième valeur ({{cssxref("flex-basis")}}) à `auto`. Comme la valeur {{cssxref("width")}} de l'élément est fixée, `auto` utilisera cette valeur en tant que valeur de `flex-basis`.
 
 Sur la ligne haute, nous disposons de douze boîtes nettes sur la trame et elle s'élargissent ou s'étrécissent de manière égale quand nous modifions la largeur de la vue. Sur la ligne suivante, toutefois, nous n'avons que quatre éléments et ceux-ci s'élargissent ou s'étrécissent à partir de la base de 60px. Avec seulement quatre d'entre eux ils peuvent s'élargir un peu plus que les éléments de la ligne au‑dessus, le résultat étant qu'ils occupent tous la même largeur sur la deuxième ligne.
 
@@ -495,7 +495,7 @@ Pour corriger cela, nous avons encore besoin d'inclure les classes `span` pour d
 
 Également, ils ne respectent pas la trame utilisée par les éléments au‑dessus car ils ne «&nbsp;savent&nbsp;» rien à son propos.
 
-Flexbox est un design **mono-dimensionnel** par conception. Il compose avec une seule dimentsion, celle d'une ligne ou d'une colonne. Nous ne pouvons pas créer une trame stricte pour les colonnes **et** pour les lignes, ce qui signifie que si nous utilisons Flexbox pour  une trame, nous devons encore calculer les pourcentages comme pour la disposition en boîtes flottantes.
+Flexbox est un design **mono-dimensionnel** par conception. Il compose avec une seule dimentsion, celle d'une ligne ou d'une colonne. Nous ne pouvons pas créer une trame stricte pour les colonnes **et** pour les lignes, ce qui signifie que si nous utilisons Flexbox pour  une trame, nous devons encore calculer les pourcentages comme pour la disposition en boîtes flottantes.
 
 Dans votre projet, vous pouvez toujours choisir d'utiliser une «&nbsp;trame&nbsp;» Flexbox en raison des capacités d'alignement et de distribution de l'espace supplémentaires que Flexbox offre pour les boites flottantes. Mais sachez que vous utilisez encore un outil pour autre chose que ce pour quoi il a été conçu. Vous pouvez donc avoir l'impression d'être obligé de passer par un tas de circonvolutions pour obtenir le résultat final souhaité.
 
@@ -549,7 +549,7 @@ Nous utiliserons un HTML similaire à celui de notre dernier exemple. Ajoutez ce
 
 Pour commencer à utiliser Skeleton nous devons donner à l'élément enveloppe {{htmlelement("div")}} une classe `container` — elle est déjà comprise dans le HTML. Ceci centre le contenu avec une largeur maximale de 960 pixels. Vous pouvez voir que les boîtes ne deviennent plus jamais plus large que 960 pixels.
 
-Regardez dans le fichier skeleton.css, vous verrez la  CSS appliquée quand on se sert de cette classe. L'élément `<div>` est centré en utilisant la valeur `auto` pour les marges droite et gauche ; de plus, un remplissage de 20 pixels est appliqué à droite et à gauche. Skeleton fixe également la propriété {{cssxref("box-sizing")}} à la valeur `border-box` comme nous l'avions fait plu tôt et donc le remplissage et l'encadrement de cet élément seront inclus dans la largeur totale.
+Regardez dans le fichier skeleton.css, vous verrez la  CSS appliquée quand on se sert de cette classe. L'élément `<div>` est centré en utilisant la valeur `auto` pour les marges droite et gauche ; de plus, un remplissage de 20 pixels est appliqué à droite et à gauche. Skeleton fixe également la propriété {{cssxref("box-sizing")}} à la valeur `border-box` comme nous l'avions fait plu tôt et donc le remplissage et l'encadrement de cet élément seront inclus dans la largeur totale.
 
 ```css
 .container {
@@ -592,7 +592,7 @@ Ensuite, indiquez les conteneurs sur la deuxième ligne en précisant le nombre 
 
 Enregistrez le fichier HTML et chargez‑le dans le navigateur pour voir ce que cela donne.
 
-> **Note :** Si vous éprouvez des difficulatés à faire fonctionner cet exemple, comparez votre code avec le fichier [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) (à voir aussi  [en exécution directe](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
+> **Note :** Si vous éprouvez des difficulatés à faire fonctionner cet exemple, comparez votre code avec le fichier [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) (à voir aussi  [en exécution directe](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
 
 Si vous regardez dans le fichier _skeleton.css_ vous verrez comment cela fonctionne. Par exemple, Skeleton prédéfinit ce qui suit pour styler des éléments de la classe «&nbsp;three columns&nbsp;» que l'on ajouterait.
 
@@ -606,7 +606,7 @@ Comme vous le voyez, vous n'avez besoin d'écrire que peu de CSS en utilisant Sk
 
 ## Résumé
 
-Vous savez maintenant comment les divers systèmes de trames sont créés. La connaissance de ces processus est utile dans le cadre d'un travail sur des sites anciens, ainsi que pour la compréhension des différences  entre les trames natives de «&nbsp;CSS Grid Layout&nbsp;» et celles des anciens systèmes.
+Vous savez maintenant comment les divers systèmes de trames sont créés. La connaissance de ces processus est utile dans le cadre d'un travail sur des sites anciens, ainsi que pour la compréhension des différences  entre les trames natives de «&nbsp;CSS Grid Layout&nbsp;» et celles des anciens systèmes.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 

@@ -88,7 +88,7 @@ Le code exécuté par le navigateur est connu sous le nom de **code côté clien
 
 Le code client est écrit en [HTML](/fr/Apprendre/HTML), [CSS](/fr/Apprendre/CSS), et [JavaScript](/fr/Apprendre/JavaScript) — il est exécuté dans un navigateur web et a peu ou pas accès au système d'exploitation de l'utilisateur (inclut un accès limité au système de fichiers).
 
-Les développeurs web ne peuvent pas contrôler quel navigateur est utilisé par l'utilisateur pour voir le site web  — or les navigateurs fournissent des niveaux de compatibilité inconsistants quant aux fonctionnalités du code côté client, et une partie du challenge de la programmation côté client consiste à gérer les différences de support des navigateurs.
+Les développeurs web ne peuvent pas contrôler quel navigateur est utilisé par l'utilisateur pour voir le site web  — or les navigateurs fournissent des niveaux de compatibilité inconsistants quant aux fonctionnalités du code côté client, et une partie du challenge de la programmation côté client consiste à gérer les différences de support des navigateurs.
 
 Le code côté serveur peut être écrit dans nombre de langages de programmation — les langages les plus populaires pour la programmation web côté serveur sont en autres PHP, Python, Ruby, C#, et NodeJS(JavaScript). Le code côté serveur a plein accès au système d'exploitation du serveur et le développeur est libre de choisir le langage (et la version) qu'il veut utiliser.
 
@@ -126,7 +126,7 @@ Comme les informations se trouvent dans une base de données, elles peuvent éga
 > 2.  Cherchez un certain nombre de mot-clés et remarquez que la structure de la page de change pas, même si les résultats oui.
 > 3.  Ouvrez deux ou trois produits. Remarquez que la structure et la disposition de la page sont identiques, mais que le contenu pour les différents produits a été extrait de la base de données.
 >
-> Pour un terme de recherche courant  ("poisson", disons) vous pouvez voir littéralement des millions de valeurs retournées. Utiliser une base de données permet à ces données d'être stockées et partagées efficacement, et permet de contrôler la présentation de l'information à partir d'un seul endroit.
+> Pour un terme de recherche courant  ("poisson", disons) vous pouvez voir littéralement des millions de valeurs retournées. Utiliser une base de données permet à ces données d'être stockées et partagées efficacement, et permet de contrôler la présentation de l'information à partir d'un seul endroit.
 
 ### Expérience utilisateur personnalisée
 
@@ -150,7 +150,7 @@ La programmation côté serveur permet aux sites de restreindre l'accès aux uti
 
 Quelques exemples du monde réel incluent :
 
-- Les réseaux sociaux comme Facebook permettent aux utilisateurs de contrôler entièrement leurs propres données, mais permettent seulement à leurs amis de les voir ou des les commenter. L'utilisateur détermine qui peut voir ses données, et par extension, dans le flux de qui elles apparaissent —  l'autorisation est une partie centrale de l'expérience utilisateur !
+- Les réseaux sociaux comme Facebook permettent aux utilisateurs de contrôler entièrement leurs propres données, mais permettent seulement à leurs amis de les voir ou des les commenter. L'utilisateur détermine qui peut voir ses données, et par extension, dans le flux de qui elles apparaissent —  l'autorisation est une partie centrale de l'expérience utilisateur !
 - Le site sur lequel vous êtes en ce moment même contrôle l'accès au contenu : les articles sont visibles à tout le monde, mais seuls les utilisateurs identifiés peuvent éditer le contenu. Essayez de cliquer sur le bouton **Modifier** en haut de cette page — si vous êtes identifié, vous verrez la vue d'édition ; sinon, vous serez redirigé vers la page d'inscription.
 
 > **Note :** Il existe de nombreux autres exemples où l'accès au contenu est contrôlé. Par exemple, que voyez-vous si vous allez sur le site en ligne de votre banque ? Connectez-vous à votre compte — quelles autres informations pouvez-vous voir et modifier ? Quelles informations pouvez-vous voir que seule la banque peut changer ?
@@ -195,7 +195,7 @@ Vous devez également comprendre que c'est utile pour créer des sites web qui d
 
 Finalement, vous devez comprendre que le code côté serveur peut être écrit dans de nombreux langages de programmation et que l'on peut utiliser des frameworks web pour rendre ce processus plus facile.
 
-Dans un futur article,  nous vous aiderons à choisir le framework le plus adapté pour la création d'un premier site. Ensuite, nous vous présenterons les principales interactions client-serveur plus en détails.
+Dans un futur article,  nous vous aiderons à choisir le framework le plus adapté pour la création d'un premier site. Ensuite, nous vous présenterons les principales interactions client-serveur plus en détails.
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 

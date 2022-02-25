@@ -29,7 +29,7 @@ _Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événem
 
 ## Méthodes
 
-_Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événement implémente également ces propriétés_.  _Il n'y a pas de méthode _{{domxref("MediaStreamEvent")}}_ spécifique._
+_Un {{domxref("MediaStreamEvent")}} étant un {{domxref("Event")}}, cet événement implémente également ces propriétés_.  _Il n'y a pas de méthode _{{domxref("MediaStreamEvent")}}_ spécifique._
 
 ## Exemples
 

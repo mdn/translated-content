@@ -28,7 +28,7 @@ Voir le tableau de [compatibilité des navigateurs](#compat "#Compatibilit.C3.A9
 
 {{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/DateTimeFormat','Paramètres')}}
 
-La valeur par défaut de chacun des composants de la date-heure vaut {{jsxref("undefined")}}, mais si les propriétés `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second` sont toutes {{jsxref("undefined")}},  alors  `weekday`, `year`, `month`, `day`, `hour`, `minute` et `second` sont supposés être "numeric".
+La valeur par défaut de chacun des composants de la date-heure vaut {{jsxref("undefined")}}, mais si les propriétés `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second` sont toutes {{jsxref("undefined")}},  alors  `weekday`, `year`, `month`, `day`, `hour`, `minute` et `second` sont supposés être "numeric".
 
 ### Valeur de retour
 

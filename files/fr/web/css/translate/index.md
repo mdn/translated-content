@@ -51,7 +51,7 @@ translate: 50% 105px 5rem;
 
 ```html
 <div>
-  <p class="translate">Translation</p>
+  <p class="translate">Translation</p>
 </div>
 ```
 

@@ -26,17 +26,17 @@ Tous les évènements (excepté `onErrorOccurred`) peuvent prendre trois argumen
 
 - Le receveur d'évènements lui-même
 - un {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} objet, afin de n'être notifié que pour les requêtes effectués par des URLs particulières ou pour un type particulier de ressources.
-- un  `extraInfoSpec` objet optionnel. Vous pouvez utiliser celui-ci pour passer des instructions spécifiques à l'évènement supplémentaires.
+- un  `extraInfoSpec` objet optionnel. Vous pouvez utiliser celui-ci pour passer des instructions spécifiques à l'évènement supplémentaires.
 
 Une fonction d'écoute reçoit un objet `details` qui contient des informations à propos de la requête. Il inclut un ID de requête, fourni afin de permettre à une extension de relier des évènements associés à une même requête. Il est unique à chaque session de navigation et à l'extension. Il reste le même tout au long d'une requête, même durant les redirections et les échanges d'authentifications.
 
-Pour utiliser l'API webRequest pour un hôte donné, une extension doit avoir la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)  "webRequest" et la [permission hôte ](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)pour cet hôte. Pour utiliser la fonction "blocking", l'extension doit également avoir la permission API "webRequestBlocking".
+Pour utiliser l'API webRequest pour un hôte donné, une extension doit avoir la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)  "webRequest" et la [permission hôte ](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)pour cet hôte. Pour utiliser la fonction "blocking", l'extension doit également avoir la permission API "webRequestBlocking".
 
-Pour intercepter des ressources chargées par une page (comme des images, des scripts ou des feuilles de style), l'extension doit avoir la permission de l'hôte pour la ressource ainsi que pour la page principale demandant la ressource. Par exemple, si une page à  "https\://developer.mozilla.org" charge une image à partir de "https\://mdn.mozillademos.org", alors une extension doit avoir les deux permissions d'hôte si elle doit intercepter la demande d'image.
+Pour intercepter des ressources chargées par une page (comme des images, des scripts ou des feuilles de style), l'extension doit avoir la permission de l'hôte pour la ressource ainsi que pour la page principale demandant la ressource. Par exemple, si une page à  "https\://developer.mozilla.org" charge une image à partir de "https\://mdn.mozillademos.org", alors une extension doit avoir les deux permissions d'hôte si elle doit intercepter la demande d'image.
 
 ## Modifier une requête
 
-Sur certains de ces événements, vous pouvez modifier la demande. Plus précisément, vous pouvez  :
+Sur certains de ces événements, vous pouvez modifier la demande. Plus précisément, vous pouvez  :
 
 - Annuler une requête avec:
 

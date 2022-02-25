@@ -59,7 +59,7 @@ La valeur de cette propriété peut être définie selon deux formes :
     , etc. Il correspond aux valeurs OpenType values `ordn`.
 
 - `slashed-zero`
-  - : Ce mot-clé permet de forcer l'application d'une barre oblique après un 0. Cela peut être utile quand on cherche à distinguer un O majuscule d'un 0. Il correspond aux valeurs  OpenType `zero`.
+  - : Ce mot-clé permet de forcer l'application d'une barre oblique après un 0. Cela peut être utile quand on cherche à distinguer un O majuscule d'un 0. Il correspond aux valeurs  OpenType `zero`.
 - _\<numeric-figure-values_>
 
   - : Ces valeurs contrôlent les chiffres utilisés pour les nombres. Deux valeurs peuvent être utilisées :

@@ -33,9 +33,9 @@ Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWo
 - {{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}}
   - : Crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour un `scriptURL` donné.
 - {{domxref("ServiceWorkerContainer.getRegistration()")}}
-  - : Récupère un objet {{domxref("ServiceWorkerRegistration")}} dont l’URL de la portée correspond à l’URL du document fourni.  Si la méthode ne peut retourner un {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+  - : Récupère un objet {{domxref("ServiceWorkerRegistration")}} dont l’URL de la portée correspond à l’URL du document fourni.  Si la méthode ne peut retourner un {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 - {{domxref("ServiceWorkerContainer.getRegistrations()")}}
-  - : Retourne tous les  {{domxref("ServiceWorkerRegistration")}} associés à un `ServiceWorkerContainer` dans un tableau. Si la méthode ne peut retourner les {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+  - : Retourne tous les  {{domxref("ServiceWorkerRegistration")}} associés à un `ServiceWorkerContainer` dans un tableau. Si la méthode ne peut retourner les {{domxref("ServiceWorkerRegistration")}}, elle retourne une [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Exemples
 

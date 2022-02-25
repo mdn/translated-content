@@ -76,7 +76,7 @@ Deuxième version plus concise qui utilise la méthode globale `isFinite`
 
 ```js
 if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === "number" && isFinite(value);
+    return typeof value === "number" && isFinite(value);
 }
 ```
 

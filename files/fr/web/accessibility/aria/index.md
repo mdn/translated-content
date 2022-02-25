@@ -44,7 +44,7 @@ En plus des déclarations _statiques_ dans le contenu HTML, les attributs ARIA p
  }
 ```
 
-> **Note :** ARIA  a été inventé après HTML4 et ne valide pas HTML4 ou les variantes XHTML. Toutefois, les gains d'accessibilité l'emportent sur cette invalidité.
+> **Note :** ARIA  a été inventé après HTML4 et ne valide pas HTML4 ou les variantes XHTML. Toutefois, les gains d'accessibilité l'emportent sur cette invalidité.
 >
 > En HTML5, tous les attributs ARIA sont valides. Les nouveaux éléments de navigation (`<main>`, `<header>`, `<nav>` etc.) possèdent des rôles ARIA natifs et il n'est pas nécessaire de les dupliquer.
 
@@ -79,7 +79,7 @@ Il est aussi important de tester l'ARIA écrit avec des technologies d'assistanc
 - [Régions dynamiques](/fr/docs/Accessibilité/ARIA/Zones_live_ARIA) (_live regions_)
   - : Les régions dynamiques fournissent des suggestion aux lecteurs d'écran sur la façon dont gérer la modification du contenu d'une page.
 - [Utiliser les régions dynamiques ARIA afin d'indiquer une modification de contenu](https://www.freedomscientific.com/SurfsUp/AriaLiveRegions.htm)
-  - : Un rapide résumé des régions interactives par les concepteurs du lecteur d'écran JAWS. Les régions dynamiques sont également prises en charge par NVDA pour Firefox et par  VoiceOver avec Safari.
+  - : Un rapide résumé des régions interactives par les concepteurs du lecteur d'écran JAWS. Les régions dynamiques sont également prises en charge par NVDA pour Firefox et par  VoiceOver avec Safari.
 
 ## Processus de standardisation
 

@@ -55,7 +55,7 @@ Cela fonctionne bien sur un appareil avec un grand écran, comme un portable ou 
 
 Tout cela c'est très bien, mais le problème apparaît lorsque vous commencez à regarder le site sur un écran étroit — l'en-tête semble correct, mais commence à prendre beaucoup de hauteur pour un mobile, et la première image de contenu d'autre part n'est pas terrible — à cette taille, vous avez du mal à distinguer les personnes&nbsp;!
 
-![Notre site d'exemple vu sur un écran étroit  la première image est réduite à telle point qu'il est difficile d'y voir les détails.](non-responsive-narrow.png)
+![Notre site d'exemple vu sur un écran étroit  la première image est réduite à telle point qu'il est difficile d'y voir les détails.](non-responsive-narrow.png)
 
 Quand le site est vu sur un écran étroit, il serait préférable de montrer une version recadrée de l'image sur les parties importantes de la vue au lieu de faire voir des bâtiments, et peut-être quelque chose entre les deux pour un écran de largeur moyenne comme une tablette — ce problème relève de **décisions de nature artistique**.
 

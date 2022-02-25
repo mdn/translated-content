@@ -15,12 +15,12 @@ Le constructeur **`AnimationEvent()`** retourne un nouvel {{domxref("AnimationEv
 
 ### Paramètres
 
-*Le constructeur `AnimationEvent()` *constructeur hérite également des arguments de  _{{domxref("Event.Event", "Event()")}}._
+*Le constructeur `AnimationEvent()` *constructeur hérite également des arguments de  _{{domxref("Event.Event", "Event()")}}._
 
 - `type`
   - : Un {{domxref("DOMString")}} représentant le nom du type de `AnimationEvent`. Il est sensible à la casse (majuscule-minuscule) et peut être: `'animationstart'`, `'animationend'`, or `'animationiteration'`.
 - `animationName` {{optional_inline}}
-  - : Un {{domxref("DOMString")}} contenant la valeur de  la propriété associée avec la transition.{{cssxref("animation-name")}} . Prend par défaut `""`.
+  - : Un {{domxref("DOMString")}} contenant la valeur de  la propriété associée avec la transition.{{cssxref("animation-name")}} . Prend par défaut `""`.
 - `elapsedTime` {{optional_inline}}
   - : Un `float` donne le montant de temps d'une application qui a fonctionné, en secondes, quand l'évenenement est déclenché, excluant le temps de pause des animations. Pour un évènement `"animationstart"` , `elapsedTime` est de `0.0` jusqu'a ce qu'il y ai une valeur négative pour une valeur {{cssxref("animation-delay")}}, dans le case où l'évenement est déclenché par `elapsedTime` contenant `(-1 * `_délais_`)`. SA valeur par défaut vaut `0.0`.
 - `pseudoElement` {{optional_inline}}

@@ -631,7 +631,7 @@ Afin d'échapper les informations saisies par l'utilisateur et de traîter les c
 function escapeRegExp(string){
   // $& correspond à la chaîne correspondante
   // dans son intégralité
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 ```
 
@@ -645,7 +645,7 @@ Les parenthèses encadrant une partie du motif de l'expression régulière peuve
 
 Ainsi, le motif `/Chapitre (\d+)\.\d*/` utilise des caractères échappés et spéciaux et indique une partie du motif à garder en mémoire. Ce motif correspond aux caractères 'Chapitre ' suivi par un ou plusieurs caractères numériques (`\d` correspond à un chiffre et `+` indiquant que une série de 1 ou plusieurs chiffres), suivis par un point (qu'il est nécessaire d'échapper car c'est un caractère spécial, on utilise donc '\\' pour indiquer qu'on souhaite reconnaître le caractère '.'), suivi par 0 ou plusieurs chiffres (`\d` correspondant à un chiffre et l'astérisque indiquant que le caractère est présent 0 ou plusieurs fois). Les parenthèses sont utilisées pour garder en mémoire les premiers chiffres correspondant.
 
-Ce motif est trouvé dans "Ouvrir le Chapitre 4.3 au paragraphe 6" et le chiffre '4' est gardé en mémoire. Le motif n'est pas trouvé dans  "Chapitre 3 et 4", car la chaîne de caractères ne comporte pas de point après le '3'.
+Ce motif est trouvé dans "Ouvrir le Chapitre 4.3 au paragraphe 6" et le chiffre '4' est gardé en mémoire. Le motif n'est pas trouvé dans  "Chapitre 3 et 4", car la chaîne de caractères ne comporte pas de point après le '3'.
 
 Pour qu'une partie de la chaîne de caractère corresponde mais que la correspondance ne soit pas gardée en mémoire, on pourra utiliser `?:`. Ainsi, `(?:\d+)` correspondra pour une séquence de chiffres (1 ou plusieurs chiffres) mais on ne gardera pas en mémoire les caractères correspondants.
 

@@ -60,7 +60,7 @@ Il existe trois types de déclarations de variable en JavaScript.
 Les variables sont utilisées comme des noms symboliques désignant les valeurs utilisées dans l'application. Les noms des variables sont appelés _identifiants_. Ces identifiants doivent respecter certaines règles.
 
 Un identifiant JavaScript doit commencer par une lettre, un tiret bas (\_) ou un symbole dollar ($). Les caractères qui suivent peuvent être des chiffres (0 à 9).
-À noter : puisque Javascript est sensible aux majuscules et minuscules: les lettres peuvent comprendre les caractères de « A » à « Z » (en majuscule) mais aussi les caractères  de « a » à « z » (en minuscule).
+À noter : puisque Javascript est sensible aux majuscules et minuscules: les lettres peuvent comprendre les caractères de « A » à « Z » (en majuscule) mais aussi les caractères  de « a » à « z » (en minuscule).
 
 On peut aussi utiliser la plupart lettres Unicode ou ISO 8859-1 (comme å et ü, pour plus de détails, voir [ce billet de blog, en anglais](https://mathiasbynens.be/notes/javascript-identifiers-es6)) au sein des identifiants. Il est également possible d'utiliser les \uXXXX [séquences d'échappement Unicode](<#littéraux chaînes>) comme caractères dans les identifiants.
 

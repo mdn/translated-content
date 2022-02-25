@@ -117,20 +117,20 @@ Maintenant que nous avons vu quelques bases de CSS, ajoutons quelques règles et
     }
     ```
 
-    > **Note :** Tout ce qui est entre `/*` et `*/` dans un document CSS est un **commentaire**  **de CSS.**  Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.
+    > **Note :** Tout ce qui est entre `/*` et `*/` dans un document CSS est un **commentaire**  **de CSS.**  Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.
 
 4.  Ensuite, fixons les tailles des différents textes contenus dans le corps du HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, et {{htmlelement("p")}}). Nous allons également centrer le texte du titre et donner une taille de ligne et un espacement de caractère entre les lettres pour que le contenu du corps (_body_) du document soit plus lisible :
 
     ```css
     h1 {
-      font-size: 60px;
-      text-align: center;
+      font-size: 60px;
+      text-align: center;
     }
 
     p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
+      font-size: 16px;
+      line-height: 2;
+      letter-spacing: 1px;
     }
     ```
 

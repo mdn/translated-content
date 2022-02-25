@@ -5,7 +5,7 @@ translation_of: Web/API/DOMTokenList/add
 ---
 {{APIRef("DOM")}}
 
-La méthode **`add()`** de l'interface {{domxref("DOMTokenList")}} ajoute  le _token_ (_marque_) à la liste.
+La méthode **`add()`** de l'interface {{domxref("DOMTokenList")}} ajoute  le _token_ (_marque_) à la liste.
 
 ## Syntaxe
 
@@ -22,7 +22,7 @@ Vide.
 
 ## Exemples
 
-Dans l'exemple suivant, nous récupérons une liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList`, en utilisant {{domxref("Element.classList")}}. Nous ajoutons alors une nouvelle marque à la  liste et écrivons la liste dans un  {{domxref("Node.textContent")}} du `<span>`.
+Dans l'exemple suivant, nous récupérons une liste des classes définies sur un élément {{htmlelement("span")}} en tant que `DOMTokenList`, en utilisant {{domxref("Element.classList")}}. Nous ajoutons alors une nouvelle marque à la  liste et écrivons la liste dans un  {{domxref("Node.textContent")}} du `<span>`.
 
 Tout d'abord, le code HTML :
 

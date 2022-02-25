@@ -16,7 +16,7 @@ None.
 - {{domxref("SyncManager.register")}}
   - : Créé une nouvelle sync registration et retourne une {{jsxref("Promise")}}
 - {{domxref("SyncManager.getTags")}}
-  - : Renvoie une liste d'identifiants définis par le développeur pour l'enregistrement  du SyncManager.
+  - : Renvoie une liste d'identifiants définis par le développeur pour l'enregistrement  du SyncManager.
 
 ## Specifications
 

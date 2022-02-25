@@ -136,8 +136,8 @@ console.log(new Intl.Collator("sv", {sensitivity: "base"}).compare("ä", "a"));
 | Spécification                                                                            | État                             | Commentaires         |
 | ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
 | {{SpecName('ES Int 1.0', '#sec-10.1', 'Intl.Collator')}}             | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-10.1', 'Intl.Collator')}}             | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#collator-objects', 'Intl.Collator')}} | {{Spec2('ES Int Draft')}} |                      |
+| {{SpecName('ES Int 2.0', '#sec-10.1', 'Intl.Collator')}}             | {{Spec2('ES Int 2.0')}} |                      |
+| {{SpecName('ES Int Draft', '#collator-objects', 'Intl.Collator')}} | {{Spec2('ES Int Draft')}} |                      |
 
 ## Compatibilité des navigateurs
 

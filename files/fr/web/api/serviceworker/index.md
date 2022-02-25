@@ -13,9 +13,9 @@ translation_of: Web/API/ServiceWorker
 ---
 {{APIRef("Service Workers API")}}
 
-L'interface **`ServiceWorker`** de l'[API ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API) met à disposition une référence vers un service worker. Plusieurs  {{glossary("browsing context", "contextes de navigations")}} (par exemple une page, un _worker_, etc.) peuvent être associés au même service worker, chacun à travers un unique objet `ServiceWorker`.
+L'interface **`ServiceWorker`** de l'[API ServiceWorker](/en-US/docs/Web/API/ServiceWorker_API) met à disposition une référence vers un service worker. Plusieurs  {{glossary("browsing context", "contextes de navigations")}} (par exemple une page, un _worker_, etc.) peuvent être associés au même service worker, chacun à travers un unique objet `ServiceWorker`.
 
-Un objet `ServiceWorker` est disponible dans les propriétés  {{domxref("ServiceWorkerRegistration.active")}} et {{domxref("ServiceWorkerContainer.controller")}} — c'est un service worker qui a été activé et qui contrôle la page (ce service worker a été bien enregistré, et la page contrôlée a été rechargée).
+Un objet `ServiceWorker` est disponible dans les propriétés  {{domxref("ServiceWorkerRegistration.active")}} et {{domxref("ServiceWorkerContainer.controller")}} — c'est un service worker qui a été activé et qui contrôle la page (ce service worker a été bien enregistré, et la page contrôlée a été rechargée).
 
 L'interface `ServiceWorker` est distribuée à travers différents évènements de son cycle de vie — `install` et `activate` — et d'utilisation, comme `fetch`. Un objet `ServiceWorker` a un état associé {{domxref("ServiceWorker.state")}}, lié à son cycle de vie.
 
@@ -43,35 +43,35 @@ Ce fragment de code provient d'[un exemple d'enregistrement d'évènement pour l
 
 ```js
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker
-    .register('service-worker.js', {
-      scope: './'
-    })
-    .then(({ installing, waiting, active }) => {
-      let serviceWorker
-      if (installing) {
-        serviceWorker = installing
-        document.querySelector('#kind').textContent = 'installé'
-      } else if (waiting) {
-        serviceWorker = waiting
-        document.querySelector('#kind').textContent = 'en attente'
-      } else if (active) {
-        serviceWorker = active
-        document.querySelector('#kind').textContent = 'actif'
-      }
-      if (serviceWorker) {
-        // logState(serviceWorker.state);
-        serviceWorker.addEventListener('statechange', (e) => {
-          // logState(e.target.state);
-        })
-      }
-    })
-    .catch((error) => {
-      // L'enregistrement s'est mal déroulé. Le fichier service-worker.js
-      // est peut-être indisponible ou contient une erreur.
-    })
+  navigator.serviceWorker
+    .register('service-worker.js', {
+      scope: './'
+    })
+    .then(({ installing, waiting, active }) => {
+      let serviceWorker
+      if (installing) {
+        serviceWorker = installing
+        document.querySelector('#kind').textContent = 'installé'
+      } else if (waiting) {
+        serviceWorker = waiting
+        document.querySelector('#kind').textContent = 'en attente'
+      } else if (active) {
+        serviceWorker = active
+        document.querySelector('#kind').textContent = 'actif'
+      }
+      if (serviceWorker) {
+        // logState(serviceWorker.state);
+        serviceWorker.addEventListener('statechange', (e) => {
+          // logState(e.target.state);
+        })
+      }
+    })
+    .catch((error) => {
+      // L'enregistrement s'est mal déroulé. Le fichier service-worker.js
+      // est peut-être indisponible ou contient une erreur.
+    })
 } else {
-  // Le navigateur ne supporte pas les service workers.
+  // Le navigateur ne supporte pas les service workers.
 }
 ```
 

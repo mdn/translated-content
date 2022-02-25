@@ -8,7 +8,7 @@ tags:
 translation_of: Glossary/Hoisting
 original_slug: Glossaire/Hoisting
 ---
-Le hoisting (_en français,_ _"hissage"_) est un terme que vous _ne_ trouverez dans aucune prose de spécification normative avant  l'[ECMAScript® 2015](http://www.ecma-international.org/ecma-262/6.0/index.html).  Le hissage a été conçu comme une façon générale de penser à la manière dont les contextes d'exécution (précisément, les phases de création et d'exécution) fonctionnent en JavaScript. Toutefois, le concept peut être un peu déroutant à première vue.
+Le hoisting (_en français,_ _"hissage"_) est un terme que vous _ne_ trouverez dans aucune prose de spécification normative avant  l'[ECMAScript® 2015](http://www.ecma-international.org/ecma-262/6.0/index.html).  Le hissage a été conçu comme une façon générale de penser à la manière dont les contextes d'exécution (précisément, les phases de création et d'exécution) fonctionnent en JavaScript. Toutefois, le concept peut être un peu déroutant à première vue.
 
 Conceptuellement, par exemple, une définition stricte du hissage suggère que les déclarations de variables et de fonctions sont déplacées physiquement en haut de votre code, mais ce n'est pas ce qui se passe en fait. A la place, les déclarations de variables et de fonctions sont mises en mémoire pendant la phase de _compilation_, mais restent exactement là où vous les avez tapées dans votre code.
 

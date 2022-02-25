@@ -59,7 +59,7 @@ output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) 
 
 | Spécification                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-node-isequalnode', 'Node.isEqualNode')}} | {{Spec2('DOM WHATWG')}} |             |
+| {{SpecName('DOM WHATWG', '#dom-node-isequalnode', 'Node.isEqualNode')}} | {{Spec2('DOM WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

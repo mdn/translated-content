@@ -96,7 +96,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 | Spécification                                                                                                                            | État                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-deleteIndex-void-DOMString-indexName', 'deleteIndex()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-deleteIndex-void-DOMString-indexName', 'deleteIndex()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité avec les navigateurs
 

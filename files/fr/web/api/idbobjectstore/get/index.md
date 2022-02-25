@@ -25,7 +25,7 @@ var request = objectStore.get(cle);
 ## Renvoie
 
 - Une {{domxref("IDBRequest","requête")}}
-  - : La propriété {{domxref("IDBRequest.result","result")}} de cette requête renvoie en cas de succès,  un clone structuré de la valeur de l'enregistrement correspondant à la clé ou du premier correspondant à l'intervalle de clé.
+  - : La propriété {{domxref("IDBRequest.result","result")}} de cette requête renvoie en cas de succès,  un clone structuré de la valeur de l'enregistrement correspondant à la clé ou du premier correspondant à l'intervalle de clé.
 
 ## Exceptions
 
@@ -93,7 +93,7 @@ function deleteData() {
 
 | Spécification                                                                                                | Statut                       | Commentaire |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

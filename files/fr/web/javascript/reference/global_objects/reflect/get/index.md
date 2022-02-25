@@ -64,7 +64,7 @@ Reflect.get(obj, "toto"); // "tototruc"
 | Spécification                                                                | État                         | Commentaires        |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-reflect.get', 'Reflect.get')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

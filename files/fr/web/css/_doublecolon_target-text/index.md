@@ -10,7 +10,7 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) [CSS](/en-US/docs/Web/CS
 
 ```css
 ::target-text {
-  background-color: pink;
+  background-color: pink;
 }
 ```
 

@@ -73,7 +73,7 @@ Quand l'événement retourne une valeur non nulle, l'utilisateur est invité à 
 
 Depuis le 25 Mai 2011, la spécification HTML5 indique ques les appels aux méthodes {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} et {{domxref("window.prompt()")}} peuvent être ignorés durant l'événement. Voir [specification HTML5 ](http://www.w3.org/TR/html5/webappapis.html#user-prompts)pour plus de détails.
 
-Noter aussi que de nombreux navigateurs ignorent le résultat  de l'événement (il n'y a donc aucune demande de confirmation). Firefox a une préférence cachée dans about:config pour faire de même. Essentiellement, cela signifie que l'utilisateur confirme toujours silencieusement que le document peut être déchargé.
+Noter aussi que de nombreux navigateurs ignorent le résultat  de l'événement (il n'y a donc aucune demande de confirmation). Firefox a une préférence cachée dans about:config pour faire de même. Essentiellement, cela signifie que l'utilisateur confirme toujours silencieusement que le document peut être déchargé.
 
 ## Spécifications
 

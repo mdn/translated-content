@@ -45,7 +45,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Cet exemple utilise `update()` pour mettre à jour une notification de progression. Cliquez sur l'action du navigateur pour afficher la notification et lancer un  {{WebExtAPIRef("alarms", "alarm")}}, que nous utilisons pour mettre à jour l'indicateur de progression de la notification.
+Cet exemple utilise `update()` pour mettre à jour une notification de progression. Cliquez sur l'action du navigateur pour afficher la notification et lancer un  {{WebExtAPIRef("alarms", "alarm")}}, que nous utilisons pour mettre à jour l'indicateur de progression de la notification.
 
 Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications). Notez également que Firefox ne prend pas en charge l'attribut de `progress`.
 

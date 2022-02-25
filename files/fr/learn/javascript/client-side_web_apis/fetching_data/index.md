@@ -88,7 +88,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
 `XMLHttpRequest` (qui est fréquemment abrégé XHR) est une technologie assez vieille maintenant — elle a été inventée par Microsoft dans les années 90 et a été standardisée dans les autres navigateurs il y a longtemps.
 
 1.  Pour commencer cet exemple, faites une copie locale de [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) et des quatre fichiers texte — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), et [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — dans un nouveau répertoire sur votre ordinateur. Dans cet exemple, nous allons charger le verset d'un poème (que vous pourriez bien reconnaître), quand il est sélectionné dans le menu déroulant, en utilisant XHR.
-2.  À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'événement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction  `updateDisplay()`.
+2.  À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'événement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction  `updateDisplay()`.
 
     ```js
     var verseChoose = document.querySelector('select');
@@ -198,7 +198,7 @@ Voyons comment convertir le dernier exemple, en remplaçant XHR par Fetch.
     });
     ```
 
-4.  Chargez l'exemple dans votre navigateur (en l'exécutant à travers un serveur web) et il devrait produire le même résultat que la version XHR  — pourvu que vous utilisiez un navigateur moderne.
+4.  Chargez l'exemple dans votre navigateur (en l'exécutant à travers un serveur web) et il devrait produire le même résultat que la version XHR  — pourvu que vous utilisiez un navigateur moderne.
 
 #### Que se passe-t-il dans le code Fetch?
 

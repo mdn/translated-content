@@ -10,7 +10,7 @@ original_slug: Apprendre/Commencez_votre_projet_web
 ---
 {{IncludeSubnav("/fr/Apprendre")}}
 
-Cette article présente l'étape primordiale de n'importe quel projet  définir ce qu'on souhaite accomplir avec.
+Cette article présente l'étape primordiale de n'importe quel projet  définir ce qu'on souhaite accomplir avec.
 
 <table class="standard-table">
   <tbody>
@@ -56,7 +56,7 @@ Une discussion d'une heure avec des amis est un bon début, mais ce sera insuffi
 
 ### Qu'est-ce que je veux accomplir exactement ?
 
-C'est la question la plus importante à laquelle vous devez répondre, car il en découle tout le reste. Énumérez tous les objectifs que vous souhaitez atteindre. Ce peut être n'importe quoi  vendre des biens pour faire de l'argent, exprimer des opinions politiques, rencontrer de nouveaux amis, donner des concerts avec des musiciens, collectionner des images de chat ou autre chose encore.
+C'est la question la plus importante à laquelle vous devez répondre, car il en découle tout le reste. Énumérez tous les objectifs que vous souhaitez atteindre. Ce peut être n'importe quoi  vendre des biens pour faire de l'argent, exprimer des opinions politiques, rencontrer de nouveaux amis, donner des concerts avec des musiciens, collectionner des images de chat ou autre chose encore.
 
 Supposons que vous êtes un musicien. Vous pourriez souhaiter
 
@@ -94,7 +94,7 @@ Comment un site web peut-il m'aider à atteindre mes objectifs ? En répondant �
 
 ### Qu'est-ce qui doit être fait, et dans quel ordre, pour atteindre mes objectifs ?
 
-Maintenant que vous savez ce que vous voulez accomplir, il est temps de transformer ces objectifs en mesures concrètes. Note  vos objectifs ne sont pas nécessairement gravés dans la pierre. Ils évoluent au fil du temps, même dans le cadre du projet, si vous rencontrez des obstacles inattendus ou tout simplement si vous changez d'avis.
+Maintenant que vous savez ce que vous voulez accomplir, il est temps de transformer ces objectifs en mesures concrètes. Note  vos objectifs ne sont pas nécessairement gravés dans la pierre. Ils évoluent au fil du temps, même dans le cadre du projet, si vous rencontrez des obstacles inattendus ou tout simplement si vous changez d'avis.
 
 Plutôt qu'une longue explication, revenons à notre exemple avec ce tableau
 
@@ -191,5 +191,5 @@ Comme vous pouvez le voir, l'idée simple: « Je veux faire un site » génère 
 
 ## Prochaines étapes
 
-- Commencer à apprendre la technique  [Comment fonctionne l'Internet ?](/fr/Apprendre/Fonctionnement_Internet)
-- Approfondir le design et la conception  [Conception d'une page web](/fr/Apprendre/Concevoir_page_web)
+- Commencer à apprendre la technique  [Comment fonctionne l'Internet ?](/fr/Apprendre/Fonctionnement_Internet)
+- Approfondir le design et la conception  [Conception d'une page web](/fr/Apprendre/Concevoir_page_web)

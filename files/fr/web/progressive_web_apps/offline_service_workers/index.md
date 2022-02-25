@@ -132,7 +132,7 @@ Il y a également un événement `activate` qui est utilisé de la même façon 
 
 ### Répondre aux requêtes
 
-Nous avons également un événement `fetch` à notre disposition et qui est déclenché à chaque fois qu'une requête HTTP est émise par notre app. Ceci est très  utile car ça nous permet d'intercepter des requêtes et d'y répondre de façon personnalisée. Voic un exemple d'utilisation simpliste:
+Nous avons également un événement `fetch` à notre disposition et qui est déclenché à chaque fois qu'une requête HTTP est émise par notre app. Ceci est très  utile car ça nous permet d'intercepter des requêtes et d'y répondre de façon personnalisée. Voic un exemple d'utilisation simpliste:
 
 ```js
 self.addEventListener('fetch', (e) => {
@@ -219,7 +219,7 @@ Servir des fichiers depuis le cache n'est pas la seule fonctionnalité que le Se
 
 ## Résumé
 
-Dans cet article, nous avons rapidement abordé la façon de faire fonctionner notre PWA en mode déconnecté grâce aux service workers. Consultez  la documentation si vous voulez en apprendre davantage sur les concepts qui sont derrière l'[API Service Worker](/fr/docs/Web/API/Service_Worker_API) et comment l'exploiter au mieux.
+Dans cet article, nous avons rapidement abordé la façon de faire fonctionner notre PWA en mode déconnecté grâce aux service workers. Consultez  la documentation si vous voulez en apprendre davantage sur les concepts qui sont derrière l'[API Service Worker](/fr/docs/Web/API/Service_Worker_API) et comment l'exploiter au mieux.
 
 Les Service Workers sont également utilisés pour gérer les [push notifications ](/fr/docs/Web/API/Push_API)[](/fr/docs//Web/API/Push_API)— ceci sera expliqué dans un prochain article.
 

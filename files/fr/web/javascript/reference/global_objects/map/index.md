@@ -35,7 +35,7 @@ On notera qu'un objet `Map` contenant des objets ne sera parcouru que dans l'ord
 L'égalité des clés est testée avec l'algorithme basé sur [l'égalité de valeurs](/fr/docs/JavaScript/Les_différents_tests_d_Égalité_comment_les_utiliser#.C3.89galit.C3.A9_de_valeurs) :
 
 - {{jsxref("NaN")}} est considéré égal à `NaN` (bien que, pour l'égalité stricte `NaN !== NaN`)
-- les autres valeurs sont considérées égales au sens de l'égalité stricte (l'opérateur  `===`).
+- les autres valeurs sont considérées égales au sens de l'égalité stricte (l'opérateur  `===`).
 
 Dans les versions précédentes des brouillons ECMAScript 2015 (ES6) `-0` et `+0` étaient considérés différents (bien que `-0 === +0`), ceci a été changé dans les versions ultérieures et a été adapté avec Gecko 29 {{geckoRelease("29")}} ({{bug("952870")}}) et une version nocturne de [Chrome](https://code.google.com/p/v8/issues/detail?id=3069).
 

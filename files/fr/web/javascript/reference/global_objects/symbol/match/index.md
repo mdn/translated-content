@@ -48,7 +48,7 @@ re[Symbol.match] = false;
 | Spécification                                                                    | État                         | Commentaires         |
 | -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-symbol.match', 'Symbol.match')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

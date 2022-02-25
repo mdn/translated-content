@@ -52,8 +52,8 @@ Cette méthode peut être émulée grâce à la fonction {{jsxref("Objets_globau
 
 ```js
 Math.tanh = Math.tanh || function(x){
-  var a = Math.exp(+x), b = Math.exp(-x);
-  return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
+  var a = Math.exp(+x), b = Math.exp(-x);
+  return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
 }
 ```
 
@@ -77,7 +77,7 @@ Math.tanhx = Math.tanhx || function(x) {
 | Spécification                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

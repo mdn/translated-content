@@ -63,7 +63,7 @@ Cet élément implémenté l'interface {{domxref("SVGStopElement")}}.
 
 | Spécification                                                                                | Statut                   | Commentaire         |
 | -------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('SVG2', 'pservers.html#GradientStops', '&lt;stop&gt;')}}     | {{Spec2('SVG2')}} |                     |
+| {{SpecName('SVG2', 'pservers.html#GradientStops', '&lt;stop&gt;')}}     | {{Spec2('SVG2')}} |                     |
 | {{SpecName('SVG1.1', 'pservers.html#GradientStops', '&lt;stop&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
 
 ## Compatibilité des navigateurs

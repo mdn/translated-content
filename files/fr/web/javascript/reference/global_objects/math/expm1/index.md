@@ -59,7 +59,7 @@ Math.expm1 = Math.expm1 || function(x) {
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-math.expm1', 'Math.expm1')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

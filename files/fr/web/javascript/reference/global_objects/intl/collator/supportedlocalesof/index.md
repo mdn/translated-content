@@ -43,7 +43,7 @@ Cette méthode renvoie un tableau qui est un sous-ensemble des balises de locale
 
 ## Exemples
 
-Si on dispose d'un environnement (un navigateur par exemple) qui supporte la comparaison de chaînes dans les locales indonésienne, allemande mais pas balinaise,  `supportedLocalesOf` renvoie les balises pour l'indonésien et l'allemand quand bien même la collation avec pinyin n'est pas utilisée avec l'indonésien et qu'il n'existe pas une version spécifique de l'allemand pour l'Indonésie. On illustre ici l'algorithme `"lookup"`. SI on utilisait `"best fit"` pour trouver les locales correspondantes, on aurait pu avoir une balise supplémentaire pour le balinais en plus car la plupart des balinais comprennent l'indonésien.
+Si on dispose d'un environnement (un navigateur par exemple) qui supporte la comparaison de chaînes dans les locales indonésienne, allemande mais pas balinaise,  `supportedLocalesOf` renvoie les balises pour l'indonésien et l'allemand quand bien même la collation avec pinyin n'est pas utilisée avec l'indonésien et qu'il n'existe pas une version spécifique de l'allemand pour l'Indonésie. On illustre ici l'algorithme `"lookup"`. SI on utilisait `"best fit"` pour trouver les locales correspondantes, on aurait pu avoir une balise supplémentaire pour le balinais en plus car la plupart des balinais comprennent l'indonésien.
 
 ```js
 var locales = ["ban", "id-u-co-pinyin", "de-ID"];
@@ -57,8 +57,8 @@ console.log(Intl.Collator.supportedLocalesOf(locales, options).join(", "));
 | Spécification                                                                                                                                | État                             | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
 | {{SpecName('ES Int 1.0', '#sec-10.2.2', 'Intl.Collator.supportedLocalesOf')}}                                     | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-10.2.2', 'Intl.Collator.supportedLocalesOf')}}                                     | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.Collator.supportedLocalesOf', 'Intl.Collator.supportedLocalesOf')}} | {{Spec2('ES Int Draft')}} |                      |
+| {{SpecName('ES Int 2.0', '#sec-10.2.2', 'Intl.Collator.supportedLocalesOf')}}                                     | {{Spec2('ES Int 2.0')}} |                      |
+| {{SpecName('ES Int Draft', '#sec-Intl.Collator.supportedLocalesOf', 'Intl.Collator.supportedLocalesOf')}} | {{Spec2('ES Int Draft')}} |                      |
 
 ## Compatibilité des navigateurs
 

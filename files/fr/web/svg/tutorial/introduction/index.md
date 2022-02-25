@@ -13,7 +13,7 @@ SVG est un langage [XML](/fr/XML "XML"), assez similaire au [XHTML](/fr/XHTML "f
 
 La seconde particularité est que vous allez pouvoir lire le code. Stop ! Lire une image ? Et oui, cela vient du fait que SVG dérive du XML. Nous verrons dans ce tutoriel que le code SVG reste (la plupart du temps) humainement lisible. C'est aussi sympa car on va pouvoir le transformer en arbre DOM et ainsi le manipuler, avec du CSS et / ou du Javascript.
 
-SVG est apparu en 1999, après que plusieurs formats concurrents aient été soumis au [W3C](http://www.w3.org "en-US/W3C")  sans succès. SVG est pris en charge par tous les [principaux navigateurs](https://caniuse.com/#search=svg). Un inconvénient est que le chargement SVG peut être lent. En contrepartie, l'avantage c'est de disposer du DOM et de ne pas nécessiter d'extensions tierces. Choisir d'utiliser ou non SVG dépend souvent des cas d'utilisation.
+SVG est apparu en 1999, après que plusieurs formats concurrents aient été soumis au [W3C](http://www.w3.org "en-US/W3C")  sans succès. SVG est pris en charge par tous les [principaux navigateurs](https://caniuse.com/#search=svg). Un inconvénient est que le chargement SVG peut être lent. En contrepartie, l'avantage c'est de disposer du DOM et de ne pas nécessiter d'extensions tierces. Choisir d'utiliser ou non SVG dépend souvent des cas d'utilisation.
 
 ## Les ingrédients de base
 

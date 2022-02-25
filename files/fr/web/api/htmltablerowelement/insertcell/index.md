@@ -70,7 +70,7 @@ addRow('my-table');
 
 | Spécification                                                                                                                    | Statut                           | Commentaire          |
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("HTML WHATWG", "tables.html#dom-tr-insertcell", "HTMLTableRowElement.insertCell()")}} | {{Spec2("HTML WHATWG")}} |                      |
+| {{SpecName("HTML WHATWG", "tables.html#dom-tr-insertcell", "HTMLTableRowElement.insertCell()")}} | {{Spec2("HTML WHATWG")}} |                      |
 | {{SpecName("DOM2 HTML", "html.html#ID-68927016", "HTMLTableRowElement.insertCell()")}}             | {{Spec2("DOM2 HTML")}}     | Définition initiale. |
 
 ## Compatibilité des navigateurs
@@ -80,4 +80,4 @@ addRow('my-table');
 ## Voir aussi
 
 - {{domxref("HTMLTableElement.insertRow()")}}
-- L’élément HTML représentant les  cellules&nbsp;: {{domxref("HTMLTableCellElement")}}
+- L’élément HTML représentant les  cellules&nbsp;: {{domxref("HTMLTableCellElement")}}

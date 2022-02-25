@@ -33,13 +33,13 @@ _Hérite de son ancêtre, {{domxref("Event")}}_.
 _Hérite de son parent,_ _{{domxref("ExtendableEvent")}}_.
 
 - {{domxref("FetchEvent.respondWith()")}}
-  - : Promesse qui est résolue en retournant une {{domxref("Response")}} ou une [erreur réseau](http://fetch.spec.whatwg.org/#concept-network-error)  à [`Fetch`](http://fetch.spec.whatwg.org/#concept-fetch).
+  - : Promesse qui est résolue en retournant une {{domxref("Response")}} ou une [erreur réseau](http://fetch.spec.whatwg.org/#concept-network-error)  à [`Fetch`](http://fetch.spec.whatwg.org/#concept-fetch).
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
   - : Etend la durée de vie de l'évènement. Cette méthode est destinée à être appelée dans l'{{event("Event_handlers", "event handler")}} {{event("install")}} pour le worker {{domxref("ServiceWorkerRegistration.installing", "installing")}}, et dans l'{{event("Event_handlers", "event handler")}} {{event("active")}} pour le worker {{domxref("ServiceWorkerRegistration.active", "active")}}.
 
 ## Exemples
 
-Ce extrait de code provient de l'exemple [Service Worker Fetch](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([lancer l'exemple dans le navigateur](https://googlechrome.github.io/samples/service-worker/prefetch/)). Dans une partie antérieure du code,  un {{domxref("InstallEvent")}} contrôle la mise en cache de plusieurs ressources. Le gestionnaire {{domxref("ServiceWorkerGlobalScope.onfetch")}} attends ensuite l'évènement {{event("fetch")}} . Une fois déclenché, {{domxref("FetchEvent.respondWith()")}} retourne une promesse à la page contrôlée. Cette promesse est résolue avec comme valeur de retour la première requête d'URL qui correspond dans l'objet {{domxref("Cache")}}. Si aucune correspondance n'est trouvée (i.e. la ressource n'a pas été mise en cache pendant la phase d'installation), le code va récupérer une réponse depuis le réseau.
+Ce extrait de code provient de l'exemple [Service Worker Fetch](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/prefetch/service-worker.js) ([lancer l'exemple dans le navigateur](https://googlechrome.github.io/samples/service-worker/prefetch/)). Dans une partie antérieure du code,  un {{domxref("InstallEvent")}} contrôle la mise en cache de plusieurs ressources. Le gestionnaire {{domxref("ServiceWorkerGlobalScope.onfetch")}} attends ensuite l'évènement {{event("fetch")}} . Une fois déclenché, {{domxref("FetchEvent.respondWith()")}} retourne une promesse à la page contrôlée. Cette promesse est résolue avec comme valeur de retour la première requête d'URL qui correspond dans l'objet {{domxref("Cache")}}. Si aucune correspondance n'est trouvée (i.e. la ressource n'a pas été mise en cache pendant la phase d'installation), le code va récupérer une réponse depuis le réseau.
 
 Le code gère aussi les exceptions émises depuis l'opération {{domxref("ServiceWorkerGlobalScope.fetch()")}}. A noter que qu'une réponse d'erreur HTTP (e.g., 404) ne déclenche pas d'exception. Elle retourne un objet de réponse normal avec le code d'erreur approprié.
 

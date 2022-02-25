@@ -53,7 +53,7 @@ L'évènement `reset` est déclenché quand l'utilisateur clique sur le bouton d
 
 | Spécification                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onreset','onreset')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onreset','onreset')}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

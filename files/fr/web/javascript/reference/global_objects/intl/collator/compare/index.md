@@ -66,8 +66,8 @@ console.log(matches.join(", "));
 | Spécification                                                                                                                            | Statut                           | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
 | {{SpecName('ES Int 1.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}}                                     | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}}                                     | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.Collator.prototype.compare', 'Intl.Collator.prototype.compare')}} | {{Spec2('ES Int Draft')}} |                      |
+| {{SpecName('ES Int 2.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}}                                     | {{Spec2('ES Int 2.0')}} |                      |
+| {{SpecName('ES Int Draft', '#sec-Intl.Collator.prototype.compare', 'Intl.Collator.prototype.compare')}} | {{Spec2('ES Int Draft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -15,7 +15,7 @@ translation_of: Web/API/UIEvent
 
 L'interface **`UIEvent`** représente des évènements simples de l'interface utilisateur.
 
-`UIEvent` dérive de {{domxref("Event")}}. Bien que la méthode {{domxref("UIEvent.initUIEvent()")}}  soit conservée pour la compatibilité ascendante, vous devez créer un objet `UIEvent` en utilisant le constructeur {{domxref("UIEvent.UIEvent", "UIEvent()")}}.
+`UIEvent` dérive de {{domxref("Event")}}. Bien que la méthode {{domxref("UIEvent.initUIEvent()")}}  soit conservée pour la compatibilité ascendante, vous devez créer un objet `UIEvent` en utilisant le constructeur {{domxref("UIEvent.UIEvent", "UIEvent()")}}.
 
 Plusieurs interfaces descendent directement ou indirectement de celle-ci : {{domxref("MouseEvent")}}, {{domxref("FocusEvent")}}, {{domxref("KeyboardEvent")}}, {{domxref("WheelEvent")}}, {{domxref("InputEvent")}} et {{domxref("CompositionEvent")}}.
 

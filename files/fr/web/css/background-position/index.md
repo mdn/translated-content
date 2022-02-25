@@ -65,7 +65,7 @@ La propriété `background-position` peut être définie grâce à une ou plusie
     **Définition avec deux valeurs :** la première valeur définit l'abscisse (la coordonnée horizontale X) et la seconde définit l'ordonnée (la coordonnée verticale Y). Chaque valeur peut être :
 
     - Un des mots-clés parmi `top`, `left`, `bottom`, `right`. Si `left` ou `right` est utilisé, la valeur définit l'abscisse et l'autre définira l'ordonnée. Si `top` ou `bottom` est indiqué, cette valeur définira l'ordonnée et l'autre valeur définira X.
-    - Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Si l'autre valeur vaut `left` ou `right`, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est `top` ou `bottom`,  cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.
+    - Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Si l'autre valeur vaut `left` ou `right`, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est `top` ou `bottom`,  cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.
 
     On notera que :
 

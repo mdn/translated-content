@@ -57,7 +57,7 @@ Il n'est donc pas étonnant que les créateurs du HTML fournissent un moyen de s
 
 ### Comment fonctionne un tableau ?
 
-L'avantage du tableau tient dans sa rigueur. L'information est facilement interprétée par  des associations visuelles entre les en‑têtes de lignes et colonnes. Cherchez dans la table ci-dessous par exemple et trouvez une planète géante gazeuse du système jovien avec 62 lunes. Vous pouvez trouver la réponse en associant les en-têtes de lignes et colonnes pertinents.
+L'avantage du tableau tient dans sa rigueur. L'information est facilement interprétée par  des associations visuelles entre les en‑têtes de lignes et colonnes. Cherchez dans la table ci-dessous par exemple et trouvez une planète géante gazeuse du système jovien avec 62 lunes. Vous pouvez trouver la réponse en associant les en-têtes de lignes et colonnes pertinents.
 
 <table>
   <caption>
@@ -204,7 +204,7 @@ Lorsque cela est fait correctement, même les personnes malvoyantes peuvent inte
 
 ### Style de tableau
 
-Vous pouvez également [regarder sur l'exemple réel](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) sur GitHub ! Vous remarquerez sur celui-ci que le tableau est légèrement plus lisible  — car le tableau figurant ci-dessus présente un style minimal, alors que sa version sur GitHub est liée à un  CSS plus signifiant.
+Vous pouvez également [regarder sur l'exemple réel](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) sur GitHub ! Vous remarquerez sur celui-ci que le tableau est légèrement plus lisible  — car le tableau figurant ci-dessus présente un style minimal, alors que sa version sur GitHub est liée à un  CSS plus signifiant.
 
 Ne vous faites pas d'illusions ; pour obtenir un tableau avec un certain effet sur le web, vous devez fournir un minimum d'informations de style avec [CSS](/fr/docs/Learn/CSS), ainsi qu'une structure solide avec HTML. Dans ce module nous nous concentrons sur la partie HTML ; pour en savoir plus sur la partie CSS, vous devrez lire notre article [Style et tableaux](/fr/docs/Learn/CSS/Styling_boxes/Styling_tables) quand vous aurez fini ici.
 
@@ -226,7 +226,7 @@ Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et c
 
 1.  Avant tout, faites une copie locale de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire de votre ordinateur.
 2.  Le contenu de chaque tableau est encadré par ces deux balises : **[`<table></table>`](/fr/docs/Web/HTML/Element/table)**. Ajoutez‑les dans le corps de votre HTML.
-3.  Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément  **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
+3.  Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément  **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
 
     ```html
     <td>Bonjour, je suis votre première cellule.</td>
@@ -462,7 +462,7 @@ Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
 
 ## Attribuer un style commun aux colonnes
 
-Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments **[`<col>`](/fr/docs/Web/HTML/Element/col)** and **[`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)**. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne  — vous devez généralement spécifier les éléments de style dans chaque  `<td>` ou `<th>` de la colonne, ou utiliser un selecteur complexe tel que {{cssxref(":nth-child()")}}.
+Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments **[`<col>`](/fr/docs/Web/HTML/Element/col)** and **[`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)**. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne  — vous devez généralement spécifier les éléments de style dans chaque  `<td>` ou `<th>` de la colonne, ou utiliser un selecteur complexe tel que {{cssxref(":nth-child()")}}.
 
 ### Premier exemple
 
@@ -489,7 +489,7 @@ Ce qui nous donne comme résultat :
 
 {{EmbedLiveSample("Premier_exemple")}}
 
-Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne  (nous aurions probablement défini une `classe` dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément `<col>`. Les éléments `<col>` sont utilisés dans un conteneur `<colgroup>` juste en-dessous de la balise `<table>`. Nous pourrions créer le même effet que  celui vu plus haut en spécifiant notre tableau comme suit&nbsp;:
+Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne  (nous aurions probablement défini une `classe` dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément `<col>`. Les éléments `<col>` sont utilisés dans un conteneur `<colgroup>` juste en-dessous de la balise `<table>`. Nous pourrions créer le même effet que  celui vu plus haut en spécifiant notre tableau comme suit&nbsp;:
 
 ### Autres exemples
 
@@ -514,7 +514,7 @@ Ce n'est pas idéal, car nous devons répéter les informations de style dans le
 </table>
 ```
 
-En effet, nous définissons deux «&nbsp;styles de colonnes&nbsp;», les informations de style pour chaque colonne. Nous n'appliquons pas de style pour la première colonne, mais nous devons inclure un élément `<col>`  vide — si nous ne le faisons pas, le style indiqué s'appliquera à la première colonne.
+En effet, nous définissons deux «&nbsp;styles de colonnes&nbsp;», les informations de style pour chaque colonne. Nous n'appliquons pas de style pour la première colonne, mais nous devons inclure un élément `<col>`  vide — si nous ne le faisons pas, le style indiqué s'appliquera à la première colonne.
 
 Si nous voulions appliquer les informations de style aux deux colonnes, nous devrions juste inclure un élément `<col>` avec un attribut span, comme ceci :
 
@@ -537,7 +537,7 @@ Ci-dessous, vous pouvez voir le planning d'un professeur de langues. Le vendredi
 Recréez le tableau en suivant les étapes ci-dessous.
 
 1.  Tout d'abord, faites une copie locale du fichier [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le tableau vu ci-dessus, à l'exception des informations de style des colonnes.
-2.  Ajoutez un élément `<colgroup>`  au début du tableau, juste en dessous de la balise `<table>`,dans lequel vous pouvez ajouter vos éléments `<col>` (voir les étapes restantes ci-dessous).
+2.  Ajoutez un élément `<colgroup>`  au début du tableau, juste en dessous de la balise `<table>`,dans lequel vous pouvez ajouter vos éléments `<col>` (voir les étapes restantes ci-dessous).
 3.  Les deux premières colonnes doivent rester sans style.
 4.  Ajoutez une couleur de fond à la troisième colonne. La valeur de votre attribut `style` est `background-color:#97DB9A;`
 5.  Définissez une largeur différente pour la quatrième colonne. La valeur de votre attribut `style` est `width: 42px;`

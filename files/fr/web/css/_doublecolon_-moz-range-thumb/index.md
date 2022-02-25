@@ -12,7 +12,7 @@ translation_of: Web/CSS/::-moz-range-thumb
 
 Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se déplace le long de la piste dans un élément {{HTMLElement("input")}} de type `range` et qui permet de modifier la valeur numérique associée.
 
-> **Note :** Utiliser `::-moz-range-thumb` avec un autre élément que  `<input type="range">` n'aura aucun effet.
+> **Note :** Utiliser `::-moz-range-thumb` avec un autre élément que  `<input type="range">` n'aura aucun effet.
 
 ## Syntaxe
 

@@ -27,7 +27,7 @@ element = document.querySelector(sélecteurs);
 ### Paramètres
 
 - `selectors` (sélecteurs)
-  - : une  {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs) pour plus d'informations sur les sélecteurs et leur gestion.
+  - : une  {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs) pour plus d'informations sur les sélecteurs et leur gestion.
 
 > **Note :** les caractères qui n'appartiennent pas à la syntaxe standard CSS doivent être échappés par un antislash ("\\"). Puisque JavaScript utilise aussi cette barre pour l'échappement, une attention particulière est nécessaire quand des chaînes comprennent ces caractères. Voir {{anch("Caractère spécial d'échappement")}} pour plus d'informations.
 
@@ -91,7 +91,7 @@ var el = document.querySelector("div.panneau-utilisateur.principal input[name='i
 
 | Spécification                                                                                                            | Statut                                       | Commentaire         |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName("Selectors API Level 2", "#interface-definitions", "document.querySelector()")}} | {{Spec2("Selectors API Level 2")}} |                     |
+| {{SpecName("Selectors API Level 2", "#interface-definitions", "document.querySelector()")}} | {{Spec2("Selectors API Level 2")}} |                     |
 | {{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}} | {{Spec2("Selectors API Level 1")}} | Définition initiale |
 
 ## Compatibilité des navigateurs

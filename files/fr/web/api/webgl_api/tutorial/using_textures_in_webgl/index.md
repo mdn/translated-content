@@ -52,13 +52,13 @@ Le code qui charge la texture ressemble à ce qui suit&nbsp;:
 
         // WebGL1 a des spécifications différentes pour les images puissances de 2
         // par rapport aux images non puissances de 2 ; aussi vérifier si l'image est une
-        // puissance de 2 sur chacune de ses dimensions.
+        // puissance de 2 sur chacune de ses dimensions.
         if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
            // Oui, c'est une puissance de 2. Générer les mips.
            gl.generateMipmap(gl.TEXTURE_2D);
         } else {
            // Non, ce n'est pas une puissance de 2. Désactiver les mips et définir l'habillage
-           // comme "accrocher au bord"
+           // comme "accrocher au bord"
            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
            gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);

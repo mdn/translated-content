@@ -236,12 +236,12 @@ _Note: Cet exemple spécifiquement, aurait besoin d'une relecture._
     * numTicks est combien de mises à jour auraient dû avoir lieu entre 2 rendus d'images.
     *
     * render() se voit passé tFrame car il est considéré que la méthode de rendu va calculer
-               combien de temps se sera écoulé depuis la mise à jour la plus récente pour
-               extrapolation (purement cosmétique pour des systèmes rapides). La scène est dessinée.
+               combien de temps se sera écoulé depuis la mise à jour la plus récente pour
+               extrapolation (purement cosmétique pour des systèmes rapides). La scène est dessinée.
     *
     * update() calcule l'état du jeu comme point donné dans le temps. Ça devrait toujours être
-               incrémenté par tickLength. C'est l'autorité de l'état du jeu. On lui passe le
-               DOMHighResTimeStamp pour le temps que cela représente (qui, à nouveau, est toujours
+               incrémenté par tickLength. C'est l'autorité de l'état du jeu. On lui passe le
+               DOMHighResTimeStamp pour le temps que cela représente (qui, à nouveau, est toujours
                la dernière mise à jour + MyGame.tickLength qu'une pause ne soit ajoutée, etc.)
     *
     * setInitialState() réalise n'importe quel tâche mise de côté avant que la boucle principale ne doive tourner.

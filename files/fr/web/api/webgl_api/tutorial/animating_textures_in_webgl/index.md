@@ -22,38 +22,38 @@ La première étape consiste à créer l'élément {{HTMLElement("video")}} que 
 var copierVideo = false;
 
 function configurerVideo(url) {
-  const video = document.createElement('video');
+  const video = document.createElement('video');
 
-  var playing = false;
-  var timeupdate = false;
+  var playing = false;
+  var timeupdate = false;
 
-  video.autoplay = true;
-  video.muted = true;
-  video.loop = true;
+  video.autoplay = true;
+  video.muted = true;
+  video.loop = true;
 
-  // Le fait d'attendre ces 2 évènements assure
+  // Le fait d'attendre ces 2 évènements assure
   // qu'il y a des données dans la vidéo
 
-  video.addEventListener('playing', function() {
-     playing = true;
-     verifierPret();
-  }, true);
+  video.addEventListener('playing', function() {
+     playing = true;
+     verifierPret();
+  }, true);
 
-  video.addEventListener('timeupdate', function() {
-     timeupdate = true;
-     verifierPret();
-  }, true);
+  video.addEventListener('timeupdate', function() {
+     timeupdate = true;
+     verifierPret();
+  }, true);
 
-  video.src = url;
-  video.play();
+  video.src = url;
+  video.play();
 
-  function verifierPret() {
-    if (playing && timeupdate) {
-      copierVideo = true;
-    }
-  }
+  function verifierPret() {
+    if (playing && timeupdate) {
+      copierVideo = true;
+    }
+  }
 
-  return video;
+  return video;
 }
 ```
 
@@ -67,32 +67,32 @@ La prochaine modification porte sur `initTexture()`, qui devient beaucoup plus s
 
 ```js
 function initTexture(gl, url) {
-  const texture = gl.createTexture();
-  gl.bindTexture(gl.TEXTURE_2D, texture);
+  const texture = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, texture);
 
   // Parce que la vidéo doit être téléchargée depuis sur Internet,
   // cela peut prendre un certain temps jusqu'à ce qu'elle soit prête, donc
   // mettre un seul pixel dans la texture, de façon à ce que nous puissions
   // l'utiliser immédiatement.
-  const niveau = 0;
-  const formatInterne = gl.RGBA;
-  const largeur = 1;
-  const hauteur = 1;
-  const bordure = 0;
-  const formatSrc = gl.RGBA;
-  const typeSrc = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]);  // bleu opaque
-  gl.texImage2D(gl.TEXTURE_2D, niveau, formatInterne,
-                largeur, hauteur, bordure, formatSrc, typeSrc,
-                pixel);
+  const niveau = 0;
+  const formatInterne = gl.RGBA;
+  const largeur = 1;
+  const hauteur = 1;
+  const bordure = 0;
+  const formatSrc = gl.RGBA;
+  const typeSrc = gl.UNSIGNED_BYTE;
+  const pixel = new Uint8Array([0, 0, 255, 255]);  // bleu opaque
+  gl.texImage2D(gl.TEXTURE_2D, niveau, formatInterne,
+                largeur, hauteur, bordure, formatSrc, typeSrc,
+                pixel);
 
   // Désactiver mips et définir l'emballage comme accroché au bord afin qu'il
   // fonctionne indépendamment des dimensions de la vidéo.
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 
-  return texture;
+  return texture;
 }
 ```
 
@@ -100,13 +100,13 @@ Voici à quoi ressemble la fonction `mettreAJourTexture()` ; c'est là où le
 
 ```js
 function mettreAJourTexture(gl, texture, video) {
-  const niveau = 0;
-  const formatInterne = gl.RGBA;
-  const formatSrc = gl.RGBA;
-  const typeSrc = gl.UNSIGNED_BYTE;
-  gl.bindTexture(gl.TEXTURE_2D, texture);
-  gl.texImage2D(gl.TEXTURE_2D, niveau, formatInterne,
-                formatSrc, typeSrc, video);
+  const niveau = 0;
+  const formatInterne = gl.RGBA;
+  const formatSrc = gl.RGBA;
+  const typeSrc = gl.UNSIGNED_BYTE;
+  gl.bindTexture(gl.TEXTURE_2D, texture);
+  gl.texImage2D(gl.TEXTURE_2D, niveau, formatInterne,
+                formatSrc, typeSrc, video);
 }
 ```
 
@@ -115,23 +115,23 @@ Vous avez déjà vu ce code. Il est presque identique à la fonction onload de l
 Si `copierVideo` est true, alors `mettreAJourTexture()` est appelé à chaque fois juste avant que nous appellions la fonction `dessinerScene()`.
 
 ```js
-  var alors = 0;
+  var alors = 0;
 
-  // Dessiner la scène répétitivement
-  function dessiner(maintenant) {
-    maintenant *= 0.001;  // convertir en seconds
-    const ecartTemps = maintenant - alors;
-    alors = maintenant;
+  // Dessiner la scène répétitivement
+  function dessiner(maintenant) {
+    maintenant *= 0.001;  // convertir en seconds
+    const ecartTemps = maintenant - alors;
+    alors = maintenant;
 
-    if (copierVideo) {
-      mettreAJourTexture(gl, texture, video);
-    }
+    if (copierVideo) {
+      mettreAJourTexture(gl, texture, video);
+    }
 
-    dessinerScene(gl, programInfo, buffers, texture, ecartTemps);
+    dessinerScene(gl, programInfo, buffers, texture, ecartTemps);
 
-    requestAnimationFrame(dessiner);
-  }
-  requestAnimationFrame(dessiner);
+    requestAnimationFrame(dessiner);
+  }
+  requestAnimationFrame(dessiner);
 ```
 
 C'est tout pour ce qu'il y a à faire pour cela !

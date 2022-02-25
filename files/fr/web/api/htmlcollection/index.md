@@ -29,7 +29,7 @@ Une HTMLCollection dans le DOM HTML est automatiquement mise à jour quand le do
 
 ## Utilisation en JavaScript
 
-`HTMLCollection` expose aussi directement ses membres comme propriétés, par nom et par index. Les ID HTML peuvent contenir : et . comme caractères valides, ce qui nécessite d'utiliser la notation entre crochets pour accèder aux propriétés. Actuellement, HTMLCollections ne reconnait pas  purement les ID numériques, ce qui provoquerait des conflits avec l'accès de "array-style" , bien qu'HTML5 le permette.
+`HTMLCollection` expose aussi directement ses membres comme propriétés, par nom et par index. Les ID HTML peuvent contenir : et . comme caractères valides, ce qui nécessite d'utiliser la notation entre crochets pour accèder aux propriétés. Actuellement, HTMLCollections ne reconnait pas  purement les ID numériques, ce qui provoquerait des conflits avec l'accès de "array-style" , bien qu'HTML5 le permette.
 
 Par exemple, en supposant qu'il y ait un élément `<form>` _(formulaire)_ dans le document et que son `id` soit `"myForm" `:
 
@@ -59,8 +59,8 @@ Certains navigateurs se comportent différemment quand il y a plus d'un élémen
 
 | Specification                                                                                    | Statut                           | Commentaire          |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#htmlcollection', 'HTMLCollection')}}             | {{ Spec2('DOM WHATWG') }} |                      |
-| {{SpecName('DOM2 HTML', 'html.html#ID-75708506', 'HTMLCollection')}}     | {{ Spec2('DOM2 HTML') }} |                      |
+| {{SpecName('DOM WHATWG', '#htmlcollection', 'HTMLCollection')}}             | {{ Spec2('DOM WHATWG') }} |                      |
+| {{SpecName('DOM2 HTML', 'html.html#ID-75708506', 'HTMLCollection')}}     | {{ Spec2('DOM2 HTML') }} |                      |
 | {{SpecName('DOM1', 'level-one-html.html#ID-75708506', 'HTMLCollection')}} | {{ Spec2('DOM1') }}         | Définition initiale. |
 
 ## Voir aussi

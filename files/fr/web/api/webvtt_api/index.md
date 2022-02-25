@@ -96,7 +96,7 @@ Il est important de ne pas utiliser de ligne vide sans réplique, par exemple en
 
 Les commentaires sont des composants optionels qui peuvent être utilisés pour ajouter des informations à un fichier WebVTT. Les commentaires sont prévus pour ceux qui liront le fichier, ils ne seront pas vus par les utilisateurs. Les commentaires peuvent contenir de nouvelles ligne mais ne peuvent pas contenir de ligne vide ce qui équivaut à deux nouvelles lignes. Une ligne vide correspond à la fin d'un commentaire.
 
-Un  commentaire ne peut contenir la chaîne "`-->`", l'esperluette `&` ou bien le symbole plus-petit que `<`. Si vous voulez utiliser ces caractères, vous devez utiliser les caractères échapés comme `&amp;`pour l'esperluette et `&lt;` pour le plus petit que. Il est aussi recommandé `&gt;` pour le plus grand que, afin d'éviter toutes confusions.
+Un  commentaire ne peut contenir la chaîne "`-->`", l'esperluette `&` ou bien le symbole plus-petit que `<`. Si vous voulez utiliser ces caractères, vous devez utiliser les caractères échapés comme `&amp;`pour l'esperluette et `&lt;` pour le plus petit que. Il est aussi recommandé `&gt;` pour le plus grand que, afin d'éviter toutes confusions.
 
 Un commentaire est constitué de ces trois composants:
 

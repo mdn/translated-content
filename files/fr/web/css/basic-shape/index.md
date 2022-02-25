@@ -85,7 +85,7 @@ Les arguments qui ne sont pas définis ci-avant suivent cette syntaxe :
 Les valeurs d'une fonction `<basic-shape>` sont calculées comme indiqué, avec ces exceptions :
 
 - Les valeurs absentes sont incluses et leurs valeurs calculées sont leurs valeurs par défaut.
-- Une valeur {{cssxref("&lt;position&gt;")}} pour `circle()` ou  `ellipse()` est calculée comme une paire de distances indiquant les décalages (horizontaux puis verticaux) depuis l'origine en haut à gauche. Chaque décalage est indiqué comme une combinaison d'une longueur absolue et d'un pourcentage.
+- Une valeur {{cssxref("&lt;position&gt;")}} pour `circle()` ou  `ellipse()` est calculée comme une paire de distances indiquant les décalages (horizontaux puis verticaux) depuis l'origine en haut à gauche. Chaque décalage est indiqué comme une combinaison d'une longueur absolue et d'un pourcentage.
 - Pour `inset()`, une valeur {{cssxref("border-radius")}} est calculée comme une liste développée de de huit valeurs {{cssxref("length")}} ou de huit pourcentages.
 
 ## L'interpolation des formes simples

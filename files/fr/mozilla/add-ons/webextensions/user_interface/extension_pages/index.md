@@ -30,7 +30,7 @@ Vous pouvez inclure des fichiers HTML - et les fichiers CSS ou JavaScript associ
 
 ## Affichage des pages d’extension
 
-Il existe deux options pour afficher des pages d'extension&nbsp;:  {{WebExtAPIRef("windows.create()")}} et {{WebExtAPIRef("tabs.create()")}}.
+Il existe deux options pour afficher des pages d'extension&nbsp;:  {{WebExtAPIRef("windows.create()")}} et {{WebExtAPIRef("tabs.create()")}}.
 
 À l’aide de `windows.create()`, vous pouvez ouvrir une page HTML intégrée dans un panneau détaché (une fenêtre sans l’interface utilisateur de la barre d’la barre de signet et similaire) pour créer une expérience utilisateur semblable à une boîte de dialogue&nbsp;:
 

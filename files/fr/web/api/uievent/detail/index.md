@@ -22,7 +22,7 @@ Pour tous les autres objets {{domxref("UIEvent")}}, `UIEvent.detail` vaut toujou
 
 | Spécification                                                                                | Statut                           | Commentaires         |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('DOM3 Events','#widl-UIEvent-detail','UIEvent.detail')}}     | {{Spec2('DOM3 Events')}} |                      |
+| {{SpecName('DOM3 Events','#widl-UIEvent-detail','UIEvent.detail')}}     | {{Spec2('DOM3 Events')}} |                      |
 | {{SpecName('DOM2 Events','#Events-UIEvent-detail','UIEvent.detail')}} | {{Spec2('DOM2 Events')}} | Première définition. |
 
 ## Compatibilité des navigateurs

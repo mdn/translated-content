@@ -175,7 +175,7 @@ function updateProgress(percentComplete) {
 }
 
 function initDemo() {
-  setupProgress(); // Setup the progress bar.
+  setupProgress(); // Setup the progress bar.
 
   // Lier un événement clic au bouton, ce qui actualisera la barre de progression à 75%.
   document.getElementById("update-button").addEventListener("click", function (e) {

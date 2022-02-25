@@ -25,7 +25,7 @@ _Cette interface hérite des propriétés de l'interface {{domxref("EventTarget"
 - {{domxref("WorkerGlobalScope.navigator")}} {{readOnlyinline}}
   - : Renvoie le {{domxref("WorkerNavigator")}} associé au worker. C'est un objet navigator spécifique, principalement un sous-ensemble de {{domxref("Navigator")}} pour la navigation dans les portées, mais adapté aux workers.
 - {{domxref("WorkerGlobalScope.self")}} {{readOnlyinline}}
-  - : Renvoie une référence au `WorkerGlobalScope` lui-même. La plupart du temps, il s'agit d'une portée spécifique comme {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} ou {{domxref("ServiceWorkerGlobalScope")}}.
+  - : Renvoie une référence au `WorkerGlobalScope` lui-même. La plupart du temps, il s'agit d'une portée spécifique comme {{domxref("DedicatedWorkerGlobalScope")}},  {{domxref("SharedWorkerGlobalScope")}} ou {{domxref("ServiceWorkerGlobalScope")}}.
 - {{domxref("WorkerGlobalScope.location")}} {{readOnlyinline}}
   - : Renvoie le {{domxref("WorkerLocation")}} associé au worker. Il s'agit d'un objet de localisation spécifique, principalement un sous-ensemble de {{domxref ("Location")}} pour les portées de navigation, mais adapté aux workers.
 

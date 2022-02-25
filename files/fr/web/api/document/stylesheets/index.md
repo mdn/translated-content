@@ -13,14 +13,14 @@ original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 
 L'objet retourné est une liste {{domxref("StyleSheetList")}}.
 
-Il s'agit d'une collection ordonnée d'objets {{domxref("StyleSheet")}}. `styleSheetList.item(index)` ou  `styleSheetList{{ mediawiki.External('<em>index</em>') }}` retourne un seul objet stylesheet par son `index `(`index` débute par 0).
+Il s'agit d'une collection ordonnée d'objets {{domxref("StyleSheet")}}. `styleSheetList.item(index)` ou  `styleSheetList{{ mediawiki.External('<em>index</em>') }}` retourne un seul objet stylesheet par son `index `(`index` débute par 0).
 
 ## Spécification
 
 | Spécification                                                                                                                        | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('CSSOM', '#dom-document-stylesheets', 'styleSheets')}}                                             | {{Spec2('CSSOM')}}         |             |
-| {{SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-DocumentStyle-styleSheets', 'styleSheets')}} | {{Spec2('DOM2 Style')}} |             |
+| {{SpecName('CSSOM', '#dom-document-stylesheets', 'styleSheets')}}                                             | {{Spec2('CSSOM')}}         |             |
+| {{SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-DocumentStyle-styleSheets', 'styleSheets')}} | {{Spec2('DOM2 Style')}} |             |
 
 ## Voir aussi
 

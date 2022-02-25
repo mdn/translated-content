@@ -115,16 +115,16 @@ translation_of: Web/API/XMLHttpRequest/response
 var url = 'somePage.html'; // une page locale
 
 function load(url, callback) {
-  var xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      console.log(xhr.response); // Par défault une DOMString
-    }
-  }
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      console.log(xhr.response); // Par défault une DOMString
+    }
+  }
 
   xhr.open('GET', url, true);
-  xhr.send('');
+  xhr.send('');
 }
 ```
 

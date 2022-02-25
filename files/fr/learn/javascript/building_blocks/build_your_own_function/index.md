@@ -116,7 +116,7 @@ panel.setAttribute('class', 'msgBox');
 html.appendChild(panel);
 ```
 
-Les deux sections suivantes font usage des mêmes fonctions `createElement()` et `appendChild()` que nous avons déjà vu pour créer deux nouveaux éléments — l'un {{htmlelement("p")}} et l'autre {{htmlelement("button")}} —  et pour les insèrer dans la page en tant qu'enfant du panneau `<div>`. On utilise leur propriété {{domxref("Node.textContent")}} — qui représente le contenu textuel d'un élément — pour insérer un message à l'intérieur du paragraphe, ainsi qu'un 'x' à l'intérieur du bouton. Ce bouton sera cliqué / activé quand l'utilisateur voudra fermer la boîte de message.
+Les deux sections suivantes font usage des mêmes fonctions `createElement()` et `appendChild()` que nous avons déjà vu pour créer deux nouveaux éléments — l'un {{htmlelement("p")}} et l'autre {{htmlelement("button")}} —  et pour les insèrer dans la page en tant qu'enfant du panneau `<div>`. On utilise leur propriété {{domxref("Node.textContent")}} — qui représente le contenu textuel d'un élément — pour insérer un message à l'intérieur du paragraphe, ainsi qu'un 'x' à l'intérieur du bouton. Ce bouton sera cliqué / activé quand l'utilisateur voudra fermer la boîte de message.
 
 ```js
 var msg = document.createElement('p');

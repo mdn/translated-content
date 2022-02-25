@@ -144,12 +144,12 @@ Lors du formatage de beaucoup de nombres, il est préférable de créer un objet
 | Spécification                                                                                                                            | État                             | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                                                 | {{Spec2('ES3')}}             | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}                                         | {{Spec2('ES5.1')}}         |                                                       |
-| {{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}             | {{Spec2('ES6')}}             |                                                       |
-| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     | {{Spec2('ESDraft')}}     |                                                       |
-| {{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 1.0')}} |                                                       |
-| {{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 2.0')}} |                                                       |
-| {{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}                                         | {{Spec2('ES5.1')}}         |                                                       |
+| {{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}             | {{Spec2('ES6')}}             |                                                       |
+| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     | {{Spec2('ESDraft')}}     |                                                       |
+| {{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 1.0')}} |                                                       |
+| {{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 2.0')}} |                                                       |
+| {{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

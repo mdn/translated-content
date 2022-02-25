@@ -40,7 +40,7 @@ L'interface **`BiquadFilterNode`** représente un simple filtre de bas niveau, c
 ## Constructeur
 
 - {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}}
-  - : Crée une nouvelle instance d'un objet  `BiquadFilterNode`.
+  - : Crée une nouvelle instance d'un objet  `BiquadFilterNode`.
 
 ## Propriétés
 

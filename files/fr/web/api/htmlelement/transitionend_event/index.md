@@ -38,7 +38,7 @@ L'événement **`transitionend`** est déclenché lorsqu'une [transition CSS](/e
   </tbody>
 </table>
 
-L'événement `transitionend` est déclenché dans les deux sens - à la fin de la transition vers l'état de transition et lorsqu'il revient complètement à l'état par défaut ou sans transition. S'il n'y a pas de délai ou de durée de transition, si les deux sont 0 ou qu'aucun n'est déclaré, il n'y a pas de transition et aucun des événements de transition n'est déclenché.  Si l'événement `transitioncancel` est déclenché, l'événement `transitionend` ne se déclenchera pas.
+L'événement `transitionend` est déclenché dans les deux sens - à la fin de la transition vers l'état de transition et lorsqu'il revient complètement à l'état par défaut ou sans transition. S'il n'y a pas de délai ou de durée de transition, si les deux sont 0 ou qu'aucun n'est déclaré, il n'y a pas de transition et aucun des événements de transition n'est déclenché.  Si l'événement `transitioncancel` est déclenché, l'événement `transitionend` ne se déclenchera pas.
 
 ## Propriétés
 

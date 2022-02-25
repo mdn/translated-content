@@ -230,7 +230,7 @@ Si vous essayez de naviguer à l'aide d'un lecteur d'écran, cela vous indiquera
 
 Les structures de table sont un vestige du passé – elles semblaient logiques lorsque le support CSS n’était pas répandu dans les navigateurs, mais elles semaient la confusion chez les utilisateurs de lecteurs d’écran, tout en étant mauvaises pour de nombreuses autres raisons (utilisation abusive des tableaux, nécessite plus de balisage, design manquant de souplesse). Ne les utilisez pas !
 
-Vous pouvez vérifier ces affirmations en comparant votre expérience antérieure avec un  [exemple plus moderne de structure de site Web](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), qui pourrait ressembler à ceci :
+Vous pouvez vérifier ces affirmations en comparant votre expérience antérieure avec un  [exemple plus moderne de structure de site Web](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), qui pourrait ressembler à ceci :
 
 ```html
 <header>
@@ -304,23 +304,23 @@ Vous obtenez essentiellement ce comportement gratuitement, en utilisant simpleme
 <h2>formulaire</h2>
 
 <form>
-  <div>
-    <label for="name"> Remplis ton nom :</label>
-    <input type="text" id="name" name="name">
-  </div>
-  <div>
-    <label for="age"> Entrez votre âge :</label>
-    <input type="text" id="age" name="age">
-  </div>
-  <div>
-    <label for="mood"> Choisissez votre humeur :</label>
-    <select id="mood" name="mood">
-      <option>Heureux</option>
+  <div>
+    <label for="name"> Remplis ton nom :</label>
+    <input type="text" id="name" name="name">
+  </div>
+  <div>
+    <label for="age"> Entrez votre âge :</label>
+    <input type="text" id="age" name="age">
+  </div>
+  <div>
+    <label for="mood"> Choisissez votre humeur :</label>
+    <select id="mood" name="mood">
+      <option>Heureux</option>
       <option> Triste </option>
       <option> Fâché </option>
-      <option> Préoccupé </option>
-    </select>
-  </div>
+      <option> Préoccupé </option>
+    </select>
+  </div>
 </form>
 ```
 
@@ -447,10 +447,10 @@ Mais cela pose des problèmes : un utilisateur de lecteur d’écran ne peut pas
 
 Regardez maintenant notre tableau d'exemple sur les groupes punk – vous pouvez voir quelques aides à l'accessibilité au travail ici :
 
-- Les en-têtes de tableau sont définis à l'aide d'éléments {{htmlelement("th")}} —  vous pouvez également spécifier s'il s'agit d'en-têtes de lignes ou de colonnes à l'aide de l'attribut `scope`. Cela vous donne des groupes complets de données qui peuvent être consommés par les lecteurs d'écran en tant qu'unités simples
+- Les en-têtes de tableau sont définis à l'aide d'éléments {{htmlelement("th")}} —  vous pouvez également spécifier s'il s'agit d'en-têtes de lignes ou de colonnes à l'aide de l'attribut `scope`. Cela vous donne des groupes complets de données qui peuvent être consommés par les lecteurs d'écran en tant qu'unités simples
 - L'élément {{htmlelement("caption")}} et l'attribut summary `<table>` effectuent tous deux des travaux similaires. Ils agissent en tant que texte alternatif pour une table, offrant ainsi à un utilisateur de lecteur d'écran un résumé rapide et utile du contenu de la table. `<caption>` est généralement préféré car il rend son contenu accessible aux utilisateurs malvoyants, qui pourraient également le trouver utile. Vous n'avez pas vraiment besoin des deux.
 
-> **Note :** voir notre article  [Tableaux HTML&nbsp;: dispositions avancées et accessibilité](/fr/docs/Apprendre/HTML/Tableaux/Advanced) pour plus de détails sur les tables de données accessibles.
+> **Note :** voir notre article  [Tableaux HTML&nbsp;: dispositions avancées et accessibilité](/fr/docs/Apprendre/HTML/Tableaux/Advanced) pour plus de détails sur les tables de données accessibles.
 
 ## Alternatives textuelles
 

@@ -17,7 +17,7 @@ Quelle est donc la démarche à suivre pour obtenir cet array buffer et le compi
 
 ## En utilisant Fetch
 
-[Fetch](/fr/docs/Web/API/Fetch_API)  est une API qui facilite la récupération de ressources sur le réseau.
+[Fetch](/fr/docs/Web/API/Fetch_API)  est une API qui facilite la récupération de ressources sur le réseau.
 
 La façon la plus rapide et la plus efficace de récupérer un module wasm (webassembly) est d'utiliser la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}, qui accepte comme premier argument un appel de fonction `fetch()`, et s'occupe de récupérer, compiler, et instancier le module en une seule et même étape, en accedant directement au flux de code binaire provenant du serveur:
 
@@ -53,7 +53,7 @@ The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — 
 
 > **Note :** En règle générale, on ne s'intéresse qu'à l'instance, mais il peut être utile de préserver le module afin de le mettre ultérieurement en cache, de le partager avec un autre worker ou window via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage), ou tout simplement pour créer d'autres instances.
 
-> **Note :** Un chargement supplémentaire du module nécessite un object  de type {{jsxref("WebAssembly.Module")}} comme argument, et retourne une promesse contenant directement un objet de type instance comme résultat. Voir [Second overload example](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
+> **Note :** Un chargement supplémentaire du module nécessite un object  de type {{jsxref("WebAssembly.Module")}} comme argument, et retourne une promesse contenant directement un objet de type instance comme résultat. Voir [Second overload example](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
 
 ### Mise en marche du code webassembly
 
@@ -81,7 +81,7 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est plus ancien que Fetch, mais peut toujours être utiliser afin récupérer un array buffer. En supposant que notre module se nome `simple.wasm`:
 
 1.  Créer une nouvel instance {{domxref("XMLHttpRequest()")}}, afin d'utiliser la méthode {{domxref("XMLHttpRequest.open","open()")}} nécessaire pour ouvrir une requête. Paramètrer la requête avec une méthode `GET`, et y déclarer le chemin du fichier que nous souhaiter récupérer.
-2.  L'étape essentielle est içi de définir la réponse comme une réponse de type `'arraybuffer'` en utilisant  la propriété {{domxref("XMLHttpRequest.responseType","responseType")}}.
+2.  L'étape essentielle est içi de définir la réponse comme une réponse de type `'arraybuffer'` en utilisant  la propriété {{domxref("XMLHttpRequest.responseType","responseType")}}.
 3.  Ensuite, la requête est envoyée à l'aide de la méthode {{domxref("XMLHttpRequest.send()")}}.
 4.  Enfin l'event handler {{domxref("XMLHttpRequest.onload", "onload")}} se charge d'invoquer une fonction lorsque la réponse a terminé de se télécharger — au sein de cette fonction, la propriété {{domxref("XMLHttpRequest.response", "response")}} nous donne accès à un array buffer. Celui ci est fournit à notre méthode {{jsxref("WebAssembly.instantiate()")}} d'un manière similaire à ce qui est fait avec la méthode Fetch().
 

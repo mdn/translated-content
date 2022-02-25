@@ -34,22 +34,22 @@ var creating = browser.tabs.create(
   - : `object`.Propriétés pour donner le nouvel onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
 
     - `active`{{optional_inline}}
-      - : `boolean`. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est `false`, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à  `true`.
+      - : `boolean`. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est `false`, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à  `true`.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Utilisez-le pour créer un onglet dont l'ID de cookie estCette option n'est disponible que si l'extension a  la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies".`
+      - : `string`. Utilisez-le pour créer un onglet dont l'ID de cookie estCette option n'est disponible que si l'extension a  la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies".`
     - `index`{{optional_inline}}
       - : `integer`. La position que l'onglet devrait prendre dans la fenêtre. La valeur fournie sera comprise entre zéro et le nombre d'onglets dans la fenêtre.
     - `openerTabId`{{optional_inline}}
       - : `integer`. L'ID de l'onglet qui a ouvert cet onglet. Si spécifié, l'onglet d'ouverture doit être dans la même fenêtre que l'onglet nouvellement créé.
     - `openInReaderMode`{{optional_inline}}
-      - : `boolean`. si `true`, ouvrez cet onglet en [mode lecture](/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Par défaut à  `false`.
+      - : `boolean`. si `true`, ouvrez cet onglet en [mode lecture](/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Par défaut à  `false`.
     - `pinned`{{optional_inline}}
       - : `boolean`. Si l'onglet doit être épinglé. Par défaut à `false`.
     - `selected`{{optional_inline}}
 
       - : `boolean`. Si l'onglet doit devenir l'onglet sélectionné dans la fenêtre. Par défaut à `true`.
 
-        > **Attention :** Cette propriété est obsolète et n'est pas prise en charge dans Firefox. Utilisez  `actif` à la place.
+        > **Attention :** Cette propriété est obsolète et n'est pas prise en charge dans Firefox. Utilisez  `actif` à la place.
 
     - `url`{{optional_inline}}
 
@@ -66,7 +66,7 @@ var creating = browser.tabs.create(
         - privileged about: URLs (par exemple, `about:config`, `about:addons`, `about:debugging`). Les URL non privilégiées (e.g., `about:blank`) sont autorisés.
         - La page Nouvel onglet (`about:newtab`) peut être ouverte si aucune valeur n'est fournie pour l'URL.
 
-        Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple :  '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.
+        Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple :  '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.
 
     - `windowId`{{optional_inline}}
       - : `integer`. La fenêtre pour créer le nouvel onglet. Par défaut à la fenêtre actuelle.

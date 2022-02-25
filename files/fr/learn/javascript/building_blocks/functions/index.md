@@ -242,7 +242,7 @@ Parlons un peu de la {{glossary("portée")}} — un concept très important lors
 
 Le plus haut niveau en dehors de toutes vos fonctions est appelé la **portée globale**. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe qu'elle partie du code.
 
-Le JavaScript est construit de cette façon pour plusieurs raisons —  mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits. Cela peut être fait de manière malveillante ou simplement par accident.
+Le JavaScript est construit de cette façon pour plusieurs raisons —  mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits. Cela peut être fait de manière malveillante ou simplement par accident.
 
 Par exemple, disons que vous avez un fichier HTML qui appelle deux fichiers JavaScript externes, et que les deux ont une variable et une fonction définie qui utilisent le même nom :
 
@@ -271,7 +271,7 @@ function greeting() {
 }
 ```
 
-Les deux fonctions que vous voulez appeler s'appellent `greeting()`, mais vous ne pouvez accéder qu'à la fonction `greeting()` du second fichier `second.js`  — car celui-ci est appliqué au code HTML plus tard dans le code source, de sorte que sa variable et sa fonction écrasent celles du premier fichier `first.js`.
+Les deux fonctions que vous voulez appeler s'appellent `greeting()`, mais vous ne pouvez accéder qu'à la fonction `greeting()` du second fichier `second.js`  — car celui-ci est appliqué au code HTML plus tard dans le code source, de sorte que sa variable et sa fonction écrasent celles du premier fichier `first.js`.
 
 > **Note :** Vous pouvez voir cet exemple [s'exécuter sur GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/functions/conflict.html) (voir aussi le [code source](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/functions)).
 
@@ -350,7 +350,7 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
     b();
     ```
 
-    Les deux fonctions `a()` et `b()` appelées devraient renvoyer la valeur x — 1. Cela fonctionne très bien car même si la fonction `output()` n'est pas dans la même portée que celle dans laquelle  `x` est définie, `x` est une variable globale et donc elle est disponible dans n'importe quelle partie du code.
+    Les deux fonctions `a()` et `b()` appelées devraient renvoyer la valeur x — 1. Cela fonctionne très bien car même si la fonction `output()` n'est pas dans la même portée que celle dans laquelle  `x` est définie, `x` est une variable globale et donc elle est disponible dans n'importe quelle partie du code.
 
 8.  Pour finir, essayez de mettre à jour le code comme ceci :
 
@@ -373,7 +373,7 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
     b();
     ```
 
-    Cette fois l'appel de `a()` et `b()` renverra l'erreur "[ReferenceError: z is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)"  — parce que l'appel de la fonction `output()` et des variables qu'elle essaie d'afficher ne sont pas définis dans les mêmes portées — les variables sont en effet invisibles pour cet appel de fonction.
+    Cette fois l'appel de `a()` et `b()` renverra l'erreur "[ReferenceError: z is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)"  — parce que l'appel de la fonction `output()` et des variables qu'elle essaie d'afficher ne sont pas définis dans les mêmes portées — les variables sont en effet invisibles pour cet appel de fonction.
 
 > **Note :** Ces règles de portée ne s'appliquent pas aux boucles (ex. `for() { ... }`) ni aux instructions conditionnelles (ex. `if() { ... }`) — elles semblent très similaires, mais ce n'est pas la même chose ! Prenez garde de ne pas les confondre.
 
@@ -405,7 +405,7 @@ function subFunction3() {
 }
 ```
 
-Assurez-vous simplement que les valeurs utilisées dans la fonction ont une portée correcte. L'exemple ci-dessus entraînerait une erreur `ReferenceError: myValue is not defined`, car bien que la valeur `myValue`  est définie dans la même portée que les appels de fonction, elle n'est pas définie dans les définitions de fonctions - le code réel qui est exécuté lorsque les fonctions sont appelées. Pour que cela fonctionne, vous devez passer la valeur dans la fonction en tant que paramètre, comme ceci :
+Assurez-vous simplement que les valeurs utilisées dans la fonction ont une portée correcte. L'exemple ci-dessus entraînerait une erreur `ReferenceError: myValue is not defined`, car bien que la valeur `myValue`  est définie dans la même portée que les appels de fonction, elle n'est pas définie dans les définitions de fonctions - le code réel qui est exécuté lorsque les fonctions sont appelées. Pour que cela fonctionne, vous devez passer la valeur dans la fonction en tant que paramètre, comme ceci :
 
 ```js
 function myBigFunction() {

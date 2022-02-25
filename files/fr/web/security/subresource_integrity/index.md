@@ -65,8 +65,8 @@ Les navigateurs gèrent SRI en effectuant les étapes suivantes :
 
 | Spécification                                    | État                                         | Commentaires |
 | ------------------------------------------------ | -------------------------------------------- | ------------ |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |              |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |              |
+| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |              |
+| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |              |
 
 ## Compatibilité des navigateurs
 

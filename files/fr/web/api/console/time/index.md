@@ -32,7 +32,7 @@ Voir [Timers](/fr/docs/Web/API/console#Timers) dans la documentation de {{ domx
 | ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
 | {{SpecName("Console API", "#time", "console.time()")}} | {{Spec2("Console API")}} | Définition initiale |
 
-## Compatibilité  des navigateurs
+## Compatibilité  des navigateurs
 
 {{Compat("api.Console.time")}}
 

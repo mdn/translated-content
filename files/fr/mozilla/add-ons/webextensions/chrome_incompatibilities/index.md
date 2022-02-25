@@ -81,7 +81,7 @@ Si vous écrivez votre extension en utilisant `browser` et les promesses, l'équ
 
 La page sur la [compatibilité des navigateurs pour les API JavaScript WebExtension](/fr/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) inclut l'ensemble des tableaux de compatibilité. Lorsqu'il existe des réserves autour du support d'un élément d'API donné, ceci est indiqué dans ces tableaux avec un astérisque "\*". Ces réserves sont détaillées la page de documentation respective de l'API.
 
-Ces tableaux sont générés à partir des données de compatibilité stockées en tant que  [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
+Ces tableaux sont générés à partir des données de compatibilité stockées en tant que  [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
 
 Le reste de cette section décrit les problèmes de compatibilité qui ne sont pas encore pris en compte dans ces tableaux.
 

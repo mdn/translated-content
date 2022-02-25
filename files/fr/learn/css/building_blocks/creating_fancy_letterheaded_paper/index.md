@@ -44,14 +44,14 @@ Si vous voulez faire bonne impression, écrire une lettre sur un beau papier à 
 
 Pour débuter cet exercice, vous devez&nbsp;:
 
-- faire une copie locale du [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/index.html) et de la [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/style.css) — enregistrez‑les sous les noms  `index.html` et `style.css` dans un nouveau répertoire.
-- enregistrer des copies locales des images d'[en‑tête](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [pied de page](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) et  [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) dans le même répertoire que les fichiers de code.
+- faire une copie locale du [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/index.html) et de la [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/style.css) — enregistrez‑les sous les noms  `index.html` et `style.css` dans un nouveau répertoire.
+- enregistrer des copies locales des images d'[en‑tête](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [pied de page](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) et  [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) dans le même répertoire que les fichiers de code.
 
-> **Note :** Autrement, vous pouvez utiliser un site comme  [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
+> **Note :** Autrement, vous pouvez utiliser un site comme  [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
 
 ## Résumé du projet
 
-Vous avez les fichiers nécessaires à la création d'un modèle de papier à en-tête. Rassemblez les dossiers. Il  faut :
+Vous avez les fichiers nécessaires à la création d'un modèle de papier à en-tête. Rassemblez les dossiers. Il  faut :
 
 ### La lettre
 
@@ -87,7 +87,7 @@ Voici une capture d'écran affichant un exemple de ce à quoi le dessin final re
 
 ## Évaluation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
+Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur  [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
 
 {{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}
 

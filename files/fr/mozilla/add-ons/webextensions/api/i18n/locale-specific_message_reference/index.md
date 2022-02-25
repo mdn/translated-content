@@ -85,9 +85,9 @@ Au moins, cette propriété doit être définie pour chaque chaîne. Le membre `
 Autres points à noter :
 
 - Tout nombre de signes dollar consécutifs apparaissant dans les chaînes est remplacé par le même nombre de signes dollar moins un. donc, $$ > $, $$$ > $$, etc.
-- Lorsque le fichier de paramètres régionaux est lu, les jetons correspondant à  `/\$([a-z0-9_@]+)\$/i` sont remplacés par la valeur correspondante de l'objet "placeholders" de la chaîne. Ces substitutions se produisent avant le traitement des  `/\$\d/` jetons dans le message.
+- Lorsque le fichier de paramètres régionaux est lu, les jetons correspondant à  `/\$([a-z0-9_@]+)\$/i` sont remplacés par la valeur correspondante de l'objet "placeholders" de la chaîne. Ces substitutions se produisent avant le traitement des  `/\$\d/` jetons dans le message.
 - Lorsqu'une chaîne locale est utilisée, les jetons correspondant à `/\$\d+/` sont remplacés par les remplacements passés à {{WebExtAPIRef("i18n.getMessage()")}}.
-- `getMessage()` ne traitera pas les appels avec plus de 9  placeholders/substitutions.
+- `getMessage()` ne traitera pas les appels avec plus de 9  placeholders/substitutions.
 
 ### description
 

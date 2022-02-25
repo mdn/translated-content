@@ -247,7 +247,7 @@ Il est également nécessaire de fournir des alternatives à du contenu multimé
 Certains utilisateurs pourraient avoir choisi d'afficher les images mais pourraient disposer d'une connexion instable ou limité (c'est le cas notamment dans les pays en développement et sur les appareils mobiles). Si vous souhaitez que votre site web soit le plus fonctionnel possible, il est nécessaire de compresser les images. Voici quelques outils pour vous aider à cette tâche (logiciels ou services en ligne)&nbsp;:
 
 - **Logiciels à installer&nbsp;:** [ImageOptim](https://imageoptim.com/) (Mac), [OptiPNG](http://optipng.sourceforge.net/) (toutes les plates-formes, [PNGcrush](http://pmt.sourceforge.net/pngcrush/) (DOS, Unix/Linux)
-- **Outils en lignes&nbsp;:** [smushit!](http://smush.it/) de Yahoo!,   [Online Image Optimizer](http://tools.dynamicdrive.com/imageoptimizer/) de Dynamic Drive (qui peut convertir d'un format à un autre si cela est plus efficace en termes de bande passante)
+- **Outils en lignes&nbsp;:** [smushit!](http://smush.it/) de Yahoo!,   [Online Image Optimizer](http://tools.dynamicdrive.com/imageoptimizer/) de Dynamic Drive (qui peut convertir d'un format à un autre si cela est plus efficace en termes de bande passante)
 
 ## Prochaines étapes
 

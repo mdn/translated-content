@@ -42,7 +42,7 @@ La propriété **`-webkit-mask-position-x`** permet de définir la position hori
 ### Valeurs
 
 - `<length-percentage>`
-  - : Une longueur indiquant la position du bord gauche de l'image à partir du bord gauche de la boîte de remplissage (_padding_). Les pourcentages sont calculés relativement à la dimension horizontale de la boîte de remplissage. (`0%` indique que le bord gauche de l'image est aligné avec le bord gauche de la boîte de remplissage et `100%` indique que le bord droit de l'image est aligné avec le bord droit  de la boîte de remplissage).
+  - : Une longueur indiquant la position du bord gauche de l'image à partir du bord gauche de la boîte de remplissage (_padding_). Les pourcentages sont calculés relativement à la dimension horizontale de la boîte de remplissage. (`0%` indique que le bord gauche de l'image est aligné avec le bord gauche de la boîte de remplissage et `100%` indique que le bord droit de l'image est aligné avec le bord droit  de la boîte de remplissage).
 - **`left`**
   - : Un mot-clé équivalent à `0%`.
 - **`right`**

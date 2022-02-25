@@ -135,7 +135,7 @@ console.log(runCodeWithDateFunction(
 
 2\. Le surcoût lié à un appel de fonction est léger
 
-3\. `Function()` permet d'utiliser  `"use strict";` (qui peut également aider à améliorer les performances).
+3\. `Function()` permet d'utiliser  `"use strict";` (qui peut également aider à améliorer les performances).
 
 Enfin, pour la plupart des cas, on doit pouvoir éviter de passer par
 

@@ -17,7 +17,7 @@ L'événement **error** _(erreur)_ est déclenché lorsqu'une ressource n'a pas 
 - Spécification
   - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-error)
 - Interface
-  - : {{domxref("UIEvent")}} si généré depuis l'interface utilisateur, {{domxref("MediaRecorderErrorEvent")}} si généré par [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)  et sinon {{domxref("Event")}}.
+  - : {{domxref("UIEvent")}} si généré depuis l'interface utilisateur, {{domxref("MediaRecorderErrorEvent")}} si généré par [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API)  et sinon {{domxref("Event")}}.
 - Propagation
   - : Non
 - Annulable
@@ -49,6 +49,6 @@ Ces évènements sont d'un type {{domxref("MediaRecorderErrorEvent")}}.
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : Évènements envoyés à {{domxref("Window.onerror")}} et à {{domxref("Element.onerror")}}
 - {{domxref("HTMLMediaElement.onerror")}}
-  - : Évènements envoyés à {{domxref("HTMLMediaElement")}} incluant {{HTMLElement("audio")}}   et {{HTMLElement("video")}} .
+  - : Évènements envoyés à {{domxref("HTMLMediaElement")}} incluant {{HTMLElement("audio")}}   et {{HTMLElement("video")}} .
 - {{domxref("MediaRecorder.onerror")}}
   - : Évènements envoyés à {{domxref("MediaRecorder.onerror")}} , d'un type {{domxref("MediaRecorderErrorEvent")}}

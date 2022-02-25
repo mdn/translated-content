@@ -119,8 +119,8 @@ Maintenant, faites l'extraction de l'ensemble des polices web crées. Dans le r�
 Pour mettre en œuvre ces polices dans la démo, suivez ces étapes&nbsp;:
 
 1.  Renommez le répertoire d'extraction avec quelque chose de simple, comme `fonts`.
-2.  Ouvrez le fichier `stylesheet.css` et copiez y les deux blocs `@font-face` contenus dans le  fichier `web-font-start.css` — il faut les mettre tout en haut, avant tout élement du CSS, car les polices doivent être importées avant de pouvoir les utiliser sur votre site.
-3.  Chaque fonction `url()` pointe sur un fichier de police à importer dans la CSS — assurez‑vous que les chemins vers les fichiers soient corrects, donc ajoutez  `fonts/` au début de chaque chemin (si nécessaire).
+2.  Ouvrez le fichier `stylesheet.css` et copiez y les deux blocs `@font-face` contenus dans le  fichier `web-font-start.css` — il faut les mettre tout en haut, avant tout élement du CSS, car les polices doivent être importées avant de pouvoir les utiliser sur votre site.
+3.  Chaque fonction `url()` pointe sur un fichier de police à importer dans la CSS — assurez‑vous que les chemins vers les fichiers soient corrects, donc ajoutez  `fonts/` au début de chaque chemin (si nécessaire).
 4.  Maintenant, vous pouvez vous servir de ces polices dans vos piles de fontes, tout à fait comme les polices système ou une police «&nbsp;web safe ». Par exemple&nbsp;:
 
     ```css
@@ -144,7 +144,7 @@ La plupart de ces services sont faciles à utiliser, donc nous n'en parlerons pa
 1.  Allez sur [Google Fonts](https://www.google.com/fonts).
 2.  Utilisez les filtres sur la droite pour afficher les types de polices à choisir et retenez une paire de fontes qui vous plaisent.
 3.  Pour sélectionner une famille de fontes, pressez le bouton ⊕ sur le côté.
-4.  Après avoir choisi les familles de fontes, pressez la barre avec  _\[Nombre] Families Selected_ en bas de la page.
+4.  Après avoir choisi les familles de fontes, pressez la barre avec  _\[Nombre] Families Selected_ en bas de la page.
 5.  Dans l'écran résultant, copiez d'abord la ligne de code HTML affichée et collez‑la dans l'en-tête de votre fichier HTML. Mettez-la au-dessus de l'élément {{htmlelement("link")}} existant, de sorte que la police soit importée avant que le navigateur essaye de l'utiliser dans la CSS.
 6.  Copiez ensuite les déclarations CSS listées dans la CSS comme il convient pour appliquer la fonte personnalisée à votre HTML.
 

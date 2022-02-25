@@ -118,7 +118,7 @@ Le mapper URL est généralement stocké dans un fichier nommé **urls.py**. Dan
 
     urlpatterns = [
         path('admin/', admin.site.urls),
-        path('book/<int:id>/', views.book-detail, name='book-detail'),
+        path('book/<int:id>/', views.book-detail, name='book-detail'),
         path('catalog/', include('catalog.urls')),
         re_path(r'^([0-9]+)/$', views.best),
     ]
@@ -134,7 +134,7 @@ Le second argument est une autre fonction qui sera appelée quand le pattern ser
 
 Les vues sont le coeur des applications web. Elles reçoivent des requêtes HTTP de clients web et renvoient des réponses HTTP. Entretemps, elles mobilisent les autres ressources du framework pour accéder aux bases de données, préparer le rendu des templates, etc.
 
-L'exemple ci-dessous montre une fonction vue minimale `index()`, qui pourrait être appelée par notre mapper URL de la section précédente. Comme toutes les fonctions vues, elle reçoit un objet  `HttpRequest` comme paramètre (`request`) et renvoie un objet `HttpResponse`. Dans notre cas on ne fait rien de spécial avec la requête; et notre réponse ne renvoie qu'une chaîne de caractères brute. Nous vons montrerons une requête plus intéressante dans une autre section.
+L'exemple ci-dessous montre une fonction vue minimale `index()`, qui pourrait être appelée par notre mapper URL de la section précédente. Comme toutes les fonctions vues, elle reçoit un objet  `HttpRequest` comme paramètre (`request`) et renvoie un objet `HttpResponse`. Dans notre cas on ne fait rien de spécial avec la requête; et notre réponse ne renvoie qu'une chaîne de caractères brute. Nous vons montrerons une requête plus intéressante dans une autre section.
 
 ```python
 ## nom du fichier : view.py (fonction vue Django)
@@ -150,7 +150,7 @@ def index(request):
 
 > **Note :** Un peu de Python :
 >
-> - Les [modules Python](https://docs.python.org/3/tutorial/modules.html) sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet  `HttpResponse` du module `django.http` pour qu'on puisse l'utiliser dans notre vue : `from django.http import HttpResponse` . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.
+> - Les [modules Python](https://docs.python.org/3/tutorial/modules.html) sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet  `HttpResponse` du module `django.http` pour qu'on puisse l'utiliser dans notre vue : `from django.http import HttpResponse` . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.
 > - Les fonctions sont déclarées en utilisant le mot-clé `def` comme indiqué ci-dessus, avec des paramètres nommés listés entre parenthèses après le nom de la fonction; la ligne se termine ensuite par deux points. Notez que les lignes suivantes sont **indentées**.  L'indentation est importante, car elle spécifie que les lignes de code sont contenues dans un bloc particulier (l'indentation obligatoire est un élément clé de Python, et une des raisons pour lesquelles le code Python est si simple à lire).
 
 Les vues sont généralement stockées dans un fichier nommé **views.py**.
@@ -167,22 +167,22 @@ L'extrait de code ci-dessous montre un modèle Django très simple pour un objet
 from django.db import models
 
 class Team(models.Model):
-    team_name = models.CharField(max_length=40)
+    team_name = models.CharField(max_length=40)
 
-    TEAM_LEVELS = (
-        ('U09', 'Under 09s'),
-        ('U10', 'Under 10s'),
-        ('U11', 'Under 11s'),
-        ...  # lister les autres niveaux d'équipes
-    )
-    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
+    TEAM_LEVELS = (
+        ('U09', 'Under 09s'),
+        ('U10', 'Under 10s'),
+        ('U11', 'Under 11s'),
+        ...  # lister les autres niveaux d'équipes
+    )
+    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
 ```
 
 > **Note :** Un peu de Python :
 >
 > - Python supporte la "programmation orientée-objet", un type de programmation où l'on organise notre code en objets, ce qui inclut les données et fonctions liées qui agiront sur les données. Les objets peuvent être hérités/étendus/dérivés d'autres objets, ce qui permet à ces objets de partager un comportement commun. En Python, on utilise le mot-clé `class` pour définir le "squelette" d'un objet. On peut créer plusieurs *instances* spécifiques de ce type d'objet d'après le modèle d'une classe.
 >
->   Ainsi par exemple, nous avons ici une classe `Team`, dérivée de la classe `Model`.  Cela signifie que c'est un modèle, et qu'elle contiendra toutes les méthodes d'un modèle, mais qu'on peut aussi lui donner des caractéristiques spécifiques. Dans notre modèle, nous définissons les champs dont aura besoin notre base de données, en leur donnant des noms spécifiques. Django utilisera ces définitions, ce qui inclut aussi le nom des champs, pour créer la base de données sous-jacente.
+>   Ainsi par exemple, nous avons ici une classe `Team`, dérivée de la classe `Model`.  Cela signifie que c'est un modèle, et qu'elle contiendra toutes les méthodes d'un modèle, mais qu'on peut aussi lui donner des caractéristiques spécifiques. Dans notre modèle, nous définissons les champs dont aura besoin notre base de données, en leur donnant des noms spécifiques. Django utilisera ces définitions, ce qui inclut aussi le nom des champs, pour créer la base de données sous-jacente.
 
 ### Requêter les données (views.py)
 
@@ -197,9 +197,9 @@ from django.shortcuts import render
 from .models import Team
 
 def index(request):
-    list_teams = Team.objects.filter(team_level__exact="U09")
-    context = {'youngest_teams': list_teams}
-    return render(request, '/best/index.html', context)
+    list_teams = Team.objects.filter(team_level__exact="U09")
+    context = {'youngest_teams': list_teams}
+    return render(request, '/best/index.html', context)
 ```
 
 Cette fonction utilise la fonction `render()` pour créer la `HttpResponse` qui est renvoyée au navigateur. Cette fonction est un _raccourci_; elle créée un fichier HTML en combinant un template HTML spécifique et des données à insérer dans le template (fournies dans la variable appelée "`context`"). Dans la prochaine section, nous vous montrons comment des données sont insérées dans le template pour générer le HTML.
@@ -218,13 +218,13 @@ L'extrait de code ci-dessous montre à quoi pourrait ressembler le template HTML
 <body>
 
  {% if youngest_teams %}
-    <ul>
-    {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
-    </ul>
+    <ul>
+    {% for team in youngest_teams %}
+        <li>\{\{ team.team_name \}\}</li>
+    {% endfor %}
+    </ul>
 {% else %}
-    <p>No teams are available.</p>
+    <p>No teams are available.</p>
 {% endif %}
 
 </body>

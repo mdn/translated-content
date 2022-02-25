@@ -9,7 +9,7 @@ tags:
 translation_of: Games/Examples
 original_slug: Jeux/Exemples
 ---
-{{GamesSidebar}}  {{IncludeSubnav("/fr/docs/Jeux")}}
+{{GamesSidebar}}  {{IncludeSubnav("/fr/docs/Jeux")}}
 
 Cette page liste un grand nombre de démos de technologies web impressionnantes vous permettant de vous inspirer et de vous amuser. Une preuve de ce qui peut être fait avec Javascript, WebGL et autres. Les deux premières sections listent des jeux tandis que la troisième est une liste de démos de technologies web.
 
@@ -102,7 +102,7 @@ Cette page liste un grand nombre de démos de technologies web impressionnantes 
 - [Rainbow Firestorm](http://codepen.io/jackrugile/pen/AokpF)
   - : Des particules de couleur arc-en-ciel, tombant comme de la pluie, rebondissent sur un terrain d'orbes.
 - [Crowd Simulation](http://visualiser.fr/babylon/crowd/)
-  - : Simulation d'une foule de personnes agitées  voulant rejoindre des directions opposées.
+  - : Simulation d'une foule de personnes agitées  voulant rejoindre des directions opposées.
 - [SVG Masking Experiment](http://codepen.io/noeldelgado/pen/ByxQjL)
   - : Une machine à rayons X, créée en utilisant un calque SVG.
 - [Realistic Water Simulation](https://www.shadertoy.com/view/Ms2SD1)

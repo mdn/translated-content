@@ -42,7 +42,7 @@ La méthode `compile` est dépréciée. Pour obtenir le même effet, on utiliser
 
 ## Exemples
 
-Dans l'exemple qui suit, on voit comment réinitialiser le motif et les drapeaux d'une expression rationnelle grâce à  la méthode `compile()`.
+Dans l'exemple qui suit, on voit comment réinitialiser le motif et les drapeaux d'une expression rationnelle grâce à  la méthode `compile()`.
 
 ```js
 var regexObj = new RegExp("toto", "gi");

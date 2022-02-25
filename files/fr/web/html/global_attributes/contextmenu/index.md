@@ -32,11 +32,11 @@ Voici quelques exemples de personnalisations de menus. Le code HTML pourra être
     </menu>
   </menu>
   <ol>
-    <li>
-      Dans cet exemple, vous pouvez partager un lien vers
-      cette page sur Facebook et/ou Twitter via le groupe Partager
+    <li>
+      Dans cet exemple, vous pouvez partager un lien vers
+      cette page sur Facebook et/ou Twitter via le groupe Partager
       du menu contextuel
-    </li>
+    </li>
     <li>Sur cette ligne : on peut partager la page sur Twitter ou Facebook grâce au menu Partager du menu contextuel.</li>
     <li><pre contextmenu="changeFont" id="fontSizing">Sur cette ligne : on peut changer la taille de la police en utilisant les options "Augmenter/Réduire la taille de la police" du menu contextuel</pre></li>
     <menu type="context" id="changeFont">

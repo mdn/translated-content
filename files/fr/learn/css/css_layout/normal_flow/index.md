@@ -82,8 +82,8 @@ Voici un exemple simple expliquant cela :
 
 ```css
 body {
-  width: 500px;
-  margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 p {

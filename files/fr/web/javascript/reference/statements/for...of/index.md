@@ -308,7 +308,7 @@ for (let o of gen){
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

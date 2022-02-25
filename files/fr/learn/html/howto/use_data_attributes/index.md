@@ -18,10 +18,10 @@ La syntaxe est simple. Tout attribut d'un élément dont le nom commence par `da
 
 ```html
 <article
-  id="voitureelectrique"
-  data-columns="3"
-  data-index-number="12314"
-  data-parent="voitures">
+  id="voitureelectrique"
+  data-columns="3"
+  data-index-number="12314"
+  data-parent="voitures">
 ...
 </article>
 ```
@@ -73,7 +73,7 @@ Comme les valeurs des données sont des chaînes, toutes les valeurs doivent êt
 
 Ne stockez pas de contenu qui devrait être visible dans les attributs data, car les technologies d'assistance pourraient ne pas y avoir accès. De plus, les moteurs de recherche pourraient ne pas indexer les valeurs des attributs de données.
 
-Les principaux problèmes à prendre en considération sont le support d'Internet Explorer et la performance. Internet Explorer 11+ prend en charge le standard, mais toutes les versions antérieures  [ne prennent pas en charge le `dataset`](https://caniuse.com/#feat=dataset). Pour prendre en charge IE 10 et versions inférieures vous avez besoin d'accéder aux attributs data avec {{domxref("Element.getAttribute", "getAttribute()")}}. De plus, la [la performance de lecture des attributs de données](https://jsperf.com/data-dataset), au stockage dans des structures de données JavaScript est assez faible. Utiliser un `dataset` est même plus lent que lire les données avec `getAttribute()`.
+Les principaux problèmes à prendre en considération sont le support d'Internet Explorer et la performance. Internet Explorer 11+ prend en charge le standard, mais toutes les versions antérieures  [ne prennent pas en charge le `dataset`](https://caniuse.com/#feat=dataset). Pour prendre en charge IE 10 et versions inférieures vous avez besoin d'accéder aux attributs data avec {{domxref("Element.getAttribute", "getAttribute()")}}. De plus, la [la performance de lecture des attributs de données](https://jsperf.com/data-dataset), au stockage dans des structures de données JavaScript est assez faible. Utiliser un `dataset` est même plus lent que lire les données avec `getAttribute()`.
 
 Mais ceci dit, pour les métadonnées personnalisées associées aux éléments, c'est une excellente solution.
 

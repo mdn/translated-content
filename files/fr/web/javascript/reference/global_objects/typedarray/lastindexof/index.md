@@ -54,7 +54,7 @@ uint8.lastIndexOf(2, -1); // 3
 | Spécification                                                                                                                            | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.lastindexof', 'TypedArray.prototype.lastIndexOf')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.lastindexof', 'TypedArray.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.lastindexof', 'TypedArray.prototype.lastIndexOf')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -20,21 +20,21 @@ original_slug: Outils/Editeur_Web_Audio
  <li>Des nœuds représentant la <a href="/fr/docs/Web/API/Web_Audio_API#Defining_audio_destinations">destination du flux audio</a>, par exemple les hauts parleurs.</li>
 </ul>
 
-<p>Chaque nœud à zéro ou plusieurs propriétés {{domxref ("AudioParam")}}. Ces propriétés configurent sa fonction. Par exemple le {{domxref ("GainNode")}} a une seule propriété <code>gain</code> alors que le nœud {{domxref ("OscillatorNode")}} a les propriétés <code>frequency</code>  et <code>detune</code>.</p>
+<p>Chaque nœud à zéro ou plusieurs propriétés {{domxref ("AudioParam")}}. Ces propriétés configurent sa fonction. Par exemple le {{domxref ("GainNode")}} a une seule propriété <code>gain</code> alors que le nœud {{domxref ("OscillatorNode")}} a les propriétés <code>frequency</code>  et <code>detune</code>.</p>
 
 <p>Le développeur connecte les nœuds dans un graphique et le graphique une fois complet définit le comportement du flux audio.</p>
 
-<p>L'Éditeur Web Audio examine un contexte audio construit dans la page et fournit une visualisation de son graphique. Cela donne une vue globale de son fonctionnement et permet de vérifier que tous les nœuds sont connectés comme attendu. Il est également possible d’examiner et d'éditer la propriété <code>AudioParam</code> pour chaque nœud du graphique. Quelques propriétés non-<code>AudioParam</code>  comme une propriété <code>OscillatorNode</code>'s <code>type</code>, sont également affichées et il est aussi possible de les éditer.</p>
+<p>L'Éditeur Web Audio examine un contexte audio construit dans la page et fournit une visualisation de son graphique. Cela donne une vue globale de son fonctionnement et permet de vérifier que tous les nœuds sont connectés comme attendu. Il est également possible d’examiner et d'éditer la propriété <code>AudioParam</code> pour chaque nœud du graphique. Quelques propriétés non-<code>AudioParam</code>  comme une propriété <code>OscillatorNode</code>'s <code>type</code>, sont également affichées et il est aussi possible de les éditer.</p>
 
 <p>Cet outil étant encore expérimental, si vous trouvez des bugs, nous adorerions que vous les <a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox&amp;component=Developer%20Tools%3A%20Web%20Audio%20Editor">reportiez dans <span class="external external-icon">Bugzilla</span></a>. Si vous avez des avis ou des suggestions pour de nouvelles fonctionnalités, <a href="https://lists.mozilla.org/listinfo/dev-developer-tools">dev-developer-tools</a> ou <a href="http://twitter.com/firefoxdevtools">Twitter</a> sont de bon endroit pour les partager.</p>
 
 <h2 id="Ouvrir_l'Éditeur_Web_Audio">Ouvrir l'Éditeur Web Audio</h2>
 
-<p>L'Éditeur Web Audio n'est pas activé par défaut dans Firefox 32. Pour l'activer, il faut ouvrir les<a href="/fr/docs/Tools/Tools_Toolbox#Settings_2"> options des outils de développement</a> et cocher l'option "Web Audio".  Un nouvel onglet nommé "Web Audio" s'ajoute alors à vos outils de développement. Il faut ensuite cliquer sur l’onglet et charger une page avec un contexte audio. Voici deux bons exemples :</p>
+<p>L'Éditeur Web Audio n'est pas activé par défaut dans Firefox 32. Pour l'activer, il faut ouvrir les<a href="/fr/docs/Tools/Tools_Toolbox#Settings_2"> options des outils de développement</a> et cocher l'option "Web Audio".  Un nouvel onglet nommé "Web Audio" s'ajoute alors à vos outils de développement. Il faut ensuite cliquer sur l’onglet et charger une page avec un contexte audio. Voici deux bons exemples :</p>
 
 <ul>
  <li>Le <a href="https://github.com/mdn/voice-change-o-matic">Voice-change-O-Matic</a>, qui peut appliquer divers effets à l’entrée du microphone et fournit aussi une visualisation du résultat.</li>
- <li>La démo <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>, qui change le ton et le volume d'un signal sinusoïdal  lorsque l'on bouge la souris.</li>
+ <li>La démo <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>, qui change le ton et le volume d'un signal sinusoïdal  lorsque l'on bouge la souris.</li>
 </ul>
 
 <h2 id="Visualiser_le_graphique">Visualiser le graphique</h2>

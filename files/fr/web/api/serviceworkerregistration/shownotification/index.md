@@ -32,7 +32,7 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
 
     - `actions`: Un tableau de {{domxref ("NotificationAction")}} représentant les actions disponibles pour l'utilisateur lorsque la notification est présentée. Ce sont des options parmi lesquelles l'utilisateur peut choisir pour agir sur l'action dans le contexte de la notification elle-même. Le nom de l'action est envoyé au gestionnaire de notifications du service worker pour lui faire savoir que l'action a été sélectionnée par l'utilisateur. Les membres du tableau doivent être un objet. Il peut contenir les valeurs suivantes:
 
-      - action: Une {{domxref("DOMString")}}  représentant une action utilisateur à afficher sur la notification.
+      - action: Une {{domxref("DOMString")}}  représentant une action utilisateur à afficher sur la notification.
       - title: Une {{domxref("DOMString")}} contenant le texte d'action à montrer à l'utilisateur.
       - icon: Une {{domxref("USVString")}} contenant l'URL d'une icône à afficher avec l'action.
 

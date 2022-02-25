@@ -38,7 +38,7 @@ Allez sur n'importe quel site à la mode avec un formulaire d'inscription et vou
 - «&nbsp;Veuillez entrer une adresse e-mail valide&nbsp;» (ce que vous avez saisi ne ressemble pas à une adresse e-mail valide).
 - «&nbsp;Votre mot de passe doit comporter entre 8 et 30 caractères et contenir une majuscule, un symbole et un chiffre&nbsp;» (sérieusement ?).
 
-C'est ce qu'on appelle la validation de formulaire —  lorsque vous saisissez des données, l'application Web vérifie si elles sont correctes. Si elles sont correctes, l'application permet que les données soient soumises au serveur et (généralement) sauvegardées dans une base de données ; si ce n'est pas le cas, elle émet des messages d'erreur pour expliquer ce que vous avez fait de mal (pour autant que vous l'ayez fait). La validation des formulaires peut être mise en œuvre de différentes manières.
+C'est ce qu'on appelle la validation de formulaire —  lorsque vous saisissez des données, l'application Web vérifie si elles sont correctes. Si elles sont correctes, l'application permet que les données soient soumises au serveur et (généralement) sauvegardées dans une base de données ; si ce n'est pas le cas, elle émet des messages d'erreur pour expliquer ce que vous avez fait de mal (pour autant que vous l'ayez fait). La validation des formulaires peut être mise en œuvre de différentes manières.
 
 La vérité est qu'aucun d'entre nous n'_aime_ remplir des formulaires — les formulaires ennuient les utilisateurs, tout le prouve&nbsp;: cela les incite à partir et à aller voir ailleurs s'ils sont mal faits. Bref, les formulaires, c'est nullissime.
 
@@ -152,7 +152,7 @@ Vous trouverez ci-dessous quelques exemples pour vous donner une idée de base d
 - `[a-z]` — correspond à tout caractère de la plage a–z, en minuscules seulement (utilisez `[A-Za-z]` pour minuscules et majuscules et `[A-Z]` pour les majuscules uniquement).
 - `a.c` — correspond à a, suivi par n'importe quel caractère,suivi par c.
 - `a{5}` — correspond à a, 5 fois.
-- `a{5,7}` — correspond à  a, 5 à 7 fois, mais ni plus, ni moins.
+- `a{5,7}` — correspond à  a, 5 à 7 fois, mais ni plus, ni moins.
 
 Vous pouvez utiliser des nombres ou d'autres caractères dans ces expressions, comme&nbsp;:
 
@@ -374,11 +374,11 @@ En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/H
 var email = document.getElementById("mail");
 
 email.addEventListener("keyup", function (event) {
-  if(email.validity.typeMismatch) {
-    email.setCustomValidity("J'attend un e-mail, mon cher&nbsp;!");
-  } else {
-    email.setCustomValidity("");
-  }
+  if(email.validity.typeMismatch) {
+    email.setCustomValidity("J'attend un e-mail, mon cher&nbsp;!");
+  } else {
+    email.setCustomValidity("");
+  }
 });
 ```
 
@@ -400,7 +400,7 @@ Propriétés de l'API de validation des contraintes
 | `validity`                 | Un objet {{domxref("ValidityState")}} qui décrit l'état de validité de l'élément.                                                                                                                                                                                                    |
 | `validity.customError`     | Renvoie `true` si l'élément à une erreur personnalisée, `false` a contrario.                                                                                                                                                                                                                 |
 | `validity.patternMismatch` | Renvoie `true` si la valeur de l'élément ne correspond pas au motif fourni, `false` dans le cas contraire. Si la méthode renvoie `true`, l'élément fera partie de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                     |
-| `validity.rangeOverflow`   | Renvoie `true` si la valeur de l'élément est supérieure au maximum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des  pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                   |
+| `validity.rangeOverflow`   | Renvoie `true` si la valeur de l'élément est supérieure au maximum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des  pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                   |
 | `validity.rangeUnderflow`  | Renvoie `true` si la valeur de l'élément est plus petite que le minimum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                               |
 | `validity.stepMismatch`    | Renvoie `true` si la valeur de l'élément ne correspond pas aux règles définies par l'attribut `step`,`false` a contrario. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                    |
 | `validity.tooLong`         | Renvoie `true` si la taille de l'élément est supérieure à la longueur maximum définie, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                        |

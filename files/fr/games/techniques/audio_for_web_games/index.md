@@ -316,7 +316,7 @@ Vous pouvez trouver que l'introduction d'une nouvelle piste sonne plus naturelle
 
 Pour ce faire, avant de jouer la piste que vous voulez synchroniser, vous devez calculer combien de temps cela va durer jusqu'au début de la prochaine unité musicale.
 
-Voici un peu de code qui donne un tempo (le temps en secondes de votre battement / mesure), calcule combien de temps attendre pour jouer la partie suivante  — vous alimentez la valeur initiale de la fonction `start ()` avec le premier paramètre qui prend le temps absolu de début de la lecture. Notez que le deuxième paramètre (où commencer à jouer à partir de la nouvelle piste) est relatif :
+Voici un peu de code qui donne un tempo (le temps en secondes de votre battement / mesure), calcule combien de temps attendre pour jouer la partie suivante  — vous alimentez la valeur initiale de la fonction `start ()` avec le premier paramètre qui prend le temps absolu de début de la lecture. Notez que le deuxième paramètre (où commencer à jouer à partir de la nouvelle piste) est relatif :
 
 ```js
 if (offset == 0) {

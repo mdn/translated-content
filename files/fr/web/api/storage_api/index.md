@@ -67,7 +67,7 @@ Pour déterminer les valeurs de quota et d’usage estimées pour une origine do
 
 ```js
 navigator.storage.estimate().then(estimate => {
-  // estimate.quota est le quota estimé
+  // estimate.quota est le quota estimé
   // estimate.usage est le nombre estimé d’octets utilisés
 });
 ```

@@ -105,7 +105,7 @@ La valeur d'un membre dans un objet peut être n'importe quoi — dans notre obj
 
 Dans cet exemple, l'objet est créé grâce à un **objet littéral** : on écrit littéralement le contenu de l'objet pour le créer. On distinguera cette structure des objets instanciés depuis des classes, que nous verrons plus tard.
 
-C'est une pratique très courante de créer un objet en utilisant un objet littéral :  par exemple, quand on envoie une requête au serveur pour transférer des données vers une base de données.
+C'est une pratique très courante de créer un objet en utilisant un objet littéral :  par exemple, quand on envoie une requête au serveur pour transférer des données vers une base de données.
 
 Envoyer un seul objet est bien plus efficace que d'envoyer ses membres de manière individuelle, et c'est bien plus simple de travailler avec un tableau quand on veut identifier des membres par leur nom.
 
@@ -177,7 +177,7 @@ personne['age']
 personne['nom']['prenom']
 ```
 
-Cela ressemble beaucoup à la façon d'accéder aux éléments d'un tableau et c'est bien la même chose  — au lieu d'utiliser un indice numérique pour sélectionner un élément, on utilise le nom associé à chaque valeur d'un membre. Ce n'est pas pour rien que les objets sont parfois appelés tableaux associatifs : ils associent des chaînes de caractères (les noms des membres) à des valeurs, de la même façon que les tableaux associent des nombres à des valeurs.
+Cela ressemble beaucoup à la façon d'accéder aux éléments d'un tableau et c'est bien la même chose  — au lieu d'utiliser un indice numérique pour sélectionner un élément, on utilise le nom associé à chaque valeur d'un membre. Ce n'est pas pour rien que les objets sont parfois appelés tableaux associatifs : ils associent des chaînes de caractères (les noms des membres) à des valeurs, de la même façon que les tableaux associent des nombres à des valeurs.
 
 ## Définir les membres d'un objet
 
@@ -248,7 +248,7 @@ salutation: function() {
 }
 ```
 
-Vous vous demandez probablement ce que signifie « `this` ». Le mot-clé `this` se réfère à l'objet courant dans lequel le code est écrit —  dans notre cas, `this` est l'équivalent de `personne`.  Alors, pourquoi ne pas écrire `personne` à la place ? Comme vous le verrez dans l'article [la programmation JavaScript orientée objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS), `this` est très utile — il permet de s'assurer que les bonnes valeurs sont utilisées quand le contexte d'un membre change (on peut par exemple avoir deux personnes, sous la forme de deux objets, avec des noms différents).
+Vous vous demandez probablement ce que signifie « `this` ». Le mot-clé `this` se réfère à l'objet courant dans lequel le code est écrit —  dans notre cas, `this` est l'équivalent de `personne`.  Alors, pourquoi ne pas écrire `personne` à la place ? Comme vous le verrez dans l'article [la programmation JavaScript orientée objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS), `this` est très utile — il permet de s'assurer que les bonnes valeurs sont utilisées quand le contexte d'un membre change (on peut par exemple avoir deux personnes, sous la forme de deux objets, avec des noms différents).
 
 Essayons d'illustrer nos propos par une paire d'objet `personne` simplifiée :
 
@@ -268,7 +268,7 @@ var personne2 = {
 }
 ```
 
-Dans ce cas,  `personne1.salutation()` affichera "Bonjour ! Je suis Christophe.", tandis que `personne2.salutation()` affichera "Bonjour ! Je suis Bruno." alors que le code est le même dans les deux cas. Comme expliqué plus tôt, `this` est égal à l'objet dans lequel se situe le code. Ce n'est pas très utile quand on écrit des objets littéraux à la main, mais ça prend tout son sens quand on génère des objets dynamiques (avec des constructeurs par exemple).
+Dans ce cas,  `personne1.salutation()` affichera "Bonjour ! Je suis Christophe.", tandis que `personne2.salutation()` affichera "Bonjour ! Je suis Bruno." alors que le code est le même dans les deux cas. Comme expliqué plus tôt, `this` est égal à l'objet dans lequel se situe le code. Ce n'est pas très utile quand on écrit des objets littéraux à la main, mais ça prend tout son sens quand on génère des objets dynamiques (avec des constructeurs par exemple).
 
 ## Vous utilisiez des objets depuis le début !
 
@@ -291,7 +291,7 @@ var maVideo = document.querySelector('video');
 
 Vous utilisez une méthode disponible dans l'instance de la classe {{domxref("Document")}}. Pour chaque page web chargée, une instance de `Document` est créée, appelée `document` et qui représente la structure entière de la page, son contenu et d'autres caractéristiques telles que son URL. Encore une fois, cela signifie qu'elle possède plusieurs méthodes/propriétés communes.
 
-C'est également vrai pour beaucoup d'autres objets/API natifs que vous avez utilisé  — {{jsxref("Array")}}, {{jsxref("Math")}}, etc.
+C'est également vrai pour beaucoup d'autres objets/API natifs que vous avez utilisé  — {{jsxref("Array")}}, {{jsxref("Math")}}, etc.
 
 On notera que les objets/API natifs ne créent pas toujours automatiquement des instances d'objet. Par exemple, [l'API Notifications](/fr/docs/Web/API/Notifications_API) — qui permet aux navigateurs modernes de déclencher leurs propres notifications — vous demande d'instancier vous-même une nouvelle instance d'objet en utilisant le constructeur pour chaque notification que vous souhaitez lancer. Essayez d'entrer le code ci-dessous dans la console JavaScript :
 
@@ -305,7 +305,7 @@ Nous verrons les constructeurs dans un prochain article.
 
 ## Résumé
 
-Félicitations, vous avez terminé notre premier article sur les objets JavaScript  — vous devriez maintenant mieux comprendre comment on travaille avec des objets en JavaScript. Vous avez pu créer vos propres objets basiques. Vous devriez aussi voir que les objets sont très pratiques pour stocker des données et des fonctionnalités. Si on ne passe pas par un objet et qu'on a une variable différente pour chaque propriété et méthode de notre objet `personne`, cela sera inefficace et frustrant et vous prendrez le risque de créer des conflits avec d'autres variables et fonctions du même nom.
+Félicitations, vous avez terminé notre premier article sur les objets JavaScript  — vous devriez maintenant mieux comprendre comment on travaille avec des objets en JavaScript. Vous avez pu créer vos propres objets basiques. Vous devriez aussi voir que les objets sont très pratiques pour stocker des données et des fonctionnalités. Si on ne passe pas par un objet et qu'on a une variable différente pour chaque propriété et méthode de notre objet `personne`, cela sera inefficace et frustrant et vous prendrez le risque de créer des conflits avec d'autres variables et fonctions du même nom.
 
 Les objets permettent de conserver les informations de façon sûre, enfermées dans leur propre « paquet », hors de danger.
 

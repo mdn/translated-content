@@ -16,7 +16,7 @@ Pour comprendre comment améliorer les performances et les performances perçues
 
 Les sites rapides offrent une meilleure expérience utilisateur. Les utilisateurs veulent et s'attendent à des expériences Web avec un contenu rapide à charger et à interagir avec fluidité.
 
-La compréhension des problèmes liés 1) à la latence et 2) les problèmes liés au fait que, dans la plupart des cas, les navigateurs fonctionné  à un seul thread. Cela sont deux problèmes majeurs dans les performances Web.
+La compréhension des problèmes liés 1) à la latence et 2) les problèmes liés au fait que, dans la plupart des cas, les navigateurs fonctionné  à un seul thread. Cela sont deux problèmes majeurs dans les performances Web.
 
 La latence est notre principale menace à surmonter pour assurer une charge rapide. Pour être rapides à charger, les objectifs des développeurs incluent l’envoi des informations demandées aussi rapidement que possible, ou du moins, cela semble super rapide. La latence du réseau est le temps nécessaire pour transmettre des octets par liaison radio aux ordinateurs. La performance Web est ce que nous devons faire pour que le chargement de la page se fasse le plus rapidement possible.
 

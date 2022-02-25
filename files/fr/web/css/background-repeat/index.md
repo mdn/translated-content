@@ -198,14 +198,14 @@ div {
         <div class="four"></div>
     </li>
     <li>space
-        <div class="five"></div>
-    </li>
+        <div class="five"></div>
+    </li>
     <li>round
-        <div class="six"></div>
-    </li>
-    <li>repeat-x, repeat-y (plusieurs images)
-        <div class="seven"></div>
-    </li>
+        <div class="six"></div>
+    </li>
+    <li>repeat-x, repeat-y (plusieurs images)
+        <div class="seven"></div>
+    </li>
 </ol>
 ```
 

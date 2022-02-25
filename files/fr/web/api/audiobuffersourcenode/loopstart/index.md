@@ -27,46 +27,46 @@ Lorsque la lecture de la source audio est terminée, elle boucle. Il est possibl
 
 ```js
 function getData() {
-  source = contexteAudio.createBufferSource();
-  requete = new XMLHttpRequest();
+  source = contexteAudio.createBufferSource();
+  requete = new XMLHttpRequest();
 
-  requete.open('GET', 'viper.ogg', true);
+  requete.open('GET', 'viper.ogg', true);
 
-  requete.responseType = 'arraybuffer';
+  requete.responseType = 'arraybuffer';
 
 
-  requete.onload = function() {
-    var donneesAudio = requete.response;
+  requete.onload = function() {
+    var donneesAudio = requete.response;
 
-    contexteAudio.decodeAudioData(donneesAudio, function(buffer) {
-        maMemoireTampon = buffer;
-        dureeMorceau = buffer.duration;
-        source.buffer = maMemoireTampon;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(contexteAudio.destination);
-        source.loop = true;
+    contexteAudio.decodeAudioData(donneesAudio, function(buffer) {
+        maMemoireTampon = buffer;
+        dureeMorceau = buffer.duration;
+        source.buffer = maMemoireTampon;
+        source.playbackRate.value = playbackControl.value;
+        source.connect(contexteAudio.destination);
+        source.loop = true;
 
-        loopstartControl.setAttribute('max', Math.floor(dureeMorceau));
-        loopendControl.setAttribute('max', Math.floor(dureeMorceau));
-      },
+        loopstartControl.setAttribute('max', Math.floor(dureeMorceau));
+        loopendControl.setAttribute('max', Math.floor(dureeMorceau));
+      },
 
-      function(e){"Erreur lors du décodage des données audio " + e.err});
+      function(e){"Erreur lors du décodage des données audio " + e.err});
 
-  }
+  }
 
-  requete.send();
+  requete.send();
 }
 
   ...
 
 loopstartControl.oninput = function() {
-  source.loopStart = loopstartControl.value;
-  loopstartValue.innerHTML = loopstartControl.value;
+  source.loopStart = loopstartControl.value;
+  loopstartValue.innerHTML = loopstartControl.value;
 }
 
 loopendControl.oninput = function() {
-  source.loopEnd = loopendControl.value;
-  loopendValue.innerHTML = loopendControl.value;
+  source.loopEnd = loopendControl.value;
+  loopendValue.innerHTML = loopendControl.value;
 }
 ```
 
@@ -74,7 +74,7 @@ loopendControl.oninput = function() {
 
 | Spécification                                                                                                    | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loopStart', 'loopStart')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-loopStart', 'loopStart')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

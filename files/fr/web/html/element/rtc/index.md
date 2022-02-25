@@ -96,9 +96,9 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('HTML5.3', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.3')}} |                      |
-| {{SpecName('HTML5.2', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.2')}} |                      |
-| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.1')}} |                      |
+| {{SpecName('HTML5.3', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.3')}} |                      |
+| {{SpecName('HTML5.2', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.2')}} |                      |
+| {{SpecName('HTML5.1', 'textlevel-semantics.html#the-rtc-element', '&lt;rtc&gt;')}}     | {{Spec2('HTML5.1')}} |                      |
 | {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-rtc-element', '&lt;rtc&gt;')}} | {{Spec2('HTML5 W3C')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs

@@ -39,7 +39,7 @@ _Aucun_
 
 | Spécification                                                                                                                        | Statut                               | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#OfflineAudioCompletionEvent-section', 'OfflineAudioCompletionEvent')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#OfflineAudioCompletionEvent-section', 'OfflineAudioCompletionEvent')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Voir aussi
 

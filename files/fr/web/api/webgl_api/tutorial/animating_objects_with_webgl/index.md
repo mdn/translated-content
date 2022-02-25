@@ -46,7 +46,7 @@ Pour réaliser effectivement l'animation, nous avons besoin d'ajouter du code
 
 Ce code utilise `requestAnimationFrame` pour demander au navigateur d'appeler la fonction "`render`" à chaque image. `requestAnimationFrame` nous transmet le temps en millisecondes depuis le chargement de la page. Nous le convertissons en secondes, puis nous lui soustrayons le dernier instant pour calculer `deltaTime`, qui est le nombre de secondes depuis le rendu de la dernière image. À la fin de drawscene, nous ajoutons le code pour mettre à jour `squareRotation`.
 
-      squareRotation += deltaTime;
+      squareRotation += deltaTime;
 
 Ce code utilise le laps de temps qui s'est écoulé depuis la dernière fois que nous avons mis à jour la valeur `squareRotation` pour déterminer de combien faire tourner le carré.
 

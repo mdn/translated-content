@@ -257,7 +257,7 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
     </section>
     ```
 
-6.  Nous arrivons maintenant à la deuxième `<section>` de notre formulaire — l'information de paiement. Ici nous avons trois widgets distincts avec leur étiquette, chacun contenu dans un paragraphe `<p>`. Le premier est un menu déroulant ({{htmlelement("select")}}) pour le choix du type de la carte de crédit. Le deuxième  est un élément `<input>` de type nombre pour entrer le numéro de la carte de crédit. Le dernier est un élément `<input>` de type `date` pour entrer la date d'expiration de la carte de crédit (il sera accompagné d'un widget dateur pour les navigateurs prenant en charge cette fonctionnalité, et sera un simple champ textuel pour les navigateurs ne la prenant pas en charge). À nouveau, entrez ce qui suit après la section ci‑dessus&nbsp;:
+6.  Nous arrivons maintenant à la deuxième `<section>` de notre formulaire — l'information de paiement. Ici nous avons trois widgets distincts avec leur étiquette, chacun contenu dans un paragraphe `<p>`. Le premier est un menu déroulant ({{htmlelement("select")}}) pour le choix du type de la carte de crédit. Le deuxième  est un élément `<input>` de type nombre pour entrer le numéro de la carte de crédit. Le dernier est un élément `<input>` de type `date` pour entrer la date d'expiration de la carte de crédit (il sera accompagné d'un widget dateur pour les navigateurs prenant en charge cette fonctionnalité, et sera un simple champ textuel pour les navigateurs ne la prenant pas en charge). À nouveau, entrez ce qui suit après la section ci‑dessus&nbsp;:
 
     ```html
     <section>
@@ -302,7 +302,7 @@ Vous pouvez voir le formulaire terminé en action ci‑dessous (vous le trouvere
 
 ## Résumé
 
-Nous savons maintenant ce qu'il faut faire pour structurer de manière appropriée un formulaire HTML&nbsp;; l'article suivant approfondira la mise en œuvre  des divers types de widgets pour formulaire pour collecter les informations utilisateur.
+Nous savons maintenant ce qu'il faut faire pour structurer de manière appropriée un formulaire HTML&nbsp;; l'article suivant approfondira la mise en œuvre  des divers types de widgets pour formulaire pour collecter les informations utilisateur.
 
 ## Voir aussi
 

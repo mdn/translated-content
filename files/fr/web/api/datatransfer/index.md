@@ -255,7 +255,7 @@ L'état du curseur au cours d'un glisser. Cette propriété est surtout utilisé
 
 Le nombre d'éléments glissés.
 
-> **Note :** Cette propriété est  spécifique a Gecko.
+> **Note :** Cette propriété est  spécifique a Gecko.
 
 ### mozSourceNode
 

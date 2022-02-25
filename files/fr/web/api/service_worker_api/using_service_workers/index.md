@@ -29,7 +29,7 @@ Les service workers devraient finalement résoudre ces problèmes. La syntaxe du
 
 De nombreuses fonctionnalités des service workers sont désormais disponibles par défaut dans les plus récentes versions des navigateurs qui les supportent. Cependant, si vous constatez que le code de la démo ne fonctionne pas dans votre version actuelle, vous pourriez avoir besoin d'activer une configuration :
 
-- **Firefox Nightly** : rendez-vous sur `about:config` et configurer  `dom.serviceWorkers.enabled` à true; redémarrer le navigateur.
+- **Firefox Nightly** : rendez-vous sur `about:config` et configurer  `dom.serviceWorkers.enabled` à true; redémarrer le navigateur.
 - **Chrome Canary** : rendez-vous sur `chrome://flags` et activer `experimental-web-platform-features`; redémarrer le navigateur (à noter que certaines fonctionnalités sont désormais activées par défaut dans Chrome.)
 - **Opera** : rendez-vous sur `opera://flags` et activer `Support for ServiceWorker`; redémarrer le navigateur.
 
@@ -202,29 +202,29 @@ Commençons cette section par l'examen d'un exemple de code — c'est le [premie
 
 ```js
 this.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
-  );
+  event.waitUntil(
+    caches.open('v1').then(function(cache) {
+      return cache.addAll([
+        '/sw-test/',
+        '/sw-test/index.html',
+        '/sw-test/style.css',
+        '/sw-test/app.js',
+        '/sw-test/image-list.js',
+        '/sw-test/star-wars-logo.jpg',
+        '/sw-test/gallery/',
+        '/sw-test/gallery/bountyHunters.jpg',
+        '/sw-test/gallery/myLittleVader.jpg',
+        '/sw-test/gallery/snowTroopers.jpg'
+      ]);
+    })
+  );
 });
 ```
 
-1.  Un écouteur d'événement `install` est d'abord ajouté au service worker (d'où le  `this`), puis une méthode {{domxref("ExtendableEvent.waitUntil()") }} est chaînée à l'événement — cela garantit que le Service Worker ne s'installera pas tant que le code à l'intérieur de `waitUntil()` n'a pas été exécuté avec succès.
+1.  Un écouteur d'événement `install` est d'abord ajouté au service worker (d'où le  `this`), puis une méthode {{domxref("ExtendableEvent.waitUntil()") }} est chaînée à l'événement — cela garantit que le Service Worker ne s'installera pas tant que le code à l'intérieur de `waitUntil()` n'a pas été exécuté avec succès.
 2.  A l'intérieur de `waitUntil()` la méthode [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) est utilisée pour créer un nouveau cache appelé `v1`, ce qui constitue la version 1 du cache de ressources de notre site. Cette fonction retourne une promesse lorsque le cache est créé; une fois résolue, est appelée une fonction qui appelle elle-même `addAll()` sur le cache créé, avec pour paramètre un tableau d'URLs relatives à l'origine correspondant aux ressources à mettre en cache.
 3.  Si la promesse est rejetée, l'installation échoue, et le worker ne fait rien de plus. Le code peut être alors corrigé et l'opération retentée la prochaine fois que l'enregistrement survient.
-4.  Après une installation couronnée de succès, le service worker est activé. Cela ne fait pas une grande différence  la première fois que le service worker est installé/activé, mais cela fait plus sens lorsque le service worker est mis à jour (voir la section {{anch("Updating your service worker") }} plus bas.)
+4.  Après une installation couronnée de succès, le service worker est activé. Cela ne fait pas une grande différence  la première fois que le service worker est installé/activé, mais cela fait plus sens lorsque le service worker est mis à jour (voir la section {{anch("Updating your service worker") }} plus bas.)
 
 > **Note :** [localStorage](/fr/docs/Web/API/Web_Storage_API) fonctionne de la même façon que le cache du service worker, mais de manière synchrone, et il n'est donc pas autorisé dans les service workers.
 
@@ -332,7 +332,7 @@ this.addEventListener('fetch', function(event) {
 
 Ici on retourne la requête réseau par défaut au moyen de `return fetch(event.request)`, qui retourne lui-même une promesse. Lorsque cette promesse est résolue, on exécute une fonction qui sollicite le cache en utilisant `caches.open('v1')`; une promesse est de nouveau retournée. Lorsque cette promesse est résolue, `cache.put()` est utilisée pour ajouter la ressource au cache. La ressource est récupérée à partir de `event.request`, et la réponse est alors clonée avec `response.clone()` et ajoutée au cache. Le clone est placé dans le cache, et la réponse originale est retournée au navigateur et délivrée à la page qui la requiert.
 
-Pourquoi un clone ? Il se trouve que les flux de requête et de réponse peuvent seulement être lus une fois.  Afin de retourner la réponse au navigateur et de la mettre en cache, elle doit être clonée. Aussi, l'original est retourné au navigateur tandis que le clone est envoyé dans le cache. Ils sont chacun lus une seule fois.
+Pourquoi un clone ? Il se trouve que les flux de requête et de réponse peuvent seulement être lus une fois.  Afin de retourner la réponse au navigateur et de la mettre en cache, elle doit être clonée. Aussi, l'original est retourné au navigateur tandis que le clone est envoyé dans le cache. Ils sont chacun lus une seule fois.
 
 Le dernier problème qui demeure alors est l'échec de la requête au cas où elle n'a aucune correspondance dans le cache et que le réseau n'est pas disponible. Fournir un document de rechange par défaut permet quoiqu'il arrive, à l'utilisateur de récupérer quelque chose :
 
@@ -347,8 +347,8 @@ this.addEventListener('fetch', function(event) {
         });
       });
     }).catch(function() {
-      return caches.match('/sw-test/gallery/myLittleVader.jpg');
-    })
+      return caches.match('/sw-test/gallery/myLittleVader.jpg');
+    })
   );
 });
 ```
@@ -361,18 +361,18 @@ Ce code utilise un chaînage de promesses plus standard et retourne la réponse 
 
 ```js
 this.addEventListener('fetch', function(event) {
-  var response;
-  event.respondWith(caches.match(event.request).catch(function() {
-    return fetch(event.request);
-  }).then(function(r) {
-    response = r;
-    caches.open('v1').then(function(cache) {
-      cache.put(event.request, response);
-    });
-    return response.clone();
-  }).catch(function() {
-    return caches.match('/sw-test/gallery/myLittleVader.jpg');
-  }));
+  var response;
+  event.respondWith(caches.match(event.request).catch(function() {
+    return fetch(event.request);
+  }).then(function(r) {
+    response = r;
+    caches.open('v1').then(function(cache) {
+      cache.put(event.request, response);
+    });
+    return response.clone();
+  }).catch(function() {
+    return caches.match('/sw-test/gallery/myLittleVader.jpg');
+  }));
 });
 ```
 

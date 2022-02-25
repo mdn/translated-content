@@ -24,7 +24,7 @@ La méthode **`Node.cloneNode()`** renvoie une copie du nœud sur lequel elle a 
 - deep _{{optional_inline}} (profondeur)_
   - : `true` (_vrai_) si les enfants du noeud doivent aussi être clonés ou `false` (_faux_) si seul le noeud spécifié doit l'être.
 
-> **Note :** Dans la spécification DOM4 (telle qu'implémentée dans Gecko 13.0 {{geckoRelease(13)}}), `deep` est un argument facultatif. S'il est omis, la méthode agit comme si la valeur de  `deep` était **`true`** par défaut, elle utilise le clonage profond comme comportement par défaut. Pour créer un clone superficiel, `deep` doit être défini sur `false`.
+> **Note :** Dans la spécification DOM4 (telle qu'implémentée dans Gecko 13.0 {{geckoRelease(13)}}), `deep` est un argument facultatif. S'il est omis, la méthode agit comme si la valeur de  `deep` était **`true`** par défaut, elle utilise le clonage profond comme comportement par défaut. Pour créer un clone superficiel, `deep` doit être défini sur `false`.
 >
 > Le comportement a été modifié dans la dernière spécification et, s'il est omis, la méthode doit agir comme si la valeur de `deep` était **`false`**. Bien que ce soit toujours facultatif, vous devriez toujours fournir l'argument `deep` pour la compatibilité amont et aval. Avec Gecko 28.0 {{geckoRelease(28)}}), la console a averti les développeurs de ne pas omettre l'argument. À partir de Gecko 29.0 {{geckoRelease(29)}}), un clone superficiel est défini par défaut au lieu d'un clone profond.
 
@@ -48,14 +48,14 @@ Si `deep` est évalué à `true`, le sous-arbre entier est copié également (y 
 
 Si le noeud d'origine a un identifiant et que le clone doit être placé dans le même document, l'identifiant du clone peut être modifié pour être unique. Les attributs du nom peuvent devoir être modifiés également, selon que les noms en double sont attendus.
 
-Pour cloner un noeud à ajouter dans un document différent, utilisez  {{domxref("Document.importNode()")}} à la place.
+Pour cloner un noeud à ajouter dans un document différent, utilisez  {{domxref("Document.importNode()")}} à la place.
 
 ### Spécification
 
 | Spécification                                                                                | Statut                           | Commentaire         |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#dom-node-clonenode", "Node.cloneNode()")}} | {{Spec2("DOM WHATWG")}} |                     |
-| {{SpecName("DOM3 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM3 Core")}}     |                     |
+| {{SpecName("DOM WHATWG", "#dom-node-clonenode", "Node.cloneNode()")}} | {{Spec2("DOM WHATWG")}} |                     |
+| {{SpecName("DOM3 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM3 Core")}}     |                     |
 | {{SpecName("DOM2 Core", "core.html#ID-3A0ED0A4", "Node.cloneNode()")}} | {{Spec2("DOM2 Core")}}     | Définition initiale |
 
 ## Compatibilité des navigateurs

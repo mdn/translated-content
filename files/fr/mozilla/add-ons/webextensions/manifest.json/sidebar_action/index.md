@@ -216,14 +216,14 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
 
 ```json
 "sidebar_action": {
-  "default_icon": "sidebar.svg",
-  "default_title": "Ma barre latérale !",
-  "default_panel": "sidebar.html",
+  "default_icon": "sidebar.svg",
+  "default_title": "Ma barre latérale !",
+  "default_panel": "sidebar.html",
   "browser_style": true
 }
 ```
 
-Pour un exemple simple d'une extension qui utilise une barre latérale, regarder  [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+Pour un exemple simple d'une extension qui utilise une barre latérale, regarder  [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
 
 ## Compatibilité du navigateur
 

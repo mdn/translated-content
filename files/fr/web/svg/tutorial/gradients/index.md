@@ -159,39 +159,39 @@ Cet attribut contrôle ce qu'il arrive quand le dégradé arrive à sa fin, mais
 
 ```html
 <svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-      <!-- pad -->
-      <radialGradient id="GradientPad"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="pad">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
+  <defs>
+      <!-- pad -->
+      <radialGradient id="GradientPad"
+            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+            spreadMethod="pad">
+        <stop offset="0%" stop-color="red"/>
+        <stop offset="100%" stop-color="blue"/>
+      </radialGradient>
 
-      <!-- repeat -->
-      <radialGradient id="GradientRepeat"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="repeat">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
+      <!-- repeat -->
+      <radialGradient id="GradientRepeat"
+            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+            spreadMethod="repeat">
+        <stop offset="0%" stop-color="red"/>
+        <stop offset="100%" stop-color="blue"/>
+      </radialGradient>
 
-      <!-- reflect -->
-      <radialGradient id="GradientReflect"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="reflect">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
-  </defs>
+      <!-- reflect -->
+      <radialGradient id="GradientReflect"
+            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
+            spreadMethod="reflect">
+        <stop offset="0%" stop-color="red"/>
+        <stop offset="100%" stop-color="blue"/>
+      </radialGradient>
+  </defs>
 
-  <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#GradientPad)"/>
-  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientRepeat)"/>
-  <rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientReflect)"/>
+  <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#GradientPad)"/>
+  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientRepeat)"/>
+  <rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientReflect)"/>
 
-  <text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt">Pad</text>
-  <text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt">Repeat</text>
-  <text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt">Reflect</text>
+  <text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt">Pad</text>
+  <text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt">Repeat</text>
+  <text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt">Reflect</text>
 
 </svg>
 ```

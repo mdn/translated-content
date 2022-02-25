@@ -198,7 +198,7 @@ Pour le moment, toutes les classes d’administration sont vides (cf. pass), par
 
 ### Configurer les vues en liste
 
-La liste des auteurs (objet `Author`) est affichée dans l'application _LocalLibrary_ à l'aide du nom généré par la méthode  `__str__()`. Ceci fonctionne bien, judqu'à ce que vous aurez de nombreux auteurs et éventuellement des doublons parmi ces auteurs. Pour bien les différencier, ou simplement parce que vous souhaitez avoir directement plus d'information, vous allez utiliser la directive [list_display](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin) pour ajouter d'autres champs de l'objet `Author`.
+La liste des auteurs (objet `Author`) est affichée dans l'application _LocalLibrary_ à l'aide du nom généré par la méthode  `__str__()`. Ceci fonctionne bien, judqu'à ce que vous aurez de nombreux auteurs et éventuellement des doublons parmi ces auteurs. Pour bien les différencier, ou simplement parce que vous souhaitez avoir directement plus d'information, vous allez utiliser la directive [list_display](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin) pour ajouter d'autres champs de l'objet `Author`.
 
 Modifiez votre classe `AuthorAdmin` comme décrit ci-dessous (vous pouvez copier et coller le code). Les noms de champs à afficher dans la liste sont déclarés dans un tuple dans l'ordre requis. Ils sont identiques à ceux spécifiés dans votre modèle d'objet `Author`.
 
@@ -211,7 +211,7 @@ Si vous accèdez à la page d'administration des auteurs, vous devriez obtenir u
 
 ![Admin Site - Improved Author List](admin_improved_author_list.png)
 
-Pour les livres, nous allons visulaiser les objets  `Book` en affichant les champs `author` and `genre`. Le champs `author` est de type `ForeignKey` décrivant une relation un à n. En conséquence, nous afficherons l'élément produit par la méthode `__str__()` de l'objet `Author` pour l'instance associée à votre livre. Le genre est une relation n à n, donc nous allons avoir à traiter son affichage de manière particulière. Modifiez la classe `BookAdmin` comme suit :
+Pour les livres, nous allons visulaiser les objets  `Book` en affichant les champs `author` and `genre`. Le champs `author` est de type `ForeignKey` décrivant une relation un à n. En conséquence, nous afficherons l'élément produit par la méthode `__str__()` de l'objet `Author` pour l'instance associée à votre livre. Le genre est une relation n à n, donc nous allons avoir à traiter son affichage de manière particulière. Modifiez la classe `BookAdmin` comme suit :
 
 ```python
 class BookAdmin(admin.ModelAdmin):
@@ -220,7 +220,7 @@ class BookAdmin(admin.ModelAdmin):
 
 Le champ genre représente une relation n à n (`ManyToManyField`) qui ne peut pas être prise en charge par la directive `list_display`. Le coût d'accès à la base de donnée peut être important et donc le cadriciel se protège de ce phénomène. A la place, nous devons définir une fonction(`display_genre`) qui permettra de traiter l'affichage des informations souhaitées pour le genre.
 
-> **Note :** C'est dans un but pédagogique que nous recherchons ici l'affichage du `genre` qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications  — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.
+> **Note :** C'est dans un but pédagogique que nous recherchons ici l'affichage du `genre` qui n'a peut-être pas nécessaire d'intérêt et peut représenter un coût d'accès. Nous montrons, ici, comment appler les fonctions dans vos modèles ce qui sera très utile pour la suite de vos applications  — par exemple pour ajouter un lien de suppression de vos enregistrements en liste.
 
 Ajoutez le code ci-dessous dans votre modèle d'objet `Book` (concrètement dans le fichier **locallibrary/catalog/models.py**). Cette fonction génère une chaîne de caractère contenant les trois premières valeurs de tous les genres (s'ils existent) et créer une courte destription (`short_description`) qui sera utilisé par le site d'administration avec cette méthode.
 
@@ -300,7 +300,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 Chaque section peut avoir un titre (ou aucun si vous indiquez la valeur `None`) et des champs regroupés à l'aide de tuples enregistrés dans un dictionnaire — le schéma de déclaration peut paraître compliqué à décrire mais assez aisé à comprendre à la lecture du code ci-dessus formaté pour être plus compréhensible.
 
-Le résultat de cette description devrait vous apparaître de manière analogue à celle présente  ci-dessous :
+Le résultat de cette description devrait vous apparaître de manière analogue à celle présente  ci-dessous :
 
 ![Admin Site - Improved BookInstance Detail with sections](admin_improved_bookinstance_detail_sections.png)
 
@@ -308,16 +308,16 @@ Le résultat de cette description devrait vous apparaître de manière analogue 
 
 Parfois, il peut être très utile d'ajouter à l'affichage des éléments associés en même temps. C'est le cas, par exemple, pour les copies d'ouvrage associés à un livre en bibliothèque. Il est utile pour le bibliothécaire de disposer à la fois des informations sur le livre et des copies présentes ou non en rayonnage..
 
-Pour cela, vous pouvez utiliser un d'objet pour un affichage horizontal ([TabularInline](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.TabularInline)) ou vertical ([StackedInline)](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.StackedInline) (qui n'est autre que l'affichage standard des données). Modifiez le code associé à votre modèle `BookInstance` dans le fichier **admin.py** pour disposer des informations _inline_ à l'affichage des informations sur votre objet `Book`. Gardez en mémoire que c'est l'objet  `BookAdmin` qui gère l'affichage les informations de l'objet `Book`; c'est donc `BookAdmin` il doit donc être modifié :
+Pour cela, vous pouvez utiliser un d'objet pour un affichage horizontal ([TabularInline](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.TabularInline)) ou vertical ([StackedInline)](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.StackedInline) (qui n'est autre que l'affichage standard des données). Modifiez le code associé à votre modèle `BookInstance` dans le fichier **admin.py** pour disposer des informations _inline_ à l'affichage des informations sur votre objet `Book`. Gardez en mémoire que c'est l'objet  `BookAdmin` qui gère l'affichage les informations de l'objet `Book`; c'est donc `BookAdmin` il doit donc être modifié :
 
 ```python
 class BooksInstanceInline(admin.TabularInline):
-    model = BookInstance
+    model = BookInstance
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'display_genre')
-    inlines = [BooksInstanceInline]
+    list_display = ('title', 'author', 'display_genre')
+    inlines = [BooksInstanceInline]
 ```
 
 Si vous allez consulter un livre, vous devriez pouvoir, au bas de la page, consulter la liste des copies enregistrées :
@@ -341,7 +341,7 @@ Beaucoup de sujets ont été abordés dans ce chapitre... Vous avez acquis les b
 
 ## A voir aussi
 
-- [Ecrire sa première application Dajngo, 2ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/#introducing-the-django-admin)  (Django docs)
+- [Ecrire sa première application Dajngo, 2ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial02/#introducing-the-django-admin)  (Django docs)
 - [Le site d'administration de Django](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}

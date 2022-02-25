@@ -41,7 +41,7 @@ L'objet **`Intl.NumberFormat`** est un constructeur permettant de créer des obj
     - `currency`
       - : La devise à utiliser pour le formatage. Les valeurs possibles sont les codes ISO 4217 pour les devises, tels que `"USD"` pour le dollar américain, `"EUR"` pour l'euro, ou `"CNY"` pour le yuan chinois. Voir la page listant [les codes actuels pour les devises et les fonds](http://www.currency-iso.org/en/home/tables/table-a1.html) (en anglais). Il n'y a pas de valeur par défaut. Si le style choisi avec l'option `style` est "currency", la propriété `currency` doit être définie.
     - `currencyDisplay`
-      - : La façon d'afficher la devise dans le format courant. Les valeurs possibles sont `"symbol"` qui permet d'utiliser un symbole localisé comme '€', `"code"` qui affichera le code ISO de la devise (voir ci-avant), `"name"`  affichera un nom localisé pour la devise comme `"dollar"`. La valeur par défaut est `"symbol"`.
+      - : La façon d'afficher la devise dans le format courant. Les valeurs possibles sont `"symbol"` qui permet d'utiliser un symbole localisé comme '€', `"code"` qui affichera le code ISO de la devise (voir ci-avant), `"name"`  affichera un nom localisé pour la devise comme `"dollar"`. La valeur par défaut est `"symbol"`.
     - `useGrouping`
       - : Cette option indique si on doit utiliser des séparateurs de groupes (comme les séparateurs de milliers ou autres comme lakhs et crores). Les valeurs possibles sont `true` et `false`. La valeur par défaut `true`.
 
@@ -52,7 +52,7 @@ L'objet **`Intl.NumberFormat`** est un constructeur permettant de créer des obj
     - `minimumFractionDigits`
       - : Le nombre minimal de chiffres à utiliser pour la partie fractionnaire. Les valeurs possibles sont comprises entre 0 et 20. Pour les formats `"decimal"` et `"percent"`, la valeur par défaut est 0. La valeur par défaut pour le formatage monétaire (`"currency"`) correspond au nombre de chiffres défini par [la liste de codes de devises ISO 4217](https://www.currency-iso.org/en/home/tables/table-a1.html), si cette valeur n'est pas définie dans cette liste, on aura 2 chiffres.
     - `maximumFractionDigits`
-      - : Le nombre maximal de chiffres à utiliser pour représenter la partie fractionnaire. Les valeurs possibles sont comprises entre 0 et 20. Pour le format `"decimal"`, la valeur par défaut est le maximum entre 3 et `minimumFractionDigits`. Pour le format monétaire (`"currency"`), la valeur par défaut est le maximum entre  `minimumFractionDigits` et le nombre de chiffres prévus par la liste [ISO 4217 des codes de devises](https://www.currency-iso.org/en/home/tables/table-a1.html) (ou 2 si cette information n'est pas disponible dans cette liste). Pour le format en pourcent, la valeur par défaut est le maximum entre `minimumFractionDigits` et 0.
+      - : Le nombre maximal de chiffres à utiliser pour représenter la partie fractionnaire. Les valeurs possibles sont comprises entre 0 et 20. Pour le format `"decimal"`, la valeur par défaut est le maximum entre 3 et `minimumFractionDigits`. Pour le format monétaire (`"currency"`), la valeur par défaut est le maximum entre  `minimumFractionDigits` et le nombre de chiffres prévus par la liste [ISO 4217 des codes de devises](https://www.currency-iso.org/en/home/tables/table-a1.html) (ou 2 si cette information n'est pas disponible dans cette liste). Pour le format en pourcent, la valeur par défaut est le maximum entre `minimumFractionDigits` et 0.
     - `minimumSignificantDigits`
       - : Le nombre minimal de chiffres significatifs à utiliser. Les valeurs possibles sont comprises entre 1 et 21. La valeur par défaut est 1.
     - `maximumSignificantDigits`
@@ -155,8 +155,8 @@ console.log(new Intl.NumberFormat("en-IN", {maximumSignificantDigits: 3}).format
 | Spécification                                                                                        | État                             | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
 | {{SpecName('ES Int 1.0', '#sec-11.1', 'Intl.NumberFormat')}}                     | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-11.1', 'Intl.NumberFormat')}}                     | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}} | {{Spec2('ES Int Draft')}} |                      |
+| {{SpecName('ES Int 2.0', '#sec-11.1', 'Intl.NumberFormat')}}                     | {{Spec2('ES Int 2.0')}} |                      |
+| {{SpecName('ES Int Draft', '#numberformat-objects', 'Intl.NumberFormat')}} | {{Spec2('ES Int Draft')}} |                      |
 
 ## Compatibilité des navigateurs
 

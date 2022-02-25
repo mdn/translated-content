@@ -45,8 +45,8 @@ Ce fragment HTML rendra un résultat différent pour chaque valeur de `ruby-posi
 
 ```html
 <ruby>
-  <rb>超電磁砲</rb>
-  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
+  <rb>超電磁砲</rb>
+  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
 </ruby>
 ```
 
@@ -54,14 +54,14 @@ Ce fragment HTML rendra un résultat différent pour chaque valeur de `ruby-posi
 
 ```html hidden
 <ruby>
-  <rb>超電磁砲</rb>
-  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
+  <rb>超電磁砲</rb>
+  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
 </ruby>
 ```
 
 ```css
 ruby {
-    ruby-position:over;
+    ruby-position:over;
 }
 ```
 
@@ -73,14 +73,14 @@ On obtiendra le résultat suivant :
 
 ```html hidden
 <ruby>
-  <rb>超電磁砲</rb>
-  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
+  <rb>超電磁砲</rb>
+  <rp>（</rp><rt>レールガン</rt><rp>）</rp>
 </ruby>
 ```
 
 ```css
 ruby {
-    ruby-position:under;
+    ruby-position:under;
 }
 ```
 

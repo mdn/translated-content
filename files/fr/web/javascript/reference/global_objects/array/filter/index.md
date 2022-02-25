@@ -95,7 +95,7 @@ var arr = [
 var elementsInvalides = 0;
 
 function filtrerParID(obj) {
-  // Si c'est un nombre
+  // Si c'est un nombre
   if (obj.id !== undefined && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
     return true;
   } else {
@@ -139,7 +139,7 @@ L'exemple suivant utilise [les fonctions fléchées](/fr/docs/Web/JavaScript/Ref
 const fruits = ['pomme', 'banane', 'raisin', 'mangue'];
 
 const filtreTexte = (arr, requete) => {
-  return arr.filter(el =>  el.toLowerCase().indexOf(requete.toLowerCase()) !== -1);
+  return arr.filter(el =>  el.toLowerCase().indexOf(requete.toLowerCase()) !== -1);
 }
 
 console.log(filtreTexte(fruits, 'an')); // ['banane', 'mangue'];
@@ -192,8 +192,8 @@ if (!Array.prototype.filter){
 | Spécification                                                                                                | État                         | Commentaires                                          |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.4.4.20', 'Array.prototype.filter')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES2015', '#sec-array.prototype.filter', 'Array.prototype.filter')}}     | {{Spec2('ES2015')}}     |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES2015', '#sec-array.prototype.filter', 'Array.prototype.filter')}}     | {{Spec2('ES2015')}}     |                                                       |
+| {{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

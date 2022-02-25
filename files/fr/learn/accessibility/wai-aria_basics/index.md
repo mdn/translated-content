@@ -22,7 +22,7 @@ Après l'article précédent, il peut être difficile de créer des contrôles U
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">  Prerequis:</th>
+      <th scope="row">  Prerequis:</th>
       <td>
         Connaissances informatiques de base, une compréhension de base de HTML,
         CSS et JavaScript, une compréhension des
@@ -48,7 +48,7 @@ Commençons par regarder ce que WAI-ARIA est , et ce qu’il peut faire pour nou
 
 Car les applications web ont commencé à devenir plus complexes et dynamiques, un nouvel ensemble de fonctionnalités d'accessibilité et de problèmes ont commencé à apparaître.
 
-Par exemple, HTML5 a introduit un certain nombre d’éléments sémantiques pour définir des fonctionnalités de page communes  ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.)  Avant de les utiliser, les développeurs utilisaient simplement {{htmlelement("div")}} s avec des identifiants ou des classes, par exemple `<div class="nav">` , mais ils posaient problème, car il n’existait pas de moyen facile de trouver facilement une fonctionnalité de page spécifique telle que la navigation principale par programmation. .
+Par exemple, HTML5 a introduit un certain nombre d’éléments sémantiques pour définir des fonctionnalités de page communes  ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.)  Avant de les utiliser, les développeurs utilisaient simplement {{htmlelement("div")}} s avec des identifiants ou des classes, par exemple `<div class="nav">` , mais ils posaient problème, car il n’existait pas de moyen facile de trouver facilement une fonctionnalité de page spécifique telle que la navigation principale par programmation. .
 
 La solution initiale consistait à ajouter un ou plusieurs liens cachés en haut de la page pour créer un lien vers la navigation (ou autre), par exemple:
 
@@ -74,14 +74,14 @@ Le problème ici est que, visuellement, ils fonctionnent, mais que les lecteurs 
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) est une spécification écrite par le W3C et définissant un ensemble d'attributs HTML supplémentaires pouvant être appliqués aux éléments pour fournir une sémantique supplémentaire et améliorer l'accessibilité en cas de manque. Trois caractéristiques principales sont définies dans la spécification:
 
 - **Rôles** - Ceux-ci définissent ce qu'un élément est ou fait. Bon nombre de ces rôles sont des rôles de référence, qui dupliquent en grande partie la valeur sémantique des éléments structurels HTML5, par exemple role = "navigation" ({{htmlelement("nav")}}) ou `role="complementary"` ({{htmlelement("aside")}}) , mais il en existe d'autres qui décrivent différentes structures de pages, telles que `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"`, etc., que l'on trouve couramment dans les UIs.
-- **Propriétés**  — Ceux-ci définissent les propriétés des éléments, qui peuvent être utilisés pour leur donner une signification supplémentaire ou une sémantique. Par exemple, `aria-required="true"` spécifie qu'une entrée de formulaire doit être renseignée pour être valide, alors que `aria-labelledby="label"` vous permet de mettre un ID sur un élément, puis de le référencer en tant qu'étiquette pour tout autre élément de la page, y compris plusieurs éléments, ce qui n'est pas possible avec `<label for="input">`. À titre d'exemple, vous pouvez utiliser `aria-labelledby`  pour spécifier qu'une description de clé contenue dans un {{htmlelement("div")}}  est le label  de plusieurs cellules de tableau, ou vous pouvez l’utiliser comme alternative au texte alternatif d’image —  spécifiez les informations existantes sur la page en tant que texte alternatif d’image,  plutôt que de devoir les répéter à l'intérieur de l'attribut `alt`.  Vous pouvez voir un exemple de celà à [Alternatives textuelles](/fr/docs/Apprendre/a11y/HTML?document_saved=true#Alternatives_textuelles).
-- **États**  —  Propriétés spéciales qui définissent les conditions actuelles des éléments, telles que `aria-disabled="true"`, qui spécifient à un lecteur d'écran que l'entrée de formulaire est actuellement désactivée. Les états diffèrent des propriétés en ce que les propriétés ne changent pas tout au long du cycle de vie d'une application, alors que les états peuvent changer, généralement par programmation via JavaScript.
+- **Propriétés**  — Ceux-ci définissent les propriétés des éléments, qui peuvent être utilisés pour leur donner une signification supplémentaire ou une sémantique. Par exemple, `aria-required="true"` spécifie qu'une entrée de formulaire doit être renseignée pour être valide, alors que `aria-labelledby="label"` vous permet de mettre un ID sur un élément, puis de le référencer en tant qu'étiquette pour tout autre élément de la page, y compris plusieurs éléments, ce qui n'est pas possible avec `<label for="input">`. À titre d'exemple, vous pouvez utiliser `aria-labelledby`  pour spécifier qu'une description de clé contenue dans un {{htmlelement("div")}}  est le label  de plusieurs cellules de tableau, ou vous pouvez l’utiliser comme alternative au texte alternatif d’image —  spécifiez les informations existantes sur la page en tant que texte alternatif d’image,  plutôt que de devoir les répéter à l'intérieur de l'attribut `alt`.  Vous pouvez voir un exemple de celà à [Alternatives textuelles](/fr/docs/Apprendre/a11y/HTML?document_saved=true#Alternatives_textuelles).
+- **États**  —  Propriétés spéciales qui définissent les conditions actuelles des éléments, telles que `aria-disabled="true"`, qui spécifient à un lecteur d'écran que l'entrée de formulaire est actuellement désactivée. Les états diffèrent des propriétés en ce que les propriétés ne changent pas tout au long du cycle de vie d'une application, alors que les états peuvent changer, généralement par programmation via JavaScript.
 
 Un point important sur les attributs WAI-ARIA est qu'ils n'affectent en rien la page Web, à l'exception des informations exposées par les API d'accessibilité du navigateur (où les lecteurs d'écran obtiennent leurs informations). WAI-ARIA n'affecte pas la structure de la page Web, le DOM, etc., bien que les attributs puissent être utiles pour sélectionner des éléments par CSS.
 
 > **Note :** Vous pouvez trouver une liste utile de tous les rôles ARIA et de leurs utilisations, avec des liens vers des informations supplémentaires, dans les spécifications WAI-ARIA — voir la [définition des rôles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions).
 >
-> La spécification contient également une liste de toutes les propriétés et de tous les états, avec des liens vers des informations complémentaires - voir  [Définitions des états et des propriétés (tous les attributs aria-*)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+> La spécification contient également une liste de toutes les propriétés et de tous les états, avec des liens vers des informations complémentaires - voir  [Définitions des états et des propriétés (tous les attributs aria-*)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
 
 ### Où WAI-ARIA est supporté?
 
@@ -363,9 +363,9 @@ To improve things, we've created a new version of the example called [aria-tabbe
 
 ```html
 <ul role="tablist">
-  <li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0">Tab 1</li>
-  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0">Tab 2</li>
-  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0">Tab 3</li>
+  <li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0">Tab 1</li>
+  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0">Tab 2</li>
+  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0">Tab 3</li>
 </ul>
 <div class="panels">
   <article class="active-panel" role="tabpanel" aria-hidden="false">
@@ -393,7 +393,7 @@ The new features are as follows:
 
 In our tests, this new structure did serve to improve things overall. The tabs are now recognised as tabs (e.g. "tab" is spoken by the screenreader), the selected tab is indicated by "selected" being read out with the tab name, and the screenreader also tells you which tab number you are currently on. In addition, because of the `aria-hidden` settings (only the non-hidden tab ever has `aria-hidden="false"` set), the non-hidden content is the only one you can navigate down to, meaning the selected content is easier to find.
 
-> **Note :** If there is anything you explicitly don't want screen readers to read out, you can give them the `aria-hidden="true"`  attribute.
+> **Note :** If there is anything you explicitly don't want screen readers to read out, you can give them the `aria-hidden="true"`  attribute.
 
 ## Summary
 

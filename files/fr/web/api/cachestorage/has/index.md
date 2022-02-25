@@ -27,7 +27,7 @@ Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("Win
 ### Paramètres
 
 - cacheName
-  - : Un  {{domxref("DOMString")}} représentant le nom de l'objet {{domxref("Cache")}} que vous cherchez dans le {{domxref("CacheStorage")}}.
+  - : Un  {{domxref("DOMString")}} représentant le nom de l'objet {{domxref("Cache")}} que vous cherchez dans le {{domxref("CacheStorage")}}.
 
 ### Retour
 
@@ -40,10 +40,10 @@ L'exemple suivant vérifie qu'un cache nommé 'v1' exists. Si c'est le cas, nous
 ```js
 caches.has('v1').then(function() {
   caches.open('v1').then(function(cache) {
-      return cache.addAll(myAssets);
+      return cache.addAll(myAssets);
   });
 }).catch(function() {
-  someCacheSetupfunction();
+  someCacheSetupfunction();
 });;
 ```
 

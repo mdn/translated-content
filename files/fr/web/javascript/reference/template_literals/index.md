@@ -135,23 +135,23 @@ let personne = 'Michou';
 let age = 28;
 
 function monEtiquette(chaines, expPersonne, expAge) {
-  let chn0 = chaines[0]; // "ce "
-  let chn1 = chaines[1]; // " est un "
+  let chn0 = chaines[0]; // "ce "
+  let chn1 = chaines[1]; // " est un "
 
-  // Techniquement, il y a une chaîne après
-  // l'expression finale (dans notre exemple),
-  // mais elle est vide (""), donc ne pas en tenir compte.
-  // var chn2 = chaines[2];
+  // Techniquement, il y a une chaîne après
+  // l'expression finale (dans notre exemple),
+  // mais elle est vide (""), donc ne pas en tenir compte.
+  // var chn2 = chaines[2];
 
-  let chnAge;
-  if (expAge > 99){
-    chnAge = 'centenaire';
-  } else {
-    chnAge = 'jeunot';
-  }
+  let chnAge;
+  if (expAge > 99){
+    chnAge = 'centenaire';
+  } else {
+    chnAge = 'jeunot';
+  }
   // On peut tout à fait renvoyer une chaîne construite
   // avec un gabarit
-  return `${chn0}${expPersonne}${chn1}${chnAge}`;
+  return `${chn0}${expPersonne}${chn1}${chnAge}`;
 }
 
 let sortie = monEtiquette`ce ${ personne } est un ${ age }`;

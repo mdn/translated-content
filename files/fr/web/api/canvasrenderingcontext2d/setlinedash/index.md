@@ -60,8 +60,8 @@ Editez le code ci-dessous et observez les changements se produire dans le canva
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code" style="height:150px">
 ctx.beginPath();
@@ -109,7 +109,7 @@ window.addEventListener("load", drawCanvas);
 
 | Specification                                                                                                                                        | Status                           | Comment |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-setlinedash", "CanvasRenderingContext2D.setLineDash")}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-setlinedash", "CanvasRenderingContext2D.setLineDash")}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilité des navivgateurs
 
@@ -117,7 +117,7 @@ window.addEventListener("load", drawCanvas);
 
 ## Notes spécifiques pour Gecko
 
-- Depuis  Gecko 7.0 {{geckoRelease("7.0")}}, la propriété non standard et dépréciée `mozDash` a été implémentée  comme liste de définition pour les pointillés. Cette propriété sera dépréciée et supprimée dans le futur, voir {{bug(931643)}}. Utilisez `setLineDash()` à la place.
+- Depuis  Gecko 7.0 {{geckoRelease("7.0")}}, la propriété non standard et dépréciée `mozDash` a été implémentée  comme liste de définition pour les pointillés. Cette propriété sera dépréciée et supprimée dans le futur, voir {{bug(931643)}}. Utilisez `setLineDash()` à la place.
 
 ## Notes spécifiques pour WebKit
 

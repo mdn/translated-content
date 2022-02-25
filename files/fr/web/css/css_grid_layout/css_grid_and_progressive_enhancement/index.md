@@ -206,7 +206,7 @@ Les requêtes de fonctionnalité ressemblent beaucoup aux [requêtes de média](
 
 La prise en charge des requêtes de fonctionnalité par les différents navigateurs est excellente. Tous les navigateurs qui prennent en charge la nouvelle spécification pour les grilles CSS supportent aussi les requêtes de fonctionnalité. On peut donc les utiliser pour résoudre le problème précédent pour améliorer la disposition flottante.
 
-On utilise donc `@supports` pour vérifier la prise en charge de `display: grid`;, ensuite on indique que {{HTMLElement("ul")}} est le conteneur de la grille, on définit la largeur et {{cssxref("min-height")}} avec `auto` pour les éléments {{HTMLElement("li")}}. On retire également les marges, les marges négatives et on remplace l'espacement avec la propriété {{cssxref("gap")}}. Cela signifie qu'il n'y aura pas de marge finale sur la dernière ligne de boîtes. La disposition fonctionne également  désormais lorsqu'une carte possède plus de contenu qu'une autre.
+On utilise donc `@supports` pour vérifier la prise en charge de `display: grid`;, ensuite on indique que {{HTMLElement("ul")}} est le conteneur de la grille, on définit la largeur et {{cssxref("min-height")}} avec `auto` pour les éléments {{HTMLElement("li")}}. On retire également les marges, les marges négatives et on remplace l'espacement avec la propriété {{cssxref("gap")}}. Cela signifie qu'il n'y aura pas de marge finale sur la dernière ligne de boîtes. La disposition fonctionne également  désormais lorsqu'une carte possède plus de contenu qu'une autre.
 
 ```css hidden
 * {box-sizing: border-box;}

@@ -63,9 +63,9 @@ console.log(b); // Affiche 'TRUE' dans la console
 | Spécification                                                                                                                | État                         | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.4.18', 'String.prototype.toUpperCase')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.5.4.18', 'String.prototype.toUpperCase')}}                             | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-string.prototype.touppercase', 'String.prototype.toUpperCase')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

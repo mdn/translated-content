@@ -32,7 +32,7 @@ Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("Wri
 ### Readable streams
 
 - {{domxref("ReadableStream")}}
-  - : Correspond à un flux de données lisible. Il peut être utlisé afin de gérer les réponses des flux de l'[API Fetch](/en-US/docs/Web/API/Fetch_API), ou des flux définis par le développeur (cad. un constructeur  {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} personnalisé).
+  - : Correspond à un flux de données lisible. Il peut être utlisé afin de gérer les réponses des flux de l'[API Fetch](/en-US/docs/Web/API/Fetch_API), ou des flux définis par le développeur (cad. un constructeur  {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} personnalisé).
 - {{domxref("ReadableStreamDefaultReader")}}
   - : Correspond à un lecteur par défaut pouvant être utilisé afin de lire un flux de données fourni par le réseau (cad. une requête fetch).
 - {{domxref("ReadableStreamDefaultController")}}
@@ -41,7 +41,7 @@ Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("Wri
 ### Writable streams
 
 - {{domxref("WritableStream")}}
-  - : Propose un standard d'abstraction afin d'écrire des flux de données vers une destination, ce qu'on appel un sink (un _aggregateur de flux_). Cet objet s'accompagne  d'un built-in backpressure et d'un système de queue.
+  - : Propose un standard d'abstraction afin d'écrire des flux de données vers une destination, ce qu'on appel un sink (un _aggregateur de flux_). Cet objet s'accompagne  d'un built-in backpressure et d'un système de queue.
 - {{domxref("WritableStreamDefaultWriter")}}
   - : Correspond à un flux inscriptible par défaut pouvant être utilisé afin d'écire des chunks (plus petit morceaux) de données vers un flux inscriptible.
 - {{domxref("WritableStreamDefaultController")}}

@@ -80,7 +80,7 @@ html,body,svg { height:100% }
 
 | Spécification                                                                        | Statut                       | Commentaire         |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('CSS Masks', '#MaskElement', '&lt;mask&gt;')}}         | {{Spec2('CSS Masks')}} |                     |
+| {{SpecName('CSS Masks', '#MaskElement', '&lt;mask&gt;')}}         | {{Spec2('CSS Masks')}} |                     |
 | {{SpecName('SVG1.1', 'masking.html#Masking', '&lt;mask&gt;')}} | {{Spec2('SVG1.1')}}     | Définition initiale |
 
 ## Compatibilité des navigateurs

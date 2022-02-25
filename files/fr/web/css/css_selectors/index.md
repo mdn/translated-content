@@ -85,7 +85,7 @@ original_slug: Web/CSS/Sélecteurs_CSS
       <td>{{Spec2('CSS4 Selectors')}}</td>
       <td>
         Ajout du combinateur de colonne (<code>||</code>), des sélecteurs
-        structurels pour la  grille, des combinateurs logiques, des
+        structurels pour la  grille, des combinateurs logiques, des
         pseudo-classes pour la localisation, la temporisation, les états de
         ressources, les éléments linguistiques et les éléments relatifs à
         l'interface utilisateur. Ajout du modificateur de sensibilité à la casse

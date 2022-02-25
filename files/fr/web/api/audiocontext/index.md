@@ -137,7 +137,7 @@ Variante avec gestion de la compatibilité navigateur:
 
 | Spécification                                                                            | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioContext-section', 'AudioNode')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#AudioContext-section', 'AudioNode')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité des navigateurs
 

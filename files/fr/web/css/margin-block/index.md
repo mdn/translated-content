@@ -11,7 +11,7 @@ translation_of: Web/CSS/margin-block
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`margin-block`** définit la marge sur les côtés de l'élément qui sont ceux de l'axe de bloc. Cette propriété logique peut correspondre à différentes marges selon le mode d'écriture de l'élément, sa direction ou l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("margin-top")}} et {{cssxref("margin-bottom")}} ou à   {{cssxref("margin-right")}} et {{cssxref("margin-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`margin-block`** définit la marge sur les côtés de l'élément qui sont ceux de l'axe de bloc. Cette propriété logique peut correspondre à différentes marges selon le mode d'écriture de l'élément, sa direction ou l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("margin-top")}} et {{cssxref("margin-bottom")}} ou à   {{cssxref("margin-right")}} et {{cssxref("margin-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 ```css
 /* Valeurs de longueur */

@@ -888,7 +888,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
           <li>
             Seul Firefox fournit une prise en charge totale de cette propriété.
             Opera ne la prend pas du tout en charge et d'autres navigateur ne le
-            font que pour l'élément  {{HTMLElement("select")}}.
+            font que pour l'élément  {{HTMLElement("select")}}.
           </li>
         </ol>
       </td>

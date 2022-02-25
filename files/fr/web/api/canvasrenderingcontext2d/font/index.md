@@ -45,8 +45,8 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.font = '48px serif';
@@ -97,7 +97,7 @@ f.load().then(function() {
 
 | Spécification                                                                                                                        | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-font", "CanvasRenderingContext2D.font")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-font", "CanvasRenderingContext2D.font")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité navigateurs
 

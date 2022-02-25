@@ -245,11 +245,11 @@ Cela nous donne la sortie suivante :
 Cela montre une boucle utiliser pour itérer sur les éléments d'un tableau et faire quelque chose avec chacun d'eux — un schéma très commun en JavaScript. Ici :
 
 1.  L'itérateur, `i`, commence à `0` (`let i = 0`).
-2.  On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important  — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
+2.  On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important  — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
 3.  Au sein de la boucle, on concatène les élèments présents dans cette boucle (`cats[i]` est `cats[quelque soit la valeur de i lors de l'iteration]`) avec une virgule et un espace, à la fin de la variable `info`. Donc :
 
     1.  Pendant le premier lancement, `i = 0`, donc `cats[0] + ', '` sera concaténé à ("Bill, ")
-    2.  Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à  ("Jeff, ")
+    2.  Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à  ("Jeff, ")
     3.  Et ainsi de suite. Aprés chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
 
 4.  Quand `i` devient égal à `cats.length`, la boucle s'arrête, et le navigateur va bouger au prochain bout de code aprés la boucle.
@@ -276,7 +276,7 @@ for (let i = 0; i < cats.length; i++) {
 
 > **Note :** Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for-improved.html) (et aussi le [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
 
-> **Attention :** Avec for — comme avec toutes les boucles  — vous devez vous assurer que l'initialiseur est itéré de sorte qu'il finisse par atteindre la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
+> **Attention :** Avec for — comme avec toutes les boucles  — vous devez vous assurer que l'initialiseur est itéré de sorte qu'il finisse par atteindre la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
 
 ## Quitter une boucle avec break
 
@@ -649,7 +649,7 @@ Plus précisément, nous attendons de vous :
 - Au cours de chaque itération, vérifiez si l'élément actuel du tableau est "Phil" ou "Lola" en utilisant une déclaration conditionnelle.
 
   - Si tel est le cas, concaténez l'élément à la fin du paragraphe `refused` du `textContent`, suivi d'une virgule et d'un espace.
-  - Dans le cas contraire, concaténez l'élément à la fin du paragraphe `admitted`  du `textContent` suivi d'une virgule et d'un espace.
+  - Dans le cas contraire, concaténez l'élément à la fin du paragraphe `admitted`  du `textContent` suivi d'une virgule et d'un espace.
 
 Nous vous avons déjà fourni les éléments suivants :
 

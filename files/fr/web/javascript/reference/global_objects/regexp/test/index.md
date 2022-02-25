@@ -102,7 +102,7 @@ console.log(compterMots("Ah que coucou Bob")); // 4
 
 ## Notes spécifiques à Firefox
 
-Pour les versions antérieures à Firefox 8.0, l'implémentation de `test()` était erronée. Quand la méthode était appelée sans aucun paramètre, elle effectuait son test par rapport à la dernière entrée (la propriété `RegExp.input`) et non par rapport à la chaîne `"undefined"`. Ce comportement a été corrigé  ; désormais `/undefined/.test()` retourne bien `true` au lieu d'une erreur.
+Pour les versions antérieures à Firefox 8.0, l'implémentation de `test()` était erronée. Quand la méthode était appelée sans aucun paramètre, elle effectuait son test par rapport à la dernière entrée (la propriété `RegExp.input`) et non par rapport à la chaîne `"undefined"`. Ce comportement a été corrigé  ; désormais `/undefined/.test()` retourne bien `true` au lieu d'une erreur.
 
 ## Voir aussi
 

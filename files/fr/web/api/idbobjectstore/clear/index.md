@@ -83,7 +83,7 @@ function clearData() {
 
 | Spécification                                                                                            | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-clear-IDBRequest', 'clear()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-clear-IDBRequest', 'clear()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité avec les navigateurs
 

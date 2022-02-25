@@ -50,7 +50,7 @@ La méthode `some()` exécute la fonction `callback` une seule fois pour chaque 
 
 La fonction `callback` est invoquée avec trois paramètres&nbsp;: la valeur de l'élément, l'indice de l'élément et l'objet `Array` parcouru.
 
-Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur  {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si un paramètre `objetThis` est fourni à `some()`, il sera utilisé comme valeur de `this` pour chaque invocation du `callback`. Sinon, la valeur  {{jsxref("undefined")}} sera passée pour utilisation comme valeur `this`. La valeur `this` finalement utilisée par `callback` est déterminée en fonction [des règles habituelles pour déterminer `this` pour une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 
 La méthode `some()` ne modifie pas le tableau sur lequel elle est appelée.
 

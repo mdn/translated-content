@@ -360,7 +360,7 @@ unObjetGénérateur[Symbol.iterator]() === unObjetGénérateur
 | Spécification                                                            | État                         | Commentaires        |
 | ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-iteration', 'Iteration')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-iteration', 'Iteration')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-iteration', 'Iteration')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Voir aussi
 

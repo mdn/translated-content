@@ -143,9 +143,9 @@ setTimeout(parallelPromise, 13000); // identique à parallel
 Dans `sequentialStart`, l'exécution est arrêtée pendant deux secondes avant le premier `await` puis encore une autre seconde avant le deuxième `await`. Le deuxième minuteur n'est pas créé tant que le premier n'est pas écoulé. Le code s'exécute donc au moins en 3 secondes.
 
 Avec `concurrentStart`, les deux minuteurs sont créés puis attendus derrière un `await` Les minuteurs sont exécutés de façon concurrente. L'ensemble du code se termine donc en au moins 2 secondes plutôt qu'en 3 secondes.
-Toutefois, les appels utilisant  `await` sont exécutés séquentiellement et la deuxième instruction avec `await` attendra que la première ait été  traitée. Le minuteur le plus rapide est donc créé juste après le premier.
+Toutefois, les appels utilisant  `await` sont exécutés séquentiellement et la deuxième instruction avec `await` attendra que la première ait été  traitée. Le minuteur le plus rapide est donc créé juste après le premier.
 
-Si on souhaite avoir deux tâches qui s'exécutent réellement en parallèle, on pourra utiliser  `await Promise.all([job1(), job2()])` comme illustré ci-avant avec `parallel`.
+Si on souhaite avoir deux tâches qui s'exécutent réellement en parallèle, on pourra utiliser  `await Promise.all([job1(), job2()])` comme illustré ci-avant avec `parallel`.
 
 #### `async`/`await`, `Promise.prototype.then()` et la gestion des erreurs
 

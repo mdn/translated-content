@@ -104,7 +104,7 @@ console.info("My first car was a", car, ". The object is: ", someObject);
 
 L'affichage ressemblera à ceci :
 
-    [09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
+    [09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
 
 #### Utiliser les caractères de substitution
 
@@ -199,7 +199,7 @@ L'affichage ressemblera à ceci :
 
 {{h3_gecko_minversion("Timers", "10.0")}}
 
-Pour calculer la durée d'une opération spécifique, Gecko 10 a amené le supports des chronomètres dans l'objet `console`.  pour démarrer un chronomètre, appelez la méthode ` console.time``() ` en lui donnant un seul paramètre, son nom. Pour arrêter le chronomètre et obtenir le temps écoulé en millisecondes, utilisez la méthode `console.timeEnd()`, en passant à nouveau le nom du chronomètre comme paramètre. Une seule page peut faire tourner un maximum de 10.000 chronomètres.
+Pour calculer la durée d'une opération spécifique, Gecko 10 a amené le supports des chronomètres dans l'objet `console`.  pour démarrer un chronomètre, appelez la méthode ` console.time``() ` en lui donnant un seul paramètre, son nom. Pour arrêter le chronomètre et obtenir le temps écoulé en millisecondes, utilisez la méthode `console.timeEnd()`, en passant à nouveau le nom du chronomètre comme paramètre. Une seule page peut faire tourner un maximum de 10.000 chronomètres.
 
 Par exemple, voici ce code :
 
@@ -224,10 +224,10 @@ L'objet console supporte aussi l'affichage d'une trace d'appels ; cela montre le
     foo();
 
     function foo() {
-      function bar() {
-        console.trace();
-      }
-      bar();
+      function bar() {
+        console.trace();
+      }
+      bar();
     }
 
 L'affichage dans la console ressemblera à ceci :

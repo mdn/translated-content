@@ -76,7 +76,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'
 
 ## Exemples
 
-Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse  <https://developers.google.com/identity/protocols/OAuth2UserAgent>. La validation du jeton d'accès renvoyé n'est pas affichée ici :
+Cette fonction autorise une extension des données Google d'un utilisateur, conformément à la documentation disponible à l'adresse  <https://developers.google.com/identity/protocols/OAuth2UserAgent>. La validation du jeton d'accès renvoyé n'est pas affichée ici :
 
 ```js
 function validate(redirectURL) {

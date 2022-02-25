@@ -52,7 +52,7 @@ Cet élément implémente l'interface [`SVGTitleElement`](/fr/docs/Web/API/SVGT
 
 | Spécification                                                                                                | Statut                   | Commentaire         |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('SVG2', 'struct.html#TitleElement', '&lt;title&gt;')}}                     | {{Spec2('SVG2')}} |                     |
+| {{SpecName('SVG2', 'struct.html#TitleElement', '&lt;title&gt;')}}                     | {{Spec2('SVG2')}} |                     |
 | {{SpecName('SVG1.1', 'struct.html#DescriptionAndTitleElements', '&lt;title&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale |
 
 ## Compatibilité des navigateurs

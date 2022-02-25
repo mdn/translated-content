@@ -36,7 +36,7 @@ Les événements ont trois fonctions :
 - `removeListener(listener)`
   - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
-  - : Vérifie si un  `listener` est enregistré pour cet événement. Retourne `true` s'il écoute,  `false` sinon.
+  - : Vérifie si un  `listener` est enregistré pour cet événement. Retourne `true` s'il écoute,  `false` sinon.
 
 ## Syntaxe addListener
 
@@ -72,7 +72,7 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
-Gretel écoute la connexion  et vérifie que l'expéditeur est vraiment Hansel:
+Gretel écoute la connexion  et vérifie que l'expéditeur est vraiment Hansel:
 
 ```js
 var portFromHansel;

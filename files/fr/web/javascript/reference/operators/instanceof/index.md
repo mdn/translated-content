@@ -80,26 +80,26 @@ Cependant, les objets créés à partir de littéraux objets sont une exception 
 
 ```js
 var chaîneSimple = "Une chaîne simple";
-var maChaîne  = new String();
+var maChaîne  = new String();
 var newChaîne = new String("Chaîne créée avec un constructeur");
-var maDate    = new Date();
-var monObjet  = {};
+var maDate    = new Date();
+var monObjet  = {};
 var monNonObjet = Object.create(null);
 
 chaîneSimple instanceof String; //false car le prototype vaut undefined
-maChaîne  instanceof String; // true
+maChaîne  instanceof String; // true
 newChaîne instanceof String; // true
-maChaîne  instanceof Object; // true
+maChaîne  instanceof Object; // true
 
 monObjet instanceof Object;  // true, bien que le protoype soit undefined
-({}) instanceof Object;      // true, comme pour le cas précédent
+({}) instanceof Object;      // true, comme pour le cas précédent
 monNonObjet instance Object; // false
 
-maChaîne instanceof Date;   // false
+maChaîne instanceof Date;   // false
 
-maDate instanceof Date;     // true
-maDate instanceof Object;   // true
-maDate instanceof String;   // false
+maDate instanceof Date;     // true
+maDate instanceof Object;   // true
+maDate instanceof String;   // false
 ```
 
 ### Démonstration que `mavoiture` est de type `Voiture` et de type `Object`

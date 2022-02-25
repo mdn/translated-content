@@ -8,7 +8,7 @@ original_slug: Accessibilité/Communauté
 ---
 Ce document fournit des liens vers des listes de diffusions, des forums, et d'autres communautés portées sur l'accessibilité.
 
-Si vous connaissez d'autres, ressources utiles  n'hésitez pas à ajouter un lien ci-dessous.
+Si vous connaissez d'autres, ressources utiles  n'hésitez pas à ajouter un lien ci-dessous.
 
 - [Newsgroup Mozilla Accessibility](news://news.mozilla.org/netscape.public.mozilla.accessibility)
 - [Liste de discussion du groupe WAI](http://www.w3.org/WAI/IG/)

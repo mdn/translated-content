@@ -31,7 +31,7 @@ La position de la page (à gauche ou à droite) dépend de la direction d'écrit
 
 ```css
 @page :right {
-  margin: 2cm 3cm;
+  margin: 2cm 3cm;
 }
 ```
 

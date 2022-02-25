@@ -103,7 +103,7 @@ Dans la spécification CSS de niveau 1, la notation fonctionnelle `url()` ne per
 
 ```css
 li::after {
-  content: ' - ' url(https://mdn.mozillademos.org/files/16761/star.gif);
+  content: ' - ' url(https://mdn.mozillademos.org/files/16761/star.gif);
 }
 ```
 
@@ -123,14 +123,14 @@ li::after {
 
 ```css hidden
 .background {
-  height: 100vh;
+  height: 100vh;
 }
 ```
 
 ```css
 .background {
-  background: yellow;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
+  background: yellow;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
 }
 ```
 

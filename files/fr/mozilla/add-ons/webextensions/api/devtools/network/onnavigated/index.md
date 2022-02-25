@@ -63,7 +63,7 @@ browser.devtools.network.onNavigated.addListener(handleNavigated);
 >
 > Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
 >
-> Les données de compatibilité de  Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> Les données de compatibilité de  Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
 
 <div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
 //

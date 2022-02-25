@@ -25,7 +25,7 @@ Une {{domxref("DOMString")}}.
 
 ## Exemples
 
-Le code suivant est utilisé, dans un service worker, pour répondre à un message push en envoyant les données reçues par le  {{domxref("PushMessageData")}} au contexte principale, via le [canal de messages](/en-US/docs/Web/API/Channel_Messaging_API). L'objet événement de `onmessage` sera un `ExtendableMessageEvent.`
+Le code suivant est utilisé, dans un service worker, pour répondre à un message push en envoyant les données reçues par le  {{domxref("PushMessageData")}} au contexte principale, via le [canal de messages](/en-US/docs/Web/API/Channel_Messaging_API). L'objet événement de `onmessage` sera un `ExtendableMessageEvent.`
 
 ```js
 var port;

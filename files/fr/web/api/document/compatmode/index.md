@@ -18,12 +18,12 @@ Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mo
 
 ## Valeurs
 
-- `"BackCompat"` si le document est a ffiché en mode   "quirks" ;
+- `"BackCompat"` si le document est a ffiché en mode   "quirks" ;
 
 <!---->
 
 - mode
-  - : est une  valeur énumérée qui peut être :
+  - : est une  valeur énumérée qui peut être :
 
 <!---->
 

@@ -61,13 +61,13 @@ Dans la démo [Down the Rabbit Hole (with the Web Animation API)](https://codep
 
 ```js
 document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
+  // keyframes
+  { transform: 'translateY(0px)' },
+  { transform: 'translateY(-300px)' }
 ], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
+  // timing options
+  duration: 1000,
+  iterations: Infinity
 });
 ```
 

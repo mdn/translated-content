@@ -20,7 +20,7 @@ Les résultats seront affichés dans un nouvel onglet, ou si l'argument tabId es
 
 Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/Add-ons/WebExtensions/manifest.json/permissions) "search".
 
-Pour obtenir les moteurs de recherche installés, utilisez  {{WebExtAPIRef("search.get()")}}.
+Pour obtenir les moteurs de recherche installés, utilisez  {{WebExtAPIRef("search.get()")}}.
 
 ## Syntaxe
 

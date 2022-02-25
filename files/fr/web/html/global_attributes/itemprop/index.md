@@ -408,8 +408,8 @@ Un exemple sur un livre qu'on décrit avec les différents attributs.
 
 | Spécification                                                                                                        | État                                 | Commentaires |
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-attr-itemprop", "itemprop")}}                                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#names:-the-itemprop-attribute", "itemprop")}} | {{Spec2('HTML WHATWG')}}     |              |
+| {{SpecName('HTML Microdata', "#dfn-attr-itemprop", "itemprop")}}                                 | {{Spec2('HTML Microdata')}} |              |
+| {{SpecName('HTML WHATWG', "microdata.html#names:-the-itemprop-attribute", "itemprop")}} | {{Spec2('HTML WHATWG')}}     |              |
 
 ## Compatibilité des navigateurs
 

@@ -35,7 +35,7 @@ Les ordinateurs qui se connectent au Web sont appelés des **clients** et des **
 
 Le client et le serveur ne sont pas les seuls éléments qui interviennent. Il y a beaucoup d'autres composants que nous allons décrire dans la suite de cet article.
 
-Faisons un parallèle entre le Web et une rue. D'un côté de la rue, il y a une maison qui correspond au client. De l'autre côté,  un magasin correspondant au serveur, et dans lequel vous souhaitez acheter quelque chose.
+Faisons un parallèle entre le Web et une rue. D'un côté de la rue, il y a une maison qui correspond au client. De l'autre côté,  un magasin correspondant au serveur, et dans lequel vous souhaitez acheter quelque chose.
 
 ![](road.jpg)
 
@@ -57,7 +57,7 @@ Lorsque vous saisissez une adresse web dans votre navigateur (dans notre compara
 1.  le navigateur demande au DNS l'adresse réelle du serveur contenant le site web (vous trouvez l'adresse du magasin).
 2.  le navigateur envoie une requête HTTP au serveur pour lui demander d'envoyer une copie du site web au client (vous allez au magasin et vous passez commande). Ce message, et les autres données envoyées entre le client et le serveur, sont échangés par l'intermédiaire de la connexion internet en utilisant TCP/IP.
 3.  si le serveur accepte la requête émise par le client, le serveur envoie un message «&nbsp;200 OK&nbsp;» au client qui signifie : « Pas de problème, tu peux consulter ce site web, le voici ». Ensuite le serveur commence à envoyer les fichiers du site web au navigateur sous forme d'une série de petits morceaux nommés "paquet" (le magasin vous livre les produits et vous les ramenez chez vous).
-4.  le navigateur assemble les différents morceaux pour recomposer le site web en entier puis l'affiche sur votre écran (les produits sont à votre porte —  des nouveaux trucs tout neufs, génial !).
+4.  le navigateur assemble les différents morceaux pour recomposer le site web en entier puis l'affiche sur votre écran (les produits sont à votre porte —  des nouveaux trucs tout neufs, génial !).
 
 ## Des explications sur le DNS
 

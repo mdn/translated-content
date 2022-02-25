@@ -88,7 +88,7 @@ Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant
 
 #### Lighttpd
 
-    setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
+    setenv.add-response-header  = ( "Public-Key-Pins" => "pin-sha256=\"base64+primary==\"; pin-sha256=\"base64+backup==\"; max-age=5184000; includeSubDomains")
 
 **Note:** Cela demande le module `mod_setenv` chargé, ce qui peut être fait en ajoutant la ligne suivante (s'il n'est pas déjà chargé) :
 

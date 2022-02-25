@@ -61,7 +61,7 @@ Autour de 2006-2007, Mozilla a commencé à travailler sur une implémentation e
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-Cet article se concentrera principalement sur les canvas 2D, car le code WebGL brut est très complexe. Nous montrerons cependant comment utiliser une bibliothèque WebGL pour créer une scène 3D plus facilement, et vous pourrez  par la suite suivre le tutoriel [WebGL](/fr/Apprendre/WebGL), qui couvre le code WebGL brut.
+Cet article se concentrera principalement sur les canvas 2D, car le code WebGL brut est très complexe. Nous montrerons cependant comment utiliser une bibliothèque WebGL pour créer une scène 3D plus facilement, et vous pourrez  par la suite suivre le tutoriel [WebGL](/fr/Apprendre/WebGL), qui couvre le code WebGL brut.
 
 > **Note :** Canvas est très bien pris en charge parmi les différents navigateurs, à l'exception de IE 8 (et inférieur) pour les canvas 2D, et IE 11 (et inférieur) pour WebGL.
 
@@ -330,7 +330,7 @@ Maintenant, voyons comment dessiner un cercle sur le canvas. Pour ce faire, on u
 
     Le motif ici est très similaire, a deux différences près:
 
-    - Nous avons mis le dernier paramètre de `arc()` à `true`, ce qui signifie que l'arc est tracé dans le sens inverse des aiguilles d'une montre.  Donc si notre arc commence à -45 degrés et fini à 45 degrés, nous dessinons un arc de 270 degrés. Si vous changez `true` à `false` et ré-exécutez le code, seule une portion de 90 degrés sera dessinée.
+    - Nous avons mis le dernier paramètre de `arc()` à `true`, ce qui signifie que l'arc est tracé dans le sens inverse des aiguilles d'une montre.  Donc si notre arc commence à -45 degrés et fini à 45 degrés, nous dessinons un arc de 270 degrés. Si vous changez `true` à `false` et ré-exécutez le code, seule une portion de 90 degrés sera dessinée.
     - Avant d'appeler `fill()`, nous ajoutons une ligne vers le centre du cercle. Nous obtenons une découpe de style Pac-Man plutôt sympa. Si vous supprimiez cette ligne (essayez!) et ré-exécutiez le code, vous auriez juste un cercle dont le bout a été coupé — entre le début et la fin de l'arc. Cela illuste un autre point important du canvas: si vous essayez de remplir une forme incomplète (qui n'est pas fermée), le navigateur ajoute une ligne droite entre le début et la fin du path et le remplit.
 
 C'est tout pour le moment; votre exemple final devrait ressembler à ceci:
@@ -390,7 +390,7 @@ Il est possible d'afficher des images externes sur le canvas. Ce peut être des 
     image.src = 'firefox.png';
     ```
 
-    Ici, nous créons un nouvel objet {{domxref("HTMLImageElement")}} en utilisant le constructeur {{domxref("HTMLImageElement.Image()", "Image()")}}. (L'objet retourné est le même type que celui retourné lorsque vous récupérez une référence vers un élément {{htmlelement("img")}} existant). Nous définissons son attribut  {{htmlattrxref("src", "img")}} à notre image du logo Firefox. À ce stade, le navigateur commence à charger l'image.
+    Ici, nous créons un nouvel objet {{domxref("HTMLImageElement")}} en utilisant le constructeur {{domxref("HTMLImageElement.Image()", "Image()")}}. (L'objet retourné est le même type que celui retourné lorsque vous récupérez une référence vers un élément {{htmlelement("img")}} existant). Nous définissons son attribut  {{htmlattrxref("src", "img")}} à notre image du logo Firefox. À ce stade, le navigateur commence à charger l'image.
 
 3.  Nous pourrions essayer maintenant d'inclure l'image en utilisant `drawImage()`, mais nous devons nous assurer que le fichier image ait été chargé en premier, faute de quoi le code échouera. Nous pouvons y parvenir en utilisant le gestionnaire d'événement `onload`, qui ne sera appelé que lorsque l'image aura fini de charger. Ajoutez le bloc suivant à la suite du précédent:
 

@@ -161,7 +161,7 @@ Les notes vont de A à F. La page actuelle est pluôt légère et respecte donc 
     4 packets transmitted, 4 packets received, 0.0% packet loss
     round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 
-Si vous utilisez Windows, le ping s'arrêtera après quelques envois mais si vous utilisez Mac ou Linux, mémorisez le raccourci **Ctrl+C** pour arrêter l'envoi des pings.  Ctrl+C envoie un signal d'interruption qui arrêtera l'exécution du programme. Si vous n'utilisez pas Ctrl+C, le programme `ping` contactera le serveur indéfiniment.
+Si vous utilisez Windows, le ping s'arrêtera après quelques envois mais si vous utilisez Mac ou Linux, mémorisez le raccourci **Ctrl+C** pour arrêter l'envoi des pings.  Ctrl+C envoie un signal d'interruption qui arrêtera l'exécution du programme. Si vous n'utilisez pas Ctrl+C, le programme `ping` contactera le serveur indéfiniment.
 
 ### Une _checklist_ de base
 

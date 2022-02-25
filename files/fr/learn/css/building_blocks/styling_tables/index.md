@@ -147,7 +147,7 @@ Nous mettons un cadre ({{cssxref("border")}}) tout autour du tableau, cadre néc
   Ceci est couplé avec une largeur {{cssxref("width")}} de 100%, ce qui signifie que le tableau remplira complétement tout conteneur dans lequel il sera placé et sera bien adaptable (même s'il aura besoin de quelques aménagements complémentaires pour avoir bel aspect avec les largeurs d'écran étroites).
 
 - La valeur `collapse` pour {{cssxref("border-collapse")}} est une bonne pratique courante pour toute mise en page de tableau. Par défaut, quand vous définissez des encadrements pour les éléments d'un tableau, il y a un espace entre eux, comme le montre cette illustration : ![Encadrement des éléments d'un tableau](cadre_1.png) Cela n'a pas l'air très joli (même si c'est peut-être le look que vous voulez, qui sait ?) Avec `border-collapse : collapse;`, les bordures se condensent en une seule, ce qui est beaucoup mieux :![Avec border-collapse: collapse; les encadrements se condensent](cadre_2.png)
-- Nous avons mis un cadre ({{cssxref("border")}}) tout autour du tableau, cadre nécessaire car nous encadrerons  plus tard l'intitulé et le pied de page — si vous n'avez pas d'encadrement général du tableau, terminer par un espacement donne un aspect insolite et peu net.
+- Nous avons mis un cadre ({{cssxref("border")}}) tout autour du tableau, cadre nécessaire car nous encadrerons  plus tard l'intitulé et le pied de page — si vous n'avez pas d'encadrement général du tableau, terminer par un espacement donne un aspect insolite et peu net.
 - Nous avons défini une valeur pour le remplissage ({{cssxref("padding")}}) des éléments {{htmlelement("th")}} et {{htmlelement("td")}} — cela donne un peu d'air aux données et facilite la lecture de la table.
 
 À ce stade, le tableau a déjà meilleure mine :
@@ -226,13 +226,13 @@ Commençons par ajouter le CSS suivant à la fin du fichier `style.css` :
 
 Encore une fois, il n'y a rien de propre aux tableaux ici, mais cela vaut la peine de noter certaines choses.
 
-Nous avons ajouté un élément {{cssxref("background-image")}} aux éléments {{htmlelement("thead")}} et {{htmlelement("tfoot")}} et changé la valeur de  {{cssxref("color")}} du texte dans l'en-tête et le pied de page en blanc (nous l'avons aussi ombré avec {{cssxref("text-shadow")}}) pour qu'il soit bien lisible. Assurez‑vous que le texte contraste bien avec l'arrière-plan pour qu'il soit bien lisible.
+Nous avons ajouté un élément {{cssxref("background-image")}} aux éléments {{htmlelement("thead")}} et {{htmlelement("tfoot")}} et changé la valeur de  {{cssxref("color")}} du texte dans l'en-tête et le pied de page en blanc (nous l'avons aussi ombré avec {{cssxref("text-shadow")}}) pour qu'il soit bien lisible. Assurez‑vous que le texte contraste bien avec l'arrière-plan pour qu'il soit bien lisible.
 
 Nous avons également ajouté un gradient linéaire aux éléments {{htmlelement("th")}}} et {{htmlelement("td")}}} à l'intérieur de l'en-tête et du pied de page pour donner un peu de texture ainsi qu'un cadre mauve brillant. Il est utile d'avoir plusieurs éléments imbriqués disponibles pour pouvoir superposer les styles. Oui, nous aurions pu mettre image de fond et gradient linéaire sur les éléments {{htmlelement("thead")}} et {{htmlelement("tfoot")}}} en utilisant plusieurs images de fond, mais nous avons décidé de le faire séparément pour le bénéfice des navigateurs plus anciens qui ne prennent pas en charge plusieurs images de fond ou gradients linéaires.
 
 #### Zébrures
 
-Nous avons souhaité dédier un paragraphe séparé à la  mise en place de **zèbrures** — une alternance de coloris des lignes faisant ressortir les données des tableaux, facilitant leur lecture et leur analyse. Ajoutez le CSS suivant au bas de votre fichier `style.css` :
+Nous avons souhaité dédier un paragraphe séparé à la  mise en place de **zèbrures** — une alternance de coloris des lignes faisant ressortir les données des tableaux, facilitant leur lecture et leur analyse. Ajoutez le CSS suivant au bas de votre fichier `style.css` :
 
 ```css
 tbody tr:nth-child(odd) {
@@ -264,7 +264,7 @@ Maintenant, peut-être trouverez‑vous que nous avons forcé la dose et que ce 
 
 ### Styliser l'intitulé
 
-Il nous reste une dernière chose à faire avec ce tableau — styliser l'intitulé. Pour ce faire, ajoutez ce qui suit en fin de fichier `style.css`  :
+Il nous reste une dernière chose à faire avec ce tableau — styliser l'intitulé. Pour ce faire, ajoutez ce qui suit en fin de fichier `style.css`  :
 
 ```css
 caption {

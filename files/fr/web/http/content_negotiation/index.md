@@ -50,9 +50,9 @@ The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can 
 
 | Value            | Meaning                                                                                                                                                                                                             |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Device-Memory`  | Indicates the approximate amount of device RAM. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024. For example, 512 megabytes will be reported as `0.5`.  |
+| `Device-Memory`  | Indicates the approximate amount of device RAM. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024. For example, 512 megabytes will be reported as `0.5`.  |
 | `DPR`            | Indicates the client's device pixel ratio.                                                                                                                                                                          |
-| `Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                  |
+| `Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                  |
 | `Width`          | Indicates the resource width in physical pixels (in other words the intrinsic size of an image).                                                                                                                    |
 
 ### The `Accept-Charset` header

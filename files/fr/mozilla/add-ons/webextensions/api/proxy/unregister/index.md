@@ -34,7 +34,7 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie  sans arguments lorsque le fichier PAC a été désinscrit.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie  sans arguments lorsque le fichier PAC a été désinscrit.
 
 ## Exemples
 

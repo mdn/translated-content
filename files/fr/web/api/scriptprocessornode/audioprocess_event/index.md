@@ -99,7 +99,7 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
 
 | Spécification                                                                                                        | Statut                               | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilités navigateur
 

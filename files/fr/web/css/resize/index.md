@@ -63,7 +63,7 @@ Par défaut, les éléments {{HTMLElement("textarea")}} peuvent être redimensio
 
 ```css
 textarea.exemple {
-  resize: none;
+  resize: none;
 }
 ```
 

@@ -21,7 +21,7 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_parenthesis_after_condit
 
 ## Quel est le problème ?
 
-Il y a une erreur pour la condition écrite dans l'instruction [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else). Pour chaque langage de programmation, on utilise des instructions pour choisir quel bloc d'instructions exécuter selon les différentes entrées. L'instruction `if` permet d'exécuter une instruction si une condition donnée est vérifiée. En JavaScript, il faut que cette condition apparaisse entre parenthèses après le mot-clé  `if` :
+Il y a une erreur pour la condition écrite dans l'instruction [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else). Pour chaque langage de programmation, on utilise des instructions pour choisir quel bloc d'instructions exécuter selon les différentes entrées. L'instruction `if` permet d'exécuter une instruction si une condition donnée est vérifiée. En JavaScript, il faut que cette condition apparaisse entre parenthèses après le mot-clé  `if` :
 
 ```js
 if (condition) {

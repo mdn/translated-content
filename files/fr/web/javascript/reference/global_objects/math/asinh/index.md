@@ -53,7 +53,7 @@ Math.asinh = Math.asinh || function(x) {
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-math.asinh', 'Math.asinh')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

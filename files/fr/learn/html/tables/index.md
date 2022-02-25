@@ -19,7 +19,7 @@ Une tâche assez courante en HTML consiste à structurer des données sous forme
 
 ## Prérequis
 
-Avant de commencer ce module, vous devez déjà connaître les bases du HTML  — voyez [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
+Avant de commencer ce module, vous devez déjà connaître les bases du HTML  — voyez [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
 
 > **Note :** Si vous travaillez sur un ordinateur/tablette/autre appareil avec lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous devriez essayer (la plupart) des exemples de code dans un programme de codage en ligne comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 
@@ -35,4 +35,4 @@ Ce module contient les articles suivants :
 ## Évaluation des connaissances
 
 - [Structuration de données sur les planètes](/fr/docs/Learn/HTML/Tables/Structuring_planet_data)
-  - : Pour une évaluation des connaissances en matière de tableaux, nous vous  fournissons quelques données sur les planètes du système solaire et nous vous demandons de les structurer sous forme de tableau HTML.
+  - : Pour une évaluation des connaissances en matière de tableaux, nous vous  fournissons quelques données sur les planètes du système solaire et nous vous demandons de les structurer sous forme de tableau HTML.

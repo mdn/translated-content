@@ -56,8 +56,8 @@ Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct d
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 var gradient = ctx.createLinearGradient(0,0,200,0);
@@ -99,7 +99,7 @@ window.addEventListener("load", drawCanvas);
 
 | Spécification                                                                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-canvasgradient-addcolorstop", "CanvasGradient.addColorStop")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

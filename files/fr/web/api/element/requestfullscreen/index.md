@@ -22,7 +22,7 @@ Cette méthode doit être invoquée par l'interaction d'un utilisateur ou un cha
 
 ## Exemple
 
-Avant d'appeler `requestFullScreen()`, mettez en place des gestionnaires (handlers) pour les évenements  {{event("fullscreenchange")}} et {{event("fullscreenerror")}}, pour savoir lorsque vous avez réussi à passer en mode plein écran (ou lorsque la permission de le faire a été refusée).
+Avant d'appeler `requestFullScreen()`, mettez en place des gestionnaires (handlers) pour les évenements  {{event("fullscreenchange")}} et {{event("fullscreenerror")}}, pour savoir lorsque vous avez réussi à passer en mode plein écran (ou lorsque la permission de le faire a été refusée).
 
 tbd
 

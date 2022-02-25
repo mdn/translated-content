@@ -91,9 +91,9 @@ function keyUpHandler(e) {
 }
 ```
 
-Quand on presse une touche du clavier, l'information est stockée dans une variable. La variable concernée est mis sur `true`. Quand la touche est relachée, la variable revient à  `false`.
+Quand on presse une touche du clavier, l'information est stockée dans une variable. La variable concernée est mis sur `true`. Quand la touche est relachée, la variable revient à  `false`.
 
-Les deux fonctions prennent un événement comme paramètre, représenté par la variable `e`. De là, vous pouvez obtenir des informations utiles : la propriété `key` contient les informations sur la touche qui a été enfoncée.  La plupart des navigateurs utilisent `ArrowRight` et `ArrowLeft` pour les touches de flèche gauche/droite, mais nous devons également tester `Right` and `Left` pour prendre en charge les navigateurs IE/Edge. Si la touche gauche est enfoncé, la variable `leftPressed` est mise à `true`, et lorsqu'elle est relâchée, la variable `leftPressed` est mise à `false`. Le même principe s'applique à la touche droite et à la variable `RightPressed`.
+Les deux fonctions prennent un événement comme paramètre, représenté par la variable `e`. De là, vous pouvez obtenir des informations utiles : la propriété `key` contient les informations sur la touche qui a été enfoncée.  La plupart des navigateurs utilisent `ArrowRight` et `ArrowLeft` pour les touches de flèche gauche/droite, mais nous devons également tester `Right` and `Left` pour prendre en charge les navigateurs IE/Edge. Si la touche gauche est enfoncé, la variable `leftPressed` est mise à `true`, et lorsqu'elle est relâchée, la variable `leftPressed` est mise à `false`. Le même principe s'applique à la touche droite et à la variable `RightPressed`.
 
 ### La logique du déplacement de la raquette
 

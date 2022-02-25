@@ -24,7 +24,7 @@ Pour ce faire, on utilise un élément SVG tel que {{ SVGElement("animate") }}. 
 
 ## Animation pour un attribut
 
-L'exemple suivant anime l'attribut **`cx`** d'un cercle. Pour ce faire, on ajoute un élément {{ SVGElement("animate") }}  dans l'élément {{ SVGElement("circle") }}. Les attributs importants pour {{ SVGElement("animate") }} sont :
+L'exemple suivant anime l'attribut **`cx`** d'un cercle. Pour ce faire, on ajoute un élément {{ SVGElement("animate") }}  dans l'élément {{ SVGElement("circle") }}. Les attributs importants pour {{ SVGElement("animate") }} sont :
 
 - **`attributeName`**
   - : Le nom de l'attribut à animer.

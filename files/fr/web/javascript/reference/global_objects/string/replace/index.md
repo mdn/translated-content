@@ -27,7 +27,7 @@ La chaîne de caractère originale reste inchangée.
 ### Paramètres
 
 - `regexp` (modèle)
-  - : Un objet ou un littéral {{jsxref("RegExp")}}. La ou les correspondances sont remplacées  par `nouvSouschn` ou par la valeur retournée par la `fonction` indiquée.
+  - : Un objet ou un littéral {{jsxref("RegExp")}}. La ou les correspondances sont remplacées  par `nouvSouschn` ou par la valeur retournée par la `fonction` indiquée.
 - `souschn` (modèle)
   - : Une {{jsxref("String")}} qui est à remplacer par `nouvSouschn`. Elle est traitée comme une chaîne de caractères verbatim et elle n'est _pas_ interprétée comme une expression régulière. Seule la première occurrence sera remplacée.
 - `nouvSouschn` (remplacement)
@@ -149,7 +149,7 @@ L'exemple suivant affectera `'abc - 12345 - #$*%'` à la variable `nouvelleCh
 ```js
 function remplaceur(correspondance, p1, p2, p3, decalage, chaine) {
   // p1 est non numérique, p2 numérique, et p3 non-alphanumérique
-  return [p1, p2, p3].join(' - ');
+  return [p1, p2, p3].join(' - ');
 }
 var nouvelleChaine = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, remplaceur);
 console.log(nouvelleChaine); // abc - 12345 - #$*%

@@ -141,9 +141,9 @@ Pour plus d'exemples sur l'utilisation d'arguments négatifs, voir la page {{jsx
 | Spécification                                                                                                        | État                         | Commentaires                     |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
 | {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.4.15', 'String.prototype.substring')}}                         | {{Spec2('ES5.1')}}     |                                  |
-| {{SpecName('ES6', '#sec-string.prototype.substring', 'String.prototype.substring')}}     | {{Spec2('ES6')}}         |                                  |
-| {{SpecName('ESDraft', '#sec-string.prototype.substring', 'String.prototype.substring')}} | {{Spec2('ESDraft')}} |                                  |
+| {{SpecName('ES5.1', '#sec-15.5.4.15', 'String.prototype.substring')}}                         | {{Spec2('ES5.1')}}     |                                  |
+| {{SpecName('ES6', '#sec-string.prototype.substring', 'String.prototype.substring')}}     | {{Spec2('ES6')}}         |                                  |
+| {{SpecName('ESDraft', '#sec-string.prototype.substring', 'String.prototype.substring')}} | {{Spec2('ESDraft')}} |                                  |
 
 ## Compatibilité des navigateurs
 

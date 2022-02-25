@@ -22,19 +22,19 @@ L'élément SVG `feMergeNode` se place à l'intérieur d'un élément {{ SVGElem
  xmlns="http://www.w3.org/2000/svg"
  xmlns:xlink="http://www.w3.org/1999/xlink">
 
-    <filter id="feOffset" x="-40" y="-20" width="100" height="200">
-        <feOffset in="SourceGraphic" dx="60" dy="60" />
-        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" />
-        <feMerge>
-            <feMergeNode in="blur2" />
-            <feMergeNode in="SourceGraphic" />
-        </feMerge>
-    </filter>
+    <filter id="feOffset" x="-40" y="-20" width="100" height="200">
+        <feOffset in="SourceGraphic" dx="60" dy="60" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" />
+        <feMerge>
+            <feMergeNode in="blur2" />
+            <feMergeNode in="SourceGraphic" />
+        </feMerge>
+    </filter>
 
     <rect x="40" y="40" width="100" height="100"
-       style="stroke: #000000; fill: green; filter: url(#feOffset);" />
+       style="stroke: #000000; fill: green; filter: url(#feOffset);" />
     <rect x="40" y="40" width="100" height="100"
-        style="stroke: #000000; fill: green;" />
+        style="stroke: #000000; fill: green;" />
 </svg>
 ```
 
@@ -60,7 +60,7 @@ Cet élément implémente l'interface {{domxref("SVGFEMergeNodeElement")}}.
 
 | Spécification                                                                                                | Statut                           | Commentaire         |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Filters 1.0', '#elementdef-femergenode', '&lt;feMergeNode&gt;')}}     | {{Spec2('Filters 1.0')}} |                     |
+| {{SpecName('Filters 1.0', '#elementdef-femergenode', '&lt;feMergeNode&gt;')}}     | {{Spec2('Filters 1.0')}} |                     |
 | {{SpecName('SVG1.1', 'filters.html#feMergeNodeElement', '&lt;feMergeNode&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale |
 
 ## Compatibilité des navigateurs

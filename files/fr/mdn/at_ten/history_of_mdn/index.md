@@ -13,7 +13,7 @@ Lors de cette discussion (en anglais), plusieurs contributeurs au projet MDN reg
 ```html hidden
 <audio controls="controls">
   Il semblerait que votre navigateur ne dispose pas d'un lecteur audio intégré. Vous pouvez télécharger et l'utiliser depuis : https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3
-  <source src="https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3" type="audio/mp3">
+  <source src="https://videos.cdn.mozilla.net/uploads/mdn/MDN10/MDN_RoundTable.mp3" type="audio/mp3">
 </audio>
 ```
 

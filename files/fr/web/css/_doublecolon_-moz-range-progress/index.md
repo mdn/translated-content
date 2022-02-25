@@ -24,7 +24,7 @@ Le pseudo-élément **`::-moz-range-progress`** représente la portion de la pis
 
 ```css
 input[type=range]::-moz-range-progress {
-  background-color: green;
+  background-color: green;
   height: 1em;
 }
 ```

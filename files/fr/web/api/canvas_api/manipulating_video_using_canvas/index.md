@@ -146,7 +146,7 @@ Quand la routine est appelée, l'élément vidéo affiche les données de la plu
 
 La ligne 3 extrait une copie des données graphiques brutes pour l'image courante de la vidéo en appelant la méthode `getImageData() `sur le premier contexte. Cela fournit des données brutes d'image pixel 32 bits que nous pouvons ensuite manipuler. La ligne 4 calcule le nombre de pixels de l'image en divisant la taille totale des données d'image du cadre par quatre.
 
-La boucle `for`, qui commence à la ligne 6, parcourt les pixels du cadre  en extrayant les valeurs rouges, vertes et bleues de chaque pixel et compare les valeurs aux nombres prédéterminés utilisés pour détecter l'écran vert qui sera remplacé par l'image de fond importée de `foo.png`.
+La boucle `for`, qui commence à la ligne 6, parcourt les pixels du cadre  en extrayant les valeurs rouges, vertes et bleues de chaque pixel et compare les valeurs aux nombres prédéterminés utilisés pour détecter l'écran vert qui sera remplacé par l'image de fond importée de `foo.png`.
 
 Chaque pixel dans les données d'image, qui se trouve dans les paramètres considérés comme faisant partie de l'écran vert, a sa valeur alpha remplacée par un zéro, indiquant que le pixel est entièrement transparent. En conséquence, l'image finale a toute la zone d'écran vert 100% transparente, de sorte que lorsqu'elle est dessinée dans le contexte de destination à la ligne 13, le résultat est une superposition sur la toile de fond statique.
 

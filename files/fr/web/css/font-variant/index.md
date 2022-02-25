@@ -59,10 +59,10 @@ font-variant: unset;
 
 ```css
 p.normal {
-    font-variant: normal;
+    font-variant: normal;
 }
 p.small {
-    font-variant: small-caps;
+    font-variant: small-caps;
 }
 ```
 
@@ -74,7 +74,7 @@ p.small {
 
 | Spécification                                                                                    | État                             | Commentaires                                                                                         |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-variant', 'font-variant')}}         | {{Spec2('CSS3 Fonts')}} | La propriété est désormais une propriété raccourcie pour les nouvelles propriétés  `font-variant-*`. |
+| {{SpecName('CSS3 Fonts', '#propdef-font-variant', 'font-variant')}}         | {{Spec2('CSS3 Fonts')}} | La propriété est désormais une propriété raccourcie pour les nouvelles propriétés  `font-variant-*`. |
 | {{SpecName('CSS2.1', 'fonts.html#propdef-font-variant', 'font-variant')}} | {{Spec2('CSS2.1')}}         | Aucun changement.                                                                                    |
 | {{SpecName('CSS1', '#font-variant', 'font-variant')}}                         | {{Spec2('CSS1')}}         | Définition initiale.                                                                                 |
 

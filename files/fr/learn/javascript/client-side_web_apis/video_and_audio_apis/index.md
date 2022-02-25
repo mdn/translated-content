@@ -90,21 +90,21 @@ Ouvrez le fichier HTML d'index. Vous allez voir que le HTML contient majoritaire
 
 ```html
 <div class="player">
-  <video controls>
-    <source src="video/sintel-short.mp4" type="video/mp4">
-    <source src="video/sintel-short.mp4" type="video/webm">
-    <!-- fallback contenu ici -->
-  </video>
-  <div class="controls">
-    <button class="play" data-icon="P" aria-label="bascule lecture pause"></button>
-    <button class="stop" data-icon="S" aria-label="stop"></button>
-    <div class="timer">
+  <video controls>
+    <source src="video/sintel-short.mp4" type="video/mp4">
+    <source src="video/sintel-short.mp4" type="video/webm">
+    <!-- fallback contenu ici -->
+  </video>
+  <div class="controls">
+    <button class="play" data-icon="P" aria-label="bascule lecture pause"></button>
+    <button class="stop" data-icon="S" aria-label="stop"></button>
+    <div class="timer">
       <div></div>
       <span aria-label="timer">00:00</span>
     </div>
-    <button class="rwd" data-icon="B" aria-label="retour arrière"></button>
-    <button class="fwd" data-icon="F" aria-label="avance rapide"></button>
-  </div>
+    <button class="rwd" data-icon="B" aria-label="retour arrière"></button>
+    <button class="fwd" data-icon="F" aria-label="avance rapide"></button>
+  </div>
 </div>
 ```
 
@@ -273,7 +273,7 @@ Imlémentons le contrôle le plus important — le bouton play/pause.
     }
     ```
 
-    Ici, nous utilisons une instruction [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) pour vérifier si la vidéo est en pause. La propriété {{domxref("HTMLMediaElement.paused")}} retourne vrai si le média est en pause — c'est le cas quand la vidéo n'est pas en cours de lecture, y compris quand la vidéo est au début après son chargement. Si elle est en pause, nous définissons la valeur de l'attribut `data-icon` à "u", qui est une icône "en pause", et invoquons la  méthode {{domxref("HTMLMediaElement.play()")}} pour jouer le média.
+    Ici, nous utilisons une instruction [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) pour vérifier si la vidéo est en pause. La propriété {{domxref("HTMLMediaElement.paused")}} retourne vrai si le média est en pause — c'est le cas quand la vidéo n'est pas en cours de lecture, y compris quand la vidéo est au début après son chargement. Si elle est en pause, nous définissons la valeur de l'attribut `data-icon` à "u", qui est une icône "en pause", et invoquons la  méthode {{domxref("HTMLMediaElement.play()")}} pour jouer le média.
 
     Au second clic, le bouton sera de nouveau alterné — l'icône "play" sera affiché, et la vidéo sera mise en pause avec {{domxref("HTMLMediaElement.paused()")}}.
 
@@ -298,7 +298,7 @@ Imlémentons le contrôle le plus important — le bouton play/pause.
     }
     ```
 
-    Il n'y a pas de méthode `stop()` dans l'API  HTMLMediaElement — l'équivalent du stop est de mettre `pause()` sur la vidéo, et de définir la propriété {{domxref("HTMLMediaElement.currentTime","currentTime")}} à 0. Définir une valeur à `currentTime` (en secondes) change immédiatement la position du temps du média.
+    Il n'y a pas de méthode `stop()` dans l'API  HTMLMediaElement — l'équivalent du stop est de mettre `pause()` sur la vidéo, et de définir la propriété {{domxref("HTMLMediaElement.currentTime","currentTime")}} à 0. Définir une valeur à `currentTime` (en secondes) change immédiatement la position du temps du média.
 
     Tout ce qui nous reste à faire après ça est d'afficher l'icône "play". Que la vidéo ait été en train de jouer ou en pause, quand le bouton stop est pressé, vous voulez qu'elle doit prête à être lue.
 
@@ -465,7 +465,7 @@ Je pense que nous vous en avons suffisamment appris dans cet article. L'API {{do
 Voici quelques suggestions de modifications à apporter à l'exemple que nous avons construit:
 
 1.  Si la vidéo dure plus d'une heure, le temps écoulé va bien afficher les minutes et les secondes mais pas les heures. Changez l'exemple pour lui faire afficher les heures.
-2.  Parce que les éléments `<audio>` ont la même fonctionnalité {{domxref("HTMLMediaElement")}} de disponible, vous pouvez faire fonctionner ce lecteur avec un élément `<audio>`. Essayez  de le faire.
+2.  Parce que les éléments `<audio>` ont la même fonctionnalité {{domxref("HTMLMediaElement")}} de disponible, vous pouvez faire fonctionner ce lecteur avec un élément `<audio>`. Essayez  de le faire.
 3.  Trouvez un moyen de transformer le `<div>` interne en une véritable barre de progrès — quand vous cliquez quelque part sur la barre, vous vous déplacez à la position relative dans la vidéo. Un indice: vous pouvez trouver les valeurs X et Y des côtés gauche/droite et haut/bas d'un l'élément via la méthode [`getBoundingClientRect()`](/fr/docs/Web/API/Element/getBoundingClientRect), et vous pouvez trouver les coordonnées de la souris au moment du clic à l'intérieur de l'objet `event` du clic, appelé sur l'objet {{domxref("Document")}}. Par exemple:
 
     ```js

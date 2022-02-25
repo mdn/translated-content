@@ -82,9 +82,9 @@ Il n'existe pas d'objet global intitulé _TypedArray_, la prothèse doit donc un
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.slice
 if (!Uint8Array.prototype.some) {
-  Object.defineProperty(Uint8Array.prototype, 'some', {
-    value: Array.prototype.some
-  });
+  Object.defineProperty(Uint8Array.prototype, 'some', {
+    value: Array.prototype.some
+  });
 }
 ```
 
@@ -95,7 +95,7 @@ S'il faut également prendre en charge les moteurs JavaScript qui ne prennent pa
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.some', 'TypedArray.prototype.some')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.some', 'TypedArray.prototype.some')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.some', 'TypedArray.prototype.some')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

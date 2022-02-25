@@ -82,9 +82,9 @@ La pseudo-classe `:target` s'accommode également des éléments qui ne sont pas
 ```html
 <p><a href="#newcomment">Ajouter un commentaire</a></p>
 <div id="newcomment">
-  <form>
-  <p>Saisir un commentaire :<br />
-  <textarea></textarea></p>
+  <form>
+  <p>Saisir un commentaire :<br />
+  <textarea></textarea></p>
   </form>
 </div>
 ```

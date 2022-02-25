@@ -45,7 +45,7 @@ Les données de stockage temporaire ne provoquent aucune fenêtre de dialogue ve
 
 ### "Default storage" dans Firefox _(stockage par défaut)_
 
-C'est le troisième type de stockage à envisager dans Firefox — "Default storage" _(stockage par défaut)_.  C'est une option par défaut, utilisée quand vous ne spécifiez pas le paramètre `storage`  vu ci-dessus. Les données du stockage par défaut se comportent différemment selon les circonstances : assimilées aux données d'un stockage persistant pour les applications installées de Firefox OS, ou d'un stockage temporaire pour tout autre type d'utilisation.
+C'est le troisième type de stockage à envisager dans Firefox — "Default storage" _(stockage par défaut)_.  C'est une option par défaut, utilisée quand vous ne spécifiez pas le paramètre `storage`  vu ci-dessus. Les données du stockage par défaut se comportent différemment selon les circonstances : assimilées aux données d'un stockage persistant pour les applications installées de Firefox OS, ou d'un stockage temporaire pour tout autre type d'utilisation.
 
 ## Où sont stockées les données ?
 
@@ -66,7 +66,7 @@ Chaque type de stockage représente un référentiel distinct, voici la cartogra
 
 ## Limites de stockage
 
-L'espace de stockage maximal du navigateur est dynamique  — il est basé sur la taille de votre disque dur. La limite globale est calculée sur la base de 50% de l'espace disque libre. Dans Firefox, un outil interne du navigateur appelé " Quota Manager " _(gestionnaire de quotas)_ surveille la quantité d'espace disque utilisée par chaque origine et supprime les données si nécessaire.
+L'espace de stockage maximal du navigateur est dynamique  — il est basé sur la taille de votre disque dur. La limite globale est calculée sur la base de 50% de l'espace disque libre. Dans Firefox, un outil interne du navigateur appelé " Quota Manager " _(gestionnaire de quotas)_ surveille la quantité d'espace disque utilisée par chaque origine et supprime les données si nécessaire.
 
 Donc, si votre disque dur est de 500 Go, le stockage total d'un navigateur est de 250 Go. S'il est dépassé, une procédure appelée **"origin eviction"** _(éviction d'origine)_ entre en jeu, en supprimant la valeur totale de l'origine jusqu'à ramener le niveau de stockage en-dessous de la limite. La suppression d'une base de données d'origine peut entraîner des problèmes d'incohérence.
 
@@ -86,7 +86,7 @@ Les deux limites reagissent différemment quand la limite est atteinte :
 - La limite de groupe est également appelée «limite dure»: elle ne déclenche pas l'éviction d'origine.
 - La limite globale est une «limite douce» car il est possible que certains espaces soient libérés et que l'opération puisse se poursuivre.
 
-> **Note :** Si la limite de groupe est dépassée, ou si l'éviction d'origine ne crée pas assez d'espace libre, le navigateur lance  `QuotaExceededError`.
+> **Note :** Si la limite de groupe est dépassée, ou si l'éviction d'origine ne crée pas assez d'espace libre, le navigateur lance  `QuotaExceededError`.
 
 ## Politique LRU
 

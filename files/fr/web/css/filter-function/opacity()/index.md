@@ -21,7 +21,7 @@ opacity(multiplicateur)
 ### Paramètres
 
 - `multiplicateur`
-  - : L'intensité de l'opacité, indiquée comme un nombre ([`<number>`](/fr/docs/Web/CSS/number)) ou comme un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Une  valeur de `0%` entraînera une image complètement transparente. Une valeur de `100%` laissera l'image inchangée. Les valeurs intermédiaires auront un effet proportionnel. Lors d'une interpolation, la valeur par défaut utilisée sera `1`.
+  - : L'intensité de l'opacité, indiquée comme un nombre ([`<number>`](/fr/docs/Web/CSS/number)) ou comme un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Une  valeur de `0%` entraînera une image complètement transparente. Une valeur de `100%` laissera l'image inchangée. Les valeurs intermédiaires auront un effet proportionnel. Lors d'une interpolation, la valeur par défaut utilisée sera `1`.
 
 ## Exemples
 

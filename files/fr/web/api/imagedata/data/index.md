@@ -22,7 +22,7 @@ imagedata.data; // Uint8ClampedArray[40000]
 
 | Specification                                                                                                | Status                           | Comment |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#dom-imagedata-data', 'ImageData.data')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', 'scripting.html#dom-imagedata-data', 'ImageData.data')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Browser compatibility
 

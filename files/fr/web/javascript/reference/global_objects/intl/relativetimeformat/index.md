@@ -31,9 +31,9 @@ L'objet **`Intl.RelativeTimeFormat`** est un constructeur fournissant des objets
     - `localeMatcher`
       - : L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont `"lookup"` et `"best fit"` ; le défaut est `"best fit"`. Pour des informations sur cette option, voir la page {{jsxref("Objets_globaux/Intl","Intl","##Choix_de_la_locale")}}.
     - `numeric`
-      - : Le format du message de sortie. Les valeurs possibles sont `"always"` (par exemple `1 day ago`) ou  `"auto"` (par exemple `yesterday`). `"auto"` permet de ne pas toujours avoir de valeurs numériques dans le message produit.
+      - : Le format du message de sortie. Les valeurs possibles sont `"always"` (par exemple `1 day ago`) ou  `"auto"` (par exemple `yesterday`). `"auto"` permet de ne pas toujours avoir de valeurs numériques dans le message produit.
     - `style`
-      - : La longueur du message internationalisé. Les valeurs possibles sont : `"long"` (la valeur par défaut) (par exemple : `in 1 month`), `"short"` (par exemple : `in 1 mo.`) ou  `"narrow"` (par exemple : `in 1 mo.`). Le style `narrow` peut être semblable au style `short` pour certaines locales.
+      - : La longueur du message internationalisé. Les valeurs possibles sont : `"long"` (la valeur par défaut) (par exemple : `in 1 month`), `"short"` (par exemple : `in 1 mo.`) ou  `"narrow"` (par exemple : `in 1 mo.`). Le style `narrow` peut être semblable au style `short` pour certaines locales.
 
 ## Description
 

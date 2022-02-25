@@ -21,4 +21,4 @@ Demande la mise au premier plan de la fenêtre. Cet appel peut échouer en fonct
 
 | Specification                                                                                                | Status                           | Comment |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','interaction.html#dom-window-focus','Window.focus()')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG','interaction.html#dom-window-focus','Window.focus()')}} | {{Spec2('HTML WHATWG')}} |         |

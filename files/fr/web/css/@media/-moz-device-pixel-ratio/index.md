@@ -26,7 +26,7 @@ La [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#
 >
 > Voir [cet article du CSSWG](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) pour les bonnes pratiques quant à la compatibilité de `resolution` et `dppx`.
 
-> **Note :** Cette caractéristique est également implémentée par Webkit et [IE 11 pour Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>) sous le nom `-webkit-device-pixel-ratio`. Les versions préfixées pour les seuils minimal / maximal sont intitulées `min--moz-device-pixel-ratio` et `max--moz-device-pixel-ratio` sous Gecko, tandis que sous Webkit, elles sont intitulées  `-webkit-min-device-pixel-ratio` et `-webkit-max-device-pixel-ratio`.
+> **Note :** Cette caractéristique est également implémentée par Webkit et [IE 11 pour Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>) sous le nom `-webkit-device-pixel-ratio`. Les versions préfixées pour les seuils minimal / maximal sont intitulées `min--moz-device-pixel-ratio` et `max--moz-device-pixel-ratio` sous Gecko, tandis que sous Webkit, elles sont intitulées  `-webkit-min-device-pixel-ratio` et `-webkit-max-device-pixel-ratio`.
 
 ## Syntaxe
 

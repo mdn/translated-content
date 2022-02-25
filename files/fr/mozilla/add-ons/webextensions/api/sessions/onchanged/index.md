@@ -47,7 +47,7 @@ Les événements ont trois fonctions :
 
 ## Exemples
 
-Cette extension écoute `onChanged`, puis restaure  immédiatement la dernière session fermée, ce qui rend impossible de fermer les fenêtres ou les onglets :
+Cette extension écoute `onChanged`, puis restaure  immédiatement la dernière session fermée, ce qui rend impossible de fermer les fenêtres ou les onglets :
 
 ```js
 function restoreSession(sessionInfos) {

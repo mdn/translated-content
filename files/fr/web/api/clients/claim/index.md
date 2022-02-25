@@ -38,10 +38,10 @@ L'exemple suivant utilise `claim()` dans le gestionnaire d'évènement `onActiv
 
 ```js
 self.addEventListener('install', function(event) {
-  event.waitUntil(self.skipWaiting());
+  event.waitUntil(self.skipWaiting());
 });
 self.addEventListener('activate', function(event) {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(self.clients.claim());
 });
 ```
 

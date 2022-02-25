@@ -91,17 +91,17 @@ Ci-dessous, le contenu de `child-frame.html`:
 <html>
   <head>
     <title>Cadre enfant</title>
-    <script>
-      window.addEventListener('beforeunload', function(event) {
-        console.log('Je suis le 2nd.');
-      });
+    <script>
+      window.addEventListener('beforeunload', function(event) {
+        console.log('Je suis le 2nd.');
+      });
       window.addEventListener('unload', function(event) {
         console.log('Je suis le 4ème et dernier…');
       });
     </script>
   </head>
   <body>
-      ☻
+      ☻
   </body>
 </html>
 ```

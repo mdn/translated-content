@@ -5,7 +5,7 @@ translation_of: Web/API/AudioBuffer/sampleRate
 ---
 {{ APIRef("Web Audio API") }}
 
-La propriété `sampleRate` de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre à virgule flottante  représentant la taux d'échantillonage, en échantillons par seconde, des données PCM stockées dans la mémoire-tampon.
+La propriété `sampleRate` de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre à virgule flottante  représentant la taux d'échantillonage, en échantillons par seconde, des données PCM stockées dans la mémoire-tampon.
 
 ## Syntaxe
 
@@ -50,7 +50,7 @@ bouton.onclick = function() {
 
 | Spécification                                                                                        | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-sampleRate', 'sampleRate')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBuffer-sampleRate', 'sampleRate')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité des Navigateurs
 

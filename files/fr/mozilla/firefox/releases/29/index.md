@@ -33,7 +33,7 @@ _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/c
 - Les Flexbox prennent désormais en charge {{cssxref("visibility")}}`: collapse` ({{bug(783470)}}).
 - La propriété {{cssxref("box-sizing")}} n'a pas de préfixe ({{bug(243412)}}).
 - La propriété {{cssxref("will-change")}}, un indice indiquant que quelque chose va s'animer a été ajoutée. La préférence `layout.css.will-change.enabled` doit être définie sur `true` pour l'activer. ({{bug(940842)}})
-- La notation exponentielle scientifique, comme `3e1` ou `10e+0`, est désormais prise en charge pour les valeurs et les dérivés {{cssxref("&lt;number&gt;")}}, comme {{cssxref("&lt;percentage&gt;")}} et les valeurs unitaires, mais pas {{cssxref("&lt;integer&gt;")}}  ({{bug(964529)}}).
+- La notation exponentielle scientifique, comme `3e1` ou `10e+0`, est désormais prise en charge pour les valeurs et les dérivés {{cssxref("&lt;number&gt;")}}, comme {{cssxref("&lt;percentage&gt;")}} et les valeurs unitaires, mais pas {{cssxref("&lt;integer&gt;")}}  ({{bug(964529)}}).
 - Les images de type {{cssxref("&lt;gradient&gt;")}} sont désormais prises en charge dans {{cssxref("border-image")}} ({{bug(709587)}}).
 - La propriété {{cssxref("touch-action")}} a été mise en implémenté. Il n'est pas activé par défaut; le pref de `layout.css.touch_action.enabled` le contrôle. ({{bug(795567)}})
 - Supprimez le style par défaut redondant pour l'élément \<pre> de quirk.css ({{bug(948914)}}).

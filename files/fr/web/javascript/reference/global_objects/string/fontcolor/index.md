@@ -32,7 +32,7 @@ Une chaîne de caractères représentant un élément HTML {{HTMLElement("font")
 
 ## Description
 
-Si la couleur est représentée sous forme d'un triplet RVB, le format attendu est `rrvvbb`. Ainsi, pour représenter un rose saumon, les différentes composantes seront rouge = FA,  vert = 80, et bleu = 72, le triplet s'écrit donc "`FA8072`".
+Si la couleur est représentée sous forme d'un triplet RVB, le format attendu est `rrvvbb`. Ainsi, pour représenter un rose saumon, les différentes composantes seront rouge = FA,  vert = 80, et bleu = 72, le triplet s'écrit donc "`FA8072`".
 
 ## Exemples
 

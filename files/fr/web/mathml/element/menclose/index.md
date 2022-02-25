@@ -47,11 +47,11 @@ L'élément MathML `<menclose>` permet d'afficher son contenu groupé au sein d'
 ```html
 <math>
 
-  <menclose notation="circle box">
-    <mi> x </mi>
-    <mo> + </mo>
-    <mi> y </mi>
-  </menclose>
+  <menclose notation="circle box">
+    <mi> x </mi>
+    <mo> + </mo>
+    <mi> y </mi>
+  </menclose>
 
 </math>
 ```

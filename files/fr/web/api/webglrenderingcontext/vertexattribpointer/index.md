@@ -56,9 +56,9 @@ Aucune.
 ### Exceptions
 
 - Une erreur `gl.INVALID_VALUE` est déclenchée si `decalage` est négatif.
-- Une erreur `gl.INVALID_OPERATION` est déclenchée si  `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
-- Une erreur  `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
-- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur  `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
+- Une erreur `gl.INVALID_OPERATION` est déclenchée si  `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
+- Une erreur  `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
+- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur  `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
 
 ## Description
 

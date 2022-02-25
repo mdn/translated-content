@@ -28,7 +28,7 @@ Les deux principaux mécanismes internes du Stockage Web sont :
 - **`sessionStorage`** qui maintient un espace de stockage, séparé pour chaque origine différente, disponible le temps de la session de la page (tant que le navigateur reste lancé, incluant les rechargements de la page et les restaurations).
 - **`localStorage`** qui tient le même rôle mais persiste même après le redémarrage du navigateur web.
 
-Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}}  (plus précisément, dans les navigateurs web le supportant, l'objet `Window`  implémente les objets `WindowLocalStorage` et `WindowSessionStorage`, sur lesquels les propriétés `localStorage` et `sessionStorage` se basent) — l'appel d'un des deux va créer une instance de l'objet {{domxref("Storage")}}, dans lequel des données pourront être ajoutées, récupérées et supprimées. Pour `sessionStorage` et `localStorage`, un objet de stockage différent est utilisé pour chaque origine — ils fonctionnent et sont contrôlés séparément.
+Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}}  (plus précisément, dans les navigateurs web le supportant, l'objet `Window`  implémente les objets `WindowLocalStorage` et `WindowSessionStorage`, sur lesquels les propriétés `localStorage` et `sessionStorage` se basent) — l'appel d'un des deux va créer une instance de l'objet {{domxref("Storage")}}, dans lequel des données pourront être ajoutées, récupérées et supprimées. Pour `sessionStorage` et `localStorage`, un objet de stockage différent est utilisé pour chaque origine — ils fonctionnent et sont contrôlés séparément.
 
 Donc, par exemple, un appel initial de `localStorage` sur un document va retourner un objet {{domxref("Storage")}} ; un appel de `sessionStorage` sur un document va retourner un objet {{domxref("Storage")}} différent. Les deux peuvent se manipuler de la même façon, mais séparément.
 
@@ -137,7 +137,7 @@ Ici, les trois premières lignes vont chercher les valeurs dans le stockage loca
 
 ## Enregistrer une valeur dans le stockage
 
-{{domxref("Storage.setItem()")}} est aussi bien utilisée pour la création d'une donnée,  que pour la modification d'une donnée existante (si cette donnée existe déja). Elle prend deux arguments — la clé de l'élément à créer/modifier, et la valeur associée à stocker.
+{{domxref("Storage.setItem()")}} est aussi bien utilisée pour la création d'une donnée,  que pour la modification d'une donnée existante (si cette donnée existe déja). Elle prend deux arguments — la clé de l'élément à créer/modifier, et la valeur associée à stocker.
 
 ```js
 function populateStorage() {

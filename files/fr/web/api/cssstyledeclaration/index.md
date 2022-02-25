@@ -68,5 +68,5 @@ Le bloc de déclaration est la partie de la règle de mise en forme qui apparaî
 
 | Spécification                                                                                                    | Statut                           | Commentaire          |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}     | {{Spec2('CSSOM')}}         |                      |
+| {{SpecName('CSSOM', '#the-cssstyledeclaration-interface', 'CSSStyleDeclaration')}}     | {{Spec2('CSSOM')}}         |                      |
 | {{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSPrimitiveValue')}} | {{Spec2('DOM2 Style')}} | Définition initiale. |

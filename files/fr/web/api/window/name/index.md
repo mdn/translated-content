@@ -37,5 +37,5 @@ Les noms de fenêtres ont en outre été utilisés par quelques _frameworks_ pou
 
 | Specification                                                                                | Status                           | Comment |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-name', 'Window.name')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-name', 'Window.name')}}     | {{Spec2('HTML5 W3C')}}     |         |
+| {{SpecName('HTML WHATWG', 'browsers.html#dom-name', 'Window.name')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML5 W3C', 'browsers.html#dom-name', 'Window.name')}}     | {{Spec2('HTML5 W3C')}}     |         |

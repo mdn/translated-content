@@ -28,7 +28,7 @@ Le nœud enfant retiré existe toujours en mémoire, mais ne fait plus partie du
 
 Avec la seconde forme montrée en exemple, aucune référence à l'objet `ancienEnfant` n'est conservée ; ainsi, en supposant que votre code n'a conservé nulle part ailleurs cette référence à ce nœud, il devient immédiatement inutilisable et irrécupérable, et sera en général [automatiquement supprimé](/fr/docs/Web/JavaScript/Gestion_de_la_m%C3%A9moire) de la mémoire après un court moment.
 
-Si  `child` n'est pas un enfant du noeud  `element`, la méthode provoque une exception. Une exception sera aussi lancée dans la cas où le nœud `enfant `est bien un enfant du nœud `element `au moment de l'appel à la méthode, mais qu'il a été retiré par un gestionnaire d'événement invoqué dans la cadre d'une tentative de suppression du nœud `element `(comme *blur*).
+Si  `child` n'est pas un enfant du noeud  `element`, la méthode provoque une exception. Une exception sera aussi lancée dans la cas où le nœud `enfant `est bien un enfant du nœud `element `au moment de l'appel à la méthode, mais qu'il a été retiré par un gestionnaire d'événement invoqué dans la cadre d'une tentative de suppression du nœud `element `(comme *blur*).
 
 La méthode peut lever une exception de deux façons :
 

@@ -52,8 +52,8 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps rée
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.scale(10, 3);
@@ -98,8 +98,8 @@ Vous pouvez utiliser `ctx.scale(-1, 1)` pour retourner le contexte horizontalem
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.scale(-1, 1);
@@ -140,7 +140,7 @@ window.addEventListener("load", drawCanvas);
 
 | Spécification                                                                                                                        | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-scale", "CanvasRenderingContext2D.scale")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-scale", "CanvasRenderingContext2D.scale")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité navigateur
 

@@ -33,7 +33,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
 ### Paramètres
 
 - `tabIds`
-  - : `array` of `integer`. Un tableau  d'`ID`s. L'ordre des éléments dans le tableau définit la relation des onglets. Tout `ID` d'onglet invalide, ou l'`ID` d'onglet correspondant à des onglets qui ne sont pas dans la même fenêtre que `tabId` (ou le premier onglet du tableau, si  `tabId` est omis), sera ignoré - ils conserveront leurs successeurs et prédécesseurs actuels.
+  - : `array` of `integer`. Un tableau  d'`ID`s. L'ordre des éléments dans le tableau définit la relation des onglets. Tout `ID` d'onglet invalide, ou l'`ID` d'onglet correspondant à des onglets qui ne sont pas dans la même fenêtre que `tabId` (ou le premier onglet du tableau, si  `tabId` est omis), sera ignoré - ils conserveront leurs successeurs et prédécesseurs actuels.
 - `tabId` {{optional_inline}}
   - : `integer.` L'`ID` de l'onglet qui succédera au dernier onglet du tableau `tabIds`. Si cet `ID` est invalide ou {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, le dernier onglet n'aura pas de successeur. Par défaut {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
 - `options` {{optional_inline}}
@@ -43,7 +43,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
     - `append` {{optional_inline}}
       - : `boolean`. Détermine s'il faut déplacer les onglets dans les `tabIds` avant ou après `tabId `dans la succession. Si `false`, les onglets sont déplacés avant `tabId`, si `true`, les onglets sont déplacés après `tabId`. Par défaut à `false`.
     - `insert` {{optional_inline}}
-      - : `boolean`. Détermine s'il faut lier les prédécesseurs ou successeurs actuels (selon `options.append`) de `tabId`à l'autre côté de la chaîne après son ajout ou son ajout. Si true, l'un des événements suivants se produit : si `options.append` est `false`, le premier onglet du tableau est défini comme successeur de tout prédécesseur actuel de  `tabId`; Si `options.append` est `true`, le successeur actuel de tabId est défini comme le successeur du dernier onglet du tableau. La valeur par défaut est `false`.
+      - : `boolean`. Détermine s'il faut lier les prédécesseurs ou successeurs actuels (selon `options.append`) de `tabId`à l'autre côté de la chaîne après son ajout ou son ajout. Si true, l'un des événements suivants se produit : si `options.append` est `false`, le premier onglet du tableau est défini comme successeur de tout prédécesseur actuel de  `tabId`; Si `options.append` est `true`, le successeur actuel de tabId est défini comme le successeur du dernier onglet du tableau. La valeur par défaut est `false`.
 
 ## Compatibilité du navigateur
 

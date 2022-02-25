@@ -27,4 +27,4 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à WebKit/Blink et
 
 - [Bug Chromium n°46543 : Le fond jaune des champs texte saisis automatiquement ne peut pas être désactivé.](https://code.google.com/p/chromium/issues/detail?id=46543)
 - [Bug WebKit n°66032 : Permettre aux auteurs de surcharger la couleur des champs remplis automatiquement.](https://bugs.webkit.org/show_bug.cgi?id=66032)
-- [Bug Mozilla n°740979 : Implémentation de la pseudo-classe `:-moz-autofill` pour  les éléments `input` avec une valeur saisie automatiquement.](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)
+- [Bug Mozilla n°740979 : Implémentation de la pseudo-classe `:-moz-autofill` pour  les éléments `input` avec une valeur saisie automatiquement.](https://bugzilla.mozilla.org/show_bug.cgi?id=740979)

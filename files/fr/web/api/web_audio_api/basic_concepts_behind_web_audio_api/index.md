@@ -40,7 +40,7 @@ On peut trouver davantage de détails sur la page Wikipedia [Echantillonage (si
 
 Un {{ domxref("AudioBuffer") }} prend comme paramètres un nombre de canaux (1 pour mono, 2 pour stéréo, etc), une longueur, qui correspond au nombre de trames d'échantillon dans la mémoire tampon, et un taux d'échantillonage, qui indique le nombre de trames d'échantillons lues par seconde.
 
-Un échantillon est une valeur float32 unique, qui correspond à la valeur du flux audio à un point précis dans le temps, sur un canal spécifique (gauche ou droit dans le cas de la stéréo). Une trame, ou trame d'échantillon est l'ensemble de toutes les valeurs pour tous les canaux (deux pour la stéréo, six pour le 5.1, etc.)  à un point précis dans le temps.
+Un échantillon est une valeur float32 unique, qui correspond à la valeur du flux audio à un point précis dans le temps, sur un canal spécifique (gauche ou droit dans le cas de la stéréo). Une trame, ou trame d'échantillon est l'ensemble de toutes les valeurs pour tous les canaux (deux pour la stéréo, six pour le 5.1, etc.)  à un point précis dans le temps.
 
 Le taux d'échantillonage est le nombre d'échantillons (ou de trames, puisque tous les échantillons d'une trame jouent en même temps) qui sont joués en une seconde, exprimés en Hz. Plus le taux d'échantillonage est élevé, meilleure est la qualité du son.
 
@@ -91,13 +91,13 @@ L'alternative est d'utiliser un format entrelacé:
 
     LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (pour un buffer de 16 trames)
 
-Ce format est communément utilisé pour stocker et lire du son avec très peu de traitement, comme par exemple pour un flux de  MP3 décodé.
+Ce format est communément utilisé pour stocker et lire du son avec très peu de traitement, comme par exemple pour un flux de  MP3 décodé.
 
 La Web Audio API expose \*uniquement\* des buffer linéaires, car elle est faite pour le traitement du son. Elle fonctionne en linéaire, mais convertit les données au format entrelacé au moment de les envoyer à la carte son pour qu'elles soient jouées. A l'inverse, lorsqu'un MP3 est décodé, le format d'origine entrelacé est converti en linéaire pour le traitement.
 
 ## Canaux audio
 
-Une mémoire tampon audio peut contenir différents nombres de canaux, depuis les configurations simple mono (un seul canal) ou stéréo (canal gauche et canal droit) en allant jusquà des configurations plus complexe comme le quad ou le 5.1, pour lesquels chaque canal contient plusieurs échantillons de sons, ce qui permet une expérience sonore plus riche. Les canaux sont généralement représentés par les abbréviations standard  détaillées dans le tableau ci-après :
+Une mémoire tampon audio peut contenir différents nombres de canaux, depuis les configurations simple mono (un seul canal) ou stéréo (canal gauche et canal droit) en allant jusquà des configurations plus complexe comme le quad ou le 5.1, pour lesquels chaque canal contient plusieurs échantillons de sons, ce qui permet une expérience sonore plus riche. Les canaux sont généralement représentés par les abbréviations standard  détaillées dans le tableau ci-après :
 
 <table class="standard-table">
   <tbody>
@@ -234,7 +234,7 @@ Lorsque le nombre de canaux n'est pas le même en entrée et en sortie, on effec
       <td>
         <em>Conversion descendante de quad vers mono</em>.<br />Les quatre
         canaux de sortie (<code>L</code>, <code>R</code>, <code>SL</code>, et
-        <code>SR</code>) sont  combinés pour produire l'unique canal de sortie
+        <code>SR</code>) sont  combinés pour produire l'unique canal de sortie
         (<code>M</code>).<br /><code
           >output.M = 0.25 * (input.L + input.R + </code
         ><code>input.SL + input.SR</code><code>)</code>
@@ -325,7 +325,7 @@ Lorsque le nombre de canaux n'est pas le même en entrée et en sortie, on effec
         <code>channelInterpretation</code> avait la valeur
         <code>discrete</code>.<br />La spécification autorise explicitement la
         définition à venir de nouvelles configurations de sortie pour les
-        enceintes. Ce cas de figure  n'est par conséquent pas garanti dans le
+        enceintes. Ce cas de figure  n'est par conséquent pas garanti dans le
         futur, car le comportement des navigateurs pour un nombre spécifique de
         canaux pourrait être amené à changer.
       </td>
@@ -389,7 +389,7 @@ La position du panoramique est décrite avec des coodonnées cartésiennes selon
 
 ![Le PannerNode donne la position dans l'espace, la vélocité et la direction d'un signal donné](pannernode.svg)
 
-La position de l'auditeur est décrite avec des coodonnées cartésiennes selon la règle de la main droite,  son mouvement à l'aide d'un vecteur de vélocité et la direction vers laquelle elle pointe en utilisant deux vecteurs de direction : haut et face. Ceux-ci définissent respectivement la direction vers laquelle pointent le haut de la tête et le bout du nez de l'auditeur, et forment un angle droit entre eux.
+La position de l'auditeur est décrite avec des coodonnées cartésiennes selon la règle de la main droite,  son mouvement à l'aide d'un vecteur de vélocité et la direction vers laquelle elle pointe en utilisant deux vecteurs de direction : haut et face. Ceux-ci définissent respectivement la direction vers laquelle pointent le haut de la tête et le bout du nez de l'auditeur, et forment un angle droit entre eux.
 
 ![On voit la position d'un auditeur, ainsi que les vecteurs de direction haut et de face qui forment un angle de 90°](listener.svg)
 

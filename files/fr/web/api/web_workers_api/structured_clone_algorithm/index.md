@@ -32,20 +32,20 @@ Il y a quelques avantages notables à utiliser l’algorithme de clonage structu
 | Type d’objet                                                                        | Notes                                                                                                          |
 | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | [Tous types primitifs](/en-US/docs/Web/JavaScript/Data_structures#Primitive_values) | À l’exception des symboles                                                                                     |
-| Objet [Booléen](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)        |                                                                                                                |
-| Objet String                                                                        |                                                                                                                |
-| [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)                    |                                                                                                                |
+| Objet [Booléen](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)        |                                                                                                                |
+| Objet String                                                                        |                                                                                                                |
+| [Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)                    |                                                                                                                |
 | [RegExp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                | Le champ `lastIndex` n’est pas préservé                                                                        |
-| {{ domxref("Blob") }}                                                        |                                                                                                                |
-| {{ domxref("File") }}                                                        |                                                                                                                |
-| {{ domxref("FileList") }}                                                    |                                                                                                                |
-| [ArrayBuffer](/en-US/docs/Web/API/ArrayBuffer)                                      |                                                                                                                |
+| {{ domxref("Blob") }}                                                        |                                                                                                                |
+| {{ domxref("File") }}                                                        |                                                                                                                |
+| {{ domxref("FileList") }}                                                    |                                                                                                                |
+| [ArrayBuffer](/en-US/docs/Web/API/ArrayBuffer)                                      |                                                                                                                |
 | [ArrayBufferView](/en-US/docs/Web/API/ArrayBufferView)                              | Ce qui implique tous les [tableaux typés](/en-US/docs/Web/JavaScript/Typed_arrays) tels que `Int32Array`, etc. |
-| {{ domxref("ImageData") }}                                                |                                                                                                                |
-| [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)                  |                                                                                                                |
+| {{ domxref("ImageData") }}                                                |                                                                                                                |
+| [Array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)                  |                                                                                                                |
 | [Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)                | Inclut seulement les objets plats (par ex. depuis un objet littéral)                                           |
-| [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)                      |                                                                                                                |
-| [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)                      |                                                                                                                |
+| [Map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)                      |                                                                                                                |
+| [Set](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)                      |                                                                                                                |
 
 ## Alternative&nbsp;: copie profonde
 

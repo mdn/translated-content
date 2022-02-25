@@ -46,10 +46,10 @@ const featurePolicy = document.featurePolicy
 const estPermise = featurePolicy.allowsFeature("camera")
 
 if (estPermise)
-  console.log("FP autorise l'appareil photo.")
+  console.log("FP autorise l'appareil photo.")
 
 else
-  console.log("FP n'autorise pas l'appareil photo.")
+  console.log("FP n'autorise pas l'appareil photo.")
 ```
 
 ## Spécifications

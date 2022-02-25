@@ -114,7 +114,7 @@ Nous avons fait trois changements par rapport à l’original&nbsp;:
 
 - Nous ne parlons plus de «&nbsp;background.js&nbsp;», car maintenant nous allons gérer la logique de l’extension dans le script de la fenêtre contextuelle (vous êtes autorisé à utiliser background.js ainsi qu’un popup, c’est juste que nous n’en avons pas besoin dans ce cas).
 - Nous avons ajouté `"browser_style":true`, ce qui aidera le style de notre popup à ressembler davantage à une partie du navigateur.
-- Enfin, nous avons ajouté `"default_popup": "popup/choose_page.html"`, qui indique au navigateur que l’action du navigateur va maintenant afficher une fenêtre contextuelle lorsqu’elle est cliquée, dont le document se trouve dans  «&nbsp;popup / choose_page.html&nbsp;».
+- Enfin, nous avons ajouté `"default_popup": "popup/choose_page.html"`, qui indique au navigateur que l’action du navigateur va maintenant afficher une fenêtre contextuelle lorsqu’elle est cliquée, dont le document se trouve dans  «&nbsp;popup / choose_page.html&nbsp;».
 
 Donc maintenant nous devons créer cette fenêtre contextuelle. Créez un répertoire appelé «&nbsp;popup&nbsp;» puis créez un fichier appelé «&nbsp;choose_page.html&nbsp;» à l’intérieur. Donnez‐lui les contenus suivants&nbsp;:
 

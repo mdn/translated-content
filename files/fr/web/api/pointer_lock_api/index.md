@@ -46,9 +46,9 @@ canvas.requestPointerLock()
 
 ### pointerLockElement et exitPointerLock()
 
-L'API Pointer Lock étend également l'interface {{domxref("Document")}}, ajoutant à la fois une nouvelle propriété et une nouvelle méthode. La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utilisée pour accéder à l'élément actuellement verrouillé (s'il y en a). La méthode {{domxref("Document.exitPointerLock","exitPointerLock()")}}  est utilisée pour libérer le verrou du pointeur.
+L'API Pointer Lock étend également l'interface {{domxref("Document")}}, ajoutant à la fois une nouvelle propriété et une nouvelle méthode. La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utilisée pour accéder à l'élément actuellement verrouillé (s'il y en a). La méthode {{domxref("Document.exitPointerLock","exitPointerLock()")}}  est utilisée pour libérer le verrou du pointeur.
 
-La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utile pour déterminer si un élément est actuellement verrouillé (pour une vérification booléenne par exemple) et également pour obtenir une référence vers l'élément s'il existe.
+La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utile pour déterminer si un élément est actuellement verrouillé (pour une vérification booléenne par exemple) et également pour obtenir une référence vers l'élément s'il existe.
 
 Voici un exemple d'utilisation de `pointerLockElement`:
 

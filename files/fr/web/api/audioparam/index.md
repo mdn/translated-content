@@ -51,7 +51,7 @@ _Hérite des propriétés de son parent, AudioNode._
 - {{domxref("AudioParam.setTargetAtTime()")}}
   - : Planifie le début d'un changement de la valeur d'`AudioParam`. Le changement commence à l'heure spécifiée par l'argument `startTime` et de façon exponentielle tend vers la valeur donnée par le paramètre `target`. Le taux de décroissance exponentielle est définie par le paramètre `timeConstant`. C'est le temps nécessaire à un système continu linéaire du premier ordre invariant dans le temps pour atteindre la valeur de 1 - 1 / e (environ 63,2%) donné une réponse d'entrée de l'étape (passage de 0 à 1 en valeur), Plus il est grand, plus la transition sera facile. Ceci est utile pour la décroissance ou la libération de portions d'enveloppes.
 - {{domxref("AudioParam.setValueCurveAtTime()")}}
-  - : Planifie des valeurs de `AudioParam` selon un jeu de valeurs, défini par le paramètre  `values `({{domxref ("Float32Array")}}), mis à l'échelle pour s'adapter à l'intervalle de temps donné, en commençant à `startTime`.
+  - : Planifie des valeurs de `AudioParam` selon un jeu de valeurs, défini par le paramètre  `values `({{domxref ("Float32Array")}}), mis à l'échelle pour s'adapter à l'intervalle de temps donné, en commençant à `startTime`.
 - {{domxref("AudioParam.cancelScheduledValues()")}}
   - : Annule toutes les modifications futures prévues du `AudioParam`.
 - {{domxref("AudioParam.cancelAndHoldAtTime()")}}
@@ -59,7 +59,7 @@ _Hérite des propriétés de son parent, AudioNode._
 
 ## Exemples
 
-Ce premier exemple simple montre la définition de la valeur de  `gain `d'un` `{{domxref("GainNode")}}. `gain` est un exemple de paramètre audio de type a-rate, car sa valeur peut potentiellement être différente pour chaque trame d'échantillon.
+Ce premier exemple simple montre la définition de la valeur de  `gain `d'un` `{{domxref("GainNode")}}. `gain` est un exemple de paramètre audio de type a-rate, car sa valeur peut potentiellement être différente pour chaque trame d'échantillon.
 
 ```js
 var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -86,7 +86,7 @@ biquadFilter.gain.value = 25;
 
 | Spécification                                                                            | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioParam-section', 'AudioParam')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#AudioParam-section', 'AudioParam')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

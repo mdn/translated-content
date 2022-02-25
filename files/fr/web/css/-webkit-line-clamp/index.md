@@ -46,8 +46,8 @@ Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au mil
 
 ```html
 <p>
-  Dans cet exemple <code>-webkit-line-clamp</code> vaut <code>3</code>, ce qui signifie que le texte sera rogné après trois lignes.
-  Une ellipse sera affichée au n ellipsis will be shown at the point where the text is clamped.
+  Dans cet exemple <code>-webkit-line-clamp</code> vaut <code>3</code>, ce qui signifie que le texte sera rogné après trois lignes.
+  Une ellipse sera affichée au n ellipsis will be shown at the point where the text is clamped.
 </p>
 ```
 
@@ -55,10 +55,10 @@ Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au mil
 
 ```css
 p {
-  width: 300px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  width: 300px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
   overflow: hidden;
 }
 ```

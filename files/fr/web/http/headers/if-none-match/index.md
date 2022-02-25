@@ -20,7 +20,7 @@ Quand utilisé avec {{HTTPHeader("If-Modified-Since")}}, il a la priorité (si 
 Il y a 2 cas d'utilisation communs:
 
 - Pour les méthodes {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}, pour mettre à jour une entité en cache qui a un {{HTTPHeader("ETag")}} associé.
-- Pour les autres méthodes, et en particulier pour {{HTTPMethod("PUT")}}, `If-None-Match` avec pour valeur `*` peut être  utilisé pour sauver un fichier dont on ne sait pas s'il existe, garantissant qu'un autre téléversement n'a pas été fait avant, perdant les données du précédent chargement ; ce problème est une variation du [problème de la mise à jour perdue](https://www.w3.org/1999/04/Editing/#3.1).
+- Pour les autres méthodes, et en particulier pour {{HTTPMethod("PUT")}}, `If-None-Match` avec pour valeur `*` peut être  utilisé pour sauver un fichier dont on ne sait pas s'il existe, garantissant qu'un autre téléversement n'a pas été fait avant, perdant les données du précédent chargement ; ce problème est une variation du [problème de la mise à jour perdue](https://www.w3.org/1999/04/Editing/#3.1).
 
 <table class="properties">
   <tbody>

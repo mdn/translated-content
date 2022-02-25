@@ -67,7 +67,7 @@ PlayCanvas est un moteur de jeu 3D WebGL populaire ouvert sur GitHub, avec un é
 
 ### Construction d'une démo de base avec Three.js
 
-Three.js, comme toute autre bibliothèque, vous donne un énorme avantage : au lieu d'écrire des centaines de lignes de code WebGL pour construire quelque chose d'intéressant, vous pouvez utiliser des fonctions intégrées pour le faire beaucoup plus facilement et plus rapidement. Voir la page [Construction d'une démo de base avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)  pour le processus étape par étape de création de la démo .
+Three.js, comme toute autre bibliothèque, vous donne un énorme avantage : au lieu d'écrire des centaines de lignes de code WebGL pour construire quelque chose d'intéressant, vous pouvez utiliser des fonctions intégrées pour le faire beaucoup plus facilement et plus rapidement. Voir la page [Construction d'une démo de base avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)  pour le processus étape par étape de création de la démo .
 
 ### Autres outils
 

@@ -54,7 +54,7 @@ Même aujourd'hui, malgré toute l'attention portée aux appareils mobiles, la m
 - Bas de page
   - : Visible au bas de chaque page du site, cette section contient, tout comme l'en-tête, des informations pertinentes pour l'ensemble des pages. On peut, entre autres, y trouver les mentions légales et les informations nécessaires pour contacter les responsables du site.
 
-Ces quatre sections sont généralement présentes, mais elles peuvent être disposées de plusieurs façons distinctes. Voici quelques exemples de dispositions possibles (où **1** représente l'entête ; **2,**  le bas de page ; **A**, le contenu principal ; et **B1, B2**, le contenu secondaire)&nbsp;:
+Ces quatre sections sont généralement présentes, mais elles peuvent être disposées de plusieurs façons distinctes. Voici quelques exemples de dispositions possibles (où **1** représente l'entête ; **2,**  le bas de page ; **A**, le contenu principal ; et **B1, B2**, le contenu secondaire)&nbsp;:
 
 **Dispostion à une colonne&nbsp;:** particulièrement utile pour l'affichage sur téléphone mobile, car cette disposition évite d'encombrer les petits écrans.
 
@@ -88,27 +88,27 @@ Regardons maintenant quelques exemples concrets tirés de sites connus.
 
 **[Invision](http://www.invisionapp.com/)&nbsp;:** un exemple de disposition classique à une colonne où toute l'information est présentée de façon linéaire sur une page.
 
-![Example of a 1 column layout in the wild](screenshot-product.jpg)        ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
+![Example of a 1 column layout in the wild](screenshot-product.jpg)        ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
 
-Un style simple et direct.  N'oubliez pas, toutefois, que certains utilisateurs navigeront à partir d'un ordinateur de bureau et qu'il faut donc s'assurer que le contenu soit accessible sur cette plateforme également.
+Un style simple et direct.  N'oubliez pas, toutefois, que certains utilisateurs navigeront à partir d'un ordinateur de bureau et qu'il faut donc s'assurer que le contenu soit accessible sur cette plateforme également.
 
 ### Disposition à deux colonnes
 
 **[Abduzeedo](http://abduzeedo.com/typography-mania-261)**, un blog à disposition simple. En règle générale, les blogs comprennent deux colonnes&nbsp;: une large pour le contenu principal et une plus étroite pour les à-côtés (comme des widgets, les menus de navigation et les publicités).
 
-![Example of a 2 column layout for a blog](screenshot-blog.jpg)        ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
+![Example of a 2 column layout for a blog](screenshot-blog.jpg)        ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
 
-Dans cet exemple, regardez bien l'image (B1) située directement sous l'en-tête. L'image est en rapport avec le contenu principal, mais n'est pas essentielle à sa compréhension. Nous pourrions donc considérer que l'image fait partie du contenu principal ou bien qu'il s'agit d'un à-côté (contenu secondaire).  La distinction importe peu. Ce qui est vraiment important, c'est qu'un élément placé directement sous l'en-tête devrait soit faire partie du contenu principal, soit y être _directement relié_.
+Dans cet exemple, regardez bien l'image (B1) située directement sous l'en-tête. L'image est en rapport avec le contenu principal, mais n'est pas essentielle à sa compréhension. Nous pourrions donc considérer que l'image fait partie du contenu principal ou bien qu'il s'agit d'un à-côté (contenu secondaire).  La distinction importe peu. Ce qui est vraiment important, c'est qu'un élément placé directement sous l'en-tête devrait soit faire partie du contenu principal, soit y être _directement relié_.
 
 ### Attention, c'est un piège&nbsp;!
 
 **[MICA](http://www.mica.edu/About_MICA.html)**. Cet exemple est un peu plus embêtant. On dirait une disposition à trois colonnes…
 
-![Example of a false 3 columns layout](screenshot-education.jpg)        ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
+![Example of a false 3 columns layout](screenshot-education.jpg)        ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
 …mais non&nbsp;! B1 et B2 flottent autour du contenu principal. Rappelez-vousce mot-clé&nbsp;: "flotte" (_float_ en anglais) - nous y reviendrons lorsque vous commencerez à apprendre le {{Glossary("CSS")}}.
 
-Pourquoi êtes-vous porté à penser qu'il s'agit d'une disposition à trois colonnes&nbsp;? Eh bien, pour trois raisons&nbsp;: parce que l'image en haut à droite est en forme de L, parce que B1 semble être une colonne soutenant un contenu principal décalé vers la gauche et parce le "M" et le "I" du logo de  MICA forment une ligne de force verticale.
+Pourquoi êtes-vous porté à penser qu'il s'agit d'une disposition à trois colonnes&nbsp;? Eh bien, pour trois raisons&nbsp;: parce que l'image en haut à droite est en forme de L, parce que B1 semble être une colonne soutenant un contenu principal décalé vers la gauche et parce le "M" et le "I" du logo de  MICA forment une ligne de force verticale.
 
 Il s'agit ici d'un bon exemple d'une mise en page classique qui a été rehaussée avec un peu de créativité. Les dispositions simples sont plus faciles à mettre en place, mais ne devraient pas restreindre votre créativité.
 
@@ -116,9 +116,9 @@ Il s'agit ici d'un bon exemple d'une mise en page classique qui a été rehauss�
 
 **L'[Opéra de Paris](https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini).**
 
-![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlaping the main content.](screenshot-opera-overlay.jpg)
+![An example of a tricky layout.](screenshot-opera.jpg)        ![This is a 2 column layout but the header is overlaping the main content.](screenshot-opera-overlay.jpg)
 
-Il s'agit à la base d'une disposition à deux colonnes, mais vous noterez quelques ajustements ici et là qui viennent rompre la linéarité de la disposition. On remarque surtout que l'en-tête est superposée à l'image du contenu principal. En raison de la courbe du menu de navigation qui rappelle celle au bas de l'image principale, l'en-tête et l'image semblent former un seul élément uni alors qu'il s'agit en fait d'éléments techniquement distincts.  L'exemple de l'Opéra de Paris semble plus complexe à réaliser que celui de MICA, mais est en réalité plus facile à mettre en place (la facilité étant bien entendu, un concept plutôt relatif).
+Il s'agit à la base d'une disposition à deux colonnes, mais vous noterez quelques ajustements ici et là qui viennent rompre la linéarité de la disposition. On remarque surtout que l'en-tête est superposée à l'image du contenu principal. En raison de la courbe du menu de navigation qui rappelle celle au bas de l'image principale, l'en-tête et l'image semblent former un seul élément uni alors qu'il s'agit en fait d'éléments techniquement distincts.  L'exemple de l'Opéra de Paris semble plus complexe à réaliser que celui de MICA, mais est en réalité plus facile à mettre en place (la facilité étant bien entendu, un concept plutôt relatif).
 
 Comme vous pouvez le voir, il est possible de créer des sites sensationnels avec des mises en page somme toute assez simples. Jetez un coup d'œil à vos sites préférés. Pouvez-vous repérer l'en-tête, le bas de page, le contenu principal et le contenu secondaire&nbsp;? Cet exercice pourra vous fournir de l'inspiration pour vos propres réalisations et vous aider à distinguer les dispositions qui fonctionnent bien de celles qui posent problème.
 

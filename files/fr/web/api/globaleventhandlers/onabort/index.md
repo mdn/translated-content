@@ -35,7 +35,7 @@ window.onabort = function() {
 
 | Spécification                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onabort','onabort')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onabort','onabort')}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

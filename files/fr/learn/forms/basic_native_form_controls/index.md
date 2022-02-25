@@ -158,7 +158,7 @@ Il ajoute une contrainte de validation spéciale du champ&nbsp;; le navigateur r
 
 ### Champs texte multilignes
 
-Un champ texte sur plusieurs lignes  se définit avec l'élément {{HTMLElement("textarea")}}, et non avec l'élément {{HTMLElement("input")}}.
+Un champ texte sur plusieurs lignes  se définit avec l'élément {{HTMLElement("textarea")}}, et non avec l'élément {{HTMLElement("input")}}.
 
 ```html
     <textarea cols="30" rows="10"></textarea>
@@ -170,7 +170,7 @@ La principale différence entre un champ `textarea` et un champ monoligne est qu
 
 > **Note :** Vous trouverez un exemple de champ texte multiligne sur GitHub à l'adresse [multi-line-text-field.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/multi-line-text-field.html) (voir aussi [directement](https://mdn.github.io/learning-area/html/forms/native-form-widgets/multi-line-text-field.html)). Jetez-y un coup d'œil, et remarquez que dans la plupart des navigateurs, la zone de texte est dotée d'une poignée d'étirement en bas à droite pour permettre à l'utilisateur de la redimensionner. Cette capacité de redimensionnement peut être désactivée en réglant la propriété {{cssxref("resize")}} de la zone de texte à `none` dans les CSS.
 
-{{htmlelement("textarea")}} accepte également quelques attributs pour contrôler son rendu sur plusieurs lignes  (outre plusieurs autres)&nbsp;:
+{{htmlelement("textarea")}} accepte également quelques attributs pour contrôler son rendu sur plusieurs lignes  (outre plusieurs autres)&nbsp;:
 
 | Nom de l'attribut                                | Valeur par défaut | Description                                                                              |
 | ------------------------------------------------ | ----------------- | ---------------------------------------------------------------------------------------- |
@@ -205,16 +205,16 @@ Si nécessaire, la valeur par défaut de la boîte de sélection peut être déf
 
 ```html
     <select>
-      <optgroup label="Fruits">
-        <option>Banane</option>
-        <option selected>Cerise</option>
-        <option>Citron</option>
-      </optgroup>
-      <optgroup label="Légumes">
-        <option>Carotte</option>
-        <option>Aubergine</option>
-        <option>Pomme de terre</option>
-      </optgroup>
+      <optgroup label="Fruits">
+        <option>Banane</option>
+        <option selected>Cerise</option>
+        <option>Citron</option>
+      </optgroup>
+      <optgroup label="Légumes">
+        <option>Carotte</option>
+        <option>Aubergine</option>
+        <option>Pomme de terre</option>
+      </optgroup>
     </select>
 ```
 
@@ -254,14 +254,14 @@ Une fois la liste de données affiliée au widget de formulaire, ses options s'u
     <label for="onFruit">Quel est votre fruit préféré&nbsp;?</label>
     <input type="text" id="onFruit" list="maSuggestion" />
     <datalist id="maSuggestion">
-      <option>Pomme</option>
-      <option>Banane</option>
-      <option>Mûre</option>
-      <option>Airelles</option>
-      <option>Citron</option>
-      <option>Litchi</option>
-      <option>Pêche</option>
-      <option>Poire</option>
+      <option>Pomme</option>
+      <option>Banane</option>
+      <option>Mûre</option>
+      <option>Airelles</option>
+      <option>Citron</option>
+      <option>Litchi</option>
+      <option>Pêche</option>
+      <option>Poire</option>
     </datalist>
 ```
 
@@ -327,7 +327,7 @@ Il est important de noter que ces widgets ne se comportent pas tout à fait comm
 
 > **Note :** Vous trouverez les exemples de cette section sur GitHub à l'adresse [checkable-items.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/checkable-items.html) ([voir directement aussi](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
 
-Pour un maximum de convivialité/accessibilité, il est conseillé d'entourer chaque liste d'éléments liés dans un {{htmlelement("fieldset")}}, avec un élément {{htmlelement("legend")}} fournissant une description globale de la liste.  Chaque paire individuelle d'éléments {{htmlelement("label")}}/{{htmlelement("input")}} doit être contenue dans son propre élément de liste (ou similaire), comme le montrent les exemples.
+Pour un maximum de convivialité/accessibilité, il est conseillé d'entourer chaque liste d'éléments liés dans un {{htmlelement("fieldset")}}, avec un élément {{htmlelement("legend")}} fournissant une description globale de la liste.  Chaque paire individuelle d'éléments {{htmlelement("label")}}/{{htmlelement("input")}} doit être contenue dans son propre élément de liste (ou similaire), comme le montrent les exemples.
 
 Vous devez également fournir des valeurs pour ces types d'entrées dans l'attribut `value` si vous voulez qu'elles aient un sens — si aucune valeur n'est fournie, les cases à cocher et les boutons radio ont la valeur `on`.
 
@@ -470,7 +470,7 @@ Un problème avec les curseurs est qu'il n'offrent aucun moyen visue de savoir q
 <span class="beancount"></span>
 ```
 
-et en  JavaScript&nbsp;:
+et en  JavaScript&nbsp;:
 
 ```js
 var beans = document.querySelector('#beans');
@@ -483,7 +483,7 @@ beans.oninput = function() {
 }
 ```
 
-Ici nous stockons dans deux variables les références du curseur et celle de `span`, puis nous réglons immédiatement le [`textContent`](/fr/docs/Web/API/Node/textContent)  de `span` à la valeur courante `value` de l'entrée. Enfin, nous avons mis en place un gestionnaire d'événements oninput de sorte que chaque fois que le curseur de plage est déplacé, le `textContent` de `span` est mis à jour avec la nouvelle valeur de l'entrée.
+Ici nous stockons dans deux variables les références du curseur et celle de `span`, puis nous réglons immédiatement le [`textContent`](/fr/docs/Web/API/Node/textContent)  de `span` à la valeur courante `value` de l'entrée. Enfin, nous avons mis en place un gestionnaire d'événements oninput de sorte que chaque fois que le curseur de plage est déplacé, le `textContent` de `span` est mis à jour avec la nouvelle valeur de l'entrée.
 
 L'attribut `range` pour `input` n'est pas pris en charge dans les versions d'Internet Explorer dont le numéro est inférieur à 10.
 
@@ -554,7 +554,7 @@ Il existe d'autres types de widgets qui ne peuvent pas être classés facilement
 
 ### Sélection de fichier
 
-Les formulaires HTML permettent d'envoyer des fichiers à un serveur. Cette action spécifique est détaillée dans l'article  «&nbsp;[Envoi et extraction des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires "/fr/docs/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires")&nbsp;». Le widget de sélection de fichier permet à l'utilisateur de choisir un ou plusieurs fichiers à envoyer.
+Les formulaires HTML permettent d'envoyer des fichiers à un serveur. Cette action spécifique est détaillée dans l'article  «&nbsp;[Envoi et extraction des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires "/fr/docs/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires")&nbsp;». Le widget de sélection de fichier permet à l'utilisateur de choisir un ou plusieurs fichiers à envoyer.
 
 Pour créer un widget de sélection de fichier, vous devez utiliser un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur `file`. Les types de fichiers acceptés peuvent être contraints en utilisant l'attribut {{htmlattrxref("accept","input")}}. De plus, si vous souhaitez permettre à l'utilisateur de choisir plusieurs fichiers, vous pouvez le faire en ajoutant l'attribut {{htmlattrxref("multiple","input")}}.
 
@@ -611,7 +611,7 @@ Une barre de progression représente une valeur qui évolue dans le temps jusqu'
 
 Cela sert à mettre en œuvre visuellement un rapport d'avancement, comme le pourcentage du nombre total de fichiers téléchargés ou le nombre de questions posées dans un questionnaire.
 
-Le contenu dans l'élément {{HTMLElement("progress")}} est un affichage informatif de repli pour les navigateurs ne prenant pas en charge cet élément&nbsp;;  les technologies d'assistance vocalisent ce contenu.
+Le contenu dans l'élément {{HTMLElement("progress")}} est un affichage informatif de repli pour les navigateurs ne prenant pas en charge cet élément&nbsp;;  les technologies d'assistance vocalisent ce contenu.
 
 #### Meter
 
@@ -647,7 +647,7 @@ La prise en charge de `progress` et `meter` est vraiment bonne — il n'y a pas 
 
 ## Conclusion
 
-Comme nous venons de le voir, il y a pas mal d'éléments de formulaire différents disponibles  — il n'est pas nécessaire de mémoriser l'ensemble de ces détails dès maintenant, mais vous pourrez revenir à cet article tant que vous le voudrez pour revoir tel ou tel détail.
+Comme nous venons de le voir, il y a pas mal d'éléments de formulaire différents disponibles  — il n'est pas nécessaire de mémoriser l'ensemble de ces détails dès maintenant, mais vous pourrez revenir à cet article tant que vous le voudrez pour revoir tel ou tel détail.
 
 ## Voir également
 

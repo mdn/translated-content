@@ -34,7 +34,7 @@ Même si vous construisez votre serveur au profit des WebSockets, votre client d
 
 Le client peut solliciter des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. En outre, des en-têtes communs tel que _User-Agent_, _Referer_, *Cookie* ou des en-têtes d'authentification peuvent être envoyés par la même requête : leur usage est laissé libre car ils ne se rapportent pas directement au WebSocket et au processus de poignée de main. A ce titre il semble préférable de les ignorer : d'ailleurs dans de nombreuses configurations communes, un proxy inverse les aura finalement déjà traitées.
 
-Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse  "[400 Bad Request](/en-US/docs/HTTP/Response_codes#400)" (_erreur 400 : la requête est incorrecte_) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (_en somme, tout dépend du comportement du client_). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête _Sec-WebSocket-Version_ correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (_voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction_). Maintenant, nous allons passer à l'entête attendu : *Sec-WebSocket-Key*.
+Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse  "[400 Bad Request](/en-US/docs/HTTP/Response_codes#400)" (_erreur 400 : la requête est incorrecte_) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (_en somme, tout dépend du comportement du client_). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête _Sec-WebSocket-Version_ correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (_voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction_). Maintenant, nous allons passer à l'entête attendu : *Sec-WebSocket-Key*.
 
 > **Note :** Un grand nombre de navigateurs enverront un  [`Entête d'origine`](/en-US/docs/HTTP/Access_control_CORS#Origin). Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse [403 Forbidden](/en-US/docs/HTTP/Response_codes#403) si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci.
 
@@ -73,29 +73,29 @@ Le client ou le serveur peuvent choisir d'envoyer un message à n'importe quel m
 
 Chaque trame (dans un sens ou dans un autre) suit le schéma suivant :
 
-     0               1               2               3
+     0               1               2               3
      0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
     +-+-+-+-+-------+-+-------------+-------------------------------+
-    |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-    |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
-    |N|V|V|V|       |S|             |   (if payload len==126/127)   |
-    | |1|2|3|       |K|             |                               |
+    |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+    |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
+    |N|V|V|V|       |S|             |   (if payload len==126/127)   |
+    | |1|2|3|       |K|             |                               |
     +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-     4               5               6               7
+     4               5               6               7
     + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-    |     Extended payload length continued, if payload len == 127  |
+    |     Extended payload length continued, if payload len == 127  |
     + - - - - - - - - - - - - - - - +-------------------------------+
-     8               9               10              11
+     8               9               10              11
     + - - - - - - - - - - - - - - - +-------------------------------+
-    |                               |Masking-key, if MASK set to 1  |
+    |                               |Masking-key, if MASK set to 1  |
     +-------------------------------+-------------------------------+
-     12              13              14              15
+     12              13              14              15
     +-------------------------------+-------------------------------+
-    | Masking-key (continued)       |          Payload Data         |
+    | Masking-key (continued)       |          Payload Data         |
     +-------------------------------- - - - - - - - - - - - - - - - +
-    :                     Payload Data continued ...               &nbsp;:
+    :                     Payload Data continued ...               &nbsp;:
     + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-    |                     Payload Data continued ...                |
+    |                     Payload Data continued ...                |
     +---------------------------------------------------------------+
 
 RSV1-3 peuvent être ignorés, ils concernent les extensions.

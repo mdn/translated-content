@@ -75,7 +75,7 @@ En plus des attributs qui suivent, l'élément `<math>` accepte tous les attribu
     </mrow>
   </math>
 
-  </body>
+  </body>
 </html>
 ```
 

@@ -115,12 +115,12 @@ div > div {
 
 ```html
 <div id="container">
-  <div class="small">Lorem</div>
-  <div class="small">Lorem<br/>ipsum</div>
-  <div class="large">Lorem</div>
-  <div class="large">Lorem<br/>impsum</div>
-  <div class="large"></div>
-  <div class="large"></div>
+  <div class="small">Lorem</div>
+  <div class="small">Lorem<br/>ipsum</div>
+  <div class="large">Lorem</div>
+  <div class="large">Lorem<br/>impsum</div>
+  <div class="large"></div>
+  <div class="large"></div>
 </div>
 ```
 

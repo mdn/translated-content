@@ -86,9 +86,9 @@ self.addEventListener('fetch', function(event) {
       return response;
     } else {
       return fetch(event.request).then(function (response) {
-        // la réponse ne peut être utilisée qu'une seule fois
-        // nous devons sauvegarder le clone pour mettre
-        // une copie en cache et servir le second
+        // la réponse ne peut être utilisée qu'une seule fois
+        // nous devons sauvegarder le clone pour mettre
+        // une copie en cache et servir le second
         let responseClone = response.clone();
 
         caches.open('v1').then(function (cache) {

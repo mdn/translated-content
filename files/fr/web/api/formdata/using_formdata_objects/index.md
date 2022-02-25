@@ -78,13 +78,13 @@ L’objet `FormData` vous permet également d’envoyer des fichiers. Il vous 
 
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
-  <label>Votre adresse électronique&nbsp;:</label>
-  <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32" maxlength="64" /><br />
-  <label>Étiquette du fichier personnalisé&nbsp;:</label>
-  <input type="text" name="filelabel" size="12" maxlength="32" /><br />
-  <label>Fichier à mettre de côté&nbsp;:</label>
-  <input type="file" name="file" required />
-  <input type="submit" value="Mettez le fichier de côté." />
+  <label>Votre adresse électronique&nbsp;:</label>
+  <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32" maxlength="64" /><br />
+  <label>Étiquette du fichier personnalisé&nbsp;:</label>
+  <input type="text" name="filelabel" size="12" maxlength="32" /><br />
+  <label>Fichier à mettre de côté&nbsp;:</label>
+  <input type="file" name="file" required />
+  <input type="submit" value="Mettez le fichier de côté." />
 </form>
 <div></div>
 ```
@@ -95,22 +95,22 @@ Vous pouvez ensuite l’envoyer à l’aide du code suivant&nbsp;:
 var form = document.forms.namedItem("fileinfo");
 form.addEventListener('submit', function(ev) {
 
-  var oOutput = document.querySelector("div"),
+  var oOutput = document.querySelector("div"),
       oData = new FormData(form);
 
-  oData.append("CustomField", "Données supplémentaires");
+  oData.append("CustomField", "Données supplémentaires");
 
-  var oReq = new XMLHttpRequest();
-  oReq.open("POST", "stash.php", true);
-  oReq.onload = function(oEvent) {
-    if (oReq.status == 200) {
-      oOutput.innerHTML = "Envoyé&nbsp;!";
-    } else {
-      oOutput.innerHTML = "Erreur " + oReq.status + " lors de la tentative d’envoi du fichier.<br \/>";
-    }
-  };
+  var oReq = new XMLHttpRequest();
+  oReq.open("POST", "stash.php", true);
+  oReq.onload = function(oEvent) {
+    if (oReq.status == 200) {
+      oOutput.innerHTML = "Envoyé&nbsp;!";
+    } else {
+      oOutput.innerHTML = "Erreur " + oReq.status + " lors de la tentative d’envoi du fichier.<br \/>";
+    }
+  };
 
-  oReq.send(oData);
+  oReq.send(oData);
   ev.preventDefault();
 }, false);
 ```
@@ -134,7 +134,7 @@ $.ajax({
   url: "stash.php",
   type: "POST",
   data: fd,
-  processData: false,  // dire à jQuery de ne pas traiter les données
+  processData: false,  // dire à jQuery de ne pas traiter les données
   contentType: false   // dire à jQuery de ne pas définir le contentType
 });
 ```

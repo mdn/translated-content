@@ -47,7 +47,7 @@ Ce descripteur peut prendre l'une de ces trois formes :
   - : Le système interprète les symboles comme les chiffres d'un système de numérotation alphabétique. Ainsi, si les lettres `a` à `z` sont définies comme symbole dans un style de compteur dont le système est `alphabetic`, les 26 premières représentations du compteur seront `a`, `b`, etc. jusqu'à `z` (jusqu'ici, le comportement est identique à celui obtenu grâce à `symbolic`) mais ensuite, le système poursuivra avec `aa`, `ab`, `ac`, etc.
     Pour que le style du compteur soit valide, il faut qu'au moins deux symboles soient fournis. Le premier symbole est interprété comme `1`, le suivant comme `2` et ainsi de suite. Ce système ne fonctionne que pour les valeurs positives.
 - `numeric`
-  - : Les symboles sont interprétés comme les chiffres d'un [système de notation positionnelle](https://fr.wikipedia.org/wiki/Notation_positionnelle). Ce système est très proche de celui qu'on peut obtenir avec `alphabetic` sauf que, pour ce dernier, le premier symbole fourni par `symbols` sera interprété comme `1`, le suivant  comme `2` et ainsi de suite alors que pour `numeric`, le premier symbole est interprété comme 0, le suivant comme `1`, puis `2` etc. Pour que le style de compteur soit valide, il faut qu'au moins deux symboles soient définis avec `symbols`. Le premier symbole qui est fourni sera interprété comme `0`. Comme on peut le voir dans l'exemple ci-après, si on utilise les chiffres de `0` à `9` comme symboles, on obtiendra le même résultat qu'avec le système décimal.
+  - : Les symboles sont interprétés comme les chiffres d'un [système de notation positionnelle](https://fr.wikipedia.org/wiki/Notation_positionnelle). Ce système est très proche de celui qu'on peut obtenir avec `alphabetic` sauf que, pour ce dernier, le premier symbole fourni par `symbols` sera interprété comme `1`, le suivant  comme `2` et ainsi de suite alors que pour `numeric`, le premier symbole est interprété comme 0, le suivant comme `1`, puis `2` etc. Pour que le style de compteur soit valide, il faut qu'au moins deux symboles soient définis avec `symbols`. Le premier symbole qui est fourni sera interprété comme `0`. Comme on peut le voir dans l'exemple ci-après, si on utilise les chiffres de `0` à `9` comme symboles, on obtiendra le même résultat qu'avec le système décimal.
 - `additive`
   - : Ce système peut être utilisé pour représenter [des systèmes de numérotations additives](<https://fr.wikipedia.org/wiki/Notation_additive_(num%C3%A9ration)>) telles que les chiffres romains qui, plutôt que de réutiliser des chiffres pour obtenir différentes valeurs, définissent des chiffres supplémentaires pour représenter de grandes valeurs. La valeur d'un nombre représenté dans ce sytème est obtenue en sommant les différents chiffres qui le représentent. Le descripteur supplémentaire {{cssxref("additive-symbols")}} doit être utilisé avec au moins un tuple additif pour que le style de compteur soit considéré comme valide. Un tuple additif est composé d'un symbole de compteur et d'un poids entier positif. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids afin que le système soit valide. On voit dans l'exemple ci-après que `range` est utilisé afin de définir l'intervalle de validité. Une fois en dehors de cet intervalle, on utilisera la représentation classique avec `decimal` (le style de secours). Si on veut utiliser les chiffres romains, on pourra utiliser les valeurs de style prédéfinies comme `upper-roman` ou `lower-roman` afin d'éviter de réinventer la roue.
 - `extends`
@@ -79,11 +79,11 @@ Ce descripteur peut prendre l'une de ces trois formes :
 
 ```html
 <ul class="list">
-  <li>Un</li>
-  <li>Deux</li>
-  <li>Trois</li>
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
   <li>Quatre</li>
-  <li>Cinq</li>
+  <li>Cinq</li>
 </ul>
 ```
 

@@ -31,7 +31,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `host`
   - : `string`. Le nom d'hôte du serveur proxy. Obligatoire sauf si le `type` est `"direct"`.
 - `port`
-  - : `string`. e numéro de port du serveur proxy. Obligatoire sauf si le `type` est  `"direct"`.
+  - : `string`. e numéro de port du serveur proxy. Obligatoire sauf si le `type` est  `"direct"`.
 - `username`
   - : `string`. Nom d'utilisateur pour le service proxy. Ceci est utilisable avec "socks".  Pour les autorisations de proxy HTTP, utilisez [`webRequest.onAuthRequired`](/fr/Add-ons/WebExtensions/API/webRequest/onAuthRequired).
 - `password`

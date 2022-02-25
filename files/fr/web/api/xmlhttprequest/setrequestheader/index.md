@@ -11,7 +11,7 @@ A chaque fois que vous appellez `setRequestHeader()`, son contenu est ajouté 
 
 Si aucun {{HTTPHeader("Accept")}} n'a été configurer avec cette méthode, un `Accept` header avec le type `"*/*"` sera envoyé avec la requête lorsque {{domxref("XMLHttpRequest.send", "send()")}} sera appellée.
 
-Pour des raisons de sécurité, certain header ne peuvent être manipulés que par le user agent. Ceux-ci contiennent les paramètres {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+Pour des raisons de sécurité, certain header ne peuvent être manipulés que par le user agent. Ceux-ci contiennent les paramètres {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
 > **Note :** Dans certain cas, vous pourrez rencontrer l'erreur / exception "**not allowed by Access-Control-Allow-Headers in preflight response**" quand vous enverez une requête cross domains. Dans ce cas, vous devrez configurer {{HTTPHeader("Access-Control-Allow-Headers")}} dans votre réponse HTTP coté serveur.
 

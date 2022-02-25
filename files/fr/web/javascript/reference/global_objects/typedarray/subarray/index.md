@@ -57,7 +57,7 @@ console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                             | {{Spec2('Typed Array')}} | Remplacée par ECMAScript 6.                     |
 | {{SpecName('ES6', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

@@ -44,7 +44,7 @@ var highlighting = browser.tabs.highlight(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)  qui sera remplie avec un objet  {{WebExtAPIRef('windows.Window')}} contenant des détails sur la fenêtre dont les onglets ont été mis en surbrillance. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)  qui sera remplie avec un objet  {{WebExtAPIRef('windows.Window')}} contenant des détails sur la fenêtre dont les onglets ont été mis en surbrillance. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité du navigateur
 

@@ -347,7 +347,7 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
 
     Le gestionnare d'événement {{domxref("IDBRequest.onsuccess", "request.onsuccess")}}, d'autre part, s'exécutera si la requête aboutit, que la base de données a été ouverte avec succès. Lorsque cela arrive, la propriété {{domxref("IDBRequest.result", "request.result")}} contient alors un objet représentant la base de données ouverte, qui nous permet de la manipuler. On stocke cette valeur dans la variable `db` qu'on a crée plus tôt pour pouvoir l'utiliser ensuite. On exécute également une fonction appelée `displayData()`, qu'on définira plus tard — elle affiche les données de la base de données dans le {{HTMLElement("ul")}}. On l'exécute dès à présent pour que les notes en base de données soient affichées dès que la page est chargée.
 
-5.  Pour en finir avec cette section, on ajoute le gestionnaire d'événement qui est  probablement le plus important, {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupdateneeded")}}. Il est exécuté si la base de données n'a pas déjà été créée ou si on veut ouvrir la base de données avec un numéro de version supérieur à celle qui existe (pour faire une mise à jour). Ajoutez le code suivant en dessous de votre gestionnaire précédent :
+5.  Pour en finir avec cette section, on ajoute le gestionnaire d'événement qui est  probablement le plus important, {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupdateneeded")}}. Il est exécuté si la base de données n'a pas déjà été créée ou si on veut ouvrir la base de données avec un numéro de version supérieur à celle qui existe (pour faire une mise à jour). Ajoutez le code suivant en dessous de votre gestionnaire précédent :
 
     ```js
     // Spécifie les tables de la BDD si ce n'est pas déjà pas fait
@@ -703,7 +703,7 @@ Voir [IndexedDB video store avec service worker en direct](https://mdn.github.io
 
 ### Enregistrer le service worker
 
-La première chose à noter est qu'il  a un peu plus de code placé dans le fichier JavaScript principal (voir [index.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js#L144)):
+La première chose à noter est qu'il  a un peu plus de code placé dans le fichier JavaScript principal (voir [index.js](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js#L144)):
 
 ```js
 // Enregistre un service worker pour contrôler le site hors-ligne

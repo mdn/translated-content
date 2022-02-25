@@ -12,8 +12,8 @@ CSSStyleRule représente une règle de style CSS unique. Il implémente l'interf
 La syntaxe est décrite à l'aide du format WebIDL.
 
     interface CSSStyleRule : CSSRule {
-        attribute DOMString selectorText;
-        readonly attribute CSSStyleDeclaration style;
+        attribute DOMString selectorText;
+        readonly attribute CSSStyleDeclaration style;
     };
 
 ## Properties
@@ -28,7 +28,7 @@ La syntaxe est décrite à l'aide du format WebIDL.
 | Specification                                                                                | Status                           | Comment           |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------- |
 | {{ SpecName('CSSOM', '#the-cssstylerule-interface', 'CSSStyleRule') }} | {{ Spec2('CSSOM') }}     | pas de changement |
-| {{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }} | {{ Spec2('DOM2 Style') }} |                   |
+| {{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }} | {{ Spec2('DOM2 Style') }} |                   |
 
 ## Compatibilité des navigateurs
 

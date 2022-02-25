@@ -72,7 +72,7 @@ if (name === 'Adam') {
 // ... etc.
 ```
 
-Peut-être ne comprenez‑vous pas (encore&nbsp;!) la syntaxe utilisée, mais vous l'imaginerez sans peine  — si nous n'avions pas de variables à disposition, nous devrions implémenter un bloc de code géant qui vérifierait quel était le nom saisi, puis afficherait un message approprié à ce nom. Cela est évidemment inefficace (le code est déjà plus volumineux avec seulement quatre possibilités) et il ne fonctionnerait certainement pas — il n'est pas possible de stocker tous les choix possibles.
+Peut-être ne comprenez‑vous pas (encore&nbsp;!) la syntaxe utilisée, mais vous l'imaginerez sans peine  — si nous n'avions pas de variables à disposition, nous devrions implémenter un bloc de code géant qui vérifierait quel était le nom saisi, puis afficherait un message approprié à ce nom. Cela est évidemment inefficace (le code est déjà plus volumineux avec seulement quatre possibilités) et il ne fonctionnerait certainement pas — il n'est pas possible de stocker tous les choix possibles.
 
 Les variables sont essentielles et à mesure que vous en apprendrez plus sur JavaScript, elles deviendront une seconde nature pour vous.
 
@@ -168,8 +168,8 @@ Dans ces lignes, nous venons de créer deux variables nommées respectivement `m
       document.body.appendChild(inputDiv);
 
       if(document.querySelectorAll('div').length > 1) {
-        inputForm.focus();
-      }
+        inputForm.focus();
+      }
 
       inputForm.addEventListener('change', executeCode);
     }
@@ -229,7 +229,7 @@ myName = 'Chris';
 myAge = 37;
 ```
 
-Revenez à la console maintenant et saisissez‑y ces deux lignes. Constatez que la console renvoie en confirmation la  valeur assignée à la variable dans chaque cas. Vous pouvez, à nouveau, faire renvoyer par la console les valeurs de variable en saisissant simplement son nom dans la console — essayez encore&nbsp;:
+Revenez à la console maintenant et saisissez‑y ces deux lignes. Constatez que la console renvoie en confirmation la  valeur assignée à la variable dans chaque cas. Vous pouvez, à nouveau, faire renvoyer par la console les valeurs de variable en saisissant simplement son nom dans la console — essayez encore&nbsp;:
 
 ```js
 myName;
@@ -294,7 +294,7 @@ let myName = 'Chris' ;
 myName = 'Bob' ;
 ```
 
-Encore une fois, c'est une décision sensée des concepteurs du langage. Il n'y a aucune bonne raison de redéclarer une variable —  cela rend les choses obscures.
+Encore une fois, c'est une décision sensée des concepteurs du langage. Il n'y a aucune bonne raison de redéclarer une variable —  cela rend les choses obscures.
 
 Pour ces raisons, et d'autres, nous recommandons d'utiliser `let` plutôt que `var`. Il n'y a pas de bonne raison d'utiliser `var`, sauf à rechercher la compatibilité avec de vieilles versions d'Internet Explorer (pas de support du `let` avant la version 11 ; le support de `let` par le navigateur Edge ne pose pas de problème).
 
@@ -309,7 +309,7 @@ myAge = 40;
 
 ### Aparté concernant les règles de nommage des variables
 
-Vous pouvez nommer une variable comme vous l'entendez, mais il y a des restrictions. Généralement, il convient de se limiter à l'emploi des caractères latins (0-9, a-z, A-Z)  et du underscore ( \_ ).
+Vous pouvez nommer une variable comme vous l'entendez, mais il y a des restrictions. Généralement, il convient de se limiter à l'emploi des caractères latins (0-9, a-z, A-Z)  et du underscore ( \_ ).
 
 - N'utilisez pas d'autres caractères&nbsp;; ils pourraient entraîner des erreurs ou être difficiles à comprendre pour un auditoire international.
 - N'utilisez pas le underscore comme premier caractère d'un nom de variable — cette façon d'opérer est utilisée dans certaines constructions JavaScript pour signer certaines spécificités&nbsp;; il pourrait y avoir confusion.
@@ -393,7 +393,7 @@ Toutefois, en réalité, un booléen sera plutôt utilisé ainsi&nbsp;:
 var test = 6 < 3;
 ```
 
-Cette expression utilise l'opérateur  «&nbsp;inférieur à&nbsp;» (`<`) pour tester si 6 est plus petit que 3. Comme vous pouvez vous y attendre, cette expression renverra `false`, car 6 n'est pas plus petit que 3&nbsp;! Vous en apprendrez bien plus à propos de ces opérateurs plus loin dans ce cours.
+Cette expression utilise l'opérateur  «&nbsp;inférieur à&nbsp;» (`<`) pour tester si 6 est plus petit que 3. Comme vous pouvez vous y attendre, cette expression renverra `false`, car 6 n'est pas plus petit que 3&nbsp;! Vous en apprendrez bien plus à propos de ces opérateurs plus loin dans ce cours.
 
 ### Tableaux
 

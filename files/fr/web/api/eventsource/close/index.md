@@ -37,8 +37,8 @@ var bouton = document.querySelector('button');
 var evtSource = new EventSource('sse.php');
 
 bouton.onclick = function() {
-  console.log('Connection fermée');
-  evtSource.close();
+  console.log('Connection fermée');
+  evtSource.close();
 }
 ```
 

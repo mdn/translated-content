@@ -81,7 +81,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 - `none`
   - : Aucun chemin de rognage n'est créé.
 
-> **Note :** Si [la valeur calculée](/fr/docs/Web/CSS/Valeur_calcul%C3%A9e) est différente de `none`, cela entraînera  la création d'un nouveau [contexte d'empilement](/fr/docs/Glossaire/Contexte_d_empilement) (de la même façon qu'{{cssxref("opacity")}} avec des valeurs différentes de 1).
+> **Note :** Si [la valeur calculée](/fr/docs/Web/CSS/Valeur_calcul%C3%A9e) est différente de `none`, cela entraînera  la création d'un nouveau [contexte d'empilement](/fr/docs/Glossaire/Contexte_d_empilement) (de la même façon qu'{{cssxref("opacity")}} avec des valeurs différentes de 1).
 
 ### Syntaxe formelle
 

@@ -29,7 +29,7 @@ Le constructeur **`Error`** crée un objet d'erreur. Des instances d'objets `Err
 
 Les erreurs d'exécution ont pour résultat la création et le déclenchement d'objets `Error`.
 
-Cette page documente l'utilisation de l'objet `Error` lui-même et son utilisation comme fonction constructeur. Pour une liste des propriétés et des méthodes héritées par les instances d'`Error`,  voir {{jsxref("Error.prototype")}}.
+Cette page documente l'utilisation de l'objet `Error` lui-même et son utilisation comme fonction constructeur. Pour une liste des propriétés et des méthodes héritées par les instances d'`Error`,  voir {{jsxref("Error.prototype")}}.
 
 ### Utilisation de `Error` comme fonction
 
@@ -155,7 +155,7 @@ try {
 
 #### Objet d'erreur personnalisé ES5
 
-> **Attention :** Tous les navigateurs incluent le constructeur `CustomError` dans la pile  d'appel lorsqu'une déclaration prototypale est utilisée.
+> **Attention :** Tous les navigateurs incluent le constructeur `CustomError` dans la pile  d'appel lorsqu'une déclaration prototypale est utilisée.
 
 ```js
 function CustomError(machin, message, nomFichier, numeroLigne) {

@@ -490,7 +490,7 @@ La plupart des fonctionnalités JavaScript standard peuvent être utilisées dan
 
 En revanche, un _worker_ ne pourra pas directement manipuler la page parente et notamment le DOM et les objets de la page. Il faudra effectuer ce traitement indirectement, via des messages.
 
-> **Note :** Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir  [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+> **Note :** Pour avoir une liste exhaustive des fonctionnalités disponibles pour les _workers_, voir  [les fonctions et interfaces disponibles pour les _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
 ## Spécifications
 

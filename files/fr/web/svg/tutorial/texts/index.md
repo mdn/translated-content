@@ -93,9 +93,9 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 ```xml
 <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
 <text>
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
-    A curve.
-  </textPath>
+  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+    A curve.
+  </textPath>
 </text>
 ```
 
@@ -105,9 +105,9 @@ Cet élément récupère via son attribut `xlink:href` un chemin arbitraire et a
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
 <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
 <text>
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
-    A curve.
-  </textPath>
+  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+    A curve.
+  </textPath>
 </text>
 
 <style><![CDATA[

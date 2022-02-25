@@ -233,7 +233,7 @@ C'est pour cela que la meilleure solution consiste à avoir trois champs de sais
 
 ## Exemples
 
-Dans l'exemple qui suit, on crée deux éléments d'interface utilisateur afin de choisir une date : le premier qui utilise un sélecteur natif `<input type="date">` et un second qui utilise trois éléments {{htmlelement("select")}}  qui permettra de choisir une date pour les anciens navigateurs qui ne prendraient pas en charge le contrôle natif.
+Dans l'exemple qui suit, on crée deux éléments d'interface utilisateur afin de choisir une date : le premier qui utilise un sélecteur natif `<input type="date">` et un second qui utilise trois éléments {{htmlelement("select")}}  qui permettra de choisir une date pour les anciens navigateurs qui ne prendraient pas en charge le contrôle natif.
 
 {{EmbedLiveSample('Exemples', 600, 100)}}
 
@@ -348,7 +348,7 @@ function populateDays(month) {
   // Si le mois est février, on calcule si l'année est bissextile
     var year = yearSelect.value;
     var leap = new Date(year, 1, 29).getMonth() == 1;
-    dayNum = leap ? 29 : 28;
+    dayNum = leap ? 29 : 28;
   }
 
   // on ajoute le bon nombre de jours dans autant

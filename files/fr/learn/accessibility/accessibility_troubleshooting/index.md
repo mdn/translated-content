@@ -92,7 +92,7 @@ Pouvez-vous énumérer deux autres idées d’amélioration qui rendraient le si
 
 ## Évaluation
 
-Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre enseignant / mentor pour qu'il la corrige. Si vous vous auto-apprenez, vous pouvez obtenir le guide de notation assez facilement en le demandant sur la [discussion thread for this exercise](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691),  ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn)  sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez d'abord l'exercice - il n'y a rien à gagner à tricher!
+Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre enseignant / mentor pour qu'il la corrige. Si vous vous auto-apprenez, vous pouvez obtenir le guide de notation assez facilement en le demandant sur la [discussion thread for this exercise](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691),  ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn)  sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez d'abord l'exercice - il n'y a rien à gagner à tricher!
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 

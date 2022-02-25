@@ -91,7 +91,7 @@ function couperSon () {
 
 | Spécification                                                                                                        | Status                               | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-createGain-GainNode', 'createGain()')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioContext-createGain-GainNode', 'createGain()')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateur
 

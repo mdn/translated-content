@@ -16,7 +16,7 @@ La différence entre `PUT` et {{HTTPMethod("POST")}} tient au fait que `PUT` est
 
 Une requête `POST` est habituellement envoyée via un [formulaire HTML](/en-US/docs/Web/Guide/HTML/Forms) et a pour résultat un changement sur le serveur. Dans ce cas, le type du contenu est sélectionné en mettant la chaîne de caractères adéquate dans l'attribut* {{htmlattrxref("enctype", "form")}} de l'élément {{HTMLElement("form")}} ou dans l'attribut {{htmlattrxref("formenctype", "input")}} de l'élément {{HTMLElement("input") }}, voir celui des éléments {{HTMLElement("button")}}*&nbsp;:
 
-- `application/`_`x-www-form-urlencoded`&nbsp;: les valeurs sont encodées sous forme de couples clé-valeur séparés par `'&'`, avec un `'='` entre la clé et la valeur. Les caractères non alphanumériques sont {{glossary("percent encoded")}}&nbsp;: c'est la raison pour laquelle ce type de format n'est pas adapté à une utilisation avec des données binaires  (utilisez `multipart/form-data` à la place)_
+- `application/`_`x-www-form-urlencoded`&nbsp;: les valeurs sont encodées sous forme de couples clé-valeur séparés par `'&'`, avec un `'='` entre la clé et la valeur. Les caractères non alphanumériques sont {{glossary("percent encoded")}}&nbsp;: c'est la raison pour laquelle ce type de format n'est pas adapté à une utilisation avec des données binaires  (utilisez `multipart/form-data` à la place)_
 - _`multipart/form-data`_
 - _`text/plain`_
 

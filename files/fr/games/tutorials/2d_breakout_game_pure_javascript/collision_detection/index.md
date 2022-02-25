@@ -134,6 +134,6 @@ Exercice: changez la couleur de la balle lorsqu'elle frappe une brique.
 
 ## Prochaine étape
 
-Nous ne sommes plus très loin de la fin ;  poursuivons ! Dans le huitième chapitre, nous verrons comment[ Track the score and win](/fr/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
+Nous ne sommes plus très loin de la fin ;  poursuivons ! Dans le huitième chapitre, nous verrons comment[ Track the score and win](/fr/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

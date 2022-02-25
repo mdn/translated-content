@@ -48,7 +48,7 @@ Un objet {{domxref("ImageData")}}  contenant les données de l'image pour le r
 
 ### Utilisation de la méthode  `getImageData`
 
-Ceci est juste un petit exemple qui utilise la méthode getImageData. Pour plus d'informations, visitez  [Manipulation de pixels avec canvas](/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas) et l'objet {{domxref("ImageData")}}.
+Ceci est juste un petit exemple qui utilise la méthode getImageData. Pour plus d'informations, visitez  [Manipulation de pixels avec canvas](/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas) et l'objet {{domxref("ImageData")}}.
 
 #### HTML
 

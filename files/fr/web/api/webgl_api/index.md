@@ -150,8 +150,8 @@ Ci-dessous, vous pourrez trouver divers guides pour vous aider à apprendre les
 | ---------------------------------------- | ------------------------------------ | --------------------------------------------------------- |
 | {{SpecName('WebGL')}}             | {{Spec2('WebGL')}}             | Définition. Basée sur OpenGL ES 2.0                       |
 | {{SpecName('WebGL2')}}             | {{Spec2('WebGL2')}}             | Construite au-dessus de WebGL 1. Basée sur OpenGL ES 3.0. |
-| {{SpecName('OpenGL ES 2.0')}} | {{Spec2('OpenGL ES 2.0')}} |                                                           |
-| {{SpecName('OpenGL ES 3.0')}} | {{Spec2('OpenGL ES 3.0')}} |                                                           |
+| {{SpecName('OpenGL ES 2.0')}} | {{Spec2('OpenGL ES 2.0')}} |                                                           |
+| {{SpecName('OpenGL ES 3.0')}} | {{Spec2('OpenGL ES 3.0')}} |                                                           |
 
 ## Compatibilité des navigateurs
 

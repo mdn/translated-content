@@ -46,9 +46,9 @@ console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
 | Spécification                                                                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES3')}}                                                                                                 | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.9.5.4', 'Date.prototype.toTimeString')}}                             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.9.5.4', 'Date.prototype.toTimeString')}}                             | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -279,7 +279,7 @@ element.style.setProperty("--ma-variable", varJS + 4);
 
 {{Compat("css.properties.custom-property")}}
 
-> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification  (cf. {{bug(985838)}})
+> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification  (cf. {{bug(985838)}})
 
 ## Voir aussi
 

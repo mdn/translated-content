@@ -37,7 +37,7 @@ mediaQueryList.addListener(function(mql) {
 
 | Specification                                                                                            | Status                           | Comment |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#handler-window-onbeforeprint', 'onbeforeprint')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', '#handler-window-onbeforeprint', 'onbeforeprint')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilité des navigateurs
 

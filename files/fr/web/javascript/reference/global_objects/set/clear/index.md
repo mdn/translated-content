@@ -46,7 +46,7 @@ monSet.has("truc")  // false
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-set.prototype.clear', 'Set.prototype.clear')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

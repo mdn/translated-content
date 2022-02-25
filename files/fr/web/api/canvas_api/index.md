@@ -7,7 +7,7 @@ translation_of: Web/API/Canvas_API
 
 Ajouté en [HTML5](/fr/docs/Web/Guide/HTML/HTML5), l'élément {{HTMLElement("canvas")}} est un nouvel élément qui peut être utilisé pour dessiner des graphismes via des scripts [JavaScript](/fr/docs/JavaScript). Par exemple, Il peut être utilisé pour dessiner des graphes, faire des compositions de photos, des animations, ou même faire du traitement ou de l'affichage de vidéos en temps réel.
 
-Les applications Mozilla ont commencé à supporter \<canvas> à partir de Gecko 1.8 (c'est-à-dire [Firefox 1.5](/fr/docs/Firefox_1.5_pour_les_développeurs)). L'élément a été introduit à l'origine par Apple pour le [Dashboard d'OS X](http://www.apple.com/macosx/features/dashboard/) et pour Safari. Internet Explorer supporte \<canvas> depuis la version 9 et ultérieures, pour les versions précédentes d'IE, une page peut effectuer ce support de \<canvas> en incluant un script depuis le projet [Explorer Canvas  ](http://excanvas.sourceforge.net/)de Google.
+Les applications Mozilla ont commencé à supporter \<canvas> à partir de Gecko 1.8 (c'est-à-dire [Firefox 1.5](/fr/docs/Firefox_1.5_pour_les_développeurs)). L'élément a été introduit à l'origine par Apple pour le [Dashboard d'OS X](http://www.apple.com/macosx/features/dashboard/) et pour Safari. Internet Explorer supporte \<canvas> depuis la version 9 et ultérieures, pour les versions précédentes d'IE, une page peut effectuer ce support de \<canvas> en incluant un script depuis le projet [Explorer Canvas  ](http://excanvas.sourceforge.net/)de Google.
 
 L'élément \<canvas> est aussi utilisé par [WebGL](/fr/docs/Web/API/WebGL_API) pour afficher des graphismes 3D avec accélération matérielle sur des pages web.
 
@@ -38,8 +38,8 @@ ctx.fillRect(10, 10, 100, 100);
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'green';
@@ -134,7 +134,7 @@ Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebG
 
 | Specification                                                                                                | Status                           | Comment |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Voir aussi
 

@@ -41,7 +41,7 @@ Ce type d'objet est conçu pour contenir de petit extraits audio, durant génér
 
 ## Exemple
 
-L'exemple suivant montre comment créer un  `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](http://mdn.github.io/audio-buffer/) est également consultable.
+L'exemple suivant montre comment créer un  `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](http://mdn.github.io/audio-buffer/) est également consultable.
 
 ```js
 // Stéréo

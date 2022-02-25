@@ -33,7 +33,7 @@ sayings.has("bird"); // false
 sayings.delete("dog");
 
 for (var [key, value] of sayings) {
-  console.log(key + " goes " + value);
+  console.log(key + " goes " + value);
 }
 // "cat goes meow"
 // "elephant goes toot"

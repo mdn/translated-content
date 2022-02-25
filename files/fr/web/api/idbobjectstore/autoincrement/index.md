@@ -81,7 +81,7 @@ function addData() {
 
 | Spécification                                                                                                | Statut                       | Commentaire |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-autoIncrement', 'autoIncrement')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-autoIncrement', 'autoIncrement')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité avec les navigateurs
 

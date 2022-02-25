@@ -11,7 +11,7 @@ original_slug: Web/API/IDBDatabase/onerror
 ---
 {{APIRef("IndexedDB")}}
 
-Le gestionnaire d'événement **`onerror`**, rattaché à  l'interface `IDBDatabase`, s’exécute au déclenchement de l'événement `error` qui se produit lorsque la connexion à la base de donnée échoue.
+Le gestionnaire d'événement **`onerror`**, rattaché à  l'interface `IDBDatabase`, s’exécute au déclenchement de l'événement `error` qui se produit lorsque la connexion à la base de donnée échoue.
 
 {{AvailableInWorkers}}
 
@@ -59,7 +59,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 | Spécification                                                                            | État                         | Commentaires |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-onerror', 'onerror')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-onerror', 'onerror')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

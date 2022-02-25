@@ -314,7 +314,7 @@ Les éléments qui défilent avec du contenu utilisant `fixed` ou `sticky` peuve
 
 | Spécification                                                                            | État                                     | Commentaires                |
 | ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------- |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}                 |                             |
+| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}                 |                             |
 | {{SpecName('CSS3 Positioning','#position-property','position')}}     | {{Spec2('CSS3 Positioning')}} | Ajout de la valeur `sticky` |
 
 {{cssinfo}}

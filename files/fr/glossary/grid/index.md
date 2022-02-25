@@ -70,4 +70,4 @@ Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes 
 
 ### En lire plus
 
-- Guide des grilles CSS : _[Les  concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_
+- Guide des grilles CSS : _[Les  concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_

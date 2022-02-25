@@ -24,7 +24,7 @@ Les programmes shaders ont accès à trois types de stockage de données, chacun
 
 ## Types de données GLSL
 
-<\<documenter les types de base, les vecteurs, etc. ; voir [Data Type (GLSL)](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>)  sur le wiki WebGL de Khronos >>
+<\<documenter les types de base, les vecteurs, etc. ; voir [Data Type (GLSL)](<https://www.khronos.org/opengl/wiki/Data_Type_(GLSL)>)  sur le wiki WebGL de Khronos >>
 
 ## Variables GLSL
 

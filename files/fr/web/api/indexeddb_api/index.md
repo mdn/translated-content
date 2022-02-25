@@ -75,15 +75,15 @@ Pour accèder à une base de données, il faut apeller [`open()`](/fr/docs/Web/A
 Cette spécification provoque des évènements avec les interfaces personnalisées suivantes:
 
 - {{domxref("IDBVersionChangeEvent")}}
-  - : `L'interface IDBVersionChangeEvent` indique que la version de la base de données à changé, résultat de la fonction de saisie d'un évènement  {{domxref("IDBOpenDBRequest.onupgradeneeded")}}.
+  - : `L'interface IDBVersionChangeEvent` indique que la version de la base de données à changé, résultat de la fonction de saisie d'un évènement  {{domxref("IDBOpenDBRequest.onupgradeneeded")}}.
 
 ### Interfaces obsolètes
 
 Une précedente version des spécifications a défini ces interfaces, désormais supprimées. Elles sont toujours documentées dans le cas où vous avez besoin de mettre à jour du code déja écrit :
 
 - {{domxref("IDBVersionChangeRequest")}} {{obsolete_inline}}
-  - : Représente une requête de changement de version de la base de données. Le moyen pour changer de version de la base de données a désormais changé (avec un appel de {{domxref("IDBFactory.open")}} sans aussi appeler {{domxref("IDBDatabase.setVersion")}}), et l'interface  {{domxref("IDBOpenDBRequest")}} a désormais la fonction de l'ancienne (supprimée) {{domxref("IDBVersionChangeRequest")}}.
-- {{domxref("IDBDatabaseException")}}  {{obsolete_inline}}
+  - : Représente une requête de changement de version de la base de données. Le moyen pour changer de version de la base de données a désormais changé (avec un appel de {{domxref("IDBFactory.open")}} sans aussi appeler {{domxref("IDBDatabase.setVersion")}}), et l'interface  {{domxref("IDBOpenDBRequest")}} a désormais la fonction de l'ancienne (supprimée) {{domxref("IDBVersionChangeRequest")}}.
+- {{domxref("IDBDatabaseException")}}  {{obsolete_inline}}
   - : Représente une exception (erreur) qui peut survenir durant les opérations sur la base de données.
 - {{domxref("IDBTransactionSync")}} {{obsolete_inline}}
   - : Version synchrone de {{domxref("IDBTransaction")}}.

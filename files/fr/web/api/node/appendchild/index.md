@@ -12,7 +12,7 @@ translation_of: Web/API/Node/appendChild
 ---
 {{APIRef("DOM")}}
 
-La méthode **`Node.appendChild()`** ajoute un nœud à la fin de la liste des enfants d'un nœud parent spécifié. Si l'enfant donné est une référence à un nœud existant dans le document, `appendChild()` le déplace  de sa position actuelle vers une nouvelle position (il n'est pas nécessaire de supprimer le noeud sur son noeud parent avant de l'ajouter à un autre).
+La méthode **`Node.appendChild()`** ajoute un nœud à la fin de la liste des enfants d'un nœud parent spécifié. Si l'enfant donné est une référence à un nœud existant dans le document, `appendChild()` le déplace  de sa position actuelle vers une nouvelle position (il n'est pas nécessaire de supprimer le noeud sur son noeud parent avant de l'ajouter à un autre).
 
 Cela signifie qu'un noeud ne peut pas être à deux points du document simultanément. Donc, si le nœud a déjà un parent, le nœud est d'abord retiré, puis ajouté à la nouvelle position. Le {{domxref("Node.cloneNode()")}} peut être utilisé pour réaliser une copie de noeud avant de l'ajouter à son nouveau parent. Notez que les copies faites avec `cloneNode` ne seront pas automatiquement synchronisées.
 

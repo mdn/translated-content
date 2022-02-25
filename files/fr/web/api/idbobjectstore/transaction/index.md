@@ -76,7 +76,7 @@ function addData() {
 
 | Spécification                                                                                        | Statut                       | Commentaire |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-transaction', 'transaction')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-transaction', 'transaction')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

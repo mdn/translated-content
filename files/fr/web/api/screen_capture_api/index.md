@@ -42,7 +42,7 @@ L'API Screen Capture n'a pas sa propre interface. Cependant, elle ajoute une mé
 ### Interface MediaDevices
 
 - {{domxref("MediaDevices.getDisplayMedia()")}}
-  - : La méthode `getDisplayMedia()` est ajoutée à l'interface `MediaDevices`. Similaire à {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, cette méthode crée une promise qui  method creates a promise qui résout un {{domxref("MediaStream")}} contenant  la zone d'affichage sélectionnée par l'utilisateur, dans un format qui correspond aux options spécifiées.
+  - : La méthode `getDisplayMedia()` est ajoutée à l'interface `MediaDevices`. Similaire à {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}, cette méthode crée une promise qui  method creates a promise qui résout un {{domxref("MediaStream")}} contenant  la zone d'affichage sélectionnée par l'utilisateur, dans un format qui correspond aux options spécifiées.
 
 ## Ajouts aux dictionnaires actuels
 
@@ -51,7 +51,7 @@ L'API Screen Capture ajoute des propriétés au dictionnaire suivant définit pa
 ### MediaTrackConstraints
 
 - {{domxref("MediaTrackConstraints.cursor")}}
-  - : Un {{domxref("ConstrainDOMString")}}  indiquant si le curseur doit ou non être inclus dans le flux de la surface d'affichage capturée, et s'il doit toujours être visible ou s'il ne doit l'être que lorsque la souris est en mouvement.
+  - : Un {{domxref("ConstrainDOMString")}}  indiquant si le curseur doit ou non être inclus dans le flux de la surface d'affichage capturée, et s'il doit toujours être visible ou s'il ne doit l'être que lorsque la souris est en mouvement.
 - {{domxref("MediaTrackConstraints.displaySurface")}}
   - : Un {{domxref("ConstrainDOMString")}} indiquant quel type de surface d'affichage doit être capturé. La valeur peut être `application`, `browser`, `monitor`, ou `window`.
 - {{domxref("MediaTrackConstraints.logicalSurface")}}
@@ -86,7 +86,7 @@ Le dictionnaire suivant est difinit par l'API Screen Capture.
 
 ## Validation de Feature Policy
 
-{{Glossary("User agent", "User agents")}} qui supportent  Feature Policy (soit en utilisant les entetes HTTP {{HTTPHeader("Feature-Policy")}} ou l'attribut {{HTMLElement("iframe")}}{{htmlattrxref("allow", "iframe")}} peut spécifier la volonté d'utiliser l'API Screen Capture API en utilisant la directive Policy Controle `display-capture`:
+{{Glossary("User agent", "User agents")}} qui supportent  Feature Policy (soit en utilisant les entetes HTTP {{HTTPHeader("Feature-Policy")}} ou l'attribut {{HTMLElement("iframe")}}{{htmlattrxref("allow", "iframe")}} peut spécifier la volonté d'utiliser l'API Screen Capture API en utilisant la directive Policy Controle `display-capture`:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">

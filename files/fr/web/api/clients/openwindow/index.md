@@ -36,7 +36,7 @@ onotificationclick = function(event) {
   clients.matchAll().then(function(clients) {
     for (i = 0; i < clients.length; i++) {
       if (clients[i].url === event.data.url) {
-        // La fenêtre existe, focus dessus.
+        // La fenêtre existe, focus dessus.
         found = true;
         clients[i].focus();
         break;

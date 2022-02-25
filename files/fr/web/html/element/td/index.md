@@ -21,7 +21,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 - {{htmlattrdef("colspan")}}
 
-  - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. La valeur par défaut est 1, si la valeur est 0, la cellule s'étend jusqu'à la fin du  {{HTMLElement("colgroup")}} auquel appartient la cellule, même si celui-ci est défini implicitement. Des valeurs supérieures à 1000 peuvent être considérées comme incorrectes et seront interprétées comme valant la valeur par défaut (1).
+  - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. La valeur par défaut est 1, si la valeur est 0, la cellule s'étend jusqu'à la fin du  {{HTMLElement("colgroup")}} auquel appartient la cellule, même si celui-ci est défini implicitement. Des valeurs supérieures à 1000 peuvent être considérées comme incorrectes et seront interprétées comme valant la valeur par défaut (1).
 
     > **Note :** En {{HTMLVersionInline(5)}} cet attribut ne peut valoir qu'un nombre strictement positif car [il ne doit pas être utilisé pour faire chevaucher des cellules](https://dev.w3.org/html5/spec/single-page.html#attr-tdth-colspan). Par ailleurs, Firefox est le seul navigateur supportant la valeur 0 définie par la spécification {{HTMLVersionInline(4.01)}}.
 
@@ -46,7 +46,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     - `center` : le contenu de la cellule est centré horizontalement
     - `right` : le contenu de la cellule est aligné à droite de la cellule
     - `justify` : insert des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié
-    - `char` : aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  {{htmlattrxref("char", "td")}} et {{htmlattrxref("charoff", "td")}} {{unimplemented_inline(2212)}}.
+    - `char` : aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  {{htmlattrxref("char", "td")}} et {{htmlattrxref("charoff", "td")}} {{unimplemented_inline(2212)}}.
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
@@ -199,7 +199,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
       <th scope="row">Omission de balises</th>
       <td>
         La balise de début est obligatoire. La balise de fin peut être absente
-        si l'élément est immédiatement suivi par  un élément
+        si l'élément est immédiatement suivi par  un élément
         {{HTMLElement("th")}} ou un élément {{HTMLElement("td")}}
         ou s'il n'y a plus aucune donnée dans l'élément parent.
       </td>
@@ -223,8 +223,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 | Spécification                                                                                    | État                             | Commentaires |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','tables.html#the-td-element','td element')}}     | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-td-element','td element')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG','tables.html#the-td-element','td element')}}     | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C','tabular-data.html#the-td-element','td element')}} | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

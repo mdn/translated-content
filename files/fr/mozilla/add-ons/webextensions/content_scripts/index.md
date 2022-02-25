@@ -47,7 +47,7 @@ Il est possible de charger un script de contenu dans une page web de trois mani�
 
 1.  **Lors de la phase d'installation, pour les pages qui correspondent à certains motifs d'URL :** en utilisant la clé [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) dans le fichier `manifest.json`, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/Add-ons/WebExtensions/Match_patterns).
 2.  **Lors de l'exécution, pour les pages qui correspondent à certains motifs d'URL :** en utilisant l'API {{WebExtAPIRef("contentScripts")}}, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/Add-ons/WebExtensions/Match_patterns). Cette méthode est la version dynamique de la première méthode.
-3.  **Lors de l'exécution, pour certains onglets spécifiques :** en utilisant la méthode  [`tabs.executeScript()`](/fr/Add-ons/WebExtensions/API/Tabs/executeScript), vous pouvez charger un script de contenu dans un onglet spécifique quand vous le souhaitez (par exemple lorsqu'un utilisateur clique sur un [bouton d'action du navigateur](/fr/Add-ons/WebExtensions/Browser_action)).
+3.  **Lors de l'exécution, pour certains onglets spécifiques :** en utilisant la méthode  [`tabs.executeScript()`](/fr/Add-ons/WebExtensions/API/Tabs/executeScript), vous pouvez charger un script de contenu dans un onglet spécifique quand vous le souhaitez (par exemple lorsqu'un utilisateur clique sur un [bouton d'action du navigateur](/fr/Add-ons/WebExtensions/Browser_action)).
 
 Il n'y a qu'une seule portée globale pour chaque _frame_ et pour chaque extension. Cela signifie que les variables d'un script de contenu peuvent être accédées directement par un autre script de contenu, indépendamment de la manière dont le script de contenu a été chargé.
 
@@ -173,7 +173,7 @@ L'ensemble des propriétés et méthodes de l'API [`storage`](/fr/Add-ons/WebExt
 
 ### XHR et Fetch
 
-Les scripts de contenu peuvent effectuer des requêtes en utilisant les API classiques  [`window.XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et [`window.fetch()`](/fr/docs/Web/API/Fetch_API).
+Les scripts de contenu peuvent effectuer des requêtes en utilisant les API classiques  [`window.XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et [`window.fetch()`](/fr/docs/Web/API/Fetch_API).
 
 Les scripts de contenu obtiennent les mêmes privilèges interdomaines que le reste de l'extension : si l'extension a demandé un accès interdomaine pour un domaine à l'aide de la clé [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions) dans le fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ses scripts de contenu auront également accès à ce domaine.
 
@@ -476,7 +476,7 @@ La même chose s'applique pour [`setTimeout()`](/fr/docs/Web/API/WindowTimers/se
 > var original = console.log;
 >
 > console.log = function() {
->   original(true);
+>   original(true);
 > }
 > ```
 >

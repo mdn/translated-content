@@ -224,23 +224,23 @@ document.addEventListener('keydown', (event) => {
     return;
   }
 
-  if (event.ctrlKey) {
-    // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
-    // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
-    alert(`Combinaison de ctrlKey + ${nomTouche}`);
-  } else {
-    alert(`Touche pressée ${nomTouche}`);
-  }
+  if (event.ctrlKey) {
+    // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
+    // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
+    alert(`Combinaison de ctrlKey + ${nomTouche}`);
+  } else {
+    alert(`Touche pressée ${nomTouche}`);
+  }
 }, false);
 
 document.addEventListener('keyup', (event) => {
-  const nomTouche = event.key;
+  const nomTouche = event.key;
 
-  // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
-  // Aussi event.ctrlKey est false.
-  if (nomTouche === 'Control') {
-    alert('La touche Control a été relâchée');
-  }
+  // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
+  // Aussi event.ctrlKey est false.
+  if (nomTouche === 'Control') {
+    alert('La touche Control a été relâchée');
+  }
 }, false);
 
 </script>
@@ -255,7 +255,7 @@ document.addEventListener('keyup', (event) => {
 
 | Spécification                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('UI Events', '#interface-keyboardevent', 'KeyboardEvent')}} | {{Spec2('UI Events')}} |             |
+| {{SpecName('UI Events', '#interface-keyboardevent', 'KeyboardEvent')}} | {{Spec2('UI Events')}} |             |
 
 La spécification d'interface `KeyboardEvent` est passée par de nombreuses versions préliminaires, d'abord sous DOM Events Level 2 où elle a été supprimée du fait qu'aucun consensus n'avait émergé, puis sous DOM Events Level 3. Cela conduit à l'implémentation de méthodes d'initialisation non standard, la version ancienne DOM Events Level 2, {{domxref("KeyboardEvent.initKeyEvent()")}} par les navigateurs Gecko et la version prémiminaire DOM Events Level 3, {{domxref("KeyboardEvent.initKeyboardEvent()")}} par d'autres navigateurs. Tous deux ont été remplacés par l'utilisation moderne d'un constructeur : {{domxref ("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
 

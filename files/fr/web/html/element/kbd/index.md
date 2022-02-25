@@ -25,7 +25,7 @@ Cet élément ne contient que [les attributs universels](/fr/docs/Web/HTML/Attri
 D'autres éléments peuvent être utilisés en association avec `<kbd>` afin de représenter certains scénarios plus spécifiques :
 
 - Imbriquer un élément `<kbd>` dans un autre élément `<kbd>` représente une touche ou une unité de saisie au sein d'une saisie plus grande. Cf. {{anch("Représenter les frappes de touches dans une saisie")}} ci-après.
-- Imbriquer un élément `<kbd>` dans un élément  {{HTMLElement("samp")}} permet d'indiquer que la saisie a été restituée (_echo_) à l'utilisateur. Cf. {{anch("Saisie restituée")}}, ci-après.
+- Imbriquer un élément `<kbd>` dans un élément  {{HTMLElement("samp")}} permet d'indiquer que la saisie a été restituée (_echo_) à l'utilisateur. Cf. {{anch("Saisie restituée")}}, ci-après.
 - Imbriquer un élément `<samp>` dans un élément `<kbd>` permet de représenter des saisies basées sur le texte présenté par le système (cela peut être le nom de menus, d'éléments de menu ou le nom de bouttons affichés à l'écran). Cf. {{anch("Représenter les options de saisies à l'écran")}} ci-après..
 
 > **Note :** Il est possible de définir un style pour surcharger la mise en forme par défaut du navigateur pour l'élément `<kbd>`. À ce titre, on gardera à l'esprit que les préférences et feuilles de style de l'utilisateur peuvent surcharger la mise en forme du site.
@@ -75,7 +75,7 @@ On peut alors ajouter un peu de CSS :
 
 ##### CSS
 
-On ajoute un règle pour les les éléments `<kbd>` avec la classe  `"key"` afin de représenter les touches d'un clavier :
+On ajoute un règle pour les les éléments `<kbd>` avec la classe  `"key"` afin de représenter les touches d'un clavier :
 
 ```css
 kbd.key {
@@ -123,7 +123,7 @@ En imbriquant un élément `<kbd>` dans un élément {{HTMLElement("samp")}}, on
 
 ### Représenter les options de saisies à l'écran
 
-Imbriquer un élément `<samp>` dans un élément `<kbd>`  représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
+Imbriquer un élément `<samp>` dans un élément `<kbd>`  représente une saisie basée sur du texte affiché par le système (par exemple des noms de menu, d'éléments de menu, des noms de boutons affichés à l'écran, etc.).
 
 #### HTML
 

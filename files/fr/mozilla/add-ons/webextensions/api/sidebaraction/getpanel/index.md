@@ -33,7 +33,7 @@ var gettingPanel = browser.sidebarAction.getPanel(
   - : `object`. Un objet avec les propriétés suivantes :
 
     - `tabId`{{optional_inline}}
-      - : `integer`.  Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.
+      - : `integer`.  Obtenir le panneau pour la barre latérale spécifique à l'onglet donné.
     - `windowId` {{optional_inline}}
       - : `integer`. Obtenir le panneau pour la barre latérale spécifique à la fenêtre donnée.
 

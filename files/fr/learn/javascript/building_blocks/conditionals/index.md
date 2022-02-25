@@ -171,7 +171,7 @@ Les opérateurs de comparaison sont utilisés pour tester les conditions dans no
 
 > **Note :** Revoyez le contenu du lien précédent si vous voulez vous rafraîchir la mémoire.
 
-Nous souhaitons mentionner à propos des tests des valeurs booléennes (`true`/`false`) un modèle courant que vous rencontrerez souvent. Toute valeur autre que `false`, `undefined`, `null`, `0`, `NaN` ou une chaîne vide  (`''`) renvoie `true` lorsqu'elle est testée dans une structure conditionnelle, vous pouvez donc simplement utiliser un nom de variable pour tester si elle est `true`, ou même si elle existe (c'est-à-dire si elle n'est pas `undefined`).
+Nous souhaitons mentionner à propos des tests des valeurs booléennes (`true`/`false`) un modèle courant que vous rencontrerez souvent. Toute valeur autre que `false`, `undefined`, `null`, `0`, `NaN` ou une chaîne vide  (`''`) renvoie `true` lorsqu'elle est testée dans une structure conditionnelle, vous pouvez donc simplement utiliser un nom de variable pour tester si elle est `true`, ou même si elle existe (c'est-à-dire si elle n'est pas `undefined`).
 Par exemple :
 
 ```js
@@ -217,7 +217,7 @@ Même si tout le code fonctionne ensemble, chaque déclaration `if...else` fonct
 Si vous voulez tester plusieurs conditions sans imbriquer des instructions `if...else` , les [opérateurs logiques](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques) pourront vous rendre service. Quand ils sont utilisés dans des conditions, les deux premiers sont représentés comme ci dessous :
 
 - `&&` — AND&nbsp;; vous permet d'enchaîner deux ou plusieurs expressions de sorte que toutes doivent être individuellement égales à `true` pour que l'enemble de l'expression retourne `true`.
-- `||` — OR&nbsp;; vous permet d'enchaîner deux ou plusieurs expressions ensemble de sorte qu'il suffit qu'une au plus soit évaluée comme étant  `true` pour que l'ensemble de l'expression renvoie `true`.
+- `||` — OR&nbsp;; vous permet d'enchaîner deux ou plusieurs expressions ensemble de sorte qu'il suffit qu'une au plus soit évaluée comme étant  `true` pour que l'ensemble de l'expression renvoie `true`.
 
 Pour vous donner un exemple de AND, le morceau de code précedent peut être réécrit ainsi&nbsp;:
 
@@ -241,7 +241,7 @@ if (camionDeGlaces || etatDeLaMaison === 'on fire') {
 }
 ```
 
-Le dernier type d'opérateur logique, NOT, exprimé par l'opérateur `!`,  peut s'utiliser pour nier une expression. Combinons‑le avec OR dans cet exemple :
+Le dernier type d'opérateur logique, NOT, exprimé par l'opérateur `!`,  peut s'utiliser pour nier une expression. Combinons‑le avec OR dans cet exemple :
 
 ```js
 if (!(camionDeGlaces || etatDeLaMaison === 'on fire')) {
@@ -279,7 +279,7 @@ if (x === 5 || x === 7 || x === 10 ||x === 20) {
 
 ## Instruction switch
 
-Les Instructions `if...else`  font bien le travail d'aiguiller la programmation selon des conditions, mais elles ne sont pas sans inconvénient. Elles sont principalement adaptées aux cas où vous avez un choix binaire, chacun nécessitant une quantité raisonnable de code à exécuter, et/ou au cas où les conditions sont complexes (par ex. plusieurs opérateurs logiques). Si vous voulez juste fixer la valeur d'une variable à un choix donné ou afficher une déclaration particulière en fonction d'une condition, cette syntaxe peut devenir un peu lourde, surtout si le nombre de choix est important.
+Les Instructions `if...else`  font bien le travail d'aiguiller la programmation selon des conditions, mais elles ne sont pas sans inconvénient. Elles sont principalement adaptées aux cas où vous avez un choix binaire, chacun nécessitant une quantité raisonnable de code à exécuter, et/ou au cas où les conditions sont complexes (par ex. plusieurs opérateurs logiques). Si vous voulez juste fixer la valeur d'une variable à un choix donné ou afficher une déclaration particulière en fonction d'une condition, cette syntaxe peut devenir un peu lourde, surtout si le nombre de choix est important.
 
 Les [instructions switch](/fr/docs/Web/JavaScript/Reference/Instructions/switch) sont vos amies — elles prennent une seule valeur ou expression en entrée, puis examinent une palette de choix jusqu'à trouver celui qui correspond, et exécutent le code qui va avec. Voici un peu de pseudo-code, pour vous donner l'idée&nbsp;:
 
@@ -308,9 +308,9 @@ Ici nous avons
 4.  Le code exécuté si l'expression/valeur de `case` correspond à celles de `switch`.
 5.  Une déclaration `break`, suivie d'un point‑virgule. Si le choix précédent correspond à l'expression/valeur, le navigateur va stopper l'exécution du bloc de code ici et continuer après l'instruction **switch**.
 6.  Vous pouvez rajouter autant de **cas** que vous le souhaitez. (points 3–5)
-7.  Le mot‑clé `default`,  suivi d'une même structure de code qu'aux points 3-5, sauf que `default` n'a pas de choix après lui et n'a donc pas besoin de l'instruction `break`  puisqu'il n'y a plus rien à exécuter après ce bloc. C'est l'option `default` qui sera exécutée si aucun choix ne correspond.
+7.  Le mot‑clé `default`,  suivi d'une même structure de code qu'aux points 3-5, sauf que `default` n'a pas de choix après lui et n'a donc pas besoin de l'instruction `break`  puisqu'il n'y a plus rien à exécuter après ce bloc. C'est l'option `default` qui sera exécutée si aucun choix ne correspond.
 
-> **Note :** Vous n'avez pas à inclure la section  `default` — elle peut être omise en toute sécurité s'il n'y a aucune chance que l'expression finisse par égaler une valeur inconnue. À contrario, vous devez l'inclure s'il est possible qu'il y ait des cas inconnus.
+> **Note :** Vous n'avez pas à inclure la section  `default` — elle peut être omise en toute sécurité s'il n'y a aucune chance que l'expression finisse par égaler une valeur inconnue. À contrario, vous devez l'inclure s'il est possible qu'il y ait des cas inconnus.
 
 ### Un exemple de switch
 
@@ -541,7 +541,7 @@ window.addEventListener('load', updateCode);
 
 ## Activité&nbsp;: plus de choix de couleurs
 
-Nous allons reprendre l'exemple de l'opérateur ternaire vu plus haut et transformer cet opérateur ternaire en une directive `switch`  qui nous permettra une plus grande variété de choix pour le site web tout simple. Voyez l'élément {{htmlelement("select")}} — cette fois, il n'y a pas deux options de thème, mais cinq. Il vous faut ajouter une directive `switch` au dessous du commentaire  `// AJOUT D'UNE DIRECTIVE SWITCH`&nbsp;:
+Nous allons reprendre l'exemple de l'opérateur ternaire vu plus haut et transformer cet opérateur ternaire en une directive `switch`  qui nous permettra une plus grande variété de choix pour le site web tout simple. Voyez l'élément {{htmlelement("select")}} — cette fois, il n'y a pas deux options de thème, mais cinq. Il vous faut ajouter une directive `switch` au dessous du commentaire  `// AJOUT D'UNE DIRECTIVE SWITCH`&nbsp;:
 
 - Elle doit accepter la variable `choice` comme expression d'entrée.
 - Pour chaque cas, le choix doit être égal à une des valeurs possibles pouvant être choisies, c'est-à-dire blanc, noir, mauve, jaune ou psychédélique.

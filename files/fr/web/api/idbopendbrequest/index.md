@@ -21,7 +21,7 @@ L'interface **`IDBOpenDBRequest`** de l'API IndexedDB donne un accès aux rés
 
 ## Propriétés
 
-_Hérite  des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}_.
+_Hérite  des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref("EventTarget")}}_.
 
 ### Évènements
 
@@ -77,12 +77,12 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
   // définit quels éléments de données l'objet de stockage contiendra.
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
-  objectStore.createIndex("notified", "notified", { unique: false });
+  objectStore.createIndex("hours", "hours", { unique: false });
+  objectStore.createIndex("minutes", "minutes", { unique: false });
+  objectStore.createIndex("day", "day", { unique: false });
+  objectStore.createIndex("month", "month", { unique: false });
+  objectStore.createIndex("year", "year", { unique: false });
+  objectStore.createIndex("notified", "notified", { unique: false });
 };
 ```
 
@@ -91,7 +91,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 | Spécification                                                                                        | Statut                           | Commentaire         |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
 | {{SpecName('IndexedDB', '#idl-def-IDBOpenDBRequest', 'IDBOpenDBRequest')}} | {{Spec2('IndexedDB')}}     | Définition initiale |
-| {{SpecName("IndexedDB 2", "#idbopendbrequest", "IDBOpenDBRequest")}}         | {{Spec2("IndexedDB 2")}} |                     |
+| {{SpecName("IndexedDB 2", "#idbopendbrequest", "IDBOpenDBRequest")}}         | {{Spec2("IndexedDB 2")}} |                     |
 
 ## Compatibilité des navigateurs
 

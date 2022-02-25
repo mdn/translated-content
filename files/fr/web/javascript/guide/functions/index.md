@@ -613,13 +613,13 @@ Avant les fonctions fléchées, chaque nouvelle fonction définissait sa propre 
 ```js
 function Personne() {
   // Le constructeur Personne() utilise `this` comme lui-même.
-  this.âge = 0;
+  this.âge = 0;
 
   setInterval(function grandir() {
     // En mode non-strict, la fonction grandir() définit `this`
     // avec l'objet global, qui est donc différent du `this`
     // défini par le constructeur Person().
-    this.âge++;
+    this.âge++;
   }, 1000);
 }
 

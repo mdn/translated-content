@@ -115,7 +115,7 @@ Les fonctions de la ligne sont évaluées en premières, et leurs valeurs de ret
 
 Allons-y, écrivons nos propres fonctions avec des valeurs de retour.
 
-1.  Pour commencer, faites une copie locale du fichier [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) à partir de GitHub. Il s'agit d'une simple page HTML contenant un champ texte  {{htmlelement("input")}} et un paragraphe. Il y a également un élément {{htmlelement("script")}} qui référence ces éléments HTML dans deux variables. Cette page vous permettra d'entrer un nombre dans le champ texte, et affichera, dans le paragraphe au-dessous, différents nombres en lien avec celui entré.
+1.  Pour commencer, faites une copie locale du fichier [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) à partir de GitHub. Il s'agit d'une simple page HTML contenant un champ texte  {{htmlelement("input")}} et un paragraphe. Il y a également un élément {{htmlelement("script")}} qui référence ces éléments HTML dans deux variables. Cette page vous permettra d'entrer un nombre dans le champ texte, et affichera, dans le paragraphe au-dessous, différents nombres en lien avec celui entré.
 2.  Ajoutons quelques fonctions dans `<script>` . Sous les deux lignes existantes de JavaScript, ajoutez les définitions des fonctions suivantes:
 
     ```js
@@ -179,7 +179,7 @@ Si vous n'avez pas compris quelque chose, n'hésitez pas à relire l'article, ou
 
 ## Voir aussi
 
-- [Fonctions  en profondeur](/fr/docs/Web/JavaScript/Reference/Functions) — Un guide détaillé couvrant des information plus avancées sur les fonctions.
+- [Fonctions  en profondeur](/fr/docs/Web/JavaScript/Reference/Functions) — Un guide détaillé couvrant des information plus avancées sur les fonctions.
 - [Fonction Callback en JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — Une façon courante en JavaScript consiste à passer une fonction à une autre en tant qu'argument, qui est alors appelée à l'intérieur de la première fonction.  Cela va au delà de la portée de ce cours, mais mériterait d'être étudier rapidement.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

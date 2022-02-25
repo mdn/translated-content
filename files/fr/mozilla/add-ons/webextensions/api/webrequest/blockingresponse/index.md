@@ -35,7 +35,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
       - : `string`. Mot de passe à fournir.
 
 - `cancel`{{optional_inline}}
-  - : `boolean`. Si `true`, la demande est annulée. Vous ne pouvez définir cette propriété dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, et  {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.
+  - : `boolean`. Si `true`, la demande est annulée. Vous ne pouvez définir cette propriété dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, et  {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.
 - `redirectUrl`{{optional_inline}}
 
   - : `string`. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.

@@ -63,7 +63,7 @@ SignedPublicKeyAndChallenge ::= SEQUENCE {
 }
 ```
 
-La clé publique et la requête/réponse sont encodées en DER en tant que PublicKeyAndChallenge, puis signées avec la clé privée pour produire un SignedPublicKeyAndChallenge. Le  SignedPublicKeyAndChallenge est encodé en base64 et les données ASCII sont finalement envoyées au serveur sous forme d'une paire nom-valeur du formulaire. Le nom étant la valeur définie par l'attribut `name` de l'élément `keygen`. Si aucune chaîne de requête/réponse n'est fournie, cela sera encodé comme une IA5STRING de longueur nulle.
+La clé publique et la requête/réponse sont encodées en DER en tant que PublicKeyAndChallenge, puis signées avec la clé privée pour produire un SignedPublicKeyAndChallenge. Le  SignedPublicKeyAndChallenge est encodé en base64 et les données ASCII sont finalement envoyées au serveur sous forme d'une paire nom-valeur du formulaire. Le nom étant la valeur définie par l'attribut `name` de l'élément `keygen`. Si aucune chaîne de requête/réponse n'est fournie, cela sera encodé comme une IA5STRING de longueur nulle.
 
 Voici un exemple d'un envoi de formulaire, tel qu'envoyé au programme CGI par le serveur HTTP :
 

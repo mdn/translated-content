@@ -48,9 +48,9 @@ navigator.serviceWorker.register(..).then(function(swr) {
   swr.installing.state == "installé"
   swr.installing.onstatechange = function() {
     swr.installing == null;
-    // Ici, swr.waiting OU swr.active peuvent valoir true. Parce que l'évènement
+    // Ici, swr.waiting OU swr.active peuvent valoir true. Parce que l'évènement
     // statechange est mis en queue, pendant que le worker sous jacent est peut être en
-    // état d'attente et sera immédiatement activé si possible.
+    // état d'attente et sera immédiatement activé si possible.
   }
 })
 ```

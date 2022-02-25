@@ -11,7 +11,7 @@ translation_of: Games/Tools
 ---
 {{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
 
-Sur cette page, vous trouverez des liens vers nos articles sur les outils de développement de jeux, qui visent à terme à couvrir les frameworks, les compilateurs et les outils de  débogage.
+Sur cette page, vous trouverez des liens vers nos articles sur les outils de développement de jeux, qui visent à terme à couvrir les frameworks, les compilateurs et les outils de  débogage.
 
 - [asm.js](/fr/docs/Games/Tools/asm.js)
   - : asm.js est un sous-ensemble très limité du langage JavaScript, qui peut être grandement optimisé et exécuté dans un moteur de compilation à l'avance (AOT) pour des performances beaucoup plus rapides que vos performances JavaScript typiques. C'est, bien sûr, idéal pour les jeux.

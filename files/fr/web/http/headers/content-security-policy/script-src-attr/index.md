@@ -48,7 +48,7 @@ Une ou plusieurs sources peuvent être autorisées pour cette directive :
     Content-Security-Policy: script-src-attr <source>;
     Content-Security-Policy: script-src-attr <source> <source>;
 
-`script-src-attr`  peut être utilisée conjointement à  {{CSP("script-src")}} :
+`script-src-attr`  peut être utilisée conjointement à  {{CSP("script-src")}} :
 
     Content-Security-Policy: script-src <source>;
     Content-Security-Policy: script-src-attr <source>;

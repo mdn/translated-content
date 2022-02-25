@@ -65,9 +65,9 @@ numObj.toFixed(6);      // Renvoie '12345.678900' : des zéros sont ajoutés
 | Spécification                                                                                                    | État                         | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.5', 'Number.prototype.toFixed')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.7.4.5', 'Number.prototype.toFixed')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

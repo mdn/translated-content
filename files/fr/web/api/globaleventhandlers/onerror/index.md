@@ -69,7 +69,7 @@ Lors de l'utilisation du balisage html intégré (\<body onerror="alert('une e
 
 | Spécification                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onerror','onerror')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onerror','onerror')}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

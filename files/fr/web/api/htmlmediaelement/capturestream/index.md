@@ -38,7 +38,7 @@ Dans cet exemple, un écouteur d'événement est mise en place, permettant la ca
 document.querySelector('.playAndRecord').addEventListener('click', function() {
   var playbackElement = document.getElementById("playback");
   var captureStream = playbackElement.captureStream();
-  playbackElement.play();
+  playbackElement.play();
 });
 ```
 
@@ -56,12 +56,12 @@ Voir [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/R
 
 ### Firefox-notes spécifiques
 
-Avant Firefox 51, vous ne pouviez pas utiliser `captureStream()` sur un élément média dont la source était, lui-même, un objet {{domxref("MediaStream")}} (comme un élément {{HTMLElement("video")}} présentant un flux reçu à travers un {{domxref("RTCPeerConnection")}}). Au commencement de  51, ça fonctionne. ce qui veut dire que vous pouvez capturer le flux d'un élément video et utiliser {{domxref("MediaRecorder")}} pour l'enregistrer. Voir {{bug(1259788)}} pour plus de détails.
+Avant Firefox 51, vous ne pouviez pas utiliser `captureStream()` sur un élément média dont la source était, lui-même, un objet {{domxref("MediaStream")}} (comme un élément {{HTMLElement("video")}} présentant un flux reçu à travers un {{domxref("RTCPeerConnection")}}). Au commencement de  51, ça fonctionne. ce qui veut dire que vous pouvez capturer le flux d'un élément video et utiliser {{domxref("MediaRecorder")}} pour l'enregistrer. Voir {{bug(1259788)}} pour plus de détails.
 
 Cependant, `captureStream()` reste préfixé `mozCaptureStream()` sur Firefox pour une bonne raison: il y a quelques etrangetés dans l'implémentation actuelle qui mérite d'être soulignées :
 
 - Actuellement, l'implémentation de Firefox fonctionne uniquement (comme décrit dans les spécifications) quand la source de l'élément média est elle-même, donc une instance {{domxref("MediaStream")}}.
-- Si la source de l'élément média n'est pas un `MediaStream`, la sortie de cette méthode n'est pas compatible avec les spécifications, et si vous changez la source après avoir commencé la capture, la sortie de la capture du flux ne peut accepter les nouvelles données source suite à une incompatibilité, donc aucun  {{domxref("MediaStreamTrack")}}s sera ajouté de la nouvelle source `MediaStream` au flux capturé, résultant d'une sortie n'ayant pas capturé la source mise à jour.
+- Si la source de l'élément média n'est pas un `MediaStream`, la sortie de cette méthode n'est pas compatible avec les spécifications, et si vous changez la source après avoir commencé la capture, la sortie de la capture du flux ne peut accepter les nouvelles données source suite à une incompatibilité, donc aucun  {{domxref("MediaStreamTrack")}}s sera ajouté de la nouvelle source `MediaStream` au flux capturé, résultant d'une sortie n'ayant pas capturé la source mise à jour.
 - Repasser la source en `MediaStream` ajoute des pistes au flux et fonctionne de nouveau comme prévu.
 - L'appel à `mozCaptureMediaStream()` sur un élément avec une source `MediaStream` retourne un flux qui contient uniquement les pistes jouées par un `MediaStream`.
 - Si vous appellez `mozCaptureMediaStream()` sur un élément média sans source, son mode de compatibilité va se baser sur la première source ayant été ajoutée; Par exemple, Si c'est un `MediaStream`, alors la capture du flux va seulement fonctionner avec une source MediaStream à partir de ce moment.

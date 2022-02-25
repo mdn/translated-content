@@ -20,7 +20,7 @@ Avec l'API Cookies, vos extensions ont accès à des fonctionnalités similaires
 
 ## Permissions
 
-Pour utiliser l'API Cookies, vous devez demander à la fois la permission `"cookies"` et les  [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour les protocoles, domaines, ou sites web auxquels vous souhaitez accéder ou utiliser `"<all_urls>"` pour accéder à tous les protocoles et domaines. La façon dont vous définissez votre chaîne de permission d'hôte affecte la capacité de votre extension à lire, écrire et supprimer les cookies.
+Pour utiliser l'API Cookies, vous devez demander à la fois la permission `"cookies"` et les  [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour les protocoles, domaines, ou sites web auxquels vous souhaitez accéder ou utiliser `"<all_urls>"` pour accéder à tous les protocoles et domaines. La façon dont vous définissez votre chaîne de permission d'hôte affecte la capacité de votre extension à lire, écrire et supprimer les cookies.
 
 <table>
   <colgroup>
@@ -127,9 +127,9 @@ The key feature of the [manifest.json](https://github.com/mdn/webextensions-exam
 
 ```json
   "permissions": [
-      "tabs",
-      "cookies",
-      "<all_urls>"
+      "tabs",
+      "cookies",
+      "<all_urls>"
 ],
 ```
 

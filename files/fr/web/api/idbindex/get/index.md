@@ -89,7 +89,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                                        | Ètat                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité avec les navigateurs
 

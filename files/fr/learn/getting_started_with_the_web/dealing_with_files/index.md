@@ -42,7 +42,7 @@ Cela dit, regardons la structure que le site de test devrait avoir. Les élémen
 3.  **un dossier `styles` **: ce dossier contiendra le code des CSS utilisé pour la mise en forme du contenu (par exemple pour définir les couleurs à utiliser pour le texte et l'arrière-plan). Créez un dossier nommé `styles` dans votre dossier `site-test`.
 4.  **un dossier `scripts`** : ce dossier contiendra le code JavaScript utilisé pour ajouter des fonctionnalités interactives sur votre site (par exemple, des boutons qui permettent de charger des données lorsqu'on clique dessus). Créez un dossier nommé `scripts` dans votre dossier `site-test`.
 
-> **Note :** Sur Windows, vous aurez peut être des problèmes pour voir le nom des fichiers en entier. En effet, Windows possède une option, activée par défaut&nbsp;: **Masquer les extensions pour les types de fichiers connus**. Généralement, il est possible de la désactiver en allant dans l'explorateur de fichiers, en sélectionnant   **Options des dossiers...**, en enlevant la coche de **Masquer les extensions pour les types de fichier connus** puis en cliquant sur **OK**. Pour des informations propres à votre version de Windows, recherchez sur le Web !
+> **Note :** Sur Windows, vous aurez peut être des problèmes pour voir le nom des fichiers en entier. En effet, Windows possède une option, activée par défaut&nbsp;: **Masquer les extensions pour les types de fichiers connus**. Généralement, il est possible de la désactiver en allant dans l'explorateur de fichiers, en sélectionnant   **Options des dossiers...**, en enlevant la coche de **Masquer les extensions pour les types de fichier connus** puis en cliquant sur **OK**. Pour des informations propres à votre version de Windows, recherchez sur le Web !
 
 ## Les chemins de fichiers
 
@@ -79,7 +79,7 @@ Quelques règles générales à propos des chemins de fichier :
 
 Pour le moment, c'est tout ce qu'il y a à savoir.
 
-> **Note :** Le système de fichiers Windows utilise des barres obliques inversées (_backslash_ : « \ ») et non des barres obliques (_slash_ : « / »), par exemple `C:\windows`. Cela n'intervient pas en HTML — même si vous développez votre site sur Windows, vous devez toujours utiliser des barres obliques  (« / ») dans votre code..
+> **Note :** Le système de fichiers Windows utilise des barres obliques inversées (_backslash_ : « \ ») et non des barres obliques (_slash_ : « / »), par exemple `C:\windows`. Cela n'intervient pas en HTML — même si vous développez votre site sur Windows, vous devez toujours utiliser des barres obliques  (« / ») dans votre code..
 
 ## Autre chose ?
 

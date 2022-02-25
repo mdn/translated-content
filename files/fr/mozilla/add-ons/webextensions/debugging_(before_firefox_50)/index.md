@@ -131,7 +131,7 @@ Essayons avec l'exemple ci-dessus : sélectionnez l'onglet Console dans la boît
 
 {{EmbedYouTube("Qpx0n8gP3Qw")}}
 
-Un problème ici est que la console vous montre les messages de l'ensemble du navigateur, donc il peut y avoir beaucoup de bruit. Lisez  [comment filtrer les messages de journal](/fr/docs/Tools/Web_Console/Console_messages#Filtering_and_searching) pour obtenir de l'aide à ce sujet.
+Un problème ici est que la console vous montre les messages de l'ensemble du navigateur, donc il peut y avoir beaucoup de bruit. Lisez  [comment filtrer les messages de journal](/fr/docs/Tools/Web_Console/Console_messages#Filtering_and_searching) pour obtenir de l'aide à ce sujet.
 
 ### Débogage JavaScript
 
@@ -139,9 +139,9 @@ Avec la Toolbox du navigateur, vous pouvez utiliser le débogueur JavaScript pou
 
 Les scripts en arrière-plan sont toujours disponibles dans le débogueur si l'extension est installée et activée. Les scripts popup ne deviennent visibles que lorsque le popup est ouvert. Si vous avez besoin d'accéder aux scripts popup dès qu'ils se chargent, essayez d'ajouter un [`debogueur`](/fr/docs/Web/JavaScript/Reference/Statements/debugger) ; instruction au début du script.
 
-Pour utiliser le débogueur JavaScript, sélectionnez l'onglet Débogueur dans la boîte à outils du navigateur. Le travail suivant est donc de trouver le code de votre extension  : pour ce faire [cliquez dans la boite de recherche et tapez le nom de la source](/fr/docs/Tools/Debugger/How_to/Search_and_filter).
+Pour utiliser le débogueur JavaScript, sélectionnez l'onglet Débogueur dans la boîte à outils du navigateur. Le travail suivant est donc de trouver le code de votre extension  : pour ce faire [cliquez dans la boite de recherche et tapez le nom de la source](/fr/docs/Tools/Debugger/How_to/Search_and_filter).
 
-Une fois que vous avez trouvé votre source, vous pouvez définir des points d'arrêt, passer en revue le code et  faire [tout ce que vous vous attendez à pouvoir faire dans un débogueur](/fr/docs/Tools/Debugger).
+Une fois que vous avez trouvé votre source, vous pouvez définir des points d'arrêt, passer en revue le code et  faire [tout ce que vous vous attendez à pouvoir faire dans un débogueur](/fr/docs/Tools/Debugger).
 
 {{EmbedYouTube("3edeJiG38ZA")}}
 
@@ -191,7 +191,7 @@ Le problème avec les panneaux de débogage en général est qu'ils sont cachés
 >
 > Notez également que le changement est persistant, même si le navigateur redémarre. Nous travaillons à résoudre ce problème dans le [bug 1251658](https://bugzilla.mozilla.org/show_bug.cgi?id=1251658), mais d'ici là, vous préférerez peut-être réactiver la fonction Autohide en cliquant à nouveau sur le bouton avant de fermer la boîte à outils du navigateur.
 >
-> En interne, ce bouton bascule juste la préférence  `ui.popup.disable_autohide` que vous pouvez basculer manuellement en utilisant using about:config.
+> En interne, ce bouton bascule juste la préférence  `ui.popup.disable_autohide` que vous pouvez basculer manuellement en utilisant using about:config.
 
 #### Ouvrir la fenêtre contextuelle
 

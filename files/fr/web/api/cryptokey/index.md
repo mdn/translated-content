@@ -19,11 +19,11 @@ Un objet `CryptoKey` peut être obtenu en utilisant : {{domxref("SubtleCrypto.ge
 _Cette interface n'hérite d'aucune propriété._
 
 - {{domxref("CryptoKey.type")}}
-  - : Retourne  une énumération de valeurs représentant un type de clef, une clef secrète (pour un algorithme symétriques), une clef publique ou privée (pour un algorithme asymétrique)
+  - : Retourne  une énumération de valeurs représentant un type de clef, une clef secrète (pour un algorithme symétriques), une clef publique ou privée (pour un algorithme asymétrique)
 - {{domxref("CryptoKey.extractable")}}
   - : Retourne un {{jsxref("booléen")}} indiquant si l'information peut être extraite de l'application ou non.
 - {{domxref("CryptoKey.algorithm")}}
-  - : Retourne un objet opaque représentant  un chiffre particulier avec lequel la clé doit être utilisée avec.
+  - : Retourne un objet opaque représentant  un chiffre particulier avec lequel la clé doit être utilisée avec.
 - {{domxref("CryptoKey.usages")}}
   - : Retourne un tableau contenant une énumération de valeurs indiquant quel est la clé qui peut être utilisée.
 

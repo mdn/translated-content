@@ -132,12 +132,12 @@ Lorsque des grands nombres ou de grandes dates sont formatés, il est préférab
 | Spécification                                                                                                                                    | État                             | Commentaires                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                                                         | {{Spec2('ES3')}}             | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', 'sec-15.9.5.6', 'Date.prototype.toLocaleDateString')}}                                             | {{Spec2('ES5.1')}}         |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.tolocaledatestring', 'Date.prototype.toLocaleDateString')}}             | {{Spec2('ES6')}}             |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocaledatestring', 'Date.prototype.toLocaleDateString')}}         | {{Spec2('ESDraft')}}     |                                                       |
+| {{SpecName('ES5.1', 'sec-15.9.5.6', 'Date.prototype.toLocaleDateString')}}                                             | {{Spec2('ES5.1')}}         |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.tolocaledatestring', 'Date.prototype.toLocaleDateString')}}             | {{Spec2('ES6')}}             |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.tolocaledatestring', 'Date.prototype.toLocaleDateString')}}         | {{Spec2('ESDraft')}}     |                                                       |
 | {{SpecName('ES Int 1.0', '#sec-13.3.2', 'Date.prototype.toLocaleDateString')}}                                         | {{Spec2('ES Int 1.0')}} | Définition des arguments `locales` et `options`.      |
-| {{SpecName('ES Int 2.0', '#sec-13.3.2', 'Date.prototype.toLocaleDateString')}}                                         | {{Spec2('ES Int 2.0')}} |                                                       |
-| {{SpecName('ES Int Draft', '#sec-Date.prototype.toLocaleDateString', 'Date.prototype.toLocaleDateString')}} | {{Spec2('ES Int Draft')}} |                                                       |
+| {{SpecName('ES Int 2.0', '#sec-13.3.2', 'Date.prototype.toLocaleDateString')}}                                         | {{Spec2('ES Int 2.0')}} |                                                       |
+| {{SpecName('ES Int Draft', '#sec-Date.prototype.toLocaleDateString', 'Date.prototype.toLocaleDateString')}} | {{Spec2('ES Int Draft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

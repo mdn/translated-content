@@ -101,8 +101,8 @@ DBOpenRequest.onsuccess = function(event) {
 
 | Spécification                                                                                                                                                    | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version', 'open()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}                                                                                 | {{Spec2("IndexedDB 2")}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBFactory-open-IDBOpenDBRequest-DOMString-name-unsigned-long-long-version', 'open()')}} | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbfactory-open", "open()")}}                                                                                 | {{Spec2("IndexedDB 2")}} |              |
 
 ## Compatibilité des navigateurs
 

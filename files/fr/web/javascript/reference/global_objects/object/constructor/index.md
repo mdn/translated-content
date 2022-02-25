@@ -119,7 +119,7 @@ function String() {
 
 ### Modifier le constructeur d'une fonction
 
-La plupart du temps, cette  propriété est utilisée afin de définir une fonction en tant que constructeur, c'est-à-dire qu'on l'appellera avec **`new`** et en « attachant » la chaîne de prototypes.
+La plupart du temps, cette  propriété est utilisée afin de définir une fonction en tant que constructeur, c'est-à-dire qu'on l'appellera avec **`new`** et en « attachant » la chaîne de prototypes.
 
 ```js
 function Parent() {}
@@ -212,9 +212,9 @@ En résumé, lorsqu'on paramètre manuellement le constructeur, on peut obtenir 
 | Spécification                                                                                                                | Statut                       | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

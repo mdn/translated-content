@@ -82,7 +82,7 @@ Une valeur de type {{cssxref("&lt;url&gt;")}} s'utilise avec une notation foncti
 
 ```css
 .box {
-  background-image: url("images/mon-arriere-plan.png");
+  background-image: url("images/mon-arriere-plan.png");
 }
 
 .box {
@@ -173,7 +173,7 @@ Les valeurs temporelles sont de type {{cssxref("&lt;time&gt;")}} et utilisent le
 
 | Unité | Nom           | Description             |
 | ----- | ------------- | ----------------------- |
-| `s`   | Secondes      |                         |
+| `s`   | Secondes      |                         |
 | `ms`  | Millisecondes | Un millième de seconde. |
 
 #### Unités de fréquence
@@ -269,8 +269,8 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
       <td>
         Ajout des unités <code>vi</code>, <code>vb</code>, <code>ic</code>,
         <code>cap</code>, <code>lh</code> et <code>rlh</code>.<br />Ajout des
-        notations fonctionnelles  <code>min()</code>, <code>max()</code> et
-        <code>clamp()</code>.<br />Ajout de  <code>toggle()</code>
+        notations fonctionnelles  <code>min()</code>, <code>max()</code> et
+        <code>clamp()</code>.<br />Ajout de  <code>toggle()</code>
       </td>
     </tr>
     <tr>
@@ -290,7 +290,7 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
       <td>
         Ajout des syntaxes sans virgule pour les fonctions
         <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> et
-        <code>hsla()</code>. Ajout des valeurs alpha pour  <code>rgb()</code> et
+        <code>hsla()</code>. Ajout des valeurs alpha pour  <code>rgb()</code> et
         <code>hsl()</code>, transformant ainsi <code>rgba()</code> et
         <code>hsla()</code> en alias respectifs (dépréciés).<br />Ajout du
         mot-clé de couleur <code>rebeccapurple</code>.<br />Ajout des couleurs

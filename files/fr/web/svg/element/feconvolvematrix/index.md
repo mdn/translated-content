@@ -112,7 +112,7 @@ Cet élément implémente l'interface {{domxref("SVGFEConvolveMatrixElement")}}.
 
 | Spécification                                                                                                            | Statut                           | Commentaire         |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("Filters 1.0", "#feConvolveMatrixElement", "&lt;feConvolveMatrix&gt;")}}         | {{Spec2("Filters 1.0")}} |                     |
+| {{SpecName("Filters 1.0", "#feConvolveMatrixElement", "&lt;feConvolveMatrix&gt;")}}         | {{Spec2("Filters 1.0")}} |                     |
 | {{SpecName("SVG1.1", "filters.html#feConvolveMatrixElement", "&lt;feConvolveMatrix&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
 
 ## Compatibilité des navigateurs

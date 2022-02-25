@@ -36,9 +36,9 @@ L'évènement `select` est déclenché quand du texte est sélectionné. L'évè
 ```html
 <input id="test" type="text" value="Sélectionnez-moi !" />
 <script>
-  var elem = document.getElementById('test');
-  elem.addEventListener('select', function() {
-    alert('La sélection a changé !');
-  }, false);
+  var elem = document.getElementById('test');
+  elem.addEventListener('select', function() {
+    alert('La sélection a changé !');
+  }, false);
 </script>
 ```

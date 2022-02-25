@@ -40,7 +40,7 @@ window.crypto.getRandomValues(array);
 
 console.log("Your lucky numbers:");
 for (var i = 0; i < array.length; i++) {
-    console.log(array[i]);
+    console.log(array[i]);
 }
 ```
 

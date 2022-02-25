@@ -13,7 +13,7 @@ tags:
   - onCommand
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 ---
-{{AddonSidebar()}}Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.L'écouteur reçoit  le nom de la commande. Cela correspond au nom donnée à la commande dans une  [entrée manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
+{{AddonSidebar()}}Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.L'écouteur reçoit  le nom de la commande. Cela correspond au nom donnée à la commande dans une  [entrée manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Syntaxe
 

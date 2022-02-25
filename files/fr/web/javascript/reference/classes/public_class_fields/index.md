@@ -21,7 +21,7 @@ Les champs publics, tant statiques que d'instance, sont des propriétés qui peu
 ## Syntaxe
 
     class ClasseAvecChampDInstance {
-      champDInstance = 'champ d\'instance'
+      champDInstance = 'champ d\'instance'
     }
 
     class ClasseAvecChampStatique {
@@ -29,9 +29,9 @@ Les champs publics, tant statiques que d'instance, sont des propriétés qui peu
     }
 
     class ClasseAvecMethodeDInstancePublique {
-      methodePublique() {
-        return 'hello world'
-      }
+      methodePublique() {
+        return 'hello world'
+      }
     }
 
 ## Exemples
@@ -55,7 +55,7 @@ Les champs sans initialiseur sont initialisés à `undefined`.
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatique
+  static champStatique
 }
 
 console.assert(ClasseAvecChampStatique.hasOwnProperty('champStatique'))
@@ -67,11 +67,11 @@ Les champs statiques publics ne sont pas réinitialisés dans les sous-classes, 
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatiqueDeBase = 'champ de base'
+  static champStatiqueDeBase = 'champ de base'
 }
 
 class SousClasseAvecChampStatique extends ClasseAvecChampStatique {
-  static sousChampStatique = 'champ de la sous-classe'
+  static sousChampStatique = 'champ de la sous-classe'
 }
 
 console.log(SousClasseAvecChampStatique.sousChampStatique)
@@ -85,14 +85,14 @@ Lors de l'initialisation des champs, `this` fait référence au constructeur de 
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatiqueDeBase = 'champ statique de base'
-  static autreChampStatiqueDeBase = this.champStatiqueDeBase
+  static champStatiqueDeBase = 'champ statique de base'
+  static autreChampStatiqueDeBase = this.champStatiqueDeBase
 
-  static methodeStatiqueDeBase() { return 'affichage de la méthode statique de base' }
+  static methodeStatiqueDeBase() { return 'affichage de la méthode statique de base' }
 }
 
 class SousClasseAvecChampStatique extends ClasseAvecChampStatique {
-  static sousChampStatique = super.methodeStatiqueDeBase()
+  static sousChampStatique = super.methodeStatiqueDeBase()
 }
 
 console.log(ClasseAvecChampStatique.autreChampStatiqueDeBase)
@@ -122,7 +122,7 @@ Les champs sans initialiseur sont initialisés à `undefined`.
 
 ```js
 class ClasseAvecChampDInstance {
-  champdDInstance
+  champdDInstance
 }
 
 const instance = new ClasseAvecChampDInstance()
@@ -137,7 +137,7 @@ console.log(instance.champDInstance);
 const PREFIXE = 'prefixe';
 
 class ClasseAvecNomDeChampCalcule {
-    [`${PREFIXE}Champ`] = 'champ préfixé'
+    [`${PREFIXE}Champ`] = 'champ préfixé'
 }
 
 const instance = new ClasseAvecNomDeChampCalcule()
@@ -149,13 +149,13 @@ Lors de l'initialisation des champs, `this` fait référence à l'instance en co
 
 ```js
 class ClasseAvecChampDInstance {
-  champDInstanceDeBase = 'champ de base'
-  autreChampDInstanceDeBase = this.champDInstanceDeBase
-  methodeDInstanceDeBase() { return 'affichage de la méthode de base' }
+  champDInstanceDeBase = 'champ de base'
+  autreChampDInstanceDeBase = this.champDInstanceDeBase
+  methodeDInstanceDeBase() { return 'affichage de la méthode de base' }
 }
 
 class SousClasseAvecChampDInstance extends ClasseAvecChampDInstance {
-  sousChampDInstance = super.methodeDInstanceDeBase()
+  sousChampDInstance = super.methodeDInstanceDeBase()
 }
 
 const base = new ClasseAvecChampDInstance()
@@ -219,16 +219,16 @@ A l'intérieur des méthodes d'instance, `this` fait référence à l'instance e
 
 ```js
 class ClasseDeBase {
-  msg = 'hello world'
-  methodePubliqueDeBase() {
-    return this.msg
-  }
+  msg = 'hello world'
+  methodePubliqueDeBase() {
+    return this.msg
+  }
 }
 
 class SousClasse extends ClasseDeBase {
-  sousMethodePublique() {
-    return super.methodePubliqueDeBase()
-  }
+  sousMethodePublique() {
+    return super.methodePubliqueDeBase()
+  }
 }
 
 const instance = new SousClasse()
@@ -240,13 +240,13 @@ Les accesseurs et les mutateurs sont des méthodes spéciales qui sont liées à
 
 ```js
 class ClasseAvecGetSet {
-  #msg = 'hello world'
-  get msg() {
-    return this.#msg
-  }
-  set msg(x) {
-    this.#msg = `hello ${x}`
-  }
+  #msg = 'hello world'
+  get msg() {
+    return this.#msg
+  }
+  set msg(x) {
+    this.#msg = `hello ${x}`
+  }
 }
 
 const instance = new ClasseAvecGetSet();

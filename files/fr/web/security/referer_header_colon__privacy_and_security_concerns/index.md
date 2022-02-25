@@ -32,7 +32,7 @@ De plus, vous devriez envisager de supprimer tout contenu provenant d'un tiers (
 Vous pouvez également atténuer ces risques en utilisant :
 
 - L’en-tête `{{httpheader("Referrer-Policy")}}` sur votre serveur pour contrôler quelle information est envoyée par l’en-tête `Referer`. Encore une fois, une directive `no-referrer` omettrait intégralement l’en-tête `Referer`.
-- L’attribut `referrerpolicy` sur les éléments HTML qui présentent des risques de fuite d'informations (comme `<img>` et `<a>`). Cet attribut peut prendre par exemple la valeur  `no-referrer` afin d'empêcher l'envoi de l’en-tête `Referer`.
+- L’attribut `referrerpolicy` sur les éléments HTML qui présentent des risques de fuite d'informations (comme `<img>` et `<a>`). Cet attribut peut prendre par exemple la valeur  `no-referrer` afin d'empêcher l'envoi de l’en-tête `Referer`.
 - L’attribut `rel` défini à `noreferrer` sur les éléments HTML à risques (comme `<img>` et \<a>). Voir Types de liens et rechercher `noreferrer` pour plus d’informations.
 - La technique de la [page de sortie](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect).
 

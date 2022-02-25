@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 
 Déclenché lorsqu'une requête Web est sur le point d'être effectuée, pour donner à l'extension la possibilité de l'utiliser comme proxy.
 
-Cet événement est étroitement modélisé sur les événements définis dans l'API  [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest) Comme ces événements, sa fonction `addListener()` prend trois arguments :
+Cet événement est étroitement modélisé sur les événements définis dans l'API  [`webRequest`](/fr/Add-ons/WebExtensions/API/webRequest) Comme ces événements, sa fonction `addListener()` prend trois arguments :
 
 - l'écouteur qui sera appelé lorsque l'événement est déclenché.
 - Un objet [`RequestFilter`](/fr/Add-ons/WebExtensions/API/webRequest/RequestFilter) contrôlant quelles requêtes provoquent le déclenchement de l'événement.

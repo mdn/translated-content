@@ -53,7 +53,7 @@ Cette propriété peut être définie avec un mot-clé ou avec une valeur exprim
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : Permet de choisir une fonte plus étendue que la normale, `ultra-expanded` correspond à la forme la plus étirée.
 - `<percentage>`
-  - : Une valeur de type {{cssxref("&lt;percentage&gt;")}} entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette  propriété.
+  - : Une valeur de type {{cssxref("&lt;percentage&gt;")}} entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette  propriété.
 
 Dans les anciennes versions de la spécification de `font-stretch`, seuls les mots-clés étaient acceptés comme valeurs. Avec la spécification _CSS Fonts_ de niveau 4, cette propriété peut également être définie avec un pourcentage. Cela permet d'obtenir un contrôle plus fin sur la largeur. Attention toutefois à la compatibilité car certains navigateurs ne prennent pas encore en charge cette fonctionnalité (cf. la section en fin d'article).
 

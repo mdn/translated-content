@@ -48,7 +48,7 @@ const myImage = document.querySelector('img');
 
 fetch('flowers.jpg')
 .then(function(response) {
-  return response.blob();
+  return response.blob();
 })
 .then(function(myBlob) {
   const objectURL = URL.createObjectURL(myBlob);
@@ -198,7 +198,7 @@ Un bon cas d'utilisation des en-têtes est de vérifier que le type de contenu r
 
 ```js
 fetch(myRequest).then(function(response) {
-  var contentType = response.headers.get("content-type");
+  var contentType = response.headers.get("content-type");
   if(contentType && contentType.indexOf("application/json") !== -1) {
     return response.json().then(function(json) {
       // traitement du JSON
@@ -280,7 +280,7 @@ fetch("/login", {
 })
 ```
 
-Les Requêtes et Réponses (et par extension la fonction `fetch()`), vont tenter de déterminer le type de contenu. Une requête va automatiquement définir un en-tête `Content-Type`  si rien n'est défini dans le dictionnaire \[NDLT: configuration d'initialisation].
+Les Requêtes et Réponses (et par extension la fonction `fetch()`), vont tenter de déterminer le type de contenu. Une requête va automatiquement définir un en-tête `Content-Type`  si rien n'est défini dans le dictionnaire \[NDLT: configuration d'initialisation].
 
 ## Spécifications
 

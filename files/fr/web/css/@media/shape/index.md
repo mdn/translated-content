@@ -38,19 +38,19 @@ La caractéristique `shape` peut prendre une valeur parmi deux valeurs définies
 
 ```css
 h1 {
-  text-align: left;
+  text-align: left;
 }
 
 @media (shape: rect) {
-  h1 {
-    text-align: left;
-  }
+  h1 {
+    text-align: left;
+  }
 }
 
 @media (shape: round) {
-  h1 {
-    text-align: center;
-  }
+  h1 {
+    text-align: center;
+  }
 }
 ```
 
@@ -64,9 +64,9 @@ Ce fragment de code HTML permettra d'appliquer une feuille de style particulièr
 
 ```html
 <head>
-    <link rel="stylesheet" href="default.css" />
-    <link media="screen and (shape: rect)" rel="stylesheet" href="rectangle.css" />
-    <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
+    <link rel="stylesheet" href="default.css" />
+    <link media="screen and (shape: rect)" rel="stylesheet" href="rectangle.css" />
+    <link media="screen and (shape: round)" rel="stylesheet" href="round.css" />
 </head>
 ```
 

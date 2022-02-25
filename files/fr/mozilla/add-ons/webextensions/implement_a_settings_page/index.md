@@ -158,7 +158,7 @@ Cela fait deux choses :
 
 Vous pouvez stocker les valeurs des paramètres dans le stockage local à la place si vous pensez que le stockage local est préférable pour votre extension.
 
-> **Note :** L'implémentation de `storage.sync` dans Firefox repose sur l'ID du module complémentaire. Si vous utilisez `storage.sync`,  vous devez définir un ID pour votre extension à l'aide de la clé manifest.json des [`applications`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)  comme indiqué dans l'exemple de manifeste ci-dessus.
+> **Note :** L'implémentation de `storage.sync` dans Firefox repose sur l'ID du module complémentaire. Si vous utilisez `storage.sync`,  vous devez définir un ID pour votre extension à l'aide de la clé manifest.json des [`applications`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications)  comme indiqué dans l'exemple de manifeste ci-dessus.
 
 Finalement, mettez à jour "borderify.js" pour lire la couleur de la bordure depuis le stockage :
 

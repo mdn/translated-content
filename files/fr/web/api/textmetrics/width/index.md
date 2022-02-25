@@ -39,7 +39,7 @@ texte.width; // 16;
 
 | Spécification                                                                                                        | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-textmetrics-width", "TextMetrics.width")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-textmetrics-width", "TextMetrics.width")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

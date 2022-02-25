@@ -62,7 +62,7 @@ table {
 
 td {
   border: 1px solid #000;
-  padding: 5px;
+  padding: 5px;
 }
 
 .unevaleur {

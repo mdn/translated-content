@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/Content-Language
 ---
 {{HTTPSidebar}}
 
-L'en-tête **`Content-Language`**  est utilisé pour décrire quels langages sont destinés au public, de sorte que cela permette à l'utilisateur de se différencier en fonction de la langue préférée des utilisateurs.
+L'en-tête **`Content-Language`**  est utilisé pour décrire quels langages sont destinés au public, de sorte que cela permette à l'utilisateur de se différencier en fonction de la langue préférée des utilisateurs.
 
 Par exemple, si "`Content-Language: de-DE`" est mis en place, cela signifie que la page est destinée à un public parlant l'allemand (par contre, cela n'indique pas que la page est écrite en allemand. Par exemple, elle pourrait être écrite en anglais dans le cadre d'un cours de langue destiné aux allemands).
 

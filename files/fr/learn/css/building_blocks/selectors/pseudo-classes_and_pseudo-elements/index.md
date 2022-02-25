@@ -28,7 +28,7 @@ Voyons maintenant les sélecteurs de **pseudo-classes** et de **pseudo-élémen
         >, compétences élémentaires pour <a
           href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >travailler avec des fichiers</a
-        >, connaissance de base du HTML  (cf. <a
+        >, connaissance de base du HTML  (cf. <a
           href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction à HTML</a
         >), et une idée de <a
@@ -110,7 +110,7 @@ article p:first-child::first-line {
 
 Il existe quelques pseudo-éléments spéciaux, qui sont utilisés avec la propriété [`content`](/fr/docs/Web/CSS/content) pour insérer du contenu dans votre document en utilisant le CSS.
 
-Vous pouvez les utiliser pour insérer une chaîne de texte, comme dans l'exemple ci-dessous. Essayez de changer la valeur du texte de la propriété {{cssxref("content")}} et vous verrez qu'elle change en sortie. Vous pouvez également changer le pseudo-élément `::before` en  `::after` et voir le texte inséré à la fin de l'élément au lieu du début.
+Vous pouvez les utiliser pour insérer une chaîne de texte, comme dans l'exemple ci-dessous. Essayez de changer la valeur du texte de la propriété {{cssxref("content")}} et vous verrez qu'elle change en sortie. Vous pouvez également changer le pseudo-élément `::before` en  `::after` et voir le texte inséré à la fin de l'élément au lieu du début.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/before.html", '100%', 400)}}
 

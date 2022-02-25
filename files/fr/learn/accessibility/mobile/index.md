@@ -63,7 +63,7 @@ Le lecteur d’écran TalkBack est intégré au système d’exploitation Androi
 
 Pour l'activer, sélectionnez Paramètres> Accessibilité> TalkBack, puis appuyez sur le curseur pour l'activer. Suivez toute invite supplémentaire à l'écran qui vous est présentée.
 
-**Note:**  Les anciennes versions de TalkBack sont activées dans [slightly different ways](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback).
+**Note:**  Les anciennes versions de TalkBack sont activées dans [slightly different ways](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback).
 
 Lorsque TalkBack est activé, les commandes de base de votre appareil Android seront un peu différentes. Par exemple:
 
@@ -123,7 +123,7 @@ Par exemple, avec TalkBack activé:
 7.  Appuyez deux fois pour le sélectionner. Vous pouvez maintenant glisser à gauche et à droite pour vous déplacer entre les rubriques et les points de repère ARIA.
 8.  Pour revenir au mode par défaut, entrez de nouveau dans le menu contextuel local en balayant l'écran vers le haut, le curseur à droite, sélectionnez "Par défaut", puis tapez deux fois pour l'activer.
 
-**Note:**  Voir  aussi [Get started on Android with TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) pour obtenir une documentation plus complète.
+**Note:**  Voir  aussi [Get started on Android with TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) pour obtenir une documentation plus complète.
 
 ### iOS VoiceOver
 
@@ -182,13 +182,13 @@ Essayons la navigation Web avec VoiceOver:
 
 7.  S*électionnez les en-têtes*. Vous pouvez maintenant glisser de haut en bas pour vous déplacer entre les titres de la page.
 
-**Note:**  Pour une référence plus complète couvrant les gestes VoiceOver disponibles et d'autres astuces sur le test d'accessibilité sur iOS, voir aussi [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html#//apple_ref/doc/uid/TP40012619-CH3).
+**Note:**  Pour une référence plus complète couvrant les gestes VoiceOver disponibles et d'autres astuces sur le test d'accessibilité sur iOS, voir aussi [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html#//apple_ref/doc/uid/TP40012619-CH3).
 
 ## Mécanismes de contrôle
 
 Dans notre article relatif à l'accessibilité CSS et JavaScript, nous avons examiné l'idée d'événements spécifiques à un certain type de mécanisme de contrôle  (see [Mouse-specific events](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)). En résumé, cela pose des problèmes d'accessibilité car d'autres mécanismes de contrôle ne peuvent pas activer la fonctionnalité associée.
 
-Par exemple, l'événement  [click](/fr/docs/Web/API/GlobalEventHandlers/onclick)  est bon en termes d'accessibilité - un gestionnaire d'événements associé peut être appelé en cliquant sur l'élément sur lequel il est défini, en le sélectionnant et en appuyant sur Entrée / Retour ou en le tapant sur un périphérique à écran tactile. Essayez notre [simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html) exemple ([see it running live](http://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) pour voir ce que nous entendons. .
+Par exemple, l'événement  [click](/fr/docs/Web/API/GlobalEventHandlers/onclick)  est bon en termes d'accessibilité - un gestionnaire d'événements associé peut être appelé en cliquant sur l'élément sur lequel il est défini, en le sélectionnant et en appuyant sur Entrée / Retour ou en le tapant sur un périphérique à écran tactile. Essayez notre [simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html) exemple ([see it running live](http://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) pour voir ce que nous entendons. .
 
 Sinon, des événements spécifiques à la souris, tels que  [mousedown](/fr/docs/Web/API/GlobalEventHandlers/onmousedown) et [mouseup](/fr/docs/Web/API/GlobalEventHandlers/onmouseup) créent des problèmes - leurs gestionnaires d'événements ne peuvent pas être appelés à l'aide de contrôles autres que la souris.
 
@@ -219,7 +219,7 @@ panel.ontouchend = stopMove;
 
 Nous avons fourni un exemple simple qui montre comment utiliser simultanément les événements de la souris et des événements tactiles — voir [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([see the example live](http://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html) aussi).
 
-**Note:** Vous pouvez également voir des exemples fonctionnels montrant comment implémenter différents mécanismes de contrôle à   [Implementing game control mechanisms](/fr/docs/Games/Techniques/Control_mechanisms).
+**Note:** Vous pouvez également voir des exemples fonctionnels montrant comment implémenter différents mécanismes de contrôle à   [Implementing game control mechanisms](/fr/docs/Games/Techniques/Control_mechanisms).
 
 ## Responsive design
 
@@ -229,9 +229,9 @@ En particulier, les problèmes les plus courants auxquels le mobile doit faire f
 
 - Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que  [media queries](/fr/docs/Web/CSS/Media_Queries), [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), et [flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
 - Conserver les tailles d’image téléchargées. En général, les appareils de petite taille n’auront pas besoin d’images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d’être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant  [responsive image techniques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
-- Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d’image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée   (voir [Adding vector graphics to the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) pour plus de détails ).
+- Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d’image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée   (voir [Adding vector graphics to the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) pour plus de détails ).
 
-**Note:**  Nous ne fournirons pas une analyse complète des techniques de conception réactive ici, car elles sont couvertes ailleurs au sein de MDN (voir les liens ci-dessus).
+**Note:**  Nous ne fournirons pas une analyse complète des techniques de conception réactive ici, car elles sont couvertes ailleurs au sein de MDN (voir les liens ci-dessus).
 
 ### Considérations mobiles spécifiques
 
@@ -259,14 +259,14 @@ Cliquez ici pour un  [good hamburger menu example](http://fritz-weisshart.de/me
 
 Sur les appareils mobiles, la saisie de données a tendance à être plus agaçante pour les utilisateurs que l'expérience équivalente sur les ordinateurs de bureau. Il est plus pratique de taper du texte dans les entrées de formulaire à l'aide d'un clavier d'ordinateur de bureau ou d'ordinateur portable que d'un clavier virtuel à écran tactile ou d'un petit clavier physique mobile.
 
-Pour cette raison, il vaut la peine d'essayer de minimiser la quantité de frappe nécessaire. Par exemple, au lieu de forcer les utilisateurs à saisir chaque fois le titre de leur travail en utilisant une entrée de texte standard, vous pouvez proposer un menu  {{htmlelement("select")}}  contenant les options les plus courantes (ce qui aide également à cohérence dans la saisie des données), et offrent une option "Autre" qui affiche un champ de texte dans lequel taper les valeurs aberrantes. Vous pouvez voir un exemple simple de cette idée en action dans [common-job-types.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/common-job-types.html) ( voir le [common jobs example live](http://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
+Pour cette raison, il vaut la peine d'essayer de minimiser la quantité de frappe nécessaire. Par exemple, au lieu de forcer les utilisateurs à saisir chaque fois le titre de leur travail en utilisant une entrée de texte standard, vous pouvez proposer un menu  {{htmlelement("select")}}  contenant les options les plus courantes (ce qui aide également à cohérence dans la saisie des données), et offrent une option "Autre" qui affiche un champ de texte dans lequel taper les valeurs aberrantes. Vous pouvez voir un exemple simple de cette idée en action dans [common-job-types.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/common-job-types.html) ( voir le [common jobs example live](http://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
 
-Il est également utile d’envisager l’utilisation de types de saisie de formulaire au format HTML5, tels que la date sur les plates-formes mobiles car ils les gèrent bien (Android et iOS, par exemple, affichent des widgets utilisables qui correspondent bien à l’expérience de l’appareil. Voir  [html5-form-examples.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html)  pour quelques exemples (voir [HTML5 form examples live](http://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — essayez de les charger et de les manipuler sur des appareils mobiles. Par exemple:
+Il est également utile d’envisager l’utilisation de types de saisie de formulaire au format HTML5, tels que la date sur les plates-formes mobiles car ils les gèrent bien (Android et iOS, par exemple, affichent des widgets utilisables qui correspondent bien à l’expérience de l’appareil. Voir  [html5-form-examples.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html)  pour quelques exemples (voir [HTML5 form examples live](http://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — essayez de les charger et de les manipuler sur des appareils mobiles. Par exemple:
 
 - Les types  `number`, `tel`, et `email` affichent des claviers virtuels appropriés pour la saisie de numéros / numéros de téléphone.
 - Les types `time` et `date` affichent des sélecteurs appropriés pour la sélection des heures et des dates. .
 
-Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à  [input types](http://diveinto.html5doctor.com/detect.html#input-types)  pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article [feature detection article](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) pour en savoir plus. .
+Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à  [input types](http://diveinto.html5doctor.com/detect.html#input-types)  pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article [feature detection article](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) pour en savoir plus. .
 
 ## Résumé
 

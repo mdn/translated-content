@@ -25,7 +25,7 @@ translation_of: Web/API/Element/getAttributeNS
 
 ### Valeur de retour
 
-La valeur de chaîne de caractères de l'attribut spécifié. Si  l'attribut n'existe pas, le résultat est `null`.
+La valeur de chaîne de caractères de l'attribut spécifié. Si  l'attribut n'existe pas, le résultat est `null`.
 
 > **Note :** Les versions antérieures de la spécification DOM avaient cette méthode décrite comme renvoyant une chaîne vide pour des attributs inexistants, mais elle n'était généralement pas implémentée de cette façon, car null a plus de sens. La spécification DOM4 indique maintenant que cette méthode devrait retourner null pour les attributs inexistants.
 
@@ -86,8 +86,8 @@ Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer un
 
 | Spécification                                                                                                    | État                             | Commentaire                                                                                                                                                                                                 |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("DOM WHATWG", "#dom-element-getattributens", "Element.getAttributeNS()")}} | {{Spec2("DOM WHATWG")}} |                                                                                                                                                                                                             |
-| {{SpecName("DOM3 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM3 Core")}}     | Specifie qu'une exception `NOT_SUPPORTED_ERR`  est levée si l'agent utilisateur ne supporte pas la fonctionnalité `"XML"`. Spécifie également que `null` doit être passé pour n'avoir aucun espace de noms. |
+| {{SpecName("DOM WHATWG", "#dom-element-getattributens", "Element.getAttributeNS()")}} | {{Spec2("DOM WHATWG")}} |                                                                                                                                                                                                             |
+| {{SpecName("DOM3 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM3 Core")}}     | Specifie qu'une exception `NOT_SUPPORTED_ERR`  est levée si l'agent utilisateur ne supporte pas la fonctionnalité `"XML"`. Spécifie également que `null` doit être passé pour n'avoir aucun espace de noms. |
 | {{SpecName("DOM2 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM2 Core")}}     | Définition initiale                                                                                                                                                                                         |
 
 ## Compatibilité des navigateurs

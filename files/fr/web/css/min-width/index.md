@@ -65,10 +65,10 @@ min-width: unset;
 
 ```html
 <div> Lorem ipsum tralala sit amet, consectetur adipisicing
-  <p>
-     Ut enim ad minim veniam, quis nostrud exercitation
-     ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
+  <p>
+     Ut enim ad minim veniam, quis nostrud exercitation
+     ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
 </div>
 ```
 

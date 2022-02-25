@@ -37,7 +37,7 @@ Les deux valeurs suivantes inversent l'ordre des éléments en échangeant les l
 
 ![Les éléments sont affichés en colonne et dans l'ordre inverse, ils commencent par le bas.](align11.png)
 
-Rappelons ici que les lignes de début et de fin sont liées aux modes d'écritures. Les exemples en lignes ci-avant illustrent comment `row` et `row-reverse` fonctionnent dans une langue qui s'écrit de gauche à droite (le français par exemple). Si on travaille avec une langue écrite de droite à gauche (l'arabe par exemple), `row` correspondrait au côté droit et  `row-reverse` au côté gauche.
+Rappelons ici que les lignes de début et de fin sont liées aux modes d'écritures. Les exemples en lignes ci-avant illustrent comment `row` et `row-reverse` fonctionnent dans une langue qui s'écrit de gauche à droite (le français par exemple). Si on travaille avec une langue écrite de droite à gauche (l'arabe par exemple), `row` correspondrait au côté droit et  `row-reverse` au côté gauche.
 
 ![Des conteneurs flexibles avec des lettres arabes illustrant comment le contenu commence à droite normalement et commence à gauche lorsqu'on utilise row-reverse.](order-rtl.png)
 

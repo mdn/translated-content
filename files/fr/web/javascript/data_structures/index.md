@@ -87,7 +87,7 @@ const y = x + 1n;
 9007199254740993n
 ```
 
-À l'instar des nombres classiques, on peut utiliser les opérateurs `+`,  `*`, `-`, `**` et `%`. Un grand entier ne sera pas strictement égal à un nombre mais on pourra avoir une égalité faible.
+À l'instar des nombres classiques, on peut utiliser les opérateurs `+`,  `*`, `-`, `**` et `%`. Un grand entier ne sera pas strictement égal à un nombre mais on pourra avoir une égalité faible.
 
 Un grand entier se comportera comme un nombre lorsqu'il est converti en booléen avec `if`, `||`, `&&`, `Boolean` et `!`.
 

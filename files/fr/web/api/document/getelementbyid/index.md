@@ -5,7 +5,7 @@ translation_of: Web/API/Document/getElementById
 ---
 {{ ApiRef("DOM") }}
 
-La méthode **`getElementById()`** de {{domxref("Document")}} renvoie un objet  {{domxref("Element")}} représentant l'élément dont la propriété  {{domxref("Element.id", "id")}} correspond à la chaîne de caractères spécifiée. Étant donné que les ID d'élément doivent être uniques, s'ils sont spécifiés, ils constituent un moyen utile d'accéder rapidement à un élément spécifique.
+La méthode **`getElementById()`** de {{domxref("Document")}} renvoie un objet  {{domxref("Element")}} représentant l'élément dont la propriété  {{domxref("Element.id", "id")}} correspond à la chaîne de caractères spécifiée. Étant donné que les ID d'élément doivent être uniques, s'ils sont spécifiés, ils constituent un moyen utile d'accéder rapidement à un élément spécifique.
 
 Si vous avez besoin d'accéder à un élément qui n'a pas d'ID, vous pouvez utiliser {{domxref("Document.querySelector","querySelector()")}} pour trouver l'élément en utilisant un {{Glossary("CSS selector","sélecteur")}}.
 
@@ -58,7 +58,7 @@ function changeColor(newColor) {
 
 L'écriture de la lettre capitale de «&nbsp;Id&nbsp;» dans le nom de cette méthode _doit_ être respectée pour que le code fonctionne ; `getElementByID()` n'est pas valide et ne fonctionnera _pas_, même si elle semble naturelle.
 
-Contrairement à d'autres méthodes de recherche d'éléments, comme  {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}, `getElementById` est uniquement disponible comme méthode de l'objet global `document` et _n'est pas_ disponible sur tous les objets du DOM. Parce que les valeurs d'ID doivent être uniques dans l'ensemble du document, il n'y pas besoin d'avoir une version "locale" de la fonction.
+Contrairement à d'autres méthodes de recherche d'éléments, comme  {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}, `getElementById` est uniquement disponible comme méthode de l'objet global `document` et _n'est pas_ disponible sur tous les objets du DOM. Parce que les valeurs d'ID doivent être uniques dans l'ensemble du document, il n'y pas besoin d'avoir une version "locale" de la fonction.
 
 ## Autre exemple
 

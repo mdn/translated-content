@@ -48,7 +48,7 @@ _Cette interface hérite de méthodes de la part de son parent, {{domxref("Node"
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('DOM WHATWG', '#documenttype', 'DocumentType')}}                 | {{Spec2('DOM WHATWG')}} | Implémente désormais l'interface {{domxref("ChildNode")}}. Retrait des propriétés `internalSubset`, `entities` et `notation`. |
 | {{SpecName('DOM3 Core', 'core.html#ID-412266927', 'DocumentType')}}         | {{Spec2('DOM3 Core')}}     | Aucune modification depuis {{SpecName('DOM2 Core')}}.                                                                          |
-| {{SpecName('DOM2 Core', 'core.html#ID-412266927', 'CharacterData')}}     | {{Spec2('DOM2 Core')}}     | Ajout des propriétés `publicID`, `systemID`  et `internalSubset`.                                                                     |
+| {{SpecName('DOM2 Core', 'core.html#ID-412266927', 'CharacterData')}}     | {{Spec2('DOM2 Core')}}     | Ajout des propriétés `publicID`, `systemID`  et `internalSubset`.                                                                     |
 | {{SpecName('DOM1', 'level-one-core.html#ID-412266927', 'CharacterData')}} | {{Spec2('DOM1')}}         | Définition initiale.                                                                                                                  |
 
 ## Compatibilité des navigateurs

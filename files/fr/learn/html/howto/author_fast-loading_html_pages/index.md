@@ -43,8 +43,8 @@ En particulier pour les pages qui sont générées dynamiquement, une petite rec
 Plus d'informations:
 
 1. [HTTP Conditional Get for RSS Hackers](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-   2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-   3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
+   2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
+   3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
 
 ### Réduire le nombre de scripts en ligne
 
@@ -61,11 +61,11 @@ En outre, la validité du balisage permet la libre utilisation d'autres outils q
 Remplacer la mise en page basé sur des \<table> par des blocs \<div>, plutôt que des \<table> très imbriquée comme dans l'exemple suivant:
 
     <TABLE>
-      <TABLE>
-        <TABLE>
-              ...
-        </TABLE>
-      </TABLE>
+      <TABLE>
+        <TABLE>
+              ...
+        </TABLE>
+      </TABLE>
     </TABLE>
 
 Préferez des \<table> non-imbriquées ou \<div> comme dans l'exemple suivant:
@@ -79,7 +79,7 @@ Préferez des \<table> non-imbriquées ou \<div> comme dans l'exemple suivant:
 Si le navigateur peut immédiatement déterminer la hauteur et/ou la largeur de vos images et tableaux, il sera capable d'afficher une page web sans avoir à refondre le contenu. Cela n'augmente pas seulement la vitesse d'affichage de la page, mais aussi à empêcher les changements gênants dans la disposition d'une page lors du chargement. Pour cette raison, la hauteur et la largeur doit être spécifié pour les images, chaque fois que possible.
 Les tableaux doivent utiliser le sélecteur CSS selector:property combination:
 
-      table-layout: fixed;
+      table-layout: fixed;
 
 et doit spécifier la largeur des colonnes en utilisant le COL et les balises html COLGROUP.
 

@@ -41,7 +41,7 @@ L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuve
 - Obtention d'une liste de signets récemment ajoutés ({{WebExtAPIRef("bookmarks.getRecent")}}).
 - Signet la manipulation de l'arborescence des dossiers pour :
 
-  - Obtenir des informations sur l'arborescence  ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, and {{WebExtAPIRef("bookmarks.getSubTree")}}).
+  - Obtenir des informations sur l'arborescence  ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, and {{WebExtAPIRef("bookmarks.getSubTree")}}).
   - Ajouter des branches ({{WebExtAPIRef("bookmarks.create")}}).
   - Supprimer des noeuds ({{WebExtAPIRef("bookmarks.removeTree")}}).
   - Déplacer des nœuds ({{WebExtAPIRef("bookmarks.move")}}).
@@ -61,7 +61,7 @@ L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuve
 
 ## Exemple de procédure pas à pas
 
-Pour comprendre comment utiliser l'API Bookmarks, jetons un coup d'œil à l'exemple  [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it). Cet exemple ajoute une icône de barre d'outils  ({{WebExtAPIRef("browserAction")}}) lorsqu'on clique dessus, ajoute ou supprime la page en cours des signets. Si la page est mise en signet (ou supprimée des signets) d'une autre manière, l'icône est mise à jour pour montrer l'état du signet de la page.
+Pour comprendre comment utiliser l'API Bookmarks, jetons un coup d'œil à l'exemple  [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it). Cet exemple ajoute une icône de barre d'outils  ({{WebExtAPIRef("browserAction")}}) lorsqu'on clique dessus, ajoute ou supprime la page en cours des signets. Si la page est mise en signet (ou supprimée des signets) d'une autre manière, l'icône est mise à jour pour montrer l'état du signet de la page.
 
 Cette vidéo montre l'extension en action :
 
@@ -84,8 +84,8 @@ Définit les icônes qui seront utilisées pour représenter l'extension, dans d
 
 ```json
   "icons": {
-    "48": "icons/bookmark-it.png",
-    "96": "icons/bookmark-it@2x.png"
+    "48": "icons/bookmark-it.png",
+    "96": "icons/bookmark-it@2x.png"
   },
 ```
 

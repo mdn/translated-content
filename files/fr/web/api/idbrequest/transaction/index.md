@@ -87,7 +87,7 @@ openRequest.onsuccess = function() {
 
 | Spécification                                                                                    | Statut                       | Commentaire |
 | ------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-transaction', 'transaction')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBRequest-transaction', 'transaction')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

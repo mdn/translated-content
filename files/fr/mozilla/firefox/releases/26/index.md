@@ -57,7 +57,7 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 
 ### MathML
 
-- Les rendus incohérents de {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}} ont été unifiés et la gestion des erreurs de ces éléments a été améliorée ({{bug("827713")}}).
+- Les rendus incohérents de {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}} ont été unifiés et la gestion des erreurs de ces éléments a été améliorée ({{bug("827713")}}).
 
 ### SVG
 

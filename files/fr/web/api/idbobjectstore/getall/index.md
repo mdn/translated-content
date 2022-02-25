@@ -40,7 +40,7 @@ La méthode **`getAll()`** de l'interface {{domxref("IDBObjectStore")}} fait une
 
 | Spécification                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB2', '#dom-idbobjectstore-getall', 'getAll()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB2', '#dom-idbobjectstore-getall', 'getAll()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

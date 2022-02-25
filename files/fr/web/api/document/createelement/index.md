@@ -97,7 +97,7 @@ Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/
 
 | Spécification                                                                                                    | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
+| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

@@ -57,7 +57,7 @@ Cet élément est implémenté par l'interface [`SVGDefsElement`](/fr/docs/Web/A
 
 | Spécification                                                                | Status                   | Commentaire        |
 | ---------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'struct.html#Head', '&lt;defs&gt;')}} | {{Spec2('SVG2')}} |                    |
+| {{SpecName('SVG2', 'struct.html#Head', '&lt;defs&gt;')}} | {{Spec2('SVG2')}} |                    |
 | {{SpecName('SVG1.1', 'struct.html#Head', '&lt;defs&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
 ## Compatibilité des navigateurs

@@ -50,7 +50,7 @@ Mais ne désespérez pas - nous vous aiderons ici à naviguer parmi les techniqu
 
 ## Simple images
 
-Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article  [ HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML)  —  vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d’un texte alternatif que les lecteurs d’écran peuvent lire et lire à leurs utilisateurs.
+Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article  [ HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML)  —  vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d’un texte alternatif que les lecteurs d’écran peuvent lire et lire à leurs utilisateurs.
 
 Par exemple:
 
@@ -184,9 +184,9 @@ stopBtn.onclick = function() {
 };
 ```
 
-Il n'y a pas de fonction  `stop()`  disponible sur {{domxref("HTMLMediaElement")}}s,  nous le mettons donc en `pause()`  et, dans le même temps, définissons la valeur `currentTime` sur 0.
+Il n'y a pas de fonction  `stop()`  disponible sur {{domxref("HTMLMediaElement")}}s,  nous le mettons donc en `pause()`  et, dans le même temps, définissons la valeur `currentTime` sur 0.
 
-Ensuite, nos boutons de rembobinage et d’avance rapide - ajoutez les blocs suivants au bas de votre  code:
+Ensuite, nos boutons de rembobinage et d’avance rapide - ajoutez les blocs suivants au bas de votre  code:
 
 ```js
 rwdBtn.onclick = function() {
@@ -317,7 +317,7 @@ Un fichier WebVTT typique ressemblera à ceci:
 Pour que ceci soit affiché avec la lecture du média HTML, vous devez:
 
 - Enregistrez-le en tant que fichier .vtt dans un endroit approprié.
-- Lien vers le fichier .vtt avec  l'élément {{htmlelement("track")}} . `<track>`  devrait être placé dans `<audio>` ou `<video>`,  mais après tout `<source>` éléments .  Utilisez l’attribut {{htmlattrxref ("kind", "track")}} pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez {{htmlattrxref ("srclang", "track")}} pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
+- Lien vers le fichier .vtt avec  l'élément {{htmlelement("track")}} . `<track>`  devrait être placé dans `<audio>` ou `<video>`,  mais après tout `<source>` éléments .  Utilisez l’attribut {{htmlattrxref ("kind", "track")}} pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez {{htmlattrxref ("srclang", "track")}} pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
 
 Voici un exemple:
 
@@ -333,7 +333,7 @@ Cela donnera une vidéo avec des sous-titres affichés, un peu comme ceci:
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-Pour plus de détails, veuillez lire  [Ajouter des légendes et des sous titres à des vidéos HTML 5](/fr/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).  Vous trouverez [un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/)  qui accompagne cet article sur Github, écrit par Ian Devlin (voir aussi le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Cet exemple utilise du JavaScript. pour permettre aux utilisateurs de choisir entre différents sous-titres. Notez que pour activer les sous-titres, vous devez appuyer sur le bouton "CC" et sélectionner une option - Anglais, Allemand ou Español.
+Pour plus de détails, veuillez lire  [Ajouter des légendes et des sous titres à des vidéos HTML 5](/fr/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).  Vous trouverez [un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/)  qui accompagne cet article sur Github, écrit par Ian Devlin (voir aussi le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Cet exemple utilise du JavaScript. pour permettre aux utilisateurs de choisir entre différents sous-titres. Notez que pour activer les sous-titres, vous devez appuyer sur le bouton "CC" et sélectionner une option - Anglais, Allemand ou Español.
 
 > **Note :** Les pistes de texte et les transcriptions vous aident également avec {{glossary ("SEO")}}, car les moteurs de recherche se développent particulièrement bien avec le texte. Les pistes de texte permettent même aux moteurs de recherche de se lier directement à un endroit en cours de vidéo.
 

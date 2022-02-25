@@ -44,7 +44,7 @@ Vous devriez également être familiarisé avec les bases du JavaScript avant de
 
 ## Auto-évaluation
 
-- [Ajoutez des fonctionnalités  à notre  démo des ballons bondissants](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+- [Ajoutez des fonctionnalités  à notre  démo des ballons bondissants](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
   - : Dans cette évaluation, vous devrez utiliser la démo des balles bondissantes de l’article précédent comme un point de départ et y ajouter quelques nouvelles et intéressantes fonctionnalités.
 
 {{PreviousNext("Apprendre/JavaScript/Building_blocks", "JavaScript/Guide")}}

@@ -47,4 +47,4 @@ Avant Gecko 7.0 {{ geckoRelease("7.0") }}, il était possible que la valeur renv
 
 | Spécification                                                                                                                                                                  | Statut                       | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('DOM2 HTML', 'html.html#ID-52460740', 'dir')}} — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-52460740) (non normative) | {{Spec2('DOM2 HTML')}} |             |
+| {{SpecName('DOM2 HTML', 'html.html#ID-52460740', 'dir')}} — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-52460740) (non normative) | {{Spec2('DOM2 HTML')}} |             |

@@ -616,7 +616,7 @@ Modifiers are special keys which are used to generate special characters or caus
     <tr>
       <td><code>"Insert"</code></td>
       <td>
-        The Insert key, <kbd>Ins</kbd>. Toggles  between inserting and
+        The Insert key, <kbd>Ins</kbd>. Toggles  between inserting and
         overwriting text.
       </td>
       <td><code>VK_INSERT</code> (0x2D)</td>
@@ -1598,7 +1598,7 @@ These keys are only available on Japanese keyboards.
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**; these are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the  {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's  {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**; these are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the  {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's  {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK
 
@@ -1795,7 +1795,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
         >
         (0x01001261)
       </td>
-      <td>  ̡</td>
+      <td>  ̡</td>
       <td></td>
     </tr>
     <tr>

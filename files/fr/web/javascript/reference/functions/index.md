@@ -126,7 +126,7 @@ Les _IIFE_ sont des expressions de fonction appelées dès que la fonction est d
 Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page sur l'instruction {{jsxref('Instructions/function*', 'function*')}} pour plus de détails) :
 
     function* nom([param[, param[, ... param]]]) {
-       instructions
+       instructions
     }
 
 - `nom`
@@ -141,7 +141,7 @@ Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page s
 Une expression de générateur est similaire à une déclaration de fonction génératrice et possède presque la même syntaxe (pour plus de détails, consulter la page sur l'expression {{jsxref('Opérateurs/function*', 'function*')}}) :
 
     function* [nom]([param[, param[, ... param]]]) {
-       instructions
+       instructions
     }
 
 - `nom`
@@ -162,7 +162,7 @@ Une expression de fonction fléchée possède une syntaxe plus courte et est li�
     param => expression
 
 - `param`
-  - : Le nom d'un argument. S'il n'y a pas d'arguments, cela doit être indiqué par `()`.  S'il y a un seul argument, les parenthèses ne sont pas obligatoires (par exemple :  `toto => 1`).
+  - : Le nom d'un argument. S'il n'y a pas d'arguments, cela doit être indiqué par `()`.  S'il y a un seul argument, les parenthèses ne sont pas obligatoires (par exemple :  `toto => 1`).
 - `instructions `ou` expression`
   - : S'il y a plusieurs instructions, elles doivent être encadrées par des accolades. Une expression unique ne doit pas obligatoirement être entourée d'accolades. L'expression est également la valeur de retour implicite de la fonction.
 
@@ -358,7 +358,7 @@ Cela n'est pas différent du stockage de références avec d'autres objets, mais
 
 ### Imbrication multiple de fonctions
 
-On peut imbriquer plusieurs fonctions : une fonction (A) contien une fonction (B) qui contient une fonction (C). Ici les fonctions B et C forment des fermetures et aisni B peut accéder à A et C peut accéder à B. On peut donc en déduire, puisque C accède à B qui accède à A que C peut accéder à A. On voit donc que les fermetures peuvent contenir différentes portées. Elles peuvent, récursivement, contenir la portée des fonctions qui la contiennent. Ce mécanisme est appelé « chaînage de portée »  (_scope chaining_ en anglais). (Cette dénomination sera expliquée par la suite.)
+On peut imbriquer plusieurs fonctions : une fonction (A) contien une fonction (B) qui contient une fonction (C). Ici les fonctions B et C forment des fermetures et aisni B peut accéder à A et C peut accéder à B. On peut donc en déduire, puisque C accède à B qui accède à A que C peut accéder à A. On voit donc que les fermetures peuvent contenir différentes portées. Elles peuvent, récursivement, contenir la portée des fonctions qui la contiennent. Ce mécanisme est appelé « chaînage de portée »  (_scope chaining_ en anglais). (Cette dénomination sera expliquée par la suite.)
 
 On peut l'observer avec l'exemple suivant :
 
@@ -379,7 +379,7 @@ Dans cet exemple, C accède à la variable y de B et à la variable x de A. Cela
 
 1.  `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`
 2.  `C` est une fermeture qui contient `B`
-3.  Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` *enchaîne les portées de*  `B` et `A` dans cet ordre.
+3.  Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` *enchaîne les portées de*  `B` et `A` dans cet ordre.
 
 La réciproque n'est pas vraie. `A` ne peut avoir accès à `C`, parce que `A` ne peut accéder ni aux variables ni aux arguments de `B`, or `C` est une variable de `B. C` est donc privé et seulement pour `B`.
 
@@ -398,7 +398,7 @@ function externe() {
 resultat = externe()(20); // renvoie 20 et non pas 10
 ```
 
-Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x `de la fonction` interne` et la variable `x `de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le  `x` de la fonction interne l'emporte sur le `x `de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
+Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x `de la fonction` interne` et la variable `x `de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le  `x` de la fonction interne l'emporte sur le `x `de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
 
 ## Définition des méthodes
 
@@ -418,7 +418,7 @@ Avec ECMAScript 2015, il est possible de définir des méthodes de façon plus c
 ```js
 var obj = {
   toto() {},
-  truc() {}
+  truc() {}
 };
 ```
 

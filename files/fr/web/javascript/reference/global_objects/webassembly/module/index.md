@@ -18,7 +18,7 @@ Le constructeur `WebAssembly.Module()` peut être appelé de façon synchrone po
 
 ## Syntaxe
 
-> **Attention :** La compilation de modules volumineux peut être consommatrice de ressources et de temps. Le constructeur `Module()` doit uniqument être utilisé lorsqu'il faut absolument avoir une compilation  synchrone. Pour tous les autres cas de figures, on privilégiera la méthode asynchrone {{jsxref("WebAssembly.compileStreaming()")}}.
+> **Attention :** La compilation de modules volumineux peut être consommatrice de ressources et de temps. Le constructeur `Module()` doit uniqument être utilisé lorsqu'il faut absolument avoir une compilation  synchrone. Pour tous les autres cas de figures, on privilégiera la méthode asynchrone {{jsxref("WebAssembly.compileStreaming()")}}.
 
     var monModule = new WebAssembly.Module(bufferSource);
 

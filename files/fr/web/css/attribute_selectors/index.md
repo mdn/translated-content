@@ -214,7 +214,7 @@ ol[type="A" s] {
 | Spécification                                                                                                | État                                 | Commentaires                                                                                |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------- |
 | {{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS4 Selectors')}} | Ajout du modification pour la sélection des valeurs d'attribut ASCII insensible à la casse. |
-| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS3 Selectors')}} |                                                                                             |
+| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS3 Selectors')}} |                                                                                             |
 | {{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}} | {{Spec2('CSS2.1')}}             | Définition initiale.                                                                        |
 
 ## Compatibilité des navigateurs

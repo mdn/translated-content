@@ -384,7 +384,7 @@ Le positionnement relatif vous permet de décaler un élément de la position qu
 }
 ```
 
-Ici, nous donnons au paragraphe médian à la propriété  {{cssxref("position")}} la valeur `relative` — ce qui ne fait rien en soi, alors nous ajoutons également les propriétés {{cssxref("top")}} et {{cssxref("left")}}. Elles servent à déplacer l'élément en question vers le bas et à droite — cela pourrait sembler être l'opposé de ce à quoi vous vous attendiez, mais représentez-vous l'élément comme poussé à partir de ses côtés gauche et haut&nbsp;: il en résulte un déplacement vers la droite et vers le bas.
+Ici, nous donnons au paragraphe médian à la propriété  {{cssxref("position")}} la valeur `relative` — ce qui ne fait rien en soi, alors nous ajoutons également les propriétés {{cssxref("top")}} et {{cssxref("left")}}. Elles servent à déplacer l'élément en question vers le bas et à droite — cela pourrait sembler être l'opposé de ce à quoi vous vous attendiez, mais représentez-vous l'élément comme poussé à partir de ses côtés gauche et haut&nbsp;: il en résulte un déplacement vers la droite et vers le bas.
 
 Ajouter ce code donne le résultat suivant&nbsp;:
 
@@ -600,7 +600,7 @@ Prenons un exemple. Tout d'abord, un simple balisage qui crée un formulaire HTM
 
 Maintenant, le CSS pour cet exemple. Le gros de la CSS est plutôt ordinaire, à l'exception de l'utilisation de la propriété {{cssxref("display")}}. Les éléments {{htmlelement("form")}}, {{htmlelement("div")}} et {{htmlelement("label")}} ainsi que {{htmlelement("input")}} ont été configurés pour disposés en tableau, en lignes de tableau et en cellules de tableau respectivement — à la base, ils se comporteront comme dans le cas d'un balisage de tableau HTML, avec pour résultat un bon alignement par défaut entre les étiquettes et le texte. Tout ce qu'il nous reste à faire est d'ajouter un peu d'ampleur, des marges, etc. pour que tout soit agréable visuellement et c'est tout.
 
-Notez que les propriétés `display: table-caption;` et `caption-side: bottom;` ont été affectées au paragraphe légende — il sera donc disposé comme une légende de tableau ({{htmlelement("caption")}})  placée en bas de la table pour des raisons de style, même si son balisage est placé avant les éléments `input` dans le code source. Voilà une bonne dose de souplesse.
+Notez que les propriétés `display: table-caption;` et `caption-side: bottom;` ont été affectées au paragraphe légende — il sera donc disposé comme une légende de tableau ({{htmlelement("caption")}})  placée en bas de la table pour des raisons de style, même si son balisage est placé avant les éléments `input` dans le code source. Voilà une bonne dose de souplesse.
 
 ```css
 html {

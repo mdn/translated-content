@@ -135,11 +135,11 @@ Il y a cinq principaux moteurs de rendu&nbsp;: Trident, Gecko, Presto, Blink et 
 
 | Moteur  | Doit contenir   | Ne doit pas contenir                                                                                            |
 | ------- | --------------- | --------------------------------------------------------------------------------------------------------------- |
-| Gecko   | Gecko/xyz       |                                                                                                                 |
+| Gecko   | Gecko/xyz       |                                                                                                                 |
 | WebKit  | AppleWebKit/xyz | Attention&nbsp;: les navigateurs qui utilisent Webkit ajoutent "like Gecko", ce qui peut déclencher de faux positifs |
 | Presto  | Opera/xyz       | **Note&nbsp;:** Presto n'est plus utilisé par Opera pour les versions >= 15 (voir "Blink")                           |
 | Trident | Trident/xyz     | Internet Explorer place cette chaîne dans la partie _commentaire_ du User-Agent                                 |
-| Blink   | Chrome/xyz      |                                                                                                                 |
+| Blink   | Chrome/xyz      |                                                                                                                 |
 
 ## Version du moteur de rendu
 

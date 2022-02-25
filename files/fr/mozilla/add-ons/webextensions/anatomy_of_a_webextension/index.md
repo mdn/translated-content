@@ -89,7 +89,7 @@ Les scripts d'arrière-plan peuvent faire des requêtes XHR à tous les hôtes p
 
 #### Contenu Web
 
-Les scripts d'arrière-plan n'obtiennent pas un accès direct aux pages Web. Toutefois,  ils peuvent charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages Web et peuvent [communiquer avec ces scripts de contenu à l'aide d'une API de communication](/fr/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts).
+Les scripts d'arrière-plan n'obtiennent pas un accès direct aux pages Web. Toutefois,  ils peuvent charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages Web et peuvent [communiquer avec ces scripts de contenu à l'aide d'une API de communication](/fr/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts).
 
 #### Politique de sécurité du contenu
 
@@ -105,13 +105,13 @@ Votre extension peut inclure divers composants d'interface utilisateur dont le c
 
 Pour chacun de ces composants, vous créez un fichier HTML et pointez vers lui en utilisant une propriété spécifique dans [manifest.json](/fr/Add-ons/WebExtensions/manifest.json). Le fichier HTML peut inclure des fichiers CSS et JavaScript, tout comme une page Web normale.
 
-Toutes ces pages sont un type de [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages),et contrairement à une page Web normale, votre JavaScript peut utiliser les mêmes API d'extension Web privilégiées que votre script de fond. Ils peuvent même accéder directement aux variables de la page d'arrière-plan en utilisant  {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
+Toutes ces pages sont un type de [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages),et contrairement à une page Web normale, votre JavaScript peut utiliser les mêmes API d'extension Web privilégiées que votre script de fond. Ils peuvent même accéder directement aux variables de la page d'arrière-plan en utilisant  {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
 ## Page d'extension
 
 Vous pouvez également inclure dans votre extension des documents HTML qui ne sont pas attachés à un composant d'interface utilisateur prédéfini. Contrairement aux documents que vous pouvez fournir pour les sidebars, les popups ou les pages d'options, ceux-ci n'ont pas d'entrée dans manifest.json. Cependant, ils ont également accès aux mêmes API WebExtension privilégiées que votre script d'arrière-plan.
 
-Vous chargerez typiquement une page comme celle-ci en utilisant  {{WebExtAPIRef("windows.create()")}} ou {{WebExtAPIRef("tabs.create()")}}.
+Vous chargerez typiquement une page comme celle-ci en utilisant  {{WebExtAPIRef("windows.create()")}} ou {{WebExtAPIRef("tabs.create()")}}.
 
 Voir les [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages) pour en savoir plus.
 

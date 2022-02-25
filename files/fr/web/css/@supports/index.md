@@ -161,9 +161,9 @@ sera ainsi équivalente à :
 
 ```css
 @supports (--toto: green) {
-  body {
-    color: --nomVar;
-  }
+  body {
+    color: --nomVar;
+  }
 }
 ```
 

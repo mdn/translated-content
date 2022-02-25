@@ -41,7 +41,7 @@ L'équipement peut également inclure un accéléromètre, un baromètre, ou d'a
 Pour accéder à l'API WebXR à l'intérieur du contexte d'une fenêtre donnée, utiliser la propriété {{domxref("navigator.xr")}}, qui retourne un objet {{domxref("XRSystem")}} au travers duquel toute l'API de périphérique WebXR Device API est alors exposée.
 
 - {{domxref("navigator.xr")}} {{ReadOnlyInline}}
-  - : Cette propriété, ajoutée à l'interface {{domxref("Navigator")}}, retourne l'objet  {{domxref("XRSystem")}} au travers duquel l'API WebXR est exposée. Si cette propriété est missing ou `null`, WebXR n'est pas disponible.
+  - : Cette propriété, ajoutée à l'interface {{domxref("Navigator")}}, retourne l'objet  {{domxref("XRSystem")}} au travers duquel l'API WebXR est exposée. Si cette propriété est missing ou `null`, WebXR n'est pas disponible.
 
 ## Les interfaces WebXR
 

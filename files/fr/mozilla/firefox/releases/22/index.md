@@ -25,11 +25,11 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 - Support de la propriété `multipart` avec `XMLHttpRequest`. Les réponses `multipart/x-mixed-replace` dans `XMLHttpRequest` ont été supprimées. C'était une fonctionnalité uniquement supportée par Gecko et jamais standardisée. Il est possible d'utiliser [Server-Sent Events](/fr/docs/Server-sent_events) et [Web Sockets](/fr/docs/WebSockets) ou d'inspecter la propriété `responseText` des _progress events_ à la place.
 - Le support des [Web Notifications](http://notifications.spec.whatwg.org/) est activé par défaut. ({{bug(782211)}}).
-- La méthode {{domxref("XMLHttpRequest/FormData", "FormData")}}  `append` accepte maintenant un troisième paramètre optionnel `filename` ({{bug(690659)}}).
+- La méthode {{domxref("XMLHttpRequest/FormData", "FormData")}}  `append` accepte maintenant un troisième paramètre optionnel `filename` ({{bug(690659)}}).
 - {{domxref("Node.isSupported")}} a été supprimé ({{bug(801562)}}).
 - {{domxref("Node.setUserData")}} et {{domxref("Node.getUserData")}} ont été supprimés pour le contenu web et dépréciés pour le contenu chrome ({{bug(842372)}})
 - Un backend Mac OS X pour {{domxref("DeviceLightEvent", "Ambient Light Events")}} a été implémenté.
-- Les éléments du namespace HTML avec les noms locaux "bgsound", "multicol", et "image" n'utilisent plus l'interface `HTMLSpanElement`.  "bgsound" et "multicol" utilisent `HTMLUnknownElement` et "image" utilise `HTMLElement`.
+- Les éléments du namespace HTML avec les noms locaux "bgsound", "multicol", et "image" n'utilisent plus l'interface `HTMLSpanElement`.  "bgsound" et "multicol" utilisent `HTMLUnknownElement` et "image" utilise `HTMLElement`.
 
 ### CSS
 
@@ -47,7 +47,7 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 - [L'inspecteur de polices](https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/) montre quelles polices sur votre ordinateur ont été appliquées sur cette page.
 - Le mode d'affichage de rendu visuel montre quand et où une page est re-rendue.
 - Les outils pour développeurs peuvent maintenant être affichés à droite d'une fenêtre et plus seulement en bas.
-- Certains onglets des outils pour développeurs sont passés de [XUL à HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727). Par exemple, l'onglet présentant les règles css fait maintenant partie de chrome://browser/content/devtools/cssruleview\.xhtml, et pas de  `cssruleview.xul`. Au lieu d'ajouter une couche pour ajouter des fonctionnalités directement sur ces onglets, vous pouvez ajouter une couche et la lier par script au document xul externe afin d'ajouter des écouteurs d'événements et de changer ces documents html.
+- Certains onglets des outils pour développeurs sont passés de [XUL à HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727). Par exemple, l'onglet présentant les règles css fait maintenant partie de chrome://browser/content/devtools/cssruleview\.xhtml, et pas de  `cssruleview.xul`. Au lieu d'ajouter une couche pour ajouter des fonctionnalités directement sur ces onglets, vous pouvez ajouter une couche et la lier par script au document xul externe afin d'ajouter des écouteurs d'événements et de changer ces documents html.
 - L'affichage en pile est maintenant affiché en fil d'Ariane en haut de l'onglet et la liste des scripts est maintenant sur la gauche du débuggeur.
 
 ## A voir aussi

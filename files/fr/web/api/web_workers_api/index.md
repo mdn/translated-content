@@ -18,7 +18,7 @@ Vous pouvez exécuter quelque code que ce soit à l'intérieur du thread du work
 
 Les données sont envoyées entre les workers et le thread principal au moyen d'un sytème de messages — des deux côtés les messages sont envoyés en utilisant la méthode `postMessage()`, et la réponse leur parvient au moyen du gestionnaire d'événement `onmessage` (le message est contenu dans l'attribut `data` de l'événement {{event("Message")}}.) Les données sont copiées plutôt que partagées.
 
-Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente.  De plus, les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour les E/S réseau, à l'exception que les attributs `responseXML` et `channel` de `XMLHttpRequest` retournent toujours `null`.
+Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente.  De plus, les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour les E/S réseau, à l'exception que les attributs `responseXML` et `channel` de `XMLHttpRequest` retournent toujours `null`.
 
 En plus des workers dédiés, il y a d'autres types de worker :
 

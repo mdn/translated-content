@@ -29,7 +29,7 @@ Le constructeur **`Extendable.MessageEvent()`** crée une nouvelle instance d'u
     - `origin`: Une {{domxref("DOMString")}} qui définie l'origine de l'environnement du service worker correspondant.
     - `lastEventId`: Une {{domxref("DOMString")}} qui définie le dernier l'id du dernier évènement de l'évènement source.
     - `source`: Le {{domxref("Client")}}, {{domxref("ServiceWorker")}} ou {{domxref("MessagePort")}} qui a envoyé un message.
-    - `ports`: Un tableau contenant les objets  {{domxref("MessagePort")}} connectés au canal d'envoie des messages.
+    - `ports`: Un tableau contenant les objets  {{domxref("MessagePort")}} connectés au canal d'envoie des messages.
 
 ## Exemples
 

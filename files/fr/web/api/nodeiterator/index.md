@@ -154,7 +154,7 @@ _Cette interface n'hérite d'aucune méthode._
 - {{domxref("NodeIterator.previousNode()")}}
   - : Renvoie le noeud {{domxref("Node")}} précédent dans le document ou `null` s'il n'y en a aucun.
 - {{domxref("NodeIterator.nextNode()")}}
-  - : Renvoie le noeud {{domxref("Node")}} suivant dans le  document ou `null` s'il n'y en a aucun.
+  - : Renvoie le noeud {{domxref("Node")}} suivant dans le  document ou `null` s'il n'y en a aucun.
 
 ## Spécifications
 

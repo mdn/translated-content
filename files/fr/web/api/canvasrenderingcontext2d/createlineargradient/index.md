@@ -65,8 +65,8 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 var gradient = ctx.createLinearGradient(0,0,200,0);
@@ -108,7 +108,7 @@ window.addEventListener("load", drawCanvas);
 
 | Spécification                                                                                                                                                                | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createlineargradient", "CanvasRenderingContext2D.createLinearGradient")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-createlineargradient", "CanvasRenderingContext2D.createLinearGradient")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité navigateurs
 
@@ -116,7 +116,7 @@ window.addEventListener("load", drawCanvas);
 
 ## Notes spécifiques à Gecko
 
-- A partir de Gecko 2.0 {{geckoRelease("2.0")}}, le fait de spécifier des valeurs non finies  déclenche maintenant `NOT_SUPPORTED_ERR` au lieu de `SYNTAX_ERR`.
+- A partir de Gecko 2.0 {{geckoRelease("2.0")}}, le fait de spécifier des valeurs non finies  déclenche maintenant `NOT_SUPPORTED_ERR` au lieu de `SYNTAX_ERR`.
 
 ## Voir aussi
 

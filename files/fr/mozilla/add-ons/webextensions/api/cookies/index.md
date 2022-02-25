@@ -16,11 +16,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 
 Permet aux extensions d'obtenir et de définir des cookies, et d'être averti quand ils changent.
 
-Pour utiliser cette API, vous devez inclure l'[API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" dans votre fichier  [manifest.json](/fr/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)  pour les sites dont vous devez accéder aux cookies. Voir les [permissions cookies](/fr/Add-ons/WebExtensions/API/cookies#Permissions).
+Pour utiliser cette API, vous devez inclure l'[API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" dans votre fichier  [manifest.json](/fr/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions)  pour les sites dont vous devez accéder aux cookies. Voir les [permissions cookies](/fr/Add-ons/WebExtensions/API/cookies#Permissions).
 
 ## Permissions
 
-Pour utiliser cette API, un module complémentaire doit spécifier la  [permission d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" dans son manifest, ainsi que les [permissions host](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour tous les sites pour lesquels il souhaite accéder aux cookies. L'add-on peut lire ou écrire des cookies qui pourraient être lus ou écrits  par une URL correspondant aux permissions de l'hôte. Par exemple :
+Pour utiliser cette API, un module complémentaire doit spécifier la  [permission d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" dans son manifest, ainsi que les [permissions host](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour tous les sites pour lesquels il souhaite accéder aux cookies. L'add-on peut lire ou écrire des cookies qui pourraient être lus ou écrits  par une URL correspondant aux permissions de l'hôte. Par exemple :
 
 - `http://*.example.com/`
 
@@ -31,7 +31,7 @@ Pour utiliser cette API, un module complémentaire doit spécifier la  [permiss
 
     Il ne peut _pas_ :
 
-    - Lire un cookie  sécurisé pour `www.example.com`.
+    - Lire un cookie  sécurisé pour `www.example.com`.
 
 - `http://www.example.com/`
 
@@ -39,8 +39,8 @@ Pour utiliser cette API, un module complémentaire doit spécifier la  [permiss
 
     - Lire un cookie non sécurisé pour `www.example.com`, avec n'importe quel chemin.
     - Lire un cookie non sécurisé pour `.example.com`, avec n'importe quel chemin.
-    - Écrire un cookie sécurisé ou non sécurisé pour  `www.example.com` avec n'importe quel chemin.
-    - Écrire un cookie sécurisé ou non sécurisé pour  `.example.com` avec n'importe quel chemin.
+    - Écrire un cookie sécurisé ou non sécurisé pour  `www.example.com` avec n'importe quel chemin.
+    - Écrire un cookie sécurisé ou non sécurisé pour  `.example.com` avec n'importe quel chemin.
 
     Il ne peut _pas_ :
 
@@ -58,7 +58,7 @@ Pour utiliser cette API, un module complémentaire doit spécifier la  [permiss
 Les cookies tiers sont des cookies qui sont définis par un site Web autre que celui sur lequel vous êtes actuellement. Par exemple :
 
 1.  Vous visitez [bbc.com](http://bbc.com). Il contient une annonce de [tracker.com](http://tracker.com) qui définit un cookie associé au domaine "[tracker.com](http://tracker.com)".
-2.  Vous visitez [cnn.com](http://cnn.com). Il contient également une annonce de  [tracker.com](http://tracker.com) qui définit un cookie associé au domaine "[tracker.com](http://tracker.com)".
+2.  Vous visitez [cnn.com](http://cnn.com). Il contient également une annonce de  [tracker.com](http://tracker.com) qui définit un cookie associé au domaine "[tracker.com](http://tracker.com)".
 3.  Finalement, les deux cookies peuvent être envoyés à [tracker.com](http://tracker.com). qui peut alors comprendre que le même utilisateur a visité les deux sites.
 
 Lorsque l'isolement de la première partie est activé, les cookies sont en outre qualifiés par le domaine de la page d'origine visitée par l'utilisateur (essentiellement, le domaine montré à l'utilisateur dans la barre d'URL, également appelé "première partie du domaine"). Cela signifie qu'un tracker ne peut pas corréler son cookie de [bbc.com](http://bbc.com) avec son cookie de [cnn.com](http://cnn.com), de sorte que le tracker ne peut pas suivre un seul utilisateur sur les deux sites.
@@ -74,7 +74,7 @@ Lorsque l'isolation de première partie est activée, vous devez fournir cette o
 Pour `getAll()`,  vous pouvez aussi passer `null` ici, et ceci obtiendra tous les cookies,
 qu'ils aient ou non une valeur non vide pour `firstPartyDomain.`
 
-Lorsque l'isolation de la première partie est désactivée, le paramètre `firstPartyDomain` est optionnel et par défaut est une chaîne vide. Une chaîne non vide peut être utilisée pour récupérer ou modifier les cookies d'isolation de première partie. De même, passer  `null` comme `firstPartyDomain` pour `getAll()` retournera tous les cookies.
+Lorsque l'isolation de la première partie est désactivée, le paramètre `firstPartyDomain` est optionnel et par défaut est une chaîne vide. Une chaîne non vide peut être utilisée pour récupérer ou modifier les cookies d'isolation de première partie. De même, passer  `null` comme `firstPartyDomain` pour `getAll()` retournera tous les cookies.
 
 ## Types
 

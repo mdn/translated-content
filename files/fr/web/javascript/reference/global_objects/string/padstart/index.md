@@ -33,7 +33,7 @@ Une chaîne de caractères ({{jsxref("String")}}) dont la longueur est celle ind
 ## Exemples
 
 ```js
-'abc'.padStart(10);         // "        abc"
+'abc'.padStart(10);         // "        abc"
 'abc'.padStart(10, "toto"); // "totototabc"
 'abc'.padStart(6,"123465"); // "123abc"
 'abc'.padStart(8, "0");     // "00000abc"

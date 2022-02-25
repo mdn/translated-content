@@ -25,7 +25,7 @@ Une {{domxref("IDBDatabase","connexion","",1)}} à la base de données sous la f
 
 ## Exemples
 
-Dans le fragment de code suivant, on ouvre une {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction","",1)}} en lecture/écriture pour {{domxref("IDBObjectStore","accéder au magasin d'objet","",1)}}  `"toDoList"` et y {{domxref("IDBObjectStore.add","ajouter","",1)}} un enregistrement. Notez également les gestionnaires d'événements {{domxref("IDBTransaction.oncomplete","oncomplete")}} et {{domxref("IDBTransaction.onerror","onerror")}} de la transaction qui affichent sur la page le résultat de la transaction.
+Dans le fragment de code suivant, on ouvre une {{domxref("IDBDatabase","connexion","",1)}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction","",1)}} en lecture/écriture pour {{domxref("IDBObjectStore","accéder au magasin d'objet","",1)}}  `"toDoList"` et y {{domxref("IDBObjectStore.add","ajouter","",1)}} un enregistrement. Notez également les gestionnaires d'événements {{domxref("IDBTransaction.oncomplete","oncomplete")}} et {{domxref("IDBTransaction.onerror","onerror")}} de la transaction qui affichent sur la page le résultat de la transaction.
 
 À la fin, la méthode **`db`** sert à renvoyer la connexion à la base de données associée à la transaction.
 
@@ -82,7 +82,7 @@ function addData() {
 
 | Spécification                                                                | État                         | Commentaires |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-db', 'db')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBTransaction-db', 'db')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

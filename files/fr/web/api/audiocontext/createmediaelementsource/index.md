@@ -76,7 +76,7 @@ gainNode.connect(audioCtx.destination);
 
 | Spécification                                                                                                                                                                                                                | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-createMediaElementSource-MediaElementAudioSourceNode-HTMLMediaElement-mediaElement', 'createMediaElementSource()')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioContext-createMediaElementSource-MediaElementAudioSourceNode-HTMLMediaElement-mediaElement', 'createMediaElementSource()')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité des navigateurs
 

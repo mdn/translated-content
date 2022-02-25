@@ -14,7 +14,7 @@ Deux API très simulaires existent en fonction du comportement asynchrone ou syn
 
 L'API asynchrone a les interfaces suivantes :
 
-- [LocalFileSystem](/en/DOM/File_API/File_System_API/LocalFileSystem) a deux méthodes globales qui vous permet d'avoir accès à un espace virtuel : requestFileSystem() et resolveLocalFileSystemURL().  Les méthodes sont implémentées par l'objet [window](/fr/docs/window) et le worker global scope.
+- [LocalFileSystem](/en/DOM/File_API/File_System_API/LocalFileSystem) a deux méthodes globales qui vous permet d'avoir accès à un espace virtuel : requestFileSystem() et resolveLocalFileSystemURL().  Les méthodes sont implémentées par l'objet [window](/fr/docs/window) et le worker global scope.
 - [FileSystem](/en/DOM/File_API/File_System_API/FileSystem) représente un fichier système. L'objet est la passerelle à votre API toute entière.
 - [Entry](/en/DOM/File_API/File_System_API/Entry) représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.
 - [DirectoryEntry](/en/DOM/File_API/File_System_API/DirectoryEntry) représente un dossier dans un fichier système.
@@ -30,7 +30,7 @@ L'API synchrone est utile avec les [WebWorkers](/En/Using_web_workers). Contrair
 - [FileSystemSync](/en/DOM/File_API/File_System_API/FileSystemSync) représente un fichier système.
 - [EntrySync](/en/DOM/File_API/File_System_API/EntrySync) représente une entrée dans un fichier système. L'entrée peut être un fichier ou un dossier.
 - [DirectoryEntrySync](/en/DOM/File_API/File_System_API/DirectoryEntrySync) représente un dossier dans un fichier système.
-- [DirectoryReaderSync](/en/DOM/File_API/File_System_API/DirectoryReaderSync)  vous permet la lecture de fichiers et dossiers à partir d'un dossier.
+- [DirectoryReaderSync](/en/DOM/File_API/File_System_API/DirectoryReaderSync)  vous permet la lecture de fichiers et dossiers à partir d'un dossier.
 - [FileEntrySync](/en/DOM/File_API/File_System_API/FileEntrySync) représente un fichier dans un fichier système.
 - [FileException](/en/DOM/File_API/File_System_API/FileException) est une erreur que vous pourriez rencontrer pendant l'utilisation des méthodes synchrones.
 

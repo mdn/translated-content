@@ -28,7 +28,7 @@ Une règle `@document` peut définir une ou plusieurs fonctions de correspondanc
 - `url-prefix()`, qui établit une correspondance si l'URL du document commence par la valeur fournie ;
 - `domain()`, qui établit une correspondance si l'URL du document se trouve sur le domaine indiqué (ou l'un de ses sous-domaines) ;
 - `media-document()` qui caractérise le type de document : vidéo, image, plugin, tout ;
-- `regexp()`, qui établit une correspondance avec si l'URL  du document vérifie une [expression rationnelle](/fr-FR/docs/Web/JavaScript/Guide/Regular_Expressions). L'expression doit correspondre à l'URL entière.
+- `regexp()`, qui établit une correspondance avec si l'URL  du document vérifie une [expression rationnelle](/fr-FR/docs/Web/JavaScript/Guide/Regular_Expressions). L'expression doit correspondre à l'URL entière.
 
 Les valeurs fournies aux fonctions `url()`, `url-prefix()`, `media-document()` et `domain()` peuvent être éventuellement délimitées par des apostrophes, simples ou doubles. Les valeurs fournies à la fonction `regexp()` _doivent_ être délimitées par des apostrophes.
 

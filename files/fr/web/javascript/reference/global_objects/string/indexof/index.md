@@ -119,9 +119,9 @@ console.log(count); // Affiche 2
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}                         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}                         | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

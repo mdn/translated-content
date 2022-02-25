@@ -31,7 +31,7 @@ if (screen.pixelDepth < 8) {
 
 | Spécification                                                                            | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSSOM View', '#dom-window-screen', 'window.screen')}} | {{Spec2('CSSOM View')}} |              |
+| {{SpecName('CSSOM View', '#dom-window-screen', 'window.screen')}} | {{Spec2('CSSOM View')}} |              |
 
 ## Compatibilité des navigateurs
 

@@ -49,7 +49,7 @@ Les événements ont trois fonctions :
       - : [`object`](#details). Détails sur l'événement de navigation.
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété `url`, qui est un  `Array` d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans le tableau.Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un  `Array` d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans le tableau.Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
 
 ## Objets supplémentaires
 

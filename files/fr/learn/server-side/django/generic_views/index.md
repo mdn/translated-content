@@ -58,7 +58,7 @@ Ouvrez le fichier **/catalog/urls.py**, et copiez-y la ligne en gras ci-dessous.
 ```python
 urlpatterns = [
     path('', views.index, name='index'),
-    path('books/', views.BookListView.as_view(), name='books'),
+    path('books/', views.BookListView.as_view(), name='books'),
 ]
 ```
 
@@ -105,8 +105,8 @@ Par exemple, nous pouvons ré-écrire la méthode `get_queryset()` pour changer
 class BookListView(generic.ListView):
     model = Book
 
-    def get_queryset(self):
-        return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
+    def get_queryset(self):
+        return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
 ```
 
 Nous pourrions aussi réécrire `get_context_data()`, afin d'envoyer au template des variables de contexte supplémentaires (par défaut c'est la liste de livres qui est envoyée). Le bout de code ci-dessous montre comment ajouter une variable appelée "`some_data`" au contexte (elle sera alors accessible comme variable de template).
@@ -115,12 +115,12 @@ Nous pourrions aussi réécrire `get_context_data()`, afin d'envoyer au templat
 class BookListView(generic.ListView):
     model = Book
 
-    def get_context_data(self, **kwargs):
-        # Call the base implementation first to get the context
-        context = super(BookListView, self).get_context_data(**kwargs)
-        # Create any data and add it to the context
-        context['some_data'] = 'This is just some data'
-        return context
+    def get_context_data(self, **kwargs):
+        # Call the base implementation first to get the context
+        context = super(BookListView, self).get_context_data(**kwargs)
+        # Create any data and add it to the context
+        context['some_data'] = 'This is just some data'
+        return context
 ```
 
 Quand vous faites cela, il est important de suivre la procédure indiquée ci-dessus :
@@ -142,17 +142,17 @@ Les templates pour vues génériques sont exactement comme les autres templates 
 
 {% block content %}
   <h1>Book List</h1>
-  {% if book_list %}
-  <ul>
-    {% for book in book_list %}
-      <li>
-        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
-      </li>
-    {% endfor %}
-  </ul>
-  {% else %}
-    <p>There are no books in the library.</p>
-  {% endif %}
+  {% if book_list %}
+  <ul>
+    {% for book in book_list %}
+      <li>
+        <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}
 {% endblock %}
 ```
 
@@ -170,7 +170,7 @@ Nous utilisons les balises de templates [`if`](https://docs.djangoproject.com/en
 {% endif %}
 ```
 
-La condition ci-dessus ne vérifie qu'un seul cas, mais vous pouvez ajouter d'autres tests grâce à la balise de template `elif` (par exemple `{% elif var2 %}`). Pour plus d'information sur les opérateurs conditionnels, voyez ici :  [if](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifequal-and-ifnotequal), et [ifchanged](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifchanged) dans [Built-in template tags and filters](https://docs.djangoproject.com/en/2.1/ref/templates/builtins) (Django Docs).
+La condition ci-dessus ne vérifie qu'un seul cas, mais vous pouvez ajouter d'autres tests grâce à la balise de template `elif` (par exemple `{% elif var2 %}`). Pour plus d'information sur les opérateurs conditionnels, voyez ici :  [if](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifequal-and-ifnotequal), et [ifchanged](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifchanged) dans [Built-in template tags and filters](https://docs.djangoproject.com/en/2.1/ref/templates/builtins) (Django Docs).
 
 #### Boucles for
 
@@ -223,12 +223,12 @@ Ouvrez **/catalog/urls.py** et ajoutez-y le mappeur d'URL '**book-detail**' ind
 ```python
 urlpatterns = [
     path('', views.index, name='index'),
-    path('books/', views.BookListView.as_view(), name='books'),
-    path('book/<int:pk>', views.BookDetailView.as_view(), name='book-detail'),
+    path('books/', views.BookListView.as_view(), name='books'),
+    path('book/<int:pk>', views.BookDetailView.as_view(), name='book-detail'),
 ]
 ```
 
-Pour le chemin *book-detail*, le pattern d'URL utilise une syntaxe spéciale pour capturer l'id exact du livre que nous voulons voir. La syntaxe est très simple : les chevrons ('<' et '>') définissent la partie de l'URL qui doit être capturée et encadrent le nom de la variable que la vue pourra utiliser pour accéder aux données capturées. Par exemple, **\<something>**  va capturer le pattern marqué et passer la valeur à la vue en tant que variable "something". De manière optionnelle, vous pouvez faire précéder le nom de variable d'une [spécification de convertisseur](https://docs.djangoproject.com/en/2.1/topics/http/urls/#path-converters), qui définit le type de la donnée (int, str, slug, uuid, path).
+Pour le chemin *book-detail*, le pattern d'URL utilise une syntaxe spéciale pour capturer l'id exact du livre que nous voulons voir. La syntaxe est très simple : les chevrons ('<' et '>') définissent la partie de l'URL qui doit être capturée et encadrent le nom de la variable que la vue pourra utiliser pour accéder aux données capturées. Par exemple, **\<something>**  va capturer le pattern marqué et passer la valeur à la vue en tant que variable "something". De manière optionnelle, vous pouvez faire précéder le nom de variable d'une [spécification de convertisseur](https://docs.djangoproject.com/en/2.1/topics/http/urls/#path-converters), qui définit le type de la donnée (int, str, slug, uuid, path).
 
 Dans ce cas, nous utilisons `'<int:pk>'` pour capturer l'id du livre, qui doit être une chaîne formatée d'une certaine manière, et passer cet id à la vue en tant que paramètre nommé `pk` (abréviation pour primary key - clé primaire). C'est l'id qui doit être utilisé pour stocker le livre de manière unique dans la base de données, comme défini dans le modèle Book.
 
@@ -357,7 +357,7 @@ Ouvrez **catalog/views.py**, et copiez-y le code suivant à la fin du fichier :
 
 ```python
 class BookDetailView(generic.DetailView):
-    model = Book
+    model = Book
 ```
 
 C'est tout ! La seule chose que vous avez à faire maintenant, c'est créer un template appelé **/locallibrary/catalog/templates/catalog/book_detail.html**, et la vue va lui passer les informations de la base de donnée concernant l'enregistrement `Book` spécifique, extrait par le mapper d'URL. À l'intérieur du template, vous pouvez accéder à la liste de livres via la variable de template appelée `object` OU `book` (c'est-à-dire, de manière générique, "le_nom_du_modèle").
@@ -388,7 +388,7 @@ Une alternative consiste à utiliser la fonction `get_object_or_404()` comme un
 from django.shortcuts import get_object_or_404
 
 def book_detail_view(request, primary_key):
-    book = get_object_or_404(Book, pk=primary_key)
+    book = get_object_or_404(Book, pk=primary_key)
     return render(request, 'catalog/book_detail.html', context={'book': book})
 ```
 
@@ -525,23 +525,23 @@ Ouvrez **/locallibrary/catalog/templates/_base_generic.html_**, et copiez-y, sou
 ```python
 {% block content %}{% endblock %}
 
-  {% block pagination %}
-    {% if is_paginated %}
-        <div class="pagination">
-            <span class="page-links">
-                {% if page_obj.has_previous %}
-                    <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
-                {% endif %}
-                <span class="page-current">
-                    Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
-                </span>
-                {% if page_obj.has_next %}
-                    <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
-                {% endif %}
-            </span>
-        </div>
-    {% endif %}
-  {% endblock %} 
+  {% block pagination %}
+    {% if is_paginated %}
+        <div class="pagination">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+                    <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+                <span class="page-current">
+                    Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
+                </span>
+                {% if page_obj.has_next %}
+                    <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
+  {% endblock %} 
 ```
 
 Le `page_obj` est un objet [Paginator](https://docs.djangoproject.com/en/2.1/topics/pagination/#paginator-objects) qui n'existera que si une pagination est utilisée dans la page courante. Cet objet vous permet de récupérer toutes les informations sur la page courante, les pages précédentes, combien il y a de pages au total, etc.

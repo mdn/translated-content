@@ -31,7 +31,7 @@ Bien que cette leçon puisse sembler moins pertinente dans l'immédiat et un peu
         >, compétences élémentaires pour <a
           href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >travailler avec des fichiers</a
-        >, connaissance de base du HTML  (cf. <a
+        >, connaissance de base du HTML  (cf. <a
           href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction à HTML</a
         >), et une idée de <a
@@ -99,7 +99,7 @@ Ces trois concepts combinés permettent de décider dans tous les cas quelle rè
 
 ## Comprendre l'héritage
 
-Commençons par l'héritage. Dans l'exemple ci-dessous nous avons un  {{HTMLElement("ul")}}, contenant plusieurs niveaux de listes imbriquées. Nous avons spécifié une bordure, un remplissage (`padding`) et une couleur de police pour la `<ul>` extérieure.
+Commençons par l'héritage. Dans l'exemple ci-dessous nous avons un  {{HTMLElement("ul")}}, contenant plusieurs niveaux de listes imbriquées. Nous avons spécifié une bordure, un remplissage (`padding`) et une couleur de police pour la `<ul>` extérieure.
 
 La couleur est transmise aux enfants directs, et aussi enfants indirects — les `<li>` de la première liste, et ceux de la première liste de deuxième niveau. Nous avons ensuite ajouté une classe `special` à la seconde liste imbriquée et nous lui appliquons une autre couleur. Cette dernière est transmise aux descendants.
 
@@ -191,7 +191,7 @@ Le tableau suivant montre quelques exemples isolés pour vous mettre dans l'ambi
 | `h1 + p::first-letter`                                                                                  | 0        | 0         | 0        | 3      | 0003        |
 | `li > a[href*="fr"] > .inline-warning`                                                                  | 0        | 0         | 2        | 2      | 0022        |
 | `#identifiant`                                                                                          | 0        | 1         | 0        | 0      | 0100        |
-| pas de sélecteurs, la règle est déclarée dans l'attribut {{htmlattrxref("style")}} d'un élément  | 1        | 0         | 0        | 0      | 1000        |
+| pas de sélecteurs, la règle est déclarée dans l'attribut {{htmlattrxref("style")}} d'un élément  | 1        | 0         | 0        | 0      | 1000        |
 
 Avant de continuer, regardons un exemple en action.
 
@@ -220,7 +220,7 @@ Regardons ça d'un peu plus près pour mieux comprendre — si vous avez du mal 
 1.  Vous verrez que les valeurs de couleur et de remplissage de la troisième règle ont été appliquées, mais pas la couleur d'arrière-plan. Pourquoi ? On pourrait penser que les trois déclarations s'appliquent, puisque la règle en question, venant plus tard dans le code source, prend le dessus sur les règles antérieures.
 2.  Mais rappelez vous, les sélecteurs de classe sont plus spécifiques !
 3.  Les deux éléments sont dans la classe `better`, mais le deuxième a aussi l'{{htmlattrxref("id")}}  `winning`. Étant donné que les ID ont une spécificité encore plus élevée que les classes (sur une page, pour une ID donnée, il y a un seul élément,  alors qu'on peut trouver de nombreux éléments dans la même classe — les sélecteurs d'ID sont donc très spécifiques dans ce qu'ils ciblent), le deuxième élément aura une couleur d'arrière-plan rouge et une bordure noire de 1 px ; pour le premier élément, la couleur d'arrière-plan sera grise, sans bordure, comme spécifié par la classe.
-4.  Le deuxième élément a un arrière-plan rouge, mais pas de bordure. Pourquoi ? En raison de la déclaration `!important` dans la deuxième règle — écrit après  `border: none`,  ce mot-clé signifie que cette déclaration l'emporte sur le `border` définie dans la règle précédente, même si l'ID a une spécificité plus élevée.
+4.  Le deuxième élément a un arrière-plan rouge, mais pas de bordure. Pourquoi ? En raison de la déclaration `!important` dans la deuxième règle — écrit après  `border: none`,  ce mot-clé signifie que cette déclaration l'emporte sur le `border` définie dans la règle précédente, même si l'ID a une spécificité plus élevée.
 
 > **Note :** La seule façon de dépasser cette déclaration  `!important` serait d'ajouter un `!important` dans une déclaration de même *spécificité* apparaissant plus bas dans l'ordre du source, ou avec une spécificité plus grande.
 

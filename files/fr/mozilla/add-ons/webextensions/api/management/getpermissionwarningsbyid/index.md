@@ -11,7 +11,7 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
 ---
-{{AddonSidebar()}}Lorsque l'utilisateur installe ou met  à jour une extension, le navigateur peut avertir l'utilisateur des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) particulièrement puissantes que l'extension a demandée. Toutes les permissions ne donnent pas lieu à des alertes et ce comportement n'est pas normalisé dans les navigateurs.
+{{AddonSidebar()}}Lorsque l'utilisateur installe ou met  à jour une extension, le navigateur peut avertir l'utilisateur des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) particulièrement puissantes que l'extension a demandée. Toutes les permissions ne donnent pas lieu à des alertes et ce comportement n'est pas normalisé dans les navigateurs.
 
 Compte tenu de l'ID d'une extension, cette fonction retourne les avertisseurs de permissions comme un tableau de chaînes.
 

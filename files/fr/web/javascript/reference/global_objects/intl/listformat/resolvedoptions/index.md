@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/resolvedO
 ---
 {{JSRef}}{{Draft}}
 
-La méthode  **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de style calculées à l'initialisation de l'objet {{jsxref("ListFormat")}}.
+La méthode  **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de style calculées à l'initialisation de l'objet {{jsxref("ListFormat")}}.
 
 ## Syntaxe
 

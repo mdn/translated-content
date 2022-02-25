@@ -14,7 +14,7 @@ Chaque méthode de disposition qui implémente cette nouvelle spécification se 
 
 ## Les deux axes d'une grille
 
-Lorsqu'on manipule une grille, on dispose  de deux axes sur lesquels aligner les objets. L'axe de bloc et l'axe en ligne. L'axe de bloc est l'axe selon lequel les blocs sont disposés quand on a une disposition en bloc (_block layout_). Par exemple, si on a deux paragraphes sur une page, par défaut, ils s'affichent l'un en dessous de l'autre.
+Lorsqu'on manipule une grille, on dispose  de deux axes sur lesquels aligner les objets. L'axe de bloc et l'axe en ligne. L'axe de bloc est l'axe selon lequel les blocs sont disposés quand on a une disposition en bloc (_block layout_). Par exemple, si on a deux paragraphes sur une page, par défaut, ils s'affichent l'un en dessous de l'autre.
 
 ![](7_block_axis.png)
 

@@ -147,10 +147,10 @@ voiture2.propriétaire.nom
 
 | Spécification                                                                        | Statut                       | Commentaires                                          |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-new-operator', 'Opérateur new')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-new-operator', 'Opérateur new')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.2.2', 'Opérateur new')}}             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3', '#sec-11.2.2', 'Opérateur new')}}                 | {{Spec2('ES3')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-new-operator', 'Opérateur new')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-new-operator', 'Opérateur new')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ES5.1', '#sec-11.2.2', 'Opérateur new')}}             | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES3', '#sec-11.2.2', 'Opérateur new')}}                 | {{Spec2('ES3')}}         |                                                       |
 | {{SpecName('ES1', '#sec-11.2.2', 'Opérateur new')}}                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
 
 ## Compatibilité des navigateurs

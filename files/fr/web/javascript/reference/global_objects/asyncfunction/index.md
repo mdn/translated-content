@@ -36,7 +36,7 @@ Les objets des {{jsxref("Instructions/async_function", "fonctions asynchrones","
 
 Tous les arguments passés à la fonction sont traités comme les noms des identifiants des paramètres de la fonction qui sera créée, dans l'ordre dans lequel ils sont passés.
 
-> **Note :** Les fonctions asynchrones créées avec le constructeur `AsyncFunction` ne créent pas de fermetutres dans leurs contextes de création. Elles sont toujours créées dans la portée globale. Lorsqu'on les exécute, ellee ne pourront accéder qu'à leurs variables locales et aux variables globales, pas à celles qui appartiennent à la portée dans laquelle `AsyncFunction` a été appelé. On aurait donc un comportement différent  si on appelait {{jsxref("Objets_globaux/eval", "eval")}} avec le code de l'expression de la fonction asynchrone.
+> **Note :** Les fonctions asynchrones créées avec le constructeur `AsyncFunction` ne créent pas de fermetutres dans leurs contextes de création. Elles sont toujours créées dans la portée globale. Lorsqu'on les exécute, ellee ne pourront accéder qu'à leurs variables locales et aux variables globales, pas à celles qui appartiennent à la portée dans laquelle `AsyncFunction` a été appelé. On aurait donc un comportement différent  si on appelait {{jsxref("Objets_globaux/eval", "eval")}} avec le code de l'expression de la fonction asynchrone.
 
 Si on appelle `AsyncFunction` comme une fonction (c'est-à-dire sans `new`), cela aura le même effet que s'il est appelé comme un constructeur.
 

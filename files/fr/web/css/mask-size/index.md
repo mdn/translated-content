@@ -68,7 +68,7 @@ Chaque valeur peut être une longueur (`<length>`), un pourcentage (`<percentage
 - `<length>`
   - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}} qui redimensionne l'image avec la longueur indiquée dans l'axe correspondant. Les longueurs négatives ne sont pas autorisées.
 - `<percentage>`
-  - : Une valeur de pourcentage ({{cssxref("&lt;percentage&gt;")}} qui indique le redimensionnement à appliquer dans l'axe correspondant à partir de l'origine définie par {{cssxref("mask-origin")}} par rapport à la taille  de la zone du masque. Par défaut, cette zone contient la boîte de contenu et la boîte de remplissage (_padding_) (on peut modifier cette zone pour choisir les boîtes concernées). Les valeurs négatives ne sont pas autorisées.
+  - : Une valeur de pourcentage ({{cssxref("&lt;percentage&gt;")}} qui indique le redimensionnement à appliquer dans l'axe correspondant à partir de l'origine définie par {{cssxref("mask-origin")}} par rapport à la taille  de la zone du masque. Par défaut, cette zone contient la boîte de contenu et la boîte de remplissage (_padding_) (on peut modifier cette zone pour choisir les boîtes concernées). Les valeurs négatives ne sont pas autorisées.
 - `auto`
   - : Un mot-clé qui permet de redimensionner l'image du masque dans l'axe correspondant tout en conservant ses proportions.
 - `contain`

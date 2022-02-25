@@ -189,7 +189,7 @@ observer.disconnect();
 
 | Spécification                                                                            | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#mutationobserver', 'MutationObserver')}} | {{ Spec2('DOM WHATWG') }} |             |
+| {{SpecName('DOM WHATWG', '#mutationobserver', 'MutationObserver')}} | {{ Spec2('DOM WHATWG') }} |             |
 
 ## Compatibilité des navigateurs
 

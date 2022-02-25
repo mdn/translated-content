@@ -47,7 +47,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 - `manufacturer`
   - : `string`. Nom du jeton fabriqué.
 - `HWVersion`
-  - : `string`. Version matérielle, en tant que numéro de version PKCS #11 (deux entiers  32-bit séparés par un point, comme "1.0".
+  - : `string`. Version matérielle, en tant que numéro de version PKCS #11 (deux entiers  32-bit séparés par un point, comme "1.0".
 - `FWVersion`
   - : `string`. Version du micrologiciel, en tant que numéro de version PKCS #11 (deux 32-bit séparés par un point, comme "1.0".
 - `serial`

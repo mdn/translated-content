@@ -21,7 +21,7 @@ element.insertAdjacentHTML(position, text);
 ### Paramètres
 
 - `position`
-  - : une {{domxref("DOMString")}}  représentant la position relative à l'`element`, et doit être une des chaînes de caractères suivantes :
+  - : une {{domxref("DOMString")}}  représentant la position relative à l'`element`, et doit être une des chaînes de caractères suivantes :
 
 <!---->
 

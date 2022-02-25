@@ -28,7 +28,7 @@ Un nœud {{domxref("Attr")}}.
 
 ### Exceptions levées
 
-- `INVALID_CHARACTER_ERR`  si le paramètre contient un caractère invalide pour un attribut XML.
+- `INVALID_CHARACTER_ERR`  si le paramètre contient un caractère invalide pour un attribut XML.
 
 ## Exemples
 

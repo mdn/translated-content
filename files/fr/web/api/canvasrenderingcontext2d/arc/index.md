@@ -56,8 +56,8 @@ Modifiez le code ci-dessous et voyez les changements en direct sur le canvas :
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.beginPath();
@@ -133,7 +133,7 @@ for (var i = 0; i < 4; i++) {
 
 | Spécification                                                                                                                    | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

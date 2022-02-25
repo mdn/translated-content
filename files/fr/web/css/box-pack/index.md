@@ -77,8 +77,8 @@ div.exemple {
   -webkit-box-align: center; /* WebKit */
 
   /* On groupe les éléments fils en bas de la boîte */
-  -moz-box-pack: end;             /* Mozilla */
-  -webkit-box-pack: end;          /* WebKit */
+  -moz-box-pack: end;             /* Mozilla */
+  -webkit-box-pack: end;          /* WebKit */
 }
 
 div.exemple p {

@@ -55,13 +55,13 @@ div {
 }
 
 .exemple {
-  border: 10px double;
-  padding: 10px;
-  background-image: url(https://mdn.mozillademos.org/files/12988/p_201.jpg);
-  background-color: palegreen;
-  background-position: 0px 40px;
-  background-origin: content-box;
-  background-repeat: no-repeat;
+  border: 10px double;
+  padding: 10px;
+  background-image: url(https://mdn.mozillademos.org/files/12988/p_201.jpg);
+  background-color: palegreen;
+  background-position: 0px 40px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
 }
 ```
 

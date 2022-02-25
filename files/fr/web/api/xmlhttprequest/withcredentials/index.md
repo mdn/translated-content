@@ -34,7 +34,7 @@ xhr.send(null);
 
 | Spécification                                                                        | État                                 | Commentaires |
 | ------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
-| {{SpecName('XMLHttpRequest', '#the-withcredentials-attribute')}} | {{Spec2('XMLHttpRequest')}} |              |
+| {{SpecName('XMLHttpRequest', '#the-withcredentials-attribute')}} | {{Spec2('XMLHttpRequest')}} |              |
 
 ## Compatibilité des navigateurs
 

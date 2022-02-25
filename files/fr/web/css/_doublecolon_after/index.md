@@ -26,7 +26,7 @@ a:after {
 
 {{csssyntax}}
 
-> **Note :** CSS3 a introduit la notation `::after`  (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi`:after`, introduite dans CSS2.
+> **Note :** CSS3 a introduit la notation `::after`  (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi`:after`, introduite dans CSS2.
 
 ## Exemples
 

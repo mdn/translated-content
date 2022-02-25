@@ -21,7 +21,7 @@ La méthode **`handler.getPrototypeOf()`** représente une trappe pour la métho
 ```js
 var p = new Proxy(obj, {
   getPrototypeOf(cible) {
-  ...
+  ...
   }
 });
 ```
@@ -65,8 +65,8 @@ var obj = {};
 var proto = {};
 var gestionnaire = {
     getPrototypeOf(cible) {
-        console.log(cible === obj);   // true
-        console.log(this === gestionnaire); // true
+        console.log(cible === obj);   // true
+        console.log(this === gestionnaire); // true
         return proto;
     }
 };
@@ -118,7 +118,7 @@ Object.getPrototypeOf(p); // TypeError : on attend la même valeur pour le proto
 | Spécification                                                                                                                                                | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

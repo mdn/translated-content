@@ -22,7 +22,7 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path fill="none" stroke="red"
+  <path fill="none" stroke="red"
     d="M 10,30
        A 20, 20 0, 0, 1 50, 30
        A 20, 20 0, 0, 1 90, 30

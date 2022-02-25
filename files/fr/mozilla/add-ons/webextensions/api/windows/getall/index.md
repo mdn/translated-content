@@ -40,7 +40,7 @@ var gettingAll = browser.windows.getAll(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un ensemble d'objets  {{WebExtAPIRef('windows.Window')}}, représentant toutes les fenêtres qui correspondent aux critères donnés. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un ensemble d'objets  {{WebExtAPIRef('windows.Window')}}, représentant toutes les fenêtres qui correspondent aux critères donnés. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité du navigateur
 

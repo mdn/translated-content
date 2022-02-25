@@ -30,7 +30,7 @@ La plupart du temps, les propriétés d'un objet créé avec [un littéral de ta
 
 ## Exemples
 
-### Propriétés non-configurables créées avec  `Object.defineProperty`
+### Propriétés non-configurables créées avec  `Object.defineProperty`
 
 Par défaut, la méthode {{jsxref("Object.defineProperty()")}} crée des propriétés non-configurables si on n'indique pas expressément le contraire :
 

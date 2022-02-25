@@ -30,7 +30,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `font`
   - : Polices Web chargées pour un {{cssxref("@font-face")}} règle CSS.
 - `image`
-  - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de  `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
+  - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de  `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
 - `imageset`
   - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut {{htmlattrxref("srcset", "img")}} d'un élement `<img>`.
 
@@ -39,7 +39,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `main_frame`
   - : Documents de niveau chargés dans un objet.
 - `media`
-  - : Ressources chargées par un élément  {{HTMLElement("video")}} ou  {{HTMLElement("audio")}}.
+  - : Ressources chargées par un élément  {{HTMLElement("video")}} ou  {{HTMLElement("audio")}}.
 - `object`
 
   - : Ressources chargées par un élément {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.

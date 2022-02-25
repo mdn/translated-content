@@ -57,8 +57,8 @@ Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct d
 ```html hidden
 <canvas id="canevas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="modifier" type="button" value="Modifier" />
-  <input id="effacer" type="button" value="Effacer" />
+  <input id="modifier" type="button" value="Modifier" />
+  <input id="effacer" type="button" value="Effacer" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.beginPath();
@@ -138,7 +138,7 @@ for (var i = 0; i < lineCap.length; i++) {
 
 | Spécification                                                                                                                                | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

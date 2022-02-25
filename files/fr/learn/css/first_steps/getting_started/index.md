@@ -78,7 +78,7 @@ Notre point de départ est un document HTML. Pour suivre la leçon en travaillan
 
 ## Ajouter CSS à notre document
 
-Pour commencer, on doit signaler au document HTML que nous souhaitons utiliser des règles CSS. Vous rencontrerez trois possibilités pour appliquer CSS à un document HTML. Nous nous contenterons de présenter la méthode la plus utilisée  — créer un lien vers la feuille de style CSS depuis l'en-tête du document HTML.
+Pour commencer, on doit signaler au document HTML que nous souhaitons utiliser des règles CSS. Vous rencontrerez trois possibilités pour appliquer CSS à un document HTML. Nous nous contenterons de présenter la méthode la plus utilisée  — créer un lien vers la feuille de style CSS depuis l'en-tête du document HTML.
 
 Avec votre éditeur de code, dans le dossier où se trouve le document HTML, créez un fichier et sauvegardez le sous le nom `styles.css`. L'extension `.css` indique que c'est un fichier CSS.
 
@@ -128,7 +128,7 @@ Testez cela dans l'éditeur interacif ci-dessous (éditer les boîtes de code) o
 
 Quand on observe un document HTML bien formé, même simple comme notre exemple, on peut voir comment un navigateur le rend lisible par une mise en forme par défaut. Les titres sont écrits en gras dans une taille plus grande, les items des listes sont précédés d'une puce. Les navigateurs ont leurs feuilles de style internes qu'ils appliquent par défaut à toutes les pages ; sans cela, tout le texte s'agglutinerait en paquet et il faudrait tout mettre en forme à partir de zéro. Tous les navigateurs modernes rendent les contenus HTML par défaut essentiellement de la même manière.
 
-On recherche pourtant souvent autre chose que ce rendu par défaut. Il suffit alors de sélectionner l'élément HTML dont on veut modifier le rendu et d'écrire la règle CSS pour réaliser cette mise en forme.  Un bon exemple est notre `<ul>`, une liste non ordonnée. Ses items sont marqués par des puces et si on décide de se débarrasser de ces puces, on peut le faire comme suit :
+On recherche pourtant souvent autre chose que ce rendu par défaut. Il suffit alors de sélectionner l'élément HTML dont on veut modifier le rendu et d'écrire la règle CSS pour réaliser cette mise en forme.  Un bon exemple est notre `<ul>`, une liste non ordonnée. Ses items sont marqués par des puces et si on décide de se débarrasser de ces puces, on peut le faire comme suit :
 
 ```css
 li {
@@ -169,7 +169,7 @@ Sauvegardez et rechargez la page HTML dans votre navigateur pour observer le ré
 
 Vous pouvez attribuer la classe `special` à tout élément dans votre document HTML, dans le navigateur il sera rendu comme le deuxième item de la liste. Par exemple, vous pourriez appliquer ce style à l'élément `<span>` du premier paragraphe.
 
-Vous verrez parfois des règles avec un sélecteur qui combine le nom de l'élément HTML avec celui de la classe  :
+Vous verrez parfois des règles avec un sélecteur qui combine le nom de l'élément HTML avec celui de la classe  :
 
 ```css
 li.special {
@@ -204,7 +204,7 @@ li em {
 
 Ce sélecteur cible tout élément `<em>` à l'intérieur (descendant) d'un `<li>`. Ainsi, dans notre exemple, le `<em>` dans le troisième item de la liste sera maintenant pourpre, alors que celui du paragraphe est inchangé.
 
-On pourrait maintenant essayer d'appliquer un style à un paragraphe quand il vient juste après un titre de niveau un dans le HTML. Pour obtenir cela, on place un `+`  (le **combinateur de frères et sœurs adjacents**) entre les sélecteurs.
+On pourrait maintenant essayer d'appliquer un style à un paragraphe quand il vient juste après un titre de niveau un dans le HTML. Pour obtenir cela, on place un `+`  (le **combinateur de frères et sœurs adjacents**) entre les sélecteurs.
 
 Ajoutez cette règle à votre feuille de style :
 
@@ -294,7 +294,7 @@ Dans la leçon suivante, nous étudirons comment CSS est structuré.
 
 ## Dans ce cours
 
-1.  [Qu'est ce que  CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
+1.  [Qu'est ce que  CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
 2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
 3.  [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
 4.  [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)

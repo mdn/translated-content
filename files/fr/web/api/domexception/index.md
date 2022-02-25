@@ -95,7 +95,7 @@ Les noms d'erreurs courants sont répertoriés ici. Certaines API définissent l
 - `OperationError` {{experimental_inline}}
   - : L'opération a échoué pour une raison spécifique à l'opération (Pas de valeur de code ni de nom de constante hérités).
 - `NotAllowedError` {{experimental_inline}}
-  - : La demande n'est pas autorisée par l'agent utilisateur ou la plateforme dans le contexte actuel, peut-être parce que l'utilisateur a refusé la permission  (Pas de valeur de code ni de nom de constante hérités).
+  - : La demande n'est pas autorisée par l'agent utilisateur ou la plateforme dans le contexte actuel, peut-être parce que l'utilisateur a refusé la permission  (Pas de valeur de code ni de nom de constante hérités).
 
 ## Spécifications
 

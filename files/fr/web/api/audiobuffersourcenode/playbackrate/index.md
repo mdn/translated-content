@@ -41,34 +41,34 @@ Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est ut
 
 ```js
 function getData() {
-  source = contexteAudio.createBufferSource();
-  requete = new XMLHttpRequest();
+  source = contexteAudio.createBufferSource();
+  requete = new XMLHttpRequest();
 
-  requete.open('GET', 'viper.ogg', true);
+  requete.open('GET', 'viper.ogg', true);
 
-  requete.responseType = 'arraybuffer';
+  requete.responseType = 'arraybuffer';
 
 
-  requete.onload = function() {
-    var donneesAudio = requete.response;
+  requete.onload = function() {
+    var donneesAudio = requete.response;
 
-    contexteAudio.decodeAudioData(donneesAudio, function(buffer) {
-        maMemoireTampon = buffer;
-        dureeMorceau = buffer.duration;
-        source.buffer = maMemoireTampon;
-        source.playbackRate.value = playbackControl.value;
-        source.connect(contexteAudio.destination);
-        source.loop = true;
+    contexteAudio.decodeAudioData(donneesAudio, function(buffer) {
+        maMemoireTampon = buffer;
+        dureeMorceau = buffer.duration;
+        source.buffer = maMemoireTampon;
+        source.playbackRate.value = playbackControl.value;
+        source.connect(contexteAudio.destination);
+        source.loop = true;
 
-        loopstartControl.setAttribute('max', Math.floor(dureeMorceau));
-        loopendControl.setAttribute('max', Math.floor(dureeMorceau));
-      },
+        loopstartControl.setAttribute('max', Math.floor(dureeMorceau));
+        loopendControl.setAttribute('max', Math.floor(dureeMorceau));
+      },
 
-      function(e){"Erreur lors du décodage des données audio " + e.err});
+      function(e){"Erreur lors du décodage des données audio " + e.err});
 
-  }
+  }
 
-  requete.send();
+  requete.send();
 }
 
 // connecte les boutons pour lancer et arrêter la lecture, et modifier la vitesse de lecture
@@ -96,7 +96,7 @@ playbackControl.oninput = function() {
 
 | Spécification                                                                                                            | Statut                               | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-playbackRate', 'playbackRate')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-playbackRate', 'playbackRate')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

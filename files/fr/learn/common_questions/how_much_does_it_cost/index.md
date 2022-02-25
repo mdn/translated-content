@@ -52,7 +52,7 @@ Vous disposez probablement d'un éditeur de texte grâce à votre système d'exp
 
 De nombreux éditeurs sont gratuits : [Bluefish](http://bluefish.openoffice.nl/), [TextWrangler](http://www.barebones.com/products/textwrangler/), [Eclipse](http://eclipse.org/) et [Netbeans](https://netbeans.org/). Certains comme [Sublime Text](http://www.sublimetext.com/) peuvent être utilisés librement mais vous serez invité à payer si vous les utilisez continuellement ou dans un cadre professionnel. D'autres comme [PhpStorm](https://www.jetbrains.com/phpstorm/) peuvent coûter entre quelques dizaines et plusieurs centaines d'euros en fonction de l'abonnement choisi. Enfin, certains comme [Microsoft Visual Studio](http://www.visualstudio.com/) peuvent coûter plusieurs centaines voire plusieurs milliers d'euros selon l'utilisation qui en est faite.
 
-Pour commencer, n'hésitez pas à essayer plusieurs éditeurs (même les éditeurs payants disposent souvent d'une version d'essai) pour savoir lequel vous convient le mieux. Si vous prévoyez de n'écrire que du {{Glossary("HTML")}}, {{Glossary("CSS")}} et  {{Glossary("Javascript")}} simples, vous pouvez utiliser un éditeur simple.
+Pour commencer, n'hésitez pas à essayer plusieurs éditeurs (même les éditeurs payants disposent souvent d'une version d'essai) pour savoir lequel vous convient le mieux. Si vous prévoyez de n'écrire que du {{Glossary("HTML")}}, {{Glossary("CSS")}} et  {{Glossary("Javascript")}} simples, vous pouvez utiliser un éditeur simple.
 
 Le prix d'un éditeur ne reflète pas toujours son utilité ou sa qualité. À vous de les essayer et de forger votre avis. Par exemple, Sublime Text n'est pas très cher mais peut être agrémenté d'extensions (_plugins_) gratuites qui augmentent sensiblement les fonctionnalités qu'il offre.
 
@@ -105,7 +105,7 @@ Assurez-vous d'avoir suffisamment de bande passante :
 
 ##### Comprendre ce qu'est la « bande passante »
 
-Le tarif d'un hébergeur  variera en fonction de la bande passante consommée par votre site web. Celle-ci dépend du nombre de visiteurs (humains ou robots) sur une période donnée et de l'espace occupé par votre contenu (c'est pour cette raison que la plupart des gens stockent leurs vidéos sur Youtube, Dailymotion et Vimeo). Par exemple, votre fournisseur peut avoir une formule qui permet d'avoir jusqu'à plusieurs milliers de visiteurs par jours pour une bande passante raisonnable (cette définition de « raisonnable » peut varier d'un fournisseur à l'autre). Grosso modo, un hébergement personnalisé moyen et qui vous permet de servir suffisamment de visiteurs coûte entre 10 et 15 euros par mois.
+Le tarif d'un hébergeur  variera en fonction de la bande passante consommée par votre site web. Celle-ci dépend du nombre de visiteurs (humains ou robots) sur une période donnée et de l'espace occupé par votre contenu (c'est pour cette raison que la plupart des gens stockent leurs vidéos sur Youtube, Dailymotion et Vimeo). Par exemple, votre fournisseur peut avoir une formule qui permet d'avoir jusqu'à plusieurs milliers de visiteurs par jours pour une bande passante raisonnable (cette définition de « raisonnable » peut varier d'un fournisseur à l'autre). Grosso modo, un hébergement personnalisé moyen et qui vous permet de servir suffisamment de visiteurs coûte entre 10 et 15 euros par mois.
 
 > **Note :** Un débit « illimité » n'existe pas en réalité. Si vous consommez beaucoup de bande passante, attendez-vous à devoir payer en conséquence.
 

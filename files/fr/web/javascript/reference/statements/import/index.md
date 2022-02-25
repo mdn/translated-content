@@ -47,7 +47,7 @@ Le paramètre `nom` est le nom de l'"objet module" qui sera utilisé comme un 
 
 ### Importer l'intégralité du contenu d'un module
 
-Ce qui suit insère `monModule` dans la portée courante, contenant tous les exports  du module dans le fichier situé dans `/modules/mon-module.js`.
+Ce qui suit insère `monModule` dans la portée courante, contenant tous les exports  du module dans le fichier situé dans `/modules/mon-module.js`.
 
 ```js
 import * as monModule from '/modules/mon-module.js';

@@ -86,7 +86,7 @@ function addData() {
 
 | Spécification                                                                                | État                         | Commentaires |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-keyPath', 'keyPath')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-keyPath', 'keyPath')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

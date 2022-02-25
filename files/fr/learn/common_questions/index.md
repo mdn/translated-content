@@ -34,7 +34,7 @@ Cette section couvre les mécaniques du Web — les questions en relation avec l
 Questions relatives aux outils/logiciels que vous pouvez utiliser pour construire des sites web.
 
 - [Combien ça coûte de créer quelque chose sur le Web?](/fr/docs/Learn/Common_questions/How_much_does_it_cost)
-  - : Quand vous démarrez votre site web, vous pouvez ne rien dépenser ou alors complètement dépasser vos estimations.  Dans cet article nous aborderons le prix de chaque chose et de ce que vous aurez si vous payez (ou ne payez pas).
+  - : Quand vous démarrez votre site web, vous pouvez ne rien dépenser ou alors complètement dépasser vos estimations.  Dans cet article nous aborderons le prix de chaque chose et de ce que vous aurez si vous payez (ou ne payez pas).
 - [Quel logiciel est nécessaire pour construire un site web?](/fr/docs/Learn/Common_questions/What_software_do_I_need)
   - : Dans cet article nous expliquerons quel logiciel est nécessaire pour l'édition, l'upload, ou pour la visualisation d'un site web.
 - [Quels sont les éditeurs disponibles?](/fr/docs/Learn/Common_questions/Available_text_editors)
@@ -58,7 +58,7 @@ Questions relatives aux outils/logiciels que vous pouvez utiliser pour construir
 
 Cette section rassemble les questions liées à l'esthétique, la structure des pages, aux techniques d'accessibilité, etc.
 
-- [Comment démarrer dans la conception  de mon site web?](/fr/docs/Learn/Common_questions/Thinking_before_coding)
+- [Comment démarrer dans la conception  de mon site web?](/fr/docs/Learn/Common_questions/Thinking_before_coding)
   - : Cet article couvre la première étape la plus importante de tous les projets: définir ce que vous voulez accomplir avec.
 - [Que contiennent les mises en page classiques?](/fr/docs/Learn/Common_questions/Common_web_layouts)
   - : Lorsque vous concevez des pages pour votre site Web, il est bon d'avoir une idée des mises en page les plus courantes. Cet article présente quelques mises en page typiques du web, en analysant les parties qui composent chacune d'entre elles.

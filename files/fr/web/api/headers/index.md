@@ -14,11 +14,11 @@ translation_of: Web/API/Headers
 ---
 {{APIRef("Fetch API")}}
 
-L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.)  Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
+L'interface `Headers` de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet `Headers` a une liste `Headers` associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.)  Dans toutes les méthodes de cette interface, les noms des `Headers` sont reliés à une séquence d'octets sensible à la case.
 
-Pour des raisons de sécurité, les `Headers` ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
+Pour des raisons de sécurité, les `Headers` ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.
 
-Un objet `Headers` a aussi une garde associée, qui prend la valeur `immutable`, `request`, `request-no-cors`, `reponse`, or `none`. Cela affecte si les méthodes {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, et {{domxref("Headers.append","append()")}}  vont modifier le `Header`. Pour plus d'informations voir {{Glossary("Guard")}}.
+Un objet `Headers` a aussi une garde associée, qui prend la valeur `immutable`, `request`, `request-no-cors`, `reponse`, or `none`. Cela affecte si les méthodes {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, et {{domxref("Headers.append","append()")}}  vont modifier le `Header`. Pour plus d'informations voir {{Glossary("Guard")}}.
 
 Vous pouvez récuperer un objet `Header` via les propriétés {{domxref("Request.headers")}} et {{domxref("Response.headers")}} et créer un nouvel objet `Header` en utilisant le constructeur {{domxref("Headers.Headers()")}}.
 
@@ -46,13 +46,13 @@ Un objet implémentant `Headers` peut directement être utilisé dans une struct
 - {{domxref("Headers.has()")}}
   - : Retourne un booléen indiquant si un objet `Headers` contient un certain header.
 - {{domxref("Headers.keys()")}}
-  - : Retourne un  {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les clefs des paires clef/valeur contenues dans cet objet.
+  - : Retourne un  {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les clefs des paires clef/valeur contenues dans cet objet.
 - {{domxref("Headers.set()")}}
   - : Définti une nouvelle valeur pour un header existant dans un objet `Headers`, ou ajoute le header s'il n'existe pas déjà.
 - {{domxref("Headers.values()")}}
   - : Retourne un {{jsxref("Iteration_protocols", "iterator")}} permettant de parcourir toutes les valeurs des paires clefs/valeur contenues dans cet objet.
 
-> **Note :** Pour être clair, la différence entre {{domxref("Headers.set()")}} et {{domxref("Headers.append()")}} est que si le header spécifié existe et accepte plusieurs valeurs,  {{domxref("Headers.set()")}} va remplacer la valeur existante par la nouvelle, tandis que {{domxref("Headers.append()")}} va ajouter la nouvelle valeur à la fin des autres valeurs. Voir leurs pages dédiées pour des exemples de code.
+> **Note :** Pour être clair, la différence entre {{domxref("Headers.set()")}} et {{domxref("Headers.append()")}} est que si le header spécifié existe et accepte plusieurs valeurs,  {{domxref("Headers.set()")}} va remplacer la valeur existante par la nouvelle, tandis que {{domxref("Headers.append()")}} va ajouter la nouvelle valeur à la fin des autres valeurs. Voir leurs pages dédiées pour des exemples de code.
 
 > **Note :** Toutes les méthodes Headers vont retourner `TypeError` si vous essayez de passer dans une réfférenceun nom qui n'est pas un [nom de Header HTTP valide](https://fetch.spec.whatwg.org/#concept-header-name). Les opérations de mutation vont retourner `TypeError` si le header a un {{Glossary("Guard")}} immuable. Dans tous les autres cas, les erreurs sont silencieuses.
 
@@ -74,7 +74,7 @@ monHeader.append('Content-Type', 'text/xml');
 monHeader.get('Content-Type') // doit retourner 'text/xml'
 ```
 
-La même chose peut être accomplie en passant par un array d'array  un littéral d'objet au constructeur.
+La même chose peut être accomplie en passant par un array d'array  un littéral d'objet au constructeur.
 
 ```js
 var mesHeaders = new Headers({

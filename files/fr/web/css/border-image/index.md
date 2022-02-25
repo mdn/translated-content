@@ -61,8 +61,8 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 ```css
 #bitmap {
   border: 30px solid transparent;
-  padding: 20px;
-  border-image: url("https://mdn.mozillademos.org/files/4127/border.png") 30;
+  padding: 20px;
+  border-image: url("https://mdn.mozillademos.org/files/4127/border.png") 30;
 }
 ```
 
@@ -84,9 +84,9 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 
 ```css
 #gradient {
-  border: 30px solid;
-  border-image: linear-gradient(red, yellow) 10;
-  padding: 20px;
+  border: 30px solid;
+  border-image: linear-gradient(red, yellow) 10;
+  padding: 20px;
 }
 ```
 

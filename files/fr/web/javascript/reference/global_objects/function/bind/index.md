@@ -66,7 +66,7 @@ this.x = 9; // en dehors de tout contexte,
             // l'objet window
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function() { return this.x; }
 };
 
 module.getX(); // 81
@@ -178,7 +178,7 @@ YAxisPoint(13);
 emptyObj.x + "," + emptyObj.y; // "0,13"
 ```
 
-Si on souhaite supporter le cas où la fonction liée  d'une fonction liée en utilisant seulement `new`, ou juste en l'appellant, la fonction cible doit outrepasser cette restriction.
+Si on souhaite supporter le cas où la fonction liée  d'une fonction liée en utilisant seulement `new`, ou juste en l'appellant, la fonction cible doit outrepasser cette restriction.
 
 ### Créer des raccourcis
 

@@ -54,7 +54,7 @@ On peut rencontrer ce type de comportement dans les "feuilles de style de réin
 
 ### Utiliser le sélecteur universel pour rendre les sélecteurs plus lisibles
 
-On peut utiliser `*` pour rendre les sélecteurs plus lisibles, pour clarifier leur  fonctionnement. Par exemple, si je veux sélectionner le premier descendant de chaque élément `<article>` pour le mettre en gras, je peux utiliser le sélecteur {{cssxref(":first-child")}}, qu'on verra dans la leçon sur les [pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)&nbsp;:
+On peut utiliser `*` pour rendre les sélecteurs plus lisibles, pour clarifier leur  fonctionnement. Par exemple, si je veux sélectionner le premier descendant de chaque élément `<article>` pour le mettre en gras, je peux utiliser le sélecteur {{cssxref(":first-child")}}, qu'on verra dans la leçon sur les [pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)&nbsp;:
 
 ```css
 article :first-child {
@@ -62,7 +62,7 @@ article :first-child {
 }
 ```
 
-On peut néanmoins confondre ce sélecteur avec `article:first-child` ciblant les éléments `<article>`  qui sont le premier descendant d'un élément.
+On peut néanmoins confondre ce sélecteur avec `article:first-child` ciblant les éléments `<article>`  qui sont le premier descendant d'un élément.
 
 Pour éviter cette confusion, on peut ajouter le sélecteur universel `*` à  `:first-child`,  le fonctionnement de ce dernier sera plus clair : il cible *tout* élément premier descendant d'un élément `<article>` :
 
@@ -74,7 +74,7 @@ article *:first-child {
 
 ## Sélecteurs de classe
 
-Le sélecteur de classe commence par un point  `.` et sélectionne tout élément du document auquel cette classe est appliquée. Dans l'exemple live ci-dessous, nous avons créé une classe appelée `.highlight` et l'avons appliquée à plusieurs endroits du document. Tous les éléments auxquels la classe est appliquée sont mis en évidence.
+Le sélecteur de classe commence par un point  `.` et sélectionne tout élément du document auquel cette classe est appliquée. Dans l'exemple live ci-dessous, nous avons créé une classe appelée `.highlight` et l'avons appliquée à plusieurs endroits du document. Tous les éléments auxquels la classe est appliquée sont mis en évidence.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/class.html", '100%', 750)}}
 

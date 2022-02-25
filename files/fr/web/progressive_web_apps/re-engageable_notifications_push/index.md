@@ -70,7 +70,7 @@ Pousser (push) est plus compliqué que de faire des notifications — nous avons
 
 La technologie en est toujours à ses tous débuts — certains exemples fonctionnels utilisent la plateforme Cloud de messagerie de Google, mais elles sont en cours de réécriture pour prendre en charge [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification) qui offre une couche de sécurité supplémentaire pour votre application. Vous pouvez étudier les [exemples du Cookbook des Service Workers](https://serviceworke.rs/push-payload.html), essayer de mettre en place un serveur d'émission de messages utilisant [Firebase](https://firebase.google.com/) ou construire votre propre serveur (en utilisant Node.js par exemple).
 
-Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un service worker dont les fondamentaux ont déjà été expliqué dans l'article  [Permettre aux PWAs de fonctionner en mode déconnecté grâce aux Service workers](/fr/docs/Web/Apps/Progressive/Offline_Service_workers). A l'intérieur du service worker, un mécanisme de souscription à un service d'émission est créé.
+Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un service worker dont les fondamentaux ont déjà été expliqué dans l'article  [Permettre aux PWAs de fonctionner en mode déconnecté grâce aux Service workers](/fr/docs/Web/Apps/Progressive/Offline_Service_workers). A l'intérieur du service worker, un mécanisme de souscription à un service d'émission est créé.
 
 ```js
 registration.pushManager.getSubscription() .then( /* ... */ );
@@ -137,7 +137,7 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 
 L'application récupère la clef publique du serveur et convertit la réponse sous forme de texte; puis cette réponse doit être convertie en un tableau de nombre entier non signé (Uint8Array (pour une prise en charge par Chrome). Pour en apprendre davantage sur les clefs VAPID, vous pouvez lire le message de blog [Envoyer des notifications WebPush identitées par VAPID via le service de Push de Mozilla](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/).
 
-L'application peut maintenant utiliser le {{domxref("PushManager")}} pour abonner le nouvel utilisateur. Il y a deux options passées à la méthode {{domxref("PushManager.subscribe()")}}  — la première est `userVisibleOnly: true`, qui signifie que toutes les notifications envoyées à l'utilisateur lui seront visibles et la seconde est `applicationServerKey`, qui contient notre clef VAPID une fois récupérée et convertie avec succès.
+L'application peut maintenant utiliser le {{domxref("PushManager")}} pour abonner le nouvel utilisateur. Il y a deux options passées à la méthode {{domxref("PushManager.subscribe()")}}  — la première est `userVisibleOnly: true`, qui signifie que toutes les notifications envoyées à l'utilisateur lui seront visibles et la seconde est `applicationServerKey`, qui contient notre clef VAPID une fois récupérée et convertie avec succès.
 
 ```js
 return registration.pushManager.subscribe({
@@ -183,7 +183,7 @@ document.getElementById('doIt').onclick = function() {
 };
 ```
 
-Quand le bouton est cliqué,  `fetch` demande au serveur d'envoyer la notification avec les paramètres suivants: `payload` est le contenu que la notification doir afficher, `delay` définit un délai en seconde avant que la notification soit affichée et `ttl` indique en seconde le temps que cette notification doit rester disponible sur le serveur.
+Quand le bouton est cliqué,  `fetch` demande au serveur d'envoyer la notification avec les paramètres suivants: `payload` est le contenu que la notification doir afficher, `delay` définit un délai en seconde avant que la notification soit affichée et `ttl` indique en seconde le temps que cette notification doit rester disponible sur le serveur.
 
 Au tour maintenant du fichier Javascript suivant.
 

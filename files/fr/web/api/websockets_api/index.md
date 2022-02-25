@@ -39,7 +39,7 @@ L'**API WebSocket** est une technologie évoluée qui permet d'ouvrir un canal d
 
 ## Outils
 
-- [HumbleNet](https://humblenet.github.io/) :Bibliothèque de réseau multiplateforme qui fonctionne dans un navigateur. Il s'agit bibliothèque écrite en C qui enveloppe WebSockets et WebRTC. Elle gomme toutes les différences qui existent entre les navigateurs et les logiciels, ce qui facilite la création d'une fonctionnalité de réseau multi-joueurs pour les jeux, par exemple,  et autres applications.
+- [HumbleNet](https://humblenet.github.io/) :Bibliothèque de réseau multiplateforme qui fonctionne dans un navigateur. Il s'agit bibliothèque écrite en C qui enveloppe WebSockets et WebRTC. Elle gomme toutes les différences qui existent entre les navigateurs et les logiciels, ce qui facilite la création d'une fonctionnalité de réseau multi-joueurs pour les jeux, par exemple,  et autres applications.
 - [µWebSockets](https://github.com/uWebSockets/uWebSockets): Déclinaison plus légère et plus performante de WebSocket et écrite en [C++11](https://isocpp.org/) et en [Node.js](https://nodejs.org/fr/).
 - [ClusteWS](https://github.com/ClusterWS/ClusterWS): Framework léger, rapide et puissant qui permet de construire des application en [Node.js](https://nodejs.org/fr/).
 - [Socket.IO](http://socket.io): API WebSocket puissante et multiplateformes en [Node.js](http://nodejs.org).
@@ -47,7 +47,7 @@ L'**API WebSocket** est une technologie évoluée qui permet d'ouvrir un canal d
 - [Node.js](http://nodejs.org).
 - [Total.js](https://www.totaljs.com/): FrameWork pour web application en [Node.js](http://nodejs.org).
 - [Faye](https://www.npmjs.com/package/faye-websocket): Combine WebSocket(bidirectionnelle) et EventSource(unidirectionnelle) , côté serveur et côté client en [Node.js](http://nodejs.org).
-- [SignalR](http://signalr.net/): SignalR est une nouvelle bibliothèque pour les développeurs [ASP.NET](https://dotnet.microsoft.com/apps/aspnet). Elle simplifie l'ajout des WebSockets dans les applications. SignalR utilise les canaux  de WebSockets lorsqu'elles sont disponibles,  dans le cas contraire elle utilise d'autres technos, sans modifier votre application.
+- [SignalR](http://signalr.net/): SignalR est une nouvelle bibliothèque pour les développeurs [ASP.NET](https://dotnet.microsoft.com/apps/aspnet). Elle simplifie l'ajout des WebSockets dans les applications. SignalR utilise les canaux  de WebSockets lorsqu'elles sont disponibles,  dans le cas contraire elle utilise d'autres technos, sans modifier votre application.
 - [Caddy](https://caddyserver.com/docs/websocket): Serveur web capable de créer des WebSockets serveur/proxy(stdin/stdout, echo, cat, ...).
 - [ws](https://github.com/websockets/ws): La plus populaire des WebSockets pour client & serveur en [Node.js](http://nodejs.org).
 - [jsonrpc-bidirectional](https://github.com/bigstepinc/jsonrpc-bidirectional): Asynchronous RPC which, on a single connection, may have functions exported on the server and, and the same time, on the client (client may call server, server may also call client).

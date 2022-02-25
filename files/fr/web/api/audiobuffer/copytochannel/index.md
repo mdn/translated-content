@@ -35,7 +35,7 @@ tableauDonnees.copyToChannel (autreTableau,0,0);
 
 | Spécification                                                                                                                                                                                                | Statut                               | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-copyToChannel-void-Float32Array-source-long-channelNumber-unsigned-long-startInChannel', 'copyToChannel')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBuffer-copyToChannel-void-Float32Array-source-long-channelNumber-unsigned-long-startInChannel', 'copyToChannel')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

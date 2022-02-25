@@ -82,7 +82,7 @@ La plupart du temps, ce n'est pas l'élément `<u>` qu'il faut utiliser. Voici q
 
 #### Souligner pour la simple mise en forme
 
-Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilisera un élément {{HTMLElement("span")}} qu'on mettra en forme avec la propriété CSS  {{cssxref("text-decoration")}} et la valeur `"underline"` :
+Pour souligner du texte sans que cela ait une quelconque portée sémantique, on utilisera un élément {{HTMLElement("span")}} qu'on mettra en forme avec la propriété CSS  {{cssxref("text-decoration")}} et la valeur `"underline"` :
 
 ##### HTML
 

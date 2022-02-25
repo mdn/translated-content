@@ -33,7 +33,7 @@ Pour utiliser les fonctionnalités d'identité contextuelle dans les extensions,
 
 ## Permissions
 
-Pour utiliser l'API {{WebExtAPIRef("contextualIdentities")}} vous devez inclure la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json). Vous n'avez pas besoin de la permission "tabs" pour utiliser {{WebExtAPIRef("tabs.create")}} ; vous avez besoin de la permission "cookies" pour spécifier le conteneur de cookies que vous souhaitez utiliser.
+Pour utiliser l'API {{WebExtAPIRef("contextualIdentities")}} vous devez inclure la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "contextualIdentities" dans votre fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json). Vous n'avez pas besoin de la permission "tabs" pour utiliser {{WebExtAPIRef("tabs.create")}} ; vous avez besoin de la permission "cookies" pour spécifier le conteneur de cookies que vous souhaitez utiliser.
 
 ## Exemple de procédure pas à pas
 
@@ -112,7 +112,7 @@ Le script utilise maintenant contextualIdentities.query pour déterminer s'il ex
       }
 ```
 
-Si des identités contextuelles sont présentes — Firefox a quatre identités par défaut — le script parcourt chacune d'elles en ajoutant son nom, stylisé dans la couleur choisie, à l'élément \<div>. La fonction `createOptions()` ajoute ensuite les options à “create” ou  “close all” à la \<div> avant qu'elle ne soit ajoutée au popup.
+Si des identités contextuelles sont présentes — Firefox a quatre identités par défaut — le script parcourt chacune d'elles en ajoutant son nom, stylisé dans la couleur choisie, à l'élément \<div>. La fonction `createOptions()` ajoute ensuite les options à “create” ou  “close all” à la \<div> avant qu'elle ne soit ajoutée au popup.
 
 ```json
      for (let identity of identities) {

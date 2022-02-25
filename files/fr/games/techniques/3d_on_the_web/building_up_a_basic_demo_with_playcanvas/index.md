@@ -23,7 +23,7 @@ translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Pla
 PlayCanvas a publié quelques démos populaires présentant ses fonctionnalités.
 
 - [Tanx](http://playcanv.as/p/aP0oxhUr) est un jeu de char multijoueur dans lequel vous pouvez conduire votre char, en tirant sur d'autres joueurs au fur et à mesure.
-- [Swooop](http://playcanv.as/p/JtL2iqIH)  est un jeu de vol où vous pilotez votre avion autour d'une île magique tout en collectant des bijoux et du carburant.
+- [Swooop](http://playcanv.as/p/JtL2iqIH)  est un jeu de vol où vous pilotez votre avion autour d'une île magique tout en collectant des bijoux et du carburant.
 - Des visualisations comme the [Star Lord](http://playcanv.as/b/FQbBsJTd) et [BMW i8](http://playcanv.as/p/RqJJ9oU9) mettent également en valeur les possibilités du moteur.
 
 ![](playcanvas-demos.png)

@@ -96,7 +96,7 @@ Et un peu de JavaScript:
 
         var startX = myAudio.buffered.start(i) * inc;
         var endX = myAudio.buffered.end(i) * inc;
-        var width = endX - startX;
+        var width = endX - startX;
 
         context.fillRect(startX, 0, width, myCanvas.height);
         context.rect(startX, 0, width, myCanvas.height);
@@ -190,12 +190,12 @@ window.onload = function(){
   myAudio.addEventListener('progress', function() {
     var duration =  myAudio.duration;
     if (duration > 0) {
-      for (var i = 0; i < myAudio.buffered.length; i++) {
-            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
-                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
-                break;
-            }
-        }
+      for (var i = 0; i < myAudio.buffered.length; i++) {
+            if (myAudio.buffered.start(myAudio.buffered.length - 1 - i) < myAudio.currentTime) {
+                document.getElementById("buffered-amount").style.width = (myAudio.buffered.end(myAudio.buffered.length - 1 - i) / duration) * 100 + "%";
+                break;
+            }
+        }
     }
   });
 

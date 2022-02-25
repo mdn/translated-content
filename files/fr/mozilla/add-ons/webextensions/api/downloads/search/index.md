@@ -54,7 +54,7 @@ function logDownloads(downloads) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
 var searching = browser.downloads.search({
@@ -77,7 +77,7 @@ function logDownloads(downloads) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
 var id = 13;
@@ -99,7 +99,7 @@ function logDownloads(downloads) {
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.log(`Error: ${error}`);
 }
 
 var searching = browser.downloads.search({});

@@ -93,7 +93,7 @@ Notez que vos pouvez aussi passer l'objet init dans l'appel à `fetch` pour obte
 
 ```js
 fetch(maRequete,monInit).then(function(reponse) {
-  ...
+  ...
 });
 ```
 

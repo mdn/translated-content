@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray
 ---
 {{JSRef}}
 
-Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau pour manipuler [un tampon (_buffer_) de données binaires](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer). `TypedArray` n'est pas une propriété globale, il n'existe pas non plus de constructeur `TypedArray`.  En revanche, plusieurs propriétés globales existent et leurs valeurs permettent de construire des tableaux typés (_typed arrays_) avec différents types de données. Ceux-ci sont listés ci-après. Les pages suivantes permettent de décrire les propriétés et méthodes qui peuvent être utilisées sur les différents tableaux typés.
+Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau pour manipuler [un tampon (_buffer_) de données binaires](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer). `TypedArray` n'est pas une propriété globale, il n'existe pas non plus de constructeur `TypedArray`.  En revanche, plusieurs propriétés globales existent et leurs valeurs permettent de construire des tableaux typés (_typed arrays_) avec différents types de données. Ceux-ci sont listés ci-après. Les pages suivantes permettent de décrire les propriétés et méthodes qui peuvent être utilisées sur les différents tableaux typés.
 
 {{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
 
@@ -48,7 +48,7 @@ Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau p
 
 ## Description
 
-ECMAScript 2015 (ES6) définit un constructeur `%TypedArray%` qui est un `[[Prototype]]` de tous les constructeurs _TypedArray_. Ce constructeur n'est pas accessible directement. Il n'existe pas de  `%TypedArray%` global ou de propriété `TypedArray`.  Il est uniquement accessible via `Object.getPrototypeOf(Int8Array.prototype)` ou avec les méthodes semblables. L'ensemble des différents constructeurs *TypedArray*s hérite de propriétés communes de la fonction `%TypedArray%`. De plus, tous les prototypes des tableaux typés (_TypedArray_`.prototype`) ont `%TypedArray%.prototype` pour `[[Prototype]]`.
+ECMAScript 2015 (ES6) définit un constructeur `%TypedArray%` qui est un `[[Prototype]]` de tous les constructeurs _TypedArray_. Ce constructeur n'est pas accessible directement. Il n'existe pas de  `%TypedArray%` global ou de propriété `TypedArray`.  Il est uniquement accessible via `Object.getPrototypeOf(Int8Array.prototype)` ou avec les méthodes semblables. L'ensemble des différents constructeurs *TypedArray*s hérite de propriétés communes de la fonction `%TypedArray%`. De plus, tous les prototypes des tableaux typés (_TypedArray_`.prototype`) ont `%TypedArray%.prototype` pour `[[Prototype]]`.
 
 Le constructeur `%TypedArray%` en tant que tel n'est pas très utile. Toute tentative d'appel ou d'utilisation avec une expression `new` renverra `TypeError`, sauf quand il est utilisé par le moteur JavaScript lors de la création de l'objet quand le moteur supporte les sous-classes. À l'heure actuelle, il n'existe pas de tels moteurs, pour cette raison `%TypedArray%` est uniquement utile dans les fonctions d'émulation (_polyfill_) our pour les propriétés des différents constructeurs _TypedArray_.
 

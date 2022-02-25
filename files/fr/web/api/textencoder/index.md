@@ -45,12 +45,12 @@ La prothèse d'émulation ci-dessous va uniquement répondre aux spécifications
 if (typeof TextEncoder === "undefined") {
     TextEncoder=function TextEncoder(){};
     TextEncoder.prototype.encode = function encode(str) {
-        "use strict";
+        "use strict";
         var Len = str.length, resPos = -1;
-        // The Uint8Array's length must be at least 3x the length of the string because an invalid UTF-16
-        //  takes up the equivelent space of 3 UTF-8 characters to encode it properly. However, Array's
-        //  have an auto expanding length and 1.5x should be just the right balance for most uses.
-        var resArr = typeof Uint8Array === "undefined" ? new Array(Len * 1.5) : new Uint8Array(Len * 3);
+        // The Uint8Array's length must be at least 3x the length of the string because an invalid UTF-16
+        //  takes up the equivelent space of 3 UTF-8 characters to encode it properly. However, Array's
+        //  have an auto expanding length and 1.5x should be just the right balance for most uses.
+        var resArr = typeof Uint8Array === "undefined" ? new Array(Len * 1.5) : new Uint8Array(Len * 3);
         for (var point=0, nextcode=0, i = 0; i !== Len; ) {
             point = str.charCodeAt(i), i += 1;
             if (point >= 0xD800 && point <= 0xDBFF) {
@@ -86,18 +86,18 @@ if (typeof TextEncoder === "undefined") {
                 resArr[resPos += 1] = (0x2/*0b10*/<<6)    | (point&0x3f/*0b00111111*/);
             }
         }
-        if (typeof Uint8Array !== "undefined") return resArr.subarray(0, resPos + 1);
-        // else // IE 6-9
-        resArr.length = resPos + 1; // trim off extra weight
-        return resArr;
+        if (typeof Uint8Array !== "undefined") return resArr.subarray(0, resPos + 1);
+        // else // IE 6-9
+        resArr.length = resPos + 1; // trim off extra weight
+        return resArr;
     };
-    TextEncoder.prototype.toString = function(){return "[object TextEncoder]"};
-    try { // Object.defineProperty only works on DOM prototypes in IE8
-        Object.defineProperty(TextEncoder.prototype,"encoding",{
-            get:function(){if(TextEncoder.prototype.isPrototypeOf(this)) return"utf-8";
+    TextEncoder.prototype.toString = function(){return "[object TextEncoder]"};
+    try { // Object.defineProperty only works on DOM prototypes in IE8
+        Object.defineProperty(TextEncoder.prototype,"encoding",{
+            get:function(){if(TextEncoder.prototype.isPrototypeOf(this)) return"utf-8";
                            else throw TypeError("Illegal invocation");}
-        });
-    } catch(e) { /*IE6-8 fallback*/ TextEncoder.prototype.encoding = "utf-8"; }
+        });
+    } catch(e) { /*IE6-8 fallback*/ TextEncoder.prototype.encoding = "utf-8"; }
     if(typeof Symbol!=="undefined")TextEncoder.prototype[Symbol.toStringTag]="TextEncoder";
 }
 ```

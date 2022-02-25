@@ -61,7 +61,7 @@ La couleur par défaut dans Firefox est : `[217, 0, 0, 255]`.
 
 ## Exemples
 
-Une couleur d'arrière plan qui commence en rouge et devient  verte lorsque l'action du navigateur est cliquée :
+Une couleur d'arrière plan qui commence en rouge et devient  verte lorsque l'action du navigateur est cliquée :
 
 ```js
 browser.browserAction.setBadgeText({text: "1234"});

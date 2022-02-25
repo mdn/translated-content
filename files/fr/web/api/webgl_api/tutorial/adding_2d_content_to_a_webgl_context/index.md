@@ -27,7 +27,7 @@ La chose la plus importante à comprendre avant que nous ne commencions est que,
 
 Un shader est un programme, écrit en utilisant le [OpenGL ES Shading Language](https://www.khronos.org/files/opengles_shading_language.pdf) (GLSL), qui utilise les informations des sommets constituant une forme, et qui génère les données nécessaires pour faire un rendu des pixels à l'écran : nommément, les positions des pixels et leurs couleurs.
 
-Deux fonctions de shader sont exécutées lors du dessin d'un contenu WebGL : le **shader  de sommet** et le **shader de fragment**. Vous les écrivez en GLSL et vous passez le texte du code à WebGL pour qu'il soit compilé pour exécution dans la GPU. Pris conjointement, un ensemble de shaders de sommet et de fragment sont appelés un **programme shader**.
+Deux fonctions de shader sont exécutées lors du dessin d'un contenu WebGL : le **shader  de sommet** et le **shader de fragment**. Vous les écrivez en GLSL et vous passez le texte du code à WebGL pour qu'il soit compilé pour exécution dans la GPU. Pris conjointement, un ensemble de shaders de sommet et de fragment sont appelés un **programme shader**.
 
 Jetons un coup d'œil rapide aux deux types de shaders, en gardant présent à l'esprit l'exemple du dessin d'une forme 2D dans le contexte WebGL.
 
@@ -157,7 +157,7 @@ Avant de pouvoir faire un rendu de notre carré 2D, nous devons créer le tamp
       const positionBuffer = gl.createBuffer();
 
       // Définir le positionBuffer comme étant celui auquel appliquer les opérations
-      // de tampon à partir d'ici.
+      // de tampon à partir d'ici.
 
       gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 
@@ -171,8 +171,8 @@ Avant de pouvoir faire un rendu de notre carré 2D, nous devons créer le tamp
       ];
 
       // Passer mainenant la liste des positions à WebGL pour construire la forme.
-      // Nous faisons cela en créant un Float32Array à partir du tableau JavaScript,
-      // puis en l'utilisant pour remplir le tampon en cours.
+      // Nous faisons cela en créant un Float32Array à partir du tableau JavaScript,
+      // puis en l'utilisant pour remplir le tampon en cours.
 
       gl.bufferData(gl.ARRAY_BUFFER,
                     new Float32Array(positions),
@@ -204,9 +204,9 @@ Une fois que les shaders sont définis, que les emplacements sont retrouvés, et
       gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
       // Créer une matrice de perspective, une matrice spéciale qui est utilisée pour
-      // simuler la distorsion de la perspective dans une caméra.
+      // simuler la distorsion de la perspective dans une caméra.
       // Notre champ de vision est de 45 degrés, avec un rapport largeur/hauteur qui
-      // correspond à la taille d'affichage du canvas ;
+      // correspond à la taille d'affichage du canvas ;
       // et nous voulons seulement voir les objets situés entre 0,1 unité et 100 unités
       // à partir de la caméra.
 
@@ -217,7 +217,7 @@ Une fois que les shaders sont définis, que les emplacements sont retrouvés, et
       const projectionMatrix = mat4.create();
 
       // note: glmatrix.js a toujours comme premier argument la destination
-      // où stocker le résultat.
+      // où stocker le résultat.
       mat4.perspective(projectionMatrix,
                        fieldOfView,
                        aspect,
@@ -229,14 +229,14 @@ Une fois que les shaders sont définis, que les emplacements sont retrouvés, et
       const modelViewMatrix = mat4.create();
 
       // Commencer maintenant à déplacer la position de dessin un peu vers là où
-      // nous voulons commencer à dessiner le carré.
+      // nous voulons commencer à dessiner le carré.
 
       mat4.translate(modelViewMatrix,     // matrice de destination
                      modelViewMatrix,     // matrice de déplacement
                      [-0.0, 0.0, -6.0]);  // quantité de déplacement
 
       // Indiquer à WebGL comment extraire les positions à partir du tampon des
-      // positions pour les mettre dans l'attribut vertexPosition.
+      // positions pour les mettre dans l'attribut vertexPosition.
       {
         const numComponents = 2;  // extraire 2 valeurs par itération
         const type = gl.FLOAT;    // les données dans le tampon sont des flottants 32bit

@@ -13,7 +13,7 @@ Cette durée peut être nulle, positive ou négative :
 
 - Une valeur de `0s` ou `0ms` indique que l'animation correspondante démarrera immédiatement lorsque la valeur sera modifiée.
 - Une valeur positive permettra d'attendre avant de démarrer l'effet de transition.
-- Une valeur négative lancera l'animation immédiatement mais à partir d'un état intermédiaire (comme si la  transition avait déjà commencé).
+- Une valeur négative lancera l'animation immédiatement mais à partir d'un état intermédiaire (comme si la  transition avait déjà commencé).
 
 Il est possible d'indiquer plusieurs valeurs d'attente. Chaque valeur sera appliquée à la propriété correspondante donnée par la liste {{cssxref("transition-property")}} (qui agit comme un index des propriétés concernées par les transitions). S'il n'y a pas suffisamment de valeurs dans cette liste, les valeurs précédentes seront répétées jusqu'à ce qu'il y en ait suffisamment. S'il y a plus de valeurs d'attente que d'éléments dans {{cssxref("transition-property")}}, la liste est simplement tronquée. Dans les deux cas, la déclaration CSS est considérée comme valide.
 

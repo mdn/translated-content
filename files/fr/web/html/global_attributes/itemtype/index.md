@@ -72,8 +72,8 @@ Google et les autres moteurs de recherche participent au vocabulaire défini pa
 
 | Spécification                                                                                    | État                                 | Commentaires |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
-| {{SpecName('HTML Microdata', "#dfn-itemtype", "itemtype")}}                 | {{Spec2('HTML Microdata')}} |              |
-| {{SpecName('HTML WHATWG', "microdata.html#attr-itemtype", "itemprop")}} | {{Spec2('HTML WHATWG')}}     |              |
+| {{SpecName('HTML Microdata', "#dfn-itemtype", "itemtype")}}                 | {{Spec2('HTML Microdata')}} |              |
+| {{SpecName('HTML WHATWG', "microdata.html#attr-itemtype", "itemprop")}} | {{Spec2('HTML WHATWG')}}     |              |
 
 ## Compatibilité des navigateurs
 

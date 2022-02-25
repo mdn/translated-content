@@ -67,7 +67,7 @@ Pour en savoir plus, voir [le guide sur les formes et les boîtes](/fr/docs/Web/
 
 ### Générer une forme à partir d'une image
 
-Une autre méthode qui peut s'avérer utile consiste à générer une forme à partir d'une image et de son canal alpha :  le texte épousera alors la forme non-transparente de l'image. On peut alors avoir un texte qui « s'écoule » dans une image ou autour. Cette méthode permet aussi d'avoir une forme plus complexe sans avoir à recourir à un polygone (il n'est pas nécessaire que  l'image  soit visible).
+Une autre méthode qui peut s'avérer utile consiste à générer une forme à partir d'une image et de son canal alpha :  le texte épousera alors la forme non-transparente de l'image. On peut alors avoir un texte qui « s'écoule » dans une image ou autour. Cette méthode permet aussi d'avoir une forme plus complexe sans avoir à recourir à un polygone (il n'est pas nécessaire que  l'image  soit visible).
 
 Attention, les images utilisées ainsi doivent être [compatibles avec les règles CORS](/en-US/docs/Web/HTTP/CORS). Se n'est pass le cas, `shape-outside` se comportera comme si elle avait reçu la valeur `none` et il n'y aura alors aucune forme.
 
@@ -105,7 +105,7 @@ Dans l'exemple qui suit, on utilise du contenu généré afin d'inséer un élé
 
 Les valeurs utilisées pour les formes simples et pour les boîtes de référence sont les mêmes que celles utilisées pour la propriété {{cssxref("clip-path")}}. Ainsi, si on souhaite créer une forme à partir d'une image et rogner une partie de cette image, on pourra utiliser les mêmes valeurs.
 
-Ci-après, on a une image carrée avec un arrière-plan bleu. On a défini la forme avec  `shape-outside: ellipse(40% 50%);` puis utilisé `clip-path: ellipse(40% 50%);` afin de rogner l'image pour suivre la forme.
+Ci-après, on a une image carrée avec un arrière-plan bleu. On a défini la forme avec  `shape-outside: ellipse(40% 50%);` puis utilisé `clip-path: ellipse(40% 50%);` afin de rogner l'image pour suivre la forme.
 
 {{EmbedGHLiveSample("css-examples/shapes/overview/clip-path.html", '100%', 800)}}
 

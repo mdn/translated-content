@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/Vary
 ---
 {{HTTPSidebar}}
 
-L'en-tête HTTP  **`Vary`** détermine comment les en-têtes de requêtes futures sont associés pour décider si une réponse en cache peut être réutilisée plutôt que de solliciter à nouveau le serveur d'origine. Il est utilisé par le serveur pour indiquer quels en-têtes sont utilisés pour représenter une resource dans un algorithme de [négociation de contenu](/en-US/docs/Web/HTTP/Content_negotiation).
+L'en-tête HTTP  **`Vary`** détermine comment les en-têtes de requêtes futures sont associés pour décider si une réponse en cache peut être réutilisée plutôt que de solliciter à nouveau le serveur d'origine. Il est utilisé par le serveur pour indiquer quels en-têtes sont utilisés pour représenter une resource dans un algorithme de [négociation de contenu](/en-US/docs/Web/HTTP/Content_negotiation).
 
 L'en-tête `Vary` doit être renseigné de manière identique sur une réponse {{HTTPStatus("304")}} `Not Modified` à ce qu'elle aurait été sur la réponse {{HTTPStatus("200")}} `OK` correspondante.
 

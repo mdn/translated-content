@@ -31,7 +31,7 @@ Differents types d'objets sont construits en utilisant les sommets. Un Sommet (
 
 - **Position** : L'identifie dans un espace 3D (`x`, `y`, `z`).
 - **Color** (Couleur) : Prend une valeur RVBA (R, V et B pour le Rouge, Vert et Bleu, A (alpha) pour l'opacité — toutes les valeurs comprises entre 0.0 et 1.0)
-- **Normal :**  Une manière de décrire la direction à laquelle fait face le sommet.
+- **Normal :**  Une manière de décrire la direction à laquelle fait face le sommet.
 - **Texture** : Une image 2D que le sommet peut utiliser pour décorer la surface dont il fait partie à la place d'une simple couleur.
 
 Vous pouvez faire de la géométrie en utilisant ces informations — voici l'exemple d'un cube :

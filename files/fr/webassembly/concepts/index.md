@@ -39,7 +39,7 @@ De plus, le coût du téléchargement, du parsing et de la compilation de trè
 
 WebAssembly est un langage différent de JavaScript, mais n'a pas pour but de le remplacer. Il faut plutôt l'envisager comme complément, travaillant "main dans la main" avec JavaScript, permettant ainsi aux développeurs WEB de prendre avantage des points forts de chacun des deux langages :
 
-- JavaScript est un langage haut niveau, flexible et suffisamment expressif pour écrire des applications web.  Il possède beaucoup d'avantages — il est dynamiquement typé, ne nécessite aucune étape de compilation, et a un écosystème foisonnant qui lui fourni de puissants frameworks, bibliothèques, et autres outils.
+- JavaScript est un langage haut niveau, flexible et suffisamment expressif pour écrire des applications web.  Il possède beaucoup d'avantages — il est dynamiquement typé, ne nécessite aucune étape de compilation, et a un écosystème foisonnant qui lui fourni de puissants frameworks, bibliothèques, et autres outils.
 - WebAssembly est un langage bas niveau, de style assembleur, avec un format binaire compact qui tourne avec des performances proches du natif et fourni au langage une gestion bas niveau de la mémoire tout comme le C++ et Rust comme cible de compilation afin de pouvoir tourner sur le web. (Notez qu'une [priorité](http://webassembly.org/docs/high-level-goals/) de WebAssembly est de supporter les langages avec modèles de mémoire à garbage-collector dans le futur.)
 
 Avec l'apparition du WebAssembly dans les navigateurs, la machine virtuelle dont nous parlions précédemment charge et exécute deux type de code - JavaScript ET WebAssembly.
@@ -50,7 +50,7 @@ Les deux différents type de code peuvent s'appeler si nécessaire — l'API We
 
 Il y a différents concepts clefs nécessaires pour comprendre comment fonctionne WebAssembly dans le navigateur. Tous ces concepts se retrouvent totalement dans l'API WebAssembly JavaScript.
 
-- **Module** : Représente un binaire WebAssembly qui a été compilé en code exécutable par le navigateur.  Un module est sans état et - comme un [Blob](/fr/docs/Web/API/Blob) - peut donc être explicitement[ mis en cache dans IndexedDB](/fr/WebAssembly/Caching_modules) ou partagé entre le contexte fenêtre et les workers (via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage)).  Un module déclare des imports et exports au même titre qu'un module ES2015.
+- **Module** : Représente un binaire WebAssembly qui a été compilé en code exécutable par le navigateur.  Un module est sans état et - comme un [Blob](/fr/docs/Web/API/Blob) - peut donc être explicitement[ mis en cache dans IndexedDB](/fr/WebAssembly/Caching_modules) ou partagé entre le contexte fenêtre et les workers (via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage)).  Un module déclare des imports et exports au même titre qu'un module ES2015.
 - **Mémoire** : Représente un ArrayBuffer redimensionnable qui contient un tableau d'octets contiguë accessible en lecture/écriture par les instructions bas niveau d'accès mémoire du WebAssembly.
 - **Table** : Représente un tableau typé de référence (comme par exemple des fonctions) qui ne peut pas être stocké de manière brute en mémoire (pour des raisons de sécurité et de portabilité).
 - **Instance** : Représente un module associé avec tous les états qu'il utilise à l'exécution à savoir la mémoire, la table précédemment citée et un ensemble de données importées. Une instance est comme un module ES2015 qui a été chargée dans un contexte global avec un ensemble d'imports.
@@ -101,7 +101,7 @@ Vous pouvez trouver toute la documentation sur Emscripten à l'adresse [emscrip
 
 Voulez vous construire votre propre compilateur ou vos propres outils ou faire une librairie JavaScript qui génère du WebAssembly à la volée ?
 
-De la même manière que les langages assembleur physiques, le format binaire du  WebAssembly a une représentation textuelle. Ces deux formats ont un fonctionnement équivalents. Vous pouvez écrire ou générer ce format à la main et ensuite le convertir au format binaire avec un des nombreux [outils de conversion texte vers binaire WebAssembly](http://webassembly.org/getting-started/advanced-tools/).
+De la même manière que les langages assembleur physiques, le format binaire du  WebAssembly a une représentation textuelle. Ces deux formats ont un fonctionnement équivalents. Vous pouvez écrire ou générer ce format à la main et ensuite le convertir au format binaire avec un des nombreux [outils de conversion texte vers binaire WebAssembly](http://webassembly.org/getting-started/advanced-tools/).
 
 Pour un guide simple sur comment réaliser ceci, regarder notre article [Convertir le WebAssembly au format text en wasm](/fr/docs/WebAssembly/Text_format_to_wasm).
 

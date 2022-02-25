@@ -132,7 +132,7 @@ Un web worker ou une `iframe` d'origine multiple (_cross origin_) possède sa pr
 
 ## Non bloquant
 
-Le modèle de la boucle d'événement possède une caractéristique intéressante : JavaScript, à  la différence d'autres langages, ne bloque jamais. La gestion des entrées-sorties (_I/O_) est généralement traitée par des événements et des callbacks. Ainsi, quand l'application attend le résultat d'une requête [IndexedDB](/fr/docs/IndexedDB) ou d'une requête [XHR](/fr/docs/XMLHttpRequest), il reste possible de traiter d'autres éléments comme les saisies utilisateur.
+Le modèle de la boucle d'événement possède une caractéristique intéressante : JavaScript, à  la différence d'autres langages, ne bloque jamais. La gestion des entrées-sorties (_I/O_) est généralement traitée par des événements et des callbacks. Ainsi, quand l'application attend le résultat d'une requête [IndexedDB](/fr/docs/IndexedDB) ou d'une requête [XHR](/fr/docs/XMLHttpRequest), il reste possible de traiter d'autres éléments comme les saisies utilisateur.
 
 Il existe certaines exceptions historiques comme `alert` ou des appels XHR synchrones. C'est une bonne pratique que de les éviter. Attention, [certaines exceptions existent](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) (mais relèvent généralement de bugs d'implémentation).
 

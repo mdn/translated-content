@@ -29,7 +29,7 @@ Les pages peuvent utiliser la détection de fonctionnalités pour vérifier si e
 
 ```js
 if (window.isSecureContext) {
-  // La page est dans un contexte sécurisé, les services workers sont disponibles.
+  // La page est dans un contexte sécurisé, les services workers sont disponibles.
   navigator.serviceWorker.register("/offline-worker.js").then(function () {
     ...
   });

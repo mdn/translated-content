@@ -96,9 +96,9 @@ Nous avons aussi besoin de construire un tableau des couleurs pour chacun des 24
   for (j=0; j<faceColors.length; j++) {
     const c = faceColors[j];
 
-    // Répéter chaque couleur quatre fois pour les quatre sommets d'une face
+    // Répéter chaque couleur quatre fois pour les quatre sommets d'une face
     colors = colors.concat(c, c, c, c);
-  }
+  }
 
   const colorBuffer = gl.createBuffer();
   gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
@@ -115,7 +115,7 @@ Une fois que les tableaux des sommets sont générés, nous devons construire l
 
   // Ce tableau définit chaque face comme deux triangles, en utilisant les
   // indices dans le tableau des sommets pour spécifier la position de chaque
-  // triangle.
+  // triangle.
 
   const indices = [
     0,  1,  2,      0,  2,  3,    // avant

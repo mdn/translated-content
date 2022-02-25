@@ -20,7 +20,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/interagir_avec_le_presse_papier
 ---
 {{AddonSidebar}}
 
-ll y a deux façons dont les extensions de navigateur peuvent interagir avec le presse-papiers système : la méthode {{domxref("Document.execCommand()")}}  et l'asynchrone moderne de l'[API Presse-papiers](/fr/docs/Web/API/Clipboard_API).
+ll y a deux façons dont les extensions de navigateur peuvent interagir avec le presse-papiers système : la méthode {{domxref("Document.execCommand()")}}  et l'asynchrone moderne de l'[API Presse-papiers](/fr/docs/Web/API/Clipboard_API).
 
 La méthode {{domxref("Document.execCommand()")}} peut être utilisée, en spécifiant la commande désirée :
 
@@ -67,7 +67,7 @@ document.querySelector("#copy").addEventListener("click", copy);
 
 Parce que l'appel `execCommand()` se trouve à l'intérieur d'un gestionnaire d'événements click, vous n'avez pas besoin de permissions spéciales ici.
 
-Cependant, disons que vous déclenchez plutôt la copie à partir d'une alarme  :
+Cependant, disons que vous déclenchez plutôt la copie à partir d'une alarme  :
 
 ```js
 function copy() {
@@ -87,7 +87,7 @@ Selon le navigateur, cela peut ne pas fonctionner. Sur Firefox, cela ne fonction
 
     document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler.
 
-Pour activer ce cas d'utilisation, vous devez demander [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardWrite"`. Alors :  `"clipboardWrite"` vous permet d'écrire dans le presse-papiers en dehors d'un gestionnaire d'événements de courte durée pour une action utilisateur.
+Pour activer ce cas d'utilisation, vous devez demander [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardWrite"`. Alors :  `"clipboardWrite"` vous permet d'écrire dans le presse-papiers en dehors d'un gestionnaire d'événements de courte durée pour une action utilisateur.
 
 ### Utilisation de l'API Presse-papiers
 

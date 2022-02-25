@@ -113,7 +113,7 @@ Les valeurs valides sont :
 | `minimal-ui`     | L'application va ressembler et se comporter comme une application autonome, mais elle aura quelques élements d'interface permettant de contrôler la navigation. Les éléments varient en fonction du navigateur web.                                                                                                                                                                     | `browser`               |
 | `browser`        | L'application s'ouvre dans un nouvel onglet ou une nouvelle fenêtre du navigateur, en fonction du navigateur et de la plateforme. C'est la valeur par défaut.                                                                                                                                                                                                                           | (None)                  |
 
-> **Note :** Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant  la fonction [display-mode](/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
+> **Note :** Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant  la fonction [display-mode](/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
 
 ### `icons`
 

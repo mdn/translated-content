@@ -45,9 +45,9 @@ Le JavaScript Object Notation (JSON) est un format standard utilisé pour repré
 
 {{glossary("JSON")}} est un format de données semblable à la syntaxe des objets JavaScript, qui a été popularisé par [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford). Malgré sa syntaxe très similaire à celle des objets littéraux JavaScript, JSON peut être utilisé indépendamment de ce langage et ainsi, de nombreux autres langages de programmation disposent de fonctionnalités permettant d'analyser la syntaxe du JSON et d'en générer.
 
-Le JSON se présente sous la forme  d'une chaîne de caractères —utile lorsque vous souhaitez transmettre les données sur un réseau. Il a donc besoin d'être converti en un objet JavaScript natif lorsque vous souhaitez accéder aux données. Ce n'est pas vraiment un souci puisque le JavaScript fournit un objet global [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) disposant des méthodes pour assurer la conversion entre les deux.
+Le JSON se présente sous la forme  d'une chaîne de caractères —utile lorsque vous souhaitez transmettre les données sur un réseau. Il a donc besoin d'être converti en un objet JavaScript natif lorsque vous souhaitez accéder aux données. Ce n'est pas vraiment un souci puisque le JavaScript fournit un objet global [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) disposant des méthodes pour assurer la conversion entre les deux.
 
-> **Note :** Convertir une chaîne de caractères en un objet natif se nomme **analyse syntaxique (parsage)** tandis que le contraire porte le nom  de la **linéarisation (stringification)**.
+> **Note :** Convertir une chaîne de caractères en un objet natif se nomme **analyse syntaxique (parsage)** tandis que le contraire porte le nom  de la **linéarisation (stringification)**.
 
 Un objet JSON peut être stocké dans son propre fichier qui se présente simplement sous la forme d'un fichier texte avec l'extension `.json` et le {{glossary("MIME type")}} `application/json`.
 
@@ -57,45 +57,45 @@ Nous disions tout à l'heure qu'un objet JSON n'était ni plus ni moins qu'un ob
 
 ```json
 {
-  "squadName": "Super hero squad",
-  "homeTown": "Metro City",
-  "formed": 2016,
-  "secretBase": "Super tower",
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
   "active": true,
-  "members": [
-    {
-      "name": "Molecule Man",
-      "age": 29,
-      "secretIdentity": "Dan Jukes",
-      "powers": [
-        "Radiation resistance",
-        "Turning tiny",
-        "Radiation blast"
-      ]
-    },
-    {
-      "name": "Madame Uppercut",
-      "age": 39,
-      "secretIdentity": "Jane Wilson",
-      "powers": [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
-      ]
-    },
-    {
-      "name": "Eternal Flame",
-      "age": 1000000,
-      "secretIdentity": "Unknown",
-      "powers": [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
-      ]
-    }
-  ]
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": [
+        "Radiation resistance",
+        "Turning tiny",
+        "Radiation blast"
+      ]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
 }
 ```
 
@@ -137,15 +137,15 @@ Un peu plus haut, nous avons dit qu'un objet JSON n'était ni plus ni moins qu'u
     ]
   },
   {
-    "name": "Madame Uppercut",
-    "age": 39,
-    "secretIdentity": "Jane Wilson",
-    "powers": [
-      "Million tonne punch",
-      "Damage resistance",
-      "Superhuman reflexes"
-    ]
-  }
+    "name": "Madame Uppercut",
+    "age": 39,
+    "secretIdentity": "Jane Wilson",
+    "powers": [
+      "Million tonne punch",
+      "Damage resistance",
+      "Superhuman reflexes"
+    ]
+  }
 ]
 ```
 
@@ -252,7 +252,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-Nous avons appelé le paramètre de cette fonction `jsonObj`  afin de garder en tête que cet objet JavaScript provient du JSON. Ici, nous créons tout d'abord un élément {{HTMLElement("h1")}} à l'aide de [`createElement()`](/fr/docs/Web/API/Document/createElement), nous fixons son [`textContent`](/fr/docs/Web/API/Node/textContent) à la valeur de la propriété `squadName` de l'objet, puis nous l'ajoutons à l'en-tête en utilisant [`appendChild()`](/fr/docs/Web/API/Node/appendChild). Ensuite, nous faisons quelque chose de relativement similaire avec un élément paragraphe : nous le créons, fixons son contenu et l'ajoutons à l'en-tête. La seule différence est que pour son contenu, nous avons concaténé la chaîne de caractère `homeTown` et la propriété `formed` de l'objet.
+Nous avons appelé le paramètre de cette fonction `jsonObj`  afin de garder en tête que cet objet JavaScript provient du JSON. Ici, nous créons tout d'abord un élément {{HTMLElement("h1")}} à l'aide de [`createElement()`](/fr/docs/Web/API/Document/createElement), nous fixons son [`textContent`](/fr/docs/Web/API/Node/textContent) à la valeur de la propriété `squadName` de l'objet, puis nous l'ajoutons à l'en-tête en utilisant [`appendChild()`](/fr/docs/Web/API/Node/appendChild). Ensuite, nous faisons quelque chose de relativement similaire avec un élément paragraphe : nous le créons, fixons son contenu et l'ajoutons à l'en-tête. La seule différence est que pour son contenu, nous avons concaténé la chaîne de caractère `homeTown` et la propriété `formed` de l'objet.
 
 ### Création des fiches des héros
 
@@ -349,7 +349,7 @@ On commence par créer un objet JavaScript puis on vérifie son contenu avant de
 
 ## Résumé
 
-Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans vos programmes, incluant les méthodes de  création et d'analyse syntaxique (parsage)  du JSON  et d'accès aux données qu'il contient. Dans le prochain article, nous débuterons l'apprentissage du Javascript orienté objet.
+Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans vos programmes, incluant les méthodes de  création et d'analyse syntaxique (parsage)  du JSON  et d'accès aux données qu'il contient. Dans le prochain article, nous débuterons l'apprentissage du Javascript orienté objet.
 
 ## Voir aussi
 

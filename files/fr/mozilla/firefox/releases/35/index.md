@@ -67,12 +67,12 @@ Liens:
 
 ### HTML
 
-- Les obsolètes `et non conformes bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributs de l'élement `<body> ` ont été activés en mode  non-quirks ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
+- Les obsolètes `et non conformes bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributs de l'élement `<body> ` ont été activés en mode  non-quirks ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
 - Les [imports HTML](/fr/docs/Web/Web_Components/HTML_Imports) sont maintenant supportés ([bug 877072](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)).
 
 ### JavaScript
 
-- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée.  En conformité avec les sémantiques `let `ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet[ annoncement de newsgroup ](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds)and [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090 'FIXED: Implement ES6 "temporal dead zone" for let').
+- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée.  En conformité avec les sémantiques `let `ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet[ annoncement de newsgroup ](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds)and [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090 'FIXED: Implement ES6 "temporal dead zone" for let').
 
   - Redéclarer des variables existantes ou arguments utilisant `let` sans la même portée dans le corps de fonctions est maintenant une erreur de syntaxe.
   - Utiliser une variable déclarée en utilisant `let` dans le corps de fonctions avant la déclaration de cette variable est maintenant une erreur d'exécution.
@@ -80,11 +80,11 @@ Liens:
 - ES6 [`Symbols`](/fr/docs/Web/JavaScript/Reference/Symbols) (disponible uniquement dans Nightly) a été mis à jour pour être conforme avec les récents changements de spécification :
 
   - `String(Symbol("1"))` ne renvoie maintenant une [`TypeError`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypeError); au lieu d'un string (`"Symbol(1)"`) ([bug 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396)).
-  - Les divers [constructeurs _TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) ont maintenant comme `[[Prototype]]` une simple fonction, notée `%TypedArray%`  en ES6 (mais pas directement exposé).  Chaque prototype de tableau typé hérite maintenant de `%TypedArray%.prototype`.  (`%TypedArray%` et `%TypedArray%.prototype` hérite eux-mêmes de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype), respectivement, ainsi ce constructeur et ces instances de tableau typé ont aussi les propriétés de ces objets.) Les propriétés des fonctions de tableau typés se trouvent maintenant sur `%TypedArray%.prototype` et fonctionnent sur tous les tableaux typés. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) et [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) pour plus d'information.
+  - Les divers [constructeurs _TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) ont maintenant comme `[[Prototype]]` une simple fonction, notée `%TypedArray%`  en ES6 (mais pas directement exposé).  Chaque prototype de tableau typé hérite maintenant de `%TypedArray%.prototype`.  (`%TypedArray%` et `%TypedArray%.prototype` hérite eux-mêmes de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype), respectivement, ainsi ce constructeur et ces instances de tableau typé ont aussi les propriétés de ces objets.) Les propriétés des fonctions de tableau typés se trouvent maintenant sur `%TypedArray%.prototype` et fonctionnent sur tous les tableaux typés. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Description) et [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) pour plus d'information.
 
 - Les semantiques ES6 pour les [mutations de prototype utilisant les _initialisateurs d'objet_](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#Prototype_mutation) ont été implémentées ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
 
-  - Maintenant un seul membre noté  `__proto__:value` peut changer `le [[Prototype]]` dans la syntaxe de l'initialisateur d'objet.
+  - Maintenant un seul membre noté  `__proto__:value` peut changer `le [[Prototype]]` dans la syntaxe de l'initialisateur d'objet.
   - Les membres de méthode comme `__proto__() {}` ne réecrivent pas le `[[Prototype]]`.
 
 ### Interfaces/APIs/DOM
@@ -107,7 +107,7 @@ Liens:
 
 ###  MathML
 
-- La fonction  `dtls` OpenType (via les CSS [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings) sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (e.g. dotless i with mathematical hat).
+- La fonction  `dtls` OpenType (via les CSS [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings) sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (e.g. dotless i with mathematical hat).
 
 ### SVG
 
