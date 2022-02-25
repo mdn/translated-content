@@ -27,7 +27,7 @@ Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur
 
 > **Note :** En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section {{anch("Clipboard availability")}} pour plus de détails.
 
-Toutes les méthodes de l’API clipboard fonctionnent de manière asynchrone ; elles renvoient une {{jsxref("Promise")}} qui est résolue une fois que l’accès au presse-papiers a réussi. La promesse est rejetée si l’accès au presse-papiers est refusé.
+Toutes les méthodes de l’API clipboard fonctionnent de manière asynchrone&nbsp;; elles renvoient une {{jsxref("Promise")}} qui est résolue une fois que l’accès au presse-papiers a réussi. La promesse est rejetée si l’accès au presse-papiers est refusé.
 
 ## Méthodes
 
@@ -36,7 +36,7 @@ _`Clipboard` est basé sur l’interface {{domxref("EventTarget")}}, et inclut l
 - {{domxref("Clipboard.read()","read()")}}
   - : Demande des données arbitraires (telles que des images) depuis le presse-papiers, et renvoie une {{jsxref("Promise")}}. Quand les données ont été obtenues, la promesse est résolue avec un objet {{domxref("DataTransfer")}} qui fournit les données.
 - {{domxref("Clipboard.readText()","readText()")}}
-  - : Demande du texte depuis le presse-papiers du système ; renvoie une `Promise` qui est résolue avec une {{domxref("DOMString")}} contenant le texte du presse-papiers une fois disponible.
+  - : Demande du texte depuis le presse-papiers du système&nbsp;; renvoie une `Promise` qui est résolue avec une {{domxref("DOMString")}} contenant le texte du presse-papiers une fois disponible.
 - {{domxref("Clipboard.write()","write()")}}
   - : Écrit des données arbitraires dans le presse-papiers du système. Cette opération asynchrone signale quand elle a terminé en résolvant la `Promise` renvoyée.
 - {{domxref("Clipboard.writeText()","writeText()")}}

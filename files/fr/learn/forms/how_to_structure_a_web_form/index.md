@@ -290,7 +290,7 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
     </section>
     ```
 
-7.  La dernière section est plus simple ; elle ne contient qu'un bouton {{htmlelement("button")}} de type `submit`, pour adresser les données du formulaire. Ajoutez ceci au bas du formulaire&nbsp;:
+7.  La dernière section est plus simple&nbsp;; elle ne contient qu'un bouton {{htmlelement("button")}} de type `submit`, pour adresser les données du formulaire. Ajoutez ceci au bas du formulaire&nbsp;:
 
     ```html
     <p> <button type="submit">Valider le paiement</button> </p>
@@ -302,7 +302,7 @@ Vous pouvez voir le formulaire terminé en action ci‑dessous (vous le trouvere
 
 ## Résumé
 
-Nous savons maintenant ce qu'il faut faire pour structurer de manière appropriée un formulaire HTML ; l'article suivant approfondira la mise en œuvre  des divers types de widgets pour formulaire pour collecter les informations utilisateur.
+Nous savons maintenant ce qu'il faut faire pour structurer de manière appropriée un formulaire HTML&nbsp;; l'article suivant approfondira la mise en œuvre  des divers types de widgets pour formulaire pour collecter les informations utilisateur.
 
 ## Voir aussi
 

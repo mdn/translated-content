@@ -41,7 +41,7 @@ Nous examinerons maintenant en détail les fonctionnalités des divers widgets p
 
 Ici, nous nous attarderons sur les widgets de formulaires intégrés aux navigateurs, mais comme les formulaires HTML restent très circonscrits et que la qualité des implémentations peut être très différente d'un navigateur à l'autre, les développeurs web construisent parfois leurs propres widgets de formulaires — voir [Comment construire des widgets de formulaires personnalisés](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés) plus loin dans ce même module pour plus d'idées à ce propos.
 
-> **Note :** La plupart des fonctionnalités discutées dans cet article sont abondamment explicitées dans les navigateurs ; nous soulignerons les exceptions à ce sujet. Si vous voulez plus de précisions, consultez les [références aux éléments de formulaires HTML](/fr/docs/Web/HTML/Element#Forms), et en particulier nos références détaillées aux [types \<input>](/fr/docs/Web/HTML/Element/input).
+> **Note :** La plupart des fonctionnalités discutées dans cet article sont abondamment explicitées dans les navigateurs&nbsp;; nous soulignerons les exceptions à ce sujet. Si vous voulez plus de précisions, consultez les [références aux éléments de formulaires HTML](/fr/docs/Web/HTML/Element#Forms), et en particulier nos références détaillées aux [types \<input>](/fr/docs/Web/HTML/Element/input).
 
 ## Attributs communs
 
@@ -50,9 +50,9 @@ Beaucoup d'éléments utilisés pour définir les widgets de formulaire ont leur
 | Nom de l'attribut | Valeur par défaut | Description                                                                                                                                                                                                                                                                                                                                                                 |
 | ----------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `autofocus`       | (_false_)         | Cet attribut, booléen, vous permet de spécifier que cet élément doit avoir automatiquement le focus au chargement de la page, sauf si l'utilisateur prend la main, en faisant, par exemple, une saisie dans un autre contrôle. Seul un élément associé à un formulaire peut avoir cet attribut activé.                                                                      |
-| `disabled`        | (_false_)         | Cet attribut est un booléen. Il indique que l'utilisateur ne peut pas avoir d'action sur cet élément. S'il n'est pas précisé, l'élément hérite son comportement de l'élément contenant, comme, {{HTMLElement("fieldset")}} ; si le conteneur n'a pas d'attribut `disabled` mis, l'élément est activé.                                                              |
+| `disabled`        | (_false_)         | Cet attribut est un booléen. Il indique que l'utilisateur ne peut pas avoir d'action sur cet élément. S'il n'est pas précisé, l'élément hérite son comportement de l'élément contenant, comme, {{HTMLElement("fieldset")}}&nbsp;; si le conteneur n'a pas d'attribut `disabled` mis, l'élément est activé.                                                              |
 | `form`            |                   | L'élément <form> auquel le widget est associé. La valeur de l'attribut doit être l'attribut `id` d'un élément {{HTMLElement("form")}} dans le même document. En théorie, il vous permet de mettre un widget en dehors d'un élément {{HTMLElement("form")}}. En pratique, toutefois, il n'y a pas de navigateur qui prenne en charge cette fonctionnalité. |
-| `name`            |                   | Le nom de l'élément ; il sera soumis en même temps que les données du formulaire.                                                                                                                                                                                                                                                                                           |
+| `name`            |                   | Le nom de l'élément&nbsp;; il sera soumis en même temps que les données du formulaire.                                                                                                                                                                                                                                                                                           |
 | `value`           |                   | La valeur initiale de l'élément.                                                                                                                                                                                                                                                                                                                                            |
 
 ## Champs de saisie de texte
@@ -116,7 +116,7 @@ Ce type de champ est défini en donnant la valeur `password` à l'attribut {{htm
 
 Aucune contrainte de saisie du texte n'est ajoutée, mais la valeur entrée dans le champ est masquée (avec des points ou des astérisques) afin qu'elle ne puisse pas être lue par d'autres.
 
-Gardez à l'esprit que ceci n'est qu'une fonction de l'interface utilisateur ; sauf si vous soumettez le formulaire de manière sécurisée, il sera envoyé en texte brut, ce qui est mauvais pour la sécurité — un tiers malicieux pourrait intercepter les données et voler le mot de passe, les détails de la carte de crédit ou autre texte soumis. La meilleure façon de protéger l'utilisateur contre ceci consiste à héberger toute page contenant des formulaires avec une connexion sécurisée (par ex. avec https\:// ...), ainsi les données sont chiffrées avant expédition.
+Gardez à l'esprit que ceci n'est qu'une fonction de l'interface utilisateur&nbsp;; sauf si vous soumettez le formulaire de manière sécurisée, il sera envoyé en texte brut, ce qui est mauvais pour la sécurité — un tiers malicieux pourrait intercepter les données et voler le mot de passe, les détails de la carte de crédit ou autre texte soumis. La meilleure façon de protéger l'utilisateur contre ceci consiste à héberger toute page contenant des formulaires avec une connexion sécurisée (par ex. avec https\:// ...), ainsi les données sont chiffrées avant expédition.
 
 Les navigateurs modernes reconnaissent les risques courus lors de l'envoi de formulaires avec une connexion non sécurisée et affichent des avertissements pour prévenir les utilisateurs. Pour plus de précisions sur ce que Firefox a mis en œuvre, voir [Mots de passe peu sûrs](/fr/docs/Sécurité/MotsdepasseInsecurisés).
 
@@ -150,7 +150,7 @@ Ce type de champ se définit en donnant la valeur `url` à l'attribut {{htmlattr
     <input type="url" id="url" name="url">
 ```
 
-Il ajoute une contrainte de validation spéciale du champ ; le navigateur renvoie une erreur si une URL invalide est saisie.
+Il ajoute une contrainte de validation spéciale du champ&nbsp;; le navigateur renvoie une erreur si une URL invalide est saisie.
 
 > **Note :** ce n'est pas parce qu'une URL est bien formée qu'elle pointe vers un emplacement qui existe réellement.
 
@@ -182,8 +182,8 @@ Notez que l'élément {{HTMLElement("textarea")}} est écrit un peu différemmen
 
 Deux points clés à noter ici&nbsp;:
 
-- Si vous voulez définir une valeur par défaut pour un élément {{HTMLElement("input")}}, vous devez utiliser l'attribut `value` ; avec un élément {{HTMLElement("textarea")}} mettez le texte par défaut entre la balise ouvrante et la balise fermante du dit élément.
-- Par nature, l'élément {{HTMLElement("textarea")}} n'accept que des contenus textuels ; ce qui signifie que si du contenu HTML est placé dans un élément {{HTMLElement("textarea")}} il sera restitué sous forme de texte brut.
+- Si vous voulez définir une valeur par défaut pour un élément {{HTMLElement("input")}}, vous devez utiliser l'attribut `value`&nbsp;; avec un élément {{HTMLElement("textarea")}} mettez le texte par défaut entre la balise ouvrante et la balise fermante du dit élément.
+- Par nature, l'élément {{HTMLElement("textarea")}} n'accept que des contenus textuels&nbsp;; ce qui signifie que si du contenu HTML est placé dans un élément {{HTMLElement("textarea")}} il sera restitué sous forme de texte brut.
 
 ## Contenu déroulant
 
@@ -611,7 +611,7 @@ Une barre de progression représente une valeur qui évolue dans le temps jusqu'
 
 Cela sert à mettre en œuvre visuellement un rapport d'avancement, comme le pourcentage du nombre total de fichiers téléchargés ou le nombre de questions posées dans un questionnaire.
 
-Le contenu dans l'élément {{HTMLElement("progress")}} est un affichage informatif de repli pour les navigateurs ne prenant pas en charge cet élément ;  les technologies d'assistance vocalisent ce contenu.
+Le contenu dans l'élément {{HTMLElement("progress")}} est un affichage informatif de repli pour les navigateurs ne prenant pas en charge cet élément&nbsp;;  les technologies d'assistance vocalisent ce contenu.
 
 #### Meter
 
@@ -641,7 +641,7 @@ Une telle barre se crée avec un élément {{HTMLElement("meter")}}. Cela permet
 <meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
 ```
 
-Le contenu de l'élément {{HTMLElement("meter")}} est un affichage informatif de repli pour les navigateurs ne prenant pas en charge cet élément ; les technologies d'assistance vocalisent cet affichage.
+Le contenu de l'élément {{HTMLElement("meter")}} est un affichage informatif de repli pour les navigateurs ne prenant pas en charge cet élément&nbsp;; les technologies d'assistance vocalisent cet affichage.
 
 La prise en charge de `progress` et `meter` est vraiment bonne — il n'y a pas de prise en charge dans Internet Explorer, mais les autres navigateurs l'acceptent bien.
 

@@ -67,15 +67,15 @@ Dans le monde réel, les développeurs ont tendance à utiliser une combinaison 
 
 ## Utiliser la validation intégrée au formulaire
 
-Une des caractéristiques de [HTML5](/fr/docs/orphaned/Web/Guide/HTML/HTML5) est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des [attributs de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) sur les éléments de formulaire ; ils vous permettent de spécifier des règles pour une entrée de formulaire comme&nbsp;: une valeur doit‑elle être remplie ? y a-t-il une longueur minimale et/ou maximale des données ? doit‑elle être un nombre, une adresse e-mail ou autre chose ? doit‑elle correspondre à un modèle ? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
+Une des caractéristiques de [HTML5](/fr/docs/orphaned/Web/Guide/HTML/HTML5) est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des [attributs de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) sur les éléments de formulaire&nbsp;; ils vous permettent de spécifier des règles pour une entrée de formulaire comme&nbsp;: une valeur doit‑elle être remplie ? y a-t-il une longueur minimale et/ou maximale des données ? doit‑elle être un nombre, une adresse e-mail ou autre chose ? doit‑elle correspondre à un modèle ? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
 Quand un élément est valide&nbsp;:
 
-- l'élément correspond à la pseudo‑classe CSS {{cssxref(":valid")}}  ; cela vous permet d'appliquer une composition de style distinctive.
+- l'élément correspond à la pseudo‑classe CSS {{cssxref(":valid")}} &nbsp;; cela vous permet d'appliquer une composition de style distinctive.
 - si l'utilisateur essaie d'envoyer les données, le navigateur soumet le formulaire pour autant qu'il n'y ait rien d'autre qui l'empêche de le faire (par ex. du JavaScript).
 
 Quand un élément est invalide&nbsp;:
 
-- l'élément correspond à la pseudo‑classe CSS {{cssxref(":invalid")}}  ; cela vous permet d'appliquer une composition de style distinctive.
+- l'élément correspond à la pseudo‑classe CSS {{cssxref(":invalid")}} &nbsp;; cela vous permet d'appliquer une composition de style distinctive.
 - si l'utilisateur essaie d'envoyer le formulaire, le navigateur le bloquera et affichera un message d'erreur.
 
 ### Contraintes de validation sur les éléments input — simple début
@@ -162,7 +162,7 @@ Vous pouvez utiliser des nombres ou d'autres caractères dans ces expressions, c
 Vous pouvez combiner cela pratiquement comme vous l'entendez en précisant les différentes parties les unes après les autres&nbsp;:
 
 - `[Ll].*k` — Un seul caractère L en majuscules ou minuscules, suivi de zéro ou plusieurs caractères de n'importe quel type, suivis par un k minuscules.
-- `[A-Z][A-Za-z' -]+` — Un seul caractère en majuscules suivi par un ou plusieurs caractères en majuscules ou minuscules, un tiret, une apostrophe ou une espace. Cette combinaison peut s'utiliser pour valider les nom de villes dans les pays anglo‑saxons ; ils débutent par une majuscule et ne contiennent pas d'autre caractère. Quelques exemples de ville de GB correspondant à ce schéma&nbsp;: Manchester, Ashton-under-lyne et Bishop's Stortford.
+- `[A-Z][A-Za-z' -]+` — Un seul caractère en majuscules suivi par un ou plusieurs caractères en majuscules ou minuscules, un tiret, une apostrophe ou une espace. Cette combinaison peut s'utiliser pour valider les nom de villes dans les pays anglo‑saxons&nbsp;; ils débutent par une majuscule et ne contiennent pas d'autre caractère. Quelques exemples de ville de GB correspondant à ce schéma&nbsp;: Manchester, Ashton-under-lyne et Bishop's Stortford.
 - `[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}` — Un schéma pour un numéro de téléphone intérieur américain — trois chiffres, suivis par une espace ou un tiret, suivis par trois nombres, suivis par une espace ou un tiret, suivis par quatre nombres. Vous aurez peut-être à faire plus compliqué, car certains écrivent leur numéro de zone entre parenthèses, mais ici il s'agit simplement de faire une démonstration.
 
 Voyons un exemple — mettons à jour notre HTML en y ajoutant un attribut `pattern`, ainsi&nbsp;:
@@ -405,7 +405,7 @@ Propriétés de l'API de validation des contraintes
 | `validity.stepMismatch`    | Renvoie `true` si la valeur de l'élément ne correspond pas aux règles définies par l'attribut `step`,`false` a contrario. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                    |
 | `validity.tooLong`         | Renvoie `true` si la taille de l'élément est supérieure à la longueur maximum définie, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                        |
 | `validity.typeMismatch`    | Renvoie `true` si la syntaxe de la valeur de l'élément n'est pas correcte ; `false` dans le cas contraire. Si le retour est `true`, l'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                                 |
-| `validity.valid`           | Renvoie `true` si la valeur de l'élément n'a pas de problème de validité, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":valid")}} si le retour est `true` ; de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `false`.                    |
+| `validity.valid`           | Renvoie `true` si la valeur de l'élément n'a pas de problème de validité, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":valid")}} si le retour est `true`&nbsp;; de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `false`.                    |
 | `validity.valueMissing`    | Renvoie `true` si l'élément n'a pas de valeur alors que le champ est requis, sinon`false`. L'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `true`.                                                                                                  |
 | `willValidate`             | Retourne `true` si l'élément est validé lorsque le formulaire est soumis, `false` dans le cas contraire.                                                                                                                                                                                     |
 
@@ -414,7 +414,7 @@ Propriétés de l'API de validation des contraintes
 | Méthodes                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `checkValidity()`            | Renvoie `true` si la valeur de l'élément n'a pas de problème de validation, `false` autrement. Si l'élément est invalide, cette méthode déclenche aussi un événement {{event("invalid")}} sur cet élément.                                                                                                                                                                                                                                                                                                                     |
-| `setCustomValidity(message)` | Ajoute un message d'erreur personnalisé à l'élément ; si vous définissez un message d'erreur personnalisé, l'élément est considéré comme invalide, et le message spécifié est affiché. Cela vous permet d'utiliser du code JavaScript pour établir une erreur de validation autre que celles offertes par l'API standard des contraintes de validation. Le message est affiché à l'utilisateur lorsque le problème est rapporté. Si l'argument est une chaîne de caractères vide, l'erreur personnalisée est considérée comme effacée. |
+| `setCustomValidity(message)` | Ajoute un message d'erreur personnalisé à l'élément&nbsp;; si vous définissez un message d'erreur personnalisé, l'élément est considéré comme invalide, et le message spécifié est affiché. Cela vous permet d'utiliser du code JavaScript pour établir une erreur de validation autre que celles offertes par l'API standard des contraintes de validation. Le message est affiché à l'utilisateur lorsque le problème est rapporté. Si l'argument est une chaîne de caractères vide, l'erreur personnalisée est considérée comme effacée. |
 
 Pour les anciens navigateurs, il existe [une prothèse d'émulation (_polyfill_) comme Hyperform](https://hyperform.js.org/), pour compenser le défaut de prise en charge de cette API. Comme vous utilisez déjà JavaScript, l'utilisation d'une prethèse d'émulation n'est pas un souci supplémentaire pour la conception ou l'implémentation de votre site ou application Web.
 
@@ -587,7 +587,7 @@ Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlev�
 
 ##### CSS
 
-De même, nous n'avons pas eu à changer radicalement les CSS ; nous avons simplement transformé la pseudo-classe {{cssxref(":invalid")}} en une vraie classe et évité d'utiliser le sélecteur d'attribut, qui ne fonctionne pas avec Internet Explorer 6.
+De même, nous n'avons pas eu à changer radicalement les CSS&nbsp;; nous avons simplement transformé la pseudo-classe {{cssxref(":invalid")}} en une vraie classe et évité d'utiliser le sélecteur d'attribut, qui ne fonctionne pas avec Internet Explorer 6.
 
 ```css
 /* On améliore l'aspect de l'exemple avec ces quelques règles */

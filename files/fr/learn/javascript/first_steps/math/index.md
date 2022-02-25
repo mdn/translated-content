@@ -39,7 +39,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 ## Tout le monde aime les maths
 
-Mouais, peut‑être pas. Certains parmi nous aiment les maths, d'autres les détestent depuis qu'il leur a fallu apprendre les tables de multiplication et les longues divisions à l'école, d'autres se situent entre les deux. Mais personne ne peut nier que les mathématiques sont une connaissance fondamentale dont il n'est pas possible de se passer. Cela devient particulièrement vrai lorsque nous apprenons à programmer en JavaScript (ou tout autre langage d'ailleurs) — une grande part de ce que nous faisons reposant en effet sur le traitement de données numériques, le calcul de nouvelles valeurs, etc. ; vous ne serez donc pas étonné d'apprendre que JavaScript dispose d'un ensemble complet de fonctions mathématiques.
+Mouais, peut‑être pas. Certains parmi nous aiment les maths, d'autres les détestent depuis qu'il leur a fallu apprendre les tables de multiplication et les longues divisions à l'école, d'autres se situent entre les deux. Mais personne ne peut nier que les mathématiques sont une connaissance fondamentale dont il n'est pas possible de se passer. Cela devient particulièrement vrai lorsque nous apprenons à programmer en JavaScript (ou tout autre langage d'ailleurs) — une grande part de ce que nous faisons reposant en effet sur le traitement de données numériques, le calcul de nouvelles valeurs, etc.&nbsp;; vous ne serez donc pas étonné d'apprendre que JavaScript dispose d'un ensemble complet de fonctions mathématiques.
 
 Cet article ne traite que des éléments de base nécessaires pour débuter.
 
@@ -57,7 +57,7 @@ Nous disposons même de plusieurs systèmes de numération ! Le décimal a pou
 - **Octal** — de base 8, utilise les chiffres entre 0 et 7 dans chaque rang.
 - **Hexadécimal** — de base 16, utilise les chiffres entre 0 et 9 puis les lettres de a à f dans chaque rang. Vous avez peut-être déjà rencontré ces nombres en définissant des couleurs dans les [CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#hexadecimal_values).
 
-**Avant que votre cervelle ne se mette à bouillir, stop !** Pour commencer, nous ne nous intéresserons qu'aux nombres décimaux dans ce cours ; vous aurez rarement besoin de vous servir des autres types, peut-être même jamais.
+**Avant que votre cervelle ne se mette à bouillir, stop !** Pour commencer, nous ne nous intéresserons qu'aux nombres décimaux dans ce cours&nbsp;; vous aurez rarement besoin de vous servir des autres types, peut-être même jamais.
 
 L'autre bonne nouvelle, c'est que contrairement à d'autres langages de programmation, JavaScript n'a qu'un seul type de donnée pour les nombres, vous l'avez deviné : {{jsxref("Number")}}. Cela signifie que, en JavaScript, quels que soient les types de nombre avec lesquels vous travaillerez, vous les manipulerez tous exactement de la même façon.
 
@@ -206,7 +206,7 @@ Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, m
     num2 + num1 / 8 + 2;
     ```
 
-Certaines opérations de cet ensemble ne vous renvoient peut-être pas le résultat attendu ; le paragraphe qui suit vous explique pourquoi.
+Certaines opérations de cet ensemble ne vous renvoient peut-être pas le résultat attendu&nbsp;; le paragraphe qui suit vous explique pourquoi.
 
 ### Priorité des opérateurs
 
@@ -240,7 +240,7 @@ Quelquefois vous aurez besoin d'ajouter ou retrancher 1 à une valeur de variabl
 guessCount++;
 ```
 
-> **Note :** Ces opérateurs sont couramment utilisés dans des [boucles ;](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration) nous les verrons plus loin dans ce cours. Par exemple, disons que vous voulez parcourir une liste de prix et ajouter les taxes à chacun. Vous utiliserez une boucle pour obtenir chaque valeur une à une et exécuterez le calcul voulu pour ajouter les taxes à chacune. L'incrément s'utilise pour aller à la valeur suivante. Nous avons mis un exemple concret montrant comment faire — voyez‑le tout de suite, examinez le code source et notez les opérateurs d'incrémentation ! Nous reverrons les boucles en détail plus loin dans ce cours.
+> **Note :** Ces opérateurs sont couramment utilisés dans des [boucles&nbsp;;](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration) nous les verrons plus loin dans ce cours. Par exemple, disons que vous voulez parcourir une liste de prix et ajouter les taxes à chacun. Vous utiliserez une boucle pour obtenir chaque valeur une à une et exécuterez le calcul voulu pour ajouter les taxes à chacune. L'incrément s'utilise pour aller à la valeur suivante. Nous avons mis un exemple concret montrant comment faire — voyez‑le tout de suite, examinez le code source et notez les opérateurs d'incrémentation ! Nous reverrons les boucles en détail plus loin dans ce cours.
 
 Jouons avec ces opérateurs dans la console. Notez d'abord qu'il n'est pas possible de les appliquer directement à un nombre, ce qui peut paraître étrange, mais cet opérateur assigne à une variable une nouvelle valeur mise à jour, il n'agit pas sur la valeur elle‑même. Ce qui suit renvoie une erreur&nbsp;:
 

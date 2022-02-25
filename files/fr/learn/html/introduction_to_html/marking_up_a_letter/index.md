@@ -14,7 +14,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_à_HTML")}}
 
-Tôt ou tard nous apprenons tous à écrire une lettre ; c'est aussi un exemple utile pour tester nos compétences en matière de mise en forme ! Dans cet exercice, vous devrez opérer le balisage d'une lettre en utilisant les fonctionnalités textes élémentaires et avancées, y compris les hyperliens, et en plus nous testerons vos connaissances avec certains contenus de `<head>` en HTML.
+Tôt ou tard nous apprenons tous à écrire une lettre&nbsp;; c'est aussi un exemple utile pour tester nos compétences en matière de mise en forme ! Dans cet exercice, vous devrez opérer le balisage d'une lettre en utilisant les fonctionnalités textes élémentaires et avancées, y compris les hyperliens, et en plus nous testerons vos connaissances avec certains contenus de `<head>` en HTML.
 
 <table class="standard-table">
   <tbody>
@@ -70,12 +70,12 @@ Sémantique en ligne&nbsp;:
 
 - Les noms de l'expéditeur et du destinataire (et «&nbsp;Tél&nbsp;» et «&nbsp;e‑mail&nbsp;») doivent être marqués comme étant de grande importance.
 - Les quatre dates du document doivent être indiquées dans des éléments appropriés contenant des dates lisibles par la machine.
-- La première adresse et la première date de la lettre doivent recevoir une valeur d'attribut de classe «&nbsp;sender-column&nbsp;» ; le CSS que vous ajouterez plus tard les alignera à droite, comme c'est le cas dans une mise en page de lettre classique.
+- La première adresse et la première date de la lettre doivent recevoir une valeur d'attribut de classe «&nbsp;sender-column&nbsp;»&nbsp;; le CSS que vous ajouterez plus tard les alignera à droite, comme c'est le cas dans une mise en page de lettre classique.
 - Les cinq acronymes/abréviations dans le corps du texte de la lettre seront marqués pour permettre leur développement.
 - Les six indices/exposants seront balisés de manière appropriée.
 - Les symboles «&nbsp;degré&nbsp;», «&nbsp;plus grand que » , «&nbsp;multiplier&nbsp;» seront marqués avec les références d'entités voulues.
 - Essayez de marquer au moins deux mots importants en gras/italique.
-- Deux emplacements nécessitent un hyperlien ; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement http\://example.com.
+- Deux emplacements nécessitent un hyperlien&nbsp;; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement http\://example.com.
 - La citation et la devise de l'université doivent être marquées avec les éléments appropriés.
 
 Dans l'en‑tête du document&nbsp;:
@@ -86,8 +86,8 @@ Dans l'en‑tête du document&nbsp;:
 
 ## Conseils et astuces
 
-- Utilisez le [validateur HTML W3C](https://validator.w3.org/) pour valider votre HTML ; Vous aurez des points supplémentaires s'il est valide.
-- Il n'est pas nécessaire de connaître les CSS pour faire cet exercice ; vous avez juste besoin de le mettre dans un élément HTML.
+- Utilisez le [validateur HTML W3C](https://validator.w3.org/) pour valider votre HTML&nbsp;; Vous aurez des points supplémentaires s'il est valide.
+- Il n'est pas nécessaire de connaître les CSS pour faire cet exercice&nbsp;; vous avez juste besoin de le mettre dans un élément HTML.
 
 ## Exemple
 

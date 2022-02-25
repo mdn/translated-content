@@ -11,7 +11,7 @@ Après la séparation, le nœud actuel contient tout le texte jusqu’à l’ind
 
 Des nœuds texte séparés peuvent être concaténés en utilisant la méthode {{domxref("Node.normalize()")}}.
 
-Une {{domxref("DOMException")}} avec la valeur `INDEX_SIZE_ERR` est levée si l’indice spécifié est négatif ou est supérieur au nombre d’unités 16-bit dans le texte du nœud ; une {{domxref("DOMException")}} avec la valeur `NO_MODIFICATION_ALLOWED_ERR` est levée si le nœud est en lecture seule.
+Une {{domxref("DOMException")}} avec la valeur `INDEX_SIZE_ERR` est levée si l’indice spécifié est négatif ou est supérieur au nombre d’unités 16-bit dans le texte du nœud&nbsp;; une {{domxref("DOMException")}} avec la valeur `NO_MODIFICATION_ALLOWED_ERR` est levée si le nœud est en lecture seule.
 
 ## Syntaxe
 

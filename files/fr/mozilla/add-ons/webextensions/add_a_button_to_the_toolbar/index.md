@@ -69,7 +69,7 @@ function openPage() {
 browser.browserAction.onClicked.addListener(openPage);
 ```
 
-Cela écoute l’événement de clic de l’action du navigateur ; Lorsque l’événement se déclenche, la fonction `openPage()` est exécuté, ce qui ouvre la page spécifiée à l’aide de l’API des [`onglets`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs).
+Cela écoute l’événement de clic de l’action du navigateur&nbsp;; Lorsque l’événement se déclenche, la fonction `openPage()` est exécuté, ce qui ouvre la page spécifiée à l’aide de l’API des [`onglets`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs).
 
 A ce point, l’extension complète devrait ressembler à ceci :
 
@@ -177,7 +177,7 @@ document.addEventListener("click", function(e) {
 });
 ```
 
-Dans notre JavaScript, nous écoutons les clics sur les choix contextuels. Nous vérifions d’abord si le clic a atterri sur l’un des choix de la page ; Sinon, nous ne faisons rien d’autre. Si le clic atterrit sur un choix de page, nous construisons une URL à partir de celui‐ci, et ouvrons un nouvel onglet contenant la page correspondante. Notez que nous pouvons utiliser les API WebExtension dans les scripts contextuels, tout comme nous le pouvons dans les scripts en arrière‐plan.
+Dans notre JavaScript, nous écoutons les clics sur les choix contextuels. Nous vérifions d’abord si le clic a atterri sur l’un des choix de la page&nbsp;; Sinon, nous ne faisons rien d’autre. Si le clic atterrit sur un choix de page, nous construisons une URL à partir de celui‐ci, et ouvrons un nouvel onglet contenant la page correspondante. Notez que nous pouvons utiliser les API WebExtension dans les scripts contextuels, tout comme nous le pouvons dans les scripts en arrière‐plan.
 
 La structure finale de l’add‐on devrait ressembler à ceci :
 

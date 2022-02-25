@@ -12,8 +12,8 @@ L’interface **`File`** fournit des informations sur des fichiers et permet au 
 
 Les objets `File` sont généralements obtenus à partir de&nbsp;:
 
-- l’objet {{domxref("FileList")}} retourné lorsque qu’un utilisateur ou une utilisatrice sélectionne des fichiers grâce à un élément {{HTMLElement("input")}} ;
-- l’objet {{domxref("DataTransfer")}} d’une opération de glisser-déposer ;
+- l’objet {{domxref("FileList")}} retourné lorsque qu’un utilisateur ou une utilisatrice sélectionne des fichiers grâce à un élément {{HTMLElement("input")}}&nbsp;;
+- l’objet {{domxref("DataTransfer")}} d’une opération de glisser-déposer&nbsp;;
 - l’API `mozGetAsFile()` de l’élément {{domxref("HTMLCanvasElement")}}.
 
 Dans Gecko, le code privilégié peut créer des objets `File` représentant tout fichier local sans nécessiter une interaction de l’utilisateur ou de l’utilisatrice (voir {{anch("Notes d’implémentation")}} pour plus d’informations.)

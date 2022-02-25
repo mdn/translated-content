@@ -18,7 +18,7 @@ Le constructeur permettant d’instancier un nouvel observateur de mutations DOM
 #### Paramètres
 
 - `callback`
-  - : Une fonction qui sera appelée à chaque mutation du DOM. L’observateur appellera cette fonction avec deux arguments. Le premier est un tableau d’objets de type {{domxref("MutationRecord")}} ; le second est l’instance de `MutationObserver`.
+  - : Une fonction qui sera appelée à chaque mutation du DOM. L’observateur appellera cette fonction avec deux arguments. Le premier est un tableau d’objets de type {{domxref("MutationRecord")}}&nbsp;; le second est l’instance de `MutationObserver`.
 
 ## Méthodes d’instance
 

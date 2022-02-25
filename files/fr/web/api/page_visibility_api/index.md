@@ -108,7 +108,7 @@ if (typeof document.addEventListener === "undefined" || typeof document.hidden =
   - : Une `string` représentant l’état de visibilité du document. Valeurs possibles&nbsp;:
 
     - `visible`&nbsp;: le contenu de la page peut être au moins partiellement visible. En pratique, cela signifie que la page est l’onglet actif d’une fenêtre non minimisée.
-    - `hidden`&nbsp;: le contenu de la page n’est pas visible pour l’utilisateur. En pratique, cela signifie que le document est soit dans un onglet en arrière-plan, soit dans une fenêtre minimizée ; ou bien que l’écran de verrouillage de l’OS est actif.
+    - `hidden`&nbsp;: le contenu de la page n’est pas visible pour l’utilisateur. En pratique, cela signifie que le document est soit dans un onglet en arrière-plan, soit dans une fenêtre minimizée&nbsp;; ou bien que l’écran de verrouillage de l’OS est actif.
     - `prerender`&nbsp;: le contenu de la page est en train d’être précalculé et n’est pas visible pour l’utilisateur (il est considéré masqué pour `document.hidden`). Le document peut être dans cet état initialement, mais ne passera jamais à cet état depuis une autre valeur. Note&nbsp;: le support des navigateurs est optionnel.
     - `unloaded`&nbsp;: la page est en train d’être déchargée de la mémoire. Note&nbsp;: le support des navigateurs est optionnel.
 

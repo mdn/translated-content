@@ -19,7 +19,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/conditionals
 
 {{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}
 
-Dans tout langage de programmation, le code doit prendre des décisions et agir en fonction des différents paramètres. Par exemple dans un jeu, si le nombre de vies du joueur atteint 0, alors le jeu est terminé. Dans une application météo, si elle est consultée le matin, l'application montrera une image du lever de soleil ; l'application proposera des étoiles et la lune s'il fait nuit. Dans cet article nous allons découvrir comment ces instructions conditionnelles fonctionnent en JavaScript.
+Dans tout langage de programmation, le code doit prendre des décisions et agir en fonction des différents paramètres. Par exemple dans un jeu, si le nombre de vies du joueur atteint 0, alors le jeu est terminé. Dans une application météo, si elle est consultée le matin, l'application montrera une image du lever de soleil&nbsp;; l'application proposera des étoiles et la lune s'il fait nuit. Dans cet article nous allons découvrir comment ces instructions conditionnelles fonctionnent en JavaScript.
 
 <table class="standard-table">
   <tbody>
@@ -69,7 +69,7 @@ Ici nous avons:
 
 1.  Le mot‑clé `if` suivie de parenthèses.
 2.  Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur ? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
-3.  Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu ; il sera exécuté seulement si la condition renvoie `true`.
+3.  Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu&nbsp;; il sera exécuté seulement si la condition renvoie `true`.
 4.  Le mot‑clé `else`.
 5.  Une autre paire d'accolades, à l'intérieur de laquelle se trouve du code différent — tout code souhaité et il sera exécuté seulement si la condition ne renvoie pas `true`.
 
@@ -216,8 +216,8 @@ Même si tout le code fonctionne ensemble, chaque déclaration `if...else` fonct
 
 Si vous voulez tester plusieurs conditions sans imbriquer des instructions `if...else` , les [opérateurs logiques](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques) pourront vous rendre service. Quand ils sont utilisés dans des conditions, les deux premiers sont représentés comme ci dessous :
 
-- `&&` — AND ; vous permet d'enchaîner deux ou plusieurs expressions de sorte que toutes doivent être individuellement égales à `true` pour que l'enemble de l'expression retourne `true`.
-- `||` — OR ; vous permet d'enchaîner deux ou plusieurs expressions ensemble de sorte qu'il suffit qu'une au plus soit évaluée comme étant  `true` pour que l'ensemble de l'expression renvoie `true`.
+- `&&` — AND&nbsp;; vous permet d'enchaîner deux ou plusieurs expressions de sorte que toutes doivent être individuellement égales à `true` pour que l'enemble de l'expression retourne `true`.
+- `||` — OR&nbsp;; vous permet d'enchaîner deux ou plusieurs expressions ensemble de sorte qu'il suffit qu'une au plus soit évaluée comme étant  `true` pour que l'ensemble de l'expression renvoie `true`.
 
 Pour vous donner un exemple de AND, le morceau de code précedent peut être réécrit ainsi&nbsp;:
 
@@ -374,11 +374,11 @@ Regardons cet exemple simple&nbsp;:
 let formuleDePolitesse = ( est_anniversaire ) ? 'Bon anniversaire Mme Smith — nous vous souhaitons une belle journée !' : 'Bonjour Mme Smith.';
 ```
 
-Ici, nous avons une variable nommée `est_anniversaire` — si elle est `true`, nous adressons à notre hôte un message de «&nbsp;Bon anniversaire&nbsp;» ; si ce n'est pas le cas, c'est-à-dire si `est_anniversaire` renvoie `false`, nous disons simplement «&nbsp;Bonjour&nbsp;».
+Ici, nous avons une variable nommée `est_anniversaire` — si elle est `true`, nous adressons à notre hôte un message de «&nbsp;Bon anniversaire&nbsp;»&nbsp;; si ce n'est pas le cas, c'est-à-dire si `est_anniversaire` renvoie `false`, nous disons simplement «&nbsp;Bonjour&nbsp;».
 
 ### Exemple opérateur ternaire
 
-L'opérateur ternaire ne sert pas qu'à définir des valeurs de variables ; vous pouvez aussi exécuter des fonctions, ou des lignes de code — ce que vous voulez. Voici un exemple concret de choix de thème où le style du site est déterminé grâce à un opérateur ternaire.
+L'opérateur ternaire ne sert pas qu'à définir des valeurs de variables&nbsp;; vous pouvez aussi exécuter des fonctions, ou des lignes de code — ce que vous voulez. Voici un exemple concret de choix de thème où le style du site est déterminé grâce à un opérateur ternaire.
 
 ```html
 <label for="theme">Select theme: </label>
@@ -545,7 +545,7 @@ Nous allons reprendre l'exemple de l'opérateur ternaire vu plus haut et transfo
 
 - Elle doit accepter la variable `choice` comme expression d'entrée.
 - Pour chaque cas, le choix doit être égal à une des valeurs possibles pouvant être choisies, c'est-à-dire blanc, noir, mauve, jaune ou psychédélique.
-- Chaque cas exécutera la fonction `update()` à laquelle deux valeurs de couleurs seront passées, la première pour le fond, la seconde pour le texte. Souvenez vous que les valeurs de couleurs sont des chaînes ; elle doivent donc être mises entre guillemets.
+- Chaque cas exécutera la fonction `update()` à laquelle deux valeurs de couleurs seront passées, la première pour le fond, la seconde pour le texte. Souvenez vous que les valeurs de couleurs sont des chaînes&nbsp;; elle doivent donc être mises entre guillemets.
 
 Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le bouton «&nbsp;Réinitialiser&nbsp;». Si vous êtes vraiment bloqué, pressez «&nbsp;Voir la solution&nbsp;».
 
@@ -616,7 +616,7 @@ window.addEventListener('load', updateCode);
 
 ## Conclusion
 
-C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment ! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément ; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien [contactez‑nous](/fr/Apprendre#Nous_contacter) pour une aide.
+C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment ! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément&nbsp;; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien [contactez‑nous](/fr/Apprendre#Nous_contacter) pour une aide.
 
 ## Voir aussi
 

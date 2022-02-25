@@ -39,8 +39,8 @@ Ordonne au navigateur de charger des [scripts de contenu](/fr/docs/Mozilla/Add-o
 
 Cette clé est un tableau. Chaque élément est un objet qui&nbsp;:
 
-- **doit** contenir une clé nommée **`matches`**, qui spécifie les modèles d’URL à reconnaître afin que les scripts soient chargés ;
-- **peut** contenir des clés nommées **`js`** et **`css`**, qui listent les scripts à charger dans les pages correspondantes ;
+- **doit** contenir une clé nommée **`matches`**, qui spécifie les modèles d’URL à reconnaître afin que les scripts soient chargés&nbsp;;
+- **peut** contenir des clés nommées **`js`** et **`css`**, qui listent les scripts à charger dans les pages correspondantes&nbsp;;
 - **peut** contenir un certain nombre d’autres propriétés qui contrôlent des aspects plus fins correspondant à quand et comment les scripts de contenu sont chargés.
 
 Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez inclure.
@@ -269,9 +269,9 @@ Les deux adresses `http://example.org/` et `http://example.com/` correspondront.
 
 Étant donné que `matches` est la seule clé obligatoire, les trois autres clés sont utilisées pour limiter davantage les URL qui correspondent. Pour associer la clé dans son ensemble, une URL doit&nbsp;:
 
-1.  Correspondre à la propriété `matches` ;
-2.  ET associer à la propriété `include_globs`, si présent ;
-3.  ET NE PAS correspondre à la propriété `exclude_matches`, si présent ;
+1.  Correspondre à la propriété `matches`&nbsp;;
+2.  ET associer à la propriété `include_globs`, si présent&nbsp;;
+3.  ET NE PAS correspondre à la propriété `exclude_matches`, si présent&nbsp;;
 4.  ET NE PAS correspondre à la propriété `exclude_globs`, si présent.
 
 ### globs

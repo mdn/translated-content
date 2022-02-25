@@ -83,7 +83,7 @@ Les éléments disposés en empilement sont désignés comme étant des élémen
 
 > **Note :** «&nbsp;Block Direction&nbsp;» (Sens d'empilement) définit le sens dans lequel les éléments blocs sont disposés. Le sens d'empilement est vertical pour une langue comme l'anglais dont le mode d'écriture est horizontal. Ce sens sera horizontal pour toute langue avec un mode d'écriture vertical, comme le japonais. La «&nbsp;Inline Direction » (sens d'écriture) correspond à celle dont les contenus en ligne (comme une phrase) sont disposés.
 
-Lorsque vous utilisez les CSS pour faire une mise en page, vous déplacez les éléments de leur cours normal ; toutefois, pour la plupart des éléments de la page, ce cours normal crée exactement la mise en page dont vous avez besoin. C'est pourquoi il est si important de commencer avec un document HTML bien structuré, car vous pouvez alors travailler la façon dont les choses seront disposées par défaut au lieu de lutter contre cette disposition.
+Lorsque vous utilisez les CSS pour faire une mise en page, vous déplacez les éléments de leur cours normal&nbsp;; toutefois, pour la plupart des éléments de la page, ce cours normal crée exactement la mise en page dont vous avez besoin. C'est pourquoi il est si important de commencer avec un document HTML bien structuré, car vous pouvez alors travailler la façon dont les choses seront disposées par défaut au lieu de lutter contre cette disposition.
 
 Les méthodes des CSS pouvant changer le placement des éléments sont les suivantes :
 
@@ -103,13 +103,13 @@ En plus de pouvoir changer la présentation par défaut en faisant passer un él
 
 ## Flexbox
 
-Flexbox est l'abréviation pour [Flexible Box Layout](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser `flexbox`, appliquez `display: flex` à l'élément parent des éléments à placer ; tous ses enfants directs deviennent alors des éléments `flex`. Voyons cela avec un simple exemple.
+Flexbox est l'abréviation pour [Flexible Box Layout](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) Module (Mise en page de boîtes modulaires), conçu pour faciliter une disposition alignée sur une dimension — soit en ligne, soit en colonne. Pour utiliser `flexbox`, appliquez `display: flex` à l'élément parent des éléments à placer&nbsp;; tous ses enfants directs deviennent alors des éléments `flex`. Voyons cela avec un simple exemple.
 
 Le balisage HTML ci-dessous crée un élément conteneur de la classe `wrapper`, dans lequel nous plaçons 3 éléments {{htmlelement("div")}}. Par défaut ces éléments s'afficheront en tant qu'éléments blocs, les uns sous les autres, dans ce document en langue française.
 
 ### Utiliser display: flex
 
-Mais nous ajoutons `display: flex` sur le parent ; les trois éléments se placent maintenant côte à côte. Cela provient du fait qu'ils sont devenus des _éléments flex_ et qu'ils utilisent les valeurs initiales données par flexbox. Ils sont disposés alignés, car la valeur initiale de {{cssxref("flex-direction")}} est `row`. Ils apparaissent serrés au haut de l'élément le plus haut, car la valeur initiale de la propriété {{cssxref("align-items")}} est `stretch`. Ce qui signifie que les éléments se casent dans la hauteur du conteneur `flex` défini dans ce cas par l'élément le plus grand. Les éléments s'alignent à partir de l'origine du conteneur à la fin sans laisser d'espace.
+Mais nous ajoutons `display: flex` sur le parent&nbsp;; les trois éléments se placent maintenant côte à côte. Cela provient du fait qu'ils sont devenus des _éléments flex_ et qu'ils utilisent les valeurs initiales données par flexbox. Ils sont disposés alignés, car la valeur initiale de {{cssxref("flex-direction")}} est `row`. Ils apparaissent serrés au haut de l'élément le plus haut, car la valeur initiale de la propriété {{cssxref("align-items")}} est `stretch`. Ce qui signifie que les éléments se casent dans la hauteur du conteneur `flex` défini dans ce cas par l'élément le plus grand. Les éléments s'alignent à partir de l'origine du conteneur à la fin sans laisser d'espace.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -142,7 +142,7 @@ Mais nous ajoutons `display: flex` sur le parent ; les trois éléments se pla
 
 En plus des propriétés ci-dessus applicables au conteneur `flex`, il existe des propriétés applicables aux éléments flex. Ces propriétés, entre autres choses, peuvent changer le mode d'adaptation des éléments, leur permettant de s'étaler et de se resserrer pour s'adapter à l'espace disponible.
 
-À titre d'exemple, nous pouvons donner la valeur `1` à la propriété {{cssxref("flex")}} des éléments enfants. Tous les éléments vont grandir jusqu'à remplir le conteneur, au lieu de laisser de l'espace à la suite. S'il y a assez d'espace, les éléments vont devenir plus larges ; s'il y en a moins ils vont devenir plus étroits. En outre, si vous ajoutez un autre élément au balisage, les éléments vont rapetisser pour lui faire de la place — ils ajusteront leur taille pour prendre la même quantité d'espace, quel qu'il soit.
+À titre d'exemple, nous pouvons donner la valeur `1` à la propriété {{cssxref("flex")}} des éléments enfants. Tous les éléments vont grandir jusqu'à remplir le conteneur, au lieu de laisser de l'espace à la suite. S'il y a assez d'espace, les éléments vont devenir plus larges&nbsp;; s'il y en a moins ils vont devenir plus étroits. En outre, si vous ajoutez un autre élément au balisage, les éléments vont rapetisser pour lui faire de la place — ils ajusteront leur taille pour prendre la même quantité d'espace, quel qu'il soit.
 
 ```css hidden
     * {box-sizing: border-box;}
@@ -267,7 +267,7 @@ Une fois la trame créée, vous pouvez y placer explicitement les éléments au 
 
 {{ EmbedLiveSample('Placer_des_objets_sur_la_grille', '300', '330') }}
 
-> **Note :** Ces deux exemples ne sont qu'une petite partie de la puissance des dispositions tramées ; pour en savoir plus, voyez l'article [Disposition tramée](/fr/docs/Learn/CSS/CSS_layout/Grids).
+> **Note :** Ces deux exemples ne sont qu'une petite partie de la puissance des dispositions tramées&nbsp;; pour en savoir plus, voyez l'article [Disposition tramée](/fr/docs/Learn/CSS/CSS_layout/Grids).
 
 La suite de ce guide porte sur d'autres méthodes de mise en page. Elles ont moins d'importance pour la structure générale de la mise en page, mais peuvent tout de même vous aider à réaliser des tâches spécifiques. En comprenant la nature de chaque tâche de mise en page, vous découvrez rapidement, en regardant un composant particulier de votre design, que le type de mise en page le plus adapté est souvent évident.
 
@@ -664,7 +664,7 @@ Dans l'exemple ci–dessous, nous démarrons avec un bloc HTML dans un élément
 </div>
 ```
 
-Noux utilisons une propriété `column-width` de valeur 200 pixels pour ce conteneur ; le navigateur crée autant de colonnes de 200 pixels de large qu'il est possible de faire entrer dans le conteneur, puis il partage l'espace restant entre les colonnes crées.
+Noux utilisons une propriété `column-width` de valeur 200 pixels pour ce conteneur&nbsp;; le navigateur crée autant de colonnes de 200 pixels de large qu'il est possible de faire entrer dans le conteneur, puis il partage l'espace restant entre les colonnes crées.
 
 ```html hidden
     <div class="container">

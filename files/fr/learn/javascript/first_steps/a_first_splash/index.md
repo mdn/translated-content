@@ -272,7 +272,7 @@ Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez da
 checkGuess();
 ```
 
-Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir apparaître une alerte «&nbsp;Je suis un espace réservé&nbsp;» ; nous avons défini une fonction dans notre code créant une alerte chaque fois que nous l'appelons.
+Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir apparaître une alerte «&nbsp;Je suis un espace réservé&nbsp;»&nbsp;; nous avons défini une fonction dans notre code créant une alerte chaque fois que nous l'appelons.
 
 > **Note :** Vous allez en apprendre beaucoup plus sur les fonctions plus tard dans ce cours.
 

@@ -42,7 +42,7 @@ Une mise en page à colonnes multiples est une méthode de disposition du conten
 
 Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes, souvent nommée  «&nbsp;*multicol* ». Vous pourrez effectuer le suivi de cet article en  [téléchargeant le fichier de depart multicol](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) et en ajoutant la CSS aux emplacements appropriés. En fin de section, vous verrez un exemple en direct de ce à quoi le code final peut ressembler.
 
-Notre point de départ contient un HTML très simple ; une enveloppe de la classe `container` dans laquelle nous avons placé un en‑tête et quelques paragraphes.
+Notre point de départ contient un HTML très simple&nbsp;; une enveloppe de la classe `container` dans laquelle nous avons placé un en‑tête et quelques paragraphes.
 
 L'élément {{htmlelement("div")}} de la classe `container` sera notre conteneur multi‑colonnes. Nous basculons dans une disposition _multicol_ en utilisant l'une des deux propriétés {{cssxref("column-count")}} ou {{cssxref("column-width")}}. La propriété `column-count` crée autant de colonnes que la valeur indiquée, donc si vous ajoutez la CSS suivante et actalisez la page, vous obtiendrez une disposition sur trois colonnes&nbsp;:
 

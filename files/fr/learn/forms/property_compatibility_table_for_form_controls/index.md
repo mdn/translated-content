@@ -858,7 +858,7 @@ Firefox ne fournit aucun moyen de changer la flèche vers le bas sur l'élément
           <li>
             IE9 ne prend pas en charge cette propriété sur les éléments
             {{HTMLElement("select")}}, {{HTMLElement("option")}},
-            et {{HTMLElement("optgroup")}} ; les navigateurs fondés sur
+            et {{HTMLElement("optgroup")}}&nbsp;; les navigateurs fondés sur
             WebKit sur Mac OSX ne prennent pas en charge cette propriété sur les
             éléments {{HTMLElement("option")}} et
             {{HTMLElement("optgroup")}}.

@@ -20,8 +20,8 @@ Utilisez cet événement pour écouter les messages d’une autre partie de votr
 Voici quelques exemples de cas d'utilisation :
 
 - **dans un [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)**, pour écouter les messages d’un [script d’arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) ;
-- **dans un script d’arrière-plan**, pour écouter les messages d’un script de contenu ;
-- **dans une [page d’options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) ou un script de [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#popups)**, pour écouter les messages d’un script d’arrière-plan ;
+- **dans un script d’arrière-plan**, pour écouter les messages d’un script de contenu&nbsp;;
+- **dans une [page d’options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) ou un script de [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#popups)**, pour écouter les messages d’un script d’arrière-plan&nbsp;;
 - **dans un script d’arrière-plan**, pour écouter les messages d’une page d’options ou d’un script de popup.
 
 Pour envoyer un message reçu par l'écouteur `onMessage`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}} ou (pour envoyer un message à un script de contenu) {{WebExtAPIRef("tabs.sendMessage()")}}.
@@ -32,7 +32,7 @@ Pour envoyer un message reçu par l'écouteur `onMessage`, utilisez {{WebExtAPIR
 
 En plus du message, l’écouteur reçoit en paramètres&nbsp;:
 
-- Un objet `sender` donnant les détails sur l’expéditeur du message ;
+- Un objet `sender` donnant les détails sur l’expéditeur du message&nbsp;;
 - Une fonction `sendResponse()` qui peut être utilisée pour renvoyer une réponse à l'expéditeur.
 
 Vous pouvez envoyer une réponse synchrone au message en appelant la fonction `sendResponse()` dans votre écouteur. [Voir un exemple](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_a_synchronous_response).

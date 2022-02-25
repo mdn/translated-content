@@ -36,9 +36,9 @@ Vous pouvez utiliser la clé `"content_security_policy"` pour desserrer ou resse
 
 Par exemple, vous pouvez utiliser cette clé pour&nbsp;:
 
-- permettre à l’extension de charger des scripts et des objets hors de son paquet, en fournissant leurs URL dans les directives {{CSP("script-src")}} or {{CSP("object-src")}} ;
-- permettre à l’extension d’exécuter des scripts en ligne, en [fournissant le hash du script dans la directive `"script-src"`](/fr/docs/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script) ;
-- permettre à l’extension d’utiliser `eval()` et des fonctionnalités similaires, en incluant `'unsafe-eval'` dans la directive {{CSP("script-src")}} ;
+- permettre à l’extension de charger des scripts et des objets hors de son paquet, en fournissant leurs URL dans les directives {{CSP("script-src")}} or {{CSP("object-src")}}&nbsp;;
+- permettre à l’extension d’exécuter des scripts en ligne, en [fournissant le hash du script dans la directive `"script-src"`](/fr/docs/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script)&nbsp;;
+- permettre à l’extension d’utiliser `eval()` et des fonctionnalités similaires, en incluant `'unsafe-eval'` dans la directive {{CSP("script-src")}}&nbsp;;
 - limiter les sources autorisées pour d’autres types de contenu, tels que les images et les feuilles de style, en utilisant la [directive de politique](https://publicsuffix.org/list/) appropriée.
 
 Il existe des restrictions sur la politique que vous pouvez spécifier ici&nbsp;:

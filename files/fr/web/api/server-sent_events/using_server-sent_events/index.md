@@ -14,11 +14,11 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
 {{DefaultAPISidebar("Server Sent Events")}}
 
-Développer une application web qui utilise des [évènements envoyés par le serveur](/fr/docs/Web/API/Server-sent_events) (_server-sent events_ en anglais) est relativement simple. Côté serveur, on aura besoin d'un bout de code qui puisse transmettre des évènements à l'application web ; côté client, le fonctionnement est quasi identique à celui qu'on utilise pour les [websockets](/fr/docs/Web/API/WebSockets_API) et notamment la gestion d'évènements entrants. Il s'agit d'une connexion unidirectionnelle : on ne peut pas envoyer d'évènements du client vers le serveur.
+Développer une application web qui utilise des [évènements envoyés par le serveur](/fr/docs/Web/API/Server-sent_events) (_server-sent events_ en anglais) est relativement simple. Côté serveur, on aura besoin d'un bout de code qui puisse transmettre des évènements à l'application web&nbsp;; côté client, le fonctionnement est quasi identique à celui qu'on utilise pour les [websockets](/fr/docs/Web/API/WebSockets_API) et notamment la gestion d'évènements entrants. Il s'agit d'une connexion unidirectionnelle : on ne peut pas envoyer d'évènements du client vers le serveur.
 
 ## Recevoir des évènements du serveur
 
-L'API des évènements serveur est exposée par l'interface [`EventSource`](/fr/docs/Web/API/EventSource) ; pour ouvrir une connexion vers le serveur afin de commencer à recevoir des évènements de celui-ci, on crée un nouvel objet `EventSource`, en spécifiant l'URL d'un script côté serveur qui va générer les évènements. Par exemple&nbsp;:
+L'API des évènements serveur est exposée par l'interface [`EventSource`](/fr/docs/Web/API/EventSource)&nbsp;; pour ouvrir une connexion vers le serveur afin de commencer à recevoir des évènements de celui-ci, on crée un nouvel objet `EventSource`, en spécifiant l'URL d'un script côté serveur qui va générer les évènements. Par exemple&nbsp;:
 
 ```js
 const evtSource = new EventSource("ssedemo.php");
@@ -55,7 +55,7 @@ evtSource.addEventListener("ping", function(event) {
 });
 ```
 
-Ce fragment de code est similaire au précédent, mais sera appelé automatiquement si le serveur envoie un message dont le champ `event` est `ping` ; il analysera alors le JSON dans le champ `data` et l'affichera.
+Ce fragment de code est similaire au précédent, mais sera appelé automatiquement si le serveur envoie un message dont le champ `event` est `ping`&nbsp;; il analysera alors le JSON dans le champ `data` et l'affichera.
 
 > **Attention :** **Lorsque HTTP/2 n'est pas utilisé**, les évènements serveurs sont limités par le nombre maximal de connexion ouvertes, notamment quand on a plusieurs onglets ouverts. La limite est fixée _par le navigateur_ et vaut 6 pour chaque origine (voir les bugs [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) et [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896)). On pourra avoir 6 connexions pour les évènements serveurs parmi tous les onglets ouverts sur `www.example1.com`, 6 autres pour tous les onglets sur `www.example2.com` (voir cette réponse [Stack Overflow](https://stackoverflow.com/a/5326159/1905229)). Avec HTTP/2, le nombre de flux HTTP simultanés est négocié entre le serveur et le client et vaut 100 par défaut.
 

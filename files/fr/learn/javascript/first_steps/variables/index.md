@@ -212,7 +212,7 @@ myName;
 myAge;
 ```
 
-Actuellement elles ne contiennent aucune valeur ; ce sont des conteneurs vides. Quand vous entrez les noms des variables, vous obtiendrez la valeur `undefined` en retour. Si elles n'existent pas, vous aurez un message d'erreur — essayez en saisissant
+Actuellement elles ne contiennent aucune valeur&nbsp;; ce sont des conteneurs vides. Quand vous entrez les noms des variables, vous obtiendrez la valeur `undefined` en retour. Si elles n'existent pas, vous aurez un message d'erreur — essayez en saisissant
 
 ```js
 scoobyDoo;
@@ -311,8 +311,8 @@ myAge = 40;
 
 Vous pouvez nommer une variable comme vous l'entendez, mais il y a des restrictions. Généralement, il convient de se limiter à l'emploi des caractères latins (0-9, a-z, A-Z)  et du underscore ( \_ ).
 
-- N'utilisez pas d'autres caractères ; ils pourraient entraîner des erreurs ou être difficiles à comprendre pour un auditoire international.
-- N'utilisez pas le underscore comme premier caractère d'un nom de variable — cette façon d'opérer est utilisée dans certaines constructions JavaScript pour signer certaines spécificités ; il pourrait y avoir confusion.
+- N'utilisez pas d'autres caractères&nbsp;; ils pourraient entraîner des erreurs ou être difficiles à comprendre pour un auditoire international.
+- N'utilisez pas le underscore comme premier caractère d'un nom de variable — cette façon d'opérer est utilisée dans certaines constructions JavaScript pour signer certaines spécificités&nbsp;; il pourrait y avoir confusion.
 - Ne mettez pas un chiffre en début de nom de variable. Ce n'est pas permis et provoque une erreur.
 - Une convention sûre, nommée ["lower camel case"](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms) (dos de chameau), consiste à accoler plusieurs mots en mettant le premier en minuscules les suivants commençant par une majuscule. Dans cet article, nous avons adopté cette convention pour les noms de variables.
 - Prenez des noms de variable intuitifs, décrivant les données que la variable contient. Évitez les noms se limitant à un caractère ou à l'inverse des noms trop longs, trop verbeux.

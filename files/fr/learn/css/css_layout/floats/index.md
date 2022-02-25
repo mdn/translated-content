@@ -439,7 +439,7 @@ body {
 
 {{ EmbedLiveSample('Utilisation_du_débordement', '100%', 600) }}
 
-Cet exemple fonctionne en créant ce que l'on appelle un **block formatting context** (BFC) (contexte de formatage de bloc). C'est comme une mini composition à l'intérieur de la page, composition dans laquelle tout est contenu ; l'élément flottant est contenu à l'intérieur de la BFC et l'arrière-plan est derrière les deux éléments. Cela fonctionne en règle générale, mais dans certains cas, vous pourriez avoir des barres de défilement indésirables ou des ombres découpées en raison des conséquences involontaires de l'utilisation du débordement.
+Cet exemple fonctionne en créant ce que l'on appelle un **block formatting context** (BFC) (contexte de formatage de bloc). C'est comme une mini composition à l'intérieur de la page, composition dans laquelle tout est contenu&nbsp;; l'élément flottant est contenu à l'intérieur de la BFC et l'arrière-plan est derrière les deux éléments. Cela fonctionne en règle générale, mais dans certains cas, vous pourriez avoir des barres de défilement indésirables ou des ombres découpées en raison des conséquences involontaires de l'utilisation du débordement.
 
 ### «&nbsp;display: flow-root&nbsp;»
 

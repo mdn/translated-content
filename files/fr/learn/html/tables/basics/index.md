@@ -226,7 +226,7 @@ Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et c
 
 1.  Avant tout, faites une copie locale de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire de votre ordinateur.
 2.  Le contenu de chaque tableau est encadré par ces deux balises : **[`<table></table>`](/fr/docs/Web/HTML/Element/table)**. Ajoutez‑les dans le corps de votre HTML.
-3.  Le plus petit conteneur d'un tableau est la cellule ; elle est créée avec l'élément  **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
+3.  Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément  **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
 
     ```html
     <td>Bonjour, je suis votre première cellule.</td>

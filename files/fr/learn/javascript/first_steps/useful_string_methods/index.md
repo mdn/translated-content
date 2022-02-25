@@ -174,13 +174,13 @@ Cette commande doit renvoyer le nombre 7, parce que «&nbsp;mozilla&nbsp;» comp
 
 ### Retrouver un caractère donné dans une chaîne
 
-Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver ; par exemple, pour retrouver le premier caractère, vous devez  écrire ceci&nbsp;:
+Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver&nbsp;; par exemple, pour retrouver le premier caractère, vous devez  écrire ceci&nbsp;:
 
 ```js
 browserType[0];
 ```
 
-Les ordinateurs décomptent à partir de 0, pas de 1 ! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit ; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut&nbsp;:
+Les ordinateurs décomptent à partir de 0, pas de 1 ! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit&nbsp;; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut&nbsp;:
 
 ```js
 browserType[browserType.length-1];
@@ -190,7 +190,7 @@ La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le déco
 
 ### Trouver une sous-chaîne à l'intérieur d'une chaîne et l'extraire
 
-1.  Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire ; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez&nbsp;:
+1.  Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire&nbsp;; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez&nbsp;:
 
     ```js
     browserType.indexOf('zilla');

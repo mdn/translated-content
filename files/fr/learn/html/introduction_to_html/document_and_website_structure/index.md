@@ -59,7 +59,7 @@ Les pages web peuvent sembler assez différentes les unes des autres, mais elles
 - En‑tête (header)
   - : Généralement une grande bande placée en travers au haut de la page avec un titre ou un logo. C'est là où les principales informations du site restent d'une page à l'autre.
 - Barre de navigation
-  - : Elle fait le lien vers les principales parties du site ; d'habitude, elle est présentée sous forme de boutons de menu, de liens ou d'onglets. Comme l'en‑tête, la barre de navigation reste souvent cohérente d'une page à l'autre — avoir une navigation destructurée ne peut conduire qu'à de la confusion et la frustation pour le lecteur. Beaucoup de créateurs de site considèrent la barre de navigation partie de l'en‑tête et non comme un composant individuel, mais ce n'est pas une exigence. En fait certains soutiennent également que le fait d'avoir les deux séparés est préférable pour l'accessibilité, car les lecteurs d'écran lisent mieux les deux éléments s'ils sont séparés.
+  - : Elle fait le lien vers les principales parties du site&nbsp;; d'habitude, elle est présentée sous forme de boutons de menu, de liens ou d'onglets. Comme l'en‑tête, la barre de navigation reste souvent cohérente d'une page à l'autre — avoir une navigation destructurée ne peut conduire qu'à de la confusion et la frustation pour le lecteur. Beaucoup de créateurs de site considèrent la barre de navigation partie de l'en‑tête et non comme un composant individuel, mais ce n'est pas une exigence. En fait certains soutiennent également que le fait d'avoir les deux séparés est préférable pour l'accessibilité, car les lecteurs d'écran lisent mieux les deux éléments s'ils sont séparés.
 - Contenu principal
   - : Une grande zone au centre contenant la majeure partie du contenu unique de la dite page web, par ex. la vidéo à regarder, ou le corps de l'article à parcourir, ou la carte à lire, ou les dernières nouvelles etc. C'est la partie du site variable de page en page.
 - Barre latérale
@@ -87,7 +87,7 @@ Pour mettre en œuvre le marquage sémantique, HTML fournit des balises dédiée
 - **header&nbsp;:** {{htmlelement("header")}}.
 - **barre de navigation&nbsp;:** {{htmlelement("nav")}}.
 - **contenu principal&nbsp;:** {{htmlelement("main")}}, avec diverses sous‑sections de contenu représentées à l'aide de des éléments {{HTMLElement("article")}}, {{htmlelement("section")}} et {{htmlelement("div")}}.
-- **barre latérale&nbsp;:** {{htmlelement("aside")}} ; souvent mise à l'intérieur de l'élément {{htmlelement("main")}}.
+- **barre latérale&nbsp;:** {{htmlelement("aside")}}&nbsp;; souvent mise à l'intérieur de l'élément {{htmlelement("main")}}.
 - **pied de page&nbsp;:** {{htmlelement("footer")}}.
 
 ### Apprentissage actif&nbsp;: exploration du code de l'exemple
@@ -193,7 +193,7 @@ La compréhension détaillée de la signification globale de tous les éléments
 
 Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément sémantique idéal pour regrouper certaines entités ou envelopper certains contenus. D'autres fois, vous souhaitez simplement regrouper un ensemble d'éléments pour en faire une entité unique pour des {{glossary("CSS")}} ou des {{glossary("JavaScript")}}. Pour de tels cas, HTML met à votre disposition les éléments {{HTMLElement("div")}} et {{HTMLElement("span")}}}. Utilisez‑les de préférence avec un attribut {{htmlattrxref('class')}} approprié, en quelque sorte étiquetez‑les pour pouvoir les cibler plus facilement.
 
-{{HTMLElement("span")}} est un élément en ligne non-semantique ; vous l'utiliserez seulement si vous ne trouvez pas de meilleur élément de sémantique textuelle pour envelopper votre contenu, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple&nbsp;:
+{{HTMLElement("span")}} est un élément en ligne non-semantique&nbsp;; vous l'utiliserez seulement si vous ne trouvez pas de meilleur élément de sémantique textuelle pour envelopper votre contenu, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple&nbsp;:
 
 ```html
 <p>Le Roi retourna ivre à sa chambre à une heure, la bière ne l'aidant en rien
@@ -229,7 +229,7 @@ Ce n'est pas vraiment un élément `<aside>` et il n'a pas forcément de relatio
 
 Les éléments {{htmlelement("br")}} et {{htmlelement("hr")}} sont utilisés à l'occasion et il convient de les connaître&nbsp;:
 
-`<br>` crée un saut de ligne dans un paragraphe ; c'est le seul moyen de forcer une structure rigide quand vous voulez obtenir une suite de lignes courtes fixes, comme dans une adresse postale ou un poème. Par exemple&nbsp;:
+`<br>` crée un saut de ligne dans un paragraphe&nbsp;; c'est le seul moyen de forcer une structure rigide quand vous voulez obtenir une suite de lignes courtes fixes, comme dans une adresse postale ou un poème. Par exemple&nbsp;:
 
 ```html
 <p>Il y avait une fois une fille nommée Nell<br>
@@ -238,7 +238,7 @@ Mais ses structures et sémantiques affligeantes<br>
 rendaient de ses marquages la lecture inélégante.</p>
 ```
 
-Sans éléments `<br>`, le paragraphe serait rendu par une seule longue ligne (comme précisé plus haut dans ce cours, [HTML ignore la plupart des blancs](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html)) ; avec des \<br> dans le code, voici le rendu de ce qui précède&nbsp;:
+Sans éléments `<br>`, le paragraphe serait rendu par une seule longue ligne (comme précisé plus haut dans ce cours, [HTML ignore la plupart des blancs](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html))&nbsp;; avec des \<br> dans le code, voici le rendu de ce qui précède&nbsp;:
 
 Il y avait une fois une fille nommée Nell
 Qui aimait écrire du HTML

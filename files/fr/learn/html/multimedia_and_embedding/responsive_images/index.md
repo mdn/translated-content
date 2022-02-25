@@ -166,7 +166,7 @@ Revenons à notre exemple initial du fichier [not-responsive.html](https://mdn.g
 <img src="elva-800w.jpg" alt="Chris debout tenant sa fille Elva dans ses bras">
 ```
 
-Arrangeons cela avec [`<picture>`](/fr/docs/Web/HTML/Element/picture)} ! Comme pour `<vidéo>` et `<audio>`, l'élément `<picture>` est une enveloppe conteneur de plusieurs éléments [`<source>`](/fr/docs/Web/HTML/Element/Source)} ; ces éléments indiquent plusieurs sources différentes entre lesquelles le navigateur peut choisir ; ils sont suivis du très important élément [`<img>`](/fr/docs/Web/HTML/Element/Img)}. Le code dans [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ressemblera à :
+Arrangeons cela avec [`<picture>`](/fr/docs/Web/HTML/Element/picture)} ! Comme pour `<vidéo>` et `<audio>`, l'élément `<picture>` est une enveloppe conteneur de plusieurs éléments [`<source>`](/fr/docs/Web/HTML/Element/Source)}&nbsp;; ces éléments indiquent plusieurs sources différentes entre lesquelles le navigateur peut choisir&nbsp;; ils sont suivis du très important élément [`<img>`](/fr/docs/Web/HTML/Element/Img)}. Le code dans [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ressemblera à :
 
 ```html
 <picture>

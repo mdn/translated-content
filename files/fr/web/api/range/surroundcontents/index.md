@@ -16,7 +16,7 @@ range.insertNode(newNode)
 
 Après déplacement, les bornes du `range` incluent `newNode`.
 
-Cependant, une exception sera levée si le {{ domxref("Range") }} découpe un nœud non-{{ domxref("Text") }} sur une seule de ses bornes. C’est-à-dire que, contrairement à l’alternative ci-dessus, s’il y a des nœuds partiellement sélectionnés, ils ne seront pas clonés ; à la place, l’opération échouera.
+Cependant, une exception sera levée si le {{ domxref("Range") }} découpe un nœud non-{{ domxref("Text") }} sur une seule de ses bornes. C’est-à-dire que, contrairement à l’alternative ci-dessus, s’il y a des nœuds partiellement sélectionnés, ils ne seront pas clonés&nbsp;; à la place, l’opération échouera.
 
 ## Syntaxe
 

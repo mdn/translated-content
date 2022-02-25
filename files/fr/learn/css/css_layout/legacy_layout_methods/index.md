@@ -48,7 +48,7 @@ Il peut sembler surprenant pour un désigner web que les CSS n'avaient pas de sy
 
 Pour les nouveaux projets, dans la plupart des cas, CSS Grid Layout forme la base de toute mise en page en combinaison avec une ou plusieurs autres méthodes modernes. Vous rencontrerez cependant de temps en temps des «&nbsp;systèmes de trame&nbsp;» utilisant ces méthodes héritées. Il est intéressant de comprendre comment elles fonctionnent et en quoi elles différent de CSS Grid Layout.
 
-Cette leçon explique comment fonctionnent les systèmes et les cadres de trames se fondant sur des boîtes flottantes et Flexbox. Après avoir étudié «&nbsp;Grid Layout&nbsp;», vous serez probablement surpris de voir à quel point tout cela semble compliqué ! Ces connaissances vous seront utile si vous avez besoin de créer du code de recours pour les navigateurs qui ne prenent pas en charge les nouvelles méthodes ; de plus, elles vous permettront de travailler sur des projets existants qui utilisent ces types de systèmes.
+Cette leçon explique comment fonctionnent les systèmes et les cadres de trames se fondant sur des boîtes flottantes et Flexbox. Après avoir étudié «&nbsp;Grid Layout&nbsp;», vous serez probablement surpris de voir à quel point tout cela semble compliqué ! Ces connaissances vous seront utile si vous avez besoin de créer du code de recours pour les navigateurs qui ne prenent pas en charge les nouvelles méthodes&nbsp;; de plus, elles vous permettront de travailler sur des projets existants qui utilisent ces types de systèmes.
 
 Gardons présent à l'esprit, en explorant ces systèmes, qu'aucun d'entre eux ne crée réellement une trame de la même manière que CSS Grid Layout. Leur mode de fonctionnement consiste à donner une taille aux objets et à les pousser pour les aligner d'une manière figurant une trame.
 
@@ -83,7 +83,7 @@ body {
 }
 ```
 
-Le corps du document prendra 90% de la largeur de fenêtre de la vue jusqu'à atteindre 900px de large ; au delà, il restera fixe à cette largeur et se centrera lui-même dans la fenêtre. Par défaut, ses enfants (les éléments {{htmlelement("h1")}}} et les deux {{htmlelement("div")}}) prenent 100% de la largeur du corps. Si nous voulons que les deux {{htmlelement("div")}} flottent l'un à côté de l'autre, nous devons fixer la somme de leur largeurs à 100% de la largeur totale de leur parent ou moins pour qu'ils puissent se placer l'un à côté de l'autre. Ajoutez ceci au bas de la CSS :
+Le corps du document prendra 90% de la largeur de fenêtre de la vue jusqu'à atteindre 900px de large&nbsp;; au delà, il restera fixe à cette largeur et se centrera lui-même dans la fenêtre. Par défaut, ses enfants (les éléments {{htmlelement("h1")}}} et les deux {{htmlelement("div")}}) prenent 100% de la largeur du corps. Si nous voulons que les deux {{htmlelement("div")}} flottent l'un à côté de l'autre, nous devons fixer la somme de leur largeurs à 100% de la largeur totale de leur parent ou moins pour qu'ils puissent se placer l'un à côté de l'autre. Ajoutez ceci au bas de la CSS :
 
 ```css
 div:nth-of-type(1) {
@@ -327,7 +327,7 @@ Ensuite, mettez à jour les quatre règles CSS (du sélecteur `.col`) ainsi&nbsp
 }
 ```
 
-Maintenant vient la partie un peu plus laborieuse — nous devons mettre à jour toutes  les règles `.col.span` en utilisant des largeurs en pourcentage au lieu de pixels. Cela prend un peu de temps avec une calculette ; pour vous économiser du travail, nous l'avons fait pour vous.
+Maintenant vient la partie un peu plus laborieuse — nous devons mettre à jour toutes  les règles `.col.span` en utilisant des largeurs en pourcentage au lieu de pixels. Cela prend un peu de temps avec une calculette&nbsp;; pour vous économiser du travail, nous l'avons fait pour vous.
 
 Mettez à jour le bloc bas des règles CSS avec ce qui suit&nbsp;:
 

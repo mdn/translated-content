@@ -80,7 +80,7 @@ Les {{Glossary("Variable", "variables")}} sont des conteneurs dans lesquels on p
 let myVariable;
 ```
 
-> **Note :** Un point-virgule en fin de ligne indique là où se termine l'instruction ; ce n'est impérativement requis que si vous devez séparer des instructions sur une même ligne. Toutefois, certains pensent qu'il est de bonne pratique de les mettre à la fin de chaque instruction. Il y a d'autres règles à propos de leur emploi ou non‑emploi — voyez [Guide des points‑virgule en JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) pour plus de détails.
+> **Note :** Un point-virgule en fin de ligne indique là où se termine l'instruction&nbsp;; ce n'est impérativement requis que si vous devez séparer des instructions sur une même ligne. Toutefois, certains pensent qu'il est de bonne pratique de les mettre à la fin de chaque instruction. Il y a d'autres règles à propos de leur emploi ou non‑emploi — voyez [Guide des points‑virgule en JavaScript](http://news.codecademy.com/your-guide-to-semicolons-in-javascript/) pour plus de détails.
 
 > **Note :** Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restrictions (voyez [cet article](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Variables) sur les règles de nommage des variables). Si vous avez un doute, vous pouvez [vérifier le nom de votre variable](https://mothereff.in/js-variables) pour voir s'il est valide.
 
@@ -253,7 +253,7 @@ Un {{Glossary("operator","opérateur")}} est un symbole mathématique qui produi
       <th scope="row">Négation , N'égale pas</th>
       <td>
         <p>
-          Renvoie la valeur logique opposée à ce qu'il précède ; il change <code
+          Renvoie la valeur logique opposée à ce qu'il précède&nbsp;; il change <code
             >true</code
           >
           en <code>false</code>, etc. Utilisé avec l'opérateur d'égalité,

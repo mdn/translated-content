@@ -225,7 +225,7 @@ for (var i = 0; i < sequence.length; i++) {
 Vous en apprendrez plus sur les boucles dans un prochain article, mais, en résumé, ce code dit&nbsp;:
 
 1.  Commencer la boucle à l'élément 0 du tableau.
-2.  Arrêter de tourner quand le dernier élément du tableau sera atteint. Cela fonctionne pour n'importe quelle dimension de tableau ; dans notre cas, on sortira de la boucle à l'élément  7 (c'est bon, car le dernier élément — que nous souhaitons que la boucle traite — est le 6).
+2.  Arrêter de tourner quand le dernier élément du tableau sera atteint. Cela fonctionne pour n'importe quelle dimension de tableau&nbsp;; dans notre cas, on sortira de la boucle à l'élément  7 (c'est bon, car le dernier élément — que nous souhaitons que la boucle traite — est le 6).
 3.  Afficher chaque élément sur la console de l'explorateur avec` console.log()`.
 
 ## Quelques méthodes utiles pour les tableaux
@@ -421,7 +421,7 @@ window.addEventListener('load', updateCode);
 
 Une bonne utilisation des méthodes de tableaux comme {{jsxref("Array.prototype.push()","push()")}} et {{jsxref("Array.prototype.pop()","pop()")}} permet de conserver un enregistrement des éléments actuellement actifs dans une application web. Dans une scène animée, par exemple, vous pouvez avoir un tableau d'objets représentant les graphiques d'arrière-plan actuellement affichés, et vous pouvez n'en vouloir que 50 à la fois, pour des raisons de performance ou d'encombrement. Chaque fois que de nouveaux objets sont créés et ajoutés au tableau, les plus anciens peuvent être supprimés du tableau pour n'en conserver que le nombre voulu.
 
-Dans cet exemple nous allons montrer une utilisation beaucoup plus simple — ici, nous allons vous fournir un site de recherche fictif, avec une boîte de recherche. Voici l'idée&nbsp;: quand un terme est entré dans la boîte de recherche, les 5 précédents termes entrés sont affichés dans la liste. Quand le nombre de termes dépasse 5, le dernier terme est supprimé chaque fois qu'un nouveau terme est ajouté ; ainsi, le 5 termes précédents sont toujours affichés.
+Dans cet exemple nous allons montrer une utilisation beaucoup plus simple — ici, nous allons vous fournir un site de recherche fictif, avec une boîte de recherche. Voici l'idée&nbsp;: quand un terme est entré dans la boîte de recherche, les 5 précédents termes entrés sont affichés dans la liste. Quand le nombre de termes dépasse 5, le dernier terme est supprimé chaque fois qu'un nouveau terme est ajouté&nbsp;; ainsi, le 5 termes précédents sont toujours affichés.
 
 > **Note :** Dans une application réelle avec boîte de recherche, vous pourriez vraisemblablement cliquer sur un des termes de la liste pour revenir à la recherche précédente, et l'application afficherait les vrais résultats ! Mais pour le moment nous en resterons à quelque chose de simple.
 

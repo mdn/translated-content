@@ -269,7 +269,7 @@ Pour un rayon `rx` et un rayon `ry` donnés, il existe deux ellipses pouvant con
 
 Pour chacune des deux ellipses, il existe deux chemins possibles, ce qui donne quatre chemins possibles.
 
-`large-arc-flag` détermine simplement si l’arc doit être supérieur ou inférieur à 180 degrés ; au final, il détermine dans quelle direction l’arc va parcourir une ellipse donnée.
+`large-arc-flag` détermine simplement si l’arc doit être supérieur ou inférieur à 180 degrés&nbsp;; au final, il détermine dans quelle direction l’arc va parcourir une ellipse donnée.
 
 ```html
 <!-- large-arc-flag: 0 -->

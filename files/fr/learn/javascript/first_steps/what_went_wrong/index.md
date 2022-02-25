@@ -117,7 +117,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 
     > **Note :** [`console.log()`](/fr/docs/Web/API/Console/log) est vraiment utile pour déboguer une fonction en affichant sa valeur sur la console. Donc, elle affichera sur cette dernière la valeur de `lowOrHi` que nous avons essayé de définir à la ligne 48.
 
-7.  Enregistrez et actualisez la page, et vous verrez le résultat de `console.log()` sur la console. ![](console-log-output.png) C'est sûr, la valeur de `lowOrHi` est `null` à ce niveau ; il y a bien un problème à la ligne 48.
+7.  Enregistrez et actualisez la page, et vous verrez le résultat de `console.log()` sur la console. ![](console-log-output.png) C'est sûr, la valeur de `lowOrHi` est `null` à ce niveau&nbsp;; il y a bien un problème à la ligne 48.
 8.  Quel est ce problème ? Réfléchissons. À la ligne 48, nous avons utilisé la méthode [`document.querySelector()`](/fr/docs/Web/API/Document/querySelector) pour obtenir une référence sur un élément avec un sélecteur CSS. En regardant plus en amont dans notre fichier, nous pouvons trouver le paragraphe en question&nbsp;:
 
     ```js
@@ -139,7 +139,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 
 À ce stade, le jeu se déroule correctement, mais après avoir fait quelques parties, vous noterez sans doute que le nombre «&nbsp;aléatoire&nbsp;» à deviner est toujours 0 ou 1. Franchement, de quoi vous dégoûter de jouer !
 
-Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne renvoie pas d'erreur ; il ne fonctionne pas correctement.
+Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne renvoie pas d'erreur&nbsp;; il ne fonctionne pas correctement.
 
 1.  Recherchons les lignes où la variable `randomNumber` est définie. L'instance qui stocke en début de jeu le nombre aléatoire à deviner se situe autour de la ligne 44&nbsp;:
 
@@ -193,7 +193,7 @@ D'autres erreurs courantes peuvent être commises en écrivant du code. Ce parag
 
 ### SyntaxError: missing ; before statement
 
-Cette erreur signale généralement l'oubli du point‑virgule à la fin d'une ligne de code ; mais elle peut se révéler parfois plus énigmatique. Par exemple, si, dans la fonction  `checkGuess(),`nous modifions cette ligne&nbsp;:
+Cette erreur signale généralement l'oubli du point‑virgule à la fin d'une ligne de code&nbsp;; mais elle peut se révéler parfois plus énigmatique. Par exemple, si, dans la fonction  `checkGuess(),`nous modifions cette ligne&nbsp;:
 
 ```js
 let userGuess = Number(guessField.value);
@@ -265,7 +265,7 @@ Voilà ce que nous pouvons dire à propos des erreurs basiques pour de simples p
 
 ## Voir aussi
 
-- Il y a nombre d'autres erreurs qui n'ont pas été listées ici ; nous les avons récolées dans un référencement qui les explique en détail — voyez [JavaScript error reference](/fr/docs/Web/JavaScript/Reference/Errors).
+- Il y a nombre d'autres erreurs qui n'ont pas été listées ici&nbsp;; nous les avons récolées dans un référencement qui les explique en détail — voyez [JavaScript error reference](/fr/docs/Web/JavaScript/Reference/Errors).
 - Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide ! Demandez‑la sur le fil de discussion [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou par le canal IRC de [#mdn](irc://irc.mozilla.org/mdn) sur  [Mozilla IRC](https://wiki.mozilla.org/IRC). Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

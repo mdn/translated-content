@@ -50,7 +50,7 @@ Dans ce paragraphe, nous expliquons ce qui arrive aux données lors de la soumis
 
 ## A propos de l'architecture client / serveur
 
-Le web se fonde sur une architecture client/serveur élémentaire ; en résumé : un client (généralement un navigateur Web) envoie une requête à un serveur (le plus souvent un serveur web comme [Apache](https://httpd.apache.org/), [Nginx](https://nginx.com/), [IIS](https://www.iis.net/), [Tomcat](https://tomcat.apache.org/)...), en utilisant le [protocole HTTP](/fr/docs/Web/HTTP). Le serveur répond à la requête en utilisant le même protocole.
+Le web se fonde sur une architecture client/serveur élémentaire&nbsp;; en résumé : un client (généralement un navigateur Web) envoie une requête à un serveur (le plus souvent un serveur web comme [Apache](https://httpd.apache.org/), [Nginx](https://nginx.com/), [IIS](https://www.iis.net/), [Tomcat](https://tomcat.apache.org/)...), en utilisant le [protocole HTTP](/fr/docs/Web/HTTP). Le serveur répond à la requête en utilisant le même protocole.
 
 ![Un schéma élémentaire d'architecture client/serveur sur le Web ](client-server.png)
 
@@ -192,7 +192,7 @@ La seule chose affichée à l'utilisateur est l'URL appelée. Comme mentionné c
 
 ## Côté serveur : récupérer les données
 
-Quelle que soit la méthode HTTP qu'on choisit, le serveur reçoit une chaîne de caractères qui sera décomposée pour récupérer les données comme une liste de paires clé/valeur. La façon d'accéder à cette liste dépend de la plateforme de développement utilisée et des modèles qu'on peut utiliser avec. La technologie utilisée détermine aussi comment les clés dupliquées sont gérées ; souvent, la priorité est donnée à la valeur de clé la plus récente.
+Quelle que soit la méthode HTTP qu'on choisit, le serveur reçoit une chaîne de caractères qui sera décomposée pour récupérer les données comme une liste de paires clé/valeur. La façon d'accéder à cette liste dépend de la plateforme de développement utilisée et des modèles qu'on peut utiliser avec. La technologie utilisée détermine aussi comment les clés dupliquées sont gérées&nbsp;; souvent, la priorité est donnée à la valeur de clé la plus récente.
 
 ### Exemple&nbsp;: PHP brut
 

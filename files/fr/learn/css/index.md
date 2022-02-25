@@ -38,7 +38,7 @@ Il est recommandé de travailler par le biais de Débuter avec le web avant d'es
 Cet article contient les modules suivants, dans l'ordre suggéré pour le parcours. Vous devez vraiment commencer par le premier.
 
 - [Introduction aux CSS](/fr/Apprendre/CSS/Introduction_à_CSS)
-  - : Ce module vous enseigne les bases du fonctionnement des CSS ; il comprend les sélecteurs et les propriétés, l'écriture des règles des CSS, l'application des CSS au HTML, la définition de la longueur, de la couleur et d'autres unités avec les CSS, la cascade et l'héritage, les bases du modèle de boîte et le débogage du CSS.
+  - : Ce module vous enseigne les bases du fonctionnement des CSS&nbsp;; il comprend les sélecteurs et les propriétés, l'écriture des règles des CSS, l'application des CSS au HTML, la définition de la longueur, de la couleur et d'autres unités avec les CSS, la cascade et l'héritage, les bases du modèle de boîte et le débogage du CSS.
 - [Styliser les boîtes](/fr/Apprendre/CSS/styliser_boites)
   - : Ensuite, nous examinons la stylisation des boîtes&nbsp;: une des étapes fondamentales de la composition d'une page Web. Dans ce module, nous récapitulons les modèles de boîtes, puis nous nous penchons sur le contrôle de leur disposition en définissant le remplissage, les bordures et les marges, la personnalisation des couleurs d'arrière-plan, les images et autres caractéristiques, les caractéristiques de fantaisie telles que filtres et ombrages des boîtes.
 
