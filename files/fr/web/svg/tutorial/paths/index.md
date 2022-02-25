@@ -27,7 +27,7 @@ Il existe cinq commandes pour tracer des lignes avec un élément `<path>`. Ces 
 
 ### MoveTo
 
-La première commande, « aller à », invoquée avec `M` (_MoveTo_), a été décrite ci-dessus. Elle prend en paramètres les coordonnées `x` et `y` où se rendre. Aucun trait n’est dessiné, le curseur est simplement déplacé dans la page. La commande « aller à » apparaît au début d’un chemin pour spécifier à quel endroit le dessin doit commencer. Par exemple :
+La première commande, « aller à », invoquée avec `M` (_MoveTo_), a été décrite ci-dessus. Elle prend en paramètres les coordonnées `x` et `y` où se rendre. Aucun trait n’est dessiné, le curseur est simplement déplacé dans la page. La commande « aller à » apparaît au début d’un chemin pour spécifier à quel endroit le dessin doit commencer. Par exemple&nbsp;:
 
     M x y
 
@@ -59,7 +59,7 @@ Il existe deux formes abrégées pour dessiner des lignes horizontales ou vertic
     H x (ou h dx)
     V y (ou v dy)
 
-Afin de commencer facilement, nous allons dessiner une forme simple, un rectangle (qu'on aurait aussi pu dessiner avec un élément `<rect>`). Il est composé uniquement de lignes horizontales et verticales :
+Afin de commencer facilement, nous allons dessiner une forme simple, un rectangle (qu'on aurait aussi pu dessiner avec un élément `<rect>`). Il est composé uniquement de lignes horizontales et verticales&nbsp;:
 
 ![](path_line_commands.png)
 

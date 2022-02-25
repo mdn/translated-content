@@ -20,7 +20,7 @@ Le premier article de notre série vous offre une toute première expérience de
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs et les
         <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
@@ -29,7 +29,7 @@ Le premier article de notre série vous offre une toute première expérience de
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Comprendre ce que sont les formulaires HTML, à quoi ils servent, comment
         les concevoir et quels sont les éléments de base HTML nécessaires dans
@@ -60,7 +60,7 @@ Dans ce guide, nous allons concevoir un formulaire de contact simple. Posons les
 
 Notre formulaire contiendra trois champs de texte et un bouton. Nous demandons simplement à notre utilisateur son nom, son adresse électronique et le message qu'il souhaite envoyer. En appuyant sur le bouton, le message sera envoyé au serveur web.
 
-##  Apprentissage actif : mise en œuvre de notre formulaire HTML
+##  Apprentissage actif&nbsp;: mise en œuvre de notre formulaire HTML
 
 Très bien, nous sommes maintenant prêts à passer au HTML et à coder notre formulaire. Pour construire notre formulaire, nous aurons besoin des éléments HTML suivants : {{HTMLElement("form")}}, {{HTMLElement("label")}}, {{HTMLElement("input")}}, {{HTMLElement("textarea")}} et {{HTMLElement("button")}}.
 
@@ -98,7 +98,7 @@ En terme de code HTML, nous avons besoin de quelque chose qui ressemble à ceci 
         <input type="text" id="name" name="user_name">
     </div>
     <div>
-        <label for="mail">e-mail :</label>
+        <label for="mail">e-mail&nbsp;:</label>
         <input type="email" id="mail" name="user_mail">
     </div>
     <div>
@@ -137,7 +137,7 @@ Notre formulaire est presque terminé. Il nous suffit seulement d'ajouter un bou
     </div>
 ```
 
-Comme vous le voyez l'élément {{htmlelement("button")}} accepte aussi un attribut de type — il peut prendre une des trois valeurs : `submit`, `reset` ou `button`.
+Comme vous le voyez l'élément {{htmlelement("button")}} accepte aussi un attribut de type — il peut prendre une des trois valeurs&nbsp;: `submit`, `reset` ou `button`.
 
 - Un clic sur un bouton `submit` (valeur par défaut) envoie les données du formulaire vers la page définie par l'attribut `action` de l'élément {{HTMLElement("form")}}.
 - Un clic sur un bouton `reset` réinitialise tous les widgets du formulaire à leurs valeurs par défaut immédiatement. Du point de vue de l'expérience utilisateur, utiliser un tel bouton est une mauvaise pratique.
@@ -155,7 +155,7 @@ Nous avons désormais notre formulaire HTML, et si vous le regardez dans votre n
 
 Les formulaires sont notoirement embêtants à présenter joliment. Apprendre la mise en page ou la décoration des formulaires sort du cadre de cet article, donc pour le moment nous allons simplement ajouter quelques indications au CSS pour lui donner un air convenable.
 
-Tout d'abord, ajoutons un élément {{htmlelement("style")}} à notre page, dans l'en‑tête HTML. Comme ceci :
+Tout d'abord, ajoutons un élément {{htmlelement("style")}} à notre page, dans l'en‑tête HTML. Comme ceci&nbsp;:
 
 ```html
 <style>
@@ -163,7 +163,7 @@ Tout d'abord, ajoutons un élément {{htmlelement("style")}} à notre page, dans
 </style>
 ```
 
-Entre les balises style, ajoutons le CSS suivant, juste comme indiqué :
+Entre les balises style, ajoutons le CSS suivant, juste comme indiqué&nbsp;:
 
 ```css
 form {
@@ -239,16 +239,16 @@ L'élément {{HTMLElement("form")}} définit où et comment les données sont en
 
 Mais ce n'est pas tout. Nous avons aussi besoin de donner un nom à nos données. Ces noms sont importants pour deux raisons. Du côté du navigateur, cela sert à définir le nom de chaque élément de donnée. Du côté du serveur, chaque information doit avoir un nom pour être manipulée correctement.
 
-Pour nommer vos données vous devez utiliser l'attribut `name` pour identifier bien précisément l'élément d'information collecté par chacun des widgets. Regardons à nouveau le code de notre formulaire :
+Pour nommer vos données vous devez utiliser l'attribut `name` pour identifier bien précisément l'élément d'information collecté par chacun des widgets. Regardons à nouveau le code de notre formulaire&nbsp;:
 
 ```html
 <form action="/my-handling-form-page" method="post">
   <div>
-    <label for="name">Nom :</label>
+    <label for="name">Nom&nbsp;:</label>
     <input type="text" id="name" name="user_name" />
   <div>
   <div>
-    <label for="mail">E-mail :</label>
+    <label for="mail">E-mail&nbsp;:</label>
     <input type="email" id="mail" name="user_email" />
   </div>
   <div>
@@ -265,7 +265,7 @@ Du côté du serveur, le script à l'URL « `/my-handling-form-page` » recevra 
 
 ## Résumé
 
-Félicitations ! Vous avez construit votre premier formulaire HTML. Il ressemble à ceci :
+Félicitations ! Vous avez construit votre premier formulaire HTML. Il ressemble à ceci&nbsp;:
 
 {{EmbedLiveSample("Un_formulaire_simple", "100%", "240", "", "Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple")}}
 

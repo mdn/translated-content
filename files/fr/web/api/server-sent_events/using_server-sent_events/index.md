@@ -18,19 +18,19 @@ Développer une application web qui utilise des [évènements envoyés par le se
 
 ## Recevoir des évènements du serveur
 
-L'API des évènements serveur est exposée par l'interface [`EventSource`](/fr/docs/Web/API/EventSource) ; pour ouvrir une connexion vers le serveur afin de commencer à recevoir des évènements de celui-ci, on crée un nouvel objet `EventSource`, en spécifiant l'URL d'un script côté serveur qui va générer les évènements. Par exemple :
+L'API des évènements serveur est exposée par l'interface [`EventSource`](/fr/docs/Web/API/EventSource) ; pour ouvrir une connexion vers le serveur afin de commencer à recevoir des évènements de celui-ci, on crée un nouvel objet `EventSource`, en spécifiant l'URL d'un script côté serveur qui va générer les évènements. Par exemple&nbsp;:
 
 ```js
 const evtSource = new EventSource("ssedemo.php");
 ```
 
-Si le script qui génère les évènements est hébergé sur une origine différente, le nouvel objet `EventSource` doit être créé en spécifiant à la fois l'URL et un dictionnaire d'options. Par exemple, en supposant que le script client est sur example.com :
+Si le script qui génère les évènements est hébergé sur une origine différente, le nouvel objet `EventSource` doit être créé en spécifiant à la fois l'URL et un dictionnaire d'options. Par exemple, en supposant que le script client est sur example.com&nbsp;:
 
 ```js
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-Une fois que la source d'évènement a été instanciée, on peut écouter les messages provenant du serveur en attachant un gestionnaire d'évènement pour [`message`](/fr/docs/Web/API/MessageEvent) :
+Une fois que la source d'évènement a été instanciée, on peut écouter les messages provenant du serveur en attachant un gestionnaire d'évènement pour [`message`](/fr/docs/Web/API/MessageEvent)&nbsp;:
 
 ```js
 evtSource.onmessage = function(event) {
@@ -44,7 +44,7 @@ evtSource.onmessage = function(event) {
 
 Ce code écoute les messages entrants (plus précisément, les notifications venant du serveur qui n'ont pas de champ `event` attaché) et ajoute le texte des messages à une liste dans le contenu HTML du document.
 
-On peut aussi écouter les évènements avec `addEventListener()` :
+On peut aussi écouter les évènements avec `addEventListener()`&nbsp;:
 
 ```js
 evtSource.addEventListener("ping", function(event) {
@@ -63,7 +63,7 @@ Ce fragment de code est similaire au précédent, mais sera appelé automatiquem
 
 Le script côté serveur qui envoie les évènements doit répondre en utilisant le type MIME `text/event-stream`. Chaque notification est envoyée sous la forme d'un bloc de texte se terminant par une paire de caractères saut de ligne (`\n`). Pour plus de détails sur le format du flux d'évènements, voir [la section ci-après](#event_stream_format).
 
-Voici le code [PHP](/fr/docs/Glossary/PHP) que nous utilisons pour notre exemple :
+Voici le code [PHP](/fr/docs/Glossary/PHP) que nous utilisons pour notre exemple&nbsp;:
 
 ```php
 date_default_timezone_set("America/New_York");
@@ -126,11 +126,11 @@ evtSource.close();
 
 ## Format du flux d'évènements
 
-Le flux d'évènements est un simple flux de données de texte, qui doit être encodé en [UTF-8](/fr/docs/Glossary/UTF-8). Les messages dans le flux d'évènements sont séparés par une paire de sauts de ligne. Un caractère deux-points « : » en début de ligne représente un commentaire, et est ignoré.
+Le flux d'évènements est un simple flux de données de texte, qui doit être encodé en [UTF-8](/fr/docs/Glossary/UTF-8). Les messages dans le flux d'évènements sont séparés par une paire de sauts de ligne. Un caractère deux-points «&nbsp;: » en début de ligne représente un commentaire, et est ignoré.
 
 > **Note :** Une ligne de commentaire peut être utilisée pour empêcher les connexions d'expirer. Un serveur peut envoyer périodiquement des commentaires afin de garder la connexion ouverte.
 
-Chaque message consiste en une ou plusieurs lignes de texte décrivant les champs de ce message. Chaque champ est représenté par le nom du champ, suivi d'un « : », suivi des données de texte pour la valeur de ce champ.
+Chaque message consiste en une ou plusieurs lignes de texte décrivant les champs de ce message. Chaque champ est représenté par le nom du champ, suivi d'un «&nbsp;: », suivi des données de texte pour la valeur de ce champ.
 
 ### Champs
 

@@ -14,7 +14,7 @@ original_slug: Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Installation_outils_de_base","Apprendre/Commencer_avec_le_web/Gérer_les_fichiers","Apprendre/Commencer_avec_le_web")}}
 
-_Quel sera l'aspect de votre site web ?_ parle de planifier et concevoir (_design_), travaux à faire _avant_ d'écrire du code. Voici les questions que cela comprend : « Quelles informations mon site web offrira-t-il ? », « Quelles polices de caractères et quelles couleurs souhaité-je ? » et « Que fait mon site web ? ».
+_Quel sera l'aspect de votre site web ?_ parle de planifier et concevoir (_design_), travaux à faire _avant_ d'écrire du code. Voici les questions que cela comprend&nbsp;: « Quelles informations mon site web offrira-t-il ? », « Quelles polices de caractères et quelles couleurs souhaité-je ? » et « Que fait mon site web ? ».
 
 ## Commençons par le commencement : planification
 
@@ -64,7 +64,7 @@ Pour choisir une image, allez sur [Google Images](https://www.google.com/imghp?g
 
 ![](Screenshot%20from%202014-11-04%2015:20:48.png)
 
-> **Note :** La plupart des images sur le Web, dont celles dans Google Images, sont protégées. Pour réduire votre probabilité de commettre une violation de droits d'auteur, vous pouvez utiliser le filtre de licence de Google. Tout simplement 1) cliquez sur **Outils de recherche**, puis  2) **Droits d'usage** :
+> **Note :** La plupart des images sur le Web, dont celles dans Google Images, sont protégées. Pour réduire votre probabilité de commettre une violation de droits d'auteur, vous pouvez utiliser le filtre de licence de Google. Tout simplement 1) cliquez sur **Outils de recherche**, puis  2) **Droits d'usage**&nbsp;:
 >
 > ![](Screenshot%20from%202014-11-04%2014:27:45.png)
 

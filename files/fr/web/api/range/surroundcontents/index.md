@@ -7,7 +7,7 @@ translation_of: Web/API/Range/surroundContents
 
 La méthode **`Range.surroundContents()`** déplace le contenu du {{ domxref("Range") }} dans un nouveau nœud, plaçant le nouveau nœud au début du `range` spécifié.
 
-Cette méthode est à peu près équivalente à :
+Cette méthode est à peu près équivalente à&nbsp;:
 
 ```js
 newNode.appendChild(range.extractContents());

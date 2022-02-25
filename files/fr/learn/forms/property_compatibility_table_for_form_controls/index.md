@@ -21,7 +21,7 @@ Les tables de compatibilité suivantes tentent de résumer l'état de la prise e
 
 ### Valeurs
 
-Pour chaque propriété, il y a quatre valeurs possibles :
+Pour chaque propriété, il y a quatre valeurs possibles&nbsp;:
 
 - OUI
   - : La prise en charge de la propriété est raisonnablement cohérente d'un navigateur à l'autre. Il se peut que vous soyez encore confronté à des effets collatéraux étranges dans certains cas limites.
@@ -34,7 +34,7 @@ Pour chaque propriété, il y a quatre valeurs possibles :
 
 ### Rendu
 
-Pour chaque propriété il y a deux rendus possibles :
+Pour chaque propriété il y a deux rendus possibles&nbsp;:
 
 - N (Normal)
   - : Indique que la propriété est appliquée telle quelle.

@@ -1,5 +1,5 @@
 ---
-title: 'Tableaux HTML : notions de base'
+title: 'Tableaux HTML&nbsp;: notions de base'
 slug: Learn/HTML/Tables/Basics
 tags:
   - Apprentissage
@@ -49,7 +49,7 @@ Un tableau est un ensemble structuré de données (**table de données**) prése
 
 ![A swimming timetable showing a sample data table](swimming-timetable.png)
 
-Les tableaux sont très couramment utilisés dans la société humaine, et depuis très longtemps, pour preuve ce document du recensement américain datant de 1800 :
+Les tableaux sont très couramment utilisés dans la société humaine, et depuis très longtemps, pour preuve ce document du recensement américain datant de 1800&nbsp;:
 
 ![A very old parchment document; the data is not easily readable, but it clearly shows a data table being used.](1800-census.jpg)
 
@@ -214,13 +214,13 @@ Nous n'approfondirons pas le CSS dans ce module, mais nous avons écrit une feui
 
 Les tableaux HTML ne doivent être utilisés que pour des données tabulaires — c'est pour cela qu'ils sont conçus. Malheureusement, beaucoup de gens ont utilisé les tableaux HTML pour organiser des pages Web, par exemple : une ligne pour contenir l'en-tête, une ligne pour les colonnes de contenu, une ligne pour le pied de page, etc. Vous pouvez trouver plus de détails et un exemple avec [Mises en page](/fr/docs/Learn/Accessibility/HTML#Page_layouts) dans notre [Module d'apprentissage à l'Accessibilité](/fr/docs/Learn/Accessibility). Cette dispostion a été couramment utilisée car la prise en charge des CSS parmi les navigateurs avait pour coutume d'être effroyable ; ces mises en page sont beaucoup moins fréquentes de nos jours, mais vous pouvez toujours les voir dans certains recoins du Web.
 
-Bref, utiliser les tableaux pour la mise en page [au lieu des techniques des CSS](/fr/docs/Learn/CSS/CSS_layout) est une mauvaise idée. En voici les principales raisons :
+Bref, utiliser les tableaux pour la mise en page [au lieu des techniques des CSS](/fr/docs/Learn/CSS/CSS_layout) est une mauvaise idée. En voici les principales raisons&nbsp;:
 
 1.  **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders), utilisés par les non-voyants, interprêtent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
 2.  **Les tables produisent de la bouillie :** Comme mentionné ci-dessus, les mises en page sur la base de tableaux comportent généralement des structures de balisage plus complexes que des techniques de mise en page appropriées. Le code résultant sera plus difficile à écrire, à maintenir et à déboguer.
 3.  **Les tableaux ne s'adaptent pas automatiquement** : Si vous utilisez les propriétés de mise en page ({{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}} ou {{htmlelement("div")}}), leur largeur est par défaut 100% de celle du parent. Par contre, les tableaux sont dimensionnés en fonction de leur contenu par défaut, de sorte que des mesures supplémentaires sont nécessaires pour que le style du tableau fonctionne effectivement sur les différents types d'écran.
 
-## Apprentissage actif : créer votre premier tableau
+## Apprentissage actif&nbsp;: créer votre premier tableau
 
 Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et construisons un tableau simple.
 
@@ -232,7 +232,7 @@ Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et c
     <td>Bonjour, je suis votre première cellule.</td>
     ```
 
-4.  Si nous voulons une rangée de quatre cellules, nous devons copier la première trois fois. Mettez à jour le contenu du tableau pour avoir quelque chose comme :
+4.  Si nous voulons une rangée de quatre cellules, nous devons copier la première trois fois. Mettez à jour le contenu du tableau pour avoir quelque chose comme&nbsp;:
 
     ```html
     <td>Bonjour, je suis votre première cellule </td>
@@ -367,7 +367,7 @@ Maintenant, le rendu du tableau réel :
 
 Le problème ici c'est que, bien que vous puissiez comprendre le tableau, il n'est pas aussi facile de croiser les données que cela pourrait être. Si les en-têtes de colonnes et de lignes se démarquaient d'une manière ou d'une autre, ce serait mieux.
 
-### Apprentissage actif : en-tête de tableau
+### Apprentissage actif&nbsp;: en-tête de tableau
 
 Améliorons ce tableau.
 
@@ -489,7 +489,7 @@ Ce qui nous donne comme résultat :
 
 {{EmbedLiveSample("Premier_exemple")}}
 
-Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne  (nous aurions probablement défini une `classe` dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément `<col>`. Les éléments `<col>` sont utilisés dans un conteneur `<colgroup>` juste en-dessous de la balise `<table>`. Nous pourrions créer le même effet que  celui vu plus haut en spécifiant notre tableau comme suit :
+Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne  (nous aurions probablement défini une `classe` dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément `<col>`. Les éléments `<col>` sont utilisés dans un conteneur `<colgroup>` juste en-dessous de la balise `<table>`. Nous pourrions créer le même effet que  celui vu plus haut en spécifiant notre tableau comme suit&nbsp;:
 
 ### Autres exemples
 

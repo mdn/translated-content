@@ -83,7 +83,7 @@ Vide la file des mutations enregistrées du `MutationObserver` et retourne son c
 
 ## `MutationObserverInit`
 
-`MutationObserverInit` est un objet pouvant avoir les propriétés suivantes :
+`MutationObserverInit` est un objet pouvant avoir les propriétés suivantes&nbsp;:
 
 > **Note :** Au moins une propriété parmi `childList`, `attributes` ou `characterData` doit être initialisée à `true`, sinon l’erreur <i lang="en">"An invalid or illegal string was specified</i>" sera émise.
 

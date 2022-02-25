@@ -13,7 +13,7 @@ original_slug: Apprendre/Commencer_avec_le_web/Les_bases_JavaScript
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_CSS", "Apprendre/Commencer_avec_le_web/Publier_votre_site_web","Apprendre/Commencer_avec_le_web")}}
 
-JavaScript est un langage de programmation qui ajoute de l'interactivité à votre site web (par exemple : jeux, réponses quand on clique sur un bouton ou des données entrées dans des formulaires, composition dynamique, animations). Cet article vous aide à débuter dans ce langage passionnant et vous donne une idée de ses possibilités.
+JavaScript est un langage de programmation qui ajoute de l'interactivité à votre site web (par exemple&nbsp;: jeux, réponses quand on clique sur un bouton ou des données entrées dans des formulaires, composition dynamique, animations). Cet article vous aide à débuter dans ce langage passionnant et vous donne une idée de ses possibilités.
 
 ## Qu'est le JavaScript, réellement ?
 
@@ -47,7 +47,7 @@ Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML
     ```
 
 3.  Cet élément a le même rôle que l'élément {{htmlelement("link")}} pour le CSS — il applique le code JavaScript à la page, de sorte qu'il puisse avoir de l'effet sur le HTML (en même temps que le CSS et autres sur la page).
-4.  Maintenant ajoutez le code suivant dans `main.js` :
+4.  Maintenant ajoutez le code suivant dans `main.js`&nbsp;:
 
     ```js
     let myHeading = document.querySelector('h1');
@@ -92,13 +92,13 @@ Une fois une variable déclarée, vous pouvez lui donner une valeur :
 myVariable = 'Bob';
 ```
 
-Vous pouvez faire les deux opérations sur une même ligne si vous le souhaitez :
+Vous pouvez faire les deux opérations sur une même ligne si vous le souhaitez&nbsp;:
 
 ```js
 let myVariable = 'Bob';
 ```
 
-Vous retrouvez la valeur en appelant simplement la variable par son nom :
+Vous retrouvez la valeur en appelant simplement la variable par son nom&nbsp;:
 
 ```js
 myVariable;
@@ -339,7 +339,7 @@ multiply(0.5, 3);
 
 ### Événements
 
-Pour qu'un site web soit vraiment interactif, vous aurez besoin d'événements. Les événements sont des structures de code qui « écoutent » ce qui se passe dans le navigateur et déclenchent du code en réponse. Le meilleur exemple est [l'événement cliquer](/fr/docs/Web/Events/click), déclenché par le navigateur quand vous cliquez sur quelque chose avec la souris. À titre de démonstration, saisissez ces quelques lignes dans la console, puis cliquez sur la page en cours :
+Pour qu'un site web soit vraiment interactif, vous aurez besoin d'événements. Les événements sont des structures de code qui « écoutent » ce qui se passe dans le navigateur et déclenchent du code en réponse. Le meilleur exemple est [l'événement cliquer](/fr/docs/Web/Events/click), déclenché par le navigateur quand vous cliquez sur quelque chose avec la souris. À titre de démonstration, saisissez ces quelques lignes dans la console, puis cliquez sur la page en cours&nbsp;:
 
 ```js
 document.querySelector('html').addEventListener('click', function() {

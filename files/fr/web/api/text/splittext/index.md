@@ -60,4 +60,4 @@ Dans cet exemple, le nœud texte d’un {{HTMLElement("p")}} est séparé en deu
 ## Voir aussi
 
 - L’interface {{domxref("Text")}} à laquelle cette méthode appartient.
-- La méthode opposée : {{domxref("Node.normalize")}}.
+- La méthode opposée&nbsp;: {{domxref("Node.normalize")}}.

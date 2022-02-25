@@ -25,14 +25,14 @@ Dans le dernier article de ce module, nous examinerons les tableaux — une faç
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vocabulaire courant de l'informatique, bases de HTML et CSS,
         compréhension de ce que fait JavaScript.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Comprendre ce que sont les tableaux et savoir comment les manipuler en
         JavaScript.
@@ -163,14 +163,14 @@ Comme précédemment, initions‑nous aux bases pratiques des tableaux en entran
 
 On définit les valeurs d'un tableau par une liste d'éléments entre crochets droits, séparés par des virgules.
 
-1.  Disons que nous voulons mettre une liste d'achats dans un tableau — nous devons opérer comme suit. Entrez les lignes ci‑après dans la console :
+1.  Disons que nous voulons mettre une liste d'achats dans un tableau — nous devons opérer comme suit. Entrez les lignes ci‑après dans la console&nbsp;:
 
     ```js
     let shopping = ['pain', 'lait', 'fromage', 'houmous', 'nouilles'];
     shopping;
     ```
 
-2.  Dans ce cas, chaque élément du tableau est une chaîne, mais gardez en tête que vous pouvez stocker n'importe quel élément dans un tableau — chaîne, nombre, objet, autre variable et même d'autres tableaux. Vous pouvez également mélanger et assortir les types d'articles — il n'est pas obligatoire que ce soient tous des nombres, des chaînes, etc. Essayez ceci :
+2.  Dans ce cas, chaque élément du tableau est une chaîne, mais gardez en tête que vous pouvez stocker n'importe quel élément dans un tableau — chaîne, nombre, objet, autre variable et même d'autres tableaux. Vous pouvez également mélanger et assortir les types d'articles — il n'est pas obligatoire que ce soient tous des nombres, des chaînes, etc. Essayez ceci&nbsp;:
 3.  ```js
     let sequence = [1, 1, 2, 3, 5, 8, 13];
     let random = ['arbre', 795, [0, 1, 2]];
@@ -181,14 +181,14 @@ On définit les valeurs d'un tableau par une liste d'éléments entre crochets d
 
 Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant la notation crochet, de la même façon que nous avons eu [accès aux lettres dans une chaîne](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
 
-1.  Entrez ceci dans la console :
+1.  Entrez ceci dans la console&nbsp;:
 
     ```js
     shopping[0];
     // renvoie "pain"
     ```
 
-2.  Vous pouvez aussi modifier un élément dans un tableau en donnant simplement une nouvelle valeur à l'élément. Essayez ceci :
+2.  Vous pouvez aussi modifier un élément dans un tableau en donnant simplement une nouvelle valeur à l'élément. Essayez ceci&nbsp;:
 
     ```js
     shopping[0] = 'crème de sésame';
@@ -198,7 +198,7 @@ Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant 
 
     > **Note :** Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0 !
 
-3.  Notez qu'un tableau à l'intérieur d'un tableau est appelé un tableau multidimensionnel. Vous accédez à un des éléments de ce tableau interne en chaînant deux paires de crochets. Par exemple, pour avoir accès à l'un des éléments (le troisième) du tableau élément du tableau `random` (voir la section précédente), vous pouvez écrire quelque chose comme :
+3.  Notez qu'un tableau à l'intérieur d'un tableau est appelé un tableau multidimensionnel. Vous accédez à un des éléments de ce tableau interne en chaînant deux paires de crochets. Par exemple, pour avoir accès à l'un des éléments (le troisième) du tableau élément du tableau `random` (voir la section précédente), vous pouvez écrire quelque chose comme&nbsp;:
 4.  ```js
     random[2][2];
     ```
@@ -206,14 +206,14 @@ Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant 
 
 ### Trouver la taille d'un tableau
 
-Vous pouvez trouver la taille d'un tableau (le nombre d'éléments qu'il comporte) de la même façon que vous obtenez la taille (en caractères) d'un chaîne — avec la propriété {{jsxref("Array.prototype.length","length")}}. Essayez :
+Vous pouvez trouver la taille d'un tableau (le nombre d'éléments qu'il comporte) de la même façon que vous obtenez la taille (en caractères) d'un chaîne — avec la propriété {{jsxref("Array.prototype.length","length")}}. Essayez&nbsp;:
 
 ```js
 sequence.length;
 // renvoie 7
 ```
 
-Il y a d'autres usages, mais le plus courant permet de dire à une boucle de poursuivre jusqu'à ce que tous les éléments du tableau aient été passés en revue. Ainsi, par exemple :
+Il y a d'autres usages, mais le plus courant permet de dire à une boucle de poursuivre jusqu'à ce que tous les éléments du tableau aient été passés en revue. Ainsi, par exemple&nbsp;:
 
 ```js
 let sequence = [1, 1, 2, 3, 5, 8, 13];
@@ -222,7 +222,7 @@ for (var i = 0; i < sequence.length; i++) {
 }
 ```
 
-Vous en apprendrez plus sur les boucles dans un prochain article, mais, en résumé, ce code dit :
+Vous en apprendrez plus sur les boucles dans un prochain article, mais, en résumé, ce code dit&nbsp;:
 
 1.  Commencer la boucle à l'élément 0 du tableau.
 2.  Arrêter de tourner quand le dernier élément du tableau sera atteint. Cela fonctionne pour n'importe quelle dimension de tableau ; dans notre cas, on sortira de la boucle à l'élément  7 (c'est bon, car le dernier élément — que nous souhaitons que la boucle traite — est le 6).
@@ -238,20 +238,20 @@ Souvent, vous serez confronté à des données brutes contenues dans une longue 
 
 > **Note :** D'accord, techniquement parlant c'est une méthode de chaîne, et non une méthode de tableau, mais nous la mettons dans le chapitre des tableaux car elle est bien à sa place ici.
 
-1.  Servons‑nous en et voyons comment elle fonctionne. D'abord créons une chaîne dans la console :
+1.  Servons‑nous en et voyons comment elle fonctionne. D'abord créons une chaîne dans la console&nbsp;:
 
     ```js
     let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
     ```
 
-2.  Scindons‑la à chaque virgule :
+2.  Scindons‑la à chaque virgule&nbsp;:
 
     ```js
     let myArray = myData.split(',');
     myArray;
     ```
 
-3.  Pour terminer, trouvons la taille du nouveau tableau et retrouvons quelques‑uns de ses éléments :
+3.  Pour terminer, trouvons la taille du nouveau tableau et retrouvons quelques‑uns de ses éléments&nbsp;:
 
     ```js
     myArray.length;
@@ -260,7 +260,7 @@ Souvent, vous serez confronté à des données brutes contenues dans une longue 
     myArray[myArray.length-1]; // le dernier élément du tableau
     ```
 
-4.  Vous pouvez également faire le contraire avec la méthode {{jsxref("Array.prototype.join()","join()")}}. Essayons :
+4.  Vous pouvez également faire le contraire avec la méthode {{jsxref("Array.prototype.join()","join()")}}. Essayons&nbsp;:
 
     ```js
     let myNewString = myArray.join(',');
@@ -276,7 +276,7 @@ Souvent, vous serez confronté à des données brutes contenues dans une longue 
 
 ### Ajout et suppression d'éléments de tableau
 
-Nous n'avons pas encore parlé d'ajout et de suppression d'éléments de tableau — allons‑y. Nous utiliserons le tableau `myArray` dont nous nous sommes servis à la fin de la dernière section. Si vous n'avez pas entré les commandes de cette section dans la console, il est nécessaire de créer d'abord le tableau :
+Nous n'avons pas encore parlé d'ajout et de suppression d'éléments de tableau — allons‑y. Nous utiliserons le tableau `myArray` dont nous nous sommes servis à la fin de la dernière section. Si vous n'avez pas entré les commandes de cette section dans la console, il est nécessaire de créer d'abord le tableau&nbsp;:
 
 ```js
 let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
@@ -284,7 +284,7 @@ let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carl
 
 Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous pouvez respectivement utiliser {{jsxref("Array.prototype.push()","push()")}} et {{jsxref("Array.prototype.pop()","pop()")}}.
 
-1.  Voyons `push()` d'abord — notez que vous devez mettre en paramètre les éléments que vous souhaitez ajouter à la fin du tableau. Essayez ceci :
+1.  Voyons `push()` d'abord — notez que vous devez mettre en paramètre les éléments que vous souhaitez ajouter à la fin du tableau. Essayez ceci&nbsp;:
 
     ```js
     myArray.push('Cardiff');
@@ -293,7 +293,7 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
     myArray;
     ```
 
-2.  La taille du tableau modifié est renvoyée quand l'appel de la méthode est terminé. Si vous voulez enregistrer la taille du nouveau tableau dans une variable, vous pouvez écrire quelque chose comme ceci :
+2.  La taille du tableau modifié est renvoyée quand l'appel de la méthode est terminé. Si vous voulez enregistrer la taille du nouveau tableau dans une variable, vous pouvez écrire quelque chose comme ceci&nbsp;:
 
     ```js
     let newLength = myArray.push('Bristol');
@@ -301,7 +301,7 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
     newLength;
     ```
 
-3.  Supprimer le dernier élément de la liste est très simple : il suffit de lancer `pop()` sur celle‑ci. Essayez :
+3.  Supprimer le dernier élément de la liste est très simple&nbsp;: il suffit de lancer `pop()` sur celle‑ci. Essayez&nbsp;:
 
     ```js
     myArray.pop();
@@ -317,7 +317,7 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} et {{jsxref("Array.prototype.shift()","shift()")}} fonctionnent exactement de la même manière, excepté qu'il travaillent sur la tête du tableau au lieu de la queue.
 
-1.  D'abord `unshift()` — essayez :
+1.  D'abord `unshift()` — essayez&nbsp;:
 
     ```js
     myArray.unshift('Edinburgh');
@@ -332,9 +332,9 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
     removedItem;
     ```
 
-## Activité : affichons les produits
+## Activité&nbsp;: affichons les produits
 
-Revenons à l'exemple que nous avons décrit plus haut — afficher les noms des produits et leurs prix pour un envoi, puis faire le total des prix et l'afficher à la fin de la liste. Dans l'exemple modifiable ci‑dessous, il y a des commentaires numérotés — chacun d'entre eux marque l'emplacement où vous devez ajouter quelque chose au code. Voici :
+Revenons à l'exemple que nous avons décrit plus haut — afficher les noms des produits et leurs prix pour un envoi, puis faire le total des prix et l'afficher à la fin de la liste. Dans l'exemple modifiable ci‑dessous, il y a des commentaires numérotés — chacun d'entre eux marque l'emplacement où vous devez ajouter quelque chose au code. Voici&nbsp;:
 
 1.  Sous le commentaire `// number 1` il y a un certain nombre de chaînes de caractères, chacune précise le nom d'un produit et son prix séparé par deux‑points. Placez‑les dans un tableau ; enregistrez‑le sous le nom `products`.
 2.  Sur la même ligne que le commentaire `// number 2` se trouve le début d'une boucle. Dans cette ligne nous avons actuellement `i <= 0`, test conditionnel qui fait que la [ boucle](/fr/docs/Learn/JavaScript/First_steps/A_first_splash#loops) stoppe immédiatement, car ce test dit « stopper dès que `i` est inférieur ou égal à 0 » et `i` part de 0. Remplacez ce test par un qui  n'arrêtera pas la boucle tant que `i` sera inférieur à la taille du tableau `products`.
@@ -417,15 +417,15 @@ window.addEventListener('load', updateCode);
 
 {{ EmbedLiveSample('Activité_affichons_les_produits', '100%', 600) }}
 
-## Activité : Top 5 des recherches
+## Activité&nbsp;: Top 5 des recherches
 
 Une bonne utilisation des méthodes de tableaux comme {{jsxref("Array.prototype.push()","push()")}} et {{jsxref("Array.prototype.pop()","pop()")}} permet de conserver un enregistrement des éléments actuellement actifs dans une application web. Dans une scène animée, par exemple, vous pouvez avoir un tableau d'objets représentant les graphiques d'arrière-plan actuellement affichés, et vous pouvez n'en vouloir que 50 à la fois, pour des raisons de performance ou d'encombrement. Chaque fois que de nouveaux objets sont créés et ajoutés au tableau, les plus anciens peuvent être supprimés du tableau pour n'en conserver que le nombre voulu.
 
-Dans cet exemple nous allons montrer une utilisation beaucoup plus simple — ici, nous allons vous fournir un site de recherche fictif, avec une boîte de recherche. Voici l'idée : quand un terme est entré dans la boîte de recherche, les 5 précédents termes entrés sont affichés dans la liste. Quand le nombre de termes dépasse 5, le dernier terme est supprimé chaque fois qu'un nouveau terme est ajouté ; ainsi, le 5 termes précédents sont toujours affichés.
+Dans cet exemple nous allons montrer une utilisation beaucoup plus simple — ici, nous allons vous fournir un site de recherche fictif, avec une boîte de recherche. Voici l'idée&nbsp;: quand un terme est entré dans la boîte de recherche, les 5 précédents termes entrés sont affichés dans la liste. Quand le nombre de termes dépasse 5, le dernier terme est supprimé chaque fois qu'un nouveau terme est ajouté ; ainsi, le 5 termes précédents sont toujours affichés.
 
 > **Note :** Dans une application réelle avec boîte de recherche, vous pourriez vraisemblablement cliquer sur un des termes de la liste pour revenir à la recherche précédente, et l'application afficherait les vrais résultats ! Mais pour le moment nous en resterons à quelque chose de simple.
 
-Pour terminer l'application, il vous faut :
+Pour terminer l'application, il vous faut&nbsp;:
 
 1.  Ajouter une ligne sous le commentaire `// number 1` pour ajouter la valeur qui vient d'être saisie dans la boîte au début du tableau. Cette valeur est récupérée avec `searchInput.value`.
 2.  Ajouter une ligne sous le commentaire `// number 2`  pour supprimer la valeur en fin de liste du tableau.
@@ -520,7 +520,7 @@ Vous avez atteint la fin de cet article, mais vous souvenez-vous des information
 
 ## Conclusion
 
-Après la lecture de cet article, vous conviendrez que les tableaux semblent fichtrement utiles ; vous les verrez un peu partout en JavaScript, souvent associés à des boucles pour appliquer la même action à chaque élément du tableau. Nous vous indiquerons toutes les bases utiles à savoir à propos des boucles dans le prochain module, mais pour l'instant, félicitations : prenez une pause bien méritée ; vous avez étudié tous les articles du module !
+Après la lecture de cet article, vous conviendrez que les tableaux semblent fichtrement utiles ; vous les verrez un peu partout en JavaScript, souvent associés à des boucles pour appliquer la même action à chaque élément du tableau. Nous vous indiquerons toutes les bases utiles à savoir à propos des boucles dans le prochain module, mais pour l'instant, félicitations&nbsp;: prenez une pause bien méritée ; vous avez étudié tous les articles du module !
 
 La seule chose restant à faire est de procéder à l'évaluation de ce module pour tester votre compréhension de son contenu.
 

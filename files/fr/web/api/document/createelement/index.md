@@ -83,7 +83,7 @@ class ExpandingList extends HTMLUListElement {
 customElements.define('expanding-list', ExpandingList, { extends: 'ul' });
 ```
 
-Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante :
+Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante&nbsp;:
 
 ```js
 let expandingList = document.createElement('ul', { is : 'expanding-list' })

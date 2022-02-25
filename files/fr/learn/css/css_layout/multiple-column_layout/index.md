@@ -44,7 +44,7 @@ Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes
 
 Notre point de départ contient un HTML très simple ; une enveloppe de la classe `container` dans laquelle nous avons placé un en‑tête et quelques paragraphes.
 
-L'élément {{htmlelement("div")}} de la classe `container` sera notre conteneur multi‑colonnes. Nous basculons dans une disposition _multicol_ en utilisant l'une des deux propriétés {{cssxref("column-count")}} ou {{cssxref("column-width")}}. La propriété `column-count` crée autant de colonnes que la valeur indiquée, donc si vous ajoutez la CSS suivante et actalisez la page, vous obtiendrez une disposition sur trois colonnes :
+L'élément {{htmlelement("div")}} de la classe `container` sera notre conteneur multi‑colonnes. Nous basculons dans une disposition _multicol_ en utilisant l'une des deux propriétés {{cssxref("column-count")}} ou {{cssxref("column-width")}}. La propriété `column-count` crée autant de colonnes que la valeur indiquée, donc si vous ajoutez la CSS suivante et actalisez la page, vous obtiendrez une disposition sur trois colonnes&nbsp;:
 
 ```css
 .container {
@@ -125,12 +125,12 @@ body {
 
 ## Style des colonnes
 
-Les colonnes créées avec _multicol_ ne peuvent pas être stylisées individuellement. Il n'y a aucun moyen de faire en sorte qu'une colonne soit plus large qu'une autre, ou de modifier l'arrière‑plan ou la couleur du texte d'une seule colonne. Il y a deux moyens de modifier l'affichage des colonnes :
+Les colonnes créées avec _multicol_ ne peuvent pas être stylisées individuellement. Il n'y a aucun moyen de faire en sorte qu'une colonne soit plus large qu'une autre, ou de modifier l'arrière‑plan ou la couleur du texte d'une seule colonne. Il y a deux moyens de modifier l'affichage des colonnes&nbsp;:
 
 - modifier la taille de l'espacement entre colonnes avec {{cssxref("column-gap")}}.
 - ajouter une règle entre colonnes avec {{cssxref("column-rule")}}.
 
-En utilisant l'exemple ci‑dessus, changeons la taille de l'espacement entre colonnes avec la propriété `column-gap` :
+En utilisant l'exemple ci‑dessus, changeons la taille de l'espacement entre colonnes avec la propriété `column-gap`&nbsp;:
 
 ```css
 .container {

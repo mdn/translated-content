@@ -14,9 +14,9 @@ Les performances des sites et applications web peuvent être significativement a
 
 ## Différents types de caches
 
-La mise en cache est une technique qui stocke une copie d’une ressource donnée et la renvoie quand elle est demandée. Quand un cache web a une ressource demandée dans son espace de stockage, il intercepte la requête et renvoie sa copie au lieu de la re-télécharger depuis le serveur d’origine. Cela a plusieurs avantages : le cache réduit la charge du serveur qui n’a pas besoin de servir tous les clients lui-même, et il améliore la performance en étant plus proche du client, par exemple, cela prend moins de temps pour transmettre à nouveau la ressource. Pour un site web, c’est un composant majeur pour atteindre de hautes performances. Cependant, il doit être configuré correctement, car toutes les ressources ne restent pas éternellement inchangées : il est important de mettre une ressource en cache seulement jusqu’à ce qu’elle change, pas plus longtemps.
+La mise en cache est une technique qui stocke une copie d’une ressource donnée et la renvoie quand elle est demandée. Quand un cache web a une ressource demandée dans son espace de stockage, il intercepte la requête et renvoie sa copie au lieu de la re-télécharger depuis le serveur d’origine. Cela a plusieurs avantages&nbsp;: le cache réduit la charge du serveur qui n’a pas besoin de servir tous les clients lui-même, et il améliore la performance en étant plus proche du client, par exemple, cela prend moins de temps pour transmettre à nouveau la ressource. Pour un site web, c’est un composant majeur pour atteindre de hautes performances. Cependant, il doit être configuré correctement, car toutes les ressources ne restent pas éternellement inchangées&nbsp;: il est important de mettre une ressource en cache seulement jusqu’à ce qu’elle change, pas plus longtemps.
 
-Il y a différents types de caches, qui peuvent être groupés en deux principales catégories : les caches privés et les caches partagés. Un _cache partagé_ est un cache qui stocke les réponses pour qu’elles soient réutilisées par plus d’un utilisateur. Un _cache privé_ est dédié à un seul utilisateur. Cette page aborde principalement les caches de navigateur et de proxy, mais il existe aussi des caches de passerelle, de CDN, les caches de proxy inversés et les répartiteurs de charge qui sont déployés sur les serveurs web pour une meilleure fiabilité, une meilleure performance et une meilleure évolutivité des sites et applications web.
+Il y a différents types de caches, qui peuvent être groupés en deux principales catégories&nbsp;: les caches privés et les caches partagés. Un _cache partagé_ est un cache qui stocke les réponses pour qu’elles soient réutilisées par plus d’un utilisateur. Un _cache privé_ est dédié à un seul utilisateur. Cette page aborde principalement les caches de navigateur et de proxy, mais il existe aussi des caches de passerelle, de CDN, les caches de proxy inversés et les répartiteurs de charge qui sont déployés sur les serveurs web pour une meilleure fiabilité, une meilleure performance et une meilleure évolutivité des sites et applications web.
 
 ![Ce que permet un cache, avantages et inconvénients des caches privés ou partagés.](http_cache_type.png)
 
@@ -30,12 +30,12 @@ Un cache partagé est un cache qui stocke les réponses pour qu’elles soient r
 
 ## Cibles des opérations de  cache
 
-La mise en cache HTTP est optionnelle, mais réutiliser une ressource en cache est généralement souhaitable. Cependant, les caches HTTP communs se limitent typiquement à mettre en cache les réponses à des requêtes {{HTTPMethod("GET")}} et peuvent décliner les autres méthodes. La clé de cache primaire consiste en la méthode de requête et l’URI ciblée (souvent, seule l’URI est utilisée, car seules des requêtes GET sont ciblées par la mise en cache). Voici des formes courantes d’entrées de cache :
+La mise en cache HTTP est optionnelle, mais réutiliser une ressource en cache est généralement souhaitable. Cependant, les caches HTTP communs se limitent typiquement à mettre en cache les réponses à des requêtes {{HTTPMethod("GET")}} et peuvent décliner les autres méthodes. La clé de cache primaire consiste en la méthode de requête et l’URI ciblée (souvent, seule l’URI est utilisée, car seules des requêtes GET sont ciblées par la mise en cache). Voici des formes courantes d’entrées de cache&nbsp;:
 
 - Résultat positif de requête de lecture : une réponse {{HTTPStatus(200)}} (OK) à une requête {{HTTPMethod("GET")}} contenant une ressource telle qu’un document HTML, une image ou un fichier.
-- Redirection permanente : une réponse {{HTTPStatus(301)}} _(Moved Permanently)._
-- Réponse d’erreur : une page de résultat {{HTTPStatus(404)}} _(Not Found)_.
-- Résultat incomplet : une réponse {{HTTPStatus(206)}} _(Partial Content)_.
+- Redirection permanente&nbsp;: une réponse {{HTTPStatus(301)}} _(Moved Permanently)._
+- Réponse d’erreur&nbsp;: une page de résultat {{HTTPStatus(404)}} _(Not Found)_.
+- Résultat incomplet&nbsp;: une réponse {{HTTPStatus(206)}} _(Partial Content)_.
 - Réponses autres que {{HTTPMethod("GET")}} si quelque chose est défini comme pouvant être utilisé comme clé de cache.
 
 Une entrée de cache peut aussi consister en de multiples réponses stockées différenciées par une clé secondaire, si la requête fait l’objet de négociation de contenu. Pour plus de détails, voir les informations à propos de l’en-tête {{HTTPHeader("Vary")}} [ci-dessous](#Varying_responses).

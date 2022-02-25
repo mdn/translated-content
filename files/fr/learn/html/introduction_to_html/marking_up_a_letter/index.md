@@ -19,7 +19,7 @@ Tôt ou tard nous apprenons tous à écrire une lettre ; c'est aussi un exempl
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Avant de se lancer dans cet exercice, vous devez déja avoir travaillé
         <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
@@ -41,7 +41,7 @@ Tôt ou tard nous apprenons tous à écrire une lettre ; c'est aussi un exempl
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Tester vos connaissances en balisage HTML simple et avancé de texte,
         d'hyperliens et de ce qu'il convient de mettre dans l'élément
@@ -59,14 +59,14 @@ Pour commencer cet exercice, vous devez récupérer le [texte brut que vous alle
 
 Pour ce projet, votre tâche consiste à baliser une lettre destinée à être hébergée dans l'intranet d'une université. La lettre est une réponse d'une chercheuse en poste à une doctorante éventuelle à propos de sa candidature pour travailler à l'université.
 
-Sémantique de blocs/structures :
+Sémantique de blocs/structures&nbsp;:
 
 - Il convient que vous donniez à la totalité du document une structure appropriée comprenant le type de document et les éléments {{htmlelement("html")}}, {{htmlelement("head")}} et {{htmlelement("body")}}.
-- La lettre doit être marquée avec une structure de paragraphes et d'en‑têtes, en prenant en considération les points suivants : un en‑tête de haut niveau (la ligne « Re : ») et trois en-têtes de deuxième niveau.
+- La lettre doit être marquée avec une structure de paragraphes et d'en‑têtes, en prenant en considération les points suivants&nbsp;: un en‑tête de haut niveau (la ligne « Re&nbsp;: ») et trois en-têtes de deuxième niveau.
 - Les dates de début des semestres, les sujets d'étude et les danses exotiques seront balisées avec les types de listes appropriés.
 - Mettez les deux adresses dans l'élement {{htmlelement("address")}}. En plus, chaque ligne des adresses doit être mise sur une nouvelle ligne sans que ce soit un nouveau paragraphe.
 
-Sémantique en ligne :
+Sémantique en ligne&nbsp;:
 
 - Les noms de l'expéditeur et du destinataire (et « Tél » et « e‑mail ») doivent être marqués comme étant de grande importance.
 - Les quatre dates du document doivent être indiquées dans des éléments appropriés contenant des dates lisibles par la machine.
@@ -78,7 +78,7 @@ Sémantique en ligne :
 - Deux emplacements nécessitent un hyperlien ; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement http\://example.com.
 - La citation et la devise de l'université doivent être marquées avec les éléments appropriés.
 
-Dans l'en‑tête du document :
+Dans l'en‑tête du document&nbsp;:
 
 - Le jeu de caractères sera précisé comme étant utf-8 avec la balise `meta` appropriée.
 - L'auteur de la lettre sera indiqué dans une balise `meta` adéquate.

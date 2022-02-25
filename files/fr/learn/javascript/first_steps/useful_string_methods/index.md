@@ -19,19 +19,19 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées : trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.
+À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées&nbsp;: trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vocabulaire courant de l'informatique, bases de HTML et CSS,
         compréhension de ce que fait JavaScript.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Comprendre que les chaînes de caractères sont des objets, et apprendre à
         utiliser certaines méthodes basiques disponibles sur ces objets pour
@@ -163,7 +163,7 @@ Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous 
 
 ### Trouver la longueur d'une chaîne
 
-C'est facile — il suffit d'utiliser la propriété {{jsxref("String.prototype.length", "length")}}. Entrez ceci :
+C'est facile — il suffit d'utiliser la propriété {{jsxref("String.prototype.length", "length")}}. Entrez ceci&nbsp;:
 
 ```js
 let browserType = 'mozilla';
@@ -174,13 +174,13 @@ Cette commande doit renvoyer le nombre 7, parce que « mozilla » comporte 7
 
 ### Retrouver un caractère donné dans une chaîne
 
-Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver ; par exemple, pour retrouver le premier caractère, vous devez  écrire ceci :
+Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver ; par exemple, pour retrouver le premier caractère, vous devez  écrire ceci&nbsp;:
 
 ```js
 browserType[0];
 ```
 
-Les ordinateurs décomptent à partir de 0, pas de 1 ! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit ; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut :
+Les ordinateurs décomptent à partir de 0, pas de 1 ! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit ; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut&nbsp;:
 
 ```js
 browserType[browserType.length-1];
@@ -190,7 +190,7 @@ La longueur de « mozilla » est de 7 caractères, mais comme le décompte s
 
 ### Trouver une sous-chaîne à l'intérieur d'une chaîne et l'extraire
 
-1.  Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire ; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez :
+1.  Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire ; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez&nbsp;:
 
     ```js
     browserType.indexOf('zilla');
@@ -198,7 +198,7 @@ La longueur de « mozilla » est de 7 caractères, mais comme le décompte s
 
     La commande donne 2 comme résultat, car la sous-chaîne « zilla » commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans « mozilla ». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent « mozilla ».
 
-2.  On peut faire cela autrement, peut-être plus efficacement encore. Écrivez :
+2.  On peut faire cela autrement, peut-être plus efficacement encore. Écrivez&nbsp;:
 
     ```js
     browserType.indexOf('vanilla');
@@ -214,7 +214,7 @@ La longueur de « mozilla » est de 7 caractères, mais comme le décompte s
     }
     ```
 
-3.  Lorsque vous savez où la sous-chaîne commence à l'intérieur de la chaîne, et savez à quel caractère elle prend fin, vous pouvez utiliser {{jsxref("String.prototype.slice()", "slice()")}} pour l'extraire. Voyez ce code :
+3.  Lorsque vous savez où la sous-chaîne commence à l'intérieur de la chaîne, et savez à quel caractère elle prend fin, vous pouvez utiliser {{jsxref("String.prototype.slice()", "slice()")}} pour l'extraire. Voyez ce code&nbsp;:
 
     ```js
     browserType.slice(0,3);
@@ -222,7 +222,7 @@ La longueur de « mozilla » est de 7 caractères, mais comme le décompte s
 
     Il renvoie « moz » — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
 
-4.  Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre ! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande :
+4.  Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre ! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande&nbsp;:
 
     ```js
     browserType.slice(2);
@@ -254,7 +254,7 @@ La méthode prend deux paramètres — la chaîne que vous voulez remplacer et l
 browserType.replace('moz','van');
 ```
 
-À noter : pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire :` browserType = browserType.replace('moz','van');`
+À noter&nbsp;: pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire&nbsp;:` browserType = browserType.replace('moz','van');`
 
 ## Apprendre en pratiquant
 

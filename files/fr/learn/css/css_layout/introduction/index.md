@@ -24,7 +24,7 @@ Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les fondamentaux du HTML (étudiez
         <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML"
@@ -35,7 +35,7 @@ Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Vous donner un aperçu des techniques de mise en page des CSS. Chaque
         technique peut être apprise plus précisément dans des tutoriels dédiés.
@@ -73,11 +73,11 @@ Le cours normal est la manière dont le navigateur présente les pages HTML par 
 <p>La fin !</p>
 ```
 
-Par défaut, le navigateur affichera ce code ainsi :
+Par défaut, le navigateur affichera ce code ainsi&nbsp;:
 
 {{ EmbedLiveSample('Cours_normal', '100%', 200) }}
 
-Notez que le HTML est affiché dans l'ordre exact où il est dans le code source : les éléments s'empilent les uns sur les autres — le premier paragraphe, puis la liste non ordonnée suivie par le second paragraphe.
+Notez que le HTML est affiché dans l'ordre exact où il est dans le code source&nbsp;: les éléments s'empilent les uns sur les autres — le premier paragraphe, puis la liste non ordonnée suivie par le second paragraphe.
 
 Les éléments disposés en empilement sont désignés comme étant des éléments _blocs_, par opposition aux éléments _en ligne_ qui apparaissent l'un après l'autre telle la succession de mots distincts d'un paragraphe.
 
@@ -175,13 +175,13 @@ En plus des propriétés ci-dessus applicables au conteneur `flex`, il existe de
 
 {{ EmbedLiveSample('Définir_la_propriété_flex', '300', '200') }}
 
-> **Note :** Ce n'est qu'une très brève introduction aux possibilités de Flexbox : pour en apprendre plus, voyez notre article sur [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+> **Note :** Ce n'est qu'une très brève introduction aux possibilités de Flexbox&nbsp;: pour en apprendre plus, voyez notre article sur [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
 
 ## Disposition en trame
 
 Alors que « flexbox » est conçu pour une disposition unidimensionnelle, « Grid Layout » (Disposition tramée) est bidimensionnel — il place les choses en rangées et colonnes.
 
-À nouveau, vous basculez en disposition tramée en donnant une valeur appropriée à `display` — `display: grid`. L'exemple ci-dessous utilise un balisage semblable à celui de l'exemple flex : un conteneur et quelques éléments enfants. Outre `display: grid`, nous définissons une trame de placement sur le parent avec les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}. Nous avons défini trois colonnes de `1fr` chacune et deux lignes de `100px`. Il n'est pas nécessaire de mettre de règles sur les éléments enfants ; il seront automatiquement placés dans les cellules de trame créées.
+À nouveau, vous basculez en disposition tramée en donnant une valeur appropriée à `display` — `display: grid`. L'exemple ci-dessous utilise un balisage semblable à celui de l'exemple flex&nbsp;: un conteneur et quelques éléments enfants. Outre `display: grid`, nous définissons une trame de placement sur le parent avec les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}. Nous avons défini trois colonnes de `1fr` chacune et deux lignes de `100px`. Il n'est pas nécessaire de mettre de règles sur les éléments enfants ; il seront automatiquement placés dans les cellules de trame créées.
 
 ### Utiliser display: grid
 
@@ -275,7 +275,7 @@ La suite de ce guide porte sur d'autres méthodes de mise en page. Elles ont moi
 
 Faire flotter un élément change son comportement ainsi que celui de l'élément qui le suit dans le cours normal. L'élément est déplacé à gauche ou à droite. Il est sorti du cours normal. Le contenu environnant l'enveloppe comme si l'élément flottait dans ce contenu.
 
-La propriété {{cssxref("float")}} a quatre valeurs possibles :
+La propriété {{cssxref("float")}} a quatre valeurs possibles&nbsp;:
 
 - `left` — fait flotter l'élément sur la gauche.
 - `right` — fait flotter l'élément sur la droite.
@@ -331,13 +331,13 @@ Le positionnement permet de déplacer un élément de l'endroit où il serait pl
 
 Il existe cependant des techniques utiles pour certains modes de positionnement se fondant sur la propriété {{cssxref("position")}}. Comprendre le positionnement aide aussi à comprendre le cours normal et le fait de déplacer un objet hors du cours normal.
 
-Il y a cinq types de positionnement à connaître :
+Il y a cinq types de positionnement à connaître&nbsp;:
 
 - **positionnement statique** : valeur par défaut reçue par chaque élément — il signifie simplement « placer l'élément à sa position normale suivant le cours normal de mise en page du document — rien de spécial à constater ici ».
 - **positionnement relatif :** modification de la position d'un élément dans la page — il est déplacé par rapport à sa position dans le cours normal — y compris la possibilité de chevaucher d'autres éléments de la page.
 - **positionnement absolu** : déplacement d'un élément indépendamment du cours normal de positionnement, comme s'il était placé sur un calque séparé. À partir de là, vous pouvez le fixer à une position relative au bord de la page de l'élément `<html>` (ou de son plus proche élément ancêtre positionné). Ce positionnement est utile pour créer des effets de mise en page complexes tels que des boîtes à onglets où différents panneaux de contenu sont superposés, affichés ou cachés comme vous le souhaitez, ou des panneaux d'information hors de l'écran par défaut, mais qui peuvent glisser à l'écran à l'aide d'un bouton de contrôle.
 - **positionnement fixe :** tout à fait semblable au précédent, à l'exception que l'élément est fixé par rapport à la vue du navigateur et non d'un autre élément. C'est très pratique pour créer des effets tels qu'un menu de navigation persistant, toujours au même endroit sur l'écran, quand l'utilisateur fait défiler le reste de la page.
-- **positionnement collant :** nouvelle méthode de positionnement qui fait qu'un élément se comporte comme `position: static` jusqu'à un certain décalage de la vue au delà duquel il se comporte comme si sa propriété était `position: fixed`.
+- **positionnement collant&nbsp;:** nouvelle méthode de positionnement qui fait qu'un élément se comporte comme `position: static` jusqu'à un certain décalage de la vue au delà duquel il se comporte comme si sa propriété était `position: fixed`.
 
 ### Exemple simple de positionnement
 
@@ -351,7 +351,7 @@ Afin de se familiariser avec ces techniques de mises en page, nous allons vous m
 <p>Je suis un élément de niveau bloc de base.</p>
 ```
 
-Ce code HTML sera stylisé par défaut en utilisant la CSS suivante :
+Ce code HTML sera stylisé par défaut en utilisant la CSS suivante&nbsp;:
 
 ```css
 body {
@@ -374,7 +374,7 @@ Le rendu est le suivant:
 
 ### Positionnement relatif
 
-Le positionnement relatif vous permet de décaler un élément de la position qu'il occuperait par défaut dans le cours normal de la mise en page. Ce positionnement permet de déplacer légèrement une icône pour l'aligner avec une étiquette de texte. Pour faire cette opération, nous ajoutons la règle suivante pour réaliser le positionnement relatif :
+Le positionnement relatif vous permet de décaler un élément de la position qu'il occuperait par défaut dans le cours normal de la mise en page. Ce positionnement permet de déplacer légèrement une icône pour l'aligner avec une étiquette de texte. Pour faire cette opération, nous ajoutons la règle suivante pour réaliser le positionnement relatif&nbsp;:
 
 ```css
 .positioned {
@@ -384,9 +384,9 @@ Le positionnement relatif vous permet de décaler un élément de la position qu
 }
 ```
 
-Ici, nous donnons au paragraphe médian à la propriété  {{cssxref("position")}} la valeur `relative` — ce qui ne fait rien en soi, alors nous ajoutons également les propriétés {{cssxref("top")}} et {{cssxref("left")}}. Elles servent à déplacer l'élément en question vers le bas et à droite — cela pourrait sembler être l'opposé de ce à quoi vous vous attendiez, mais représentez-vous l'élément comme poussé à partir de ses côtés gauche et haut : il en résulte un déplacement vers la droite et vers le bas.
+Ici, nous donnons au paragraphe médian à la propriété  {{cssxref("position")}} la valeur `relative` — ce qui ne fait rien en soi, alors nous ajoutons également les propriétés {{cssxref("top")}} et {{cssxref("left")}}. Elles servent à déplacer l'élément en question vers le bas et à droite — cela pourrait sembler être l'opposé de ce à quoi vous vous attendiez, mais représentez-vous l'élément comme poussé à partir de ses côtés gauche et haut&nbsp;: il en résulte un déplacement vers la droite et vers le bas.
 
-Ajouter ce code donne le résultat suivant :
+Ajouter ce code donne le résultat suivant&nbsp;:
 
 ```html hidden
 <h1>Positionnement relatif</h1>
@@ -427,7 +427,7 @@ p {
 
 Le positionnement absolu s'utilise pour sortir totalement un élément du cours normal de la mise en page et le placer selon son décalage par rapport à un bloc conteneur.
 
-En revenant à l'exemple sans positionnement, nous pourrions ajouter la règle CSS suivante pour implémenter un positionnement absolu :
+En revenant à l'exemple sans positionnement, nous pourrions ajouter la règle CSS suivante pour implémenter un positionnement absolu&nbsp;:
 
 ```css
 .positioned {
@@ -437,7 +437,7 @@ En revenant à l'exemple sans positionnement, nous pourrions ajouter la règle C
 }
 ```
 
-Ici pour notre paragraphe médian, nous donnons à la propriété {{cssxref("position")}} la valeur `absolute` et les mêmes valeurs aux propriétés {{cssxref("top")}} et {{cssxref("left")}} que précédemment. Ajouter ce code, cependant, donnera le résultat suivant :
+Ici pour notre paragraphe médian, nous donnons à la propriété {{cssxref("position")}} la valeur `absolute` et les mêmes valeurs aux propriétés {{cssxref("top")}} et {{cssxref("left")}} que précédemment. Ajouter ce code, cependant, donnera le résultat suivant&nbsp;:
 
 ```html hidden
 <h1>Positionnement absolu</h1>
@@ -584,15 +584,15 @@ Prenons un exemple. Tout d'abord, un simple balisage qui crée un formulaire HTM
 <form>
   <p>Tout d'abord, dites‑nous votre nom et votre âge.</p>
   <div>
-    <label for="fname">Prénom :</label>
+    <label for="fname">Prénom&nbsp;:</label>
     <input type="text" id="fname">
   </div>
   <div>
-    <label for="lname">Nom :</label>
+    <label for="lname">Nom&nbsp;:</label>
     <input type="text" id="lname">
   </div>
   <div>
-    <label for="age">Âge :</label>
+    <label for="age">Âge&nbsp;:</label>
     <input type="text" id="age">
   </div>
 </form>

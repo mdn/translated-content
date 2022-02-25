@@ -73,7 +73,7 @@ Ce type de problème n'existait pas quand le web a vu le jour, du début jusqu'a
 
 ## Comment créer des images adaptatives ?
 
-Dans ce paragraphe, nous allons examiner les deux problèmes illustrés ci-dessus et montrer comment les résoudre à l'aide des fonctions d'images adaptatives du HTML. Notez que nous nous focaliserons sur l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) du HTML dans cette section, comme vous avez pu le voir dans la zone de contenu de l'exemple ci-dessus — l'image d'en-tête du site n'est là que pour la décoration, et donc implémenté en utilisant des images de fond du CSS. CSS a [sans doute de meilleurs outils ](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/)que le HTML pour la conception adaptative : nous en parlerons dans le module CSS à venir.
+Dans ce paragraphe, nous allons examiner les deux problèmes illustrés ci-dessus et montrer comment les résoudre à l'aide des fonctions d'images adaptatives du HTML. Notez que nous nous focaliserons sur l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) du HTML dans cette section, comme vous avez pu le voir dans la zone de contenu de l'exemple ci-dessus — l'image d'en-tête du site n'est là que pour la décoration, et donc implémenté en utilisant des images de fond du CSS. CSS a [sans doute de meilleurs outils ](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/)que le HTML pour la conception adaptative&nbsp;: nous en parlerons dans le module CSS à venir.
 
 ### Commutations de résolution : tailles différentes
 
@@ -214,7 +214,7 @@ Et vous voici à la fin de cet article, mais saurez-vous vous rappeler les infor
 
 ## Résumé
 
-Voilà notre paquet‑cadeau pour des images adaptatives — nous espérons que ces nouvelles techniques vous plaisent. Résumons, nous vous avons exposé deux méthodes distinctes pour résoudre ce problème :
+Voilà notre paquet‑cadeau pour des images adaptatives — nous espérons que ces nouvelles techniques vous plaisent. Résumons, nous vous avons exposé deux méthodes distinctes pour résoudre ce problème&nbsp;:
 
 - **les décisions de nature artistique** : cette méthode consiste à servir des images recadrées selon les diverses mises en page — par exemple, une image paysagère offrant toute la scène pour une mise en page destinée aux ordinateurs de bureau et une image portrait montrant le sujet principal zoomé de près pour une mise en page destinée aux mobiles. On résout alors ce problème avec [`<picture>`](/fr/docs/Web/HTML/Element/picture).
 - **la commutation de résolution** : cette méthode consiste à servir des images issues de fichiers plus petits pour les périphériques à petit écran, car ils n'ont que faire des grosses images prévues pour les écrans d'ordinateurs de bureau — et en plus, en option, adapter la résolution de l'image aux écrans de faible ou grande densité. On résout ce problème avec l'utilisation de [graphiques vectoriels](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) (images SVG) ainsi qu'à l'aide des attributs [`srcset`](/fr/docs/Web/HTML/Element/Img#attr-srcset) et [`sizes`](/fr/docs/Web/HTML/Element/Img#attr-sizes).

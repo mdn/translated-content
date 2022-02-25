@@ -305,7 +305,7 @@ Maintenant que nous avons franchi les hauteurs vertigineusement passionnantes de
 
 ## Dans ce module
 
-- [Le modèle de boîte : récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
+- [Le modèle de boîte&nbsp;: récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
 - [Arrière-plans](/fr/Apprendre/CSS/styliser_boites/Backgrounds)
 - [Encadrements](/fr/docs/Apprendre/CSS/styliser_boites/Borders)
 - [Mise en page des tableaux](/fr/Apprendre/CSS/styliser_boites/Styling_tables)

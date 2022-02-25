@@ -20,7 +20,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Être familiarisé avec les bases du HTML, traitées aux pages
         <a
@@ -38,7 +38,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Apprendre les bases de l'utilisation des outils de débogage pour
         détecter des problèmes en HTML.
@@ -61,22 +61,22 @@ HTML n'est pas aussi compliqué à comprendre que le Rust. HTML n'est pas compil
 
 ### Code permissif
 
-Que voulons‑nous dire par permissif ? Et bien, quand vous faites une erreur dans du code, vous rencontrerez deux types principaux d'erreurs :
+Que voulons‑nous dire par permissif ? Et bien, quand vous faites une erreur dans du code, vous rencontrerez deux types principaux d'erreurs&nbsp;:
 
-- **Erreurs de syntaxe** : ce sont des « fautes d'orthographe » dans le code qui font que le programme ne fonctionne vraiment pas, comme l'erreur du Rust ci‑dessus. Elles sont généralement faciles à corriger pour autant que vous soyez à l'aise avec la syntaxe du langage et que vous sachiez ce que signifie le message d'erreur.
-- **Erreurs de logique** : ce sont des erreurs dans lesquelles la syntaxe est réellement correcte, mais pour lesquelles le code ne correspond pas à vos souhaits, ce qui veut dire que le programme ne s'exécute pas correctement. Elles sont généralement plus difficiles à corriger que les erreurs de syntaxe, car il n'y a pas de message d'erreur pour vous guider à la source de l'erreur.
+- **Erreurs de syntaxe**&nbsp;: ce sont des « fautes d'orthographe » dans le code qui font que le programme ne fonctionne vraiment pas, comme l'erreur du Rust ci‑dessus. Elles sont généralement faciles à corriger pour autant que vous soyez à l'aise avec la syntaxe du langage et que vous sachiez ce que signifie le message d'erreur.
+- **Erreurs de logique**&nbsp;: ce sont des erreurs dans lesquelles la syntaxe est réellement correcte, mais pour lesquelles le code ne correspond pas à vos souhaits, ce qui veut dire que le programme ne s'exécute pas correctement. Elles sont généralement plus difficiles à corriger que les erreurs de syntaxe, car il n'y a pas de message d'erreur pour vous guider à la source de l'erreur.
 
-HTML ne craint pas les erreurs de syntaxe, car les navigateurs l'analysent de manière permissive : la page s'affiche toujours même s'il y a des erreurs de syntaxe. Les navigateurs intègrent des règles indiquant comment interpréter un balisage incorrectement écrit, de sorte que vous obtiendrez toujours quelque chose à l'exécution, même si ce n'est pas ce que vous attendiez. Mais cela reste, bien sûr, toujours un problème !
+HTML ne craint pas les erreurs de syntaxe, car les navigateurs l'analysent de manière permissive&nbsp;: la page s'affiche toujours même s'il y a des erreurs de syntaxe. Les navigateurs intègrent des règles indiquant comment interpréter un balisage incorrectement écrit, de sorte que vous obtiendrez toujours quelque chose à l'exécution, même si ce n'est pas ce que vous attendiez. Mais cela reste, bien sûr, toujours un problème !
 
 > **Note :** HTML est analysé de façon permissive parce que, lorsque le Web a été créé pour la première fois, on a décidé qu'il était plus important de permettre aux gens de publier leur contenu que de s'assurer d'une syntaxe absolument correcte. Le web ne serait probablement pas aussi populaire qu'il l'est aujourd'hui, s'il avait été plus strict dans ses débuts.
 
-### Apprentissage actif : étude avec un code permissif
+### Apprentissage actif&nbsp;: étude avec un code permissif
 
 Voici le moment venu d'étudier le caractère permissif du code HTML.
 
 1.  Primo, télécharchez notre démo [debug-example ](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html)et enregistrez‑le localement. Cette démo est délibérement écrite avec des erreurs pour que nous puissions les examiner (le balisage HTML est dit **malformé**, par opposition à **bien-formé**).
-2.  Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci :![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](fr-html-errone.png)
-3.  Constatons que ce n'est pas terrible ; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément `body` est affiché) :
+2.  Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci&nbsp;:![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](fr-html-errone.png)
+3.  Constatons que ce n'est pas terrible ; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément `body` est affiché)&nbsp;:
 
             <h1>Exemple de HTML à déboguer</h1>
 
@@ -98,20 +98,20 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
                   lien à la page d'accueil de Mozilla</a>
             </ul>
 
-4.  Revoyons les problèmes :
+4.  Revoyons les problèmes&nbsp;:
 
     - Les élements {{htmlelement("p")}} (paragraphe) et {{htmlelement("li")}} (élément de liste) n'ont pas de balise de fermeture. En voyant l'image ci‑dessus, cela ne semble pas avoir trop sévèrement affecté le rendu, car on voit bien où un élément se termine et où le suivant commence.
     - Le premier élément {{htmlelement("strong")}} n'a pas de balise de fermeture. C'est un peu plus problématique, car il n'est pas possible de dire où l'élément est supposé se terminer. En fait, tout le reste du texte est en gras.
-    - Cette partie est mal imbriquée : `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
+    - Cette partie est mal imbriquée&nbsp;: `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
     - La valeur de l'attribut {{htmlattrxref("href","a")}} n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
 
 5.  Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs).
-6.  Dans l'« Inspecteur », vous pouvez voir ce à quoi le balisage du rendu ressemble : ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](fr-inspecteur.png)
-7.  Avec l'« Inspecteur », explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox ; d'autres navigateurs modernes _devraient_ donner le même résultat) :
+6.  Dans l'« Inspecteur », vous pouvez voir ce à quoi le balisage du rendu ressemble&nbsp;: ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](fr-inspecteur.png)
+7.  Avec l'« Inspecteur », explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox ; d'autres navigateurs modernes _devraient_ donner le même résultat)&nbsp;:
 
     - Les éléments `p` et `li` ont été pourvus de balises fermantes.
     - L'endroit où le premier élément `<strong>` doit être fermé n'est pas clair, donc le navigateur a enveloppé séparément chaque bloc de texte avec ses propres balises `strong`, jusqu'à la fin du document !
-    - L'imbrication incorrecte a été corrigée ainsi :
+    - L'imbrication incorrecte a été corrigée ainsi&nbsp;:
 
       ```html
       <strong>caractères gras
@@ -120,12 +120,12 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
       <em> qu'est ce ?</em>
       ```
 
-    - Le lien avec les guillemets manquants a été illico détruit. Le dernier élément `li` ressemble à ceci :
+    - Le lien avec les guillemets manquants a été illico détruit. Le dernier élément `li` ressemble à ceci&nbsp;:
 
       ```html
       <li>
         <strong>Attributs non fermés : autre source courante de problèmes
-      en HTML. Voici un exemple :</strong>
+      en HTML. Voici un exemple&nbsp;:</strong>
       </li>
       ```
 
@@ -156,17 +156,17 @@ Cela vous donnera une liste d'erreurs et autres informations.
 
 Les messages d'erreur sont généralement utiles, mais parfois non ; avec un peu de pratique, vous trouverez comment les interpréter pour corriger votre code. Passons en revue les messages d'erreur et voyons leur signification. Chaque message est accompagné d'un numéro de ligne et de colonne pour faciliter la localisation de l'erreur.
 
-- « End tag `li` implied, but there were open elements » (2 instances) : ces messages indiquent qu'un élément ouvert devrait être fermé. La balise de fermeture est implicite, mais pas réellement mise. L'information ligne/colonne pointe sur la première ligne après laquelle la balise de fermeture devrait réellement se situer, mais c'est un bon indice pour voir ce qui ne va pas.
-- « Unclosed element `strong` » : C'est facile à comprendre — un élément {{htmlelement("strong")}} n'est pas fermé ; l'information ligne/colonne pointe directement dessus.
-- « End tag `strong` violates nesting rules » : signale des éléments incorrectement imbriqués et l'information ligne/colonne signale là où cela se trouve.
-- « End of file reached when inside an attribute value. Ignoring tag » : c'est peu clair ; la remarque se rapporte au fait qu'il y a une valeur d'attribut improprement formée quelque part, peut-être près de la fin du fichier car la fin du fichier apparaît dans la valeur de l'attribut. Le fait que le navigateur ne rende pas le lien est un bon indice pour dire que cet élément est en faute.
-- « End of file seen and there were open elements » : c'est un peu ambigu, mais se réfère au fait qu'à la base des éléments ouverts n'ont pas été proprement fermés. Les numéros de ligne pointent sur les dernières lignes du fichier et ce message d'erreur vient avec une ligne de code qui désigne un exemple d'élément ouvert :
+- « End tag `li` implied, but there were open elements » (2 instances)&nbsp;: ces messages indiquent qu'un élément ouvert devrait être fermé. La balise de fermeture est implicite, mais pas réellement mise. L'information ligne/colonne pointe sur la première ligne après laquelle la balise de fermeture devrait réellement se situer, mais c'est un bon indice pour voir ce qui ne va pas.
+- « Unclosed element `strong` »&nbsp;: C'est facile à comprendre — un élément {{htmlelement("strong")}} n'est pas fermé ; l'information ligne/colonne pointe directement dessus.
+- « End tag `strong` violates nesting rules »&nbsp;: signale des éléments incorrectement imbriqués et l'information ligne/colonne signale là où cela se trouve.
+- « End of file reached when inside an attribute value. Ignoring tag »&nbsp;: c'est peu clair ; la remarque se rapporte au fait qu'il y a une valeur d'attribut improprement formée quelque part, peut-être près de la fin du fichier car la fin du fichier apparaît dans la valeur de l'attribut. Le fait que le navigateur ne rende pas le lien est un bon indice pour dire que cet élément est en faute.
+- « End of file seen and there were open elements »&nbsp;: c'est un peu ambigu, mais se réfère au fait qu'à la base des éléments ouverts n'ont pas été proprement fermés. Les numéros de ligne pointent sur les dernières lignes du fichier et ce message d'erreur vient avec une ligne de code qui désigne un exemple d'élément ouvert&nbsp;:
 
       exemple: <a href="https://www.mozilla.org/>lien à la page d'accueil de Mozilla</a> ↩ </ul>↩ </body>↩</html>
 
   > **Note :** un attribut sans guillemet fermant peut entraîner un élément ouvert car le reste du document est interprété comme le contenu de l'attribut.
 
-- « Unclosed element `ul` » : n'est pas vraiment utile, car l'élément {{htmlelement("ul")}} _est_ correctement fermé. Cette erreur ressort car l'élément {{htmlelement("a")}} n'est pas fermé en raison de l'absence de guillemet fermant.
+- « Unclosed element `ul` »&nbsp;: n'est pas vraiment utile, car l'élément {{htmlelement("ul")}} _est_ correctement fermé. Cette erreur ressort car l'élément {{htmlelement("a")}} n'est pas fermé en raison de l'absence de guillemet fermant.
 
 Si vous ne comprenez pas ce que signifie chaque message d'erreur, ne vous inquiétez pas — une bonne idée consiste à corriger quelques erreurs à la fois. Puis essayez de revalider le HTML pour voir les erreurs restantes. Parfois, la correction d'une erreur en amont permet aussi d'éliminer d'autres messages d'erreur — plusieurs erreurs sont souvent causées par un même problème, avec une sorte d'effet domino.
 

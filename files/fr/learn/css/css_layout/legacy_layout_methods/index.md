@@ -73,7 +73,7 @@ Tout d'abord, nous avons besoin de contenu à mettre dans nos colonnes. Remplace
 
 Chacune de ces colonnes nécessite un élément extérieur conteneur du dit contenu et manipulons‑le en bloc.. Dans notre exemple, nous avons choisi des éléments {{htmlelement("div")}}, mais vous auriez pu choisir n'importe quoi d'autre sémantiquement approprié comme un élément  {{htmlelement("article")}}, {{htmlelement("section")}} ou {{htmlelement("aside")}} ou tout autre.
 
-Pour la CSS maintenant appliquons ce qui suit au HTML comme base de configuration :
+Pour la CSS maintenant appliquons ce qui suit au HTML comme base de configuration&nbsp;:
 
 ```css
 body {
@@ -95,7 +95,7 @@ div:nth-of-type(2) {
 }
 ```
 
-Ici nous faisons en sorte que chaque élément représente 48% de la largeur du parent — soit 96% au total, laissant 4% libres pour jouer le rôle de gouttière entre les deux colonnes et leur donner un peu d'air. Maintenant nous avons juste à faire flotter les deux colonnes ainsi :
+Ici nous faisons en sorte que chaque élément représente 48% de la largeur du parent — soit 96% au total, laissant 4% libres pour jouer le rôle de gouttière entre les deux colonnes et leur donner un peu d'air. Maintenant nous avons juste à faire flotter les deux colonnes ainsi&nbsp;:
 
 ```css
 div:nth-of-type(1) {
@@ -109,7 +109,7 @@ div:nth-of-type(2) {
 }
 ```
 
-En mettant tout ensemble, voici le résultat :
+En mettant tout ensemble, voici le résultat&nbsp;:
 
 ### Exemple complet
 
@@ -225,7 +225,7 @@ Les gouttières entre colonnes ont une largeur de 20 px. Ces gouttières sont fa
 
 Il convient de soustraire cela de la largeur totale de 960 pixels, ce qui laisse 720 pixels pour les colonnes. En divisant par 12, nous voyons que chaque colonne aura une largeur de 60 pixels.
 
-L'étape suivante consiste à créer un règle pour la classe `.col` la faisant flotter à gauche lui laissant une marge gauche de {{cssxref("margin-left")}} de 20 pixels formant la gouttière et  une largeur {{cssxref("width")}} de 60 pixels. Ajoutez la règle suivante en fin de la CSS :
+L'étape suivante consiste à créer un règle pour la classe `.col` la faisant flotter à gauche lui laissant une marge gauche de {{cssxref("margin-left")}} de 20 pixels formant la gouttière et  une largeur {{cssxref("width")}} de 60 pixels. Ajoutez la règle suivante en fin de la CSS&nbsp;:
 
 ```css
 .col {
@@ -242,7 +242,7 @@ La ligne supérieure des colonnes unitaires est maintenant disposées en tant qu
 
 Les conteneurs destinés à accueillir plusieurs colonnes doivent être d'une classe spéciale pour pouvoir ajuster leurs valeurs {{cssxref("width")}} en fonction du nombre de colonnes requis (plus les gouttières intermédiaires). Nous devons créer une classe supplémentaire pour permettre aux conteneurs de s'étendre de 2 à 12 colonnes. Cette largeur est le résultat de l'addition de la largeur de toutes les colonnes plus les largeurs des gouttières dont le nombre est toujours inférieur de 1 au nombre de colonnes.
 
-Ajoutez ce qui suit en bas de la CSS :
+Ajoutez ce qui suit en bas de la CSS&nbsp;:
 
 ```css
 /* Deux largeurs de colonnes (120px) plus une largeur de gouttière (20px) */
@@ -265,7 +265,7 @@ Une fois ces classes crées, nous pouvons disposer des colonnes de largeur diff�
 
 > **Note :** Si vous avez du mal à faire fonctionner cet exemple, comparez‑le avec notre [version terminée](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html) sur GitHub (la voir aussi [en fonctionnement direct](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)).
 
-Modifiez les classes de vos éléments soit en ajoutant ou retirant certains conteneurs, pour voir comment faire varier la disposition. Par exemple, vous pouvez faire en sorte que la deuxième ligne ressemble à ceci :
+Modifiez les classes de vos éléments soit en ajoutant ou retirant certains conteneurs, pour voir comment faire varier la disposition. Par exemple, vous pouvez faire en sorte que la deuxième ligne ressemble à ceci&nbsp;:
 
 ```css
 <div class="row">
@@ -290,7 +290,7 @@ Pour la largeur de la première colonne, la **largeur cible** est de 60 pixels e
 
 Décalant de deux le point décimal nous obtenons un pourcentage de 6.25%. Donc, dans la CSS, nous pouvons remplacer la largeur de colonne de 60 pixels par 6.25%.
 
-En faisant de même pour la largeur de la gouttière :
+En faisant de même pour la largeur de la gouttière&nbsp;:
 
     20 / 960 = 0.02083333333
 
@@ -300,7 +300,7 @@ Donc, remplaçons par 2.08333333% la valeur 20 pixels de {{cssxref("margin-left"
 
 Pour ce paragraphe, faites une autre copie de la page exemple précédente ou faites une copie locale du code de [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html) comme point de départ.
 
-Mettez à jour la deuxième règle CSS (avec le sélecteur `.wrapper`) comme suit :
+Mettez à jour la deuxième règle CSS (avec le sélecteur `.wrapper`) comme suit&nbsp;:
 
 ```css
 body {
@@ -316,7 +316,7 @@ body {
 
 Outre la définition du pourcentage comme valeur de {{cssxref("width")}}, nous avons ajouté la propriété {{cssxref("max-width")}} de façon à plafonner une mise en page qui deviendrait trop large.
 
-Ensuite, mettez à jour les quatre règles CSS (du sélecteur `.col`) ainsi :
+Ensuite, mettez à jour les quatre règles CSS (du sélecteur `.col`) ainsi&nbsp;:
 
 ```css
 .col {
@@ -329,7 +329,7 @@ Ensuite, mettez à jour les quatre règles CSS (du sélecteur `.col`) ainsi :
 
 Maintenant vient la partie un peu plus laborieuse — nous devons mettre à jour toutes  les règles `.col.span` en utilisant des largeurs en pourcentage au lieu de pixels. Cela prend un peu de temps avec une calculette ; pour vous économiser du travail, nous l'avons fait pour vous.
 
-Mettez à jour le bloc bas des règles CSS avec ce qui suit :
+Mettez à jour le bloc bas des règles CSS avec ce qui suit&nbsp;:
 
 ```css
 /* Deux largeurs de colonnes (12.5%) plus une largeur de gouttière (2.08333333%) */
@@ -356,7 +356,7 @@ Maintenant enregistrez le code, chargez le dans le navigateur et modifiez la lar
 
 Vous pouvez utiliser la fonction {{cssxref("calc()")}} pour faire les calculs à l'intérieur même de la CSS — la fonction vous permet d'insérer de simples expressions mathématiques pour calculer la valeur qu'il convient de donner à la propriété CSS. C'est utile quand les calculs sont complexes ; vous pouvez même effectuer un calcul avec des unités différentes, par exemple « je veux que la hauteur de cet élément soit toujours égale à 100% de son parent moins 50px ». Voir [cet exemple dans le didacticiel MediaRecorder API](</fr/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
 
-Revenon à nos trames ! Toute colonne se développant au delà de la première a une largeur totale de 6.25% multipliée par le nombre de colonnes précédentes plus 2.08333333% multiplié par le nombre de gouttières (qui doit toujours être égal au nombre de colonnes moins 1). La fonction `calc()` nous permet de faire ce calcul dans la valeur `width` même, ainsi pour tout élément au-delà de la colonne 4 nous pouvons écrire, par exemple :
+Revenon à nos trames ! Toute colonne se développant au delà de la première a une largeur totale de 6.25% multipliée par le nombre de colonnes précédentes plus 2.08333333% multiplié par le nombre de gouttières (qui doit toujours être égal au nombre de colonnes moins 1). La fonction `calc()` nous permet de faire ce calcul dans la valeur `width` même, ainsi pour tout élément au-delà de la colonne 4 nous pouvons écrire, par exemple&nbsp;:
 
 ```css
 .col.span4 {
@@ -364,7 +364,7 @@ Revenon à nos trames ! Toute colonne se développant au delà de la première
 }
 ```
 
-Remplacez le bloc de règles le plus bas par le suivant, puis actualisez le navigateur pour constater que vous obtenez un résultat identique :
+Remplacez le bloc de règles le plus bas par le suivant, puis actualisez le navigateur pour constater que vous obtenez un résultat identique&nbsp;:
 
 ```css
 .col.span2 { width: calc((6.25%*2) + 2.08333333%); }
@@ -406,7 +406,7 @@ Essayons.
 
 Démarrons avec le code précédent ou utilisons le fichier [fluid-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html) comme point de départ.
 
-Créons dans la CSS une classe qui décale un élément de conteneur d'une largaur de colonne. Ajoutons ce qui suit au bas de la CSS :
+Créons dans la CSS une classe qui décale un élément de conteneur d'une largaur de colonne. Ajoutons ce qui suit au bas de la CSS&nbsp;:
 
 ```css
 .offset-by-one {
@@ -414,7 +414,7 @@ Créons dans la CSS une classe qui décale un élément de conteneur d'une larga
 }
 ```
 
-Ou, si vous préférez calculer le pourcentage vous-même, utilisez :
+Ou, si vous préférez calculer le pourcentage vous-même, utilisez&nbsp;:
 
 ```css
 .offset-by-one {
@@ -422,13 +422,13 @@ Ou, si vous préférez calculer le pourcentage vous-même, utilisez :
 }
 ```
 
-Vous pouvez maintenant ajouter cette classe à tout conteneur pour lequel vous voulez laisser une colonne vide sur sa gauche. Par exemple, si vous avez ceci dans votre HTML :
+Vous pouvez maintenant ajouter cette classe à tout conteneur pour lequel vous voulez laisser une colonne vide sur sa gauche. Par exemple, si vous avez ceci dans votre HTML&nbsp;:
 
 ```html
 <div class="col span6">14</div>
 ```
 
-remplacez‑le par :
+remplacez‑le par&nbsp;:
 
 ```html
 <div class="col span5 offset-by-one">14</div>
@@ -436,7 +436,7 @@ remplacez‑le par :
 
 > **Note :** Notez que vous devez réduire le nombre de colonnes réparties pour faire de la place au décalage !
 
-Chargez et actualisez pour voir la différence, ou bien vérifiez avec l'exemple [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) (voir aussi [l'exécution directement](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)). L'exemple terminé doit ressembler à ceci :
+Chargez et actualisez pour voir la différence, ou bien vérifiez avec l'exemple [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) (voir aussi [l'exécution directement](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)). L'exemple terminé doit ressembler à ceci&nbsp;:
 
 ![](offset-grid-finished.png)
 
@@ -454,7 +454,7 @@ La plus grande limite de ce système est essentiellement son caractère unidimen
 
 Si vous avez lu le précédent article à propors de Flexbox, vous pourriez penser que Flexbox est la solution idéale pour créer un système de trames. Il existe actuellement nombre de systèmes de grille fondés sur Flexbox et Flexbox peut résoudre beaucoup de problèmes mis en évidence lors de la création de notre trame ci-dessus.
 
-Cependant, Flexbox n'a jamais été conçu comme système de trames : il conduit à un nouvel ensemble de défis lorsqu'il est utilisé comme tel. Comme simple exemple, prenons le même exemple que celui utilisé ci-dessus et utilisons la CSS suivante pour mettre en page les classes `wrapper`, `row` et `col` :
+Cependant, Flexbox n'a jamais été conçu comme système de trames&nbsp;: il conduit à un nouvel ensemble de défis lorsqu'il est utilisé comme tel. Comme simple exemple, prenons le même exemple que celui utilisé ci-dessus et utilisons la CSS suivante pour mettre en page les classes `wrapper`, `row` et `col` :
 
 ```css
 body {
@@ -503,13 +503,13 @@ Dans votre projet, vous pouvez toujours choisir d'utiliser une « trame » F
 
 Maintenant que nous avons compris la mathématique derrière les calculs de grille, nous sommes au bon endroit pour examiner certains des systèmes de trame tierces parties couramment utilisés. Si vous faite une recherche web pour « CSS Grid framework », vous vous trouverez devant une liste de choix énorme. Les canevas populaires tels que [Bootstrap](http://getbootstrap.com/) et [Foundation](http://foundation.zurb.com/) incluent un système de trame. Il existe également des systèmes de trames autonomes, développés soit à l'aide des CSS, soit à l'aide de préprocesseurs.
 
-Voyons un de ces systèmes autonomes : il montre les techniques courantes pour travailler dans un cadre de trames. La trame que nous allons utiliser fait partie de Skeleton, un simple canevas CSS.
+Voyons un de ces systèmes autonomes&nbsp;: il montre les techniques courantes pour travailler dans un cadre de trames. La trame que nous allons utiliser fait partie de Skeleton, un simple canevas CSS.
 
 Commençons par visiter le [site web de Skeleton](http://getskeleton.com/) et choisissons « Download » pour télécharger le fichier ZIP. Faisons l'extraction et copions les fichiers _skeleton.css_ et _normalize.css_ dans un nouveau répertoire.
 
 Faites une copie de [html-skeleton.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton.html) et enregistrez le dans le même répertoire que _skeleton.css_ et _normalize.css_.
 
-Incorporez les .css _skeleton_ et _normalize_ dans la page HTML, en ajoutant ce qui suit dans `head` :
+Incorporez les .css _skeleton_ et _normalize_ dans la page HTML, en ajoutant ce qui suit dans `head`&nbsp;:
 
 ```html
 <link href="normalize.css" rel="stylesheet">
@@ -520,7 +520,7 @@ Skeleton inclut plus qu'un système de grille — il contient aussi des CSS pour
 
 > **Note :** [Normalize](/fr/docs/) est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.
 
-Nous utiliserons un HTML similaire à celui de notre dernier exemple. Ajoutez ce qui suit dans le corps du HTML :
+Nous utiliserons un HTML similaire à celui de notre dernier exemple. Ajoutez ce qui suit dans le corps du HTML&nbsp;:
 
 ```html
 <div class="container">
@@ -566,7 +566,7 @@ Les éléments ne peuvent faire partie d'une trame que s'ils sont à l'intérieu
 
 Disposons maintenant les boîtes conteneur. Skeleton est fondé sur une trame de 12 colonnes. Les boîtes de la ligne supérieure nécessitent toutes des classes `one column` pour qu'elles se répartissent à raison de une par colonne.
 
-Ajoutez maintenant cet extrait de lignes de code :
+Ajoutez maintenant cet extrait de lignes de code&nbsp;:
 
 ```html
 <div class="container">
@@ -579,7 +579,7 @@ Ajoutez maintenant cet extrait de lignes de code :
 </div>
 ```
 
-Ensuite, indiquez les conteneurs sur la deuxième ligne en précisant le nombre de colonnes qu'ils englobent , ainsi :
+Ensuite, indiquez les conteneurs sur la deuxième ligne en précisant le nombre de colonnes qu'ils englobent , ainsi&nbsp;:
 
 ```html
 <div class="row">

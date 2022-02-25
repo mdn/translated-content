@@ -23,7 +23,7 @@ original_slug: Apprendre/CSS/CSS_layout/Floats
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases du HTML (étudiez
         <a href="/fr/Apprendre/HTML/Introduction_à_HTML">Introduction au HTML</a
@@ -32,7 +32,7 @@ original_slug: Apprendre/CSS/CSS_layout/Floats
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Apprendre comment créer des éntités flottantes dans les pages web, ainsi
         qu'utiliser la propriété <code>clear</code> et autres méthodes de
@@ -56,7 +56,7 @@ Dans cet article, nous nous limiterons notre exposé à l'utilisation approprié
 
 Découvrons comment utiliser les boîtes flottantes. Nous commencerons par un exemple très simple consistant à faire flotter un élément dans un bloc de texte. Vous pouvez suivre cela en créant un nouveau fichier `index.html` sur votre ordinateur initialisé avec un [simple modèle HTML](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) et en y insérant le code ci-dessous à la bonne place. Au bas de ce paragraphe vous pouvez directement voir un exemple en direct de ce à quoi le code final doit ressembler.
 
-Tout d'abord, commençons  avec un HTML simple — ajoutez le code ci-dessous dans l'élément `body` en supprimant tout ce qu'il y avait avant :
+Tout d'abord, commençons  avec un HTML simple — ajoutez le code ci-dessous dans l'élément `body` en supprimant tout ce qu'il y avait avant&nbsp;:
 
 ```html
 <h1>Exemple simple de boîte flottante</h1>
@@ -87,7 +87,7 @@ body {
 }
 ```
 
-Si vous enregistrez et actualisez maintenant, vous verrez quelque chose qui ressemble un peu à ce à quoi vous vous attendiez — la boîte est au-dessus du texte suivant le cours normal de l'affichage. Pour faire flotter l'image dans le texte ajoutez ces deux propriétés à la règle pour `.box` :
+Si vous enregistrez et actualisez maintenant, vous verrez quelque chose qui ressemble un peu à ce à quoi vous vous attendiez — la boîte est au-dessus du texte suivant le cours normal de l'affichage. Pour faire flotter l'image dans le texte ajoutez ces deux propriétés à la règle pour `.box`&nbsp;:
 
 ```css
 .box {
@@ -156,7 +156,7 @@ Ajoutez une classe `special` au premier paragraphe du texte suivant immédiateme
 
 ### Visualiser le flottement
 
-Pour mieux visualiser l'effet, modifiez `margin-right` de la boîte flottante en `margin` de façon à avoir le même espace tout autour de la boîte flottante. Vous verrez l'arrière-plan du paragraphe juste au dessous de la boîte flottante comme dans l'exemple ci-dessous :
+Pour mieux visualiser l'effet, modifiez `margin-right` de la boîte flottante en `margin` de façon à avoir le même espace tout autour de la boîte flottante. Vous verrez l'arrière-plan du paragraphe juste au dessous de la boîte flottante comme dans l'exemple ci-dessous&nbsp;:
 
 ```html hidden
 <h1>Exemple simple de boîte flottante</h1>
@@ -203,7 +203,7 @@ Les lignes du paragraphe  suivant la boîte flottante  ont été raccourcies p
 
 Nous avons vu que la boîte flottante est retirée du cours normal de l'affichage et que les autres éléments se placent à côté, donc si nous voulons empêcher un élément à la suite de remonter pour se placer à côté, nous devons le dégager. Cette opération se réalise à l'aide de la propriété {{cssxref("clear")}}.
 
-Dans le HTML de l'exemple précédent, donnez la classe `cleared` au second paragraphe sous l'élément destiné à être placé à côté de la boîte flottante. Puis, ajoutez ceci à la CSS :
+Dans le HTML de l'exemple précédent, donnez la classe `cleared` au second paragraphe sous l'élément destiné à être placé à côté de la boîte flottante. Puis, ajoutez ceci à la CSS&nbsp;:
 
 ```css
 .cleared {
@@ -249,10 +249,10 @@ body {
 
 {{ EmbedLiveSample('Dégagement_des_boîtes_flottantes', '100%', 600) }}
 
-Vous verrez que le paragraphe suivant s'est dégagé de l'élément flottant et ne remonte plus à côté de ce dernier. La propriété  `clear` accepte les valeurs suivantes :
+Vous verrez que le paragraphe suivant s'est dégagé de l'élément flottant et ne remonte plus à côté de ce dernier. La propriété  `clear` accepte les valeurs suivantes&nbsp;:
 
-- `left` : dégage les élément à gauche de la boîte flottante.
-- `right` : dégage les éléments à droite.
+- `left`&nbsp;: dégage les élément à gauche de la boîte flottante.
+- `right`&nbsp;: dégage les éléments à droite.
 - `both `: dégage de tous élément flottant, à gauche et à droite.
 
 ## Dégagement de boîtes autour d'une boîte flottante
@@ -267,7 +267,7 @@ Vous savez comment dégager quelque chose suivant un élément flottant, mais re
 </div>
 ```
 
-Dans la CSS, ajoutez la règle suivante pour la classe `.wrapper` et actualisez la page :
+Dans la CSS, ajoutez la règle suivante pour la classe `.wrapper` et actualisez la page&nbsp;:
 
 ```css
 .wrapper {
@@ -327,7 +327,7 @@ Encore une fois, c'est parce que la boîte flottante a été retirée du cours n
 
 La façon dont cette situation est traditionnellement traitée consiste à utiliser un procédé connu sous le nom de « clearfix hack » (truc pour déboguer clear). Cela consiste à insérer un contenu après la boîte contenant le flotteur, envelopper le contenu et donner la valeur `both` à la propriété `clear`.
 
-Ajoutez ceci à la CSS de notre exemple :
+Ajoutez ceci à la CSS de notre exemple&nbsp;:
 
 ```css
 .wrapper::after {

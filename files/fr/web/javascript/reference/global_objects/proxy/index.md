@@ -305,7 +305,7 @@ console.log(produits.nombre); // 3
 
 ### Un exemple avec toutes les trappes
 
-Pour illustrer l'ensemble des trappes, on tente de « proxifier » un objet non natif : l'objet global `docCookies` créé grâce à [cet exemple](/fr/docs/Web/API/Document/cookie/Simple_document.cookie_framework).
+Pour illustrer l'ensemble des trappes, on tente de « proxifier » un objet non natif&nbsp;: l'objet global `docCookies` créé grâce à [cet exemple](/fr/docs/Web/API/Document/cookie/Simple_document.cookie_framework).
 
 ```js
 /*

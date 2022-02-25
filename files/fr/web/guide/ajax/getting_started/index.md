@@ -12,7 +12,7 @@ Cet article vous guide à travers les bases d’AJAX et vous donne deux exemples
 
 AJAX est un raccourci pour **A**synchronous **J**avaScript **A**nd **X**ML (JavaScript asynchrone et XML) inventé par Jesse James Garrett. Pour simplifier, il s’agit d’employer l’objet [`XMLHttpRequest`](/fr/XMLHttpRequest "fr/XMLHttpRequest") pour communiquer avec des serveurs. Il peut envoyer et recevoir des informations sous différents formats, dont JSON, XML, HTML ou texte. Son principal attrait est sa nature « asynchrone » ce qui signifie qu’il peut communiquer avec le serveur, échanger des données et mettre à jour la page sans avoir à la recharger.
 
-Les deux principales fonctionnalités d’AJAX permettent de :
+Les deux principales fonctionnalités d’AJAX permettent de&nbsp;:
 
 - faire des requêtes vers le serveur sans recharger la page ;
 - recevoir et travailler avec des données provenant du serveur.
@@ -33,13 +33,13 @@ else if (window.ActiveXObject) { // IE 6 et antérieurs
 
 > **Note :** Pour illustrer le principe, le code ci-dessus est une version un peu simplifiée de celui qui est utilisé pour créer une instance XMLHTTP. Pour un exemple plus réaliste, voir l’étape 3 de cet article.
 
-Après avoir fait une requête, vous recevrez une réponse du serveur. À ce stade, vous devez indiquer à l’objet `httpRequest` le nom de la fonction JavaScript qui traitera la réponse. Pour cela, assignez à la propriété `onreadystatechange` de l’objet le nom de la fonction JavaScript que vous envisagez d’utiliser, comme ceci :
+Après avoir fait une requête, vous recevrez une réponse du serveur. À ce stade, vous devez indiquer à l’objet `httpRequest` le nom de la fonction JavaScript qui traitera la réponse. Pour cela, assignez à la propriété `onreadystatechange` de l’objet le nom de la fonction JavaScript que vous envisagez d’utiliser, comme ceci&nbsp;:
 
 ```js
 httpRequest.onreadystatechange = nomDeLaFonction;
 ```
 
-Notez qu’il n’y a ni parenthèses ni paramètres après le nom de la fonction, car vous ne faites qu’assigner une référence à la fonction sans l’appeler réellement. Alternativement, au lieu de donner un nom de fonction, vous pouvez utiliser la technique JavaScript de définition de fonctions à la volée (ce qu’on appelle une fonction anonyme), et définir à cet endroit les actions à effectuer sur la réponse, comme ceci :
+Notez qu’il n’y a ni parenthèses ni paramètres après le nom de la fonction, car vous ne faites qu’assigner une référence à la fonction sans l’appeler réellement. Alternativement, au lieu de donner un nom de fonction, vous pouvez utiliser la technique JavaScript de définition de fonctions à la volée (ce qu’on appelle une fonction anonyme), et définir à cet endroit les actions à effectuer sur la réponse, comme ceci&nbsp;:
 
 ```js
 httpRequest.onreadystatechange = function() {
@@ -47,7 +47,7 @@ httpRequest.onreadystatechange = function() {
 };
 ```
 
-Ensuite, après avoir déclaré ce qui se produit lorsque la réponse est reçue, il s’agit de lancer effectivement la requête. Il faut pour cela appeler les méthodes `open()` et `send()` de l’objet `httpRequest`, comme ceci :
+Ensuite, après avoir déclaré ce qui se produit lorsque la réponse est reçue, il s’agit de lancer effectivement la requête. Il faut pour cela appeler les méthodes `open()` et `send()` de l’objet `httpRequest`, comme ceci&nbsp;:
 
 ```js
 httpRequest.open('GET', 'http://www.example.org/some.file', true);
@@ -58,7 +58,7 @@ httpRequest.send();
 - Le second paramètre est l’URL à laquelle vous envoyez la requête. Pour des raisons de sécurité, il est par défaut impossible d’appeler des URL se situant sur un domaine de tierce-partie. Veillez à utiliser le nom de domaine exact sur toutes vos pages ou vous obtiendrez une erreur « permission refusée » lors de l’appel à `open()`. Une erreur courante est de charger le site via `domaine.tld`, mais d’essayer d’appeler des pages avec `www.domain.tld`. Si vous avez réellement besoin d’envoyer une requête vers un autre domaine, veuillez consulter [Cross-Origin Resource Sharing (CORS)](/fr/docs/Web/HTTP/CORS).
 - Le troisième paramètre, optionnel, précise si la requête est asynchrone. Si mis à `true` (sa valeur par défaut), l’exécution de JavaScript se poursuivra, et l’utilisateur ou l’utilisatrice pourra interagir avec la page, en attendant l’arrivée de la réponse du serveur. C’est le premier « A » de « AJAX ».
 
-Le paramètre de la méthode `send()` peut être n’importe quelle donnée que vous voulez envoyer au serveur en cas d’utilisation de la méthode POST. Les données doivent être sous la forme d’une chaîne de requête, comme :
+Le paramètre de la méthode `send()` peut être n’importe quelle donnée que vous voulez envoyer au serveur en cas d’utilisation de la méthode POST. Les données doivent être sous la forme d’une chaîne de requête, comme&nbsp;:
 
 ```js
 "nom=valeur&autrenom="+encodeURIComponent(autrevaleur)+"&ainsi=desuite"
@@ -66,7 +66,7 @@ Le paramètre de la méthode `send()` peut être n’importe quelle donnée que 
 
 Ou d’autres formats tels que `multipart/form-data`, JSON, XML, etc.
 
-Notez que si vous voulez envoyer des données avec la méthode POST, vous aurez peut-être à changer le type MIME de la requête. Par exemple, utilisez ce qui suit avant d’appeler `send()` pour envoyer des données de formulaire en tant que chaîne de requête :
+Notez que si vous voulez envoyer des données avec la méthode POST, vous aurez peut-être à changer le type MIME de la requête. Par exemple, utilisez ce qui suit avant d’appeler `send()` pour envoyer des données de formulaire en tant que chaîne de requête&nbsp;:
 
 ```js
 httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -90,7 +90,7 @@ if (httpRequest.readyState === XMLHttpRequest.DONE) {
 }
 ```
 
-La liste complète des valeurs de `readyState` est documentée sur [XMLHttpRequest.readyState](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Properties) et se résume de cette façon :
+La liste complète des valeurs de `readyState` est documentée sur [XMLHttpRequest.readyState](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Properties) et se résume de cette façon&nbsp;:
 
 - 0 (non initialisée) ou (requête non initialisée)
 - 1 (en cours de chargement) ou (connexion établie avec le serveur)
@@ -110,7 +110,7 @@ if (httpRequest.status === 200) {
 }
 ```
 
-Après avoir vérifié l’état de la requête et le code de statut HTTP de la réponse, vous pouvez traiter à votre guise les données envoyées par le serveur. Il existe deux manières d’accéder à ces données :
+Après avoir vérifié l’état de la requête et le code de statut HTTP de la réponse, vous pouvez traiter à votre guise les données envoyées par le serveur. Il existe deux manières d’accéder à ces données&nbsp;:
 
 - `httpRequest.responseText` — renvoie la réponse du serveur sous la forme d’une chaîne de texte ;
 - `httpRequest.responseXML` — renvoie la réponse sous la forme d’un objet `XMLDocument` que vous pouvez parcourir à l’aide des fonctions DOM de JavaScript.
@@ -119,7 +119,7 @@ Notez que les étapes ci-dessus sont valides uniquement si vous utilisez une req
 
 ### Étape 3 — Un exemple simple
 
-Rassemblons tous ces éléments dans un exemple : une requête HTTP simple. Notre JavaScript demande un document HTML, `test.html`, qui contient le texte « Je suis un test. », puis nous affichons le contenu de la réponse dans un message `alert()`. Remarquez que cet exemple n’utilise que du pur JavaScript vanilla (pas de jQuery). D’autre part, les fichiers HTML, XML et PHP doivent être placés dans le même dossier.
+Rassemblons tous ces éléments dans un exemple&nbsp;: une requête HTTP simple. Notre JavaScript demande un document HTML, `test.html`, qui contient le texte « Je suis un test. », puis nous affichons le contenu de la réponse dans un message `alert()`. Remarquez que cet exemple n’utilise que du pur JavaScript vanilla (pas de jQuery). D’autre part, les fichiers HTML, XML et PHP doivent être placés dans le même dossier.
 
 ```html
 <button id="ajaxButton" type="button">Faire une requête</button>
@@ -154,7 +154,7 @@ Rassemblons tous ces éléments dans un exemple : une requête HTTP simple. No
 </script>
 ```
 
-Dans cet exemple :
+Dans cet exemple&nbsp;:
 
 - L’utilisateur ou l’utilisatrice clique sur le bouton « Faire une requête » ;
 - Le gestionnaire d’évènement appelle la fonction `makeRequest()` ;
@@ -167,7 +167,7 @@ Dans cet exemple :
 
 > **Note :** Si la variable `httpRequest` est utilisée globalement, des appels concurrents à `makeRequest()` peuvent s’écraser l’un l’autre, provoquant une situation de compétition _(race condition_). On peut s’en prémunir en déclarant la variable `httpRequest` locale à une [closure](/fr/docs/Web/JavaScript/Closures) contenant les fonctions AJAX.
 
-Si une erreur de communication se produit (par exemple le serveur qui cesse de répondre), une exception sera levée dans la méthode `onreadystatechange` lors de l’accès à la propriété `status`. Pour atténuer ce problème, vous pouvez entourer votre bloc `if...then` dans un `try...catch` :
+Si une erreur de communication se produit (par exemple le serveur qui cesse de répondre), une exception sera levée dans la méthode `onreadystatechange` lors de l’accès à la propriété `status`. Pour atténuer ce problème, vous pouvez entourer votre bloc `if...then` dans un `try...catch`&nbsp;:
 
 ```js
 function alertContents(httpRequest) {
@@ -190,7 +190,7 @@ function alertContents(httpRequest) {
 
 Dans l’exemple précédent, après avoir reçu la réponse à la requête HTTP, nous avons utilisé la propriété `responseText` de l’objet, qui contenait le contenu du fichier `test.html`. Essayons maintenant la propriété `responseXML`.
 
-Tout d’abord, créons un document XML valide qui sera l’objet de la requête. Le document (`test.xml`) contient ce qui suit :
+Tout d’abord, créons un document XML valide qui sera l’objet de la requête. Le document (`test.xml`) contient ce qui suit&nbsp;:
 
 ```xml
 <?xml version="1.0" ?>
@@ -199,7 +199,7 @@ Tout d’abord, créons un document XML valide qui sera l’objet de la requête
 </root>
 ```
 
-Dans le script, il est seulement nécessaire de remplacer la ligne de requête par :
+Dans le script, il est seulement nécessaire de remplacer la ligne de requête par&nbsp;:
 
 ```html
 ...
@@ -207,7 +207,7 @@ onclick="makeRequest('test.xml')">
 ...
 ```
 
-Ensuite, dans `alertContents()`, il faut remplacer la ligne `alert(httpRequest.responseText);` par :
+Ensuite, dans `alertContents()`, il faut remplacer la ligne `alert(httpRequest.responseText);` par&nbsp;:
 
 ```js
 var xmldoc = httpRequest.responseXML;
@@ -225,7 +225,7 @@ Interwiki
 
 Pour finir, envoyons quelques données au serveur et réceptionnons la réponse. Notre JavaScript demandera cette fois-ci une page dynamique, `test.php`, qui prendra notre contenu envoyé et revera une chaîne « calculée » – "Bonjour, \[user data] !" – que nous afficherons via `alert()`.
 
-D’abord, nous allons ajouter un boîte de texte dans notre HTML afin que l’utilisateur ou l’utilisatrice puisse saisir son nom :
+D’abord, nous allons ajouter un boîte de texte dans notre HTML afin que l’utilisateur ou l’utilisatrice puisse saisir son nom&nbsp;:
 
 ```html
 <label>Vore nom :
@@ -236,7 +236,7 @@ D’abord, nous allons ajouter un boîte de texte dans notre HTML afin que l’u
 </span>
 ```
 
-Nous allons également ajouter une ligne à notre gestionnaire d’événement pour obtenir les données de la boite de texte et les envoyer à la fonction `makeRequest()`, ainsi que l’URL de notre script côté serveur :
+Nous allons également ajouter une ligne à notre gestionnaire d’événement pour obtenir les données de la boite de texte et les envoyer à la fonction `makeRequest()`, ainsi que l’URL de notre script côté serveur&nbsp;:
 
 ```js
   document.getElementById("ajaxButton").onclick = function() {
@@ -245,7 +245,7 @@ Nous allons également ajouter une ligne à notre gestionnaire d’événement p
   };
 ```
 
-Nous devons modifier `makeRequest()` afin d’accepter les données et les transmettre au serveur. Nous changerons la méthode de GET à POST et inclurons nos données en paramètres dans l’appel à `httpRequest.send()` :
+Nous devons modifier `makeRequest()` afin d’accepter les données et les transmettre au serveur. Nous changerons la méthode de GET à POST et inclurons nos données en paramètres dans l’appel à `httpRequest.send()`&nbsp;:
 
 ```js
   function makeRequest(url, userName) {
@@ -259,13 +259,13 @@ Nous devons modifier `makeRequest()` afin d’accepter les données et les trans
   }
 ```
 
-La fonction `alertContents()` peut être écrite de la même manière qu’à l’étape 3 pour afficher notre chaîne calculée, si c’est tout ce que le serveur renvoie. Cependant, supposons que le serveur renvoie à la fois la phrase calculée et la donnée originale. Donc si l’utilisateur ou l’utilisatrice a saisi « Dorothée », la réponse du serveur ressemblera à :
+La fonction `alertContents()` peut être écrite de la même manière qu’à l’étape 3 pour afficher notre chaîne calculée, si c’est tout ce que le serveur renvoie. Cependant, supposons que le serveur renvoie à la fois la phrase calculée et la donnée originale. Donc si l’utilisateur ou l’utilisatrice a saisi « Dorothée », la réponse du serveur ressemblera à&nbsp;:
 
 ```json
 {"userData":"Dorothée","computedString":"Bonjour, Dorothée !"}
 ```
 
-Pour utiliser cette phrase dans `alertContents()`, nous ne pouvons pas simplement afficher une alerte avec le contenu de `responseText`, nous devons l’analyser et afficher `computedString`, la propriété que nous souhaitons :
+Pour utiliser cette phrase dans `alertContents()`, nous ne pouvons pas simplement afficher une alerte avec le contenu de `responseText`, nous devons l’analyser et afficher `computedString`, la propriété que nous souhaitons&nbsp;:
 
 ```js
 function alertContents() {
@@ -280,7 +280,7 @@ function alertContents() {
 }
 ```
 
-Le fichier `test.php` devrait contenir ce qui suit :
+Le fichier `test.php` devrait contenir ce qui suit&nbsp;:
 
 ```php
 $name = (isset($_POST['userName'])) ? $_POST['userName'] : 'anonyme';

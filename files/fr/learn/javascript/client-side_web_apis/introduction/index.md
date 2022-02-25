@@ -22,7 +22,7 @@ Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API — leur fo
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Des connaissances de base en informatique, une compréhension de base du
         <a href="/fr/docs/Learn/HTML">HTML</a> et
@@ -34,7 +34,7 @@ Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API — leur fo
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Vous familiariser avec les API, ce qu'elles permettent de faire, et
         comment les utiliser dans votre code.
@@ -76,7 +76,7 @@ Ci-dessus, nous avons indiqué ce qu'est une API JavaScript côté client et sa 
 - Les API tierces — Constructions intégrées à des plateformes tierces (par exemple Twitter, Facebook) qui permettent d'utiliser certaines fonctionnalités de ces plateformes dans vos propres pages Web (par exemple: afficher vos derniers Tweets sur votre page Web).
 - Les bibliothèques JavaScript — Habituellement, un ou plusieurs fichiers JavaScript contenant des [fonctions personnalisées](/fr/docs/Learn/JavaScript/Building_blocks/Functions#custom_functions) que vous pouvez attacher à votre page Web pour accélérer ou activer l'écriture de fonctionnalités courantes. Des exemples incluent jQuery, Mootools et React.
 - Les _frameworks_ JavaScript — Au‑dessus des bibliothèques, les _frameworks_ JavaScript (par exemple Angular et Ember) sont plutôt des packages de HTML, CSS, JavaScript et autres technologies, que vous installez puis utilisez pour écrire une application web entière.
-  La différence essentielle entre une bibliothèque et un _framework_ est « l'Inversion du Contrôle ». Avec une bibliothèque, c'est le développeur qui appelle les méthodes de la bibliothèque — il exerce le contrôle. Avec un _framework_, le contrôle est inversé : c'est le _framework_ qui appelle le code du développeur.
+  La différence essentielle entre une bibliothèque et un _framework_ est « l'Inversion du Contrôle ». Avec une bibliothèque, c'est le développeur qui appelle les méthodes de la bibliothèque — il exerce le contrôle. Avec un _framework_, le contrôle est inversé&nbsp;: c'est le _framework_ qui appelle le code du développeur.
 
 ## Que peuvent faire les API ?
 
@@ -84,18 +84,18 @@ Il y a un beaucoup d'API disponibles dans les navigateurs modernes. Elles permet
 
 ### API de navigateur courantes
 
-En particulier, voici les catégories d'API de navigateur les plus courantes que vous utiliserez (et que nous allons voir dans ce module plus en détail) :
+En particulier, voici les catégories d'API de navigateur les plus courantes que vous utiliserez (et que nous allons voir dans ce module plus en détail)&nbsp;:
 
 - **Les API pour manipuler des documents** chargés dans le navigateur. L'exemple le plus évident est l'[API DOM (_Document Object Model_)](/fr/docs/Web/API/Document_Object_Model). Elle permet de manipuler le HTML et CSS — créer, supprimer et modifier du code HTML, appliquer de nouveaux styles à votre page dynamiquement, etc. Par exemple, chaque fois que vous voyez une fenêtre pop-up apparaître sur une page, ou qu'un nouveau contenu affiché, c'est que le DOM est en action. Découvrez-en plus sur ces types d'API dans la rubrique [Manipuler des documents](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents).
 - **Les API pour récupérer des données du serveur**, afin de mettre à jour des sections d'une page Web, sont couramment utilisées. Ce détail apparemment anodin a eu un impact énorme sur les performances et le comportement des sites — si vous avez juste besoin de mettre à jour une liste de produits ou afficher de nouveaux articles disponibles, le faire instantanément sans avoir à recharger toute la page du serveur peut rendre le site ou l'application beaucoup plus réactif et « accrocheur ». [XMLHttpRequest ](/fr/docs/Web/API/XMLHttpRequest)et l'[API Fetch](/fr/docs/Web/API/Fetch_API) sont les API qui rendent ça possible. Vous verrez aussi peut-être le terme **Ajax** pour qualifier cette technique. Pour en savoir plus sur ces API, voir [Récupérer des données du serveur.](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
 - **Les API pour dessiner et manipuler des graphiques** sont maintenant couramment prises en charge dans les navigateurs — les plus populaires sont [Canvas ](/fr/docs/Web/API/Canvas_API)et [WebGL](/fr/docs/Web/API/WebGL_API). Elles permettent la mise à jour, par programmation, des pixels contenus dans un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) pour créer des scènes 2D et 3D. Par exemple, vous pouvez dessiner des formes comme des rectangles ou des cercles, importer une image sur le canevas, et lui appliquer un filtre sépia ou niveau de gris à l'aide de l'API Canvas ou encore créer une scène 3D complexe avec éclairage et textures en utilisant WebGL. De telles API sont souvent combinées avec d'autres API, par exemple [`window.requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame), pour créer des boucles d'animation (faire des mises à jour continues de scènes) et ainsi créer des dessins animés et des jeux. Pour en savoir plus sur ces API, voir [Dessiner des éléments graphiques](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics).
 - **Les API audio et vidéo** comme [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement), [Web Audio API](/fr/docs/Web/API/Web_Audio_API) ou [WebRTC](/fr/docs/Web/API/WebRTC_API), permettent de faire des choses vraiment intéressantes avec du multimédia, telles que la création de contrôles UI personnalisées pour jouer de l'audio et vidéo, l'affichage de textes comme des légendes et des sous-titres, la récupération de vidéos depuis votre webcam pour l'afficher sur l'ordinateur d'une autre personne dans une visio‑conférence ou encore l'ajout d'effets sur des pistes audio (tels que le gain, la distorsion, la balance, etc.). Pour en savoir plus sur ces API, voir [API audio et vidéo](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs).
-- **Les API de périphérique** permettent essentiellement de manier et récupérer des données à partir de périphériques modernes, de manière utile pour les applications Web. Nous avons déjà parlé de l'API de géolocalisation accédant aux données d'emplacement de l'appareil afin que vous puissiez repérer votre position sur une carte. Autres exemples : indiquer à l'utilisateur qu'une mise à jour est disponible pour une application Web via des notifications système (voir l'[API Notifications](/fr/docs/Web/API/Notifications_API)) ou des vibrations (voir l'[API Vibration](/fr/docs/Web/API/Vibration_API)).
+- **Les API de périphérique** permettent essentiellement de manier et récupérer des données à partir de périphériques modernes, de manière utile pour les applications Web. Nous avons déjà parlé de l'API de géolocalisation accédant aux données d'emplacement de l'appareil afin que vous puissiez repérer votre position sur une carte. Autres exemples&nbsp;: indiquer à l'utilisateur qu'une mise à jour est disponible pour une application Web via des notifications système (voir l'[API Notifications](/fr/docs/Web/API/Notifications_API)) ou des vibrations (voir l'[API Vibration](/fr/docs/Web/API/Vibration_API)).
 - **Les API de stockage côté client** deviennent de plus en plus répandues dans les navigateurs Web — la possibilité de stocker des données côté client est très utile si vous souhaitez créer une application qui enregistre son état entre les chargements de page, et peut-être même fonctionner lorsque le périphérique est hors ligne. Il existe un certain nombre d'options disponibles, par exemple le simple stockage nom/valeur avec l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API), et le stockage plus complexe de données tabulaires avec l'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API). Pour en savoir plus sur ces API, voir [Stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage).
 
 ### API tierces courantes
 
-Il y a une grande variété d'API tierces ; en voici quelques-unes des plus populaires que vous allez probablement utiliser tôt ou tard :
+Il y a une grande variété d'API tierces ; en voici quelques-unes des plus populaires que vous allez probablement utiliser tôt ou tard&nbsp;:
 
 - [L'API Twitter](https://dev.twitter.com/overview/documentation) vous permet d'afficher vos derniers tweets sur un site web.
 - Les API de cartographie comme [Mapquest](https://developer.mapquest.com/) et [Google Maps API](https://developers.google.com/maps/) vous permettent de réaliser toute sorte de cartes dans des pages web.

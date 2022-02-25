@@ -9,7 +9,7 @@ Le standard _Storage_ définit un système de stockage commun et partagé utilis
 
 {{AvailableInWorkers}}
 
-Le stockage de site — les données stockées pour un site web qui sont gérées par le standard Storage — inclut :
+Le stockage de site — les données stockées pour un site web qui sont gérées par le standard Storage — inclut&nbsp;:
 
 - [les bases de données IndexedDB](/fr/docs/Web/API/IndexedDB_API) ;
 - [les données de l’API Cache](/fr/docs/Web/API/Cache) ;
@@ -34,7 +34,7 @@ Les {{Glossary("User agent", "agents utilisateur")}} sont susceptibles d’utili
 
 ## Modes de boîte
 
-Le stockage de données en lui-même, au sein de chaque unité de stockage, est appelé sa **boîte**. Chaque unité de stockage de site a exactement une boîte dans laquelle toutes ses données sont placées, et a une **mode de boîte** qui décrit la politique de conservation de données pour cette boîte. Il existe deux modes :
+Le stockage de données en lui-même, au sein de chaque unité de stockage, est appelé sa **boîte**. Chaque unité de stockage de site a exactement une boîte dans laquelle toutes ses données sont placées, et a une **mode de boîte** qui décrit la politique de conservation de données pour cette boîte. Il existe deux modes&nbsp;:
 
 - `"best-effort"`
   - : L’agent utilisateur essayera de conserver les données contenues dans la boîte aussi longtemps qu’il peut, _mais n’avertira pas l’utilisateur ou l’utilisatrice_ si l’espace de stockage approche sa limite et s’il devient nécessaire de nettoyer la boîte afin de réduire la pression de stockage.
@@ -55,7 +55,7 @@ Si une boîte est marquée `"persistent"`, le contenu ne sera pas nettoyé par l
 
 ## Estimations de quota et d’usage
 
-L’agent utilisateur détermine, à l’aide du mécanisme de son choix, la quantité maximale de stockage qu’un site donné peut utiliser. Ce maximum est le **quota** de l’origine. La quantité de cet espace utilisée par le site est appelée son **usage**. Ces deux valeurs sont des estimations ; elles sont imprécise pour plusieurs raisons :
+L’agent utilisateur détermine, à l’aide du mécanisme de son choix, la quantité maximale de stockage qu’un site donné peut utiliser. Ce maximum est le **quota** de l’origine. La quantité de cet espace utilisée par le site est appelée son **usage**. Ces deux valeurs sont des estimations ; elles sont imprécise pour plusieurs raisons&nbsp;:
 
 - Les agents utilisateur sont encouragés à dissimuler la taille exacte des données utilisées par une origine donnée, pour empêcher que ces valeurs soient utilisées à des fins de fingerprinting.
 - La dé-duplication, la compression et d’autres méthodes pour réduire la taille physique des données stockées peuvent être utilisées.
@@ -63,7 +63,7 @@ L’agent utilisateur détermine, à l’aide du mécanisme de son choix, la qua
 
 Les agents utilisateurs peuvent utiliser toute méthode de leur choix pour déterminer la taille du quota de l’origine, et sont encouragés par la spécification à fournir de l’espace supplémentaire aux sites populaires ou fréquemment visités.
 
-Pour déterminer les valeurs de quota et d’usage estimées pour une origine donnée, utilisez la méthode {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}}, qui retourne une promesse qui, une fois résolue, reçoit un {{domxref("StorageEstimate")}} qui contient ces nombres. Par exemple :
+Pour déterminer les valeurs de quota et d’usage estimées pour une origine donnée, utilisez la méthode {{domxref("StorageManager.estimate", "navigator.storage.estimate()")}}, qui retourne une promesse qui, une fois résolue, reçoit un {{domxref("StorageEstimate")}} qui contient ces nombres. Par exemple&nbsp;:
 
 ```js
 navigator.storage.estimate().then(estimate => {

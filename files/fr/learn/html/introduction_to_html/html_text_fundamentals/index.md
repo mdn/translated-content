@@ -749,7 +749,7 @@ Il est parfaitement possible d'imbriquer une liste dans une autre. Il se peut qu
 </ol>
 ```
 
-Comme les deux dernières puces de la liste sont très liées à celle qui les précède (elles semblent être des sous-instructions ou des choix correspondant à cette puce), il peut être judicieux de les regrouper dans une même liste non-ordonnée, et placer cette liste dans le quatrième item. Cela ressemblerait alors à ceci :
+Comme les deux dernières puces de la liste sont très liées à celle qui les précède (elles semblent être des sous-instructions ou des choix correspondant à cette puce), il peut être judicieux de les regrouper dans une même liste non-ordonnée, et placer cette liste dans le quatrième item. Cela ressemblerait alors à ceci&nbsp;:
 
 ```html
 <ol>
@@ -809,7 +809,7 @@ Il est possible d'imbriquer `strong` et `em` :
 si vous en buvez, <strong>vous pourriez en <em>mourir</em></strong>.</p>
 ```
 
-### Apprentissage actif : soulignez l'important
+### Apprentissage actif&nbsp;: soulignez l'important
 
 Dans ce paragraphe d'apprentissage actif, nous avons donné un exemple modifiable. À l'intérieur, nous aimerions que vous essayiez d'ajouter de l'emphase et de l'importance aux mots quand vous pensez qu'ils en ont besoin, juste pour une bonne pratique.
 
@@ -950,8 +950,8 @@ HTML5 a redéfini `<b>`, `<i>` et `<u>` avec de nouveaux rôles sémantiques que
 Voici la meilleure règle d'or : il est probablement approprié d'utiliser `<b>`, `<i>`, ou `<u>` pour communiquer le sens traditionnellement associé aux caractères gras, italiques ou soulignés, à condition qu'il n'y ait pas d'élément plus approprié. Toutefois, il demeure toujours essentiel de garder présent à l'esprit le concept d'accessibilité. L'écriture en italique n'est pas très utile aux personnes utilisant des lecteurs d'écran ou un système d'écriture autre que l'alphabet latin.
 
 - {{HTMLElement('i')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec l'italique : des mots étrangers, une désignation taxonomique, des termes techniques, une pensée…
-- {{HTMLElement('b')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec les caractères en gras : des mots‑clés, des noms de produits, une phrase liminaire…
-- {{HTMLElement('u')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec le soulignement : noms propres, mauvaise orthographe...
+- {{HTMLElement('b')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec les caractères en gras&nbsp;: des mots‑clés, des noms de produits, une phrase liminaire…
+- {{HTMLElement('u')}} s'utilise pour transmettre un sens traditionnellement véhiculé avec le soulignement&nbsp;: noms propres, mauvaise orthographe...
 
 > **Note :** Un petit avertissement à propos du soulignement : **les gens associent fortement soulignement et hyperliens**. Par conséquent, sur le Web, il est préférable de ne souligner que les liens. N'utilisez l'élément `<u>` que s'il est sémantiquement approprié, mais envisagez d'utiliser les CSS pour remplacer le soulignement par défaut par quelque chose de plus approprié sur le Web. L'exemple ci-dessous illustre comment cela peut être fait.
 

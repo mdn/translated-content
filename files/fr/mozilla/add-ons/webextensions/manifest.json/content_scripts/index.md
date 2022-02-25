@@ -37,7 +37,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
 Ordonne au navigateur de charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages web dont l’URL correspond à un modèle donné.
 
-Cette clé est un tableau. Chaque élément est un objet qui :
+Cette clé est un tableau. Chaque élément est un objet qui&nbsp;:
 
 - **doit** contenir une clé nommée **`matches`**, qui spécifie les modèles d’URL à reconnaître afin que les scripts soient chargés ;
 - **peut** contenir des clés nommées **`js`** et **`css`**, qui listent les scripts à charger dans les pages correspondantes ;
@@ -59,7 +59,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
       <td>{{ jsxref("boolean", "Booléen") }}</td>
       <td>
         <p>
-          <code>true</code> : injecte les scripts spécifiés dans
+          <code>true</code>&nbsp;: injecte les scripts spécifiés dans
           {{ anch("js") }} et {{ anch("css") }} dans tous les cadres
           correspondant aux exigences d’URL spécifiées, même s’il n’est pas le
           cadre le plus haut d’un onglet. Cela n’injecte pas dans les cadres
@@ -68,7 +68,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           cadre indépendamment.
         </p>
         <p>
-          <code>false</code> : injecte seulement dans le cadre le plus haut de
+          <code>false</code>&nbsp;: injecte seulement dans le cadre le plus haut de
           l’onglet qui répond aux exigences d’URL.
         </p>
         <p>Par défaut à <code>false</code>.</p>
@@ -141,7 +141,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
         <p>
           Les fichiers sont injectés dans l’ordre indiqué. Cela signifie que,
           par exemple, si vous incluez ici jQuery suivi d’un autre script de
-          contenu, comme ceci :
+          contenu, comme ceci&nbsp;:
         </p>
         <pre class="brush: json">
 "js": ["jquery.js", "my-content-script.js"]</pre
@@ -172,7 +172,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
         </p>
         <p>
           Par exemple, supposons que vous disposiez d’une clé de
-          <code>content_scripts</code> comme ceci :
+          <code>content_scripts</code> comme ceci&nbsp;:
         </p>
         <pre class="brush: json">
 "content_scripts": [
@@ -222,21 +222,21 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           {{ anch("js") }} sont injectés. Vous pouvez fournir une chaîne
           parmi trois ici, chacune identifiant un état dans le processus de
           chargement d’un document. Les états correspondent directement à
-          {{domxref("Document/readyState", "Document.readyState")}} :
+          {{domxref("Document/readyState", "Document.readyState")}}&nbsp;:
         </p>
         <ul>
           <li>
-            <code>"document_start"</code> : correspond à <code>"loading"</code>.
+            <code>"document_start"</code>&nbsp;: correspond à <code>"loading"</code>.
             Le DOM est toujours en cours de chargement.
           </li>
           <li>
-            <code>"document_end"</code> : correspond à
+            <code>"document_end"</code>&nbsp;: correspond à
             <code>"interactive"</code>. Le DOM a fini de charger, mais des
             ressources telles que des scripts et des images peuvent toujours
             être en cours de chargement.
           </li>
           <li>
-            <code>"document_idle"</code> : correspond à <code>"complete"</code>.
+            <code>"document_idle"</code>&nbsp;: correspond à <code>"complete"</code>.
             Le document et toutes ses ressources ont terminé de charger.
           </li>
         </ul>
@@ -252,14 +252,14 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
 
 ## Les modèles de correspondance d’URL
 
-La clé `content_scripts` associe les scripts de contenu aux documents en fonction de la correspondance des URL : si l’URL du document correspond à la spécification de la clé, le script sera joint. Il existe quatre propriétés dans `content_scripts` que vous pouvez utiliser pour cette spécification :
+La clé `content_scripts` associe les scripts de contenu aux documents en fonction de la correspondance des URL&nbsp;: si l’URL du document correspond à la spécification de la clé, le script sera joint. Il existe quatre propriétés dans `content_scripts` que vous pouvez utiliser pour cette spécification&nbsp;:
 
-- `matches` : un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) (modèles).
-- `exclude_matches` : un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
-- `include_globs` : un tableau de {{ anch("globs") }} (caractères génériques).
-- `exclude_globs` : un tableau de {{ anch("globs") }}.
+- `matches`&nbsp;: un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) (modèles).
+- `exclude_matches`&nbsp;: un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
+- `include_globs`&nbsp;: un tableau de {{ anch("globs") }} (caractères génériques).
+- `exclude_globs`&nbsp;: un tableau de {{ anch("globs") }}.
 
-Pour associer une de ces propriétés, une URL doit correspondre à au moins un des éléments de son tableau. Par exemple, donner une propriété comme :
+Pour associer une de ces propriétés, une URL doit correspondre à au moins un des éléments de son tableau. Par exemple, donner une propriété comme&nbsp;:
 
 ```json
 "matches": ["*://*.example.org/*", "*://*.example.com/*"]
@@ -267,7 +267,7 @@ Pour associer une de ces propriétés, une URL doit correspondre à au moins un 
 
 Les deux adresses `http://example.org/` et `http://example.com/` correspondront.
 
-Étant donné que `matches` est la seule clé obligatoire, les trois autres clés sont utilisées pour limiter davantage les URL qui correspondent. Pour associer la clé dans son ensemble, une URL doit :
+Étant donné que `matches` est la seule clé obligatoire, les trois autres clés sont utilisées pour limiter davantage les URL qui correspondent. Pour associer la clé dans son ensemble, une URL doit&nbsp;:
 
 1.  Correspondre à la propriété `matches` ;
 2.  ET associer à la propriété `include_globs`, si présent ;
@@ -276,12 +276,12 @@ Les deux adresses `http://example.org/` et `http://example.com/` correspondront.
 
 ### globs
 
-Un « glob » est juste une chaîne qui peut contenir des caractères génériques. Il existe deux types de caractères génériques, et vous pouvez les combiner dans le même glob :
+Un « glob » est juste une chaîne qui peut contenir des caractères génériques. Il existe deux types de caractères génériques, et vous pouvez les combiner dans le même glob&nbsp;:
 
 - `"*"` correspond à zéro ou plus de caractères
 - `"?"` correspond exactement à un caractère.
 
-Par exemple : `"*na?i"` correspond à `"illuminati"` et à `"annunaki"`, mais pas à `"sagnarelli"`.
+Par exemple&nbsp;: `"*na?i"` correspond à `"illuminati"` et à `"annunaki"`, mais pas à `"sagnarelli"`.
 
 ## Exemple
 

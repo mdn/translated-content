@@ -50,7 +50,7 @@ Dans ce projet, l'objectif est d'ajouter des éléments structurels au contenu d
 - une zone de contenu principal de deux colonnes : un bloc principal avec le texte de bienvenue et une barre latérale avec des vignettes d'images,
 - un pied de page avec les informations de droits d'auteur et les crédits.
 
-Vous devez ajouter les enveloppes appropriées pour :
+Vous devez ajouter les enveloppes appropriées pour&nbsp;:
 
 - l'en-tête
 - le menu de navigation

@@ -176,17 +176,17 @@ Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier[ ar
   <h1>à: Mozilla</h1>
 
   <div id="from">
-    <label for="name">de :</label>
+    <label for="name">de&nbsp;:</label>
     <input type="text" id="name" name="user_name">
   </div>
 
   <div id="reply">
-    <label for="mail">répondre à :</label>
+    <label for="mail">répondre à&nbsp;:</label>
     <input type="email" id="mail" name="user_email">
   </div>
 
   <div id="message">
-    <label for="msg">Votre message :</label>
+    <label for="msg">Votre message&nbsp;:</label>
     <textarea id="msg" name="user_message"></textarea>
   </div>
 
@@ -206,7 +206,7 @@ C'est ici que le « fun » commence ! Avant de commencer à coder, nous avons be
 
 
 
-Les polices demandent un supplément de traitement avant de débuter :
+Les polices demandent un supplément de traitement avant de débuter&nbsp;:
 
 1.  Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de fontsquirrel.
 2.  En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.

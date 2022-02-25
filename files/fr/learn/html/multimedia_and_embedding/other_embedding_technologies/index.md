@@ -24,7 +24,7 @@ Maintenant, vous devriez vraiment avoir la main pour intégrer des choses dans l
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Compétences informatiques de base, 
         <a
@@ -41,7 +41,7 @@ Maintenant, vous devriez vraiment avoir la main pour intégrer des choses dans l
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Apprendre comment incorporer des éléments, tels que d'autres pages ou
         des clips Flash,  dans des pages Web à l'aide de
@@ -58,7 +58,7 @@ Il y a longtemps, sur le Web, il était courant d'utiliser des **cadres** pour c
 
 
 
-Un peu plus tard (fin des années 90, début des années 2000), la technique des greffons est devenue très populaire, citons les [applets Java](/fr/docs/Glossary/Java) et [Flash](/fr/docs/Glossary/Adobe_Flash) — ils permettaient aux développeurs web d'intégrer du contenu riche dans des pages web telles que des vidéos et des animations, ce qui n'était tout simplement pas possible avec le HTML. L'intégration de ces techniques a été réalisée grâce à des éléments comme {{htmlelement("object")}} et {{htmlelement("embed")}}, un peu moins utilisé. Ils étaient très utiles à l'époque. Ils sont depuis tombés en désuétude en raison de nombreux problèmes : accessibilité, sécurité, taille de fichier et autres ; de nos jours, la plupart des mobiles ne prennent plus en charge de tels greffons, et les ordinateurs de bureau sont en train de les abandonner.
+Un peu plus tard (fin des années 90, début des années 2000), la technique des greffons est devenue très populaire, citons les [applets Java](/fr/docs/Glossary/Java) et [Flash](/fr/docs/Glossary/Adobe_Flash) — ils permettaient aux développeurs web d'intégrer du contenu riche dans des pages web telles que des vidéos et des animations, ce qui n'était tout simplement pas possible avec le HTML. L'intégration de ces techniques a été réalisée grâce à des éléments comme {{htmlelement("object")}} et {{htmlelement("embed")}}, un peu moins utilisé. Ils étaient très utiles à l'époque. Ils sont depuis tombés en désuétude en raison de nombreux problèmes&nbsp;: accessibilité, sécurité, taille de fichier et autres ; de nos jours, la plupart des mobiles ne prennent plus en charge de tels greffons, et les ordinateurs de bureau sont en train de les abandonner.
 
 Enfin, l'élément {{htmlelement("iframe")}} est apparu (avec d'autres moyens d'intégration de contenu, comme {{htmlelement("canvas")}}, {{htmlelement("video")}}, etc). Cet élément permet d'intégrer un document web entier dans un autre, comme s'il s'agissait d'un élément {{htmlelement("img")}}} ou d'un autre élément de ce type. Il  est régulièrement utilisé aujourd'hui.
 
@@ -66,7 +66,7 @@ Maintenant que la leçon d'histoire est terminée, passons à autre chose et voy
 
 
 
-## Apprentissage actif : utilisations classiques de l'intégration
+## Apprentissage actif&nbsp;: utilisations classiques de l'intégration
 
 Dans cet article, passons directement à l'apprentissage actif pour vous donner tout de suite une idée concrète de l'utilité des techniques d'intégration. Le monde en ligne connaît très bien [Youtube](https://www.youtube.com/), mais beaucoup de gens ne connaissent pas les facilités de partage dont il dispose. Voyons comment Youtube nous permet d'intégrer une vidéo dans toute page qui nous plairait à l'aide d'un élément {{htmlelement("iframe")}}}.
 
@@ -211,7 +211,7 @@ textarea.onkeyup = function(){
 
 Alors, facile et amusant, non ? Les éléments {{htmlelement("iframe")}} sont conçus pour intégrer d'autres documents Web dans le document en cours de traitement. C'est ce qu'il y a de mieux pour incorporer des contenus tierce‑partie dans un site Web, contenus sur lesquels vous n'aurez peut‑être pas de contrôle direct, mais pour lesquels vous ne voulez pas implémenter votre propre version — comme une vidéo de fournisseurs de vidéo en ligne, un système de commentaires comme [Disqus](https://disqus.com/), des cartes de fournisseurs en ligne, des bandeaux publicitaires, etc. Les exemples modifiables en direct utilisés dans ce cours ont été implémentés avec des `<iframe>`.
 
-Il y a de sérieux {{anch("problèmes de sécurité")}} à prendre en considération avec \<iframe>, comme nous le verrons plus loin, mais cela ne veut pas dire que vous ne devez pas les utiliser dans vos sites Web — cela demande juste un peu de connaissance et de soin à la conception. Examinons le code un peu plus en détail. Disons que vous voulez intégrer le glossaire MDN dans une de vos pages Web — vous pourriez tenter quelque chose comme :
+Il y a de sérieux {{anch("problèmes de sécurité")}} à prendre en considération avec \<iframe>, comme nous le verrons plus loin, mais cela ne veut pas dire que vous ne devez pas les utiliser dans vos sites Web — cela demande juste un peu de connaissance et de soin à la conception. Examinons le code un peu plus en détail. Disons que vous voulez intégrer le glossaire MDN dans une de vos pages Web — vous pourriez tenter quelque chose comme&nbsp;:
 
     <iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
             width="100%" height="500" frameborder="0"
@@ -220,7 +220,7 @@ Il y a de sérieux {{anch("problèmes de sécurité")}} à prendre en considéra
         Lien de repli pour les navigateurs ne prenant pas en charge iframe  </a> </p>
     </iframe>
 
-Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisation d'un `<iframe>` :
+Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisation d'un `<iframe>`&nbsp;:
 
 - {{htmlattrxref('allowfullscreen','iframe')}}
   - : Si activé, `<iframe>` pourra être mis en mode plein écran avec [Full Screen API](/fr/docs/Web/API/Fullscreen_API) (un peu hors‑sujet dans cet article).
@@ -243,7 +243,7 @@ Nous avons dit plus haut qu'il y avait des problèmes en matière de sécurité 
 
 Fabricants de navigateurs et développeurs Web ont appris à la dure que `<iframe>` constitue sur le Web une cible commune (terme officiel : un **vecteur d'attaque**) pour des personnes mal intentionnées.  `<iframe>` est une porte d'entrée pour les attaques de ces personnes quand ils essaient de modifier malicieusement une page Web ou d'amener des utilisateurs à faire quelque chose qu'ils ne voudraient pas faire, comme révéler des informations confidentielles comme noms d'utilisateur et mots de passe. Pour cette raison, les ingénieurs spécialistes et les développeurs de navigateurs ont développé divers mécanismes de sécurité pour rendre `<iframe>` plus sûr. De meilleures pratiques sont aussi à prendre en compte — nous allons développer certaines d'entre elles ci-dessous.
 
-> **Note :** Le {{interwiki('wikipedia','détournement de clic')}} est un type d'attaque courant par l'intermédiaire de `<iframe>` : les hackeurs incorporent un `<iframe>` invisible dans votre document (ou intégrent votre document dans leur propre site malveillant) et s'en servent pour capturer les interactions utilisateur. C'est un moyen courant pour tromper des utilisateurs ou voler leurs données confidentielles.
+> **Note :** Le {{interwiki('wikipedia','détournement de clic')}} est un type d'attaque courant par l'intermédiaire de `<iframe>`&nbsp;: les hackeurs incorporent un `<iframe>` invisible dans votre document (ou intégrent votre document dans leur propre site malveillant) et s'en servent pour capturer les interactions utilisateur. C'est un moyen courant pour tromper des utilisateurs ou voler leurs données confidentielles.
 
 Un exemple rapide d'abord - essayez de charger l'exemple précédent que nous avons montré ci-dessus dans votre navigateur - vous pouvez le [trouver en direct sur Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (voyez le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) aussi). Vous ne verrez rien d'affiché sur la page, et si vous regardez la _Console_ dans les [outils de développement](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) du navigateur, vous verrez un message vous disant pourquoi. Dans Firefox, ce message indique _Load denied by X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary does not permit framing_ (_Chargement interdit par X-Frame-Options: https\://developer.mozilla.org/en-US/docs/Glossary ne permet pas la mise en cadre_) . C'est parce que les développeurs qui ont construit MDN ont inclus un paramètre sur le serveur des pages du site empêchant l'intégration de ces pages sur un autre site avec `<iframe>` (voir {{anch("Configurer les directives CSP")}}, ci-dessous). Parfaitement sensé — il n'y a aucune raison d'intégrer une page entière de MDN dans d'autres pages, sauf à vouloir les intégrer dans votre site et les prétendre vôtres, ou bien tenter de voler des données par l'intermédiaire d'un détournement de clic, actions qui sont tous les deux des malhonnêtetés. De plus, si tout le monde se mettait à faire cela, toute la bande passante supplémentaire nécessaire commencerait à coûter un paquet d'argent à Mozilla.
 
@@ -288,7 +288,7 @@ Les éléments {{htmlelement("embed")}} et {{htmlelement("object")}} ont une fon
 
 > **Note :** Un **greffon** est un logiciel qui permet d'avoir accès à des contenus que le navigateur n'est pas capable de lire de manière native.
 
-Cependant, il est peu probable que vous utilisiez beaucoup ces éléments — les applets ne sont plus utilisés depuis des années, Flash n'est plus très apprécié pour un certain nombre de raisons (voir {{anch("Le cas « greffons »")}}}, ci-dessous), les PDF ont tendance à être plutôt liés qu'intégrés, et les autres contenus tels que les images et la vidéo disposent d'éléments d'intégration beaucoup plus faciles à manipuler. Les greffons et ces méthodes d'intégration sont assurément une technique traditionnelle héritée : nous les mentionnons principalement au cas où vous les rencontreriez dans certaines circonstances, comme des intranets ou des projets d'entreprise.
+Cependant, il est peu probable que vous utilisiez beaucoup ces éléments — les applets ne sont plus utilisés depuis des années, Flash n'est plus très apprécié pour un certain nombre de raisons (voir {{anch("Le cas « greffons »")}}}, ci-dessous), les PDF ont tendance à être plutôt liés qu'intégrés, et les autres contenus tels que les images et la vidéo disposent d'éléments d'intégration beaucoup plus faciles à manipuler. Les greffons et ces méthodes d'intégration sont assurément une technique traditionnelle héritée&nbsp;: nous les mentionnons principalement au cas où vous les rencontreriez dans certaines circonstances, comme des intranets ou des projets d'entreprise.
 
 Si vous avez besoin d'intégrer du contenu de greffon, vous aurez besoin de ce minimum d'information :
 
@@ -318,7 +318,7 @@ Voici un exemple utilisant l'élément {{htmlelement("embed")}} pour intégrer u
 
 Plutôt horrible, n'est-ce pas ? Le HTML généré par l'outil Adobe Flash avait tendance à être encore pire, utilisant un élément \<objet> avec un élément \<embed> intégré pour couvrir toutes les bases (voir un exemple.) Flash a même été utilisé avec succès comme contenu de repli pour la vidéo HTML5, pendant un certain temps, mais cela est de plus en plus souvent considéré comme non nécessaire.
 
-Regardons maintenant un exemple avec `<object>` ; il intègre  un PDF dans une  (voir  [l'exemple en direct](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) et le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)) :
+Regardons maintenant un exemple avec `<object>` ; il intègre  un PDF dans une  (voir  [l'exemple en direct](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) et le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html))&nbsp;:
 
 ```html
 <object data="mypdf.pdf" type="application/pdf"
@@ -342,7 +342,7 @@ Alors, que faire ? Si vous avez besoin d'interactivité, HTML et {{glossary("Jav
 
 ## Résumé
 
-Le problème de l'intégration de contenus tiers dans des documents web peut rapidement devenir très complexe : dans cet article nous avons donc essayé de le présenter de manière simple et classique — en espérant la méthode pertinente même si elle touche à certaines fonctionnalités parmi les plus avancées des techniques impliquées. Pour commencer, il est peu probable que vous utilisiez l'intégration pour autre chose que l'intégration de contenu tiers de cartes ou vidéos dans vos pages. L'expérience grandissant, il est vraisemblable que vous lui trouverez d'autres utilisations.
+Le problème de l'intégration de contenus tiers dans des documents web peut rapidement devenir très complexe&nbsp;: dans cet article nous avons donc essayé de le présenter de manière simple et classique — en espérant la méthode pertinente même si elle touche à certaines fonctionnalités parmi les plus avancées des techniques impliquées. Pour commencer, il est peu probable que vous utilisiez l'intégration pour autre chose que l'intégration de contenu tiers de cartes ou vidéos dans vos pages. L'expérience grandissant, il est vraisemblable que vous lui trouverez d'autres utilisations.
 
 D'autres techniques impliquent l'intégration de contenu externe en plus de celles discutées ici. Nous en avons vu dans des articles précédents, comme {{htmlelement("video")}}}, {{htmlelement("audio")}}, et {{htmlelement("img")}}}, mais il y en a d'autres à découvrir, comme {{htmlelement("canvas")}} pour les graphiques 2D et 3D générés en JavaScript, et {{htmlelement("svg")}} pour intégrer des graphiques vectoriels. Nous verrons SVG dans le prochain article de ce module.
 

@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 
 Permet aux extensions de stocker et de récupérer des données et d'écouter les modifications apportées aux éléments stockés.
 
-Le mécanisme de stockage est basé sur l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API), à quelques différences près. Elles incluent entre autres :
+Le mécanisme de stockage est basé sur l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API), à quelques différences près. Elles incluent entre autres&nbsp;:
 
 - Le mécanisme est asynchrone.
 - La portée des valeurs s'étend à l'extension, pas à un domaine en particulier (c-à-d que les mêmes paires clef/valeur sont disponibles pour tous les scripts d'arrière-plan et de contenu).

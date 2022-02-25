@@ -11,7 +11,7 @@ Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les don
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs, une bonne compréhension du
         <a href="/fr/docs/Learn/HTML">HTML</a>, des
@@ -20,7 +20,7 @@ Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les don
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Comprendre ce qu'est la validation d'un formulaire, pourquoi c'est
         important et comment la mettre en œuvre.
@@ -40,7 +40,7 @@ Allez sur n'importe quel site à la mode avec un formulaire d'inscription et vou
 
 C'est ce qu'on appelle la validation de formulaire —  lorsque vous saisissez des données, l'application Web vérifie si elles sont correctes. Si elles sont correctes, l'application permet que les données soient soumises au serveur et (généralement) sauvegardées dans une base de données ; si ce n'est pas le cas, elle émet des messages d'erreur pour expliquer ce que vous avez fait de mal (pour autant que vous l'ayez fait). La validation des formulaires peut être mise en œuvre de différentes manières.
 
-La vérité est qu'aucun d'entre nous n'_aime_ remplir des formulaires — les formulaires ennuient les utilisateurs, tout le prouve : cela les incite à partir et à aller voir ailleurs s'ils sont mal faits. Bref, les formulaires, c'est nullissime.
+La vérité est qu'aucun d'entre nous n'_aime_ remplir des formulaires — les formulaires ennuient les utilisateurs, tout le prouve&nbsp;: cela les incite à partir et à aller voir ailleurs s'ils sont mal faits. Bref, les formulaires, c'est nullissime.
 
 Remplir des formulaires web doit être aussi facile que possible. Alors pourquoi être tatillons et bloquer les utilisateurs à chaque fois ? Il y a trois raisons principales :
 
@@ -67,13 +67,13 @@ Dans le monde réel, les développeurs ont tendance à utiliser une combinaison 
 
 ## Utiliser la validation intégrée au formulaire
 
-Une des caractéristiques de [HTML5](/fr/docs/orphaned/Web/Guide/HTML/HTML5) est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des [attributs de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) sur les éléments de formulaire ; ils vous permettent de spécifier des règles pour une entrée de formulaire comme : une valeur doit‑elle être remplie ? y a-t-il une longueur minimale et/ou maximale des données ? doit‑elle être un nombre, une adresse e-mail ou autre chose ? doit‑elle correspondre à un modèle ? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
-Quand un élément est valide :
+Une des caractéristiques de [HTML5](/fr/docs/orphaned/Web/Guide/HTML/HTML5) est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des [attributs de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) sur les éléments de formulaire ; ils vous permettent de spécifier des règles pour une entrée de formulaire comme&nbsp;: une valeur doit‑elle être remplie ? y a-t-il une longueur minimale et/ou maximale des données ? doit‑elle être un nombre, une adresse e-mail ou autre chose ? doit‑elle correspondre à un modèle ? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
+Quand un élément est valide&nbsp;:
 
 - l'élément correspond à la pseudo‑classe CSS {{cssxref(":valid")}}  ; cela vous permet d'appliquer une composition de style distinctive.
 - si l'utilisateur essaie d'envoyer les données, le navigateur soumet le formulaire pour autant qu'il n'y ait rien d'autre qui l'empêche de le faire (par ex. du JavaScript).
 
-Quand un élément est invalide :
+Quand un élément est invalide&nbsp;:
 
 - l'élément correspond à la pseudo‑classe CSS {{cssxref(":invalid")}}  ; cela vous permet d'appliquer une composition de style distinctive.
 - si l'utilisateur essaie d'envoyer le formulaire, le navigateur le bloquera et affichera un message d'erreur.
@@ -110,7 +110,7 @@ Pour commencer, faites une copie de fruit-start.html dans un nouveau répertoire
 
 La fonctionnalité de validation HTML5 la plus simple à utiliser est l'attribut {{htmlattrxref("required", "input")}}} — si vous voulez rendre une entrée obligatoire, vous pouvez marquer l'élément en utilisant cet attribut. Lorsque cet attribut est mis, le formulaire ne sera pas soumis (et affichera un message d'erreur) si l'entrée est vide (l'entrée sera également considérée comme invalide).
 
-Ajoutez un attribut `required` à votre saisie, comme montré ci‑dessous :
+Ajoutez un attribut `required` à votre saisie, comme montré ci‑dessous&nbsp;:
 
 ```html
 <form>
@@ -120,7 +120,7 @@ Ajoutez un attribut `required` à votre saisie, comme montré ci‑dessous :
 </form>
 ```
 
-Notez aussi le CSS incorporé dans le fichier exemple :
+Notez aussi le CSS incorporé dans le fichier exemple&nbsp;:
 
 ```css
 input:invalid {
@@ -154,18 +154,18 @@ Vous trouverez ci-dessous quelques exemples pour vous donner une idée de base d
 - `a{5}` — correspond à a, 5 fois.
 - `a{5,7}` — correspond à  a, 5 à 7 fois, mais ni plus, ni moins.
 
-Vous pouvez utiliser des nombres ou d'autres caractères dans ces expressions, comme :
+Vous pouvez utiliser des nombres ou d'autres caractères dans ces expressions, comme&nbsp;:
 
 - `[ -]` — correspond à une espace ou un tiret.
 - `[0-9]` — correspond à tout nombre compris entre 0 et 9.
 
-Vous pouvez combiner cela pratiquement comme vous l'entendez en précisant les différentes parties les unes après les autres :
+Vous pouvez combiner cela pratiquement comme vous l'entendez en précisant les différentes parties les unes après les autres&nbsp;:
 
 - `[Ll].*k` — Un seul caractère L en majuscules ou minuscules, suivi de zéro ou plusieurs caractères de n'importe quel type, suivis par un k minuscules.
-- `[A-Z][A-Za-z' -]+` — Un seul caractère en majuscules suivi par un ou plusieurs caractères en majuscules ou minuscules, un tiret, une apostrophe ou une espace. Cette combinaison peut s'utiliser pour valider les nom de villes dans les pays anglo‑saxons ; ils débutent par une majuscule et ne contiennent pas d'autre caractère. Quelques exemples de ville de GB correspondant à ce schéma : Manchester, Ashton-under-lyne et Bishop's Stortford.
+- `[A-Z][A-Za-z' -]+` — Un seul caractère en majuscules suivi par un ou plusieurs caractères en majuscules ou minuscules, un tiret, une apostrophe ou une espace. Cette combinaison peut s'utiliser pour valider les nom de villes dans les pays anglo‑saxons ; ils débutent par une majuscule et ne contiennent pas d'autre caractère. Quelques exemples de ville de GB correspondant à ce schéma&nbsp;: Manchester, Ashton-under-lyne et Bishop's Stortford.
 - `[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}` — Un schéma pour un numéro de téléphone intérieur américain — trois chiffres, suivis par une espace ou un tiret, suivis par trois nombres, suivis par une espace ou un tiret, suivis par quatre nombres. Vous aurez peut-être à faire plus compliqué, car certains écrivent leur numéro de zone entre parenthèses, mais ici il s'agit simplement de faire une démonstration.
 
-Voyons un exemple — mettons à jour notre HTML en y ajoutant un attribut `pattern`, ainsi :
+Voyons un exemple — mettons à jour notre HTML en y ajoutant un attribut `pattern`, ainsi&nbsp;:
 
 ```html
 <form>
@@ -238,7 +238,7 @@ div {
 }
 ```
 
-Voici cet exemple s'exécutant en « live » :
+Voici cet exemple s'exécutant en « live »&nbsp;:
 
 {{EmbedLiveSample('Limitation_de_la_taille_des_entrées', "100%", 100)}}
 
@@ -246,7 +246,7 @@ Voici cet exemple s'exécutant en « live » :
 
 ### Exemple complet
 
-Voici un exemple complet montrant l'utilisation des fonctionnalités HTML intégrées pour la validation :
+Voici un exemple complet montrant l'utilisation des fonctionnalités HTML intégrées pour la validation&nbsp;:
 
 ```html
 <form>
@@ -552,7 +552,7 @@ Il arrive parfois, comme c'est le cas avec des navigateurs anciens ou de [widget
 Pour valider un formulaire, vous devez vous poser un certain nombre de questions:
 
 - Quel type de validation dois-je réaliser ?
-  - : Vous devez déterminer comment valider vos données : opération sur des chaînes de caractères, conversion de type, expressions rationnelles, etc. C'est comme vous voulez. Mais retenez simplement que les données de formulaire sont toujours du texte et sont toujours fournies à vos scripts sous forme de chaînes de caractères.
+  - : Vous devez déterminer comment valider vos données&nbsp;: opération sur des chaînes de caractères, conversion de type, expressions rationnelles, etc. C'est comme vous voulez. Mais retenez simplement que les données de formulaire sont toujours du texte et sont toujours fournies à vos scripts sous forme de chaînes de caractères.
 - Que dois-je faire si le formulaire n'est pas valide ?
   - : C'est clairement une affaire d'interface utilisateur. Vous devez décider comment le formulaire doit se comporter : enverra-t-il quand même les données ? Devriez-vous mettre en évidence les champs qui sont en erreur ? Devriez-vous afficher des messages d'erreur ?
 - Comment puis-je aider l'utilisateur à corriger ses données invalides?

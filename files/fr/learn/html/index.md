@@ -1,5 +1,5 @@
 ---
-title: 'Apprendre le HTML : guides et didacticiels'
+title: 'Apprendre le HTML&nbsp;: guides et didacticiels'
 slug: Learn/HTML
 tags:
   - Apprentissage
@@ -17,7 +17,7 @@ original_slug: Apprendre/HTML
 
 ## Parcours d'apprentissage
 
-L'idéal serait que vous débutiez votre parcours d'apprentissage par l'étude du HTML. Commencez par lire [Introduction au HTML](/fr/docs/Web/Guide/HTML/Introduction). Vous pouvez ensuite passer à l'étude de sujets plus avancés comme :
+L'idéal serait que vous débutiez votre parcours d'apprentissage par l'étude du HTML. Commencez par lire [Introduction au HTML](/fr/docs/Web/Guide/HTML/Introduction). Vous pouvez ensuite passer à l'étude de sujets plus avancés comme&nbsp;:
 
 - les [CSS](/fr/docs/Learn/CSS), et comment les utiliser pour donner un style au HTML (par exemple, modifier la taille du texte et les polices utilisées, ajouter des bordures et des ombres portées, mettre en page avec plusieurs colonnes, ajouter des animations et autres effets visuels).
 - le[ JavaScript](/fr/docs/Learn/JavaScript), et comment l'utiliser pour ajouter des fonctionnalités dynamiques aux pages Web (par exemple, trouver votre emplacement et le tracer sur une carte, faire apparaître/disparaître des éléments d'interface utilisateur lorsque vous basculez un bouton, enregistrer les données des utilisateurs localement sur leurs ordinateurs, et bien plus encore).

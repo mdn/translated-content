@@ -33,7 +33,7 @@ L’évènement `pageshow` est émis lorsqu’une entrée dans un historique de 
 
 ## Exemples
 
-L’exemple suivant va afficher dans la console des informations sur l’évènement `pageshow`, qui est émis à l’utilisation des boutons précédent / suivant, et pas uniquement après `onload` :
+L’exemple suivant va afficher dans la console des informations sur l’évènement `pageshow`, qui est émis à l’utilisation des boutons précédent / suivant, et pas uniquement après `onload`&nbsp;:
 
 ```js
 window.addEventListener('pageshow', function(event) {
@@ -42,7 +42,7 @@ window.addEventListener('pageshow', function(event) {
 });
 ```
 
-Bien que ce ne soit pas la meilleure pratique, vous pouvez également ajouter l’évènement comme un attribut sur la balise `<body>`, de la même manière que `onload` :
+Bien que ce ne soit pas la meilleure pratique, vous pouvez également ajouter l’évènement comme un attribut sur la balise `<body>`, de la même manière que `onload`&nbsp;:
 
 ```html
 <body onload="myonload()" onpageshow="mypageshowcode()">

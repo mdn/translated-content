@@ -24,7 +24,7 @@ Dans tout langage de programmation, le code doit prendre des décisions et agir 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Connaissances du vocabulaire informatique, compréhension des bases du
         HTML et des CSS,
@@ -34,7 +34,7 @@ Dans tout langage de programmation, le code doit prendre des décisions et agir 
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Comprendre comment utiliser les structures conditionnelles en
         JavaScript.
@@ -75,7 +75,7 @@ Ici nous avons:
 
 Ce code est facile à lire pour une personne — il dit « **si** la **condition** renvoie `true`, exécuter le code A, **sinon** exécuter le code B ».
 
-Notez qu'il n'est pas nécessaire d'inclure une instruction `else` et le deuxième bloc entre accolades — le code suivant est aussi parfaitement correct :
+Notez qu'il n'est pas nécessaire d'inclure une instruction `else` et le deuxième bloc entre accolades — le code suivant est aussi parfaitement correct&nbsp;:
 
     if (condition) {
       code à exécuter si la condition est true
@@ -85,7 +85,7 @@ Notez qu'il n'est pas nécessaire d'inclure une instruction `else` et le deuxiè
 
 Cependant, vous devez faire attention ici — dans ce cas, le deuxième bloc de code n'est pas controlé par l'instruction conditionnelle, donc il sera **toujours** exécuté, que la condition ait renvoyé `true` ou `false`. Ce n'est pas nécessairement une mauvaise chose, mais il se peut que ce ne soit pas ce que vous vouliez — le plus souvent vous voudrez exécuter un bloc de code *ou* l'autre, et non les deux.
 
-Une dernière remarque, vous verrez quelques fois les instructions `if...else` écrites sans accolades, de manière abrégée, ainsi :
+Une dernière remarque, vous verrez quelques fois les instructions `if...else` écrites sans accolades, de manière abrégée, ainsi&nbsp;:
 
     if (condition) code à exécuter si la condition est true
     else exécute un autre code à la place
@@ -94,7 +94,7 @@ Ce code est parfaitement valide, mais il n'est pas recommandé — il est nette
 
 ### Un exemple concret
 
-Pour mieux comprendre cette syntaxe, prenons un exemple concret. Imaginez un enfant à qui le père ou la mère demande de l'aide pour une tâche. Le parent pourrait dire « Mon chéri, si tu m'aides en allant faire les courses, je te donnerai un peu plus d'argent de poche pour que tu puisses t'acheter ce jouet que tu voulais ». En JavaScript, on pourrait le représenter de cette manière :
+Pour mieux comprendre cette syntaxe, prenons un exemple concret. Imaginez un enfant à qui le père ou la mère demande de l'aide pour une tâche. Le parent pourrait dire « Mon chéri, si tu m'aides en allant faire les courses, je te donnerai un peu plus d'argent de poche pour que tu puisses t'acheter ce jouet que tu voulais ». En JavaScript, on pourrait le représenter de cette manière&nbsp;:
 
 ```js
 let coursesFaites = false;
@@ -219,7 +219,7 @@ Si vous voulez tester plusieurs conditions sans imbriquer des instructions `if..
 - `&&` — AND ; vous permet d'enchaîner deux ou plusieurs expressions de sorte que toutes doivent être individuellement égales à `true` pour que l'enemble de l'expression retourne `true`.
 - `||` — OR ; vous permet d'enchaîner deux ou plusieurs expressions ensemble de sorte qu'il suffit qu'une au plus soit évaluée comme étant  `true` pour que l'ensemble de l'expression renvoie `true`.
 
-Pour vous donner un exemple de AND, le morceau de code précedent peut être réécrit ainsi :
+Pour vous donner un exemple de AND, le morceau de code précedent peut être réécrit ainsi&nbsp;:
 
 ```js
 if (choice === 'sunny' && temperature < 86) {
@@ -253,7 +253,7 @@ if (!(camionDeGlaces || etatDeLaMaison === 'on fire')) {
 
 Dans cet extrait, si la déclaration avec OR renvoie `true`, l'opérateur NOT va nier l'ensemble : l'expression retournera donc `false`.
 
-Vous pouvez combiner autant d'instructions logiques que vous le souhaitez, quelle que soit la structure. L'exemple suivant n'exécute le code entre accolades que si les deux instructions OR renvoient true, l'instruction AND recouvrante renvoie alors `true` :
+Vous pouvez combiner autant d'instructions logiques que vous le souhaitez, quelle que soit la structure. L'exemple suivant n'exécute le code entre accolades que si les deux instructions OR renvoient true, l'instruction AND recouvrante renvoie alors `true`&nbsp;:
 
 ```js
 if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'Steve')) {
@@ -261,7 +261,7 @@ if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'Steve')) {
 }
 ```
 
-Une erreur fréquente avec l'opérateur OR dans des instructions conditionnelles est de n'indiquer la variable dont vous testez la valeur qu'une fois, puis de donner une liste de valeurs sensées renvoyer `true` séparées par des || (OR) opérateurs. Par exemple :
+Une erreur fréquente avec l'opérateur OR dans des instructions conditionnelles est de n'indiquer la variable dont vous testez la valeur qu'une fois, puis de donner une liste de valeurs sensées renvoyer `true` séparées par des || (OR) opérateurs. Par exemple&nbsp;:
 
 ```js example-bad
 if (x === 5 || 7 || 10 || 20) {
@@ -269,7 +269,7 @@ if (x === 5 || 7 || 10 || 20) {
 }
 ```
 
-Dans ce cas, la condition dans le `if(...) `sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité « si x est égal à 5, ou bien 7 est vrai » — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement ! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR :
+Dans ce cas, la condition dans le `if(...) `sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité « si x est égal à 5, ou bien 7 est vrai » — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement ! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR&nbsp;:
 
 ```js
 if (x === 5 || x === 7 || x === 10 ||x === 20) {
@@ -281,7 +281,7 @@ if (x === 5 || x === 7 || x === 10 ||x === 20) {
 
 Les Instructions `if...else`  font bien le travail d'aiguiller la programmation selon des conditions, mais elles ne sont pas sans inconvénient. Elles sont principalement adaptées aux cas où vous avez un choix binaire, chacun nécessitant une quantité raisonnable de code à exécuter, et/ou au cas où les conditions sont complexes (par ex. plusieurs opérateurs logiques). Si vous voulez juste fixer la valeur d'une variable à un choix donné ou afficher une déclaration particulière en fonction d'une condition, cette syntaxe peut devenir un peu lourde, surtout si le nombre de choix est important.
 
-Les [instructions switch](/fr/docs/Web/JavaScript/Reference/Instructions/switch) sont vos amies — elles prennent une seule valeur ou expression en entrée, puis examinent une palette de choix jusqu'à trouver celui qui correspond, et exécutent le code qui va avec. Voici un peu de pseudo-code, pour vous donner l'idée :
+Les [instructions switch](/fr/docs/Web/JavaScript/Reference/Instructions/switch) sont vos amies — elles prennent une seule valeur ou expression en entrée, puis examinent une palette de choix jusqu'à trouver celui qui correspond, et exécutent le code qui va avec. Voici un peu de pseudo-code, pour vous donner l'idée&nbsp;:
 
 ```js
 switch (expression) {
@@ -314,7 +314,7 @@ Ici nous avons
 
 ### Un exemple de switch
 
-Voyons un exemple concret — nous allons réécrire notre application de prévision météo en utilisant une instruction `switch` à la place :
+Voyons un exemple concret — nous allons réécrire notre application de prévision météo en utilisant une instruction `switch` à la place&nbsp;:
 
 ```html
 <label for="weather">Select the weather type today: </label>
@@ -364,11 +364,11 @@ function setWeather() {
 
 ## Opérateur ternaire
 
-Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'[opérateur ternaire ou conditionnel](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel) est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est `true` et une autre si elle est `false` — elle est utile dans certains cas, et occupe moins de place qu'un bloc `if...else` si votre choix est limité à deux possibilités à choisir via une condition `true`/`false`. Voici le pseudo‑code correspondant :
+Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'[opérateur ternaire ou conditionnel](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel) est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est `true` et une autre si elle est `false` — elle est utile dans certains cas, et occupe moins de place qu'un bloc `if...else` si votre choix est limité à deux possibilités à choisir via une condition `true`/`false`. Voici le pseudo‑code correspondant&nbsp;:
 
     ( condition ) ? exécuter ce code : exécuter celui‑ci à la place
 
-Regardons cet exemple simple :
+Regardons cet exemple simple&nbsp;:
 
 ```js
 let formuleDePolitesse = ( est_anniversaire ) ? 'Bon anniversaire Mme Smith — nous vous souhaitons une belle journée !' : 'Bonjour Mme Smith.';
@@ -409,24 +409,24 @@ select.onchange = function() {
 
 Nous mettons un élément {{htmlelement('select')}} pour choisir un thème (noir ou blanc), plus un simple élément {{htmlelement('h1')}} pour afficher un titre de site web. Nous avons aussi une fonction `update()`, qui prend deux couleurs en paramètre (entrées). La couleur de fond du site est déterminée par la couleur indiquée dans le premier paramètre fourni, et la couleur du texte par le deuxième.
 
-Nous avons également mis un écouteur d'événement [onchange](/fr/docs/Web/API/GlobalEventHandlers/onchange) qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — `select.value === 'black'`. Si le test renvoie `true`, nous exécutons la fonction `update()` avec les paramètres blanc et noir : cela signifie que le fond sera noir et le texte blanc. S'il renvoie `false`, nous exécutons `update()` avec les paramètres noir et blanc, les couleurs du site seront inversées.
+Nous avons également mis un écouteur d'événement [onchange](/fr/docs/Web/API/GlobalEventHandlers/onchange) qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — `select.value === 'black'`. Si le test renvoie `true`, nous exécutons la fonction `update()` avec les paramètres blanc et noir&nbsp;: cela signifie que le fond sera noir et le texte blanc. S'il renvoie `false`, nous exécutons `update()` avec les paramètres noir et blanc, les couleurs du site seront inversées.
 
 > **Note :** Vous trouverez également cet [exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (voyez‑le en [cours d'exécution ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)ici aussi.)
 
-## Apprentissage actif : un calendrier simple
+## Apprentissage actif&nbsp;: un calendrier simple
 
-Dans cet exemple nous allons vous aider à finaliser une application de calendrier simple. Dans le code, vous avez :
+Dans cet exemple nous allons vous aider à finaliser une application de calendrier simple. Dans le code, vous avez&nbsp;:
 
 - Un élément {{htmlelement("select")}} permettant à l'utilisateur de choisir un mois.
 - Un pilote d'événement `onchange` pour détecter si la valeur choisie dans le menu `<select>` a été modifiée.
 - Une fonction `createCalendar()` qui trace le calendrier et affiche le mois voulu dans l'élément {{htmlelement("h1")}}.
 
-Vous aurez besoin d'écrire une instruction conditionnelle dans la fonction `onchange`, juste au dessous du commentaire `// AJOUTER LA CONDITION ICI`. Elle doit :
+Vous aurez besoin d'écrire une instruction conditionnelle dans la fonction `onchange`, juste au dessous du commentaire `// AJOUTER LA CONDITION ICI`. Elle doit&nbsp;:
 
 1.  Noter le mois choisi (enregistré dans la variable `choice`. Ce doit être la valeur de l'élément `<select>` après un changement, "Janvier" par exemple).
 2.  Faire en sorte que la variable nommée `days` soit égale au nombre de jours du mois sélectionné. Pour ce faire, examinez le nombre de jours dans chaque mois de l'année. Vous pouvez ignorer les années bissextiles pour les besoins de cet exemple.
 
-Conseils :
+Conseils&nbsp;:
 
 - Utilisez un OR logique pour grouper plusieurs mois ensemble dans une même condition, beaucoup d'entre eux ont le même nombre de jours.
 - Voyez quel est le nombre de jours le plus courant et utilisez le comme valeur par défaut.
@@ -435,7 +435,7 @@ Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le
 
 ```html hidden
 <div class="output" style="height: 500px;overflow: auto;">
-  <label for="month">Choisissez un mois : </label>
+  <label for="month">Choisissez un mois&nbsp;: </label>
   <select id="month">
     <option value="Janvier">Janvier</option>
     <option value="Février">Février</option>
@@ -539,9 +539,9 @@ window.addEventListener('load', updateCode);
 
 {{ EmbedLiveSample('Apprentissage_actif_un_calendrier_simple', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}
 
-## Activité : plus de choix de couleurs
+## Activité&nbsp;: plus de choix de couleurs
 
-Nous allons reprendre l'exemple de l'opérateur ternaire vu plus haut et transformer cet opérateur ternaire en une directive `switch`  qui nous permettra une plus grande variété de choix pour le site web tout simple. Voyez l'élément {{htmlelement("select")}} — cette fois, il n'y a pas deux options de thème, mais cinq. Il vous faut ajouter une directive `switch` au dessous du commentaire  `// AJOUT D'UNE DIRECTIVE SWITCH` :
+Nous allons reprendre l'exemple de l'opérateur ternaire vu plus haut et transformer cet opérateur ternaire en une directive `switch`  qui nous permettra une plus grande variété de choix pour le site web tout simple. Voyez l'élément {{htmlelement("select")}} — cette fois, il n'y a pas deux options de thème, mais cinq. Il vous faut ajouter une directive `switch` au dessous du commentaire  `// AJOUT D'UNE DIRECTIVE SWITCH`&nbsp;:
 
 - Elle doit accepter la variable `choice` comme expression d'entrée.
 - Pour chaque cas, le choix doit être égal à une des valeurs possibles pouvant être choisies, c'est-à-dire blanc, noir, mauve, jaune ou psychédélique.
@@ -551,7 +551,7 @@ Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le
 
 ```html hidden
 <div class="output" style="height: 300px;">
-  <label for="theme">Choisissez un thème : </label>
+  <label for="theme">Choisissez un thème&nbsp;: </label>
   <select id="theme">
     <option value="white">Blanc</option>
     <option value="black">Noir</option>

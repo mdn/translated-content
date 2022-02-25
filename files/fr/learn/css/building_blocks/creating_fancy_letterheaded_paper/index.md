@@ -31,7 +31,7 @@ Si vous voulez faire bonne impression, écrire une lettre sur un beau papier à 
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Tester votre compréhension du modèle de boîte CSS et toutes les
         fonctionnalités associées comme l'implémentation d'arrière‑plans.
@@ -42,7 +42,7 @@ Si vous voulez faire bonne impression, écrire une lettre sur un beau papier à 
 
 ## Départ
 
-Pour débuter cet exercice, vous devez :
+Pour débuter cet exercice, vous devez&nbsp;:
 
 - faire une copie locale du [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/index.html) et de la [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/style.css) — enregistrez‑les sous les noms  `index.html` et `style.css` dans un nouveau répertoire.
 - enregistrer des copies locales des images d'[en‑tête](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [pied de page](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) et  [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) dans le même répertoire que les fichiers de code.
@@ -56,7 +56,7 @@ Vous avez les fichiers nécessaires à la création d'un modèle de papier à en
 ### La lettre
 
 - appliquer la CSS au HTML,
-- ajouter à la lettre une déclaration `background` qui :
+- ajouter à la lettre une déclaration `background` qui&nbsp;:
 
   - place l'image haute en en‑tête de lettre
   - place l'image basse en pied de lettre
@@ -79,7 +79,7 @@ Vous avez les fichiers nécessaires à la création d'un modèle de papier à en
 
 ## Exemple
 
-Voici une capture d'écran affichant un exemple de ce à quoi le dessin final ressemblera :
+Voici une capture d'écran affichant un exemple de ce à quoi le dessin final ressemblera&nbsp;:
 
 ![](letterhead.png)
 
@@ -95,7 +95,7 @@ Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvo
 
 ## Dans ce module
 
-- [Le modèle de boîte : récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
+- [Le modèle de boîte&nbsp;: récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
 - [Arrière-plans](/fr/Apprendre/CSS/styliser_boites/Backgrounds)
 - [Encadrements](/fr/docs/Apprendre/CSS/styliser_boites/Borders)
 - [Mise en page des tableaux](/fr/Apprendre/CSS/styliser_boites/Styling_tables)

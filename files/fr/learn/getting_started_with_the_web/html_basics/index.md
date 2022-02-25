@@ -55,13 +55,13 @@ Un attribut doit toujours avoir :
 
 ### Imbriquer des éléments
 
-Vous pouvez placer des éléments au sein d'autres éléments, c'est ce qu'on appelle l'**imbrication**. Par exemple, si vous souhaitez montrer que votre chat est **très** grincheux, vous pouvez placer le mot « très » dans un élement {{htmlelement("strong")}}, signifiant que le mot sera fortement mis en relief :
+Vous pouvez placer des éléments au sein d'autres éléments, c'est ce qu'on appelle l'**imbrication**. Par exemple, si vous souhaitez montrer que votre chat est **très** grincheux, vous pouvez placer le mot « très » dans un élement {{htmlelement("strong")}}, signifiant que le mot sera fortement mis en relief&nbsp;:
 
 ```html example-good
 <p>Mon chat est <strong>très</strong> grincheux.</p>
 ```
 
-Toutefois, il faut faire attention à ce que les éléments soient bien imbriqués les uns dans les autres. Dans l'exemple précédent, on ouvre l'élément {{htmlelement("p")}}, puis l'élément {{htmlelement("strong")}}. Nous devrons donc fermer l'élément {{htmlelement("strong")}} d'abord, puis l'élement {{htmlelement("p")}}. Le code suivant est incorrect :
+Toutefois, il faut faire attention à ce que les éléments soient bien imbriqués les uns dans les autres. Dans l'exemple précédent, on ouvre l'élément {{htmlelement("p")}}, puis l'élément {{htmlelement("strong")}}. Nous devrons donc fermer l'élément {{htmlelement("strong")}} d'abord, puis l'élement {{htmlelement("p")}}. Le code suivant est incorrect&nbsp;:
 
 ```html example-bad
 <p>Mon chat est <strong>très grincheux.</p></strong>
@@ -115,7 +115,7 @@ Regardons à nouveau l'élément image :
 
 Comme on l'a vu auparavant, cet élément permet d'intégrer une image dans la page, à l'endroit où l'élément apparaît. L'image utilisée est définie via l'attribut `src` (pour source) qui contient le chemin vers le fichier de l'image.
 
-Nous avons aussi utilisé l'attribut `alt` (pour **alt**ernatif). Il contient un texte descriptif de l'image à l'intention des utilisateurs qui ne peuvent pas voir l'image, car :
+Nous avons aussi utilisé l'attribut `alt` (pour **alt**ernatif). Il contient un texte descriptif de l'image à l'intention des utilisateurs qui ne peuvent pas voir l'image, car&nbsp;:
 
 1.  ils sont mal-voyants. Les utilisateurs handicapés visuellement utilisent souvent des outils nommés lecteurs d'écrans pour lire le texte de cet attribut ;
 2.  quelque chose s'est mal passé et l'image n'a pas pu être affichée. Par exemple, modifiez volontairement le chemin dans votre attribut `src` et faites qu'il soit incorrect. Si vous enregistrez et rechargez la page, vous verrez quelque chose comme ceci à la place de l'image :

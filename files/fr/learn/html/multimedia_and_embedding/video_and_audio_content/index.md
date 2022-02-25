@@ -21,7 +21,7 @@ Maintenant que nous sommes à l'aise pour ajouter de simples images dans une pag
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Compétences informatiques de base, 
         <a
@@ -41,7 +41,7 @@ Maintenant que nous sommes à l'aise pour ajouter de simples images dans une pag
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Apprendre à intégrer vidéos et audios dans une page web et y ajouter des
         légendes et des sous-titres.
@@ -129,7 +129,7 @@ Chaque élément \<source> possède également un attribut de type. C'est facult
 
 ### Autres fonctionnalités de \<video>
 
-Il y a possibilité d'inclure d'autres fonctionnalités dans une vidéo HTML5. Regardez notre troisième exemple :
+Il y a possibilité d'inclure d'autres fonctionnalités dans une vidéo HTML5. Regardez notre troisième exemple&nbsp;:
 
 ```html
 <video controls width="400" height="400"
@@ -141,11 +141,11 @@ Il y a possibilité d'inclure d'autres fonctionnalités dans une vidéo HTML5. R
 </video>
 ```
 
-Cela produit une sortie du type suivant :
+Cela produit une sortie du type suivant&nbsp;:
 
 ![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](extra-video-features.png)
 
-Voici les nouvelles fonctionnalités :
+Voici les nouvelles fonctionnalités&nbsp;:
 
 - {{htmlattrxref("width","video")}} et {{htmlattrxref("height","video")}}
   - : Il est possible de contrôler la taille de la vidéo soit avec ces attributs, soit avec le {{Glossary("CSS")}}. Dans les deux cas, les vidéos conservent le rapport largeur‑hauteur natif — désigné sous le vocable **rapport de proportions**. Si ce dernier ne correspond pas aux tailles indiquées, la vidéo occupera tout l'espace horizontal et l'espace non rempli sera de la couleur d'arrière plan unie par défaut.
@@ -159,17 +159,17 @@ Voici les nouvelles fonctionnalités :
   - : Cet attribut prend comme valeur l'URL d'une image affichée avant la lecture de la vidéo. Il s'utilise en tant que logo de démarrage ou de publicité.
 - {{htmlattrxref("preload","video")}}
 
-  - : Cet attribut s'utilise pour mettre en tampon les gros fichiers. Il peut prendre 3 valeurs :
+  - : Cet attribut s'utilise pour mettre en tampon les gros fichiers. Il peut prendre 3 valeurs&nbsp;:
 
-    - `"none"` : ne pas mettre le fichier dans un tampon
-    - `"auto"` : mettre le fichier média dans un tampon
-    - `"metadata"` : ne mettre que les métadonnées dans le tampon
+    - `"none"`&nbsp;: ne pas mettre le fichier dans un tampon
+    - `"auto"`&nbsp;: mettre le fichier média dans un tampon
+    - `"metadata"`&nbsp;: ne mettre que les métadonnées dans le tampon
 
 Vous trouverez cet exemple [prêt pour l'interprétation](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) sur Github ( voir aussi le [ code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)). Notez que nous n'avons pas inséré l'attribut `autoplay` dans la version en direct — si la vidéo débute dès le chargement de la page, vous ne pourrez pas voir le poster !
 
 ### L'élément  \<audio>
 
-L'élément {{htmlelement("audio")}} fonctionne exactement de la même manière que l'élément {{htmlelement("video")}}, mais avec quelques menues différences décrites plus bas. Un exemple classique ressemble à ceci :
+L'élément {{htmlelement("audio")}} fonctionne exactement de la même manière que l'élément {{htmlelement("video")}}, mais avec quelques menues différences décrites plus bas. Un exemple classique ressemble à ceci&nbsp;:
 
 ```html
 <audio controls>
@@ -179,13 +179,13 @@ L'élément {{htmlelement("audio")}} fonctionne exactement de la même manière 
 </audio>
 ```
 
-Vous verrez quelque chose de ce genre dans un navigateur :
+Vous verrez quelque chose de ce genre dans un navigateur&nbsp;:
 
 ![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > **Note :** Vous pouver [lancer la démo de l'audio en direct ](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)sur Github (voir aussi le [code source de l'interpréteur](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
-Cela prend moins de place qu'une vidéo, et il n'y a pas de composante visuelle — il est juste nécessaire d'afficher les contrôles de lecture de l'audio. Voici les autres différences avec les vidéos HTML5 :
+Cela prend moins de place qu'une vidéo, et il n'y a pas de composante visuelle — il est juste nécessaire d'afficher les contrôles de lecture de l'audio. Voici les autres différences avec les vidéos HTML5&nbsp;:
 
 - L'élément {{htmlelement("audio")}} ne prend pas en charge les attributs `width`/`height` — redisons‑le, il n'y a pas de composant visuel, il n'y donc pas lieu d'assigner une largeur ou une hauteur.
 - Il ne prend pas en charge non plus l'attribut `poster` — toujours pas de composant visuel.
@@ -204,7 +204,7 @@ Ne serait-il pas agréable de pouvoir fournir à ces personnes la transcription 
 
 > **Note :** « Transcrire » signifie écrire des paroles sous forme de texte, et « transcription » est l'action correspondante.
 
-WebVTT est un format d'écriture de fichiers texte ; il contient nombre de chaînes de texte avec des métadonnées comme l'instant dans la vidéo où vous souhaitez l'affichage du texte, et même une information succinte sur le style et la position de celui‑ci. Ces chaînes textuelles sont appelées des marqueurs, les plus courants étant :
+WebVTT est un format d'écriture de fichiers texte ; il contient nombre de chaînes de texte avec des métadonnées comme l'instant dans la vidéo où vous souhaitez l'affichage du texte, et même une information succinte sur le style et la position de celui‑ci. Ces chaînes textuelles sont appelées des marqueurs, les plus courants étant&nbsp;:
 
 - les sous‑titres (`subtitles`)
   - : Traductions d'éléments d'une langue étrangère pour les personnes ne comprenant pas les paroles de l'audio.
@@ -213,7 +213,7 @@ WebVTT est un format d'écriture de fichiers texte ; il contient nombre de cha
 - les descriptions programmées (`descriptions`)
   - : Textes convertis en audio, pour aider les personnes avec des défauts de vision.
 
-Un fichier WebVTT typique ressemblera à :
+Un fichier WebVTT typique ressemblera à&nbsp;:
 
     WEBVTT
 
@@ -227,12 +227,12 @@ Un fichier WebVTT typique ressemblera à :
 
       ...
 
-Pour qu'il soit affiché avec la diffusion du média HTML, il faut :
+Pour qu'il soit affiché avec la diffusion du média HTML, il faut&nbsp;:
 
 1.  Enregistrer le fichier avec l'extension `.vtt` dans un endroit sensé.
 2.  Lier le fichier `.vtt` avec l'élément {{htmlelement("track")}}. `<track>` doit être placé entre les balises `<audio>` ou `<video>`, mais après tous les éléments `<source>`. Utilisez l'attribut {{htmlattrxref("kind","track")}} pour préciser si les marqueurs sont  `subtitles`, `captions` ou `descriptions`. Plus loin, utilisez l'attribut {{htmlattrxref("srclang","track")}} pour indiquer au navigateur la langue dans laquelle sont écrit les sous‑titres.
 
-Voici un exemple :
+Voici un exemple&nbsp;:
 
 ```html
 <video controls>
@@ -242,7 +242,7 @@ Voici un exemple :
 </video>
 ```
 
-Il en résultera une vidéo dont les sous-titres seront affichés un peu comme ceci :
+Il en résultera une vidéo dont les sous-titres seront affichés un peu comme ceci&nbsp;:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 

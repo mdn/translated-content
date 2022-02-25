@@ -16,9 +16,9 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 
 ### Documentation du fournisseur du navigateur
 
-- Mozilla : vous êtes au bon endroit, explorez juste MDN
-- Microsoft : [Documentation sur la prise en charge de la norme par Internet Explorer](http://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx)
-- WebKit : comme il y a plusieurs versions de ce moteur, les choses se compliquent :
+- Mozilla&nbsp;: vous êtes au bon endroit, explorez juste MDN
+- Microsoft&nbsp;: [Documentation sur la prise en charge de la norme par Internet Explorer](http://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx)
+- WebKit&nbsp;: comme il y a plusieurs versions de ce moteur, les choses se compliquent&nbsp;:
 
   - [le Blog WebKit](https://www.webkit.org/blog/) et [Planet WebKit](http://planet.webkit.org/) rassemblent les meilleurs articles par les déveoppeurs WebKit.
   - [l](https://www.chromestatus.com/features)e site État de la p[lateforme Chrome](https://www.chromestatus.com/features) est aussi importante.
@@ -35,7 +35,7 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 
 
 
-Comme les [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires) impliquent des interactions complexes, une règle empirique : [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient  « plus beaux » ou « avec des fonctionnalités avancées » ! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
+Comme les [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient  « plus beaux » ou « avec des fonctionnalités avancées » ! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
 
 ### La simplification élégante est la meilleure amie du développeur Web
 
@@ -81,7 +81,7 @@ Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon 
 
 #### Sélecteurs d'attributs CSS
 
-Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Sélecteurs_d_attribut "/en-US/docs/CSS/Attribute_selectors") sont très utiles avec les [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente :
+Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Sélecteurs_d_attribut "/en-US/docs/CSS/Attribute_selectors") sont très utiles avec les [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
 
 ```html
 <input type="number" class="number">
@@ -97,7 +97,7 @@ input.number {
 }
 ```
 
-Notez que ce qui suit n'est pas utile (car redondant) et peut échouer dans certains navigateurs :
+Notez que ce qui suit n'est pas utile (car redondant) et peut échouer dans certains navigateurs&nbsp;:
 
 ```css
 input[type=number],
@@ -109,12 +109,12 @@ input.number {
 
 #### Boutons et formulaires
 
-Il y a deux manières de définir un bouton dans un formulaire HTML :
+Il y a deux manières de définir un bouton dans un formulaire HTML&nbsp;:
 
 - un élément {{HTMLElement("input")}} avec un attribut {htmlattrxref("type","input")}} défini avec une des valeurs `button`, `submit`, `reset` ou `image`
 - un élément {{HTMLElement("button")}}
 
-L'élément {{HTMLElement("input")}} peut rendre les choses compliquées si vous voulez appliquer des CSS avec un sélecteur d'élément :
+L'élément {{HTMLElement("input")}} peut rendre les choses compliquées si vous voulez appliquer des CSS avec un sélecteur d'élément&nbsp;:
 
 ```html
 <input type="button" class="button" value="Cliquez‑moi">
@@ -138,7 +138,7 @@ input.button {
 }
 ```
 
-L'élément {{HTMLElement("button")}} présente deux problèmes potentiels :
+L'élément {{HTMLElement("button")}} présente deux problèmes potentiels&nbsp;:
 
 - un bogue dans certaines anciennes versions d'Internet Explorer. Lorsque l'utilisateur clique sur le bouton, ce n'est pas le contenu de l'attribut {{htmlattrxref("value", "button")}} qui est envoyé, mais le contenu HTML disponible entre balises de début et de fin de l'élément {{HTMLElement("button")}}. Ce n'est un problème que si vous voulez envoyer une telle valeur, par exemple si le traitement des données dépend du bouton sur lequel l'utilisateur clique.
 - certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut  pour l'attribut {{htmlattrxref("type","button")}}, donc il est recommandé de toujours définir l'attribut {{htmlattrxref("type","button")}} pour les éléments {{HTMLElement("button")}}.
@@ -162,7 +162,7 @@ Bien que JavaScript soit un langage de programmation remarquable pour les naviga
 
 ### JavaScript non obstructif
 
-Un des plus gros problèmes est la disponibilité des API. Pour cette raison, il est considéré comme de bonne pratique de travailler avec du JavaScript « non obstructif ». C'est un modèle de développement défini par deux obligations :
+Un des plus gros problèmes est la disponibilité des API. Pour cette raison, il est considéré comme de bonne pratique de travailler avec du JavaScript « non obstructif ». C'est un modèle de développement défini par deux obligations&nbsp;:
 
 - une séparation stricte entre structure et comportement.
 - si le fil du code casse, le contenu et les fonctionnalités de base doivent rester accessibles et utilisables.
@@ -173,9 +173,9 @@ Un des plus gros problèmes est la disponibilité des API. Pour cette raison, il
 
 Dans de nombreux cas, une bonne prothèse d'émulation (« polyfill ») peut aider en fournissant une API manquante. Un « [polyfill »](http://remysharp.com/2010/10/08/what-is-a-polyfill/) est un petit morceau de JavaScript qui « remplit un trou » dans les fonctionnalités des navigateurs historiques. Bien qu'ils puissent être utilisés pour améliorer la prise en charge de n'importe quelle fonctionnalité, leur utilisation dans le JavaScript est moins risquée que dans les CSS ou le HTML ; il existe de nombreux cas où JavaScript peut casser (problèmes de réseau, conflits de script, etc.). Mais avec le JavaScript, à condition de travailler avec un JavaScript non obstructif, si les polyfills manquent, ce ne sera pas grave.
 
-La meilleure façon de remplir un trou d'API manquante consiste à utiliser la bibliothèque [Modernizr](http://modernizr.com) et son projet dérivé : [YepNope](http://yepnopejs.com). Modernizr est une bibliothèque qui vous permet de tester la disponibilité d'une fonctionnalité pour une action en accord. YepNope est une bibliothèqe de chargements conditionnels.
+La meilleure façon de remplir un trou d'API manquante consiste à utiliser la bibliothèque [Modernizr](http://modernizr.com) et son projet dérivé&nbsp;: [YepNope](http://yepnopejs.com). Modernizr est une bibliothèque qui vous permet de tester la disponibilité d'une fonctionnalité pour une action en accord. YepNope est une bibliothèqe de chargements conditionnels.
 
-Voici un exemple :
+Voici un exemple&nbsp;:
 
 ```js
 Modernizr.load({
@@ -204,7 +204,7 @@ L'équipe de Modernizr fait une maintenance opportune de grande liste de « [p
 
 ### Faites attention aux performances
 
-Même si des scripts comme Modernizr sont très attentifs aux performances, le chargement d'un polyfill de 200 kilooctets peut affecter les performances de votre application.  Ceci est particulièrement critique avec les navigateurs historiques ; beaucoup d'entre eux ont un moteur JavaScript très lent qui peut rendre l'exécution de tous vos polyfills pénibles pour l'utilisateur. La performance est un sujet en soi ; les navigateurs historiques y sont très sensibles : fondamentalement, ils sont lents et ils ont plus besoin de polyfills, et donc ils ont besoin de traiter encore plus de JavaScript. Ils sont donc doublement surchargés par rapport aux navigateurs modernes. Testez votre code avec les navigateurs historiques pour voir comment leur fonctionnement en conditions réelles. Parfois, l'abandon de certaines fonctionnalités amène un meilleur ressenti pour l'utilisateur que d'avoir exactement la même fonctionnalité dans tous les navigateurs. Dernier rappel : pensez toujours à l'utilisateur final.
+Même si des scripts comme Modernizr sont très attentifs aux performances, le chargement d'un polyfill de 200 kilooctets peut affecter les performances de votre application.  Ceci est particulièrement critique avec les navigateurs historiques ; beaucoup d'entre eux ont un moteur JavaScript très lent qui peut rendre l'exécution de tous vos polyfills pénibles pour l'utilisateur. La performance est un sujet en soi ; les navigateurs historiques y sont très sensibles : fondamentalement, ils sont lents et ils ont plus besoin de polyfills, et donc ils ont besoin de traiter encore plus de JavaScript. Ils sont donc doublement surchargés par rapport aux navigateurs modernes. Testez votre code avec les navigateurs historiques pour voir comment leur fonctionnement en conditions réelles. Parfois, l'abandon de certaines fonctionnalités amène un meilleur ressenti pour l'utilisateur que d'avoir exactement la même fonctionnalité dans tous les navigateurs. Dernier rappel&nbsp;: pensez toujours à l'utilisateur final.
 
 ## Conclusion
 

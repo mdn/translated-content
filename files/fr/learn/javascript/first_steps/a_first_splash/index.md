@@ -200,7 +200,7 @@ Voyons maintenant comment nous pouvons transformer ces étapes en code. Nous all
 
 Pour commencer ce didacticiel, faites une copie locale du fichier [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)  (à voir [directement ici](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). Ouvrez-le dans votre éditeur de code et votre navigateur web. Pour l'instant, vous ne verrez qu'un titre, un paragraphe d'instructions et un formulaire pour entrer une estimation, mais le formulaire est pour l'instant inactif.
 
-L'endroit où nous allons ajouter tout notre code se trouve dans l'élément {{htmlelement ("script")}} au bas du code HTML :
+L'endroit où nous allons ajouter tout notre code se trouve dans l'élément {{htmlelement ("script")}} au bas du code HTML&nbsp;:
 
 ```html
 <script>
@@ -212,7 +212,7 @@ L'endroit où nous allons ajouter tout notre code se trouve dans l'élément {{h
 
 ### Ajouter des variables pour stocker les données
 
-Commençons. Tout d'abord, ajoutez les lignes suivantes dans l'élément {{htmlelement ("script")}} :
+Commençons. Tout d'abord, ajoutez les lignes suivantes dans l'élément {{htmlelement ("script")}}&nbsp;:
 
 ```js
 let randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -230,7 +230,7 @@ let resetButton;
 
 Cette partie de code définit les variables nécessaires au stockage des données que notre programme utilisera. Les variables sont essentiellement des conteneurs de valeurs (tels que des nombres ou des chaînes de texte). Une variable se crée avec le mot-clé `let` suivi du nom de la variable. Vous pouvez ensuite attribuer une valeur à la variable avec le signe égal (`=`) suivi de la valeur que vous voulez lui donner.
 
-Dans notre exemple :
+Dans notre exemple&nbsp;:
 
 - La première variable — `randomNumber` — reçoit le nombre aléatoire entre 1 et 100, calculé en utilisant un algorithme mathématique.
 - Les trois variables suivantes sont chacune faite pour stocker une référence aux paragraphes de résultats dans le HTML ; elles sont utilisées pour insérer des valeurs dans les paragraphes plus tard dans le code :
@@ -280,7 +280,7 @@ Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir 
 
 Les opérateurs en JavaScript nous permettent d'effectuer des tests, de faire des calculs, de joindre des chaînes ensemble et d'autres choses de ce genre.
 
-Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les[ outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes « Exemple » exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous :
+Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les[ outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes « Exemple » exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
 
 ```html hidden
 <!DOCTYPE html>
@@ -376,7 +376,7 @@ Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affi
       let outputPara = document.createElement('p');
 
       outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Résultat : ' + result;
+      outputPara.textContent = 'Résultat&nbsp;: ' + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
@@ -394,7 +394,7 @@ Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affi
 
 {{ EmbedLiveSample('Opérateurs', '100%', 300,"", "", "hide-codepen-jsfiddle") }}
 
-Regardons d'abord les opérateurs arithmétiques, par exemple :
+Regardons d'abord les opérateurs arithmétiques, par exemple&nbsp;:
 
 | Operator | Name           | Example   |
 | -------- | -------------- | --------- |
@@ -403,7 +403,7 @@ Regardons d'abord les opérateurs arithmétiques, par exemple :
 | `*`      | Multiplication | `3 * 7`   |
 | `/`      | Division       | `10 / 5`  |
 
-L'opérateur `+` peut aussi s'utiliser pour unir des chaînes de caractères (en informatique, on dit *concaténer*). Entrez les lignes suivantes, une par une :
+L'opérateur `+` peut aussi s'utiliser pour unir des chaînes de caractères (en informatique, on dit *concaténer*). Entrez les lignes suivantes, une par une&nbsp;:
 
 ```js
 let name = 'Bingo';
@@ -439,13 +439,13 @@ Lorsque nous exécutons des tests vrai/faux (par exemple, dans des conditions �
 
 Revenons à la fonction `checkGuess()`. Nous pouvons assurément dire que nous ne souhaitons pas qu'elle renvoie un message d'emplacement réservé. Nous voulons qu'elle vérifie si la supposition du joueur est correcte ou non et qu'elle renvoie une réponse appropriée.
 
-Donc, remplacez l'actuelle fonction `checkGuess()` par celle-ci :
+Donc, remplacez l'actuelle fonction `checkGuess()` par celle-ci&nbsp;:
 
 ```js
 function checkGuess(){
   let userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = 'Propositions précédentes : ';
+    guesses.textContent = 'Propositions précédentes&nbsp;: ';
   }
   guesses.textContent += userGuess + ' ';
 
@@ -477,13 +477,13 @@ Pas mal de code — ouf ! Passons en revue chaque section et expliquons ce qu'
 
 - La première ligne de la fonction (ligne 2) déclare une variable nommée `userGuess` et définit sa valeur par celle qui vient d'être saisie dans le champ de texte. Nous faisons passer aussi cette valeur par la méthode  `Number()` , juste pour nous assurer que la valeur stockée dans `userGuess` est bien un nombre.
 - Ensuite, nous rencontrons notre premier bloc de code conditionnel (lignes 3-5). Il permet d'exécuter des instructions de manière sélective, selon certaines conditions qui sont vraies ou non. Cela ressemble un peu à une fonction, mais ce n'est pas le cas. La forme la plus simple du bloc conditionnel commence par le mot clé `if`, puis parenthèses, puis des accolades `{ }`.
-  A l'intérieur de ces parenthèses, nous mettons le test. S'il renvoie `true` , nous exécutons le code à l'intérieur des accolades. Sinon, nous ne le faisons pas, et passons au morceau de code suivant. Dans ce cas, le test vérifie si la variable `guessCount` est égale à `1` (c'est-à-dire s'il s'agit de la première supposition du joueur) :
+  A l'intérieur de ces parenthèses, nous mettons le test. S'il renvoie `true` , nous exécutons le code à l'intérieur des accolades. Sinon, nous ne le faisons pas, et passons au morceau de code suivant. Dans ce cas, le test vérifie si la variable `guessCount` est égale à `1` (c'est-à-dire s'il s'agit de la première supposition du joueur)&nbsp;:
 
   ```js
   guessCount === 1
   ```
 
-  Si c'est le cas, nous faisons en sorte que le texte affiché soit « Propositions précédentes : ». Sinon, nous ne le faisons pas.
+  Si c'est le cas, nous faisons en sorte que le texte affiché soit « Propositions précédentes&nbsp;: ». Sinon, nous ne le faisons pas.
 
 - La ligne 6 ajoute la valeur courante `userGuess` à la fin du paragraphe `guesses` , plus un espace vide de sorte qu'il y aura un espace entre chaque supposition faite.
 - Le bloc suivant (lignes 8-24) effectue quelques vérifications :

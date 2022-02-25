@@ -40,19 +40,19 @@ Le widget est dans son état normal :
 
 > **Note :** Déplacer le focus dans la page entre les divers widgets se fait généralement en appuyant sur la touche de tabulation, mais ce n'est pas la norme partout. Par exemple, circuler parmi les liens sur une page se fait dans Safari par défaut en utilisant la [combinaison Option+Tab](http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
 
-Le widget est sans son état actif :
+Le widget est sans son état actif&nbsp;:
 
 - l'utilisateur clique sur lui
 - l'utilisateur presse la touche Tabulation et obtient le focus
 - le widget était dans l'état ouvert et l'utilisateur a cliqué dessus.
 
-Le widget est dans un état ouvert :
+Le widget est dans un état ouvert&nbsp;:
 
 - le widget est dans un état autre que ouvert et l'utilisateur clique dessus.
 
 Maintenant que nous savons comment changer les états du widget, il est important de définir comment changer la valeur du widget :
 
-La valeur change quand :
+La valeur change quand&nbsp;:
 
 - l'utilisateur clique sur une option quand le widget est dans l'état ouvert
 - l'utilisateur presse la touche
@@ -65,7 +65,7 @@ La valeur change quand :
 
   quand le widget est dans l'état actif
 
-Enfin, définissons comment les options du widget doivent se comporter :
+Enfin, définissons comment les options du widget doivent se comporter&nbsp;:
 
 - Quand le widget est ouvert, l'option sélectionnée est mise en valeur
 - Quand la souris est sur une option, l'option est mise en valeur et l'option précédemment mise en valeur revient à l'état normal

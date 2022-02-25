@@ -20,7 +20,7 @@ Nous examinerons maintenant en détail les fonctionnalités des divers widgets p
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Notions concernant les ordinateurs et les
         <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
@@ -29,7 +29,7 @@ Nous examinerons maintenant en détail les fonctionnalités des divers widgets p
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Comprendre quels sont les types de widgets de forme native disponibles
         dans les navigateurs pour collecter des données et comment les mettre en
@@ -76,13 +76,13 @@ On crée un champ texte sur une seule ligne avec l'élément {{HTMLElement("inpu
 
 > **Note :** Vous trouverez des exemples de tous les types de champ texte sur une ligne dans GitHub à [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) (voir [directement aussi](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
-Voici un exemple élémentaire de champ texte sur une ligne :
+Voici un exemple élémentaire de champ texte sur une ligne&nbsp;:
 
 ```html
 <input type="text" id="comment" name="comment" value="Je suis un champ texte">
 ```
 
-Les champs texte sur une ligne n'ont qu'une seule contrainte : si vous saisissez du texte avec des sauts de ligne, le navigateur les supprime avant d'envoyer les données.
+Les champs texte sur une ligne n'ont qu'une seule contrainte&nbsp;: si vous saisissez du texte avec des sauts de ligne, le navigateur les supprime avant d'envoyer les données.
 
 ![Screenshots of single line text fields on several platforms.](https://developer.mozilla.org/files/4273/all-single-line-text-field.png)
 
@@ -96,7 +96,7 @@ Ce type de champ est défini en donnant la valeur `email` à l'attribut {{htmlat
     <input type="email" id="email" name="email" multiple>
 ```
 
-Avec ce `type` , l'utilisateur doit saisir un e‑mail valide dans le champ. Tout autre type de contenu amène le navigateur à émettre une erreur lors de la soumission du formulaire. Notez que cette validation s'opère côté client et est faite par le navigateur :
+Avec ce `type` , l'utilisateur doit saisir un e‑mail valide dans le champ. Tout autre type de contenu amène le navigateur à émettre une erreur lors de la soumission du formulaire. Notez que cette validation s'opère côté client et est faite par le navigateur&nbsp;:
 
 ![Entrée d'un e-mail non valide déclenchant un message d'avertissement « Veuillez saisir une adresse électronique valide »](fr-email.png)
 
@@ -170,17 +170,17 @@ La principale différence entre un champ `textarea` et un champ monoligne est qu
 
 > **Note :** Vous trouverez un exemple de champ texte multiligne sur GitHub à l'adresse [multi-line-text-field.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/multi-line-text-field.html) (voir aussi [directement](https://mdn.github.io/learning-area/html/forms/native-form-widgets/multi-line-text-field.html)). Jetez-y un coup d'œil, et remarquez que dans la plupart des navigateurs, la zone de texte est dotée d'une poignée d'étirement en bas à droite pour permettre à l'utilisateur de la redimensionner. Cette capacité de redimensionnement peut être désactivée en réglant la propriété {{cssxref("resize")}} de la zone de texte à `none` dans les CSS.
 
-{{htmlelement("textarea")}} accepte également quelques attributs pour contrôler son rendu sur plusieurs lignes  (outre plusieurs autres) :
+{{htmlelement("textarea")}} accepte également quelques attributs pour contrôler son rendu sur plusieurs lignes  (outre plusieurs autres)&nbsp;:
 
 | Nom de l'attribut                                | Valeur par défaut | Description                                                                              |
 | ------------------------------------------------ | ----------------- | ---------------------------------------------------------------------------------------- |
 | {{htmlattrxref("cols","textarea")}} | `20`              | Largeur visible de la boîte de contrôle texte, mesurée en largeurs de caractères.        |
 | {{htmlattrxref("rows","textarea")}} |                   | Nombre de lignes de texte visibles dans la boîte de contrôle.                            |
-| {{htmlattrxref("wrap","textarea")}} | `soft`            | Indique comment le contrôle va à la ligne. Les valeurs possibles sont : `hard` ou `soft` |
+| {{htmlattrxref("wrap","textarea")}} | `soft`            | Indique comment le contrôle va à la ligne. Les valeurs possibles sont&nbsp;: `hard` ou `soft` |
 
 Notez que l'élément {{HTMLElement("textarea")}} est écrit un peu différemment de l'élément {{HTMLElement("input")}}. Ce dernier est un élément vide, ce qui signifie qu'il ne peut pas contenir d'élément enfant. A contrario, l'élément {{HTMLElement("textarea")}} est un élément régulier pouvant contenir des enfants contenus de texte.
 
-Deux points clés à noter ici :
+Deux points clés à noter ici&nbsp;:
 
 - Si vous voulez définir une valeur par défaut pour un élément {{HTMLElement("input")}}, vous devez utiliser l'attribut `value` ; avec un élément {{HTMLElement("textarea")}} mettez le texte par défaut entre la balise ouvrante et la balise fermante du dit élément.
 - Par nature, l'élément {{HTMLElement("textarea")}} n'accept que des contenus textuels ; ce qui signifie que si du contenu HTML est placé dans un élément {{HTMLElement("textarea")}} il sera restitué sous forme de texte brut.
@@ -418,7 +418,7 @@ Un bouton se crée avec un élément {{HTMLElement("button")}} ou un élément {
     <input type="button" value="Ceci est un bouton lambda">
 ```
 
-Les boutons se comportent de la même manière que vous utilisiez l'élément {{HTMLElement("button")}} ou l'élément {{HTMLElement("input")}}. Il existe toutefois quelques différences à noter :
+Les boutons se comportent de la même manière que vous utilisiez l'élément {{HTMLElement("button")}} ou l'élément {{HTMLElement("input")}}. Il existe toutefois quelques différences à noter&nbsp;:
 
 - Comme on peut le voir dans l'exemple précédent, les éléments {{HTMLElement("button")}} autorisent l'utilisation de contenu HTML dans l'étiquette, tandis que les éléments {{HTMLElement("input")}} n'acceptent que du texte brut.
 - Dans le cas des éléments {{HTMLElement("button")}}, il est possible d'avoir une valeur différente de l'étiquette du bouton (toutefois, ceci ne peut être utilisé pour les versions antérieures à la version 8 d'Internet Explorer).
@@ -435,7 +435,7 @@ Ces widgets sont des contrôles permettant l'utilisateur de saisir des données 
 
 On crée un widget pour nombres avec un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur `number`. Ce contrôle ressemble à un champ texte mais il n'accepte que des chiffres en virgule flottante, et propose habituellement des boutons pour augmenter ou réduire la valeur dans le widget.
 
-Il est aussi possible de :
+Il est aussi possible de&nbsp;:
 
 - contraindre la valeur en définissant les attributs {{htmlattrxref("min","input")}} et {{htmlattrxref("max","input")}}.
 - définir l'incrément de modification de la valeur du widget à l'aide des boutons ad‑hoc en précisant l'attribut {{htmlattrxref("step","input")}}.
@@ -470,7 +470,7 @@ Un problème avec les curseurs est qu'il n'offrent aucun moyen visue de savoir q
 <span class="beancount"></span>
 ```
 
-et en  JavaScript :
+et en  JavaScript&nbsp;:
 
 ```js
 var beans = document.querySelector('#beans');
@@ -586,12 +586,12 @@ Une image-bouton se crée avec un élément {{HTMLElement("input")}} dont l'attr
     <input type="image" alt="Click me!" src="my-img.png" width="80" height="30" />
 ```
 
-Si l'image-bouton est utilisée pour envoyer un formulaire, ce widget n'envoie pas sa valeur mais les coordonnées X et Y du clic sur l'image (les coordonnées sont relatives à l'image, ce qui veut dire que le coin supérieur gauche représente les coordonnées 0, 0). Les coordonnées sont envoyées sous la forme de deux paires de clé/valeur :
+Si l'image-bouton est utilisée pour envoyer un formulaire, ce widget n'envoie pas sa valeur mais les coordonnées X et Y du clic sur l'image (les coordonnées sont relatives à l'image, ce qui veut dire que le coin supérieur gauche représente les coordonnées 0, 0). Les coordonnées sont envoyées sous la forme de deux paires de clé/valeur&nbsp;:
 
 - la valeur X est la valeur de l'attribut {{htmlattrxref("name","input")}} suivie de la chaîne « *.x* »
 - la valeur Y est la valeur de l'attribut {{htmlattrxref("name","input")}} suivie de la chaîne « *.y* ».
 
-Lorsque vous cliquez sur l'image dans ce formulaire, vous êtes redirigés une URL du type suivant :
+Lorsque vous cliquez sur l'image dans ce formulaire, vous êtes redirigés une URL du type suivant&nbsp;:
 
         http://foo.com?pos.x=123&pos.y=456
 

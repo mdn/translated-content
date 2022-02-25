@@ -41,9 +41,9 @@ Si vous avez des questions concernant des sujets que vous aimeriez voir couverts
 - Complètement débutant
   - : Si vous êtes totalement débutant dans le développement web, nous vous recommandons de commencer par travailler notre module [« Premiers pas sur le Web »](/fr/docs/Learn/Getting_started_with_the_web), qui est une introduction pratique au développement web.
 - Au-delà des bases
-  - : Si vous possédez déjà quelques connaissances, l'étape suivante consiste à étudier en détail le {{glossary("HTML")}} et les {{glossary("CSS")}} : débutez avec notre module [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML), puis voyez le module [Introduction aux CSS](/fr/docs/Learn/CSS/First_steps).
+  - : Si vous possédez déjà quelques connaissances, l'étape suivante consiste à étudier en détail le {{glossary("HTML")}} et les {{glossary("CSS")}}&nbsp;: débutez avec notre module [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML), puis voyez le module [Introduction aux CSS](/fr/docs/Learn/CSS/First_steps).
 - Écrire des scripts
-  - : Si vous êtes déjà à l'aise avec le HTML et les CSS, ou si vous êtes plutôt intéressé par le codage, voyez le {{glossary("JavaScript")}} ou le développement côté serveur. Commencez par nos modules [JavaScript : premiers pas](/fr/docs/Learn/JavaScript/First_steps) et [Premiers pas côté serveur](/fr/docs/Learn/Server-side/First_steps).
+  - : Si vous êtes déjà à l'aise avec le HTML et les CSS, ou si vous êtes plutôt intéressé par le codage, voyez le {{glossary("JavaScript")}} ou le développement côté serveur. Commencez par nos modules [JavaScript&nbsp;: premiers pas](/fr/docs/Learn/JavaScript/First_steps) et [Premiers pas côté serveur](/fr/docs/Learn/Server-side/First_steps).
 - Les _frameworks_ et l'outillage
   - : Lorsque vous aurez appris l'essentiel de HTML, CSS, et JavaScript, vous devriez étudier [les outils de développement web côté client](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools) et éventuellement approfondir [les _frameworks_ JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), ainsi [que la programmation des sites web côté serveur](/fr/docs/Learn/Server-side).
 
@@ -72,7 +72,7 @@ Voici une liste de toutes les rubriques couvertes dans la zone d'apprentissage d
 - [Outils et tests](/fr/docs/Learn/Tools_and_testing)
   - : Cette rubrique présente les outils que les développeurs utilisent pour faciliter leur travail, tels que les outils de test inter-navigateurs, les _linters_, les outils de transformations et de mise en forme, les systèmes de gestion de version, et les outils de déploiement.
 - [Programmation de site web coté serveur](/fr/docs/Learn/Server-side)
-  - : Même si vous êtes focalisés sur le développement côté client, il est toujours utile de connaître le mode de fonctionnement des serveurs et des fonctionnalités du code côté serveur. Cette rubrique fournit une introduction générale sur le fonctionnement côté serveur et des didacticiels détaillant la manière de créer une application côté serveur à l'aide de deux environnements applicatifs populaires : Django (en Python) et Express (Node.js).
+  - : Même si vous êtes focalisés sur le développement côté client, il est toujours utile de connaître le mode de fonctionnement des serveurs et des fonctionnalités du code côté serveur. Cette rubrique fournit une introduction générale sur le fonctionnement côté serveur et des didacticiels détaillant la manière de créer une application côté serveur à l'aide de deux environnements applicatifs populaires&nbsp;: Django (en Python) et Express (Node.js).
 
 ## Obtenir nos exemples de code
 
@@ -84,7 +84,7 @@ Si vous préférez copier le dépôt d'une manière plus flexible qui permet des
 2.  [S'inscrire pour obtenir un compte GitHub](https://github.com/join).
 3.  Une fois inscrit, se connecter dans [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
 4.  Ouvrir l'[invite de commande](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) ou un terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
-5.  Pour copier depuis le dépôt de l'espace d'apprentissage un répertoire nommé « learning-area » à l'emplacement courant dans votre ordinateur, utilisez la commande suivante :
+5.  Pour copier depuis le dépôt de l'espace d'apprentissage un répertoire nommé « learning-area » à l'emplacement courant dans votre ordinateur, utilisez la commande suivante&nbsp;:
 
     ```bash
     git clone https://github.com/mdn/learning-area
@@ -92,15 +92,15 @@ Si vous préférez copier le dépôt d'une manière plus flexible qui permet des
 
 6.  Vous pouvez maintenant saisir le répertoire et retrouver les fichiers recherchés (soit avec votre explorateur de fichiers ou avec la [commande `cd`](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
-Vous pouvez mettre à jour le dépôt de `learning-area` pour tout changement intervenu sur la version principale « main » de GitHub en parcourant les étapes suivantes :
+Vous pouvez mettre à jour le dépôt de `learning-area` pour tout changement intervenu sur la version principale « main » de GitHub en parcourant les étapes suivantes&nbsp;:
 
-1.  Dans votre terminal/invite de commande, allez dans le répertoire `learning-area` avec `cd`. Par exemple, si vous êtes dans son répertoire parent :
+1.  Dans votre terminal/invite de commande, allez dans le répertoire `learning-area` avec `cd`. Par exemple, si vous êtes dans son répertoire parent&nbsp;:
 
     ```bash
     cd learning-area
     ```
 
-2.  Mettez à jour le dépôt avec la commande :
+2.  Mettez à jour le dépôt avec la commande&nbsp;:
 
     ```bash
     git pull

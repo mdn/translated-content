@@ -30,5 +30,5 @@ _Pas de méthode spécifique ; hérite des méthodes de son parent, {{DOMxRef(
 
 ## Voir aussi
 
-- Les éléments HTML obsolètes ou non standard implémentant cette interface : {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}
+- Les éléments HTML obsolètes ou non standard implémentant cette interface&nbsp;: {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}
 - {{DOMxRef("SVGUnknownElement")}}

@@ -450,7 +450,7 @@ Regardez maintenant notre tableau d'exemple sur les groupes punk – vous pouvez
 - Les en-têtes de tableau sont définis à l'aide d'éléments {{htmlelement("th")}} —  vous pouvez également spécifier s'il s'agit d'en-têtes de lignes ou de colonnes à l'aide de l'attribut `scope`. Cela vous donne des groupes complets de données qui peuvent être consommés par les lecteurs d'écran en tant qu'unités simples
 - L'élément {{htmlelement("caption")}} et l'attribut summary `<table>` effectuent tous deux des travaux similaires. Ils agissent en tant que texte alternatif pour une table, offrant ainsi à un utilisateur de lecteur d'écran un résumé rapide et utile du contenu de la table. `<caption>` est généralement préféré car il rend son contenu accessible aux utilisateurs malvoyants, qui pourraient également le trouver utile. Vous n'avez pas vraiment besoin des deux.
 
-> **Note :** voir notre article  [Tableaux HTML : dispositions avancées et accessibilité](/fr/docs/Apprendre/HTML/Tableaux/Advanced) pour plus de détails sur les tables de données accessibles.
+> **Note :** voir notre article  [Tableaux HTML&nbsp;: dispositions avancées et accessibilité](/fr/docs/Apprendre/HTML/Tableaux/Advanced) pour plus de détails sur les tables de données accessibles.
 
 ## Alternatives textuelles
 

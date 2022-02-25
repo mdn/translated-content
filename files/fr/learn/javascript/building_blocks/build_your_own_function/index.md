@@ -53,7 +53,7 @@ alert('This is a message');
 
 La fonction prend un seul argument en paramètre — la chaîne de caractères qui est affichée dans la boîte d'alerte. Vous pouvez essayer de varier la syntaxe de la chaîne pour modifier le message.
 
-La fonction [alert()](/fr/docs/Web/API/Window/alert) est assez limitée : vous pouvez modifier le message, mais vous ne pouvez pas facilement faire varier autre chose, comme la couleur, une icône, ou autre chose. Nous en construirons une qui s'avérera plus amusante.
+La fonction [alert()](/fr/docs/Web/API/Window/alert) est assez limitée&nbsp;: vous pouvez modifier le message, mais vous ne pouvez pas facilement faire varier autre chose, comme la couleur, une icône, ou autre chose. Nous en construirons une qui s'avérera plus amusante.
 
 > **Note :** Cet exemple devrait fonctionner correctement dans tous les navigateurs modernes, mais elle pourrait avoir un comportement un peu plus inattendu dans un navigateur ancien. Nous recommandons donc de faire cet exercice dans un navigateur moderne tel que Firefox, Opera, ou Chrome.
 
@@ -198,7 +198,7 @@ Si vous avez essayé la dernière expérimentation, assurez-vous d'annuler la de
 
 En l'état, la fonction n'est pas très utile — on ne veut pas montrer le même message par défaut à chaque fois. Améliorons la en ajoutant quelques paramètres, ils permettront d'appeler la fonction avec différentes options.
 
-1.  Premièrement, mettons à jour la première ligne :
+1.  Premièrement, mettons à jour la première ligne&nbsp;:
 
     ```js
     function displayMessage() {

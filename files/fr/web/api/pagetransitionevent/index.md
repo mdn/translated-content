@@ -39,13 +39,13 @@ function myFunction(event) {
 
 ## Membres
 
-L’objet **PageTransitionEvent** possède les types de membres suivants :
+L’objet **PageTransitionEvent** possède les types de membres suivants&nbsp;:
 
 - [Propriétés](#Propriétés)
 
 ### Propriétés
 
-L’objet **PageTransitionEvent** possède les propriétés suivantes :
+L’objet **PageTransitionEvent** possède les propriétés suivantes&nbsp;:
 
 <table>
   <tbody>

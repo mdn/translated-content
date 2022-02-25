@@ -1,5 +1,5 @@
 ---
-title: 'Tableaux HTML :  dispositions avancées et accessibilité'
+title: 'Tableaux HTML&nbsp;:  dispositions avancées et accessibilité'
 slug: Learn/HTML/Tables/Advanced
 tags:
   - Accessibilité
@@ -28,7 +28,7 @@ Dans le second article de ce module, nous examinerons quelques dispositions avan
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases de HTML (voir
         <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
@@ -37,7 +37,7 @@ Dans le second article de ce module, nous examinerons quelques dispositions avan
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         En apprendre plus sur les fonctionnalités HTML plus avancées et
         l'accessibilité aux tableaux.
@@ -64,11 +64,11 @@ Le titre est placé directement sous la balise `<table>`.
 
 > **Note :** L'attribut {{htmlattrxref("summary","table")}} peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`,  car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant  (il n'apparaît pas dans la page).
 
-### Apprentissage actif : Ajouter un titre
+### Apprentissage actif&nbsp;: Ajouter un titre
 
 Essayons en revisitant un exemple rencontré dans l'article précédent.
 
-1.  Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML : notions de base](/fr/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
+1.  Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
 2.  Ajoutez un titre approprié pour le tableau.
 3.  Enregistrez votre code et ouvrez-le dans un navigateur pour voir à quoi il ressemble.
 
@@ -362,7 +362,7 @@ Nous avons déjà traité des en-têtes dans notre article précédent — voir 
 
 ### L'attribut `scope`
 
-Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut {{htmlattrxref("scope","th")}}. Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguité un en-tête de colonne comme étant un en-tête de colonne ainsi :
+Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut {{htmlattrxref("scope","th")}}. Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguité un en-tête de colonne comme étant un en-tête de colonne ainsi&nbsp;:
 
 ```html
 <thead>
@@ -401,7 +401,7 @@ Une alternative à l'usage de l'attribut `scope` est l'utilisation des attributs
 
 Votre tableau HTML possède donc la position explicite de chaque cellule dans le tableau, définie par les en-têtes de chaque colonne et chaque ligne qui en font partie, un peu comme dans une feuille de calcul. Pour un bon fonctionnement, le tableau a réellement besoin d'en-têtes de colonnes et de lignes.
 
-En revenant à notre exemple de tableau des dépenses et des coûts, les deux extraits précédents pourraient être réécrits ainsi :
+En revenant à notre exemple de tableau des dépenses et des coûts, les deux extraits précédents pourraient être réécrits ainsi&nbsp;:
 
 ```html
 <thead>
@@ -429,7 +429,7 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 
 > **Note :** Cette méthode crée des associations très précises entre en-têtes et données mais elle utilise **beaucoup** plus de balisage et ne laisse aucune marge d'erreur.  L'approche `scope` est généralement suffisante pour la plupart des tableaux.
 
-### Apprentissage actif : jouer avec `scope` et `headers`
+### Apprentissage actif&nbsp;: jouer avec `scope` et `headers`
 
 1.  Pour cet exercice final, nous aimerions que vous fassiez une copie locale de [items‑sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css), dans un nouveau répertoire.
 2.  Maintenant essayez d'ajouter un attribut `scope` approprié pour améliorer ce tableau.
@@ -446,6 +446,6 @@ Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais 
 
 ## Dans ce module
 
-- [Tableaux HTML : notions de base](/fr/docs/Learn/HTML/Tables/Basics)
+- [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics)
 - [Tableaux HTML : dispositions avancées et accessibilité](/fr/docs/Learn/HTML/Tables/Advanced)
 - [Structuration de données sur les planètes](/fr/docs/Learn/HTML/Tables/Structuring_planet_data)

@@ -49,7 +49,7 @@ Le **CSS Object Model** est un ensemble d’API permettant de manipuler le CSS d
 - {{domxref("StylesheetList")}}
 - {{domxref("TransitionEvent")}}
 
-Quelques autres interfaces sont également étentues par les spécifications relatives au CSSOM : {{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, et {{domxref("SVGElement")}}.
+Quelques autres interfaces sont également étentues par les spécifications relatives au CSSOM&nbsp;: {{domxref("Document")}}, {{domxref("Window")}}, {{domxref("Element")}}, {{domxref("HTMLElement")}}, {{domxref("HTMLImageElement")}}, {{domxref("Range")}}, {{domxref("MouseEvent")}}, et {{domxref("SVGElement")}}.
 
 ## Tutoriels
 
@@ -73,4 +73,4 @@ Quelques autres interfaces sont également étentues par les spécifications rel
 
 ## Notes sur la compatibilité des navigateurs
 
-Toutes ces fonctionnalités ont été ajoutées petit à petit au fil des années dans les différents navigateurs : ce fut un processus assez complexe, impossible à résumer en un simple tableau. Veuillez vous référer aux interfaces spécifiques pour connaître leurs disponibilités.
+Toutes ces fonctionnalités ont été ajoutées petit à petit au fil des années dans les différents navigateurs&nbsp;: ce fut un processus assez complexe, impossible à résumer en un simple tableau. Veuillez vous référer aux interfaces spécifiques pour connaître leurs disponibilités.

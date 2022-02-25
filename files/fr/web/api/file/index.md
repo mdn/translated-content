@@ -10,7 +10,7 @@ translation_of: Web/API/File
 
 L’interface **`File`** fournit des informations sur des fichiers et permet au code JavaScript d’une une page web d’accéder à leurs contenus.
 
-Les objets `File` sont généralements obtenus à partir de :
+Les objets `File` sont généralements obtenus à partir de&nbsp;:
 
 - l’objet {{domxref("FileList")}} retourné lorsque qu’un utilisateur ou une utilisatrice sélectionne des fichiers grâce à un élément {{HTMLElement("input")}} ;
 - l’objet {{domxref("DataTransfer")}} d’une opération de glisser-déposer ;
@@ -40,7 +40,7 @@ Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/
 - {{domxref("File.webkitRelativePath")}} {{readonlyinline}} {{non-standard_inline}}
   - : Renvoie le chemin auquel l’URL du {{domxref("File")}} est relative.
 
-`File` implémente {{domxref("Blob")}}, et ainsi possède les propriétés suivantes :
+`File` implémente {{domxref("Blob")}}, et ainsi possède les propriétés suivantes&nbsp;:
 
 - {{domxref("File.size")}} {{readonlyinline}}
   - : Renvoie la taille du fichier en octets.
@@ -49,7 +49,7 @@ Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/
 
 ## Méthodes
 
-_L’interface `File` ne définit aucune méthode, mais hérite des méthodes de l’interface {{domxref("Blob")}} :_
+_L’interface `File` ne définit aucune méthode, mais hérite des méthodes de l’interface {{domxref("Blob")}}&nbsp;:_
 
 - {{domxref("Blob.slice()", "Blob.slice([start[, end[, contentType]]])")}}
   - : Renvoie un nouvel objet `Blob` contenant les données du blob source comprises dans l’intervalle d’octets spécifié.
@@ -82,7 +82,7 @@ _L’interface `File` ne définit aucune méthode, mais hérite des méthodes de
         BlobPropertyBag properties
       );
 
-- Les propriétés et méthodes non standard suivantes ont été retirées de Gecko 7 {{geckoRelease("7.0")}} : {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Les propriétés standard {{domxref("File.name")}}, {{domxref("Blob.size")}}, et les méthodes de {{domxref("FileReader")}} devraient être utilisées à la place.
+- Les propriétés et méthodes non standard suivantes ont été retirées de Gecko 7 {{geckoRelease("7.0")}}&nbsp;: {{domxref("File.fileName")}}, {{domxref("File.fileSize")}}, {{domxref("File.getAsBinary()")}}, {{domxref("File.getAsDataURL()")}}, {{domxref("File.getAsText()","File.getAsText(string encoding)")}} ({{bug("661876")}}). Les propriétés standard {{domxref("File.name")}}, {{domxref("Blob.size")}}, et les méthodes de {{domxref("FileReader")}} devraient être utilisées à la place.
 
 ## Voir aussi
 
