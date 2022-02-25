@@ -280,7 +280,7 @@ Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir 
 
 Les opérateurs en JavaScript nous permettent d'effectuer des tests, de faire des calculs, de joindre des chaînes ensemble et d'autres choses de ce genre.
 
-Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les[ outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
+Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les[ outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
 
 ```html hidden
 <!DOCTYPE html>
@@ -455,7 +455,7 @@ function checkGuess(){
     lowOrHi.textContent = '';
     setGameOver();
   } else if (guessCount === 10) {
-     lastResult.textContent = '!!! PERDU&nbsp;!!!';
+     lastResult.textContent = '!!! PERDU&nbsp;!!!';
      setGameOver();
   } else {
      lastResult.textContent = 'Faux&nbsp;!';

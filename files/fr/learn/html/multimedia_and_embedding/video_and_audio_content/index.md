@@ -95,7 +95,7 @@ Les pistes audio et vidéo sont aussi de différents formats, par exemple :
 
 - Un conteneur WebM empaquette de l'audio Ogg Vorbis avec de la vidéo VP8/VP9. Firefox et Chrome, en particulier, assurent sa prise en charge.
 - Un conteneur MP4 assemble de l'audio AAC ou MP3 en audio avec de la vidéo H.264. Internet Explorer et Safari, principalement, le prennent en charge.
-- L'ancien conteneur Ogg rassemblait de l'audio Ogg Vorbis et de la vidéo Ogg Theora. Il était essentiellement pris en charge par Firefox and Chrome, mais il a été supplanté par le format WebM qui est de meilleure qualité.
+- L'ancien conteneur Ogg rassemblait de l'audio Ogg Vorbis et de la vidéo Ogg Theora. Il était essentiellement pris en charge par Firefox and Chrome, mais il a été supplanté par le format WebM qui est de meilleure qualité.
 
 Un lecteur audio peut jouer directement une piste audio, par ex. un fichier MP3 ou Ogg. Elles ne nécessitent pas de conteneur.
 

@@ -9,7 +9,7 @@ Le standard _Storage_ définit un système de stockage commun et partagé utilis
 
 {{AvailableInWorkers}}
 
-Le stockage de site — les données stockées pour un site web qui sont gérées par le standard Storage — inclut&nbsp;:
+Le stockage de site — les données stockées pour un site web qui sont gérées par le standard Storage — inclut&nbsp;:
 
 - [les bases de données IndexedDB](/fr/docs/Web/API/IndexedDB_API)&nbsp;;
 - [les données de l’API Cache](/fr/docs/Web/API/Cache)&nbsp;;
@@ -30,7 +30,7 @@ Le système de stockage de site décrit par le standard Storage, et avec lequel 
 - L’origine 2 n’a pas encore de données stockées&nbsp;; c’est simplement une boîte vide en attente de contenu. Cette origine, toutefois, a un quota inférieur à celui des deux autres. Il peut s’agir d’un site visité moins souvent, ou d’un site connu pour avoir des besoins de stockage inférieurs.
 - L’unité de stockage de l’origine 3 est complètement remplie&nbsp;; elle a atteint son quota et ne peut pas stocker de données supplémentaires sans que du contenu existant soit supprimé.
 
-Les {{Glossary("User agent", "agents utilisateur")}} sont susceptibles d’utiliser diverses techniques pour déterminer le quota de différentes origines. Une des méthodes les plus probables — une que la spécification encourage spécifiquement, en fait — est de considérer la popularité et les niveaux d’utilisation de sites individuels pour déterminer quels doivent être leurs quotas. Il est également concevable que le navigateur puisse offrir une interface utilisateur pour personnaliser ces quotas.
+Les {{Glossary("User agent", "agents utilisateur")}} sont susceptibles d’utiliser diverses techniques pour déterminer le quota de différentes origines. Une des méthodes les plus probables — une que la spécification encourage spécifiquement, en fait — est de considérer la popularité et les niveaux d’utilisation de sites individuels pour déterminer quels doivent être leurs quotas. Il est également concevable que le navigateur puisse offrir une interface utilisateur pour personnaliser ces quotas.
 
 ## Modes de boîte
 

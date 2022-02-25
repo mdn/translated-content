@@ -38,9 +38,9 @@ Le reste du module est toutefois un peu plus difficile — il est facile de plac
 ## Validation et soumission des données de formulaires
 
 - [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)
-  - : Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination&nbsp;? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
+  - : Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination&nbsp;? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
 - [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
-  - : Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont de format correct pour pouvoir les traiter correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser nos applications. La validation et la soumission des données des formulaires vous aidera à remplir ces objectifs — cet article indique ce qui est nécessaire de savoir.
+  - : Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont de format correct pour pouvoir les traiter correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser nos applications. La validation et la soumission des données des formulaires vous aidera à remplir ces objectifs — cet article indique ce qui est nécessaire de savoir.
 
 ## Guides avancés
 

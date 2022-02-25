@@ -30,7 +30,7 @@ Pour commencer, posez-vous ces questions :
 
 ## Esquisse de votre concept
 
-Ensuite, prenez un crayon et du papier et faites une esquisse de l'apparence souhaitée pour votre site. Pour une première et simple page web, il n'y a pas beaucoup à esquisser, mais vous devriez prendre l'habitude de le faire dès maintenant. Cela aide vraiment — vous n'avez pas à être Van Gogh !
+Ensuite, prenez un crayon et du papier et faites une esquisse de l'apparence souhaitée pour votre site. Pour une première et simple page web, il n'y a pas beaucoup à esquisser, mais vous devriez prendre l'habitude de le faire dès maintenant. Cela aide vraiment — vous n'avez pas à être Van Gogh !
 
 ![](website-drawing-scan.png)
 
@@ -64,7 +64,7 @@ Pour choisir une image, allez sur [Google Images](https://www.google.com/imghp?g
 
 ![](Screenshot%20from%202014-11-04%2015:20:48.png)
 
-> **Note :** La plupart des images sur le Web, dont celles dans Google Images, sont protégées. Pour réduire votre probabilité de commettre une violation de droits d'auteur, vous pouvez utiliser le filtre de licence de Google. Tout simplement 1) cliquez sur **Outils de recherche**, puis  2) **Droits d'usage**&nbsp;:
+> **Note :** La plupart des images sur le Web, dont celles dans Google Images, sont protégées. Pour réduire votre probabilité de commettre une violation de droits d'auteur, vous pouvez utiliser le filtre de licence de Google. Tout simplement 1) cliquez sur **Outils de recherche**, puis  2) **Droits d'usage**&nbsp;:
 >
 > ![](Screenshot%20from%202014-11-04%2014:27:45.png)
 

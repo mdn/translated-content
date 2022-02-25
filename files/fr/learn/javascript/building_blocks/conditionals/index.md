@@ -314,7 +314,7 @@ Ici nous avons
 
 ### Un exemple de switch
 
-Voyons un exemple concret — nous allons réécrire notre application de prévision météo en utilisant une instruction `switch` à la place&nbsp;:
+Voyons un exemple concret — nous allons réécrire notre application de prévision météo en utilisant une instruction `switch` à la place&nbsp;:
 
 ```html
 <label for="weather">Select the weather type today: </label>

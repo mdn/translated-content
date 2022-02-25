@@ -49,7 +49,7 @@ Cela dit, regardons la structure que le site de test devrait avoir. Les élémen
 Pour que les fichiers puissent converser entre eux, il faut préciser le chemin pour les trouver — en résumé, la route qu'un fichier doit connaître pour situer l'autre fichier. Nous allons illustrer cela avec un peu de HTML dans `index.html` pour que la page affiche l'image choisie dans l'article « [Quel aspect pour votre site web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)&nbsp;».
 
 1.  Copiez l'image précédemment choisie dans votre dossier `images`.
-2.  Ouvrez le fichier `index.html` et insérez le code suivant exactement comme indiqué. Ne vous préoccupez pas de sa signification pour le moment — nous verrons les structures plus en détail par la suite.
+2.  Ouvrez le fichier `index.html` et insérez le code suivant exactement comme indiqué. Ne vous préoccupez pas de sa signification pour le moment — nous verrons les structures plus en détail par la suite.
 
     ```html
     <!DOCTYPE html>

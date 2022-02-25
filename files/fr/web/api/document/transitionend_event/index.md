@@ -34,7 +34,7 @@ L’évènement **`transitionend`** est émis quand une [transition CSS](/fr/doc
   </tbody>
 </table>
 
-L’évènement `transitionend` est émis dans les deux directions&nbsp;: quand la transition se termine vers l’état modifié, et quand elle est complètement retournée à l’état par défaut ou non modifié. S’il n’y a pas de délai ou de durée de transition, si les deux sont 0 s ou ne sont pas déclarés, il n’y a pas de transition, et aucun évènement de transition n’est émis. Si l’évènement `transitioncancel` est émis, l’évènement `transitionend` ne se produira pas.
+L’évènement `transitionend` est émis dans les deux directions&nbsp;: quand la transition se termine vers l’état modifié, et quand elle est complètement retournée à l’état par défaut ou non modifié. S’il n’y a pas de délai ou de durée de transition, si les deux sont 0 s ou ne sont pas déclarés, il n’y a pas de transition, et aucun évènement de transition n’est émis. Si l’évènement `transitioncancel` est émis, l’évènement `transitionend` ne se produira pas.
 
 La cible originale pour cet évènement est l’[`Element`](/en-US/docs/Web/API/Element) sur lequel la transition est appliquée. Vous pouvez écouter cet évènement sur l’interface `Window` pour le gérer durant les phases de capture ou de bouillonnement. Pour plus de détails sur cet évènement, veuillez consulter la page [HTMLElement: transitionend](/fr/docs/Web/Events/transitionend).
 

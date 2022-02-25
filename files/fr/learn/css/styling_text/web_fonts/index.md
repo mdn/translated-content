@@ -120,7 +120,7 @@ Pour mettre en œuvre ces polices dans la démo, suivez ces étapes&nbsp;:
 
 1.  Renommez le répertoire d'extraction avec quelque chose de simple, comme `fonts`.
 2.  Ouvrez le fichier `stylesheet.css` et copiez y les deux blocs `@font-face` contenus dans le  fichier `web-font-start.css` — il faut les mettre tout en haut, avant tout élement du CSS, car les polices doivent être importées avant de pouvoir les utiliser sur votre site.
-3.  Chaque fonction `url()` pointe sur un fichier de police à importer dans la CSS — assurez‑vous que les chemins vers les fichiers soient corrects, donc ajoutez  `fonts/` au début de chaque chemin (si nécessaire).
+3.  Chaque fonction `url()` pointe sur un fichier de police à importer dans la CSS — assurez‑vous que les chemins vers les fichiers soient corrects, donc ajoutez  `fonts/` au début de chaque chemin (si nécessaire).
 4.  Maintenant, vous pouvez vous servir de ces polices dans vos piles de fontes, tout à fait comme les polices système ou une police «&nbsp;web safe ». Par exemple&nbsp;:
 
     ```css

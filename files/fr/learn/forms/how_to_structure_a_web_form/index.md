@@ -90,7 +90,7 @@ En raison de son influence sur les techniques d'assistance, l'élément {{HTMLEl
 
 ## L'élément \<label>
 
-Comme nous l'avons vu dans l'article précédent, l'élément {{HTMLElement("label")}} est le moyen naturel de définir une étiquette pour un widget de formulaire HTML. C'est l'élément le plus important si vous voulez créer des formulaires accessibles — lorsqu'ils sont correctement implémentés, les lecteurs d'écran énonceront l'étiquette d'un élément de formulaire selon toutes les instructions associées. Prenons cet exemple, que nous avons vu dans l'article précédent&nbsp;:
+Comme nous l'avons vu dans l'article précédent, l'élément {{HTMLElement("label")}} est le moyen naturel de définir une étiquette pour un widget de formulaire HTML. C'est l'élément le plus important si vous voulez créer des formulaires accessibles — lorsqu'ils sont correctement implémentés, les lecteurs d'écran énonceront l'étiquette d'un élément de formulaire selon toutes les instructions associées. Prenons cet exemple, que nous avons vu dans l'article précédent&nbsp;:
 
 ```html
 <label for="name">Nom&nbsp;:</label> <input type="text" id="name" name="user_name">
@@ -163,10 +163,10 @@ Considérons cet exemple&nbsp;:
 </div>
 ```
 
-Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant «&nbsp;astérisque&nbsp;» ou «&nbsp;obligatoire&nbsp;», selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.
+Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant «&nbsp;astérisque&nbsp;» ou «&nbsp;obligatoire&nbsp;», selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.
 
 - Dans le premier exemple, l'étiquette n'est pas lue du tout avec l'entrée — vous obtenez simplement «&nbsp;texte édité vierge&nbsp;», puis les étiquettes réelles sont lues séparément. Les multiples éléments \<label> embrouillent le lecteur d'écran.
-- Dans le deuxième exemple, les choses sont un peu plus claires — l'étiquette lue en même temps que l'entrée est «&nbsp;nom astérisque nom éditer texte&nbsp;», et les étiquettes sont toujours lues séparément. Les choses sont encore un peu confuses, mais c'est un peu mieux cette fois parce que l'entrée a une étiquette associée.
+- Dans le deuxième exemple, les choses sont un peu plus claires — l'étiquette lue en même temps que l'entrée est «&nbsp;nom astérisque nom éditer texte&nbsp;», et les étiquettes sont toujours lues séparément. Les choses sont encore un peu confuses, mais c'est un peu mieux cette fois parce que l'entrée a une étiquette associée.
 - Le troisième exemple est meilleur — les véritables étiquettes sont toutes lues ensemble, et l'étiquette énoncée avec l'entrée est «&nbsp;nom astériquer éditer texte&nbsp;».
 
 > **Note :** Vous pouvez obtenir des résultats légérement différents, selon votre lecteur d'écran. Ce qui précéde a été testé avec VoiceOver (et NVDA se comporte de la même façon). Nous aimerions avoir un retour sur vos expériences également.
@@ -187,7 +187,7 @@ Chaque groupe de fonctionnalités séparées doit être contenu dans un élémen
 
 ### Apprentissage actif&nbsp;: construire une structure de formulaire
 
-Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn/HTML/Forms/The_native_form_widgets)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
+Mettons ces idées en pratique et construisons une structure de formulaire un peu plus sophistiquée — un formulaire de paiement. Il contiendra un certain nombre de types de widgets que vous ne comprenez pas encore — ne vous inquiétez pas pour l'instant ; vous découvrirez comment ils fonctionnent dans l'article suivant ([Les widgets natifs pour formulaire](/fr/docs/Learn/HTML/Forms/The_native_form_widgets)). Pour l'instant, lisez attentivement les descriptions en suivant les instructions ci-dessous et commencez à vous faire une idée des éléments enveloppes que nous utilisons pour structurer le formulaire, et pourquoi.
 
 1.  Pour commencer, faites une copie locale de notre [fichier modèle vierge](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) et des [CSS pour notre formulaire de paiement ](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css)dans un nouveau répertoire.
 2.  Primo, appliquez les CSS au HTML en ajoutant la ligne suivante dans l'élément {{htmlelement("head")}} du HTML&nbsp;:
@@ -257,7 +257,7 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
     </section>
     ```
 
-6.  Nous arrivons maintenant à la deuxième `<section>` de notre formulaire — l'information de paiement. Ici nous avons trois widgets distincts avec leur étiquette, chacun contenu dans un paragraphe `<p>`. Le premier est un menu déroulant ({{htmlelement("select")}}) pour le choix du type de la carte de crédit. Le deuxième  est un élément `<input>` de type nombre pour entrer le numéro de la carte de crédit. Le dernier est un élément `<input>` de type `date` pour entrer la date d'expiration de la carte de crédit (il sera accompagné d'un widget dateur pour les navigateurs prenant en charge cette fonctionnalité, et sera un simple champ textuel pour les navigateurs ne la prenant pas en charge). À nouveau, entrez ce qui suit après la section ci‑dessus&nbsp;:
+6.  Nous arrivons maintenant à la deuxième `<section>` de notre formulaire — l'information de paiement. Ici nous avons trois widgets distincts avec leur étiquette, chacun contenu dans un paragraphe `<p>`. Le premier est un menu déroulant ({{htmlelement("select")}}) pour le choix du type de la carte de crédit. Le deuxième  est un élément `<input>` de type nombre pour entrer le numéro de la carte de crédit. Le dernier est un élément `<input>` de type `date` pour entrer la date d'expiration de la carte de crédit (il sera accompagné d'un widget dateur pour les navigateurs prenant en charge cette fonctionnalité, et sera un simple champ textuel pour les navigateurs ne la prenant pas en charge). À nouveau, entrez ce qui suit après la section ci‑dessus&nbsp;:
 
     ```html
     <section>

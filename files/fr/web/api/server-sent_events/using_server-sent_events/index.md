@@ -134,7 +134,7 @@ Chaque message consiste en une ou plusieurs lignes de texte décrivant les champ
 
 ### Champs
 
-Chaque message reçu contient un ou plusieurs de ces champs, un par ligne  :
+Chaque message reçu contient un ou plusieurs de ces champs, un par ligne  :
 
 - `event`
   - : Une chaîne identifiant le type d'évènement décrit. S'il est spécifié, un évènement sera envoyé dans le navigateur à l'écouteur défini pour l'évènement spécifié. Le code source de l'application doit utiliser `addEventListener()` pour écouter des évènements nommés. Le gestionnaire `onmessage` est appelé si aucun nom d'évènement n'est spécifié dans un message.

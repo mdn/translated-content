@@ -314,7 +314,7 @@ Si vous n'avez pas réussi à démarrer l'application, vous devriez voir un mess
     "No such native application <name>"
 
 - Vérifiez que le nom passé comme argument à la fonction `runtime.connectNative()` correspond au nom dans le manifest de l'application
-- OS X / Linux : vérifiez que le nom du fichier de manifest de l'application est \<name>.json.
+- OS X / Linux : vérifiez que le nom du fichier de manifest de l'application est \<name>.json.
 - Windows : vérifiez que la clé de registre est dans l'endroit correcte, et que son nom correspond au «&nbsp;name&nbsp;» dans le manifest de l'application.
 - Windows : vérifiez que le chemin donné dans la clé de registre pointe vers le manifest de l'application.
 

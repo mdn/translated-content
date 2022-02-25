@@ -61,7 +61,7 @@ En utilisant la méthode (3), vous pouvez également charger des scripts dans de
 
 Les scripts de contenu peuvent accéder et modifier le DOM de la page à la manière des scripts classique. Ils peuvent également observer tout changement du DOM effectué par les scripts de la page.
 
-Cependant, les scripts de contenu reçoivent une «&nbsp;vue propre du DOM&nbsp;». Cela signifie que :
+Cependant, les scripts de contenu reçoivent une «&nbsp;vue propre du DOM&nbsp;». Cela signifie que :
 
 - Les scripts de contenu ne peuvent pas accéder aux variables JavaScript définies par les scripts de la page.
 - Si un script de page redéfinit une propriété intrinsèque du DOM, le script de contenu verra la version originale de cette propriété et non la version redéfinie.
@@ -307,7 +307,7 @@ document.body.addEventListener("click", function() {
 });
 ```
 
-Le script d'arrière plan qui correspond ·
+Le script d'arrière plan qui correspond ·
 
 - Écoute les tentatives de connexion depuis le script de contenu.
 - Quand il reçoit une tentative de connexion&nbsp;:

@@ -54,7 +54,7 @@ httpRequest.open('GET', 'http://www.example.org/some.file', true);
 httpRequest.send();
 ```
 
-- Le premier paramètre de l’appel à `open()` est la méthode de requête HTTP — GET, POST, HEAD ou toute autre méthode gérée par votre serveur. Laissez le nom de la méthode en majuscules comme spécifié par la norme HTTP&nbsp;; autrement certains navigateurs (comme Firefox) peuvent ne pas traiter la requête. Pour plus d’informations sur les méthodes de requêtes HTTP possibles, vous pouvez consulter les [spécifications du W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
+- Le premier paramètre de l’appel à `open()` est la méthode de requête HTTP — GET, POST, HEAD ou toute autre méthode gérée par votre serveur. Laissez le nom de la méthode en majuscules comme spécifié par la norme HTTP&nbsp;; autrement certains navigateurs (comme Firefox) peuvent ne pas traiter la requête. Pour plus d’informations sur les méthodes de requêtes HTTP possibles, vous pouvez consulter les [spécifications du W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
 - Le second paramètre est l’URL à laquelle vous envoyez la requête. Pour des raisons de sécurité, il est par défaut impossible d’appeler des URL se situant sur un domaine de tierce-partie. Veillez à utiliser le nom de domaine exact sur toutes vos pages ou vous obtiendrez une erreur «&nbsp;permission refusée&nbsp;» lors de l’appel à `open()`. Une erreur courante est de charger le site via `domaine.tld`, mais d’essayer d’appeler des pages avec `www.domain.tld`. Si vous avez réellement besoin d’envoyer une requête vers un autre domaine, veuillez consulter [Cross-Origin Resource Sharing (CORS)](/fr/docs/Web/HTTP/CORS).
 - Le troisième paramètre, optionnel, précise si la requête est asynchrone. Si mis à `true` (sa valeur par défaut), l’exécution de JavaScript se poursuivra, et l’utilisateur ou l’utilisatrice pourra interagir avec la page, en attendant l’arrivée de la réponse du serveur. C’est le premier «&nbsp;A&nbsp;» de «&nbsp;AJAX&nbsp;».
 
@@ -223,7 +223,7 @@ Interwiki
 
 ### Étape 5 – Manipuler les données
 
-Pour finir, envoyons quelques données au serveur et réceptionnons la réponse. Notre JavaScript demandera cette fois-ci une page dynamique, `test.php`, qui prendra notre contenu envoyé et revera une chaîne «&nbsp;calculée&nbsp;» – "Bonjour, \[user data] !" – que nous afficherons via `alert()`.
+Pour finir, envoyons quelques données au serveur et réceptionnons la réponse. Notre JavaScript demandera cette fois-ci une page dynamique, `test.php`, qui prendra notre contenu envoyé et revera une chaîne «&nbsp;calculée&nbsp;» – "Bonjour, \[user data] !" – que nous afficherons via `alert()`.
 
 D’abord, nous allons ajouter un boîte de texte dans notre HTML afin que l’utilisateur ou l’utilisatrice puisse saisir son nom&nbsp;:
 

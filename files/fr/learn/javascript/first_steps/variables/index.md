@@ -268,7 +268,7 @@ var myName;
 
 > **Note :** l'exemple ci-dessus ne fonctionnera pas si on tape des lignes une à une dans la console, mais seulement quand on exécute un script JavaScript multi-lignes dans un document web.
 
-Ce processus se nomme **«** **hoisting&nbsp;»** (en français, "hissage") — lisez [var hoisting](/fr/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) pour plus de précisions sur ce sujet.
+Ce processus se nomme **«** **hoisting&nbsp;»** (en français, "hissage") — lisez [var hoisting](/fr/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) pour plus de précisions sur ce sujet.
 
 Le hissage ne fonctionne plus avec `let`. Si on remplaçait var par let dans l'exemple ci-dessus, l'exécution du script planterait sur une erreur. C'est une bonne chose — déclarer une variable après l'avoir initialisé produit un code obscur, difficile à lire.
 
@@ -333,7 +333,7 @@ audio1
 audio2
 ```
 
-Exemples de noms incorrects (soit illégal, soit non conforme aux recommandations) :
+Exemples de noms incorrects (soit illégal, soit non conforme aux recommandations) :
 
 ```plain example-bad
 1

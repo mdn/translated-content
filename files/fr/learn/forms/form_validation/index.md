@@ -40,13 +40,13 @@ Allez sur n'importe quel site à la mode avec un formulaire d'inscription et vou
 
 C'est ce qu'on appelle la validation de formulaire —  lorsque vous saisissez des données, l'application Web vérifie si elles sont correctes. Si elles sont correctes, l'application permet que les données soient soumises au serveur et (généralement) sauvegardées dans une base de données ; si ce n'est pas le cas, elle émet des messages d'erreur pour expliquer ce que vous avez fait de mal (pour autant que vous l'ayez fait). La validation des formulaires peut être mise en œuvre de différentes manières.
 
-La vérité est qu'aucun d'entre nous n'_aime_ remplir des formulaires — les formulaires ennuient les utilisateurs, tout le prouve&nbsp;: cela les incite à partir et à aller voir ailleurs s'ils sont mal faits. Bref, les formulaires, c'est nullissime.
+La vérité est qu'aucun d'entre nous n'_aime_ remplir des formulaires — les formulaires ennuient les utilisateurs, tout le prouve&nbsp;: cela les incite à partir et à aller voir ailleurs s'ils sont mal faits. Bref, les formulaires, c'est nullissime.
 
 Remplir des formulaires web doit être aussi facile que possible. Alors pourquoi être tatillons et bloquer les utilisateurs à chaque fois ? Il y a trois raisons principales :
 
 - **obtenir de bonnes données dans un bon format** — les applications ne tourneront pas correctement si les données utilisateur sont stockées dans un format fantaisiste, ou si les bonnes informations ne sont pas aux bons endroits ou totalement omises.
 - **protéger nos utilisateurs** — s'ils entrent un mot de passe facile à deviner ou aucun, des utilisateurs malveillants peuvent aisément accéder à leurs comptes et voler leurs données.
-- **nous protéger nous‑mêmes** — il existe de nombreuses façons dont les utilisateurs malveillants peuvent utiliser les formulaires non protégés pour endommager l'application dans laquelle ils se trouvent (voir [Sécurité du site Web](/fr/docs/Learn/Server-side/First_steps/Website_security)).
+- **nous protéger nous‑mêmes** — il existe de nombreuses façons dont les utilisateurs malveillants peuvent utiliser les formulaires non protégés pour endommager l'application dans laquelle ils se trouvent (voir [Sécurité du site Web](/fr/docs/Learn/Server-side/First_steps/Website_security)).
 
 ### Les divers types de validation de formulaire
 
@@ -78,11 +78,11 @@ Quand un élément est invalide&nbsp;:
 - l'élément correspond à la pseudo‑classe CSS {{cssxref(":invalid")}} &nbsp;; cela vous permet d'appliquer une composition de style distinctive.
 - si l'utilisateur essaie d'envoyer le formulaire, le navigateur le bloquera et affichera un message d'erreur.
 
-### Contraintes de validation sur les éléments input — simple début
+### Contraintes de validation sur les éléments input — simple début
 
 Dans cette section, nous examinerons quelques unes des diverses fonctionnalités HTML5 peuvant être utilisées pour valider des éléments d'{{HTMLElement("input")}}.
 
-Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) et un exemple «&nbsp;live&nbsp;» ci-dessous :
+Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) et un exemple «&nbsp;live&nbsp;» ci-dessous :
 
 ```html hidden
 <form>
@@ -108,7 +108,7 @@ Pour commencer, faites une copie de fruit-start.html dans un nouveau répertoire
 
 ### Attribut required
 
-La fonctionnalité de validation HTML5 la plus simple à utiliser est l'attribut {{htmlattrxref("required", "input")}}} — si vous voulez rendre une entrée obligatoire, vous pouvez marquer l'élément en utilisant cet attribut. Lorsque cet attribut est mis, le formulaire ne sera pas soumis (et affichera un message d'erreur) si l'entrée est vide (l'entrée sera également considérée comme invalide).
+La fonctionnalité de validation HTML5 la plus simple à utiliser est l'attribut {{htmlattrxref("required", "input")}}} — si vous voulez rendre une entrée obligatoire, vous pouvez marquer l'élément en utilisant cet attribut. Lorsque cet attribut est mis, le formulaire ne sera pas soumis (et affichera un message d'erreur) si l'entrée est vide (l'entrée sera également considérée comme invalide).
 
 Ajoutez un attribut `required` à votre saisie, comme montré ci‑dessous&nbsp;:
 
@@ -222,7 +222,7 @@ Supprimez maintenant le contenu de l'élément `<body>` et remplacez-le par le s
 ```
 
 - Ici, nous avons donné au champ de texte une taille minimale et maximale de 6 caractères — la même que celle de _banane_ ou _cerise_. La saisie de moins de 6 caractères s'affichera comme non valide et la saisie de plus de 6 caractères ne sera pas possible dans la plupart des navigateurs.
-- Nous avons également contraint le champ `number` à un `min` de 1 et un `max `de 10 — les nombres entrés hors de cette plage seront affichés comme non valides, et vous ne pourrez pas utiliser les flèches d'incrémentation/décrémentation pour porter la valeur en dehors de cette plage.
+- Nous avons également contraint le champ `number` à un `min` de 1 et un `max `de 10 — les nombres entrés hors de cette plage seront affichés comme non valides, et vous ne pourrez pas utiliser les flèches d'incrémentation/décrémentation pour porter la valeur en dehors de cette plage.
 
 ```html hidden
 input:invalid {

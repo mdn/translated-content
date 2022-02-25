@@ -114,4 +114,4 @@ Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Node.insertBefore()")}}
 - {{domxref("Node.hasChildNodes()")}}
-- {{domxref("document.createElementNS()")}} — pour spécifier explicitement l’URI de l’espace de noms de l’élément.
+- {{domxref("document.createElementNS()")}} — pour spécifier explicitement l’URI de l’espace de noms de l’élément.

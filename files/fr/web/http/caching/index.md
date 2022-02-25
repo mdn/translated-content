@@ -22,7 +22,7 @@ Il y a différents types de caches, qui peuvent être groupés en deux principal
 
 ### Caches de navigateur privés
 
-Un cache privé est dédié à un seul utilisateur. Il se peut que vous ayez déjà vu les termes «&nbsp;mise en cache&nbsp;» dans les paramètres de votre navigateur. Un cache de navigateur contient tous les documents téléchargés via [HTTP](/fr/docs/Web/HTTP "en/HTTP") par l’utilisateur. Ce cache est utilisé pour rendre les documents visités disponibles à la navigation via les boutons précédent / suivant, la sauvegarde, l’affichage du code source, etc. sans nécessiter un aller-retour au serveur supplémentaire. De la même manière, il améliore la navigation hors-ligne de contenu en cache.
+Un cache privé est dédié à un seul utilisateur. Il se peut que vous ayez déjà vu les termes «&nbsp;mise en cache&nbsp;» dans les paramètres de votre navigateur. Un cache de navigateur contient tous les documents téléchargés via [HTTP](/fr/docs/Web/HTTP "en/HTTP") par l’utilisateur. Ce cache est utilisé pour rendre les documents visités disponibles à la navigation via les boutons précédent / suivant, la sauvegarde, l’affichage du code source, etc. sans nécessiter un aller-retour au serveur supplémentaire. De la même manière, il améliore la navigation hors-ligne de contenu en cache.
 
 ### Caches de proxy partagés
 

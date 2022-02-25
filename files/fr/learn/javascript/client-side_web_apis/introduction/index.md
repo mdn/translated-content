@@ -59,7 +59,7 @@ De la même façon, par exemple, pour programmer des graphismes en 3D, il est be
 
 ### API JavaScript côté client
 
-Le JavaScript côté client en particulier a de nombreuses API à sa disposition — elles ne font pas partie du langage JavaScript lui-même, elles sont construites par-dessus JavaScript, offrant des super-pouvoirs supplémentaires à utiliser dans votre code. Elles appartiennent généralement à une des deux catégories :
+Le JavaScript côté client en particulier a de nombreuses API à sa disposition — elles ne font pas partie du langage JavaScript lui-même, elles sont construites par-dessus JavaScript, offrant des super-pouvoirs supplémentaires à utiliser dans votre code. Elles appartiennent généralement à une des deux catégories :
 
 - **Les API du navigateur** sont intégrées au navigateur web et permettent de rendre disponibles les données du navigateur et de son environnement afin de réaliser des choses complexes avec. Ainsi, [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API) fournit des constructions JavaScript pour manipuler des données audio dans le navigateur. On pourra utiliser cette API afin de récupérer une piste audio puis d'abaisser son volume, d'y appliquer des effets, etc. Sous le capot, c'est le navigateur qui s'occupe des couches plus complexes en code « bas niveau » (C++ ou Rust par exemple) afin de réaliser le traitement du signal. Là encore, cette complexité est masquée par l'abstraction offerte par l'API.
 - **Les API tierces** ne sont pas intégrées au navigateur par défaut, et vous devez généralement récupérer le code de l'API et des informations depuis un site Web.

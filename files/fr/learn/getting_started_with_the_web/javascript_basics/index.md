@@ -23,7 +23,7 @@ JavaScript est d'une incroyable flexibilité. Vous pouvez commencer petit, avec 
 
 JavaScript est plutôt compact tout en étant très souple. Les développeurs ont écrit de nombreux outils sur le cœur du langage JavaScript, créant des fonctionnalités supplémentaires très simplement. Parmi ces outils, il y a :
 
-- des Interfaces de Programmation d'Applications pour navigateurs ({{Glossary("API","API")}}) — API intégrées aux navigateurs web permettant de créer dynamiquement du HTML, de définir des styles de CSS, de collecter et manipuler un flux vidéo depuis la webcam de l'utilisateur ou de créer des graphiques 3D et des échantillonnages audio.
+- des Interfaces de Programmation d'Applications pour navigateurs ({{Glossary("API","API")}}) — API intégrées aux navigateurs web permettant de créer dynamiquement du HTML, de définir des styles de CSS, de collecter et manipuler un flux vidéo depuis la webcam de l'utilisateur ou de créer des graphiques 3D et des échantillonnages audio.
 - des API tierces‑parties permettant aux développeurs d'incorporer dans leurs sites des fonctionnalités issues d'autres fournisseurs de contenu, comme Twitter ou Facebook.
 - des modèles et bibliothèques tierces‑parties applicables à votre HTML permettant de mettre en œuvre rapidement des sites et des applications.
 
@@ -156,7 +156,7 @@ Notez que les variables peuvent contenir des[ types différents de données](/fr
       <td>
         <p>
           <code>let myVariable = [1,'Bob','Étienne',10];</code
-          ><br />Référez‑vous à chaque élément du tableau ainsi <code
+          ><br />Référez‑vous à chaque élément du tableau ainsi <code
             >: myVariable[0]</code
           >, <code>myVariable[1]</code>, etc.
         </p>

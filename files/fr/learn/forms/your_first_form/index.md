@@ -269,7 +269,7 @@ Félicitations ! Vous avez construit votre premier formulaire HTML. Il ressemble
 
 {{EmbedLiveSample("Un_formulaire_simple", "100%", "240", "", "Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple")}}
 
-Toutefois, ce n'est qu'un début — il est désormais temps de regarder plus en détail. Les formulaires HTML sont bien plus puissants que ce que vous avez pu voir ici et les autres articles de ce guide vous aiderons à maîtriser le reste.
+Toutefois, ce n'est qu'un début — il est désormais temps de regarder plus en détail. Les formulaires HTML sont bien plus puissants que ce que vous avez pu voir ici et les autres articles de ce guide vous aiderons à maîtriser le reste.
 
 {{NextMenu("Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML", "Web/Guide/HTML/Formulaires")}}
 

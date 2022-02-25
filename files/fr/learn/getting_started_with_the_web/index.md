@@ -58,4 +58,4 @@ Une succession d'opérations complexes, dont vous n'avez pas forcément à vous 
 
 ## Voir aussi
 
-[Le Web démystifié ](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): une grande série de vidéos expliquant les fondamentaux du Web, visant à parfaire des débutants dans le développement Web. Créée par [Jérémie Patonnier](https://twitter.com/JeremiePat).
+[Le Web démystifié ](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): une grande série de vidéos expliquant les fondamentaux du Web, visant à parfaire des débutants dans le développement Web. Créée par [Jérémie Patonnier](https://twitter.com/JeremiePat).

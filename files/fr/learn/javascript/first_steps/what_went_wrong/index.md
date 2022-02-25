@@ -205,7 +205,7 @@ en
 let userGuess === Number(guessField.value);
 ```
 
-cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation  (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat  `true`/`false` (vrai/faux).
+cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation  (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat  `true`/`false` (vrai/faux).
 
 > **Note :** Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) pour plus de précisions à propos de cette erreur.
 

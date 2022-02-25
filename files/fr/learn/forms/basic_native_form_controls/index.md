@@ -39,7 +39,7 @@ Nous examinerons maintenant en détail les fonctionnalités des divers widgets p
   </tbody>
 </table>
 
-Ici, nous nous attarderons sur les widgets de formulaires intégrés aux navigateurs, mais comme les formulaires HTML restent très circonscrits et que la qualité des implémentations peut être très différente d'un navigateur à l'autre, les développeurs web construisent parfois leurs propres widgets de formulaires — voir [Comment construire des widgets de formulaires personnalisés](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés) plus loin dans ce même module pour plus d'idées à ce propos.
+Ici, nous nous attarderons sur les widgets de formulaires intégrés aux navigateurs, mais comme les formulaires HTML restent très circonscrits et que la qualité des implémentations peut être très différente d'un navigateur à l'autre, les développeurs web construisent parfois leurs propres widgets de formulaires — voir [Comment construire des widgets de formulaires personnalisés](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés) plus loin dans ce même module pour plus d'idées à ce propos.
 
 > **Note :** La plupart des fonctionnalités discutées dans cet article sont abondamment explicitées dans les navigateurs&nbsp;; nous soulignerons les exceptions à ce sujet. Si vous voulez plus de précisions, consultez les [références aux éléments de formulaires HTML](/fr/docs/Web/HTML/Element#Forms), et en particulier nos références détaillées aux [types \<input>](/fr/docs/Web/HTML/Element/input).
 
@@ -47,7 +47,7 @@ Ici, nous nous attarderons sur les widgets de formulaires intégrés aux navigat
 
 Beaucoup d'éléments utilisés pour définir les widgets de formulaire ont leurs propres attributs. Cependant, il y a un jeu d'attributs communs à tous les éléments de formulaire. Il vous permettent un certain contrôle sur ces widgets. Voici une liste de ces attributs communs :
 
-| Nom de l'attribut | Valeur par défaut | Description                                                                                                                                                                                                                                                                                                                                                                 |
+| Nom de l'attribut | Valeur par défaut | Description                                                                                                                                                                                                                                                                                                                                                                 |
 | ----------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `autofocus`       | (_false_)         | Cet attribut, booléen, vous permet de spécifier que cet élément doit avoir automatiquement le focus au chargement de la page, sauf si l'utilisateur prend la main, en faisant, par exemple, une saisie dans un autre contrôle. Seul un élément associé à un formulaire peut avoir cet attribut activé.                                                                      |
 | `disabled`        | (_false_)         | Cet attribut est un booléen. Il indique que l'utilisateur ne peut pas avoir d'action sur cet élément. S'il n'est pas précisé, l'élément hérite son comportement de l'élément contenant, comme, {{HTMLElement("fieldset")}}&nbsp;; si le conteneur n'a pas d'attribut `disabled` mis, l'élément est activé.                                                              |
@@ -128,7 +128,7 @@ Ce type de champ se définit avec la valeur `search` de l'attribut {{htmlattrxre
     <input type="search" id="search" name="search">
 ```
 
-La principale différence entre un champ textuel et un champ de recherche est dans l'apparence — souvent, les champs de recherche sont affichés avec des coins arrondis, et/ou avec une «&nbsp;×&nbsp;» à cliquer pour effacer la valeur entrée. Toutefois, une fonction est aussi ajoutée : les valeurs saisies peuvent être automatiquement enregistrées afin d'être utilisées pour compléter des recherches sur plusieurs pages du même site.
+La principale différence entre un champ textuel et un champ de recherche est dans l'apparence — souvent, les champs de recherche sont affichés avec des coins arrondis, et/ou avec une «&nbsp;×&nbsp;» à cliquer pour effacer la valeur entrée. Toutefois, une fonction est aussi ajoutée : les valeurs saisies peuvent être automatiquement enregistrées afin d'être utilisées pour compléter des recherches sur plusieurs pages du même site.
 
 ![Screenshots of search fields on several platforms.](all-search-field.png)
 
@@ -647,7 +647,7 @@ La prise en charge de `progress` et `meter` est vraiment bonne — il n'y a pas 
 
 ## Conclusion
 
-Comme nous venons de le voir, il y a pas mal d'éléments de formulaire différents disponibles  — il n'est pas nécessaire de mémoriser l'ensemble de ces détails dès maintenant, mais vous pourrez revenir à cet article tant que vous le voudrez pour revoir tel ou tel détail.
+Comme nous venons de le voir, il y a pas mal d'éléments de formulaire différents disponibles  — il n'est pas nécessaire de mémoriser l'ensemble de ces détails dès maintenant, mais vous pourrez revenir à cet article tant que vous le voudrez pour revoir tel ou tel détail.
 
 ## Voir également
 

@@ -600,7 +600,7 @@ Si vous êtes arrivé jusqu'ici dans l'article, vous avez toutes les connaissanc
 
   Ingrédients
 
-  1 boîte (400 g) de pois chiches (garbanzos)
+  1 boîte (400 g) de pois chiches (garbanzos)
   175g de crème de sésame
   6 tomates séchées
   un demi poivron rouge

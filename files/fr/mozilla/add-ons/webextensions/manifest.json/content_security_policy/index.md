@@ -66,7 +66,7 @@ Autoriser les scripts distants depuis n’importe quel sous-domaine de «&nbsp;j
 "content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"
 ```
 
-Autoriser [`eval()` et ses amis ](</fr/Add-ons/WebExtensions/Content_Security_Policy#eval()_et_amis>):
+Autoriser [`eval()` et ses amis ](</fr/Add-ons/WebExtensions/Content_Security_Policy#eval()_et_amis>):
 
 ```json
 "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"

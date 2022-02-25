@@ -4,7 +4,7 @@ slug: Web/API/Window/pageshow_event
 translation_of: Web/API/Window/pageshow_event
 original_slug: Web/Events/pageshow
 ---
-L’évènement `pageshow` est émis lorsqu’une entrée dans un historique de session est atteinte (cela comprend les boutons précédent / suivant ainsi que l’affichage initial de la page après l’évènement `onload`).
+L’évènement `pageshow` est émis lorsqu’une entrée dans un historique de session est atteinte (cela comprend les boutons précédent / suivant ainsi que l’affichage initial de la page après l’évènement `onload`).
 
 ## Informations générales
 
@@ -33,7 +33,7 @@ L’évènement `pageshow` est émis lorsqu’une entrée dans un historique de 
 
 ## Exemples
 
-L’exemple suivant va afficher dans la console des informations sur l’évènement `pageshow`, qui est émis à l’utilisation des boutons précédent / suivant, et pas uniquement après `onload`&nbsp;:
+L’exemple suivant va afficher dans la console des informations sur l’évènement `pageshow`, qui est émis à l’utilisation des boutons précédent / suivant, et pas uniquement après `onload`&nbsp;:
 
 ```js
 window.addEventListener('pageshow', function(event) {

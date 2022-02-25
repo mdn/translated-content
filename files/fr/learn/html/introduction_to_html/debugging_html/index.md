@@ -176,7 +176,7 @@ Vous saurez que toutes vos erreurs sont corrigées quand vous verrez la bannièr
 
 ## Résumé
 
-Voilà donc une introduction au débogage HTML, qui devrait vous donner des compétences utiles sur lesquelles compter lorsque vous commencerez à déboguer des CSS, du JavaScript ou d'autres types de code plus tard dans votre carrière. Ceci marque également la fin des articles d'apprentissage du module Introduction au HTML — maintenant vous pouvez faire un auto‑test avec nos évaluations : le lien ci‑dessous vous dirige sur la première.
+Voilà donc une introduction au débogage HTML, qui devrait vous donner des compétences utiles sur lesquelles compter lorsque vous commencerez à déboguer des CSS, du JavaScript ou d'autres types de code plus tard dans votre carrière. Ceci marque également la fin des articles d'apprentissage du module Introduction au HTML — maintenant vous pouvez faire un auto‑test avec nos évaluations : le lien ci‑dessous vous dirige sur la première.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
 

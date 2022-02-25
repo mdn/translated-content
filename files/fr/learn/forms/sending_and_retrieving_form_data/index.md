@@ -66,13 +66,13 @@ L'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) définit la méthode d'en
 
 Cet attribut définit où les données sont envoyées. Sa valeur doit être une URL valide. S'il n'est pas fourni, les données seront envoyées à l'URL de la page contenant le formulaire.
 
-Dans cet exemple, les données sont envoyées à une URL précise — http\://foo.com :
+Dans cet exemple, les données sont envoyées à une URL précise — http\://foo.com :
 
 ```html
 <form action="http://foo.com">
 ```
 
-Ici, nous utilisons une URL relative — les données sont envoyées à une URL différente sur le serveur&nbsp;:
+Ici, nous utilisons une URL relative — les données sont envoyées à une URL différente sur le serveur&nbsp;:
 
 ```html
 <form action="/somewhere_else">
@@ -212,13 +212,13 @@ Cet exemple affiche une page avec les données envoyées. Vous pouvez voir ceci 
 
 ![L'exécution du code PHP déclenche l'affichage de Hi Mom](php-result.png)
 
-> **Note :** Cet exemple ne fonctionnera pas si vous le chargez localement dans un navigateur — les navigateurs ne savent pas interpréter le code PHP, donc quand le formulaire est soumis, le navigateur vous offrira seulement de télécharger le fichier PHP pour vous. Pour qu'il s'exécute, il est nécessaire de lancer l'exemple par l'intermédiaire d'un serveur PHP de n'importe quel type. Les bons choix pour des tests locaux de PHP sont [MAMP](https://www.mamp.info/en/downloads/) (Mac et Windows) et [AMPPS](https://ampps.com/download) (Mac, Windows, Linux).
+> **Note :** Cet exemple ne fonctionnera pas si vous le chargez localement dans un navigateur — les navigateurs ne savent pas interpréter le code PHP, donc quand le formulaire est soumis, le navigateur vous offrira seulement de télécharger le fichier PHP pour vous. Pour qu'il s'exécute, il est nécessaire de lancer l'exemple par l'intermédiaire d'un serveur PHP de n'importe quel type. Les bons choix pour des tests locaux de PHP sont [MAMP](https://www.mamp.info/en/downloads/) (Mac et Windows) et [AMPPS](https://ampps.com/download) (Mac, Windows, Linux).
 >
 > Notez également que si vous utilisez MAMP mais que vous n'avez pas installé MAMP Pro (ou si le temps d'essai de la démo de MAMP Pro a expiré), vous pourriez avoir des difficultés à le faire fonctionner. Pour le faire fonctionner à nouveau, nous avons constaté que vous pouvez charger l'application MAMP, puis choisir les options de menu _MAMP_ > _Préférences_ > _PHP_, et définir "Version standard :" à "7.2.x" (x sera différent selon la version que vous avez installée).
 
 ### Exemple: Python
 
-Cet exemple vous montre comment utiliser Python pour faire la même chose — afficher les données sur une page web. Celui‑ci utilise [Flask framework](https://flask.pocoo.org/) pour le rendu des modèles, la gestion de la soumission des données du formulaire, etc (voyez [python-example.py](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py)).
+Cet exemple vous montre comment utiliser Python pour faire la même chose — afficher les données sur une page web. Celui‑ci utilise [Flask framework](https://flask.pocoo.org/) pour le rendu des modèles, la gestion de la soumission des données du formulaire, etc (voyez [python-example.py](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py)).
 
 ```python
 from flask import Flask, render_template, request
@@ -238,7 +238,7 @@ if __name__ == "__main__":
 
 Les deux prototypes référencés dans le code ci‑dessus sont les suivants&nbsp;:
 
-- [form.html ](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
+- [form.html ](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
 - [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
 
 > **Note :** À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec «&nbsp;`pip3 install flask`&nbsp;». À ce moment‑là vous pourrez exécuter l'exemple avec «&nbsp;`python3 python-example.py`&nbsp;», puis en allant sur «&nbsp;`localhost:5000`&nbsp;» dans votre navigateur.
@@ -260,7 +260,7 @@ Enfin il faut noter que même en utilisant ces canevas, travailler avec des form
 
 ## Cas particulier : envoyer des fichiers
 
-L'envoi de fichiers avec un formulaire HTML est cas particulier. Les fichiers sont des données binaires — ou considérées comme telles — alors que toutes les autres données sont des données textuelles. Comme HTTP est un protocole de texte, il y a certaines conditions particulières à remplir pour gérer des données binaires.
+L'envoi de fichiers avec un formulaire HTML est cas particulier. Les fichiers sont des données binaires — ou considérées comme telles — alors que toutes les autres données sont des données textuelles. Comme HTTP est un protocole de texte, il y a certaines conditions particulières à remplir pour gérer des données binaires.
 
 ### L'attribut enctype
 
@@ -290,7 +290,7 @@ Par exemple :
 
 ## Problèmes courants de sécurité
 
-Chaque fois qu'on envoie des données à un serveur, il faut considérer la sécurité. Les formulaires HTML sont l'un des principaux vecteurs d'attaque (emplacements d'où les attaques peuvent provenir) contre les serveurs. Les problèmes ne viennent jamais des formulaires eux-mêmes — ils proviennent de la façon dont les serveurs gèrent les données.
+Chaque fois qu'on envoie des données à un serveur, il faut considérer la sécurité. Les formulaires HTML sont l'un des principaux vecteurs d'attaque (emplacements d'où les attaques peuvent provenir) contre les serveurs. Les problèmes ne viennent jamais des formulaires eux-mêmes — ils proviennent de la façon dont les serveurs gèrent les données.
 
 L'article [Sécurité des sites Web](/fr/docs/Learn/Server-side/First_steps/Website_security) de notre sujet d'apprentissage [server-side](/fr/docs/Learn/Server-side) aborde en détail un certain nombre d'attaques courantes et les défenses potentielles contre celles-ci. Vous devriez aller consulter cet article, pour vous faire une idée de ce qui est possible.
 

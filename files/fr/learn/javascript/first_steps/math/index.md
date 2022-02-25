@@ -19,7 +19,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
-À ce point du didacticiel, nous parlerons de «&nbsp;mathématiques en JavaScript&nbsp;» — comment utiliser les {{Glossary("Operator","operators")}} et autres fonctionnalités pour manier avec succès les nombres pour faire nos bricolages.
+À ce point du didacticiel, nous parlerons de «&nbsp;mathématiques en JavaScript&nbsp;» — comment utiliser les {{Glossary("Operator","operators")}} et autres fonctionnalités pour manier avec succès les nombres pour faire nos bricolages.
 
 <table class="standard-table">
   <tbody>

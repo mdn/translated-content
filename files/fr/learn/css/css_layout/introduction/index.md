@@ -664,7 +664,7 @@ Dans l'exemple ci–dessous, nous démarrons avec un bloc HTML dans un élément
 </div>
 ```
 
-Noux utilisons une propriété `column-width` de valeur 200 pixels pour ce conteneur&nbsp;; le navigateur crée autant de colonnes de 200 pixels de large qu'il est possible de faire entrer dans le conteneur, puis il partage l'espace restant entre les colonnes crées.
+Noux utilisons une propriété `column-width` de valeur 200 pixels pour ce conteneur&nbsp;; le navigateur crée autant de colonnes de 200 pixels de large qu'il est possible de faire entrer dans le conteneur, puis il partage l'espace restant entre les colonnes crées.
 
 ```html hidden
     <div class="container">

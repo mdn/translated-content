@@ -8,7 +8,7 @@ original_slug: Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers
 
 Tout développeur apprend très rapidement (parfois difficilement) que le Web est un endroit assez inconfortable. Le pire des fléaux est le «&nbsp;navigateur historique&nbsp;». Oui, admettons‑le, si on dit «&nbsp;navigateur historique&nbsp;», nous pensons tous aux anciennes versions d'Internet Explorer ... mais elles sont loin d'être les seules. Les premières versions de Firefox, comme la [version ESR,](http://www.mozilla.org/en-US/firefox/organizations/) sont aussi des «&nbsp;navigateurs historiques&nbsp;». Et dans le monde du mobile ? Quand ni le navigateur ni l'OS ne peut être mis à jour? Oui, il y a beaucoup de vieux smartphones Android ou des iPhones dont le navigateur par défaut n'est pas à jour. Ceux-ci sont aussi des «&nbsp;navigateurs historiques&nbsp;».
 
-Malheureusement, parcourir cette jungle est une facette du métier. Mais opportunément, il existe quelques astuces pour nous aider à résoudre 80 % des problèmes causés par ces vieilles versions de navigateur.
+Malheureusement, parcourir cette jungle est une facette du métier. Mais opportunément, il existe quelques astuces pour nous aider à résoudre 80 % des problèmes causés par ces vieilles versions de navigateur.
 
 ## S'informer sur les difficultés
 
@@ -29,7 +29,7 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 - [Can I Use](http://caniuse.com) a des informations sur la prise en charge des techniques avancées.
 - [Quirks Mode](http://www.quirksmode.org) est une surprenante ressource sur la compatibilité des divers navigateurs. [La partie sur les mobiles](http://www.quirksmode.org/mobile/) est la meilleure actuellement disponible.
 - [Position Is Everything](http://positioniseverything.net/) est la meilleure ressource disponible sur les bogues de rendu dans les navigateurs historiques et leur solution de contournement (le cas échéant).
-- [Mobile HTML5](http://mobilehtml5.org) dispose d'informations de compatibilité pour une large gamme de navigateurs pour mobiles, et pas seulement pour le «&nbsp;top 5&nbsp;» (y compris Nokia, Amazon et Blackberry).
+- [Mobile HTML5](http://mobilehtml5.org) dispose d'informations de compatibilité pour une large gamme de navigateurs pour mobiles, et pas seulement pour le «&nbsp;top 5&nbsp;» (y compris Nokia, Amazon et Blackberry).
 
 ## Rendre les choses simples
 
