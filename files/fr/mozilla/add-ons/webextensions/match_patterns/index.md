@@ -99,7 +99,7 @@ Ni l'[identificateur de fragment d'URL](https://en.wikipedia.org/wiki/Fragment_i
 
 ### \<all_urls>
 
-La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des schémas pris en charge, c’est‐à‐dire : "http", "https", "ws", "wss", "ftp", "data" et "file".
+La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des schémas pris en charge, c’est‐à‐dire&nbsp;: "http", "https", "ws", "wss", "ftp", "data" et "file".
 
 ## Exemples
 
