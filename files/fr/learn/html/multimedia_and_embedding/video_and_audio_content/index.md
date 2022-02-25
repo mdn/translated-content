@@ -165,7 +165,7 @@ Voici les nouvelles fonctionnalités&nbsp;:
     - `"auto"`&nbsp;: mettre le fichier média dans un tampon
     - `"metadata"`&nbsp;: ne mettre que les métadonnées dans le tampon
 
-Vous trouverez cet exemple [prêt pour l'interprétation](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) sur Github ( voir aussi le [ code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)). Notez que nous n'avons pas inséré l'attribut `autoplay` dans la version en direct — si la vidéo débute dès le chargement de la page, vous ne pourrez pas voir le poster !
+Vous trouverez cet exemple [prêt pour l'interprétation](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) sur Github ( voir aussi le [ code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)). Notez que nous n'avons pas inséré l'attribut `autoplay` dans la version en direct — si la vidéo débute dès le chargement de la page, vous ne pourrez pas voir le poster&nbsp;!
 
 ### L'élément  \<audio>
 

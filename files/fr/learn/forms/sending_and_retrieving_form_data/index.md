@@ -138,7 +138,7 @@ La requête HTTP ressemble à quelque chose comme&nbsp;:
 
 #### La méthode POST
 
-La méthode `POST` est un peu différente.C'est la méthode que le navigateur utilise pour demander au serveur une réponse prenant en compte les données contenues dans le corps de la requête HTTP : «&nbsp;Hé serveur ! vois ces données et renvoie-moi le résultat approprié&nbsp;». Si un formulaire est envoyé avec cette méthode, les données sont ajoutées au corps de la requête HTTP.
+La méthode `POST` est un peu différente.C'est la méthode que le navigateur utilise pour demander au serveur une réponse prenant en compte les données contenues dans le corps de la requête HTTP : «&nbsp;Hé serveur&nbsp;! vois ces données et renvoie-moi le résultat approprié&nbsp;». Si un formulaire est envoyé avec cette méthode, les données sont ajoutées au corps de la requête HTTP.
 
 Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Element/Form#attr-method).
 
@@ -304,7 +304,7 @@ Toute donnée qui va dans un serveur doit être vérifiée et nettoyée. Toujour
 - **Limitez la quantité de données entrantes pour n'autoriser que ce qui est nécessaire**.
 - **Sandbox des fichiers téléchargés**. Stockez-les sur un serveur différent et n'autorisez l'accès au fichier que par un sous-domaine différent ou, mieux encore, par un domaine complètement différent.
 
-Vous devriez vous éviter beaucoup de problèmes en suivant ces trois règles, mais cela reste néanmoins une bonne idée de faire un examen de sécurité auprès d'une tierce personne compétente. Ne pensez pas, à tort, avoir anticipé tous les problèmes de sécurité !
+Vous devriez vous éviter beaucoup de problèmes en suivant ces trois règles, mais cela reste néanmoins une bonne idée de faire un examen de sécurité auprès d'une tierce personne compétente. Ne pensez pas, à tort, avoir anticipé tous les problèmes de sécurité&nbsp;!
 
 ## Conclusion
 

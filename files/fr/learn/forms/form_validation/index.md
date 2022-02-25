@@ -375,7 +375,7 @@ var email = document.getElementById("mail");
 
 email.addEventListener("keyup", function (event) {
   if(email.validity.typeMismatch) {
-    email.setCustomValidity("J'attend un e-mail, mon cher !");
+    email.setCustomValidity("J'attend un e-mail, mon cher&nbsp;!");
   } else {
     email.setCustomValidity("");
   }
@@ -531,7 +531,7 @@ form.addEventListener("submit", function (event) {
   if (!email.validity.valid) {
 
     // S'il est invalide, on affiche un message d'erreur personnalisé
-    error.innerHTML = "J'attends une adresse e-mail correcte, mon cher !";
+    error.innerHTML = "J'attends une adresse e-mail correcte, mon cher&nbsp;!";
     error.className = "error active";
     // Et on empêche l'envoi des données du formulaire
     event.preventDefault();

@@ -288,7 +288,7 @@ Les citations sont affichées avec un police italique par défaut. Vous pouvez v
 
 ### Apprentissage actif&nbsp;: Qui a dit quoi ?
 
-Il est temps de faire un autre apprentissage actif ! Dans cet exemple, nous souhaiterions que&nbsp;:
+Il est temps de faire un autre apprentissage actif&nbsp;! Dans cet exemple, nous souhaiterions que&nbsp;:
 
 1.  vous marquiez le paragraphe central comme étant une citation comprenant un attribut `cite`.
 2.  une partie du troisième paragraphe soit balisée en tant que citation en ligne, comprenant aussi un attribut `cite`.
@@ -673,7 +673,7 @@ L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, m
 <time datetime="01-20">20 janvier</time>
 <!-- Juste l'heure, heure et minutes -->
 <time datetime="19:30">19h30</time>
-<!-- Vous pouvez aussi mettre les secondes et les millisecondes ! -->
+<!-- Vous pouvez aussi mettre les secondes et les millisecondes&nbsp;! -->
 <time datetime="19:30:01.856">19h30m1,856s</time>
 <!-- Date et heure -->
 <time datetime="2016-01-20T19:30">19h30, le 20 janvier 2016</time>

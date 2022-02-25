@@ -474,7 +474,7 @@ p {
 
 {{ EmbedLiveSample('Positionnement_absolu', '100%', 300) }}
 
-C'est vraiment différent ! L'élément positionné a maintenant complètement été séparé du reste de la mise en page et se situe au haut de celle-ci. Les deux autres paragraphes se trouvent maintenant ensemble comme si leur frère positionné n'existait pas. Les propriétés {{cssxref("top")}} et {{cssxref("left")}} ont des effets différents pour un positionnement absolu comparativement à un relatif. Dans ce cas les décalages ont été calculés à compter du haut et du côté gauche de la la page. Il est possible de modifier l'élément parent conteneur ; nous verrons cela dans la leçon sur le [positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning).
+C'est vraiment différent&nbsp;! L'élément positionné a maintenant complètement été séparé du reste de la mise en page et se situe au haut de celle-ci. Les deux autres paragraphes se trouvent maintenant ensemble comme si leur frère positionné n'existait pas. Les propriétés {{cssxref("top")}} et {{cssxref("left")}} ont des effets différents pour un positionnement absolu comparativement à un relatif. Dans ce cas les décalages ont été calculés à compter du haut et du côté gauche de la la page. Il est possible de modifier l'élément parent conteneur ; nous verrons cela dans la leçon sur le [positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning).
 
 ### Positionnement fixé
 

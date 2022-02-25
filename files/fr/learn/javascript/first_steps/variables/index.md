@@ -44,7 +44,7 @@ const button = document.querySelector('button');
 
 button.onclick = function() {
   let name = prompt('Quel est votre nom ?');
-  alert('Salut ' + name + ', sympa de vous voir !');
+  alert('Salut ' + name + ', sympa de vous voir&nbsp;!');
 }
 ```
 
@@ -58,21 +58,21 @@ Pour comprendre le pratique de la chose, imaginons comment nous aurions du coder
 let name = prompt('Quel est votre nom ?');
 
 if (name === 'Adam') {
-  alert('Salut Adam, sympa de vous voir !');
+  alert('Salut Adam, sympa de vous voir&nbsp;!');
 } else if (name === 'Alan') {
-  alert('Salut Alan, sympa de vous voir !');
+  alert('Salut Alan, sympa de vous voir&nbsp;!');
 } else if (name === 'Bella') {
-  alert('Salut Bella, sympa de vous voir !');
+  alert('Salut Bella, sympa de vous voir&nbsp;!');
 } else if (name === 'Bianca') {
-  alert('Salut Bianca, sympa de vous voir !');
+  alert('Salut Bianca, sympa de vous voir&nbsp;!');
 } else if (name === 'Chris') {
-  alert('Salut Chris, sympa de vous voir !');
+  alert('Salut Chris, sympa de vous voir&nbsp;!');
 }
 
 // ... etc.
 ```
 
-Peut-être ne comprenez‑vous pas (encore !) la syntaxe utilisée, mais vous l'imaginerez sans peine  — si nous n'avions pas de variables à disposition, nous devrions implémenter un bloc de code géant qui vérifierait quel était le nom saisi, puis afficherait un message approprié à ce nom. Cela est évidemment inefficace (le code est déjà plus volumineux avec seulement quatre possibilités) et il ne fonctionnerait certainement pas — il n'est pas possible de stocker tous les choix possibles.
+Peut-être ne comprenez‑vous pas (encore&nbsp;!) la syntaxe utilisée, mais vous l'imaginerez sans peine  — si nous n'avions pas de variables à disposition, nous devrions implémenter un bloc de code géant qui vérifierait quel était le nom saisi, puis afficherait un message approprié à ce nom. Cela est évidemment inefficace (le code est déjà plus volumineux avec seulement quatre possibilités) et il ne fonctionnerait certainement pas — il n'est pas possible de stocker tous les choix possibles.
 
 Les variables sont essentielles et à mesure que vous en apprendrez plus sur JavaScript, elles deviendront une seconde nature pour vous.
 
@@ -393,7 +393,7 @@ Toutefois, en réalité, un booléen sera plutôt utilisé ainsi :
 var test = 6 < 3;
 ```
 
-Cette expression utilise l'opérateur  «&nbsp;inférieur à&nbsp;» (`<`) pour tester si 6 est plus petit que 3. Comme vous pouvez vous y attendre, cette expression renverra `false`, car 6 n'est pas plus petit que 3 ! Vous en apprendrez bien plus à propos de ces opérateurs plus loin dans ce cours.
+Cette expression utilise l'opérateur  «&nbsp;inférieur à&nbsp;» (`<`) pour tester si 6 est plus petit que 3. Comme vous pouvez vous y attendre, cette expression renverra `false`, car 6 n'est pas plus petit que 3&nbsp;! Vous en apprendrez bien plus à propos de ces opérateurs plus loin dans ce cours.
 
 ### Tableaux
 

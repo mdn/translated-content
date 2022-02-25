@@ -48,7 +48,7 @@ Tout d’abord, créez un nouveau dossier, «&nbsp;bouton&nbsp;», et créez un 
 
 Cela spécifie que nous aurons un script en [arrière‐plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) nommé «&nbsp;background.js&nbsp;», et une action du navigateur (bouton) et une action du navigateur (bouton) dont les icônes vont vivre dans le répertoire «&nbsp;icônes&nbsp;».
 
-Ces icônes proviennent des [bits !](https://www.iconfinder.com/iconsets/bitsies) icônes créées parRecep Kütük.
+Ces icônes proviennent des [bits&nbsp;!](https://www.iconfinder.com/iconsets/bitsies) icônes créées parRecep Kütük.
 
 Ensuite, créez un dossier «&nbsp;icons&nbsp;» dans le dossier «&nbsp;buttons&nbsp;» et enregistrez les deux icônes ci‐dessous :
 
@@ -208,7 +208,7 @@ Alors que les actions du navigateur sont toujours affichées, les actions de la 
 - Exemples d’actions du navigateur :
 
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [Bookmark it !](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
+  - [Bookmark it&nbsp;!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
   - [favourite‐colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
   - [inpage‐toolbar‐ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
   - [open‐my‐page‐button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)

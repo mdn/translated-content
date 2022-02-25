@@ -22,7 +22,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding
 ---
 {{LearnSidebar}}
 
-Jusqu'ici, nous avons vu et utilisé beaucoup de texte dans ce cours mais le web serait vraiment ennuyeux s'il n'utilisait que du texte.  Voyons ensemble la manière de le rendre plus vivant avec plus de contenu intéressant ! Ce module explore l'utilisation d'HTML pour inclure du contenu multimedia dans vos pages web. Cela comprend les différentes manières d'ajouter des images, d'intégrer de la video, de l'audio et même des pages web entières.
+Jusqu'ici, nous avons vu et utilisé beaucoup de texte dans ce cours mais le web serait vraiment ennuyeux s'il n'utilisait que du texte.  Voyons ensemble la manière de le rendre plus vivant avec plus de contenu intéressant&nbsp;! Ce module explore l'utilisation d'HTML pour inclure du contenu multimedia dans vos pages web. Cela comprend les différentes manières d'ajouter des images, d'intégrer de la video, de l'audio et même des pages web entières.
 
 ## Prérequis
 
@@ -50,7 +50,7 @@ Ce module contient les articles suivants, qui vous guideront à travers les fond
 Les évaluations qui suivent sont là pour tester votre compréhension des bases du HTML traitées dans les guides ci-dessus.
 
 - [Évaluation : page d'accueil Mozilla](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Mozilla_splash_page)
-  - : Cette évaluation concernera vos connaissances de quelques unes des techniques traitées dans les articles de ce module, vous amenant à ajouter des images et vidéos à une page de garde «&nbsp;funky&nbsp;» développant les atouts de Mozilla !
+  - : Cette évaluation concernera vos connaissances de quelques unes des techniques traitées dans les articles de ce module, vous amenant à ajouter des images et vidéos à une page de garde «&nbsp;funky&nbsp;» développant les atouts de Mozilla&nbsp;!
 
 ## À voir aussi
 

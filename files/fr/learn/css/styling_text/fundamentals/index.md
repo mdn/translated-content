@@ -632,7 +632,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ avec le bouton 
 <div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>Zone de saisie du HTML</h2>
   <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Un peu de texte pour vous délecter !</p></textarea>
+  <p>Un peu de texte pour vous délecter&nbsp;!</p></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">p {

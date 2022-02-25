@@ -261,7 +261,7 @@ function notify(message) {
   browser.notifications.create({
     "type": "basic",
     "iconUrl": browser.extension.getURL("link.png"),
-    "title": "Vous avez cliqué sur un lien !",
+    "title": "Vous avez cliqué sur un lien&nbsp;!",
     "message": message.url
   });
 }
@@ -303,7 +303,7 @@ myPort.onMessage.addListener(function(m) {
 });
 
 document.body.addEventListener("click", function() {
-  myPort.postMessage({greeting: "clic sur la page !"});
+  myPort.postMessage({greeting: "clic sur la page&nbsp;!"});
 });
 ```
 
@@ -325,7 +325,7 @@ var portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "salut, script de contenu !"});
+  portFromCS.postMessage({greeting: "salut, script de contenu&nbsp;!"});
   portFromCS.onMessage.addListener(function(m) {
     console.log("Dans le script d'arrière-plan, réception d'un message du script de contenu.")
     console.log(m.greeting);
@@ -335,7 +335,7 @@ function connected(p) {
 browser.runtime.onConnect.addListener(connected);
 
 browser.browserAction.onClicked.addListener(function() {
-  portFromCS.postMessage({greeting: "clic sur le bouton !"});
+  portFromCS.postMessage({greeting: "clic sur le bouton&nbsp;!"});
 });
 ```
 

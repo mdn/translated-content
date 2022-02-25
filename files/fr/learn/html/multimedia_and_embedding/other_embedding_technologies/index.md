@@ -284,7 +284,7 @@ Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une 
 
 ## Les éléments \<embed> et \<object>
 
-Les éléments {{htmlelement("embed")}} et {{htmlelement("object")}} ont une fonction différente de {{htmlelement("iframe")}}} — ces éléments sont des outils d'intégration à caractère général pour importer plusieurs types de contenu externe&nbsp;; cela comprend des technologies de greffons comme Java Applets ou Flash, PDF (affichable dans le navigateur avec un greffon PDF) et même du contenu comme des vidéos, du SVG ou des images !
+Les éléments {{htmlelement("embed")}} et {{htmlelement("object")}} ont une fonction différente de {{htmlelement("iframe")}}} — ces éléments sont des outils d'intégration à caractère général pour importer plusieurs types de contenu externe&nbsp;; cela comprend des technologies de greffons comme Java Applets ou Flash, PDF (affichable dans le navigateur avec un greffon PDF) et même du contenu comme des vidéos, du SVG ou des images&nbsp;!
 
 > **Note :** Un **greffon** est un logiciel qui permet d'avoir accès à des contenus que le navigateur n'est pas capable de lire de manière native.
 

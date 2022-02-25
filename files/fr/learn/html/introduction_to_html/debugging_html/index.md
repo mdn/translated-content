@@ -110,7 +110,7 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
 7.  Avec l'«&nbsp;Inspecteur&nbsp;», explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox&nbsp;; d'autres navigateurs modernes _devraient_ donner le même résultat)&nbsp;:
 
     - Les éléments `p` et `li` ont été pourvus de balises fermantes.
-    - L'endroit où le premier élément `<strong>` doit être fermé n'est pas clair, donc le navigateur a enveloppé séparément chaque bloc de texte avec ses propres balises `strong`, jusqu'à la fin du document !
+    - L'endroit où le premier élément `<strong>` doit être fermé n'est pas clair, donc le navigateur a enveloppé séparément chaque bloc de texte avec ses propres balises `strong`, jusqu'à la fin du document&nbsp;!
     - L'imbrication incorrecte a été corrigée ainsi&nbsp;:
 
       ```html

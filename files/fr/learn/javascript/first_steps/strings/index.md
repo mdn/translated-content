@@ -187,7 +187,7 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
     dbl;
     ```
 
-2.  Il y a une toute petite différence entre les deux, et celle que vous retenez relève de la préférence personnelle. Prenez-en une, et tenez‑vous y toutefois&nbsp;: du code avec des mises entre guillemets diversifiées peut amener des confusions, en particulier si vous utilisez les deux sortes dans la même chaîne ! Ce qui suit renvoie une erreur&nbsp;:
+2.  Il y a une toute petite différence entre les deux, et celle que vous retenez relève de la préférence personnelle. Prenez-en une, et tenez‑vous y toutefois&nbsp;: du code avec des mises entre guillemets diversifiées peut amener des confusions, en particulier si vous utilisez les deux sortes dans la même chaîne&nbsp;! Ce qui suit renvoie une erreur&nbsp;:
 
     ```js example-bad
     let badQuotes = 'Quoi sur Terre ?";
@@ -263,7 +263,7 @@ let button = document.querySelector('button');
 
 button.onclick = function() {
   let name = prompt('Quel est votre nom ?');
-  alert('Hello ' + name + ', sympa de vous voir !');
+  alert('Hello ' + name + ', sympa de vous voir&nbsp;!');
 }
 ```
 

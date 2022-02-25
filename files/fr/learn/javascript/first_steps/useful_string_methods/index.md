@@ -49,7 +49,7 @@ Nous l'avons déjà dit, et nous le redirons — _tout_ est objet en JavaScript.
 let string = 'Ceci est une chaîne';
 ```
 
-votre variable devient une instance de l'objet `String`, et par conséquent possède un grand nombre de propriétés et de méthodes associées. Allez sur la page de l'objet {{jsxref("String")}} et regardez la liste sur le côté de la page !
+votre variable devient une instance de l'objet `String`, et par conséquent possède un grand nombre de propriétés et de méthodes associées. Allez sur la page de l'objet {{jsxref("String")}} et regardez la liste sur le côté de la page&nbsp;!
 
 **Avant que votre cervelle ne commence à bouillir, pas de panique !** Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous utiliserez  certaines assez souvent. Nous allons les voir maintenant.
 
@@ -180,7 +180,7 @@ Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère 
 browserType[0];
 ```
 
-Les ordinateurs décomptent à partir de 0, pas de 1 ! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit&nbsp;; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut&nbsp;:
+Les ordinateurs décomptent à partir de 0, pas de 1&nbsp;! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit&nbsp;; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut&nbsp;:
 
 ```js
 browserType[browserType.length-1];
@@ -222,7 +222,7 @@ La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le déco
 
     Il renvoie «&nbsp;moz&nbsp;» — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
 
-4.  Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre ! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande&nbsp;:
+4.  Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre&nbsp;! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande&nbsp;:
 
     ```js
     browserType.slice(2);

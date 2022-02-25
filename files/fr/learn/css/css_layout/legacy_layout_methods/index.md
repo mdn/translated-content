@@ -356,7 +356,7 @@ Maintenant enregistrez le code, chargez le dans le navigateur et modifiez la lar
 
 Vous pouvez utiliser la fonction {{cssxref("calc()")}} pour faire les calculs à l'intérieur même de la CSS — la fonction vous permet d'insérer de simples expressions mathématiques pour calculer la valeur qu'il convient de donner à la propriété CSS. C'est utile quand les calculs sont complexes ; vous pouvez même effectuer un calcul avec des unités différentes, par exemple «&nbsp;je veux que la hauteur de cet élément soit toujours égale à 100% de son parent moins 50px&nbsp;». Voir [cet exemple dans le didacticiel MediaRecorder API](</fr/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
 
-Revenon à nos trames ! Toute colonne se développant au delà de la première a une largeur totale de 6.25% multipliée par le nombre de colonnes précédentes plus 2.08333333% multiplié par le nombre de gouttières (qui doit toujours être égal au nombre de colonnes moins 1). La fonction `calc()` nous permet de faire ce calcul dans la valeur `width` même, ainsi pour tout élément au-delà de la colonne 4 nous pouvons écrire, par exemple&nbsp;:
+Revenon à nos trames&nbsp;! Toute colonne se développant au delà de la première a une largeur totale de 6.25% multipliée par le nombre de colonnes précédentes plus 2.08333333% multiplié par le nombre de gouttières (qui doit toujours être égal au nombre de colonnes moins 1). La fonction `calc()` nous permet de faire ce calcul dans la valeur `width` même, ainsi pour tout élément au-delà de la colonne 4 nous pouvons écrire, par exemple&nbsp;:
 
 ```css
 .col.span4 {
@@ -434,7 +434,7 @@ remplacez‑le par&nbsp;:
 <div class="col span5 offset-by-one">14</div>
 ```
 
-> **Note :** Notez que vous devez réduire le nombre de colonnes réparties pour faire de la place au décalage !
+> **Note :** Notez que vous devez réduire le nombre de colonnes réparties pour faire de la place au décalage&nbsp;!
 
 Chargez et actualisez pour voir la différence, ou bien vérifiez avec l'exemple [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) (voir aussi [l'exécution directement](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)). L'exemple terminé doit ressembler à ceci&nbsp;:
 
@@ -602,7 +602,7 @@ Si vous regardez dans le fichier _skeleton.css_ vous verrez comment cela fonctio
 
 Tout Skeleton (ou n'importe quel autre canevas) paramètre des classes prédéfinies qu'il est possible d'utiliser en les ajoutant à votre balisage. Vous avez fait exactement la même chose en calculant ces pourcentages vous même.
 
-Comme vous le voyez, vous n'avez besoin d'écrire que peu de CSS en utilisant Skeleton. Il traite tout l'aspect boîte flottante pour vous quand vous ajoutez des classes à votre balisage. C'est la possibilité de gérer la responsabilité de la disposition sur quelque chose d'autre qui fait que l'utilisation d'un canevas pour un système de trames est un choix convaincan ! Toutefois, actuellement avec «&nbsp;CSS Grid Layout&nbsp;», nombre de développeurs délaissent ces canevas pour l'utilisation des trames natives intégrées que les CSS fournissent.
+Comme vous le voyez, vous n'avez besoin d'écrire que peu de CSS en utilisant Skeleton. Il traite tout l'aspect boîte flottante pour vous quand vous ajoutez des classes à votre balisage. C'est la possibilité de gérer la responsabilité de la disposition sur quelque chose d'autre qui fait que l'utilisation d'un canevas pour un système de trames est un choix convaincan&nbsp;! Toutefois, actuellement avec «&nbsp;CSS Grid Layout&nbsp;», nombre de développeurs délaissent ces canevas pour l'utilisation des trames natives intégrées que les CSS fournissent.
 
 ## Résumé
 

@@ -408,7 +408,7 @@ L'opérateur `+` peut aussi s'utiliser pour unir des chaînes de caractères (en
 ```js
 let name = 'Bingo';
 name;
-let hello = ' dit bonjour !';
+let hello = ' dit bonjour&nbsp;!';
 hello;
 let greeting = name + hello;
 greeting;
@@ -417,13 +417,13 @@ greeting;
 Des raccourcis d'opérateurs sont également disponibles, appelés [opérateurs d'assignation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation) augmentés. Par exemple, si vous voulez simplement ajouter une nouvelle chaîne de texte à une chaîne existante et renvoyer le résultat, vous pouvez faire :
 
 ```js
-name += ' dit bonjour !';
+name += ' dit bonjour&nbsp;!';
 ```
 
 Cela équivaut à :
 
 ```js
-name = name + ' dit bonjour !';
+name = name + ' dit bonjour&nbsp;!';
 ```
 
 Lorsque nous exécutons des tests vrai/faux (par exemple, dans des conditions — voir {{anch ("Structures conditionnelles", "ci-dessous")}}, nous utilisons des [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), par exemple :
@@ -455,10 +455,10 @@ function checkGuess(){
     lowOrHi.textContent = '';
     setGameOver();
   } else if (guessCount === 10) {
-     lastResult.textContent = '!!! PERDU !!!';
+     lastResult.textContent = '!!! PERDU&nbsp;!!!';
      setGameOver();
   } else {
-     lastResult.textContent = 'Faux !';
+     lastResult.textContent = 'Faux&nbsp;!';
      lastResult.style.backgroundColor = 'red';
      if (userGuess < randomNumber) {
       lowOrHi.textContent = 'Le nombre saisi est trop petit !';
@@ -473,7 +473,7 @@ function checkGuess(){
 }
 ```
 
-Pas mal de code — ouf ! Passons en revue chaque section et expliquons ce qu'elle fait.
+Pas mal de code — ouf&nbsp;! Passons en revue chaque section et expliquons ce qu'elle fait.
 
 - La première ligne de la fonction (ligne 2) déclare une variable nommée `userGuess` et définit sa valeur par celle qui vient d'être saisie dans le champ de texte. Nous faisons passer aussi cette valeur par la méthode  `Number()` , juste pour nous assurer que la valeur stockée dans `userGuess` est bien un nombre.
 - Ensuite, nous rencontrons notre premier bloc de code conditionnel (lignes 3-5). Il permet d'exécuter des instructions de manière sélective, selon certaines conditions qui sont vraies ou non. Cela ressemble un peu à une fonction, mais ce n'est pas le cas. La forme la plus simple du bloc conditionnel commence par le mot clé `if`, puis parenthèses, puis des accolades `{ }`.

@@ -110,7 +110,7 @@ Notez qu'un widget peut être incorporé dans son élément {{HTMLElement("label
 
 Toutefois, même dans ce cas, il est considéré de bonne pratique de définir l'attribut `for` parce que certaines techniques d'assistance ne font pas implicitement le lien entre les étiquettes et les widgets.
 
-### Les étiquettes peuvent être cliquées, aussi !
+### Les étiquettes peuvent être cliquées, aussi&nbsp;!
 
 Autre avantage de bien configurer les étiquettes&nbsp;: vous pouvez cliquer sur l'étiquette pour activer le widget correspondant, dans tous les navigateurs. Utile, par exemple, pour des entrées de texte&nbsp;: vous pouvez cliquer sur l'étiquette ou la zone de texte pour y obtenir le curseur, mais c'est encore plus utile pour les boutons radio et les cases à cocher — la surface active au clic pour une telle commande peut être très réduite, il est donc utile de l'agrandir autant que possible.
 
@@ -171,7 +171,7 @@ Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce do
 
 > **Note :** Vous pouvez obtenir des résultats légérement différents, selon votre lecteur d'écran. Ce qui précéde a été testé avec VoiceOver (et NVDA se comporte de la même façon). Nous aimerions avoir un retour sur vos expériences également.
 
-> **Note :** Vous trouverez cet exemple sur GitHub dans [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Ne lancez pas l'exemple avec 2 ou 3 version non mises en commentaires — le lecteur d'écran serait totalement embrouillé s'il y a plusieurs étiquettes ET plusieurs entrées avec le même ID !
+> **Note :** Vous trouverez cet exemple sur GitHub dans [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Ne lancez pas l'exemple avec 2 ou 3 version non mises en commentaires — le lecteur d'écran serait totalement embrouillé s'il y a plusieurs étiquettes ET plusieurs entrées avec le même ID&nbsp;!
 
 ## Structures HTML courantes dans les formulaires
 

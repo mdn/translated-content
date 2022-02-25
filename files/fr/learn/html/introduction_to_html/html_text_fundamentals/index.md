@@ -265,7 +265,7 @@ C'est un élément {{htmlelement("span")}}. Il n'a pas de valeur sémantique. Il
 
 ## Listes
 
-Intéressons-nous maintenant aux listes. Il y a des listes partout dans la vie — de la liste de courses à la liste de directions que vous suivez inconsciemment pour rentrer chez vous tous les jours, sans oublier la liste des instructions que vous suivez dans ce tutoriel ! Les listes sont aussi très répandues sur le Web, nous allons nous intéresser aux trois différents types de liste.
+Intéressons-nous maintenant aux listes. Il y a des listes partout dans la vie — de la liste de courses à la liste de directions que vous suivez inconsciemment pour rentrer chez vous tous les jours, sans oublier la liste des instructions que vous suivez dans ce tutoriel&nbsp;! Les listes sont aussi très répandues sur le Web, nous allons nous intéresser aux trois différents types de liste.
 
 ### Listes non-ordonnées
 
@@ -799,7 +799,7 @@ En HTML, nous utilisons l'élément {{htmlelement("strong")}} (forte importance)
 ```html
 <p>Ce liquide est <strong>hautement toxique</strong>.</p>
 
-<p>Je compte sur vous. <strong>Ne soyez pas en retard</strong> !</p>
+<p>Je compte sur vous. <strong>Ne soyez pas en retard</strong>&nbsp;!</p>
 ```
 
 Il est possible d'imbriquer `strong` et `em` :

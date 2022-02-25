@@ -53,4 +53,4 @@ Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable e
 L'auto-évaluation suivante teste votre compréhension des bases de JavaScript abordées dans le guide ci-dessus.
 
 - [Génerateur d'histoires absurdes](/fr/docs/Learn/JavaScript/First_steps/Silly_story_generator)
-  - : Dans le cadre de cette évaluation, votre tâche sera d'utiliser les connaissances que vous avez apprises dans les articles de ce module et de les appliquer pour créer une appli ludique qui génère aléatoirement des histoires absurdes. Amusez-vous bien !
+  - : Dans le cadre de cette évaluation, votre tâche sera d'utiliser les connaissances que vous avez apprises dans les articles de ce module et de les appliquer pour créer une appli ludique qui génère aléatoirement des histoires absurdes. Amusez-vous bien&nbsp;!

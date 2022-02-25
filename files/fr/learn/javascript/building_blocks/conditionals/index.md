@@ -178,7 +178,7 @@ Par exemple :
 const fromage = 'Comté';
 
 if (fromage) {
-  console.log('Ouaips ! Du fromage pour mettre sur un toast.');
+  console.log('Ouaips&nbsp;! Du fromage pour mettre sur un toast.');
 } else {
   console.log('Pas de fromage sur le toast pour vous aujourd\'hui.');
 }
@@ -205,7 +205,7 @@ if (choice === 'sunny') {
   if (temperature < 86) {
     para.textContent = 'Il fait ' + temperature + ' degrés dehors — beau et ensoleillé. Allez à la plage ou au parc et achetez une crème glacée.';
   } else if (temperature >= 86) {
-    para.textContent = 'Il fait ' + temperature + ' degrés dehors — VRAIMENT CHAUD ! si vous voulez sortir, n\'oubliez pas de mettre de la crème solaire.';
+    para.textContent = 'Il fait ' + temperature + ' degrés dehors — VRAIMENT CHAUD&nbsp;! si vous voulez sortir, n\'oubliez pas de mettre de la crème solaire.';
   }
 }
 ```
@@ -225,7 +225,7 @@ Pour vous donner un exemple de AND, le morceau de code précedent peut être ré
 if (choice === 'sunny' && temperature < 86) {
   para.textContent = 'Il fait ' + temperature + ' degrés dehors — beau temps ensoleillé. Allez à la plage ou au parc et achetez une crème glacée.';
 } else if (choice === 'sunny' && temperature >= 86) {
-  para.textContent = 'Il fait ' + temperature + ' degrés dehors — VRAIMENT CHAUD ! Si vous voulez sortir, assurez‑vous d'avoir passé une crème solaire.';
+  para.textContent = 'Il fait ' + temperature + ' degrés dehors — VRAIMENT CHAUD&nbsp;! Si vous voulez sortir, assurez‑vous d'avoir passé une crème solaire.';
 }
 ```
 
@@ -269,7 +269,7 @@ if (x === 5 || 7 || 10 || 20) {
 }
 ```
 
-Dans ce cas, la condition dans le `if(...) `sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité «&nbsp;si x est égal à 5, ou bien 7 est vrai&nbsp;» — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement ! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR&nbsp;:
+Dans ce cas, la condition dans le `if(...) `sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité «&nbsp;si x est égal à 5, ou bien 7 est vrai&nbsp;» — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement&nbsp;! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR&nbsp;:
 
 ```js
 if (x === 5 || x === 7 || x === 10 ||x === 20) {
@@ -371,7 +371,7 @@ Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous am
 Regardons cet exemple simple&nbsp;:
 
 ```js
-let formuleDePolitesse = ( est_anniversaire ) ? 'Bon anniversaire Mme Smith — nous vous souhaitons une belle journée !' : 'Bonjour Mme Smith.';
+let formuleDePolitesse = ( est_anniversaire ) ? 'Bon anniversaire Mme Smith — nous vous souhaitons une belle journée&nbsp;!' : 'Bonjour Mme Smith.';
 ```
 
 Ici, nous avons une variable nommée `est_anniversaire` — si elle est `true`, nous adressons à notre hôte un message de «&nbsp;Bon anniversaire&nbsp;»&nbsp;; si ce n'est pas le cas, c'est-à-dire si `est_anniversaire` renvoie `false`, nous disons simplement «&nbsp;Bonjour&nbsp;».
@@ -616,7 +616,7 @@ window.addEventListener('load', updateCode);
 
 ## Conclusion
 
-C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment ! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément&nbsp;; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien [contactez‑nous](/fr/Apprendre#Nous_contacter) pour une aide.
+C'est tout ce qu'il est nécessaire de connaître à propos des structures conditionnelles en JavaScript pour le moment&nbsp;! Je pense que vous avez assurément compris ces concepts et travaillé les exemples aisément&nbsp;; s'il y a quelque chose que vous n'avez pas compris, relisez cet article à nouveau, ou bien [contactez‑nous](/fr/Apprendre#Nous_contacter) pour une aide.
 
 ## Voir aussi
 

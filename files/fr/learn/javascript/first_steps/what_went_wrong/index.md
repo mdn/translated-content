@@ -43,7 +43,7 @@ Après avoir créé le jeu "Devinez le nombre" de l'article précédent, vous av
 
 En règle générale, les erreurs dans un code sont à ranger dans deux catégories :
 
-- **Erreurs de syntaxe&nbsp;:** Ce sont les fautes d'orthographe. Elles empêchent réellement le programme de fonctionner ou l'arrêtent en cours de chemin — elles sont accompagnées de messages d'erreur. Ces erreurs sont généralement simple à corriger, pour autant que vous connaissiez les bons outils et sachiez ce que signifient les messages !
+- **Erreurs de syntaxe&nbsp;:** Ce sont les fautes d'orthographe. Elles empêchent réellement le programme de fonctionner ou l'arrêtent en cours de chemin — elles sont accompagnées de messages d'erreur. Ces erreurs sont généralement simple à corriger, pour autant que vous connaissiez les bons outils et sachiez ce que signifient les messages&nbsp;!
 - **Erreurs logiques&nbsp;:** La syntaxe est correcte, mais le code n'est pas ce que vous attendiez&nbsp;: le programme tourne sans planter mais donne des résultats inattendus. Ces erreurs sont souvent plus difficiles à corriger que les erreurs de syntaxe, car il n'y a pas, en général, de message d'erreur pour vous diriger vers la source de l'erreur.
 
 Bon, mais ce n'est pas si simple que cela — il y a d'autres facteurs de différenciation lorsque vous approfondissez. Mais la classification ci-dessus suffiira pour commencer. Nous examinerons ces deux catégories d'erreur un peu plus loin.
@@ -90,7 +90,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 ### Erreurs de syntaxe&nbsp;: deuxième tour
 
 1.  Enregistrez la page et actualisez‑la, vous constaterez que l'erreur a disparu.
-2.  Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur ! ![](variable-is-null.png)
+2.  Maintenant si vous entrez une supposition et pressez le bouton de soumission, vous constaterez ... une autre erreur&nbsp;! ![](variable-is-null.png)
 3.  Cette fois‑ci, l'erreur rapportée est "TypeError: lowOrHi is null", à la ligne 78.
 
     > **Note :** [`Null`](/fr/docs/Glossary/Null) est une valeur spéciale signifiant "rien" ou "aucune valeur". Or `lowOrHi` a été déclaré et initialisé, mais sans valeur signifiante — il n'a ni type ni valeur.
@@ -124,20 +124,20 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
     <p class="lowOrHi"></p>
     ```
 
-9.  Donc, il nous faut un sélecteur de classe ici, précédé d'un point (.), alors que le sélecteur passé à la méthode `querySelector()` en ligne 48 n'en a pas. Ce pourrait être le problème ! Changeons `lowOrHi` en `.lowOrHi` à la ligne 48.
-10. Enregistrons et actualisons à nouveau, et la directive `console.log()` renvoie bien l'élément  `<p>` attendu. Pfff ! Une autre erreur corrigée ! On peut enlever la ligne `console.log()` maintenant, ou bien la garder pour s'y reporter plus tard — comme vous l'entendez.
+9.  Donc, il nous faut un sélecteur de classe ici, précédé d'un point (.), alors que le sélecteur passé à la méthode `querySelector()` en ligne 48 n'en a pas. Ce pourrait être le problème&nbsp;! Changeons `lowOrHi` en `.lowOrHi` à la ligne 48.
+10. Enregistrons et actualisons à nouveau, et la directive `console.log()` renvoie bien l'élément  `<p>` attendu. Pfff&nbsp;! Une autre erreur corrigée&nbsp;! On peut enlever la ligne `console.log()` maintenant, ou bien la garder pour s'y reporter plus tard — comme vous l'entendez.
 
 > **Note :** Voyez la page relative à [TypeError: "x" is (not) "y"](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_type) pour plus de précisions à propos de cette erreur.
 
 ### Erreurs de syntaxe&nbsp;: troisième tour
 
 1.  Maintenant si vous essayez de jouer, cela ira mieux — tout se déroule correctement, jusqu'à ce que vous arriviez à la fin, soit en devinant le bon chiffre, soit en épuisant le nombre de tentatives permises.
-2.  Arrivé là, le jeu échoue à nouveau et vous rencontrez la même erreur qu'au début — "TypeError: resetButton.addeventListener is not a function" ! Mais cette fois‑ci, elle vient de la ligne  94.
+2.  Arrivé là, le jeu échoue à nouveau et vous rencontrez la même erreur qu'au début — "TypeError: resetButton.addeventListener is not a function"&nbsp;! Mais cette fois‑ci, elle vient de la ligne  94.
 3.  En regardant cette ligne, il est facile de voir que nous avons fait ici la même erreur que précédemment. Il nous suffit de changer `addeventListener` en `addEventListener`. Faites‑le.
 
 ## Une erreur de logique
 
-À ce stade, le jeu se déroule correctement, mais après avoir fait quelques parties, vous noterez sans doute que le nombre «&nbsp;aléatoire&nbsp;» à deviner est toujours 0 ou 1. Franchement, de quoi vous dégoûter de jouer !
+À ce stade, le jeu se déroule correctement, mais après avoir fait quelques parties, vous noterez sans doute que le nombre «&nbsp;aléatoire&nbsp;» à deviner est toujours 0 ou 1. Franchement, de quoi vous dégoûter de jouer&nbsp;!
 
 Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne renvoie pas d'erreur&nbsp;; il ne fonctionne pas correctement.
 
@@ -185,7 +185,7 @@ Maintenant ajoutons 1 pour obtenir un nombre aléatoire entre 1 et 100&nbsp;:
 Math.floor(Math.random()*100) + 1;
 ```
 
-Modifiez ces deux lignes comme indiqué, enregistrez, actualisez — le jeu devrait maintenant fonctionner comme il faut !
+Modifiez ces deux lignes comme indiqué, enregistrez, actualisez — le jeu devrait maintenant fonctionner comme il faut&nbsp;!
 
 ## Autres erreurs courantes
 
@@ -223,7 +223,7 @@ en
 if (userGuess = randomNumber) {
 ```
 
-le test renverra toujours `true` (vrai) et le programme indiquera que vous avez gagné à tout coup. Soyez attentif !
+le test renverra toujours `true` (vrai) et le programme indiquera que vous avez gagné à tout coup. Soyez attentif&nbsp;!
 
 ### SyntaxError: missing ) after argument list
 
@@ -245,7 +245,7 @@ en
 function checkGuess( {
 ```
 
-Le navigateur pense que vous essayez de passer le contenu d'un fonction comme argument pour l'autre fonction. Soyez attentifs avec les parenthèses !
+Le navigateur pense que vous essayez de passer le contenu d'un fonction comme argument pour l'autre fonction. Soyez attentifs avec les parenthèses&nbsp;!
 
 ### SyntaxError: missing } after function body
 
@@ -255,7 +255,7 @@ Facile — elle signifie généralement que vous avez omis une accolade dans une
 
 Ces erreurs signalent généralement l'oubli de guillemets ouvrants ou fermants dans une chaîne littérale. Dans la première erreur du titre, _string_ doit être remplacé par l'un ou les caractères inattendus que l'explorateur a trouvé à la place du guillemet en début de chaîne. La deuxième erreur indique que la chaîne n'a pas été clôturée avec un guillement fermant.
 
-Pour toutes ces erreurs, revoyez comment nous avons opéré dans les exemples de ce parcours. Quand une erreur survient, regardez le numéro de ligne indiqué, allez à cette ligne et voyez si vous remarquez ce qui ne va pas. N'oubliez pas que l'erreur n'est pas forcément sur la ligne indiquée, et qu'elle ne provient pas forcément d'un des problèmes évoqués plus haut !
+Pour toutes ces erreurs, revoyez comment nous avons opéré dans les exemples de ce parcours. Quand une erreur survient, regardez le numéro de ligne indiqué, allez à cette ligne et voyez si vous remarquez ce qui ne va pas. N'oubliez pas que l'erreur n'est pas forcément sur la ligne indiquée, et qu'elle ne provient pas forcément d'un des problèmes évoqués plus haut&nbsp;!
 
 > **Note :** Voyez les pages relatives à  [SyntaxError: Unexpected token](/fr/docs/Web/JavaScript/Reference/Errors/Unexpected_token) et [SyntaxError: unterminated string literal](/fr/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) pour plus de précisions à ce propos.
 
@@ -266,6 +266,6 @@ Voilà ce que nous pouvons dire à propos des erreurs basiques pour de simples p
 ## Voir aussi
 
 - Il y a nombre d'autres erreurs qui n'ont pas été listées ici&nbsp;; nous les avons récolées dans un référencement qui les explique en détail — voyez [JavaScript error reference](/fr/docs/Web/JavaScript/Reference/Errors).
-- Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide ! Demandez‑la sur le fil de discussion [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou par le canal IRC de [#mdn](irc://irc.mozilla.org/mdn) sur  [Mozilla IRC](https://wiki.mozilla.org/IRC). Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.
+- Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide&nbsp;! Demandez‑la sur le fil de discussion [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou par le canal IRC de [#mdn](irc://irc.mozilla.org/mdn) sur  [Mozilla IRC](https://wiki.mozilla.org/IRC). Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

@@ -51,13 +51,13 @@ En programmation, même l'ordinaire système des nombres décimaux que nous conn
 - **Nombre à virgule flottante&nbsp;:** (_float_ en anglais) il a un **point** de séparation entre la partie entière et la partie fractionnaire (là où en France nous mettons une virgule), par exemple 12**.**5 et 56**.**7786543
 - **Doubles**&nbsp;: (pour double précision) ce sont des nombres à virgule flottante de précision supérieure aux précédents (on les dit plus précis en raison du plus grand nombre de décimales possibles).
 
-Nous disposons même de plusieurs systèmes de numération ! Le décimal a pour base 10 (ce qui signifie qu'il se sert de chiffres entre 0 et 9 dans chaque rang), mais il en existe d'autres&nbsp;:
+Nous disposons même de plusieurs systèmes de numération&nbsp;! Le décimal a pour base 10 (ce qui signifie qu'il se sert de chiffres entre 0 et 9 dans chaque rang), mais il en existe d'autres&nbsp;:
 
 - **Binaire** — utilisé par le plus bas niveau de langage des ordinateurs, il est composé de 0 et de 1.
 - **Octal** — de base 8, utilise les chiffres entre 0 et 7 dans chaque rang.
 - **Hexadécimal** — de base 16, utilise les chiffres entre 0 et 9 puis les lettres de a à f dans chaque rang. Vous avez peut-être déjà rencontré ces nombres en définissant des couleurs dans les [CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#hexadecimal_values).
 
-**Avant que votre cervelle ne se mette à bouillir, stop !** Pour commencer, nous ne nous intéresserons qu'aux nombres décimaux dans ce cours&nbsp;; vous aurez rarement besoin de vous servir des autres types, peut-être même jamais.
+**Avant que votre cervelle ne se mette à bouillir, stop&nbsp;!** Pour commencer, nous ne nous intéresserons qu'aux nombres décimaux dans ce cours&nbsp;; vous aurez rarement besoin de vous servir des autres types, peut-être même jamais.
 
 L'autre bonne nouvelle, c'est que contrairement à d'autres langages de programmation, JavaScript n'a qu'un seul type de donnée pour les nombres, vous l'avez deviné : {{jsxref("Number")}}. Cela signifie que, en JavaScript, quels que soient les types de nombre avec lesquels vous travaillerez, vous les manipulerez tous exactement de la même façon.
 
@@ -240,7 +240,7 @@ Quelquefois vous aurez besoin d'ajouter ou retrancher 1 à une valeur de variabl
 guessCount++;
 ```
 
-> **Note :** Ces opérateurs sont couramment utilisés dans des [boucles&nbsp;;](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration) nous les verrons plus loin dans ce cours. Par exemple, disons que vous voulez parcourir une liste de prix et ajouter les taxes à chacun. Vous utiliserez une boucle pour obtenir chaque valeur une à une et exécuterez le calcul voulu pour ajouter les taxes à chacune. L'incrément s'utilise pour aller à la valeur suivante. Nous avons mis un exemple concret montrant comment faire — voyez‑le tout de suite, examinez le code source et notez les opérateurs d'incrémentation ! Nous reverrons les boucles en détail plus loin dans ce cours.
+> **Note :** Ces opérateurs sont couramment utilisés dans des [boucles&nbsp;;](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration) nous les verrons plus loin dans ce cours. Par exemple, disons que vous voulez parcourir une liste de prix et ajouter les taxes à chacun. Vous utiliserez une boucle pour obtenir chaque valeur une à une et exécuterez le calcul voulu pour ajouter les taxes à chacune. L'incrément s'utilise pour aller à la valeur suivante. Nous avons mis un exemple concret montrant comment faire — voyez‑le tout de suite, examinez le code source et notez les opérateurs d'incrémentation&nbsp;! Nous reverrons les boucles en détail plus loin dans ce cours.
 
 Jouons avec ces opérateurs dans la console. Notez d'abord qu'il n'est pas possible de les appliquer directement à un nombre, ce qui peut paraître étrange, mais cet opérateur assigne à une variable une nouvelle valeur mise à jour, il n'agit pas sur la valeur elle‑même. Ce qui suit renvoie une erreur&nbsp;:
 
@@ -255,7 +255,7 @@ var num1 = 4;
 num1++;
 ```
 
-Ok, curieuse la ligne 2 ! En écrivant cela, elle renvoie la valeur 4 — c'est dû au fait que l'explorateur renvoie la valeur courante, _puis_ incrémente la variable. Vous constaterez qu'elle a bien été incrémentée si vous demandez de la revoir&nbsp;:
+Ok, curieuse la ligne 2&nbsp;! En écrivant cela, elle renvoie la valeur 4 — c'est dû au fait que l'explorateur renvoie la valeur courante, _puis_ incrémente la variable. Vous constaterez qu'elle a bien été incrémentée si vous demandez de la revoir&nbsp;:
 
 ```js
 num1;
@@ -359,7 +359,7 @@ btn.addEventListener('click', updateBtn);
 function updateBtn() {
   if (btn.textContent === 'Démarrer la machine') {
     btn.textContent = 'Arrêter la machine';
-    txt.textContent = 'La machine est en marche !';
+    txt.textContent = 'La machine est en marche&nbsp;!';
   } else {
     btn.textContent = 'Démarrer la machine';
     txt.textContent = 'La machine est arrêtée.';

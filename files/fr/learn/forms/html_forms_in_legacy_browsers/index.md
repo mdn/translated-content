@@ -35,7 +35,7 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 
 
 
-Comme les [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient  «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;» ! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
+Comme les [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient  «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;»&nbsp;! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
 
 ### La simplification élégante est la meilleure amie du développeur Web
 
@@ -132,7 +132,7 @@ input.button {
 }
 
 input.button {
-  /* Avec ceci non plus ! En fait, il n'y a pas de méthode standard pour
+  /* Avec ceci non plus&nbsp;! En fait, il n'y a pas de méthode standard pour
      le faire quel que soit le navigateur */
   border: auto;
 }

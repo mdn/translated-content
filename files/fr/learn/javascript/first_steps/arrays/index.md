@@ -196,7 +196,7 @@ Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant 
     // shopping renvoie maintenant [ "crème de sésame", "lait", "fromage", "houmous", "nouilles" ]
     ```
 
-    > **Note :** Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0 !
+    > **Note :** Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0&nbsp;!
 
 3.  Notez qu'un tableau à l'intérieur d'un tableau est appelé un tableau multidimensionnel. Vous accédez à un des éléments de ce tableau interne en chaînant deux paires de crochets. Par exemple, pour avoir accès à l'un des éléments (le troisième) du tableau élément du tableau `random` (voir la section précédente), vous pouvez écrire quelque chose comme&nbsp;:
 4.  ```js
@@ -324,7 +324,7 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
     myArray;
     ```
 
-2.  Maintenant `shift()` — essayez !
+2.  Maintenant `shift()` — essayez&nbsp;!
 
     ```js
     let removedItem = myArray.shift();
@@ -423,7 +423,7 @@ Une bonne utilisation des méthodes de tableaux comme {{jsxref("Array.prototype.
 
 Dans cet exemple nous allons montrer une utilisation beaucoup plus simple — ici, nous allons vous fournir un site de recherche fictif, avec une boîte de recherche. Voici l'idée&nbsp;: quand un terme est entré dans la boîte de recherche, les 5 précédents termes entrés sont affichés dans la liste. Quand le nombre de termes dépasse 5, le dernier terme est supprimé chaque fois qu'un nouveau terme est ajouté&nbsp;; ainsi, le 5 termes précédents sont toujours affichés.
 
-> **Note :** Dans une application réelle avec boîte de recherche, vous pourriez vraisemblablement cliquer sur un des termes de la liste pour revenir à la recherche précédente, et l'application afficherait les vrais résultats ! Mais pour le moment nous en resterons à quelque chose de simple.
+> **Note :** Dans une application réelle avec boîte de recherche, vous pourriez vraisemblablement cliquer sur un des termes de la liste pour revenir à la recherche précédente, et l'application afficherait les vrais résultats&nbsp;! Mais pour le moment nous en resterons à quelque chose de simple.
 
 Pour terminer l'application, il vous faut&nbsp;:
 

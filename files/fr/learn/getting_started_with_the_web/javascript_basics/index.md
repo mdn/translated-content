@@ -35,7 +35,7 @@ Ci-dessous nous allons vous présenter quelques aspects du coeur du langage, et 
 
 Le paragraphe précédent laisse entrevoir quelque chose de passionnant, et cela l'est vraiment — JavaScript est une technologie web parmi les plus dynamiques. Une fois que vous commencerez à être autonome en JavaScript, vous entrerez dans une nouvelle dimension de puissance et créativité.
 
-Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML ou CSS. Vous pourrez démarrer petit et continuer à travailler par petites étapes de façon soutenue. Pour commencer, nous allons vous montrer comment ajouter un JavaScript basique à votre page, en créant un exemple « Hello world !&nbsp;» ([la norme en matière d'exemples de programmation de base](https://fr.wikipedia.org/wiki/Hello_world)).
+Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML ou CSS. Vous pourrez démarrer petit et continuer à travailler par petites étapes de façon soutenue. Pour commencer, nous allons vous montrer comment ajouter un JavaScript basique à votre page, en créant un exemple « Hello world&nbsp;!&nbsp;» ([la norme en matière d'exemples de programmation de base](https://fr.wikipedia.org/wiki/Hello_world)).
 
 > **Attention :** Si vous rejoignez cette série d'articles en cours de route, [téléchargez cet exemple de code](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) et utilisez‑le comme point de départ.
 
@@ -84,7 +84,7 @@ let myVariable;
 
 > **Note :** Vous pouvez utiliser (quasiment) n'importe quel nom pour nommer une variable, mais il y a quelques restrictions (voyez [cet article](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Variables) sur les règles de nommage des variables). Si vous avez un doute, vous pouvez [vérifier le nom de votre variable](https://mothereff.in/js-variables) pour voir s'il est valide.
 
-> **Note :** JavaScript est sensible à la casse — `myVariable` est une variable différente de `myvariable`. Si vous avez des problèmes dans votre code, vérifiez la casse  !
+> **Note :** JavaScript est sensible à la casse — `myVariable` est une variable différente de `myvariable`. Si vous avez des problèmes dans votre code, vérifiez la casse &nbsp;!
 
 Une fois une variable déclarée, vous pouvez lui donner une valeur :
 
@@ -216,7 +216,7 @@ Un {{Glossary("operator","opérateur")}} est un symbole mathématique qui produi
       </td>
       <td><code>+</code></td>
       <td>
-        <code>6 + 9;<br />"Bonjour " + "monde !";</code>
+        <code>6 + 9;<br />"Bonjour " + "monde&nbsp;!";</code>
       </td>
     </tr>
     <tr>
