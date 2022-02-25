@@ -151,7 +151,7 @@ div > div {
   <option value="flex-start">flex-start</option>
   <option value="flex-end">flex-end</option>
 </select>
-﻿<select id="justifyContentAlignment">
+<select id="justifyContentAlignment">
   <option value="normal">normal</option>
   <option value="space-between">space-between</option>
   <option value="space-around">space-around</option>

@@ -22,7 +22,7 @@ Avant de faire quoi que ce soit, vous avez besoin d'idées. Qu'est-ce que votre 
 
 Pour commencer, posez-vous ces questions :
 
-1.  **De quoi va parler mon site web ?** ﻿Aimez-vous les chiens, New York ou Pacman ?
+1.  **De quoi va parler mon site web ?** Aimez-vous les chiens, New York ou Pacman ?
 2.  **Quelles informations vais-je présenter sur le sujet ?** Écrivez un titre et quelques paragraphes, et trouvez une image que vous aimeriez mettre sur votre page.
 3.  **Quelle sera l'apparence de mon site web,** en simple termes de survol ? Quelle sera la couleur de l'arrière plan ? Quelle sorte de police de caractères est appropriée : formelle, dessin animé, grasse et lourde, subtile ?
 
@@ -48,13 +48,13 @@ Vous devriez encore avoir vos paragraphes et votre titre puisque vous y avez son
 
 ### Couleur du thème
 
-Pour choisir une couleur, utilisez une [palette de couleurs](http://www.code-couleur.com/index.html) e﻿t trouvez une couleur que vous aimez. Quand vous cliquez sur une couleur, vous verrez un étrange code à six caractères comme `#660066`. Ceci est appelé un _code hexadécimal_ et il représente votre couleur. Copiez le code dans un endroit sûr pour l'instant.
+Pour choisir une couleur, utilisez une [palette de couleurs](http://www.code-couleur.com/index.html) et trouvez une couleur que vous aimez. Quand vous cliquez sur une couleur, vous verrez un étrange code à six caractères comme `#660066`. Ceci est appelé un _code hexadécimal_ et il représente votre couleur. Copiez le code dans un endroit sûr pour l'instant.
 
 ![](Screenshot%20from%202014-11-03%2017:40:49.png)
 
 ### Images
 
-Pour choisir une image, allez sur [Google Images](https://www.google.com/imghp?gws_rd=ssl) e﻿t cherchez une image qui convient.
+Pour choisir une image, allez sur [Google Images](https://www.google.com/imghp?gws_rd=ssl) et cherchez une image qui convient.
 
 1.  Quand vous avez trouvé l'image que vous voulez, cliquez sur l'image.
 2.  Appuyez sur le bouton _Afficher l'image_.

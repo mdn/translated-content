@@ -86,7 +86,7 @@ La polyfill suivante pour `classList` et `DOMTokenList` garantit une conformité
 
 ```js
 // 1. String.prototype.trim polyfill
-if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s﻿]+|[\s﻿]+$/g, ''); };
+if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s]+|[\s]+$/g, ''); };
 (function(window){"use strict"; // prevent global namespace pollution
 if(!window.DOMException) (DOMException = function(reason){this.message = reason}).prototype = new Error;
 var wsRE = /[\11\12\14\15\40]/, wsIndex = 0, checkIfValidClassListEntry = function(O, V) {
