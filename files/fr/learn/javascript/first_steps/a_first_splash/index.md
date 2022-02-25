@@ -579,7 +579,7 @@ for (let i = 1 ; i < 21 ; i++) { console.log(i) }
 
 Que s'est-il passé&nbsp;? Les nombres de 1 à 20 s'affichent dans la console. C'est à cause de la boucle. Une boucle : `for`  prend trois valeurs d'entrée (arguments)
 
-1.  **Une valeur de départ** : Dans ce cas, nous commençons un compte à 1, mais cela pourrait être n'importe quel nombre. Vous pouvez remplacer `i` par n'importe quel nom (ou presque...) , mais `i` est utilisé par convention car il est court et facile à retenir.
+1.  **Une valeur de départ** : Dans ce cas, nous commençons un compte à 1, mais cela pourrait être n'importe quel nombre. Vous pouvez remplacer `i` par n'importe quel nom (ou presque...), mais `i` est utilisé par convention car il est court et facile à retenir.
 2.  **Une condition de fin** : Ici, nous avons spécifié  `i < 21` la boucle continuera jusqu'à ce que  `i`  ne soit plus inférieur à 21. Quand `i` atteindra ou dépassera 21, la boucle s'arrêtera.
 3.  **Un incrémenteur** :  Nous avons spécifié `i++`, ce qui signifie "ajouter 1 à i". La boucle sera exécutée une fois pour chaque valeur de `i`, jusqu'a ce que `i` atteigne une valeur de 21 (comme indiqué ci-dessus). Dans ce cas, nous imprimons simplement la valeur de `i`  sur la console à chaque itération en utilisant {{domxref("Console.log", "console.log()")}}.
 

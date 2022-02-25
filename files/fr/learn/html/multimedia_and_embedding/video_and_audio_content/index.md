@@ -77,7 +77,7 @@ Les fonctionnalités de ce code sont :
 - {{htmlattrxref("controls","video")}}
   - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/%C3%89pilepsie).) Vous devez vous servir de l'attribut  `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript ](/fr/docs/Web/API/HTMLMediaElement)adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
 - Le paragraphe dans la balise `<video>`
-  - : Cela peut s'appeler solution de repli ou contenu de secours (fallback content) — si le navigateur accédant à la page ne supporte pas l'élément `<video>` , cela offre un texte alternatif qui peut être ce que vous voulez&nbsp;; dans ce cas nous avons mis un lien direct au fichier vidéo, afin que l'utilisateur puisse au moins y accéder sans avoir à se soucier du navigateur qu'il utilise.
+  - : Cela peut s'appeler solution de repli ou contenu de secours (fallback content) — si le navigateur accédant à la page ne supporte pas l'élément `<video>`, cela offre un texte alternatif qui peut être ce que vous voulez&nbsp;; dans ce cas nous avons mis un lien direct au fichier vidéo, afin que l'utilisateur puisse au moins y accéder sans avoir à se soucier du navigateur qu'il utilise.
 
 La vidéo intégrée donnerait quelque chose comme ça :
 

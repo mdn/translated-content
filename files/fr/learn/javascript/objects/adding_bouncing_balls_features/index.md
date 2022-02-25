@@ -104,7 +104,7 @@ Cette méthode doit avoir la même fonction que celle de `Ball()`: soit dessine
 Cette méthode à la même fonction que la première partie de `Ball()` `update()` — Savoir si le viseur va hors de l'écran, et l'arrêter si besoin. Une fois encore, copié la méthode `Ball.prototype.update`, mais en effectuant quelques changements:
 
 - Débarrassez-vous des deux dernières lignes — on a pas besoin de connaître la position du viseur à chaque frame, car nous le déplacerons d'une manière différente comme vous pourrez le voir.
-- Dans les conditions en `if()` , si la condition retourne true on ne veut pas modifier (update) les propriétés `velX`/`velY`; mais plutôt changer les valeurs de `x`/`y` de manière à ce que le viseur revienne doucement dans l'écran. Ajouter ou soustraire de manière appropriée la taille (`size)` du viseur sera suffisant.
+- Dans les conditions en `if()`, si la condition retourne true on ne veut pas modifier (update) les propriétés `velX`/`velY`; mais plutôt changer les valeurs de `x`/`y` de manière à ce que le viseur revienne doucement dans l'écran. Ajouter ou soustraire de manière appropriée la taille (`size)` du viseur sera suffisant.
 
 #### `setControls()`
 

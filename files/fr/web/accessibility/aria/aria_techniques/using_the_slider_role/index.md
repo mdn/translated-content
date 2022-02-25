@@ -48,7 +48,7 @@ Dans l'exemple ci-dessous, un simple curseur est utilisé pour sélectionner une
 
 #### Exemple 2&nbsp;: Valeurs texte
 
-Parfois, un slider est utilisé pour choisir une valeur qui n'est pas, sémantiquement , un nombre. Dans ces cas là, l'attribut `aria-valuetext` est utilisé pour donner le texte approprié pour la valeur sélectionnée. Dans l'exemple ci-dessous, le slider est utilisé pour sélectionner un jour de la semaine .
+Parfois, un slider est utilisé pour choisir une valeur qui n'est pas, sémantiquement, un nombre. Dans ces cas là, l'attribut `aria-valuetext` est utilisé pour donner le texte approprié pour la valeur sélectionnée. Dans l'exemple ci-dessous, le slider est utilisé pour sélectionner un jour de la semaine .
 
 ```html
 <div id="slider-label">Jour de la semaine&nbsp;:</div>

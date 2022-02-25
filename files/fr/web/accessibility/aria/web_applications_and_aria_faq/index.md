@@ -87,7 +87,7 @@ Plutôt que de les intégrer directement dans le balisage, les attributs ARIA so
 // Trouver le <div> de la barre de progression dans le DOM.
 var progressBar = document.getElementById("percent-loaded");
 
-// Définition de ses rôles et états ARIA ,
+// Définition de ses rôles et états ARIA,
 // pour que les technologies d’assistance sachent quel type de composant il s’agit.
 progressBar.setAttribute("role", "progressbar");
 progressBar.setAttribute("aria-valuemin", 0);

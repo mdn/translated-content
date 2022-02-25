@@ -224,7 +224,7 @@ Regardons ça d'un peu plus près pour mieux comprendre — si vous avez du mal 
 
 > **Note :** La seule façon de dépasser cette déclaration  `!important` serait d'ajouter un `!important` dans une déclaration de même *spécificité* apparaissant plus bas dans l'ordre du source, ou avec une spécificité plus grande.
 
-Il est utile de connaître  `!important` , ne serait-ce que pour le reconnaître dans le code des autres. **Cependant, nous vous recommandons fortement de ne jamais l'utiliser, sauf en dernier recours.** `!important` modifie le fonctionnement normal de la cascade, de sorte qu'il peut être très difficile de résoudre les problèmes de débogage CSS, en particulier dans une grande feuille de style.
+Il est utile de connaître  `!important`, ne serait-ce que pour le reconnaître dans le code des autres. **Cependant, nous vous recommandons fortement de ne jamais l'utiliser, sauf en dernier recours.** `!important` modifie le fonctionnement normal de la cascade, de sorte qu'il peut être très difficile de résoudre les problèmes de débogage CSS, en particulier dans une grande feuille de style.
 
 Lorsque vous travaillez sur un CMS où vous ne pouvez pas modifier les modules CSS de base et que vous souhaitez malgré tout remplacer un style, vous serez peut être amené à utiliser `!important`. Mais vraiment, si vous pouvez l'éviter, ne l'utilisez pas.
 

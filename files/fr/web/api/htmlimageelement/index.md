@@ -61,7 +61,7 @@ _Hérite les propriétés de son parent, {{domxref ("HTMLElement")}}_
 _Hérite les propriétés de son parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.Image()", "Image()")}}
-  - : Le constructeur d'image, comprend deux propriétés `unsigned`  et `long` , qui sont la largeur et la hauteur de la ressource, et crée une instance de `HTMLImageElement` , non insérée dans une arborescence DOM.
+  - : Le constructeur d'image, comprend deux propriétés `unsigned`  et `long`, qui sont la largeur et la hauteur de la ressource, et crée une instance de `HTMLImageElement` , non insérée dans une arborescence DOM.
 
 ## Erreurs
 

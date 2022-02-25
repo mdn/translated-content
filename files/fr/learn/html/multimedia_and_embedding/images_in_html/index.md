@@ -482,7 +482,7 @@ textarea.onkeyup = function(){
 
 ## Images d'arrière-plan CSS
 
-Vous pouvez également utiliser du CSS pour intégrer des images dans vos pages web (ou JavaScript, mais c'est une autre histoire). Les propriétés CSS {{cssxref("background-image")}} et `background` , sont utilisées pour contrôler le placement de l'image d'arrière-plan. Par exemple, pour placer une image d'arrière-plan sur chaque paragraphe de la page, vous pourriez faire ceci :
+Vous pouvez également utiliser du CSS pour intégrer des images dans vos pages web (ou JavaScript, mais c'est une autre histoire). Les propriétés CSS {{cssxref("background-image")}} et `background`, sont utilisées pour contrôler le placement de l'image d'arrière-plan. Par exemple, pour placer une image d'arrière-plan sur chaque paragraphe de la page, vous pourriez faire ceci :
 
 ```css
 p {
