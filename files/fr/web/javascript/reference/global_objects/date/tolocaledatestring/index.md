@@ -59,7 +59,7 @@ function toLocaleDateStringSupportsLocales() {
     try {
         new Date().toLocaleDateString("i");
     } catch (e) {
-        return e​.name === "RangeError";
+        return e.name === "RangeError";
     }
     return false;
 }

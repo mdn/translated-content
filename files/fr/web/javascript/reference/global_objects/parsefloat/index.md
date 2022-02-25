@@ -58,7 +58,7 @@ parseFloat("3.14d'autres caractères non numériques");
 
 var titi = Object.create(null);
 titi.valueOf = function () { return "3.14"; };
-parseFloat(titi);​​​​​
+parseFloat(titi);
 ```
 
 ### Utiliser `parseFloat()` pour renvoyer `NaN`

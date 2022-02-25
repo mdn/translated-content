@@ -29,7 +29,7 @@ L’évènement **`DOMContentLoaded`** est émis lorsque le document HTML initia
   </tbody>
 </table>
 
-La cible originale pour cet évènement est le {{domxref("Document")}} qui a terminé de charger. Vous pouvez observer cet évènement sur l’interface `Window` pour le gérer dans les phases de capture ou de bouillonnement. Pour plus de détails, veuillez consulter la page de l’évènement {{domxref("Document/DOMContentLoaded_event", "Document: DOMContent​Loaded event")}}.
+La cible originale pour cet évènement est le {{domxref("Document")}} qui a terminé de charger. Vous pouvez observer cet évènement sur l’interface `Window` pour le gérer dans les phases de capture ou de bouillonnement. Pour plus de détails, veuillez consulter la page de l’évènement {{domxref("Document/DOMContentLoaded_event", "Document: DOMContentLoaded event")}}.
 
 L’évènement [`load`](/fr/docs/Web/Events/load), très différent, doit être utilisé uniquement pour détecter qu’une page est entièrement chargée. C’est une erreur répandue d’utiliser [`load` ](/fr/docs/Web/Events/load)là où `DOMContentLoaded` serait beaucoup plus approprié.
 
@@ -64,4 +64,4 @@ window.addEventListener("DOMContentLoaded", (event) => {
 ## Voir aussi
 
 - Évènements associés&nbsp;: {{event("load")}}, {{event("readystatechange")}}, {{event("beforeunload")}}, {{event("unload")}}
-- Cet évènement sur les cibles {{domxref("Document")}}&nbsp;: {{domxref("Document/DOMContentLoaded_event", "Document: DOMContent​Loaded event")}}
+- Cet évènement sur les cibles {{domxref("Document")}}&nbsp;: {{domxref("Document/DOMContentLoaded_event", "Document: DOMContentLoaded event")}}

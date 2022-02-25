@@ -35,7 +35,7 @@ background-color: rgb(255, 255, 128);
 background-color: rgba(117, 190, 218, 0.0); /* 0.0 - transparent */
 background-color: rgba(117, 190, 218, 0.5); /* 0.5 - semi-transparent */
 background-color: rgba(117, 190, 218, 1.0); /* 1.0 - opaque */
-​​​​​​​
+
 /* Valeur HSLA */
 background-color: hsla(50, 33%, 25%, 0.75);
 

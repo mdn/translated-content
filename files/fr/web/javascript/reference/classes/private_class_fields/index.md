@@ -158,7 +158,7 @@ class ClassWithPrivateMethod {
 
 const instance = new ClassWithPrivateMethod()
 console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Les méthodes d'instance privées peuvent être des fonctions génératrices, asynchones ou génératrices asynchrones. Des accesseurs (getters) et des mutateurs (setters) privés sont aussi posibles :
@@ -181,7 +181,7 @@ class ClassWithPrivateAccessor {
 }
 
 new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
+// expected output: "✨hello world✨"
 ```
 
 ## Spécifications

@@ -77,9 +77,9 @@ Les argument `locales` et `options` ne sont pas supportés par tous les navigate
 ```js
 function localeCompareSupportsLocales() {
     try {
-        "a".localeCompare​("b", "i");
+        "a".localeCompare("b", "i");
     } catch (e) {
-        return e​.name === "RangeError";
+        return e.name === "RangeError";
     }
     return false;
 }

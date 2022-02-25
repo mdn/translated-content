@@ -48,7 +48,7 @@ class ClasseAvecChampStatique {
 }
 
 console.log(ClasseAvecChampStatique.champStatique)
-// affichage attendu : "champ statique"​
+// affichage attendu : "champ statique"
 ```
 
 Les champs sans initialiseur sont initialisés à `undefined`.
@@ -200,7 +200,7 @@ class ClasseAvecMethodeDInstancePublique {
 
 const instance = new ClasseAvecMethodeDInstancePublique()
 console.log(instance.methodePublique())
-// affichage attendu : "hello worl​d"
+// affichage attendu : "hello world"
 ```
 
 Les méthodes d'instance publiques sont ajoutées au prototype au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Elles peuvent être écrites, ne sont pas énumérables et sont configurables.
@@ -233,7 +233,7 @@ class SousClasse extends ClasseDeBase {
 
 const instance = new SousClasse()
 console.log(instance.sousMethodePublique())
-// affichage attendu : "hello worl​d"
+// affichage attendu : "hello world"
 ```
 
 Les accesseurs et les mutateurs sont des méthodes spéciales qui sont liées à une propriété de classe, et sont appelées lorsqu'on accède à cette propriété ou qu'on la définit. Utilisez la syntaxe [get](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/get) et [set](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/set) pour déclarer un accesseur ou un mutateur publique d'une instance.
@@ -251,7 +251,7 @@ class ClasseAvecGetSet {
 
 const instance = new ClasseAvecGetSet();
 console.log(instance.msg);
-// affichage attendu : "hello worl​d"
+// affichage attendu : "hello world"
 
 instance.msg = 'gâteau';
 console.log(instance.msg);

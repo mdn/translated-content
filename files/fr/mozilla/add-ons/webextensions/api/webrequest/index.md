@@ -98,7 +98,7 @@ Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking
 
 ## Propriétés
 
-- {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_​HANDLER_​BEHAVIOR_​CHANGED_​CALLS_​PER_​10_​MINUTES")}}
+- {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
   - : Le nombre de fois que [`handlerBehaviorChanged()`](/fr/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) peut être appelé dans une période de 10 minutes.
 
 ## Méthodes

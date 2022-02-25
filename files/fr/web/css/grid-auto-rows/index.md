@@ -46,9 +46,9 @@ grid-auto-rows: minmax(20%, 80vmax);
 /* Gestion de plusieurs pistes */
 grid-auto-rows: min-content max-content auto;
 grid-auto-rows: 100px 150px 390px;
-​​​​​​​grid-auto-rows: 10% 33.3%;
+grid-auto-rows: 10% 33.3%;
 grid-auto-rows: 0.5fr 3fr 1fr;
-​​​​​​​grid-auto-rows: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
+grid-auto-rows: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
 grid-auto-rows: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 
 

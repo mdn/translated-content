@@ -60,7 +60,7 @@ Les séquences d'échappement pour les propriétés Unicode permettent de distin
 | `\p{Other_Number} \p{UnicodePropertyName=Other_Number}`               |                                                                                                                  |
 | `\p{Other_Punctuation} \p{UnicodePropertyName=Other_Punctuation}`     |                                                                                                                  |
 | `\p{Paragraph_Separator} \p{UnicodePropertyName=Paragraph_Separator}` |                                                                                                                  |
-| `\p{Private_Use}`Meaning `​​​​​​​\p{UnicodePropertyName=Private_Use}`        |                                                                                                                  |
+| `\p{Private_Use}`Meaning `\p{UnicodePropertyName=Private_Use}`        |                                                                                                                  |
 | `\p{Punctuation} \p{UnicodePropertyName=Punctuation}`                 |                                                                                                                  |
 | `\p{Separator} \p{UnicodePropertyName=Separator}`                     |                                                                                                                  |
 | `\p{Space_Separator} \p{UnicodePropertyName=Space_Separator}`         |                                                                                                                  |

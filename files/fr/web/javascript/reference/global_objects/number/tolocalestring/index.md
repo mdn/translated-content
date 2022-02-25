@@ -58,7 +58,7 @@ function testSupporttoLocaleString() {
     try {
         nombre.toLocaleString("i");
     } catch (e) {
-        return e​.name === "RangeError";
+        return e.name === "RangeError";
     }
     return false;
 }
