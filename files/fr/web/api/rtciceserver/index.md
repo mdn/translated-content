@@ -26,7 +26,7 @@ RTCIceServer définit comment se connecter à un serveur ICE unique (comme un s
 
 ## Constantes
 
-### Enumeration RTCIceCredentialType 
+### Enumeration RTCIceCredentialType
 
 L'enumeration `RTCIceCredentialType` spécifie les valeurs qui peuvent être renvoyés par la propriété credentialType pour définir quel type d'authentification est fournie dans la propriété {{domxref("RTCIceServer.credential")}}. Cela peut être l'une des valeurs ci‑dessous.
 

@@ -124,7 +124,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
       <th scope="row"><dfn>Contenu autorisé</dfn></th>
       <td>
         Zéro ou plusieurs éléments {{HTMLElement("param")}} suivis par
-        du 
+        du
         <a
           href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Mod.C3.A8le_de_contenu_transparent"
           >contenu transparent.</a

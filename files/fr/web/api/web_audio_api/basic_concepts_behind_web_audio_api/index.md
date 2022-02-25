@@ -291,7 +291,7 @@ Lorsque le nombre de canaux n'est pas le même en entrée et en sortie, on effec
       <td><code>2</code> <em>(Stéréo)</em></td>
       <td>
         <em>Conversion descendante de 5.1 vers stéréo.</em><br />Le canal
-        central (<code>C</code>) est additionné avec chacun des canaux latéraux 
+        central (<code>C</code>) est additionné avec chacun des canaux latéraux
         (<code>SL</code> et <code>SR</code>) puis combiné avec chacun des canaux
         latéraux (L et R). Comme il est converti en deux canaux, il est mixé à
         une puissance inférieure : multiplié par <code>√2/2</code>. Le canal

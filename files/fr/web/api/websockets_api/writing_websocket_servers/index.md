@@ -21,7 +21,7 @@ En tout premier lieu, le serveur doit écouter les connexions sockets entrantes 
 
 La *poignée de mains* est la partie "Web" dans les WebSockets : c'est le pont entre le protocole HTTP et le WebSocket. Durant cette poignée, les détails (les paramètres) de la connexion sont négociés et l'une des parties peut interromptre la transaction avant la fin si l'un des termes ne lui est pas autorisé / ne lui est pas possible. Le serveur doit donc être attentif à comprendre parfaitement les demandes et attentes du client, sans quoi des procédures de sécurité seront déclenchées.
 
-### La requête de _poignée de mains_ côté client 
+### La requête de _poignée de mains_ côté client
 
 Même si vous construisez votre serveur au profit des WebSockets, votre client doit tout de même démarrer un processus dit de _poignée de main_. Vous devez donc savoir comment interprêter cette requête. En premier, le **client** enverra tout d'abord une requête HTTP correctement formée. La requête **doit** être à la version 1.1 ou supérieure et la méthode **doit** être de type GET :
 
@@ -42,7 +42,7 @@ Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur
 
 > **Note :** [Les codes réguliers (_c-à-d défini par le protocole standard_) HTTP](/en-US/docs/HTTP/Response_codes) ne peuvent être utilisés qu'**_avant_** la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée.
 
-### La réponse du serveur lors de la poignée de mains 
+### La réponse du serveur lors de la poignée de mains
 
 Lorsqu'il reçoit la requête du client, le serveur doit envoyer une réponse correctement formée dans un format non-standard HTTP et qui ressemble au code ci-dessous. Gardez à l'esprit que chaque entête se termine par un saut de ligne : *\r\n* ; un saut de ligne doublé lors de l'envoi du dernier entête pour séparer du reste du corps (même si celui-ci est vide).
 
@@ -59,11 +59,11 @@ Ainsi si la clé (la valeur de l'entête du client) était "`dGhlIHNhbXBsZSBub2
 
 > **Note :** Le serveur peut envoyer à ce moment, d'autres entêtes comme par exemple Set-Cookie, ou demander une authenficiation ou encore une redirection via les codes standards HTTP et ce **avant** la fin du processus de poignée de main.
 
-### Suivre les clients confirmés 
+### Suivre les clients confirmés
 
 Cela ne concerne pas directement le protocole WebSocket, mais mérite d'être mentionné maintenant : votre serveur pourra suivre le socket client : il ne faut donc pas tenter une poignée de mains supplémentaire avec un client déjà confirmé. Un même client avec la même IP pourrait alors se connecter à de multiples reprises, mais être finalement rejeté et dénié par le serveur si les tentatives sont trop nombreuses selon les règles pouvant être édictées pour éviter les attaques dites de [déni de service](https://en.wikipedia.org/wiki/Denial_of_service).
 
-## L'échange de trames de données 
+## L'échange de trames de données
 
 Le client ou le serveur peuvent choisir d'envoyer un message à n'importe quel moment à partir de la fin du processus de poignée de mains : c'est la magie des WebSockets (une connexion permanente). Cependant, l'extraction d'informations à partir des trames de données n'est pas une expérience si... magique. Bien que toutes les trames suivent un même format spécifique, les données allant du client vers le serveur sont masquées en utilisant le [cryptage XOR](https://en.wikipedia.org/wiki/XOR_cipher) (avec une clé de 32 bits). L'article 5 de la spécification décrit en détail ce processus.
 
@@ -108,7 +108,7 @@ Le champ `opcode` définit comment est interpêtée la _charge utile_ (`payload 
 
 Le bit FIN indique si c'est le dernier message de la série \[_NDT : pour la concaténation, pas la fin de la connexion elle-même_]. S'il est à 0, alors le serveur doit attendre encore une ou plusieurs parties. Sinon le message est considéré comme complet.
 
-### Connaître la taille des *données utiles* 
+### Connaître la taille des *données utiles*
 
 Pour (pouvoir) lire les _données utiles_, vous devez savoir quand arrêter la lecture dans le flux des trames entrantes vers le serveur. C'est pourquoi il est important de connaître la taille des _données utiles_. Et malheureusement ce n'est pas toujours simple. Voici quelques étapes essentielles à connaître :
 
@@ -117,7 +117,7 @@ Pour (pouvoir) lire les _données utiles_, vous devez savoir quand arrêter la 
 2.  (_étape 2_) Lire les 16 bits supplémentaires et les interprêter comme précédent (entier non-signé). Vous avez alors la taille des données utiles.
 3.  (_étape 3_) Lire les 64 bits supplémentaires et les interprêter comme précédent (entier non-signé). Vous avez alors la taille des données utiles. Attention, le bit le plus significatif doit rester à 0.
 
-### Lire et démasquer les données 
+### Lire et démasquer les données
 
 Si le bit MASK a été fixé (et il devrait l'être, pour les messages client-serveur), vous devez lire les 4 prochains octets (32 bits) : ils sont la clé de masquage. Une fois la longueur de charge utile connue et la clé de masquage décodée, vous pouvez poursuivre la lecture des autres bits comme étant les données utiles masquées. Par convention pour le reste du paragraphe, appelons-les _données encodées_, et la clé *masque*. Pour décoder les données, bouclez les octets du texte reçu en XOR avec l'octet du (_i modulo 4_) ième octet du *masque*. En voici le pseudo-code (_JavaScript valide_) :
 
@@ -128,7 +128,7 @@ Si le bit MASK a été fixé (et il devrait l'être, pour les messages client-se
 
 > **Note :** Ici la variable `DECODED` correspond aux données utiles à votre application - en fonction de l'utilisation ou non d'un sous-protocole (_si c'est `json`, vous devez encore décoder les données utiles reçues avec le parseur JSON_).
 
-### La fragmentation des messages 
+### La fragmentation des messages
 
 Les champs FIN et opcodes fonctionnent ensemble pour envoyer un message découpé en une multitude de trames. C'est ce que l'on appele la _fragmentation des messages_. La fragmentation est seulement possible avec les opcodes de `0x0 `à `0x2`.
 
@@ -143,7 +143,7 @@ Souvenez-vous de l'intérêt de l'opcode et ce qu'il implique dans l'échange 
     Client: FIN=1, opcode=0x0, msg="year!"
     Server: (process complete message) Happy new year to you too!
 
-La première trame dispose d'un message en entier (FIN = 1 et optcode est différent de 0x0) : le serveur peut traiter la requête reçue et y répondre. A partir de la seconde trame et pour les deux suivantes (soit trois trames), l'opcode à 0x1 puis 0x0 signifie qu'il s'agit d'un texte suivi du reste du contenu (0x1 = texte ; 0x0 = la suite). La 3e trame à FIN = 1 indique la fin de la requête. 
+La première trame dispose d'un message en entier (FIN = 1 et optcode est différent de 0x0) : le serveur peut traiter la requête reçue et y répondre. A partir de la seconde trame et pour les deux suivantes (soit trois trames), l'opcode à 0x1 puis 0x0 signifie qu'il s'agit d'un texte suivi du reste du contenu (0x1 = texte ; 0x0 = la suite). La 3e trame à FIN = 1 indique la fin de la requête.
 Voir la [section 5.4](http://tools.ietf.org/html/rfc6455#section-5.4) de la spécification pour les détails de cette partie.
 
 ## Pings-Pongs : le "coeur" des WebSockets
@@ -154,7 +154,7 @@ Le _ping_ ou le _pong_ sont des trames classiques dites **de contrôle**. Les _p
 
 > **Note :** Lorsque plusieurs pings sont envoyés à la suite, un **seul** pong suffit en réponse (_le plus récent pour la donnée utile renvoyée_).
 
-## Clore la connexion 
+## Clore la connexion
 
 La connexion peut être close à l'initiative du client ou du serveur grâce à l'envoi d'une trame de contrôle contenant des données spécifiques permettant d'interrompre la poignée de main (de lever définitivement le masque pour être plus précis ; voir la [section 5.5.1](http://tools.ietf.org/html/rfc6455#section-5.5.1)). Dès la réception de la trame, le récepteur envoit une trame spécifique de fermeture en retour (pour signifier la bonne compréhension de la fin de connexion). C'est l'émetteur à l'origine de la fermeture qui doit clore la connexion ; toutes les données supplémentaires sont éliminés / ignorés.
 
@@ -172,7 +172,7 @@ L'idée des extensions pourrait être, par exemple, la compression d'un fichier 
 
 > **Note :** Les extensions sont présentées et expliquées dans les sections 5.8, 9, 11.3.2, and 11.4 de la documentation sus-nommées.
 
-### Les sous-protocoles 
+### Les sous-protocoles
 
 Les sous-protocoles sont à comparer à [un schéma XML](https://en.wikipedia.org/wiki/XML_schema) ou [une déclaration de DocType](https://en.wikipedia.org/wiki/Document_Type_Definition). Ainsi vous pouvez utiliser seulement du XML et sa syntaxe et, imposer par le biais des sous-protocoles, son utilisation durant l'échange WebSocket. C'est l'intérêt de ces sous-protocoles : établir une structure définie (_et intangible : le client se voit imposer la mise en oeuvre par le serveur_), bien que les deux doivent l'accepter pour communiquer ensemble.
 

@@ -46,7 +46,7 @@ Avec l'apparition du WebAssembly dans les navigateurs, la machine virtuelle dont
 
 Les deux différents type de code peuvent s'appeler si nécessaire — l'API WebAssembly JavaScript enveloppe le code exporté avec des fonctions JavaScript qui peuvent être appelées normalement et le code WebAssembly peut importer et appeler normalement de manière synchrone les fonctions JavaScript. En fait, l'unité de base de code WebAssembly est appelée module et est similaire par de nombreux aspects aux modules ES2015.
 
-### Les concepts clefs du WebAssembly 
+### Les concepts clefs du WebAssembly
 
 Il y a différents concepts clefs nécessaires pour comprendre comment fonctionne WebAssembly dans le navigateur. Tous ces concepts se retrouvent totalement dans l'API WebAssembly JavaScript.
 

@@ -53,7 +53,7 @@ Lorsque la requête `POST` est envoyée par un autre moyen qu'un formulaire HTML
     </tr>
     <tr>
       <th scope="row">
-        Autorisée dans les 
+        Autorisée dans les
         <a href="/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML</a>
       </th>
       <td>Oui</td>

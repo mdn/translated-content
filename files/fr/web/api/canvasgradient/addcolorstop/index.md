@@ -26,7 +26,7 @@ La méthode CanvasGradient.addColorStop () ajoute un nouvel arrêt, défini pa
 
 ## Exemples
 
-### Utilisation de la méthode `addColorStop` 
+### Utilisation de la méthode `addColorStop`
 
 Il s'agit seulement d'un simple fragment de code qui utilise la méthode `addColorStop` avec un objet {{domxref("CanvasGradient")}}.
 

@@ -59,7 +59,7 @@ Quand une page HTML est retournée, elle est affichée par le navigateur. Le nav
 
 Les sites web dynamiques ou statiques (voir sections suivantes) utilisent les mêmes protocoles/modèles de communication.
 
-### Exemple de requête/réponse GET 
+### Exemple de requête/réponse GET
 
 Vous faites une simple requête `GET` en cliquant sur un lien ou en faisant une recherche sur un site (sur une page de moteur de recherche par exemple). Une requête HTTP envoyée lorsque vous effectuez une recherche sur MDN pour les termes : "La relation Client-Serveur" ressemblera beaucoup à ce qui suit mais ne sera pas identique car des parties du message dépendent des paramètres de votre navigateur.
 

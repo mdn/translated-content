@@ -71,7 +71,7 @@ Le code équivalent à l'exemple précédent prend la forme suivante:
       results.instance.exports.exported_func();
     });
 
-### Visualiser wasm dans l'outil de développement 
+### Visualiser wasm dans l'outil de développement
 
 In Firefox 54+, the Developer Tool Debugger Panel has functionality to expose the text representation of any wasm code included in a web page. To view it, you can go to the Debugger Panel and click on the “wasm://” entry.
 

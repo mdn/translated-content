@@ -38,7 +38,7 @@ Le moteur peut lui même être utilisé comme une bibliotheque standard en inclu
 
 Conçu pour les navigateurs modernes, PlayCanvas est un moteur de jeu 3D complet intégrant le chargement de ressources, un système d'entité et de composants, une manipulation avancée des graphismes, un moteur de collision et de physique (conçu avec [ammo.js](https://github.com/kripken/ammo.js/)), la gestion du son et des simplifications pour la gestion des entrées de nombreux dispositifs (y compris les manettes de jeu). C'est une liste assez impressionnante de sonctionnalités — observez-en quelques-unes en action en consultant la rubrique [Conception d'une démo de base avec PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine) pour plus de détails.
 
-## Éditeur PlayCanvas 
+## Éditeur PlayCanvas
 
 Au lieu de tout coder à parir de zéro, vous pouvez également utiliser l'éditeur en ligne. Cela peut être un environnement de travail plus agréable si vous n'êtes pas très orienté codage. Voici la [construction d'une démo de base avec l'éditeur de PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor) pour plus de détails.
 

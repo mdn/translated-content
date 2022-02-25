@@ -541,7 +541,7 @@ Ouvrez **/locallibrary/catalog/templates/_base_generic.html_**, et copiez-y, sou
             </span>
         </div>
     {% endif %}
-  {% endblock %} 
+  {% endblock %}
 ```
 
 Le `page_obj` est un objet [Paginator](https://docs.djangoproject.com/en/2.1/topics/pagination/#paginator-objects) qui n'existera que si une pagination est utilisée dans la page courante. Cet objet vous permet de récupérer toutes les informations sur la page courante, les pages précédentes, combien il y a de pages au total, etc.

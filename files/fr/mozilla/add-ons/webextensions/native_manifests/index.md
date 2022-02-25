@@ -41,7 +41,7 @@ Il existe trois types différents de manifest natif :
     <tr>
       <td><a href="#PKCS_11_manifests">PKCS #11 manifests</a></td>
       <td>
-        Activez une extension pour utiliser l'API 
+        Activez une extension pour utiliser l'API
         {{WebExtAPIRef("pkcs11")}} afin d'énumérer les modules de
         sécurité PKCS #11 et installez-les dans Firefox.
       </td>
@@ -70,7 +70,7 @@ Le manifest de messagerie natif contient un seul objet JSON avec les propriété
       <td>
         <p>Nom de l'application native.</p>
         <p>
-          Cela doit correspondre au nom passé dans 
+          Cela doit correspondre au nom passé dans
           {{WebExtAPIRef("runtime.connectNative()")}} ou
           {{WebExtAPIRef("runtime.sendNativeMessage()")}} par
           l'extension.

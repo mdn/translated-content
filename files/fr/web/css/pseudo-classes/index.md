@@ -222,7 +222,7 @@ p:nth-child(2n+1) {
       <td>
         Définition de <code>:lang()</code>, <code>:first-child</code>,
         <code>:hover</code> et <code>:focus</code>.<br />Aucune modification
-        significative pour les pseudo-classes définies avec 
+        significative pour les pseudo-classes définies avec
         {{SpecName('CSS1')}}.
       </td>
     </tr>

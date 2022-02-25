@@ -88,7 +88,7 @@ Firefox offre également des fonctionnalités uniques que vous pouvez utiliser p
     <tr>
       <td>
         <p>
-          Ajoutez une dimension supplémentaire à vos thèmes en 
+          Ajoutez une dimension supplémentaire à vos thèmes en
           <a href="/fr/Add-ons/WebExtensions/API/theme"
             >mettant à jour le thème du navigateur au moment de l'exécution</a
           >. Avec cette fonction, vous pouvez alterner les thèmes par heure de

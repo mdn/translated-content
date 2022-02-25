@@ -13,12 +13,12 @@ La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feConvolveMatrix>`** applique
 
 Une convolution de matrice se fonde sur une matrice n par m (le noyau de convolution), qui décrit la façon dont une valeur de pixel donné de l'image en entrée est combinée avec celles des pixels de son voisinage pour aboutir à une valeur de pixel résultante. Chaque pixel du résultat est déterminé par l'application de la matrice noyau sur le pixel source correspondant et ses pixels voisins. La formule de convolution de base, appliquée à chaque valeur de couleur d'un pixel donné, est :
 
-COLOR<sub>X,Y</sub> = ( 
-              SUM <sub>I=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-1]</sub> { 
-                SUM <sub>J=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-1]</sub> { 
-                  SOURCE <sub>X-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">targetY</a>+I</sub> \*  [kernelMatrix](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute)<sub><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-J-1,  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-I-1</sub> 
-                } 
-              } 
+COLOR<sub>X,Y</sub> = (
+              SUM <sub>I=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-1]</sub> {
+                SUM <sub>J=0 to [<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-1]</sub> {
+                  SOURCE <sub>X-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetXAttribute">targetX</a>+J, Y-<a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementTargetYAttribute">targetY</a>+I</sub> \*  [kernelMatrix](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementKernelMatrixAttribute)<sub><a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderX</a>-J-1,  <a href="https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementOrderAttribute">orderY</a>-I-1</sub>
+                }
+              }
             ) /  [divisor](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementDivisorAttribute) +  [bias](https://www.w3.org/TR/SVG11/filters.html#feConvolveMatrixElementBiasAttribute) \* ALPHA<sub>X,Y</sub>
 
 dans laquelle

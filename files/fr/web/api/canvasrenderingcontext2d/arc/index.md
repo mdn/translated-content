@@ -28,7 +28,7 @@ La méthode **`CanvasRenderingContext2D.arc()`** de l'API Canvas 2D permet d'ajo
 
 ## Exemples
 
-### En utilisant la méthode `arc` 
+### En utilisant la méthode `arc`
 
 Voici un code simple permettant de dessiner un cercle .
 

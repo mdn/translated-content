@@ -78,7 +78,7 @@ if(!window.HashChangeEvent)(function(){
 
 ###  
 
-## Spécifications 
+## Spécifications
 
 | Spécifications                                                                                       | Statut                           | Commentaires |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |

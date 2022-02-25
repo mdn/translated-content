@@ -25,7 +25,7 @@ Une page web ne doit pas contenir plus d'un rôle `banner`, mais il est tout à 
 
 ### Exemples
 
-#### Une zone d'entête typique de site 
+#### Une zone d'entête typique de site
 
 ```html
 <header role="banner">

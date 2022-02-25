@@ -267,7 +267,7 @@ En plus des opérations arithmétiques standards (+,-,\*,/), JavaScript fournit 
           href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_arithm%C3%A9tiques#Reste_(.25)"
           >Reste</a
         >
-        (<code>%</code>)<br /> 
+        (<code>%</code>)<br />
       </td>
       <td>
         Opérateur binaire. Renvoie le reste entier de la division entre les deux

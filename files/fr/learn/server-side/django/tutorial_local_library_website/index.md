@@ -23,7 +23,7 @@ Le premier article de cette série didactique explique ce que vous apprendrez et
         <a href="/fr/docs/Learn/Server-side/Django/Introduction"
           >l'introduction</a
         >. Pour les articles suivants avoir mis à jour l'environnement comme
-        décrit précédemment. 
+        décrit précédemment.
       </td>
     </tr>
     <tr>

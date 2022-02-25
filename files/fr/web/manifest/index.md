@@ -156,7 +156,7 @@ Les objets image peuvent contenir les valeurs suivantes :
       <td><code>sizes</code></td>
       <td>
         Une chaîne de caractères contenant les dimensions des images, séparées
-        par des espaces. 
+        par des espaces.
       </td>
     </tr>
     <tr>

@@ -38,7 +38,7 @@ Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs
 </video>
 ```
 
-### WebVTT 
+### WebVTT
 
     FICHIER WEBVTT
 

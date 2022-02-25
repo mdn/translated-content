@@ -5,15 +5,15 @@ translation_of: Web/Guide/AJAX
 ---
 **AJAX (Asynchronous JavaScript + XML)** n'est pas une technologie en soi, mais un terme désignant une «&nbsp;nouvelle&nbsp;» approche utilisant un ensemble de technologies existantes, dont&nbsp;: [HTML](/fr/HTML "fr/HTML") ou [XHTML](/fr/XHTML "fr/XHTML"), [les feuilles de styles CSS](/fr/CSS "fr/CSS"), [JavaScript](/fr/JavaScript "fr/JavaScript"), [le modèle objet de document](/fr/DOM "fr/DOM") (DOM), [XML](/fr/XML "fr/XML"), [XSLT](/fr/XSLT "fr/XSLT"), et l'[objet XMLHttpRequest](/fr/XMLHttpRequest "fr/XMLHttpRequest"). Lorsque ces technologies sont combinées dans le modèle AJAX, les applications Web sont capables de réaliser des mises à jour rapides et incrémentielles de l'interface utilisateur sans devoir recharger la page entière du navigateur. Les applications fonctionnent plus rapidement et sont plus réactives aux actions de l'utilisateur.
 
-#### **Quand utiliser (ou non) AJAX ?** 
+#### **Quand utiliser (ou non) AJAX ?**
 
 S'il n'y a pas de "bonne réponse", quelques éléments généraux sont à garder à mémoire :
 
-- La méthode AJAX peut être résumée comme un compromis : elle évite un rechargement complet de la page mais **n'autorise pas davantage** que ce qu'apporte une requête HTTP GET ou POST (ou HEAD) classique. Les échanges sont plutôt lourds car, même pour peu d'éléments, le navigateur **doit** envoyer des entêtes et négocier la transaction. 
+- La méthode AJAX peut être résumée comme un compromis : elle évite un rechargement complet de la page mais **n'autorise pas davantage** que ce qu'apporte une requête HTTP GET ou POST (ou HEAD) classique. Les échanges sont plutôt lourds car, même pour peu d'éléments, le navigateur **doit** envoyer des entêtes et négocier la transaction.
   La méthode est alors intérressante pour tous les sites où le contenu est changé peu fréquemment et reste prévisible : un blog, un forum, etc. où c'est l'utilisateur qui décide de changer le contenu (_le serveur ne peut pas être à l'initiative, sauf à faire des requêtes régulièrement mais il serait alors préférable de passer par les [WebSockets](https://developer.mozilla.org/fr/docs/WebSockets)_).
 - La méthode AJAX a comme qualité de rester dans les standards HTTP, en plus d'être du côté client : c'est donc une méthode qui est **totalement** transparente dans les échanges standards entre un client et un serveur, donc avec tous les langages de programmes qui supportent une connexion socket classique. C'est important à garder à l'esprit dans des environnements mixtes : un serveur Apache / PHP pour la génération de pages maîtresses et un contenu déployé dans un autre langage.
   Ne pas confondre *possible* et *souhaitable*&nbsp;: AJAX **peut** négocier avec plusieurs domaines différents ou (des ports différents dans un même domaine). Cependant pour des [raisons de sécurité](https://developer.mozilla.org/fr/docs/HTTP/Access_control_CORS) les possibilités sont restreintes voire impossibles. La méthode AJAX est donc dépendante de ce qu'autorise ou permet le navigateur du client.
-- La méthode AJAX est connue et reconnue, pouvant être utilisées à large échelle dans des bibliothèques comme [JQuery](https://fr.wikipedia.org/wiki/JQuery), dont l'intérêt de ces bibliothéques est d'accélérer la vitesse de développement. De plus l'utilisation de Javascript permet d'accéder aux ressources du DOM de la page et des données reçues si elles sont au format XML, permettant la sérialisation dans la plupart des situations. 
+- La méthode AJAX est connue et reconnue, pouvant être utilisées à large échelle dans des bibliothèques comme [JQuery](https://fr.wikipedia.org/wiki/JQuery), dont l'intérêt de ces bibliothéques est d'accélérer la vitesse de développement. De plus l'utilisation de Javascript permet d'accéder aux ressources du DOM de la page et des données reçues si elles sont au format XML, permettant la sérialisation dans la plupart des situations.
   Cependant AJAX rencontre aussi les difficultés liées à la grande hétérogénité des navigateurs (implantation différente de JS, donc _in fine_ des possibilités AJAX), des règles de sécurité, etc. Comme pour CSS, AJAX peut être vu comme un "plus" dans la navigation (_voir le principe de [dégradation élégante](https://fr.wikipedia.org/wiki/Am%C3%A9lioration_progressive)_) mais ne doit pas être vu comme une finalité au risque, sinon, de se couper d'une partie des utilisateurs.
 
 <table>
@@ -131,7 +131,7 @@ S'il n'y a pas de "bonne réponse", quelques éléments généraux sont à garde
           <dt>
             <a class="external" href="http://www.w3.org/TR/XMLHttpRequest/"
               >La spécification XMLHttpRequest</a
-            >- 
+            >-
             <a class="external" href="http://www.xul.fr/XMLHttpRequest.html"
               >(Traduction française)</a
             >

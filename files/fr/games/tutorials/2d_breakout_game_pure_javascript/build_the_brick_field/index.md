@@ -118,7 +118,7 @@ Exercice : essayez de changer le nombre de briques dans une colonne ou dans une 
 
 ## Prochaines étapes
 
-Nous avons donc maintenant des briques !  
+Nous avons donc maintenant des briques ! 
 Mais la balle n'a toujours aucune interaction avec elles. Nous allons donc changer ça dans le chapitre sept : [Détection des collisions ](/fr/docs/)
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}

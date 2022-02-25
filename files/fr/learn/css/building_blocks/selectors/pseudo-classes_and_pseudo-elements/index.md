@@ -52,7 +52,7 @@ Les pseudo-classes sont signalées par un mot clé commençant par deux point
 
     :pseudo-class-name
 
-### Exemple d'une pseudo-classe élémentaire 
+### Exemple d'une pseudo-classe élémentaire
 
 Voyons cela dans un premier exemple. Pour agrandir et mettre en gras le texte du premier paragraphe d'un article, on pourrait attribuer une classe à ce paragraphe, puis lui ajouter du CSS, comme ci-dessous :
 

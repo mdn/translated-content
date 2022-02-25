@@ -72,7 +72,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
           propriété <code>browser_style</code>.
         </p>
         <p>
-          Dans Firefox, la feuille de style peut être vue sur 
+          Dans Firefox, la feuille de style peut être vue sur
           chrome://browser/content/extension.css, ou
           chrome://browser/content/extension-mac.css sur OS X. Lors de la
           définition des dimensions, savez que cette feiulle de style est

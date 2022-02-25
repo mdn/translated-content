@@ -128,7 +128,7 @@ La clé du thème est un objet qui prend les propriétés suivantes:
           <li>
             <code>"additional_backgrounds_alignment":</code> un tableau
             énumérant les valeurs définissant l'alignement des éléments
-            correspondants du tableau 
+            correspondants du tableau
             <code>"additional_backgrounds":</code>.<br />Les options
             d'alignement comprennent  : <code>"bottom" <em>(bas)</em></code
             >, <code>"center" <em>(centre)</em></code
@@ -414,7 +414,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans <code>frame</code>, 
+            contraste bien avec celles utilisées dans <code>frame</code>,
             <code>frame_inactive</code>, <code>button_background_active</code>,
             et  <code>button_background_hover</code>.
           </p>
@@ -441,7 +441,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans <code>frame</code>, 
+            contraste bien avec celles utilisées dans <code>frame</code>,
             <code>frame_inactive</code>, <code>button_background_active</code>,
             et  <code>button_background_hover</code>.
           </p>
@@ -521,7 +521,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celle utilisée dans 
+            contraste bien avec celle utilisée dans
             <code>ntp_background</code>.
           </p>
         </div>
@@ -776,8 +776,8 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans 
-            <code>tab_selected</code> ou <code>frame</code> et 
+            contraste bien avec celles utilisées dans
+            <code>tab_selected</code> ou <code>frame</code> et
             <code>frame_inactive</code>.
           </p>
         </div>
@@ -862,8 +862,8 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans 
-            <code>tab_selected</code> ou <code>frame</code> et 
+            contraste bien avec celles utilisées dans
+            <code>tab_selected</code> ou <code>frame</code> et
             <code>frame_inactive</code>.
           </p>
         </div>
@@ -1062,7 +1062,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <p>
           Ici, le champ <code>toolbar_field_highlight</code> spécifie que la
           couleur de surbrillance est un vert clair, alors que le texte est
-          réglé sur un vert foncé à vert moyen en utilisant le texte 
+          réglé sur un vert foncé à vert moyen en utilisant le texte
           <code>toolbar_field_highlight_text</code>.
         </p>
       </td>
@@ -1078,7 +1078,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> S'assurer que la couleur utilisée contraste
-            bien avec celles utilisées dans 
+            bien avec celles utilisées dans
             <code>toolbar_field_highlight</code>.
           </p>
         </div>
@@ -1139,7 +1139,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans 
+            contraste bien avec celles utilisées dans
             <code>toolbar_field</code>.
           </p>
         </div>
@@ -1167,7 +1167,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans 
+            contraste bien avec celles utilisées dans
             <code>toolbar_field_focus</code>.
           </p>
         </div>

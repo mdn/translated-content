@@ -31,7 +31,7 @@ Dans l'article précédent, nous avons passé en revue l'essentiel de la théor
           >) et les bases de la programmation objet en JavaScript (voir <a
             href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction"
             >Introduction aux objets</a
-          >). 
+          >).
         </p>
       </td>
     </tr>

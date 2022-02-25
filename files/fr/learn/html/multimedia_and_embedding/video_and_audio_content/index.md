@@ -23,14 +23,14 @@ Maintenant que nous sommes à l'aise pour ajouter de simples images dans une pag
     <tr>
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
-        Compétences informatiques de base, 
+        Compétences informatiques de base,
         <a
           href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
           >installation des outils de base</a
         >, bases de la
         <a href="/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
           >manipulation des fichiers</a
-        >, connaissance des fondamentaux du HTML (comme expliqué dans 
+        >, connaissance des fondamentaux du HTML (comme expliqué dans
         <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
           >Commencer avec le HTML)</a
         >

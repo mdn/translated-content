@@ -441,7 +441,7 @@ daySelect.onchange = function() {
       <td>
         {{htmlattrxref("autocomplete", "input")}},
         {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}} et 
+        {{htmlattrxref("readonly", "input")}} et
         {{htmlattrxref("step", "input")}}
       </td>
     </tr>

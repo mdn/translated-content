@@ -14,7 +14,7 @@ La méthode **`Element.animate()`** est un raccourci permettant de créer et j
 ## Syntaxe
 
 ```js
-element.animate(keyframes, options); 
+element.animate(keyframes, options);
 ```
 
 ### Paramèters

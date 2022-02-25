@@ -156,7 +156,7 @@ Il y a trois facteurs à prendre en compte, listés ci-dessous par ordre décroi
 
 Passons les en revue en partant de la fin, pour voir comment les navigateurs déterminent quel CSS doit être appliqué.
 
-### Ordre d'apparition dans le source 
+### Ordre d'apparition dans le source
 
 Nous avons déjà vu comment l'ordre d'apparition dans le source compte dans la cascade. Si deux règles avec le même poids s'appliquent alors celle qui vient en dernier dans le CSS l'emporte. L'intuition est la suivante : plus on avance dans le CSS plus on s'approche de l'élément ciblé ; quand une règle le sélectionne, elle écrase la précédente jusqu'à la dernière règle rencontrée dans le source qui l'emporte et met en forme l'élément..
 

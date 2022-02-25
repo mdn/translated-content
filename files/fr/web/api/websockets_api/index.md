@@ -21,7 +21,7 @@ L'**API WebSocket** est une technologie évoluée qui permet d'ouvrir un canal d
 
 > **Note :** Bien que les connexions WebSocket soient fonctionnellement similaires aux sockets standard de type Unix, elles ne sont pas liées.
 
-## Interfaces  
+## Interfaces 
 
 - [`WebSocket`](/fr/docs/WebSockets/Writing_WebSocket_client_applications)
   - : Interface principale pour se connecter à un serveur WebSocket. Il permet d'envoyer et de recevoir des données sur la connexion.

@@ -43,7 +43,7 @@ La propriété {{cssxref("all")}} peut être utilisée avec cette valeur afin de
           ce texte est avec la couleur initiale (noire)
        </em>
     ce texte est rouge aussi
- </p> 
+ </p>
 ```
 
 ### Résultat

@@ -25,7 +25,7 @@ Maintenant que nous avons examiné les blocs fondamentaux de construction de Jav
       <th scope="row">Conditions préalables:</th>
       <td>
         Avant de tenter cette évaluation, vous devriez avoir parcouru tous les
-        articles de ce module. 
+        articles de ce module.
       </td>
     </tr>
     <tr>

@@ -294,7 +294,7 @@ This guideline refers to the ability of content to be consumed by users in multi
       <td colspan="1" rowspan="1">1.3.1 Info and relationships (A)</td>
       <td>
         <p>
-          Any content structure — or visual relationship made between content — 
+          Any content structure — or visual relationship made between content —
           can also be determined programmatically, or be inferred from text
           description. The main situations in which this is relevant are:
         </p>
@@ -410,7 +410,7 @@ This guideline refers to the ability of content to be consumed by users in multi
         <p>
           <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html"
             >Understanding Orientation</a
-          > 
+          >
         </p>
       </td>
     </tr>
@@ -429,7 +429,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
             >53 input fields</a
           >
-          to programmatically identify the purpose of a field.   
+          to programmatically identify the purpose of a field.  
         </p>
       </td>
       <td>
@@ -638,7 +638,7 @@ This guideline relates to making sure core content is easy to discernable from b
         <ul>
           <li>
             No horizontal scrolling for right-to-left languages (like English)
-            or left-to-right languages (like Arabic)   
+            or left-to-right languages (like Arabic)  
           </li>
           <li>
             No vertical scrolling for top-to-bottom languages (like Japanese)
@@ -665,7 +665,7 @@ This guideline relates to making sure core content is easy to discernable from b
       </td>
       <td>
         Minimum color contrast ratio of 3 to 1 for user interface components and
-        graphical objects. 
+        graphical objects.
       </td>
       <td>
         <a
@@ -685,7 +685,7 @@ This guideline relates to making sure core content is easy to discernable from b
       <td>
         <p>
           No loss of content or functionality occurs when the following styles
-          are applied: 
+          are applied:
         </p>
         <ul>
           <li>
@@ -724,7 +724,7 @@ This guideline relates to making sure core content is easy to discernable from b
           <li>dismissable (can be closed/removed)</li>
           <li>
             hoverable (the additional content does not disappear when the
-            pointer is over it) 
+            pointer is over it)
           </li>
           <li>
             persistent (the additional content does not disappear without user

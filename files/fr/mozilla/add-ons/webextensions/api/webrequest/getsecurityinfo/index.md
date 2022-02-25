@@ -40,7 +40,7 @@ var gettingInfo = browser.webRequest.getSecurityInfo(
   - : `object`. Un objet qui peut contenir l'une des propriétés suivantes, toutes facultatives :
 
     - `certificateChain` {{optional_inline}}
-      - : `boolean`. Si `true`, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si `false`, 
+      - : `boolean`. Si `true`, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si `false`,
         il n'inclura que le certificat du serveur. La valeur par défaut est `false`.
     - `rawDER` {{optional_inline}}
       - : `boolean`. Si true, chaque propriété {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} dans le {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} contiendra une propriété `rawDER`. Il contient le DER-encoded ASN.1 qui comprend les données du certificat.

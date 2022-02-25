@@ -304,7 +304,7 @@ Le tableau suivant montre les différents messages prédéfinis disponibles :
           l'URL de l'add-on. Cela signifie que vous ne pouvez pas utiliser cette
           valeur comme paramètre  <code>extensionId</code> pour
           {{WebExtAPIRef("runtime.sendMessage()")}}, et que vous
-          ne pouvez pas l'utiliser pour vérifier la propriété id d'un objet 
+          ne pouvez pas l'utiliser pour vérifier la propriété id d'un objet
           {{WebExtAPIRef("runtime.MessageSender")}}.
         </p>
       </td>

@@ -89,7 +89,7 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
           >".
         </p>
         <p>
-          C'est une 
+          C'est une
           <a
             href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
             >propriété localisable</a
