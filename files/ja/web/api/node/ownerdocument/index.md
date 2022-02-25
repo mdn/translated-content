@@ -2,65 +2,35 @@
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 tags:
-  - DOM
-  - Gecko
-  - Node
+  - プロパティ
+  - リファレンス
+  - 読み取り専用
+browser-compat: api.Node.ownerDocument
 translation_of: Web/API/Node/ownerDocument
 ---
-<div>{{ApiRef}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`ownerDocument`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、このノードの最上位の文書オブジェクトを返します。
 
-<p><code>ownerDocument</code> プロパティは、指定ノードを内包するノードツリーのトップレベルのドキュメントオブジェクトを返します。</p>
+## 値
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+すべての子ノードが作成された最上位の {{domxref("Document")}} オブジェクトです。
 
-<pre class="syntaxbox"><var>document</var> = element.ownerDocument
-</pre>
+このプロパティが文書自身のノードで使用された場合、値は `null` になります。
 
-<ul>
- <li><code>document</code> : 指定要素の祖先である {{domxref("document")}} オブジェクト</li>
-</ul>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
+```js
+// 指定された "p" から、文書オブジェクトの子である最上位の HTML を取得します。
 
-<pre class="brush:js">var doc = p.ownerDocument; // ノード p のノードツリー上のトップレベル document オブジェクトを取得
-var html = doc.documentElement; // owner のドキュメント要素を取得
+const d = p.ownerDocument;
+const html = d.documentElement;
+```
 
-alert(html); // [object HTMLHtmlElement]
-</pre>
+## 仕様書
 
-<h2 id="Notes" name="Notes">注記</h2>
+{{Specifications}}
 
-<p>このプロパティによって返される <code>document</code> オブジェクトは、実際の HTML 文書中ですべての子ノードの属するメインオブジェクトです。<code>document</code> ノード自身に対しこのプロパティを用いた場合、戻り値は <code>null</code> となります。</p>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-node-ownerdocument", "Node.ownerDocument")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM3 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}}</td>
-   <td>{{Spec2("DOM3 Core")}}</td>
-   <td>No change</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM2 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}}</td>
-   <td>{{Spec2("DOM2 Core")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
-
-<p>{{Compat("api.Node.ownerDocument")}}</p>
+{{Compat}}

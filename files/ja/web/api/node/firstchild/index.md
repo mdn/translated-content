@@ -2,45 +2,68 @@
 title: Node.firstChild
 slug: Web/API/Node/firstChild
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - Node
+  - プロパティ
+  - リファレンス
+browser-compat: api.Node.firstChild
 translation_of: Web/API/Node/firstChild
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>ノードのツリーの中で最初の子ノード、もしくは子ノードがなければ <code>null</code> を返します。ノードが <code>Document</code> の場合は、その直接の子のリスト内の最初のノードを返します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox">var <var>childNode</var> = <var>node</var>.firstChild;
-</pre>
-<ul>
- <li><code>childNode</code> : node の最初の子ノードがあればその参照、無い場合は <code>null</code></li>
-</ul>
-<h2 id="Example" name="Example">例</h2>
-<p>次の例では <code>firstChild</code> の使用方法と、このプロパティを使用すると空白ノードがどのように影響するかをデモンストレーションしています。Gecko DOM に於ける空白の扱われ方についてより多くの情報を得るために、{{Anch("Notes")}} も参照してください。</p>
-<pre class="brush:html">&lt;p id="para-01"&gt;
-  &lt;span&gt;First span&lt;/span&gt;
-&lt;/p&gt;
+{{APIRef("DOM")}}
 
-&lt;script type="text/javascript"&gt;
-  var p01 = document.getElementById('para-01');
-  alert(p01.firstChild.nodeName)
-&lt;/script&gt;</pre>
-<p>上記の例では alert は'#text'を表示します。なぜなら開始タグ &lt;p&gt; の末端と &lt;span&gt; の間にある空白を調整するためにテキストノードが挿入されているからです。<b>どんな</b> 空白、単一スペースから多数のスペース、改行、タブ等々、も #text ノードを挿入することになります。</p>
-<p>その他の #text ノードは閉じタグ &lt;/span&gt; と &lt;/p&gt; の間に挿入されていみます。</p>
-<p>もしこの空白がソースから取り除かれれば、#text ノードは挿入されず、span 要素は段落の最初の子ノードとなります。</p>
-<pre class="brush:html">&lt;p id="para-01"&gt;&lt;span&gt;First span&lt;/span&gt;&lt;/p&gt;
+**`firstChild`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティで、ツリー内におけるこのノードの最初の子、またはこのノードに子がない場合は `null` を返します。
 
-&lt;script type="text/javascript"&gt;
-  var p01 = document.getElementById('para-01');
-  alert(p01.firstChild.nodeName)
-&lt;/script&gt;
-</pre>
-<p>今度は alert は 'SPAN' を表示するでしょう。</p>
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-firstChild">DOM Level 1 Core: firstChild</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388">DOM Level 2 Core: firstChild</a></li>
-</ul>
+このノードが {{domxref("Document")}} であった場合は、このプロパティは直接のこのリスト内で最初のノードを返します。
+
+> **Note:** このプロパティはこのノードの最初の子であれば、あらゆる種類のノードを返します。
+> {{domxref("Text")}} または {{domxref("Comment")}} ノードになることがあります。
+> 他の要素の子である最初の {{domxref("Element")}} を取得したい場合は、 {{domxref("Element.firstElementChild")}} を使用することを検討してください。
+
+## 値
+
+{{domxref("Node")}}、または存在しなければ `null`。
+
+## 例
+
+次の例では `firstChild` の使用方法と、このプロパティを使用すると空白ノードがどのように影響するかを示しています。
+
+```html
+<p id="para-01">
+  <span>最初の span</span>
+</p>
+
+<script>
+  const p01 = document.getElementById('para-01');
+  console.log(p01.firstChild.nodeName);
+</script>
+```
+
+上記の例では[コンソール](/ja/docs/Web/API/console)に '#text' と表示されます。開始タグ `<p>` の末尾と `<span>` タグとの間にある空白を調整するためにテキストノードが挿入されているためです。**あらゆる**[ホワイトスペース](/ja/docs/Web/API/Document_Object_Model/Whitespace)は、単一の空白から複数のスペース、改行、タブに至るまで、 1 つの `#text` ノードを生成します。
+
+`#text` ノードはもう 1 つ、閉じタグ `</span>` と `</p>` の間に挿入されます。
+
+ホワイトスペースをソースから取り除くと、 #text ノードは挿入されず、 span 要素がその段落の最初の子になります。
+
+```html
+<p id="para-01"><span>最初の span</span></p>
+
+<script>
+  const p01 = document.getElementById('para-01');
+  console.log(p01.firstChild.nodeName);
+</script>
+```
+
+コンソールには 'SPAN' と表示されるようになります。
+
+`node.firstChild` が `#text` や `#comment` ノードを返す問題を回避するには、 {{domxref("Element.firstElementChild")}} を使用すると最初の要素ノードのみを返すことができます。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Element.firstElementChild")}}
+- {{domxref("Node.lastChild")}}
