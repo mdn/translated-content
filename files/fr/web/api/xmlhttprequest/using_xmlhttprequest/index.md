@@ -35,7 +35,7 @@ Une demande faite via XMLHttpRequest peut récupérer les données dans l'une de
 
 ## Gérer les réponses
 
-Il existe plusieurs types [d'attributs de réponse](http://www.w3.org/TR/XMLHttpRequest2/#response) définies par la spécification W3C pour XMLHttpRequest. Ceci indique que le client faisant l'objet XMLHttpRequest des informations importantes sur l'état ​​de la réponse. Certains cas où, traitant de types de réponse non-texte peuvent impliquer une certaine manipulation et l'analyse comme indiqué dans les sections suivantes.
+Il existe plusieurs types [d'attributs de réponse](http://www.w3.org/TR/XMLHttpRequest2/#response) définies par la spécification W3C pour XMLHttpRequest. Ceci indique que le client faisant l'objet XMLHttpRequest des informations importantes sur l'état ​de la réponse. Certains cas où, traitant de types de réponse non-texte peuvent impliquer une certaine manipulation et l'analyse comme indiqué dans les sections suivantes.
 
 ### Analyser et manipuler la propriété `responseXML`
 

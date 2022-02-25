@@ -225,11 +225,11 @@ Toutes les instances de *TypedArray*s héritent de {{jsxref("TypedArray.prototyp
 La plupart des méthodes des tableaux typés peuvent être en partie émulées grâce aux méthodes rattachées à {{jsxref("Array")}} :
 
 ```js
-var typedArrayTypes = [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, ​​​Int32Array, Uint32Array, ​​​Float32Array, Float64Array];
+var typedArrayTypes = [Int8Array, Uint8Array, Uint8ClampedArray, Int16Array, Uint16Array, ​​Int32Array, Uint32Array, ​​Float32Array, Float64Array];
 for (var k in typedArrayTypes){
   for (var v in Array.prototype){
     if (Array.prototype.hasOwnProperty(v) &&
-  ​​​​​         !typedArrayTypes[k].prototype.hasOwnProperty(v)){
+  ​​​         !typedArrayTypes[k].prototype.hasOwnProperty(v)){
       typedArrayTypes[k].prototype[v] = Array.prototype[v];
     }
   }

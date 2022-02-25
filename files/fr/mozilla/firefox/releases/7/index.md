@@ -89,7 +89,7 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 
-Ces changements affectent les développeurs d'extensions ainsi que les développeurs qui travaillent sur ​​ou avec le code de Mozilla lui-même. Les developpeurs d'extensions doivent voir [Updating extensions for Firefox 7](/fr/docs/Firefox/Updating_extensions_for_Firefox_7) pour plus d'informations.
+Ces changements affectent les développeurs d'extensions ainsi que les développeurs qui travaillent sur ​ou avec le code de Mozilla lui-même. Les developpeurs d'extensions doivent voir [Updating extensions for Firefox 7](/fr/docs/Firefox/Updating_extensions_for_Firefox_7) pour plus d'informations.
 
 > **Note :** Firefox 7 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
 
