@@ -14,7 +14,7 @@ translation_of: Web/API/Element/getElementsByClassName
 
 La méthode **`Element.getElementsByClassName()`** retourne une {{domxref("HTMLCollection")}} contenant une référence sur tous les éléments ayant les noms de classes passés en paramètre. Quand la méthode est appelée sur l'objet document, la recherche s'effectue dans le document complet, noeud racine compris.
 
-À l'instar de la méthode {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} qui agit sur le document entier ; elle va retourner les descendants de l'élément spécifié comme document root qui auront les noms de classes passés en paramètre.
+À l'instar de la méthode {{domxref("Document.getElementsByClassName", "Document.getElementsByClassName()")}} qui agit sur le document entier&nbsp;; elle va retourner les descendants de l'élément spécifié comme document root qui auront les noms de classes passés en paramètre.
 
 ## Syntaxe
 

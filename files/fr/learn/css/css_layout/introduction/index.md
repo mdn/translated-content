@@ -181,7 +181,7 @@ En plus des propriétés ci-dessus applicables au conteneur `flex`, il existe de
 
 Alors que «&nbsp;flexbox&nbsp;» est conçu pour une disposition unidimensionnelle, «&nbsp;Grid Layout&nbsp;» (Disposition tramée) est bidimensionnel — il place les choses en rangées et colonnes.
 
-À nouveau, vous basculez en disposition tramée en donnant une valeur appropriée à `display` — `display: grid`. L'exemple ci-dessous utilise un balisage semblable à celui de l'exemple flex&nbsp;: un conteneur et quelques éléments enfants. Outre `display: grid`, nous définissons une trame de placement sur le parent avec les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}. Nous avons défini trois colonnes de `1fr` chacune et deux lignes de `100px`. Il n'est pas nécessaire de mettre de règles sur les éléments enfants ; il seront automatiquement placés dans les cellules de trame créées.
+À nouveau, vous basculez en disposition tramée en donnant une valeur appropriée à `display` — `display: grid`. L'exemple ci-dessous utilise un balisage semblable à celui de l'exemple flex&nbsp;: un conteneur et quelques éléments enfants. Outre `display: grid`, nous définissons une trame de placement sur le parent avec les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}. Nous avons défini trois colonnes de `1fr` chacune et deux lignes de `100px`. Il n'est pas nécessaire de mettre de règles sur les éléments enfants&nbsp;; il seront automatiquement placés dans les cellules de trame créées.
 
 ### Utiliser display: grid
 

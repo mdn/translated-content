@@ -22,7 +22,7 @@ Lorsqu’on navigue entre les différents éléments d’une liste, le premier �
 
 Lorsque le rôle `listbox` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
-- Présenter l’élément comme ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation. Alternativement, s’il est un enfant de ou s’il appartient à une boîte combinée [combobox](http://www.w3.org/TR/wai-aria/roles#combobox), présenter l’élément comme un [menu](http://www.w3.org/TR/wai-aria/roles#menu) ;
+- Présenter l’élément comme ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation. Alternativement, s’il est un enfant de ou s’il appartient à une boîte combinée [combobox](http://www.w3.org/TR/wai-aria/roles#combobox), présenter l’élément comme un [menu](http://www.w3.org/TR/wai-aria/roles#menu)&nbsp;;
 - Déclencher un événement liste (ou dans les cas spéciaux, un événement menu) accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
 Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence&nbsp;:

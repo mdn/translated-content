@@ -48,7 +48,7 @@ Il existe `transformToDocument` et `transformToFragment` depuis Mozilla 1.2, voi
 
 #### Pourquoi Internet Explorer requiert-il un espace de nommage différent de celui de Mozilla&nbsp;?
 
-Jusqu'à sa version 6, IE requiert un espace de nommage déprécié issu d'un brouillon XSLT, merci d'utiliser Mozilla ;-), IE6+ ou MSXML3+, qui ne posent pas ce problème. Comme les différences entre XSLT 1.0 et l'implémentation dans IE de ce brouillon sont significatives, nous n'offrons pas de support.
+Jusqu'à sa version 6, IE requiert un espace de nommage déprécié issu d'un brouillon XSLT, merci d'utiliser Mozilla&nbsp;;-), IE6+ ou MSXML3+, qui ne posent pas ce problème. Comme les différences entre XSLT 1.0 et l'implémentation dans IE de ce brouillon sont significatives, nous n'offrons pas de support.
 
 #### Comment compiler une version autonome de TransforMiiX&nbsp;?
 

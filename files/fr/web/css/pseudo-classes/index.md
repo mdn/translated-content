@@ -113,7 +113,7 @@ p:nth-child(2n+1) {
 ```html
 <div>
   <p class="survol">
-    La Reine devint pourpre de colère ; et après
+    La Reine devint pourpre de colère&nbsp;; et après
     l’avoir considérée un moment avec des yeux
     flamboyants comme ceux d’une bête fauve, elle
     se mit à crier&nbsp;: «&nbsp;Qu’on lui coupe la tête&nbsp;!&nbsp;»

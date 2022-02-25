@@ -14,8 +14,8 @@ Cette technique présente l’utilisation du rôle [checkbox](http://www.w3.org/
 
 Le rôle `checkbox` est utilisé pour des contrôles interactifs à cocher. Si un élément utilise `role="checkbox",` il est obligatoire pour cet élément d’avoir également un attribut `aria-checked` qui présente l’état de la case à cocher aux technologies d’assistance. Alors que le contrôle de formulaire HTML natif `checkbox` ne peut avoir que deux états («&nbsp;coché&nbsp;» ou «&nbsp;décoché&nbsp;»), un élément avec le rôle `role=checkbox` peut présenter trois états pour l'attribut `aria-checked`&nbsp;:
 
-- `aria-checked="true"`&nbsp;: la case est cochée ;
-- `aria-checked="false"`&nbsp;: la case est décochée ;
+- `aria-checked="true"`&nbsp;: la case est cochée&nbsp;;
+- `aria-checked="false"`&nbsp;: la case est décochée&nbsp;;
 - `aria-checked="mixed"`&nbsp;: la case est partiellement cochée.
 
 Le développeur doit modifier dynamiquement la valeur de l’attribut `aria-checked` lorsque la case est cochée.
@@ -26,7 +26,7 @@ Comme une case à cocher est un contrôle interactif, elle doit pouvoir recevoir
 
 Lorsque le rôle `checkbox` est ajouté à un élément, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
-- Présenter l’élément comme ayant un rôle de case à cocher à l’API d’accessibilité du système d’exploitation ;
+- Présenter l’élément comme ayant un rôle de case à cocher à l’API d’accessibilité du système d’exploitation&nbsp;;
 - Lorsque la valeur de l’attribut `aria-checked` change, envoyer un événement accessible de changement d’état.
 
 Les technologies d’assistance doivent faire la chose suivante&nbsp;:

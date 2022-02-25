@@ -25,7 +25,7 @@ Un nombre représentant l'année de la date indiquée, selon l'heure locale, auq
 
 ## Description
 
-La méthode `getYear()` renvoie l'année moins 1900 ; par conséquent&nbsp;:
+La méthode `getYear()` renvoie l'année moins 1900&nbsp;; par conséquent&nbsp;:
 
 - Pour les années supérieures ou égales à 2000, la valeur renvoyée par `getYear()` est supérieure ou égale à 100. Par exemple, si l'année est 2026, `getYear()` renvoie 126.
 - Pour les années entre 1900 et 1999 incluses, la valeur renvoyée par `getYear()` est comprise entre 0 et 99. Par exemple, si l'année est 1976, `getYear()` renvoie 76.

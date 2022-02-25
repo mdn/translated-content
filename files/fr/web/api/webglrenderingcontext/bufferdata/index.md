@@ -36,7 +36,7 @@ La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/doc
       - `gl.COPY_READ_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
       - `gl.COPY_WRITE_BUFFER` : tampon pour la copie d'un objet tampon à un autre ;
       - `gl.TRANSFORM_FEEDBACK_BUFFER` : tampon pour les opérations de retour de transformation ;
-      - `gl.UNIFORM_BUFFER` : tampon utilisé pour stocker des blocs uniform ;
+      - `gl.UNIFORM_BUFFER` : tampon utilisé pour stocker des blocs uniform&nbsp;;
       - `gl.PIXEL_PACK_BUFFER` : tampon utilisé pour les opérations de transfert de pixels ;
       - `gl.PIXEL_UNPACK_BUFFER` : tampon utilisé pour les opérations de transfert de pixels.
 
@@ -50,7 +50,7 @@ La méthode **`WebGLRenderingContext.bufferData()`** de l'[API WebGL](/fr-FR/doc
 
     - `gl.STATIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent mais de ne pas changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
     - `gl.DYNAMIC_DRAW`&nbsp;: le contenu du tampon est susceptible d'être souvent utilisé et de changer souvent ; du contenu est écrit dans le tampon, mais non lu ;
-    - `gl.STREAM_DRAW` : le contenu du tampon est susceptible de ne pas être utilisé souvent ; du contenu est écrit dans le tampon, mais non lu ;
+    - `gl.STREAM_DRAW` : le contenu du tampon est susceptible de ne pas être utilisé souvent&nbsp;; du contenu est écrit dans le tampon, mais non lu ;
     - lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, les valeurs suivantes the following values sont en outre disponibles :
 
       - `gl.STATIC_READ`&nbsp;: le contenu du tampon est susceptible d'être utilisé souvent et de ne pas changer souvent ; du contenu est lu depuis le tampon, mais non écrit ;

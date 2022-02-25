@@ -49,12 +49,12 @@ Remarquez que cet attribut ne changera pas automatiquement la présentation du c
 
 ### Utilisé dans les rôles ARIA
 
-- Combobox ;
-- Gridcell ;
-- Listbox ;
-- Radiogroup ;
-- Spinbutton ;
-- [Textbox](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_textbox) ;
+- Combobox&nbsp;;
+- Gridcell&nbsp;;
+- Listbox&nbsp;;
+- Radiogroup&nbsp;;
+- Spinbutton&nbsp;;
+- [Textbox](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_textbox)&nbsp;;
 - Tree.
 
 ### Techniques ARIA connexes
@@ -63,6 +63,6 @@ Remarquez que cet attribut ne changera pas automatiquement la présentation du c
 
 ### Autres ressources
 
-- [Spécification WAI-ARIA pour `aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required) ;
-- [WAI-ARIA Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform) (Règles WAI-ARIA de création de formulaires) ;
+- [Spécification WAI-ARIA pour `aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required)&nbsp;;
+- [WAI-ARIA Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform) (Règles WAI-ARIA de création de formulaires)&nbsp;;
 - [Validation de condition](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) en {{ HTMLVersionInline("5") }}.

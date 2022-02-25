@@ -17,7 +17,7 @@ Le rôle `dialog` est utilisé pour marquer une fenêtre ou une boîte de dialog
 
 Marquer un élément de dialogue avec le rôle `dialog` aide les technologies d’assistance à identifier le contenu des boîtes de dialogue comme étant regroupé et séparé du reste du contenu de la page. Cependant, le seul ajout de `role="dialog"` n’est pas suffisant pour rendre une boîte de dialogue accessible. De plus, il faut veiller à ce qui suit&nbsp;:
 
-- La boîte de dialogue doit être correctement labélisée ;
+- La boîte de dialogue doit être correctement labélisée&nbsp;;
 - Le focus clavier doit être géré correctement.
 
 Les sections ci-dessous décrivent comment ces deux exigences peuvent être satisfaites.

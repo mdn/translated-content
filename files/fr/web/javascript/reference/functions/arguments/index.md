@@ -113,7 +113,7 @@ function myConcat(separateur) {
 }
 ```
 
-Vous pouvez passer n'importe quel nombre d'arguments à cette fonction ; elle créera une liste en utilisant chaque argument comme un élément de la liste.
+Vous pouvez passer n'importe quel nombre d'arguments à cette fonction&nbsp;; elle créera une liste en utilisant chaque argument comme un élément de la liste.
 
 ```js
 // renvoie "rouge, orange, bleu"
@@ -138,7 +138,7 @@ function liste(type) {
 }
 ```
 
-Vous pouvez passer n'importe quel nombre d'arguments à cette fonction ; elle créera une liste du type indiqué en ajoutant chaque argument comme élément dans la liste. Exemple&nbsp;:
+Vous pouvez passer n'importe quel nombre d'arguments à cette fonction&nbsp;; elle créera une liste du type indiqué en ajoutant chaque argument comme élément dans la liste. Exemple&nbsp;:
 
 ```js
 var listeHTML = liste("u", "Un", "Deux", "Trois");

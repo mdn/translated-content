@@ -44,7 +44,7 @@ Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur
 
 ### La réponse du serveur lors de la poignée de mains
 
-Lorsqu'il reçoit la requête du client, le serveur doit envoyer une réponse correctement formée dans un format non-standard HTTP et qui ressemble au code ci-dessous. Gardez à l'esprit que chaque entête se termine par un saut de ligne : *\r\n* ; un saut de ligne doublé lors de l'envoi du dernier entête pour séparer du reste du corps (même si celui-ci est vide).
+Lorsqu'il reçoit la requête du client, le serveur doit envoyer une réponse correctement formée dans un format non-standard HTTP et qui ressemble au code ci-dessous. Gardez à l'esprit que chaque entête se termine par un saut de ligne : *\r\n*&nbsp;; un saut de ligne doublé lors de l'envoi du dernier entête pour séparer du reste du corps (même si celui-ci est vide).
 
     HTTP/1.1 101 Switching Protocols
     Upgrade: websocket

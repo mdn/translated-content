@@ -111,7 +111,7 @@ Le comportement de la méthode `sort()` a changé entre JavaScript 1.1 et JavaSc
 
 En JavaScript 1.1, sur certaines plateformes, la méthode `sort` ne fonctionnait pas. Le tri fonctionne sur toutes les plateformes à partir de JavaScript 1.2.
 
-En JavaScript 1.2, cette méthode ne convertit plus les éléments non définis (`undefined`) en `null` ; elle les place en fin de tableau. Par exemple, supposons que vous ayez ce script&nbsp;:
+En JavaScript 1.2, cette méthode ne convertit plus les éléments non définis (`undefined`) en `null`&nbsp;; elle les place en fin de tableau. Par exemple, supposons que vous ayez ce script&nbsp;:
 
 ```js
 var a = [];

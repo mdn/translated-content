@@ -61,7 +61,7 @@ La page est principalement formée de XHTML, CSS et JavaScript classiques. La se
 Cette approche bénéficie des points suivants en sa faveur&nbsp;:
 
 - Nous avons choisi un formulaire XHTML classique qui pourrait faire partie d'un site Web existant, et lui avons ajouté un fond attractif et interactif
-- L'approche assure une rétro-compatibilité pour les navigateurs qui ne supportent pas SVG ; simplement, aucun fond n'apparaîtra pour eux
+- L'approche assure une rétro-compatibilité pour les navigateurs qui ne supportent pas SVG&nbsp;; simplement, aucun fond n'apparaîtra pour eux
 - Elle est très simple et remplit sa fonction parfaitement
 - L'image se redimensionne automatiquement à la taille requise de manière intelligente
 - Nous pouvons avoir des déclarations de styles appliquées à la fois sur le HTML et le SVG

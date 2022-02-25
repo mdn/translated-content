@@ -23,7 +23,7 @@ La propriété globale **`Infinity`** est une valeur numérique représentant l'
 
 `Infinity` est une propriété de _l'objet global_ , c'est-à-dire qu'elle est accessible globalement.
 
-La valeur initiale d'`Infinity` est {{jsxref("Number.POSITIVE_INFINITY")}}. La valeur `Infinity` (infinité positive) est une valeur plus grande que n'importe quel nombre. Cette valeur se comporte comme l'infini mathématique ; par exemple, tout ce qui est multiplié par `Infinity` vaut `Infinity`, et tout ce qui est divisé par `Infinity` vaut 0.
+La valeur initiale d'`Infinity` est {{jsxref("Number.POSITIVE_INFINITY")}}. La valeur `Infinity` (infinité positive) est une valeur plus grande que n'importe quel nombre. Cette valeur se comporte comme l'infini mathématique&nbsp;; par exemple, tout ce qui est multiplié par `Infinity` vaut `Infinity`, et tout ce qui est divisé par `Infinity` vaut 0.
 
 D'après la spécification ECMAScript 5, `Infinity` est en lecture seule.
 

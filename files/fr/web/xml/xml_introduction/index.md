@@ -107,7 +107,7 @@ L'autre technique utilise la puissance de [XSLT](fr/XSLT), qui est capable de tr
 
 ### Recommandations
 
-Cet article n'est qu'une introduction rapide à XML ; pour plus de détails, parcourez le Web à la recherche d'articles allant plus en profondeur.
+Cet article n'est qu'une introduction rapide à XML&nbsp;; pour plus de détails, parcourez le Web à la recherche d'articles allant plus en profondeur.
 
 L'apprentissage du langage de balisage HTML vous aidera à mieux comprendre XML. Vous trouverez également plus d'informations en explorant le Mozilla Developer Center.
 

@@ -34,5 +34,5 @@ Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder �
 
 ## Voir aussi
 
-- L'objet global {{jsxref("NaN")}} ;
+- L'objet global {{jsxref("NaN")}}&nbsp;;
 - L'objet {{jsxref("Number")}} auquel appartient cette propriété.

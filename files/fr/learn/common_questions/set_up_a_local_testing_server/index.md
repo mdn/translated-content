@@ -43,7 +43,7 @@ Cet article explique comment configurer un serveur de test local simple sur votr
 
 Dans les cours du MDN, la plupart du temps, on vous demande d'ouvrir les exemples directement dans le navigateur — vous pouvez le faire en double cliquant le fichier HTML, en déposant celui-ci dans la fenêtre de votre navigateur, ou en faisant _Fichier_ > _Ouvrir..._ et naviguer jusqu'au fichier HTML, etc... Il y a beaucoup de manières d'y arriver.
 
-Vous savez que vous avez lancé l'exemple depuis un fichier local, lorsque l'URL commence par `file://` suivi du chemin d'accès dans votre système de fichiers. Par contre, si vous consultez un de nos exemples hébergés sur GitHub (ou n'importe quel autre serveur distant), l'adresse web commencera par `http://` ou `https://` ; dans ce cas le fichier a été servi via HTTP.
+Vous savez que vous avez lancé l'exemple depuis un fichier local, lorsque l'URL commence par `file://` suivi du chemin d'accès dans votre système de fichiers. Par contre, si vous consultez un de nos exemples hébergés sur GitHub (ou n'importe quel autre serveur distant), l'adresse web commencera par `http://` ou `https://`&nbsp;; dans ce cas le fichier a été servi via HTTP.
 
 ## Le problème du test local
 

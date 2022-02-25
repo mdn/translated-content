@@ -95,7 +95,7 @@ Certaines propriétés ne se transmettent pas — par exemple si vous attribu
 
 ## Comprendre comment ces concepts se combinent
 
-Ces trois concepts combinés permettent de décider dans tous les cas quelle règle CSS s'applique à quel élément ; dans les sections ci-dessous nous les verrons en action, ensemble. Cela peut parfois sembler compliqué, mais avec l'expérience les choses vous sembleront plus claires, et de toute façon, si vous oubliez, vous pourrez toujours retrouver tous les détails ici !
+Ces trois concepts combinés permettent de décider dans tous les cas quelle règle CSS s'applique à quel élément&nbsp;; dans les sections ci-dessous nous les verrons en action, ensemble. Cela peut parfois sembler compliqué, mais avec l'expérience les choses vous sembleront plus claires, et de toute façon, si vous oubliez, vous pourrez toujours retrouver tous les détails ici !
 
 ## Comprendre l'héritage
 

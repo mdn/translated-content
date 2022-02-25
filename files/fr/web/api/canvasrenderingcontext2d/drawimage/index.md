@@ -32,7 +32,7 @@ La méthode **`CanvasRenderingContext2D.drawImage()`** de l'API 2D des Canvas 
 - `sy`
   - : La coordonnée `y` du bord en haut à gauche de la partie de l'`image` source à dessiner dans le contexte du canvas.
 - `sLargeur`
-  - : La largeur de la partie de l'image source à dessiner dans le contexte. Si ce n'est pas spécifié, cet argument prend la valeur de la largeur de l'image moins `sx`, autrement dit l'image dessinée dans le contexte sera la partie de l'image d'origine à partir du point s de coordonnées (`sx` ; `sy`) et jusqu'au bord en bas à droite.
+  - : La largeur de la partie de l'image source à dessiner dans le contexte. Si ce n'est pas spécifié, cet argument prend la valeur de la largeur de l'image moins `sx`, autrement dit l'image dessinée dans le contexte sera la partie de l'image d'origine à partir du point s de coordonnées (`sx`&nbsp;; `sy`) et jusqu'au bord en bas à droite.
 - `sHauteur`
   - : La hauteur de la partie de l'image source à dessiner dans le contexte. De la même manière que pour sLargeur, si aucune valeur n'est donnée cet argument prendra la valeur de la hauteur de l'image moins `sy`.
 

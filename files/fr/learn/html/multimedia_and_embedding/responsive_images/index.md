@@ -59,7 +59,7 @@ Tout cela c'est très bien, mais le problème apparaît lorsque vous commencez �
 
 Quand le site est vu sur un écran étroit, il serait préférable de montrer une version recadrée de l'image sur les parties importantes de la vue au lieu de faire voir des bâtiments, et peut-être quelque chose entre les deux pour un écran de largeur moyenne comme une tablette — ce problème relève de **décisions de nature artistique**.
 
-De plus, il n'est pas nécessaire d'intégrer des images aussi volumineuses sur une page destinée à être affichée sur l'écran minuscule d'un mobile ; c'est le problème des **changements de résolution** — une image matricielle est définie sur un certain nombre de pixels de large et un certain nombre de pixels de haut ; comme on a pu le voir à propos des [graphiques vectoriels](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web), une image matricielle paraît pixelisée si elle est affichée plus grande que sa taille d'origine (alors qu'un graphique vectoriel ne l'est pas).
+De plus, il n'est pas nécessaire d'intégrer des images aussi volumineuses sur une page destinée à être affichée sur l'écran minuscule d'un mobile&nbsp;; c'est le problème des **changements de résolution** — une image matricielle est définie sur un certain nombre de pixels de large et un certain nombre de pixels de haut&nbsp;; comme on a pu le voir à propos des [graphiques vectoriels](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web), une image matricielle paraît pixelisée si elle est affichée plus grande que sa taille d'origine (alors qu'un graphique vectoriel ne l'est pas).
 
 Et si elle est montrée significativement plus petite que sa taille d'origine, c'est un gaspillage de bande passante — les personnes utilisant des navigateurs mobiles en particulier ne veulent pas gaspiller leur bande passante en téléchargeant une grande image destinée à des ordinateurs de bureau, alors qu'une petite image ferait l'affaire pour leur appareil. La solution idéale serait d'avoir plusieurs résolutions disponibles et de servir des tailles appropriées selon le type d'appareil accédant au site web.
 
@@ -116,7 +116,7 @@ Les attributs `srcset` et `sizes` paraissent complexes, mais ils ne sont pas dif
 2.  une espace,
 3.  **la largeur de la place** occupée par l'image si la condition pour le média est vraie (`440px`).
 
-> **Note :** pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (`px`, `em`) ou relative au viewport (`vw`), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante ; donc soyez attentif à l'ordre de ces conditions pour le média.
+> **Note :** pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (`px`, `em`) ou relative au viewport (`vw`), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante&nbsp;; donc soyez attentif à l'ordre de ces conditions pour le média.
 
 Ainsi, une fois ces attributs en place, le navigateur va&nbsp;:
 
@@ -184,7 +184,7 @@ Ce code nous permet d'afficher une image adaptée à la fois sur un écran large
 
 ![Notre exemple vu sur un écran assez large : la première image est OK et on voit le détail au centre.](picture-element-wide.png)![Notre exemple vu sur un écran étroit où l'élément picture permet de passer la première image à une image en portrait, plus utile sur un écran étroit.](picture-element-narrow.png)
 
-> **Note :** vous ne devez utiliser l'attribut `media` qu'avec un scénario de décision de nature artistique ; quand vous utilisez `media`, ne mettez pas de conditions pour le média avec l'attribut `sizes.`
+> **Note :** vous ne devez utiliser l'attribut `media` qu'avec un scénario de décision de nature artistique&nbsp;; quand vous utilisez `media`, ne mettez pas de conditions pour le média avec l'attribut `sizes.`
 
 ### Pourquoi ne peut-on pas réaliser cela avec le CSS ou du JavaScript&nbsp;?
 

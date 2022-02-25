@@ -123,7 +123,7 @@ Maintenant que nous avons défini les deux shaders, nous devons les transmettre 
 
 La fonction `loadShader()` prend en entrée le contexte WebGL, le type de shader et le code source, puis crée et compile le shader comme suit :
 
-1.  un nouveau shader est créé en appelant {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}} ;
+1.  un nouveau shader est créé en appelant {{domxref("WebGLRenderingContext.createShader", "gl.createShader()")}}&nbsp;;
 2.  le code source du shader est envoyé au shader en appelant {{domxref("WebGLRenderingContext.shaderSource", "gl.shaderSource()")}} ;
 3.  une fois que le shader a le code source, il est compilé en utilisant {{domxref("WebGLRenderingContext.compileShader", "gl.compileShader()")}} ;
 4.  pour vérifier que le shader a été compilé avec succès, le paramètre `gl.COMPILE_STATUS` du shader est vérifié ; pour obtenir sa valeur, nous appelons {{domxref("WebGLRenderingContext.getShaderParameter", "gl.getShaderParameter()")}}, en indiquant le shader et le nom du paramètre que nous voulons vérifier (`gl.COMPILE_STATUS`) ; si c'est `false`, nous savons que le shader n'a pas pu être compilé, aussi nous affichons une alerte avec les informations du journalisation obtenues du compilateur en utilisant {{domxref ("WebGLRenderingContext.getShaderInfoLog", "gl.getShaderInfoLog()")}}, puis nous supprimons le shader et nous renvoyons `null` pour indiquer l'échec du chargement du shader ;

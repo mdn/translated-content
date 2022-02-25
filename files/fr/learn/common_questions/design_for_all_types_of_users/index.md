@@ -170,7 +170,7 @@ Pour plusieurs raisons et notamment parce que vous ne connaissez pas le moment o
 
 Il est généralement conseillé de&nbsp;:
 
-- Décrire les tailles de police en unité `rem`, cela ne posera aucun problème à la plupart des navigateurs ;
+- Décrire les tailles de police en unité `rem`, cela ne posera aucun problème à la plupart des navigateurs&nbsp;;
 - Laisser les anciens navigateurs afficher les polices avec leurs moteurs internes. Les moteurs des navigateurs ignorent les propriétés ou valeurs CSS qu'ils ne reconnaissent pas et/ou qu'ils ne peuvent pas gérer. Votre site web est donc toujours utilisable, même s'il ne respecte pas nécessairement le design que vous souhaitiez. De toute façon et inexorablement, les anciens navigateurs seront de moins en moins utilisés.
 
 > **Note :** Votre utilisation de ces unités pourra varier. S'il est nécessaire pour vous de gérer les anciens navigateurs, vous aurez besoin d'utiliser des `em`s, quitte à faire un peu de mathématique en chemin.

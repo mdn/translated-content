@@ -14,9 +14,9 @@ Que l'on traite des fichiers audio pré-enregistrés ou des flux en directs, le 
 
 Pour distribuer du contenu audio et vidéo, le processus général se déroule comme suit&nbsp;:
 
-1.  Vérifier quels formats sont pris en charge par le navigateur via la détection de fonctionnalité ;
-2.  Si le navigateur ne lit pas nativement les formats fournis, utiliser un contenu de secours dans un autre format ;
-3.  Définir la façon dont vous voulez lire/instancier le média (par exemple un élément [`<video>`](/fr/docs/Web/HTML/Element/video), ou peut-être via JavaScript avec `document.createElement('video')`) ;
+1.  Vérifier quels formats sont pris en charge par le navigateur via la détection de fonctionnalité&nbsp;;
+2.  Si le navigateur ne lit pas nativement les formats fournis, utiliser un contenu de secours dans un autre format&nbsp;;
+3.  Définir la façon dont vous voulez lire/instancier le média (par exemple un élément [`<video>`](/fr/docs/Web/HTML/Element/video), ou peut-être via JavaScript avec `document.createElement('video')`)&nbsp;;
 4.  Ajouter le fichier média au lecteur.
 
 ### Audio HTML

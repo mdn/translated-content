@@ -15,8 +15,8 @@ Cette technique présente l’utilisation du rôle [`alert` (en)](http://www.w3.
 
 Le rôle `alert` est utilisé pour communiquer un message important et généralement avec une notion d'urgence à l’utilisateur. Lorsque ce rôle est ajouté à un élément, le navigateur émettra un événement d'alerte accessible aux produits de technologie d’assistance qui pourront alors le notifier à l’utilisateur. Le rôle `alert` est le plus utile lorsqu’il s’agit d’attirer l’attention de l’utilisateur, par exemple si :
 
-- Une valeur non valide a été saisie dans un champ de formulaire ;
-- La session d’un utilisateur est sur le point d’expirer ;
+- Une valeur non valide a été saisie dans un champ de formulaire&nbsp;;
+- La session d’un utilisateur est sur le point d’expirer&nbsp;;
 - La connexion au serveur a été interrompue, les modifications locales ne seront pas sauvegardées.
 
 De fait de sa nature intrusive, le rôle `alert` doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que `aria-live="polite"` ou autres rôles de zone live.
@@ -25,12 +25,12 @@ De fait de sa nature intrusive, le rôle `alert` doit être utilisé avec parcim
 
 Lorsque le rôle `alert` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
-- Présenter l’élément ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation ;
+- Présenter l’élément ayant un rôle d’alerte à l’API d’accessibilité du système d’exploitation&nbsp;;
 - Déclencher un événement d'alerte accessible à l’aide l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
 Les technologies d’assistance devraient être à l’écoute de tels évènements et les notifier à l’utilisateur en conséquence&nbsp;:
 
-- Les lecteurs d’écran peuvent interrompre la sortie en cours (qu’elle soit vocale ou en braille) et immédiatement annoncer ou afficher le message d’alerte ;
+- Les lecteurs d’écran peuvent interrompre la sortie en cours (qu’elle soit vocale ou en braille) et immédiatement annoncer ou afficher le message d’alerte&nbsp;;
 - Les loupes ou agrandisseurs d’écran peuvent indiquer qu’une alerte est survenue et quel en est le texte.
 
 > **Note :** plusieurs points de vue existent sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
@@ -100,8 +100,8 @@ document.getElementById("expirationWarning").className = "";
 
 ### Notes
 
-- L’utilisation du rôle `alert` sur un élément implique que cet élément a l’attribut `aria-live="assertive"` ;
-- Le rôle `alert` ne devrait être utilisé que pour du contenu texte statique. L’élément sur lequel on utilise le rôle `alert` ne devrait pas pouvoir recevoir le focus, car les lecteurs d’écran annonceront automatiquement l’alerte où que se trouve le focus clavier ;
+- L’utilisation du rôle `alert` sur un élément implique que cet élément a l’attribut `aria-live="assertive"`&nbsp;;
+- Le rôle `alert` ne devrait être utilisé que pour du contenu texte statique. L’élément sur lequel on utilise le rôle `alert` ne devrait pas pouvoir recevoir le focus, car les lecteurs d’écran annonceront automatiquement l’alerte où que se trouve le focus clavier&nbsp;;
 - Si une alerte fournit également des contrôles interactifs – tels que des contrôles de formulaire qui permettraient à l’utilisateur de rectifier une erreur, ou un bouton `OK` pour annuler l’alerte – le rôle [`alertdialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog) est préférable.
 
 ### Attributs ARIA utilisés
@@ -110,7 +110,7 @@ document.getElementById("expirationWarning").className = "";
 
 ### Techniques ARIA connexes
 
-- [Utiliser le rôle `alertdialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog) ;
+- [Utiliser le rôle `alertdialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alertdialog)&nbsp;;
 - [Utiliser la propriété `aria-invalid`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_la_propriété_aria-invalid).
 
 ### Autres ressources

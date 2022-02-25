@@ -47,14 +47,14 @@ Même aujourd'hui, malgré toute l'attention portée aux appareils mobiles, la m
 
   - : Il peut s'agir&nbsp;:
 
-    1.  d'informations complémentaires au contenu principal ;
-    2.  d'informations partagées entre un sous-ensemble de pages ;
+    1.  d'informations complémentaires au contenu principal&nbsp;;
+    2.  d'informations partagées entre un sous-ensemble de pages&nbsp;;
     3.  d'un moyen alternatif de navigation. En fait, ce peut être un peu tout ce qui est superflu par rapport au contenu principal.
 
 - Bas de page
   - : Visible au bas de chaque page du site, cette section contient, tout comme l'en-tête, des informations pertinentes pour l'ensemble des pages. On peut, entre autres, y trouver les mentions légales et les informations nécessaires pour contacter les responsables du site.
 
-Ces quatre sections sont généralement présentes, mais elles peuvent être disposées de plusieurs façons distinctes. Voici quelques exemples de dispositions possibles (où **1** représente l'entête ; **2,**  le bas de page ; **A**, le contenu principal ; et **B1, B2**, le contenu secondaire)&nbsp;:
+Ces quatre sections sont généralement présentes, mais elles peuvent être disposées de plusieurs façons distinctes. Voici quelques exemples de dispositions possibles (où **1** représente l'entête&nbsp;; **2,**  le bas de page&nbsp;; **A**, le contenu principal&nbsp;; et **B1, B2**, le contenu secondaire)&nbsp;:
 
 **Dispostion à une colonne&nbsp;:** particulièrement utile pour l'affichage sur téléphone mobile, car cette disposition évite d'encombrer les petits écrans.
 

@@ -101,7 +101,7 @@ var el = document.querySelector("div.panneau-utilisateur.principal input[name='i
 ## Voir aussi
 
 - [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs)
-- {{domxref("document.querySelectorAll()")}} ;
-- {{domxref("element.querySelector()")}} ;
-- {{domxref("element.querySelectorAll()")}} ;
+- {{domxref("document.querySelectorAll()")}}&nbsp;;
+- {{domxref("element.querySelector()")}}&nbsp;;
+- {{domxref("element.querySelectorAll()")}}&nbsp;;
 - [Extraits de code pour `querySelector`](/fr/docs/Archive/Add-ons/Code_snippets/QuerySelector)

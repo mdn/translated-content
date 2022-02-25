@@ -78,10 +78,10 @@ var updateSlider = function (newValue) {
 
 ### Attributs ARIA utilisés
 
-- [aria-valuemin](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin) ;
-- [aria-valuemax](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax) ;
-- [aria-valuenow](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow) ;
-- [aria-valuetext](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext) ;
+- [aria-valuemin](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin)&nbsp;;
+- [aria-valuemax](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax)&nbsp;;
+- [aria-valuenow](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow)&nbsp;;
+- [aria-valuetext](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext)&nbsp;;
 - [aria-orientation](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-orientation).
 
 ### Autres ressources

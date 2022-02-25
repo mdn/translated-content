@@ -44,8 +44,8 @@ L’extrait de code ci-dessous montre un curseur simple de sélection d’un jou
 
 ### Utilisé avec les rôles ARIA
 
-- [progressbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_progressbar) ;
-- scrollbar ;
+- [progressbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_progressbar)&nbsp;;
+- scrollbar&nbsp;;
 - [slider](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_slider)
 - spinbutton.
 

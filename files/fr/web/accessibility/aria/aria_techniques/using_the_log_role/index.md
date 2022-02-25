@@ -20,7 +20,7 @@ Par défaut, les mises à jour ne contiennent que les changements apportés à l
 
 Lorsque le rôle `log` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
-- Présenter l’élément ayant un rôle de journal à l’API d’accessibilité du système d’exploitation ;
+- Présenter l’élément ayant un rôle de journal à l’API d’accessibilité du système d’exploitation&nbsp;;
 - Déclencher un événement journal accessible à l’aide de l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
 Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence&nbsp;:
@@ -59,8 +59,8 @@ Voir l’[exemple](http://codetalks.org/source/live/chat.html) sur CodeTalks pou
 
 #### Exemples concrets&nbsp;:
 
-- <http://test.cita.illinois.edu/aria/live/live1.php> ;
-- <http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/> ;
+- <http://test.cita.illinois.edu/aria/live/live1.php>&nbsp;;
+- <http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/>&nbsp;;
 - <http://codetalks.org/source/live/chat.html> \[[notes](http://codetalks.org/source/live/chat_notes.html)].
 
 ### Notes

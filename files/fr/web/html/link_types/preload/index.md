@@ -18,8 +18,8 @@ Pour charger un fichier CSS permettant de styler une page, on utilise le plus so
 
 Ici, nous allons utiliser la valeur `preload` sur l'attribut `rel`, ce qui transformera l'élément `<link>` en outil de préchargement utilisable pour n'importe quelle ressource. Nous devrons aussi indiquer&nbsp;:
 
-- le chemin de la ressource dans l'attribut {{htmlattrxref("href", "link")}} ;
-- le type de ressource dans l'attribut {{htmlattrxref("as", "link")}} ;
+- le chemin de la ressource dans l'attribut {{htmlattrxref("href", "link")}}&nbsp;;
+- le type de ressource dans l'attribut {{htmlattrxref("as", "link")}}&nbsp;;
 
 Voici un exemple simple (voir nos [fichiers JS et CSS d'exemple](https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css) et le [résultat obtenu](https://mdn.github.io/html-examples/link-rel-preload/js-and-css/))&nbsp;:
 
@@ -44,31 +44,31 @@ Voici un exemple simple (voir nos [fichiers JS et CSS d'exemple](https://github.
 
 Dans l'exemple ci-dessus, nous préchargeons nos fichiers CSS et JavaScript afin qu'ils puissent être disponibles dès qu'ils sont nécessaires pour le rendu de la page. Cet exemple est trivial, car le navigateur va probablement découvrir en même temps les balises de préchargement, le `<link rel="stylesheet">` et le `<script>`, mais le bénéfice sera bien plus visible si les ressources sont plus nombreuses, plus lourdes et chargées à différents endroits. Par exemple&nbsp;:
 
-- les ressources qui sont chargées depuis un fichier CSS, comme certaines polices et images ;
-- les ressources inclues par des fichiers JavaScript, comme des fichiers JSON, d'autres scripts importés ou des services web ;
+- les ressources qui sont chargées depuis un fichier CSS, comme certaines polices et images&nbsp;;
+- les ressources inclues par des fichiers JavaScript, comme des fichiers JSON, d'autres scripts importés ou des services web&nbsp;;
 - les fichiers image et vidéos plus importants.
 
 `preload` dispose aussi d'autres avantages. L'utilisation de l'attribut `as` pour spécifier le type de contenu à précharger permet au navigateur de&nbsp;:
 
-- prioriser les ressources se chargeant avec davantage de précision ;
-- les stocker dans le cache pour de futures requêtes, ce qui permet de réutiliser les ressources si c'est pertinent ;
-- appliquer la bonne [stratégie de sécurité du contenu](/fr/docs/Web/HTTP/CSP) aux ressources ;
+- prioriser les ressources se chargeant avec davantage de précision&nbsp;;
+- les stocker dans le cache pour de futures requêtes, ce qui permet de réutiliser les ressources si c'est pertinent&nbsp;;
+- appliquer la bonne [stratégie de sécurité du contenu](/fr/docs/Web/HTTP/CSP) aux ressources&nbsp;;
 - mettre en place les bons en-têtes de requêtes {{HTTPHeader("Accept")}} pour les ressources.
 
 ### Quels types de contenu peuvent être préchargés&nbsp;?
 
 De nombreux différents types de contenu peuvent être préchargés. Les valeurs possibles de l'attribut `as` sont les suivantes&nbsp;:
 
-- `audio`&nbsp;: fichier audio, typiquement intégré avec l'élément {{htmlelement("audio")}} ;
-- `document`&nbsp;: un document HTML destiné à être embarqué dans une {{htmlelement("frame")}} ou dans une {{htmlelement("iframe")}} ;
-- `embed`&nbsp;: une ressource à embarquer dans un élément {{htmlelement("embed")}} ;
-- `fetch`&nbsp;: une ressource accessible via une requête `fetch` ou `XHR`, comme un `ArrayBuffer` ou un fichier JSON ;
-- `font`&nbsp;: un fichier de police ;
-- `image`&nbsp;: un fichier image ;
-- `object`&nbsp;: une ressource à embarquer à l'intérieur d'un élément {{htmlelement("object")}} ;
-- `script`&nbsp;: un fichier JavaScript ;
-- `style`&nbsp;: une feuille de styles CSS ;
-- `track`&nbsp;: un fichier WebVTT ;
+- `audio`&nbsp;: fichier audio, typiquement intégré avec l'élément {{htmlelement("audio")}}&nbsp;;
+- `document`&nbsp;: un document HTML destiné à être embarqué dans une {{htmlelement("frame")}} ou dans une {{htmlelement("iframe")}}&nbsp;;
+- `embed`&nbsp;: une ressource à embarquer dans un élément {{htmlelement("embed")}}&nbsp;;
+- `fetch`&nbsp;: une ressource accessible via une requête `fetch` ou `XHR`, comme un `ArrayBuffer` ou un fichier JSON&nbsp;;
+- `font`&nbsp;: un fichier de police&nbsp;;
+- `image`&nbsp;: un fichier image&nbsp;;
+- `object`&nbsp;: une ressource à embarquer à l'intérieur d'un élément {{htmlelement("object")}}&nbsp;;
+- `script`&nbsp;: un fichier JavaScript&nbsp;;
+- `style`&nbsp;: une feuille de styles CSS&nbsp;;
+- `track`&nbsp;: un fichier WebVTT&nbsp;;
 - `worker`&nbsp;: un
 
   <i lang="en">web worker</i>
@@ -77,7 +77,7 @@ De nombreux différents types de contenu peuvent être préchargés. Les valeurs
 
   <i lang="en">worker</i>
 
-  partagé ;
+  partagé&nbsp;;
 
 - `video`&nbsp;: un fichier vidéo, typiquement intégré avec l'élément {{htmlelement("video")}}.
 
@@ -206,9 +206,9 @@ C'est utile lorsque vous voulez précharger un script mais repousser son exécut
 
 D'autres fonctionnalités de préchargement sont disponibles, mais sachez qu'aucune d'entre elle n'est aussi adaptée à l'objectif recherché que `<link rel="preload">`. En voici la liste&nbsp;:
 
-- `<link rel="prefetch">` est pris en charge depuis quelque temps par les navigateurs, mais est destinée à la récupération préalable des ressources qui vont être utilisées lors de la **_prochaine_** page visitée/chargée (par exemple lorsque vous vous rendrez sur une autre page du site). C'est une bonne chose, mais ce n'est pas utile pour la page en cours de chargement&nbsp;! Par ailleurs, les navigateurs donnent une priorité plus faible à `prefetch` qu'à `preload` — la page courante est prioritaire par rapport à la page suivante. Consultez la [FAQ sur le préchargement des liens](/fr/docs/Web/HTTP/Link_prefetching_FAQ) pour plus de détails ;
-- `<link rel="prerender">` effectue le rendu une page spécifiée en arrière-plan, ce qui permet d'accélerer son chargement si la personne visitant le site se rend sur cette page par la suite. Du fait du gaspillage potentiel de bande passante pour les visiteurs (on charge des éléments sans savoir si on en aura besoin), Chrome traite l'instruction `prerender` comme une instruction [NoState prefetch](https://developers.google.com/web/updates/2018/07/nostate-prefetch) ;
-- `<link rel="subresource">` {{non-standard_inline}} était pris en charge par Chrome il y a quelques temps et était destiné à gérer la même chose que `preload`, mais il y avait un problème&nbsp;: il n'y avait aucun moyen de définir une priorité sur les éléments à charger (`as` n'existait pas encore), donc toutes les ressources étaient chargées avec la même priorité (la plus faible) ;
+- `<link rel="prefetch">` est pris en charge depuis quelque temps par les navigateurs, mais est destinée à la récupération préalable des ressources qui vont être utilisées lors de la **_prochaine_** page visitée/chargée (par exemple lorsque vous vous rendrez sur une autre page du site). C'est une bonne chose, mais ce n'est pas utile pour la page en cours de chargement&nbsp;! Par ailleurs, les navigateurs donnent une priorité plus faible à `prefetch` qu'à `preload` — la page courante est prioritaire par rapport à la page suivante. Consultez la [FAQ sur le préchargement des liens](/fr/docs/Web/HTTP/Link_prefetching_FAQ) pour plus de détails&nbsp;;
+- `<link rel="prerender">` effectue le rendu une page spécifiée en arrière-plan, ce qui permet d'accélerer son chargement si la personne visitant le site se rend sur cette page par la suite. Du fait du gaspillage potentiel de bande passante pour les visiteurs (on charge des éléments sans savoir si on en aura besoin), Chrome traite l'instruction `prerender` comme une instruction [NoState prefetch](https://developers.google.com/web/updates/2018/07/nostate-prefetch)&nbsp;;
+- `<link rel="subresource">` {{non-standard_inline}} était pris en charge par Chrome il y a quelques temps et était destiné à gérer la même chose que `preload`, mais il y avait un problème&nbsp;: il n'y avait aucun moyen de définir une priorité sur les éléments à charger (`as` n'existait pas encore), donc toutes les ressources étaient chargées avec la même priorité (la plus faible)&nbsp;;
 - Il y a un grand nombre de scripts de chargements de ressources disponibles un peu partout, mais aucun ne peut avoir la puissance d'une file de priorisation gérée directement par le navigateur. De plus, ces scripts sont sujets à des problèmes de performances similaires.
 
 ## Spécifications

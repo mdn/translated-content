@@ -22,7 +22,7 @@ Nous avons mis au point un cours qui comprend toutes les informations essentiell
 Avant de commencer ce module, vous devriez avoir :
 
 1.  Une connaissance basique de l'utilisation d'un ordinateur, et l'utilisation passive du Web (i.e. consulter des sites, consommer le contenu s'y trouvant) ;
-2.  Un environnement de travail minimal installé, comme indiqué dans la section [installer les logiciels de base](/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base) et une compréhension de la façon de créer et gérer des fichiers, comme indiqué dans la section [Gérer les fichiers](/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers) ;
+2.  Un environnement de travail minimal installé, comme indiqué dans la section [installer les logiciels de base](/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base) et une compréhension de la façon de créer et gérer des fichiers, comme indiqué dans la section [Gérer les fichiers](/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)&nbsp;;
 3.  Une familiarité avec HTML, comme discuté dans le module d'[introduction à HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML).
 
 > **Note :** Si vous travaillez sur un ordinateur / tablette / autre périphérique où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code sur des sites de programmation en ligne comme [JSBin](/fr/docs/) ou [Thimble](/fr/docs/).

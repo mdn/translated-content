@@ -37,7 +37,7 @@ Une fois suspendue sur une expression `yield`, l'exécution du code du générat
 
 - un `yield`, ce qui provoque une nouvelle pause du générateur et retourne la nouvelle valeur du générateur ; la prochaine fois que `next()` sera appelé, l'exécution reprendra à l'instruction immédiatement après le `yield` ;
 - {{jsxref ("Statements/throw", "throw")}} est utilisé pour déclencher une exception depuis le générateur ; cela arrête entièrement l'exécution du générateur et l'exécution reprend dans l'appelant, comme c'est normalement le cas lorsqu'une exception est déclenchée ;
-- la fin de la fonction génératrice est atteinte ; dans ce cas, l'exécution du générateur se termine et un `IteratorResult` est retourné à l'appelant, dans lequel la valeur est {{jsxref ("undefined")}} et `done` est `true` ;
+- la fin de la fonction génératrice est atteinte ; dans ce cas, l'exécution du générateur se termine et un `IteratorResult` est retourné à l'appelant, dans lequel la valeur est {{jsxref ("undefined")}} et `done` est `true`&nbsp;;
 - une instruction {{jsxref ("Statements/return", "return")}} est atteinte ; dans ce cas, l'exécution du générateur se termine et un `IteratorResult` est retourné à l'appelant dans lequel la `value` est la valeur spécifiée par l'instruction `return` et `done` vaut `true`.
 
 Si une valeur optionnelle est passée à la méthode `next()` du générateur, cette valeur devient la valeur retournée par l'opération `yield` en cours du générateur.

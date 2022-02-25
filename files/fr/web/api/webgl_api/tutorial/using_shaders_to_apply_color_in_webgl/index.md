@@ -13,7 +13,7 @@ Dans la [démonstration précédente](/fr/docs/WebGL/Ajouter_du_contenu_à_WebG
 
 ## Application de couleur aux sommets
 
-En WebGL, les objets sont construits en utilisant des sommets, chacun d'entre eux ayant une position et une couleur ; par défaut, les couleurs des autres sommets (et tous leurs autres attributs, incluant leur position) sont calculés en utilisant une interpolation linéaire, créant ainsi automatiquement des dégradés. Précédemment, notre nuanceur de sommet n'appliquait aucunes couleurs spécifiques aux sommets ; entre cela et le fait que le nuanceur de fragment assignait la valeur blanche à chaque pixel, le carré entier était rendu en blanc uni.
+En WebGL, les objets sont construits en utilisant des sommets, chacun d'entre eux ayant une position et une couleur ; par défaut, les couleurs des autres sommets (et tous leurs autres attributs, incluant leur position) sont calculés en utilisant une interpolation linéaire, créant ainsi automatiquement des dégradés. Précédemment, notre nuanceur de sommet n'appliquait aucunes couleurs spécifiques aux sommets&nbsp;; entre cela et le fait que le nuanceur de fragment assignait la valeur blanche à chaque pixel, le carré entier était rendu en blanc uni.
 
 Supposons que nous voulions faire un rendu en dégradé dans lequel chaque coin du carré est de couleur différente : rouge, bleu, vert et blanc. La première chose à faire est de définir ces couleurs pour les quatre sommets. Pour ce faire, nous devons d'abord créer un tableau des couleurs des sommets, puis le stocker dans un tampon WebGL ; nous le ferons en ajoutant le code suivant à notre fonction `initBuffers()` :
 

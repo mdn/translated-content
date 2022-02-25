@@ -232,7 +232,7 @@ Pour charger nos données JSON, nous allons utiliser l'API {{domxref("XMLHttpReq
     }
     ```
 
-Ici, nous stockons la réponse à notre requête (disponible au travers de la propriété [`response`](/fr/docs/Web/API/XMLHttpRequest/response)) dans la variable `superHeroes` ; cette variable contiendra désormais l'objet JavaScript basé sur le JSON ! Nous passerons ensuite cet objet en paramètre à deux fonctions — la première remplira le <`header>` avec les données correspondantes tandis que la seconde créera une carte d'identité pour chaque héros de l'équipe et l'ajoutera dans la `<section>`.
+Ici, nous stockons la réponse à notre requête (disponible au travers de la propriété [`response`](/fr/docs/Web/API/XMLHttpRequest/response)) dans la variable `superHeroes`&nbsp;; cette variable contiendra désormais l'objet JavaScript basé sur le JSON ! Nous passerons ensuite cet objet en paramètre à deux fonctions — la première remplira le <`header>` avec les données correspondantes tandis que la seconde créera une carte d'identité pour chaque héros de l'équipe et l'ajoutera dans la `<section>`.
 
 Nous avons encapsulé ce code dans un gestionnaire d'évènements qui s'exécutera quand l'évènement load sera déclenché sur l'objet request (voir [`onload`](/fr/docs/Web/API/XMLHttpRequestEventTarget/onload)) — simplement parce que l'évènement load est déclenché quand une réponse a été renvoyée avec succès ; en procédant de la sorte, nous serons certains que la propriété `request.response` sera disponible au moment où nous essayerons d'en faire quelque chose.
 

@@ -38,15 +38,15 @@ L’extrait de code ci-dessous montre un curseur basique avec une valeur minimal
 
 ### Utilisé avec les rôles ARIA
 
-- [progressbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_progressbar) ;
-- [scrollbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_scrollbar) ;
-- [slider](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_slider) ;
+- [progressbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_progressbar)&nbsp;;
+- [scrollbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_scrollbar)&nbsp;;
+- [slider](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_slider)&nbsp;;
 - [spinbutton](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_spinbutton).
 
 ### Techniques ARIA connexes
 
-- [aria-valuemax](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax) ;
-- [aria-valuenow](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow) ;
+- [aria-valuemax](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemax)&nbsp;;
+- [aria-valuenow](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow)&nbsp;;
 - [aria-valuetext](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext).
 
 ### Autres ressources

@@ -12,7 +12,7 @@ translation_of: Web/API/File/Using_files_from_web_applications
 
 Grâce à l'API File ajoutée au DOM avec HTML5, il est maintenant possible depuis une page web de proposer à l'utilisateur de sélectionner des fichiers locaux, puis d'en lire le contenu. Cette sélection est possible en utilisant un élément HTML {{ HTMLElement("input") }} ou par glisser-déposer.
 
-Vous pouvez utiliser si vous le souhaitez l'API DOM File depuis du code chrome d'extensions ou d'un autre navigateur ; notez cependant qu'il existe des fonctionnalités additionnelles auxquelles il vous faudra être attentif. Reportez-vous à [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails.
+Vous pouvez utiliser si vous le souhaitez l'API DOM File depuis du code chrome d'extensions ou d'un autre navigateur&nbsp;; notez cependant qu'il existe des fonctionnalités additionnelles auxquelles il vous faudra être attentif. Reportez-vous à [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails.
 
 ## Accéder au(x) fichier(s) sélectionné(s)
 
@@ -269,7 +269,7 @@ Vous pouvez procéder ainsi pour créer un objet URL lorsque vous souhaitez ré
 var objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré ; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }}  si votre page les utilise de manière dynamique&nbsp;:
+L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }}  si votre page les utilise de manière dynamique&nbsp;:
 
 ```js
 window.URL.revokeObjectURL(objectURL);
@@ -366,7 +366,7 @@ function sendFiles() {
 }
 ```
 
-La ligne 2 crée un tableau, nommé `imgs`, de tous les éléments de la classe CSS `obj` dans le document ; s'agit dans notre cas de toutes les miniatures d'images. Une fois la liste établie, c'est un jeu d'enfant de la parcourir et de créer une nouvelle instance de `FileUpload` pour chacun de ses éléments. Chacune de ces instances gère le téléchargement du fichier correspondant vers le serveur.
+La ligne 2 crée un tableau, nommé `imgs`, de tous les éléments de la classe CSS `obj` dans le document&nbsp;; s'agit dans notre cas de toutes les miniatures d'images. Une fois la liste établie, c'est un jeu d'enfant de la parcourir et de créer une nouvelle instance de `FileUpload` pour chacun de ses éléments. Chacune de ces instances gère le téléchargement du fichier correspondant vers le serveur.
 
 ### Manipuler le processus de téléchargement pour un fichier
 
@@ -408,11 +408,11 @@ Il est nécessaire de prévoir quelques étapes préparatoires avant le téléch
 1.  Le processus d'écoute de l'événement `progress` du XMLHttpRequest est écrit de telle façon que l'indicateur d'activité affiche l'information de progression du téléchargement la plus récente.
 2.  Le gestionnaire de l'événement `load` du XMLHttpRequest est écrit pour que l'indicateur d'activité affiche 100% afin d'être sûr atteigne effectivement les 100%, même en cas granularité anormale lors du processus. Le gestionnaire supprime ensuite l'indicateur devenu inutile, entraînant sa disparition à la fin normale du téléchargement.
 3.  La requête de téléchargement de l'image est ouverte par l'appel à la méthode `open()` du XMLHttpRequest, démarrant la création d'une requête POST.
-4.  Le type MIME pour le téléchargement est défini en appelant la fonction `overrideMimeType()` du `XMLHttpRequest`. Nous utilisons ici un type MIME générique ; vous pouvez selon les cas définir ou ne définir aucun type MIME.
+4.  Le type MIME pour le téléchargement est défini en appelant la fonction `overrideMimeType()` du `XMLHttpRequest`. Nous utilisons ici un type MIME générique&nbsp;; vous pouvez selon les cas définir ou ne définir aucun type MIME.
 5.  L'objet `FileReader` est utilisé pour la conversion du fichier en chaîne binaire.
 6.  La fonction `send()` du  XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
 
-> **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }} ; utilisez plutôt la méthode standard `send(Blob data)`.
+> **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }}&nbsp;; utilisez plutôt la méthode standard `send(Blob data)`.
 
 ### Gérer le processus de téléchargement d'un fichier de manière asynchrone
 

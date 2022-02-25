@@ -61,7 +61,7 @@ obtenir = objet[nom_de_propriété];
 objet[nom_de_propriété] = définir;
 ```
 
-`nom_de_propriété` est une chaîne de caractères ou un {{jsxref("Symbol","symbole","","")}}. Elle n'a pas besoin d'être un identifiant valide ; elle peut avoir n'importe quelle valeur, par exemple `"1foo"`, `"!bar!"` ou même `" "` (une espace).
+`nom_de_propriété` est une chaîne de caractères ou un {{jsxref("Symbol","symbole","","")}}. Elle n'a pas besoin d'être un identifiant valide&nbsp;; elle peut avoir n'importe quelle valeur, par exemple `"1foo"`, `"!bar!"` ou même `" "` (une espace).
 
 #### Exemple
 

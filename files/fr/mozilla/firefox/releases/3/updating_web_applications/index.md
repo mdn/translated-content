@@ -69,7 +69,7 @@ Cette manipulation ne devrait pas être nécessaire la plupart du temps, mais el
 
 #### Champs d'envoi de fichiers (upload)
 
-Dans les versions précédentes de Firefox, un certain nombre de cas existaient où le chemin entier du fichier envoyé par l'utilisateur était lisible par une application web. Pour des raisons de confidentialité, ce n'est plus possible dans Firefox 3 ; à présent seul le nom du fichier lui-même est visible par l'application web.
+Dans les versions précédentes de Firefox, un certain nombre de cas existaient où le chemin entier du fichier envoyé par l'utilisateur était lisible par une application web. Pour des raisons de confidentialité, ce n'est plus possible dans Firefox 3&nbsp;; à présent seul le nom du fichier lui-même est visible par l'application web.
 
 ### Changements dans JavaScript
 

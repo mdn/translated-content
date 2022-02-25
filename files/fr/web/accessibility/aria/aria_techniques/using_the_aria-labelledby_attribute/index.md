@@ -16,11 +16,11 @@ L’attribut `aria-labelledby` est utilisé pour indiquer les ID des éléments 
 
 `aria-labelledby` est très similaire à l’attribut [aria-describedby](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-describedby)&nbsp;: un label décrit la nature d’un objet, alors qu’une description fournit plus d’informations pouvant être utiles à l’utilisateur.
 
-L’attribut `aria-labelledby` n’est pas uniquement utilisé avec les éléments de formulaire ; il peut également être utilisé pour associer un texte statique avec des composants, des groupes d’éléments, des panneaux, des zones possédant un titre, des définitions, etc. La section {{ anch("Exemples") }} ci-dessous fournit plus d’informations sur l’utilisation de cet attribut dans ces cas précis.
+L’attribut `aria-labelledby` n’est pas uniquement utilisé avec les éléments de formulaire&nbsp;; il peut également être utilisé pour associer un texte statique avec des composants, des groupes d’éléments, des panneaux, des zones possédant un titre, des définitions, etc. La section {{ anch("Exemples") }} ci-dessous fournit plus d’informations sur l’utilisation de cet attribut dans ces cas précis.
 
 L’attribut `aria-labelledby` peut être utilisé en conjonction avec l’élément {{ HTMLElement("label") }} (à l’aide de l’attribut `for`) pour améliorer la compatibilité avec les agents utilisateurs qui ne prennent pas encore en charge ARIA.
 
-Cet attribut peut être utilisé avec n’importe quel élément caractéristique de formulaire HTML ; il n’est pas limité aux éléments auxquels un rôle ARIA a été assigné.
+Cet attribut peut être utilisé avec n’importe quel élément caractéristique de formulaire HTML&nbsp;; il n’est pas limité aux éléments auxquels un rôle ARIA a été assigné.
 
 ### Valeurs
 
@@ -143,7 +143,7 @@ Tous les éléments de balisage de base.
 
 ### Techniques ARIA connexes
 
-- [Utiliser l’attribut `aria-label`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-label) ;
+- [Utiliser l’attribut `aria-label`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-label)&nbsp;;
 - [Utiliser l’attribut `aria-describedby`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-describedby).
 
 ### Autres ressources

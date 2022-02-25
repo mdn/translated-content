@@ -19,7 +19,7 @@ Il y a quelques avantages notables à utiliser l’algorithme de clonage structu
 
 ## Ce qui ne marche pas avec le clonage structuré
 
-- Les objets [`Error`](/en/JavaScript/Reference/Global_Objects/Error) et [`Function`](/en/JavaScript/Reference/Global_Objects/Function) ne peuvent pas être copiés par l’algorithme de clonage structuré ; toute tentative de le faire émettra une exception `DATA_CLONE_ERR`.
+- Les objets [`Error`](/en/JavaScript/Reference/Global_Objects/Error) et [`Function`](/en/JavaScript/Reference/Global_Objects/Function) ne peuvent pas être copiés par l’algorithme de clonage structuré&nbsp;; toute tentative de le faire émettra une exception `DATA_CLONE_ERR`.
 - De la même manière, toute tentative de cloner des nœuds DOM émettra une exception `DATA_CLONE_ERR`.
 - Certains paramètres d’objets ne sont pas préservés&nbsp;:
 

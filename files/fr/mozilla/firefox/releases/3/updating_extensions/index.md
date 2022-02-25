@@ -120,7 +120,7 @@ La méthode [`handleEnter()`](/fr/NsIAutoCompleteController#handleEnter.28.29) d
 - Lorsqu'un objet `DOMParser` est instancié, il hérite du principal du code appelant et des valeurs `documentURI` et `baseURI` de la fenêtre dont le constructeur venait.
 - Si l'appelant a des privilèges UniversalXPConnect, il peut fournir des paramètres à `new DOMParser()`. Si moins de trois paramètres sont fournis, les paramètres restants prendront la valeur `null` par défaut.
 
-  - Le premier paramètre est le principal à utiliser ; il remplace le principal par défaut normalement hérité.
+  - Le premier paramètre est le principal à utiliser&nbsp;; il remplace le principal par défaut normalement hérité.
   - Le second paramètre est la valeur `documentURI` à utiliser.
   - Le troisième paramètre est la valeur `baseURI` à utiliser.
 

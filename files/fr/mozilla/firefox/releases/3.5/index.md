@@ -135,7 +135,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 #### Nouvelles fonctionnalités SVG
 
 - [Application d'effets SVG à du contenu HTML](/fr/Application_d'effets_SVG_à_du_contenu_HTML)
-  - : Vous pouvez à présent appliquer des effets SVG à du contenu HTML et XHTML ; cet article explique comment.
+  - : Vous pouvez à présent appliquer des effets SVG à du contenu HTML et XHTML&nbsp;; cet article explique comment.
 
 #### Autres nouvelles fonctionnalités
 
@@ -181,16 +181,16 @@ Si vous développez des extensions, vous devriez tout d'abord lire [Mise à jour
 
 - Le widget XUL [`textbox`](/fr/XUL/textbox) offre à présent un type [`search`](/fr/XUL/Attribute/textbox.type), pour être utilisé en tant que champ de recherche.
 - Afin de gérer le glisser et déposer d'onglets entre les fenêtres, le widget [`browser`](/fr/XUL/browser) dispose à présent d'une méthode [`swapDocShells()`](/fr/XUL/Méthodes/SwapDocShells).
-- Ajout de l'attribut [`level`](/fr/XUL/Attributs/Panel.level) à l'élément [`panel`](/fr/XUL/panel) ; celui-ci indique si le panel apparait par dessus les autres applications, ou uniquement au-dessus de la fenêtre contenant le panel.
+- Ajout de l'attribut [`level`](/fr/XUL/Attributs/Panel.level) à l'élément [`panel`](/fr/XUL/panel)&nbsp;; celui-ci indique si le panel apparait par dessus les autres applications, ou uniquement au-dessus de la fenêtre contenant le panel.
 - Les éléments XUL gèrent à présent les propriétés `clientHeight`, `clientWidth`, `scrollHeight` et `scrollWidth`.
 - Les éléments [`keyset`](/fr/XUL/keyset) disposent à présent d'un attribut `disabled`.
 - De plus, les `keyset`s peuvent être supprimés à l'aide de la méthode [`removeChild()`](/fr/DOM/Node.removeChild) du nœud.
-- [`mozIStorageStatement`](/fr/mozIStorageStatement) a vu sa méthode `initialize()` supprimée ; ses utilisateurs doivent utiliser la méthode [`createStatement()`](</fr/mozIStorageConnection#createStatement()>) à la place pour obtenir un nouvel objet statement.
+- [`mozIStorageStatement`](/fr/mozIStorageStatement) a vu sa méthode `initialize()` supprimée&nbsp;; ses utilisateurs doivent utiliser la méthode [`createStatement()`](</fr/mozIStorageConnection#createStatement()>) à la place pour obtenir un nouvel objet statement.
 - L'API [Storage](/fr/Storage) permet à présent d'effectuer des requêtes asynchrones.
 - L'interface [`nsICookie2`](/fr/nsICookie2) expose à présent l'heure à laquelle les cookies ont été créés dans son nouvel attribut `creationTime`.
 - Un flag a été ajouté à [`nsIProtocolHandler`](/fr/nsIProtocolHandler) (`URI_IS_LOCAL_RESOURCE`) qui est vérifié au cours d'un enregistrement chrome pour s'assurer qu'un protocole a le droit d'être enregistré.
 - Firefox recherche à présent des plugins dans `/usr/lib/mozilla/plugins` sous Linux, outre les emplacements précédemment consultés.
-- L'API des plugins a été mise à jour pour gérer le mode de navigation privée ; vous pouvez à présent utiliser [`NPN_GetValue()`](/fr/NPN_GetValue) pour connaître l'état du mode de navigation privée à l'aide de la variable `NPNVprivateModeBool`.
+- L'API des plugins a été mise à jour pour gérer le mode de navigation privée&nbsp;; vous pouvez à présent utiliser [`NPN_GetValue()`](/fr/NPN_GetValue) pour connaître l'état du mode de navigation privée à l'aide de la variable `NPNVprivateModeBool`.
 
 ## Nouvelles fonctionnalités pour les utilisateurs
 

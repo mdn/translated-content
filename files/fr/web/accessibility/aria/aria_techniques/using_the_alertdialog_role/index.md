@@ -62,11 +62,11 @@ L’extrait de code ci-dessous présente la façon de baliser une boîte de dial
 
 ### Attributs ARIA utilisés
 
-- [alertdialog](http://www.w3.org/TR/wai-aria/roles#dialog) ;
-- [aria-labelledby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby) ;
+- [alertdialog](http://www.w3.org/TR/wai-aria/roles#dialog)&nbsp;;
+- [aria-labelledby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)&nbsp;;
 - [aria-describedby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby).
 
 ### Techniques ARIA connexes
 
-- [Utiliser le rôle `dialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog) ;
+- [Utiliser le rôle `dialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog)&nbsp;;
 - [Utiliser le rôle `alert`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_alert).

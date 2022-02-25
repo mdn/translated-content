@@ -10,7 +10,7 @@ original_slug: Accessibilité/ARIA/formulaires/Indications_elementaires_pour_les
 ---
 ## Labels de formulaire
 
-Lors de l’implémentation de formulaires à l’aide d’éléments de formulaire HTML classiques, il est important de fournir des labels pour les contrôles et d’associer explicitement un label avec son contrôle. Lorsqu’un utilisateur de lecteur d’écran navigue sur une page, le lecteur d’écran décrit les contrôles de formulaire ; mais sans association directe entre un contrôle et son label, le lecteur d’écran n’a aucun moyen de savoir quel est le label correspondant.
+Lors de l’implémentation de formulaires à l’aide d’éléments de formulaire HTML classiques, il est important de fournir des labels pour les contrôles et d’associer explicitement un label avec son contrôle. Lorsqu’un utilisateur de lecteur d’écran navigue sur une page, le lecteur d’écran décrit les contrôles de formulaire&nbsp;; mais sans association directe entre un contrôle et son label, le lecteur d’écran n’a aucun moyen de savoir quel est le label correspondant.
 
 L’exemple ci-dessous montre un formulaire basique avec des labels. Remarquez que chaque élément {{ HTMLElement("input") }} possède un `id`, et chaque élément {{ HTMLElement("label") }} a un attribut `for` indiquant l’`id` de l’{{ HTMLElement("input") }} associé.
 

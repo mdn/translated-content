@@ -23,7 +23,7 @@ Le chargement différé peut être appliqué sur de multiples ressources et avec
 
 Le code JavaScript, CSS et HTML peuvent être divisés en petits morceaux. Cela permet de n'envoyer que la portion de code nécessaire à l'affichage sur l'écran de l'internaute, et donc d'améliorer les temps de chargement. Le reste sera chargé sur demande. Deux systèmes sont possibles&nbsp;:
 
-- division par points d'entrée&nbsp;: séparation du code en différents points d'entrée au sein de l'application ;
+- division par points d'entrée&nbsp;: séparation du code en différents points d'entrée au sein de l'application&nbsp;;
 - division dynamique&nbsp;: séparation du code où des déclarations [`import()`](/fr/docs/Web/JavaScript/Reference/Statements/import) dynamiques sont utilisées.
 
 ### JavaScript

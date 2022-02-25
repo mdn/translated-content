@@ -19,7 +19,7 @@ L'élément `<xsl:when>` apparaît toujours dans un élément `<xsl:choose>`, et
 ### Attribut obligatoire
 
 - `test`
-  - : Définit une expression booléenne à évaluer. Si elle est vraie, le contenu de l'élément est exécuté ; sinon, il est ignoré.
+  - : Définit une expression booléenne à évaluer. Si elle est vraie, le contenu de l'élément est exécuté&nbsp;; sinon, il est ignoré.
 
 ### Attributs obligatoires
 

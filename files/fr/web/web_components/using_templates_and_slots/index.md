@@ -73,11 +73,11 @@ On peut maintenant utiliser le modèle dans le document HTML:
 <my-paragraph></my-paragraph>
 ```
 
-> **Note :** Les modèles sont bien pris en charge par les navigateurs ; l'API Shadow DOM est pris en charge par défaut dans Firefox (à partir de la version 63), Chrome, Opera, Safari et Edge (à partir de la version 70).
+> **Note :** Les modèles sont bien pris en charge par les navigateurs&nbsp;; l'API Shadow DOM est pris en charge par défaut dans Firefox (à partir de la version 63), Chrome, Opera, Safari et Edge (à partir de la version 70).
 
 ## Plus de flexibilité avec les slots
 
-Jusque-là, nous avons vu une première utilisation de l'élément `<template>`. Cette implémentation n'est pas très flexible ; elle ne permet d'afficher que du texte, c'est-à-dire qu'il est aussi utile qu'un paragraphe classique&nbsp;! Il est possible d'insérer du texte dans chaque instance d'élément de façon déclarative grâce à [`<slot>`](/fr/docs/Web/HTML/Element/slot). Cette fonction est moins bien prise en charge que [`<template>`](/fr/docs/Web/HTML/Element/template), disponible sur Chrome 53, Opera 40, Safari 10, Firefox 59 et Edge 79.
+Jusque-là, nous avons vu une première utilisation de l'élément `<template>`. Cette implémentation n'est pas très flexible&nbsp;; elle ne permet d'afficher que du texte, c'est-à-dire qu'il est aussi utile qu'un paragraphe classique&nbsp;! Il est possible d'insérer du texte dans chaque instance d'élément de façon déclarative grâce à [`<slot>`](/fr/docs/Web/HTML/Element/slot). Cette fonction est moins bien prise en charge que [`<template>`](/fr/docs/Web/HTML/Element/template), disponible sur Chrome 53, Opera 40, Safari 10, Firefox 59 et Edge 79.
 
 Les emplacements (<i lang="en">slots</i>) sont identifiés par leur attribut `name`, et permettent de définir des emplacements dans le modèle qui peuvent être alimentés avec n'importe quelle structure HTML.
 

@@ -96,7 +96,7 @@ function initTexture(gl, url) {
 }
 ```
 
-Voici à quoi ressemble la fonction `mettreAJourTexture()` ; c'est là où le vrai travail est fait :
+Voici à quoi ressemble la fonction `mettreAJourTexture()`&nbsp;; c'est là où le vrai travail est fait :
 
 ```js
 function mettreAJourTexture(gl, texture, video) {

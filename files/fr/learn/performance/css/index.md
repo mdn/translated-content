@@ -55,7 +55,7 @@ La propriété CSS [`contain`](/fr/docs/Web/CSS/contain) permet quant à elle de
 
 Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruciales et chronophages du rendu de page&nbsp;:
 
-- d'une part le chargement des ressources CSS de la page (en compressant, en divisant le fichier, ou encore en l'enregistrant dans le cache par exemple) ;
+- d'une part le chargement des ressources CSS de la page (en compressant, en divisant le fichier, ou encore en l'enregistrant dans le cache par exemple)&nbsp;;
 - d'autre part le rendu, en établissant une stratégie ingénieuse de chargement et d'interprétation des ressources, notamment en distinguant les ressources essentielles pour le rendu et les autres ressources annexes, qui peuvent attendre.
 
 Enfin, les outils de développement du navigateur sont à votre disposition pour vous aider à cibler les étapes chronophages qui ralentissent le rendu de vos pages et gagner encore en efficacité, au prix parfois de quelques compromis.

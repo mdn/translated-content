@@ -63,8 +63,8 @@ L'extrait de code ci-dessous affiche un curseur simple avec une valeur courante 
 
 ## Techniques ARIA connexes
 
-- [aria-valuemax](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute) ;
-- [aria-valuemin](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute) ;
+- [aria-valuemax](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute)&nbsp;;
+- [aria-valuemin](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute)&nbsp;;
 - [aria-valuetext](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute).
 
 ## Compatibilité
