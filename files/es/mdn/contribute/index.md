@@ -15,13 +15,13 @@ translation_of: MDN/Contribute
 
 ## ¿Que puedo hacer para ayudar?
 
-Hay varias opciones que puede tomar para contribuir a MDN según sus habilidades e intereses. Junto con cada tarea proporcionamos una breve descripción y un tiempo aproximado que normalmente toma cada tipo de tarea.
+Hay varias opciones que puedes tomar para contribuir a MDN según tus habilidades e intereses. Junto con cada tarea proporcionamos una breve descripción y el tiempo aproximado que normalmente toma cada tipo de tarea.
 
-Si no está seguro de qué hacer, siempre puede [pedir ayuda](/es/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
+Si no estás seguro de qué hacer, siempre puede [pedir ayuda](/es/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
 
 ### Tipos de contribución primaria
 
-Los enlaces en esta sección conducen a guías detalladas que explican cómo realizar una tarea de contribución en particular con la que estamos más interesados en obtener ayuda de la comunidad, ya sea porque son una función crítica y/o porque tienen una gran acumulación asociada con ellos. Considere ayudar con estas tareas antes de considerar contribuir de otras maneras.
+Los enlaces en esta sección conducen a guías detalladas que explican cómo realizar una tarea de contribución en particular con la que estamos más interesados en obtener ayuda de la comunidad, ya sea porque son una función crítica y/o porque se asocia a un gran retraso. Considera ayudar con estas tareas antes de considerar contribuir de otras maneras.
 
 <table class="standard-table">
   <thead>
@@ -47,11 +47,11 @@ Los enlaces en esta sección conducen a guías detalladas que explican cómo rea
       <td>
         <ul>
           <li>
-            Conocimiento de las tecnologías web con las que elige ayudar (por
+            Conocimiento de las tecnologías web con las que quieres ayudar (por
             ejemplo, JavaScript, CSS).
           </li>
           <li>
-            Una comprensión razonable del idioma inglés (no se preocupe si su
+            Una comprensión razonable del idioma inglés (no te preocupes si su
             inglés no es perfecto; podemos ayudarlo).
           </li>
         </ul>
@@ -79,11 +79,11 @@ Los enlaces en esta sección conducen a guías detalladas que explican cómo rea
       <td>
         <ul>
           <li>
-            Conocimiento de las tecnologías web con las que elige ayudar (por
+            Conocimiento de las tecnologías web con las que eliges ayudar (por
             ejemplo, JavaScript, CSS).
           </li>
           <li>
-            Una comprensión razonable del idioma inglés (no se preocupe si su
+            Una comprensión razonable del idioma inglés (no te preocupes si su
             inglés no es perfecto; podemos ayudarlo).
           </li>
         </ul>
@@ -116,7 +116,7 @@ Los enlaces en esta sección conducen a guías detalladas que explican cómo rea
             a aprender a programar.
           </li>
           <li>
-            Una comprensión razonable del idioma inglés (no se preocupe si su
+            Una comprensión razonable del idioma inglés (no te preocupes si su
             inglés no es perfecto; podemos ayudarlo).
           </li>
         </ul>
@@ -125,7 +125,7 @@ Los enlaces en esta sección conducen a guías detalladas que explican cómo rea
   </tbody>
 </table>
 
-Agregaremos más tareas aquí a medida que pase el tiempo.
+Añadimos más tareas aquí a medida que pase el tiempo.
 
 #### Clasificaciones de prioridad
 
@@ -135,26 +135,26 @@ Estos se resuelven durante el proceso regular de clasificación de errores de MD
 
 ### Otros tipos de tareas
 
-Si nuestras principales prioridades enumeradas anteriormente no le interesan, puede encontrar una serie de otros tipos de tareas más generales para participar a continuación, divididos por habilidades.
+Si nuestras principales prioridades enumeradas anteriormente no te interesan, puedes encontrar una serie de otros tipos de tareas más generales para participar a continuación, divididos por habilidades.
 
-Si estás más interesado en las letras, puedes hacer lo siguiente:
+Si estás más interesado en las palabras, puedes hacer lo siguiente:
 
 - [Actualizar un artículo existente con nueva información](/es/docs/MDN/Contribute/Howto/Create_and_edit_pages#editing_an_existing_page) (5 minutos-1 hora)
 - [Escribe una nueva entrada en el Glosario](/es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) (15 minutos-1 hora)
 
-Si está más interesado en el código, puede probar lo siguiente:
+Si estás más interesado en el código, puedes probar lo siguiente:
 
-- [Convierta ejemplos de código para que estén "en vivo"](/es/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live) (30 minutos)
+- [Convierte ejemplos de código para que estén "en vivo"](/es/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live) (30 minutos)
 - [Envía un parche al código base de Yari](https://github.com/mdn/yari) (1 hora)
 - [Escribe un ejemplo interactivo](https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md) (1 hora)
 
-Si está interesado en las letras *y* el código, puede intentar lo siguiente:
+Si estás interesado en las palabras *y* el código, puede intentar lo siguiente:
 
 - [Escribir o actualizar una referencia de API](/es/docs/MDN/Contribute/Howto/Write_an_API_reference) (30 minutos to 2 horas, o más)
 - [Escribe un nuevo artículo sobre un tema con el que estés familiarizado.](https://github.com/mdn/content#adding-a-new-document) (1 hora o más)
-- [Agregue o actualice los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Structures/Compatibility_tables) (30 minutos a 1 hora)
+- [Añada o actualice los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Structures/Compatibility_tables) (30 minutos a 1 hora)
 
-> **Nota:** Si ha encontrado algo que es incorrecto en MDN pero no está seguro de cómo solucionarlo, puede reportarlo llenando un [informe de error de documentación](https://github.com/mdn/content/issues/new/choose). Por favor, asigne al problema un título descriptivo. (No es útil decir "Enlace muerto" sin decir dónde encontraste el enlace).
+> **Nota:** Si encontraste algo que es incorrecto en MDN pero no estás seguro de cómo solucionarlo, puede reportarlo llenando un [informe de error de documentación](https://github.com/mdn/content/issues/new/choose). Por favor, asigne al problema un título descriptivo. (No es útil decir "Enlace muerto" sin decir dónde encontraste el enlace).
 
 ## Otras páginas útiles
 
