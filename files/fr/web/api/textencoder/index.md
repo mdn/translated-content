@@ -39,7 +39,7 @@ _L'interface `TextEncoder` n'hérite d'aucune propriété._
 
 ## Prothèse d'émulation
 
-La prothèse d'émulation ci-dessous va uniquement répondre aux spécifications données par le W3 (par d'autre type d'encodage que UTF-8 n'est supporté, malheureusement ☹️). Elle est conçue pour fonctionner "clé en main" avec IE5. Toutefois, de IE5 à IE9, elle retournera un tableau normal plutôt qu'un tableau typé. Dans de telles circonstances et avec des navigateurs si lents, cette prothèse (ou tout autre ayant le même objectif) serait inutilisable pour de longues chaînes de caractères avec ces vieux navigateurs. Enfin, notez que vous devriez exécuter le code ci-dessous avec un minifieur (et plus particulièrement un compilateur ) to turn sequences like `0x1e << 3` into `0xf0`. These sequences are not already precomputed because they serve to aesthetically illustrate how the polyfill works.
+La prothèse d'émulation ci-dessous va uniquement répondre aux spécifications données par le W3 (par d'autre type d'encodage que UTF-8 n'est supporté, malheureusement ☹). Elle est conçue pour fonctionner "clé en main" avec IE5. Toutefois, de IE5 à IE9, elle retournera un tableau normal plutôt qu'un tableau typé. Dans de telles circonstances et avec des navigateurs si lents, cette prothèse (ou tout autre ayant le même objectif) serait inutilisable pour de longues chaînes de caractères avec ces vieux navigateurs. Enfin, notez que vous devriez exécuter le code ci-dessous avec un minifieur (et plus particulièrement un compilateur ) to turn sequences like `0x1e << 3` into `0xf0`. These sequences are not already precomputed because they serve to aesthetically illustrate how the polyfill works.
 
 ```js
 if (typeof TextEncoder === "undefined") {
