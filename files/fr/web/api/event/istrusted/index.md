@@ -39,7 +39,7 @@ La propriété en lecture seule isTrusted, de l'interface {{domxref("Event")}}, 
         {{SpecName('DOM WHATWG', '#dom-event-istrusted', 'Event.isTrusted')}}
       </td>
       <td>{{ Spec2('DOM WHATWG') }}</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>

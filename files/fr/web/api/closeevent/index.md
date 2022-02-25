@@ -35,7 +35,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>0</code>–<code>999</code></td>
-          <td> </td>
+          <td></td>
           <td><strong>Reservé et inutilisé.</strong></td>
         </tr>
         <tr>
@@ -72,7 +72,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>1004</code></td>
-          <td> </td>
+          <td></td>
           <td>
             <strong>Réservé.</strong> Une utilisation pourrait être définie dans le
             futur.
@@ -96,7 +96,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>1007</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Le serveur termine la connexion car un message contenant des données
             incohérentes a été reçu (e.g., des données qui ne sont pas au format
@@ -105,7 +105,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>1008</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Le serveur termine la connexion car un message ne respectant pas la
             politique du serveur est reçu. C'est un code d'état générique qui est
@@ -123,7 +123,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>1010</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Le client termine la connexion car il souhaitait négocier une ou
             plusieurs extensions mais le serveur ne l'a pas fait.
@@ -131,7 +131,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>1011</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Le serveur termine la connexion car il a rencontré un problème qui
             l'empêche de traiter la requête.
@@ -139,7 +139,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td>–<code>1014</code></td>
-          <td> </td>
+          <td></td>
           <td>
             <strong
               >Réservé pour une utilisation future par le standard
@@ -149,7 +149,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>1015</code></td>
-          <td> </td>
+          <td></td>
           <td>
             <strong>Réservé.</strong> Indique que la connexion a été fermée à cause
             d'une erreur durant le handshake TLS (e.g., le certificat du serveur ne
@@ -158,7 +158,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>1016</code>–<code>1999</code></td>
-          <td> </td>
+          <td></td>
           <td>
             <strong
               >Réservé pour une utilisation future par le standard
@@ -168,7 +168,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>2000</code>–<code>2999</code></td>
-          <td> </td>
+          <td></td>
           <td>
             <strong
               >Réservé pour une utilisation future par le standard
@@ -178,7 +178,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>3000</code>–<code>3999</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Disponible pour être utilisé par des bibliothèques ou des frameworks.
             Ces codes <strong>ne doivent pas</strong> être utilisés par des
@@ -187,7 +187,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Eve
         </tr>
         <tr>
           <td><code>4000</code>–<code>4999</code></td>
-          <td> </td>
+          <td></td>
           <td>Disponible pour être utilisés par des applications.</td>
         </tr>
       </tbody>

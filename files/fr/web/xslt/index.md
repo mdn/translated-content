@@ -135,7 +135,6 @@ XSLT est lui-même un dialecte [XML](/fr/XML "fr/XML"). Un programme XSLT est do
         <p>
           {{ DiscussionList("dev-tech-xslt", "mozilla.dev.tech.xslt") }}
         </p>
-        <p> </p>
         <h4 id="Sujets_li.C3.A9s">Sujets liés</h4>
         <dl>
           <dd>

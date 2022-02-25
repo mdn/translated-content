@@ -56,7 +56,7 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
 <table class="standard-table">
   <tbody>
     <tr>
-      <td> </td>
+      <td></td>
       <td>Chrome</td>
       <td>Safari</td>
       <td>Firefox</td>
@@ -71,7 +71,7 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
           >
         </p>
       </td>
-      <td> </td>
+      <td></td>
       <td>
         <p>
           Accès temporaire uniquement (les utilisateurs ne peuvent pas choisir
@@ -107,20 +107,20 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
     <tr>
       <td>EME</td>
       <td>Avertissement de dépréciation</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td>Device motion / orientation</td>
       <td>Avertissement de dépréciation</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td>MIDI</td>
       <td>Désactivé</td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr>
       <td><em>{{SpecName('Web Crypto API')}}</em></td>
@@ -130,8 +130,8 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
           antérieur</em
         >
       </td>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
     </tr>
   </tbody>
 </table>

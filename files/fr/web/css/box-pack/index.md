@@ -108,7 +108,7 @@ Le « début » et la « fin » de la boîte dépendent de l'orientation et de l
 <table class="standard-table">
   <tbody>
     <tr>
-      <th> </th>
+      <th></th>
       <th><strong>Normal</strong></th>
       <th><strong>Inverse</strong></th>
     </tr>

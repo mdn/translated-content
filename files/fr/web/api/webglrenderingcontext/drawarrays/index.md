@@ -64,10 +64,7 @@ gl.drawArrays(gl.POINTS, 0, 8);
     <tr>
       <td>{{SpecName('WebGL', "#5.14.11", "drawArrays")}}</td>
       <td>{{Spec2('WebGL')}}</td>
-      <td>
-        <p> </p>
-        Définition initiale.
-      </td>
+      <td>Définition initiale.</td>
     </tr>
     <tr>
       <td>

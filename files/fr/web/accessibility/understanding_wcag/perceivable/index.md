@@ -206,7 +206,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         You should provide synchronized captions for all live multimedia that
         contains audio (e.g. video conferences, live audio broadcasts.)
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">
@@ -217,7 +217,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         where the existing audio does not convey the full meaning expressed by
         the video.
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">
@@ -227,7 +227,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         An equivalent sign language video should be provided for any prerecorded
         content containing audio.
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">
@@ -240,7 +240,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         should be provided that includes inserted pauses (and audio
         descriptions).
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">
@@ -390,7 +390,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           </p>
         </div>
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">
@@ -423,7 +423,6 @@ This guideline refers to the ability of content to be consumed by users in multi
         >
       </td>
       <td>
-        <p> </p>
         <p>
           Follow the list of
           <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
@@ -547,7 +546,7 @@ This guideline relates to making sure core content is easy to discernable from b
         This means that designs should be responsive, so that when the text size
         is increased, the content is still accessible.
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">1.4.5 Images of text (AA)</td>
@@ -556,7 +555,7 @@ This guideline relates to making sure core content is easy to discernable from b
         job. For example, if an image is mostly textual, it could be represented
         using text as well as images.
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">1.4.6 Enhanced contrast (AAA)</td>
@@ -587,7 +586,7 @@ This guideline relates to making sure core content is easy to discernable from b
         Prerecorded audio recordings that primarily feature speech should have
         minimal background noise, so the content can be easily understood.
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">1.4.8 Visual presentation (AAA)</td>
@@ -615,7 +614,7 @@ This guideline relates to making sure core content is easy to discernable from b
           </li>
         </ul>
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">1.4.9 Images of text (No Exception) (AAA)</td>
@@ -624,7 +623,7 @@ This guideline relates to making sure core content is easy to discernable from b
         decoration (i.e. it does not convey any content), or cannot be presented
         in any other way.
       </td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td colspan="1">

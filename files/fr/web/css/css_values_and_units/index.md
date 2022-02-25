@@ -329,7 +329,7 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
     <tr>
       <td>{{SpecName("CSS2.1")}}</td>
       <td>{{Spec2("CSS2.1")}}</td>
-      <td> </td>
+      <td></td>
     </tr>
     <tr>
       <td>{{SpecName("CSS1")}}</td>
