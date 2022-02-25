@@ -151,7 +151,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
           >, tout comme une page Web normale.
         </p>
         <p>
-           Contrairement à une page Web normale, JavaScript en cours d'exécution
+           Contrairement à une page Web normale, JavaScript en cours d'exécution
           dans le panneau peut accéder à toutes les
           <a href="/fr/Add-ons/WebExtensions/API">APIs des WebExtension</a> (à
           condition, bien sûr, que l'extension ait les

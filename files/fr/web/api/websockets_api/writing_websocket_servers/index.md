@@ -53,7 +53,7 @@ Lorsqu'il reçoit la requête du client, le serveur doit envoyer une réponse c
 
 En sus, le serveur peut décider de proposer des extensions de protocoles ou des sous-protocoles à cet instant ; voir [Miscellaneous](#Miscellaneous) pour les détails. L'entête Sec-WebSocket-Accept nous intéresse ici : le serveur doit la former depuis l'entête Sec-WebSocket-Key envoyée précédemment par le client. Pour l'obtenir, vous devez concaténater (_rassembler_) la valeur de *Sec-WebSocket-Key* et "_258EAFA5-E914-47DA-95CA-C5AB0DC85B11_" (valeur fixée par défaut : c'est une "[magic string](https://en.wikipedia.org/wiki/Magic_string)") puis procéder au hash par la méthode [SHA-1](https://en.wikipedia.org/wiki/SHA-1) du résultat et retourner le format au format [base64](https://en.wikipedia.org/wiki/Base64).
 
-> **Note :** Ce processus qui peut paraître inutilement complexe, permet de certifier que le serveur et le client sont bien sur une base WebSocket et non une requête HTTP  (qui serait alors mal interprétée).
+> **Note :** Ce processus qui peut paraître inutilement complexe, permet de certifier que le serveur et le client sont bien sur une base WebSocket et non une requête HTTP  (qui serait alors mal interprétée).
 
 Ainsi si la clé (la valeur de l'entête du client) était "`dGhlIHNhbXBsZSBub25jZQ==`", le retour (_Accept \* dans la version d'origine du tutoriel_) sera : "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Une fois que le serveur a envoyé les entêtes attendues, alors la poignée de mains est considérée comme effectuée et vous pouvez débuter l'échange de données !
 
@@ -73,29 +73,29 @@ Le client ou le serveur peuvent choisir d'envoyer un message à n'importe quel m
 
 Chaque trame (dans un sens ou dans un autre) suit le schéma suivant :
 
-     0               1               2               3
-     0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
+     0               1               2               3
+     0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
     +-+-+-+-+-------+-+-------------+-------------------------------+
-    |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
-    |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
+    |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+    |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
     |N|V|V|V|       |S|             |   (if payload len==126/127)   |
     | |1|2|3|       |K|             |                               |
     +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
-     4               5               6               7
+     4               5               6               7
     + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-    |     Extended payload length continued, if payload len == 127  |
+    |     Extended payload length continued, if payload len == 127  |
     + - - - - - - - - - - - - - - - +-------------------------------+
-     8               9               10              11
+     8               9               10              11
     + - - - - - - - - - - - - - - - +-------------------------------+
-    |                               |Masking-key, if MASK set to 1  |
+    |                               |Masking-key, if MASK set to 1  |
     +-------------------------------+-------------------------------+
-     12              13              14              15
+     12              13              14              15
     +-------------------------------+-------------------------------+
-    | Masking-key (continued)       |          Payload Data         |
+    | Masking-key (continued)       |          Payload Data         |
     +-------------------------------- - - - - - - - - - - - - - - - +
     :                     Payload Data continued ...               &nbsp;:
     + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
-    |                     Payload Data continued ...                |
+    |                     Payload Data continued ...                |
     +---------------------------------------------------------------+
 
 RSV1-3 peuvent être ignorés, ils concernent les extensions.

@@ -7,7 +7,7 @@ translation_of: WebAssembly/Loading_and_running
 
 ## Quelles sont les différentes options?
 
-Webassembly n'est pas encore intégré à `<script type='module'>`  ou ES2015 `import`, autrement dit le navigateur ne peut pas récuperer les modules à l'aide de déclaration d'imports.
+Webassembly n'est pas encore intégré à `<script type='module'>`  ou ES2015 `import`, autrement dit le navigateur ne peut pas récuperer les modules à l'aide de déclaration d'imports.
 
 Les anciennes méthodes {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} requièrent la création d'un {{domxref("ArrayBuffer")}} contenant le binaire de votre module webassembly sous forme d'octet brut, pour ensuite effectuer sa compilation et son instantiation. Cette approche est simialire à `new Function(string)`, à la différence que dans notre cas, nous substituons une chaine de charactères par une chaine de bytes (le code source webassembly).
 

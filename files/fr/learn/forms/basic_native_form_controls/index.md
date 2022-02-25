@@ -70,7 +70,7 @@ Tous les champs textuels ont des comportement en commun&nbsp;:
 
 > **Note :** L'élément {{htmlelement("input")}} est spécial car il peut être pratiquement n'importe quoi. En réglant simplement ses attributs de type, il peut changer radicalement, et il est utilisé pour créer la plupart des types de widgets de formulaire allant des champs texte sur une seule ligne, contrôles sans entrée de texte, contrôles de date et heure jusqu'aux boutons. Il y a toutefois des exceptions, comme {{htmlelement("textarea")}} pour les entrées multi-lignes. Prenez bien note de ceci en lisant cet article.
 
-###  Champs texte sur une seule ligne
+###  Champs texte sur une seule ligne
 
 On crée un champ texte sur une seule ligne avec l'élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type", "input")}} est mis à `text` (maisi, si vous n'indiquez pas l'attribut {{htmlattrxref("type", "input")}}, `text` est la valeur par défaut). `text` est aussi la valeur de repli si celle indiquée pour l'attribut {{htmlattrxref("type", "input")}} est inconnue du navigateur (par exemple, si vous spécifiez `type="date"` et que le navigateur ne prend pas en charge les sélecteurs de date natifs).
 
@@ -206,14 +206,14 @@ Si nécessaire, la valeur par défaut de la boîte de sélection peut être déf
 ```html
     <select>
       <optgroup label="Fruits">
-        <option>Banane</option>
-        <option selected>Cerise</option>
-        <option>Citron</option>
+        <option>Banane</option>
+        <option selected>Cerise</option>
+        <option>Citron</option>
       </optgroup>
       <optgroup label="Légumes">
-        <option>Carotte</option>
-        <option>Aubergine</option>
-        <option>Pomme de terre</option>
+        <option>Carotte</option>
+        <option>Aubergine</option>
+        <option>Pomme de terre</option>
       </optgroup>
     </select>
 ```

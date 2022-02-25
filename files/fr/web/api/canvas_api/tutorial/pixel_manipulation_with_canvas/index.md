@@ -17,7 +17,7 @@ L'objet {{domxref("ImageData")}} représente les données de pixels sous-jacente
 - `height`
   - : La hauteur de l'image en pixels.
 - `data`
-  - : Un {{jsxref("Uint8ClampedArray")}} représentant un tableau monodimensionnel contenant les données dans l'ordre RVBA, ayant des valeurs entières entre 0 et  255 (inclus).
+  - : Un {{jsxref("Uint8ClampedArray")}} représentant un tableau monodimensionnel contenant les données dans l'ordre RVBA, ayant des valeurs entières entre 0 et  255 (inclus).
 
 La propriété `data` retourne un tableau {{jsxref("Uint8ClampedArray")}} auquel on peut accéder pour voir plus en détail les données brutes des pixels ; chaque pixel est représenté par quatre valeurs sur un octet (rouge, vert, bleu et alpha, dans cet ordre ; c'est-à-dire, le format "RVBA").  Chaque composante de couleur est représentée par un entier entre 0 et 255. Chaque composante reçoit un indice à l'intérieur du tableau, la composante rouge du pixel supérieur gauche étant à l'indice 0 à l'intérieur du tableau. Les pixels continuent ensuite de gauche à droite, puis vers le bas, jusqu'au bout du tableau.
 
@@ -53,7 +53,7 @@ var monImageData = ctx.createImageData(autreImageData);
 
 ## Obtention des données pixel pour un contexte
 
-Pour obtenir un objet  `ImageData` contenant une copie des données pixel pour un contexte de canevas, vous pouvez utiliser la méthode `getImageData()` :
+Pour obtenir un objet  `ImageData` contenant une copie des données pixel pour un contexte de canevas, vous pouvez utiliser la méthode `getImageData()` :
 
 ```js
 var monImageData = ctx.getImageData(gauche, haut, largeur, hauteur);

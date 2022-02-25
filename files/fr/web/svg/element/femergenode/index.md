@@ -32,7 +32,7 @@ L'élément SVG `feMergeNode` se place à l'intérieur d'un élément {{ SVGElem
     </filter>
 
     <rect x="40" y="40" width="100" height="100"
-       style="stroke: #000000; fill: green; filter: url(#feOffset);" />
+       style="stroke: #000000; fill: green; filter: url(#feOffset);" />
     <rect x="40" y="40" width="100" height="100"
         style="stroke: #000000; fill: green;" />
 </svg>

@@ -39,7 +39,7 @@ class ClassWithPrivateStaticField {
 
   static publicStaticMethod() {
     ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
   }
 }
 
@@ -85,7 +85,7 @@ class ClassWithPrivateField {
 
   constructor() {
     this.#privateField = 42
-    this.#randomField = 666 // Erreur de syntaxe
+    this.#randomField = 666 // Erreur de syntaxe
   }
 }
 
@@ -108,11 +108,11 @@ class ClassWithPrivateStaticMethod {
     }
 
     static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
+        return ClassWithPrivateStaticMethod.#privateStaticMethod();
     }
 
     static publicStaticMethod2() {
-        return this.#privateStaticMethod();
+        return this.#privateStaticMethod();
     }
 }
 

@@ -7,7 +7,7 @@ translation_of: Web/SVG/Attribute/width
 
 Cet attribut indique une dimension horizontale `<length>` dans le système de coordonnées. La donnée (ou coordonnée) définie par cet attribut dépend de l'élément sur lequel il est appliqué. La plupart du temps, il représente la largeur de la région rectangulaire composant l'élément (voir les exceptions dans la documentation pour chaque type d'élément).
 
-Cet attribut doit être spécifié, hormis pour les éléments {{ SVGElement("svg") }} dont la valeur par défaut est de 100% (exepté pour l'élément racine {{ SVGElement("svg") }} qui possède un parent HTML),  {{ SVGElement("filter") }} et {{ SVGElement("mask") }} dont la valeur par défaut est de 120%.
+Cet attribut doit être spécifié, hormis pour les éléments {{ SVGElement("svg") }} dont la valeur par défaut est de 100% (exepté pour l'élément racine {{ SVGElement("svg") }} qui possède un parent HTML),  {{ SVGElement("filter") }} et {{ SVGElement("mask") }} dont la valeur par défaut est de 120%.
 
 ## Contexte d'utilisation
 

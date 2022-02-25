@@ -118,7 +118,7 @@ CSS propose quatre valeurs spéciales universelles pour contrôler l'héritage
 - {{cssxref("initial")}}
   - : La propriété correspondante prend la valeur par défaut définie dans la feuille de style du navigateur. Si aucune valeur n'est définie par défaut dans le navigateur et que la propriété est transmise par héritage la propriété est redéfinie à `inherit`.
 - {{cssxref("unset")}}
-  - : Redéfinit la propriété à sa valeur naturelle : si la propriété est transmise par héritage, le comportement est le même que  `inherit`, sinon il est identique à `initial`.
+  - : Redéfinit la propriété à sa valeur naturelle : si la propriété est transmise par héritage, le comportement est le même que  `inherit`, sinon il est identique à `initial`.
 
 > **Note :** Il existe aussi la valeur {{cssxref("revert")}}, dont le support par les navigateurs est limité.
 
@@ -162,7 +162,7 @@ Nous avons déjà vu comment l'ordre d'apparition dans le source compte dans la 
 
 ### Spécificité
 
-L'ordre des règles dans le source est important. On rencontre pourtant des situations où deux règles ciblent le même élément mais c'est la première écrite dans le source qui s'applique. C'est que la première règle a une **spécificité** plus élevée —  elle est plus spécifique, elle est donc choisie par le navigateur pour mettre en forme l'élément.
+L'ordre des règles dans le source est important. On rencontre pourtant des situations où deux règles ciblent le même élément mais c'est la première écrite dans le source qui s'applique. C'est que la première règle a une **spécificité** plus élevée —  elle est plus spécifique, elle est donc choisie par le navigateur pour mettre en forme l'élément.
 
 Comme nous l'avons vu plus haut dans cette leçon, un sélecteur de classe a plus de poids qu'un sélecteur d'élément, de sorte que les propriétés définies sur la classe remplaceront celles appliquées directement à l'élément.
 
@@ -209,7 +209,7 @@ Alors qu'est-ce qui se passe ici ? Tout d'abord, nous ne sommes intéressés que
 
 ### !important
 
-Vous pouvez annuler tous les calculs ci-dessus à l'aide de la valeur CSS spéciale  `!important` mais vous devez être très prudent avec son utilisation. Ce mot-clé est utilisé pour donner la plus grande spécificité à la propriété à laquelle il s'applique, remplaçant ainsi les règles normales de la cascade.
+Vous pouvez annuler tous les calculs ci-dessus à l'aide de la valeur CSS spéciale  `!important` mais vous devez être très prudent avec son utilisation. Ce mot-clé est utilisé pour donner la plus grande spécificité à la propriété à laquelle il s'applique, remplaçant ainsi les règles normales de la cascade.
 
 Jetez un œil à cet exemple : nous avons deux paragraphes, dont l'un a un ID.
 
@@ -219,7 +219,7 @@ Regardons ça d'un peu plus près pour mieux comprendre — si vous avez du mal 
 
 1.  Vous verrez que les valeurs de couleur et de remplissage de la troisième règle ont été appliquées, mais pas la couleur d'arrière-plan. Pourquoi ? On pourrait penser que les trois déclarations s'appliquent, puisque la règle en question, venant plus tard dans le code source, prend le dessus sur les règles antérieures.
 2.  Mais rappelez vous, les sélecteurs de classe sont plus spécifiques !
-3.  Les deux éléments sont dans la classe `better`, mais le deuxième a aussi l'{{htmlattrxref("id")}}  `winning`. Étant donné que les ID ont une spécificité encore plus élevée que les classes (sur une page, pour une ID donnée, il y a un seul élément,  alors qu'on peut trouver de nombreux éléments dans la même classe — les sélecteurs d'ID sont donc très spécifiques dans ce qu'ils ciblent), le deuxième élément aura une couleur d'arrière-plan rouge et une bordure noire de 1 px ; pour le premier élément, la couleur d'arrière-plan sera grise, sans bordure, comme spécifié par la classe.
+3.  Les deux éléments sont dans la classe `better`, mais le deuxième a aussi l'{{htmlattrxref("id")}}  `winning`. Étant donné que les ID ont une spécificité encore plus élevée que les classes (sur une page, pour une ID donnée, il y a un seul élément,  alors qu'on peut trouver de nombreux éléments dans la même classe — les sélecteurs d'ID sont donc très spécifiques dans ce qu'ils ciblent), le deuxième élément aura une couleur d'arrière-plan rouge et une bordure noire de 1 px ; pour le premier élément, la couleur d'arrière-plan sera grise, sans bordure, comme spécifié par la classe.
 4.  Le deuxième élément a un arrière-plan rouge, mais pas de bordure. Pourquoi ? En raison de la déclaration `!important` dans la deuxième règle — écrit après  `border: none`,  ce mot-clé signifie que cette déclaration l'emporte sur le `border` définie dans la règle précédente, même si l'ID a une spécificité plus élevée.
 
 > **Note :** La seule façon de dépasser cette déclaration  `!important` serait d'ajouter un `!important` dans une déclaration de même *spécificité* apparaissant plus bas dans l'ordre du source, ou avec une spécificité plus grande.

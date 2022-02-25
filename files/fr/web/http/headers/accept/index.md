@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Headers/Accept
 ---
 {{HTTPSidebar}}
 
-Le paramètre d'entête de requête HTTP **`Accept`** indique quels sont les types de contenu, exprimés sous la forme de types MIME, que le client sera capable d'interpréter. Par le biais de la résolution de contenu -([content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)), le serveur sélectionne ensuite une proposition parmi toutes, l'utilise et informe le client de son choix avec l'entête de réponse {{HTTPHeader("Content-Type")}}. Les navigateurs fixent des valeurs adéquates pour cet entête selon le contexte où la requête a été exécutée : selon que l'utilisateur souhaite récupérer une feuille de style css,  ou qu'il souhaite récupérer une image, une vidéo ou un script, la valeur fixée pour la requête ne sera pas la même.
+Le paramètre d'entête de requête HTTP **`Accept`** indique quels sont les types de contenu, exprimés sous la forme de types MIME, que le client sera capable d'interpréter. Par le biais de la résolution de contenu -([content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)), le serveur sélectionne ensuite une proposition parmi toutes, l'utilise et informe le client de son choix avec l'entête de réponse {{HTTPHeader("Content-Type")}}. Les navigateurs fixent des valeurs adéquates pour cet entête selon le contexte où la requête a été exécutée : selon que l'utilisateur souhaite récupérer une feuille de style css,  ou qu'il souhaite récupérer une image, une vidéo ou un script, la valeur fixée pour la requête ne sera pas la même.
 
 <table class="properties">
   <tbody>

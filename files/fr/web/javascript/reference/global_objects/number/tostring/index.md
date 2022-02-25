@@ -63,7 +63,7 @@ console.log(x.toString(2));       // affiche "110"
 console.log((254).toString(16));  // affiche "fe"
 
 
-console.log((-10).toString(2));   // affiche "-1010"
+console.log((-10).toString(2));   // affiche "-1010"
 console.log((-0xff).toString(2)); // affiche "-11111111"
 ```
 

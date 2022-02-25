@@ -184,7 +184,7 @@ La première récupère juste le `message` du champ `notificationTitle `du fichi
 
 Le membre `"placeholders"` définit tous les espaces réservés et d'où ils sont extraits. L'espace réservé `"url"` spécifie que son contenu est pris à partir de $1, qui est la première valeur donnée dans le second paramètre de  `getMessage()`. Puisque l'espace réservé est appelé `"url"`, nous utilisons `$URL$` pour l'appeler dans la chaîne de message (pour `"name"` vous utiliserez `$NAME$`, etc.) Si vous avez plusieurs espaces réservés, vous pouvez les fournir à l'intérieur un tableau qui est donné à {{WebExtAPIRef("i18n.getMessage()")}} en tant que deuxième paramètre — `[a, b, c]`sera disponible en`$1`, `$2`, et `$3`, et ainsi de suite, à l'intérieur des `messages.json`.
 
-Parcourons un exemple: la chaîne originale du message  `notificationContent` dans le fichier  `en/messages.json` est
+Parcourons un exemple: la chaîne originale du message  `notificationContent` dans le fichier  `en/messages.json` est
 
     You clicked $URL$.
 

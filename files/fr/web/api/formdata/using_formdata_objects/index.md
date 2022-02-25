@@ -141,7 +141,7 @@ $.ajax({
 
 ## Envoi de formulaires et de fichiers via AJAX *sans* objet `FormData`
 
-Si vous voulez en savoir plus sur la sérialisation des données  et l’envoi d’un formulaire via [AJAX](/en-US/docs/AJAX) *sans* utiliser d’objets FormData, consultez [ce paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)e.
+Si vous voulez en savoir plus sur la sérialisation des données  et l’envoi d’un formulaire via [AJAX](/en-US/docs/AJAX) *sans* utiliser d’objets FormData, consultez [ce paragraph](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)e.
 
 ## Voir aussi
 

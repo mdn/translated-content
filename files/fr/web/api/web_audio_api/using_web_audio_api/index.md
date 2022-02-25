@@ -27,7 +27,7 @@ Les noeuds audio sont reliés au niveau de leurs entrées et sorties. Ils formen
 
 1.  Création d'un contexte audio
 2.  Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
-3.  Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
+3.  Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
 4.  Choix final de la sortie audio, par exemple les enceintes du système
 5.  Connection des sources aux effets, et des effets à la sortie.
 

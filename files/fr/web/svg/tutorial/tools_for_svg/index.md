@@ -10,7 +10,7 @@ Maintenant que nous avons vu les notions de base en SVG, nous allons nous intér
 
 ### Support des navigateurs
 
-Avec l'arrivée de IE9, on peut enfin dire que les principaux navigateurs -  Internet Explorer 9, Mozilla Firefox, Safari, Google Chrome et Opera - supportent le SVG. Sur mobile c'est aussi le cas des navigateurs basés sur Webkit (principalement iOS et Android). Et il y a en général des chances pour que les appareils plus vieux ou plus petits supportent au moins SVG Tiny.
+Avec l'arrivée de IE9, on peut enfin dire que les principaux navigateurs -  Internet Explorer 9, Mozilla Firefox, Safari, Google Chrome et Opera - supportent le SVG. Sur mobile c'est aussi le cas des navigateurs basés sur Webkit (principalement iOS et Android). Et il y a en général des chances pour que les appareils plus vieux ou plus petits supportent au moins SVG Tiny.
 
 ## Inkscape
 
@@ -38,7 +38,7 @@ Utilisé avec [Apache FOP](http://xmlgraphics.apache.org/fop/), il permet égal
 
 ### Autres moteurs de rendu
 
-Il existe plusieurs projets qui permettent d'exporter une image tramée à partie d'une source SVG. [ImageMagick](http://ImageMagick.org) est l'un des outils les plus connus de traitement des images en ligne de commande.  Wikipédia utilise la librairie de code Gnome [rsvg](http://library.gnome.org/devel/rsvg/) pour le rendu de ses images SVG.
+Il existe plusieurs projets qui permettent d'exporter une image tramée à partie d'une source SVG. [ImageMagick](http://ImageMagick.org) est l'un des outils les plus connus de traitement des images en ligne de commande.  Wikipédia utilise la librairie de code Gnome [rsvg](http://library.gnome.org/devel/rsvg/) pour le rendu de ses images SVG.
 
 ## Raphael JS
 

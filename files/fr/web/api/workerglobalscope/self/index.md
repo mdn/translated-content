@@ -30,8 +30,8 @@ au sein d'un worker, vous obtiendrez un worker global scope du même type que l'
 ```js
 DedicatedWorkerGlobalScope {
 undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
-    Infinity: Infinity
-    Array: function Array() { [native code] }
+    Infinity: Infinity
+    Array: function Array() { [native code] }
       arguments: null
       caller: null
       isArray: function isArray() { [native code] }
@@ -42,7 +42,7 @@ undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl:
       unobserve: function unobserve() { [native code] }
       __proto__: function Empty() {}
       <function scope>
-    ArrayBuffer: function ArrayBuffer() { [native code] }
+    ArrayBuffer: function ArrayBuffer() { [native code] }
     Blob: function Blob() { [native code] }
     Boolean: function Boolean() { [native code] }
     DataView: function DataView() { [native code] }

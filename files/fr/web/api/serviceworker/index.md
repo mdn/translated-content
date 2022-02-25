@@ -24,7 +24,7 @@ L'interface `ServiceWorker` est distribuée à travers différents évènements
 _L'interface `ServiceWorker` hérite des propriétés de son parent, le {{domxref("Worker")}}._
 
 - {{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}
-  - : Retourne la `scriptURL` sérialisée du `ServiceWorker`, définie comme une partie du {{domxref("ServiceWorkerRegistration")}}. Cette URL doit avoir la même origine que le document qui enregistre le  `ServiceWorker`.
+  - : Retourne la `scriptURL` sérialisée du `ServiceWorker`, définie comme une partie du {{domxref("ServiceWorkerRegistration")}}. Cette URL doit avoir la même origine que le document qui enregistre le  `ServiceWorker`.
 - {{domxref("ServiceWorker.state")}} {{readonlyinline}}
   - : Retourne le status du service worker. Il retourne l'une des valeurs suivantes : `installing`, `installed,` `activating`, `activated`, or `redundant`.
 

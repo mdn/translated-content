@@ -62,9 +62,9 @@ Remplacer la mise en page basé sur des \<table> par des blocs \<div>, plutôt q
 
     <TABLE>
       <TABLE>
-        <TABLE>
-              ...
-        </TABLE>
+        <TABLE>
+              ...
+        </TABLE>
       </TABLE>
     </TABLE>
 

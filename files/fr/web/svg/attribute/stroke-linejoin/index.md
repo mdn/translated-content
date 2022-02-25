@@ -120,7 +120,7 @@ html,body,svg { height:100% }
         stroke-linejoin="arcs" />
 
   <!--
-  Lignes roses qui indiquent la position
+  Lignes roses qui indiquent la position
   du chemin pour chaque trait
   -->
   <g id="p">
@@ -195,7 +195,7 @@ html,body,svg { height:100% }
   <path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/>
 
   <!--
-  Lignes roses qui indiquent la position
+  Lignes roses qui indiquent la position
   du chemin pour chaque trait
   -->
   <g>
@@ -244,7 +244,7 @@ html,body,svg { height:100% }
   <path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/>
 
   <!--
-  Lignes roses qui indiquent la position
+  Lignes roses qui indiquent la position
   du chemin pour chaque trait
   -->
   <g>

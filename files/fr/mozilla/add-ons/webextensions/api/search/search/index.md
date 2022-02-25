@@ -41,7 +41,7 @@ browser.search.search(
     - `engine`{{optional_inline}}
       - : `string`. Le nom du moteur de recherche. Si le nom du moteur de recherche que vous spécifiez n'existe pas, la fonction lance une erreur. Si cette propriété est omise, le moteur de recherche par défaut sera utilisé.
     - `tabId`{{optional_inline}}
-      - : `integer`.  Un identificateur facultatif pour l'onglet dans lequel vous voulez exécuter la recherche. Si cette propriété est omise, les résultats de la recherche seront affichés dans un nouvel onglet.
+      - : `integer`.  Un identificateur facultatif pour l'onglet dans lequel vous voulez exécuter la recherche. Si cette propriété est omise, les résultats de la recherche seront affichés dans un nouvel onglet.
 
 ### Valeur retournée
 

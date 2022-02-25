@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/hide
 
 Masque un ou plusieurs onglets.
 
-Les onglets cachés ne sont plus visibles dans l'onglet du navigateur. Les onglets cachés ne sont pas automatiquement [supprimés](/fr/Add-ons/WebExtensions/API/tabs/discard) :  le code qui s'y trouve continue à s'exécuter. Vous pouvez explicitement supprimer les onglets à chaque fois que vous les masquez : bien que cela ne soit pas approprié dans toutes les situations, cela aidera à réduire les ressources utilisées par le navigateur.
+Les onglets cachés ne sont plus visibles dans l'onglet du navigateur. Les onglets cachés ne sont pas automatiquement [supprimés](/fr/Add-ons/WebExtensions/API/tabs/discard) :  le code qui s'y trouve continue à s'exécuter. Vous pouvez explicitement supprimer les onglets à chaque fois que vous les masquez : bien que cela ne soit pas approprié dans toutes les situations, cela aidera à réduire les ressources utilisées par le navigateur.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

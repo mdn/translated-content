@@ -37,12 +37,12 @@ Les pixels en dehors de la zone de canevas sont présents sous forme de valeurs 
 
 ### Valeur retournée
 
-Un objet {{domxref("ImageData")}}  contenant les données de l'image pour le rectangle donné du canevas.
+Un objet {{domxref("ImageData")}}  contenant les données de l'image pour le rectangle donné du canevas.
 
 ### Erreurs renvoyées
 
 - `IndexSizeError`
-  - : Renvoyé si l'un des arguments de  largeur ou de hauteur est égal à zéro.
+  - : Renvoyé si l'un des arguments de  largeur ou de hauteur est égal à zéro.
 
 ## Exemples
 

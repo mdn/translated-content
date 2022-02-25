@@ -27,7 +27,7 @@ Les éléments définis grâce à `defs` ne sont jamais directement générés (
     </linearGradient>
   </defs>
 
-  <rect x="10" y="10" width="60" height="10"
+  <rect x="10" y="10" width="60" height="10"
         fill="url(#Gradient01)"  />
 </svg>
 ```

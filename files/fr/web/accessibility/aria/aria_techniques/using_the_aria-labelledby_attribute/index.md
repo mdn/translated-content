@@ -106,7 +106,7 @@ Dans l’exemple ci-dessous, les définitions sont associées avec les termes qu
 <dl>
   <dt id="anatheme">anathème</dt>
     <dd role="definition" aria-labelledby="anatheme">une interdiction ou une condamnation prononcée par une autorité ecclésiastique
-                                         et accompagnée de l’excommunication</dd>
+                                         et accompagnée de l’excommunication</dd>
     <dd role="definition" aria-labelledby="anatheme">une dénonciation vigoureuse&nbsp;: condamnation</dd>
 
   <dt id="homelie">homélie</dt>

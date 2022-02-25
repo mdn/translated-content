@@ -8,7 +8,7 @@ translation_of: Web/API/HTMLFormElement/reportValidity
 ---
 {{APIRef("HTML DOM")}}
 
-La méthode  **`HTMLFormElement.reportValidity()`** renvoie true si les contrôles enfants de l'élément répondent à leurs contraintes de validation. Lorsque la valeur `false` est renvoyée, ,  les événements [`invalid`](/en-US/docs/Web/Events/invalid) annulables sont déclenchés pour chaque enfant non valide et les problèmes de validation sont signalés à l'utilisateur. .
+La méthode  **`HTMLFormElement.reportValidity()`** renvoie true si les contrôles enfants de l'élément répondent à leurs contraintes de validation. Lorsque la valeur `false` est renvoyée, ,  les événements [`invalid`](/en-US/docs/Web/Events/invalid) annulables sont déclenchés pour chaque enfant non valide et les problèmes de validation sont signalés à l'utilisateur. .
 
 ## Syntax
 

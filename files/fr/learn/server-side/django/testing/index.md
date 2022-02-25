@@ -73,7 +73,7 @@ Pour écrire un test, vous partez de l'une des classes de test de base fournies 
 class YourTestClass(TestCase):
     def setUp(self):
         # Setup run before every test method.
-        pass
+        pass
 
     def tearDown(self):
         # Clean up run after every test method.
@@ -817,7 +817,7 @@ Ajoutez les tests suivants à la fin de la classe de test. Ils vérifient que se
     def test_redirect_if_logged_in_but_not_correct_permission(self):
         login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
         response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
-        self.assertEqual(response.status_code, 403)
+        self.assertEqual(response.status_code, 403)
 
     def test_logged_in_with_permission_borrowed_book(self):
         login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')

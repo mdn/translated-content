@@ -31,7 +31,7 @@ Récemment, JavaScript est revenu du côté serveur grâce au succès de la plat
 
 - Le {{Link("/fr-FR/docs/Web/JavaScript/Guide")}} sur MDN
 - [The "javascripting" workshop](http://nodeschool.io/#workshoppers) sur NodeSchool
-- Les [cours  JavaScript](http://www.codecademy.com/tracks/javascript) sur codecademy.com
+- Les [cours  JavaScript](http://www.codecademy.com/tracks/javascript) sur codecademy.com
 - [John Resig's Learning Advanced JavaScript](http://ejohn.org/apps/learn/)
 
 ### Références techniques

@@ -196,7 +196,7 @@ if (coursesFaites) { // pas besoin d'écrire explicitement '=== true'
 }
 ```
 
-###  if ... else imbriqué
+###  if ... else imbriqué
 
 Il est parfaitement correct d'ajouter une déclaration `if...else` à l'intérieur d'une autre — pour les imbriquer. Par exemple, nous pourrions mettre à jour notre application de prévisions météo pour montrer un autre ensemble de choix en fonction de la température :
 

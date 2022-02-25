@@ -24,7 +24,7 @@ Une {{domxref("DOMString")}} _(chaîne de caractères)_ qui représente la parti
 
 ## Exemple
 
-Cet exemple affiche "id" dans une  fenêtre d'alerte.
+Cet exemple affiche "id" dans une  fenêtre d'alerte.
 
 ### Contenu HTML
 

@@ -7,7 +7,7 @@ translation_of: Web/API/Window/getComputedStyle
 
 ## Résumé
 
-`La méthode window.getComputedStyle() `donne la  [valeur calculée finale](/en/CSS/used_value) de toutes les propriétés CSS sur un élément.
+`La méthode window.getComputedStyle() `donne la  [valeur calculée finale](/en/CSS/used_value) de toutes les propriétés CSS sur un élément.
 
 ## Syntaxe
 

@@ -59,7 +59,7 @@ Seul un petit sous-groupe de propriétés CSS peuvent être utilisées dans un b
 - Toutes les propriétés liées à `padding` : {{cssxref("padding")}}, {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
 - Toutes les propriétés liées aux bordures : les raccourcis {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-radius")}}, {{cssxref("border-image")}}, et les propriétés détaillées.
 - La propriété {{cssxref("color")}} .
-- Les propriétés  {{cssxref("text-decoration")}}, {{cssxref("text-shadow")}}, {{cssxref("text-transform")}}, {{cssxref("letter-spacing")}}, {{cssxref("word-spacing")}} (lorsqu'approprié), {{cssxref("line-height")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{cssxref("float")}}, {{cssxref("vertical-align")}} (seulement si `float` vaut `none`).
+- Les propriétés  {{cssxref("text-decoration")}}, {{cssxref("text-shadow")}}, {{cssxref("text-transform")}}, {{cssxref("letter-spacing")}}, {{cssxref("word-spacing")}} (lorsqu'approprié), {{cssxref("line-height")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, {{cssxref("box-shadow")}}, {{cssxref("float")}}, {{cssxref("vertical-align")}} (seulement si `float` vaut `none`).
 
 Puisque cette liste sera complétée dans l'avenir, il est recommandé de ne pas utiliser d'autres propriétés dans un bloc de déclaration, de manière à concevoir un CSS pérenne.
 

@@ -19,7 +19,7 @@ Lancé lorsqu'une extension reçoit une demande de connexion d'une extension dif
 
 Pour envoyer un message qui sera reçu par le programme d'écoute `onConnectExternal`, utilisez {{WebExtAPIRef("runtime.connect()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
 
-L'écouteur reçoit un objet {{WebExtAPIRef('runtime.Port')}} qu'il peut ensuite utiliser pour envoyer et recevoir des messages. L'objet `Port` contient également une propriété`sender`, qui est un objet {{WebExtAPIRef("runtime.MessageSender")}},  et que le destinataire peut utiliser pour vérifier l'ID de l'expéditeur.
+L'écouteur reçoit un objet {{WebExtAPIRef('runtime.Port')}} qu'il peut ensuite utiliser pour envoyer et recevoir des messages. L'objet `Port` contient également une propriété`sender`, qui est un objet {{WebExtAPIRef("runtime.MessageSender")}},  et que le destinataire peut utiliser pour vérifier l'ID de l'expéditeur.
 
 ## Syntaxe
 

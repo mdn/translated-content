@@ -280,7 +280,7 @@ L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisa
 
 ![](button-focused-unfocused.png)
 
-Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné ou appuyer sur un bouton (nous avons inclus du JavaScript pour que les boutons alertent un message), ou commencer à taper pour saisir du texte dans une entrée de texte (les autres éléments de formulaire ont des contrôles différents, par exemple, l'élément  {{htmlelement("select")}} peut avoir ses options affichées et alterner entre les touches fléchées haut et bas).
+Vous pouvez ensuite appuyer sur Entrée/Retour pour suivre un lien sélectionné ou appuyer sur un bouton (nous avons inclus du JavaScript pour que les boutons alertent un message), ou commencer à taper pour saisir du texte dans une entrée de texte (les autres éléments de formulaire ont des contrôles différents, par exemple, l'élément  {{htmlelement("select")}} peut avoir ses options affichées et alterner entre les touches fléchées haut et bas).
 
 > **Note :** Différents navigateurs peuvent avoir différentes options de contrôle du clavier disponibles. Voir comment [gérer les problèmes courants d'accessibilité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Using_native_keyboard_accessibility) pour plus de détails.
 
@@ -306,7 +306,7 @@ Vous obtenez essentiellement ce comportement gratuitement, en utilisant simpleme
 <form>
   <div>
     <label for="name"> Remplis ton nom :</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name">
   </div>
   <div>
     <label for="age"> Entrez votre âge :</label>
@@ -334,7 +334,7 @@ Cependant, il est encore une fois que les gens font parfois des choses étranges
 <div data-message="This is from the third button"> Et moi!</div>
 ```
 
-Il est toutefois déconseillé d’utiliser un tel code. Vous perdriez immédiatement l’accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments  {{htmlelement("button")}}. De plus, vous n’obtenez aucun des styles CSS par défaut que les boutons ont.
+Il est toutefois déconseillé d’utiliser un tel code. Vous perdriez immédiatement l’accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments  {{htmlelement("button")}}. De plus, vous n’obtenez aucun des styles CSS par défaut que les boutons ont.
 
 #### Remettre l'accessibilité au clavier
 
@@ -510,7 +510,7 @@ Les images ont également d'autres mécanismes disponibles pour fournir un texte
 
 Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente). Cependant, longdesc n’est pas toujours pris en charge par les lecteurs d’écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d’écran. Il est sans doute préférable d’inclure la description longue sur la même page que l’image, ou d’y accéder par un lien régulier.
 
-HTML5 comprend deux nouveaux éléments  — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} — qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :
+HTML5 comprend deux nouveaux éléments  — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} — qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :
 
 ```html
 <figure>
@@ -530,7 +530,7 @@ Malheureusement, la plupart des lecteurs d’écran ne semblent pas encore assoc
 </h3>
 ```
 
-Il peut arriver qu'une image soit incluse dans la conception d'une page, mais son objectif principal est la décoration visuelle. Vous remarquerez dans l'exemple de code ci-dessus que l'attribut  `alt `de l'image est vide – il s'agit pour que les lecteurs d'écran reconnaissent l'image, mais n'essayent pas de décrire l'image (au lieu de cela, ils diraient simplement « image&nbsp;», ou similaire) .
+Il peut arriver qu'une image soit incluse dans la conception d'une page, mais son objectif principal est la décoration visuelle. Vous remarquerez dans l'exemple de code ci-dessus que l'attribut  `alt `de l'image est vide – il s'agit pour que les lecteurs d'écran reconnaissent l'image, mais n'essayent pas de décrire l'image (au lieu de cela, ils diraient simplement « image&nbsp;», ou similaire) .
 
 La raison d'utiliser un vide `alt` au lieu de ne pas l'inclure est due au fait que de nombreux lecteurs d'écran annoncent l'URL complète de l'image si aucun `alt` n'est fourni. Dans l'exemple ci-dessus, l'image agit comme une décoration visuelle de l'en-tête auquel elle est associée. Dans ce cas, et dans les cas où une image est uniquement une décoration et n'a pas de valeur de contenu, vous devez mettre un vide `alt` sur vos images. Une autre alternative consiste à utiliser l'attribut aria role role = "presentation" – cela empêche également les lecteurs d'écrans de lire du texte alternatif.
 

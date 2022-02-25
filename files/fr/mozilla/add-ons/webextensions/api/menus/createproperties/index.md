@@ -5,7 +5,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/createProperties
 ---
 {{AddonSidebar()}}
 
-Un `object` passé au méthodes {{WebExtAPIRef("menus.create()", "menus.create()")}} ou  {{WebExtAPIRef("menus.update()", "menus.update()")}}  pour décrire les propriétés de l'élément de menu nouveau ou mis à jour.
+Un `object` passé au méthodes {{WebExtAPIRef("menus.create()", "menus.create()")}} ou  {{WebExtAPIRef("menus.update()", "menus.update()")}}  pour décrire les propriétés de l'élément de menu nouveau ou mis à jour.
 
 - `checked` {{optional_inline}}
   - : `boolean`. The initial state of a checkbox or radio item: `true` for selected and `false` for unselected. Only one radio item can be selected at a time in a given group of radio items.

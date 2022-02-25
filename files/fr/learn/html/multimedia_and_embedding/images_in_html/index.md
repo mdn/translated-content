@@ -50,7 +50,7 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
 
 ## Comment intégrer une image à une page web ?
 
-Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}.  C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier:  *source*). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément  {{htmlelement("a")}}  `href=` attribue des valeurs.
+Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}.  C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier:  *source*). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément  {{htmlelement("a")}}  `href=` attribue des valeurs.
 
 > **Note :** Vous devriez lire  [Une brève présentation des URL et des chemins](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#url)  pour vous rafraîchir la mémoire avant de continuer.
 

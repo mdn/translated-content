@@ -52,7 +52,7 @@ Commençons par regarder le CSS.
 
 ### Sémantique correcte et attentes de l'utilisateur
 
-Il est possible d’utiliser CSS pour détourner l'apparence d'un élément HTML pour qu'il ressemble à un autre, mais cela ne veut pas dire que vous devriez le faire. Comme nous l’avons souvent mentionné dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML), vous devez utiliser, dans la mesure du possible, l’élément sémantique approprié. Sinon, cela peut créer de la confusion et des difficultés d'usage pour tout le monde, plus particulièrement pour les utilisateurs handicapés. L'utilisation de la sémantique correcte a beaucoup à voir avec les attentes des utilisateurs  — les éléments ont une apparence et un comportement particuliers, en fonction de leurs fonctionnalités, et ces conventions communes sont attendues par les utilisateurs.
+Il est possible d’utiliser CSS pour détourner l'apparence d'un élément HTML pour qu'il ressemble à un autre, mais cela ne veut pas dire que vous devriez le faire. Comme nous l’avons souvent mentionné dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML), vous devez utiliser, dans la mesure du possible, l’élément sémantique approprié. Sinon, cela peut créer de la confusion et des difficultés d'usage pour tout le monde, plus particulièrement pour les utilisateurs handicapés. L'utilisation de la sémantique correcte a beaucoup à voir avec les attentes des utilisateurs  — les éléments ont une apparence et un comportement particuliers, en fonction de leurs fonctionnalités, et ces conventions communes sont attendues par les utilisateurs.
 
 Par exemple, un utilisateur de lecteur d'écran ne peut pas naviguer dans une page via des éléments d'en-tête si le développeur n'a pas utilisé les éléments d'en-tête de manière appropriée pour annoter le contenu. De la même manière, un en-tête perd son utilité visuelle si vous le stylisez de sorte qu'il ne ressemble pas à un en-tête.
 
@@ -135,7 +135,7 @@ Par convention, on souligne en pointillés les abréviations et il n’est pas 
 
 #### Liens
 
-Hyperliens  la façon dont vous accédez à de nouveaux endroits sur le Web :
+Hyperliens  la façon dont vous accédez à de nouveaux endroits sur le Web :
 
 ```html
 <p> Visiter la  <a href="https://www.mozilla.org"> Page d'accueil de Mozilla </a>.</p>
@@ -188,7 +188,7 @@ Toutefois, vous ne devriez pas trop vous écarter des indications visuelles cla
 
 Tableaux pour la présentation des données tabulées.
 
-Vous pouvez voir un bon exemple simple de  [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) et ([en direct](https://mdn.github.io/learning-area/accessibility/css/table-css.html)).
+Vous pouvez voir un bon exemple simple de  [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) et ([en direct](https://mdn.github.io/learning-area/accessibility/css/table-css.html)).
 
 En appliquant les propriétés du module CSS des tableaux, vous pourrez adapter les tables HTML à votre design avec une apparence pas trop affreuse. Il est judicieux de vous assurer que les en-têtes de table se démarquent (normalement en gras), et de zébrer les lignes via le pseudo-sélecteur `:nth-child(n) `pour faciliter la lecture.
 
@@ -253,7 +253,7 @@ Lors de la création de votre contenu, gardez à l'esprit l'idée d'un **JavaS
 De bons exemples d'utilisation de JavaScript discret incluent :
 
 - Fournir une validation de formulaire côté client, qui alerte les utilisateurs en cas de problèmes liés aux entrées de formulaire, sans avoir à attendre que le serveur vérifie les données. S'il n'est pas disponible, le formulaire fonctionnera toujours, mais la validation risque d'être plus lente.
-- Fournir des commandes personnalisées pour les  `<video>` HTML5 accessibles aux utilisateurs uniquement au clavier, ainsi qu'un lien direct vers la vidéo pouvant être utilisé pour y accéder si JavaScript n'est pas disponible (les commandes du navigateur `<video>` par défaut ne sont pas des touches accessibles dans la plupart des navigateurs).
+- Fournir des commandes personnalisées pour les  `<video>` HTML5 accessibles aux utilisateurs uniquement au clavier, ainsi qu'un lien direct vers la vidéo pouvant être utilisé pour y accéder si JavaScript n'est pas disponible (les commandes du navigateur `<video>` par défaut ne sont pas des touches accessibles dans la plupart des navigateurs).
 
 Par exemple, nous avons écrit un exemple de validation de formulaire côté client rapide — voir [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) (voir aussi la [démonstration en direct](https://mdn.github.io/learning-area/accessibility/css/form-validation.html)). Ici, vous verrez un formulaire simple. Lorsque vous essayez de soumettre le formulaire avec un ou les deux champs vides, l'envoi échoue et un message d'erreur s'affiche pour vous indiquer ce qui ne va pas.
 
@@ -293,7 +293,7 @@ function validate(e) {
 
 La validation du formulaire réel serait beaucoup plus complexe que cela : vous voudriez vérifier que le nom saisi ressemble réellement à un nom, que l’âge entré est en réalité un nombre et qu’il est réaliste (par exemple, pas un nombre négatif, ni à quatre chiffres). Ici, nous venons d'implémenter la vérification simple qu'une valeur a été renseignée dans chaque champ de saisie (`if(testItem.input.value === '')`).
 
-Une fois la validation effectuée, si les tests réussissent, le formulaire est soumis. S'il y a des erreurs  (`if(errorList.innerHTML !== '')`) nous arrêtons la soumission du formulaire ( à l'aide de[ event.preventDefault()](/fr/docs/Web/API/Event/preventDefault)), et affichons tous les messages d'erreur créés (voir ci-dessous). Ce mécanisme signifie que les erreurs ne seront affichées que s’il y a des erreurs, ce qui est meilleur pour la facilité d’utilisation.
+Une fois la validation effectuée, si les tests réussissent, le formulaire est soumis. S'il y a des erreurs  (`if(errorList.innerHTML !== '')`) nous arrêtons la soumission du formulaire ( à l'aide de[ event.preventDefault()](/fr/docs/Web/API/Event/preventDefault)), et affichons tous les messages d'erreur créés (voir ci-dessous). Ce mécanisme signifie que les erreurs ne seront affichées que s’il y a des erreurs, ce qui est meilleur pour la facilité d’utilisation.
 
 Pour chaque entrée pour laquelle aucune valeur n'a été renseignée lors de la soumission du formulaire, nous créons un élément de liste avec un lien et l'insérons dans la liste `errorList`.
 
@@ -352,9 +352,9 @@ imgThumb.onfocus = showImg;
 imgThumb.onblur = hideImg;
 ```
 
-Les deux premières lignes exécutent les fonctions lorsque le pointeur de la souris survole et cesse de survoler la vignette, respectivement. Cela ne nous permettra toutefois pas d'accéder à la vue agrandie à l'aide du clavier ; pour cela, nous avons inclus les deux dernières lignes, qui exécutent les fonctions lorsque l'image est nette et floue (lorsque la mise au point s'arrête). Cela peut être fait en tapant sur l'image, car nous avons inclus  `tabindex="0"` dessus.
+Les deux premières lignes exécutent les fonctions lorsque le pointeur de la souris survole et cesse de survoler la vignette, respectivement. Cela ne nous permettra toutefois pas d'accéder à la vue agrandie à l'aide du clavier ; pour cela, nous avons inclus les deux dernières lignes, qui exécutent les fonctions lorsque l'image est nette et floue (lorsque la mise au point s'arrête). Cela peut être fait en tapant sur l'image, car nous avons inclus  `tabindex="0"` dessus.
 
-L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/GlobalEventHandlers/onclick) après avoir  pressé <kbd>Entrée</kbd>  sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)).
+L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/GlobalEventHandlers/onclick) après avoir  pressé <kbd>Entrée</kbd>  sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)).
 
 ## Résumé
 

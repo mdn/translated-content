@@ -170,7 +170,7 @@ L'interface Document, pour les documents HTML, hérite de l'interface *{{domxref
   - : renvoie tous les éléments {{HTMLElement("script")}}  sur le document.
 - {{domxref("Document.title")}}
   - : Renvoie le titre du document courant.
-- {{domxref("Document.URL")}}  {{readonlyInline}}
+- {{domxref("Document.URL")}}  {{readonlyInline}}
   - : Renvoie une chaîne de caractères contenant l'URL ("Uniform Resource Locator", _repère uniforme de ressource_) du document courant.
 
 <!---->

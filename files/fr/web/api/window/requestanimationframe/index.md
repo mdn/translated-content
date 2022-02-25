@@ -32,7 +32,7 @@ requestID = window.webkitRequestAnimationFrame(callback); // Anciennes versions 
 
 ### Valeur retournée
 
-`requestID` est un entier `long` unique identifiant l'élément dans la liste des callbacks. C'est une valeur différente de zéro, mais il est prudent de ne pas faire de suppositions sur cette valeur. En passant cette valeur en paramètre de la méthode {{domxref("window.cancelAnimationFrame()")}},  vous annulez l'appel du callback.
+`requestID` est un entier `long` unique identifiant l'élément dans la liste des callbacks. C'est une valeur différente de zéro, mais il est prudent de ne pas faire de suppositions sur cette valeur. En passant cette valeur en paramètre de la méthode {{domxref("window.cancelAnimationFrame()")}},  vous annulez l'appel du callback.
 
 ## Exemple
 

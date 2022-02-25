@@ -29,7 +29,7 @@ Les littéraux de gabarits sont des littéraux de chaînes de caractères permet
 
 ## Description
 
-Les gabarits sont délimités par des caractères [accent grave](https://fr.wikipedia.org/wiki/Accent_grave) (\` \`)  au lieu des apostrophes doubles ou simples. Les gabarits peuvent contenir des espaces réservés (_placeholders_). Ces espaces sont indiqués par le signe dollar ($) et des accolades (`${expression})`. Les expressions dans les espaces réservés et le texte compris dans ces espaces sont passés à une fonction.
+Les gabarits sont délimités par des caractères [accent grave](https://fr.wikipedia.org/wiki/Accent_grave) (\` \`)  au lieu des apostrophes doubles ou simples. Les gabarits peuvent contenir des espaces réservés (_placeholders_). Ces espaces sont indiqués par le signe dollar ($) et des accolades (`${expression})`. Les expressions dans les espaces réservés et le texte compris dans ces espaces sont passés à une fonction.
 
 Pour créer la chaîne finale, la fonction par défaut concatène simplement les différentes parties en une seule chaîne. Toutefois, on peut utiliser une fonction spécifique pour obtenir un comportement différent et recomposer la chaîne avec une autre logique. On parlera alors [de gabarit étiqueté (cf. ci-après)](#Gabarits_étiquetés).
 

@@ -108,7 +108,7 @@ p {
   <p class="redimensionnable">
     Ce paragraphe peut être redimensionné car la propriété
     CSS resize vaut 'both' sur cet élément.
-  </p>
+  </p>
 </div>
 ```
 

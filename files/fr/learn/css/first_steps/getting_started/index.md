@@ -146,7 +146,7 @@ En parcourant la page de documentation, vous découvrirez qu'au lieu de supprime
 
 Jusqu'ici, nous avons mis en forme des éléments HTML repérés par leur nom de balise. Cela fonctionne tant que vous voulez appliquer le même style à tous les éléments de ce type dans le document. La plupart du temps ce n'est pas le comportement désiré ; il faut donc trouver une méthode pour sélectionner un sous-ensemble des éléments à mettre en forme sans changer l'apparence des autres éléments du même type. L'approche la plus commune pour obtenir ce comportement est d'ajouter une classe (pensez à une étiquette) aux éléments HTML à mettre en forme puis de sélectionner cette classe.
 
-Dans le document HTML, ajouter un  [attribut class](/fr/docs/Web/HTML/Attributs_universels/class) au deuxième item de la liste :
+Dans le document HTML, ajouter un  [attribut class](/fr/docs/Web/HTML/Attributs_universels/class) au deuxième item de la liste :
 
 ```html
 <ul>

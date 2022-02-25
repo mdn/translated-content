@@ -22,7 +22,7 @@ On crée un `OscillatorNode` en utilisant la méthode {{domxref("AudioContext.
 - {{domxref("OscillatorNode.frequency")}}
   - : {{domxref("AudioParam")}} de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate) représentant la fréquence d'oscillation en Hertz (la propriété frequency est en lecture seule, mais sa sous-propriété value ne l'est pas).
 - {{domxref("OscillatorNode.detune")}}
-  - : {{domxref("AudioParam")}} de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate) représentant le désaccordage de l' oscillation exprimé en cents  (la propriété detune est en lecture seule, mais sa sous-propriété value ne l'est pas).
+  - : {{domxref("AudioParam")}} de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate) représentant le désaccordage de l' oscillation exprimé en cents  (la propriété detune est en lecture seule, mais sa sous-propriété value ne l'est pas).
 - {{domxref("OscillatorNode.type")}}
   - : Chaîne de caractères indiquant la forme de l'onde générée. Différentes ondes produisent différentes tonalités.  Les valeurs standard sont `"sine"`, `"square"`, `"sawtooth"`, `"triangle"` et `"custom"`. La valeur par défault is `"sine"`. `custom` permet d'utiliser une {{domxref("PeriodicWave")}} pour décrire une forme d'onde personnalisée.
 

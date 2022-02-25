@@ -9,7 +9,7 @@ translation_of: Web/API/HTMLFormElement/submit
 ---
 {{APIRef("HTML DOM")}}
 
-La méthode  **`HTMLFormElement.submit()`**  soumet un {{HtmlElement("form")}} donné
+La méthode  **`HTMLFormElement.submit()`**  soumet un {{HtmlElement("form")}} donné
 
 Cette méthode est similaire, mais pas identique, à l’activation du script submit {{HtmlElement ("button")}}. Lors de l'appel direct de cette méthode, cependant:
 
@@ -17,7 +17,7 @@ Cette méthode est similaire, mais pas identique, à l’activation du script su
 - {{domxref("GlobalEventHandlers.onsubmit", "onsubmit")}}  le gestionnaire d'événement n'est pas exécuté .
 - [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation) n'est pas déclenché .
 
-Si un contrôle de formulaire (tel qu'un  submit bouton ) a un`name` ou un `id` de `submit`, cette méthode masquera la méthode d'envoi du formulaire.
+Si un contrôle de formulaire (tel qu'un  submit bouton ) a un`name` ou un `id` de `submit`, cette méthode masquera la méthode d'envoi du formulaire.
 
 ## Syntax
 

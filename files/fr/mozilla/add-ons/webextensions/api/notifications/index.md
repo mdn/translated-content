@@ -31,7 +31,7 @@ La notification est identique sur tous les systèmes d'exploitation de bureau. Q
 - {{WebExtAPIRef("notifications.clear()")}}
   - : Effacer une notification spécifique, compte tenu de son identifiant.
 - {{WebExtAPIRef("notifications.create()")}}
-  - :  Créez et affichez une nouvelle notification.
+  - :  Créez et affichez une nouvelle notification.
 - {{WebExtAPIRef("notifications.getAll()")}}
   - : Recevez toutes les notifications
 - {{WebExtAPIRef("notifications.update()")}}

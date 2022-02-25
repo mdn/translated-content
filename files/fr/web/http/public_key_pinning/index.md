@@ -56,7 +56,7 @@ Les commandes suivantes vous aideront à extraire la clé publique et à l'encod
 
     openssl x509 -in my-certificate.crt -pubkey -noout | openssl rsa -pubin -outform der | openssl dgst -sha256 -binary | openssl enc -base64
 
-###  
+###  
 
 ### Exemple d'entête HPKP
 

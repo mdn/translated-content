@@ -44,7 +44,7 @@ Le résultat du code ci-dessus est : "Le nom de mon chat est Chloé"
 
 Même si nous appelons d'abord la fonction dans notre code, avant que la fonction ne soit écrite, le code fonctionne néanmoins. Cela est dû à la façon dont l'exécution de contexte fonctionne en Javascript.
 
-Le hissage fonctionne tout aussi bien avec d'autres types de données et d'autres variables.  Les variables peuvent être initialisées et utilisées avant d'être déclarées. Mais elles ne peuvent pas être utilisées sans initialisation.
+Le hissage fonctionne tout aussi bien avec d'autres types de données et d'autres variables.  Les variables peuvent être initialisées et utilisées avant d'être déclarées. Mais elles ne peuvent pas être utilisées sans initialisation.
 
 ### Exemple technique
 

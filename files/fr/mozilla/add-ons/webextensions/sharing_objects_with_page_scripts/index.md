@@ -138,7 +138,7 @@ browser.runtime.onMessage.addListener((message) => {
 Cela fait deux choses :
 
 - exécuter un script de contenu dans l'onglet en cours, lorsque l'utilisateur clique sur une action du navigateur
-- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications)  lorsque le message arrive.
+- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications)  lorsque le message arrive.
 
 Le script de contenu ressemble à ceci :
 

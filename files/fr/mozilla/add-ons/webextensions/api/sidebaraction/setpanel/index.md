@@ -22,7 +22,7 @@ Les barres latérales ont toujours un _"panneau manifest"_, qui est le panneau d
 
 Si vous définissez un nouveau panneau à l'aide de `setPanel()`, et incluez l'option `tabId` le panneau est défini uniquement pour l'onglet donné. Ce panneau est appelé  _"tab-specific panel"_.
 
-Si vous définissez un nouveau panneau en utilisant `setPanel()`, et incluez l'option `windowId`, alors le panneau n'est défini que pour la fenêtre donnée.  Ce panneau est appelé _"panneau spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas d'ensemble de panneaux spécifiques aux onglets.
+Si vous définissez un nouveau panneau en utilisant `setPanel()`, et incluez l'option `windowId`, alors le panneau n'est défini que pour la fenêtre donnée.  Ce panneau est appelé _"panneau spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas d'ensemble de panneaux spécifiques aux onglets.
 
 Si vous définissez un nouveau panneau en utilisant `setPanel()`, et omettez les options `tabId` et `windowId`, alors ceci définit le _"panneau global"_. Le panneau global apparaîtra alors dans tous les onglets qui n'ont pas d'ensemble de panneaux spécifiques aux onglets et dont la fenêtre n'a pas de panneau spécifique à une fenêtre.
 

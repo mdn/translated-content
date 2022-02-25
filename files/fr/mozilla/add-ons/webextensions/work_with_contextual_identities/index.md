@@ -50,22 +50,22 @@ Les principales caractéristiques du fichier [manifest.json](https://github.com/
 - La demande de permissions :
 
   ```json
-    "permissions": [
-        "contextualIdentities",
-        "cookies"
-    ],
+    "permissions": [
+        "contextualIdentities",
+        "cookies"
+    ],
   ```
 
 - spécification du bouton de la barre d'outils (browseAction) donnant accès aux fonctionnalités de l'extension :
 
   ```json
-    "browser_action": {
-      "browser_style": true,
-      "default_title": "Contextual Identities",
-      "default_popup": "context.html",
-      "default_icon": {
-        "128": "identity.svg"
-      }
+    "browser_action": {
+      "browser_style": true,
+      "default_title": "Contextual Identities",
+      "default_popup": "context.html",
+      "default_icon": {
+        "128": "identity.svg"
+      }
   ```
 
 ## context.html

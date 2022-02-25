@@ -210,7 +210,7 @@ Pour charger nos données JSON, nous allons utiliser l'API {{domxref("XMLHttpReq
     request.open('GET', requestURL);
     ```
 
-    Cette méthode prend au moins deux paramètres — il y a d'autres paramètres optionnels disponibles.  Deux suffiront pour notre exemple :
+    Cette méthode prend au moins deux paramètres — il y a d'autres paramètres optionnels disponibles.  Deux suffiront pour notre exemple :
 
     - La méthode HTTP à utiliser sur le réseau pour notre requête. Dans notre cas, la méthode [`GET`](/fr/docs/Web/HTTP/Methods/GET) est appropriée dans la mesure où nous voulons simplement récupérer quelques données.
     - L'URL où adresser notre requête — il s'agit de l'URL du fichier JSON dont nous parlions tout à l'heure.
@@ -349,7 +349,7 @@ On commence par créer un objet JavaScript puis on vérifie son contenu avant de
 
 ## Résumé
 
-Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans vos programmes, incluant les méthodes de  création et d'analyse syntaxique (parsage)  du JSON  et d'accès aux données qu'il contient. Dans le prochain article, nous débuterons l'apprentissage du Javascript orienté objet.
+Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans vos programmes, incluant les méthodes de  création et d'analyse syntaxique (parsage)  du JSON  et d'accès aux données qu'il contient. Dans le prochain article, nous débuterons l'apprentissage du Javascript orienté objet.
 
 ## Voir aussi
 
@@ -357,6 +357,6 @@ Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON da
 - [La page de référence sur l'objet XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest)
 - [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [Les méthodes de requêtes HTTP ](/fr/docs/Web/HTTP/Methods)
-- [Le site web officiel  avec un lien vers les normes de l' ECMA](http://json.org)
+- [Le site web officiel  avec un lien vers les normes de l' ECMA](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

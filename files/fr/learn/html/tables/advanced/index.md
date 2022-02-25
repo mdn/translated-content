@@ -436,7 +436,7 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 3.  Enfin, essayez avec une autre copie du fichier initial, de faire un tableau plus accessible en utilisant les attributs `id` et `headers`.
 
 > **Note :** Vous pouvez contrôler votre travail en le comparant à nos exemples finis  — voir [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))
->          et [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+>          et [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Résumé
 

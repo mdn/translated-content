@@ -57,7 +57,7 @@ L'objet `downloadDelta` a les propriétés suivantes disponibles :
 - `id`
   - : Un `integer` représentant l'identifiant de l'`id`  {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
 - `url`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une  `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une  `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `filename`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `filename` {{WebExtAPIRef('downloads.DownloadItem')}}
 - `danger`{{optional_inline}}

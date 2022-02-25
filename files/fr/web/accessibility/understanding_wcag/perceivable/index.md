@@ -32,7 +32,7 @@ The key here is that text can be converted to other forms people with disabiliti
   </thead>
   <tbody>
     <tr>
-      <td colspan="1" rowspan="5">1.1.1 Provide text equivalents  (A)</td>
+      <td colspan="1" rowspan="5">1.1.1 Provide text equivalents  (A)</td>
       <td>
         All images that convey meaningful content should be given suitable
         alternative text.
@@ -429,7 +429,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
             >53 input fields</a
           >
-          to programmatically identify the purpose of a field.   
+          to programmatically identify the purpose of a field.   
         </p>
       </td>
       <td>

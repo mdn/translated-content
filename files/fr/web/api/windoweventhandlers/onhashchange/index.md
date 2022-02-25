@@ -76,7 +76,7 @@ if(!window.HashChangeEvent)(function(){
 }());
 ```
 
-###  
+###  
 
 ## Spécifications 
 

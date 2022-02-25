@@ -91,7 +91,7 @@ Les premières et secondes lignes contiennent la plupart des données déjà év
 - Le site web cible/hôte (developer.mozilla.org).
 - La fin de la première ligne inclut aussi une petite chaîne identifiant la version spécifique du protocole (`HTTP/1.1`).
 
-La dernière ligne contient des données sur les cookies côté client — vous observerez que dans ce cas, le cookie a une id pour gérer la session :    (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
+La dernière ligne contient des données sur les cookies côté client — vous observerez que dans ce cas, le cookie a une id pour gérer la session :    (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
 
 Les lignes restantes concernent le navigateur utilisé et les sortes de réponses qu'il peut accepter. Par exemple, vous pouvez voir ceci :
 
@@ -130,7 +130,7 @@ Content-Length: 41823
 
 
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
+<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">

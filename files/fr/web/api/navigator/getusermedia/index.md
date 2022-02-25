@@ -114,4 +114,4 @@ See [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-cap
 - {{domxref("MediaDevices.getUserMedia()")}} qui remplace cette méthode dépréciée.
 - [WebRTC](/en-US/docs/WebRTC) - page d'introduction aux APIS
 - [MediaStream API](/en-US/docs/WebRTC/MediaStream_API) - L'API des Media Streams Objects
-- [Taking webcam photos](/en-US/docs/WebRTC/taking_webcam_photos) - un tutoriel à propos de l'utilisation de  `getUserMedia()` pour prendre des photos plutôt que des vidéos.
+- [Taking webcam photos](/en-US/docs/WebRTC/taking_webcam_photos) - un tutoriel à propos de l'utilisation de  `getUserMedia()` pour prendre des photos plutôt que des vidéos.

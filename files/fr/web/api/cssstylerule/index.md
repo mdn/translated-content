@@ -12,8 +12,8 @@ CSSStyleRule représente une règle de style CSS unique. Il implémente l'interf
 La syntaxe est décrite à l'aide du format WebIDL.
 
     interface CSSStyleRule : CSSRule {
-        attribute DOMString selectorText;
-        readonly attribute CSSStyleDeclaration style;
+        attribute DOMString selectorText;
+        readonly attribute CSSStyleDeclaration style;
     };
 
 ## Properties

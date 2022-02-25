@@ -55,7 +55,7 @@ Le code HTML suivant démontre l'utilisation de la propriété `stack`.
 
 En supposant que ce code a été enregistré comme `C:\exemple.html` sur un système de fichier Windows, il produira un message d'alerte dans une nouvelle fenêtre avec le texte suivant :
 
-À partir de Firefox 30 et ultérieur, ce message contiendra le numéro de colonne  ({{bug(762556)}}) :
+À partir de Firefox 30 et ultérieur, ce message contiendra le numéro de colonne  ({{bug(762556)}}) :
 
 ```html
 trace@file:///C:/exemple.html:9:17

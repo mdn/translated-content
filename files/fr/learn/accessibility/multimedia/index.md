@@ -42,7 +42,7 @@ Le multimédia est une autre catégorie de contenu susceptible de créer des pro
 
 ## Multimédia et accessibilité
 
-Jusqu'ici, dans ce module, nous avons examiné une variété de contenus et ce qui doit être fait pour en assurer l'accessibilité, du simple contenu textuel aux tableaux de données, en passant par les images, les contrôles natifs tels que les éléments de formulaire et les boutons, et des structures de balisage encore plus complexes. (avec  [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics) l'attribut).
+Jusqu'ici, dans ce module, nous avons examiné une variété de contenus et ce qui doit être fait pour en assurer l'accessibilité, du simple contenu textuel aux tableaux de données, en passant par les images, les contrôles natifs tels que les éléments de formulaire et les boutons, et des structures de balisage encore plus complexes. (avec  [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics) l'attribut).
 
 Cet article, par contre, examine une autre catégorie générale de contenu pour laquelle il est difficile d’assurer l’accessibilité au multimédia. Les images, les vidéos, les éléments {{htmlelement ("canvas")}} les animations Flash, etc. ne sont pas aussi faciles à comprendre par les lecteurs d'écran ou à naviguer au clavier, et nous devons leur donner un coup de main.
 
@@ -50,7 +50,7 @@ Mais ne désespérez pas - nous vous aiderons ici à naviguer parmi les techniqu
 
 ## Simple images
 
-Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article  [ HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML)  —  vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d’un texte alternatif que les lecteurs d’écran peuvent lire et lire à leurs utilisateurs.
+Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article  [ HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML)  —  vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d’un texte alternatif que les lecteurs d’écran peuvent lire et lire à leurs utilisateurs.
 
 Par exemple:
 
@@ -65,7 +65,7 @@ La mise en œuvre de contrôles audio / vidéo sur le Web ne devrait pas poser d
 
 ### Le problème avec les contrôles HTML5 natifs
 
-Les instances audio et vidéo HTML5 sont même fournies avec un ensemble de commandes intégrées vous permettant de contrôler le contenu multimédia directement. Par exemple (voir  `native-controls.html` [code source](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html) et [en direct](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
+Les instances audio et vidéo HTML5 sont même fournies avec un ensemble de commandes intégrées vous permettant de contrôler le contenu multimédia directement. Par exemple (voir  `native-controls.html` [code source](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html) et [en direct](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
 
 ```html
 <audio controls>
@@ -104,7 +104,7 @@ Prenons l'exemple vidéo ci-dessus et ajoutons-leur des contrôles personnalisé
 
 #### Basic setup
 
-Tout d'abord, prenez une copie de notre  [custom-controls-start.html](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html), [custom-controls.css](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css), [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4), et [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm) fichiers et enregistrez-les dans un nouveau répertoire sur votre disque dur .
+Tout d'abord, prenez une copie de notre  [custom-controls-start.html](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html), [custom-controls.css](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css), [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4), et [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm) fichiers et enregistrez-les dans un nouveau répertoire sur votre disque dur .
 
 Créez un nouveau fichier appelé main.js et enregistrez-le dans le même répertoire .
 
@@ -184,7 +184,7 @@ stopBtn.onclick = function() {
 };
 ```
 
-Il n'y a pas de fonction  `stop()`  disponible sur {{domxref("HTMLMediaElement")}}s,  nous le mettons donc en `pause()`  et, dans le même temps, définissons la valeur `currentTime` sur 0.
+Il n'y a pas de fonction  `stop()`  disponible sur {{domxref("HTMLMediaElement")}}s,  nous le mettons donc en `pause()`  et, dans le même temps, définissons la valeur `currentTime` sur 0.
 
 Ensuite, nos boutons de rembobinage et d’avance rapide - ajoutez les blocs suivants au bas de votre  code:
 
@@ -203,9 +203,9 @@ fwdBtn.onclick = function() {
 };
 ```
 
-Celles-ci sont très simples, il suffit d’ajouter ou de soustraire 3 secondes à  `currentTime` chaque fois qu’on clique dessus. Dans un vrai lecteur vidéo, vous voudrez probablement une barre de recherche plus élaborée, ou similaire.
+Celles-ci sont très simples, il suffit d’ajouter ou de soustraire 3 secondes à  `currentTime` chaque fois qu’on clique dessus. Dans un vrai lecteur vidéo, vous voudrez probablement une barre de recherche plus élaborée, ou similaire.
 
-Notez que nous vérifions également si la durée  `currentTime` est supérieure à la durée totale du support ou si le support n'est pas en cours de lecture lorsque le bouton Fwd est enfoncé. Si l'une ou l'autre de ces conditions est vraie, nous arrêtons simplement la vidéo pour éviter que l'interface utilisateur ne se détériore si elle tente d'effectuer une avance rapide lorsque la vidéo n'est pas en cours de lecture ou si la fin de la vidéo est terminée. .
+Notez que nous vérifions également si la durée  `currentTime` est supérieure à la durée totale du support ou si le support n'est pas en cours de lecture lorsque le bouton Fwd est enfoncé. Si l'une ou l'autre de ces conditions est vraie, nous arrêtons simplement la vidéo pour éviter que l'interface utilisateur ne se détériore si elle tente d'effectuer une avance rapide lorsque la vidéo n'est pas en cours de lecture ou si la fin de la vidéo est terminée. .
 
 Enfin, ajoutez ce qui suit à la fin du code pour contrôler l’affichage du temps écoulé:
 
@@ -243,7 +243,7 @@ Cela vous donne une idée de base sur la manière d’ajouter des fonctionnalit�
 - [Video player styling basics](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Video_player_styling_basics)
 - [Creating a cross-browser video player](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)
 
-Nous avons également créé un exemple avancé pour montrer comment créer un système orienté objet permettant de rechercher tous les lecteurs vidéo et audio de la page (quel que soit leur nombre) et d'y ajouter nos contrôles personnalisés. Voir  [custom-controls-oojs](http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) ( également [voir le code source](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS)).
+Nous avons également créé un exemple avancé pour montrer comment créer un système orienté objet permettant de rechercher tous les lecteurs vidéo et audio de la page (quel que soit leur nombre) et d'y ajouter nos contrôles personnalisés. Voir  [custom-controls-oojs](http://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) ( également [voir le code source](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS)).
 
 ## Transcriptions audio
 
@@ -251,9 +251,9 @@ Pour permettre aux sourds d'accéder au contenu audio, vous devez créer des tra
 
 En termes de création de la transcription, vos options sont les suivantes:
 
-- Services commerciaux - Vous pouvez payer un professionnel pour effectuer la transcription, voir par exemple des entreprises telles que  [Scribie](https://scribie.com/), [Casting Words](https://castingwords.com/), ou [Rev](https://www.rev.com/). Regardez autour de vous et demandez conseil pour vous assurer de trouver une entreprise fiable avec laquelle vous pourrez travailler efficacement.
+- Services commerciaux - Vous pouvez payer un professionnel pour effectuer la transcription, voir par exemple des entreprises telles que  [Scribie](https://scribie.com/), [Casting Words](https://castingwords.com/), ou [Rev](https://www.rev.com/). Regardez autour de vous et demandez conseil pour vous assurer de trouver une entreprise fiable avec laquelle vous pourrez travailler efficacement.
 - Communauté / base / auto-transcription - Si vous faites partie d'une communauté ou d'une équipe active sur votre lieu de travail, vous pouvez leur demander de l'aide pour faire les traductions. Vous pouvez même essayer de les faire vous-même.
-- Services automatisés - Des services d'intelligence artificielle sont disponibles, tels que  [Trint](https://trint.com). Téléchargez un fichier vidéo / audio sur le site, qui le transcrivera automatiquement pour vous. Sur YouTube, vous pouvez choisir de générer des sous-titres / transcriptions automatisés. Selon la clarté de l'audio parlé, la qualité de la transcription résultante variera considérablement. .
+- Services automatisés - Des services d'intelligence artificielle sont disponibles, tels que  [Trint](https://trint.com). Téléchargez un fichier vidéo / audio sur le site, qui le transcrivera automatiquement pour vous. Sur YouTube, vous pouvez choisir de générer des sous-titres / transcriptions automatisés. Selon la clarté de l'audio parlé, la qualité de la transcription résultante variera considérablement. .
 
 Comme dans la plupart des choses de la vie, vous avez tendance à avoir ce que vous payez. la précision et le temps requis pour produire la transcription varient selon les services. Si vous payez une transcription pour une entreprise digne de confiance ou un service d’AI, vous le ferez probablement rapidement et avec une qualité élevée. Si vous ne voulez pas payer pour cela, vous le ferez probablement avec une qualité inférieure et / ou lentement.
 
@@ -261,9 +261,9 @@ Il n’est pas acceptable de publier une ressource audio mais de promettre de pu
 
 ### Exemples de transcription
 
-Si vous utilisez un service automatisé, vous devrez probablement utiliser l'interface utilisateur fournie par l'outil. Par exemple, jetez un coup d’œil à  [Audio Transcription Sample 1](https://www.youtube.com/watch?v=zFFBsj97Od8) _et choisissez plus > Transcript_.
+Si vous utilisez un service automatisé, vous devrez probablement utiliser l'interface utilisateur fournie par l'outil. Par exemple, jetez un coup d’œil à  [Audio Transcription Sample 1](https://www.youtube.com/watch?v=zFFBsj97Od8) _et choisissez plus > Transcript_.
 
-Si vous créez votre propre interface utilisateur pour présenter votre audio et la transcription associée, vous pouvez le faire comme bon vous semble, mais il serait peut-être judicieux de l'inclure dans un panneau pouvant être affiché / masqué; voir notre exemple  [transcription audio-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) exemple (voir aussi le [code source](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui)).
+Si vous créez votre propre interface utilisateur pour présenter votre audio et la transcription associée, vous pouvez le faire comme bon vous semble, mais il serait peut-être judicieux de l'inclure dans un panneau pouvant être affiché / masqué; voir notre exemple  [transcription audio-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) exemple (voir aussi le [code source](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui)).
 
 ### Descriptions audio
 
@@ -348,7 +348,7 @@ Les sections ci-dessus ne couvrent pas tous les types de contenu multimédia que
 Pour ce type de contenu, vous devez traiter les problèmes d’accessibilité au cas par cas. Dans certains cas, ce n'est pas si grave, par exemple:
 
 - Si vous intégrez du contenu audio à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez probablement simplement fournir une transcription audio de la même manière que celle décrite ci-dessus dans la section {{anch("Transcript examples")}} .
-- Si vous intégrez du contenu vidéo à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez tirer parti des techniques de sous-titrage / sous-titrage disponibles pour ces technologies. Par exemple, voir  [Flash captions](http://www.adobe.com/accessibility/products/flash/captions.html), [Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning), ou [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
+- Si vous intégrez du contenu vidéo à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez tirer parti des techniques de sous-titrage / sous-titrage disponibles pour ces technologies. Par exemple, voir  [Flash captions](http://www.adobe.com/accessibility/products/flash/captions.html), [Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning), ou [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
 
 Cependant, il est difficile de rendre les autres multimédias accessibles. Si, par exemple, vous avez affaire à un jeu immersif en 3D ou à une application de réalité virtuelle, il est vraiment difficile de fournir des alternatives textuelles pour une telle expérience, et vous pouvez soutenir que les utilisateurs non-voyants ne sont pas vraiment dans le groupe-cible de telles applications.
 

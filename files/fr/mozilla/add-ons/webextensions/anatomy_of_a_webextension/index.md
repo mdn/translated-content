@@ -101,7 +101,7 @@ Votre extension peut inclure divers composants d'interface utilisateur dont le c
 
 - Une [barre latérale](/fr/Add-ons/WebExtensions/user_interface/Sidebars) est un volet qui s'affiche dans la partie gauche de la fenêtre du navigateur, à côté de la page Web.
 - Un [popup](/fr/Add-ons/WebExtensions/user_interface/Popups) est une boîte de dialogue que vous pouvez afficher lorsque l'utilisateur clique sur un [bouton de la barre d'outils](/fr/Add-ons/WebExtensions/user_interface/Browser_action) ou de la [barre d'adresse](/fr/Add-ons/WebExtensions/user_interface/Page_actions)
-- Une [page d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages)  est une page qui s'affiche lorsque l'utilisateur accède aux préférences de votre module complémentaire dans le gestionnaire d'add-ons natif du navigateur.
+- Une [page d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages)  est une page qui s'affiche lorsque l'utilisateur accède aux préférences de votre module complémentaire dans le gestionnaire d'add-ons natif du navigateur.
 
 Pour chacun de ces composants, vous créez un fichier HTML et pointez vers lui en utilisant une propriété spécifique dans [manifest.json](/fr/Add-ons/WebExtensions/manifest.json). Le fichier HTML peut inclure des fichiers CSS et JavaScript, tout comme une page Web normale.
 

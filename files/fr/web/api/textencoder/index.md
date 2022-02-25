@@ -45,10 +45,10 @@ La prothèse d'émulation ci-dessous va uniquement répondre aux spécifications
 if (typeof TextEncoder === "undefined") {
     TextEncoder=function TextEncoder(){};
     TextEncoder.prototype.encode = function encode(str) {
-        "use strict";
+        "use strict";
         var Len = str.length, resPos = -1;
         // The Uint8Array's length must be at least 3x the length of the string because an invalid UTF-16
-        //  takes up the equivelent space of 3 UTF-8 characters to encode it properly. However, Array's
+        //  takes up the equivelent space of 3 UTF-8 characters to encode it properly. However, Array's
         //  have an auto expanding length and 1.5x should be just the right balance for most uses.
         var resArr = typeof Uint8Array === "undefined" ? new Array(Len * 1.5) : new Uint8Array(Len * 3);
         for (var point=0, nextcode=0, i = 0; i !== Len; ) {
@@ -79,7 +79,7 @@ if (typeof TextEncoder === "undefined") {
                 resArr[resPos += 1] = (0x0/*0b0*/<<7) | point;
             } else if (point <= 0x07ff) {
                 resArr[resPos += 1] = (0x6/*0b110*/<<5) | (point>>>6);
-                resArr[resPos += 1] = (0x2/*0b10*/<<6)  | (point&0x3f/*0b00111111*/);
+                resArr[resPos += 1] = (0x2/*0b10*/<<6)  | (point&0x3f/*0b00111111*/);
             } else {
                 resArr[resPos += 1] = (0xe/*0b1110*/<<4) | (point>>>12);
                 resArr[resPos += 1] = (0x2/*0b10*/<<6)    | ((point>>>6)&0x3f/*0b00111111*/);

@@ -254,7 +254,7 @@ x-xxx-xx-x-
 x_x_x___x___x___
 ```
 
-**Sortie :**Un tableau d'objets. Un `'x'` dénote un état `'marche'`, un `'-'` symbolise un état '`arret`' et un  `'_'` (blanc souligné) symbolise la longueur d'un état `'marche'`.
+**Sortie :**Un tableau d'objets. Un `'x'` dénote un état `'marche'`, un `'-'` symbolise un état '`arret`' et un  `'_'` (blanc souligné) symbolise la longueur d'un état `'marche'`.
 
 ```json
 [

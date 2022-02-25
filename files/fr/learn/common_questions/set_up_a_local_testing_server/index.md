@@ -64,7 +64,7 @@ Voilà la marche à suivre :
     - Sous Télécharger, cliquez le lien pour Python "3.xxx".
     - Tout en bas de la page,  télécharger le fichier pointé par le lien *Windows x86 executable installer*.
     - Exécuter ce programme quand le téléchargement est fini.
-    - Sur la première page de l'installeur, assurez-vous d'avoir coché la case  "Ajouter Python 3.xxx to PATH".
+    - Sur la première page de l'installeur, assurez-vous d'avoir coché la case  "Ajouter Python 3.xxx to PATH".
     - Cliquer _Install_, puis _Fermer_ quand l'installation est complète.
 
 2.  Ouvrez votre invite de commandes (Windows)/terminal (OS X et GNULinux). Pour vérifier que l'installation précédente s'est déroulée correctement, entrez la commande suivante :

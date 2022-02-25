@@ -195,7 +195,7 @@ navigator.getUserMedia (
     filtreAccordable.connect(gainVolume);
     gainVolume.connect(contexteAudio.destination); // connecte les différents noeuds de graphes audio entre eux
 
-    genererVisualisation(flux);
+    genererVisualisation(flux);
     voiceChange();
 
   },

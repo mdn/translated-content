@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
 {{APIRef()}}{{SeeCompatTable}}
 
-La propriété en lecture seule  **`caches`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'objet {{domxref("CacheStorage")}} associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
+La propriété en lecture seule  **`caches`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'objet {{domxref("CacheStorage")}} associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
 
 ## Syntaxe
 

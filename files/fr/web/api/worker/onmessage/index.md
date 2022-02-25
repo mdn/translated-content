@@ -32,8 +32,8 @@ first.onchange = function() {
 }
 
 myWorker.onmessage = function(e) {
-  result.textContent = e.data;
-  console.log('Message reçu du worker');
+  result.textContent = e.data;
+  console.log('Message reçu du worker');
 }
 ```
 

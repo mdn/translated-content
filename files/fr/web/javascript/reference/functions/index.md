@@ -126,7 +126,7 @@ Les _IIFE_ sont des expressions de fonction appelées dès que la fonction est d
 Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page sur l'instruction {{jsxref('Instructions/function*', 'function*')}} pour plus de détails) :
 
     function* nom([param[, param[, ... param]]]) {
-       instructions
+       instructions
     }
 
 - `nom`
@@ -141,7 +141,7 @@ Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page s
 Une expression de générateur est similaire à une déclaration de fonction génératrice et possède presque la même syntaxe (pour plus de détails, consulter la page sur l'expression {{jsxref('Opérateurs/function*', 'function*')}}) :
 
     function* [nom]([param[, param[, ... param]]]) {
-       instructions
+       instructions
     }
 
 - `nom`

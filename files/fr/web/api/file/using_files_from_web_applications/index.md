@@ -269,7 +269,7 @@ Vous pouvez procéder ainsi pour créer un objet URL lorsque vous souhaitez ré
 var objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré ; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }}  si votre page les utilise de manière dynamique&nbsp;:
+L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré ; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }}  si votre page les utilise de manière dynamique&nbsp;:
 
 ```js
 window.URL.revokeObjectURL(objectURL);
@@ -410,7 +410,7 @@ Il est nécessaire de prévoir quelques étapes préparatoires avant le téléch
 3.  La requête de téléchargement de l'image est ouverte par l'appel à la méthode `open()` du XMLHttpRequest, démarrant la création d'une requête POST.
 4.  Le type MIME pour le téléchargement est défini en appelant la fonction `overrideMimeType()` du `XMLHttpRequest`. Nous utilisons ici un type MIME générique ; vous pouvez selon les cas définir ou ne définir aucun type MIME.
 5.  L'objet `FileReader` est utilisé pour la conversion du fichier en chaîne binaire.
-6.  La fonction `send()` du  XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
+6.  La fonction `send()` du  XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
 
 > **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }} ; utilisez plutôt la méthode standard `send(Blob data)`.
 
@@ -450,12 +450,12 @@ if (isset($_FILES['myFile'])) {
         window.onload = function() {
             var dropzone = document.getElementById("dropzone");
             dropzone.ondragover = dropzone.ondragenter = function(event) {
-                event.stopPropagation();
+                event.stopPropagation();
                 event.preventDefault();
             }
 
             dropzone.ondrop = function(event) {
-                event.stopPropagation();
+                event.stopPropagation();
                 event.preventDefault();
 
                 var filesArray = event.dataTransfer.files;

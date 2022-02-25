@@ -70,7 +70,7 @@ L'exemple ressemble à ceci:
 
 Les parties les plus intéressantes du fichier CSS de l'exemple:
 
-- Positionnez les trois éléments en absolu à l’intérieur du `full-img <div>`: le `<img>` dans lequel l’image est affichée grandeur nature, un  `<div>` vide dimensionné à la même taille que le `<img>` et placé juste au-dessus (ceci est utilisé pour appliquer un effet assombrissant à l'image via une couleur d'arrière-plan semi-transparente), et un bouton `<button>`qui est utilisé pour contrôler l'effet d'assombrissement.
+- Positionnez les trois éléments en absolu à l’intérieur du `full-img <div>`: le `<img>` dans lequel l’image est affichée grandeur nature, un  `<div>` vide dimensionné à la même taille que le `<img>` et placé juste au-dessus (ceci est utilisé pour appliquer un effet assombrissant à l'image via une couleur d'arrière-plan semi-transparente), et un bouton `<button>`qui est utilisé pour contrôler l'effet d'assombrissement.
 - Réglez la largeur des images à l'intérieur de `thumb-bar <div>`(appelées images miniatures) à 20% et faites un float à gauche pour qu'elles soient côte-à-côte sur une ligne.
 
 Votre JavaScript doit:

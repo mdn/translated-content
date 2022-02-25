@@ -106,9 +106,9 @@ Pour plus de détails, voir [section 3.1, Event dispatch and DOM event flow](htt
 <label for="chCapture">Use Capturing</label>
  <div id="d1">d1
   <div id="d2">d2
-      <div id="d3">d3
-          <div id="d4">d4</div>
-      </div>
+      <div id="d3">d3
+          <div id="d4">d4</div>
+      </div>
   </div>
  </div>
  <div id="divInfo"></div>

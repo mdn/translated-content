@@ -90,7 +90,7 @@ Une précedente version des spécifications a défini ces interfaces, désormais
 - {{domxref("IDBObjectStoreSync")}} {{obsolete_inline}}
   - : Version synchrone de {{domxref("IDBObjectStore")}}.
 - {{domxref("IDBIndexSync")}} {{obsolete_inline}}
-  - : Version synchrone de  {{domxref("IDBIndex")}}.
+  - : Version synchrone de  {{domxref("IDBIndex")}}.
 - {{domxref("IDBFactorySync")}} {{obsolete_inline}}
   - : Version synchrone de {{domxref("IDBFactory")}}.
 - {{domxref("IDBEnvironmentSync")}} {{obsolete_inline}}

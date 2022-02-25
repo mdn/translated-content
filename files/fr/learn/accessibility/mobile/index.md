@@ -21,7 +21,7 @@ L'accès Web sur les appareils mobiles étant si populaire et les plates-formes 
       <th scope="row">Prerequisites:</th>
       <td>
         Connaissances de base en informatique, compréhension de base de HTML,
-        CSS et JavaScript et compréhension de la  <a
+        CSS et JavaScript et compréhension de la  <a
           href="/fr/docs/Learn/Accessibility"
           >previous articles in the course</a
         >.
@@ -41,7 +41,7 @@ L'accès Web sur les appareils mobiles étant si populaire et les plates-formes 
 
 L’état de l’accessibilité - et la prise en charge des normes Web en général - est bon pour les appareils mobiles modernes. Le temps où les appareils mobiles utilisaient des technologies Web complètement différentes des navigateurs de bureau, forçait les développeurs à utiliser le sniffing de navigateur et à leur servir des sites complètement séparés (même si de nombreuses entreprises détectent encore l'utilisation d'appareils mobiles et leur servent un domaine distinct).
 
-De nos jours, les appareils mobiles en général peuvent gérer des sites Web "complets", et les principales plates-formes ont même des lecteurs d'écran intégrés pour permettre aux utilisateurs malvoyants de les utiliser avec succès. Les navigateurs mobiles modernes ont tendance à avoir un bon support pour  [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics), aussi
+De nos jours, les appareils mobiles en général peuvent gérer des sites Web "complets", et les principales plates-formes ont même des lecteurs d'écran intégrés pour permettre aux utilisateurs malvoyants de les utiliser avec succès. Les navigateurs mobiles modernes ont tendance à avoir un bon support pour  [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics), aussi
 
 Pour rendre un site Web accessible et utilisable sur mobile, il vous suffit de suivre les bonnes pratiques générales en matière de conception de sites Web et d'accessibilité.
 
@@ -80,7 +80,7 @@ Si vous souhaitez désactiver TalkBack:
 
 **Note:** Vous pouvez accéder à votre écran d'accueil à tout moment en glissant vers le haut et à gauche dans un mouvement fluide. Si vous avez plus d'un écran d'accueil, vous pouvez passer d'un écran à l'autre en faisant glisser deux doigts vers la gauche et vers la droite. .
 
-Pour une liste plus complète des gestes TalkBack, voir  [Use TalkBack gestures](https://support.google.com/accessibility/android/answer/6151827).
+Pour une liste plus complète des gestes TalkBack, voir  [Use TalkBack gestures](https://support.google.com/accessibility/android/answer/6151827).
 
 #### Déverrouiller le téléphone
 
@@ -101,7 +101,7 @@ TalkBack vous permet d'accéder aux menus contextuels globaux et locaux, où que
 3.  Balayez vers la gauche et la droite pour naviguer entre les différentes options. .
 4.  Une fois que vous avez sélectionné l'option de votre choix, double-cliquez dessus pour la choisir.
 
-Pour plus de détails sur toutes les options disponibles dans les menus contextuels global et local, voir  [Use global and local context menus](https://support.google.com/accessibility/android/answer/6007066).
+Pour plus de détails sur toutes les options disponibles dans les menus contextuels global et local, voir  [Use global and local context menus](https://support.google.com/accessibility/android/answer/6007066).
 
 #### Parcourir des pages Web
 
@@ -186,13 +186,13 @@ Essayons la navigation Web avec VoiceOver:
 
 ## Mécanismes de contrôle
 
-Dans notre article relatif à l'accessibilité CSS et JavaScript, nous avons examiné l'idée d'événements spécifiques à un certain type de mécanisme de contrôle  (see [Mouse-specific events](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)). En résumé, cela pose des problèmes d'accessibilité car d'autres mécanismes de contrôle ne peuvent pas activer la fonctionnalité associée.
+Dans notre article relatif à l'accessibilité CSS et JavaScript, nous avons examiné l'idée d'événements spécifiques à un certain type de mécanisme de contrôle  (see [Mouse-specific events](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#mouse-specific_events)). En résumé, cela pose des problèmes d'accessibilité car d'autres mécanismes de contrôle ne peuvent pas activer la fonctionnalité associée.
 
-Par exemple, l'événement  [click](/fr/docs/Web/API/GlobalEventHandlers/onclick)  est bon en termes d'accessibilité - un gestionnaire d'événements associé peut être appelé en cliquant sur l'élément sur lequel il est défini, en le sélectionnant et en appuyant sur Entrée / Retour ou en le tapant sur un périphérique à écran tactile. Essayez notre [simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html) exemple ([see it running live](http://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) pour voir ce que nous entendons. .
+Par exemple, l'événement  [click](/fr/docs/Web/API/GlobalEventHandlers/onclick)  est bon en termes d'accessibilité - un gestionnaire d'événements associé peut être appelé en cliquant sur l'élément sur lequel il est défini, en le sélectionnant et en appuyant sur Entrée / Retour ou en le tapant sur un périphérique à écran tactile. Essayez notre [simple-button-example.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-button-example.html) exemple ([see it running live](http://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) pour voir ce que nous entendons. .
 
-Sinon, des événements spécifiques à la souris, tels que  [mousedown](/fr/docs/Web/API/GlobalEventHandlers/onmousedown) et [mouseup](/fr/docs/Web/API/GlobalEventHandlers/onmouseup) créent des problèmes - leurs gestionnaires d'événements ne peuvent pas être appelés à l'aide de contrôles autres que la souris.
+Sinon, des événements spécifiques à la souris, tels que  [mousedown](/fr/docs/Web/API/GlobalEventHandlers/onmousedown) et [mouseup](/fr/docs/Web/API/GlobalEventHandlers/onmouseup) créent des problèmes - leurs gestionnaires d'événements ne peuvent pas être appelés à l'aide de contrôles autres que la souris.
 
-Si vous essayez de contrôler notre exemple  [simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html) ([see example live](http://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) avec un clavier ou une touche, vous verrez le problème. Cela se produit car nous utilisons un code tel que:
+Si vous essayez de contrôler notre exemple  [simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html) ([see example live](http://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) avec un clavier ou une touche, vous verrez le problème. Cela se produit car nous utilisons un code tel que:
 
 ```js
 div.onmousedown = function() {
@@ -227,8 +227,8 @@ Nous avons fourni un exemple simple qui montre comment utiliser simultanément l
 
 En particulier, les problèmes les plus courants auxquels le mobile doit faire face sont les suivants:
 
-- Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que  [media queries](/fr/docs/Web/CSS/Media_Queries), [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), et [flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
-- Conserver les tailles d’image téléchargées. En général, les appareils de petite taille n’auront pas besoin d’images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d’être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant  [responsive image techniques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+- Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que  [media queries](/fr/docs/Web/CSS/Media_Queries), [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), et [flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+- Conserver les tailles d’image téléchargées. En général, les appareils de petite taille n’auront pas besoin d’images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d’être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant  [responsive image techniques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 - Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d’image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée   (voir [Adding vector graphics to the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) pour plus de détails ).
 
 **Note:**  Nous ne fournirons pas une analyse complète des techniques de conception réactive ici, car elles sont couvertes ailleurs au sein de MDN (voir les liens ci-dessus).
@@ -239,7 +239,7 @@ Il existe d'autres problèmes importants à prendre en compte lors de la créati
 
 #### Ne pas désactiver le zoom
 
-En utilisant  [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), il est possible de désactiver le zoom, en utilisant un code comme celui-ci dans votre {{htmlelement("head")}}:
+En utilisant  [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), il est possible de désactiver le zoom, en utilisant un code comme celui-ci dans votre {{htmlelement("head")}}:
 
 ```html
 <meta name="viewport" content="user-scalable=no">
@@ -253,20 +253,20 @@ Vous ne devriez jamais faire cela autant que possible - beaucoup de gens compten
 
 Lorsque vous implémentez un tel menu, vous devez vous assurer que le contrôle qui le révèle est accessible par les mécanismes de contrôle appropriés (normalement tactile pour mobile), comme indiqué dans {{anch("Control mechanisms")}} ci-dessus, et que le reste de la page est déplacé ou caché d'une manière ou d'une autre pendant l'accès au menu, afin d'éviter toute confusion lors de la navigation. .
 
-Cliquez ici pour un  [good hamburger menu example](http://fritz-weisshart.de/meg_men/).
+Cliquez ici pour un  [good hamburger menu example](http://fritz-weisshart.de/meg_men/).
 
 ## Entrée utilisateur
 
 Sur les appareils mobiles, la saisie de données a tendance à être plus agaçante pour les utilisateurs que l'expérience équivalente sur les ordinateurs de bureau. Il est plus pratique de taper du texte dans les entrées de formulaire à l'aide d'un clavier d'ordinateur de bureau ou d'ordinateur portable que d'un clavier virtuel à écran tactile ou d'un petit clavier physique mobile.
 
-Pour cette raison, il vaut la peine d'essayer de minimiser la quantité de frappe nécessaire. Par exemple, au lieu de forcer les utilisateurs à saisir chaque fois le titre de leur travail en utilisant une entrée de texte standard, vous pouvez proposer un menu  {{htmlelement("select")}}  contenant les options les plus courantes (ce qui aide également à cohérence dans la saisie des données), et offrent une option "Autre" qui affiche un champ de texte dans lequel taper les valeurs aberrantes. Vous pouvez voir un exemple simple de cette idée en action dans [common-job-types.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/common-job-types.html) ( voir le [common jobs example live](http://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
+Pour cette raison, il vaut la peine d'essayer de minimiser la quantité de frappe nécessaire. Par exemple, au lieu de forcer les utilisateurs à saisir chaque fois le titre de leur travail en utilisant une entrée de texte standard, vous pouvez proposer un menu  {{htmlelement("select")}}  contenant les options les plus courantes (ce qui aide également à cohérence dans la saisie des données), et offrent une option "Autre" qui affiche un champ de texte dans lequel taper les valeurs aberrantes. Vous pouvez voir un exemple simple de cette idée en action dans [common-job-types.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/common-job-types.html) ( voir le [common jobs example live](http://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
 
-Il est également utile d’envisager l’utilisation de types de saisie de formulaire au format HTML5, tels que la date sur les plates-formes mobiles car ils les gèrent bien (Android et iOS, par exemple, affichent des widgets utilisables qui correspondent bien à l’expérience de l’appareil. Voir  [html5-form-examples.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html)  pour quelques exemples (voir [HTML5 form examples live](http://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — essayez de les charger et de les manipuler sur des appareils mobiles. Par exemple:
+Il est également utile d’envisager l’utilisation de types de saisie de formulaire au format HTML5, tels que la date sur les plates-formes mobiles car ils les gèrent bien (Android et iOS, par exemple, affichent des widgets utilisables qui correspondent bien à l’expérience de l’appareil. Voir  [html5-form-examples.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/html5-form-examples.html)  pour quelques exemples (voir [HTML5 form examples live](http://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — essayez de les charger et de les manipuler sur des appareils mobiles. Par exemple:
 
-- Les types  `number`, `tel`, et `email` affichent des claviers virtuels appropriés pour la saisie de numéros / numéros de téléphone.
+- Les types  `number`, `tel`, et `email` affichent des claviers virtuels appropriés pour la saisie de numéros / numéros de téléphone.
 - Les types `time` et `date` affichent des sélecteurs appropriés pour la sélection des heures et des dates. .
 
-Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à  [input types](http://diveinto.html5doctor.com/detect.html#input-types)  pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article [feature detection article](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) pour en savoir plus. .
+Si vous souhaitez fournir une solution différente pour les ordinateurs de bureau, vous pouvez toujours proposer un balisage différent à vos périphériques mobiles à l'aide de la détection de fonctionnalités. Reportez-vous à  [input types](http://diveinto.html5doctor.com/detect.html#input-types)  pour obtenir des informations brutes sur la détection de différents types d'entrée et consultez notre article [feature detection article](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection) pour en savoir plus. .
 
 ## Résumé
 

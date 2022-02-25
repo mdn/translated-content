@@ -30,7 +30,7 @@ function drawScore() {
 }
 ```
 
-Dessiner du texte sur un canvas revient à dessiner une forme. La définition de la police est identique à celle en CSS — vous pouvez définir la taille et le type avec la méthode   {{domxref("CanvasRenderingContext2D.font","font()")}}. Puis utilisez {{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} pour définir la couleur de la police et {{domxref("CanvasRenderingContext2D.fillText","fillText()")}} pour définir la position du texte sur le canevas. Le premier paramètre est le texte lui-même — le code ci-dessus indique le nombre actuel de points — et les deux derniers paramètres sont les coordonnées où le texte est placé sur le canevas.
+Dessiner du texte sur un canvas revient à dessiner une forme. La définition de la police est identique à celle en CSS — vous pouvez définir la taille et le type avec la méthode   {{domxref("CanvasRenderingContext2D.font","font()")}}. Puis utilisez {{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} pour définir la couleur de la police et {{domxref("CanvasRenderingContext2D.fillText","fillText()")}} pour définir la position du texte sur le canevas. Le premier paramètre est le texte lui-même — le code ci-dessus indique le nombre actuel de points — et les deux derniers paramètres sont les coordonnées où le texte est placé sur le canevas.
 
 Pour attribuer le score à chaque collision avec une brique, ajoutez une ligne à la fonction `collisionDetection()` afin d'incrémenter la valeur de la variable score à chaque détection d'une collision. Ajoutez à votre code la ligne mise en évidence ci-dessous :
 

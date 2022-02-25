@@ -43,7 +43,7 @@ var creating = browser.windows.create(
 
     - `allowScriptsToClose` {{optional_inline}}
 
-      - : `boolean`. Lorsque la fenêtre est ouverte, elle contiendra un seul onglet, ou plus d'un onglet si `url` est donnée et comprendra un tableau contenant plus d'une URL. Par défaut, les scripts s'exécutant dans ces pages ne sont pas autorisés à fermer leur onglet en utilisant [`window.close()`](/fr/docs/Web/API/Window/close). Si vous incluez `allowScriptsToClose` et le mettez à `true` ,  alors ce comportement par défaut est modifié, de sorte que les scripts peuvent fermer leurs onglets. Notez cela :
+      - : `boolean`. Lorsque la fenêtre est ouverte, elle contiendra un seul onglet, ou plus d'un onglet si `url` est donnée et comprendra un tableau contenant plus d'une URL. Par défaut, les scripts s'exécutant dans ces pages ne sont pas autorisés à fermer leur onglet en utilisant [`window.close()`](/fr/docs/Web/API/Window/close). Si vous incluez `allowScriptsToClose` et le mettez à `true` ,  alors ce comportement par défaut est modifié, de sorte que les scripts peuvent fermer leurs onglets. Notez cela :
 
         - Ceci ne s'applique qu'aux onglets qui ont été ouverts lors de la création de la fenêtre. Si l'utilisateur ouvre plus d'onglets dans cette fenêtre, les scripts ne pourront pas fermer ces nouveaux onglets.
         - Si la ou les url(s) donnée(s) dans `url` pointent vers les [pages d'extension](/fr/Add-ons/WebExtensions/user_interface/Bundled_web_pages) (c'est-à-dire qu'il s'agit de pages incluses avec cette extension et chargées avec le protocole "moz-extension:") alors les scripts _sont_ par défaut autorisés à fermer ces onglets.

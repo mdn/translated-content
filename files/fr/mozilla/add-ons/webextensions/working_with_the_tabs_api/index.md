@@ -551,7 +551,7 @@ Maintenant, un écouteur sur `geAction.onClicked` attend que l'icône pageAction
 browser.pageAction.onClicked.addListener(toggleCSS);
 ```
 
-`toggleCSS()` obtient le titre de la `pageAction`  puis prend l'action décrite :
+`toggleCSS()` obtient le titre de la `pageAction`  puis prend l'action décrite :
 
 - **Pour "Appliquer CSS”:**
 

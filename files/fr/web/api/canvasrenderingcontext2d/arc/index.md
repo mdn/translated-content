@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.arc()`** de l'API Canvas 2D permet d'ajouter un arc de cercle  au tracé, en le centrant aux positions _(x, y)* et avec un rayon *r* qui démarre à *angleDépart* et qui finit à *angleFin*, dans la direction de *sensAntiHoraire* (par défaut en sens horaire).
+La méthode **`CanvasRenderingContext2D.arc()`** de l'API Canvas 2D permet d'ajouter un arc de cercle  au tracé, en le centrant aux positions _(x, y)* et avec un rayon *r* qui démarre à *angleDépart* et qui finit à *angleFin*, dans la direction de *sensAntiHoraire* (par défaut en sens horaire).
 
 ## Syntaxe
 

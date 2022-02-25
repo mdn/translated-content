@@ -97,7 +97,7 @@ browser.menus.create(
         Si le titre contient une esperluette "&" le caractère suivant sera utilisé comme clé d'accès pour l'élément et l'esperluette ne sera pas affichée. Les exceptions à cette règle sont les suivantes :
 
         - Si le caractère suivant est également une esperluette : alors une esperluette simple sera affichée et aucune clé d'accès ne sera définie. En effet, "&&" est utilisé pour afficher une seule esperluette.
-        - Si les caractères suivants sont la directive d'interpolation "%s" :  alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
+        - Si les caractères suivants sont la directive d'interpolation "%s" :  alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
         - Si l'esperluette est le dernier caractère du titre : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
 
         Seule la première esperluette sera utilisée pour définir une clé d'accès : les esperluettes suivantes ne seront pas affichées mais ne définiront pas les clés. Ainsi "\&A et \&B" seront affichés comme "A et B" et "A" comme clé d'accès.

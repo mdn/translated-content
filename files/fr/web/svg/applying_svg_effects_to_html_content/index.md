@@ -170,7 +170,7 @@ Et encore d'autres filtres :
   </filter>
   <filter id="f4">
     <feSpecularLighting surfaceScale="5" specularConstant="1"
-                        specularExponent="10" lighting-color="white">
+                        specularExponent="10" lighting-color="white">
       <fePointLight x="-5000" y="-10000" z="20000"/>
     </feSpecularLighting>
   </filter>

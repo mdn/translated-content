@@ -37,12 +37,12 @@ Les caractères d'une chaîne de caractères sont indexés de gauche à droite. 
 
 ```js
 'canal'.lastIndexOf('a');     // renvoie 3
-'canal'.lastIndexOf('a', 2);  // renvoie 1
-'canal'.lastIndexOf('a', 0);  // renvoie -1
+'canal'.lastIndexOf('a', 2);  // renvoie 1
+'canal'.lastIndexOf('a', 0);  // renvoie -1
 'canal'.lastIndexOf('x');     // renvoie -1
 'canal'.lastIndexOf('c', -5); // renvoie 0
-'canal'.lastIndexOf('c', 0);  // renvoie 0
-'canal'.lastIndexOf('');      // renvoie 5
+'canal'.lastIndexOf('c', 0);  // renvoie 0
+'canal'.lastIndexOf('');      // renvoie 5
 'canal'.lastIndexOf('', 2);   // renvoie 2
 ```
 

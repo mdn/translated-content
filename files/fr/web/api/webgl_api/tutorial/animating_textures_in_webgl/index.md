@@ -35,13 +35,13 @@ function configurerVideo(url) {
   // qu'il y a des données dans la vidéo
 
   video.addEventListener('playing', function() {
-     playing = true;
-     verifierPret();
+     playing = true;
+     verifierPret();
   }, true);
 
   video.addEventListener('timeupdate', function() {
-     timeupdate = true;
-     verifierPret();
+     timeupdate = true;
+     verifierPret();
   }, true);
 
   video.src = url;
@@ -81,7 +81,7 @@ function initTexture(gl, url) {
   const bordure = 0;
   const formatSrc = gl.RGBA;
   const typeSrc = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]);  // bleu opaque
+  const pixel = new Uint8Array([0, 0, 255, 255]);  // bleu opaque
   gl.texImage2D(gl.TEXTURE_2D, niveau, formatInterne,
                 largeur, hauteur, bordure, formatSrc, typeSrc,
                 pixel);
@@ -119,7 +119,7 @@ Si `copierVideo` est true, alors `mettreAJourTexture()` est appelé à chaque fo
 
   // Dessiner la scène répétitivement
   function dessiner(maintenant) {
-    maintenant *= 0.001;  // convertir en seconds
+    maintenant *= 0.001;  // convertir en seconds
     const ecartTemps = maintenant - alors;
     alors = maintenant;
 

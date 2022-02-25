@@ -208,7 +208,7 @@ browser.cookies.onChanged.addListener((changeInfo) => {
 
 ### Scripts—background.js
 
-Un script d'arrière-plan ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) permet à l'utilisateur de choisir une icône d'arrière-plan et une couleur pour le site Web dans une session antérieure. Le script est à l'écoute des changements dans l'onglet actif, que ce soit l'utilisateur qui passe d'un onglet à l'autre ou modifie l'URL de la page affichée dans l'onglet. Lorsque l'un de ces événements se produit, `cookieUpdate()` est appelée.  `cookieUpdate()` utilise à son tour `getActiveTab()` pour obtenir l'ID de l'onglet actif. La fonction peut ensuite vérifier si un cookie existe pour l'extension, en utilisant l'URL de l'onglet :
+Un script d'arrière-plan ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) permet à l'utilisateur de choisir une icône d'arrière-plan et une couleur pour le site Web dans une session antérieure. Le script est à l'écoute des changements dans l'onglet actif, que ce soit l'utilisateur qui passe d'un onglet à l'autre ou modifie l'URL de la page affichée dans l'onglet. Lorsque l'un de ces événements se produit, `cookieUpdate()` est appelée.  `cookieUpdate()` utilise à son tour `getActiveTab()` pour obtenir l'ID de l'onglet actif. La fonction peut ensuite vérifier si un cookie existe pour l'extension, en utilisant l'URL de l'onglet :
 
 ```js
     var gettingCookies = browser.cookies.get({

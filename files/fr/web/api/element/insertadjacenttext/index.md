@@ -77,8 +77,8 @@ Vous pouvez utiliser une émulation de la méthode `insertAdjacentText()` dans I
         this.insertAdjacentHTML(
           type,
           (txt+'') // convertir en chaîne de caractères
-            .replace(/&/g, '&amp;') // intégrer des symboles d'esperluette
-            .replace(/</g, '&lt;') // intégrer les symboles "plus petit que"
+            .replace(/&/g, '&amp;') // intégrer des symboles d'esperluette
+            .replace(/</g, '&lt;') // intégrer les symboles "plus petit que"
         )
       }
 

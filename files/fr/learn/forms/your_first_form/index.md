@@ -60,7 +60,7 @@ Dans ce guide, nous allons concevoir un formulaire de contact simple. Posons les
 
 Notre formulaire contiendra trois champs de texte et un bouton. Nous demandons simplement à notre utilisateur son nom, son adresse électronique et le message qu'il souhaite envoyer. En appuyant sur le bouton, le message sera envoyé au serveur web.
 
-##  Apprentissage actif&nbsp;: mise en œuvre de notre formulaire HTML
+##  Apprentissage actif&nbsp;: mise en œuvre de notre formulaire HTML
 
 Très bien, nous sommes maintenant prêts à passer au HTML et à coder notre formulaire. Pour construire notre formulaire, nous aurons besoin des éléments HTML suivants : {{HTMLElement("form")}}, {{HTMLElement("label")}}, {{HTMLElement("input")}}, {{HTMLElement("textarea")}} et {{HTMLElement("button")}}.
 
