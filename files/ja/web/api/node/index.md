@@ -28,7 +28,7 @@ _以下のプロパティに加え、 `Node` は親である {{DOMxRef("EventTar
 - {{DOMxRef("Node.firstChild")}}{{ReadOnlyInline}}
   - : ノードの直下の最初の子ノードを表す `Node` を返します。子が存在しなければ `null` を返します。
 - {{DOMxRef("Node.isConnected")}}{{ReadOnlyInline}}
-  - : 論理値で、ノードが (直接/間接的に) コンテキストオブジェクト、例えば、通常の DOM の場合は {{DOMxRef("Document")}} オブジェクト、あるいはシャドー DOM の場合は {{DOMxRef("ShadowRoot")}} に接続されているかどうかを示します。
+  - : 論理値で、ノードが (直接/間接的に) コンテキストオブジェクト、例えば、通常の DOM の場合は {{DOMxRef("Document")}} オブジェクト、あるいはシャドウ DOM の場合は {{DOMxRef("ShadowRoot")}} に接続されているかどうかを示します。
 - {{DOMxRef("Node.lastChild")}}{{ReadOnlyInline}}
   - : ノードの直下の最後の子ノードを表す `Node` を返します。子が存在しなければ `null` を返します。
 - {{DOMxRef("Node.nextSibling")}}{{ReadOnlyInline}}
