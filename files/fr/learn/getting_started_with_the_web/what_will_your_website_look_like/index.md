@@ -74,7 +74,7 @@ Pour choisir une police :
 
 1.  Allez sur [Google Fonts](http://www.google.com/fonts) et faites défiler la page jusqu'à en trouver une que vous aimez. Vous pouvez aussi utiliser les contrôles sur la gauche pour filtrer plus précisément les résultats.
 2.  Cliquez sur l'icône _« + »_ (_ajouter_) à côté de la police que vous voulez.
-3.  Cliquez sur le bouton « \* Family Selected » dans le panneau en bas de la page (« \* » dépend du nombre de polices sélectionnées).
+3.  Cliquez sur le bouton « \* Family Selected » dans le panneau en bas de la page («&nbsp;\*&nbsp;» dépend du nombre de polices sélectionnées).
 4.  Sur la fenêtre contextuelle suivante, vous pouvez copier les lignes de code que Google vous donne dans votre éditeur de texte pour les garder pour plus tard.
 
 ![](font1.png)

@@ -22,7 +22,7 @@ original_slug: Apprendre/CSS/CSS_layout
 ---
 {{LearnSidebar}}
 
-À ce stade, les principes fondamentaux du CSS ont été vus : comment composer le texte et comment mettre en forme et manipuler les boîtes dans lesquelles se trouve votre contenu. Il est maintenant temps de regarder comment placer vos boîtes au bon endroit dans la vue et par rapport aux autres boîtes. Les prérequis nécessaires ont été examinés, nous pouvons maintenant nous plonger profondément dans la mise en page avec CSS, en regardant les différents paramètres d'affichage, les outils modernes tels que « flexbox », les grilles CSS et le positionnement, ainsi que quelques méthodes traditionnelles qu'il est encore bon de connaître.
+À ce stade, les principes fondamentaux du CSS ont été vus : comment composer le texte et comment mettre en forme et manipuler les boîtes dans lesquelles se trouve votre contenu. Il est maintenant temps de regarder comment placer vos boîtes au bon endroit dans la vue et par rapport aux autres boîtes. Les prérequis nécessaires ont été examinés, nous pouvons maintenant nous plonger profondément dans la mise en page avec CSS, en regardant les différents paramètres d'affichage, les outils modernes tels que «&nbsp;flexbox&nbsp;», les grilles CSS et le positionnement, ainsi que quelques méthodes traditionnelles qu'il est encore bon de connaître.
 
 > **Remarque :**
 >

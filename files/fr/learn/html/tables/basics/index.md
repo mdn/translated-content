@@ -226,7 +226,7 @@ Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et c
 
 1.  Avant tout, faites une copie locale de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire de votre ordinateur.
 2.  Le contenu de chaque tableau est encadré par ces deux balises : **[`<table></table>`](/fr/docs/Web/HTML/Element/table)**. Ajoutez‑les dans le corps de votre HTML.
-3.  Le plus petit conteneur d'un tableau est la cellule ; elle est créée avec l'élément  **[`<td>`](/fr/docs/Web/HTML/Element/td)** (« td » comme « tableau données »). Ajoutez ceci entre les balises du tableau :
+3.  Le plus petit conteneur d'un tableau est la cellule ; elle est créée avec l'élément  **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
 
     ```html
     <td>Bonjour, je suis votre première cellule.</td>
@@ -243,7 +243,7 @@ Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et c
 
 Comme vous le verrez, les cellules ne sont pas placées les unes en dessous des autres, mais elles sont automatiquement affichées dans une même ligne. chaque élément `<td>` crée une cellule simple et ensemble elles forment la première ligne. Toutes les cellules que nous ajoutons allongent la ligne.
 
-Pour empêcher cette ligne de croître et commencer à placer les cellules suivantes sur une deuxième ligne, nous devons utiliser la balise **[`<tr>`](/fr/docs/Web/HTML/Element/tr)** (« tr » comme « table rangée »). Étudions cela maintenant.
+Pour empêcher cette ligne de croître et commencer à placer les cellules suivantes sur une deuxième ligne, nous devons utiliser la balise **[`<tr>`](/fr/docs/Web/HTML/Element/tr)** («&nbsp;tr&nbsp;» comme «&nbsp;table rangée&nbsp;»). Étudions cela maintenant.
 
 1.  Placez les quatre cellules que vous avez créées entre deux balises `<tr>` ainsi :
 
@@ -371,8 +371,8 @@ Le problème ici c'est que, bien que vous puissiez comprendre le tableau, il n'e
 
 Améliorons ce tableau.
 
-1.  En premier lieu, faites une copie des fichiers [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le contenu HTML est similaire à l'exemple « Dogs » ci-dessus.
-2.  Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise **[`<th>`](/fr/docs/Web/HTML/Element/th)** (« th » comme « table header » ou en-tête de tableau). Il fonctionne exactement comme la balise `<td>`, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les `<td>` des cellules entourant le tableau par des `<th>`.
+1.  En premier lieu, faites une copie des fichiers [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le contenu HTML est similaire à l'exemple «&nbsp;Dogs&nbsp;» ci-dessus.
+2.  Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise **[`<th>`](/fr/docs/Web/HTML/Element/th)** («&nbsp;th&nbsp;» comme «&nbsp;table header&nbsp;» ou en-tête de tableau). Il fonctionne exactement comme la balise `<td>`, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les `<td>` des cellules entourant le tableau par des `<th>`.
 3.  Enregistrez votre HTML et chargez-le dans un navigateur. Vous devriez voir que les en-têtes ressemblent maintenant à des en-têtes.
 
 > **Note :** Vous pouvez trouver notre exemple achevé [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
@@ -454,8 +454,8 @@ Nous avons besoin d'un moyen pour étendre "Animaux", "Hippopotame" et "Crocodil
 Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
 
 1.  Tout d'abord, faites une copie locale de nos fichiers [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le même exemple d'animaux vu ci-dessus.
-2.  Ensuite, utilisez `colspan` pour mettre « Animaux », « Hippopotame » et « Crocodile » sur deux colonnes.
-3.  Enfin, utilisez `rowspan` pour mettre « Cheval » and « Poulet » sur deux lignes.
+2.  Ensuite, utilisez `colspan` pour mettre «&nbsp;Animaux&nbsp;», «&nbsp;Hippopotame&nbsp;» et «&nbsp;Crocodile&nbsp;» sur deux colonnes.
+3.  Enfin, utilisez `rowspan` pour mettre «&nbsp;Cheval&nbsp;» and «&nbsp;Poulet&nbsp;» sur deux lignes.
 4.  Enregistrez et ouvrez votre code sur un navigateur pour voir l'amélioration.
 
 > **Note :** Vous pouvez trouver l'exemple achevé dans [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) sur GitHub ([voir en direct aussi](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
@@ -514,7 +514,7 @@ Ce n'est pas idéal, car nous devons répéter les informations de style dans le
 </table>
 ```
 
-En effet, nous définissons deux « styles de colonnes », les informations de style pour chaque colonne. Nous n'appliquons pas de style pour la première colonne, mais nous devons inclure un élément `<col>`  vide — si nous ne le faisons pas, le style indiqué s'appliquera à la première colonne.
+En effet, nous définissons deux «&nbsp;styles de colonnes&nbsp;», les informations de style pour chaque colonne. Nous n'appliquons pas de style pour la première colonne, mais nous devons inclure un élément `<col>`  vide — si nous ne le faisons pas, le style indiqué s'appliquera à la première colonne.
 
 Si nous voulions appliquer les informations de style aux deux colonnes, nous devrions juste inclure un élément `<col>` avec un attribut span, comme ceci :
 

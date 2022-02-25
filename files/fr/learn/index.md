@@ -84,7 +84,7 @@ Si vous préférez copier le dépôt d'une manière plus flexible qui permet des
 2.  [S'inscrire pour obtenir un compte GitHub](https://github.com/join).
 3.  Une fois inscrit, se connecter dans [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
 4.  Ouvrir l'[invite de commande](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) ou un terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
-5.  Pour copier depuis le dépôt de l'espace d'apprentissage un répertoire nommé « learning-area » à l'emplacement courant dans votre ordinateur, utilisez la commande suivante&nbsp;:
+5.  Pour copier depuis le dépôt de l'espace d'apprentissage un répertoire nommé «&nbsp;learning-area&nbsp;» à l'emplacement courant dans votre ordinateur, utilisez la commande suivante&nbsp;:
 
     ```bash
     git clone https://github.com/mdn/learning-area

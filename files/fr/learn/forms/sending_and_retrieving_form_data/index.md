@@ -138,7 +138,7 @@ La requête HTTP ressemble à quelque chose comme&nbsp;:
 
 #### La méthode POST
 
-La méthode `POST` est un peu différente.C'est la méthode que le navigateur utilise pour demander au serveur une réponse prenant en compte les données contenues dans le corps de la requête HTTP : « Hé serveur ! vois ces données et renvoie-moi le résultat approprié ». Si un formulaire est envoyé avec cette méthode, les données sont ajoutées au corps de la requête HTTP.
+La méthode `POST` est un peu différente.C'est la méthode que le navigateur utilise pour demander au serveur une réponse prenant en compte les données contenues dans le corps de la requête HTTP : «&nbsp;Hé serveur ! vois ces données et renvoie-moi le résultat approprié&nbsp;». Si un formulaire est envoyé avec cette méthode, les données sont ajoutées au corps de la requête HTTP.
 
 Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Element/Form#attr-method).
 
@@ -176,10 +176,10 @@ L'en-tête `Content-Length `indique la taille du corps, et l'en-tête `Content-T
 Les requêtes HTTP ne sont jamais montrées à l'utilisateur (si vous voulez les voir, vous devez utiliser des outils comme la [Console Web](/fr/docs/Tools/Web_Console) de Firefox ou les [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). À titre d'exemple, les données de formulaire sont visibles comme suit dans l'onglet Chrome Network. Après avoir soumis le formulaire&nbsp;:
 
 1.  Pressez F12
-2.  Selectionnez « Réseau »
-3.  Selectionnez « Tout »
-4.  Selectionnez « foo.com » dans l'onglet « Nom »
-5.  Selectionnez « En‑tête »
+2.  Selectionnez «&nbsp;Réseau&nbsp;»
+3.  Selectionnez «&nbsp;Tout&nbsp;»
+4.  Selectionnez «&nbsp;foo.com&nbsp;» dans l'onglet «&nbsp;Nom&nbsp;»
+5.  Selectionnez «&nbsp;En‑tête&nbsp;»
 
 Vous obtiendrez les données du formulaire, comme l'image suivante le montre.
 
@@ -238,10 +238,10 @@ if __name__ == "__main__":
 
 Les deux prototypes référencés dans le code ci‑dessus sont les suivants&nbsp;:
 
-- [form.html ](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros « à rediriger sur `/hello` quand le formulaire est soumis ».)
+- [form.html ](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros «&nbsp;à rediriger sur `/hello` quand le formulaire est soumis&nbsp;».)
 - [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html)&nbsp;: Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
 
-> **Note :** À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec « `pip3 install flask` ». À ce moment‑là vous pourrez exécuter l'exemple avec « `python3 python-example.py` », puis en allant sur « `localhost:5000` » dans votre navigateur.
+> **Note :** À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec «&nbsp;`pip3 install flask`&nbsp;». À ce moment‑là vous pourrez exécuter l'exemple avec «&nbsp;`python3 python-example.py`&nbsp;», puis en allant sur «&nbsp;`localhost:5000`&nbsp;» dans votre navigateur.
 
 ### Autres langages et canevas de structures
 
@@ -264,7 +264,7 @@ L'envoi de fichiers avec un formulaire HTML est cas particulier. Les fichiers so
 
 ### L'attribut enctype
 
-Cet attribut vous permet de préciser la valeur de l'en-tête HTTP `Content-Type` incorporé dans la requête générée au moment de la soumission du formulaire. Cet en-tête est très important, car il indique au serveur le type de données envoyées. Par défaut, sa valeur est `application/x-www-form-urlencoded`. Ce qui signifie : « Ce sont des données de formulaire encodées à l'aide de paramètres URL ».
+Cet attribut vous permet de préciser la valeur de l'en-tête HTTP `Content-Type` incorporé dans la requête générée au moment de la soumission du formulaire. Cet en-tête est très important, car il indique au serveur le type de données envoyées. Par défaut, sa valeur est `application/x-www-form-urlencoded`. Ce qui signifie : «&nbsp;Ce sont des données de formulaire encodées à l'aide de paramètres URL&nbsp;».
 
 Mais si vous voulez envoyer des fichiers, il faut faire deux choses en plus :
 

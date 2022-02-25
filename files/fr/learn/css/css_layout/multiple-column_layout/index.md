@@ -40,7 +40,7 @@ Une mise en page à colonnes multiples est une méthode de disposition du conten
 
 ## Un exemple élémentaire
 
-Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes, souvent nommée  « *multicol* ». Vous pourrez effectuer le suivi de cet article en  [téléchargeant le fichier de depart multicol](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) et en ajoutant la CSS aux emplacements appropriés. En fin de section, vous verrez un exemple en direct de ce à quoi le code final peut ressembler.
+Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes, souvent nommée  «&nbsp;*multicol* ». Vous pourrez effectuer le suivi de cet article en  [téléchargeant le fichier de depart multicol](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) et en ajoutant la CSS aux emplacements appropriés. En fin de section, vous verrez un exemple en direct de ce à quoi le code final peut ressembler.
 
 Notre point de départ contient un HTML très simple ; une enveloppe de la classe `container` dans laquelle nous avons placé un en‑tête et quelques paragraphes.
 

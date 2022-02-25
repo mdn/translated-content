@@ -94,7 +94,7 @@ Cherchons des polices de caractères ! Allez dans [Font Squirrel](https://www.fo
 
 Dans chaque cas, décompressez le paquet de la fonte (les fontes Web sont généralement distribuées dans des fichiers ZIP contenant les fichiers de police et l'information de licence). Vous pouvez trouver plusieurs fichiers de polices dans le paquet — certaines fontes sont distribuées sous forme de familles avec plusieurs variantes disponibles, par exemple fine, moyenne, grasse, italique, italique fine, etc. Pour cet exemple, ne vous interessez qu'à un seul fichier pour chacun des deux cas.
 
-> **Note :** Dans la partie « Find fonts » dans la colonne de droite, vous pouvez cliquer sur les diverses marques et classification pour filtrer les chois à afficher.
+> **Note :** Dans la partie «&nbsp;Find fonts&nbsp;» dans la colonne de droite, vous pouvez cliquer sur les diverses marques et classification pour filtrer les chois à afficher.
 
 ### Créer le code requis
 
@@ -104,7 +104,7 @@ Maintenant, créez le code requis (et les formats de police). Pour chaque police
 2.  Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de Fontsquirrel.
 3.  Téléversez les deux fichiers de fontes avec le bouton _Upload Fonts_.
 4.  Cochez la case nommée « Yes, the fonts I'm uploading are legally eligible for web embedding » (_Oui, les fontes téléversées sont légalement éligibles à une intégration web_).
-5.  Cliquez sur « *Download your kit* » (_Télécharger le kit_) .
+5.  Cliquez sur «&nbsp;*Download your kit* » (_Télécharger le kit_) .
 
 Après que le générateur a terminé le traitement, vous obtenez un fichier ZIP à télécharger — enregistrez‑le dans le même répertoire que les fichiers HTML et CSS.
 
@@ -121,7 +121,7 @@ Pour mettre en œuvre ces polices dans la démo, suivez ces étapes&nbsp;:
 1.  Renommez le répertoire d'extraction avec quelque chose de simple, comme `fonts`.
 2.  Ouvrez le fichier `stylesheet.css` et copiez y les deux blocs `@font-face` contenus dans le  fichier `web-font-start.css` — il faut les mettre tout en haut, avant tout élement du CSS, car les polices doivent être importées avant de pouvoir les utiliser sur votre site.
 3.  Chaque fonction `url()` pointe sur un fichier de police à importer dans la CSS — assurez‑vous que les chemins vers les fichiers soient corrects, donc ajoutez  `fonts/` au début de chaque chemin (si nécessaire).
-4.  Maintenant, vous pouvez vous servir de ces polices dans vos piles de fontes, tout à fait comme les polices système ou une police « web safe ». Par exemple&nbsp;:
+4.  Maintenant, vous pouvez vous servir de ces polices dans vos piles de fontes, tout à fait comme les polices système ou une police «&nbsp;web safe ». Par exemple&nbsp;:
 
     ```css
     font-family: 'zantrokeregular', serif;
@@ -168,7 +168,7 @@ Examinons la syntaxe générée par fontsquirrel pour `@font-face`. C'est un bl
 }
 ```
 
-Elle est désignée sous le vocable « bulletproof @font-face syntax » (_syntaxe @font-face à puces garanties_), d'après un post de Paul Irish lors des débuts des succès de `@font-face` ([Bulletproof @font-face Syntax](http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)). Voyons les actions&nbsp;:
+Elle est désignée sous le vocable «&nbsp;bulletproof @font-face syntax&nbsp;» (_syntaxe @font-face à puces garanties_), d'après un post de Paul Irish lors des débuts des succès de `@font-face` ([Bulletproof @font-face Syntax](http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)). Voyons les actions&nbsp;:
 
 - `font-family`&nbsp;: cette ligne précise la référence à la police. Vous pouvez mettre cette assertion comme bon vous semble, pour autant que ce soit utilisé de manière cohérent dans la CSS.
 - `src` : ces lignes indiquent les chemins vers les fichiers de fontes à importer dans la CSS (la partie `url`) et le format de chaque fichier de fonte (la partie `format`). Cette dernière partie est dans chaque cas optionnelle, mais il est utile de la déclarer car elle permet aux navigateurs de trouver la police à utiliser plus rapidement. Plusieurs déclarations peuvent être mises dans la liste, séparées par des virgules — le navigateur cherchera parmi celles-ci et utilisera la première trouvée qu'il comprend — toutefois il est préférable de mettre en tête les formats nouveaux comme WOFF2 et le plus anciens comme TTF en fin de liste. Les fontes EOT font exception — elles seront placées en tête pour corriger une paire de bogues dans les anciennes versions de IE, car IE essayera d'utiliser la première trouvée même s'il est en fait incapable de l'utiliser.

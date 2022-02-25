@@ -10,7 +10,7 @@ Cet article vous guide à travers les bases d’AJAX et vous donne deux exemples
 
 ### Présentation d’AJAX
 
-AJAX est un raccourci pour **A**synchronous **J**avaScript **A**nd **X**ML (JavaScript asynchrone et XML) inventé par Jesse James Garrett. Pour simplifier, il s’agit d’employer l’objet [`XMLHttpRequest`](/fr/XMLHttpRequest "fr/XMLHttpRequest") pour communiquer avec des serveurs. Il peut envoyer et recevoir des informations sous différents formats, dont JSON, XML, HTML ou texte. Son principal attrait est sa nature « asynchrone » ce qui signifie qu’il peut communiquer avec le serveur, échanger des données et mettre à jour la page sans avoir à la recharger.
+AJAX est un raccourci pour **A**synchronous **J**avaScript **A**nd **X**ML (JavaScript asynchrone et XML) inventé par Jesse James Garrett. Pour simplifier, il s’agit d’employer l’objet [`XMLHttpRequest`](/fr/XMLHttpRequest "fr/XMLHttpRequest") pour communiquer avec des serveurs. Il peut envoyer et recevoir des informations sous différents formats, dont JSON, XML, HTML ou texte. Son principal attrait est sa nature «&nbsp;asynchrone&nbsp;» ce qui signifie qu’il peut communiquer avec le serveur, échanger des données et mettre à jour la page sans avoir à la recharger.
 
 Les deux principales fonctionnalités d’AJAX permettent de&nbsp;:
 
@@ -55,8 +55,8 @@ httpRequest.send();
 ```
 
 - Le premier paramètre de l’appel à `open()` est la méthode de requête HTTP — GET, POST, HEAD ou toute autre méthode gérée par votre serveur. Laissez le nom de la méthode en majuscules comme spécifié par la norme HTTP ; autrement certains navigateurs (comme Firefox) peuvent ne pas traiter la requête. Pour plus d’informations sur les méthodes de requêtes HTTP possibles, vous pouvez consulter les [spécifications du W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
-- Le second paramètre est l’URL à laquelle vous envoyez la requête. Pour des raisons de sécurité, il est par défaut impossible d’appeler des URL se situant sur un domaine de tierce-partie. Veillez à utiliser le nom de domaine exact sur toutes vos pages ou vous obtiendrez une erreur « permission refusée » lors de l’appel à `open()`. Une erreur courante est de charger le site via `domaine.tld`, mais d’essayer d’appeler des pages avec `www.domain.tld`. Si vous avez réellement besoin d’envoyer une requête vers un autre domaine, veuillez consulter [Cross-Origin Resource Sharing (CORS)](/fr/docs/Web/HTTP/CORS).
-- Le troisième paramètre, optionnel, précise si la requête est asynchrone. Si mis à `true` (sa valeur par défaut), l’exécution de JavaScript se poursuivra, et l’utilisateur ou l’utilisatrice pourra interagir avec la page, en attendant l’arrivée de la réponse du serveur. C’est le premier « A » de « AJAX ».
+- Le second paramètre est l’URL à laquelle vous envoyez la requête. Pour des raisons de sécurité, il est par défaut impossible d’appeler des URL se situant sur un domaine de tierce-partie. Veillez à utiliser le nom de domaine exact sur toutes vos pages ou vous obtiendrez une erreur «&nbsp;permission refusée&nbsp;» lors de l’appel à `open()`. Une erreur courante est de charger le site via `domaine.tld`, mais d’essayer d’appeler des pages avec `www.domain.tld`. Si vous avez réellement besoin d’envoyer une requête vers un autre domaine, veuillez consulter [Cross-Origin Resource Sharing (CORS)](/fr/docs/Web/HTTP/CORS).
+- Le troisième paramètre, optionnel, précise si la requête est asynchrone. Si mis à `true` (sa valeur par défaut), l’exécution de JavaScript se poursuivra, et l’utilisateur ou l’utilisatrice pourra interagir avec la page, en attendant l’arrivée de la réponse du serveur. C’est le premier «&nbsp;A&nbsp;» de «&nbsp;AJAX&nbsp;».
 
 Le paramètre de la méthode `send()` peut être n’importe quelle donnée que vous voulez envoyer au serveur en cas d’utilisation de la méthode POST. Les données doivent être sous la forme d’une chaîne de requête, comme&nbsp;:
 
@@ -119,7 +119,7 @@ Notez que les étapes ci-dessus sont valides uniquement si vous utilisez une req
 
 ### Étape 3 — Un exemple simple
 
-Rassemblons tous ces éléments dans un exemple&nbsp;: une requête HTTP simple. Notre JavaScript demande un document HTML, `test.html`, qui contient le texte « Je suis un test. », puis nous affichons le contenu de la réponse dans un message `alert()`. Remarquez que cet exemple n’utilise que du pur JavaScript vanilla (pas de jQuery). D’autre part, les fichiers HTML, XML et PHP doivent être placés dans le même dossier.
+Rassemblons tous ces éléments dans un exemple&nbsp;: une requête HTTP simple. Notre JavaScript demande un document HTML, `test.html`, qui contient le texte «&nbsp;Je suis un test.&nbsp;», puis nous affichons le contenu de la réponse dans un message `alert()`. Remarquez que cet exemple n’utilise que du pur JavaScript vanilla (pas de jQuery). D’autre part, les fichiers HTML, XML et PHP doivent être placés dans le même dossier.
 
 ```html
 <button id="ajaxButton" type="button">Faire une requête</button>
@@ -156,12 +156,12 @@ Rassemblons tous ces éléments dans un exemple&nbsp;: une requête HTTP simple.
 
 Dans cet exemple&nbsp;:
 
-- L’utilisateur ou l’utilisatrice clique sur le bouton « Faire une requête » ;
+- L’utilisateur ou l’utilisatrice clique sur le bouton «&nbsp;Faire une requête&nbsp;» ;
 - Le gestionnaire d’évènement appelle la fonction `makeRequest()` ;
 - la requête est faite, puis l’exécution est passée à `alertContents()` (via `onreadystatechange`);
 - `alertContents()` vérifie si la réponse reçue est correcte, et affiche ensuite le contenu du fichier `test.html` dans un message `alert()`.
 
-> **Note :** Si vous envoyez une requête à du code qui renvoie du XML plutôt qu’un fichier HTML statique, vous devez spécifier des en-têtes de réponse pour que cela fonctionne avec Internet Explorer. Si vous ne spécifiez pas l’en-tête `Content-Type: application/xml`, IE émettra une erreur JavaScript « Objet attendu » après la ligne à laquelle vous avez tenté d’accéder à l’élément XML.
+> **Note :** Si vous envoyez une requête à du code qui renvoie du XML plutôt qu’un fichier HTML statique, vous devez spécifier des en-têtes de réponse pour que cela fonctionne avec Internet Explorer. Si vous ne spécifiez pas l’en-tête `Content-Type: application/xml`, IE émettra une erreur JavaScript «&nbsp;Objet attendu&nbsp;» après la ligne à laquelle vous avez tenté d’accéder à l’élément XML.
 
 > **Note :** Si vous ne spécifiez pas l’en-tête `Cache-Control: no-cache`, le navigateur mettra la réponse en cache et n’effectuera plus jamais la requête ultérieurement, ce qui peut rendre le débogage difficile. Vous pouvez également ajouter un paramètre GET toujours différent, comme un timestamp ou un nombre aléatoire (voir [contourner le cache](https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest#Contourner_le_cache)).
 
@@ -223,7 +223,7 @@ Interwiki
 
 ### Étape 5 – Manipuler les données
 
-Pour finir, envoyons quelques données au serveur et réceptionnons la réponse. Notre JavaScript demandera cette fois-ci une page dynamique, `test.php`, qui prendra notre contenu envoyé et revera une chaîne « calculée » – "Bonjour, \[user data] !" – que nous afficherons via `alert()`.
+Pour finir, envoyons quelques données au serveur et réceptionnons la réponse. Notre JavaScript demandera cette fois-ci une page dynamique, `test.php`, qui prendra notre contenu envoyé et revera une chaîne «&nbsp;calculée&nbsp;» – "Bonjour, \[user data] !" – que nous afficherons via `alert()`.
 
 D’abord, nous allons ajouter un boîte de texte dans notre HTML afin que l’utilisateur ou l’utilisatrice puisse saisir son nom&nbsp;:
 
@@ -259,7 +259,7 @@ Nous devons modifier `makeRequest()` afin d’accepter les données et les trans
   }
 ```
 
-La fonction `alertContents()` peut être écrite de la même manière qu’à l’étape 3 pour afficher notre chaîne calculée, si c’est tout ce que le serveur renvoie. Cependant, supposons que le serveur renvoie à la fois la phrase calculée et la donnée originale. Donc si l’utilisateur ou l’utilisatrice a saisi « Dorothée », la réponse du serveur ressemblera à&nbsp;:
+La fonction `alertContents()` peut être écrite de la même manière qu’à l’étape 3 pour afficher notre chaîne calculée, si c’est tout ce que le serveur renvoie. Cependant, supposons que le serveur renvoie à la fois la phrase calculée et la donnée originale. Donc si l’utilisateur ou l’utilisatrice a saisi «&nbsp;Dorothée&nbsp;», la réponse du serveur ressemblera à&nbsp;:
 
 ```json
 {"userData":"Dorothée","computedString":"Bonjour, Dorothée !"}

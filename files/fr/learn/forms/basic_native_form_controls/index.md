@@ -98,7 +98,7 @@ Ce type de champ est défini en donnant la valeur `email` à l'attribut {{htmlat
 
 Avec ce `type` , l'utilisateur doit saisir un e‑mail valide dans le champ. Tout autre type de contenu amène le navigateur à émettre une erreur lors de la soumission du formulaire. Notez que cette validation s'opère côté client et est faite par le navigateur&nbsp;:
 
-![Entrée d'un e-mail non valide déclenchant un message d'avertissement « Veuillez saisir une adresse électronique valide »](fr-email.png)
+![Entrée d'un e-mail non valide déclenchant un message d'avertissement «&nbsp;Veuillez saisir une adresse électronique valide »](fr-email.png)
 
 Avec l'attribut {{htmlattrxref("multiple","input")}}, l'utilisateur pourra saisir plusieurs adresses électroniques dans la même entrée (avec une virgule comme séparateur).
 
@@ -128,7 +128,7 @@ Ce type de champ se définit avec la valeur `search` de l'attribut {{htmlattrxre
     <input type="search" id="search" name="search">
 ```
 
-La principale différence entre un champ textuel et un champ de recherche est dans l'apparence — souvent, les champs de recherche sont affichés avec des coins arrondis, et/ou avec une « × » à cliquer pour effacer la valeur entrée. Toutefois, une fonction est aussi ajoutée : les valeurs saisies peuvent être automatiquement enregistrées afin d'être utilisées pour compléter des recherches sur plusieurs pages du même site.
+La principale différence entre un champ textuel et un champ de recherche est dans l'apparence — souvent, les champs de recherche sont affichés avec des coins arrondis, et/ou avec une «&nbsp;×&nbsp;» à cliquer pour effacer la valeur entrée. Toutefois, une fonction est aussi ajoutée : les valeurs saisies peuvent être automatiquement enregistrées afin d'être utilisées pour compléter des recherches sur plusieurs pages du même site.
 
 ![Screenshots of search fields on several platforms.](all-search-field.png)
 
@@ -554,7 +554,7 @@ Il existe d'autres types de widgets qui ne peuvent pas être classés facilement
 
 ### Sélection de fichier
 
-Les formulaires HTML permettent d'envoyer des fichiers à un serveur. Cette action spécifique est détaillée dans l'article  « [Envoi et extraction des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires "/fr/docs/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires") ». Le widget de sélection de fichier permet à l'utilisateur de choisir un ou plusieurs fichiers à envoyer.
+Les formulaires HTML permettent d'envoyer des fichiers à un serveur. Cette action spécifique est détaillée dans l'article  «&nbsp;[Envoi et extraction des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires "/fr/docs/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires")&nbsp;». Le widget de sélection de fichier permet à l'utilisateur de choisir un ou plusieurs fichiers à envoyer.
 
 Pour créer un widget de sélection de fichier, vous devez utiliser un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type","input")}} a pour valeur `file`. Les types de fichiers acceptés peuvent être contraints en utilisant l'attribut {{htmlattrxref("accept","input")}}. De plus, si vous souhaitez permettre à l'utilisateur de choisir plusieurs fichiers, vous pouvez le faire en ajoutant l'attribut {{htmlattrxref("multiple","input")}}.
 
@@ -595,7 +595,7 @@ Lorsque vous cliquez sur l'image dans ce formulaire, vous êtes redirigés une U
 
         http://foo.com?pos.x=123&pos.y=456
 
-C'est une façon très commode de construire une « hot map » (cartographie des parties d'une page Internet le plus souvent balayées par le regard des lecteurs). La manière d'envoyer et d'extraire ces valeurs est détaillée dans l'article « [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires "/fr/docs/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires") ».
+C'est une façon très commode de construire une «&nbsp;hot map&nbsp;» (cartographie des parties d'une page Internet le plus souvent balayées par le regard des lecteurs). La manière d'envoyer et d'extraire ces valeurs est détaillée dans l'article «&nbsp;[Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires "/fr/docs/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires")&nbsp;».
 
 ### Compteurs et barres de progression
 

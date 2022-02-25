@@ -81,19 +81,19 @@ Notez que le HTML est affiché dans l'ordre exact où il est dans le code source
 
 Les éléments disposés en empilement sont désignés comme étant des éléments _blocs_, par opposition aux éléments _en ligne_ qui apparaissent l'un après l'autre telle la succession de mots distincts d'un paragraphe.
 
-> **Note :** « Block Direction » (Sens d'empilement) définit le sens dans lequel les éléments blocs sont disposés. Le sens d'empilement est vertical pour une langue comme l'anglais dont le mode d'écriture est horizontal. Ce sens sera horizontal pour toute langue avec un mode d'écriture vertical, comme le japonais. La « Inline Direction » (sens d'écriture) correspond à celle dont les contenus en ligne (comme une phrase) sont disposés.
+> **Note :** «&nbsp;Block Direction&nbsp;» (Sens d'empilement) définit le sens dans lequel les éléments blocs sont disposés. Le sens d'empilement est vertical pour une langue comme l'anglais dont le mode d'écriture est horizontal. Ce sens sera horizontal pour toute langue avec un mode d'écriture vertical, comme le japonais. La «&nbsp;Inline Direction » (sens d'écriture) correspond à celle dont les contenus en ligne (comme une phrase) sont disposés.
 
 Lorsque vous utilisez les CSS pour faire une mise en page, vous déplacez les éléments de leur cours normal ; toutefois, pour la plupart des éléments de la page, ce cours normal crée exactement la mise en page dont vous avez besoin. C'est pourquoi il est si important de commencer avec un document HTML bien structuré, car vous pouvez alors travailler la façon dont les choses seront disposées par défaut au lieu de lutter contre cette disposition.
 
 Les méthodes des CSS pouvant changer le placement des éléments sont les suivantes :
 
 - **La propriété {{cssxref("display")}}** — les valeurs standards comme `block`, `inline` ou `inline-block` peuvent changer la manière dont l'élément se comporte dans le cours normal (voir [Types de boîtes](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte#Les_types_de_bo%C3%AEte) pour plus d'informations). Ensuite, nous disposons de méthodes de mise en page autonomes activées par l'intermédiaire d'une valeur de `display`, par exemple les [Grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) ou [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
-- **Flotteurs** — appliquer à {{cssxref("float")}} une valeur comme `left` peut créer une juxtaposition d'un élément bloc à côté d'un autre, tout comme les images « baignent » dans le texte dans les mises en page de magazines.
+- **Flotteurs** — appliquer à {{cssxref("float")}} une valeur comme `left` peut créer une juxtaposition d'un élément bloc à côté d'un autre, tout comme les images «&nbsp;baignent&nbsp;» dans le texte dans les mises en page de magazines.
 - **La propriété {{cssxref("position")}}** — vous permet de contrôler avec précision le placement de boîtes dans d'autres boîtes. `static` est le placement par défaut dans le cours, mais vous pouvez manipuler les éléments pour qu'ils se comportent différemment à l'aide d'autres valeurs, par exemple en les fixant en haut à gauche de la fenêtre d'affichage du navigateur.
 - **Mise en page de tableaux** — les fonctions conçues pour styliser les parties d'un tableau HTML peuvent être utilisées sur des éléments non tableau en utilisant `display: table` et les propriétés associées.
 - **Mise en page sur plusieurs colonnes** — Les propriétés [Multi-column](/fr/docs/Web/CSS/CSS_Columns) peuvent faire qu'un contenu bloc soit disposé en colonnes, comme dans un journal.
 
-## La propriété « display »
+## La propriété «&nbsp;display »
 
 Les principales modalités de mise en page avec les CSS relèvent toutes des valeurs de la propriété `display`. Cette propriété permet de modifier l'affichage par défaut des éléments. Chaque chose dans le cours normal a une valeur de propriété `display`. Les éléments se règlent sur cette valeur pour définir leur comportement par défaut. Par exemple, le fait que des paragraphes en langue anglaise se placent les uns au dessus des autres provient du fait que leur style est `display: block`. Si vous créez un lien sur un texte à l'intérieur d'un paragraphe, ce lien reste aligné avec le reste du texte et ne s'affiche pas sur une nouvelle ligne. C'est parce que l'élément {{htmlelement("a")}} est `display: inline` par défaut.
 
@@ -179,7 +179,7 @@ En plus des propriétés ci-dessus applicables au conteneur `flex`, il existe de
 
 ## Disposition en trame
 
-Alors que « flexbox » est conçu pour une disposition unidimensionnelle, « Grid Layout » (Disposition tramée) est bidimensionnel — il place les choses en rangées et colonnes.
+Alors que «&nbsp;flexbox&nbsp;» est conçu pour une disposition unidimensionnelle, «&nbsp;Grid Layout&nbsp;» (Disposition tramée) est bidimensionnel — il place les choses en rangées et colonnes.
 
 À nouveau, vous basculez en disposition tramée en donnant une valeur appropriée à `display` — `display: grid`. L'exemple ci-dessous utilise un balisage semblable à celui de l'exemple flex&nbsp;: un conteneur et quelques éléments enfants. Outre `display: grid`, nous définissons une trame de placement sur le parent avec les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}. Nous avons défini trois colonnes de `1fr` chacune et deux lignes de `100px`. Il n'est pas nécessaire de mettre de règles sur les éléments enfants ; il seront automatiquement placés dans les cellules de trame créées.
 
@@ -333,7 +333,7 @@ Il existe cependant des techniques utiles pour certains modes de positionnement 
 
 Il y a cinq types de positionnement à connaître&nbsp;:
 
-- **positionnement statique** : valeur par défaut reçue par chaque élément — il signifie simplement « placer l'élément à sa position normale suivant le cours normal de mise en page du document — rien de spécial à constater ici ».
+- **positionnement statique** : valeur par défaut reçue par chaque élément — il signifie simplement «&nbsp;placer l'élément à sa position normale suivant le cours normal de mise en page du document — rien de spécial à constater ici&nbsp;».
 - **positionnement relatif :** modification de la position d'un élément dans la page — il est déplacé par rapport à sa position dans le cours normal — y compris la possibilité de chevaucher d'autres éléments de la page.
 - **positionnement absolu** : déplacement d'un élément indépendamment du cours normal de positionnement, comme s'il était placé sur un calque séparé. À partir de là, vous pouvez le fixer à une position relative au bord de la page de l'élément `<html>` (ou de son plus proche élément ancêtre positionné). Ce positionnement est utile pour créer des effets de mise en page complexes tels que des boîtes à onglets où différents panneaux de contenu sont superposés, affichés ou cachés comme vous le souhaitez, ou des panneaux d'information hors de l'écran par défaut, mais qui peuvent glisser à l'écran à l'aide d'un bouton de contrôle.
 - **positionnement fixe :** tout à fait semblable au précédent, à l'exception que l'élément est fixé par rapport à la vue du navigateur et non d'un autre élément. C'est très pratique pour créer des effets tels qu'un menu de navigation persistant, toujours au même endroit sur l'écran, quand l'utilisateur fait défiler le reste de la page.
@@ -531,7 +531,7 @@ body {
 
 ### Positionnement collant
 
-Le positionnement collant est la dernière méthode de positionnement à notre disposition. Elle mélange le positionnement statique par défaut avec le positionnement fixé. Lorsqu'un élément a la propriété `position: sticky`, il défile dans le cours normal jusqu'à atteindre un décalage défini de la fenêtre de vue. A ce moment-là, il est « collé » comme si `position: fixed` lui était appliqué.
+Le positionnement collant est la dernière méthode de positionnement à notre disposition. Elle mélange le positionnement statique par défaut avec le positionnement fixé. Lorsqu'un élément a la propriété `position: sticky`, il défile dans le cours normal jusqu'à atteindre un décalage défini de la fenêtre de vue. A ce moment-là, il est «&nbsp;collé&nbsp;» comme si `position: fixed` lui était appliqué.
 
 ```html hidden
 <h1>Positionnement collant</h1>
@@ -576,7 +576,7 @@ body {
 
 Les tableaux HTML sont utiles pour afficher des données sous forme de tableaux, mais il y a des années de cela — avant même que les bases des CSS soit prises en charge de manière fiable par les navigateurs — les développeurs web avaient l'habitude d'utiliser les tableaux pour agencer toute la mise en page — y plaçant les en‑têtes, les pieds-de-page, diverses colonnes, etc. en multiples lignes et colonnes de tableaux. Cela fonctionnait en son temps, mais il y avait beaucoup de problèmes — la mise en page par tableau n'est pas souple, très lourde en balisage, difficile à déboguer et sémantiquement erronée (par ex., les utilisateurs de lecteur d'écran avaient des problèmes de navigation avec cette disposition en tableau).
 
-La façon dont un tableau est affiché sur une page web quand vous utilisez le balisage « table » résulte d'un ensemble de propriétés des CSS définissant la composition du tableau. Ces propriétés peuvent être utilisées pour placer des éléments qui ne sont pas des tableaux, utilisation quelquefois désignée sous le vocable « utiliser des tableaux CSS ».
+La façon dont un tableau est affiché sur une page web quand vous utilisez le balisage «&nbsp;table&nbsp;» résulte d'un ensemble de propriétés des CSS définissant la composition du tableau. Ces propriétés peuvent être utilisées pour placer des éléments qui ne sont pas des tableaux, utilisation quelquefois désignée sous le vocable «&nbsp;utiliser des tableaux CSS&nbsp;».
 
 Prenons un exemple. Tout d'abord, un simple balisage qui crée un formulaire HTML. Chaque élément en entrée a une étiquette ; nous avons également inclus une légende à l'intérieur d'un paragraphe. Chaque paire étiquette/entrée est incorporée dans un élément {{htmlelement("div")}} pour les besoins de la mise en page.
 

@@ -45,9 +45,9 @@ Dans tout langage de programmation, le code doit prendre des décisions et agir 
 
 ## Vous l'aurez à une condition !..
 
-Les êtres humains (et d'autres animaux) prennent tout le temps des décisions qui affectent leur vie, de la plus insignifiante (« Est‑ce que je devrais prendre un biscuit ou deux ? ») à la plus importante (« Est‑ce que je dois rester dans mon pays natal et travailler à la ferme de mon père, ou déménager aux États-Unis et étudier l'astrophysique ? »)
+Les êtres humains (et d'autres animaux) prennent tout le temps des décisions qui affectent leur vie, de la plus insignifiante («&nbsp;Est‑ce que je devrais prendre un biscuit ou deux ?&nbsp;») à la plus importante («&nbsp;Est‑ce que je dois rester dans mon pays natal et travailler à la ferme de mon père, ou déménager aux États-Unis et étudier l'astrophysique ?&nbsp;»)
 
-Les instructions conditionnelles nous permettent de représenter ce genre de prise de décision en JavaScript, du choix qui doit être fait (par ex. « un biscuit ou deux »), à la conséquence de ces choix (il se peut que la conséquence de « manger un biscuit » soit « avoir encore faim », et celle de « manger deux biscuits » soit « se sentir rassasié, mais se faire gronder par maman pour avoir mangé tous les biscuits ».)
+Les instructions conditionnelles nous permettent de représenter ce genre de prise de décision en JavaScript, du choix qui doit être fait (par ex. «&nbsp;un biscuit ou deux »), à la conséquence de ces choix (il se peut que la conséquence de «&nbsp;manger un biscuit&nbsp;» soit «&nbsp;avoir encore faim&nbsp;», et celle de «&nbsp;manger deux biscuits&nbsp;» soit «&nbsp;se sentir rassasié, mais se faire gronder par maman pour avoir mangé tous les biscuits&nbsp;».)
 
 ![](cookie-choice-small.png)
 
@@ -68,12 +68,12 @@ La syntaxe élémentaire de `if...else` ressemble à cela en {{glossary("pseud
 Ici nous avons:
 
 1.  Le mot‑clé `if` suivie de parenthèses.
-2.  Une condition à évaluer, placée entre les parenthèses (typiquement « cette valeur est‑elle plus grande que cet autre valeur ? » ou « cette valeur existe‑t‑elle ? »). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
+2.  Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur ? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
 3.  Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu ; il sera exécuté seulement si la condition renvoie `true`.
 4.  Le mot‑clé `else`.
 5.  Une autre paire d'accolades, à l'intérieur de laquelle se trouve du code différent — tout code souhaité et il sera exécuté seulement si la condition ne renvoie pas `true`.
 
-Ce code est facile à lire pour une personne — il dit « **si** la **condition** renvoie `true`, exécuter le code A, **sinon** exécuter le code B ».
+Ce code est facile à lire pour une personne — il dit «&nbsp;**si** la **condition** renvoie `true`, exécuter le code A, **sinon** exécuter le code B&nbsp;».
 
 Notez qu'il n'est pas nécessaire d'inclure une instruction `else` et le deuxième bloc entre accolades — le code suivant est aussi parfaitement correct&nbsp;:
 
@@ -94,7 +94,7 @@ Ce code est parfaitement valide, mais il n'est pas recommandé — il est nette
 
 ### Un exemple concret
 
-Pour mieux comprendre cette syntaxe, prenons un exemple concret. Imaginez un enfant à qui le père ou la mère demande de l'aide pour une tâche. Le parent pourrait dire « Mon chéri, si tu m'aides en allant faire les courses, je te donnerai un peu plus d'argent de poche pour que tu puisses t'acheter ce jouet que tu voulais ». En JavaScript, on pourrait le représenter de cette manière&nbsp;:
+Pour mieux comprendre cette syntaxe, prenons un exemple concret. Imaginez un enfant à qui le père ou la mère demande de l'aide pour une tâche. Le parent pourrait dire «&nbsp;Mon chéri, si tu m'aides en allant faire les courses, je te donnerai un peu plus d'argent de poche pour que tu puisses t'acheter ce jouet que tu voulais&nbsp;». En JavaScript, on pourrait le représenter de cette manière&nbsp;:
 
 ```js
 let coursesFaites = false;
@@ -157,7 +157,7 @@ function setWeather() {
 1.  Ici nous avons l'élément HTML {{htmlelement("select")}} nous permettant de sélectionner divers choix de temps et un simple paragraphe.
 2.  Dans le JavaScript, nous conservons une référence aussi bien à l'élément {{htmlelement("select")}} qu'à l'élément {{htmlelement("p")}}, et ajoutons un écouteur d'évènement à l'élément `<select>` de sorte que la fonction `setWeather()` soit exécutée quand sa valeur change.
 3.  Quand cette fonction est exécutée, nous commençons par assigner à la variable `choice` la valeur actuellement sélectionnée dans l'élément `<select>`. Nous utilisons ensuite une instruction conditionnelle pour montrer différents textes dans le paragraphe en fonction de la valeur de `choice`. Remarquez comment toutes les conditions sont testées avec des blocs `else if() {...}`, mis à part le tout premier testé avec un  `bloc if() {...}`.
-4.  Le tout dernier choix, à l'intérieur du bloc `else {...}`, est simplement une option de "secours" — le code qui s'y trouve ne sera exécuté que si aucune des conditions n'est `true`. Dans ce cas, il faut vider le texte du paragraphe si rien n'est sélectionné, par exemple si un utilisateur décide de resélectionner le texte à substituer « --Choisir-- » présenté au début.
+4.  Le tout dernier choix, à l'intérieur du bloc `else {...}`, est simplement une option de "secours" — le code qui s'y trouve ne sera exécuté que si aucune des conditions n'est `true`. Dans ce cas, il faut vider le texte du paragraphe si rien n'est sélectionné, par exemple si un utilisateur décide de resélectionner le texte à substituer «&nbsp;--Choisir--&nbsp;» présenté au début.
 
 > **Note :** Vous trouverez également [cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (ainsi qu'en [version live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) ici.)
 
@@ -269,7 +269,7 @@ if (x === 5 || 7 || 10 || 20) {
 }
 ```
 
-Dans ce cas, la condition dans le `if(...) `sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité « si x est égal à 5, ou bien 7 est vrai » — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement ! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR&nbsp;:
+Dans ce cas, la condition dans le `if(...) `sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité «&nbsp;si x est égal à 5, ou bien 7 est vrai&nbsp;» — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement ! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR&nbsp;:
 
 ```js
 if (x === 5 || x === 7 || x === 10 ||x === 20) {
@@ -374,7 +374,7 @@ Regardons cet exemple simple&nbsp;:
 let formuleDePolitesse = ( est_anniversaire ) ? 'Bon anniversaire Mme Smith — nous vous souhaitons une belle journée !' : 'Bonjour Mme Smith.';
 ```
 
-Ici, nous avons une variable nommée `est_anniversaire` — si elle est `true`, nous adressons à notre hôte un message de « Bon anniversaire » ; si ce n'est pas le cas, c'est-à-dire si `est_anniversaire` renvoie `false`, nous disons simplement « Bonjour ».
+Ici, nous avons une variable nommée `est_anniversaire` — si elle est `true`, nous adressons à notre hôte un message de «&nbsp;Bon anniversaire&nbsp;» ; si ce n'est pas le cas, c'est-à-dire si `est_anniversaire` renvoie `false`, nous disons simplement «&nbsp;Bonjour&nbsp;».
 
 ### Exemple opérateur ternaire
 
@@ -547,7 +547,7 @@ Nous allons reprendre l'exemple de l'opérateur ternaire vu plus haut et transfo
 - Pour chaque cas, le choix doit être égal à une des valeurs possibles pouvant être choisies, c'est-à-dire blanc, noir, mauve, jaune ou psychédélique.
 - Chaque cas exécutera la fonction `update()` à laquelle deux valeurs de couleurs seront passées, la première pour le fond, la seconde pour le texte. Souvenez vous que les valeurs de couleurs sont des chaînes ; elle doivent donc être mises entre guillemets.
 
-Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le bouton « Réinitialiser ». Si vous êtes vraiment bloqué, pressez « Voir la solution ».
+Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le bouton «&nbsp;Réinitialiser&nbsp;». Si vous êtes vraiment bloqué, pressez «&nbsp;Voir la solution&nbsp;».
 
 ```html hidden
 <div class="output" style="height: 300px;">

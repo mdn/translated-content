@@ -82,7 +82,7 @@ Voici un petit exemple :
 
 > **Note :** Vous trouverez cet exemple dans [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) (voir [directement aussi](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
 
-En lisant le formulaire ci-dessus, un lecteur d'écran dira « Taille du jus de fruit&nbsp;: petit » pour le premier widget, « Taille du jus de fruit&nbsp;: moyenne » pour le second, et « Taille du jus de fruit&nbsp;: grande » pour le troisième.
+En lisant le formulaire ci-dessus, un lecteur d'écran dira «&nbsp;Taille du jus de fruit&nbsp;: petit&nbsp;» pour le premier widget, «&nbsp;Taille du jus de fruit&nbsp;: moyenne&nbsp;» pour le second, et «&nbsp;Taille du jus de fruit&nbsp;: grande&nbsp;» pour le troisième.
 
 Le scenario d'utilisation du lecteur dans cet exemple est l'un des plus importants. Chaque fois que vous avez un ensemble de boutons radio, vous devez les imbriquer dans un élément {{HTMLElement("fieldset")}}. Il y a d'autres scenarii d'utilisation, et en général l'élément {{HTMLElement("fieldset")}} peut aussi être utilisé pour partager un formulaire. Idéalement, les formulaires longs doivent être éclatés sur plusieurs pages, mais si un formulaire long doit être sur une page unique, le fait de placer les différentes sections connexes dans de différents {{HTMLElement("fieldset")}} peut en améliorer l'utilisation.
 
@@ -96,9 +96,9 @@ Comme nous l'avons vu dans l'article précédent, l'élément {{HTMLElement("lab
 <label for="name">Nom&nbsp;:</label> <input type="text" id="name" name="user_name">
 ```
 
-Avec un élément `<label>` correctement associé à `<input>` par l'intermédiaire respectivement des attributs `for` et `id` (l'attribut `for` de \<label> référence l'attibut `id` du widget correspondant), un lecteur d'écran lira et dira quelque chose comme « Nom, texte indiqué ».
+Avec un élément `<label>` correctement associé à `<input>` par l'intermédiaire respectivement des attributs `for` et `id` (l'attribut `for` de \<label> référence l'attibut `id` du widget correspondant), un lecteur d'écran lira et dira quelque chose comme «&nbsp;Nom, texte indiqué&nbsp;».
 
-Si l'étiquette n'est pas correctement paramétrée, le lecteur d'écran dira quelque chose comme « Texte édité vierge », ce qui n'est pas utile du tout.
+Si l'étiquette n'est pas correctement paramétrée, le lecteur d'écran dira quelque chose comme «&nbsp;Texte édité vierge&nbsp;», ce qui n'est pas utile du tout.
 
 Notez qu'un widget peut être incorporé dans son élément {{HTMLElement("label")}}, ainsi&nbsp;:
 
@@ -163,11 +163,11 @@ Considérons cet exemple&nbsp;:
 </div>
 ```
 
-Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant « astérisque » ou « obligatoire », selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.
+Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant «&nbsp;astérisque&nbsp;» ou «&nbsp;obligatoire&nbsp;», selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.
 
-- Dans le premier exemple, l'étiquette n'est pas lue du tout avec l'entrée — vous obtenez simplement « texte édité vierge », puis les étiquettes réelles sont lues séparément. Les multiples éléments \<label> embrouillent le lecteur d'écran.
-- Dans le deuxième exemple, les choses sont un peu plus claires — l'étiquette lue en même temps que l'entrée est « nom astérisque nom éditer texte », et les étiquettes sont toujours lues séparément. Les choses sont encore un peu confuses, mais c'est un peu mieux cette fois parce que l'entrée a une étiquette associée.
-- Le troisième exemple est meilleur — les véritables étiquettes sont toutes lues ensemble, et l'étiquette énoncée avec l'entrée est « nom astériquer éditer texte ».
+- Dans le premier exemple, l'étiquette n'est pas lue du tout avec l'entrée — vous obtenez simplement «&nbsp;texte édité vierge&nbsp;», puis les étiquettes réelles sont lues séparément. Les multiples éléments \<label> embrouillent le lecteur d'écran.
+- Dans le deuxième exemple, les choses sont un peu plus claires — l'étiquette lue en même temps que l'entrée est «&nbsp;nom astérisque nom éditer texte&nbsp;», et les étiquettes sont toujours lues séparément. Les choses sont encore un peu confuses, mais c'est un peu mieux cette fois parce que l'entrée a une étiquette associée.
+- Le troisième exemple est meilleur — les véritables étiquettes sont toutes lues ensemble, et l'étiquette énoncée avec l'entrée est «&nbsp;nom astériquer éditer texte&nbsp;».
 
 > **Note :** Vous pouvez obtenir des résultats légérement différents, selon votre lecteur d'écran. Ce qui précéde a été testé avec VoiceOver (et NVDA se comporte de la même façon). Nous aimerions avoir un retour sur vos expériences également.
 

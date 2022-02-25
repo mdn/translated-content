@@ -245,9 +245,9 @@ textarea.onkeyup = function(){
 
 ### Pourquoi a-t-on besoin de sémantique ?
 
-La sémantique est utilisée partout autour de nous — on se fie à nos précédentes experiences pour savoir à quoi servent les objets du quotidien; quand on voit quelque chose, on sait à quoi cela sert. Par exemple, on s'attend à ce qu'un feu rouge de signalisation signifie « Stop » et qu'un feu vert signifie « Avancez ». Les choses peuvent vite devenir plus compliquées si de mauvaises sémantiques sont appliquées (existe-t-il un pays dans lequel un feu rouge signifie que l'on peut passer ? Je ne l'espère pas.)
+La sémantique est utilisée partout autour de nous — on se fie à nos précédentes experiences pour savoir à quoi servent les objets du quotidien; quand on voit quelque chose, on sait à quoi cela sert. Par exemple, on s'attend à ce qu'un feu rouge de signalisation signifie «&nbsp;Stop&nbsp;» et qu'un feu vert signifie «&nbsp;Avancez ». Les choses peuvent vite devenir plus compliquées si de mauvaises sémantiques sont appliquées (existe-t-il un pays dans lequel un feu rouge signifie que l'on peut passer ? Je ne l'espère pas.)
 
-Dans la même optique, il faut s'assurer que l'on utilise les bons élements et que l'on donne la bonne signification, la bonne fonction et la bonne apparence à notre contenu. Dans ce contexte, l'élément {{htmlelement("h1")}} est aussi un élement sémantique. Il donne au texte auquel il s'applique la fonction (ou la signification) de « titre principal de la page ».
+Dans la même optique, il faut s'assurer que l'on utilise les bons élements et que l'on donne la bonne signification, la bonne fonction et la bonne apparence à notre contenu. Dans ce contexte, l'élément {{htmlelement("h1")}} est aussi un élement sémantique. Il donne au texte auquel il s'applique la fonction (ou la signification) de «&nbsp;titre principal de la page ».
 
 ```html
 <h1>Ceci est un titre principal</h1>
@@ -774,9 +774,9 @@ Dans le langage, nous mettons souvent l'accent sur certains mots pour modifier l
 
 Dans le langage parlé, pour accentuer, nous insistons sur certains mots, modifiant subtilement le sens de ce que nous disons. De même, dans le langage écrit, nous avons tendance à mettre un certain accent sur des mots en les écrivant en italique. Par exemple, les deux phrases suivantes ont des significations différentes.
 
-« Je suis content que vous n'ayez pas été en retard. »
+«&nbsp;Je suis content que vous n'ayez pas été en retard. »
 
-« Je suis _content_ que vous n'ayez pas été _en retard_. »
+«&nbsp;Je suis _content_ que vous n'ayez pas été _en retard_.&nbsp;»
 
 La première phrase semble indiquer que le locuteur est vraiment soulagé que la personne n'aie pas été en retard. En revanche, la seconde a une tonalité sarcastique ou passive-agressive, exprimant la gêne que la personne soit arrivée un peu en retard.
 
@@ -987,7 +987,7 @@ Voici la meilleure règle d'or : il est probablement approprié d'utiliser `<b>`
 
 ## Résumé
 
-C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine ; nous en verrons beaucoup plus dans notre article « More Semantic Elements », plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment [créer des hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), qui est peut-être l'élément le plus important sur le Web.
+C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine ; nous en verrons beaucoup plus dans notre article «&nbsp;More Semantic Elements&nbsp;», plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment [créer des hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), qui est peut-être l'élément le plus important sur le Web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 

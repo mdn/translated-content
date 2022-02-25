@@ -33,10 +33,10 @@ Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les don
 
 Allez sur n'importe quel site à la mode avec un formulaire d'inscription et vous remarquerez des retours si vous n'entrez pas les données dans le format attendu. Vous aurez des messages comme :
 
-- « Ce champ est obligatoire » (vous ne pouvez pas le laisser vide)
-- « Veuillez entrer votre numéro de téléphone au format xxx-xxxx » (il attend trois chiffres suivis d'un tiret, suivi de quatre chiffres).
-- « Veuillez entrer une adresse e-mail valide » (ce que vous avez saisi ne ressemble pas à une adresse e-mail valide).
-- « Votre mot de passe doit comporter entre 8 et 30 caractères et contenir une majuscule, un symbole et un chiffre » (sérieusement ?).
+- «&nbsp;Ce champ est obligatoire&nbsp;» (vous ne pouvez pas le laisser vide)
+- «&nbsp;Veuillez entrer votre numéro de téléphone au format xxx-xxxx&nbsp;» (il attend trois chiffres suivis d'un tiret, suivi de quatre chiffres).
+- «&nbsp;Veuillez entrer une adresse e-mail valide&nbsp;» (ce que vous avez saisi ne ressemble pas à une adresse e-mail valide).
+- «&nbsp;Votre mot de passe doit comporter entre 8 et 30 caractères et contenir une majuscule, un symbole et un chiffre&nbsp;» (sérieusement ?).
 
 C'est ce qu'on appelle la validation de formulaire —  lorsque vous saisissez des données, l'application Web vérifie si elles sont correctes. Si elles sont correctes, l'application permet que les données soient soumises au serveur et (généralement) sauvegardées dans une base de données ; si ce n'est pas le cas, elle émet des messages d'erreur pour expliquer ce que vous avez fait de mal (pour autant que vous l'ayez fait). La validation des formulaires peut être mise en œuvre de différentes manières.
 
@@ -82,7 +82,7 @@ Quand un élément est invalide&nbsp;:
 
 Dans cette section, nous examinerons quelques unes des diverses fonctionnalités HTML5 peuvant être utilisées pour valider des éléments d'{{HTMLElement("input")}}.
 
-Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) et un exemple « live » ci-dessous :
+Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) et un exemple «&nbsp;live&nbsp;» ci-dessous :
 
 ```html hidden
 <form>
@@ -187,7 +187,7 @@ input:valid {
 
 {{EmbedLiveSample("Validation_selon_une_expression_régulière", "100%", 55)}}
 
-Dans cet exemple, l'élément {{HTMLElement("input")}}} accepte l'une des deux valeurs possibles : la chaîne « banane » ou la chaîne « cerise ».
+Dans cet exemple, l'élément {{HTMLElement("input")}}} accepte l'une des deux valeurs possibles : la chaîne «&nbsp;banane&nbsp;» ou la chaîne «&nbsp;cerise&nbsp;».
 
 Maintenant, essayez de changer la valeur à l'intérieur de l'attribut `pattern` suivant certains exemples vus plus haut et regardez comment les valeurs entrées en sont affectées pour rester valides. Écrivez vos propres textes et voyez comment vous vous en sortez ! Restez dans le domaine des fruits dans la mesure du possible, afin que vos exemples aient du sens !
 
@@ -238,7 +238,7 @@ div {
 }
 ```
 
-Voici cet exemple s'exécutant en « live »&nbsp;:
+Voici cet exemple s'exécutant en «&nbsp;live&nbsp;»&nbsp;:
 
 {{EmbedLiveSample('Limitation_de_la_taille_des_entrées', "100%", 100)}}
 

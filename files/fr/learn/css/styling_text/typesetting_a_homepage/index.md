@@ -52,7 +52,7 @@ Nous mettons à votre disposition un HTML pour la page d'accueil du site interne
 Fontes&nbsp;:
 
 - Primo, téléchargez quelques polices gratuites.  Comme il s'agit d'un collège, les polices choisies doivent donner à la page une impression de sérieux, de formalisme et de confiance — une police sérif ample pour le corps du texte général, associée une police sans sérif ou bloc sérif pour les en-têtes serait pas mal.
-- Ensuite, utilisez le service ad-hoc pour créer le « bulletproof `@font-face` code » pour ces deux fontes.
+- Ensuite, utilisez le service ad-hoc pour créer le «&nbsp;bulletproof `@font-face` code&nbsp;» pour ces deux fontes.
 - Appliquez la police pour le corps à toute la page et celle pour les titres aux en‑têtes.
 
 Style général du texte&nbsp;:

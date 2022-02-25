@@ -325,7 +325,7 @@ Encore une fois, c'est parce que la boîte flottante a été retirée du cours n
 
 ### Débogage avec clear
 
-La façon dont cette situation est traditionnellement traitée consiste à utiliser un procédé connu sous le nom de « clearfix hack » (truc pour déboguer clear). Cela consiste à insérer un contenu après la boîte contenant le flotteur, envelopper le contenu et donner la valeur `both` à la propriété `clear`.
+La façon dont cette situation est traditionnellement traitée consiste à utiliser un procédé connu sous le nom de «&nbsp;clearfix hack&nbsp;» (truc pour déboguer clear). Cela consiste à insérer un contenu après la boîte contenant le flotteur, envelopper le contenu et donner la valeur `both` à la propriété `clear`.
 
 Ajoutez ceci à la CSS de notre exemple&nbsp;:
 
@@ -441,7 +441,7 @@ body {
 
 Cet exemple fonctionne en créant ce que l'on appelle un **block formatting context** (BFC) (contexte de formatage de bloc). C'est comme une mini composition à l'intérieur de la page, composition dans laquelle tout est contenu ; l'élément flottant est contenu à l'intérieur de la BFC et l'arrière-plan est derrière les deux éléments. Cela fonctionne en règle générale, mais dans certains cas, vous pourriez avoir des barres de défilement indésirables ou des ombres découpées en raison des conséquences involontaires de l'utilisation du débordement.
 
-### « display: flow-root »
+### «&nbsp;display: flow-root&nbsp;»
 
 La solution moderne de ce problème consiste à utiliser la valeur `flow-root` pour le propriété `display`. Elle n'existe que pour créer des BFC sans recourir à des astuces — il n'y pas de conséquences imprévisibles à son utilisation. Supprimez `overflow: auto` de la règle `.wrapper` et ajoutez `display: flow-root`. En supposant que votre navigateur le prenne en charge, la boîte sera dégagée.
 

@@ -16,7 +16,7 @@ translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
-Maintenant que vous avez appris quelques éléments théoriques sur le JavaScript, et ce que vous pouvez faire avec, nous allons vous donner un cours intensif sur les fonctionnalités basiques du JavaScript avec un tutoriel entièrement pratique. Vous allez construire un jeu simple, étape par étape. Il s'agit de faire deviner un nombre, notre jeu s'appelle « Guess the number ».
+Maintenant que vous avez appris quelques éléments théoriques sur le JavaScript, et ce que vous pouvez faire avec, nous allons vous donner un cours intensif sur les fonctionnalités basiques du JavaScript avec un tutoriel entièrement pratique. Vous allez construire un jeu simple, étape par étape. Il s'agit de faire deviner un nombre, notre jeu s'appelle «&nbsp;Guess the number&nbsp;».
 
 <table class="standard-table">
   <tbody>
@@ -42,7 +42,7 @@ Ne vous attendez pas à comprendre tout le code en détail immédiatement — no
 
 Une des choses les plus difficiles à apprendre en programmation n'est pas la syntaxe, mais comment l'appliquer afin de résoudre un problème réel. Vous devez commencer à penser comme un programmeur — ce qui implique généralement d'examiner les tâches que votre programme doit effectuer, de déterminer les fonctionnalités du code nécessaires à leurs réalisations et comment les faire fonctionner ensemble.
 
-Cela requiert un mélange de travail acharné, d'expérience avec la syntaxe de programmation (de manière générale) et surtout de la pratique — ainsi qu'un peu de créativité. Plus vous allez coder, plus vous aller vous améliorer. On ne peut pas garantir que vous aurez un « cerveau de développeur » en 5 minutes, mais nous allons vous donner plein d'occasions pour pratiquer cette façon de penser, tout au long du cours.
+Cela requiert un mélange de travail acharné, d'expérience avec la syntaxe de programmation (de manière générale) et surtout de la pratique — ainsi qu'un peu de créativité. Plus vous allez coder, plus vous aller vous améliorer. On ne peut pas garantir que vous aurez un «&nbsp;cerveau de développeur&nbsp;» en 5 minutes, mais nous allons vous donner plein d'occasions pour pratiquer cette façon de penser, tout au long du cours.
 
 Maintenant que vous avez cela en tête, regardons l'exemple que nous allons construire dans cet article et comment le découper en plusieurs tâches qui ont du sens.
 
@@ -272,7 +272,7 @@ Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez da
 checkGuess();
 ```
 
-Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir apparaître une alerte « Je suis un espace réservé » ; nous avons défini une fonction dans notre code créant une alerte chaque fois que nous l'appelons.
+Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir apparaître une alerte «&nbsp;Je suis un espace réservé&nbsp;» ; nous avons défini une fonction dans notre code créant une alerte chaque fois que nous l'appelons.
 
 > **Note :** Vous allez en apprendre beaucoup plus sur les fonctions plus tard dans ce cours.
 
@@ -280,7 +280,7 @@ Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir 
 
 Les opérateurs en JavaScript nous permettent d'effectuer des tests, de faire des calculs, de joindre des chaînes ensemble et d'autres choses de ce genre.
 
-Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les[ outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes « Exemple » exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
+Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les[ outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
 
 ```html hidden
 <!DOCTYPE html>
@@ -483,7 +483,7 @@ Pas mal de code — ouf ! Passons en revue chaque section et expliquons ce qu'
   guessCount === 1
   ```
 
-  Si c'est le cas, nous faisons en sorte que le texte affiché soit « Propositions précédentes&nbsp;: ». Sinon, nous ne le faisons pas.
+  Si c'est le cas, nous faisons en sorte que le texte affiché soit «&nbsp;Propositions précédentes&nbsp;: ». Sinon, nous ne le faisons pas.
 
 - La ligne 6 ajoute la valeur courante `userGuess` à la fin du paragraphe `guesses` , plus un espace vide de sorte qu'il y aura un espace entre chaque supposition faite.
 - Le bloc suivant (lignes 8-24) effectue quelques vérifications :

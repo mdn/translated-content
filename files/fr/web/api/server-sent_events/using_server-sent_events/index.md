@@ -100,7 +100,7 @@ while (true) {
 }
 ```
 
-Ce code génère un évènement de type « ping » à chaque seconde. La donnée de chaque évènement est un objet JSON contenant un horodatage ISO 8601 qui correspond à l'heure à laquelle l'évènement a été généré. À des intervalles aléatoires, un message simple (sans type d'évènement) est envoyé.
+Ce code génère un évènement de type «&nbsp;ping&nbsp;» à chaque seconde. La donnée de chaque évènement est un objet JSON contenant un horodatage ISO 8601 qui correspond à l'heure à laquelle l'évènement a été généré. À des intervalles aléatoires, un message simple (sans type d'évènement) est envoyé.
 
 La boucle s'exécute indépendamment du statut de la connexion, on a donc une vérification pour terminer l'exécution si la connexion a été terminée.
 
@@ -126,11 +126,11 @@ evtSource.close();
 
 ## Format du flux d'évènements
 
-Le flux d'évènements est un simple flux de données de texte, qui doit être encodé en [UTF-8](/fr/docs/Glossary/UTF-8). Les messages dans le flux d'évènements sont séparés par une paire de sauts de ligne. Un caractère deux-points «&nbsp;: » en début de ligne représente un commentaire, et est ignoré.
+Le flux d'évènements est un simple flux de données de texte, qui doit être encodé en [UTF-8](/fr/docs/Glossary/UTF-8). Les messages dans le flux d'évènements sont séparés par une paire de sauts de ligne. Un caractère deux-points «&nbsp;:&nbsp;» en début de ligne représente un commentaire, et est ignoré.
 
 > **Note :** Une ligne de commentaire peut être utilisée pour empêcher les connexions d'expirer. Un serveur peut envoyer périodiquement des commentaires afin de garder la connexion ouverte.
 
-Chaque message consiste en une ou plusieurs lignes de texte décrivant les champs de ce message. Chaque champ est représenté par le nom du champ, suivi d'un «&nbsp;: », suivi des données de texte pour la valeur de ce champ.
+Chaque message consiste en une ou plusieurs lignes de texte décrivant les champs de ce message. Chaque champ est représenté par le nom du champ, suivi d'un «&nbsp;:&nbsp;», suivi des données de texte pour la valeur de ce champ.
 
 ### Champs
 

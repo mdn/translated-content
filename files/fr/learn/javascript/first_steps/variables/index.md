@@ -268,7 +268,7 @@ var myName;
 
 > **Note :** l'exemple ci-dessus ne fonctionnera pas si on tape des lignes une à une dans la console, mais seulement quand on exécute un script JavaScript multi-lignes dans un document web.
 
-Ce processus se nomme **«** **hoisting »** (en français, "hissage") — lisez [var hoisting](/fr/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) pour plus de précisions sur ce sujet.
+Ce processus se nomme **«** **hoisting&nbsp;»** (en français, "hissage") — lisez [var hoisting](/fr/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) pour plus de précisions sur ce sujet.
 
 Le hissage ne fonctionne plus avec `let`. Si on remplaçait var par let dans l'exemple ci-dessus, l'exécution du script planterait sur une erreur. C'est une bonne chose — déclarer une variable après l'avoir initialisé produit un code obscur, difficile à lire.
 
@@ -393,7 +393,7 @@ Toutefois, en réalité, un booléen sera plutôt utilisé ainsi :
 var test = 6 < 3;
 ```
 
-Cette expression utilise l'opérateur  « inférieur à » (`<`) pour tester si 6 est plus petit que 3. Comme vous pouvez vous y attendre, cette expression renverra `false`, car 6 n'est pas plus petit que 3 ! Vous en apprendrez bien plus à propos de ces opérateurs plus loin dans ce cours.
+Cette expression utilise l'opérateur  «&nbsp;inférieur à&nbsp;» (`<`) pour tester si 6 est plus petit que 3. Comme vous pouvez vous y attendre, cette expression renverra `false`, car 6 n'est pas plus petit que 3 ! Vous en apprendrez bien plus à propos de ces opérateurs plus loin dans ce cours.
 
 ### Tableaux
 
@@ -435,7 +435,7 @@ Nous en resterons là avec les objets pour le moment — vous en saurez plus à 
 
 ## Typage faible
 
-JavaScript est un « langage faiblement typé », ce qui veut dire que, contrairement à d'autres langages, vous n'êtes pas obligé de préciser quel est le type de donnée que doit contenir une variable (par ex. nombres, chaînes, tableaux, etc).
+JavaScript est un «&nbsp;langage faiblement typé&nbsp;», ce qui veut dire que, contrairement à d'autres langages, vous n'êtes pas obligé de préciser quel est le type de donnée que doit contenir une variable (par ex. nombres, chaînes, tableaux, etc).
 
 Par exemple, si vous déclarez une variable et si vous y placez une valeur entre guillemets, le navigateur la traitera comme étant une chaîne :
 

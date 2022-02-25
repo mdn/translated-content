@@ -297,7 +297,7 @@ Il est temps de faire un autre apprentissage actif ! Dans cet exemple, nous so
 L'origine des citations dont vous aurez besoin se trouvent aux pages&nbsp;:
 
 - http\://www\.brainyquote.com/quotes/authors/c/confucius.html pour la citation de Confucius,
-- http\://www\.affirmationsforpositivethinking.com/index.html pour « The Need To Eliminate Negative Self Talk » (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
+- http\://www\.affirmationsforpositivethinking.com/index.html pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
 
 Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant le bouton de même nom. Si vous êtes vraiment bloqué, pressez le bouton _Voir la solution_ pour obtenir la réponse.
 
@@ -313,7 +313,7 @@ Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
 <p>Salut et bienvenue sur ma page de motivation. Comme Confucius a dit en son temps&nbsp;:</p>
 <p>La lenteur avec laquelle vous allez n'a pas d'importance tant que vous ne vous arrêtez pas.</p>
-<p>J'aime aussi ce concept de pensée positive « Il est nécessaire d'éliminer le discours négatif sur soi-même » (comme dit dans « Affirmations for Positive Thinking ».)</p>
+<p>J'aime aussi ce concept de pensée positive «&nbsp;Il est nécessaire d'éliminer le discours négatif sur soi-même&nbsp;» (comme dit dans «&nbsp;Affirmations for Positive Thinking&nbsp;».)</p>
 </textarea>
 
 <div class="playable-buttons">

@@ -1,5 +1,5 @@
 ---
-title: Des objets aux « iframe » — autres techniques d'intégration
+title: Des objets aux «&nbsp;iframe&nbsp;» — autres techniques d'intégration
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 tags:
   - Apprentissage
@@ -78,7 +78,7 @@ Dans cet article, passons directement à l'apprentissage actif pour vous donner 
 En prime, vous pouvez aussi essayer d'intégrer une carte [Google Map](https://www.google.com/maps/) dans l'exemple.
 
 1.  Allez sur Google Maps et trouvez une carte qui vous plaise.
-2.  Cliquez sur le  « Menu Hamburger » (trois lignes horizontales) en haut à gauche de l'interface utilisateur.
+2.  Cliquez sur le  «&nbsp;Menu Hamburger&nbsp;» (trois lignes horizontales) en haut à gauche de l'interface utilisateur.
 3.  Selectionnez l'option _Share or embed map_ (Partager ou intégrer une carte).
 4.  Selectionnez l'option _Embed map_ (intégrer une carte), qui vous fournira du code `<iframe>` — copiez‑le.
 5.  Inserez‑le dans la boîte _Input_ di‑dessous et voyez le résultat dans _Output_.
@@ -270,15 +270,15 @@ L'utilisation de HTTPS nécessite un certificat de sécurité, ce qui peut être
 
 Pour minimiser la possibilité que des attaquants commettent des actions néfastes  sur votre site Web, vous deviez donner au contenu intégré uniquement les permissions nécessaires pour qu'il  fasse son travail. Bien sûr, cela est aussi valable pour votre propre contenu. Le conteneur de code, dans lequel il peut être utilisé de manière appropriée — ou pour des tests — sans pouvoir causer aucun dommage (accidentel ou malveillant) au reste de la base du code s'appelle un [sandbox ](<https://en.wikipedia.org/wiki/Sandbox_(computer_security)>)(_bac à sable_).
 
-Un contenu en dehors du « bac à sable » peut faire beaucoup trop de choses (exécuter du JavaScript, soumettre des formulaires, des fenêtres « popup », etc.). Par défaut, vous devez imposer toute restriction disponible avec un attribut `sandbox` sans paramètres, comme montré dans notre exemple précédent.
+Un contenu en dehors du «&nbsp;bac à sable&nbsp;» peut faire beaucoup trop de choses (exécuter du JavaScript, soumettre des formulaires, des fenêtres «&nbsp;popup&nbsp;», etc.). Par défaut, vous devez imposer toute restriction disponible avec un attribut `sandbox` sans paramètres, comme montré dans notre exemple précédent.
 
-Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une (en tant que valeur de l'attribut `sandbox=""`) — voir l'entrée de référence {{htmlattrxref('sandbox','iframe')}} pour toutes les options disponibles. Il est important de noter que vous ne devez _jamais_ mettre à la fois les valeurs `allow-scripts` et `allow-same-origin` aux attributs de la « sandbox » — dans ce cas,, le contenu intégré pourrait contourner la politique de sécurité originelle qui empêche les sites d'exécuter des scripts et donc utiliser JavaScript pour désactiver complètement le « bac à sable ».
+Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une (en tant que valeur de l'attribut `sandbox=""`) — voir l'entrée de référence {{htmlattrxref('sandbox','iframe')}} pour toutes les options disponibles. Il est important de noter que vous ne devez _jamais_ mettre à la fois les valeurs `allow-scripts` et `allow-same-origin` aux attributs de la «&nbsp;sandbox&nbsp;» — dans ce cas,, le contenu intégré pourrait contourner la politique de sécurité originelle qui empêche les sites d'exécuter des scripts et donc utiliser JavaScript pour désactiver complètement le «&nbsp;bac à sable&nbsp;».
 
-> **Note :** Mettre le code dans le « bac à sable » n'offre aucune protection si les attaquants peuvent tromper les gens pour qu'ils visitent directement du contenu malveillant (en dehors d'un `<iframe>`). S'il y a la moindre chance que certain contenu soit malveillant (par exemple, du contenu d'utilisateur inconnu), veuillez le servir vers votre site principal à partir d'un autre {{glossary("domaine")}}.
+> **Note :** Mettre le code dans le «&nbsp;bac à sable&nbsp;» n'offre aucune protection si les attaquants peuvent tromper les gens pour qu'ils visitent directement du contenu malveillant (en dehors d'un `<iframe>`). S'il y a la moindre chance que certain contenu soit malveillant (par exemple, du contenu d'utilisateur inconnu), veuillez le servir vers votre site principal à partir d'un autre {{glossary("domaine")}}.
 
 #### Configurer  les directives CSP
 
-{{Glossary("CSP")}} est un acronyme pour « **[content security policy](/fr/docs/Web/Security/CSP)** » (politique de sécurité du contenu) ; les directives CSP fournissent un [ensemble d'en‑têtes HTTP](/fr/docs/Web/Security/CSP/CSP_policy_directives) (métadonnées adressées en même temps que les pages Web quand elles sont diffusées à partir d'un serveur web) conçues pour améliorer la sécurité des documents HTML. Quand elles sont destinées à sécuriser les `<iframe>`, vous pouvez _[configurer votre serveur pour qu'il adresse une en‑tête appropriée `X-Frame-Options`](/fr/docs/Web/HTTP/X-Frame-Options)._ Elle empêchera d'autres sites Web d'intégrer votre contenu dans leurs pages (ce qui pourrait permettre le {{interwiki('wikipedia','détournement de clic')}} ou accueillir d'autres attaques) ; c'est exactement ce que les développeurs de MDN ont fait, comme nous l'avons vu plus haut.
+{{Glossary("CSP")}} est un acronyme pour «&nbsp;**[content security policy](/fr/docs/Web/Security/CSP)** » (politique de sécurité du contenu) ; les directives CSP fournissent un [ensemble d'en‑têtes HTTP](/fr/docs/Web/Security/CSP/CSP_policy_directives) (métadonnées adressées en même temps que les pages Web quand elles sont diffusées à partir d'un serveur web) conçues pour améliorer la sécurité des documents HTML. Quand elles sont destinées à sécuriser les `<iframe>`, vous pouvez _[configurer votre serveur pour qu'il adresse une en‑tête appropriée `X-Frame-Options`](/fr/docs/Web/HTTP/X-Frame-Options)._ Elle empêchera d'autres sites Web d'intégrer votre contenu dans leurs pages (ce qui pourrait permettre le {{interwiki('wikipedia','détournement de clic')}} ou accueillir d'autres attaques) ; c'est exactement ce que les développeurs de MDN ont fait, comme nous l'avons vu plus haut.
 
 > **Note :** Lisez le post de Frederik Braun sur [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) pour plus d'informations sur le fond de ce sujet. Manifestement, une explication complète est hors des limites de cet article.
 
@@ -288,7 +288,7 @@ Les éléments {{htmlelement("embed")}} et {{htmlelement("object")}} ont une fon
 
 > **Note :** Un **greffon** est un logiciel qui permet d'avoir accès à des contenus que le navigateur n'est pas capable de lire de manière native.
 
-Cependant, il est peu probable que vous utilisiez beaucoup ces éléments — les applets ne sont plus utilisés depuis des années, Flash n'est plus très apprécié pour un certain nombre de raisons (voir {{anch("Le cas « greffons »")}}}, ci-dessous), les PDF ont tendance à être plutôt liés qu'intégrés, et les autres contenus tels que les images et la vidéo disposent d'éléments d'intégration beaucoup plus faciles à manipuler. Les greffons et ces méthodes d'intégration sont assurément une technique traditionnelle héritée&nbsp;: nous les mentionnons principalement au cas où vous les rencontreriez dans certaines circonstances, comme des intranets ou des projets d'entreprise.
+Cependant, il est peu probable que vous utilisiez beaucoup ces éléments — les applets ne sont plus utilisés depuis des années, Flash n'est plus très apprécié pour un certain nombre de raisons (voir {{anch("Le cas «&nbsp;greffons&nbsp;»")}}}, ci-dessous), les PDF ont tendance à être plutôt liés qu'intégrés, et les autres contenus tels que les images et la vidéo disposent d'éléments d'intégration beaucoup plus faciles à manipuler. Les greffons et ces méthodes d'intégration sont assurément une technique traditionnelle héritée&nbsp;: nous les mentionnons principalement au cas où vous les rencontreriez dans certaines circonstances, comme des intranets ou des projets d'entreprise.
 
 Si vous avez besoin d'intégrer du contenu de greffon, vous aurez besoin de ce minimum d'information :
 
@@ -329,7 +329,7 @@ Regardons maintenant un exemple avec `<object>` ; il intègre  un PDF dans un
 
 Les PDF étaient un tremplin nécessaire entre le papier et le numérique, mais ils posent de nombreux [problèmes d'accessibilité](http://webaim.org/techniques/acrobat/acrobat) et peuvent être difficiles à lire sur de petits écrans. Ils ont encore tendance à être populaires dans certains cercles, mais il est préférable d'établir un lien vers eux pour qu'ils puissent être téléchargés ou lus sur une page séparée, plutôt que de les intégrer dans une page Web.
 
-### Le cas « greffons »
+### Le cas «&nbsp;greffons&nbsp;»
 
 Il était une fois des greffons qui s'étaient rendus indispensables sur le Web. Vous souvenez-vous de l'époque où vous deviez installer Adobe Flash Player juste pour regarder un film en ligne ? Et puis vous avez constamment reçu des alertes ennuyeuses pour la mise à jour de Flash Player et de votre environnement d'exécution Java. Depuis, les technologies Web sont devenues beaucoup plus robustes, et cette époque est révolue. Pour la plupart des applications, il est temps d'arrêter de diffuser du contenu dépendant de greffons et de commencer à tirer profit des technologies Web à la place.
 

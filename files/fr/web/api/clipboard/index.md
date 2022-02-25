@@ -15,7 +15,7 @@ translation_of: Web/API/Clipboard
 ---
 {{APIRef("Clipboard API")}}
 
-> **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une {{interwiki("wikipedia", "Mémoire_tampon", "mémoire tampon")}} temporaire, parfois appelée « tampon de collage », qui peut être accédé par la plupart ou tous les programmes de l’environnement via des {{interwiki("wikipedia", "Interface_de_programmation", "interfaces de programmation")}} définies.
+> **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une {{interwiki("wikipedia", "Mémoire_tampon", "mémoire tampon")}} temporaire, parfois appelée «&nbsp;tampon de collage&nbsp;», qui peut être accédé par la plupart ou tous les programmes de l’environnement via des {{interwiki("wikipedia", "Interface_de_programmation", "interfaces de programmation")}} définies.
 >
 > Une application typique accède aux fonctionnalités du presse-papiers en associant des {{interwiki("wikipedia", "Entr%C3%A9es-sorties", "entrées utilisateur")}} telles que des {{interwiki("wikipedia", "Raccourci_clavier", "raccourcis clavier")}}, des éléments de {{interwiki("wikipedia", "Menu_(informatique)", "menus")}}, etc. à ces interfaces.
 

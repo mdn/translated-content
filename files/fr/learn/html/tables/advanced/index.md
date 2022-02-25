@@ -96,7 +96,7 @@ Mettons en œuvre ces nouveaux éléments.
 2.  Essayez de les ouvrir dans un navigateur — vous verrez que cela paraît correct, mais gagnerait à être amélioré. La ligne "SUM" qui contient les totaux des montants dépensés semble être au mauvais endroit et il manque certains détails du code.
 3.  Mettez la ligne d'en-têtes en évidence avec l'élément `<thead>` , la ligne des totaux ("SUM") dans un `<tfoot>`, et le reste du contenu dans un `<tbody>`.
 4.  Enregistrez et actualisez, et vous verrez que l'ajout de l'élément `<tfoot>` a renvoyé la ligne "SUM" en bas du tableau.
-5.  Ensuite, ajoutez un attribut {{htmlattrxref("colspan","td")}}  pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne « Coût ».
+5.  Ensuite, ajoutez un attribut {{htmlattrxref("colspan","td")}}  pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne «&nbsp;Coût&nbsp;».
 6.  Ajoutons un style supplémentaire au tableau, pour vous donner une idée de l'utilité de ces éléments pour l'application des CSS. Dans le \<head> du document HTML, vous pouvez voir un élément {{htmlelement("style")}} vide, ajoutez les lignes suivantes de code CSS :
 
     ```css
@@ -390,7 +390,7 @@ Et chaque ligne pourrait également avoir une définition de son en-tête comme 
 
 Les lecteurs d'écran reconnaîtront un balisage structuré comme celui-ci et permettront à leurs utilisateurs de lire en une fois une colonne ou une ligne entière par exemple.
 
-`scope` a deux autres valeurs possibles — `colgroup` et `rowgroup`. Elles sont utilisées pour les en-têtes qui couvrent plusieurs colonnes ou lignes. Si vous revenez au tableau « Articles vendus... » au début de ce paragraphe du présent article, vous voyez que la cellule « Vêtements » se trouve au-dessus des cellules  « Pantalons », « Jupes » et « Robes ». Toutes ces cellules sont marquées comme en-têtes (`<th>`), mais « Vêtements » est un en-tête de niveau supérieur qui définit trois « sous-en-têtes ». « Vêtements » comportera donc un attribut  `scope="colgroup"`, alors que les autres doivent recevront un attribut `scope="col"`.
+`scope` a deux autres valeurs possibles — `colgroup` et `rowgroup`. Elles sont utilisées pour les en-têtes qui couvrent plusieurs colonnes ou lignes. Si vous revenez au tableau «&nbsp;Articles vendus...&nbsp;» au début de ce paragraphe du présent article, vous voyez que la cellule «&nbsp;Vêtements&nbsp;» se trouve au-dessus des cellules  «&nbsp;Pantalons&nbsp;», «&nbsp;Jupes&nbsp;» et «&nbsp;Robes&nbsp;». Toutes ces cellules sont marquées comme en-têtes (`<th>`), mais «&nbsp;Vêtements&nbsp;» est un en-tête de niveau supérieur qui définit trois «&nbsp;sous-en-têtes&nbsp;». «&nbsp;Vêtements&nbsp;» comportera donc un attribut  `scope="colgroup"`, alors que les autres doivent recevront un attribut `scope="col"`.
 
 ### Les attributs `id` et `headers`
 

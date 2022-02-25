@@ -112,7 +112,7 @@ Les attributs `srcset` et `sizes` paraissent complexes, mais ils ne sont pas dif
 
 **`sizes`** définit un ensemble de conditions pour le média (par ex. des largeurs d'écran) et indique quelle taille d'image serait la plus adaptée si certaines conditions sont satisfaites — ce sont les conditions dont nous avons parlé plus haut. Dans ce cas, nous écrivons avant chaque virgule :
 
-1.  une **condition pour le média** (`(max-width:480px)`) — vous pourrez en savoir plus à ce propos dans l'[article sur les CSS](/fr/docs/Learn/CSS), mais pour le moment disons simplement que cette condition pour le média décrit un état possible de l'écran. Dans notre cas, nous disons « si la largeur de fenêtre est de 480 pixels ou moins »,
+1.  une **condition pour le média** (`(max-width:480px)`) — vous pourrez en savoir plus à ce propos dans l'[article sur les CSS](/fr/docs/Learn/CSS), mais pour le moment disons simplement que cette condition pour le média décrit un état possible de l'écran. Dans notre cas, nous disons «&nbsp;si la largeur de fenêtre est de 480 pixels ou moins »,
 2.  une espace,
 3.  **la largeur de la place** occupée par l'image si la condition pour le média est vraie (`440px`).
 

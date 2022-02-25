@@ -19,7 +19,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
-À ce point du didacticiel, nous parlerons de « mathématiques en JavaScript » — comment utiliser les {{Glossary("Operator","operators")}} et autres fonctionnalités pour manier avec succès les nombres pour faire nos bricolages.
+À ce point du didacticiel, nous parlerons de «&nbsp;mathématiques en JavaScript&nbsp;» — comment utiliser les {{Glossary("Operator","operators")}} et autres fonctionnalités pour manier avec succès les nombres pour faire nos bricolages.
 
 <table class="standard-table">
   <tbody>
@@ -216,9 +216,9 @@ Revenons sur le dernier exemple ci‑dessus, en supposant que `num2` contient la
 num2 + num1 / 8 + 2;
 ```
 
-En tant qu'humain, vous pouvez lire « *50 plus 10 égale 60 »*, puis « *8 plus 2 égale 10 »* et finalement « *60 divisé par 10 égale 6 »*.
+En tant qu'humain, vous pouvez lire «&nbsp;*50 plus 10 égale 60&nbsp;»*, puis «&nbsp;*8 plus 2 égale 10&nbsp;»* et finalement «&nbsp;*60 divisé par 10 égale 6&nbsp;»*.
 
-Mais le navigateur _calcule « 10 sur 8 égale 1.25 »_, puis « *50 plus 1.25 plus 2 égale 53.25 »*.
+Mais le navigateur _calcule «&nbsp;10 sur 8 égale 1.25&nbsp;»_, puis «&nbsp;*50 plus 1.25 plus 2 égale 53.25&nbsp;»*.
 
 Cela est dû aux **priorités entre opérateurs** — certains sont appliqués avant d'autres dans une opération (on parle d'une expression en programmation). En JavaScript, la priorité des opérateurs est identique à celle enseignée à l'école — Multiplication et Division sont toujours effectuées en premier, suivies d'Addition et Soustraction (le calcul est toujours exécuté de la gauche vers la droite).
 
@@ -234,7 +234,7 @@ Essayez-le et voyez.
 
 ## Opérateurs d'incrémentation et de décrémentation
 
-Quelquefois vous aurez besoin d'ajouter ou retrancher 1 à une valeur de variable de manière répétitive. On effectue commodément cette opération à l'aide des opérateurs d'incrémentation (`++`) ou de décrementation (`--`). Nous nous sommes servis de `++` dans le jeu « Devinez le nombre » dans notre article [Première plongée dans le JavaScript](/fr/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) pour ajouter 1 à la variable `guessCount` pour décompter le nombre de suppositions restantes après chaque tour.
+Quelquefois vous aurez besoin d'ajouter ou retrancher 1 à une valeur de variable de manière répétitive. On effectue commodément cette opération à l'aide des opérateurs d'incrémentation (`++`) ou de décrementation (`--`). Nous nous sommes servis de `++` dans le jeu «&nbsp;Devinez le nombre&nbsp;» dans notre article [Première plongée dans le JavaScript](/fr/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) pour ajouter 1 à la variable `guessCount` pour décompter le nombre de suppositions restantes après chaque tour.
 
 ```js
 guessCount++;
@@ -371,7 +371,7 @@ function updateBtn() {
 
 **[Ouvrir dans une nouvelle fenêtre](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
 
-Vous pouvez voir l'utilisation de l'opérateur d'égalité stricte dans la fonction `updateBtn()`. Dans ce cas, nous ne testons pas si deux expressions mathématiques ont la même valeur — nous testons si le contenu textuel d'un bouton contient une certaine chaîne — mais c'est toujours le même principe. Si le bouton affiche « Démarrer la machine » quand on le presse, nous changeons son étiquette en « Arrêter la machine » et mettons à jour l'étiquette comme il convient. Si le bouton indique « Arrêter la machine » au moment de le presser, nous basculons l'étiquette à nouveau.
+Vous pouvez voir l'utilisation de l'opérateur d'égalité stricte dans la fonction `updateBtn()`. Dans ce cas, nous ne testons pas si deux expressions mathématiques ont la même valeur — nous testons si le contenu textuel d'un bouton contient une certaine chaîne — mais c'est toujours le même principe. Si le bouton affiche «&nbsp;Démarrer la machine&nbsp;» quand on le presse, nous changeons son étiquette en «&nbsp;Arrêter la machine&nbsp;» et mettons à jour l'étiquette comme il convient. Si le bouton indique «&nbsp;Arrêter la machine&nbsp;» au moment de le presser, nous basculons l'étiquette à nouveau.
 
 > **Note :** Un contrôle qui alterne entre deux états porte généralement le nom de **toggle** (bascule). Il bascule d'un état l'autre — allumé, éteint, etc.
 

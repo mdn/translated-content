@@ -165,7 +165,7 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
     let badString = Voici un test';
     ```
 
-    Ces lignes de code ne fonctionnent pas parce que toute chaîne de texte qui n'est pas écrite entre guillemets est considérée comme un nom de variable, un nom de propriété, un mot réservé ou quelque chose de semblable. Quand l'interpréteur ne parvient pas à trouver la déclaration de ladite variable, une erreur est déclenchée (par ex. « missing ; before statement »). Si l'interpréteur voit le début d'une chaîne  mais ne trouve pas sa fin, comme dans la ligne 2, il se plaint en émettant une erreur (avec « *unterminated string literal* »). Si votre programme produit de telles erreurs, revoyez‑le et vérifiez qu'aucun guillemet ne manque.
+    Ces lignes de code ne fonctionnent pas parce que toute chaîne de texte qui n'est pas écrite entre guillemets est considérée comme un nom de variable, un nom de propriété, un mot réservé ou quelque chose de semblable. Quand l'interpréteur ne parvient pas à trouver la déclaration de ladite variable, une erreur est déclenchée (par ex. «&nbsp;missing ; before statement »). Si l'interpréteur voit le début d'une chaîne  mais ne trouve pas sa fin, comme dans la ligne 2, il se plaint en émettant une erreur (avec «&nbsp;*unterminated string literal* »). Si votre programme produit de telles erreurs, revoyez‑le et vérifiez qu'aucun guillemet ne manque.
 
 3.  L'assertion suivante fonctionne si la variable `string` a été préalablement définie — essayez maintenant&nbsp;:
 
@@ -212,7 +212,7 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
 
 ### Échappement de caractères dans une chaîne
 
-Pour corriger l'erreur dans notre ligne de code précédente, il nous suffit d'échapper au problème que pose le guillemet. « Échapper des caractères » signifie que nous les marquons de manière à ce qu'ils soient reconnus comme partie intégrante du texte, et non pas comme symbole de code. Dans JavaScript, nous le faisons en mettant une barre oblique inverse juste avant le caractère. Essayons&nbsp;:
+Pour corriger l'erreur dans notre ligne de code précédente, il nous suffit d'échapper au problème que pose le guillemet. «&nbsp;Échapper des caractères&nbsp;» signifie que nous les marquons de manière à ce qu'ils soient reconnus comme partie intégrante du texte, et non pas comme symbole de code. Dans JavaScript, nous le faisons en mettant une barre oblique inverse juste avant le caractère. Essayons&nbsp;:
 
 ```js
 let bigmouth = 'Je n\'ai pas eu droit à prendre place...';
@@ -223,7 +223,7 @@ Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de 
 
 ## Concaténation de chaînes
 
-1.  Concaténer est un terme de programmation du genre chic qui signifie « attacher ensemble ». Pour attacher des chaînes en JavaScript, on utilise l'opérateur plus (+) , le même que l'on utilise pour ajouter deux nombres, mais dans ce contexte il fait quelque chose de différent. Voyons un exemple dans la console.
+1.  Concaténer est un terme de programmation du genre chic qui signifie «&nbsp;attacher ensemble&nbsp;». Pour attacher des chaînes en JavaScript, on utilise l'opérateur plus (+) , le même que l'on utilise pour ajouter deux nombres, mais dans ce contexte il fait quelque chose de différent. Voyons un exemple dans la console.
 
     ```js
     let one = 'Hello, ';

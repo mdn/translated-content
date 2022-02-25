@@ -17,7 +17,7 @@ JavaScript est un langage de programmation qui ajoute de l'interactivité à vot
 
 ## Qu'est le JavaScript, réellement ?
 
-{{Glossary("JavaScript")}} (« JS » en abrégé) est un langage de {{Glossary("Dynamic programming language", "programmation dynamique")}} complet qui, appliqué à un document {{Glossary("HTML")}}, peut fournir une interactivité dynamique sur les sites Web. Il a été inventé par Brendan Eich, co-fondateur du projet Mozilla, de la Mozilla Foundation et de la Mozilla Corporation.
+{{Glossary("JavaScript")}} («&nbsp;JS&nbsp;» en abrégé) est un langage de {{Glossary("Dynamic programming language", "programmation dynamique")}} complet qui, appliqué à un document {{Glossary("HTML")}}, peut fournir une interactivité dynamique sur les sites Web. Il a été inventé par Brendan Eich, co-fondateur du projet Mozilla, de la Mozilla Foundation et de la Mozilla Corporation.
 
 JavaScript est d'une incroyable flexibilité. Vous pouvez commencer petit, avec des carrousels, des galeries d'images, des variations de mises en page et des réponses aux clics de boutons. Avec plus d'expérience, vous serez en mesure de créer des jeux, des graphiques 2D et 3D animés, des applications complètes fondées sur des bases de données et bien plus encore !
 
@@ -35,11 +35,11 @@ Ci-dessous nous allons vous présenter quelques aspects du coeur du langage, et 
 
 Le paragraphe précédent laisse entrevoir quelque chose de passionnant, et cela l'est vraiment — JavaScript est une technologie web parmi les plus dynamiques. Une fois que vous commencerez à être autonome en JavaScript, vous entrerez dans une nouvelle dimension de puissance et créativité.
 
-Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML ou CSS. Vous pourrez démarrer petit et continuer à travailler par petites étapes de façon soutenue. Pour commencer, nous allons vous montrer comment ajouter un JavaScript basique à votre page, en créant un exemple « Hello world ! » ([la norme en matière d'exemples de programmation de base](https://fr.wikipedia.org/wiki/Hello_world)).
+Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML ou CSS. Vous pourrez démarrer petit et continuer à travailler par petites étapes de façon soutenue. Pour commencer, nous allons vous montrer comment ajouter un JavaScript basique à votre page, en créant un exemple « Hello world !&nbsp;» ([la norme en matière d'exemples de programmation de base](https://fr.wikipedia.org/wiki/Hello_world)).
 
 > **Attention :** Si vous rejoignez cette série d'articles en cours de route, [téléchargez cet exemple de code](https://github.com/mdn/beginner-html-site-styled/archive/gh-pages.zip) et utilisez‑le comme point de départ.
 
-1.  Tout d'abord, allez sur votre site de test et créez un nouveau dossier nommé « scripts » (sans guillemets). Ensuite, dans le nouveau dossier `scripts` que vous venez de créer, créez un nouveau fichier appelé main.js. Sauvegardez-le dans votre dossier scripts.
+1.  Tout d'abord, allez sur votre site de test et créez un nouveau dossier nommé «&nbsp;scripts&nbsp;» (sans guillemets). Ensuite, dans le nouveau dossier `scripts` que vous venez de créer, créez un nouveau fichier appelé main.js. Sauvegardez-le dans votre dossier scripts.
 2.  Ensuite, dans votre fichier `index.html`, ajoutez l'élément suivant sur une nouvelle ligne avant la balise fermante `</body>` :
 
     ```html
@@ -62,7 +62,7 @@ Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML
 
 Le texte du titre a été changé en «Bonjour, monde ! » en utilisant JavaScript. Pour cela, on a utilisé une fonction appelée {{domxref("Document.querySelector", "querySelector()")}} pour obtenir une référence sur l'en‑tête et la stocker dans une variable appelée `myHeading`. C'est assez proche de ce qu'on a fait avec les sélecteurs CSS. Lorsqu'on souhaite manipuler un élément, il faut d'abord le sélectionner.
 
-Ensuite, nous fixons à « Bonjour, monde ! » la valeur de la propriété {{domxref("Node.textContent", "textContent")}} de la variable `myHeading` (elle représente le contenu du titre).
+Ensuite, nous fixons à «&nbsp;Bonjour, monde !&nbsp;» la valeur de la propriété {{domxref("Node.textContent", "textContent")}} de la variable `myHeading` (elle représente le contenu du titre).
 
 > **Note :** Les deux fonctions que vous avez utilisées ci-dessus font partie de l'API Document Object Model (DOM), qui vous permet de manipuler les documents.
 
@@ -374,7 +374,7 @@ Dans cette section, nous allons incorporer une autre image au site en utilisant 
 
 1.  Tout d'abord, trouvez une autre image à afficher sur le site. Assurez‑vous qu'elle soit de même taille que la première, ou le plus possible approchante.
 2.  Enregistrez cette image dans votre dossier `images`.
-3.  Renommez cette image « firefox2.png » (sans les guillemets).
+3.  Renommez cette image «&nbsp;firefox2.png&nbsp;» (sans les guillemets).
 4.  Dans le fichier `main.js`, entrez ce code JavaScript (si votre code « Bonjour, monde » est toujours là, supprimez‑le) :
 
     ```js

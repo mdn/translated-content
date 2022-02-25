@@ -17,7 +17,7 @@ original_slug: Apprendre/CSS/CSS_layout/Legacy_Layout_Methods
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-Les systèmes de trames sont courants dans les mises en page avec une CSS, mais avant la création de l'application « CSS Grid Layout », ces mises en page  étaient mises en œuvre à l'aide de boîtes flottantes ou autres. Vous imaginiez votre mise en page sous la forme d'un nombre fixe de colonnes (par exemple 4, 6 ou 12), puis insériez des colonnes de contenu dans ces colonnes imaginaires. Dans cet article, nous allons explorer le fonctionnement de ces méthodes traditionnelles anciennes pour que vous compreniez comment elles sont utilisées si vous travaillez sur un projet ancien.
+Les systèmes de trames sont courants dans les mises en page avec une CSS, mais avant la création de l'application «&nbsp;CSS Grid Layout&nbsp;», ces mises en page  étaient mises en œuvre à l'aide de boîtes flottantes ou autres. Vous imaginiez votre mise en page sous la forme d'un nombre fixe de colonnes (par exemple 4, 6 ou 12), puis insériez des colonnes de contenu dans ces colonnes imaginaires. Dans cet article, nous allons explorer le fonctionnement de ces méthodes traditionnelles anciennes pour que vous compreniez comment elles sont utilisées si vous travaillez sur un projet ancien.
 
 <table class="standard-table">
   <tbody>
@@ -44,11 +44,11 @@ Les systèmes de trames sont courants dans les mises en page avec une CSS, mais 
 
 ## Mise en page et systèmes de trames avant CSS Grid Layout
 
-Il peut sembler surprenant pour un désigner web que les CSS n'avaient pas de système de disposition en trame intégré jusqu'à peu. Au lieu de cela, nous utilisions diverses méthodes peu performantes pour créer des designs à trames. Nous appelerons maintenant ces méthodes « méthodes héritées ».
+Il peut sembler surprenant pour un désigner web que les CSS n'avaient pas de système de disposition en trame intégré jusqu'à peu. Au lieu de cela, nous utilisions diverses méthodes peu performantes pour créer des designs à trames. Nous appelerons maintenant ces méthodes «&nbsp;méthodes héritées&nbsp;».
 
-Pour les nouveaux projets, dans la plupart des cas, CSS Grid Layout forme la base de toute mise en page en combinaison avec une ou plusieurs autres méthodes modernes. Vous rencontrerez cependant de temps en temps des « systèmes de trame » utilisant ces méthodes héritées. Il est intéressant de comprendre comment elles fonctionnent et en quoi elles différent de CSS Grid Layout.
+Pour les nouveaux projets, dans la plupart des cas, CSS Grid Layout forme la base de toute mise en page en combinaison avec une ou plusieurs autres méthodes modernes. Vous rencontrerez cependant de temps en temps des «&nbsp;systèmes de trame&nbsp;» utilisant ces méthodes héritées. Il est intéressant de comprendre comment elles fonctionnent et en quoi elles différent de CSS Grid Layout.
 
-Cette leçon explique comment fonctionnent les systèmes et les cadres de trames se fondant sur des boîtes flottantes et Flexbox. Après avoir étudié « Grid Layout », vous serez probablement surpris de voir à quel point tout cela semble compliqué ! Ces connaissances vous seront utile si vous avez besoin de créer du code de recours pour les navigateurs qui ne prenent pas en charge les nouvelles méthodes ; de plus, elles vous permettront de travailler sur des projets existants qui utilisent ces types de systèmes.
+Cette leçon explique comment fonctionnent les systèmes et les cadres de trames se fondant sur des boîtes flottantes et Flexbox. Après avoir étudié «&nbsp;Grid Layout&nbsp;», vous serez probablement surpris de voir à quel point tout cela semble compliqué ! Ces connaissances vous seront utile si vous avez besoin de créer du code de recours pour les navigateurs qui ne prenent pas en charge les nouvelles méthodes ; de plus, elles vous permettront de travailler sur des projets existants qui utilisent ces types de systèmes.
 
 Gardons présent à l'esprit, en explorant ces systèmes, qu'aucun d'entre eux ne crée réellement une trame de la même manière que CSS Grid Layout. Leur mode de fonctionnement consiste à donner une taille aux objets et à les pousser pour les aligner d'une manière figurant une trame.
 
@@ -354,7 +354,7 @@ Maintenant enregistrez le code, chargez le dans le navigateur et modifiez la lar
 
 ### Faciliter les calculs avec la fonction calc()
 
-Vous pouvez utiliser la fonction {{cssxref("calc()")}} pour faire les calculs à l'intérieur même de la CSS — la fonction vous permet d'insérer de simples expressions mathématiques pour calculer la valeur qu'il convient de donner à la propriété CSS. C'est utile quand les calculs sont complexes ; vous pouvez même effectuer un calcul avec des unités différentes, par exemple « je veux que la hauteur de cet élément soit toujours égale à 100% de son parent moins 50px ». Voir [cet exemple dans le didacticiel MediaRecorder API](</fr/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
+Vous pouvez utiliser la fonction {{cssxref("calc()")}} pour faire les calculs à l'intérieur même de la CSS — la fonction vous permet d'insérer de simples expressions mathématiques pour calculer la valeur qu'il convient de donner à la propriété CSS. C'est utile quand les calculs sont complexes ; vous pouvez même effectuer un calcul avec des unités différentes, par exemple «&nbsp;je veux que la hauteur de cet élément soit toujours égale à 100% de son parent moins 50px&nbsp;». Voir [cet exemple dans le didacticiel MediaRecorder API](</fr/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
 
 Revenon à nos trames ! Toute colonne se développant au delà de la première a une largeur totale de 6.25% multipliée par le nombre de colonnes précédentes plus 2.08333333% multiplié par le nombre de gouttières (qui doit toujours être égal au nombre de colonnes moins 1). La fonction `calc()` nous permet de faire ce calcul dans la valeur `width` même, ainsi pour tout élément au-delà de la colonne 4 nous pouvons écrire, par exemple&nbsp;:
 
@@ -384,9 +384,9 @@ Remplacez le bloc de règles le plus bas par le suivant, puis actualisez le navi
 
 > **Note :** Si vous n'arrivez pas à faire fonctionner ce qui précède, cela peut être dû au fait que votre navigateur ne prend pas en charge la fonction `calc()`, même si elle est assez bien prise en charge parmi les navigateurs — au‑delà de IE9.
 
-### Systèmes de trames « sémantiques » vs. « non sémantiques »
+### Systèmes de trames «&nbsp;sémantiques&nbsp;» vs. «&nbsp;non sémantiques&nbsp;»
 
-Ajouter des classes au balisage pour définir une mise en page signifie que le contenu et le balisage sont liés à la présentation visuelle. Cette utilisation de classes CSS est parfois décrite comme étant « non sémantique » — montrant comment le contenu est disposé — par opposition à l'utilisation sémantique des classes qui décrit le contenu. C'est le cas de nos classes `span2`, `span3`, etc.
+Ajouter des classes au balisage pour définir une mise en page signifie que le contenu et le balisage sont liés à la présentation visuelle. Cette utilisation de classes CSS est parfois décrite comme étant «&nbsp;non sémantique&nbsp;» — montrant comment le contenu est disposé — par opposition à l'utilisation sémantique des classes qui décrit le contenu. C'est le cas de nos classes `span2`, `span3`, etc.
 
 Ce n'est pas la seule approche. À la place, vous pouvez décider de la trame, puis ajouter les informations de taille aux règles des classes sémantiques existantes. Par exemple, si vous avez un élément {{htmlelement("div")}} de classe `content` que vous voulez développer sur huit colonnes, vous pouvez copier sur la largeur de la classe `span8`, ce qui vous donne une règle :
 
@@ -493,19 +493,19 @@ Sur la ligne haute, nous disposons de douze boîtes nettes sur la trame et elle 
 
 Pour corriger cela, nous avons encore besoin d'inclure les classes `span` pour donner une largeur qui remplave la valeur donnée par `flex-basis` pour cet élément.
 
-Également, ils ne respectent pas la trame utilisée par les éléments au‑dessus car ils ne « savent » rien à son propos.
+Également, ils ne respectent pas la trame utilisée par les éléments au‑dessus car ils ne «&nbsp;savent&nbsp;» rien à son propos.
 
 Flexbox est un design **mono-dimensionnel** par conception. Il compose avec une seule dimentsion, celle d'une ligne ou d'une colonne. Nous ne pouvons pas créer une trame stricte pour les colonnes **et** pour les lignes, ce qui signifie que si nous utilisons Flexbox pour  une trame, nous devons encore calculer les pourcentages comme pour la disposition en boîtes flottantes.
 
-Dans votre projet, vous pouvez toujours choisir d'utiliser une « trame » Flexbox en raison des capacités d'alignement et de distribution de l'espace supplémentaires que Flexbox offre pour les boites flottantes. Mais sachez que vous utilisez encore un outil pour autre chose que ce pour quoi il a été conçu. Vous pouvez donc avoir l'impression d'être obligé de passer par un tas de circonvolutions pour obtenir le résultat final souhaité.
+Dans votre projet, vous pouvez toujours choisir d'utiliser une «&nbsp;trame&nbsp;» Flexbox en raison des capacités d'alignement et de distribution de l'espace supplémentaires que Flexbox offre pour les boites flottantes. Mais sachez que vous utilisez encore un outil pour autre chose que ce pour quoi il a été conçu. Vous pouvez donc avoir l'impression d'être obligé de passer par un tas de circonvolutions pour obtenir le résultat final souhaité.
 
 ## Systèmes de trame tierces parties
 
-Maintenant que nous avons compris la mathématique derrière les calculs de grille, nous sommes au bon endroit pour examiner certains des systèmes de trame tierces parties couramment utilisés. Si vous faite une recherche web pour « CSS Grid framework », vous vous trouverez devant une liste de choix énorme. Les canevas populaires tels que [Bootstrap](http://getbootstrap.com/) et [Foundation](http://foundation.zurb.com/) incluent un système de trame. Il existe également des systèmes de trames autonomes, développés soit à l'aide des CSS, soit à l'aide de préprocesseurs.
+Maintenant que nous avons compris la mathématique derrière les calculs de grille, nous sommes au bon endroit pour examiner certains des systèmes de trame tierces parties couramment utilisés. Si vous faite une recherche web pour «&nbsp;CSS Grid framework&nbsp;», vous vous trouverez devant une liste de choix énorme. Les canevas populaires tels que [Bootstrap](http://getbootstrap.com/) et [Foundation](http://foundation.zurb.com/) incluent un système de trame. Il existe également des systèmes de trames autonomes, développés soit à l'aide des CSS, soit à l'aide de préprocesseurs.
 
 Voyons un de ces systèmes autonomes&nbsp;: il montre les techniques courantes pour travailler dans un cadre de trames. La trame que nous allons utiliser fait partie de Skeleton, un simple canevas CSS.
 
-Commençons par visiter le [site web de Skeleton](http://getskeleton.com/) et choisissons « Download » pour télécharger le fichier ZIP. Faisons l'extraction et copions les fichiers _skeleton.css_ et _normalize.css_ dans un nouveau répertoire.
+Commençons par visiter le [site web de Skeleton](http://getskeleton.com/) et choisissons «&nbsp;Download&nbsp;» pour télécharger le fichier ZIP. Faisons l'extraction et copions les fichiers _skeleton.css_ et _normalize.css_ dans un nouveau répertoire.
 
 Faites une copie de [html-skeleton.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton.html) et enregistrez le dans le même répertoire que _skeleton.css_ et _normalize.css_.
 
@@ -594,7 +594,7 @@ Enregistrez le fichier HTML et chargez‑le dans le navigateur pour voir ce que 
 
 > **Note :** Si vous éprouvez des difficulatés à faire fonctionner cet exemple, comparez votre code avec le fichier [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) (à voir aussi  [en exécution directe](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
 
-Si vous regardez dans le fichier _skeleton.css_ vous verrez comment cela fonctionne. Par exemple, Skeleton prédéfinit ce qui suit pour styler des éléments de la classe « three columns » que l'on ajouterait.
+Si vous regardez dans le fichier _skeleton.css_ vous verrez comment cela fonctionne. Par exemple, Skeleton prédéfinit ce qui suit pour styler des éléments de la classe «&nbsp;three columns&nbsp;» que l'on ajouterait.
 
 ```css
 .three.columns { width: 22%; }
@@ -602,11 +602,11 @@ Si vous regardez dans le fichier _skeleton.css_ vous verrez comment cela fonctio
 
 Tout Skeleton (ou n'importe quel autre canevas) paramètre des classes prédéfinies qu'il est possible d'utiliser en les ajoutant à votre balisage. Vous avez fait exactement la même chose en calculant ces pourcentages vous même.
 
-Comme vous le voyez, vous n'avez besoin d'écrire que peu de CSS en utilisant Skeleton. Il traite tout l'aspect boîte flottante pour vous quand vous ajoutez des classes à votre balisage. C'est la possibilité de gérer la responsabilité de la disposition sur quelque chose d'autre qui fait que l'utilisation d'un canevas pour un système de trames est un choix convaincan ! Toutefois, actuellement avec « CSS Grid Layout », nombre de développeurs délaissent ces canevas pour l'utilisation des trames natives intégrées que les CSS fournissent.
+Comme vous le voyez, vous n'avez besoin d'écrire que peu de CSS en utilisant Skeleton. Il traite tout l'aspect boîte flottante pour vous quand vous ajoutez des classes à votre balisage. C'est la possibilité de gérer la responsabilité de la disposition sur quelque chose d'autre qui fait que l'utilisation d'un canevas pour un système de trames est un choix convaincan ! Toutefois, actuellement avec «&nbsp;CSS Grid Layout&nbsp;», nombre de développeurs délaissent ces canevas pour l'utilisation des trames natives intégrées que les CSS fournissent.
 
 ## Résumé
 
-Vous savez maintenant comment les divers systèmes de trames sont créés. La connaissance de ces processus est utile dans le cadre d'un travail sur des sites anciens, ainsi que pour la compréhension des différences  entre les trames natives de « CSS Grid Layout » et celles des anciens systèmes.
+Vous savez maintenant comment les divers systèmes de trames sont créés. La connaissance de ces processus est utile dans le cadre d'un travail sur des sites anciens, ainsi que pour la compréhension des différences  entre les trames natives de «&nbsp;CSS Grid Layout&nbsp;» et celles des anciens systèmes.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 

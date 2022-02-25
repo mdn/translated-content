@@ -6,7 +6,7 @@ original_slug: Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML", "Web/Guide/HTML/Formulaires")}}
 
-Tout développeur apprend très rapidement (parfois difficilement) que le Web est un endroit assez inconfortable. Le pire des fléaux est le « navigateur historique ». Oui, admettons‑le, si on dit « navigateur historique », nous pensons tous aux anciennes versions d'Internet Explorer ... mais elles sont loin d'être les seules. Les premières versions de Firefox, comme la [version ESR,](http://www.mozilla.org/en-US/firefox/organizations/) sont aussi des « navigateurs historiques ». Et dans le monde du mobile ? Quand ni le navigateur ni l'OS ne peut être mis à jour? Oui, il y a beaucoup de vieux smartphones Android ou des iPhones dont le navigateur par défaut n'est pas à jour. Ceux-ci sont aussi des « navigateurs historiques ».
+Tout développeur apprend très rapidement (parfois difficilement) que le Web est un endroit assez inconfortable. Le pire des fléaux est le «&nbsp;navigateur historique&nbsp;». Oui, admettons‑le, si on dit «&nbsp;navigateur historique&nbsp;», nous pensons tous aux anciennes versions d'Internet Explorer ... mais elles sont loin d'être les seules. Les premières versions de Firefox, comme la [version ESR,](http://www.mozilla.org/en-US/firefox/organizations/) sont aussi des «&nbsp;navigateurs historiques&nbsp;». Et dans le monde du mobile ? Quand ni le navigateur ni l'OS ne peut être mis à jour? Oui, il y a beaucoup de vieux smartphones Android ou des iPhones dont le navigateur par défaut n'est pas à jour. Ceux-ci sont aussi des «&nbsp;navigateurs historiques&nbsp;».
 
 Malheureusement, parcourir cette jungle est une facette du métier. Mais opportunément, il existe quelques astuces pour nous aider à résoudre 80 % des problèmes causés par ces vieilles versions de navigateur.
 
@@ -29,13 +29,13 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 - [Can I Use](http://caniuse.com) a des informations sur la prise en charge des techniques avancées.
 - [Quirks Mode](http://www.quirksmode.org) est une surprenante ressource sur la compatibilité des divers navigateurs. [La partie sur les mobiles](http://www.quirksmode.org/mobile/) est la meilleure actuellement disponible.
 - [Position Is Everything](http://positioniseverything.net/) est la meilleure ressource disponible sur les bogues de rendu dans les navigateurs historiques et leur solution de contournement (le cas échéant).
-- [Mobile HTML5](http://mobilehtml5.org) dispose d'informations de compatibilité pour une large gamme de navigateurs pour mobiles, et pas seulement pour le « top 5 » (y compris Nokia, Amazon et Blackberry).
+- [Mobile HTML5](http://mobilehtml5.org) dispose d'informations de compatibilité pour une large gamme de navigateurs pour mobiles, et pas seulement pour le «&nbsp;top 5&nbsp;» (y compris Nokia, Amazon et Blackberry).
 
 ## Rendre les choses simples
 
 
 
-Comme les [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient  « plus beaux » ou « avec des fonctionnalités avancées » ! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
+Comme les [formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires) impliquent des interactions complexes, une règle empirique&nbsp;: [restez aussi simple que possible](https://fr.wikipedia.org/wiki/Principe_KISS). Il y a tant de cas où nous voudrions que des formulaires soient  «&nbsp;plus beaux » ou «&nbsp;avec des fonctionnalités avancées&nbsp;» ! Mais construire des formulaires HTML efficaces n'est pas une question de design ou de technique. Pour rappel, prenez le temps de lire cet article sur l'[ergonomie des formulaires sur UX For The Masses](http://www.uxforthemasses.com/forms-usability/) (en anglais).
 
 ### La simplification élégante est la meilleure amie du développeur Web
 
@@ -144,7 +144,7 @@ L'élément {{HTMLElement("button")}} présente deux problèmes potentiels&nbsp;
 - certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut  pour l'attribut {{htmlattrxref("type","button")}}, donc il est recommandé de toujours définir l'attribut {{htmlattrxref("type","button")}} pour les éléments {{HTMLElement("button")}}.
 
 ```html
-<!-- Cliquer sur ce boutton envoie « <em>Do A</em> » au lieu de « A » dans certains cas -->
+<!-- Cliquer sur ce boutton envoie «&nbsp;<em>Do A</em>&nbsp;» au lieu de «&nbsp;A&nbsp;» dans certains cas -->
 <button type="submit" name="IWantTo" value="A">
   <em>Do A</em>
 </button>
@@ -162,7 +162,7 @@ Bien que JavaScript soit un langage de programmation remarquable pour les naviga
 
 ### JavaScript non obstructif
 
-Un des plus gros problèmes est la disponibilité des API. Pour cette raison, il est considéré comme de bonne pratique de travailler avec du JavaScript « non obstructif ». C'est un modèle de développement défini par deux obligations&nbsp;:
+Un des plus gros problèmes est la disponibilité des API. Pour cette raison, il est considéré comme de bonne pratique de travailler avec du JavaScript «&nbsp;non obstructif&nbsp;». C'est un modèle de développement défini par deux obligations&nbsp;:
 
 - une séparation stricte entre structure et comportement.
 - si le fil du code casse, le contenu et les fonctionnalités de base doivent rester accessibles et utilisables.
@@ -171,7 +171,7 @@ Un des plus gros problèmes est la disponibilité des API. Pour cette raison, il
 
 ### La bibliothèque Modernizr
 
-Dans de nombreux cas, une bonne prothèse d'émulation (« polyfill ») peut aider en fournissant une API manquante. Un « [polyfill »](http://remysharp.com/2010/10/08/what-is-a-polyfill/) est un petit morceau de JavaScript qui « remplit un trou » dans les fonctionnalités des navigateurs historiques. Bien qu'ils puissent être utilisés pour améliorer la prise en charge de n'importe quelle fonctionnalité, leur utilisation dans le JavaScript est moins risquée que dans les CSS ou le HTML ; il existe de nombreux cas où JavaScript peut casser (problèmes de réseau, conflits de script, etc.). Mais avec le JavaScript, à condition de travailler avec un JavaScript non obstructif, si les polyfills manquent, ce ne sera pas grave.
+Dans de nombreux cas, une bonne prothèse d'émulation («&nbsp;polyfill&nbsp;») peut aider en fournissant une API manquante. Un «&nbsp;[polyfill »](http://remysharp.com/2010/10/08/what-is-a-polyfill/) est un petit morceau de JavaScript qui «&nbsp;remplit un trou&nbsp;» dans les fonctionnalités des navigateurs historiques. Bien qu'ils puissent être utilisés pour améliorer la prise en charge de n'importe quelle fonctionnalité, leur utilisation dans le JavaScript est moins risquée que dans les CSS ou le HTML ; il existe de nombreux cas où JavaScript peut casser (problèmes de réseau, conflits de script, etc.). Mais avec le JavaScript, à condition de travailler avec un JavaScript non obstructif, si les polyfills manquent, ce ne sera pas grave.
 
 La meilleure façon de remplir un trou d'API manquante consiste à utiliser la bibliothèque [Modernizr](http://modernizr.com) et son projet dérivé&nbsp;: [YepNope](http://yepnopejs.com). Modernizr est une bibliothèque qui vous permet de tester la disponibilité d'une fonctionnalité pour une action en accord. YepNope est une bibliothèqe de chargements conditionnels.
 
@@ -198,7 +198,7 @@ Modernizr.load({
 });
 ```
 
-L'équipe de Modernizr fait une maintenance opportune de grande liste de « [polyfills »](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Prenez celui dont vous avez besoin.
+L'équipe de Modernizr fait une maintenance opportune de grande liste de «&nbsp;[polyfills »](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Prenez celui dont vous avez besoin.
 
 > **Note :** Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de [ la documentation de Modernizr](http://modernizr.com/docs/).
 

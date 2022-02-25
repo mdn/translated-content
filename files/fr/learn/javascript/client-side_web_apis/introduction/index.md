@@ -76,7 +76,7 @@ Ci-dessus, nous avons indiqué ce qu'est une API JavaScript côté client et sa 
 - Les API tierces — Constructions intégrées à des plateformes tierces (par exemple Twitter, Facebook) qui permettent d'utiliser certaines fonctionnalités de ces plateformes dans vos propres pages Web (par exemple: afficher vos derniers Tweets sur votre page Web).
 - Les bibliothèques JavaScript — Habituellement, un ou plusieurs fichiers JavaScript contenant des [fonctions personnalisées](/fr/docs/Learn/JavaScript/Building_blocks/Functions#custom_functions) que vous pouvez attacher à votre page Web pour accélérer ou activer l'écriture de fonctionnalités courantes. Des exemples incluent jQuery, Mootools et React.
 - Les _frameworks_ JavaScript — Au‑dessus des bibliothèques, les _frameworks_ JavaScript (par exemple Angular et Ember) sont plutôt des packages de HTML, CSS, JavaScript et autres technologies, que vous installez puis utilisez pour écrire une application web entière.
-  La différence essentielle entre une bibliothèque et un _framework_ est « l'Inversion du Contrôle ». Avec une bibliothèque, c'est le développeur qui appelle les méthodes de la bibliothèque — il exerce le contrôle. Avec un _framework_, le contrôle est inversé&nbsp;: c'est le _framework_ qui appelle le code du développeur.
+  La différence essentielle entre une bibliothèque et un _framework_ est «&nbsp;l'Inversion du Contrôle&nbsp;». Avec une bibliothèque, c'est le développeur qui appelle les méthodes de la bibliothèque — il exerce le contrôle. Avec un _framework_, le contrôle est inversé&nbsp;: c'est le _framework_ qui appelle le code du développeur.
 
 ## Que peuvent faire les API ?
 

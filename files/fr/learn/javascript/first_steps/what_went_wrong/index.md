@@ -137,7 +137,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 
 ## Une erreur de logique
 
-À ce stade, le jeu se déroule correctement, mais après avoir fait quelques parties, vous noterez sans doute que le nombre « aléatoire » à deviner est toujours 0 ou 1. Franchement, de quoi vous dégoûter de jouer !
+À ce stade, le jeu se déroule correctement, mais après avoir fait quelques parties, vous noterez sans doute que le nombre «&nbsp;aléatoire&nbsp;» à deviner est toujours 0 ou 1. Franchement, de quoi vous dégoûter de jouer !
 
 Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne renvoie pas d'erreur ; il ne fonctionne pas correctement.
 

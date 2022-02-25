@@ -42,7 +42,7 @@ Hypertext Markup Language (HTML) correspond au code que vous utiliserez pour str
 
 ### [Les bases des CSS](/fr/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
 
-Les _Cascading Stylesheets_ (CSS) (« feuilles de styles en cascade ») reçoivent le code à utiliser pour mettre en forme votre site Web. Par exemple, voulez‑vous que le texte soit en noir ou en rouge ? Où le contenu doit‑il être placé sur l'écran ? Quelles devront être les images de fond et les couleurs utilisées pour décorer votre site web ? [« Les bases des CSS »](/fr/Apprendre/Commencer_avec_le_web/Les_bases_CSS) vous apprendra tout ce dont vous avez besoin pour commencer.
+Les _Cascading Stylesheets_ (CSS) (« feuilles de styles en cascade ») reçoivent le code à utiliser pour mettre en forme votre site Web. Par exemple, voulez‑vous que le texte soit en noir ou en rouge ? Où le contenu doit‑il être placé sur l'écran ? Quelles devront être les images de fond et les couleurs utilisées pour décorer votre site web ? [«&nbsp;Les bases des CSS&nbsp;»](/fr/Apprendre/Commencer_avec_le_web/Les_bases_CSS) vous apprendra tout ce dont vous avez besoin pour commencer.
 
 ### [Les bases de JavaScript](/fr/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
 

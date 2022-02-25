@@ -276,7 +276,7 @@ Les deux adresses `http://example.org/` et `http://example.com/` correspondront.
 
 ### globs
 
-Un « glob » est juste une chaîne qui peut contenir des caractères génériques. Il existe deux types de caractères génériques, et vous pouvez les combiner dans le même glob&nbsp;:
+Un «&nbsp;glob&nbsp;» est juste une chaîne qui peut contenir des caractères génériques. Il existe deux types de caractères génériques, et vous pouvez les combiner dans le même glob&nbsp;:
 
 - `"*"` correspond à zéro ou plus de caractères
 - `"?"` correspond exactement à un caractère.

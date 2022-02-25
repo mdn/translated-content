@@ -39,7 +39,7 @@ L’évènement [`load`](/fr/docs/Web/Events/load), très différent, doit être
 
 ## Accélérer
 
-Si vous voulez que le DOM soit analysé aussi rapidement que possible après que l’utilisateur ou l’utilisatrice a demandé la page, vous pouvez [rendre votre JavaScript asynchrone](/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) et [optimiser le chargement des feuilles de style](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Ces dernières, sans optimisation, ralentissent le chargement de la page parce qu’elles sont chargées en parallèle, et « subtilisent » de la bande passante au document html principal.
+Si vous voulez que le DOM soit analysé aussi rapidement que possible après que l’utilisateur ou l’utilisatrice a demandé la page, vous pouvez [rendre votre JavaScript asynchrone](/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) et [optimiser le chargement des feuilles de style](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Ces dernières, sans optimisation, ralentissent le chargement de la page parce qu’elles sont chargées en parallèle, et «&nbsp;subtilisent&nbsp;» de la bande passante au document html principal.
 
 ## Exemples
 

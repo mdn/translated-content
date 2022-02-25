@@ -5,7 +5,7 @@ translation_of: Web/API/Page_Visibility_API
 ---
 {{DefaultAPISidebar("Page Visibility API")}}
 
-**L’API _Page Visibility_** (« visibilité de la page ») permet de savoir quand une page web est visible ou a le focus.
+**L’API _Page Visibility_** («&nbsp;visibilité de la page&nbsp;») permet de savoir quand une page web est visible ou a le focus.
 
 Avec la navigation par onglets, il y a une probabilité raisonnable qu’une page web donnée soit en arrière-plan, donc masquée pour l’utilisateur. Quand celui-ci minimise la page ou bascule vers un autre onglet, l’API émet un évènement {{event("visibilitychange")}} correspondant à la visibilité de la page. Vous pouvez détecter cet évènement et réaliser différentes actions ou modifier un comportement. Par exemple, si votre application web est en train de lire une vidéo, elle peut mettre cette dernière en pause au moment où l’utilisateur regarde un autre onglet, et reprendre la lecture quand la personne revient à l’onglet. L’utilisateur ne perd pas le fil de la vidéo et peut continuer à la regarder.
 

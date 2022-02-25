@@ -22,7 +22,7 @@ Dans WebExtensions, ces types de boutons s’appellent « actions du navigateur 
 
 Dans cette section, nous créerons une WebExtension qui ajoute un bouton à la barre d’outils. Lorsque l’utilisateur clique sur le bouton, nous ouvrirons [https ://developer.mozilla.org](https://developer.mozilla.org) dans un nouveau onglet.
 
-Tout d’abord, créez un nouveau dossier, « bouton », et créez un fichier appelé « manifest.json » à l’intérieur avec le contenu suivant :
+Tout d’abord, créez un nouveau dossier, «&nbsp;bouton&nbsp;», et créez un fichier appelé «&nbsp;manifest.json&nbsp;» à l’intérieur avec le contenu suivant :
 
 ```json
 {
@@ -46,18 +46,18 @@ Tout d’abord, créez un nouveau dossier, « bouton », et créez un fichie
 }
 ```
 
-Cela spécifie que nous aurons un script en [arrière‐plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) nommé « background.js », et une action du navigateur (bouton) et une action du navigateur (bouton) dont les icônes vont vivre dans le répertoire « icônes ».
+Cela spécifie que nous aurons un script en [arrière‐plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) nommé «&nbsp;background.js&nbsp;», et une action du navigateur (bouton) et une action du navigateur (bouton) dont les icônes vont vivre dans le répertoire «&nbsp;icônes&nbsp;».
 
 Ces icônes proviennent des [bits !](https://www.iconfinder.com/iconsets/bitsies) icônes créées parRecep Kütük.
 
-Ensuite, créez un dossier « icons » dans le dossier « buttons » et enregistrez les deux icônes ci‐dessous :
+Ensuite, créez un dossier «&nbsp;icons&nbsp;» dans le dossier «&nbsp;buttons&nbsp;» et enregistrez les deux icônes ci‐dessous :
 
-- « page‐16.png » (![](page-16.png))
-- « page‐32.png » (![](page-32.png)).
+- «&nbsp;page‐16.png&nbsp;» (![](page-16.png))
+- «&nbsp;page‐32.png&nbsp;» (![](page-32.png)).
 
 Nous avons deux icônes que nous pouvons utiliser, la plus grande dans les écrans haute densité. Le navigateur prend en charge la sélection de la meilleure icône pour l’affichage courrant.
 
-Ensuite, créez « background.js » dans le répertoire racine de l’add‐on, et donnez‐lui le contenu suivant :
+Ensuite, créez «&nbsp;background.js&nbsp;» dans le répertoire racine de l’add‐on, et donnez‐lui le contenu suivant :
 
 ```js
 function openPage() {
@@ -112,11 +112,11 @@ Essayons d’ajouter une fenêtre contextuelle au bouton. Remplacez manifest.jso
 
 Nous avons fait trois changements par rapport à l’original :
 
-- Nous ne parlons plus de « background.js », car maintenant nous allons gérer la logique de l’extension dans le script de la fenêtre contextuelle (vous êtes autorisé à utiliser background.js ainsi qu’un popup, c’est juste que nous n’en avons pas besoin dans ce cas).
+- Nous ne parlons plus de «&nbsp;background.js&nbsp;», car maintenant nous allons gérer la logique de l’extension dans le script de la fenêtre contextuelle (vous êtes autorisé à utiliser background.js ainsi qu’un popup, c’est juste que nous n’en avons pas besoin dans ce cas).
 - Nous avons ajouté `"browser_style":true`, ce qui aidera le style de notre popup à ressembler davantage à une partie du navigateur.
-- Enfin, nous avons ajouté `"default_popup": "popup/choose_page.html"`, qui indique au navigateur que l’action du navigateur va maintenant afficher une fenêtre contextuelle lorsqu’elle est cliquée, dont le document se trouve dans  « popup / choose_page.html ».
+- Enfin, nous avons ajouté `"default_popup": "popup/choose_page.html"`, qui indique au navigateur que l’action du navigateur va maintenant afficher une fenêtre contextuelle lorsqu’elle est cliquée, dont le document se trouve dans  «&nbsp;popup / choose_page.html&nbsp;».
 
-Donc maintenant nous devons créer cette fenêtre contextuelle. Créez un répertoire appelé « popup » puis créez un fichier appelé « choose_page.html » à l’intérieur. Donnez‐lui les contenus suivants :
+Donc maintenant nous devons créer cette fenêtre contextuelle. Créez un répertoire appelé «&nbsp;popup&nbsp;» puis créez un fichier appelé «&nbsp;choose_page.html&nbsp;» à l’intérieur. Donnez‐lui les contenus suivants :
 
 ```html
 <!DOCTYPE html>
@@ -139,7 +139,7 @@ Donc maintenant nous devons créer cette fenêtre contextuelle. Créez un réper
 
 Vous pouvez voir qu’il s’agit d’une page HTML normale contenant trois éléments {{htmlelement ("div")}}, chacun avec le nom d’un site Mozilla à l’intérieur. Il comprend également un fichier CSS et un fichier JavaScript, que nous ajouterons ensuite.
 
-Créez un fichier appelé « choose_page.css » dans le répertoire « popup » et donnez‐lui ce contenu :
+Créez un fichier appelé «&nbsp;choose_page.css&nbsp;» dans le répertoire «&nbsp;popup&nbsp;» et donnez‐lui ce contenu :
 
 ```css
 html, body {
@@ -161,7 +161,7 @@ html, body {
 
 C'est juste un peu d’habillage pour notre popup.
 
-Ensuite, créez un fichier « choose_page.js » dans le répertoire « popup » et donnez‐le à ces contenus :
+Ensuite, créez un fichier «&nbsp;choose_page.js&nbsp;» dans le répertoire «&nbsp;popup&nbsp;» et donnez‐le à ces contenus :
 
 ```js
 document.addEventListener("click", function(e) {

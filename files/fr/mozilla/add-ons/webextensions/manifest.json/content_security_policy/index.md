@@ -45,7 +45,7 @@ Il existe des restrictions sur la politique que vous pouvez spécifier ici&nbsp;
 
 - La politique doit inclure au moins les directives {{CSP("script-src")}} et les {{CSP("object-src")}}, et la directive {{CSP("script-src")}} doit contenir le mot-clé `'self'`.
 - Les sources distantes doivent utiliser le schéma `https:`.
-- Les sources distantes ne doivent pas utiliser de caractères génériques pour les domaines dans la [liste des suffixes publics](https://publicsuffix.org/list/) (ainsi, « \*.co.uk » et « \*.blogspot.com » ne sont pas autorisés, même si « \*.foo.blogspot.com » est autorisé).
+- Les sources distantes ne doivent pas utiliser de caractères génériques pour les domaines dans la [liste des suffixes publics](https://publicsuffix.org/list/) (ainsi, «&nbsp;\*.co.uk&nbsp;» et «&nbsp;\*.blogspot.com&nbsp;» ne sont pas autorisés, même si «&nbsp;\*.foo.blogspot.com&nbsp;» est autorisé).
 - Toutes les sources doivent spécifier un hôte.
 - Les seuls schémas autorisés pour les sources sont&nbsp;: `blob:`, `filesystem:`, `moz-extension:`, et `https:`.
 - Les seuls [mots-clés](/fr/docs/HTTP/Headers/Content-Security-Policy/default-src#Sources) autorisés sont&nbsp;: `'none'`, `'self'`, et `'unsafe-eval'`.
@@ -60,7 +60,7 @@ Autoriser les scripts distants de "https\://example.com" : <sup>(<em>voir note</
 "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
 ```
 
-Autoriser les scripts distants depuis n’importe quel sous-domaine de « jquery.com »&nbsp;:
+Autoriser les scripts distants depuis n’importe quel sous-domaine de «&nbsp;jquery.com&nbsp;»&nbsp;:
 
 ```json
 "content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"

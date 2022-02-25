@@ -52,7 +52,7 @@ Maintenant que nous sommes à l'aise pour ajouter de simples images dans une pag
 
 ## Audio et vidéo sur le web
 
-Les développeurs ont toujours voulu utiliser la vidéo et l'audio sur le web et ce, dès le début des années 2000, quand nous avons commencé à disposer d'une bande passante suffisamment rapide pour supporter toutes sortes de vidéos (les fichiers vidéo étant beaucoup plus lourds que du texte ou des images). Au départ, les technologies embarquées telles que HTML n'avaient pas la capacité d'intégrer de la vidéo ou de l'audio, donc, les solutions « propriétaires » (ou basées sur des greffons) comme [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash) (puis, plus tard, [Silverlight](https://fr.wikipedia.org/wiki/Silverlight)) sont devenues très populaires pour gérer ce type de contenu. Ces technologies fonctionnaient bien mais avaient de nombreux inconvénients, comme une relation aléatoire avec les fonctionnalités HTML/CSS, des problèmes de sécurité et d'accessibilité.
+Les développeurs ont toujours voulu utiliser la vidéo et l'audio sur le web et ce, dès le début des années 2000, quand nous avons commencé à disposer d'une bande passante suffisamment rapide pour supporter toutes sortes de vidéos (les fichiers vidéo étant beaucoup plus lourds que du texte ou des images). Au départ, les technologies embarquées telles que HTML n'avaient pas la capacité d'intégrer de la vidéo ou de l'audio, donc, les solutions «&nbsp;propriétaires&nbsp;» (ou basées sur des greffons) comme [Flash](https://fr.wikipedia.org/wiki/Adobe_Flash) (puis, plus tard, [Silverlight](https://fr.wikipedia.org/wiki/Silverlight)) sont devenues très populaires pour gérer ce type de contenu. Ces technologies fonctionnaient bien mais avaient de nombreux inconvénients, comme une relation aléatoire avec les fonctionnalités HTML/CSS, des problèmes de sécurité et d'accessibilité.
 
 Une solution embarquée devrait résoudre la plupart de ces problèmes. Heureusement, après quelques années, la spécification {{glossary("HTML5")}} apportait ces améliorations avec les éléments  {{htmlelement("video")}} et {{htmlelement("audio")}} et des {{Glossary("API","APIs")}}{{Glossary("JavaScript")}} flambants neufs pour les contrôler. Nous ne verrons pas JavaScript ici — nous poserons juste les fondamentaux qui peuvent être obtenus avec HTML.
 
@@ -87,7 +87,7 @@ Faites un essai avec [l'exemple ici](http://mdn.github.io/learning-area/html/mu
 
 ### Gestion de différents formats
 
-Il y a un problème avec l'exemple au-dessus que vous avez dû rencontrer si vous avez accédé au lien « exemple ici » avec un navigateur comme Safari ou Internet Explorer. La vidéo ne se lancera pas ! Ceci parce que les navigateurs acceptent des formats différents de video et d'audio.
+Il y a un problème avec l'exemple au-dessus que vous avez dû rencontrer si vous avez accédé au lien «&nbsp;exemple ici&nbsp;» avec un navigateur comme Safari ou Internet Explorer. La vidéo ne se lancera pas ! Ceci parce que les navigateurs acceptent des formats différents de video et d'audio.
 
 Voyons-en rapidement la terminologie. Les formats comme le MP3, MP4 et le WebM sont appelés des [formats conteneurs](https://fr.wikipedia.org/wiki/Format_conteneur). Ils contiennent plusieurs parties qui, ensemble, donnent l'intégralité de la chanson ou de la vidéo — comme une piste audio, une piste vidéo et les métadonnées qui décrivent le média qui est lu.
 
@@ -202,7 +202,7 @@ Nous allons maintenant parler d'un concept un peu plus avancé vraiment utile à
 
 Ne serait-il pas agréable de pouvoir fournir à ces personnes la transcription des paroles prononcés dans l'audio ou la vidéo ? Eh bien, avec des vidéos HTML5 vous le pouvez, à l'aide du format WebVTT et de l'élément {{htmlelement("track")}}.
 
-> **Note :** « Transcrire » signifie écrire des paroles sous forme de texte, et « transcription » est l'action correspondante.
+> **Note :** «&nbsp;Transcrire&nbsp;» signifie écrire des paroles sous forme de texte, et «&nbsp;transcription&nbsp;» est l'action correspondante.
 
 WebVTT est un format d'écriture de fichiers texte ; il contient nombre de chaînes de texte avec des métadonnées comme l'instant dans la vidéo où vous souhaitez l'affichage du texte, et même une information succinte sur le style et la position de celui‑ci. Ces chaînes textuelles sont appelées des marqueurs, les plus courants étant&nbsp;:
 
@@ -246,13 +246,13 @@ Il en résultera une vidéo dont les sous-titres seront affichés un peu comme c
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-Pour plus de détails, lisez [Ajouter des légendes et des sous‑titres aux vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Vous [trouverez un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/), écrit par Ian Devlin, accompagnant cet article sur Github (voyez le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) aussi). Cet exemple utilise un peu de JavaScript pour permettre à l'utilisateur de choisir entre différents sous‑titres. Notez que pour activer les sous‑titres, vous devez presser le bouton « CC » et selectionner une option — English, Deutsch ou Español.
+Pour plus de détails, lisez [Ajouter des légendes et des sous‑titres aux vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Vous [trouverez un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/), écrit par Ian Devlin, accompagnant cet article sur Github (voyez le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) aussi). Cet exemple utilise un peu de JavaScript pour permettre à l'utilisateur de choisir entre différents sous‑titres. Notez que pour activer les sous‑titres, vous devez presser le bouton «&nbsp;CC&nbsp;» et selectionner une option — English, Deutsch ou Español.
 
 > **Note :** Les pistes texte peuvent aussi vous aider avec {{glossary("SEO")}}, car les moteurs de recherche sont très performants sur le texte. Les pistes textes permettent aussi aux moteurs de recherche de faire un lien direct à un point particulier de la vidéo.
 
 ### Apprentissage interactif : intégrer vos propres vidéos et audios
 
-Pour cet exercice, nous aimerions (idéalement) que vous partiez « dans le monde » pour enregistrer vos propres vidéos et pistes audio — la plupart des téléphones actuels vous permettent facilement de le faire, et, à condition que vous puissiez le transférer sur l'ordinateur, vous pouvez l'utiliser. Vous allez devoir convertir dans les formats adaptés, WebM et MP4 pour la vidéo,  MP3 et Ogg pour l'audio. Il y a de nombreux progammes vous permettant de faire ça sans difficulté comme [Miro Video Converter](http://www.mirovideoconverter.com/) et [Audacity](https://sourceforge.net/projects/audacity/). Nous aimerions que vous essayiez !
+Pour cet exercice, nous aimerions (idéalement) que vous partiez «&nbsp;dans le monde&nbsp;» pour enregistrer vos propres vidéos et pistes audio — la plupart des téléphones actuels vous permettent facilement de le faire, et, à condition que vous puissiez le transférer sur l'ordinateur, vous pouvez l'utiliser. Vous allez devoir convertir dans les formats adaptés, WebM et MP4 pour la vidéo,  MP3 et Ogg pour l'audio. Il y a de nombreux progammes vous permettant de faire ça sans difficulté comme [Miro Video Converter](http://www.mirovideoconverter.com/) et [Audacity](https://sourceforge.net/projects/audacity/). Nous aimerions que vous essayiez !
 
 Si vous ne pouvez enregistrer ni vidéo ni audio, alors, n'hésitez pas à vous servir de nos  [échantillons audio et vidéo ](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content)pour réaliser cet exercice. Vous pouvez aussi utiliser notre échantillon-code de référence.
 

@@ -61,7 +61,7 @@ En utilisant la méthode (3), vous pouvez également charger des scripts dans de
 
 Les scripts de contenu peuvent accéder et modifier le DOM de la page à la manière des scripts classique. Ils peuvent également observer tout changement du DOM effectué par les scripts de la page.
 
-Cependant, les scripts de contenu reçoivent une « vue propre du DOM ». Cela signifie que :
+Cependant, les scripts de contenu reçoivent une «&nbsp;vue propre du DOM&nbsp;». Cela signifie que :
 
 - Les scripts de contenu ne peuvent pas accéder aux variables JavaScript définies par les scripts de la page.
 - Si un script de page redéfinit une propriété intrinsèque du DOM, le script de contenu verra la version originale de cette propriété et non la version redéfinie.
@@ -83,7 +83,7 @@ Prenons par exemple la page web suivante&nbsp;:
 </html>
 ```
 
-Le script « page-script.js » est écrit ci-dessous&nbsp;:
+Le script «&nbsp;page-script.js&nbsp;» est écrit ci-dessous&nbsp;:
 
 ```js
 // page-script.js

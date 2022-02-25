@@ -15,9 +15,9 @@ Les chemins créent des formes en combinant plusieurs lignes droites ou courbes.
 
 La forme d’un élément path est définie par son attribut {{ SVGAttr("d") }}. Celui-ci prend pour valeur une série de commandes suivi de paramètres utilisés par ces commandes.
 
-Chacune des commandes est instanciée par une lettre spécifique. Par exemple, pour se positionner aux coordonnées (10, 10), on utilise la commande `M` (pour _MoveTo,_ « aller à ») suivit des coordonées: "M 10 10". Quand l’interpréteur rencontre une lettre, il comprend que vous invoquez une commande, et les nombres qui suivent sont les paramètres de la commande.
+Chacune des commandes est instanciée par une lettre spécifique. Par exemple, pour se positionner aux coordonnées (10, 10), on utilise la commande `M` (pour _MoveTo,_ «&nbsp;aller à&nbsp;») suivit des coordonées: "M 10 10". Quand l’interpréteur rencontre une lettre, il comprend que vous invoquez une commande, et les nombres qui suivent sont les paramètres de la commande.
 
-De plus, toutes les commandes se présentent sous deux formes: une **lettre majuscule** spécifie des coordonnées absolues dans la page, une **lettre minuscule** spécifie des coordonées relatives (par exemple, « aller à 10px vers le haut et 7px vers la gauche depuis le point précédent »).
+De plus, toutes les commandes se présentent sous deux formes: une **lettre majuscule** spécifie des coordonnées absolues dans la page, une **lettre minuscule** spécifie des coordonées relatives (par exemple, «&nbsp;aller à 10px vers le haut et 7px vers la gauche depuis le point précédent&nbsp;»).
 
 Les coordonnées dans l’attribut `d` sont **toujours sans unité** et par conséquent dans le système de coordonnées utilisateur. Par la suite, nous apprendrons comment les chemins peuvent être transformés pour répondre à d’autres besoins.
 
@@ -27,7 +27,7 @@ Il existe cinq commandes pour tracer des lignes avec un élément `<path>`. Ces 
 
 ### MoveTo
 
-La première commande, « aller à », invoquée avec `M` (_MoveTo_), a été décrite ci-dessus. Elle prend en paramètres les coordonnées `x` et `y` où se rendre. Aucun trait n’est dessiné, le curseur est simplement déplacé dans la page. La commande « aller à » apparaît au début d’un chemin pour spécifier à quel endroit le dessin doit commencer. Par exemple&nbsp;:
+La première commande, «&nbsp;aller à&nbsp;», invoquée avec `M` (_MoveTo_), a été décrite ci-dessus. Elle prend en paramètres les coordonnées `x` et `y` où se rendre. Aucun trait n’est dessiné, le curseur est simplement déplacé dans la page. La commande «&nbsp;aller à&nbsp;» apparaît au début d’un chemin pour spécifier à quel endroit le dessin doit commencer. Par exemple&nbsp;:
 
     M x y
 
@@ -50,7 +50,7 @@ Dans l’exemple suivant, on se place au point (10, 10). Notez cependant qu'à c
 
 ### LineTo, Horizontal LineTo, Vertical LineTo
 
-Il y a trois commandes qui dessinent des lignes. La plus générique est la commande « ligne vers », invoquée avec `L` (_LineTo_). `L` prend deux paramètres, les coordonnées `x` et `y`, et dessine une ligne depuis la position actuelle vers la nouvelle position.
+Il y a trois commandes qui dessinent des lignes. La plus générique est la commande «&nbsp;ligne vers&nbsp;», invoquée avec `L` (_LineTo_). `L` prend deux paramètres, les coordonnées `x` et `y`, et dessine une ligne depuis la position actuelle vers la nouvelle position.
 
     L x y (ou l dx dy)
 
@@ -77,7 +77,7 @@ Afin de commencer facilement, nous allons dessiner une forme simple, un rectangl
 
 ### ClosePath
 
-On aurait pu raccourcir un peu la déclaration de l'exemple ci-dessus en utilisant la commande « fermer le chemin », invoquée avec `Z` (_ClosePath_). Cette commande dessine une ligne droite entre la position actuelle et le premier point du chemin. Elle est souvent placée à la fin du `path`, mais pas toujours. Il n’y a pas de différence entre la commande en majuscule et en minuscule.
+On aurait pu raccourcir un peu la déclaration de l'exemple ci-dessus en utilisant la commande «&nbsp;fermer le chemin&nbsp;», invoquée avec `Z` (_ClosePath_). Cette commande dessine une ligne droite entre la position actuelle et le premier point du chemin. Elle est souvent placée à la fin du `path`, mais pas toujours. Il n’y a pas de différence entre la commande en majuscule et en minuscule.
 
     Z (ou z)
 
@@ -103,7 +103,7 @@ Dans ces exemples, il serait probablement plus simple d’utiliser un élément 
 
 ## Commandes pour les courbes
 
-Il existe trois commandes différentes pour créer des courbes. Deux d’entre elles sont des courbes de Bézier, et la troisième est un « arc » ou section de cercle. Il se peut que vous ayez déjà acquis une expérience pratique avec les courbes de Bézier en utilisant les outils de chemins avec Inkscape, Illustrator ou Photoshop. Pour une description complète des concepts mathématiques sous-jacents, vous pouvez consulter la [page Wikipedia Courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier).
+Il existe trois commandes différentes pour créer des courbes. Deux d’entre elles sont des courbes de Bézier, et la troisième est un «&nbsp;arc&nbsp;» ou section de cercle. Il se peut que vous ayez déjà acquis une expérience pratique avec les courbes de Bézier en utilisant les outils de chemins avec Inkscape, Illustrator ou Photoshop. Pour une description complète des concepts mathématiques sous-jacents, vous pouvez consulter la [page Wikipedia Courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier).
 
 Il existe une infinité de courbes de Bézier, mais seulement deux des plus simples d’entre elles sont disponibles dans les éléments `path`: l’une cubique, invoquée avec `C`, et l’autre quadratique, invoquée avec `Q`.
 

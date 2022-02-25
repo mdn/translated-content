@@ -40,7 +40,7 @@ L'objet **Proxy** est utilisé afin de définir un comportement sur mesure pour 
 
 ## Méthodes pour le gestionnaire
 
-L'objet utilisé comme gestionnaire regroupe les différentes fonctions « trappes » pour le `Proxy`.
+L'objet utilisé comme gestionnaire regroupe les différentes fonctions «&nbsp;trappes&nbsp;» pour le `Proxy`.
 
 {{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Proxy/handler', 'Méthodes') }}
 
@@ -67,7 +67,7 @@ console.log(p.a, p.b); // 1, undefined
 console.log('c' in p, p.c); // false, 37
 ```
 
-### Proxy « invisible »
+### Proxy «&nbsp;invisible&nbsp;»
 
 Dans cet exemple, le proxy transfère toutes les opérations qui sont appliquées à l'objet cible.
 
@@ -305,7 +305,7 @@ console.log(produits.nombre); // 3
 
 ### Un exemple avec toutes les trappes
 
-Pour illustrer l'ensemble des trappes, on tente de « proxifier » un objet non natif&nbsp;: l'objet global `docCookies` créé grâce à [cet exemple](/fr/docs/Web/API/Document/cookie/Simple_document.cookie_framework).
+Pour illustrer l'ensemble des trappes, on tente de «&nbsp;proxifier&nbsp;» un objet non natif&nbsp;: l'objet global `docCookies` créé grâce à [cet exemple](/fr/docs/Web/API/Document/cookie/Simple_document.cookie_framework).
 
 ```js
 /*

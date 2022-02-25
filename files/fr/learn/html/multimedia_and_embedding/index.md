@@ -50,7 +50,7 @@ Ce module contient les articles suivants, qui vous guideront à travers les fond
 Les évaluations qui suivent sont là pour tester votre compréhension des bases du HTML traitées dans les guides ci-dessus.
 
 - [Évaluation : page d'accueil Mozilla](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Mozilla_splash_page)
-  - : Cette évaluation concernera vos connaissances de quelques unes des techniques traitées dans les articles de ce module, vous amenant à ajouter des images et vidéos à une page de garde « funky » développant les atouts de Mozilla !
+  - : Cette évaluation concernera vos connaissances de quelques unes des techniques traitées dans les articles de ce module, vous amenant à ajouter des images et vidéos à une page de garde «&nbsp;funky&nbsp;» développant les atouts de Mozilla !
 
 ## À voir aussi
 

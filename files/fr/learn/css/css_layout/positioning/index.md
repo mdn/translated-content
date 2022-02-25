@@ -48,9 +48,9 @@ Le positionnement permet de modifier le cours classique de la mise en page pour 
 
 Il y a différents types de positionnement que vous pouvez appliquer à des éléments HTML. Pour utiliser un type particulier de positionnement sur un élément, nous utilisons la propriété {{cssxref("position")}}.
 
-### Positionnement « static »
+### Positionnement «&nbsp;static&nbsp;»
 
-Le positionnement `static` est celui reçu par défaut par chaque élément — cela veut tout simplement dire « positionner l'élément selon le cours normal de placement — rien de spécial à voir ici ».
+Le positionnement `static` est celui reçu par défaut par chaque élément — cela veut tout simplement dire «&nbsp;positionner l'élément selon le cours normal de placement — rien de spécial à voir ici&nbsp;».
 
 Pour le démontrer et avoir préparer un premier exemple pour les prochaines sections, ajoutez tout d'abord une classe `positioned` pour le deuxième {{htmlelement("p")}} dans le HTML:
 
@@ -70,7 +70,7 @@ Si maintenant vous sauvegardez et actualisez, vous verrez qu'il n'y a aucune dif
 
 > **Note :** ce lien [`1_static-positioning.html`](http://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) ([voir le code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)) pointe sur un exemple de positionnement « static ».
 
-### Positionnement « relative »
+### Positionnement «&nbsp;relative&nbsp;»
 
 Le positionnement relatif est le premier type de positionnement que nous allons étudier. Il est très similaire au positionnement statique. Cependant, une fois que l'élément positionné occupe une place dans le cours normal de la mise en page, vous pourrez modifier sa position finale. Vous pourrez par exemple le faire chevaucher d'autres éléments de la page. Poursuivons&nbsp;: mettez à jour la déclaration de `position` dans le code&nbsp;:
 

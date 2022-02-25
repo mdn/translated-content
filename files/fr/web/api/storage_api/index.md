@@ -51,7 +51,7 @@ Si le site ou l’application a la permission sur la fonctionnalité **`"persist
 
 Lors du nettoyage d’unités de stockage de site, la boîte d’une origine est traitée comme une seule entité ; si l’agent utilisateur a besoin de la nettoyer et si l’utilisateur ou l’utilisatrice approuve, le stockage de données entier est nettoyé plutôt que de fournir un moyen de nettoyer seulement les données d’une API individuelle.
 
-Si une boîte est marquée `"persistent"`, le contenu ne sera pas nettoyé par l’agent utilisateur sans que l’origine des données elle-même, ou l’utilisateur ou l’utilisatrice, ne le fasse spécifiquement. Cela inclut des scénarios tels que l’utilisateur ou l’utilisatrice choisissant une option « nettoyer le cache » or « nettoyer l’historique récent ». La permission de supprimer des unités de stockage persistantes sera spécifiquement demandée à l’utilisateur ou à l’utilisatrice.
+Si une boîte est marquée `"persistent"`, le contenu ne sera pas nettoyé par l’agent utilisateur sans que l’origine des données elle-même, ou l’utilisateur ou l’utilisatrice, ne le fasse spécifiquement. Cela inclut des scénarios tels que l’utilisateur ou l’utilisatrice choisissant une option «&nbsp;nettoyer le cache&nbsp;» or «&nbsp;nettoyer l’historique récent&nbsp;». La permission de supprimer des unités de stockage persistantes sera spécifiquement demandée à l’utilisateur ou à l’utilisatrice.
 
 ## Estimations de quota et d’usage
 

@@ -23,7 +23,7 @@ Le mécanisme de stockage est basé sur l'[API Web Storage](/fr/docs/Web/API/Web
 - Les valeurs stockées peuvent être de tout type compatible avec JSON et pas uniquement [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String). Ce qui inclut entre autres [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) et [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), mais seulement si leur contenu peut être représenté en JSON, ce qui exclut les nœuds DOM. Il n'est pas nécessaire de convertir vos valeurs en JSON Strings avant de les stocker, mais elles sont représentées en JSON en interne, d'où l'impératif de compatibilité.
 - Plusieurs paires clef/valeur peuvent être récupérées par un même appel à l'API.
 
-Pour utiliser cette API vous devez inclure la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) « storage » dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+Pour utiliser cette API vous devez inclure la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) «&nbsp;storage&nbsp;» dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 Chaque extension a sa propre zone de stockage, qui peut être divisée entre plusieurs types de stockage.
 

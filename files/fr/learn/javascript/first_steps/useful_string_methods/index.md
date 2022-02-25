@@ -170,7 +170,7 @@ let browserType = 'mozilla';
 browserType.length;
 ```
 
-Cette commande doit renvoyer le nombre 7, parce que « mozilla » comporte 7 caractères. C'est utile pour de nombreuses raisons ; par exemple, vous pourriez avoir besoin de trouver les longueurs d'une série de noms pour les afficher par taille ou faire savoir à un utilisateur qu'il a entré un nom trop long dans un champ de formulaire à partir du moment où il dépasse une certaine taille.
+Cette commande doit renvoyer le nombre 7, parce que «&nbsp;mozilla&nbsp;» comporte 7 caractères. C'est utile pour de nombreuses raisons ; par exemple, vous pourriez avoir besoin de trouver les longueurs d'une série de noms pour les afficher par taille ou faire savoir à un utilisateur qu'il a entré un nom trop long dans un champ de formulaire à partir du moment où il dépasse une certaine taille.
 
 ### Retrouver un caractère donné dans une chaîne
 
@@ -186,7 +186,7 @@ Les ordinateurs décomptent à partir de 0, pas de 1 ! Pour retrouver le derni
 browserType[browserType.length-1];
 ```
 
-La longueur de « mozilla » est de 7 caractères, mais comme le décompte se fait à partir de 0, la position du caractère est 6, d'où la nécessité d'écrire `length-1`. Vous pourrez utiliser cette propriété pour, par exemple, trouver la première lettre d'une série de chaînes et les trier alphabétiquement.
+La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le décompte se fait à partir de 0, la position du caractère est 6, d'où la nécessité d'écrire `length-1`. Vous pourrez utiliser cette propriété pour, par exemple, trouver la première lettre d'une série de chaînes et les trier alphabétiquement.
 
 ### Trouver une sous-chaîne à l'intérieur d'une chaîne et l'extraire
 
@@ -196,7 +196,7 @@ La longueur de « mozilla » est de 7 caractères, mais comme le décompte s
     browserType.indexOf('zilla');
     ```
 
-    La commande donne 2 comme résultat, car la sous-chaîne « zilla » commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans « mozilla ». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent « mozilla ».
+    La commande donne 2 comme résultat, car la sous-chaîne «&nbsp;zilla&nbsp;» commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans «&nbsp;mozilla&nbsp;». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent «&nbsp;mozilla ».
 
 2.  On peut faire cela autrement, peut-être plus efficacement encore. Écrivez&nbsp;:
 
@@ -204,9 +204,9 @@ La longueur de « mozilla » est de 7 caractères, mais comme le décompte s
     browserType.indexOf('vanilla');
     ```
 
-    Cela doit vous donner `-1` comme résultat — renvoyé quand la sous-chaîne, en l'occurence « vanilla », n'est pas trouvée dans la chaîne principale.
+    Cela doit vous donner `-1` comme résultat — renvoyé quand la sous-chaîne, en l'occurence «&nbsp;vanilla&nbsp;», n'est pas trouvée dans la chaîne principale.
 
-    Vous pouvez utiliser cette propriété pour trouver tous les cas de chaînes **ne** **contenant** **pas** la sous-chaîne « mozilla », ou bien **la contenant**, si vous utilisez l'opérateur négation logique, tel que montré ci-dessous. Vous pourriez faire quelque chose comme :
+    Vous pouvez utiliser cette propriété pour trouver tous les cas de chaînes **ne** **contenant** **pas** la sous-chaîne «&nbsp;mozilla&nbsp;», ou bien **la contenant**, si vous utilisez l'opérateur négation logique, tel que montré ci-dessous. Vous pourriez faire quelque chose comme :
 
     ```js
     if(browserType.indexOf('mozilla') !== -1) {
@@ -220,7 +220,7 @@ La longueur de « mozilla » est de 7 caractères, mais comme le décompte s
     browserType.slice(0,3);
     ```
 
-    Il renvoie « moz » — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
+    Il renvoie «&nbsp;moz&nbsp;» — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
 
 4.  Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre ! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande&nbsp;:
 
@@ -228,7 +228,7 @@ La longueur de « mozilla » est de 7 caractères, mais comme le décompte s
     browserType.slice(2);
     ```
 
-    Elle renvoie « zilla » — le caractère à la position 2 est « z » et comme nous n'avons pas mis de second paramètre, la sous-chaîne retournée comporte tous les caractères restants de la chaîne.
+    Elle renvoie «&nbsp;zilla&nbsp;» — le caractère à la position 2 est «&nbsp;z&nbsp;» et comme nous n'avons pas mis de second paramètre, la sous-chaîne retournée comporte tous les caractères restants de la chaîne.
 
 > **Note :** Le second paramètre de `slice()` est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.
 
@@ -260,7 +260,7 @@ browserType.replace('moz','van');
 
 Dans cette section, vous allez pouvoir vous entraîner à écrire du code de manipulation de chaîne. Dans chacun des exercices ci-dessous, nous avons un tableau de chaînes, une boucle qui traîte chaque valeur dans le tableau et l'affiche dans une liste à puces. Vous n'avez pas besoin de comprendre comment fonctionnent les tableaux ou les boucles dès maintenant — cela vous sera expliqué dans de prochains articles. Tout ce dont vous avez besoin dans chaque cas est d'écrire le code qui va renvoyer les chaînes dans le format souhaité.
 
-Chaque exemple est accompagné d'un bouton « Réinitialiser », que vous pouvez utiliser pour réinitialiser le code si vous faites une erreur et que vous ne parvenez pas à la corriger, et un bouton « Montrer la solution » sur lequel vous pouvez cliquer pour afficher une réponse possible si jamais vous êtes vraiment bloqué.
+Chaque exemple est accompagné d'un bouton «&nbsp;Réinitialiser&nbsp;», que vous pouvez utiliser pour réinitialiser le code si vous faites une erreur et que vous ne parvenez pas à la corriger, et un bouton «&nbsp;Montrer la solution&nbsp;» sur lequel vous pouvez cliquer pour afficher une réponse possible si jamais vous êtes vraiment bloqué.
 
 ### Filtrer des messages de vœux
 

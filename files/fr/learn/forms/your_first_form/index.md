@@ -45,13 +45,13 @@ Les formulaires HTML sont un des vecteurs principaux d'interaction entre un util
 
 Un formulaire HTML est composé d'un ou plusieurs widgets. Ceux-ci peuvent être des zones de texte (sur une seule ligne ou plusieurs lignes), des boîtes à sélection, des boutons, des cases à cocher ou des boutons radio. La plupart du temps, ces items sont associés à un libellé qui décrit leur rôle — des étiquettes correctement implémentées sont susceptibles d'informer clairement l'utilisateur normal ou mal‑voyant sur ce qu'il convient d'entrer dans le formulaire.
 
-La principale différence entre un formulaire HTML et un document HTML habituel réside dans le fait que, généralement, les données collectées par le formulaire sont envoyées vers un serveur web. Dans ce cas, vous avez besoin de mettre en place un serveur web pour récupérer ces données et les traiter. La mise en place d'un tel serveur ne fait pas partie des sujets abordés dans ce guide. Si vous souhaitez toutefois en savoir plus, voyez « [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires) » plus loin dans ce module.
+La principale différence entre un formulaire HTML et un document HTML habituel réside dans le fait que, généralement, les données collectées par le formulaire sont envoyées vers un serveur web. Dans ce cas, vous avez besoin de mettre en place un serveur web pour récupérer ces données et les traiter. La mise en place d'un tel serveur ne fait pas partie des sujets abordés dans ce guide. Si vous souhaitez toutefois en savoir plus, voyez «&nbsp;[Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)&nbsp;» plus loin dans ce module.
 
 ## Concevoir le formulaire
 
 Avant de passer au code, il est souhaitable de prendre un peu de recul et accorder quelques instants de réflexion à votre formulaire. Dessiner un rapide croquis vous permettra de définir les informations que vous souhaitez demander à l'utilisateur. Du point de vue de l'expérience utilisateur, il est important de garder à l'esprit que plus vous demandez d'informations, plus vous risquez que votre utilisateur s'en aille. Restez simple et ne perdez pas votre objectif de vue : ne demandez que ce dont vous avez absolument besoin. La conception de formulaires est une phase importante de la construction d'un site internet ou d'une application. L'approche de l'expérience utilisateur de ces formulaires ne fait pas partie des objectifs de ce guide, mais si vous souhaitez approfondir ce sujet, vous pouvez lire les articles suivants :
 
-- Smashing Magazine a de très bons [articles à propos de l'expérience utilisateur dans les formulaires](http://uxdesign.smashingmagazine.com/tag/forms/), mais le plus intéressant est certainement leur « [Guide complet pour des formulaires web facilement utilisables](http://uxdesign.smashingmagazine.com/2011/11/08/extensive-guide-web-form-usability/) ».
+- Smashing Magazine a de très bons [articles à propos de l'expérience utilisateur dans les formulaires](http://uxdesign.smashingmagazine.com/tag/forms/), mais le plus intéressant est certainement leur «&nbsp;[Guide complet pour des formulaires web facilement utilisables](http://uxdesign.smashingmagazine.com/2011/11/08/extensive-guide-web-form-usability/)&nbsp;».
 - UXMatters est une ressource bien pensée avec de très bons conseils allant des [meilleures pratiques de base](http://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php) jusqu'à des sujets plus complexes tels que [les formulaires sur plusieurs pages](http://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php).
 
 Dans ce guide, nous allons concevoir un formulaire de contact simple. Posons les premières pierres.
@@ -81,7 +81,7 @@ Cet élément définit un formulaire. C'est un élément conteneur au même titr
 - L'attribut `action` définit l'emplacement (une URL) où doivent être envoyées les données collectées par le formulaire.
 - L'attribut `method` définit la méthode HTTP utilisée pour envoyer les données (cela peut être « get » ou « post »).
 
-> **Note :** Si vous souhaitez en savoir plus sur le fonctionnement de ces attributs, cela est détaillé dans l'article [« Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires) ».
+> **Note :** Si vous souhaitez en savoir plus sur le fonctionnement de ces attributs, cela est détaillé dans l'article [«&nbsp;Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)&nbsp;».
 
 Pour le moment, ajoutez l'élément {{htmlelement("form")}} ci dessus dans le corps de votre HTML.
 
@@ -113,7 +113,7 @@ Les éléments {{HTMLElement("div")}} sont ici pour structurer notre code et ren
 Concernant l'élément {{HTMLElement("input")}}, l'attribut le plus important est l'attribut `type`. Ce dernier est extrêmement important puisqu'il définit le comportement de l'élément {{HTMLElement("input")}}. Il peut radicalement changer le sens de l'élément, faites-y attention. Si vous voulez en savoir plus à ce propos, vous pouvez lire l'article au sujet des [widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs).
 
 - Dans notre exemple nous n'utilisons que la valeur `text` — qui est la valeur par défaut de cet attribut et représente un champ de texte basique sur une seule ligne acceptant n'importe quel type de texte.
-- Pour la deuxième entrée, nous utilisons la valeur `email` qui définit un champ de texte sur une seule ligne n'acceptant que des adresses électroniques valides. Cette dernière valeur transforme un champ basique en une sorte de champ « intelligent » qui réalise des vérifications sur les données fournies par l'utilisateur. Vous trouverez plus de détails sur la validation des formulaires dans l'article [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire).
+- Pour la deuxième entrée, nous utilisons la valeur `email` qui définit un champ de texte sur une seule ligne n'acceptant que des adresses électroniques valides. Cette dernière valeur transforme un champ basique en une sorte de champ «&nbsp;intelligent&nbsp;» qui réalise des vérifications sur les données fournies par l'utilisateur. Vous trouverez plus de détails sur la validation des formulaires dans l'article [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire).
 
 Last but not least, remarquez la syntaxe de `<input>` vs `<textarea></textarea>`. C'est une des bizarreries du HTML. La balise `<input>` est un élément vide, ce qui signifie qu'il n'a pas besoin de balise fermante. Au contraire, {{HTMLElement("textarea")}} n'est pas un élément vide, il faut donc le fermer avec la balise fermante appropriée. Cela a un effet sur une caractéristique spécifique des formulaires HTML : la manière dont vous définissez la valeur par défaut. Pour définir une valeur par défaut d'un élément {{HTMLElement("input")}} vous devez utiliser l'attribut `value` de la manière suivante :
 
@@ -259,7 +259,7 @@ Pour nommer vos données vous devez utiliser l'attribut `name` pour identifier b
   ...
 ```
 
-Dans notre exemple, le formulaire enverra trois informations nommées respectivement « `user_name` », « `user_email `» et « `user_message` ». Ces informations seront envoyées à l'URL « `/my-handling-form-page` » avec la méthode HTTP POST.
+Dans notre exemple, le formulaire enverra trois informations nommées respectivement «&nbsp;`user_name`&nbsp;», «&nbsp;`user_email `» et «&nbsp;`user_message`&nbsp;». Ces informations seront envoyées à l'URL « `/my-handling-form-page` » avec la méthode HTTP POST.
 
 Du côté du serveur, le script à l'URL « `/my-handling-form-page` » recevra les données sous forme d'une liste de trois éléments clé/valeur intégrés à la requête HTTP. À vous de définir comment ce script va manipuler les données. Chacun des langages serveurs (PHP, Python, Ruby, Java, C#, etc.) a son propre mécanisme pour traiter ces données. Il n'appartient pas à ce guide d'approfondir ce sujet, mais si vous souhaitez en savoir plus, nous avons mis quelques exemples dans l'article [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires).
 
