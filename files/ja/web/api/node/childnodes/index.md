@@ -2,100 +2,73 @@
 title: Node.childNodes
 slug: Web/API/Node/childNodes
 tags:
-  - API
-  - DOM
-  - DOMリファレンス
   - プロパティ
   - リファレンス
+  - 読み取り専用
+browser-compat: api.Node.childNodes
 translation_of: Web/API/Node/childNodes
 ---
-<p>{{ ApiRef() }}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.childNodes</strong></code>読み取り専用プロパティは、最初の子ノードにインデックス0が割り当てられている、指定された要素の子{{domxref("Node","nodes")}}の現在の{{domxref("NodeList")}}を返します。</p>
+**`childNodes`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、{{domxref("NodeList")}} で指定された要素の子{{domxref("Node", "ノード", "", 1)}}の生きたリストを返し、最初の子ノードは位置 `0` に割り当てられます。子ノードには要素、テキスト、コメントが含まれます。
 
-<h2 id="構文">構文</h2>
+> **Note:** {{domxref("NodeList")}} が生きたリストであるというのは、新しい子が追加されたり取り除かれたりするたびに、内容が変化するという意味です。
 
-<pre class="syntaxbox">let <var>nodeList</var> = <var>elementNodeReference</var>.childNodes;
-</pre>
+ノードのコレクションの項目はオブジェクトであり、文字列ではありません。ノードオブジェクトからデータを取得するには、そのプロパティを使用してください。例えば、最初の子ノードの名前を取得するには、 `elementNodeReference.childNodes[0].nodeName` を使うことで実現できます。
 
-<h2 id=".E6.9B.B8.E5.BC.8F.E3.81.A8.E5.80.A4" name=".E6.9B.B8.E5.BC.8F.E3.81.A8.E5.80.A4">例</h2>
+{{domxref("document")}} オブジェクト自体には 2 つの子があります。文書型宣言と、ルート要素、ふつうは `documentElement` として参照されます。 HTML 文書の場合、後者は {{HTMLElement("html")}} 要素です。
 
-<h3 id="簡単な使用方法">簡単な使用方法</h3>
+覚えておくべき重要なこととして、 `childNodes` には*すべての*子ノードが含まれ、テキストやコメントなどの要素以外のノードが含まれることです。
+要素のみが含まれるコレクションを取得するのであれば、 {{domxref("Element.children")}} を代わりに使用してください。
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="comment token">// 変数pargは&lt;p&gt;要素へのオブジェクト参照です</span>
+## 値
 
-<span class="comment token">// まず、pargが子ノードを持っているかをチェックします</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span>parg<span class="punctuation token">.</span><span class="function token">hasChildNodes</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> children <span class="operator token">=</span> parg<span class="punctuation token">.</span>childNodes<span class="punctuation token">;</span>
+このノードの子を含む生きた {{domxref("NodeList")}} です。
 
-  <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">let</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> children<span class="punctuation token">.</span>length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// for文を使って各ノードにchildren[i]としてアクセスします
-    // 注意！ NodeListは不変ではないので、ノードを追加したり削除したりするとchildren.lengthは変化します</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+> **Note:** `childNodes` を複数回呼び出しても、*同じ* {{domxref("NodeList")}} が返されます。
 
-<h3 id="ノードから全ての子を削除する">ノードから全ての子を削除する</h3>
+## 例
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="comment token">// これは一例ですが、この方法でノードからすべての子ノードを削除することができます</span>
-<span class="comment token">// let box = document.getElementById(/**/)</span>;
+### 単純な使用方法
 
-<span class="keyword token">while</span> <span class="punctuation token">(</span>box<span class="punctuation token">.</span>firstChild<span class="punctuation token">)</span> <span class="punctuation token">{
-    // NodeListは不変ではないので、毎処理ごとにbox.firstChildは変化します</span>
-    box<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>box<span class="punctuation token">.</span>firstChild<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+```js
+// parg は <p> 要素へのオブジェクト参照です
 
-<h2 id="注記">注記</h2>
+// まず、要素に子ノードがあるかどうかをチェックします
+if (parg.hasChildNodes()) {
+  let children = parg.childNodes;
 
-<p>ノードのコレクション内の項目はオブジェクトであり、文字列ではありません。node オブジェクトからデータを取得するには、そのプロパティ (たとえば<code>elementNodeReference.childNodes[1].nodeName</code> で名前を取得) を使用します。<br>
- <br>
- <code>document</code>オブジェクト自体には Doctype 宣言と root 要素 の2つの子があり、通常は<code>documentElement</code>と呼ばれます。 （(X)HTML文書ではこれが<code>HTML</code>要素です）<br>
- <br>
- <code>childNodes</code>にはテキストノードやコメントノードなどの非要素ノードを含むすべての子ノードが含まれます。要素のみのコレクションを取得するには、代わりに{{domxref("ParentNode.children")}} を使用してください。</p>
+  for (let i = 0; i < children.length; i++) {
+    // それぞれの子を children[i] として処理します
+    // 注: リストは生きています。子を追加したり取り除いたりすると、リストの `length` が変わります
+  }
+}
+```
 
-<h2 id="仕様">仕様</h2>
+### ノードからすべてての子を削除
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-childnodes', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-1451460987', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-1451460987', 'Node.childNodes')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+```js
+// これはあるノードからすべての子を取り除くための一つの方法です
+// box はある要素へのオブジェクト参照です
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+while (box.firstChild) {
+    // リストは生きているので、呼び出されるたびにインデックスが変わります
+    box.removeChild(box.firstChild);
+}
+```
 
-<p>{{Compat("api.Node.childNodes")}}</p>
+## 仕様書
 
-<h2 id=".E5.8F.82.E7.85.A7" name=".E5.8F.82.E7.85.A7">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li>{{ domxref("Node.firstChild") }}</li>
- <li>{{ domxref("Node.lastChild") }}</li>
- <li>{{ domxref("Node.nextSibling") }}</li>
- <li>{{ domxref("Node.previousSibling") }}</li>
- <li>{{ domxref("Element.children") }}</li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Node.firstChild")}}
+- {{domxref("Node.lastChild")}}
+- {{domxref("Node.nextSibling")}}
+- {{domxref("Node.previousSibling")}}
+- {{domxref("Element.children")}}
