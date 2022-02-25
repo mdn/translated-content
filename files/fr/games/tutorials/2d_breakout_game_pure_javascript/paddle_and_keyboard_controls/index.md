@@ -18,7 +18,7 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr�
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
-C'est la **4<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
+C'est la **4<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
 
 La balle rebondit librement partout et vous pourriez la regarder indéfiniment... Mais il n'y a pas d'interaction avec le joueur. Ce n'est pas un jeu si vous ne pouvez pas le contrôler ! Nous allons donc ajouter une interaction avec le joueur : une raquette contrôlable.
 

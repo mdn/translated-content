@@ -33,7 +33,7 @@ Pour plusieurs raisons, Gecko fixe quelques restrictions sur le format SVG lorsq
 - Les liens stylistiques {{cssxref(":visited")}}  ne sont pas interprété.
 - Les widgets stylistiques natifs aux plateformes (basés sur le thème de l'OS) sont désactivés.
 
-A noter que les restrictions précédentes sont spécifiques à l'usage de SVG en tant qu'image; elles ne s'appliquent pas lorsque le contenu SVG est vu directement, ou lorsque il est embarqué en tant que document via les éléments {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, ou {{HTMLElement("embed")}}
+A noter que les restrictions précédentes sont spécifiques à l'usage de SVG en tant qu'image; elles ne s'appliquent pas lorsque le contenu SVG est vu directement, ou lorsque il est embarqué en tant que document via les éléments {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, ou {{HTMLElement("embed")}}
 
 ## Spécifications
 

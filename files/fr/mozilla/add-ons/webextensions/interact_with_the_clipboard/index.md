@@ -150,7 +150,7 @@ Considérez le HTML qui inclut quelque chose comme ceci :
 <button id="paste">Paste</button>
 ```
 
-Pour définir le contenu de l'élément {{HTMLElement("textarea")}} avec l'ID `"output"` du presse-papiers lorsque l'utilisateur clique sur le {{HTMLElement("button")}} `"coller"`, vous pouvez utiliser du code comme ceci :
+Pour définir le contenu de l'élément {{HTMLElement("textarea")}} avec l'ID `"output"` du presse-papiers lorsque l'utilisateur clique sur le {{HTMLElement("button")}} `"coller"`, vous pouvez utiliser du code comme ceci :
 
 ```js
 function paste() {

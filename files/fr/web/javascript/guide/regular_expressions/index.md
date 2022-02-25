@@ -651,7 +651,7 @@ Pour qu'une partie de la chaîne de caractère corresponde mais que la correspon
 
 ## Utiliser les expressions rationnelles
 
-Les expresssions régulières sont utilisées avec les méthodes ` test``  `et` exec` de l'objet` RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+Les expresssions régulières sont utilisées avec les méthodes ` test``  `et` exec` de l'objet` RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
 | Méthode                                                  | Description                                                                                                                                                                                        |
 | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -843,7 +843,7 @@ pour obtenir le même résultat.
 
 Le comportement du marqueur `'g'` est différent selon qu'il est utilisé avec [`exec()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp/exec) ou avec [`match()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/match). Pour `match()`, c'est la chaîne de caractères qui invoque la méthode et l'expression rationnelle est alors un argument. Pour `exec()`, c'est l'expression rationnelle qui invoque la méthode et c'est la chaîne de caractères qui est passée en argument. Dans l'appel à `exec()`, le marqueur `'g'` permet d'avoir une progression itérative.
 
-Le marqueur `m` pourra être utilisé pour traiter une chaîne de caractères de plusieurs lignes comme plusieurs lignes distinctes. Si ce marqueur est utilisé, les caractères spéciaux `^` et `$` correspondront au début ou à la fin de n'importe quelle ligne appartenant à la chaîne de caractères au lieu de correspondre simplement au début ou à la fin de la chaîne.
+Le marqueur `m` pourra être utilisé pour traiter une chaîne de caractères de plusieurs lignes comme plusieurs lignes distinctes. Si ce marqueur est utilisé, les caractères spéciaux `^` et `$` correspondront au début ou à la fin de n'importe quelle ligne appartenant à la chaîne de caractères au lieu de correspondre simplement au début ou à la fin de la chaîne.
 
 ## Exemples
 

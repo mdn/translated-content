@@ -12,7 +12,7 @@ original_slug: Web/HTML/Attributs_universels/itemprop
 ---
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemprop`** est utilisé afin d'ajouter des propriétés à un objet. C'est un attribut universel et chaque élément HTML peut donc avoir un attribut `itemprop` qui permettra de former un couple de nom (la valeur de l'attribut) et de valeur (la valeur de l'élément). Chacune de ces paires constitue une **propriété** et un groupe de propriété forme un **objet (_item_)**. Les valeurs des propriétés sont généralement des chaînes de caractères ou des URL et peuvent être associées à de nombreux éléments comme {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}} et {{HTMLElement("video")}}.
+L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemprop`** est utilisé afin d'ajouter des propriétés à un objet. C'est un attribut universel et chaque élément HTML peut donc avoir un attribut `itemprop` qui permettra de former un couple de nom (la valeur de l'attribut) et de valeur (la valeur de l'élément). Chacune de ces paires constitue une **propriété** et un groupe de propriété forme un **objet (_item_)**. Les valeurs des propriétés sont généralement des chaînes de caractères ou des URL et peuvent être associées à de nombreux éléments comme {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}} et {{HTMLElement("video")}}.
 
 ### Un exemple simple
 
@@ -36,7 +36,7 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemprop`** es
 <table class="standard-table">
   <tbody>
     <tr>
-      <td colspan="1" rowspan="2"> </td>
+      <td colspan="1" rowspan="2"> </td>
       <th colspan="2" rowspan="1"><strong>Objet</strong></th>
     </tr>
     <tr>
@@ -240,7 +240,7 @@ Une propriété est un ensemble non-ordonné de composants uniques sensibles à 
 <table class="standard-table">
   <thead>
     <tr>
-      <th colspan="1" rowspan="2" scope="col"> </th>
+      <th colspan="1" rowspan="2" scope="col"> </th>
       <th colspan="2" rowspan="1" scope="col">Objet</th>
     </tr>
     <tr>

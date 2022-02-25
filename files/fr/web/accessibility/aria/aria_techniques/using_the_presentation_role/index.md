@@ -53,4 +53,4 @@ De plus en plus d'images sont proposées sous la forme de compositions SVG direc
 
 ## Autres ressources
 
-Using Aria - 2.9 Use of Role=presentation or Role=none: <https://www.w3.org/TR/using-aria/#presentation>
+Using Aria - 2.9 Use of Role=presentation or Role=none: <https://www.w3.org/TR/using-aria/#presentation>

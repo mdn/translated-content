@@ -5,9 +5,9 @@ translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
 {{APIRef}} {{SeeCompatTable}}
 
-La propriété `CanvasRenderingContext2D.imageSmoothingEnabled` de l'API Canvas 2D peut être affectée pour changer le fait que les images soient lissées (`true`, par défaut) ou non (`false`). Lors de la récupération de la propriété `imageSmoothingEnabled`, la dernière valeur à laquelle elle a été définie est renvoyée.
+La propriété `CanvasRenderingContext2D.imageSmoothingEnabled` de l'API Canvas 2D peut être affectée pour changer le fait que les images soient lissées (`true`, par défaut) ou non (`false`). Lors de la récupération de la propriété `imageSmoothingEnabled`, la dernière valeur à laquelle elle a été définie est renvoyée.
 
-Cette propriété est utile pour les jeux à thème pixel-art, lors d'une mise à l'échelle du canvas par exemple. L'algorithme de redimensionnement par défaut peut créer des effets de flou et ruiner les jolis pixels. Mettez cette propriété à `false` dans ce cas. Voir aussi la propriété CSS {{cssxref("image-rendering")}}.
+Cette propriété est utile pour les jeux à thème pixel-art, lors d'une mise à l'échelle du canvas par exemple. L'algorithme de redimensionnement par défaut peut créer des effets de flou et ruiner les jolis pixels. Mettez cette propriété à `false` dans ce cas. Voir aussi la propriété CSS {{cssxref("image-rendering")}}.
 
 ## Syntaxe
 
@@ -16,7 +16,7 @@ Cette propriété est utile pour les jeux à thème pixel-art, lors d'une mise 
 ### Options
 
 - `valeur`
-  - : Un {{jsxref("Boolean")}} indiquant de lisser les images ou non.
+  - : Un {{jsxref("Boolean")}} indiquant de lisser les images ou non.
 
 ## Exemples
 
@@ -74,5 +74,5 @@ img.onload = function() {
 
 ## Voir aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
 - {{cssxref("image-rendering")}}

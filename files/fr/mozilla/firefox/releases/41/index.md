@@ -40,7 +40,7 @@ Nouveautés:
 
 ### HTML
 
-- {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ({{bug(1167816)}}).
+- {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ({{bug(1167816)}}).
 - SVG icons are now supported for site icons, that is favicons and shortcut icons ({{bug(366324)}}).
 - The {{htmlattrxref('crossorigin', 'link')}} attribute is now supported for [\<link rel='preconnect'>](/fr/docs/Web/HTML/Element/link) ({{bug(1174152)}}).
 
@@ -96,7 +96,7 @@ Nouveautés:
 #### Miscellaneous
 
 - On OS X and Windows, {{domxref("NavigatorOnLine.onLine", "Navigator.onLine")}} now changes regarding network connectivity (it always returned `true`, , unless "Work offline" mode was selected) before ({{bug(654579)}}).
-- {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/fr/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ({{bug(952139)}}) and ({{bug(911972)}}).
+- {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/fr/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ({{bug(952139)}}) and ({{bug(911972)}}).
 - The User Timing API is now available in [Web workers](/fr/docs/Web/API/Web_Workers_API) ({{bug(1155761)}}).
 - The [Notifications API](/fr/docs/Web/API/Notifications_API) is now available in [Web workers](/fr/docs/Web/API/Web_Workers_API) ({{bug(916893)}}).
 - {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}} are now available in [Web workers](/fr/docs/Web/API/Web_Workers_API) ({{bug(1167650)}}).

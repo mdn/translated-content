@@ -9,7 +9,7 @@ translation_of: Web/CSS/direction
 ---
 {{CSSRef}}
 
-La propriété **`direction`** doit être paramétrée afin de correspondre à la direction du texte: `rtl` (_Right To Left_ pour droite à gauche) pour les textes en hébreu ou en arabe et `ltr` (_Left To Right_ pour gauche à droite) pour les autres. Cela doit normalement être fait dans le document (par exemple, en utilisant [l'attribut `dir` en HTML](/fr/docs/Web/HTML/Attributs_universels/dir)) plutôt qu'avec une feuille de style CSS.
+La propriété **`direction`** doit être paramétrée afin de correspondre à la direction du texte: `rtl` (_Right To Left_ pour droite à gauche) pour les textes en hébreu ou en arabe et `ltr` (_Left To Right_ pour gauche à droite) pour les autres. Cela doit normalement être fait dans le document (par exemple, en utilisant [l'attribut `dir` en HTML](/fr/docs/Web/HTML/Attributs_universels/dir)) plutôt qu'avec une feuille de style CSS.
 
 {{EmbedInteractiveExample("pages/css/direction.html")}}
 

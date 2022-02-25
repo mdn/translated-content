@@ -121,7 +121,7 @@ Mais il ne correspondra pas à :
 - `blue yellow` car le composant doit apparaître au plus une fois.
 - `bold` car le mot-clé n'est pas permis pour aucune valeur de l'entité.
 
-> **Note :** La double esperluette est prioritaire par rapport à la double barre. `bold || thin && <length>` est équivalent à `bold || [ thin && <length> ]` qui décrit `bold`, `thin` `<length>`, `bold thin` `<length>`, ou `thin <length> bold` mais pas ` <length>`` bold thin  ` car bold, s'il est présent doit apparaître avant `thin && <length>`.
+> **Note :** La double esperluette est prioritaire par rapport à la double barre. `bold || thin && <length>` est équivalent à `bold || [ thin && <length> ]` qui décrit `bold`, `thin` `<length>`, `bold thin` `<length>`, ou `thin <length> bold` mais pas ` <length>`` bold thin  ` car bold, s'il est présent doit apparaître avant `thin && <length>`.
 
 ### La barre verticale
 
@@ -271,7 +271,7 @@ Mais pas à :
       <th colspan="4">Combinateurs</th>
     </tr>
     <tr>
-      <td> </td>
+      <td> </td>
       <td>Juxtaposition</td>
       <td>
         Les composants sont obligatoires et doivent apparaître dans cet ordre.
@@ -317,7 +317,7 @@ Mais pas à :
       <th colspan="4">Multiplicateurs</th>
     </tr>
     <tr>
-      <td> </td>
+      <td> </td>
       <td>Aucun multiplicateur</td>
       <td>Exactement 1 fois.</td>
       <td><code>solid</code></td>

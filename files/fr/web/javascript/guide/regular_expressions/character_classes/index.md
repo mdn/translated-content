@@ -114,7 +114,7 @@ Les classes de caractères permettent de distinguer différents ensembles de car
           >.
         </p>
         <p>
-          Ainsi, <code>/\s\w*/</code> correspond à ' toto' dans "truc toto".
+          Ainsi, <code>/\s\w*/</code> correspond à ' toto' dans "truc toto".
         </p>
       </td>
     </tr>

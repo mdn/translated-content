@@ -15,7 +15,7 @@ La façon dont les utilisateurs accèdent à la page et la manière dont elle es
 
 Vous pouvez ouvrir la page en programmant en appelant  [`runtime.openOptionsPage()`](/fr/Add-ons/WebExtensions/API/Runtime/openOptionsPage).
 
-Les pages d'options ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle elles peuvent charger des ressources et interdit certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu](/fr/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails.
+Les pages d'options ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle elles peuvent charger des ressources et interdit certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu](/fr/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails.
 
 ## Spécification de la page d'options
 

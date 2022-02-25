@@ -74,7 +74,7 @@ _Cette interface hérite aussi des interfaces {{domxref("Node")}} et {{domxref("
   - : retourne le nom de l'ensemble de feuilles de style qui a été activé en dernier. A la valeur `null` jusqu'à ce que la feuille de style soit modifiée en définissant la valeur de  {{domxref("document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
 - {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}} {{gecko_minversion_inline("8.0")}}
   - : retourne un {{jsxref("Boolean")}} qui est `true` _(vrai)_ seulement si le document est synthétique, tel qu'une image autonome, une vidéo, un fichier audio ou similaire.
-- {{domxref("Document.mozFullScreenElement")}} {{readonlyinline}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreenElement")}} {{readonlyinline}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
   - : L'élément qui est actuellement affiché en mode plein écran pour ce document.
 - {{domxref("Document.mozFullScreenEnabled")}} {{readonlyinline}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
   - : `true` _(vrai)_ si l'appel  {{domxref("Element.mozRequestFullscreen()")}}  est réussi dans le document courant.
@@ -322,7 +322,7 @@ L'interface Document est étendue avec l'interface  {{domxref("XPathEvaluator")}
 - {{domxref("document.evaluate","document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}
   - : évalue l'expression XPath .
 
-### Extensions pour les documents HTML
+### Extensions pour les documents HTML
 
 - {{domxref("document.clear()")}} {{non-standard_inline}} {{Deprecated_inline}}
   - : dans la majorité des navigateurs modernes, y compris les versions récentes de Firefox et Internet Explorer, cette méthode ne fait rien.

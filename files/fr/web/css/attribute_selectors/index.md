@@ -51,15 +51,15 @@ a[class~="logo"] {
 - `[attr~=valeur]`
   - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est `valeur`. Cette forme permet de fournir une liste de valeurs, séparées par des blancs, à tester. Si au moins une de ces valeurs est égale à celle de l'attribut, l'élément sera ciblé.
 - `[attr|=valeur]`
-  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est exactement `valeur` ou dont la valeur commence par `valeur` suivi immédiatement d'un tiret (U+002D). Cela peut notamment être utilisé pour effectuer des correspondances avec des codes de langues.
+  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est exactement `valeur` ou dont la valeur commence par `valeur` suivi immédiatement d'un tiret (U+002D). Cela peut notamment être utilisé pour effectuer des correspondances avec des codes de langues.
 - `[attr^=valeur]`
   - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur commence par `valeur`.
 - `[attr$=valeur]`
   - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur se termine par `valeur`.
 - `[attr*=valeur]`
-  - : Permet de cibler un élément qui possède un attribut `attr` et dont la valeur contient au moins une occurrence de `valeur` dans la chaîne de caractères.
+  - : Permet de cibler un élément qui possède un attribut `attr` et dont la valeur contient au moins une occurrence de `valeur` dans la chaîne de caractères.
 - `[attr operateur valeur i]`
-  - : On peut ajouter un `i` (ou `I`) avant le crochet de fin. Dans ce cas, la casse ne sera pas prise en compte (pour les caractères contenus sur l'intervalle ASCII).
+  - : On peut ajouter un `i` (ou `I`) avant le crochet de fin. Dans ce cas, la casse ne sera pas prise en compte (pour les caractères contenus sur l'intervalle ASCII).
 - `[attr operateur valeur s]` {{experimental_inline}}
   - : Ajouter un `s` (ou `S`) avant le crochet fermant permettra d'effectuer une comparaison de valeur sensible à la casse (pour les caractères ASCII).
 

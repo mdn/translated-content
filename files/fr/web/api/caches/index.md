@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
 {{APIRef()}}{{SeeCompatTable}}
 
-La propriété en lecture seule  **`caches`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'objet {{domxref("CacheStorage")}} associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
+La propriété en lecture seule  **`caches`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne l'objet {{domxref("CacheStorage")}} associé au contexte actuel. Cet objet permet de stocker des ressources pour une utilisation hors-ligne et de générer des réponses personnalisées à des requêtes.
 
 ## Syntaxe
 
@@ -18,7 +18,7 @@ Un objet de type {{domxref("CacheStorage")}}.
 
 ## Exemple
 
-L'exemple suivant montre comment mettre en cache un contexte de [service worker](/en-US/docs/Web/API/Service_Worker_API) pour stocker des ressources et les utiliser hors-ligne.
+L'exemple suivant montre comment mettre en cache un contexte de [service worker](/en-US/docs/Web/API/Service_Worker_API) pour stocker des ressources et les utiliser hors-ligne.
 
 ```js
 this.addEventListener('install', function(event) {
@@ -57,7 +57,7 @@ this.addEventListener('install', function(event) {
       <td>{{Spec2('Service Workers')}}</td>
       <td>
         <p>
-          Défini dans un <code>WindowOrWorkerGlobalScope</code> partiel dans la
+          Défini dans un <code>WindowOrWorkerGlobalScope</code> partiel dans la
           nouvelle spec.
         </p>
       </td>

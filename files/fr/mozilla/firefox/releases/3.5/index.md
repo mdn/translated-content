@@ -9,7 +9,7 @@ original_slug: Mozilla/Firefox/Versions/3.5
 ---
 {{FirefoxSidebar}}
 
-Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'une gestion améliorée d'une grande variété de standards du Web. Cet article en fournit une longue liste, avec des liens vers des articles décrivant les améliorations majeures.
+Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'une gestion améliorée d'une grande variété de standards du Web. Cet article en fournit une longue liste, avec des liens vers des articles décrivant les améliorations majeures.
 
 ## Nouvelles fonctionnalités pour les développeurs dans Firefox 3.5
 
@@ -117,7 +117,7 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 - [Évènements de progression pour `XMLHttpRequest`](/fr/Utilisation_de_XMLHttpRequest#Suivi_de_la_progression)
   - : Des évènements de progression sont à présent émis pour permettre aux extensions de surveiller l'état des requêtes.
 - [Amélioration des appels `XMLHttpRequest` synchrones](/fr/Utilisation_de_XMLHttpRequest#Suivi_de_la_progression)
-  - : Les [timeouts DOM](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) et les [évènements d'entrée](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) sont à présent supprimés pendant un appel `XMLHttpRequest` synchrone.
+  - : Les [timeouts DOM](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) et les [évènements d'entrée](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) sont à présent supprimés pendant un appel `XMLHttpRequest` synchrone.
 - [Contrôle du préchargement DNS](/fr/Contrôle_du_préchargement_DNS)
   - : Firefox 3.5 permet le préchargement DNS, par lequel il effectue la résolution des noms de domaines à l'avance pour les liens présents dans la page courante, afin de gagner du temps lorsque l'on clique effectivement sur ces liens. Cet article explique comment adapter votre site pour désactiver le préchargement, ou contrôler le comportement de ce préchargement.
 
@@ -147,12 +147,12 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
 ### Autres améliorations
 
 - La propriété [`wholeText`](/fr/DOM/Text.wholeText) et la méthode [`replaceWholeText()`](/fr/DOM/Text.replaceWholeText) ont été ajoutées aux nœuds texte.
-- La propriété [`element.children`](/fr/DOM/Element.children) a été ajoutée. Elle renvoie une _collection_ d'éléments enfants de l'élément donné.
-- L'API Element Traversal est à présent gérée par l'objet DOM [Element](/fr/DOM/element).
+- La propriété [`element.children`](/fr/DOM/Element.children) a été ajoutée. Elle renvoie une _collection_ d'éléments enfants de l'élément donné.
+- L'API Element Traversal est à présent gérée par l'objet DOM [Element](/fr/DOM/element).
 - Les nœuds HTML document peuvent à présent être clonés à l'aide de [`cloneNode()`](/fr/DOM/Node.cloneNode).
-- La méthode DOM non-standard `getBoxObjectFor()` a été supprimée. Utilisez plutôt [`getBoundingClientRect()`](/fr/DOM/element.getBoundingClientRect).
-- Les éléments DOM dispatchés peuvent être redispatchés. Ceci permet à Firefox 3.5 de passer le test 30 d'Acid 3.
-- Des améliorations ont été apportés à la gestion de DOM 2 Range.
+- La méthode DOM non-standard `getBoxObjectFor()` a été supprimée. Utilisez plutôt [`getBoundingClientRect()`](/fr/DOM/element.getBoundingClientRect).
+- Les éléments DOM dispatchés peuvent être redispatchés. Ceci permet à Firefox 3.5 de passer le test 30 d'Acid 3.
+- Des améliorations ont été apportés à la gestion de DOM 2 Range.
 - Dans un contexte non-chrome, les objets catchés dans les exceptions sont à présent les objets rejetés tels quels plutôt qu'une enveloppe [XPConnect](/fr/XPConnect) contenant ces objets.
 - Les références ID dans SVG sont à présent directes.
 - Les filtres SVG fonctionnent à présent avec `foreignObject`.
@@ -197,25 +197,25 @@ Si vous développez des extensions, vous devriez tout d'abord lire [Mise à jour
 ### Interface
 
 - Navigation en fonction de sa localisation
-  - : Si vous le désirez, vous pouvez permettre à Firefox 3.5 de partager des informations concernant votre localisation géographique avec des sites web. Firefox 3.5 peut utiliser des informations sur le réseau auquel votre machine est connectée pour partager votre localisation. Bien évidemment, votre permission sera demandée au préalable afin de préserver votre vie privée.
+  - : Si vous le désirez, vous pouvez permettre à Firefox 3.5 de partager des informations concernant votre localisation géographique avec des sites web. Firefox 3.5 peut utiliser des informations sur le réseau auquel votre machine est connectée pour partager votre localisation. Bien évidemment, votre permission sera demandée au préalable afin de préserver votre vie privée.
 - Gestion de la vidéo et de l'audio ouverts
-  - : Firefox 3.5 gère l'intégration de vidéos et d'extraits audio à l'aide du format ouvert Ogg, ainsi qu'au format WAV pour l'audio. Aucun plugin nécessaire, pas de messages d'erreurs incompréhensibles vous demandant d'installer quelque chose qui n'est en fait pas disponible sur votre plateforme.
+  - : Firefox 3.5 gère l'intégration de vidéos et d'extraits audio à l'aide du format ouvert Ogg, ainsi qu'au format WAV pour l'audio. Aucun plugin nécessaire, pas de messages d'erreurs incompréhensibles vous demandant d'installer quelque chose qui n'est en fait pas disponible sur votre plateforme.
 - Stockage local de données
-  - : Les applications web peuvent à présent utiliser les possibilités de stockage local pour conserver des données sur votre ordinateur. Cela peut servir pour conserver des préférences ou d'autres données plus complexes.
+  - : Les applications web peuvent à présent utiliser les possibilités de stockage local pour conserver des données sur votre ordinateur. Cela peut servir pour conserver des préférences ou d'autres données plus complexes.
 
 ### Sécurité et vie privée
 
 - Navigation privée
   - : Besoin d'utiliser l'ordinateur de quelqu'un d'autre ? Activez la navigation privée et rien ne sera enregistré concernant votre session, ni cookies, ni historique, ni aucune autre information privée.
 - Meilleurs contrôles sur la vie privée
-  - : Le panneau de préférences Vie privée a été complètement revu pour disposer d'un meilleur contrôle sur vos informations privées. Les utilisateurs peuvent choisir de conserver ou d'effacer tout ce qui concerne l'historique, les cookies, les téléchargements et les informations de formulaire enregistrées. De plus, il est possible d'indiquer si l'historique et/ou les marque-pages doivent faire partie des suggestions automatiques de la Barre d'adresse, afin d'empêcher des adresses privées d'apparaître par inadvertance en saisissant des informations dans la Barre d'adresse.
+  - : Le panneau de préférences Vie privée a été complètement revu pour disposer d'un meilleur contrôle sur vos informations privées. Les utilisateurs peuvent choisir de conserver ou d'effacer tout ce qui concerne l'historique, les cookies, les téléchargements et les informations de formulaire enregistrées. De plus, il est possible d'indiquer si l'historique et/ou les marque-pages doivent faire partie des suggestions automatiques de la Barre d'adresse, afin d'empêcher des adresses privées d'apparaître par inadvertance en saisissant des informations dans la Barre d'adresse.
 
 ### Performances
 
 - Du JavaScript plus rapide
   - : Le code JavaScript est exécuté nettement plus rapidement dans Firefox 3.5 grâce à son nouveau moteur TraceMonkey. Les applications web sont ainsi beaucoup plus rapides que dans Firefox 3.
 - Rendu plus rapide des pages
-  - : Le contenu web est affiché plus rapidement dans Firefox 3.5, grâce à des technologies telles que l'« analyse spéculative ». Vos utilisateurs n'ont pas besoin de savoir de quoi il s'agit, simplement que ça rend les choses plus rapides.
+  - : Le contenu web est affiché plus rapidement dans Firefox 3.5, grâce à des technologies telles que l'« analyse spéculative ». Vos utilisateurs n'ont pas besoin de savoir de quoi il s'agit, simplement que ça rend les choses plus rapides.
 
 ## Voir également
 

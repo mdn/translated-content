@@ -28,7 +28,7 @@ L'événement **compositionupdate** est déclenché lorsqu'un caractère est ajo
 | `view` {{ReadOnlyInline}}       | {{domxref("WindowProxy")}}      | {{domxref("Document.defaultView")}} (fenêtre du document).                    |
 | `detail` {{ReadOnlyInline}}     | `long` (`float`)                          | 0.                                                                                         |
 | `data `{{ReadOnlyInline}}       | {{domxref("DOMString")}} (string) | La chaîne de caractères originale éditée ou une chaîne vide.                               |
-| `locale `{{ReadOnlyInline}}     | {{domxref("DOMString")}} (string) | Le code de la langue pour l'événement de composition si disponible; Sinon une chaîne vide. |
+| `locale `{{ReadOnlyInline}}     | {{domxref("DOMString")}} (string) | Le code de la langue pour l'événement de composition si disponible; Sinon une chaîne vide. |
 
 ## Compatibilités navigateur
 

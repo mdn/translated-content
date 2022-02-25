@@ -31,20 +31,20 @@ De plus, vous devriez envisager de supprimer tout contenu provenant d'un tiers (
 
 Vous pouvez également atténuer ces risques en utilisant :
 
-- L’en-tête `{{httpheader("Referrer-Policy")}}` sur votre serveur pour contrôler quelle information est envoyée par l’en-tête `Referer`. Encore une fois, une directive `no-referrer` omettrait intégralement l’en-tête `Referer`.
+- L’en-tête `{{httpheader("Referrer-Policy")}}` sur votre serveur pour contrôler quelle information est envoyée par l’en-tête `Referer`. Encore une fois, une directive `no-referrer` omettrait intégralement l’en-tête `Referer`.
 - L’attribut `referrerpolicy` sur les éléments HTML qui présentent des risques de fuite d'informations (comme `<img>` et `<a>`). Cet attribut peut prendre par exemple la valeur  `no-referrer` afin d'empêcher l'envoi de l’en-tête `Referer`.
 - L’attribut `rel` défini à `noreferrer` sur les éléments HTML à risques (comme `<img>` et \<a>). Voir Types de liens et rechercher `noreferrer` pour plus d’informations.
 - La technique de la [page de sortie](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect).
 
-Les frameworks soucieux de la sécurité employés côté serveur ont tendance à inclure d'emblée des mesures d’atténuation pour résoudre ces problèmes, par exemple&nbsp;:
+Les frameworks soucieux de la sécurité employés côté serveur ont tendance à inclure d'emblée des mesures d’atténuation pour résoudre ces problèmes, par exemple&nbsp;:
 
 - La sécurité dans Django (voir notamment Cross Site Request Forgery (CSRF) protection).
 - helmet referrer-policy — middleware pour configurer l'entête Referrer-Policy dans les applications Node.js/Express (voir aussi helmet pour plus d'aménagements liés à la sécurité).
 
 ## Politique et exigences.
 
-Il serait pertinent de rédiger pour votre (vos) équipe(s) de projet un ensemble d’exigences en matière de sécurité et de protection des renseignements personnels en en précisant l’utilisation dans le cadre de l'atténuation des risques. Vous devriez demander l’aide d’un expert en sécurité Web pour rédiger ces exigences en tenant compte à la fois des besoins et du bien-être des utilisateurs, ainsi que d’autres questions liées à la législation et la réglementation comme le [Réglement Général à la Protection des Données de l'Union Européenne](https://ec.europa.eu/info/law/law-topic/data-protection/eu-data-protection-rules_fr).
+Il serait pertinent de rédiger pour votre (vos) équipe(s) de projet un ensemble d’exigences en matière de sécurité et de protection des renseignements personnels en en précisant l’utilisation dans le cadre de l'atténuation des risques. Vous devriez demander l’aide d’un expert en sécurité Web pour rédiger ces exigences en tenant compte à la fois des besoins et du bien-être des utilisateurs, ainsi que d’autres questions liées à la législation et la réglementation comme le [Réglement Général à la Protection des Données de l'Union Européenne](https://ec.europa.eu/info/law/law-topic/data-protection/eu-data-protection-rules_fr).
 
 ## Voir aussi
 
-- [Lignes directrices de l'équipe de sécurité de Mozilla sur Referrer-Policy](https://infosec.mozilla.org/guidelines/web_security.html#referrer-policy)
+- [Lignes directrices de l'équipe de sécurité de Mozilla sur Referrer-Policy](https://infosec.mozilla.org/guidelines/web_security.html#referrer-policy)

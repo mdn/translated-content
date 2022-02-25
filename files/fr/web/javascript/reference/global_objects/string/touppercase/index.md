@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/toUpperCase
 ---
 {{JSRef}}
 
-La méthode **`toUpperCase()`** retourne la valeur de la chaîne courante, convertie en majuscules.
+La méthode **`toUpperCase()`** retourne la valeur de la chaîne courante, convertie en majuscules.
 
 {{EmbedInteractiveExample("pages/js/string-touppercase.html")}}
 
@@ -31,7 +31,7 @@ Une nouvelle chaîne de caractères obtenue à partir de la chaîne appelante, p
 
 ## Description
 
-La méthode `toUpperCase()` retourne la valeur de la chaîne convertie en majuscules. `toUpperCase` n'affecte pas la valeur de la chaîne elle-même.
+La méthode `toUpperCase()` retourne la valeur de la chaîne convertie en majuscules. `toUpperCase` n'affecte pas la valeur de la chaîne elle-même.
 
 ## Exemples
 

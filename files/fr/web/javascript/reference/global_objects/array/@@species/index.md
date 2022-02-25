@@ -34,7 +34,7 @@ La propriété renvoie le constructeur par défaut, dans le cas des objets `Arra
 Array[Symbol.species]; // function Array()
 ```
 
-Pour un objet dérivé, la valeur de `species` pour une classe `MonArray` sera le constructeur de cette classe. Vous pouvez surcharger ce comportement afin de renvoyer le constructeur `Array` :
+Pour un objet dérivé, la valeur de `species` pour une classe `MonArray` sera le constructeur de cette classe. Vous pouvez surcharger ce comportement afin de renvoyer le constructeur `Array` :
 
 ```js
 class MonArray extends Array {

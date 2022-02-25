@@ -65,7 +65,7 @@ La mise en œuvre de contrôles audio / vidéo sur le Web ne devrait pas poser d
 
 ### Le problème avec les contrôles HTML5 natifs
 
-Les instances audio et vidéo HTML5 sont même fournies avec un ensemble de commandes intégrées vous permettant de contrôler le contenu multimédia directement. Par exemple (voir  `native-controls.html` [code source](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html) et [en direct](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
+Les instances audio et vidéo HTML5 sont même fournies avec un ensemble de commandes intégrées vous permettant de contrôler le contenu multimédia directement. Par exemple (voir  `native-controls.html` [code source](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html) et [en direct](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
 
 ```html
 <audio controls>
@@ -333,7 +333,7 @@ Cela donnera une vidéo avec des sous-titres affichés, un peu comme ceci:
 
 ![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
-Pour plus de détails, veuillez lire  [Ajouter des légendes et des sous titres à des vidéos HTML 5](/fr/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).  Vous trouverez [un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/)  qui accompagne cet article sur Github, écrit par Ian Devlin (voir aussi le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Cet exemple utilise du JavaScript. pour permettre aux utilisateurs de choisir entre différents sous-titres. Notez que pour activer les sous-titres, vous devez appuyer sur le bouton "CC" et sélectionner une option - Anglais, Allemand ou Español.
+Pour plus de détails, veuillez lire  [Ajouter des légendes et des sous titres à des vidéos HTML 5](/fr/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video).  Vous trouverez [un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/)  qui accompagne cet article sur Github, écrit par Ian Devlin (voir aussi le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Cet exemple utilise du JavaScript. pour permettre aux utilisateurs de choisir entre différents sous-titres. Notez que pour activer les sous-titres, vous devez appuyer sur le bouton "CC" et sélectionner une option - Anglais, Allemand ou Español.
 
 > **Note :** Les pistes de texte et les transcriptions vous aident également avec {{glossary ("SEO")}}, car les moteurs de recherche se développent particulièrement bien avec le texte. Les pistes de texte permettent même aux moteurs de recherche de se lier directement à un endroit en cours de vidéo.
 

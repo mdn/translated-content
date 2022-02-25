@@ -32,9 +32,9 @@ L'élément `<title>` est souvent le premier enfant de son parent. Notons que le
 
 _(Aucun)_
 
-## Interface DOM
+## Interface DOM
 
-Cet élément implémente l'interface [`SVGTitleElement`](/fr/docs/Web/API/SVGTitleElement "en/DOM/SVGTitleElement").
+Cet élément implémente l'interface [`SVGTitleElement`](/fr/docs/Web/API/SVGTitleElement "en/DOM/SVGTitleElement").
 
 ## Exemple
 

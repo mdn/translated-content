@@ -16,7 +16,7 @@ _Hérite les propriétés de son parent : {{domxref("HTMLElement")}}._
 
 | Nom                              | Type                             | Description                                            |
 | -------------------------------- | -------------------------------- | ------------------------------------------------------ |
-| `clear` {{obsolete_inline}} | {{domxref("DOMString")}} | Indique le flux du texte autours des objets flottants. |
+| `clear` {{obsolete_inline}} | {{domxref("DOMString")}} | Indique le flux du texte autours des objets flottants. |
 
 ## Méthodes
 

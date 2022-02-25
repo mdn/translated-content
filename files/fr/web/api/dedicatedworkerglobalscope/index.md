@@ -12,7 +12,7 @@ L'objet **`DedicatedWorkerGlobalScope`** (le contexte global du {{domxref("Worke
 _Cette interface hérite des propriétés de l'interface {{domxref("WorkerGlobalScope")}}, et de son parent {{domxref("EventTarget")}}, et implémente ainsi les propriétés de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, et {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("DedicatedWorkerGlobalScope.name")}} {{readOnlyinline}}
-  - : Le nom du {{domxref("Worker")}} optionnellement donné lors de la création du worker avec le constructeur {{domxref("Worker.Worker", "Worker()")}}. Il est souvent utilisé pour du débogage.
+  - : Le nom du {{domxref("Worker")}} optionnellement donné lors de la création du worker avec le constructeur {{domxref("Worker.Worker", "Worker()")}}. Il est souvent utilisé pour du débogage.
 
 ### Propriétés héritées de WorkerGlobalScope
 

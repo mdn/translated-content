@@ -10,7 +10,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 ---
 {{APIRef("DOM")}}
 
-`insertAdjacentHTML()` analyse le texte spécifié en tant que HTML ou XML et insère les noeuds résultants dans le DOM à la position spécifiée. L'élement qui est utilisé n'est pas réanalysé et les élements qu'il contient ne sont donc pas corrompus. Ceci, et le fait d'éviter la sérialisation supplémentaire, rend la fonction plus rapide et directe que **innerHTML**.
+`insertAdjacentHTML()` analyse le texte spécifié en tant que HTML ou XML et insère les noeuds résultants dans le DOM à la position spécifiée. L'élement qui est utilisé n'est pas réanalysé et les élements qu'il contient ne sont donc pas corrompus. Ceci, et le fait d'éviter la sérialisation supplémentaire, rend la fonction plus rapide et directe que **innerHTML**.
 
 ## Syntaxe
 
@@ -45,7 +45,7 @@ element.insertAdjacentHTML(position, text);
     </p>
     <!-- afterend -->
 
-> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est un arbre et a un élément parent.
+> **Note :** Les positions `beforebegin` et `afterend` ne fonctionnent que si le noeud est un arbre et a un élément parent.
 
 ## Exemple
 

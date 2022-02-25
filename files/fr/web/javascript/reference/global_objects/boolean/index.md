@@ -28,7 +28,7 @@ La valeur passée en premier paramètre est, si nécessaire, convertie en valeur
 
 Ne pas confondre les valeurs primitives booléennes `true` et `false` avec les valeurs _true_ et _false_ d'un objet Booléen.
 
-Tout objet dont la valeur n'est ni  `undefined` ni `null`, incluant un objet Booléen dont la valeur est fausse, évalue à `true` lorsqu'il est à une instruction conditionnelle. Par exemple, la condition (voir {{jsxref("Instructions/if...else", "if")}}), dans le code suivant, est validée si l'expression est évaluée à `true` :
+Tout objet dont la valeur n'est ni `undefined` ni `null`, incluant un objet Booléen dont la valeur est fausse, évalue à `true` lorsqu'il est à une instruction conditionnelle. Par exemple, la condition (voir {{jsxref("Instructions/if...else", "if")}}), dans le code suivant, est validée si l'expression est évaluée à `true` :
 
 ```js
 var x = new Boolean("false");

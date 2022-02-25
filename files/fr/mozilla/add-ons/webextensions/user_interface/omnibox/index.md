@@ -22,7 +22,7 @@ Vous dites à votre extension qu'il va personnaliser les suggestions de la barre
   "omnibox": { "keyword" : "cs" }
 ```
 
-Dans le fichier JavaScript d'arrière-plan extension, en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, vous pouvez éventuellement définir la première suggestion à afficher dans la liste déroulante de la barre d'adresse. Utilisez ceci pour donner un indice sur l'utilisation de la fonction :
+Dans le fichier JavaScript d'arrière-plan extension, en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, vous pouvez éventuellement définir la première suggestion à afficher dans la liste déroulante de la barre d'adresse. Utilisez ceci pour donner un indice sur l'utilisation de la fonction :
 
 ```js
 browser.omnibox.setDefaultSuggestion({
@@ -46,7 +46,7 @@ browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
 });
 ```
 
-Si la WebExtension définit une suggestion par défaut en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, alors cela apparaîtra en premier dans la liste déroulante.
+Si la WebExtension définit une suggestion par défaut en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, alors cela apparaîtra en premier dans la liste déroulante.
 
 L'extension peut ensuite écouter l'utilisateur en cliquant sur l'une des suggestions, en utilisant {{WebExtAPIRef("omnibox.onInputEntered")}}. Si la suggestion par défaut est cliquée, le terme personnalisé de l'utilisateur est renvoyé, sinon la chaîne de la suggestion est renvoyée. En outre, les informations sur les préférences du navigateur de l'utilisateur pour la gestion des nouveaux liens sont transmises. Dans le code ci-dessous, le terme personnalisé de l'utilisateur est employé pour créer une recherche différente, l'URL suggérée est ouverte:
 

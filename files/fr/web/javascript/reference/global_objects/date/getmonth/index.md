@@ -28,7 +28,7 @@ Un entier entre 0 et 11 selon le mois de la date indiquée et d'après l'heure l
 
 ### Utiliser `getMonth()`
 
-La seconde instruction ci-dessous assigne la valeur 11 à la variable `mois`, d'après la valeur de l'objet {{jsxref("Date")}} `noel95`.
+La seconde instruction ci-dessous assigne la valeur 11 à la variable `mois`, d'après la valeur de l'objet {{jsxref("Date")}} `noel95`.
 
 ```js
 var noel95 = new Date("December 25, 1995 23:15:00");

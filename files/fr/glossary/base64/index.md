@@ -31,7 +31,7 @@ Les deux méthodes, `atob()` et `btoa()`, fonctionnent sur des chaînes de carac
 ## Documentation
 
 - [URIs de données](/fr/docs/Web/HTTP/data_URIs)
-  - : Les URIs de données, définies par la [RFC 2397](http://tools.ietf.org/html/rfc2397), permettent aux créateurs de contenus d'intégrer des fichiers en ligne dans des documents.
+  - : Les URIs de données, définies par la [RFC 2397](http://tools.ietf.org/html/rfc2397), permettent aux créateurs de contenus d'intégrer des fichiers en ligne dans des documents.
 - [Base64](https://fr.wikipedia.org/wiki/Base_64)
   - : Article Wikipédia sur l'encodage en base64.
 - {{domxref("window.atob","atob()")}}
@@ -95,7 +95,7 @@ Cette solution a été proposée dans un article de [Johan Sundström](http://ec
 
 ### Seconde solution – réécrire `atob()` et `btoa()` en utilisant des `TypedArray` avec de l'UTF-8
 
-> **Note :** Le code suivant peut également être utilisé pour obtenir un [ArrayBuffer](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer) depuis une chaîne en base 64 (et vice-versa, voir ci-après). **Pour un article concernant une bibliothèque complète sur les tableaux typés, voir [cet article](/fr/Add-ons/Code_snippets/StringView)**.
+> **Note :** Le code suivant peut également être utilisé pour obtenir un [ArrayBuffer](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer) depuis une chaîne en base 64 (et vice-versa, voir ci-après). **Pour un article concernant une bibliothèque complète sur les tableaux typés, voir [cet article](/fr/Add-ons/Code_snippets/StringView)**.
 
 ```js
 "use strict";

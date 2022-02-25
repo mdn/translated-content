@@ -8,7 +8,7 @@ translation_of: Web/SVG/Element/clipPath
 ---
 {{SVGRef}}
 
-L'élément [SVG](/fr/docs/Web/SVG) **`<clipPath>`** définit un détourage. Ce détourage peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("clip-path")}}.
+L'élément [SVG](/fr/docs/Web/SVG) **`<clipPath>`** définit un détourage. Ce détourage peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("clip-path")}}.
 
 Le détourage limite la zone dans laquelle l'élément sur lequel il est appliqué sera dessiné. Autrement dit, les parties de l'élément en dehors de la forme créée par le détourage ne seront pas affichées.
 
@@ -59,7 +59,7 @@ Par défaut, les événements de pointeur ne sont pas déclenchés sur les régi
 
 - {{SVGAttr("clipPathUnits")}}
   - : Cet attribut définit le système de coordonnées pour le contenu de l'élément `<clipPath>`.
-    _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `userSpaceOnUse`; _Animation_: **oui**
+    _Valeur_: `userSpaceOnUse`|`objectBoundingBox` ; _Valeur par défaut_: `userSpaceOnUse`; _Animation_: **oui**
 
 ### Attributs globaux
 

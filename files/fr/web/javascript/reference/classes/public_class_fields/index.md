@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Classes/Class_fields
 >
 > Les déclarations de champs, tant publics que privés, sont [une fonctionnalité expérimentale (étape 3)](https://github.com/tc39/proposal-class-fields) proposée au [TC39](https://tc39.github.io/beta/), le comité des standards JavaScript.
 >
-> La prise en charge dans les navigateurs est limitée, mais cette fonctionnalité peut être utilisée à travers une étape de contruction avec des systèmes tels que [Babel](https://babeljs.io/). Voir [l'information de compatibilité](/fr/docs/Web/JavaScript/Reference/Classes/Class_fields$edit#Browser_compatibility) ci-dessous.
+> La prise en charge dans les navigateurs est limitée, mais cette fonctionnalité peut être utilisée à travers une étape de contruction avec des systèmes tels que [Babel](https://babeljs.io/). Voir [l'information de compatibilité](/fr/docs/Web/JavaScript/Reference/Classes/Class_fields$edit#Browser_compatibility) ci-dessous.
 
 Les champs publics, tant statiques que d'instance, sont des propriétés qui peuvent être écrites, et qui sont énumérables et configurables. En tant que telles, à la différence de leurs contreparties privées, elles participent à l'héritage du prototype.
 

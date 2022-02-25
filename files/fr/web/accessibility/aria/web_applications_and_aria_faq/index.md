@@ -63,13 +63,13 @@ Les rôles, les états et les propriétés ARIA ont été ajoutées à de nombre
 - jQuery UI
 - Fluid Infusion
 - Google Closure
-- Google Web Toolkit
-- BBC Glow
-- Yahoo! User Interface Library (YUI)
+- Google Web Toolkit
+- BBC Glow
+- Yahoo! User Interface Library (YUI)
 
 Pour plus d’informations sur l’accessibilité des kits de développement JavaScript&nbsp;:
 
-- [WAI-ARIA Implementation in JavaScript UI Libraries](http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/) (Implémentation de WAI-ARIA dans les bibliothèques JavaScript d’UI) de Steve Faulkner
+- [WAI-ARIA Implementation in JavaScript UI Libraries](http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/) (Implémentation de WAI-ARIA dans les bibliothèques JavaScript d’UI) de Steve Faulkner
 
 ## Pouvez-vous me montrez un exemple d’ARIA en action&nbsp;?
 
@@ -84,7 +84,7 @@ Cette barre de progression est construite à l’aide de l’élément `<div>`, 
 Plutôt que de les intégrer directement dans le balisage, les attributs ARIA sont généralement ajoutés à l’élément et dynamiquement actualisés à l’aide de code JavaScript tel que celui-ci&nbsp;:
 
 ```js
-// Trouver le <div> de la barre de progression dans le DOM.
+// Trouver le <div> de la barre de progression dans le DOM.
 var progressBar = document.getElementById("percent-loaded");
 
 // Définition de ses rôles et états ARIA,
@@ -197,7 +197,7 @@ ARIA fournit un pont entre le monde du DOM et le bureau. Les navigateurs exposen
 Il existe plusieurs outils d’inspection et de débogage pour vous aider à tester le comportement d’ARIA&nbsp;:
 
 - _Object Inspector_ sur Windows
-- _Accessibility Inspector_ sur Mac OS X
+- _Accessibility Inspector_ sur Mac OS X
 - _AccProbe_ sur Linux
 - _Inspecteur DOM_ de Firebug
 - L’[_Inspecteur d’accessibilité_ de Firebug](http://code.google.com/p/ainspector/)
@@ -206,7 +206,7 @@ Il existe plusieurs lecteurs d’écran gratuits voire libre qui peuvent être u
 
 - [Orca](http://live.gnome.org/Orca) pour Linux
 - [NVDA](http://www.nvda-project.org/) pour Windows
-- [VoiceOver](http://www.apple.com/accessibility/voiceover/) est intégré à Mac OS X
+- [VoiceOver](http://www.apple.com/accessibility/voiceover/) est intégré à Mac OS X
 
 Lorsque vous effectuez des tests avec un lecteur d’écran, gardez deux points importants en tête&nbsp;:
 

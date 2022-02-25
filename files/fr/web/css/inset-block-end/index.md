@@ -11,7 +11,7 @@ original_slug: inset-block-end
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`inset-block-end`** définit la fin du décalage logique en bloc (_block_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou  {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`inset-block-end`** définit la fin du décalage logique en bloc (_block_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou  {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 > **Note :** Avant Firefox 63, cette propriété était implémentée avec le nom `offset-block-end`. Firefox 63 a mis à jour le nom de la propriété afin de s'accorder avec les modifications apportées à la spécification.
 

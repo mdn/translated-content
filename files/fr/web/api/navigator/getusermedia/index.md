@@ -12,9 +12,9 @@ original_slug: NavigatorUserMedia.getUserMedia
 ---
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
-La fonction obsolète **Navigator.getUserMedia()** demande à l'utilisateur la permission d'utiliser une entrée vidéo (ex: une webcam ou un écran partagé) ou audio (ex: un microphone) de l'utilisateur.
+La fonction obsolète **Navigator.getUserMedia()** demande à l'utilisateur la permission d'utiliser une entrée vidéo (ex: une webcam ou un écran partagé) ou audio (ex: un microphone) de l'utilisateur.
 
-Si ce dernier l'autorise, un {{domxref("MediaStream")}} est transmis au callback spécifié, il contient les pistes audio et/ou vidéo des entrées autorisées. Si l'utilisateur refuse l'accès, que le périphérique n'existe pas, ou qu'une erreur quelconque se produit, le callback d'erreur est alors exécuté avec comme paramètre un objet {{domxref("MediaStreamError")}}, il décrit l'erreur qui vient de se produire. Si l'utilisateur ne fait aucun choix, aucun callback n'est exécuté.
+Si ce dernier l'autorise, un {{domxref("MediaStream")}} est transmis au callback spécifié, il contient les pistes audio et/ou vidéo des entrées autorisées. Si l'utilisateur refuse l'accès, que le périphérique n'existe pas, ou qu'une erreur quelconque se produit, le callback d'erreur est alors exécuté avec comme paramètre un objet {{domxref("MediaStreamError")}}, il décrit l'erreur qui vient de se produire. Si l'utilisateur ne fait aucun choix, aucun callback n'est exécuté.
 
 > **Note :** Il s'agit d'une ancienne méthode, veuillez utiliser la méthode {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} à la place. Bien qu'elle ne soit pas techniquement obsolète, l'utilisation de callbacks l'est, les spécifications encouragent fortamment l'utilisation de la nouvelle version avec {{jsxref("promise", "promesses")}}.
 
@@ -41,7 +41,7 @@ Si ce dernier l'autorise, un {{domxref("MediaStream")}} est transmis au callback
     ```
 
 - errorCallback
-  - : Lorsque l'appel échoue, la fonction spécifiée dans `errorCallback` est appelée avec comme seul argument l'objet {{domxref("MediaStreamError")}}. Cet objet ressemble à {{domxref("DOMException")}}. Voir {anch("Erreurs")}} plus bas sur cette page pour voir quelle erreur peut arriver.
+  - : Lorsque l'appel échoue, la fonction spécifiée dans `errorCallback` est appelée avec comme seul argument l'objet {{domxref("MediaStreamError")}}. Cet objet ressemble à {{domxref("DOMException")}}. Voir {anch("Erreurs")}} plus bas sur cette page pour voir quelle erreur peut arriver.
 
 ### Valeur de retour
 
@@ -55,7 +55,7 @@ Si ce dernier l'autorise, un {{domxref("MediaStream")}} est transmis au callback
 
 ### Largeur et hauteur
 
-Voici un exemple de l'utilisation de `getUserMedia()`, avec les différentes mises en oeuvres pour couvrir les préfixes navigateurs. Remarquez que ceci est la façon dépréciée de procéder. Regardez les [exemples](/en-US/docs/Web/API/MediaDevices/getUserMedia#Frame_rate) sous la section {{domxref("MediaDevices.getUserMedia()")}} pour les exemples modernes.
+Voici un exemple de l'utilisation de `getUserMedia()`, avec les différentes mises en oeuvres pour couvrir les préfixes navigateurs. Remarquez que ceci est la façon dépréciée de procéder. Regardez les [exemples](/en-US/docs/Web/API/MediaDevices/getUserMedia#Frame_rate) sous la section {{domxref("MediaDevices.getUserMedia()")}} pour les exemples modernes.
 
 ```js
 navigator.getUserMedia = navigator.getUserMedia ||
@@ -95,7 +95,7 @@ Pour utiliser `getUserMedia()` dans une application installable (par exemple une
 }
 ```
 
-See [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) and [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) for more information.
+See [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) and [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) for more information.
 
 ## Spécifications
 
@@ -112,6 +112,6 @@ See [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-cap
 ## Voir aussi
 
 - {{domxref("MediaDevices.getUserMedia()")}} qui remplace cette méthode dépréciée.
-- [WebRTC](/en-US/docs/WebRTC) - page d'introduction aux APIS
-- [MediaStream API](/en-US/docs/WebRTC/MediaStream_API) - L'API des Media Streams Objects
-- [Taking webcam photos](/en-US/docs/WebRTC/taking_webcam_photos) - un tutoriel à propos de l'utilisation de  `getUserMedia()` pour prendre des photos plutôt que des vidéos.
+- [WebRTC](/en-US/docs/WebRTC) - page d'introduction aux APIS
+- [MediaStream API](/en-US/docs/WebRTC/MediaStream_API) - L'API des Media Streams Objects
+- [Taking webcam photos](/en-US/docs/WebRTC/taking_webcam_photos) - un tutoriel à propos de l'utilisation de  `getUserMedia()` pour prendre des photos plutôt que des vidéos.

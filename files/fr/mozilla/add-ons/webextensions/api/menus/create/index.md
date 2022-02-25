@@ -19,7 +19,7 @@ Crée un nouvel élément de menu, avec un objet d'options définissant les prop
 
 Contrairement aux autres fonctions asynchrones, celle-ci ne renvoie pas de promesse, mais utilise un callback optionnel pour communiquer le succès ou l'échec. C'est parce que sa valeur de retour est l'ID du nouvel élément.
 
-Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace noms `contextMenus` ainsi que l'espace de noms des `menus`. Notez cependant qu'il n'est pas possible de créer des éléments de menu d'outils (`contexts: ["tools_menu"]`) en utilisant l'espace de noms `contextMenus`.
+Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace noms `contextMenus` ainsi que l'espace de noms des `menus`. Notez cependant qu'il n'est pas possible de créer des éléments de menu d'outils (`contexts: ["tools_menu"]`) en utilisant l'espace de noms `contextMenus`.
 
 ## Syntaxe
 
@@ -46,7 +46,7 @@ browser.menus.create(
         - `"_execute_page_action"`: simule un clic sur l'action de la page de l'extension, en ouvrant son popup s'il en a un
         - `"_execute_sidebar_action"`: ouvre la barre latérale de l'extension
 
-        Cliquer sur l'élément déclenchera toujours l'événement {{WebExtAPIRef("menus.onClicked")}}, mais il n'y a aucune garantie de la commande ici: la commande peut être exécutée avant les incendies `onClicked`.
+        Cliquer sur l'élément déclenchera toujours l'événement {{WebExtAPIRef("menus.onClicked")}}, mais il n'y a aucune garantie de la commande ici: la commande peut être exécutée avant les incendies `onClicked`.
 
     - `contexts` {{optional_inline}}
 
@@ -87,7 +87,7 @@ browser.menus.create(
     - `parentId` {{optional_inline}}
       - : `integer` ou `string`. L'ID d'un élément de menu parent; Cela fait de l'élément un enfant d'un élément ajouté précédemment. Remarque : Si vous avez créé plus d'un élément de menu, les éléments seront placés dans un sous-menu. Le parent du sous-menu sera étiqueté avec le nom de l'extension.
     - `targetUrlPatterns` {{optional_inline}}
-      - : `array` de `string`. Similaire à `documentUrlPatterns`, mais vous permet de filtrer en fonction du `href` des balises d'ancrage et de l'attribut `src` des balises img/audio/video tags. Ce paramètre prend en charge n'importe quel schéma d'URL, même ceux qui ne sont généralement pas autorisés dans un modèle de correspondance.
+      - : `array` de `string`. Similaire à `documentUrlPatterns`, mais vous permet de filtrer en fonction du `href` des balises d'ancrage et de l'attribut `src` des balises img/audio/video tags. Ce paramètre prend en charge n'importe quel schéma d'URL, même ceux qui ne sont généralement pas autorisés dans un modèle de correspondance.
     - `title` {{optional_inline}}
 
       - : `string`. Le texte à afficher dans l'article. Obligatoire sauf si le `type` est "separator".

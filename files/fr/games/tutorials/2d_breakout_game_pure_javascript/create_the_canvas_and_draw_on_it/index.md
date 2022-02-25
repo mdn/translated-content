@@ -19,13 +19,13 @@ original_slug: >-
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
 
-C'est la **1<sup>re</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
+C'est la **1<sup>re</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 
-Avant d'écrire les fonctionnalités de notre jeu, nous devons créer une structure où le jeu sera rendu. C'est possible en utilisant HTML et l'élément {{htmlelement("canvas")}}.
+Avant d'écrire les fonctionnalités de notre jeu, nous devons créer une structure où le jeu sera rendu. C'est possible en utilisant HTML et l'élément {{htmlelement("canvas")}}.
 
 ## La page HTML du jeu
 
-La structure de la page HTML est vraiment simple, car tout le jeu sera contenu dans l'élément {{htmlelement("canvas")}}. Avec votre éditeur de texte préféré, créez un nouveau fichier HTML, sauvegardez-le sous le nom `index.html`, et ajoutez-y le code suivant :
+La structure de la page HTML est vraiment simple, car tout le jeu sera contenu dans l'élément {{htmlelement("canvas")}}. Avec votre éditeur de texte préféré, créez un nouveau fichier HTML, sauvegardez-le sous le nom `index.html`, et ajoutez-y le code suivant :
 
 ```html
 <!DOCTYPE html>
@@ -54,14 +54,14 @@ Dans l'en-tête, nous avons défini l'encodage des caractères (`charset`), le t
 
 ## Les bases de Canvas
 
-Pour utiliser l'élément {{htmlelement("canvas")}}, pour le rendu graphique de notre jeu, nous devons d'abord en donner la référence à JavaScript. Ajoutez le code après la balise ouvrante `<script>`.
+Pour utiliser l'élément {{htmlelement("canvas")}}, pour le rendu graphique de notre jeu, nous devons d'abord en donner la référence à JavaScript. Ajoutez le code après la balise ouvrante `<script>`.
 
 ```js
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 ```
 
-Ici nous avons enregistré la référence à l'élément {{htmlelement("canvas")}} dans une variable nommée `canvas`. Ensuite, nous créons la variable ctx pour stocker le contexte de rendu 2D — l'outil réel que nous pouvons utiliser pour peindre sur Canvas.
+Ici nous avons enregistré la référence à l'élément {{htmlelement("canvas")}} dans une variable nommée `canvas`. Ensuite, nous créons la variable ctx pour stocker le contexte de rendu 2D — l'outil réel que nous pouvons utiliser pour peindre sur Canvas.
 
 Voyons un exemple de code qui imprime un carré rouge sur le canevas. Ajoutez ceci en dessous de vos lignes précédentes de JavaScript, puis chargez votre `index.html` dans un navigateur pour l'essayer.
 
@@ -108,11 +108,11 @@ Le code ci-dessus affiche un rectangle vide avec des traits bleus. Grâce au can
 
 ## Comparez votre code
 
-Voici tout le code source de cette première leçon, fonctionnant avec JSFiddle :
+Voici tout le code source de cette première leçon, fonctionnant avec JSFiddle :
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","370")}}
 
-**Exercice**&nbsp;: essayez de changer la taille et la couleur des formes géométriques.
+**Exercice**&nbsp;: essayez de changer la taille et la couleur des formes géométriques.
 
 ## Prochaines étapes
 

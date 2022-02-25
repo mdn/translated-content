@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Instructions/import
 ---
 {{jsSidebar("Statements")}}
 
-L'instruction **`import`** est utilisée pour importer des liens qui sont exportés par un autre module. Les modules importés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `import` ne peut pas être utilisée dans les scripts embarqués sauf si ceux-ci proviennent de ressources avec [`type="module"`](/fr/docs/Web/HTML/Element/script#Attributs).
+L'instruction **`import`** est utilisée pour importer des liens qui sont exportés par un autre module. Les modules importés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `import` ne peut pas être utilisée dans les scripts embarqués sauf si ceux-ci proviennent de ressources avec [`type="module"`](/fr/docs/Web/HTML/Element/script#Attributs).
 
 > **Note :** Il existe également une forme fonctionnelle, `import()` (cf. [ci-après](#dyn)) qui permet d'avoir des chargements dynamiques. La compatibilité ascendante peut être atteinte en utilisant l'attribut `nomodule` sur la balise {{HTMLElement("script")}}.
 
@@ -33,35 +33,35 @@ L'instruction **`import`** est utilisée pour importer des liens qui sont expor
 - `exportParDefaut`
   - : Nom qui fera référence à l'export par défaut du module.
 - `nom-module`
-  - : Le module depuis lequel importer. C'est souvent un chemin absolu ou relatif vers le fichier `.js` contenant le module. Certains empaqueteurs peuvent permettre ou requérir l'utilisation de l'extension ; vérifier votre environnement. Seules les String à apostrophes simples ou doubles sont autorisées.
+  - : Le module depuis lequel importer. C'est souvent un chemin absolu ou relatif vers le fichier `.js` contenant le module. Certains empaqueteurs peuvent permettre ou requérir l'utilisation de l'extension ; vérifier votre environnement. Seules les String à apostrophes simples ou doubles sont autorisées.
 - `nom`
-  - : Nom de l'objet module qui sera utilisé comme un genre d'espace de noms lors de références aux imports.
+  - : Nom de l'objet module qui sera utilisé comme un genre d'espace de noms lors de références aux imports.
 - `export`, `exportN`
-  - : Nom des exports à importer.
+  - : Nom des exports à importer.
 - `alias`, `aliasN`
   - : Noms qui feront référence aux imports nommés.
 
 ## Description
 
-Le paramètre `nom` est le nom de l'"objet module" qui sera utilisé comme un genre d'espace de noms lors de références aux exports. Les paramètres `export` indiquent les exports nommés individuellement, tandis que la syntaxe `import * as nom` les importe tous. Ci-dessous d'autres exemples pour clarifier la syntaxe.
+Le paramètre `nom` est le nom de l'"objet module" qui sera utilisé comme un genre d'espace de noms lors de références aux exports. Les paramètres `export` indiquent les exports nommés individuellement, tandis que la syntaxe `import * as nom` les importe tous. Ci-dessous d'autres exemples pour clarifier la syntaxe.
 
-### Importer l'intégralité du contenu d'un module
+### Importer l'intégralité du contenu d'un module
 
-Ce qui suit insère `monModule` dans la portée courante, contenant tous les exports  du module dans le fichier situé dans `/modules/mon-module.js`.
+Ce qui suit insère `monModule` dans la portée courante, contenant tous les exports  du module dans le fichier situé dans `/modules/mon-module.js`.
 
 ```js
 import * as monModule from '/modules/mon-module.js';
 ```
 
-Ici, accéder aux exports signifie utiliser le nom du module (ici `monModule`) comme un espace de noms. Par exemple, si le module importé ci-dessus incluait un export `faireToutesLesChosesIncroyables()`, vous l'écririez comme ceci&nbsp;:
+Ici, accéder aux exports signifie utiliser le nom du module (ici `monModule`) comme un espace de noms. Par exemple, si le module importé ci-dessus incluait un export `faireToutesLesChosesIncroyables()`, vous l'écririez comme ceci&nbsp;:
 
 ```js
 monModule.faireToutesLesChosesIncroyables();
 ```
 
-### Importer un seul export depuis un module
+### Importer un seul export depuis un module
 
-Étant donné un objet ou une valeur nommé(e) `monExport` qui est exporté(e) depuis le module `mon-module`, soit implicitement (parce que l'intégralité du module est exportée), soit explicitement (en utilisant l'instruction {{jsxref("Statements/export", "export")}}), ce qui suit insére `monExport` dans la portée courante.
+Étant donné un objet ou une valeur nommé(e) `monExport` qui est exporté(e) depuis le module `mon-module`, soit implicitement (parce que l'intégralité du module est exportée), soit explicitement (en utilisant l'instruction {{jsxref("Statements/export", "export")}}), ce qui suit insére `monExport` dans la portée courante.
 
 ```js
 import {monExport} from '/modules/mon-module.js';
@@ -69,7 +69,7 @@ import {monExport} from '/modules/mon-module.js';
 
 ### Importer plusieurs éléments exportés depuis un module
 
-Ce qui suit insère à la fois `machin` et `truc` dans la portée courante.
+Ce qui suit insère à la fois `machin` et `truc` dans la portée courante.
 
 ```js
 import {machin, truc} from '/modules/mon-module.js';
@@ -77,16 +77,16 @@ import {machin, truc} from '/modules/mon-module.js';
 
 ### Importer un élément exporté avec un alias
 
-Vous pouvez renommer un export lors de l'importation. Par exemple, ce qui suit insére `nomCourt` dans la portée courante.
+Vous pouvez renommer un export lors de l'importation. Par exemple, ce qui suit insére `nomCourt` dans la portée courante.
 
 ```js
 import {nomDExportDeModuleVraimentVraimentLong as nomCourt}
   from '/modules/mon-module.js';
 ```
 
-### Renommer plusieurs exports pendant l'import
+### Renommer plusieurs exports pendant l'import
 
-Importe des exports multiples depuis un module avec des alias commodes :
+Importe des exports multiples depuis un module avec des alias commodes :
 
 ```js
 import {
@@ -97,23 +97,23 @@ import {
 
 ### Importer un module uniquement pour ses effets de bord
 
-Importe un module complet pour ses effets de bord seulement, sans importer quoi que ce soit. Ce qui suit exécute le code global du module, mais n'importe en fait aucune valeur.
+Importe un module complet pour ses effets de bord seulement, sans importer quoi que ce soit. Ce qui suit exécute le code global du module, mais n'importe en fait aucune valeur.
 
 ```js
 import '/modules/mon-module.js';
 ```
 
-### Importation des défauts
+### Importation des défauts
 
-Il est possible d'avoir un {{jsxref("Statements/export", "export")}} par défaut (que ce soit un objet, une fonction, une classe, etc.). L'instruction `import` peut alors être utilisée pour importer ces défauts.
+Il est possible d'avoir un {{jsxref("Statements/export", "export")}} par défaut (que ce soit un objet, une fonction, une classe, etc.). L'instruction `import` peut alors être utilisée pour importer ces défauts.
 
-La version la plus simple importe directement le défaut :
+La version la plus simple importe directement le défaut :
 
 ```js
 import monDefaut from '/modules/mon-module.js';
 ```
 
-Il est également possible d'utiliser la syntaxe de défaut avec celles vues ci-dessus (imports d'espaces de noms ou imports nommés). Dans de tels cas, l'import par défaut devra être déclaré en premier. Par exemple :
+Il est également possible d'utiliser la syntaxe de défaut avec celles vues ci-dessus (imports d'espaces de noms ou imports nommés). Dans de tels cas, l'import par défaut devra être déclaré en premier. Par exemple :
 
 ```js
 import monDefaut, * as monModule from '/modules/mon-module.js';
@@ -146,7 +146,7 @@ let module = await import('/modules/mon-module.js');
 
 ## Exemples
 
-Importation depuis un module secondaire pour aider le traitement d'une requête AJAX JSON.
+Importation depuis un module secondaire pour aider le traitement d'une requête AJAX JSON.
 
 ### Le module : fichier.js
 
@@ -218,6 +218,6 @@ for (const link of document.querySelectorAll("nav > a")) {
 - [`import.meta`](/fr/docs/Web/JavaScript/Reference/Instructions/import.meta)
 - Limin Zhu, Brian Terlson et l'équipe Microsoft Edge : [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - [Jason Orendorff : ES6 en détails : les modules](https://tech.mozfr.org/post/2015/08/21/ES6-en-details-%3A-les-modules)
-- [Le livre d'Axel Rauschmayer : Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
+- [Le livre d'Axel Rauschmayer : Exploring JS: Modules](https://exploringjs.com/es6/ch_modules.html)
 - [Un billet illustré de Lin Clark, traduit en français, sur les modules](https://tech.mozfr.org/post/2018/04/06/Une-plongee-illustree-dans-les-modules-ECMAScript)
 - [Tutoriel JavaScript sur `export` et `import`](https://javascript.info/import-export)

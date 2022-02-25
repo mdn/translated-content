@@ -5,9 +5,9 @@ translation_of: Web/API/IDBObjectStore/deleteIndex
 ---
 {{ APIRef("IndexedDB") }}
 
-La méthode **`deleteIndex()`** de l'interface {{domxref("IDBObjectStore")}} supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié ({{domxref("IDBObjectStore")}}).
+La méthode **`deleteIndex()`** de l'interface {{domxref("IDBObjectStore")}} supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié ({{domxref("IDBObjectStore")}}).
 
-> **Note :** Cette méthode ne peut être appelée que si la transaction ({{domxref("IDBTransaction")}}) de l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet est en mode ({{domxref("IDBTransaction.mode")}}) **[versionchange](/fr/docs/Web/API/IDBTransaction/mode#versionchange)**. Les propriétés **indexNames ({{domxref("IDBObjectStore.indexNames")}})** des accès au magasin d'object seront aussi mises à jour.
+> **Note :** Cette méthode ne peut être appelée que si la transaction ({{domxref("IDBTransaction")}}) de l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet est en mode ({{domxref("IDBTransaction.mode")}}) **[versionchange](/fr/docs/Web/API/IDBTransaction/mode#versionchange)**. Les propriétés **indexNames ({{domxref("IDBObjectStore.indexNames")}})** des accès au magasin d'object seront aussi mises à jour.
 
 {{AvailableInWorkers}}
 
@@ -32,9 +32,9 @@ Void.
   - : Cette exception ({{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) dont dépend cet accès ({{domxref("IDBObjectStore")}}) au magasin d'objet n'est pas en mode ({{domxref("IDBTransaction.mode")}}) [`versionchange`](/fr/docs/Web/API/IDBTransaction/mode#versionchange).
 - `TransactionInactiveError`
   - : Cette exception ({{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) de l'accès ({{domxref("IDBObjectStore")}}) au magasin d’objet est inactive.
-    [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165)).
+    [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165)).
 - `NotFoundError`
-  - : Cette exception ({{domxref("DOMException")}}) est levée si l'index avec le nom (case sensible) demandé n'existe pas sur le magasin d'objet.
+  - : Cette exception ({{domxref("DOMException")}}) est levée si l'index avec le nom (case sensible) demandé n'existe pas sur le magasin d'objet.
 
 ## Exemple
 

@@ -9,7 +9,7 @@ translation_of: Web/CSS/:right
 ---
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:right`**, liée à la règle {{cssxref("@page")}}, correspond aux pages de droite pour un média paginé. Ceci permet de mettre en forme les pages de droite.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:right`**, liée à la règle {{cssxref("@page")}}, correspond aux pages de droite pour un média paginé. Ceci permet de mettre en forme les pages de droite.
 
 ```css
 /* Sélectionne le contenu des pages droites */

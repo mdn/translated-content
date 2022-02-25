@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_in
 ---
 {{jsSidebar("Operators")}}
 
-L'**opérateur `in`** renvoie `true` si une propriété donnée appartient à l'objet donné (directement ou via sa chaîne de prototype).
+L'**opérateur `in`** renvoie `true` si une propriété donnée appartient à l'objet donné (directement ou via sa chaîne de prototype).
 
 {{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
 

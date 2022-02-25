@@ -38,7 +38,7 @@ La méthode **`some()`** teste si au moins un élément du tableau passe le test
       - : Le tableau sur lequel on a appelé la méthode `some`.
 
 - `objetThis` {{optional_inline}}
-  - : Paramètre optionnel. Il correspond à la valeur à utiliser pour `this` lors de l'exécution de la fonction `callback`.
+  - : Paramètre optionnel. Il correspond à la valeur à utiliser pour `this` lors de l'exécution de la fonction `callback`.
 
 ### Valeur de retour
 

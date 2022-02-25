@@ -16,7 +16,7 @@ Maintenant que nous avons vu à quoi ressemble l'architecture de js13kPWA et que
 
 ## Les Service workers expliqués
 
-Les Service Workers sont des proxy virtuels entre le navigateur et le réseau. Ils permettent enfin de régler les problèmes auxquels les développeurs front-end se débattent depuis des années — et plus particulièrement comment mettre proprement en cache les composants d'un site web et les rendre disponibles quand l'appareil de l'utilisateur est hors connexion.
+Les Service Workers sont des proxy virtuels entre le navigateur et le réseau. Ils permettent enfin de régler les problèmes auxquels les développeurs front-end se débattent depuis des années — et plus particulièrement comment mettre proprement en cache les composants d'un site web et les rendre disponibles quand l'appareil de l'utilisateur est hors connexion.
 
 Ils s'exécutent dans un processus séparé de celui du code JavaScript principal de notre page et n'ont aucun accès à la structure DOM. Cela introduit une approche différente de celle de la programmation web traditionnelle — l'API est non bloquante et peut émettre et recevoir de la communication entre différents contextes. Vous pouvez donner à un Service Worker quelque chose à faire et recevoir le résultat quand il est prêt en utilisant une approche basée sur les [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -42,7 +42,7 @@ Assez de théorie — voyons un peu de code source !
 
 Commençons par regarder le code qui enregistre un nouveau Service Worker, dans le fichier app.js:
 
-**NOTE** : Nous utilisons la syntaxe des **fonctions flèchées** pour l'implémentation du Service Worker
+**NOTE** : Nous utilisons la syntaxe des **fonctions flèchées** pour l'implémentation du Service Worker
 
 ```js
 if('serviceWorker' in navigator) {
@@ -50,11 +50,11 @@ if('serviceWorker' in navigator) {
 };
 ```
 
-Si l'API service worker est prise en charge dans le navigateur, il est enregistré pour le site en utilisant la méthode {{domxref("ServiceWorkerContainer.register()")}}. Son contenu se trouve dans le fichier sw\.js et peut être exécuté une fois que l'enregistrement a réussi. C'est la seule partie de code du Service Worker qui se trouve dans le fichier app.js. Tout le reste spécifique au Service Worker se trouve dans le fichier sw\.js .
+Si l'API service worker est prise en charge dans le navigateur, il est enregistré pour le site en utilisant la méthode {{domxref("ServiceWorkerContainer.register()")}}. Son contenu se trouve dans le fichier sw\.js et peut être exécuté une fois que l'enregistrement a réussi. C'est la seule partie de code du Service Worker qui se trouve dans le fichier app.js. Tout le reste spécifique au Service Worker se trouve dans le fichier sw\.js .
 
 ### Le cycle de vie d'un Service Worker
 
-Une fois que l'enregistrement a été réalisé, le fichier sw\.js est automatiquement téléchargé, puis installé, et finalement activé.
+Une fois que l'enregistrement a été réalisé, le fichier sw\.js est automatiquement téléchargé, puis installé, et finalement activé.
 
 #### Installation
 
@@ -124,7 +124,7 @@ Le service worker ne s'installe pas tant que le code de `waitUntil` n'est pas ex
 
 `caches` est un objet {{domxref("CacheStorage")}} spécial accessible dans la portée du Service Worker et qui permet d'enregistrer les données — l'enregistrement dans le [web storage](/fr/docs/Web/API/Web_Storage_API) ne fonctionnera pas, parce que le web storage fonctionne de façon synchrone. Avec les Service Workers, nous utilisons l'API Cache à la place. Ici, nous ouvrons un cache sous un nom donné, puis nous lui ajoutons tous les fichiers que notre app utilise, de telle sorte qu'ils soient disponibles la prochaine fois qu'il sera chargé (identifié par l'URL de la requête).
 
-Vous avez remarqué que nous n'avons pas mis en cache le fichier `game.js`. Ce fichier contient les données utilisées pour afficher les jeux. En réalité, ces données seront appelées depuis le endpoint d'une API ou depuis une base de données.Mettre en cache ces données signifierait qu'elles ne seraient mises à jour que périodiquement quand il y' a une connexion au réseau. Nous n'irons pas plus loin sur ce sujet, pour en savoir plus&nbsp;: [Web_Periodic_Background_Synchronization_API](/fr/docs/Web/API/Web_Periodic_Background_Synchronization_API) .
+Vous avez remarqué que nous n'avons pas mis en cache le fichier `game.js`. Ce fichier contient les données utilisées pour afficher les jeux. En réalité, ces données seront appelées depuis le endpoint d'une API ou depuis une base de données.Mettre en cache ces données signifierait qu'elles ne seraient mises à jour que périodiquement quand il y' a une connexion au réseau. Nous n'irons pas plus loin sur ce sujet, pour en savoir plus&nbsp;: [Web_Periodic_Background_Synchronization_API](/fr/docs/Web/API/Web_Periodic_Background_Synchronization_API) .
 
 #### Activation
 
@@ -165,7 +165,7 @@ Ici, nous répondons à l'événement `fetch` grâce à une fonction qui essaie 
 
 La méthode {{domxref("FetchEvent.respondWith")}} prend le contrôle — c'est la partie qui agit en tant que serveur proxy entre l'application et le réseau. Ceci nous permet de répondre à chacune des requêtes avec la réponse que nous voulons: celle préparée par le Service Worker, celle récupérée dans le cache, modifiée si nécessaire.
 
-ça y est ! Notre application met en cache ses ressources lors de l'installation et les sert en les récupérant dans le cache, si bien qu'elle fonctionne même si l'utilisateur n'a pas de connexion. Elle met également en cache les contenus dès qu'il y en a de nouveaux d'ajoutés.
+ça y est ! Notre application met en cache ses ressources lors de l'installation et les sert en les récupérant dans le cache, si bien qu'elle fonctionne même si l'utilisateur n'a pas de connexion. Elle met également en cache les contenus dès qu'il y en a de nouveaux d'ajoutés.
 
 ## Mises à jour
 
@@ -221,7 +221,7 @@ Servir des fichiers depuis le cache n'est pas la seule fonctionnalité que le Se
 
 Dans cet article, nous avons rapidement abordé la façon de faire fonctionner notre PWA en mode déconnecté grâce aux service workers. Consultez  la documentation si vous voulez en apprendre davantage sur les concepts qui sont derrière l'[API Service Worker](/fr/docs/Web/API/Service_Worker_API) et comment l'exploiter au mieux.
 
-Les Service Workers sont également utilisés pour gérer les [push notifications ](/fr/docs/Web/API/Push_API)[](/fr/docs//Web/API/Push_API)— ceci sera expliqué dans un prochain article.
+Les Service Workers sont également utilisés pour gérer les [push notifications ](/fr/docs/Web/API/Push_API)[](/fr/docs//Web/API/Push_API)— ceci sera expliqué dans un prochain article.
 
 {{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}
 

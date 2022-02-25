@@ -11,9 +11,9 @@ translation_of: Web/API/AudioBufferSourceNode/loop
 ---
 {{ APIRef("Web Audio API") }}
 
-La propriété `loop` de l'interface {{domxref("AudioBufferSourceNode") }} est un booléen indiquant si la ressource audio doit être rejouée quand à la fin de l'{{domxref("AudioBuffer")}}.
+La propriété `loop` de l'interface {{domxref("AudioBufferSourceNode") }} est un booléen indiquant si la ressource audio doit être rejouée quand à la fin de l'{{domxref("AudioBuffer")}}.
 
-La valeur par défaut de la propriété `loop `est `false`.
+La valeur par défaut de la propriété `loop `est `false`.
 
 ## Syntaxe
 
@@ -30,9 +30,9 @@ Lorsque la lecture en boucle est activée, le son commence à jouer au point sp�
 
 ## Exemple
 
-Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la placer dans un {{domxref("AudioBufferSourceNode")}}. Les boutons mis à disposition permettent de lire et d'arrêter la lecture audio, et un slider est utilisé pour changer la valeur de `playbackRate` en temps réel. Quand la lecture est terminée, elle boucle.
+Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la placer dans un {{domxref("AudioBufferSourceNode")}}. Les boutons mis à disposition permettent de lire et d'arrêter la lecture audio, et un slider est utilisé pour changer la valeur de `playbackRate` en temps réel. Quand la lecture est terminée, elle boucle.
 
-> **Note :** Vous pouvez [essayer un exemple live](http://mdn.github.io/decode-audio-data/) (or [voir la source](https://github.com/mdn/decode-audio-data).)
+> **Note :** Vous pouvez [essayer un exemple live](http://mdn.github.io/decode-audio-data/) (or [voir la source](https://github.com/mdn/decode-audio-data).)
 
 ```js
 function getData() {

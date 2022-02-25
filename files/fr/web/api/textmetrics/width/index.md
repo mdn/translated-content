@@ -25,7 +25,7 @@ La propriété en lecture seule **TextMetrics.width** contient en pixels CSS la 
 <canvas id="canevas"></canvas>
 ```
 
-vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
+vous pouvez obtenir un objet {{domxref("TextMetrics")}} en utilisant le code suivant :
 
 ```js
 var canvas = document.getElementById("canevas");

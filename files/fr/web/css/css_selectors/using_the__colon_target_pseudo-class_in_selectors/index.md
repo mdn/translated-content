@@ -10,13 +10,13 @@ original_slug: Web/CSS/Sélecteurs_CSS/Utiliser_la_pseudo-classe_:target_dans_un
 ---
 {{CSSRef}}
 
-Afin d'aider à identifier la destination d'un lien qui mène vers une portion spécifique du document, les [sélecteurs CSS3](https://www.w3.org/TR/css3-selectors/#target-pseudo) ont introduit [la pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{cssxref(":target")}}.
+Afin d'aider à identifier la destination d'un lien qui mène vers une portion spécifique du document, les [sélecteurs CSS3](https://www.w3.org/TR/css3-selectors/#target-pseudo) ont introduit [la pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{cssxref(":target")}}.
 
 ## Choisir une cible
 
-La pseudo-classe {{cssxref(":target")}} permet de mettre en forme l'élément ciblé par le fragment d'identifiant de l'URL du document. Ainsi l'URL `https://developer.mozilla.org/fr/docs/Utiliser_la_pseudo-classe_:target_dans_un_selecteur#Exemple` contient le fragment d'identifiant `#Exemple`. En HTML, les identifiants correspondent aux valeurs des attributs `id` et `name`, puisque les deux partagent le même espace de nommage. Ainsi l'URL dans l'exemple devrait pointer vers le titre « Exemple » de ce document.
+La pseudo-classe {{cssxref(":target")}} permet de mettre en forme l'élément ciblé par le fragment d'identifiant de l'URL du document. Ainsi l'URL `https://developer.mozilla.org/fr/docs/Utiliser_la_pseudo-classe_:target_dans_un_selecteur#Exemple` contient le fragment d'identifiant `#Exemple`. En HTML, les identifiants correspondent aux valeurs des attributs `id` et `name`, puisque les deux partagent le même espace de nommage. Ainsi l'URL dans l'exemple devrait pointer vers le titre « Exemple » de ce document.
 
-Imaginons qu'on souhaite mettre en forme n'importe quel élément {{HTMLElement("h2")}} qui serait la cible de l'URL mais qu'on ne souhaite pas qu'un autre type d'élément ait un style particulier lorsqu'il est ciblé. On peut obtenir cet effet assez simplement :
+Imaginons qu'on souhaite mettre en forme n'importe quel élément {{HTMLElement("h2")}} qui serait la cible de l'URL mais qu'on ne souhaite pas qu'un autre type d'élément ait un style particulier lorsqu'il est ciblé. On peut obtenir cet effet assez simplement :
 
 ```css
 h2:target {
@@ -24,7 +24,7 @@ h2:target {
 }
 ```
 
-On peut également créer des styles particuliers pour une portion spécifique du document. On peut ainsi utiliser la même valeur identifiant la cible que celle présente dans l'URL. Par exemple, pour ajouter une bordure au fragment `#Exemple`, on pourra écrire :
+On peut également créer des styles particuliers pour une portion spécifique du document. On peut ainsi utiliser la même valeur identifiant la cible que celle présente dans l'URL. Par exemple, pour ajouter une bordure au fragment `#Exemple`, on pourra écrire :
 
 ```css
 #Exemple:target {
@@ -44,7 +44,7 @@ Si le but est de créer un style commun qui s'appliquera à tous les éléments 
 
 ## Exemple
 
-Dans l'exemple suivant, cinq liens pointent chacun vers une portion du même document. Actionner le lien « Premier », par exemple, fera en sorte que le` <h1 id="un"> `devienne l'élément cible. Notons que le document pourrait défiler vers une nouvelle position, jusqu'à la cible du lien.
+Dans l'exemple suivant, cinq liens pointent chacun vers une portion du même document. Actionner le lien « Premier », par exemple, fera en sorte que le` <h1 id="un"> `devienne l'élément cible. Notons que le document pourrait défiler vers une nouvelle position, jusqu'à la cible du lien.
 
 ```html
 <h4 id="un">...</h4> <p id="deux">...</p>
@@ -59,7 +59,7 @@ Dans l'exemple suivant, cinq liens pointent chacun vers une portion du même doc
 
 ## Conclusion
 
-Les utilisateurs peuvent être gênés lorsqu'un fragment d'identifiant mène à une portion du document, ne sachant pas quelle partie du document ils sont supposés lire. En mettant en forme la cible d'une URI, on peut réduire (voire supprimer) cette confusion.
+Les utilisateurs peuvent être gênés lorsqu'un fragment d'identifiant mène à une portion du document, ne sachant pas quelle partie du document ils sont supposés lire. En mettant en forme la cible d'une URI, on peut réduire (voire supprimer) cette confusion.
 
 ## Voir aussi
 

@@ -45,7 +45,7 @@ Maintenant, vous devriez vraiment avoir la main pour intégrer des choses dans l
       <td>
         Apprendre comment incorporer des éléments, tels que d'autres pages ou
         des clips Flash,  dans des pages Web à l'aide de
-        {{htmlelement("object")}}, {{htmlelement("embed")}}, et
+        {{htmlelement("object")}}, {{htmlelement("embed")}}, et
         {{htmlelement("iframe")}}.
       </td>
     </tr>
@@ -209,7 +209,7 @@ textarea.onkeyup = function(){
 
 ## Iframes en détail
 
-Alors, facile et amusant, non ? Les éléments {{htmlelement("iframe")}} sont conçus pour intégrer d'autres documents Web dans le document en cours de traitement. C'est ce qu'il y a de mieux pour incorporer des contenus tierce‑partie dans un site Web, contenus sur lesquels vous n'aurez peut‑être pas de contrôle direct, mais pour lesquels vous ne voulez pas implémenter votre propre version — comme une vidéo de fournisseurs de vidéo en ligne, un système de commentaires comme [Disqus](https://disqus.com/), des cartes de fournisseurs en ligne, des bandeaux publicitaires, etc. Les exemples modifiables en direct utilisés dans ce cours ont été implémentés avec des `<iframe>`.
+Alors, facile et amusant, non ? Les éléments {{htmlelement("iframe")}} sont conçus pour intégrer d'autres documents Web dans le document en cours de traitement. C'est ce qu'il y a de mieux pour incorporer des contenus tierce‑partie dans un site Web, contenus sur lesquels vous n'aurez peut‑être pas de contrôle direct, mais pour lesquels vous ne voulez pas implémenter votre propre version — comme une vidéo de fournisseurs de vidéo en ligne, un système de commentaires comme [Disqus](https://disqus.com/), des cartes de fournisseurs en ligne, des bandeaux publicitaires, etc. Les exemples modifiables en direct utilisés dans ce cours ont été implémentés avec des `<iframe>`.
 
 Il y a de sérieux {{anch("problèmes de sécurité")}} à prendre en considération avec \<iframe>, comme nous le verrons plus loin, mais cela ne veut pas dire que vous ne devez pas les utiliser dans vos sites Web — cela demande juste un peu de connaissance et de soin à la conception. Examinons le code un peu plus en détail. Disons que vous voulez intégrer le glossaire MDN dans une de vos pages Web — vous pourriez tenter quelque chose comme&nbsp;:
 

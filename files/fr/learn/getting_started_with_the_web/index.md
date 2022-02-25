@@ -46,7 +46,7 @@ Les _Cascading Stylesheets_ (CSS) (« feuilles de styles en cascade ») reçoive
 
 ### [Les bases de JavaScript](/fr/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
 
-JavaScript est le langage de programmation à utiliser pour ajouter des fonctionnalités interactives dans vos sites Web, par exemple des jeux, les événements déclenchés lorsqu'un bouton est pressé ou lorsque des données sont entrées dans un formulaire, des effets de style dynamiques, des animations, etc. [Les bases de JavaScript](/fr/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript) vous offrent un aperçu des possibilités de ce puissant langage et vous montre comment commencer à l'utiliser.
+JavaScript est le langage de programmation à utiliser pour ajouter des fonctionnalités interactives dans vos sites Web, par exemple des jeux, les événements déclenchés lorsqu'un bouton est pressé ou lorsque des données sont entrées dans un formulaire, des effets de style dynamiques, des animations, etc. [Les bases de JavaScript](/fr/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript) vous offrent un aperçu des possibilités de ce puissant langage et vous montre comment commencer à l'utiliser.
 
 ### [Publier votre site web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
 

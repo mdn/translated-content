@@ -28,7 +28,7 @@ Nous pouvons contrôler ce qui est demandé au serveur et ce qui est récupéré
 
 ### Pourquoi dois-je l'utiliser ?
 
-Cette architecture permet à un site web de bénéficier de la plupart des fonctionnalités PWA - elle met en cache l'app shell et gère le contenu dynamique d'une manière qui améliore grandement les performances. En plus de la structure de base, vous pouvez ajouter d'autres fonctionnalités telles que [l'ajouter à l'écran d'accueil](/fr/docs/Web/Apps/Progressive/Add_to_home_screen) ou [l'envoi de notifications](/fr/docs/Web/API/Push_API), sachant que l'application fonctionnera toujours correctement si elles ne sont pas prises en charge par le navigateur de l'utilisateur - c'est la beauté de l'amélioration continue.
+Cette architecture permet à un site web de bénéficier de la plupart des fonctionnalités PWA - elle met en cache l'app shell et gère le contenu dynamique d'une manière qui améliore grandement les performances. En plus de la structure de base, vous pouvez ajouter d'autres fonctionnalités telles que [l'ajouter à l'écran d'accueil](/fr/docs/Web/Apps/Progressive/Add_to_home_screen) ou [l'envoi de notifications](/fr/docs/Web/API/Push_API), sachant que l'application fonctionnera toujours correctement si elles ne sont pas prises en charge par le navigateur de l'utilisateur - c'est la beauté de l'amélioration continue.
 
 Le site web se comporte comme une application native, offrant une interaction instantannée et de solides performances tout en conservant les avantages du web.
 

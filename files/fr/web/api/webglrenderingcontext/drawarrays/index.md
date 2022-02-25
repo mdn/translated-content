@@ -11,7 +11,7 @@ translation_of: Web/API/WebGLRenderingContext/drawArrays
 ---
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.drawArrays()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) dessine des primitives à partir de données tabulaires.
+La méthode **`WebGLRenderingContext.drawArrays()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) dessine des primitives à partir de données tabulaires.
 
 ## Syntaxe
 
@@ -32,9 +32,9 @@ La méthode **`WebGLRenderingContext.drawArrays()`** de l'[API WebGL](/fr-FR/doc
     - `gl.TRIANGLES`&nbsp;: dessine un triangle pour un groupe de trois sommets.
 
 - `premier`
-  - : Un {{domxref("GLint")}} indiquant de l'indice de départ dans le tableau des points des vecteurs.
+  - : Un {{domxref("GLint")}} indiquant de l'indice de départ dans le tableau des points des vecteurs.
 - `compte`
-  - : Un {{domxref("GLsizei")}} indiquant le nombre d'indices à dessiner.
+  - : Un {{domxref("GLsizei")}} indiquant le nombre d'indices à dessiner.
 
 ### Valeur retournée
 
@@ -42,9 +42,9 @@ None.
 
 ### Exceptions
 
-- Si `mode` n'est pas l'une des valeurs acceptables, une erreur `gl.INVALID_ENUM` est déclenchée.
-- Si `premier` ou `compte` sont négatifs, une erreur `gl.INVALID_VALUE` est déclenchée.
-- Si `gl.CURRENT_PROGRAM` est {{jsxref("null")}}, une erreur `gl.INVALID_OPERATION` est déclenchée.
+- Si `mode` n'est pas l'une des valeurs acceptables, une erreur `gl.INVALID_ENUM` est déclenchée.
+- Si `premier` ou `compte` sont négatifs, une erreur `gl.INVALID_VALUE` est déclenchée.
+- Si `gl.CURRENT_PROGRAM` est {{jsxref("null")}}, une erreur `gl.INVALID_OPERATION` est déclenchée.
 
 ## Exemples
 
@@ -65,7 +65,7 @@ gl.drawArrays(gl.POINTS, 0, 8);
       <td>{{SpecName('WebGL', "#5.14.11", "drawArrays")}}</td>
       <td>{{Spec2('WebGL')}}</td>
       <td>
-        <p> </p>
+        <p> </p>
         Définition initiale.
       </td>
     </tr>

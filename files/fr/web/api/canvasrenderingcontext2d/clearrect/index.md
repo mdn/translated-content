@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.clearRect()`** de l'API 2D des Canvas met en noir transparent tous les pixels dans le rectangle défini par le point de départ de coordonnées _(x, y)_ et par les tailles _(largeur, hauteur)_, supprimant tout contenu précédemment dessiné.
+La méthode **`CanvasRenderingContext2D.clearRect()`** de l'API 2D des Canvas met en noir transparent tous les pixels dans le rectangle défini par le point de départ de coordonnées _(x, y)_ et par les tailles _(largeur, hauteur)_, supprimant tout contenu précédemment dessiné.
 
 ## Syntaxe
 
@@ -14,23 +14,23 @@ La méthode **`CanvasRenderingContext2D.clearRect()`** de l'API 2D des Canvas me
 ### Paramètres
 
 - `x`
-  - : La coordonnée sur l'axe des *x* du point de départ du rectangle.
+  - : La coordonnée sur l'axe des *x* du point de départ du rectangle.
 - `y`
-  - : La coordonnée sur l'axe des *y* du point de départ du rectangle.
+  - : La coordonnée sur l'axe des *y* du point de départ du rectangle.
 - `largeur`
   - : La largeur du rectangle.
 - `hauteur`
-  - : La hauteur de rectangle.
+  - : La hauteur de rectangle.
 
 ## Notes d'utilisation
 
-Un problème classique avec `clearRect` est qu'il peut apparaître comme ne fonctionnant pas si l'on n'[utilise pas les trajets de façon appropriée](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques#Drawing_paths). N'oubliez pas d'appeler {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} avant de commencer à dessiner une nouvelle image après avoir appelé `clearRect`.
+Un problème classique avec `clearRect` est qu'il peut apparaître comme ne fonctionnant pas si l'on n'[utilise pas les trajets de façon appropriée](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques#Drawing_paths). N'oubliez pas d'appeler {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} avant de commencer à dessiner une nouvelle image après avoir appelé `clearRect`.
 
 ## Exemples
 
-### Utilisation de la méthode `clearRect`
+### Utilisation de la méthode `clearRect`
 
-Ceci est seulement un fragment de code simple qui utilise la méthode `clearRect`.
+Ceci est seulement un fragment de code simple qui utilise la méthode `clearRect`.
 
 #### HTML
 
@@ -57,7 +57,7 @@ ctx.clearRect(10, 10, 100, 100);
 // ctx.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
-Modifiez le code suivant et voyez vos changements en direct dans le canevas :
+Modifiez le code suivant et voyez vos changements en direct dans le canevas :
 
 #### Code jouable
 

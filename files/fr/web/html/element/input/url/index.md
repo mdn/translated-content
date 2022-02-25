@@ -302,7 +302,7 @@ En plus des exemples précédents, vous pouvez consulter [l'exemple de validatio
         {{htmlattrxref("minlength", "input")}},
         {{htmlattrxref("pattern", "input")}},
         {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}}, {{htmlattrxref("required", "input")}}
+        {{htmlattrxref("readonly", "input")}}, {{htmlattrxref("required", "input")}}
         et {{htmlattrxref("size", "input")}}
       </td>
     </tr>

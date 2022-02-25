@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Shells
 ---
 {{JsSidebar}}
 
-Un _shell_ (ou une interface système) JavaScript permet de tester rapidement des fragments de code [JavaScript](/fr/docs/Web/JavaScript) sans devoir recharger constamment une page web. Ce type d'outil est très utile pour développer et déboguer du code.
+Un _shell_ (ou une interface système) JavaScript permet de tester rapidement des fragments de code [JavaScript](/fr/docs/Web/JavaScript) sans devoir recharger constamment une page web. Ce type d'outil est très utile pour développer et déboguer du code.
 
 ## Des shells JavaScript autonomes
 

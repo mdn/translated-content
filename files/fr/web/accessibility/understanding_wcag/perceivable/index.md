@@ -16,7 +16,7 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable
 ---
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
-> **Note :** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
+> **Note :** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
@@ -70,7 +70,7 @@ The key here is that text can be converted to other forms people with disabiliti
       </td>
       <td>
         <p>
-          See <a href="/fr/docs/Learn/Accessibility/HTML#Text_alternatives"
+          See <a href="/fr/docs/Learn/Accessibility/HTML#Text_alternatives"
             >Text alternatives</a
           >
           for static caption options, and
@@ -150,7 +150,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         video-only media (i.e. silent video).
       </td>
       <td>
-        See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
+        See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
           >Audio transcripts</a
         >
         for transcript information. No audio description tutorial available as
@@ -193,7 +193,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         full content from the audio alone.
       </td>
       <td>
-        See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
+        See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
           >Audio transcripts</a
         >
         for transcript information. No audio description tutorial available as
@@ -206,7 +206,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         You should provide synchronized captions for all live multimedia that
         contains audio (e.g. video conferences, live audio broadcasts.)
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">
@@ -217,7 +217,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         where the existing audio does not convey the full meaning expressed by
         the video.
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">
@@ -227,7 +227,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         An equivalent sign language video should be provided for any prerecorded
         content containing audio.
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">
@@ -240,7 +240,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         should be provided that includes inserted pauses (and audio
         descriptions).
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">
@@ -253,7 +253,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         content.
       </td>
       <td>
-        See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
+        See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
           >Audio transcripts</a
         >
         for transcript information.
@@ -268,7 +268,7 @@ Time-based media refers to multimedia with a duration, i.e. audio and video. Als
         the content.
       </td>
       <td>
-        See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
+        See <a href="/fr/docs/Learn/Accessibility/Multimedia#Audio_transcripts"
           >Audio transcripts</a
         >
         for transcript information.
@@ -313,7 +313,7 @@ This guideline refers to the ability of content to be consumed by users in multi
             inferred even if you can't see the image.
           </li>
           <li>
-            Lists — if the order of list items is important, and ordered list
+            Lists — if the order of list items is important, and ordered list
             should be used ({{htmlelement("ol")}}).
           </li>
         </ul>
@@ -390,7 +390,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           </p>
         </div>
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">
@@ -416,20 +416,20 @@ This guideline refers to the ability of content to be consumed by users in multi
     </tr>
     <tr>
       <td colspan="1">
-        1.3.5 Identify Input Purpose (AA) <em
+        1.3.5 Identify Input Purpose (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
         >
       </td>
       <td>
-        <p> </p>
+        <p> </p>
         <p>
           Follow the list of
           <a href="https://www.w3.org/TR/WCAG21/#input-purposes"
             >53 input fields</a
           >
-          to programmatically identify the purpose of a field.  
+          to programmatically identify the purpose of a field.  
         </p>
       </td>
       <td>
@@ -441,7 +441,7 @@ This guideline refers to the ability of content to be consumed by users in multi
     </tr>
     <tr>
       <td colspan="1">
-        1.3.6 Identify Purpose (AAA) <em
+        1.3.6 Identify Purpose (AAA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -547,7 +547,7 @@ This guideline relates to making sure core content is easy to discernable from b
         This means that designs should be responsive, so that when the text size
         is increased, the content is still accessible.
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">1.4.5 Images of text (AA)</td>
@@ -556,7 +556,7 @@ This guideline relates to making sure core content is easy to discernable from b
         job. For example, if an image is mostly textual, it could be represented
         using text as well as images.
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">1.4.6 Enhanced contrast (AAA)</td>
@@ -587,7 +587,7 @@ This guideline relates to making sure core content is easy to discernable from b
         Prerecorded audio recordings that primarily feature speech should have
         minimal background noise, so the content can be easily understood.
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">1.4.8 Visual presentation (AAA)</td>
@@ -615,7 +615,7 @@ This guideline relates to making sure core content is easy to discernable from b
           </li>
         </ul>
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">1.4.9 Images of text (No Exception) (AAA)</td>
@@ -624,11 +624,11 @@ This guideline relates to making sure core content is easy to discernable from b
         decoration (i.e. it does not convey any content), or cannot be presented
         in any other way.
       </td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td colspan="1">
-        1.4.10 Reflow (AA) <em
+        1.4.10 Reflow (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -657,7 +657,7 @@ This guideline relates to making sure core content is easy to discernable from b
     </tr>
     <tr>
       <td colspan="1">
-        1.4.11 Non-Text Contrast(AA) <em
+        1.4.11 Non-Text Contrast(AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -676,7 +676,7 @@ This guideline relates to making sure core content is easy to discernable from b
     </tr>
     <tr>
       <td colspan="1">
-        1.4.12 Text Spacing (AA) <em
+        1.4.12 Text Spacing (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em
@@ -708,7 +708,7 @@ This guideline relates to making sure core content is easy to discernable from b
     </tr>
     <tr>
       <td colspan="1">
-        1.4.13 Content on Hover or Focus (AA) <em
+        1.4.13 Content on Hover or Focus (AA) <em
           ><a href="https://www.w3.org/TR/WCAG21/#new-features-in-wcag-2-1"
             >added in 2.1</a
           ></em

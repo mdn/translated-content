@@ -26,7 +26,7 @@ Le nombre de millisecondes écoulées entre le premier janvier 1970, minuit UTC 
 
 ## Description
 
-La méthode `valueOf()` renvoie la valeur primitive d'un objet `Date` sous forme d'un nombre. Ce nombre correspond au nombre de millisecondes écoulées depuis le 1 janvier 1970 00h00 GMT.
+La méthode `valueOf()` renvoie la valeur primitive d'un objet `Date` sous forme d'un nombre. Ce nombre correspond au nombre de millisecondes écoulées depuis le 1 janvier 1970 00h00 GMT.
 
 D'un point de vue fonctionnel, cette méthode est équivalente à {{jsxref("Date.prototype.getTime()")}}.
 

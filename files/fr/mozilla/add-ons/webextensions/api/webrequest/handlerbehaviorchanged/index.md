@@ -26,7 +26,7 @@ Comme la page sera rechargée à partir du cache mémoire, il se peut que l'audi
 
 La fonction `handlerBehaviorChanged()` est conçue pour résoudre ce problème. Il vide le cache en mémoire, de sorte que les rechargements de page déclenchent les auditeurs d'événements.
 
-Parce que `handlerBehaviorChanged()` nettoie le cache, cela peut être coûteux et mauvais pour la performance. Le module webRequest définit une propriété en lecture seule  {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}} : faire plus d'appels que ce nombre en 10 minutes n'aura aucun effet.
+Parce que `handlerBehaviorChanged()` nettoie le cache, cela peut être coûteux et mauvais pour la performance. Le module webRequest définit une propriété en lecture seule  {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}} : faire plus d'appels que ce nombre en 10 minutes n'aura aucun effet.
 
 L'implémentation de la mise en cache, d'où la nécessité de cette fonction, varie d'un navigateur à l'autre, de sorte que dans certains navigateurs, cette fonction ne fait rien.
 

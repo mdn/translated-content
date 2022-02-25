@@ -28,7 +28,7 @@ Si la valeur `aria-valuemax` n’est pas déterminée, ou si `aria-valuemin` n�
 
 ### Exemples
 
-#### Exemple 1:
+#### Exemple 1:
 
 L’extrait de code ci-dessous montre un curseur basique avec une valeur maximale de 10.
 

@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Object/constructor
 ---
 {{JSRef}}
 
-La propriété **`constructor`** renvoie une référence à la fonction {{jsxref("Object")}} qui a créé le prototype de l'instance. La valeur de cette propriété est une référence à la fonction elle-même, ce n'est pas une chaîne de caractères représentant le nom de la fonction. Cette valeur est en lecture seule pour les valeurs de types primitifs comme `1`, `true` et `"test"`.
+La propriété **`constructor`** renvoie une référence à la fonction {{jsxref("Object")}} qui a créé le prototype de l'instance. La valeur de cette propriété est une référence à la fonction elle-même, ce n'est pas une chaîne de caractères représentant le nom de la fonction. Cette valeur est en lecture seule pour les valeurs de types primitifs comme `1`, `true` et `"test"`.
 
 ## Description
 

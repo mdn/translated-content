@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
 {{APIRef}}
 
-La propriété **`CanvasRenderingContext2D.canvas`** est une référence à l'objet {{domxref("HTMLCanvasElement")}} qui est associé au contexte. Il peut être {{jsxref("null")}} s'il n'est pas associé à un élément {{HTMLElement("canvas")}}.
+La propriété **`CanvasRenderingContext2D.canvas`** est une référence à l'objet {{domxref("HTMLCanvasElement")}} qui est associé au contexte. Il peut être {{jsxref("null")}} s'il n'est pas associé à un élément {{HTMLElement("canvas")}}.
 
 ## Syntaxe
 
@@ -25,7 +25,7 @@ Soit cet élément {{HTMLElement("canvas")}}:
 <canvas id="canvas"></canvas>
 ```
 
-Vous pouvez obtenir la référence à l'élément `canvas` grâce à `CanvasRenderingContext2D` en utilisant la propriété `canvas`&nbsp;:
+Vous pouvez obtenir la référence à l'élément `canvas` grâce à `CanvasRenderingContext2D` en utilisant la propriété `canvas`&nbsp;:
 
 ```js
 var canvas = document.getElementById("canvas");

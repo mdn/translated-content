@@ -33,10 +33,10 @@ Le dernier standard ECMAScript définit 8 types de données :
   - {{Glossary("Undefined")}}
   - {{Glossary("Number", "Nombre")}}
   - {{Glossary("BigInt")}} (proposition pour ES2020)
-  - {{Glossary("String", "Chaîne de caractères")}} (String)
+  - {{Glossary("String", "Chaîne de caractères")}} (String)
   - {{Glossary("Symbol", "Symbole")}} (type introduit avec ECMAScript 6)
 
-- et le type {{Glossary("Object", "Objet")}}
+- et le type {{Glossary("Object", "Objet")}}
 
 ## Les valeurs primitives
 

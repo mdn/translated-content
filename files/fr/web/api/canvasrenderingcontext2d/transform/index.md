@@ -5,9 +5,9 @@ translation_of: Web/API/CanvasRenderingContext2D/transform
 ---
 {{APIRef}}
 
-La méthode **CanvasRenderingContext2D.transform ()** de l'API Canvas 2D multiplie la matrice de transformation courante par la matrice décrite par les arguments de cette méthode. Vous pouvez mettre à l'échelle, faire pivoter, déplacer et incliner le contexte.
+La méthode **CanvasRenderingContext2D.transform ()** de l'API Canvas 2D multiplie la matrice de transformation courante par la matrice décrite par les arguments de cette méthode. Vous pouvez mettre à l'échelle, faire pivoter, déplacer et incliner le contexte.
 
-Voir aussi la méthode {{domxref ("CanvasRenderingContext2D.setTransform()", "setTransform()")}} qui réinitialise la transformation courante à la matrice identité puis invoque `transform()`.
+Voir aussi la méthode {{domxref ("CanvasRenderingContext2D.setTransform()", "setTransform()")}} qui réinitialise la transformation courante à la matrice identité puis invoque `transform()`.
 
 ## Syntaxe
 
@@ -34,7 +34,7 @@ La matrice de transformation est décrite par : <math><semantics><mrow><mo>[</mo
 
 ### Utilisation de la méthode `transform`
 
-Ceci est seulement un fragment de code simple utilisant la méthode `transform`.
+Ceci est seulement un fragment de code simple utilisant la méthode `transform`.
 
 #### HTML
 

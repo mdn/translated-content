@@ -61,7 +61,7 @@ Les événements ont trois fonctions :
       - : `Array`. Un tableau [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Ne déclenchez l'événement que pour les onglets dont la propriété de l'`url` courante correspond à l'un des motifs.
     - `properties`
 
-      - : `Array`. un tableau de chaîne de caractères,  qui sont les noms des propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}}. Ne déclenchez cet événement seulement pour les changement apportées à l'une des propriétés nommées dans ce tableau. Les propriétés suivantes peuvent être listées ici :
+      - : `Array`. un tableau de chaîne de caractères,  qui sont les noms des propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}}. Ne déclenchez cet événement seulement pour les changement apportées à l'une des propriétés nommées dans ce tableau. Les propriétés suivantes peuvent être listées ici :
 
         - "attention"
         - "audible"

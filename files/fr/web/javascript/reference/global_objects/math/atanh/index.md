@@ -48,7 +48,7 @@ Math.atanh(1);   // Infinity
 Math.atanh(2);   // NaN
 ```
 
-Pour les valeurs strictement inférieures à -1 ou strictement supérieures à 1, {{jsxref("NaN")}} sera renvoyé.
+Pour les valeurs strictement inférieures à -1 ou strictement supérieures à 1, {{jsxref("NaN")}} sera renvoyé.
 
 ## Prothèse d'émulation (_polyfill_)
 

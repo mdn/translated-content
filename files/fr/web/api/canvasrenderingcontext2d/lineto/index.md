@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.lineTo()`** de l'API Canvas 2D connecte le dernier point du sous-chemin en cours aux coordonnées `x, y` spécifiées avec une ligne droite (sans tracer réellement le chemin).
+La méthode **`CanvasRenderingContext2D.lineTo()`** de l'API Canvas 2D connecte le dernier point du sous-chemin en cours aux coordonnées `x, y` spécifiées avec une ligne droite (sans tracer réellement le chemin).
 
 ## Syntaxe
 
@@ -20,9 +20,9 @@ La méthode **`CanvasRenderingContext2D.lineTo()`** de l'API Canvas 2D connecte
 
 ## Exemples
 
-### Utilisation de la méthode `lineTo`
+### Utilisation de la méthode `lineTo`
 
-Ceci est un extrait de code utilisant la méthode `lineTo`. Il faut utiliser la méthode {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} pour débuter un dessin, pour ensuite pouvoir dessiner une ligne dessus. On peut déplacer le crayon avec la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} et utiliser la méthode {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} pour rendre la ligne visible.
+Ceci est un extrait de code utilisant la méthode `lineTo`. Il faut utiliser la méthode {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} pour débuter un dessin, pour ensuite pouvoir dessiner une ligne dessus. On peut déplacer le crayon avec la méthode {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}} et utiliser la méthode {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} pour rendre la ligne visible.
 
 #### HTML
 

@@ -95,7 +95,7 @@ Ici, nous avons supprimé la clé content_scripts et ajouté deux nouvelles clé
 - [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): Pour injecter dans des pages, nous avons besoin de permissions pour la page que nous modifions. La [`permission activeTab`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) est un moyen d'obtenir ceci temporaiement pour l'onglet actuellement actif. Nous avons également besoin de la permission contextMenus pour pouvoir ajouter des éléments du menu contextuel.
 - [`background`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): Nous utilisons ceci pour charger un ["script de fond"](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) persistant appelé "background.js", dans lequel nous configurons le menu contextuel et injectons le script de contenu.
 
-Créons ce fichier, pour cela nous créons un fichier appelé "background.js" dans le dossier "modify-page", et donnez-lui le contenu suivant :
+Créons ce fichier, pour cela nous créons un fichier appelé "background.js" dans le dossier "modify-page", et donnez-lui le contenu suivant :
 
 ```js
 browser.contextMenus.create({

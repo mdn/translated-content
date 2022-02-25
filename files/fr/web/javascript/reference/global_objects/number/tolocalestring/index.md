@@ -28,7 +28,7 @@ Les arguments `locales` et `options` permettent à l'application de spécifier l
 
 Voir la section [compatibilité des navigateurs](#compat "#Browser_Compatibility") afin de voir quels navigateurs supportent les arguments `locales` et `options`. L'exemple [Vérifier le support des arguments `locales` et `options`](#check) permet de détecter cette fonctionnalité.
 
-> **Note :** L'API ECMAScript Internationalization, implémentée avec Firefox 29, a ajouté l'argument `locales` à la méthode [`Number.toLocaleString`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number/toLocaleString). Si l'argument vaut `undefined`,cette méthode renvoie les nombres selon la locale du système d'exploitation, les versions antérieures de Firefox renvoyaient un résultat correspondant à la locale anglaise. Ce changement a été rapporté comme une régression, avec un risque de manque de rétrocompatibilité, avant d'être corrigé avec Firefox 55, voir le bug ({{bug(999003)}}).
+> **Note :** L'API ECMAScript Internationalization, implémentée avec Firefox 29, a ajouté l'argument `locales` à la méthode [`Number.toLocaleString`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number/toLocaleString). Si l'argument vaut `undefined`,cette méthode renvoie les nombres selon la locale du système d'exploitation, les versions antérieures de Firefox renvoyaient un résultat correspondant à la locale anglaise. Ce changement a été rapporté comme une régression, avec un risque de manque de rétrocompatibilité, avant d'être corrigé avec Firefox 55, voir le bug ({{bug(999003)}}).
 
 {{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/NumberFormat','Paramètres')}}
 
@@ -116,7 +116,7 @@ var nombre = 123456.789;
 
 // on formate selon une devise
 console.log(nombre.toLocaleString("de-DE", {style: "currency", currency: "EUR"}));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // le yen japonais ne possède pas de centimes
 console.log(nombre.toLocaleString("ja-JP", {style: "currency", currency: "JPY"}))

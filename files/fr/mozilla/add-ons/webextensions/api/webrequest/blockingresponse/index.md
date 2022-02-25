@@ -27,7 +27,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
 - `authCredentials`{{optional_inline}}
 
-  - : `object`. Si elle est définie, la demande est faite en utilisant les informations d'identification données. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}. La propriété `authCredentials` est un objet avec les propriétés suivantes :
+  - : `object`. Si elle est définie, la demande est faite en utilisant les informations d'identification données. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}. La propriété `authCredentials` est un objet avec les propriétés suivantes :
 
     - `username`
       - : `string`. Nom d'utilisateur à fournir.
@@ -38,18 +38,18 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `boolean`. Si `true`, la demande est annulée. Vous ne pouvez définir cette propriété dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, et  {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.
 - `redirectUrl`{{optional_inline}}
 
-  - : `string`. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.
+  - : `string`. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.
 
     Les redirections vers des schémas non-HTTP tels que data : sont autorisées, mais elles ne sont pas prises en charge actuellement ({{bug("707624")}}). Les redirections utilisent la même méthode de requête que la requête originale à moins qu'elle ne soit initiée à partir de l'étape `onHeadersReceived`, auquel cas la redirection utilise la méthode GET.
 
     Si une extension veut rediriger une URL publique (par exemple HTTPS) vers une [page d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages), le fichier manifest.json de l'extension doit contenir une clé [web_accessible_resources](/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
 
 - `requestHeaders`{{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, la demande est faite avec ces en-têtes plutôt qu'avec les en-têtes d'origine. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} .
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, la demande est faite avec ces en-têtes plutôt qu'avec les en-têtes d'origine. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} .
 - `responseHeaders`{{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, le serveur est supposé avoir répondu avec ces en-têtes de réponse au lieu des originaux. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}. Si plusieurs extensions tentent de définir le même en-tête (par exemple, `Content-Security-Policy`), une seule des modifications sera réussie.
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, le serveur est supposé avoir répondu avec ces en-têtes de réponse au lieu des originaux. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}. Si plusieurs extensions tentent de définir le même en-tête (par exemple, `Content-Security-Policy`), une seule des modifications sera réussie.
 - `upgradeToSecure`{{optional_inline}}
-  - : `boolean`. Si la valeur `true` est est définie et que la requête originale est une requête HTTP, cela empêchera l'envoi de la requête originale et fera plutôt une requête sécurisée (HTTPS). Si une extension renvoie `redirectUrl` dans `onBeforeRequest`, alors `upgradeToSecure` sera ignoré pour cette requête. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.
+  - : `boolean`. Si la valeur `true` est est définie et que la requête originale est une requête HTTP, cela empêchera l'envoi de la requête originale et fera plutôt une requête sécurisée (HTTPS). Si une extension renvoie `redirectUrl` dans `onBeforeRequest`, alors `upgradeToSecure` sera ignoré pour cette requête. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.
 
 ## Compatibilité du navigateur
 

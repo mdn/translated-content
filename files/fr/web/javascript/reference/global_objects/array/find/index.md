@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/find
 ---
 {{JSRef}}
 
-La méthode **`find()`** renvoie la **valeur** du **premier élément trouvé** dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur {{jsxref("undefined")}} est renvoyée.
+La méthode **`find()`** renvoie la **valeur** du **premier élément trouvé** dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur {{jsxref("undefined")}} est renvoyée.
 
 {{EmbedInteractiveExample("pages/js/array-find.html")}}
 

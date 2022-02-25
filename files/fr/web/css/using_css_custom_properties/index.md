@@ -5,7 +5,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 {{CSSRef}}
 
-**Les propriétés personnalisées CSS** (_custom properties_ en anglais, aussi parfois appelés **variables CSS**) sont des entités définies par les développeurs ou les utilisateurs d'une page Web, contenant des valeurs spécifiques utilisables à travers le document. Elles sont initialisées avec des propriétés personnalisées (par exemple **`--main-color: black;`**) et accessibles en utilisant la notation spécifique {{cssxref("var", "var()")}} (par exemple : **`color: var(--main-color);`**).
+**Les propriétés personnalisées CSS** (_custom properties_ en anglais, aussi parfois appelés **variables CSS**) sont des entités définies par les développeurs ou les utilisateurs d'une page Web, contenant des valeurs spécifiques utilisables à travers le document. Elles sont initialisées avec des propriétés personnalisées (par exemple **`--main-color: black;`**) et accessibles en utilisant la notation spécifique {{cssxref("var", "var()")}} (par exemple : **`color: var(--main-color);`**).
 
 Des sites et applications web complexes peuvent avoir des feuilles de style où de nombreuses valeurs sont répétées. Ainsi, la même couleur pourra être utilisée à des centaines d'endroits où il faudra la mettre à jour si besoin. Les propriétés personnalisées permettent de stocker une valeur à un endroit puis de réutiliser cette valeur (on factorise ainsi le code).
 
@@ -31,18 +31,18 @@ element {
 
 Lors de l'élaboration de sites de grande envergure, leurs auteurs font parfois face à des soucis de maintenabilité. De grandes feuilles de styles sont utilisées et de nombreuses informations se répètent. Par exemple, maintenir un thème de couleurs à travers un document nécessite la réutilisation des valeurs des couleurs à plusieurs endroits dans les fichiers CSS. Modifier un thème, en changeant une couleur ou en le récrivant entièrement, devient alors une tâche complexe demandant de la précision, là où un simple trouver et remplacer ne suffit pas.
 
-Le problème peut s'aggraver en utilisant les _frameworks_ CSS puisque modifier une couleur demande de modifier le framework lui-même. Les pré-processeurs comme [LESS](https://lesscss.org/) ou [Sass](https://sass-lang.com/) peuvent faciliter cette tâche, mais peuvent également complexifier le processus de création en ajoutant une étape de compilation. Les propriétés personnalisées permettent d'utiliser une des principales fonctionnalités des pré-processeurs, sans cette étape de compilation.
+Le problème peut s'aggraver en utilisant les _frameworks_ CSS puisque modifier une couleur demande de modifier le framework lui-même. Les pré-processeurs comme [LESS](https://lesscss.org/) ou [Sass](https://sass-lang.com/) peuvent faciliter cette tâche, mais peuvent également complexifier le processus de création en ajoutant une étape de compilation. Les propriétés personnalisées permettent d'utiliser une des principales fonctionnalités des pré-processeurs, sans cette étape de compilation.
 
-Le deuxième avantage de ces variables vient du fait que le nom lui-même contient des informations sémantiques. Les fichiers CSS deviennent alors plus facile à lire et à comprendre : écrire `main-text-color` permet de mieux s'y retrouver au fur et à mesure de la lecture qu'une valeur hexadécimale comme `#00ff00`, surtout si la même couleur est utilisée dans un autre contexte.
+Le deuxième avantage de ces variables vient du fait que le nom lui-même contient des informations sémantiques. Les fichiers CSS deviennent alors plus facile à lire et à comprendre : écrire `main-text-color` permet de mieux s'y retrouver au fur et à mesure de la lecture qu'une valeur hexadécimale comme `#00ff00`, surtout si la même couleur est utilisée dans un autre contexte.
 
 ## Définition
 
 Les propriétés personnalisées ont actuellement deux formes :
 
-- les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle `var()`&nbsp;: `var(--example-variable)` retourne la valeur de `--example-variable`.
-- les propriétés personnalisées, qui sont des propriétés spéciales notées `--*` où `*` représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : `--example-variable: 20px;` est une déclaration en CSS, utilisant la propriété personnalisée `--*` pour initialiser la valeur de la variable CSS `--example-variable` à `20px`.
+- les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle `var()`&nbsp;: `var(--example-variable)` retourne la valeur de `--example-variable`.
+- les propriétés personnalisées, qui sont des propriétés spéciales notées `--*` où `*` représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : `--example-variable: 20px;` est une déclaration en CSS, utilisant la propriété personnalisée `--*` pour initialiser la valeur de la variable CSS `--example-variable` à `20px`.
 
-> **Note :** Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ({{bug(985838)}})
+> **Note :** Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ({{bug(985838)}})
 
 Les propriétés personnalisées sont similaires aux propriétés ordinaires. Elles sont sujettes à la cascade et héritent leur valeur de leur parent si elles ne sont pas redéfinies.
 
@@ -103,7 +103,7 @@ ce qui donne ceci :
 
 {{EmbedLiveSample("Exemple_1",600,180)}}
 
-Remarquez la répétition dans le CSS. La couleur d'arrière-plan est définie à `brown` à plusieurs endroits. Certaines déclarations peuvent être faites plus haut dans la cascade et le problème se résoudra grâce à l'héritage. Mais pour des projets non-triviaux, cela n'est pas toujours possible. En déclarant une variable dans la pseudo-classe {{cssxref(":root")}}, un développeur CSS peut éviter certaines répétitions en utilisant cette variable.
+Remarquez la répétition dans le CSS. La couleur d'arrière-plan est définie à `brown` à plusieurs endroits. Certaines déclarations peuvent être faites plus haut dans la cascade et le problème se résoudra grâce à l'héritage. Mais pour des projets non-triviaux, cela n'est pas toujours possible. En déclarant une variable dans la pseudo-classe {{cssxref(":root")}}, un développeur CSS peut éviter certaines répétitions en utilisant cette variable.
 
 ### Exemple 2
 
@@ -217,7 +217,7 @@ Le premier argument passé à la fonction est le nom de la [propriété personna
 }
 ```
 
-> **Note :** La syntaxe pour la valeur de recours, comme celle des [propriétés personnalisées](https://www.w3.org/TR/css-variables/#custom-property), permet d'utiliser une virgule. Ainsi, `var(--toto, red, blue)` définit une valeur de recours égale à `red, blue`, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.
+> **Note :** La syntaxe pour la valeur de recours, comme celle des [propriétés personnalisées](https://www.w3.org/TR/css-variables/#custom-property), permet d'utiliser une virgule. Ainsi, `var(--toto, red, blue)` définit une valeur de recours égale à `red, blue`, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.
 >
 > La syntaxe de la deuxième règle (sur `.trois`) permet d'utiliser une autre variable comme variable de secours et une autre valeur (`pink`) dans le cas où cette deuxième variable ne fonctionne pas.
 
@@ -225,7 +225,7 @@ Le premier argument passé à la fonction est le nom de la [propriété personna
 
 ## Validité et valeurs
 
-Le concept classique de validité en CSS, lié à chaque propriété, n'est pas très utile en ce qui concerne les propriétés personnalisées. Quand la valeur d'une propriété personnalisée est lue, le navigateur ne sait pas à quel moment elle sera utilisée. Il doit donc considérer quasiment toutes les valeurs comme _valides_.
+Le concept classique de validité en CSS, lié à chaque propriété, n'est pas très utile en ce qui concerne les propriétés personnalisées. Quand la valeur d'une propriété personnalisée est lue, le navigateur ne sait pas à quel moment elle sera utilisée. Il doit donc considérer quasiment toutes les valeurs comme _valides_.
 
 Malheureusement, ces valeurs valides peuvent être utilisées, via la notation fonctionnelle `var()`, dans un contexte où cela n'aurait pas de sens. Les propriétés et variables personnalisées peuvent mener à des déclarations CSS invalides, conduisant à un nouveau concept de _valide lors de l'exécution_.
 

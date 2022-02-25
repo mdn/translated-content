@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLMediaElement
 ---
 {{APIRef("HTML DOM")}}
 
-L'interface **`HTMLMediaElement`** ajoute à {{domxref("HTMLElement")}} les propriétés et les méthodes nécessaires pour prendre en charge les fonctionnalités de base liées aux médias qui sont communes aux vidéos et aux documents audios. {{domxref("HTMLVideoElement")}} et {{domxref("HTMLAudioElement")}} héritent de cette interface.
+L'interface **`HTMLMediaElement`** ajoute à {{domxref("HTMLElement")}} les propriétés et les méthodes nécessaires pour prendre en charge les fonctionnalités de base liées aux médias qui sont communes aux vidéos et aux documents audios. {{domxref("HTMLVideoElement")}} et {{domxref("HTMLAudioElement")}} héritent de cette interface.
 
 ## Propriétés
 
@@ -45,7 +45,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : est un `double` indiquant le taux de lecture par défaut pour le média.
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
-  - : est un {{jsxref('Boolean')}} qui définit ou retourne l'état de lecture à distance, indiquant si l'élément de média est autorisé à avoir une interface de lecture à distance.
+  - : est un {{jsxref('Boolean')}} qui définit ou retourne l'état de lecture à distance, indiquant si l'élément de média est autorisé à avoir une interface de lecture à distance.
 - {{domxref("HTMLMediaElement.duration")}}{{readonlyinline}}
   - : renvoie un `double` indiquant la longueur du média en secondes, ou 0 si aucune donnée multimédia n'est disponible.
 - {{domxref("HTMLMediaElement.ended")}}{{readonlyinline}}
@@ -57,23 +57,23 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.mediaGroup")}}
   - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("mediagroup","video")}}, lequel indique le nom du groupe d'éléments auquel il appartient. Un groupe d'éléments média partage un  {{domxref('MediaController')}} commun.
 - {{domxref("HTMLMediaElement.mediaKeys")}}{{readonlyinline}} {{experimental_inline}}
-  - : Renvoie un objet {{domxref("MediaKeys")}} ou `null`. `MediaKeys` est un ensemble de clés qu'un élément `HTMLMediaElement` associé peut utiliser pour déchiffrer les données du média pendant la lecture.
+  - : Renvoie un objet {{domxref("MediaKeys")}} ou `null`. `MediaKeys` est un ensemble de clés qu'un élément `HTMLMediaElement` associé peut utiliser pour déchiffrer les données du média pendant la lecture.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}}{{readonlyinline}} {{non-standard_inline}}
-  - : renvoie un {{jsxref('Boolean')}}. Lié à la capture de flux audio.
+  - : renvoie un {{jsxref('Boolean')}}. Lié à la capture de flux audio.
 - {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}
   - : est un `double` qui donne accès à l'heure de fin du fragment si l'élément média a un fragment URI pour `currentSrc`, sinon il est égal à la durée du média.
-- {{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}
+- {{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}
 
   - : est un `unsigned long` qui indique le nombre d'échantillons qui seront renvoyés dans le "framebuffer" de chaque évènement `MozAudioAvailable`. Ce nombre est un total pour tous les canaux, et par défaut est défini par le nombre de canaux \* 1024 (c'est-à-dire, 2 canaux \* 1024 échantillons = total 2048).
 
     La propriété `mozFrameBufferLength` peut être définie à une nouvelle valeur pour une latence plus faible, de plus grandes quantités de données, etc. La taille donnée _doit_ être un nombre compris entre 512 et 16384. L'utilisation d'autres tailles entraîne la levée d'une exception. Le meilleur moment pour définir une nouvelle longueur est après le lancement de l'évènement [loadedmetadata](/en-US/docs/Web/Events/loadedmetadata), lorsque l'information audio est connue, mais avant que l'audio ait commencé ou que les événements `MozAudioAvailable` aient commencé à se déclencher.
 
-- {{domxref("HTMLMediaElement.mozSampleRate")}}{{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
-  - : renvoie un `double` représentant le nombre d'échantillons par seconde. Par exemple, 44100 échantillons par seconde correspondent à la fréquence d'échantillonnage utilisée par les CD audio.
+- {{domxref("HTMLMediaElement.mozSampleRate")}}{{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
+  - : renvoie un `double` représentant le nombre d'échantillons par seconde. Par exemple, 44100 échantillons par seconde correspondent à la fréquence d'échantillonnage utilisée par les CD audio.
 - {{domxref("HTMLMediaElement.muted")}}
   - : est un {{jsxref('Boolean')}} qui détermine si l'audio est coupé. `true` (_vrai_) si l'audio est coupé et `false` (_faux_) sinon.
 - {{domxref("HTMLMediaElement.networkState")}}{{readonlyinline}}
-  - : renvoie un `unsigned short` (énumération) indiquant l'état actuel de récupération du média sur le réseau.
+  - : renvoie un `unsigned short` (énumération) indiquant l'état actuel de récupération du média sur le réseau.
 - {{domxref("HTMLMediaElement.paused")}}{{readonlyinline}}
   - : renvoie un {{jsxref('Boolean')}} qui indique si l'élément média est en pause.
 - {{domxref("HTMLMediaElement.playbackRate")}}
@@ -85,7 +85,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}
   - : est un {{jsxref('Boolean')}} qui détermine si la hauteur du son sera préservée. S'il est défini à `false` (_faux_), la hauteur du son s'ajustera à la vitesse de l'audio. C'est implémenté avec préfixe dans Firefox (`mozPreservesPitch`) et WebKit (`webkitPreservesPitch`).
 - {{domxref("HTMLMediaElement.readyState")}}{{readonlyinline}}
-  - : Renvoie un `unsigned short` (énumération) indiquant l'état de préparation des médias.
+  - : Renvoie un `unsigned short` (énumération) indiquant l'état de préparation des médias.
 - {{domxref("HTMLMediaElement.seekable")}}{{readonlyinline}}
   - : Renvoie un objet {{domxref('TimeRanges')}} qui contient les plages de temps que l'utilisateur peut rechercher, le cas échéant.
 - {{domxref("HTMLMediaElement.seeking")}}{{readonlyinline}}
@@ -120,7 +120,7 @@ Ces attributs sont obsolètes et ne doivent plus être utilisés, même si un na
 
 - {{domxref("HTMLMediaElement.initialTime")}} {{readonlyinline}} {{non-standard_inline}} {{obsolete_inline}}
   - : renvoie un `double` qui indique la position de lecture initiale en secondes.
-- {{domxref("HTMLMediaElement.mozChannels")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
+- {{domxref("HTMLMediaElement.mozChannels")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}
   - : renvoie un `double` représentant le nombre de canaux dans la ressource audio (c'est-à-dire 2 pour stéréo).
 
 ### Gestionnaires d'évènements obsolètes
@@ -137,7 +137,7 @@ _Cette interface hérite aussi des méthodes de ses ancêtres {{domxref("HTMLEle
 - {{domxref("HTMLMediaElement.addTextTrack()")}}
   - : Ajoute une piste de texte (telle qu'une piste pour les sous-titres) à un élément de média.
 - {{domxref("HTMLMediaElement.captureStream()")}} {{experimental_inline}}
-  - : Renvoie {{domxref("MediaStream")}}, capture un flux du contenu du média.
+  - : Renvoie {{domxref("MediaStream")}}, capture un flux du contenu du média.
 - {{domxref("HTMLMediaElement.canPlayType()")}}
   - : Détermine si le type de média spécifié peut être lu.
 - {{domxref("HTMLMediaElement.fastSeek()")}}

@@ -12,7 +12,7 @@ translation_of: Web/API/Selection/collapse
 ---
 {{ApiRef("DOM")}}{{SeeCompatTable}}
 
-La méthode **`Selection.collapse()`** positionne la sélection en cours en un seul point. Le document n'est pas modifié. Si le focus est sur le contenu et est modifiable, le curseur d'édition s'y positionnera et sera visible.
+La méthode **`Selection.collapse()`** positionne la sélection en cours en un seul point. Le document n'est pas modifié. Si le focus est sur le contenu et est modifiable, le curseur d'édition s'y positionnera et sera visible.
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ La méthode **`Selection.collapse()`** positionne la sélection en cours en un
 <!---->
 
 - _`offset`_
-  - : Indique la position du curseur d'édition dans `parentNode`.
+  - : Indique la position du curseur d'édition dans `parentNode`.
 
 ## Exemples
 

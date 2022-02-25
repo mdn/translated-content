@@ -38,7 +38,7 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.lastChild")}} {{readonlyInline}}
   - : Retourne un {{domxref("Node")}} représentant le dernier nœud enfant direct de ce nœud ou `null` s'il n'a pas d'enfant.
 - {{DOMxRef("Node.nextSibling")}} {{readonlyInline}}
-  - : Retourne un {{domxref("Node")}} représentant le nœud suivant dans l'arbre ou `null` s'il n'y en a pas.
+  - : Retourne un {{domxref("Node")}} représentant le nœud suivant dans l'arbre ou `null` s'il n'y en a pas.
 - {{DOMxRef("Node.nodeName")}} {{readonlyInline}}
   - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom du nœud. La structure du nom diffère du type de nœud. Par exemple, un {{domxref("HTMLElement")}} contiendra le nom de la balise correspondante, comme `'audio'`  pour un {{domxref("HTMLAudioElement")}}, un nœud {{domxref("Text")}} doit avoir la chaîne `'#text'` ou un  {{domxref("Document")}}  doit avoir la chaîne `'#document'.`.
 - {{DOMxRef("Node.nodeType")}}{{readonlyInline}}
@@ -84,13 +84,13 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
   - : L'URI du "Namespace" de ce nom, ou  `null` s'il n'y en a pas.
 
-> **Note :** Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/)  pour HTML et XML.  {{gecko_minversion_inline("1.9.2")}}
+> **Note :** Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/) pour HTML et XML.  {{gecko_minversion_inline("1.9.2")}}
 
 - {{DOMxRef("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
   - : Est une {{domxref("DOMString")}} représentant le préfixe de l'espace de nom du nœud ou `null`  si aucun préfixe n'est spécifié.
-- {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Obsolete_Inline("gecko46")}}
+- {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Obsolete_Inline("gecko46")}}
   - : Un {{Interface("nsIPrincipal")}} représentant le nœud principal.
-- {{DOMxRef("Node.rootNode")}} {{Obsolete_Inline}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.rootNode")}} {{Obsolete_Inline}}{{ReadOnlyInline}}
   - : Retourne un objet {{DOMxRef("Node")}} représentant le noeud le plus haut dans l'arbre ou le noeud en cours s'il est le noeud le plus haut de l'arbre. Cette propriété a été remplacée par {{DOMxRef("Node.getRootNode()")}}.
 
 ## Méthodes
@@ -127,7 +127,7 @@ _Hérite des méthodes de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.normalize()")}}
   - : Nettoye tous les nœuds de texte en-dessous de cet élément (fusionne adjacent, supprime vide).
 - {{DOMxRef("Node.removeChild()")}}
-  - : Supprime un nœud enfant, depuis l'élément courant, qui doit être un enfant de ce nœud.
+  - : Supprime un nœud enfant, depuis l'élément courant, qui doit être un enfant de ce nœud.
 - {{DOMxRef("Node.replaceChild()")}}
   - : Remplace un {{domxref("Node")}} enfant du nœud courant par celui donné dans le paramètre.
 

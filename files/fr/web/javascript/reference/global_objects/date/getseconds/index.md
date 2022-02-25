@@ -28,7 +28,7 @@ La valeur renvoyée par `getSeconds()` est un entier entre 0 et 59 correspondant
 
 ### Utiliser `getSeconds()`
 
-La seconde instruction ci-dessous assigne la valeur 30 à la variable `secondes`, selon la valeur de l'objet {{jsxref("Date")}} `noel95`.
+La seconde instruction ci-dessous assigne la valeur 30 à la variable `secondes`, selon la valeur de l'objet {{jsxref("Date")}} `noel95`.
 
 ```js
 var noel95 = new Date("December 25, 1995 23:15:30");

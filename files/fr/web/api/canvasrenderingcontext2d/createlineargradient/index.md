@@ -11,7 +11,7 @@ La méthode **`CanvasRenderingContext2D.createLinearGradient()`** de l'API Canva
 
 Cette méthode retourne un {{domxref("CanvasGradient")}} linéaire.
 
-NOTE : les coordonnées sont globales, aussi soyez conscient du fait que, lors de l'utilisation "fillRect" (et de ses amis), les coordonnées NE sont PAS relatives aux coordonnées spécifiées dans les arguments de "fillRect".
+NOTE : les coordonnées sont globales, aussi soyez conscient du fait que, lors de l'utilisation "fillRect" (et de ses amis), les coordonnées NE sont PAS relatives aux coordonnées spécifiées dans les arguments de "fillRect".
 
 ## Syntaxe
 
@@ -37,7 +37,7 @@ NOTE : les coordonnées sont globales, aussi soyez conscient du fait que, lors 
 
 ### Utilisation de la méthode `createLinearGradient`
 
-Ceci est seulement un simple fragment de code qui utilise la méthode `createLinearGradient` pour créer un {{domxref("CanvasGradient")}} avec les points de début et de fin spécifiés. Une fois créé, vous pouvez utiliser la méthode {{domxref("CanvasGradient.addColorStop()")}} pour définir de nouveaux arrêts sur le gradient, avec des déplacements et des couleurs spécifiés. Le gradient est appliqué si vous le mettez comme {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} courant, et il est dessiné sur le canevas lors de l'utilisation de la méthode {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}}, par exemple.
+Ceci est seulement un simple fragment de code qui utilise la méthode `createLinearGradient` pour créer un {{domxref("CanvasGradient")}} avec les points de début et de fin spécifiés. Une fois créé, vous pouvez utiliser la méthode {{domxref("CanvasGradient.addColorStop()")}} pour définir de nouveaux arrêts sur le gradient, avec des déplacements et des couleurs spécifiés. Le gradient est appliqué si vous le mettez comme {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} courant, et il est dessiné sur le canevas lors de l'utilisation de la méthode {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}}, par exemple.
 
 #### HTML
 
@@ -58,7 +58,7 @@ ctx.fillStyle = gradient;
 ctx.fillRect(10, 10, 200, 100);
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel sur le canevas :
+Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel sur le canevas :
 
 #### Code jouable
 
@@ -120,5 +120,5 @@ window.addEventListener("load", drawCanvas);
 
 ## Voir aussi
 
-- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
+- L'interface la définissant, {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}

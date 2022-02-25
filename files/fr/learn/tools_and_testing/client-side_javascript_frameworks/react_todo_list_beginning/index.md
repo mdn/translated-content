@@ -252,7 +252,7 @@ The `htmlFor` attribute corresponds to the `for` attribute used in HTML. We cann
 Notes:
 
 - To use boolean values (`true` and `false`) in JSX attributes, you must enclose them in curly braces. If you write `defaultChecked="true"`, the value of `defaultChecked` will be `"true"` — a string literal. Remember — this is actually JavaScript, not HTML!
-- The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
+- The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
 
 ### Implementing our styles
 

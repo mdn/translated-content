@@ -44,7 +44,7 @@ Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray
 
 ## Accès aux objets de script de page à partir de scripts de contenu
 
-Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une propriété supplémentaire `wrappedJSObject`. C'est une version "déballée" de l'objet, qui inclut toutes les modifications apportées à cet objet par les scripts de page.
+Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une propriété supplémentaire `wrappedJSObject`. C'est une version "déballée" de l'objet, qui inclut toutes les modifications apportées à cet objet par les scripts de page.
 
 Prenons un exemple simple. Supposons qu'une page Web charge un script:
 

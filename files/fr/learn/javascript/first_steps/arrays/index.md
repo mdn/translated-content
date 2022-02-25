@@ -43,11 +43,11 @@ Dans le dernier article de ce module, nous examinerons les tableaux — une faç
 
 ## Qu'est‑ce qu'un tableau&nbsp;?
 
-Les tableaux sont généralement décrits comme des "objets de type liste" ; un tableau est un objet contenant plusieurs valeurs. Les objets tableau peuvent être stockés dans des variables et traités de la même manière que tout autre type de valeur, la différence étant que nous pouvons accéder à chaque valeur du tableau individuellement, et faire des choses super utiles et efficaces avec la liste des valeurs, comme boucler et faire la même chose pour chaque valeur. Peut-être que nous avons une série d'articles et leurs prix stockés dans un tableau, et nous voulons les parcourir tous et les imprimer sur une facture, tout en totalisant tous les prix ensemble et en imprimant le prix total en bas.
+Les tableaux sont généralement décrits comme des "objets de type liste" ; un tableau est un objet contenant plusieurs valeurs. Les objets tableau peuvent être stockés dans des variables et traités de la même manière que tout autre type de valeur, la différence étant que nous pouvons accéder à chaque valeur du tableau individuellement, et faire des choses super utiles et efficaces avec la liste des valeurs, comme boucler et faire la même chose pour chaque valeur. Peut-être que nous avons une série d'articles et leurs prix stockés dans un tableau, et nous voulons les parcourir tous et les imprimer sur une facture, tout en totalisant tous les prix ensemble et en imprimant le prix total en bas.
 
-Sans tableaux, nous devrions stocker chaque valeur dans une variable séparée, puis appeler le code qui effectue l'affichage ou l'impression, puis ajouter séparément chaque élément. Ce serait plus long à écrire, moins efficace et cela comporterait plus de risques d'erreurs. Si nous avions 10 articles à ajouter à la facture, ce serait déjà assez mauvais, mais qu'en serait-il de 100 articles ou de 1000&nbsp;? Nous reviendrons sur cet exemple plus loin dans l'article.
+Sans tableaux, nous devrions stocker chaque valeur dans une variable séparée, puis appeler le code qui effectue l'affichage ou l'impression, puis ajouter séparément chaque élément. Ce serait plus long à écrire, moins efficace et cela comporterait plus de risques d'erreurs. Si nous avions 10 articles à ajouter à la facture, ce serait déjà assez mauvais, mais qu'en serait-il de 100 articles ou de 1000&nbsp;? Nous reviendrons sur cet exemple plus loin dans l'article.
 
-Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés ou utiliser la [console développeur de l'explorateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
+Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés ou utiliser la [console développeur de l'explorateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
 
 ```html hidden
 <!DOCTYPE html>
@@ -196,7 +196,7 @@ Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant 
     // shopping renvoie maintenant [ "crème de sésame", "lait", "fromage", "houmous", "nouilles" ]
     ```
 
-    > **Note :** Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0&nbsp;!
+    > **Note :** Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0&nbsp;!
 
 3.  Notez qu'un tableau à l'intérieur d'un tableau est appelé un tableau multidimensionnel. Vous accédez à un des éléments de ce tableau interne en chaînant deux paires de crochets. Par exemple, pour avoir accès à l'un des éléments (le troisième) du tableau élément du tableau `random` (voir la section précédente), vous pouvez écrire quelque chose comme&nbsp;:
 4.  ```js
@@ -230,7 +230,7 @@ Vous en apprendrez plus sur les boucles dans un prochain article, mais, en résu
 
 ## Quelques méthodes utiles pour les tableaux
 
-Dans ce paragraphe nous examinerons quelques méthodes de tableaux à connaître. Elles permettent de scinder des chaînes en éléments de tableau et inversement, et d'ajouter de nouveaux éléments dans des tableaux.
+Dans ce paragraphe nous examinerons quelques méthodes de tableaux à connaître. Elles permettent de scinder des chaînes en éléments de tableau et inversement, et d'ajouter de nouveaux éléments dans des tableaux.
 
 ### Conversions entre chaînes et tableaux
 
@@ -337,7 +337,7 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
 Revenons à l'exemple que nous avons décrit plus haut — afficher les noms des produits et leurs prix pour un envoi, puis faire le total des prix et l'afficher à la fin de la liste. Dans l'exemple modifiable ci‑dessous, il y a des commentaires numérotés — chacun d'entre eux marque l'emplacement où vous devez ajouter quelque chose au code. Voici&nbsp;:
 
 1.  Sous le commentaire `// number 1` il y a un certain nombre de chaînes de caractères, chacune précise le nom d'un produit et son prix séparé par deux‑points. Placez‑les dans un tableau ; enregistrez‑le sous le nom `products`.
-2.  Sur la même ligne que le commentaire `// number 2` se trouve le début d'une boucle. Dans cette ligne nous avons actuellement `i <= 0`, test conditionnel qui fait que la [ boucle](/fr/docs/Learn/JavaScript/First_steps/A_first_splash#loops) stoppe immédiatement, car ce test dit «&nbsp;stopper dès que `i` est inférieur ou égal à 0&nbsp;» et `i` part de 0. Remplacez ce test par un qui  n'arrêtera pas la boucle tant que `i` sera inférieur à la taille du tableau `products`.
+2.  Sur la même ligne que le commentaire `// number 2` se trouve le début d'une boucle. Dans cette ligne nous avons actuellement `i <= 0`, test conditionnel qui fait que la [ boucle](/fr/docs/Learn/JavaScript/First_steps/A_first_splash#loops) stoppe immédiatement, car ce test dit «&nbsp;stopper dès que `i` est inférieur ou égal à 0&nbsp;» et `i` part de 0. Remplacez ce test par un qui  n'arrêtera pas la boucle tant que `i` sera inférieur à la taille du tableau `products`.
 3.  Au dessous du commentaire `// number 3` nous voudrions que vous écriviez une ligne de code qui scinde l'élément courant du tableau (`nom:prix`) en deux éléments distincts, un contenant uniquement le nom, l'autre uniquement le prix. Si vous nous ne savez pas trop comment faire, revoyez l'article relatif aux [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods) pour vous aider, ou même mieux, regardez la section {{anch("Converting between strings and arrays")}} de cet article.
 4.  En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le [premier article à propos des chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
 5.  Il y a une variable nommée `total` créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous `// number 4`) ajoutez une ligne qui ajoute à ce total le prix de l'article courant  à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un [opérateur d'assignation](/fr/docs/Learn/JavaScript/First_steps/Math#assignment_operators) pour faire cela ;-).
@@ -516,13 +516,13 @@ window.addEventListener('load', updateCode);
 
 ## Testez vos compétences !
 
-Vous avez atteint la fin de cet article, mais vous souvenez-vous des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien fixé ces connaissances avant de continuer — voir [Test de compétences&nbsp;: les tableaux](/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays).
+Vous avez atteint la fin de cet article, mais vous souvenez-vous des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien fixé ces connaissances avant de continuer — voir [Test de compétences&nbsp;: les tableaux](/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays).
 
 ## Conclusion
 
 Après la lecture de cet article, vous conviendrez que les tableaux semblent fichtrement utiles ; vous les verrez un peu partout en JavaScript, souvent associés à des boucles pour appliquer la même action à chaque élément du tableau. Nous vous indiquerons toutes les bases utiles à savoir à propos des boucles dans le prochain module, mais pour l'instant, félicitations&nbsp;: prenez une pause bien méritée ; vous avez étudié tous les articles du module !
 
-La seule chose restant à faire est de procéder à l'évaluation de ce module pour tester votre compréhension de son contenu.
+La seule chose restant à faire est de procéder à l'évaluation de ce module pour tester votre compréhension de son contenu.
 
 ## Voir aussi
 

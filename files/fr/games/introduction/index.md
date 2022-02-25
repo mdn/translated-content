@@ -13,7 +13,7 @@ original_slug: Jeux/Introduction
 
 {{IncludeSubnav("/fr/docs/Jeux")}}
 
-Le Web d'aujourd'hui est désormais une plate-forme viable pour créer des jeux époustouflants et de bonne qualité, mais aussi et surtout pour distribuer ces jeux. Imaginez tous les jeux qui peuvent être créés...
+Le Web d'aujourd'hui est désormais une plate-forme viable pour créer des jeux époustouflants et de bonne qualité, mais aussi et surtout pour distribuer ces jeux. Imaginez tous les jeux qui peuvent être créés...
 
 Grâce aux technologies web actuelles et aux navigateurs récents, il est tout à fait possible de créer un jeu excellent pour le Web. Et nous ne parlons pas ici de jeux de cartes ou de jeux sociaux multi-joueurs déjà créés il y a longtemps, avec Flash®, mais bien de jeux de tirs en 3D, de RPG etc. Grâce aux améliorations des performances des compilateurs juste-à-temps [JavaScript](/fr/docs/JavaScript "/fr/docs/JavaScript") et aux nouvelles APIs, vous pouvez construire des jeux vidéo qui fonctionnent dans un navigateur (ou sur des plateformes HTML5 comme [Firefox OS](/fr/docs/Mozilla/Firefox_OS "/fr/docs/Mozilla/Firefox_OS")) sans compromettre les performances.
 

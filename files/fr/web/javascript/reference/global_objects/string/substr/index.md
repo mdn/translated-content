@@ -38,19 +38,19 @@ Une nouvelle chaîne contenant la partie indiquée de la chaîne donnée.
 
 `substr()` extrait `longueur` caractères d'une `string`, en comptant à partir de l'indice `début`.
 
-Si `début` est un nombre positif, l'indice commence à compter du début de la chaîne. Sa valeur est limitée à `chn.length`.
+Si `début` est un nombre positif, l'indice commence à compter du début de la chaîne. Sa valeur est limitée à `chn.length`.
 
-Si `début` est un nombre négatif, l'indice commence à compter de la fin de la chaîne. Sa valeur est limitée à `-chn.length`.
+Si `début` est un nombre négatif, l'indice commence à compter de la fin de la chaîne. Sa valeur est limitée à `-chn.length`.
 
 Note : dans JScript de Microsoft, les valeurs négatives de l'argument `début` ne sont pas considérées comme faisant référence à la fin de la chaîne.
 
-Si `longueur` est omise, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
+Si `longueur` est omise, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
 
-Si `longueur` est {{jsxref("undefined")}}, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
+Si `longueur` est {{jsxref("undefined")}}, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
 
-Si `longueur` est négative, elle est traitée comme 0.
+Si `longueur` est négative, elle est traitée comme 0.
 
-Pour `début` comme pour `longueur`, NaN est traité comme 0.
+Pour `début` comme pour `longueur`, NaN est traité comme 0.
 
 ## Exemples
 

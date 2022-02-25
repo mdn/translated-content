@@ -16,7 +16,7 @@ La fonction CSS **`cross-fade()`** peut être utilisée afin de fusionner deux o
 
 ## Syntaxe (spécification)
 
-La fonction `cross-fade()` prend comme argument une liste d'images accompagnée d'un pourcentage qui définit la proportion de chaque image dans le « mélange » obtenu. La valeur en pourcentage ne doit pas être entourée de quotes, doit contenir le symbole « %&nbsp;» et être comprise entre 0% et 100%.
+La fonction `cross-fade()` prend comme argument une liste d'images accompagnée d'un pourcentage qui définit la proportion de chaque image dans le « mélange » obtenu. La valeur en pourcentage ne doit pas être entourée de quotes, doit contenir le symbole « %&nbsp;» et être comprise entre 0% et 100%.
 
 Cette fonction pourra être utilisée à tout endroit où une image (cf. {{cssxref("&lt;image&gt;")}}) CSS peut être utilisée.
 

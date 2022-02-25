@@ -36,7 +36,7 @@ Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de
 
 ## Spécifications
 
-- [HTML5 : Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [HTML5 : Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
 
 ## Voir aussi
 

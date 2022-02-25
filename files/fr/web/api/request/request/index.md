@@ -41,7 +41,7 @@ Le constructeur **`Request()`** crée un nouvel objet {{domxref("Request")}}.
     - `credentials`: Les informations d'authentification de requête que vous souhaitez utiliser pour la requête : `omit`, `same-origin`, ou `include`. La valeur par défaut est `omit`. Dans Chrome, la valeur par défaut est `same-origin` avant Chrome 47 et `include` à partir de Chrome 47.
     - `cache`: Le [mode de cache](/en-US/docs/Web/API/Request/cache) que vous voulez utiliser pour la requête.
     - `redirect`: Le mode de redirection à utiliser : `follow`, `error`, ou `manual`. Dans Chrome, le défaut est `manual` avant Chrome 47 et `follow` à partir de Chrome 47.
-    - `referrer`: Une {{domxref("USVString")}} indiquant `no-referrer`, `client`, ou une URL. La valeur par défaut est `client`.
+    - `referrer`: Une {{domxref("USVString")}} indiquant `no-referrer`, `client`, ou une URL. La valeur par défaut est `client`.
     - `integrity`: Contient la valeur d'[intégrité de la sous ressource](/en-US/docs/Web/Security/Subresource_Integrity) de la requête (par ex.., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 
 ## Erreurs

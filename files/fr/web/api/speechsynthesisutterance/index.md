@@ -5,16 +5,16 @@ translation_of: Web/API/SpeechSynthesisUtterance
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-L'interface **`SpeechSynthesisUtterance`** de l'[API Web Speech](/en-US/docs/Web/API/Web_Speech_API) représente une requète de synthèse vocale. Elle contient le contenu du service permettant de définir la façon dont elle sera lu (langue, hauteur et volume).
+L'interface **`SpeechSynthesisUtterance`** de l'[API Web Speech](/en-US/docs/Web/API/Web_Speech_API) représente une requète de synthèse vocale. Elle contient le contenu du service permettant de définir la façon dont elle sera lu (langue, hauteur et volume).
 
 ## Constructor
 
 - {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()")}}
-  - : Retourne une nouvelle instance de l'objet `SpeechSynthesisUtterance`.
+  - : Retourne une nouvelle instance de l'objet `SpeechSynthesisUtterance`.
 
 ## Properties
 
-_`SpeechSynthesisUtterance` hérite également des propriétés de son interface parente, {{domxref("EventTarget")}}._
+_`SpeechSynthesisUtterance` hérite également des propriétés de son interface parente, {{domxref("EventTarget")}}._
 
 - {{domxref("SpeechSynthesisUtterance.lang")}}
   - : Gets and sets the language of the utterance.
@@ -48,16 +48,16 @@ _`SpeechSynthesisUtterance` hérite également des propriétés de son interfac
 
 ## Examples
 
-Dans notre exemple basique de [démonstration de synthèse vocale](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), nous commençons par récupérer une référence du controller SpeechSynthesis en utilisant `window.speechSynthesis`.
-Après avoir définit les variables nécessaires, nous récupérons une liste des voix disponibles en utilisant {{domxref("SpeechSynthesis.getVoices()")}} puis nous alimentons un menu avec celle-ci.
+Dans notre exemple basique de [démonstration de synthèse vocale](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), nous commençons par récupérer une référence du controller SpeechSynthesis en utilisant `window.speechSynthesis`.
+Après avoir définit les variables nécessaires, nous récupérons une liste des voix disponibles en utilisant {{domxref("SpeechSynthesis.getVoices()")}} puis nous alimentons un menu avec celle-ci.
 L'utilisateur pourra ensuite choisir la voix qu'il souhaite.
 
 À l'intérieur du handler `inputForm.onsubmit`&nbsp;:
 
-- Nous stoppons la soumission du formulaire avec [preventDefault()](/en-US/docs/Web/API/Event/preventDefault);
-- Nous utilisons le constructeur {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} pour créer une nouvelle instance contenant le texte de l'{{htmlelement("input")}};
-- Nous positionnons {{domxref("SpeechSynthesisUtterance.voice","voice")}} sur la voix sélectionnée dans le {{htmlelement("select")}};
-- Nous démarrons la synthèse vocale via la méthode {{domxref("SpeechSynthesis.speak()")}}
+- Nous stoppons la soumission du formulaire avec [preventDefault()](/en-US/docs/Web/API/Event/preventDefault);
+- Nous utilisons le constructeur {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} pour créer une nouvelle instance contenant le texte de l'{{htmlelement("input")}};
+- Nous positionnons {{domxref("SpeechSynthesisUtterance.voice","voice")}} sur la voix sélectionnée dans le {{htmlelement("select")}};
+- Nous démarrons la synthèse vocale via la méthode {{domxref("SpeechSynthesis.speak()")}}
 
 ```js
 var synth = window.speechSynthesis;

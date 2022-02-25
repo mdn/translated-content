@@ -20,13 +20,13 @@ alert(document.lastModified);
 // renvoie: 11/28/2015 16:11:15
 ```
 
-### Exemple #2: Transformer `lastModified` en un objet de type [`Date`](/en-US/docs/JavaScript/Reference/Global_Objects/Date)
+### Exemple #2: Transformer `lastModified` en un objet de type [`Date`](/en-US/docs/JavaScript/Reference/Global_Objects/Date)
 
 ```js
 var oLastModif = new Date(document.lastModified);
 ```
 
-### Exemple #3: Transformer `lastModified` en un nombre de millisecondes passées depuis le 1 Janvier 1970 à 00:00:00, heure locale.
+### Exemple #3: Transformer `lastModified` en un nombre de millisecondes passées depuis le 1 Janvier 1970 à 00:00:00, heure locale.
 
 ```js
 var nLastModif = Date.parse(document.lastModified);
@@ -34,7 +34,7 @@ var nLastModif = Date.parse(document.lastModified);
 
 ## Notes
 
-Veuillez noter qu'en tant que chaîne de caractères, `lastModified `ne peut être *facilement* utilisé pour des comparaisons entre les dates modifées des documents. Voici un exemple possible qui montre comment afficher une alerte quand la page change (voir aussi: [API des cookies en JavaScript](/en-US/docs/DOM/document.cookie)):
+Veuillez noter qu'en tant que chaîne de caractères, `lastModified `ne peut être *facilement* utilisé pour des comparaisons entre les dates modifées des documents. Voici un exemple possible qui montre comment afficher une alerte quand la page change (voir aussi: [API des cookies en JavaScript](/en-US/docs/DOM/document.cookie)):
 
 ```js
 if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {
@@ -59,9 +59,9 @@ if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
 }
 ```
 
-> **Note :** WebKit renvoie le temps sous forme de chaîne de caractère en UTC; Gecko et Internet Explorer renvoient le temps selon le fuseau horaire local. (Voir: [Bogue 4363 – document.lastModified renoive la date en UTC, mais devrait la renvoyer selon le fuseau horaire local](https://bugs.webkit.org/show_bug.cgi?id=4363))
+> **Note :** WebKit renvoie le temps sous forme de chaîne de caractère en UTC; Gecko et Internet Explorer renvoient le temps selon le fuseau horaire local. (Voir: [Bogue 4363 – document.lastModified renoive la date en UTC, mais devrait la renvoyer selon le fuseau horaire local](https://bugs.webkit.org/show_bug.cgi?id=4363))
 
-Si vous voulez savoir **si *une page externe* a changé,** veuillez lire [ce paragraphe à propos de l'API `XMLHttpRequest()`](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Get_last_modified_date).
+Si vous voulez savoir **si *une page externe* a changé,** veuillez lire [ce paragraphe à propos de l'API `XMLHttpRequest()`](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Get_last_modified_date).
 
 ## Spécification
 

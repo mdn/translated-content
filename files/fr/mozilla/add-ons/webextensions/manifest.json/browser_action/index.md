@@ -82,7 +82,7 @@ La clé `browser_action` est un objet qui peut avoir l'une des propriétés suiv
         </p>
         <p>
           Dans Firefox, la feuille de style peut être vue
-          à chrome://browser/content/extension.css, ou
+          à chrome://browser/content/extension.css, ou
           chrome://browser/content/extension-mac.css sur OS X. Lorsque vous
           définissez les dimensions, sachez que cette feuille de style définit
           actuellement  <code>box-sizing: border-box</code> (voir

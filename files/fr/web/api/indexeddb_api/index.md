@@ -12,7 +12,7 @@ original_slug: Web/API/API_IndexedDB
 ---
 {{DefaultAPISidebar("IndexedDB")}}
 
-IndexedDB est une API de bas niveau qui permet le stockage côté client de quantités importantes de données structurées, incluant des fichiers/blobs. Cette API utilise des index afin de permettre des recherches performantes sur ces données. Alors que [Web Storage](/fr/docs/Web/API/Web_Storage_API) est utile pour stocker de petites quantités de données, il est moins utile pour stocker de grandes quantités de données structurées. IndexedDB fournit une solution. Cette page est le point d'entrée pour tout ce qui concerne IndexedDB sur MDN - vous y trouverez les liens vers la référence complète de l'API et les guides d'utilisation, le support par les navigateurs, et quelques explications des concepts clés.
+IndexedDB est une API de bas niveau qui permet le stockage côté client de quantités importantes de données structurées, incluant des fichiers/blobs. Cette API utilise des index afin de permettre des recherches performantes sur ces données. Alors que [Web Storage](/fr/docs/Web/API/Web_Storage_API) est utile pour stocker de petites quantités de données, il est moins utile pour stocker de grandes quantités de données structurées. IndexedDB fournit une solution. Cette page est le point d'entrée pour tout ce qui concerne IndexedDB sur MDN - vous y trouverez les liens vers la référence complète de l'API et les guides d'utilisation, le support par les navigateurs, et quelques explications des concepts clés.
 
 {{AvailableInWorkers}}
 
@@ -23,8 +23,8 @@ IndexedDB est une API de bas niveau qui permet le stockage côté client de quan
 IndexedDB est un système de gestion de base de données transactionnel, similaire à un SGBD relationnel basé sur SQL. Cependant contrairement aux SGBD relationnels, qui utilisent des tables avec des colonnes fixes, IndexedDB est une base de données orientée objet basée sur JavaScript. IndexedDB vous permet de stocker et de récupérer des objets qui sont indexés avec une **clef**; tout objet supporté par [l'algorithme de clônage structuré](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure) peut être stocké. Vous devez spécifier le schéma de la base de données, ouvrir une connexion à votre base de données, puis récupérer et mettre à jour des données dans une série de **transactions**.
 
 - Plus d'informations sur les [concepts derrière IndexedDB](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
-- Apprenez à utiliser IndexedDB de manière asynchrone à partir des principes fondamentaux grâce à notre guide [Utiliser IndexedDB](/fr/docs/IndexedDB/Using_IndexedDB).
-- Combinez IndexedDB pour le stockage des données en mode déconnecté avec les Service Workers pour stocker des assets en mode déconnecté, comme précisé dans [Faire fonctionner les PWAs en mode déconnecté grâce aux Service workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers).
+- Apprenez à utiliser IndexedDB de manière asynchrone à partir des principes fondamentaux grâce à notre guide [Utiliser IndexedDB](/fr/docs/IndexedDB/Using_IndexedDB).
+- Combinez IndexedDB pour le stockage des données en mode déconnecté avec les Service Workers pour stocker des assets en mode déconnecté, comme précisé dans [Faire fonctionner les PWAs en mode déconnecté grâce aux Service workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers).
 
 > **Note :** Comme la plupart des solutions de stockage en ligne, IndexedDB suit la politique [same-origin policy](http://www.w3.org/Security/wiki/Same_Origin_Policy). Alors même que vous pouvez accèder à des données stockées au sein d'un domaine, vous ne pouvez pas accéder à des données sur plusieurs domaines.
 
@@ -38,7 +38,7 @@ Il y a un certain nombre de technologies web pour stocker différents types de d
 
 ## Interfaces
 
-Pour accèder à une base de données, il faut apeller [`open()`](/fr/docs/Web/API/IDBFactory.open) sur l'attribut [`indexedDB`](/fr/docs/Web/API/IDBEnvironment.indexedDB) d'un objet [window](/fr/docs/DOM/window). Cette méthode retourne un objet {{domxref("IDBRequest")}}; Les opérations asynchrones communiquent avec l'application appelante en déclenchant des évènements sur les objets {{domxref("IDBRequest")}}.
+Pour accèder à une base de données, il faut apeller [`open()`](/fr/docs/Web/API/IDBFactory.open) sur l'attribut [`indexedDB`](/fr/docs/Web/API/IDBEnvironment.indexedDB) d'un objet [window](/fr/docs/DOM/window). Cette méthode retourne un objet {{domxref("IDBRequest")}}; Les opérations asynchrones communiquent avec l'application appelante en déclenchant des évènements sur les objets {{domxref("IDBRequest")}}.
 
 ### Se connecter à la base de données
 
@@ -94,11 +94,11 @@ Une précedente version des spécifications a défini ces interfaces, désormais
 - {{domxref("IDBFactorySync")}} {{obsolete_inline}}
   - : Version synchrone de {{domxref("IDBFactory")}}.
 - {{domxref("IDBEnvironmentSync")}} {{obsolete_inline}}
-  - : Version synchrone de {{domxref("IDBEnvironment")}}.
+  - : Version synchrone de {{domxref("IDBEnvironment")}}.
 - {{domxref("IDBDatabaseSync")}} {{obsolete_inline}}
-  - : Version synchrone de {{domxref("IDBDatabase")}}.
+  - : Version synchrone de {{domxref("IDBDatabase")}}.
 - {{domxref("IDBCursorSync")}} {{obsolete_inline}}
-  - : Version synchrone de {{domxref("IDBCursor")}}.
+  - : Version synchrone de {{domxref("IDBCursor")}}.
 
 ## Exemples
 

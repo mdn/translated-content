@@ -68,7 +68,7 @@ Cette alerte apparait car la stratégie de `SameSite` pour le cookie n'a pas ét
 Set-Cookie: flavor=choco
 ```
 
-Même si vous pouvez compter sur la valeur par défaut `SameSite=Lax` des navigateurs récents, vous devriez tout de même spécifier la stratégie à appliquer pour ce cookie afin de communiquer clairement votre intention. Cela améliorera également l'expérience sur les autres navigateurs si ceux-ci n'utilisent pas encore la valeur par défaut `Lax`.
+Même si vous pouvez compter sur la valeur par défaut `SameSite=Lax` des navigateurs récents, vous devriez tout de même spécifier la stratégie à appliquer pour ce cookie afin de communiquer clairement votre intention. Cela améliorera également l'expérience sur les autres navigateurs si ceux-ci n'utilisent pas encore la valeur par défaut `Lax`.
 
 ```plain example-good
 Set-Cookie: flavor=choco; SameSite=Lax

@@ -15,17 +15,17 @@ _Cette interface hérite aussi des propriétés de_ _{{domxref("SVGGeometryEleme
 
 - {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.x")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}}  correspondant à l'attribut {{SVGAttr("x")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.y")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.y")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("y")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.width")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.width")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("width")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.height")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.height")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("height")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.rx")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.rx")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("rx")}} de l'élément {{SVGElement("rect")}} donné.
-- {{domxref("SVGRectElement.ry")}} {{ReadOnlyInline}}
+- {{domxref("SVGRectElement.ry")}} {{ReadOnlyInline}}
   - : Retourne un {{domxref("SVGAnimatedLength")}} correspondant à l'attribut {{SVGAttr("ry")}} de l'élément {{SVGElement("rect")}} donné.
 
 ## Méthode

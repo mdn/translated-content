@@ -21,10 +21,10 @@ Voir aussi la méthode {{domxref("CanvasRenderingContext2D.strokeText()")}} pour
 <!---->
 
 - `x`
-  - : La valeur de la coordonnée sur l'axe des x du point de début du texte.
+  - : La valeur de la coordonnée sur l'axe des x du point de début du texte.
 - `y`
-  - : La valeur de la coordonnée sur l'axe des y du point de fin du texte.
-- `largeurMax` {{optional_inline}}
+  - : La valeur de la coordonnée sur l'axe des y du point de fin du texte.
+- `largeurMax` {{optional_inline}}
   - : La largeur maximum à dessiner. Si spécifiée, et si la longueur calculée de la chaîne est supérieure à cette largeur, la police est ajustée pour utiliser une police plus condensée horizontalement (s'il en existe une ou s'il peut en être synthétisée une raisonnablement lisible en mettant à l'échelle horizontalement la police en cours) ou une plus petite police.
 
 ## Exemples

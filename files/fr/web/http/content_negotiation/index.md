@@ -42,11 +42,11 @@ The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that
 
 The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user-agent, and can vary according to the context, like fetching an HTML page or an image, a video, or a script: It is different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }} or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) is available.
 
-### The `Accept-CH` header {{experimental_inline}}
+### The `Accept-CH` header {{experimental_inline}}
 
 > **Note :** This is part of an **experimental** technology called _Client Hints_. Initial support is in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
 
-The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can be used by the server to select an appropriate response. Valid values are:
+The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can be used by the server to select an appropriate response. Valid values are:
 
 | Value            | Meaning                                                                                                                                                                                                             |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -63,7 +63,7 @@ With UTF-8 now being well-supported, being the preferred way of encoding charact
 
 ### The `Accept-CH-Lifetime` header
 
-> **Note :** This is part of an **experimental** technology called *Client Hints*  and is only available in Chrome 61 or later.
+> **Note :** This is part of an **experimental** technology called *Client Hints* and is only available in Chrome 61 or later.
 
 The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the `Device-Memory` value of the `Accept-CH` header and indicates the amount of time the device should opt-in to sharing the amount of device memory with the server. The value is given in miliseconds and it's use is optional.
 
@@ -100,7 +100,7 @@ The `Vary` header was added in the version 1.1 of HTTP and is necessary in order
 
 ## Agent-driven negotiation
 
-Server-driven negotiation suffers from a few downsides: it doesn't scale well. There is one header per feature used in the negotiation. If you want to use screen size, resolution or other dimensions, a new HTTP header must be created. Sending of the headers must be done on every request. This is not too problematic with few headers, but with the eventual multiplications of them, the message size would lead to a decrease in performance. The more precise headers are sent, the more entropy is sent, allowing for more HTTP fingerprinting and corresponding privacy concern.
+Server-driven negotiation suffers from a few downsides: it doesn't scale well. There is one header per feature used in the negotiation. If you want to use screen size, resolution or other dimensions, a new HTTP header must be created. Sending of the headers must be done on every request. This is not too problematic with few headers, but with the eventual multiplications of them, the message size would lead to a decrease in performance. The more precise headers are sent, the more entropy is sent, allowing for more HTTP fingerprinting and corresponding privacy concern.
 
 From the beginnings of HTTP, the protocol allowed another negotiation type: _agent-driven negotiation_ or _reactive negotiation_. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.
 

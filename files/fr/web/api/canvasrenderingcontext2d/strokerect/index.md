@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.strokeRect()`** de l'API 2D des Canvas dessine le contour d'un rectangle aux coordonnées de l'angle haut gauche _(x, y)_ et aux dimensions déterminées par *largeur* et *hauteur* dans la balise canvas, et en utilisant l'actuel `strokeStyle`.
+La méthode **`CanvasRenderingContext2D.strokeRect()`** de l'API 2D des Canvas dessine le contour d'un rectangle aux coordonnées de l'angle haut gauche _(x, y)_ et aux dimensions déterminées par *largeur* et *hauteur* dans la balise canvas, et en utilisant l'actuel `strokeStyle`.
 
 ## Syntaxe
 
@@ -14,19 +14,19 @@ La méthode **`CanvasRenderingContext2D.strokeRect()`** de l'API 2D des Canvas 
 ### Paramètres
 
 - `x`
-  - : L'abcisse *x* des coordonnées du point de départ du rectangle.
+  - : L'abcisse *x* des coordonnées du point de départ du rectangle.
 - `y`
   - : L'ordonnée _y_ des coordonnées du point de départ du rectangle.
 - largeur
   - : La largeur du rectangle.
 - `hauteur`
-  - : La hauteur de rectangle.
+  - : La hauteur de rectangle.
 
 ## Exemples
 
-### Utilisation de la méthode `strokeRect`
+### Utilisation de la méthode `strokeRect`
 
-Ceci est juste un extrait de code qui utilise la méthode `strokeRect`.
+Ceci est juste un extrait de code qui utilise la méthode `strokeRect`.
 
 #### HTML
 

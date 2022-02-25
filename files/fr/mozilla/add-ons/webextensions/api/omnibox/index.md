@@ -18,7 +18,7 @@ Lorsque l'utilisateur se concentre sur la barre d'adresse du navigateur et comme
 
 L'API omnibox fournit à l'extension un moyen de personnaliser les suggestions affichées dans la liste déroulante, lorsque l'utilisateur saisit un mot clé défini par l'extension. Cela fonctionne comme suit:...
 
-1.  Tout d'abord, l'extension doit inclure une clé "[omnibox](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)" dans le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) qui définit un mot-clé.
+1.  Tout d'abord, l'extension doit inclure une clé "[omnibox](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)" dans le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) qui définit un mot-clé.
 2.  Lorsque l'utilisateur met la barre d'adresse en surbrillance et tape le mot-clé, suivi d'un espace, l'extension recevra un événement  {{WebExtAPIRef("omnibox.onInputStarted")}}.
 3.  Facultativement, l'extension peut appeler  {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} pour définir la première suggestion qui sera affichée dans la liste déroulante de la barre d'adresse.
 4.  Comme l'utilisateur continue à taper des caractères après cela, l'extension recevra {{WebExtAPIRef("omnibox.onInputChanged")}} événements. L'écouteur d'événement recevra la valeur actuelle que l'utilisateur a saisie et pourra remplir la liste déroulante de la barre d'adresse avec des suggestions. Si l'extension définit une suggestion par défaut en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, elle apparaît en premier dans la liste déroulante.

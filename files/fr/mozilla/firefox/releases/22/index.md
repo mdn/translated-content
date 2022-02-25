@@ -52,9 +52,9 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 ## A voir aussi
 
-- [Notes de version de Firefox 22 Beta](http://www.mozilla.org/en-US/firefox/22.0beta/releasenotes/)
-- [Compatibilité des sites avec Firefox 22](/fr/docs/Site_Compatibility_for_Firefox_22)
-- [Compatibilité des add-ons avec Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
+- [Notes de version de Firefox 22 Beta](http://www.mozilla.org/en-US/firefox/22.0beta/releasenotes/)
+- [Compatibilité des sites avec Firefox 22](/fr/docs/Site_Compatibility_for_Firefox_22)
+- [Compatibilité des add-ons avec Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
 
 ### Versions
 

@@ -67,7 +67,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `bytesReceived`{{optional_inline}}
   - : Un `number` représentant le nombre d'octets reçus jusqu'ici de l'hôte, sans tenir compte de la compression de fichier. Inclure seulement  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur `bytesReceived`.
 - `totalBytes`{{optional_inline}}
-  - : Un `number` représentant le nombre total d'octets dans le fichier téléchargé, sans tenir compte de la compression de fichier. Inclure seulement  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur  `totalBytes`.
+  - : Un `number` représentant le nombre total d'octets dans le fichier téléchargé, sans tenir compte de la compression de fichier. Inclure seulement  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur  `totalBytes`.
 - `fileSize`{{optional_inline}}
   - : `number`. Nombre d'octets dans le fichier entier après la décompression, ou -1 si inconnu. Un `nombre` représentant le nombre total d'octets dans le fichier après la décompression. Inclure seulement {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur `fileSize`.
 - `exists`{{optional_inline}}

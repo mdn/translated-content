@@ -15,13 +15,13 @@ original_slug: Web/HTML/Attributs_universels/itemtype
 
 L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`itemtype`** définit l'URL du vocabulaire qui sera utilisé pour définir les propriétés des objets dans la structure de données. `itemscope` est utilisé afin de définir la portée, dans le document, où le vocabulaire défini sera actif.
 
-L'attribut `itemtype` doit avoir une valeur qui est un ensemble non ordonné de fragments uniques, sensible à la casse. Chaque fragment doit être une URL absolue valide et tous les fragments participent à la définition du même vocabulaire. La valeur de l'attribut doit avoir au moins un fragment.
+L'attribut `itemtype` doit avoir une valeur qui est un ensemble non ordonné de fragments uniques, sensible à la casse. Chaque fragment doit être une URL absolue valide et tous les fragments participent à la définition du même vocabulaire. La valeur de l'attribut doit avoir au moins un fragment.
 
 Les types d'objet doivent tous être définis dans des spécifications de vocabulaire (comme [schema.org](http://schema.org/)) et doivent tous être définis avec le même vocabulaire.
 
 L'attribut `itemtype` peut uniquement être défini pour les éléments qui ont un attribut `itemscope`.
 
-Google et les autres moteurs de recherche participent au vocabulaire défini par [schema.org](http://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](http://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](http://schema.org/startDate) et [`location`](http://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent).
+Google et les autres moteurs de recherche participent au vocabulaire défini par [schema.org](http://schema.org/) pour structurer les données. Ce vocabulaire définit un ensemble standard de types et de noms de propriétés. Par exemple [`MusicEvent`](http://schema.org/MusicEvent) indique un événement musical dont les propriétés [`startDate`](http://schema.org/startDate) et [`location`](http://schema.org/location) utilisées pour définir les détails du concert. Dans ce cas, l'URL [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent) sera l'URL utilisée pour l'attribut `itemtype` et les propriétés `startDate` et `location` seront les propriétés utilisées, définies par [`http://schema.org/MusicEvent`](http://schema.org/MusicEvent).
 
 > **Note :** Vous pourrez trouver plus d'informations sur l'attribut itemtype sur <http://schema.org/Thing>
 

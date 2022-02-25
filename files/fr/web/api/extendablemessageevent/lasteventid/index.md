@@ -13,7 +13,7 @@ translation_of: Web/API/ExtendableMessageEvent/lastEventId
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-La propriété en lecture seule **`lastEventID`** de l'interface {{domxref("ExtendableMessageEvent")}} représente, dans [les évenements envoyés par lle serveur](/en-US/docs/Web/API/en-US/docs/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
+La propriété en lecture seule **`lastEventID`** de l'interface {{domxref("ExtendableMessageEvent")}} représente, dans [les évenements envoyés par lle serveur](/en-US/docs/Web/API/en-US/docs/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
 
 ## Syntaxe
 
@@ -25,7 +25,7 @@ Une {{domxref("DOMString")}}.
 
 ## Exemples
 
-Le code suivant est utilisé, dans un service worker, pour répondre à un message push en envoyant les données reçues par le  {{domxref("PushMessageData")}} au contexte principale, via le [canal de messages](/en-US/docs/Web/API/Channel_Messaging_API). L'objet événement de `onmessage` sera un `ExtendableMessageEvent.`
+Le code suivant est utilisé, dans un service worker, pour répondre à un message push en envoyant les données reçues par le  {{domxref("PushMessageData")}} au contexte principale, via le [canal de messages](/en-US/docs/Web/API/Channel_Messaging_API). L'objet événement de `onmessage` sera un `ExtendableMessageEvent.`
 
 ```js
 var port;
@@ -59,6 +59,6 @@ self.onmessage = function(e) {
 ## Voir aussi
 
 - [Utilisation des Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Exemple simple des service workers](https://github.com/mdn/sw-test)
-- [Est-ce que les service workers sont prêts&nbsp;?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Exemple simple des service workers](https://github.com/mdn/sw-test)
+- [Est-ce que les service workers sont prêts&nbsp;?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Canal de messages](/en-US/docs/Web/API/Channel_Messaging_API)

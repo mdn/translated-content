@@ -26,7 +26,7 @@ L'objet **`Intl.Collator`** est un constructeur de « collecteurs », des objets
 
 - `locales`
 
-  - : Une chaîne de caractères avec une balise de langue BCP 47 ou un tableau qui contient des chaînes dans ce format. Pour plus d'informations sur le format et l'interprétation de l'argument `locales`, voir la page {{jsxref("Objets_globaux/Intl", "Intl", "#Choix_de_la_locale")}}. Pour ce constructeur, les clés d'extensions Unicode suivantes sont acceptées :
+  - : Une chaîne de caractères avec une balise de langue BCP 47 ou un tableau qui contient des chaînes dans ce format. Pour plus d'informations sur le format et l'interprétation de l'argument `locales`, voir la page {{jsxref("Objets_globaux/Intl", "Intl", "#Choix_de_la_locale")}}. Pour ce constructeur, les clés d'extensions Unicode suivantes sont acceptées :
 
     - `co`
       - : Les variantes dans les méthodes de regroupement (« collation ») des chaînes de caractères. Les valeurs autorisées pour cette clé sont : `"big5han", "dict", "direct", "ducet", "gb2312", "phonebk", "phonetic", "pinyin", "reformed", "searchjl", "stroke", "trad", "unihan"`. Les valeurs `"standard"` et `"search"` sont ignorées. Elles sont remplacées par la propriété `usage` de l'argument `options` (voir ci-après).
@@ -119,7 +119,7 @@ console.log(new Intl.Collator("sv").compare("ä", "z"));
 
 ### Utiliser `options`
 
-Les résultats fournis par {{jsxref("Collator.prototype.compare()")}} peuvent être adaptés grâce à l'argument `options` :
+Les résultats fournis par {{jsxref("Collator.prototype.compare()")}} peuvent être adaptés grâce à l'argument `options` :
 
 ```js
 // en allemand, 'ä' est composé de la lettre de base 'a'

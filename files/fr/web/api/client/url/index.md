@@ -11,7 +11,7 @@ tags:
   - URL
 translation_of: Web/API/Client/url
 ---
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}La propriété **`url`** (lecture seule) de l'interface {{domxref("Client")}} retourne l'url du service worker client courant.
+{{SeeCompatTable}}{{APIRef("Service Workers API")}}La propriété **`url`** (lecture seule) de l'interface {{domxref("Client")}} retourne l'url du service worker client courant.
 
 ## Syntaxe
 

@@ -14,7 +14,7 @@ original_slug: Apprendre/Commencer_avec_le_web/Les_bases_CSS
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_HTML", "Apprendre/Commencer_avec_le_web/Les_bases_JavaScript","Apprendre/Commencer_avec_le_web")}}
 
-Les CSS (_Cascading Style Sheets_ en anglais, ou « feuilles de style en cascade ») sont le code utilisé pour mettre en forme une page web. _Les bases des CSS_ présentent ce qu'il faut savoir pour commencer. Nous répondrons à des questions comme : Comment rendre mon texte rouge ou noir ? Comment faire apparaître mon contenu à tel endroit de l'écran ? Comment décorer ma page web avec une image ou une couleur d'arrière-plan ?
+Les CSS (_Cascading Style Sheets_ en anglais, ou « feuilles de style en cascade ») sont le code utilisé pour mettre en forme une page web. _Les bases des CSS_ présentent ce qu'il faut savoir pour commencer. Nous répondrons à des questions comme : Comment rendre mon texte rouge ou noir ? Comment faire apparaître mon contenu à tel endroit de l'écran ? Comment décorer ma page web avec une image ou une couleur d'arrière-plan ?
 
 ## Donc, que sont les CSS, réellement ?
 
@@ -46,7 +46,7 @@ Regardons un peu plus en détails ce que nous avons écrit en CSS :
 
 ![Diagramme expliquant les différents éléments d'une déclaration CSS](CSS.svg)
 
-Cette structure s'appelle **un ensemble de règles** (ou seulement « une règle »). Les différentes parties se nomment :
+Cette structure s'appelle **un ensemble de règles** (ou seulement « une règle »). Les différentes parties se nomment :
 
 - Sélecteur
   - : C'est le nom de l'élément HTML situé au début de l'ensemble de règles. Il permet de sélectionner les éléments sur lesquels appliquer le style souhaité (en l'occurence, les éléments `p`). Pour mettre en forme un élément différent, il suffit de changer le sélecteur.

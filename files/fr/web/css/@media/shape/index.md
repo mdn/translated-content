@@ -38,18 +38,18 @@ La caractéristique `shape` peut prendre une valeur parmi deux valeurs définies
 
 ```css
 h1 {
-  text-align: left;
+  text-align: left;
 }
 
 @media (shape: rect) {
   h1 {
-    text-align: left;
+    text-align: left;
   }
 }
 
 @media (shape: round) {
   h1 {
-    text-align: center;
+    text-align: center;
   }
 }
 ```

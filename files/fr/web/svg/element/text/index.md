@@ -10,7 +10,7 @@ translation_of: Web/SVG/Element/text
 ---
 {{SVGRef}}{{Draft("Cette version n'est pas à jour relativement à la version anglaise de référence, merci d'en tenir compte.")}}
 
-L'élément SVG `text` définit un élément graphique contenant du texte. Notez  qu'il est possible d'y appliquer un dégradé, un motif, un tracé spécifique (clipping path), un masque ou un filtre.
+L'élément SVG `text` définit un élément graphique contenant du texte. Notez  qu'il est possible d'y appliquer un dégradé, un motif, un tracé spécifique (clipping path), un masque ou un filtre.
 
 Si du texte est écrit dans le SVG sans être intégré dans un balise \<text>, il ne sera pas affiché. Le texte n'est pas _caché_ par défaut, la propriété display ne le montre simplement pas.
 
@@ -45,7 +45,7 @@ L'élément \<text> est utilisé pour dessiner des caractères de texte. L'exemp
 </svg>
 ```
 
-Le texte en SVG peut être pivoté. L'exemple de code suivant démontre la rotation de texte à l'aide de l'attribut transform.
+Le texte en SVG peut être pivoté. L'exemple de code suivant démontre la rotation de texte à l'aide de l'attribut transform.
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
@@ -96,7 +96,7 @@ Le texte SVG peut également être stylisé avec du CSS contenant les propriét�
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGTextElement`](/fr/DOM/SVGTextElement "en/DOM/SVGTextElement").
+Cet élément implémente l'interface [`SVGTextElement`](/fr/DOM/SVGTextElement "en/DOM/SVGTextElement").
 
 ## Compatibilité des navigateurs
 

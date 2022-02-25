@@ -11,7 +11,7 @@ La propriété CSS **`overflow`** est une [propriété raccourcie](/fr/docs/Web/
 
 Lorsqu'on utilise la propriété `overflow` avec une autre valeur que `visible` (la valeur par défaut), cela entraîne la création [d'un nouveau contexte de formatage de bloc](/fr/docs/Web/Guide/CSS/Block_formatting_context). Cette création est nécessaire d'un point de vue technique. Ceci est nécessaire techniquement puisque si un élément flottant traverse l'élément avec barres de défilement, cela forcera l'encapsulation du contenu de ce dernier autour de l'élément flottant. L'encapsulation devrait alors se produire après chaque défilement de la barre et mènerait à une expérience utilisateur dégradée
 
-Afin que la propriété `overflow` puisse avoir un effet, le conteneur de niveau de bloc doit avoir une hauteur limite (définie grâce à {{cssxref("height")}} ou {{cssxref("max-height")}}) ou avoir `white-space` avec la valeur `nowrap.`
+Afin que la propriété `overflow` puisse avoir un effet, le conteneur de niveau de bloc doit avoir une hauteur limite (définie grâce à {{cssxref("height")}} ou {{cssxref("max-height")}}) ou avoir `white-space` avec la valeur `nowrap.`
 
 > **Note :** Si on définit un axe avec `visible` (la valeur par défaut) et qu'on définit l'autre axe avec une valeur différente, alors la valeur du premier axe (`visible`) sera considérée comme `auto`.
 

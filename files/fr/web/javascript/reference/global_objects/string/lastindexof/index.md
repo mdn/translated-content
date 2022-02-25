@@ -46,7 +46,7 @@ Les caractères d'une chaîne de caractères sont indexés de gauche à droite. 
 'canal'.lastIndexOf('', 2);   // renvoie 2
 ```
 
-> **Note :** `'abab'.lastIndexOf('ab', 2)` renvoie `2` et pas `0` car l'argument `indiceDébut` ne limite que le début de la correspondance recherchée ( qui est `'ab'`)
+> **Note :** `'abab'.lastIndexOf('ab', 2)` renvoie `2` et pas `0` car l'argument `indiceDébut` ne limite que le début de la correspondance recherchée ( qui est `'ab'`)
 
 ### Sensibilité à la casse
 

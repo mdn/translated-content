@@ -44,7 +44,7 @@ L'exemple précédent devrait faire apparaître des images semblables (en utilis
 _Pour le lien `left.html`&nbsp;:_
 ![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
-_Pour le lien `right.html` _
+_Pour le lien `right.html` _
 ![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## Résumé technique

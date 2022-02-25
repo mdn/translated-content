@@ -34,7 +34,7 @@ var gettingAll = browser.windows.getAll(
   - : `object`. Cela contrôle ce que les objets {{WebExtAPIRef('windows.Window')}} sont récupérés.
 
     - `populate`{{optional_inline}}
-      - : `boolean` Par défaut à `false`.  S'il est défini sur `true`, chaque objet {{WebExtAPIRef('windows.Window')}} aura une propriété `tabs` qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les tabs de cette fenêtre. Les objets `Tab` contiendront les propriétés `url`, `title` et `favIconUrl` uniquement si le fichier manifest de l'extension contient les permissions `"tabs"`.
+      - : `boolean` Par défaut à `false`.  S'il est défini sur `true`, chaque objet {{WebExtAPIRef('windows.Window')}} aura une propriété `tabs` qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les tabs de cette fenêtre. Les objets `Tab` contiendront les propriétés `url`, `title` et `favIconUrl` uniquement si le fichier manifest de l'extension contient les permissions `"tabs"`.
     - `windowTypes`{{optional_inline}}
       - : `Un ensemble d'objets` {{WebExtAPIRef('windows.WindowType')}}. Si cette option est définie, les objets {{WebExtAPIRef('windows.Window')}} renvoyés seront filtrés en fonction de leur type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panel'` qui sont limités aux propres fenêtres de l'extension.
 

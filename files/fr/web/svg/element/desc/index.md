@@ -29,7 +29,7 @@ Quand l'élément contenant une description apparaît à l'utilisateur sous form
 
 _(Aucun)_
 
-## Interface DOM
+## Interface DOM
 
 Cet élément implémente l'interface [`SVGDescElement`](/fr/docs/Web/API/SVGDescElement "en/DOM/SVGDescElement").
 

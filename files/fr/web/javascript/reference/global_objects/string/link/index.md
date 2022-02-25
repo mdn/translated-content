@@ -58,7 +58,7 @@ console.log("Cliquer ici pour revenir sur " + texteAffiché.link(URL));
 
 ## Notes relatives à Gecko
 
-- À partir de Gecko 17.0 {{geckoRelease("17")}} le symbole de double quote **"** est automatiquement remplacé par l'entité HTML de référence dans le paramètre `url`.
+- À partir de Gecko 17.0 {{geckoRelease("17")}} le symbole de double quote **"** est automatiquement remplacé par l'entité HTML de référence dans le paramètre `url`.
 
 ## Voir aussi
 

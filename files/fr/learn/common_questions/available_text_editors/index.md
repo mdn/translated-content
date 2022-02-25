@@ -360,7 +360,7 @@ Voici un tableau de quelques éditeurs de texte connus :
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
 
 ## Aller plus loin
 

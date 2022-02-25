@@ -26,26 +26,26 @@ Pour utiliser cette API, un module complémentaire doit spécifier la  [permissi
 
   - : Un module complémentaire avec cette autorisation d'hôte peut :
 
-    - Lire un cookie non sécurisé pour `www.example.com`, avec n'importe quel chemin.
-    - Écrire un cookie ou non sécurisé pour `www.example.com`, avec n'importe quel chemin.
+    - Lire un cookie non sécurisé pour `www.example.com`, avec n'importe quel chemin.
+    - Écrire un cookie ou non sécurisé pour `www.example.com`, avec n'importe quel chemin.
 
     Il ne peut _pas_ :
 
-    - Lire un cookie  sécurisé pour `www.example.com`.
+    - Lire un cookie  sécurisé pour `www.example.com`.
 
 - `http://www.example.com/`
 
   - : Un module complémentaire avec cette permission d'hôte peut :
 
-    - Lire un cookie non sécurisé pour `www.example.com`, avec n'importe quel chemin.
-    - Lire un cookie non sécurisé pour `.example.com`, avec n'importe quel chemin.
-    - Écrire un cookie sécurisé ou non sécurisé pour  `www.example.com` avec n'importe quel chemin.
-    - Écrire un cookie sécurisé ou non sécurisé pour  `.example.com` avec n'importe quel chemin.
+    - Lire un cookie non sécurisé pour `www.example.com`, avec n'importe quel chemin.
+    - Lire un cookie non sécurisé pour `.example.com`, avec n'importe quel chemin.
+    - Écrire un cookie sécurisé ou non sécurisé pour  `www.example.com` avec n'importe quel chemin.
+    - Écrire un cookie sécurisé ou non sécurisé pour  `.example.com` avec n'importe quel chemin.
 
     Il ne peut _pas_ :
 
-    - Lire ou écrire un cookie pour `foo.example.com`.
-    - Lire ou écrire un cookie pour `foo.www.example.com`.
+    - Lire ou écrire un cookie pour `foo.example.com`.
+    - Lire ou écrire un cookie pour `foo.www.example.com`.
 
 - `*://*.example.com/`
 
@@ -65,7 +65,7 @@ Lorsque l'isolement de la première partie est activé, les cookies sont en outr
 
 L'isolement de la première partie peut être activé directement par l'utilisateur en ajustant la configuration du navigateur et peut être défini par des extensions à l'aide du paramètre [`firstPartyIsolate`](/fr/Add-ons/WebExtensions/API/privacy/websites#Properties) de l'API de [`privacy`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy) Notez que l'isolation de première partie est activée par défaut dans le [Tor Browser](https://www.torproject.org/).
 
-Dans l'API `cookies`, le domaine de première partie est représenté à l'aide de l'attribut `firstPartyDomain`. Tous les cookies configurés pendant l'isolement de la première partie ont cet attribut défini sur le domaine de la page d'origine. Dans l'exemple ci-dessus, ce serait "[bbc.com](http://bbc.com)" pour un cookie et "[cnn.com](http://cnn.com)" pour l'autre. Tous les cookies définis par les sites Web alors que l'isolation de première partie est désactivée auront cette propriété définie sur une chaîne vide.
+Dans l'API `cookies`, le domaine de première partie est représenté à l'aide de l'attribut `firstPartyDomain`. Tous les cookies configurés pendant l'isolement de la première partie ont cet attribut défini sur le domaine de la page d'origine. Dans l'exemple ci-dessus, ce serait "[bbc.com](http://bbc.com)" pour un cookie et "[cnn.com](http://cnn.com)" pour l'autre. Tous les cookies définis par les sites Web alors que l'isolation de première partie est désactivée auront cette propriété définie sur une chaîne vide.
 
 Le {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} et {{WebExtAPIRef("cookies.remove()")}} Les API acceptent toutes une option `firstPartyDomain`.
 
@@ -74,7 +74,7 @@ Lorsque l'isolation de première partie est activée, vous devez fournir cette o
 Pour `getAll()`,  vous pouvez aussi passer `null` ici, et ceci obtiendra tous les cookies,
 qu'ils aient ou non une valeur non vide pour `firstPartyDomain.`
 
-Lorsque l'isolation de la première partie est désactivée, le paramètre `firstPartyDomain` est optionnel et par défaut est une chaîne vide. Une chaîne non vide peut être utilisée pour récupérer ou modifier les cookies d'isolation de première partie. De même, passer  `null` comme `firstPartyDomain` pour `getAll()` retournera tous les cookies.
+Lorsque l'isolation de la première partie est désactivée, le paramètre `firstPartyDomain` est optionnel et par défaut est une chaîne vide. Une chaîne non vide peut être utilisée pour récupérer ou modifier les cookies d'isolation de première partie. De même, passer  `null` comme `firstPartyDomain` pour `getAll()` retournera tous les cookies.
 
 ## Types
 

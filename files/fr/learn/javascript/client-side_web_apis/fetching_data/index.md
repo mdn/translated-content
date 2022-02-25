@@ -16,7 +16,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-Une autre tâche courante dans les sites et applications web modernes est de récupérer des données à partir du serveur pour mettre à jour des sections de la page web sans la recharger entièrement. Ce qui pourrait paraître comme un petit détail a, en vérité, eu un impact énorme sur les performances et le comportement des sites. Dans cet article, nous allons expliquer le concept et les technologies qui rendent cela possible, tels que XMLHttpRequest et l'API Fetch.
+Une autre tâche courante dans les sites et applications web modernes est de récupérer des données à partir du serveur pour mettre à jour des sections de la page web sans la recharger entièrement. Ce qui pourrait paraître comme un petit détail a, en vérité, eu un impact énorme sur les performances et le comportement des sites. Dans cet article, nous allons expliquer le concept et les technologies qui rendent cela possible, tels que XMLHttpRequest et l'API Fetch.
 
 <table class="standard-table">
   <tbody>
@@ -51,19 +51,19 @@ Une autre tâche courante dans les sites et applications web modernes est de ré
 
 ![A basic representation of a web site architecture](web-site-architechture@2x.png)
 
-Le problème avec ce modèle c'est qu'à chaque fois que vous voulez mettre à jour une partie de la page, par exemple pour afficher la page suivante d'une liste de produits, vous devez recharger toute la page. Ce surcoût est tout à fait inutile et résulte en une mauvaise expérience utilisateur, particulièrement pour les pages qui sont lourdes, complexes et du coup longues à charger.
+Le problème avec ce modèle c'est qu'à chaque fois que vous voulez mettre à jour une partie de la page, par exemple pour afficher la page suivante d'une liste de produits, vous devez recharger toute la page. Ce surcoût est tout à fait inutile et résulte en une mauvaise expérience utilisateur, particulièrement pour les pages qui sont lourdes, complexes et du coup longues à charger.
 
 ### L'arrivée d'Ajax
 
-Pour traiter ce problème, des technologies ont été élaborées qui permettent de récupérer à la demande de petites portions de données (comme du [HTML](/fr/docs/Web/HTML), {{glossary("XML")}}, [JSON](/fr/docs/Learn/JavaScript/Objects/JSON), ou texte brut) et de les afficher dans la page web.
+Pour traiter ce problème, des technologies ont été élaborées qui permettent de récupérer à la demande de petites portions de données (comme du [HTML](/fr/docs/Web/HTML), {{glossary("XML")}}, [JSON](/fr/docs/Learn/JavaScript/Objects/JSON), ou texte brut) et de les afficher dans la page web.
 
-Nous avons pour cela l'API {{domxref("XMLHttpRequest")}} à notre disposition ou — plus récemment — l'[API Fetch](/fr/docs/Web/API/Fetch_API). Elles permettent de réaliser des requêtes [HTTP](/fr/docs/Web/HTTP) pour récupérer des ressources spécifiques disponibles sur un serveur et de formater les données retournées selon les besoins avant l'affichage dans la page.
+Nous avons pour cela l'API {{domxref("XMLHttpRequest")}} à notre disposition ou — plus récemment — l'[API Fetch](/fr/docs/Web/API/Fetch_API). Elles permettent de réaliser des requêtes [HTTP](/fr/docs/Web/HTTP) pour récupérer des ressources spécifiques disponibles sur un serveur et de formater les données retournées selon les besoins avant l'affichage dans la page.
 
 > **Note :** Dans les premiers temps, cette technique était appelée "Asynchronous JavaScript and XML" (JavaScript asychrone et XML), dit AJAX, parce qu'elle utilisait {{domxref("XMLHttpRequest")}} pour requêter des données XML. De nos jours, c'est rarement le cas; la plupart du temps, on utilise `XMLHttpRequest` ou Fetch pour requêter des données JSON. Quoi qu'il en soit, le procédé reste le même et le terme "Ajax" est resté pour décrire cette technique.
 
 ![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
 
-Le modèle Ajax implique une API web comme proxy pour requêter les données plus intelligemment que simplement rafraîchir la page à chaque fois. Voyons plutôt l'impact que cela a :
+Le modèle Ajax implique une API web comme proxy pour requêter les données plus intelligemment que simplement rafraîchir la page à chaque fois. Voyons plutôt l'impact que cela a :
 
 1.  Allez sur un site riche en information de votre choix, comme Amazon, YouTube, CNN...
 2.  Cherchez quelque chose dans la barre de recherche, comme un nouveau produit. Le contenu principal va changer, mais la plupart de ce qui l'entoure reste statique, comme l'entête, le pied de page, le menu de navigation, etc.
@@ -73,22 +73,22 @@ C'est une bonne chose puisque :
 - La mise à jour de la page est beaucoup plus rapide et vous n'avez pas à attendre que la page se rafraîchisse, si bien que le site paraît être plus rapide et plus réactif.
 - Moins de données doivent être téléchargées pour mettre à jour la page, et donc moins de bande passante est utilisée. Cela ne fait peut-être pas une grande différence sur un ordinateur de bureau, mais cela peut devenir un problème majeur sur mobile ou dans les pays en développement, qui n'ont pas partout un service Internet ultra-rapide.
 
-Notez que pour accélerer les choses encore davantage, certains sites stockent les ressources et données chez le client lors de sa première visite, si bien que les visites suivantes, les fichiers locaux sont utilisés et non re-téléchargés du serveur. Le contenu n'est rechargé que lorsqu'il a été mis à jour sur le serveur.
+Notez que pour accélerer les choses encore davantage, certains sites stockent les ressources et données chez le client lors de sa première visite, si bien que les visites suivantes, les fichiers locaux sont utilisés et non re-téléchargés du serveur. Le contenu n'est rechargé que lorsqu'il a été mis à jour sur le serveur.
 
 ![A basic web app data flow architecture](web-app-architecture@2x.png)
 
 ## Une requête Ajax basique
 
-Voyons maintenant comment ces requêtes sont gérées, en utilisant soit {{domxref("XMLHttpRequest")}} soit [Fetch](/fr/docs/Web/API/Fetch_API). Pour ces exemples, nous allons requêter les données de différents fichiers texte et les utiliserons pour remplir une zone de contenu.
+Voyons maintenant comment ces requêtes sont gérées, en utilisant soit {{domxref("XMLHttpRequest")}} soit [Fetch](/fr/docs/Web/API/Fetch_API). Pour ces exemples, nous allons requêter les données de différents fichiers texte et les utiliserons pour remplir une zone de contenu.
 
-Ces fichiers agiront comme une fausse base de données ; dans une vraie application, il est plus probable que vous utiliseriez un langage côté serveur comme PHP, Python, ou Node pour récupérer les données à partir d'une véritable base de données. En revanche, nous voulons ici garder les choses simples ; nous allons donc nous concentrer sur le côté client.
+Ces fichiers agiront comme une fausse base de données ; dans une vraie application, il est plus probable que vous utiliseriez un langage côté serveur comme PHP, Python, ou Node pour récupérer les données à partir d'une véritable base de données. En revanche, nous voulons ici garder les choses simples ; nous allons donc nous concentrer sur le côté client.
 
 ### XMLHttpRequest
 
-`XMLHttpRequest` (qui est fréquemment abrégé XHR) est une technologie assez vieille maintenant — elle a été inventée par Microsoft dans les années 90 et a été standardisée dans les autres navigateurs il y a longtemps.
+`XMLHttpRequest` (qui est fréquemment abrégé XHR) est une technologie assez vieille maintenant — elle a été inventée par Microsoft dans les années 90 et a été standardisée dans les autres navigateurs il y a longtemps.
 
 1.  Pour commencer cet exemple, faites une copie locale de [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) et des quatre fichiers texte — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), et [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — dans un nouveau répertoire sur votre ordinateur. Dans cet exemple, nous allons charger le verset d'un poème (que vous pourriez bien reconnaître), quand il est sélectionné dans le menu déroulant, en utilisant XHR.
-2.  À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'événement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction  `updateDisplay()`.
+2.  À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'événement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction  `updateDisplay()`.
 
     ```js
     var verseChoose = document.querySelector('select');
@@ -110,7 +110,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
 
 4.  Nous allons commencer notre fonction en construisant une URL relative qui pointe vers le fichier texte que nous voulons charger, nous en aurons besoin plus tard. La valeur de l'élément {{htmlelement("select")}} à tout instant est la même que l'élément {{htmlelement("option")}} sélectionné (c'est à dire le texte de l'élément sélectionné, ou son attribut `value` s'il est spécifié) — par exemple "Verse 1". Le fichier correspondant est "verse1.txt" et il est situé dans le même répertoire que le fichier HTML, le nom du fichier seul suffira donc.
 
-    Les serveurs web sont généralement sensibles à la casse, le nom de fichier n'a pas d'espace et a une extension de fichier. Pour convertir "Verse 1" en "verse1.txt" nous allons convertir le "V" en minuscles avec {{jsxref("String.toLowerCase", "toLowerCase()")}}, supprimer l'espace avec {{jsxref("String.replace", "replace()")}} et ajouter ".txt" à la fin avec une simple [concaténation de chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#Concaténation_de_chaînes). Ajoutez les lignes suivantes à l'intérieur de la fonction `updateDisplay()`&nbsp;:
+    Les serveurs web sont généralement sensibles à la casse, le nom de fichier n'a pas d'espace et a une extension de fichier. Pour convertir "Verse 1" en "verse1.txt" nous allons convertir le "V" en minuscles avec {{jsxref("String.toLowerCase", "toLowerCase()")}}, supprimer l'espace avec {{jsxref("String.replace", "replace()")}} et ajouter ".txt" à la fin avec une simple [concaténation de chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#Concaténation_de_chaînes). Ajoutez les lignes suivantes à l'intérieur de la fonction `updateDisplay()`&nbsp;:
 
     ```js
     verse = verse.replace(" ", "");
@@ -138,7 +138,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
 
 8.  Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'événement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'événement {{event("load")}} est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
 
-    Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'événément `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
+    Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'événément `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
 
     ```js
     request.onload = function() {
@@ -146,7 +146,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
     };
     ```
 
-9.  Les étapes précédentes nous ont permis de configurer la requête XHR, mais celle-ci n'est exécutée que lorsqu'on le demande explicitement. Pour ce faire, il faut appeler la méthode {{domxref("XMLHttpRequest.send","send()")}}. Ajoutez la ligne suivante à la suite du code déjà écrit&nbsp;:
+9.  Les étapes précédentes nous ont permis de configurer la requête XHR, mais celle-ci n'est exécutée que lorsqu'on le demande explicitement. Pour ce faire, il faut appeler la méthode {{domxref("XMLHttpRequest.send","send()")}}. Ajoutez la ligne suivante à la suite du code déjà écrit&nbsp;:
 
     ```js
     request.send();
@@ -214,9 +214,9 @@ Enfin, dans le corps de la fonction, nous faisons la même chose que nous faisio
 
 ### À propos des promesses
 
-Les promesses peuvent être un peu déroutantes au premier abord, ne vous en souciez pas trop pour l'instant. Vous vous y ferez après un certain temps, d'autant plus après en avoir appris davantage sur les APIs JavaScript modernes — la plupart des APIs récentes utilisent beaucoup les promesses.
+Les promesses peuvent être un peu déroutantes au premier abord, ne vous en souciez pas trop pour l'instant. Vous vous y ferez après un certain temps, d'autant plus après en avoir appris davantage sur les APIs JavaScript modernes — la plupart des APIs récentes utilisent beaucoup les promesses.
 
-Regardons à nouveau la structure d'une promesse pour voir si nous pouvons en donner plus de sens.
+Regardons à nouveau la structure d'une promesse pour voir si nous pouvons en donner plus de sens.
 
 #### Promesse 1
 
@@ -245,7 +245,7 @@ myFetch.then(function(response) {
 });
 ```
 
-Parce que la méthode `fetch()` retourne une promesse qui résout une réponse HTTP, la fonction définie à l'intérieur du `.then()` reçoit la réponse en tant que paramètre. Vous pouvez appeler le paramètre comme vous souhaitez — l'exemple ci-dessous fait toujours la même chose :
+Parce que la méthode `fetch()` retourne une promesse qui résout une réponse HTTP, la fonction définie à l'intérieur du `.then()` reçoit la réponse en tant que paramètre. Vous pouvez appeler le paramètre comme vous souhaitez — l'exemple ci-dessous fait toujours la même chose :
 
 ```js
 fetch(url).then(function(dogBiscuits) {
@@ -273,7 +273,7 @@ L'objet `response` a une méthode {{domxref("Body.text","text()")}}, qui convert
 
 #### Chaîner les then()
 
-Notez que le résultat de la fonction appelée par le `.then()` est également retourné par ce dernier, nous pouvons donc mettre les `.then()` bout à bout, en passant le résultat du bloc précédent au prochain.
+Notez que le résultat de la fonction appelée par le `.then()` est également retourné par ce dernier, nous pouvons donc mettre les `.then()` bout à bout, en passant le résultat du bloc précédent au prochain.
 
 Ainsi, le bloc de code suivant fait la même chose que notre exemple original, mais écrit dans un style différent :
 
@@ -285,7 +285,7 @@ fetch(url).then(function(response) {
 });
 ```
 
-Beaucoup de développeurs préfèrent ce style, plus "plat" : il évite de définir des fonctions à l'intérieur de fonctions et est plus facile à lire lorsqu'il y a beaucoup de promesses qui s'enchaînent. La seule différence ici est que nous avons une instruction [`return`](/fr/Apprendre/JavaScript/Building_blocks/Return_values) pour retourner `response.text()`, et ce résultat est passé au prochain `.then()`.
+Beaucoup de développeurs préfèrent ce style, plus "plat" : il évite de définir des fonctions à l'intérieur de fonctions et est plus facile à lire lorsqu'il y a beaucoup de promesses qui s'enchaînent. La seule différence ici est que nous avons une instruction [`return`](/fr/Apprendre/JavaScript/Building_blocks/Return_values) pour retourner `response.text()`, et ce résultat est passé au prochain `.then()`.
 
 ### Quel mécanisme devriez-vous utiliser?
 
@@ -332,7 +332,7 @@ Vous pouvez tester le cas d'échec vous-même :
 
 1.  Faites une copie locale des fichiers d'exemple (téléchargez et dézippez le [fichier ZIP can-store](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true))
 2.  Éxecutez le code via un serveur web (comme vu précédemment dans {{anch("Serving your example from a server", "Servir votre exemple depuis un serveur")}})
-3.  Modifiez le chemin du fichier à récupérer, mettez un nom de fichier qui n'existe pas, comme 'produc.json'.
+3.  Modifiez le chemin du fichier à récupérer, mettez un nom de fichier qui n'existe pas, comme 'produc.json'.
 4.  Maintenant, chargez le fichier index dans votre navigateur (via `localhost:8000`) et regardez dans la console de développement. Vous verrez un message parmi les lignes "Network request for products.json failed with response 404: File not found" (la requête réseau pour products.json a échoué avec la réponse 404: Fichier non trouvé).
 
 #### Deuxième Fetch
@@ -352,15 +352,15 @@ fetch(url).then(function(response) {
 });
 ```
 
-Cela fonctionne à peu près de la même manière que le précédent, sauf qu'au lieu d'utiliser {{domxref("Body.json","json()")}}, on utilise {{domxref("Body.blob","blob()")}} — en l'occurence, nous voulons récupérer la réponse sous la forme d'un fichier image, et le format de données que nous utilisons est [Blob](/fr/docs/Web/API/Blob) — ce terme est une abbréviation de "Binary Large Object" (large objet binaire) et peut être utilisé pour représenter de gros objets fichier — tels que des fichiers images ou vidéo.
+Cela fonctionne à peu près de la même manière que le précédent, sauf qu'au lieu d'utiliser {{domxref("Body.json","json()")}}, on utilise {{domxref("Body.blob","blob()")}} — en l'occurence, nous voulons récupérer la réponse sous la forme d'un fichier image, et le format de données que nous utilisons est [Blob](/fr/docs/Web/API/Blob) — ce terme est une abbréviation de "Binary Large Object" (large objet binaire) et peut être utilisé pour représenter de gros objets fichier — tels que des fichiers images ou vidéo.
 
-Une fois que nous avons reçu notre blob avec succès, nous créons un objet URL, en utilisant {{domxref("URL.createObjectURL()", "createObjectURL()")}}. Cela renvoie une URL interne temporaire qui pointe vers un blob en mémoire dans le navigateur. Cet objet n'est pas très lisible, mais vous pouvez voir à quoi il ressemble en ouvrant l'application Can Store, Ctrl + Clic droit sur l'image, et sélectionner l'option "Afficher l'image" (peut légèrement varier selon le navigateur que vous utilisez). L'URL créée sera visible à l'intérieur de la barre d'adresse et devrait ressembler à quelque chose comme ça :
+Une fois que nous avons reçu notre blob avec succès, nous créons un objet URL, en utilisant {{domxref("URL.createObjectURL()", "createObjectURL()")}}. Cela renvoie une URL interne temporaire qui pointe vers un blob en mémoire dans le navigateur. Cet objet n'est pas très lisible, mais vous pouvez voir à quoi il ressemble en ouvrant l'application Can Store, Ctrl + Clic droit sur l'image, et sélectionner l'option "Afficher l'image" (peut légèrement varier selon le navigateur que vous utilisez). L'URL créée sera visible à l'intérieur de la barre d'adresse et devrait ressembler à quelque chose comme ça :
 
     blob:http://localhost:7800/9b75250e-5279-e249-884f-d03eb1fd84f4
 
 ### Challenge : une version XHR de Can Store
 
-Comme exercice pratique, nous aimerions que vous essayiez de convertir la version Fetch de l'application en une version XHR. Faites une [copie du fichier ZIP](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true) et essayiez de modifier le JavaScript en conséquence.
+Comme exercice pratique, nous aimerions que vous essayiez de convertir la version Fetch de l'application en une version XHR. Faites une [copie du fichier ZIP](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true) et essayiez de modifier le JavaScript en conséquence.
 
 Quelques conseils qui pourraient s'avérer utiles :
 
@@ -368,7 +368,7 @@ Quelques conseils qui pourraient s'avérer utiles :
 - Vous allez devoir utiliser le même modèle que vous avez vu plus tôt dans l'exemple [XHR-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html).
 - Vous devrez ajouter la gestion des erreurs que nous vous avons montré dans la version Fetch de Can Store :
 
-  - La réponse se situe dans `request.response` une fois que l'événement `load` a été déclenché et non dans une promesse.
+  - La réponse se situe dans `request.response` une fois que l'événement `load` a été déclenché et non dans une promesse.
   - Le meilleur équivalent à `response.ok` en XHR est de vérifier si {{domxref("XMLHttpRequest.status","request.status")}} vaut 200 ou si {{domxref("XMLHttpRequest.readyState","request.readyState")}} est égal à 4.
   - Les propriétés permettant d'obtenir le status et le message en cas d'erreur sont toujours `status` et `statusText` mais elles se situent sur l'objet `request` (XHR) et non sur l'objet `response`.
 

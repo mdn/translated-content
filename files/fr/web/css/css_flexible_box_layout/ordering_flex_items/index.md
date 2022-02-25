@@ -69,17 +69,17 @@ Dans l'exemple qui suit, on dispose de 5 objets flexibles et on affecte les vale
 
 - Premier élément selon la source : `order: 2`
 - Deuxième élément selon la source : `order: 3`
-- Troisième élément selon la source : `order: 1`
-- Quatrième élément selon la source :`order: 3`
-- Cinquième élément selon la source :`order: 1`
+- Troisième élément selon la source : `order: 1`
+- Quatrième élément selon la source :`order: 3`
+- Cinquième élément selon la source :`order: 1`
 
 Les éléments seront affichés sur la page dans l'ordre suivant :
 
-- Troisième élément selon la source&nbsp;: `order: 1`
-- Cinquième élément selon la source : `order: 1`
-- Premier élément selon la source&nbsp;: `order: 2`
-- Deuxième élément selon la source : `order: 3`
-- Quatrième élément selon la source : `order: 3`
+- Troisième élément selon la source&nbsp;: `order: 1`
+- Cinquième élément selon la source : `order: 1`
+- Premier élément selon la source&nbsp;: `order: 2`
+- Deuxième élément selon la source : `order: 3`
+- Quatrième élément selon la source : `order: 3`
 
 ![Les éléments contiennent un nombre qui illustre leur ordre selon la source et on peut voir que leur ordre visuel a été réarrangé.](order-property.png)
 

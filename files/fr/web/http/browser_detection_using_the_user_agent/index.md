@@ -66,25 +66,25 @@ Faites aussi attention à ne pas utiliser une expression régulière trop simple
       <td>Firefox</td>
       <td>Firefox/xyz</td>
       <td>Seamonkey/xyz</td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>Seamonkey</td>
       <td>Seamonkey/xyz</td>
-      <td> </td>
-      <td> </td>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>Chrome</td>
       <td>Chrome/xyz</td>
       <td>Chromium/xyz</td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>Chromium</td>
       <td>Chromium/xyz</td>
-      <td> </td>
-      <td> </td>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>Safari</td>
@@ -101,7 +101,7 @@ Faites aussi attention à ne pas utiliser une expression régulière trop simple
         <p>OPR/xyz></p>
         <p>Opera/xyz</p>
       </td>
-      <td> </td>
+      <td> </td>
       <td>
         <p>Opera 15+ (moteur de rendu Blink)</p>
         <p>Opera 12- (moteur de rendu Presto)</p>
@@ -110,7 +110,7 @@ Faites aussi attention à ne pas utiliser une expression régulière trop simple
     <tr>
       <td>Internet Explorer</td>
       <td>;MSIE xyz;</td>
-      <td> </td>
+      <td> </td>
       <td>
         Internet Explorer n'utilise pas le format
         <em>NomDuNavigateur/NuméroDeVersion</em>

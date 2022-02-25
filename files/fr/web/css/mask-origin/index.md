@@ -48,7 +48,7 @@ Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une
 - `content-box`
   - : La position de la zone est relative à la boîte de contenu.
 - `padding-box`
-  - : La position de la zone est relative à la boîte de remplissage (_padding_). Pour les boîtes simples, `0 0` désigne le coin en haut à gauche de la bordure de cette boîte et `100% 100%` le coin en bas à droite.
+  - : La position de la zone est relative à la boîte de remplissage (_padding_). Pour les boîtes simples, `0 0` désigne le coin en haut à gauche de la bordure de cette boîte et `100% 100%` le coin en bas à droite.
 - `border-box`
   - : La position de la zone est relative à la boîte de bordure.
 - `margin-box`

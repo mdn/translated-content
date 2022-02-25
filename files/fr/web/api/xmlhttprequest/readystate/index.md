@@ -51,7 +51,7 @@ La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve u
 - UNSENT
   - : Le client XMLHttpRequest a été créé, mais la méthode open() n'a pas encore été appelée.
 - OPENED
-  - : La méthode open() a été invoquée. Pendant cet état, les en-têtes de requête peuvent être définis à l'aide de la méthode [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader)  et la méthode [send()](/en-US/docs/Web/API/XMLHttpRequest/send)  peut être appelée, ce qui lancera la récupération.
+  - : La méthode open() a été invoquée. Pendant cet état, les en-têtes de requête peuvent être définis à l'aide de la méthode [setRequestHeader()](/en-US/docs/Web/API/XMLHttpRequest/setRequestHeader)  et la méthode [send()](/en-US/docs/Web/API/XMLHttpRequest/send)  peut être appelée, ce qui lancera la récupération.
 - HEADERS_RECEIVED
   - : send() a été appelé et les en-têtes de réponse ont été reçus
 - LOADING

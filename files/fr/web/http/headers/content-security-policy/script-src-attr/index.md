@@ -18,7 +18,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-attr`** spécifie les sources valides pour du code JavaScript embarqué dans des éléments {{HTMLElement("script")}} ou dans des gestionnaires d'évènements par attribut comme `onclick`, mais non les URL chargées par des éléments {{HTMLElement("script")}}.
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-attr`** spécifie les sources valides pour du code JavaScript embarqué dans des éléments {{HTMLElement("script")}} ou dans des gestionnaires d'évènements par attribut comme `onclick`, mais non les URL chargées par des éléments {{HTMLElement("script")}}.
 
 <table class="properties">
   <tbody>

@@ -68,51 +68,51 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     <table>
       <tbody>
         <tr>
-          <td> </td>
+          <td> </td>
           <td><code>black</code> = "#000000"</td>
-          <td> </td>
+          <td> </td>
           <td><code>green</code> = "#008000"</td>
         </tr>
         <tr>
-          <td> </td>
+          <td> </td>
           <td><code>silver</code> = "#C0C0C0"</td>
-          <td> </td>
+          <td> </td>
           <td><code>lime</code> = "#00FF00"</td>
         </tr>
         <tr>
-          <td> </td>
+          <td> </td>
           <td><code>gray</code> = "#808080"</td>
-          <td> </td>
+          <td> </td>
           <td><code>olive</code> = "#808000"</td>
         </tr>
         <tr>
-          <td> </td>
+          <td> </td>
           <td><code>white</code> = "#FFFFFF"</td>
-          <td> </td>
+          <td> </td>
           <td><code>yellow</code> = "#FFFF00"</td>
         </tr>
         <tr>
-          <td> </td>
+          <td> </td>
           <td><code>maroon</code> = "#800000"</td>
-          <td> </td>
+          <td> </td>
           <td><code>navy</code> = "#000080"</td>
         </tr>
         <tr>
-          <td> </td>
+          <td> </td>
           <td><code>red</code> = "#FF0000"</td>
-          <td> </td>
+          <td> </td>
           <td><code>blue</code> = "#0000FF"</td>
         </tr>
         <tr>
-          <td> </td>
+          <td> </td>
           <td><code>purple</code> = "#800080"</td>
-          <td> </td>
+          <td> </td>
           <td><code>teal</code> = "#008080"</td>
         </tr>
         <tr>
-          <td> </td>
+          <td> </td>
           <td><code>fuchsia</code> = "#FF00FF"</td>
-          <td> </td>
+          <td> </td>
           <td>
             <p><code>aqua</code> = "#00FFFF"</p>
           </td>

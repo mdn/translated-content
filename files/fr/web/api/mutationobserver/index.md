@@ -47,7 +47,7 @@ Le constructeur permettant d’instancier un nouvel observateur de mutations DOM
   </tbody>
 </table>
 
-> **Note :** La cible {{domxref("Node")}} ne doit pas être confondue avec celle de [NodeJS](https://nodejs.org/en/).
+> **Note :** La cible {{domxref("Node")}} ne doit pas être confondue avec celle de [NodeJS](https://nodejs.org/en/).
 
 ### `observe()`
 

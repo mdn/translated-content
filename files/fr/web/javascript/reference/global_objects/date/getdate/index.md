@@ -32,7 +32,7 @@ Un entier entre 1 et 31 correspondant au jour du mois de la date indiquée selon
 
 ### Utiliser `getDate()`
 
-La seconde instruction ci-dessous affecte la valeur 25 à la variable `jour`, d'après la valeur de l'objet {{jsxref("Date")}} `Noel95`.
+La seconde instruction ci-dessous affecte la valeur 25 à la variable `jour`, d'après la valeur de l'objet {{jsxref("Date")}} `Noel95`.
 
 ```js
 var Noel95 = new Date("December 25, 1995 23:15:00");

@@ -90,7 +90,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview
       <td>
         <ul>
           <li>
-            Packager votre extension avec la <a
+            Packager votre extension avec la <a
               href="/fr/Add-ons/WebExtensions/Getting_started_with_web-ext#Packaging_your_extension"
             >
               brique web-ext</a

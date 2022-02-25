@@ -6,11 +6,11 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/stroke-dasharray
 ---
-L'attribut `stroke-dasharray` contrôle le motif et l'espacement entre les segments utilisés pour tracer le contour d'un élément via l'attribut stroke. L'attribut définit ainsi un motif constitué d'une suite de segments et de vides dont la forme se rapprochera d'une ligne de pointillés.
+L'attribut `stroke-dasharray` contrôle le motif et l'espacement entre les segments utilisés pour tracer le contour d'un élément via l'attribut stroke. L'attribut définit ainsi un motif constitué d'une suite de segments et de vides dont la forme se rapprochera d'une ligne de pointillés.
 
 > **Note :** Comme il s'agit d'un attribut de présentation, `stroke-dasharray `peut aussi être utilisé directement dans une feuille de style CSS.
 
-Les éléments suivants peuvent utiliser l'attribut `stroke-dasharray`: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
+Les éléments suivants peuvent utiliser l'attribut `stroke-dasharray`: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 
 ## Exemple
 
@@ -59,7 +59,7 @@ html,body,svg { height:100% }
 </table>
 
 - \<dasharray>
-  - : Il s'agit d'une liste de mesures [\<length>](/fr/SVG/Content_type#Length "en/SVG/Content_type#Length") et [\<percentage>](/fr/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") séparées par des virgules ou des espaces blancs. Ils permettent de spécifier la longeur de l'alternance entre segments et vides. Si un nombre impair de valeurs est entré, alors la liste sera répartie afin de créer un nombre pair de valeurs par répétition. Ainsi, **5,3,2** sera rendu comme **5,3,2,5,3,2**.
+  - : Il s'agit d'une liste de mesures [\<length>](/fr/SVG/Content_type#Length "en/SVG/Content_type#Length") et [\<percentage>](/fr/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") séparées par des virgules ou des espaces blancs. Ils permettent de spécifier la longeur de l'alternance entre segments et vides. Si un nombre impair de valeurs est entré, alors la liste sera répartie afin de créer un nombre pair de valeurs par répétition. Ainsi, **5,3,2** sera rendu comme **5,3,2,5,3,2**.
 
 ## Compatibilité des navigateurs
 

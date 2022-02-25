@@ -82,4 +82,4 @@ if (document.elementsFromPoint) {
 ## Voir aussi
 
 - {{DOMxRef("DocumentOrShadowRoot.elementFromPoint()")}}
-- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}
+- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()")}} {{Non-standard_Inline}}

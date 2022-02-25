@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
 
 Met à jour un élément de menu précédemment créé.
 
-Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
+Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

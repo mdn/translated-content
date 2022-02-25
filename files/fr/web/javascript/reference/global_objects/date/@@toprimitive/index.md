@@ -26,7 +26,7 @@ La valeur primitive de l'objet {{jsxref("Date")}}. Selon la valeur de l'argument
 
 La méthode `[@@toPrimitive]()` de {{jsxref("Date")}} renvoie une valeur primitive qui est un nombre ou une chaîne de caractère.
 
-Si le paramètre `hint` vaut `"string"` ou `"default"`, `[@@toPrimitive]()` tentera d'appeler la méthode {{jsxref("Object.prototype.toString()", "toString")}}, si la propriété `toString()` n'existe pas, elle tentera alors d'appeler la méthode {{jsxref("Object.prototype.valueOf()", "valueOf")}}, si cette dernière n'existe pas non plus, `[@@toPrimitive]()` lèvera une exception {{jsxref("TypeError")}}.
+Si le paramètre `hint` vaut `"string"` ou `"default"`, `[@@toPrimitive]()` tentera d'appeler la méthode {{jsxref("Object.prototype.toString()", "toString")}}, si la propriété `toString()` n'existe pas, elle tentera alors d'appeler la méthode {{jsxref("Object.prototype.valueOf()", "valueOf")}}, si cette dernière n'existe pas non plus, `[@@toPrimitive]()` lèvera une exception {{jsxref("TypeError")}}.
 
 Si le paramètre `hint` vaut `"number"`, `[@@toPrimitive]()` tentera d'abord un appel à `valueOf()` puis ensuite un appel à `toString()`.
 

@@ -69,7 +69,7 @@ La première ligne obtient le {{HTMLElement("canvas")}} dans le DOM en appelant 
 
 ## Vérification de la prise en charge
 
-Le contenu de repli est affiché dans les navigateurs qui ne prennent pas en charge l'élément {{HTMLElement("canvas")}}. Les scripts peuvent aussi vérifier la prise en charge de manière programmatique en vérifiant la présence de la méthode `getContext()`. Notre extrait de code ci-dessus se transforme donc en ceci :
+Le contenu de repli est affiché dans les navigateurs qui ne prennent pas en charge l'élément {{HTMLElement("canvas")}}. Les scripts peuvent aussi vérifier la prise en charge de manière programmatique en vérifiant la présence de la méthode `getContext()`. Notre extrait de code ci-dessus se transforme donc en ceci :
 
 ```js
 var canvas = document.getElementById('tutorial');
@@ -110,7 +110,7 @@ Voici un modèle minimaliste, que nous allons utiliser comme point de départ da
 </html>
 ```
 
-Ce script contient une fonction `draw()`, qui est exécutée lorsque la page a fini de charger. Ce résultat est obtenu en utilisant l'événement de chargement du document. Cette fonction, ou une fonction similaire, pourrait aussi être appelé en utilisant {{domxref("window.setTimeout()")}}, {{domxref("window.setInterval()")}}, ou n'importe quel autre gestionnaire d'événement, tant que la page est chargée en premier.
+Ce script contient une fonction `draw()`, qui est exécutée lorsque la page a fini de charger. Ce résultat est obtenu en utilisant l'événement de chargement du document. Cette fonction, ou une fonction similaire, pourrait aussi être appelé en utilisant {{domxref("window.setTimeout()")}}, {{domxref("window.setInterval()")}}, ou n'importe quel autre gestionnaire d'événement, tant que la page est chargée en premier.
 
 Voici à quoi le modèle ressemble :
 

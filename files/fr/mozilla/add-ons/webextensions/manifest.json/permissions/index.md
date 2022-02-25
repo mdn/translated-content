@@ -50,7 +50,7 @@ La clé peut contenir trois types d'autorisations:
 
 ## Les permissions d'hôte
 
-Les permissions d'hôte sont spécifiées comme [modèles de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), et chaque modèle identifie un groupe d'URL pour lequel l'extension demande des privilèges supplémentaires. Par exemple, une autorisation d'hôte pourrait être `"*://developer.mozilla.org/*"`.
+Les permissions d'hôte sont spécifiées comme [modèles de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), et chaque modèle identifie un groupe d'URL pour lequel l'extension demande des privilèges supplémentaires. Par exemple, une autorisation d'hôte pourrait être `"*://developer.mozilla.org/*"`.
 
 Les privilèges supplémentaires incluent :
 
@@ -141,7 +141,7 @@ Les privilèges supplémentaires sont les suivants :
 - La capacité d'injecter du JavaScript ou du CSS dans l'onglet par programme, en utilisant [`browser.tabs.executeScript`](/fr/Add-ons/WebExtensions/API/tabs/executeScript) et  [`browser.tabs.insertCSS`](/fr/Add-ons/WebExtensions/API/tabs/insertCSS)
 - L'accès aux parties privilégiées des onglets de l'API pour l'onglet actuel : Tab.url, Tab.title et Tab.faviconUrl.
 
-L'objectif de cette permission est de permettre aux extensions de réaliser une utilisation courante, sans avoir à leur accorder de permissions très puissantes. Beaucoup d'extensions veulent "faire quelque chose à la page courante quand l'utilisateur le demande". Par exemple, considérez une extension qui veut exécuter un script dans la page courante quand l'utilisateur clique sur une action de navigateur. Si la permission `activeTab` n'existait pas, l'extension devrait demander une permission d'hôte \<all_urls>. Mais cela donnerait à l'extension plus de puissance que nécessaire : elle pourrait désormais exécuter des scripts dans n'importe quel onglet, à tout moment, plutôt que simplement dans l'onglet actif et juste en réponse à une action de l'utilisateur.
+L'objectif de cette permission est de permettre aux extensions de réaliser une utilisation courante, sans avoir à leur accorder de permissions très puissantes. Beaucoup d'extensions veulent "faire quelque chose à la page courante quand l'utilisateur le demande". Par exemple, considérez une extension qui veut exécuter un script dans la page courante quand l'utilisateur clique sur une action de navigateur. Si la permission `activeTab` n'existait pas, l'extension devrait demander une permission d'hôte \<all_urls>. Mais cela donnerait à l'extension plus de puissance que nécessaire : elle pourrait désormais exécuter des scripts dans n'importe quel onglet, à tout moment, plutôt que simplement dans l'onglet actif et juste en réponse à une action de l'utilisateur.
 
 Notez que vous ne pouvez accéder qu'à l'onglet ou aux données qui s'y trouvaient au moment de l'interaction de l'utilisateur (par exemple le clic). Lorsque l'onglet actif s'éloigne, par exemple en raison d'un chargement terminé ou d'un autre événement, l'autorisation ne vous donne plus accès à l'onglet.
 

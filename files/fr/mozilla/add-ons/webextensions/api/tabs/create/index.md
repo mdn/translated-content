@@ -42,7 +42,7 @@ var creating = browser.tabs.create(
     - `openerTabId`{{optional_inline}}
       - : `integer`. L'ID de l'onglet qui a ouvert cet onglet. Si spécifié, l'onglet d'ouverture doit être dans la même fenêtre que l'onglet nouvellement créé.
     - `openInReaderMode`{{optional_inline}}
-      - : `boolean`. si `true`, ouvrez cet onglet en [mode lecture](/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Par défaut à  `false`.
+      - : `boolean`. si `true`, ouvrez cet onglet en [mode lecture](/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Par défaut à  `false`.
     - `pinned`{{optional_inline}}
       - : `boolean`. Si l'onglet doit être épinglé. Par défaut à `false`.
     - `selected`{{optional_inline}}

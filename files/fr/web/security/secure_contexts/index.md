@@ -3,7 +3,7 @@ title: Secure Contexts
 slug: Web/Security/Secure_Contexts
 translation_of: Web/Security/Secure_Contexts
 ---
-Un navigateur entre dans un **contexte sécurisé** quand il a satisfait les exigences minimale de sécurité. Un contexte sécurisé permet au navigateur de mettre à disposition des APIs qui nécessitent des transferts sécurisés avec l'utilisateur.
+Un navigateur entre dans un **contexte sécurisé** quand il a satisfait les exigences minimale de sécurité. Un contexte sécurisé permet au navigateur de mettre à disposition des APIs qui nécessitent des transferts sécurisés avec l'utilisateur.
 
 
 
@@ -19,13 +19,13 @@ Certaines APIs du web peuvent donner beaucoup de pouvoir à un attaqueur, lui pe
 
 Un contexte sera considéré comme sécurisé s'il est servi locallement, ou depuis un serveur sécurisé. Un contexte qui n'est pas à la racine (une page qui n'est pas dans une fenêtre, iframe, ...) doit avoir tous ses contextes parents sécurisés.
 
-Les fichiers servis locallement avec des chemins comme *http\://localhost* et *file://* sont considérés sécurisés.
+Les fichiers servis locallement avec des chemins comme *http\://localhost* et *file://* sont considérés sécurisés.
 
-Les contextes qui ne sont pas servis locallement doivent être servis avec *https\://* ou *wss\://* et les protocoles utilisés ne doivent pas être considérés obsolètes.
+Les contextes qui ne sont pas servis locallement doivent être servis avec *https\://* ou *wss\://* et les protocoles utilisés ne doivent pas être considérés obsolètes.
 
 ## Détection des fonctionnalités
 
-Les pages peuvent utiliser la détection de fonctionnalités pour vérifier si elles sont dans un context sécurisé ou non en utilisant le booléen `isSecureContext `qui est présent dans le scope global.
+Les pages peuvent utiliser la détection de fonctionnalités pour vérifier si elles sont dans un context sécurisé ou non en utilisant le booléen `isSecureContext `qui est présent dans le scope global.
 
 ```js
 if (window.isSecureContext) {
@@ -36,7 +36,7 @@ if (window.isSecureContext) {
 }
 ```
 
-## Quelles APIs requièrent un contexte sécurisé ?
+## Quelles APIs requièrent un contexte sécurisé ?
 
 - {{SpecName('Service Workers')}}
 - {{SpecName('Web Bluetooth')}}
@@ -56,7 +56,7 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
 <table class="standard-table">
   <tbody>
     <tr>
-      <td> </td>
+      <td> </td>
       <td>Chrome</td>
       <td>Safari</td>
       <td>Firefox</td>
@@ -71,11 +71,11 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
           >
         </p>
       </td>
-      <td> </td>
+      <td> </td>
       <td>
         <p>
           Accès temporaire uniquement (les utilisateurs ne peuvent pas choisir
-          "Retenir ce choix" dans la selection de permission).
+          "Retenir ce choix" dans la selection de permission).
         </p>
       </td>
     </tr>
@@ -107,20 +107,20 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
     <tr>
       <td>EME</td>
       <td>Avertissement de dépréciation</td>
-      <td> </td>
-      <td> </td>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>Device motion / orientation</td>
       <td>Avertissement de dépréciation</td>
-      <td> </td>
-      <td> </td>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>MIDI</td>
       <td>Désactivé</td>
-      <td> </td>
-      <td> </td>
+      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td><em>{{SpecName('Web Crypto API')}}</em></td>
@@ -130,13 +130,13 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
           antérieur</em
         >
       </td>
-      <td> </td>
-      <td> </td>
+      <td> </td>
+      <td> </td>
     </tr>
   </tbody>
 </table>
 
-Pour vérifier le support de votre navigateur, utilisez le site: http\://permission.site
+Pour vérifier le support de votre navigateur, utilisez le site: http\://permission.site
 
 _Note: Safari et Chrome ne supportent pas complètement la spécification des Secure Contexts, certaines APIs peuvent fonctionner avec des iframes utilisant du HTTPS dans une page utilisant du HTTP ou dans une page qui a un contexte ouvert avec une page non sécurisée (c'est le cas quand une page utilisant du HTTP utilise window\.open ou target="\_blank")._
 

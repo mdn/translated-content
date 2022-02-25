@@ -11,7 +11,7 @@ tags:
   - Écran
 translation_of: Web/API/Window/screen
 ---
-{{APIRef("CSSOM View")}}Retourne une référence à l'objet `screen` associé à la fenêtre. L'object `screen`, qui implémente l'interface {{domxref("Screen")}}, est un objet spécial servant à examiner les propriétés de l'écran qui affiche la fenêtre courante.
+{{APIRef("CSSOM View")}}Retourne une référence à l'objet `screen` associé à la fenêtre. L'object `screen`, qui implémente l'interface {{domxref("Screen")}}, est un objet spécial servant à examiner les propriétés de l'écran qui affiche la fenêtre courante.
 
 ## Syntaxe
 

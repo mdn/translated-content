@@ -71,7 +71,7 @@ first.onchange = function() {
   }
 ```
 
-Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété `ports` de l'événement {{event("connect")}} — nous utilisons alors la méthode {{domxref("MessagePort")}} `start()` pour démarrer le port, et le gestionnaire `onmessage` pour s'occuper des messages en provenance des threads principaux.
+Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété `ports` de l'événement {{event("connect")}} — nous utilisons alors la méthode {{domxref("MessagePort")}} `start()` pour démarrer le port, et le gestionnaire `onmessage` pour s'occuper des messages en provenance des threads principaux.
 
 ```js
 onconnect = function(e) {

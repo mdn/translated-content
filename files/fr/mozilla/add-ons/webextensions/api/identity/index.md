@@ -23,7 +23,7 @@ L'API d'identité fournit la fonction {{WebExtAPIRef("identity.launchWebAuthFlow
 
 L'extension termine alors le flux OAuth2 pour obtenir un jeton d'accès validé, et peut ensuite l'utiliser dans les requêtes HTTP pour accéder aux données de l'utilisateur en fonction de l'autorisation donnée par l'utilisateur.
 
-Pour utiliser cette API, vous devez posséder la [permission de l'API ](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)"identity"
+Pour utiliser cette API, vous devez posséder la [permission de l'API ](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)"identity"
 
 ## Installer
 

@@ -107,7 +107,7 @@ translation_of: Web/API/XMLHttpRequest/response
   </tbody>
 </table>
 
-> **Note :** À partir de Gecko 11.0 {{geckoRelease("11.0")}} et de WebKit build 528, ces navigateurs ne permettent plus l'utilisation de l'attribut `responseType` lors des requêtes synchrones. Cela renvoi l'erreur `NS_ERROR_DOM_INVALID_ACCESS_ERR`. Ce changement a été proposé au W3C afin d'être standardisé.
+> **Note :** À partir de Gecko 11.0 {{geckoRelease("11.0")}} et de WebKit build 528, ces navigateurs ne permettent plus l'utilisation de l'attribut `responseType` lors des requêtes synchrones. Cela renvoi l'erreur `NS_ERROR_DOM_INVALID_ACCESS_ERR`. Ce changement a été proposé au W3C afin d'être standardisé.
 
 ## Example
 

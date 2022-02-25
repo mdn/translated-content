@@ -66,9 +66,9 @@ The Paciello Group propose des [informations sur l'état du support des zones "L
 - aria-relevant :
   - : L’attribut `aria-relevant=[LISTE_DES_CHANGEMENTS]` est utilisé pour définir quel type de changements est adéquat à une zone «&nbsp;Live&nbsp;» – les valeurs possibles sont `additions` (addition)/`removals` (suppression)/`text` (texte)/`all` (tous). La valeur par défaut est «&nbsp;`additions text`.&nbsp;»
 - aria-labelledby :
-  - : L’attribut `aria-labelledby=[LISTE_ID]` est utilisé pour associer un ou des libellés à une zone. Le fonctionnement est similaire à celui d'`aria-controls` mais les références d'id pointent vers les libellés associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
+  - : L’attribut `aria-labelledby=[LISTE_ID]` est utilisé pour associer un ou des libellés à une zone. Le fonctionnement est similaire à celui d'`aria-controls` mais les références d'id pointent vers les libellés associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
 - aria-describedby :
-  - : L’attribut `aria-describedby=[LISTE_ID]` est utilisé pour associer une ou des descriptions à une zone. Le fonctionnement est similaire à celui d'`aria-controls `mais les références d'id pointent vers les textes descriptifs associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
+  - : L’attribut `aria-describedby=[LISTE_ID]` est utilisé pour associer une ou des descriptions à une zone. Le fonctionnement est similaire à celui d'`aria-controls `mais les références d'id pointent vers les textes descriptifs associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
 
 ### Cas d’étude avancé&nbsp;: liste de contacts
 
@@ -82,7 +82,7 @@ Un site de chat voudrait afficher la liste des utilisateurs actuellement connect
 
 #### Détails des propriétés « live&nbsp;» d’ARIA&nbsp;:
 
-- L’attribut `aria-live="polite"` indique au lecteur d’écran qu’il doit attendre que l’utilisateur soit inactif avant de lui présenter une mise à jour. C’est la valeur la plus communément utilisée, car interrompre l’utilisateur avec la valeur `assertive` briserait son flux de lecture.
+- L’attribut `aria-live="polite"` indique au lecteur d’écran qu’il doit attendre que l’utilisateur soit inactif avant de lui présenter une mise à jour. C’est la valeur la plus communément utilisée, car interrompre l’utilisateur avec la valeur `assertive` briserait son flux de lecture.
 - L’attribut `aria-atomic` n’est pas défini (`false` par défaut), ainsi seuls les utilisateurs ajoutés ou supprimés devraient être lus et non l’intégralité de la liste, à chaque mise à jour.
 - L’attribut `aria-relevant="additions removals"` assure à la fois que les utilisateurs ajoutés et supprimés de la liste seront lus.
 

@@ -15,7 +15,7 @@ original_slug: Apprendre/JavaScript/Building_blocks
 ---
 {{JsSidebar}}{{PreviousNext("Learn/JavaScript/First_steps", "Learn/JavaScript/Objects")}}
 
-Dans ce module nous allons continuer à voir l'ensemble des fonctionnalités clefs du JavaScript en nous concentrant plus particulièrement sur les structures les plus répandues telles que les conditions, les boucles, les fonctions et les événements. Nous avons déjà vu ces notions dans le cours mais sans nous y attarder, nous allons maintenant les étudier en détails.
+Dans ce module nous allons continuer à voir l'ensemble des fonctionnalités clefs du JavaScript en nous concentrant plus particulièrement sur les structures les plus répandues telles que les conditions, les boucles, les fonctions et les événements. Nous avons déjà vu ces notions dans le cours mais sans nous y attarder, nous allons maintenant les étudier en détails.
 
 ## Prérequis
 
@@ -28,7 +28,7 @@ Avant de commencer ce module, vous devriez connaître les bases du [HTML ](/fr/A
 - [Prendre des décisions dans votre code — les conditions](/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
   - : Quelque soit le langage de programmation, notre programme doit prendre des décisions et effectuer des actions différentes selon les valeurs traitées. Dans un jeu par exemple, si le nombre de vies du joueur est égal à 0, le jeu s'achève. Sur le même principe, une application météo affiche un fond d'aube si elle est lancée le matin, des étoiles et la Lune si, au contraire, elle est lancée la nuit. Dans cet article, nous allons voir comment les structures conditionnelles fonctionnent en JavaScript.
 - [Les boucles](/fr/Apprendre/JavaScript/Building_blocks/Looping_code)
-  - : Parfois une action doit être réalisée plusieurs fois d'affilée. Par exemple, parcourir une liste de noms. En programmation, les boucles effectuent ce genre de tâches à merveille. Ici, nous allons examiner les structures de boucles en JavaScript.
+  - : Parfois une action doit être réalisée plusieurs fois d'affilée. Par exemple, parcourir une liste de noms. En programmation, les boucles effectuent ce genre de tâches à merveille. Ici, nous allons examiner les structures de boucles en JavaScript.
 - [Les fonctions — réutiliser des blocs de code](/fr/docs/Learn/JavaScript/Building_blocks/Functions)
   - : Un autre concept essentiel en programmation est celui de **fonctions.** Les **fonctions** permettent de définir un morceau de code réalisant une tâche particulière qui pourra être appelé ultérieurement dans le reste du programme par une simple ligne, ce qui évite d'écrire plusieurs fois le même code. Dans cet article, nous allons voir les concepts qui se cachent derrière les fonctions tels que la syntaxe de base, la définition et l'appel d'une fonction, sa portée et ses paramètres.
 - [Créez votre propre fonction](/fr/Apprendre/JavaScript/Building_blocks/Build_your_own_function)

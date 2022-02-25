@@ -75,7 +75,7 @@ var addingUrl = browser.history.addUrl({url: "https://example.org/"});
 addingUrl.then(onAdded);
 ```
 
-Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition`  "typed":
+Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition`  "typed":
 
 ```js
 const DAY = 24 * 60* 60 * 1000;

@@ -107,7 +107,7 @@ We talked about some of the problems that prompted WAI-ARIA to be created earlie
 
 1.  **Signposts/Landmarks**: ARIA's `role` attribute values can act as landmarks that either replicate the semantics of HTML5 elements (e.g. {{htmlelement("nav")}}), or go beyond HTML5 semantics to provide signposts to different functional areas, e.g `search`, `tabgroup`, `tab`, `listbox`, etc.
 2.  **Dynamic content updates**: Screenreaders tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screenreader users when an area of content is updated, e.g. via [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest), or [DOM APIs](/fr/docs/Web/API/Document_Object_Model).
-3.  **Enhancing keyboard accessibility**: There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screenreader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using `tabindex`).
+3.  **Enhancing keyboard accessibility**: There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screenreader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using `tabindex`).
 4.  **Accessibility of non-semantic controls**: When a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screenreader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like `button`, `listbox`, or `tabgroup`, and properties like `aria-required` or `aria-posinset` to provide further clues as to functionality.
 
 One thing to remember though — **you should only use WAI-ARIA when you need to!** Ideally, you should _always_ use [native HTML features](/fr/docs/Learn/Accessibility/HTML) to provide the semantics required by screenreaders to tell their users what is going on. Sometimes this isn't possible, either because you have limited control over the code, or because you are creating something complex that doesn't have an easy HTML element to implement it. In such cases, WAI-ARIA can be a valuable accessibility enhancing tool.
@@ -290,7 +290,7 @@ We could go further with our ARIA usage, and provide some more validation help. 
     <p>Fields marked with an asterisk (*) are required.</p>
     ```
 
-4.  This makes visual sense, but it isn't as easy to understand for screenreader users. Fortunately, WAI-ARIA provides the [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) attribute to give screenreaders hints that they should tell users that form inputs need to be filled in. Update the `<input>` elements like so:
+4.  This makes visual sense, but it isn't as easy to understand for screenreader users. Fortunately, WAI-ARIA provides the [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) attribute to give screenreaders hints that they should tell users that form inputs need to be filled in. Update the `<input>` elements like so:
 
     ```html
     <input type="text" name="name" id="name" aria-required="true">

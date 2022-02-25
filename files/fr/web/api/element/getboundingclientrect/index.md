@@ -86,9 +86,9 @@ Remarquez aussi que les valeurs de `x`/`left`,
 
 ### Notes
 
-L'objet `DOMRect` retourné peut être modifié dans les navigateurs modernes. Cela n'était pas le cas avec ceux plus anciens qui retournaient effectivement `DOMRectReadOnly`. Dans IE et Edge, ne pas pouvoir ajouter les propriétés manquantes à l'objet [ClientRect ](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>)qu'ils retournent empêche d'ajouter le support de `x` et `y`.
+L'objet `DOMRect` retourné peut être modifié dans les navigateurs modernes. Cela n'était pas le cas avec ceux plus anciens qui retournaient effectivement `DOMRectReadOnly`. Dans IE et Edge, ne pas pouvoir ajouter les propriétés manquantes à l'objet [ClientRect ](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>)qu'ils retournent empêche d'ajouter le support de `x` et `y`.
 
-En raison de problèmes de compatibilité (voir ci-dessous), il est plus sûr de se limiter aux propriétés `top`, `left`, `right`, et `bottom`.
+En raison de problèmes de compatibilité (voir ci-dessous), il est plus sûr de se limiter aux propriétés `top`, `left`, `right`, et `bottom`.
 
 Les propriétés dans l'objet `DOMRect` retourné ne sont pas possèdées pas ce dernier. Tandis que les opérateurs `in` et `for...in` vont trouver les propriétés retournées, les autres APIs comme Object.keys échoueront. De plus, et de façon inattendue, les fonctionnalités ES2015 et plus récentes telles que `Object.assign()` et les paramètres du reste / la décomposition d'un objet, ne réussiront pas à copier les propriétés retournées.
 

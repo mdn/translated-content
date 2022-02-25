@@ -40,7 +40,7 @@ L'**Internet** est l'épine dorsale du Web&nbsp;: il s'agit de l'infrastructure 
 
 ## Pédagogie active
 
-- [How the internet Works in 5 minutes](https://www.youtube.com/watch?v=7_LPdttKXPc)&nbsp;: Une vidéo d'une durée de 5 minutes réalisée par Aaron Titus afin d'expliquer les rudiments du fonctionnement de l'Internet. (_en anglais seulement_)
+- [How the internet Works in 5 minutes](https://www.youtube.com/watch?v=7_LPdttKXPc)&nbsp;: Une vidéo d'une durée de 5 minutes réalisée par Aaron Titus afin d'expliquer les rudiments du fonctionnement de l'Internet. (_en anglais seulement_)
 
 ## Allons plus loin
 
@@ -56,7 +56,7 @@ Un réseau comme celui illustré ci-haut n'est pas limité à deux ordinateurs. 
 
 ![Ten computers all together](internet-schema-2.png)
 
-Afin de résoudre ce problème, chaque ordinateur du réseau est relié à un petit ordinateur bien spécial que l'on appelle _routeur_. Ce _routeur_ n'a qu'une seule fonction&nbsp;: tout comme un signaleur de gare de train, il s'assure que les messages transmis par un ordinateur donné se rendent au bon ordinateur destinataire. Ainsi, pour envoyer un message à l'ordinateur B, l'ordinateur A transmet d'abord le message au routeur, qui s'assure alors de transférer le message à l'ordinateur B et non à l'ordinateur C.
+Afin de résoudre ce problème, chaque ordinateur du réseau est relié à un petit ordinateur bien spécial que l'on appelle _routeur_. Ce _routeur_ n'a qu'une seule fonction&nbsp;: tout comme un signaleur de gare de train, il s'assure que les messages transmis par un ordinateur donné se rendent au bon ordinateur destinataire. Ainsi, pour envoyer un message à l'ordinateur B, l'ordinateur A transmet d'abord le message au routeur, qui s'assure alors de transférer le message à l'ordinateur B et non à l'ordinateur C.
 
 Vous voyez donc que lorsque nous ajoutons un routeur dans notre structure, notre réseau de dix ordinateurs ne requiert alors que de dix câbles, d'une prise par ordinateur et d'un routeur de 10 ports.
 

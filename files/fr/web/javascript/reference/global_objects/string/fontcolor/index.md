@@ -48,7 +48,7 @@ console.log(worldString.fontcolor("FF00") + " avec la valeur hexadécimale sur c
 // '<font color="FF00">Coucou monde</font> avec la valeur hexadécimale sur cette ligne'
 ```
 
-L'objet {{domxref("HTMLElement.style", "element.style")}} permet d'utiliser l'attribut `style` de l'élément et de le manipuler de façon générique. Par exemple :
+L'objet {{domxref("HTMLElement.style", "element.style")}} permet d'utiliser l'attribut `style` de l'élément et de le manipuler de façon générique. Par exemple :
 
 ```js
 document.getElementById('IDdeVotreElement').style.color = 'red'

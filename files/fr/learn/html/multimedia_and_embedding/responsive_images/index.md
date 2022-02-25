@@ -49,7 +49,7 @@ Quel problème essayons-nous de résoudre avec des images adaptatives&nbsp;? Exa
 
 Cela fonctionne bien sur un appareil avec un grand écran, comme un portable ou un ordinateur de bureau (vous pouvez [voir cet exemple en direct](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) et trouver son [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) sur GitHub). Nous ne nous attarderons pas sur les CSS, excepté pour préciser ceci&nbsp;:
 
-- Le contenu du corps a été fixé à une largeur maximale de 1200 pixels — dans les fenêtres de largeur supérieure, il s'affiche sur 1200 pixels et se centre dans l'espace disponible. Dans celles de largeur inférieure, le contenu occupe 100 % de la largeur de la vue.
+- Le contenu du corps a été fixé à une largeur maximale de 1200 pixels — dans les fenêtres de largeur supérieure, il s'affiche sur 1200 pixels et se centre dans l'espace disponible. Dans celles de largeur inférieure, le contenu occupe 100 % de la largeur de la vue.
 - L'image d'en-tête est définie de sorte que son milieu soit toujours au centre de l'en-tête, quelle que soit sa largeur. Ainsi, si le site est regardé sur un écran moins large, le détail important au centre de l'image (les gens) peut toujours être vu, et l'excès est perdu de part et d'autre. L'image a une hauteur de 200 pixels.
 - Les images de contenu sont définies de sorte que si l'élément corps devient plus petit que l'image, les images se contractent pour rester toujours à l'intérieur du corps sans jamais déborder.
 

@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/translate
 ---
 {{APIRef}}
 
-La méthode **CanvasRenderingContext2D.translate()** de l'API Canvas 2D ajoute une transformation de translation en déplaçant le canevas et son origine x horizontalement et y verticalement sur la grille.
+La méthode **CanvasRenderingContext2D.translate()** de l'API Canvas 2D ajoute une transformation de translation en déplaçant le canevas et son origine x horizontalement et y verticalement sur la grille.
 
 ## Syntaxe
 
@@ -16,15 +16,15 @@ La méthode **CanvasRenderingContext2D.translate()** de l'API Canvas 2D ajoute u
 ### Paramètres
 
 - `x`
-  - : Distance de déplacement dans le sens horizontal.
+  - : Distance de déplacement dans le sens horizontal.
 - y
-  - : Distance de déplacement dans le sens vertical.
+  - : Distance de déplacement dans le sens vertical.
 
 ## Exemples
 
 ### Utilisation de la méthode `translate`
 
-Il s'agit seulement d'un extrait de code simple qui utilise la méthode translate.
+Il s'agit seulement d'un extrait de code simple qui utilise la méthode translate.
 
 #### HTML
 
@@ -45,7 +45,7 @@ ctx.fillRect(0, 0, 100, 100);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ```
 
-Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct sur le canevas :
+Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct sur le canevas :
 
 #### Code jouable
 

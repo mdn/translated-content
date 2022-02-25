@@ -15,9 +15,9 @@ translation_of: Web/API/Cache/put
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-La méthode **`put()`** de l'interface {{domxref("Cache")}} permet d'ajouter des paires clé/valeur à l'objet {{domxref("Cache")}} en cours.
+La méthode **`put()`** de l'interface {{domxref("Cache")}} permet d'ajouter des paires clé/valeur à l'objet {{domxref("Cache")}} en cours.
 
-Souvent, le comportement voulu est juste de {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser  {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations&nbsp;:
+Souvent, le comportement voulu est juste de {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} une ou plusieurs requête, et d'ajouter les résultats directement dans le cache. Dans ce type de cas, il est plus judicieux d'utiliser  {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}} , étant donné que ces méthodes sont des raccourcis pour une ou plusieurs de ces opérations&nbsp;:
 
 ```js
 fetch(url).then(function(response) {
@@ -28,11 +28,11 @@ fetch(url).then(function(response) {
 })
 ```
 
-> **Note :** `put()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.
+> **Note :** `put()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.
 
-> **Note :** Les implémentations initiales de Cache (à la fois dans Blink et Gecko) résolvent les promesses   {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, et {{domxref("Cache.put")}} quand le corps de la réponse est entièrement écrit en stockage.  Les versions plus récentes des spécifications sont plus précises en déclarant que le navigateur peut résoudre ces promesses dès que l'entrée est enregistrée en base de donnée, même si le reste de la requête est encore en train d'arriver.
+> **Note :** Les implémentations initiales de Cache (à la fois dans Blink et Gecko) résolvent les promesses   {{domxref("Cache.add")}}, {{domxref("Cache.addAll")}}, et {{domxref("Cache.put")}} quand le corps de la réponse est entièrement écrit en stockage.  Les versions plus récentes des spécifications sont plus précises en déclarant que le navigateur peut résoudre ces promesses dès que l'entrée est enregistrée en base de donnée, même si le reste de la requête est encore en train d'arriver.
 
-> **Note :** Depuis Chrome 46, l'API Cache ne stocke que les requêtes depuis des origines sécurisées, à savoir celles servies en HTTPS.
+> **Note :** Depuis Chrome 46, l'API Cache ne stocke que les requêtes depuis des origines sécurisées, à savoir celles servies en HTTPS.
 
 ## Syntaxe
 
@@ -53,14 +53,14 @@ cache.put(request, response).then(function() {
 
 Une {{jsxref("Promise", "Promesse")}} est retournée avec void.
 
-> **Note :** La promesse sera rompue avec un `TypeError` si le schéma d'URL n'est pas `http` ou `https`.
+> **Note :** La promesse sera rompue avec un `TypeError` si le schéma d'URL n'est pas `http` ou `https`.
 
 ## Exemples
 
-Cet extrait de code est tiré du MDN [sw-test example](https://github.com/mdn/sw-test/) (lancez [sw-test dans votre navigateur](https://mdn.github.io/sw-test/)). On attend le déclenchement d'un {{domxref("FetchEvent")}}, puis l'on va retourner une réponse spéciale d'après la procédure suivante&nbsp;:
+Cet extrait de code est tiré du MDN [sw-test example](https://github.com/mdn/sw-test/) (lancez [sw-test dans votre navigateur](https://mdn.github.io/sw-test/)). On attend le déclenchement d'un {{domxref("FetchEvent")}}, puis l'on va retourner une réponse spéciale d'après la procédure suivante&nbsp;:
 
-1.  Vérifier si un match pour la requête a été trouvé dans le {{domxref("CacheStorage")}} grâce à  {{domxref("CacheStorage.match","CacheStorage.match()")}} . Si oui, servir cette réponse.
-2.  Sinon, ouvrir le cache `v1` avec `open()`, insérer la requête réseau par défaut dans le cache via {{domxref("Cache.put","Cache.put()")}} , et retourner un clone de cette requête avec `return response.clone()` — nécessaire car `put()` détruit le corps de la réponse.
+1.  Vérifier si un match pour la requête a été trouvé dans le {{domxref("CacheStorage")}} grâce à  {{domxref("CacheStorage.match","CacheStorage.match()")}} . Si oui, servir cette réponse.
+2.  Sinon, ouvrir le cache `v1` avec `open()`, insérer la requête réseau par défaut dans le cache via {{domxref("Cache.put","Cache.put()")}} , et retourner un clone de cette requête avec `return response.clone()` — nécessaire car `put()` détruit le corps de la réponse.
 3.  En cas d'échec (e.g., car le réseau est inaccessible), retourner une réponse de secours.
 
 ```js

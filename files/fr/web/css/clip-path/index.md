@@ -10,7 +10,7 @@ translation_of: Web/CSS/clip-path
 ---
 {{CSSRef}}
 
-La propriété **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule une zone spécifique de l'élément sera affichée. La zone de rognage est un chemin défini avec une URL faisant référence à un SVG externe ou en ligne ou grâce à une fonction de forme comme [`circle()`](/fr/docs/Web/SVG/Element/circle).
+La propriété **`clip-path`** empêche une portion d'un élément d'être affichée en définissant une région de rognage. Seule une zone spécifique de l'élément sera affichée. La zone de rognage est un chemin défini avec une URL faisant référence à un SVG externe ou en ligne ou grâce à une fonction de forme comme [`circle()`](/fr/docs/Web/SVG/Element/circle).
 
 {{EmbedInteractiveExample("pages/css/clip-path.html")}}
 

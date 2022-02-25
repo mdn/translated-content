@@ -28,7 +28,7 @@ Mozilla supporte une large gamme de technologies open web vraiment intéressante
 - [Canvas ash1](https://glimr.rubyforge.org/cake/demos/canvas_ash.html)
 - [Canvas ash2](https://glimr.rubyforge.org/cake/demos/canvas_ash2.html)
 - [Canvas ash8](https://glimr.rubyforge.org/cake/demos/canvas_ash8.html)
-- [3D on 2D Canvas](https://gyu.que.jp/jscloth/)
+- [3D on 2D Canvas](https://gyu.que.jp/jscloth/)
 - [miniPaint - Image editor ](https://viliusle.github.io/miniPaint/)([source code](https://github.com/viliusle/miniPaint))
 
 ### SVG

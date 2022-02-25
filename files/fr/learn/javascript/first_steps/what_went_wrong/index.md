@@ -41,31 +41,31 @@ Après avoir créé le jeu "Devinez le nombre" de l'article précédent, vous av
 
 ## Types d' erreurs
 
-En règle générale, les erreurs dans un code sont à ranger dans deux catégories&nbsp;:
+En règle générale, les erreurs dans un code sont à ranger dans deux catégories&nbsp;:
 
-- **Erreurs de syntaxe&nbsp;:** Ce sont les fautes d'orthographe. Elles empêchent réellement le programme de fonctionner ou l'arrêtent en cours de chemin — elles sont accompagnées de messages d'erreur. Ces erreurs sont généralement simple à corriger, pour autant que vous connaissiez les bons outils et sachiez ce que signifient les messages&nbsp;!
-- **Erreurs logiques&nbsp;:** La syntaxe est correcte, mais le code n'est pas ce que vous attendiez&nbsp;: le programme tourne sans planter mais donne des résultats inattendus. Ces erreurs sont souvent plus difficiles à corriger que les erreurs de syntaxe, car il n'y a pas, en général, de message d'erreur pour vous diriger vers la source de l'erreur.
+- **Erreurs de syntaxe&nbsp;:** Ce sont les fautes d'orthographe. Elles empêchent réellement le programme de fonctionner ou l'arrêtent en cours de chemin — elles sont accompagnées de messages d'erreur. Ces erreurs sont généralement simple à corriger, pour autant que vous connaissiez les bons outils et sachiez ce que signifient les messages&nbsp;!
+- **Erreurs logiques&nbsp;:** La syntaxe est correcte, mais le code n'est pas ce que vous attendiez&nbsp;: le programme tourne sans planter mais donne des résultats inattendus. Ces erreurs sont souvent plus difficiles à corriger que les erreurs de syntaxe, car il n'y a pas, en général, de message d'erreur pour vous diriger vers la source de l'erreur.
 
-Bon, mais ce n'est pas si simple que cela — il y a d'autres facteurs de différenciation lorsque vous approfondissez. Mais la classification ci-dessus suffiira pour commencer. Nous examinerons ces deux catégories d'erreur un peu plus loin.
+Bon, mais ce n'est pas si simple que cela — il y a d'autres facteurs de différenciation lorsque vous approfondissez. Mais la classification ci-dessus suffiira pour commencer. Nous examinerons ces deux catégories d'erreur un peu plus loin.
 
 ## Un exemple erroné
 
 Pour commencer, revenons à notre jeu de devinettes numériques — sauf que cette fois-ci, nous explorerons une version qui comporte des erreurs délibérées. Allez sur Github et fabriquez vous-même une copie locale de [number-game-errors.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) ([voyez-la ici](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/troubleshooting/number-game-errors.html) en direct).
 
 1.  Pour commencer, ouvrez la copie locale avec votre éditeur de texte favoris.
-2.  Essayez de lancer le jeu — vous remarquerez que quand vous pressez le bouton
+2.  Essayez de lancer le jeu — vous remarquerez que quand vous pressez le bouton
 
     <kbd>Submit guess</kbd>
 
     , cela ne fonctionne pas!
 
-> **Note :** Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.
+> **Note :** Votre propre version de l'exemple de jeu ne fonctionne pas, vous pourriez vouloir la corriger ! Il nous semble plus efficace que vous travailliez sur notre version boguée, afin que vous puissiez apprendre les techniques que nous enseignons ici. Ensuite, vous pouvez revenir en arrière et essayer de réparer votre exemple.
 
 À ce stade, consultons la [console du développeur](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) pour voir si nous pouvons voir des erreurs de syntaxe, puis essayez de les corriger. Vous apprendrez comment ci-dessous.
 
 ## Réparer les erreurs de syntaxe
 
-Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la [console JavaScript](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) [des outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !
+Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la [console JavaScript](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) [des outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !
 
 1.  Allez à l'onglet dans lequel est affiché `number-game-errors.html`, et ouvrez la console  JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent&nbsp;: ![](not-a-function.png)
 2.  C'est une erreur très facile à trouver, et le navigateur vous fournit quelques indices pour vous en sortir (la copie d'écran ci‑dessus provient de Firefox, mais les autres navigateurs donnent des indications semblables). De gauche à droite, nous avons :
@@ -83,7 +83,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
     ```
 
 4.  Le message d'erreur dit "guessSubmit.addeventListener n'est pas une fonction", donc nous avons probablement mal orthographié quelque chose. Si vous n'êtes pas sûr de la bonne orthographe d'un élément syntaxique, il est fréquemment opportun de regarder dans MDN. Actuellement, la meilleure façon d'opérer consiste à faire une recherche pour  "mdn _nom-de-fonctionnalité_" avec votre moteur de recherche préféré. Voici un raccourci pour gagner un peu de temps dans le cas présent : [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener).
-5.  Donc, en regardant cette page, il apparaît que nous avions mal orthographié le nom de la fonction ! Souvenez-vous que JavaScript est sensible à la casse, et que la moindre différence dans l'orthographe ou la casse déclenchera une erreur. Remplacer `addeventListener` par `addEventListener` corrigera cela. Faisons‑le maintenant.
+5.  Donc, en regardant cette page, il apparaît que nous avions mal orthographié le nom de la fonction ! Souvenez-vous que JavaScript est sensible à la casse, et que la moindre différence dans l'orthographe ou la casse déclenchera une erreur. Remplacer `addeventListener` par `addEventListener` corrigera cela. Faisons‑le maintenant.
 
 > **Note :** Voyez la page relative à [TypeError: "x" is not a function](/fr/docs/Web/JavaScript/Reference/Errors/Not_a_function) pour plus de précisions à propos de cette erreur.
 
@@ -109,7 +109,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
     let lowOrHi = document.querySelector('lowOrHi');
     ```
 
-6.  Là, nous essayons de faire en sorte que la variable contienne une référence à un élément dans le HTML du document. Vérifions si sa valeur est `null` après que cette ligne ait été exécutée. Ajoutez le code suivant à la ligne 49&nbsp;:
+6.  Là, nous essayons de faire en sorte que la variable contienne une référence à un élément dans le HTML du document. Vérifions si sa valeur est `null` après que cette ligne ait été exécutée. Ajoutez le code suivant à la ligne 49&nbsp;:
 
     ```js
     console.log(lowOrHi);
@@ -137,9 +137,9 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 
 ## Une erreur de logique
 
-À ce stade, le jeu se déroule correctement, mais après avoir fait quelques parties, vous noterez sans doute que le nombre «&nbsp;aléatoire&nbsp;» à deviner est toujours 0 ou 1. Franchement, de quoi vous dégoûter de jouer&nbsp;!
+À ce stade, le jeu se déroule correctement, mais après avoir fait quelques parties, vous noterez sans doute que le nombre «&nbsp;aléatoire&nbsp;» à deviner est toujours 0 ou 1. Franchement, de quoi vous dégoûter de jouer&nbsp;!
 
-Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne renvoie pas d'erreur&nbsp;; il ne fonctionne pas correctement.
+Il y a sûrement un problème dans la logique du jeu quelque part — le jeu ne renvoie pas d'erreur&nbsp;; il ne fonctionne pas correctement.
 
 1.  Recherchons les lignes où la variable `randomNumber` est définie. L'instance qui stocke en début de jeu le nombre aléatoire à deviner se situe autour de la ligne 44&nbsp;:
 
@@ -205,7 +205,7 @@ en
 let userGuess === Number(guessField.value);
 ```
 
-cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation  (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat  `true`/`false` (vrai/faux).
+cela déclenchera cette même erreur car le logiciel pense que vous êtes en train de faire quelque chose d'autre. Vous devez vous assurer que vous n'avez pas confondu l'opérateur d'assignation  (`=`) — qui fixe une valeur donnée à une variable — avec l'opérateur (`===`) qui teste la stricte égalité de deux valeurs, et renvoie un résultat  `true`/`false` (vrai/faux).
 
 > **Note :** Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) pour plus de précisions à propos de cette erreur.
 
@@ -261,11 +261,11 @@ Pour toutes ces erreurs, revoyez comment nous avons opéré dans les exemples de
 
 ## Résumé
 
-Voilà ce que nous pouvons dire à propos des erreurs basiques pour de simples programmes JavaScript. Il n'est pas toujours aussi simple de détecter ce qui ne va pas dans du code, mais au moins vous économiserez ainsi quelques heures de veille et vous progresserez plus rapidement si les choses ne déraillent pas dès le début de votre parcours d'apprentissage.
+Voilà ce que nous pouvons dire à propos des erreurs basiques pour de simples programmes JavaScript. Il n'est pas toujours aussi simple de détecter ce qui ne va pas dans du code, mais au moins vous économiserez ainsi quelques heures de veille et vous progresserez plus rapidement si les choses ne déraillent pas dès le début de votre parcours d'apprentissage.
 
 ## Voir aussi
 
-- Il y a nombre d'autres erreurs qui n'ont pas été listées ici&nbsp;; nous les avons récolées dans un référencement qui les explique en détail — voyez [JavaScript error reference](/fr/docs/Web/JavaScript/Reference/Errors).
-- Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide&nbsp;! Demandez‑la sur le fil de discussion [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou par le canal IRC de [#mdn](irc://irc.mozilla.org/mdn) sur  [Mozilla IRC](https://wiki.mozilla.org/IRC). Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.
+- Il y a nombre d'autres erreurs qui n'ont pas été listées ici&nbsp;; nous les avons récolées dans un référencement qui les explique en détail — voyez [JavaScript error reference](/fr/docs/Web/JavaScript/Reference/Errors).
+- Si dans votre code vous rencontrez une erreur, et même après avoir lu cet article, vous ne parvenez pas à la corriger, vous pouvez obtenir de l'aide&nbsp;! Demandez‑la sur le fil de discussion [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou par le canal IRC de [#mdn](irc://irc.mozilla.org/mdn) sur  [Mozilla IRC](https://wiki.mozilla.org/IRC). Dites‑nous quelle est cette erreur, et nous essayerons de vous aider. Un listing de votre code sera aussi utile.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

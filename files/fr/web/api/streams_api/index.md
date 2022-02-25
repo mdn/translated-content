@@ -21,7 +21,7 @@ Il y a aussi d'autres avantages — vous pouvez détecter quand un flux commence
 
 L'usage basique des Streams s'articule autour de la mise à disposition des réponses sous forme de flux. Par exemple, la réponse {{domxref("Body")}} retourné par une requête [fetch ](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch)réussie peut être exposée en tant que {{domxref("ReadableStream")}}, vous pourrez ainsi le lire en utilisant un lecteur créé par {{domxref("ReadableStream.getReader()")}}, l'annuler avec {{domxref("ReadableStream.cancel()")}}, etc.
 
-Un usage plus avancé consiste à créer son propre flux en utilisant le constructeur {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, pour traiter par exemple les données à l'intérieur d'un [service worker](/docs/Web/API/Service_Worker_API).
+Un usage plus avancé consiste à créer son propre flux en utilisant le constructeur {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, pour traiter par exemple les données à l'intérieur d'un [service worker](/docs/Web/API/Service_Worker_API).
 
 Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("WritableStream")}}.
 
@@ -45,7 +45,7 @@ Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("Wri
 - {{domxref("WritableStreamDefaultWriter")}}
   - : Correspond à un flux inscriptible par défaut pouvant être utilisé afin d'écire des chunks (plus petit morceaux) de données vers un flux inscriptible.
 - {{domxref("WritableStreamDefaultController")}}
-  - : Correspond à un controlleur permettant de gérer l'état d'un {{domxref("WritableStream")}}. Lors de la construction d'un `WritableStream`, le sink sous-jacent se voit attribuer une instance de `WritableStreamDefaultController` afin de pouvoir le manipuler.
+  - : Correspond à un controlleur permettant de gérer l'état d'un {{domxref("WritableStream")}}. Lors de la construction d'un `WritableStream`, le sink sous-jacent se voit attribuer une instance de `WritableStreamDefaultController` afin de pouvoir le manipuler.
 
 ### Related stream APIs and operations
 

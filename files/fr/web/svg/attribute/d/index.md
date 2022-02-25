@@ -8,11 +8,11 @@ translation_of: Web/SVG/Attribute/d
 ---
 {{SVGRef}}
 
-L'attribut **`d`** définit un tracé à dessiner.
+L'attribut **`d`** définit un tracé à dessiner.
 
 La définition d'un tracé est une liste de commandes de tracé où chaque commande est composée d'une lettre pour la commande, et de nombres qui représentent les paramètres de la commande. Les commandes sont détaillées ci-dessous.
 
-Trois éléments ont cet attribut : {{SVGElement("path")}}, {{SVGElement("glyph")}}, and {{SVGElement("missing-glyph")}}
+Trois éléments ont cet attribut : {{SVGElement("path")}}, {{SVGElement("glyph")}}, and {{SVGElement("missing-glyph")}}
 
 ## Exemple
 
@@ -62,7 +62,7 @@ Pour un {{SVGElement('path')}}, `d` est une chaîne de caractère qui contient u
 
 > **Attention :** Depuis SVG2, {{SVGElement('glyph')}} est dépréciée et ne doit plus être utilisé.
 
-Pour un {{SVGElement('glyph')}}, `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour de la glyphe.
+Pour un {{SVGElement('glyph')}}, `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour de la glyphe.
 
 <table class="standard-table">
   <tbody>
@@ -85,13 +85,13 @@ Pour un {{SVGElement('glyph')}}, `d` est une chaîne de caractères qui contien
   </tbody>
 </table>
 
-> **Note :** Le point d'origine (coordonnée `0,0`) est généralement le point du _coin en haut à gauche_ du context. Néanmoins, l'élément {{SVGElement("glyph")}} a son point d'origine dans le coin en bas à gauche de son enveloppe.
+> **Note :** Le point d'origine (coordonnée `0,0`) est généralement le point du _coin en haut à gauche_ du context. Néanmoins, l'élément {{SVGElement("glyph")}} a son point d'origine dans le coin en bas à gauche de son enveloppe.
 
 ## missing-glyph
 
 > **Attention :** Depuis SVG2, {{SVGElement('missing-glyph')}} est dépréciée et ne doit plus être utilisé.
 
-Pour un {{SVGElement('missing-glyph')}}, `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour de la glyphe.
+Pour un {{SVGElement('missing-glyph')}}, `d` est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour de la glyphe.
 
 <table class="standard-table">
   <tbody>
@@ -128,7 +128,7 @@ SVG définit 6 types de commandes, pour un total de 20 commandes :
 
 > **Note :** Les commandes sont sensibles à la casse; une commande en majuscule attend des positions absolues en arguments, alors qu'une commande en minuscule attend des points relatifs à la position actuelle du point.
 
-Il est toujours possible de spécifier une valeur négative en argument d'une commande : des angles négatifs pointeront dans une direction vers le sens inverse des aiguilles d'une montre; des positions `x` et `y` seront interprétées commandes coordonnées négatives; des valeurs `x` négatives se déplaceront vers la gauche; et des valeurs `y` négatives se déplaceront vers le haut.
+Il est toujours possible de spécifier une valeur négative en argument d'une commande : des angles négatifs pointeront dans une direction vers le sens inverse des aiguilles d'une montre; des positions `x` et `y` seront interprétées commandes coordonnées négatives; des valeurs `x` négatives se déplaceront vers la gauche; et des valeurs `y` négatives se déplaceront vers le haut.
 
 ## Moveto (aller à)
 
@@ -169,11 +169,11 @@ Finalement, toutes les commandes de courbes de Bézier peuvent servir de "polyb�
 
 ## Arcto
 
-Parfois il est plus simple de définir un `path` comme une courbe elliptique plutôt que comme une courbe de Bézier. Dans cette optique, les commandes Arcto sont supportées par les balises `path`.
+Parfois il est plus simple de définir un `path` comme une courbe elliptique plutôt que comme une courbe de Bézier. Dans cette optique, les commandes Arcto sont supportées par les balises `path`.
 
-La définition d'un Arcto est relativement complexe : `A rx, ry xAxisRotate LargeArcFlag, SweepFlag x, y`, où `rx` et `ry` représentent les rayons sur les axes x et y, respectivement ; `LargeArcFlag` est une valeur à 0 ou 1, et permet de déterminer si le plus petit (0) ou le plus grand (1) arc possible doit être dessiné ; `SweepFlag` est une valeur à 0 ou 1 et définit le sens de balayage de la courbe : horaire (1) ou anti-horaire (0) ; et enfin `x` et `y` sont les coordonnées de destination.
+La définition d'un Arcto est relativement complexe : `A rx, ry xAxisRotate LargeArcFlag, SweepFlag x, y`, où `rx` et `ry` représentent les rayons sur les axes x et y, respectivement ; `LargeArcFlag` est une valeur à 0 ou 1, et permet de déterminer si le plus petit (0) ou le plus grand (1) arc possible doit être dessiné ; `SweepFlag` est une valeur à 0 ou 1 et définit le sens de balayage de la courbe : horaire (1) ou anti-horaire (0) ; et enfin `x` et `y` sont les coordonnées de destination.
 
-La propriété `xAxisRotate` est censée changer l'axe des x relativement au viewport de référence. Cependant, il semble que cette propriété n'ait aucun effet avec le moteur de rendu Gecko 7.
+La propriété `xAxisRotate` est censée changer l'axe des x relativement au viewport de référence. Cependant, il semble que cette propriété n'ait aucun effet avec le moteur de rendu Gecko 7.
 
 ## ClosePath (fermer un chemin)
 

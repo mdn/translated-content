@@ -28,13 +28,13 @@ window.addEventListener("gamepadconnected", function(e) {
 });
 ```
 
-Chaque contrôleur est associé à un identifiant unique, qui est disponible dans la propriété `gamepad` de l'événement.
+Chaque contrôleur est associé à un identifiant unique, qui est disponible dans la propriété `gamepad` de l'événement.
 
 > **Note :** À l'écriture de ces lignes, Chrome n'implémente pas les événements {{ domxref("Window.gamepadconnected") }} et {{ domxref("Window.gamepaddisconnected") }}. Vous devez utiliser {{ domxref("navigator.getGamepads") }} pour récupérer la liste des contrôleurs disponibles.
 
 ## Déconnexion du contrôleur
 
-Lorsqu'un contrôleur est déconnecté, et si la page avait déjà reçu des données de ce contrôleur auparavant (par exemple par l'événement {{ domxref("Window.gamepadconnected") }}), un second événement est envoyé à la fenêtre active :  {{ domxref("Window.gamepaddisconnected") }}.
+Lorsqu'un contrôleur est déconnecté, et si la page avait déjà reçu des données de ce contrôleur auparavant (par exemple par l'événement {{ domxref("Window.gamepadconnected") }}), un second événement est envoyé à la fenêtre active : {{ domxref("Window.gamepaddisconnected") }}.
 
 ```js
 window.addEventListener("gamepaddisconnected", function(e) {
@@ -43,7 +43,7 @@ window.addEventListener("gamepaddisconnected", function(e) {
 });
 ```
 
-La propriété `index` sera unique à chaque périphérique connecté au système, même si plusieurs contrôleurs du même type sont utilisés. La propriété correspond également à l'indice du tableau retourné par {{ domxref("navigator.getGamepads") }}.
+La propriété `index` sera unique à chaque périphérique connecté au système, même si plusieurs contrôleurs du même type sont utilisés. La propriété correspond également à l'indice du tableau retourné par {{ domxref("navigator.getGamepads") }}.
 
 ```js
 var gamepads = {};
@@ -64,13 +64,13 @@ window.addEventListener("gamepadconnected", function(e) { gamepadHandler(e, true
 window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, false); }, false);
 ```
 
-Cet exemple montre également comment la propriété `gamepad` peut être conservée après que l'événement se soit terminé. Cette technique sera utilisée plus tard pour obtenir l'état du périphérique.
+Cet exemple montre également comment la propriété `gamepad` peut être conservée après que l'événement se soit terminé. Cette technique sera utilisée plus tard pour obtenir l'état du périphérique.
 
 \[PAGE NON TRADUITE DEPUIS ICI...]
 
 ## Querying the Gamepad object
 
-As you can see, the **gamepad** events discussed above include a `gamepad` property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this in order to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. We can do much more with the {{ domxref("Gamepad") }} object, including holding a reference to it and querying it to find out which buttons and axes are being pressed at any one time. Doing so is often desirable for games or other interactive web pages that need to know the state of a gamepad now vs. the next time an event fires.
+As you can see, the **gamepad** events discussed above include a `gamepad` property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this in order to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. We can do much more with the {{ domxref("Gamepad") }} object, including holding a reference to it and querying it to find out which buttons and axes are being pressed at any one time. Doing so is often desirable for games or other interactive web pages that need to know the state of a gamepad now vs. the next time an event fires.
 
 Performing such checks tends to involve using the {{ domxref("Gamepad") }} object in conjunction with an animation loop (e.g., {{ domxref("requestAnimationFrame") }}), where developers want to make decisions for the current frame based on the state of the gamepad or gamepads.
 

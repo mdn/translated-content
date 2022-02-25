@@ -17,7 +17,7 @@ La propriété en lecture seule **parentNode** renvoie le parent du nœud spéci
 
     parentNode = node.parentNode
 
-`parentNode` est l'élément parent du nœud courant. Le parent d'un élément est un nœud `Element`, un nœud `Document` ou un nœud `DocumentFragment`.
+`parentNode` est l'élément parent du nœud courant. Le parent d'un élément est un nœud `Element`, un nœud `Document` ou un nœud `DocumentFragment`.
 
 ## Exemple
 

@@ -30,7 +30,7 @@ Une **instruction étiquetée (_labeled_ en anglais)** peut être utilisée avec
 
 Une étiquette (_label_) peut être utilisée pour identifier une boucle et pour y faire référence à l'intérieur en utilisant les instructions `break` ou `continue` afin d'interrompre cette boucle ou de reprendre son exécution.
 
-JavaScript _ne possède pas_ d'instruction `goto`, les étiquettes ne peuvent être utilisées que par les instructions `break` ou `continue`.
+JavaScript _ne possède pas_ d'instruction `goto`, les étiquettes ne peuvent être utilisées que par les instructions `break` ou `continue`.
 
 En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), on ne peut pas utiliser `let` comme étiquette, cela lèvera une exception {{jsxref("SyntaxError")}} (`let` est un identifiant réservé).
 

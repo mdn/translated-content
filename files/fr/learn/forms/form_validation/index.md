@@ -347,7 +347,7 @@ Comme nous avons vu dans les exemples précédents, à chaque fois qu'un utilisa
 
 Ces messages automatiques présentent deux inconvénients:
 
-- Il n'y a pas de façon standard de changer leur apparence avec CSS.
+- Il n'y a pas de façon standard de changer leur apparence avec CSS.
 - Ils dépendent des paramètres régionaux du navigateur, ce qui signifie que vous pouvez avoir une page dans une langue mais les messages d'erreurs affichés dans une autre.
 
 | Navigateur             | Affichage                                                                                        |
@@ -368,7 +368,7 @@ HMTL5 fournit une [API de contraintes de validation](https://www.w3.org/TR/html5
 </form>
 ```
 
-En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()> "/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"):
+En JavaScript, il faut appeler la méthode [`setCustomValidity()`](</fr/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()> "/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"):
 
 ```js
 var email = document.getElementById("mail");
@@ -384,7 +384,7 @@ email.addEventListener("keyup", function (event) {
 
 {{EmbedLiveSample("Messages_adaptés_pour_les_erreurs", "100%", 50)}}
 
-## Validation de formulaires avec JavaScript
+## Validation de formulaires avec JavaScript
 
 Si vous souhaitez avoir le contrôle de l'apparence des messages d'erreur, ou si vous voulez gérer le comportement des navigateurs n'ayant pas implémenté la validation de formulaire HTML5, vous n'avez pas d'autre choix que d'utiliser JavaScript.
 
@@ -396,31 +396,31 @@ Propriétés de l'API de validation des contraintes
 
 | Propriétés                 | Description                                                                                                                                                                                                                                                                                  |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `validationMessage`        | Un message (dans la langue locale) décrivant les contraintes de validation que le contrôle ne satisfait pas (si c'est le cas), ou une chaîne vide si le contrôle n'est pas soumis à validation (`willValidate` est alors `false`), ou bien la valeur de l'élément satisfait ses contraintes. |
+| `validationMessage`        | Un message (dans la langue locale) décrivant les contraintes de validation que le contrôle ne satisfait pas (si c'est le cas), ou une chaîne vide si le contrôle n'est pas soumis à validation (`willValidate` est alors `false`), ou bien la valeur de l'élément satisfait ses contraintes. |
 | `validity`                 | Un objet {{domxref("ValidityState")}} qui décrit l'état de validité de l'élément.                                                                                                                                                                                                    |
-| `validity.customError`     | Renvoie `true` si l'élément à une erreur personnalisée, `false` a contrario.                                                                                                                                                                                                                 |
-| `validity.patternMismatch` | Renvoie `true` si la valeur de l'élément ne correspond pas au motif fourni, `false` dans le cas contraire. Si la méthode renvoie `true`, l'élément fera partie de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                     |
-| `validity.rangeOverflow`   | Renvoie `true` si la valeur de l'élément est supérieure au maximum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des  pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                   |
+| `validity.customError`     | Renvoie `true` si l'élément à une erreur personnalisée, `false` a contrario.                                                                                                                                                                                                                 |
+| `validity.patternMismatch` | Renvoie `true` si la valeur de l'élément ne correspond pas au motif fourni, `false` dans le cas contraire. Si la méthode renvoie `true`, l'élément fera partie de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                     |
+| `validity.rangeOverflow`   | Renvoie `true` si la valeur de l'élément est supérieure au maximum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des  pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                   |
 | `validity.rangeUnderflow`  | Renvoie `true` si la valeur de l'élément est plus petite que le minimum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                               |
-| `validity.stepMismatch`    | Renvoie `true` si la valeur de l'élément ne correspond pas aux règles définies par l'attribut `step`,`false` a contrario. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                    |
-| `validity.tooLong`         | Renvoie `true` si la taille de l'élément est supérieure à la longueur maximum définie, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                        |
-| `validity.typeMismatch`    | Renvoie `true` si la syntaxe de la valeur de l'élément n'est pas correcte ; `false` dans le cas contraire. Si le retour est `true`, l'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                                 |
-| `validity.valid`           | Renvoie `true` si la valeur de l'élément n'a pas de problème de validité, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":valid")}} si le retour est `true`&nbsp;; de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `false`.                    |
+| `validity.stepMismatch`    | Renvoie `true` si la valeur de l'élément ne correspond pas aux règles définies par l'attribut `step`,`false` a contrario. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                    |
+| `validity.tooLong`         | Renvoie `true` si la taille de l'élément est supérieure à la longueur maximum définie, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                        |
+| `validity.typeMismatch`    | Renvoie `true` si la syntaxe de la valeur de l'élément n'est pas correcte ; `false` dans le cas contraire. Si le retour est `true`, l'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                                 |
+| `validity.valid`           | Renvoie `true` si la valeur de l'élément n'a pas de problème de validité, sinon `false`. L'élément sera de la pseudo-classe CSS {{cssxref(":valid")}} si le retour est `true`&nbsp;; de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `false`.                    |
 | `validity.valueMissing`    | Renvoie `true` si l'élément n'a pas de valeur alors que le champ est requis, sinon`false`. L'élément sera de la pseudo-classe CSS {{cssxref(":invalid")}} si le retour est `true`.                                                                                                  |
-| `willValidate`             | Retourne `true` si l'élément est validé lorsque le formulaire est soumis, `false` dans le cas contraire.                                                                                                                                                                                     |
+| `willValidate`             | Retourne `true` si l'élément est validé lorsque le formulaire est soumis, `false` dans le cas contraire.                                                                                                                                                                                     |
 
-#### Méthodes de l'API de validation des contraintes
+#### Méthodes de l'API de validation des contraintes
 
 | Méthodes                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `checkValidity()`            | Renvoie `true` si la valeur de l'élément n'a pas de problème de validation, `false` autrement. Si l'élément est invalide, cette méthode déclenche aussi un événement {{event("invalid")}} sur cet élément.                                                                                                                                                                                                                                                                                                                     |
 | `setCustomValidity(message)` | Ajoute un message d'erreur personnalisé à l'élément&nbsp;; si vous définissez un message d'erreur personnalisé, l'élément est considéré comme invalide, et le message spécifié est affiché. Cela vous permet d'utiliser du code JavaScript pour établir une erreur de validation autre que celles offertes par l'API standard des contraintes de validation. Le message est affiché à l'utilisateur lorsque le problème est rapporté. Si l'argument est une chaîne de caractères vide, l'erreur personnalisée est considérée comme effacée. |
 
-Pour les anciens navigateurs, il existe [une prothèse d'émulation (_polyfill_) comme Hyperform](https://hyperform.js.org/), pour compenser le défaut de prise en charge de cette API. Comme vous utilisez déjà JavaScript, l'utilisation d'une prethèse d'émulation n'est pas un souci supplémentaire pour la conception ou l'implémentation de votre site ou application Web.
+Pour les anciens navigateurs, il existe [une prothèse d'émulation (_polyfill_) comme Hyperform](https://hyperform.js.org/), pour compenser le défaut de prise en charge de cette API. Comme vous utilisez déjà JavaScript, l'utilisation d'une prethèse d'émulation n'est pas un souci supplémentaire pour la conception ou l'implémentation de votre site ou application Web.
 
 #### Exemple utilisant la validation des contraintes
 
-Voyons comment utiliser l'API pour créer des messages d'erreur personnalisés. Tout d'abord, le HTML :
+Voyons comment utiliser l'API pour créer des messages d'erreur personnalisés. Tout d'abord, le HTML :
 
 ```html
 <form novalidate>
@@ -435,9 +435,9 @@ Voyons comment utiliser l'API pour créer des messages d'erreur personnalisés. 
 </form>
 ```
 
-Ce formulaire simple utilise l'attribut {{htmlattrxref("novalidate","form")}} pour désactiver la validation automatique par le navigateur ; cela permet donc à notre script d'avoir le contrôle sur la validation. Toutefois, cela ne désactive la prise en charge par l'API de validation des contraintes, ni l'application des pseudo-classes CSS  {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}} et {{cssxref(":out-of-range")}}. Cela signifie que, même si le navigateur ne vérifie pas automatiquement la validité du formulaire avant l'envoi des données, vous pouvez toujours effectuer cette validation et définir l'apparence du formulaire par vous-même.
+Ce formulaire simple utilise l'attribut {{htmlattrxref("novalidate","form")}} pour désactiver la validation automatique par le navigateur ; cela permet donc à notre script d'avoir le contrôle sur la validation. Toutefois, cela ne désactive la prise en charge par l'API de validation des contraintes, ni l'application des pseudo-classes CSS {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}} et {{cssxref(":out-of-range")}}. Cela signifie que, même si le navigateur ne vérifie pas automatiquement la validité du formulaire avant l'envoi des données, vous pouvez toujours effectuer cette validation et définir l'apparence du formulaire par vous-même.
 
-L'attribut [`aria-live`](/fr/docs/Accessibility/ARIA/ARIA_Live_Regions) garantit que nos messages d'erreur personnalisés seront affichés à tout le monde, y compris les personnes utilisant des techniques d'assistance comme des lecteurs d'écran.
+L'attribut [`aria-live`](/fr/docs/Accessibility/ARIA/ARIA_Live_Regions) garantit que nos messages d'erreur personnalisés seront affichés à tout le monde, y compris les personnes utilisant des techniques d'assistance comme des lecteurs d'écran.
 
 ##### CSS
 
@@ -504,7 +504,7 @@ input:focus:invalid {
 
 ##### JavaScript
 
-Le code JavaScript suivant gère la validation personnalisée des erreurs.
+Le code JavaScript suivant gère la validation personnalisée des erreurs.
 
 ```js
 // Il y a plusieurs façon de sélectionner un nœud DOM ; ici on récupère
@@ -547,15 +547,15 @@ L'API de validation des contraintes fournit un outil puissant pour gérer la val
 
 ### Valider des formulaires sans API intégrée
 
-Il arrive parfois, comme c'est le cas avec des navigateurs anciens ou de [widgets personnalisés](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets), de ne pas pouvoir (ou vouloir) utiliser l'API de validation des contraintes. Dans ce cas, vous pourrez toujours utiliser JavaScript pour valider votre formulaire. Valider un formulaire est plus une question d'interface utilisateur que de réelle validation des données.
+Il arrive parfois, comme c'est le cas avec des navigateurs anciens ou de [widgets personnalisés](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets), de ne pas pouvoir (ou vouloir) utiliser l'API de validation des contraintes. Dans ce cas, vous pourrez toujours utiliser JavaScript pour valider votre formulaire. Valider un formulaire est plus une question d'interface utilisateur que de réelle validation des données.
 
-Pour valider un formulaire, vous devez vous poser un certain nombre de questions:
+Pour valider un formulaire, vous devez vous poser un certain nombre de questions:
 
 - Quel type de validation dois-je réaliser&nbsp;?
   - : Vous devez déterminer comment valider vos données&nbsp;: opération sur des chaînes de caractères, conversion de type, expressions rationnelles, etc. C'est comme vous voulez. Mais retenez simplement que les données de formulaire sont toujours du texte et sont toujours fournies à vos scripts sous forme de chaînes de caractères.
 - Que dois-je faire si le formulaire n'est pas valide&nbsp;?
-  - : C'est clairement une affaire d'interface utilisateur. Vous devez décider comment le formulaire doit se comporter : enverra-t-il quand même les données ? Devriez-vous mettre en évidence les champs qui sont en erreur ? Devriez-vous afficher des messages d'erreur ?
-- Comment puis-je aider l'utilisateur à corriger ses données invalides?
+  - : C'est clairement une affaire d'interface utilisateur. Vous devez décider comment le formulaire doit se comporter : enverra-t-il quand même les données ? Devriez-vous mettre en évidence les champs qui sont en erreur ? Devriez-vous afficher des messages d'erreur ?
+- Comment puis-je aider l'utilisateur à corriger ses données invalides?
 
   - : Pour limiter la frustration de l'utilisateur, il est très important de fournir autant d'information d'aide que nécessaire pour le guider dans la correction de sa saisie. Vous devriez afficher des suggestions en amont pour que l'utilisateur sache ce qui est attendu, ainsi que des messages d'erreur clairs. Si vous souhaitez vous plonger dans les exigences d'interface utilsateur pour la validation de formulaires, voici quelques articles (en anglais) utiles que vous devriez lire :
 
@@ -583,11 +583,11 @@ Afin d'illustrer le propos, réécrivons le précédent exemple afin qu'il fonct
 </form>
 ```
 
-Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.
+Comme vous pouvez voir, le HTML est quasiment identique; nous avons juste enlevé les fonctionnalités de validation HTML. Notez que [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") est une spécification indépendante qui n'est pas spécifiquement liée à HTML5.
 
 ##### CSS
 
-De même, nous n'avons pas eu à changer radicalement les CSS&nbsp;; nous avons simplement transformé la pseudo-classe {{cssxref(":invalid")}} en une vraie classe et évité d'utiliser le sélecteur d'attribut, qui ne fonctionne pas avec Internet Explorer 6.
+De même, nous n'avons pas eu à changer radicalement les CSS&nbsp;; nous avons simplement transformé la pseudo-classe {{cssxref(":invalid")}} en une vraie classe et évité d'utiliser le sélecteur d'attribut, qui ne fonctionne pas avec Internet Explorer 6.
 
 ```css
 /* On améliore l'aspect de l'exemple avec ces quelques règles */
@@ -650,7 +650,7 @@ input:focus.invalid {
 
 ##### JavaScript
 
-Les changements les plus importants sont dans le code JavaScript, qui nécessite bien plus que de simples retouches.
+Les changements les plus importants sont dans le code JavaScript, qui nécessite bien plus que de simples retouches.
 
 ```js
 // Il existe moins de méthode pour sélectionner un nœud DOM
@@ -735,7 +735,7 @@ Voici le résultat:
 
 {{EmbedLiveSample("Exemple_sans_utilisation_de_la_validation_des_contraintes", "100%", 130)}}
 
-Comme vous avez pu le voir, il n'est pas si difficile de créer par soi-même un système de validation. La difficulté consiste à rendre le tout assez générique pour l'utiliser à la fois sur toutes les plateformes et pour chaque formulaire que vous pourriez créer. Il existe de nombreuses bibliothèques permettant ce genre de validation de formulaire ; n'hésitez pas à les utiliser. En voici quelques exemples :
+Comme vous avez pu le voir, il n'est pas si difficile de créer par soi-même un système de validation. La difficulté consiste à rendre le tout assez générique pour l'utiliser à la fois sur toutes les plateformes et pour chaque formulaire que vous pourriez créer. Il existe de nombreuses bibliothèques permettant ce genre de validation de formulaire ; n'hésitez pas à les utiliser. En voici quelques exemples :
 
 - Bibliothèques indépendantes :
 
@@ -747,7 +747,7 @@ Comme vous avez pu le voir, il n'est pas si difficile de créer par soi-même un
 
 #### Validation à distance
 
-Il peut être utile, dans certains cas, d'effectuer une validation à distance. Ce genre de validation est nécessaire lorsque les données saisies par l'utilisateur sont liées à des données supplémentaires stockées sur le serveur hébergeant votre application. Prenons par exemple les formulaires d'inscription, pour lesquels on vous demande un nom d'utilisateur. Pour éviter toute duplication d'un nom d'utilisateur, il est plus judicieux d'effectuer une requête AJAX pour vérifier la disponibilté du nom d'utilisateur que de demander à envoyer les données saisies et de renvoyer le formulaire avec une erreur.
+Il peut être utile, dans certains cas, d'effectuer une validation à distance. Ce genre de validation est nécessaire lorsque les données saisies par l'utilisateur sont liées à des données supplémentaires stockées sur le serveur hébergeant votre application. Prenons par exemple les formulaires d'inscription, pour lesquels on vous demande un nom d'utilisateur. Pour éviter toute duplication d'un nom d'utilisateur, il est plus judicieux d'effectuer une requête AJAX pour vérifier la disponibilté du nom d'utilisateur que de demander à envoyer les données saisies et de renvoyer le formulaire avec une erreur.
 
 Pour réaliser une telle validation, plusieurs précautions doivent être prises :
 
@@ -756,7 +756,7 @@ Pour réaliser une telle validation, plusieurs précautions doivent être prises
 
 ## Conclusion
 
-La validation d'un formulaire ne requiert pas de code JavaScript complexe, mais il est nécessaire de penser tout particulièrement à l'utilisateur. Rappelez-vous de toujours aider l'utilisateur à corriger les données qu'il saisit. Pour ce faire, assurez-vous de toujours :
+La validation d'un formulaire ne requiert pas de code JavaScript complexe, mais il est nécessaire de penser tout particulièrement à l'utilisateur. Rappelez-vous de toujours aider l'utilisateur à corriger les données qu'il saisit. Pour ce faire, assurez-vous de toujours :
 
 - Afficher des messages d'erreur explicites.
 - Être tolérant sur le format des données à envoyer.

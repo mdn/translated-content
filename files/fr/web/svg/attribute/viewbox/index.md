@@ -8,11 +8,11 @@ translation_of: Web/SVG/Attribute/viewBox
 ---
 « [Sommaire de la référence des attributs SVG](/fr/SVG/Attribute)
 
-L'attribut `viewBox` permet de spécifier qu'un groupe d'éléments graphiques s'étire afin de s'adapter à un élément conteneur.
+L'attribut `viewBox` permet de spécifier qu'un groupe d'éléments graphiques s'étire afin de s'adapter à un élément conteneur.
 
-La valeur de l'attribut `viewBox` est une liste de quatre nombres `min-x`, `min-y`, `width` et `height`, séparés par des espaces ou/et des virgules. Ces nombres spécifient un rectangle dans l'espace utilisateur, qui doit correspondre aux coins du viewport établis par l'élément SVG donné, ceci en prenant en compte l'attribut {{ SVGAttr("preserveAspectRatio") }}.
+La valeur de l'attribut `viewBox` est une liste de quatre nombres `min-x`, `min-y`, `width` et `height`, séparés par des espaces ou/et des virgules. Ces nombres spécifient un rectangle dans l'espace utilisateur, qui doit correspondre aux coins du viewport établis par l'élément SVG donné, ceci en prenant en compte l'attribut {{ SVGAttr("preserveAspectRatio") }}.
 
-Les valeurs négatives de `width` et `height` ne sont pas autorisées et une valeur à zéro désactive le rendu de l'élément.
+Les valeurs négatives de `width` et `height` ne sont pas autorisées et une valeur à zéro désactive le rendu de l'élément.
 
 ## Contexte d'utilisation
 
@@ -47,13 +47,13 @@ Nous créons ici un viewport de 300×200 unités, ce qui fait que chaque unité 
 
 `<svg width="300" height="200"></svg>`
 
-En ajoutant une notion de viewbox, nous transformons ce système de coordonnées afin qu'il aille de 0 à w à l'horizontale et de 0 à h à la verticale. Ici, ce sera donc 300/30 (=10) en x ce qui équivaut à 10 unités d'élément SVG pour 1 unité du viewport&nbsp;:
+En ajoutant une notion de viewbox, nous transformons ce système de coordonnées afin qu'il aille de 0 à w à l'horizontale et de 0 à h à la verticale. Ici, ce sera donc 300/30 (=10) en x ce qui équivaut à 10 unités d'élément SVG pour 1 unité du viewport&nbsp;:
 
 `<svg width="300" height="200" viewBox="0 0 30 20"></svg>`
 
 ## Elements
 
-Les éléments suivants peuvent utiliser l'attribut `viewBox`
+Les éléments suivants peuvent utiliser l'attribut `viewBox`
 
 - {{ SVGElement("svg") }}
 - {{ SVGElement("symbol") }}

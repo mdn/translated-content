@@ -7,7 +7,7 @@ A ne pas confondre avec la règle de style de feuille de style {{domxref("CSSRul
 
 {{APIRef("CSSOM") }}
 
-**cssText** retourne ou définit seulement le texte de la déclaration de style **inline** de l'élément. Pour pouvoir définir dynamiquement une règle d'une **stylesheet**, voir [Utilisation d'informations de mise en forme dynamiques.](/fr-FR/docs/DOM/Using_dynamic_styling_information)
+**cssText** retourne ou définit seulement le texte de la déclaration de style **inline** de l'élément. Pour pouvoir définir dynamiquement une règle d'une **stylesheet**, voir [Utilisation d'informations de mise en forme dynamiques.](/fr-FR/docs/DOM/Using_dynamic_styling_information)
 
 ## Syntaxe
 

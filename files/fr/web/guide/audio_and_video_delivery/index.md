@@ -7,7 +7,7 @@ On peut distribuer de l'audio et de la vidéo sur le web de plusieurs manières,
 
 ## Les éléments audio et vidéo
 
-Que l'on traite des fichiers audio pré-enregistrés ou des flux en directs, le mécanisme pour les rendre disponibles à travers un navigateur reste à peu près le même — via les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video). Actuellement, pour prendre en charge tous les navigateurs, il est nécessaire de définir deux formats — bien qu'avec l'adoption des formats MP3 et MP4 dans Firefox et Opera, cela change rapidement. Vous pouvez trouver les informations de compatibilité des navigateurs aux endroits suivants&nbsp;:
+Que l'on traite des fichiers audio pré-enregistrés ou des flux en directs, le mécanisme pour les rendre disponibles à travers un navigateur reste à peu près le même — via les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video). Actuellement, pour prendre en charge tous les navigateurs, il est nécessaire de définir deux formats — bien qu'avec l'adoption des formats MP3 et MP4 dans Firefox et Opera, cela change rapidement. Vous pouvez trouver les informations de compatibilité des navigateurs aux endroits suivants&nbsp;:
 
 - [Tableau de compatibilité des codecs audio](/fr/docs/Web/Apps/Build/Manipulating_media/Cross-browser_audio_basics#audio_codec_support)
 - [Guide sur les codecs pour les vidéos](/fr/docs/Web/Media/Formats/Video_codecs)
@@ -335,7 +335,7 @@ Vous rencontrez des problèmes de lecture audio ou vidéo ? Vérifiez les diffé
 
 Utilisez les fichiers suivants pour vérifier le support de votre format:
 
-- Audio MP3 (`type="audio/mpeg"`)&nbsp;: <https://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3> ([audio MP3 en direct](https://jsbin.com/gekatoge/1/edit))
+- Audio MP3 (`type="audio/mpeg"`)&nbsp;: <https://jPlayer.org/audio/mp3/Miaow-01-Tempered-song.mp3> ([audio MP3 en direct](https://jsbin.com/gekatoge/1/edit))
 - Audio MP4 (`type="audio/mp4"`)&nbsp;: <https://jPlayer.org/audio/m4a/Miaow-01-Tempered-song.m4a> ([audio MP4 en direct](https://jsbin.com/gekatoge/2/edit))
 - Audio Ogg (`type="audio/ogg"`)&nbsp;: <https://jPlayer.org/audio/ogg/Miaow-01-Tempered-song.ogg> ([audio OGG en direct](https://jsbin.com/gekatoge/4/edit))
 - Video MP4 (`type="video/mp4"`)&nbsp;: <https://jPlayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v> ([vidéo MP4 en direct](https://jsbin.com/gekatoge/5/edit))

@@ -30,7 +30,7 @@ var gettingSessions = browser.sessions.getRecentlyClosed(
 ### Paramètres
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet {{WebExtAPIRef("sessions.Filter")}} qui limite l'ensemble des sessions renvoyées.
+  - : `object`. Un objet {{WebExtAPIRef("sessions.Filter")}} qui limite l'ensemble des sessions renvoyées.
 
 ### Valeur retournée
 

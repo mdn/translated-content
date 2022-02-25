@@ -209,6 +209,6 @@ Maintenant, le champ d'application de la boîte à outils est le popup. Dans l'I
 
 ## Qu'en est-il de l'Add-on Deboguer ?
 
-Le [deboguer des modules complémentaires](/fr/Add-ons/Add-on_Debugger) est destiné à être l'évanir du débogage des add-on dans Firefox.
+Le [deboguer des modules complémentaires](/fr/Add-ons/Add-on_Debugger) est destiné à être l'évanir du débogage des add-on dans Firefox.
 
 Son grand avantage par rapport à la Browser Toolbox est qu'il ne montre que les fichiers de votre extension, donc il est beaucoup plus facile de trouver votre code. Cependant, pour le moment, vous ne pouvez pas voir les messages de console de votre extension dans l'Add-on Debugger, donc la Browser Toolbox est plus fonctionnelle.

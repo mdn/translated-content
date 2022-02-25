@@ -11,7 +11,7 @@ translation_of: Web/API/Storage/length
 ---
 {{APIRef("Web Storage API")}}
 
-La propriété en lecture seule de l'interface {{domxref("Storage")}} retourne un entier représentant le nombre d'items stockés dans l'objet `Storage`.
+La propriété en lecture seule de l'interface {{domxref("Storage")}} retourne un entier représentant le nombre d'items stockés dans l'objet `Storage`.
 
 ## Syntaxe
 
@@ -35,7 +35,7 @@ function populateStorage() {
 }
 ```
 
-> **Note :** Pour voir ceci utilisé dans un exemple concret, regardez notre [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note :** Pour voir ceci utilisé dans un exemple concret, regardez notre [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Spécifications
 

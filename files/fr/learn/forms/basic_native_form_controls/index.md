@@ -503,7 +503,7 @@ Cette valeur d'attribut créé un widget pour afficher et sélectionner une date
 
 #### `month`
 
-Cette valeur d'attribut créé un widget pour afficher et sélectionner un mois dans une année donnée.
+Cette valeur d'attribut créé un widget pour afficher et sélectionner un mois dans une année donnée.
 
 ```html
 <input type="month" name="month" id="month">
@@ -511,7 +511,7 @@ Cette valeur d'attribut créé un widget pour afficher et sélectionner un mois
 
 #### `time`
 
-Cette valeur d'attribut créé un widget pour afficher et sélectionner un horaire.
+Cette valeur d'attribut créé un widget pour afficher et sélectionner un horaire.
 
 ```html
 <input type="time" name="time" id="time">
@@ -519,7 +519,7 @@ Cette valeur d'attribut créé un widget pour afficher et sélectionner un hora
 
 #### `week`
 
-Cette valeur d'attribut crée un widget pour afficher et sélectionner une semaine et l'année correspondante.
+Cette valeur d'attribut crée un widget pour afficher et sélectionner une semaine et l'année correspondante.
 
 ```html
 <input type="week" name="week" id="week">

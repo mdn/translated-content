@@ -28,7 +28,7 @@ Voir le tableau de [compatibilité des navigateurs](#compat) afin de déterminer
 
 {{page('fr/docs/JavaScript/Reference/Objets_globaux/DateTimeFormat','Paramètres')}}
 
-La valeur par défaut de chacun des composants de la date vaut {{jsxref("undefined")}}, si les propriétés `weekday`, `year`, `month`, `day` sont toutes `undefined`, on suppose alors que `year`, `month`, et `day` sont « numériques ».
+La valeur par défaut de chacun des composants de la date vaut {{jsxref("undefined")}}, si les propriétés `weekday`, `year`, `month`, `day` sont toutes `undefined`, on suppose alors que `year`, `month`, et `day` sont « numériques ».
 
 ### Valeur de retour
 

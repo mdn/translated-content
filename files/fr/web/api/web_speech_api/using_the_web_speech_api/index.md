@@ -179,13 +179,13 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 To show simple usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://mdn.github.io/web-speech-api/speak-easy-synthesis/). This includes a set of form controls for entering text to be synthesised, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
 
-To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
+To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
 
 ### Browser support
 
 Support for Web Speech API speech synthesis is still getting there across mainstream browsers, and is currently limited to the following:
 
-- Firefox desktop and mobile support it in Gecko 42+ (Windows)/44+, without prefixes, and it can be turned on by flipping the `media.webspeech.synth.enabled` flag to `true` in `about:config`.
+- Firefox desktop and mobile support it in Gecko 42+ (Windows)/44+, without prefixes, and it can be turned on by flipping the `media.webspeech.synth.enabled` flag to `true` in `about:config`.
 - Firefox OS 2.5+ supports it, by default, and without the need for any permissions.
 - Chrome for Desktop and Android have supported it since around version 33, without prefixes.
 

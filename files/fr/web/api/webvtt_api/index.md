@@ -83,7 +83,7 @@ Réexaminons le premier exemple, et observons la structure plus précisément.
 
 Dans chaque réplique:
 
-- La première ligne commence par un temps correspondant au moment où il apparait.
+- La première ligne commence par un temps correspondant au moment où il apparait.
 - Sur la même ligne nous avons une chaîne `-->`.
 - Nous finissions la ligne par un second temps indiquant la fin de l'affichage du texte.
 - Nous pouvons alors afficher une ou plusieurs lignes commençant par un tiret (-), chacune contenant une partie du texte à afficher.

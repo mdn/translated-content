@@ -183,15 +183,15 @@ Vous pouvez également définir une propriété [effectAllowed](/fr/GlisserD%C3%
 
 ## Retour d'information du dépôt
 
-Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété [dropEffect](/En/DragDrop/DataTransfer#dropEffect.28.29). L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.
+Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété [dropEffect](/En/DragDrop/DataTransfer#dropEffect.28.29). L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.
 
-De plus, vous pouvez aussi mettre à jour l'interface utilisateur en surlignant au besoin. Pour un simple surlignage, vous pouvez utiliser la pseudo-classe `-moz-drag-over`sur la cible du dépôt.
+De plus, vous pouvez aussi mettre à jour l'interface utilisateur en surlignant au besoin. Pour un simple surlignage, vous pouvez utiliser la pseudo-classe `-moz-drag-over`sur la cible du dépôt.
 
     .droparea:-moz-drag-over {
       border: 1px solid black;
     }
 
-Dans cet example, l'élement comportant la classe `droparea` va recevoir un bord noir de un pixel tant que la cible sera valide, ce qui est le cas, si la méthode [event.preventDefault](/en/DOM/event.preventDefault) est appelé durant l'évenement `dragenter`. Il est à noter que vous devez annuler l'évenement `dragenter` de cette pseudo-classe tant que l'état n'est pas verifié par l'évenement `dragover`.
+Dans cet example, l'élement comportant la classe `droparea` va recevoir un bord noir de un pixel tant que la cible sera valide, ce qui est le cas, si la méthode [event.preventDefault](/en/DOM/event.preventDefault) est appelé durant l'évenement `dragenter`. Il est à noter que vous devez annuler l'évenement `dragenter` de cette pseudo-classe tant que l'état n'est pas verifié par l'évenement `dragover`.
 
 For more complex visual effects, you can also perform other operations during the `dragenter` event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an [image](/en/XUL/image) or [separator](/en/XUL/separator) element for example, and simply insert it into the document during the `dragenter` event.
 

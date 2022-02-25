@@ -36,7 +36,7 @@ On ajoute maintenant les puces aux éléments de la liste. Puisqu'il s'agit d'un
 
 Visuellement, ces marqueurs apparaissent en dehors de la zone de contenu de l'élément `ul`, mais ce n'est pas ce qui est le plus important ici. Ce qui compte, c'est que ces marqueurs prennent place en dehors de la «&nbsp;boîte principale&nbsp;» des éléments `li`. Ils apparaissent comme des sortes d'appendices aux items de liste, qui se tiennent en dehors de la zone de contenu de chaque item, tout en étant attaché à chaque `li`.
 
-C'est pourquoi, dans tous les navigateurs sauf Internet Explorer Windows, les marqueurs sont placés à l'extérieur des bordures de l'élément `li`, dès lors que la propriété {{cssxref("list-style-position")}} vaut `outside`. Si cette valeur est changée en `inside`, les marqueurs seront alors déplacés à l'intérieur du contenu des éléments `li`, comme s'il s'agissait d'une boîte en ligne placée au tout début de ceux-ci.
+C'est pourquoi, dans tous les navigateurs sauf Internet Explorer Windows, les marqueurs sont placés à l'extérieur des bordures de l'élément `li`, dès lors que la propriété {{cssxref("list-style-position")}} vaut `outside`. Si cette valeur est changée en `inside`, les marqueurs seront alors déplacés à l'intérieur du contenu des éléments `li`, comme s'il s'agissait d'une boîte en ligne placée au tout début de ceux-ci.
 
 ### Obtenir une double indentation
 

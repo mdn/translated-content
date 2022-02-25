@@ -125,7 +125,7 @@ Lorsqu'on envoie le formulaire de l'exemple, le nom de chaque fichier sera ajout
 
 ### Obtenir des informations sur les fichiers sélectionnés
 
-Les fichiers sélectionnés peuvent être obtenus sous la forme d'un objet {{domxref("FileList")}} renvoyé par la propriété `HTMLInputElement.files` de l'élement du DOM. Cet objet est une liste d'objets {{domxref("File")}}. Un objet `FileList` se comporte comme un tableau et on peut donc consulter sa longueur (la propriété `length`) afin de connaître le nombre de fichiers sélectionnés.
+Les fichiers sélectionnés peuvent être obtenus sous la forme d'un objet {{domxref("FileList")}} renvoyé par la propriété `HTMLInputElement.files` de l'élement du DOM. Cet objet est une liste d'objets {{domxref("File")}}. Un objet `FileList` se comporte comme un tableau et on peut donc consulter sa longueur (la propriété `length`) afin de connaître le nombre de fichiers sélectionnés.
 
 Chaque objet `File` contient les informations suivantes :
 

@@ -26,7 +26,7 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 - checkbox
   - : Un élément de menu qui représente un état binaire. Il affiche une coche à côté de l'étiquette. Cliquez sur l'élément pour activer la coche. L'écouteur {{WebExtAPIRef("menus.onClicked")}} recevra deux propriétés supplémentaires : "checked", indiquant si l'élément est vérifié maintenant, et "wasChecked", indiquant si l'élément a été vérifié avant l'événement click.
 - radio
-  - : Un élément de menu qui représente l'un des groupes de choix. Tout comme une case à cocher, cela affiche également une coche à côté de l'étiquette, et son écouteur  {{WebExtAPIRef("menus.onClicked")}} est passé "checked" et "wasChecked". However, Cependant, si vous créez plus d'un élément radio, les éléments fonctionnent comme un groupe d'éléments radio items: un seul élément du groupe peut être vérifié, et cliquer sur un élément en fait l'élément sélectionné.
+  - : Un élément de menu qui représente l'un des groupes de choix. Tout comme une case à cocher, cela affiche également une coche à côté de l'étiquette, et son écouteur  {{WebExtAPIRef("menus.onClicked")}} est passé "checked" et "wasChecked". However, Cependant, si vous créez plus d'un élément radio, les éléments fonctionnent comme un groupe d'éléments radio items: un seul élément du groupe peut être vérifié, et cliquer sur un élément en fait l'élément sélectionné.
 - separator
   - : Une ligne séparant un groupe d'éléments.
 

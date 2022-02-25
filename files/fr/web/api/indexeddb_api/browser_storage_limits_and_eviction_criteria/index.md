@@ -23,14 +23,14 @@ Même dans le même navigateur, en utilisant la même méthode de stockage, il e
 
 Généralement, les deux principaux types de stockage sont les suivants :
 
-- Persistant : ce sont des données qui doivent être conservées pendant une longue période. Elles ne seront évincéés que si l'utilisateur le choisit (par exemple, dans Firefox, il existe un bouton "nettoyer stockage" dans la boîte de dialogue d'informations sur la page pour chaque page).
-- Temporaire : il s'agit de données qui n'ont pas besoin de persister très longtemps. Elles seront évacuées en-dessous d'un minimum d'utilisation ({{anch("LRU policy")}}) lorsque les limites de stockage sont atteintes.
+- Persistant : ce sont des données qui doivent être conservées pendant une longue période. Elles ne seront évincéés que si l'utilisateur le choisit (par exemple, dans Firefox, il existe un bouton "nettoyer stockage" dans la boîte de dialogue d'informations sur la page pour chaque page).
+- Temporaire : il s'agit de données qui n'ont pas besoin de persister très longtemps. Elles seront évacuées en-dessous d'un minimum d'utilisation ({{anch("LRU policy")}}) lorsque les limites de stockage sont atteintes.
 
 Par défaut, le stockage temporaire sera utilisé dans la plupart des contextes d'utilisation (par exemple, des applications Web standard) et le persistant pour les applications installées (par exemple, les applications Firefox installées sur le système d'exploitation Firefox OS / Firefox de bureau, les applications Chrome).
 
 ### Spécificités de Firefox
 
-Dans Firefox, vous pouvez choisir le type de stockage que vous souhaitez utiliser en incluant une option propriétaire — `storage` — lorsque vous créez une base de données IndexedDB en utilisant {{domxref ("IDBFactory.open ()", "open ()")}} :
+Dans Firefox, vous pouvez choisir le type de stockage que vous souhaitez utiliser en incluant une option propriétaire — `storage` — lorsque vous créez une base de données IndexedDB en utilisant {{domxref ("IDBFactory.open ()", "open ()")}} :
 
 - ```js
   var request = indexedDB.open("myDatabase", { version: 1, storage: "persistent" });
@@ -52,7 +52,7 @@ C'est le troisième type de stockage à envisager dans Firefox — "Default stor
 Chaque type de stockage représente un référentiel distinct, voici la cartographie réelle des répertoires sous le profil Firefox d'un utilisateur (d'autres navigateurs peuvent différer légèrement) :
 
 - `<profile>/storage` — le principal, le plus haut niveau de répertoire pour le stockage maintenu par le " quota manager " _(manager de quotas)_ (voir ci-dessous).
-- `<profile>/storage/permanent` — répertoire de stockage des données persistantes.
+- `<profile>/storage/permanent` — répertoire de stockage des données persistantes.
 - `<profile>/storage/temporary` — répertoire de stockage des données temporaires.
 - `<profile>/storage/default` — répertoire de stockage des données par défaut.
 
@@ -70,7 +70,7 @@ L'espace de stockage maximal du navigateur est dynamique  — il est basé sur l
 
 Donc, si votre disque dur est de 500 Go, le stockage total d'un navigateur est de 250 Go. S'il est dépassé, une procédure appelée **"origin eviction"** _(éviction d'origine)_ entre en jeu, en supprimant la valeur totale de l'origine jusqu'à ramener le niveau de stockage en-dessous de la limite. La suppression d'une base de données d'origine peut entraîner des problèmes d'incohérence.
 
-Il y a aussi une autre limite appelée **group limit** — ceci est défini comme 20% de la limite globale. Chaque origine fait partie d'un groupe (groupe d'origines). Il existe un groupe pour chaque domaine eTLD + 1.
+Il y a aussi une autre limite appelée **group limit** — ceci est défini comme 20% de la limite globale. Chaque origine fait partie d'un groupe (groupe d'origines). Il existe un groupe pour chaque domaine eTLD + 1.
 
 Par exemple :
 

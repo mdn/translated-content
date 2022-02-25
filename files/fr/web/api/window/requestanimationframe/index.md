@@ -9,11 +9,11 @@ translation_of: Web/API/window/requestAnimationFrame
 ---
 {{APIRef("Window")}}
 
-La méthode **`window.requestAnimationFrame()`** notifie le navigateur que vous souhaitez exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement du navigateur. Cette méthode prend comme argument un callback qui sera appelé avant le rafraîchissement du navigateur.
+La méthode **`window.requestAnimationFrame()`** notifie le navigateur que vous souhaitez exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement du navigateur. Cette méthode prend comme argument un callback qui sera appelé avant le rafraîchissement du navigateur.
 
 > **Note :** Si vous souhaitez animer une nouvelle frame durant le prochain repaint, votre callback doit appeler la méthode `requestAnimationFrame()`.
 
-Vous devez appeler cette méthode dès que vous êtes prêt à rafraîchir votre animation. La fonction contenant l'animation doit être appelée avant que le navigateur n'effectue un nouveau rafraîchissement . En moyenne, le callback sera appelé 60 fois par seconde, cela dépendra de la fréquence de rafraîchissement de votre écran, conformément aux recommandations de la W3C. Cette fréquence peut être inférieure si plusieurs onglets sont ouverts simultanément.
+Vous devez appeler cette méthode dès que vous êtes prêt à rafraîchir votre animation. La fonction contenant l'animation doit être appelée avant que le navigateur n'effectue un nouveau rafraîchissement . En moyenne, le callback sera appelé 60 fois par seconde, cela dépendra de la fréquence de rafraîchissement de votre écran, conformément aux recommandations de la W3C. Cette fréquence peut être inférieure si plusieurs onglets sont ouverts simultanément.
 
 Le callback possède un seul argument, un {{domxref("DOMHighResTimeStamp")}}, qui est le temps, en millisecondes avec une précision minimum de 10 µs, durant lequel l'exécution du rafraîchissement est prévu.
 
@@ -28,11 +28,11 @@ requestID = window.webkitRequestAnimationFrame(callback); // Anciennes versions 
 ### Paramètres
 
 - `callback`
-  - : Un paramètre définissant la fonction à appeler lorsque votre animation va être rafraîchie lors du prochain rafraîchissement. Le callback ne prend qu'un seul argument, un {{domxref("DOMHighResTimeStamp")}}, qui est le temps à partir duquel requestAnimationFrame va commencer à appeler les callbacks.
+  - : Un paramètre définissant la fonction à appeler lorsque votre animation va être rafraîchie lors du prochain rafraîchissement. Le callback ne prend qu'un seul argument, un {{domxref("DOMHighResTimeStamp")}}, qui est le temps à partir duquel requestAnimationFrame va commencer à appeler les callbacks.
 
 ### Valeur retournée
 
-`requestID` est un entier `long` unique identifiant l'élément dans la liste des callbacks. C'est une valeur différente de zéro, mais il est prudent de ne pas faire de suppositions sur cette valeur. En passant cette valeur en paramètre de la méthode {{domxref("window.cancelAnimationFrame()")}},  vous annulez l'appel du callback.
+`requestID` est un entier `long` unique identifiant l'élément dans la liste des callbacks. C'est une valeur différente de zéro, mais il est prudent de ne pas faire de suppositions sur cette valeur. En passant cette valeur en paramètre de la méthode {{domxref("window.cancelAnimationFrame()")}},  vous annulez l'appel du callback.
 
 ## Exemple
 
@@ -64,13 +64,13 @@ requestAnimationFrame(step);
 
 ### Notes pour Gecko
 
-\[1] Avant Gecko 11.0 {{geckoRelease("11.0")}}, `mozRequestAnimationFrame()` pouvait être appelée sans paramètres d'entrée. Cela n'est plus supporté et n'est pas susceptible d'être standardisé.
+\[1] Avant Gecko 11.0 {{geckoRelease("11.0")}}, `mozRequestAnimationFrame()` pouvait être appelée sans paramètres d'entrée. Cela n'est plus supporté et n'est pas susceptible d'être standardisé.
 
 \[2] Le callback prend comme paramètre un {{domxref("DOMTimeStamp")}} au lieu d'un {{domxref("DOMHighResTimeStamp")}} si c'est la version préfixée qui est utilisée. `DOMTimeStamp` n'a qu'une précision de l'ordre de la milliseconde, mais `DOMHightResTimeStamp` a une précision minimale de l'ordre de 10 microsecondes.
 
 ### Notes pour Chrome
 
-La syntaxe correcte, dans Chrome, pour annuler l'exécution est` window.cancelAnimationFrame()`. Dans les anciennes versions, `window.webkitCancelAnimationFrame()` & `window.webkitCancelRequestAnimationFrame() sont obsolètes` mais sont toujours supportées pour le moment.
+La syntaxe correcte, dans Chrome, pour annuler l'exécution est` window.cancelAnimationFrame()`. Dans les anciennes versions, `window.webkitCancelAnimationFrame()` & `window.webkitCancelRequestAnimationFrame() sont obsolètes` mais sont toujours supportées pour le moment.
 
 ## Specification
 

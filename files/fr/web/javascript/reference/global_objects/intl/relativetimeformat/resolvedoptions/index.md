@@ -27,7 +27,7 @@ La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un
 
 ### Valeur de retour
 
-Un nouvel objet dont les propriétés reflètent les options de locale et de formatage calculées lors de l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.
+Un nouvel objet dont les propriétés reflètent les options de locale et de formatage calculées lors de l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.
 
 ## Description
 

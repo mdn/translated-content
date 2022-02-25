@@ -14,7 +14,7 @@ Le constructeur **`AudioBuffer`** créer un nouvel objet {{domxref("AudioBuffer"
 
 ### Parameters
 
-- *context* {{obsolete_inline("")}}
+- *context* {{obsolete_inline("")}}
   - : Référence à un {{domxref("AudioContext")}}. Ce paramètre a été supprimer de la specification. Consultez la section Compatibilité du navigateur pour plus de détails.
 - _options_ {{optional_inline}}
 

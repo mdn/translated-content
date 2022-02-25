@@ -42,7 +42,7 @@ Un descripteur de propriété est un enregistrement qui dispose des attributs su
 - **`writable`**
   - : `true` si et seulement si la valeur associée à la propriété peut être changée (pour les descripteurs de données uniquement).
 - **`get`**
-  - : Une fonction qui joue le rôle d'accesseur (_getter_) pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas d'accesseur (pour les descripteurs d'accesseurs uniquement).
+  - : Une fonction qui joue le rôle d'accesseur (_getter_) pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas d'accesseur (pour les descripteurs d'accesseurs uniquement).
 - **`set`**
   - : Une fonction qui joue le rôle de mutateur (_setter_) pour la propriété ou `undefined` s'il n'y a pas de tel mutateur (pour les descripteurs d'accesseurs uniquement).
 - **`configurable`**

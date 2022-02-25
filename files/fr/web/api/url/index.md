@@ -114,7 +114,7 @@ L'interface `URL` implémente les méthodes définies dans _{{domxref("URLUtils"
 ## Méthodes statiques
 
 - {{ domxref("URL.createObjectURL()") }}
-  - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant un "blob URL" unique ; c'est une URL avec `blob :` son schéma suivi d'une chaîne opaque identifiant de manière unique l'objet dans le navigateur.
+  - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant un "blob URL" unique ; c'est une URL avec `blob :` son schéma suivi d'une chaîne opaque identifiant de manière unique l'objet dans le navigateur.
 - {{ domxref("URL.revokeObjectURL()") }}
   - : Révoque un objet URL précédemment créé avec {{domxref ("URL.createObjectURL ()")}}.
 

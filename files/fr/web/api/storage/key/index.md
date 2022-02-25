@@ -43,7 +43,7 @@ function forEachKey(callback) {
 
 ## Autre exemple
 
-La fonction suivante parcourt chaque clé présente dans le localStorage et affiche les valeurs correspondantes.
+La fonction suivante parcourt chaque clé présente dans le localStorage et affiche les valeurs correspondantes.
 
 ```js
 for (var i = 0; i < localStorage.length; i++) {

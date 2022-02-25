@@ -54,7 +54,7 @@ Le code gère les exceptions déclenchées par l'opération de {{domxref("Global
 
 Cet extrait de code illustre également une bonne pratique pour versionner les caches utilisés par le service worker. Bien qu'il y ait seulement un cache dans cet exemple, la même approche peut être utilisée pour des caches multiples. Il associe un identifiant  court avec un nom de cache versionné et spécifique. Le code supprime aussi tous les caches qui ne sont pas nommés dans `CURRENT_CACHES`.
 
-> **Note :** In Chrome, visit chrome://inspect/#service-workers and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
+> **Note :** In Chrome, visit chrome://inspect/#service-workers and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
 
 ```js
 var CACHE_VERSION = 1;

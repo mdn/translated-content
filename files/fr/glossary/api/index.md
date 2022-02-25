@@ -8,7 +8,7 @@ tags:
 translation_of: Glossary/API
 original_slug: Glossaire/API
 ---
-Une API (Application Programming Interface) est un ensemble de fonctionnalités et de règles existant dans un logiciel permettant d'intéragir avec celui-ci de manière automatisée (plutôt que de passer par une interface utilisateur). L'API peut être vue comme un contrat simple passé entre le logiciel qui la propose et d'autres entités, telles que des logiciels ou matériels tiers.
+Une API (Application Programming Interface) est un ensemble de fonctionnalités et de règles existant dans un logiciel permettant d'intéragir avec celui-ci de manière automatisée (plutôt que de passer par une interface utilisateur). L'API peut être vue comme un contrat simple passé entre le logiciel qui la propose et d'autres entités, telles que des logiciels ou matériels tiers.
 
 En développement web, une API est généralement un ensemble de fonctionnalités (par exemple : {{glossary("method","méthodes")}}, {{Glossary("property","propriétés")}}, évènements et {{Glossary("URL")}}) qu'un développeur peut utiliser dans son application pour les interactions avec les composants du navigateur de l'utilisateur, ou avec d'autres logiciels/matériels de l'ordinateur de l'utilisateur, ou avec des sites web et services tiers.
 

@@ -16,15 +16,15 @@ La méthode **`CanvasRenderingContext2D.arc()`** de l'API Canvas 2D permet d'ajo
 - `x`
   - : La position en x du centre de l'arc.
 - `y`
-  - : La position en y du centre de l'arc.
+  - : La position en y du centre de l'arc.
 - `radius` _(rayon)_
   - : Le rayon de l'arc.
 - `startAngle` _(angle départ)_
-  - : La valeur de l'angle avec laquelle démarre l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
+  - : La valeur de l'angle avec laquelle démarre l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
 - `endAngle` _(angle fin)_
-  - : La valeur de l'angle avec laquelle se finit l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
+  - : La valeur de l'angle avec laquelle se finit l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.
 - `anticlockwise` _(sens anti-horaire)_ {{optional_inline}}
-  - : Un {{jsxref("Booléen")}} facultatif qui, si à `true`_(vrai),_ indique que l'arc sera dessiné dans le sens inverse des aiguilles d'une montre entre les deux angles. Par défaut, la valeur est le sens des aiguilles d'une montre.
+  - : Un {{jsxref("Booléen")}} facultatif qui, si à `true`_(vrai),_ indique que l'arc sera dessiné dans le sens inverse des aiguilles d'une montre entre les deux angles. Par défaut, la valeur est le sens des aiguilles d'une montre.
 
 ## Exemples
 
@@ -95,7 +95,7 @@ window.addEventListener("load", drawCanvas);
 
 ### Exemple avec différentes formes
 
-Dans cet exemple, plusieurs formes différentes sont dessinées, afin de montrer les possibilités offertes par `arc()`.
+Dans cet exemple, plusieurs formes différentes sont dessinées, afin de montrer les possibilités offertes par `arc()`.
 
 ```html hidden
 <canvas id="canvas" width="150" height="200"></canvas>
@@ -141,11 +141,11 @@ for (var i = 0; i < 4; i++) {
 
 ## Notes spécifiques à Gecko
 
-Avec Gecko 2.0 {{geckoRelease("2.0")}}:
+Avec Gecko 2.0 {{geckoRelease("2.0")}}:
 
 - Le paramètre `anticlockwise` est optionnel,
-- Une valeur négative pour le rayon lance une erreur de type {{domxref("DOMError", "IndexSizeError")}} ( "L'index ou la taille est négatif ou supérieur à la valeur autorisée" ).
+- Une valeur négative pour le rayon lance une erreur de type {{domxref("DOMError", "IndexSizeError")}} ( "L'index ou la taille est négatif ou supérieur à la valeur autorisée" ).
 
 ## Voir aussi
 
-- L'Interface JavaScript à laquelle appartient la méthode : {{domxref("CanvasRenderingContext2D")}}
+- L'Interface JavaScript à laquelle appartient la méthode : {{domxref("CanvasRenderingContext2D")}}

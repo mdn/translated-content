@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/update
 
 Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'onglet.
 
-Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet `updateProperties` contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans  `updateProperties` ne sont pas modifiées.
+Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet `updateProperties` contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans  `updateProperties` ne sont pas modifiées.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -39,7 +39,7 @@ var updating = browser.tabs.update(
   - : `object`. L'ensemble des propriétés à mettre à jour pour cet onglet. Pour en savoir plus sur ces propriétés, consultez la documentation  {{WebExtAPIRef("tabs.Tab")}}.
 
     - `active`{{optional_inline}}
-      - : `boolean`. Si l'onglet doit devenir actif. Ne modifie pas le focus de la fenêtre (voir {{WebExtAPIRef('windows.update')}}). Si `true`, les onglets surlignés non actifs cesseront d'être surlignés. Si `false`, ne fait rien.
+      - : `boolean`. Si l'onglet doit devenir actif. Ne modifie pas le focus de la fenêtre (voir {{WebExtAPIRef('windows.update')}}). Si `true`, les onglets surlignés non actifs cesseront d'être surlignés. Si `false`, ne fait rien.
     - `autoDiscardable`{{optional_inline}}
       - : `boolean`. Si l'onglet doit être supprimé automatiquement par le navigateur lorsque les ressources sont faibles.
     - `highlighted`{{optional_inline}}
@@ -82,7 +82,7 @@ var updating = browser.tabs.update(
 
 ### Valeur retournée
 
-A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet mis à jour. L'objet {{WebExtAPIRef('tabs.Tab')}} ne contient pas d' `url`, `title` et `favIconUrl` sauf si la permission `"tabs"` a été demandée. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet mis à jour. L'objet {{WebExtAPIRef('tabs.Tab')}} ne contient pas d' `url`, `title` et `favIconUrl` sauf si la permission `"tabs"` a été demandée. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 

@@ -21,7 +21,7 @@ Le contexte du _worker_ est représenté par un objet {{domxref("DedicatedWorker
 
 > **Note :** Voir [la page d'entrée pour l'API Web Workers](/fr/docs/Web/API/Web_Workers_API) pour consulter la documentation de référence sur les _workers_ et d'autres guides.
 
-Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/API_IndexedDB). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
+Il est possible d'exécuter n'importe quel code JavaScript dans le _thread_ du _worker_, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via `window` comme les [WebSockets](/fr/docs/Web/API/WebSockets_API), les API de stockage de données telles que [IndexedDB](/fr/docs/Web/API/API_IndexedDB). Pour plus de détails, voir [les fonctions et classes disponibles au sein des _workers_](/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers).
 
 Les données sont échangées entre le _thread_ du _worker_ et le _thread_ principal par l'intermédiaire de messages. Chaque partie peut envoyer des messages à l'aide de la méthode `postMessage()` et réagir aux messages reçus grâce au gestionnaire d'évènement `onmessage` (le message sera contenu dans l'attribut `data` de l'évènement {{event("Message")}} associé). Les données sont copiées dans le message, elles ne sont pas partagées.
 
@@ -124,7 +124,7 @@ L'évènement décrivant l'erreur possède notamment trois propriétés intéres
 
 ### Initier des _workers_ fils
 
-Les _workers_ peuvent également engendrer d'autres _workers_. Ces _workers_-fils doivent être hébergés sur la même origine que la page initiale. De plus, les URI des workers-fils sont résolues relativement à l'emplacement du _worker_ père (plutôt que par rapport à la page parente). Ces contraintes permettent de simplifier le suivi des dépendances.
+Les _workers_ peuvent également engendrer d'autres _workers_. Ces _workers_-fils doivent être hébergés sur la même origine que la page initiale. De plus, les URI des workers-fils sont résolues relativement à l'emplacement du _worker_ père (plutôt que par rapport à la page parente). Ces contraintes permettent de simplifier le suivi des dépendances.
 
 ### Importer des scripts et des bibliothèques
 

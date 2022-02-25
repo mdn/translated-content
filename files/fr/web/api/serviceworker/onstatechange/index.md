@@ -9,16 +9,16 @@ translation_of: Web/API/ServiceWorker/onstatechange
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-Une propriété {{domxref("EventListener")}} appelée quand un évenement de type `statechange` est déclenché; c'est le cas dès que le {{domxref("ServiceWorker.state")}} change.
+Une propriété {{domxref("EventListener")}} appelée quand un évenement de type `statechange` est déclenché; c'est le cas dès que le {{domxref("ServiceWorker.state")}} change.
 
 ## Syntax
 
     ServiceWorker.onstatechange = function(statechangeevent) { ... }
-    ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
+    ServiceWorker.addEventListener('statechange', function(statechangeevent) { ... } )
 
 ## Examples
 
-Ce fragment de code présente [un exemple d'enregistrement d'évenements pour le service worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([démo live](https://googlechrome.github.io/samples/service-worker/registration-events/)). Le code écoute pour tout changement du {{domxref("ServiceWorker.state")}} et retourne sa valeur.
+Ce fragment de code présente [un exemple d'enregistrement d'évenements pour le service worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([démo live](https://googlechrome.github.io/samples/service-worker/registration-events/)). Le code écoute pour tout changement du {{domxref("ServiceWorker.state")}} et retourne sa valeur.
 
 ```js
 var serviceWorker;
@@ -41,7 +41,7 @@ if (serviceWorker) {
 }
 ```
 
-Notez que quand l'évenement `statechange` est déclenché, la référence du service worker peut avoir changée. Par exemple :
+Notez que quand l'évenement `statechange` est déclenché, la référence du service worker peut avoir changée. Par exemple :
 
 ```js
 navigator.serviceWorker.register(..).then(function(swr) {

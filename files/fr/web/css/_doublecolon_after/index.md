@@ -11,7 +11,7 @@ translation_of: Web/CSS/::after
 ---
 {{CSSRef}}
 
-En CSS, **`::after`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le dernier enfant de l'élément sélectionné. Il est souvent utilisé pour ajouter du contenu cosmétique à un élément, en utilisant la propriété CSS {{cssxref("content")}}. Par défaut, ce contenu est de type « [en ligne](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_types_de_boîte) ».
+En CSS, **`::after`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) qui sera le dernier enfant de l'élément sélectionné. Il est souvent utilisé pour ajouter du contenu cosmétique à un élément, en utilisant la propriété CSS {{cssxref("content")}}. Par défaut, ce contenu est de type « [en ligne](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_types_de_boîte) ».
 
 ```css
 /* Ajoute une flèche après les liens */
@@ -20,19 +20,19 @@ a:after {
 }
 ```
 
-> **Note :** les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, `::before` et `::after` ne s'appliquent pas aux *[éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé)* tels que les éléments {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
+> **Note :** les pseudo-éléments générés par `::before` et `::after` sont [contenus dans la boîte de mise en forme de l'élément](https://www.w3.org/TR/CSS2/generate.html#before-after-content). Aussi, `::before` et `::after` ne s'appliquent pas aux *[éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé)* tels que les éléments {{HTMLElement("img")}} ou {{HTMLElement("br")}}.
 
 ## Syntaxe
 
 {{csssyntax}}
 
-> **Note :** CSS3 a introduit la notation `::after`  (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi`:after`, introduite dans CSS2.
+> **Note :** CSS3 a introduit la notation `::after`  (avec deux deux-points) pour distinguer les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-éléments). Les navigateurs acceptent aussi`:after`, introduite dans CSS2.
 
 ## Exemples
 
 ### Utilisation simple
 
-Nous allons ici créer deux classes : une pour les paragraphes ennuyeux et une pour les intéressants. Nous marquerons ensuite chacun de ces paragraphes en ajoutant un pseudo-élément après chacun d’eux.
+Nous allons ici créer deux classes : une pour les paragraphes ennuyeux et une pour les intéressants. Nous marquerons ensuite chacun de ces paragraphes en ajoutant un pseudo-élément après chacun d’eux.
 
 #### HTML
 

@@ -95,7 +95,7 @@ Dans l'exemple qui suit, on a une forme simple sur laquelle on ajoute `shape-mar
 
 ## Utiliser du contenu généré comme objet flottant
 
-Dans les exemples qui précèdent, nous avons utilisé des images ou des éléments visibles afin de définir la forme. Autrement dit, la forme est visible sur la page. Il se peut également qu'on veuille que le texte suive une ligne invisible qui ne soit pas droite. On pourrait le faire avec une image ensuite rendue invisible mais on aurait alors des éléments redondants dans le document. Aussi, autant utiliser du contenu généré afin de strictement conserver la mise en forme dans la feuille CSS.
+Dans les exemples qui précèdent, nous avons utilisé des images ou des éléments visibles afin de définir la forme. Autrement dit, la forme est visible sur la page. Il se peut également qu'on veuille que le texte suive une ligne invisible qui ne soit pas droite. On pourrait le faire avec une image ensuite rendue invisible mais on aurait alors des éléments redondants dans le document. Aussi, autant utiliser du contenu généré afin de strictement conserver la mise en forme dans la feuille CSS.
 
 Dans l'exemple qui suit, on utilise du contenu généré afin d'inséer un élément avec une hauteur et une largeur de 150 pixels. On peut alors ensuite utiliser les formes simples, les boîtes de référence ou le canal alpha d'une image afin de créer une forme qu'épouserait le texte.
 

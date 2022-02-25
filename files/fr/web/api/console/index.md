@@ -13,7 +13,7 @@ translation_of: Web/API/Console
 
 L'objet **`console`** donne accès à la console de débogage du navigateur (par exemple., la[ Console Web](/fr/docs/Outils/Console_Web) dans Firefox). Les spécificités de fonctionnement varient d'un navigateur à l'autre, mais il y a tout de même un ensemble de fonctionnalités qui sont fournies de base.
 
-La `console` est accessible de n'importe quel objet global, {{domxref("Window")}} du cadre de navigation, {{domxref("WorkerGlobalScope")}} et ses variantes spécifiques pour les workers. Elle est exposée comme {{domxref ("Window.console")}} et peut être référencée simplement comme console. Par exemple :
+La `console` est accessible de n'importe quel objet global, {{domxref("Window")}} du cadre de navigation, {{domxref("WorkerGlobalScope")}} et ses variantes spécifiques pour les workers. Elle est exposée comme {{domxref ("Window.console")}} et peut être référencée simplement comme console. Par exemple :
 
 ```js
 console.log("Failed to open the specified link")
@@ -61,7 +61,7 @@ Cette page documente les {{anch("Methods", "méthodes")}} disponibles pour l'obj
 - {{domxref("Console.table()")}}
   - : Affiche des données tabulaires comme un tableau.
 - {{domxref("Console.time()")}}
-  - : Démarre un [chronomètre](/fr/docs/Web/API/console#Timers) que l'on peut nommer en le spécifiant en tant que paramètre. Jusqu'à 10 000 chronomètres simultanés peuvent tourner sur une page.
+  - : Démarre un [chronomètre](/fr/docs/Web/API/console#Timers) que l'on peut nommer en le spécifiant en tant que paramètre. Jusqu'à 10 000 chronomètres simultanés peuvent tourner sur une page.
 - {{domxref("Console.timeEnd()")}}
   - : Arrête le [chronomètre](/fr/docs/Web/API/console#Timers) spécifié et affiche le temps écoulé en millisecondes depuis son démarrage.
 - {{domxref("Console.timeStamp()")}} {{Non-standard_inline}}

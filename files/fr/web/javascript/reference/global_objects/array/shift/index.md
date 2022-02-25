@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/shift
 ---
 {{JSRef}}
 
-La méthode **`shift()`** permet de retirer le **premier** élément d'un tableau et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.
+La méthode **`shift()`** permet de retirer le **premier** élément d'un tableau et de renvoyer cet élément. Cette méthode modifie la longueur du tableau.
 
 {{EmbedInteractiveExample("pages/js/array-shift.html")}}
 
@@ -26,11 +26,11 @@ L'élément retiré du tableau ou {{jsxref("undefined")}} si le tableau est vide
 
 ## Description
 
-La méthode `shift` retire l'élément situé à l'index zéro et décrémente l'index des éléments suivant avant de retourner l'élément supprimé. Si la propriété {{jsxref("Array.length", "length")}} vaut 0, {{jsxref("undefined")}} est retourné.
+La méthode `shift` retire l'élément situé à l'index zéro et décrémente l'index des éléments suivant avant de retourner l'élément supprimé. Si la propriété {{jsxref("Array.length", "length")}} vaut 0, {{jsxref("undefined")}} est retourné.
 
 Cette méthode est générique et peut être {{jsxref("Function.call", "appelée","",1)}} ou {{jsxref("Function.apply", "appliquée","",1)}} sur des objets similaires à des tableaux.
 
-Cette méthode n'est pas exploitable pour les objets dont la propriété `length` ne reflète pas la taille du contenu, ou pour lesquels la propriété `length` n'est pas définie.
+Cette méthode n'est pas exploitable pour les objets dont la propriété `length` ne reflète pas la taille du contenu, ou pour lesquels la propriété `length` n'est pas définie.
 
 > **Note :** La méthode {{jsxref("Array.prototype.pop()")}} possède un comportement similaire mais retire le dernier élément du tableau (et non le premier).
 

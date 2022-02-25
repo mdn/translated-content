@@ -26,12 +26,12 @@ _elementClasses_ est une [DOMTokenList](/en-US/docs/DOM/DOMTokenList) représent
 
 - add( String \[, String] )
   - : Ajoute les classes spécifiées. Si une classe est déjà assignée en attribut de cet élément, elle est ignorée.
-- remove( String \[, String] )
+- remove( String \[, String] )
   - : Supprime les classes spécifiées.
     **Note:** Supprimer une classe qui n'existe pas NE génère PAS d'erreurs.
 - **item**( Number )
   - : Renvoie la position d'une classe dans une collection.
-- **toggle**( String \[, force] )
+- **toggle**( String \[, force] )
   - : Si un seul argument est présent : change la présence d'une classe dans la liste. Si la classe existe, alors la supprime et renvoie `false`, dans le cas inverse, ajoute cette classe et retourne `true`.
     Si le second argument est présent : Si l'argument `force` est à `true`, ajoute cette classe, si l'argument est à `false`, la supprime.
 - contains( String )

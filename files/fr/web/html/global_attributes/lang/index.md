@@ -32,7 +32,7 @@ Voici un aperçu de la syntaxe simplifiée. Une balise de langue est composées 
 - Sous-balise régionale
   - : Ce fragment est optionnel. Il définit un dialecte de la langue de base pour une région donnée. Cette sous-balise est composée de deux lettres en majuscules pour indiquer un pays ou de trois chiffres pour une indiquer une région qui n'est pas un pays. Ainsi, `es-ES` représente l'espagnol parlé en Espagne et `es-013` représente l'espagnol parlé en Amérique centrale ; l'espagnol international serait simplement `es`.
 
-La sous-balise de script doit précéder la sous-balise régionale si les deux sont présentes. Voici un exemple avec les trois fragments : `ru-Cyrl-BY` qui correspond au russe, écrit avec l'alphabet cyrillique, tel que parlé en Biélorussie.
+La sous-balise de script doit précéder la sous-balise régionale si les deux sont présentes. Voici un exemple avec les trois fragments : `ru-Cyrl-BY` qui correspond au russe, écrit avec l'alphabet cyrillique, tel que parlé en Biélorussie.
 
 ## Spécifications
 

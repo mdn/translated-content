@@ -36,11 +36,11 @@ Autres mots clés utilisés dans cette section.
 - [anchorNode](/fr/docs/Web/API/Selection/anchorNode)
   - : Renvoie le nœud d'où la sélection commence.
 - [anchorOffset](/fr/docs/Web/API/Selection/anchorOffset)
-  - : Renvoie un nombre correspondant au décalage de l'«&nbsp;ancre&nbsp;» de la sélection au sein de l'`anchorNode`. Si l'`anchorNode` est un noeud texte, il s'agit du nombre de caractères précédants l'«&nbsp;ancre&nbsp;» au sein de l'`anchorNode`. Si l'`anchorNode` est un élément, il s'agit du nombre de noeuds enfants de l'`anchorNode` précédant l'«&nbsp;ancre&nbsp;».
+  - : Renvoie un nombre correspondant au décalage de l'«&nbsp;ancre&nbsp;» de la sélection au sein de l'`anchorNode`. Si l'`anchorNode` est un noeud texte, il s'agit du nombre de caractères précédants l'«&nbsp;ancre&nbsp;» au sein de l'`anchorNode`. Si l'`anchorNode` est un élément, il s'agit du nombre de noeuds enfants de l'`anchorNode` précédant l'«&nbsp;ancre&nbsp;».
 - [focusNode](/fr/docs/Web/API/Selection/focusNode)
   - : Renvoie le nœud où la sélection se termine.
 - [focusOffset](/fr/docs/Web/API/Selection/focusOffset)
-  - : Renvoie un nombre correspondant au décalage du « focus&nbsp;» de la sélection au sein du focus`Node`. Si le focus`Node` est un noeud texte, il s'agit du nombre de caractères précédants le « focus » au sein du focus`Node`. Si le focusNode est un élément, il s'agit du nombre de noeuds enfants du focus`Node` précédant le « focus ».
+  - : Renvoie un nombre correspondant au décalage du « focus&nbsp;» de la sélection au sein du focus`Node`. Si le focus`Node` est un noeud texte, il s'agit du nombre de caractères précédants le « focus » au sein du focus`Node`. Si le focusNode est un élément, il s'agit du nombre de noeuds enfants du focus`Node` précédant le « focus ».
 - [isCollapsed](/fr/docs/Web/API/Selection/isCollapsed)
   - : Renvoie un booléen indiquant si le point de départ et d'arrivée sont à la même position.
 - [rangeCount](/fr/docs/Web/API/Selection/rangeCount)
@@ -81,7 +81,7 @@ Autres mots clés utilisés dans cette section.
 
 ### Voir aussi
 
-[window.getSelection](Window/getSelection), [`document.getSelection()`](/fr/docs/Web/API/Document/getSelection),[Range](range)
+[window.getSelection](Window/getSelection), [`document.getSelection()`](/fr/docs/Web/API/Document/getSelection),[Range](range)
 
 ### Liens externes
 

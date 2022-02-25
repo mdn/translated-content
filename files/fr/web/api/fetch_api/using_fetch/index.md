@@ -17,7 +17,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 
 L'[API Fetch](/fr/docs/Web/API/Fetch_API) fournit une interface JavaScript pour l'accès et la manipulation des parties de la pipeline HTTP, comme les requêtes et les réponses. Cela fournit aussi une méthode globale {{domxref("GlobalFetch.fetch","fetch()")}} qui procure un moyen facile et logique de récupérer des ressources à travers le réseau de manière asynchrone.
 
-Ce genre de fonctionnalité était auparavant réalisé avec {{domxref("XMLHttpRequest")}}. Fetch fournit une meilleure alternative qui peut être utilisée facilement par d’autres technologies comme {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch fournit aussi un endroit unique et logique pour la définition d'autres concepts liés à HTTP comme CORS et les extensions d'HTTP.
+Ce genre de fonctionnalité était auparavant réalisé avec {{domxref("XMLHttpRequest")}}. Fetch fournit une meilleure alternative qui peut être utilisée facilement par d’autres technologies comme {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch fournit aussi un endroit unique et logique pour la définition d'autres concepts liés à HTTP comme CORS et les extensions d'HTTP.
 
 ## L'état actuel du support par les navigateurs
 
@@ -56,7 +56,7 @@ fetch('flowers.jpg')
 });
 ```
 
-Ici nous récupérons une image à travers le réseau et l'insérons dans un élément {{htmlelement("img")}}. L'utilisation la plus simple de `fetch()` prend un argument — le chemin de la ressource que nous souhaitons récupérer — et retourne une promesse (promise) contenant, en réponse, un objet (de type {{domxref("Response")}}).
+Ici nous récupérons une image à travers le réseau et l'insérons dans un élément {{htmlelement("img")}}. L'utilisation la plus simple de `fetch()` prend un argument — le chemin de la ressource que nous souhaitons récupérer — et retourne une promesse (promise) contenant, en réponse, un objet (de type {{domxref("Response")}}).
 
 Bien sûr, il s'agit seulement d'une réponse HTTP, pas exactement de l'image. Pour extraire le contenu de l'image de la réponse, nous utilisons la méthode {{domxref("Body.blob","blob()")}} (définie sur le mixin {{domxref("Body")}}, qui est implémenté autant par les objets {{domxref("Request")}} que par les objets {{domxref("Response")}}).
 
@@ -68,7 +68,7 @@ Les requêtes Fetch sont controllées par la directive `connect-src` du [Content
 
 ### Fournir des options à la requête
 
-La méthode `fetch()` accepte un second paramètre, optionnel ; un objet `init` qui vous permet de contrôler un certain nombre de réglages :
+La méthode `fetch()` accepte un second paramètre, optionnel ; un objet `init` qui vous permet de contrôler un certain nombre de réglages :
 
 ```js
 var myHeaders = new Headers();

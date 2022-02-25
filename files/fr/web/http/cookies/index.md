@@ -22,21 +22,21 @@ Les cookies sont utilisés pour 3 raisons principales :
 - Suivi
   - : Enregistrement et analyse du comportement utilisateur.
 
-Les cookies étaient auparavant utilisés pour le stockage côté client. C'était légitime lorsque les cookies étaient la seule manière de stocker des données côté client, mais il est aujourd'hui recommandé de préférer les APIs modernes de stockage. Les cookies sont envoyés avec chaque requête, ils peuvent donc avoir un impact négatif sur les performances (particulièrement pour des connexions mobiles). Les APIs modernes de stockage côté client sont l'[API Web storage](/fr/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/API_IndexedDB).
+Les cookies étaient auparavant utilisés pour le stockage côté client. C'était légitime lorsque les cookies étaient la seule manière de stocker des données côté client, mais il est aujourd'hui recommandé de préférer les APIs modernes de stockage. Les cookies sont envoyés avec chaque requête, ils peuvent donc avoir un impact négatif sur les performances (particulièrement pour des connexions mobiles). Les APIs modernes de stockage côté client sont l'[API Web storage](/fr/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage` et `sessionStorage`) et [IndexedDB](/fr/docs/Web/API/API_IndexedDB).
 
 > **Note :** Pour voir les cookies stockés (et d'autres stockages que le navigateur peut conserver), vous ouvrez l'[Inspecteur de stockage](/fr/docs/Outils/Inspecteur_de_stockage) des Outils Développeur et sélectionnez Cookies dans l'onglet stockage (pour Firefox).
 
 ## Création de cookies
 
-Après avoir reçu une requête HTTP, un serveur peut renvoyer sa réponse avec une ou des entête(s) {{HTTPHeader("Set-Cookie")}}. Le cookie ou les cookies ainsi définis sont habituellement stockés par le navigateur, puis renvoyés lors des prochaines requêtes au même serveur, dans une entête HTTP {{HTTPHeader("Cookie")}}. Une date d'expiration ou une durée peut être spécifiée par cookie, après quoi le cookie ne sera plus envoyé. De plus, des restrictions à un domaine ou un chemin spécifiques peuvent être spécifiés, limitant quand le cookie est envoyé.
+Après avoir reçu une requête HTTP, un serveur peut renvoyer sa réponse avec une ou des entête(s) {{HTTPHeader("Set-Cookie")}}. Le cookie ou les cookies ainsi définis sont habituellement stockés par le navigateur, puis renvoyés lors des prochaines requêtes au même serveur, dans une entête HTTP {{HTTPHeader("Cookie")}}. Une date d'expiration ou une durée peut être spécifiée par cookie, après quoi le cookie ne sera plus envoyé. De plus, des restrictions à un domaine ou un chemin spécifiques peuvent être spécifiés, limitant quand le cookie est envoyé.
 
-### Les entêtes `Set-Cookie` et `Cookie`
+### Les entêtes `Set-Cookie` et `Cookie`
 
-L'entête de réponse HTTP {{HTTPHeader("Set-Cookie")}} envoie un cookie depuis le serveur vers le navigateur. Un cookie simple est défini comme ceci:
+L'entête de réponse HTTP {{HTTPHeader("Set-Cookie")}} envoie un cookie depuis le serveur vers le navigateur. Un cookie simple est défini comme ceci:
 
     Set-Cookie: <nom-du-cookie>=<valeur-du-cookie>
 
-> **Note :** Voici comment utiliser l'en-tête `Set-Cookie` dans divers langages de programmation côté serveur :
+> **Note :** Voici comment utiliser l'en-tête `Set-Cookie` dans divers langages de programmation côté serveur :
 >
 > - [PHP](https://secure.php.net/manual/en/function.setcookie.php)
 > - [Node.JS](https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value)
@@ -60,11 +60,11 @@ Maintenant, à chaque requête vers le serveur, le navigateur va renvoyer au ser
 
 ### Cookies de session
 
-Le cookie créé ci-dessus est un *cookie de session*&nbsp;: il est effacé quand le navigateur est fermé, puisqu'on n'a pas spécifié de directive `Expires` ou `Max-Age`. Notons cependant que les navigateurs web peuvent utiliser la **restauration de session**, ce qui fait de la plupart des cookies des cookies permanents, comme si le navigateur n'avait jamais été fermé.
+Le cookie créé ci-dessus est un *cookie de session*&nbsp;: il est effacé quand le navigateur est fermé, puisqu'on n'a pas spécifié de directive `Expires` ou `Max-Age`. Notons cependant que les navigateurs web peuvent utiliser la **restauration de session**, ce qui fait de la plupart des cookies des cookies permanents, comme si le navigateur n'avait jamais été fermé.
 
 ### Cookies permanents
 
-Plutôt que d'expirer quand le client ferme, _les cookies permanents_ expirent à une date spécifique (`Expires`) ou après un certain temps (`Max-Age`).
+Plutôt que d'expirer quand le client ferme, _les cookies permanents_ expirent à une date spécifique (`Expires`) ou après un certain temps (`Max-Age`).
 
     Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
@@ -158,7 +158,7 @@ Pour faire court, la directive de l'UE stipule qu'avant de pouvoir stocker ou r�
 
 Pour en savoir plus, voir [cette section Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie#EU_cookie_directive) et consultez les lois de l'état pour avoir des informations plus récentes et plus précises.
 
-### Cookies Zombie et Evercookies
+### Cookies Zombie et Evercookies
 
 Une approche plus radicale des cookies sont les Cookies Zombies ou "Evercookies", qui sont des cookies recrées après leur suppression et intentionnellement difficiles à supprimer définitivement. Ils utilisent l'[API Web storage](/en-US/docs/Web/API/Web_Storage_API "DOM Storage"), les Flash Local Shared Objects et d'autres techniques pour se recréer d'eux mêmes dès que l'absence du cookie est détéctée.
 

@@ -37,7 +37,7 @@ var detecting = browser.tabs.detectLanguage(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise)qui sera remplie avec une chaîne représentant un code de langue ISO tel que `en` ou `fr`. Pour une liste complète des langues prises en charge par cette méthode, see [kLanguageInfoTable](https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23). Pour une langue inconnue, `"und"` sera retourné (mais voir [bug 1288263](https://bugzilla.mozilla.org/show_bug.cgi?id=1288263)). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise)qui sera remplie avec une chaîne représentant un code de langue ISO tel que `en` ou `fr`. Pour une liste complète des langues prises en charge par cette méthode, see [kLanguageInfoTable](https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23). Pour une langue inconnue, `"und"` sera retourné (mais voir [bug 1288263](https://bugzilla.mozilla.org/show_bug.cgi?id=1288263)). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
 ## Exemples
 

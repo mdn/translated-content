@@ -5,7 +5,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
-Concentrons-nous maintenant sur les chaînes de caractères - c'est le nom donné à un segment de texte en programmation. Dans cet article, nous aborderons les aspects les plus communs des chaînes de caractères que vous devez vraiment connaître quand vous apprenez JavaScript, comme créer une chaîne de caractères, échapper des guillemets dans une chaîne ou encore concaténer des chaînes.
+Concentrons-nous maintenant sur les chaînes de caractères - c'est le nom donné à un segment de texte en programmation. Dans cet article, nous aborderons les aspects les plus communs des chaînes de caractères que vous devez vraiment connaître quand vous apprenez JavaScript, comme créer une chaîne de caractères, échapper des guillemets dans une chaîne ou encore concaténer des chaînes.
 
 <table class="standard-table">
   <tbody>
@@ -155,7 +155,7 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
     string;
     ```
 
-    Comme nous l'avons fait avec les nombres, nous déclarons une variable, l'initialisons avec une valeur de chaîne, puis renvoyons la valeur. La seule différence ici est que lorsque nous écrivons une chaîne, nous la mettons entre guillemets.
+    Comme nous l'avons fait avec les nombres, nous déclarons une variable, l'initialisons avec une valeur de chaîne, puis renvoyons la valeur. La seule différence ici est que lorsque nous écrivons une chaîne, nous la mettons entre guillemets.
 
 2.  Si vous ne le faites pas, ou si vous oubliez un des guillemets, vous déclenchez une erreur. Essayez d'entrer une de ces lignes&nbsp;:
 
@@ -165,7 +165,7 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
     let badString = Voici un test';
     ```
 
-    Ces lignes de code ne fonctionnent pas parce que toute chaîne de texte qui n'est pas écrite entre guillemets est considérée comme un nom de variable, un nom de propriété, un mot réservé ou quelque chose de semblable. Quand l'interpréteur ne parvient pas à trouver la déclaration de ladite variable, une erreur est déclenchée (par ex. «&nbsp;missing ; before statement »). Si l'interpréteur voit le début d'une chaîne  mais ne trouve pas sa fin, comme dans la ligne 2, il se plaint en émettant une erreur (avec «&nbsp;*unterminated string literal* »). Si votre programme produit de telles erreurs, revoyez‑le et vérifiez qu'aucun guillemet ne manque.
+    Ces lignes de code ne fonctionnent pas parce que toute chaîne de texte qui n'est pas écrite entre guillemets est considérée comme un nom de variable, un nom de propriété, un mot réservé ou quelque chose de semblable. Quand l'interpréteur ne parvient pas à trouver la déclaration de ladite variable, une erreur est déclenchée (par ex. «&nbsp;missing ; before statement »). Si l'interpréteur voit le début d'une chaîne mais ne trouve pas sa fin, comme dans la ligne 2, il se plaint en émettant une erreur (avec «&nbsp;*unterminated string literal* »). Si votre programme produit de telles erreurs, revoyez‑le et vérifiez qu'aucun guillemet ne manque.
 
 3.  L'assertion suivante fonctionne si la variable `string` a été préalablement définie — essayez maintenant&nbsp;:
 
@@ -193,7 +193,7 @@ Les mots ont beaucoup d'importance pour les humains — ils occupent une large p
     let badQuotes = 'Quoi sur Terre&nbsp;?";
     ```
 
-3.  L'interpréteur pensera que la chaîne n'a pas été fermée, car le type de guillemet autre ne servant pas à délimiter les chaînes peut y être employé. Par exemple, ces deux assertions sont valables&nbsp;:
+3.  L'interpréteur pensera que la chaîne n'a pas été fermée, car le type de guillemet autre ne servant pas à délimiter les chaînes peut y être employé. Par exemple, ces deux assertions sont valables&nbsp;:
 
     ```js
     let sglDbl = 'Mangeriez‑vous un "souper de poisson"?';
@@ -248,7 +248,7 @@ Cela fonctionne à la perfection. Vous pouvez échapper d'autres caractères de 
     response;
     ```
 
-> **Note :** Quand vous entrez une chaîne dans votre code, entre guillemets simples ou doubles, on l'appelle **chaîne littérale**.
+> **Note :** Quand vous entrez une chaîne dans votre code, entre guillemets simples ou doubles, on l'appelle **chaîne littérale**.
 
 ### Concaténation dans un contexte
 
@@ -288,7 +288,7 @@ Ici nous utilisons en ligne 4 la fonction {{domxref("Window.prompt()", "Window.p
     typeof myDate;
     ```
 
-3.  Si vous avez une variable numérique que vous souhaitez convertir en chaîne sans autre modification, ou une variable numérique que vous voulez convertir en chaîne sans autre modification, vous pouvez utiliser les constructions suivantes&nbsp;:
+3.  Si vous avez une variable numérique que vous souhaitez convertir en chaîne sans autre modification, ou une variable numérique que vous voulez convertir en chaîne sans autre modification, vous pouvez utiliser les constructions suivantes&nbsp;:
 
     - L'objet {{jsxref("Number")}} convertit tout ce qui lui est passé en nombre, si c'est possible. Essayez&nbsp;:
 

@@ -32,7 +32,7 @@ Il existe deux façons de spécifier une action du navigateur: avec ou sans [pop
 browser.browserAction.onClicked.addListener(handleClick);
 ```
 
-Si vous spécifiez une fenêtre contextuelle, l'événement de clic n'est pas envoyé : A la place, le popup s'affiche lorsque l'utilisateur clique sur le bouton. L'utilisateur peut interagir avec le popup et il se ferme automatiquement lorsque l'utilisateur clique à l'extérieur. Consulter l'article [Popup ](/fr/Add-ons/WebExtensions/Popups)pour plus de détails sur la création et la gestion des fenêtres pop-up.
+Si vous spécifiez une fenêtre contextuelle, l'événement de clic n'est pas envoyé : A la place, le popup s'affiche lorsque l'utilisateur clique sur le bouton. L'utilisateur peut interagir avec le popup et il se ferme automatiquement lorsque l'utilisateur clique à l'extérieur. Consulter l'article [Popup ](/fr/Add-ons/WebExtensions/Popups)pour plus de détails sur la création et la gestion des fenêtres pop-up.
 
 Notez que votre extension ne peut avoir qu'une seule action de navigateur.
 

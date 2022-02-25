@@ -76,7 +76,7 @@ Vous pouvez trouver l'[exemple (en) fini](https://mdn.github.io/learning-area/cs
 
 ### Couleur
 
-La propriété {{cssxref("color")}} définit la couleur du contenu d'avant‑plan des éléments sélectionnés (généralement du texte, mais peut être autre chose, comme un soulignement ou un surlignage créé avec la propriété {{cssxref("text-decoration")}}.
+La propriété {{cssxref("color")}} définit la couleur du contenu d'avant‑plan des éléments sélectionnés (généralement du texte, mais peut être autre chose, comme un soulignement ou un surlignage créé avec la propriété {{cssxref("text-decoration")}}.
 
 `color` accepte toutes les [unités de couleur des CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units#Couleurs), par exemple :
 
@@ -202,7 +202,7 @@ Dans l'article [Valeurs et unités CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CS
 
 - `px` (pixels) : le nombre de pixels souhaités pour la hauteur du texte. C'est une unité absolue — il en résulte une même valeur finale calculée de la police sur la page dans à peu près n'importe quelle situation.
 - `em` : 1 em est égal à la taille de la police définie sur l'élément parent de l'élément courant que nous composons (plus précisément, la largeur d'un « M » majuscule de l'élément parent). Cette valeur peut devenir difficile à déterminer si vous avez beaucoup d'imbrications avec diverses tailles de police, mais cela reste faisable, comme vous le verrez ci-dessous. Pourquoi s'embêter ? C'est assez naturel, une fois que vous y êtes habitué ; vous pouvez utiliser `em` pour tout dimensionner, pas seulement du texte. Vous pouvez avoir un site web entier dimensionné avec des `em`, la maintenance en sera facilitée.
-- `rem` : il fonctionne comme `em`, excepté que un `rem` est égal à la taille de la police sur l'élément racine du document (c'est-à-dire {{htmlelement("html")}}) et non le parent direct). Le calcul des tailles de police en est facilité, mais malheureusement les `rem` ne sont pas pris en charge dans Internet Explorer 8 et avant. Si vous devez prendre en charge des navigateurs plus anciens dans votre projet, vous devrez vous en tenir aux `em` ou aux `px`, soit utiliser une prothèse d'émulation ({{glossary ("polyfill")}}) telle que [REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill).
+- `rem` : il fonctionne comme `em`, excepté que un `rem` est égal à la taille de la police sur l'élément racine du document (c'est-à-dire {{htmlelement("html")}}) et non le parent direct). Le calcul des tailles de police en est facilité, mais malheureusement les `rem` ne sont pas pris en charge dans Internet Explorer 8 et avant. Si vous devez prendre en charge des navigateurs plus anciens dans votre projet, vous devrez vous en tenir aux `em` ou aux `px`, soit utiliser une prothèse d'émulation ({{glossary ("polyfill")}}) telle que [REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill).
 
 La propriété `font-size` d'un élément est héritée de son parent. Tout commence par l'élément racine de l'ensemble du document — {{htmlelement("html")}} — dont la propriété `font‑size` est normée à 16 px sur les navigateurs. Tout paragraphe (ou tout autre élément dont la taille n'a pas été définie différemment par le navigateur) à l'intérieur de l'élément racine aura une taille finale de 16 px. D'autres éléments peuvent avoir des tailles par défaut différentes, par exemple un élément {{htmlelement ("h1")}} a une taille de 2 `em` définie par défaut, donc aura une taille finale de 32 px.
 

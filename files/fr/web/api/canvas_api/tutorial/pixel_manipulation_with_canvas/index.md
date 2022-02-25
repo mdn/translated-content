@@ -13,17 +13,17 @@ Jusqu'à présent, nous n'avons pas examiné dans le détail les pixels réels d
 L'objet {{domxref("ImageData")}} représente les données de pixels sous-jacentes à une zone d'un objet canevas. Il contient les attributs (en lecture seule) suivants :
 
 - `width`
-  - : La largeur de l'image en pixels.
+  - : La largeur de l'image en pixels.
 - `height`
-  - : La hauteur de l'image en pixels.
+  - : La hauteur de l'image en pixels.
 - `data`
-  - : Un {{jsxref("Uint8ClampedArray")}} représentant un tableau monodimensionnel contenant les données dans l'ordre RVBA, ayant des valeurs entières entre 0 et  255 (inclus).
+  - : Un {{jsxref("Uint8ClampedArray")}} représentant un tableau monodimensionnel contenant les données dans l'ordre RVBA, ayant des valeurs entières entre 0 et  255 (inclus).
 
-La propriété `data` retourne un tableau {{jsxref("Uint8ClampedArray")}} auquel on peut accéder pour voir plus en détail les données brutes des pixels ; chaque pixel est représenté par quatre valeurs sur un octet (rouge, vert, bleu et alpha, dans cet ordre ; c'est-à-dire, le format "RVBA").  Chaque composante de couleur est représentée par un entier entre 0 et 255. Chaque composante reçoit un indice à l'intérieur du tableau, la composante rouge du pixel supérieur gauche étant à l'indice 0 à l'intérieur du tableau. Les pixels continuent ensuite de gauche à droite, puis vers le bas, jusqu'au bout du tableau.
+La propriété `data` retourne un tableau {{jsxref("Uint8ClampedArray")}} auquel on peut accéder pour voir plus en détail les données brutes des pixels ; chaque pixel est représenté par quatre valeurs sur un octet (rouge, vert, bleu et alpha, dans cet ordre ; c'est-à-dire, le format "RVBA").  Chaque composante de couleur est représentée par un entier entre 0 et 255. Chaque composante reçoit un indice à l'intérieur du tableau, la composante rouge du pixel supérieur gauche étant à l'indice 0 à l'intérieur du tableau. Les pixels continuent ensuite de gauche à droite, puis vers le bas, jusqu'au bout du tableau.
 
-Le {{jsxref("Uint8ClampedArray")}} contient `height`_(hauteur)_ × `width`*(largeur)*  × 4 octets, dont les valeurs d'indices vont de 0 à (`height`×`width`×4)-1.
+Le {{jsxref("Uint8ClampedArray")}} contient `height`_(hauteur)_ × `width`*(largeur)*  × 4 octets, dont les valeurs d'indices vont de 0 à (`height`×`width`×4)-1.
 
-Par exemple, pour lire la valeur de la composante bleue d'un pixel situé en colonne 200, ligne 50  de l'image, vous pouvez faire ce qui suit&nbsp;:
+Par exemple, pour lire la valeur de la composante bleue d'un pixel situé en colonne 200, ligne 50  de l'image, vous pouvez faire ce qui suit&nbsp;:
 
 ```js
 composanteBleue = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
@@ -35,17 +35,17 @@ Vous pouvez accéder à la taille en octets du tableau de pixels en lisant l'att
 var nbOctets = imageData.data.length;
 ```
 
-## Création d'un objet `ImageData`
+## Création d'un objet `ImageData`
 
-Pour créer un nouvel objet `ImageData` vierge, vous pouvez utiliser la méthode  {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}. Il existe deux versions de la méthode `createImageData() `:
+Pour créer un nouvel objet `ImageData` vierge, vous pouvez utiliser la méthode  {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}. Il existe deux versions de la méthode `createImageData() `:
 
 ```js
 var monImageData = ctx.createImageData(largeur, hauteur);
 ```
 
-Cela crée un nouvel objet `ImageData` avec les dimensions spécifiées. Tous les pixels sont prédéfinis comme étant noirs transparents.
+Cela crée un nouvel objet `ImageData` avec les dimensions spécifiées. Tous les pixels sont prédéfinis comme étant noirs transparents.
 
-Vous pouvez aussi créer un nouvel objet `ImageData` ayant les mêmes dimensions que celles de l'objet indiqué par `autreImageData`. Les pixels du nouvel objet sont tous prédéfinis comme étant noirs transparents. **Cela ne copie pas les données d'image&nbsp;!**
+Vous pouvez aussi créer un nouvel objet `ImageData` ayant les mêmes dimensions que celles de l'objet indiqué par `autreImageData`. Les pixels du nouvel objet sont tous prédéfinis comme étant noirs transparents. **Cela ne copie pas les données d'image&nbsp;!**
 
 ```js
 var monImageData = ctx.createImageData(autreImageData);
@@ -53,21 +53,21 @@ var monImageData = ctx.createImageData(autreImageData);
 
 ## Obtention des données pixel pour un contexte
 
-Pour obtenir un objet  `ImageData` contenant une copie des données pixel pour un contexte de canevas, vous pouvez utiliser la méthode `getImageData()` :
+Pour obtenir un objet  `ImageData` contenant une copie des données pixel pour un contexte de canevas, vous pouvez utiliser la méthode `getImageData()` :
 
 ```js
 var monImageData = ctx.getImageData(gauche, haut, largeur, hauteur);
 ```
 
-Cette méthode retourne un objet `ImageData` représentant les données pixel pour la zone du canevas dont les coins sont représentés par les points  (`left`,`top`) _`(gauche,haut)`_, (`left+width`, `top`) _(gauche+largeur, haut)_, (`left`, `top+height`) _(gauche, haut+hauteur)_ et  (`left+width`, `top+height`) _(gauche+largeur, haut+hauteur)_. Les coordonnées sont spécifiées en unités d'espace de coordonnées du canevas.
+Cette méthode retourne un objet `ImageData` représentant les données pixel pour la zone du canevas dont les coins sont représentés par les points  (`left`,`top`) _`(gauche,haut)`_, (`left+width`, `top`) _(gauche+largeur, haut)_, (`left`, `top+height`) _(gauche, haut+hauteur)_ et  (`left+width`, `top+height`) _(gauche+largeur, haut+hauteur)_. Les coordonnées sont spécifiées en unités d'espace de coordonnées du canevas.
 
-> **Note :** Tous les pixels en dehors du canevas seront retournés comme noirs transparents dans l'objet `ImageData` résultant.
+> **Note :** Tous les pixels en dehors du canevas seront retournés comme noirs transparents dans l'objet `ImageData` résultant.
 
-Cette méthode est aussi présentée dans l'article [Manipulation vidéo utilisant canvas](/fr/docs/HTML/Manipulating_video_using_canvas).
+Cette méthode est aussi présentée dans l'article [Manipulation vidéo utilisant canvas](/fr/docs/HTML/Manipulating_video_using_canvas).
 
 ### Une pipette à couleur
 
-Dans cet exemple, nous utilisons la méthode [getImageData() ](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData)pour afficher la couleur en dessous du curseur de la souris. Pour cela, nous avons besoin de la position en cours de la souris donnée par `layerX` et `layerY`, nous recherchons ensuite les données pixel à cette position dans le tableau de pixels que [getImageData()](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData) nous fournit. Finalement, nous utilisons les données du tableau pour définir une couleur d'arrière-plan et un texte dans le `<div>` pour afficher la couleur.
+Dans cet exemple, nous utilisons la méthode [getImageData() ](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData)pour afficher la couleur en dessous du curseur de la souris. Pour cela, nous avons besoin de la position en cours de la souris donnée par `layerX` et `layerY`, nous recherchons ensuite les données pixel à cette position dans le tableau de pixels que [getImageData()](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData) nous fournit. Finalement, nous utilisons les données du tableau pour définir une couleur d'arrière-plan et un texte dans le `<div>` pour afficher la couleur.
 
 ```html hidden
 <canvas id="canvas" width="300" height="227" style="float:left"></canvas>
@@ -99,15 +99,15 @@ Dans cet exemple, nous utilisons la méthode [getImageData() ](/fr/docs/Web/API/
 
 ## Peinture des données pixel dans un contexte
 
-Vous pouvez utiliser la méthode [putImageData() ](/fr/docs/Web/API/CanvasRenderingContext2D/putImageData)pour peindre les données pixel dans un contexte :
+Vous pouvez utiliser la méthode [putImageData() ](/fr/docs/Web/API/CanvasRenderingContext2D/putImageData)pour peindre les données pixel dans un contexte :
 
 ```js
 ctx.putImageData(monImageData, dx, dy);
 ```
 
-Les paramètres `dx` et `dy` indiquent les coordonnées système dans le contexte du coin supérieur gauche des données pixel qui doivent être peintes.
+Les paramètres `dx` et `dy` indiquent les coordonnées système dans le contexte du coin supérieur gauche des données pixel qui doivent être peintes.
 
-Par exemple, pour peindre l'image entière représentée par `monImageData` dans le coin supérieur gauche du contexte, vous pouvez simplement faire ce qui suit :
+Par exemple, pour peindre l'image entière représentée par `monImageData` dans le coin supérieur gauche du contexte, vous pouvez simplement faire ce qui suit :
 
 ```js
 ctx.putImageData(monImageData, 0, 0);
@@ -115,7 +115,7 @@ ctx.putImageData(monImageData, 0, 0);
 
 ### Niveaux de gris et inversion de couleurs
 
-Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction  grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipedia pour plus d'informations.
+Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction  grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipedia pour plus d'informations.
 
 ```html hidden
 <canvas id="canevas" width="300" height="227"></canvas>

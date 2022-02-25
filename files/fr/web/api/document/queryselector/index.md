@@ -14,9 +14,9 @@ translation_of: Web/API/Document/querySelector
 ---
 {{ ApiRef("DOM") }}
 
-La méthode **`querySelector()`** de l'interface {{domxref("Document")}} retourne le premier {{domxref("Element")}} dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou `null` si aucune correspondance n'est trouvée.
+La méthode **`querySelector()`** de l'interface {{domxref("Document")}} retourne le premier {{domxref("Element")}} dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou `null` si aucune correspondance n'est trouvée.
 
-> **Note :** La correspondance est effectuée en utilisant le parcours pré-ordonné profondeur-d'abord des nœuds du document, en partant du premier élément dans le balisage du document et en itérant à travers les nœuds en séquence, par ordre du compte de nœuds enfants.
+> **Note :** La correspondance est effectuée en utilisant le parcours pré-ordonné profondeur-d'abord des nœuds du document, en partant du premier élément dans le balisage du document et en itérant à travers les nœuds en séquence, par ordre du compte de nœuds enfants.
 
 ## Syntaxe
 
@@ -33,7 +33,7 @@ element = document.querySelector(sélecteurs);
 
 ### Valeur retournée
 
-Un objet {{domxref("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) spécifié, ou `null` s'il n'y a pas de correspondances.
+Un objet {{domxref("Element")}} représentant le premier élément dans le document qui corresponde au jeu de [sélecteurs CSS](/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS) spécifié, ou `null` s'il n'y a pas de correspondances.
 
 Si vous avez besoin d'une liste de tous les éléments correspondant aux sélecteurs spécifiés, vous devez utiliser {{domxref("Document.querySelectorAll", "querySelectorAll()")}} à la place.
 
@@ -44,7 +44,7 @@ Si vous avez besoin d'une liste de tous les éléments correspondant aux sélect
 
 ## Notes d'utilisation
 
-Si le sélecteur correspond à un ID et que cet ID est utilisé de façon erronée plusieurs fois dans le document, le premier élément en correspondance est retourné.
+Si le sélecteur correspond à un ID et que cet ID est utilisé de façon erronée plusieurs fois dans le document, le premier élément en correspondance est retourné.
 
 Les [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) CSS ne retourneront jamais aucun élément, comme spécifié dans l'[API des sélecteurs](http://www.w3.org/TR/selectors-api/#grammar) (en).
 
@@ -81,7 +81,7 @@ var el = document.querySelector(".maclasse");
 
 ### Un sélecteur plus complexe
 
-Les _sélecteurs_ peuvent également être réellement puissants comme le montre l'exemple suivant. Ici, le premier élément `<input name="identifiant"/>` dans un `<div class="panneau-utilisateur principal">` dans le document est retourné :
+Les _sélecteurs_ peuvent également être réellement puissants comme le montre l'exemple suivant. Ici, le premier élément `<input name="identifiant"/>` dans un `<div class="panneau-utilisateur principal">` dans le document est retourné :
 
 ```js
 var el = document.querySelector("div.panneau-utilisateur.principal input[name='identifiant']");

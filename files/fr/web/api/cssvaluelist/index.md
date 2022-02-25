@@ -23,7 +23,7 @@ Les éléments dans `CSSValueList` sont accessibles par un index integral commen
 
 _Hérite des propriétés de son parent {{domxref("CSSValue")}}_.
 
-- {{domxref("CSSValueList.length")}} {{readonlyInline}}
+- {{domxref("CSSValueList.length")}} {{readonlyInline}}
   - : Un `unsigned long` représentant le nombre de `CSSValues` (_valeurs CSS_) dans la liste.
 
 ## Méthodes

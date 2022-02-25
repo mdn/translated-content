@@ -5,9 +5,9 @@ translation_of: Web/API/HTMLFormElement/enctype
 ---
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLFormElement.enctype`** représente le type de contenu de l'élément  {{HTMLElement("form")}}.
+La propriété **`HTMLFormElement.enctype`** représente le type de contenu de l'élément  {{HTMLElement("form")}}.
 
-Le type d'encodage généralement utilisé est "application/x-www-form-urlencoded".
+Le type d'encodage généralement utilisé est "application/x-www-form-urlencoded".
 
 ## Syntaxe
 

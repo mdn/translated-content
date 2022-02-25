@@ -166,7 +166,7 @@ pourra être remplacée par :
 }
 ```
 
-En revanche, le modèle d'usage suivant n'est pas recommandée (cf. [la section qui suit sur les performances](#issues_with_performance_and_specificity)) :
+En revanche, le modèle d'usage suivant n'est pas recommandée (cf. [la section qui suit sur les performances](#issues_with_performance_and_specificity)) :
 
 ```css
 :matches(ol, ul, menu, dir) :matches(ol, ul, menu, dir) :matches(ul, menu, dir) {
@@ -178,7 +178,7 @@ En revanche, le modèle d'usage suivant n'est pas recommandée (cf. [la section
 
 La pseudo-classe `:matches` est particulièrement utile lorsqu'on manipule les [sections et en-têtes](/en-US/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document") HTML5. {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} étant souvent imbriqués les uns dans les autres, les mettre en forme (sans `:matches()`) s'avèrerait plutôt compliqué.
 
-Par exemple, pour mettre en forme les éléments {{HTMLElement("h1")}} à différents niveaux sans utiliser `:matches()`, on obtient ces règles plutôt compliquées :
+Par exemple, pour mettre en forme les éléments {{HTMLElement("h1")}} à différents niveaux sans utiliser `:matches()`, on obtient ces règles plutôt compliquées :
 
 ```css
 /* Niveau 0 */
@@ -224,7 +224,7 @@ h1 {
 }
 ```
 
-### Éviter l'invalidation d'une liste de sélecteur
+### Éviter l'invalidation d'une liste de sélecteur
 
 À la différence des listes de sélecteurs, la pseudo-classe `:is()` ne devient pas invalide lorsqu'un des sélecteurs passés en argument n'est pas pris en charge par le navigateur.
 
@@ -234,7 +234,7 @@ h1 {
 }
 ```
 
-Le sélecteur ci-dessus sera analysé sans problème et permettra de cibler `:valid` même si les navigateurs ne prennent pas en charge le sélecteur `:incompatible`. En revanche :
+Le sélecteur ci-dessus sera analysé sans problème et permettra de cibler `:valid` même si les navigateurs ne prennent pas en charge le sélecteur `:incompatible`. En revanche :
 
 ```css
 :valid, :incompatible {
@@ -242,7 +242,7 @@ Le sélecteur ci-dessus sera analysé sans problème et permettra de cibler `:va
 }
 ```
 
-L'exemple ci-dessus ne sera pas appliqué par les navigateurs qui ne prennent pas en charge `:incompatible`, même si `:valid` est bien pris en charge.
+L'exemple ci-dessus ne sera pas appliqué par les navigateurs qui ne prennent pas en charge `:incompatible`, même si `:valid` est bien pris en charge.
 
 ## Notes
 
@@ -282,5 +282,5 @@ et cette dernière version sera plus rapide :
 
 ## Voir aussi
 
-- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - se comporte comme `is()`, avec une spécificité nulle
+- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - se comporte comme `is()`, avec une spécificité nulle
 - [Les composants web](/fr/docs/Web/Web_Components)

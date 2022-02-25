@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Méthode/OPTIONS
 ---
 {{HTTPSidebar}}
 
-La **méthode HTTP `OPTIONS`** est utilisée pour décrire les options de communication pour la ressource ciblée. Le client peut renseigner une URL spécifique pour la méthode OPTIONS, ou une astérisque (\*) pour interroger le serveur dans sa globalité.
+La **méthode HTTP `OPTIONS`** est utilisée pour décrire les options de communication pour la ressource ciblée. Le client peut renseigner une URL spécifique pour la méthode OPTIONS, ou une astérisque (\*) pour interroger le serveur dans sa globalité.
 
 <table class="properties">
   <tbody>
@@ -58,7 +58,7 @@ Pour déterminer les méthodes HTTP supportées par le serveur, on peut utiliser
 
     curl -X OPTIONS http://example.org -i
 
-La réponse contient un en-tête {{HTTPHeader("Allow")}} qui liste les méthodes autorisées :
+La réponse contient un en-tête {{HTTPHeader("Allow")}} qui liste les méthodes autorisées :
 
     HTTP/1.1 200 OK
     Allow: OPTIONS, GET, HEAD, POST
@@ -69,9 +69,9 @@ La réponse contient un en-tête {{HTTPHeader("Allow")}} qui liste les méthode
     x-ec-custom-error: 1
     Content-Length: 0
 
-### Requête de pré-vérification cross-origin [CORS](https://developer.mozilla.org/fr/docs/Glossaire/CORS)
+### Requête de pré-vérification cross-origin [CORS](https://developer.mozilla.org/fr/docs/Glossaire/CORS)
 
-En [CORS](/en-US/docs/Web/HTTP/Access_control_CORS), une requête de pré-vérification est envoyée avec la méthode `OPTIONS` afin que le serveur indique si la requête est acceptable avec les paramètres spécifiés. En tant qu'élément de la requête de pré-vérification, le header {{HTTPHeader("Access-Control-Request-Method")}} notifie le serveur que lorsque la véritable requête sera envoyée, ce sera avec une méthode `POST`. Le header {{HTTPHeader("Access-Control-Request-Headers")}} indique au serveur que lorsque la vraie requête sera envoyée, elle aura les en-tête personnalisés `X-PINGOTHER` et `Content-Type`. Le serveur a maintenant la possibilité de déterminer s'il souhaite ou non accepter la requête dans les conditions énoncées par la requête de pré-vérification.
+En [CORS](/en-US/docs/Web/HTTP/Access_control_CORS), une requête de pré-vérification est envoyée avec la méthode `OPTIONS` afin que le serveur indique si la requête est acceptable avec les paramètres spécifiés. En tant qu'élément de la requête de pré-vérification, le header {{HTTPHeader("Access-Control-Request-Method")}} notifie le serveur que lorsque la véritable requête sera envoyée, ce sera avec une méthode `POST`. Le header {{HTTPHeader("Access-Control-Request-Headers")}} indique au serveur que lorsque la vraie requête sera envoyée, elle aura les en-tête personnalisés `X-PINGOTHER` et `Content-Type`. Le serveur a maintenant la possibilité de déterminer s'il souhaite ou non accepter la requête dans les conditions énoncées par la requête de pré-vérification.
 
     OPTIONS /resources/post-here/ HTTP/1.1
     Host: bar.other
@@ -84,7 +84,7 @@ En [CORS](/en-US/docs/Web/HTTP/Access_control_CORS), une requête de pré-vérif
     Access-Control-Request-Method: POST
     Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
-Dans la réponse du serveur, l'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique que les méthodes `POST`, `GET`, and `OPTIONS` sont utilisables pour interroger la ressource.  Cet en-tête est similaire à {{HTTPHeader("Allow")}}, mais utilisé uniquement dans le contexte CORS.
+Dans la réponse du serveur, l'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique que les méthodes `POST`, `GET`, and `OPTIONS` sont utilisables pour interroger la ressource. Cet en-tête est similaire à {{HTTPHeader("Allow")}}, mais utilisé uniquement dans le contexte CORS.
 
     HTTP/1.1 200 OK
     Date: Mon, 01 Dec 2008 01:15:39 GMT

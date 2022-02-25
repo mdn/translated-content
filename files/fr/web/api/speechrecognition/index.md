@@ -19,11 +19,11 @@ _` SpeechRecognition``  `hérite également des propriétés de son interface pa
 - {{domxref("SpeechRecognition.grammars")}}
   - : Retourne et définit une collection d'objets {{domxref("SpeechGrammar")}} représentant les grammaires qui seront comprises par `SpeechRecognition`.
 - {{domxref("SpeechRecognition.lang")}}
-  - : Retourne et définit la langue de  `SpeechRecognition`. Si elle n'est pas spécifiée, prend la valeur par défaut du HTML {{htmlattrxref("lang","html")}} ou le paramètre de langue du user agent si celle-ci n'est pas défini non plus.
+  - : Retourne et définit la langue de  `SpeechRecognition`. Si elle n'est pas spécifiée, prend la valeur par défaut du HTML {{htmlattrxref("lang","html")}} ou le paramètre de langue du user agent si celle-ci n'est pas défini non plus.
 - {{domxref("SpeechRecognition.continuous")}}
   - : Contrôle si la reconnaissance est continue, ou retourne seulement un seul résultat. Par défaut retourne un seul résultat (`false`.)
 - {{domxref("SpeechRecognition.interimResults")}}
-  - : Contrôle si les résultats intermédiaires doivent être retournés (`true`) ou pas (`false`.) Les résultats intermédiaires sont des résultats qui ne sont pas encore définitifs. (e.x. ou la propriété {{domxref("SpeechRecognitionResult.isFinal")}}  est `false`.)
+  - : Contrôle si les résultats intermédiaires doivent être retournés (`true`) ou pas (`false`.) Les résultats intermédiaires sont des résultats qui ne sont pas encore définitifs. (e.x. ou la propriété {{domxref("SpeechRecognitionResult.isFinal")}}  est `false`.)
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Règle le nombre maximum de {{domxref("SpeechRecognitionAlternative")}} (d'alternatives) fourni par résultat. La valeur par défaut est 1.
 - {{domxref("SpeechRecognition.serviceURI")}}

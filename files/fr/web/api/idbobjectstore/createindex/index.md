@@ -89,7 +89,7 @@ L'{{domxref("IDBIndex","accès")}} au nouvel index.
   - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} dont dépend cet {{domxref("IDBObjectStore","accès")}} au magasin d'objet n'est pas en {{domxref("IDBTransaction.mode","mode")}} `versionchange`.
 - `TransactionInactiveError`
   - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.
-    [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165) ).
+    [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165) ).
 - `ConstraintError`
   - : Cette {{domxref("DOMException","exeption")}} si un index avec le même nom (case sensible) existe déjà sur le magasin d'objet.
 

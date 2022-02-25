@@ -10,7 +10,7 @@ original_slug: Web/HTTP/Méthode
 ---
 {{HTTPSidebar}}
 
-HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action que l'on souhaite réaliser sur la ressource indiquée. Bien qu'on rencontre également des noms (en anglais), ces méthodes sont souvent appelées _verbes HTTP_. Chacun d'eux implémente une sémantique différente mais certaines fonctionnalités courantes peuvent être partagées par différentes méthodes (e.g. une méthode de requête peut être sûre (_safe_), idempotente ou être mise en cache (_cacheable_)).
+HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action que l'on souhaite réaliser sur la ressource indiquée. Bien qu'on rencontre également des noms (en anglais), ces méthodes sont souvent appelées _verbes HTTP_. Chacun d'eux implémente une sémantique différente mais certaines fonctionnalités courantes peuvent être partagées par différentes méthodes (e.g. une méthode de requête peut être sûre (_safe_), idempotente ou être mise en cache (_cacheable_)).
 
 - [`GET`](/fr/docs/Web/HTTP/Méthode/GET)
   - : La méthode `GET` demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.

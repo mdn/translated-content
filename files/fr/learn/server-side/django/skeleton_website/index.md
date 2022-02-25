@@ -117,7 +117,7 @@ La commande ci-dessous va créer l'application _catalog_. Vous devez être dans 
 python3 manage.py startapp catalog
 ```
 
-> **Note :** La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : `py -3 manage.py startapp catalog`
+> **Note :** La commande ci-dessus est exécutée dans un environnement Linux/macOS X. Sous Windows, il se peut que la commande soit : `py -3 manage.py startapp catalog`
 >
 > Si vous travaillez dans un environnement Windows, l'ensemble de la série didactique est écrite pour un environnement Linux/MacOS. Pensez, alors, à remplacer les commandes `python3` par `py -3`.
 >
@@ -232,7 +232,7 @@ Le routage des URLs est géré à l'aide de la variable `urlpatterns`. Elle cons
 
 > **Note :** Dans la fonction `path()`, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre < et >, par exemple `'catalog/<id>/'`). Ce motif correspondra à une URL du type **/catalog/*des_caractères*/**. La chaîne *des_caractères* sera transmis à la vue comme une chaîne de caractère associée à une variable nommée `id`. Ce point sera vu en détails plus loin dans la série didactique.
 
-Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable `urlpatterns` une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour `catalog/` dont la gestion est déléguée au fichier **urls.py** du module **catalog** (c'est-à-dire le fichier **catalog/urls.py**).
+Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable `urlpatterns` une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour `catalog/` dont la gestion est déléguée au fichier **urls.py** du module **catalog** (c'est-à-dire le fichier **catalog/urls.py**).
 
 ```python
 # Use include() to add paths from the catalog application
@@ -329,7 +329,7 @@ L'option `migrate` applique les modifications sur la base de données (Django tr
 
 Pendant la phase de développement, vous pouvez tester votre serveur sur un mode local et le consulter avec votre navigateur.
 
-> **Note :** Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL `http://127.0.0.1:8000/`. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes [django-admin and manage.py: runserver](https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver).
+> **Note :** Le serveur local n'est ni robuste ni performant, il n'est donc pas fait pour être utilisé en production, mais il permet d'être autonome pour les travaux de développement. La configuration par défaut de ce serveur est telle que votre site est accessible à l'URL `http://127.0.0.1:8000/`. Cependant, vous pouvez modifier ces paramètres et pour plus d'information vous pouvez consulter la documentation sur le site Django des commandes [django-admin and manage.py: runserver](https://docs.djangoproject.com/fr/2.2/ref/django-admin/#runserver).
 
 Pour démarrer le serveur local, il suffit d'exécuter la commande ci-dessous dans le répertoire du projet (dossier où se trouver **manage.py**) :
 

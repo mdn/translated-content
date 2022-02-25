@@ -167,7 +167,7 @@ var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);
 ```
 
-La première récupère juste le `message` du champ `notificationTitle `du fichier `messages.json` le plus approprié pour les paramètres régionaux actuels du navigateur. Le second est similaire, mais il est passé une URL en tant que deuxième paramètre. Ce qui donne? C'est ainsi que vous spécifiez le contenu pour remplacer l'espace réservé `$URL$`  que nous voyons dans le champ `message` du champ  `notificationContent` :
+La première récupère juste le `message` du champ `notificationTitle `du fichier `messages.json` le plus approprié pour les paramètres régionaux actuels du navigateur. Le second est similaire, mais il est passé une URL en tant que deuxième paramètre. Ce qui donne? C'est ainsi que vous spécifiez le contenu pour remplacer l'espace réservé `$URL$`  que nous voyons dans le champ `message` du champ  `notificationContent` :
 
 ```json
 "notificationContent": {
@@ -341,7 +341,7 @@ Le tableau suivant montre les différents messages prédéfinis disponibles :
     <tr>
       <td><code>@@bidi_end_edge</code></td>
       <td>
-        Si le <code>@@bidi_dir</code> est "ltr", alors c'est "droite"; sinon,
+        Si le <code>@@bidi_dir</code> est "ltr", alors c'est "droite"; sinon,
         c'est "gauche".
       </td>
     </tr>

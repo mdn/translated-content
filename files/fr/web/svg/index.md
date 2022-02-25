@@ -20,7 +20,7 @@ translation_of: Web/SVG
 
 **[Premiers pas](/fr/SVG/Tutoriel "fr/SVG/Tutoriel")** ce tutoriel vous aidera à débuter en SVG.
 
-SVG est une [recommandation du W3C](http://www.w3.org/Graphics/SVG/) et est basé sur XML. Il est explicitement conçu pour fonctionner avec d'autres standards du [W3C](http://www.w3.org/) comme [CSS](/fr/CSS "fr/CSS"), [DOM](/fr/DOM "fr/DOM") et [SMIL](http://www.w3.org/AudioVideo/).
+SVG est une [recommandation du W3C](http://www.w3.org/Graphics/SVG/) et est basé sur XML. Il est explicitement conçu pour fonctionner avec d'autres standards du [W3C](http://www.w3.org/) comme [CSS](/fr/CSS "fr/CSS"), [DOM](/fr/DOM "fr/DOM") et [SMIL](http://www.w3.org/AudioVideo/).
 
 SVG est un format d'images vectorielles. Les images vectorielles peuvent être redimensionnées sans perte de qualité, tandis que ce n'est pas possible avec des images matricielles (bitmap).
 

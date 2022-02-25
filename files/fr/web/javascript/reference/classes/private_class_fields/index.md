@@ -75,7 +75,7 @@ console.assert(error instanceof TypeError)
 
 ### Champs d'instance privés
 
-Les champs d'instance privés sont déclarés avec des **noms** à **#** (prononcés "_noms à hash_", "_hash names_" en anglais), qui sont des identifieurs préfixés par `#`. Le `#` fait partie du nom lui-même. Il est utilisé tant pour la déclaration que pour l'accès.
+Les champs d'instance privés sont déclarés avec des **noms** à **#** (prononcés "_noms à hash_", "_hash names_" en anglais), qui sont des identifieurs préfixés par `#`. Le `#` fait partie du nom lui-même. Il est utilisé tant pour la déclaration que pour l'accès.
 
 L'encapsulation est forcée par le langage. C'est une erreur de syntaxe que de faire référence aux noms à `#` en dehors de leur portée.
 

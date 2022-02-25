@@ -25,14 +25,14 @@ L'objet **`Intl.NumberFormat`** est un constructeur permettant de créer des obj
 
 - `locales`
 
-  - : Paramètre optionnel. Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`, voir la page {{jsxref("Intl","Intl","#L'identification_et_le_choix_de_la_locale")}}. Les clefs d'extensions Unicode suivantes sont autorisées :
+  - : Paramètre optionnel. Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`, voir la page {{jsxref("Intl","Intl","#L'identification_et_le_choix_de_la_locale")}}. Les clefs d'extensions Unicode suivantes sont autorisées :
 
     - nu
       - : Le système numérique à utiliser. Parmi les valeurs possibles, on a : `"arab", "arabext", "bali", "beng", "deva", "fullwide", "gujr", "guru", "hanidec", "khmr", "knda", "laoo", "latn", "limb", "mlym", "mong", "mymr", "orya", "tamldec", "telu", "thai", "tibt".`
 
 - `options`
 
-  - : Paramètre optionnel. Un objet avec certaines ou toutes les propriétés suivantes :
+  - : Paramètre optionnel. Un objet avec certaines ou toutes les propriétés suivantes :
 
     - `localeMatcher`
       - : L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont `"lookup"` et `"best fit"` ; le défaut est `"best fit"`. Pour des informations sur cette option, voir la page {{jsxref("Intl","Intl","##Choix_de_la_locale")}}.
@@ -139,7 +139,7 @@ var nombre = 123456.789;
 
 // on affiche une devise avec le style "currency"
 console.log(new Intl.NumberFormat("de-DE", {style: "currency", currency: "EUR"}).format(nombre));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // Le yen japonais n'a pas de centimes
 console.log(new Intl.NumberFormat("ja-JP", {style: "currency", currency: "JPY"}).format(nombre))

@@ -61,7 +61,7 @@ D'abord, nous créons un élément vidéo. Nous le mettons en lecture automatiqu
 
 Et enfin, nous définissons l'attribut `src` pour commencer, et nous appelons `play` pour démarrer le chargement et la lecture de la vidéo.
 
-## Utilisation des images vidéo comme texture
+## Utilisation des images vidéo comme texture
 
 La prochaine modification porte sur `initTexture()`, qui devient beaucoup plus simple, car elle n'a plus besoin de charger un fichier image. A la place, tout ce qu'elle fait est de créer un objet texture vide, d'y mettre un unique pixel et de définir son filtrage pour une utilisation ultérieure :
 
@@ -96,7 +96,7 @@ function initTexture(gl, url) {
 }
 ```
 
-Voici à quoi ressemble la fonction `mettreAJourTexture()`&nbsp;; c'est là où le vrai travail est fait :
+Voici à quoi ressemble la fonction `mettreAJourTexture()`&nbsp;; c'est là où le vrai travail est fait :
 
 ```js
 function mettreAJourTexture(gl, texture, video) {
@@ -134,14 +134,14 @@ Si `copierVideo` est true, alors `mettreAJourTexture()` est appelé à chaque fo
   requestAnimationFrame(dessiner);
 ```
 
-C'est tout pour ce qu'il y a à faire pour cela !
+C'est tout pour ce qu'il y a à faire pour cela !
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample8/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample8/)
+[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample8) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample8/)
 
 ## Voir aussi
 
-- [Utilisation de l'audio et de la video dans Firefox](/fr/Using_HTML5_audio_and_video)
+- [Utilisation de l'audio et de la video dans Firefox](/fr/Using_HTML5_audio_and_video)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

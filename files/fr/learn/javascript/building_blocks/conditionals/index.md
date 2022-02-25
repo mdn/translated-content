@@ -19,7 +19,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/conditionals
 
 {{NextMenu("Apprendre/JavaScript/Building_blocks/Looping_code", "Apprendre/JavaScript/Building_blocks")}}
 
-Dans tout langage de programmation, le code doit prendre des décisions et agir en fonction des différents paramètres. Par exemple dans un jeu, si le nombre de vies du joueur atteint 0, alors le jeu est terminé. Dans une application météo, si elle est consultée le matin, l'application montrera une image du lever de soleil&nbsp;; l'application proposera des étoiles et la lune s'il fait nuit. Dans cet article nous allons découvrir comment ces instructions conditionnelles fonctionnent en JavaScript.
+Dans tout langage de programmation, le code doit prendre des décisions et agir en fonction des différents paramètres. Par exemple dans un jeu, si le nombre de vies du joueur atteint 0, alors le jeu est terminé. Dans une application météo, si elle est consultée le matin, l'application montrera une image du lever de soleil&nbsp;; l'application proposera des étoiles et la lune s'il fait nuit. Dans cet article nous allons découvrir comment ces instructions conditionnelles fonctionnent en JavaScript.
 
 <table class="standard-table">
   <tbody>
@@ -43,9 +43,9 @@ Dans tout langage de programmation, le code doit prendre des décisions et agir 
   </tbody>
 </table>
 
-## Vous l'aurez à une condition !..
+## Vous l'aurez à une condition !..
 
-Les êtres humains (et d'autres animaux) prennent tout le temps des décisions qui affectent leur vie, de la plus insignifiante («&nbsp;Est‑ce que je devrais prendre un biscuit ou deux ?&nbsp;») à la plus importante («&nbsp;Est‑ce que je dois rester dans mon pays natal et travailler à la ferme de mon père, ou déménager aux États-Unis et étudier l'astrophysique&nbsp;?&nbsp;»)
+Les êtres humains (et d'autres animaux) prennent tout le temps des décisions qui affectent leur vie, de la plus insignifiante («&nbsp;Est‑ce que je devrais prendre un biscuit ou deux ?&nbsp;») à la plus importante («&nbsp;Est‑ce que je dois rester dans mon pays natal et travailler à la ferme de mon père, ou déménager aux États-Unis et étudier l'astrophysique&nbsp;?&nbsp;»)
 
 Les instructions conditionnelles nous permettent de représenter ce genre de prise de décision en JavaScript, du choix qui doit être fait (par ex. «&nbsp;un biscuit ou deux »), à la conséquence de ces choix (il se peut que la conséquence de «&nbsp;manger un biscuit&nbsp;» soit «&nbsp;avoir encore faim&nbsp;», et celle de «&nbsp;manger deux biscuits&nbsp;» soit «&nbsp;se sentir rassasié, mais se faire gronder par maman pour avoir mangé tous les biscuits&nbsp;».)
 
@@ -53,11 +53,11 @@ Les instructions conditionnelles nous permettent de représenter ce genre de pri
 
 ## Instruction if ... else
 
-Intéressons nous de plus près à la forme la plus répandue d'instruction conditionnelle que vous utiliserez en JavaScript — la modeste [instruction](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) [`if ... else`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else).
+Intéressons nous de plus près à la forme la plus répandue d'instruction conditionnelle que vous utiliserez en JavaScript — la modeste [instruction](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) [`if ... else`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else).
 
 ### Syntaxe élémentaire if ... else
 
-La syntaxe élémentaire de `if...else` ressemble à cela en {{glossary("pseudocode")}}:
+La syntaxe élémentaire de `if...else` ressemble à cela en {{glossary("pseudocode")}}:
 
     if (condition) {
       code à exécuter si la condition est true
@@ -68,14 +68,14 @@ La syntaxe élémentaire de `if...else` ressemble à cela en {{glossary("pseud
 Ici nous avons:
 
 1.  Le mot‑clé `if` suivie de parenthèses.
-2.  Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur&nbsp;? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
-3.  Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu&nbsp;; il sera exécuté seulement si la condition renvoie `true`.
+2.  Une condition à évaluer, placée entre les parenthèses (typiquement «&nbsp;cette valeur est‑elle plus grande que cet autre valeur&nbsp;? » ou «&nbsp;cette valeur existe‑t‑elle ?&nbsp;»). Cette condition se servira des [opérateurs de comparaison](/fr/docs/Learn/JavaScript/First_steps/Math#Comparison_operators) que nous avons étudié dans le précédent module, et renverra `true` ou `false`.
+3.  Une paire d'accolades, à l'intérieur de laquelle se trouve du code — cela peut être n'importe quel code voulu&nbsp;; il sera exécuté seulement si la condition renvoie `true`.
 4.  Le mot‑clé `else`.
-5.  Une autre paire d'accolades, à l'intérieur de laquelle se trouve du code différent — tout code souhaité et il sera exécuté seulement si la condition ne renvoie pas `true`.
+5.  Une autre paire d'accolades, à l'intérieur de laquelle se trouve du code différent — tout code souhaité et il sera exécuté seulement si la condition ne renvoie pas `true`.
 
-Ce code est facile à lire pour une personne — il dit «&nbsp;**si** la **condition** renvoie `true`, exécuter le code A, **sinon** exécuter le code B&nbsp;».
+Ce code est facile à lire pour une personne — il dit «&nbsp;**si** la **condition** renvoie `true`, exécuter le code A, **sinon** exécuter le code B&nbsp;».
 
-Notez qu'il n'est pas nécessaire d'inclure une instruction `else` et le deuxième bloc entre accolades — le code suivant est aussi parfaitement correct&nbsp;:
+Notez qu'il n'est pas nécessaire d'inclure une instruction `else` et le deuxième bloc entre accolades — le code suivant est aussi parfaitement correct&nbsp;:
 
     if (condition) {
       code à exécuter si la condition est true
@@ -83,18 +83,18 @@ Notez qu'il n'est pas nécessaire d'inclure une instruction `else` et le deuxiè
 
     exécuter un autre code
 
-Cependant, vous devez faire attention ici — dans ce cas, le deuxième bloc de code n'est pas controlé par l'instruction conditionnelle, donc il sera **toujours** exécuté, que la condition ait renvoyé `true` ou `false`. Ce n'est pas nécessairement une mauvaise chose, mais il se peut que ce ne soit pas ce que vous vouliez — le plus souvent vous voudrez exécuter un bloc de code *ou* l'autre, et non les deux.
+Cependant, vous devez faire attention ici — dans ce cas, le deuxième bloc de code n'est pas controlé par l'instruction conditionnelle, donc il sera **toujours** exécuté, que la condition ait renvoyé `true` ou `false`. Ce n'est pas nécessairement une mauvaise chose, mais il se peut que ce ne soit pas ce que vous vouliez — le plus souvent vous voudrez exécuter un bloc de code *ou* l'autre, et non les deux.
 
-Une dernière remarque, vous verrez quelques fois les instructions `if...else` écrites sans accolades, de manière abrégée, ainsi&nbsp;:
+Une dernière remarque, vous verrez quelques fois les instructions `if...else` écrites sans accolades, de manière abrégée, ainsi&nbsp;:
 
     if (condition) code à exécuter si la condition est true
     else exécute un autre code à la place
 
-Ce code est parfaitement valide, mais il n'est pas recommandé — il est nettement plus facile de lire le code et d'en déduire ce qui se passe si vous utilisez des accolades pour délimiter les blocs de code, des lignes séparées et des indentations.
+Ce code est parfaitement valide, mais il n'est pas recommandé — il est nettement plus facile de lire le code et d'en déduire ce qui se passe si vous utilisez des accolades pour délimiter les blocs de code, des lignes séparées et des indentations.
 
 ### Un exemple concret
 
-Pour mieux comprendre cette syntaxe, prenons un exemple concret. Imaginez un enfant à qui le père ou la mère demande de l'aide pour une tâche. Le parent pourrait dire «&nbsp;Mon chéri, si tu m'aides en allant faire les courses, je te donnerai un peu plus d'argent de poche pour que tu puisses t'acheter ce jouet que tu voulais&nbsp;». En JavaScript, on pourrait le représenter de cette manière&nbsp;:
+Pour mieux comprendre cette syntaxe, prenons un exemple concret. Imaginez un enfant à qui le père ou la mère demande de l'aide pour une tâche. Le parent pourrait dire «&nbsp;Mon chéri, si tu m'aides en allant faire les courses, je te donnerai un peu plus d'argent de poche pour que tu puisses t'acheter ce jouet que tu voulais&nbsp;». En JavaScript, on pourrait le représenter de cette manière&nbsp;:
 
 ```js
 let coursesFaites = false;
@@ -106,15 +106,15 @@ if (coursesFaites === true) {
 }
 ```
 
-Avec un tel code, la variable `coursesFaites` renvoie toujours `false`, imaginez la déception de ce pauvre enfant. Il ne tient qu'à nous de fournir un mécanisme pour que le parent assigne `true` à la variable `coursesFaites` si l'enfant a fait les courses.
+Avec un tel code, la variable `coursesFaites` renvoie toujours `false`, imaginez la déception de ce pauvre enfant. Il ne tient qu'à nous de fournir un mécanisme pour que le parent assigne `true` à la variable `coursesFaites` si l'enfant a fait les courses.
 
-> **Note :** Vous pouvez voir une [version plus complète de cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (ainsi qu'en [version live](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
+> **Note :** Vous pouvez voir une [version plus complète de cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/allowance-updater.html) (ainsi qu'en [version live](http://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html).)
 
 ### else if
 
 Il n'y a qu'une alternative dans l'exemple précédent — mais qu'en est‑il si l'on souhaite plus de choix&nbsp;?
 
-Il existe un moyen d'enchaîner des choix / résultats supplémentaires à `if...else` — en utilisant `else if` entre. Chaque choix supplémentaire nécessite un bloc additionnel à placer entre `if() { ... }` et `else { ... }` — regardez l'exemple suivant plus élaboré, qui pourrait faire partie d'une simple application de prévisions météo:
+Il existe un moyen d'enchaîner des choix / résultats supplémentaires à `if...else` — en utilisant `else if` entre. Chaque choix supplémentaire nécessite un bloc additionnel à placer entre `if() { ... }` et `else { ... }` — regardez l'exemple suivant plus élaboré, qui pourrait faire partie d'une simple application de prévisions météo:
 
 ```html
 <label for="weather">Select the weather type today: </label>
@@ -155,23 +155,23 @@ function setWeather() {
 {{ EmbedLiveSample('else_if', '100%', 100) }}
 
 1.  Ici nous avons l'élément HTML {{htmlelement("select")}} nous permettant de sélectionner divers choix de temps et un simple paragraphe.
-2.  Dans le JavaScript, nous conservons une référence aussi bien à l'élément {{htmlelement("select")}} qu'à l'élément {{htmlelement("p")}}, et ajoutons un écouteur d'évènement à l'élément `<select>` de sorte que la fonction `setWeather()` soit exécutée quand sa valeur change.
-3.  Quand cette fonction est exécutée, nous commençons par assigner à la variable `choice` la valeur actuellement sélectionnée dans l'élément `<select>`. Nous utilisons ensuite une instruction conditionnelle pour montrer différents textes dans le paragraphe en fonction de la valeur de `choice`. Remarquez comment toutes les conditions sont testées avec des blocs `else if() {...}`, mis à part le tout premier testé avec un  `bloc if() {...}`.
-4.  Le tout dernier choix, à l'intérieur du bloc `else {...}`, est simplement une option de "secours" — le code qui s'y trouve ne sera exécuté que si aucune des conditions n'est `true`. Dans ce cas, il faut vider le texte du paragraphe si rien n'est sélectionné, par exemple si un utilisateur décide de resélectionner le texte à substituer «&nbsp;--Choisir--&nbsp;» présenté au début.
+2.  Dans le JavaScript, nous conservons une référence aussi bien à l'élément {{htmlelement("select")}} qu'à l'élément {{htmlelement("p")}}, et ajoutons un écouteur d'évènement à l'élément `<select>` de sorte que la fonction `setWeather()` soit exécutée quand sa valeur change.
+3.  Quand cette fonction est exécutée, nous commençons par assigner à la variable `choice` la valeur actuellement sélectionnée dans l'élément `<select>`. Nous utilisons ensuite une instruction conditionnelle pour montrer différents textes dans le paragraphe en fonction de la valeur de `choice`. Remarquez comment toutes les conditions sont testées avec des blocs `else if() {...}`, mis à part le tout premier testé avec un `bloc if() {...}`.
+4.  Le tout dernier choix, à l'intérieur du bloc `else {...}`, est simplement une option de "secours" — le code qui s'y trouve ne sera exécuté que si aucune des conditions n'est `true`. Dans ce cas, il faut vider le texte du paragraphe si rien n'est sélectionné, par exemple si un utilisateur décide de resélectionner le texte à substituer «&nbsp;--Choisir--&nbsp;» présenté au début.
 
-> **Note :** Vous trouverez également [cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (ainsi qu'en [version live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) ici.)
+> **Note :** Vous trouverez également [cet exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) (ainsi qu'en [version live](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) ici.)
 
 ### Une note sur les opérateurs de comparaison
 
 Les opérateurs de comparaison sont utilisés pour tester les conditions dans nos instructions conditionnelles. Nous avons d'abord regardé les opérateurs de comparaison dans notre [Mathématiques de base en JavaScript — nombres et opérateurs](/fr/docs/Learn/JavaScript/First_steps/Math#Opérateurs_de_comparaison) article. Nos choix sont :
 
-- `===` et `!==` — teste si une valeur est identique ou non à une autre.
+- `===` et `!==` — teste si une valeur est identique ou non à une autre.
 - `<` and `>` —teste si une valeur est inférieure ou non à une autre.
 - `<=` and `>=` — teste si une valeur est inférieur ou égal, ou égal à, ou supérieur ou égal à une autre.
 
 > **Note :** Revoyez le contenu du lien précédent si vous voulez vous rafraîchir la mémoire.
 
-Nous souhaitons mentionner à propos des tests des valeurs booléennes (`true`/`false`) un modèle courant que vous rencontrerez souvent. Toute valeur autre que `false`, `undefined`, `null`, `0`, `NaN` ou une chaîne vide  (`''`) renvoie `true` lorsqu'elle est testée dans une structure conditionnelle, vous pouvez donc simplement utiliser un nom de variable pour tester si elle est `true`, ou même si elle existe (c'est-à-dire si elle n'est pas `undefined`).
+Nous souhaitons mentionner à propos des tests des valeurs booléennes (`true`/`false`) un modèle courant que vous rencontrerez souvent. Toute valeur autre que `false`, `undefined`, `null`, `0`, `NaN` ou une chaîne vide  (`''`) renvoie `true` lorsqu'elle est testée dans une structure conditionnelle, vous pouvez donc simplement utiliser un nom de variable pour tester si elle est `true`, ou même si elle existe (c'est-à-dire si elle n'est pas `undefined`).
 Par exemple :
 
 ```js
@@ -253,7 +253,7 @@ if (!(camionDeGlaces || etatDeLaMaison === 'on fire')) {
 
 Dans cet extrait, si la déclaration avec OR renvoie `true`, l'opérateur NOT va nier l'ensemble : l'expression retournera donc `false`.
 
-Vous pouvez combiner autant d'instructions logiques que vous le souhaitez, quelle que soit la structure. L'exemple suivant n'exécute le code entre accolades que si les deux instructions OR renvoient true, l'instruction AND recouvrante renvoie alors `true`&nbsp;:
+Vous pouvez combiner autant d'instructions logiques que vous le souhaitez, quelle que soit la structure. L'exemple suivant n'exécute le code entre accolades que si les deux instructions OR renvoient true, l'instruction AND recouvrante renvoie alors `true`&nbsp;:
 
 ```js
 if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'Steve')) {
@@ -302,7 +302,7 @@ switch (expression) {
 
 Ici nous avons
 
-1.  Le mot‑clé `switch` suivi de parenthèses.
+1.  Le mot‑clé `switch` suivi de parenthèses.
 2.  Une expression ou une valeur mise entre les parenthèses.
 3.  Le mot‑clé `case` suivi d'une expression ou d'une valeur, et de deux‑points.
 4.  Le code exécuté si l'expression/valeur de `case` correspond à celles de `switch`.
@@ -364,7 +364,7 @@ function setWeather() {
 
 ## Opérateur ternaire
 
-Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'[opérateur ternaire ou conditionnel](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel) est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est `true` et une autre si elle est `false` — elle est utile dans certains cas, et occupe moins de place qu'un bloc `if...else` si votre choix est limité à deux possibilités à choisir via une condition `true`/`false`. Voici le pseudo‑code correspondant&nbsp;:
+Voici une dernière syntaxe que nous souhaitons vous présenter avant de nous amuser avec quelques exemples. L'[opérateur ternaire ou conditionnel](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel) est un petit morceau de code qui teste une condition et renvoie une valeur ou expression si elle est `true` et une autre si elle est `false` — elle est utile dans certains cas, et occupe moins de place qu'un bloc `if...else` si votre choix est limité à deux possibilités à choisir via une condition `true`/`false`. Voici le pseudo‑code correspondant&nbsp;:
 
     ( condition ) ? exécuter ce code : exécuter celui‑ci à la place
 
@@ -428,7 +428,7 @@ Vous aurez besoin d'écrire une instruction conditionnelle dans la fonction `onc
 
 Conseils&nbsp;:
 
-- Utilisez un OR logique pour grouper plusieurs mois ensemble dans une même condition, beaucoup d'entre eux ont le même nombre de jours.
+- Utilisez un OR logique pour grouper plusieurs mois ensemble dans une même condition, beaucoup d'entre eux ont le même nombre de jours.
 - Voyez quel est le nombre de jours le plus courant et utilisez le comme valeur par défaut.
 
 Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le bouton "Réinitialiser". Si vous êtes vraiment bloqué, pressez "Voir la solution".
@@ -541,11 +541,11 @@ window.addEventListener('load', updateCode);
 
 ## Activité&nbsp;: plus de choix de couleurs
 
-Nous allons reprendre l'exemple de l'opérateur ternaire vu plus haut et transformer cet opérateur ternaire en une directive `switch`  qui nous permettra une plus grande variété de choix pour le site web tout simple. Voyez l'élément {{htmlelement("select")}} — cette fois, il n'y a pas deux options de thème, mais cinq. Il vous faut ajouter une directive `switch` au dessous du commentaire  `// AJOUT D'UNE DIRECTIVE SWITCH`&nbsp;:
+Nous allons reprendre l'exemple de l'opérateur ternaire vu plus haut et transformer cet opérateur ternaire en une directive `switch`  qui nous permettra une plus grande variété de choix pour le site web tout simple. Voyez l'élément {{htmlelement("select")}} — cette fois, il n'y a pas deux options de thème, mais cinq. Il vous faut ajouter une directive `switch` au dessous du commentaire  `// AJOUT D'UNE DIRECTIVE SWITCH`&nbsp;:
 
 - Elle doit accepter la variable `choice` comme expression d'entrée.
 - Pour chaque cas, le choix doit être égal à une des valeurs possibles pouvant être choisies, c'est-à-dire blanc, noir, mauve, jaune ou psychédélique.
-- Chaque cas exécutera la fonction `update()` à laquelle deux valeurs de couleurs seront passées, la première pour le fond, la seconde pour le texte. Souvenez vous que les valeurs de couleurs sont des chaînes&nbsp;; elle doivent donc être mises entre guillemets.
+- Chaque cas exécutera la fonction `update()` à laquelle deux valeurs de couleurs seront passées, la première pour le fond, la seconde pour le texte. Souvenez vous que les valeurs de couleurs sont des chaînes&nbsp;; elle doivent donc être mises entre guillemets.
 
 Si vous faites une erreur, vous pouvez toujours réinitialiser l'exemple avec le bouton «&nbsp;Réinitialiser&nbsp;». Si vous êtes vraiment bloqué, pressez «&nbsp;Voir la solution&nbsp;».
 

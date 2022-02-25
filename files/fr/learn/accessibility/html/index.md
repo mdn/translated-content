@@ -26,7 +26,7 @@ Une grande partie des contenus web peut être rendue accessible simplement en s'
       <td>
         Compétences informatiques de base, compréhension basique de HTML (voir<a
           href="/fr/Apprendre/HTML/Introduction_à_HTML"
-          > </a
+          > </a
         ><a href="/fr/docs/Learn/HTML/Introduction_to_HTML">I</a
         ><a href="/fr/Apprendre/HTML/Introduction_à_HTML">ntroduction à HTML</a
         >), et compréhension de
@@ -46,9 +46,9 @@ Une grande partie des contenus web peut être rendue accessible simplement en s'
   </tbody>
 </table>
 
-## HTML et accessibilité
+## HTML et accessibilité
 
-Plus vous apprenez le HTML — plus vous lisez de ressources, regardez d'exemples — plus vous recontrerez un thème récurrent : l'importance d'utiliser du HTML sémantique, parfois appelé POSH (Plain Old Semantic HTML). C'est l'usage des éléments HTML appropriés autant que possible.
+Plus vous apprenez le HTML — plus vous lisez de ressources, regardez d'exemples — plus vous recontrerez un thème récurrent : l'importance d'utiliser du HTML sémantique, parfois appelé POSH (Plain Old Semantic HTML). C'est l'usage des éléments HTML appropriés autant que possible.
 
 Vous pouvez vous demander pourquoi c'est si important. Après tout, vous pouvez utiliser une combinaison de CSS et de JavaScript pour faire fonctionner n'importe quel élément HTML de la manière que vous souhaitez. Par exemple, un bouton de lecture pour une vidéo sur votre site pourrait être codé ainsi :
 
@@ -62,13 +62,13 @@ Mais comme vous le verrez en détail plus loin, il est beaucoup plus sensé d'ut
 <button>Lire la vidéo</button>
 ```
 
-Non seulement  `<button>` possède des styles adéquats par défaut (que vous voudrez probablement surcharger), il intègre aussi l'accès au clavier — on peut tabuler dessus, et l'activer avec la touche entrée.
+Non seulement `<button>` possède des styles adéquats par défaut (que vous voudrez probablement surcharger), il intègre aussi l'accès au clavier — on peut tabuler dessus, et l'activer avec la touche entrée.
 
 Le HTML sémantique ne demande pas plus de temps à écrire que du (mauvais) balisage non-sémantique si vous le faites de manière constante dès le début de votre projet, et il a également des bénéfices au delà de l'accessibilité :
 
-1.  **Facilite les développements** — comme mentionné ci-dessus, certaines fonctionnalités sont gratuites, et c'est indiscutablement plus compréhensible.
-2.  **Meilleur pour le mobile** — le HTML sémantique est indiscutablement plus léger en la taille du fichier que le code spaghetti non sémantique, et plus aisé à rendre responsive.
-3.  **Bon pour le SEO** — les moteurs de recherche donnent plus d'importance aux mots clés contenus dans les titres, liens, etc. que des mots-clés contenus dans des `<div>` non sémantiques, et donc vos documents seront plus facilement trouvés par vos clients.
+1.  **Facilite les développements** — comme mentionné ci-dessus, certaines fonctionnalités sont gratuites, et c'est indiscutablement plus compréhensible.
+2.  **Meilleur pour le mobile** — le HTML sémantique est indiscutablement plus léger en la taille du fichier que le code spaghetti non sémantique, et plus aisé à rendre responsive.
+3.  **Bon pour le SEO** — les moteurs de recherche donnent plus d'importance aux mots clés contenus dans les titres, liens, etc. que des mots-clés contenus dans des `<div>` non sémantiques, et donc vos documents seront plus facilement trouvés par vos clients.
 
 Continuons et jetons un œil au HTML accessible dans le détail.
 
@@ -76,7 +76,7 @@ Continuons et jetons un œil au HTML accessible dans le détail.
 
 ## Une bonne sémantique
 
-Nous avons déjà parlé de l'importance d'une bonne sémantique, et pourquoi nous devons utiliser le bon élément HTML pour le bon usage. Il ne faut pas l'ignorer car c'est une des principales causes d'importants problèmes d'accessibilité si ce n'est pas fait correctement.
+Nous avons déjà parlé de l'importance d'une bonne sémantique, et pourquoi nous devons utiliser le bon élément HTML pour le bon usage. Il ne faut pas l'ignorer car c'est une des principales causes d'importants problèmes d'accessibilité si ce n'est pas fait correctement.
 
 En vérité sur le Web, les développeurs font d'étranges choses avec HTML. Certains abus en HTML sont hérités de vieilles pratiques obsolètes pas complètement oubliées, d'autre sont juste de l'ignorance. Dans tous les cas, vous devez remplacer ce mauvais code partout où vous le verrez, dès que vous le pourrez.
 
@@ -141,7 +141,7 @@ Je vais ajouter ici un autre paragraphe.
 Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus intéressante que la dernière.
 ```
 
-Si vous essayez notre version plus longue avec un lecteur d'écran (voir [la mauvaise sémantique](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), vous n'aurez pas une très bonne expérience – le lecteur d'écran n'a plus rien à utiliser comme indicateur, il ne peut pas récupérer une table des matières utilisable, et la page entière est vue comme un bloc unique, lu tout d'une traite.
+Si vous essayez notre version plus longue avec un lecteur d'écran (voir [la mauvaise sémantique](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), vous n'aurez pas une très bonne expérience – le lecteur d'écran n'a plus rien à utiliser comme indicateur, il ne peut pas récupérer une table des matières utilisable, et la page entière est vue comme un bloc unique, lu tout d'une traite.
 
 Il y a aussi d'autres problèmes au-delà de l'accessibilité – le contenu est plus dur à mettre en forme avec le CSS, ou à manipuler avec JavaScript par exemple, car il n'y a pas d'élément à utiliser comme sélecteurs.
 
@@ -266,9 +266,9 @@ Vous pouvez vérifier ces affirmations en comparant votre expérience antérieur
 </footer>
 ```
 
-Si vous essayez notre exemple plus moderne de structure avec un lecteur d’écran, vous verrez que le balisage de présentation ne gêne plus ni ne rend la lecture du contenu confuse. Il est également beaucoup plus léger et plus petit en termes de taille de code, ce qui signifie une maintenance plus facile du code et une sollicitation moindre de la bande passante par l'utilisateur (particulièrement critique en cas de connexions lentes).
+Si vous essayez notre exemple plus moderne de structure avec un lecteur d’écran, vous verrez que le balisage de présentation ne gêne plus ni ne rend la lecture du contenu confuse. Il est également beaucoup plus léger et plus petit en termes de taille de code, ce qui signifie une maintenance plus facile du code et une sollicitation moindre de la bande passante par l'utilisateur (particulièrement critique en cas de connexions lentes).
 
-Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir [Référence des éléments HTML](/fr/docs/Web/HTML/Element#Content_sectioning)). Vous pouvez créer une disposition en utilisant uniquement des éléments {{htmlelement("div")}} imbriqués, mais il est préférable d'utiliser des éléments de sectionnement appropriés pour envelopper votre navigation principale ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), en répétant des unités de contenu ({{htmlelement("article")}}), etc. Elles fournissent une sémantique supplémentaire aux lecteurs d’écran (et à d’autres outils) pour donner à l’utilisateur des indices supplémentaires sur le contenu qu’il navigue (voir [Prise en charge du lecteur d’écran pour les nouveaux éléments de section HTML5](http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) pour une idée de la prise en charge du lecteur d’écran).
+Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir [Référence des éléments HTML](/fr/docs/Web/HTML/Element#Content_sectioning)). Vous pouvez créer une disposition en utilisant uniquement des éléments {{htmlelement("div")}} imbriqués, mais il est préférable d'utiliser des éléments de sectionnement appropriés pour envelopper votre navigation principale ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), en répétant des unités de contenu ({{htmlelement("article")}}), etc. Elles fournissent une sémantique supplémentaire aux lecteurs d’écran (et à d’autres outils) pour donner à l’utilisateur des indices supplémentaires sur le contenu qu’il navigue (voir [Prise en charge du lecteur d’écran pour les nouveaux éléments de section HTML5](http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) pour une idée de la prise en charge du lecteur d’écran).
 
 > **Note :** Outre le fait que votre contenu présente une bonne sémantique et une présentation attrayante, il convient que son ordre source soit logique : vous pouvez toujours le placer où vous le souhaitez à l'aide de CSS par la suite, mais vous devez définir l'ordre exact des sources pour commencer. les utilisateurs de lecteur d’écran qui se liront auront du sens.
 
@@ -276,7 +276,7 @@ Une autre considération à prendre en compte lors de la création de dispositio
 
 Par contrôles d'interface utilisateur, nous entendons les parties principales des documents web avec lesquelles les utilisateurs interagissent – le plus souvent des boutons, des liens et des contrôles de formulaire. Dans cette section, nous examinerons les problèmes d’accessibilité de base à prendre en compte lors de la création de tels contrôles. Des articles ultérieurs sur WAI-ARIA et le multimédia aborderont d'autres aspects de l'accessibilité de l'interface utilisateur.
 
-L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisateur est que, par défaut, les navigateurs leur permettent d'être manipulés par le clavier. Vous pouvez essayer ceci en utilisant notre exemple [accessibilité du clavier natif](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) – ouvrez-le dans un nouvel onglet et essayez d’appuyer sur la touche de tabulation; après quelques appuis, vous devriez voir le focus de l'onglet commencer à se déplacer à travers les différents éléments qui peuvent être mis au point ; les éléments focalisés se voient attribuer un style par défaut en surbrillance dans chaque navigateur (il diffère légèrement d’un navigateur à l’autre) afin que vous puissiez déterminer quel élément est ciblé.
+L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisateur est que, par défaut, les navigateurs leur permettent d'être manipulés par le clavier. Vous pouvez essayer ceci en utilisant notre exemple [accessibilité du clavier natif](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) – ouvrez-le dans un nouvel onglet et essayez d’appuyer sur la touche de tabulation; après quelques appuis, vous devriez voir le focus de l'onglet commencer à se déplacer à travers les différents éléments qui peuvent être mis au point ; les éléments focalisés se voient attribuer un style par défaut en surbrillance dans chaque navigateur (il diffère légèrement d’un navigateur à l’autre) afin que vous puissiez déterminer quel élément est ciblé.
 
 ![](button-focused-unfocused.png)
 
@@ -361,7 +361,7 @@ document.onkeydown = function(e) {
 }
 ```
 
-Ici, nous ajoutons un écouteur à l’objet `document` pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété [`keyCode`](/fr/docs/Web/API/KeyboardEvent/keyCode) de l'objet événement; s'il s'agit du code clé qui correspond Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton `onclick` à l'aide de `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément qui est actuellement ciblé sur la page.
+Ici, nous ajoutons un écouteur à l’objet `document` pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété [`keyCode`](/fr/docs/Web/API/KeyboardEvent/keyCode) de l'objet événement; s'il s'agit du code clé qui correspond Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton `onclick` à l'aide de `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément qui est actuellement ciblé sur la page.
 
 > **Note :** N'oubliez pas que cette technique ne fonctionnera que si vous définissez vos gestionnaires d'événements d'origine via les propriétés du gestionnaire d'événements (par exemple, onclick), `addEventListener` ne fonctionnera pas.
 
@@ -387,7 +387,7 @@ c'est un mauvais texte du lien :
 <p> Les baleines sont des créatures vraiment impressionnantes. Pour en savoir plus sur les baleines,  <a href="whales.html">cliquez ici</a>.</p>
 ```
 
-> **Note :** Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur la [création d'hyperliens](/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks). Vous pouvez également voir quelques bons et mauvais exemples dans [Bons-liens.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) et [Mauvais-liens.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> **Note :** Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur la [création d'hyperliens](/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks). Vous pouvez également voir quelques bons et mauvais exemples dans [Bons-liens.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) et [Mauvais-liens.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Les libellés de formulaire sont également importantes pour vous donner un indice sur ce que vous devez entrer dans chaque entrée de formulaire. Ce qui suit semble être un exemple assez raisonnable :
 
@@ -412,7 +412,7 @@ Avec le code comme celui-ci, le label sera clairement associée à input; la des
 
 En prime, dans la plupart des navigateurs, associer a un label à une form input signifie que vous pouvez cliquer sur celle-ci pour sélectionner / activer l'élément label. Cela donne à input une zone de résultats plus grande, ce qui facilite la sélection
 
-> **Note :** vous pouvez voir des exemples de bonnes et de mauvaises de formulaire dans [exemple de bon formulaire](https://mdn.github.io/learning-area/accessibility/html/good-form.html) et [exemple de mauvais formulaire](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
+> **Note :** vous pouvez voir des exemples de bonnes et de mauvaises de formulaire dans [exemple de bon formulaire](https://mdn.github.io/learning-area/accessibility/html/good-form.html) et [exemple de mauvais formulaire](https://mdn.github.io/learning-area/accessibility/html/bad-form.html).
 
 ## Tableaux de données accessibles
 
@@ -498,11 +498,11 @@ Jetons un autre coup d'oeil à la quatrième méthode :
 
 Dans ce cas, nous n'utilisons pas du tout l'attribut `alt` Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un `id` puis nous avons utilisé l'attribut `aria-labelledby` pour : faire référence à cela `id`, ce qui amène les lecteurs d’écran à utiliser ce paragraphe comme alt text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n’est pas possible avec `alt`.
 
-> **Note :** `aria-labelledby` fait partie de la spécification [WAI ARIA](https://www.w3.org/TR/wai-aria-1.1/), qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article [WAI-ARIA basic](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
+> **Note :** `aria-labelledby` fait partie de la spécification [WAI ARIA](https://www.w3.org/TR/wai-aria-1.1/), qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article [WAI-ARIA basic](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
 
 ### Autres mécanismes alternatifs de texte
 
-Les images ont également d'autres mécanismes disponibles pour fournir un texte descriptif. Par exemple, il existe un attribut `longdesc` destiné à pointer sur un document web distinct contenant une description étendue de l'image, par exemple :
+Les images ont également d'autres mécanismes disponibles pour fournir un texte descriptif. Par exemple, il existe un attribut `longdesc` destiné à pointer sur un document web distinct contenant une description étendue de l'image, par exemple :
 
 ```html
 <img src="dinosaur.png" longdesc="dino-info.html">

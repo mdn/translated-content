@@ -111,7 +111,7 @@ let nestedProp = obj?.['propName'];
     let objet = {};
     objet?.propriété = 1; // Uncaught SyntaxError: Invalid left-hand side in assignment
 
-### Accès aux éléments de tableau avec le chaînage optionnel
+### Accès aux éléments de tableau avec le chaînage optionnel
 
     let élément = arr?.[42];
 
@@ -159,7 +159,7 @@ let villeDuClient = client.details?.adresse?.ville;
 let durée = vacations.trip?.getTime?.();
 ```
 
-### Combinaison avec l'opérateur de coalescence des nuls (Nullish coalescing operator)
+### Combinaison avec l'opérateur de coalescence des nuls (Nullish coalescing operator)
 
 L'{{JSxRef("Opérateurs/Nullish_coalescing_operator", "Opérateur de coalescence des nuls (Nullish coalescing operator)", '', 1)}} peut être utilisé après un chaînage optionnel afin de construire une valeur par défaut quand aucune n'a été trouvée :
 

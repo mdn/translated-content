@@ -122,5 +122,5 @@ Le même exemple que précédemment mais avec une trajectoire courbe.
 ## Voir aussi
 
 - [SVG](/fr/SVG "en/SVG")
-- [SVG Animation Specification](http://www.w3.org/TR/SVG/animate.html)
-- [SMIL Specification](http://www.w3.org/TR/REC-smil)
+- [SVG Animation Specification](http://www.w3.org/TR/SVG/animate.html)
+- [SMIL Specification](http://www.w3.org/TR/REC-smil)

@@ -31,7 +31,7 @@ var updating = browser.notifications.update(
 ### Paramètres
 
 - `id`
-  - : `string`. L'ID de la notification à mettre à jour. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.
+  - : `string`. L'ID de la notification à mettre à jour. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.
 - `options`
   - : {{WebExtAPIRef('notifications.NotificationOptions')}}. Définit le nouveau contenu et le nouveau comportement de la notification.
 

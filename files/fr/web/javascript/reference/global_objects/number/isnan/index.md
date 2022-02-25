@@ -82,5 +82,5 @@ Number.isNaN = Number.isNaN || function(value) {
 ## Voir aussi
 
 - L'objet {{jsxref("Number")}} auquel appartient cette méthode.
-- La méthode {{jsxref("Objets_globaux/Object/is", "Object.is")}} qui permet d'effectuer des comparaisons sur l'égalité de valeur
+- La méthode {{jsxref("Objets_globaux/Object/is", "Object.is")}} qui permet d'effectuer des comparaisons sur l'égalité de valeur
 - La méthode {{jsxref("isNaN")}} de l'objet global

@@ -23,18 +23,18 @@ original_slug: Web/JavaScript/Reference/Erreurs/Missing_parenthesis_after_argume
 
 
 
-Il y a une erreur avec la façon dont une fonction est appelée . Cela peut être une faute de frappe, un opérateur manquant, ou une chaîne non-échappée, par exemple .
+Il y a une erreur avec la façon dont une fonction est appelée . Cela peut être une faute de frappe, un opérateur manquant, ou une chaîne non-échappée, par exemple .
 
 ## Exemple
 
-Parce qu'il n'y a pas d'opérateur "+" pour concaténer la chaîne de caractères, JavaScript s'attend à trouver une parenthèse après "PI : ", qu'il considère comme  l'argument de la fonction `log. `
+Parce qu'il n'y a pas d'opérateur "+" pour concaténer la chaîne de caractères, JavaScript s'attend à trouver une parenthèse après "PI : ", qu'il considère comme l'argument de la fonction `log. `
 
 ```js example-bad
 console.log("PI: " Math.PI);
 // SyntaxError: missing ) after argument list
 ```
 
-La fonction `log` peut être corrigée en ajoutant un opérateur "+".
+La fonction `log` peut être corrigée en ajoutant un opérateur "+".
 
 ```js example-good
 console.log("PI: " + Math.PI);

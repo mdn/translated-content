@@ -36,7 +36,7 @@ Les événements ont trois fonctions :
 - `removeListener(listener)`
   - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
 
 ## Syntaxe addListener
 
@@ -55,7 +55,7 @@ La fonction d'écouteur recevra deux paramètres: une chaine de `text`, et un  {
 
 ## Exemples
 
-Cet exemple interprète l'entrée de l'utilisateur en tant que nom de propriété CSS et remplit la liste déroulante avec un objet {{WebExtAPIRef("omnibox.SuggestResult")}} pour chaque propriété CSS correspondant à l'entrée. La `description SuggestResult` est le nom complet de la propriété et le `contenu` est la page MDN de cette propriété.
+Cet exemple interprète l'entrée de l'utilisateur en tant que nom de propriété CSS et remplit la liste déroulante avec un objet {{WebExtAPIRef("omnibox.SuggestResult")}} pour chaque propriété CSS correspondant à l'entrée. La `description SuggestResult` est le nom complet de la propriété et le `contenu` est la page MDN de cette propriété.
 
 L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument   {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
 

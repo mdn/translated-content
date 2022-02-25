@@ -25,7 +25,7 @@ Dans cet article, nous allons regarder :
 
 Nous concluons ensuite en examinant d'autres fonctionnalités diverses offertes par l'API.
 
-> **Note :** Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et  {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts) et le guide pratique [modifier une page web](/fr/Add-ons/WebExtensions/Modify_a_web_page).
+> **Note :** Certaines fonctionnalités de l'API d'onglet sont couvert ailleurs. Voici les méthodes que vous pouvez utiliser pour manipuler le contenu de l'onglet avec des scripts ({{WebExtAPIRef("tabs.connect")}}, {{WebExtAPIRef("tabs.sendMessage")}}, et  {{WebExtAPIRef("tabs.executeScript")}}). Si vous voulez plus d'informations sur ces méthodes, reportez-vous à l'article [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts) et le guide pratique [modifier une page web](/fr/Add-ons/WebExtensions/Modify_a_web_page).
 
 ## Permissions et l'API Tabs
 
@@ -60,7 +60,7 @@ Lorsque vous souhaitez uniquement obtenir des informations sur l'onglet en cours
 
 ### Par exemple
 
-Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) ajoute la liste de  “passer aux onglets” à son popup bouton de barre d'outils.
+Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) ajoute la liste de  “passer aux onglets” à son popup bouton de barre d'outils.
 
 ![](switch_to_tab.png)
 
@@ -173,7 +173,7 @@ Pour commencer :
 1.  Récupérer les `tabs-list` `div`.
 2.  Créer un fragment de document (dans lequel la liste sera construite).
 3.  Mettre les compteurs.
-4.  Effacer le contenu de `tabs-list` `div`.
+4.  Effacer le contenu de `tabs-list` `div`.
 
 ```js
 function listTabs() {
@@ -191,7 +191,7 @@ Ensuite, nous allons créer les liens pour chaque onglet :
 1.  Boucle les 5 premiers éléments de l'objet {{WebExtAPIRef("tabs.Tab")}}.
 2.  Pour chaque poste, ajoutez un hyperlien vers le fragment de document.
 
-    - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
+    - L'étiquette du lien, c'est-à-dire son texte, est définie à l'aide du titre de l'onglet (ou de l'ID, s'il n'a pas de titre).
     - L'adresse du lien est définie à l'aide de l'ID de l'onglet.
 
 ```js
@@ -522,7 +522,7 @@ gettingAllTabs.then((tabs) => {
 });
 ```
 
-`initializePageAction` utilise `protocolIsApplicable()` pour déterminer si l'URL de l'onglet actif est celle à laquelle le CSS peut être appliqué :
+`initializePageAction` utilise `protocolIsApplicable()` pour déterminer si l'URL de l'onglet actif est celle à laquelle le CSS peut être appliqué :
 
 ```js
 function protocolIsApplicable(url) {

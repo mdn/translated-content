@@ -11,7 +11,7 @@ translation_of: Web/SVG/Element/mask
 ---
 {{SVGRef}}
 
-L'élément **`<mask>`** définit un masque alpha. Ce masque peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("mask")}}.
+L'élément **`<mask>`** définit un masque alpha. Ce masque peut par la suite être appliqué sur une forme en utilisant la propriété {{SVGAttr("mask")}}.
 
 Le masque permet de rendre des zones de l'élément sur lequel est appliqué (semi-)transparentes. On peut par exemple créer un effet de fondu en utilisant un dégradé, ce que le détourage ({{SVGElement('clipPath')}}) ne permet pas.
 

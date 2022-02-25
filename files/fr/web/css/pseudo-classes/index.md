@@ -92,7 +92,7 @@ Les pseudo-classes permettent d'appliquer un style à un élément non seulement
 - {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
 - {{CSSxRef(":valid")}}
 - {{CSSxRef(":visited")}}
-- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}
+- {{CSSxRef(":where", ":where()")}} {{Experimental_Inline}}
 
 ## Exemples
 
@@ -174,7 +174,7 @@ p:nth-child(2n+1) {
         </p>
         <p>
           Changement afin que <code>:empty</code> se comporte comme
-          {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}}.
+          {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}}.
         </p>
         <p>
           Aucune modification significative pour les pseudo-classes définies

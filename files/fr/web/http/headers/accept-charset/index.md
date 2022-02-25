@@ -62,4 +62,4 @@ Si le serveur ne peut servir aucun jeu de caractères correspondant, il peut th�
 
 - HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
 - Header avec le résultat de la négociation de contenu : {{HTTPHeader("Content-Type")}}
-- Autres Header similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}
+- Autres Header similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}

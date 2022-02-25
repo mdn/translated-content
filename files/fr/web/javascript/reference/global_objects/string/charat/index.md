@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/charAt
 ---
 {{JSRef}}
 
-La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère (ou, plus précisément, le point de code UTF-16)  à la position indiquée en argument.
+La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère (ou, plus précisément, le point de code UTF-16)  à la position indiquée en argument.
 
 {{EmbedInteractiveExample("pages/js/string-charat.html")}}
 

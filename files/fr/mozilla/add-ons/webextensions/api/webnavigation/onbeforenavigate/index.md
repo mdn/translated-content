@@ -74,7 +74,7 @@ Les événements ont trois fonctions :
 
 ## Exemples
 
-Logs les URL cibles de `onBeforeNavigate`, si le nom d'hôte de la cible contient "example.com" ou commence avec "developer".
+Logs les URL cibles de `onBeforeNavigate`, si le nom d'hôte de la cible contient "example.com" ou commence avec "developer".
 
 ```js
 var filter = {

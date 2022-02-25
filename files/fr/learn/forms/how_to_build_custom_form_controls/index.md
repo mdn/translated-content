@@ -213,7 +213,7 @@ Maintenant que nous avons mis en place les fonctionnalités de base, le divertis
 }
 
 .select .value {
-  /* Comme la valeur peut être plus large que le widget, nous devons nous
+  /* Comme la valeur peut être plus large que le widget, nous devons nous
      assurer qu'elle ne changera pas la largeur du widget. */
   display  : inline-block;
   width    : 100%;

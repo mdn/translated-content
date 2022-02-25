@@ -20,7 +20,7 @@ Le reste de notre matériel d'apprentissage pour débutants a essayé de s'en te
 
 ## Parcours d'apprentissage
 
-Bien que la connaissance de HTML, CSS et JavaScript soit nécessaire pour mettre en œuvre de nombreuses recommandations d'amélioration des performances Web, savoir comment créer des applications n'est pas une condition préalable nécessaire pour comprendre et mesurer les performances Web. Nous vous recommandons cependant, avant de commencer à utiliser ce module, d'avoir au moins une idée de base du développement Web en consultant notre module [Commencer avec le web](/fr/docs/Apprendre/Commencer_avec_le_web).
+Bien que la connaissance de HTML, CSS et JavaScript soit nécessaire pour mettre en œuvre de nombreuses recommandations d'amélioration des performances Web, savoir comment créer des applications n'est pas une condition préalable nécessaire pour comprendre et mesurer les performances Web. Nous vous recommandons cependant, avant de commencer à utiliser ce module, d'avoir au moins une idée de base du développement Web en consultant notre module [Commencer avec le web](/fr/docs/Apprendre/Commencer_avec_le_web).
 
 Il serait également utile d'approfondir un peu ces sujets, avec des modules tels que:
 

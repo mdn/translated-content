@@ -56,7 +56,7 @@ Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire
 
 - Les trois premières clés&nbsp;: [`manifest_version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), et [`version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) sont obligatoires et contiennent des métadonnées fondamentales nécessaires au module.
 - [`description`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) est optionnelle, mais recommandée&nbsp;: elle s'affiche dans le gestionnaire de module.
-- [`icons`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) est optionnelle, mais recommandée&nbsp;: elle permet d'établir l'icône du module qui s'affichera dans le gestionnaire de module.
+- [`icons`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) est optionnelle, mais recommandée&nbsp;: elle permet d'établir l'icône du module qui s'affichera dans le gestionnaire de module.
 
 La clé la plus intéressante ici est [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), qui demande à Firefox de charger un script dans toutes les pages dont l'URL correspond à un motif de correspondance de domaines spécifique. Dans notre cas, nous demandons à Firefox de charger un script appelé `borderify.js` dans toutes les pages HTTP ou HTTPS du domaine "mozilla.org" et tous ses sous-domaines.
 

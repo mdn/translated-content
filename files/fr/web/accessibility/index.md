@@ -13,7 +13,7 @@ L’accessibilité dans le développement web signifie permettre l'utilisation d
 
 «&nbsp;**L'accessibilité du web** signifie que les personnes handicapées peuvent l'utiliser. Plus spécifiquement, elle signifie que ces gens peuvent percevoir, comprendre, naviguer, interagir avec le web, et y contribuer. L'accessibilité du web bénéficie également à d'autres, notamment les personnes âgées ayant des capacités diminuées dues au vieillissement. » ( [L'accessibilité du Web définie dans Wikipédia](http://fr.wikipedia.org/wiki/Accessibilit%C3%A9_du_web))
 
-«&nbsp;**L'accessibilité numérique est la mise à la disposition de tous les individus** – quels que soient leur matériel ou logiciel, leur infrastructure réseau, leur langue maternelle, leur culture, leur localisation géographique, ou leurs aptitudes physiques ou mentales – des ressources numériques. » [W3C   Accessibility](http://www.w3.org/standards/webdesign/accessibility)
+«&nbsp;**L'accessibilité numérique est la mise à la disposition de tous les individus** – quels que soient leur matériel ou logiciel, leur infrastructure réseau, leur langue maternelle, leur culture, leur localisation géographique, ou leurs aptitudes physiques ou mentales – des ressources numériques. » [W3C   Accessibility](http://www.w3.org/standards/webdesign/accessibility)
 
 ## Tutoriels clefs
 

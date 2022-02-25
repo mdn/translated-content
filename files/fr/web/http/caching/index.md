@@ -44,7 +44,7 @@ Une entrée de cache peut aussi consister en de multiples réponses stockées di
 
 ### L'en-tête Cache-control
 
-Le {{HTTPHeader("Cache-Control")}} HTTP/1.1 Le champ d'en-tête général est utilisé pour spécifier les directives pour les mécanismes de cache dans les requêtes et les réponses. Utilisez cet en-tête pour définir vos stratégies de mise en cache avec la variété de directives fournies.
+Le {{HTTPHeader("Cache-Control")}} HTTP/1.1 Le champ d'en-tête général est utilisé pour spécifier les directives pour les mécanismes de cache dans les requêtes et les réponses. Utilisez cet en-tête pour définir vos stratégies de mise en cache avec la variété de directives fournies.
 
 #### Pas du tout de cache mémoire
 
@@ -70,13 +70,13 @@ La directive "public" indique que la réponse peut être mise en cache par n'imp
 
 La directive la plus importante ici est "max-age = \<secondes>", qui correspond au temps maximum pendant lequel une ressource est considérée comme nouvelle. Contrairement à {{HTTPHeader ("Expires")}}, cette directive est relative à l'heure de la demande. Pour les fichiers de l'application qui ne changeront pas, vous pouvez généralement ajouter une mise en cache agressive. Cela inclut les fichiers statiques tels que les images, les fichiers CSS et les fichiers JavaScript, par exemple.
 
-Pour plus de détails, voir aussi la section [Freshness](#Freshness) ci-dessous..
+Pour plus de détails, voir aussi la section [Freshness](#Freshness) ci-dessous..
 
     Cache-Control: max-age=31536000
 
 #### Validation
 
-Lors de l'utilisation de la directive "must-revalidate", le cache doit vérifier l'état des ressources obsolètes avant de l'utiliser, et celles qui ont expiré ne doivent pas être utilisées. Pour plus de détails, voir la section [Validation](#Cache_validation) ci-dessous.
+Lors de l'utilisation de la directive "must-revalidate", le cache doit vérifier l'état des ressources obsolètes avant de l'utiliser, et celles qui ont expiré ne doivent pas être utilisées. Pour plus de détails, voir la section [Validation](#Cache_validation) ci-dessous.
 
     Cache-Control: must-revalidate
 

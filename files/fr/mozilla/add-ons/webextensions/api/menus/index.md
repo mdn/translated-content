@@ -29,7 +29,7 @@ Excepté que [`menus.getTargetElement()`](/fr/docs/Mozilla/Add-ons/WebExtensions
 
 Pour créer un élément de menu, appelez la méthode {{WebExtAPIRef("menus.create()")}}. Vous transmettez à cette méthode un objet contenant des options pour l'élément, y compris l'ID d'élément, le type d'élément et les contextes dans lesquels il doit être affiché.
 
-Écoutez les clics sur votre élément de menu en ajoutant un écouteur à l'événement {{WebExtAPIRef("menus.onClicked")}}. Cet écouteur recevra un objet  {{WebExtAPIRef("menus.OnClickData")}} contenant les détails de l'événement.
+Écoutez les clics sur votre élément de menu en ajoutant un écouteur à l'événement {{WebExtAPIRef("menus.onClicked")}}. Cet écouteur recevra un objet  {{WebExtAPIRef("menus.OnClickData")}} contenant les détails de l'événement.
 
 Vous pouvez créer quatre types différents d'élément de menu, en fonction de la valeur de la propriété `type` que vous fournissez dans les options de `create()`:
 

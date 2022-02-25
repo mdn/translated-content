@@ -14,7 +14,7 @@ translation_of: Web/API/TextEncoder
 
 **`TextEncoder`** prend un flux de points de code en entrée et émet un flux d'octets. Pour une bibliothèque non native plus extensible, voir [`StringView` – une représentation des chaînes de caractères proche de celle de C basée sur les tableaux typés](/en-US/Add-ons/Code_snippets/StringView).
 
-> **Note :** Firefox, Chrome et Opera ont pour habitude de supporter les types d'encodage autres que `utf-8` (tels que `utf-16`, `iso-8859-2`, `koi8`, `cp1261`, et `gbk`). À partir de Firefox 48 ({{bug(1257877)}}), Chrome 54 ([ticket](https://www.chromestatus.com/feature/5630760492990464)) et Opera 41, aucun type d'encodage autre que `utf-8` n'est disponible, de manière à être en accord avec la [spécification](https://www.w3.org/TR/encoding/#dom-textencoder). Dans tous les cas, passer un type d'encodage au constructeur sera ignoré et un TextEncoder utf-8 sera créé (le {{DOMxRef("TextDecoder")}} permet toujours d'autres types pour le décodage).
+> **Note :** Firefox, Chrome et Opera ont pour habitude de supporter les types d'encodage autres que `utf-8` (tels que `utf-16`, `iso-8859-2`, `koi8`, `cp1261`, et `gbk`). À partir de Firefox 48 ({{bug(1257877)}}), Chrome 54 ([ticket](https://www.chromestatus.com/feature/5630760492990464)) et Opera 41, aucun type d'encodage autre que `utf-8` n'est disponible, de manière à être en accord avec la [spécification](https://www.w3.org/TR/encoding/#dom-textencoder). Dans tous les cas, passer un type d'encodage au constructeur sera ignoré et un TextEncoder utf-8 sera créé (le {{DOMxRef("TextDecoder")}} permet toujours d'autres types pour le décodage).
 
 > **Note :** Il y a une prothèse d'émulation d'implantation pour supporter tous les encodages hérités dans [GitHub](https://github.com/inexorabletash/text-encoding).
 
@@ -39,7 +39,7 @@ _L'interface `TextEncoder` n'hérite d'aucune propriété._
 
 ## Prothèse d'émulation
 
-La prothèse d'émulation ci-dessous va uniquement répondre aux spécifications données par le W3 (par d'autre type d'encodage que UTF-8 n'est supporté, malheureusement ☹️). Elle est conçue pour fonctionner "clé en main" avec IE5. Toutefois, de IE5 à IE9, elle retournera un tableau normal plutôt qu'un tableau typé. Dans de telles circonstances et avec des navigateurs si lents, cette prothèse (ou tout autre ayant le même objectif) serait inutilisable pour de longues chaînes de caractères avec ces vieux navigateurs. Enfin, notez que vous devriez exécuter le code ci-dessous avec un minifieur (et plus particulièrement un compilateur ) to turn sequences like `0x1e << 3` into `0xf0`. These sequences are not already precomputed because they serve to aesthetically illustrate how the polyfill works.
+La prothèse d'émulation ci-dessous va uniquement répondre aux spécifications données par le W3 (par d'autre type d'encodage que UTF-8 n'est supporté, malheureusement ☹️). Elle est conçue pour fonctionner "clé en main" avec IE5. Toutefois, de IE5 à IE9, elle retournera un tableau normal plutôt qu'un tableau typé. Dans de telles circonstances et avec des navigateurs si lents, cette prothèse (ou tout autre ayant le même objectif) serait inutilisable pour de longues chaînes de caractères avec ces vieux navigateurs. Enfin, notez que vous devriez exécuter le code ci-dessous avec un minifieur (et plus particulièrement un compilateur ) to turn sequences like `0x1e << 3` into `0xf0`. These sequences are not already precomputed because they serve to aesthetically illustrate how the polyfill works.
 
 ```js
 if (typeof TextEncoder === "undefined") {
@@ -82,8 +82,8 @@ if (typeof TextEncoder === "undefined") {
                 esArr[resPos += 1] = (0x2/*0b10*/<<6)  | (point&0x3f/*0
                     else {
                       resArr[resPos += 1] = (0xe/*0b1110*/<<4) | (point>>>12);
-                resArr[resPos += 1] = (0x2/*0b10*/<<6)    | ((point>>>6)&0x3f/*0b00111111*/);
-                resArr[resPos += 1] = (0x2/*0b10*/<<6)    | (point&0x3f/*0b00111111*/);
+                resArr[resPos += 1] = (0x2/*0b10*/<<6) | ((point>>>6)&0x3f/*0b00111111*/);
+                resArr[resPos += 1] = (0x2/*0b10*/<<6) | (point&0x3f/*0b00111111*/);
             }
         }
         if (typeof Uint8Array !== "undefined") return resArr.subarray(0, resPos + 1);

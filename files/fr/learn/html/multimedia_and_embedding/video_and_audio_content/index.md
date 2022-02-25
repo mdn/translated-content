@@ -83,7 +83,7 @@ La vidéo intégrée donnerait quelque chose comme ça :
 
 ![A simple video player showing a video of a small white rabbit](simple-video.png)
 
-Faites un essai avec [l'exemple ici](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html). (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html).)
+Faites un essai avec [l'exemple ici](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html). (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html).)
 
 ### Gestion de différents formats
 
@@ -165,7 +165,7 @@ Voici les nouvelles fonctionnalités&nbsp;:
     - `"auto"`&nbsp;: mettre le fichier média dans un tampon
     - `"metadata"`&nbsp;: ne mettre que les métadonnées dans le tampon
 
-Vous trouverez cet exemple [prêt pour l'interprétation](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) sur Github ( voir aussi le [ code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)). Notez que nous n'avons pas inséré l'attribut `autoplay` dans la version en direct — si la vidéo débute dès le chargement de la page, vous ne pourrez pas voir le poster&nbsp;!
+Vous trouverez cet exemple [prêt pour l'interprétation](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) sur Github ( voir aussi le [ code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)). Notez que nous n'avons pas inséré l'attribut `autoplay` dans la version en direct — si la vidéo débute dès le chargement de la page, vous ne pourrez pas voir le poster&nbsp;!
 
 ### L'élément  \<audio>
 
@@ -276,7 +276,7 @@ Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages
 - {{htmlelement("video")}}
 - {{htmlelement("source")}}
 - {{htmlelement("track")}}
-- [ Ajouter des légendes et sous-titres aux vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [ Ajouter des légendes et sous-titres aux vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
 - [Intégration Audio et Vidéo ](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery): de nombreux détails sur la manière de mettre de la vidéo et audio sur le web avec HTML et JavaScript.
 - [Manipuler l'Audio et la Vidéo](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation): de nombreux détails pour manipuler l'audio et la vidéo avec JavaScript (par ex. en ajoutant des filtres).
 - Options automatisées pour la [traduction multimédia](http://www.inwhatlanguage.com/blog/translate-video-audio/).

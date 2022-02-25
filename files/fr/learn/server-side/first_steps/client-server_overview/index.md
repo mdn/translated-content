@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
-Maintenant que vous connaissez le but et le bénéfice de la programmation côté serveur, nous allons analyser en détails ce qui se passe quand un serveur reçoit une requête dynamique de la part d'un navigateur. Comme la plupart des sites gèrent le code côté serveur (requêtes et réponses) de la même manière, cela vous aidera à comprendre ce que vous devrez faire ensuite en écrivant votre propre code.
+Maintenant que vous connaissez le but et le bénéfice de la programmation côté serveur, nous allons analyser en détails ce qui se passe quand un serveur reçoit une requête dynamique de la part d'un navigateur. Comme la plupart des sites gèrent le code côté serveur (requêtes et réponses) de la même manière, cela vous aidera à comprendre ce que vous devrez faire ensuite en écrivant votre propre code.
 
 <table class="standard-table">
   <tbody>
@@ -53,7 +53,7 @@ Cette requête inclut&nbsp;:
 - `POST` data.  Les requêtes `POST` ajoutent de nouvelles ressources dont les données sont encodées dans le corps de la requête.
 - Cookies côté Client.  Contient les données de session du client, incluant les clés dont peut se servir le serveur pour déterminer le statut de login et les accés/permissions aux ressources.
 
-Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut [HTTP Response ](/fr/docs/Web/HTTP/Status)indiquant si, oui ou non, la requête a abouti. (ex : "`200 OK`" pour un succés, "`404 Not Found`" si la ressource ne peut être trouvée, "`403 Forbidden`" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête  `GET` contiendrait la ressource demandée.
+Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut [HTTP Response ](/fr/docs/Web/HTTP/Status)indiquant si, oui ou non, la requête a abouti. (ex : "`200 OK`" pour un succés, "`404 Not Found`" si la ressource ne peut être trouvée, "`403 Forbidden`" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête  `GET` contiendrait la ressource demandée.
 
 Quand une page HTML est retournée, elle est affichée par le navigateur. Le navigateur, nativement, pourra découvrir des liens vers d'autres ressources (ex : une page HTML intégre habituellement des pages JavaScript et CSS ), et enverra des requêtes séparées pour télécharger ces fichiers.
 
@@ -91,14 +91,14 @@ Les premières et secondes lignes contiennent la plupart des données déjà év
 - Le site web cible/hôte (developer.mozilla.org).
 - La fin de la première ligne inclut aussi une petite chaîne identifiant la version spécifique du protocole (`HTTP/1.1`).
 
-La dernière ligne contient des données sur les cookies côté client — vous observerez que dans ce cas, le cookie a une id pour gérer la session :    (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
+La dernière ligne contient des données sur les cookies côté client — vous observerez que dans ce cas, le cookie a une id pour gérer la session :    (`Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; ...`).
 
 Les lignes restantes concernent le navigateur utilisé et les sortes de réponses qu'il peut accepter. Par exemple, vous pouvez voir ceci :
 
 - Mon navigateur (`User-Agent`) est Mozilla Firefox (`Mozilla/5.0`).
 - Il accepte les données compressées (`Accept-Encoding: gzip`).
 - Il accepte les familles de caractères suivantes :  (`Accept-Charset: ISO-8859-1,UTF-8;q=0.7,*;q=0.7`) et pour les langages : (`Accept-Language: de,en;q=0.7,en-us;q=0.3`).
-- La ligne `Referer` indique l'adresse de la page web qui contenait le lien vers cette ressource (Par ex. l'origine de la requête : `https://developer.mozilla.org/en-US/`).
+- La ligne `Referer` indique l'adresse de la page web qui contenait le lien vers cette ressource (Par ex. l'origine de la requête : `https://developer.mozilla.org/en-US/`).
 
 Les requêtes HTTP peuvent aussi avoir un corps mais dans ce cas précis, il est vide.
 
@@ -168,11 +168,11 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; _gat=1; csrftoken=zIPUJsAZv6
 csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&user-fullname=Hamish+Willee&user-title=&user-organization=&user-location=Australia&user-locale=en-US&user-timezone=Australia%2FMelbourne&user-irc_nickname=&user-interests=&user-expertise=&user-twitter_url=&user-stackoverflow_url=&user-linkedin_url=&user-mozillians_url=&user-facebook_url=
 ```
 
-La principale différence est que l'URL ne comporte pas de paramètres.  Comme vous voyez, l'information du formulaire est encodée dans le corps de la requête (par exemple : le nom complet du nouvel utilisateur est paramétré avec  `&user-fullname=Hamish+Willee`).
+La principale différence est que l'URL ne comporte pas de paramètres.  Comme vous voyez, l'information du formulaire est encodée dans le corps de la requête (par exemple : le nom complet du nouvel utilisateur est paramétré avec `&user-fullname=Hamish+Willee`).
 
 #### La réponse
 
-La réponse à la requête est expliquée dessous. Le statut "`302 Found`" dit au navigateur que le post a abouti et qu'il peut délivrer une deuxième requête HTTP pour charger la page spécifiée dans le champ  `Location`. L'information est donc en cela similaire à une réponse de requête `GET`.
+La réponse à la requête est expliquée dessous. Le statut "`302 Found`" dit au navigateur que le post a abouti et qu'il peut délivrer une deuxième requête HTTP pour charger la page spécifiée dans le champ  `Location`. L'information est donc en cela similaire à une réponse de requête `GET`.
 
 ```html
 HTTP/1.1 302 FOUND
@@ -190,11 +190,11 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **Note :** Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application [Fiddler](https://www.telerik.com/download/fiddler) , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. [Websniffer](http://websniffer.cc/), [Wireshark](https://www.wireshark.org/)) ou des extensions de navigateur comme  [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et  éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le [Network Monitor](/fr/docs/Tools/Network_Monitor) dans Firefox).
+> **Note :** Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application [Fiddler](https://www.telerik.com/download/fiddler) , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. [Websniffer](http://websniffer.cc/), [Wireshark](https://www.wireshark.org/)) ou des extensions de navigateur comme  [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et  éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le [Network Monitor](/fr/docs/Tools/Network_Monitor) dans Firefox).
 
 ## Les sites statiques
 
-Un site statique renvoie le même contenu codé en dur depuis le serveur quelle que soit la ressource demandée. Si vous avez une page concernant un produit à l'adresse  `/static/myproduct1.html`, cette même page sera retournée à chaque utilisateur. Si vous ajoutez un nouveau produit, vous devez ajouter une nouvelle page (par ex : `myproduct2.html`) et ainsi de suite. Cela peut être vraiment inefficace — Comment faire quand vous avez des milliers de pages "produit" à faire ? Vous allez répéter beaucoup de code identique dans chaque page (le modèle de base de la page, sa structure, etc.) et si vous voulez changer quoique ce soit dans la structure de la page — comme une section "produits dérivés" par exemple — alors, il faudra changer chaque page individuellement..
+Un site statique renvoie le même contenu codé en dur depuis le serveur quelle que soit la ressource demandée. Si vous avez une page concernant un produit à l'adresse  `/static/myproduct1.html`, cette même page sera retournée à chaque utilisateur. Si vous ajoutez un nouveau produit, vous devez ajouter une nouvelle page (par ex : `myproduct2.html`) et ainsi de suite. Cela peut être vraiment inefficace — Comment faire quand vous avez des milliers de pages "produit" à faire ? Vous allez répéter beaucoup de code identique dans chaque page (le modèle de base de la page, sa structure, etc.) et si vous voulez changer quoique ce soit dans la structure de la page — comme une section "produits dérivés" par exemple — alors, il faudra changer chaque page individuellement..
 
 > **Note :** Les sites statiques sont trés efficace quand vous avez un petit nombre de pages et que vous voulez envoyer le même contenu à chaque utilisateur. De toutes façons, ils peuvent avoir un coût certain de maintenance au fur et à mesure de l'augmentation du nombre de pages.
 
@@ -204,17 +204,17 @@ Voyons comment tout cela marche en révisant un diagramme d'architecture de site
 
 Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP `GET` spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse  HTTP contenant le document et un  [HTTP Response status code](/fr/docs/Web/HTTP/Status) ( statut codé de la réponse HTTP) qui est  "`200 OK`" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "`404 Not Found`"  si le fichier est absent sur le serveur , ou bien "`301 Moved Permanently`" si le fichier existe mais a été déplacé vers une nouvelle localisation.
 
-Le serveur d'un site statique n'aura à faire face qu'à des requêtes  GET vu qu'il ne stocke aucune donnée modifiable. Il ne change pas non plus ses réponses basées sur les données des requêtes HTTP (c'est à dire les paramètres URL ou les cookies).
+Le serveur d'un site statique n'aura à faire face qu'à des requêtes  GET vu qu'il ne stocke aucune donnée modifiable. Il ne change pas non plus ses réponses basées sur les données des requêtes HTTP (c'est à dire les paramètres URL ou les cookies).
 
 Comprendre comment fonctionnent les sites statiques est sans aucun doute trés utile à l'apprentissage de la programmation côté serveur car les sites dynamiques gèrent les requêtes pour les fichiers statiques (CSS, JavaScript, images statiques , etc.) exactement de la même manière.
 
 ## Les sites dynamiques
 
-Un site dynamique peut générer et retourner du contenu basé sur une requête URL spécifique et les données (plutôt que de toujours renvoyer le même fichier codé en dur à une URL particulière).  Toujours avec l'exemple d'un site "produits", le serveur stockera les données du produit dans une base de données plutôt que dans un fichier HTML individuel. Quand il reçoit une requête HTTP `GET` pour un produit, le serveur détermine l'ID du produit, va chercher les données dans la base de données puis construit la page HTML pour la réponse en intégrant les données dans un gabarit (template) HTML. C'est un avantage indéniable sur un site statique :
+Un site dynamique peut générer et retourner du contenu basé sur une requête URL spécifique et les données (plutôt que de toujours renvoyer le même fichier codé en dur à une URL particulière).  Toujours avec l'exemple d'un site "produits", le serveur stockera les données du produit dans une base de données plutôt que dans un fichier HTML individuel. Quand il reçoit une requête HTTP `GET` pour un produit, le serveur détermine l'ID du produit, va chercher les données dans la base de données puis construit la page HTML pour la réponse en intégrant les données dans un gabarit (template) HTML. C'est un avantage indéniable sur un site statique :
 
 Utiliser une base de données permet à l'information "produit" d'être stockée efficacement, en étant modifiable, extensible et bien indexée.
 
-Employer des gabarits HTML facilite la façon de changer la structure HTML parce que c'est fait en un seul endroit, dans un seul gabarit (template) et non pas sur potentiellement des milliers de pages statiques.
+Employer des gabarits HTML facilite la façon de changer la structure HTML parce que c'est fait en un seul endroit, dans un seul gabarit (template) et non pas sur potentiellement des milliers de pages statiques.
 
 ### Anatomie d'un requête dynamique
 

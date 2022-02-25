@@ -10,9 +10,9 @@ translation_of: Web/API/Document/readyState
 ---
 {{APIRef("DOM")}} {{ gecko_minversion_header("1.9.2") }}
 
-La valeur **Document.readyState** est une propriété de {{ domxref("document") }} qui décrit l'état de chargement du document.
+La valeur **Document.readyState** est une propriété de {{ domxref("document") }} qui décrit l'état de chargement du document.
 
-À chaque évolution de la valeur, un évenement {{event("readystatechange")}} est émis dans l'objet {{ domxref("document") }}.
+À chaque évolution de la valeur, un évenement {{event("readystatechange")}} est émis dans l'objet {{ domxref("document") }}.
 
 ## Syntaxe
 
@@ -20,14 +20,14 @@ La valeur **Document.readyState** est une propriété de {{ domxref("document")
 
 ### Valeurs
 
-La variable `readyState` peut valoir&nbsp;:
+La variable `readyState` peut valoir&nbsp;:
 
 - **`loading`**
   - : Le {{ domxref("document") }} est encore en chargement.
 - **`interactive`**
-  - : Le document a été chargé, mais les ressources (images, scripts, css..) sont encore en cours d'acquisition. En revanche la structure DOM est générée, et {{event("DOMContentLoaded")}} a été émis.
+  - : Le document a été chargé, mais les ressources (images, scripts, css..) sont encore en cours d'acquisition. En revanche la structure DOM est générée, et {{event("DOMContentLoaded")}} a été émis.
 - **`complete`**
-  - : Le document et toutes les sous-ressources ont été chargés, et {{event("load")}} a été émis.
+  - : Le document et toutes les sous-ressources ont été chargés, et {{event("load")}} a été émis.
 
 ## Exemples
 
@@ -62,7 +62,7 @@ document.onreadystatechange = function () {
 }
 ```
 
-### readystatechange comme alternative à load
+### readystatechange comme alternative à load
 
 ```js
 // alternative à load
@@ -73,7 +73,7 @@ document.onreadystatechange = function () {
 }
 ```
 
-### readystatechange comme event listener pour insérer ou modifier le DOM avant DOMContentLoaded
+### readystatechange comme event listener pour insérer ou modifier le DOM avant DOMContentLoaded
 
 ```js
 // Modification du document <body> dès que possible en utilisant un script externe
@@ -96,11 +96,11 @@ document.addEventListener('readystatechange', bootstrap, false);
 
 {{Compat("api.Document.readyState")}}
 
-\[1] Ne supporte que 'complete'. Opera Presto notifie 'complete' seulement après l'événement 'load' (dans un ordre incorrect par rapport à la spécification du standard HTML5).
+\[1] Ne supporte que 'complete'. Opera Presto notifie 'complete' seulement après l'événement 'load' (dans un ordre incorrect par rapport à la spécification du standard HTML5).
 
-\[2] Internet Explorer 9 et 10 ont des bogues quand l'état 'interactive' [peut être notifié trop tôt](https://bugs.jquery.com/ticket/12282) avant que le document soit entièrement analysé.
+\[2] Internet Explorer 9 et 10 ont des bogues quand l'état 'interactive' [peut être notifié trop tôt](https://bugs.jquery.com/ticket/12282) avant que le document soit entièrement analysé.
 
-\[3] À l'introduction dans IE 4, la propriété était seulement disponible pour les objets document, embed, img, link, object, script, et style. IE 5 a étendu le support à tous les objets élément HTML.
+\[3] À l'introduction dans IE 4, la propriété était seulement disponible pour les objets document, embed, img, link, object, script, et style. IE 5 a étendu le support à tous les objets élément HTML.
 
 ## Voir aussi
 

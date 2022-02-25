@@ -126,7 +126,7 @@ L'ensemble [des options de champs](https://docs.djangoproject.com/fr/2.2/ref/mod
 
 Vous trouverez ci-dessous les arguments les principaux type de champs :
 
-- [CharField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#django.db.models.CharField) caractérise un champ de type chaîne de caractères de taille maximale fixe. Ce champ nécessite l'option obligatoire `max_length` pour définir la taille maximale de la chaîne de caractère.
+- [CharField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#django.db.models.CharField) caractérise un champ de type chaîne de caractères de taille maximale fixe. Ce champ nécessite l'option obligatoire `max_length` pour définir la taille maximale de la chaîne de caractère.
 - [TextField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#django.db.models.TextField) caractérise un champs texte (de longeur non définit dans la base de données). Si l'option `max_length` est utilisé, celui-ci précisera la taille du champs texte des formulaires web mais n'aura pas d'impact dans la définition du champs en base de données.
 - [IntegerField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#django.db.models.IntegerField "django.db.models.IntegerField") caractérise un champs de type nombre entier.
 - [DateField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#datefield) et [DateTimeField](https://docs.djangoproject.com/fr/2.2/ref/models/fields/#datetimefield) sont des type utilisées pour caractériser une date et une heure comme les objets `datetime.date` et `datetime.datetime` en Python. Les options (incompatibles ensemble) les plus courantes pour ces champs sont l'enregistrement au moment de la sauvegarde (`auto_now=True`), l'enregistrement à la création de l'objet (`auto_now_add`) et une valeur par défaut (`default)` qui pourra être changée par l'utilisateur.
@@ -196,7 +196,7 @@ Vous pouvez aussi définir toute les méthodes dont vous aurez besoin pour manip
 
 ### Administration des données
 
-A partir du moment où vous avez créé votre modèle de données, vous pouvez manipuler les instances pour créer, mettre à jour ou supprimer les enregistrements en base de données. Vous pouvez aussi faire des requêtes pour obtenir tout ou parti des enregistrements de la base. L'objet de cette section est d'évoquer la manière de manipuler ces données et sera revu progressivement dans les avancées de l'application Bibliothèque.
+A partir du moment où vous avez créé votre modèle de données, vous pouvez manipuler les instances pour créer, mettre à jour ou supprimer les enregistrements en base de données. Vous pouvez aussi faire des requêtes pour obtenir tout ou parti des enregistrements de la base. L'objet de cette section est d'évoquer la manière de manipuler ces données et sera revu progressivement dans les avancées de l'application Bibliothèque.
 
 #### Créer et modifier des enregistrements
 
@@ -268,7 +268,7 @@ from django.db import models
 
 ### L'objet Genre
 
-Cet objet est utilisé pour décrire et enregistrer le genre littéraire des livres — par exemple une fiction, une polard ou un roman. Comme cela a été évoqué précédemment, nous créons un modèle de données plutôt que de gérer cela à l'aide de texte libre ou de codage en dur. Copiez le texte ci-dessous à la fin du fichier _models.py_.
+Cet objet est utilisé pour décrire et enregistrer le genre littéraire des livres — par exemple une fiction, une polard ou un roman. Comme cela a été évoqué précédemment, nous créons un modèle de données plutôt que de gérer cela à l'aide de texte libre ou de codage en dur. Copiez le texte ci-dessous à la fin du fichier _models.py_.
 
 ```python
 class Genre(models.Model):
@@ -319,7 +319,7 @@ class Book(models.Model):
 
 Le genre littéraire est une relation n à n (`ManyToManyField`) car un livre peut avoir plusieurs genres et inversement. Bien que des livres soient écrits à plusieurs, dans le modèle de données présent un livre n'aura qu'un et un seul auteur. Un auteur est donc vu comme une clé étrangère `(ForeignKey`) de telle sorte qu'un livre n'a qu'un seul auteur et une auteur peut avoir écrit plusieurs livres.
 
-La modélisation des relations entre les objets, c'est le cas pour les deux champs décrits à l'instant, nécessite de manipuler les classes d'objet par leur nom de classe. Vous devez déclarer l'objet par son de classe dans la déclaration de la relation entre les objets, si celui-ci a déjà été déclaré vous pouvez l'utiliser comme un nom d'objet - à l'identique d'une variable Python - ou comme une chaîne de caractère si l'objet n'a pas déjà fait l'objet d'un déclaration. les autres paramètres dans la déclaration des relations permettent de spécifier les comportement des attributs : l'option `null` positionné à `True` permet d'avoir un contenu vide en base de données, la second option` on_delete=models.SET_NULL` qualifie le fonctionnement de cet attribut si l'objet est supprimé en base de données, en l'occurence il peut être positionné à vide en base de données.
+La modélisation des relations entre les objets, c'est le cas pour les deux champs décrits à l'instant, nécessite de manipuler les classes d'objet par leur nom de classe. Vous devez déclarer l'objet par son de classe dans la déclaration de la relation entre les objets, si celui-ci a déjà été déclaré vous pouvez l'utiliser comme un nom d'objet - à l'identique d'une variable Python - ou comme une chaîne de caractère si l'objet n'a pas déjà fait l'objet d'un déclaration. les autres paramètres dans la déclaration des relations permettent de spécifier les comportement des attributs : l'option `null` positionné à `True` permet d'avoir un contenu vide en base de données, la second option` on_delete=models.SET_NULL` qualifie le fonctionnement de cet attribut si l'objet est supprimé en base de données, en l'occurence il peut être positionné à vide en base de données.
 
 Deux méthodes sont déclarées pour cet objet. La méthode `__str__()` obligatoirement requise par Django pour manipuler les instances d'objet et les enregistrements associés en base. La seconde méthode, `get_absolute_url()`, retourne une URL formatée qui peut être utilisée par le cadriciel pour délivrer le détail de chaque instance d'objet de la classe. Le routage d'URL sera associé au nom  `book-detail`, et nous aurons à définir une vue et un gabarit.
 
@@ -368,7 +368,7 @@ class BookInstance(models.Model):
 De nouveaux types de champs sont utilisés :
 
 - Le type `UUIDField` est utilisé pour traiter d'un identifiant unique de livre comme clé primaire. Ce type de champ permet de générer un identifiant unique pour enregistrer et suivre chacune des copies de chacun des livres.
-- Le type `DateField` est utilisé pour enregistrer la date de retour d'un prêt. Ce champ peut-être vide pour gérer le cas des livres dans les rayonnages c'est-à-dire disponibles pour un prêt. Il est fait appel à la classe `Meta` pour permettre de classer les requêtes sur les objet par date de retr
+- Le type `DateField` est utilisé pour enregistrer la date de retour d'un prêt. Ce champ peut-être vide pour gérer le cas des livres dans les rayonnages c'est-à-dire disponibles pour un prêt. Il est fait appel à la classe `Meta` pour permettre de classer les requêtes sur les objet par date de retr
 - our.
 - Le champ `status` est un type connu (`CharField`) qui définit une liste de choix. Les choix sont définis dans la description de l'objet par l'usage de tuples (une paire clé-valeur) et transmis en option dans la déclaration du champs. Alors que l'utilisateur manipulera les valeurs, les clés seront enregistrées dans la base de données. Enfin, la valeur par défaut est la Maintenance car lorsqu'un ouvrage est créé il n'est pas immédiatement disponible au prêt et n'est pas directement positionné en rayon.
 

@@ -26,9 +26,9 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `beacon`
   - : Demandes envoyées par le biais de l'[API Beacon](/fr/docs/Web/API/Beacon_API).
 - `csp_report`
-  - : Demandes envoyées au {{CSP("report-uri")}} donné dans l'en-tête {{HTTPHeader("Content-Security-Policy")}}, lorsqu'une tentative de violation de la politique est détectée.
+  - : Demandes envoyées au {{CSP("report-uri")}} donné dans l'en-tête {{HTTPHeader("Content-Security-Policy")}}, lorsqu'une tentative de violation de la politique est détectée.
 - `font`
-  - : Polices Web chargées pour un {{cssxref("@font-face")}} règle CSS.
+  - : Polices Web chargées pour un {{cssxref("@font-face")}} règle CSS.
 - `image`
   - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de  `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
 - `imageset`
@@ -55,7 +55,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
     Les navigateurs qui n'ont pas de type de `balise` dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que `ping`.
 
 - `script`
-  - : Code chargé pour être exécuté par un élément {{HTMLElement("script")}} ou exécuté dans un [Worker](/fr/docs/Web/API/Web_Workers_API).
+  - : Code chargé pour être exécuté par un élément {{HTMLElement("script")}} ou exécuté dans un [Worker](/fr/docs/Web/API/Web_Workers_API).
 - `speculative`
   - : Dans une connexion spéculative, le navigateur a déterminé qu'une demande d'URI pourrait bientôt arriver, donc il lance immédiatement un handshake TCP et/ou TLS, de sorte qu'il est prêt plus rapidement lorsque la ressource est effectivement demandée.
 - `stylesheet`
@@ -69,7 +69,7 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `xbl`
   - : [XBL](/fr/docs/XBL) bindings chargés pour étendre le comportement des éléments d'un document.
 - `xml_dtd`
-  - : [DTDs](/fr/docs/Glossaire/DTD) chargées pour un document XML.
+  - : [DTDs](/fr/docs/Glossaire/DTD) chargées pour un document XML.
 - `xmlhttprequest`
   - : Requêtes envoyées par un objet {{domxref("XMLHttpRequest")}} ou par l'[API Fetch](/fr/docs/Web/API/Fetch_API).
 - `xslt`

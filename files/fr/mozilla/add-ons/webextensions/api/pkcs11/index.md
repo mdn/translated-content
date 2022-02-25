@@ -48,7 +48,7 @@ Très probablement, l'utilisateur ou l'administrateur du périphérique installe
 
 Cependant, le module et le manifeste ne peuvent pas être installés dans le cadre du processus d'installation de l'extension.
 
-Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, voir [Manifest natifs](/fr/Add-ons/WebExtensions/Native_manifests).
+Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, voir [Manifest natifs](/fr/Add-ons/WebExtensions/Native_manifests).
 
 ## Fonctions
 

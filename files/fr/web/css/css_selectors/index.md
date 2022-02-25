@@ -30,7 +30,7 @@ original_slug: Web/CSS/Sélecteurs_CSS
     **Exemple :** `#toc` permettra de cibler l'élément qui possède l'identifiant `toc` (vraisemblablement défini avec un attribut `id="toc"`).
 - [Le sélecteur universel](/fr/docs/Web/CSS/Universal_selectors)
   - : Ce sélecteur permet de cibler tous les nœuds d'un document. Il existe également une variante pour ne cibler qu'un seul espace de noms et une variante pour cibler tous les espaces de noms.
-    **Syntaxe :** `*` `ns|*` `*|*`
+    **Syntaxe :** `*` `ns|*` `*|*`
     **Exemple :** `*` permettra de cibler tous les éléments du document.
 - [Les sélecteurs d'attribut](/fr/docs/Web/CSS/Attribute_selectors)
   - : Ce sélecteur simple permet de cibler des éléments d'un document en fonction de la valeur d'un de leurs attributs.
@@ -42,17 +42,17 @@ original_slug: Web/CSS/Sélecteurs_CSS
 - [Les sélecteurs de voisin direct](/fr/docs/Web/CSS/Adjacent_sibling_combinator)
   - : Le combinateur `'+'` permet de sélectionner les nœuds qui suivent immédiatement un élément donné.
     **Syntaxe :** `A + B`
-    **Exemple :** `div + p` permettra de cibler n'importe quel élément {{HTMLElement('p')}} qui suit immédiatement un élément {{HTMLElement('div')}}.
+    **Exemple :** `div + p` permettra de cibler n'importe quel élément {{HTMLElement('p')}} qui suit immédiatement un élément {{HTMLElement('div')}}.
 - [Les sélecteurs de voisins](/fr/docs/Web/CSS/General_sibling_combinator)
   - : Le combinateur `'~'` permet de sélectionner les nœuds qui suivent un élément et qui ont le même parent.
     **Syntaxe :** `A ~ B`
     **Exemple :** `p ~ span` permettra de cibler les éléments {{HTMLElement('span')}} qui suivent (immédiatement ou non) un élément {{HTMLElement('p')}} et qui ont le même élément parent.
 - [Les sélecteurs d'éléments enfants](/fr/docs/Web/CSS/Child_combinator)
-  - : Le combinateur `'>'` permet de sélectionner les nœuds qui sont des enfants directs d'un élément donné.
+  - : Le combinateur `'>'` permet de sélectionner les nœuds qui sont des enfants directs d'un élément donné.
     **Syntaxe :** `A > B`
     **Exemple :** `ul > li` permettra de cibler tous les éléments {{HTMLElement('li')}} qui sont directement situés sous un élément {{HTMLElement('ul')}}.
 - [Les sélecteurs d'éléments descendants](/fr/docs/Web/CSS/Descendant_combinator)
-  - : Le combinateur ` ` (espace) permet de sélectionner les nœuds qui sont des descendants (pas nécessairement des enfants directs) d'un élément donné.
+  - : Le combinateur ` ` (espace) permet de sélectionner les nœuds qui sont des descendants (pas nécessairement des enfants directs) d'un élément donné.
     **Syntaxe :** `A B`
     **Exemple :** `div span` permettra de cibler n'importe quel élément {{HTMLElement('span')}} situé à l'intérieur d'un élément {{HTMLElement('div')}}.
 - [Le combinateur de colonne](/fr/docs/Web/CSS/Column_combinator){{experimental_inline}}

@@ -21,7 +21,7 @@ Un {{jsxref("object")}} avec les propriétés suivantes :
 - `origins`{{optional_inline}}
   - : Un tableau de [modèles de correspondance](/fr/Add-ons/WebExtensions/Match_patterns), représentant les [permissions de l'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions).
 - `permissions`{{optional_inline}}
-  - : Un tableau de permissions nommées, y compris les [permissions d'API ](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) et les [permissions du presse-papiers](/fr/Add-ons/WebExtensions/manifest.json/permissions#Clipboard_access).
+  - : Un tableau de permissions nommées, y compris les [permissions d'API ](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) et les [permissions du presse-papiers](/fr/Add-ons/WebExtensions/manifest.json/permissions#Clipboard_access).
 
 ## Compatibilité du navigateur
 

@@ -48,7 +48,7 @@ Questions relatives aux outils/logiciels que vous pouvez utiliser pour construir
 - [Comment transférer des fichiers vers un serveur web?](/fr/docs/Learn/Common_questions/Upload_files_to_a_web_server)
   - : Cet article montre comment mettre son site en ligne en utilisant un outil [FTP](/fr/docs/Glossary/FTP) — un des moyens les plus fréquents de publier son site afin qu'il soit disponible aux autres depuis leurs ordinateurs.
 - [Comment utiliser GitHub Pages?](/fr/docs/Learn/Common_questions/Using_GitHub_Pages)
-  - : Cet article fourni un guide basique pour publier du contenu en utilisant l'outil gh-pages de GitHub.
+  - : Cet article fourni un guide basique pour publier du contenu en utilisant l'outil gh-pages de GitHub.
 - [Comment héberger son site sur Google App Engine?](/fr/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine)
   - : Vous recherchez un endroit pour héberger votre site web? Voici un guide pas-à-pas pour héberger votre site sur Google App Engine.
 - [Quels outils sont disponibles pour corriger et améliorer les performances du site web?](/fr/docs/Tools/Performance)

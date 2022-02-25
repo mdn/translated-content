@@ -12,7 +12,7 @@ translation_of: Web/API/WebGLRenderingContext/getTexParameter
 ---
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) retourne des informations concernant la texture indiquée.
+La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) retourne des informations concernant la texture indiquée.
 
 ## Syntaxe
 
@@ -22,18 +22,18 @@ La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr
 
 - cible
 
-  - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
+  - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
 
     - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionnelle.
-    - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texture appliquée à un cube.
+    - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texture appliquée à un cube.
     - Lorsqu' un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
 
-      - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
+      - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
       - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture bi-dimensionnelle en tableau.
 
 - nomp
 
-  - : Un {{domxref("Glenum")}} indiquant l'information à obtenir. Valeurs possibles :
+  - : Un {{domxref("Glenum")}} indiquant l'information à obtenir. Valeurs possibles :
 
     <table class="standard-table">
       <thead>
@@ -71,7 +71,7 @@ La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr
         <tr>
           <td><code>gl.TEXTURE_WRAP_S</code></td>
           <td>{{domxref("GLenum")}}</td>
-          <td>Fonction d'emballage pour la coordonnée de texture <code>s</code></td>
+          <td>Fonction d'emballage pour la coordonnée de texture <code>s</code></td>
           <td>
             <code>gl.REPEAT</code> (valeur par défaut),
             <code>gl.CLAMP_TO_EDGE</code>, <code>gl.MIRRORED_REPEAT</code>.
@@ -175,7 +175,7 @@ La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr
 
 ### Valeur retournée
 
-Retourne l'information de texture demandée (telle qu'indiquée par `nomp`). Si une erreur se produit, {{jsxref("null")}} est retourné.
+Retourne l'information de texture demandée (telle qu'indiquée par `nomp`). Si une erreur se produit, {{jsxref("null")}} est retourné.
 
 ## Exemples
 

@@ -7,7 +7,7 @@ La [Web Audio API](/en-US/docs/Web_Audio_API) offre un méchanisme à la fois si
 
 La Web Audio API ne vient pas remplacer l'élément [\<audio>](/en-US/docs/Web/HTML/Element/audio), mais plutôt le compléter, de même que l'API Canvas 2D coexiste avec l'élément [\<video>](/en-US/docs/Web/HTML/Element/Img). Si vous avez seulement besoin de contrôler la lecture d'un fichier audio, \<audio> est probablement une meilleure solution, plus rapide. Si vous voulez procéder à un traitement audio plus complexe et à la lecture d'une source, la Web Audio API offre davantage de possibilités en termes de puissance et de contrôle.
 
-L'une des particularités de la Web Audio API est qu'elle n'a pas de limites au niveau de la programmation du son. Par exemple, le nombre de sons que l'on peut appeler en même temps n'est pas plafonnée. Certains processeurs sont potentiellement capables de jouer plus d'un millier de sons simultanément sans saccades.
+L'une des particularités de la Web Audio API est qu'elle n'a pas de limites au niveau de la programmation du son. Par exemple, le nombre de sons que l'on peut appeler en même temps n'est pas plafonnée. Certains processeurs sont potentiellement capables de jouer plus d'un millier de sons simultanément sans saccades.
 
 ## Exemples
 
@@ -25,10 +25,10 @@ La Web Audio API impliqe de réaliser les opérations de traitement audio dans u
 
 Les noeuds audio sont reliés au niveau de leurs entrées et sorties. Ils forment une chaîne qui commence avec une ou plusieurs sources, traverse un ou plusieurs noeuds de traitement, et se termine par une destination (bien qu'il ne soit pas néessaire d'avoir une destination si l'on souhaite simplement visualiser des données audio). Un scénario simple, représentatif de la Web Audio API, pourrait ressembler à ceci&nbsp;:
 
-1.  Création d'un contexte audio
-2.  Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
+1.  Création d'un contexte audio
+2.  Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
 3.  Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
-4.  Choix final de la sortie audio, par exemple les enceintes du système
+4.  Choix final de la sortie audio, par exemple les enceintes du système
 5.  Connection des sources aux effets, et des effets à la sortie.
 
 ### Création d'un contexte audio

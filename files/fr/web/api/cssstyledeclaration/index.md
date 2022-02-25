@@ -15,7 +15,7 @@ translation_of: Web/API/CSSStyleDeclaration
 `CSSStyleDeclaration` représente une collection de paires propriété/valeur CSS. Elle est utilisée dans quelques API&nbsp;:
 
 - {{domxref("HTMLElement.style")}} - pour manipuler le style d'un seul élément (\<elem style="...">)&nbsp;;
-- (AFAIRE : à reformuler) est une interface avec le [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) renvoyé par la propriété [`style`](/en/DOM/cssRule.style) d'une `cssRule` dans une [feuille de style](/fr/docs/Web/API/StyleSheet), lorsque la règle est une [CSSStyleRule](/en/DOM/cssRule#CSSStyleRule)&nbsp;;
+- (AFAIRE : à reformuler) est une interface avec le [declaration block](http://www.w3.org/TR/1998/REC-CSS2-19980512/syndata.html#block) renvoyé par la propriété [`style`](/en/DOM/cssRule.style) d'une `cssRule` dans une [feuille de style](/fr/docs/Web/API/StyleSheet), lorsque la règle est une [CSSStyleRule](/en/DOM/cssRule#CSSStyleRule)&nbsp;;
 - `CSSStyleDeclaration` est également une interface en **lecture seule** pour le résultat de [window.getComputedStyle()](/fr/docs/Web/API/Window/getComputedStyle).
 
 ## Attributs

@@ -5,7 +5,7 @@ translation_of: Web/SVG/Element/svg
 ---
 {{SVGRef}}
 
-L'élément `svg` peut être utilisé pour intégrer des fragments de code SVG à l'intérieur d'un document (par exemple, un document HTML). Ce fragment de code SVG dispose de ses propres [viewport](/fr/docs/) et système de coordonnée.
+L'élément `svg` peut être utilisé pour intégrer des fragments de code SVG à l'intérieur d'un document (par exemple, un document HTML). Ce fragment de code SVG dispose de ses propres [viewport](/fr/docs/) et système de coordonnée.
 
 ## Contexte d'utilisation
 
@@ -75,7 +75,7 @@ Ce fichier peut être inclus dans un document HTML5 de cette façon :
 
 ## Interface DOM
 
-Cette élément implémente l'interface [`SVGSVGElement`](/fr/docs/Web/API/SVGSVGElement).
+Cette élément implémente l'interface [`SVGSVGElement`](/fr/docs/Web/API/SVGSVGElement).
 
 ## Spécifications
 

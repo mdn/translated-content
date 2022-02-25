@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/supportedLo
 ---
 {{JSRef}}
 
-La méthode **`Intl.Collator.supportedLocalesOf()`** renvoie, parmi les locales fournies, un tableau contenant les locales supportées et qui ne nécessitent pas d'utiliser la locale par défaut de l'environnement.
+La méthode **`Intl.Collator.supportedLocalesOf()`** renvoie, parmi les locales fournies, un tableau contenant les locales supportées et qui ne nécessitent pas d'utiliser la locale par défaut de l'environnement.
 
 {{EmbedInteractiveExample("pages/js/intl-collator-prototype-supportedlocalesof.html")}}
 

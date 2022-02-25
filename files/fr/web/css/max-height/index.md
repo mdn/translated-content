@@ -52,7 +52,7 @@ max-height: unset;
 - `min-content` {{experimental_inline}}
   - : La hauteur intrinsèque minimale.
 - `fill-available`{{experimental_inline}}
-  - : La hauteur du bloc englobant moins la marge verticale, la bordure et le remplissage (_padding_). Certains navigateurs implémentent cette valeur avec un ancien nom : `available`.
+  - : La hauteur du bloc englobant moins la marge verticale, la bordure et le remplissage (_padding_). Certains navigateurs implémentent cette valeur avec un ancien nom : `available`.
 - `fit-content` {{experimental_inline}}
   - : Un synonyme pour `max-content`.
 

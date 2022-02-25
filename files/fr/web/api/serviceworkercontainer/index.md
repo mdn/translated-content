@@ -12,7 +12,7 @@ Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWo
 ## Propriétés
 
 - {{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}
-  - : Retourne un objet {{domxref("ServiceWorker")}} si son état est `activated` (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne `null` si la requête est un rechargement forcé (*Majuscule* + rechargement) ou si il n'y a pas de worker actif.
+  - : Retourne un objet {{domxref("ServiceWorker")}} si son état est `activated` (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne `null` si la requête est un rechargement forcé (*Majuscule* + rechargement) ou si il n'y a pas de worker actif.
 
 <!---->
 

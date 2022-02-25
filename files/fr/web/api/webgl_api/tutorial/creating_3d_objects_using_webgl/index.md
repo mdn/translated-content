@@ -9,13 +9,13 @@ original_slug: Web/API/WebGL_API/Tutorial/Creer_des_objets_3D_avec_WebGL
 ---
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
-Transformons notre carré en trois dimensions en lui ajoutant cinq faces supplémentaires pour créer un cube. Pour faire cela efficacement, nous allons passer du dessin de sommets par l'appel direct de la méthode {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}, à l'utilisation du tableau des sommets comme une table, et à référencer les sommets individuels dans cette table pour définir les positions des sommets de chaque face, en appelant directement {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
+Transformons notre carré en trois dimensions en lui ajoutant cinq faces supplémentaires pour créer un cube. Pour faire cela efficacement, nous allons passer du dessin de sommets par l'appel direct de la méthode {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}}, à l'utilisation du tableau des sommets comme une table, et à référencer les sommets individuels dans cette table pour définir les positions des sommets de chaque face, en appelant directement {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}}.
 
-Notez que chaque face nécessite quatre sommets pour la définir, mais que chaque sommet est partagé entre trois faces. Nous pouvons donc passer beaucoup moins de données en faisant un tableau des 24 sommets, puis en référençant chaque sommet par son indice dans ce tableau, au lieu de passer des ensembles complets de coordonnées. Si vous vous demandez pourquoi nous avons besoin de 24 sommets, et non pas seulement de 8, c'est parce que chaque coin appartient à trois faces de couleurs différentes, et qu'un sommet donné doit avoir une couleur spécifique - c'est pourquoi nous allons créer 3 copies de chaque sommet dans les trois couleurs différentes, une pour chaque face.
+Notez que chaque face nécessite quatre sommets pour la définir, mais que chaque sommet est partagé entre trois faces. Nous pouvons donc passer beaucoup moins de données en faisant un tableau des 24 sommets, puis en référençant chaque sommet par son indice dans ce tableau, au lieu de passer des ensembles complets de coordonnées. Si vous vous demandez pourquoi nous avons besoin de 24 sommets, et non pas seulement de 8, c'est parce que chaque coin appartient à trois faces de couleurs différentes, et qu'un sommet donné doit avoir une couleur spécifique - c'est pourquoi nous allons créer 3 copies de chaque sommet dans les trois couleurs différentes, une pour chaque face.
 
 ## Définir la position des sommets du cube
 
-Tout d'abord, construisons le tampon des sommets du cube en mettant à jour le code de `initBuffer()`. C'est sensiblement le même que pour le carré, mais en plus long, du fait qu'il y a 24 sommets (4 par côté) :
+Tout d'abord, construisons le tampon des sommets du cube en mettant à jour le code de `initBuffer()`. C'est sensiblement le même que pour le carré, mais en plus long, du fait qu'il y a 24 sommets (4 par côté) :
 
 ```js
   const positions = [
@@ -57,7 +57,7 @@ Tout d'abord, construisons le tampon des sommets du cube en mettant à jour le 
   ];
 ```
 
-Du fait que nous avons ajouté une composante z à nos sommets, nous avons besoin de changer en 3 le `numComponents` de notre attribut `vertexPosition`.
+Du fait que nous avons ajouté une composante z à nos sommets, nous avons besoin de changer en 3 le `numComponents` de notre attribut `vertexPosition`.
 
     // Indiquer à WebGL comment extraire les positions du tampon des
     // positions dans l'attribut vertexPosition
@@ -75,9 +75,9 @@ Du fait que nous avons ajouté une composante z à nos sommets, nous avons besoi
           programInfo.attribLocations.vertexPosition);
     }
 
-## Définir les couleurs des sommets
+## Définir les couleurs des sommets
 
-Nous avons aussi besoin de construire un tableau des couleurs pour chacun des 24 sommets. Ce code commence par définir une couleur pour chaque face, puis il utilise une boucle pour assembler le tableau de toutes les couleurs pour chacun des sommets.
+Nous avons aussi besoin de construire un tableau des couleurs pour chacun des 24 sommets. Ce code commence par définir une couleur pour chaque face, puis il utilise une boucle pour assembler le tableau de toutes les couleurs pour chacun des sommets.
 
 ```js
   const faceColors = [
@@ -107,7 +107,7 @@ Nous avons aussi besoin de construire un tableau des couleurs pour chacun des 24
 
 ## Définir le tableau des éléments
 
-Une fois que les tableaux des sommets sont générés, nous devons construire le tableau des éléments.
+Une fois que les tableaux des sommets sont générés, nous devons construire le tableau des éléments.
 
 ```js
   const indexBuffer = gl.createBuffer();
@@ -139,11 +139,11 @@ Une fois que les tableaux des sommets sont générés, nous devons construire l
 }
 ```
 
-Le tableau `indices` définit chaque face comme étant une paire de triangles, en spécifiant chaque sommet du triangle comme un indice dans les tableaux des sommets du cube. Ainsi le cube est décrit comme une collection de 12 triangles.
+Le tableau `indices` définit chaque face comme étant une paire de triangles, en spécifiant chaque sommet du triangle comme un indice dans les tableaux des sommets du cube. Ainsi le cube est décrit comme une collection de 12 triangles.
 
-## Dessiner le cube
+## Dessiner le cube
 
-Ensuite, nous devons ajouter du code à notre fonction `drawScene()` pour dessiner le tampon des indices du cube, en ajoutant de nouveaux appels à {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} et {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} :
+Ensuite, nous devons ajouter du code à notre fonction `drawScene()` pour dessiner le tampon des indices du cube, en ajoutant de nouveaux appels à {{domxref("WebGLRenderingContext.bindBuffer()", "gl.bindBuffer()")}} et {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} :
 
       // Indiquer à WebGL quels indices utiliser pour indexer les sommets
       gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, tampons.indices);
@@ -157,16 +157,16 @@ Ensuite, nous devons ajouter du code à notre fonction `drawScene()` pour dessin
         gl.drawElements(gl.TRIANGLES, vertexCount, type, offset);
       }
 
-Du fait que chaque face de notre cube est composée de deux triangles, il y a 6 sommets par côté, soit 36 sommets au total dans le cube, même si beaucoup d'entre eux sont des doublons.
+Du fait que chaque face de notre cube est composée de deux triangles, il y a 6 sommets par côté, soit 36 sommets au total dans le cube, même si beaucoup d'entre eux sont des doublons.
 
-Finalement, remplaçons notre variable `squareRotation` par `cubeRotation` et ajoutons une seconde rotation autour de l'axe des x :
+Finalement, remplaçons notre variable `squareRotation` par `cubeRotation` et ajoutons une seconde rotation autour de l'axe des x :
 
     mat4.rotate(modelViewMatrix, modelViewMatrix, cubeRotation * .7, [0, 1, 0]);
 
-À ce stade, nous avons un cube animé en rotation, ses six faces ayant des couleurs assez vives.
+À ce stade, nous avons un cube animé en rotation, ses six faces ayant des couleurs assez vives.
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample5/index.html', 670, 510) }}
 
-[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample5/)
+[Voir le code complet](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample5) | [Ouvrir cette démo dans une nouvelle page](http://mdn.github.io/webgl-examples/tutorial/sample5/)
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}

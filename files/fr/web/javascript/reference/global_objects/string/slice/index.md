@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/slice
 ---
 {{JSRef}}
 
-La méthode **`slice()`** extrait une section d'une chaine de caractères et la retourne comme une nouvelle chaine de caractères. La chaîne de caractères courante n'est pas modifiée.
+La méthode **`slice()`** extrait une section d'une chaine de caractères et la retourne comme une nouvelle chaine de caractères. La chaîne de caractères courante n'est pas modifiée.
 
 {{EmbedInteractiveExample("pages/js/string-slice.html")}}
 
@@ -23,27 +23,27 @@ La méthode **`slice()`** extrait une section d'une chaine de caractères et la
 ### Paramètres
 
 - `indiceDebut`
-  - : L'indice base 0 auquel commencer l'extraction. Si négatif, il est traité comme (`longueurSource + indiceDebut`) où `longueurSource` est la longueur de la chaine de caractères (par exemple, si `indiceDebut` est -3, il sera traité comme `longueurSource - 3`). Si `indiceDebut` est supérieur à la longueur de la chaîne, `slice()` renvoie une chaîne vide.
+  - : L'indice base 0 auquel commencer l'extraction. Si négatif, il est traité comme (`longueurSource + indiceDebut`) où `longueurSource` est la longueur de la chaine de caractères (par exemple, si `indiceDebut` est -3, il sera traité comme `longueurSource - 3`). Si `indiceDebut` est supérieur à la longueur de la chaîne, `slice()` renvoie une chaîne vide.
 - `indiceFin`
-  - : Paramètre optionnel. Un indice base 0 _avant_ lequel terminer l'extraction. Le caractère à cet indice ne sera pas inclus. Si `indiceFin` est absent, `slice()` extraira jusqu'à la fin de la chaine de caractères. Si négatif, il sera traité comme (`longueurSource + indiceFin`) où `longueurSource` est la longueur de la chaine de caractères (par exemple s'il vaut `-3`, il sera traité comme `longueurSource - 3`)
+  - : Paramètre optionnel. Un indice base 0 _avant_ lequel terminer l'extraction. Le caractère à cet indice ne sera pas inclus. Si `indiceFin` est absent, `slice()` extraira jusqu'à la fin de la chaine de caractères. Si négatif, il sera traité comme (`longueurSource + indiceFin`) où `longueurSource` est la longueur de la chaine de caractères (par exemple s'il vaut `-3`, il sera traité comme `longueurSource - 3`)
 
 ### Valeur retournée
 
-Une nouvelle chaîne de caractères contenant la section extraite de la chaîne.
+Une nouvelle chaîne de caractères contenant la section extraite de la chaîne.
 
 ## Description
 
-`slice()` extrait le texte d'une chaine de caractères et retourne une nouvelle chaîne de caractères. Les changements au texte dans une chaine de caractères n'affectent pas l'autre chaîne.
+`slice()` extrait le texte d'une chaine de caractères et retourne une nouvelle chaîne de caractères. Les changements au texte dans une chaine de caractères n'affectent pas l'autre chaîne.
 
-`slice()` extrait jusqu'à `indiceFin`, mais sans l'inclure. Par exemple, `chn.slice(1, 4)` extrait du second caractère jusqu'au quatrième caractère (caractères d'indices 1, 2 et 3).
+`slice()` extrait jusqu'à `indiceFin`, mais sans l'inclure. Par exemple, `chn.slice(1, 4)` extrait du second caractère jusqu'au quatrième caractère (caractères d'indices 1, 2 et 3).
 
-Par exemple, `chn.slice(2, -1)` extrait du troisième caractère jusqu'à l'avant-dernier caractère de la chaine de caractères.
+Par exemple, `chn.slice(2, -1)` extrait du troisième caractère jusqu'à l'avant-dernier caractère de la chaine de caractères.
 
 ## Exemples
 
-### Utilisation de `slice()` pour créer une nouvelle chaîne de caractères
+### Utilisation de `slice()` pour créer une nouvelle chaîne de caractères
 
-L'exemple suivant utilise `slice()` pour créer une nouvelle chaîne de caractères.
+L'exemple suivant utilise `slice()` pour créer une nouvelle chaîne de caractères.
 
 ```js
 var chn1 = 'Le matin est sur nous.', // la longueur de chn1 est de 22

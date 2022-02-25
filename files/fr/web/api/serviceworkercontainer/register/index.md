@@ -86,7 +86,7 @@ if ('serviceWorker' in navigator) {
 
 Il y a une confusion fréquente autour de la signification et de l'utilisation de la portée. Puisque qu'un `ServiceWorker` ne peut pas avoir une portée plus large que son propre emplacement, utilisez uniquement l'option de la portée lorsque vous avez besoin d'une portée plus étroite que la valeur par défaut.
 
-Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'un site, ne s'appliquerait qu'aux ressources sous `example.com/product`.
+Le code suivant, s'il est inclus dans `example.com/index.html`, à la racine d'un site, ne s'appliquerait qu'aux ressources sous `example.com/product`.
 
 ```js
 if ('serviceWorker' in navigator) {

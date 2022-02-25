@@ -4,7 +4,7 @@ slug: Web/API/History_API/Example
 translation_of: Web/API/History_API/Example
 original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
 ---
-Voici un exemple de site web AJAX composé uniquement de trois pages (_page_un.php_, *page_deux.php* et *page_trois.php*). Pour tester cet exemple, merci de créer les fichiers suivants :
+Voici un exemple de site web AJAX composé uniquement de trois pages (_page_un.php_, *page_deux.php* et *page_trois.php*). Pour tester cet exemple, merci de créer les fichiers suivants :
 
 **page_un.php**:
 
@@ -399,9 +399,9 @@ var ajaxRequest = new (function () {
 })();
 ```
 
-> **Note :** [`const`](/en/JavaScript/Reference/Statements/const) (instruction de constante) **ne fait pas partie de ECMAScript 5**. Il est supporté dans Firefox et Chrome (V8) et partiellement supporté dans Opera 9+ et Safari. **Il n'est pas supporté dans Internet Explorer 6-9, ou dans la version de prévisualisation de Internet Explorer 10**. [`const`](/en/JavaScript/Reference/Statements/const) sera défini par ECMAScript 6, mais avec une sémantique différente. Proches des variables déclarées avec l'instruction [`let`](/en/JavaScript/Reference/Statements/let), les constantes déclarées avec [`const`](/en/JavaScript/Reference/Statements/const) seront limitées en portée. **Nous ne l'avons utilisé que pour des raisons pédagogiques, si vous souhaitez une compatibilité maximale de ce code, merci de remplacer les références à** **[`const`](/en/JavaScript/Reference/Statements/const) par des instructions [`var`](/en/JavaScript/Reference/Statements/var).**
+> **Note :** [`const`](/en/JavaScript/Reference/Statements/const) (instruction de constante) **ne fait pas partie de ECMAScript 5**. Il est supporté dans Firefox et Chrome (V8) et partiellement supporté dans Opera 9+ et Safari. **Il n'est pas supporté dans Internet Explorer 6-9, ou dans la version de prévisualisation de Internet Explorer 10**. [`const`](/en/JavaScript/Reference/Statements/const) sera défini par ECMAScript 6, mais avec une sémantique différente. Proches des variables déclarées avec l'instruction [`let`](/en/JavaScript/Reference/Statements/let), les constantes déclarées avec [`const`](/en/JavaScript/Reference/Statements/const) seront limitées en portée. **Nous ne l'avons utilisé que pour des raisons pédagogiques, si vous souhaitez une compatibilité maximale de ce code, merci de remplacer les références à** **[`const`](/en/JavaScript/Reference/Statements/const) par des instructions [`var`](/en/JavaScript/Reference/Statements/var).**
 
-Pour plus d'informations, voyez : [Manipuler l'historique du navigateur](/fr/docs/DOM/manipuler_lhistorique_du_navigateur).
+Pour plus d'informations, voyez : [Manipuler l'historique du navigateur](/fr/docs/DOM/manipuler_lhistorique_du_navigateur).
 
 ## Lire également
 

@@ -38,7 +38,7 @@ ctx.font = '48px serif';
 ctx.strokeText('Hello world', 50, 100);
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
+Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :
 
 #### Code jouable
 

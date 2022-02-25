@@ -51,7 +51,7 @@ border-image-outset: unset;
 - `<length>`
   - : Une valeur de longueur (cf. type {{cssxref("&lt;length&gt;")}}) qui indique l'espace duquel on peut dépasser de la boîte de bordure. Les valeurs négatives ne sont pas autorisées.
 - `<number>`
-  - : Une valeur numérique (cf. type {{cssxref("&lt;number&gt;")}}) qui sera multipliée par la valeur calculée de {{cssxref("border-width")}} afin de déterminer la longueur de l'espace duquel dépasser.
+  - : Une valeur numérique (cf. type {{cssxref("&lt;number&gt;")}}) qui sera multipliée par la valeur calculée de {{cssxref("border-width")}} afin de déterminer la longueur de l'espace duquel dépasser.
 
 ### Syntaxe formelle
 

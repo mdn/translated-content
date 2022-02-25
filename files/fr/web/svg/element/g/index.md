@@ -10,9 +10,9 @@ translation_of: Web/SVG/Element/g
 ---
 {{SVGRef}}
 
-L'élément `g` est un conteneur utilisé pour grouper des objets.
+L'élément `g` est un conteneur utilisé pour grouper des objets.
 
-Les transformations appliquées à l'élément `g` sont reportées à tous ses éléments enfants. Les attributs appliqués sont également reportés aux éléments enfants. De plus, il peut être utilisé pour définir des objets complexes qui seront référencés ultérieurement avec l'élément {{SVGElement("use")}}.
+Les transformations appliquées à l'élément `g` sont reportées à tous ses éléments enfants. Les attributs appliqués sont également reportés aux éléments enfants. De plus, il peut être utilisé pour définir des objets complexes qui seront référencés ultérieurement avec l'élément {{SVGElement("use")}}.
 
 ## Exemple
 

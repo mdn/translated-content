@@ -28,7 +28,7 @@ Le constructeur WebSocket accepte un paramètre obligatoire et un paramètre opt
 - `url`
   - : L'URL à laquelle le client se connecte, et le serveur répond.
 - `protocols` {{ optional_inline() }}
-  - : Soit une chaîne décrivant un protocole unique, soit une liste de chaînes décrivant chacune un protocole. Ces chaînes permettent d'indiquer des sous-protocoles, de façon à ce qu'un serveur puisse implémenter plusieurs sous-protocoles WebSocket (par example, on pourrait vouloir qu'un serveur soit capable de traiter différents types d'interactions en fonction du protocole spécifié). Si aucun protocole n'est spécifié, l'argument prend la valeur d'une chaîne vide.
+  - : Soit une chaîne décrivant un protocole unique, soit une liste de chaînes décrivant chacune un protocole. Ces chaînes permettent d'indiquer des sous-protocoles, de façon à ce qu'un serveur puisse implémenter plusieurs sous-protocoles WebSocket (par example, on pourrait vouloir qu'un serveur soit capable de traiter différents types d'interactions en fonction du protocole spécifié). Si aucun protocole n'est spécifié, l'argument prend la valeur d'une chaîne vide.
 
 Le constructeur peut renvoyer des exceptions:
 
@@ -110,7 +110,7 @@ function sendText() {
 WebSockets est une API orientée évènement; lorsqu'elle reçoit un message, un évènement "message" est envoyé au gestionnaire d'évènement `onmessage`. Pour écouter les données reçues, on peut écrire quelque chose comme:
 
 ```js
-exampleSocket.onmessage = function (event) {
+exampleSocket.onmessage = function (event) {
   console.log(event.data);
 }
 ```

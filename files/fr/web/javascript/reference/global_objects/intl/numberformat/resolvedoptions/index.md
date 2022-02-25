@@ -25,7 +25,7 @@ La méthode **`Intl.NumberFormat.prototype.resolvedOptions()`** renvoie un nouve
 
 ### Valeur de retour
 
-Un objet dont les propriétés correspondent aux options de locale et de format calculées lors de l'initialisation de l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}}.
+Un objet dont les propriétés correspondent aux options de locale et de format calculées lors de l'initialisation de l'objet {{jsxref("NumberFormat", "Intl.NumberFormat")}}.
 
 ## Description
 

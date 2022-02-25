@@ -11,7 +11,7 @@ translation_of: Web/API/DataTransfer/files
 ---
 {{APIRef("HTML Drag and Drop API")}}
 
-La propriété **`DataTransfer.files`** est une  {{domxref("FileList","liste de fichier")}} issue d'une manipulation de glisser-déposer. Si l'opération n'inclut pas de fichier, alors la liste est vide.
+La propriété **`DataTransfer.files`** est une  {{domxref("FileList","liste de fichier")}} issue d'une manipulation de glisser-déposer. Si l'opération n'inclut pas de fichier, alors la liste est vide.
 
 Cette fonctionnalité peut être utilisée pour glisser des fichiers du bureau utilisateur au navigateur.
 

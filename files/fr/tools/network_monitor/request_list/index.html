@@ -10,7 +10,7 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <h2 id="Liste_des_requêtes_réseau">Liste des requêtes réseau</h2>
 
-<p>Par défaut, le moniteur affiche une liste de toutes les requêtes faites lors du chargement de la page, à raison d'une par ligne :<img alt="" src="https://mdn.mozillademos.org/files/16258/Network_request_list.png" style="border: 1px solid black; display: block; height: 328px; margin: 0px auto; width: 900px;">Il est également vidé par défaut lors d'un changement de page ou du rafraîchissement de la page. Vous avez la possibilité de modifier ce comportement en cochant "Activer les journaux persistants" dans les <a href="/fr/docs/Tools_Toolbox#Common_preferences">paramètres</a> des outils de développement.</p>
+<p>Par défaut, le moniteur affiche une liste de toutes les requêtes faites lors du chargement de la page, à raison d'une par ligne :<img alt="" src="https://mdn.mozillademos.org/files/16258/Network_request_list.png" style="border: 1px solid black; display: block; height: 328px; margin: 0px auto; width: 900px;">Il est également vidé par défaut lors d'un changement de page ou du rafraîchissement de la page. Vous avez la possibilité de modifier ce comportement en cochant "Activer les journaux persistants" dans les <a href="/fr/docs/Tools_Toolbox#Common_preferences">paramètres</a> des outils de développement.</p>
 
 <h3 id="Champs_des_requêtes_réseau">Champs des requêtes réseau</h3>
 
@@ -31,10 +31,10 @@ original_slug: Outils/Moniteur_réseau/request_list
 
   <ul>
    <li><img alt="" src="https://mdn.mozillademos.org/files/13136/1x.png" style="height: 17px; width: 17px;">un cercle bleu pour les codes d'information (1XX codes). Cela inclut notamment le code 101 (Changement de protocole) pour les upgrades <a href="/fr/docs/Web/API/WebSocket">WebSocket</a>.</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10941/200.png" style="height: 17px; width: 17px;"> un cercle vert pour le succès (codes 2XX),</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10945/300.png" style="height: 17px; width: 17px;"> un triangle orange pour la redirection (3XX)</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10943/4-500.png" style="height: 17px; width: 17px;"> un carré rouge pour les erreurs (4XX et 5XX).</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10947/cached.png" style="height: 17px; width: 17px;"> un cercle gris pour les réponses récupérées dans le cache du navigateur</li>
+   <li><img alt="" src="https://mdn.mozillademos.org/files/10941/200.png" style="height: 17px; width: 17px;"> un cercle vert pour le succès (codes 2XX),</li>
+   <li><img alt="" src="https://mdn.mozillademos.org/files/10945/300.png" style="height: 17px; width: 17px;"> un triangle orange pour la redirection (3XX)</li>
+   <li><img alt="" src="https://mdn.mozillademos.org/files/10943/4-500.png" style="height: 17px; width: 17px;"> un carré rouge pour les erreurs (4XX et 5XX).</li>
+   <li><img alt="" src="https://mdn.mozillademos.org/files/10947/cached.png" style="height: 17px; width: 17px;"> un cercle gris pour les réponses récupérées dans le cache du navigateur</li>
   </ul>
  </li>
  <li><strong>Méthode </strong>: la méthode de la requête HTTP.</li>
@@ -43,7 +43,7 @@ original_slug: Outils/Moniteur_réseau/request_list
  <li><strong>Scheme:</strong> Le "scheme" (https/http/ftp/...) du chemin demandé.</li>
  <li><strong>Domaine </strong>: le domaine du chemin requis.
   <ul>
-   <li><strong></strong>Si la requête utilise le protocole SSL/TLS et que la connexion a une faiblesse de sécurité telle qu'un chiffrement peu solide, une icône en forme de triangle apparaît à côté du domaine. On peut trouver davantage de détails sur le problème dans <a href="/fr/docs/Tools/Network_Monitor#Security">l'onglet Sécurité</a>.</li>
+   <li><strong></strong>Si la requête utilise le protocole SSL/TLS et que la connexion a une faiblesse de sécurité telle qu'un chiffrement peu solide, une icône en forme de triangle apparaît à côté du domaine. On peut trouver davantage de détails sur le problème dans <a href="/fr/docs/Tools/Network_Monitor#Security">l'onglet Sécurité</a>.</li>
    <li>Survolez le domaine pour voir l'adresse IP.</li>
    <li>Il y a une icône à côté du domaine qui donne des informations supplémentaires sur le statut de sécurité de la requête. Voir <a href="/fr/docs/Tools/Network_Monitor#Security_icons">icônes de sécurité</a>.</li>
   </ul>
@@ -179,7 +179,7 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <h4 id="Filtrer_par_URL">Filtrer par URL</h4>
 
-<p>Pour cela, il y a une barre de recherche dans la <a href="/fr/docs/Tools/Network_Monitor#Toolbar">barre d'outils</a>. Cliquez à l'intérieur, ou faites la combinaison de touches clavier  <kbd>Ctrl</kbd> + <kbd>F</kbd> (ou <kbd>Cmd</kbd> + <kbd>F</kbd> sous Mac) , et saisissez votre recherche. La liste des requêtes réseau sera filtrée en fonction de la chaîne de caractère recherchée, sur les parties concernant le "Domaine" ou le "Fichier".</p>
+<p>Pour cela, il y a une barre de recherche dans la <a href="/fr/docs/Tools/Network_Monitor#Toolbar">barre d'outils</a>. Cliquez à l'intérieur, ou faites la combinaison de touches clavier  <kbd>Ctrl</kbd> + <kbd>F</kbd> (ou <kbd>Cmd</kbd> + <kbd>F</kbd> sous Mac) , et saisissez votre recherche. La liste des requêtes réseau sera filtrée en fonction de la chaîne de caractère recherchée, sur les parties concernant le "Domaine" ou le "Fichier".</p>
 
 <p>{{EmbedYouTube("HUcWOBBhLHg")}}</p>
 
@@ -299,12 +299,12 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <ul>
  <li>Copier l'URL</li>
- <li>Copier les paramètres de l'URL (à partir de Firefox 40)</li>
- <li>Copier les données POST  (à partir de Firefox 40, uniquement pour les requêtes POST)</li>
+ <li>Copier les paramètres de l'URL (à partir de Firefox 40)</li>
+ <li>Copier les données POST (à partir de Firefox 40, uniquement pour les requêtes POST)</li>
  <li>Copier en tant que commande cURL</li>
- <li>Copier les En-têtes de la requête (à partir de Firefox 40)</li>
- <li>Copier les En-têtes de la réponse (à partir de Firefox 40)</li>
- <li>Copier la réponse (à partir de Firefox 40)</li>
+ <li>Copier les En-têtes de la requête (à partir de Firefox 40)</li>
+ <li>Copier les En-têtes de la réponse (à partir de Firefox 40)</li>
+ <li>Copier la réponse (à partir de Firefox 40)</li>
  <li>Copier l'image comme Data URI (seulement pour les images)</li>
  <li>Tout copier en tant qu’HAR (à partir de Firefox 41)</li>
  <li>Tout enregistrer en tant qu’HAR (à partir de Firefox 41)</li>

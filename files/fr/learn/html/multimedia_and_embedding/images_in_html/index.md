@@ -17,7 +17,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureusement, il n'a pas fallu longtemps pour que la possibilité d'intégrer des images ( et d'autres types de contenu intéressants) dans une page web soit ajoutée.  Bien qu'il y ait plusieurs types de contenu multimedia, il est logique de commencer avec l'humble élément {{htmlelement("img")}},  utilisé pour intégrer une image dans une page web. Dans cet article, nous approfondirons son utilisation en abordant les principes fondamentaux, l'annotation par légendes utilisant {{htmlelement("figure")}}, et en analysant sa relation avec les images d'arrière-plan du {{glossary("CSS")}} .
+Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureusement, il n'a pas fallu longtemps pour que la possibilité d'intégrer des images ( et d'autres types de contenu intéressants) dans une page web soit ajoutée.  Bien qu'il y ait plusieurs types de contenu multimedia, il est logique de commencer avec l'humble élément {{htmlelement("img")}},  utilisé pour intégrer une image dans une page web. Dans cet article, nous approfondirons son utilisation en abordant les principes fondamentaux, l'annotation par légendes utilisant {{htmlelement("figure")}}, et en analysant sa relation avec les images d'arrière-plan du {{glossary("CSS")}} .
 
 <table class="standard-table">
   <tbody>
@@ -31,7 +31,7 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
         >, bases  de la
         <a href="/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
           >manipulation des fichiers</a
-        >, fondamentaux du HTML (comme décrit dans  <a
+        >, fondamentaux du HTML (comme décrit dans <a
           href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
           >Commencer avec le Web).</a
         >
@@ -50,9 +50,9 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
 
 ## Comment intégrer une image à une page web ?
 
-Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}.  C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier:  *source*). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément  {{htmlelement("a")}}  `href=` attribue des valeurs.
+Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}.  C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier: *source*). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément  {{htmlelement("a")}} `href=` attribue des valeurs.
 
-> **Note :** Vous devriez lire  [Une brève présentation des URL et des chemins](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#url)  pour vous rafraîchir la mémoire avant de continuer.
+> **Note :** Vous devriez lire [Une brève présentation des URL et des chemins](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#url)  pour vous rafraîchir la mémoire avant de continuer.
 
 Donc, par exemple, si votre image s'appelle `dinosaur.jpg`, et qu'elle est située dans le même répertoire que votre page HTML, vous pouvez intégrer cette image comme ceci (URL relative) :
 
@@ -60,7 +60,7 @@ Donc, par exemple, si votre image s'appelle `dinosaur.jpg`, et qu'elle est situ�
 <img src="dinosaur.jpg">
 ```
 
-Et si cette image se trouve dans un sous-répertoire `images` situé dans le même dossier que la page HTML (ce que Google recommande pour  {{glossary("SEO")}}/dans un but d'indexation et d'optimisation de la recherche), alors vous l'intégrerez comme ceci :
+Et si cette image se trouve dans un sous-répertoire `images` situé dans le même dossier que la page HTML (ce que Google recommande pour {{glossary("SEO")}}/dans un but d'indexation et d'optimisation de la recherche), alors vous l'intégrerez comme ceci :
 
 ```html
 <img src="images/dinosaur.jpg">
@@ -68,7 +68,7 @@ Et si cette image se trouve dans un sous-répertoire `images` situé dans le m�
 
 Ainsi de suite.
 
-> **Note :** Les moteurs de recherche lisent aussi les noms de fichiers image et s'en servent pour optimiser la recherche. Donc, donnez à vos images des noms de fichiers descritifs et qui ont du sens. `dinosaur.jpg` est infiniment mieux que `img835.png`.
+> **Note :** Les moteurs de recherche lisent aussi les noms de fichiers image et s'en servent pour optimiser la recherche. Donc, donnez à vos images des noms de fichiers descritifs et qui ont du sens. `dinosaur.jpg` est infiniment mieux que `img835.png`.
 
 Vous pouvez intégrer l'image en utilisant son URL absolue, par exemple :
 
@@ -84,7 +84,7 @@ Ce n'est pas trés efficace, cela fait travailler le navigateur plus qu'il ne de
 > 2\) vous ayez reçu une permission explicite et écrite du propriètaire de l'image ou,
 > 3\) que vous ayez une preuve indiscutable que cette image appartient au domaine public.
 >
-> Les violations des lois sur les droits d'auteur sont non seulement illégales mais aussi non-éthiques. De plus, ne faites jamais pointer votre attribut `src` vers une image hébergée sur le site de quelqu'un d'autre sans en avoir l'autorisation. Cela s'appelle du "hotlinking". Souvenez-vous que voler de la bande passante à quelqu'un est aussi illégal. Cela ralentit aussi votre page et vous laisse sans contrôle si l'image est enlevée ou remplacée par une autre plus gênante...
+> Les violations des lois sur les droits d'auteur sont non seulement illégales mais aussi non-éthiques. De plus, ne faites jamais pointer votre attribut `src` vers une image hébergée sur le site de quelqu'un d'autre sans en avoir l'autorisation. Cela s'appelle du "hotlinking". Souvenez-vous que voler de la bande passante à quelqu'un est aussi illégal. Cela ralentit aussi votre page et vous laisse sans contrôle si l'image est enlevée ou remplacée par une autre plus gênante...
 
 Le code au-dessus vous donnera, à peu prés, le résultat suivant :
 
@@ -110,7 +110,7 @@ La manière la plus simple de tester votre texte `alt` est de mal épeler votre 
 
 Pourquoi vous verrez partout du texte alt ? Vous en aurez besoin car c'est très pratique en maintes occasions :
 
-- L'utilisateur est un déficient visuel qui utilise un [lecteur d'écran](https://fr.wikipedia.org/wiki/Lecteur_d%27%C3%A9cran) qui s'en sert pour "lire" le web. En fait, avoir du texte alt disponible pour décrire les images est très utile à beaucoup d'utilisateurs.
+- L'utilisateur est un déficient visuel qui utilise un [lecteur d'écran](https://fr.wikipedia.org/wiki/Lecteur_d%27%C3%A9cran) qui s'en sert pour "lire" le web. En fait, avoir du texte alt disponible pour décrire les images est très utile à beaucoup d'utilisateurs.
 - Comme nous l'avons vu au-dessus, vous pourriez avoir mal épelé le nom ou le chemin du fichier.
 - Le navigateur ne gère pas ce type d'image. Certains utilisent encore des navigateurs en terminal, affichant seulement du texte (comme [Lynx)](<https://fr.wikipedia.org/wiki/Lynx_(navigateur)>), qui affichent le texte alt des images.
 - Vous pouvez avoir envie de fournir du texte que pourraient utiliser les moteurs de recherche. Par exemple, ils mettront en relation le texte alt avec des requêtes de recherche.
@@ -339,7 +339,7 @@ Une meilleure solution consiste en l'utilisation des éléments HTML5 {{htmlelem
 
 L'élément {{htmlelement("figcaption")}}  dit au navigateur et aux technologies d'assistance que la légende décrit le contenu de l'autre élément {{htmlelement("figure")}}.
 
-> **Note :** D'un  point de vue accessibilité, les légendes ont un rôle différent du texte {{htmlattrxref('alt','img')}}. Le texte {{htmlattrxref('alt','img')}} ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
+> **Note :** D'un  point de vue accessibilité, les légendes ont un rôle différent du texte {{htmlattrxref('alt','img')}}. Le texte {{htmlattrxref('alt','img')}} ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
 
 Un objet \<figure> n'est pas forcé de contenir une image. C'est une unité de contenu indépendante qui :
 
@@ -347,7 +347,7 @@ Un objet \<figure> n'est pas forcé de contenir une image. C'est une unité de c
 - peut se placer en plusieurs endroits dans une page à flot linéaire.
 - Fournit une information essentielle qui supporte le texte principal.
 
-Cet objet peut être un ensemble d'images, des bribes de code, de l'audio, de la vidéo, des équations, un tableau ou bien d'autres choses.
+Cet objet peut être un ensemble d'images, des bribes de code, de l'audio, de la vidéo, des équations, un tableau ou bien d'autres choses.
 
 ### Pédagogie active : créer un objet figure
 
@@ -482,7 +482,7 @@ textarea.onkeyup = function(){
 
 ## Images d'arrière-plan CSS
 
-Vous pouvez également utiliser du CSS pour intégrer des images dans vos pages web (ou JavaScript, mais c'est une autre histoire). Les propriétés CSS {{cssxref("background-image")}} et `background`, sont utilisées pour contrôler le placement de l'image d'arrière-plan. Par exemple, pour placer une image d'arrière-plan sur chaque paragraphe de la page, vous pourriez faire ceci :
+Vous pouvez également utiliser du CSS pour intégrer des images dans vos pages web (ou JavaScript, mais c'est une autre histoire). Les propriétés CSS {{cssxref("background-image")}} et `background`, sont utilisées pour contrôler le placement de l'image d'arrière-plan. Par exemple, pour placer une image d'arrière-plan sur chaque paragraphe de la page, vous pourriez faire ceci :
 
 ```css
 p {

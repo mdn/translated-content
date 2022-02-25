@@ -53,7 +53,7 @@ Les **lignes de grille** sont créées avec la définition  des {{glossary("Grid
 
 {{ EmbedLiveSample('Exemple', '500', '250') }}
 
-Les lignes peuvent être adressées en utilisant leur numéro de ligne. Dans une langue de gauche à droite telle que l'anglais, la ligne de colonne 1 sera sur la gauche de la grille, la ligne de ligne 1 en haut. Les chiffres des lignes respectent le [mode d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture) du document et ainsi, dans une langue écrite de droite à gauche par exemple, la ligne de colonne 1 sera sur la droite de la grille. L'image ci-dessous montre les numéros de ligne de la grille, en supposant que la langue est écrite de gauche à droite.
+Les lignes peuvent être adressées en utilisant leur numéro de ligne. Dans une langue de gauche à droite telle que l'anglais, la ligne de colonne 1 sera sur la gauche de la grille, la ligne de ligne 1 en haut. Les chiffres des lignes respectent le [mode d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_%C3%A9criture) du document et ainsi, dans une langue écrite de droite à gauche par exemple, la ligne de colonne 1 sera sur la droite de la grille. L'image ci-dessous montre les numéros de ligne de la grille, en supposant que la langue est écrite de gauche à droite.
 
 ![Diagram showing the grid with lines numbered.](1_diagram_numbered_grid_lines.png)
 

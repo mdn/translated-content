@@ -66,7 +66,7 @@ Vous pouvez simplement faire référence à un fichier SVG au sein de l'élémen
 
 ### Avantages
 
-- Rapide à mettre en œuvre, syntaxe très proche avec les images matricielles, texte alternatif disponible.
+- Rapide à mettre en œuvre, syntaxe très proche avec les images matricielles, texte alternatif disponible.
 - Il est également possible de créer des hyperliens en plaçant l'élément `<img>` dans un élément {{htmlelement("a")}}.
 
 ### Inconvénients

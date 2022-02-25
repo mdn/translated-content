@@ -37,7 +37,7 @@ translation_of: Web/SVG/Element/radialGradient
 - {{SVGAttr("spreadMethod")}}
 - {{SVGAttr("xlink:href")}}
 
-## DOM Interface
+## DOM Interface
 
 Cet élément implémente l'interface {{domxref("SVGRadialGradientElement")}}.
 

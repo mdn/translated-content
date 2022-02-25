@@ -105,7 +105,7 @@ Elles se divisent généralement en deux catégories&nbsp;:
 
 **Les API de navigateur** font partie intégrante de votre navigateur web, et peuvent accéder à des données de l'environnement informatique (l'ordinateur), ou faire d'autres choses complexes. Par exemple&nbsp;:
 
-- l'[API DOM (Document Object Model)](/fr/docs/Web/API/Document_Object_Model) permet de manipuler du HTML et du CSS (créer, supprimer et modifier du HTML, appliquer de nouveaux styles à la page de façon dynamique, etc.). Chaque fois que vous voyez une fenêtre popup sur une page ou du nouveau contenu apparaître (comme dans notre démonstration plus haut), il s'agit d'une action du DOM.
+- l'[API DOM (Document Object Model)](/fr/docs/Web/API/Document_Object_Model) permet de manipuler du HTML et du CSS (créer, supprimer et modifier du HTML, appliquer de nouveaux styles à la page de façon dynamique, etc.). Chaque fois que vous voyez une fenêtre popup sur une page ou du nouveau contenu apparaître (comme dans notre démonstration plus haut), il s'agit d'une action du DOM.
 - l'[API de géolocalisation](/fr/docs/Web/API/Geolocation) récupère des informations géographiques. C'est ainsi que [Google Maps](https://www.google.com/maps) peut trouver votre position et la situer sur une carte.
 - les API [Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API) permettent de créer des animations 2D et 3D. On fait des choses incroyables avec ces technologies, voyez [Chrome Experiments](https://www.chromeexperiments.com/webgl) et [webglsamples](https://webglsamples.org/).
 - [les API Audio et Video](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery), comme {{domxref("HTMLMediaElement")}} et [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent des actions intéressantes sur le multimédia, telles que jouer de l'audio ou de la vidéo directement dans une page web, ou récupérer le flux vidéo de votre webcam et l'afficher sur l'ordinateur de quelqu'un d'autre (essayez la [Snapshot demo ](http://chrisdavidmills.github.io/snapshot/)pour vous faire une idée).
@@ -276,7 +276,7 @@ for(let i = 0; i < buttons.length ; i++) {
 
 Cela peut sembler un peu plus long que l'attribut `onclick`, mais cela fonctionnera pour tous les boutons peu importe leur nombre sur la page, et peu importe si des boutons sont ajoutés ou retirés, le code JavaScript n'aura pas besoin d'être modifié.
 
-> **Note :** essayez de modifier votre version de `apply-javascript.html` et d'y ajouter quelques boutons dans le fichier. En actualisant la page, tous les boutons devraient créer un paragraphe quand ils sont cliqués. Pas mal, non&nbsp;?
+> **Note :** essayez de modifier votre version de `apply-javascript.html` et d'y ajouter quelques boutons dans le fichier. En actualisant la page, tous les boutons devraient créer un paragraphe quand ils sont cliqués. Pas mal, non&nbsp;?
 
 ### Stratégies de chargement de script
 

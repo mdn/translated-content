@@ -30,7 +30,7 @@ Highlights:
 - Enabled {{cssxref("mix-blend-mode")}} by default ({{Bug(952643)}}).
 - Enabled `position:sticky` by default in release builds (only enabled on Nightly and Aurora before) ({{Bug(916315)}}).
 - Implemented {{cssxref("box-decoration-break")}} and removed the non-standard {{cssxref("-moz-background-inline-policy")}}({{Bug(613659)}}).
-- Allowed {{cssxref("flex-grow")}} and  {{cssxref("flex-shrink")}} to transition between zero and nonzero values ({{Bug(996945)}}).
+- Allowed {{cssxref("flex-grow")}} and  {{cssxref("flex-shrink")}} to transition between zero and nonzero values ({{Bug(996945)}}).
 
 ### HTML
 

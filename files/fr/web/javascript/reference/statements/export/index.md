@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Instructions/export
 ---
 {{jsSidebar("Statements")}}
 
-L'instruction **`export`** est utilisée lors de la création de modules JavaScript pour exporter des fonctions, des objets ou des valeurs primitives à partir du module, de sorte qu'ils puissent être utilisés par d'autres programmes grâce à l'instruction {{jsxref("Instructions/import", "import")}}.
+L'instruction **`export`** est utilisée lors de la création de modules JavaScript pour exporter des fonctions, des objets ou des valeurs primitives à partir du module, de sorte qu'ils puissent être utilisés par d'autres programmes grâce à l'instruction {{jsxref("Instructions/import", "import")}}.
 
 Les modules exportés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `export` ne peut pas être utilisée dans les scripts embarqués.
 
@@ -46,11 +46,11 @@ Les modules exportés sont interprétés en [mode strict](/fr/docs/Web/JavaScrip
     export { default } from …;
 
 - `nomN`
-  - : Identifiant à exporter (afin qu'il puisse être importé via {{jsxref("Statements/import", "import")}} dans un autre script).
+  - : Identifiant à exporter (afin qu'il puisse être importé via {{jsxref("Statements/import", "import")}} dans un autre script).
 
 ## Description
 
-Il existe deux types d'export différents : les exports **nommés** et les exports **par défaut**. Il est possible d'avoir plusieurs exports nommés mais un seul export par défaut. Chaque type correspond à une des syntaxes ci-dessus&nbsp;:
+Il existe deux types d'export différents : les exports **nommés** et les exports **par défaut**. Il est possible d'avoir plusieurs exports nommés mais un seul export par défaut. Chaque type correspond à une des syntaxes ci-dessus&nbsp;:
 
 - Les exports nommés :
 
@@ -91,7 +91,7 @@ La syntaxe suivante n'exporte pas le défaut depuis le module importé :
 export * from …;
 ```
 
-Si vous avez besoin d'exporter le défaut, écrivez ce qui suit à la place :
+Si vous avez besoin d'exporter le défaut, écrivez ce qui suit à la place :
 
 ```js
 export {default} from 'mod';
@@ -130,7 +130,7 @@ const machin = Math.PI + Math.SQRT2;
 export { cube, machin };
 ```
 
-De cette façon, dans un autre script, on pourra avoir :
+De cette façon, dans un autre script, on pourra avoir :
 
 ```js
 import { cube, machin } from 'mon-module';
@@ -152,14 +152,14 @@ export default function cube(x) {
 }
 ```
 
-Alors, dans un autre script, il sera facile d'importer l'export par défaut :
+Alors, dans un autre script, il sera facile d'importer l'export par défaut :
 
 ```js
 import cube from './mon-module.js';
 console.log(cube(3)); // 27
 ```
 
-Notez qu'il n'est pas possible d'utiliser `var`, `let` ou `const` avec `export default`.
+Notez qu'il n'est pas possible d'utiliser `var`, `let` ou `const` avec `export default`.
 
 ## Spécifications
 
@@ -176,6 +176,6 @@ Notez qu'il n'est pas possible d'utiliser `var`, `let` ou `const` avec `export 
 
 - {{jsxref("Instructions/import", "import")}}
 - [Guide sur les modules JavaScript](/fr/docs/Web/JavaScript/Guide/Modules)
-- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post par Jason Orendorff
-- [Livre d'Axel Rauschmayer : "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
+- [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/), Hacks blog post par Jason Orendorff
+- [Livre d'Axel Rauschmayer : "Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
 - [Un billet illustré de Lin Clark, traduit en français, sur les modules](https://tech.mozfr.org/post/2018/04/06/Une-plongee-illustree-dans-les-modules-ECMAScript)

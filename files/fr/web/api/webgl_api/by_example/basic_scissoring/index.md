@@ -23,7 +23,7 @@ Dans cet article, on illustre comment dessiner des rectangles et des carrés gr�
 
 Voici une démonstration simple des opérations appliquées sur le contexte de rendu avec la méthode {{domxref("WebGLRenderingContext.scissor","scissor")}}.
 
-La commande {{domxref("WebGLRenderingContext.clear","clear()")}} permet de dessiner la couleur d'applique (définie à l'aide de {{domxref("WebGLRenderingContext.clearColor","clearColor()")}}) sur tous les pixels du tampon (_buffer_) de dessin. La commande  {{domxref("WebGLRenderingContext.scissor","scissor()")}} permet quant à elle de définir un masque qui permet de ne modifier que les pixels contenus dans un rectangle donné.
+La commande {{domxref("WebGLRenderingContext.clear","clear()")}} permet de dessiner la couleur d'applique (définie à l'aide de {{domxref("WebGLRenderingContext.clearColor","clearColor()")}}) sur tous les pixels du tampon (_buffer_) de dessin. La commande  {{domxref("WebGLRenderingContext.scissor","scissor()")}} permet quant à elle de définir un masque qui permet de ne modifier que les pixels contenus dans un rectangle donné.
 
 Cet article représente une excellente occasion pour distinguer les _pixels_ des _fragments_. Un pixel est un élément d'une image (en pratique c'est un point) sur l'écran ou un élément unique du tampon de dessin (l'espace mémoire qui contient les données relatives aux pixels comme les différentes composantes couleur). Un _fragment_ fait référence au pixel manipulé par les processus {{Glossary("WebGL")}}.
 

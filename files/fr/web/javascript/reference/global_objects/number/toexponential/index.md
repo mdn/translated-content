@@ -32,7 +32,7 @@ Une chaîne représentant l'objet {{jsxref("Number")}} appelant en notation expo
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : Cette exception est causée si `nbChiffresDécimaux` est trop petit ou trop grand. Les valeurs comprises, au sens large, entre 0 et 20 ne causeront pas d'exception {{jsxref("RangeError")}}. Les implémentations peuvent également autorisér des valeurs en dehors de ces bornes.
+  - : Cette exception est causée si `nbChiffresDécimaux` est trop petit ou trop grand. Les valeurs comprises, au sens large, entre 0 et 20 ne causeront pas d'exception {{jsxref("RangeError")}}. Les implémentations peuvent également autorisér des valeurs en dehors de ces bornes.
 - {{jsxref("TypeError")}}
   - : Si cette méthode est invoquée pour un objet qui n'est pas un objet `Number`.
 

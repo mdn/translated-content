@@ -5,7 +5,7 @@ translation_of: Web/API/Document/getElementById
 ---
 {{ ApiRef("DOM") }}
 
-La méthode **`getElementById()`** de {{domxref("Document")}} renvoie un objet  {{domxref("Element")}} représentant l'élément dont la propriété  {{domxref("Element.id", "id")}} correspond à la chaîne de caractères spécifiée. Étant donné que les ID d'élément doivent être uniques, s'ils sont spécifiés, ils constituent un moyen utile d'accéder rapidement à un élément spécifique.
+La méthode **`getElementById()`** de {{domxref("Document")}} renvoie un objet  {{domxref("Element")}} représentant l'élément dont la propriété  {{domxref("Element.id", "id")}} correspond à la chaîne de caractères spécifiée. Étant donné que les ID d'élément doivent être uniques, s'ils sont spécifiés, ils constituent un moyen utile d'accéder rapidement à un élément spécifique.
 
 Si vous avez besoin d'accéder à un élément qui n'a pas d'ID, vous pouvez utiliser {{domxref("Document.querySelector","querySelector()")}} pour trouver l'élément en utilisant un {{Glossary("CSS selector","sélecteur")}}.
 

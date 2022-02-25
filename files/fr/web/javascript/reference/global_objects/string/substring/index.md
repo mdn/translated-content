@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/substring
 ---
 {{JSRef}}
 
-La méthode **`substring()`** retourne une sous-chaîne de la chaîne courante, entre un indice de début et un indice de fin.
+La méthode **`substring()`** retourne une sous-chaîne de la chaîne courante, entre un indice de début et un indice de fin.
 
 {{EmbedInteractiveExample("pages/js/string-substring.html")}}
 
@@ -35,12 +35,12 @@ Une nouvelle chaîne de caractères qui correspond à la section souhaitée de l
 
 `substring` extrait des caractères de la chaîne courante à partir de `indiceA` jusqu'à `indiceB` (non compris). On a notamment :
 
-- Si `indiceA` est égal à `indiceB`, `substring` retournera une chaîne vide.
-- Si `indiceB` est omis, `substring` effectuera l'extraction des caractères jusqu'à la fin de la chaîne.
+- Si `indiceA` est égal à `indiceB`, `substring` retournera une chaîne vide.
+- Si `indiceB` est omis, `substring` effectuera l'extraction des caractères jusqu'à la fin de la chaîne.
 - Si l'un des deux arguments est négatif ou vaut {{jsxref("NaN")}}, il sera traité comme 0.
 - Si l'un des deux arguments est plus grand que `str.length`, il sera traité comme `str.length`.
 
-Si `indiceA` est supérieur à `indiceB`, la fonction `substring()` intervertira ces deux valeurs afin de les traiter comme si elles avaient été passées dans le bon ordre. Par exemple : `str.substring(1, 0) == str.substring(0, 1)`.
+Si `indiceA` est supérieur à `indiceB`, la fonction `substring()` intervertira ces deux valeurs afin de les traiter comme si elles avaient été passées dans le bon ordre. Par exemple : `str.substring(1, 0) == str.substring(0, 1)`.
 
 ## Exemples
 
@@ -86,7 +86,7 @@ function replaceString(oldS, newS, fullS) {
 replaceString("World", "Web", "Brave New World");
 ```
 
-Attention : ceci peut résulter en une boucle infinie si `oldS` est elle-même une sous-chaine de `newS` -- par exemple, si on essaie de remplacer "World" par "OtherWorld". Une meilleure solution serait de remplacer les chaines de cette manière :
+Attention : ceci peut résulter en une boucle infinie si `oldS` est elle-même une sous-chaine de `newS` -- par exemple, si on essaie de remplacer "World" par "OtherWorld". Une meilleure solution serait de remplacer les chaines de cette manière :
 
 ```js
 function replaceString(oldS, newS,fullS){

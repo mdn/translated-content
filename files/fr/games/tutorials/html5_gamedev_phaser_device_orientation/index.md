@@ -273,7 +273,7 @@ else if(this.keys.down.isDown) {
 
 De cette manière on peut vérifier quelle touche est pressée à un moment donné et appliquer une force définie à la balle, ce qui a pour effet d'augmenter sa vélocité dans la bonne direction.
 
-## Implémentation de l'API Device Orientation (_gyroscopique_)
+## Implémentation de l'API Device Orientation (_gyroscopique_)
 
 La particularité du jeu est qu'il utilise l'API gyroscopique sur les mobiles. Grâce à elle, vous pouvez jouer au jeu en inclinant l'appareil dans la direction où vous voulez que la balle aille. Voilà le code de la fonction  `create()` qui l'implémente :
 
@@ -487,6 +487,6 @@ Ceci est simplement une démonstration de travail d'un jeu qui pourrait avoir be
 
 ## Résumé
 
-J'espère que ce tutoriel vous aidera à plonger dans le développement de jeux en 2D et vous inspirera pour créer des jeux géniaux par vous-même. Vous pouvez jouer au jeu de démonstration [Cyber Orb](http://orb.enclavegames.com/) et consulter son [code source sur GitHub](https://github.com/EnclaveGames/Cyber-Orb).
+J'espère que ce tutoriel vous aidera à plonger dans le développement de jeux en 2D et vous inspirera pour créer des jeux géniaux par vous-même. Vous pouvez jouer au jeu de démonstration [Cyber Orb](http://orb.enclavegames.com/) et consulter son [code source sur GitHub](https://github.com/EnclaveGames/Cyber-Orb).
 
 HTML5 nous donne des outils bruts, les frameworks construits au-dessus deviennent plus rapides et meilleurs, alors c'est un bon moment pour le développement de jeux web. Dans ce tutoriel, nous avons utilisé Phaser, mais il existe un certain nombre d' [autres frameworks](http://html5devstarter.enclavegames.com/#frameworks) qui méritent d'être considérés aussi, comme [ImpactJS](http://impactjs.com/), [Construct 2](https://www.scirra.com/construct2) ou [PlayCanvas](http://playcanvas.com/) — cela dépend de vos préférences, de vos compétences en codage (ou de leur absence), de l'échelle du projet, des exigences et d'autres aspects. Vous devriez les regarder tous et décider lequel convient le mieux à vos besoins.

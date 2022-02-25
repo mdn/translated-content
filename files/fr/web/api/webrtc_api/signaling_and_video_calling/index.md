@@ -7,15 +7,15 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 translation_of_original: Web/API/WebRTC_API/WebRTC_basics
 original_slug: Web/Guide/API/WebRTC/WebRTC_basics
 ---
-Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias  pair à pair qui fonctionne
+Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias  pair à pair qui fonctionne
 
-## Contenu semi-ancien, à partir de RTCPeerConnection
+## Contenu semi-ancien, à partir de RTCPeerConnection
 
-Les informations ci-dessous proviennent de RTCPeerConnection; elles  pourraient rester ici, comme aller ailleurs. Mais elles ne font pas partie de cette page. Alors pendant que je trie cette page, elles seront ici, jusqu'à ce que je sache où elles appartiennent pour de vrai.
+Les informations ci-dessous proviennent de RTCPeerConnection; elles pourraient rester ici, comme aller ailleurs. Mais elles ne font pas partie de cette page. Alors pendant que je trie cette page, elles seront ici, jusqu'à ce que je sache où elles appartiennent pour de vrai.
 
 ## Usage basique
 
-l'utilisation de RTCPeerConnection implique la négociation d'une connexion entre votre machine  et une machine distante,et ce, en générant {{interwiki("wikipedia", "Session Description Protocol")}} a échanger entre les deux. L'appelant commence le processus en envoyant une offre à l'appareil distant, qui répond par l'acceptation ou le rejet de la demande de connexion.
+l'utilisation de RTCPeerConnection implique la négociation d'une connexion entre votre machine  et une machine distante,et ce, en générant {{interwiki("wikipedia", "Session Description Protocol")}} a échanger entre les deux. L'appelant commence le processus en envoyant une offre à l'appareil distant, qui répond par l'acceptation ou le rejet de la demande de connexion.
 
 Les deux parties (l'appelant et l'appelé) doivent mettre en place leurs propres instances de RTCPeerConnection pour représenter leurs extrémités de la connexion peer-to-peer:
 
@@ -42,9 +42,9 @@ function error(err) {
 }
 ```
 
-**Initialiser un appel**
+**Initialiser un appel**
 
-l'appelant doit utiliser {{domxref("navigator.getUserMedia()")}} pour obtenir un flux vidéo, puis ajouter ce flux à l'instance de RTCPeerConnection. Une fois que cela a été fait, il doit appeler {{domxref("RTCPeerConnection.createOffer()")}} pour créer une offre,puis la configurer et l'envoyer a un serveur faisant office d'intermediaire.
+l'appelant doit utiliser {{domxref("navigator.getUserMedia()")}} pour obtenir un flux vidéo, puis ajouter ce flux à l'instance de RTCPeerConnection. Une fois que cela a été fait, il doit appeler {{domxref("RTCPeerConnection.createOffer()")}} pour créer une offre,puis la configurer et l'envoyer a un serveur faisant office d'intermediaire.
 
 ```js
 // recuperer la liste des "amis" a partir du serveur
@@ -65,9 +65,9 @@ navigator.getUserMedia({video: true}, function(stream) {
 
 **Répondre à un appel**
 
-sur l'autre machine, l'ami recevra l'offre à partir du serveur en utilisant le protocole approprié (définit par le serveur). Une fois que l'offre arrive,{{domxref("navigator.getUserMedia()")}} est une fois de plus appelée pour créer le second flux, qui est ajouté à la RTCPeerConnection. Un  objet {{domxref("RTCSessionDescription")}} est créé, et mis en place comme la description du distant en appelant {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
+sur l'autre machine, l'ami recevra l'offre à partir du serveur en utilisant le protocole approprié (définit par le serveur). Une fois que l'offre arrive,{{domxref("navigator.getUserMedia()")}} est une fois de plus appelée pour créer le second flux, qui est ajouté à la RTCPeerConnection. Un  objet {{domxref("RTCSessionDescription")}} est créé, et mis en place comme la description du distant en appelant {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 
-Ensuite, une réponse est créée en utilisant {{domxref("RTCPeerConnection.createAnswer()")}} et renvoyé au serveur, qui la transmet à l'appelant.
+Ensuite, une réponse est créée en utilisant {{domxref("RTCPeerConnection.createAnswer()")}} et renvoyé au serveur, qui la transmet à l'appelant.
 
 ```js
 var offer = getOfferFromFriend();
@@ -87,7 +87,7 @@ navigator.getUserMedia({video: true}, function(stream) {
 
 **Gestion de la réponse**
 
-retour a la première machine, qui recois la reponse. une fois cette dernière arrivée,l'appelant utilise {{domxref("RTCPeerConnection.setRemoteDescription()")}} pour définir la réponse comme la description de l'autre l'extrémité de la connexion.
+retour a la première machine, qui recois la reponse. une fois cette dernière arrivée,l'appelant utilise {{domxref("RTCPeerConnection.setRemoteDescription()")}} pour définir la réponse comme la description de l'autre l'extrémité de la connexion.
 
 ```js
 // pc a été déclaré précédemment, lors de l'envoi de l'offre.
@@ -99,7 +99,7 @@ pc.setRemoteDescription(new RTCSessionDescription(offer), function() { }, error)
 
 Tout ce qui est en dessous de ce point est potentiellement obsolète. Il est toujours là en attente d'examen et d'intégration possible dans d'autres parties de la documentation où il serait encore valides.
 
-> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
+> **Note :** Ne pas utiliser les examples de cette page. Voir l'article [signalisation et appel vidéo](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) ,pour des example mis a jour sur l'utilisation des medias WebRTC.
 
 ## Note
 

@@ -47,7 +47,7 @@ Les présentations ayant été faites pour les concepts du JavaScript orienté o
 
 Nous avons déjà vu le concept d'héritage en action, nous avons vu comment la chaîne de prototypage fonctionnait, et comment les propriétés de cette chaîne sont lues de manière ascendante. En revanche,nous n'avons utilisé pratiquement que quelques fonctionnalités déjà intégrées dans le navigateur pour le faire. Comment créer un objet JavaScript qui hérite d'un autre objet ?
 
-Certains pensent que JavaScript n'est pas un véritable langage orienté objet. Dans les langages orientés objets classiques, on définit des classes objet et on peut ensuite définir laquelle hérite d'une autre (voir [C++ inheritance](http://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm) en anglais pour des exemples simples). JavasScript utilise une approche différente : les objets héritant d'un autre n'ont pas de fonctionnalités copiées d'un autre objet, au lieu de ça, ils héritent des fonctionnalités via les liens de la chaîne de prototypage (on parle alors d'un **héritage prototypique**).
+Certains pensent que JavaScript n'est pas un véritable langage orienté objet. Dans les langages orientés objets classiques, on définit des classes objet et on peut ensuite définir laquelle hérite d'une autre (voir [C++ inheritance](http://www.tutorialspoint.com/cplusplus/cpp_inheritance.htm) en anglais pour des exemples simples). JavasScript utilise une approche différente : les objets héritant d'un autre n'ont pas de fonctionnalités copiées d'un autre objet, au lieu de ça, ils héritent des fonctionnalités via les liens de la chaîne de prototypage (on parle alors d'un **héritage prototypique**).
 
 Voyons comment cela se passe avec un exemple concret.
 
@@ -109,9 +109,9 @@ Cependant cela aurait eu pour effet de redéfinir les attributs à nouveau, sans
 
 
 
-### Hériter d'un constructeur sans paramètres
+### Hériter d'un constructeur sans paramètres
 
-Notez que si les valeurs des propriétés du constructeur dont vous héritez ne proviennent pas de paramètres, vous n'avez nullement besoin de les specifier comme arguments additionnels dans l'appel de la fonction `call()`. Donc, par exemple, si vous avez quelque chose d'aussi simple que ceci :
+Notez que si les valeurs des propriétés du constructeur dont vous héritez ne proviennent pas de paramètres, vous n'avez nullement besoin de les specifier comme arguments additionnels dans l'appel de la fonction `call()`. Donc, par exemple, si vous avez quelque chose d'aussi simple que ceci :
 
 ```js
 function Brick() {
@@ -120,7 +120,7 @@ function Brick() {
 }
 ```
 
-Vous pouvez hériter des propriétés `width` et `height` en procédant comme ceci (Mais  également en suivant bien sûr les différentes étapes décrites ci dessous) :
+Vous pouvez hériter des propriétés `width` et `height` en procédant comme ceci (Mais  également en suivant bien sûr les différentes étapes décrites ci dessous) :
 
 ```js
 function BlueGlassBrick() {
@@ -131,31 +131,31 @@ function BlueGlassBrick() {
 }
 ```
 
-Notez que nous n'avons spécifié que `this` au sein de `call()` — Aucun autre paramètre n'est requis puisque nous n'héritons ici d'aucune propriété provenant de la classe parente qui soit spécifiée via paramètres.
+Notez que nous n'avons spécifié que `this` au sein de `call()` — Aucun autre paramètre n'est requis puisque nous n'héritons ici d'aucune propriété provenant de la classe parente qui soit spécifiée via paramètres.
 
 ## Définir le prototype de Professeur() et son constructeur référent.
 
-Pour le moment tout va bien, mais nous avons un petit problème. Nous avons défini un  nouveau constructeur et ce dernier possède une propriété `prototype`, qui par défaut ne contient qu'une référence à la fonction constructrice elle même. En revanche il ne contient pas les méthodes de la propriété `prototype` du constructeur `Personne()`. Pour le constater, vous pouvez par exemple entrer `Professeur.prototype.constructor` dans la console JavaScript pour voir ce qu'il en est. Le nouveau constructeur n'a en aucun cas hérité de ces méthodes. Pour le constater, comparez les sorties de `Personne.prototype.saluer` et de `Professeur.prototype.saluer`
+Pour le moment tout va bien, mais nous avons un petit problème. Nous avons défini un  nouveau constructeur et ce dernier possède une propriété `prototype`, qui par défaut ne contient qu'une référence à la fonction constructrice elle même. En revanche il ne contient pas les méthodes de la propriété `prototype` du constructeur `Personne()`. Pour le constater, vous pouvez par exemple entrer `Professeur.prototype.constructor` dans la console JavaScript pour voir ce qu'il en est. Le nouveau constructeur n'a en aucun cas hérité de ces méthodes. Pour le constater, comparez les sorties de `Personne.prototype.saluer` et de `Professeur.prototype.saluer`
 
-Notre classe `Professeur()` doit hériter des méthodes définies dans le prototype de `Personne()`. Aussi comment procéder pour obtenir ce résultat&nbsp;?
+Notre classe `Professeur()` doit hériter des méthodes définies dans le prototype de `Personne()`. Aussi comment procéder pour obtenir ce résultat&nbsp;?
 
 Ajoutez la ligne suivante à la suite du bloc de code que nous venons d'ajouter :
 
     Professeur.prototype = Object.create(Personne.prototype);
 
-1.  Ici, notre ami [`create()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vient nous aider à nouveau. Dans ce cas, on l'utilise afin de créer un nouvel objet que nous assignons à `Professeur.prototype`. Le nouvel objet possède `Personne.prototype` désormais comme son prototype et héritera ainsi, si et quand le besoin se fera sentir, de toutes les méthodes disponible sur `Personne.prototype`.
-2.  Nous avons également besoin de faire encore une chose avant de continuer. Après avoir ajouté la ligne précédente, le constructeur du prototype de `Professeur()` est désormais équivalent à celui de `Personne()`, parce que nous avons défini `Professeur.prototype` pour référencer un objet qui hérite ses propriétés de  `Personne.prototype` ! Essayez, après avoir sauvegardé votre code et rechargé la page, d'entrer `Professeur.prototype.constructor` dans la console pour vérifier.
-3.  Cela peut devenir problématique, autant le corriger dès maintenant. C'est possible via l'ajout de la ligne de code suivante à la fin :
+1.  Ici, notre ami [`create()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vient nous aider à nouveau. Dans ce cas, on l'utilise afin de créer un nouvel objet que nous assignons à `Professeur.prototype`. Le nouvel objet possède `Personne.prototype` désormais comme son prototype et héritera ainsi, si et quand le besoin se fera sentir, de toutes les méthodes disponible sur `Personne.prototype`.
+2.  Nous avons également besoin de faire encore une chose avant de continuer. Après avoir ajouté la ligne précédente, le constructeur du prototype de `Professeur()` est désormais équivalent à celui de `Personne()`, parce que nous avons défini `Professeur.prototype` pour référencer un objet qui hérite ses propriétés de `Personne.prototype` ! Essayez, après avoir sauvegardé votre code et rechargé la page, d'entrer `Professeur.prototype.constructor` dans la console pour vérifier.
+3.  Cela peut devenir problématique, autant le corriger dès maintenant. C'est possible via l'ajout de la ligne de code suivante à la fin :
 
         Professeur.prototype.constructor = Professeur;
 
-4.  A présent, si vous sauvegardez et rafraichissez après avoir écrit `Professeur.prototype.constructor`, cela devrait retourner `Professeur()`, et en plus nous héritons maintenant de `Personne()`&nbsp;!
+4.  A présent, si vous sauvegardez et rafraichissez après avoir écrit `Professeur.prototype.constructor`, cela devrait retourner `Professeur()`, et en plus nous héritons maintenant de `Personne()`&nbsp;!
 
 ## Donner au prototype de Professeur() une nouvelle fonction saluer()
 
 Pour terminer notre code, nous devons définir une nouvelle fonction `saluer()` sur le constructeur de `Professeur()`.
 
-La façon la plus facile d'accomplir cela est de la définir sur le prototype de Professeur() — ajoutez ceci à la suite de votre code :
+La façon la plus facile d'accomplir cela est de la définir sur le prototype de Professeur() — ajoutez ceci à la suite de votre code :
 
     Professeur.prototype.saluer = function() {
       var prefix;
@@ -171,17 +171,17 @@ La façon la plus facile d'accomplir cela est de la définir sur le prototype de
       alert('Bonjour. Mon nom est ' + prefix + ' ' + this.nom_complet.nom + ', et j\'enseigne ' + this.matiere + '.');
     };
 
-Ceci affiche la salutation du professeur, qui utilise le titre de civilité approprié à son genre, au moyen d'une instruction conditionnelle.
+Ceci affiche la salutation du professeur, qui utilise le titre de civilité approprié à son genre, au moyen d'une instruction conditionnelle.
 
 
 
 ## Exécuter l'exemple
 
-Une fois tout le code saisi, essayez de créer une instance d'objet `Professeur()` en ajoutant à la fin de votre JavaScript (ou à l'endroit de votre choix) :
+Une fois tout le code saisi, essayez de créer une instance d'objet `Professeur()` en ajoutant à la fin de votre JavaScript (ou à l'endroit de votre choix) :
 
     var professeur1 = new Professeur('Cédric', 'Villani', 44, 'm', ['football', 'cuisine'], 'les mathématiques');
 
-Sauvegardez et actualisez, et essayez d'accéder aux propriétés et méthodes de votre nouvel objet `professeur1`, par exemple :
+Sauvegardez et actualisez, et essayez d'accéder aux propriétés et méthodes de votre nouvel objet `professeur1`, par exemple :
 
     professeur1.nom_complet.nom;
     professeur1.interets[0];
@@ -189,59 +189,59 @@ Sauvegardez et actualisez, et essayez d'accéder aux propriétés et méthodes d
     professeur1.matiere;
     professeur1.saluer();Ffa
 
-Tout cela devrait parfaitement fonctionner. Les instructions des lignes 1,2,3  et 6 accèdent à des membres hérités de la classe générique `Personne()` via son constructeur, tandis que la ligne 4 accède de façon plus spécifique à un membre qui n'est disponible que via le constructeur de la classe spécialisée `Professeur()`.
+Tout cela devrait parfaitement fonctionner. Les instructions des lignes 1,2,3  et 6 accèdent à des membres hérités de la classe générique `Personne()` via son constructeur, tandis que la ligne 4 accède de façon plus spécifique à un membre qui n'est disponible que via le constructeur de la classe spécialisée `Professeur()`.
 
-**Note**: Si vous rencontrez un problème afin de faire fonctionner ce code comparez le à notre [version finalisée](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (Ou regarder tourner [notre demo en ligne](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)).
+**Note**: Si vous rencontrez un problème afin de faire fonctionner ce code comparez le à notre [version finalisée](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (Ou regarder tourner [notre demo en ligne](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)).
 
-La méthode que nous avons détaillée ici n'est pas la seule permettant de mettre en place l'héritage de classes en JavaScript, mais elle fonctionne parfaitement et elle vous permet d'avoir une bonne idée de comment implémenter l'héritage en JavaScript.
+La méthode que nous avons détaillée ici n'est pas la seule permettant de mettre en place l'héritage de classes en JavaScript, mais elle fonctionne parfaitement et elle vous permet d'avoir une bonne idée de comment implémenter l'héritage en JavaScript.
 
-Vous pourriez également être intéressé par certaines des nouvelles fonctionnalités de {{glossary("ECMAScript")}} qui nous permettent de mettre en place l'héritage d'une façon beaucoup plus élégante en JavaScript (Voir [Classes](/fr/docs/Web/JavaScript/Reference/Classes)). Nous ne les avons pas développées ici parce qu'elles ne sont actuellement pas supportées par tous les navigateurs. Toutes les autres constructions dont nous avons discuté dans cette série d'articles sont supportées par IE9 et les versions moins récentes et il existe des méthodes qui prennent plus en  charge les navigateurs moins récents.
+Vous pourriez également être intéressé par certaines des nouvelles fonctionnalités de {{glossary("ECMAScript")}} qui nous permettent de mettre en place l'héritage d'une façon beaucoup plus élégante en JavaScript (Voir [Classes](/fr/docs/Web/JavaScript/Reference/Classes)). Nous ne les avons pas développées ici parce qu'elles ne sont actuellement pas supportées par tous les navigateurs. Toutes les autres constructions dont nous avons discuté dans cette série d'articles sont supportées par IE9 et les versions moins récentes et il existe des méthodes qui prennent plus en  charge les navigateurs moins récents.
 
 Un moyen habituel est d'utiliser les librairies JavaScript — La plupart des options populaires ont une sélection de fonctionnalités disponibles pour réaliser l'héritage plus facilement et plus rapidement.
 
-[CoffeeScript](http://coffeescript.org/#classes) par exemple fournit les fonctionnalités `class`, `extends`, etc.
+[CoffeeScript](http://coffeescript.org/#classes) par exemple fournit les fonctionnalités `class`, `extends`, etc.
 
 ## Un exercice plus complexe.
 
-Dans notre [section sur la programmation orientée objet](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters) nous avons également inclus  une classe `Etudiant` comme un concept qui hérite de toutes les fonctionnalités de la classe `Personne`, et qui a également une méthode `saluer()` differente de celle de `Personne` qui est beaucoup moins formelle que la méthode `saluer()` de `Professeur()`. Jetez un oeil à ce à quoi ressemble la méthode `saluer()` de la classe `Etudiant` dans cette section et essayez d'implémenter votre propre constructeur `Etudiant()` qui hérite de toutes les fonctionnalités de `Personne()` et la fonction `saluer()` différente.
+Dans notre [section sur la programmation orientée objet](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters) nous avons également inclus  une classe `Etudiant` comme un concept qui hérite de toutes les fonctionnalités de la classe `Personne`, et qui a également une méthode `saluer()` differente de celle de `Personne` qui est beaucoup moins formelle que la méthode `saluer()` de `Professeur()`. Jetez un oeil à ce à quoi ressemble la méthode `saluer()` de la classe `Etudiant` dans cette section et essayez d'implémenter votre propre constructeur `Etudiant()` qui hérite de toutes les fonctionnalités de `Personne()` et la fonction `saluer()` différente.
 
-**Note**: Si vous rencontrez un problème afin de faire fonctionner ce code comparez le à notre [version finalisée](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (Ou regarder tourner [notre demo en ligne](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)).
+**Note**: Si vous rencontrez un problème afin de faire fonctionner ce code comparez le à notre [version finalisée](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (Ou regarder tourner [notre demo en ligne](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)).
 
 ## Résumé sur les membres de l'Objet
 
 Pour résumer, vous avez de façon basique trois types de propriétés/méthodes à prendre en compte :
 
-1.  Celles définies au sein d'un constructeur et passées en paramètres aux instances de l'objet. Celles là ne sont pas difficiles à repérer — Dans votre propre code personnalisé, elles sont les membres définis en utilisant les lignes comme `this.x = x`&nbsp;; Dans les codes préconstruits propres aux navigateurs, ils sont les membres seulement accessibles aux instances d'objet (usuellement créés en appelant un constructeur via l'utilisation du mot clé `new`, exemple : `var myInstance = new myConstructor()`).
-2.  Celles définies directement sur les constructeurs eux mêmes et accessibles uniquement sur les constructeurs. Celles là sont communément présentes uniquement dans les objets préconstruits des navigateurs et sont reconnus par le fait d'être directement chaînées sur un constructeur et non sur une instance. Par exemple, [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
-3.  Celles définies sur un prototype de constructeur qui sont héritées par toutes les instances des classes d'objet. Celles là incluent n'importe quel membre défini sur un prototype de constructeur, exemple : `myConstructor.prototype.x()`.
+1.  Celles définies au sein d'un constructeur et passées en paramètres aux instances de l'objet. Celles là ne sont pas difficiles à repérer — Dans votre propre code personnalisé, elles sont les membres définis en utilisant les lignes comme `this.x = x`&nbsp;; Dans les codes préconstruits propres aux navigateurs, ils sont les membres seulement accessibles aux instances d'objet (usuellement créés en appelant un constructeur via l'utilisation du mot clé `new`, exemple : `var myInstance = new myConstructor()`).
+2.  Celles définies directement sur les constructeurs eux mêmes et accessibles uniquement sur les constructeurs. Celles là sont communément présentes uniquement dans les objets préconstruits des navigateurs et sont reconnus par le fait d'être directement chaînées sur un constructeur et non sur une instance. Par exemple, [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
+3.  Celles définies sur un prototype de constructeur qui sont héritées par toutes les instances des classes d'objet. Celles là incluent n'importe quel membre défini sur un prototype de constructeur, exemple : `myConstructor.prototype.x()`.
 
 Si vous êtes encore dans la confusion par rapport aux différents types ne vous inquiétez pas c'est normal — vous êtes encore entrain d'apprendre et la familiarité apparaîtra avec la pratique.
 
 ## Quand devez-vous utiliser  l'héritage en JavaScript?
 
-Particulièrement après ce dernier article, vous pourriez penser "woa c'est compliqué". Bien, vous avez vu juste, prototypes et héritages représentent une partie des aspects les plus complexes de JavaScript, mais une bonne partie de la puissance et de la flexibilité de JavaScript vient de sa structure Objet et de l'héritage et il est vraiment très important de comprendre comment cela fonctionne.
+Particulièrement après ce dernier article, vous pourriez penser "woa c'est compliqué". Bien, vous avez vu juste, prototypes et héritages représentent une partie des aspects les plus complexes de JavaScript, mais une bonne partie de la puissance et de la flexibilité de JavaScript vient de sa structure Objet et de l'héritage et il est vraiment très important de comprendre comment cela fonctionne.
 
-D'une certaine manière, vous utilisez l'héritage à plein temps — Que vous utilisiez différentes fonctionnalités d'une WebAPI , ou une méthode/propriété définie par défaut  sur un objet prédéfini du navigateur que vous invoquez sur vos chaînes de caractères, tableaux etc., vous utilisez de façon implicite l'héritage.
+D'une certaine manière, vous utilisez l'héritage à plein temps — Que vous utilisiez différentes fonctionnalités d'une WebAPI , ou une méthode/propriété définie par défaut  sur un objet prédéfini du navigateur que vous invoquez sur vos chaînes de caractères, tableaux etc., vous utilisez de façon implicite l'héritage.
 
-En termes d'utilisation de l'héritage dans votre propre code, vous ne l'utiliserez probablement pas si souvent et spécialement pour débuter avec, et dans les petits projets — C'est une perte de temps d'utiliser les objets et l'héritage par amour pour cette pratique quand vous n'en avez pas besoin. Mais à mesure que les bases de votre code s'élargissent vous trouverez cette façon de faire probablement très utile. Si vous trouvez utile et plus pratique de commencer en créant un certain nombre d'objets spécialisés partageant les mêmes fonctionnalités, alors créer un objet générique qui contiendra toutes les fonctionnalités communes dont les objets spécialisés hériteront vous apparaîtra être une pratique peut être plus confortable et efficace par la suite.
+En termes d'utilisation de l'héritage dans votre propre code, vous ne l'utiliserez probablement pas si souvent et spécialement pour débuter avec, et dans les petits projets — C'est une perte de temps d'utiliser les objets et l'héritage par amour pour cette pratique quand vous n'en avez pas besoin. Mais à mesure que les bases de votre code s'élargissent vous trouverez cette façon de faire probablement très utile. Si vous trouvez utile et plus pratique de commencer en créant un certain nombre d'objets spécialisés partageant les mêmes fonctionnalités, alors créer un objet générique qui contiendra toutes les fonctionnalités communes dont les objets spécialisés hériteront vous apparaîtra être une pratique peut être plus confortable et efficace par la suite.
 
-**Note**: A cause de la manière dont JavaScript fonctionne, avec la chaîne de prototype, etc., le partage de fonctionnalités entre objet est souvent appelée **délégation** — Les objets spécialisés délèguent cette fonctionnalité à l'objet de type générique. C'est certainement beaucoup plus précis que de l'appeler héritage, puisque la fonctionnalité "héritée" n'est pas copiée dans les objets qui "héritent". Au contraire, elle demeure dans l'objet générique.
+**Note**: A cause de la manière dont JavaScript fonctionne, avec la chaîne de prototype, etc., le partage de fonctionnalités entre objet est souvent appelée **délégation** — Les objets spécialisés délèguent cette fonctionnalité à l'objet de type générique. C'est certainement beaucoup plus précis que de l'appeler héritage, puisque la fonctionnalité "héritée" n'est pas copiée dans les objets qui "héritent". Au contraire, elle demeure dans l'objet générique.
 
-Lorsque vous utilisez l'héritage, il est conseillé de ne pas avoir trop de degrés d'héritage et de toujours garder minutieusement trace de l'endroit où vous définissez vos propriétés et méthodes. Il est possible de commencer à écrire un code qui modifie temporairement les prototypes des objets prédéfinis du navigateur mais vous ne devriez pas le faire à moins que n'ayiez une très bonne raison. Trop de degrés d'héritages peut conduire à une confusion sans fin et une peine sans fin quand vous essayez de déboguer un tel code.
+Lorsque vous utilisez l'héritage, il est conseillé de ne pas avoir trop de degrés d'héritage et de toujours garder minutieusement trace de l'endroit où vous définissez vos propriétés et méthodes. Il est possible de commencer à écrire un code qui modifie temporairement les prototypes des objets prédéfinis du navigateur mais vous ne devriez pas le faire à moins que n'ayiez une très bonne raison. Trop de degrés d'héritages peut conduire à une confusion sans fin et une peine sans fin quand vous essayez de déboguer un tel code.
 
-En définitive, les objets sont juste une autre forme de réutilisation de code comme les fonctions et les boucles avec leurs propres rôles et avantages. Si vous trouvez utile de créer un lot de variables et fonctions relatives et que vous voulez les retracer ensemble et les empaqueter de façon ordonnée, un objet est une bonne idée. Les objets sont également très utiles quand vous souhaitez passer une collection de données d'un endroit à un autre. Toutes ces choses peuvent être accomplies sans l'utilisation d'un constructeur ou de l'héritage. Si vous n'avez besoin que d'une seule instance, l'utilisation d'un simple objet littéral serait certainement un choix beaucoup plus judicieux et vous n'avez certainement pas besoin de l'héritage.
+En définitive, les objets sont juste une autre forme de réutilisation de code comme les fonctions et les boucles avec leurs propres rôles et avantages. Si vous trouvez utile de créer un lot de variables et fonctions relatives et que vous voulez les retracer ensemble et les empaqueter de façon ordonnée, un objet est une bonne idée. Les objets sont également très utiles quand vous souhaitez passer une collection de données d'un endroit à un autre. Toutes ces choses peuvent être accomplies sans l'utilisation d'un constructeur ou de l'héritage. Si vous n'avez besoin que d'une seule instance, l'utilisation d'un simple objet littéral serait certainement un choix beaucoup plus judicieux et vous n'avez certainement pas besoin de l'héritage.
 
 ## Résumé
 
-Cet article a couvert le reste du coeur de la théorie du JSOO et des syntaxes que nous pensons que vous devriez connaître maintenant. A cet stade vous devriez comprendre l'objet JavaScript et les bases de la POO, les prototypes et l'héritage par prototype, comment créer les classes (constructeurs) et les instances d'objet, ajouter des fonctionnalités aux classes, et créer des sous classes qui héritent d'autres classes.
+Cet article a couvert le reste du coeur de la théorie du JSOO et des syntaxes que nous pensons que vous devriez connaître maintenant. A cet stade vous devriez comprendre l'objet JavaScript et les bases de la POO, les prototypes et l'héritage par prototype, comment créer les classes (constructeurs) et les instances d'objet, ajouter des fonctionnalités aux classes, et créer des sous classes qui héritent d'autres classes.
 
 Dans le prochain article, nous jetterons un regard sur comment travailler avec le (JSON),  un format commun d'échange de données écrit en utilisant les objets JavaScript.
 
 ## Voir aussi
 
 - [ObjectPlayground.com](http://www.objectplayground.com/) — Un site interactif d'appentissage très utile pour en savoir plus sur les Objets.
-- [Secrets of the JavaScript Ninja](https://www.amazon.com/gp/product/193398869X/), Chapitre 6 — Un bon livre sur les concepts et techniques avancées du JavaScript par John Resig et Bear Bibeault. Le chapitre 6 couvre très bien les divers aspects des prototypes et de l'héritage ; vous trouverez sûrement facilement une version imprimée ou une version en ligne.
-- [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Une partie de l'excellente série de manuels sur le JavaScript de Kyle Simpson. Le chapitre 5 en particulier jette un regard beaucoup plus approfondi sur les prototypes que nous ne l'avons fait ici. Nous avons présenté ici une vue simplifiée dans cette série d'articles dédiée aux débutants tandis que Kyle est allé dans les détails les plus profonds et fournit une image beaucoup plus complexe et plus précise.
+- [Secrets of the JavaScript Ninja](https://www.amazon.com/gp/product/193398869X/), Chapitre 6 — Un bon livre sur les concepts et techniques avancées du JavaScript par John Resig et Bear Bibeault. Le chapitre 6 couvre très bien les divers aspects des prototypes et de l'héritage ; vous trouverez sûrement facilement une version imprimée ou une version en ligne.
+- [You Don't Know JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Une partie de l'excellente série de manuels sur le JavaScript de Kyle Simpson. Le chapitre 5 en particulier jette un regard beaucoup plus approfondi sur les prototypes que nous ne l'avons fait ici. Nous avons présenté ici une vue simplifiée dans cette série d'articles dédiée aux débutants tandis que Kyle est allé dans les détails les plus profonds et fournit une image beaucoup plus complexe et plus précise.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 

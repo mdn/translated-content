@@ -21,7 +21,7 @@ JavaScript est un langage de programmation qui ajoute de l'interactivité à vot
 
 JavaScript est d'une incroyable flexibilité. Vous pouvez commencer petit, avec des carrousels, des galeries d'images, des variations de mises en page et des réponses aux clics de boutons. Avec plus d'expérience, vous serez en mesure de créer des jeux, des graphiques 2D et 3D animés, des applications complètes fondées sur des bases de données et bien plus encore !
 
-JavaScript est plutôt compact tout en étant très souple. Les développeurs ont écrit de nombreux outils sur le cœur du langage JavaScript, créant des fonctionnalités supplémentaires très simplement. Parmi ces outils, il y a :
+JavaScript est plutôt compact tout en étant très souple. Les développeurs ont écrit de nombreux outils sur le cœur du langage JavaScript, créant des fonctionnalités supplémentaires très simplement. Parmi ces outils, il y a :
 
 - des Interfaces de Programmation d'Applications pour navigateurs ({{Glossary("API","API")}}) — API intégrées aux navigateurs web permettant de créer dynamiquement du HTML, de définir des styles de CSS, de collecter et manipuler un flux vidéo depuis la webcam de l'utilisateur ou de créer des graphiques 3D et des échantillonnages audio.
 - des API tierces‑parties permettant aux développeurs d'incorporer dans leurs sites des fonctionnalités issues d'autres fournisseurs de contenu, comme Twitter ou Facebook.
@@ -29,7 +29,7 @@ JavaScript est plutôt compact tout en étant très souple. Les développeurs on
 
 Comme cet article est une introduction simplifiée à JavaScript, nous n'allons pas compliquer les choses à ce stade en entrant dans les détails sur les différences entre le coeur du langage JavaScript et les différents outils cités plus haut. Vous pourrez entrer dans ces détails plus tard grâce à notre [centre d'apprentissage JavaScript](/fr/docs/Apprendre/JavaScript), et le reste du MDN.
 
-Ci-dessous nous allons vous présenter quelques aspects du coeur du langage, et vous pratiquerez aussi en manipulant les fonctionnalités des API navigateur. Amusez-vous !
+Ci-dessous nous allons vous présenter quelques aspects du coeur du langage, et vous pratiquerez aussi en manipulant les fonctionnalités des API navigateur. Amusez-vous !
 
 ## Un exemple « hello world »
 
@@ -46,7 +46,7 @@ Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML
     <script src="scripts/main.js"></script>
     ```
 
-3.  Cet élément a le même rôle que l'élément {{htmlelement("link")}} pour le CSS — il applique le code JavaScript à la page, de sorte qu'il puisse avoir de l'effet sur le HTML (en même temps que le CSS et autres sur la page).
+3.  Cet élément a le même rôle que l'élément {{htmlelement("link")}} pour le CSS — il applique le code JavaScript à la page, de sorte qu'il puisse avoir de l'effet sur le HTML (en même temps que le CSS et autres sur la page).
 4.  Maintenant ajoutez le code suivant dans `main.js`&nbsp;:
 
     ```js
@@ -56,13 +56,13 @@ Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML
 
 5.  Assurez-vous que les fichiers HTML et JavaScript soient enregistrés puis chargez `index.html` dans votre navigateur. Vous devriez obtenir quelque chose comme :![](hello-world.png)
 
-> **Note :** La raison pour laquelle nous avons placé l'élément {{htmlelement("script")}} en bas du fichier HTML est que le HTML est chargé par le navigateur dans l'ordre dans lequel il apparaît dans le fichier. Si le JavaScript est chargé en premier et qu'il est supposé affecter le HTML en dessous, il pourrait ne pas fonctionner, car le JavaScript serait chargé avant le HTML sur lequel il est supposé travailler. Par conséquent, placer JavaScript près du bas de la page HTML est souvent la meilleure stratégie.
+> **Note :** La raison pour laquelle nous avons placé l'élément {{htmlelement("script")}} en bas du fichier HTML est que le HTML est chargé par le navigateur dans l'ordre dans lequel il apparaît dans le fichier. Si le JavaScript est chargé en premier et qu'il est supposé affecter le HTML en dessous, il pourrait ne pas fonctionner, car le JavaScript serait chargé avant le HTML sur lequel il est supposé travailler. Par conséquent, placer JavaScript près du bas de la page HTML est souvent la meilleure stratégie.
 
 ### Que s'est-il passé ?
 
-Le texte du titre a été changé en «Bonjour, monde ! » en utilisant JavaScript. Pour cela, on a utilisé une fonction appelée {{domxref("Document.querySelector", "querySelector()")}} pour obtenir une référence sur l'en‑tête et la stocker dans une variable appelée `myHeading`. C'est assez proche de ce qu'on a fait avec les sélecteurs CSS. Lorsqu'on souhaite manipuler un élément, il faut d'abord le sélectionner.
+Le texte du titre a été changé en «Bonjour, monde ! » en utilisant JavaScript. Pour cela, on a utilisé une fonction appelée {{domxref("Document.querySelector", "querySelector()")}} pour obtenir une référence sur l'en‑tête et la stocker dans une variable appelée `myHeading`. C'est assez proche de ce qu'on a fait avec les sélecteurs CSS. Lorsqu'on souhaite manipuler un élément, il faut d'abord le sélectionner.
 
-Ensuite, nous fixons à «&nbsp;Bonjour, monde !&nbsp;» la valeur de la propriété {{domxref("Node.textContent", "textContent")}} de la variable `myHeading` (elle représente le contenu du titre).
+Ensuite, nous fixons à «&nbsp;Bonjour, monde !&nbsp;» la valeur de la propriété {{domxref("Node.textContent", "textContent")}} de la variable `myHeading` (elle représente le contenu du titre).
 
 > **Note :** Les deux fonctions que vous avez utilisées ci-dessus font partie de l'API Document Object Model (DOM), qui vous permet de manipuler les documents.
 
@@ -253,7 +253,7 @@ Un {{Glossary("operator","opérateur")}} est un symbole mathématique qui produi
       <th scope="row">Négation , N'égale pas</th>
       <td>
         <p>
-          Renvoie la valeur logique opposée à ce qu'il précède&nbsp;; il change <code
+          Renvoie la valeur logique opposée à ce qu'il précède&nbsp;; il change <code
             >true</code
           >
           en <code>false</code>, etc. Utilisé avec l'opérateur d'égalité,
@@ -299,7 +299,7 @@ if (iceCream === 'chocolat') {
 }
 ```
 
-L'expression contenue dans `if ( ... )` correspond au test — Ici, on utilise l'opérateur d'égalité (décrit plus haut) pour comparer la variable iceCream avec la chaîne de caractères `chocolat` pour voir si elles sont égales. Si cette comparaison renvoie `true`, le premier bloc de code sera exécuté. Sinon, le premier bloc est sauté et  c'est le code du second bloc, celui présent après  `else`, qui est exécuté.
+L'expression contenue dans `if ( ... )` correspond au test — Ici, on utilise l'opérateur d'égalité (décrit plus haut) pour comparer la variable iceCream avec la chaîne de caractères `chocolat` pour voir si elles sont égales. Si cette comparaison renvoie `true`, le premier bloc de code sera exécuté. Sinon, le premier bloc est sauté et  c'est le code du second bloc, celui présent après  `else`, qui est exécuté.
 
 ### Fonctions
 
@@ -335,7 +335,7 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **Note :** L'instruction [`return`](/fr/docs/Web/JavaScript/Reference/Instructions/return) indique au navigateur qu'il faut renvoyer la variable `result` en dehors de la fonction afin qu'elle puisse être réutilisée par ailleurs. Cette instruction est nécessaire car les variables définies à l'intérieur des fonctions sont uniquement disponibles à l'intérieur de ces fonctions. C'est ce qu'on appelle une {{Glossary("Portée", "portée")}} (pour en savoir plus, lisez [cet article](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_portées_de_variables)).
+> **Note :** L'instruction [`return`](/fr/docs/Web/JavaScript/Reference/Instructions/return) indique au navigateur qu'il faut renvoyer la variable `result` en dehors de la fonction afin qu'elle puisse être réutilisée par ailleurs. Cette instruction est nécessaire car les variables définies à l'intérieur des fonctions sont uniquement disponibles à l'intérieur de ces fonctions. C'est ce qu'on appelle une {{Glossary("Portée", "portée")}} (pour en savoir plus, lisez [cet article](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_portées_de_variables)).
 
 ### Événements
 
@@ -394,7 +394,7 @@ Dans cette section, nous allons incorporer une autre image au site en utilisant 
 
 Dans cet exemple, nous utilisons une référence vers l'élement {{htmlelement("img")}} grâce à la variable `myImage`. Ensuite, nous égalons la propriété du gestionnaire d'événement `onclick `de cette variable à une fonction sans nom (une fonction anonyme). Maintenant chaque fois que cet élément est cliqué :
 
-1.  nous récupèrons la valeur de l'attribut `src` de l'image.
+1.  nous récupèrons la valeur de l'attribut `src` de l'image.
 2.  nous utilisons une structure conditionnelle pour voir si la valeur de `src` est égale au chemin de l'image originale :
 
     1.  si c'est le cas, nous changeons la valeur de `src` et indiquons le chemin vers la seconde image, forçant le chargement de cette image dans l'élément {{htmlelement("img")}}.
@@ -417,7 +417,7 @@ Continuons en ajoutant encore un peu de code pour changer le titre de la page af
     let myHeading = document.querySelector('h1');
     ```
 
-3.  Ajoutons maintenant les fonctionnalités pour avoir ce message d'accueil personnalisé (cela ne servira pas immédiatement mais un peu plus tard) :
+3.  Ajoutons maintenant les fonctionnalités pour avoir ce message d'accueil personnalisé (cela ne servira pas immédiatement mais un peu plus tard) :
 
     ```js
     function setUserName() {

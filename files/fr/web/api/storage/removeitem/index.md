@@ -67,4 +67,4 @@ function populateStorage() {
 
 ## Voir aussi
 
-[Utilisation de l'API de stockage Web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[Utilisation de l'API de stockage Web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

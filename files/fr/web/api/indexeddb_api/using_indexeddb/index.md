@@ -144,7 +144,7 @@ Blink/Webkit supporte la version courante de la spécification, telle que livré
 
 ### Structurer la base de données
 
-Maintenant, structurons la base de données. IndexedDB utilise des objets de stockage plutôt que des tableaux, et une seule base de données peut contenir un nombre quelconque d'objets de stockage. Chaque fois qu'une valeur est stockée dans un objet de stockage, elle est associée à une clé. Il y a différentes manières pour une clé d'être définie, selon que l'objet de stockage utilise un [key path](/en/IndexedDB#gloss_key_path) _(chemin de clé)_ ou un [key generator](/en/IndexedDB#gloss_key_generator) _(générateur de clé)_.
+Maintenant, structurons la base de données. IndexedDB utilise des objets de stockage plutôt que des tableaux, et une seule base de données peut contenir un nombre quelconque d'objets de stockage. Chaque fois qu'une valeur est stockée dans un objet de stockage, elle est associée à une clé. Il y a différentes manières pour une clé d'être définie, selon que l'objet de stockage utilise un [key path](/en/IndexedDB#gloss_key_path) _(chemin de clé)_ ou un [key generator](/en/IndexedDB#gloss_key_generator) _(générateur de clé)_.
 
 Le tableau suivant montre les différentes manières d'attribuer des clés.
 
@@ -610,7 +610,7 @@ Au-moins, avec l'ajout des notifications d'annulation et {{domxref ("IDBDatabase
 
 ## Le tri et les langues
 
-Mozilla a implémenté la capacité d'effectuer un tri des données IndexedDB localisées sur Firefox 43+. Par défaut, IndexedDB n'a pas pris en charge l'internationalisation des chaînes de tri, et était trié comme s'il s'agissait d'un texte anglais. Par exemple, "b", "á", "z", "a" devaient être triés comme suit :
+Mozilla a implémenté la capacité d'effectuer un tri des données IndexedDB localisées sur Firefox 43+. Par défaut, IndexedDB n'a pas pris en charge l'internationalisation des chaînes de tri, et était trié comme s'il s'agissait d'un texte anglais. Par exemple, "b", "á", "z", "a" devaient être triés comme suit :
 
 - a
 - b
@@ -1312,7 +1312,7 @@ input {
 
 Référence :
 
-- [IndexedDB API Reference](/en/IndexedDB)
+- [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [Using JavaScript generators in Firefox](/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
@@ -1321,11 +1321,11 @@ Référence :
 Tutoriels :
 
 - [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
-- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
+- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
 
 Bibliothèques :
 
-- [localForage ](http://mozilla.github.io/localForage/): Un Polyfill qui fournit un nom simple : la syntaxe de valeur pour le stockage de données côté client, qui utilise IndexedDB en arrière-plan, mais retourne à WebSQL puis à localStorage pour les navigateurs qui ne prennent pas en charge IndexedDB.
+- [localForage ](http://mozilla.github.io/localForage/): Un Polyfill qui fournit un nom simple : la syntaxe de valeur pour le stockage de données côté client, qui utilise IndexedDB en arrière-plan, mais retourne à WebSQL puis à localStorage pour les navigateurs qui ne prennent pas en charge IndexedDB.
 - [dexie.js ](http://www.dexie.org/): Une enveloppe pour IndexedDB qui permet un développement de code beaucoup plus rapide grâce à une syntaxe simple et agréable.
 - [ZangoDB ](https://github.com/erikolson186/zangodb): Un MongoDB-like interface pour IndexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
 - [JsStore](http://jsstore.net/) : Une enveloppe d'IndexedDB simple et avancée ayant une syntaxe SQL.

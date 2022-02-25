@@ -14,7 +14,7 @@ translation_of: Web/API/UIEvent/detail
 
 Pour les événements {{event("click")}} ou {{event("dblclick")}}, `UIEvent.detail` donne le nombre de clics courant.
 
-Pour les événements {{event("mousedown")}} ou {{event("mouseup")}}, `UIEvent.detail` donne le nombre de clics courant _plus_ un.
+Pour les événements {{event("mousedown")}} ou {{event("mouseup")}}, `UIEvent.detail` donne le nombre de clics courant _plus_ un.
 
 Pour tous les autres objets {{domxref("UIEvent")}}, `UIEvent.detail` vaut toujours zéro.
 

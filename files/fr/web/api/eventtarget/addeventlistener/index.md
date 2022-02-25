@@ -16,7 +16,7 @@ Les cibles courantes sont un {{domxref("Element")}}, le {{domxref("Document")}} 
 ```js
 target.addEventListener(type, listener [, options]);
 target.addEventListener(type, listener [, useCapture]);
-target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-standard_inline}}]); // Gecko/Mozilla uniquement
+target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-standard_inline}}]); // Gecko/Mozilla uniquement
 ```
 
 ### Paramètres

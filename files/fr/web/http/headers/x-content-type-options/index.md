@@ -49,7 +49,7 @@ Les testeurs de sécurité du site s'attendent généralement à ce que cet en-t
     - `text/html`
     - `text/plain`
     - `text/json`, `application/json` ou tout autre type avec une extension JSON: `*/*+json`
-    - `text/xml`, `application/xml` ou tout autre type avec une extension XML: `*/*+xml` (hors `image/svg+xml`)
+    - `text/xml`, `application/xml` ou tout autre type avec une extension XML: `*/*+xml` (hors `image/svg+xml`)
 
 ## Caractéristiques
 

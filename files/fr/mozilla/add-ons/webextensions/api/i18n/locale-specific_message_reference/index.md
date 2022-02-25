@@ -116,7 +116,7 @@ Le nom de l'espace réservé est utilisé pour représenter l'espace réservé d
 
 #### contenu
 
-L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript).
+L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript).
 
 #### exemple
 

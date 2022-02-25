@@ -6,13 +6,13 @@ tags:
   - Manifeste
 translation_of: Web/Manifest
 ---
-Le manifeste d'une application web fournit des informations concernant celle-ci (comme son nom, son auteur, une icône et une description) dans un document texte JSON. Le but du manifeste est d'installer des applications sur l'écran d'accueil d'un appareil, offrant aux utilisateurs un accès plus rapide et une expérience plus riche.
+Le manifeste d'une application web fournit des informations concernant celle-ci (comme son nom, son auteur, une icône et une description) dans un document texte JSON. Le but du manifeste est d'installer des applications sur l'écran d'accueil d'un appareil, offrant aux utilisateurs un accès plus rapide et une expérience plus riche.
 
-Les manifestes font partie d'un ensemble de technologies appelées les [applications web progressives](/fr/docs/Web/Apps/Progressive) (_progressive web apps_). Il s'agit d'applications web qui peuvent être installées sur la page d'accueil d'un appareil sans que l'utilisateur ait à se rendre dans une boutique d'applications. De plus, une fois installées, elles peuvent être utilisées sans connexion internet et sont capables de recevoir des notifications _push._
+Les manifestes font partie d'un ensemble de technologies appelées les [applications web progressives](/fr/docs/Web/Apps/Progressive) (_progressive web apps_). Il s'agit d'applications web qui peuvent être installées sur la page d'accueil d'un appareil sans que l'utilisateur ait à se rendre dans une boutique d'applications. De plus, une fois installées, elles peuvent être utilisées sans connexion internet et sont capables de recevoir des notifications _push._
 
-## Déployer un manifeste
+## Déployer un manifeste
 
-Les manifestes des applications Web sont déployés dans vos pages HTML en utilisant une balise lien (_link_) dans l'entête (_head_) de votre document :
+Les manifestes des applications Web sont déployés dans vos pages HTML en utilisant une balise lien (_link_) dans l'entête (_head_) de votre document :
 
     <link rel="manifest" href="/manifest.webmanifest">
 
@@ -109,11 +109,11 @@ Les valeurs valides sont :
 | Mode d'affichage | Description                                                                                                                                                                                                                                                                                                                                                                             | Affichage de rattrapage |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
 | `fullscreen`     | Toute la zone d'affichage disponible est utilisée et aucun agent utilisateur {{Glossary("chrome")}} n'est montré.                                                                                                                                                                                                                                                                 | `standalone`            |
-| `standalone`     | L'application va ressembler à une application autonome et se comporter comme telle. Cela peut inclure que l'application ait une fenêtre différente, sa propre icône dans le lanceur d'applications, etc. Dans ce mode, l'agent utilisateur va exclure les élements d'interface qui permettent de contrôler la navigation mais peut inclure d'autres éléments comme une barre de statut. | `minimal-ui`            |
+| `standalone`     | L'application va ressembler à une application autonome et se comporter comme telle. Cela peut inclure que l'application ait une fenêtre différente, sa propre icône dans le lanceur d'applications, etc. Dans ce mode, l'agent utilisateur va exclure les élements d'interface qui permettent de contrôler la navigation mais peut inclure d'autres éléments comme une barre de statut. | `minimal-ui`            |
 | `minimal-ui`     | L'application va ressembler et se comporter comme une application autonome, mais elle aura quelques élements d'interface permettant de contrôler la navigation. Les éléments varient en fonction du navigateur web.                                                                                                                                                                     | `browser`               |
 | `browser`        | L'application s'ouvre dans un nouvel onglet ou une nouvelle fenêtre du navigateur, en fonction du navigateur et de la plateforme. C'est la valeur par défaut.                                                                                                                                                                                                                           | (None)                  |
 
-> **Note :** Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant  la fonction [display-mode](/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
+> **Note :** Vous pouvez appliquer les CSS de manière séléctive pour votre application en fonction du mode d'affichage en utilisant  la fonction [display-mode](/docs/Web/CSS/@media/display-mode). Cela peut être utilisé pour fournir une expérience utilisateur cohérente entre le lancement à partir d'une URL et le lancement à partir d'une icône de bureau.
 
 ### `icons`
 
@@ -162,7 +162,7 @@ Les objets image peuvent contenir les valeurs suivantes :
     <tr>
       <td><code>src</code></td>
       <td>
-        Le chemin du fichier image. Si <code>src</code> est une URL relative,
+        Le chemin du fichier image. Si <code>src</code> est une URL relative,
         l'URL de base sera celle du manifeste.
       </td>
     </tr>
@@ -214,7 +214,7 @@ L'orientation peut être l'une des valeurs suivantes:
 
 ### `prefer_related_applications`
 
-Une valeur boléenne qui indique à l'agent utilisateur si une application liée doit être préférée à l'application web. Cela ne devrait être utilisé que si les applications natives concernées offrent vraiment quelque chose que l'application Web ne peut pas faire.
+Une valeur boléenne qui indique à l'agent utilisateur si une application liée doit être préférée à l'application web. Cela ne devrait être utilisé que si les applications natives concernées offrent vraiment quelque chose que l'application Web ne peut pas faire.
 
 ```json
 "prefer_related_applications": "false"

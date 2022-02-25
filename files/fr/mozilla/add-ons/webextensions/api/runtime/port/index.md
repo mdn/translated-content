@@ -65,7 +65,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `postMessage`
   - : `function`. Envoyer un message à l'autre extrémité. Cela prend un argument, qui est un objet JSON représentant le message à envoyer. Il sera fourni à tout script écoutant l'événement `onMessage` du port, ou à l'application native si ce port est connecté à une application native.
 - `sender`{{optional_inline}}
-  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contient des informations sur l'expéditeur du message. ette propriété ne sera présente que sur les ports transmis aux écouteurs `onConnect`/`onConnectExternal`.
+  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contient des informations sur l'expéditeur du message. ette propriété ne sera présente que sur les ports transmis aux écouteurs `onConnect`/`onConnectExternal`.
 
 ## Compatibilité du navigateur
 

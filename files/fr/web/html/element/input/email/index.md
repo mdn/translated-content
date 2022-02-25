@@ -338,7 +338,7 @@ L'élément {{HTMLElement("label")}} qui précède l'élément `<input>` permett
         {{htmlattrxref("multiple", "input")}},
         {{htmlattrxref("pattern", "input")}},
         {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}}, {{htmlattrxref("required", "input")}}
+        {{htmlattrxref("readonly", "input")}}, {{htmlattrxref("required", "input")}}
         et {{htmlattrxref("size", "input")}}
       </td>
     </tr>

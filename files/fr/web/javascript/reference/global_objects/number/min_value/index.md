@@ -21,7 +21,7 @@ La propriété `MIN_VALUE` représente le nombre positif le plus proche de 0 et 
 
 `MIN_VALUE` vaut environ 5e-324. Les valeurs inférieures à `MIN_VALUE` sont converties en 0.
 
-`MIN_VALUE` est une propriété statique de {{jsxref("Number")}} et doit donc être utilisée avec la syntaxe `Number.MIN_VALUE`, et non pas via la propriété d'un objet `Number` qui aurait été instancié.
+`MIN_VALUE` est une propriété statique de {{jsxref("Number")}} et doit donc être utilisée avec la syntaxe `Number.MIN_VALUE`, et non pas via la propriété d'un objet `Number` qui aurait été instancié.
 
 ## Exemples
 

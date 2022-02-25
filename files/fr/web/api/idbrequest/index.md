@@ -41,7 +41,7 @@ _Hérite des propriétés de {{domxref("EventTarget")}}._
 - {{domxref("IDBRequest.transaction","transaction")}} {{readonlyInline}}
   - : La propriété **`transaction`** de l'interface **`IDBRequest`** renvoie la {{domxref("IDBTransaction","transaction")}} dans laquelle on fait la requête. La propriété peut renvoyer `null` si requête se fait sans transaction, comme un objet IDBRequest renvoyé par {{domxref("IDBFactory.open")}} dans ce cas on est juste connecté à la base de données.
 - {{domxref("IDBRequest.readyState","readyState")}} {{readonlyInline}}
-  - : La propriété **`readyState`** de l'interface **`IDBRequest`** renvoie l'état de la requête. Chaque requête débute avec un statut `pending` et passe au statut `done` quand la requête réussie ou échoue.
+  - : La propriété **`readyState`** de l'interface **`IDBRequest`** renvoie l'état de la requête. Chaque requête débute avec un statut `pending` et passe au statut `done` quand la requête réussie ou échoue.
 
 ## Méthodes
 

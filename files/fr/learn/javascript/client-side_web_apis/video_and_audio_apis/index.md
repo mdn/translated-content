@@ -16,14 +16,14 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 
-HTML5 fournit des éléments pour intégrer du multimédia dans les documents — {{htmlelement("video")}} et {{htmlelement("audio")}} — et qui viennent avec leurs propres APIs pour contrôler la lecture, se déplacer dans le flux, etc*.* Cet article montre comment réaliser les tâches les plus communes, comme créer des contrôles de lectures personnalisés.
+HTML5 fournit des éléments pour intégrer du multimédia dans les documents — {{htmlelement("video")}} et {{htmlelement("audio")}} — et qui viennent avec leurs propres APIs pour contrôler la lecture, se déplacer dans le flux, etc*.* Cet article montre comment réaliser les tâches les plus communes, comme créer des contrôles de lectures personnalisés.
 
 <table class="standard-table">
   <tbody>
     <tr>
       <th scope="row">Prérequis:</th>
       <td>
-        Les bases du JavaScript (voir <a
+        Les bases du JavaScript (voir <a
           href="/fr/docs/Learn/JavaScript/First_steps"
           >premiers pas en JavaScript</a
         >,
@@ -31,7 +31,7 @@ HTML5 fournit des éléments pour intégrer du multimédia dans les documents �
           >les briques Javascript</a
         >,
         <a href="/fr/docs/Learn/JavaScript/Objects">Introduction aux objets</a
-        >), <a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction"
+        >), <a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction"
           >Introduction aux APIs web</a
         >
       </td>
@@ -46,9 +46,9 @@ HTML5 fournit des éléments pour intégrer du multimédia dans les documents �
   </tbody>
 </table>
 
-## Les balises HTML5 video et audio
+## Les balises HTML5 video et audio
 
-Les balises {{htmlelement("video")}} et {{htmlelement("audio")}} permettent d'intégrer des vidéos et de l'audio dans des pages web. Comme nous l'avons montré dans [Contenu audio et vidéo](/fr/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video), une implémentation habituelle ressemble à ça :
+Les balises {{htmlelement("video")}} et {{htmlelement("audio")}} permettent d'intégrer des vidéos et de l'audio dans des pages web. Comme nous l'avons montré dans [Contenu audio et vidéo](/fr/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video), une implémentation habituelle ressemble à ça :
 
 ```html
 <video controls>
@@ -62,17 +62,17 @@ Cela crée un lecteur vidéo à l'intérieur du navigateur:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-Vous pouvez consulter toutes fonctionnalités HTML audio et vidéo dans l'article mentionné précédemment. Pour notre utilisation ici, l'attribut le plus intéressant est {{htmlattrxref("controls", "video")}}. Il permet d'activer l'ensemble des contrôles de lecture par défaut; si vous ne le spécifiez pas, vous aucun contrôle ne sera affiché:
+Vous pouvez consulter toutes fonctionnalités HTML audio et vidéo dans l'article mentionné précédemment. Pour notre utilisation ici, l'attribut le plus intéressant est {{htmlattrxref("controls", "video")}}. Il permet d'activer l'ensemble des contrôles de lecture par défaut; si vous ne le spécifiez pas, vous aucun contrôle ne sera affiché:
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
-Ce n'est pas immédiatement utile pour la lecture de vidéos, mais ça a des avantages. Les contrôles natifs des navigateurs différent complètement d'un navigateur à l'autre — ce qui est embêtant pour un support global des différents navigateurs. Un autre problème est que le contrôles natifs sont généralement assez peu accessibles au clavier.
+Ce n'est pas immédiatement utile pour la lecture de vidéos, mais ça a des avantages. Les contrôles natifs des navigateurs différent complètement d'un navigateur à l'autre — ce qui est embêtant pour un support global des différents navigateurs. Un autre problème est que le contrôles natifs sont généralement assez peu accessibles au clavier.
 
 Vous pouvez régler ces deux problèmes en cachant les contrôles natifs (en supprimant l'attribut `controls`) et en les remplaçant par les votres en HTML, CSS et JavaScript. Dans la prochaine section, nous verrons les outils de base à notre disposition pour faire ça.
 
 ## L'API HTMLMediaElement
 
-L'API {{domxref("HTMLMediaElement")}}, spécifiée dans HTML5, fournit des fonctionnalités qui permettent de controller des lecteurs audio et vidéo avec JavaScript — avec par exemple {{domxref("HTMLMediaElement.play()")}} ou encore {{domxref("HTMLMediaElement.pause()")}}. Cette interface est disponible à la fois pour les balises {{htmlelement("audio")}} et {{htmlelement("video")}}, les fonctionnalités utiles pour les deux étant quasiment identiques. Voyons un exemple pour découvrir ces fonctionnalités.
+L'API {{domxref("HTMLMediaElement")}}, spécifiée dans HTML5, fournit des fonctionnalités qui permettent de controller des lecteurs audio et vidéo avec JavaScript — avec par exemple {{domxref("HTMLMediaElement.play()")}} ou encore {{domxref("HTMLMediaElement.pause()")}}. Cette interface est disponible à la fois pour les balises {{htmlelement("audio")}} et {{htmlelement("video")}}, les fonctionnalités utiles pour les deux étant quasiment identiques. Voyons un exemple pour découvrir ces fonctionnalités.
 
 Notre exemple final ressemblera (et fonctionnera) comme ceci:
 
@@ -80,9 +80,9 @@ Notre exemple final ressemblera (et fonctionnera) comme ceci:
 
 ### Débuter
 
-Pour commencer avec cet exemple, [télechargez notre media-player-start.zip](https://github.com/mdn/learning-area/raw/master/javascript/apis/video-audio/start/media-player-start.zip) et décompressez-le dans un nouveau dossier sur votre disque dur. Si vous avez téléchargé notre dépôt d'exemples, vous le trouverez dans `javascript/apis/video-audio/start/`.
+Pour commencer avec cet exemple, [télechargez notre media-player-start.zip](https://github.com/mdn/learning-area/raw/master/javascript/apis/video-audio/start/media-player-start.zip) et décompressez-le dans un nouveau dossier sur votre disque dur. Si vous avez téléchargé notre dépôt d'exemples, vous le trouverez dans `javascript/apis/video-audio/start/`.
 
-Si vous ouvrez la page HTML, vous devriez voir un lecteur HTML5 utilisant les contrôles natifs.
+Si vous ouvrez la page HTML, vous devriez voir un lecteur HTML5 utilisant les contrôles natifs.
 
 #### Exploration du HTML
 
@@ -110,10 +110,10 @@ Ouvrez le fichier HTML d'index. Vous allez voir que le HTML contient majoritaire
 
 - Le lecteur complet est englobé dans une balise {{htmlelement("div")}} pour pouvoir appliquer du style sur le bloc complet si nécessaire.
 - La balise {{htmlelement("video")}} contient deux éléments {{htmlelement("source")}} pour permettre la lecture du média selon les capacités de chaque navigateur.
-- La partie _controls_ du HTML est la plus intéressante:
+- La partie _controls_ du HTML est la plus intéressante:
 
   - Il contient 4 {{htmlelement("button")}} : lecture/mise en pause, stop, retour arrière et avance rapide.
-  - Chaque `<button>` a un nom de classe, un attribut `data-icon` (pour définir l'icône affichée), et un attribut `aria-label` (qui fournit une description de chaque bouton pour le rendre accessible). Le contenu d'un attribut `aria-label` est lu par les lecteurs d'écran quand l'élément sur lequel il se situe prend le focus.
+  - Chaque `<button>` a un nom de classe, un attribut `data-icon` (pour définir l'icône affichée), et un attribut `aria-label` (qui fournit une description de chaque bouton pour le rendre accessible). Le contenu d'un attribut `aria-label` est lu par les lecteurs d'écran quand l'élément sur lequel il se situe prend le focus.
   - Il y a également un élément {{htmlelement("div")}}, qui affiche le temps écoulé quand la vidéo est en cours de lecture. Pour s'amuser, nous avons mis deux mécanismes en place — un {{htmlelement("span")}} qui affiche le temps écoulé en minutes/secondes, et un autre `<div>` pour afficher une barre de progrès. Pour vous faire une idée du produit final, vous pouvez jeter un d'oeil à [la version finie](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/).
 
 #### Exploration du CSS
@@ -238,7 +238,7 @@ Nous avons déjà une interface HTML et CSS assez complète; nous avons maintena
 
     - L'élément `<video>`, et la barre de contrôle.
     - Les boutons play/pause, stop, retour arrière, et avance rapide.
-    - Le `<div>` externe, le `<span>` qui décompte le temps écoulé, et le `<div>` interne qui affiche le progrès de la vidéo.
+    - Le `<div>` externe, le `<span>` qui décompte le temps écoulé, et le `<div>` interne qui affiche le progrès de la vidéo.
 
 3.  Ensuite, insérez ce qui suit en bas de votre code:
 
@@ -273,7 +273,7 @@ Imlémentons le contrôle le plus important — le bouton play/pause.
     }
     ```
 
-    Ici, nous utilisons une instruction [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) pour vérifier si la vidéo est en pause. La propriété {{domxref("HTMLMediaElement.paused")}} retourne vrai si le média est en pause — c'est le cas quand la vidéo n'est pas en cours de lecture, y compris quand la vidéo est au début après son chargement. Si elle est en pause, nous définissons la valeur de l'attribut `data-icon` à "u", qui est une icône "en pause", et invoquons la  méthode {{domxref("HTMLMediaElement.play()")}} pour jouer le média.
+    Ici, nous utilisons une instruction [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) pour vérifier si la vidéo est en pause. La propriété {{domxref("HTMLMediaElement.paused")}} retourne vrai si le média est en pause — c'est le cas quand la vidéo n'est pas en cours de lecture, y compris quand la vidéo est au début après son chargement. Si elle est en pause, nous définissons la valeur de l'attribut `data-icon` à "u", qui est une icône "en pause", et invoquons la  méthode {{domxref("HTMLMediaElement.play()")}} pour jouer le média.
 
     Au second clic, le bouton sera de nouveau alterné — l'icône "play" sera affiché, et la vidéo sera mise en pause avec {{domxref("HTMLMediaElement.paused()")}}.
 
@@ -357,7 +357,7 @@ Il y a différentes manières d'implémenter le retour arrière et l'avance rapi
     1.  Nous effaçons les classes et intervales qui sont définits sur la fonctionnalité d'avance rapide — de cette manière, si on presse le bouton `rwd` après avoir pressé le bouton `fwd`, on annule l'avance rapide et la remplaçons avec le retour arrière. Si on essayait de faire les deux à la fois, le lecteur échouerait.
     2.  Nous utilisons une instruction `if` pour vérifier si la classe `active` a été définie sur le bouton `rwd`, ce qui indique qu'il a déjà été pressé. La propriété {{domxref("classList")}} est une propriété plutôt pratique qui existe sur chaque élément — elle contient une liste de toutes les classes définies sur l'élément, ainsi que des méthodes pour en ajouter/supprimer, etc. Nous utilisons la méthode `classList.contains()` pour vérifier si la liste contient la classe `active`. Cela retourne un booléen `true`/`false` en résultat.
     3.  Si la classe `active` a été définie sur le bouton `rwd`, nous la supprimons avec `classList.remove()`, effaçons l'intervale qui a été définit sur le bouton quand il a été pressé (voir ci-dessous pour plus d'explication), et utilisons {{domxref("HTMLMediaElement.play()")}} pour annuler le retour arrière et démarrer la vidéo normalement.
-    4.  Sinon, nous ajoutons la classe `active` sur le bouton `rwd` avec `classList.add()`, mettons la vidéo en pause en utilisant {{domxref("HTMLMediaElement.pause()")}}, puis définissons la variable `intervalRwd` en appelant {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}. Quand elle invoquée, la fonction `setInterval()` créé un intervale actif, ce qui signifie qu'une fonction donnée en paramètre est exécutée toutes les x millisecondes — x est la valeur du 2ème paramètre. Ainsi, nous exécutons ici la fonction `windBackward()` toutes les 200 millisecondes — nous utiliserons cette fonction pour retourner la fonction en arrière de manière constante. Pour stopper un intervale actif, vous devez appeler {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} en lui donnant l'intervale à arrêter en paramètre, dans notre cas il est stocké dans la variable `intervalRwd` (voir l'appel à `clearInterval()` effectué plus tôt dans la fonction).
+    4.  Sinon, nous ajoutons la classe `active` sur le bouton `rwd` avec `classList.add()`, mettons la vidéo en pause en utilisant {{domxref("HTMLMediaElement.pause()")}}, puis définissons la variable `intervalRwd` en appelant {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}}. Quand elle invoquée, la fonction `setInterval()` créé un intervale actif, ce qui signifie qu'une fonction donnée en paramètre est exécutée toutes les x millisecondes — x est la valeur du 2ème paramètre. Ainsi, nous exécutons ici la fonction `windBackward()` toutes les 200 millisecondes — nous utiliserons cette fonction pour retourner la fonction en arrière de manière constante. Pour stopper un intervale actif, vous devez appeler {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} en lui donnant l'intervale à arrêter en paramètre, dans notre cas il est stocké dans la variable `intervalRwd` (voir l'appel à `clearInterval()` effectué plus tôt dans la fonction).
 
 3.  Pour en finir avec cette section, nous devons définir les fonctions `windBackward()` et `windForward()` invoquées dans les appels `setInterval()`. Ajoutez ce qui suit après les deux fonctions précédentes:
 
@@ -431,7 +431,7 @@ C'est une fonction assez longue, alors allons-y étape par étape:
 
 1.  Tout d'abord, nous récupérons le nombre de minutes et de secondes à partir de {{domxref("HTMLMediaElement.currentTime")}}.
 2.  Ensuite, on initialise deux variables supplémentaires — `minuteValue` et `secondValue`.
-3.  Les deux instructions `if` qui suivent déterminent si le nombre de minutes et secondes est inférieur à 10. Si c'est le cas, on ajoute un zéro à gauche pour afficher le numéro sur deux chiffres — comme sur une horloge digitale.
+3.  Les deux instructions `if` qui suivent déterminent si le nombre de minutes et secondes est inférieur à 10. Si c'est le cas, on ajoute un zéro à gauche pour afficher le numéro sur deux chiffres — comme sur une horloge digitale.
 4.  Le temps est au final la concaténation de `minuteValue`, un caractère deux-points, et `secondValue`.
 5.  Le temps qu'on vient de définir devient la valeur {{domxref("Node.textContent")}} du décompte, pour qu'il s'affiche dans l'interface utilisateur.
 6.  La largeur que nous devons donner `<div>` intérieur est calculée en récupérant la largeur du `<div>` externe (la propriété {{domxref("HTMLElement.clientWidth", "clientWidth")}} retourne la largeur de l'élément), et en la multipliant par {{domxref("HTMLMediaElement.currentTime")}} divisé par le total {{domxref("HTMLMediaElement.duration")}} du média.

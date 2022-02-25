@@ -8,9 +8,9 @@ translation_of: Web/SVG/Attribute/height
 ---
 « [SVG Attribute reference home](/fr/SVG/Attribute "en/SVG/Attribute")
 
-Cet attribut indique une dimension verticale `<length>` dans le système de coordonnées. La donnée (ou coordonnée) définie par cet attribut dépend de l'élément sur lequel il est appliqué. La plupart du temps, il représente la hauteur de la région rectangulaire composant l'élément (voir les exceptions dans la documentation pour chaque type d'élément).
+Cet attribut indique une dimension verticale `<length>` dans le système de coordonnées. La donnée (ou coordonnée) définie par cet attribut dépend de l'élément sur lequel il est appliqué. La plupart du temps, il représente la hauteur de la région rectangulaire composant l'élément (voir les exceptions dans la documentation pour chaque type d'élément).
 
-Cet attribut doit être spécifié, hormis pour les éléments {{ SVGElement("svg") }} dont la valeur par défaut est de 100% et {{ SVGElement("mask") }} dont la valeur par défaut est de 120%.
+Cet attribut doit être spécifié, hormis pour les éléments {{ SVGElement("svg") }} dont la valeur par défaut est de 100% et {{ SVGElement("mask") }} dont la valeur par défaut est de 120%.
 
 ## Contexte d'utilisation
 
@@ -83,7 +83,7 @@ Cet attribut doit être spécifié, hormis pour les éléments {{ SVGElement("sv
 
 ## Eléments
 
-Les éléments suivants peuvent utiliser l'attribut `height`&nbsp;:
+Les éléments suivants peuvent utiliser l'attribut `height`&nbsp;:
 
 - [Filter primitive elements](/fr/SVG/Element#FilterPrimitive "en/SVG/Element#FilterPrimitive")&nbsp;»
 - {{ SVGElement("filter") }}

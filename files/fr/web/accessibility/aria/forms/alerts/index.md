@@ -15,7 +15,7 @@ Vous avez un formulaire – par exemple un formulaire de contact – pour lequel
 
 ## Le formulaire
 
-Tout d’abord, veuillez lire la [technique `aria-required`](/fr/Accessibilité/ARIA/formulaires/Indications_élémentaires_pour_les_formulaires) pour commencer, si vous ne l’avez pas déjà lu, puisque la technique abordée en est le prolongement.
+Tout d’abord, veuillez lire la [technique `aria-required`](/fr/Accessibilité/ARIA/formulaires/Indications_élémentaires_pour_les_formulaires) pour commencer, si vous ne l’avez pas déjà lu, puisque la technique abordée en est le prolongement.
 
 Voici un formulaire simple&nbsp;:
 

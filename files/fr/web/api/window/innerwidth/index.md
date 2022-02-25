@@ -23,7 +23,7 @@ Voir aussi&nbsp;: [window.innerHeight](/fr/docs/Web/API/Window/innerHeight), [wi
 
 ## Notes
 
-La propriété `innerWidth` est supportée par tous les objet "window" comme par exemple une fenêtre, une frame, un frameset, ou une fenêtre secondaire.
+La propriété `innerWidth` est supportée par tous les objet "window" comme par exemple une fenêtre, une frame, un frameset, ou une fenêtre secondaire.
 
 ## Example
 

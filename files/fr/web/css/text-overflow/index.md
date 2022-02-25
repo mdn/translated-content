@@ -11,9 +11,9 @@ La propriété **`text-overflow`** définit la façon dont le contenu textuel qu
 
 Le rognage se fera à la bordure de la boîte. Afin que le rognage se fasse plus tôt, à la limite des caractères, on peut utiliser la chaîne vide (`''`).
 
-Cette propriété n'affecte que le contenu qui dépasse de la boîte englobante dans le sens de la progression en ligne. Par exemple, on ne parle pas ici du texte qui dépasserait vers le bas d'une boîte. Le texte peut dépasser lorsqu'on empêche le retour automatique à la ligne (par exemple avec `white-space: nowrap`) ou lorsqu'un seul mot est trop long pour tenir dans le conteneur.
+Cette propriété n'affecte que le contenu qui dépasse de la boîte englobante dans le sens de la progression en ligne. Par exemple, on ne parle pas ici du texte qui dépasserait vers le bas d'une boîte. Le texte peut dépasser lorsqu'on empêche le retour automatique à la ligne (par exemple avec `white-space: nowrap`) ou lorsqu'un seul mot est trop long pour tenir dans le conteneur.
 
-Cette  propriété CSS ne force pas le dépassement. Pour ce faire et afin que `text-overflow` soit appliqué, l'auteur devra ajouter des propriétés supplémentaires sur l'élément, notamment : {{cssxref("overflow")}} avec `hidden` et {{cssxref("white-space")}} avec `nowrap`.
+Cette  propriété CSS ne force pas le dépassement. Pour ce faire et afin que `text-overflow` soit appliqué, l'auteur devra ajouter des propriétés supplémentaires sur l'élément, notamment : {{cssxref("overflow")}} avec `hidden` et {{cssxref("white-space")}} avec `nowrap`.
 
 ## Syntaxe
 

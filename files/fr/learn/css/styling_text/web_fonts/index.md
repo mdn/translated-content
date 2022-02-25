@@ -135,7 +135,7 @@ Vous devriez obtenir une page de démonstration avec les belles polices impléme
 
 ## Utiliser un service de polices en ligne
 
-Les services de polices en ligne stockent et servent généralement des polices pour vous afin que vous n'ayez pas à vous soucier d'écrire le code `@font-face`, et en général, il suffit d'insérer une simple ligne ou deux de code dans votre site pour que tout fonctionne. Les exemples incluent [Typekit](https://typekit.com/) and [Cloud.typography](http://www.typography.com/cloud/welcome/). La plupart de ces services sont fondés sur l'abonnement, à l'exception notable de [Google Fonts](https://www.google.com/fonts), un service gratuit utile, en particulier pour les tests rapides et la rédaction de démos.
+Les services de polices en ligne stockent et servent généralement des polices pour vous afin que vous n'ayez pas à vous soucier d'écrire le code `@font-face`, et en général, il suffit d'insérer une simple ligne ou deux de code dans votre site pour que tout fonctionne. Les exemples incluent [Typekit](https://typekit.com/) and [Cloud.typography](http://www.typography.com/cloud/welcome/). La plupart de ces services sont fondés sur l'abonnement, à l'exception notable de [Google Fonts](https://www.google.com/fonts), un service gratuit utile, en particulier pour les tests rapides et la rédaction de démos.
 
 
 
@@ -152,7 +152,7 @@ La plupart de ces services sont faciles à utiliser, donc nous n'en parlerons pa
 
 ## @font-face plus en détail
 
-Examinons la syntaxe générée par fontsquirrel pour `@font-face`. C'est un bloc de ce type&nbsp;:
+Examinons la syntaxe générée par fontsquirrel pour `@font-face`. C'est un bloc de ce type&nbsp;:
 
 ```css
 @font-face {

@@ -30,7 +30,7 @@ L'exponentielle du nombre passé en argument (`e^x`).
 
 ## Description
 
-`exp()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.exp()`, elle ne doit pas être utilisée avec un objet qui aurait été créé (`Math` n'est pas un constructeur).
+`exp()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.exp()`, elle ne doit pas être utilisée avec un objet qui aurait été créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 

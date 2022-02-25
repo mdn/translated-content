@@ -41,9 +41,9 @@ Dans ce premier article sur les objets JavaScript, nous verrons la syntaxe des o
 
 ## Les bases de l'objet
 
-Un objet est une collection de données apparentées et/ou de fonctionnalités (qui, souvent, se composent de plusieurs variables et fonctions, appelées propriétés et méthodes quand elles sont dans des objets). Prenons un exemple pour voir à quoi cela ressemble.
+Un objet est une collection de données apparentées et/ou de fonctionnalités (qui, souvent, se composent de plusieurs variables et fonctions, appelées propriétés et méthodes quand elles sont dans des objets). Prenons un exemple pour voir à quoi cela ressemble.
 
-Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cette exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs#La_console_JavaScript) ouverte et prête, pour y saisir des commandes.
+Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cette exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs#La_console_JavaScript) ouverte et prête, pour y saisir des commandes.
 
 Comme souvent dans JavaScript, pour créer un objet, on commence avec la définition et l'initialisation d'une variable. Essayez de mettre le code ci-dessous sous le code déjà écrit de votre fichier JavaScript, puis sauvegardez et rafraichissez la page :
 
@@ -51,7 +51,7 @@ Comme souvent dans JavaScript, pour créer un objet, on commence avec la défini
 var personne = {};
 ```
 
-Désormais ouvrez la [console JavaScript](/fr/docs/Outils/Console_JavaScript#Ouvrir_la_Console_du_navigateur) de votre navigateur, saisissez `personne` à l'intérieur, et appuyez sur <kbd>Entrée</kbd>. Vous devriez obtenir le résultat suivant :
+Désormais ouvrez la [console JavaScript](/fr/docs/Outils/Console_JavaScript#Ouvrir_la_Console_du_navigateur) de votre navigateur, saisissez `personne` à l'intérieur, et appuyez sur <kbd>Entrée</kbd>. Vous devriez obtenir le résultat suivant :
 
 ```js
 [object Object]
@@ -74,7 +74,7 @@ var personne = {
 };
 ```
 
-Après avoir sauvegardé et rafraîchit la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input` :
+Après avoir sauvegardé et rafraîchit la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input` :
 
 ```js
 personne.nom

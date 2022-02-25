@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getPrototyp
 ---
 {{JSRef}}
 
-La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.
+La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.
 
 {{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
 

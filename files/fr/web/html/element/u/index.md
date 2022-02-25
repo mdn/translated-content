@@ -189,5 +189,5 @@ Les titres de livres doivent être indiqués avec un élément {{HTMLElement("ci
 
 ## Voir aussi
 
-- Les éléments {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}} et {{HTMLElement("cite")}} qui, selon les cas, peuvent être utilisés à la place de `<u>`.
+- Les éléments {{HTMLElement("span")}}, {{HTMLElement("i")}}, {{HTMLElement("em")}}, {{HTMLElement("b")}} et {{HTMLElement("cite")}} qui, selon les cas, peuvent être utilisés à la place de `<u>`.
 - La propriété CSS {{cssxref("text-decoration")}} qui permet d'obtenir un effet stylistique semblable à la mise en forme par défaut d'un élément `<u>`.

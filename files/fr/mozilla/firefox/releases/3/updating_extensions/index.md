@@ -134,7 +134,7 @@ Les interfaces suivantes ont été retirées de Gecko 1.9, sur lequel se base Fi
 - `nsIDOMScrollListener`
 - `nsIDOMMutationListener`
 - `nsIDOMPageTransitionListener`
-- `nsICloseAllWindows` (voir le [bug 386200](https://bugzilla.mozilla.org/show_bug.cgi?id=386200 'FIXED: SeaMonkey only: no "view cert button" in untrusted cert error dialog'))
+- `nsICloseAllWindows` (voir le [bug 386200](https://bugzilla.mozilla.org/show_bug.cgi?id=386200 'FIXED: SeaMonkey only: no "view cert button" in untrusted cert error dialog'))
 
 ### Quatrième étape&nbsp;: vérifier les changements chrome appropriés
 
@@ -167,17 +167,17 @@ Ou utilisez la technique suivante pour que votre overlay fonctionne tant avec Fi
 _Ajoutez ici les changements simples que vous avez dû faire à vos extensions pour qu'elles fonctionnent avec Firefox 3._
 
 - `chrome://browser/base/utilityOverlay.js` n'est plus géré pour des raisons de sécurité. Si vous l'utilisiez auparavant, vous devriez passer à `chrome://browser/content/utilityOverlay.js`.
-- Les implémentations de [`nsIAboutModule`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) doivent à présent supporter la méthode `getURIFlags`. Consultez [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) pour la documentation. Ceci affecte les extensions qui fournissent de nouvelles URI `about:`. ([bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746 'FIXED: [FIX]Move "safe about" hardcoding out of security manager'))
-- L'élément [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) ne fait plus partie du «&nbsp;toolkit&nbsp;» ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). Cela signifie qu'il n'est plus disponible pour les applications XUL et extensions. Il continue cependant à être utilisé dans la fenêtre principale de Firefox (browser.xul).
+- Les implémentations de [`nsIAboutModule`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) doivent à présent supporter la méthode `getURIFlags`. Consultez [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/public/nsIAboutModule.idl) pour la documentation. Ceci affecte les extensions qui fournissent de nouvelles URI `about:`. ([bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746 'FIXED: [FIX]Move "safe about" hardcoding out of security manager'))
+- L'élément [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) ne fait plus partie du «&nbsp;toolkit&nbsp;» ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). Cela signifie qu'il n'est plus disponible pour les applications XUL et extensions. Il continue cependant à être utilisé dans la fenêtre principale de Firefox (browser.xul).
 - Les changements dans les [proxys nsISupports](/fr/Proxys_nsISupports) et éventuellement aux interfaces liées aux threads doivent être documentés.
-- Si vous utilisez des instructions de traitement XML comme `<?xml-stylesheet ?>` dans vos fichiers XUL, tenez compte des changements effectués dans le [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654)&nbsp;:
+- Si vous utilisez des instructions de traitement XML comme `<?xml-stylesheet ?>` dans vos fichiers XUL, tenez compte des changements effectués dans le [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654)&nbsp;:
 
   1.  Les instructions de traitement XML sont à présent ajoutées au DOM des documents XUL. Cela signifie que [`document.firstChild`](/fr/docs/Web/API/Document/firstChild) n'est plus forcément l'élément racine. Si vous avez besoin de l'élément racine dans votre script, utilisez plutôt [`document.documentElement`](/fr/docs/Web/API/Document/documentElement).
   2.  Les instructions de traitement `<?xml-stylesheet ?>` et `<?xul-overlay ?>` n'ont plus d'effet en dehors du prologue du document.
 
-- `window.addEventListener("load", myFunc, true)` n'est pas déclenché au chargement de contenu web (chargement de page dans le navigateur). Ceci est causé par le [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) qui modifie la manière dont les fenêtres internes et externes communiquent. Une correction simple est d'utiliser `gBrowser.addEventListener("load", myFunc, true)` comme décrit dans [les exemples de code](/fr/Extraits_de_code/Onglets_de_navigation#D.C3.A9tection_du_chargement_d.27une_page) et qui fonctionnera dans Firefox 2 également.
+- `window.addEventListener("load", myFunc, true)` n'est pas déclenché au chargement de contenu web (chargement de page dans le navigateur). Ceci est causé par le [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) qui modifie la manière dont les fenêtres internes et externes communiquent. Une correction simple est d'utiliser `gBrowser.addEventListener("load", myFunc, true)` comme décrit dans [les exemples de code](/fr/Extraits_de_code/Onglets_de_navigation#D.C3.A9tection_du_chargement_d.27une_page) et qui fonctionnera dans Firefox 2 également.
 - `content.window.getSelection()` fournit un objet (qui peut être converti en une chaîne avec `toString()`), contrairement à l'ancienne `content.document.getSelection()`, à présent dépréciée, qui renvoie une chaîne.
 - `event.preventBubble()` avait été dépréciée dans Firefox 2 et a été retirée de Firefox 3. Utilisez [`event.stopPropagation()`](/fr/DOM/event.stopPropagation), qui fonctionne également dans Firefox 2.
-- Les timers initialisés par`setTimeout()` sont à présent bloqués par les fenêtres modales suite à la correction du [bug 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209). Vous pouvez utiliser `nsITimer` à la place.
+- Les timers initialisés par`setTimeout()` sont à présent bloqués par les fenêtres modales suite à la correction du [bug 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209). Vous pouvez utiliser `nsITimer` à la place.
 - Si votre extension doit permettre à une source non sûre (par exemple un site web) d'accéder au chrome de l'extension, vous devrez utiliser le nouveau paramètre [`contentaccessible`](/fr/Enregistrement_chrome#contentaccessible).
 - FireFox 3.6 est sensible aux accents dans les pages XUL ! Il faut donc soigneusement enlever toute ponctuation, même dans les commentaires.

@@ -210,7 +210,7 @@ setTimeout(monTableau.maMéthode, 1500, '1');
 // affiche "undefined" après 1.5 seconde
 ```
 
-La fonction `monTableau.maMéthode` est pasée à `setTimeout` et, lorsqu'elle est appelée, `this` n'est pas défini et le moteur utilise la valeur par défaut : `window`. Il n'y apas d'option qui permettent de passer une valeur  `thisArg` à `setTimeout()` comme on peut le faire avec {{jsxref("Array.prototype.forEach()")}} ou {{jsxref("Array.prototype.reduce()")}} par exemple. Aussi, utiliser `call()` afin de définir `this` ne fonctionnera pas non plus.
+La fonction `monTableau.maMéthode` est pasée à `setTimeout` et, lorsqu'elle est appelée, `this` n'est pas défini et le moteur utilise la valeur par défaut : `window`. Il n'y apas d'option qui permettent de passer une valeur  `thisArg` à `setTimeout()` comme on peut le faire avec {{jsxref("Array.prototype.forEach()")}} ou {{jsxref("Array.prototype.reduce()")}} par exemple. Aussi, utiliser `call()` afin de définir `this` ne fonctionnera pas non plus.
 
 ```js
 setTimeout.call(monTableau, monTableau.maMéthode, 2000);

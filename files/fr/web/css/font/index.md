@@ -67,7 +67,7 @@ Si `font` est définie comme une propriété raccourcie :
 - Les valeurs pour `font-style`, `font-variant` et `font-weight` doivent précéder la valeur pour `font-size`
 - La valeur de `font-variant` ne peut utiliser que les valeurs définies en CSS 2.1 : `normal` et `small-caps`
 - La valeur de `font-stretch` ne peut être qu'un mot-clé.
-- La valeur pour `line-height` doit immédiatement suivre la valeur pour `font-size`, séparée par une barre oblique (par exemple "`16px/3`")
+- La valeur pour `line-height` doit immédiatement suivre la valeur pour `font-size`, séparée par une barre oblique (par exemple "`16px/3`")
 - La valeur pour `font-family` doit être la dernière fournie.
 
 ### Valeurs

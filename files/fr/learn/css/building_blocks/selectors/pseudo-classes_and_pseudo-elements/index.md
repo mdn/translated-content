@@ -14,7 +14,7 @@ original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 
-Voyons maintenant les sélecteurs de **pseudo-classes** et de **pseudo-éléments**. Il en existe un grand nombre, ces sélecteurs sont souvent assez spécifiques. Une fois que vous aurez compris comment les utiliser, revenez consulter leur liste pour voir si quelque chose peut fonctionner dans la tâche que vous essayez d'accomplir. Une fois encore, vérifiez la prise en charge par les navigateurs sur la page MDN associée à chaque sélecteur.
+Voyons maintenant les sélecteurs de **pseudo-classes** et de **pseudo-éléments**. Il en existe un grand nombre, ces sélecteurs sont souvent assez spécifiques. Une fois que vous aurez compris comment les utiliser, revenez consulter leur liste pour voir si quelque chose peut fonctionner dans la tâche que vous essayez d'accomplir. Une fois encore, vérifiez la prise en charge par les navigateurs sur la page MDN associée à chaque sélecteur.
 
 <table class="standard-table">
   <tbody>
@@ -25,13 +25,13 @@ Voyons maintenant les sélecteurs de **pseudo-classes** et de **pseudo-élémen
         <a
           href="/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
           >suite logicielle de base installée</a
-        >, compétences élémentaires pour <a
+        >, compétences élémentaires pour <a
           href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >travailler avec des fichiers</a
-        >, connaissance de base du HTML  (cf. <a
+        >, connaissance de base du HTML  (cf. <a
           href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction à HTML</a
-        >), et une idée de <a
+        >), et une idée de <a
           href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
           >Comment fonctionne CSS</a
         >.
@@ -46,23 +46,23 @@ Voyons maintenant les sélecteurs de **pseudo-classes** et de **pseudo-élémen
 
 ## Qu'est ce qu'une pseudo-classe ?
 
-Une pseudo-classe est un sélecteur ciblant des éléments dans un état spécifique, par ex. le premier élément d'un type, ou un élément survolé par le pointeur de la souris. Leur comportement correspond à celui d'une classe, mais qui ne s'appliquerait que partiellement. On gagne ainsi en flexibilité, en éliminant du code inutile. Le résultat est plus facile à maintenir.
+Une pseudo-classe est un sélecteur ciblant des éléments dans un état spécifique, par ex. le premier élément d'un type, ou un élément survolé par le pointeur de la souris. Leur comportement correspond à celui d'une classe, mais qui ne s'appliquerait que partiellement. On gagne ainsi en flexibilité, en éliminant du code inutile. Le résultat est plus facile à maintenir.
 
-Les pseudo-classes sont signalées par un mot clé commençant par deux points `:`
+Les pseudo-classes sont signalées par un mot clé commençant par deux points `:`
 
     :pseudo-class-name
 
 ### Exemple d'une pseudo-classe élémentaire
 
-Voyons cela dans un premier exemple. Pour agrandir et mettre en gras le texte du premier paragraphe d'un article, on pourrait attribuer une classe à ce paragraphe, puis lui ajouter du CSS, comme ci-dessous :
+Voyons cela dans un premier exemple. Pour agrandir et mettre en gras le texte du premier paragraphe d'un article, on pourrait attribuer une classe à ce paragraphe, puis lui ajouter du CSS, comme ci-dessous :
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/first-child.html", '100%', 800)}}
 
-Mais cette solution est difficile à maintenir — que se passe-t-il si un nouveau paragraphe est ajouté en haut du document ? Il faut dans ce cas déplacer manuellement la classe vers le nouveau paragraphe. Une solution plus souple est d'utiliser le sélecteur de pseudo-classe {{cssxref (": first-child")}} — cela cible *dans tous les cas* le premier élément enfant de l'article : plus nécessaire d'éditer le code HTML (particulièrement utile en particulier quand le code HTML est généré par un CMS.)
+Mais cette solution est difficile à maintenir — que se passe-t-il si un nouveau paragraphe est ajouté en haut du document ? Il faut dans ce cas déplacer manuellement la classe vers le nouveau paragraphe. Une solution plus souple est d'utiliser le sélecteur de pseudo-classe {{cssxref (": first-child")}} — cela cible *dans tous les cas* le premier élément enfant de l'article : plus nécessaire d'éditer le code HTML (particulièrement utile en particulier quand le code HTML est généré par un CMS.)
 
 {{EmbedGHLiveSample ("css-examples/learn/selectors/first-child2.html", '100%', 700)}}
 
-Toutes les pseudo-classes se comportent de la même manière. Elles ciblent les éléments du document dans un état donné, comme si vous aviez ajouté une classe dans votre code HTML. Jetez un œil à quelques exemples sur MDN :
+Toutes les pseudo-classes se comportent de la même manière. Elles ciblent les éléments du document dans un état donné, comme si vous aviez ajouté une classe dans votre code HTML. Jetez un œil à quelques exemples sur MDN :
 
 - [`:last-child`](/fr/docs/Web/CSS/:last-child)
 - [`:only-child`](/fr/docs/Web/CSS/:only-child)
@@ -72,12 +72,12 @@ Toutes les pseudo-classes se comportent de la même manière. Elles ciblent les 
 
 Certaines pseudo-classes ne s'appliquent que lorsque l'utilisateur interagit avec le document d'une manière ou d'une autre. Ces pseudo-classes d'action utilisateur, parfois appelées _pseudo-classes dynamiques_, agissent comme si une classe avait été ajoutée à l'élément lorsque l'utilisateur interagit avec lui. Par exemple :
 
-[`:hover`](/fr/docs/Web/CSS/:hover) — mentionné ci-dessus ; s'applique quand l'utilisateur déplace son pointeur sur un élément, généralement un lien.
-[`:focus`](/fr/docs/Web/CSS/:focus) — s'applique uniquement si l'utilisateur concentre l'élément à l'aide des commandes du clavier.
+[`:hover`](/fr/docs/Web/CSS/:hover) — mentionné ci-dessus ; s'applique quand l'utilisateur déplace son pointeur sur un élément, généralement un lien.
+[`:focus`](/fr/docs/Web/CSS/:focus) — s'applique uniquement si l'utilisateur concentre l'élément à l'aide des commandes du clavier.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}
 
-## Qu'est ce qu'un pseudo-élément ?
+## Qu'est ce qu'un pseudo-élément ?
 
 Les pseudo-éléments se comportent de manière similaire, même s'ils se comportent comme si vous aviez ajouté un tout nouvel élément HTML dans le balisage, au lieu d'appliquer une classe à des éléments existants. Les pseudo-éléments commencent avec un double deux-points `::`.
 
@@ -95,7 +95,7 @@ Il agit comme si un `<span>` était comme par magie placé autour de cette premi
 
 Vous pouvez voir que cela sélectionne la première ligne des deux paragraphes.
 
-## Combiner pseudo-classes et pseudo-éléments
+## Combiner pseudo-classes et pseudo-éléments
 
 Si vous souhaitez mettre en gras la première ligne du premier paragraphe, vous pouvez enchaîner les sélecteurs `:first-child` et `::first-line` Essayez de modifier l'exemple précédent en direct pour qu'il utilise le CSS suivant. Nous souhaitons sélectionner la première ligne du premier élément `<p>`, qui se trouve à l'intérieur d'un élément `<article>`
 
@@ -122,7 +122,7 @@ Une utilisation plus pertinente de ces pseudo-éléments consiste à insérer un
 
 Ces pseudo-éléments sont aussi fréquemment utilisés pour insérer une chaîne vide, qui peut ensuite être stylisée comme n'importe quel élément de la page.
 
-Dans l'exemple suivant, nous avons ajouté une chaîne vide en utilisant le e pseudo-élément `::before` pseudo-element. Nous l'avons défini en `display: block` afin de pouvoir la styliser avec une largeur et une hauteur. Nous utilisons ensuite le CSS pour la styliser comme n'importe quel élément. Vous pouvez jouer avec le CSS et modifier son apparence et son comportement.
+Dans l'exemple suivant, nous avons ajouté une chaîne vide en utilisant le e pseudo-élément `::before` pseudo-element. Nous l'avons défini en `display: block` afin de pouvoir la styliser avec une largeur et une hauteur. Nous utilisons ensuite le CSS pour la styliser comme n'importe quel élément. Vous pouvez jouer avec le CSS et modifier son apparence et son comportement.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}
 
@@ -130,7 +130,7 @@ L'utilisation des pseudo-éléments `::before` et `::after` avec la propriété 
 
 ## Section de référence
 
-Il existe un grand nombre de pseudo-classes et pseudo-éléments, une bonne liste de références est donc utile. Vous trouverez ci-dessous des tableaux les répertoriant, avec pour chacun le lien vers la page de référence sur MDN. Vous y trouverez toutes les informations sur leur utilisation.
+Il existe un grand nombre de pseudo-classes et pseudo-éléments, une bonne liste de références est donc utile. Vous trouverez ci-dessous des tableaux les répertoriant, avec pour chacun le lien vers la page de référence sur MDN. Vous y trouverez toutes les informations sur leur utilisation.
 
 ### Pseudo-classes
 
@@ -201,7 +201,7 @@ Il existe un grand nombre de pseudo-classes et pseudo-éléments, une bonne list
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 
-## Dans ce cours
+## Dans ce cours
 
 1.  [Cascade and inheritance](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 2.  [CSS selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors)

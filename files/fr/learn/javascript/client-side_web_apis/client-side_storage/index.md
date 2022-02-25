@@ -17,7 +17,7 @@ original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
-Les navigateurs web modernes permettent aux sites web de stocker des données sur l'ordinateur de l'utilisateur — avec sa permission — puis de les récupérer au besoin. Cela permet d'enregistrer des données pour du stockage à long terme, de sauvegarder des documents ou des sites hors-ligne, de conserver des préférences spécifiques à l'utilisateur et plus encore. Cet article explique les fondamentaux pour y parvenir.
+Les navigateurs web modernes permettent aux sites web de stocker des données sur l'ordinateur de l'utilisateur — avec sa permission — puis de les récupérer au besoin. Cela permet d'enregistrer des données pour du stockage à long terme, de sauvegarder des documents ou des sites hors-ligne, de conserver des préférences spécifiques à l'utilisateur et plus encore. Cet article explique les fondamentaux pour y parvenir.
 
 <table class="standard-table">
   <tbody>
@@ -50,30 +50,30 @@ Les navigateurs web modernes permettent aux sites web de stocker des données su
 
 Ailleurs dans la zone d'apprentissage de MDN, nous avons parlé de la différence entre les [sites statiques](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#Static_sites) et les [sites dynamiques](/fr/docs/Learn/Server-side/First_steps/Client-Server_overview#Dynamic_sites) — ces derniers stockent des données [côté serveur](/fr/docs/Learn/Server-side) en utilisant une base de données. Ensuite, ils exécutent du code pour récupérer les données et les insérer dans des templates de page statique. Finalement, le HTML résultant est envoyé au client, qui est alors affiché par le navigateur de l'utilisateur.
 
-Le stockage côté client fonctionne sur des principes similaires, mais pour une utilisation différente. Le stockage côté client repose sur des APIs JavaScript qui permettent de stocker des données sur la machine de l'utilisateur et de les récupérer au besoin. Cela peut se révéler utile dans différents cas comme :
+Le stockage côté client fonctionne sur des principes similaires, mais pour une utilisation différente. Le stockage côté client repose sur des APIs JavaScript qui permettent de stocker des données sur la machine de l'utilisateur et de les récupérer au besoin. Cela peut se révéler utile dans différents cas comme :
 
 - Personnaliser les préférences du site (par exemple, afficher des widgets personnalisés selon le choix de l'utilisateur, changer le thème du site ou la taille de la police).
 - Enregistrer les activités sur le site (comme le contenu d'un panier d'achat d'une session précédente, ou encore se souvenir si l'utilisateur s'est déjà connecté).
 - Sauvegarder des données et ressources localement pour pouvoir accéder au site plus rapidement ou même sans connexion réseau.
 - Sauvegarder des documents générés par l'application pour une utilisation hors ligne.
 
-Souvent, le stockage côté client et côté serveur sont utilisés ensemble. Par exemple, vous pouvez télécharger à partir d'une base de données côté serveur une série de fichiers mp3 utilisés par un site web (comme un jeu ou une application de musique) vers une base de données côté client et ainsi pouvoir les lire quand vous le voulez. Avec cette stratégie, l'utilisateur n'a à télécharger le fichier qu'une seule fois — les visites suivantes, ils sont récupérés à partir de la base de données locale.
+Souvent, le stockage côté client et côté serveur sont utilisés ensemble. Par exemple, vous pouvez télécharger à partir d'une base de données côté serveur une série de fichiers mp3 utilisés par un site web (comme un jeu ou une application de musique) vers une base de données côté client et ainsi pouvoir les lire quand vous le voulez. Avec cette stratégie, l'utilisateur n'a à télécharger le fichier qu'une seule fois — les visites suivantes, ils sont récupérés à partir de la base de données locale.
 
-> **Note :** La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour plus d'informations.
+> **Note :** La quantité de données que l'on peut stocker à l'aide des APIs de stockage côté client est limitée (limite par API et limite globale), la limite exacte dépend du navigateur et des configurations. Voir [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria) pour plus d'informations.
 
 ### À l'ancienne : les cookies
 
 Le concept de stockage côté client existe depuis longtemps. Au début du web, les sites utilisaient des [cookies](/fr/docs/Web/HTTP/Cookies) pour stocker des informations et personnaliser l'expérience utilisateur. C'est la méthode de stockage côté client la plus couramment utilisée et la plus ancienne.
 
-De par leur histoire, les cookies souffrent d'un certain nombre de problèmes — tant techniques qu'au niveau de l'expérience utilisateur. Ces problèmes sont suffisamment importants pour imposer un message d'information aux utilisateurs habitant en Europe lors de leur première visite si le site utilise des cookies pour stocker des informations sur eux. Cela est dû à une loi de l'Union Européenne connue sous le nom de [directive Cookie](/fr/docs/Web/HTTP/Cookies#EU_cookie_directive).
+De par leur histoire, les cookies souffrent d'un certain nombre de problèmes — tant techniques qu'au niveau de l'expérience utilisateur. Ces problèmes sont suffisamment importants pour imposer un message d'information aux utilisateurs habitant en Europe lors de leur première visite si le site utilise des cookies pour stocker des informations sur eux. Cela est dû à une loi de l'Union Européenne connue sous le nom de [directive Cookie](/fr/docs/Web/HTTP/Cookies#EU_cookie_directive).
 
 ![](cookies-notice.png)
 
-Pour ces raisons, nous ne verrons pas dans cet article comment utiliser les cookies. Entre le fait qu'ils sont dépassés, les [problèmes de sécurité](/fr/docs/Web/HTTP/Cookies#Security) qu'ils présentent et l'incapacité de stocker des données complexes, les cookies ne sont pas la meilleure manière pour stocker des données. Il y a de meilleures alternatives, modernes, permettant de stocker des données variées sur l'ordinateur de l'utilisateur.
+Pour ces raisons, nous ne verrons pas dans cet article comment utiliser les cookies. Entre le fait qu'ils sont dépassés, les [problèmes de sécurité](/fr/docs/Web/HTTP/Cookies#Security) qu'ils présentent et l'incapacité de stocker des données complexes, les cookies ne sont pas la meilleure manière pour stocker des données. Il y a de meilleures alternatives, modernes, permettant de stocker des données variées sur l'ordinateur de l'utilisateur.
 
-Le seul avantage des cookies est qu'ils sont supportés par des navigateurs anciens : si votre projet requiert le support de navigateurs obsolètes (comme Internet Explorer 8 et inférieur), les cookies peuvent se révéler utiles. Pour la plupart des projets, vous ne devriez pas avoir besoin d'y recourir.
+Le seul avantage des cookies est qu'ils sont supportés par des navigateurs anciens : si votre projet requiert le support de navigateurs obsolètes (comme Internet Explorer 8 et inférieur), les cookies peuvent se révéler utiles. Pour la plupart des projets, vous ne devriez pas avoir besoin d'y recourir.
 
-> **Note :** Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.
+> **Note :** Pourquoi existe-t-il encore de nouveaux sites crées à l'aide de cookies? Principalement de par les habitudes des développeurs, l'utilisation de bibliothèques anciennes qui utilisent encore des cookies et l'existence de nombreux sites web fournissant des formations et références dépassées pour apprendre à stocker des données.
 
 ### La nouvelle école : Web Storage et IndexedDB
 
@@ -86,7 +86,7 @@ Vous en apprendrez plus sur ces APIs ci-dessous.
 
 ### Le futur : l'API Cache
 
-Certains navigateurs modernes prennent en charge la nouvelle API {{domxref("Cache")}}. Cette API a été conçue pour stocker les réponses HTTP de requêtes données et est très utile pour stocker des ressources du site afin qu'il soit accessible sans connexion réseau par exemple. Le cache est généralement utilisé avec l'[API Service Worker](/fr/docs/Web/API/Service_Worker_API), mais ce n'est pas obligatoire.
+Certains navigateurs modernes prennent en charge la nouvelle API {{domxref("Cache")}}. Cette API a été conçue pour stocker les réponses HTTP de requêtes données et est très utile pour stocker des ressources du site afin qu'il soit accessible sans connexion réseau par exemple. Le cache est généralement utilisé avec l'[API Service Worker](/fr/docs/Web/API/Service_Worker_API), mais ce n'est pas obligatoire.
 
 L'utilisation du Cache et des Service Workers est un sujet avancé, nous ne le traiterons pas en détail dans cet article, nous ne montrerons qu'un simple exemple dans la section {{anch("Stockage hors-ligne de ressources")}} plus bas.
 
@@ -169,7 +169,7 @@ Le HTML de l'exemple est disponible à [personal-greeting.html](https://github.c
 Nous allons construire cet exemple pas à pas, cela vous permettra de comprendre comment ça marche.
 
 1.  D'abord, copiez notre fichier [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) dans un nouveau répertoire sur votre ordinateur.
-2.  Ensuite, créez un fichier `index.js` dans le même répertoire que le fichier HTML — le fichier HTML inclut ce script (voir ligne 40).
+2.  Ensuite, créez un fichier `index.js` dans le même répertoire que le fichier HTML — le fichier HTML inclut ce script (voir ligne 40).
 3.  Nous allons commencer par récupérer les références de tous les éléments HTML qu'on manipulera dans cet exemple — nous les créons en tant que constantes car ces références n'ont pas besoin d'être modifiées au cours de l'exécution de l'application. Ajoutez les lignes suivantes à votre fichier JavaScript:
 
     ```js
@@ -255,11 +255,11 @@ Notre exemple est terminé — bien joué ! Il ne vous reste plus qu'à enregist
 
 > **Note :** Vous pouvez trouver un exemple un peu plus complexe dans l'article [Utiliser l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API).
 
-> **Note :** Dans la ligne `<script src="index.js" defer></script>` de notre version finie, l'attribut `defer` spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.
+> **Note :** Dans la ligne `<script src="index.js" defer></script>` de notre version finie, l'attribut `defer` spécifie que le contenu de l'élément {{htmlelement("script")}} ne doit pas s'exécuter avant que la page ait fini de charger.
 
 ## Stocker des données complexes — IndexedDB
 
-L'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API) (parfois abrégé IDB) est un système de base de données complet disponible dans le navigateur. Vous pouvez y stocker des données complexes, les types ne sont pas limités à des valeurs simples de type chaînes ou nombres. Vous pouvez stocker des vidéos, des images et à peu près tout ce que vous voulez, dans une instance IndexedDB.
+L'[API IndexedDB](/fr/docs/Web/API/IndexedDB_API) (parfois abrégé IDB) est un système de base de données complet disponible dans le navigateur. Vous pouvez y stocker des données complexes, les types ne sont pas limités à des valeurs simples de type chaînes ou nombres. Vous pouvez stocker des vidéos, des images et à peu près tout ce que vous voulez, dans une instance IndexedDB.
 
 Cependant, cela a un coût : IndexedDB est beaucoup plus complexe à utiliser que l'API Web Storage. Dans cette section, nous ne ferons qu'égratigner la surface de ce qu'IndexedDB peut faire, mais nous vous en donnerons assez pour débuter.
 
@@ -317,7 +317,7 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
 
     Cette ligne crée une requête `request` pour ouvrir la version `1` de la base de données appelée `notes`. Si elle n'existe pas déjà, on devra la créer via un gestionnaire d'événement.
 
-    Vous verrez très souvent ce format dans IndexedDB. Les opérations de base de données prennent du temps et on ne veut pas suspendre le navigateur le temps de récupérer le résultat, les opérations sur la base de données sont donc {{Glossary("asynchronous", "asynchrones")}} — ce qui signifie qu'au lieu d'arriver immédiatement, elles se produiront à un moment ultérieur et un événement sera déclenché lorsque cela arrivera.
+    Vous verrez très souvent ce format dans IndexedDB. Les opérations de base de données prennent du temps et on ne veut pas suspendre le navigateur le temps de récupérer le résultat, les opérations sur la base de données sont donc {{Glossary("asynchronous", "asynchrones")}} — ce qui signifie qu'au lieu d'arriver immédiatement, elles se produiront à un moment ultérieur et un événement sera déclenché lorsque cela arrivera.
 
     Pour gérer cela dans IndexedDB, on crée d'abord une requête (que vous pouvez appeler comme vous le voulez — on l'appelle `request` pour que ce soit plus explicite). On utilise ensuite des gestionnaire d'événement pour exécuter du code lorsque les requêtes sont terminées, échouent, etc, ce que l'on va voir ci-dessous.
 
@@ -345,7 +345,7 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
 
     Le gestionnaire d'événement {{domxref("IDBRequest.onerror", "request.onerror")}} s'exécutera si la requête échoue. Cela vous permet de gérer le problème si cela arrive. Dans notre exemple, on affiche simplement un message dans la console JavaScript.
 
-    Le gestionnare d'événement {{domxref("IDBRequest.onsuccess", "request.onsuccess")}}, d'autre part, s'exécutera si la requête aboutit, que la base de données a été ouverte avec succès. Lorsque cela arrive, la propriété {{domxref("IDBRequest.result", "request.result")}} contient alors un objet représentant la base de données ouverte, qui nous permet de la manipuler. On stocke cette valeur dans la variable `db` qu'on a crée plus tôt pour pouvoir l'utiliser ensuite. On exécute également une fonction appelée `displayData()`, qu'on définira plus tard — elle affiche les données de la base de données dans le {{HTMLElement("ul")}}. On l'exécute dès à présent pour que les notes en base de données soient affichées dès que la page est chargée.
+    Le gestionnare d'événement {{domxref("IDBRequest.onsuccess", "request.onsuccess")}}, d'autre part, s'exécutera si la requête aboutit, que la base de données a été ouverte avec succès. Lorsque cela arrive, la propriété {{domxref("IDBRequest.result", "request.result")}} contient alors un objet représentant la base de données ouverte, qui nous permet de la manipuler. On stocke cette valeur dans la variable `db` qu'on a crée plus tôt pour pouvoir l'utiliser ensuite. On exécute également une fonction appelée `displayData()`, qu'on définira plus tard — elle affiche les données de la base de données dans le {{HTMLElement("ul")}}. On l'exécute dès à présent pour que les notes en base de données soient affichées dès que la page est chargée.
 
 5.  Pour en finir avec cette section, on ajoute le gestionnaire d'événement qui est  probablement le plus important, {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupdateneeded")}}. Il est exécuté si la base de données n'a pas déjà été créée ou si on veut ouvrir la base de données avec un numéro de version supérieur à celle qui existe (pour faire une mise à jour). Ajoutez le code suivant en dessous de votre gestionnaire précédent :
 
@@ -369,7 +369,7 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
 
     C'est ici qu'on définit le schéma (la structure) de notre base de données; c'est à dire l'ensemble des champs (ou colonnes) qu'il contient.
 
-    1.  On récupère une référence à la base de données existante depuis `e.target.result` (la propriété `result` de la cible de l'événement, c'est à dire l'objet `request`). C'est l'équivalent de la ligne `db = request.result;` du gestionnaire d'événement `onsuccess`, mais on doit le faire de cette manière ici puisque le gestionnaire d'événement `onupgradeneeded` est exécuté avant `onsuccess` — la valeur de `db` n'est pas encore disponible.
+    1.  On récupère une référence à la base de données existante depuis `e.target.result` (la propriété `result` de la cible de l'événement, c'est à dire l'objet `request`). C'est l'équivalent de la ligne `db = request.result;` du gestionnaire d'événement `onsuccess`, mais on doit le faire de cette manière ici puisque le gestionnaire d'événement `onupgradeneeded` est exécuté avant `onsuccess` — la valeur de `db` n'est pas encore disponible.
     2.  Ensuite, on utilise {{domxref("IDBDatabase.createObjectStore()")}} pour créer un object store (un container pour une collection d'objets) à l'intérieur de notre base de données. C'est l'équivalent d'une table dans un système de base de données traditionnel. On lui a donné le nom `notes`, et un champs `id` avec `autoIncrement` — pour chaque nouvelle entrée dans cette table, une valeur auto-incrementée sera attributée au champ `id` sans que le développeur n'ait à le définir. Le champ `id` est la clé de l'object store: il sera utilisé pour identifier de manière unique les entrées, permettant de les mettre à jour ou les supprimer.
     3.  On crée deux autres index (champs) en utilisant la méthode {{domxref("IDBObjectStore.createIndex()")}}: `title` (qui contiendra le titre de chaque note), et `body` (qui contiendra la description de chaque note).
 
@@ -443,7 +443,7 @@ Maintenant, voyons comment ajouter des entrées dans la base de données. On le 
     5.  On ajoute un nouvel enregistrement à la base de données en utilisant {{domxref("IDBObjectStore.add()")}}. Cela crée une requête, sur le même principe qu'on a déjà vu.
     6.  On ajoute des gestionnaires d'événement à `request` et `transaction` pour exécuter du code aux points importants de leur cycle de vie :
 
-        - Quand la requête a réussit, on efface les champs du formulaire — pour pouvoir ajouter une nouvelle note
+        - Quand la requête a réussit, on efface les champs du formulaire — pour pouvoir ajouter une nouvelle note
         - Quand la transaction est terminé, on réexécute la fonction `displayData()` — pour mettre à jour l'affichage de notes sur la page.
 
 ### Afficher les données
@@ -515,7 +515,7 @@ Encore une fois, pas à pas :
 2.  Ensuite, on récupère une référence à l'object store `notes` en utilisant {{domxref("IDBDatabase.transaction()")}} et {{domxref("IDBTransaction.objectStore()")}} comme nous l'avons fait dans `addData()`, mais en chaînant ces deux instructions en une seule ligne.
 3.  L'étape suivante consiste à utiliser la méthode {{domxref("IDBObjectStore.openCursor()")}} pour ouvrir un curseur — une construction qui peut être utilisée pour itérer sur les entrées d'un object store. On chaîne un gestionnaire d'événement `onsuccess` à la fin de cette opération pour rendre le code plus concis — dès que le curseur est récupéré, le gestionnaire est exécuté.
 4.  On récupère une référence au curseur lui-même (un objet {{domxref("IDBCursor")}}) avec `cursor = e.target.result`.
-5.  Ensuite, on vérifie si le curseur contient une entrée de l'object store (`if(cursor){ ... }`) — si c'est le cas, on crée des éléments du DOM, les remplit avec les données de l'entrée, et les insère dans la page (à l'intérieur de l'élément `<ul>`). On inclut un bouton de suppression, qui, quand il est cliqué, supprime l'entrée en cours en appelant la fonction `deleteItem()` — que nous allons voir dans la section suivante.
+5.  Ensuite, on vérifie si le curseur contient une entrée de l'object store (`if(cursor){ ... }`) — si c'est le cas, on crée des éléments du DOM, les remplit avec les données de l'entrée, et les insère dans la page (à l'intérieur de l'élément `<ul>`). On inclut un bouton de suppression, qui, quand il est cliqué, supprime l'entrée en cours en appelant la fonction `deleteItem()` — que nous allons voir dans la section suivante.
 6.  À la fin du bloc `if`, on utilise la méthode {{domxref("IDBCursor.continue()")}} pour avancer le curseur à la prochaine entrée dans l'object store et réexécuter le bloc. S'il reste une autre entrée sur laquelle itérer, elle sera à son tour insérée dans la page, `continue()` sera exécuté à nouveau, et ainsi de suite.
 7.  Quand il n'y a plus d'enregistrements à parcourir, le curseur retourne `undefined`, et le bloc `else` sera donc exécuté à la place. Ce bloc vérifie si des notes ont été insérées dans le `<ul>` — si ce n'est pas le cas, on insère un message indiquant qu'il n'existe aucune note.
 
@@ -612,7 +612,7 @@ Passons en revue les parties les plus intéressantes de l'exemple. Nous ne regar
 
 3.  Le bout de code qui suit est extrait de la fonction `fetchVideoFromNetwork()` — ici, on récupère les versions MP4 et WebM de la vidéos en utilisant deux requêtes {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}} distinctes. On utilise ensuite la méthode {{domxref("blob()", "Body.blob()")}} pour extraire la réponse sous forme de blob, ce qui nous donne une représentation objet de la vidéo que l'on peut stocker et afficher plus tard.
 
-    Il reste cependant un problème — ces deux requêtes sont asynchrones et ont veut afficher/stocker la vidéo uniquement lorsque les deux promesses sont résolues. Heureusement, il existe une méthode native qui gère ce problème — {{jsxref("Promise.all()")}}. Elle prend un argument — la liste de toutes les promesses qui doivent être attendues — et retourne elle-même une promesse. Quand toutes les promesses sont résolues, alors la promesse de la méthode `all()` est résolue, avec pour valeur un tableau contenant toutes les valeurs individuelles retournées par les promesses.
+    Il reste cependant un problème — ces deux requêtes sont asynchrones et ont veut afficher/stocker la vidéo uniquement lorsque les deux promesses sont résolues. Heureusement, il existe une méthode native qui gère ce problème — {{jsxref("Promise.all()")}}. Elle prend un argument — la liste de toutes les promesses qui doivent être attendues — et retourne elle-même une promesse. Quand toutes les promesses sont résolues, alors la promesse de la méthode `all()` est résolue, avec pour valeur un tableau contenant toutes les valeurs individuelles retournées par les promesses.
 
     À l'intérieur du bloc `all()`, vous pouvez voir qu'on appelle la fonction `displayVideo()`, comme on l'a fait précédemment, pour afficher les vidéos dans l'interface utilisateur, puis la fonction `storeVideo()` pour stocker ces vidéos dans la base de données.
 
@@ -654,7 +654,7 @@ Passons en revue les parties les plus intéressantes de l'exemple. Nous ne regar
     };
     ```
 
-5.  Enfin, `displayVideo()` crée les éléments DOM nécessaires pour insérer la vidéo dans l'interface utilisateur, puis les ajoute à la page. Les parties les plus intéressantes sont copiées ci-dessous — pour afficher notre blob vidéo dans un élément `<video>`, on doit créer un objet URL (URL interne qui pointe vers un blob en mémoire) en utilisant la méthode {{domxref("URL.createObjectURL()")}}. Une fois que c'est fait, on peut assigner l'URL comme valeur d'attribut `src` de l'élément {{htmlelement("source")}}, et ça marche.
+5.  Enfin, `displayVideo()` crée les éléments DOM nécessaires pour insérer la vidéo dans l'interface utilisateur, puis les ajoute à la page. Les parties les plus intéressantes sont copiées ci-dessous — pour afficher notre blob vidéo dans un élément `<video>`, on doit créer un objet URL (URL interne qui pointe vers un blob en mémoire) en utilisant la méthode {{domxref("URL.createObjectURL()")}}. Une fois que c'est fait, on peut assigner l'URL comme valeur d'attribut `src` de l'élément {{htmlelement("source")}}, et ça marche.
 
     ```js
     function displayVideo(mp4Blob, webmBlob, title) {

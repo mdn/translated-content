@@ -32,7 +32,7 @@ L'élément HTML **`<track>`** est utilisé comme élément fils d'un élément 
 
     - `captions`
 
-      - La piste est une retransciption voire une traduction de la partie audio du média.
+      - La piste est une retransciption voire une traduction de la partie audio du média.
       - La piste peut contenir des informations non-verbales importantes comme des indications musicales ou des effets sonores. La piste peut également indiquer la source du bruit (musique, personnage, etc.).
       - Ce type de piste est adapté aux utilisateurs malentendants ou lorsque le son est désactivé.
 

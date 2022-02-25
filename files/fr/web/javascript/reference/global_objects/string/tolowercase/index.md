@@ -26,7 +26,7 @@ Une nouvelle chaîne de caractères qui est obtenue en passant la chaîne appela
 
 ## Description
 
-La méthode `toLowerCase()` renvoie la valeur de la chaîne convertie en minuscules. `toLowerCase()` ne modifie pas la valeur de la chaîne courante.
+La méthode `toLowerCase()` renvoie la valeur de la chaîne convertie en minuscules. `toLowerCase()` ne modifie pas la valeur de la chaîne courante.
 
 ## Exemples
 

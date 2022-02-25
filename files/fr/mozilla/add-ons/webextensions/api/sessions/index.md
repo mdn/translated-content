@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/sessions
 
 Utilisez l'API de sessions pour lister et restaurer, les onglets et les fenêtres qui ont été fermés pendant que le navigateur fonctionne.
 
-La fonction {{WebExtAPIRef("sessions.getRecentlyClosed()")}} renvoie un tableau de {{WebExtAPIRef("tabs.Tab")}} et les objets {{WebExtAPIRef("windows.Window")}}, représente les onglets et les fenêtres qui ont été fermées depuis le fonctionnement du navigateur, jusqu'au maximum défini dans {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
+La fonction {{WebExtAPIRef("sessions.getRecentlyClosed()")}} renvoie un tableau de {{WebExtAPIRef("tabs.Tab")}} et les objets {{WebExtAPIRef("windows.Window")}}, représente les onglets et les fenêtres qui ont été fermées depuis le fonctionnement du navigateur, jusqu'au maximum défini dans {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
 
 Vous pouvez ensuite restaurer une fenêtre ou un onglet en utilisant la fonction  {{WebExtAPIRef("sessions.restore()")}}. il restaure également l'historique de navigation de l'onglet, de sorte que les boutons arrière / avant fonctionnent.
 

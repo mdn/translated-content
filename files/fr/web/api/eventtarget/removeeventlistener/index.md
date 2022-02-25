@@ -24,7 +24,7 @@ La méthode **`EventTarget.removeEventListener()`** supprime d'une {{domxref("Ev
 ### Paramètres
 
 - `type`
-  - : Une chaîne représentant le type d'événement pour lequel supprimer un écouteur d'évènements.
+  - : Une chaîne représentant le type d'événement pour lequel supprimer un écouteur d'évènements.
 - `listener`
   - : La fonction  {{domxref("EventListener")}}  du gestionnaire d'évènements à retirer de la cible d'évènements.
 - `options` {{optional_inline}}

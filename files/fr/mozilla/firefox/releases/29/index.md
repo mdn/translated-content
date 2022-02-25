@@ -36,8 +36,8 @@ _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/c
 - La notation exponentielle scientifique, comme `3e1` ou `10e+0`, est désormais prise en charge pour les valeurs et les dérivés {{cssxref("&lt;number&gt;")}}, comme {{cssxref("&lt;percentage&gt;")}} et les valeurs unitaires, mais pas {{cssxref("&lt;integer&gt;")}}  ({{bug(964529)}}).
 - Les images de type {{cssxref("&lt;gradient&gt;")}} sont désormais prises en charge dans {{cssxref("border-image")}} ({{bug(709587)}}).
 - La propriété {{cssxref("touch-action")}} a été mise en implémenté. Il n'est pas activé par défaut; le pref de `layout.css.touch_action.enabled` le contrôle. ({{bug(795567)}})
-- Supprimez le style par défaut redondant pour l'élément \<pre> de quirk.css ({{bug(948914)}}).
-- Les variables CSS ne sont pas correctement implémentées (cycles primaires)  ({{bug(950497)}}).
+- Supprimez le style par défaut redondant pour l'élément \<pre> de quirk.css ({{bug(948914)}}).
+- Les variables CSS ne sont pas correctement implémentées (cycles primaires) ({{bug(950497)}}).
 - @supports les conditions avec des jetons après que la propriété d'une déclaration doit être évaluée à false ({{bug(909170)}}).
 
 ### HTML
@@ -65,7 +65,7 @@ _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/c
     - {{jsxref("Date.prototype.toLocaleTimeString()")}}
 
 - Pour correspondre au projet de spécification ECMAScript6 mis à jour, les objets {{jsxref("Map")}} et {{jsxref("Set")}} traitent désormais `-0` et `+0` comme étant identiques lors de la vérification de l'égalité des clés et des valeurs.
-- La `Promise` a été activée par défaut ({{bug(918806)}}).
+- La `Promise` a été activée par défaut ({{bug(918806)}}).
 - Les [générateurs](/fr/docs/Web/JavaScript/Reference/Statements/function*) terminés renvoient maintenant un objet `IteratorResult` au lieu de lancer ({{bug(958951)}}).
 - Une chaîne JSON malformée analysée par {{jsxref("JSON.parse()")}} renvoie désormais un message d'erreur plus détaillé contenant le numéro de ligne et de colonne à l'origine de l'erreur d'analyse. Ceci est utile lors du débogage de données JSON volumineuses.
 - La méthode {{jsxref("ArrayBuffer.isView()")}} a été ajoutée ({{bug(896105)}}).

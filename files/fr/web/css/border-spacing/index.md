@@ -14,7 +14,7 @@ La propriété **`border-spacing`** définit la distance qu'il y a entre les bor
 
 {{EmbedInteractiveExample("pages/css/border-spacing.html")}}
 
-La valeur de `border-spacing` est également utilisée le long du bord extérieur du tableau, où la distance entre la bordure du tableau et les cellules dans la première/dernière colonne ou ligne est la somme du `border-spacing` approprié (horizontal ou vertical) et du {{cssxref("padding")}} correspondant (top, right, bottom ou left).
+La valeur de `border-spacing` est également utilisée le long du bord extérieur du tableau, où la distance entre la bordure du tableau et les cellules dans la première/dernière colonne ou ligne est la somme du `border-spacing` approprié (horizontal ou vertical) et du {{cssxref("padding")}} correspondant (top, right, bottom ou left).
 
 > **Note :** La propriété `border-spacing` équivaut à l'attribut déprécié `cellspacing` de l'élément `<table>`, sauf qu'il possède une seconde valeur optionnelle qui peut être utilisée pour définir différents espacements horizontaux et verticaux.
 

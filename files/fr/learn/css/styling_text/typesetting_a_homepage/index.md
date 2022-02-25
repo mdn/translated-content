@@ -75,7 +75,7 @@ Liens&nbsp;:
 
 Listes&nbsp;:
 
-- Assurez-vous que l'espacement des listes et éléments de liste s'accorde bien avec le style d'ensemble de la page. Chaque élément de liste doit avoir la même valeur de propriété `line-height` qu'une ligne de paragraphe et chaque liste doit avoir le même espacement en haut et en bas que celui entre les paragraphes.
+- Assurez-vous que l'espacement des listes et éléments de liste s'accorde bien avec le style d'ensemble de la page. Chaque élément de liste doit avoir la même valeur de propriété `line-height` qu'une ligne de paragraphe et chaque liste doit avoir le même espacement en haut et en bas que celui entre les paragraphes.
 - Mettez une belle puce, appropriée à la conception de la page, devant les éléments de la liste. À vous de décider si vous choisissez une image personnalisée ou autre chose.
 
 Menu de navigation&nbsp;:

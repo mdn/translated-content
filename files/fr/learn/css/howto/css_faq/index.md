@@ -52,7 +52,7 @@ Quand vous voulez appliquer un style à un bloc ou un élément spécifique, uti
 
 Quand vous voulez appliquer un style à plusieurs blocs ou éléments dans la même page, utilisez un attribut `class`.
 
-Les feuilles de style avec le moins de règles sont les plus performantes. Par conséquent, il est recommandé d'utiliser le plus possible les classes et de réserver les id à des usages spécifiques - comme connecter des éléments de type `label` et `form` ou pour décorer des éléments qui doivent être sémantiquement uniques.
+Les feuilles de style avec le moins de règles sont les plus performantes. Par conséquent, il est recommandé d'utiliser le plus possible les classes et de réserver les id à des usages spécifiques - comme connecter des éléments de type `label` et `form` ou pour décorer des éléments qui doivent être sémantiquement uniques.
 
 Voire [Les sélecteurs CSS](/fr/docs/CSS/Premiers_pas/Les_sélecteurs "Les sélecteurs CSS").
 

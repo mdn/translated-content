@@ -289,14 +289,14 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
   </caption>
   <tbody>
     <tr>
-      <td> </td>
-      <td> </td>
+      <td> </td>
+      <td> </td>
       <th colspan="3" scope="colgroup">Vêtements</th>
       <th colspan="2" scope="colgroup">Accessoires</th>
     </tr>
     <tr>
-      <td> </td>
-      <td> </td>
+      <td> </td>
+      <td> </td>
       <th scope="col">Pantalons</th>
       <th scope="col">Jupes</th>
       <th scope="col">Robes</th>

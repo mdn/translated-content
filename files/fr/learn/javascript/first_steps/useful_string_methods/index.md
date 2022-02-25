@@ -186,7 +186,7 @@ Les ordinateurs décomptent à partir de 0, pas de 1&nbsp;! Pour retrouver le de
 browserType[browserType.length-1];
 ```
 
-La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le décompte se fait à partir de 0, la position du caractère est 6, d'où la nécessité d'écrire `length-1`. Vous pourrez utiliser cette propriété pour, par exemple, trouver la première lettre d'une série de chaînes et les trier alphabétiquement.
+La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le décompte se fait à partir de 0, la position du caractère est 6, d'où la nécessité d'écrire `length-1`. Vous pourrez utiliser cette propriété pour, par exemple, trouver la première lettre d'une série de chaînes et les trier alphabétiquement.
 
 ### Trouver une sous-chaîne à l'intérieur d'une chaîne et l'extraire
 
@@ -230,7 +230,7 @@ La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le déco
 
     Elle renvoie «&nbsp;zilla&nbsp;» — le caractère à la position 2 est «&nbsp;z&nbsp;» et comme nous n'avons pas mis de second paramètre, la sous-chaîne retournée comporte tous les caractères restants de la chaîne.
 
-> **Note :** Le second paramètre de `slice()` est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.
+> **Note :** Le second paramètre de `slice()` est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.
 
 ### Changer la casse
 
@@ -258,7 +258,7 @@ browserType.replace('moz','van');
 
 ## Apprendre en pratiquant
 
-Dans cette section, vous allez pouvoir vous entraîner à écrire du code de manipulation de chaîne. Dans chacun des exercices ci-dessous, nous avons un tableau de chaînes, une boucle qui traîte chaque valeur dans le tableau et l'affiche dans une liste à puces. Vous n'avez pas besoin de comprendre comment fonctionnent les tableaux ou les boucles dès maintenant — cela vous sera expliqué dans de prochains articles. Tout ce dont vous avez besoin dans chaque cas est d'écrire le code qui va renvoyer les chaînes dans le format souhaité.
+Dans cette section, vous allez pouvoir vous entraîner à écrire du code de manipulation de chaîne. Dans chacun des exercices ci-dessous, nous avons un tableau de chaînes, une boucle qui traîte chaque valeur dans le tableau et l'affiche dans une liste à puces. Vous n'avez pas besoin de comprendre comment fonctionnent les tableaux ou les boucles dès maintenant — cela vous sera expliqué dans de prochains articles. Tout ce dont vous avez besoin dans chaque cas est d'écrire le code qui va renvoyer les chaînes dans le format souhaité.
 
 Chaque exemple est accompagné d'un bouton «&nbsp;Réinitialiser&nbsp;», que vous pouvez utiliser pour réinitialiser le code si vous faites une erreur et que vous ne parvenez pas à la corriger, et un bouton «&nbsp;Montrer la solution&nbsp;» sur lequel vous pouvez cliquer pour afficher une réponse possible si jamais vous êtes vraiment bloqué.
 

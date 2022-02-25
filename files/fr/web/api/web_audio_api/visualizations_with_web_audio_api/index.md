@@ -27,13 +27,13 @@ analyseur.connect(distortion);
 
 > **Note :** il n'est pas nécessaire de connecter la sortie de l'analyseur à un noeud pour qu'il fonctionne, il suffit que l'entrée soit connectée à la source, directement ou via un autre noeud.
 
-L'analyseur va alors capturer les données audio en usant une Transformation de Fourier Rapide (fft) à une certaine fréquence, en fonction de ce qui est spécifié dans la propriété {{ domxref("AnalyserNode.fftSize") }} (la valeur par défaut est 2048).
+L'analyseur va alors capturer les données audio en usant une Transformation de Fourier Rapide (fft) à une certaine fréquence, en fonction de ce qui est spécifié dans la propriété {{ domxref("AnalyserNode.fftSize") }} (la valeur par défaut est 2048).
 
 > **Note :** Vous pouvez aussi spécifier des valeurs de puissance minimum et maximum pour la plage de mise à l'échelle fft, en utilisant {{ domxref("AnalyserNode.minDecibels") }} et {{ domxref("AnalyserNode.maxDecibels") }}, et plusieurs valeurs de transition en utilisant {{ domxref("AnalyserNode.smoothingTimeConstant") }}.
 
 Pour capturer des données, il faut utiliser les méthodes {{ domxref("AnalyserNode.getFloatFrequencyData()") }} et {{ domxref("AnalyserNode.getByteFrequencyData()") }} pour la fréquence, et {{ domxref("AnalyserNode.getByteTimeDomainData()") }} et {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} pour la forme d'onde.
 
-Ces méthodes copient les données dans le tableau passé en paramètre, il faut donc créer un tableau avant de les invoquer. La première produit des nombres flottants à simple précision de 32 bits, qui ne peuvent être stockées dans un simple tableau javascript. Vous devez créer un domxref("Float32Array") }} ou un {{ domxref("Uint8Array") }}, en fonction du type de données que vous traitez.
+Ces méthodes copient les données dans le tableau passé en paramètre, il faut donc créer un tableau avant de les invoquer. La première produit des nombres flottants à simple précision de 32 bits, qui ne peuvent être stockées dans un simple tableau javascript. Vous devez créer un domxref("Float32Array") }} ou un {{ domxref("Uint8Array") }}, en fonction du type de données que vous traitez.
 
 Par exemple, disons que nous manipulons une fft de fréquence 2048. Nous retournons la valeur {{ domxref("AnalyserNode.frequencyBinCount") }}, qui correspond à la moitié de la fréquence, puis nous appelons la méthode  Uint8Array() en passant frequencyBinCount comme argument pour la taille — c'est le nombre de points de données qui seront collectées pour cette fréquence.
 

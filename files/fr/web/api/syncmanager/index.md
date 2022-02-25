@@ -5,7 +5,7 @@ translation_of: Web/API/SyncManager
 ---
 {{APIRef("Service Workers API")}}{{Non-standard_header}}
 
-L'interface **`SyncManager`** de l' [API ServiceWorker ](/en-US/docs/Web/API/ServiceWorker_API)fournit une interface pour l'enregistrement et la liste des sync registrations.
+L'interface **`SyncManager`** de l' [API ServiceWorker ](/en-US/docs/Web/API/ServiceWorker_API)fournit une interface pour l'enregistrement et la liste des sync registrations.
 
 ## Properties
 
@@ -14,7 +14,7 @@ None.
 ## Methods
 
 - {{domxref("SyncManager.register")}}
-  - : Créé une nouvelle sync registration et retourne une {{jsxref("Promise")}}
+  - : Créé une nouvelle sync registration et retourne une {{jsxref("Promise")}}
 - {{domxref("SyncManager.getTags")}}
   - : Renvoie une liste d'identifiants définis par le développeur pour l'enregistrement  du SyncManager.
 

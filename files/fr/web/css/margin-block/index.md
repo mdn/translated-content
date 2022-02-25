@@ -86,5 +86,5 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes : {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}
+- Les propriétés physiques correspondantes : {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} et {{cssxref("margin-left")}}
 - Les propriétés qui influencent les propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -168,5 +168,5 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ## Voir aussi
 
 - {{HTMLElement("param")}}
-- {{HTMLElement("applet")}} {{Obsolete_Inline}}
+- {{HTMLElement("applet")}} {{Obsolete_Inline}}
 - {{HTMLElement("embed")}}

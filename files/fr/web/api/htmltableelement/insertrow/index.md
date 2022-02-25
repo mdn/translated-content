@@ -12,16 +12,16 @@ translation_of: Web/API/HTMLTableElement/insertRow
 ---
 {{APIRef("HTML DOM")}}
 
-La méthode **`HTMLTableElement.insertRow()`** insère une nouvelle ligne dans la table et retourne une référence à la nouvelle ligne.
+La méthode **`HTMLTableElement.insertRow()`** insère une nouvelle ligne dans la table et retourne une référence à la nouvelle ligne.
 
 ## Syntaxe
 
     var ligne = HTMLTableElement.insertRow(optionnel indice = -1);
 
 - [`HTMLTableElement`](/en-US/docs/DOM/HTMLTableElement) est une référence à un élément table HTML.
-- `indice` est l'indice de ligne de la nouvelle ligne.
-- `ligne` reçoit la référence à la nouvelle ligne. Une référence à un [HTMLTableRowElement](/en-US/docs/Web/API/HTMLTableRowElement). Si l'indice est -1 ou est égal au nombre de lignes, la ligne est ajoutée comme dernière ligne. Si `indice` est plus grand que le nombre de lignes, une exception IndexSizeError sera générée. Si indice est omis, sa  valeur sera -1 par défaut.
-- Si une table a plusieurs éléments `tbody`, par défaut, la nouvelle ligne est ajoutée dans le dernier `tbody`. Pour insérer la ligne dans un `tbody` particulier :
+- `indice` est l'indice de ligne de la nouvelle ligne.
+- `ligne` reçoit la référence à la nouvelle ligne. Une référence à un [HTMLTableRowElement](/en-US/docs/Web/API/HTMLTableRowElement). Si l'indice est -1 ou est égal au nombre de lignes, la ligne est ajoutée comme dernière ligne. Si `indice` est plus grand que le nombre de lignes, une exception IndexSizeError sera générée. Si indice est omis, sa  valeur sera -1 par défaut.
+- Si une table a plusieurs éléments `tbody`, par défaut, la nouvelle ligne est ajoutée dans le dernier `tbody`. Pour insérer la ligne dans un `tbody` particulier :
   ` var tbody_particulier``=document.getElementById(id_tbody); var ligne=tbody_particulier.``insertRow(indice) `
 
 ## Exemple
@@ -57,7 +57,7 @@ ajouteLigne('TableA');
 
 Pour être valide dans un document HTML, un élément TR doit avoir au moins un élément TD.
 
-Remarquez que `insertRow` insère directement la ligne dans la table et renvoie une référence à la nouvelle ligne. La ligne n'a pas besoin d'être ajoutée séparement comme cela aurait été le cas si [`document.createElement()`](/en-US/docs/DOM/document.createElement) avait été utilisé pour créer un nouvel élement TR.
+Remarquez que `insertRow` insère directement la ligne dans la table et renvoie une référence à la nouvelle ligne. La ligne n'a pas besoin d'être ajoutée séparement comme cela aurait été le cas si [`document.createElement()`](/en-US/docs/DOM/document.createElement) avait été utilisé pour créer un nouvel élement TR.
 
 ## Spécifications
 

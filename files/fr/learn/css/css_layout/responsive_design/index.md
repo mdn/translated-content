@@ -268,7 +268,7 @@ Cela signifie que nous n'avons besoin de spécifier la taille de la police pour 
 
 ## Le méta-tag du viewport
 
-Si vous regardez le code source d'une page HTML responsive, vous verrez généralement la balise suivante {{htmlelement("meta")}} dans la section `<head>` du document.
+Si vous regardez le code source d'une page HTML responsive, vous verrez généralement la balise suivante {{htmlelement("meta")}} dans la section `<head>` du document.
 
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -278,9 +278,9 @@ Cette balise meta dit aux navigateurs mobiles qu'ils doivent ajuster la largeur 
 
 Pourquoi est-ce nécessaire? Parce que les navigateurs mobiles ont tendance à mentir à propos de leur taille de fenêtre.
 
-Cette balise meta existe car lorsque l'Iphone original fut lancé et que les gens commencèrent à regarder des sites web sur un petit écran de téléphone, la plupart des sites n'étaient pas optimisés pour les mobiles. Le navigateur mobile définissait donc la largeur de la fenêtre d'affichage à 960 pixels, affichait la page à cette largeur et affichait le résultat sous la forme d'une version zoomée de la disposition du bureau. Les autres navigateurs mobiles (comme sur Google Android) faisaient la même chose. Les utilisateurs pouvaient zoomer et parcourir le site Web pour voir les éléments qui les intéressaient, mais l'affichage était mauvais. Vous le verrez toujours aujourd'hui si vous avez le malheur de tomber sur un site qui n'est pas responsive.
+Cette balise meta existe car lorsque l'Iphone original fut lancé et que les gens commencèrent à regarder des sites web sur un petit écran de téléphone, la plupart des sites n'étaient pas optimisés pour les mobiles. Le navigateur mobile définissait donc la largeur de la fenêtre d'affichage à 960 pixels, affichait la page à cette largeur et affichait le résultat sous la forme d'une version zoomée de la disposition du bureau. Les autres navigateurs mobiles (comme sur Google Android) faisaient la même chose. Les utilisateurs pouvaient zoomer et parcourir le site Web pour voir les éléments qui les intéressaient, mais l'affichage était mauvais. Vous le verrez toujours aujourd'hui si vous avez le malheur de tomber sur un site qui n'est pas responsive.
 
-Le problème est que votre responsive design avec des points de coupure et des media queries ne fonctionnera pas comme prévu sur les navigateurs mobiles. Si vous avez une disposition pour écran étroit qui démarre à une largeur de fenêtre de 480 pixels ou moins, et que la fenêtre est définie à 960 pixels, vous ne verrez jamais votre disposition pour écran étroit sur mobile. En définissant `width = device-width`, vous remplacez la largeur par défaut d'Apple de `width = 960px `par la largeur réelle de l'appareil, afin que vos requêtes multimédias fonctionnent comme prévu.
+Le problème est que votre responsive design avec des points de coupure et des media queries ne fonctionnera pas comme prévu sur les navigateurs mobiles. Si vous avez une disposition pour écran étroit qui démarre à une largeur de fenêtre de 480 pixels ou moins, et que la fenêtre est définie à 960 pixels, vous ne verrez jamais votre disposition pour écran étroit sur mobile. En définissant `width = device-width`, vous remplacez la largeur par défaut d'Apple de `width = 960px `par la largeur réelle de l'appareil, afin que vos requêtes multimédias fonctionnent comme prévu.
 
 **Vous devriez donc toujours inclure la ligne HTML ci-dessus dans la tête de vos documents.**
 
@@ -289,8 +289,8 @@ Il existe d'autres paramètres que vous pouvez utiliser avec la balise meta view
 - `initial-scale`: Définit le zoom initial de la page, que nous définissons à 1.
 - `height`: Definit une hauteur spécifique pour la fenêtre.
 - `minimum-scale`: Définit le niveau minimal de zoom
-- `maximum-scale`: Définit le niveau maximal de zoom.
-- `user-scalable`: Empêche le zoom si défini à `no`.
+- `maximum-scale`: Définit le niveau maximal de zoom.
+- `user-scalable`: Empêche le zoom si défini à `no`.
 
 Vous devriez éviter d'utiliser `minimum-scale`, `maximum-scale`, et en particulier la définition de `user-scalable` sur `no`. Les utilisateurs devraient être autorisés à zoomer autant ou aussi peu que nécessaire; éviter cela entraîne des problèmes d'accessibilité.
 

@@ -34,7 +34,7 @@ Cette rubrique contient les modules suivants, dans l'ordre suggéré pour les pa
   - : Ce module prépare le terrain, en vous familiarisant avec les concepts importants et la syntaxe, en examinant comment appliquer le HTML au texte, comment créer des hyperliens et comment utiliser le HTML pour structurer une page Web.
 - [Multimedia et intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding)
   - : Ce module explore comment utiliser le HTML pour incorporer du multimédia dans vos pages Web, y compris les diverses façons d'inclure des images, et comment intégrer de la vidéo, de l'audio et même d'autres pages Web entières.
-- [Tableaux HTML](/fr/docs/Learn/HTML/Tables)
+- [Tableaux HTML](/fr/docs/Learn/HTML/Tables)
   - : Représenter des sous forme de tableaux sur une page Web de manière compréhensible, {{Glossary("Accessibilité", "accessible")}}} peut être un défi. Ce module porte sur le balisage basique des tableaux, ainsi que des fonctions plus complexes telles que l'implémentation de légendes et de résumés.
 - [Formulaire HTML](/fr/docs/Learn/HTML/Forms)
   - : Les formulaires sont une partie très importante du Web — ils fournissent la grande partie des fonctionnalités dont vous avez besoin pour interagir avec les sites Web, par exemple enregistrement et connexion, envoi de commentaires, achat de produits et plus encore. Ce module vous permet de commencer à créer la partie des formulaires côté client.

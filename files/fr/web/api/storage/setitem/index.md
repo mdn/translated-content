@@ -34,7 +34,7 @@ Par conséquent les développeurs devraient être sûrs de toujours de **systém
 
 ## Exemple
 
-La fonction suivante crée trois éléments à l'intérieur du stockage local.
+La fonction suivante crée trois éléments à l'intérieur du stockage local.
 
 ```js
 function remplissageStockage() {
@@ -44,7 +44,7 @@ function remplissageStockage() {
 }
 ```
 
-> **Note :** Pour voir ceci utilisé dans un exemple concret, regardez notre [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note :** Pour voir ceci utilisé dans un exemple concret, regardez notre [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Spécifications
 

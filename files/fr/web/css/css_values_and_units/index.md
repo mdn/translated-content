@@ -279,7 +279,7 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
       <td>
         Ajout de
         <code>calc()</code
-        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
+        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
           >Q</code
         >
       </td>
@@ -289,13 +289,13 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
       <td>{{Spec2("CSS4 Colors")}}</td>
       <td>
         Ajout des syntaxes sans virgule pour les fonctions
-        <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> et
+        <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> et
         <code>hsla()</code>. Ajout des valeurs alpha pour  <code>rgb()</code> et
         <code>hsl()</code>, transformant ainsi <code>rgba()</code> et
         <code>hsla()</code> en alias respectifs (dépréciés).<br />Ajout du
         mot-clé de couleur <code>rebeccapurple</code>.<br />Ajout des couleurs
         sur 4 et 8 chiffres hexadécimaux où le dernier chiffre représente la
-        valeur alpha.<br />Ajout des fonctions <code>hwb()</code>, <code
+        valeur alpha.<br />Ajout des fonctions <code>hwb()</code>, <code
           >device-cmyk()</code
         >
         et <code>color()</code>.
@@ -306,7 +306,7 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
       <td>{{Spec2("CSS3 Colors")}}</td>
       <td>
         Dépréciation des couleurs système. Ajout des couleurs SVG. Ajout des
-        fonctions <code>rgba()</code>, <code>hsl()</code> et
+        fonctions <code>rgba()</code>, <code>hsl()</code> et
         <code>hsla()</code>.
       </td>
     </tr>
@@ -329,7 +329,7 @@ Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des
     <tr>
       <td>{{SpecName("CSS2.1")}}</td>
       <td>{{Spec2("CSS2.1")}}</td>
-      <td> </td>
+      <td> </td>
     </tr>
     <tr>
       <td>{{SpecName("CSS1")}}</td>

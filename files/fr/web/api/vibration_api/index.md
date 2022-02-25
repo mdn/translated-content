@@ -24,7 +24,7 @@ Ces deux exemples illustrent tout deux la vibration de l'appareil pendant 200 mi
 
 ### Série de vibrations
 
-Un tableau de valeurs décrit des périodes de temps durant lesquelles le dispositif effectue des vibrations alternées (marche-arrêt répété). Chaque valeur dans le tableau est convertie en entier puis est interprétée alternativement comme le nombre de millisecondes pour lequel le dispositif devrait vibrer et le nombre de millisecondes dont il ne le devrait pas. Par exemple:
+Un tableau de valeurs décrit des périodes de temps durant lesquelles le dispositif effectue des vibrations alternées (marche-arrêt répété). Chaque valeur dans le tableau est convertie en entier puis est interprétée alternativement comme le nombre de millisecondes pour lequel le dispositif devrait vibrer et le nombre de millisecondes dont il ne le devrait pas. Par exemple:
 
 
 
@@ -71,7 +71,7 @@ Bien sûr, l'extrait de code ci-dessus ne prends pas en compte la méthode du ta
 
 ### Pourquoi utiliser l'API de vibration?
 
-Cette APi est dédiée pour les appareils mobiles. Il peut être indispensable pour les alertes au sein des applications mobiles et est particulièrement utile lorsqu'il est associé à des jeux ou des applications multimédia lourdes. Imaginez lorsque vous êtes en train de regarder une vidéo sur votre appareil mobile et pendant une scène d'explosion, votre téléphone vibre un peu. Ou jouer à Bomberman et sentir une petite vibration lorsqu'un bloc explose.
+Cette APi est dédiée pour les appareils mobiles. Il peut être indispensable pour les alertes au sein des applications mobiles et est particulièrement utile lorsqu'il est associé à des jeux ou des applications multimédia lourdes. Imaginez lorsque vous êtes en train de regarder une vidéo sur votre appareil mobile et pendant une scène d'explosion, votre téléphone vibre un peu. Ou jouer à Bomberman et sentir une petite vibration lorsqu'un bloc explose.
 
 ## Spécifications
 

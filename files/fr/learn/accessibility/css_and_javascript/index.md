@@ -52,15 +52,15 @@ Commençons par regarder le CSS.
 
 ### Sémantique correcte et attentes de l'utilisateur
 
-Il est possible d’utiliser CSS pour détourner l'apparence d'un élément HTML pour qu'il ressemble à un autre, mais cela ne veut pas dire que vous devriez le faire. Comme nous l’avons souvent mentionné dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML), vous devez utiliser, dans la mesure du possible, l’élément sémantique approprié. Sinon, cela peut créer de la confusion et des difficultés d'usage pour tout le monde, plus particulièrement pour les utilisateurs handicapés. L'utilisation de la sémantique correcte a beaucoup à voir avec les attentes des utilisateurs  — les éléments ont une apparence et un comportement particuliers, en fonction de leurs fonctionnalités, et ces conventions communes sont attendues par les utilisateurs.
+Il est possible d’utiliser CSS pour détourner l'apparence d'un élément HTML pour qu'il ressemble à un autre, mais cela ne veut pas dire que vous devriez le faire. Comme nous l’avons souvent mentionné dans notre article [HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML), vous devez utiliser, dans la mesure du possible, l’élément sémantique approprié. Sinon, cela peut créer de la confusion et des difficultés d'usage pour tout le monde, plus particulièrement pour les utilisateurs handicapés. L'utilisation de la sémantique correcte a beaucoup à voir avec les attentes des utilisateurs  — les éléments ont une apparence et un comportement particuliers, en fonction de leurs fonctionnalités, et ces conventions communes sont attendues par les utilisateurs.
 
 Par exemple, un utilisateur de lecteur d'écran ne peut pas naviguer dans une page via des éléments d'en-tête si le développeur n'a pas utilisé les éléments d'en-tête de manière appropriée pour annoter le contenu. De la même manière, un en-tête perd son utilité visuelle si vous le stylisez de sorte qu'il ne ressemble pas à un en-tête.
 
-La règle de base est la suivante : adaptez les styles et les comportements à votre conception sans rompre les habitudes utilisateur qui permettent une expérience intuitive. Les sections suivantes résument les principales fonctionnalités HTML à prendre en compte.
+La règle de base est la suivante : adaptez les styles et les comportements à votre conception sans rompre les habitudes utilisateur qui permettent une expérience intuitive. Les sections suivantes résument les principales fonctionnalités HTML à prendre en compte.
 
 #### Structure du contenu du texte "standard"
 
-Titres, paragraphes, listes — le contenu de texte de base de votre page :
+Titres, paragraphes, listes — le contenu de texte de base de votre page :
 
 ```html
 <h1>En-têtes</h1>
@@ -89,15 +89,15 @@ p, li {
 Vous devriez :
 
 - Sélectionnez une taille de police, une hauteur de ligne, un espacement interlettres, etc. raisonnables pour que votre texte soit logique, lisible et agréable à lire.
-- Le style par défaut pour les titres, dans une taille plus grande et en gras les distingue du texte principal.
+- Le style par défaut pour les titres, dans une taille plus grande et en gras les distingue du texte principal.
 - Vos listes devraient ressembler à des listes.
-- La couleur du texte doit présenter un contraste suffisant avec la couleur de fond.
+- La couleur du texte doit présenter un contraste suffisant avec la couleur de fond.
 
-Voir [Fondamentaux du texte HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals) et [ Introduction au style de texte](/fr/docs/Learn/CSS/Styling_text) pour plus d'informations.
+Voir [Fondamentaux du texte HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals) et [ Introduction au style de texte](/fr/docs/Learn/CSS/Styling_text) pour plus d'informations.
 
 #### Texte mis en emphase
 
-On met en avant une portion de texte grâce au balises *inline* `<em>` :
+On met en avant une portion de texte grâce au balises *inline* `<em>` :
 
 ```html
 <p> L'eau est <em> très chaude </em>.</p>
@@ -117,7 +117,7 @@ Cependant, vous aurez rarement besoin de styliser des éléments d’emphase de 
 
 #### Les abréviations
 
-Un élément permettant d'associer une abréviation, un acronyme ou un sigle à sa forme développée :
+Un élément permettant d'associer une abréviation, un acronyme ou un sigle à sa forme développée :
 
 ```html
 <p> Le contenu web est marqué à l'aide de  <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
@@ -131,7 +131,7 @@ abbr {
 }
 ```
 
-Par convention, on souligne en pointillés les abréviations et il n’est pas judicieux de s’écarter significativement cette règle reconnue. Pour plus d'informations sur les abréviations, voir [Abréviations](/fr/docs/Apprendre/HTML/Introduction_à_HTML/formatage-avance-texte#Abbreviations).
+Par convention, on souligne en pointillés les abréviations et il n’est pas judicieux de s’écarter significativement cette règle reconnue. Pour plus d'informations sur les abréviations, voir [Abréviations](/fr/docs/Apprendre/HTML/Introduction_à_HTML/formatage-avance-texte#Abbreviations).
 
 #### Liens
 
@@ -165,7 +165,7 @@ Les conventions de style sur les liens sont le soulignement et une couleur diff�
 
 ![](focus-highlight-chrome.png)
 
-Vous pouvez faire preuve de créativité avec les styles de lien, tant que vous continuez à donner aux utilisateurs des informations visuelles en retour lorsqu'ils interagissent avec les liens. Quelque chose doit effectivement se produire pour signaler les changements d'états d'un lien, et vous ne devriez pas vous débarrasser du curseur de pointeur ou du contour — ces deux outils sont des aides très importantes pour l'accessibilité pour ceux qui utilisent les contrôles du clavier.
+Vous pouvez faire preuve de créativité avec les styles de lien, tant que vous continuez à donner aux utilisateurs des informations visuelles en retour lorsqu'ils interagissent avec les liens. Quelque chose doit effectivement se produire pour signaler les changements d'états d'un lien, et vous ne devriez pas vous débarrasser du curseur de pointeur ou du contour — ces deux outils sont des aides très importantes pour l'accessibilité pour ceux qui utilisent les contrôles du clavier.
 
 #### Éléments form
 
@@ -180,9 +180,9 @@ Vous pouvez faire preuve de créativité avec les styles de lien, tant que vous 
 
 Vous pouvez voir de bons exemples de CSS dans notre exemple [form-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-css.html) et ([en direct](https://mdn.github.io/learning-area/accessibility/css/form-css.html)).
 
-La plupart du CSS que vous rédigerez pour les formulaires servira à dimensionner les éléments, à aligner les étiquettes et les entrées, et à leur donner une apparence nette et ordonnée.
+La plupart du CSS que vous rédigerez pour les formulaires servira à dimensionner les éléments, à aligner les étiquettes et les entrées, et à leur donner une apparence nette et ordonnée.
 
-Toutefois, vous ne devriez pas trop vous écarter des indications visuelles classiques qui signalent qu'un élément du formulaire est ciblé, c'est fondamentalement la même chose que pour les liens (voir ci-dessus). Vous pouvez mettre en forme les états ciblé / survolé du formulaire pour rendre ce comportement plus cohérent sur les navigateurs ou pour obtenir une meilleure intégration au design de votre page, mais ne vous en débarrassez pas complètement. Là encore, les utilisateurs s’appuient sur ces indices pour comprendre ce qui se passe.
+Toutefois, vous ne devriez pas trop vous écarter des indications visuelles classiques qui signalent qu'un élément du formulaire est ciblé, c'est fondamentalement la même chose que pour les liens (voir ci-dessus). Vous pouvez mettre en forme les états ciblé / survolé du formulaire pour rendre ce comportement plus cohérent sur les navigateurs ou pour obtenir une meilleure intégration au design de votre page, mais ne vous en débarrassez pas complètement. Là encore, les utilisateurs s’appuient sur ces indices pour comprendre ce qui se passe.
 
 #### Tableaux
 
@@ -190,13 +190,13 @@ Tableaux pour la présentation des données tabulées.
 
 Vous pouvez voir un bon exemple simple de  [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) et ([en direct](https://mdn.github.io/learning-area/accessibility/css/table-css.html)).
 
-En appliquant les propriétés du module CSS des tableaux, vous pourrez adapter les tables HTML à votre design avec une apparence pas trop affreuse. Il est judicieux de vous assurer que les en-têtes de table se démarquent (normalement en gras), et de zébrer les lignes via le pseudo-sélecteur `:nth-child(n) `pour faciliter la lecture.
+En appliquant les propriétés du module CSS des tableaux, vous pourrez adapter les tables HTML à votre design avec une apparence pas trop affreuse. Il est judicieux de vous assurer que les en-têtes de table se démarquent (normalement en gras), et de zébrer les lignes via le pseudo-sélecteur `:nth-child(n) `pour faciliter la lecture.
 
 ### Couleur et contraste de couleur
 
 Lorsque vous choisissez un jeu de couleurs pour votre site web, assurez-vous que la couleur du texte contraste bien avec la couleur de fond. Votre design peut sembler agréable, mais cela n’est pas bon si les personnes malvoyantes, par exemple atteintes de daltonisme, ne peuvent pas lire votre contenu.
 
-Il existe un moyen simple de vérifier si votre contraste est suffisamment important pour ne pas causer de problèmes. Il existe un certain nombre d’outils de vérification du contraste en ligne dans lesquels vous pouvez entrer vos couleurs de premier plan et d’arrière-plan afin de les vérifier. Par exemple, le [vérificateur de contraste de couleur](https://webaim.org/resources/contrastchecker/) du WebAIM est simple à utiliser et explique ce dont vous avez besoin pour vous conformer aux critères WCAG relatifs au contraste des couleurs.
+Il existe un moyen simple de vérifier si votre contraste est suffisamment important pour ne pas causer de problèmes. Il existe un certain nombre d’outils de vérification du contraste en ligne dans lesquels vous pouvez entrer vos couleurs de premier plan et d’arrière-plan afin de les vérifier. Par exemple, le [vérificateur de contraste de couleur](https://webaim.org/resources/contrastchecker/) du WebAIM est simple à utiliser et explique ce dont vous avez besoin pour vous conformer aux critères WCAG relatifs au contraste des couleurs.
 
 > **Note :** Un taux de contraste élevé permettra également à toute personne utilisant un smartphone ou une tablette avec un écran brillant de mieux lire les pages dans un environnement lumineux, tel qu'exposé à la lumière du soleil.
 
@@ -204,7 +204,7 @@ Un autre conseil est de ne pas compter uniquement sur la couleur pour les pannea
 
 ### Cacher des choses
 
-Dans de nombreux cas, une conception visuelle nécessitera de ne pas afficher tout le contenu en même temps. Par exemple, dans notre [Exemple de boîte d'information à onglets](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (voir notre [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)), nous avons trois panneaux d’informations, mais nous les [positionnons](/fr/docs/Apprendre/CSS/CSS_layout/Le_positionnement) les uns sur les autres et fournissons des onglets sur lesquels on peut cliquer pour les afficher à tour de rôle (c’est aussi accessible au clavier – vous pouvez également utiliser <kbd>Tab</kbd> et <kbd>Entrée</kbd> pour les sélectionner).
+Dans de nombreux cas, une conception visuelle nécessitera de ne pas afficher tout le contenu en même temps. Par exemple, dans notre [Exemple de boîte d'information à onglets](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (voir notre [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)), nous avons trois panneaux d’informations, mais nous les [positionnons](/fr/docs/Apprendre/CSS/CSS_layout/Le_positionnement) les uns sur les autres et fournissons des onglets sur lesquels on peut cliquer pour les afficher à tour de rôle (c’est aussi accessible au clavier – vous pouvez également utiliser <kbd>Tab</kbd> et <kbd>Entrée</kbd> pour les sélectionner).
 
 ![](tabbed-info-box.png)
 
@@ -216,11 +216,11 @@ Par contre, vous ne devriez pas utiliser {{cssxref("visibility")}}`:hidden` ou {
 
 ### Accepter que les utilisateurs puissent remplacer les styles
 
-#### Acceptez que les utilisateurs puissent remplacer vos styles
+#### Acceptez que les utilisateurs puissent remplacer vos styles
 
 Il est possible pour les utilisateurs de remplacer vos styles par leurs propres styles personnalisés, par exemple :
 
-- Voir [Éditeur de Style](/fr/docs/Outils/Éditeur_de_style) pour un guide utile expliquant comment le faire manuellement dans Firefox, et [Comment utiliser une feuille de style (css) personnalisée avec Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) par Adrian Gordon pour les instructions IE équivalentes (EN).
+- Voir [Éditeur de Style](/fr/docs/Outils/Éditeur_de_style) pour un guide utile expliquant comment le faire manuellement dans Firefox, et [Comment utiliser une feuille de style (css) personnalisée avec Internet Explorer](https://www.itsupportguides.com/knowledge-base/computer-accessibility/how-to-use-a-custom-style-sheet-css-with-internet-explorer/) par Adrian Gordon pour les instructions IE équivalentes (EN).
 - Il est probablement plus facile de le faire en utilisant une extension, par exemple l’extension Stylus est disponible pour [Firefox](https://addons.mozilla.org/en-US/firefox/addon/stylish/), [Safari](https://safari-extensions.apple.com/details/?id=com.sobolev.stylish-5555L95H45), [Opera](https://addons.opera.com/en/extensions/details/stylish/), et [Chrome](https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe).
 
 Les utilisateurs peuvent le faire pour diverses raisons. Un utilisateur malvoyant peut vouloir agrandir le texte de tous les sites Web qu’il visite, ou un utilisateur présentant un déficit de couleur grave peut vouloir afficher tous les sites Web dans des couleurs très contrastées, faciles à lire. Quel que soit le besoin, vous devriez être à l'aise avec cela et rendre vos conceptions suffisamment flexibles pour que de tels changements fonctionnent dans votre conception. Par exemple, vous voudrez peut-être vous assurer que votre zone de contenu principale peut gérer un texte plus volumineux (le défilement commencera peut-être pour permettre à tout le monde de le voir), et ne le cachera pas ou ne sera pas complètement interrompu.
@@ -248,16 +248,16 @@ En plus d'utiliser le bon élément pour le bon travail, vous devez également v
 
 ### Le garder discret
 
-Lors de la création de votre contenu, gardez à l'esprit l'idée d'un **JavaScript discret, en retrait**. JavaScript est discret quand il est utilisé pour améliorer des fonctionnalités, il devient gênant quand ces mêmes fonctionnalités sont développées entièrement en JavaScript. Les fonctions de base de votre page devraient idéalement tourner sans JavaScript, même s’il est évident que ce n’est pas toujours possible. La règle est d'utiliser lorsque cela est possible les fonctionnalités intégrées au navigateur.
+Lors de la création de votre contenu, gardez à l'esprit l'idée d'un **JavaScript discret, en retrait**. JavaScript est discret quand il est utilisé pour améliorer des fonctionnalités, il devient gênant quand ces mêmes fonctionnalités sont développées entièrement en JavaScript. Les fonctions de base de votre page devraient idéalement tourner sans JavaScript, même s’il est évident que ce n’est pas toujours possible. La règle est d'utiliser lorsque cela est possible les fonctionnalités intégrées au navigateur.
 
 De bons exemples d'utilisation de JavaScript discret incluent :
 
 - Fournir une validation de formulaire côté client, qui alerte les utilisateurs en cas de problèmes liés aux entrées de formulaire, sans avoir à attendre que le serveur vérifie les données. S'il n'est pas disponible, le formulaire fonctionnera toujours, mais la validation risque d'être plus lente.
-- Fournir des commandes personnalisées pour les  `<video>` HTML5 accessibles aux utilisateurs uniquement au clavier, ainsi qu'un lien direct vers la vidéo pouvant être utilisé pour y accéder si JavaScript n'est pas disponible (les commandes du navigateur `<video>` par défaut ne sont pas des touches accessibles dans la plupart des navigateurs).
+- Fournir des commandes personnalisées pour les  `<video>` HTML5 accessibles aux utilisateurs uniquement au clavier, ainsi qu'un lien direct vers la vidéo pouvant être utilisé pour y accéder si JavaScript n'est pas disponible (les commandes du navigateur `<video>` par défaut ne sont pas des touches accessibles dans la plupart des navigateurs).
 
 Par exemple, nous avons écrit un exemple de validation de formulaire côté client rapide — voir [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) (voir aussi la [démonstration en direct](https://mdn.github.io/learning-area/accessibility/css/form-validation.html)). Ici, vous verrez un formulaire simple. Lorsque vous essayez de soumettre le formulaire avec un ou les deux champs vides, l'envoi échoue et un message d'erreur s'affiche pour vous indiquer ce qui ne va pas.
 
-Ce type de validation de formulaire est discret — vous pouvez toujours utiliser le formulaire parfaitement sans que le JavaScript soit disponible, et toute implémentation de formulaire sensée aura également une validation côté serveur, car il est trop facile pour les utilisateurs malveillants de contourner la validation côté client (en désactivant JavaScript dans le navigateur, par exemple). La validation côté client est toujours très utile pour signaler les erreurs — les utilisateurs peuvent savoir instantanément quelles erreurs ils commettent, au lieu d'attendre un aller-retour vers le serveur et un rechargement de page. C'est un avantage certain en termes de convivialité.
+Ce type de validation de formulaire est discret — vous pouvez toujours utiliser le formulaire parfaitement sans que le JavaScript soit disponible, et toute implémentation de formulaire sensée aura également une validation côté serveur, car il est trop facile pour les utilisateurs malveillants de contourner la validation côté client (en désactivant JavaScript dans le navigateur, par exemple). La validation côté client est toujours très utile pour signaler les erreurs — les utilisateurs peuvent savoir instantanément quelles erreurs ils commettent, au lieu d'attendre un aller-retour vers le serveur et un rechargement de page. C'est un avantage certain en termes de convivialité.
 
 > **Note :** La validation côté serveur n'a pas été implémentée dans cette simple démonstration.
 
@@ -268,7 +268,7 @@ Nous avons également rendu cette validation de formulaire assez accessible. Nou
 <input type="text" name="name" id="name">
 ```
 
-Nous ne faisons la validation qu'une fois le formulaire soumis — ceci afin de ne pas mettre à jour l'interface utilisateur trop souvent et de ne pas perturber les utilisateurs du lecteur d'écran (et éventuellement d'autres) :
+Nous ne faisons la validation qu'une fois le formulaire soumis — ceci afin de ne pas mettre à jour l'interface utilisateur trop souvent et de ne pas perturber les utilisateurs du lecteur d'écran (et éventuellement d'autres) :
 
 ```js
 form.onsubmit = validate;
@@ -291,7 +291,7 @@ function validate(e) {
 
 > **Note :** Dans cet exemple, nous masquons et montrons la boîte de message d'erreur en utilisant le positionnement absolu plutôt qu'une autre méthode telle que la visibilité ou l'affichage, car cela n'empêche pas le lecteur d'écran de pouvoir lire le contenu de celui-ci.
 
-La validation du formulaire réel serait beaucoup plus complexe que cela : vous voudriez vérifier que le nom saisi ressemble réellement à un nom, que l’âge entré est en réalité un nombre et qu’il est réaliste (par exemple, pas un nombre négatif, ni à quatre chiffres). Ici, nous venons d'implémenter la vérification simple qu'une valeur a été renseignée dans chaque champ de saisie (`if(testItem.input.value === '')`).
+La validation du formulaire réel serait beaucoup plus complexe que cela : vous voudriez vérifier que le nom saisi ressemble réellement à un nom, que l’âge entré est en réalité un nombre et qu’il est réaliste (par exemple, pas un nombre négatif, ni à quatre chiffres). Ici, nous venons d'implémenter la vérification simple qu'une valeur a été renseignée dans chaque champ de saisie (`if(testItem.input.value === '')`).
 
 Une fois la validation effectuée, si les tests réussissent, le formulaire est soumis. S'il y a des erreurs  (`if(errorList.innerHTML !== '')`) nous arrêtons la soumission du formulaire ( à l'aide de[ event.preventDefault()](/fr/docs/Web/API/Event/preventDefault)), et affichons tous les messages d'erreur créés (voir ci-dessous). Ce mécanisme signifie que les erreurs ne seront affichées que s’il y a des erreurs, ce qui est meilleur pour la facilité d’utilisation.
 
@@ -311,7 +311,7 @@ function createLink(testItem) {
 }
 ```
 
-Chaque lien a un double objectif — il vous dit quelle est l’erreur, vous pouvez aussi cliquer dessus / l’activer pour passer directement à l’élément d’entrée en question et corriger votre saisie.
+Chaque lien a un double objectif — il vous dit quelle est l’erreur, vous pouvez aussi cliquer dessus / l’activer pour passer directement à l’élément d’entrée en question et corriger votre saisie.
 
 > **Note :** La partie `focus()` de cet exemple est un peu délicate. Chrome et Edge (et les versions plus récentes d'IE) focalisent l'élément lorsque l'utilisateur clique sur le lien, sans avoir besoin du bloc `onclick`/`focus()`. Safari ne mettra en évidence que l'élément de formulaire avec le lien, il a donc besoin du bloc `onclick`/`focus()` pour le focaliser. Firefox ne focalise pas les entrées correctement dans ce contexte, les utilisateurs de Firefox ne peuvent donc pas en profiter pour le moment (bien que tout le reste fonctionne bien). Le problème de Firefox devrait bientôt être résolu - des efforts sont en cours pour donner la parité des comportements de Firefox aux autres navigateurs (voir {{bug(277178)}}).
 
@@ -328,11 +328,11 @@ Nous expliquerons ces attributs dans notre prochain article, qui couvre [WAI-ARI
 
 > **Note :** Certains d'entre vous penseront probablement au fait que les formulaires HTML5 ont des mécanismes de validation intégrés tels que les attributs `required`, `min`/`minlength`, et `max`/`maxlength` (voir {{htmlelement("input")}} référence d'élément pour plus d'informations). Nous avons fini par ne pas les utiliser dans la démo, car la prise en charge multi-navigateurs est inégale (par exemple, IE10 et versions ultérieures, pas de prise en charge de Safari).
 
-> **Note :** WebAIM's [Validation de formulaire et récupération d'erreur utilisables et accessibles (EN)](https://webaim.org/techniques/formvalidation/) fournit des informations supplémentaires utiles sur la validation de formulaire accessible.
+> **Note :** WebAIM's [Validation de formulaire et récupération d'erreur utilisables et accessibles (EN)](https://webaim.org/techniques/formvalidation/) fournit des informations supplémentaires utiles sur la validation de formulaire accessible.
 
 ### Autres problèmes d'accessibilité JavaScript
 
-Il y a d'autres choses à prendre en compte quand on met en œuvre des solutions JavaScript tout en réflechissant à l'accessibilité. Voilà déjà une liste de points à surveiller, que nous complèterons à chaque fois qu'un nouveau cas se présente.
+Il y a d'autres choses à prendre en compte quand on met en œuvre des solutions JavaScript tout en réflechissant à l'accessibilité. Voilà déjà une liste de points à surveiller, que nous complèterons à chaque fois qu'un nouveau cas se présente.
 
 #### Événements spécifiques à la souris
 
@@ -340,9 +340,9 @@ Comme vous le savez peut-être, la plupart des interactions utilisateur sont imp
 
 Pour résoudre de tels problèmes, vous devez doubler ces événements avec des événements similaires pouvant être activés par d'autres moyens (appelés gestionnaires d'événements indépendants du périphérique) —[focus](/fr/docs/Web/Events/focus) et [blur (event)](/fr/docs/Web/Events/blur) fourniraient une accessibilité aux utilisateurs de clavier.
 
-Regardons un exemple qui illustre cela. Considérons une image miniature ; quand elle est survolée ou ciblée (comme sur un catalogue de produits de commerce électronique) une version plus grande de l’image s'affiche.
+Regardons un exemple qui illustre cela. Considérons une image miniature ; quand elle est survolée ou ciblée (comme sur un catalogue de produits de commerce électronique) une version plus grande de l’image s'affiche.
 
-Nous avons créé un exemple très simple, que vous pouvez trouver sur [Exemple d'événements de souris et de clavier](https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html)). Le code comporte deux fonctions qui affichent et cachent l'image agrandie ; ceux-ci sont gérés par les lignes suivantes qui les définissent en tant que gestionnaires d'événements :
+Nous avons créé un exemple très simple, que vous pouvez trouver sur [Exemple d'événements de souris et de clavier](https://mdn.github.io/learning-area/accessibility/css/mouse-and-keyboard-events.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/accessibility/css/mouse-and-keyboard-events.html)). Le code comporte deux fonctions qui affichent et cachent l'image agrandie ; ceux-ci sont gérés par les lignes suivantes qui les définissent en tant que gestionnaires d'événements :
 
 ```js
 imgThumb.onmouseover = showImg;
@@ -354,7 +354,7 @@ imgThumb.onblur = hideImg;
 
 Les deux premières lignes exécutent les fonctions lorsque le pointeur de la souris survole et cesse de survoler la vignette, respectivement. Cela ne nous permettra toutefois pas d'accéder à la vue agrandie à l'aide du clavier ; pour cela, nous avons inclus les deux dernières lignes, qui exécutent les fonctions lorsque l'image est nette et floue (lorsque la mise au point s'arrête). Cela peut être fait en tapant sur l'image, car nous avons inclus  `tabindex="0"` dessus.
 
-L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/GlobalEventHandlers/onclick) après avoir  pressé <kbd>Entrée</kbd>  sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)).
+L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/GlobalEventHandlers/onclick) après avoir  pressé <kbd>Entrée</kbd>  sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)).
 
 ## Résumé
 

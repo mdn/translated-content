@@ -40,7 +40,7 @@ original_slug: Web/CSS/Modèle_de_boîte_CSS
 - {{cssxref("margin-left")}}
 - {{cssxref("margin-right")}}
 - {{cssxref("margin-top")}}
-- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
+- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
 
 #### Les propriétés qui définissent le remplissage (_padding_) d'une boîte
 

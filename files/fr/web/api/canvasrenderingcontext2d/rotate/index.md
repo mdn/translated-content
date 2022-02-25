@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.rotate()`**` de l'API` Canvas 2D ajoute une rotation à la matrice de transformation. L'argument angle représente un angle de rotation horaire et il est exprimé en radians.
+La méthode **`CanvasRenderingContext2D.rotate()`**` de l'API` Canvas 2D ajoute une rotation à la matrice de transformation. L'argument angle représente un angle de rotation horaire et il est exprimé en radians.
 
 ## Syntaxe
 
@@ -16,15 +16,15 @@ La méthode **`CanvasRenderingContext2D.rotate()`**` de l'API` Canvas 2D ajout
 ### Paramètres
 
 - `angle`
-  - : L'angle de rotation horaire en radians. Vous pouvez utiliser `degrés * Math.PI / 180` si vous voulez faire la conversion à partir d'une valeur en degrés.
+  - : L'angle de rotation horaire en radians. Vous pouvez utiliser `degrés * Math.PI / 180` si vous voulez faire la conversion à partir d'une valeur en degrés.
 
-Le centre de la rotation est toujours l'origine du canevas. Pour changer le centre, il faudra déplacer le canevas en utilisant la méthode {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.
+Le centre de la rotation est toujours l'origine du canevas. Pour changer le centre, il faudra déplacer le canevas en utilisant la méthode {{domxref("CanvasRenderingContext2D.translate", "translate()")}}.
 
 ## Exemples
 
 ### Utilisation de la méthode `rotate`
 
-Ceci est seulement un fragment de code simple qui utilise la méthode `rotate`.
+Ceci est seulement un fragment de code simple qui utilise la méthode `rotate`.
 
 #### HTML
 
@@ -45,7 +45,7 @@ ctx.fillRect(70, 0, 100, 30);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ```
 
-Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas:
+Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas:
 
 #### Code jouable
 

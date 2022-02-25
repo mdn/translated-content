@@ -11,7 +11,7 @@ translation_of: Web/API/HTMLCollection
 
 L'interface **HTMLCollection** est constituée d'une collection générique (à la manière d'un tableau similaire à [arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments)) d'éléments (dans l'ordre du document) et offre des méthodes et des propriétés pour sélectionner ces éléments dans la liste.
 
-**Note:** Cette interface est appelée `HTMLCollection` pour des raisons historiques (avant DOM4, les collections implémentant cette interface pouvaient uniquement êtres constituées d'élements HTML).
+**Note:** Cette interface est appelée `HTMLCollection` pour des raisons historiques (avant DOM4, les collections implémentant cette interface pouvaient uniquement êtres constituées d'élements HTML).
 
 Une HTMLCollection dans le DOM HTML est automatiquement mise à jour quand le document concerné change.
 
@@ -25,7 +25,7 @@ Une HTMLCollection dans le DOM HTML est automatiquement mise à jour quand le do
 - {{domxref("HTMLCollection.item()")}}
   - : Retourne le nœud spécifique à l'`index` basé sur zéro donné dans la liste. Retourne `null` si l'`index` est hors de portée.
 - {{domxref("HTMLCollection.namedItem()")}}
-  - : Retourne le nœud spécifique dont l'ID ou, à défaut, le nom correspond à la chaîne de caractères fournie par `name`. La recherche par nom est faite seulement en dernier ressort, uniquement en HTML, et seulement si l'élément référencé supporte l'attribut `name`. Retourne `null` si aucun nœud n'existe pour le nom donné.
+  - : Retourne le nœud spécifique dont l'ID ou, à défaut, le nom correspond à la chaîne de caractères fournie par `name`. La recherche par nom est faite seulement en dernier ressort, uniquement en HTML, et seulement si l'élément référencé supporte l'attribut `name`. Retourne `null` si aucun nœud n'existe pour le nom donné.
 
 ## Utilisation en JavaScript
 

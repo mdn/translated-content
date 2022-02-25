@@ -26,7 +26,7 @@ Réduire le nombre de fichiers référencés dans une page web diminue le nombre
 
 - Utilisez le moins d'images possible sur votre site (et de gif animés ofc). Preferez des [boutons graphiques en CSS](http://css-tricks.com/examples/ButtonMaker/).
 - Compressez vos images (éviter les .png). Vous pouvez pour cela utiliser [Gimp](http://www.gimp.org/) ou [Imagemagik](http://www.imagemagick.org/script/index.php).
-- Preferez le CSS ou le JavaScript au flash: il ralenti le navigateur.
+- Preferez le CSS ou le JavaScript au flash: il ralenti le navigateur.
 
 Les videos sont diffusées progressivement depuis le serveur, elles ne ralentisseent donc pas le chargement de votre page.
 
@@ -54,7 +54,7 @@ Les scripts intégrés peut être coûteux pour le chargement de la page, puisqu
 
 L'utilisation de CSS modernes réduit la quantité de balisage, et peut réduire la nécessité de "spacer" les images, en termes de disposition, et peut très souvent remplacer des images de texte stylisé - qui "coutent" beaucoup plus que l'équivalent texte-et-CSS.
 Utiliser des balises valides a d'autres avantages. Tout d'abord, les navigateurs n'ont pas besoin d'effectuer de corrections d'erreurs lors de l'analyse du code HTML.
-En outre, la validité du balisage permet la libre utilisation d'autres outils qui peuvent pré-traiter vos pages web. Par exemple, [HTML Tidy](http://tidy.sourceforge.net/)  peut supprimer des espaces blancs et des balises facultatives, mais il refusera de s'exécuter sur une page avec des erreurs de balisage graves.
+En outre, la validité du balisage permet la libre utilisation d'autres outils qui peuvent pré-traiter vos pages web. Par exemple, [HTML Tidy](http://tidy.sourceforge.net/) peut supprimer des espaces blancs et des balises facultatives, mais il refusera de s'exécuter sur une page avec des erreurs de balisage graves.
 
 ### Segmentez votre contenu
 

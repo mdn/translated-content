@@ -9,7 +9,7 @@ tags:
   - localStorage
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
-L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
+L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
 
 ## Concepts de base
 
@@ -21,7 +21,7 @@ localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');
 ```
 
-> **Note :** Il est recommandé d'utiliser l'API "Web Storage" (`setItem`, `getItem`, `removeItem`, `key`, `length`) pour prévenir les [embûches](http://www.2ality.com/2012/01/objects-as-maps.html) associées à l'utilisation d'objets capable de stocker des couples clé-valeur.
+> **Note :** Il est recommandé d'utiliser l'API "Web Storage" (`setItem`, `getItem`, `removeItem`, `key`, `length`) pour prévenir les [embûches](http://www.2ality.com/2012/01/objects-as-maps.html) associées à l'utilisation d'objets capable de stocker des couples clé-valeur.
 
 Les deux principaux mécanismes internes du Stockage Web sont :
 
@@ -85,7 +85,7 @@ Vous pouvez retrouver ici [une brève histoire de la détection de localStorage]
 
 ## Un exemple simple
 
-Pour illustrer certains usages typiques du Stockage Web, nous avons créé un exemple simple ingénieusement appelé **Web Storage Demo**. La [page de lancement](https://mdn.github.io/dom-examples/web-storage/) fournit des contrôles afin de personnaliser la couleur, la police de caractère et l'image de décoration:
+Pour illustrer certains usages typiques du Stockage Web, nous avons créé un exemple simple ingénieusement appelé **Web Storage Demo**. La [page de lancement](https://mdn.github.io/dom-examples/web-storage/) fournit des contrôles afin de personnaliser la couleur, la police de caractère et l'image de décoration:
 
 ![](landing.png)
 

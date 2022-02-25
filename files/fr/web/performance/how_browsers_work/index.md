@@ -114,7 +114,7 @@ Même si le code HTML de la page de demande est plus volumineux que le paquet in
 
 Nous décrivons cinq étapes dans le chemin de rendu critique, ou "[critical rendering path](/fr/docs/Web/Performance/Critical_rendering_path)".
 
-La première étape consiste à traiter le balisage HTML et à créer l'arborescence DOM. L'analyse HTML implique la création de jetons, [tokenization,](/fr/docs/Web/API/DOMTokenList) et la construction du DOM tree. Les jetons HTML incluent les balises de début et de fin, ainsi que les noms et les valeurs des attributs. Si le document est bien formé, son analyse est simple et rapide. L'analyseur analyse les entrées sous forme de jetons dans le document, créant ainsi le document tree.
+La première étape consiste à traiter le balisage HTML et à créer l'arborescence DOM. L'analyse HTML implique la création de jetons, [tokenization,](/fr/docs/Web/API/DOMTokenList) et la construction du DOM tree. Les jetons HTML incluent les balises de début et de fin, ainsi que les noms et les valeurs des attributs. Si le document est bien formé, son analyse est simple et rapide. L'analyseur analyse les entrées sous forme de jetons dans le document, créant ainsi le document tree.
 
 Le DOM tree décrit le contenu du document. L'élément [`<html>`](/fr/docs/Web/HTML/Element/html) est la première balise et le premier nœud racine de du document tree. L'arbre reflète les relations et les hiérarchies entre différentes balises. Les balises imbriquées dans d'autres balises sont des nœuds enfants. Plus le nombre de nœuds DOM est élevé, le plus de temps ca prends pour construire le DOM tree.
 

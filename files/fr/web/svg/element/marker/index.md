@@ -54,7 +54,7 @@ html,body,svg { height:100% }
     _Valeur_: **[\<length>](/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
 - {{SVGAttr("markerUnits")}}
   - : Définit le système de coordnnées pour les attributs `markerWidth`, `markerHeight` et le contenu du `<marker>`.
-    _Valeur_: `userSpaceOnUse`|`strokeWidth` ; _Valeur par défaut_: `strokeWidth`; _Animation_: **oui**
+    _Valeur_: `userSpaceOnUse`|`strokeWidth` ; _Valeur par défaut_: `strokeWidth`; _Animation_: **oui**
 - {{SVGAttr("markerWidth")}}
   - : Définit la largeur du viewport du marqueur.
     _Valeur_: **[\<length>](/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**

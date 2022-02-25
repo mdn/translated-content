@@ -78,7 +78,7 @@ grid-auto-rows: unset;
   - : Une notation fonctionnelle qui définit un intervalle de taille entre `min` et `max`. Si `max` est inférieur à `min`, `max` est ignoré et la fonction est traitée comme un minimum. En tant que maximum, elle joue le rôle d'une valeur `<flex>` qui définit le facteur de flexibilité de la piste. En tant que minimum, elle est gérée comme zéro (ou comme le contenu minimal si le conteneur de la grille impose une contrainte de contenu minimal).
 - `auto`
 
-  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
+  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
 
     > **Note :** Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
 

@@ -243,7 +243,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
         <div class="warning">
           <p>
             <strong>Attention :</strong> La propriété
-            <code>additional_backgrounds</code> est experimentale.  Il est
+            <code>additional_backgrounds</code> est experimentale. Il est
             actuellement accepté dans les versions finale de Firefox, mais son
             comportement est sujet à changement.
           </p>
@@ -336,7 +336,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
       <td>
         <p>
           La couleur du texte et des icônes dans le signet et les barres de
-          recherche. De plus, si <code>tab_text</code> n'est pas défini, il
+          recherche. De plus, si <code>tab_text</code> n'est pas défini, il
           définit la couleur du texte de l'onglet actif et si les
           <code>icons</code> ne sont pas définies, la couleur des icônes de la
           barre d'outils. Fourni en tant qu'alias compatible Chrome pour

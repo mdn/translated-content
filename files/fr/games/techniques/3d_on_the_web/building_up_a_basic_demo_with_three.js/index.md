@@ -181,7 +181,7 @@ Now we will add more shapes to the scene, and explore other shapes, materials, l
 cube.position.x = -25;
 ```
 
-Now onto more shapes and materials. What might happen when you add a torus, wrapped in the Phong material? Try adding the following lines, just below the lines defining the cube.
+Now onto more shapes and materials. What might happen when you add a torus, wrapped in the Phong material? Try adding the following lines, just below the lines defining the cube.
 
 ```js
 var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
@@ -224,7 +224,7 @@ This looks a little boring though. In a game, something is usually happening. We
 
 ## Animation
 
-We already used rotation, to adjust the position of the cube. We can also scale the shapes, or change their positions. To show animation, we need to make changes to these values inside the render loop, so they update on each frame.
+We already used rotation, to adjust the position of the cube. We can also scale the shapes, or change their positions. To show animation, we need to make changes to these values inside the render loop, so they update on each frame.
 
 ### Rotation
 

@@ -10,7 +10,7 @@ tags:
   - URLSearchParameters
 translation_of: Web/API/URL/searchParams
 ---
-{{APIRef("URL API")}} La propriété en lecture seule **`searchParams`** de l'interface {{domxref("URL")}} retourneun objet {{domxref("URLSearchParams")}} permettant d'accéder aux arguments décodésde la requête GET contenu dans l'URL.
+{{APIRef("URL API")}} La propriété en lecture seule **`searchParams`** de l'interface {{domxref("URL")}} retourneun objet {{domxref("URLSearchParams")}} permettant d'accéder aux arguments décodésde la requête GET contenu dans l'URL.
 
 {{AvailableInWorkers}}
 
@@ -20,11 +20,11 @@ translation_of: Web/API/URL/searchParams
 
 ### Value
 
-Un objet {{domxref("URLSearchParams")}}.
+Un objet {{domxref("URLSearchParams")}}.
 
 ## Exemples
 
-Si l'URL de votre page est `https://example.com/?nom=Jonathan%20Smith&age=18`
+Si l'URL de votre page est `https://example.com/?nom=Jonathan%20Smith&age=18`
 vous pouvez extraire les paramètres 'nom' et 'age' en utilisant:
 
 ```js
@@ -39,6 +39,6 @@ let age = parseInt(params.get('age')); // le nombre 18
 | -------------------------------------------------------------------------------- | -------------------- | -------------------- |
 | {{SpecName('URL', '#dom-url-searchparams', 'searchParams')}} | {{Spec2('URL')}} | Définition initiale. |
 
-## Compatibilités des navigateurs
+## Compatibilités des navigateurs
 
 {{Compat("api.URL.searchParams")}}

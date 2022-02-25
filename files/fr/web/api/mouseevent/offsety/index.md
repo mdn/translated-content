@@ -20,7 +20,7 @@ La propriété en lecture seule **`offsetY`** de l'interface {{domxref("MouseEve
 
 ### Valeur retournée
 
-Un nombre à virgule flottante double précision `double`. Les premières versions de la spécification la définissaient comme un nombre entier. Pour plus de détails, voir la section Commpatibilité des navigateurs.
+Un nombre à virgule flottante double précision `double`. Les premières versions de la spécification la définissaient comme un nombre entier. Pour plus de détails, voir la section Commpatibilité des navigateurs.
 
 ## Spécifications
 

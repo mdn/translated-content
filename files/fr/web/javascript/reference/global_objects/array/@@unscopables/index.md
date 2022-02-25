@@ -20,7 +20,7 @@ La propriété symbol **`@@unscopable`** contient les noms des propriétés qui 
 
 ## Description
 
-Les propriétés natives d'un objet `Array` qui sont exclues lorsqu'on utilise `with` sont `copyWithin`, `entries`, `fill`, `find`, `findIndex`, `includes`, `keys` et `values`.
+Les propriétés natives d'un objet `Array` qui sont exclues lorsqu'on utilise `with` sont `copyWithin`, `entries`, `fill`, `find`, `findIndex`, `includes`, `keys` et `values`.
 
 Voir la page sur le symbole {{jsxref("Symbol.unscopables")}} pour manipuler `unscopables` sur des objets personnalisés.
 

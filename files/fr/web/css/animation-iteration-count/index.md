@@ -37,9 +37,9 @@ La propriété `animation-iteration-count` est définie avec une ou plusieurs va
 ### Valeurs
 
 - `infinite`
-  - : L'animation sera répétée à l'infini. Dans ce mode d'animation infinie, cette valeur est considérée de la même manière qu'une valeur paire par la propriété **`animation-direction`**.
+  - : L'animation sera répétée à l'infini. Dans ce mode d'animation infinie, cette valeur est considérée de la même manière qu'une valeur paire par la propriété **`animation-direction`**.
 - `<number>`
-  - : Le nombre de répétitions pour l'animation. La valeur par défaut est `1` (elle n'est exécutée qu'une seule fois). Les valeurs négatives sont considérées comme invalides. Il est possible d'utiliser des valeurs qui ne sont pas entières pour indiquer des fragments d'un cycle (ainsi `0.5` indiquera une moitié du cycle de l'animation).
+  - : Le nombre de répétitions pour l'animation. La valeur par défaut est `1` (elle n'est exécutée qu'une seule fois). Les valeurs négatives sont considérées comme invalides. Il est possible d'utiliser des valeurs qui ne sont pas entières pour indiquer des fragments d'un cycle (ainsi `0.5` indiquera une moitié du cycle de l'animation).
 
 > **Note :** Lorsqu'on utilise plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS).
 

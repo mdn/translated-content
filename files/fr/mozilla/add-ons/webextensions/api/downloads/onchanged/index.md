@@ -69,7 +69,7 @@ L'objet `downloadDelta` a les propriétés suivantes disponibles :
 - `endTime`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un  `endTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `state`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `état` {{WebExtAPIRef('downloads.DownloadItem')}}
+  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `état` {{WebExtAPIRef('downloads.DownloadItem')}}
 - `canResume`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}} `canResume`.
 - `paused`{{optional_inline}}

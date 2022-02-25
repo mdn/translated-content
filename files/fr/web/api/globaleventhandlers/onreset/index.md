@@ -40,7 +40,7 @@ function hit() {
  <form>
    <input type="reset" value="reset" />
  </form>
- <div id="d"> </div>
+ <div id="d"> </div>
 </body>
 </html>
 ```

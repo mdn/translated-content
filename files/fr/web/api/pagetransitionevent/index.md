@@ -11,7 +11,7 @@ Les évènements de transition de page sont émis quand une page web est chargé
 
 ### Hiérarchie d’héritage
 
-[Event](/fr/docs/Web/API/Event)   PageTransitionEvent
+[Event](/fr/docs/Web/API/Event) PageTransitionEvent
 
 ## Exemple
 

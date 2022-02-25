@@ -18,9 +18,9 @@ original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 
 ## Pourquoi est-ce si difficile de modifier l'apparence des formulaires avec CSS&nbsp;?
 
-Dans la jeunesse du Web — aux alentours de 1995 — les formulaires ont été ajoutés au HTML dans la [spécification HTML 2](http://www.ietf.org/rfc/rfc1866.txt). À cause de la complexité des formulaires, ceux qui les mettaient en œuvre ont préféré s'appuyer sur le système d'exploitation sous‑jacent pour les gérer et les afficher.
+Dans la jeunesse du Web — aux alentours de 1995 — les formulaires ont été ajoutés au HTML dans la [spécification HTML 2](http://www.ietf.org/rfc/rfc1866.txt). À cause de la complexité des formulaires, ceux qui les mettaient en œuvre ont préféré s'appuyer sur le système d'exploitation sous‑jacent pour les gérer et les afficher.
 
-Quelques années plus tard, les CSS ont été créées et ce qui était une nécessité technique — c'est-à-dire, utiliser des widgets natifs pour les contrôles de formulaire — est devenu un préalable stylistique. Dans la jeunesse des CSS, l'apparence des formulaires n'était pas une priorité.
+Quelques années plus tard, les CSS ont été créées et ce qui était une nécessité technique — c'est-à-dire, utiliser des widgets natifs pour les contrôles de formulaire — est devenu un préalable stylistique. Dans la jeunesse des CSS, l'apparence des formulaires n'était pas une priorité.
 
 Comme les utilisateurs étaient habitués à l'apparence visuelle de leurs plateformes respectives, les fournisseurs de navigateurs étaient réticents à rendre possible la modification de l'apparence des formulaires. Et pour être honnête, il est toujours extrêmement difficile de reconstruire tous les contrôles pour que leur apparence soit modifiable.
 
@@ -202,7 +202,7 @@ C'est ici que le « fun » commence ! Avant de commencer à coder, nous avons be
 
 1.  L'[image de fond](/files/4151/background.jpg "The postcard background") de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.
 2.  Une police de machine à écrire : [« Secret Typewriter » de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
-3.  Une police d'écriture manuelle : [ « Journal » de fontsquirrel.com ](http://www.fontsquirrel.com/fonts/Journal)— téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
+3.  Une police d'écriture manuelle : [ « Journal » de fontsquirrel.com ](http://www.fontsquirrel.com/fonts/Journal)— téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
 
 
 

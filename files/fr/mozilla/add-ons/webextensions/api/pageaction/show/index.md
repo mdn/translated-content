@@ -19,7 +19,7 @@ Affiche l'action de la page pour un onglet donné. L'action de la page est affic
 
 `show()` remplace la correspondance de motifs, de sorte que l'action page sera affichée dans l'onglet spécifié même si [`show_matches`](/Add-ons/WebExtensions/manifest.json/page_action) e correspond pas à l'URL ou si [`hide_matches`](/Add-ons/WebExtensions/manifest.json/page_action) ne correspond pas.
 
-Notez que l'appel à `show()` n'a aucun effet sur un onglet sans contenu chargé.
+Notez que l'appel à `show()` n'a aucun effet sur un onglet sans contenu chargé.
 
 ## Syntaxe
 

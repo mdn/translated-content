@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty
 ---
 {{JSRef}}
 
-La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet possède la propriété spécifiée "en propre", sans que celle-ci provienne de la chaîne de prototypes de l'objet.
+La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet possède la propriété spécifiée "en propre", sans que celle-ci provienne de la chaîne de prototypes de l'objet.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
 
@@ -35,9 +35,9 @@ Chaque objet descendant d'{{jsxref("Object")}} hérite de la méthode `hasOwnPro
 
 ## Exemples
 
-### Utiliser `hasOwnProperty()` pour tester l'existence d'une propriété
+### Utiliser `hasOwnProperty()` pour tester l'existence d'une propriété
 
-L'exemple suivant détermine si l'objet `o` contient une propriété appelée `prop`:
+L'exemple suivant détermine si l'objet `o` contient une propriété appelée `prop`:
 
 ```js
 o = new Object();

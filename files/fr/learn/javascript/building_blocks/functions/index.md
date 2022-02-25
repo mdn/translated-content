@@ -69,7 +69,7 @@ var myNumber = Math.random();
 
 > **Note :** N'hésitez pas à copier ces lignes dans la console JavaScript de votre navigateur afin de vous familiariser à nouveau avec leur fonctionnalité si vous en ressentez le besoin.
 
-Le langage Javascript a de nombreuses fonctions intégrées pour vous permettre de faire des choses utiles sans devoir écrire tout le code vous-même. En fait, certains codes que vous appelez quand **invoquez** (un mot sophistiqué pour dire lancer ou exécuter) une fonction intégrée du navigateur ne pourraient pas être écrits en JavaScript — la plupart de ces fonctions appellent des parties de code interne du navigateur qui est très majoritairement écrit en langages de bas niveau comme le C++, et non pas en langage web comme JavaScript.
+Le langage Javascript a de nombreuses fonctions intégrées pour vous permettre de faire des choses utiles sans devoir écrire tout le code vous-même. En fait, certains codes que vous appelez quand **invoquez** (un mot sophistiqué pour dire lancer ou exécuter) une fonction intégrée du navigateur ne pourraient pas être écrits en JavaScript — la plupart de ces fonctions appellent des parties de code interne du navigateur qui est très majoritairement écrit en langages de bas niveau comme le C++, et non pas en langage web comme JavaScript.
 
 Gardez à l'esprit que certaines fonctions intégrées du navigateur ne font pas partie du noyau du langage JavaScript — certaines font partie des APIs du navigateur qui sont construites à partir du langage par défaut pour apporter encore plus de fonctionnalités ( consultez cette [section antérieure de notre cours](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript) pour une description plus détaillée ). Nous aborderons l'utilisation des APIs du navigateur plus en détail dans un module ultérieur.
 
@@ -83,7 +83,7 @@ Vous n'aurez pas besoin d'apprendre les rouages des objets structurés du JavaSc
 
 ## Fonctions personnalisées
 
-Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html ](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html)tiré de l'article [les boucles dans le code ](/fr/Apprendre/JavaScript/Building_blocks/Looping_code)(voir aussi le [code source ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)complet), nous avons inclus une fonction personnalisée `draw()`qui ressemblait à ça :
+Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html ](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html)tiré de l'article [les boucles dans le code ](/fr/Apprendre/JavaScript/Building_blocks/Looping_code)(voir aussi le [code source ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)complet), nous avons inclus une fonction personnalisée `draw()`qui ressemblait à ça :
 
 ```js
 function draw() {
@@ -97,13 +97,13 @@ function draw() {
 }
 ```
 
-Cette fonction dessine 100 cercles aléatoires dans un élément {{htmlelement("canvas")}}. À chaque fois que nous voulons faire cela, il suffit d'invoquer la fonction comme suit :
+Cette fonction dessine 100 cercles aléatoires dans un élément {{htmlelement("canvas")}}. À chaque fois que nous voulons faire cela, il suffit d'invoquer la fonction comme suit :
 
 ```js
 draw();
 ```
 
-au lieu de devoir ré-écrire tout le code à chaque fois que nous voulons la répéter. De plus, les fonctions peuvent contenir tous les codes qu'il vous plaira — vous pouvez même appeler d'autres fonctions à l'intérieur d'une fonction. Par exemple, la fonction ci-dessus appelle la fonction `random()` trois fois, comme définie par le code suivant :
+au lieu de devoir ré-écrire tout le code à chaque fois que nous voulons la répéter. De plus, les fonctions peuvent contenir tous les codes qu'il vous plaira — vous pouvez même appeler d'autres fonctions à l'intérieur d'une fonction. Par exemple, la fonction ci-dessus appelle la fonction `random()` trois fois, comme définie par le code suivant :
 
 ```js
 function random(number) {
@@ -111,7 +111,7 @@ function random(number) {
 }
 ```
 
-Nous avions besoin de cette fonction car la fonction intégrée du navigateur [Math.random()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random) génère uniquement un nombre décimal aléatoire compris entre 0 et 1 alors que nous voulions un nombre entier compris entre 0 et un nombre défini.
+Nous avions besoin de cette fonction car la fonction intégrée du navigateur [Math.random()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random) génère uniquement un nombre décimal aléatoire compris entre 0 et 1 alors que nous voulions un nombre entier compris entre 0 et un nombre défini.
 
 ## Invoquer des fonctions
 
@@ -144,7 +144,7 @@ function() {
 }
 ```
 
-Ceci est une **fonction anonyme** — elle n'a pas de nom ! De plus, elle ne produira pas d'effet par elle-même. Les fonctions anonymes sont généralement utilisées en association avec un gestionnaire d'évènement, comme dans l'exemple suivant qui lance le code inscrit dans la fonction lorsque le bouton associé est cliqué :
+Ceci est une **fonction anonyme** — elle n'a pas de nom ! De plus, elle ne produira pas d'effet par elle-même. Les fonctions anonymes sont généralement utilisées en association avec un gestionnaire d'évènement, comme dans l'exemple suivant qui lance le code inscrit dans la fonction lorsque le bouton associé est cliqué :
 
 ```js
 var myButton = document.querySelector('button');
@@ -209,7 +209,7 @@ Certaines fonctions nécessitent que l'on définisse des **paramètres** lorsqu'
 
 > **Note :** Les paramètres sont parfois appelés arguments, propriétés ou encore attributs.
 
-Par exemple, la fonction intégrée du navigateur [Math.random()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random) ne nécessite pas de paramètres. lorsqu'elle est appelée, elle renvoie toujours un nombre aléatoire compris entre 0 et 1 :
+Par exemple, la fonction intégrée du navigateur [Math.random()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/random) ne nécessite pas de paramètres. lorsqu'elle est appelée, elle renvoie toujours un nombre aléatoire compris entre 0 et 1 :
 
 ```js
 var myNumber = Math.random();
@@ -242,7 +242,7 @@ Parlons un peu de la {{glossary("portée")}} — un concept très important lors
 
 Le plus haut niveau en dehors de toutes vos fonctions est appelé la **portée globale**. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe qu'elle partie du code.
 
-Le JavaScript est construit de cette façon pour plusieurs raisons —  mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits. Cela peut être fait de manière malveillante ou simplement par accident.
+Le JavaScript est construit de cette façon pour plusieurs raisons —  mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits. Cela peut être fait de manière malveillante ou simplement par accident.
 
 Par exemple, disons que vous avez un fichier HTML qui appelle deux fichiers JavaScript externes, et que les deux ont une variable et une fonction définie qui utilisent le même nom :
 
@@ -277,7 +277,7 @@ Les deux fonctions que vous voulez appeler s'appellent `greeting()`, mais vous n
 
 En conservant des parties de votre code enfermées dans des fonctions, vous évitez de tels problèmes. Cette procédure est considérée comme une bonne pratique.
 
-C'est un peu comme au zoo. Les lions, zèbres, tigres et pingouins sont enfermés dans leurs propres enclos, et n'ont accès qu'aux éléments se trouvant à l'intérieur de leur enclos — de la même manière que la portée des fonctions. S'il leur était possible de pénétrer dans les autres enclos, des problèmes se produiraient. Au mieux, des animaux différents seraient dans l'inconfort au sein d'un habitat étranger — un lion ou un tigre se sentirait très mal dans l'environnement humide et glacé des pingouins. Au pire, les lions et les tigres pourraient essayer de manger les pingouins !
+C'est un peu comme au zoo. Les lions, zèbres, tigres et pingouins sont enfermés dans leurs propres enclos, et n'ont accès qu'aux éléments se trouvant à l'intérieur de leur enclos — de la même manière que la portée des fonctions. S'il leur était possible de pénétrer dans les autres enclos, des problèmes se produiraient. Au mieux, des animaux différents seraient dans l'inconfort au sein d'un habitat étranger — un lion ou un tigre se sentirait très mal dans l'environnement humide et glacé des pingouins. Au pire, les lions et les tigres pourraient essayer de manger les pingouins !
 
 ![](MDN-mozilla-zoo.png)
 
@@ -304,7 +304,7 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
     output(z);
     ```
 
-    Toutes les deux devraient vous renvoyer un message d'erreur du type : "[ReferenceError: y is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)". Pourquoi ? À cause de la portée de la fonction — `y` and `z` sont enfermées dans les fonctions `a()` et `b()`, donc `output()` ne peut pas les atteindre lorsqu'elles sont appelées depuis la portée globale.
+    Toutes les deux devraient vous renvoyer un message d'erreur du type : "[ReferenceError: y is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined)". Pourquoi ? À cause de la portée de la fonction — `y` and `z` sont enfermées dans les fonctions `a()` et `b()`, donc `output()` ne peut pas les atteindre lorsqu'elles sont appelées depuis la portée globale.
 
 5.  Néanmoins, que se passe-t-il losqu'elles sont appelées de l'intérieur d'une autre fonction ? Essayer d'éditer `a()` et `b()` pour qu'elles aient la forme suivante :
 
@@ -377,11 +377,11 @@ Jetons un coup d'oeil à un exemple réel pour démontrer les effets de la port�
 
 > **Note :** Ces règles de portée ne s'appliquent pas aux boucles (ex. `for() { ... }`) ni aux instructions conditionnelles (ex. `if() { ... }`) — elles semblent très similaires, mais ce n'est pas la même chose ! Prenez garde de ne pas les confondre.
 
-> **Note :** Le message d'erreur [ReferenceError: "x" is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined) est l'un des plus courant que vous pourrez rencontrer. S'il s'affiche et que vous êtes sûr d'avoir défini la variable en question, vérifiez quelle est sa portée.
+> **Note :** Le message d'erreur [ReferenceError: "x" is not defined](/fr/docs/Web/JavaScript/Reference/Errors/Not_defined) est l'un des plus courant que vous pourrez rencontrer. S'il s'affiche et que vous êtes sûr d'avoir défini la variable en question, vérifiez quelle est sa portée.
 
 ### Des fonctions à l'intérieur de fonctions
 
-Gardez à l'esprit que vous pouvez appeler une fonction de n'importe où, même à l'intérieur d'une autre fonction. Ceci est souvent utilisé comme un moyen de garder le code bien organisé — si vous avez une grande fonction complexe, elle est plus facile à comprendre si vous la divisez en plusieurs sous-fonctions :
+Gardez à l'esprit que vous pouvez appeler une fonction de n'importe où, même à l'intérieur d'une autre fonction. Ceci est souvent utilisé comme un moyen de garder le code bien organisé — si vous avez une grande fonction complexe, elle est plus facile à comprendre si vous la divisez en plusieurs sous-fonctions :
 
 ```js
 function myBigFunction() {

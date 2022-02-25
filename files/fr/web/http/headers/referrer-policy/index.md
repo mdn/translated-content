@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
 {{HTTPSidebar}}
 
-L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quantité d'[informations sur le référent (referrer)](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (envoyées par l'en-tête {{HTTPHeader("Referer")}}) incluses dans la requête.
+L'en-tête {{glossary("HTTP header")}} **`Referrer-Policy`** contrôle la quantité d'[informations sur le référent (referrer)](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) (envoyées par l'en-tête {{HTTPHeader("Referer")}}) incluses dans la requête.
 
 <table class="properties">
   <tbody>

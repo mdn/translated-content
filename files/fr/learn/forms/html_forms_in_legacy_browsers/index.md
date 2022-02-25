@@ -171,7 +171,7 @@ Un des plus gros problèmes est la disponibilité des API. Pour cette raison, il
 
 ### La bibliothèque Modernizr
 
-Dans de nombreux cas, une bonne prothèse d'émulation («&nbsp;polyfill&nbsp;») peut aider en fournissant une API manquante. Un «&nbsp;[polyfill »](http://remysharp.com/2010/10/08/what-is-a-polyfill/) est un petit morceau de JavaScript qui «&nbsp;remplit un trou&nbsp;» dans les fonctionnalités des navigateurs historiques. Bien qu'ils puissent être utilisés pour améliorer la prise en charge de n'importe quelle fonctionnalité, leur utilisation dans le JavaScript est moins risquée que dans les CSS ou le HTML ; il existe de nombreux cas où JavaScript peut casser (problèmes de réseau, conflits de script, etc.). Mais avec le JavaScript, à condition de travailler avec un JavaScript non obstructif, si les polyfills manquent, ce ne sera pas grave.
+Dans de nombreux cas, une bonne prothèse d'émulation («&nbsp;polyfill&nbsp;») peut aider en fournissant une API manquante. Un «&nbsp;[polyfill »](http://remysharp.com/2010/10/08/what-is-a-polyfill/) est un petit morceau de JavaScript qui «&nbsp;remplit un trou&nbsp;» dans les fonctionnalités des navigateurs historiques. Bien qu'ils puissent être utilisés pour améliorer la prise en charge de n'importe quelle fonctionnalité, leur utilisation dans le JavaScript est moins risquée que dans les CSS ou le HTML ; il existe de nombreux cas où JavaScript peut casser (problèmes de réseau, conflits de script, etc.). Mais avec le JavaScript, à condition de travailler avec un JavaScript non obstructif, si les polyfills manquent, ce ne sera pas grave.
 
 La meilleure façon de remplir un trou d'API manquante consiste à utiliser la bibliothèque [Modernizr](http://modernizr.com) et son projet dérivé&nbsp;: [YepNope](http://yepnopejs.com). Modernizr est une bibliothèque qui vous permet de tester la disponibilité d'une fonctionnalité pour une action en accord. YepNope est une bibliothèqe de chargements conditionnels.
 
@@ -200,7 +200,7 @@ Modernizr.load({
 
 L'équipe de Modernizr fait une maintenance opportune de grande liste de «&nbsp;[polyfills »](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Prenez celui dont vous avez besoin.
 
-> **Note :** Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de [ la documentation de Modernizr](http://modernizr.com/docs/).
+> **Note :** Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de [ la documentation de Modernizr](http://modernizr.com/docs/).
 
 ### Faites attention aux performances
 

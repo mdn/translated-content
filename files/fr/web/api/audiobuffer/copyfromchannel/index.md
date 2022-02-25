@@ -10,7 +10,7 @@ translation_of: Web/API/AudioBuffer/copyFromChannel
 ---
 {{ APIRef("Web Audio API") }}
 
-La méthode `copyFromChannel() `de l'interface {{ domxref("AudioBuffer") }} copie les échantillons de l'un des canaux de l'`AudioBuffer` dans un tableau.
+La méthode `copyFromChannel() `de l'interface {{ domxref("AudioBuffer") }} copie les échantillons de l'un des canaux de l'`AudioBuffer` dans un tableau.
 
 ## Syntaxe
 
@@ -21,9 +21,9 @@ La méthode `copyFromChannel() `de l'interface {{ domxref("AudioBuffer") }} cop
 - _destination_
   - : Un tableau {{domxref("Float32Array")}} dans lequel copier les données.
 - _channelNumber_
-  - : Le numéro du canal de l'AudioBuffer depuis lequel copier les données. Si *channelNumber* est supérieur ou égal à {{domxref("AudioBuffer.numberOfChannels")}}, une exception `INDEX_SIZE_ERR est` levée.
+  - : Le numéro du canal de l'AudioBuffer depuis lequel copier les données. Si *channelNumber* est supérieur ou égal à {{domxref("AudioBuffer.numberOfChannels")}}, une exception `INDEX_SIZE_ERR est` levée.
 - _startInChannel_ {{optional_inline}}
-  - : Un offset optionnel à partir duquel copier les données. Si la valeur de *startInChannel* est supérieure à {{domxref("AudioBuffer.length")}}, une exception `INDEX_SIZE_ERR` est levée.
+  - : Un offset optionnel à partir duquel copier les données. Si la valeur de *startInChannel* est supérieure à {{domxref("AudioBuffer.length")}}, une exception `INDEX_SIZE_ERR` est levée.
 
 ## Exemple
 

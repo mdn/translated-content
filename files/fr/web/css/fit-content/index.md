@@ -35,7 +35,7 @@ Elle peut également être utilisée pour définir la taille d'une boîte avec {
 - `<length>`
   - : Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) exprimée de façon absolue.
 - `<percentage>`
-  - : Un pourcentage (valeur de type {{cssxref("&lt;percentage&gt;")}}) relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relative à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en block pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.
+  - : Un pourcentage (valeur de type {{cssxref("&lt;percentage&gt;")}}) relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relative à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en block pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.
 
 ### Syntaxe formelle
 

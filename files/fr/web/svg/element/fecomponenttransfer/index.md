@@ -40,7 +40,7 @@ Cet élément implémente l'interface {{domxref("SVGFEComponentTransferElement")
 ### SVG
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
   <defs>
     <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
       <stop offset="0" stop-color="#ff0000"></stop>

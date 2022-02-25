@@ -99,7 +99,7 @@ var maFonction = function() {
 }
 ```
 
-Il est également possible de fournir un nom lors de la définition afin de créer une expression de fonction **nommée** :
+Il est également possible de fournir un nom lors de la définition afin de créer une expression de fonction **nommée** :
 
 ```js
 var maFonction = function fonctionNommée(){
@@ -398,7 +398,7 @@ function externe() {
 resultat = externe()(20); // renvoie 20 et non pas 10
 ```
 
-Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x `de la fonction` interne` et la variable `x `de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le  `x` de la fonction interne l'emporte sur le `x `de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
+Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x `de la fonction` interne` et la variable `x `de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le  `x` de la fonction interne l'emporte sur le `x `de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
 
 ## Définition des méthodes
 

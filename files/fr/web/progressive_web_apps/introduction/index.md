@@ -37,7 +37,7 @@ Il y a des principes clés qu'une application web devrait suivre afin d'être id
 
 - [Discoverable](/fr/docs/Web/Progressive_web_apps/Advantages#Discoverable), afin que le contenu soit trouvé à l'aide de moteurs de recherche.
 - [Installable](/fr/docs/Web/Progressive_web_apps/Advantages#Installable), afin d'être disponible sur l'écran d'accueil de l'appareil.
-- [Linkable](/fr/docs/Web/Progressive_web_apps/Advantages#Linkable), afin que vous puissiez la partager simplement en envoyant un lien.
+- [Linkable](/fr/docs/Web/Progressive_web_apps/Advantages#Linkable), afin que vous puissiez la partager simplement en envoyant un lien.
 - [Network independent](/fr/docs/Web/Progressive_web_apps/Advantages#Network_independent), afin qu'elle fonctionne hors-ligne ou avec une mauvaise connexion internet.
 - [Progressive](/fr/docs/Web/Progressive_web_apps/Advantages#Progressive), afin qu'elle soit utilisable sur les plus vieux navigateurs, mais complétement fonctionnelle sur les derniers.
 - [Re-engageable](/fr/docs/Web/Progressive_web_apps/Advantages#Re-engageable), afin qu'elle soit capable d'envoyer des notifications lorsque du nouveau contenu est disponible.
@@ -63,7 +63,7 @@ Vous pouvez consulter la liste sur [pwa.rocks](https://pwa.rocks/) pour plus d'e
 
 Vous pouvez même générer des PWA en ligne à l'aide du site web [PWABuilder](https://www.pwabuilder.com/).
 
-Pour les informations spécifiques aux _service workers_ et aux notifications _push_, consultez le [Service Worker Cookbook](https://serviceworke.rs/), une collection d'exemples utilisant des _service workers_.
+Pour les informations spécifiques aux _service workers_ et aux notifications _push_, consultez le [Service Worker Cookbook](https://serviceworke.rs/), une collection d'exemples utilisant des _service workers_.
 
 Ça vaut le coup d'essayer l'approche PWA, afin que vous puissiez constater par vous-même si ça convient à votre application.
 

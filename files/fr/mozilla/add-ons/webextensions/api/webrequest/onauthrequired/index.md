@@ -30,7 +30,7 @@ L'auditeur peut répondre de l'une des quatre façons suivantes :
 L'auditeur peut fournir des informations d'identification de manière synchrone comme suit :
 
 - dans addListener, passez `"blocking"` dans le paramètre `extraInfoSpec`
-- dans l'auditeur, retourner un objet avec une propriété `authCredentials` définie sur les informations d'identification à fournir
+- dans l'auditeur, retourner un objet avec une propriété `authCredentials` définie sur les informations d'identification à fournir
 
 **Fournir les informations d'identification de manière asynchrone** : l'extension peut avoir besoin de récupérer les informations d'identification de manière asynchrone. Par exemple, l'extension peut avoir besoin d'extraire les informations d'identification du stockage ou de demander à l'utilisateur. Dans ce cas, l'auditeur peut fournir des informations d'identification de manière asynchrone comme suit :
 
@@ -83,8 +83,8 @@ Les événements ont trois fonctions :
 
     Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
-    - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
-    - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet  `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
+    - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
+    - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet  `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.

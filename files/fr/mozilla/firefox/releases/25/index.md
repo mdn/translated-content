@@ -52,7 +52,7 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 - L'[API Web Audio](/fr/docs/Web_Audio_API) est désormais prise en charge. Une implémentation incomplète était auparavant disponible derrière une péférence ({{bug("779297")}}).
 - Certaines clés liées à IME sous Windows sont prises en charge par `KeyboardEvent.key` ({{bug("865565")}}), voir [le tableau des noms de clé](/fr/docs/Web/API/KeyboardEvent#keyname_table_win) pour plus de détails.
 - Firefox pour Metro distribue désormais les événements clés de la même manière que la version bureau ({{bug("843236")}}).
-- L'événement `keypress` n'est plus distribué si `preventDefault()` de l'événement `keydown` précédnt est appelé ({{bug("501496")}}), voir [le document de l'événement `keydown`](</fr/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event>) pour plus de détails.
+- L'événement `keypress` n'est plus distribué si `preventDefault()` de l'événement `keydown` précédnt est appelé ({{bug("501496")}}), voir [le document de l'événement `keydown`](</fr/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event>) pour plus de détails.
 - L'interface `Future` a été renommée `Promise` ({{bug("884279")}}).
 - La propriété `srcDoc` sur l'interface {{domxref("HTMLIFrameElement")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est désormais prise en charge ({{bug("802895")}}).
 - La méthode `createTBody()` sur l'interface {{domxref("HTMLTableElement")}}, permettant d'obtenir son {{HTMLElement("tbody")}}, est désormais supportée ({{bug("813034")}}).

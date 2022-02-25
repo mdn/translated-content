@@ -53,7 +53,7 @@ ne fonctionnait pas. Pour que cela puisse fonctionner, on ajouta `arguments.call
 });
 ```
 
-Cependant, ce fut une mauvaise solution (avec `caller` également) car elle rendit impossible l'[extension inline](https://fr.wikipedia.org/wiki/Extension_inline) et la [récursion terminale](https://fr.wikipedia.org/wiki/R%C3%A9cursion_terminale) de façon générale (il est possible d'y arriver de certaines façons mais cela entraînerait nécessairement un code moins efficace). Le second problème que cela entraîne est que l'appel récursif aura une autre valeur `this` :
+Cependant, ce fut une mauvaise solution (avec `caller` également) car elle rendit impossible l'[extension inline](https://fr.wikipedia.org/wiki/Extension_inline) et la [récursion terminale](https://fr.wikipedia.org/wiki/R%C3%A9cursion_terminale) de façon générale (il est possible d'y arriver de certaines façons mais cela entraînerait nécessairement un code moins efficace). Le second problème que cela entraîne est que l'appel récursif aura une autre valeur `this` :
 
 ```js
 var global = this;

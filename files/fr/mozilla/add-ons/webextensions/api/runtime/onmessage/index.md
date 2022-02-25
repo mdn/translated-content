@@ -26,7 +26,7 @@ Voici quelques exemples de cas d'utilisation :
 
 Pour envoyer un message reçu par l'écouteur `onMessage`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}} ou (pour envoyer un message à un script de contenu) {{WebExtAPIRef("tabs.sendMessage()")}}.
 
-> **Note :** Évitez de créer plusieurs écouteurs `onMessage` pour le même type de message, car l'ordre de déclenchement des différents écouteurs ne sera pas garanti.
+> **Note :** Évitez de créer plusieurs écouteurs `onMessage` pour le même type de message, car l'ordre de déclenchement des différents écouteurs ne sera pas garanti.
 >
 > Lorsque vous voulez garantir la livraison d'un message à une terminaison spécifique, utilisez l'[approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#les_messages_en_flux_continu).
 

@@ -41,7 +41,7 @@ Il est bon de garder cette distinction à l'esprit pour choisir la façon de par
 - {{domxref("NodeList.item()")}}
   - : Retourne un élément de la liste par son index ou `null` si l'index est en dehors des limites. Équivalent à `nodeList[idx]` (qui renvoie à la place `undefined` quand  `idx` est hors des limites).
 - {{domxref("NodeList.entries()")}}
-  - : renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet.
+  - : renvoie un {{jsxref("Les_protocoles_iteration","itérateur")}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet.
 - {{domxref("NodeList.forEach()")}}
   - : exécute une fonction fournie une fois par élément `NodeList`.
 - {{domxref("NodeList.keys()")}}

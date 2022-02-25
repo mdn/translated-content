@@ -24,11 +24,11 @@ Pour garantir une performance suffisante, les implémentations n’utilisent pas
 ### Paramètres
 
 - _typedArray_
-  - : Un {{jsxref("TypedArray")}} de nombres entiers, qui est un {{jsxref("Int8Array")}}, un {{jsxref("Uint8Array")}}, un {{jsxref("Uint16Array")}}, un {{jsxref("Int32Array")}}, ou encore un {{jsxref("Uint32Array")}}. Tous les éléments du tableau seront subsitués avec des nombres aléatoires.
+  - : Un {{jsxref("TypedArray")}} de nombres entiers, qui est un {{jsxref("Int8Array")}}, un {{jsxref("Uint8Array")}}, un {{jsxref("Uint16Array")}}, un {{jsxref("Int32Array")}}, ou encore un {{jsxref("Uint32Array")}}. Tous les éléments du tableau seront subsitués avec des nombres aléatoires.
 
 ### Exceptions
 
-- Une {{exception("QuotaExceededError")}} {{domxref("DOMException")}} est levée si la taille de la requête est plus grand que 65 536 octets.
+- Une {{exception("QuotaExceededError")}} {{domxref("DOMException")}} est levée si la taille de la requête est plus grand que 65 536 octets.
 
 ## Exemple
 
@@ -56,5 +56,5 @@ for (var i = 0; i < array.length; i++) {
 
 ## Voir aussi
 
-- {{ domxref("Window.crypto") }} pour obtenir un objet {{domxref("Crypto")}}.
+- {{ domxref("Window.crypto") }} pour obtenir un objet {{domxref("Crypto")}}.
 - {{jsxref("Math.random")}}, une source non cryptographique de nombres aléatoires.

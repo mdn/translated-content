@@ -168,7 +168,7 @@ Certains types de valeur acceptent des nombres, sans unité. Une telle propriét
 
 Il existe de nombreuses façons d'utiliser des couleurs en CSS, certaines ayant été plus récemment implémentées que d'autres. Les mêmes valeurs de couleur peuvent être utilisées n'importe où en CSS, qu'il s'agisse d'une couleur pour du texte, d'une couleur d'arrière-plan ou de toute autre couleur.
 
-Le système standard de couleurs disponible pour les ordinateurs modernes utilise 24 bits, ce qui permet d'afficher 16,7 millions de couleurs différentes par des combinaisons de canaux rouge, vert et bleu dont chacun peut avoir 256 valeurs distinctes (256 x 256 x 256 = 16 777 216). Voyons quelques façons d'indiquer des couleurs en CSS.
+Le système standard de couleurs disponible pour les ordinateurs modernes utilise 24 bits, ce qui permet d'afficher 16,7 millions de couleurs différentes par des combinaisons de canaux rouge, vert et bleu dont chacun peut avoir 256 valeurs distinctes (256 x 256 x 256 = 16 777 216). Voyons quelques façons d'indiquer des couleurs en CSS.
 
 > **Note :** Dans ce tutoriel, nous verrons les méthodes communément utilisées pour définir les couleurs et qui disposent d'une bonne prise en charge des navigateurs. Il en existe d'autres, mais elles sont moins bien prises en charge et sont moins fréquentes.
 

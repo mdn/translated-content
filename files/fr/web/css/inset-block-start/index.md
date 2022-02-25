@@ -11,7 +11,7 @@ original_slug: inset-block-start
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`inset-block-start`** définit le début du décalage logique en bloc (_block_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou  {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`inset-block-start`** définit le début du décalage logique en bloc (_block_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou  {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 > **Note :** Avant Firefox 63, cette propriété était implémentée avec le nom `offset-block-start`. Firefox 63 a mis à jour son implémentation afin de suivre les modifications apportées à la spécification.
 

@@ -52,13 +52,13 @@ Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une
 ### Valeurs
 
 - `content-box`
-  - : La partie qui est « peinte » est rognée sur la boîte de contenu.
+  - : La partie qui est « peinte » est rognée sur la boîte de contenu.
 - `padding-box`
-  - : La partie qui est « peinte » est rognée sur la boîte de _padding_.
+  - : La partie qui est « peinte » est rognée sur la boîte de _padding_.
 - `border-box`
-  - : La partie qui est « peinte » est rognée sur la boîte de bordure.
+  - : La partie qui est « peinte » est rognée sur la boîte de bordure.
 - `margin-box`
-  - : La partie qui est « peinte » est rognée sur la boîte de marge.
+  - : La partie qui est « peinte » est rognée sur la boîte de marge.
 - `fill-box`
   - : La partie qui est « peinte » est rognée sur la boîte contenant l'objet.
 - `stroke-box`
@@ -66,7 +66,7 @@ Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une
 - `view-box`
   - : C'est le _viewport_ du plus proche SVG qui est utilisé comme boîte de référence. Si l'attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée le _viewport_, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîtes sont basées sur la hauteur et la largeur de l'attribut `viewBox`.
 - `no-clip`
-  - : La partie qui est « peinte » n'est pas rognée.
+  - : La partie qui est « peinte » n'est pas rognée.
 
 ### Syntaxe formelle
 

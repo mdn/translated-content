@@ -45,7 +45,7 @@ Lors de la construction d'un site, il faut entre autres garder à l'esprit qu'un
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
+_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
 
 ## Aller plus loin
 

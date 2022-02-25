@@ -20,7 +20,7 @@ Lorsque vous envisagez d'utiliser le `browser_style: true`, vous devez tester vo
 
 > **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
 
-Dans Firefox, la feuille de style peut être vue sur `chrome://browser/content/extension.css`. La feuille de style peut être vue sur `chrome://browser/content/extension-mac.css` est également incluse sur OS X.
+Dans Firefox, la feuille de style peut être vue sur `chrome://browser/content/extension.css`. La feuille de style peut être vue sur `chrome://browser/content/extension-mac.css` est également incluse sur OS X.
 
 La plupart des styles sont automatiquement appliqués, mais certains éléments nécessitent que vous ajoutiez la classe  `browser-style` non standard pour obtenir leur style, comme indiqué dans le tableau ci-dessous :
 

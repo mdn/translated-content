@@ -85,7 +85,7 @@ grid-auto-columns: unset;
   - : Cette notation représente la formule `min(max-content, max(auto, argument))` qui est calculée de façon semblable à `auto`, sauf qu'ici, la taille de la piste est écrétée à _argument_ s'i elle est plus grande que le minimum `auto`.
 - `auto`
 
-  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
+  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
 
     > **Note :** Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
 

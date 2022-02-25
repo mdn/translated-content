@@ -93,7 +93,7 @@ Le reste de cette section décrit les problèmes de compatibilité qui ne sont p
 
 #### proxy
 
-- [Cette API est complètement différente de celle conçue par Chrome. Avec l'API de Chrome, une extension peut enregistrer un fichier PAC, mais peut également définir des règles de proxy explicites. Comme cela est également possible en utilisant les fichiers PAC étendus, cette API ne prend en charge que l'approche de fichier PAC. Étant donné que cette API est incompatible avec l'API `proxy` de Chrome, cette API est uniquement disponible via l'espace de nom `browser`.](/fr/Add-ons/WebExtensions/API/proxy)
+- [Cette API est complètement différente de celle conçue par Chrome. Avec l'API de Chrome, une extension peut enregistrer un fichier PAC, mais peut également définir des règles de proxy explicites. Comme cela est également possible en utilisant les fichiers PAC étendus, cette API ne prend en charge que l'approche de fichier PAC. Étant donné que cette API est incompatible avec l'API `proxy` de Chrome, cette API est uniquement disponible via l'espace de nom `browser`.](/fr/Add-ons/WebExtensions/API/proxy)
 
 #### tabs
 
@@ -135,7 +135,7 @@ Firefox ne prend pas en charge [`alert()`](/fr/docs/Web/API/Window/alert), [`con
 
 #### web_accessible_resources
 
-Dans Chrome, lorsqu'une ressource est répertoriée dans `web_accessible_resources`, elle est accessible via `chrome-extension://<id-de-l-extension>/<chemin/vers/la/ressource>`. L'identifiant de l'extension est fixé pour une extension donnée.
+Dans Chrome, lorsqu'une ressource est répertoriée dans `web_accessible_resources`, elle est accessible via `chrome-extension://<id-de-l-extension>/<chemin/vers/la/ressource>`. L'identifiant de l'extension est fixé pour une extension donnée.
 
 Firefox l'implémente différemment en utilisant un UUID aléatoire qui change pour chaque instance de Firefox : `moz-extension://<UUID-aleatoire>/<chemin/vers/la/ressource>`. Cette façon aléatoire peut empêcher certaines choses, comme ajouter l'URL de votre extension spécifique à la politique CSP d'un autre domaine.
 

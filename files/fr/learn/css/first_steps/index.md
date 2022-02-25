@@ -22,17 +22,17 @@ Nous avons mis au point un cours qui comprend toutes les informations essentiell
 Avant de commencer ce module, vous devriez avoir :
 
 1.  Une connaissance basique de l'utilisation d'un ordinateur, et l'utilisation passive du Web (i.e. consulter des sites, consommer le contenu s'y trouvant) ;
-2.  Un environnement de travail minimal installé, comme indiqué dans la section [installer les logiciels de base](/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base) et une compréhension de la façon de créer et gérer des fichiers, comme indiqué dans la section [Gérer les fichiers](/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)&nbsp;;
+2.  Un environnement de travail minimal installé, comme indiqué dans la section [installer les logiciels de base](/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base) et une compréhension de la façon de créer et gérer des fichiers, comme indiqué dans la section [Gérer les fichiers](/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)&nbsp;;
 3.  Une familiarité avec HTML, comme discuté dans le module d'[introduction à HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML).
 
-> **Note :** Si vous travaillez sur un ordinateur / tablette / autre périphérique où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code sur des sites de programmation en ligne comme [JSBin](/fr/docs/) ou [Thimble](/fr/docs/).
+> **Note :** Si vous travaillez sur un ordinateur / tablette / autre périphérique où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code sur des sites de programmation en ligne comme [JSBin](/fr/docs/) ou [Thimble](/fr/docs/).
 
 ## Guides
 
-Ce module contient les articles suivants, qui vous présenteront les bases théoriques du CSS et vous fourniront des occasions de mettre en pratique vos nouvelles compétences :
+Ce module contient les articles suivants, qui vous présenteront les bases théoriques du CSS et vous fourniront des occasions de mettre en pratique vos nouvelles compétences :
 
 - [Qu'est-ce que le CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
-  - : **{{Glossary("CSS")}}** (Cascading Style Sheets) permet de créer de superbes pages web, mais comment fonctionne-t-il sous le capot ? Cet article explique ce qu'est le CSS à l'aide d'un exemple de syntaxe simple et couvre également quelques-uns des termes clés du langage.
+  - : **{{Glossary("CSS")}}** (Cascading Style Sheets) permet de créer de superbes pages web, mais comment fonctionne-t-il sous le capot ? Cet article explique ce qu'est le CSS à l'aide d'un exemple de syntaxe simple et couvre également quelques-uns des termes clés du langage.
 - [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
   - : Dans cet article, nous partirons d'un document HTML simple et y appliquerons des CSS, tout en apprenant des choses pratiques sur le langage.
 - [Comment est structuré le CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
@@ -40,9 +40,9 @@ Ce module contient les articles suivants, qui vous présenteront les bases théo
 - [Comment CSS Fonctionne](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
   - : Nous avons appris les bases de CSS, ce qu'il est et comment écrire des feuilles de style simple. Dans cette leçon, nous étudierons comment un navigateur transforme CSS et HTML en une page web.
 - [Utilisez vos nouvelles compétences](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
-  - : Avec toutes les choses que vous avez apprises dans les dernières leçons, vous devriez être capable de formater des documents textuels simples en utilisant CSS et y ajouter votre propre style. Cet article vous permet d'expérimenter.
+  - : Avec toutes les choses que vous avez apprises dans les dernières leçons, vous devriez être capable de formater des documents textuels simples en utilisant CSS et y ajouter votre propre style. Cet article vous permet d'expérimenter.
 
 ## Voir aussi
 
-- Literacy[ Web intermédiaire 1 : Introduction au CSS](/fr/docs/)
-  - : Un excellent cours de base de la fondation Mozilla qui explore et teste de nombreuses compétences évoquées dans le module _Introduction à CSS_. Approfondissements à propos de l'application de styles sur les éléments HTML d'une page Web, les sélecteurs CSS, les attributs et valeurs.P
+- Literacy[ Web intermédiaire 1 : Introduction au CSS](/fr/docs/)
+  - : Un excellent cours de base de la fondation Mozilla qui explore et teste de nombreuses compétences évoquées dans le module _Introduction à CSS_. Approfondissements à propos de l'application de styles sur les éléments HTML d'une page Web, les sélecteurs CSS, les attributs et valeurs.P

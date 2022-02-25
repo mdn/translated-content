@@ -28,7 +28,7 @@ Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères. S
 
 ## Description
 
-`parseFloat` est une fonction non associée à un objet, disponible au plus haut niveau de l'environnement JavaScript.
+`parseFloat` est une fonction non associée à un objet, disponible au plus haut niveau de l'environnement JavaScript.
 
 `parseFloat` analyse l'argument fourni sous la forme d'une chaîne de caractères et renvoie un nombre flottant correspondant. L'analyse de la chaîne s'arrête dès qu'un caractère qui n'est pas +,-, un chiffre, un point ou un exposant. Ce caractère, ainsi que les suivants, seront ignorés. Les blancs en début et en fin de chaîne sont autorisés.
 

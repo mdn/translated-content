@@ -13,7 +13,7 @@ L’élément [`<path>`](/fr/Web/SVG/Element/path) (_chemin_ en français) est l
 
 Les chemins créent des formes en combinant plusieurs lignes droites ou courbes. Les formes composées uniquement de lignes droites peuvent être crées avec des [lignes brisées](/fr/docs/Web/SVG/Tutoriel/Formes_de_base#Lignes_brisées) (_polylines_). Bien que les lignes brisées et les chemins peuvent tout deux créer des formes d’apparence similaire, les lignes brisées nécessitent un grand nombre de petites lignes pour simuler des courbes, et qui ne s’adaptent pas bien aux grandes tailles. Une bonne compréhension des chemins est importante pour dessiner en SVG. Bien qu’il ne soit pas recommandé d'éditer des chemins complexes avec un éditeur XML ou texte (on utilisera plutôt un éditeur SVG tel que Inkscape ou Adobe Illustrator), comprendre comment un chemin s'écrit vous permettra éventuellement d’identifier et de corriger des erreurs d’affichage dans un SVG.
 
-La forme d’un élément path est définie par son attribut {{ SVGAttr("d") }}. Celui-ci prend pour valeur une série de commandes suivi de paramètres utilisés par ces commandes.
+La forme d’un élément path est définie par son attribut {{ SVGAttr("d") }}. Celui-ci prend pour valeur une série de commandes suivi de paramètres utilisés par ces commandes.
 
 Chacune des commandes est instanciée par une lettre spécifique. Par exemple, pour se positionner aux coordonnées (10, 10), on utilise la commande `M` (pour _MoveTo,_ «&nbsp;aller à&nbsp;») suivit des coordonées: "M 10 10". Quand l’interpréteur rencontre une lettre, il comprend que vous invoquez une commande, et les nombres qui suivent sont les paramètres de la commande.
 
@@ -81,7 +81,7 @@ On aurait pu raccourcir un peu la déclaration de l'exemple ci-dessus en utilisa
 
     Z (ou z)
 
-Ainsi, notre chemin précédent peut se raccourcir comme ceci:
+Ainsi, notre chemin précédent peut se raccourcir comme ceci:
 
 ```xml
 <path d="M10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black"/>
@@ -103,7 +103,7 @@ Dans ces exemples, il serait probablement plus simple d’utiliser un élément 
 
 ## Commandes pour les courbes
 
-Il existe trois commandes différentes pour créer des courbes. Deux d’entre elles sont des courbes de Bézier, et la troisième est un «&nbsp;arc&nbsp;» ou section de cercle. Il se peut que vous ayez déjà acquis une expérience pratique avec les courbes de Bézier en utilisant les outils de chemins avec Inkscape, Illustrator ou Photoshop. Pour une description complète des concepts mathématiques sous-jacents, vous pouvez consulter la [page Wikipedia Courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier).
+Il existe trois commandes différentes pour créer des courbes. Deux d’entre elles sont des courbes de Bézier, et la troisième est un «&nbsp;arc&nbsp;» ou section de cercle. Il se peut que vous ayez déjà acquis une expérience pratique avec les courbes de Bézier en utilisant les outils de chemins avec Inkscape, Illustrator ou Photoshop. Pour une description complète des concepts mathématiques sous-jacents, vous pouvez consulter la [page Wikipedia Courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier).
 
 Il existe une infinité de courbes de Bézier, mais seulement deux des plus simples d’entre elles sont disponibles dans les éléments `path`: l’une cubique, invoquée avec `C`, et l’autre quadratique, invoquée avec `Q`.
 
@@ -205,7 +205,7 @@ L'élément arc part du point actuel vers le point d'arrivée (x, y) en parcoura
 
 #### x-axis-rotation
 
-`x-axis-rotation` décrit la rotation de l’arc. Il s’explique plus facilement avec un exemple:
+`x-axis-rotation` décrit la rotation de l’arc. Il s’explique plus facilement avec un exemple:
 
 ![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 

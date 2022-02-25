@@ -73,7 +73,7 @@ console.log(Object.getOwnPropertyNames(mon_obj).sort());
 // ["toto", "getToto"]
 ```
 
-Si on souhaite n'avoir que les propriétés énumérables, on peut utiliser {{jsxref("Object.keys")}} ou bien une boucle {{jsxref("Instructions/for...in","for...in")}} (cette méthode renverra également les propriétés héritées via la chaîne de prototypes si on ne filtre pas avec la méthode {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
+Si on souhaite n'avoir que les propriétés énumérables, on peut utiliser {{jsxref("Object.keys")}} ou bien une boucle {{jsxref("Instructions/for...in","for...in")}} (cette méthode renverra également les propriétés héritées via la chaîne de prototypes si on ne filtre pas avec la méthode {{jsxref("Object.prototype.hasOwnProperty()", "hasOwnProperty()")}}).
 
 Les propriétés héritées via la chaîne de prototype ne sont pas listées :
 

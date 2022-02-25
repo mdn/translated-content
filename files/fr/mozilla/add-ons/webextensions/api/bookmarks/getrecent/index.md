@@ -34,7 +34,7 @@ var gettingRecent = browser.bookmarks.getRecent(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode).
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode).
 
 ## Exemples
 

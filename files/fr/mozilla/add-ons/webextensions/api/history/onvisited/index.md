@@ -46,7 +46,7 @@ Les événements ont trois fonctions :
 
       - : {{WebExtAPIRef('history.HistoryItem')}}. Un objet représentant l'élément dans l'historique du navigateur.
 
-        Au moment où cet événement est envoyé, le navigateur ne connaît pas encore le titre de la page. Si le navigateur a déjà visité cette page et s'est souvenu de son ancien titre, l'objet `HistoryItem.title` contiendra l'ancien titre de la page. Si le navigateur n'a pas d'enregistrement de l'ancien titre de la page, alors `HistoryItem.title` sera vide. Pour obtenir les titres des pages dès qu'ils sont connus, écoutez  {{WebExtAPIRef("history.onTitleChanged")}}.
+        Au moment où cet événement est envoyé, le navigateur ne connaît pas encore le titre de la page. Si le navigateur a déjà visité cette page et s'est souvenu de son ancien titre, l'objet `HistoryItem.title` contiendra l'ancien titre de la page. Si le navigateur n'a pas d'enregistrement de l'ancien titre de la page, alors `HistoryItem.title` sera vide. Pour obtenir les titres des pages dès qu'ils sont connus, écoutez  {{WebExtAPIRef("history.onTitleChanged")}}.
 
 ## Compatibilité du navigateur
 

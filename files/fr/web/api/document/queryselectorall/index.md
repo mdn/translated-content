@@ -32,7 +32,7 @@ elementList = parentNode.querySelectorAll(selectors);
 
 Une {{domxref("NodeList")}} statique contenant un objet {{domxref("Element")}} pour chaque élément qui correspond à au-moins un des sélecteurs spécifiés ou une {{domxref("NodeList")}} vide si aucune correspondance n'est trouvée .
 
-> **Note :** Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste retournée sera toujours vide.
+> **Note :** Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste retournée sera toujours vide.
 
 ### Exceptions
 
@@ -47,7 +47,7 @@ Pour obtenir une {{domxref("NodeList")}} (_liste de noeuds_) de tous les éléme
 const matches = document.querySelectorAll("p");
 ```
 
-Cet exemple renvoie la liste de tous les éléments `div` du `document` dont l'attribut de classe a pour valeur "`note`" ou "`alert`" :
+Cet exemple renvoie la liste de tous les éléments `div` du `document` dont l'attribut de classe a pour valeur "`note`" ou "`alert`" :
 
 ```js
 const matches = document.querySelectorAll("div.note, div.alert");
@@ -89,7 +89,7 @@ highlightedItems.forEach(function(userItem) {
 
 ## Notes d'utilisation
 
-`querySelectorAll()` se comporte différemment des bibliothèques DOM JavaScript les plus courantes, ce qui peut entraîner des résultats inattendus.
+`querySelectorAll()` se comporte différemment des bibliothèques DOM JavaScript les plus courantes, ce qui peut entraîner des résultats inattendus.
 
 ### HTML
 
@@ -144,4 +144,4 @@ inner.length; // 0
 - {{domxref("document.querySelector")}}
 - {{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}
 - {{domxref("ParentNode.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}
-- [Extraits de code pour `querySelector`](/fr/docs/Code_snippets/QuerySelector)
+- [Extraits de code pour `querySelector`](/fr/docs/Code_snippets/QuerySelector)

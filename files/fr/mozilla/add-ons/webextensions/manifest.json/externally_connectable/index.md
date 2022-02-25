@@ -57,7 +57,7 @@ Une connexion externe permet au développeur d’extensions de contrôler quelle
 
 Les correspondances permettent la communication entre cette extension et les pages Web. Voici une liste d'expressions régulières pour les URL de page avec lesquelles vous souhaitez communiquer.
 
-> **Note :** Si `browser_action` n'est pas spécifié, la communication entre les extensions est toujours autorisée, comme si `browser_action` était `{"ids": ["*"] }`, par conséquent, si vous spécifiez `browser_action.matches` n'oubliez pas d'ajouter des identifiants si vous souhaitez toujours communiquer. avec d'autres extensions.
+> **Note :** Si `browser_action` n'est pas spécifié, la communication entre les extensions est toujours autorisée, comme si `browser_action` était `{"ids": ["*"] }`, par conséquent, si vous spécifiez `browser_action.matches` n'oubliez pas d'ajouter des identifiants si vous souhaitez toujours communiquer. avec d'autres extensions.
 
 ## Compatibilité du navigateur
 
