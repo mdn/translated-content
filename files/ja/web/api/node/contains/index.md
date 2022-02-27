@@ -1,56 +1,56 @@
 ---
-title: Node.contains
+title: Node.contains()
 slug: Web/API/Node/contains
 tags:
-  - API
-  - DOM
-  - Method
-  - Node
+  - メソッド
+  - リファレンス
+browser-compat: api.Node.contains
 translation_of: Web/API/Node/contains
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Node.contains</code></strong> メソッドは指定ノードの子孫ノードに特定の子ノード（※自身も含む）が含まれるかどうかを示す真偽値を返します。</p>
+**`contains()`** は {{domxref("Node")}} インターフェイスのメソッドで、あるノードが指定されたノードの子孫であるか、すなわち、このノード自体であるか、直接の子ノード ({{domxref("Node.childNodes", "childNodes")}}) の何れかであるか、直接の子ノードの子ノードの何れかであるか（以下同様）を示す論理値を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+> **Note:** ノードは自分自身に**含まれます**。
 
-<pre class="syntaxbox">node.contains( otherNode )
-</pre>
+## 構文
 
-<h2 id="Example" name="Example">例</h2>
+```js
+contains(otherNode);
+```
 
-<p>この関数は、ある要素がそのページの body 要素に含まれるかどうかをチェックするものです。<code>contains</code> は包括的かつ決定的であるため、body がそれ自身を含むかどうかは <code>isInPage</code> の意図ではないため明示的に <code>false</code> を返します。</p>
+### 引数
 
-<pre class="brush:js">function isInPage(node) {
+- `otherNode`
+  - : 検査する {{domxref("Node")}} です。
+    > **Note:** `otherNode` は省略できませんが、 `null` に設定することはできます。
+
+### 返値
+
+論理値で、 `true` は `otherNode` がそのノードに含まれていることを表します。
+そうでなければ `false` になります。
+
+`otherNode` 引数が `null` であれば、 `contains()` は常に `false` になります。
+
+## 例
+
+この関数は、ある要素がそのページの body 要素に含まれるかどうかを検査するものです。 `contains` は包括的かつ決定的であるため、 body がそれ自身を含むかどうかは `isInPage` の意図するところではないため、明示的に `false` を返します。
+
+```js
+function isInPage(node) {
   return (node === document.body) ? false : document.body.contains(node);
-}</pre>
+}
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-node-contains", "Node.contains()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Node.contains")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Node.compareDocumentPosition")}}</li>
- <li>{{domxref("Node.hasChildNodes")}}</li>
-</ul>
+- {{domxref("Node.compareDocumentPosition")}}
+- {{domxref("Node.hasChildNodes")}}

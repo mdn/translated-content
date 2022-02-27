@@ -2,74 +2,95 @@
 title: Node.replaceChild
 slug: Web/API/Node/replaceChild
 tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
+  - メソッド
+  - リファレンス
+browser-compat: api.Node.replaceChild
 translation_of: Web/API/Node/replaceChild
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Node.replaceChild()</code></strong> メソッドは指定ノードの子ノードを別のノードに置き換えます。</p>
+**`replaceChild()`** は {{domxref("Node")}} 要素のメソッドで、この（親）ノードの中の子ノードを置き換えます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+**`Node.replaceChild()`** メソッドは指定ノードの子ノードを別のノードに置き換えます。
 
-<pre class="syntaxbox"><var>replacedNode</var> = <var>parentNode</var>.replaceChild(<var>newChild</var>, <var>oldChild</var>);
-</pre>
+## 構文
 
-<ul>
- <li><code>newChild</code> : <code>oldChild</code> を置き換える新しいノード（既存のノードは先に取り除かれます）</li>
- <li><code>oldChild</code> : 置き換えられる既存ノード</li>
- <li><code>replacedNode</code> : 置き換えられたノード（<code>oldChild</code> と同じノード）</li>
-</ul>
+```js
+replaceChild(newChild, oldChild);
+```
 
-<h2 id="Example" name="Example">例</h2>
+### 引数
 
-<pre class="brush:js">// &lt;div&gt;
-//  &lt;span id="childSpan"&gt;foo bar&lt;/span&gt;
-// &lt;/div&gt;
+- `newChild`
+  - : `oldChild` を置き換える新しいノードです。
+    > **Warning:** 新しいノードが既に DOM のどこか別なところにある場合は、まずその位置から取り除かれます。
+- `oldChild`
+  - : 置き換えられる子ノードです。
+
+> **Note:** 引数の順序で、*新しい*ものの前に*古い*ものが来るのは異例です。
+[`Element.replaceWith()`](/ja/docs/Web/API/Element/replaceWith) は、要素であるノードのみに適用されるものですが、読んだり使用したりしやすいかもしれません。
+
+### 返値
+
+置き換えられた {{domxref("Node")}} です。これは `oldChild` と同じノードです。
+
+### 例外
+
+- `HierarchyRequestError` {{domxref("DOMException")}}
+  - : DOM ツリーの制約に違反した場合に発生します。すなわち、以下のいずれかが発生する場合です。
+    - `oldChild` の親が {{domxref("Document")}}, {{domxref("DocumentFragment")}}, {{domxref("Element")}} のいずれにもならない場合。
+    - `oldChild` を `newChild` で置き換えると循環参照になる場合。すなわち `newChild` がこのノードの祖先である場合。
+    - `newChild` が {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} のいずれでもない場合。
+    - 現在のノードが {{domxref("Text")}} であり、親ノードが {{domxref("Document")}} になる場合。
+    - 現在のノードが {{domxref("DocumentType")}} であり、その親が {{domxref("Document")}} にならない場合。 _doctype_ は常に _document_ の直下になければならないからです。
+    - このノードの親が {{domxref("Document")}} で `newChild` が {{domxref("DocumentFragment")}} であり、複数の {{domxref("Element")}} の子、または {{domxref("Text")}} の子がある場合。
+    - `oldChild` を `newChild` で置き換えると、 {{domxref("Document")}} の子の {{domxref("Element")}} が複数になる場合。
+    - `oldChild` を `newChild` で置き換えると、 {{domxref("Element")}} ノードが {{domxref("DocumentType")}} の前になる場合。
+- `NotFoundError` {{domxref("DOMException")}}
+  - : `oldChild` の親ノードが現在のノードではない場合に発生します。
+
+## 例
+
+```js
+// 前提:
+// <div>
+//  <span id="childSpan">foo bar</span>
+// </div>
 
 // ID も属性も内容も持たない空要素を生成
-var sp1 = document.createElement("span");
+const sp1 = document.createElement("span");
 
 // 生成したノードに id 属性 'newSpan' を付与
-sp1.setAttribute("id", "newSpan");
+sp1.id = "newSpan";
 
-// テキストノードを生成
-var sp1_content = document.createTextNode("新しい span 要素");
+// 新しい要素にいくらかの内容を作成
+const sp1_content = document.createTextNode("新しい置換 span 要素");
 
-// 生成したテキストノードを先の空要素の子ノードとして配置
+// その内容を新しい要素に適用
 sp1.appendChild(sp1_content);
 
-// 置換に先んじ、参照を代入
-var sp2 = document.getElementById("childSpan"); // 既存の置換対象ノード
-var parentDiv = sp2.parentNode; // 置換対象ノードの親要素
+// 置き換えられる既存のノードの参照を作る
+const sp2 = document.getElementById("childSpan");
+const parentDiv = sp2.parentNode;
 
-// 既存ノード "sp2" を 生成済の新しい span 要素 "sp1" と置換
+// 既存のノード sp2 を新しい span 要素 sp1 で置換
 parentDiv.replaceChild(sp1, sp2);
 
+// 結果:
+// <div>
+//   <span id="newSpan">新しい置換 span 要素</span>
+// </div>
+```
 
-// 上記コード実行後のノードは以下の様になります:
-// &lt;div&gt;
-//   &lt;span id="newSpan"&gt;新しい span 要素&lt;/span&gt;
-// &lt;/div&gt;
-</pre>
+## 仕様書
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+{{Specifications}}
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-replaceChild">DOM Level 1 Core: replaceChild</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-785887307">DOM Level 2 Core: replaceChild</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-785887307">DOM Level 3 Core: replaceChild</a></li>
-</ul>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+{{Compat}}
 
-<p>{{Compat("api.Node.replaceChild")}}</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("Node.removeChild")}}</li>
-</ul>
+- {{domxref("Node.removeChild")}}
+- {{domxref("Element.replaceWith")}}
