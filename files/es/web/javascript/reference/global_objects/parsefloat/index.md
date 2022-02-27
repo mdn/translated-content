@@ -7,7 +7,6 @@ browser-compat: javascript.builtins.parseFloat
 ---
 {{jsSidebar("Objects")}}
 
-
 La función **`parseFloat()`** modifica (si es necesario, convierte un argumento de tipo cadena) y devuelve un número decimal.
 
 {{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
