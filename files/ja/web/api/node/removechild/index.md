@@ -1,124 +1,125 @@
 ---
-title: Node.removeChild
+title: Node.removeChild()
 slug: Web/API/Node/removeChild
 tags:
-  - DOM
-  - Gecko
-  - Node
+  - メソッド
+  - リファレンス
+browser-compat: api.Node.removeChild
 translation_of: Web/API/Node/removeChild
 ---
-<p><code><strong>Node.removeChild()</strong></code> メソッドは、 DOM から子ノードを取り除きます。取り除いたノードを返します。</p>
+{{APIRef("DOM")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+**`removeChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、子ノードを DOM から取り除き、取り除いたノードを返します。
 
-<pre class="syntaxbox"><em>var oldChild</em> = <em>node</em>.removeChild(<em>child</em>);
-<strong>または</strong>
-<em>node</em>.removeChild(<em>child</em>);
-</pre>
+> **Note:** 取り除かれた子ノードへの参照が保持されている限り、子ノードはメモリー内に残りますが、 DOM の一部ではなくなります。
+> 後のコードで再利用することができます。
+>
+> `removeChild()` の返値が保持されず、他の参照もなくなった場合は、まもなくメモリーから[自動的に削除](/en-US/docs/Web/JavaScript/Memory_Management)されます。
 
-<ul>
- <li><code>child</code> は DOM から取り除く、子ノードです。</li>
- <li><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">node</span></font> は <code>child</code> の親ノードです。</li>
- <li><code>oldChild</code> は 取り除かれた子ノードへの参照を保持します。 <code>oldChild</code> === <code>child</code> です。</li>
-</ul>
+{{domxref("Node.cloneNode()")}} とは異なり、返値は関連付けられた {{domxref("EventListener")}} オブジェクトを保持します。
 
-<p>取り除かれた子ノードはメモリ内に残りますが、 DOM の一部ではなくなります。最初の構文にある通り、取り除いたノードは、 <code>oldChild</code> オブジェクト参照を通じて、後でコード中で再利用することができます。</p>
+## 構文
 
-<p>しかし、第二の構文では <code>oldChild</code> の参照が保持されないので、コードが他の場所でノードへの参照を持っていなければ、直ちに使用できなくなり、無関係になり、ふつうはまもなくメモリから <a href="/ja/docs/Web/JavaScript/Memory_Management">自動的に削除</a>されます。</p>
+```js
+removeChild(child);
+```
 
-<p><code>child</code> が実際には <code>element</code> ノードの子ではない場合、このメソッドは例外を発生します。これは <code>child</code> が呼び出し時には実際に <code>element</code> の子であったものの、要素を取り除こうと呼び出されたイベントハンドラーによって削除された場合にも発生します。</p>
+### 引数
 
-<p>このメソッドでは、2つの異なる方法で例外が発生します。</p>
+- `child`
+  - : {{domxref("Node")}} で、 DOM から取り除きたい子ノードを指定します。
 
-<ol>
- <li>
-  <p><code>child</code> が実際に <code>element</code> の子であり、 DOM 上に存在していたが削除された場合、このメソッドでは次の例外が発生します。</p>
+### 例外
 
-  <p><code>Uncaught NotFoundError: Failed to execute 'removeChild' on 'Node': The node to be removed is not a child of this node</code>.</p>
- </li>
- <li>
-  <p><code>child</code> がページの DOM 上に存在しない場合、このメソッドでは次の例外が発生します。<br>
-   <br>
-   <code>Uncaught TypeError: Failed to execute 'removeChild' on 'Node': parameter 1 is not of type 'Node'.</code></p>
- </li>
-</ol>
+- `NotFoundError` {{domxref("DOMException")}}
+  - : `child` がこのノードの子ではない場合に発生します。
+- {{jsxref("TypeError")}}
+  - : `child` が `null` であった場合に発生します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: html">&lt;!-- 対象とする HTML のコード --&gt;
-&lt;div id="top" &gt; &lt;/div&gt;
+### 単純な例
 
-&lt;script type="text/javascript"&gt;
-      var top = document.getElementById("top");
-      var nested = document.getElementById("nested");
+この HTML を使います。
 
-      var garbage = top.removeChild(nested);    //Test Case 2: the method throws the exception (2)
+```html
+<div id="top">
+  <div id="nested"></div>
+</div>
+```
 
-&lt;/script&gt;
+親ノードが分かる場合に、指定された要素を取り除きます。
 
-&lt;!--Sample HTML code--&gt;
-&lt;div id="top"&gt;
- &lt;div id="nested"&gt;&lt;/div&gt;
-&lt;/div&gt;
+```js
+let d = document.getElementById("top");
+let d_nested = document.getElementById("nested");
+let throwawayNode = d.removeChild(d_nested);
+```
 
-&lt;script type="text/javascript"&gt;
-      var top = document.getElementById("top");
-      var nested = document.getElementById("nested");
+親ノードが分からないときに指定された要素を取り除きます。
 
-      var garbage = top.removeChild(nested); // This first call remove correctly the node
-
-      // ......
-      garbage = top.removeChild(nested);   // Test Case 1: the method in the second call here, throws the exception (1)
-
-&lt;/script&gt;
-
-</pre>
-
-<pre class="brush: html">&lt;!--Sample HTML code--&gt;
-
-&lt;div id="top"&gt;
-  &lt;div id="nested"&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-<pre class="brush:js">// 親ノードから指定した子要素を除去
-var d = document.getElementById("top");
-var d_nested = document.getElementById("nested");
-var throwawayNode = d.removeChild(d_nested);
-</pre>
-
-<pre class="brush:js">// 親要素が不明、不定の場合の方法
-var node = document.getElementById("nested");
+```js
+let node = document.getElementById("nested");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
 }
-</pre>
+```
 
-<pre class="brush:js">// 要素の全ての子を除去
-var element = document.getElementById("top");
+ある要素からすべての子を削除します。
+
+```js
+let element = document.getElementById("top");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
 }
-</pre>
+```
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+### TypeError が発生する例
 
-<ul>
- <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-removeChild">DOM Level 1 Core: removeChild</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1734834066">DOM Level 2 Core: removeChild</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1734834066">DOM Level 3 Core: removeChild</a></li>
-</ul>
+```html
+<!--HTML コードの例-->
+<div id="top"> </div>
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+```js
+let top = document.getElementById("top");
+let nested = document.getElementById("nested");
 
-<p>{{Compat("api.Node.removeChild")}}</p>
+// TypeError が発生
+let garbage = top.removeChild(nested);
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+### NotFoundError が発生する例
 
-<ul>
- <li>{{domxref("Node.replaceChild")}}</li>
- <li>{{domxref("Node.parentNode")}}</li>
- <li>{{domxref("ChildNode.remove")}}</li>
-</ul>
+```html
+<!--HTML コードの例-->
+<div id="top">
+  <div id="nested"></div>
+</div>
+```
 
-<div>{{APIRef("DOM")}}</div>
+```js
+let top = document.getElementById("top");
+let nested = document.getElementById("nested");
+
+// 最初の呼び出しでは正しくノードを取り除く
+let garbage = top.removeChild(nested);
+
+// NotFoundError が発生
+garbage = top.removeChild(nested);
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.parentNode")}}
+- {{domxref("Element.remove()")}}
+- {{domxref("Node.cloneNode()")}}
