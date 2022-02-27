@@ -1,97 +1,82 @@
 ---
-title: Node.appendChild
+title: Node.appendChild()
 slug: Web/API/Node/appendChild
 tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Reference
+  - メソッド
+  - リファレンス
+browser-compat: api.Node.appendChild
 translation_of: Web/API/Node/appendChild
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Node.appendChild()</strong></code> メソッドは、特定の親ノードの子ノードリストの末尾にノードを追加します。追加しようとしたノードが既に存在していたら、それは現在の親ノードから除かれ、新しい親ノードに追加されます（他のノードに追加する前にそのノードを親ノードから削除する必要はありません）。</p>
+**`appendChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、指定された親ノードの子ノードリストの末尾にノードを追加します。追加しようとしたノードが既に存在していた場合は、 `appendChild()` はその子ノードを現在の位置から新しい位置へ移動します（他のノードに追加する前に、そのノードを親ノードから取り除く必要はありません）。
 
-<p>これは、ノードが同時にドキュメントの 2 箇所に存在できないということを意味します。ノードがすでに親を持っている場合、最初にノードが削除された後、新しい位置の末尾に追加されます。{{domxref("Node.cloneNode()")}} は、新しい親の末尾に追加する前に、ノードのコピーを作成するために使用できます。<code>cloneNode</code> で作成したコピーは自動的に同期を保たないことに注意してください。</p>
+これは、 1 つのノードが同時に文書の 2 か所に存在できないということです。したがって、すでにノードに親がある場合、最初にノードが取り除かれた後、新しい位置に追加されます。
+{{domxref("Node.cloneNode()")}} メソッドを使用すると、新しい親ノード以下に追加する前に、ノードのコピーを作成することができます。
+`cloneNode` で作成したコピーは自動的に同期されません。
 
-<p>このメソッドでは、異なるドキュメント間でノードを移動することはできません。異なるドキュメントからノードを末尾に追加したい場合は、{{domxref("document.importNode()")}} メソッドを使用する必要があります。</p>
+指定された子ノードが {{domxref("DocumentFragment")}} であった場合、その 
+{{domxref("DocumentFragment")}} の内容全体が指定された親ノードの子ノードリストに移動します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+> **Note:** このメソッドとは異なり、 {{domxref("Element.append()")}} メソッドは複数の引数や文字列の追加に対応しています。ノードが要素であった場合は、こちらを使用することができます。
 
-<pre class="syntaxbox">var <em>aChild</em> = <em>element</em>.appendChild(<em>aChild</em>);</pre>
+`appendChild()` は子要素を返すので、メソッドチェーンは動作しません。
 
-<h3 id="引数">引数</h3>
+```js
+let aBlock = document.createElement('block').appendChild( document.createElement('b') );
+```
 
-<h4 id="aChild">aChild</h4>
+`aBlock` に `<b></b>` を追加するだけですが、 `block` に対して複数の `appendChild` を連鎖させるなど、それ以外の操作を連鎖せることはできません。
 
-<p>親ノードに追加する子ノード(要素)</p>
+## 構文
 
-<h3 id="戻り値">戻り値</h3>
+```js
+appendChild(aChild);
+```
 
-<p>追加した子ノードです。ただし、{{domxref("DocumentFragment")}}を引数にした場合は、空の{{domxref("DocumentFragment")}}が戻ります。</p>
+### 引数
 
-<h2 id="Notes" name="Notes">注意</h2>
+- `aChild`
+  - : 指定された親ノードに追加するノード（ふつうは要素）。
 
-<p><code>appendChild()</code> が子要素を返すため、メソッドチェーンが期待通りに動きません。:</p>
+### 返値
 
-<pre class="brush: js"><code>var aBlock = doc.createElement('block').appendChild(doc.createElement('b'));</code></pre>
+{{domxref("Node")}} で追加された子ノード (`aChild`) を返します。
+ただし、 `aChild` が {{domxref("DocumentFragment")}} であった場合は、空の {{domxref("DocumentFragment")}} を返します。
 
-<p><code>aBlock</code> に <code>&lt;b&gt;&lt;/b&gt;</code> を与えただけでは期待通りに動きません。</p>
+### 例外
 
-<h2 id="Example" name="Example">例</h2>
+- `HierarchyRequestError` {{domxref("DOMException")}}
+  - : DOM ツリーの制約に違反した場合に発生します。すなわち、以下のいずれかが発生する場合です。
+    - `aChild` の親が {{domxref("Document")}}, {{domxref("DocumentFragment")}}, {{domxref("Element")}} のいずれにもならない場合。
+    - `aChild` を挿入すると循環参照になる場合。すなわち `aChild` がこのノードの祖先である場合。
+    - `aChild` が {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} のいずれでもない場合。
+    - 現在のノードが {{domxref("Text")}} であり、親ノードが {{domxref("Document")}} になる場合。
+    - 現在のノードが {{domxref("DocumentType")}} であり、その親が {{domxref("Document")}} にならない場合。 _doctype_ は常に _document_ の直下になければならないからです。
+    - このノードの親が {{domxref("Document")}} で `aChild` が {{domxref("DocumentFragment")}} であり、複数の {{domxref("Element")}} の子、または {{domxref("Text")}} の子がある場合。
+    -`aChild` を挿入すると {{domxref("Document")}} の子の {{domxref("Element")}} が複数になる場合。
 
-<pre class="brush:js">// 新しい段落要素を作成し、ドキュメントの body の最後に追加します。
-var p = document.createElement("p");
+## 例
+
+```js
+// 新しい段落要素を作成し、文書の body の末尾に追加します。
+let p = document.createElement("p");
 document.body.appendChild(p);
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-node-appendchild', 'Node.appendChild()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>{{SpecName("DOM3 Core")}} から変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-184E7107', 'Node.appendChild()')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>{{SpecName("DOM2 Core")}} から変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-184E7107', 'Node.appendChild()')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>{{SpecName("DOM1")}} から変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-184E7107', 'Node.appendChild()')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Node.appendChild")}}</p>
+{{Compat}}
 
-<div id="compat-mobile"></div>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("Node.removeChild()")}}</li>
- <li>{{domxref("Node.replaceChild()")}}</li>
- <li>{{domxref("Node.insertBefore()")}}</li>
- <li>{{domxref("Node.hasChildNodes()")}}</li>
- <li>{{domxref("ParentNode.append()")}}</li>
-</ul>
+- {{domxref("Node.removeChild()")}}
+- {{domxref("Node.replaceChild()")}}
+- {{domxref("Node.insertBefore()")}}
+- {{domxref("Node.hasChildNodes()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("Element.append()")}}
