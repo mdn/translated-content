@@ -1,48 +1,73 @@
 ---
-title: Node.normalize
+title: Node.normalize()
 slug: Web/API/Node/normalize
 tags:
-  - DOM
-  - Gecko
-  - Node
+  - メソッド
+  - リファレンス
+browser-compat: api.Node.normalize
 translation_of: Web/API/Node/normalize
 ---
-<div>{{ApiRef}}</div>
+{{APIRef("DOM")}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`normalize()`** は {{domxref("Node")}} インターフェイスのメソッドで、指定されたノードとその下のツリーを*正規化された*形にします。
+正規化されたサブツリーでは、サブツリー内に空のテキストノードがなくなり、隣り合うテキストノードがなくなります。
 
-<p>指定ノードの空のノードを削除し、隣接するテキストノードをひとつに纏め、文書を「正規化 (normalize)」します。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+normalize();
+```
 
-<pre class="syntaxbox"><em>element</em>.normalize();
-</pre>
+### 引数
 
-<h2 id="Example" name="Example">例</h2>
+なし。
 
-<pre class="brush:js;highlight:10;">var wrapper = document.createElement("div");
+### 返値
+
+なし。
+
+## 例
+
+```html
+<output id="result"></output>
+```
+
+```js
+let wrapper = document.createElement("div");
 
 wrapper.appendChild( document.createTextNode("Part 1 ") );
 wrapper.appendChild( document.createTextNode("Part 2 ") );
 
-// wrapper.childNodes[0].textContent === "Part 1 "
-// wrapper.childNodes[1].textContent === "Part 2 "
-// この時点で、wrapper の 子ノード数は 2 です。 wrapper.childNodes.length === 2
+let node = wrapper.firstChild;
+let result = "正規化前:<br/>";
+while (node) {
+  result += " " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  node = node.nextSibling;
+}
 
-wrapper.normalize(); // 正規化
+wrapper.normalize();
 
-// 正規化後の wrapper の子ノード数は 1 となっています。 wrapper.childNodes.length === 1
-// 挿入処理の為に冗長化したノードはひとつに纏められています。 wrapper.childNodes[0].textContent === "Part 1 Part 2"
-</pre>
+node = wrapper.firstChild;
+result += "<br/><br/>正規化後:<br/>";
+while (node) {
+  result += " " + node.nodeName + ": " + node.nodeValue + "<br/>";
+  node = node.nextSibling;
+}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+const output = document.getElementById("result");
+output.innerHTML = result;
+```
 
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize">DOM Level 2 Core: Node.normalize</a></li>
-</ul>
+{{ EmbedLiveSample("Example", "100%", "170")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 仕様書
 
-<ul>
- <li><a href="/ja/docs/Web/API/Text.splitText"><code>Text.splitText</code></a></li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- 逆の操作である {{domxref("Text.splitText()")}}
