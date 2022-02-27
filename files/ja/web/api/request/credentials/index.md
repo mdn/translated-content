@@ -3,64 +3,55 @@ title: Request.credentials
 slug: Web/API/Request/credentials
 tags:
   - API
-  - Experimental
+  - Cookies
   - Fetch
+  - Networking
   - Property
   - Reference
+  - Security
   - credentials
   - request
 translation_of: Web/API/Request/credentials
 ---
-<div>{{APIRef("Fetch")}}{{SeeCompatTable}}</div>
+{{APIRef("Fetch")}}
 
-<p>{{domxref("Request")}} インターフェースの <strong><code>credentials</code></strong> 読み取り専用プロパティは、クロスオリジンリクエストの場合、ユーザーエージェントが ほかのドメインからクッキーを送信すべきかどうかを示します。これは XHR の <code>withCredentials フラグと似ていますが、（2 つではなく）3 つの値があります：</code></p>
+{{domxref("Request")}} インターフェイスの **`credentials`** 読み取り専用プロパティは、クロスオリジンの場合に、ユーザーエージェントが他のドメインからクッキーを送信すべきかどうかを示します。
 
-<ul>
- <li><code>omit：</code>決してクッキーを送信しない。</li>
- <li><code>same-origin：</code>URL が呼び出し元のスクリプトと同一オリジンだった場合のみ、クッキーを送信する。</li>
- <li><code>include：</code>クロスオリジンの呼び出しであっても、常にクッキーを送信する。</li>
-</ul>
+<h2 id="Syntax">構文</h2>
 
-<h2 id="構文">構文</h2>
+```js
+var myCred = request.credentials;
+```
 
-<pre class="brush: js">var myCred = request.credentials;</pre>
+<h3 id="Value">値</h3>
 
-<h3 id="値">値</h3>
+`RequestCredentials` 辞書値は、クロスオリジンの場合に、ユーザーエージェントが他のドメインからクッキーを送信すべきかどうかを示します。有効な値は次の通りです:
 
-<p>{{domxref("RequestCredentials")}} 値。</p>
+- `omit`: 決してクッキーを送受信しません。
+- `same-origin`: URL が呼び出し元のスクリプトと同一オリジンだった場合のみ、ユーザーの資格情報 (HTTP Basic 認証、など) を送信します。 **これが既定値です。**
+- `include`: クロスオリジン呼び出しであっても、常にユーザーの資格情報 (クッキー、HTTP Basic 認証、、など) を送信します。
 
-<h2 id="例">例</h2>
+これは XHR の [`withCredentials`](/ja/docs/Web/API/XMLHttpRequest/withCredentials) フラグと似ていますが、有効な値が 2 つではなく 3 つあります。
 
-<p>次のスニペットは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを生成してから、リクエストの credentials を変数に保存しています：</p>
+<h2 id="Example">例</h2>
 
-<pre class="brush: js">var myRequest = new Request('flowers.jpg');
-var myCred = myRequest.credentials; // 既定では "omit" を返す。</pre>
+次のスニペットは、{{domxref("Request.Request()")}} コンストラクタを使って（スクリプトと同じディレクトリーにある画像ファイルのために）新しいリクエストを生成してから、リクエストの credentials を変数に保存しています：
 
-<h2 id="仕様">仕様</h2>
+```js
+var myRequest = new Request('flowers.jpg');
+var myCred = myRequest.credentials; // 既定では "same-origin" を返す
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#dom-request-credentials','credentials')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+<h2 id="Specifications">仕様</h2>
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+{{Specifications}}
 
-<p>{{Compat("api.Request.credentials")}}</p>
+<h2 id="Browser compatibility">ブラウザー実装状況</h2>
 
-<h2 id="関連項目">関連項目</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
- <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
-</ul>
+<h2 id="See also">関連情報</h2>
+
+- [ServiceWorker API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP access control (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP](/ja/docs/Web/HTTP)
