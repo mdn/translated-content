@@ -86,7 +86,7 @@ Sumado a los métodos para leer y manipular los componentes individuales de la f
 - {{jsxref("Date.prototype.getUTCSeconds()")}}
   - : Retorna los segundos (`0`–`59`) para la fecha especificada acorde a la hora universal.
 - {{jsxref("Date.prototype.getYear()")}}
-  - : Retorna el año (usualmente de 2 a 3 dígitos) para la fecha especificada acorde a la hora local. Usa {{jsxref("Date.prototype.getFullYear()", en lugar de "getFullYear()")}}.
+  - : Retorna el año (usualmente de 2 a 3 dígitos) para la fecha especificada acorde a la hora local. Usa {{jsxref("Date.prototype.getFullYear()", "getFullYear()")}} en su lugar.
 - {{jsxref("Date.prototype.setDate()")}}
   - : Establece el día del mes para la fecha especificada acorde a la hora local.
 - {{jsxref("Date.prototype.setFullYear()")}}
@@ -117,7 +117,7 @@ Sumado a los métodos para leer y manipular los componentes individuales de la f
 - {{jsxref("Date.prototype.setUTCSeconds()")}}
   - : Establece los segundos para una fecha especifica acorde a la hora universal.
 - {{jsxref("Date.prototype.setYear()")}}
-  - : Establece el año (usualmente de 2 a 3 dígitos) para una fecha especifica acorde a la hora local. Usa {{jsxref("Date.prototype.setFullYear()", en lugar de "setFullYear()")}}.
+  - : Establece el año (usualmente de 2 a 3 dígitos) para una fecha especifica acorde a la hora local. Usa {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} en su lugar.
 - {{jsxref("Date.prototype.toDateString()")}}
   - : Retona la "fecha" del objeto {{jsxref("Date")}} como una cadena facil de leer por humanos `'Thu Apr 12 2018'`.
 - {{jsxref("Date.prototype.toISOString()")}}
