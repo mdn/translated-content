@@ -6,7 +6,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
 {{JSRef}}
 
-El objecto `Proxy` permite crear un intermediario para otro objeto, el cual
+El objeto `Proxy` permite crear un intermediario para otro objeto, el cual
 puede interceptar y redefinir operaciones fundamentales para dicho objeto.
 
 ## Descripción
@@ -61,7 +61,7 @@ Aquí hemos provisto una implementación del manipulador
 {{jsxref("Global_Objects/Proxy/Proxy/get", "get()")}}, el cual intercepta los
 intentos de acceder a las propiedades del objeto envuelto.
 
-Las funciones manipuladores son llamadas a menudo _trampas_, probablemente
+Las funciones manipuladoras son llamadas a menudo _trampas_, probablemente
 proque atrapan las llamadas al objeto envuelto. La trampa simple de arriba en
 `handler2` redefine todos los accesores de propiedades:
 
@@ -400,7 +400,7 @@ console.log(products.number); // 3
 
 ### Un ejemplo con todas las `trampas`
 
-Para crear un ejemplo con la lista compreta de `trampas`, con motivos
+Para crear un ejemplo con la lista completa de `trampas`, con motivos
 didácticos, intentaremos intervenir un objeto _no-nativo_ que se ajusta
 particularmente a este tipo de operación: el objeto global `docCookies` creado
 por
@@ -472,6 +472,6 @@ console.log(docCookies.my_cookie1);
 
 ## Véase también
 
-- [Presentaci;on de "Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk)
+- [Presentación de "Proxies are awesome" Brendan Eich presentation at JSConf](https://www.youtube.com/watch?v=sClk6aB_CPk)
   ([diapositivas](https://www.slideshare.net/BrendanEich/metaprog-5303821))
 - [Tutorial on proxies](https://web.archive.org/web/20171007221059/https://soft.vub.ac.be/~tvcutsem/proxies/)
