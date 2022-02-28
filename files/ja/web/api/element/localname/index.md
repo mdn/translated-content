@@ -6,82 +6,80 @@ tags:
 - DOM
 - NeedsBrowserCompatibility
 - NeedsMobileBrowserCompatibility
-- Property
-- Reference
+- プロパティ
+- リファレンス
 browser-compat: api.Element.localName
 translation_of: Web/API/Element/localName
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Element.localName</code></strong> は読み取り専用プロパティで、要素の修飾名のローカル部分を返します。</p>
+**`Element.localName`** は読み取り専用プロパティで、要素の修飾名のローカル部分を返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><var>name</var> = <var>element</var>.localName
-</pre>
+```js
+name = element.localName
+```
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>要素の修飾名の、ローカル部分を示す {{domxref("DOMString")}} です。
-</p>
+要素の修飾名の、ローカル部分を示す {{domxref("DOMString")}} です。
 
-<h2 id="Example">例</h2>
+## 例
 
-<p>(<code>text/xml</code> や <code>application/xhtml+xml</code> のような、XML のコンテンツタイプで送出される必要があります。)</p>
+(`text/xml` や `application/xhtml+xml` のような、XML のコンテンツタイプで送出される必要があります。)
 
-<pre class="brush:xml">&lt;html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:svg="http://www.w3.org/2000/svg"&gt;
-&lt;head&gt;
-  &lt;script type="application/javascript"&gt;&lt;![CDATA[
+```xml
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:svg="http://www.w3.org/2000/svg">
+<head>
+  <script type="application/javascript"><![CDATA[
   function test() {
     var text = document.getElementById('text');
     var circle = document.getElementById('circle');
 
-    text.value = "&lt;svg:circle&gt; has:\n" +
+    text.value = "<svg:circle> has:\n" +
                  "localName = '" + circle.localName + "'\n" +
                  "namespaceURI = '" + circle.namespaceURI + "'";
   }
-  ]]&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="test()"&gt;
-  &lt;svg:svg version="1.1"
+  ]]></script>
+</head>
+<body onload="test()">
+  <svg:svg version="1.1"
     width="100px" height="100px"
-    viewBox="0 0 100 100"&gt;
-    &lt;svg:circle cx="50" cy="50" r="30" style="fill:#aaa" id="circle"/&gt;
-  &lt;/svg:svg&gt;
-  &lt;textarea id="text" rows="4" cols="55"/&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
+    viewBox="0 0 100 100">
+    <svg:circle cx="50" cy="50" r="30" style="fill:#aaa" id="circle"/>
+  </svg:svg>
+  <textarea id="text" rows="4" cols="55"/>
+</body>
+</html>
+```
 
-<h2 id="Notes">注</h2>
+## メモ
 
-<p>ノードのローカル名とは、ノードの修飾名の、コロンの後に続く部分です。 XML において修飾名は、一般に特定の XML 文書の名前空間の一部として使われます。例えば、<code>ecomm:partners</code> という修飾名において、 <code>partners</code> はローカル名、<code>ecomm</code> は接頭辞です。</p>
+ノードのローカル名とは、ノードの修飾名の、コロンの後に続く部分です。 XML において修飾名は、一般に特定の XML 文書の名前空間の一部として使われます。例えば、`ecomm:partners` という修飾名において、 `partners` はローカル名、`ecomm` は接頭辞です。
 
-<pre class="brush:xml">&lt;ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm"&gt;
-  &lt;ecomm:partners&gt;
-    &lt;ecomm:partner id="1001"&gt;Tony's Syrup Warehouse
-    &lt;/ecomm:partner&gt;
-  &lt;/ecomm:partner&gt;
-&lt;/ecomm:business&gt;
-</pre>
+```xml
+<ecomm:business id="soda_shop" type="brick_n_mortar" xmlns:ecomm="http://example.com/ecomm">
+  <ecomm:partners>
+    <ecomm:partner id="1001">Tony's Syrup Warehouse
+    </ecomm:partner>
+  </ecomm:partner>
+</ecomm:business>
+```
 
-<div class="note">
-<p><strong>注: </strong>{{Gecko("1.9.2")}} 以前、このプロパティは、HTML DOM における HTML 要素ではローカル名を大文字で返していました（XML DOM における XHTML 要素とは対照的に）。最新バージョンでは HTML5 に従い、このプロパティは内部の DOM ストレージの場合、 HTML DOM における HTML要素と XHTML DOM における XHTML要素のいずれも、小文字で返します。{{domxref("element.tagName","tagName")}} プロパティは引き続き、 HTML DOM における HTML 要素では大文字で返します。</p>
-</div>
+> **Note:** {{Gecko("1.9.2")}} 以前、このプロパティは、HTML DOM における HTML 要素ではローカル名を大文字で返していました（XML DOM における XHTML 要素とは対照的に）。最新バージョンでは HTML5 に従い、このプロパティは内部の DOM ストレージの場合、 HTML DOM における HTML 要素と XHTML DOM における XHTML 要素のいずれも、小文字で返します。{{domxref("element.tagName","tagName")}} プロパティは引き続き、 HTML DOM における HTML 要素では大文字で返します。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("Element.namespaceURI")}}</li>
-  <li>{{domxref("Element.prefix")}}</li>
-  <li>{{domxref("Attr.localName")}}</li>
-</ul>
+- {{domxref("Element.namespaceURI")}}
+- {{domxref("Element.prefix")}}
+- {{domxref("Attr.localName")}}

@@ -5,63 +5,47 @@ tags:
   - API
   - CSSOM View
   - NeedsMarkupWork
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
+browser-compat: api.Element.clientHeight
 translation_of: Web/API/Element/clientHeight
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><strong><code>Element.clientHeight</code></strong> は読み取り専用のプロパティで、 CSS のない要素やインラインレイアウトボックスではゼロになります。それ以外では、要素の内側の寸法をピクセル単位で表します。パディングは含みますが、境界、マージン、 (もしあれば) 水平スクロールバーは含みません。</p>
+**`Element.clientHeight`** は読み取り専用のプロパティで、 CSS のない要素やインラインレイアウトボックスではゼロになります。それ以外では、要素の内側の寸法をピクセル単位で表します。パディングは含みますが、境界、マージン、（もしあれば）水平スクロールバーは含みません。
 
-<p><code>clientHeight</code> は CSS <code>height</code> + CSS <code>padding</code> - 水平スクロールバーの高さ(height) (もしあれば) として計算できます。</p>
+`clientHeight` は CSS `height` + CSS `padding` - 水平スクロールバーの高さ (もしあれば) として計算できます。
 
-<p><code>clientHeight</code> がルート要素 (<code>&lt;html&gt;</code> 要素) (または文書が後方互換モードである場合は <code>&lt;body&gt;</code>) に使用された場合、 (スクロールバーを除いた) ビューポートの高さが返されます。<a href="https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientheight">これは <code>clientHeight</code> の特例です</a>。</p>
+`clientHeight` がルート要素（`<html>` 要素）（または文書が後方互換モードである場合は `<body>`）に使用された場合、（スクロールバーを除いた）ビューポートの高さが返されます。[これは `clientHeight` の特例です](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-clientheight)。
 
-<div class="note">
-<p><strong>注:</strong> このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。</p>
-</div>
+> **Note:** このプロパティは値を整数値に丸めます。小数値が必要であれば、 {{ domxref("element.getBoundingClientRect()") }} を使用してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <var>intElemClientHeight</var> = <var>element</var>.clientHeight;</pre>
+```js
+var intElemClientHeight = element.clientHeight;
+```
 
-<p><code><var>intElemClientHeight</var></code> は <code><var>element</var></code> の <code>clientHeight</code> をピクセル単位で表す整数値です。 <code>clientHeight</code> プロパティは読み取り専用です。</p>
+`intElemClientHeight` は `element` の `clientHeight` をピクセル単位で表す整数値です。 `clientHeight` プロパティは読み取り専用です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p><img alt="Image:Dimensions-client.png" class="internal" src="/@api/deki/files/185/=Dimensions-client.png"></p>
+![](dimensions-client.png)
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#dom-element-clientheight', 'clientHeight')}}</td>
-   <td>{{Spec2("CSSOM View")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h3 id="Notes" name="Notes">注</h3>
+### メモ
 
-<p><code>clientHeight</code> は Internet Explorer オブジェクトモデルで導入されたプロパティです。</p>
+`clientHeight` は Internet Explorer オブジェクトモデルで導入されたプロパティです。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.clientHeight")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLElement.offsetHeight")}}</li>
- <li>{{domxref("Element.scrollHeight")}}</li>
- <li><a href="/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements">要素の寸法の決定</a></li>
-</ul>
+- {{domxref("HTMLElement.offsetHeight")}}
+- {{domxref("Element.scrollHeight")}}
+- [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)

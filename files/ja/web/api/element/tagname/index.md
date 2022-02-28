@@ -1,36 +1,63 @@
 ---
-title: element.tagName
+title: Element.tagName
 slug: Web/API/Element/tagName
 tags:
+  - API
   - DOM
+  - DOM リファレンス
+  - Element
   - Gecko
-  - Gecko DOM Reference
+  - NeedsBrowserCompatibility
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+  - tagName
+browser-compat: api.Element.tagName
 translation_of: Web/API/Element/tagName
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>要素の名前を返します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><var>elementName</var> = element.tagName
-</pre>
-<ul>
- <li><code>elementName</code> : 現在の要素の名前を含む文字列</li>
-</ul>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>XML (および XHTML など XML ベースの言語) では、tagName は大文字・小文字が保たれます。HTML では、<code>tagName</code> は標準的な大文字で要素名を返します。 <code>tagName</code> の値は <a href="/ja/docs/Web/API/Node.nodeName">nodeName</a> の値と同じになります。</p>
-<h2 id="Example" name="Example">例</h2>
-<p>以下のようなマークアップを想定します。</p>
-<pre class="brush:html">&lt;span id="born"&gt;When I was born...&lt;/span&gt;
-</pre>
-<p>上記 HTML に対し以下のスクリプトを実行した場合...</p>
-<pre class="brush:js">var span = document.getElementById("born");
+{{ApiRef("DOM")}}
 
-alert(span.tagName);
-</pre>
-<p>XHTML (および他の XML 形式) では、「span」という警告ダイアログが表示されます。HTML では、その代わりに「SPAN」と表示されます。</p>
-<h2 id="Specifications" name="Specifications">仕様</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-104682815">DOM Level 2 Core: tagName</a></li>
- <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents">HTML 5: APIs in HTML documents</a></li>
-</ul>
+**`tagName`** は {{domxref("Element")}} インターフェイスのプロパティで、呼び出された要素のタグ名を返します。
+
+例えば、この要素が {{HTMLElement("img")}} であれば、 `tagName` プロパティは `"IMG"` となります（HTML 文書の場合。 XML/XHTML 文書では大文字小文字が違うかもしれません）。
+
+## 構文
+
+```js
+elementName = Element.tagName;
+```
+
+### 値
+
+この要素のタグ名を示す文字列です。文字列が大文字であるかどうかは、文書型によって変わります。
+
+- HTML 文書を表す DOM ツリーでは、タグ名は常に大文字に正規化されます。例えば、 `tagName` が {{HTMLElement("div")}} 要素で呼び出された場合は、 `"DIV"` を返します。
+- XML の DOM ツリー内にある要素のタグ名は、元の XML ファイルに書かれているのと大文字小文字が同じになります。 XML 文書に `"<SomeTag>"` タグがあった場合、 `tagName` プロパティの値は `"SomeTag"` になります。
+
+{{domxref("Element")}} オブジェクトにおいては、 `tagName` の値は要素オブジェクトの継承元である {{domxref("Node")}} の {{domxref("Node.nodeName", "nodeName")}} プロパティの値と同じになります。
+
+## 例
+
+### HTML
+
+```html
+<span id="born">When I was born...</span>
+```
+
+### JavaScript
+
+```js
+var span = document.getElementById("born");
+console.log(span.tagName);
+```
+
+XHTML (および他の XML 形式) では、元の大文字小文字が保持されるので、元のタグ名が小文字で生成されている場合は `"span"` が出力されます。
+HTML では、元の文書を生成したときに大文字小文字のどちらが使われたかに関わらず、 `"SPAN"` と出力されます。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

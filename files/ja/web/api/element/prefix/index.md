@@ -6,43 +6,43 @@ tags:
 - DOM
 - NeedsBrowserCompatibility
 - NeedsMobileBrowserCompatibility
-- Property
-- Reference
+- プロパティ
+- リファレンス
 browser-compat: api.Element.prefix
 translation_of: Web/API/Element/prefix
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>Element.prefix</strong></code> は読み取り専用プロパティで、指定された要素の名前空間の接頭辞を、接頭辞が指定されていない場合は <code>null</code> を返します。</p>
+**`Element.prefix`** は読み取り専用プロパティで、指定された要素の名前空間の接頭辞を、接頭辞が指定されていない場合は `null` を返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><var>string</var> = <var>element</var>.prefix
-</pre>
+```js
+string = element.prefix
+```
 
-<h2 id="Examples">例</h2>
+## 例
 
-<p>次の例はコンソールに "x" を記録します。</p>
+次の例はコンソールに "x" を記録します。
 
-<pre class="brush:xml">&lt;x:div onclick="console.log(this.prefix)"/&gt;
-</pre>
+```xml
+<x:div onclick="console.log(this.prefix)"/>
+```
 
-<h2 id="Notes">注</h2>
+## 注
 
-<p>これは、名前空間を認識するパーサーを使用しているとき、すなわち、文書が XML の MIME タイプで送信されたときのみ動作します。 HTML 文書では動作しません。</p>
+これは、名前空間を認識するパーサーを使用しているとき、すなわち、文書が XML の MIME タイプで送信されたときのみ動作します。 HTML 文書では動作しません。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("Element.namespaceURI")}}</li>
-  <li>{{domxref("Element.localName")}}</li>
-  <li>{{domxref("Attr.prefix")}}</li>
-</ul>
+- {{domxref("Element.namespaceURI")}}
+- {{domxref("Element.localName")}}
+- {{domxref("Attr.prefix")}}

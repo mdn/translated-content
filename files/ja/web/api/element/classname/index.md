@@ -1,35 +1,61 @@
 ---
-title: element.className
+title: Element.className
 slug: Web/API/Element/className
 tags:
+  - API
   - DOM
   - Gecko
-  - Gecko DOM Reference
+  - プロパティ
+  - リファレンス
+browser-compat: api.Element.className
 translation_of: Web/API/Element/className
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p><strong>className</strong> は要素の <code>class</code> 属性の値の取得 / 設定に用います。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><var>cName</var> = <var>elementNodeReference</var>.className;
-<var>elementNodeReference</var>.className = <var>cName</var>;</pre>
-<ul>
- <li><var>cName</var> : クラス名（文字列）</li>
-</ul>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js">var elm = document.getElementById("div1"); //対象要素を取得
+{{APIRef("DOM")}}
 
-if (elm.className == "fixed") {
-  // 対象要素のクラス名が "fixed" であった場合の処理をここに記述
-}</pre>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>"class" という語句はプログラミングに於いて様々な文脈で用いられる為、競合を防ぐために <code>className</code> という名称となっています。</p>
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95362176">DOM Level 2 HTML: className</a></li>
-</ul>
-<h2 id="See_also" name="See_also">関連情報</h2>
-<ul>
- <li>{{domxref("element.classList")}}</li>
-</ul>
+**`className`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素の [`class` 属性](/ja/docs/Web/HTML/Global_attributes/class)の値を取得したり設定したりします。
+
+## 構文
+
+```js
+var cName = elementNodeReference.className;
+elementNodeReference.className = cName;
+```
+
+- `cName` は文字列変数で、現在の要素のクラスまたは空白区切りのクラス群を表します。
+
+## 例
+
+```js
+let el = document.getElementById('item');
+
+if (el.className === 'active'){
+  el.className = 'inactive';
+} else {
+  el.className = 'active';
+}
+```
+
+## メモ
+
+このプロパティでは、 `className` という名前が `class` の代わりに使用されています。
+これは DOM を操作するために使用される多くの言語と "class" キーワードが競合するためです。
+
+`className` は {{domxref("SVGAnimatedString")}} のインスタンスにも、 `element` が {{domxref("SVGElement")}} であれば存在する可能性があります。 SVG 要素を扱っている場合は、要素の `className` は {{domxref("Element.getAttribute")}} や {{domxref("Element.setAttribute")}} を使用して取得したり設定したりした方がいいでしょう。しかし、その要素の [`class` 属性](/ja/docs/Web/HTML/Global_attributes/class)が空であった場合、 {{domxref("Element.getAttribute")}} は`""` ではなく [`null`](/ja/docs/Web/JavaScript/Reference/Global_Objects/null) を返すことに注意してください。
+
+```js
+elm.setAttribute('class', elm.getAttribute('class'))
+```
+
+> **Note:** `class` は **HTML 属性**であり、 `className` は **DOM プロパティ**です。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("element.classList")}}
