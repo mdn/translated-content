@@ -15,7 +15,7 @@ Le constructeur **`AnimationEvent()`** retourne un nouvel {{domxref("AnimationEv
 
 ### Paramètres
 
-*Le constructeur `AnimationEvent()` *constructeur hérite également des arguments de  _{{domxref("Event.Event", "Event()")}}._
+*Le constructeur `AnimationEvent()` hérite également des arguments du constructeur [`Event()`](/fr/docs/Web/API/Event/Event).*
 
 - `type`
   - : Un {{domxref("DOMString")}} représentant le nom du type de `AnimationEvent`. Il est sensible à la casse (majuscule-minuscule) et peut être: `'animationstart'`, `'animationend'`, or `'animationiteration'`.
