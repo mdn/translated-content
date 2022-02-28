@@ -6,53 +6,50 @@ tags:
   - DOM
   - Element
   - HTMLCollection
-  - Property
+  - プロパティ
   - children
 browser-compat: api.Element.children
 translation_of: Web/API/Element/children
 original_slug: Web/API/ParentNode/children
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p><strong><code>children</code></strong> は読み取り専用のプロパティで、生きた {{domxref("HTMLCollection")}} で呼び出された要素の子{{domxref("Element", "要素", "", 1)}}をすべて返します。</p>
+**`children`** は読み取り専用のプロパティで、生きた {{domxref("HTMLCollection")}} で呼び出された要素の子{{domxref("Element", "要素", "", 1)}}をすべて返します。
 
-<p><code>Element.children</code> は要素のノードしか含みません。すべての子ノード、例えばテキストやコメントノードなどを取得するには、 {{domxref("Node.childNodes")}} を使用してください。</p>
+`Element.children` は要素のノードしか含みません。すべての子ノード、例えばテキストやコメントノードなどを取得するには、 {{domxref("Node.childNodes")}} を使用してください。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">
-// Getter
+```js
+// ゲッター
 collection = myElement.children;
 
-// No setter; read-only property
-</pre>
+// セッターはありません。読み取り専用プロパティです。
+```
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>生きた {{ domxref("HTMLCollection") }} で、 <code><var>node</var></code> の子の DOM 要素の順序付きコレクションを返します。コレクションの {{domxref("HTMLCollection.item()", "item()")}} メソッドか、 JavaScript の配列スタイルの記法を使って、コレクション内の個々の子ノードにアクセスすることができます。</p>
+生きた {{ domxref("HTMLCollection") }} で、 `node` の子の DOM 要素の順序付きコレクションを返します。コレクションの {{domxref("HTMLCollection.item()", "item()")}} メソッドか、 JavaScript の配列スタイルの記法を使って、コレクション内の個々の子ノードにアクセスすることができます。
 
-<p>ノードが子要素を持たない場合、 <code>children</code> は要素を含まず、<code>length</code> は <code>0</code> です。</p>
+ノードが子要素を持たない場合、 `children` は要素を含まず、`length` は `0` です。
 
-<h2 id="Example">例 </h2>
+## 例
 
-<pre class="brush: js">const myElement = document.getElementById('foo');
-for (let i = 0; i &lt; myElement.children.length; i++) {
+```js
+const myElement = document.getElementById('foo');
+for (let i = 0; i < myElement.children.length; i++) {
   console.log(myElement.children[i].tagName);
 }
-</pre>
+```
 
-<h2 id="Specification">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>
-    {{domxref("Node.childNodes")}}
-  </li>
-</ul>
+- {{domxref("Node.childNodes")}}

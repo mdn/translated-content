@@ -6,113 +6,85 @@ tags:
   - Attributes
   - DOM
   - Element
-  - Property
   - プロパティ
   - リファレンス
-  - 属性
+browser-compat: api.Element.attributes
 translation_of: Web/API/Element/attributes
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{ APIRef("DOM") }}
 
-<p><strong><code>Element.attributes</code></strong> プロパティは、そのノードに登録された全ての属性ノードのコレクションを返却します。返却される値は {{domxref("NamedNodeMap")}} であり、 <code><strong>Array</strong></code> ではありません。つまり、 {{jsxref("Array")}} のメソッドは持っておらず、 {{domxref("Attr")}} ノードのインデックスはブラウザーによって変わる可能性があります。より正確に言うと、 <code><strong>attributes</strong></code> はその属性に関するあらゆる情報を表す文字列のキーと値の組です。</p>
+**`Element.attributes`** プロパティは、そのノードに登録されたすべての属性ノードの生きたコレクションを返却します。返却される値は {{domxref("NamedNodeMap")}} であり、 `Array` ではありません。つまり、 {{jsxref("Array")}} のメソッドは持っておらず、 {{domxref("Attr")}} ノードのインデックスはブラウザーによって変わる可能性があります。より正確に言うと、 `attributes` はその属性に関するあらゆる情報を表す文字列のキーと値の組です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>attr</em> =<em> element</em>.attributes;
-</pre>
+```js
+var attr = element.attributes;
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="Basic_examples" name="Basic_examples">基本的な例</h3>
+### 基本的な例
 
-<pre class="brush: js">// ドキュメント内の最初の &lt;p&gt; 要素を取得する
+```js
+// 文書内の最初の <p> 要素を取得
 var para = document.getElementsByTagName("p")[0];
-var atts = para.attributes;</pre>
+var atts = para.attributes;
+```
 
-<h3 id="Enumerating_elements_attributes" name="Enumerating_elements_attributes">要素の属性を列挙する</h3>
+### 要素の属性を列挙する
 
-<p>ある要素の全ての属性を走査したい時には、インデックスを使うと便利です。<br>
- 次の例では、 "paragraph" を id に持つ要素の全ての属性ノードを走査し、その属性の値を表示します。</p>
+ある要素のすべての属性を走査したい場合は、数値のインデックスを使うと便利です。
+次の例では、 "paragraph" を id に持つ要素のすべての属性ノードを走査し、その属性の値を表示します。
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+```html
+<!DOCTYPE html>
 
-&lt;html&gt;
+<html>
 
- &lt;head&gt;
-  &lt;title&gt;Attributes example&lt;/title&gt;
-  &lt;script type="text/javascript"&gt;
+ <head>
+  <title>Attributes example</title>
+  <script type="text/javascript">
    function listAttributes() {
      var paragraph = document.getElementById("paragraph");
      var result = document.getElementById("result");
 
-     // まず、最初の段落(p1)がなんらかの属性を持っているか確かめよう
+     // まず、段落に属性があるか確かめる
      if (paragraph.hasAttributes()) {
        var attrs = paragraph.attributes;
        var output = "";
-       for(var i = attrs.length - 1; i &gt;= 0; i--) {
-         output += attrs[i].name + "-&gt;" + attrs[i].value;
+       for(var i = attrs.length - 1; i >= 0; i--) {
+         output += attrs[i].name + "->" + attrs[i].value;
        }
        result.value = output;
      } else {
-       result.value = "No attributes to show";
+       result.value = "表示する属性はありません";
      }
    }
-  &lt;/script&gt;
- &lt;/head&gt;
+  </script>
+ </head>
 
-&lt;body&gt;
- &lt;p id="paragraph" style="color: green;"&gt;Sample Paragraph&lt;/p&gt;
- &lt;form action=""&gt;
-  &lt;p&gt;
-    &lt;input type="button" value="Show first attribute name and value"
-      onclick="listAttributes();"&gt;
-    &lt;input id="result" type="text" value=""&gt;
-  &lt;/p&gt;
- &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+<body>
+ <p id="paragraph" style="color: green;">サンプルの段落</p>
+ <form action="">
+  <p>
+    <input type="button" value="Show first attribute name and value"
+      onclick="listAttributes();">
+    <input id="result" type="text" value="">
+  </p>
+ </form>
+</body>
+</html>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-attributes', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>{{SpecName('DOM3 Core')}} 以降、 {{domxref("Node")}} から {{domxref("Element")}} へ移動</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-84CF096', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>{{SpecName('DOM2 Core')}} から変更無し</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-84CF096', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>{{SpecName('DOM1')}}から変更無し</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-84CF096', 'Element.attributes')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.attributes")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>返却される値のインターフェースである {{domxref("NamedNodeMap")}}</li>
- <li><a href="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a> におけるブラウザー間の互換性への配慮</li>
-</ul>
+- 返却される値のインターフェースである {{domxref("NamedNodeMap")}}
+- [quirksmode](https://www.quirksmode.org/dom/w3c_core.html#attributes) におけるブラウザー間の互換性の考慮事項
