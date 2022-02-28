@@ -9,9 +9,9 @@ translation_of: MDN/Contribute
 ---
 {{MDNSidebar}}
 
-¡MDN Web Docs necesita tu ayuda! Tenemos una gran cantidad de errores tipográficos para corregir, ejemplos para escribir, errores para corregir, personas con las que hablar y más, y el número crece a medida que más personas comienzan a usar el sitio. Esta página describe lo que puedes hacer para ayudar. 
+¡MDN Web Docs necesita tu ayuda! Tenemos una gran cantidad de errores tipográficos para corregir, ejemplos para escribir, errores para corregir, personas con las que hablar y más, y el número crece a medida que más personas comienzan a usar el sitio. Esta página describe lo que puedes hacer para ayudar.
 
-> **Nota:** Si no has contribuido a MDN anteriormente, la [guía de inicio](/es/docs/MDN/Contribute/Getting_started) explica el proceso en cuatro pasos simples. Buenas noticias, ya estás en el paso 2: "Elegir una tarea para completar". 
+> **Nota:** Si no has contribuido a MDN anteriormente, la [guía de inicio](/es/docs/MDN/Contribute/Getting_started) explica el proceso en cuatro pasos simples. Buenas noticias, ya estás en el paso 2: "Elegir una tarea para completar".
 
 ## ¿Que puedo hacer para ayudar?
 
@@ -64,12 +64,12 @@ Los enlaces en esta sección conducen a guías detalladas que explican cómo rea
         >
       </td>
       <td>
-        Las personas envían aportaciones a nuestro 
+        Las personas envían aportaciones a nuestro
         <a href="https://github.com/mdn/translated-content/issues"
           >repositorio de contenido</a
         >
         todo el tiempo para actualizar el contenido de MDN y necesitamos ayuda
-        para revisarlas. Dirígete a nuestra página 
+        para revisarlas. Dirígete a nuestra página
         <a href="https://github.com/mdn/content/blob/main/REVIEWING.md"
           >REVIEWING.md</a
         >
@@ -150,7 +150,7 @@ Si estás más interesado en el código, puedes probar lo siguiente:
 
 Si estás interesado en las palabras *y* el código, puede intentar lo siguiente:
 
-- [Escribir o actualizar una referencia de API](/es/docs/MDN/Contribute/Howto/Write_an_API_reference) (30 minutos to 2 horas, o más)
+- [Escribir o actualizar una referencia de API](/es/docs/MDN/Contribute/Howto/Write_an_API_reference) (30 minutos a 2 horas, o más)
 - [Escribe un nuevo artículo sobre un tema con el que estés familiarizado.](https://github.com/mdn/content#adding-a-new-document) (1 hora o más)
 - [Añade o actualiza los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Structures/Compatibility_tables) (30 minutos a 1 hora)
 
@@ -159,4 +159,3 @@ Si estás interesado en las palabras *y* el código, puede intentar lo siguiente
 ## Otras páginas útiles
 
 {{LandingPageListSubPages()}}
-
