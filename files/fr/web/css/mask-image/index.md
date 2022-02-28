@@ -1,18 +1,14 @@
 ---
 title: mask-image
 slug: Web/CSS/mask-image
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/mask-image
+browser-compat: css.properties.mask-image
 ---
 {{CSSRef}}
 
-La propriété CSS **`mask-image`** définit l'image qui sera utilisée comme masque pour un élément.
+La propriété [CSS](/fr/docs/Web/CSS) **`mask-image`** définit l'image qui sera utilisée comme masque pour un élément.
 
-## Syntaxe
+Par défaut, cela signifie que le canal alpha de l'image du masque sera multiplié par le canal alpha de l'élément. Cette combinaison peut être contrôlée avec la propriété [`mask-mode`](/fr/docs/Web/CSS/mask-mode).
 
 ```css
 /* Valeur avec un mot-clé */
@@ -31,52 +27,45 @@ mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), tr
 /* Valeurs globales */
 mask-image: inherit;
 mask-image: initial;
+mask-image: revert;
 mask-image: unset;
 ```
+
+## Syntaxe
 
 ### Valeurs
 
 - `none`
   - : Le masque défini par ce mot-clé sera une image noire transparente.
 - `<mask-source>`
-  - : Une référence {{cssxref("&lt;url&gt;")}} vers un masque ({{SVGElement("mask")}}) ou une image CSS.
-- {{cssxref("&lt;image&gt;")}}
+  - : Une référence [`url()`](/fr/docs/Web/CSS/url()) vers un masque SVG ([<mask>](/fr/docs/Web/SVG/Element/mask)) ou une image CSS.
+- [`<image>`](/fr/docs/Web/CSS/image)
   - : Une image utilisée pour le masque.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Définir une image de masque avec une URL
 
-```css
-#masked {
-  width: 100px;
-  height: 100px;
-  background-color: #8cffa0;
-  -webkit-mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
-  mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
-}
-```
+{{EmbedGHLiveSample("css-examples/masking/mask-image.html", '100%', 560)}}
 
-### HTML
-
-```html
-<div id="masked"></div>
-```
-
-{{EmbedLiveSample("Exemples", "100px", "100px",'', '', 'hide-codepen-jsfiddle') }}
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Masks", "#the-mask-image", "mask-image")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mask-image")}}
+{{Compat}}
+
+## Voir aussi
+
+- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
+- [Appliquer des effets à des images avec la propriété CSS `mask-image`](https://web.dev/css-masking/)
