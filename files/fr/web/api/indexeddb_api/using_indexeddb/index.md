@@ -1325,7 +1325,7 @@ Tutoriels :
 
 Bibliothèques :
 
-- [localForage ](http://mozilla.github.io/localForage/): Un Polyfill qui fournit un nom simple : la syntaxe de valeur pour le stockage de données côté client, qui utilise IndexedDB en arrière-plan, mais retourne à WebSQL puis à localStorage pour les navigateurs qui ne prennent pas en charge IndexedDB.
-- [dexie.js ](http://www.dexie.org/): Une enveloppe pour IndexedDB qui permet un développement de code beaucoup plus rapide grâce à une syntaxe simple et agréable.
-- [ZangoDB ](https://github.com/erikolson186/zangodb): Un MongoDB-like interface pour IndexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
+- [localForage](https://localforage.github.io/localForage/)&nbsp;: un polyfill qui fournit un nom simple — la syntaxe de valeur pour le stockage de données côté client, qui utilise IndexedDB en arrière-plan, mais retourne à WebSQL puis à localStorage pour les navigateurs qui ne prennent pas en charge IndexedDB.
+- [dexie.js](https://www.dexie.org/)&nbsp;: une enveloppe pour IndexedDB qui permet un développement de code beaucoup plus rapide grâce à une syntaxe simple et agréable.
+- [ZangoDB](https://github.com/erikolson186/zangodb)&nbsp;: une interface comme MongoDB pour IndexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
 - [JsStore](http://jsstore.net/) : Une enveloppe d'IndexedDB simple et avancée ayant une syntaxe SQL.

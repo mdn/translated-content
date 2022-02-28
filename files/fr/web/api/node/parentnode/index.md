@@ -31,7 +31,7 @@ if (node.parentNode) {
 
 ## Notes
 
-Les [noeuds ](/en-US/docs/DOM/Node.nodeType)`Document` et `DocumentFragment` ne peuvent jamais avoir de parent, alors  `parentNode`  retournera toujours `null`.
+Les [nœuds](/fr/docs/Web/API/Node/nodeType) `Document` et `DocumentFragment` ne peuvent jamais avoir de parent, alors `parentNode` retournera toujours `null`.
 
 Il renvoie également `null` si le nœud vient d'être créé et n'est pas encore attaché à l'arbre.
 

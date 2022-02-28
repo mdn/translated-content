@@ -45,7 +45,7 @@ Si vous utlisez `XMLHttpRequest` pour obtenir le contenu d'un fichier XML distan
 2.  Utiliser [JXON](/en-US/docs/JXON) pour le convertir en Objet structuré JavaScript.
 3.  Manuellement [parser et serializer le XML](/en-US/docs/Parsing_and_serializing_XML) en chaînes de caractères ou en objets.
 4.  Utiliser [XMLSerializer](/en-US/docs/XMLSerializer) pour serializer **le DOM en chaînes ou en fichiers.**
-5.  [RegExp ](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp)peut être utlisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne, si vous utlisez RegExp en prenant en compte ces sauts. Toutefois, cette méthode est un "dernier recours", car si le code XML change légèrement, la méthode échouera probablement.
+5.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utlisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utlisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ### Analyser et manipuler une propriété `responseText` contenant un document HTML
 
@@ -55,7 +55,7 @@ Si vous utilisez `XMLHttpRequest` pour récupérer le contenu d'une page HTML d
 
 1.  Utiliser la propriété `XMLHttpRequest.responseXML`.
 2.  Injecter le contenu dans le body d'un [fragment de document](/en-US/docs/Web/API/DocumentFragment) via `fragment.body.innerHTML` et traverser le DOM du fragment.
-3.  [RegExp ](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp)peut être utlisé si vous connaissez à l'avance le contenu du document HTML dans responseText. Vous pouvez supprimer les sauts de ligne, si vous utlisez RegExp en prenant en compte ces sauts. Toutefois, cette méthode est un "dernier recours", car si le code XML change légèrement, la méthode échouera probablement.
+3.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utlisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utlisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ## Gérer les données binaires
 
@@ -719,7 +719,7 @@ La manière recommandée d'activer les requêtes intersites est d'utiliser l'en-
 
 ### XMLHttpRequests stoppées
 
-Si vous vous retrouvez avec une XMLHttpRequest ayant `status=0` et `statusText=null`, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été [`UNSENT`](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). Une cause probable est lorsque [l'origine `XMLHttpRequest` ](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (lors de la création de l'objet XMLHttpRequest) a changé quand l'objet XMLHttpRequest est déjà open(). Ce cas peut se produire par exemple lorsque l'on a une XMLHttpRequest qui est lancée sur un évènement onunload d'une fenêtre: l'objet XMLHttpRequest est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est à dire open()) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement "activate" de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son événement "unload" lancé.
+Si vous vous retrouvez avec une `XMLHttpRequest` ayant `status=0` et `statusText=null`, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). Une cause probable est lorsque [l'origine `XMLHttpRequest`](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin) (lors de la création de l'objet `XMLHttpRequest`) a changé quand l'objet `XMLHttpRequest` est déjà `open()`. Ce cas peut se produire par exemple lorsque l'on a une `XMLHttpRequest` qui est lancée sur un évènement `onunload` d'une fenêtre&nbsp;: l'objet `XMLHttpRequest` est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est à dire `open()`) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement `activate` de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son évènement `unload` lancé.
 
 ## Utiliser XMLHttpRequest depuis un module JavaScript / un composant XPCOM
 

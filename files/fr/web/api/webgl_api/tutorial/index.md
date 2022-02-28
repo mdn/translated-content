@@ -30,9 +30,9 @@ L'utilisation de l'élément `<canvas>` n'est pas très difficile, mais vous a
   - : Montre comment tourner et déplacer des objets pour créer des animations simples.
 - [Créer des objets 3D avec WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Creer_des_objets_3D_avec_WebGL)
   - : Montre comment créer et animer un objet 3D (dans ce cas, un cube).
-- [Utilisation des textures dans WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL)
+- [Utilisation des textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
   - : Démontrer comment appliquer des textures sur les faces d'un objet.
-- [ Éclairage en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Eclairage_en_WebGL)
+- [Éclairage en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Eclairage_en_WebGL)
   - : Comment simuler des effets d'illumination dans votre contexte WebGL.
 - [Animation de textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL)
   - : Montre comment animer des textures ; dans ce cas, en appliquant une vidéo Ogg sur les faces d'un cube en rotation.

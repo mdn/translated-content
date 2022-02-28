@@ -49,7 +49,7 @@ first.onchange = function() {
 }
 ```
 
-Pour un exemple complet, consultez notre [Exemple basique d'un worker dédié ](https://github.com/mdn/simple-web-worker)([lancer le worker dédié](http://mdn.github.io/simple-web-worker/)).
+Pour un exemple complet, consultez notre [exemple basique d'un worker dédié](https://github.com/mdn/simple-web-worker) ([lancer le worker dédié](https://mdn.github.io/simple-web-worker/)).
 
 ## Spécifications
 

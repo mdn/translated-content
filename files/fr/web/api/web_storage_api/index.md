@@ -27,7 +27,7 @@ Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionS
 
 > **Note :** L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a [désactivé les cookies tierce-partie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (Firefox a adopté ce comportement à partir de la [version 43](/en-US/docs/Mozilla/Firefox/Releases/43) et suivantes.)
 
-> **Note :** Le Web Storage n'est pas identique au [mozStorage](/en-US/docs/Storage) (interfaces XPCOM de Mozilla vers SQLite) ou l'[API Session store ](/en-US/docs/Session_store_API)(un utilitaire de stockage [XPCOM](/en-US/docs/XPCOM) utilisable par des extensions).
+> **Note :** Le <i lang="en">Web Storage</i> n'est pas identique au `mozStorage` (interfaces XPCOM de Mozilla vers SQLite) ou l'API <i lang="en">Session Store</i> (un utilitaire de stockage XPCOM utilisable par des extensions).
 
 ## Web Storage interfaces
 
@@ -64,7 +64,7 @@ De nos jours, la plupart des navigateurs prennent en charge une option de confid
 
 La plupart des navigateurs ont opté pour une stratégie dans laquelle les API de stockage sont toujours disponibles et apparemment totalement fonctionnelles, à la différence près que toutes les données stockées sont effacées après la fermeture du navigateur. Pour ces navigateurs, il existe toujours différentes interprétations de ce qui devrait être fait avec les données stockées existantes (à partir d'une session de navigation normale). Devrait-il être disponible en lecture en mode privé? Certains navigateurs, notamment Safari, ont opté pour une solution dans laquelle le stockage est disponible, vide et doté d'un quota de 0 octets, ce qui rend impossible l'écriture de données.
 
-Les développeurs doivent connaître ces différentes implémentations et en tenir compte lors du développement de sites Web en fonction des API de stockage Web. Pour plus d'informations, consultez [cet article de blog du WHATWG ](https://blog.whatwg.org/tag/localstorage)qui traite spécifiquement de ce sujet
+Les développeurs doivent connaître ces différentes implémentations et en tenir compte lors du développement de sites web en fonction des API de stockage web. Pour plus d'informations, consultez [cet article de blog du WHATWG (en anglais)](https://blog.whatwg.org/this-week-in-html-5-episode-30) qui traite spécifiquement de ce sujet.
 
 ## Voir aussi
 

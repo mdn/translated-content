@@ -25,7 +25,7 @@ La plupart des événements natifs du navigateur qui peuvent être annulés sont
 
 ## Exemple
 
-Par exemple, les vendeurs de navigateurs proposent que l'[évènement wheel ](/fr/docs/Web/Events/wheel)puisse être annulable seulement  [la première fois que l'écouteur est appelé](https://github.com/WICG/interventions/issues/33) (en) ; les évènements  `wheel` suivants ne peuvent être annulés.
+Par exemple, les vendeurs de navigateurs proposent que l'évènement [`wheel`](/fr/docs/Web/API/Document/wheel_event) puisse être annulable seulement [la première fois que l'écouteur est appelé (ressource en anglais)](https://github.com/WICG/interventions/issues/33)&nbsp;; les évènements `wheel` suivants ne peuvent être annulés.
 
 ```js
 function preventScrollWheel(event) {

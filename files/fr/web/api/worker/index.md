@@ -19,7 +19,7 @@ Notez qu'un worker peut lui aussi lancer d'autre Worker tant que ces autres work
 
 De plus les workers peuvent utiliser [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) pour les communiquer avec le réseau, à l'exception des attributs `responseXML` et `channel` qui vont toujours retourner `null`.
 
-Toutes les[ interfaces et toutes les fonctions](/fr/DOM/Worker/Functions_available_to_workers) ne seront pas disponibles pour le script associé au worker.
+[Toutes les interfaces et toutes les fonctions](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) ne seront pas disponibles pour le script associé au `Worker`.
 
 > **Note :** Dans Firefox, si vous souhaitez utiliser les workers dans une extension et que vous souhaitez avoir accès au [js-ctypes](/en/js-ctypes), vous devez utiliser le {{ domxref("ChromeWorker") }} à la place.
 

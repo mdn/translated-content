@@ -44,7 +44,7 @@ _Hérite des méthodes de ses parents, {{domxref("AudioNode")}}_.
 
 ## Exemples
 
-L'exemple suivant montre une utilisation basique d'un {{ domxref("AudioContext") }} pour créer un `OscillatorNode`. Pour un exemple appliqué, jetez un oeil à notre [Violent Theremin demo](http://mdn.github.io/violent-theremin/) (voir[ app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) pour l'intégralité du code).
+L'exemple suivant montre une utilisation basique d'un [`AudioContext`](/fr/docs/Web/API/AudioContext) pour créer un `OscillatorNode`. Pour un exemple appliqué, jetez un œil à notre [démo «&nbsp;<i lang="en">Violent Theremin</i>&nbsp;»](https://mdn.github.io/violent-theremin/) (voir [`app.js`](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) pour l'intégralité du code).
 
 ```js
 // crée un contexteaudio
