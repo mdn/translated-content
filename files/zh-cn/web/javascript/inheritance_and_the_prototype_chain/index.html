@@ -288,7 +288,7 @@ var c = Object.create(b);
 // c ---&gt; b ---&gt; a ---&gt; Object.prototype ---&gt; null
 
 var d = Object.create(null);
-// d ---&gt; null
+// d ---&gt; {}
 console.log(d.hasOwnProperty); // undefined, 因为d没有继承Object.prototype</pre>
 
 <h3 id="使用_class_关键字创建的对象">使用 <code>class</code> 关键字创建的对象</h3>
