@@ -131,7 +131,7 @@ Supposons maintenant que l'utilisateur accède à http\://www\.microsoft.com, pu
 
 ### L'événement popstate
 
-Un événement `popstate` est envoyé à la fenêtre chaque fois que l'entrée active de l'historique change. Si l'entrée de l'historique activée a été créée par un appel à `replaceState`, la propriété `state `de l'événement `popstate` contient une copie de l'objet état  de l'entrée de l'historique.
+Un évènement `popstate` est envoyé à la fenêtre chaque fois que l'entrée active de l'historique change. Si l'entrée de l'historique activée a été créée par un appel à `replaceState`, la propriété `state` de l'évènement `popstate` contient une copie de l'objet état de l'entrée de l'historique.
 
 Voir {{ domxref("window.onpopstate") }} pour un exemple d'utilisation.
 

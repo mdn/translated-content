@@ -9,7 +9,7 @@ translation_of: Web/API/Element/matches
 ---
 {{ APIRef("DOM") }}
 
-`La méthode `**`element.matches()`** renvoie `true` lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramêtre; sinon, elle renvoie `false`.
+La méthode **`element.matches()`** renvoie `true` lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramêtre&nbsp;; sinon, elle renvoie `false`.
 
 > **Attention :** Certains navigateurs implémentent cette méthode sous le nom `matchesSelector()` non-standardisé et préfixé.
 
@@ -49,7 +49,7 @@ Ce code affichera l'alerte "Le - aigle des Philippines - est en voie de disparit
 
 ## Polyfill
 
-Pour les navigateurs qui ne supportent pas `Element.matches()` ou `Element.matchesSelector()`, mais fournissent le support de` document.querySelectorAll()`, il existe un _polyfill_ :
+Pour les navigateurs qui ne supportent pas `Element.matches()` ou `Element.matchesSelector()`, mais fournissent le support de `document.querySelectorAll()`, il existe un _polyfill_&nbsp;:
 
     if (!Element.prototype.matches) {
         Element.prototype.matches =

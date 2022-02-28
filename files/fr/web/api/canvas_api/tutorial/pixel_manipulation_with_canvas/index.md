@@ -37,7 +37,7 @@ var nbOctets = imageData.data.length;
 
 ## Création d'un objet `ImageData`
 
-Pour créer un nouvel objet `ImageData` vierge, vous pouvez utiliser la méthode  {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}. Il existe deux versions de la méthode `createImageData() `:
+Pour créer un nouvel objet `ImageData` vierge, vous pouvez utiliser la méthode [`createImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/createImageData). Il existe deux versions de la méthode `createImageData()`&nbsp;:
 
 ```js
 var monImageData = ctx.createImageData(largeur, hauteur);

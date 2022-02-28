@@ -25,7 +25,7 @@ La méthode **`forEach()`** de l'interface {{domxref("DOMTokenList")}} appelle l
     - _`listObj`_
       - : Le tableau que `forEach()` est en train d'appliquer.
 
-- _`argument`_` {{Optional_inline}}`
+- `argument` {{Optional_Inline}}
   - : Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du `callback` (_rappel_).
 
 ### Valeur renvoyée

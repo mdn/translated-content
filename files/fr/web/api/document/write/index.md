@@ -63,7 +63,7 @@ Si l'appel à `document.write()` est intégré directement dans le code HTML, il
 </script>
 ```
 
-> **Note :** `document.write` et `document.writeln ne fonctionnent pas dans les documents XHTML (vous obtiendrez une erreur ` "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] dans la console d'erreurs). Cela arrive lors de l'ouverture d'un fichier local avec l'extension de fichier  .xhtm ou pour tout document servi avec une  `application/xhtml+xml` de [type MIME](/fr/docs/Glossaire/Type_MIME). Plus d'informations disponibles dans la   [foire aux questions W3C XHTML (en)](http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+> **Note :** `document.write` et [`document.writeln`](/fr/docs/Web/API/Document/writeln) ne fonctionnent pas dans les documents XHTML (vous obtiendrez une erreur «&nbsp;Operation is not supported \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`]&nbsp;» dans la console d'erreurs). Cela arrive lors de l'ouverture d'un fichier local avec l'extension de fichier `.xhtm` ou pour tout document servi avec une `application/xhtml+xml` de [type MIME](/fr/docs/Glossary/MIME_type). Plus d'informations disponibles dans la [foire aux questions W3C XHTML (en anglais)](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
 > **Note :** `document.write` dans les scripts [deferred (_différé_)](/en-US/docs/Web/HTML/Element/script#attr-defer) ou [asynchronous (_asynchrone_)](/en-US/docs/Web/HTML/Element/script#attr-async) sera ignoré et vous recevrez un message comme  "A call to `document.write()` from an asynchronously-loaded external script was ignored" dans la console d'erreurs.
 

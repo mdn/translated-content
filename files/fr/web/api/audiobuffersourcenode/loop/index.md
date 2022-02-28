@@ -13,7 +13,7 @@ translation_of: Web/API/AudioBufferSourceNode/loop
 
 La propriété `loop` de l'interface {{domxref("AudioBufferSourceNode") }} est un booléen indiquant si la ressource audio doit être rejouée quand à la fin de l'{{domxref("AudioBuffer")}}.
 
-La valeur par défaut de la propriété `loop `est `false`.
+La valeur par défaut de la propriété `loop` est `false`.
 
 ## Syntaxe
 

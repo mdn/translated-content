@@ -10,7 +10,7 @@ translation_of: Web/API/WindowEventHandlers/onunload
 ---
 {{APIRef("HTML DOM")}}
 
-L'événement **`unload`** est déclenché lorsque le contenu et les ressources sont déchargés à la fermeture de la fenêtre. Le processus de suppression des ressources se fait _après_ que l'événement `unload `a eu lieu.
+L'évènement **`unload`** est déclenché lorsque le contenu et les ressources sont déchargés à la fermeture de la fenêtre. Le processus de suppression des ressources se fait _après_ que l'évènement `unload` a eu lieu.
 
 Les navigateurs équipés d'un bloqueur de pop-up vont ignorer tout appel de `window.open()` lancé depuis onunload.
 

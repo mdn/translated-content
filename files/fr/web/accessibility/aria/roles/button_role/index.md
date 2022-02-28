@@ -68,7 +68,7 @@ Une fois le bouton activé, la gestion du focus dépendra du type d'action effec
 
 #### Gestionnaires d'évènements nécessaires
 
-Les boutons peuvent être manipulés avec une souris, le toucher et le clavier. Pour les éléments HTML natifs `<button>`, l'évènement `onclick` du bouton est déclenché lors du clic de la souris ou lorsque l'utilisateur utilise la touche <kbd>Espace</kbd> ou <kbd>Entrée</kbd> lorsque le bouton a le focus. Si un autre élément est utilisé pour créer un bouton, l'évènement `onclick `ne se déclenche qu'au clic de la souris, y compris lorsqu'on utilise `role="button"`. C'est pour cette raison qu'on doit ajouter des gestionnaires d'évènements distincts à l'élément afin de réagir aux appuis sur les touches <kbd>Espace</kbd> ou <kbd>Entrée</kbd>.
+Les boutons peuvent être manipulés avec une souris, le toucher et le clavier. Pour les éléments HTML natifs `<button>`, l'évènement `onclick` du bouton est déclenché lors du clic de la souris ou lorsque l'utilisateur utilise la touche <kbd>Espace</kbd> ou <kbd>Entrée</kbd> lorsque le bouton a le focus. Si un autre élément est utilisé pour créer un bouton, l'évènement `onclick` ne se déclenche qu'au clic de la souris, y compris lorsqu'on utilise `role="button"`. C'est pour cette raison qu'on doit ajouter des gestionnaires d'évènements distincts à l'élément afin de réagir aux appuis sur les touches <kbd>Espace</kbd> ou <kbd>Entrée</kbd>.
 
 - `onclick`
   - : Gère l'évènement déclenché lorsque le bouton est activé avec un clic de souris ou au toucher.

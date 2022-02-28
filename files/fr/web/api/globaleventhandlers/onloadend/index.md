@@ -19,7 +19,7 @@ La propriété **`onloadend`** du "mixin" {{domxref("GlobalEventHandlers")}} est
 
 ### Valeur
 
-`funcRef` est la fonction du gestionnaire à appeler quand l'évènement `loadend `de la ressource est déclenché.
+`funcRef` est la fonction du gestionnaire à appeler quand l'évènement `loadend` de la ressource est déclenché.
 
 ## Exemples
 

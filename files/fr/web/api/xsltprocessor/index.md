@@ -22,11 +22,11 @@ Le constructeur n'a pas de paramètre.
 
 ## Méthodes
 
-- `[Throws] void `{{domxref("XSLTProcessor.importStylesheet")}}`(`{{domxref("Node")}}` styleSheet)`
+- `[Throws] void` [`XSLTProcessor.importStylesheet`](/fr/docs/Web/API/XSLTProcessor/importStylesheet)`(`[`Node`](/fr/docs/Web/API/Node) `styleSheet)`
   - : Importe une feuille de style XSLT. Si le nœud passé en argument est un nœud de document, vous pouvez passer une transformation XSL complète ou un [transformation d'élèment résultant](http://www.w3.org/TR/xslt#result-element-stylesheet); sinon, il doit s'agir d'un élèment `<xsl:stylesheet>` ou `<xsl:transform>`.
-- `[Throws] `{{domxref("DocumentFragment")}} {{domxref("XSLTProcessor.transformToFragment")}}`(`{{domxref("Node")}}` source, `{{domxref("Document")}}` owner)`
+- `[Throws]` [`DocumentFragment`](/fr/docs/Web/API/DocumentFragment) [`XSLTProcessor.transformToFragment`](/fr/docs/Web/API/XSLTProcessor/transformToFragment)`(`[`Node`](/fr/docs/Web/API/Node) `source`, [`Document`](/fr/docs/Web/API/Document) `owner)`
   - : Transforme la source du nœud en applicant la fonction {{domxref("XSLTProcessor.importStylesheet()")}}. Le document propriétaire du fragment de document résultant est le nœud propriétaire.
-- [`[Throws]`](/en-US/docs/Mozilla/WebIDL_bindings#Throws) {{domxref("Document")}} {{domxref("XSLTProcessor.transformToDocument")}}`(`{{domxref("Node")}}` source)`
+- [`[Throws]`](/en-US/docs/Mozilla/WebIDL_bindings#Throws) [`Document`](/fr/docs/Web/API/Document) [`XSLTProcessor.transformToDocument`](/fr/docs/Web/API/XSLTProcessor/transformToDocument)`(`[`Node`](/fr/docs/Web/API/Node) `source)`
 
   - : Transforme la source du nœud en appliquant la feuille de style donnée lors de l'importation à l'aide de la fonction {{domxref ("XSLTProcessor.importStylesheet ()")}}.
 
@@ -38,15 +38,15 @@ Le constructeur n'a pas de paramètre.
     | `xml`             | {{domxref("XMLDocument")}}                                                                                |
     | `text`            | {{domxref("XMLDocument")}} avec un seul élèment racine `<transformiix:result>` avec le texte comme enfant |
 
-- `[Throws] void `{{domxref("XSLTProcessor.setParameter")}}`(`{{jsxref("String")}}` namespaceURI, `{{jsxref("String")}}` localName, any value)`
+- `[Throws] void` [`XSLTProcessor.setParameter`](/fr/docs/Web/API/XSLTProcessor/setParameter)`(`[`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) `namespaceURI`, [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) `localName, any value)`
   - : Définit un paramètre dans la feuille de style XSLT qui a été importée. (Définit la valeur d'un `<xsl:param>`.) Une valeur nulle pour `namespaceURI` sera traitée comme une chaîne vide.
-- `[Throws] any `{{domxref("XSLTProcessor.getParameter")}}`(`{{jsxref("String")}}` namespaceURI, `{{jsxref("String")}}` localName)`
+- `[Throws] any` [`XSLTProcessor.getParameter`](/fr/docs/Web/API/XSLTProcessor/getParameter)`(`[`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) `namespaceURI`, [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) `localName)`
   - : Récupére un paramètre de la feuille de style XSLT. Une valeur nulle pour `namespaceURI` sera traitée comme une chaîne vide.
-- `[Throws] void `{{domxref("XSLTProcessor.removeParameter")}}`(`{{jsxref("String")}}` namespaceURI, `{{jsxref("String")}}` localName)`
+- `[Throws] void` [`XSLTProcessor.removeParameter`](/fr/docs/Web/API/XSLTProcessor/removeParameter)`(`[`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) `namespaceURI`, [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) `localName)`
   - : Supprime le paramètre s'il a déjà été défni. Le `XSLTProcessor` utilisera alors la valeur par défaut du paramètre. Si une valeur nulle est donnée pour `namespaceURI`, elle sera traitée comme une chaîne vide.
-- `void `{{domxref("XSLTProcessor.clearParameters()")}}
+- `void` [`XSLTProcessor.clearParameters()`](/fr/docs/Web/API/XSLTProcessor/clearParameters)
   - : Supprime tous les paramètres définis dans le `XSLTProcessor`. Le `XSLTProcessor` utilisera alors les valeurs par défaut spécifiées dans la feuille de style XSLT.
-- `void `{{domxref("XSLTProcessor.reset()")}}
+- `void` [`XSLTProcessor.reset()`](/fr/docs/Web/API/XSLTProcessor/reset)
   - : Supprime tous les paramétres et feuilles de style du `XSLTProcessor`.
 
 ## Propriétés
@@ -55,7 +55,7 @@ Le constructeur n'a pas de paramètre.
 
 Les propriétés suivantes sont [`[ChromeOnly]`](/en-US/docs/Mozilla/WebIDL_bindings#ChromeOnly) et ne sont pas apparentes au contenu Web :
 
-- `[ChromeOnly] attribute unsigned long `{{domxref("XSLTProcessor.flags")}}
+- `[ChromeOnly] attribute unsigned long` [`XSLTProcessor.flags`](/fr/docs/Web/API/XSLTProcessor/flags)
 
   - : Drapeaux qui modifient le comportement du processeur. Pas de réinitialisation en appelant {{domxref("XSLTProcessor.reset()")}}. Valeur par défaut: `0`
 

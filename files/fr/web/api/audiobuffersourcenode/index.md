@@ -19,7 +19,7 @@ Un AudioBufferSourceNode n'a pas d'entrée et il comporte une unique sortie, don
 
 Un {{domxref("AudioBufferSourceNode")}} ne peut être joué qu'une seule fois; autrement dit un seul appel à la fonction `AudioBufferSourceNode.start()` est autorisé. Pour rejouer le son, il faut créer un nouvel `AudioBufferSourceNode`. Heureusement ces noeuds ne demandent pas beaucoup de ressource, et les véritables `AudioBuffer`s peuvent être réutilisés. On dit que les `AudioBufferSourceNode`s doivent être utilisés en mode "one shot": une fois que la lecture est lancée, toutes les références peuvent être supprimées, et elles seront collectées par le ramasse-miette automatiquement quand la lecture des sons sera terminée.
 
-Plusieurs appels à la fonction `AudioBufferSourceNode.stop()` sont autorisés. Le dernier appel remplace le précédent, à condition que le `AudioBufferSourceNode `n'ait pas déjà atteint la fin du buffer.
+Plusieurs appels à la fonction `AudioBufferSourceNode.stop()` sont autorisés. Le dernier appel remplace le précédent, à condition que le `AudioBufferSourceNode` n'ait pas déjà atteint la fin du buffer.
 
 ![L'objet AudioBufferSourceNode prend le contenu d'un AudioBuffer et le convertit en audio](webaudioaudiobuffersourcenode.png)
 

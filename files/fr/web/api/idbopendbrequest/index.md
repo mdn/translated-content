@@ -26,7 +26,7 @@ _Hérite  des méthodes de ses parents {{domxref("IDBRequest")}} et {{domxref(
 ### Évènements
 
 - {{domxref("IDBOpenDBRequest.onblocked")}}
-  - : Le gestionnaire d'événements pour événement bloqué . Cet événement est lancé lorsqu' un événement  `upgradeneeded `doit être déclenché en raison d'un changement de version, mais que la base de données est toujours en cours d'utilisation (c'est-à-dire, non fermée) quelque part, même après l'envoi de l'évènement `versionchange` .
+  - : Le gestionnaire d'évènements pour l'évènement bloqué. Cet évènement est lancé lorsqu'un évènement `upgradeneeded` doit être déclenché en raison d'un changement de version, mais que la base de données est toujours en cours d'utilisation (c'est-à-dire, non fermée) quelque part, même après l'envoi de l'évènement `versionchange`.
 - {{domxref("IDBOpenDBRequest.onupgradeneeded")}}
   - : Le gestionnaire d'évènement pour évènement `upgradeneeded` _(mise-à-jour nécessaire)_, lancé quand une base de données d'une version supérieure à celle de la base de données existante est chargé.
 

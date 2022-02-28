@@ -39,7 +39,7 @@ Il existe plusieurs types [d'attributs de réponse](http://www.w3.org/TR/XMLHtt
 
 ### Analyser et manipuler la propriété `responseXML`
 
-Si vous utlisez `XMLHttpRequest `pour obtenir le contenu d'un fichier XML distant, la propriété `responseXML `sera un Objet DOM contenant le document XML parsé, qui peut être difficile à manipuler et analyser. Il y a quatres moyens principaux d'analyser ce document XML :
+Si vous utlisez `XMLHttpRequest` pour obtenir le contenu d'un fichier XML distant, la propriété `responseXML` sera un objet DOM contenant le document XML parsé, qui peut être difficile à manipuler et analyser. Il y a quatres moyens principaux d'analyser ce document XML&nbsp;:
 
 1.  Utiliser [XPath](/en-US/docs/XPath) pour localiser des parties.
 2.  Utiliser [JXON](/en-US/docs/JXON) pour le convertir en Objet structuré JavaScript.
@@ -508,7 +508,7 @@ La syntaxe de ce script est la suivante:
 
 > **Note :** La meilleure façon d'envoyer du contenu binaire est de passer par [ArrayBuffers](/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer) ou [Blobs](/en-US/docs/DOM/Blob) en conjonction avec la méthode [`send()`](/en-US/docs/DOM/XMLHttpRequest#send%28%29) et possiblement avec la méthode [`readAsArrayBuffer()`](</en-US/docs/DOM/FileReader#readAsArrayBuffer()>) de l'API [`FileReader`](/en-US/docs/DOM/FileReader). Mais dans la mesure où le but de ce script est de fonctionner avec des données [chaînifiable](/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify), nous avons utilisé la méthode [`sendAsBinary()`](/en-US/docs/DOM/XMLHttpRequest#sendAsBinary%28%29) en conjonction avec la méthode [`readAsBinaryString()`](/en-US/docs/DOM/FileReader#readAsBinaryString%28%29) de l'API [`FileReader`](/en-US/docs/DOM/FileReader). Du coup, le script ci-dessous n'a de sens que quand vous voulez transférer de petits fichiers. Si vous n'avez pas l'intention de transférer des données binaires, songez plutôt à utilisez l'API [`FormData`](/en-US/docs/DOM/XMLHttpRequest/FormData).
 
-> **Note :** La méthode non-strandard `sendAsBinary `est dépréciée à partir de Gecko 31 {{ geckoRelease(31) }} et sera prochainement supprimée. La méthode standard `send(Blob data)` peut être utilisée à la place.
+> **Note :** La méthode non-strandard `sendAsBinary` est dépréciée à partir de Gecko 31 et sera prochainement supprimée. La méthode standard `send(Blob data)` peut être utilisée à la place.
 
 ### Utiliser les objets FormData
 
@@ -715,7 +715,7 @@ oReq.send(null);
 
 {{fx_minversion_note(5, "Les versions de Firefox avant Firefox 5 pouvaient utiliser <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> pour demander un accès cross-site. Ce n'est plus supporté, me^me si cela ne produit aucun avertissement et que la demande de permission est toujours présente.")}}
 
-La manière recommandée d'activer les requêtes cross-sites est d'utiliser le header HTTP `Access-Control-Allow-Origin `dans la réponse du XMLHttpRequest.
+La manière recommandée d'activer les requêtes intersites est d'utiliser l'en-tête HTTP `Access-Control-Allow-Origin` dans la réponse du `XMLHttpRequest`.
 
 ### XMLHttpRequests stoppées
 
