@@ -131,7 +131,7 @@ Añadimos más tareas aquí a medida que pase el tiempo.
 
 También puede ver las clasificaciones de prioridad para tener una idea de cuál es el trabajo más importante en el que trabajar: comenzamos a asignar etiquetas de problemas de errores de contenido de P0, P1, P2, P3 y P4 para indicar cuán importantes son. siendo los números más bajos más importantes que los números más altos.
 
-Estos se resuelven durante el proceso regular de clasificación de errores de MDN, [según la lista de prioridades de la documentación de MDN](/es/docs/MDN/Contribute/Documentation_priorities).
+Estos se resuelven durante el proceso regular de clasificación de errores de MDN, [según la lista de prioridades de la documentación de MDN](/en-US/docs/MDN/Contribute/Documentation_priorities).
 
 ### Otros tipos de tareas
 
@@ -139,7 +139,7 @@ Si nuestras principales prioridades enumeradas anteriormente no te interesan, pu
 
 Si estás más interesado en las palabras, puedes hacer lo siguiente:
 
-- [Actualizar un artículo existente con nueva información](/es/docs/MDN/Contribute/Howto/Create_and_edit_pages#editing_an_existing_page) (5 minutos-1 hora)
+- [Actualizar un artículo existente con nueva información](/en-US/docs/MDN/Contribute/Howto/Create_and_edit_pages#editing_an_existing_page) (5 minutos-1 hora)
 - [Escribe una nueva entrada en el Glosario](/es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary) (15 minutos-1 hora)
 
 Si estás más interesado en el código, puedes probar lo siguiente:
@@ -150,7 +150,7 @@ Si estás más interesado en el código, puedes probar lo siguiente:
 
 Si estás interesado en las palabras *y* el código, puede intentar lo siguiente:
 
-- [Escribir o actualizar una referencia de API](/es/docs/MDN/Contribute/Howto/Write_an_API_reference) (30 minutos a 2 horas, o más)
+- [Escribir o actualizar una referencia de API](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference) (30 minutos a 2 horas, o más)
 - [Escribe un nuevo artículo sobre un tema con el que estés familiarizado.](https://github.com/mdn/content#adding-a-new-document) (1 hora o más)
 - [Añade o actualiza los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Structures/Compatibility_tables) (30 minutos a 1 hora)
 
