@@ -152,9 +152,9 @@ Si estás interesado en las palabras *y* el código, puede intentar lo siguiente
 
 - [Escribir o actualizar una referencia de API](/es/docs/MDN/Contribute/Howto/Write_an_API_reference) (30 minutos to 2 horas, o más)
 - [Escribe un nuevo artículo sobre un tema con el que estés familiarizado.](https://github.com/mdn/content#adding-a-new-document) (1 hora o más)
-- [Añada o actualice los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Structures/Compatibility_tables) (30 minutos a 1 hora)
+- [Añade o actualiza los datos de compatibilidad del navegador en una página de referencia](/es/docs/MDN/Structures/Compatibility_tables) (30 minutos a 1 hora)
 
-> **Nota:** Si encontraste algo que es incorrecto en MDN pero no estás seguro de cómo solucionarlo, puede reportarlo llenando un [informe de error de documentación](https://github.com/mdn/content/issues/new/choose). Por favor, asigne al problema un título descriptivo. (No es útil decir "Enlace muerto" sin decir dónde encontraste el enlace).
+> **Nota:** Si encontraste algo que es incorrecto en MDN pero no estás seguro de cómo solucionarlo, puedes reportarlo a través de un [informe de error de documentación](https://github.com/mdn/content/issues/new/choose). Por favor, asigna Un título descriptivo al problema. (No es útil decir "Enlace muerto" sin decir dónde encontraste el enlace).
 
 ## Otras páginas útiles
 
