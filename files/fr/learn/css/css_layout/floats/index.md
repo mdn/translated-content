@@ -6,7 +6,7 @@ original_slug: Apprendre/CSS/CSS_layout/Floats
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 
-À l'origine conçue pour faire flotter des images à l'intérieur d'un bloc de texte, la propriété [`float`](/fr/docs/Web/CSS/float) est devenue un des outils les plus communément utilisés pour créer des dispositions sur plusieurs colonnes dans des pages web. Avec la venue de Flexbox et des grilles CSS, il est maintenant revenu à sa destination initiale, comme l'explique l'article.
+À l'origine conçue pour faire flotter des images à l'intérieur d'un bloc de texte, la propriété [`float`](/fr/docs/Web/CSS/float) est devenue un des outils les plus communément utilisés pour créer des dispositions sur plusieurs colonnes dans des pages web. Avec la venue de Flexbox et des grilles CSS, cette propriété est maintenant revenue à sa destination initiale, comme l'explique l'article.
 
 <table class="standard-table">
   <tbody>
@@ -22,7 +22,7 @@ original_slug: Apprendre/CSS/CSS_layout/Floats
     <tr>
       <th scope="row">Objectif&nbsp;:</th>
       <td>
-        Apprendre comment créer des éntités flottantes dans les pages web, ainsi
+        Apprendre comment créer des entités flottantes dans les pages web, ainsi
         qu'utiliser la propriété <code>clear</code> et autres méthodes de
         dégagement des boîtes flottantes.
       </td>
@@ -34,7 +34,7 @@ original_slug: Apprendre/CSS/CSS_layout/Floats
 
 La propriété [`float`](/fr/docs/Web/CSS/float) a été introduite pour permettre aux développeurs web d'implémenter des dispositions simples comme une image flottant dans une colonne de texte, le texte se développant autour de cette image sur la gauche ou sur la droite. Le genre de choses que vous pourriez avoir dans une mise en page de journal.
 
-Mais les développeurs web se sont vite rendu compte que tout élément pouvait flotter, pas seulement les images — c'est ainsi que l'utilisation de `float` s'est élargie pour créer des mises en page amusantes telles qu'une [lettrine](https://css-tricks.com/snippets/css/drop-caps/).
+Mais les développeuses et développeurs web se sont vite rendu compte que tout élément pouvait flotter, pas seulement les images — c'est ainsi que l'utilisation de `float` s'est élargie pour créer des mises en page amusantes telles qu'une [lettrine](https://css-tricks.com/snippets/css/drop-caps/).
 
 Les boîtes flottantes ont été couramment utilisées pour créer des mises en page complètes de sites web avec plusieurs colonnes d'informations flottant les unes à côté des autres (le comportement par défaut est une superposition des contenus, dans le même ordre que dans le code source). De nouvelles techniques de mises en page bien meilleures sont disponibles, nous les avons déjà vues dans ce module, et l'utilisation des boîtes flottantes à cette fin doit être considérée comme une [technique du passé](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
@@ -51,11 +51,33 @@ Tout d'abord, commençons avec un HTML simple — ajoutez le code ci-dessous dan
 
 <div class="box">Boîte flottante</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci.
+  Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet.
+</p>
 
-<p>Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur 
+  vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet
+  turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+  ornare egestas augue ut luctus. Proin blandit quam nec lacus
+  varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+  malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus
+  ut, facilisis sed est. Nam id risus quis ante semper consectetur
+  eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus
+  suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus
+  eu urna eget velit cursus viverra quis vestibulum sem. Aliquam
+  tincidunt eget purus in interdum. Cum sociis natoque penatibus et
+  magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 Maintenant, appliquez la CSS suivante au HTML ci-dessus (avec un élément [`<style>`](/fr/docs/Web/HTML/Element/style) ou un élément [`<link>`](/fr/docs/Web/HTML/Element/link) pointant sur un fichier `.css` séparé — comme vous voulez)&nbsp;:
@@ -111,7 +133,7 @@ Enregistrez et actualisez à nouveau et vous verrez quelque chose comme ce qui s
 
 {{EmbedLiveSample('', '100%', 500)}}
 
-Voyons comment fonctionne la boîte flottante — l'élément possèdant la propriété `float` (l'élément [`<div>`](/fr/docs/Web/HTML/Element/div) dans notre cas) est retiré du cours normal de la mise en page du document et collé du côté gauche (`left`) de son conteneur parent ([`<body>`](/fr/docs/Web/HTML/Element/body), dans ce cas). Tout contenu disposé après l'élément flottant dans le cours normal de la mise en page (c'est-à-dire disposé à la suite dans le code source) va maintenant l'envelopper en remplissant l'espace sur sa droite sur toute sa hauteur. Là, ça s'arrête.
+Voyons comment fonctionne la boîte flottante — l'élément possédant la propriété `float` (l'élément [`<div>`](/fr/docs/Web/HTML/Element/div) dans notre cas) est retiré du cours normal de la mise en page du document et collé du côté gauche (`left`) de son conteneur parent ([`<body>`](/fr/docs/Web/HTML/Element/body), dans ce cas). Tout contenu disposé après l'élément flottant dans le cours normal de la mise en page (c'est-à-dire disposé à la suite dans le code source) va maintenant l'envelopper en remplissant l'espace sur sa droite sur toute sa hauteur. Là, ça s'arrête.
 
 Faire flotter le contenu sur la droite a exactement le même effet, mais inversé — l'élément flottant se plaque sur la droite du conteneur et le contenu l'enveloppera en se plaçant à gauche. Donnez la valeur `right` à la propriété `float` et remplacez [`margin-right`](/fr/docs/Web/CSS/margin-right) par [`margin-left`](/fr/docs/Web/CSS/margin-left) dans le dernier jeu de règles, et observez le résultat.
 
@@ -491,7 +513,7 @@ Vous savez maintenant tout ce qu'il y a à savoir à propos des boîtes flottant
 - [Cours normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
 - [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
 - [Grilles](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Les boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats)
+- Les boîtes flottantes
 - [Le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
 - [Disposition sur plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
 - [Méthodes de mises en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
