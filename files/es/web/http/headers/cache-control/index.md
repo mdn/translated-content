@@ -164,7 +164,7 @@ Cache-Control: private
 
 Deberías añadir la directiva `private` para el contenido personalizado de usuario — en particular, respuestas recibidas después del login, y sesiones administradas via cookies.
 
-Si olvidas añadire `private` a una respuesta con contenido personalizado, entonces esa respuesta puede ser almacenada en una caché compartida y terminar siendo reutilizada por multiples usuarios, lo cual puede causar una fuga de información personal.
+Si olvidas añadir `private` a una respuesta con contenido personalizado, entonces esa respuesta puede ser almacenada en una caché compartida y terminar siendo reutilizada por multiples usuarios, lo cual puede causar una fuga de información personal.
 
 #### `public`
 
