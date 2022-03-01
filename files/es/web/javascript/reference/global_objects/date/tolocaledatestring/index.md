@@ -142,11 +142,11 @@ console.log(date.toLocaleDateString('en-US', options));
 
 {{Specifications}}
 
-## Compatibilidad con los navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
 - {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}
 - {{jsxref("Date.prototype.toLocaleString()")}}
