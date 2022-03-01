@@ -7,160 +7,205 @@ tags:
   - DOM Parsing
   - Element
   - Parsing HTML
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
   - innerHTML
   - プロパティ
 browser-compat: api.Element.innerHTML
 translation_of: Web/API/Element/innerHTML
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary">{{domxref("Element")}} オブジェクトの <strong><code>innerHTML</code></strong> プロパティは、要素内の HTML または XML のマークアップを取得したり設定したりします。</span></p>
+{{domxref("Element")}} オブジェクトの **`innerHTML`** プロパティは、要素内の HTML または XML のマークアップを取得したり設定したりします。
 
-<div class="note"><strong>メモ:</strong> {{HTMLElement("div")}}, {{HTMLElement("span")}}, {{HTMLElement("noembed")}} ノードが <code>(&amp;)</code>, <code>(&lt;)</code>, <code>(&gt;)</code> の文字を含むテキストの子ノードを持っている場合、 <code>innerHTML</code> はこれらの文字を HTML エンティティの <code>"&amp;amp;"</code>, <code>"&amp;lt;"</code>, <code>"&amp;gt;"</code> としてそれぞれ返します。これらのテキストノードの内容の生のコピーを取得するには {{domxref("Node.textContent")}} を使用してください。</div>
+要素の内容を置き換えるというより、文書に HTML を挿入するという場合には、 {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} メソッドを使用してください。
 
-<p>要素の内容を置き換えるというより、文書に HTML を挿入するという場合には、 {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} メソッドを使用してください。</p>
+## 構文
 
-<h2 id="Syntax">構文</h2>
+```js
+const content = element.innerHTML;
 
-<pre class="brush: js">const <var>content</var> = <var>element</var>.innerHTML;
+element.innerHTML = content;
+```
 
-<var>element</var>.innerHTML = <var>htmlString</var>;
-</pre>
+### 値
 
-<h3 id="Value">値</h3>
+要素の子孫を HTML にシリアライズしたものを含んだ {{domxref("DOMString")}} です。 `innerHTML` に値を設定すると、要素のすべての子孫を削除して、 _htmlString_ の文字列で与えられた HTML を解釈して構築されたノードに置き換えます。
 
-<p>要素の子孫を HTML シリアライズしたものを含んだ {{domxref("DOMString")}} です。 <code>innerHTML</code> に値を設定すると、要素のすべての子孫を削除して、 <var>htmlString</var> の文字列で与えられた HTML を解析して構築されたノードに置き換えます。</p>
+### 例外
 
-<h3 id="Exceptions">例外</h3>
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 正しくない形の HTML の文字列を使用して `innerHTML` の値を設定しようとした場合に発生します。
+- `NoModificationAllowedError` {{domxref("DOMException")}}
+  - : 親が {{domxref("Document")}} であるノードに HTML を挿入しようとした場合に発生します。
 
-<dl>
-  <dt><code>SyntaxError</code></dt>
-  <dd>正しくない形の HTML の文字列を使用して <code>innerHTML</code> の値を設定しようとした場合。</dd>
-  <dt><code>NoModificationAllowedError</code></dt>
-  <dd>親が {{domxref("Document")}} であるノードに HTML を挿入しようとした場合。</dd>
-</dl>
+## 使用上のメモ
 
-<h2 id="Usage_notes">使用上のメモ</h2>
+`innerHTML` プロパティは、ページの現在の HTML ソースを、ページが最初に読み込まれてから行われたあらゆる変更を含めて、見るために利用することができます。
 
-<p><code>innerHTML</code> プロパティは、ページの現在の HTML ソースを、ページが最初に読み込まれてから行われたあらゆる変更を含めて、見るために利用することができます。</p>
+### 要素の HTML コンテンツの読み取り
 
-<h3 id="Reading_the_HTML_contents_of_an_element">要素の HTML コンテンツの読み取り</h3>
+`innerHTML` を読み取ると、ユーザーエージェントが要素の子孫で構成される HTML または XML の断片をシリアライズします。結果として文字列が返ります。
 
-<p><code>innerHTML</code> を読み取ると、ユーザーエージェントが要素の子孫で構成される HTML または XML の断片をシリアライズします。結果として文字列が返ります。</p>
+```js
+let contents = myElement.innerHTML;
+```
 
-<pre class="brush: js">let contents = myElement.innerHTML;</pre>
+これで、 HTML のコンテンツのノードの HTML マークアップを見ることができます。
 
-<p>これで、 HTML のコンテンツのノードの HTML マークアップを見ることができます。</p>
+> **Note:** 返される HTML または XML の断片は、現在の要素の中身に基づいて生成されますので、返される断片のマークアップや整形方法は、元のページのマークアップと同じであるとは限りません。
 
-<div class="note">
-  <p><strong>メモ:</strong> 返される HTML または XML の断片は、現在の要素の中身に基づいて生成されますので、返される断片のマークアップや整形方法は、元のページのマークアップと同じであるとは限りません。</p>
-</div>
+### 要素の中身の置き換え
 
-<h3 id="Replacing_the_contents_of_an_element">要素の中身の置き換え</h3>
+`innerHTML` の値を設定することで、既存の要素の内容を新しい内容に置き換えることが簡単にできます。
 
-<p><code>innerHTML</code> の値を設定することで、既存の要素の内容を新しい内容に置き換えることが簡単にできます。</p>
+> **Note:** 挿入される文字列に悪意のある内容が含まれる可能性がある場合、[セキュリティ上のリスク](#セキュリティの考慮事項)になります。
+> ユーザーが提供したデータを挿入する場合は、 {{domxref("Element.SetHTML()")}} を使用するよう常に検討してください。こちらは挿入する前に無害化を行います。
 
-<p>例えば、文書の {{domxref("Document.body", "body")}} 属性の内容を消去することで、文書の内容全体を消去することができます。</p>
+例えば、文書の {{domxref("Document.body", "body")}} 属性の内容を消去することで、文書の内容全体を消去することができます。
 
-<pre class="brush: js">document.body.innerHTML = "";</pre>
+```js
+document.body.innerHTML = "";
+```
 
-<p>この例は文書の現在の HTML マークアップを走査し、 <code>"&lt;"</code> の文字を HTML エンティティの <code>"&amp;lt;"</code> に置き換え、それによって本質的に HTML を生テキストに変換します。そしてこれを {{HTMLElement("pre")}} で囲みます。そして、 <code>innerHTML</code> の値をこの新しい文字列に変更します。結果として、文書の内容がページ全体のソースコードの表示に置き換わります。</p>
+この例は文書の現在の HTML マークアップを走査し、 `"<"` の文字を HTML エンティティの `"&lt;"` に置き換え、それによって本質的に HTML を生テキストに変換します。そしてこれを {{HTMLElement("pre")}} で囲みます。そして、 `innerHTML` の値をこの新しい文字列に変更します。結果として、文書の内容がページ全体のソースコードの表示に置き換わります。
 
-<pre class="brush: js">document.documentElement.innerHTML = "&lt;pre&gt;" +
-         document.documentElement.innerHTML.replace(/&lt;/g,"&amp;lt;") +
-            "&lt;/pre&gt;";</pre>
+```js
+document.documentElement.innerHTML = "<pre>" +
+         document.documentElement.innerHTML.replace(/</g,"&lt;") +
+            "</pre>";
+```
 
-<h4 id="Operational_details">操作の詳細</h4>
+#### 操作の詳細
 
-<p><code>innerHTML</code> に値を設定すると、正確には何が起きるのでしょうか？これを行うと、ユーザーエージェントは以下のステップを追います。</p>
+`innerHTML` に値を設定すると、正確には何が起きるのでしょうか？これを行うと、ユーザーエージェントは以下のステップを追います。
 
-<ol>
- <li>指定された値は (文書型に基づいて) HTML または XML として解釈され、新しい一連の要素の DOM ノードを表す {{domxref("DocumentFragment")}} オブジェクトの中に結果が入れられます。</li>
- <li>中身を置き換えようとしている要素が {{HTMLElement("template")}} 要素である場合は、 <code>&lt;template&gt;</code> 要素の {{domxref("HTMLTemplateElement.content", "content")}} 属性を、ステップ1で生成された新しい <code>DocumentFragment</code> で置き換えます。</li>
- <li>その他の要素はすべて、要素の内容を新しい <code>DocumentFragment</code> のノードで置き換えます。</li>
-</ol>
+1. 指定された値は (文書型に基づいて) HTML または XML として解釈され、新しい一連の要素の DOM ノードを表す {{domxref("DocumentFragment")}} オブジェクトの中に結果が入れられます。
+2. 中身を置き換えようとしている要素が {{HTMLElement("template")}} 要素である場合は、 `<template>` 要素の {{domxref("HTMLTemplateElement.content", "content")}} 属性を、ステップ 1 で生成された新しい `DocumentFragment` で置き換えます。
+3. その他の要素はすべて、要素の内容を新しい `DocumentFragment` のノードで置き換えます。
 
-<h3 id="Security_considerations">セキュリティの考慮事項</h3>
+### HTML を要素に適用
 
-<p>ウェブページにテキストを挿入するために <code>innerHTML</code> を使用している例は珍しくありませんありません。これがサイト上の攻撃ベクトルになる可能性があり、潜在的なセキュリティリスクが生じます。</p>
+`innerHTML` に値を設定すると、既存の要素の一つに新しい内容物を追加します。
 
-<pre class="brush: js">const name = "John";
+例えば、新しいリスト項目 (`<li>`) を既存のリスト (`<ul>`) に追加することができます。
+
+#### HTML
+
+```html
+<ul id="list">
+  <li><a href="#">Item 1</a></li>
+  <li><a href="#">Item 2</a></li>
+  <li><a href="#">Item 3</a></li>
+</ul>
+```
+
+#### JavaScript
+
+```js
+const list = document.getElementById("list");
+
+list.innerHTML += `<li><a href="#">Item ${list.children.length + 1}</a></li>`;
+```
+
+なお、 `innerHTML` を使用して HTML 要素を追加すると（例えば `el.innerHTML += "<a href='...'>link</a>"`）、以前設定したイベントリスナーを取り除くことになります。
+つまり、この方法で HTML 要素を追加すると、以前設定したイベントリスナーで待ち受けすることができなくなります。
+
+### セキュリティの考慮事項
+
+ウェブページにテキストを挿入するために `innerHTML` を使用している例は珍しくありません。これがサイト上の攻撃ベクトルになる可能性があり、潜在的なセキュリティリスクが生じます。
+
+```js
+const name = "John";
 // 'el' を HTML の DOM 要素と想定します
 el.innerHTML = name; // この場合は無害
 
 // ...
 
-name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
-el.innerHTML = name; // この場合は無害</pre>
+name = "<script>alert('I am John in an annoying alert!')</script>";
+el.innerHTML = name; // この場合は無害
+```
 
-<p>これは{{interwiki("wikipedia", "クロスサイトスクリプティング")}}攻撃のように見えますが、結果的には無害です。 HTML5 では <code>innerHTML</code> で挿入された {{HTMLElement("script")}} タグは<a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">実行するべきではない</a>と定義しているからです。</p>
+これは{{interwiki("wikipedia", "クロスサイトスクリプティング")}}攻撃のように見えますが、結果的には無害です。 HTML5 では `innerHTML` で挿入された {{HTMLElement("script")}} タグは[実行するべきではない](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)と定義しているからです。
 
-<p>しかし、次のように {{HTMLElement("script")}} を使わずに JavaScript を実行する方法もあるので、制御することができない文字列を設定するために <code>innerHTML</code> を使用するたびに、セキュリティリスクは残ります。</p>
+しかし、次のように {{HTMLElement("script")}} を使わずに JavaScript を実行する方法もあるので、制御することができない文字列を設定するために `innerHTML` を使用するたびに、セキュリティリスクは残ります。
 
-<pre class="brush: js">const name = "&lt;img src='x' onerror='alert(1)'&gt;";
-el.innerHTML = name; // アラートが表示される</pre>
+```js
+const name = "<img src='x' onerror='alert(1)'>";
+el.innerHTML = name; // アラートが表示される
+```
 
-<p>このため、プレーンテキストを挿入するときには <code>innerHTML</code> を使用せず、代わりに {{domxref("Node.textContent")}} を使用することをお勧めします。これは渡されたコンテンツを HTML として解釈するのではなく、生テキストとして挿入します。</p>
+このため、 `innerHTML` を使用する代わりに次のようにしてください。
 
-<div class="warning">
-<p><strong>警告:</strong> プロジェクトに対して何らかの形のセキュリティレビューが行われる場合、 <code>innerHTML</code> は多くの場合、コードが拒絶される結果になります。例えば、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions">ブラウザー拡張機能</a>の中で <a href="https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation"><code>innerHTML</code> を使用した場合</a>、拡張機能を <a href="https://addons.mozilla.org/">addons.mozilla.org</a> に提出すると、自動レビュープロセスを通過できないでしょう。</p>
-</div>
+- {{domxref("Element.SetHTML()")}} で DOM に挿入する前にテキストを無害化する。
+- プレーンテキストを挿入する際には、代わりに {{domxref("Node.textContent")}} を使用する。これは渡されたコンテンツを HTML として解釈するのではなく、生のテキストとして挿入します。
 
-<h2 id="Example">例</h2>
+> **Warning:** プロジェクトに対して何らかの形のセキュリティレビューが行われた場合、 `innerHTML` は多くの場合で、コードが拒絶される結果になります。
+> 例えば、[ブラウザー拡張機能](/ja/docs/Mozilla/Add-ons/WebExtensions)の中で [`innerHTML` を使用した場合](https://wiki.mozilla.org/Add-ons/Reviewers/Guide/Reviewing#Step_2:_Automatic_validation)、拡張機能を [addons.mozilla.org](https://addons.mozilla.org/) に提出すると、自動レビュープロセスを通過できないでしょう。
+> 代替方法については、[ページへ外部コンテンツを安全に挿入する](/ja/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)を参照してください。
 
-<p>この例は <code>innerHTML</code> を使用して、ウェブページ上のボックス内にメッセージを記録するメカニズムを作成します。</p>
+## 例
 
-<h3 id="JavaScript">JavaScript</h3>
+この例は `innerHTML` を使用して、ウェブページ上のボックス内にメッセージを記録するメカニズムを作成します。
 
-<pre class="brush: js">function log(msg) {
+### JavaScript
+
+```js
+function log(msg) {
   var logElem = document.querySelector(".log");
 
   var time = new Date();
   var timeStr = time.toLocaleTimeString();
-  logElem.innerHTML += timeStr + ": " + msg + "&lt;br/&gt;";
+  logElem.innerHTML += timeStr + ": " + msg + "<br/>";
 }
 
 log("Logging mouse events inside this container...");
-</pre>
+```
 
-<p><code>log()</code> 関数は {{jsxref("Date")}} オブジェクトから {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} を使用して現在時刻を取得し、タイムスタンプとメッセージテキストから成る文字列を構築してログ出力を生成します。それから <code>"log"</code> クラスのボックスにメッセージを追加します。</p>
+`log()` 関数は {{jsxref("Date")}} オブジェクトから {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} を使用して現在時刻を取得し、タイムスタンプとメッセージテキストから成る文字列を構築してログ出力を生成します。それから `"log"` クラスのボックスにメッセージを追加します。
 
-<p>{{domxref("MouseEvent")}} ベースのイベント ({{event("mousedown")}}, {{event("click")}}, {{event("mouseenter")}} など) についての情報を記録する第二のメソッドを追加します。</p>
+{{domxref("MouseEvent")}} ベースのイベント ({{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, {{domxref("Element/mouseenter_event", "mouseenter")}} など) についての情報を記録する第二のメソッドを追加します。
 
-<pre class="brush: js">function logEvent(event) {
-  var msg = "Event &lt;strong&gt;" + event.type + "&lt;/strong&gt; at &lt;em&gt;" +
-            event.clientX + ", " + event.clientY + "&lt;/em&gt;";
+```js
+function logEvent(event) {
+  var msg = "Event <strong>" + event.type + "</strong> at <em>" +
+            event.clientX + ", " + event.clientY + "</em>";
   log(msg);
-}</pre>
+}
+```
 
-<p>それから、これをログを収めるボックスの様々なマウスイベントのイベントハンドラーとして登録します。</p>
+それから、これをログを収めるボックスの様々なマウスイベントのイベントハンドラーとして登録します。
 
-<pre class="brush: js">var boxElem = document.querySelector(".box");
+```js
+var boxElem = document.querySelector(".box");
 
 boxElem.addEventListener("mousedown", logEvent);
 boxElem.addEventListener("mouseup", logEvent);
 boxElem.addEventListener("click", logEvent);
 boxElem.addEventListener("mouseenter", logEvent);
-boxElem.addEventListener("mouseleave", logEvent);</pre>
+boxElem.addEventListener("mouseleave", logEvent);
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>この例の HTML はとても単純です。</p>
+この例の HTML はとても単純です。
 
-<pre class="brush: html">&lt;div class="box"&gt;
-  &lt;div&gt;&lt;strong&gt;Log:&lt;/strong&gt;&lt;/div&gt;
-  &lt;div class="log"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="box">
+  <div><strong>Log:</strong></div>
+  <div class="log"></div>
+</div>
+```
 
-<p><code>"box"</code> クラスが付いた {{HTMLElement("div")}} は、単なるレイアウト用途のコンテナーであり、内容とその周りのボックスを表します。クラスが <code>"log"</code> である <code>&lt;div&gt;</code> は、ログテキスト自身のコンテナーです。</p>
+`"box"` クラスが付いた {{HTMLElement("div")}} は、単なるレイアウト用途のコンテナーであり、内容とその周りのボックスを表します。
+クラスが `"log"` である `<div>` は、ログテキスト自身のコンテナーです。
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>以下の CSS が例の内容をスタイル付けします。</p>
+以下の CSS が例の内容をスタイル付けします。
 
-<pre class="brush: css">.box {
+```css
+.box {
   width: 600px;
   height: 300px;
   border: 1px solid black;
@@ -172,42 +217,29 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 .log {
   margin-top: 8px;
   font-family: monospace;
-}</pre>
+}
+```
 
-<h3 id="Result">結果</h3>
+### 結果
 
-<p>結果の内容はこのように見えます。マウスが移動してボックスを出入りしたり、中でクリックしたりすると、ログが出力されるのを見ることができます。</p>
+結果の内容はこのように見えます。
+マウスを移動してボックスを出入りさせたり、中でクリックしたりすると、ログが出力されるのを見ることができます。
 
-<p>{{EmbedLiveSample("Example", 640, 350)}}</p>
+{{EmbedLiveSample("Example", 640, 350)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM Parsing', '#dom-element-innerhtml', 'Element.innerHTML')}}</td>
-      <td>{{Spec2('DOM Parsing')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("Node.textContent")}} および {{domxref("HTMLElement.innerText")}}</li>
-  <li>{{domxref("Element.insertAdjacentHTML()")}}</li>
-  <li>HTML を解析して DOM ツリーへ入れる: {{domxref("DOMParser")}}</li>
-  <li>XML または HTML をシリアライズして DOM ツリーへ入れる: {{domxref("XMLSerializer")}}</li>
-</ul>
+- {{domxref("Node.textContent")}} および {{domxref("HTMLElement.innerText")}}
+- {{domxref("Element.insertAdjacentHTML()")}}
+- {{domxref("Element.outerHTML")}}
+- {{domxref("Element.setHTML")}}
+- HTML または XML を解釈して DOM ツリーへ: {{domxref("DOMParser")}}
+- DOM ツリーを XML 文字列へシリアライズ: {{domxref("XMLSerializer")}}
