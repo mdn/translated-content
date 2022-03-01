@@ -5,13 +5,13 @@ tags:
   - Firefox 3
 translation_of: Web/API/Navigator/registerProtocolHandler
 ---
-{{ ApiRef() }}
+{{APIRef("HTML DOM")}}{{securecontext_header}}
 
 ### Résumé
 
 Permet aux sites web de s'enregistrer en tant que gestionnaires possibles pour des protocoles particuliers.
 
-{{ Note("Un site web ne peut enregistrer de gestionnaires de protocoles que pour lui-même. Pour des raisons de sécurité, il n\'est pas possible pour une extension ou un site d\'enregistrer des gestionnaires de protocoles ciblant d\'autres sites.") }}
+> **Note:** Un site web ne peut enregistrer de gestionnaires de protocoles que pour lui-même. Pour des raisons de sécurité, il n'est pas possible pour une extension ou un site d'enregistrer des gestionnaires de protocoles ciblant d'autres sites.
 
 ### Syntaxe
 
@@ -19,7 +19,11 @@ Permet aux sites web de s'enregistrer en tant que gestionnaires possibles pour d
 
 - `protocole` est le protocole que le site désire gérer, sous la forme d'une chaîne.
 - `uri` est l'URI du gestionnaire sous la forme d'une chaîne. Il peut contenir « %s » pour indiquer où insérer l'URI échappée du document à gérer, comme montré dans l'exemple plus bas.
-- `titre` est le titre du gestionnaire présenté à l'utilisateur, sous la forme d'une chaîne.
+- `titre` {{deprecated_inline}} est le titre du gestionnaire présenté à l'utilisateur, sous la forme d'une chaîne.
+
+    > **Note:** Le `titre` a été enlevé de la spécification pour risque de spoofing.
+    > Le `titre` devrait toujours être fourni car il est **encore obligatoire** pour certains navigateurs (voir le [tableau de compatibilité plus bas](#compatibilité_avec_les_navigateurs)).
+    > Les navigateurs qui sont à jour avec la spécification accepteront mais ignoreront vraisemblablement le `titre`.
 
 ### Exemple
 
@@ -33,7 +37,11 @@ Ceci crée un gestionnaire permettant aux liens `mailto` de diriger l'utilisateu
 
 ### Spécification
 
-Spécifié dans le [brouillon de travail Web Applications 1.0](http://whatwg.org/specs/web-apps/current-work/#custom-handlers) du WHATWG.
+{{Specifications}}
+
+### Compatibilité avec les navigateurs
+
+{{Compat}}
 
 ### Voir également
 
