@@ -1,13 +1,6 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cache-Control
-  - HTTP
-  - Encabezado HTTP
-  - Encabezado de petición
-  - Encabezado de respuesta
-  - Referencia
 browser-compat: http.headers.Cache-Control
 translation_of: Web/HTTP/Headers/Cache-Control
 ---
