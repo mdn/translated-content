@@ -266,7 +266,7 @@ C'est ce problème de format qui est le plus important. Comme nous l'avons expli
 - `3h de l'après-midi`
 - etc.
 
-Une façon de contourner ce problème consiste à utiliser l'attribut {{htmlattrxref("pattern", "input")}} sur le champ `time`. Bien quqe le champ `time` n'utilise pas cet attribut, le champ texte pourra l'utiliser. Vous pouvez par exemple tester ce fragment de code dans un navigateur qui ne prend pas en charge `<input type="time">` :
+Une façon de contourner ce problème consiste à utiliser l'attribut {{htmlattrxref("pattern", "input")}} sur le champ `time`. Bien que le champ `time` n'utilise pas cet attribut, le champ texte pourra l'utiliser. Vous pouvez par exemple tester ce fragment de code dans un navigateur qui ne prend pas en charge `<input type="time">` :
 
 ```html
 <form>

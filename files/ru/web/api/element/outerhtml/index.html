@@ -64,7 +64,7 @@ console.log(container.firstChild.nodeName); // логирует "P"
 <pre class="brush: js">document.documentElement.outerHTML = "test";  // бросает DOMException
 </pre>
 
-<p>Also, while the element will be replaced in the document, the variable whose <code>outerHTML</code> property was set will still hold a reference to the original element:</p>
+<p>Обратите внимание, когда произойдёт изменение элемента в документе, переменная, у которой было установлено свойство <code>outerHTML</code>, будет по-прежнему хранить ссылку на оригинальный элемент:</p>
 
 <pre class="brush: js">var p = document.getElementsByTagName("p")[0];
 console.log(p.nodeName); // показывает: "P"
