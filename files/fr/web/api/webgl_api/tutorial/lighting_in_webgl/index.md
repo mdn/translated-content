@@ -78,7 +78,7 @@ gl.bufferData(gl.ARRAY_BUFFER, new WebGLFloatArray(vertexNormals), gl.STATIC_DRA
 
 Ceci doit vous être plutôt familier maintenant. Nous créons un nouveau buffer, on le lie avec le tableau sur lequel nous allons travailler, puis nous allons envoyer l'ensemble de notre tableau au buffer en appelant la méthode `bufferData()`.
 
-Ensuite nous allons ajouter le code à la fonction `drawScene() `pour attacher le tableau de normales à l'attribut du shader, comme ça le code du shader y aura accès:
+Ensuite nous allons ajouter le code à la fonction `drawScene()` pour attacher le tableau de normales à l'attribut du shader, comme ça le code du shader y aura accès&nbsp;:
 
 ```js
 gl.bindBuffer(gl.ARRAY_BUFFER, cubeVerticesNormalBuffer);

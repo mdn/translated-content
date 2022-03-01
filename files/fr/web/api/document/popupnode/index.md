@@ -12,7 +12,7 @@ translation_of: Web/API/Document/popupNode
 ---
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-> **Note :** À partir de {{Gecko("2.0")}}, les auteurs sont encouragés à utiliser la propriété [menupopup ](/fr/docs/Mozilla/Tech/XUL/menupopup)triggerNode à la place.
+> **Note :** À partir de Gecko 2.0, les auteurs sont encouragés à utiliser la propriété `triggerNode` de `menupopup` à la place.
 
 Quand une fenêtre contextuelle attachée via les attributs `popup` ou `context` est ouverte, la propriété `popupNode` du document XUL est définie sur le noeud sur lequel vous avez cliqué. Il sera la cible de l'événement de souris qui a activé la fenêtre contextuelle. Si elle a été ouverte avec le clavier, le nœud contextuel peut être défini sur null. En règle générale, cette propriété sera vérifiée au cours de la gestion des événements par popupshowing, un menu contextuel pour initialiser le menu basé sur le contexte.
 

@@ -21,14 +21,14 @@ La méthode **`Node.removeChild()`** retire un nœud enfant de l'arbre DOM et r
     node.removeChild(child);
 
 - `child` est le nœud enfant à retirer du DOM.
-- `node `est le nœud parent de `child`.
+- `node` est le nœud parent de `child`.
 - `oldchild` conserve une référence au nœud enfant retiré. `oldchild` === `child`.
 
 Le nœud enfant retiré existe toujours en mémoire, mais ne fait plus partie du DOM. Avec la première syntaxe, il est possible de réutiliser ultérieurement dans le code le nœud retiré, à l'aide de la référence à l'objet `ancienEnfant`_._
 
 Avec la seconde forme montrée en exemple, aucune référence à l'objet `ancienEnfant` n'est conservée ; ainsi, en supposant que votre code n'a conservé nulle part ailleurs cette référence à ce nœud, il devient immédiatement inutilisable et irrécupérable, et sera en général [automatiquement supprimé](/fr/docs/Web/JavaScript/Gestion_de_la_m%C3%A9moire) de la mémoire après un court moment.
 
-Si  `child` n'est pas un enfant du noeud  `element`, la méthode provoque une exception. Une exception sera aussi lancée dans la cas où le nœud `enfant `est bien un enfant du nœud `element `au moment de l'appel à la méthode, mais qu'il a été retiré par un gestionnaire d'événement invoqué dans la cadre d'une tentative de suppression du nœud `element `(comme *blur*).
+Si `child` n'est pas un enfant du nœud `element`, la méthode provoque une exception. Une exception sera aussi lancée dans le cas où le nœud `child` est bien un enfant du nœud `element` au moment de l'appel à la méthode, mais qu'il a été retiré par un gestionnaire d'évènement invoqué dans la cadre d'une tentative de suppression du nœud `element` (comme `blur`).
 
 La méthode peut lever une exception de deux façons :
 

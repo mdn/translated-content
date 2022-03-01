@@ -34,7 +34,7 @@ var nLastModif = Date.parse(document.lastModified);
 
 ## Notes
 
-Veuillez noter qu'en tant que chaîne de caractères, `lastModified `ne peut être *facilement* utilisé pour des comparaisons entre les dates modifées des documents. Voici un exemple possible qui montre comment afficher une alerte quand la page change (voir aussi: [API des cookies en JavaScript](/en-US/docs/DOM/document.cookie)):
+Veuillez noter qu'en tant que chaîne de caractères, `lastModified` ne peut être *facilement* utilisé pour des comparaisons entre les dates modifiées des documents. Voici un exemple possible qui montre comment afficher une alerte quand la page change (voir aussi [l'API des cookies en JavaScript](/fr/docs/Web/API/Document/cookie))&nbsp;:
 
 ```js
 if (Date.parse(document.lastModified) > parseFloat(document.cookie.replace(/(?:(?:^|.*;)\s*last_modif\s*\=\s*([^;]*).*$)|^.*$/, "$1") || "0")) {

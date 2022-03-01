@@ -48,9 +48,9 @@ public class Server{
 
 Méthodes :
 
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)` getInputStream()`
+- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getInputStream()`
   Renvoie un flux d’entrée pour ce socket.
-- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html)` getOutputStream()`
+- `java.net.`[Socket](http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html) `getOutputStream()`
   Renvoie un flux sortant pour ce socket.
 
 ### OutputStream

@@ -9,7 +9,7 @@ L'API *Payment Request* fournit une expérience utilisateur cohérente à la fo
 
 ## Concepts et usages de l'API _Payment Request_
 
-De nombreux problèmes concernant l'abandon du panier d'achat en ligne peuvent découler de formulaires de validation finale longs et difficiles à remplir, et nécessitant souvent plusieurs étapes. L'**API _Payment Request_ **a pour vocation de réduire le nombre d'étapes nécessaires pour terminer un paiement en ligne, faisant potentiellement ainsi diparaître les formulaires de validation finale. Elle vise à rendre le processus de validation final plus facile en conservant les informations de l'utilisateur, qui sont transmises au marchant sans nécessiter de formulaire HTML.
+De nombreux problèmes concernant l'abandon du panier d'achat en ligne peuvent découler de formulaires de validation finale longs et difficiles à remplir, et nécessitant souvent plusieurs étapes. L'**API <i lang="en">Payment Request</i>** a pour vocation de réduire le nombre d'étapes nécessaires pour terminer un paiement en ligne, faisant potentiellement ainsi disparaître les formulaires de validation finale. Elle vise à rendre le processus de validation final plus facile en conservant les informations de l'utilisatrice ou l'utilisateur, qui sont transmises au marchand sans nécessiter de formulaire HTML.
 
 Les avantages de l'utilisation de l'API *Payment Request* avec des règlements par cartes ("basic-card") :
 
