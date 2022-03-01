@@ -162,7 +162,7 @@ La directiva de respuesta `private` indica que la respuesta solo puede ser almac
 Cache-Control: private
 ```
 
-Deberías añadire la directiva `private` para el contenido personalizado de usuario — en particular, respuestas recibidas después del login, y sesiones administradas via cookies.
+Deberías añadir la directiva `private` para el contenido personalizado de usuario — en particular, respuestas recibidas después del login, y sesiones administradas via cookies.
 
 Si olvidas añadire `private` a una respuesta con contenido personalizado, entonces esa respuesta puede ser almacenada en una caché compartida y terminar siendo reutilizada por multiples usuarios, lo cual puede causar una fuga de información personal.
 
