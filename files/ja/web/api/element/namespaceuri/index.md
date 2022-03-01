@@ -1,35 +1,58 @@
 ---
-title: Node.namespaceURI
+title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
 tags:
+  - API
   - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - 要更新
-translation_of: Web/API/Node/namespaceURI
+  - NeedsBrowserCompatibility
+  - NeedsMobileBrowserCompatibility
+  - プロパティ
+  - リファレンス
+browser-compat: api.Element.namespaceURI
+translation_of: Web/API/Element/namespaceURI
 original_slug: Web/API/Node/namespaceURI
 ---
-<p>{{ ApiRef() }}</p>
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
-<p>ノードの名前空間 URI か、もし指定されていなければ <code>null</code>(読み込み専用)。</p>
-<h3 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h3>
-<pre class="eval"><i>namespace</i> =<i>node</i>.namespaceURI
-</pre>
-<ul>
- <li><code>namespace</code> は指定されたノードの名前空間 URI を表す文字列です。</li>
-</ul>
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
-<p>この断片では、ノードの <a href="/ja/DOM/element.localName">localName</a> と <code>namespaceURI</code> が試験されます。もし、<code>namespaceURI</code> が XUL の名前空間を返し、<code>localName</code> が "browser" を返せば、そのノードは XUL の <code>&lt;browser/&gt;</code> と理解されます。</p>
-<pre>if (node.localName == "browser" &amp;&amp;
-    node.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
-  // これは XUL browser です。
+{{APIRef("DOM")}}
+
+**`Element.namespaceURI`** は読み取り専用のプロパティで、この要素の名前空間 URI を返します。この要素が名前空間に所属していない場合は `null` を返します。
+
+## 構文
+
+```js
+namespace = element.namespaceURI
+```
+
+## 例
+
+このスニペットでは、ある要素が {{domxref("Element.localName", "localName")}} と `namespaceURI` で調べます。この `namespaceURI` は XUL の名前空間を返し、 `localName` は "browser" を返すので、このノードは XUL の `<browser/>` と解釈されます。
+
+```js
+if (element.localName == "browser" &&
+    element.namespaceURI == "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul") {
+  // これは XUL browser です
 }
-</pre>
-<h3 id=".E6.B3.A8.E8.A8.98" name=".E6.B3.A8.E8.A8.98">注記</h3>
-<p>これは、スコープ中の名前空間宣言の調査を基づいた、名前空間検索の結果である、計算された値ではありません。単に作成時に与えられた名前空間 URI です。</p>
-<p><code>ELEMENT_NODE</code> と <code>ATTRIBUTE_NODE</code> 以外の<a href="/ja/DOM/element.nodeType">種類</a>全てに属すノードと, <code><a href="/ja/DOM/document.createElement">document.createElement</a></code> のような DOM Level 1 のメソッドで作られたノードでは、常に <code>namespaceURI</code> は <code>null</code> です。</p>
-<p>DOM Level 2 の <a href="/ja/DOM/document.createElementNS">document.createElementNS</a> メソッドを使うことで、特定の <code>namespaceURI</code> を持った要素を作ることができます。</p>
-<p><a class="external" href="http://www.w3.org/TR/xml-names11/">Namespaces in XML</a> によれば、属性はその要素から名前空間を継承しません。もし属性が特定の名前空間を与えられていなければ、その属性は名前空間をもちません。</p>
-<h3 id=".E4.BB.95.E6.A7.98" name=".E4.BB.95.E6.A7.98">仕様</h3>
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-NodeNSname">DOM Level 2 Core: namespaceURI</a></p>
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#Namespaces-Considerations">DOM Level 2 Core: XML Namespaces</a></p>
+```
+
+## メモ
+
+これは、スコープ内の名前空間宣言を調べて名前空間を検索した結果であり、計算値ではありません。ノードの名前空間 URI は、ノードの生成時に凍結されます。
+
+Firefox 3.5 以前では、 HTML 文書中の HTML 要素の名前空間 URI は `null` です。それ以降のバージョンでは、 HTML5 に準拠し、 XHTML と同様に [`http://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) となります。
+
+DOM Level 2 のメソッド [document.createElementNS](/en-US/docs/Web/API/Document/createElementNS) を用いると、指定した `namespaceURI` を持つ要素を作成することができる。
+
+DOM はそれ自体で名前空間の検証を行ったり強制したりすることはありません。必要な検証を行うのは DOM アプリケーションに任されています。また、一度特定の要素に関連付けられた名前空間接頭辞は、変更することができないことに注意しましょう。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Element.localName")}}
+- {{domxref("Element.prefix")}}
+- {{domxref("Attr.namespaceURI")}}
