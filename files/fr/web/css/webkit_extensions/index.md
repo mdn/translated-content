@@ -290,7 +290,7 @@ Les applications basées sur WebKit ou Blink, telles que Safari et Chrome, prenn
 
 ## Spécificités prises en charge par Firefox
 
-Les propriétés suivantes peuvent être utilisées avec le préfixe `-webkit-` sous Firefox. La plupart de ces propriétés peuvent également s'utiliser sans préfixes (voir la section sur les [propriétés anciennement spécifiques et désormais standard ](#spe_std)ci-avant).
+Les propriétés suivantes peuvent être utilisées avec le préfixe `-webkit-` sous Firefox. La plupart de ces propriétés peuvent également s'utiliser sans préfixes (voir la section sur les [propriétés anciennement spécifiques et désormais standard](#spe_std) ci-avant).
 
 > **Note :** En raison du code historique utilisé dans de nombreux sites web et contenant des propriétés préfixées avec `-webkit-`, Edge et Firefox redirigent de nombreuses propriétés préfixées avec `-webkit-` vers les équivalents sans préfixe ou avec `-moz-` ou `-ms-`.
 
