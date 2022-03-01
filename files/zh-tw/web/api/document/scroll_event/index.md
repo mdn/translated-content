@@ -1,36 +1,38 @@
 ---
-title: 'Document: scroll event'
+title: 'Document: scroll事件'
 slug: Web/API/Document/scroll_event
 tags:
   - API
   - DOM
   - Document
   - Event
+  - 事件
   - Reference
+  - 參考文件
   - Scroll
   - UIEvent
 browser-compat: api.Document.scroll_event
 ---
 {{APIRef}}
 
-The **`scroll`** event fires when the document view has been scrolled. For element scrolling, see {{domxref("Element/scroll_event", "Element:&nbsp;scroll&nbsp;event")}}.
+**`scroll`** 事件會在捲動document檢視區時觸發。Element元件捲動相關請參見{{domxref("Element/scroll_event", "Element:&nbsp;scroll事件")}}。
 
 <table class="properties">
   <tbody>
     <tr>
       <th>Bubbles</th>
-      <td>Yes</td>
+      <td>是</td>
     </tr>
     <tr>
       <th>Cancelable</th>
-      <td>No</td>
+      <td>否</td>
     </tr>
     <tr>
-      <th>Interface</th>
+      <th>介面</th>
       <td>{{DOMxRef("Event")}}</td>
     </tr>
     <tr>
-      <th>Event handler property</th>
+      <th>事件處理常式的屬性</th>
       <td>
         {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}
       </td>
@@ -38,24 +40,24 @@ The **`scroll`** event fires when the document view has been scrolled. For eleme
   </tbody>
 </table>
 
-> **Note:** In iOS UIWebViews, `scroll` events are not fired while scrolling is taking place; they are only fired after the scrolling has completed. See [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202). Safari and WKWebViews are not affected by this bug.
+> **註：**iOS的UIWebViews中，`scroll`事件不會在捲動時觸發，而只在捲動結束後觸發。請參見[Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202)。Safari和WKWebViews不受本bug影響。
 
-## Examples
+## 範例
 
-### Scroll event throttling
+### 限制捲動事件的觸發次數
 
-Since `scroll` events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using {{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{DOMxRef("setTimeout()")}}, or a {{DOMxRef("CustomEvent")}}, as follows.
+有鑒於`scroll`事件可能會以很高的速率觸發，事件處理常式不應執行計算密集的操作（如DOM修改）。DOM修改建議改用{{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}}或{{DOMxRef("CustomEvent")}}限制事件的觸發次數，如下。
 
-Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes the`scroll` event for `requestAnimationFrame`.
+不過需要注意，輸入事件和動畫影格的觸發速率大致相同，因此通常沒有必要進行下述的最佳化。本範例最佳化`requestAnimationFrame`的`scroll`事件。
 
 ```js
-// Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
+// 參考來源：http://www.html5rocks.com/en/tutorials/speed/animations/
 
 let lastKnownScrollPosition = 0;
 let ticking = false;
 
 function doSomething(scrollPos) {
-  // Do something with the scroll position
+  // 依據捲動位置進行操作
 }
 
 document.addEventListener('scroll', function(e) {
@@ -72,16 +74,16 @@ document.addEventListener('scroll', function(e) {
 });
 ```
 
-See more, similar examples on the [`resize`](/en-US/docs/Web/API/Window/resize_event) event page.
+更多類似範例可見[`resize`](/zh-TW/docs/Web/API/Window/resize_event)事件頁面。
 
-## Specifications
+## 規格
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 延伸閱讀
 
-- [Element: `scroll` event](/en-US/docs/Web/API/Element/scroll_event)
+- [Element: `scroll`事件](/zh-TW/docs/Web/API/Element/scroll_event)
