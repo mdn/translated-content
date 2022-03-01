@@ -80,7 +80,7 @@ Une fois que les ruptures forcées ont été appliquées, le moteur peut ajouter
   - : Empêche toute saut de page après la boîte de l'élément.
 - `avoid-column`
   - : Empêche toute rupture de colonne après la boîte de l'élément.
-- `avoid-region `{{experimental_inline}}
+- `avoid-region` {{experimental_inline}}
   - : Empêche toute rupture de région après boîte de l'élément.
 
 ### Syntaxe formelle
