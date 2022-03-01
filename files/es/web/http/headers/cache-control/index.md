@@ -458,7 +458,7 @@ Alternativamente, `Clear-Site-Data` puede borrar la memoria caché del navegador
 
 ## Véase también
 
-- [HTTP Caching FAQ](/en-US/docs/Web/HTTP/Caching)
+- [HTTP Caching FAQ](/es/docs/Web/HTTP/Caching)
 - [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)
