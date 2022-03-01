@@ -9,7 +9,7 @@ translation_of: Web/API/Element/matches
 ---
 {{ APIRef("DOM") }}
 
-La méthode **`element.matches()`** renvoie `true` lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramêtre&nbsp;; sinon, elle renvoie `false`.
+La méthode **`element.matches()`** renvoie `true` lorsque l'élément peut être sélectionné par le sélecteur défini par la chaîne passée en paramètre&nbsp;; sinon, elle renvoie `false`.
 
 > **Attention :** Certains navigateurs implémentent cette méthode sous le nom `matchesSelector()` non-standardisé et préfixé.
 

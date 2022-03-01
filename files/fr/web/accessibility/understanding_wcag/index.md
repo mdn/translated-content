@@ -13,7 +13,7 @@ Les WCAG 2.0 et 2.1 fournissent un ensemble détaillé de lignes directrices pou
 
 ## Les quatre principes
 
-Les WCAG sont globalement divisés en quatre principes — éléments majeurs que le contenu Web **doit être** pour être considéré comme accessible (voir [Comprendre les quatre principes d'accessibilité (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head) pour les définitons des WCAG).
+Les WCAG sont globalement divisés en quatre principes — éléments majeurs que le contenu web **doit être** pour être considéré comme accessible (voir [Comprendre les quatre principes d'accessibilité (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head) pour les définitions des WCAG).
 
 Chacun des liens ci-dessous vous mènera à des pages qui développent davantage ces domaines, vous donnant des conseils pratiques sur la façon de rédiger votre contenu Web afin qu'il soit conforme aux critères de succès décrits dans chacune des directives WCAG 2.0 et 2.1 qui se subdivisent davantage en chaque principe.
 

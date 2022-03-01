@@ -49,5 +49,5 @@ _Hérite des propriétés de son parent, {{domxref("Event")}}_.
 ## Voir aussi
 
 - L'interface de base {{domxref("Event")}} .
-- [L'API MediaStream Recording](/fr/docs/Web/API/MediaStream_Recording_API)&nbsp;: envoie des objets `BlobEvent` chaque fois qu'un fragment de media est prêt.
+- [L'API <i lang="en">MediaStream Recording</i>](/fr/docs/Web/API/MediaStream_Recording_API)&nbsp;: envoie des objets `BlobEvent` chaque fois qu'un fragment de media est prêt.
 - [Utiliser l'API MediaStream Recording](/fr/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)

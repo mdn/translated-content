@@ -26,7 +26,7 @@ Le constructeur n'a pas de paramètre.
   - : Importe une feuille de style XSLT. Si le nœud passé en argument est un nœud de document, vous pouvez passer une transformation XSL complète ou un [transformation d'élèment résultant](http://www.w3.org/TR/xslt#result-element-stylesheet); sinon, il doit s'agir d'un élèment `<xsl:stylesheet>` ou `<xsl:transform>`.
 - `[Throws]` [`DocumentFragment`](/fr/docs/Web/API/DocumentFragment) [`XSLTProcessor.transformToFragment`](/fr/docs/Web/API/XSLTProcessor/transformToFragment)`(`[`Node`](/fr/docs/Web/API/Node) `source`, [`Document`](/fr/docs/Web/API/Document) `owner)`
   - : Transforme la source du nœud en applicant la fonction {{domxref("XSLTProcessor.importStylesheet()")}}. Le document propriétaire du fragment de document résultant est le nœud propriétaire.
-- [`[Throws]`](/en-US/docs/Mozilla/WebIDL_bindings#Throws) [`Document`](/fr/docs/Web/API/Document) [`XSLTProcessor.transformToDocument`](/fr/docs/Web/API/XSLTProcessor/transformToDocument)`(`[`Node`](/fr/docs/Web/API/Node) `source)`
+- [`[Throws]`](/fr/docs/Mozilla/WebIDL_bindings#Throws) [`Document`](/fr/docs/Web/API/Document) [`XSLTProcessor.transformToDocument`](/fr/docs/Web/API/XSLTProcessor/transformToDocument)`(`[`Node`](/fr/docs/Web/API/Node) `source)`
 
   - : Transforme la source du nœud en appliquant la feuille de style donnée lors de l'importation à l'aide de la fonction {{domxref ("XSLTProcessor.importStylesheet ()")}}.
 

@@ -46,13 +46,13 @@ Les propriétés suivantes ont été dépréciées. Si elle est disponible, la m
 
 - `attributes`
   - : Cette propriété retourne désormais toujours `NULL`.
-- `childNodes` {{obsolete_inline(14)}}
+- `childNodes` {{deprecated_inline}}
   - : Cette propriété retourne désormais toujours `un` {{domxref("NodeList")}}  vide.
-- `firstChild` {{obsolete_inline(14)}}
+- `firstChild` {{deprecated_inline}}
   - : Cette propriété retourne désormais toujours `NULL`.
 - `isId` {{readOnlyInline}}
   - : Indique si l'attribut est un "attribut ID". Un "attribut ID" étant un attribut dont la valeur devrait être unique dans un document DOM. En HTML DOM, "id" est le seul attribut ID, mais les documents XML peuvent en définir d'autres. Qu'un attribut soit unique ou non est souvent déterminé par  un {{Glossary("DTD")}}  ou une autre description de schéma.
-- `lastChild` {{obsolete_inline(14)}}
+- `lastChild` {{deprecated_inline}}
   - : Cette propriété retourne désormais toujours `NULL`.
 - `nextSibling`
   - : Cette propriété retourne désormais toujours `NULL`.
@@ -77,7 +77,7 @@ Les propriétés suivantes ont été dépréciées. Si elle est disponible, la m
 
 Les méthodes suivantes ont été dépréciées:
 
-- `appendChild()` {{obsolete_inline(14)}}
+- `appendChild()` {{deprecated_inline}}
   - : Modifiez à la place la valeur de {{domxref ("Attr.value")}}.
 - `cloneNode()`
   - : Vous n'auriez pas dû l'utiliser en premier lieu, donc cela ne devrait pas vous ennuyer qu'il soit retiré.
@@ -89,7 +89,7 @@ Les méthodes suivantes ont été dépréciées:
   - : Utilisez {{domxref("Attr.getAttribute()")}} à la place.
 - `getAttributeNodeNS()`
   - : Utilisez {{domxref("Attr.getAttributeNS()")}} à la place.
-- `hasAttributes()` {{obsolete_inline("21.0")}}
+- `hasAttributes()` {{deprecated_inline}}
   - : Cette méthode retourne désormais toujours false.
 - `hasChildNodes()`
   - : Cette méthode retourne désormais toujours false.
@@ -103,9 +103,9 @@ Les méthodes suivantes ont été dépréciées:
   - : Vous n'auriez pas dû l'utiliser en premier lieu, donc cela ne devrait pas vous ennuyer qu'il soit retiré.
 - `removeAttributeNode()`
   - : Utilisez {{domxref("Attr.removeAttribute()")}} à la place.
-- `removeChild()` {{obsolete_inline(14)}}
+- `removeChild()` {{deprecated_inline}}
   - : Modifiez à la place la valeur de {{domxref("Attr.value")}}.
-- `replaceChild()` {{obsolete_inline(14)}}
+- `replaceChild()` {{deprecated_inline}}
   - : Modifiez à la place la valeur de {{domxref("Attr.value")}}.
 - `setAttributeNode()`
   - : Utilisez {{domxref("Attr.setAttribute()")}} à la place.

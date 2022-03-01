@@ -22,7 +22,7 @@ Le constructeur **`AnimationEvent()`** retourne un nouvel {{domxref("AnimationEv
 - `animationName` {{optional_inline}}
   - : Un {{domxref("DOMString")}} contenant la valeur de  la propriété associée avec la transition.{{cssxref("animation-name")}} . Prend par défaut `""`.
 - `elapsedTime` {{optional_inline}}
-  - : Un `float` donne le montant de temps d'une application qui a fonctionné, en secondes, quand l'évènement est déclenché, excluant le temps de pause des animations. Pour un évènement `"animationstart"`, `elapsedTime` est de `0.0` jusqu'a ce qu'il y ait une valeur négative pour une valeur [`animation-delay`](/fr/docs/Web/CSS/animation-delay), dans le cas où l'évènement est déclenché par `elapsedTime` contenant `(-1 * délai)`. Sa valeur par défaut vaut `0.0`.
+  - : Un `float` donne le montant de temps d'une application qui a fonctionné, en secondes, quand l'évènement est déclenché, excluant le temps de pause des animations. Pour un évènement `animationstart`, `elapsedTime` est de `0.0` jusqu'à ce qu'il y ait une valeur négative pour une valeur [`animation-delay`](/fr/docs/Web/CSS/animation-delay), dans le cas où l'évènement est déclenché par `elapsedTime` contenant `(-1 * délai)`. Sa valeur par défaut vaut `0.0`.
 - `pseudoElement` {{optional_inline}}
   - : Is a {{domxref("DOMString")}}, starting with `"::"`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element itself, specify an empty string: `""`. It defaults to `""`.
 

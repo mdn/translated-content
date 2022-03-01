@@ -26,7 +26,7 @@ Le constructeur **`SharedWorker()`** crée un objet {{domxref("SharedWorker")}} 
 
     - `type`: Une {{domxref("DOMString")}} spécifiant le type de _worker_ à créer. Les valeurs possibles sont: `classic` ou `module`. Si non spécifié, la valeur par défaut est `classic`.
     - `credentials`: Une {{domxref("DOMString")}} spécifiant le type de crédit à utilisé pour le _worker_. La valeur peut être _`omit`_, `same-origin` ou _`include`. Si non spécifié ou si le type est `classic`, la valeur par défaut sera `omit` (pas de crédit nécéssaire)._
-    - `name`&nbsp;: une [`DOMString`](/fr/docs/Web/API/DOMString) spécifiant un identifiant pour le [`SharedWorkerGlobalScope`](/fr/docs/Web/API/SharedWorkerGlobalScope) représentant la porté du _worker_, souvent utilisé pour déboguer.
+    - `name`&nbsp;: une [`DOMString`](/fr/docs/Web/API/DOMString) spécifiant un identifiant pour le [`SharedWorkerGlobalScope`](/fr/docs/Web/API/SharedWorkerGlobalScope) représentant la portée du _worker_, souvent utilisé pour déboguer.
 
 ### Valeur retournée
 

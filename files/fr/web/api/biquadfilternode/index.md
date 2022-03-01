@@ -51,9 +51,9 @@ _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
 - {{domxref("BiquadFilterNode.detune")}}
   - : Est un {{domxref ("AudioParam")}} de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate) : un nombre flottant à double précision représentant le désaccordage de la fréquence exprimé en [cents](https://fr.wikipedia.org/wiki/Cent_et_savart).
 - {{domxref("BiquadFilterNode.Q")}}
-  - : Est un [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: un nombre flottant à double précision représentant un [facteur](http://en.wikipedia.org/wiki/Q_factor)[Q](http://en.wikipedia.org/wiki/Q_factor), ou facteur de qualité.
+  - : Est un [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: un nombre flottant à double précision représentant un [facteur Q](https://en.wikipedia.org/wiki/Q_factor), ou facteur de qualité.
 - {{domxref("BiquadFilterNode.gain")}} {{readonlyInline}}
-  - : Est un [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: un nombre flottant à double précision représentant le [gain](http://en.wikipedia.org/wiki/Gain) utilisé dans l'algorithme de filtrage.
+  - : Est un [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [a-rate](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: un nombre flottant à double précision représentant le [gain](https://en.wikipedia.org/wiki/Gain) utilisé dans l'algorithme de filtrage.
 - {{domxref("BiquadFilterNode.type")}}
 
   - : Une chaîne définissant le type d'algorithme de filtrage que le noeud implémente: La signification des paramètres diffère en fonction du type du filtre (sauf detune qui a la même signification dans tous les cas, et n'est donc pas listé ci-dessous)

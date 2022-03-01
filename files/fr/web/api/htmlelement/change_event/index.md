@@ -44,7 +44,7 @@ Les différents navigateurs ne sont pas toujours d'accord sur le fait que l'év�
 
 ### L'élément \<select>
 
-Le code suivant gère l'évènement **change** sur [`<select>`](/fr/docs/Web/HTML/Element/select) en appellant la fonction `changeEventHandler()` dans l'attribut `onchange`. Il lit la valeur de la cible de l'évènement et la montre dans une alerte.
+Le code suivant gère l'évènement **change** sur [`<select>`](/fr/docs/Web/HTML/Element/select) en appelant la fonction `changeEventHandler()` dans l'attribut `onchange`. Il lit la valeur de la cible de l'évènement et la montre dans une alerte.
 
 #### HTML
 

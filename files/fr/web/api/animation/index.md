@@ -63,9 +63,9 @@ L'interface **`Animation`** de [l'API Web Animations](/en-US/docs/Web/API/Web_An
 ### Gestionnaire d'événements
 
 - {{domxref("Animation.oncancel")}}
-  - : Retourne et défini le gestionnaire d'événement pour l'événement `cancel` (annuler).
+  - : Retourne et définit le gestionnaire d'évènement pour l'évènement `cancel` (annuler).
 - {{domxref("Animation.onfinish")}}
-  - : Retourne et défini le gestionnaire d'événement pour l'événement `finish` (terminer).
+  - : Retourne et définit le gestionnaire d'évènement pour l'évènement `finish` (terminer).
 
 ## Méthodes
 

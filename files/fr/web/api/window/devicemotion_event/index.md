@@ -55,4 +55,4 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 ## Voir aussi
 
 - [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
-- [DeviceOrientation Event (en anglais)](https://www.w3.org/TR/orientation-event/#devicemotion)
+- [`DeviceOrientation Event` (en anglais)](https://www.w3.org/TR/orientation-event/#devicemotion)
