@@ -63,4 +63,4 @@ L'élément peut ne pas être aligné complètement avec le haut ou le bas, selo
 
 ## Voir aussi
 
-- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/en-US/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}
+- [`Element.scrollIntoViewIfNeeded()`](/fr/docs/Web/API/Element/scrollIntoViewIfNeeded) {{non-standard_inline}}

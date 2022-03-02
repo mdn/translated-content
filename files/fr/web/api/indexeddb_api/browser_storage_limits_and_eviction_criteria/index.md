@@ -108,5 +108,5 @@ Dans Chrome / Opera, l'API " Quota Management" gère les quotas pour [AppCache](
 
 ## Voir aussi
 
-- [Working with quota on mobile browsers](http://www.html5rocks.com/en/tutorials/offline/quota-research/), de[ Eiji Kitamura.](http://blog.agektmr.com) Une analyse détaillée du stockage côté client sur les navigateurs mobiles.
-- [Quota Management API : Fast Facts](https://developers.google.com/web/updates/2011/11/Quota-Management-API-Fast-Facts), de[ Eiji Kitamura.](http://blog.agektmr.com) Un regard sur l'API Quota Management dans Chrome / Blink (qui devrait également inclure Opera aussi.)
+- [Gérer des quotas sur les navigateurs mobiles (en anglais)](https://www.html5rocks.com/en/tutorials/offline/quota-research/), de [Eiji Kitamura](https://blog.agektmr.com). Une analyse détaillée du stockage côté client sur les navigateurs mobiles.
+- [Stockage de données web (en anglais)](https://web.dev/storage-for-the-web/) (<https://web.dev/>)

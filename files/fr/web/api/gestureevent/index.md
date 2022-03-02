@@ -45,7 +45,7 @@ _Cette interface hérite aussi des méthodes de ses parents {{domxref("UIEvent")
 
 ## Spécifications
 
-_Ne fait partie d'aucune spécification._ Apple a une[ description dans la bibliothèque Safari Developer](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html).
+_Ne fait partie d'aucune spécification._ Apple a une [description dans la bibliothèque Safari Developer (en anglais)](https://developer.apple.com/documentation/webkitjs/gestureevent).
 
 ## Compatibilité des navigateurs
 

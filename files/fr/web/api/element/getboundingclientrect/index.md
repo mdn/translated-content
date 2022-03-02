@@ -86,7 +86,7 @@ Remarquez aussi que les valeurs de `x`/`left`,
 
 ### Notes
 
-L'objet `DOMRect` retourné peut être modifié dans les navigateurs modernes. Cela n'était pas le cas avec ceux plus anciens qui retournaient effectivement `DOMRectReadOnly`. Dans IE et Edge, ne pas pouvoir ajouter les propriétés manquantes à l'objet [ClientRect ](<https://msdn.microsoft.com/en-us/library/hh826029(VS.85).aspx>)qu'ils retournent empêche d'ajouter le support de `x` et `y`.
+L'objet `DOMRect` retourné peut être modifié dans les navigateurs modernes. Cela n'était pas le cas avec ceux plus anciens qui retournaient effectivement `DOMRectReadOnly`. Dans IE et Edge, ne pas pouvoir ajouter les propriétés manquantes à l'objet [`ClientRect`](https://docs.microsoft.com/fr-fr/previous-versions/hh826029(v=vs.85)) qu'ils retournent empêche d'ajouter le support de `x` et `y`.
 
 En raison de problèmes de compatibilité (voir ci-dessous), il est plus sûr de se limiter aux propriétés `top`, `left`, `right`, et `bottom`.
 

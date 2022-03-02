@@ -14,9 +14,9 @@ translation_of: Web/API/WebGL_API
 ---
 {{WebGLSidebar}}
 
-WebGL (Bibliothèque de Graphismes Web) est une API JavaScript pour l'affichage de graphismes 2D et 3D dans n'importe quel navigateur web compatible sans utilisation de modules complémentaires. WebGl réalise cela en introduisant une API qui se conforme de façon très proche à OpenGL ES 2.0 et qui peut être utilisée dans les éléments [canvas ](/fr/docs/HTML/Canvas)d'HTML5.
+**WebGL** (la bibliothèque de graphismes web) est une API JavaScript pour l'affichage de graphismes 2D et 3D dans n'importe quel navigateur web compatible sans utilisation de modules complémentaires. WebGL réalise cela en introduisant une API qui se conforme de façon très proche à OpenGL ES 2.0 et qui peut être utilisée dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) de HTML5.
 
-Le support pour WebGL est présent dans [Firefox](/fr-FR/Firefox) 4+, [Google Chrome](http://www.google.com/chrome/) 9+, [Opera](http://www.opera.com/) 12+, [Safari ](http://www.apple.com/safari/)5.1+ and [Internet Explorer](http://windows.microsoft.com/fr-fr/internet-explorer/browser-ie) 11+ ; toutefois, l'appareil de l'utilisateur doit aussi avoir le matériel qui supporte ces fonctionnalités.
+Le support pour WebGL est présent dans [Firefox](/fr/docs/Mozilla/Firefox) 4+, [Google Chrome](https://www.google.com/chrome/) 9+, [Opera](https://www.opera.com/fr) 12+, [Safari](https://www.apple.com/fr/safari/) 5.1+, [Internet Explorer](https://support.microsoft.com/fr-fr/windows/aide-d-internet-explorer-23360e49-9cd3-4dda-ba52-705336cc0de2) 11+ et les versions 10240+ de [Microsoft Edge](https://www.microsoft.com/fr-fr/edge)&nbsp;; toutefois, l'appareil de l'utilisatrice ou l'utilisateur doit aussi avoir le matériel qui supporte ces fonctionnalités.
 
 L'élément {{HTMLElement("canvas")}} est aussi utilisé par [Canvas 2D](/fr-FR/docs/Web/API/Canvas_API) pour faire des graphismes 2D sur les pages web.
 

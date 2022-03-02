@@ -30,7 +30,7 @@ La méthode **`DOMImplementation.createDocument()`** crée et retourne un {{domx
 <!---->
 
 - _documentType_ {{optional_inline}}
-  - : Est le [`DocumentType`](/fr/docs/Web/API/DocumentType) du document à créer. Vaut `null `par défaut.
+  - : Est le [`DocumentType`](/fr/docs/Web/API/DocumentType) du document à créer. Vaut `null` par défaut.
 
 <!---->
 

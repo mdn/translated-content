@@ -71,7 +71,7 @@ window.addEventListener("beforeunload", function (e) {
 
 Quand l'événement retourne une valeur non nulle, l'utilisateur est invité à confirmer le déchargement de la page. Dans la plupart des navigateurs, la valeur de retour de l'événement est affiché dans une boîte de dialogue. Dans Firefox 4 et plus, la chaine de caractères retournée n'est pas affiché à l'utilisateur. A la place, Firefox affiche "Cette page demande de confirmer sa fermeture ; des données saisies pourraient ne pas être enregistrées". Voir {{bug("588292")}}.
 
-Depuis le 25 Mai 2011, la spécification HTML5 indique ques les appels aux méthodes {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} et {{domxref("window.prompt()")}} peuvent être ignorés durant l'événement. Voir [specification HTML5 ](http://www.w3.org/TR/html5/webappapis.html#user-prompts)pour plus de détails.
+Depuis le 25 mai 2011, la spécification HTML5 indique que les appels aux méthodes [`window.alert()`](/fr/docs/Web/API/Window/alert), [`window.confirm()`](/fr/docs/Web/API/Window/confirm) et [`window.prompt()`](/fr/docs/Web/API/Window/prompt) peuvent être ignorés durant l'évènement. Voir [la spécification HTML5 (en anglais)](https://html.spec.whatwg.org/multipage/timers-and-user-prompts.html#user-prompts) pour plus de détails.
 
 Noter aussi que de nombreux navigateurs ignorent le résultat  de l'événement (il n'y a donc aucune demande de confirmation). Firefox a une préférence cachée dans about:config pour faire de même. Essentiellement, cela signifie que l'utilisateur confirme toujours silencieusement que le document peut être déchargé.
 

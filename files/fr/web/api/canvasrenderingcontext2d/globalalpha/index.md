@@ -142,7 +142,7 @@ for (i = 0; i < 7; i++){
 
 ## Notes spécifiques à WebKit/Blink
 
-- Dans les navigateurs WebKit et Blink, une méthode non standard et désapprouvée `ctx.setAlpha() `est implémentée en plus de cette propriété.
+- Dans les navigateurs WebKit et Blink, une méthode non standard et désapprouvée `ctx.setAlpha()` est implémentée en plus de cette propriété.
 
 ## Voir aussi
 

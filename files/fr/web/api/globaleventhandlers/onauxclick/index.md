@@ -49,7 +49,7 @@ button.onauxclick = function() {
 }
 ```
 
-> **Note :** Si vous utilisez une souris à trois boutons, vous remarquerez que le gestionnaire` onauxclick` est exécuté lorsque l'un des boutons non gauche de la souris est cliqué.
+> **Note :** Si vous utilisez une souris à trois boutons, vous remarquerez que le gestionnaire `onauxclick` est exécuté lorsque l'un des boutons non gauche de la souris est cliqué.
 
 ## Spécifications
 

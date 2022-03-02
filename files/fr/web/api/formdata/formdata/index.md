@@ -24,7 +24,7 @@ var formData = new FormData(form)
 
 ### Paramètres
 
-- `form `{{optional_inline}}
+- `form` {{optional_inline}}
   - : Un element HTML {{HTMLElement("form")}} — quand il est spécifié, l'objet {{domxref("FormData")}} sera rempli avec les clés/valeurs du formulaire en utilisant les noms de propriétés de chaque élément pour clé et les valeurs soumises. Cela encodera aussi le contenu des fichiers.
 
 ## Exemples

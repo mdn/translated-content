@@ -97,7 +97,7 @@ Les frameworks web se chargent bien souvent d'échapper ces caractères à votre
 
 ### Falsification de requête inter-sites (CSRF)
 
-Les attaques CSRF permettent à un utilisateur malveillant d'éxécuter des actions à l'a ide des identifiants d'un autre utilisateur sans que cet utilisateur ne soit informé ou consentant.
+Les attaques CSRF permettent à un utilisateur malveillant d'éxécuter des actions à l'aide des identifiants d'un autre utilisateur sans que cet utilisateur ne soit informé ou consentant.
 
 Ce type d'attaque s'explique mieux avec un exemple. John est l'utilisateur malveillant qui sait qu'un site particulier permet à des utilisateurs authentifiés d'envoyer de l'argent vers un compte particulier en utilisant des requêtes HTTP POST qui incluent le numéro de compte et le montant. John construit un formulaire qui inclut son numéro de compte et un montant dans des champs cachés (invisibles) et le transmet à un autre utilisateur du site (avec le bouton de validation déguisé en un lien vers un site "pour devenir riche".
 
