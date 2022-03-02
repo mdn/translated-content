@@ -15,7 +15,7 @@ browser-compat: api.Document.scroll_event
 ---
 {{APIRef}}
 
-**`scroll`** 事件會在捲動document檢視區時觸發。Element元件捲動相關請參見{{domxref("Element/scroll_event", "Element:&nbsp;scroll事件")}}。
+**`scroll`** 事件會在捲動文件的可視區域時觸發。元件（Element）捲動相關請參見{{domxref("Element/scroll_event", "Element:&nbsp;scroll事件")}}。
 
 <table class="properties">
   <tbody>
@@ -46,7 +46,13 @@ browser-compat: api.Document.scroll_event
 
 ### 限制捲動事件的觸發次數
 
-有鑒於`scroll`事件可能會以很高的速率觸發，事件處理常式不應執行計算密集的操作（如DOM修改）。DOM修改建議改用{{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}}或{{DOMxRef("CustomEvent")}}限制事件的觸發次數，如下。
+Since scroll events can fire at a high rate, the event handler shouldn't execute computationally expensive operations such as DOM modifications. Instead, it is recommended to throttle the event using requestAnimationFrame(), setTimeout(), or a CustomEvent, as follows.
+
+Note, however, that input events and animation frames are fired at about the same rate, and therefore the optimization below is often unnecessary. This example optimizes thescroll event for requestAnimationFrame.
+
+
+
+有鑒於`scroll`事件可能會以很高的速率觸發，事件處理常式不應執行計算密集的操作（如DOM修改）。所以，建議改用{{DOMxRef("Window.requestAnimationFrame()", "requestAnimationFrame()")}}、{{DOMxRef("setTimeout()")}}或{{DOMxRef("CustomEvent")}}以調控事件的觸發次數，如下。
 
 不過需要注意，輸入事件和動畫影格的觸發速率大致相同，因此通常沒有必要進行下述的最佳化。本範例最佳化`requestAnimationFrame`的`scroll`事件。
 
@@ -57,7 +63,7 @@ let lastKnownScrollPosition = 0;
 let ticking = false;
 
 function doSomething(scrollPos) {
-  // 依據捲動位置進行操作
+  // 依據捲動位置進行某些操作
 }
 
 document.addEventListener('scroll', function(e) {
