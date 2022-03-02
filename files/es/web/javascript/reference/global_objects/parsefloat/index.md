@@ -27,7 +27,7 @@ parseFloat(string);
 
 ### Valor de retorno
 
-Un número decimal analizado a partir de la `cadena` dada.
+Un número de coma flotante analizado a partir de la `cadena` dada.
 
 O {{jsxref("NaN")}} cuando el primer carácter que no es un espacio en blanco
 no se puede convertir en un número.
