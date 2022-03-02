@@ -164,7 +164,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
 
 - **`formtarget`**
 
-  - : Lorsque l'attribut **`type`** possède la valeur `submit`, cet attribut indique le contexte de navigation (onglet, fenêtre, frame) associé avec le formulaire, sa cible. Outre un attribut **`id `**valide du document, il peut prendre l'une de ces valeurs particulières:
+  - : Lorsque l'attribut **`type`** possède la valeur `submit`, cet attribut indique le contexte de navigation (onglet, fenêtre, frame) associé avec le formulaire, sa cible. Outre un attribut **`id`** valide du document, il peut prendre l'une de ces valeurs particulières:
 
     - `_self` : Charge la réponse dans le même contexte de navigation que le contexte actuel. Il s'agit de la valeur par défaut si l'attribut n'est pas spécifié.
     - `_blank` : Charge la réponse dans un nouveau contexte de navigation sans nom — généralement un nouvel onglet ou une nouvelle fenêtre, selon les paramètres du navigateur de l'utilisateur.
@@ -259,7 +259,7 @@ Le ratio de contraste est calculé en comparant la luminosité de la couleur du 
 
 - [Vérificateur de contraste WebAIM (en anglais)](https://webaim.org/resources/contrastchecker/)
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.3 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_[ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- _[Understanding Success Criterion 1.4.3 - W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_
 
 ## Spécifications
 
