@@ -37,11 +37,11 @@ text-overflow: unset;
 - 一个字符串 `<string>`.
 ### 值
 - `clip`
-  - : 默认值。这个关键字会在[内容区域](/zh-cn/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)的极限处截断文本，因此在单词的中间可能会发生截断。如果你的目标浏览器支持 `text-overflow: ''`，为了能在两个单词过渡处截断，你可以使用一个空字符串值 (`''`) 作为 `text-overflow` 属性的值。
+  - : 默认值。这个关键字会在[内容区域](/zh-cn/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)的极限处截断文本，因此在单词的中间可能会发生截断。如果你的目标浏览器支持 `text-overflow: ''`，为了能在两个单词过渡处截断，你可以使用一个空字符串值 (`''`) 作为 `text-overflow` 属性的值。
 - `ellipsis`
-  - : 这个关键字会用一个省略号 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`)来表示被截断的文本。这个省略号被添加在[内容区域](/zh-cn/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)中，因此会减少显示的文本。如果空间太小以至于连省略号都容纳不下，那么这个省略号也会被截断。
+  - : 这个关键字会用一个省略号 (`'…'`, `U+2026 HORIZONTAL ELLIPSIS`)来表示被截断的文本。这个省略号被添加在[内容区域](/zh-cn/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)中，因此会减少显示的文本。如果空间太小以至于连省略号都容纳不下，那么这个省略号也会被截断。
 - `<string>` {{experimental_inline}}
-  - : {{cssxref("&lt;string&gt;")}}用来表示被截断的文本。字符串内容将被添加在[内容区域](/zh-cn/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)中，所以会减少显示出的文本。如果空间太小以至于连字符串本身都容纳不下，那么这个字符串也会被截断。
+  - : {{cssxref("&lt;string&gt;")}}用来表示被截断的文本。字符串内容将被添加在[内容区域](/zh-cn/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)中，所以会减少显示出的文本。如果空间太小以至于连字符串本身都容纳不下，那么这个字符串也会被截断。
 - `fade` {{experimental_inline}}
   - : 这个关键字将会截断行内溢出文本并在完全透明的行边缘添加一个淡出特效。
 - `fade( <length> | <percentage> )` {{experimental_inline}}
