@@ -6,12 +6,12 @@ translation_of: 'Web/API/HTMLMediaElement/loop'
 ---
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLMediaElement.loop`** reflète l'attribut HTML de la [boucle](/fr/docs/web/html/element/video#attr-loop), qui contrôle si l'élément multimédia doit recommencer lorsqu'il atteint la fin.
+La propriété **`HTMLMediaElement.loop`** reflète dans le DOM [l'attribut HTML `loop`](/fr/docs/web/html/element/video#attr-loop), qui contrôle si la lecture de l'élément multimédia doit recommencer une fois la fin du média atteinte.
 
 ## Syntaxe
 
 ```js
-var loop = video.loop;
+let loop = video.loop;
 audio.loop = true;
 ```
 
@@ -22,7 +22,7 @@ Une valeur booléenne.
 ## Exemple
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement('video');
 obj.loop = true; // vrai
 ```
 
@@ -30,10 +30,10 @@ obj.loop = true; // vrai
 
 {{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}
 
 ## Voir aussi
 
-- L'interface qui le définit, [HTMLMediaElement](fr/docs/web/api/htmlmediaelement).
+- L'interface qui porte cette propriété, [HTMLMediaElement](/fr/docs/Web/API/HTMLMediaElement).
