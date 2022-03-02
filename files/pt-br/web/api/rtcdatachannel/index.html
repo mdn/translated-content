@@ -52,74 +52,7 @@ dc.onclose = function () {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatGeckoDesktop(22) }} [1]</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatUnknown }}</td>
-  </tr>
-  <tr>
-   <td><code>onbufferedamountlow</code></td>
-   <td>{{CompatChrome(56)}}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatOpera(43)}}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(29)}}</td>
-   <td>{{CompatChrome(29)}}</td>
-   <td>{{ CompatGeckoMobile(22) }} [1]</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>onbufferedamountlow</code></td>
-   <td>{{CompatChrome(56)}}</td>
-   <td>{{CompatChrome(56)}}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile(43)}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] A interface é chamada DataChannel e não RTCDataChannel no Firefox. No entanto, uma ligação foi implementada desde o Firefox 24 para que qualquer um dos nomes funcione.</p>
+{{Compat("api.RTCDataChannel")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -106,55 +106,7 @@ Selected Text: &lt;span id="output-text"&gt;&lt;/span&gt;
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>2</td>
-   <td>3.0</td>
-   <td>4 [1]</td>
-   <td>9.6</td>
-   <td>4.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]: O IE9 tem um bug que ao tentar acessar o activeElement do {{domxref("window.parent")}} {{domxref("Document")}} de um {{HTMLElement("iframe")}}(i.e. <code>parent.document.activeElement</code>) é lançado um erro</p>
+{{Compat("api.Document.activeElement")}}
 
 <h2 id="Eventos_relacionados">Eventos relacionados</h2>
 

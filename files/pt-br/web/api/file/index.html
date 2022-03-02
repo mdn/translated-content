@@ -72,70 +72,7 @@ translation_of: Web/API/File
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade com os Navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>13</td>
-   <td>{{CompatGeckoDesktop("1.9")}} (non standard)<br>
-    {{CompatGeckoDesktop("7")}} (standard)</td>
-   <td>10.0</td>
-   <td>16.0</td>
-   <td>6.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-   <td>11.1</td>
-   <td>6.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Specification" name="Specification">Notas de Implementação</h3>
-
-<h4 id="Notas_no_Gecko">Notas no Gecko</h4>
-
-<ul>
- <li>No Gecko, você pode utilizar esta API a partir de um código do chrome. Veja <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code" title="Usando a DOM File API no código do chrome">Using the DOM File API in chrome code</a> para mais detalhes.</li>
- <li>A partir do Gecko 6.0 {{geckoRelease("6.0")}}, códigos com privilégios (como extensões) podem passar um objeto {{interface("nsIFile")}} para o construtor do DOM <code>File</code> para especificar a referência para o arquivo.</li>
- <li>A partir do Gecko 8.0 {{geckoRelease("8.0")}}, você pode usar <code>new File<font face="Open Sans, sans-serif"> para criar objetos </font></code><code>File</code> de código de componentes XPCOM ao invés de precisar instanciaro objeto {{interface("nsIDOMFile")}} direamente. O construtor recebe, em contraste com o Blob,  o nome do arquivo como segundo argumento. O nome do arquivo pode ser qualquer string.
-  <pre class="syntaxbox">File File(
-  Array parts,
-  String nomedoarquivo,
-  BlobPropertyBag propriedades
-);</pre>
- </li>
-</ul>
+{{Compat("api.File")}}
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 

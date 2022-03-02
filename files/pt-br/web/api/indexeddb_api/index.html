@@ -85,73 +85,7 @@ translation_of: Web/API/IndexedDB_API
  <li>Você deveria também checar a referência de aplicações exemplo neste documento de referências: <a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">Notificações de A Fazer</a> (<a href="http://chrisdavidmills.github.io/to-do-notifications/">veja ao vivo</a>). Nem todo fragmento de código aparece neste exemplo, mas todo exemplo usa a mesma estrutura de dados e sintaxe, e fará sentido no contexto da aplicação.</li>
 </ul>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade dos navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>API Assíncrona</td>
-   <td>
-    <p>11.0 {{ property_prefix("webkit") }}<br>
-     24</p>
-   </td>
-   <td>{{ CompatGeckoDesktop("2.0") }} {{ property_prefix("moz") }}<br>
-    {{ CompatGeckoDesktop("16.0") }}</td>
-   <td>10</td>
-   <td>17</td>
-   <td>11.1</td>
-  </tr>
-  <tr>
-   <td>API Síncrona (com <a href="https://developer.mozilla.org/en-US/docs/DOM/Using_web_workers">WebWorkers</a>)</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}<br>
-    See {{ bug(701634) }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>API Assíncrona</td>
-   <td>4.4</td>
-   <td>{{ CompatGeckoDesktop("6.0") }} {{ property_prefix("moz") }}<br>
-    {{ CompatGeckoDesktop("16.0") }}</td>
-   <td>10</td>
-   <td>17</td>
-   <td>10.3</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div class="note">
-<p>Nota: alguns browsers ainda não suportam IndexedDB mas suportam WebSQL, mais especificamente Safari/Webkit no desktop e iOS. Uma maneira de driblar este problema é utilizar IndexedDB Polyfill ou Shim, que recorre ao WebSQL para navegadores que não suportam.</p>
-</div>
 
 <h2 id="Veja_Também">Veja Também</h2>
 

@@ -63,68 +63,7 @@ translation_of: Web/HTML/Element/map
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop (1,0)}} [1] [2]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>1.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoMobile (1,0)}} [1] [2]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>1.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Notas_Gecko">Notas Gecko</h3>
-
-<p>[1] A partir do Gecko 5.0 {{geckoRelease ("5.0")}}, mapas vazios já não são ignorados para favorecer outros preenchidos quando há correspondência no modo quirk. Por exemplo, consideremos o seguinte HTML:</p>
-
-<pre class="brush: html">&lt;map&gt;&lt;/ map&gt;
-&lt;map&gt;
-  &lt;area shape="rect" coords="25,25,75,75" href="#fail"&gt;
-&lt;/map&gt;
-&lt;img usemap="#a" src="image.png"&gt;
-</pre>
-
-<p>[2] Antes do Gecko 5.0, o elemento {{HTMLElement ("img")}} devia corresponder ao segundo mapa preenchido. Agora correspode apenas ao primeiro, mesmo que ele esteja vazio.</p>
-
-<p>[3] A partir do Firefox 17 o estilo padrão do elemento HTML <code>&lt;map&gt;</code> é <code>display: inline;</code> e não mais <code>display: block;</code> . Isso coincide com o comportamento dos outros navegadores e já foi resolvido no modo quirk.</p>
+{{Compat("html.elements.map")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

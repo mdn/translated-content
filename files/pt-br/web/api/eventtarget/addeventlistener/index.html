@@ -239,73 +239,7 @@ for(i=0 ; i&lt;els.length ; i++){
 
 <h2 id="Compatiblidade_de_navegadores">Compatiblidade de navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop(1.0) }}</td>
-   <td>9.0</td>
-   <td>7</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td><code>useCapture</code> é opcional</td>
-   <td>1.0</td>
-   <td>6.0</td>
-   <td>9.0</td>
-   <td>11.60</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoMobile(1.0) }}</td>
-   <td>9.0</td>
-   <td>6.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h4 id="Notas_Gecko">Notas Gecko</h4>
-
-<ul>
- <li>Antes do Firefox 6, o navegador daria um erro se o parâmetro <code>useCapture</code> não fosse especificado <code>false</code>. Antes do Gecko 9.0 {{ geckoRelease("9.0") }}, <code>addEventListener()</code> daria um erro se o parâmetro <code>escuta</code> fosse <code>null</code>; agora o método retorna sem erros, mas também sem fazer nada.</li>
-</ul>
-
-<h4 id="Notas_Webkit">Notas Webkit</h4>
-
-<ul>
- <li>Apesar do WebKit ter explicitamente adicionado <code>[optional]</code> ao parâmetro <code>useCapture </code><a class="external" href="http://trac.webkit.org/changeset/89781">como recentemente anunciado em Junho de 2011</a>, já funcionava antes do anúncio da mudança. Ela foi anunciada no Safari 5.1 e no Chrome 13.</li>
-</ul>
+{{Compat("api.EventTarget.addEventListener")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

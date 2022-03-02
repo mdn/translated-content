@@ -78,65 +78,7 @@ body {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>48<sup>[1]</sup><br>
-    49</td>
-   <td>15063<sup>[2]</sup></td>
-   <td>{{CompatGeckoDesktop("29")}}<sup>[3]</sup><br>
-    {{CompatGeckoDesktop("31")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>36</td>
-   <td>9.3<sup>[4]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Recurso</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>50</td>
-   <td>{{CompatGeckoDesktop("29")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>37</td>
-   <td>9.3<sup>[3]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] No Chrome 48 este recurso é habilitado na configuração "Experimental Web Platform features" em <code>chrome://flags</code>.</p>
-
-<p>[2] Veja <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/csscustompropertiesakacssvariables/?q=css%20var">Edge Platform Status</a> e <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15063/">15063 Build Release Notes (2017-03-20)</a>.</p>
-
-<p>[3] Esse recurso é implementado com base na preferência <code>layout.css.variables.enabled</code>, cujo padrão é <code>false</code> e usando a antiga sintaxe <code>var-<var>variablename</var></code> no Gecko 29. A partir do Gecko 31 esta preferência é habiliitada por padrão e a nova <code>--<var>variablename</var></code> sintaxe é utilizada. A partir do Gecko 55, a preferência <code>layout.css.variables.enabled</code> foi removida completamente, assim o recurso está habilitado permanentemente e não pode ser desabilitado.</p>
-
-<p>[4] Veja {{webkitbug(19660)}}.</p>
+{{Compat("css.properties.custom-property.var")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

@@ -161,76 +161,7 @@ translation_of: Web/API/CloseEvent
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("8.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("12.0")}}<sup>[2]</sup></td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>initCloseEvent</code><code>()</code> {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("8.0")}}<br>
-    {{CompatNo}} 41.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("8.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>initCloseEvent</code><code>()</code> {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("8.0")}}<br>
-    {{CompatNo}} 41.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Anterior ao Gecko 8.0 {{geckoRelease("8.0")}}, o Gecko envia o evento WebSocket {{event("close")}}  ao ouvinte como um evento simples. O suporte para o <code>CloseEvent</code> foi implementado no Gecko 8.0.</p>
-
-<p>[2] Anterior ao Gecko 12.0 {{geckoRelease("12.0")}}, o Gecko reportava o código de encerramento <code>CLOSE_NORMAL</code> quando o canal se fechava devido a um erro inesperado, ou se a condição de erro não era coberta pela especificação. Agora <code>CLOSE_GOING_AWAY</code> é reportado em seu lugar.</p>
+{{Compat("api.CloseEvent")}}
 
 <h2 id="Veja_também">Veja também</h2>
 

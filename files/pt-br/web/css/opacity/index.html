@@ -142,68 +142,7 @@ img.opacity:hover {
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1.7")}}<sup>[1]</sup></td>
-   <td>9.0<sup>[2]</sup><br>
-    8.0<br>
-    4.0</td>
-   <td>9.0</td>
-   <td>1.2 (125)<sup>[3]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Suporte básico</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoMobile("1.7")}}<sup>[1]</sup></td>
-   <td>9.0<sup>[2]</sup><br>
-    8.0<br>
-    4.0</td>
-   <td>9.0</td>
-   <td>3.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p> </p>
-
-<p>[1] Anterior ao Gecko 1.7 (Firefox 0.9) , a propriedade <code>-moz-opacity</code> foi implementada de uma maneira não-padronizada (herdada). Com o Firefox 0.9, o comportamento mudou e a propriedade foi renomeada para <code>opacity.</code> Desde então, <code>-moz-opacity </code>foi suportada somente como um alias para <code>opacity</code>.</p>
-
-<p>Gecko 1.9.1 {{geckoRelease("1.9.1")}} e posteriores não suportam  <code>-moz-opacity</code> e o suporte para <code>MozOpacity</code> no JavaScript foi removido no Gecko 13 {{geckoRelease("13")}}. A partir de agora, você deve simplesmente usar <code>opacity</code>.</p>
-
-<p>[2] Anterior à versão 9, Internet Explorer não suporta <code>opacity</code>, em vez disso ele suporta uma propriedade <code>filter</code> com <code>alpha(opacity=xx)</code> ou <code>"alpha(opacity=xx)"</code> como valor (ambas são sinônimos). Do IE4 até o IE9 foi suportado a forma extendida <code>progid:DXImageTransform.Microsoft.Alpha(Opacity=xx)</code>. IE8introduziu <code>-ms-filter</code>, a qual é sinônimo de <code>filter</code>. Ambas foram removidas no IE10.</p>
-
-<p>[3] Similar à <code>-moz-opacity</code>, <code>-khtml-opacity</code> tem estado morta desde o início de 2004 (lançamento do Safari 1.2).<br>
- Konqueror nunca teve suporte para <code>-khtml-opacity</code> e tem suportado a propriedade <code>opacity</code> desde a versão 4.0.</p>
+{{Compat("css.properties.opacity")}}
 
 <h2 id="Veja_também">Veja também</h2>
 
