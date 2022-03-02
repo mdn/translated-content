@@ -18,7 +18,7 @@ El objeto **`EvalError`** indica un error relacionado con la función global {{j
 - {{jsxref("EvalError/EvalError", "EvalError()")}}
   - : Crea un nuevo objeto `EvalError`.
 
-## Propiedades de instancias
+## Propiedades de instancia
 
 - {{jsxref("Error.prototype.message", "EvalError.prototype.message")}}
   - : Mensaje de error.
