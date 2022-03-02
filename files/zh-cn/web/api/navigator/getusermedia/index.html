@@ -126,67 +126,7 @@ if (navigator.getUserMedia) {
 <p>新代码应当使用 {{domxref("Navigator.mediaDevices.getUserMedia()")}} 替代.</p>
 </div>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>21{{property_prefix("webkit")}} [1]</td>
-   <td>17{{property_prefix("moz")}} [3]</td>
-   <td>{{CompatNo}}</td>
-   <td>12 [2]<br>
-    18{{property_prefix("webkit")}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-<div id="compat-mobile">
-<table>
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic Support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(40.0)}}{{property_prefix("webkit")}} [2]</td>
-   <td>24{{property_prefix("moz")}} [3]</td>
-   <td>1.2{{property_prefix("moz")}} [4]<br>
-    1.4{{property_prefix("moz")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12 [2]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-<p>[1] 新版的Chrome支持未带前缀的 {{domxref("MediaDevices.getUserMedia()")}}, 用以取代此已废弃版本.</p>
-
-<p>[2] Chrome 和 Opera 仍然在使用已经过期的 constraint 语法, 但是此描述中的语法可以通过 <a href="https://github.com/webrtc/adapter">adapter.js</a> polyfill来使用.</p>
-
-<p>[3]  在此描述的constraint 语法自 Firefox 38后可用. 更早的版本 (32-37) 使用了已经过期的语法, 但是此描述中的语法可以通过 <a href="https://github.com/webrtc/adapter">adapter.js</a> polyfill来使用.</p>
-
-<p>[4] 在 Firefox OS 1.2中， 只有音频的到支持, 1.4 添加了视频支持.</p>
+{{Compat("api.Navigator.getUserMedia")}}
 
 <h2 id="更多参见">更多参见 </h2>
 
