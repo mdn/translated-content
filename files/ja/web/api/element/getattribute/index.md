@@ -5,77 +5,74 @@ tags:
   - API
   - DOM
   - Element
-  - Method
-  - Reference
   - メソッド
+  - リファレンス
+browser-compat: api.Element.getAttribute
 translation_of: Web/API/Element/getAttribute
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary"><strong><code>getAttribute()</code></strong> は {{domxref("Element")}} インターフェイスのメソッドで、要素の指定された属性の値を返します。</span>指定された属性が存在しない場合、値は <code>null</code> か <code>""</code> (空文字列) のどちらかになります。詳しくは<a href="#Non-existing_attributes">属性が存在しない場合</a>を参照してください。</p>
+**`getAttribute()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素の指定された属性の値を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+指定された属性が存在しない場合、値は `null` か `""` （空文字列）のどちらかになります。詳しくは[属性が存在しない場合](#属性が存在しない場合)を参照してください。
 
-<pre class="syntaxbox">let <var>attribute</var> = <var>element</var>.getAttribute(<var>attributeName</var>);
-</pre>
+## 構文
 
-<p>ここで、</p>
+```js
+let attribute = element.getAttribute(attributeName);
+```
 
-<ul>
- <li><code><var>attribute</var></code> は <code><var>attributeName</var></code> の値を持つ文字列です。</li>
- <li><code><var>attributeName</var></code> は値を取得したい属性の名前です。</li>
-</ul>
+ここで、
 
-<h2 id="Examples" name="Examples">例</h2>
+- `attribute` は `attributeName` の値を持つ文字列です。
+- `attributeName` は値を取得したい属性の名前です。
 
-<pre class="brush:js">const div1 = document.getElementById('div1');
-const align = div1.getAttribute('align');
+## 例
 
-alert(align); // id="div1" の要素の align の値を表示します。</pre>
+```js
+<!-- HTML 文書内の div の例 -->
+<div id="div1">Hi Champ!</div>
 
-<h2 id="Description" name="Description">解説</h2>
+// コンソールへの出力
+const div1 = document.getElementById('div1');
+//=> <div id="div1">Hi Champ!</div>
 
-<h3 id="Lower_casing" name="Lower_casing">小文字化</h3>
+const exampleAttr= div1.getAttribute('id');
+//=> "div1"
 
-<p>HTML 文書である DOM の HTML 要素に対して呼び出すと、 <code>getAttribute()</code> は処理前に引数を小文字化します。</p>
+const align = div1.getAttribute('align')
+//=> null
+```
 
-<h3 id="Non-existing_attributes" name="Non-existing_attributes">属性が存在しない場合</h3>
+## 解説
 
-<p>基本的にはすべてのウェブブラウザー (限定的なリストですが Firefox, Internet Explorer, Opera の最新バージョン, Safari, Konqueror, iCab など) は、指定された要素に指定された属性が存在しない場合は <code>null</code> を返します。これは<a href="http://dom.spec.whatwg.org/#dom-element-getattribute">現在の DOM 仕様書の草稿</a>で指定されています。一方、古い DOM 3 Core 仕様書では、このような場合の正しい返値は実際には<em>空文字列</em>となっています。そしていくつかの DOM の実装はこの動作を実装しています。実際、 <code>getAttribute()</code> の XUL (Gecko) での実装では、 DOM 3 Core 仕様書に従い空文字列を返します。結果的に、指定された要素に指定された属性が存在しない可能性があるのであれば、 {{domxref("element.hasAttribute()")}} を使用して属性の存在をチェックしてから <code>getAttribute()</code> を呼び出すべきでしょう。</p>
+### 小文字化
 
-<h3 id="Retrieving_nonce_values" name="Retrieving_nonce_values">ノンス値の受け取り</h3>
+HTML 文書とされている DOM の HTML 要素に対して呼び出すと、 `getAttribute()` は処理前に引数を小文字化します。
 
-<p>セキュリティ上の理由で、スクリプト以外、例えば CSS セレクターから来た <a href="/ja/docs/Web/HTTP/CSP">CSP</a> のノンスと、 <code>.getAttribute("nonce")</code> の呼び出しは隠蔽されます。</p>
+### 属性が存在しない場合
 
-<pre class="brush: js example-bad">let nonce =  script.getAttribute('nonce');
+基本的にはすべてのウェブブラウザー（限定的なリストですが Firefox, Internet Explorer, Opera の最新バージョン, Safari, Konqueror, iCab など）は、指定された要素に指定された属性が存在しない場合は `null` を返します。これは[現在の DOM 仕様書の草稿](https://dom.spec.whatwg.org/#dom-element-getattribute)で指定されています。一方、古い DOM 3 Core 仕様書では、このような場合の正しい返値は実際には空文字列となっています。そしていくつかの DOM の実装はこの動作を実装しています。実際、 `getAttribute()` の XUL (Gecko) での実装では、 DOM 3 Core 仕様書に従い空文字列を返します。結果的に、指定された要素に指定された属性が存在しない可能性があるのであれば、 {{domxref("element.hasAttribute()")}} を使用して属性の存在をチェックしてから `getAttribute()` を呼び出すべきでしょう。
+
+### ノンス値の受け取り
+
+セキュリティ上の理由で、スクリプト以外、例えば CSS セレクターから来た [CSP](/ja/docs/Web/HTTP/CSP) のノンスと、 `.getAttribute("nonce")` の呼び出しは隠蔽されます。
+
+```js example-bad
+let nonce =  script.getAttribute('nonce');
 // 空文字列が返される
-</pre>
+```
 
-<p>コンテンツ属性のノンスをるには、代わりに <code><a href="/ja/docs/Web/API/HTMLOrForeignElement/nonce">nonce</a></code> プロパティを使用してください。</p>
+コンテンツ属性のノンスをるには、代わりに {{domxref("HTMLElement/nonce", "nonce")}} プロパティを使用してください。
 
-<pre class="brush: js">let nonce =  script.nonce;</pre>
+```js
+let nonce =  script.nonce;
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-element-attachshadow', 'attachShadow()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Element.getAttribute")}}</p>
-</div>
+{{Compat}}
