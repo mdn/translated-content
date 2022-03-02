@@ -304,68 +304,8 @@ translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 }
 </pre>
   <p>  這裡的機制很簡單，我們找到 "slideLeft" 而後將他改變成 "slideRight"，接著動畫便結束。倘若此時並沒有 "slideLeft"，就表示已在右端點，於是執行反向動作。</p>
-  <h2 id="瀏覽器的支援情形">瀏覽器的支援情形</h2>
-  <p>{{ CompatibilityTable() }}</p>
-  <div id="compat-desktop">
-   <table class="compat-table">
-    <tbody>
-     <tr>
-      <th>Feature</th>
-      <th>Chrome</th>
-      <th>Firefox (Gecko)</th>
-      <th>Internet Explorer</th>
-      <th>Opera</th>
-      <th>Safari (WebKit)</th>
-     </tr>
-     <tr>
-      <td>Basic support</td>
-      <td>1.0</td>
-      <td>{{ CompatGeckoDesktop("2") }}</td>
-      <td>10</td>
-      <td>10.5</td>
-      <td>3.2</td>
-     </tr>
-     <tr>
-      <td>Property</td>
-      <td><code>-webkit-transition</code></td>
-      <td><code>-moz-transition</code></td>
-      <td><code>-ms-transition</code></td>
-      <td><code>-o-transition</code></td>
-      <td><code>-webkit-transition</code></td>
-     </tr>
-     <tr>
-      <td>Transition ended event</td>
-      <td><code>webkitTransitionEnd</code></td>
-      <td><code>transitionend</code></td>
-      <td><code>MSTransitionEnd</code></td>
-      <td><code>oTransitionEnd</code></td>
-      <td><code>webkitTransitionEnd</code></td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
-  <div id="compat-mobile">
-   <table class="compat-table">
-    <tbody>
-     <tr>
-      <th>Feature</th>
-      <th>Android</th>
-      <th>Firefox Mobile (Gecko)</th>
-      <th>IE Phone</th>
-      <th>Opera Mobile</th>
-      <th>Safari Mobile</th>
-     </tr>
-     <tr>
-      <td>Basic support</td>
-      <td>2.1</td>
-      <td>{{ CompatGeckoMobile("2") }}</td>
-      <td>{{ CompatUnknown() }}</td>
-      <td>10</td>
-      <td>3.2</td>
-     </tr>
-    </tbody>
-   </table>
-  </div>
+
+
   <h2 id="更多資訊">更多資訊</h2>
   <ul>
    <li><a class="external" href="http://dev.w3.org/csswg/css3-transitions/">CSS Transitions</a></li>

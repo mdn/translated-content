@@ -91,66 +91,8 @@ translation_of: Web/CSS/@viewport
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{CompatibilityTable}}</p>
+{{Compat("css.at-rules.viewport")}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>29 (behind a flag) [4]</td>
-   <td>{{CompatNo()}} [2]</td>
-   <td>10 {{property_prefix("-ms")}}</td>
-   <td>11.10<br>
-    Removed in 15<br>
-    Reintroduced behind a flag in 16</td>
-   <td>{{CompatNo}} [3]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4.4</td>
-   <td>29</td>
-   <td>{{CompatNo}} [2]</td>
-   <td>10{{property_prefix("-ms")}}[1]</td>
-   <td>11.10<br>
-    Removed in 15<br>
-    Reintroduced behind a flag in 16</td>
-   <td>{{CompatNo}} [3]</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] There is a bug in IE Mobile 10 on older versions of Windows Phone 8, where <code>device-width</code>, when used within <code>@-ms-viewport</code>, evaluates to the screen width in physical pixels rather than normalized CSS pixels, which is wrong according to the specification. However, when used within a <code>viewport</code> {{HTMLElement("meta")}} tag, <code>device-width</code> evaluates correctly. According to Microsoft, this bug was fixed in <a href="http://blogs.windows.com/windows_phone/b/wpdev/archive/2013/10/14/introducing-windows-phone-preview-for-developers.aspx">Windows Phone 8 Update 3 (a.k.a. GDR3)</a>, although there are some reports that the <a href="http://www.nokia.com/us-en/windows-phone-black-update/">Lumia Black</a> GDR3 update did not fix the bug (at least on the Lumia 920). For more details and a workaround, <a href="http://timkadlec.com/2013/01/windows-phone-8-and-device-width/">see Tim Kadlec's blog post "Windows Phone 8 and Device-Width"</a>.</p>
-
-<p>[2]: See {{bug(747754, 'summary')}}</p>
-
-<p>[3]: See {{webkitbug(95959)}}</p>
-<p>[4]: See <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=235457">Chromium issue #235457: Enable @viewport on all platforms</a></p>
 <h2 id="See_also">See also</h2>
 
 <ul>
