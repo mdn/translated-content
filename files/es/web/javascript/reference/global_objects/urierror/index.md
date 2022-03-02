@@ -1,8 +1,8 @@
 ---
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
-browser-compat: javascript.builtins.URIError
 translation_of: Web/JavaScript/Reference/Global_Objects/URIError
+browser-compat: javascript.builtins.URIError
 ---
 {{JSRef}}
 
@@ -80,3 +80,4 @@ try {
 - {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
 - {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
+
