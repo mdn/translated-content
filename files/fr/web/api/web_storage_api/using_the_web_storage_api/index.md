@@ -177,7 +177,7 @@ window.addEventListener('storage', function(e) {
 });
 ```
 
-Ici nous avons ajouté un event listener à l'objet `window `qui se lance quand l'objet {{domxref("Storage")}}, associée à l'origine courante, est modifié. Comme vous pouvez le voir ci-dessus, l'objet événement associé à cet événement a de nombreuses propriétés contenant des informations utiles: la clé de la donnée qui a changé, l'ancienne valeur avant le changement, la nouvelle valeur après le changement, l'URL du document qui a changé le stockage et l'objet stockage lui-même.
+Ici nous avons ajouté un écouteur d'évènement à l'objet `window` qui se lance quand l'objet [`Storage`](/fr/docs/Web/API/Storage), associé à l'origine courante, est modifié. Comme vous pouvez le voir ci-dessus, l'objet évènement associé à cet évènement a de nombreuses propriétés contenant des informations utiles&nbsp;: la clé de la donnée qui a changé, l'ancienne valeur avant le changement, la nouvelle valeur après le changement, l'URL du document qui a changé le stockage et l'objet stockage lui-même.
 
 ## Supprimer des données
 

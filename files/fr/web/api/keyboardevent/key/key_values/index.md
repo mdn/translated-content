@@ -7,7 +7,7 @@ Les tableaux ci-dessous énumèrent les valeurs clés standard dans différentes
 
 Apprenez à utiliser ces valeurs clés en JavaScript en utilisant [KeyboardEvent.key](/fr/docs/Web/API/KeyboardEvent/key)
 
-[Special Values ](#Special_values)| [Modifier Keys](#Modifier_keys) | [Whitespace Keys](#Whitespace_keys) | [Navigation Keys](#Navigation_keys) | [Editing Keys](#Editing_keys) | [UI Keys](#UI_keys) | [Device Keys](#Device_keys) | [IME and Composition Keys](#IME_and_composition_keys) | [Function Keys](#Function_keys) | [Phone Keys](#Phone_keys) | [Multimedia Keys](#Multimedia_keys) | [Audio Control Keys](#Audio_control_keys) | [TV Control Keys](#TV_control_keys) | [Media Controller Keys](#Media_controller_keys) | [Speech Recognition Keys](#Speech_recognition_keys) | [Document Keys](#Document_keys) | [Application Selector Keys](#Application_selector_keys) | [Browser Control Keys](#Browser_control_keys) | [Numeric Keypad Keys](#Numeric_keypad_keys)
+[Valeurs spéciales](#valeurs_spéciales) | [Modifier Keys](#modifier_keys) | [Whitespace Keys](#whitespace_keys) | [Navigation Keys](#navigation_keys) | [Editing Keys](#editing_keys) | [UI Keys](#ui_keys) | [Device Keys](#device_keys) | [IME and Composition Keys](#ime_and_composition_keys) | [Function Keys](#function_keys) | [Phone Keys](#phone_keys) | [Multimedia Keys](#multimedia_keys) | [Audio Control Keys](#audio_control_keys) | [TV Control Keys](#tv_control_keys) | [Media Controller Keys](#media_controller_keys) | [Speech Recognition Keys](#speech_recognition_keys) | [Document Keys](#document_keys) | [Application Selector Keys](#application_selector_keys) | [Browser Control Keys](#browser_control_keys) | [Numeric Keypad Keys](#numeric_keypad_keys)
 
 ## Valeurs spéciales
 

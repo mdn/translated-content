@@ -6,7 +6,7 @@ original_slug: Web/Events/readystatechange
 ---
 {{ApiRef}}
 
-L'événement `readystatechange` est déclenché lorsque l'attribut [`readyState` ](/fr/docs/DOM/document.readyState)d'un document a changé.
+L'évènement **`readystatechange`** est déclenché lorsque l'attribut [`readyState`](/fr/docs/Web/API/Document/readyState) d'un document a changé.
 
 ## Information générale
 

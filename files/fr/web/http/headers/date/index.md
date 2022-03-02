@@ -30,15 +30,15 @@ L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du me
   - : L'un des mots "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ou "Sun" (sensible à la casse).
 - \<day>
   - : Numéro de jour à 2 chiffres, par ex. "04" ou "23".
-- < month>
+- \<month>
   - : L'un des mots "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" (sensible à la casse).
-- < year>
+- \<year>
   - : Numéro d'année à 4 chiffres, par exemple "1990" ou "2018".
-- < hour>
+- \<hour>
   - : Numéro d'heure à 2 chiffres, par exemple "09" or "23".
-- < minute>
+- \<minute>
   - : Numéro d'heure à 2 chiffres, par exemple "04" or "59".
-- < second>
+- \<second>
   - : Numéro de seconde à 2 chiffres, par exemple "04" or "59".
 - GMT
   - : Temps sur le Méridien de Greenwich. Les dates HTTP sont toujours exprimées en GMT, jamais en heure locale.

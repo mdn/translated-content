@@ -10,7 +10,7 @@ translation_of: Web/API/Range/setStart
 ---
 {{ApiRef("DOM")}}
 
-La methode **`Range.setStart() `**définit la position de départ d'un {{ domxref("Range") }}.
+La méthode **`Range.setStart()`** définit la position de départ d'un objet [`Range`](/fr/docs/Web/API/Range).
 
 Si le `startNode` est un {{ domxref("Node") }}  de type `Text`, `Comment`, ou `CDATASection`, alors startOffset est le nombre de caractères depuis le départ du `startNode`. Pour les autres types de `Nœud`, `startOffset` est le nombre de noeuds enfants entre le debut du `startNode`.
 

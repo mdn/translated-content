@@ -59,7 +59,7 @@ La propriété XMLHttpRequest.readyState renvoie l'état dans lequel se trouve u
 - DONE
   - : L'opération de récupération est terminée. Cela peut signifier que le transfert de données a été effectué avec succès ou a échoué.
 
-> **Note :** Les noms des états sont différents dans les versions d'Internet Explorer antérieures à 11. Au lieu de `UNSENT`, `OPENED`,` HEADERS_RECEIVED`,` LOADING` and `DONE`, the names `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) et `READYSTATE_COMPLETE` (4) sont utilisés.
+> **Note :** Les noms des états sont différents dans les versions d'Internet Explorer antérieures à 11. Au lieu de `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING` et `DONE`, les noms `READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) et `READYSTATE_COMPLETE` (4) sont utilisés.
 
 ## Exemple
 

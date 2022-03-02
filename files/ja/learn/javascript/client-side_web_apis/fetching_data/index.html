@@ -199,7 +199,7 @@ request.send();</pre>
 
 <h4 id="Fetch_のコードでは何が起きている">Fetch のコードでは何が起きている?</h4>
 
-<p>まず最初に、{{domxref("WorkerOrWindowGlobalScope.fetch()","fetch()")}} メソッドが呼ばれ、取得したいリソースの URL が渡されています。これは XHR の {{domxref("XMLHttpRequest.open","request.open()")}} の今時な同等品で、さらに言えば <code>.send()</code> に相当するものは必要ありません。</p>
+<p>まず最初に、{{domxref("fetch()")}} メソッドが呼ばれ、取得したいリソースの URL が渡されています。これは XHR の {{domxref("XMLHttpRequest.open","request.open()")}} の今時な同等品で、さらに言えば <code>.send()</code> に相当するものは必要ありません。</p>
 
 <p>その後に、{{jsxref("Promise.then",".then()")}} メソッドが <code>fetch()</code> の後に連鎖されているのがわかるでしょう — このメソッドは {{jsxref("Promise","Promises")}} の一部で、非同期処理を行なうための今風な JavaScript に備わる機能です。<code>fetch()</code> はプロミスを返し、これはサーバから送られたレスポンスによって解決されます — <code>.then()</code> を使ってプロミスが解決された後にある種後始末のコードを走らせるようにし、そのコードとは内側で定義した関数にあたります。これは XHR 版の <code>onload</code> イベントハンドラに相当します。</p>
 
