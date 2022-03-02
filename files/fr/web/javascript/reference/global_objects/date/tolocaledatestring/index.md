@@ -27,7 +27,7 @@ Les arguments `locales` et `options` permettent d'adapter le comportement de la 
 
 Pour les implémentations qui ignorent les arguments `locales` et `options`, la locale utilisée et la forme de la chaîne de caractères résultante dépendent intégralement de l'implémentation.
 
-Voir [la page du constructeur `Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Intl/DateTimeFormat/DateTimeFormat) pour plus de détails sur ces paramètres et leur utilisation.
+Voir [la page du constructeur `Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) pour plus de détails sur ces paramètres et leur utilisation.
 
 La valeur par défaut pour chaque propriété composant la date/heure est [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), mais si les propriétés `weekday`, `year`, `month`, `day` valent toutes [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), alors `year`, `month`, et `day` sont considérés comme `"numeric"`.
 
@@ -51,8 +51,8 @@ let date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 // toLocaleDateString() sans argument, on utilise donc
 // les valeurs par défaut (de l'implémentation)
 // pour la locale, et le fuseau horaire
-date.toLocaleDateString();
-// → "12/12/2012" si exécuté dans une locale fr et le fuseau horaire CEST
+console.log(date.toLocaleDateString());
+// → "12/12/2012" si exécuté dans une locale fr et le fuseau horaire UTC+01:00
 ```
 
 ### Vérifier la prise en charge des arguments `locales` et `options`
@@ -93,7 +93,7 @@ console.log(date.toLocaleDateString("ko-KR"));
 // → "2012. 12. 20."
 
 // le perse utilise un calendrier solaire
-console.log(date.toLocaleDateString('fa-IR'));
+console.log(date.toLocaleDateString("fa-IR"));
 // → "۱۳۹۱/۹/۳۰"
 
 // l'arabe, dans la plupart des pays arabophones, utilise les chiffres arabes
@@ -106,7 +106,7 @@ console.log(date.toLocaleDateString("ar-EG"));
 console.log(date.toLocaleDateString("ja-JP-u-ca-japanese"));
 // → "24/12/20"
 
-// quand un langage non support est demandé (ex : le balinais)
+// quand un langage non pris en charge est demandé (par exemple le balinais)
 // il est possible de fournir un langage de recours (ici l'indonésien)
 console.log(date.toLocaleDateString(["ban", "id"]));
 // → "20/12/2012"
@@ -119,7 +119,7 @@ Les résultats fournis par `toLocaleDateString()` peuvent être personnalisés g
 ```js
 let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
-// fournir le jour de la semaine avec une date longe
+// fournir le jour de la semaine avec une date longue
 let options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
 console.log(date.toLocaleDateString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
@@ -129,7 +129,7 @@ console.log(date.toLocaleDateString("de-DE", options));
 options.timeZone = "UTC";
 options.timeZoneName = "short";
 console.log(date.toLocaleDateString("en-US", options));
-// → "Thursday, December 20, 2012, GMT"
+// → "Thursday, December 20, 2012, UTC"
 ```
 
 ## Spécifications

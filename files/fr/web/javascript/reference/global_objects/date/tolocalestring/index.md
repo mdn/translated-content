@@ -29,9 +29,9 @@ Les arguments `locales` et `options` permettent d'adapter le comportement de la 
 
 Pour les implémentations qui ignorent les arguments `locales` et `options`, la locale utilisée et la forme de la chaîne de caractères résultante dépendent intégralement de l'implémentation.
 
-Voir [la page du constructeur `Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Intl/DateTimeFormat/DateTimeFormat) pour plus de détails sur ces paramètres et leur utilisation.
+Voir [la page du constructeur `Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) pour plus de détails sur ces paramètres et leur utilisation.
 
-La valeur par défaut de chacun des composants de la date-heure vaut [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), mais si les propriétés `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second` sont toutes [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), alors `weekday`, `year`, `month`, `day`, `hour`, `minute` et `second` sont supposés être "numeric".
+La valeur par défaut de chacun des composants de la date-heure vaut [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), mais si les propriétés `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second` sont toutes [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), alors `weekday`, `year`, `month`, `day`, `hour`, `minute` et `second` sont supposés être `"numeric"`.
 
 ### Valeur de retour
 
@@ -44,13 +44,13 @@ Une chaîne de caractères représentant la date indiquée selon des conventions
 Voici un usage simple qui ne définit pas de locale&nbsp;: une chaine de caractères dans une locale et avec des options par défaut est renvoyée.
 
 ```js
-let date = new Date(Date.UTC(2014, 11, 21, 3, 0, 0));
+let date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 
 // toLocaleString() sans argument, on utilise donc
 // les valeurs par défaut (de l'implémentation)
 // pour la locale, et le fuseau horaire
 console.log(date.toLocaleString());
-// → "21/12/2014 04:00:00" si exécuté dans une locale fr et le fuseau horaire CEST
+// → "12/12/2012, 04:00:00" si exécuté dans une locale fr et le fuseau horaire UTC+01:00
 ```
 
 ### Vérifier la prise en charge des arguments `locales` et `options`
@@ -78,13 +78,13 @@ let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 // les formats qui suivent se basent sur le
 // fuseau horaire CEST
 
-l'anglais américain utilise l'ordre mois-jour-année
+// l'anglais américain utilise l'ordre mois-jour-année
 console.log(date.toLocaleString("en-US"));
 // → "12/20/2012, 4:00:00 AM"
 
 // l'anglais britannique utilise l'ordre jour-mois-année
 console.log(date.toLocaleString("en-GB"));
-// → "20/12/2012 04:00:00"
+// → "20/12/2012, 04:00:00"
 
 // le coréen utilise l'ordre année-mois-jour
 console.log(date.toLocaleString("ko-KR"));
@@ -98,9 +98,9 @@ console.log(date.toLocaleString("ar-EG"));
 // souhaiter utiliser le calendrier japonais
 // pour lequel 2012 était l'année 24 de l'ère Heisei
 console.log(date.toLocaleString("ja-JP-u-ca-japanese"));
-// → "24/12/20 4:00:00"
+// → "H24/12/20 4:00:00"
 
-// quand un langage non support est demandé (ex : le balinais)
+// quand un langage non pris en charge est demandé (par exemple le balinais)
 // il est possible de fournir un langage de recours (ici l'indonésien)
 console.log(date.toLocaleString(["ban", "id"]));
 // → "20/12/2012 04.00.00"
@@ -115,14 +115,16 @@ let date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // obtenir le jour de la semaine avec une date longue
 let options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+
 console.log(date.toLocaleString("de-DE", options));
 // → "Donnerstag, 20. Dezember 2012"
 
 // une application peut vouloir utiliser UTC et le rendre visible
 options.timeZone = "UTC";
 options.timeZoneName = "short";
+
 console.log(date.toLocaleString("en-US", options));
-// → "Thursday, December 20, 2012, GMT"
+// → "Thursday, December 20, 2012, UTC"
 
 // parfois, même les USA ont besoin d'avoir une heure sur 24h
 console.log(date.toLocaleString("en-US", {hour12: false}));
