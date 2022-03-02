@@ -35,7 +35,7 @@ El objeto **`EvalError`** indica un error relacionado con la función global {{j
 
 ## Ejemplos
 
-El objeto `EvalError` no se utiliza en la especificación actual de ECMAScript y por lo tanto no será lanzado por el tiempo de ejecución. Sin embargo, el objeto en sí se mantiene para la compatibilidad con versiones anteriores de la especificación.
+El objeto `EvalError` no se utiliza en la especificación actual de ECMAScript y por lo tanto no será lanzado en tiempo de ejecución. Sin embargo, el objeto en sí se mantiene para la compatibilidad con versiones anteriores de la especificación.
 
 ### Creación de un EvalError
 
