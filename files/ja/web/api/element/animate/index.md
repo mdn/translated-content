@@ -1,120 +1,81 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
+tags:
+  - API
+  - アニメーション
+  - Element
+  - メソッド
+  - リファレンス
+  - ウェブアニメーション
+browser-compat: api.Element.animate
 translation_of: Web/API/Element/animate
 ---
-<div>{{APIRef('Web Animations')}} {{SeeCompatTable}}</div>
+{{APIRef('Web Animations')}}
 
-<p>{{domxref("Element")}} インターフェースの <strong><code>animate()</code></strong> メソッドは、新たに {{domxref("Animation")}} の作成、対象要素への適用、そしてアニメーションの再生を行うショートカットメソッドです。戻り値として {{domxref("Animation")}} オブジェクトのインスタンスを返します。</p>
+{{domxref("Element")}} インターフェイスの **`animate()`** メソッドは、新しい {{domxref("Animation")}} の生成、この要素への適用、そしてアニメーションの再生を行うショートカットメソッドです。生成した {{domxref("Animation")}} オブジェクトのインスタンスを返します。
 
-<h2 id="構文">構文</h2>
+> **Note:** 要素には複数のアニメーションを適用することができます。 {{domxref("Element.getAnimations()")}} を呼び出すと、要素に作用するアニメーションのリストを取得することができます。
 
-<pre class="syntaxbox"><var>element</var>.animate(<var>keyframes</var>, <var>options</var>);
-</pre>
+## 構文
 
-<h3 id="引数">引数</h3>
+```js
+animate(keyframes, options)
+```
 
-<dl>
- <dt><code>keyframes</code></dt>
-</dl>
+### 引数
 
-<ol>
- <li>列挙可能な値の配列をプロパティに持つ keyframes オブジェクト</li>
- <li>keyframes オブジェクトから成る配列</li>
-</ol>
+- `keyframes`
+  - : キーフレームオブジェクトの配列、**または**プロパティが反復処理可能な値の配列である単一のキーフレームオブジェクトのどちらかです。詳しくは [Keyframe の書式](/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats)を参照してください。
+- `options`
 
-<dl>
- <dd>のどちらかを指定します。keyframes 形式の詳細については <a href="/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats">Keyframe Formats</a> で確認できます。</dd>
- <dd>
- <ol>
-  <li>変化させたい CSS プロパティをキーとし、そのプロパティ値を遷移の順番に並べた配列を値としたオブジェクト
-   <pre class="brush: js"><em>element.</em>animate({
-  opacity: [ 0, 1 ], // [ フレーム 1, フレーム 2 ]
-  color: [ "#fff", "#000" ] // [ フレーム 1, フレーム 2 ]
-}, 2000);
-</pre>
-  </li>
-  <li>CSS プロパティとそのプロパティ値からなるオブジェクトを、遷移の順番に並べた配列
-   <pre class="brush: js"><em>element</em>.animate([
-  { // フレーム 1
-    opacity: 0,
-    color: "#fff"
-  },
-  { // フレーム 2
-    opacity: 1,
- ​   color: "#000"
-  }
-], 2000);</pre>
-  </li>
- </ol>
- </dd>
- <dt><code>options</code></dt>
- <dd>アニメーションの再生時間を表す ms 単位の整数値、または  <a href="/ja/docs/Web/API/Web_Animations_API/Animation_timing_options">animation timing options</a> を含むオブジェクトを渡す必要があります。後者の場合、<a href="/ja/docs/Web/API/Web_Animations_API/Animation_timing_options">animation timing options</a> のプロパティに加え、以下のようなプロパティも追加して <code>animate()</code> に渡すことができます。</dd>
-</dl>
+  - : **アニメーションの再生時間を表す整数値**（ミリ秒単位）、**または** [`KeyframeEffect()` のオプションの引数](/ja/docs/Web/API/KeyframeEffect)や次のオプションで記述された 1 つ以上のタイミングプロパティを含むオブジェクトのどちらかです。
 
-<h4 id="keyframeOptions_に追加できるプロパティ">keyframeOptions に追加できるプロパティ</h4>
+    - `id {{optional_inline}}`
+      - : `animate()` の固有のプロパティです。このアニメーションを参照する [`DOMString`](/ja/docs/Web/API/DOMString) です。
 
-<dl>
- <dt><code>id</code></dt>
- <dd>アニメーションを参照する文字列</dd>
-</dl>
+### 返値
 
-<dl>
- <dt><code>composite</code></dt>
- <dd>Determines how values are combined between this animation and other, separate animations that do not specify their own specific composite operation. デフォルト値は <code>replace</code> です。
- <ul>
-  <li><code>add</code> dictates an additive effect, where each successive iteration builds on the last. 例として <code>transform</code> <code>を挙げると</code>、<code>translateX(-200px)</code> は自身よりも前に指定されていた <code>rotate(20deg)</code> の値を上書きすることはありませんが、合成結果は <code>translateX(-200px) rotate(20deg)</code> になります。</li>
-  <li><code>accumulate</code> を指定した場合、<code>add</code> に似ていますがよりスマートな結果が得られ、<code>blur(2)</code> と <code>blur(5)</code> の合成結果は <code>blur(7)</code> になります（<code>blur(2) blur(5)</code> ではありません）。</li>
-  <li><code>replace</code> を指定した場合、前回の値は新しい値で上書きされます。</li>
- </ul>
- </dd>
- <dt><code>iterationComposite</code></dt>
- <dd>Defines the way animation values build from iteration to iteration. <code>accumulate</code> または <code>replace</code> を指定できます（上記参照）。デフォルト値は <code>replace</code> です。</dd>
-</dl>
+{{domxref("Animation")}} を返します。
 
-<h3 id="戻り値">戻り値</h3>
+## 例
 
-<p>{{domxref("Animation")}} を返します。</p>
+[Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010) のデモでは、上に向かって永遠に流れ続けるアニメーションが `#tunnel` 要素に施されています。ここでは、アニメーションを素早く作成して再生できる `animate()` メソッドが用いられています。keyframes として渡されているオブジェクト配列と、timing options として渡されているオブジェクトに注目してください。
 
-<h2 id="使用例">使用例</h2>
-
-<p><a href="https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010">Down the Rabbit Hole (with the Web Animation API)</a> のデモでは、上に向かって永遠に流れ続けるアニメーションが <code>#tunnel</code> 要素に施されています。ここでは、アニメーションを素早く作成して再生できる <code>animate()</code> メソッドが用いられています。keyframes として渡されているオブジェクト配列と、timing options として渡されているオブジェクトに注目してください。</p>
-
-<pre class="brush: js">document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translate3D(0, 0, 0)' },
-  { transform: 'translate3D(0, -300px, 0)' }
+```js
+document.getElementById("tunnel").animate([
+  // keyframes
+  { transform: 'translateY(0px)' },
+  { transform: 'translateY(-300px)' }
 ], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
+  // timing options
+  duration: 1000,
+  iterations: Infinity
 });
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+### 暗黙の開始/終了キーフレーム
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#the-animatable-interface', 'animate()' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Editor's draft.</td>
-  </tr>
- </tbody>
-</table>
+新しいバージョンのブラウザーでは、アニメーションの開始または終了状態のみ（つまり、単一のキーフレーム）で設定することができ、可能であればブラウザーがアニメーションのもう一方を推測します。例えば、[この簡単なアニメーション](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) を考えてみましょう。 Keyframe オブジェクトは次のようなものです。
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+```js
+let rotate360 = [
+  { transform: 'rotate(360deg)' }
+];
+```
 
-<p>{{Compat("api.Element.animate")}}</p>
+アニメーションの終了状態を指定しただけで、開始状態は暗黙になっています。
 
-<h2 id="参考情報">参考情報</h2>
+## 仕様書
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
+- {{domxref("Element.getAnimations()")}}
+- {{domxref("Animation")}}
