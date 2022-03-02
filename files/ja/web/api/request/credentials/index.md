@@ -42,11 +42,11 @@ var myRequest = new Request('flowers.jpg');
 var myCred = myRequest.credentials; // 既定では "same-origin" を返す
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 
