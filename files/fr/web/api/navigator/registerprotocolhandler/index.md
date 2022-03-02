@@ -1,48 +1,129 @@
 ---
-title: window.navigator.registerProtocolHandler
+title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
-tags:
-  - Firefox 3
 translation_of: Web/API/Navigator/registerProtocolHandler
+browser-compat: api.Navigator.registerProtocolHandler
 ---
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
-### Résumé
+La méthode **`registerProtocolHandler()`**, rattachée à l'interface **[`Navigator`](/fr/docs/Web/API/Navigator)**, permet aux sites de déclarer leur capacité à gérer certains schémas d'URL particuliers (autrement dit les protocoles).
 
-Permet aux sites web de s'enregistrer en tant que gestionnaires possibles pour des protocoles particuliers.
+Ainsi, cette API permettra aux sites de webmail d'ouvrir les URL `mailto:` URLs, ou aux sites VoIP d'ouvrir des URL `tel:`.
 
-> **Note:** Un site web ne peut enregistrer de gestionnaires de protocoles que pour lui-même. Pour des raisons de sécurité, il n'est pas possible pour une extension ou un site d'enregistrer des gestionnaires de protocoles ciblant d'autres sites.
+## Syntaxe
 
-### Syntaxe
+```js
+registerProtocolHandler(schema, url)
+registerProtocolHandler(schema, url, titre)
+```
 
-    window.navigator.registerProtocolHandler(protocole,uri,titre);
+> **Note :** La version avec l'argument déprécié `titre` est recommandée pour des raisons de compatibilité. Voir les informations sur les paramètres ci-après.
 
-- `protocole` est le protocole que le site désire gérer, sous la forme d'une chaîne.
-- `uri` est l'URI du gestionnaire sous la forme d'une chaîne. Il peut contenir « %s » pour indiquer où insérer l'URI échappée du document à gérer, comme montré dans l'exemple plus bas.
-- `titre` {{deprecated_inline}} est le titre du gestionnaire présenté à l'utilisateur, sous la forme d'une chaîne.
+### Paramètres
 
-    > **Note:** Le `titre` a été enlevé de la spécification pour risque de spoofing.
-    > Le `titre` devrait toujours être fourni car il est **encore obligatoire** pour certains navigateurs (voir le [tableau de compatibilité plus bas](#compatibilité_avec_les_navigateurs)).
-    > Les navigateurs qui sont à jour avec la spécification accepteront mais ignoreront vraisemblablement le `titre`.
+- `schema`
 
-### Exemple
+  - : Une chaîne de caractères contenant [les schémas autorisés](#schémas_autorisés) pour le protocole que le site souhaite gérer. On peut ainsi, par exemple, gérer les liens vers des messages SMS en passant le schéma `"sms"`.
 
-Si votre application web est située à `http://www.example.com`, vous pouvez enregistrer un gestionnaire de protocole lui permettant de gérer « mailto » comme ceci :
+- `url`
 
-    navigator.registerProtocolHandler("mailto",
-                                     "https://www.example.com/?to=%s",
-                                     "Example Mail");
+  - : Une chaîne de caractères qui contient l'URL du gestionnaire.
+    **Cette URL doit inclure `%s`**, comme emplacement à remplacer avec l'URL [échappée](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) à gérer.
 
-Ceci crée un gestionnaire permettant aux liens `mailto` de diriger l'utilisateur vers l'application web, en insérant l'adresse spécifiée dans le lien dans l'URL.
+    > **Note :** L'URL du gestionnaire doit également utiliser le schéma `https`. Les anciens navigateurs prenaient aussi en charge `http`.
 
-### Spécification
+- `titre` {{deprecated_inline}}
+
+  - : Un titre, lisible par un humain, pour le gestionnaire.
+    **Cette valeur sera affichée à l'utilisatrice ou à l'utilisateur**, par exemple pour lui demander «&nbsp;Autorisez-vous ce site à gérer les liens \[schema]&nbsp;?&nbsp;» ou pour lister les gestionnaires enregistrés dans les paramètres du navigateur.
+
+    > **Note :** Le titre a été retiré de la spécification en raison des risques d'usurpation.
+    > Ce paramètre `titre` devrait toujours être défini, car certains navigateurs **le considèrent obligatoire** (voir [le tableau de compatibilité qui suit](#compatibilité_des_navigateurs)).
+    > Les navigateurs qui implémentent la spécification à jour accepteront probablement ce paramètre supplémentaire en l'ignorant.
+
+### Exceptions
+
+- [`SecurityError`](/fr/docs/Web/API/DOMException#exception-securityerror)
+  - : L'agent utilisateur a bloqué l'enregistrement. Cela peut se produire si&nbsp;:
+
+    - Le schéma enregistré (le protocole) est invalide, par exemple parce qu'il est déjà géré par le navigateur (`https:`, `about:`, etc.)
+    - L'origine de l'URL du gestionnaire ne correspond pas à l'origine de la page qui utilise cette API.
+    - Cette fonction doit être appelée depuis un contexte sécurisé pour le navigateur.
+    - Le navigateur requiert que l'URL du gestionnaire soit communiquée via HTTPS.
+
+- [`SyntaxError`](/fr/docs/Web/API/DOMException#exception-syntaxerror)
+  - : L'emplacement de substitution marqué par `%s` est absent de l'URL de gestion.
+
+## Schémas autorisés
+
+Pour des raisons de sécurité, `registerProtocolHandler()` restreint les schémas qui peuvent être enregistrés.
+
+Un **schéma personnalisé** (<i lang="en">custom scheme</i>) peut être enregistré tant que&nbsp;:
+
+- Le nom du schéma personnalisé commence par `web+`
+- Le nom du schéma personnalisé inclut au moins une lettre après le préfixe `web+`
+- Le nom du schéma personnalisé ne contient que des lettres ASCII en minuscules.
+
+On peut voir un exemple après avec `web+burger`, qui obéit à ces contraintes.
+
+Le schéma peut aussi être l'une des valeurs suivantes&nbsp;:
+
+- `bitcoin`
+- `ftp`
+- `ftps`
+- `geo`
+- `im`
+- `irc`
+- `ircs`
+- `magnet`
+- `mailto`
+- `matrix`
+- `mms`
+- `news`
+- `nntp`
+- `openpgp4fpr`
+- `sftp`
+- `sip`
+- `sms`
+- `smsto`
+- `ssh`
+- `tel`
+- `urn`
+- `webcal`
+- `wtai`
+- `xmpp`
+
+<!-- Cette liste devrait correspondre à : https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme -->
+
+## Exemples
+
+Si votre site est `burgers.example.com`, vous pouvez enregistrer un gestionnaire de protocole afin qu'il puisse gérer les liens `web+burger:`, de cette façon&nbsp;:
+
+```js
+navigator.registerProtocolHandler("web+burger",
+                                  "https://burgers.example.com/?burger=%s",
+                                  "Gestionnaire de burger");
+                                  // L'argument du titre est inclus
+                                  // pour des raisons de compatibilité
+```
+
+Cette instruction crée un gestionnaire qui permet que des liens `web+burger:` envoie les utilisateurs vers votre site, en insérant l'URL du burger demandé dans l'emplacement indiqué par `%s`.
+
+Ce script devra être exécuté depuis la même origine que l'URL du gestionnaire (c'est-à-dire depuis une page située sous `https://burgers.example.com`). L'URL du gestionnaire devra être avec `http` ou `https`.
+
+La personne recevra une notification indiquant que le code a demandé à enregistrer le gestionnaire de protocole afin qu'elle puisse décide ou non d'autoriser cet enregistrement. Voir la capture d'écran ci-après pour un exemple avec `google.co.uk`&nbsp;:
+
+![Une notification de navigateur qui demande "Add Burger handler (www.google.co.uk) as an application for burger links?", et qui fournit un bouton "Add Application" et un autre de fermeture pour ignorer la requête.](protocolregister.png)
+
+## Spécifications
 
 {{Specifications}}
 
-### Compatibilité avec les navigateurs
+## Compatibilité des navigateurs
 
 {{Compat}}
 
-### Voir également
+## Voir aussi
 
-- [Gestionnaires de protocoles web](/fr/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [Web-based protocol handlers](/fr/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)
