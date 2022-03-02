@@ -105,7 +105,7 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
     > - Pour obtenir le même effet que les valeurs `left`, `center`, `right` ou `justify` :
     >
     >   - N'essayez pas de définir la propriété [`text-align`](/fr/docs/Web/CSS/text-align) sur un sélecteur donnant un élément `<col>`. Comme les éléments [`<td>`](/fr/docs/Web/HTML/Element/td) ne sont pas des descendants de l'élément `<col>`, ils n'en hériteront pas.
-    >   - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)`. Définissez `a` à zéro et `b `à la position de la colonne dans le tableau, par exemple `td:nth-child(2) { text-align : right ; }` pour aligner à droite la deuxième colonne.
+    >   - Si le tableau n'utilise pas d'attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), utilisez le sélecteur CSS `td:nth-child(an+b)`. Définissez `a` à zéro et `b` à la position de la colonne dans le tableau, par exemple `td:nth-child(2) { text-align : right ; }` pour aligner à droite la deuxième colonne.
     >   - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
 
 - **`bgcolor`** {{deprecated_inline}}
