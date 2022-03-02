@@ -31,7 +31,7 @@ El objeto **`EvalError`** indica un error relacionado con la función global {{j
 - {{jsxref("Error.prototype.columnNumber", "EvalError.prototype.columnNumber")}}
   - : Número de columna en la línea que generó este error. Heredado de {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.stack", "EvalError.prototype.stack")}}
-  - : Rastreo de pila. Heredado de {{jsxref("Error")}}.
+  - : Seguimiento de pila. Heredado de {{jsxref("Error")}}.
 
 ## Ejemplos
 
