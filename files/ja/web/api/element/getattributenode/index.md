@@ -5,59 +5,47 @@ tags:
   - API
   - DOM
   - Element
-  - Method
-  - Reference
+  - メソッド
+  - リファレンス
+browser-compat: api.Element.getAttributeNode
 translation_of: Web/API/Element/getAttributeNode
 ---
-<div>{{ APIRef("DOM") }}</div>
+{{ APIRef("DOM") }}
 
-<p>指定された要素の指定された属性を、 <code>Attr</code> ノードとして返します。</p>
+この要素の指定された属性を、 `Attr` ノードとして返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="eval"><em>var attrNode</em> = <em>element</em>.getAttributeNode(<em>attrName</em>);
-</pre>
+```js
+var attrNode = element.getAttributeNode(attrName);
+```
 
-<ul>
- <li><code>attrNode</code> は指定の属性に対する <code>Attr</code> ノードです。</li>
- <li><code>attrName</code> は属性の名前を表す文字列です。</li>
-</ul>
+- `attrNode` は指定の属性に対する `Attr` ノードです。
+- `attrName` は属性の名前を表す文字列です。
 
-<h2 id="Example">Example</h2>
+## 例
 
-<pre class="brush: js">// html: &lt;div id="top" /&gt;
+```js
+// html: <div id="top" />
 let t = document.getElementById("top");
 let idAttr = t.getAttributeNode("id");
 alert(idAttr.value == "top")
-</pre>
+```
 
-<h2 id="Notes">注</h2>
+## メモ
 
-<p>HTML 文書としてフラグが立てられた DOM 内の HTML 要素に対して呼び出された場合、<code>getAttributeNode</code> は処理前に引数を小文字にします。</p>
+HTML 文書としてフラグが立てられた DOM 内の HTML 要素に対して呼び出された場合、`getAttributeNode` は処理前に引数を小文字にします。
 
-<p><code>Attr</code> ノードは <code>Node</code> を継承していますが、文書ツリーの一部と考えることはできません。一般の <code>Node</code> 属性、例えば <a href="/ja/docs/Web/API/Node/parentNode">parentNode</a>、 <a href="/ja/docs/Web/API/Node/previousSibling">previousSibling</a>、<a href="/ja/docs/Web/API/Node/nextSibling">nextSibling</a> などは <code>Attr</code> ノードでは <code>null</code> になります。しかしながら、 <code>ownerElement</code> プロパティではこの属性が属している要素を取得することができます。</p>
+`Attr` ノードは `Node` を継承していますが、文書ツリーの一部と考えることはできません。一般の `Node` 属性、例えば [parentNode](/ja/docs/Web/API/Node/parentNode)、 [previousSibling](/ja/docs/Web/API/Node/previousSibling)、[nextSibling](/ja/docs/Web/API/Node/nextSibling) などは `Attr` ノードでは `null` になります。しかしながら、 `ownerElement` プロパティではこの属性が属している要素を取得することができます。
 
-<p>要素の属性の値を取得するためには、通常 <code>getAttributeNode</code> の代わりに <a href="/ja/docs/Web/API/Element/getAttribute">getAttribute</a> を使用してください。</p>
+要素の属性の値を取得するためには、通常 `getAttributeNode` の代わりに [getAttribute](/ja/docs/Web/API/Element/getAttribute) が使用されます。
 
-<p>{{ DOMAttributeMethods() }}</p>
+{{ DOMAttributeMethods() }}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG','#dom-element-getattributenode','getAttributeNode()')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Element.getAttributeNode")}}</p>
+{{Compat}}
