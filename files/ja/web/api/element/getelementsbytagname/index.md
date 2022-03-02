@@ -1,55 +1,54 @@
 ---
-title: element.getElementsByTagName
+title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
 tags:
+  - API
   - DOM
-  - Gecko
+  - Element
+  - メソッド
+  - リファレンス
+browser-compat: api.Element.getElementsByTagName
 translation_of: Web/API/Element/getElementsByTagName
 ---
-<p>{{ ApiRef() }}</p>
+{{ APIRef("DOM") }}
 
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+**`Element.getElementsByTagName()`** メソッドは、生きた {{domxref("HTMLCollection")}} で指定された[タグ名](/ja/docs/Web/API/Element/tagName)を持つ要素を返します。
 
-<p>指定された <a href="/ja/DOM/element.tagName">タグ名</a> による要素のリストを返します。指定された要素以下のサブツリーが検索対象となり、その要素自体は除外されます。</p>
+この要素のすべての子孫が検索されますが、要素そのものは検索されません。返されるリストは*生きており*、 DOM ツリーとともに自動的に更新されます。したがって、同じ要素と引数で `Element.getElementsByTagName()` を繰り返し呼び出す必要はなく、呼び出しの間に DOM が変化しても大丈夫です。
 
-<h3 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h3>
+HTML 文書内の HTML 要素に対して呼び出された場合、 `getElementsByTagName` は引数を小文字に変換してから検索を行います。これは、HTML 文書内のキャメルケースの SVG 要素（例えば [`<linearGradient>`](/ja/docs/Web/SVG/Element/linearGradient)）と照合しようとする場合には望ましくありません。代わりに、 {{ domxref("Element.getElementsByTagNameNS()") }} を使ってください。この場合、タグ名の大文字と小文字は区別されます。
 
-<pre class="eval"><em>elements</em> = <em>element</em>.getElementsByTagName(<em>tagName</em>)
-</pre>
+`Element.getElementsByTagName` は {{domxref("Document.getElementsByTagName()")}} に似ていますが、指定した要素の子孫の要素のみを検索する点が異なります。
 
-<ul>
- <li><code>elements</code> は見つかった要素の「生」の <code>NodeList</code> で、サブツリー内に出現した順番になります。</li>
- <li><code>element</code> は検索を開始する要素です。この要素の子孫要素のみが検索に含まれ、この要素自体は検索対象とならないことに注意してください。</li>
- <li><code>tagName</code> は検索条件とするタグ名です。特別な文字列 <code>"*"</code> はすべての要素を表します。</li>
-</ul>
+## 構文
 
-<div class="note">
-<p>Firefox 2 (Gecko 1.8.1) およびそれ以前では、タグ名に名前空間接頭辞が付いた要素がサブツリーに含まれていた場合、このメソッドは正しく動作しません (詳しくは {{ Bug(206053) }} を参照してください)。</p>
+```js
+elements = element.getElementsByTagName(tagName)
+```
 
-<p>複数の名前空間を持ったドキュメントを扱う際は {{ Domxref("element.getElementsByTagNameNS") }} を使うことを推奨します。</p>
-</div>
+- `elements` は*生きた* {{domxref("HTMLCollection")}} で、タグ名が一致する要素が出現順で入ります。要素が見つかアなかった場合は `HTMLCollection` は空になります。
+- `element` は検索を始める要素です。この要素の子孫のみが含まれ、この要素自身は含まれません。
+- `tagName` は検索する修飾名です。特別な文字列 `"*"` はすべての要素を表します。 XHTML との互換性のため、小文字を使用してください。
 
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+## 例
 
-<pre class="brush: js">// テーブル内のセルの数だけ反復処理します
-var table = document.getElementById("forecast-table");
-var cells = table.getElementsByTagName("td");
-for (var i = 0; i &lt; cells.length; i++) {
-    status = cells[i].getAttribute("status");
-    if ( status == "open") {
-        // データを取得します
-    }
+```js
+// テーブル内のセルの数だけ反復処理します
+const table = document.getElementById('forecast-table');
+const cells = table.getElementsByTagName('td');
+
+for (let cell of cells) {
+  let status = cell.getAttribute('data-status');
+  if (status === 'open') {
+    // データを取得
+  }
 }
-</pre>
+```
 
-<h3 id=".E6.B3.A8.E6.84.8F.E7.82.B9" name=".E6.B3.A8.E6.84.8F.E7.82.B9">注意点</h3>
+## 仕様書
 
-<p><code>element.getElementsByTagName</code> は、検索対象が指定された要素の子孫要素に限られるという点を除けば、<a href="/ja/DOM/document.getElementsByTagName">document.getElementsByTagName</a> と似ています。</p>
+{{Specifications}}
 
-<h3 id=".E4.BB.95.E6.A7.98.E6.9B.B8" name=".E4.BB.95.E6.A7.98.E6.9B.B8">仕様書</h3>
+## ブラウザーの互換性
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1938918D">DOM Level 2 Core: Element.getElementsByTagName </a></p>
-
-<div class="noinclude"> </div>
-
-<p>{{ languages( { "en": "en/DOM/element.getElementsByTagName", "es": "es/DOM/element.getElementsByTagName", "fr": "fr/DOM/element.getElementsByTagName", "pl": "pl/DOM/element.getElementsByTagName" } ) }}</p>
+{{Compat}}

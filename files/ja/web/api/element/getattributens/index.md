@@ -1,47 +1,100 @@
 ---
-title: element.getAttributeNS
+title: Element.getAttributeNS()
 slug: Web/API/Element/getAttributeNS
 tags:
+  - API
   - DOM
-  - Gecko
-  - 翻訳中
+  - Element
+  - メソッド
+  - リファレンス
+browser-compat: api.Element.getAttributeNS
 translation_of: Web/API/Element/getAttributeNS
 ---
-<p>{{ ApiRef("DOM") }}</p>
+{{APIRef("DOM")}}
 
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
+**`getAttributeNS()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された名前空間と名前を持つ属性の文字列値を返します。のような名前の属性が存在しない場合は、 `null` または `""` （空文字列のどちらかを返します。詳しくは{{Anch("メモ")}}を参照してください。
 
-<p><code>getAttributeNS</code> は指定の名前空間と名前の属性の文字列値を返します。もし指定の名前の属性が存在しなければ、戻り値は <code>null</code> または <code>""</code>(空文字列) のいずれかとなります。詳細は{{ Anch("注記") }} を参照。</p>
+## 構文
 
-<h3 id=".E6.A7.8B.E6.96.87" name=".E6.A7.8B.E6.96.87">構文</h3>
+```js
+attrVal = element.getAttributeNS(namespace, name)
+```
 
-<pre class="eval"><em>attrVal</em> =<em>element</em>.getAttributeNS(<em>namespace</em>,<em>name</em>)
-</pre>
+### 引数
 
-<h3 id=".E5.BC.95.E6.95.B0" name=".E5.BC.95.E6.95.B0">引数</h3>
+- `namespace`
+  - : 指定された属性を探す名前空間です。
+- `name`
+  - : 探す属性の名前です。
 
-<ul>
- <li><code><em>attrVal</em> </code> は指定の属性の文字列値です。</li>
- <li><code><em>namespace</em> </code> は指定の属性の名前空間です。</li>
- <li><code><em>name</em> </code> は指定の属性の名前です。</li>
-</ul>
+### 返値
 
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+指定された属性の文字列値です。その属性が存在しない場合、結果は `null` になります。
 
-<pre class="eval">var div1 = document.getElementById("div1");
-var a = div1.getAttributeNS("www.mozilla.org/ns/specialspace/",
-                            "special-align");
-alert(a); // div の align 属性の値を表示します。
-</pre>
+> **Note:** 古いバージョンの DOM 仕様書では、このメソッドが存在しない属性に対しては空文字列を返すと説明していました。しかし、 null の方が分かりやすいので、そのような実装はあまり行われませんでした。 DOM4 仕様書ではこのメソッドは存在しない属性に対して null を返すと書くようになりました。
 
-<h3 id=".E6.B3.A8.E8.A8.98" name=".E6.B3.A8.E8.A8.98">注記</h3>
+## 例
 
-<p><code>getAttributeNS</code> は <a href="/ja/DOM/element.getAttribute">getAttribute</a> と異なります。<code>getAttributeNS</code> は特定の名前空間に属している要求された属性をより深く特定することができます。上記の例では、属性は mozilla の架空の "specialspace" 名前空間に属しています。</p>
+以下の SVG 文書は独自の名前空間にある `foo` 属性の値を読み取ります。
 
-<p>DOM4 より前の仕様では、このメソッドは属性が存在しない場合に <code>null</code> ではなく空文字列を返すように指定されていました。しかし、ほとんどのウェブ・ブラウザは <code>null</code> を返していました。DOM4 以降は、仕様でも <code>null</code> を返すように指定されました。しかしながら、いくつかの古いウェブ・ブラウザは空文字列を返します。そのため、指定の要素に指定の属性が存在しない可能性があるなら <code>getAttributeNS</code> を呼ぶ前に <a href="/ja/docs/Web/API/Element/hasAttributeNS"><code>hasAttributeNS</code></a> を使用して属性の存在を確かめる必要があります。</p>
+```xml
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
 
-<p>{{ DOMAttributeMethods() }}</p>
+  <circle id="target" cx="12" cy="12" r="10" stroke="#444"
+      stroke-width="2" fill="none" test:foo="Hello namespaced attribute!"/>
 
-<h3 id=".E4.BB.95.E6.A7.98" name=".E4.BB.95.E6.A7.98">仕様</h3>
+  <script type="text/javascript">
+    var ns = 'http://www.example.com/2014/test';
+    var circle = document.getElementById( 'target' );
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElGetAttrNS">DOM Level 2 Core: getAttributeNS</a></p>
+    console.log( 'attribute test:foo: "' + circle.getAttributeNS( ns, 'foo' ) + '"' );
+  </script>
+</svg>
+```
+
+HTML5 文書では名前空間に対応していないため、この属性は `test:foo` でアクセスする必要があります。
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:test="http://www.example.com/2014/test" width="40" height="40">
+  <circle id="target" cx="12" cy="12" r="10" stroke="#444" stroke-width="2"
+      fill="none" test:foo="Foo value"/>
+</svg>
+
+<script type="text/javascript">
+  var ns = 'http://www.example.com/2014/test';
+  var circle = document.getElementById( 'target' );
+  console.log('Attribute value: ' + circle.getAttribute('test:foo'));
+</script>
+
+</body>
+</html>
+```
+
+## メモ
+
+名前空間は XML 文書でのみ対応しています。 HTML5 文書では、代わりに `getAttribute()` を使用する必要があります。
+
+`getAttributeNS()` は {{domxref("element.getAttribute()",
+  "getAttribute()")}} とは異なり、特定の名前空間に属している要求された属性をより深く特定することができます。上記の例では、属性は Mozilla の架空の "specialspace" 名前空間に属しています。
+
+DOM4 より前の仕様では、このメソッドは属性が存在しない場合に null ではなく空文字列を返すように指定されていました。しかし、ほとんどのウェブブラウザーは null を返していました。 DOM4 以降は、仕様でも null を返すように指定されました。しかし、一部の古いウェブブラウザーは空文字列を返します。そのため、指定の要素に指定の属性が存在しない可能性があるなら、 `getAttributeNS` を呼ぶ前に {{domxref("element.hasAttributeNS()", "hasAttributeNS()")}} を使用して属性の存在を確かめる必要があります。
+
+{{DOMAttributeMethods}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [コードスニペット:getAttributeNS](/ja/docs/Mozilla/Add-ons/Code_snippets/getAttributeNS)
