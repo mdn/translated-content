@@ -83,7 +83,7 @@ Pour plus d'information, voir le [guide sur les cookies HTTP](/fr/docs/Web/HTTP/
 
     Quand une telle date de péremption est indiquée, elle est relative au _client_ et pas au serveur.
 
-- `Max-Age=<number> `{{optional_inline}}
+- `Max-Age=<number>` {{optional_inline}}
   - : Le nombre de secondes avant son expiration. Une valeur nulle ou négative fera expirer immédiatement le cookie. Si `Expires` et `Max-Age` sont configurés, `Max-Age` sera prioritaire.
 - `Domain=<domain-value>` {{optional_inline}}
 
