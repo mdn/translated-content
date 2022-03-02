@@ -57,7 +57,7 @@ Cette propriété peut accepter une, deux, trois ou quatre valeurs avec les type
 - `<percentage>`
   - : Une valeur relative, exprimée en pourcentage (type {{cssxref("&lt;percentage&gt;")}}, à la **largeur** du bloc englobant. On peut utiliser des valeurs négatives.
 - `auto`
-  - : `auto `est remplacé par une valeur adaptée (il peut être utilisé pour centrer les blocs, par exemple, `div { width:50%; margin:0 auto; }` permet de centrer un conteneur `div` horizontalement).
+  - : `auto` est remplacé par une valeur adaptée (il peut être utilisé pour centrer les blocs, par exemple, `div { width:50%; margin:0 auto; }` permet de centrer un conteneur `div` horizontalement).
 
 ### Syntaxe formelle
 
@@ -127,9 +127,9 @@ margin: auto;              /* boîte centrée horizontalement */
 
 ### Centrer horizontalement
 
-Afin de centrer un élément horizontalement, avec un navigateur « moderne » on peut utiliser {{cssxref("display")}}`: flex; `{{cssxref("justify-content")}}`: center;`.
+Afin de centrer un élément horizontalement, avec un navigateur « moderne » on peut utiliser {{cssxref("display")}}`: flex;` {{cssxref("justify-content")}}`: center;`.
 
-Les anciens navigateurs comme IE8-9 ne gèrent pas ces valeurs. Aussi, il faudra utiliser `margin: 0 auto `pour centrer un élément au sein de son parent.
+Les anciens navigateurs comme IE8-9 ne gèrent pas ces valeurs. Aussi, il faudra utiliser `margin: 0 auto` pour centrer un élément au sein de son parent.
 
 ### Fusion des marges
 

@@ -36,7 +36,7 @@ clip: unset;
 ### Valeurs
 
 - `<shape>`
-  - : Une forme rectangulaire indiquée avec `rect(<haut>, <droite>, <bas>, <gauche>)` ou avec `rect(<haut> <droite> <bas> <gauche>)`. `<haut>` et `<bas>` indiquent les décalages à partir du haut de la boîte de bordure, `<gauche>` et `<droite>` indiquent les décalages à partir du bord gauche de la boîte de bordure.`<haut>`, `<droite>`, `<bas>` et `<gauche>` peuvent avoir une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou` auto`. Si un des côtés vaut `auto`, l'élément est rogné sur ce côté avec le bord intérieur de la boîte de bordure.
+  - : Une forme rectangulaire indiquée avec `rect(<haut>, <droite>, <bas>, <gauche>)` ou avec `rect(<haut> <droite> <bas> <gauche>)`. `<haut>` et `<bas>` indiquent les décalages à partir du haut de la boîte de bordure, `<gauche>` et `<droite>` indiquent les décalages à partir du bord gauche de la boîte de bordure.`<haut>`, `<droite>`, `<bas>` et `<gauche>` peuvent avoir une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou `auto`. Si un des côtés vaut `auto`, l'élément est rogné sur ce côté avec le bord intérieur de la boîte de bordure.
 - `auto`
   - : L'élément n'est pas rogné (la valeur par défaut). Attention, l'effet obtenu n'est pas le même que `rect(auto, auto, auto, auto)`.
 

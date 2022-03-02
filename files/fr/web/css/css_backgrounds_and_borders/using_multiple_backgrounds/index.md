@@ -16,7 +16,7 @@ Pour cela, il suffit simplement d'utiliser une liste de valeur avec {{cssxref("b
 }
 ```
 
-Cela fonctionne aussi bien avec la propriété raccourcie {{cssxref("background")}} qu'avec les propriétés détaillées, exception faite de {{cssxref("background-color")}}. On peut donc utiliser une liste de valeurs, chacune pour un arrière-plan différent, pour les propriétés suivantes : {{cssxref("background")}}, {{cssxref("background-attachment")}}, {{cssxref("background-clip")}},` `{{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}.
+Cela fonctionne aussi bien avec la propriété raccourcie {{cssxref("background")}} qu'avec les propriétés détaillées, exception faite de {{cssxref("background-color")}}. On peut donc utiliser une liste de valeurs, chacune pour un arrière-plan différent, pour les propriétés suivantes : {{cssxref("background")}}, {{cssxref("background-attachment")}}, {{cssxref("background-clip")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}.
 
 ## Exemples
 
