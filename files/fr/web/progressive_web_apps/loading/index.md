@@ -32,7 +32,7 @@ Pour corriger ça, nous pouvons, par exemple, ajouter `defer` aux fichiers JavaS
 <script src="app.js" defer></script>
 ```
 
-Ils seront téléchargés et exécutés _après_ que le document lui-même ait été analysé, si bien qu'il ne bloquera pas le rendu de la structure HTML. Nous pouvons également éclater les fichiers css et leur ajouter des types de media:
+Ils seront téléchargés et exécutés _après_ que le document lui-même a été analysé, si bien qu'il ne bloquera pas le rendu de la structure HTML. Nous pouvons également éclater les fichiers CSS et leur ajouter des types de média&nbsp;:
 
 ```html
 <link rel="stylesheet" href="style.css">
