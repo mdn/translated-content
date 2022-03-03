@@ -1,0 +1,139 @@
+---
+title: '::-webkit-scrollbar'
+slug: Web/CSS/::-webkit-scrollbar
+tags:
+  - '::-webkit-scrollbar'
+  - CSS
+  - CSS Selectors
+  - CSS:WebKit Extensions
+  - Non-standard
+  - Pseudo-element
+  - Reference
+  - Selector
+---
+{{CSSRef}}{{Non-standard_Header}}
+
+<p>O pseudo-elemento CSS <code>::-webkit-scrollbar</code> afeta o estilo de um elemento referente a barra de rolagem quando se tem por definido <code>overflow:scroll;</code>.</p>
+
+<section class="note"><strong>Nota:</strong> Se o <code>overflow:scroll;</code> não estiver definido nenhuma barra de rolagem será exibida.</section>
+
+<section class="note"><strong>Nota:</strong> <code>::-webkit-scrollbar</code> está disponível somente em navegadores baseados em <a href="https://www.chromium.org/blink">Blink</a> - e <a href="https://webkit.org">WebKit</a> - (Chrome, Edge, Opera, Safari, todos os navegadores para iOS, e <a href="https://en.wikipedia.org/wiki/List_of_web_browsers#WebKit-based">outros</a>). Um método padronizado para estilização de barras de rolagem está disponível com {{cssxref("scrollbar-color")}} e {{cssxref("scrollbar-width")}}.</section>
+
+<h2>Seletores CSS da Barra de Rolagem</h2>
+
+<p>Você pode usar os seguintes pseudo-elementos para customizar diversas partes da barra de rolagem para navegadores baseados em webkit:</p>
+
+<ul>
+  <li><code>::-webkit-scrollbar</code> — a barra de rolagem inteira.</li>
+  <li><code>::-webkit-scrollbar-button</code> — os botões na barra (setas para cima e para baixo no qual rolam uma linha de cada vez).</li>
+  <li><code>::-webkit-scrollbar-thumb</code> — a barra arrastável de rolagem.</li>
+  <li><code>::-webkit-scrollbar-track</code> — o caminho (barra de progresso) da barra de rolagem onde há uma barra cinza encima de uma barra branca.</li>
+  <li><code>::-webkit-scrollbar-track-piece</code> — a parte do caminho (barra de progresso) não coberto por uma barra.</li>
+  <li><code>::-webkit-scrollbar-corner</code> — o canto inferior da barra de rolagem, onde ambas barras horizontal e vertical se encontram. Muitas das vezes o canto inferior direito da janela do navegador.</li>
+  <li><code>::-webkit-resizer</code> — a barra redimensionável que aparece no canto inferior de alguns elementos.</li>
+</ul>
+
+<h2>Exemplos</h2>
+
+<h3>CSS</h3>
+
+<pre class="css-code-block"><code>.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Demonstrate a "mostly customized" scrollbar
+  * (won't be visible otherwise if width/height is specified) */
+.mostly-customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+    background: #000;
+}</code></pre>
+
+<h3>HTML</h3>
+
+<pre><code>
+&lt;div class="visible-scrollbar"&gt;
+  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor.
+  Proin at nulla elementum, consectetur ex eget, commodo ante.
+  Sed eros mi, bibendum ut dignissim et, maximus eget nibh. Phasellus
+  blandit quam turpis, at mollis velit pretium ut. Nunc consequat
+  efficitur ultrices. Nullam hendrerit posuere est. Nulla libero
+  sapien, egestas ac felis porta, cursus ultricies quam. Vestibulum
+  tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
+  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit
+  amet faucibus. Curabitur nibh justo, faucibus sed velit cursus,
+  mattis cursus dolor. Pellentesque id pretium est. Quisque
+  convallis nisi a diam malesuada mollis. Aliquam at enim ligula.
+&lt;/div&gt;
+
+&lt;div class="invisible-scrollbar"&gt;
+ Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+&lt;/div&gt;
+
+&lt;div class="mostly-customized-scrollbar"&gt;
+ Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;br&gt;
+ And pretty tall&lt;br&gt;
+ thing with weird scrollbars.&lt;br&gt;
+ Who thought scrollbars could be made weeeeird?
+&lt;/div&gt;
+</code>
+</pre>
+
+<h3>Resultado</h3>
+
+{{EmbedLiveSample("Examples")}}
+
+<h2>Especificações</h2>
+
+<p>Não é parte de nenhum padrão.</p>
+
+<h2>Compatibilidade entre navegadores</h2>
+
+<h3><code>::-webkit-scrollbar</code></h3>
+
+{{Compat("css.selectors.-webkit-scrollbar")}}
+
+<h3><code>::-webkit-scrollbar-button`</code></h3>
+
+{{Compat("css.selectors.-webkit-scrollbar-button")}}
+
+<h3><code>::-webkit-scrollbar-thumb</code></h3>
+
+{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
+
+<h3><code>::-webkit-scrollbar-track</code></h3>
+
+{{Compat("css.selectors.-webkit-scrollbar-track")}}
+
+<h3><code>::-webkit-scrollbar-track-piece</code></h3>
+
+{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
+
+<h3><code>::-webkit-scrollbar-corner</code></h3>
+
+{{Compat("css.selectors.-webkit-scrollbar-corner")}}
+
+<h3><code>::-webkit-resizer</code></h3>
+
+{{Compat("css.selectors.-webkit-resizer")}}
+
+<h2>Veja Também</h2>
+
+<ul>
+	<li>WebKit blog em <a href="https://webkit.org/blog/363/styling-scrollbars/)">Styling Scrollbars</a></li>
+	<li><a href="https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html">WebKit test</a> para os estilos da barra de rolagem mencionados acima</li>
+	<li>{{CSSxRef("scrollbar-width")}}</li>
+	<li>{{CSSxRef("scrollbar-color")}}</li>
+</ul>
