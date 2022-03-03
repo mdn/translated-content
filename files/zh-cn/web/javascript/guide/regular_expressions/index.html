@@ -142,7 +142,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    <td>
     <p>像下面的例子展示的那样，它会匹配 'x' 并且记住匹配项。其中括号被称为<em>捕获括号</em>。</p>
 
-    <p>模式 <code>/(foo) (bar) \1 \2/</code> 中的 '<code>(foo)</code>' 和 '<code>(bar)</code>' 匹配并记住字符串 "foo bar foo bar" 中前两个单词。模式中的 <code>\1</code> 和 <code>\2</code> 表示第一个和第二个被捕获括号匹配的子字符串，即 <code>foo</code> 和 <code>bar</code>，匹配了原字符串中的后两个单词。注意 <code>\1</code>、<code>\2</code>、...、<code>\n</code> 是用在正则表达式的匹配环节，详情可以参阅后文的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions$edit#special-backreference">\n</a> 条目。而在正则表达式的替换环节，则要使用像 <code>$1</code>、<code>$2</code>、...、<code>$n</code> 这样的语法，例如，<code>'bar foo'.replace(/(...) (...)/, '$2 $1')</code>。<code>$&amp;</code> 表示整个用于匹配的原字符串。</p>
+    <p>模式 <code>/(foo) (bar) \1 \2/</code> 中的 '<code>(foo)</code>' 和 '<code>(bar)</code>' 匹配并记住字符串 "foo bar foo bar" 中前两个单词。模式中的 <code>\1</code> 和 <code>\2</code> 表示第一个和第二个被捕获括号匹配的子字符串，即 <code>foo</code> 和 <code>bar</code>，匹配了原字符串中的后两个单词。注意 <code>\1</code>、<code>\2</code>、...、<code>\n</code> 是用在正则表达式的匹配环节，详情可以参阅后文的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference">\n</a> 条目。而在正则表达式的替换环节，则要使用像 <code>$1</code>、<code>$2</code>、...、<code>$n</code> 这样的语法，例如，<code>'bar foo'.replace(/(...) (...)/, '$2 $1')</code>。<code>$&amp;</code> 表示整个用于匹配的原字符串。</p>
    </td>
   </tr>
   <tr>
