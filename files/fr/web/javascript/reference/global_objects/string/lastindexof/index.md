@@ -24,8 +24,8 @@ La méthode **`lastIndexOf()`** renvoie l'indice, dans la chaîne courante, de l
 
 - `valeurRecherchée`
   - : Une chaîne qu'on recherche dans la chaîne courante. Si ce paramètre n'est pas défini et que `indiceDébut` est utilisé, c'est ce dernier qui sera renvoyé par la fonction.
-- `indiceDébut `{{optional_inline}}
-  - : Paramètre optionnel. L'emplacement, dans la chaîne courante, à partir duquel effectuer la recherche (en partant de la fin de la chaîne et en remontant vers le début). Cela peut être n'importe quel entier. La valeur par défaut est `+Infinity`. Si` indiceDébut > str.length`, toute la chaîne sera parcourue. Si `indiceDébut < 0`,  on aura le même comportement que si `indiceDébut` valait 0.
+- `indiceDébut` {{optional_inline}}
+  - : Paramètre optionnel. L'emplacement, dans la chaîne courante, à partir duquel effectuer la recherche (en partant de la fin de la chaîne et en remontant vers le début). Cela peut être n'importe quel entier. La valeur par défaut est `+Infinity`. Si `indiceDébut > str.length`, toute la chaîne sera parcourue. Si `indiceDébut < 0`,  on aura le même comportement que si `indiceDébut` valait 0.
 
 ### Valeur de retour
 

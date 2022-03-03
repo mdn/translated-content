@@ -26,7 +26,7 @@ La méthode **`indexOf()`** renvoie l'indice de la première occurence de la val
 ### Paramètres
 
 - `valeurRecherchée`
-  - : Une chaîne représentant la valeur qu'on cherche dans la chaîne courante. Si aucune valeur n'est fournie explicitement,[ `valeurRecherchée` sera convertie en `"undefined"` et c'est cette chaîne qui sera recherchée](https://tc39.github.io/ecma262/#sec-tostring).
+  - : Une chaîne représentant la valeur qu'on cherche dans la chaîne courante. Si aucune valeur n'est fournie explicitement, [`valeurRecherchée` sera convertie en `"undefined"` et c'est cette chaîne qui sera recherchée](https://tc39.github.io/ecma262/#sec-tostring).
 - `indexDébut`
   - : Paramètre optionnel. L'indice à partir duquel commencer la recherche, effectuée du début vers la fin de la liste. Cela peut être n'importe quel entier. La valeur par défaut est 0. Si `indexDébut < 0` la chaîne sera parcourue en entier (ce qui équivaut à utiliser 0). Si `indexDébut >= str.length`, la méthode renverra -1 sauf si `valeurRecherchée` est la chaîne vide, auquel cas, la méthode renverra `str.length`.
 

@@ -272,7 +272,7 @@ x = x + 5;
 
 Vous pouvez utiliser `++` et `--` respectivement pour incrémenter et pour décrémenter. Ils peuvent être utilisés comme opérateurs préfixes ou suffixes.
 
-L'[opérateur `+` ](</fr/docs/conflicting/Web/JavaScript/Reference/Operators#addition_(.2b)>)permet également de concaténer des chaînes :
+L'[opérateur `+`](/fr/docs/conflicting/Web/JavaScript/Reference/Operators#addition_(.2b)) permet également de concaténer des chaînes :
 
 ```js
 "coucou" + " monde"; // "coucou monde"

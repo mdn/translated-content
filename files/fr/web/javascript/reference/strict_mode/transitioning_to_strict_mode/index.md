@@ -31,8 +31,8 @@ En utilisant `"use strict";`, certaines instructions ou fragments de code lancer
 - La déclaration de fonctions dans des blocs `if(a<b){ function f(){} }`
 - Les erreurs évidentes
 
-  - Déclarer deux fois le nom d'une propriété dans un littéral objet` {a: 1, b: 3, a: 7}`. Ceci n'est plus le cas pour ECMAScript 2015 (ES6) : {{bug(1041128)}}
-  - Déclarer deux arguments de fonction avec le même nom` function f(a, b, b){}`
+  - Déclarer deux fois le nom d'une propriété dans un littéral objet `{a: 1, b: 3, a: 7}`. Ceci n'est plus le cas pour ECMAScript 2015 (ES6) : {{bug(1041128)}}
+  - Déclarer deux arguments de fonction avec le même nom `function f(a, b, b){}`
 
 Ces erreurs sont bienvenues car elles révèlent des mauvaises pratiques et certaines erreurs claires. Elles apparaissent avant l'exécution du code.
 
@@ -128,7 +128,7 @@ Un des aspects négatifs de cette migration est la sémantique : le sens du code
 1.  Écrivez votre code « strictement » et assurez vous de lancer des exceptions dans le cadre d'erreurs liées au mode non-strict (voir la section « Erreurs à l'exécution » ci-avant)
 2.  Minimisez l'utilisation des éléments dont la sémantique pourrait changer :
 
-    1.  `eval `: n'utilisez cette fonction uniquement si vous êtes certains que c'est l'unique solution
+    1.  `eval`&nbsp;: n'utilisez cette fonction uniquement si vous êtes certains que c'est l'unique solution
     2.  `arguments` : utilisez les arguments d'une fonction via leur nom ou faites une copie de l'objet en utilisant :
         `var args = Array.prototype.slice.call(arguments)`
         au tout début de votre fonction

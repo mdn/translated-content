@@ -57,7 +57,7 @@ Math.tanh = Math.tanh || function(x){
 }
 ```
 
-et si on souhaite n'utiliser qu'un seul appel à {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}}` :`
+et si on souhaite n'utiliser qu'un seul appel à {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}}&nbsp;:
 
 ```js
 Math.tanhx = Math.tanhx || function(x) {

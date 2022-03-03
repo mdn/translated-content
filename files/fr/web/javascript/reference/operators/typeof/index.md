@@ -32,7 +32,7 @@ Le tableau qui suit liste les résultats possibles de l'opérateur `typeof`. Pou
 | Type                                                                                              | Résultat                   |
 | ------------------------------------------------------------------------------------------------- | -------------------------- |
 | [indéfini](/fr/docs/Glossary/undefined)                                                           | `"undefined"`              |
-| [nul](/fr/docs/Glossary/Null)                                                                     | `"object" `(voir ci-après) |
+| [nul](/fr/docs/Glossary/Null)                                                                     | `"object"` (voir ci-après) |
 | [booléen](/fr/docs/Glossary/Boolean)                                                              | `"boolean"`                |
 | [nombre](/fr/docs/Glossary/Number)                                                                | `"number"`                 |
 | [grand entier (nouveauté d'ECMAScript 2020)](/fr/docs/Glossary/BigInt)                            | `"bigint"`                 |
@@ -161,7 +161,7 @@ typeof /s/ === 'object';   // À partir de Firefox 5 : Conforme à ECMAScript 5.
 
 Avant ECMAScript 2015 (ES6), `typeof` retournait toujours une chaîne de caractères, quel que soit l'opérande utilisé. On ne pouvait pas avoir d'erreur en utilisant `typeof`.
 
-Avec l'apparition des opérateurs [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), si on utilise `typeof` sur des variables déclarées avec ces opérateurs (ou avec une classe) avant leur déclaration, cela déclenchera une erreur [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Si on utilise `typeof` sur une variable déclarée avec `var` avant la déclaration, cela renverra `undefined`. Les variables déclarées avec `let` et `const` sont en fait placées dans une *[zone morte temporaire ](/fr/docs/Web/JavaScript/Reference/Statements/let)*entre le début du bloc et leur initialisation et dans cette zone, tout accès à la variable produit une erreur.
+Avec l'apparition des opérateurs [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const), si on utilise `typeof` sur des variables déclarées avec ces opérateurs (ou avec une classe) avant leur déclaration, cela déclenchera une erreur [`ReferenceError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError). Si on utilise `typeof` sur une variable déclarée avec `var` avant la déclaration, cela renverra `undefined`. Les variables déclarées avec `let` et `const` sont en fait placées dans une *[zone morte temporaire](/fr/docs/Web/JavaScript/Reference/Statements/let)* entre le début du bloc et leur initialisation et dans cette zone, tout accès à la variable produit une erreur.
 
 ```js
 typeof variableGlobaleNonDeclaree === "undefined";

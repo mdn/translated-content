@@ -36,7 +36,7 @@ Le logarithme en base 2 du nombre passé en argument. Si ce nombre est négatif,
 
 Si `x` est strictement inférieur à 0, la valeur renvoyée sera {{jsxref("NaN")}}.
 
-`log2()` étant une méthode statique de `Math`, il faut utiliser `Math.log2()` et non pas la méthode d'un autre objet qui aurait été créé (`Math `n'est pas un constructeur). Si on souhaite utiliser des constantes, on pourra employer {{jsxref("Math.LOG2E")}} ou {{jsxref("Math.LN2")}}.
+`log2()` étant une méthode statique de `Math`, il faut utiliser `Math.log2()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Si on souhaite utiliser des constantes, on pourra employer {{jsxref("Math.LOG2E")}} ou {{jsxref("Math.LN2")}}.
 
 ## Exemples
 
