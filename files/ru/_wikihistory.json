@@ -7987,17 +7987,17 @@
       "Excent163"
     ]
   },
-  "Web/API/FileReader/error": {
-    "modified": "2020-10-15T22:09:49.214Z",
-    "contributors": [
-      "A-Mikhail"
-    ]
-  },
-  "Web/API/FileReader/onabort": {
+  "Web/API/FileReader/abort_event": {
     "modified": "2020-05-07T08:21:21.125Z",
     "contributors": [
       "Excent163",
       "SpaceMotion"
+    ]
+  },
+  "Web/API/FileReader/error": {
+    "modified": "2020-10-15T22:09:49.214Z",
+    "contributors": [
+      "A-Mikhail"
     ]
   },
   "Web/API/FileReader/readAsArrayBuffer": {

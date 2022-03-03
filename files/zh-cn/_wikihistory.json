@@ -13442,18 +13442,6 @@
       "qhy90223"
     ]
   },
-  "Web/API/FileReader/onabort": {
-    "modified": "2019-04-18T04:11:44.611Z",
-    "contributors": [
-      "allan2coder"
-    ]
-  },
-  "Web/API/FileReader/onload": {
-    "modified": "2019-03-23T22:21:51.910Z",
-    "contributors": [
-      "Cattla"
-    ]
-  },
   "Web/API/FileReader/readAsArrayBuffer": {
     "modified": "2019-07-09T04:48:45.088Z",
     "contributors": [
@@ -46970,6 +46958,18 @@
     "contributors": [
       "teoli",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/FileReader/abort_event": {
+    "modified": "2019-04-18T04:11:44.611Z",
+    "contributors": [
+      "allan2coder"
+    ]
+  },
+  "conflicting/Web/API/FileReader/load_event": {
+    "modified": "2019-03-23T22:21:51.910Z",
+    "contributors": [
+      "Cattla"
     ]
   },
   "conflicting/Web/API/File_and_Directory_Entries_API/Introduction": {
