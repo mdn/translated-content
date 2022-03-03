@@ -28,7 +28,7 @@ Une syntaxe dépréciée a été utilisée pour indiquer une correspondance de s
 
 Il arrive souvent que les fichiers sources JavaScript soient combinés et minifiés afin que le transfert depuis le serveur vers le client soit plus efficace. Grâce [aux correspondances de source (ou _source maps_)](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/), le débogueur peut utiliser les sources des fichiers correspondants aux fichiers minifiés.
 
-La spécification sur cet outil a évolué car il existait un conflit de syntaxe avec IE (après `//@cc_on`, la correspondance était interprétée comme un test conditionnel de compilation du moteur JScript).[ Ce commentaire de compilation conditionnelle](https://msdn.microsoft.com/en-us/library/8ka90k2e%28v=vs.94%29.aspx) pour IE est peu connu mais son existence entraînait des erreurs avec [jQuery](https://bugs.jquery.com/ticket/13274) et d'autres bibliothèques.
+La spécification sur cet outil a évolué car il existait un conflit de syntaxe avec IE (après `//@cc_on`, la correspondance était interprétée comme un test conditionnel de compilation du moteur JScript). [Ce commentaire de compilation conditionnelle](https://msdn.microsoft.com/en-us/library/8ka90k2e%28v=vs.94%29.aspx) pour IE est peu connu mais son existence entraînait des erreurs avec [jQuery](https://bugs.jquery.com/ticket/13274) et d'autres bibliothèques.
 
 ## Exemples
 

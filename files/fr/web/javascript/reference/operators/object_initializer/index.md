@@ -184,7 +184,7 @@ var o = {
 };
 ```
 
-Pour plus d'informations et d'exemples sur les méthodes, voir la page concernant les[ définitions de méthode](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions).
+Pour plus d'informations et d'exemples sur les méthodes, voir la page concernant les [définitions de méthode](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 
 ### Noms de propriétés calculés
 
@@ -285,7 +285,7 @@ La notation utilisant un littéral objet n'est pas identique à celle utilisée 
 | Spécification                                                                                    | État                         | Commentaires                                                                                                                                               |
 | ------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}         | Définition initiale.                                                                                                                                       |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | [Ajout des _getter_ et ](/fr/docs/Web/JavaScript/Reference/Functions/get)_[setter](/fr/docs/Web/JavaScript/Reference/Functions/set)_ (accesseur/mutateur). |
+| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | [Ajout des _getter_ et](/fr/docs/Web/JavaScript/Reference/Functions/get) _[setter](/fr/docs/Web/JavaScript/Reference/Functions/set)_ (accesseur/mutateur). |
 | {{SpecName('ES2015', '#sec-object-initializer', 'Object Initializer')}} | {{Spec2('ES2015')}}     | Ajout des raccourcis pour les noms de méthodes et propriétés et des noms de propriétés calculés.                                                           |
 | {{SpecName('ESDraft', '#sec-object-initializer', 'Object Initializer')}} | {{Spec2('ESDraft')}} |                                                                                                                                                            |
 

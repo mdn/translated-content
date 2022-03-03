@@ -160,7 +160,7 @@ Ces propriétés associent une clé avec une ou deux fonctions accesseur et muta
 
 ### Les objets « normaux » et les fonctions
 
-Un objet JavaScript est un ensemble de correspondances entre des clés et des valeurs. Les clés sont représentées par des chaînes ou des symboles ({{jsxref("Symbol")}}). Les valeurs peuvent être de n'importe quel type. Grâce à cela, les objets peuvent, naturellement, être utilisés comme[ tables de hachage](https://fr.wikipedia.org/wiki/Table_de_hachage).
+Un objet JavaScript est un ensemble de correspondances entre des clés et des valeurs. Les clés sont représentées par des chaînes ou des symboles ({{jsxref("Symbol")}}). Les valeurs peuvent être de n'importe quel type. Grâce à cela, les objets peuvent, naturellement, être utilisés comme [tables de hachage](https://fr.wikipedia.org/wiki/Table_de_hachage).
 
 Les fonctions sont des objets classiques à la seule différence qu'on peut les appeler.
 

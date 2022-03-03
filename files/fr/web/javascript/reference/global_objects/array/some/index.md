@@ -74,7 +74,7 @@ passed = [12, 5, 8, 1, 4].some(estAssezGrand);
 
 ### Tester la valeur des éléments avec les fonctions fléchées
 
-[Les fonctions fléchées ](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
+[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
 
 ```js
 [2, 5, 8, 1, 4].some(elem => elem > 10); // false
