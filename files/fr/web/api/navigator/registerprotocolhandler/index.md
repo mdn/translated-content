@@ -8,7 +8,7 @@ browser-compat: api.Navigator.registerProtocolHandler
 
 La méthode **`registerProtocolHandler()`**, rattachée à l'interface **[`Navigator`](/fr/docs/Web/API/Navigator)**, permet aux sites de déclarer leur capacité à gérer certains schémas d'URL particuliers (autrement dit les protocoles).
 
-Ainsi, cette API permettra aux sites de webmail d'ouvrir les URL `mailto:` URLs, ou aux sites VoIP d'ouvrir des URL `tel:`.
+Ainsi, cette API permettra aux sites de webmail d'ouvrir les URL `mailto:`, ou aux sites VoIP d'ouvrir des URL `tel:`.
 
 ## Syntaxe
 
@@ -43,15 +43,15 @@ registerProtocolHandler(schema, url, titre)
 
 ### Exceptions
 
-- [`SecurityError`](/fr/docs/Web/API/DOMException#exception-securityerror)
+- [`SecurityError`](/fr/docs/Web/API/DOMException#noms_derreur)
   - : L'agent utilisateur a bloqué l'enregistrement. Cela peut se produire si&nbsp;:
 
     - Le schéma enregistré (le protocole) est invalide, par exemple parce qu'il est déjà géré par le navigateur (`https:`, `about:`, etc.)
-    - L'origine de l'URL du gestionnaire ne correspond pas à l'origine de la page qui utilise cette API.
+    - [L'origine](/fr/docs/Glossary/Origin) de l'URL du gestionnaire ne correspond pas à l'origine de la page qui utilise cette API.
     - Cette fonction doit être appelée depuis un contexte sécurisé pour le navigateur.
     - Le navigateur requiert que l'URL du gestionnaire soit communiquée via HTTPS.
 
-- [`SyntaxError`](/fr/docs/Web/API/DOMException#exception-syntaxerror)
+- [`SyntaxError`](/fr/docs/Web/API/DOMException#noms_derreur)
   - : L'emplacement de substitution marqué par `%s` est absent de l'URL de gestion.
 
 ## Schémas autorisés
@@ -64,7 +64,7 @@ Un **schéma personnalisé** (<i lang="en">custom scheme</i>) peut être enregis
 - Le nom du schéma personnalisé inclut au moins une lettre après le préfixe `web+`
 - Le nom du schéma personnalisé ne contient que des lettres ASCII en minuscules.
 
-On peut voir un exemple après avec `web+burger`, qui obéit à ces contraintes.
+On peut voir un [exemple](#exemple) après avec `web+burger`, qui obéit à ces contraintes.
 
 Le schéma peut aussi être l'une des valeurs suivantes&nbsp;:
 
@@ -95,7 +95,7 @@ Le schéma peut aussi être l'une des valeurs suivantes&nbsp;:
 
 <!-- Cette liste devrait correspondre à : https://html.spec.whatwg.org/multipage/system-state.html#safelisted-scheme -->
 
-## Exemples
+## Exemple
 
 Si votre site est `burgers.example.com`, vous pouvez enregistrer un gestionnaire de protocole afin qu'il puisse gérer les liens `web+burger:`, de cette façon&nbsp;:
 
@@ -107,7 +107,7 @@ navigator.registerProtocolHandler("web+burger",
                                   // pour des raisons de compatibilité
 ```
 
-Cette instruction crée un gestionnaire qui permet que des liens `web+burger:` envoie les utilisateurs vers votre site, en insérant l'URL du burger demandé dans l'emplacement indiqué par `%s`.
+Cette instruction crée un gestionnaire qui permet que des liens `web+burger:` envoie les utilisatrices et utilisateurs vers votre site, en insérant l'URL du burger demandée dans l'emplacement indiqué par `%s`.
 
 Ce script devra être exécuté depuis la même origine que l'URL du gestionnaire (c'est-à-dire depuis une page située sous `https://burgers.example.com`). L'URL du gestionnaire devra être avec `http` ou `https`.
 
@@ -125,5 +125,5 @@ La personne recevra une notification indiquant que le code a demandé à enregis
 
 ## Voir aussi
 
-- [Web-based protocol handlers](/fr/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
-- [RegisterProtocolHandler Enhancing the Federated Web](https://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)
+- [Gestionnaires de protocoles web](/fr/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [Améliorer le Web fédéré avec RegisterProtocolHandler (en anglais)](https://blog.mozilla.com/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) (Mozilla Webdev)
