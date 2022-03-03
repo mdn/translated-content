@@ -3038,7 +3038,7 @@
       "MatthiasRubin"
     ]
   },
-  "Web/API/FileReader/onload": {
+  "Web/API/FileReader/load_event": {
     "modified": "2019-03-23T22:41:15.437Z",
     "contributors": [
       "rehne93",

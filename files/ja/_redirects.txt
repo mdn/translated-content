@@ -3110,6 +3110,9 @@
 /ja/docs/Web/API/File/fileName	/ja/docs/conflicting/Web/API/File/name
 /ja/docs/Web/API/File/fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/Web/API/File/size	/ja/docs/Web/API/Blob/size
+/ja/docs/Web/API/FileReader/onabort	/ja/docs/conflicting/Web/API/FileReader/abort_event
+/ja/docs/Web/API/FileReader/onerror	/ja/docs/conflicting/Web/API/FileReader/error_event
+/ja/docs/Web/API/FileReader/onload	/ja/docs/conflicting/Web/API/FileReader/load_event
 /ja/docs/Web/API/Geolocation.clearWatch	/ja/docs/Web/API/Geolocation/clearWatch
 /ja/docs/Web/API/Geolocation.getCurrentPosition	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/Geolocation.watchPosition	/ja/docs/Web/API/Geolocation/watchPosition

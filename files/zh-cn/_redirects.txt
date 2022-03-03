@@ -1343,6 +1343,8 @@
 /zh-CN/docs/Web/API/File/fileName	/zh-CN/docs/conflicting/Web/API/File/name
 /zh-CN/docs/Web/API/File/fileSize	/zh-CN/docs/conflicting/Web/API/Blob/size
 /zh-CN/docs/Web/API/File/size	/zh-CN/docs/conflicting/Web/API/Blob/size_3e7c15d3e7851172bb4623d0237d8c9e
+/zh-CN/docs/Web/API/FileReader/onabort	/zh-CN/docs/conflicting/Web/API/FileReader/abort_event
+/zh-CN/docs/Web/API/FileReader/onload	/zh-CN/docs/conflicting/Web/API/FileReader/load_event
 /zh-CN/docs/Web/API/FileReader/中止事件(abort)	/zh-CN/docs/Web/API/FileReader/abort_event
 /zh-CN/docs/Web/API/FormData/删除	/zh-CN/docs/Web/API/FormData/delete
 /zh-CN/docs/Web/API/Fullscreen_API/指南	/zh-CN/docs/Web/API/Fullscreen_API/Guide

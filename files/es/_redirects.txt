@@ -1545,6 +1545,7 @@
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/File/fileName	/es/docs/conflicting/Web/API/File/name
+/es/docs/Web/API/FileReader/onload	/es/docs/Web/API/FileReader/load_event
 /es/docs/Web/API/Geolocalización	/es/docs/Web/API/Geolocation
 /es/docs/Web/API/Geolocation.clearWatch	/es/docs/Web/API/Geolocation/clearWatch
 /es/docs/Web/API/Geolocation.getCurrentPosition	/es/docs/Web/API/Geolocation/getCurrentPosition

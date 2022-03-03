@@ -424,6 +424,7 @@
 /de/docs/Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
 /de/docs/Web/API/File/fileName	/de/docs/conflicting/Web/API/File/name
 /de/docs/Web/API/File/fileSize	/de/docs/Web/API/Blob/size
+/de/docs/Web/API/FileReader/onload	/de/docs/Web/API/FileReader/load_event
 /de/docs/Web/API/FullscreenOptions	/de/docs/orphaned/Web/API/FullscreenOptions
 /de/docs/Web/API/IndexedDB_API/IndexedDB_verwenden	/de/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /de/docs/Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-handler	/de/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
