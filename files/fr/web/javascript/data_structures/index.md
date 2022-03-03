@@ -62,7 +62,7 @@ Le type `Number` est géré pour représenter les nombres : [les nombres flottan
 
 Afin de vérifier que des valeurs sont supérieures/inférieures à `+/-Infinity`, on peut utiliser les constantes {{jsxref("Number.MAX_VALUE")}} et {{jsxref("Number.MIN_VALUE")}}. À partir d'ECMAScript 6, on peut également vérifier si un nombre est/sera compris dans l'intervalle de représentation pour les nombres flottants à précision double en utilisant la méthode {{jsxref("Number.isSafeInteger()")}} ainsi que les valeurs {{jsxref("Number.MAX_SAFE_INTEGER")}} et {{jsxref("Number.MIN_SAFE_INTEGER")}}. En dehors de cet intervalle et pour JavaScript, on considère que les nombres ne sont plus représentés correctement. On manipule alors une approximation de la valeur sous forme d'un nombre à virgule flottante à précision double.
 
-Le type nombre possède un seul entier pouvant être représenté de deux façons différentes : 0 qui peut être représenté par -0 et +0. ("0" étant un alias pour +0). En pratique, cela n'a généralement aucun impact et` +0 === -0` vaut bien `true`. Malgré tout, on peut observer certaines différences quand on divise par zéro :
+Le type nombre possède un seul entier pouvant être représenté de deux façons différentes : 0 qui peut être représenté par -0 et +0. ("0" étant un alias pour +0). En pratique, cela n'a généralement aucun impact et `+0 === -0` vaut bien `true`. Malgré tout, on peut observer certaines différences quand on divise par zéro :
 
 ```js
 42 / +0

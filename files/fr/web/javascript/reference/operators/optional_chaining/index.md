@@ -66,7 +66,7 @@ Utiliser le chaînage optionnel avec les appels de fonction entraîne le retour 
 let result = uneInterface.uneMéthode?.();
 ```
 
-> **Note :** S'il est une propriété qui porte ce nom et qui n'est pas une fonction, utiliser `?.` jètera aussi une exception {{jsxref("TypeError")}} (` x.y`` is not a function  `).
+> **Note :** S'il est une propriété qui porte ce nom et qui n'est pas une fonction, utiliser `?.` jètera aussi une exception {{jsxref("TypeError")}} (`x.y is not a function`).
 
 #### Réaliser des fonctions de rappel optionnelles ou des écouteurs d'évènements
 

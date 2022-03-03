@@ -64,7 +64,7 @@ o3 instanceof C; // true car C.prototype fait partie de la chaîne de o3
 
 ### `instanceof` dans d'autres contextes (frames ou fenêtres)
 
-Différents niveaux d'intégrations ont différents environnements. Cela signifie que les valeurs retournées sont différentes (objet globaux différents, constructeurs différents, etc.). Cela peut engendrer des résultats inattendus. Par exemple, `[] instanceof window.frames[0].Array` renverra `false`, car ` Array !== ``window.frames[0].Array` et que les tableaux héritent de leur constructeur.
+Différents niveaux d'intégrations ont différents environnements. Cela signifie que les valeurs retournées sont différentes (objet globaux différents, constructeurs différents, etc.). Cela peut engendrer des résultats inattendus. Par exemple, `[] instanceof window.frames[0].Array` renverra `false`, car `Array !== window.frames[0].Array` et que les tableaux héritent de leur constructeur.
 
 Cela peut être contre-intuitif au début, mais lorsqu'il est nécessaire de travailler avec plusieurs frames ou fenêtres, et que des objets sont transférés via des fonctions, cela sera un obstacle valide et important. Par contre, il est tout à fait possible d'utiliser `Array.isArray(myObj)` pour vérifier de manière sécurisée qu'un tableau est effectivement un tableau.
 

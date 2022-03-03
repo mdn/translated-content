@@ -38,7 +38,7 @@ Une chaîne représentant l'objet {{jsxref("Number")}} appelant en notation expo
 
 ## Description
 
-La valeur renvoyée est une chaîne de caractères correspondant à la représentation du nombre en notation exponentielle. La partie entière est constituée d'un seul chiffre et la partie fractionnaire est composée de `nbChiffresDécimaux` chiffres. Si l'argument `nbChiffresDécimaux `est absent, il y aura autant de chiffres dans la partie fractionnaire que nécessaire pour représenter le nombre de façon unique.
+La valeur renvoyée est une chaîne de caractères correspondant à la représentation du nombre en notation exponentielle. La partie entière est constituée d'un seul chiffre et la partie fractionnaire est composée de `nbChiffresDécimaux` chiffres. Si l'argument `nbChiffresDécimaux` est absent, il y aura autant de chiffres dans la partie fractionnaire que nécessaire pour représenter le nombre de façon unique.
 
 Si la méthode `toExponential()` est utilisée avec un littéral numérique et que celui-ci ne possède aucun exposant ou séparateur décimal ("."), il faut laisser un ou plusieurs espaces entre le littéral et le point indiquant l'appel de la méthode. Cela permet d'éviter que le point, permettant d'accéder à la méthode, soit confondu avec un séparateur décimal.
 

@@ -156,7 +156,7 @@ Avec `concurrentStart`, si l'un des deux appels échoue, l'exception sera imméd
 Pour obtenir les mêmes sécurités avec les promesses, il faut s'assurer que la fonction renvoie une promesse qui gère ce cas d'échec. Pour `concurrentPromise` cela signifie qu'il faut renvoyer la promesse de `Promise.all([]).then()`.
 
 Bien entendu, il est toutefois possible d'avoir des fonctions asynchrones (avec `async`) qui gobent des erreurs involontairement. Si on considère la fonction `parallel` ci-avant, s'il n'y avait eu aucun `await` ou `return` pour le résultat de `Promise.all([])`, aucune erreur n'aurait été propagée.
-Bien que l'exemple `parallelPromise` paraisse simple, il ne gère aucune erreur du tout. Il aurait fallu utiliser un ` return ``Promise.all([])` analogue.
+Bien que l'exemple `parallelPromise` paraisse simple, il ne gère aucune erreur du tout. Il aurait fallu utiliser un `return Promise.all([])` analogue.
 
 ### Réécrire une chaîne de promesses avec une fonction asynchrone
 

@@ -166,7 +166,7 @@ Il y a beaucoup de différences par rapport aux exemples précédents. Au lieu d
 
 L'environnement partagé vient du corps de la fonction anonyme qui est exécutée dès sa définition complète (on parle d'expression de fonction immédiatement invoquée, abrégé en anglais en [IIFE](/fr/docs/Glossary/IIFE)). L'environnement en question contient deux éléments privés&nbsp;: une variable `compteurPrive` et une fonction `changeValeur`. Aucun de ces deux éléments ne peut être utilisé en dehors de la fonction anonyme&nbsp;; seules les trois fonctions renvoyées par la fonction anonyme sont publiques.
 
-Ces trois fonctions publiques sont des fermetures qui partagent le même environnement. Grâce à la portée lexicale, chacune a accès à` compteurPrive` et à `changeValeur`.
+Ces trois fonctions publiques sont des fermetures qui partagent le même environnement. Grâce à la portée lexicale, chacune a accès à ` compteurPrive` et à `changeValeur`.
 
 On remarquera qu'on définit une fonction anonyme qui crée un compteur puis qu'on l'appelle immédiatement pour assigner le résultat à la variable `compteur`. On pourrait stocker cette fonction dans une variable puis l'appeler plusieurs fois afin de créer plusieurs compteurs.
 

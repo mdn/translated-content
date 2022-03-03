@@ -32,7 +32,7 @@ Le tableau qui suit liste les résultats possibles de l'opérateur `typeof`. Pou
 | Type                                                                                              | Résultat                   |
 | ------------------------------------------------------------------------------------------------- | -------------------------- |
 | [indéfini](/fr/docs/Glossary/undefined)                                                           | `"undefined"`              |
-| [nul](/fr/docs/Glossary/Null)                                                                     | `"object" `(voir ci-après) |
+| [nul](/fr/docs/Glossary/Null)                                                                     | `"object"` (voir ci-après) |
 | [booléen](/fr/docs/Glossary/Boolean)                                                              | `"boolean"`                |
 | [nombre](/fr/docs/Glossary/Number)                                                                | `"number"`                 |
 | [grand entier (nouveauté d'ECMAScript 2020)](/fr/docs/Glossary/BigInt)                            | `"bigint"`                 |

@@ -34,7 +34,7 @@ La méthode **`some()`** teste si au moins un élément du tableau passe le test
       - : L'élément du tableau à traiter par la fonction.
     - `index` {{optional_inline}}
       - : L'indice de l'élément qui est traité par la fonction.
-    - `array `{{optional_inline}}
+    - `array` {{optional_inline}}
       - : Le tableau sur lequel on a appelé la méthode `some`.
 
 - `objetThis` {{optional_inline}}

@@ -678,7 +678,7 @@ if (3 in arbres) {
 }
 ```
 
-Pour qu'un élément continue à exister mais qu'il vaille `undefined`, on utilisera le mot-clé` undefined` plutôt que l'opérateur `delete`. Dans l'exemple qui suit, arbres`[3]` est modifié pour valoir `undefined` et l'élément du tableau continue à exister :
+Pour qu'un élément continue à exister mais qu'il vaille `undefined`, on utilisera le mot-clé `undefined` plutôt que l'opérateur `delete`. Dans l'exemple qui suit, arbres`[3]` est modifié pour valoir `undefined` et l'élément du tableau continue à exister :
 
 ```js
 var arbres = new Array("sequoia", "laurier", "cèdre", "chêne", "érable");

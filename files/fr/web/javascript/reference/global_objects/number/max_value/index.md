@@ -19,7 +19,7 @@ La propriété **`Number.MAX_VALUE`** représente la valeur maximale qui peut ê
 
 La propriété statique `MAX_VALUE` vaut environ `1.79E+308` (soit 2^1024). Les valeurs supérieures à `MAX_VALUE` sont représentées par {{jsxref("Infinity")}} (pour l'infini).
 
-`MAX_VALUE` est une propriété statique de {{jsxref("Number")}}, il faut donc l'utiliser avec `Number.MAX_VALUE`, plutôt qu'en faisant appel à la propriété d'un objet` Number` qui aurait été instancié (si on appelle cette propriété sur l'objet `Number` créé, on obtiendra {{jsxref("undefined")}}).
+`MAX_VALUE` est une propriété statique de {{jsxref("Number")}}, il faut donc l'utiliser avec `Number.MAX_VALUE`, plutôt qu'en faisant appel à la propriété d'un objet `Number` qui aurait été instancié (si on appelle cette propriété sur l'objet `Number` créé, on obtiendra {{jsxref("undefined")}}).
 
 ## Exemples
 
