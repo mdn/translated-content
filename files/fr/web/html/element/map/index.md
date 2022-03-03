@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/map
 ---
 {{HTMLRef}}
 
-L'élément HTML** `<map>`** est utilisé avec des éléments {{HTMLElement("area")}} afin de définir une image cliquable divisée en régions.
+L'élément HTML **`<map>`** est utilisé avec des éléments {{HTMLElement("area")}} afin de définir une image cliquable divisée en régions.
 
 {{EmbedInteractiveExample("pages/tabbed/map.html", "tabbed-standard")}}
 
@@ -44,7 +44,7 @@ L'exemple précédent devrait faire apparaître des images semblables (en utilis
 _Pour le lien `left.html` :_
 ![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
-_Pour le lien `right.html` _
+_Pour le lien `right.html`&nbsp;:_
 ![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## Résumé technique

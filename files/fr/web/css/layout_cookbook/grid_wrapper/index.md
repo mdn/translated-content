@@ -75,5 +75,5 @@ Bien que les grilles CSS nous permettent potentiellement de positionner n'import
 
 - {{Cssxref("grid-template-columns")}}
 - [Les grilles CSS sur MDN](/fr/docs/Web/CSS/CSS_Grid_Layout)
-- Article :[ Les grilles CSS, plus de flexibilité avec `minmax()` (en anglais)](https://css-irl.info/more-flexibility-with-minmax/)
+- Article : [Les grilles CSS, plus de flexibilité avec `minmax()` (en anglais)](https://css-irl.info/more-flexibility-with-minmax/)
 - Article : [Isoler des éléments sur une grille CSS (en anglais)](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)

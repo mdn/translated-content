@@ -70,4 +70,4 @@ Le cas d'usage le plus courant est la mise-à-jour d'une entité cachée qui n'a
 - {{HTTPHeader("If-Unmodified-since")}}
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
+- {{HTTPStatus("304")}} `Not Modified`

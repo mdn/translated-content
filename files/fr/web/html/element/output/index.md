@@ -18,7 +18,7 @@ L'élément HTML **`<output>`** représente un conteneur dans lequel un site ou 
 Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
 - {{htmlattrdef("for")}}
-  - : Une liste d'[identifiants ](/fr/docs/Web/HTML/Attributs_universels/id)d'autres éléments, séparés par des espaces, qui ont joué un rôle dans le calcul (en tant que valeurs d'entrée ou autrement).
+  - : Une liste d'[identifiants](/fr/docs/Web/HTML/Attributs_universels/id) d'autres éléments, séparés par des espaces, qui ont joué un rôle dans le calcul (en tant que valeurs d'entrée ou autrement).
 - {{htmlattrdef("form")}}
   - : L'identifiant d'un élément de formulaire ({{HTMLElement("form")}}) auquel cet élément est rattaché. La valeur de cet attribut doit être un identifiant (`id`) d'un formulaire qui fait partie du même document. Cet attribut n'est pas nécessaire si l'élément `<output>` est situé dans un formulaire ou si l'élément `<output>` n'est pas du tout associé à un formulaire. Cet attribut permet ainsi de placer l'élément `<output>` où on veut dans le document, pas nécessairement comme descendant d'un formulaire.
 - {{htmlattrdef("name")}}

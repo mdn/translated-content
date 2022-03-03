@@ -209,7 +209,7 @@ Cet élément inclut les [attributs globaux](/fr/docs/Web/HTML/Global_attributes
 
 `<img>` est un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) ; il a une valeur [`display`](/fr/docs/Web/CSS/display) de `inline` par défaut, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image intégrée, comme s'il s'agissait de `inline-block`. Vous pouvez définir des propriétés comme [`border`](/fr/docs/Web/CSS/border)/[`border-radius`](/fr/docs/Web/CSS/border-radius), [`padding`](/fr/docs/Web/CSS/padding)/[`margin`](/fr/docs/Web/CSS/margin), [`width`](/fr/docs/Web/CSS/width), [`height`](/fr/docs/Web/CSS/height), etc. sur une image.
 
-`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec [`vertical-align`](/fr/docs/Web/CSS/vertical-align)` : baseline`, le bas de l'image sera placé sur la ligne de base du texte.
+`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec [`vertical-align`](/fr/docs/Web/CSS/vertical-align)`: baseline`, le bas de l'image sera placé sur la ligne de base du texte.
 
 Vous pouvez utiliser la propriété [`object-position`](/fr/docs/Web/CSS/object-position) pour positionner l'image dans la boîte de l'élément, et la propriété [`object-fit`](/fr/docs/Web/CSS/object-fit) pour ajuster la taille de l'image dans la boîte (par exemple, si l'image doit s'adapter à la boîte ou la remplir même si un découpage est nécessaire).
 
@@ -292,9 +292,9 @@ L'attribut `alt` doit décrire le contenu de l'image de façon claire et concise
 
 Lorsque l'attribut `alt` n'est pas présent, certains lecteurs d'écran peuvent énoncer le nom du fichier. Cela peut être source de confusion, car le nom du fichier n'est pas représentatif du contenu de l'image.
 
-- _[An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)_[ (en anglais)](https://www.w3.org/WAI/tutorials/images/decision-tree/)
-- _[Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)_[ (en anglais)](https://axesslab.com/alt-texts/)
-- _[How to Design Great Alt Text: An Introduction - Deque](https://www.deque.com/blog/great-alt-text-introduction/)_[ (en anglais)](https://www.deque.com/blog/great-alt-text-introduction/)
+- [_An alt Decision Tree • Images • WAI Web Accessibility Tutorials_ (en anglais)](https://www.w3.org/WAI/tutorials/images/decision-tree/)
+- [_Alt-texts: The Ultimate Guide — Axess Lab_ (en anglais)](https://axesslab.com/alt-texts/)
+- [_How to Design Great Alt Text: An Introduction - Deque_ (en anglais)](https://www.deque.com/blog/great-alt-text-introduction/)
 - [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [_Understanding Success Criterion 1.1.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 

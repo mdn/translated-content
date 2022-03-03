@@ -14862,24 +14862,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/FileReader/onabort": {
-    "modified": "2020-09-25T19:31:51.509Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "Web/API/FileReader/onerror": {
-    "modified": "2020-09-25T19:37:21.563Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "Web/API/FileReader/onload": {
-    "modified": "2019-03-23T22:37:58.368Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
   "Web/API/FileReader/progress_event": {
     "modified": "2020-10-15T22:16:11.772Z",
     "contributors": [
@@ -48410,6 +48392,24 @@
       "mfuji09",
       "fscholz",
       "ethertank"
+    ]
+  },
+  "conflicting/Web/API/FileReader/abort_event": {
+    "modified": "2020-09-25T19:31:51.509Z",
+    "contributors": [
+      "silverskyvicto"
+    ]
+  },
+  "conflicting/Web/API/FileReader/error_event": {
+    "modified": "2020-09-25T19:37:21.563Z",
+    "contributors": [
+      "silverskyvicto"
+    ]
+  },
+  "conflicting/Web/API/FileReader/load_event": {
+    "modified": "2019-03-23T22:37:58.368Z",
+    "contributors": [
+      "YuichiNukiyama"
     ]
   },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {

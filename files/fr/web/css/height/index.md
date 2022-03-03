@@ -42,7 +42,7 @@ height: unset;
   - : Une valeur de longueur absolue. Voir la page {{cssxref("&lt;length&gt;")}} pour les unités qui peuvent être utilisées.
 - `<percentage>`
   - : La valeur exprimée correspond à un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) de la hauteur du bloc englobant.
-- `border-box `{{experimental_inline}}
+- `border-box` {{experimental_inline}}
   - : Si cette valeur est présente, la valeur de longueur ou le pourcentage indiqués avant s'applique à la boîte de bordure de l'élément.
 - `content-box` {{experimental_inline}}
   - : Si cette valeur est présente, la valeur de longueur ou le pourcentage indiqués avant s'applique à la boîte de contenu de l'élément
