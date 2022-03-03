@@ -24,7 +24,7 @@ XUL の `XULElement` インターフェイスのようなウェブプラット�
 
 ## プロパティ
 
-_`Element` は、親インターフェスである {{DOMxRef("Node")}}、およびその親インターフェイスである {{DOMxRef("EventTarget")}} からプロパティを継承しています。_
+_`Element` は、親インターフェイスである {{DOMxRef("Node")}}、およびその親インターフェイスである {{DOMxRef("EventTarget")}} からプロパティを継承しています。_
 
 - {{DOMxRef("Element.assignedSlot")}}{{readonlyInline}}
   - : このノードが挿入された {{htmlelement("slot")}} を表す {{DOMxRef("HTMLSlotElement")}} を返します。
