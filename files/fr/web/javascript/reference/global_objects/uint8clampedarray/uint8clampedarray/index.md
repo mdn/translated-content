@@ -11,7 +11,7 @@ Le constructeur **`Uint8ClampedArray()`** permet de créer un tableau typé cont
 ## Syntaxe
 
 ```js
-new Uint8ClampedArray();
+new Uint8ClampedArray(); // apparu avec ES2017
 new Uint8ClampedArray(longueur);
 new Uint8ClampedArray(tableauType);
 new Uint8ClampedArray(objet);
@@ -26,7 +26,7 @@ new Uint8ClampedArray(buffer, decalageOctets, longueur);
 - `longueur`
   - : Lorsque le constructeur est invoqué avec un argument indiquant une longueur, un tampon de mémoire interne tabulé est créé, dont la taille en octets est `longueur` _multipliée par `BYTES_PER_ELEMENT`_, et qui contient des zéros.
 - `tableauType`
-  - : Lorsque le constructeur est invoqué avec un tableau typé comme argument (tout tableau typé en dehors des tableaux typés [`bigint`](/fr/docs/Glossary/BigInt)), ce tableau typé est copié dans un nouveau tableau typé. Chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé sera la même que celle de `tableauType`.
+  - : Lorsque le constructeur est invoqué avec un tableau typé comme argument (tout tableau typé en dehors des tableaux typés [`bigint`](/fr/docs/Glossary/BigInt) tel que [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array)), ce tableau typé est copié dans un nouveau tableau typé. Chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé sera la même que celle de `tableauType`.
 - `objet`
   - : Lorsque le constructeur est appelé avec un objet comme argument, le nouveau tableau typé est créé avec la méthode `TypedArray.from()`.
 - `buffer`, `decalageOctets`, `longueur`
@@ -79,7 +79,7 @@ let uintc8 = new Uint8ClampedArray(iterable);
 
 ```js example-bad
 let dv = Uint8ClampedArray([1, 2, 3]);
-// TypeError : calling a builtin Uint8ClampedArray
+// TypeError: calling a builtin Uint8ClampedArray
 // constructor without new is forbidden
 ```
 

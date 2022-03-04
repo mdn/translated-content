@@ -19,7 +19,7 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
 - [`Uint8ClampedArray.BYTES_PER_ELEMENT`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
   - : Cette propriété renvoie la taille d'un élément du tableau, en octets. En l'occurrence, pour `Uint8ClampedArray` ce sera `1`.
 - [`Uint8ClampedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name)
-  - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint8ClampedArray` ce sera : "Uint8ClampedArray".
+  - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint8ClampedArray` ce sera&nbsp;: "`Uint8ClampedArray`".
 
 ## Méthodes statiques
 
@@ -44,7 +44,7 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
 - [`Uint8ClampedArray.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin)
   - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également [`Array.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin).
 - [`Uint8ClampedArray.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/entries)
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau. Voir également [`Array.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/entries).
+  - : Renvoie un nouvel *itérateur de tableau* qui contient les paires clé/valeur pour chaque indice du tableau. Voir également [`Array.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/entries).
 - [`Uint8ClampedArray.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/every)
   - : Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également [`Array.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every).
 - [`Uint8ClampedArray.prototype.fill()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/fill)
@@ -54,19 +54,19 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
 - [`Uint8ClampedArray.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/find)
   - : Renvoie une valeur trouvée dans le tableau s'il existe un élément du tableau qui satisfait une condition fournie par une fonction de test, s'il n'y a pas de tel élément `undefined` sera renvoyé. Voir également [`Array.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find).
 - [`Uint8ClampedArray.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex)
-  - : Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition -1 sera renvoyé. Voir également [`Array.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex).
+  - : Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition `-1` sera renvoyé. Voir également [`Array.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex).
 - [`Uint8ClampedArray.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/forEach)
   - : Appelle une fonction pour chacun des éléments du tableau. Voir également [`Array.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach).
 - [`Uint8ClampedArray.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes)
   - : Détermine si le tableau typé contient un élément donné. Cette méthode renvoie `true` ou `false` selon le cas de figure. Voir également [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes).
 - [`Uint8ClampedArray.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf)
-  - : Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf).
+  - : Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur `-1` sera renvoyée. Voir également [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf).
 - [`Uint8ClampedArray.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/join)
   - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également [`Array.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join).
 - [`Uint8ClampedArray.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/keys)
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les clés de chaque indice du tableau. Voir également [`Array.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/keys).
+  - : Renvoie un nouvel *itérateur de tableau* qui contient les clés de chaque indice du tableau. Voir également [`Array.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/keys).
 - [`Uint8ClampedArray.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf)
-  - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également [`Array.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf).
+  - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur `-1` sera renvoyée. Voir également [`Array.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf).
 - [`Uint8ClampedArray.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map)
   - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 - [`Uint8ClampedArray.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce)
@@ -86,17 +86,17 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
 - [`Uint8ClampedArray.prototype.subarray()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray)
   - : Renvoie un nouvel objet `Uint8ClampedArray` qui est le fragment du tableau courant, entre les indices de début et de fin donnés.
 - [`Uint8ClampedArray.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/values)
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau. Voir également [`Array.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/values).
+  - : Renvoie un nouvel *itérateur de tableau* qui contient les valeurs correspondantes à chaque indice du tableau. Voir également [`Array.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/values).
 - [`Uint8ClampedArray.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString)
   - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString).
 - [`Uint8ClampedArray.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString)
-  - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString).
+  - : Renvoie une chaîne de caractères qui représente le tableau et ses éléments. Voir également [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString).
 - [`Uint8ClampedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
-  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
+  - : Renvoie un nouvel *itérateur de tableau* qui contient les valeurs correspondantes à chaque indice du tableau.
 
 ## Exemples
 
-Différentes façons de créer un objet `Uint8ClampedArray`&nbsp;:
+### Différentes façons de créer un objet `Uint8ClampedArray`
 
 ```js
 // Construction à partir d'une longueur
