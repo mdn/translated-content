@@ -113,7 +113,7 @@ Vous verrez qu'il existe plein d'exemples de chaine de prototypage dans JavaScri
 let maChaine = 'Ceci est ma chaine de caractères.';
 ```
 
-`maChaine `possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)…
+`maChaine ` possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)…
 
 > **Attention :** L'attribut `prototype` est un des éléments JavaScript qui peut le plus prêter à confusion. On pourrait penser qu'il s'agit du prototype objet de l'objet courant mais ça ne l'est pas (on peut y accéder via `__proto__`). L'attribut `prototype` est un attribut qui contient un objet où l'on définit les éléments dont on va pouvoir hériter.
 

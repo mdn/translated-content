@@ -167,7 +167,7 @@ Quand le formulaire est soumis avec la méthode `POST`, aucune donnée n'est ajo
 
     say=Hi&to=Mom
 
-L'en-tête `Content-Length `indique la taille du corps, et l'en-tête `Content-Type` indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.
+L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-Type` indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.
 
 > **Note :** Vous trouverez cet exemple sur GitHub — voyez [post-method.html](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
