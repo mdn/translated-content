@@ -28,7 +28,7 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
 - [`Uint8ClampedArray.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/of)
   - : Cette méthode permet de créer un nouvel objet `Uint8ClampedArray` à partir d'un nombre variable d'arguments. Voir aussi [`Array.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/of).
 
-### Propriétés des instances
+## Propriétés des instances
 
 - [`Uint8ClampedArray.prototype.buffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/buffer)
   - : Cette propriété renvoie l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) référencé par l'objet `Uint8ClampedArray`. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
@@ -39,7 +39,7 @@ Le tableau typé **`Uint8ClampedArray`** permet de représenter un tableau d'ent
 - [`Uint8ClampedArray.prototype.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/length)
   - : Cette propriété renvoie le nombre d'éléments contenus dans le tableau `Uint8ClampedArray`. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
 
-### Méthodes des instances
+## Méthodes des instances
 
 - [`Uint8ClampedArray.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin)
   - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également [`Array.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin).
