@@ -182,7 +182,7 @@ Les instructions `import` et `export` ne peuvent être utilisées qu'à l'intér
 
 - Attention aux tests sur un environnement local&nbsp;: si vous chargez le fichier HTML directement depuis le système de fichier dans le navigateur (en double-cliquant dessus par exemple, ce qui donnera une URL `file://`), vous rencontrerez des erreurs CORS pour des raisons de sécurité. Il faut donc un serveur local afin de pouvoir tester.
 - On pourra avoir un comportement différent entre un même script utilisé comme un module et un script utilisé de façon « classique ». En effet, les modules utilisent automatiquement [le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
-- Il n'est pas nécessaire d'utiliser l'attribut `defer` (voir [les attributs de `<script>`](/fr/docs/Web/HTML/Element/script#attributs)) lors du chargement d'un module, ceux-ci sont automatiquement chargés à la demande.
+- Il n'est pas nécessaire d'utiliser l'attribut `defer` (voir [les attributs de `<script>`](/fr/docs/Web/HTML/Element/script#attributs)) lors du chargement d'un module, celui-ci étant automatiquement différé.
 - Les modules sont exécutés une seule fois, même s'ils sont référencés dans plusieurs balises `<script>`.
 - Enfin, les fonctionnalités importées ne sont disponibles qu'au sein de la portée du script qui les utilise ! Les valeurs importées ne sont manipulables que depuis le script, elles ne sont pas rattachées à la portée globale. On ne pourra par exemple pas y accéder depuis la console JavaScript. Bien que les erreurs soient toujours indiquées dans les outils de développement, certaines techniques de débogage ne seront pas disponibles.
 
