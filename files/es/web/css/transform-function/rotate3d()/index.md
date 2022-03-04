@@ -10,13 +10,13 @@ La [función](/es/docs/Web/CSS/CSS_Functions) **`rotate3d()`** de [CSS](/es/docs
 
 {{EmbedInteractiveExample("pages/css/rotate3d.html")}}
 
-En el espacio tridimencional, las rotaciones tienen tres grados de libertad, que describen un ángulo de rotación. El ángulo de rotación está definido por un vector \[x, y, z] y pasa por el origen (como lo define la propiedad {{cssxref("transform-origin")}}. Si el vector no está _normalizado_ (p. ej. si la suma del cuadrado de sus tres coordenadas no es igual a 1), el  {{glossary("user agent")}} lo normalizará internamente. Un vector no-normalizable, como es el caso del vector nulo, \[0, 0, 0], causará que la rotación no sea aplicada, pero sin que esto invalide la propiedad CSS en su totalidad.
+En el espacio tridimencional, las rotaciones tienen tres grados de libertad, juntos describen un ángulo de rotación. El ángulo de rotación está definido por un vector \[x, y, z] y pasa por el origen (como lo define la propiedad {{cssxref("transform-origin")}}. Si el vector no está _normalizado_ (ej. si la suma del cuadrado de sus tres coordenadas no es igual a 1), el  {{glossary("user agent")}} lo normalizará internamente. Un vector no-normalizable, como es el caso del vector nulo, \[0, 0, 0], causará que la rotación no sea aplicada, pero sin que esto invalide la propiedad CSS en su totalidad.
 
 > **Nota:** Contrario a las rotaciones en el plano 2D, la composición de las rotaciones 3D normalmente no es conmutativa; lo que significa que el orden en el que dichas rotaciones son aplicadas impacta al resultado.
 
 ## Sintaxis
 
-La cantidad de rotación creada por `rotate3d()` está especificada por tres {{cssxref("&lt;number&gt;")}} y un {{cssxref("&lt;angle&gt;")}}. El `<number>` representa las coordenadas x, y y z del vector, denotando los ejes de la rotación. El `<angle>` representa el angulo de rotación; si es positivo el movimiento será en el sentido de las agujas del reloj; si es negativo será en el sentido opuesto.
+La cantidad de rotación creada por `rotate3d()` está especificada por tres {{cssxref("&lt;number&gt;")}}s y un {{cssxref("&lt;angle&gt;")}}. El `<number>` representa las coordenadas x, y y z del vector, denotando los ejes de la rotación. El `<angle>` representa el angulo de rotación; si es positivo el movimiento será en el sentido de las agujas del reloj; si es negativo será en el sentido opuesto.
 
 ```css
 rotate3d(x, y, z, a)
