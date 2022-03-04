@@ -11,10 +11,10 @@ Le constructeur **`Uint8Array()`** crée un tableau typé contenant des entiers 
 ## Syntaxe
 
 ```js
-new Uint8Array(); // new in ES2017
+new Uint8Array(); // apparu avec ES2017
 new Uint8Array(longueur);
 new Uint8Array(tableauType);
-new Uint8Array(object);
+new Uint8Array(objet);
 
 new Uint8Array(buffer);
 new Uint8Array(buffer, decalageOctets);
@@ -26,7 +26,7 @@ new Uint8Array(buffer, decalageOctets, longueur);
 - `longueur`
   - : Lorsque le constructeur est invoqué avec un argument indiquant une longueur, un tampon de mémoire interne tabulé est créé, dont la taille en octets est `longueur` _multipliée par `BYTES_PER_ELEMENT`_, et qui contient des zéros.
 - `tableauType`
-  - : Lorsque le constructeur est invoqué avec un tableau typé comme argument (tout tableau typé en dehors des tableaux typés [`bigint`](/fr/docs/Glossary/BigInt)), ce tableau typé est copié dans un nouveau tableau typé. Chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé sera la même que celle de `tableauType`.
+  - : Lorsque le constructeur est invoqué avec un tableau typé comme argument (tout tableau typé en dehors des tableaux typés [`bigint`](/fr/docs/Glossary/BigInt) tel que `Int32Array`), ce tableau typé est copié dans un nouveau tableau typé. Chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé sera la même que celle de `tableauType`.
 - `objet`
   - : Lorsque le constructeur est appelé avec un objet comme argument, le nouveau tableau typé est créé avec la méthode `TypedArray.from()`.
 - `buffer`, `decalageOctets`, `longueur`
@@ -34,7 +34,7 @@ new Uint8Array(buffer, decalageOctets, longueur);
 
 ## Exemples
 
-## Différentes façons de construire un objet `Uint8Array`
+### Différentes façons de construire un objet `Uint8Array`
 
 ```js
 // Construction à partir d'une longueur
@@ -73,7 +73,7 @@ let uint8 = new Uint8Array(iterable);
 
 ## Notes de compatibilité
 
-À partir d'ECMAScript 2015 (ES6), `Uint8Array` doit être utilisé avec [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Appeler un constructeur `Uint8Array` comme une fonction, sans `new`, provoquera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+À partir d'ECMAScript 2015 (ES6), `Uint8Array` doit être utilisé avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new). Appeler un constructeur `Uint8Array` comme une fonction, sans `new`, provoquera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 
 ```js example-bad
 let dv = Uint8Array([1, 2, 3]);
