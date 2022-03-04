@@ -42,7 +42,7 @@ html,body,svg { height:100% }
 - [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "en/SVG/Attribute#ConditionalProccessing") ;
 - [Attributs centraux](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core") ;
 - [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d'.C3.A9v.C3.A9nement_graphique "en/SVG/Attribute#GraphicalEvent") ;
-- [Attributs de présentation ](/fr/docs/Web/SVG/Attribute#Attributs_de_pr.C3.A9sentation "en/SVG/Attribute#Presentation") ;
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_pr.C3.A9sentation "en/SVG/Attribute#Presentation")&nbsp;;
 - {{ SVGAttr("class") }} ;
 - {{ SVGAttr("style") }} ;
 - {{ SVGAttr("externalResourcesRequired") }} ;

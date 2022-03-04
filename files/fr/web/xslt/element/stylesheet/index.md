@@ -32,7 +32,7 @@ Un pseudo-attribut est nécessaire pour identifier le document comme étant une 
 
 ### Attributs optionnels
 
-- `id `(Supporté comme dans Netscape 7.0 uniquement s'il est explicitement appelé par une DTD intégrée)
+- `id` (Supporté comme dans Netscape 7.0 uniquement s'il est explicitement appelé par une DTD intégrée)
   - : Définit un identifiant `id` pour cette feuille de style. Cet attribut est le plus souvent utilisé lorsque la feuille de style est incorporée dans un autre document XML.
 
 <!---->
