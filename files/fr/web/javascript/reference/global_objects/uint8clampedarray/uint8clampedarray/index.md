@@ -29,8 +29,7 @@ new Uint8ClampedArray(buffer, decalageOctets, longueur);
   - : Lorsque le constructeur est invoqué avec un tableau typé comme argument (tout tableau typé en dehors des tableaux typés [`bigint`](/fr/docs/Glossary/BigInt)), ce tableau typé est copié dans un nouveau tableau typé. Chaque valeur de `tableauType` est convertie dans le type correspondant au constructeur avant d'être copiée dans le nouveau tableau. La longueur du nouveau tableau typé sera la même que celle de `tableauType`.
 - `objet`
   - : Lorsque le constructeur est appelé avec un objet comme argument, le nouveau tableau typé est créé avec la méthode `TypedArray.from()`.
-- `buffer`, `decalageOctets`,
-  `longueur`
+- `buffer`, `decalageOctets`, `longueur`
   - : Lorsque le constructeur est invoqué avec un tampon, éventuellement un décalage en octets et une longueur, une nouvelle vue en tableau typé est créée qui reflète l'objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) correspondant. Les paramètres `decalageOctets` et `longueur` indique l'intervalle de mémoire exposé à la vue. Si ces deux paramètres sont absents, c'est l'intégralité du tampon qui est vue. Si la longueur est absente, c'est la portion du tampon, après le décalage indiqué, qui est vue.
 
 ## Exemples
