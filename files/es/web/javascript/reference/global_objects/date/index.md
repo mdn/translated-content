@@ -37,7 +37,7 @@ Sumado a los métodos para leer y manipular los componentes individuales de la f
 ## Métodos estáticos
 
 - {{jsxref("Date.now()")}}
-  - : Retorna el valor númerico correspondiente al actual número de milisegundos transcurridos desde el 1 de Enero de 1970, 00:00:00 UTC, ignorando los segundos intercalares.
+  - : Devuelve el valor númerico correspondiente al actual número de milisegundos transcurridos desde el 1 de Enero de 1970, 00:00:00 UTC, ignorando los segundos intercalares.
 - {{jsxref("Date.parse()")}}
 
   - : Transforma la cadena que representa una fecha y retorna el número de milisegundos transcurridos desde el 1 de Enero de 1970, 00:00:00 UTC, ignorando los segundos intercalares.
