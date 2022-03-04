@@ -259,7 +259,7 @@ Pour nommer vos données vous devez utiliser l'attribut `name` pour identifier b
   ...
 ```
 
-Dans notre exemple, le formulaire enverra trois informations nommées respectivement « `user_name` », « `user_email `» et « `user_message` ». Ces informations seront envoyées à l'URL « `/my-handling-form-page` » avec la méthode HTTP POST.
+Dans notre exemple, le formulaire enverra trois informations nommées respectivement « `user_name` », «&nbsp;`user_email`&nbsp;» et « `user_message` ». Ces informations seront envoyées à l'URL « `/my-handling-form-page` » avec la méthode HTTP POST.
 
 Du côté du serveur, le script à l'URL « `/my-handling-form-page` » recevra les données sous forme d'une liste de trois éléments clé/valeur intégrés à la requête HTTP. À vous de définir comment ce script va manipuler les données. Chacun des langages serveurs (PHP, Python, Ruby, Java, C#, etc.) a son propre mécanisme pour traiter ces données. Il n'appartient pas à ce guide d'approfondir ce sujet, mais si vous souhaitez en savoir plus, nous avons mis quelques exemples dans l'article [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires).
 
