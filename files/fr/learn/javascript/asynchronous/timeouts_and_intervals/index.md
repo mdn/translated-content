@@ -373,7 +373,7 @@ Assez avec la théorie ! Construisons votre propre exemple personnel de `request
     ```
 
 4.  Insérez un élément [`<script>`](/fr/docs/Web/HTML/Element/script) juste au-dessus de la balise de fermeture `</body>`.
-5.  Insérez le JavaScript suivant dans votre élément `<script>`. Ici, vous stockez une référence à l'élément `<div> ; `à l'intérieur d'une constante, définissez une variable `rotateCount` à `0`, définissez une variable non initialisée qui sera utilisée plus tard pour contenir une référence à l'appel `requestAnimationFrame()`, et en définissant une variable `startTime` à `null`, qui sera plus tard utilisée pour stocker l'heure de début de l'appel `requestAnimationFrame()`.
+5.  Insérez le JavaScript suivant dans votre élément `<script>`. Ici, vous stockez une référence à l'élément `<div>`.  l'intérieur d'une constante, définissez une variable `rotateCount` à `0`, définissez une variable non initialisée qui sera utilisée plus tard pour contenir une référence à l'appel `requestAnimationFrame()`, et en définissant une variable `startTime` à `null`, qui sera plus tard utilisée pour stocker l'heure de début de l'appel `requestAnimationFrame()`.
 
     ```js
     const spinner = document.querySelector('div');

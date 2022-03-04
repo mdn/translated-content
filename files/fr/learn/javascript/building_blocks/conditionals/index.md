@@ -269,7 +269,7 @@ if (x === 5 || 7 || 10 || 20) {
 }
 ```
 
-Dans ce cas, la condition dans le `if(...) `sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité « si x est égal à 5, ou bien 7 est vrai » — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement ! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR :
+Dans ce cas, la condition dans le `if(...)`sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité « si x est égal à 5, ou bien 7 est vrai » — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement ! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR :
 
 ```js
 if (x === 5 || x === 7 || x === 10 ||x === 20) {
@@ -360,7 +360,7 @@ function setWeather() {
 
 {{ EmbedLiveSample('Un_exemple_de_switch', '100%', 100) }}
 
-> **Note :** Vous trouverez également cet [exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (voyez‑le en [cours d'exécution ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)ici aussi.)
+> **Note :** Vous trouverez également cet [exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (voyez‑le en [cours d'exécution](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) ici aussi.)
 
 ## Opérateur ternaire
 
@@ -411,7 +411,7 @@ Nous mettons un élément {{htmlelement('select')}} pour choisir un thème (noir
 
 Nous avons également mis un écouteur d'événement [onchange](/fr/docs/Web/API/GlobalEventHandlers/onchange) qui sert à exécuter une fonction contenant un opérateur ternaire. Il débute par un test de condition — `select.value === 'black'`. Si le test renvoie `true`, nous exécutons la fonction `update()` avec les paramètres blanc et noir : cela signifie que le fond sera noir et le texte blanc. S'il renvoie `false`, nous exécutons `update()` avec les paramètres noir et blanc, les couleurs du site seront inversées.
 
-> **Note :** Vous trouverez également cet [exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (voyez‑le en [cours d'exécution ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html)ici aussi.)
+> **Note :** Vous trouverez également cet [exemple sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-ternary.html) (voyez‑le en [cours d'exécution](http://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html) ici aussi.)
 
 ## Apprentissage actif : un calendrier simple
 

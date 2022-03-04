@@ -111,7 +111,7 @@ let myVariable = 'Bob';
 myVariable = 'Étienne';
 ```
 
-Notez que les variables peuvent contenir des[ types différents de données](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives) :
+Notez que les variables peuvent contenir des [types différents de données](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives) :
 
 <table class="standard-table">
   <thead>

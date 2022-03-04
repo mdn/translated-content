@@ -254,7 +254,7 @@ La méthode prend deux paramètres — la chaîne que vous voulez remplacer et l
 browserType.replace('moz','van');
 ```
 
-À noter : pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire :` browserType = browserType.replace('moz','van');`
+À noter : pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire : `browserType = browserType.replace('moz','van');`.
 
 ## Apprendre en pratiquant
 

@@ -482,7 +482,7 @@ Cela met en évidence l’importance non seulement d’utiliser des noms de fich
 
 Une chose à considérer est de savoir si vos images ont une signification dans votre contenu, ou si elles sont purement décoratives, n’ont donc aucune signification. S'ils sont décoratifs, il est préférable de les inclure dans la page en tant qu'images d'arrière-plan CSS.
 
-> **Note :** Lisez [Les images en HTML](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML) et[ Images adaptatives](/fr/docs/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web) pour plus d’informations sur la mise en œuvre des images et les meilleures pratiques.
+> **Note :** Lisez [Les images en HTML](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML) et [Images adaptatives](/fr/docs/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web) pour plus d’informations sur la mise en œuvre des images et les meilleures pratiques.
 
 Si vous souhaitez fournir des informations contextuelles supplémentaires, vous devez les insérer dans le texte entourant l'image ou dans un attribut title, comme indiqué ci-dessus. Dans ce cas, la plupart des lecteurs d’écran liront le texte alternatif, l’attribut title et le nom du fichier. En outre, les navigateurs affichent le texte du titre sous forme d’infos lors du survol de la souris.
 

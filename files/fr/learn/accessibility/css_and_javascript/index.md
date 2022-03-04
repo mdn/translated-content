@@ -93,7 +93,7 @@ Vous devriez :
 - Vos listes devraient ressembler à des listes.
 - La couleur du texte doit présenter un contraste suffisant avec la couleur de fond.
 
-Voir [Fondamentaux du texte HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals) et [ Introduction au style de texte](/fr/docs/Learn/CSS/Styling_text) pour plus d'informations.
+Voir [Fondamentaux du texte HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals) et [Introduction au style de texte](/fr/docs/Learn/CSS/Styling_text) pour plus d'informations.
 
 #### Texte mis en emphase
 
@@ -293,7 +293,7 @@ function validate(e) {
 
 La validation du formulaire réel serait beaucoup plus complexe que cela : vous voudriez vérifier que le nom saisi ressemble réellement à un nom, que l’âge entré est en réalité un nombre et qu’il est réaliste (par exemple, pas un nombre négatif, ni à quatre chiffres). Ici, nous venons d'implémenter la vérification simple qu'une valeur a été renseignée dans chaque champ de saisie (`if(testItem.input.value === '')`).
 
-Une fois la validation effectuée, si les tests réussissent, le formulaire est soumis. S'il y a des erreurs  (`if(errorList.innerHTML !== '')`) nous arrêtons la soumission du formulaire ( à l'aide de[ event.preventDefault()](/fr/docs/Web/API/Event/preventDefault)), et affichons tous les messages d'erreur créés (voir ci-dessous). Ce mécanisme signifie que les erreurs ne seront affichées que s’il y a des erreurs, ce qui est meilleur pour la facilité d’utilisation.
+Une fois la validation effectuée, si les tests réussissent, le formulaire est soumis. S'il y a des erreurs  (`if(errorList.innerHTML !== '')`) nous arrêtons la soumission du formulaire ( à l'aide de [event.preventDefault()](/fr/docs/Web/API/Event/preventDefault)), et affichons tous les messages d'erreur créés (voir ci-dessous). Ce mécanisme signifie que les erreurs ne seront affichées que s’il y a des erreurs, ce qui est meilleur pour la facilité d’utilisation.
 
 Pour chaque entrée pour laquelle aucune valeur n'a été renseignée lors de la soumission du formulaire, nous créons un élément de liste avec un lien et l'insérons dans la liste `errorList`.
 
