@@ -209,7 +209,7 @@ volumeSlider.addEventListener('input', function() {
 
 <p>APIを使うときは、その API の入口がどこなのかしっかり確認するべきです。Web Audio APIではとても単純でした — それは {{domxref("AudioContext")}} オブジェクトであり、あらゆる音声操作を行うために使用する必要があります。</p>
 
-<p>Document Object Model (DOM) API でも単純な入口があります — これの機能は{{domxref("Document")}} もしくは何らかの方法で影響を与えたい いHTML 要素のインスタンスにぶらさがっている場合が多く、例えば:</p>
+<p>Document Object Model (DOM) API でも単純な入口があります — これの機能は{{domxref("Document")}} もしくは何らかの方法で影響を与えたい HTML 要素のインスタンスにぶらさがっている場合が多く、例えば:</p>
 
 <pre class="brush: js notranslate">const em = document.createElement('em'); // create a new em element
 const para = document.querySelector('p'); // reference an existing p element
@@ -268,7 +268,7 @@ request.onload = function() {
 
 <h3 id="必要なところには追加のセキュリティ機構があります">必要なところには追加のセキュリティ機構があります</h3>
 
-<p>WebAPI 機能は JavaScript や他の Web 技術と同等のセキュリティ上の配慮が必要です (例えば <a href="/ja/docs/Web/Security/Same-origin_policy">same-origin ポリシー</a>) が、追加のセキュリティ機構が必要な場合もあります。例として今時の WebAPI の中に はHTTPS で配信されるページ上でしか動かないものがあり、これは機密とすべきデータをやりとりする可能性があるためです (<a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorkers</a> や <a href="/ja/docs/Web/API/Push_API">Push</a> など)。</p>
+<p>WebAPI 機能は JavaScript や他の Web 技術と同等のセキュリティ上の配慮が必要です (例えば <a href="/ja/docs/Web/Security/Same-origin_policy">same-origin ポリシー</a>) が、追加のセキュリティ機構が必要な場合もあります。例として今時の WebAPI の中には HTTPS で配信されるページ上でしか動かないものがあり、これは機密とすべきデータをやりとりする可能性があるためです (<a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorkers</a> や <a href="/ja/docs/Web/API/Push_API">Push</a> など)。</p>
 
 <p>さらには、ある種のWebAPIへの呼び出しがあなたのコードにあると、ユーザに対してそれの許可を要求します。例えば、<a href="/ja/docs/Web/API/Notifications_API">Notifications API (通知 API)</a> はポップアップのダイアログボックスを用いて許可を要求します:</p>
 
