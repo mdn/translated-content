@@ -3061,6 +3061,7 @@
 /ja/docs/Web/API/CSSMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule
 /ja/docs/Web/API/CSS_Painting_API/ガイド	/ja/docs/Web/API/CSS_Painting_API/Guide
+/ja/docs/Web/API/CSS_Typed_Object_Model_API	/ja/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model
 /ja/docs/Web/API/CanvasRenderingContext2D.addHitRegion	/ja/docs/Web/API/CanvasRenderingContext2D/addHitRegion
 /ja/docs/Web/API/CanvasRenderingContext2D.clearHitRegions	/ja/docs/Web/API/CanvasRenderingContext2D/clearHitRegions
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
