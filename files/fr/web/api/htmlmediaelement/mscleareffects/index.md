@@ -7,9 +7,9 @@ translation_of: Web/API/HTMLMediaElement/msClearEffects
 
 {{Non-standard_header()}}
 
-La méthode **`msClearEffects`** de [_HTMLMediaElement_](/fr/docs/Web/API/HTMLMediaElement) est une méthode propriétaire spécifique à Internet Explorer et Microsoft Edge.
+La méthode **`msClearEffects`** de l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) est une méthode propriétaire spécifique à Internet Explorer et Microsoft Edge.
 
-**`msClearEffects`** efface tous les effets du pipeline multimédia.
+**`msClearEffects`** efface tous les effets du canal de rendu.
 
 ### Syntaxe
 
