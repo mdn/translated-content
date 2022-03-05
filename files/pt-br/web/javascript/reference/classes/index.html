@@ -12,11 +12,11 @@ translation_of: Web/JavaScript/Reference/Classes
 ---
 <div>{{JsSidebar("Classes")}}</div>
 
-<p>Classes em JavaScript são introduzidas no ECMAScript 2015 e são simplificações da linguagem para as heranças baseadas nos protótipos. A sintaxe para classes <strong>não</strong> introduz um novo modelo de herança de orientação a objetos em JavaScript. Classes em JavaScript provêm uma maneira mais simples e clara de criar objetos e lidar com herança.</p>
+<p>Classes em JavaScript são introduzidas no ECMAScript 2015 e são simplificações da linguagem para as heranças baseadas nos protótipos. A sintaxe para classes <strong>não</strong> introduz um novo modelo de herança de orientação a objetos em JavaScript. Classes em JavaScript provêm uma maneira mais simples e clara de criar objetos e lidar com herança.</p>
 
 <h2 id="Definindo_classes">Definindo classes</h2>
 
-<p>As Classes são, de fato, "funções especiais", e, assim como você pode definir <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/function">"function expressions"</a> e <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/function">"function declarations"</a>, a sintaxe de uma classe possui dois componentes: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">"class expressions</a>" e  <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">"class declarations"</a>.</p>
+<p>As Classes são, de fato, "funções especiais", e, assim como você pode definir <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/function">"function expressions"</a> e <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/function">"function declarations"</a>, a sintaxe de uma classe possui dois componentes: <a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">"class expressions</a>" e  <a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">"class declarations"</a>.</p>
 
 <h3 id="Declarando_classes">Declarando classes</h3>
 
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Reference/Classes
 
 <h4 id="Uso_antes_da_declaração_Hoisting_-_Tradução_Literal_Lançamento">Uso antes da declaração (Hoisting - Tradução Literal: Lançamento)</h4>
 
-<p>Uma diferença importante entre <strong>declarações de funções</strong> das <strong>declarações de classes</strong>, é que  declararações de  funções são {{Glossary("Hoisting", "hoisted")}} e declarações de classes não são. Primeiramente deve declarar sua classe para só então acessá-la, pois do contrário o código a seguir irá lançar uma exceção: {{jsxref("ReferenceError")}}:</p>
+<p>Uma diferença importante entre <strong>declarações de funções</strong> das <strong>declarações de classes</strong>, é que  declararações de  funções são {{Glossary("Hoisting", "hoisted")}} e declarações de classes não são. Primeiramente deve declarar sua classe para só então acessá-la, pois do contrário o código a seguir irá lançar uma exceção: {{jsxref("ReferenceError")}}:</p>
 
 <pre class="brush: js example-bad">const p = new Retangulo(); // Erro de referência (ReferenceError)
 
@@ -46,16 +46,16 @@ class Retangulo {}
 let Retangulo = class {
   constructor(altura, largura) {
     this.altura = altura;
-    this.largura = largura;
+    this.largura = largura;
   }
 };
 
 // nomeada
 let Retangulo = class Retangulo {
   constructor(altura, largura) {
-    this.altura = altura;
-    this.largura = largura;
-  }
+    this.altura = altura;
+    this.largura = largura;
+  }
 };
 </pre>
 
@@ -63,7 +63,7 @@ let Retangulo = class Retangulo {
 
 <h2 id="Corpo_de_uma_classe_e_definições_de_métodos">Corpo de uma classe e definições de métodos</h2>
 
-<p>O corpo de uma classe é a parte que está entre chaves <code>{}</code>. É aí onde você define os membros da classe, como os métodos, ou os construtores.</p>
+<p>O corpo de uma classe é a parte que está entre chaves <code>{}</code>. É aí onde você define os membros da classe, como os métodos, ou os construtores.</p>
 
 <h3 id="Modo_Estrito_strict_mode">Modo Estrito (strict mode)</h3>
 
@@ -73,7 +73,7 @@ let Retangulo = class Retangulo {
 
 <p>O método <code><a href="/en-US/docs/Web/JavaScript/Reference/Classes/constructor">constructor</a></code> é um tipo especial de método para criar e iniciar um objeto criado pela classe. Só pode existir um método especial com o nome "constructor" dentro da classe. Um erro de sintáxe {{jsxref("SyntaxError")}} será lançado se a classe possui mais do que uma ocorrência do método <code>constructor</code>.</p>
 
-<p>Um construtor pode usar a palavra-chave <code>super</code> para chamar o construtor de uma classe pai.</p>
+<p>Um construtor pode usar a palavra-chave <code>super</code> para chamar o construtor de uma classe pai.</p>
 
 <h3 id="Métodos_Protótipos">Métodos Protótipos</h3>
 
@@ -168,7 +168,7 @@ comer<span class="punctuation token">()</span><span class="punctuation token">;<
 
 <p>Propriedades de instâncias devem ser definidas dentro dos métodos da classe:</p>
 
-<pre><code>class Retangulo {
+<pre class="brush: js"><code>class Retangulo {
   constructor(altura, largura) {
     this.altura = altura;
     this.largura = largura;
@@ -176,9 +176,9 @@ comer<span class="punctuation token">()</span><span class="punctuation token">;<
 }</code>
 </pre>
 
-<p>Propriedades de dados estáticos e propriedades de dados prototipados (prototype) devem ser definidos fora da declaração do corpo da classe.</p>
+<p>Propriedades de dados estáticos e propriedades de dados prototipados (prototype) devem ser definidos fora da declaração do corpo da classe.</p>
 
-<pre><code>Retangulo.larguraEstatico = 20;
+<pre class="brush: js"><code>Retangulo.larguraEstatico = 20;
 Retangulo.prototype.larguraPrototipagem = 25;</code></pre>
 
 <h2 id="Sub_classes_com_o_extends">Sub classes com o <code>extends</code></h2>
@@ -187,25 +187,25 @@ Retangulo.prototype.larguraPrototipagem = 25;</code></pre>
 
 <pre class="brush: js">class Animal {
   constructor(nome) {
-    this.nome = nome;
-  }
+    this.nome = nome;
+  }
 
-  falar() {
+  falar() {
     console.log(this.nome + ' emite um barulho.');
-  }
+  }
 }
 
 class Cachorro extends Animal {
   falar() {
     console.log(this.nome + ' latidos.');
-  }
+  }
 }
 
 <code class="language-js"><span class="keyword token">let</span> cachorro <span class="operator token">=</span> <span class="keyword token">new</span> </code>Cachorro<code class="language-js"><span class="punctuation token">(</span><span class="string token">'Mat'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 cachorro<span class="punctuation token">.</span></code>falar<code class="language-js"><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
 </pre>
 
-<p>Se existir um contrutor nas subclasses, é necessário primeiro chamar super() antes de usar a keyword "this".</p>
+<p>Se existir um contrutor nas subclasses, é necessário primeiro chamar super() antes de usar a keyword "this".</p>
 
 <p>Também é possivel ampliar (extends) "classes" baseadas em funções tradicionais.</p>
 
@@ -214,13 +214,13 @@ cachorro<span class="punctuation token">.</span></code>falar<code class="languag
 }
 
 Animal.prototype.falar = function() {
-   console.log(this.nome + ' faça barulho.');
+   console.log(this.nome + ' faça barulho.');
 }
 
 class Cachorro extends Animal {
-  falar() {
-    console.log(this.nome + ' lati.');
-  }
+  falar() {
+    console.log(this.nome + ' lati.');
+  }
 }
 
 let cachorro = new Cachorro('Mitzie');
@@ -229,14 +229,14 @@ cachorro.falar(); // Mitzie lati.</pre>
 <p>Note que classes não extendem objetos normais (não construíveis). Se você quer herdar de um objeto, é necessário utilizar {{jsxref("Object.setPrototypeOf()")}}:</p>
 
 <pre class="brush: js"><code>let Animal = {
-   falar() {
-      console.log(this.nome + ' faça barulho.');
+   falar() {
+      console.log(this.nome + ' faça barulho.');
    }
 };
 
 class Cachorro {
    constructor(nome) {
-      this.nome = nome;
+      this.nome = nome;
 </code>   }
 }
 
@@ -247,13 +247,13 @@ cachorro.falar(); //Mitzie faça barulho.</pre>
 
 <h2 id="Species">Species</h2>
 
-<p>Você pode querer retornar um objeto {{jsxref("Array")}} na sua classe <code>MinhaArray</code> derivada de array. O padrão Species permite a sobrescrita do construtor padrão.</p>
+<p>Você pode querer retornar um objeto {{jsxref("Array")}} na sua classe <code>MinhaArray</code> derivada de array. O padrão Species permite a sobrescrita do construtor padrão.</p>
 
-<p>Por exemplo, quando utilizando um método como {{jsxref("Array.map", "map()")}} que retorna o construtor padrão, você pode querer que esse método retorne um objeto <code>Array</code> ao invés do objeto <code>MinhaArray</code>. O {{jsxref("Symbol.species")}} te permite fazer isso:</p>
+<p>Por exemplo, quando utilizando um método como {{jsxref("Array.map", "map()")}} que retorna o construtor padrão, você pode querer que esse método retorne um objeto <code>Array</code> ao invés do objeto <code>MinhaArray</code>. O {{jsxref("Symbol.species")}} te permite fazer isso:</p>
 
 <pre class="brush: js">class MinhaArray extends Array {
-   // Sobrescreve species para o construtor da classe pai Array
-   static get [Symbol.species]() { return Array; }
+   // Sobrescreve species para o construtor da classe pai Array
+   static get [Symbol.species]() { return Array; }
 }
 
 let a = new MinhaArray(1,2,3);
@@ -265,23 +265,23 @@ console.log(mapped instanceof Array); // true
 
 <h2 id="Chamada_da_classe_pai_com_super">Chamada da classe pai com <code>super</code></h2>
 
-<p>A palavra-chave (keyword) <code>super</code> é utilizada para chamar funções que pertencem ao pai do objeto.</p>
+<p>A palavra-chave (keyword) <code>super</code> é utilizada para chamar funções que pertencem ao pai do objeto.</p>
 
 <pre class="brush: js">class Gato {
-   constructor(nome) {
-      this.nome = nome;
-   }
+   constructor(nome) {
+      this.nome = nome;
+   }
 
-   falar() {
-      console.log(this.nome + ' faça barulho.');
-   }
+   falar() {
+      console.log(this.nome + ' faça barulho.');
+   }
 }
 
 class Leao extends Gato {
-   falar() {
-      super.falar();
-      console.log(this.nome + ' roars.');
-   }
+   falar() {
+      super.falar();
+      console.log(this.nome + ' roars.');
+   }
 }
 
 let leao = new Leao('Fuzzy');
@@ -294,23 +294,23 @@ leao.falar();
 
 <h2 id="Mix-ins">Mix-ins</h2>
 
-<p>Subclasses abstratas ou <em>mix-ins</em> são templates para classes. Uma classe do ECMAScript pode apenas ter uma classe pai, assim sendo, não é possível a classe ter herança múltipla.</p>
+<p>Subclasses abstratas ou <em>mix-ins</em> são templates para classes. Uma classe do ECMAScript pode apenas ter uma classe pai, assim sendo, não é possível a classe ter herança múltipla.</p>
 
-<p>Para se ter um comportamento similar ao de herança múltipla no ECMAScript usa-se mix-ins, uma forma de implementar mix-ins é usar um template de subclasse que é uma função que instancia uma classe base e retorna uma subclasse extendida desta classe base:</p>
+<p>Para se ter um comportamento similar ao de herança múltipla no ECMAScript usa-se mix-ins, uma forma de implementar mix-ins é usar um template de subclasse que é uma função que instancia uma classe base e retorna uma subclasse extendida desta classe base:</p>
 
 <pre class="brush: js">class Humano {
-  constructor(nome) {
-    this.nome = nome;
-  }
-  andar() {
-    return this.nome+' andou um passo'
-  }
+  constructor(nome) {
+    this.nome = nome;
+  }
+  andar() {
+    return this.nome+' andou um passo'
+  }
 }
 
 const HumanoFalante = Base =&gt; class extends Base {
-  falar() {
-    return this.nome+' diz: olá mundo!'
-  }
+  falar() {
+    return this.nome+' diz: olá mundo!'
+  }
 }
 
 const HumanoFalanteMixado = Base =&gt; class extends Base {}
@@ -346,19 +346,19 @@ console.log(humano.falar())
 
 <p>{{Compat("javascript.classes")}}</p>
 
-<h2 id="Rodando_com_Scratchpad">Rodando com Scratchpad</h2>
+<h2 id="Rodando_com_Scratchpad">Rodando com Scratchpad</h2>
 
-<p>Uma classe não pode ser redefinida. Se você estiver rodando código com Scratchpad (Menu do Firefox Ferramentas &gt; Web Developer &gt; Scratchpad) e você acionar 'Run' a uma definição de uma classe com o mesmo nome duas vezes, você verá um confuso SyntaxError: redeclaration of let &lt;class-name&gt; (Erro de Sintaxe: redeclaração de let &lt;nome-da-classe&gt;).</p>
+<p>Uma classe não pode ser redefinida. Se você estiver rodando código com Scratchpad (Menu do Firefox Ferramentas &gt; Web Developer &gt; Scratchpad) e você acionar 'Run' a uma definição de uma classe com o mesmo nome duas vezes, você verá um confuso SyntaxError: redeclaration of let &lt;class-name&gt; (Erro de Sintaxe: redeclaração de let &lt;nome-da-classe&gt;).</p>
 
-<p>Para reacionar (re-run) uma definição, use o menu do Scratchpad em Execute &gt; Reload and Run (Executar &gt; Atualizar e Rodar).<br>
- Por favor, vote no bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1428672">#1428672</a>.</p>
+<p>Para reacionar (re-run) uma definição, use o menu do Scratchpad em Execute &gt; Reload and Run (Executar &gt; Atualizar e Rodar).<br>
+ Por favor, vote no bug <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1428672">#1428672</a>.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions">Funções</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">Declaração de <code>classes</code> (class declaration</a>)</li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">Expressão de <code>classes</code> (class expression</a>)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/class">Declaração de <code>classes</code> (class declaration</a>)</li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/class">Expressão de <code>classes</code> (class expression</a>)</li>
  <li>{{jsxref("Operators/super", "super")}}</li>
  <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-classes/">Blog post: "ES6 In Depth: Classes"</a></li>
 </ul>
