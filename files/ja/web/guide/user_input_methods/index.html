@@ -27,16 +27,17 @@ translation_of: Web/Guide/User_input_methods
 
 <h2 id="Recommendations" name="Recommendations">推奨事項</h2>
 
-<p>Available input mechanisms depend on the capabilities of the device running the application:</p>
+<p>利用できる入力の仕組みはアプリを動かしているデバイスの性能に依存します。</p>
 
 <ul>
- <li>Some devices provide touchscreen displays: the Web Platform offers <a href="/ja/docs/Web/Guide/Events/Touch_events">touch events</a> to interpret finger activity on touch-based user interfaces.</li>
- <li>For devices providing a mouse/touchpad as a pointing method, the <a href="/ja/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a> helps you in implementing a first person 3D game or other applications requiring full control of the pointing device. And the <a href="/ja/docs/Web/API/Fullscreen_API">Fullscreen API</a> helps you in displaying your app in fullscreen mode.</li>
- <li>Using features such as <a href="/ja/docs/Web/Guide/HTML/Content_Editable">contentEditable</a> elements you can implement fast rich-text editors and with <a href="/ja/docs/Web/Guide/HTML/Drag_and_drop">Drag&amp;Drop</a> let users moving elements inside your app. When screen orientation matters for your application, through the <a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Screen Orientation API</a> you can read the screen orientation state and perform other actions.</li>
- <li>You should always be mindful of keyboard accessibility where appropriate — many web users only use keyboard to navigate web sites and apps, and locking them out of your functionality is a bad idea.</li>
+ <li>デバイスの中にはタッチスクリーンディスプレイを提供するものがあります。そのウェブプラットフォームは、タッチを基にしたユーザーインターフェースで指の動きを解釈するための<a href="/ja/docs/Web/API/Touch_events">タッチイベント</a>を提供します。</li>
+ <li>ポインタを操作する方法としてマウスやタッチパッドを提供しているデバイスの場合、<a href="/ja/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a> が一人称視点の 3D ゲームの実装や、他のアプリがポイントを合わせているデバイスの全ての制御を要求するのに役立ちます。そして <a href="/ja/docs/Web/API/Fullscreen_API">Fullscreen API</a> は、あなたのアプリをフルスクリーンモードで表示するのに役立ちます。</li>
+ <li><a href="/ja/docs/Web/Guide/HTML/Editable_content">コンテンツを編集可能にする</a>要素のような機能を使うことで、速いリッチテキストエディタを実装することができ、そして<a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API">ドラッグ＆ドロップ API</a>はユーザーがあなたのアプリ内に要素を移動することを可能にします。画面の向きがあなたのアプリで問題である時、<a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">画面の向きを制御する API </a>を通して、画面の向きの状態を参照でき、またその他のアクションを実行できます。
+ <li>キーボードのアクセシビリティが適切か常に気に掛ける必要があります。多くのユーザーはキーボードのみを使いウェブサイトやアプリを操作します。ですので、あなたのシステムの機能性からそれを除外することは良くない考えです。</li>
 </ul>
 
 <p>The following is a set of recommendations and best practices for using such tools in Open Web Apps.</p>
+<p>以下は推奨事項一式であり、オープンなウェブアプリでそのようなツールを利用するためのベストプラクティスです。</p>
 
 <h3 id="Decide_what_input_mechanism_you’re_using">Decide what input mechanism you’re using</h3>
 
