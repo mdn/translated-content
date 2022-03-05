@@ -6,19 +6,17 @@ tags:
   - Deprecated
   - Element
   - メソッド
-  - Non-standard
+  - 標準外
   - リファレンス
-  - shadow dom
+  - シャドウ DOM
 browser-compat: api.Element.createShadowRoot
+translation_of: Web/API/Element/createShadowRoot
 ---
 {{APIRef('Shadow DOM')}}{{non-standard_header}}{{deprecated_header}}
 
-Use `Element.createShadowRoot` to create an instance of [shadow DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM). When shadow DOM is
-created, it is always attached to an existing element. After the shadow DOM is created,
-the element that it is attached to is called the {{glossary("shadow root")}}.
+`Element.createShadowRoot` は[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のインスタンスを作成するために使用し案す。シャドウ DOM が作成されると、常に既存の要素に割り当てられます。シャドウ DOM が作成された後、それが割り当てられている要素を{{glossary("shadow root", "シャドウルート")}}と呼びます。
 
-> **Note:** This method has been deprecated in favor of
-> {{DOMxRef("Element.attachShadow()","attachShadow()")}}.
+> **Note:** このメソッドは非推奨となり、 {{DOMxRef("Element.attachShadow()","attachShadow()")}} に置き換えられました。
 
 ## 構文
 
@@ -28,15 +26,15 @@ var shadowroot = element.createShadowRoot();
 
 ### 引数
 
-No parameters.
+引数はありません。
 
-### Result value
+### 返値
 
-Returns a {{DOMxRef("ShadowRoot")}}.
+{{DOMxRef("ShadowRoot")}} を返します。
 
 ## 仕様書
 
-This feature is no longer defined by any specifications.
+この機能は仕様書で定義されなくなりました。
 
 ## ブラウザーの互換性
 
