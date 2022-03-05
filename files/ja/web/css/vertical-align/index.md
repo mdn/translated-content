@@ -174,7 +174,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("Vertical_alignment_in_a_line_box", '100%', 160, "", "")}}
+{{EmbedLiveSample("Vertical_alignment_in_a_line_box", '1200', 160)}}
 
 <h3 id="Vertical_alignment_in_a_table_cell">表のセル内での垂直方向の配置</h3>
 
@@ -218,7 +218,7 @@ td {
 
 #### 結果
 
-{{EmbedLiveSample("Vertical_alignment_in_a_table_cell", '100%', 230, "", "")}}
+{{EmbedLiveSample("Vertical_alignment_in_a_table_cell", '1200', 230)}}
 
 ## 仕様書
 
