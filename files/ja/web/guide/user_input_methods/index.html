@@ -150,14 +150,14 @@ if (elem.requestFullscreen) {
 
 <h4 id="contentEditable" name="contentEditable">コンテンツを編集可能にする</h4>
 
-<p><a href="/ja/docs/Web/HTML/Global_attributes#contenteditable"><code>contenteditable</code></a> 属性を使うことで、開いているウェブアプリのあらゆる DOM 要素を直接編集することができます。</p>
+<p><a href="/ja/docs/Web/HTML/Global_attributes#attr-contenteditable"><code>contenteditable</code></a> 属性を使うことで、開いているウェブアプリのあらゆる DOM 要素を直接編集することができます。</p>
 
 <pre class="brush: html notranslate">&lt;div contenteditable="true"&gt;
     このテキストは閲覧者が編集することができます。
 &lt;/div&gt;</pre>
 
 <div class="note">
-<p><strong>注</strong>: 互換性や例、その他リソースに関する情報は <a href="/ja/docs/Web/Guide/HTML/Content_Editable">コンテンツを編集可能にするガイド</a>で確認することができます。</p>
+<p><strong>注</strong>: 互換性や例、その他リソースに関する情報は <a href="/ja/docs/Web/Guide/HTML/Editable_content">コンテンツを編集可能にするガイド</a>で確認することができます。</p>
 </div>
 
 <h2 id="Examples" name="Examples">例</h2>
@@ -168,7 +168,7 @@ if (elem.requestFullscreen) {
  <dt><strong><a href="/ja/docs/Web/API/Pointer_Lock_API#example">Simple pointer lock demo</a></strong></dt>
  <dd>We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a <code>{{htmlelement("canvas")}}</code> element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.</dd>
  <dt><strong><a href="http://html5demos.com/contenteditable">コンテンツを編集可能にするデモ</a></strong></dt>
- <dd>このデモは、編集可能なドキュメントセクションを作成することに利用できる contenteditable がどのように動くか表示しており、その状態はその後 <a href="/ja/docs/Web/Guide/API/DOM/Storage">ローカルストレージ</a>を使い保存されます。</dd>
+ <dd>このデモは、編集可能なドキュメントセクションを作成することに利用できる contenteditable がどのように動くか表示しており、その状態はその後 <a href="/ja/docs/Web/API/Web_Storage_API">ローカルストレージ</a>を使い保存されます。</dd>
 </dl>
 
 <h2 id="Tutorials" name="Tutorials">チュートリアル</h2>
@@ -176,9 +176,9 @@ if (elem.requestFullscreen) {
 <ul>
  <li><a href="/ja/docs/Web/Guide/DOM/Events/Touch_events">タッチイベントガイド</a></li>
  <li><a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">画面の回転の管理</a></li>
- <li><a href="/ja/docs/Web/Guide/API/DOM/Using_full_screen_mode">全画面モードの使用</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items">複数のアイテムのドラッグ＆ドロップ</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Drag_operations">ドラッグ操作ガイド</a></li>
+ <li><a href="/ja/docs/Web/API/Fullscreen_API">全画面モードの使用</a></li>
+ <li><a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">複数のアイテムのドラッグ＆ドロップ</a></li>
+ <li><a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">ドラッグ操作ガイド</a></li>
 </ul>
 
 <h2 id="Reference" name="Reference">関連情報</h2>
@@ -186,12 +186,12 @@ if (elem.requestFullscreen) {
 <ul>
  <li>{{domxref("MouseEvent")}}</li>
  <li>{{domxref("KeyboardEvent")}}</li>
- <li><a href="/ja/docs/Web/Guide/Events/Touch_events">タッチイベント</a></li>
+ <li><a href="/ja/docs/Web/API/Touch_events">タッチイベント</a></li>
  <li>{{domxref("Pointer_Lock_API")}}</li>
  <li><a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">画面回転 API</a></li>
- <li><a href="/ja/docs/Web/Guide/API/DOM/Using_full_screen_mode">全画面 API</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Drag_and_drop">ドラッグ＆ドロップ</a></li>
- <li><a href="/ja/docs/Web/Guide/HTML/Content_Editable">コンテンツを編集可能にする</a></li>
+ <li><a href="/ja/docs/Web/API/Fullscreen_API">全画面 API</a></li>
+ <li><a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API">ドラッグ＆ドロップ</a></li>
+ <li><a href="/ja/docs/Web/Guide/HTML/Editable_content">コンテンツを編集可能にする</a></li>
  <li><a href="/ja/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV">Keyboard events in Firefox OS TV</a></li>
  <li><a href="/ja/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation">Implementing TV remote control navigation</a></li>
 </ul>
