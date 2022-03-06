@@ -4,9 +4,10 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 translation_of: Web/JavaScript/Reference/Global_Objects/Object
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object
 ---
+
 {{JSRef}}
 
-La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/docs/Web/JavaScript/Data_structures). Es usado para guardar una colección de datos definidos y entidades más complejas. Los objetos pueden ser creados utilzando el constructor {{jsxref("Object/Object", "Object()")}} o [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer)(en inglés).
+La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/docs/Web/JavaScript/Data_structures). Es usado para guardar una colección de datos definidos y entidades más complejas. Los objetos pueden ser creados utilzando el constructor {{jsxref("Object/Object", "Object()")}} o [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Descripción
 
@@ -22,7 +23,7 @@ El constructor `Objeto` crea un envoltorio de objeto para el valor dado.
 
 Cuando lo llamamos en un contexto no-constructivo, `Object` se comporta igual que `new Object()`.
 
-Véase también la [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer)(en inglés).
+Véase también la [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
 
 ## Borrando una propiedad de un objeto
 
@@ -111,7 +112,7 @@ No hay ningún método en un Objeto que sirva para borrar sus propiedades (como 
 
 ## Ejemplos
 
-### Usando `Object` dándole tipos `undefined` y `null``
+### Usando `Object` dándole tipos `undefined` y `null`
 
 Los siguientes ejemplos almacenan un objeto vacío `Object`en `o`:
 
@@ -247,5 +248,4 @@ mime.greet();
 
 ## Véase también
 
-- [Inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer)(en inglés).
-
+- [Inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
