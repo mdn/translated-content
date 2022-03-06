@@ -90,7 +90,7 @@ Les données peuvent être récupérées puis affichées immédiatement à l'uti
 
 ### Exemple de Push
 
-Push requiert que la partie serveur fonctionne, donc nous ne pouvons pas l'inclure dans l'exemple js13kPWA hébergé dans les pages GitHub puisqu'elles ne permettent de servir que des fichiers statiques. C'est entièrement expliqué dans le [Service Worker Cookbook](https://serviceworke.rs/) — voir la[ démonstration de charge utile poussée](https://serviceworke.rs/push-payload.html).
+Push requiert que la partie serveur fonctionne, donc nous ne pouvons pas l'inclure dans l'exemple js13kPWA hébergé dans les pages GitHub puisqu'elles ne permettent de servir que des fichiers statiques. C'est entièrement expliqué dans le [Service Worker Cookbook](https://serviceworke.rs/) — voir la [démonstration de charge utile poussée](https://serviceworke.rs/push-payload.html).
 
 Cette démonstration comporte trois fichiers:
 

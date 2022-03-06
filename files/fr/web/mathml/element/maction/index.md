@@ -20,7 +20,7 @@ L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs val
     - `toggle` : Quand il y a un clic sur la sous-expression, la mise en forme des sous-expressions sélectionnées change. Ainsi chaque clic augmente la valeur de `selection`.
       La syntaxe est la suivante : `<maction actiontype="toggle" selection="entier-positif" > expression1 expression2 expressionN </maction>`.
     - `tooltip` : Lorsque la souris passe au-dessus de l'_expression_, une info-bulle est affichée à proximité de l'expression.
-      La syntaxe est la suivante :` <maction actiontype="tooltip"> expression message </maction>.`
+      La syntaxe est la suivante : `<maction actiontype="tooltip"> expression message </maction>.`
 
 - class, id, style
   - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/CSS).
