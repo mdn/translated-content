@@ -22,7 +22,7 @@ El constructor `Objeto` crea un envoltorio de objeto para el valor dado.
 
 Cuando lo llamamos en un contexto no-constructivo, `Object` se comporta igual que `new Object()`.
 
-Véase también la [la sintaxis literal / inicializador de objeto](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)(en inglés).
+Véase también la [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer)(en inglés).
 
 ## Borrando una propiedad de un objeto
 
