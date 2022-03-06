@@ -550,7 +550,7 @@ Attention : la prise en charge du widget `color` n'est pas très bonne actuellem
 
 Il existe d'autres types de widgets qui ne peuvent pas être classés facilement à cause de leur comportement très particulier, mais qui sont toujours très utiles.
 
-> **Note :** Vous trouverez les exemples de cette section sur GitHub à l'adresse [other-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/other-examples.html) (à voir aussi[ directement](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
+> **Note :** Vous trouverez les exemples de cette section sur GitHub à l'adresse [other-examples.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/other-examples.html) (à voir aussi [directement](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
 
 ### Sélection de fichier
 

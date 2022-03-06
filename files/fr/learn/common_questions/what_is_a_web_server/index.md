@@ -115,6 +115,6 @@ Il y a tellement de serveurs d'applications qu'il est difficile d'en suggérer u
 
 Maintenant que vous connaissez les serveurs web, vous pourriez :
 
-- continuer votre lecture avec[ combien ça coûte de faire quelque chose sur le Web](/fr/docs/Apprendre/Publier_sur_le_Web_combien_ça_coûte)
+- continuer votre lecture avec [combien ça coûte de faire quelque chose sur le Web](/fr/docs/Apprendre/Publier_sur_le_Web_combien_ça_coûte)
 - en savoir plus sur [les différents logiciels nécessaires à la création d'un site web](/fr/docs/Apprendre/Quels_logiciels_sont_nécessaires_pour_construire_un_site_web)
 - poursuivre avec quelque chose de plus pratique comme [comment transférer des fichiers vers un serveur web](/fr/docs/Apprendre/Transférer_des_fichiers_vers_un_serveur_web).
