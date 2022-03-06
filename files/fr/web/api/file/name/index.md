@@ -17,7 +17,7 @@ let name = file.name;
 
 ## Valeur
 
-Une chaîne de caractères qui contient le nom du fichier sans le chemin, par exemple "Mon compte-rendu.md".
+Une chaîne de caractères qui contient le nom du fichier sans le chemin, par exemple `"Mon compte-rendu.md"`.
 
 ## Exemple
 
@@ -50,7 +50,7 @@ function processSelectedFiles(fileInput) {
 }
 ```
 
-#### Résultat
+### Résultat
 
 {{EmbedLiveSample('', 300, 150)}}
 
