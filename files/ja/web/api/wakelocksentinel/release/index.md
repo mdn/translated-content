@@ -6,9 +6,9 @@ tags:
   - Method
   - リファレンス
   - 画面起動ロック API
-  - Wake Lock
+  - 起動ロック
   - WakeLockSentinel
-  - screen
+  - 画面
 browser-compat: api.WakeLockSentinel.release
 translation_of: Web/API/WakeLockSentinel/release
 ---
