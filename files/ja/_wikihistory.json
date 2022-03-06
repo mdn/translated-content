@@ -18689,16 +18689,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Navigator/Online_and_offline_events": {
-    "modified": "2019-03-23T23:53:08.504Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ethertank",
-      "Marsf",
-      "Mgjbot",
-      "Koyamak"
-    ]
-  },
   "Web/API/Navigator/activeVRDisplays": {
     "modified": "2020-10-15T21:47:31.877Z",
     "contributors": [
@@ -48423,6 +48413,16 @@
     "modified": "2019-03-18T21:40:37.855Z",
     "contributors": [
       "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/Navigator/onLine": {
+    "modified": "2019-03-23T23:53:08.504Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ethertank",
+      "Marsf",
+      "Mgjbot",
+      "Koyamak"
     ]
   },
   "conflicting/Web/API/Pointer_events": {

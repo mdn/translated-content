@@ -9,7 +9,7 @@ tags:
 translation_of: Web/Accessibility/ARIA
 original_slug: Accessibilité/ARIA
 ---
-_Accessible Rich Internet Applications_ **(ARIA)** (qu'on pourrait traduire par « applications internet riches et accessibles ») sont un ensemble un attribut qui définit comment rendre le contenu et les applications web accessibles.
+_Accessible Rich Internet Applications_ **(ARIA)** (qu'on pourrait traduire par « applications internet riches et accessibles ») sont un ensemble d'attributs qui définissent comment rendre le contenu et les applications web accessibles.
 
 ARIA complète HTML afin que les éléments interactifs et les widgets puissent être utilisés par les outils d'assistance quand les fonctionnalités standard ne le permettent pas. Ainsi, ARIA permet de rendre accessible les _widgets_ JavaScript, les indications dans les formulaires, les messages d'erreur et les mises à jour dynamiques du contenu, etc.
 
