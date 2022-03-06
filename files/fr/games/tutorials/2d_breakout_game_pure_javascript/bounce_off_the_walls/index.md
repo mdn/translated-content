@@ -119,4 +119,4 @@ Vérifions encore une fois le code fini pour cette partie par rapport à ce que 
 
 ## Dans le prochain chapitre
 
-Nous sommes maintenant arrivés au stade où notre balle se déplace et reste sur le plateau de jeu. Dans le quatrième chapitre, nous examinerons la mise en place d'une raquette contrôlable - voir[ Raquette et contrôle au clavier](/fr/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls). {PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr%C3%B4le_clavier")}}
+Nous sommes maintenant arrivés au stade où notre balle se déplace et reste sur le plateau de jeu. Dans le quatrième chapitre, nous examinerons la mise en place d'une raquette contrôlable - voir [Raquette et contrôle au clavier](/fr/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls). {PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr%C3%B4le_clavier")}}
