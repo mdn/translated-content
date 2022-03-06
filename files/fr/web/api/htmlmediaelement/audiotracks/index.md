@@ -6,11 +6,11 @@ translation_of: Web/API/HTMLMediaElement/audioTracks
 ---
 {{APIRef("HTML DOM")}}
 
-La propriété **`audioTracks`** en lecture seule sur les objets [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) renvoie un objet [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) répertoriant tous les objets [`AudioTrack`](/fr/docs/Web/API/AudioTrack) représentant les pistes audio de l'élément multimédia.
+La propriété **`audioTracks`** est une propriété en lecture seule rattachée à l'interface [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) qui renvoie un objet [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) répertoriant tous les objets [`AudioTrack`](/fr/docs/Web/API/AudioTrack) représentant les pistes audio de l'élément multimédia.
 
 L'élément multimédia peut être soit un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou un élément [`<video>`](/fr/docs/Web/HTML/Element/video).
 
-La liste renvoyée est en _live_ ; c'est-à-dire que lorsque des pistes sont ajoutées et supprimées de l'élément multimédia, le contenu de la liste change dynamiquement. Une fois que vous avez une référence à la liste, vous pouvez surveiller les modifications pour détecter l'ajout de nouvelles pistes audio ou la suppression de pistes existantes. Vous pouvez consulter les [`Event handlers`](/fr/docs/Web/API/AudioTrackList#event__handlers) (ou gestionnaires d'événements en français) au niveau de [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) pour en savoir plus sur les modifications apportées à la liste des pistes d'un élément multimédia.
+La liste renvoyée est dynamique&nbsp;; c'est-à-dire que lorsque des pistes sont ajoutées et supprimées de l'élément multimédia, le contenu de la liste change dynamiquement. Une fois que vous avez une référence à la liste, vous pouvez surveiller les modifications pour détecter l'ajout de nouvelles pistes audio ou la suppression de pistes existantes. Vous pouvez consulter les [gestionnaires d'évènements](/fr/docs/Web/API/AudioTrackList#évènements) associés à [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList) pour en savoir plus sur les modifications apportées à la liste des pistes d'un élément multimédia.
 
 ## Syntaxe
 
@@ -26,11 +26,11 @@ Chaque piste est représentée par un objet [`AudioTrack`](/fr/docs/Web/API/Audi
 
 ## Exemples
 
-Dans cet exemple, toutes les pistes audio d'un élément donné sont mutées.
+Dans cet exemple, toutes les pistes audio d'un élément donné sont coupées.
 
 ### HTML
 
-Le HTML établit l'élément lui-même.
+Le fragment HTML contient l'élément média en question.
 
 ```html
 <video id="video" src="somevideo.mp4"></video>
@@ -58,6 +58,6 @@ for (let i = 0; i < video.audioTracks.length; i += 1) {
 
 ## Voir aussi
 
-- L'interface qui le définit, [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement).
+- L'interface qui porte cette propriété, [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement).
 - [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video)
 - [`AudioTrack`](/fr/docs/Web/API/AudioTrack) et [`AudioTrackList`](/fr/docs/Web/API/AudioTrackList)
