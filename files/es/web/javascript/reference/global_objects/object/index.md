@@ -247,4 +247,5 @@ mime.greet();
 
 ## Véase también
 
-- [Inicializador de objeto](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)(en inglés).
+- [Inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer)(en inglés).
+
