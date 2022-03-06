@@ -30,13 +30,13 @@ Pour définir les en-têtes et les pieds de page, vous pouvez inclure certains c
 
 Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
-- `edgeBottom `{{optional_inline}}
+- `edgeBottom` {{optional_inline}}
   - : `number`. L'espacement entre le bas des pieds et le bord inférieur du papier (pouces). Par défaut : 0.
-- `edgeLeft `{{optional_inline}}
+- `edgeLeft` {{optional_inline}}
   - : `number`. L'espacement entre l'en-tête / pied de page gauche et le bord gauche du papier (pouces). Par défaut : 0
-- `edgeRight `{{optional_inline}}
+- `edgeRight` {{optional_inline}}
   - : `number`. L'espacement entre l'en-tête / pied droit et le bord gauche du papier (pouces). Par défaut : 0.
-- `edgeTop `{{optional_inline}}
+- `edgeTop` {{optional_inline}}
   - : `number`. L'espacement entre le haut des en-têtes et le bord supérieur du papier (pouces). Par défaut : 0
 - `footerCenter` {{optional_inline}}
   - : `string`. Le texte du pied de page central de la page. Défaut : ''.
@@ -50,17 +50,17 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `string`. Le texte de l'en-tête gauche de la page. Par défaut : '\&T'.
 - `headerRight` {{optional_inline}}
   - : `string`. Le texte de l'en-tête de la page. Par défaut : '\&U'.
-- `marginBottom `{{optional_inline}}
+- `marginBottom` {{optional_inline}}
   - : `number`. La marge entre le contenu de la page et le bord inférieur du papier (pouces). Par défaut : 0.5.
-- `marginLeft `{{optional_inline}}
+- `marginLeft` {{optional_inline}}
   - : `number`. La marge entre le contenu de la page et le bord gauche du papier (pouces). Par défaut : 0.5.
-- `marginRight `{{optional_inline}}
+- `marginRight` {{optional_inline}}
   - : `number`. La marge entre le contenu de la page et le bord droit du papier (en pouces). Par défaut : 0.5.
-- `marginTop `{{optional_inline}}
+- `marginTop` {{optional_inline}}
   - : `number`. La marge entre le contenu de la page et le bord supérieur du papier (pouces). Par défaut : 0.5.
-- `orientation `{{optional_inline}}
+- `orientation` {{optional_inline}}
   - : `integer`. Orientation de la page: 0 signifie "portrait", 1 signifie "paysage". Par défaut : 0.
-- `paperHeight `{{optional_inline}}
+- `paperHeight` {{optional_inline}}
   - : `number`. La hauteur du papier dans les unités de format papier. Par défaut : 11.0.
 - `paperSizeUnit` {{optional_inline}}
   - : `integer`. L'unité de format de papier: 0 = pouces, 1 = millimètres. Par défaut : 0.
