@@ -1,10 +1,6 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-tags:
-  - Clase
-  - JavaScript
-  - Objeto
 translation_of: Web/JavaScript/Reference/Global_Objects/Object
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object
 ---
