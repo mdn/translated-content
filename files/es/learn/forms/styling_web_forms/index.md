@@ -4,16 +4,34 @@ slug: Learn/Forms/Styling_web_forms
 translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
-{{LearnSidebar}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 En los artículos anteriores vimos todo el HTML que necesitas para crear y estructurar tus formularios HTML. En este artículo veremos como usar [CSS](/es/docs/Web/CSS) para estilizar nuestros formularios. Esto historicamente ha sido díficil — cada control tiene un nivel de dificultad distinta — pero se esta volviendo más fácil a medida de que los navegadores antiguos son retirados, y los modernos nos abren más posibilidades. 
 
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Requisitos previos:</th>
+      <td>
+        Conocimientos básicos de informática y una comprensión básica de 
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">HTML</a> y 
+        <a href="/es/docs/Learn/CSS/First_steps">CSS</a>.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>
+        Comprender los problemas detrás del diseño de formularios y 
+        aprender algunas de las técnicas básicas de diseño que le serán útiles.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## ¿Porqué es tan difícil aplicar estilos a formularios con CSS?
-Se añadieron los controles de formulario en la [2ª especificación HTML](https://www.ietf.org/rfc/rfc1866.txt) en el 1995; CSS fue lanzado a finales del 1996, y ningún navegador lo implementó correctamente por años. Los navegadores le dejaban el trabajo de manejar y renderizar los formularios.
+Se añadieron los controles de formulario en la [2ª especificación HTML](https://www.ietf.org/rfc/rfc1866.txt) en 1995; CSS fue lanzado a finales de 1996, y ningún navegador lo implementó correctamente por años. Los navegadores le dejaban el trabajo de manejar y renderizar los formularios a los sistemas operativos.
 
-Aun con CSS permitiendo estilizar HTML, los fabricantes de navegadores han sido — y son, hasta el día de hoy — reacios a permitir el estilizado de estos porque los usuarios estaban acostumbrados al estilo de sus plataformas.
-
-Esto ha cambiado. Los dueños de los sitios web quieren estilos que encajen con el diseño de sus páginas más que nunca, y la plataforma web ha cambiado para hacer esto posible.
+Aun con CSS permitiendo estilizar HTML, los fabricantes de navegadores han sido — y son, hasta el día de hoy — reacios a permitir el estilizado de estos porque los usuarios estaban acostumbrados al estilo de sus plataformas. Esto ha cambiado. Los dueños de los sitios web quieren estilos que encajen con el diseño de sus páginas más que nunca, y la plataforma web ha cambiado para hacer esto posible.
 
 Para algunos controles, todavía es díficil reconstruirlos para permitir que se puedan estilizar, pero ya podemos usar CSS para estilizar muchas partes de los formularios, pero hay que estar atentos; tienes que tener cuidado para no romper la funcionalidad de este.
 
@@ -23,27 +41,29 @@ Actualmente aun se encuentran dificultades cuando se utiliza CSS con formularios
 #### Lo bueno
 A algunos elementos se les puede dar estilo con pocos o ningún problema independientemente de la plataforma. Entre estos se incluyen los siguientes elementos estructurales:
 
-* {{HTMLElement("form")}}
-* {{HTMLElement("fieldset")}}
-* {{HTMLElement("label")}}
-* Botones (tanto {{HTMLElement("input")}} y {{HTMLElement("button")}})
-* {{HTMLElement("output")}}
+1. {{HTMLElement("form")}}
+2. {{HTMLElement("fieldset")}} y {{HTMLElement("legend")}}
+3. {{HTMLElement("input")}} de una sola línea (p.ej. de tipo text, url, email...), a excepción de [`<input type="search">`](/es/docs/Web/HTML/Element/input/search).
+4. {{HTMLElement("textarea")}} de multiples líneas
+5. Botones (ambos {{HTMLElement("input")}} y {{HTMLElement("input")}})
+6. {{HTMLElement("label")}}
+7. {{HTMLElement("output")}}
 
 #### Lo malo
 Algunos elementos son más díficiles de estilizar, llegando a necesitar CSS complejo o trucos muy específicos:
-* Los botones de radio y "checkboxes".
-* [<input type="search">](/es/docs/Web/HTML/Element/input/search)
+- Casillas de verificación ((checkbox)[/es/docs/Web/HTML/Element/input/checkbox]) y botones de opción ((radio)[/es/docs/Web/HTML/Element/input/radio]).
+- [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 
 Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
 
 #### Lo feo
 En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
-* [<input type="color">](/es/docs/Web/HTML/Element/input/color)
-* Controles relacionados al tiempo como [<input type="datetime-local">](/es/docs/Web/HTML/Element/input/datetime-local)
-* [<input type="range">](/es/docs/Web/HTML/Element/input/range)
-* [<input type="file">](/es/docs/Web/HTML/Element/input/file)
-* Elementos involucrados en la creación de widgets de selección como {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} y {{HTMLElement("datalist")}}.
-* {{HTMLElement("progress")}} y {{HTMLElement("meter")}}
+- [`<input type="color">`](/es/docs/Web/HTML/Element/input/color)
+- Controles relacionados al tiempo como [`<input type="datetime-local">`](/es/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="range">`](/es/docs/Web/HTML/Element/input/range)
+- [`<input type="file">`](/es/docs/Web/HTML/Element/input/file)
+- Elementos involucrados en la creación de widgets de selección como {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} y {{HTMLElement("datalist")}}.
+- {{HTMLElement("progress")}} y {{HTMLElement("meter")}}
 
 ## Estilizado básico
 
