@@ -12,7 +12,7 @@ original_slug: Glossaire/IIFE
 
 C'est un modèle de conception qui est également connu sous le nom de {{glossary("Self-Executing Anonymous Function","Fonction anonyme auto-exécutable")}} et contient deux parties principales. La première est la fonction anonyme avec portée lexicale incluse dans le {{jsxref("Operators/Grouping", "groupement opérateur")}}`()`. Cela empêche l'accès aux variables dans l'expression idiomatique IIFE ainsi que la pollution de la portée globale.
 
-La deuxième partie crée la fonction immédiatement exécutable` ()`, à travers laquelle le moteur JavaScript interprétera directement la fonction.
+La deuxième partie crée la fonction immédiatement exécutable `()`, à travers laquelle le moteur JavaScript interprétera directement la fonction.
 
 ## Exemples
 
