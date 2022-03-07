@@ -306,6 +306,10 @@ div {
 
 {{EmbedLiveSample("Rotating_on_a_custom_axis", "auto", 180)}}
 
+## Especificaciones
+
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
 {{Compat}}
