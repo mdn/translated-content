@@ -104,35 +104,25 @@ Pour les éléments qui n'ont pas de ligne de base définie, c'est le bord de la
 
 ### Exemple simple
 
+#### HTML
+
+```html
+<div>Une <img src="frame_image.svg" alt="link" width="32" height="32"/> image avec
+ un alignement par défaut.</div>
+<div>Une <img class="top" src="frame_image.svg" alt="link" width="32" height="32"/> image avec
+ un alignement en haut du texte.</div>
+<div>Une <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32"/> image avec
+ un alignement en bas du texte.</div>
+<div>Une <img class="middle" src="frame_image.svg" alt="link" width="32" height="32"/> image avec
+ un alignement au milieu.</div>
+```
+
 #### CSS
 
 ```css
 img.top { vertical-align: text-top; }
 img.bottom { vertical-align: text-bottom; }
 img.middle { vertical-align: middle; }
-```
-
-#### HTML
-
-```html
-<div>
-  Une
-  <img src="frame_image.svg" alt="link" width="32" height="32"/>
-  image avec un alignement par défaut.
-</div>
-<div>
-  Une
-  <img class="top" src="frame_image.svg" alt="link" width="32" height="32"/>
-  image avec un alignement en haut du texte.</div>
-<div>
-  Une
-  <img class="bottom" src="frame_image.svg" alt="link" width="32" height="32"/>
-  image avec un alignement en bas du texte.</div>
-<div>
-  Une
-  <img class="middle" src="frame_image.svg" alt="link" width="32" height="32"/>
-  image avec un alignement au milieu.
-</div>
 ```
 
 #### Résultat
@@ -184,28 +174,9 @@ p {
 
 #### Résultat
 
-{{EmbedLiveSample("", '100%', 160, "", "")}}
+{{EmbedLiveSample("", '100%', 160)}}
 
 ### Alignement vertical d'une cellule de tableau
-
-#### CSS
-
-```css
-table {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-td {
-  padding: 0.5em;
-  font-family: monospace;
-}
-```
 
 #### HTML
 
@@ -230,9 +201,28 @@ td {
 </table>
 ```
 
+#### CSS
+
+```css
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  padding: 0.5em;
+  font-family: monospace;
+}
+```
+
 #### Résultat
 
-{{EmbedLiveSample("", '100%', 230, "", "")}}
+{{EmbedLiveSample("", '100%', 230)}}
 
 
 ## Spécifications
@@ -245,7 +235,9 @@ td {
 
 ## Voir aussi
 
-- [Centrer des éléments avec _flexbox_](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#centrer_des_éléments)
-- [`line-height`](/fr/docs/Web/CSS/line-height), [`text-align`](/fr/docs/Web/CSS/text-align), [`margin`](/fr/docs/Web/CSS/margin)
-- [Comprendre `vertical-align` ou comment (ne pas) centrer des éléments verticalement](https://phrogz.net/css/vertical-align/index.html) (en anglais)
-- [Tout ce qu'il y a à savoir sur `vertical-align`](https://christopheraue.net/design/vertical-align) (en anglais)
+- [Centrer des éléments avec Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#centrer_des_éléments)
+- [`line-height`](/fr/docs/Web/CSS/line-height)
+- [`text-align`](/fr/docs/Web/CSS/text-align)
+- [`margin`](/fr/docs/Web/CSS/margin)
+- [Comprendre `vertical-align` ou comment (ne pas) centrer des éléments verticalement (en anglais)](http://phrogz.net/css/vertical-align/index.html)
+- [Tout ce qu'il y a à savoir sur `vertical-align` (en anglais)](https://christopheraue.net/design/vertical-align)

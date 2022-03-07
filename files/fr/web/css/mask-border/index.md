@@ -44,7 +44,7 @@ mask-border: unset;
 ### Valeurs
 
 - `<'mask-border-source'>`
-  - : L'image source, pour plus d'informations, voir [`mask-border-source`](/fr/docs/Web/CSS/mask-border-source).
+  - : L'image source. Voir [`mask-border-source`](/fr/docs/Web/CSS/mask-border-source).
 - `<'mask-border-slice'>`
   - : Les dimensions qui permettent de découper l'image source en différentes régions. Il est possible d'utiliser jusqu'à 4 valeurs. Voir [`mask-border-slice`](/fr/docs/Web/CSS/mask-border-slice).
 - `<'mask-border-width'>`
@@ -52,7 +52,7 @@ mask-border: unset;
 - `<'mask-border-outset'>`
   - : La distance entre le masque de la bordure et le bord extérieur de l'image. Il est possible d'utiliser jusqu'à 4 valeurs. Voir [`mask-border-outset`](/fr/docs/Web/CSS/mask-border-outset).
 - `<'mask-border-repeat'>`
-  - : Cette valeur indiique la façon dont les régions du bord de l'image source sont ajustées afin de correspondre aux dimensions du masque. Il est possible d'utiliser jusqu'à deux valeurs. Voir [`mask-border-repeat`](/fr/docs/Web/CSS/mask-border-repeat).
+  - : Cette valeur indique la façon dont les régions du bord de l'image source sont ajustées afin de correspondre aux dimensions du masque. Il est possible d'utiliser jusqu'à deux valeurs. Voir [`mask-border-repeat`](/fr/docs/Web/CSS/mask-border-repeat).
 - `<'mask-border-mode'>`
   - : Cette valeur définit si l'image source est traitée comme un masque de luminance ou comme un masque alpha. Voir [`mask-border-mode`](/fr/docs/Web/CSS/mask-border-mode).
 

@@ -42,15 +42,14 @@ position: unset;
     Cette valeur crée un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context) lorsque `z-index` ne vaut pas `auto`. Les éléments positionnés de façon absolue peuvent avoir des marges, ces marges ne fusionnent pas avec les autres marges.
 
 - `fixed`
-  - : L'élément est retiré du flux normal et aucun espace n'est laissé pour l'élément. L'élément est positionné relativement au bloc englobant initial formé par la zone d'affichage (_viewport_), sauf si un des ancêtres a une propriété [`transform`](/fr/docs/Web/CSS/transform), [`perspective`](/fr/docs/Web/CSS/perspective) ou [`filter`](/fr/docs/Web/CSS/filter) qui est différente de `none` (voir [la spécification sur les transformations CSS](https://www.w3.org/TR/css-transforms-1/#propdef-transform)) ; dans ce cas, c'est l'élément ancêtre qui joue le rôle de bloc englobant. Cela empêche le défilement lorsque la page est parcourue (ou lors de l'impression, le positionne à cette position fixe pour _chaque page_). Cette valeur crée toujours un nouveau contexte d'empilement. Certaines incohérences existent entre les navigateurs quant au rôle de `perspective` et `filter` pour la définition du bloc englobant. La valeur finale de l'élément est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
-
+  - : L'élément est retiré du flux normal et aucun espace n'est laissé pour l'élément. L'élément est positionné relativement au bloc englobant initial formé par la zone d'affichage (<i lang="en">viewport</i>), sauf si un des ancêtres a une propriété [`transform`](/fr/docs/Web/CSS/transform), [`perspective`](/fr/docs/Web/CSS/perspective) ou [`filter`](/fr/docs/Web/CSS/filter) qui est différente de `none` (voir [la spécification sur les transformations CSS](https://www.w3.org/TR/css-transforms-1/#propdef-transform))&nbsp;; dans ce cas, c'est l'élément ancêtre qui joue le rôle de bloc englobant. Cela empêche le défilement lorsque la page est parcourue (ou lors de l'impression, le positionne à cette position fixe pour _chaque page_). Cette valeur crée toujours un nouveau contexte d'empilement. Certaines incohérences existent entre les navigateurs quant au rôle de `perspective` et `filter` pour la définition du bloc englobant. La valeur finale de l'élément est déterminée par les valeurs de `top`, `right`, `bottom` et `left`.
 
     Cette valeur crée toujours un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). Pour les documents imprimés, cela se traduit par le placement de l'élément au même endroit pour _chacune des pages_.
 
 - `sticky`
-  - : La position de la boîte est calculée en fonction du flux normal du document. Ensuite, la boîte est décalée par rapport à son ancêtre de défilement le plus proche et par rapport à [son bloc englobant](/fr/docs/Web/CSS/Containing_block) selon les valeurs de `top`, `right`, `bottom` et `left`. Dans tous les cas, y compris avec les éléments `table`, cela n'affecte pas la position des autres éléments. 
+  - : La position de la boîte est calculée en fonction du flux normal du document. Ensuite, la boîte est décalée par rapport à son ancêtre de défilement le plus proche et par rapport à [son bloc englobant](/fr/docs/Web/CSS/Containing_block) selon les valeurs de `top`, `right`, `bottom` et `left`. Dans tous les cas, y compris avec les éléments `table`, cela n'affecte pas la position des autres éléments.
 
-    Cette valeur entraîne toujours la création d'un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). On notera qu'un tel élément « adhèrera » à l'ancêtre le plus proche qui dispose d'un mécanisme de défilement (c'est-à-dire quand `overflow` vaut `hidden`, `scroll`, `auto` ou `overlay`) même si cet ancêtre n'est pas nécessairement l'ancêtre de défilement le plus proche : cette valeur ne fonctionnera pas dans un élément pour lequel la propriété vaut `overflow: hidden` ou `auto` ([cf.: cette _issue_ GitHub](https://github.com/w3c/csswg-drafts/issues/865)).
+    Cette valeur entraîne toujours la création d'un nouveau [contexte d'empilement](/fr/docs/Glossary/Stacking_context). On notera qu'un tel élément «&nbsp;adhèrera&nbsp;» à l'ancêtre le plus proche qui dispose d'un mécanisme de défilement (c'est-à-dire quand `overflow` vaut `hidden`, `scroll`, `auto` ou `overlay`) même si cet ancêtre n'est pas nécessairement l'ancêtre de défilement le plus proche&nbsp;: cette valeur ne fonctionnera pas dans un élément pour lequel la propriété vaut `overflow: hidden` ou `auto` ([cf. cette _issue_ GitHub](https://github.com/w3c/csswg-drafts/issues/865)).
 
 ## Description
 
@@ -63,7 +62,7 @@ position: unset;
 
 La plupart du temps, les éléments positionnés de façon absolue ont leurs propriétés [`height`](/fr/docs/Web/CSS/height) et [`width`](/fr/docs/Web/CSS/width) qui valent `auto` afin que le contenu ait suffisamment d'espace. Toutefois, les éléments positionnés de façon absolue et qui ne sont pas des éléments remplacés peuvent remplir l'espace vertical en utilisant [`top`](/fr/docs/Web/CSS/top) et [`bottom`](/fr/docs/Web/CSS/bottom) tout en laissant [`height`](/fr/docs/Web/CSS/height) indéfini (c'est-à-dire avec la valeur `auto`). On pourra faire de même pour l'espace horizontal avec les propriétés [`left`](/fr/docs/Web/CSS/left) et [`right`](/fr/docs/Web/CSS/right).
 
-Sauf dans le cas précédemment énoncé des éléments positionnés de façon absolue et qui remplissent l'espace :
+Sauf dans le cas précédemment énoncé des éléments positionnés de façon absolue et qui remplissent l'espace&nbsp;:
 
 - Si `top` et `bottom` sont tous les deux définis (enfin, s'ils ne valent pas `auto`), c'est `top` qui aura la priorité
 - Si `left` et `right` sont tous les deux définis, c'est `left` qui aura la priorité si la direction du texte est de gauche à droite (LTR) et `right` qui aura la priorité si la direction du texte est de droite à gauche (RTL) (par exemple en perse, arabe, hébreu).
@@ -73,11 +72,11 @@ Sauf dans le cas précédemment énoncé des éléments positionnés de façon a
 Il faut s'assurer que les éléments positionnés avec `absolute` ou `fixed` ne masquent pas d'autre contenu sur la page lorsqu'on zoome sur la page afin d'augmenter la taille du texte.
 
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Visual Presentation: Understanding SC 1.4.8 | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [Présentation visuelle&nbsp;: comprendre les critères de succès 1.4.8 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ### Performance et accessibilité
 
-Les éléments qui défilent avec du contenu utilisant `fixed` ou `sticky` peuvent entraîner des problèmes de performance et d'accessibilité. Lorsque l'utilisateur fait défiler le contenu, le navigateur doit « repeindre » le contenu adhérant ou fixé à un nouvel emplacement. Selon le contenu qui doit être repeint, les performances du navigateur et celles de l'appareil, il est possible que le contenu ne soit pas affiché de façon fluide (60fps), créant ainsi des saccades. Une solution consiste à ajouter `will-change: transform` (cf. [`will-change`](/fr/docs/Web/CSS/will-change)) aux éléments positionnés afin que le rendu de l'élément soit géré à part, améliorant ainsi les performances et l'accessibilité.
+Les éléments qui défilent avec du contenu utilisant `fixed` ou `sticky` peuvent entraîner des problèmes de performance et d'accessibilité. Lorsque l'utilisatrice ou l'utilisateur fait défiler le contenu, le navigateur doit «&nbsp;repeindre&nbsp;» le contenu adhérant ou fixé à un nouvel emplacement. Selon le contenu qui doit être repeint, les performances du navigateur et celles de l'appareil, il est possible que le contenu ne soit pas affiché de façon fluide (60fps), créant ainsi des saccades. Une solution consiste à ajouter `will-change: transform` (cf. [`will-change`](/fr/docs/Web/CSS/will-change)) aux éléments positionnés afin que le rendu de l'élément soit géré à part, améliorant ainsi les performances et l'accessibilité.
 
 ## Définition formelle
 
@@ -91,7 +90,7 @@ Les éléments qui défilent avec du contenu utilisant `fixed` ou `sticky` peuve
 
 ### Positionnement relatif
 
-Dans cet exemple, on voit comment les autres éléments sont positionnés, comme si « Deux » prenait l'espace de sa position normale.
+Dans cet exemple, on voit comment les autres éléments sont positionnés, comme si «&nbsp;Deux&nbsp;» prenait l'espace de sa position normale.
 
 #### HTML
 
@@ -145,7 +144,7 @@ Dans l'exemple qui suit, on n'a pas d'ancêtre positionné et la boîte «&nbsp;
 <p class="positioned">Par défaut, on occupe 100% de la largeur de l'élément parent et on est aussi grand que notre contenu.</p>
 <p>Nous sommes séparés par nos marges (une seule marge en raison de la fusion des marges).</p>
 
-<p>Les éléments <em>inline</em> <span>comme celui-ci</span> et <span>celui-là</span> se situent sur la même ligne avec également les nœuds texte. S'il y a de l'espace sur la même ligne. Les éléments qui dépassent <span>passent à la ligne si possible — comme pour ce texte.</span> ou cette image <img src="long.jpg"></p>
+<p>Les éléments <em>en ligne (inline)</em> <span>comme celui-ci</span> et <span>celui-là</span> se situent sur la même ligne avec également les nœuds texte. S'il y a de l'espace sur la même ligne. Les éléments qui dépassent <span>passent à la ligne si possible — comme pour ce texte.</span> ou cette image <img src="long.jpg"></p>
 ```
 
 #### CSS
@@ -245,7 +244,7 @@ Le positionnement fixe est semblable au positionnement absolu sauf qu'ici, le bl
 
 #### Résultat
 
-Lorsqu'on regarde le haut de la page, la boîte apparaît en haut à gauche, même après avoir défilé, elle reste à la même place par rapport au <i lang="en">viewport</i>&nbsp;:
+Lorsqu'on regarde le haut de la page, la boîte apparaît en haut à gauche, même après avoir défilé, elle reste à la même place par rapport à la zone d'affichage (<i lang="en">viewport</i>)&nbsp;:
 
 {{EmbedLiveSample('', '800px', '300px')}}
 

@@ -22,7 +22,7 @@ mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
 mask-image: image(url(mask.png), skyblue);
 
 /* Gestion de plusieurs masques */
-mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), transparent);
+mask-image: image(url(mask.png), skyblue), linear-gradient(rgba(0, 0, 0, 1.0), transparent);
 
 /* Valeurs globales */
 mask-image: inherit;
@@ -38,7 +38,7 @@ mask-image: unset;
 - `none`
   - : Le masque défini par ce mot-clé sera une image noire transparente.
 - `<mask-source>`
-  - : Une référence [`url()`](/fr/docs/Web/CSS/url()) vers un masque SVG ([<mask>](/fr/docs/Web/SVG/Element/mask)) ou une image CSS.
+  - : Une référence [`url()`](/fr/docs/Web/CSS/url()) vers un masque SVG ([`<mask>`](/fr/docs/Web/SVG/Element/mask)) ou une image CSS.
 - [`<image>`](/fr/docs/Web/CSS/image)
   - : Une image utilisée pour le masque.
 
@@ -56,7 +56,6 @@ mask-image: unset;
 
 {{EmbedGHLiveSample("css-examples/masking/mask-image.html", '100%', 560)}}
 
-
 ## Spécifications
 
 {{Specifications}}
@@ -68,4 +67,4 @@ mask-image: unset;
 ## Voir aussi
 
 - [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
-- [Appliquer des effets à des images avec la propriété CSS `mask-image`](https://web.dev/css-masking/)
+- [Appliquer des effets à des images avec la propriété CSS `mask-image` (en anglais)](https://web.dev/css-masking/)

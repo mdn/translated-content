@@ -6,7 +6,7 @@ browser-compat: css.properties.font-weight
 ---
 {{CSSRef}}
 
-La propriété CSS **`font-weight`** permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. [`font-family`](/fr/docs/Web/CSS/font-family)). Certaines fontes n'existent qu'avec les niveaux de graisses `normal` et `bold`.
+La propriété [CSS](/fr/docs/Web/CSS) **`font-weight`** permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. [`font-family`](/fr/docs/Web/CSS/font-family)). Certaines fontes n'existent qu'avec les niveaux de graisses `normal` et `bold`.
 
 {{EmbedInteractiveExample("pages/css/font-weight.html")}}
 
@@ -135,7 +135,7 @@ On notera que lorsqu'on utilise des niveaux de graisse relatifs, seuls quatre ni
 
 ### Correspondance entre les valeurs numériques et les noms communément utilisés
 
-Les valeurs allant de 100 à 900 correspondent environ aux noms suivants, communément utilisés pour désigner les variantes de fonte, selon la graisse, d'une même police (_NdT : les noms sont laissés en anglais car généralement utilisés tels quels_) (voir [la spécification OpenType](https://docs.microsoft.com/typography/opentype/spec/os2#usweightclass))&nbsp;:
+Les valeurs allant de 100 à 900 correspondent environ aux noms suivants, communément utilisés pour désigner les variantes de fonte, selon la graisse, d'une même police (_NdT&nbsp;: les noms sont laissés en anglais car généralement utilisés tels quels_) (voir [la spécification OpenType](https://docs.microsoft.com/typography/opentype/spec/os2#usweightclass))&nbsp;:
 
 | Valeur | Nom communément utilisé     |
 | ------ | --------------------------- |
@@ -148,7 +148,7 @@ Les valeurs allant de 100 à 900 correspondent environ aux noms suivants, commun
 | 700    | _Bold_                      |
 | 800    | _Extra Bold (Ultra Bold)_   |
 | 900    | _Black (Heavy)_             |
-| 900    | _Extra Black (Ultra Black)_ |
+| 950    | _Extra Black (Ultra Black)_ |
 
 ### Polices variables
 
@@ -165,7 +165,7 @@ Pour que l'exemple suivant fonctionne, il est nécessaire d'utiliser un navigate
 Pour les personnes ayant une vision faible, il peut être extrêmement difficile de lire un texte avec `font-weight` qui vaut `100` ou `200`, notamment [si le contraste entre le texte et l'arrière-plan est faible](/fr/docs/Web/CSS/color#accessibilité).
 
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.8 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [Comprendre les critères de succès 1.4.8 — Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Définition formelle
 
@@ -230,4 +230,4 @@ span {
 
 - [`font-style`](/fr/docs/Web/CSS/font-style)
 - [`font-family`](/fr/docs/Web/CSS/font-family)
-- [Apprendre - Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Apprendre — Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)

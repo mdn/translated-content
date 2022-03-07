@@ -13,12 +13,13 @@ La propriété **`border-image`** dessine une image sur la bordure d'un élémen
 
 ## Propriétés détaillées correspondantes
 
-C'est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir&nbsp;:
-- [`border-image-source`](/fr/docs/Web/CSS/border-image-source)
-- [`border-image-width`](/fr/docs/Web/CSS/border-image-width)
+C'est [une propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) qui permet de définir&nbsp;:
+
+- [`border-image-outset`](/fr/docs/Web/CSS/border-image-outset)
 - [`border-image-repeat`](/fr/docs/Web/CSS/border-image-repeat)
+- [`border-image-source`](/fr/docs/Web/CSS/border-image-source)
 - [`border-image-slice`](/fr/docs/Web/CSS/border-image-slice)
-- [`border-image-outset`](/fr/docs/Web/CSS/border-image-outset).
+- [`border-image-width`](/fr/docs/Web/CSS/border-image-width)
 
 ## Syntaxe
 
@@ -64,7 +65,7 @@ La propriété `border-image` peut être définie avec une à cinq valeurs parmi
 Les technologies d'assistance ne peuvent pas analyser les images de bordure. Si l'image contient des informations essentielles au sens de la page, mieux vaut décrire ces informations dans le contenu sémantique du document.
 
 - [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
-- [_Understanding Success Criterion 1.1.1 - Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Comprendre les critères pour 1.1.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Définition formelle
 
@@ -80,6 +81,12 @@ Les technologies d'assistance ne peuvent pas analyser les images de bordure. Si 
 
 On découpe l'image et on la répète pour remplir la zone entre les bordures.
 
+#### HTML
+
+```html
+<div id="bitmap">L'image est étirée pour remplir l'espace.</div>
+```
+
 #### CSS
 
 ```css
@@ -90,19 +97,17 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 }
 ```
 
-#### HTML
-
-```html
-<div id="bitmap">
-  L'image est étirée pour remplir l'espace.
-</div>
-```
-
 #### Résultat
 
 {{EmbedLiveSample('')}}
 
 ### Utiliser un dégradé
+
+#### HTML
+
+```html
+<div id="gradient">L'image formée par le dégradé est étirée pour remplir la zone.</div>
+```
 
 #### CSS
 
@@ -112,14 +117,6 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
   border-image: linear-gradient(red, yellow) 10;
   padding: 20px;
 }
-```
-
-#### HTML
-
-```html
-<div id="gradient">
-  L'image formée par le dégradé est étirée pour remplir la zone.
-</div>
 ```
 
 #### Résultat
@@ -140,8 +137,8 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 - [`outline`](/fr/docs/Web/CSS/outline)
 - [`box-shadow`](/fr/docs/Web/CSS/box-shadow)
 - [`background-image`](/fr/docs/Web/CSS/background-image)
-- {{cssxref("url()", "url()")}}
-- Fonctions pour les dégradés
+- La fonction [`url()`](/fr/docs/Web/CSS/url())
+- Fonctions pour les dégradés&nbsp;:
 
   - [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient())
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient())

@@ -73,7 +73,6 @@ Certaines polices possèdent différentes fontes pour lesquelles les caractères
 
 `font-stretch` permet de choisir entre les versions condensées ou étendues d'une police. Si la police utilisée ne possède pas de fonte utilisant cet axe de variation, elle n'aura aucun effet.
 
-
 ### Sélection de la fonte
 
 La fonte sélectionnée pour une valeur `font-stretch` dépend des fontes prises en charge par la police. Si la police ne fournit pas de fonte qui corresponde à la valeur exacte, le navigateur utilisera une fonte condensée si la valeur est inférieure à 100% et une fonte étendue si la valeur est supérieure à 100%.
@@ -126,7 +125,6 @@ Le tableau qui suit illustre l'effet des différents pourcentages avec deux poli
 - Helvetica Neue est installée par défaut sur macOS et possède une seule fonte condensée en plus de la fonte normale. On voit dans ce tableau que les valeurs de `font-stretch` inférieures à 100% utilisent une fonte condensée alors que les autres valeurs utilisent la fonte normale.
 - [League Mono Variable](https://tylerfinck.com/leaguemonovariable/) est une police variable qui offre plusieurs variantes de fontes sur cet axe et on peut alors observer les variations de `font-stretch` selon les pourcentages choisis.
 
-
 ### Syntaxe formelle
 
 {{csssyntax}}
@@ -134,6 +132,7 @@ Le tableau qui suit illustre l'effet des différents pourcentages avec deux poli
 ## Exemples
 
 ### Avec un pourcentage
+
 {{EmbedGHLiveSample("css-examples/variable-fonts/font-stretch.html", '100%', 950)}}
 
 ## Spécifications
@@ -150,4 +149,4 @@ Le tableau qui suit illustre l'effet des différents pourcentages avec deux poli
 
 - [`font-style`](/fr/docs/Web/CSS/font-style)
 - [`font-weight`](/fr/docs/Web/CSS/font-weight)
-- [Apprendre - Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Apprendre — Notions fondamentales sur le texte et la mise en forme avec les polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)

@@ -63,4 +63,4 @@ La couche du masque de l'élément est appelée _source_ et les couches inférie
 
 ## Voir aussi
 
-- [Le rognage et le masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)
+- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)

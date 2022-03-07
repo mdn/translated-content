@@ -8,9 +8,9 @@ original_slug: Web/CSS/Utilisation_de_dégradés_CSS
 
 Les **dégradés CSS** sont représentés par le type de donnée [`<gradient>`](/fr/docs/Web/CSS/gradient) qui est un sous-ensemble du type [`<image>`](/fr/docs/Web/CSS/image). L'utilisation de dégradés CSS permet d'afficher des transitions douces entre deux couleurs ou plus. Il existe trois sortes de dégradés&nbsp;:
 
-* Les dégradés linéaires (créés avec la fonction [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient())),
-* Les dégradés radiaux (créés avec la fonction [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient())),
-* Les dégradés coniques (créés avec la fonction [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient())).
+- Les dégradés linéaires (créés avec la fonction [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient())),
+- Les dégradés radiaux (créés avec la fonction [`radial-gradient()`](/fr/docs/Web/CSS/gradient/radial-gradient())),
+- Les dégradés coniques (créés avec la fonction [`conic-gradient()`](/fr/docs/Web/CSS/gradient/conic-gradient())).
 
 Les dégradés peuvent être répétés avec les fonctions respectives [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient()), [`repeating-radial-gradient()`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient()) et [`repeating-conic-gradient()`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient()).
 
@@ -26,6 +26,12 @@ Pour créer un dégradé linéaire, définissez un point de départ et une direc
 
 Pour définir un dégradé sous sa forme la plus simple, il suffit d'avoir deux couleurs. Celles-ci permettent de placer ce qu'on appellera des arrêts de couleur (<i lang="en">color stops</i> en anglais). Il est nécessaire d'en avoir au moins deux, mais il est possible d'en avoir plus.
 
+#### HTML
+
+```html
+<div class="lineaire-simple"></div>
+```
+
 #### CSS
 
 ```css
@@ -39,12 +45,6 @@ div {
 }
 ```
 
-#### HTML
-
-```html
-<div class="lineaire-simple"></div>
-```
-
 #### Résultat
 
 {{EmbedLiveSample("",150,150)}}
@@ -52,6 +52,12 @@ div {
 ### Changer la direction
 
 Par défaut, les dégradés linéaires vont du haut vers le bas. Il est possible de changer leur orientation en indiquant une direction.
+
+#### HTML
+
+```html
+<div class="degrade-horizontal"></div>
+```
 
 #### CSS
 
@@ -66,12 +72,6 @@ div {
 }
 ```
 
-#### HTML
-
-```html
-<div class="degrade-horizontal"></div>
-```
-
 #### Résultat
 
 {{EmbedLiveSample("",150,150)}}
@@ -79,6 +79,12 @@ div {
 ### Appliquer un dégradé en diagonale
 
 Il est également possible d'orienter le dégradé sur une diagonale allant d'un coin à un autre.
+
+#### HTML
+
+```html
+<div class="degrade-diagonal"></div>
+```
 
 #### CSS
 
@@ -93,12 +99,6 @@ div {
 }
 ```
 
-#### HTML
-
-```html
-<div class="degrade-diagonal"></div>
-```
-
 #### Résultat
 
 {{EmbedLiveSample("",200,130)}}
@@ -106,6 +106,12 @@ div {
 ### Utilisation d'angles
 
 Si on veut choisir plus précisément la direction, on pourra fournir un angle au dégradé.
+
+#### HTML
+
+```html
+<div class="degrade-angulaire"></div>
+```
 
 #### CSS
 
@@ -118,12 +124,6 @@ div {
   width: 120px;
   height: 120px;
 }
-```
-
-#### HTML
-
-```html
-<div class="degrade-angulaire"></div>
 ```
 
 #### Résultat
@@ -142,6 +142,12 @@ L'ensemble des types de dégradés CSS sont décrits par une suite de couleurs a
 
 Les dégradés CSS ne sont pas limités à deux couleurs, il est possible d'en utiliser autant que souhaité. Par défaut, les couleurs sont espacées de façon homogène&nbsp;:
 
+#### HTML
+
+```html
+<div class="degrade-espacement-auto"></div>
+```
+
 #### CSS
 
 ```css
@@ -155,12 +161,6 @@ div {
 }
 ```
 
-#### HTML
-
-```html
-<div class="degrade-espacement-auto"></div>
-```
-
 #### Résultat
 
 {{EmbedLiveSample("",150,150)}}
@@ -168,6 +168,12 @@ div {
 ### Arrêts de couleurs
 
 Les arrêts de couleurs sont des points sur la ligne de dégradé qui doivent avoir une couleur précise. Leur emplacement peut être spécifié sous la forme de zéro, un ou deux pourcentages de la longueur de la ligne, ou d'une longueur absolue. Vous pouvez en spécifier autant que vous voulez pour obtenir l'effet désiré. Si vous spécifiez un pourcentage, `0%` indique le point de départ, et `100%` le point d'arrivée&nbsp;; il est cependant possible d'utiliser des valeurs en dehors de cet intervalle si nécessaire pour obtenir l'effet désiré. Si une position n'est pas définie, la position de cet arrêt de couleur sera automatiquement calculée (par défaut le premier arrêt est situé à 0%, le dernier à 100% et les autres répartis de façon homogène par rapport à leurs voisins).
+
+#### HTML
+
+```html
+<div class="degrade-multicolore"></div>
+```
 
 #### CSS
 
@@ -182,12 +188,6 @@ div {
 }
 ```
 
-#### HTML
-
-```html
-<div class="degrade-multicolore"></div>
-```
-
 #### Résultat
 
 {{EmbedLiveSample("",150,150)}}
@@ -195,6 +195,12 @@ div {
 ### Créer des lignes franches
 
 Pour créer une ligne franche entre deux couleurs et avoir deux bandes plutôt qu'un dégradé progressif, on peut définir deux points d'arrêt de couleur au même endroit. Dans l'exemple suivant, on a deux couleurs pour un même emplacement de point d'arrêt situé à `50%`&nbsp;:
+
+#### HTML
+
+```html
+<div class="ligne-franche"></div>
+```
 
 #### CSS
 
@@ -209,12 +215,6 @@ div {
 }
 ```
 
-#### HTML
-
-```html
-<div class="ligne-franche"></div>
-```
-
 #### Résultat
 
 {{EmbedLiveSample("", 150, 150)}}
@@ -222,6 +222,13 @@ div {
 ### Utiliser des indications de couleurs
 
 Par défaut, les dégradés passent linéairement d'une couleur à une autre. On peut également utiliser une indication afin de définir l'emplacement où la couleur médiane sera atteinte. Dans l'exemple qui suit, plutôt que d'attendre la moitié de la transition au milieu, on la place à 10% de l'axe.
+
+#### HTML
+
+```html
+<div class="indication-couleur"></div>
+<div class="degrade-lineaire"></div>
+```
 
 #### CSS
 
@@ -240,13 +247,6 @@ div {
 .degrade-lineaire {
   background: linear-gradient(blue, pink);
 }
-```
-
-#### HTML
-
-```html
-<div class="indication-couleur"></div>
-<div class="degrade-lineaire"></div>
 ```
 
 #### Résultat
@@ -328,6 +328,12 @@ div {
 
 Les dégradés gèrent la transparence. Vous pouvez l'utiliser, par exemple, en superposant plusieurs fonds pour créer des effets sur les images. Par exemple&nbsp;:
 
+#### HTML
+
+```html
+<div class="superposition"></div>
+```
+
 #### CSS
 
 ```css
@@ -342,12 +348,6 @@ div {
 }
 ```
 
-#### HTML
-
-```html
-<div class="superposition"></div>
-```
-
 #### Résultat
 
 {{EmbedLiveSample("",300,180)}}
@@ -355,6 +355,12 @@ div {
 ### Empilement de dégradés
 
 Il est possible d'empiler différents dégradés. Il suffit que les dégradés sur les couches supérieures ne soient pas complètement opaques pour qu'on puisse voir ceux des couches inférieures.
+
+#### HTML
+
+```html
+<div class="linear-gradient"></div>
+```
 
 #### CSS
 
@@ -370,12 +376,6 @@ div {
   width: 200px;
   height: 200px;
 }
-```
-
-#### HTML
-
-```html
-<div class="linear-gradient"></div>
 ```
 
 #### Résultat
@@ -850,7 +850,7 @@ div {
 
 ## Voir aussi
 
-- Les fonctions de manipulation des dégradés
+- Les fonctions de manipulation des dégradés&nbsp;:
 
   - [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient()),
   - [`radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient()),
@@ -859,12 +859,12 @@ div {
   - [`repeating-radial-gradient`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient()),
   - [`repeating-conic-gradient`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient())
 
-- Les types de donnée CSS relatifs aux dégradés
+- Les types de donnée CSS relatifs aux dégradés&nbsp;:
 
   - [`<gradient>`](/fr/docs/Web/CSS/gradient),
   - [`<image>`](/fr/docs/Web/CSS/image)
 
-- Certaines propriétés CSS qui permettent d'utiliser des dégradés
+- Certaines propriétés CSS qui permettent d'utiliser des dégradés&nbsp;:
 
   - [`background`](/fr/docs/Web/CSS/background),
   - [`background-image`](/fr/docs/Web/CSS/background-image)

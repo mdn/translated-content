@@ -6,23 +6,20 @@ translation_of: Web/CSS/border-image-repeat
 ---
 {{CSSRef}}
 
-La propriété CSS **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisées pour s'étendre sur chacun des côtés de la bordure.
+La propriété [CSS](/fr/docs/Web/CSS) **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisées pour s'étendre sur chacun des côtés de la bordure.
 
 {{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
 
 ## Syntaxe
 
 ```css
-/* border-image-repeat                      */
-/* Une valeur : s'applique à tous les côtés */
+/* Valeurs avec un mot-clé */
 border-image-repeat: stretch;
 border-image-repeat: repeat;
 border-image-repeat: round;
 border-image-repeat: space;
 
-/* border-image-repeat
-/* Première valeur : côtés horizontaux */
-/* Deuxième valeur : côtés verticaux   */
+/* côtés horizontaux | verticaux */
 border-image-repeat: round stretch;
 
 /* Valeurs globales */
@@ -58,6 +55,10 @@ La propriété `border-image-repeat` peut être définie à l'aide d'une ou deux
 
 ## Exemples
 
+### Répéter l'image de bordure
+
+#### CSS
+
 ```css
 #bordered {
   width: 12rem;
@@ -88,7 +89,6 @@ repetition.addEventListener("change", function (evt) {
   document.getElementById("bordered").style.borderImageRepeat = evt.target.value;
 });
 ```
-
 
 ### Résultat
 

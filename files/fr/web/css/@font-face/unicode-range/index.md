@@ -21,7 +21,7 @@ unicode-range: U+0025-00FF, U+4??;   /* plusieurs valeurs             */
 
 ### Valeurs
 
-Une valeur de type `<unicode-range>` peut se présenter de trois façons différentes :
+Une valeur de type `<unicode-range>` peut se présenter de trois façons différentes&nbsp;:
 
 - Un seul point de code
 
@@ -33,7 +33,7 @@ Une valeur de type `<unicode-range>` peut se présenter de trois façons différ
 
 - Un intervalle de substitution indiqué par `?`
 
-  - : Un intervalle de points de code Unicode indiqué par une valeur contenant un point d'interrogation. Ainsi, `U+4??` signifie « tous les caractères contenus dans l'intervalle entre les points de code `U+400` et `U+4FF`).
+  - : Un intervalle de points de code Unicode indiqué par une valeur contenant un point d'interrogation. Ainsi, `U+4??` signifie «&nbsp;tous les caractères contenus dans l'intervalle entre les points de code `U+400` et `U+4FF`&nbsp;».
 
 ## Description
 

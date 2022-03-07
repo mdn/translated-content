@@ -25,31 +25,19 @@ Les propriétés [`border-image-repeat`](/fr/docs/Web/CSS/border-image-repeat), 
 ## Syntaxe
 
 ```css
-/* border-image-slice :                       */
 /* Une valeur qui s'applique aux quatre côtés */
 border-image-slice: 30%;
 
-/* border-image-slice :                */
-/* Première valeur : côtés verticaux   */
-/* Deuxième valeur : côtés horizontaux */
+/* côtés verticaux | horizontaux */
 border-image-slice: 10% 30%;
 
-/* border-image-slice :                */
-/* Première valeur : côté haut         */
-/* Deuxième valeur : côtés horizontaux */
-/* Troisième valeur : côté bas         */
+/* haut | côtés horizontaux | bas */
 border-image-slice: 30 30% 45;
 
-/* border-image-slice :           */
-/* Première valeur : côté haut    */
-/* Deuxième valeur : côté droit   */
-/* Troisième valeur : côté bas    */
-/* Quatrième valeur : côté gauche */
+/* haut | droit | bas | gauche */
 border-image-slice: 7 12 14 5;
 
-/* border-image-slice: … fill          */
-/* Le mot-clé fill peut être intercalé */
-/* à n'importe quel endroit            */
+/* Le mot-clé `fill` */
 border-image-slice: 10% fill 7 12;
 
 /* Valeurs globales */
@@ -93,7 +81,7 @@ Dans l'exemple suivant, on utilise un simple élément `<div>` avec une image de
 
 ![Des losanges de plusieurs couleurs](border-diamonds.png)
 
-Les losanges mesurent 30px de large. Aussi, en utilisant 30 pixels comme valeur pour [`border-width`](/en-US/docs/Web/CSS/border-width)  et `border-image-slice`, on aura des losanges complets et nets&nbsp;:
+Les losanges mesurent 30px de large. Aussi, en utilisant 30 pixels comme valeur pour [`border-width`](/fr/docs/Web/CSS/border-width) et `border-image-slice`, on aura des losanges complets et nets&nbsp;:
 
 ```css
 border-width: 30px;
@@ -140,7 +128,7 @@ div > div {
   height: 200px;
   border-width: 30px;
   border-style: solid;
-  border-image: url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png);
+  border-image: url(border-diamonds.png);
   border-image-slice: 30;
   border-image-repeat: round;
 }

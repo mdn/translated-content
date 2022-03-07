@@ -55,5 +55,5 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
   - [`::-moz-range-track`](/fr/docs/Web/CSS/::-moz-range-track)
 
 - [`::-ms-fill-upper`](/fr/docs/Web/CSS/::-ms-fill-upper) pris en charge par Internet Explorer
-- [CSS-Tricks : Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode : Mettre en forme les pistes et curseurs](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [CSS-Tricks&nbsp;: Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode&nbsp;: Mettre en forme les pistes et curseurs (en anglais)](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

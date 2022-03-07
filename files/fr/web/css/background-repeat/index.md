@@ -6,7 +6,7 @@ translation_of: Web/CSS/background-repeat
 ---
 {{CSSRef}}
 
-La propriété CSS **`background-repeat`** définit la façon dont les images utilisées en arrière-plan sont répétées. Une image d'arrière-plan pourra ainsi être répétée sur l'axe horizontal, l'axe vertical ou bien ne pas être répétée.
+La propriété [CSS](/fr/docs/Web/CSS) **`background-repeat`** définit la façon dont les images utilisées en arrière-plan sont répétées. Une image d'arrière-plan pourra ainsi être répétée sur l'axe horizontal, l'axe vertical ou bien ne pas être répétée.
 
 {{EmbedInteractiveExample("pages/css/background-repeat.html")}}
 
@@ -24,8 +24,7 @@ background-repeat: round;
 background-repeat: no-repeat;
 
 /* Syntaxe avec deux valeurs        */
-/* Première valeur : axe horizontal */
-/* Seconde valeur : axe vertical    */
+/* axe horizontal | vertical */
 background-repeat: repeat space;
 background-repeat: repeat repeat;
 background-repeat: round space;
@@ -115,32 +114,30 @@ div {
   height: 70px;
 }
 
-/* background repeat CSS */
-.one {
+/* background-repeat CSS */
+.un {
   background-repeat: no-repeat;
 }
-.two {
+.deux {
   background-repeat: repeat;
 }
-.three {
+.trois {
   background-repeat: repeat-x;
 }
-.four {
+.quatre {
   background-repeat: repeat-y;
 }
-
-.five {
+.cinq {
    background-repeat: space;
 }
-
 .six {
    background-repeat: round;
 }
 
 /* Plusieurs images */
-.seven {
-  background-image: url(starsolid.gif),
-                    url(favicon.png);
+.sept {
+  background-image:  url(starsolid.gif),
+                     url(favicon.png);
   background-repeat: repeat-x,
                      repeat-y;
   height: 144px;
@@ -152,25 +149,25 @@ div {
 ```html
 <ol>
   <li>no-repeat
-    <div class="one"></div>
+    <div class="un"></div>
   </li>
   <li>repeat
-    <div class="two"></div>
+    <div class="deux"></div>
   </li>
   <li>repeat-x
-    <div class="three"></div>
+    <div class="trois"></div>
   </li>
   <li>repeat-y
-    <div class="four"></div>
+    <div class="quatre"></div>
   </li>
   <li>space
-    <div class="five"></div>
+    <div class="cinq"></div>
   </li>
   <li>round
     <div class="six"></div>
   </li>
   <li>repeat-x, repeat-y (plusieurs images)
-    <div class="seven"></div>
+    <div class="sept"></div>
   </li>
 </ol>
 ```
@@ -191,4 +188,4 @@ Dans cet exemple, chaque élément de la liste illustre une valeur différente d
 
 ## Voir aussi
 
-- [Utiliser plusieurs arrières-plans en CSS](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Utiliser plusieurs arrière-plans en CSS](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)

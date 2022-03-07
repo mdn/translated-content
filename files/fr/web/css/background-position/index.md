@@ -52,20 +52,20 @@ La propriété `background-position` peut être définie grâce à une ou plusie
 
 - `<position>`
 
-  - : Une valeur [`<position>`](/fr/docs/Web/CSS/position). Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une ou deux valeurs.La première correspond à la position horizontale et la seconde à la position verticale.
+  - : Une valeur [`<position>`](/fr/docs/Web/CSS/position). Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une ou deux valeurs. La première correspond à la position horizontale et la seconde à la position verticale.
 
-    **Définition avec une valeur&nbsp;:** la valeur peut être :
+    **Définition avec une valeur&nbsp;:** la valeur peut être&nbsp;:
 
     - Le mot-clé `center` qui centre l'image.
     - Un mot-clé parmi `top`, `left`, `bottom`, `right`. Ce mot-clé indique le bord par rapport auquel placer l'élément. Pour l'autre dimension, on utilisera la moitié de la boîte (50%).
     - Une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Cette valeur définit l'abscisse du point par rapport au bord gauche. L'ordonnée est fixée à 50%.
 
-    **Définition avec deux valeurs&nbsp;:** la première valeur définit l'abscisse (la coordonnée horizontale X) et la seconde définit l'ordonnée (la coordonnée verticale Y). Chaque valeur peut être :
+    **Définition avec deux valeurs&nbsp;:** la première valeur définit l'abscisse (la coordonnée horizontale X) et la seconde définit l'ordonnée (la coordonnée verticale Y). Chaque valeur peut être&nbsp;:
 
     - Un des mots-clés parmi `top`, `left`, `bottom`, `right`. Si `left` ou `right` est utilisé, la valeur définit l'abscisse et l'autre définira l'ordonnée. Si `top` ou `bottom` est indiqué, cette valeur définira l'ordonnée et l'autre valeur définira X.
     - Une valeur de longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Si l'autre valeur vaut `left` ou `right`, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est `top` ou `bottom`, cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.
 
-    >**Note :** Si une valeur est `top` ou `bottom`, la seconde ne peut pas être `top` ou `bottom`. Si une valeur est `left` ou `right`, la seconde ne peut pas être `left` ou `right`. Autrement dit "`top top"` ou "`left right`" seront considérées comme invalides.
+    > **Note :** Si une valeur est `top` ou `bottom`, la seconde ne peut pas être `top` ou `bottom`. Si une valeur est `left` ou `right`, la seconde ne peut pas être `left` ou `right`. Autrement dit `top top` ou `left right` seront considérées comme invalides.
 
     **Définition avec 3 valeurs&nbsp;:** Deux valeurs sont des mots-clés et la troisième est le décalage appliqué à la valeur qui précède.
 
@@ -82,14 +82,14 @@ La propriété `background-position` peut être définie grâce à une ou plusie
 
 Lorsqu'on exprime un décalage en pourcentage, ce dernier est relatif au conteneur. Ainsi, une valeur de 0% indiquera que le côté gauche (ou haut) du bord de l'image est aligné avec le bord gauche (ou haut) du conteneur. Une valeur de 100% indiquera que le côté droit (ou bas) de l'image d'arrière-plan est alignée avec le bord droit (ou bas) du conteneur. Une valeur de 50% permettra de centrer l'image.
 
-Autrement dit, lorsqu'on utilise un pourcentage, celui-ci s'inscrit dans la formule suivante :
+Autrement dit, lorsqu'on utilise un pourcentage, celui-ci s'inscrit dans la formule suivante&nbsp;:
 
 ```
 (largeur conteneur - largeur image) * (position en %) = (décalage horizontal)
 (hauteur conteneur - hauteur image) * (position en %) = (décalage vertical)
 ```
 
-En utilisant l'axe horizontal pour un exemple, prenons une image dont la largeur mesure 300px, qu'on utilise celle-ci dans un conteneur dont la largeur mesure 100px wide et que `background-size` vaut `auto`&nbsp;:
+En utilisant l'axe horizontal pour un exemple, prenons une image dont la largeur mesure 300px, qu'on utilise celle-ci dans un conteneur dont la largeur mesure 100px et que `background-size` vaut `auto`&nbsp;:
 
 ```
 100px - 300px = -200px (différence entre le conteneur et l'image)
@@ -129,6 +129,14 @@ On notera donc que si l'image d'arrière-plan a les mêmes dimensions que le con
 
 Dans cet exemple, on a trois éléments jaunes qui ont chacun une étoile située différemment. Le rectangle final possède deux images d'arrière-plan, chacune à une position différente.
 
+#### HTML
+
+```html
+<div class="exemple_un">Premier exemple</div>
+<div class="exemple_deux">Deuxième exemple</div>
+<div class="exemple_trois">Troisième exemple</div>
+```
+
 #### CSS
 
 ```css
@@ -154,19 +162,9 @@ différemment, on voit les virgules dans les déclarations.
 L'ordre est le même entre background-image et -position.
 */
 .exemple_trois {
-  background-image:    url("startransparent.gif"),
-                       url("catfront.png");
-  background-position: 0px 0px,
-                       center;
+  background-image: url("startransparent.gif"), url("catfront.png");
+  background-position: 0px 0px, center;
 }
-```
-
-#### HTML
-
-```html
-<div class="exemple_un">Premier exemple</div>
-<div class="exemple_deux">Deuxième exemple</div>
-<div class="exemple_trois">Troisième exemple</div>
 ```
 
 #### Résultat

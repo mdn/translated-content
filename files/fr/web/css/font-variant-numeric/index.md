@@ -6,7 +6,7 @@ browser-compat: css.properties.font-variant-numeric
 ---
 {{CSSRef}}
 
-La propriété CSS **`font-variant-numeric`** permet de contrôler l'utilisation de glyphes alternatifs pour les nombres, fractions et les marqueurs ordinaux.
+La propriété [CSS](/fr/docs/Web/CSS) **`font-variant-numeric`** permet de contrôler l'utilisation de glyphes alternatifs pour les nombres, fractions et les marqueurs ordinaux.
 
 {{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}
 
@@ -53,7 +53,7 @@ La valeur de cette propriété peut être définie selon deux formes&nbsp;:
 
 - _\<numeric-spacing-values_>
 
-  - : Ces valeurs permettent de contrôler la taille des chiffres utilisés pour les nombres. On peut utiliser deux valelurs&nbsp;:
+  - : Ces valeurs permettent de contrôler la taille des chiffres utilisés pour les nombres. On peut utiliser deux valeurs&nbsp;:
     - `proportional-nums` permet d'activer l'ensemble où les chiffres ne sont pas tous de la même taille. Elle correspond aux valeurs OpenType `pnum`.
     - `tabular-nums` permet d'activer l'ensemble où les chiffres ont la même taille (ce qui leur permet d'être facilement alignés dans des tableaux). Elle correspond aux valeurs OpenType `tnum`.
 

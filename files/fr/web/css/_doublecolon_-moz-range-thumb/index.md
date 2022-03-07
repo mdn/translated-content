@@ -36,7 +36,7 @@ input[type=range]::-moz-range-thumb {
 
 Une barre de progression mise en forme avec ces règles devrait ressembler à&nbsp;:
 
-![The thumb of the <input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
+![Un élément <input type=range> avec un curseur vert](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Spécifications
 
@@ -58,5 +58,5 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
   - [`::-webkit-slider-thumb`](/fr/docs/Web/CSS/::-webkit-slider-thumb) pour WebKit/Blink (Safari, Chrome et Opera).
   - [`::-ms-thumb`](/fr/docs/Web/CSS/::-ms-thumb) pour Internet Explorer/Edge.
 
-- [CSS-Tricks : Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode : Mettre en forme les pistes et curseurs](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [CSS-Tricks&nbsp;: Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [QuirksMode&nbsp;: Mettre en forme les pistes et curseurs (en anglais)](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

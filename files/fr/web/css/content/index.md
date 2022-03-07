@@ -6,21 +6,19 @@ browser-compat: css.properties.content
 ---
 {{CSSRef}}
 
-La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace un élément avec une valeur générée. Les objets insérés via la propriété `content` sont des _[éléments remplacés anonymes](/fr/docs/Web/CSS/Replaced_element)._
+La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace un élément avec une valeur générée. Les objets insérés via la propriété `content` sont des **[éléments remplacés anonymes](/fr/docs/Web/CSS/Replaced_element)**.
 
 ```css
-/* Des mots-clés qui ne peuvent pas être mélangés
-  avec d'autres valeurs */
+/* Des mots-clés qui ne peuvent pas être mélangés avec d'autres valeurs */
 content: normal;
 content: none;
 
-/* Valeurs pour une image */
+/* Valeurs pour une image (<image>) */
 content: url("http://www.example.com/test.png");
 content: linear-gradient(#e66465, #9198e5);
 content: image-set("image1x.png" 1x, "image2x.png" 2x);
 
-/* Texte alternatif pour le contenu, ajouté
-   avec le niveau 3 de la spécification */
+/* Texte alternatif pour le contenu, ajouté avec le niveau 3 de la spécification */
 content: url("http://www.example.com/test.png") / "Le texte alternatif";
 
 /* Une valeur <string>, les caractères non-latin */
@@ -37,8 +35,7 @@ content: counters(compteur_section, ".", decimal-leading-zero);
 /* attr() lie à la valeur de l'attribut HTML */
 content: attr(value string);
 
-/* Mots-clés dépendant de langue */
-/* ou de la position             */
+/* Mots-clés dépendant de langue ou de la position */
 content: open-quote;
 content: close-quote;
 content: no-open-quote;
@@ -62,7 +59,7 @@ content: unset;
 - `none`
   - : Lorsque cette valeur est appliquée à un pseudo-élément, ce dernier n'est pas généré. Si elle est appliquée à un élément, la valeur n'a pas d'effet.
 - `normal`
-  - : Résulte en `none` pour les pseudo-éléments `:before` et `:after`.
+  - : Résulte en `none` pour les pseudo-éléments `::before` et `::after`.
 - [`<string>`](/fr/docs/Web/CSS/string)
   - : Contenu qui indique le texte alternatif de l'élément. Les caractères non-latins doivent être encodés avec leur séquence d'échappement Unicode (`\000A9` représentera par exemple le symbole ©).
 - [`<image>`](/fr/docs/Web/CSS/image)
@@ -70,14 +67,14 @@ content: unset;
 - [`counter()`](/fr/docs/Web/CSS/counter())
   - : Un [compteur CSS](/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters), généralement un nombre, généralement produit via les propriétés [`<counter-reset>`](/fr/docs/Web/CSS/counter-reset) et [`<counter-increment>`](/fr/docs/Web/CSS/counter-increment) et qui peut être affiché grâce à la fonction [`counter()`](/fr/docs/Web/CSS/counter()) or [`counters()`](/fr/docs/Web/CSS/counters()).
 
-    [`counter()`](/fr/docs/Web/CSS/counter()) possède deux formes : 'counter(_name_)' ou 'counter(_name_, _style_)'. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément ; il est formaté selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
+    [`counter()`](/fr/docs/Web/CSS/counter()) possède deux formes&nbsp;: `counter(_name_)` ou `counter(_name_, _style_)`. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément&nbsp;; il est formaté selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
 
-    [`counters()`](/fr/docs/Web/CSS/counters()) a également deux formes : `counters(name, string)` ou `counters(name, string, style)`. Le texte généré est la valeur de tous les compteurs d'un nom donné dans ce pseudo-élément, depuis le moins profond jusqu'au plus profond, séparés par la chaîne définie. Les compteurs sont formatés selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
+    [`counters()`](/fr/docs/Web/CSS/counters()) a également deux formes&nbsp;: `counters(name, string)` ou `counters(name, string, style)`. Le texte généré est la valeur de tous les compteurs d'un nom donné dans ce pseudo-élément, depuis le moins profond jusqu'au plus profond, séparés par la chaîne définie. Les compteurs sont formatés selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).
 
 - `attr(X)`
   - : Renvoie la valeur de l'attribut X de l'élément comme une chaîne. S'il n'existe pas d'attribut X, une chaîne vide est renvoyée. La sensibilité à la casse du nom de l'attribut dépend du langage utilisé.
 - `open-quote` | `close-quote`
-  - : Ces valeurs sont remplacées par la chaîne appropriée de la propriété {{ cssxref("quotes") }}.
+  - : Ces valeurs sont remplacées par la chaîne appropriée de la propriété [`quotes`](/fr/docs/Web/CSS/quotes).
 - `no-open-quote` | `no-close-quote`
   - : N'introduit aucun contenu, mais incrémente (respectivement décrémente) le niveau d'imbrication des citations.
 
@@ -85,9 +82,9 @@ content: unset;
 
 Le contenu généré par CSS n'est pas inclus dans le [DOM](/fr/docs/Web/API/Document_Object_Model/Introduction). Pour cette raison, il ne fait pas partie de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.
 
-- [La prise en charge relative à l'accessibilité pour les contenus générés par CSS - Tink (en anglais)](https://tink.uk/accessibility-support-for-css-generated-content/)
+- [La prise en charge relative à l'accessibilité pour les contenus générés par CSS — Tink (en anglais)](https://tink.uk/accessibility-support-for-css-generated-content/)
 - [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
-- [_Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [Comprendre les critères de succès 1.3.1 | Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Définition formelle
 
@@ -107,20 +104,20 @@ Dans cet exemple, on insère des marques de citation et le mot «&nbsp;Chapitre&
 
 ```html
 <h1>5</h1>
-<p> Commençons par une citation de Sir Tim Berners-Lee,
+<p>Commençons par une citation de Sir Tim Berners-Lee,
   <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">
-    I was lucky enough to invent the Web at the time when the Internet already existed - and had for a decade and a half.</q>  We must understand that there is nothing fundamentally wrong with building on the contributions of others.
+    I was lucky enough to invent the Web at the time when the Internet already existed - and had for a decade and a half.</q>
+    We must understand that there is nothing fundamentally wrong with building on the contributions of others.
 </p>
 
 <h1>6</h1>
-<p> Citons le manifeste Mozilla
-  <q cite="http://www.mozilla.org/about/manifesto/">
-    Internet est une ressource publique mondiale qui doit demeurer ouverte et accessible.
+<p>Citons le manifeste Mozilla,
+  <q cite="https://www.mozilla.org/fr/about/manifesto/">
+    Internet est une ressource publique mondiale qui doit demeurer ouverte et accessible.</q>
 </p>
 ```
 
 #### CSS
-
 
 ```css
 q {
@@ -138,7 +135,7 @@ q::after {
 h1::before  {
   content: "Chapter ";  
   /* L'espace après la dernière lettre est 
-     voulu afin de détacher le mot du rest
+     voulu afin de détacher le mot du reste
      du contenu */
 }
 ```
@@ -160,8 +157,8 @@ h1::before  {
 ```css
 a::before{
   content: url("mdn-favicon16.png") " MOZILLA: ";
-  font:    x-small Arial,freeSans,sans-serif;
-  color:   gray;
+  font: x-small Arial, freeSans, sans-serif;
+  color: gray;
 }
 ```
 
@@ -240,7 +237,7 @@ li {
 
 ### Remplacer un élément
 
-Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est possible de remplacer le contenu d'un élément avec une [`url()`](/fr/docs/Web/CSS/url()) ou une valeur de type [`<image>`](/fr/docs/Web/CSS/image) . Le contenu ajouté avec `::before` ou avec `::after` ne sera plus généré car l'élément sera devenu un élément remplacé.
+Dans cet exemple, on remplace le contenu d'un élément avec une image. Il est possible de remplacer le contenu d'un élément avec une [`url()`](/fr/docs/Web/CSS/url()) ou une valeur de type [`<image>`](/fr/docs/Web/CSS/image). Le contenu ajouté avec `::before` ou avec `::after` ne sera plus généré car l'élément sera devenu un élément remplacé.
 
 #### HTML
 

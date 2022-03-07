@@ -29,7 +29,7 @@ cursor: url(moncurseur.cur);
 border-image-source: url(/media/diamonds.png);
 src: url('superpolice.woff');
 offset-path: url(#path);
-mask-image: url("maseques.svg#masque1");
+mask-image: url("masques.svg#masque1");
 
 /* Propriétés avec valeurs de recours */
 cursor: url(pointer.cur), pointer
@@ -46,7 +46,7 @@ mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), tr
 content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 /* Règles @ / at-rules */
-@document url("https://www.example.com/") { ... } {{Experimental_Inline}}
+@document url("https://www.example.com/") { ... } /* expérimental */
 @import url("https://www.example.com/style.css");
 @namespace url(http://www.w3.org/1999/xhtml);
 ```
@@ -65,7 +65,7 @@ La fonction **`url()`** peut être incluse comme valeur pour les propriétés [`
 
     - `<url>`
 
-      - : Une URL, relative ou absolue, qui pointe vers une ressource web à inclure ou un URI de données éventuellement encadrée entre quotes ou doubles quotes. Les quotes sont obligatoires si l'URL inclut des parenthèses, espaces, doubles quotes, etc. (sauf si ces caractères sont échappés) ou si l'adresse inclut des caractères de contrôle supérieurs à `0x7e`. Il n'est pas possible d'utiliser des doubles quotes dans une URL encadrée par des doubles quotes à moins de les échapper. De même, on ne peut pas utiliser une simple quote dans une URL délimitée par des simples quotes. Les déclarations suivantes seront équivalentes :
+      - : Une URL, relative ou absolue, qui pointe vers une ressource web à inclure ou un URI de données éventuellement encadrée entre quotes ou doubles quotes. Les quotes sont obligatoires si l'URL inclut des parenthèses, espaces, doubles quotes, etc. (sauf si ces caractères sont échappés) ou si l'adresse inclut des caractères de contrôle supérieurs à `0x7e`. Il n'est pas possible d'utiliser des doubles quotes dans une URL encadrée par des doubles quotes à moins de les échapper. De même, on ne peut pas utiliser une simple quote dans une URL délimitée par des simples quotes. Les déclarations suivantes seront équivalentes&nbsp;:
 
         ```css
         <propriete_css>: url("https://example.com/image.png")
@@ -73,10 +73,10 @@ La fonction **`url()`** peut être incluse comme valeur pour les propriétés [`
         <propriete_css>: url(https://example.com/image.png)
         ```
 
-      Si vous choisissez d'écrire l'URL sans guillemets, il faudra utiliser une barre oblique inverse (`\`) avant toute parenthèse, espace ou apostrophe (`'`) ou guillemets(`"`) faisant partie de l'URL.
+      Si vous choisissez d'écrire l'URL sans guillemets, il faudra utiliser une barre oblique inverse (`\`) avant toute parenthèse, espace ou apostrophe (`'`) ou guillemets (`"`) faisant partie de l'URL.
 
     - _chemin_
-      - : La référence à un identifiant d'une [forme SVG](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes), `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, ou `rect`. Ce sera alors la géométrie de la forme qui sera utilisée pour le chemin.
+      - : La référence à un identifiant d'une [forme SVG](/fr/docs/Web/SVG/Tutorial/Basic_Shapes), `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, ou `rect`. Ce sera alors la géométrie de la forme qui sera utilisée pour le chemin.
   
 - `url-modifier` {{Experimental_Inline}}
   - : À l'avenir, la fonction `url()` pourrait prendre en charge un modificateur tel qu'un identifiant ou une notation fonctionnelle qui modifierait le sens de l'URL. Cette valeur n'est pas complètement définie par la spécification et n'est pas prise en charge.
@@ -131,6 +131,12 @@ li::after {
 
 ### Utilisation d'un URI de données
 
+#### HTML
+
+```html
+<div class="background"></div>
+```
+
 #### CSS
 
 ```css hidden
@@ -146,11 +152,6 @@ li::after {
 }
 ```
 
-#### HTML
-
-```html
-<div class="background"></div>
-```
 #### Résultat
 
 {{EmbedLiveSample("", "100%", 50)}}

@@ -10,7 +10,7 @@ La propriété [CSS](/fr/docs/Web/CSS) **`image-rendering`** fournit une indicat
 
 {{EmbedInteractiveExample("pages/css/image-rendering.html")}}
 
-L'agent utilisateur redimensionnera une image si l'auteur de la page indique des dimensions différentes de la taille naturelle de l'image ou si l'utilisateur interagit en zoomant par exemple. Si, par exemple, la taille naturelle de l'image est `100×100px` et que l'auteur indique les dimensions `200×200px` (ou `50×50px`), l'image sera agrandie (ou réduite) aux nouvelles dimensions via l'algorithme indiqué. Le redimensionnement peut aussi avoir lieu suite aux interactions utilisateurs (avec un zoom par exemple). Cette propriété n'a aucun effet sur les images qui ne sont pas redimensionnées.
+L'agent utilisateur redimensionnera une image si l'auteur de la page indique des dimensions différentes de la taille naturelle de l'image, ou si la personne visualisant l'image interagit en zoomant par exemple. Si, par exemple, la taille naturelle de l'image est `100×100px` et que l'auteur indique les dimensions `200×200px` (ou `50×50px`), l'image sera agrandie (ou réduite) aux nouvelles dimensions via l'algorithme indiqué. Le redimensionnement peut aussi avoir lieu suite aux interactions utilisateurs (avec un zoom par exemple). Cette propriété n'a aucun effet sur les images qui ne sont pas redimensionnées.
 
 ## Syntaxe
 
@@ -37,8 +37,8 @@ image-rendering: unset;
   - : Cette valeur est proche de `smooth` mais favorise un redimensionnement avec une qualité élevée. Si les ressources du système sont limitées, ce sont les images ciblées avec `high-quality` qui devraient être priorisées par rapport aux autres s'il est nécessaire de dégrader la qualité.
 - `pixelated`
   - : L'algorithme utilisé est l'interpolation au plus proche voisin. L'image est agrandie au multiple entier de taille qui est supérieur ou égal à sa taille originale puis réduite à la taille cible, comme pour `smooth`. Lorsque l'agrandissement demandé est un multiple entier de la taille originale, l'effet obtenu sera le même qu'avec `crisp-edges`
-- `smooth`{{Experimental_inline}}
-  - : L'algorithme utilisé pour le redimensionnement doit maximiser l'apparence de l'image. Les algorithmes qui adoucissent les couleurs (ex. l'interpolation bilinéaire) sont acceptables. Cette valeur est destinée aux images telles que les photos.
+- `smooth` {{Experimental_inline}}
+  - : L'algorithme utilisé pour le redimensionnement doit maximiser l'apparence de l'image. Les algorithmes qui adoucissent les couleurs (l'interpolation bilinéaire par exemple) sont acceptables. Cette valeur est destinée aux images telles que les photos.
 
 > **Note :** Les valeurs `optimizeQuality` et `optimizeSpeed` qui étaient présentes dans un brouillon de la spécification (et qui provenaient de la spécification équivalente pour SVG) sont synonymes respectifs de `smooth` et `pixelated`.
 
@@ -102,7 +102,7 @@ img {
 
 ## Voir aussi
 
-- D'autres propriétés CSS utilisées avec les images
+- D'autres propriétés CSS utilisées avec les images&nbsp;:
   - [`object-fit`](/fr/docs/Web/CSS/object-fit)
   - [`object-position`](/fr/docs/Web/CSS/object-position)
   - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)

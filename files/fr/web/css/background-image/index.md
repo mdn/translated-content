@@ -46,14 +46,14 @@ background-image: unset;
 - `none`
   - : Un mot-clé qui indique qu'aucune image ne doit être utilisée comme arrière-plan.
 - `<image>`
-  - : Une valeur [`<image>`](/fr/docs/Web/CSS/image) qui indique l'image à afficher. On peut avoir plusieurs images en arrière-plan en séparant les valeurs par des virgules. Lorsque c'est une URL qui est utilisée, on peut aussi bien utiliser des simples quotes (`'texte_avec_double_quotes_"_'`) ou des doubles quotes (`"texte_avec_simple_quote_'_"`) pour encadrer le texte qui forme l'URL.
+  - : Une valeur [`<image>`](/fr/docs/Web/CSS/image) qui indique l'image à afficher. On peut avoir plusieurs images en arrière-plan en séparant les valeurs par des virgules.
 
 ## Accessibilité
 
-Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisateurs. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
+Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisatrices et utilisateurs. Si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.
 
 - [Comprendre les règles du WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 - W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Comprendre les critères de succès 1.1.1 — Comprendre les règles du WCAG 2.0 (en anglais)](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Définition formelle
 
@@ -135,6 +135,5 @@ div {
   - [`repeating-linear-gradient`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient())
   - [`repeating-radial-gradient`](/fr/docs/Web/CSS/gradient/repeating-radial-gradient())
   - [`repeating-conic-gradient`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient()),
-  - {{cssxref("image/paint()", "paint()")}}
-  - {{cssxref("url()", "url()")}}
-
+  - [`paint()`](/fr/docs/Web/CSS/image/paint())
+  - [`url()`](/fr/docs/Web/CSS/url())

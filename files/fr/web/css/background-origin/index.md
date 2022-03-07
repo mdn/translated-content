@@ -6,7 +6,7 @@ translation_of: Web/CSS/background-origin
 ---
 {{CSSRef}}
 
-La propriété **`background-origin`** détermine l'origine de l'arrière-plan [`background-image`](/fr/docs/Web/CSS/background-image) à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (_padding_).
+La propriété **`background-origin`** détermine l'origine de l'arrière-plan [`background-image`](/fr/docs/Web/CSS/background-image) à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (<i lang="en">padding</i>).
 
 {{EmbedInteractiveExample("pages/css/background-origin.html")}}
 
@@ -89,7 +89,7 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
   margin: 10px 0;
   color: #fff;
   background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,0.6) 60%, rgba(252,176,69,1) 100%),
-  radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%);
+              radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 28%);
   border: 20px dashed black;
   padding: 20px;
   width: 400px;

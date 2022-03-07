@@ -56,11 +56,11 @@ Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une
   - : La position de la zone est relative à la boîte de contour de l'objet.
 - `view-box`
   - : La zone d'affichage (<i lang="en">viewport</i>) SVG la plus proche est utilisée comme boîte de référence. Si l'attribut `viewBox` est défini pour l'élément qui crée la zone d'affichage, la boîte de référence est positionnée à l'origine du système de coordonnées établi par `viewBox`. Les dimensions de la boîte de référence sont les valeurs de largeur et de hauteur de `viewBox`.
-- `content`{{non-standard_inline}}
+- `content` {{non-standard_inline}}
   - : Synonyme de `content-box`.
-- `padding`{{non-standard_inline}}
+- `padding` {{non-standard_inline}}
   - : Synonyme de `padding-box`.
-- `border`{{non-standard_inline}}
+- `border` {{non-standard_inline}}
   - : Synonyme de `border-box`.
 
 ### Syntaxe formelle

@@ -58,4 +58,4 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
   - [`::-webkit-slider-runnable-track`](/fr/docs/Web/CSS/::-webkit-slider-runnable-track) pour WebKit/Blink (Safari, Chrome et Opera).
   - [`::-ms-track`](/fr/docs/Web/CSS/::-ms-track) pour Internet Explorer/Edge.
 
-- [CSS-Tricks : Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+- [CSS-Tricks&nbsp;: Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)

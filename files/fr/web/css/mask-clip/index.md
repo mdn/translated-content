@@ -8,8 +8,6 @@ browser-compat: css.properties.mask-clip
 
 La propriété [CSS](/fr/docs/Web/CSS) **`mask-clip`** définit la zone qui est modifiée par un masque. Le contenu «&nbsp;peint&nbsp;» sera restreint à cette zone.
 
-## Syntaxe
-
 ```css
 /* Valeurs de type <geometry-box> */
 mask-clip: content-box;
@@ -62,13 +60,13 @@ Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une
   - : C'est le <i lang="en">viewport</i> du plus proche SVG qui est utilisé comme boîte de référence. Si l'attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée le <i lang="en">viewport</i>, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîte sont basées sur la hauteur et la largeur de l'attribut `viewBox`.
 - `no-clip`
   - : La partie qui est peinte n'est pas rognée.
-- `border`{{non-standard_inline}}
+- `border` {{non-standard_inline}}
   - : Synonyme de `border-box`.
-- `padding`{{non-standard_inline}}
+- `padding` {{non-standard_inline}}
   - : Synonyme de `padding-box`.
-- `content`{{non-standard_inline}}
+- `content` {{non-standard_inline}}
   - : Synonyme de `content-box`.
-- `text`{{non-standard_inline}}
+- `text` {{non-standard_inline}}
   - : L'image est rognée selon la forme du texte de l'élément.
 
 ## Définition formelle

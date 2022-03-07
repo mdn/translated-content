@@ -8,46 +8,34 @@ translation_of: Web/CSS/border-image-outset
 
 La propriété **`border-image-outset`** définit la distance avec laquelle la bordure est déplacée par rapport à la boîte de bordure.
 
-Les fragments de l'image de bordure qui sont affichées en dehors de la boîte de bordure suite à l'utilisation de cette propriété n'entraîneront pas la création de barres de défilement. Ces zones ne capturent ni n'entraînent d'événements de pointeur par rapport à l'élément concerné.
+Les fragments de l'image de bordure qui sont affichées en dehors de la boîte de bordure suite à l'utilisation de cette propriété n'entraîneront pas la création de barres de défilement. Ces zones ne capturent ni n'entraînent d'évènements de pointeur par rapport à l'élément concerné.
 
 {{EmbedInteractiveExample("pages/css/border-image-outset.html")}}
-
 
 ## Syntaxe
 
 ```css
-/* border-image-outset :                 */
-/* Une même valeur pour les quatre côtés */
-/* Type <length>                         */
+/* Longueur */
+/* Type <length> */
 border-image-outset: 1rem;
 
-/* border-image-outset :                 */
-/* Une même valeur pour les quatre côtés */
-/* Type <number>                         */
+/* Valeur numérique */
+/* Type <number> */
 border-image-outset: 1.5;
 
-/* border-image-outset :              */
-/* Première valeur : côtés verticaux  */
-/* Seconde valeur : côtés horizontaux */
+/* côtés verticaux | horizontaux */
 border-image-outset: 1 1.2;
 
-/* border-image-outset :               */
-/* Première valeur : côté haut         */
-/* Deuxième valeur : côtés horizontaux */
-/* Troisième valeur : côté bas         */
+/* haut | côtés horizontaux | bas */
 border-image-outset: 30px 2 45px;
 
-/* border-image-outset :          */
-/* Première valeur : côté haut    */
-/* Deuxième valeur : côté droit   */
-/* Troisième valeur : côté bas    */
-/* Quatrième valeur : côté gauche */
+/* haut | droit | bas | gauche */
 border-image-outset: 7px 12px 14px 5px;
 
 /* Valeurs globales */
 border-image-outset: inherit;
 border-image-outset: initial;
-border-image-outset: revert;s
+border-image-outset: revert;
 border-image-outset: unset;
 ```
 
@@ -75,7 +63,15 @@ La propriété `border-image-outset` peut être définie à l'aide d'une, deux, 
 
 ## Exemples
 
-### CSS
+### Décaler la bordure d'une image
+
+#### HTML
+
+```html
+<div id="outset">Un élément avec une bordure décalée !</div>
+```
+
+#### CSS
 
 ```css
 #outset {
@@ -88,13 +84,7 @@ La propriété `border-image-outset` peut être définie à l'aide d'une, deux, 
 }
 ```
 
-### HTML
-
-```html
-<div id="outset">Un élément avec une bordure décalée !</div>
-```
-
-### Résultat
+#### Résultat
 
 {{EmbedLiveSample('', 'auto', '200')}}
 

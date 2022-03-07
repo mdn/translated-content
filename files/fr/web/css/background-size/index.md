@@ -1,15 +1,11 @@
 ---
 title: background-size
 slug: Web/CSS/background-size
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/background-size
 ---
 {{CSSRef}}
 
-La propriété CSS **`background-size`** définit la taille des images d'arrière-plan pour l'élément. La taille de l'image peut être contrainte, complètement ou partiellement afin de conserver ses proportions.
+La propriété [CSS](/fr/docs/Web/CSS) **`background-size`** définit la taille des images d'arrière-plan pour l'élément. La taille de l'image peut être contrainte, complètement ou partiellement afin de conserver ses proportions.
 
 {{EmbedInteractiveExample("pages/css/background-size.html")}}
 
@@ -24,7 +20,7 @@ background-size: contain;
 
 /* Une seule valeur                         */
 /* La valeur désigne la largeur de l'image. */
-/* La hauteur vaut 'auto'.                  */
+/* La hauteur vaut 'auto'                   */
 background-size: 50%;
 background-size: 3.2em;
 background-size: 12px;
@@ -56,7 +52,7 @@ La propriété `background-size` peut être définie de différentes façons&nbs
 - Avec une seule valeur qui indique la largeur de l'image (la hauteur vaut alors [`auto`](#auto) par défaut)
 - Avec deux valeurs dont la première représente la largeur et la seconde la hauteur. Chaque valeur peut être une longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) ou encore [`auto`](#auto).
 
-Lorsqu'on souhaite paramétrer la taillle de plusieurs images d'arrière-plan, on peut séparer ces valeurs par des virgules (l'ordre utilisé entre les valeurs suit celui de [`background-image`](/fr/docs/Web/CSS/background-image)).
+Lorsqu'on souhaite paramétrer la taille de plusieurs images d'arrière-plan, on peut séparer ces valeurs par des virgules (l'ordre utilisé entre les valeurs suit celui de [`background-image`](/fr/docs/Web/CSS/background-image)).
 
 ### Valeurs
 
@@ -69,7 +65,7 @@ Lorsqu'on souhaite paramétrer la taillle de plusieurs images d'arrière-plan, o
 - `<length>`
   - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui redimensionne l'image afin que celle-ci occupe la longueur indiquée dans la dimension concernée. Les valeurs négatives ne sont pas autorisées.
 - `<percentage>`
-  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage) qui redimensionne l'image d'arrière-plan proportionnellement à la taille de la zone dédiée à l'arrière-plan, définie via [`background-origin`](/fr/docs/Web/CSS/background-origin). Par défaut, cette zone correspond à la boîte de contenu et de remplissage (_padding_) mais peut être modifiée pour contenir uniquement la boîte de contenu ou, à l'inverse, les boîtes de contenu, remplissage et marge. Si la propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`, la zone de positionnement de l'arrière-plan sera la fenêtre du navigateur (sans les barres de défilement). Les valeurs négatives ne sont pas autorisées.
+  - : Une valeur de type [`<percentage>`](/fr/docs/Web/CSS/percentage) qui redimensionne l'image d'arrière-plan proportionnellement à la taille de la zone dédiée à l'arrière-plan, définie via [`background-origin`](/fr/docs/Web/CSS/background-origin). Par défaut, cette zone correspond à la boîte de contenu et de remplissage (<i lang="en">padding</i>) mais peut être modifiée pour contenir uniquement la boîte de contenu ou, à l'inverse, les boîtes de contenu, remplissage et marge. Si la propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) vaut `fixed`, la zone de positionnement de l'arrière-plan sera la fenêtre du navigateur (sans les barres de défilement). Les valeurs négatives ne sont pas autorisées.
 
 ### Dimensions intrinsèques et proportions
 
@@ -84,9 +80,9 @@ Le calcul des valeurs dépend des dimensions intrinsèques de l'image (sa largeu
 
 Selon le caractère intrinsèque ou non des dimensions et des proportions, la taille d'affichage de l'image d'arrière-plan est calculée de la façon suivante&nbsp;:
 
-- Si les deux composants de `background-size` sont définis et qu'aucun ne vaut `auto`&nbsp;: L'image utilise la taille définie.
-- Si `background-size` vaut `contain` ou `cover`&nbsp;: L'image est affichée et ses proportions sont conservées pour que l'image soit contenue dans la zone ou la recouvre complètement. Si l'image ne possède pas de proportions intrinsèques; elle est affichée avec la taille de la zone de positionnement de l'arrière-plan.
-- Si `background-size` vaut `auto` ou `auto auto`&nbsp;:
+- **Si les deux composants de `background-size` sont définis et qu'aucun ne vaut `auto`&nbsp;:** L'image utilise la taille définie.
+- **Si `background-size` vaut `contain` ou `cover`&nbsp;:** L'image est affichée et ses proportions sont conservées pour que l'image soit contenue dans la zone ou la recouvre complètement. Si l'image ne possède pas de proportions intrinsèques&nbsp;; elle est affichée avec la taille de la zone de positionnement de l'arrière-plan.
+- **Si `background-size` vaut `auto` ou `auto auto`&nbsp;:**
 
   - Si l'image possède deux dimensions intrinsèques, c'est cette taille qui est utilisée.
   - Si elle ne possède pas de dimension intrinsèque ni de proportion intrinsèque, elle est affichée avec la taille de la zone dédiée à l'arrière-plan.
@@ -96,7 +92,7 @@ Selon le caractère intrinsèque ou non des dimensions et des proportions, la ta
 
   > **Note :** Les images SVG peuvent contenir un attribut [`preserveAspectRatio`](/fr/docs/Web/SVG/Attribute/preserveAspectRatio) pour lequel la valeur par défaut est équivalente à `contain`. Une valeur explicite pour `background-size` permet d'ignorer `preserveAspectRatio`.
 
-- Si `background-size` possède une composante `auto` et que l'autre composante est différente de `auto`&nbsp;:
+- **Si `background-size` possède une composante `auto` et que l'autre composante est différente de `auto`&nbsp;:**
 
   - Si l'image possède une proportion intrinsèque, elle sera affichée avec la dimension indiquée et la deuxième sera calculée grâce à la proportion.
   - Si l'image ne possède aucune proportion intrinsèque, la dimension indiquée sera utilisée pour la dimension concernée et on utilisera la dimension intrinsèque de l'image pour l'autre axe si elle existe. Sinon, on prendra la dimension de la zone de l'arrière-plan pour cet axe.
@@ -139,8 +135,14 @@ L'affichage des dégradés peut différer entre les navigateurs dont certains n'
 
 ### Réaliser un pavage
 
-Prenons une image d'une taille qui ne correspond pas forcément à notre document cible. Ici, on a une image de 189x189 pixels et on souhaite réaliser un pavage avec quatre exemplaires de l'image dans un élément qui mesure 300x300 pixels.
-Pour cela, on fixe la valeur de `background-size` à 150 pixels.
+Prenons une image d'une taille qui ne correspond pas forcément à notre document cible. Ici, on a une image de 189x189 pixels et on souhaite réaliser un pavage avec quatre exemplaires de l'image dans un élément qui mesure 300x300 pixels. Pour cela, on fixe la valeur de `background-size` à 150 pixels.
+
+#### HTML
+
+```html
+<div class="tiledBackground">
+</div>
+```
 
 #### CSS
 
@@ -153,13 +155,6 @@ Pour cela, on fixe la valeur de `background-size` à 150 pixels.
   border: 2px solid;
   color: pink;
 }
-```
-
-#### HTML
-
-```html
-<div class="tiledBackground">
-</div>
 ```
 
 #### Résultat
