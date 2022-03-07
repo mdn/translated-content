@@ -1,13 +1,7 @@
 ---
 title: ARIA
 slug: Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accessibility
-  - HTML
-  - Reference
-  - WAI-ARIA
-  translation_of: Web/Accessibility/ARIA
+translation_of: Web/Accessibility/ARIA
 ---
 
 Accessible Rich Internet Applications **(<abbr>ARIA</abbr>)** es una colección de atributos que definen como realizar contenido y aplicaciónes web (especialmente las desarrolladas con Javascript) más accecsibles para las personas con discapacidades.
