@@ -41,8 +41,13 @@ console.log("numObj.toPrecision(5) is " + numObj.toPrecision(5)); //输出 5.123
 console.log("numObj.toPrecision(2) is " + numObj.toPrecision(2)); //输出 5.1
 console.log("numObj.toPrecision(1) is " + numObj.toPrecision(1)); //输出 5
 
-// 注意：在某些情况下会以指数表示法返回
+// 注意：当precision小于整数位数时，返回科学计数法字符串；大于等于时，返回定点表示法字符串
+// 1. percision = 1 小于 整数位数4位
 console.log((1234.5).toPrecision(2)); // "1.2e+3"
+// 2. percision = 5 大于 整数位数4位
+console.log((1234.5).toPrecision(5)); // "1234.5"
+// 3. percision = 6 大于 数字位数， 补充0
+console.log((1234.5).toPrecision(6)); // "1234.50"
 </pre>
 
 <h2 id="规范">规范</h2>
