@@ -242,7 +242,7 @@ mime.greet();
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
 {{Compat}}
 
