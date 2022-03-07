@@ -16,4 +16,4 @@ _Adobe Flash_ est une technologie obsolescente, développée par Adobe Systems, 
 
 - [Site officiel d'Adobe](http://www.adobe.com/fr)
 - [Shumway](https://mozilla.github.io/shumway/), une implémentation libre par Mozilla
-- [Présentation du projet Gnash ](http://gnashdev.org/)sur Sourceforge, une implémentation libre par GNU.
+- [Présentation du projet Gnash](http://gnashdev.org/) sur Sourceforge, une implémentation libre par GNU.

@@ -20,7 +20,7 @@ Les vendeurs de navigateurs ajoutent parfois des préfixes aux propriétés CSS 
 En général, les principaux navigateurs utilisent ces préfixes :
 
 - `-webkit- (`Chrome, nouvelles versions d'Opera.)
-- `-moz- `(Firefox)
+- `-moz-` (Firefox)
 - `-o-` (Anciennes versions d'Opera)
 - `-ms-` (Internet Explorer et Edge)
 
@@ -32,8 +32,8 @@ Historiquement, les fournisseurs ont également utilisé des préfixes pour les 
 
 Les préfixes pour les noms d'interface sont en majuscules:
 
-- `Webkit `(Chrome, Safari, versions d'Opera récentes, presque tous les navigateurs iOS (y compris Firefox pour iOS) ; fondamentalement, tout navigateur basé sur WebKit).
-- `Moz `(Firefox)
+- `Webkit` (Chrome, Safari, versions d'Opera récentes, presque tous les navigateurs iOS (y compris Firefox pour iOS) ; fondamentalement, tout navigateur basé sur WebKit).
+- `Moz` (Firefox)
 - `O` (anciennes versions d'Opera)
 - `MS` (Internet Explorer et Edge)
 
@@ -42,8 +42,8 @@ Les préfixes pour les noms d'interface sont en majuscules:
 Quant aux propriétés et aux méthodes, sont généralement utilisés :
 
 - `webkit (`Chrome, Safari, nouvelles versions d'Opera, presque tous les navigateurs IOS (y compris Firefox pour IOS), fondamentalement, tout navigateur basé sur WebKit).
-- `moz `(Firefox)
-- `o `(anciennes versions d'Opera)
+- `moz` (Firefox)
+- `o` (anciennes versions d'Opera)
 - `ms` (Internet Explorer et Edge)
 
 ## Pour approfondir

@@ -126,7 +126,7 @@ Il arrive parfois, pendant le développement d'une spécification et au fur à e
   - On fera de même pour toute mention dans les guides et tutoriels qui mentionnent cet élément.
   - On fera de même pour toute mention autre part sur MDN.
   - Il est très peu probable que ces mentions soient retirées de la documentation. Toutefois, il est possible que certaines de ces pages soient déplacées dans les [Archives](/fr/docs/Archive).
-  - On mettra à jour les éléments concernés [dans le dépôt de données de compatibilité des navigateurs ](https://github.com/mdn/browser-compat-data)afin d'indiquer la dépréciation de l'élément.
+  - On mettra à jour les éléments concernés [dans le dépôt de données de compatibilité des navigateurs](https://github.com/mdn/browser-compat-data) afin d'indiquer la dépréciation de l'élément.
 
 Les formulations exactes des avertissements et autres messages doivent être adaptées si besoin. En cas de doute sur la formulation, n'hésitez pas à vous rendre sur [le canal MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur [Matrix](https://wiki.mozilla.org/Matrix) ou sur le forum de discussion [Discourse](https://discourse.mozilla.org/c/mdn).
 

@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 
 Action quand une extension est désinstallée.
 
-L'API requière l'[API de permission ](/fr/Add-ons/WebExtensions/manifest.json/permissions)"management".
+L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
 ## Syntaxe
 

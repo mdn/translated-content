@@ -16,4 +16,4 @@ original_slug: Glossaire/webp
 
 ### Culture générale
 
-- [WebP ](https://fr.wikipedia.org/wiki/WebP)sur Wikipédia
+- [WebP](https://fr.wikipedia.org/wiki/WebP) sur Wikipédia

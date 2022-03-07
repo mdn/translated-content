@@ -23,7 +23,7 @@ Quelques notes sur les appels de macro:
 
 - Les noms de macros sont sensibles à la casse, mais une tentative est faite pour corriger ces erreurs communes; vous pouvez utiliser tout en minuscules, même si le nom de la macro utilise des majuscules en son sein, et vous pouvez débuter par une majuscule une macro dont le nom commence normalement par une lettre minuscule.
 - Les paramètres sont séparés par des virgules.
-- Si il n'y a pas de paramètres, vous pouvez laisser les parenthèses ou les enlever; `\{{macroname()}} `et `\{{macroname}}` sont identiques.
+- Si il n'y a pas de paramètres, vous pouvez laisser les parenthèses ou les enlever; `\{{macroname()}}` et `\{{macroname}}` sont identiques.
 - Les paramètres numériques peuvent être entre guillemets, ou non (cependant, si vous avez un numéro de version avec plusieurs décimales, il doit être entre guillemets).
 - Si vous obtenez des erreurs, consultez votre code attentivement. Si vous ne pouvez toujours pas à comprendre ce qui se passe, voir [Dépannage des erreurs KumaScript](/fr/docs/MDN/Kuma/Troubleshooting_KumaScript_errors).
 
