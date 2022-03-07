@@ -16,7 +16,7 @@ En el espacio tridimencional, las rotaciones tienen tres grados de libertad, jun
 
 ## Sintaxis
 
-La cantidad de rotación creada por `rotate3d()` está especificada por tres {{cssxref("&lt;number&gt;")}}s y un {{cssxref("&lt;angle&gt;")}}. El `<number>` representa las coordenadas x, y y z del vector, denotando los ejes de la rotación. El `<angle>` representa el angulo de rotación; si es positivo el movimiento será en el sentido de las agujas del reloj; si es negativo será en el sentido opuesto.
+La cantidad de rotación creada por `rotate3d()` está especificada por tres {{cssxref("&lt;number&gt;")}}s y un {{cssxref("&lt;angle&gt;")}}. El `<number>` representa las coordenadas _x_, _y_ y _z_ del vector, denotando los ejes de la rotación. El `<angle>` representa el angulo de rotación; si es positivo el movimiento será en el sentido de las agujas del reloj; si es negativo será en el sentido opuesto.
 
 ```css
 rotate3d(x, y, z, a)
