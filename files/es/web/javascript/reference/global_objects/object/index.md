@@ -238,7 +238,7 @@ mike.greet();
 mime.greet();
 ```
 
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
