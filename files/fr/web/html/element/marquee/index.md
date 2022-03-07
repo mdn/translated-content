@@ -33,7 +33,7 @@ L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte d�
 - {{htmlattrdef("scrolldelay")}}
   - : Définit l'intervalle entre chaque défilement en millisecondes. La valeur par défaut est `85`. Notez que toute valeur inférieure à 60 sera ignorée et 60 sera utilisé à la place, à moins que` truespeed `ne soit spécifié.
 - {{htmlattrdef("truespeed")}}
-  - : Par défaut, les valeurs de `scrolldelay` inférieures à 60 sont ignorées. `Si truespeed `est présent, ces valeurs ne seront pas ignorées.
+  - : Par défaut, les valeurs de `scrolldelay` inférieures à 60 sont ignorées. Si `truespeed` est présent, ces valeurs ne seront pas ignorées.
 - {{htmlattrdef("vspace")}}
   - : Définit la marge verticale en pixel ou en pourcentage.
 - {{htmlattrdef("width")}}

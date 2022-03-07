@@ -49,6 +49,6 @@ Si l'attribut n'est pas spécifié, alors le palier sera fixé à **0**.
 
 ## Éléments
 
-Les éléments suivants peuvent être utilisés avec l'attribut `seed ` :
+Les éléments suivants peuvent être utilisés avec l'attribut `seed`&nbsp;:
 
 - {{ SVGElement("feTurbulence") }}

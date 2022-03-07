@@ -30,9 +30,9 @@ var detecting = browser.tabs.detectLanguage(
 
 ### Paramètres
 
-- `tabId `{{optional_inline}}
+- `tabId` {{optional_inline}}
   - : `integer`. Par défaut à l'onglet actif de la fenêtre en cours.
-- `callback `{{optional_inline}}
+- `callback` {{optional_inline}}
   - : `function`. Actuellement, si un `tabId` est spécifié, cette méthode utilise ce rappel pour renvoyer les résultats au lieu de renvoyer une promesse. Le rappel reçoit comme seul paramètre d'entrée une chaîne de caractères contenant le code de langue détecté `en` ou `fr`.
 
 ### Valeur retournée

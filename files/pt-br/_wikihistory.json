@@ -5148,7 +5148,7 @@
       "helton-mori-dev"
     ]
   },
-  "Web/API/FileReader/onload": {
+  "Web/API/FileReader/load_event": {
     "modified": "2019-12-24T01:07:36.177Z",
     "contributors": [
       "euvanribeiro",

@@ -13,7 +13,7 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 ## Les objets globaux
 
-Ce chapitre documente l'ensemble des [objets natifs standards JavaScript ](/fr/docs/Web/JavaScript/Reference/Objets_globaux)ainsi que leurs méthodes et leurs propriétés.
+Ce chapitre documente l'ensemble des [objets natifs standards JavaScript](/fr/docs/Web/JavaScript/Reference/Objets_globaux) ainsi que leurs méthodes et leurs propriétés.
 
 {{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux', 'Objets_globaux_standards_(par_catégorie)')}}
 

@@ -80,7 +80,7 @@ Le nom peut inclure les caractères suivants :
 Au moins, cette propriété doit être définie pour chaque chaîne. Le membre `"message"` contient une chaîne localisée qui peut contenir {{anch("placeholders")}}. Vous pouvez utiliser :
 
 - _$placeholder_name$_ (case insensitive) pour insérer un espace réservé particulier (par exemple $URL$ dans l'exemple ci-dessus) dans votre chaîne.
-- `$1`, `$2`,` $3`, etc. pour insérer directement les valeurs obtenues à partir d'un {{WebExtAPIRef("i18n.getMessage()")}} appel dans votre chaîne.
+- `$1`, `$2`, `$3`, etc. pour insérer directement les valeurs obtenues à partir d'un {{WebExtAPIRef("i18n.getMessage()")}} appel dans votre chaîne.
 
 Autres points à noter :
 

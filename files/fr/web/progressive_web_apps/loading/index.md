@@ -32,7 +32,7 @@ Pour corriger ça, nous pouvons, par exemple, ajouter `defer` aux fichiers JavaS
 <script src="app.js" defer></script>
 ```
 
-Ils seront téléchargés et exécutés _après_ que le document lui-même a été analys"si bien qu'il ne bloquera pas le rendu de la structure HTML. Nous pouvons également éclater les fichiers css et leur ajouter des types de media:
+Ils seront téléchargés et exécutés _après_ que le document lui-même a été analysé, si bien qu'il ne bloquera pas le rendu de la structure HTML. Nous pouvons également éclater les fichiers CSS et leur ajouter des types de média&nbsp;:
 
 ```html
 <link rel="stylesheet" href="style.css">
@@ -154,7 +154,7 @@ Rappelez-vous de ce que nous avons dit concernant l'approche d'amélioration pro
 
 ## Dernières réflexions
 
-C'est fini pour ces séries de tutoriels — nous avons examiné le [code source code de l'exemple d'application js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) et nous avons appris à utiliser les fonctionnalités progressives des applications web en commençant par une [Introduction](/fr/docs/Web/Progressive_web_apps/Introduction), [la structure des PWA, ](/fr/docs/Web/Progressive_web_apps/App_structure)[la disponibilité en mode déconnectégrâce aux Service Workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers), [les PWAs installable](/fr/docs/Web/Progressive_web_apps/Installable_PWAs) et finalement les notifications. Nous avons également expliqué le mode push avec l'aide du [Service Worker Cookbook](https://serviceworke.rs/). Et dans cet article, nous avons abordé le concept de chargement progressif incluant un exemple intéressant utilisant l'[API ntersection Observer](/fr/docs/Web/API/Intersection_Observer_API).
+C'est fini pour ces séries de tutoriels — nous avons examiné le [code source code de l'exemple d'application js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) et nous avons appris à utiliser les fonctionnalités progressives des applications web en commençant par une [Introduction](/fr/docs/Web/Progressive_web_apps/Introduction), [la structure des PWA](/fr/docs/Web/Progressive_web_apps/App_structure), [la disponibilité en mode déconnectégrâce aux Service Workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers), [les PWAs installable](/fr/docs/Web/Progressive_web_apps/Installable_PWAs) et finalement les notifications. Nous avons également expliqué le mode push avec l'aide du [Service Worker Cookbook](https://serviceworke.rs/). Et dans cet article, nous avons abordé le concept de chargement progressif incluant un exemple intéressant utilisant l'[API ntersection Observer](/fr/docs/Web/API/Intersection_Observer_API).
 
 N'hésitez pas à faire des essais avec le code, à améliorer votre application existante avec des des fonctionnalités PWA ou à bâtir quelque chose d'entièrement nouveau de vous même. Les PWAs amènent un énorme avantage sur les applications web classiques.
 

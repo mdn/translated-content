@@ -5,7 +5,7 @@ translation_of: Web/API/Document/DOMContentLoaded_event
 ---
 {{APIRef}}
 
-L'évènement **`DOMContentLoaded`** est déclenché quand le document HTML initiale est complètement chargé et analysé, sans attendre la fin du chargement des feuilles de styles, images et sous-document.
+L'évènement **`DOMContentLoaded`** est déclenché quand le document HTML initial est complètement chargé et analysé, sans attendre la fin du chargement des feuilles de styles, images et sous-document.
 
 <table class="properties">
   <tbody>
@@ -28,9 +28,9 @@ L'évènement **`DOMContentLoaded`** est déclenché quand le document HTML init
   </tbody>
 </table>
 
-Un évènement différent, {{domxref("Window/load_event", "load")}} doit être utilisé pour détecter que la page entière est chargée. On utilise couramment à tord `load` là où `DOMContentLoaded` serait plus approprié.
+Un évènement différent, {{domxref("Window/load_event", "load")}} doit être utilisé pour détecter que la page entière est chargée. On utilise couramment à tort `load` là où `DOMContentLoaded` serait plus approprié.
 
-Du code JavaScript synchrone va mettre en pause la création du DOM. Si vous voulez charger le DOM le plus rapidement possible, vous pouvez faire votre code [(en) JavaScript asynchrone](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) et [(en) optimiser le chargement des feuilles de styles](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Si vous chargez comme d'habitude, les feuilles de styles vont ralentir la création du DOM comme si elles étaient chargées en parallèle, en «volant» le trafique du document principale HTML.
+Du code JavaScript synchrone va mettre en pause la création du DOM. Si vous voulez charger le DOM le plus rapidement possible, vous pouvez faire votre code [(en) JavaScript asynchrone](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) et [(en) optimiser le chargement des feuilles de styles](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Si vous chargez comme d'habitude, les feuilles de styles vont ralentir la création du DOM comme si elles étaient chargées en parallèle, en «volant» le trafic du document principal HTML.
 
 ## Exemples
 

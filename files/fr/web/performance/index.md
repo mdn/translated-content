@@ -163,7 +163,7 @@ HTML
 
   - [Responsive images](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/fr/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/ ](https://w3c.github.io/preload/))
+- [Preloading content with `rel="preload"`](/fr/docs/Web/HTML/Preloading_content) - <https://w3c.github.io/preload/>
 
 CSS
 

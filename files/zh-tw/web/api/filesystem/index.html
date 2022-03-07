@@ -54,59 +54,7 @@ translation_of: Web/API/FileSystem
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Microsoft Edge</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>13{{ property_prefix("webkit") }}</td>
-   <td>{{ CompatGeckoDesktop(50) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>0.16{{ property_prefix("webkit") }}</td>
-   <td>{{ CompatGeckoMobile(50) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Microsoft Edge 使用 <code>WebKitFileSystem 名稱實作</code>, 且只被用在 drag-and-drop scenarios 透過 {{domxref("DataTransferItem.webkitGetAsEntry()")}} 函式. 此函式不被使用在文件和目錄選擇的面板( 如當你以{{domxref("HTMLInputElement.webkitdirectory")}} 標籤使用 {{HTMLElement("input")}} 物件</p>
+{{Compat("api.FileSystem")}}
 
 <h2 id="參見">參見</h2>
 

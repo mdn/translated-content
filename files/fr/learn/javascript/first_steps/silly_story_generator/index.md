@@ -66,7 +66,7 @@ Installation basique :
 
 Variables initiales et fonctions :
 
-1.  Dans le fichier de texte brut, copiez tout le code présent sous le titre "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" et collez-le en haut du fichier `main`. Cela vous donne trois variables qui stockent les références respectivement vers le champ "Enter custom name", vers le bouton "Generate random story" (`randomize`), et vers la balise {{htmlelement("p")}} en bas du corps HTML dans lequel l'histoire sera copiée (`story`). Par ailleurs, vous avez une fonction appelée `randomValueFromArray() `qui prend une table, et qui renvoie au hasard l'un des éléments qu'elle contient.
+1.  Dans le fichier de texte brut, copiez tout le code présent sous le titre "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" et collez-le en haut du fichier `main`. Cela vous donne trois variables qui stockent les références respectivement vers le champ "Enter custom name", vers le bouton "Generate random story" (`randomize`), et vers la balise {{htmlelement("p")}} en bas du corps HTML dans lequel l'histoire sera copiée (`story`). Par ailleurs, vous avez une fonction appelée `randomValueFromArray()` qui prend une table, et qui renvoie au hasard l'un des éléments qu'elle contient.
 2.  Maintenant regardons la deuxième section du fichier de texte brut : "2. RAW TEXT STRINGS". Cette section contient des chaînes de caractères qui vont se comporter comme des entrées (_input_) dans notre program. L'idée est que vous intégriez ces variables internes dans `main.js`:
 
     1.  Stockez la première longue chaîne de caractères (string) dans la variable `storyText`.
@@ -92,7 +92,7 @@ Compléter la fonction `result()` :
 
     1.  Cherchez la formule pour convertir les pounds en stones et les fareinheit en centigrades.
     2.  Dans la ligne qui définit la variable `weight` (poids), remplacez 300 par un calcul qui convertit 300 pounds en stones. Le tout englobé dans un `Math.round()` à la fin duquel vous concatenez `'stone'`.
-    3.  Dans la ligne qui définit la variable `temperature`, remplacez 94 par un calcul qui convertit 94 fahrenheit en centigrades. Le tout englobé dans un `Math.round()` à la fin duquel vous concatenez` 'centigrade'`.
+    3.  Dans la ligne qui définit la variable `temperature`, remplacez 94 par un calcul qui convertit 94 fahrenheit en centigrades. Le tout englobé dans un `Math.round()` à la fin duquel vous concatenez `'centigrade'`.
     4.  Juste sous la définition des deux variables, ajoutez deux lignes de remplacement de chaînes supplémentaires qui remplacent '94 farhenheit' par les contenus de la variable `temperature`, et '300 pounds' par les contenus de la variable `weight`.
 
 6.  Enfin, dans l'antépénultième ligne de la fonction, faites en sorte que la propriété `textContent` de la variable `story` (qui référence le paragraphe) soit égale à `newStory`.

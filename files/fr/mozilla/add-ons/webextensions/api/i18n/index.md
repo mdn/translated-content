@@ -19,7 +19,7 @@ Fonctions permettant d'internationaliser votre extension. Vous pouvez utiliser c
 Pour plus de détails sur l'utilisation de i18n pour votre extension, voir :
 
 - [Internationalization](/fr/Add-ons/WebExtensions/Internationalization): un guide d'utilisation du système WebExtension i18n.
-- [Référence de message spécifique aux paramètres régionaux ](/fr/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): Les extensions fournissent des chaînes de caractères locales dans des fichiers appelés `messages.json`. Cette page décrit le format de `messages.json`.
+- [Référence de message spécifique aux paramètres régionaux](/fr/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)&nbsp;: Les extensions fournissent des chaînes de caractères locales dans des fichiers appelés `messages.json`. Cette page décrit le format de `messages.json`.
 
 ## Types
 

@@ -33,7 +33,7 @@ Un nouvel objet {{jsxref("TypedArray")}}.
 
 ## Description
 
-L'intervalle défini par `début` et `fin` est redimensionné si besoin pour être un intervalle valide en regard du tableau courant. Si la longueur du nouveau tableau est négative, elle est ramenée à zéro. Si `début `ou `fin `a une valeur négative, on prendra en compte la position à partir de la fin du tableau et non à partir du début de celui-ci.
+L'intervalle défini par `début` et `fin` est redimensionné si besoin pour être un intervalle valide en regard du tableau courant. Si la longueur du nouveau tableau est négative, elle est ramenée à zéro. Si `début` ou `fin` a une valeur négative, on prendra en compte la position à partir de la fin du tableau et non à partir du début de celui-ci.
 
 On notera que cette méthode permet de créer un nouvelle vue sur le tampon (_buffer_) existant, tous les changements apportés via le nouvel objet impacteront le tableau typé initial et vice versa.
 

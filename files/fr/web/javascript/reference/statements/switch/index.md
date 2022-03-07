@@ -42,9 +42,9 @@ L'instruction **`switch`** évalue une expression et, selon le résultat obtenu 
 
 - `expression`
   - : Une expression à comparer avec chacune des clause `case`.
-- `case expressionN `{{optional_inline}}
+- `case expressionN` {{optional_inline}}
   - : Une clause qu'on compare avec `expression`.
-- `default `{{optional_inline}}
+- `default` {{optional_inline}}
   - : Une clause exécutée si aucune correspondance n'est trouvée avec les clause `case` (et/ou s'il n'y a pas de `break` pour les clauses `case` précédentes).
 - `instructionsN`
   - : Les instructions à exécuter lorsque l'`expression` correspond au cas présenté pour cette clause.

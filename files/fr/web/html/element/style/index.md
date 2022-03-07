@@ -14,7 +14,7 @@ L'élément HTML **`<style>`** contient des informations de mise en forme pour u
 
 {{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
 
-L'élément `<style>` peut être inclus dans l'élément {{htmlelement("head")}} ou dans l'élément {{htmlelement("body")}} du document et les styles seront appliqués. Toutefois, il est recommandé de placer les styles dans l'élément` <head>` afin de clairement séparer la présentation du contenu autant que possible. La méthode idéale en ce sens consiste à utiliser des feuilles de style dans des fichiers externes et de les appliquer au document grâce à des éléments {{htmlelement("link")}}.
+L'élément `<style>` peut être inclus dans l'élément {{htmlelement("head")}} ou dans l'élément {{htmlelement("body")}} du document et les styles seront appliqués. Toutefois, il est recommandé de placer les styles dans l'élément `<head>` afin de clairement séparer la présentation du contenu autant que possible. La méthode idéale en ce sens consiste à utiliser des feuilles de style dans des fichiers externes et de les appliquer au document grâce à des éléments {{htmlelement("link")}}.
 
 Si plusieurs éléments `<style>` et `<link>` sont appliqués au document, ils seront appliqués dans l'ordre dans lequel ils sont inclus dans le document. Aussi, vérifiez l'ordre afin d'éviter tout problème de cascade.
 

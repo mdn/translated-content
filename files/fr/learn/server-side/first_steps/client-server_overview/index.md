@@ -53,7 +53,7 @@ Cette requête inclut :
 - `POST` data.  Les requêtes `POST` ajoutent de nouvelles ressources dont les données sont encodées dans le corps de la requête.
 - Cookies côté Client.  Contient les données de session du client, incluant les clés dont peut se servir le serveur pour déterminer le statut de login et les accés/permissions aux ressources.
 
-Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut [HTTP Response ](/fr/docs/Web/HTTP/Status)indiquant si, oui ou non, la requête a abouti. (ex : "`200 OK`" pour un succés, "`404 Not Found`" si la ressource ne peut être trouvée, "`403 Forbidden`" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête  `GET` contiendrait la ressource demandée.
+Les serveurs Web attendent une requête du client puis la traitent quand elle arrive. Il répond ensuite au navigateur avec un message HTTP Response. La réponse contient un statut [HTTP Response](/fr/docs/Web/HTTP/Status) indiquant si, oui ou non, la requête a abouti. (ex : "`200 OK`" pour un succés, "`404 Not Found`" si la ressource ne peut être trouvée, "`403 Forbidden`" si l'utilisateur n'est pas autorisé à voir la ressource etc. Le corps d'une réponse aboutie à une requête  `GET` contiendrait la ressource demandée.
 
 Quand une page HTML est retournée, elle est affichée par le navigateur. Le navigateur, nativement, pourra découvrir des liens vers d'autres ressources (ex : une page HTML intégre habituellement des pages JavaScript et CSS ), et enverra des requêtes séparées pour télécharger ces fichiers.
 

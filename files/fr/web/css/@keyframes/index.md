@@ -9,7 +9,7 @@ translation_of: Web/CSS/@keyframes
 ---
 {{CSSRef}}
 
-La [règle ](/fr/docs/Web/CSS/R%C3%A8gles_@)**`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_Transitions).
+La [règle](/fr/docs/Web/CSS/R%C3%A8gles_@) **`@keyframes`** permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec [les transitions](/fr/docs/Web/CSS/CSS_Transitions).
 
 ```css
 @keyframes slidein {

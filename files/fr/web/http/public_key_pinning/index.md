@@ -37,7 +37,7 @@ Activer cette fonctionnalité pour votre site est simple : il faut juste retourn
 
 > **Note :** Firefox n'implémente pas encore les rapports de violation d'épinglage. Chrome les implémente à partie de la version 46.
 >
-> - Firefox: [Bug 1091176 - Implement report-uri directive for HPKP ](https://bugzilla.mozilla.org/show_bug.cgi?id=1091176)et [Bug 787133 - (hpkp) Implement Public Key Pinning Extension for HTTP (HPKP)](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)
+> - Firefox: [Bug 1091176 - Implement report-uri directive for HPKP](https://bugzilla.mozilla.org/show_bug.cgi?id=1091176) et [Bug 787133 - (hpkp) Implement Public Key Pinning Extension for HTTP (HPKP)](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)
 > - Chrome: <https://developers.google.com/web/updates/2015/09/HPKP-reporting-with-chrome-46> , [HTTP Public Key Pinning violating reporting](https://www.chromestatus.com/feature/4669935557017600) et [Issue 445793: HPKP Reporting on invalid pins](https://code.google.com/p/chromium/issues/detail?id=445793)
 
 ### Extraire la clé publique encodé en Base64
@@ -72,7 +72,7 @@ Les étapes concrètes nécessaires pour délivrer l'en-tête HPKP dépendent du
 
 > **Note :** Ces exemples utilisent un a max-age de deux mois et incluent aussi tous les sous-domaines. Il est conseillé de vérifier que cela convient à votre serveur.
 
-Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant les valeurs en pointillé des lignes `pin-sha256="..." `:
+Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant les valeurs en pointillé des lignes `pin-sha256="..."`&nbsp;:
 
 #### Apache
 
