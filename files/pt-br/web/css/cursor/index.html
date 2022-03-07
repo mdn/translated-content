@@ -14,7 +14,7 @@ browser-compat: css.properties.cursor
 
 <p>A propriedade CSS <strong>cursor</strong> especifica o cursor do mouse mostrado quando o ponteiro do mouse está sobre um elemento.</p>
 
-<p>{{cssinfo}}</p>
+{{EmbedInteractiveExample("pages/css/cursor.html")}}
 
 <h2 id="Sintaxe">Sintaxe</h2>
 
@@ -35,11 +35,11 @@ cursor: unset;
 <h3 id="Valores">Valores</h3>
 
 <dl>
- <dt>&lt;<code>uri</code>&gt;</dt>
- <dd>Uma url(...) ou uma lista de url(...) separada por vírgula, apontando para uma arquivo de imagem. Mais que uma {{cssxref("&lt;uri&gt;")}} pode ser fornecida como fallback, em caso de alguns tipos de imagem não ser suportado. Um fallback não-URL (um ou mais dos outros valores) <strong>deve</strong> estar no final da lista de fallbacks. Veja <a href="/en-US/docs/CSS/Using_URL_values_for_the_cursor_property" title="Using_URL_values_for_the_cursor_property">Usando valores URL para a propriedade cursor</a> para mais detalhes.</dd>
+ <dt><code>&lt;uri&gt;</code> {{experimental_inline}}</dt>
+ <dd>Uma url(...) ou uma lista de url(...) separada por vírgula, apontando para uma arquivo de imagem. Mais que uma {{cssxref("&lt;uri&gt;")}} pode ser fornecida como fallback, em caso de alguns tipos de imagem não ser suportado. Um fallback não-URL (um ou mais dos outros valores) <strong>deve</strong> estar no final da lista de fallbacks.</dd>
  <dt><code>&lt;x&gt;</code> <code>&lt;y&gt;</code> {{experimental_inline}}</dt>
  <dd>Coordenadas x e y opcionais. Dois números não-negativos, sem unidade e menores que 32.</dd>
- <dt>Keyword values</dt>
+ <dt><code>Keyword</code></dt>
  <dd>
  <p><strong style="color: red; font-size: big;">Mova o mouse sobre os valores para testar:</strong></p>
 
@@ -263,6 +263,8 @@ cursor: unset;
 <h2 id="Especificações">Especificações</h2>
 
 <p>{{ Specifications }}</p>
+
+<h2 id="Definição formal">Definição formal</h2>
 <p>{{ cssinfo }}</p>
 
 
@@ -270,242 +272,11 @@ cursor: unset;
 
 <p>{{Compat}}</p>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td><code>auto</code>, <code>crosshair</code>, <code>default</code>, <code>move</code>, <code>text</code>, <code>wait</code>, <code>help</code>,<br>
-    <code>n-resize</code>, <code>e-resize</code>, <code>s-resize</code>, <code>w-resize</code>,<br>
-    <code>ne-resize</code>, <code>nw-resize</code>, <code>se-resize</code>, <code>sw-resize</code></td>
-   <td>1.0</td>
-   <td>1.0</td>
-   <td>4.0<sup>[1]</sup></td>
-   <td>7.0</td>
-   <td>1.2</td>
-  </tr>
-  <tr>
-   <td><code>pointer</code>, <code>progress</code></td>
-   <td>1.0</td>
-   <td>1.0</td>
-   <td>6.0</td>
-   <td>7.0</td>
-   <td>1.2</td>
-  </tr>
-  <tr>
-   <td><code>url()</code></td>
-   <td>1.0</td>
-   <td>1.5<br>
-    4.0<sup>[2]</sup></td>
-   <td>6.0</td>
-   <td>{{CompatUnknown}}</td>
-   <td>3.0</td>
-  </tr>
-  <tr>
-   <td>Positioning syntax for <code>url()</code> values {{experimental_inline}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>not-allowed</code>, <code>no-drop</code>, <code>vertical-text</code>, <code>all-scroll</code>,<br>
-    <code>col-resize</code>, <code>row-resize</code></td>
-   <td>1.0</td>
-   <td>1.5</td>
-   <td>6.0</td>
-   <td>10.6</td>
-   <td>3.0</td>
-  </tr>
-  <tr>
-   <td><code>alias</code>, <code>cell</code>, <code>copy</code>,<br>
-    <code>ew-resize</code>, <code>ns-resize</code>, <code>nesw-resize</code>, <code>nwse-resize</code></td>
-   <td>1.0</td>
-   <td>1.5</td>
-   <td>10.0</td>
-   <td>10.6</td>
-   <td>3.0</td>
-  </tr>
-  <tr>
-   <td><code>context-menu</code></td>
-   <td>1.0<sup>[3]</sup></td>
-   <td>1.5<sup>[3]</sup></td>
-   <td>10.0</td>
-   <td>10.6</td>
-   <td>3.0</td>
-  </tr>
-  <tr>
-   <td><code>none</code></td>
-   <td>5.0</td>
-   <td>3.0</td>
-   <td>9.0</td>
-   <td>15.0</td>
-   <td>5.0</td>
-  </tr>
-  <tr>
-   <td><code>inherit</code></td>
-   <td>1.0</td>
-   <td>1.0</td>
-   <td>8.0</td>
-   <td>9.0</td>
-   <td>1.2</td>
-  </tr>
-  <tr>
-   <td><code>zoom-in</code>, <code>zoom-out</code></td>
-   <td>
-    <p>1.0 {{property_prefix("-webkit-")}}<br>
-     37</p>
-   </td>
-   <td>1.0 {{property_prefix("-moz-")}}<br>
-    24.0</td>
-   <td>{{CompatNo}}</td>
-   <td>11.6<br>
-    15-23 {{property_prefix("-webkit-")}}<br>
-    24</td>
-   <td>3.0 {{property_prefix("-webkit-")}}<br>
-    9</td>
-  </tr>
-  <tr>
-   <td><code>grab</code>, <code>grabbing</code></td>
-   <td>1.0 {{property_prefix("-webkit-")}}<br>
-    22.0 {{property_prefix("-webkit-")}}<sup>[4]</sup></td>
-   <td>1.5 {{property_prefix("-moz-")}}<br>
-    27.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>4.0 {{property_prefix("-webkit-")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td><code>auto</code>, <code>crosshair</code>, <code>default</code>, <code>move</code>, <code>text</code>, <code>wait</code>, <code>help</code>,<br>
-    <code>n-resize</code>, <code>e-resize</code>, <code>s-resize</code>, <code>w-resize</code>,<br>
-    <code>ne-resize</code>, <code>nw-resize</code>, <code>se-resize</code>, <code>sw-resize</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>pointer</code>, <code>progress</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>url()</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>Positioning syntax for <code>url()</code> values {{experimental_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>not-allowed</code>, <code>no-drop</code>, <code>vertical-text</code>, <code>all-scroll</code>,<br>
-    <code>col-resize</code>, <code>row-resize</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>alias</code>, <code>cell</code>, <code>copy</code>,<br>
-    <code>ew-resize</code>, <code>ns-resize</code>, <code>nesw-resize</code>, <code>nwse-resize</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>context-menu</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>none</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>inherit</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>zoom-in</code>, <code>zoom-out</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>grab</code>, <code>grabbing</code></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] No IE11, quando cursor é aplicado em um elemento e este elemento está por baixo de um menu {{HTMLElement("select")}} aberto e o usuário paira sobre um item do menu {{HTMLElement("select")}} que está no sobre o elemento em questão, o cursor deste elemento será mostrado em vez do cursor do {{HTMLElement("select")}}. Veja <a href="https://connect.microsoft.com/IE/feedbackdetail/view/963961">IE bug 963961</a>.</p>
-
-<p>[2] Suporte para este foi adicionado no Mac OS X.</p>
-
-<p>[3] Apenas suportado no Mac OS X e Linux.</p>
-
-<p>[4] Suporte para isto foi adicionado no Windows.</p>
 
 <h2 id="Veja_também">Veja também</h2>
 
 <ul>
- <li><a href="/en-US/docs/CSS/Using_URL_values_for_the_cursor_property" title="Using_URL_values_for_the_cursor_property">Usando valores URL para a propriedade cursor</a></li>
+ <li>{{cssxref("&lt;uri&gt;")}}</li>
  <li>{{cssxref("pointer-events")}}</li>
- <li><a href="http://msdn.microsoft.com/en-us/library/aa358795.aspx">Propriedade cursor (MSDN)</a></li>
 </ul>
