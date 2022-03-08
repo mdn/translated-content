@@ -2,12 +2,10 @@
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
 tags:
-  - Internationalization
+  - 国際化
   - Intl
   - JavaScript
-  - Namespace
   - 名前空間
-  - 国際化
 browser-compat: javascript.builtins.Intl
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
@@ -33,13 +31,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
   - : 複数形を意識した書式化や複数形の言語規則を可能にするオブジェクトのためのコンストラクターです。
 - {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
   - : 言語を意識した相対時刻の書式化を可能にするオブジェクトのためのコンストラクターです。
+- {{jsxref("Global_Objects/Intl/Segmenter/Segmenter", "Intl.Segmenter()")}}
+  - : ロケールを意識したテキスト区切りを可能にするオブジェクトのためのコンストラクターです。
 
 ## メソッド
 
 - {{jsxref("Intl.getCanonicalLocales()")}}
   - : 正規のロケール名を返すメソッド。
+- {{jsxref("Intl.supportedValuesOf()")}}
+  - : この実装が対応している一意のカレンダー、照合順序、通貨、計数法、単位値を含む、ソートされた配列を返します。
 
-<h2 id="Locale_identification_and_negotiation">ロケールの識別とネゴシエーション</h2>
+## ロケールの識別とネゴシエーション
 
 国際化コンストラクターや他のコンストラクターの言語を意識したメソッド ([関連情報](#関連情報)に記載) は、ロケールを識別して実際に使用するものを決定するために共通のパターンを使用しています。これらはすべて、 `locales` と `options` の引数を受け取り、 `options.localeMatcher` プロパティで指定したアルゴリズムを使用して 要求されたロケールと対応しているロケールとのネゴシエーションを行います。
 
@@ -55,12 +57,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 
 ロケール識別子は以下のものから成る文字列です。
 
-1.  原語サブタグ
-2.  (任意で) 文字体系サブタグ
-3.  (任意で) 地域 (または国) サブタグ
-4.  (任意で) 1 つ以上の変化形サブタグ (すべて固有でなければならない)
-5.  (任意で) 1 つ以上の BCP 47 拡張シーケンス
-6.  (任意で) 私的に使用する拡張シーケンス
+1. 原語サブタグ
+2. (任意で) 文字体系サブタグ
+3. (任意で) 地域 (または国) サブタグ
+4. (任意で) 1 つ以上の変化形サブタグ (すべて固有でなければならない)
+5. (任意で) 1 つ以上の BCP 47 拡張シーケンス
+6. (任意で) 私的に使用する拡張シーケンス
 
 ...存在するサブタグやシーケンスはすべて、ハイフンで区切ります。ロケール識別子は大文字小文字の区別のない ASCII です。しかし、文字体系サブタグではタイトルケース (最初の文字が大文字で、以降の文字は小文字) を、地域サブタグは大文字、それ以外はすべて小文字を使う習慣があります。
 
@@ -140,6 +142,7 @@ log("de-DE");
   - {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
   - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
   - {{jsxref("Intl/Locale", "Intl.Locale")}}
+  - {{jsxref("Intl/Segmenter", "Intl.Segmenter")}}
 
 - メソッド
 
@@ -148,4 +151,3 @@ log("de-DE");
   - {{jsxref("Date.prototype.toLocaleString()")}}
   - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - {{jsxref("Date.prototype.toLocaleTimeString()")}}
- 
