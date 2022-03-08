@@ -1,16 +1,16 @@
 ---
 title: <input type="week">
-slug: Web/HTML/Element/Input/week
+slug: Web/HTML/Element/input/week
 translation_of: Web/HTML/Element/input/week
 browser-compat: html.elements.input.input-week
 ---
 {{HTMLRef}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut `type` vaut **`week`** permettent de créer des champs de saisie où l'on peut saisir une année et le numéro de la semaine pendant cette année (allant de 1 à 52 ou 53, suivant la norme [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601#Num%C3%A9ro_de_semaine)).
+Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`week`** permettent de créer des champs de saisie où l'on peut saisir une année et le numéro de la semaine pendant cette année (allant de 1 à 52 ou 53, suivant la norme [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601#Num%C3%A9ro_de_semaine)).
 
 {{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
 
-L'interface utilisateur offerte par un tel contrôle varie en fonction des navigateurs. Au moment où nous écrivons ces lignes, seuls Chrome/Opera et Edge prennent en charge cette fonctionnalité. Pour les navigateurs qui ne l'implémentent pas, l'élément est interprété comme un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text).
+L'interface utilisateur offerte par un tel contrôle varie en fonction des navigateurs. Au moment où nous écrivons ces lignes, seuls Chrome/Opera et Edge prennent en charge cette fonctionnalité. Pour les navigateurs qui ne l'implémentent pas, l'élément est interprété comme un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
 
 Sous Chrome/Opera, le contrôle `week` fournit des emplacements pour les deux valeurs. Un calendrier est affiché afin de sélectionner plus facilement la semaine et l'année. Un bouton avec une croix permet de supprimer la valeur saisie dans le contrôle.
 
@@ -37,7 +37,7 @@ Pour Edge, le contrôle associé à `month` est plus élaboré et se compose de 
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        <a href="/fr/docs/Web/HTML/Element/input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/input#attr-readonly"><code>readonly</code></a>, et <a href="/fr/docs/Web/HTML/Element/input#attr-step"><code>step</code></a>
+        <a href="/fr/docs/Web/HTML/Element/Input#attr-autocomplete"><code>autocomplete</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-list"><code>list</code></a>, <a href="/fr/docs/Web/HTML/Element/Input#attr-readonly"><code>readonly</code></a>, et <a href="/fr/docs/Web/HTML/Element/Input#attr-step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -58,9 +58,9 @@ Pour Edge, le contrôle associé à `month` est plus élaboré et se compose de 
 
 ## Valeur
 
-Une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui représente la valeur de la semaine et de l'année saisies dans le champ. Le format précis de représentation d'une semaine donnée est décrit dans [l'article sur les formats des dates et heures en HTML](/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_semaines).
+Une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui représente la valeur de la semaine et de l'année saisies dans le champ. Le format précis de représentation d'une semaine donnée est décrit dans [l'article sur les formats des dates et heures en HTML](/fr/docs/Web/HTML/Date_and_time_formats#représentation_des_semaines).
 
-Il est possible de définir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value") de la façon suivante&nbsp;:
+Il est possible de définir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value") de la façon suivante&nbsp;:
 
 ```html
 <label for="week">À quelle semaine souhaiteriez-vous démarrer ?</label>
@@ -71,7 +71,7 @@ Il est possible de définir une valeur par défaut grâce à l'attribut [`value`
 
 On notera que le format affiché peut être différent de la valeur réellement utilisée pour l'attribut `value`. Cette dernière respecte toujours le format `yyyy-Www` (soit les quatre chiffres de l'année, suivi d'un tiret, suivi d'un W majuscule suivi des deux chiffres pour la semaine). Dans l'exemple précédent par exemple, l'interface utilisateur pourra afficher `Semaine 01 de l'année 2017` mais la valeur envoyée via le formulaire aura toujours la structure `week=2017-W01`.
 
-Il est également possible d'accéder à la valeur ou de la définir en JavaScript grâce à la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement/value). Par exemple&nbsp;:
+Il est également possible d'accéder à la valeur ou de la définir en JavaScript grâce à la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement). Par exemple&nbsp;:
 
 ```js
 let weekControl = document.querySelector('input[type="week"]');
@@ -80,17 +80,17 @@ weekControl.value = '2017-W45';
 
 ## Attributs supplémentaires
 
-En complément des attributs pris en charge par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de semaine gèrent les attributs suivants&nbsp;:
+En complément des attributs pris en charge par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), les champs de semaine gèrent les attributs suivants&nbsp;:
 
 ### `max`
 
-La semaine la plus tardive, indiquée avec l'année, sous la forme d'une chaîne de caractères au format `"yyyy-Www"`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value")) est supérieure à cette date, [la validation échouera](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur fournie n'est pas une chaîne de caractères au format correct, aucun maximum ne sera fixé pour la valeur du contrôle.
+La semaine la plus tardive, indiquée avec l'année, sous la forme d'une chaîne de caractères au format `"yyyy-Www"`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value")) est supérieure à cette date, [la validation échouera](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur fournie n'est pas une chaîne de caractères au format correct, aucun maximum ne sera fixé pour la valeur du contrôle.
 
 Cette valeur doit être supérieure ou égale à celle indiquée par l'attribut `min`.
 
 ### `min`
 
-La semaine la plus tôt, indiquée avec l'année, sous la forme d'une chaîne de caractères au format `"yyyy-Www"`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/input#attr-value")) est antérieure à cette date, [la validation échouera](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur fournie pour cet attribut n'est pas une chaîne de caractères au format correct, aucun minimum ne sera fixé pour la valeur du contrôle.
+La semaine la plus tôt, indiquée avec l'année, sous la forme d'une chaîne de caractères au format `"yyyy-Www"`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value")) est antérieure à cette date, [la validation échouera](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur fournie pour cet attribut n'est pas une chaîne de caractères au format correct, aucun minimum ne sera fixé pour la valeur du contrôle.
 
 Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut `max`.
 
@@ -120,7 +120,7 @@ Nous verrons par la suite quelques cas d'utilisation simples puis complexes avan
 
 ### Utilisation simple
 
-La forme la plus simple de `<input type="week">` se compose d'un élément `<input>` et d'un élément [`<label>`](/fr/docs/Web/HTML/Element/label)&nbsp;:
+La forme la plus simple de `<input type="week">` se compose d'un élément `<input>` et d'un élément [`<label>`](/fr/docs/Web/HTML/Element/Label)&nbsp;:
 
 ```html
 <form>
@@ -133,11 +133,11 @@ La forme la plus simple de `<input type="week">` se compose d'un élément `<inp
 
 ### Contrôler la taille du champ
 
-`<input type="week">` ne prend pas en charge des attributs de dimensionnement (tel que [`size`](/fr/docs/Web/HTML/Element/input#attr-size")). Il sera nécessaire d'utiliser [CSS](/fr/docs/Web/CSS) si on a besoin de modifier la taille du contrôle.
+`<input type="week">` ne prend pas en charge des attributs de dimensionnement (tel que [`size`](/fr/docs/Web/HTML/Element/Input#attr-size")). Il sera nécessaire d'utiliser [CSS](/fr/docs/Web/CSS) si on a besoin de modifier la taille du contrôle.
 
 ### Utiliser l'attribut `step`
 
-En théorie, l'attribut [`step`](/fr/docs/Web/HTML/Element/input#attr-step") devrait pouvoir être employé pour définir l'incrément minimal entre chaque semaine sélectionnable. Toutefois, il ne semble avoir encore aucun effet pour les navigateurs qui prennent en charge ce contrôle.
+En théorie, l'attribut [`step`](/fr/docs/Web/HTML/Element/Input#attr-step") devrait pouvoir être employé pour définir l'incrément minimal entre chaque semaine sélectionnable. Toutefois, il ne semble avoir encore aucun effet pour les navigateurs qui prennent en charge ce contrôle.
 
 ## Validation
 
@@ -145,7 +145,7 @@ Par défaut, `<input type="week">` n'applique aucune validation aux valeurs sais
 
 ### Paramétrer des semaines minimum et maximum
 
-Les attributs [`min`](/fr/docs/Web/HTML/Element/input#attr-min") et [`max`](/fr/docs/Web/HTML/Element/input#attr-max") peuvent être utilisés afin de restreindre les semaines qui peuvent être sélectionnées par l'utilisateur. Dans l'exemple qui suit, on indique une valeur minimale correspondant à la première semaine de 2017 et une valeur maximale correspondant à la dernière semaine de 2017&nbsp;:
+Les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min") et [`max`](/fr/docs/Web/HTML/Element/Input#attr-max") peuvent être utilisés afin de restreindre les semaines qui peuvent être sélectionnées par l'utilisateur. Dans l'exemple qui suit, on indique une valeur minimale correspondant à la première semaine de 2017 et une valeur maximale correspondant à la dernière semaine de 2017&nbsp;:
 
 ```html
 <form>
@@ -191,7 +191,7 @@ Pour les navigateurs qui prennent en charge ce contrôle et ces fonctionnalités
 
 ### Rendre la valeur obligatoire
 
-On peut aussi utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/input#attr-required") afin que la saisie de la valeur soit obligatoire. Pour les navigateurs qui prennent en charge cette fonctionnalité, une erreur sera affichée lorsqu'on tentera d'envoyer un formulaire avec un champ vide pour une semaine.
+On peut aussi utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required") afin que la saisie de la valeur soit obligatoire. Pour les navigateurs qui prennent en charge cette fonctionnalité, une erreur sera affichée lorsqu'on tentera d'envoyer un formulaire avec un champ vide pour une semaine.
 
 Prenons un autre exemple (où la période a été restreinte comme précédemment) et où le champ est obligatoire&nbsp;:
 
@@ -303,7 +303,7 @@ input:valid+span:after {
 }
 ```
 
-Dans le fragment de code JavaScript qui suit, on montre comment détecter si la fonctionnalité est prise en charge ou non. Pour cela, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Element/input) et on règle son `type` sur `week` puis on vérifie immédiatement la valeur de son type. Les navigateurs qui ne prennent pas en charge la fonctionnalité renverront `text`. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif composé des deux éléments [`<select>`](/fr/docs/Web/HTML/Element/select).
+Dans le fragment de code JavaScript qui suit, on montre comment détecter si la fonctionnalité est prise en charge ou non. Pour cela, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Element/Input) et on règle son `type` sur `week` puis on vérifie immédiatement la valeur de son type. Les navigateurs qui ne prennent pas en charge la fonctionnalité renverront `text`. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif composé des deux éléments [`<select>`](/fr/docs/Web/HTML/Element/select).
 
 ```js
 // On définit certaines variables
@@ -357,8 +357,8 @@ function populateWeeks() {
 
 ## Voir aussi
 
-- L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/input)
+- L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/Input)
 - L'interface du DOM qui permet de le manipuler [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Formats_date_heure_HTML)
-- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date), [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time), et [`<input type="month">`](/fr/docs/Web/HTML/Element/input/month)
+- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
+- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/Input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/Input/date), [`<input type="time">`](/fr/docs/Web/HTML/Element/Input/time), et [`<input type="month">`](/fr/docs/Web/HTML/Element/Input/month)
 - [Compatibilité des propriétés CSS](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
