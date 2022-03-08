@@ -184,7 +184,7 @@ Por lo tanto, crear y obtener fechas entre los años `0` y `99`, preferiblemente
 
 ```js
 // Método preferido; nunca interpreta ningun valor como una diferencia relativa,
-// but instead uses the year value as-is
+// pero en su lugar valor del año tal y como está
 date.setFullYear(98); date.getFullYear()  // 98 (no 1998)
 date.setFullYear(22); date.getFullYear()  // 22 (no 1922, no 2022)
 ```
