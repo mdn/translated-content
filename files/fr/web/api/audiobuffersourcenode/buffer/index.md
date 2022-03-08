@@ -2,58 +2,90 @@
 title: AudioBufferSourceNode.buffer
 slug: Web/API/AudioBufferSourceNode/buffer
 translation_of: Web/API/AudioBufferSourceNode/buffer
+browser-compat: api.AudioBufferSourceNode.buffer
 ---
-{{ APIRef("Web Audio API") }}
+{{APIRef("Web Audio API")}}
 
-La propriété **`buffer`** de l'interface {{ domxref("AudioBufferSourceNode") }} donne la possibilité de lire un son en utilisant un {{domxref("AudioBuffer")}} comme ressource audio.
+La propriété **`buffer`** de l'interface [`AudioBufferSourceNode`](/fr/docs/Web/API/AudioBufferSourceNode) donne la possibilité de lire un son en utilisant un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) comme ressource audio.
 
-Si la propriété `buffer` a la valeur NULL, elle définit un canal unique silencieux (chaque échantillon vaut 0).
+Si la propriété `buffer` a la valeur `null`, le nœud génère un canal unique silencieux (chaque échantillon vaut 0).
 
 ## Syntaxe
 
-    AudioBufferSourceNode.buffer = soundBuffer;
+```js
+AudioBufferSourceNode.buffer = soundBuffer;
+```
 
 ### Valeur
 
-Un {{domxref("AudioBuffer")}} qui contient les données représentant le son que le noeud va lire.
+Un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) qui contient les données représentant le son que le noeud va lire.
 
 ## Exemple
 
-> **Note :** Pour un exemple complet, voir [le code interprété](http://mdn.github.io/audio-buffer/), ou [le code source](https://github.com/mdn/audio-buffer).
+> **Note :** Pour un exemple complet, voir [cette démonstration](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [le code source correspondant](https://github.com/mdn/webaudio-examples/tree/master/audio-buffer).
 
 ```js
-var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+let AudioContext = window.AudioContext || window.webkitAudioContext;
+let audioCtx;
+
+// Stereo
+let channels = 2;
+
+function init() {
+  audioCtx = new AudioContext();
+}
 
 button.onclick = function() {
-  // Remplit le buffer avec du bruit blanc;
-  // valeurs aléatoires entre -1.0 et 1.0
-  for (var channel = 0; channel < channels; channel++) {
-   // Crée le ArrayBuffer qui contient effectivement les données
-   var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio doit être compris entre [-1.0; 1.0]
+  if(!audioCtx) {
+    init();
+  }
+
+  // On crée un tampon stéréo vide de deux secondes
+  // qui utilise l'échantillonage de AudioContext
+  let frameCount = audioCtx.sampleRate * 2.0;
+
+  let myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+
+  // On remplit le buffer avec du bruit blanc ;
+  // soit des valeurs entre -1.0 et 1.0
+  for (let channel = 0; channel < channels; channel++) {
+   // Voici le calcul du tableau réel qui contient
+   // les données
+   let nowBuffering = myArrayBuffer.getChannelData(channel);
+   for (let i = 0; i < frameCount; i++) {
+     // Math.random() donne une valeur sur [0; 1.0]
+     // audio doit être sur [-1.0; 1.0]
      nowBuffering[i] = Math.random() * 2 - 1;
    }
   }
 
-  // Crée un AudioBufferSourceNode.
-  // C'est le AudioNode à utiliser pour jouer un AudioBuffer
-  var source = audioCtx.createBufferSource();
-  // Définit le buffer dans l'AudioBufferSourceNode
+  // On récupère un AudioBufferSourceNode.
+  // C'est l'objet AudioNode à utiliser pour lire
+  // un AudioBuffer
+  let source = audioCtx.createBufferSource();
+  // on passe le buffer avec AudioBufferSourceNode
   source.buffer = myArrayBuffer;
+  // on connecte le nœud AudioBufferSourceNode à
+  // la destination afin d'entendre le son
+  source.connect(audioCtx.destination);
+  // on lance la lecture
+  source.start();
+
+  source.onended = () => {
+    console.log('Bruit blanc terminé');
+  }
+}
 ```
 
 ## Spécifications
 
-| Spécification                                                                                            | Statut                               | Commentaire         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("Web Audio API", "#widl-AudioBufferSourceNode-buffer", "buffer")}} | {{Spec2("Web Audio API")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité navigateurs
 
-{{Compat("api.AudioBufferSourceNode.buffer")}}
+{{Compat}}
 
 ## Voir aussi
 
-{{page("/en-US/docs/Web/API/AudioBufferSourceNode","See_also")}}
+- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [L'API Web Audio](/fr/docs/Web/API/Web_Audio_API)
