@@ -16,13 +16,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         # Needed otherswise it will check out a merge commit which means
         # you can't get a `git diff` for this PR compared to its base.
         # with:
         #   ref: ${{ github.event.pull_request.head.sha }}
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           repository: mdn/content
           path: mdn/content
