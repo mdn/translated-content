@@ -221,7 +221,10 @@
 /ru/docs/Learn/HTML/Введение_в_HTML/Структура_документа_и_веб-сайта	/ru/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 /ru/docs/Learn/HTML/Рецепты	/ru/docs/Learn/HTML/Howto
 /ru/docs/Learn/How_the_Internet_works	/ru/docs/Learn/Common_questions/How_does_the_Internet_work
-/ru/docs/Learn/JavaScript/Asynchronous/Таймауты_и_интервалы	/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
+/ru/docs/Learn/JavaScript/Asynchronous/Async_await	/ru/docs/Learn/JavaScript/Asynchronous/Promises
+/ru/docs/Learn/JavaScript/Asynchronous/Concepts	/ru/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/ru/docs/conflicting/Learn/JavaScript/Asynchronous
+/ru/docs/Learn/JavaScript/Asynchronous/Таймауты_и_интервалы	/ru/docs/conflicting/Learn/JavaScript/Asynchronous
 /ru/docs/Learn/JavaScript/Building_blocks/События	/ru/docs/Learn/JavaScript/Building_blocks/Events
 /ru/docs/Learn/JavaScript/Objects/Inheritance	/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ru/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ru/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript

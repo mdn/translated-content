@@ -313,6 +313,9 @@
 /ko/docs/Learn/HTML/Forms/Your_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
 /ko/docs/Learn/HTML/Howto/데이터_속성_사용하기	/ko/docs/Learn/HTML/Howto/Use_data_attributes
 /ko/docs/Learn/HTML/Multimedia_and_embedding/ideo_and_audio_content	/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+/ko/docs/Learn/JavaScript/Asynchronous/Async_await	/ko/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/ko/docs/Learn/JavaScript/Asynchronous/Concepts	/ko/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/ko/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/ko/docs/conflicting/Learn/JavaScript/Asynchronous
 /ko/docs/Learn/JavaScript/Building_blocks/조건문	/ko/docs/Learn/JavaScript/Building_blocks/conditionals
 /ko/docs/Learn/JavaScript/Objects/Inheritance	/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ko/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ko/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript

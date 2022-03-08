@@ -3137,21 +3137,6 @@
       "Sheppy"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Async_await": {
-    "modified": "2020-12-10T12:33:00.159Z",
-    "contributors": [
-      "WhoRlyCares",
-      "Bucido"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Concepts": {
-    "modified": "2020-12-02T05:41:10.583Z",
-    "contributors": [
-      "haltaction",
-      "KrasnovaM",
-      "snayp"
-    ]
-  },
   "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-12-09T10:05:03.071Z",
     "contributors": [
@@ -3165,11 +3150,11 @@
       "MaxYenot"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Timeouts_and_intervals": {
-    "modified": "2020-12-09T10:32:13.319Z",
+  "Learn/JavaScript/Asynchronous/Promises": {
+    "modified": "2020-12-10T12:33:00.159Z",
     "contributors": [
       "WhoRlyCares",
-      "velheor24"
+      "Bucido"
     ]
   },
   "Learn/JavaScript/Building_blocks": {
@@ -23979,6 +23964,21 @@
     "contributors": [
       "DKas",
       "TuchaNK"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous": {
+    "modified": "2020-12-09T10:32:13.319Z",
+    "contributors": [
+      "WhoRlyCares",
+      "velheor24"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Introducing": {
+    "modified": "2020-12-02T05:41:10.583Z",
+    "contributors": [
+      "haltaction",
+      "KrasnovaM",
+      "snayp"
     ]
   },
   "conflicting/Learn/JavaScript/Objects": {

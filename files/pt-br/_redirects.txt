@@ -391,9 +391,13 @@
 /pt-BR/docs/Learn/Common_questions/Que_software_eu_preciso	/pt-BR/docs/Learn/Common_questions/What_software_do_I_need
 /pt-BR/docs/Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador	/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools
 /pt-BR/docs/Learn/Common_questions/o_que_e_um_web_server	/pt-BR/docs/Learn/Common_questions/What_is_a_web_server
-/pt-BR/docs/Learn/JavaScript/Asynchronous/Conceitos	/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts
-/pt-BR/docs/Learn/JavaScript/Asynchronous/Escolhendo_abordagem_correta	/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach
+/pt-BR/docs/Learn/JavaScript/Asynchronous/Async_await	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous
+/pt-BR/docs/Learn/JavaScript/Asynchronous/Conceitos	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/pt-BR/docs/Learn/JavaScript/Asynchronous/Escolhendo_abordagem_correta	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous
 /pt-BR/docs/Learn/JavaScript/Asynchronous/Introdução	/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing
+/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
 /pt-BR/docs/Learn/JavaScript/First_steps/Gerador_de_historias_bobas	/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator
 /pt-BR/docs/Learn/JavaScript/First_steps/Matematica	/pt-BR/docs/Learn/JavaScript/First_steps/Math
 /pt-BR/docs/Learn/JavaScript/First_steps/O_que_e_JavaScript	/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript
