@@ -1,47 +1,39 @@
 ---
-title: Console.dir()
-slug: Web/API/Console/dir
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthodes
-  - Web
-  - console
-  - débogage
+title: console.dir()
+slug: Web/API/console/dir
 translation_of: Web/API/Console/dir
+browser-compat: api.console.dir
 ---
 {{APIRef("Console API")}}
 
-Affiche une liste interactive des propriétés de l'objet Javascript spécifié. La sortie est présenté comme un listing hiérarchique avec des triangles qui permettent l'affichage du contenu des objets-enfants.
+La méthode **`console.dir()`** affiche une liste interactive des propriétés de l'objet JavaScript passé en argument. La sortie est présentée comme une liste hiérarchique avec des triangles qui permettent de développer l'arborescence de l'objet et de voir le contenu des objets descendants.
 
-En d'autres termes, console.dir est le moyen de voir toutes les propriétés de l'objet JavaScript spécifié dans la console, par lequel le développeur peut facilement obtenir les propriétés de l'objet.
+Autrement dit, `console.dir()` permet de voir l'ensemble des propriétés d'un objet JavaScript dans la console.
 
 {{AvailableInWorkers}}
 
-![](console-dir.png)
+![Une capture d'écran de l'instruction console.dir() où on peut voir les propriétés de `document.location`](console-dir.png)
 
 ## Syntaxe
 
-    console.dir(object);
+```js
+console.dir(object);
+```
 
-## Paramètres
+### Paramètres
 
 - `object`
-  - : Un objet Javascript qui contient les propriétés qui doivent être affichées.
+  - : Un objet JavaScript dont on souhaite afficher les propriétés dans la console.
 
-## Spécification
+## Spécifications
 
-| Spécification                                                        | Statut                           | Commentaire          |
-| -------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName("Console API", "#dir", "console.dir()")}} | {{Spec2("Console API")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.dir")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)
+- [Microsoft Docs&nbsp;: référence de l'API Console](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#dir)
+- [Chrome&nbsp;: référence de l'API Console](https://developer.chrome.com/docs/devtools/console/api/#dir)
