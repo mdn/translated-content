@@ -4,8 +4,8 @@ slug: Web/API/Event/preventDefault
 tags:
   - Method
   - Reference
-browser-compat: api.Event.preventDefault
 translation_of: Web/API/Event/preventDefault
+browser-compat: api.Event.preventDefault
 ---
 {{apiref("DOM")}}
 
@@ -20,6 +20,8 @@ translation_of: Web/API/Event/preventDefault
 ```
 event.preventDefault();
 ```
+
+## 예제들
 
 ### 기본 클릭 동작 방지하기
 

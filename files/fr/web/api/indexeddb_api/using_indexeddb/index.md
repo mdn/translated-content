@@ -213,7 +213,7 @@ Comme indiqué précédemment, `onupgradeneeded` est le seul endroit où vous po
 
 Les objets de stockage sont créés avec un simple appel à `createObjectStore()`. La méthode prend le nom du stockage et un paramètre de type objet. Même si les paramètres sont optionnels, ils vous laissent définir d'importantes propriétés et redéfinir le type d'un objet de stockage que vous voulez créer. Dans notre cas, nous avons demandé un objet de stockage nommé "customers" et défini un `keyPath`, qui est la propriété rendant unique un objet individuel dans le stockage. Cette propriété dans l'exemple est "ssn" puisqu'un numéro de sécurité sociale est garanti unique. "ssn" doit être présent sur chaque objet stocké dans `objectStore`.
 
-Nous avons aussi demandé un index nommé "name" qui examine la propriété `name` dans les objets stockés. Comme avec` createObjectStore()`, `createIndex()` prend un paramètre de type objet facultatif (`options`) qui définit le type d’index à créer. Ajouter des objets qui n’auront pas de propriété `name` fonctionnera, mais ces objets n'apparaîtront pas dans l'index "name".
+Nous avons aussi demandé un index nommé «&nbsp;<i lang="en">name</i>&nbsp;» qui examine la propriété `name` dans les objets stockés. Comme avec `createObjectStore()`, `createIndex()` prend un paramètre de type objet facultatif (`options`) qui définit le type d'index à créer. Ajouter des objets qui n'auront pas de propriété `name` fonctionnera, mais ces objets n'apparaîtront pas dans l'index «&nbsp;<i lang="en">name</i>&nbsp;».
 
 Nous pouvons récupérer les objets client stockés, en utilisant directement leur `ssn` dans l'objet de stockage, ou en utilisant leur nom via l’index `name`. Pour en savoir plus sur ce fonctionnement, se référer à la section [utiliser un index](/en/IndexedDB/Using_IndexedDB#Using_an_index).
 
@@ -1325,7 +1325,7 @@ Tutoriels :
 
 Bibliothèques :
 
-- [localForage ](http://mozilla.github.io/localForage/): Un Polyfill qui fournit un nom simple : la syntaxe de valeur pour le stockage de données côté client, qui utilise IndexedDB en arrière-plan, mais retourne à WebSQL puis à localStorage pour les navigateurs qui ne prennent pas en charge IndexedDB.
-- [dexie.js ](http://www.dexie.org/): Une enveloppe pour IndexedDB qui permet un développement de code beaucoup plus rapide grâce à une syntaxe simple et agréable.
-- [ZangoDB ](https://github.com/erikolson186/zangodb): Un MongoDB-like interface pour IndexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
+- [localForage](https://localforage.github.io/localForage/)&nbsp;: un polyfill qui fournit un nom simple — la syntaxe de valeur pour le stockage de données côté client, qui utilise IndexedDB en arrière-plan, mais retourne à WebSQL puis à localStorage pour les navigateurs qui ne prennent pas en charge IndexedDB.
+- [dexie.js](https://www.dexie.org/)&nbsp;: une enveloppe pour IndexedDB qui permet un développement de code beaucoup plus rapide grâce à une syntaxe simple et agréable.
+- [ZangoDB](https://github.com/erikolson186/zangodb)&nbsp;: une interface comme MongoDB pour IndexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
 - [JsStore](http://jsstore.net/) : Une enveloppe d'IndexedDB simple et avancée ayant une syntaxe SQL.

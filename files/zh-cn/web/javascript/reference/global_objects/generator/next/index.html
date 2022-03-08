@@ -15,11 +15,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 
 <p><code><strong>next</strong></code><strong><code>()</code></strong> 方法返回一个包含属性 <code>done</code> 和 <code>value</code> 的对象。该方法也可以通过接受一个参数用以向生成器传值。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><var>gen</var>.next(value)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>value</code></dt>
@@ -43,7 +43,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Example_Using_test" name="Example:_Using_test">使用 <code>next()方法</code></h3>
+<h3 id="Example_Using_test">使用 <code>next()方法</code></h3>
 
 <p>下面的例子展示了一个简单的生成器, 以及调用 <code>next</code> 后方法的返回值:</p>
 
@@ -79,7 +79,7 @@ g.next(2);
 // "{ value: null, done: false }"</code>
 </pre>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -101,63 +101,11 @@ g.next(2);
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat}}
 
-<div>
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>13</td>
-   <td>{{CompatGeckoDesktop(26)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatSafari(10)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>5.1</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile(26)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>10</td>
-  </tr>
- </tbody>
-</table>
-</div>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/function*">function*</a></code></li>

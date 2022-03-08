@@ -126,70 +126,7 @@ translation_of: Web/API/WebVR_API
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<p><strong>【K】</strong></p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatGeckoDesktop(39)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(39)}}<sup>[2]</sup><br>
-    {{CompatGeckoMobile(44)}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<ul>
- <li>[1] The support in Chrome is currently experimental. To find information on Chrome's WebVR implementation status including supporting builds, check out <a href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">Bringing VR to Chrome</a> by Brandon Jones.</li>
- <li><strong>[1]在谷歌浏览器中的支持目前尚处于实验阶段。要查找谷歌WebVR的执行状况的相关信息，包括相关技术支持的建设情况，请查看<a href="http://blog.tojicode.com/2014/07/bringing-vr-to-chrome.html">将VR带进Chrome</a> 作者：Brandon Jones.</strong></li>
- <li> </li>
- <li>[2] The support for this feature is currently disabled by default in Firefox. To enable WebVR support in Firefox Nightly/Developer Edition, you can go to <code>about:config</code> and enable the <code>dom.vr*</code> prefs. A better option however is to install the <a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR Enabler Add-on</a>, which does this for you and sets up other necessary parts of the <a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">environment</a>.</li>
- <li>[2] <strong>这项功能的技术支持，目前在火狐的浏览器中并不能被执行。要想使用火狐浏览器Nightly/开发者版本中WebVR的相关功能，你可以选择：配置并提升<code>dom.vr*</code> prefs的优先级. 另一个更好的选择是安装<a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi">WebVR</a><a href="http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi"> Enabler Add-on</a>, 它能代替你完成这些工作并建立其他运行环境中必需的部分<a href="/en-US/docs/Web/API/WebVR_API/WebVR_environment_setup">environment</a>.</strong></li>
- <li>[3] The <code>dom.vr*</code> prefs are enabled by default at this point, in Nightly/Aurora editions.</li>
- <li>[3]<strong> The <code>dom.vr*</code> prefs 在Nightly/Aurora的版本中，目前并不能被执行。</strong></li>
-</ul>
+{{Compat("api.Navigator.getVRDisplays")}}
 
 <h2 id="相关文章">相关文章</h2>
 

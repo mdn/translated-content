@@ -5,7 +5,7 @@ translation_of: Web/API/AudioBuffer/getChannelData
 ---
 {{ APIRef("Web Audio API") }}
 
-La méthode `getChannelData() `de l'interface {{ domxref("AudioBuffer") }} renvoie un {{domxref("Float32Array")}} contenant les données PCM associées au canal spécifié (0 correspondant au premier canal).
+La méthode `getChannelData()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) renvoie un [`Float32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Float32Array) contenant les données PCM associées au canal spécifié (0 correspondant au premier canal).
 
 ## Syntaxe
 

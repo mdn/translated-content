@@ -76,7 +76,7 @@ JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: {
 
 </pre>
 
-<h3 id="The_replacer_parameter"><a id="The replacer parameter" name="The replacer parameter"></a>The <code>replacer</code> parameter</h3>
+<h3 id="The_replacer_parameter">The <code>replacer</code> parameter</h3>
 
 <p>The <code>replacer</code> parameter can be either a function or an array. As a function, it takes two parameters, the key and the value being stringified. The object in which the key was found is provided as the replacer's <code>this</code> parameter. Initially it gets called with an empty key representing the object being stringified, and it then gets called for each property on the object or array being stringified. It should return the value that should be added to the JSON string, as follows:</p>
 
@@ -88,7 +88,7 @@ JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: {
  <li>If you return <code>undefined</code>, the property is not included (i.e., filtered out) in the output JSON string.</li>
 </ul>
 
-<div class="note"><strong>Note:</strong> You cannot use the <code>replacer</code> function to remove values from an array. If you return <code>undefined</code> or a function then <code>null</code> is used instead.</div>
+<div class="notecard note"><p><strong>Note:</strong> You cannot use the <code>replacer</code> function to remove values from an array. If you return <code>undefined</code> or a function then <code>null</code> is used instead.</p></div>
 
 <h4 id="Example_with_a_function">Example with a function</h4>
 
@@ -113,7 +113,7 @@ JSON.stringify(foo, replacer);
 // '{"week":45,"month":7}', only keep "week" and "month" properties
 </pre>
 
-<h3 id="The_space_argument"><a id="The space argument" name="The space argument"></a>The <code>space</code> argument</h3>
+<h3 id="The_space_argument">The <code>space</code> argument</h3>
 
 <p>The <code>space</code> argument may be used to control spacing in the final string. If it is a number, successive levels in the stringification will each be indented by this many space characters (up to 10). If it is a string, successive levels will be indented by this string (or the first ten characters of it).</p>
 
@@ -209,8 +209,8 @@ alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}</pre>
 
 <p>In a case where you want to store an object created by your user and allowing it to be restored even after the browser has been closed, the following example is a model for the applicability of <code>JSON.stringify()</code>:</p>
 
-<div class="warning">
-<p>Functions are not a valid JSON data type so they will not work. However, they can be displayed if first converted to a string (e.g. in the replacer), via the function's toString method. Also, some objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.</p>
+<div class="notecard warning">
+<p><strong>Warning:</strong> Functions are not a valid JSON data type so they will not work. However, they can be displayed if first converted to a string (e.g. in the replacer), via the function's toString method. Also, some objects like {{jsxref("Date")}} will be a string after {{jsxref("JSON.parse()")}}.</p>
 </div>
 
 <pre class="brush: js">// Creating an example of JSON
@@ -238,40 +238,13 @@ var restoredSession = JSON.parse(localStorage.getItem('session'));
 console.log(restoredSession);
 </pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.7.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-json.stringify', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.JSON.stringify")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="See_also">See also</h2>
 

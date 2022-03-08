@@ -3,31 +3,30 @@ title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ---
-<p><span class="hidden"> </span>{{JSRef}}</p>
+<p> {{JSRef}}</p>
 
 <p> <strong><code>lastIndexOf()</code></strong> 方法返回调用{{jsxref("String")}} 对象的指定值最后一次出现的索引，在一个字符串中的指定位置 <code>fromIndex</code>处从后向前搜索。如果没找到这个特定值则返回-1 。</p>
 
 <p>该方法将从尾到头地检索字符串 <em>str</em>，看它是否含有子串 <em>searchValue</em>。开始检索的位置在字符串的 <em>fromIndex</em> 处或字符串的结尾（没有指定 <em>fromIndex</em> 时）。如果找到一个 <em>searchValue</em>，则返回 <em>searchValue</em> 的第一个字符在 <em>str</em> 中的位置。<em>str</em>中的字符位置是从 0 开始的。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>str</em>.lastIndexOf(<em>searchValue</em>[, fromIndex])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>searchValue</code></dt>
  <dd>一个字符串，表示被查找的值。如果<code>searchValue</code>是空字符串，则返回<code>fromIndex</code>。</dd>
  <dt><code>fromIndex</code>{{optional_inline}}</dt>
  <dd>待匹配字符串searchValue的开头一位字符从 str的第fromIndex位开始向左回向查找。<code>fromIndex</code>默认值是 <code>+Infinity</code>。如果 <code>fromIndex &gt;= str.length</code> ，则会搜索整个字符串。如果 <code>fromIndex &lt; 0</code> ，则等同于 <code>fromIndex == 0</code>。</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
- </dt>
 </dl>
+
+<h3 id="返回值">返回值</h3>
 
 <p>返回指定值最后一次出现的索引(该索引仍是以从左至右0开始记数的)，如果没找到则返回-1。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>字符串中的字符被从左向右索引。首字符的索引（index）是 0，最后一个字符的索引是 <code>stringName.length - 1</code>。</p>
 
@@ -41,21 +40,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 'canal'.lastIndexOf('', 2);   // returns 2</code>
 </pre>
 
-<div class="blockIndicator note">
-<p>Note: <code>'abab'.lastIndexOf('ab', 2)</code> 将返回 2 而不是 0, 因为fromIndex只限制待匹配字符串的开头。</p>
+<div class="note">
+<p><strong>备注：</strong><code>'abab'.lastIndexOf('ab', 2)</code> 将返回 2 而不是 0, 因为fromIndex只限制待匹配字符串的开头。</p>
 </div>
 
 <p>(例如'abadefgabm'.lastIndexOf('ab', 7) 返回7，虽然查找的'ab'中的b已经在 index=8的位置了从index=7的a处向左查找仍是能找到自身a加上其后连成ab，因为fromIndex指的是待匹配字符串的开头那一个)</p>
 
-<h3 id="Example_indexOf_and_case-sensitivity" name="Example:_indexOf_and_case-sensitivity">区分大小写</h3>
+<h3 id="Example_indexOf_and_case-sensitivity">区分大小写</h3>
 
 <p><code>lastIndexOf</code> 方法区分大小写。例如，下面的表达式返回 -1：</p>
 
 <pre class="brush:js">"Blue Whale, Killer Whale".lastIndexOf("blue"); // returns -1</pre>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example_Using_indexOf_and_lastIndexOf" name="Example:_Using_indexOf_and_lastIndexOf">例子：使用 <code>indexOf</code> 和 <code>lastIndexOf</code></h3>
+<h3 id="Example_Using_indexOf_and_lastIndexOf">例子：使用 <code>indexOf</code> 和 <code>lastIndexOf</code></h3>
 
 <p>下例使用 <code>indexOf</code> 和 <code>lastIndexOf</code> 方法来定位字符串 "<code>Brave new world</code>" 中的值。</p>
 
@@ -101,55 +100,7 @@ console.log("The index of 'new' from the end is " + anyString.lastIndexOf("new")
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

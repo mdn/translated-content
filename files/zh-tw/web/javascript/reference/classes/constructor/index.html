@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <h2 id="語法">語法</h2>
 
-<pre class="syntaxbox notranslate">constructor([arguments]) { ... }</pre>
+<pre class="syntaxbox">constructor([arguments]) { ... }</pre>
 
 <h2 id="敘述">敘述</h2>
 
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <p>這段程式碼是從 <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">classes sample</a> 擷取而來。（<a href="https://googlechrome.github.io/samples/classes-es6/index.html">線上範例</a>）</p>
 
-<pre class="brush: js notranslate">class Square extends Polygon {
+<pre class="brush: js">class Square extends Polygon {
   constructor(length) {
     // 我們在這裡呼叫了 class 的建構子提供多邊形的長寬值
     super(length, length);
@@ -44,108 +44,22 @@ translation_of: Web/JavaScript/Reference/Classes/constructor
 
 <p>如上文所說：如果不指定建構子，就會使用預設的建構子。對 base classes 而言，預設的建構子長得像這樣：</p>
 
-<pre class="brush: js notranslate">constructor() {}
+<pre class="brush: js">constructor() {}
 </pre>
 
 <p>對 derived class 而言，預設的建構子長得像這樣：</p>
 
-<pre class="brush: js notranslate">constructor(...args) {
+<pre class="brush: js">constructor(...args) {
   super(...args);
 }</pre>
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註解</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Initial definition.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支援</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td>預設的建構子</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支援</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>{{CompatGeckoMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
-  <tr>
-   <td>預設的建構子</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile(45)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

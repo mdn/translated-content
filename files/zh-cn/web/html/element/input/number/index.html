@@ -53,7 +53,7 @@ translation_of: Web/HTML/Element/input/number
 
 <h2 id="值">值</h2>
 
-<p>填写到输入框中的数值文字的{{jsxref("Number")}}表示。你可以通过把一个数字放在{{htmlattrxref("value", "input")}} 属性中来设置输入框的默认值，如下:</p>
+<p>填写到输入框中的数值文字的{{jsxref("Number")}}表示。你可以通过把一个数字放在{{htmlattrxref("value", "input")}} 属性中来设置输入框的默认值，如下：</p>
 
 <pre class="brush: html">&lt;input id="number" type="number" value="42"&gt;</pre>
 
@@ -64,10 +64,10 @@ translation_of: Web/HTML/Element/input/number
 <p><code>&lt;input type ="number"&gt;</code>元素可以帮助您在构建用户界面和将数字输入到表单中的逻辑时简化你的工作。 当你使用正确的 type 值 <code>"number"</code> 创建数字输入时，会自动验证你输入的文本是否为数字，通常是一组向上和向下按钮。</p>
 
 <div class="note">
-<p><strong>注意：</strong>记住用户可以在幕后修改HTML是至关重要的，因此您的网站不得使用简单的客户端验证来实现任何安全目的。 您必须在服务器端验证所提供的值可能具有任何安全含义的任何事务。</p>
+<p><strong>注意：</strong>记住用户可以在幕后修改 HTML 是至关重要的，因此您的网站不得使用简单的客户端验证来实现任何安全目的。 您必须在服务器端验证所提供的值可能具有任何安全含义的任何事务。</p>
 </div>
 
-<p>此外，移动浏览器通过在用户尝试输入值时显示更适合输入数字的特殊键盘，进一步帮助用户体验。 以下屏幕截图来自Firefox for Android：</p>
+<p>此外，移动浏览器通过在用户尝试输入值时显示更适合输入数字的特殊键盘，进一步帮助用户体验。 以下屏幕截图来自 Firefox for Android：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14963/number-keyboard-fxa.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
@@ -98,43 +98,43 @@ translation_of: Web/HTML/Element/input/number
 
 <h3 id="控制步进大小">控制步进大小</h3>
 
-<p>默认情况下，向上和向下按钮可以将值增加或减小1。您可以通过使用{{htmlattrxref("step","input")}} 属性来更改此步长值。 我们上面的例子中的占位符提示我们其值是10的倍数，所以设置 <code>step</code> 的值为10是合理的：</p>
+<p>默认情况下，向上和向下按钮可以将值增加或减小 1。您可以通过使用{{htmlattrxref("step","input")}} 属性来更改此步长值。 我们上面的例子中的占位符提示我们其值是 10 的倍数，所以设置 <code>step</code> 的值为 10 是合理的：</p>
 
 <pre class="brush: html">&lt;input type="number" placeholder="multiple of 10" step="10"&gt;</pre>
 
 <p>{{ EmbedLiveSample('控制步进大小', 600, 40) }}</p>
 
-<p>在这个例子中，你会发现上下箭头每次会将其值增加和减少10，而不是1。你仍然可以手动输入一个不是10的倍数的数字，但它会被认为是无效的。</p>
+<p>在这个例子中，你会发现上下箭头每次会将其值增加和减少 10，而不是 1。你仍然可以手动输入一个不是 10 的倍数的数字，但它会被认为是无效的。</p>
 
 <h3 id="指定最小和最大值">指定最小和最大值</h3>
 
-<p>可以使用{{htmlattrxref("min","input")}} 和{{htmlattrxref("max","input")}} 属性指定该字段可以具有的最小值和最大值。 例如，给例子指定最小值为0，最大值为100：</p>
+<p>可以使用{{htmlattrxref("min","input")}} 和{{htmlattrxref("max","input")}} 属性指定该字段可以具有的最小值和最大值。 例如，给例子指定最小值为 0，最大值为 100：</p>
 
 <pre class="brush: html">&lt;input type="number" placeholder="multiple of 10" step="10" min="0" max="100"&gt;</pre>
 
 <p>{{ EmbedLiveSample('指定最小和最大值', 600, 40) }}</p>
 
-<p>修改过后，你会发现点击上下按钮不会让你低于0或高于100 . 可以在这些界限之外手动输入数字，但它将被视为无效。</p>
+<p>修改过后，你会发现点击上下按钮不会让你低于 0 或高于 100 . 可以在这些界限之外手动输入数字，但它将被视为无效。</p>
 
 <h3 id="允许小数值">允许小数值</h3>
 
-<p>数字输入的一个问题是，步长默认为1——如果你尝试输入带小数的数字，例如"1.0"，则它将被视为无效。 如果要输入一个需要小数的值，则需要修改 <code>step</code> 值（例如，<code>step="0.01"</code> 以允许2位小数）。 这里有一个简单的例子：</p>
+<p>数字输入的一个问题是，步长默认为 1——如果你尝试输入带小数的数字，例如"1.0"，则它将被视为无效。 如果要输入一个需要小数的值，则需要修改 <code>step</code> 值（例如，<code>step="0.01"</code> 以允许 2 位小数）。 这里有一个简单的例子：</p>
 
 <pre class="brush: html">&lt;input type="number" placeholder="1.0" step="0.01" min="0" max="10"&gt;</pre>
 
 <p>{{EmbedLiveSample("允许小数值", 600, 40)}}</p>
 
-<p>你可以看到这个例子允许0.0到10.0之间的任何值，小数点为2位。本例中，"9.52" 是有效的，但" 9.521" 无效。</p>
+<p>你可以看到这个例子允许 0.0 到 10.0 之间的任何值，小数点为 2 位。本例中，"9.52" 是有效的，但" 9.521" 无效。</p>
 
 <h3 id="控制输入框大小">控制输入框大小</h3>
 
 <p>类型为<code>"number"</code> 的 {{HTMLElement("input")}} 元素不支持像 {{htmlattrxref("size", "input")}} 之类的调整大小属性。你必须通过借助 <a href="/en-US/docs/Web/CSS">CSS</a> 来改变它们的尺寸大小。</p>
 
-<p>例如，要调整输入框的宽度为仅可输入3位数字的宽度，我们可以在HTML中添加 一个ID并缩短很长的占位符文本，如下：</p>
+<p>例如，要调整输入框的宽度为仅可输入 3 位数字的宽度，我们可以在 HTML 中添加 一个 ID 并缩短很长的占位符文本，如下：</p>
 
 <pre class="brush: html">&lt;input type="number" placeholder="x10" step="10" min="0" max="100" id="number"&gt;</pre>
 
-<p>然后我们添加一些 CSS 来缩小 id 为 <code>"number"</code> 的元素的宽度:</p>
+<p>然后我们添加一些 CSS 来缩小 id 为 <code>"number"</code> 的元素的宽度：</p>
 
 <pre class="brush: css">#number {
   width: 3em;
@@ -350,60 +350,7 @@ switchBtn.addEventListener('click', function() {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>iOS WebKit<br>
-    <sup><sub>(Safari/Chrome/Firefox/etc.)</sub></sup></th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.input.input-number")}}
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLVideoElement
 ---
 {{APIRef("HTML DOM")}}
 
-**`L’interface HTMLVideoElement` **fournit des propriétés et des méthodes spéciales pour manipuler des objets vidéo. Il hérite également des propriétés et des méthodes de {{domxref("HTMLMediaElement")}} et de {{domxref("HTMLElement")}}.
+L'interface **`HTMLVideoElement`** fournit des propriétés et des méthodes spéciales pour manipuler des objets vidéo. Elle hérite également des propriétés et des méthodes de [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) et de [`HTMLElement`](/fr/docs/Web/API/HTMLElement).
 
 La liste des [formats multimédias pris en charge](/fr/docs/Web/Media/Formats) varie d’un navigateur à l’autre. Vous pouvez fournir votre vidéo dans un format unique que tous les navigateurs pertinents prennent en charge, ou fournir plusieurs sources vidéo dans des formats suffisamment différents couverts par les différents navigateurs que vous ciblez.
 

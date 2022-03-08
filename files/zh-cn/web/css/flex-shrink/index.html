@@ -102,69 +102,7 @@ flex-shrink: unset</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("18.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("32.0")}}<sup>[2]</sup></td>
-   <td>21.0{{property_prefix("-webkit")}}</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatVersionUnknown}}</td>
-   <td>10<sup>[3]</sup></td>
-   <td>12.10</td>
-   <td>8.0{{property_prefix("-webkit")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>Edge</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoMobile("18.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoMobile("32.0")}}<sup>[2]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}{{property_prefix("-webkit")}}<br>
-    {{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12.10</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Firefox 仅支持单行 flexbox 直到 Firefox 28版本。To activate flexbox support, for Firefox 18 and 19, the user has to change the about:config preference "layout.css.flexbox.enabled" to <code>true</code>.</p>
-
-<p>In addition to the unprefixed support, Gecko 48.0 {{geckoRelease("48.0")}} added support for a <code>-webkit</code> prefixed version of the property for web compatibility reasons behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code>. Since Gecko 49.0 {{geckoRelease("49.0")}} the preference defaults to <code>true</code>.</p>
-
-<p>[2] 在 Firefox 32 之前，Gecko不能将动画从0开始或停止在0<code>(<a href="https://drafts.csswg.org/css-flexbox-1/#resolve-flexible-lengths">Spec</a>,<a href="http://jsbin.com/zacifexuke/edit?html,css,output">Demo</a>)</code>.。</p>
-
-<p>[3] Internet Explorer 10 使用 <code>0</code> 而不是 <code>1</code> 作为 <code>flex-shrink</code> 属性的初始值。A workaround is to always set an explicit value for <code>flex-shrink</code>. See <a href="https://github.com/philipwalton/flexbugs#6-the-default-flex-value-has-changed">Flexbug #6</a> for more info.</p>
+{{Compat("css.properties.flex-shrink")}}
 
 <h2 id="参考">参考</h2>
 

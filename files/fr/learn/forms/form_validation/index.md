@@ -222,7 +222,7 @@ Supprimez maintenant le contenu de l'élément `<body>` et remplacez-le par le s
 ```
 
 - Ici, nous avons donné au champ de texte une taille minimale et maximale de 6 caractères — la même que celle de _banane_ ou _cerise_. La saisie de moins de 6 caractères s'affichera comme non valide et la saisie de plus de 6 caractères ne sera pas possible dans la plupart des navigateurs.
-- Nous avons également contraint le champ `number` à un `min` de 1 et un `max `de 10 — les nombres entrés hors de cette plage seront affichés comme non valides, et vous ne pourrez pas utiliser les flèches d'incrémentation/décrémentation pour porter la valeur en dehors de cette plage.
+- Nous avons également contraint le champ `number` à un `min` de 1 et un `max` de 10 — les nombres entrés hors de cette plage seront affichés comme non valides, et vous ne pourrez pas utiliser les flèches d'incrémentation/décrémentation pour porter la valeur en dehors de cette plage.
 
 ```html hidden
 input:invalid {

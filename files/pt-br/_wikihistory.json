@@ -2036,19 +2036,6 @@
       "Sheppy"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Choosing_the_right_approach": {
-    "modified": "2020-10-15T22:33:23.228Z",
-    "contributors": [
-      "manoelbjr"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Concepts": {
-    "modified": "2020-10-06T09:57:59.299Z",
-    "contributors": [
-      "joseluizmonteirojr",
-      "bellammuniz"
-    ]
-  },
   "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-07-16T22:33:17.985Z",
     "contributors": [
@@ -2060,13 +2047,6 @@
     "contributors": [
       "manoelbjr",
       "luan0ap"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Timeouts_and_intervals": {
-    "modified": "2020-07-16T22:33:21.635Z",
-    "contributors": [
-      "vbarcellos",
-      "bellammuniz"
     ]
   },
   "Learn/JavaScript/Building_blocks": {
@@ -3695,8 +3675,29 @@
       "eliezerb"
     ]
   },
+  "Web/API/BatteryManager/chargingchange_event": {
+    "modified": "2019-03-23T23:16:56.594Z",
+    "contributors": [
+      "teoli",
+      "eliezerb"
+    ]
+  },
+  "Web/API/BatteryManager/chargingtimechange_event": {
+    "modified": "2019-03-23T23:16:56.942Z",
+    "contributors": [
+      "teoli",
+      "eliezerb"
+    ]
+  },
   "Web/API/BatteryManager/dischargingTime": {
     "modified": "2019-03-23T23:16:57.249Z",
+    "contributors": [
+      "teoli",
+      "eliezerb"
+    ]
+  },
+  "Web/API/BatteryManager/dischargingtimechange_event": {
+    "modified": "2019-03-23T23:16:54.139Z",
     "contributors": [
       "teoli",
       "eliezerb"
@@ -3709,28 +3710,7 @@
       "eliezerb"
     ]
   },
-  "Web/API/BatteryManager/onchargingchange": {
-    "modified": "2019-03-23T23:16:56.594Z",
-    "contributors": [
-      "teoli",
-      "eliezerb"
-    ]
-  },
-  "Web/API/BatteryManager/onchargingtimechange": {
-    "modified": "2019-03-23T23:16:56.942Z",
-    "contributors": [
-      "teoli",
-      "eliezerb"
-    ]
-  },
-  "Web/API/BatteryManager/ondischargingtimechange": {
-    "modified": "2019-03-23T23:16:54.139Z",
-    "contributors": [
-      "teoli",
-      "eliezerb"
-    ]
-  },
-  "Web/API/BatteryManager/onlevelchange": {
+  "Web/API/BatteryManager/levelchange_event": {
     "modified": "2019-03-23T23:16:53.281Z",
     "contributors": [
       "teoli",
@@ -5148,7 +5128,7 @@
       "helton-mori-dev"
     ]
   },
-  "Web/API/FileReader/onload": {
+  "Web/API/FileReader/load_event": {
     "modified": "2019-12-24T01:07:36.177Z",
     "contributors": [
       "euvanribeiro",
@@ -6920,13 +6900,6 @@
       "gustavobeavis"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-03-23T22:16:58.340Z",
-    "contributors": [
-      "brunoczim",
-      "gustavobeavis"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:03:41.298Z",
     "contributors": [
@@ -6938,6 +6911,13 @@
     "modified": "2019-05-15T10:26:01.821Z",
     "contributors": [
       "eduardovivi",
+      "gustavobeavis"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-03-23T22:16:58.340Z",
+    "contributors": [
+      "brunoczim",
       "gustavobeavis"
     ]
   },
@@ -16272,6 +16252,26 @@
       "Junior201313",
       "eduardodx",
       "LeonardoPacheco"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous": {
+    "modified": "2020-10-15T22:33:23.228Z",
+    "contributors": [
+      "manoelbjr"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Introducing": {
+    "modified": "2020-10-06T09:57:59.299Z",
+    "contributors": [
+      "joseluizmonteirojr",
+      "bellammuniz"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df": {
+    "modified": "2020-07-16T22:33:21.635Z",
+    "contributors": [
+      "vbarcellos",
+      "bellammuniz"
     ]
   },
   "conflicting/Learn/JavaScript/Objects": {

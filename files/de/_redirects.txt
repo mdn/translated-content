@@ -424,6 +424,7 @@
 /de/docs/Web/API/File/Zugriff_auf_Dateien_von_Webapplikationen	/de/docs/Web/API/File/Using_files_from_web_applications
 /de/docs/Web/API/File/fileName	/de/docs/conflicting/Web/API/File/name
 /de/docs/Web/API/File/fileSize	/de/docs/Web/API/Blob/size
+/de/docs/Web/API/FileReader/onload	/de/docs/Web/API/FileReader/load_event
 /de/docs/Web/API/FullscreenOptions	/de/docs/orphaned/Web/API/FullscreenOptions
 /de/docs/Web/API/IndexedDB_API/IndexedDB_verwenden	/de/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /de/docs/Web/API/Navigator/registerProtocolHandler/Webbasierte_protokoll-handler	/de/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
@@ -483,6 +484,7 @@
 /de/docs/Web/CSS/-moz-user-select	/de/docs/Web/CSS/user-select
 /de/docs/Web/CSS/-webkit-mask-origin	/de/docs/Web/CSS/mask-origin
 /de/docs/Web/CSS/-webkit-mask-repeat	/de/docs/Web/CSS/mask-repeat
+/de/docs/Web/CSS/-webkit-print-color-adjust	/de/docs/Web/CSS/print-color-adjust
 /de/docs/Web/CSS/:-moz-placeholder	/de/docs/Web/CSS/:placeholder-shown
 /de/docs/Web/CSS/:-moz-ui-invalid	/de/docs/Web/CSS/:user-invalid
 /de/docs/Web/CSS/:-webkit-autofill	/de/docs/Web/CSS/:autofill

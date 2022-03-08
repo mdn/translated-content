@@ -85,7 +85,7 @@ ball.draw();
 
 <h2 id="경계">경계</h2>
 
-<p>경게 충돌 테스트의 필요 없이 우리가 만든 공은 캔버스 밖으로 빠르게 빠져나갈 것입니다. 우리는 공의 <code>x</code> 와 <code>y</code> 위치가 캔버스 차원을 빠져나갔는지 체크해서 방향과 속도를 바꿔주어야 합니다. 그러기 위해서 우리는 <code>draw</code> 메소드에 다음 확인사항을 추가할 것입니다.:</p>
+<p>경계 충돌 테스트의 필요 없이 우리가 만든 공은 캔버스 밖으로 빠르게 빠져나갈 것입니다. 우리는 공의 <code>x</code> 와 <code>y</code> 위치가 캔버스 차원을 빠져나갔는지 체크해서 방향과 속도를 바꿔주어야 합니다. 그러기 위해서 우리는 <code>draw</code> 메소드에 다음 확인사항을 추가할 것입니다.:</p>
 
 <pre class="brush: js notranslate">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
   ball.vy = -ball.vy;
@@ -154,7 +154,7 @@ ball.draw();</pre>
 
 <h2 id="가속">가속</h2>
 
-<p>움직임을 좀 더 리얼하게 만들기 위해, 우리는 속도를 다음과 같이 줄 겁니다. 예를들어:</p>
+<p>움직임을 좀 더 리얼하게 만들기 위해, 우리는 속도를 다음과 같이 줄 겁니다. 예를 들어:</p>
 
 <pre class="brush: js notranslate">ball.vy *= .99;
 ball.vy += .25;</pre>

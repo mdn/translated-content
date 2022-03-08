@@ -3137,21 +3137,6 @@
       "Sheppy"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Async_await": {
-    "modified": "2020-12-10T12:33:00.159Z",
-    "contributors": [
-      "WhoRlyCares",
-      "Bucido"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Concepts": {
-    "modified": "2020-12-02T05:41:10.583Z",
-    "contributors": [
-      "haltaction",
-      "KrasnovaM",
-      "snayp"
-    ]
-  },
   "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-12-09T10:05:03.071Z",
     "contributors": [
@@ -3165,11 +3150,11 @@
       "MaxYenot"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Timeouts_and_intervals": {
-    "modified": "2020-12-09T10:32:13.319Z",
+  "Learn/JavaScript/Asynchronous/Promises": {
+    "modified": "2020-12-10T12:33:00.159Z",
     "contributors": [
       "WhoRlyCares",
-      "velheor24"
+      "Bucido"
     ]
   },
   "Learn/JavaScript/Building_blocks": {
@@ -5495,12 +5480,6 @@
   },
   "Web/API/AbortSignal/aborted": {
     "modified": "2020-10-15T22:16:51.730Z",
-    "contributors": [
-      "VerZsuT"
-    ]
-  },
-  "Web/API/AbortSignal/onabort": {
-    "modified": "2020-10-15T22:16:51.482Z",
     "contributors": [
       "VerZsuT"
     ]
@@ -7993,17 +7972,17 @@
       "Excent163"
     ]
   },
-  "Web/API/FileReader/error": {
-    "modified": "2020-10-15T22:09:49.214Z",
-    "contributors": [
-      "A-Mikhail"
-    ]
-  },
-  "Web/API/FileReader/onabort": {
+  "Web/API/FileReader/abort_event": {
     "modified": "2020-05-07T08:21:21.125Z",
     "contributors": [
       "Excent163",
       "SpaceMotion"
+    ]
+  },
+  "Web/API/FileReader/error": {
+    "modified": "2020-10-15T22:09:49.214Z",
+    "contributors": [
+      "A-Mikhail"
     ]
   },
   "Web/API/FileReader/readAsArrayBuffer": {
@@ -11327,18 +11306,6 @@
       "timur-gilauri"
     ]
   },
-  "Web/API/Window/ongamepadconnected": {
-    "modified": "2020-11-17T12:43:15.635Z",
-    "contributors": [
-      "venanen"
-    ]
-  },
-  "Web/API/Window/ongamepaddisconnected": {
-    "modified": "2020-11-17T12:45:18.585Z",
-    "contributors": [
-      "venanen"
-    ]
-  },
   "Web/API/Window/onpaint": {
     "modified": "2019-03-23T22:08:47.903Z",
     "contributors": [
@@ -11727,12 +11694,6 @@
       "forestbird"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-03-23T22:31:10.101Z",
-    "contributors": [
-      "fider"
-    ]
-  },
   "Web/API/XMLHttpRequest/open": {
     "modified": "2020-10-15T22:01:52.733Z",
     "contributors": [
@@ -11748,6 +11709,12 @@
     "contributors": [
       "ZaWertun",
       "sollerias",
+      "fider"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-03-23T22:31:10.101Z",
+    "contributors": [
       "fider"
     ]
   },
@@ -23999,6 +23966,21 @@
       "TuchaNK"
     ]
   },
+  "conflicting/Learn/JavaScript/Asynchronous": {
+    "modified": "2020-12-09T10:32:13.319Z",
+    "contributors": [
+      "WhoRlyCares",
+      "velheor24"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Introducing": {
+    "modified": "2020-12-02T05:41:10.583Z",
+    "contributors": [
+      "haltaction",
+      "KrasnovaM",
+      "snayp"
+    ]
+  },
   "conflicting/Learn/JavaScript/Objects": {
     "modified": "2019-06-04T15:16:30.349Z",
     "contributors": [
@@ -24086,6 +24068,12 @@
       "wbamberg",
       "fscholz",
       "Cyemka"
+    ]
+  },
+  "conflicting/Web/API/AbortSignal/abort_event": {
+    "modified": "2020-10-15T22:16:51.482Z",
+    "contributors": [
+      "VerZsuT"
     ]
   },
   "conflicting/Web/API/Canvas_API/A_basic_ray-caster": {
@@ -24239,6 +24227,18 @@
     "contributors": [
       "Steln",
       "akhabibullina"
+    ]
+  },
+  "conflicting/Web/API/Window/gamepadconnected_event": {
+    "modified": "2020-11-17T12:43:15.635Z",
+    "contributors": [
+      "venanen"
+    ]
+  },
+  "conflicting/Web/API/Window/gamepaddisconnected_event": {
+    "modified": "2020-11-17T12:45:18.585Z",
+    "contributors": [
+      "venanen"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {

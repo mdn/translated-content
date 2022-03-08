@@ -34,7 +34,7 @@ La méthode **`some()`** teste si au moins un élément du tableau passe le test
       - : L'élément du tableau à traiter par la fonction.
     - `index` {{optional_inline}}
       - : L'indice de l'élément qui est traité par la fonction.
-    - `array `{{optional_inline}}
+    - `array` {{optional_inline}}
       - : Le tableau sur lequel on a appelé la méthode `some`.
 
 - `objetThis` {{optional_inline}}
@@ -74,7 +74,7 @@ passed = [12, 5, 8, 1, 4].some(estAssezGrand);
 
 ### Tester la valeur des éléments avec les fonctions fléchées
 
-[Les fonctions fléchées ](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
+[Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) permettent d'utiliser une syntaxe plus concise pour réaliser la même opération que l'exemple précédent.
 
 ```js
 [2, 5, 8, 1, 4].some(elem => elem > 10); // false

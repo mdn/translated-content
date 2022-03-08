@@ -100,7 +100,7 @@ C'est l'heure de l'apprentissage actif : veuillez créer un document HTML avec u
 
 ### Liens de niveau bloc
 
-Comme mentionné précédemment, vous pouvez transformer à peu près tout contenu en un lien, même des [éléments bloc ](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#éléments_bloc_ou_en_ligne). Si vous avez une image que vous voulez transformer en lien, vous avez juste à mettre l'image entre les balises `<a></a>`.
+Comme mentionné précédemment, vous pouvez transformer à peu près tout contenu en un lien, même des [éléments bloc](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#éléments_bloc_ou_en_ligne). Si vous avez une image que vous voulez transformer en lien, vous avez juste à mettre l'image entre les balises `<a></a>`.
 
 ```html
 <a href="https://www.mozilla.org/fr/">
@@ -201,7 +201,7 @@ Regardons un exemple particulier :
 </a></p>
 ```
 
-**Mauvais** texte de lien&nbsp;: [Cliquer ici ](https://firefox.com/)pour télécharger Firefox
+**Mauvais** texte de lien&nbsp;: [Cliquer ici](https://firefox.com/) pour télécharger Firefox
 
 ```html
 <p><a href="https://firefox.com/">

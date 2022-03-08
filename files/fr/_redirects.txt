@@ -2997,6 +2997,10 @@
 /fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS	/fr/docs/Learn/CSS/First_steps/What_is_CSS
 /fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens	/fr/docs/Learn/CSS/Styling_text/Styling_links
 /fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
+/fr/docs/Learn/JavaScript/Asynchronous/Async_await	/fr/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/fr/docs/conflicting/Learn/JavaScript/Asynchronous
+/fr/docs/Learn/JavaScript/Asynchronous/Concepts	/fr/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/fr/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/fr/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
 /fr/docs/Learn/JavaScript/First_steps/Testes_vos_competence:_Tableaux	/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 /fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile	/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods
 /fr/docs/Learn/JavaScript/First_steps/tableaux	/fr/docs/Learn/JavaScript/First_steps/Arrays
@@ -3521,6 +3525,9 @@
 /fr/docs/Web/API/Document/defaultView/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
 /fr/docs/Web/API/Document/domConfig	/fr/docs/Web/API/Document
+/fr/docs/Web/API/Document/onafterscriptexecute	/fr/docs/Web/API/Document/afterscriptexecute_event
+/fr/docs/Web/API/Document/onbeforescriptexecute	/fr/docs/Web/API/Document/beforescriptexecute_event
+/fr/docs/Web/API/Document/onfullscreenchange	/fr/docs/conflicting/Web/API/Document/fullscreenchange_event
 /fr/docs/Web/API/DocumentOrShadowRoot/activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/fr/docs/Web/API/Document/elementFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
@@ -3660,8 +3667,14 @@
 /fr/docs/Web/API/HTMLOrForeignElement/tabIndex	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /fr/docs/Web/API/HTMLTableElement.caption	/fr/docs/Web/API/HTMLTableElement/caption
 /fr/docs/Web/API/HTMLTableElement.insertRow	/fr/docs/Web/API/HTMLTableElement/insertRow
+/fr/docs/Web/API/IDBDatabase/onabort	/fr/docs/conflicting/Web/API/IDBTransaction/abort_event
+/fr/docs/Web/API/IDBDatabase/onerror	/fr/docs/Web/API/IDBTransaction/error_event
+/fr/docs/Web/API/IDBDatabase/onversionchange	/fr/docs/Web/API/IDBDatabase/versionchange_event
 /fr/docs/Web/API/IDBEnvironment/indexedDB	/fr/docs/Web/API/indexedDB
 /fr/docs/Web/API/IDBRequest/blocked_event	/fr/docs/Web/API/IDBOpenDBRequest/blocked_event
+/fr/docs/Web/API/IDBTransaction/onabort	/fr/docs/conflicting/Web/API/IDBTransaction/abort_event_0945f0eeba3f0bcb487692fdcd8d6f40
+/fr/docs/Web/API/IDBTransaction/oncomplete	/fr/docs/conflicting/Web/API/IDBTransaction/complete_event
+/fr/docs/Web/API/IDBTransaction/onerror	/fr/docs/conflicting/Web/API/IDBTransaction/error_event
 /fr/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/fr/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /fr/docs/Web/API/Location.assign	/fr/docs/Web/API/Location/assign
 /fr/docs/Web/API/Location.reload	/fr/docs/Web/API/Location/reload
@@ -3704,6 +3717,7 @@
 /fr/docs/Web/API/PasswordCredential/idName	/fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41
 /fr/docs/Web/API/Performance.now()	/fr/docs/Web/API/Performance/now
+/fr/docs/Web/API/Performance/onresourcetimingbufferfull	/fr/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event
 /fr/docs/Web/API/Pointer_events/gestes_pincer_zoom	/fr/docs/Web/API/Pointer_events/Pinch_zoom_gestures
 /fr/docs/Web/API/PositionOptions	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266
 /fr/docs/Web/API/PositionOptions/enableHighAccuracy	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition
@@ -3824,6 +3838,8 @@
 /fr/docs/Web/API/WorkerGlobalScope/close	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close
 /fr/docs/Web/API/WorkerGlobalScope/onclose	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close_ad209d73ce2abfe0e3fe136acf40e5b4
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
+/fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
+/fr/docs/Web/API/XMLHttpRequestEventTarget/onload	/fr/docs/Web/API/XMLHttpRequest/load_event
 /fr/docs/Web/API/console.log	/fr/docs/Web/API/Console/log
 /fr/docs/Web/API/console.time	/fr/docs/Web/API/Console/time
 /fr/docs/Web/API/console.timeEnd	/fr/docs/Web/API/Console/timeEnd
@@ -3906,6 +3922,7 @@
 /fr/docs/Web/CSS/-ms-scroll-snap-type	/fr/docs/conflicting/Web/CSS/scroll-snap-type
 /fr/docs/Web/CSS/-ms-user-select	/fr/docs/conflicting/Web/CSS/user-select
 /fr/docs/Web/CSS/-webkit-mask-image	/fr/docs/conflicting/Web/CSS/mask-image
+/fr/docs/Web/CSS/-webkit-print-color-adjust	/fr/docs/Web/CSS/print-color-adjust
 /fr/docs/Web/CSS/:-moz-placeholder	/fr/docs/Web/CSS/:placeholder-shown
 /fr/docs/Web/CSS/:-moz-ui-invalid	/fr/docs/Web/CSS/:user-invalid
 /fr/docs/Web/CSS/:-moz-ui-valid	/fr/docs/orphaned/Web/CSS/:-moz-ui-valid
@@ -4186,6 +4203,7 @@
 /fr/docs/Web/CSS/auto	/fr/docs/conflicting/Web/CSS/width
 /fr/docs/Web/CSS/calc	/fr/docs/Web/CSS/calc()
 /fr/docs/Web/CSS/clamp	/fr/docs/Web/CSS/clamp()
+/fr/docs/Web/CSS/color-adjust	/fr/docs/conflicting/Web/CSS/print-color-adjust
 /fr/docs/Web/CSS/conic-gradient	/fr/docs/orphaned/Web/CSS/conic-gradient()
 /fr/docs/Web/CSS/conic-gradient()	/fr/docs/orphaned/Web/CSS/conic-gradient()
 /fr/docs/Web/CSS/counter	/fr/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters

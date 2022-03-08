@@ -27,7 +27,7 @@ _Hérite des propriétés de son parent {{domxref("Node")}} et implémente les i
 
 ## Méthodes
 
-*Hérite des méthodes de son parent {{domxref("Node")}}, et implémente les interfaces {{domxref("ChildNode")}} *et {{domxref("NonDocumentTypeChildNode")}}_._
+*Hérite des méthodes de ses parents, [`Node`](/fr/docs/Web/API/Node) et [`EventTarget`](/fr/docs/Web/API/EventTarget).*
 
 - {{domxref("CharacterData.appendData()")}}
   - : Ajoute la {{domxref("DOMString")}} (_chaîne de caractères_) donnée à la chaîne `CharacterData.data` ; dans le retour de la méthode, `data` contient la {{domxref("DOMString")}} concaténée .

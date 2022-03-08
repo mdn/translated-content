@@ -5,19 +5,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 ---
 <div>{{JSRef("Global_Objects", "Function")}} {{non-standard_header}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p>返回调用指定函数的函数.</p>
 
 <p>该属性不是ECMA-262第3版标准的一部分.不过, <a href="/zh-cn/SpiderMonkey" title="zh-cn/SpiderMonkey">SpiderMonkey</a> (Mozilla的JavaScript引擎) (查看{{ Bug("65683") }}), V8 (Chrome的JavaScript引擎) 和 JScript(IE的ECMAScript实现)都已经支持了它.</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>如果一个函数<code>f</code>是在全局作用域内被调用的,则<code>f.caller为</code><code>null</code>,相反,如果一个函数是在另外一个函数作用域内被调用的,则<code>f.caller指向调用它的那个函数.</code></p>
 
 <p>该属性的常用形式<code>arguments.callee.caller</code>替代了被废弃的 <a href="/zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments/caller" title="zh-cn/JavaScript/Reference/Functions_and_function_scope/arguments/caller">arguments.caller</a>.</p>
 
-<h3 id="Notes" name="Notes">备注</h3>
+<h3 id="Notes">备注</h3>
 
 <p>注意,在使用递归调用时, 你不能使用此属性来重现出调用栈.请考虑以下代码:</p>
 
@@ -50,15 +50,15 @@ while (f) {
 
 <p>有一个特殊属性 <code>__caller__</code>, 可以返回调用当前函数的函数的活动对象(可以用来重现出整个调用栈), 但由于安全原因的考虑,该属性已被删除.</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
-<h3 id="Example:_Checking_the_value_of_a_function.27s_caller_property" name="Example:_Checking_the_value_of_a_function.27s_caller_property">例子: 检测一个函数的<code>caller</code>属性的值</h3>
+<h3 id="Example:_Checking_the_value_of_a_function.27s_caller_property">例子: 检测一个函数的<code>caller</code>属性的值</h3>
 
 <p>下例用来得出一个函数是被谁调用的<code>.</code></p>
 
 <pre class="brush: js">function myFunc() {
    if (myFunc.caller == null) {
-      return ("<span><span class="string">该函数在全局作用域内被调用</span></span>!");
+      return ("该函数在全局作用域内被调用!");
    } else
       return ("调用我的是函数是" + myFunc.caller);
 }
@@ -66,4 +66,4 @@ while (f) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>Function.caller目前被所有主流浏览器支持: Firefox, Safari, Chrome, Opera 和 IE. <a class="external" href="http://dl.dropbox.com/u/534786/callertest.html" title="http://dl.dropbox.com/u/534786/callertest.html"><span style="text-decoration: underline;">查看检测结果</span></a>.</p>
+<p>Function.caller目前被所有主流浏览器支持: Firefox, Safari, Chrome, Opera 和 IE. <a class="external" href="http://dl.dropbox.com/u/534786/callertest.html" title="http://dl.dropbox.com/u/534786/callertest.html">查看检测结果</a>.</p>

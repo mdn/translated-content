@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
  <dt><code>beginIndex</code></dt>
  <dd>从该索引（以 0 为基数）处开始提取原字符串中的字符。如果值为负数，会被当做 <code>strLength + beginIndex</code> 看待，这里的<code>strLength</code> 是字符串的长度（例如， 如果 <code>beginIndex</code> 是 -3 则看作是：<code>strLength - 3</code>）</dd>
  <dt><code>endIndex</code></dt>
- <dd>可选。在该索引（以 0 为基数）处结束提取字符串。如果省略该参数，<code style="font-style: normal;">slice()</code> 会一直提取到字符串末尾。<span style="line-height: 1.5;">如果该参数为负数，则被看作是 strLength + endIndex，这里的 strLength 就是字符串的长度(例如，如果 endIndex 是 -3，则是, strLength - 3)。</span></dd>
+ <dd>可选。在该索引（以 0 为基数）处结束提取字符串。如果省略该参数，<code>slice()</code> 会一直提取到字符串末尾。如果该参数为负数，则被看作是 strLength + endIndex，这里的 strLength 就是字符串的长度(例如，如果 endIndex 是 -3，则是, strLength - 3)。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 <p>例 2：<code>str.slice(2, -1)</code> 提取第三个字符到倒数第一个字符。</p>
 
-<h2 id="Examples" name="Examples" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">例子</h2>
+<h2 id="Examples">例子</h2>
 
 <h3 id="使用_slice()_创建一个新的字符串">使用 <code>slice()</code> 创建一个新的字符串</h3>
 
@@ -73,7 +73,7 @@ str.slice(-3, -1); // 返回 'us'
 str.slice(0, -1);  // 返回 'The morning is upon us'
 </pre>
 
-<h2 id="规范" style="margin-bottom: 20px; font-size: 2.14285714285714rem;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <thead>

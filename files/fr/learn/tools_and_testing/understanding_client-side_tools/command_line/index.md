@@ -176,7 +176,7 @@ cd Bureau/projet/src
 
 Notez que si vous commencez le chemin par un slash, vous le rendez absolu, par exemple `/Utilisateurs/votre-nom/Bureau`. Omettre le premier slash comme nous l'avons fait ci-dessus construit un chemin relatif à votre répertoire de travail actuel. C'est exactement la même chose qu'une URL dans un navigateur. Un slash au début signifie "à la racine du site web", alors qu'omettre le slash signifie "l'URL est relative à ma page courante".
 
-> **Note :** Sur windows vous devez utiliser des backslashes et non des slashes, p. ex. `cd Bureau\projet\src` — cela peut vous paraître vraiment étrange, mais si la question vous intéresse,[ regardez cette vidéo YouTube](https://www.youtube.com/watch?v=5T3IJfBfBmI) (en anglais) qui présente une explication par l'un des ingénieurs principaux de Microsoft.
+> **Note :** Sur windows vous devez utiliser des backslashes et non des slashes, p. ex. `cd Bureau\projet\src` — cela peut vous paraître vraiment étrange, mais si la question vous intéresse, [regardez cette vidéo YouTube](https://www.youtube.com/watch?v=5T3IJfBfBmI) (en anglais) qui présente une explication par l'un des ingénieurs principaux de Microsoft.
 
 ### Lister le contenu d'un répertoire
 
@@ -225,7 +225,7 @@ Jouez avec elles dans un répertoire que vous aurez créé quelque part de faço
 - `cp` — d'un usage similaire à `mv`, `cp` copie le fichier à l'emplacement spécifié en premier vers celui spécifié en second. Par exemple, `cp mdn-exemple.txt mdn-exemple.txt.bak` crée une copie de `mdn-exemple.txt` nommée `mdn-exemple.txt.bak` (bien entendu vous pouvez la nommer comme vous voulez).
 - `rm` — supprimer le fichier spécifié. Par exemple, `rm mdn-exemple.txt` efface un fichier unique nommé `mdn-exemple.txt`. Notez que cet effacement est permanent et ne peut pas être annulé comme lorsque vous placez un fichier dans la corbeille de votre Bureau dans votre interface utilisateur.
 
-> **Note :** Beaucoup de commandes de terminal autorisent l'emploi d'astérisques comme caractère "joker", dont le sens est "une séquence de caractères quelconque". Cela vous permet d'exécuter une commande en une seule fois sur un nombre potentiellement important de fichiers qui correspondent au modèle donné. À titre d'exemple, `rm mdn-*` va effacer tous les fichiers qui commencent par `mdn-`. `rm mdn-*.bak` va effacer tous les fichiers qui commencent par `mdn- `et finissent par `.bak`.
+> **Note :** Beaucoup de commandes de terminal autorisent l'emploi d'astérisques comme caractère "joker", dont le sens est "une séquence de caractères quelconque". Cela vous permet d'exécuter une commande en une seule fois sur un nombre potentiellement important de fichiers qui correspondent au modèle donné. À titre d'exemple, `rm mdn-*` va effacer tous les fichiers qui commencent par `mdn-`. `rm mdn-*.bak` va effacer tous les fichiers qui commencent par `mdn-` et finissent par `.bak`.
 
 ## Le terminal — une pratique à risque ?
 

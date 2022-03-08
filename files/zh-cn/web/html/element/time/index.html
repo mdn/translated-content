@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/time
 ---
 <h2 id="概述">概述</h2>
 
-<p> HTML <em>time</em> 标签(<code>&lt;time&gt;</code>) 用来表示24小时制时间或者<a class="external" href="http://en.wikipedia.org/wiki/Gregorian_calendar">公历日期</a>，若表示日期则也可包含时间和时区。</p>
+<p> HTML <em>time</em> 标签 (<code>&lt;time&gt;</code>) 用来表示 24 小时制时间或者<a class="external" href="http://en.wikipedia.org/wiki/Gregorian_calendar">公历日期</a>，若表示日期则也可包含时间和时区。</p>
 
 <p>此元素意在以机器可读的格式表示日期和时间。 有安排日程表功能的应用可以利用这一点。</p>
 
@@ -46,9 +46,9 @@ translation_of: Web/HTML/Element/time
 
 <dl>
  <dt>{{ htmlattrdef("datetime") }}</dt>
- <dd>该属性表示此元素的时间和日期，并且属性值必须是一个<a class="external" href="http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time">有效的日期格式，并可包含时间</a>。 如果此值不能被解析为日期，元素不会有一个关联的时间戳.</dd>
+ <dd>该属性表示此元素的时间和日期，并且属性值必须是一个<a class="external" href="http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time">有效的日期格式，并可包含时间</a>。 如果此值不能被解析为日期，元素不会有一个关联的时间戳。</dd>
  <dt>{{ htmlattrdef("pubdate") }}</dt>
- <dd>(该属性仍在被WHATWG 和 W3C组织设计和讨论中.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor <a href="/zh-cn/HTML/Element/article" title="zh-cn/HTML/Element/Article">article</a> element). If true, the <code>time</code> element must have a corresponding date. Additionally, each <code>time</code> element indicating a publication date must be the only <code>time</code> element that does so for that document.</dd>
+ <dd>(该属性仍在被 WHATWG 和 W3C 组织设计和讨论中.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor <a href="/zh-cn/HTML/Element/article" title="zh-cn/HTML/Element/Article">article</a> element). If true, the <code>time</code> element must have a corresponding date. Additionally, each <code>time</code> element indicating a publication date must be the only <code>time</code> element that does so for that document.</dd>
 </dl>
 
 <h3 id="DOM_接口">DOM 接口</h3>
@@ -60,7 +60,7 @@ translation_of: Web/HTML/Element/time
 <pre class="brush: html">&lt;p&gt;The concert starts at &lt;time&gt;20:00&lt;/time&gt;.&lt;/p&gt;
 </pre>
 
-<p>上面的HTML会显示:</p>
+<p>上面的 HTML 会显示：</p>
 
 <p>The concert starts at 20:00.</p>
 
@@ -71,7 +71,7 @@ translation_of: Web/HTML/Element/time
 &lt;/article&gt;
 </pre>
 
-<p>上面的HTML会显示：</p>
+<p>上面的 HTML 会显示：</p>
 
 <p>This article was created on 2011-01-28.</p>
 
@@ -80,58 +80,10 @@ translation_of: Web/HTML/Element/time
 <pre class="brush: html">&lt;p&gt;The concert took place on &lt;time datetime="2001-05-15 19:00"&gt;May 15&lt;/time&gt;.&lt;/p&gt;
 </pre>
 
-<p>上面的HTML会显示：</p>
+<p>上面的 HTML 会显示：</p>
 
 <p>The concert took place on May 15.</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }} {{ bug("629801") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>11.50</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>{{ languages( { "en": "en/HTML/HTML_Elements/time"} ) }}</p>
+{{Compat("html.elements.time")}}

@@ -1,0 +1,64 @@
+---
+title: Animation.oncancel
+slug: Web/API/Animation/cancel_event
+tags:
+  - API
+  - Animation
+translation_of: Web/API/Animation/oncancel
+original_slug: Web/API/Animation/oncancel
+---
+<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations") }}</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a> 的 {{domxref("Animation")}} 接口的 <code><strong>oncancel</strong></code> 属性是 {{event("cancel")}} 事件的事件处理程序。</p>
+
+<p>当动作从其他状态进入 <code>"idle"</code> 播放状态，例如当动画在结束播放后从元素中移除时，<code>cancel</code> 事件可以 {{domxref("Animation.cancel()")}} 被手动触发。 </p>
+
+<div class="note">
+<p>在新的动画中，创建一个新的初始的空闲动画不会触发 {{event("cancel")}} 事件。</p>
+</div>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox">var <em>cancelHandler</em> = <em>Animation</em>.oncancel;
+
+<em>Animation</em>.oncancel = <em>cancelHandler</em>;</pre>
+
+<h3 id="值">值</h3>
+
+<p>当动画被取消时，这个函数将会被执行。默认是 <code>null</code> 。</p>
+
+<h2 id="例子">例子</h2>
+
+<p>如果动画被取消，将会从元素中移除它。</p>
+
+<pre class="brush: js">animation.oncancel = animation.effect.target.remove();
+</pre>
+
+<h2 id="标准">标准</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">标准</th>
+   <th scope="col">状态</th>
+   <th scope="col">备注</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Web Animations', '#dom-animation-oncancel', 'Animation.oncancel' )}}</td>
+   <td>{{Spec2('Web Animations')}}</td>
+   <td>编辑草案中。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+{{Compat("api.Animation.cancel_event")}}
+
+<h2 id="参见" style="line-height: 30px; font-size: 2.14285714285714rem;">参见</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
+ <li>{{domxref("Animation")}}</li>
+ <li>{{event("cancel")}} 事件</li>
+</ul>

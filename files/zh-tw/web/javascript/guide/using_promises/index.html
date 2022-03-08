@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Guide/Using_promises
 
 <p>舉例來說，下方的範例若用舊方式應該會有兩個 Callback，並根據成功或失敗來決定使用哪個：</p>
 
-<pre class="brush: js line-numbers  language-js">function successCallback(result) {
+<pre class="brush: js">function successCallback(result) {
   console.log("It succeeded with " + result);
 }
 
@@ -24,12 +24,12 @@ doSomething(successCallback, failureCallback);
 
 <p>而新作法會回傳一個 Promise，這樣你就可以附加 Callback：</p>
 
-<pre class="brush: js line-numbers  language-js">let promise = doSomething();
+<pre class="brush: js">let promise = doSomething();
 promise.then(successCallback, failureCallback);</pre>
 
 <p>再簡單點：</p>
 
-<pre class="brush: js line-numbers  language-js">doSomething().then(successCallback, failureCallback);</pre>
+<pre class="brush: js">doSomething().then(successCallback, failureCallback);</pre>
 
 <p>我們稱之為 <em>非同步函數呼叫</em>。這個做法有許多好處，我們接下來看看。</p>
 

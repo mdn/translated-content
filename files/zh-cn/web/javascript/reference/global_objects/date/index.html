@@ -18,13 +18,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">new Date();
+<pre class="syntaxbox">new Date();
 new Date(<var>value</var>);
 new Date(<var>dateString</var>);
 new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours</var> [, <var>minutes</var> [, <var>seconds</var> [, <var>milliseconds</var>]]]]]);</pre>
 
 <div class="note">
-<p>创建一个新<code>Date</code>对象的唯一方法是通过{{jsxref("Operators/new", "new")}} 操作符，例如：<code>let now = new Date();</code><br>
+<p><strong>备注：</strong>创建一个新<code>Date</code>对象的唯一方法是通过{{jsxref("Operators/new", "new")}} 操作符，例如：<code>let now = new Date();</code><br>
  若将它作为常规函数调用（即不加 {{jsxref("Operators/new", "new")}} 操作符），将返回一个字符串，而非 <code>Date</code> 对象。 </p>
 </div>
 
@@ -41,13 +41,10 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 <dl>
  <dt><code>value</code></dt>
  <dd>一个 Unix 时间戳（<a href="http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">Unix Time Stamp</a>），它是一个整数值，表示自1970年1月1日00:00:00 UTC（the Unix epoch）以来的毫秒数，忽略了闰秒。请注意大多数 Unix 时间戳功能仅精确到最接近的秒。</dd>
- <dt>
- <h4 id="时间戳字符串">时间戳字符串</h4>
- </dt>
- <dt><code>dateString</code></dt>
- <dd>表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 <a href="http://tools.ietf.org/html/rfc2822#page-14" style="white-space: pre-line;">IETF-compliant RFC 2822 timestamps</a> 或 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">version of ISO8601</a>）。
+ <dt>时间戳字符串 <code>dateString</code></dt>
+ <dd>表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 <a href="http://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822 timestamps</a> 或 <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">version of ISO8601</a>）。
  <div class="note">
- <p><strong>注意:</strong> 由于浏览器之间的差异与不一致性，强烈不推荐使用<code>Date</code>构造函数来解析日期字符串 (或使用与其等价的<code>Date.parse</code>)。对 RFC 2822 格式的日期仅有约定俗成的支持。 对 ISO 8601 格式的支持中，仅有日期的串 (例如 "1970-01-01") 会被处理为 UTC 而不是本地时间，与其他格式的串的处理不同。</p>
+ <p><strong>备注：</strong>由于浏览器之间的差异与不一致性，强烈不推荐使用<code>Date</code>构造函数来解析日期字符串 (或使用与其等价的<code>Date.parse</code>)。对 RFC 2822 格式的日期仅有约定俗成的支持。 对 ISO 8601 格式的支持中，仅有日期的串 (例如 "1970-01-01") 会被处理为 UTC 而不是本地时间，与其他格式的串的处理不同。</p>
  </div>
  </dd>
 </dl>
@@ -76,15 +73,15 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 <h2 id="使用注释">使用注释</h2>
 
 <div class="note">
-<p><strong>注意 参数</strong><code>monthIndex</code> 是从“0”开始计算的，这就意味着一月份为“0”，十二月份为“11”。</p>
+<p><strong>备注：</strong>参数<code>monthIndex</code> 是从“0”开始计算的，这就意味着一月份为“0”，十二月份为“11”。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>当Date作为构造函数调用并传入多个参数时，如果数值大于合理范围时（如月份为 13 或者分钟数为 70），相邻的数值会被调整。比如 new Date(2013, 13, 1)等于new Date(2014, 1, 1)，它们都表示日期2014-02-01（注意月份是从0开始的）。其他数值也是类似，new Date(2013, 2, 1, 0, 70)等于new Date(2013, 2, 1, 1, 10)，都表示同一个时间：<code>2013-03-01T01:10:00</code>。</p>
+<p><strong>备注：</strong>当Date作为构造函数调用并传入多个参数时，如果数值大于合理范围时（如月份为 13 或者分钟数为 70），相邻的数值会被调整。比如 new Date(2013, 13, 1)等于new Date(2014, 1, 1)，它们都表示日期2014-02-01（注意月份是从0开始的）。其他数值也是类似，new Date(2013, 2, 1, 0, 70)等于new Date(2013, 2, 1, 1, 10)，都表示同一个时间：<code>2013-03-01T01:10:00</code>。</p>
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>当Date作为构造函数调用并传入多个参数时，所定义参数代表的是当地时间。如果需要使用世界协调时 UTC，使用 <code>new Date({{jsxref("Date.UTC()", "Date.UTC(...)")}})</code> 和相同参数。</p>
+<p><strong>备注：</strong>当Date作为构造函数调用并传入多个参数时，所定义参数代表的是当地时间。如果需要使用世界协调时 UTC，使用 <code>new Date({{jsxref("Date.UTC()", "Date.UTC(...)")}})</code> 和相同参数。</p>
 </div>
 
 <h2 id="简介">简介</h2>
@@ -115,7 +112,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
  <dt>{{jsxref("Date.parse()")}}</dt>
  <dd>解析一个表示日期的字符串，并返回从 1970-1-1 00:00:00 所经过的毫秒数。
  <div class="note">
- <p><strong>注意:</strong> 由于浏览器差异和不一致，强烈建议不要使用<code>Date.parse</code>解析字符串。</p>
+ <p><strong>备注：</strong> 由于浏览器差异和不一致，强烈建议不要使用<code>Date.parse</code>解析字符串。</p>
  </div>
  </dd>
  <dt>{{jsxref("Date.UTC()")}}</dt>
@@ -144,10 +141,10 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 <p>下例展示了用来创建一个日期对象的多种方法。</p>
 
 <div class="note">
-<p><strong>注意:</strong> 由于浏览器差异和不一致性，强烈建议不要使用<code>Date</code>构造函数（和<code>Date.parse</code>，它们是等效的）解析日期字符串。</p>
+<p><strong>备注：</strong> 由于浏览器差异和不一致性，强烈建议不要使用<code>Date</code>构造函数（和<code>Date.parse</code>，它们是等效的）解析日期字符串。</p>
 </div>
 
-<pre class="brush: js notranslate">var today = new Date();
+<pre class="brush: js">var today = new Date();
 var birthday = new Date('December 17, 1995 03:24:00');
 var birthday = new Date('1995-12-17T03:24:00');
 var birthday = new Date(1995, 11, 17);
@@ -158,7 +155,7 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
 
 <p>为了创建和获取 0 到 99 之间的年份，应使用 {{jsxref("Date.prototype.setFullYear()")}} 和 {{jsxref("Date.prototype.getFullYear()")}} 方法。</p>
 
-<pre class="brush: js notranslate">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+<pre class="brush: js">var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // 已弃用的方法, 同样将 98 映射为 1998
 date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
@@ -172,7 +169,7 @@ date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 
 <p>由于不同日期、月份、年份长度的不同（日期长度不同来自夏令时的切换），使用大于秒、分钟、小时的单位表示经过的时间会遇到很多问题，在使用前需要经过详尽的调研。</p>
 
-<pre class="brush: js notranslate">// 使用 Date 对象
+<pre class="brush: js">// 使用 Date 对象
 var start = Date.now();
 
 // 调用一个消耗一定时间的方法：
@@ -180,7 +177,7 @@ doSomethingForALongTime();
 var end = Date.now();
 var elapsed = end - start; // 以毫秒计的运行时长</pre>
 
-<pre class="brush: js notranslate">// 使用内建的创建方法
+<pre class="brush: js">// 使用内建的创建方法
 var start = new Date();
 
 // 调用一个消耗一定时间的方法：
@@ -188,7 +185,7 @@ doSomethingForALongTime();
 var end = new Date();
 var elapsed = end.getTime() - start.getTime(); // 运行时间的毫秒值</pre>
 
-<pre class="brush: js notranslate" dir="ltr">// to test a function and get back its return
+<pre class="brush: js">// to test a function and get back its return
 function printElapsedTime (fTest) {
     var nStartTime = Date.now(),
         vReturn = fTest(),
@@ -200,12 +197,12 @@ yourFunctionReturn = printElapsedTime(yourFunction);
 </pre>
 
 <div class="note">
-<p>注意：在支持 {{domxref("window.performance", "Web Performance API")}} 的高精细度（high-resolution）时间功能的浏览器中，{{domxref("Performance.now()")}} 提供的所经过的时间比 {{jsxref("Date.now()")}} 更加可靠、精确。</p>
+<p><strong>备注：</strong>在支持 {{domxref("window.performance", "Web Performance API")}} 的高精细度（high-resolution）时间功能的浏览器中，{{domxref("Performance.now()")}} 提供的所经过的时间比 {{jsxref("Date.now()")}} 更加可靠、精确。</p>
 </div>
 
 <h3 id="获取自_Unix_起始时间以来经过的秒数">获取自 Unix 起始时间以来经过的秒数</h3>
 
-<pre class="brush: js notranslate">var seconds = Math.floor(Date.now() / 1000);</pre>
+<pre class="brush: js">var seconds = Math.floor(Date.now() / 1000);</pre>
 
 <p>注意此处需要返回一个整数 （仅做除法得到的不是整数），并且需要返回实际已经经过的秒数（所以这里使用了{{jsxref("Math.floor()")}}而不是{{jsxref("Math.round()")}}).</p>
 

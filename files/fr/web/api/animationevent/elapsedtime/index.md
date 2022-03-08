@@ -14,7 +14,7 @@ translation_of: Web/API/AnimationEvent/elapsedTime
 
 ## Résumé
 
-La propriété en lecture seule **`AnimationEvent.elapsedTime`** est un `float` indiquant la quantité de temps pendant laquelle l'animation a tournée, en secondes, quand l'évènement a été déclenché, excluant tout temps où l'animation était en pause. Pour un évènement ` "animationstart", ``elapsedTime` est `0.0` sauf si {{cssxref("animation-delay")}} a une valeur négative, dans ce cas l'évènement est déclenché avec `elapsedTime `contenant `(-1 * `_délai_`)`.
+La propriété en lecture seule **`AnimationEvent.elapsedTime`** est un `float` indiquant la quantité de temps pendant laquelle l'animation a tourné, en secondes, quand l'évènement a été déclenché, excluant tout temps où l'animation était en pause. Pour un évènement [`animationstart`](/fr/docs/Web/API/HTMLElement/animationstart_event), `elapsedTime` est `0.0` sauf si [`animation-delay`](/fr/docs/Web/CSS/animation-delay) a une valeur négative, dans ce cas l'évènement est déclenché avec `elapsedTime` contenant `(-1 * délai)`.
 
 ## Syntaxe
 

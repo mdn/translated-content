@@ -25,16 +25,16 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
 
 - {{ SVGAttr("cx") }}
   - : La position x de l'ellipse.
-    Type de valeur : **[\<longueur>](/fr/docs/Web/SVG/Content_type#Length)**|[\<pourcentage>](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `0`; Animable : **oui**.
+    Type de valeur : [**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut :`0`; Animable : **oui**.
 - {{ SVGAttr("cy") }}
   - : La position y de l'ellipse.
-    Type de valeur : **[\<longueur>](/fr/docs/Web/SVG/Content_type#Length)**|[\<pourcentage>](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `0`; Animable : **oui**.
+    Type de valeur : [**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut :`0`; Animable :**oui**.
 - {{ SVGAttr("rx") }}
   - : Le rayon de l'ellipse sur l'axe x.
-    Type de valeur : `auto`|**[\<longueur>](/fr/docs/Web/SVG/Content_type#Length)**|[\<pourcentage>](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `auto`; Animable : **oui**.
+    Type de valeur : `auto`|[**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut :`auto`; Animable : **oui**.
 - {{ SVGAttr("ry") }}
   - : Le rayon de l'ellipse sur l'axe y.
-    Type de valeur : `auto`|**[\<longueur>](/fr/docs/Web/SVG/Content_type#Length)**|[\<pourcentage>](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut : `auto`; Animable : **oui**.
+    Type de valeur : `auto`|[**`<longueur>`**](/fr/docs/Web/SVG/Content_type#Length)|[**`<pourcentage>`**](/fr/docs/Web/SVG/Content_type#Percentage); Valeur par défaut :`auto`; Animable : **oui**.
 - {{ SVGAttr("pathLength") }}
   - : Cet attribut permet de spécifier la longueur totale du tracé, en unités de l'utilisateur.
     Type de valeur : **[\<number>](/fr/docs/Web/SVG/Content_type#Number)**; Valeur par défaut : `auto`; Animable : **oui**.

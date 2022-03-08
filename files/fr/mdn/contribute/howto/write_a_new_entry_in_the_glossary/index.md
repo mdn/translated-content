@@ -14,7 +14,7 @@ Le [glossaire](/fr/docs/Glossary) MDN est le lieu privilégié où nous définis
 
 ## Comment créer une entrée
 
-Pour trouver des sujets ayant besoin d'entrées de glossaire, consultez la [liste des termes à documenter ](/fr/docs/Glossary#Contribute_to_the_glossary)à la fin de la page concernant le sujet en question ; cliquez n'importe lequel de ses liens pour commencer une nouvelle page de glossaire, puis suivez les étapes ci-dessous.
+Pour trouver des sujets ayant besoin d'entrées de glossaire, consultez la [liste des termes à documenter](/fr/docs/Glossary#Contribute_to_the_glossary) à la fin de la page concernant le sujet en question ; cliquez n'importe lequel de ses liens pour commencer une nouvelle page de glossaire, puis suivez les étapes ci-dessous.
 
 ### Étape 1: écrire un résumé
 
@@ -67,7 +67,7 @@ Le glossaire devient beaucoup plus utile lorsque le lecteur peut atteindre les d
 | ---------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \\{{Glossary("browser")}}                         | {{Glossary("browser")}}                     | Quand un terme correspond à un terme à définir, utilisez simplement la macro telle quelle (notez qu'elle est sensible à la casse — minuscule/majuscule) |
 | \\{{Glossary("browser", "Web browser")}}     | {{Glossary("browser","Web browser")}}     | Fournissez en deuxième argument un texte alternatif à afficher.                                                                                         |
-| \\{{Glossary("browser", "Web browser", 1)}} | {{Glossary("browser","Web browser",1)}} | Optionnellement, entrez le chiffre` 1` comme troisième argument pour afficher le lien de façon classique plutôt que comme une mise en exergue subtile.  |
+| \\{{Glossary("browser", "Web browser", 1)}} | {{Glossary("browser","Web browser",1)}} | Optionnellement, entrez le chiffre `1` comme troisième argument pour afficher le lien de façon classique plutôt que comme une mise en exergue subtile.  |
 
 Les liens créés avec la macro \\{{Glossary}} affichent toujours un texte au survol de la souris, qui contient le résumé de l'entrée du glossaire (cf. ci-dessus).
 

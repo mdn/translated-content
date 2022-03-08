@@ -160,76 +160,7 @@ translation_of: Web/API/CloseEvent
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoDesktop("8.0")}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop("12.0")}}<sup>[2]</sup></td>
-   <td>10</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>initCloseEvent</code><code>()</code> {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("8.0")}}<br>
-    {{CompatNo}} 41.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatGeckoMobile("8.0")}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>initCloseEvent</code><code>()</code> {{Non-standard_inline}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("8.0")}}<br>
-    {{CompatNo}} 41.0</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Gecko 8.0 {{geckoRelease("8.0")}} 以前, Gecko ?简单地发送 {{event("close")}} ?事件给 WebSocket ?监听器. ?对 <code>CloseEvent</code> ?的支持是在 Gecko 8.0 实现的.</p>
-
-<p>[2] Gecko 12.0 {{geckoRelease("12.0")}} 以前, Gecko 当通道由于未知错误关闭, 或是错误原因不在标准之内时会上报 <code>CLOSE_NORMAL</code> <code>状态码</code>. ?现在则使用 <code>CLOSE_GOING_AWAY</code> 代替.</p>
+{{Compat("api.CloseEvent")}}
 
 <h2 id="参考">参考</h2>
 

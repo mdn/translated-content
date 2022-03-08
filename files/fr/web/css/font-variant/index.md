@@ -38,7 +38,7 @@ font-variant: unset;
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
   - : Définit le mot-clé relatif à la propriété {{cssxref("font-variant-caps")}}.
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-  - : Définit la valeur de la propriété {{cssxref("font-variant-numeric")}}. Les valeurs possibles sont `lining-nums`,` oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, et `slashed-zero.`
+  - : Définit la valeur de la propriété {{cssxref("font-variant-numeric")}}. Les valeurs possibles sont `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, et `slashed-zero.`
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
   - : Définit la valeur de la propriété {{cssxref("font-variant-east-asian")}}. Les valeurs possibles sont: `jis78`, `jis83`,`jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, `ruby`.
 

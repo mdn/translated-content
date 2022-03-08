@@ -33,7 +33,7 @@ translation_of: Web/HTML/Element/audio
  <dt>{{htmlattrdef("controls")}}</dt>
  <dd>如果声明了该属性，浏览器将提供一个包含声音，播放进度，播放暂停的控制面板，让用户可以控制音频的播放。</dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>枚举属性  展示音频资源是否可以通过CORS加载。<a href="/zh-CN/docs/CORS_Enabled_Image">支持CORS的资源 </a> 可以被 {{HTMLElement("canvas")}} 元素复用而不污染. 可选值如下：
+ <dd>枚举属性  展示音频资源是否可以通过 CORS 加载。<a href="/zh-CN/docs/CORS_Enabled_Image">支持 CORS 的资源 </a> 可以被 {{HTMLElement("canvas")}} 元素复用而不污染。可选值如下：
  <dl>
   <dt><code>anonymous</code></dt>
   <dd>在发送跨域请求时不携带验证信息。换句话说，浏览器在发送<code>Origin:</code> HTTP 请求首部时将不携带 cookie、 X.509 安全令牌、也不会执行任何 HTTP 基本认证。如果服务器没有给予源站信任（也就是说没有设置 <code>Access-Control-Allow-Origin:</code> 响应首部），那么图片就被认为是污染的，它就会被限制使用。</dd>
@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/audio
  <p>如果音频是以流的形式加载的，并且数据超出了媒体的缓冲区（buffer），{{Glossary("user agent")}} 可能无法获取资源的某些部分。另一些音频的时间轴可能并非从 0 秒开始，所以设置 <code>currentTime</code> 到一个开始时间之前的时间可能会失败。举个例子，如果音频媒体的时间轴从 12 小时开始，把 <code>currentTime</code> 设置到 3600 将会尝试把当前播放位置设置到媒体的开始位置之前，从而导致错误。{{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} 方法能够用于确定媒体时间轴的开始位置。</p>
  </dd>
  <dt>{{htmlattrdef("disableRemotePlayback")}} {{experimental_inline}}</dt>
- <dd>这是一个布尔值，用来禁用在远程设备上进行进度控制的能力。这些设备通过有线（比如 HDMI, DVI）或无线技术（比如Miracast, Chromecast, DLNA, AirPlay,）来与 web 连接。请参考  <a href="https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute">this proposed specification</a> 来获取更多信息。
+ <dd>这是一个布尔值，用来禁用在远程设备上进行进度控制的能力。这些设备通过有线（比如 HDMI, DVI）或无线技术（比如 Miracast, Chromecast, DLNA, AirPlay,）来与 web 连接。请参考  <a href="https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute">this proposed specification</a> 来获取更多信息。
  <div class="blockIndicator note">
  <p>在 Safari 中，你能使用 <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html"><code>x-webkit-airplay="deny"</code></a> 作为兜底方案。</p>
  </div>
@@ -80,7 +80,7 @@ translation_of: Web/HTML/Element/audio
  </div>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>嵌入的音频的URL。 该URL应遵从 <a href="/en-US/docs/HTTP_access_control">HTTP access controls</a>. 这是一个可选属性；你可以在audio元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。</dd>
+ <dd>嵌入的音频的 URL。 该 URL 应遵从 <a href="/en-US/docs/HTTP_access_control">HTTP access controls</a>. 这是一个可选属性；你可以在 audio 元素中使用 {{htmlelement("source")}} 元素来替代该属性指定嵌入的音频。</dd>
 </dl>
 
 <h2 id="事件">事件</h2>
@@ -248,7 +248,7 @@ translation_of: Web/HTML/Element/audio
 </dl>
 
 <div class="blockIndicator note">
-<p><strong>注意:尽管是 </strong><code>&lt;audio&gt;</code> 元素，但它依然有视频以及文字的轨道列表，并且实际上能够用来展示视频，尽管应用接口的使用可能显得很古怪。 </p>
+<p><strong>注意：尽管是 </strong><code>&lt;audio&gt;</code> 元素，但它依然有视频以及文字的轨道列表，并且实际上能够用来展示视频，尽管应用接口的使用可能显得很古怪。 </p>
 </div>
 
 <p>举个例子，为了侦测何时音轨从一个 <code>&lt;audio&gt;</code> 元素中添加或者移除，你可以使用如下代码：</p>
@@ -296,7 +296,7 @@ elem.audioTrackList.onremovetrack = function(event) {
 
 <h3 id="&lt;audio>_与多个_&lt;source>_元素">&lt;audio&gt; 与多个 &lt;source&gt; 元素</h3>
 
-<p>这个例子包含了多个 <code>&lt;source&gt;</code> 元素。如果能够播放的话，浏览器就会试图去加载第一个 source 元素（Opus 后缀名）；如果不行，那就退而求其次去加载第二个(Vorbis 后缀名)，最终退到了 MP3 格式：</p>
+<p>这个例子包含了多个 <code>&lt;source&gt;</code> 元素。如果能够播放的话，浏览器就会试图去加载第一个 source 元素（Opus 后缀名）；如果不行，那就退而求其次去加载第二个 (Vorbis 后缀名)，最终退到了 MP3 格式：</p>
 
 <pre class="notranslate">&lt;audio controls&gt;
  &lt;source src="foo.opus" type="audio/ogg; codecs=opus"/&gt;
@@ -376,11 +376,11 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
    <td>任何能够作为容器的元素</td>
   </tr>
   <tr>
-   <th scope="row">隐式ARIA role</th>
+   <th scope="row">隐式 ARIA role</th>
    <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">No corresponding role</a></td>
   </tr>
   <tr>
-   <th scope="row">合法de ARIA roles</th>
+   <th scope="row">合法 de ARIA roles</th>
    <td>{{ARIARole("application")}}</td>
   </tr>
   <tr>

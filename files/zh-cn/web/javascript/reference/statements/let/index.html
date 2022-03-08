@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Statements/let
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<div></div>
+
 
 <div><strong>let</strong> 语句声明一个块级作用域的本地变量，并且可选的将其初始化为一个值。</div>
 
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Statements/let
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];</pre>
+<pre class="syntaxbox">let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -46,7 +46,7 @@ translation_of: Web/JavaScript/Reference/Statements/let
 
 <p><code><strong>let</strong></code>声明的变量只在其声明的块或子块中可用，这一点，与<code><strong>var</strong></code>相似。二者之间最主要的区别在于<code><strong>var</strong></code>声明的变量的作用域是整个封闭函数。</p>
 
-<pre class="brush: js notranslate">function varTest() {
+<pre class="brush: js">function varTest() {
   var x = 1;
   {
     var x = 2;  // 同样的变量!
@@ -65,11 +65,11 @@ function letTest() {
 }
 </pre>
 
-<p id="Scoping_rules">在程序和方法的最顶端，<strong><code>let</code></strong>不像 <strong><code>var</code></strong> 一样，<strong><code>let</code></strong>不会在全局对象里新建一个属性。比如：</p>
+<p>在程序和方法的最顶端，<strong><code>let</code></strong>不像 <strong><code>var</code></strong> 一样，<strong><code>let</code></strong>不会在全局对象里新建一个属性。比如：</p>
 
 <p>位于函数或代码顶部的<strong><code>var</code></strong>声明会给全局对象新增属性, 而<strong><code>let</code></strong>不会。例如:</p>
 
-<pre class="brush: js notranslate">var x = 'global';
+<pre class="brush: js">var x = 'global';
 let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
@@ -79,7 +79,7 @@ console.log(this.y); // undefined
 
 <p>在处理<a href="https://developer.mozilla.org/en-US/docs/Glossary/Constructor">构造函数</a>的时候，可以通过<code><strong>let</strong></code>声明而不是闭包来创建一个或多个私有成员。</p>
 
-<pre class="brush: js notranslate">var Thing;
+<pre class="brush: js">var Thing;
 
 {
   let privateScope = new WeakMap();
@@ -122,7 +122,7 @@ thing.showPrivate();
 
 <p>在同一个函数或块作用域中重复声明同一个变量会引起{{jsxref("SyntaxError")}}。</p>
 
-<pre class="brush: js example-bad notranslate">if (x) {
+<pre class="brush: js example-bad">if (x) {
   let foo;
   let foo; // SyntaxError thrown.
 }
@@ -130,7 +130,7 @@ thing.showPrivate();
 
 <p>在 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/switch"><code>switch</code></a> 语句中只有一个块，你可能因此而遇到错误。</p>
 
-<pre class="brush: js example-bad notranslate">let x = 1;
+<pre class="brush: js example-bad">let x = 1;
 switch(x) {
   case 0:
     let foo;
@@ -144,7 +144,7 @@ switch(x) {
 
 <p>然而，需要特别指出的是，一个嵌套在 case 子句中的块会创建一个新的块作用域的词法环境，就不会产生上诉重复声明的错误。</p>
 
-<pre class="notranslate">let x = 1;
+<pre>let x = 1;
 
 switch(x) {
   case 0: {
@@ -162,7 +162,7 @@ switch(x) {
 
 <p>与通过  <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var</a></code> 声明的有初始化值 <code>undefined</code> 的变量不同，通过 <code>let</code> 声明的变量直到它们的定义被执行时才初始化。在变量初始化前访问该变量会导致 <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code>。该变量处在一个自块顶部到初始化处理的“暂存死区”中。</p>
 
-<pre class="brush: js notranslate">function do_something() {
+<pre class="brush: js">function do_something() {
   console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
@@ -173,7 +173,7 @@ switch(x) {
 
 <p>与通过<code>var</code>声明的变量, 有初始化值 <code>undefined</code>和只是未声明的变量不同的是，如果使用<code>typeof</code>检测在暂存死区中的变量, 会抛出<code>ReferenceError</code>异常:</p>
 
-<pre class="notranslate"><code>// prints out 'undefined'
+<pre><code>// prints out 'undefined'
 console.log(typeof undeclaredVariable);
 
 // results in a 'ReferenceError'
@@ -189,7 +189,7 @@ let i = 10;</code>
 
 <p>这个if块里的<code>foo</code>还依旧在暂存死区里。</p>
 
-<pre class="brush: js example-bad notranslate">function test(){
+<pre class="brush: js example-bad">function test(){
    var foo = 33;
    if (foo) {
       let foo = (foo + 55); // ReferenceError
@@ -201,7 +201,7 @@ test();</pre>
 
 <p>在没有执行到它的初始化语句之前，它仍旧存在于暂存死区中。</p>
 
-<pre class="brush: js example-bad notranslate">function go(n) {
+<pre class="brush: js example-bad">function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
@@ -216,7 +216,7 @@ go({a: [1, 2, 3]});</pre>
 
 <p>用在块级作用域中时, <strong><code>let</code></strong>将变量的作用域限制在块内, 而<code><strong>var</strong></code>声明的变量的作用域是在函数内.</p>
 
-<pre class="brush: js notranslate">var a = 1;
+<pre class="brush: js">var a = 1;
 var b = 2;
 
 if (a === 1) {
@@ -232,7 +232,7 @@ console.log(b); // 2</pre>
 
 <p>而这种<code><strong>var</strong></code> 与 <strong><code>let</code></strong>合并的声明方式会报<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>错误, 因为<code><strong>var</strong></code>会将变量提升至块的顶部, 这会导致隐式地重复声明变量.</p>
 
-<pre class="brush: js example-bad notranslate">let x = 1;
+<pre class="brush: js example-bad">let x = 1;
 
 {
   var x = 2; // SyntaxError for re-declaration

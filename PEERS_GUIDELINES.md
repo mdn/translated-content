@@ -39,9 +39,10 @@ The review teams for each locale are:
 - French (`fr`) content — the
 [@yari-content-fr](https://github.com/orgs/mdn/teams/yari-content-fr)
   team, which consists of:
-  - [@tristantheb](https://github.com/tristantheb)
-  - [@SphinxKnight](https://github.com/SphinxKnight)
   - [@audrasjb](https://github.com/audrasjb)
+  - [@cw118](https://github.com/cw118)
+  - [@SphinxKnight](https://github.com/SphinxKnight)
+  - [@tristantheb](https://github.com/tristantheb)
 - Japanese (`ja`) content — the
 [@yari-content-ja](https://github.com/orgs/mdn/teams/yari-content-ja)
   team, which consists of:
@@ -65,7 +66,6 @@ The review teams for each locale are:
   team, which consists of:
   - [@armanpwnz](https://github.com/armanpwnz)
   - [@captainspring](https://github.com/captainspring)
-  - [@mpstv](https://github.com/mpstv)
   - [@myshov](https://github.com/myshov)
   - [@Saionaro](https://github.com/Saionaro)
   - [@sashasushko](https://github.com/sashasushko)

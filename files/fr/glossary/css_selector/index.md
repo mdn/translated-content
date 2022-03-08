@@ -66,11 +66,11 @@ Le contenu de la page résultant ressemble à ceci:
 - [Apprendre sur les sélecteurs CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Les_s%C3%A9lecteurs) dans notre introduction à CSS.
 - Sélecteurs de base
 
-  - [Sélecteurs de type](/fr/docs/Web/CSS/S%C3%A9lecteurs_de_type)` elementname`
+  - [Sélecteurs de type](/fr/docs/Web/CSS/S%C3%A9lecteurs_de_type) `elementname`
   - [Sélecteurs de classe](/fr/docs/Web/CSS/Sélecteurs_de_classe) `.classname`
   - [Sélecteurs d'ID](/fr/docs/Web/CSS/Reference/Sélecteurs_d'ID) `#idname`
-  - [Sélecteurs universels](/fr/docs/Web/CSS/Sélecteurs_universels)` * ns|* *|*`
-  - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Reference/Sélecteurs_d'attribut)` [attr=value]`
+  - [Sélecteurs universels](/fr/docs/Web/CSS/Sélecteurs_universels) `* ns|* *|*`
+  - [Sélecteurs d'attribut](/fr/docs/Web/CSS/Reference/Sélecteurs_d'attribut) `[attr=value]`
   - [`Sélecteurs d'état`](/fr/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
 - Combinaisons

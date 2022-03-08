@@ -2943,7 +2943,7 @@
       "madmaxdios"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Concepts": {
+  "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-11-19T20:30:13.091Z",
     "contributors": [
       "AndresSalomon1990",
@@ -4743,6 +4743,12 @@
       "IngoBongo"
     ]
   },
+  "Web/API/Animation/cancel_event": {
+    "modified": "2019-03-23T22:05:09.237Z",
+    "contributors": [
+      "IngoBongo"
+    ]
+  },
   "Web/API/Animation/currentTime": {
     "modified": "2019-03-23T22:05:12.506Z",
     "contributors": [
@@ -4761,6 +4767,12 @@
       "IngoBongo"
     ]
   },
+  "Web/API/Animation/finish_event": {
+    "modified": "2019-03-23T22:05:11.188Z",
+    "contributors": [
+      "IngoBongo"
+    ]
+  },
   "Web/API/Animation/finished": {
     "modified": "2019-03-23T22:05:06.573Z",
     "contributors": [
@@ -4769,18 +4781,6 @@
   },
   "Web/API/Animation/id": {
     "modified": "2019-03-18T21:15:30.202Z",
-    "contributors": [
-      "IngoBongo"
-    ]
-  },
-  "Web/API/Animation/oncancel": {
-    "modified": "2019-03-23T22:05:09.237Z",
-    "contributors": [
-      "IngoBongo"
-    ]
-  },
-  "Web/API/Animation/onfinish": {
-    "modified": "2019-03-23T22:05:11.188Z",
     "contributors": [
       "IngoBongo"
     ]
@@ -4899,6 +4899,14 @@
       "palfrei"
     ]
   },
+  "Web/API/BatteryManager/chargingchange_event": {
+    "modified": "2019-03-23T23:25:06.308Z",
+    "contributors": [
+      "fscholz",
+      "Pau_Ilargia",
+      "voylinux"
+    ]
+  },
   "Web/API/BatteryManager/dischargingTime": {
     "modified": "2019-03-23T23:27:15.312Z",
     "contributors": [
@@ -4918,15 +4926,7 @@
       "voylinux"
     ]
   },
-  "Web/API/BatteryManager/onchargingchange": {
-    "modified": "2019-03-23T23:25:06.308Z",
-    "contributors": [
-      "fscholz",
-      "Pau_Ilargia",
-      "voylinux"
-    ]
-  },
-  "Web/API/BatteryManager/onlevelchange": {
+  "Web/API/BatteryManager/levelchange_event": {
     "modified": "2019-03-23T23:25:08.174Z",
     "contributors": [
       "fscholz",
@@ -6627,7 +6627,7 @@
       "cm_rocanroll"
     ]
   },
-  "Web/API/FileReader/onload": {
+  "Web/API/FileReader/load_event": {
     "modified": "2019-03-23T22:18:25.451Z",
     "contributors": [
       "DaniMartiRamirez"
@@ -9142,7 +9142,7 @@
       "darioperez"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
+  "Web/API/XMLHttpRequest/readystatechange_event": {
     "modified": "2019-03-23T22:20:14.868Z",
     "contributors": [
       "Sheppy",
@@ -9630,13 +9630,6 @@
       "AlePerez92",
       "teoli",
       "natav",
-      "pekechis"
-    ]
-  },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2019-03-23T22:35:50.908Z",
-    "contributors": [
-      "teoli",
       "pekechis"
     ]
   },
@@ -12876,6 +12869,13 @@
       "teoli",
       "Mgjbot",
       "HenryGR"
+    ]
+  },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2019-03-23T22:35:50.908Z",
+    "contributors": [
+      "teoli",
+      "pekechis"
     ]
   },
   "Web/CSS/quotes": {

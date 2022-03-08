@@ -35,7 +35,7 @@ translation_of: Web/HTML/Element/table
      <li>一个可选的 {{HTMLElement("caption")}} 元素</li>
      <li>零个或多个的 {{HTMLElement("colgroup")}} 元素</li>
      <li>一个可选的 {{HTMLElement("thead")}} 元素</li>
-     <li>下列任意一个:
+     <li>下列任意一个：
       <ul>
        <li>零个或多个 {{HTMLElement("tbody")}}</li>
        <li>零个或多个 {{HTMLElement("tr")}}</li>
@@ -56,7 +56,7 @@ translation_of: Web/HTML/Element/table
    <td>任何支持<a href="/en-US/docs/HTML/Content_categories#Flow_content">流内容</a>的元素</td>
   </tr>
   <tr>
-   <th scope="row">允许的ARIA 角色</th>
+   <th scope="row">允许的 ARIA 角色</th>
    <td>Any</td>
   </tr>
   <tr>
@@ -68,18 +68,18 @@ translation_of: Web/HTML/Element/table
 
 <h2 id="属性"> 属性</h2>
 
-<p><span style="line-height: 21px;">表格标签支持</span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">全局属性</a><span style="line-height: 21px;">。下面列出的属性现在已经弃用（请使用CSS代替）。</span></p>
+<p><span style="line-height: 21px;">表格标签支持</span><a href="https://developer.mozilla.org/en-US/docs/HTML/Global_attributes" style="line-height: 21px;" title="HTML/Global attributes">全局属性</a><span style="line-height: 21px;">。下面列出的属性现在已经弃用（请使用 CSS 代替）。</span></p>
 
 <dl>
  <dt>{{htmlattrdef("align")}} {{Deprecated_inline}}</dt>
- <dd> 这个枚举属性指定了包含在文档中的表格必须如何对齐。有如下值:
+ <dd> 这个枚举属性指定了包含在文档中的表格必须如何对齐。有如下值：
  <ul>
   <li><span>left</span>，表格将在文档左侧显示；</li>
   <li><span>center，</span> 表格将在文档中央显示；</li>
   <li><span>right</span>， 表格将在文档右侧显示；</li>
  </ul>
 
- <div class="note"><strong>小贴士: </strong>
+ <div class="note"><strong>小贴士：</strong>
 
  <ul>
   <li><strong>不要使用这个属性</strong>，它已经不赞成被使用。  {{HTMLElement("table")}} 元素应该使用<a href="/en-US/docs/CSS" title="CSS">CSS</a> 制定样式。设置 {{cssxref("margin-left")}} 、{{cssxref("margin-right")}} 为 <code>auto</code> ( 或者 {{cssxref("margin")}} <code>设置为 0 auto</code>) 来实现类似于 align 属性的效果。</li>
@@ -91,7 +91,7 @@ translation_of: Web/HTML/Element/table
 
 <dl>
  <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
- <dd>这个属性定义了表格的背景颜色。 它是一个6位的十六进制编码，定义于 <a class="external" href="http://www.w3.org/Graphics/Color/sRGB">sRGB</a>，需要加上'#'作为前缀。 当然也可以使用下面已经被预先定义的字符串，来表示常用的16种颜色：
+ <dd>这个属性定义了表格的背景颜色。 它是一个 6 位的十六进制编码，定义于 <a class="external" href="http://www.w3.org/Graphics/Color/sRGB">sRGB</a>，需要加上'#'作为前缀。 当然也可以使用下面已经被预先定义的字符串，来表示常用的 16 种颜色：
  <table>
   <tbody>
    <tr>
@@ -145,14 +145,14 @@ translation_of: Web/HTML/Element/table
   </tbody>
  </table>
 
- <div class="note"><strong>小贴士: </strong>不要使用这个属性, 该属性已废弃，{{HTMLElement("table")}} 元素应当使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定制样式。 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 中的 {{cssxref("background-color")}} 属性能够和bgcolor属性达到一样的效果。</div>
+ <div class="note"><strong>小贴士：</strong>不要使用这个属性，该属性已废弃，{{HTMLElement("table")}} 元素应当使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定制样式。 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 中的 {{cssxref("background-color")}} 属性能够和 bgcolor 属性达到一样的效果。</div>
  </dd>
 </dl>
 
 <dl>
  <dt>{{htmlattrdef("border")}} {{Deprecated_inline}}</dt>
- <dd>这个整型元素使用像素，定义了表格边框的大小。 如果设置为0，这意味着{{htmlattrxref("frame", "table")}} 属性被设置为空。如果设置为1，表示表格具有1px大小的边框。
- <div class="note"><strong>小贴士: </strong>不要使用这个属性, 该属性已废弃，{{HTMLElement("table")}} 元素应当使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定制样式。 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性 {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} 和 {{cssxref("border-style")}} 可实现相同效果。</div>
+ <dd>这个整型元素使用像素，定义了表格边框的大小。 如果设置为 0，这意味着{{htmlattrxref("frame", "table")}} 属性被设置为空。如果设置为 1，表示表格具有 1px 大小的边框。
+ <div class="note"><strong>小贴士：</strong>不要使用这个属性，该属性已废弃，{{HTMLElement("table")}} 元素应当使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定制样式。 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 属性 {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} 和 {{cssxref("border-style")}} 可实现相同效果。</div>
  </dd>
 </dl>
 
@@ -233,8 +233,8 @@ translation_of: Web/HTML/Element/table
  </div>
  </dd>
  <dt>{{htmlattrdef("summary")}} {{Deprecated_inline}}</dt>
- <dd>该属性定义了一个替代文本，当表格无法在用户代理中显示的时候用来描述表格。通常，它被用来为残障人士提供可用性，比如，盲人使用盲文屏幕（Braille screen） 浏览网页，从中获取信息。如果要想对于非视力受限的人来说也可以提供作用，考虑使用 {{HTMLElement("caption")}} 代替。summary 属性不是强制性的，当一个 {{HTMLElement("caption")}} 发挥它应有的作用时，可以省略summary 属性。
- <div class="note"><strong>小贴士: </strong> <strong>不要使用这个属性，因为它已经被废弃。</strong> 作为替代，选择其中一种方法为表格添加描述：
+ <dd>该属性定义了一个替代文本，当表格无法在用户代理中显示的时候用来描述表格。通常，它被用来为残障人士提供可用性，比如，盲人使用盲文屏幕（Braille screen）浏览网页，从中获取信息。如果要想对于非视力受限的人来说也可以提供作用，考虑使用 {{HTMLElement("caption")}} 代替。summary 属性不是强制性的，当一个 {{HTMLElement("caption")}} 发挥它应有的作用时，可以省略 summary 属性。
+ <div class="note"><strong>小贴士：</strong> <strong>不要使用这个属性，因为它已经被废弃。</strong> 作为替代，选择其中一种方法为表格添加描述：
  <ul>
   <li>Use prose around the table (this method is less semantic).</li>
   <li>在表格的 {{HTMLElement("caption")}} 元素中添加描述。</li>
@@ -247,7 +247,7 @@ translation_of: Web/HTML/Element/table
  </dd>
  <dt>{{htmlattrdef("width")}} {{Deprecated_inline}}</dt>
  <dd>该属性定义了表格的宽度。宽度可能是一个像素或者是一个百分比值，宽度的百分比值将被定义为表格容器的宽度。
- <div class="note"><strong>小贴士: </strong> <strong>不要使用这个属性，因为它已经被废弃。</strong>规则应该使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定义和设计样式。使用 {{cssxref("width")}} 属性代替。</div>
+ <div class="note"><strong>小贴士：</strong> <strong>不要使用这个属性，因为它已经被废弃。</strong>规则应该使用 <a href="/en-US/docs/CSS" title="CSS">CSS</a> 定义和设计样式。使用 {{cssxref("width")}} 属性代替。</div>
  </dd>
 </dl>
 
@@ -475,7 +475,7 @@ border: 1px solid black;
 <h2 id="相关">相关</h2>
 
 <ul>
- <li>其它表格相关的HTML元素: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
+ <li>其它表格相关的 HTML 元素: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};</li>
  <li>可能特别有用的关于设定表格元素样式的 CSS 属性：
   <ul>
    <li>{{cssxref("width")}} 控制表格的宽度；</li>

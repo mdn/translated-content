@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}</div>
 
-<p class="summary">這個章節將講述 JavaScript 的運算式與運算子，包括賦值運算子，比較運算子，算術運算子，位元運算子， 邏輯運算子, 字串運算子, 條件(三元)運算子 以及更多運算子.</p>
+<p>這個章節將講述 JavaScript 的運算式與運算子，包括賦值運算子，比較運算子，算術運算子，位元運算子， 邏輯運算子, 字串運算子, 條件(三元)運算子 以及更多運算子.</p>
 
 <p>更多關於運算子以及運算式的資料可以在 <a href="/en-US/docs/Web/JavaScript/Reference/Operators">reference</a> 中找到。</p>
 
@@ -28,19 +28,19 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <p>JavaScript 同時具有二元運算子及一元運算子， 以及一種特殊的 三元運算子，也就是 條件運算子。 一個二元運算子需要具備兩個運算元， 一個在運算元之前，一個在運算元之後:</p>
 
-<pre class="syntaxbox notranslate"><em>運算元1</em> <em>運算子</em> <em>運算元2</em>
+<pre class="syntaxbox"><em>運算元1</em> <em>運算子</em> <em>運算元2</em>
 </pre>
 
 <p>例如, <code>3+4</code> 或 <code>x*y</code>.</p>
 
 <p>一個 一元運算子 需要一個運算元， 位於運算子之前或之後:</p>
 
-<pre class="syntaxbox notranslate"><em>運算子</em> <em>運算元</em>
+<pre class="syntaxbox"><em>運算子</em> <em>運算元</em>
 </pre>
 
 <p>或</p>
 
-<pre class="syntaxbox notranslate"><em>運算元 運算子</em>
+<pre class="syntaxbox"><em>運算元 運算子</em>
 </pre>
 
 <p>例如， <code>x++</code> 或 <code>++x</code>.</p>
@@ -133,7 +133,7 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <p>為了進行更複雜的賦值，<a href="/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">解構賦值</a>是 JavaScript 用來從陣列或物件中提取資料的語法。</p>
 
-<pre class="brush: js notranslate">var foo = ['one', 'two', 'three'];
+<pre class="brush: js">var foo = ['one', 'two', 'three'];
 
 // 不使用解構
 var one   = foo[0];
@@ -147,7 +147,7 @@ var [one, two, three] = foo;</pre>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">比較運算子</a> 會比較 運算元 並基於比較的結果回傳邏輯值。 運算元可以是數字，字串，邏輯，或物件的值。 字串的比較是基於字典序的， 使用 Unicode 的值。 在多數情況下，假如兩個運算元不具有相同型態， JavaScript 會嘗試將它們轉換成相同型態。這個行為通常是將運算元以數學形式對待。 在某些的轉換型態的例外中會使用到 <code>===</code> 及 <code>!==</code> 運算子， 它們會嚴格地進行相等或不相等的比較。 這些運算子不會在確認相等與否前嘗試轉換運算元的型態。 下面的表解釋了比較運算子:</p>
 
-<pre class="brush: js notranslate">var var1 = 3;
+<pre class="brush: js">var var1 = 3;
 var var2 = 4;
 </pre>
 
@@ -212,21 +212,21 @@ var var2 = 4;
  </tbody>
 </table>
 
-<div class="note">
-<p><strong>筆記: </strong>(<strong>=&gt;)不是運算子，是</strong> <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭頭函式。</a></p>
+<div class="notecard note">
+<p><strong>備註：</strong>(<strong>=&gt;)不是運算子，是</strong> <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">箭頭函式。</a></p>
 </div>
 
 <h3 id="算術運算子">算術運算子</h3>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators">算術運算子</a> 以 數值 (文字或變數也可以)作為其運算元，並回傳單一數值。最常見的算術運算元是 加法 (<code>+</code>)，減法 (<code>-</code>)， 乘法 (<code>*</code>)，及除法 (<code>/</code>)。 這些運算子在大多數程式語言中功能相同 (比較特別的是，在除數為0時 {{jsxref("Infinity")}})。例如:</p>
 
-<pre class="brush: js notranslate">1 / 2; // 0.5
+<pre class="brush: js">1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // 會是 true
 </pre>
 
 <p>除了標準的算術運算子外 (+, -, * /)， JavaScript 提供以下表中的算術運算子:</p>
 
-<table class="fullwidth-table">
+<table>
  <caption>算術運算子</caption>
  <thead>
   <tr>
@@ -264,7 +264,7 @@ var var2 = 4;
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation">指數運算子</a> (<code>**</code>) {{experimental_inline}}</td>
-   <td>計算以 a 為底的 <code>b</code> 次方， 也就是, a<code><sup>b</sup></code></td>
+   <td>計算以 a 為底的 <code>b</code> 次方， 也就是, <code>a^b</code></td>
    <td><code>2 ** 3</code> <code>回傳 8</code>.<br>
     <code>10 ** -1</code> 回傳 <code>0.1</code>.</td>
   </tr>
@@ -325,13 +325,13 @@ var var2 = 4;
  </tbody>
 </table>
 
-<h4 id="Bitwise_Logical_Operators" name="Bitwise_Logical_Operators">位元邏輯運算子</h4>
+<h4 id="Bitwise_Logical_Operators">位元邏輯運算子</h4>
 
 <p>概念上，位元邏輯運算子運作過程如下:</p>
 
 <ul>
  <li>運算元被轉換為32 bits 的整數以二進位形式表示 (0 和 1)。大於 32 bits 的數字將被捨棄多出來的位元。例如， 下列整數大於32個bit但是會被轉換為32個bit的整數:
-  <pre class="notranslate">轉換之前:  11100110111110100000000000000110000000000001
+  <pre>轉換之前:  11100110111110100000000000000110000000000001
 轉換之後:              10100000000000000110000000000001</pre>
  </li>
  <li>第一個運算元中的每個bit分別對應到第二個運算元的每個bit: 第一個 bit 對 第一個 bit, 第二個 bit 對 第二個 bit， 以此類推。</li>
@@ -380,7 +380,7 @@ var var2 = 4;
 
 <p>注意，在使用 位元NOT 運算子時， 所有的32個bit都被進行NOT了，包含最左邊用來描述正負數的位元(two's-complement representation)。</p>
 
-<h4 id="Bitwise_Shift_Operators" name="Bitwise_Shift_Operators">位元移動運算子</h4>
+<h4 id="Bitwise_Shift_Operators">位元移動運算子</h4>
 
 <p>位元移動運算子需要兩個運算元: 第一個是運算的目標，第二個是要移動的位元數。移動的方向取決於使用的運算子。</p>
 
@@ -388,7 +388,7 @@ var var2 = 4;
 
 <p>移動運算子在下表被列出.</p>
 
-<table class="fullwidth-table">
+<table>
  <caption>位元移動運算子</caption>
  <thead>
   <tr>
@@ -421,7 +421,7 @@ var var2 = 4;
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators">邏輯運算子</a> 通常被用於布林(邏輯)值; 使用於 布林(邏輯)值時， 它們會回傳布林型態的值。 然而，<code>&amp;&amp;</code> 和 <code>||</code> 運算子實際上是回傳兩指定運算元之一，因此用於非布林型態值時，它可能會回傳一個非布林型態的值。 邏輯運算子將在下表中被詳細解釋。</p>
 
-<table class="fullwidth-table">
+<table>
  <caption>Logical operators</caption>
  <thead>
   <tr>
@@ -453,7 +453,7 @@ var var2 = 4;
 
 <p>下面是 <code>&amp;&amp;</code> (邏輯 AND) 運算子 的範例。</p>
 
-<pre class="brush: js notranslate">var a1 =  true &amp;&amp; true;     // t &amp;&amp; t 回傳 true
+<pre class="brush: js">var a1 =  true &amp;&amp; true;     // t &amp;&amp; t 回傳 true
 var a2 =  true &amp;&amp; false;    // t &amp;&amp; f 回傳 false
 var a3 = false &amp;&amp; true;     // f &amp;&amp; t 回傳 false
 var a4 = false &amp;&amp; (3 == 4); // f &amp;&amp; f 回傳 false
@@ -464,7 +464,7 @@ var a7 = "Cat" &amp;&amp; false;    // t &amp;&amp; f 回傳 false
 
 <p>下列是 || (邏輯 OR) 運算子的範例。</p>
 
-<pre class="brush: js notranslate">var o1 =  true || true;     // t || t 回傳 true
+<pre class="brush: js">var o1 =  true || true;     // t || t 回傳 true
 var o2 = false || true;     // f || t 回傳 true
 var o3 =  true || false;    // t || f 回傳 true
 var o4 = false || (3 == 4); // f || f 回傳 false
@@ -475,12 +475,12 @@ var o7 = 'Cat' || false;    // t || f 回傳 Cat
 
 <p>下列是 ! (邏輯 NOT) 運算子的範例。</p>
 
-<pre class="brush: js notranslate">var n1 = !true;  // !t 回傳 false
+<pre class="brush: js">var n1 = !true;  // !t 回傳 false
 var n2 = !false; // !f 回傳 true
 var n3 = !'Cat'; // !t 回傳 false
 </pre>
 
-<h4 id="Short-Circuit_Evaluation" name="Short-Circuit_Evaluation">短路解析</h4>
+<h4 id="Short-Circuit_Evaluation">短路解析</h4>
 
 <p>邏輯運算式是由左向右解析的， 他們會以下列規則嘗試進行 短路解析:</p>
 
@@ -497,38 +497,38 @@ var n3 = !'Cat'; // !t 回傳 false
 
 <p>例如，</p>
 
-<pre class="brush: js notranslate">console.log('我的 ' + '字串'); // 會印出 字串 "我的字串"。</pre>
+<pre class="brush: js">console.log('我的 ' + '字串'); // 會印出 字串 "我的字串"。</pre>
 
 <p>簡化的設定運算子 += 也能用於串接字串。</p>
 
 <p>例如，</p>
 
-<pre class="brush: js notranslate">var mystring = '字';
+<pre class="brush: js">var mystring = '字';
 mystring += '母'; // 得到 "字母" 並賦與給變數 mystring.</pre>
 
 <h3 id="條件（三元）運算子">條件（三元）運算子</h3>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">條件運算子</a> 是 JavaScript 中唯一需要三個運算元的運算子。 這個運算子接受兩個運算元作為值且一個運算元作為條件。 語法是:</p>
 
-<pre class="syntaxbox notranslate"><em>條件</em> ? <em>值1</em> : <em>值2</em>
+<pre class="syntaxbox"><em>條件</em> ? <em>值1</em> : <em>值2</em>
 </pre>
 
 <p>如果 <em>條件</em> 為 true，運算子回傳 <em>值1，</em> 否則回傳 <em>值2。</em> 你可以在任何使用標準運算子的地方改用 條件運算子。</p>
 
 <p>例如，</p>
 
-<pre class="brush: js notranslate">var status = (age &gt;= 18) ? '成人' : '小孩';
+<pre class="brush: js">var status = (age &gt;= 18) ? '成人' : '小孩';
 </pre>
 
 <p>這個陳述句會將 "成人" 賦與給變數 <code>status</code> 假如 <code>age</code> 大於等於18。 否則，會將 "小孩" 賦與給變數 <code>status</code>。</p>
 
-<h3 id="Comma_operator" name="Comma_operator">逗號運算子</h3>
+<h3 id="Comma_operator">逗號運算子</h3>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator">逗點運算子</a> (<code>,</code>) 作用是解析兩個運算元並回傳後面那個運算元的值。 這個運算子通常用於for迴圈內部，讓多個變數能在每次迴圈中被更新。</p>
 
 <p>例如，假如 <code>a</code> 是一個有十個物件在裡面的二維陣列， 下面的程式中就使用了逗點運算子來同時更新兩個變數。 這段程式碼會印出陣列中所有對角線上的物件:</p>
 
-<pre class="brush: js notranslate">for (var i = 0, j = 9; i &lt;= j; i++, j--)
+<pre class="brush: js">for (var i = 0, j = 9; i &lt;= j; i++, j--)
   console.log('a[' + i + '][' + j + ']= ' + a[i][j]);
 </pre>
 
@@ -536,11 +536,11 @@ mystring += '母'; // 得到 "字母" 並賦與給變數 mystring.</pre>
 
 <p>一元運算 是只需要一個運算元的運算。</p>
 
-<h4 id="delete" name="delete"><code>delete</code></h4>
+<h4 id="delete"><code>delete</code></h4>
 
 <p><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> 運算子會刪除物件，物件的性質，或是陣列中指定 index 的物件。 語法是:</p>
 
-<pre class="brush: js notranslate">delete 物件名稱;
+<pre class="brush: js">delete 物件名稱;
 delete 物件名稱.性質;
 delete 物件名稱[索引];
 delete 性質; // 只有在 with 陳述句中可以使用
@@ -554,7 +554,7 @@ delete 性質; // 只有在 with 陳述句中可以使用
 
 <p>假如 <code>delete</code> 運算子使用成功， 它會將物件 或是 物件的特性設定為 <code>未定義。</code> <code>delete</code> 運算子會在運算成功時回傳 true ，失敗時回傳 <code>false</code> 。</p>
 
-<pre class="brush: js notranslate">x = 42;
+<pre class="brush: js">x = 42;
 var y = 43;
 myobj = new Number();
 myobj.h = 4;    // 建立特性 h
@@ -571,7 +571,7 @@ delete myobj;   // 回傳 true (在隱式宣告時可被刪除)
 
 <p>當使用 <code>delete</code> 運算子刪除陣列中的一個元素後， 那個元素便不再存在於陣列中了。 在下面的程式中， <code>trees[3]</code> 被用 delete 移除了。然而， <code>trees[3]</code> 的記憶體位址仍可用並且會回傳 未定義。</p>
 
-<pre class="brush: js notranslate">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 delete trees[3];
 if (3 in trees) {
   // 不會執行到這裡
@@ -580,18 +580,18 @@ if (3 in trees) {
 
 <p>假如你希望給予陣列元素 未定義 的值， 你可以直接使用 <code>undefined</code> 關鍵字而不是使用 delete 運算子。 下列範例中， <code>trees[3]</code> 被指定了 <code>undefined</code>， 然而陣列元素依然存在:</p>
 
-<pre class="brush: js notranslate">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+<pre class="brush: js">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 trees[3] = undefined;
 if (3 in trees) {
   // 會執行這裡
 }
 </pre>
 
-<h4 id="typeof" name="typeof"><code>typeof</code></h4>
+<h4 id="typeof"><code>typeof</code></h4>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/typeof"><code>typeof</code> 運算子</a> 能以下列任一方式使用:</p>
 
-<pre class="syntaxbox notranslate">typeof 運算元
+<pre class="syntaxbox">typeof 運算元
 typeof (運算元)
 </pre>
 
@@ -599,7 +599,7 @@ typeof (運算元)
 
 <p>假設你定義了以下這些變數:</p>
 
-<pre class="brush: js notranslate">var myFun = new Function('5 + 2');
+<pre class="brush: js">var myFun = new Function('5 + 2');
 var shape = 'round';
 var size = 1;
 var today = new Date();
@@ -607,7 +607,7 @@ var today = new Date();
 
 <p><code>typeof</code> 運算子會回傳下列結果:</p>
 
-<pre class="brush: js notranslate">typeof myFun;       // 回傳 "function"
+<pre class="brush: js">typeof myFun;       // 回傳 "function"
 typeof shape;       // 回傳 "string"
 typeof size;        // 回傳 "number"
 typeof today;       // 回傳 "object"
@@ -616,26 +616,26 @@ typeof doesntExist; // 回傳 "undefined"
 
 <p>對於 <code>true</code> 和 <code>null關鍵字，</code> <code>typeof</code> 運算子會回傳下列結果:</p>
 
-<pre class="brush: js notranslate">typeof true; // 回傳 "boolean"
+<pre class="brush: js">typeof true; // 回傳 "boolean"
 typeof null; // 回傳 "object"
 </pre>
 
 <p>對於字串或數字， <code>typeof</code> 運算子會回傳下列結果:</p>
 
-<pre class="brush: js notranslate">typeof 62;            // 回傳 "number"
+<pre class="brush: js">typeof 62;            // 回傳 "number"
 typeof 'Hello world'; // 回傳 "string"
 </pre>
 
 <p>對於特性，<code>typeof</code> 運算子會回傳 特性的值的類型:</p>
 
-<pre class="brush: js notranslate">typeof document.lastModified; // 回傳 "string"
+<pre class="brush: js">typeof document.lastModified; // 回傳 "string"
 typeof window.length;         // 回傳 "number"
 typeof Math.LN2;              // 回傳 "number"
 </pre>
 
 <p>對於 方法 及 函式， <code>typeof</code> 運算子會回傳下列結果:</p>
 
-<pre class="brush: js notranslate">typeof blur;        // 回傳 "function"
+<pre class="brush: js">typeof blur;        // 回傳 "function"
 typeof eval;        // 回傳 "function"
 typeof parseInt;    // 回傳 "function"
 typeof shape.split; // 回傳 "function"
@@ -643,18 +643,18 @@ typeof shape.split; // 回傳 "function"
 
 <p>對於內建定義的物件， <code>typeof</code> 運算子會回傳下列結果:</p>
 
-<pre class="brush: js notranslate">typeof Date;     // 回傳 "function"
+<pre class="brush: js">typeof Date;     // 回傳 "function"
 typeof Function; // 回傳 "function"
 typeof Math;     // 回傳 "object"
 typeof Option;   // 回傳 "function"
 typeof String;   // 回傳 "function"
 </pre>
 
-<h4 id="void" name="void"><code>void</code></h4>
+<h4 id="void"><code>void</code></h4>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/void"><code>void</code> 運算子 </a>能以下列任一方式使用:</p>
 
-<pre class="syntaxbox notranslate">void (運算式)
+<pre class="syntaxbox">void (運算式)
 void 運算式
 </pre>
 
@@ -664,12 +664,12 @@ void 運算式
 
 <p>下列範例是一個在點擊時甚麼都不做的超連結。 當使用者點擊連結時， <code>void(0)</code> 被解析為 未定義， 而甚麼都不會發生。</p>
 
-<pre class="brush: html notranslate">&lt;a href="javascript:void(0)"&gt;點擊這裡，甚麼都不會發生&lt;/a&gt;
+<pre class="brush: html">&lt;a href="javascript:void(0)"&gt;點擊這裡，甚麼都不會發生&lt;/a&gt;
 </pre>
 
 <p>下列範例是一個在使用者點擊時傳送表單的超連結。</p>
 
-<pre class="brush: html notranslate">&lt;a href="javascript:void(document.form.submit())"&gt;
+<pre class="brush: html">&lt;a href="javascript:void(document.form.submit())"&gt;
 點擊以送出&lt;/a&gt;</pre>
 
 <h3 id="關係運算子">關係運算子</h3>
@@ -680,14 +680,14 @@ void 運算式
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/in"><code>in </code>運算子</a> 在指定性質存在於物件中時回傳 true 。 語法是:</p>
 
-<pre class="brush: js notranslate">性質名稱 in 物件名稱
+<pre class="brush: js">性質名稱 in 物件名稱
 </pre>
 
 <p>性質名稱 可以是 字串或數字，或是陣列的索引， 且<code> </code>物件名稱 是物件的名稱。</p>
 
 <p>下列範例示範了 <code>in</code> 運算子的一些用法。</p>
 
-<pre class="brush: js notranslate">// 陣列
+<pre class="brush: js">// 陣列
 var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 0 in trees;        // 回傳 true
 3 in trees;        // 回傳 true
@@ -707,11 +707,11 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 'model' in mycar; // 回傳 true
 </pre>
 
-<h4 id="instanceof" name="instanceof"><code>instanceof</code></h4>
+<h4 id="instanceof"><code>instanceof</code></h4>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/instanceof"><code>instanceof</code> 運算子</a> 在 指定物件 具有 指定的物件型態 時回傳 true。 語法是:</p>
 
-<pre class="syntaxbox notranslate">物件名稱 instanceof 物件類型
+<pre class="syntaxbox">物件名稱 instanceof 物件類型
 </pre>
 
 <p><code>物件名稱</code> 是用來與 物件類型 比較的物件的名字， 物件類型 是物件的類型， 例如 {{jsxref("Date")}} 或 {{jsxref("Array")}}。</p>
@@ -720,7 +720,7 @@ var mycar = { make: 'Honda', model: 'Accord', year: 1998 };
 
 <p>例如，下列程式碼使用 <code>instanceof</code> 來判斷變數 <code>theDay</code> 是不是 <code>Date</code> 類型的物件。 因為 <code>theDay</code> 是 <code>Date</code> 類型的物件， 所以if 陳述中的陳述句會被執行。</p>
 
-<pre class="brush: js notranslate">var theDay = new Date(1995, 12, 17);
+<pre class="brush: js">var theDay = new Date(1995, 12, 17);
 if (theDay instanceof Date) {
   // 會被執行的陳述
 }
@@ -834,17 +834,17 @@ if (theDay instanceof Date) {
 
 <p>JavaScript 基本的關鍵字及運算式。</p>
 
-<h4 id="this" name="this"><code>this</code></h4>
+<h4 id="this"><code>this</code></h4>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code> 關鍵字</a> 能取得當前所在物件。 一般而言， <code>this</code> 能取得呼叫處所在的物件。 你可以使用 點 或是 中括號 來取用該物件中的特性:</p>
 
-<pre class="syntaxbox notranslate">this['特性名稱']
+<pre class="syntaxbox">this['特性名稱']
 this.特性名稱
 </pre>
 
 <p>以下定義一個叫做 <code>validate</code> 的函式，比較物件中特性 <code>value 與傳入的兩變數</code>:</p>
 
-<pre class="brush: js notranslate">function validate(obj, lowval, hival){
+<pre class="brush: js">function validate(obj, lowval, hival){
   if ((obj.value &lt; lowval) || (obj.value &gt; hival))
     console.log('不可用的值!');
 }
@@ -852,7 +852,7 @@ this.特性名稱
 
 <p>你可以在表單的 <code>onChange</code> event handler 中呼叫 <code>validate</code> 函式， 並以 <code>this</code> 來傳入表單的元素， 範例如下:</p>
 
-<pre class="brush: html notranslate">&lt;p&gt;請輸入一介於18 與 99 的數字:&lt;/p&gt;
+<pre class="brush: html">&lt;p&gt;請輸入一介於18 與 99 的數字:&lt;/p&gt;
 &lt;input type="text" name="age" size=3 onChange="validate(this, 18, 99);"&gt;
 </pre>
 
@@ -860,7 +860,7 @@ this.特性名稱
 
 <p>分組運算子 <code>( )</code> 控制了運算子的優先順序。 例如，你可以覆寫先乘除，後加減的優先順序，使其變成先加減，後乘除。</p>
 
-<pre class="brush:js notranslate">var a = 1;
+<pre class="brush:js">var a = 1;
 var b = 2;
 var c = 3;
 
@@ -890,7 +890,7 @@ a * c + b * c // 9
 
 <p>解析在許多程式語言中都存在，允許你快速地基於現存陣列產生新的陣列，例如:</p>
 
-<pre class="brush:js notranslate">[for (i of [ 1, 2, 3 ]) i*i ];
+<pre class="brush:js">[for (i of [ 1, 2, 3 ]) i*i ];
 // [ 1, 4, 9 ]
 
 var abc = [ 'A', 'B', 'C' ];
@@ -901,18 +901,18 @@ var abc = [ 'A', 'B', 'C' ];
 
 <p>左側是指定值的對象。</p>
 
-<h4 id="new" name="new"><code>new</code></h4>
+<h4 id="new"><code>new</code></h4>
 
 <p>你可以使用 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new"><code>new</code> 運算子</a> 來建立一個使用者自定義物件或內建物件的實例。 用法如下:</p>
 
-<pre class="brush: js notranslate">var 物件名稱 = new 物件型態([參數1, 參數2, ..., 參數N]);
+<pre class="brush: js">var 物件名稱 = new 物件型態([參數1, 參數2, ..., 參數N]);
 </pre>
 
 <h4 id="super">super</h4>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super 關鍵字</a> 用於呼叫物件的父物件中的函式。 在使用 <a href="/en-US/docs/Web/JavaScript/Reference/Classes">類別</a> 來呼叫父類別的建構子時很實用，例如:</p>
 
-<pre class="syntaxbox notranslate">super([參數]); // 呼叫父物件的建構子.
+<pre class="syntaxbox">super([參數]); // 呼叫父物件的建構子.
 super.父物件的函式([參數]);
 </pre>
 
@@ -922,12 +922,12 @@ super.父物件的函式([參數]);
 
 <p><strong>範例:</strong> 現在你想要用已存在的一個陣列做為新的一個陣列的一部份，當字串常數不再可用而你必須使用指令式編程，也就是使用，一連串的 <code>push</code>, <code>splice</code>, <code>concat</code>，等等。 展開運算子能讓過程變得更加簡潔:</p>
 
-<pre class="brush: js notranslate">var parts = ['肩膀', '膝蓋'];
+<pre class="brush: js">var parts = ['肩膀', '膝蓋'];
 var lyrics = ['頭', ...parts, '和', '腳趾'];</pre>
 
 <p>相同的，展開運算子也適用於函式呼叫:</p>
 
-<pre class="brush: js notranslate">function f(x, y, z) { }
+<pre class="brush: js">function f(x, y, z) { }
 var args = [0, 1, 2];
 f(...參數);</pre>
 

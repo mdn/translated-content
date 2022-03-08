@@ -58,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 <p>當回呼函式第一次被呼叫時，<code>accumulator</code> 與 <code>currentValue</code> 的值可能為兩種不同的狀況：若在呼叫 <code>reduce()</code> 時有提供 <code>initialValue</code>，則 <code>accumulator</code> 將會等於 <code>initialValue</code>，且 <code>currentValue</code> 會等於陣列中的第一個元素值；若沒有提供 <code>initialValue</code>，則 <code>accumulator</code> 會等於陣列的第一個元素值，且 <code>currentValue</code> 將會等於陣列的第二個元素值。</p>
 
-<div class="note">
+<div class="notecard note">
 <p><strong>備註：</strong>假如 <code>initialValue</code> 未被提供，<code>reduce()</code> 將會跳過第一個陣列索引，從陣列索引 1 開始執行回呼函式。若有提供 <code>initialValue</code>，則會由陣列索引 0 開始執行。</p>
 </div>
 

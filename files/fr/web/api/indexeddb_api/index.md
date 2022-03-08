@@ -34,7 +34,7 @@ Les opérations effectuées par IndexedDB sont réalisées de manière asynchron
 
 ### Limites de stockage et critères d'éviction
 
-Il y a un certain nombre de technologies web pour stocker différents types de données côté client (par exemple sur votre disque local). IndexedDB est la plus couramment citée. Le processus par lequel le navigateur calcule combien d'espace il doit allouer aux données web, et ce qu'il doit supprimer quand la limite est atteinte, n'est pas simple et varie entre les différents navigateurs.[ L'article "limites de stockage des navigateurs et critères d'éviction"](/fr/docs/IndexedDB/Browser_storage_limits_and_eviction_criteria) tente d'expliquer ce fonctionnement, au moins pour le cas de Firefox.
+Il y a un certain nombre de technologies web pour stocker différents types de données côté client (par exemple, sur votre disque local). IndexedDB est la plus couramment citée. Le processus par lequel le navigateur calcule combien d'espace il doit allouer aux données web, et ce qu'il doit supprimer quand la limite est atteinte, n'est pas simple et varie entre les différents navigateurs. L'article [Limites de stockage du navigateur et critères d'éviction](/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria) tente d'expliquer ce fonctionnement, au moins pour le cas de Firefox.
 
 ## Interfaces
 
@@ -117,7 +117,7 @@ Une précedente version des spécifications a défini ces interfaces, désormais
 
 - [localForage](https://localforage.github.io/localForage/): Un _Polyfill_ fournissant une syntaxe clé-valeurs simple pour un stockage côté client; il utilise IndexedDB en arrière plan, mais se retourne d'abord sur WebSQL puis sur localStorage pour les navigateurs qui ne supportent pas IndexedDB.
 - [dexie.js](http://www.dexie.org/) : Un _wrapper_ pour IndexedDB qui permet un développement plus rapide avec une syntaxe simple.
-- [ZangoDB ](https://github.com/erikolson186/zangodb): Une interface MongoDB-like pour indexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
-- [JsStore ](http://jsstore.net/): Un contenu indexedDB avec SQL comme syntaxe.
+- [ZangoDB](https://github.com/erikolson186/zangodb)&nbsp;: Une interface comme MongoDB pour IndexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
+- [JsStore](https://jsstore.net/)&nbsp;: Un contenu IndexedDB avec SQL comme syntaxe.
 - [MiniMongo](https://github.com/mWater/minimongo)
 - [PouchDB](https://pouchdb.com)

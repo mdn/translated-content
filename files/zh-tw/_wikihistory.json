@@ -4717,18 +4717,18 @@
       "ginszme"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-03-23T22:16:06.897Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/XMLHttpRequest/readyState": {
     "modified": "2019-03-23T22:16:03.865Z",
     "contributors": [
       "jWorker",
       "jackblackevo",
       "ginszme"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-03-23T22:16:06.897Z",
+    "contributors": [
+      "jackblackevo"
     ]
   },
   "Web/API/XMLHttpRequest/setRequestHeader": {

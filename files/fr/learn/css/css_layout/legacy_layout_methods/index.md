@@ -562,7 +562,7 @@ Regardez dans le fichier skeleton.css, vous verrez la  CSS appliquée quand on 
 }
 ```
 
-Les éléments ne peuvent faire partie d'une trame que s'ils sont à l'intérieur d'une ligne, donc avec notre exemple précédent nous aurons besoin d'un `<div>` supplémentaire ou d'un autre élément de la classe `row` imbriqué entre le `<div>` de `content `et les véritables conteneurs `<div> `de contenu. Nous avons aussi déjà fait cela.
+Les éléments ne peuvent faire partie d'une trame que s'ils sont à l'intérieur d'une ligne, donc avec notre exemple précédent nous aurons besoin d'un `<div>` supplémentaire ou d'un autre élément de la classe `row` imbriqué entre le `<div>` de `content` et les véritables conteneurs `<div>` de contenu. Nous avons aussi déjà fait cela.
 
 Disposons maintenant les boîtes conteneur. Skeleton est fondé sur une trame de 12 colonnes. Les boîtes de la ligne supérieure nécessitent toutes des classes `one column` pour qu'elles se répartissent à raison de une par colonne.
 

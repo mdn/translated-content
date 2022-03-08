@@ -3,7 +3,7 @@ title: <input type="search">
 slug: Web/HTML/Element/Input/search
 tags:
   - HTML
-  - HTML表单
+  - HTML 表单
   - 参考
   - 搜索
   - 表单
@@ -13,11 +13,11 @@ translation_of: Web/HTML/Element/input/search
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><code>{{HTMLElement("input")}}</code> 元素的 <code><strong>search</strong></code> 类型是 </span>专为用户输入搜索查询而设计的文本字段。功能上与<span class="seoSummary"> <code><a href="/en-US/docs/Web/HTML/Element/input/text">text</a></code> 输入相同, 但是可以通过 <code>{{Glossary("user agent")}}</code> 进行不同样式的设置。</span></p>
+<p><span class="seoSummary"><code>{{HTMLElement("input")}}</code> 元素的 <code><strong>search</strong></code> 类型是 </span>专为用户输入搜索查询而设计的文本字段。功能上与<span class="seoSummary"> <code><a href="/en-US/docs/Web/HTML/Element/input/text">text</a></code> 输入相同，但是可以通过 <code>{{Glossary("user agent")}}</code> 进行不同样式的设置。</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}</div>
 
-<div class="hidden">该交互式示例的源存储在GitHub存储库中。 如果您想为交互式示例项目做出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们发起拉取请求。</div>
+<div class="hidden">该交互式示例的源存储在 GitHub 存储库中。 如果您想为交互式示例项目做出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> 并向我们发起拉取请求。</div>
 
 <table class="properties">
  <tbody>
@@ -46,7 +46,7 @@ translation_of: Web/HTML/Element/input/search
 
 <h2 id="值">值</h2>
 
-<p><code>{{htmlattrxref("value", "input")}}</code> 属性包含 <code>{{domxref("DOMString")}}</code> 代表搜索字段中包含的值。 您可以在JavaScript使用 <code>{{domxref("HTMLInputElement.value")}}</code> 属性。</p>
+<p><code>{{htmlattrxref("value", "input")}}</code> 属性包含 <code>{{domxref("DOMString")}}</code> 代表搜索字段中包含的值。 您可以在 JavaScript 使用 <code>{{domxref("HTMLInputElement.value")}}</code> 属性。</p>
 
 <pre class="brush: js notranslate">searchTerms = mySearch.value;
 </pre>
@@ -67,7 +67,7 @@ translation_of: Web/HTML/Element/input/search
  <tbody>
   <tr>
    <td><code>{{anch("list")}}</code></td>
-   <td><code>&lt;datalist&gt;</code> 元素的ID，其中包含可选的预定义自动完成选项。</td>
+   <td><code>&lt;datalist&gt;</code> 元素的 ID，其中包含可选的预定义自动完成选项。</td>
   </tr>
   <tr>
    <td><code>{{anch("maxlength")}}</code></td>
@@ -104,15 +104,15 @@ translation_of: Web/HTML/Element/input/search
 
 <h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
 
-<p>用户可以在搜索字段中输入的最大字符数（以UTF-16代码为单位）。 必须为0或更高的整数。 如果未指定 <code>maxlength</code> 或指定了无效值，则搜索字段没有最大长度。 此值还必须大于或等于 <code>minlength</code> 的值。</p>
+<p>用户可以在搜索字段中输入的最大字符数（以 UTF-16 代码为单位）。 必须为 0 或更高的整数。 如果未指定 <code>maxlength</code> 或指定了无效值，则搜索字段没有最大长度。 此值还必须大于或等于 <code>minlength</code> 的值。</p>
 
-<p>如果输入到字段中的文本的长度大于 <code>maxlength</code> UTF-16代码单元的长度，则输入无法通过约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）。</p>
+<p>如果输入到字段中的文本的长度大于 <code>maxlength</code> UTF-16 代码单元的长度，则输入无法通过约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）。</p>
 
 <h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
 
-<p>用户可以在搜索字段中输入的最小字符数（以UTF-16代码为单位）。 该值必须是小于或等于 <code>maxlength</code> 指定的值的非负整数值。 如果未指定 <code>minlength</code> 或指定了无效值，则搜索输入没有最小长度。</p>
+<p>用户可以在搜索字段中输入的最小字符数（以 UTF-16 代码为单位）。 该值必须是小于或等于 <code>maxlength</code> 指定的值的非负整数值。 如果未指定 <code>minlength</code> 或指定了无效值，则搜索输入没有最小长度。</p>
 
-<p>如果在字段中输入的文本的长度小于 <code>minlength</code> UTF-16代码单元的长度，则搜索字段将无法通过约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）。</p>
+<p>如果在字段中输入的文本的长度小于 <code>minlength</code> UTF-16 代码单元的长度，则搜索字段将无法通过约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）。</p>
 
 <h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
 
@@ -182,7 +182,7 @@ translation_of: Web/HTML/Element/input/search
 <h3 id="htmlattrdefresults_non-standard_inline">{{htmlattrdef("results")}} {{non-standard_inline}}</h3>
 
 <div id="results-include">
-<p><code>results</code> 属性是一个数字值（仅受Safari支持），可让您覆盖要在 <code>{{HTMLElement("input")}}</code> 元素的本机提供的先前搜索查询的下拉菜单中显示的最大条目数。</p>
+<p><code>results</code> 属性是一个数字值（仅受 Safari 支持），可让您覆盖要在 <code>{{HTMLElement("input")}}</code> 元素的本机提供的先前搜索查询的下拉菜单中显示的最大条目数。</p>
 
 <p>该值必须是非负十进制数字。 如果未提供或给出了无效值，则使用浏览器的默认最大条目数。</p>
 </div>
@@ -212,11 +212,11 @@ translation_of: Web/HTML/Element/input/search
 
 <h3 id="搜索类型和文本类型之间的差异">搜索类型和文本类型之间的差异</h3>
 
-<p>主要的基本区别在于浏览器处理它们的方式。 首先要注意的是，某些浏览器显示一个十字图标，如果需要，可以单击该十字图标以立即删除搜索词。 以下屏幕截图来自Chrome：</p>
+<p>主要的基本区别在于浏览器处理它们的方式。 首先要注意的是，某些浏览器显示一个十字图标，如果需要，可以单击该十字图标以立即删除搜索词。 以下屏幕截图来自 Chrome：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15235/chrome-cross-icon.png" style="display: block; height: 31px; margin: 0px auto; width: 144px;"></p>
 
-<p>此外，现代浏览器还倾向于自动存储先前在各个域中输入的搜索词，然后在该域的搜索输入中执行后续搜索时，这些搜索词会作为自动完成选项出现。 这有助于随着时间的流逝倾向于在相同或相似搜索查询上进行搜索的用户。 此屏幕截图来自Firefox：</p>
+<p>此外，现代浏览器还倾向于自动存储先前在各个域中输入的搜索词，然后在该域的搜索输入中执行后续搜索时，这些搜索词会作为自动完成选项出现。 这有助于随着时间的流逝倾向于在相同或相似搜索查询上进行搜索的用户。 此屏幕截图来自 Firefox：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15237/firefox-auto-complete.png" style="display: block; height: 83px; margin: 0px auto; width: 171px;">现在，让我们看看可以应用于搜索表单的一些有用的技巧。</p>
 
@@ -238,7 +238,7 @@ translation_of: Web/HTML/Element/input/search
 
 <h3 id="搜索表单标签和辅助功能">搜索表单标签和辅助功能</h3>
 
-<p>搜索表单的一个问题是它们的可访问性。 常见的设计惯例是不为搜索字段提供标签（尽管可能会有放大镜图标或类似图标），因为由于放置位置的原因，搜索表单的目的通常对于视力正常的用户而言相当明显 （<a href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">这个例子展示了一个典型的模式</a>）。</p>
+<p>搜索表单的一个问题是它们的可访问性。 常见的设计惯例是不为搜索字段提供标签（尽管可能会有放大镜图标或类似图标），因为由于放置位置的原因，搜索表单的目的通常对于视力正常的用户而言相当明显（<a href="https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/">这个例子展示了一个典型的模式</a>）。</p>
 
 <p>但是，这可能会使屏幕阅读器用户感到困惑，因为他们不会对搜索输入内容有任何口头指示。 解决此问题而不会影响您的视觉设计的一种方法是使用 <a href="/en-US/docs/Learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> 功能：</p>
 
@@ -270,7 +270,7 @@ translation_of: Web/HTML/Element/input/search
 
 <h3 id="输入框元素大小">输入框元素大小</h3>
 
-<p>可以使用 <code>{{htmlattrxref("size", "input")}}</code> 属性来控制输入框的尺寸。 使用它，您可以指定输入框一次可以显示的字符数。 例如，在此示例中，搜索框为30个字符宽：</p>
+<p>可以使用 <code>{{htmlattrxref("size", "input")}}</code> 属性来控制输入框的尺寸。 使用它，您可以指定输入框一次可以显示的字符数。 例如，在此示例中，搜索框为 30 个字符宽：</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
@@ -289,12 +289,12 @@ translation_of: Web/HTML/Element/input/search
 <p><code>&lt;input&gt;</code> 元素的 <code>search</code> 类型具有与常规文本 <code>text</code> 输入相同的验证功能。 通常，您不太可能希望对搜索框使用验证功能。 在许多情况下，应该只允许用户搜索任何内容，但是有几种情况需要考虑，例如搜索已知格式的数据。</p>
 
 <div class="note">
-<p><strong>注意：</strong>HTML表单验证不能替代确保输入数据格式正确的脚本。 对于某人来说，对HTML进行调整以使其绕过验证或完全删除验证太容易了。 有人也可以完全绕开您的HTML并将数据直接提交到您的服务器。 如果服务器端代码无法验证接收到的数据，则当将格式不正确的数据（或太大，类型错误的数据等等）输入数据库时，灾难可能会发生。</p>
+<p><strong>注意：</strong>HTML 表单验证不能替代确保输入数据格式正确的脚本。 对于某人来说，对 HTML 进行调整以使其绕过验证或完全删除验证太容易了。 有人也可以完全绕开您的 HTML 并将数据直接提交到您的服务器。 如果服务器端代码无法验证接收到的数据，则当将格式不正确的数据（或太大，类型错误的数据等等）输入数据库时，灾难可能会发生。</p>
 </div>
 
 <h3 id="样式注意事项">样式注意事项</h3>
 
-<p>有一些有用的伪类可用于设置有效/无效表单元素的样式： <code>{{cssxref(":valid")}}</code> 和 <code>{{cssxref(":invalid")}}</code>。在本节中，我们将使用以下CSS，它将在包含有效值的输入旁边放置一个复选标记（勾号），并在包含无效值的输入旁边放置一个叉号。</p>
+<p>有一些有用的伪类可用于设置有效/无效表单元素的样式： <code>{{cssxref(":valid")}}</code> 和 <code>{{cssxref(":invalid")}}</code>。在本节中，我们将使用以下 CSS，它将在包含有效值的输入旁边放置一个复选标记（勾号），并在包含无效值的输入旁边放置一个叉号。</p>
 
 <pre class="brush: css notranslate">input:invalid ~ span:after {
     content: '✖';
@@ -345,7 +345,7 @@ input:valid ~ span:after {
 
 <p>{{ EmbedLiveSample('Making_input_required', 600, 40) }}</p>
 
-<p>另外，如果您尝试在未输入搜索词的情况下提交表单，浏览器将显示一条消息。 以下示例来自Firefox：</p>
+<p>另外，如果您尝试在未输入搜索词的情况下提交表单，浏览器将显示一条消息。 以下示例来自 Firefox：</p>
 
 <p><img alt="form field with attached message that says Please fill out this field" src="https://mdn.mozillademos.org/files/15241/firefox-required-message.png" style="display: block; margin: 0 auto;"></p>
 
@@ -355,7 +355,7 @@ input:valid ~ span:after {
 
 <p>您可以使用 <code>{{htmlattrxref("minlength", "input")}}</code> 属性为输入的值指定最小长度（以字符为单位）； 同样，使用 <code>{{htmlattrxref("maxlength", "input")}}</code> 设置输入值的最大长度。</p>
 
-<p>下面的示例要求输入的值的长度为4–8个字符。</p>
+<p>下面的示例要求输入的值的长度为 4–8 个字符。</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;
@@ -390,13 +390,13 @@ input:valid ~ span:after {
 
 <p>{{ EmbedLiveSample('Input_value_length', 600, 40) }}</p>
 
-<p>如果您尝试提交少于4个字符的表单，则会收到相应的错误消息（不同的浏览器会有所不同）。 如果尝试超过8个字符，浏览器将不允许您访问。</p>
+<p>如果您尝试提交少于 4 个字符的表单，则会收到相应的错误消息（不同的浏览器会有所不同）。 如果尝试超过 8 个字符，浏览器将不允许您访问。</p>
 
 <h3 id="指定模式">指定模式</h3>
 
 <p>您可以使用 <code>{{htmlattrxref("pattern", "input")}}</code> 属性指定一个正则表达式，输入值必须遵循该正则表达式才能被视为有效 (请参照 <a href="/en-US/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression">Validating against a regular expression</a>).</p>
 
-<p>让我们看一个例子。 假设我们想提供一个产品ID搜索表格，这些ID都是由两个字母和四个数字组成的代码。 以下示例对此进行了介绍：</p>
+<p>让我们看一个例子。 假设我们想提供一个产品 ID 搜索表格，这些 ID 都是由两个字母和四个数字组成的代码。 以下示例对此进行了介绍：</p>
 
 <pre class="brush: html notranslate">&lt;form&gt;
   &lt;div&gt;

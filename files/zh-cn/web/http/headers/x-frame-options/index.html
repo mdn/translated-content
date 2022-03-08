@@ -11,7 +11,7 @@ original_slug: Web/HTTP/X-Frame-Options
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>The <strong><code>X-Frame-Options</code></strong> <a href="/en-US/docs/Web/HTTP">HTTP</a> 响应头是用来给浏览器 指示允许一个页面 可否在 {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} 或者 {{HTMLElement("object")}} 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免 {{interwiki("wikipedia", "clickjacking")}} 攻击。</p>
+<p>The <strong><code>X-Frame-Options</code></strong> <a href="/en-US/docs/Web/HTTP">HTTP</a> 响应头是用来给浏览器 指示允许一个页面 可否在 {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} 或者 {{HTMLElement("object")}} 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免 {{interwiki("wikipedia", "点击劫持")}} 攻击。</p>
 
 <p>The added security is only provided if the user accessing the document is using a browser supporting <code>X-Frame-Options</code>. {{HTTPHeader("Content-Security-Policy")}} HTTP 头中的 <a href="/en-US/docs/Security/CSP/CSP_policy_directives#frame-ancestors">frame-ancestors</a> 指令会<a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">替代</a>这个非标准的 header。CSP 的 frame-ancestors 会在 {{Gecko("4.0")}} 中支持，但是并不会被所有浏览器支持。然而 <code>X-Frame-Options</code> 是个已广泛支持的非官方标准，可以和 CSP 结合使用。</p>
 

@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 <p>传递给 <code>AsyncFunction</code> 构造函数的所有参数，都会成为新函数中的变量，变量的名称和定义顺序与各参数相同。 </p>
 
 <div class="note">
-<p><strong>注意：使用</strong> <code>AsyncFunction</code> 构造函数创建的{{jsxref("Statements/async_function", "异步函数")}} 并不会在当前上下文中创建闭包，其作用域始终是全局的。因此运行的时候只能访问它们自己的本地变量和全局变量，但不能访问构造函数被调用的那个作用域中的变量。这是它与 {{jsxref("Global_Objects/eval", "eval")}} 不同的地方。</p>
+<p><strong>备注：</strong> <code>AsyncFunction</code> 构造函数创建的{{jsxref("Statements/async_function", "异步函数")}} 并不会在当前上下文中创建闭包，其作用域始终是全局的。因此运行的时候只能访问它们自己的本地变量和全局变量，但不能访问构造函数被调用的那个作用域中的变量。这是它与 {{jsxref("Global_Objects/eval", "eval")}} 不同的地方。</p>
 </div>
 
 <p>调用 <code>AsyncFunction</code> 构造函数时可以省略 <code>new</code>，其效果是一样的。</p>

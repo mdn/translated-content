@@ -3,34 +3,34 @@ title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
-<p id="Summary">{{JSRef("Global_Objects", "Math")}}</p>
+<p>{{JSRef("Global_Objects", "Math")}}</p>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2>概述</h2>
 
 <p><code><strong>Math.log()</strong></code> 函数返回一个数的自然对数，即：</p>
 
 <p><math><semantics><mrow><mo>∀</mo><mi>x</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x &gt; 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{the unique} \; y \; \text{such that} \; e^y = x</annotation></semantics></math></p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Math.log(<em>x</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>x</code></dt>
  <dd>一个数字.</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>如果指定的 <code>number</code> 为负数，则返回值为 <code>NaN</code>。</p>
 
-<p>由于 <code style="font-style: normal;">log</code> 是 <code style="font-style: normal;">Math</code> 的静态方法，所以应该像这样使用：<code style="font-style: normal;">Math.log()</code>，而不是作为你创建的 <code style="font-style: normal;">Math</code> 对象的方法。</p>
+<p>由于 <code>log</code> 是 <code>Math</code> 的静态方法，所以应该像这样使用：<code>Math.log()</code>，而不是作为你创建的 <code>Math</code> 对象的方法。</p>
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Example:_Using_Math.log" name="Example:_Using_Math.log">例子1:使用<code>Math.log</code></h3>
+<h3 id="Example:_Using_Math.log">例子1:使用<code>Math.log</code></h3>
 
 <p>下面的函数返回指定变量的自然对数：</p>
 
@@ -49,7 +49,7 @@ Math.log(10); // 2.302585092994046</pre>
 
 <p>如果你运行 <code>getBaseLog(10, 1000)，则会返回</code><code>2.9999999999999996，非常接近实际答案：3，原因是浮点数精度问题。</code></p>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -76,61 +76,13 @@ Math.log(10); // 2.302585092994046</pre>
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Chrome</th>
-   <th style="line-height: 16px;">Firefox (Gecko)</th>
-   <th style="line-height: 16px;">Internet Explorer</th>
-   <th style="line-height: 16px;">Opera</th>
-   <th style="line-height: 16px;">Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="See_also">相关链接</h2>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Android</th>
-   <th style="line-height: 16px;">Chrome for Android</th>
-   <th style="line-height: 16px;">Firefox Mobile (Gecko)</th>
-   <th style="line-height: 16px;">IE Mobile</th>
-   <th style="line-height: 16px;">Opera Mobile</th>
-   <th style="line-height: 16px;">Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
-
-<p></p>
 
 <ul>
  <li>The {{jsxref("Global_Objects/Math", "Math")}} object it belongs to.</li>

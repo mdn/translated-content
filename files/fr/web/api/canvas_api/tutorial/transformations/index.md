@@ -23,7 +23,7 @@ Avant d'étudier les méthodes de transformations, examinons deux autres méthod
 - {{domxref("CanvasRenderingContext2D.restore", "restore()")}}
   - : Restore le plus récent état sauvegardé du canevas.
 
-Les états du canevas sont stockés dans une pile. Chaque invocation de la méthode `save() `ajoute une copie de l'état courant du canevas en haut de la pile. L'état du dessin est constitué de :
+Les états du canevas sont stockés dans une pile. Chaque invocation de la méthode `save()` ajoute une copie de l'état courant du canevas en haut de la pile. L'état du dessin est constitué de&nbsp;:
 
 - les transformations qui ont été appliquées (exemples : déplacement, rotation, mise à l'échelle).
 - Les valeurs actuelles des attributs suivants : {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}, {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}, {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha")}}, {{domxref("CanvasRenderingContext2D.lineWidth", "lineWidth")}}, {{domxref("CanvasRenderingContext2D.lineCap", "lineCap")}}, {{domxref("CanvasRenderingContext2D.lineJoin", "lineJoin")}}, {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}, {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}}, {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}}, {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}}, {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, {{domxref("CanvasRenderingContext2D.direction", "direction")}}, {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
@@ -87,7 +87,7 @@ C'est une bonne idée de sauvegarder l'état du canevas avant d'effectuer des tr
 
 ### Un exemple `translate`
 
-Cet exemple montre certains des avantages du déplacement de l'origine du canevas. Sans la méthode` translate ()`, tous les rectangles seraient dessinés à la même position (0,0). La méthode `translate ()` nous donne également la liberté de placer le rectangle n'importe où sur le canevas sans avoir à ajuster manuellement les coordonnées dans la fonction `fillRect ()`. Cela le rend un peu plus facile à comprendre et à utiliser.
+Cet exemple montre certains des avantages du déplacement de l'origine du canevas. Sans la méthode `translate()`, tous les rectangles seraient dessinés à la même position `(0,0)`. La méthode `translate()` nous donne également la liberté de placer le rectangle n'importe où sur le canevas sans avoir à ajuster manuellement les coordonnées dans la fonction `fillRect()`. Cela le rend un peu plus facile à comprendre et à utiliser.
 
 Dans la fonction `draw ()`, nous appelons la fonction `fillRect ()` neuf fois en utilisant deux boucles `for` . Dans chaque boucle, le canevas est déplacé, le rectangle est dessiné et le canevas est retourné à son état d'origine. Notez comment l'appel à `fillRect ()` utilise les mêmes coordonnées à chaque fois, en s'appuyant sur `translate ()` pour ajuster la position du dessin.
 

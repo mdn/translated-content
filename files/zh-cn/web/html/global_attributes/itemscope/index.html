@@ -5,23 +5,23 @@ translation_of: Web/HTML/Global_attributes/itemscope
 ---
 <div>{{HTMLSidebar("Global_attributes")}}</div>
 
-<p><code><strong>itemscope</strong></code> 是一个布尔值的 <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a> 。它定义了一个与元数据关联的数据项。就是说一个元素的 <code><strong>itemscope</strong></code> 属性会创建一个项，包含了一组与元素相关的键值对。 相关的属性 {{htmlattrxref("itemtype")}} 通常表示表中一个有效的 URL （比如 <a href="http://schema.org/">schema.org</a>） 来表述项目和上下文。下面每个例子中的概念表都来自 <a href="https://schema.org/">schema.org</a>.</p>
+<p><code><strong>itemscope</strong></code> 是一个布尔值的 <a href="/en-US/docs/Web/HTML/Global_attributes">全局属性</a> 。它定义了一个与元数据关联的数据项。就是说一个元素的 <code><strong>itemscope</strong></code> 属性会创建一个项，包含了一组与元素相关的键值对。 相关的属性 {{htmlattrxref("itemtype")}} 通常表示表中一个有效的 URL（比如 <a href="http://schema.org/">schema.org</a>） 来表述项目和上下文。下面每个例子中的概念表都来自 <a href="https://schema.org/">schema.org</a>.</p>
 
 <p>每个 HTML 元素都可以有指定的 <code>itemscope</code> 属性。一个具有 <code>itemscope</code> 属性的元素可以没有关联的 <code>itemtype</code> ，但必须有相关的 <code>itemref</code>。</p>
 
 <div class="note">
-<p><strong>译者注:</strong> Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎： Google， Microsoft， Yandex 和 Yahoo! 所支持。</p>
+<p><strong>译者注：</strong> Schema.org 提供了一份共享的词汇表，站长可以使用它来标记网页，而这些标记则被主要的搜索引擎： Google， Microsoft， Yandex 和 Yahoo！所支持。</p>
 </div>
 
 <div class="note">
-<p><strong>提示:</strong> 获取更多关于 <code>itemtype</code> 属性的信息： <a href="http://schema.org/Thing">http://schema.org/Thing</a></p>
+<p><strong>提示：</strong> 获取更多关于 <code>itemtype</code> 属性的信息： <a href="http://schema.org/Thing">http://schema.org/Thing</a></p>
 </div>
 
 <h3 id="简单示例">简单示例</h3>
 
 <h4 id="HTML">HTML</h4>
 
-<p>下面一个例子指定的 <code>itemscope</code> 属性，设置了 <code>itemtype</code> 为 "http://schema.org/Movie"， 并且有3个关联的 <code>itemprop</code> 属性（name、director、genre）。</p>
+<p>下面一个例子指定的 <code>itemscope</code> 属性，设置了 <code>itemtype</code> 为 "http://schema.org/Movie"， 并且有 3 个关联的 <code>itemprop</code> 属性（name、director、genre）。</p>
 
 <pre class="brush:html">&lt;div itemscope itemtype ="http://schema.org/Movie"&gt;
   &lt;h1 itemprop="name"&gt;Avatar&lt;/h1&gt;
@@ -78,7 +78,7 @@ translation_of: Web/HTML/Global_attributes/itemscope
 
 <h3 id="示例">示例</h3>
 
-<p>下面示例中有4个 <code>itemscope</code> 属性。每一个 <code>itemscope</code> 设置了相应的 <code>itemptype</code> 属性。例子中<code>itemtype</code>，<code>Recipe</code>，<code>AggregateRating</code>，以及 <code>NutritionInformation</code> 通过指定了 <code>itemptype</code>，也就是“http://schema.org/Recipe”，也都是 <a href="www.schema.org">schema.org</a> 提供的一个食谱的结构化数据的一部分。</p>
+<p>下面示例中有 4 个 <code>itemscope</code> 属性。每一个 <code>itemscope</code> 设置了相应的 <code>itemptype</code> 属性。例子中<code>itemtype</code>，<code>Recipe</code>，<code>AggregateRating</code>，以及 <code>NutritionInformation</code> 通过指定了 <code>itemptype</code>，也就是“http://schema.org/Recipe”，也都是 <a href="www.schema.org">schema.org</a> 提供的一个食谱的结构化数据的一部分。</p>
 
 <pre class="brush: html">&lt;div itemscope itemtype="http://schema.org/Recipe"&gt;
 &lt;h2 itemprop="name"&gt;Grandma's Holiday Apple Pie&lt;/h2&gt;
@@ -233,7 +233,7 @@ Directions: &lt;br&gt;
 </table>
 
 <div class="note">
-<p><strong>提示</strong>: Google 提供了一个方便地从HTML提取微数据结构的工具：<a href="https://developers.google.com/structured-data/testing-tool/"> Structured Data Testing Tool</a>。你可以通过上面的 HTML试一下。</p>
+<p><strong>提示</strong>: Google 提供了一个方便地从 HTML 提取微数据结构的工具：<a href="https://developers.google.com/structured-data/testing-tool/"> Structured Data Testing Tool</a>。你可以通过上面的 HTML 试一下。</p>
 </div>
 
 <h2 id="规范">规范</h2>
@@ -257,55 +257,7 @@ Directions: &lt;br&gt;
 
 <p>下表详细列出了主流浏览器中该条目的兼容性。 </p>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.global_attributes.itemscope")}}
 
 <h2 id="参阅">参阅</h2>
 

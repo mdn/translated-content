@@ -4,7 +4,7 @@ slug: Web/HTML/Element/script
 tags:
   - <script>
   - Element
-  - HTML脚本
+  - HTML 脚本
   - Web
   - 元素
   - 网络
@@ -28,7 +28,7 @@ translation_of: Web/HTML/Element/script
   </tr>
   <tr>
    <th scope="row">可用父元素</th>
-   <td>一些元素可以接受元数据内容, 或者是一些元素可以接受短语元素。</td>
+   <td>一些元素可以接受元数据内容，或者是一些元素可以接受短语元素。</td>
   </tr>
   <tr>
    <th scope="row">隐含的 ARIA 角色</th>
@@ -39,7 +39,7 @@ translation_of: Web/HTML/Element/script
    <td>不允许任何角色</td>
   </tr>
   <tr>
-   <th scope="row">DOM接口</th>
+   <th scope="row">DOM 接口</th>
    <td>{{domxref("HTMLScriptElement")}}</td>
   </tr>
  </tbody>
@@ -56,7 +56,7 @@ translation_of: Web/HTML/Element/script
  <dd>对于<a href="/zh-CN/docs/Web/JavaScript/Guide/Modules">模块脚本</a>，如果存在 <code>async</code> 属性，那么脚本及其所有依赖都会在延缓队列中执行，因此它们会被并行请求，并尽快解析和执行。</dd>
  <dd>该属性能够消除解析阻塞的 Javascript。解析阻塞的 Javascript 会导致浏览器必须加载并且执行脚本，之后才能继续解析。<code>defer</code> 在这一点上也有类似的作用。</dd>
  <dd>这是个布尔属性：布尔属性的存在意味着 true 值，布尔属性的缺失意味着 false 值。</dd>
- <dd>关于浏览器支持请参见{{anch("浏览器兼容性")}}。另可参见文章<a href="/en-US/docs/Games/Techniques/Async_scripts">asm.js的异步脚本</a>。</dd>
+ <dd>关于浏览器支持请参见{{anch("浏览器兼容性")}}。另可参见文章<a href="/en-US/docs/Games/Techniques/Async_scripts">asm.js 的异步脚本</a>。</dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
  <dd>那些没有通过标准<a href="/zh-CN/docs/HTTP_access_control">CORS</a>检查的正常<code>script</code> 元素传递最少的信息到 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。可以使用本属性来使那些将静态资源放在另外一个域名的站点打印错误信息。参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes">CORS 设置属性</a>了解<span class="short_text" id="result_box" lang="zh-CN"><span>对有效参数的更具描述性的解释。</span></span></dd>
  <dt>
@@ -77,7 +77,7 @@ translation_of: Web/HTML/Element/script
  </dt>
  <dd><span class="short_text" id="result_box" lang="zh-CN"><span>包含用户代理可用于验证已提取资源是否已无意外操作的内联元数据。参见</span></span> <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>。</dd>
  <dt>{{htmlattrdef("nomodule")}}</dt>
- <dd>这个布尔属性被设置来标明这个脚本在支持 <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES2015 modules</a> 的浏览器中不执行。 — 实际上，这可用于在不支持模块化JavaScript的旧浏览器中提供回退脚本。</dd>
+ <dd>这个布尔属性被设置来标明这个脚本在支持 <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES2015 modules</a> 的浏览器中不执行。 — 实际上，这可用于在不支持模块化 JavaScript 的旧浏览器中提供回退脚本。</dd>
  <dt>{{htmlattrdef("nonce")}}</dt>
  <dd>A cryptographic nonce (number used once) to whitelist inline scripts in a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src">script-src Content-Security-Policy</a>. The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.</dd>
  <dt id="attr-referrer">{{htmlattrdef("referrerpolicy")}}</dt>
@@ -96,30 +96,30 @@ translation_of: Web/HTML/Element/script
  <p><strong>Note</strong>: An empty string value (<code>""</code>) is both the default value, and a fallback value if <code>referrerpolicy</code> is not supported. If <code>referrerpolicy</code> is not explicitly specified on the <code>&lt;script&gt;</code> element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to <code>no-referrer-when-downgrade</code>.</p>
  </dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>这个属性定义引用外部脚本的URI，这可以用来代替直接在文档中嵌入脚本。指定了 src 属性的script元素标签内不应该再有嵌入的脚本。</dd>
+ <dd>这个属性定义引用外部脚本的 URI，这可以用来代替直接在文档中嵌入脚本。指定了 src 属性的 script 元素标签内不应该再有嵌入的脚本。</dd>
  <dt>{{htmlattrdef("type")}}</dt>
- <dd>该属性定义script元素包含或<code>src</code>引用的脚本语言。属性的值为<abbr title="多用途互联网邮件扩展类型">MIME</abbr>类型; 支持的<abbr title="多用途互联网邮件扩展类型">MIME</abbr>类型包括<code>text/javascript</code>, <code>text/ecmascript</code>, <code>application/javascript</code>, 和<code>application/ecmascript</code>。如果没有定义这个属性，脚本会被视作JavaScript。</dd>
- <dd>如果<abbr title="多用途互联网邮件扩展类型">MIME</abbr>类型不是JavaScript类型（上述支持的类型），则该元素所包含的内容会被当作数据块而不会被浏览器执行。</dd>
- <dd>如果type属性为<code>module</code>，代码会被当作JavaScript模块 {{experimental_inline}}。请参见<a class="external external-icon" href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a></dd>
- <dd>在Firefox中可以通过定义<span style="font-family: consolas,monaco,andale mono,monospace;">type=application/javascript;version=1.8来</span>使用如let声明这类的JS高版本中的先进特性。 但请注意这是个非标准功能，其他浏览器，特别是基于Chrome的浏览器可能会不支持。</dd>
+ <dd>该属性定义 script 元素包含或<code>src</code>引用的脚本语言。属性的值为<abbr title="多用途互联网邮件扩展类型">MIME</abbr>类型; 支持的<abbr title="多用途互联网邮件扩展类型">MIME</abbr>类型包括<code>text/javascript</code>, <code>text/ecmascript</code>, <code>application/javascript</code>, 和<code>application/ecmascript</code>。如果没有定义这个属性，脚本会被视作 JavaScript。</dd>
+ <dd>如果<abbr title="多用途互联网邮件扩展类型">MIME</abbr>类型不是 JavaScript 类型（上述支持的类型），则该元素所包含的内容会被当作数据块而不会被浏览器执行。</dd>
+ <dd>如果 type 属性为<code>module</code>，代码会被当作 JavaScript 模块 {{experimental_inline}}。请参见<a class="external external-icon" href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a></dd>
+ <dd>在 Firefox 中可以通过定义<span style="font-family: consolas,monaco,andale mono,monospace;">type=application/javascript;version=1.8 来</span>使用如 let 声明这类的 JS 高版本中的先进特性。 但请注意这是个非标准功能，其他浏览器，特别是基于 Chrome 的浏览器可能会不支持。</dd>
  <dd>关于如何引入特殊编程语言，请参见<a href="/en-US/Add-ons/Code_snippets/Rosetta">这篇文章</a>。</dd>
  <dt>{{htmlattrdef("text")}}</dt>
- <dd>和 textContent 属性类似，本属性用于设置元素的文本内容。但和 textContent  不一样的是，本属性<span class="short_text" id="result_box" lang="zh-CN"><span>在节点插入到DOM之后，此属性被解析为可执行代码。</span> </span></dd>
+ <dd>和 textContent 属性类似，本属性用于设置元素的文本内容。但和 textContent  不一样的是，本属性<span class="short_text" id="result_box" lang="zh-CN"><span>在节点插入到 DOM 之后，此属性被解析为可执行代码。</span> </span></dd>
  <dt></dt>
  <dt>
  <h3 id="Deprecated_attributes">Deprecated attributes</h3>
  </dt>
  <dt>{{htmlattrdef("charset")}} {{Deprecated_inline}}</dt>
- <dd>如果存在，值必须和“<code>utf-8</code>”不区分大小写的匹配。当然声明 <code>charset</code> 是没有必要的，因为页面文档必须使用UTF-8，而 <code>script</code> 元素会从页面文档中继承这个属性。</dd>
+ <dd>如果存在，值必须和 “<code>utf-8</code>” 不区分大小写的匹配。当然声明 <code>charset</code> 是没有必要的，因为页面文档必须使用 UTF-8，而 <code>script</code> 元素会从页面文档中继承这个属性。</dd>
  <dt>{{htmlattrdef("language")}} {{Deprecated_inline}}</dt>
- <dd>和type属性类似，这个属性定义脚本使用的语言。 但是与type不同的是，这个属性的可能值从未被标准化过。请用<code>type</code>属性代替这个属性。</dd>
+ <dd>和 type 属性类似，这个属性定义脚本使用的语言。 但是与 type 不同的是，这个属性的可能值从未被标准化过。请用<code>type</code>属性代替这个属性。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="基本用法">基本用法</h3>
 
-<p>下面这些示例说明了如何在HTML4和HTML5中通过使用<code>&lt;script&gt;</code>元素来导入脚本。</p>
+<p>下面这些示例说明了如何在 HTML4 和 HTML5 中通过使用<code>&lt;script&gt;</code>元素来导入脚本。</p>
 
 <pre class="brush: html notranslate">&lt;!-- HTML4 and (x)HTML --&gt;
 &lt;script type="text/javascript" src="javascript.js"&gt;
@@ -178,147 +178,7 @@ translation_of: Web/HTML/Element/script
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(1.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>async attribute</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}<sup>[1]</sup></td>
-   <td>10<sup>[1]</sup></td>
-   <td>15<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td>defer attribute</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("1.9.1")}}<sup>[6]</sup></td>
-   <td>
-    <p>4<sup>[3]</sup><br>
-     10</p>
-   </td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>crossorigin attribute</td>
-   <td>{{CompatChrome(30.0)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoDesktop("13")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>12.50</td>
-   <td>{{CompatVersionUnknown}}<sup>[4]</sup></td>
-  </tr>
-  <tr>
-   <td>integrity attribute</td>
-   <td>{{CompatChrome(45.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("43")}}</td>
-   <td></td>
-   <td></td>
-   <td>{{CompatNo}}<sup>[5]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}<sup>[2]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>async attribute</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
-  <tr>
-   <td>defer attribute</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatGeckoMobile("1.0")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
-  <tr>
-   <td>integrity attribute</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(45.0)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("43")}}</td>
-   <td></td>
-   <td></td>
-   <td></td>
-   <td>{{CompatChrome(45.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] In older browsers that don't support the <code>async</code> attribute, parser-inserted scripts block the parser; script-inserted scripts execute asynchronously in IE and WebKit, but synchronously in Opera and pre-4.0 Firefox. In Firefox 4.0, the <code>async</code> DOM property defaults to <code>true</code> for script-created scripts, so the default behavior matches the behavior of IE and WebKit. To request script-inserted external scripts be executed in the insertion order in browsers where the <code>document.createElement("script").async</code> evaluates to <code>true</code> (such as Firefox 4.0), set <code>.async=false</code> on the scripts you want to maintain order. Never call <code>document.write()</code> from an <code>async</code> script. In Gecko 1.9.2, calling <code>document.write()</code> has an unpredictable effect. In Gecko 2.0, calling <code>document.write()</code> from an <code>async</code> script has no effect (other than printing a warning to the error console).</p>
-
-<p>[2] Starting in Gecko 2.0 {{geckoRelease("2.0")}}, inserting script elements that have been created by calling <code>document.createElement("script")</code> into the DOM no longer enforces execution in insertion order. This change lets Gecko properly abide by the HTML5 specification. To make script-inserted external scripts execute in their insertion order, set <code>.async=false</code> on them.</p>
-
-<p>Also, {{HTMLElement("script")}} elements inside {{HTMLElement("iframe")}}, {{HTMLElement("noembed")}} and {{HTMLElement("noframes")}} elements are now executed, for the same reasons.</p>
-
-<p>[3] In versions prior to Internet Explorer 10 Trident implemented <code>&lt;script&gt;</code> by a proprietary specification. Since version 10 it conforms to the W3C specification.</p>
-
-<p>[4] The <code>crossorigin</code> attribute was implemented in WebKit in {{WebKitBug(81438)}}.</p>
-
-<p>[5] {{WebKitBug(148363)}} tracks WebKit implementation of Subresource Integrity (which includes the <code>integrity</code> attribute).</p>
-
-<p>[6] 从 Gecko 1.9.2 {{geckoRelease("1.9.2")}} 开始，在没有 <code>src</code> 属性的脚本标签上的 <code>defer</code> 属性会被忽略。但是在 Gecko 1.9.1 {{geckoRelease("1.9.1")}} 中，如果定义了 <code>defer</code> 属性，即使内嵌的脚本也会被延迟执行。</p>
+{{Compat("html.elements.script")}}
 
 <h2 id="参见">参见</h2>
 

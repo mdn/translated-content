@@ -84,7 +84,7 @@ La taille de l'image affichée pour le masque est calculée de la façon suivant
   - : L'image est affichée avec la taille indiquée.
 - Si `mask-size` vaut `contain` ou `cover` :
   - : L'image est affichée en conservant ses proportions avec la plus grande taille possible pour être contenue ou couvrire toute la zone du masque. Si l'image ne possède pas de proportions intrinsèques, sa taille d'affichage sera la taille de la zone du masque.
-- Si `mask-size` vaut `auto` ou `auto auto `:
+- Si `mask-size` vaut `auto` ou `auto auto`&nbsp;:
   - : Si l'image possède deux dimensions intrinsèques, elle sera affichée avec cette taille. Si elle ne possède pas de dimensions intrinsèques ni de proportions intrinsèques, elle sera affichée à la taille de la zone du masque. Si elle n'a aucune dimension intrinsèque mais possède des proportions intrinsèques elle sera affichée comme si `contain` avait été utilisé. Si l'image possède une dimension intrinsèque et des proportions intrinsèques, sa taille sera déterminée grâce à ses informations. Si l'image possède une dimension intrinsèque mais aucune proportion intrinsèque, la dimension connue sera utilisée pour cet axe et la seconde sera celle de la zone pour le masque.
 - Si `mask-size` possède un composant `auto` et un autre composant différent de `auto` :
   - : Si l'image possède des proportions intrinsèques, elle sera affichée avec la dimension connue et la deuxième sera calculée à partir de la proportion. Si l'image ne possède pas de proportions intrinsèques, la valeur définie sera utilisée pour l'axe correspondant et pour l'autre axe, on utilisera la dimension intrinsèque si elle est connue, sinon, on utilisera la dimension (sur cet axe) de la zone du masque.

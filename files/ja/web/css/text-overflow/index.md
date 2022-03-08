@@ -4,7 +4,7 @@ slug: Web/CSS/text-overflow
 tags:
   - CSS
   - CSS プロパティ
-  - Reference
+  - リファレンス
   - recipe:css-property
 browser-compat: css.properties.text-overflow
 translation_of: Web/CSS/text-overflow
@@ -70,7 +70,7 @@ text-overflow: unset;
 
 ## 例
 
-<h3 id="One-value_syntax">値 1 つの構文</h3>
+### 値 1 つの構文
 
 この例は、様々な `text-overflow` の値が段落に適用された例を、左書きと右書きのテキストで示します。
 
@@ -142,7 +142,7 @@ body {
 
 {{EmbedLiveSample('One-value_syntax', 600, 320)}}
 
-<h3 id="Two-value_syntax">値 2 つの構文</h3>
+### 値 2 つの構文
 
 この例は `text-overflow` の値 2 つの構文を表し、テキストの先頭と末尾の様々なあふれの動作を表しています。
 効果を見るには、スクロールをして行頭を隠すようにする必要があります。

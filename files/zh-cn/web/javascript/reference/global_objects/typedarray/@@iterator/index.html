@@ -62,55 +62,7 @@ console.log(eArr.next().value); // 50
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatGeckoDesktop("36") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{ CompatVersionUnknown }}</td>
-   <td>{{ CompatGeckoMobile("36") }} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <p>[1] 从 Gecko 17 (Firefox 17 / Thunderbird 17 / SeaMonkey 2.14) 到 Gecko 26 (Firefox 26 / Thunderbird 26 / SeaMonkey 2.23 / Firefox OS 1.2) 使用 <code>iterator</code> 属性 (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=907077">bug 907077</a>)，从 Gecko 27 到 Gecko 35 使用<code>"@@iterator"</code> 占位符。 在 Gecko 36 (Firefox 36 / Thunderbird 36 / SeaMonkey 2.33)中，<code>@@iterator</code> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol">Symbol</a> 予以实现(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=918828">bug 918828</a>)。</p>
 

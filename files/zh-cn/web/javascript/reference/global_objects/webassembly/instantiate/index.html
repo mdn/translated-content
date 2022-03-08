@@ -12,8 +12,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
  <li>第二种重载使用已编译的 {{jsxref("WebAssembly.Module")}} , 返回的 <code>Promise</code> 携带一个 <code>Module</code>的实例化对象 <code>Instance</code>. 如果这个 <code>Module</code> 已经被编译了或者是从缓存中获取的( <a href="/en-US/docs/WebAssembly/Caching_modules">retrieved from cache</a>), 那么这种重载方式是非常有用的.</li>
 </ul>
 
-<div class="blockIndicator warning">
-<p><strong>重要</strong>: 此方法不是获取(fetch)和实例化wasm模块的最具效率方法。 如果可能的话，您应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。</p>
+<div class="warning">
+<p><strong>警告：</strong>此方法不是获取(fetch)和实例化wasm模块的最具效率方法。 如果可能的话，您应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -103,7 +103,7 @@ fetch('simple.wasm').then(response =&gt;
 );</pre>
 
 <div class="note">
-<p><strong>注</strong>: 查看GitHub(<a href="https://mdn.github.io/webassembly-examples/js-api-examples/">在线实例</a>)的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html">index.html</a> 中一个相似的例子，使用了我们的<code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1">fetchAndInstantiate()</a></code>库函数</p>
+<p><strong>备注：</strong>: 查看GitHub(<a href="https://mdn.github.io/webassembly-examples/js-api-examples/">在线实例</a>)的 <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html">index.html</a> 中一个相似的例子，使用了我们的<code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1">fetchAndInstantiate()</a></code>库函数</p>
 </div>
 
 <h3 id="第二种重载例子">第二种重载例子</h3>
@@ -158,13 +158,9 @@ onmessage = function(e) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.WebAssembly.instantiate")}}</p>
-</div>
+{{Compat}}
 
 <h2 id="参见">参见</h2>
 

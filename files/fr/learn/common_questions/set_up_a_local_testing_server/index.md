@@ -49,7 +49,7 @@ Vous savez que vous avez lancé l'exemple depuis un fichier local, lorsque l'URL
 
 Certains exemples ne fonctionneront pas si vous les ouvrez en tant que fichiers locaux. Il y a plusieurs raisons possibles, dont les plus courantes sont :
 
-- **Ils sont basés sur des requêtes asynchrones**. Certains navigateurs comme Chrome n'exécutent pas de requêtes asynchrones (voyez [Récolter des données depuis le serveur ](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) si vous lancez simplement l'exemple comme un fichier local. Cela est dû à des restrictions de sécurité (voir [Sécurité des sites Web](/fr/docs/Learn/Server-side/First_steps/Website_security) pour en savoir plus).
+- **Ils sont basés sur des requêtes asynchrones**. Certains navigateurs comme Chrome n'exécutent pas de requêtes asynchrones (voyez [Récolter des données depuis le serveur](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) si vous lancez simplement l'exemple comme un fichier local. Cela est dû à des restrictions de sécurité (voir [Sécurité des sites Web](/fr/docs/Learn/Server-side/First_steps/Website_security) pour en savoir plus).
 - **Ils mettent en œuvre un langage spécifique, tournant sur le serveur**. Des langages côté-serveur (comme PHP ou Python) nécessitent un environnement spécifique fourni par le serveur pour interpréter le code et donner des résultats.
 
 ## Créer un serveur HTTP local simple

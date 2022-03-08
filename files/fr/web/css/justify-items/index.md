@@ -69,7 +69,7 @@ Cette propriété peut être définie selon trois formes différentes :
   - Un mot-clé parmi : `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left` ou `right`
   - Puis éventuellement `safe` ou `unsafe`
 
-- Grâce à un alignement tel que précédemment spécifié : le mot-clé` legacy` suivi de `left` ou de `right`.
+- Grâce à un alignement tel que précédemment spécifié : le mot-clé `legacy` suivi de `left` ou de `right`.
 
 ### Valeurs
 

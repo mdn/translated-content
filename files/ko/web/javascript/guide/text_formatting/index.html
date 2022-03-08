@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}</div>
 
-<p class="summary">이 장에서는 JavaScript에서 문자열과 텍스트로 작업하는 방법을 소개합니다.</p>
+<p >이 장에서는 JavaScript에서 문자열과 텍스트로 작업하는 방법을 소개합니다.</p>
 
 <h2 id="문자열">문자열</h2>
 
@@ -50,7 +50,7 @@ translation_of: Web/JavaScript/Guide/Text_formatting
 
 <h3 id="문자열_개체">문자열 개체</h3>
 
-<p>{{jsxref("문자열")}} 개체<span>는 문자열 기본 데이터 형식의 래퍼입니다.</span></p>
+<p>{{jsxref("문자열")}} 개체는 문자열 기본 데이터 형식의 래퍼입니다.</p>
 
 <pre class="brush: js">var s = new String("foo"); // Creates a String object
 console.log(s); // Displays: { '0': 'f', '1': 'o', '2': 'o'}
@@ -66,7 +66,7 @@ var s2 = new String("2 + 2"); // Creates a String object
 eval(s1); // Returns the number 4
 eval(s2); // Returns the string "2 + 2"</pre>
 
-<p><span class="atn">문자열 개체</span><span>는</span> <span class="atn hps">문자열</span><span>의 문자 수를</span> <span class="hps">나타내는</span> <span class="atn hps">하나의 속성</span><span>,</span> <span class="atn hps">길이</span><span class="atn">를 갖습니다</span><span>.</span> 예를 들어, "Hello, World!"가 13자 이므로 다음 코드는 <span class="hps">x를 값 13으로 할당합니다. <code>String</code> 객체는 문자열에있는 UTF-16 코드 단위의 수를 나타내는 길이가 하나의 속성을 가집니다. 예를 들어, 다음 코드에서는 "Hello, World!"가 UTF-16 코드 단위로 표현되는 13개의 문자를 가지고 있기 때문에 x 값이 13이 됩니다. 배열 브래킷 스타일을 사용하여 각 코드 단위에 액세스 할 수 있습니다. 문자열은 변경 불가능한 배열과 같은 객체이기 때문에 개별 문자를 변경할 수 없습니다.</span></p>
+<p>문자열 개체는 문자열의 문자 수를 나타내는 하나의 속성, 길이를 갖습니다. 예를 들어, "Hello, World!"가 13자 이므로 다음 코드는 x를 값 13으로 할당합니다. <code>String</code> 객체는 문자열에있는 UTF-16 코드 단위의 수를 나타내는 길이가 하나의 속성을 가집니다. 예를 들어, 다음 코드에서는 "Hello, World!"가 UTF-16 코드 단위로 표현되는 13개의 문자를 가지고 있기 때문에 x 값이 13이 됩니다. 배열 브래킷 스타일을 사용하여 각 코드 단위에 액세스 할 수 있습니다. 문자열은 변경 불가능한 배열과 같은 객체이기 때문에 개별 문자를 변경할 수 없습니다.</p>
 
 <pre><code>var mystring = 'Hello, World!';
 var x = mystring.length;
@@ -135,25 +135,25 @@ mystring[0]; // This returns "H"</code></pre>
   <tr>
    <td>{{jsxref("String.substring", "substring")}}, {{jsxref("String.substr", "substr")}}</td>
    <td>
-    <p><span class="hps">어느</span> <span class="hps">시작 및 종료</span> <span class="hps">인덱스</span> <span class="hps">또는</span> <span class="hps">시작 인덱스</span> <span class="hps">및</span> <span class="atn hps">길이</span><span class="atn">를 지정하여, </span><span class="hps">문자열의</span> <span class="hps">지정된</span> <span class="hps">일부를</span> <span class="hps">반환합니다.</span></p>
+    <p>어느 시작 및 종료 인덱스 또는 시작 인덱스 및 길이를 지정하여, 문자열의 지정된 일부를 반환합니다.</p>
    </td>
   </tr>
   <tr>
    <td>{{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}</td>
    <td>
-    <p><span class="atn hps">정규 표현식</span><span>으로</span> <span class="hps">작업합니다.</span></p>
+    <p>정규 표현식으로 작업합니다.</p>
    </td>
   </tr>
   <tr>
    <td>{{jsxref("String.toLowerCase", "toLowerCase")}},<br>
     {{jsxref("String.toUpperCase", "toUpperCase")}}</td>
    <td>
-    <p>.<span class="hps">모든</span><span class="hps"> 소문자</span> <span class="hps">또는</span><span class="atn hps"> 대문자에서 각각 문자열을 반환합니다.</span></p>
+    <p>.모든 소문자 또는 대문자에서 각각 문자열을 반환합니다.</p>
    </td>
   </tr>
   <tr>
    <td>{{jsxref("String.normalize", "normalize")}}</td>
-   <td><span class="hps">호출</span> <span class="atn hps">문자열 값</span><span>의</span> <span class="hps">유니 코드 표준화</span> <span class="atn hps">양식</span><span>을 반환합니다.</span></td>
+   <td>호출 문자열 값의 유니 코드 표준화 양식을 반환합니다.</td>
   </tr>
   <tr>
    <td>{{jsxref("String.repeat", "repeat")}}</td>
@@ -163,7 +163,7 @@ mystring[0]; // This returns "H"</code></pre>
   </tr>
   <tr>
    <td>{{jsxref("String.trim", "trim")}}</td>
-   <td><span class="atn hps">문자열</span><span class="atn">의 시작과 끝</span><span>에서</span> <span class="hps">공백을</span> <span class="atn hps">자릅니다</span><span>.</span></td>
+   <td>문자열의 시작과 끝에서 공백을 자릅니다.</td>
   </tr>
  </tbody>
 </table>
@@ -172,7 +172,7 @@ mystring[0]; // This returns "H"</code></pre>
 
 <p><a href="/en-US/docs/Web/JavaScript/Reference/template_strings">템플릿 문자열</a>은 포함 식을 용납하는 문자열 리터럴입니다. 여러분은 그것들과 함께 다중 선 문자열 및 문자열 보간 기능을 사용할 수 있습니다.</p>
 
-<p>템플릿 문자열은 작은따옴표나 큰따옴표 대신에 back-tick (` `) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent">grave accent</a>)문자로 묶습니다.<span> </span><span class="hps">템플릿</span> <span class="hps">문자열은</span> <span class="hps">자리 표시자를 </span><span>포함 할 수 있습니다</span>. <span class="hps">이들은</span> <span class="atn hps">달러 기호</span><span>와</span> <span class="atn hps">중괄호</span><span>로 표시됩니다</span>.  (<code>${expression}</code>)</p>
+<p>템플릿 문자열은 작은따옴표나 큰따옴표 대신에 back-tick (` `) (<a class="external external-icon" href="https://en.wikipedia.org/wiki/Grave_accent">grave accent</a>)문자로 묶습니다. 템플릿 문자열은 자리 표시자를 포함 할 수 있습니다. 이들은 달러 기호와 중괄호로 표시됩니다.  (<code>${expression}</code>)</p>
 
 <h4 id="다중_선">다중 선</h4>
 

@@ -4,7 +4,7 @@ slug: Web/HTML/Element/form
 tags:
   - Forms
   - HTML
-  - HTML表单
+  - HTML 表单
   - Web
   - 元素
   - 参考
@@ -37,7 +37,7 @@ translation_of: Web/HTML/Element/form
   </tr>
   <tr>
    <th scope="row">允许的父级元素</th>
-   <td>可以是HTML的<a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">任何标签</a></td>
+   <td>可以是 HTML 的<a href="/en-US/docs/Web/HTML/Content_categories#Flow_content">任何标签</a></td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -85,9 +85,9 @@ translation_of: Web/HTML/Element/form
 
  </dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>表单的名称。HTML 4中不推荐（应使用 <code>id</code>）。在 HTML 5 中，该值必须是所有表单中独一无二的，而且不能是空字符串。</dd>
+ <dd>表单的名称。HTML 4 中不推荐（应使用 <code>id</code>）。在 HTML 5 中，该值必须是所有表单中独一无二的，而且不能是空字符串。</dd>
  <dt>{{htmlattrdef("rel")}}</dt>
- <dd>根据 value 创建一个超链接或Creates a hyperlink or annotation depending on the value, see the <a href="/zh-CN/docs/Web/HTML/Attributes/rel">{{htmlattrdef("rel")}}</a> attribute for details.</dd>
+ <dd>根据 value 创建一个超链接或 Creates a hyperlink or annotation depending on the value, see the <a href="/zh-CN/docs/Web/HTML/Attributes/rel">{{htmlattrdef("rel")}}</a> attribute for details.</dd>
 </dl>
 
 <h3 id="关于提交表单的属性">关于提交表单的属性</h3>
@@ -111,9 +111,9 @@ translation_of: Web/HTML/Element/form
  <p>这个值可被 {{HTMLElement("button")}}、<code><a href="/zh-CN/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素上的 {{htmlattrxref("formenctype", "button")}} 属性覆盖。</p>
  </dd>
  <dt>{{htmlattrdef("method")}}</dt>
- <dd>浏览器使用这种 <a href="/en-US/docs/HTTP">HTTP</a> 方式来提交 表单. 可能的值有：
+ <dd>浏览器使用这种 <a href="/en-US/docs/HTTP">HTTP</a> 方式来提交 表单。可能的值有：
  <ul>
-  <li><code>post</code>：指的是 HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST 方法</a>；表单数据会包含在表单体内然后发送给服务器.</li>
+  <li><code>post</code>：指的是 HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST 方法</a>；表单数据会包含在表单体内然后发送给服务器。</li>
   <li><code>get</code>：指的是 HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET 方法</a>；表单数据会附加在 <code>action</code> 属性的 URL 中，并以 '?' 作为分隔符，<a href="/zh-CN/docs/Glossary/Idempotent">没有副作用</a> 时使用这个方法。</li>
   <li><code>dialog</code>：如果表单在 {{HTMLElement("dialog")}} 元素中，提交时关闭对话框。</li>
  </ul>
@@ -121,9 +121,9 @@ translation_of: Web/HTML/Element/form
  <p>此值可以被 {{HTMLElement("button")}}、<code><a href="/zh-CN/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素中的 {{htmlattrxref("formmethod", "button")}} 属性覆盖。</p>
  </dd>
  <dt>{{htmlattrdef("novalidate")}}</dt>
- <dd>此布尔值属性表示提交表单时不需要验证表单。 如果没有声明该属性 （因此表单需要通过验证）。该属性可以被表单中的 {{HTMLElement("button")}}、<code><a href="/zh-CN/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素中的 {{htmlattrxref("formnovalidate", "button")}} 属性覆盖。</dd>
+ <dd>此布尔值属性表示提交表单时不需要验证表单。 如果没有声明该属性（因此表单需要通过验证）。该属性可以被表单中的 {{HTMLElement("button")}}、<code><a href="/zh-CN/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素中的 {{htmlattrxref("formnovalidate", "button")}} 属性覆盖。</dd>
  <dt>{{htmlattrdef("target")}}</dt>
- <dd>表示在提交表单之后，在哪里显示响应信息。在 HTML 4 中, 这是一个 frame 的名字/关键字对。在 HTML5 里，这是一个<em>浏览上下文</em> 的名字/关键字（如标签页、窗口或 iframe）。下述关键字有特别含义：
+ <dd>表示在提交表单之后，在哪里显示响应信息。在 HTML 4 中，这是一个 frame 的名字/关键字对。在 HTML5 里，这是一个<em>浏览上下文</em> 的名字/关键字（如标签页、窗口或 iframe）。下述关键字有特别含义：
  <ul>
   <li><code>_self</code>：默认值。在相同浏览上下文中加载。</li>
   <li><code>_blank</code>：在新的未命名的浏览上下文中加载。</li>

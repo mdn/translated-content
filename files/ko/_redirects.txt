@@ -313,6 +313,9 @@
 /ko/docs/Learn/HTML/Forms/Your_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
 /ko/docs/Learn/HTML/Howto/데이터_속성_사용하기	/ko/docs/Learn/HTML/Howto/Use_data_attributes
 /ko/docs/Learn/HTML/Multimedia_and_embedding/ideo_and_audio_content	/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+/ko/docs/Learn/JavaScript/Asynchronous/Async_await	/ko/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/ko/docs/Learn/JavaScript/Asynchronous/Concepts	/ko/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/ko/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/ko/docs/conflicting/Learn/JavaScript/Asynchronous
 /ko/docs/Learn/JavaScript/Building_blocks/조건문	/ko/docs/Learn/JavaScript/Building_blocks/conditionals
 /ko/docs/Learn/JavaScript/Objects/Inheritance	/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ko/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ko/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
@@ -409,7 +412,7 @@
 /ko/docs/Navigation_timing	/ko/docs/Web/API/Navigation_timing_API
 /ko/docs/Node_server_without_framework	/ko/docs/Learn/Server-side/Node_server_without_framework
 /ko/docs/Notable_bugs_fixed_in_Firefox_3	/ko/docs/Mozilla/Firefox/Releases/3/Notable_bugs_fixed
-/ko/docs/Online_and_offline_events	/ko/docs/Web/API/Navigator/Online_and_offline_events
+/ko/docs/Online_and_offline_events	/ko/docs/Web/API/Navigator/onLine
 /ko/docs/Plugins/Guide/Scripting_plugins	/ko/docs/Glossary/Plugin
 /ko/docs/SVG	/ko/docs/Web/SVG
 /ko/docs/SVG/Tutorial	/ko/docs/Web/SVG/Tutorial
@@ -439,6 +442,7 @@
 /ko/docs/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/cursor
 /ko/docs/Using_URL_values_for_the_cursor_property-redirect-1	/ko/docs/Web/CSS/cursor
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
+/ko/docs/Web/API/AudioWorkletNode/onprocessorerror	/ko/docs/Web/API/AudioWorkletNode/processorerror_event
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
@@ -465,11 +469,12 @@
 /ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.battery/window.navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
+/ko/docs/Web/API/Navigator/Online_and_offline_events	/ko/docs/Web/API/Navigator/onLine
 /ko/docs/Web/API/NavigatorID	/ko/docs/Web/API/Navigator
 /ko/docs/Web/API/NavigatorLanguage	/ko/docs/Web/API/Navigator
 /ko/docs/Web/API/NavigatorLanguage/language	/ko/docs/Web/API/Navigator/language
 /ko/docs/Web/API/NavigatorOnLine	/ko/docs/Web/API/Navigator/language
-/ko/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ko/docs/Web/API/Navigator/Online_and_offline_events
+/ko/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ko/docs/Web/API/Navigator/onLine
 /ko/docs/Web/API/NetworkInformation.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/NetworkInformation.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/NetworkInformation/connection	/ko/docs/Web/API/Navigator/connection

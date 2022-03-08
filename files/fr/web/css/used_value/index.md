@@ -13,7 +13,7 @@ original_slug: Web/CSS/Valeur_utilisée
 
 La **valeur utilisée** de n'importe quelle propriété CSS est la valeur finale d'une propriété après que tous les calculs aient été réalisés.
 
-Une fois qu'un agent utilisateur a terminé les calculs, chaque propriété CSS possède une valeur utilisée. Les valeurs utilisées des dimensions (par exemple `width`,` height`) sont exprimées en pixels et les propriétés raccourcies (comme `background`) sont cohérentes avec leurs propriétés composantes (par exemple `background-color`), `display` est cohérente avec `position` et `float`.
+Une fois qu'un agent utilisateur a terminé les calculs, chaque propriété CSS possède une valeur utilisée. Les valeurs utilisées des dimensions (par exemple `width`, `height`) sont exprimées en pixels et les propriétés raccourcies (comme `background`) sont cohérentes avec leurs propriétés composantes (par exemple `background-color`), `display` est cohérente avec `position` et `float`.
 
 Les valeurs utilisées pour certaines propriétés peuvent être retrouvées en appelant la méthode JavaScript [`window.getComputedStyle()`](/fr/docs/DOM/window.getComputedStyle).
 

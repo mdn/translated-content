@@ -13,4 +13,4 @@ Par exemple, vous pouvez ajouter l'attribut  `role="alert"` à un élément {{H
 
 ## Pour approfondir
 
-- [ARIA ](/fr/docs/Accessibilit%C3%A9/ARIA)sur MDN
+- [ARIA](/fr/docs/Accessibilit%C3%A9/ARIA) sur MDN

@@ -53,7 +53,7 @@ Dans cet article, nous écrirons une démo classique de "balles bondissantes", p
 
 ![](bouncing-balls.png)
 
-Cet exemple utilise l'[API Canvas ](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) pour dessiner les balles sur l'écran, et l'API [requestAnimationFrame](/fr/docs/Web/API/window/requestAnimationFrame)  pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous expérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation **détection de collision**).
+Cet exemple utilise l'[API Canvas](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) pour dessiner les balles sur l'écran, et l'API [requestAnimationFrame](/fr/docs/Web/API/window/requestAnimationFrame)  pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous expérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation **détection de collision**).
 
 Pour commencer, faites des copies locales de nos fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Ces fichiers contiennent respectivement :
 
@@ -132,9 +132,9 @@ En utilisant cette fonction, nous pouvons dire à notre balle de se dessiner sur
 - Ensuite, nous utilisons [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) pour définir de quelle couleur nous voulons que la forme soit — nous lui attribuons la valeur de la propriété `color` de notre balle.
 - Après, nous utilisons la méthode [`arc()`](/fr/docs/Web/API/CanvasRenderingContext2D/arc) pour tracer une forme en arc sur le papier. Ses paramètres sont :
 
-  - Les positions `x` et `y` du centre de l'arc — nous specifions donc les propriétés `x` et `y `de notre balle.
+  - Les positions `x` et `y` du centre de l'arc — nous specifions donc les propriétés `x` et `y` de notre balle.
   - Le rayon de l'arc — nous specifions la propriété `size` de notre balle.
-  - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degrés et `2 * PI `qui est l'équivalent de 360 degrés en radians (malheureusement  vous êtes obligés  de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement  `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
+  - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degrés et `2 * PI` qui est l'équivalent de 360 degrés en radians (malheureusement  vous êtes obligés  de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement  `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
 
 - En dernière position nous utilisons la méthode [`fill()`](/fr/docs/Web/API/CanvasRenderingContext2D/fill) qui est habituellement utilisée pour spécifier que nous souhaitons mettre fin au dessin que nous avons commencé avec `beginPath()`, et remplir la surface délimitée avec la couleur que nous avions spécifiée plus tôt avec `fillStyle`.
 

@@ -48,7 +48,7 @@ Float64Array();</pre>
  <dd>当传入一个任意类型化数组对象作为 <code>typedArray</code> 参数时（比如 <code>Int32Array</code>），<code>typedArray</code> 会被复制到一个新的类型数组中。<code>typedArray</code> 中的每个值在被复制到新的数组之前，会被转化为相应类型的构造函数。新的生成的类型化数组对象将会有跟传入的数组相同的长度（译者注：比如原来的类型化数组的 <code>length==2</code>，那么新生成的数组的 <code>length</code> 也是 <code>2</code>，只是数组中的每一项进行了转化）。</dd>
  <dt><code><em>object</em></code></dt>
  <dd>
- <p>当传入一个 <font face="Consolas, Liberation Mono, Courier, monospace"><code>object</code></font> 作为参数时，就像通过<font face="Consolas, Liberation Mono, Courier, monospace"> </font><code><em>TypedArray</em>.from()</code> 方法创建一个新的类型化数组一样。</p>
+ <p>当传入一个 <code>object</code> 作为参数时，就像通过 <code><em>TypedArray</em>.from()</code> 方法创建一个新的类型化数组一样。</p>
  </dd>
  <dt><code><em>buffer</em></code>, <code><em>byteOffset</em></code>, <code><em>length</em></code></dt>
  <dd>当传入一个 <code>buffer</code> 参数，或者再另外加上可选参数 <code>byteOffset</code> 和 <code>length</code> 时，一个新的类型化数组视图将会被创建，并可用于呈现传入的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="The ArrayBuffer object is used to represent a generic, fixed-length raw binary data buffer. You cannot directly manipulate the contents of an ArrayBuffer; instead, you create one of the typed array objects or a DataView object which represents the buffer in a specific format, and use that to read and write the contents of the buffer.">ArrayBuffer</a></code> 实例。<code>byteOffset</code> 和<code>length</code> 参数指定了类型化数组视图将要暴露的内存范围。如果两者都未传入，那么整个<code>buffer</code> 都会被呈现；如果仅仅忽略 <code>length</code>，那么 <code>buffer</code> 中偏移了 <code>byteOffset</code> 后剩下的 <code>buffer</code> 将会被呈现。</dd>
@@ -161,7 +161,7 @@ Int8Array.prototype.foo = "bar";
   </tr>
   <tr>
    <td>{{jsxref("Float32Array")}}</td>
-   <td><code>1.2</code>×<code>10<sup>-38</sup></code> to <code>3.4</code>×<code>10<sup>38</sup></code></td>
+   <td><code>1.2</code>×<code>10^-38</code> to <code>3.4</code>×<code>10^38</code></td>
    <td>4</td>
    <td>32 位 IEEE 浮点数（7 位有效数字，如 <code>1.1234567</code>）</td>
    <td><code>unrestricted float</code></td>
@@ -169,7 +169,7 @@ Int8Array.prototype.foo = "bar";
   </tr>
   <tr>
    <td>{{jsxref("Float64Array")}}</td>
-   <td><code>5.0</code>×<code>10<sup>-324</sup></code> to <code>1.8</code>×<code>10<sup>308</sup></code></td>
+   <td><code>5.0</code>×<code>10^-324</code> to <code>1.8</code>×<code>10^308</code></td>
    <td>8</td>
    <td>64 位 IEEE 浮点数（16 有效数字，如 <code>1.123...15</code>)</td>
    <td><code>unrestricted double</code></td>
@@ -177,7 +177,7 @@ Int8Array.prototype.foo = "bar";
   </tr>
   <tr>
    <td>{{jsxref("BigInt64Array")}}</td>
-   <td><code>-2<sup>63</sup></code> to <code>2<sup>63</sup>-1</code></td>
+   <td><code>-2^63</code> to <code>2^63-1</code></td>
    <td>8</td>
    <td>64 位二进制有符号整数</td>
    <td><code>bigint</code></td>
@@ -185,7 +185,7 @@ Int8Array.prototype.foo = "bar";
   </tr>
   <tr>
    <td>{{jsxref("BigUint64Array")}}</td>
-   <td><code>0</code> to <code>2<sup>64</sup>-1</code></td>
+   <td><code>0</code> to <code>2^64 - 1</code></td>
    <td>8</td>
    <td>64 位无符号整数</td>
    <td><code>bigint</code></td>
@@ -194,11 +194,11 @@ Int8Array.prototype.foo = "bar";
  </tbody>
 </table>
 
-<h2 id="属性"><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 2.33333rem; letter-spacing: -0.00278rem;'>属性</span></h2>
+<h2 id="属性">属性</h2>
 
 <dl>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT")}}</dt>
- <dd>返回一个数值，代表不同类型的类型化数组对象中，单个元素的字节大小。例如 <code>new Int8Array().BYTES_PER_ELEMENT === 1</code>, <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);"><code>new Int16Array().BYTES_PER_ELEMENT === 2</code></span></font> （ 8 位字节为 1，16 位为 2 字节，类推）。   </dd>
+ <dd>返回一个数值，代表不同类型的类型化数组对象中，单个元素的字节大小。例如 <code>new Int8Array().BYTES_PER_ELEMENT === 1</code>, <code>new Int16Array().BYTES_PER_ELEMENT === 2</code> （ 8 位字节为 1，16 位为 2 字节，类推）。   </dd>
  <dt><code><em>TypedArray</em>.length</code></dt>
  <dd>类型化数组中元素的个数，例如 <code>new Int8Array(3).length === 3</code>。</dd>
  <dt>{{jsxref("TypedArray.name")}}</dt>
@@ -237,7 +237,7 @@ Int8Array.prototype.foo = "bar";
 <p>下面的 JavaScript 代码片段，可能会是你尝试用来补救 <code><var>TypedArray</var></code> 方法缺失的手段（polyfill）：</p>
 
 <pre class="brush: js example-bad">var typedArrayTypes = [<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array" title="The Int8Array typed array represents an array of twos-complement 8-bit signed integers. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Int8Array</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array" title="The Uint8Array typed array represents an array of 8-bit unsigned integers. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Uint8Array</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray" title="The Uint8ClampedArray typed array represents an array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Uint8ClampedArray</a>,
-                       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array" title="The Int16Array typed array represents an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Int16Array</a>,<font face="consolas, monaco, Andale Mono, monospace"> </font></code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array" title="The Uint16Array typed array represents an array of 16-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Uint16Array</a>, ​​​<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array" title="The Int32Array typed array represents an array of twos-complement 32-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Int32Array</a>,
+                       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array" title="The Int16Array typed array represents an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Int16Array</a>, </code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array" title="The Uint16Array typed array represents an array of 16-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Uint16Array</a>, ​​​<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array" title="The Int32Array typed array represents an array of twos-complement 32-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Int32Array</a>,
                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array" title="The Uint32Array typed array represents an array of 32-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Uint32Array</a>, ​​​<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array" title="The Float32Array typed array represents an array of 32-bit floating point numbers (corresponding to the C float data type) in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).">Float32Array</a>, </code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array" title="The Float64Array typed array represents an array of 64-bit floating point numbers (corresponding to the C double data type) in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation)."><code>Float64Array</code></a>];
 
 for (var k in typedArrayTypes)
@@ -275,7 +275,7 @@ for (var k in typedArrayTypes)
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<p><span style='background-color: transparent; color: #333333; display: inline !important; float: none; font-family: "Open Sans",arial,x-locale-body,sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; white-space: normal;'>{{Compat("javascript.builtins.TypedArray")}}</span></p>
+<p>{{Compat("javascript.builtins.TypedArray")}}</p>
 
 <h2 id="兼容性注意事项">兼容性注意事项</h2>
 
@@ -293,15 +293,3 @@ for (var k in typedArrayTypes)
  <li>{{jsxref("ArrayBuffer")}}</li>
  <li>{{jsxref("DataView")}}</li>
 </ul>
-
-<p>
- <audio class="hidden"></audio>
-</p>
-
-<p>
- <audio class="hidden"></audio>
-</p>
-
-<p>
- <audio class="hidden"></audio>
-</p>

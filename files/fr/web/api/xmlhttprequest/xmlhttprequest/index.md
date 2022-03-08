@@ -48,7 +48,7 @@ Firefox 16 a ajouté un paramètre non standard au constructeur qui peut activer
     - `mozAnon`
       - : Booléen: Mettre ce drapeau à `true` évitera au navigateur d'exposer le {{Glossary("origin")}} and [credentials de l'utilisateur](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) lors de la récupération des ressources. Plus important, cela signifie que les {{Glossary("Cookie", "cookies")}} ne seront pas envoyés, sauf si ils sont clairement ajoutés en utilisant setRequestHeader.
     - `mozSystem`
-      - : Booléen: Mettre ce drapeau à `true` autorise les connections cross-site sans requérir le serveur à utiliser {{Glossary("CORS")}}. _Paramètre requis_ :_ `mozAnon: true`, i.e. cela ne peut pas être combiné avec l'envoi de cookies ou d'autres identifiants utilisateurs. Cela fonctionne seulement sur les applications autorisées ({{Bug("692677")}}); ne marche pas sur les pages chargées arbitraitement dans Firefox_
+      - : Booléen&nbsp;: mettre ce drapeau à `true` autorise les connexions intersites sans requérir le serveur à utiliser [`CORS`](/fr/docs/Glossary/CORS). *Paramètre requis&nbsp;: `mozAnon: true`, par exemple, cela ne peut pas être combiné avec l'envoi de cookies ou d'autres identifiants utilisateurs. Cela fonctionne seulement sur les applications autorisées ([bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)); ne marche pas sur les pages chargées arbitrairement dans Firefox.*
 
 ## Voir aussi
 

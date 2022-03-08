@@ -221,7 +221,10 @@
 /ru/docs/Learn/HTML/Введение_в_HTML/Структура_документа_и_веб-сайта	/ru/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 /ru/docs/Learn/HTML/Рецепты	/ru/docs/Learn/HTML/Howto
 /ru/docs/Learn/How_the_Internet_works	/ru/docs/Learn/Common_questions/How_does_the_Internet_work
-/ru/docs/Learn/JavaScript/Asynchronous/Таймауты_и_интервалы	/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
+/ru/docs/Learn/JavaScript/Asynchronous/Async_await	/ru/docs/Learn/JavaScript/Asynchronous/Promises
+/ru/docs/Learn/JavaScript/Asynchronous/Concepts	/ru/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/ru/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/ru/docs/conflicting/Learn/JavaScript/Asynchronous
+/ru/docs/Learn/JavaScript/Asynchronous/Таймауты_и_интервалы	/ru/docs/conflicting/Learn/JavaScript/Asynchronous
 /ru/docs/Learn/JavaScript/Building_blocks/События	/ru/docs/Learn/JavaScript/Building_blocks/Events
 /ru/docs/Learn/JavaScript/Objects/Inheritance	/ru/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ru/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ru/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
@@ -300,6 +303,7 @@
 /ru/docs/Tools/Производительность/Waterfall	/ru/docs/Tools/Performance/Waterfall
 /ru/docs/Using_Firefox_1.5_caching	/ru/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /ru/docs/Using_files_from_web_applications	/ru/docs/Web/API/File/Using_files_from_web_applications
+/ru/docs/Web/API/AbortSignal/onabort	/ru/docs/conflicting/Web/API/AbortSignal/abort_event
 /ru/docs/Web/API/AudioContext.currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
@@ -328,6 +332,7 @@
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/File/fileName	/ru/docs/conflicting/Web/API/File/name
+/ru/docs/Web/API/FileReader/onabort	/ru/docs/Web/API/FileReader/abort_event
 /ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
@@ -378,6 +383,8 @@
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
+/ru/docs/Web/API/Window/ongamepadconnected	/ru/docs/conflicting/Web/API/Window/gamepadconnected_event
+/ru/docs/Web/API/Window/ongamepaddisconnected	/ru/docs/conflicting/Web/API/Window/gamepaddisconnected_event
 /ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
 /ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
@@ -390,6 +397,7 @@
 /ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/WindowTimers.setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/WindowTimers/setTimeout	/ru/docs/Web/API/setTimeout
+/ru/docs/Web/API/XMLHttpRequest/onreadystatechange	/ru/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ru/docs/Web/API/console.timeEnd	/ru/docs/Web/API/Console/timeEnd
 /ru/docs/Web/API/document.activeElement	/ru/docs/Web/API/Document/activeElement
 /ru/docs/Web/API/document.createComment	/ru/docs/Web/API/Document/createComment

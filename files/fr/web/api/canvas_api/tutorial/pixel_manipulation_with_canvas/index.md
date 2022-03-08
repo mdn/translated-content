@@ -37,7 +37,7 @@ var nbOctets = imageData.data.length;
 
 ## Création d'un objet `ImageData`
 
-Pour créer un nouvel objet `ImageData` vierge, vous pouvez utiliser la méthode  {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}. Il existe deux versions de la méthode `createImageData() `:
+Pour créer un nouvel objet `ImageData` vierge, vous pouvez utiliser la méthode [`createImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/createImageData). Il existe deux versions de la méthode `createImageData()`&nbsp;:
 
 ```js
 var monImageData = ctx.createImageData(largeur, hauteur);
@@ -67,7 +67,7 @@ Cette méthode est aussi présentée dans l'article [Manipulation vidéo utilis
 
 ### Une pipette à couleur
 
-Dans cet exemple, nous utilisons la méthode [getImageData() ](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData)pour afficher la couleur en dessous du curseur de la souris. Pour cela, nous avons besoin de la position en cours de la souris donnée par `layerX` et `layerY`, nous recherchons ensuite les données pixel à cette position dans le tableau de pixels que [getImageData()](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData) nous fournit. Finalement, nous utilisons les données du tableau pour définir une couleur d'arrière-plan et un texte dans le `<div>` pour afficher la couleur.
+Dans cet exemple, nous utilisons la méthode [`getImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData) pour afficher la couleur en dessous du curseur de la souris. Pour cela, nous avons besoin de la position en cours de la souris donnée par `layerX` et `layerY`, nous recherchons ensuite les données pixel à cette position dans le tableau de pixels que [`getImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData) nous fournit. Finalement, nous utilisons les données du tableau pour définir une couleur d'arrière-plan et un texte dans le `<div>` pour afficher la couleur.
 
 ```html hidden
 <canvas id="canvas" width="300" height="227" style="float:left"></canvas>
@@ -99,7 +99,7 @@ Dans cet exemple, nous utilisons la méthode [getImageData() ](/fr/docs/Web/API/
 
 ## Peinture des données pixel dans un contexte
 
-Vous pouvez utiliser la méthode [putImageData() ](/fr/docs/Web/API/CanvasRenderingContext2D/putImageData)pour peindre les données pixel dans un contexte :
+Vous pouvez utiliser la méthode [`putImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/putImageData) pour peindre les données pixel dans un contexte&nbsp;:
 
 ```js
 ctx.putImageData(monImageData, dx, dy);

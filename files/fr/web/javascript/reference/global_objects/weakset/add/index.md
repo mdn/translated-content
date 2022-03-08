@@ -24,7 +24,7 @@ La méthode **`add()`** permet d'ajouter un nouvel objet à un objet `WeakSet`.
 ### Paramètres
 
 - `valeur`
-  - : Ce paramètre est obligatoire. Il correspond à l'objet qu'on souhaite ajouter à l'ensemble` WeakSet`.
+  - : Ce paramètre est obligatoire. Il correspond à l'objet qu'on souhaite ajouter à l'ensemble `WeakSet`.
 
 ### Valeur de retour
 

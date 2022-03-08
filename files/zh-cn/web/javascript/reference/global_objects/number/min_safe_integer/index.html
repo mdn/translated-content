@@ -5,13 +5,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Number.MIN_SAFE_INTEGER</code></strong> 代表在 JavaScript中最小的安全的integer型数字 (<code>-(2<sup>53</sup> - 1)</code>).</p>
+<p><strong><code>Number.MIN_SAFE_INTEGER</code></strong> 代表在 JavaScript中最小的安全的integer型数字 (<code>-(2^53 - 1)</code>).</p>
 
 <div>{{js_property_attributes(0, 0, 0)}}</div>
 
 <h2 id="描述">描述</h2>
 
-<p><code>MIN_SAFE_INTEGER</code> 的值是<code>-9007199254740991</code>. 形成这个数字的原因是 JavaScript 在 <a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a>中使用<a href="http://en.wikipedia.org/wiki/Double_precision_floating-point_format">double-precision floating-point format numbers</a> 作为规定。在这个规定中能安全的表示数字的范围在<code>-(2<sup>53</sup> - 1)</code> 到 <code>2<sup>53</sup> - 1之间</code>.</p>
+<p><code>MIN_SAFE_INTEGER</code> 的值是<code>-9007199254740991</code>. 形成这个数字的原因是 JavaScript 在 <a href="http://en.wikipedia.org/wiki/IEEE_floating_point">IEEE 754</a>中使用<a href="http://en.wikipedia.org/wiki/Double_precision_floating-point_format">double-precision floating-point format numbers</a> 作为规定。在这个规定中能安全的表示数字的范围在<code>-(2^53 - 1)</code> 到 <code>2^53 - 1</code>之间.</p>
 
 <p><code>由于MIN_SAFE_INTEGER</code> 是{{jsxref("Number")}}的一个静态属性,你可以直接使用<code>Number.MIN_SAFE_INTEGER</code>, 而不是自己去创建一个{{jsxref("Number")}}的属性。 </p>
 
@@ -45,10 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 
 <h2 id="浏览器支持">浏览器支持</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<p>{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}</p>
-
+{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}
 
 <h2 id="参阅">参阅</h2>
 

@@ -48,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Functions/get
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Example_Defining_a_getter_with_the_get_operator" name="Example:_Defining_a_getter_with_the_get_operator">在新对象初始化时定义一个getter</h3>
+<h3 id="Example_Defining_a_getter_with_the_get_operator">在新对象初始化时定义一个getter</h3>
 
 <p>这会为<code>obj</code>创建一个伪属性<code>latest</code>，它会返回<code>log</code>数组的最后一个元素。</p>
 
@@ -63,7 +63,7 @@ console.log(obj.latest); // "test".</pre>
 
 <p>注意，尝试为<code>latest</code>分配一个值不会改变它。</p>
 
-<h3 id="Example_Deleting_a_getter_using_the_delete_operator" name="Example:_Deleting_a_getter_using_the_delete_operator">使用<code>delete</code>操作符删除 getter</h3>
+<h3 id="Example_Deleting_a_getter_using_the_delete_operator">使用<code>delete</code>操作符删除 getter</h3>
 
 <p>只需使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>，就可删除 getter：</p>
 
@@ -102,8 +102,8 @@ console.log(obj.foo); // "bar"</pre>
  <li>如果被使用，它将被访问几次，并且不需要重新计算，该值将永远不会被改变，或者不应该被重新计算。</li>
 </ul>
 
-<div class="blockIndicator note">
-<p>这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。</p>
+<div class="note">
+<p><strong>备注：</strong>这意味着你不应该为你希望更改其值的属性使用懒 getter，因为 getter 不会重新计算该值。</p>
 </div>
 
 <p>在以下示例中，对象具有一个 getter 属性。在获取属性时，该属性将从对象中删除并重新添加，但此时将隐式显示为数据属性。最后返回得到值。</p>
@@ -161,7 +161,7 @@ console.log(
 
 <p>{{Compat("javascript.functions.get")}}</p>
 
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a></li>

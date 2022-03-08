@@ -221,7 +221,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
 `<img>` est [un élément remplacé](/fr/docs/Web/CSS/Replaced_element). Sa propriété [`display`](/fr/docs/Web/CSS/display) par défaut vaut `inline`, mais ses dimensions par défaut sont définies par les valeurs intrinsèques de l'image, à la façon de `inline-block`. Il est tout à fait possible d'utiliser les propriétés [`border`](/fr/docs/Web/CSS/border)/[`border-radius`](/fr/docs/Web/CSS/border-radius), [`padding`](/fr/docs/Web/CSS/padding)/[`margin`](/fr/docs/Web/CSS/margin), [`width`](/fr/docs/Web/CSS/width), et [`height`](/fr/docs/Web/CSS/height) sur une image.
 
-`<img>` ne possède pas de ligne de base et lorsqu'une image est utilisée dans un contexte de formatage en ligne avec [`vertical-align`](/fr/docs/Web/CSS/vertical-align)`: baseline`, le bas de l'image est placé sur la ligne de base du texte.
+`<img>` n'a pas de ligne de base, donc lorsque les images sont utilisées dans un contexte de mise en forme en ligne avec [`vertical-align`](/fr/docs/Web/CSS/vertical-align)`: baseline`, le bas de l'image sera placé sur la ligne de base du texte.
 
 La propriété [`object-position`](/fr/docs/Web/CSS/object-position) peut être utilisée afin de positionner l'image au sein de la boîte fournie par l'élément. La propriété [`object-fit`](/fr/docs/Web/CSS/object-fit) peut être utilisée pour ajuster le dimensionnement de l'image au sein de la boîte (par exemple pour étirer ou rogner l'image dans la boîte si nécessaire).
 
@@ -299,11 +299,11 @@ La valeur d'un attribut `alt` devrait toujours décrire le contenu de l'image de
 
 Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'écran pourront annoncer le nom du fichier de l'image. Cela peut être source de confusion si le nom du fichier n'est pas représentatif du contenu de l'image.
 
-- [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
-- [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
-- [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+- [_An alt Decision Tree • Images • WAI Web Accessibility Tutorials_ (en anglais)](https://www.w3.org/WAI/tutorials/images/decision-tree/)
+- [_Alt-texts: The Ultimate Guide — Axess Lab_ (en anglais)](https://axesslab.com/alt-texts/)
+- [_How to Design Great Alt Text: An Introduction - Deque_ (en anglais)](https://www.deque.com/blog/great-alt-text-introduction/)
+- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [_Understanding Success Criterion 1.1.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ### L'attribut `title`
 

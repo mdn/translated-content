@@ -1888,22 +1888,6 @@
       "Sheppy"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Async_await": {
-    "modified": "2020-11-28T09:53:12.946Z",
-    "contributors": [
-      "HerbertLim",
-      "chupark"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Concepts": {
-    "modified": "2020-11-17T21:41:39.368Z",
-    "contributors": [
-      "mochapoke",
-      "Plut0",
-      "chupark",
-      "eunjungleecub"
-    ]
-  },
   "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-11-17T21:53:14.519Z",
     "contributors": [
@@ -1916,12 +1900,6 @@
     "contributors": [
       "varvir",
       "chupark"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Timeouts_and_intervals": {
-    "modified": "2020-07-16T22:33:21.049Z",
-    "contributors": [
-      "cjkcc69"
     ]
   },
   "Learn/JavaScript/Building_blocks": {
@@ -17455,6 +17433,28 @@
     "modified": "2020-07-16T22:22:37.951Z",
     "contributors": [
       "Kaben"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous": {
+    "modified": "2020-07-16T22:33:21.049Z",
+    "contributors": [
+      "cjkcc69"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Introducing": {
+    "modified": "2020-11-17T21:41:39.368Z",
+    "contributors": [
+      "mochapoke",
+      "Plut0",
+      "chupark",
+      "eunjungleecub"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Promises": {
+    "modified": "2020-11-28T09:53:12.946Z",
+    "contributors": [
+      "HerbertLim",
+      "chupark"
     ]
   },
   "conflicting/Learn/JavaScript/Objects": {
