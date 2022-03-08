@@ -366,6 +366,6 @@ En plus des exemples précédents, vous pouvez consulter [l'exemple de validatio
 
 - [Guide sur les formulaires HTML](/fr/docs/Learn/Forms)
 - [`<input>`](/fr/docs/Web/HTML/Element/Input)
-- [`<input type="tel">`](/fr/docs/Web/HTML/Element/Input/tel)
-- [`<input type="email">`](/fr/docs/Web/HTML/Element/Input/email)
+- [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/tel)
+- [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email)
 - [Compatibilité des propriétés CSS](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

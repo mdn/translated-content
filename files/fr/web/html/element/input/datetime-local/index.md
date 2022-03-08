@@ -58,7 +58,7 @@ On notera ici que le format de la date affichée n'est pas celui utilisé pour �
 
 > **Note :** Attention si les données sont envoyées avec la méthode HTTP [`GET`](/fr/docs/Web/HTTP/Methods/GET), les deux points (:) devront être échappés pour être intégrés dans les paramètres de l'URL. Avec l'exemple précédent, cela signifie qu'on enverra `partydate=2017-06-01T08%3A30`. Si on souhaite échapper une chaîne de caractères de la même façon en JavaScript, on pourra utiliser [`encodeURI()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURI).
 
-En JavaScript, Il est également possible de définir la valeur de la date utilisée dans le contrôle via la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement/value). Par exemple :
+En JavaScript, Il est également possible de définir la valeur de la date utilisée dans le contrôle via la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement). Par exemple :
 
 ```js
 let dateControl = document.querySelector('input[type="datetime-local"]');
@@ -549,7 +549,7 @@ daySelect.onchange = function() {
 ## Voir aussi
 
 - L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/Input) ainsi que l'interface DOM qu'il implémente&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [`<input type="date">`](/fr/docs/Web/HTML/Element/Input/date) et [`<input type="time">`](/fr/docs/Web/HTML/Element/Input/time)
+- [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date) et [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time)
 - [Un tutoriel sur les sélecteurs de date et d'heure](/fr/docs/Learn/Forms/Basic_native_form_controls)
 - [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
 - [La compatibilité des propriétés CSS pour les éléments de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -8,7 +8,7 @@ browser-compat: html.elements.input.input-date
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`date`** permettent de créer des champs où saisir des dates, via un champ texte dont la valeur est validée ou avec un sélecteur de date.
 
-La valeur fournie par un tel contrôle contiendra l'année, le mois et le jour mais _pas_ l'heure et les minutes. Les éléments [`<input type="time">`](/fr/docs/Web/HTML/Element/Input/time) et [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/Input/datetime-local) permettent respectivement de saisir des heures et des combinaisons de dates et heures.
+La valeur fournie par un tel contrôle contiendra l'année, le mois et le jour mais _pas_ l'heure et les minutes. Les éléments [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time) et [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local) permettent respectivement de saisir des heures et des combinaisons de dates et heures.
 
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
 
@@ -54,7 +54,7 @@ Il est possible de fournir une valeur par défaut en renseignant l'attribut <a h
 
 > **Note :** Le format d'affichage est différent de la valeur réelle de l'attribut `value` — le format de la date affichée sera déterminé en fonction de la langue utilisée par le navigateur alors que la valeur de l'attribut `value` aura toujours la forme `yyyy-mm-dd` (c'est-à-dire les quatre chiffres de l'année, suivi d'un tiret, suivi des deux chiffres pour le mois, suivi d'un tiret puis des deux chiffres pour le jour).
 
-On peut également récupérer la valeur de la date en JavaScript grâce à la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement/value)&nbsp;:
+On peut également récupérer la valeur de la date en JavaScript grâce à la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement)&nbsp;:
 
 ```js
 let dateControl = document.querySelector('input[type="date"]');

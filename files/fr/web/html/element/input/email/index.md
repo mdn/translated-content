@@ -340,15 +340,15 @@ L'élément [`<label>`](/fr/docs/Web/HTML/Element/Label) qui précède l'éléme
 - [Le guide relatif aux formulaires HTML](/fr/docs/Learn/Forms)
 - [`<input>`](/fr/docs/Web/HTML/Element/Input)
 - [`<input type="tel">`](/fr/docs/Web/HTML/Element/Input)
-- [`<input type="url">`](/fr/docs/Web/HTML/Element/Input/url)
+- [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url)
 - Les attributs&nbsp;:
 
-  - [`list`](/fr/docs/Web/HTML/Attributes/list)
+  - [`list`](/fr/docs/Web/HTML/Element/Input#attr-list)
   - [`minlength`](/fr/docs/Web/HTML/Attributes/minlength)
   - [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength)
   - [`multiple`](/fr/docs/Web/HTML/Attributes/multiple)
   - [`pattern`](/fr/docs/Web/HTML/Attributes/pattern)
-  - [`placeholder`](/fr/docs/Web/HTML/Attributes/placeholder)
+  - [`placeholder`](/fr/docs/Web/HTML/Element/Input#attr-placeholder)
   - [`readonly`](/fr/docs/Web/HTML/Attributes/readonly)
   - [`size`](/fr/docs/Web/HTML/Attributes/size)
 

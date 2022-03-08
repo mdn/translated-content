@@ -426,6 +426,6 @@ function populateYears() {
 - L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface DOM qui permet de le manipuler&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
 - [Les formats de date et d'heure utilisés en HTML](/fr/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
 - [Un tutoriel à propos des sélecteurs de dates et d'heures](/fr/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/Input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/Input/date), [`<input type="time">`](/fr/docs/Web/HTML/Element/Input/time), and [`<input type="week">`](/fr/docs/Web/HTML/Element/Input/week)
+- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date), [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/fr/docs/Web/HTML/Element/input/week)
 - [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
 

@@ -258,7 +258,7 @@ input:valid+span:after {
 }
 ```
 
-Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:valid`](/fr/docs/Web/CSS/:valid) afin d'afficher une icône selon le cas, à côté de l'élément [`<span>`](/fr/docs/Web/HTML/Element/span) adjacent. On utilise un élément `<span>` séparé pour plus de flexibilité&nbsp;: certains navigateurs n'affichent pas le contenu généré par les pseudo-classes pour certains types de contrôle (cf. [`<input type="date">`](/fr/docs/Web/HTML/Element/Input/date#validation)).
+Ici, on a utilisé les pseudo-classes [`:invalid`](/fr/docs/Web/CSS/:invalid) et [`:valid`](/fr/docs/Web/CSS/:valid) afin d'afficher une icône selon le cas, à côté de l'élément [`<span>`](/fr/docs/Web/HTML/Element/span) adjacent. On utilise un élément `<span>` séparé pour plus de flexibilité&nbsp;: certains navigateurs n'affichent pas le contenu généré par les pseudo-classes pour certains types de contrôle (cf. [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date#validation)).
 
 > **Attention :** la validation des données des formulaires par le navigateur (côté client) doit toujours être complétée d'une validation des données côté serveur (l'utilisateur peut toujours modifier le HTML et envoyer les données au serveur).
 
@@ -385,5 +385,5 @@ Après avoir déclaré quelques variables, on ajoute un gestionnaire d'évèneme
 
 - [Guide sur les formulaires HTML](/fr/docs/Learn/Forms)
 - [`<input>`](/fr/docs/Web/HTML/Element/Input)
-- [`<input type="tel">`](/fr/docs/Web/HTML/Element/Input/tel)
+- [`<input type="tel">`](/fr/docs/Web/HTML/Element/input/tel)
 - [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

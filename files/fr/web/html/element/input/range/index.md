@@ -6,7 +6,7 @@ translation_of: Web/HTML/Element/input/range
 ---
 {{HTMLRef("Input_types")}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`range`** permettent à l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de [`number`](/fr/docs/Web/HTML/Element/Input/number) par exemple).
+Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`range`** permettent à l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de [`number`](/fr/docs/Web/HTML/Element/input/number) par exemple).
 
 Ce genre de <i lang="en">widget</i> n'étant pas précis, ce type ne devrait pas être utilisé lorsque la valeur exacte fournie par l'utilisateur est importante.
 
@@ -473,7 +473,7 @@ input[type="range"] {
 
 - [Les formulaires HTML](/fr/docs/Learn/Forms)
 - [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface  [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) sur laquelle l'élément du DOM correspondant est basé
-- [`<input type="number">`](/fr/docs/Web/HTML/Element/Input/number)
+- [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number)
 - [`validityState.rangeOverflow`](/fr/docs/Web/API/validityState/rangeOverflow) et [`validityState.rangeUnderflow`](/fr/docs/Web/API/validityState/rangeUnderflow)
 - [Contrôler plusieurs paramètres avec `ConstantSourceNode`](/fr/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Mettre en forme un contrôle d'intervalle (en anglais)](https://css-tricks.com/sliding-nightmare-understanding-range-input)

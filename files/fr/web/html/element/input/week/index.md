@@ -360,5 +360,5 @@ function populateWeeks() {
 - L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/Input)
 - L'interface du DOM qui permet de le manipuler [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
 - [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
-- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/Input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/Input/date), [`<input type="time">`](/fr/docs/Web/HTML/Element/Input/time), et [`<input type="month">`](/fr/docs/Web/HTML/Element/Input/month)
+- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date), [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time), et [`<input type="month">`](/fr/docs/Web/HTML/Element/input/month)
 - [Compatibilité des propriétés CSS](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

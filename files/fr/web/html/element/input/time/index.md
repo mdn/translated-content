@@ -533,5 +533,5 @@ minuteSelect.onchange = setMinutesToZero;
 - L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/Input) ainsi que l'interface DOM [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui peut être utilisée pour manipuler l'élément
 - [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
 - [Un tutoriel pour les sélecteurs de date et d'heure](/fr/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/Input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/Input/date), [`<input type="week">`](/fr/docs/Web/HTML/Element/input/week), et [`<input type="month">`](/fr/docs/Web/HTML/Element/Input/month)
+- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date), [`<input type="week">`](/fr/docs/Web/HTML/Element/input/week), et [`<input type="month">`](/fr/docs/Web/HTML/Element/input/month)
 - [Compatibilité des propriétés CSS](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

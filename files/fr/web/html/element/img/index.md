@@ -29,15 +29,15 @@ Le standard HTML n'indique pas les formats d'image qui doivent être pris en cha
 
 Les formats d'image qu'on rencontre le plus fréquemment sur le Web sont&nbsp;:
 
-- [APNG (<i lang="en">Animated Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#APNG_Animated_Portable_Network_Graphics) pour les séquences animées avec une compression sans perte (le format GIF est moins performant)
-- [AVIF (<i lang="en">AV1 Image File Format</i>)](/fr/docs/Web/Media/Formats/Image_types#AVIF_image) pour les images et les images animées avec de hautes performances
-- [GIF (<i lang="en">Graphics Interchange Format</i>)](/fr/docs/Web/Media/Formats/Image_types#GIF_Graphics_Interchange_Format) pour les images et animations _simples_
-- [JPEG (<i lang="en">Joint Photographic Expert Group image</i>)](/fr/docs/Web/Media/Formats/Image_types#JPEG_Joint_Photographic_Experts_Group_image) pour une compression avec pertes d'images statiques, il s'agit du format le plus utilisé
-- [PNG (<i lang="en">Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#PNG_Portable_Network_Graphics) pour une compression avec pertes d'images statiques, de meilleure qualité que le JPEG
-- [SVG (<i lang="en">Scalable Vector Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#SVG_Scalable_Vector_Graphics) pour un format d'image vectorielle (qui permet de dessiner une image précisément à différentes échelles)
-- [WebP (<i lang="en">Web Picture format</i>)](/fr/docs/Web/Media/Formats/Image_types#WebP_image) pour les images statiques et animées
+- [APNG (<i lang="en">Animated Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics) pour les séquences animées avec une compression sans perte (le format GIF est moins performant)
+- [AVIF (<i lang="en">AV1 Image File Format</i>)](/fr/docs/Web/Media/Formats/Image_types#avif_image) pour les images et les images animées avec de hautes performances
+- [GIF (<i lang="en">Graphics Interchange Format</i>)](/fr/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format) pour les images et animations _simples_
+- [JPEG (<i lang="en">Joint Photographic Expert Group image</i>)](/fr/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) pour une compression avec pertes d'images statiques, il s'agit du format le plus utilisé
+- [PNG (<i lang="en">Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) pour une compression avec pertes d'images statiques, de meilleure qualité que le JPEG
+- [SVG (<i lang="en">Scalable Vector Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) pour un format d'image vectorielle (qui permet de dessiner une image précisément à différentes échelles)
+- [WebP (<i lang="en">Web Picture format</i>)](/fr/docs/Web/Media/Formats/Image_types#webp_image) pour les images statiques et animées
 
-Les formats comme [WebP](/fr/docs/Web/Media/Formats/Image_types#WebP_image) et [AVIF](/fr/docs/Web/Media/Formats/Image_types#AVIF_image) sont recommandés, car avec de meilleures performances que PNG, JPEG, GIF tant pour les images animées que statiques. WebP dispose d'une large prise en charge tandis qu'AVIF n'est pas pris en charge par Safari.
+Les formats comme [WebP](/fr/docs/Web/Media/Formats/Image_types#webp_image) et [AVIF](/fr/docs/Web/Media/Formats/Image_types#avif_image) sont recommandés, car avec de meilleures performances que PNG, JPEG, GIF tant pour les images animées que statiques. WebP dispose d'une large prise en charge tandis qu'AVIF n'est pas pris en charge par Safari.
 
 SVG reste le format recommandé pour les images qui doivent être dessinées avec précision quelle que soit la taille.
 
@@ -177,7 +177,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
   - : L'URL partielle (commençant par `#`) d'une [carte d'image](/fr/docs/Web/HTML/Element/map) associée à l'élément.
 
-    > **Note :** Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/button).
+    > **Note :** Cet attribut est invalide si l'élément `<img>` est à l'intérieur d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) ou d'un élément [`<button>`](/fr/docs/Web/HTML/Element/Button).
 
 ### Attributs dépréciés
 
@@ -403,5 +403,5 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
   - [`object-fit`](/fr/docs/Web/CSS/object-fit),
   - [`object-position`](/fr/docs/Web/CSS/object-position),
   - [`image-orientation`](/fr/docs/Web/CSS/image-orientation),
-  - [`image-rendering`](/fr/docs/Web/CSS/image-rendering),
+  - [`image-rendering`](/fr/docs/Web/CSS/Image-rendering),
   - [`image-resolution`](/fr/docs/Web/CSS/image-resolution).
