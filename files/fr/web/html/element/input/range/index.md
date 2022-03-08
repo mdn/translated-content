@@ -1,8 +1,8 @@
 ---
 title: <input type="range">
-slug: Web/HTML/Element/Input/range
+slug: Web/HTML/Element/input/range
 browser-compat: html.elements.input.input-range
-translation_of: Web/HTML/Element/Input/range
+translation_of: Web/HTML/Element/input/range
 ---
 {{HTMLRef("Input_types")}}
 

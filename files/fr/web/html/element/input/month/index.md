@@ -1,7 +1,7 @@
 ---
 title: <input type="month">
-slug: Web/HTML/Element/Input/month
-translation_of: Web/HTML/Element/Input/month
+slug: Web/HTML/Element/input/month
+translation_of: Web/HTML/Element/input/month
 browser-compat: html.elements.input.input-month
 ---
 {{HTMLRef("Input_types")}}

@@ -1,7 +1,7 @@
 ---
 title: <input type="tel">
-slug: Web/HTML/Element/Input/tel
-translation_of: Web/HTML/Element/Input/tel
+slug: Web/HTML/Element/input/tel
+translation_of: Web/HTML/Element/input/tel
 browser-compat: html.elements.input.input-tel
 ---
 {{HTMLRef}}

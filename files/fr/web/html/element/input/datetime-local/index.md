@@ -1,7 +1,7 @@
 ---
 title: <input type="datetime-local">
-slug: Web/HTML/Element/Input/datetime-local
-translation_of: Web/HTML/Element/Input/datetime-local
+slug: Web/HTML/Element/input/datetime-local
+translation_of: Web/HTML/Element/input/datetime-local
 browser-compat: html.elements.input.input-datetime-local
 ---
 {{HTMLRef("Input_types")}}
