@@ -168,7 +168,7 @@ const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSe
 
 ### Interpretación de los años de dos dígitos
 
-`new Date()` hereda de forma no deseada, comportamiento inconsistente con años expresados en dos dígitos, cuando una llamada `New Date()` es dada a un año expresado en dos dígitos, ese valor del año no es tratado como un año literal y usado como tal si no que es interpretado como una diferencia desde el año `1900`, pero en otros casos, como una diferencia desde el año `2000`.
+`new Date()` hereda de forma no deseada, comportamiento inconsistente con años expresados en dos dígitos, cuando una llamada `new Date()` es dada a un año expresado en dos dígitos, ese valor del año no es tratado como un año literal y usado como tal si no que es interpretado como una diferencia desde el año `1900`, pero en otros casos, como una diferencia desde el año `2000`.
 
 ```js
 let date = new Date(98, 1)         // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
@@ -250,4 +250,3 @@ En este caso, es más importante retornar únicamente un entero que una simple d
 ## Véase también
 
 - {{jsxref("Date/Date", "Date()")}} constructor
-- 
