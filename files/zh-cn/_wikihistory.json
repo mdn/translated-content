@@ -4173,40 +4173,6 @@
       "oceanMIH"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Async_await": {
-    "modified": "2020-12-08T06:58:32.883Z",
-    "contributors": [
-      "byrde",
-      "woniuxingdong",
-      "qwei",
-      "plainnany",
-      "jakio6",
-      "awarmy",
-      "cochn",
-      "wangfangping"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Choosing_the_right_approach": {
-    "modified": "2020-12-08T07:27:41.218Z",
-    "contributors": [
-      "byrde",
-      "icetea_cover",
-      "rubyKC",
-      "shangruitong",
-      "PYGC",
-      "wangfangping",
-      "tjls"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Concepts": {
-    "modified": "2020-07-16T22:33:29.726Z",
-    "contributors": [
-      "alice201601",
-      "grape",
-      "HermitSun",
-      "oceanMIH"
-    ]
-  },
   "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-12-09T00:17:16.227Z",
     "contributors": [
@@ -4234,22 +4200,6 @@
       "wangfangping",
       "kafm",
       "zijieee"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Timeouts_and_intervals": {
-    "modified": "2020-08-14T06:09:20.310Z",
-    "contributors": [
-      "Pada",
-      "You2er",
-      "WinterCicada",
-      "zhangbig0",
-      "mizhon",
-      "yuqing521",
-      "Alendia",
-      "grape",
-      "wangfangping",
-      "puddlejumper26",
-      "oceanMIH"
     ]
   },
   "Learn/JavaScript/Building_blocks/Events": {
@@ -11302,12 +11252,6 @@
       "githubyangwei"
     ]
   },
-  "Web/API/Document/onvisibilitychange": {
-    "modified": "2020-10-15T22:25:06.098Z",
-    "contributors": [
-      "wangzhongchunongithub"
-    ]
-  },
   "Web/API/Document/open": {
     "modified": "2020-10-15T21:52:24.168Z",
     "contributors": [
@@ -18297,7 +18241,7 @@
       "ziyunfei"
     ]
   },
-  "Web/API/Performance/onresourcetimingbufferfull": {
+  "Web/API/Performance/resourcetimingbufferfull_event": {
     "modified": "2019-03-23T22:09:51.120Z",
     "contributors": [
       "Pada"
@@ -22603,6 +22547,13 @@
       "ziyunfei"
     ]
   },
+  "Web/API/Window/appinstalled_event": {
+    "modified": "2019-03-18T21:40:44.436Z",
+    "contributors": [
+      "Aaron_Zhung",
+      "echoArray"
+    ]
+  },
   "Web/API/Window/applicationCache": {
     "modified": "2019-03-23T23:31:44.274Z",
     "contributors": [
@@ -23102,13 +23053,6 @@
       "hhxxhg",
       "fscholz",
       "charlie"
-    ]
-  },
-  "Web/API/Window/onappinstalled": {
-    "modified": "2019-03-18T21:40:44.436Z",
-    "contributors": [
-      "Aaron_Zhung",
-      "echoArray"
     ]
   },
   "Web/API/Window/onbeforeinstallprompt": {
@@ -46637,6 +46581,56 @@
       "shenhao"
     ]
   },
+  "conflicting/Learn/JavaScript/Asynchronous": {
+    "modified": "2020-12-08T07:27:41.218Z",
+    "contributors": [
+      "byrde",
+      "icetea_cover",
+      "rubyKC",
+      "shangruitong",
+      "PYGC",
+      "wangfangping",
+      "tjls"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Introducing": {
+    "modified": "2020-07-16T22:33:29.726Z",
+    "contributors": [
+      "alice201601",
+      "grape",
+      "HermitSun",
+      "oceanMIH"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Promises": {
+    "modified": "2020-12-08T06:58:32.883Z",
+    "contributors": [
+      "byrde",
+      "woniuxingdong",
+      "qwei",
+      "plainnany",
+      "jakio6",
+      "awarmy",
+      "cochn",
+      "wangfangping"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df": {
+    "modified": "2020-08-14T06:09:20.310Z",
+    "contributors": [
+      "Pada",
+      "You2er",
+      "WinterCicada",
+      "zhangbig0",
+      "mizhon",
+      "yuqing521",
+      "Alendia",
+      "grape",
+      "wangfangping",
+      "puddlejumper26",
+      "oceanMIH"
+    ]
+  },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents": {
     "modified": "2019-03-23T23:14:19.406Z",
     "contributors": [
@@ -46834,6 +46828,12 @@
       "Breezewish",
       "teoli",
       "sunnylost"
+    ]
+  },
+  "conflicting/Web/API/Document/visibilitychange_event": {
+    "modified": "2020-10-15T22:25:06.098Z",
+    "contributors": [
+      "wangzhongchunongithub"
     ]
   },
   "conflicting/Web/API/DocumentOrShadowRoot/elementFromPoint": {

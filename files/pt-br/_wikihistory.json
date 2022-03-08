@@ -2036,19 +2036,6 @@
       "Sheppy"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Choosing_the_right_approach": {
-    "modified": "2020-10-15T22:33:23.228Z",
-    "contributors": [
-      "manoelbjr"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Concepts": {
-    "modified": "2020-10-06T09:57:59.299Z",
-    "contributors": [
-      "joseluizmonteirojr",
-      "bellammuniz"
-    ]
-  },
   "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-07-16T22:33:17.985Z",
     "contributors": [
@@ -2060,13 +2047,6 @@
     "contributors": [
       "manoelbjr",
       "luan0ap"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Timeouts_and_intervals": {
-    "modified": "2020-07-16T22:33:21.635Z",
-    "contributors": [
-      "vbarcellos",
-      "bellammuniz"
     ]
   },
   "Learn/JavaScript/Building_blocks": {
@@ -16272,6 +16252,26 @@
       "Junior201313",
       "eduardodx",
       "LeonardoPacheco"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous": {
+    "modified": "2020-10-15T22:33:23.228Z",
+    "contributors": [
+      "manoelbjr"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Introducing": {
+    "modified": "2020-10-06T09:57:59.299Z",
+    "contributors": [
+      "joseluizmonteirojr",
+      "bellammuniz"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df": {
+    "modified": "2020-07-16T22:33:21.635Z",
+    "contributors": [
+      "vbarcellos",
+      "bellammuniz"
     ]
   },
   "conflicting/Learn/JavaScript/Objects": {

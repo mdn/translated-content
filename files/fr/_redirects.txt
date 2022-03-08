@@ -2997,6 +2997,10 @@
 /fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS	/fr/docs/Learn/CSS/First_steps/What_is_CSS
 /fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens	/fr/docs/Learn/CSS/Styling_text/Styling_links
 /fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
+/fr/docs/Learn/JavaScript/Asynchronous/Async_await	/fr/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/fr/docs/conflicting/Learn/JavaScript/Asynchronous
+/fr/docs/Learn/JavaScript/Asynchronous/Concepts	/fr/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/fr/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/fr/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
 /fr/docs/Learn/JavaScript/First_steps/Testes_vos_competence:_Tableaux	/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 /fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile	/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods
 /fr/docs/Learn/JavaScript/First_steps/tableaux	/fr/docs/Learn/JavaScript/First_steps/Arrays
@@ -3713,6 +3717,7 @@
 /fr/docs/Web/API/PasswordCredential/idName	/fr/docs/conflicting/Web/API/PasswordCredential_cbf7b306e83a3f58ff06bccf89637c12
 /fr/docs/Web/API/PasswordCredential/passwordName	/fr/docs/conflicting/Web/API/PasswordCredential_bc57d5dfa87242b4fb83497887124f41
 /fr/docs/Web/API/Performance.now()	/fr/docs/Web/API/Performance/now
+/fr/docs/Web/API/Performance/onresourcetimingbufferfull	/fr/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event
 /fr/docs/Web/API/Pointer_events/gestes_pincer_zoom	/fr/docs/Web/API/Pointer_events/Pinch_zoom_gestures
 /fr/docs/Web/API/PositionOptions	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition_5852407122355d2ab39863042583c266
 /fr/docs/Web/API/PositionOptions/enableHighAccuracy	/fr/docs/conflicting/Web/API/Geolocation/getCurrentPosition

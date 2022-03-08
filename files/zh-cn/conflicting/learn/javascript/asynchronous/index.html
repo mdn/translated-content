@@ -1,0 +1,524 @@
+---
+title: 选择正确的方法
+slug: conflicting/Learn/JavaScript/Asynchronous
+translation_of: Learn/JavaScript/Asynchronous/Choosing_the_right_approach
+original_slug: Learn/JavaScript/Asynchronous/Choosing_the_right_approach
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenu("Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}</div>
+
+<p>为了完成这个模块，我们将简要讨论之前章节谈论过编码技术和功能，看看你应该使用哪一个，并提供适当的建议和提醒。随着时间的推移，我们可能会添加到此资源中。</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">预备条件:</th>
+   <td>基本的计算机素养，对JavaScript基础知识的合理理解。</td>
+  </tr>
+  <tr>
+   <th scope="row">目标:</th>
+   <td>能够在使用不同的异步编程技术时做出合理的选择。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="异步回调">异步回调</h2>
+
+<p>通常在旧式API中找到，涉及将函数作为参数传递给另一个函数，然后在异步操作完成时调用该函数，以便回调可以依次对结果执行某些操作。这是promise的前身;它不那么高效或灵活。仅在必要时使用。</p>
+
+<table class="standard-table">
+ <caption>Useful for...</caption>
+ <thead>
+  <tr>
+   <th scope="col">Single delayed operation</th>
+   <th scope="col">Repeating operation</th>
+   <th scope="col">Multiple sequential operations</th>
+   <th scope="col">Multiple simultaneous operations</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>No</td>
+   <td>Yes (recursive callbacks)</td>
+   <td>Yes (nested callbacks)</td>
+   <td>No</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="代码示例">代码示例</h3>
+
+<p>通过<a href="/en-US/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code> API</a>加载资源的示例（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/introducing/xhr-async-callback.html">run it live</a>，并查看<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/xhr-async-callback.html">see the source</a>）：</p>
+
+<pre class="brush: js notranslate">function loadAsset(url, type, callback) {
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+  xhr.responseType = type;
+
+  xhr.onload = function() {
+    callback(xhr.response);
+  };
+
+  xhr.send();
+}
+
+function displayImage(blob) {
+  let objectURL = URL.createObjectURL(blob);
+
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+}
+
+loadAsset('coffee.jpg', 'blob', displayImage);</pre>
+
+<h3 id="缺陷">缺陷</h3>
+
+<ul>
+ <li>嵌套回调可能很麻烦且难以阅读（即“回调地狱”）</li>
+ <li>每层嵌套都需要故障回调，而使用promises，您只需使用一个<code>.catch（）</code>代码块来处理整个链的错误。</li>
+ <li>异步回调不是很优雅。</li>
+ <li>Promise回调总是按照它们放在事件队列中的严格顺序调用;异步回调不是。</li>
+ <li>当传入到一个第三方库时，异步回调对函数如何执行失去完全控制。</li>
+</ul>
+
+<h3 id="浏览器兼容性">浏览器兼容性</h3>
+
+<p>非常好的一般支持，尽管API中回调的确切支持取决于特定的API。有关更具体的支持信息，请参阅您正在使用的API的参考文档。</p>
+
+<h3 id="更多信息">更多信息</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing">Introducing asynchronous JavaScript</a>, 尤其是 <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Introducing#Async_callbacks">Async callbacks</a></li>
+</ul>
+
+<h2 id="setTimeout">setTimeout()</h2>
+
+<p><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout()</a></code> 是一种允许您在经过任意时间后运行函数的方法</p>
+
+<table class="standard-table">
+ <caption>Useful for...</caption>
+ <thead>
+  <tr>
+   <th scope="col">Single delayed operation</th>
+   <th scope="col">Repeating operation</th>
+   <th scope="col">Multiple sequential operations</th>
+   <th scope="col">Multiple simultaneous operations</th>
+  </tr>
+  <tr>
+   <td>Yes</td>
+   <td>Yes (recursive timeouts)</td>
+   <td>Yes (nested timeouts)</td>
+   <td>No</td>
+  </tr>
+ </thead>
+</table>
+
+<h3 id="代码示例_2">代码示例</h3>
+
+<p>这里浏览器将在执行匿名函数之前等待两秒钟，然后将显示警报消息（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see it running live</a>，<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-settimeout.html">see the source code</a>）：</p>
+
+<pre class="brush: js notranslate">let myGreeting = setTimeout(function() {
+  alert('Hello, Mr. Universe!');
+}, 2000)</pre>
+
+<h3 id="缺陷_2">缺陷</h3>
+
+<p>您可以使用递归的<code>setTimeout（）</code>调用以类似于<code>setInterval（）</code>的方式重复运行函数，使用如下代码：</p>
+
+<pre class="brush: js notranslate">let i = 1;
+setTimeout(function run() {
+  console.log(i);
+  i++;
+
+  setTimeout(run, 100);
+}, 100);</pre>
+
+<p>递归<code>setTimeout（）</code>和<code>setInterval（）</code>之间存在差异：</p>
+
+<ul>
+ <li>递归<code>setTimeout（）</code>保证两次执行间经过指定的时间量（在本例中为100ms）;代码将运行，然后等待100毫秒再次运行。无论代码运行多长时间，间隔都是相同的。</li>
+ <li>使用<code>setInterval（）</code>，我们选择的时间间隔包含了运行代码所花费的时间。（还是100ms为例）假设代码需要40毫秒才能运行 –– 间隔最终只会有60毫秒。</li>
+</ul>
+
+<p>当你的代码有可能比你分配的时间间隔更长时间运行时，最好使用递归的<code>setTimeout（）</code> ––这将使执行之间的时间间隔保持不变，无论代码执行多长时间，你不会得到错误。</p>
+
+<h3 id="浏览器兼容性_2">浏览器兼容性</h3>
+
+<p>{{Compat("api.WindowOrWorkerGlobalScope.setTimeout")}}</p>
+
+<h3 id="更多信息_2">更多信息</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#setTimeout()">setTimeout()</a></li>
+ <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout">setTimeout() reference</a></li>
+</ul>
+
+<h2 id="setInterval">setInterval()</h2>
+
+<p><code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></code>函数允许重复执行一个函数，并设置时间间隔。不如<code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>有效率，但允许您选择运行速率/帧速率。</p>
+
+<table class="standard-table">
+ <caption>Useful for...</caption>
+ <thead>
+  <tr>
+   <th scope="col">Single delayed operation</th>
+   <th scope="col">Repeating operation</th>
+   <th scope="col">Multiple sequential operations</th>
+   <th scope="col">Multiple simultaneous operations</th>
+  </tr>
+  <tr>
+   <td>No</td>
+   <td>Yes</td>
+   <td>No (unless it is the same one)</td>
+   <td>No</td>
+  </tr>
+ </thead>
+</table>
+
+<h3 id="代码示例_3">代码示例</h3>
+
+<p>以下函数创建一个新的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date()</a></code>对象，使用<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString">toLocaleTimeString()</a></code>从中提取时间字符串，然后在UI中显示它。然后我们使用<code>setInterval（）</code>每秒运行一次，创建每秒更新一次的数字时钟的效果（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see this live</a>，<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html">see the source</a>）：</p>
+
+<pre class="brush: js notranslate">function displayTime() {
+   let date = new Date();
+   let time = date.toLocaleTimeString();
+   document.getElementById('demo').textContent = time;
+}
+
+const createClock = setInterval(displayTime, 1000);</pre>
+
+<h3 id="缺陷_3">缺陷</h3>
+
+<ul>
+ <li>帧速率未针对运行动画的系统进行优化，并且可能效率低下。除非您需要选择特定（较慢）的帧速率，否则通常最好使用<code>requestAnimationFrame(</code>).</li>
+</ul>
+
+<h3 id="浏览器兼容性_3">浏览器兼容性</h3>
+
+<p>{{Compat("api.WindowOrWorkerGlobalScope.setInterval")}}</p>
+
+<h3 id="更多信息_3">更多信息</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval()</a></li>
+ <li><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval">setInterval() reference</a></li>
+</ul>
+
+<h2 id="requestAnimationFrame">requestAnimationFrame()</h2>
+
+<p><code><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame()</a></code>是一种允许您以给定当前浏览器/系统的最佳帧速率重复且高效地运行函数的方法。除非您需要特定的速率帧，否则您应该尽可能使用它而不要去使用<code>setInterval()/recursive setTimeout()</code>。</p>
+
+<table class="standard-table">
+ <caption>Useful for...</caption>
+ <thead>
+  <tr>
+   <th scope="col">Single delayed operation</th>
+   <th scope="col">Repeating operation</th>
+   <th scope="col">Multiple sequential operations</th>
+   <th scope="col">Multiple simultaneous operations</th>
+  </tr>
+  <tr>
+   <td>No</td>
+   <td>Yes</td>
+   <td>No (unless it is the same one)</td>
+   <td>No</td>
+  </tr>
+ </thead>
+</table>
+
+<h3 id="代码示例_4">代码示例</h3>
+
+<p>一个简单的动画旋转器;你可以查看<a href="https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">example live on GitHub</a>（参见 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/simple-raf-spinner.html">source code</a> ）：</p>
+
+<pre class="brush: js notranslate">const spinner = document.querySelector('div');
+let rotateCount = 0;
+let startTime = null;
+let rAF;
+
+function draw(timestamp) {
+  if(!startTime) {
+    startTime = timestamp;
+  }
+
+  let rotateCount = (timestamp - startTime) / 3;
+
+  spinner.style.transform = 'rotate(' + rotateCount + 'deg)';
+
+  if(rotateCount &gt; 359) {
+    rotateCount = 0;
+  }
+
+  rAF = requestAnimationFrame(draw);
+}
+
+draw();</pre>
+
+<h3 id="缺陷_4">缺陷</h3>
+
+<ul>
+ <li>您无法使用<code>requestAnimationFrame（）</code>选择特定的帧速率。如果需要以较慢的帧速率运行动画，则需要使用<code>setInterval（）</code>或递归的<code>setTimeout（）</code>。</li>
+</ul>
+
+<h3 id="浏览器兼容性_4">浏览器兼容性</h3>
+
+<p>{{Compat("api.Window.requestAnimationFrame")}}</p>
+
+<h3 id="更多信息_4">更多信息</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Cooperative asynchronous JavaScript: Timeouts and intervals</a>, in particular <a href="/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals#requestAnimationFrame()">requestAnimationFrame()</a></li>
+ <li><a href="/en-US/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame() reference</a></li>
+</ul>
+
+<h2 id="Promises">Promises</h2>
+
+<p><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> 是一种JavaScript功能，允许您运行异步操作并等到它完全完成后再根据其结果运行另一个操作。 Promise是现代异步JavaScript的支柱。</p>
+
+<table class="standard-table">
+ <caption>Useful for...</caption>
+ <thead>
+  <tr>
+   <th scope="col">Single delayed operation</th>
+   <th scope="col">Repeating operation</th>
+   <th scope="col">Multiple sequential operations</th>
+   <th scope="col">Multiple simultaneous operations</th>
+  </tr>
+  <tr>
+   <td>No</td>
+   <td>No</td>
+   <td>Yes</td>
+   <td>See <code>Promise.all()</code>, below</td>
+  </tr>
+ </thead>
+</table>
+
+<h3 id="代码示例_5">代码示例</h3>
+
+<p>以下代码从服务器获取图像并将其显示在 {{htmlelement("img")}} 元素中;（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/simple-fetch-chained.html">see it live also</a>，<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/simple-fetch-chained.html">the source code</a>）：</p>
+
+<pre class="brush: js notranslate">fetch('coffee.jpg')
+.then(response =&gt; response.blob())
+.then(myBlob =&gt; {
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+})
+.catch(e =&gt; {
+  console.log('There has been a problem with your fetch operation: ' + e.message);
+});</pre>
+
+<h3 id="缺陷_5">缺陷</h3>
+
+<p>Promise链可能很复杂，难以解析。如果你嵌套了许多promises，你最终可能会遇到类似的麻烦来回调地狱。例如：</p>
+
+<pre class="brush: js notranslate">remotedb.allDocs({
+  include_docs: true,
+  attachments: true
+}).then(function (result) {
+  var docs = result.rows;
+  docs.forEach(function(element) {
+    localdb.put(element.doc).then(function(response) {
+      alert("Pulled doc with id " + element.doc._id + " and added to local db.");
+    }).catch(function (err) {
+      if (err.name == 'conflict') {
+        localdb.get(element.doc._id).then(function (resp) {
+          localdb.remove(resp._id, resp._rev).then(function (resp) {
+// et cetera...</pre>
+
+<p>最好使用promises的链功能，这样使用更平顺，更易于解析的结构：</p>
+
+<pre class="brush: js notranslate">remotedb.allDocs(...).then(function (resultOfAllDocs) {
+  return localdb.put(...);
+}).then(function (resultOfPut) {
+  return localdb.get(...);
+}).then(function (resultOfGet) {
+  return localdb.put(...);
+}).catch(function (err) {
+  console.log(err);
+});</pre>
+
+<p>乃至：</p>
+
+<pre class="brush: js notranslate">remotedb.allDocs(...)
+.then(resultOfAllDocs =&gt; {
+  return localdb.put(...);
+})
+.then(resultOfPut =&gt; {
+  return localdb.get(...);
+})
+.then(resultOfGet =&gt; {
+  return localdb.put(...);
+})
+.catch(err =&gt; console.log(err));</pre>
+
+<p>这涵盖了很多基础知识。对于更完整的论述，请参阅诺兰劳森的<a href="https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html">We have a problem with promises</a>。</p>
+
+<h3 id="浏览器兼容性_5">浏览器兼容性</h3>
+
+<p>{{Compat("javascript.builtins.Promise")}}</p>
+
+<h3 id="更多信息_5">更多信息</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises">Graceful asynchronous programming with Promises</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Guide/Using_promises">Using promises</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise reference</a></li>
+</ul>
+
+<h2 id="Promise.all">Promise.all()</h2>
+
+<p>一种JavaScript功能，允许您等待多个promises完成，然后根据所有其他promises的结果运行进一步的操作。</p>
+
+<table class="standard-table">
+ <caption>Useful for...</caption>
+ <thead>
+  <tr>
+   <th scope="col">Single delayed operation</th>
+   <th scope="col">Repeating operation</th>
+   <th scope="col">Multiple sequential operations</th>
+   <th scope="col">Multiple simultaneous operations</th>
+  </tr>
+  <tr>
+   <td>No</td>
+   <td>No</td>
+   <td>No</td>
+   <td>Yes</td>
+  </tr>
+ </thead>
+</table>
+
+<h3 id="代码示例_6">代码示例</h3>
+
+<p>以下示例从服务器获取多个资源，并使用<code>Promise.all（）</code>等待所有资源可用，然后显示所有这些资源––  <a href="https://mdn.github.io/learning-area/javascript/asynchronous/promises/promise-all.html">see it live</a>，并查看<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">source code</a>：</p>
+
+<pre class="brush: js notranslate">function fetchAndDecode(url, type) {
+  // Returning the top level promise, so the result of the entire chain is returned out of the function
+  return fetch(url).then(response =&gt; {
+    // Depending on what type of file is being fetched, use the relevant function to decode its contents
+    if(type === 'blob') {
+      return response.blob();
+    } else if(type === 'text') {
+      return response.text();
+    }
+  })
+  .catch(e =&gt; {
+    console.log(`There has been a problem with your fetch operation for resource "${url}": ` + e.message);
+  });
+}
+
+// Call the fetchAndDecode() method to fetch the images and the text, and store their promises in variables
+let coffee = fetchAndDecode('coffee.jpg', 'blob');
+let tea = fetchAndDecode('tea.jpg', 'blob');
+let description = fetchAndDecode('description.txt', 'text');
+
+// Use Promise.all() to run code only when all three function calls have resolved
+Promise.all([coffee, tea, description]).then(values =&gt; {
+  console.log(values);
+  // Store each value returned from the promises in separate variables; create object URLs from the blobs
+  let objectURL1 = URL.createObjectURL(values[0]);
+  let objectURL2 = URL.createObjectURL(values[1]);
+  let descText = values[2];
+
+  // Display the images in &lt;img&gt; elements
+  let image1 = document.createElement('img');
+  let image2 = document.createElement('img');
+  image1.src = objectURL1;
+  image2.src = objectURL2;
+  document.body.appendChild(image1);
+  document.body.appendChild(image2);
+
+  // Display the text in a paragraph
+  let para = document.createElement('p');
+  para.textContent = descText;
+  document.body.appendChild(para);
+});</pre>
+
+<h3 id="缺陷_6">缺陷</h3>
+
+<ul>
+ <li>如果<code>Promise.all（）</code>拒绝，那么你在其数组参数中输入的一个或多个promise(s)就会被拒绝，或者可能根本不返回promises。你需要检查每一个，看看他们返回了什么。</li>
+</ul>
+
+<h3 id="浏览器兼容性_6">浏览器兼容性</h3>
+
+<p>{{Compat("javascript.builtins.Promise.all")}}</p>
+
+<h3 id="更多信息_6">更多信息</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Promises#Running_code_in_response_to_multiple_promises_fulfilling">Running code in response to multiple promises fulfilling</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all() reference</a></li>
+</ul>
+
+<h2 id="Asyncawait">Async/await</h2>
+
+<p>构造在promises之上的语法糖，允许您使用更像编写同步回调代码的语法来运行异步操作。</p>
+
+<table class="standard-table">
+ <caption>Useful for...</caption>
+ <thead>
+  <tr>
+   <th scope="col">Single delayed operation</th>
+   <th scope="col">Repeating operation</th>
+   <th scope="col">Multiple sequential operations</th>
+   <th scope="col">Multiple simultaneous operations</th>
+  </tr>
+  <tr>
+   <td>No</td>
+   <td>No</td>
+   <td>Yes</td>
+   <td>Yes (in combination with <code>Promise.all()</code>)</td>
+  </tr>
+ </thead>
+</table>
+
+<h3 id="代码示例_7">代码示例</h3>
+
+<p>以下示例是我们之前看到的简单承诺示例的重构，该示例获取并显示图像，使用async / await编写（<a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-refactored-fetch.html">see it live</a>，并查看<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-refactored-fetch.html">source code</a>）：</p>
+
+<pre class="brush: js notranslate">async function myFetch() {
+  let response = await fetch('coffee.jpg');
+  let myBlob = await response.blob();
+
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+}
+
+myFetch();</pre>
+
+<h3 id="缺陷_7">缺陷</h3>
+
+<ul>
+ <li>您不能在非<code>async</code>函数内或代码的顶级上下文环境中使用<code>await</code>运算符。这有时会导致需要创建额外的函数封包，这在某些情况下会略微令人沮丧。但大部分时间都值得。</li>
+ <li>浏览器对async / await的支持不如promises那样好。如果你想使用async / await但是担心旧的浏览器支持，你可以考虑使用<a href="https://babeljs.io/">BabelJS</a> 库 - 这允许你使用最新的JavaScript编写应用程序，让Babel找出用户浏览器需要的更改。</li>
+</ul>
+
+<h3 id="浏览器兼容性_7">浏览器兼容性</h3>
+
+<p>{{Compat("javascript.statements.async_function")}}</p>
+
+<h3 id="更多信息_7">更多信息</h3>
+
+<ul>
+ <li><a href="/en-US/docs/Learn/JavaScript/Asynchronous/Async_await">Making asynchronous programming easier with async and await</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">Async function reference</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">Await operator reference</a></li>
+</ul>
+
+<p>{{PreviousMenu("Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}</p>
+
+<h2 id="本章内容">本章内容</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts">异步编程的基本概念</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing">JavaScript异步简介</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">JavaScript合作异步：超时和间隔</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises">使用Promises：优雅的异步编程</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await">使用async和await：让异步编程更简单</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">选择正确的方法</a></li>
+</ul>

@@ -1,0 +1,74 @@
+---
+title: Performance.onresourcetimingbufferfull
+slug: conflicting/Web/API/Performance/resourcetimingbufferfull_event
+tags:
+  - API
+  - Web パフォーマンス
+  - プロパティ
+  - リファレンス
+translation_of: Web/API/Performance/onresourcetimingbufferfull
+original_slug: Web/API/Performance/onresourcetimingbufferfull
+---
+<div>{{APIRef("Resource Timing API")}}</div>
+
+<p><strong><code>onresourcetimingbufferfull</code></strong> プロパティは、{{event("resourcetimingbufferfull")}} イベントが発生したときに呼び出されるイベントハンドラです。このイベントは、ブラウザのリソースタイミングパフォーマンスバッファがいっぱいになったときに発生します。</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">callback = <em>performance</em>.onresourcetimingbufferfull = buffer_full_cb;
+</pre>
+
+<h3 id="Return_Value" name="Return_Value">戻り値</h3>
+
+<dl>
+ <dt>callback</dt>
+ <dd>{{event("resourcetimingbufferfull")}} イベントが発生したときに呼び出される {{event("Event_handlers", "event handler")}}。</dd>
+</dl>
+
+<h2 id="例">例</h2>
+
+<p>次の例では、<code>onresourcetimingbufferfull</code> プロパティにコールバック関数を設定します。</p>
+
+<pre class="brush: js">function buffer_full(event) {
+  console.log("WARNING: Resource Timing Buffer is FULL!");
+  performance.setResourceTimingBufferSize(200);
+}
+function init() {
+  // Set a callback if the resource buffer becomes filled
+  performance.onresourcetimingbufferfull = buffer_full;
+}
+&lt;body onload="init()"&gt;
+</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">コメント</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Resource Timing', '#dom-performance-onresourcetimingbufferfull', 'onresourcetimingbufferfull')}}</td>
+   <td>{{Spec2('Resource Timing')}}</td>
+   <td>初期定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+
+<div>
+<p>{{Compat("api.Performance.onresourcetimingbufferfull")}}</p>
+</div>
+
+<h2 id="あわせて参照">あわせて参照</h2>
+
+<ul>
+ <li>{{event("resourcetimingbufferfull")}} event</li>
+ <li>{{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}</li>
+ <li>{{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}</li>
+</ul>
