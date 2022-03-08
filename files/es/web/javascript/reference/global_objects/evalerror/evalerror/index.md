@@ -19,7 +19,7 @@ new EvalError(message, fileName, lineNumber)
 ### Parámetros
 
 - `message` {{optional_inline}}
-  - : Descripción legible por humanos del error.
+  - : Descripción del error humanamente legible.
 - `fileName` {{optional_inline}}
   - : El nombre del archivo que contiene el código que causó la excepción.
 - `lineNumber` {{optional_inline}}
