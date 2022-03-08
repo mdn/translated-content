@@ -97,7 +97,8 @@ Sumado a los métodos para leer y manipular los componentes individuales de la f
   - : Establece los milisegundos para una fecha especifica acorde a la hora local.
 - {{jsxref("Date.prototype.setMinutes()")}}
   - : Establece los minutos para una fecha especifica acorde a la hora local.
-- {{jsxref("Date.prototype.setMonth()")}} a la hora local.
+- {{jsxref("Date.prototype.setMonth()")}}
+  - : Establece el mes para una fecha especifica acorde a la hora local.
 - {{jsxref("Date.prototype.setSeconds()")}}
   - : Establece los segundos para una fecha especifica acorde a la hora local.
 - {{jsxref("Date.prototype.setTime()")}}
