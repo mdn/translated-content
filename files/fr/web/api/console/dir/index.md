@@ -35,5 +35,5 @@ console.dir(object);
 
 ## Voir aussi
 
-- [Microsoft Docs&nbsp;: référence de l'API Console](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#dir)
-- [Chrome&nbsp;: référence de l'API Console](https://developer.chrome.com/docs/devtools/console/api/#dir)
+- [Microsoft Docs&nbsp;: référence de l'API Console](https://docs.microsoft.com/fr-fr/microsoft-edge/devtools-guide-chromium/console/api#dir)
+- [Chrome&nbsp;: référence de l'API Console (en anglais)](https://developer.chrome.com/docs/devtools/console/api/#dir)
