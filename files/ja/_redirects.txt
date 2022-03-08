@@ -2693,6 +2693,7 @@
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form/Example
 /ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型	/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
+/ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn/JavaScript/Asynchronous/Introducing
 /ja/docs/Learn/JavaScript/Objects/Inheritance	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ja/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
@@ -3239,6 +3240,7 @@
 /ja/docs/Web/API/Node/prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/Web/API/Element
+/ja/docs/Web/API/Performance/onresourcetimingbufferfull	/ja/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/PositionOptions	/ja/docs/conflicting/Web/API/Geolocation/getCurrentPosition
@@ -3338,6 +3340,7 @@
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/Window/getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
 /ja/docs/Web/API/Window/onafterprint	/ja/docs/Web/API/WindowEventHandlers/onafterprint
+/ja/docs/Web/API/Window/onappinstalled	/ja/docs/conflicting/Web/API/Window/appinstalled_event
 /ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/Web/API/Window/onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/Web/API/Window/onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
@@ -3345,7 +3348,7 @@
 /ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
 /ja/docs/Web/API/Window/ongamepadconnected	/ja/docs/conflicting/Web/API/Window/gamepadconnected_event
 /ja/docs/Web/API/Window/ongamepaddisconnected	/ja/docs/conflicting/Web/API/Window/gamepaddisconnected_event
-/ja/docs/Web/API/Window/oninstall	/ja/docs/Web/API/Window/onappinstalled
+/ja/docs/Web/API/Window/oninstall	/ja/docs/conflicting/Web/API/Window/appinstalled_event
 /ja/docs/Web/API/Window/onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
 /ja/docs/Web/API/Window/onkeyup	/ja/docs/Web/API/GlobalEventHandlers/onkeyup
 /ja/docs/Web/API/Window/onmousedown	/ja/docs/Web/API/GlobalEventHandlers/onmousedown

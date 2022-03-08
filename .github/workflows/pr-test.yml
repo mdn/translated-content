@@ -16,19 +16,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         # Needed otherswise it will check out a merge commit which means
         # you can't get a `git diff` for this PR compared to its base.
         # with:
         #   ref: ${{ github.event.pull_request.head.sha }}
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           repository: mdn/content
           path: mdn/content
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v3
         with:
           node-version: "12"
 
@@ -67,7 +67,7 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v4.2
+      - uses: technote-space/get-diff-action@v6.0.1
         id: git_diff_content
         with:
           PATTERNS: files/**/*.+(html|md)
@@ -168,7 +168,7 @@ jobs:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
-      - uses: technote-space/get-diff-action@v4.2
+      - uses: technote-space/get-diff-action@v6.0.1
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true

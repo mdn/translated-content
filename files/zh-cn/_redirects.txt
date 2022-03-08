@@ -1094,6 +1094,10 @@
 /zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form	/zh-CN/docs/Learn/Forms/Your_first_form
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/其他嵌入技术	/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/在网页中添加矢量图形	/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
+/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous
+/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/zh-CN/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
 /zh-CN/docs/Learn/JavaScript/First_steps/变量	/zh-CN/docs/Learn/JavaScript/First_steps/Variables
 /zh-CN/docs/Learn/JavaScript/First_steps/第一点	/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash
 /zh-CN/docs/Learn/JavaScript/Objects/Inheritance	/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
@@ -1273,6 +1277,7 @@
 /zh-CN/docs/Web/API/Document/onfullscreenchange	/zh-CN/docs/conflicting/Web/API/Document/fullscreenchange_event
 /zh-CN/docs/Web/API/Document/onfullscreenerror	/zh-CN/docs/Web/API/Document/fullscreenerror_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
+/zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/conflicting/Web/API/Document/visibilitychange_event
 /zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/Web/API/Document/touchmove_event
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/zh-CN/docs/Web/API/Document/elementFromPoint
@@ -1466,6 +1471,7 @@
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode/childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
+/zh-CN/docs/Web/API/Performance/onresourcetimingbufferfull	/zh-CN/docs/Web/API/Performance/resourcetimingbufferfull_event
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory
 /zh-CN/docs/Web/API/Position	/zh-CN/docs/Web/API/GeolocationPosition
 /zh-CN/docs/Web/API/Position/coords	/zh-CN/docs/Web/API/GeolocationPosition/coords
@@ -1599,6 +1605,7 @@
 /zh-CN/docs/Web/API/Window/crypto	/zh-CN/docs/Web/API/crypto_property
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozAnimationStartTIme	/zh-CN/docs/Web/API/Animation/startTime
+/zh-CN/docs/Web/API/Window/onappinstalled	/zh-CN/docs/Web/API/Window/appinstalled_event
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
 /zh-CN/docs/Web/API/Window/ongamepadconnected	/zh-CN/docs/conflicting/Web/API/Window/gamepadconnected_event
 /zh-CN/docs/Web/API/Window/ongamepaddisconnected	/zh-CN/docs/Web/API/Window/gamepaddisconnected_event
@@ -2284,12 +2291,12 @@
 /zh-CN/docs/learn/JavaScript/Building_blocks/事件	/zh-CN/docs/Learn/JavaScript/Building_blocks/Events
 /zh-CN/docs/learn/JavaScript/Building_blocks/相片走廊	/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery
 /zh-CN/docs/learn/JavaScript/异步	/zh-CN/docs/Learn/JavaScript/Asynchronous
-/zh-CN/docs/learn/JavaScript/异步/Async_await	/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await
-/zh-CN/docs/learn/JavaScript/异步/Choosing_the_right_approach	/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach
+/zh-CN/docs/learn/JavaScript/异步/Async_await	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/zh-CN/docs/learn/JavaScript/异步/Choosing_the_right_approach	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous
 /zh-CN/docs/learn/JavaScript/异步/Promises语法	/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises
-/zh-CN/docs/learn/JavaScript/异步/概念	/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts
+/zh-CN/docs/learn/JavaScript/异步/概念	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
 /zh-CN/docs/learn/JavaScript/异步/简介	/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing
-/zh-CN/docs/learn/JavaScript/异步/超时和间隔	/zh-CN/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
+/zh-CN/docs/learn/JavaScript/异步/超时和间隔	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
 /zh-CN/docs/learn/Performance/CSS_performance	/zh-CN/docs/Learn/Performance/CSS
 /zh-CN/docs/learn/Performance/dns-prefetch	/zh-CN/docs/Web/Performance/dns-prefetch
 /zh-CN/docs/learn/Performance/感知性能	/zh-CN/docs/Learn/Performance/perceived_performance
