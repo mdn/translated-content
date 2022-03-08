@@ -83,4 +83,4 @@ window.CSS.registerProperty({
 - [CSS プロパティと値 API](/ja/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS 描画 API](/ja/docs/Web/API/CSS_Painting_API)
 - [CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/ja/docs/Web/Houdini)
+- [CSS Houdini](/ja/docs/Web/Guide/Houdini)
