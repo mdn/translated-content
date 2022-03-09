@@ -128,7 +128,7 @@ let o = new Object(undefined);
 let o = new Object(null);
 ```
 
-## Usando `Object`para crear objetos `Boolean``
+### Usando `Object`para crear objetos `Boolean``
 
 Los siguientes ejemplos almacenan objetos {{jsxref("Boolean")}} en `o`:
 
