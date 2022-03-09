@@ -38,19 +38,19 @@ translation_of: Web/Guide/User_input_methods
 
 <p>以下は推奨事項一式であり、オープンなウェブアプリでそのようなツールを利用するためのベストプラクティスです。</p>
 
-<h3 id="Decide_what_input_mechanism_you’re_using">Decide what input mechanism you’re using</h3>
+<h3 id="Decide_what_input_mechanism_you’re_using">使用する入力の仕組みを決める</h3>
 
 <h4 id="Keyboard" name="Keyboard">キーボード</h4>
 
-<p>Keyboard input can be controlled by your app. For example if you want to add controls when any key gets pressed, you need to add an event listener on the window object:</p>
+<p>キーボード入力はあなたのアプリによって制御できます。例えば、何らかのキーが押された時に制御を追加したい場合、ウィンドウオブジェクトにイベントリスナーを追加する必要があります。</p>
 
 <pre class="brush: js notranslate">window.addEventListener("keydown", handleKeyDown, true);
 window.addEventListener("keyup", handleKeyUp, true);</pre>
 
-<p>where <code>handleKeyDown</code> and <code>handleKeyUp</code> are the functions implementing the controls about the <code>keydown</code> and <code>keyup</code> events.</p>
+<p><code>handleKeyDown</code> と <code>handleKeyUp</code> は、<code>keydown</code> と <code>keyup</code> イベントについての制御を実装する関数です。</p>
 
 <div class="note">
-<p><strong>注</strong>: Have a look at the <a href="/ja/docs/Web/Reference/Events">Events reference</a> and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.</p>
+<p><strong>注</strong>: キーボードイベントについて、より知りたい人は<a href="/ja/docs/Web/Reference/Events">イベントリファレンス</a> と {{domxref("KeyboardEvent")}} ガイドをご確認ください。</p>
 </div>
 
 <h4 id="Mouse" name="Mouse">マウス</h4>
