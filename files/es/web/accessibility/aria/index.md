@@ -63,7 +63,7 @@ Habría sido mucho más simple usar el elemento nativo {{HTMLElement('progress')
 
 Como cualquier otra tecnología web, existen diversos grados de soporte para ARIA. El soporte se basa en el sistema operativo y el navegador que se utiliza, así como en el tipo de tecnología de asistencia que interactúa con él. Además, la versión del sistema operativo, el navegador y la tecnología de asistencia son factores que contribuyen. Es posible que las versiones de software anteriores no admitan ciertas funciones de ARIA, solo tengan compatibilidad parcial o informen incorrectamente su funcionalidad.
 
-También es importante reconocer que algunas personas que confían en la tecnología de asistencia son reacias a actualizar su software por temor a perder la capacidad de interactuar con su computadora y navegador. Debido a esto, es importante [usar elementos HTML semánticos](/en-US/docs/Learn/Accessibility/HTML) siempre que sea posible, ya que el HTML semántico es mucho más compatible con la tecnología de asistencia.
+También es importante reconocer que algunas personas que confían en la tecnología de asistencia son reacias a actualizar su software por temor a perder la capacidad de interactuar con su computadora y navegador. Debido a esto, es importante [usar elementos HTML semánticos](/es/docs/Learn/Accessibility/HTML) siempre que sea posible, ya que el HTML semántico es mucho más compatible con la tecnología de asistencia.
 
 También es importante probar su ARIA creado con tecnología de asistencia real. Así como los emuladores y simuladores de navegador no son una solución efectiva para probar el soporte completo, las soluciones de tecnología de asistencia de emuladas no son suficientes para garantizar completamente la funcionalidad.
 
