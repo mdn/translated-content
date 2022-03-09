@@ -77,7 +77,6 @@ No hay ningún método en un Objeto que sirva para borrar sus propiedades (como 
 - {{jsxref("Object.setPrototypeOf","Object.setPrototypeOf()")}}
   - : Estipula el prototipo de un objeto (su propiedad interna `[[Prototype]]`).
 - {{jsxref("Object.values","Object.values()")}}
-
   - : Devuelve un arreglo que contiene todos los valores correspondientes a las propiedades enumerables de tipo cadena de texto **pertenecientes** a un objeto dado.
 
 ## Propiedades de instancia
