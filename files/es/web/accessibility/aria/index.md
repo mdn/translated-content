@@ -96,7 +96,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 
 - [Funciones ARIA](/en-US/docs/Web/Accessibility/ARIA/Roles)
   - : Páginas de referencia que cubren todos los roles de WAI-ARIA discutidos en MDN.
-- [Estados y propiedades de ARIA](/en-US/docs/Web/Accessibility/ARIA/Attributes)
+- [Estados y propiedades de ARIA](/es/docs/Web/Accessibility/ARIA/Attributes)
   - : Páginas de referencia que cubren todos los estados y propiedades de WAI-ARIA discutidos en MDN.rted por NVDA con Firefox y VoiceOver con Safari.
 
 ## Esfuerzos de estandarización
