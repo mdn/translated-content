@@ -489,10 +489,11 @@
 /ko/docs/Web/API/RandomSource/getRandomValues	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/Screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
 /ko/docs/Web/API/Screen.lockOrientation/window.screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
-/ko/docs/Web/API/Screen.onorientationchange	/ko/docs/Web/API/Screen/onorientationchange
-/ko/docs/Web/API/Screen.onorientationchange/window.screen.onorientationchange	/ko/docs/Web/API/Screen/onorientationchange
+/ko/docs/Web/API/Screen.onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
+/ko/docs/Web/API/Screen.onorientationchange/window.screen.onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
 /ko/docs/Web/API/Screen.orientation	/ko/docs/Web/API/Screen/orientation
 /ko/docs/Web/API/Screen.orientation/window.screen.orientation	/ko/docs/Web/API/Screen/orientation
+/ko/docs/Web/API/Screen/onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
 /ko/docs/Web/API/Streams_API/컨셉	/ko/docs/Web/API/Streams_API/Concepts
 /ko/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ko/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ko/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
@@ -512,7 +513,7 @@
 /ko/docs/Web/API/window.navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/window.screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
-/ko/docs/Web/API/window.screen.onorientationchange	/ko/docs/Web/API/Screen/onorientationchange
+/ko/docs/Web/API/window.screen.onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
 /ko/docs/Web/API/window.screen.orientation	/ko/docs/Web/API/Screen/orientation
 /ko/docs/Web/API/window.screen.unlockOrientation	/ko/docs/Web/API/Screen/unlockOrientation
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block

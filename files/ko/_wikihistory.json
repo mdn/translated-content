@@ -6381,18 +6381,18 @@
       "junho85"
     ]
   },
-  "Web/API/Screen/onorientationchange": {
-    "modified": "2019-03-23T23:26:53.977Z",
-    "contributors": [
-      "jsx",
-      "teoli",
-      "junho85"
-    ]
-  },
   "Web/API/Screen/orientation": {
     "modified": "2019-03-23T23:27:06.864Z",
     "contributors": [
       "fscholz",
+      "teoli",
+      "junho85"
+    ]
+  },
+  "Web/API/Screen/orientationchange_event": {
+    "modified": "2019-03-23T23:26:53.977Z",
+    "contributors": [
+      "jsx",
       "teoli",
       "junho85"
     ]

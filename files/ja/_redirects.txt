@@ -3268,6 +3268,7 @@
 /ja/docs/Web/API/Response/useFinalURL	/ja/docs/orphaned/Web/API/Response/useFinalURL
 /ja/docs/Web/API/SVGTests	/ja/docs/orphaned/Web/API/SVGTests
 /ja/docs/Web/API/SVGTransformable	/ja/docs/orphaned/Web/API/SVGTransformable
+/ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
 /ja/docs/Web/API/ScrollToOptions	/ja/docs/conflicting/Web/API/Window/scroll
 /ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/conflicting/Web/API/caches
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
