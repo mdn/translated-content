@@ -145,7 +145,7 @@ let o = new Object(Boolean());
 
 Cuando altere el comportamiento de los métodos existentes en `Object.prototype`, considere inyectar el código envolviendo la extensión antes o después de la lógica existente. Por ejemplo, este código (no testeado) ejecutará precondicionalmente la lógica modificada antes que la lógica predefinida o la ejecución de cualquier otra extensión.
 
-Cuando una función es llamada, los argumentos de la llamada son tenidos por la "variable" pseudo-arreglo [arguments] (/en-US/docs/Web/JavaScript/Reference/Functions/arguments). Por ejemplo en la llamada `myFn(a, b, c)`, los argumentos dentro del cuerpo de `myFn` contendrán tres elementos pseudo-arreglo correspondientes a `(a, b, c)`.
+Cuando una función es llamada, los argumentos de la llamada son tenidos por la "variable" pseudo-arreglo [arguments] (/es/docs/Web/JavaScript/Reference/Functions/arguments). Por ejemplo en la llamada `myFn(a, b, c)`, los argumentos dentro del cuerpo de `myFn` contendrán tres elementos pseudo-arreglo correspondientes a `(a, b, c)`.
 
 Cuando modificamos prototipos con hooks, pase `this`y sus argumentos (el estado durante el llamado) al actual comportamiento llamando a `apply()`en la función. Esta patrón puede ser usado por cualquier prototypo, como `Node.prototype`, `Function.prototype`, etc.
 
