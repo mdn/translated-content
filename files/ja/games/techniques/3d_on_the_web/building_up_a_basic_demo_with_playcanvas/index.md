@@ -1,5 +1,5 @@
 ---
-title: PlayCanvasでベーシックデモをビルドする
+title: PlayCanvas でベーシックデモをビルドする
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
 tags:
   - 3D
@@ -14,9 +14,10 @@ tags:
   - レンダリング
   - 初心者
 ---
+
 {{GamesSidebar}}
 
-PlayCanvas は有名な 3D WebGL ゲームエンジンです​。 Will Eastcott と  Dave Evans によって作成されました。 [GitHub 上でオープンソース](https://github.com/playcanvas/engine)となっており、オンラインで使用できる[エディター](https://developer.playcanvas.com/en/user-manual/designer/)と優れた[ドキュメント](https://developer.playcanvas.com/en/)が特徴です。 オンラインエディターは、パブリックプロジェクトの場合チームメンバー 2 人まで無料で使用できますが、商用でより多くのデベロッパーが参加できるプライベートプロジェクトを希望される場合は [有償プラン](https://playcanvas.com/plans)もあります。
+PlayCanvas は有名な 3D WebGL ゲームエンジンです ​。 Will Eastcott と Dave Evans によって作成されました。 [GitHub 上でオープンソース](https://github.com/playcanvas/engine)となっており、オンラインで使用できる[エディター](https://developer.playcanvas.com/en/user-manual/designer/)と優れた[ドキュメント](https://developer.playcanvas.com/en/)が特徴です。 オンラインエディターは、パブリックプロジェクトの場合チームメンバー 2 人まで無料で使用できますが、商用でより多くのデベロッパーが参加できるプライベートプロジェクトを希望される場合は [有償プラン](https://playcanvas.com/plans)もあります。
 
 ![PlayCanvas website.](playcanvas-cover.png)
 
@@ -30,7 +31,7 @@ PlayCanvas では、機能紹介を兼ねたデモをいくつか公開してい
 
 ![A list of PlayCanvas demos: Tanx, Swooop, Star Lord, BMW i8.](playcanvas-demos.png)
 
-> **備考:** さらに事例をご覧になる場合は[特集されているデモ](https://playcanvas.com/explore)も確認してください。
+> **Note:** さらに事例をご覧になる場合は[特集されているデモ](https://playcanvas.com/explore)も確認してください。
 
 ## エンジンとエディターの違い
 
@@ -39,14 +40,12 @@ PlayCanvas では、機能紹介を兼ねたデモをいくつか公開してい
 
 ## PlayCanvas エンジン
 
-モダンブラウザー向けに構築されている PlayCanvas は、リソースローディング、エンティティシステムやコンポーネントシステム、高度なグラフィック操作、コリジョン、物理エンジン ( [ammo.js](https://github.com/kripken/ammo.js/ )
-でのビルド)、オーディオ、様々なデバイス（ゲームパッドを含む）からの入力のコントロールを扱う設備を搭載したフル装備の 3D エンジンです。 なかなかの機能が揃っているのではないでしょうか。実際に使用されているところを見てみましょう。詳細については [PlayCanvas でベーシックデモをビルドする](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine)
-をビルドするを参照ください。
+モダンブラウザー向けに構築されている PlayCanvas は、リソースローディング、エンティティシステムやコンポーネントシステム、高度なグラフィック操作、コリジョン、物理エンジン ( [ammo.js](https://github.com/kripken/ammo.js/)
+でのビルド)、オーディオ、様々なデバイス（ゲームパッドを含む）からの入力のコントロールを扱う設備を搭載したフル装備の 3D エンジンです。 なかなかの機能が揃っているのではないでしょうか。実際に使用されているところを見てみましょう。詳細については [PlayCanvas でベーシックデモをビルドする](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine)を参照ください。
 
 ## PlayCanvas エディター
 
-ゼロからコーディングするのではなく、オンラインエディターを使用するという手もあります。 コーディングが得意というわけでない方でも、心地よく使用いただける環境になっています。 詳細は [PlayCanvas でベーシックデモをビルドする](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor)
-するを参照ください。
+ゼロからコーディングするのではなく、オンラインエディターを使用するという手もあります。 コーディングが得意というわけでない方でも、心地よく使用いただける環境になっています。 詳細は [PlayCanvas でベーシックデモをビルドする](/ja/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor)を参照ください。
 
 ## まとめ
 
