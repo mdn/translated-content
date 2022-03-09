@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object
 browser-compat: javascript.builtins.Object
 ---
+
 {{JSRef}}
 
 La clase **`Object`** representa uno de los [tipos de datos en Javascript](/es/docs/Web/JavaScript/Data_structures). Es usado para guardar una colección de datos definidos y entidades más complejas. Los objetos pueden ser creados utilzando el constructor {{jsxref("Object/Object", "Object()")}} o [la sintaxis literal / inicializador de objeto](/es/docs/Web/JavaScript/Reference/Operators/Object_initializer).
@@ -187,7 +188,8 @@ var Employee = function (name, title) {
 };
 
 Employee.prototype = Object.create(Person.prototype);
-Employee.prototype.constructor = Employee; //Si no aplicas Object.prototype.constructor a Employee,
+Employee.prototype.constructor = Employee;
+//Si no aplicas Object.prototype.constructor a Employee,
 //tomará  prototype.constructor de Person (padre).
 //Para evitarlo, aplicamos prototype.constructor a Employee(hijo).
 
@@ -202,7 +204,8 @@ var Customer = function (name) {
 };
 
 Customer.prototype = Object.create(Person.prototype);
-Customer.prototype.constructor = Customer; //Si no aplicas Object.prototype.constructor a Customer,
+Customer.prototype.constructor = Customer;
+//Si no aplicas Object.prototype.constructor a Customer,
 //tomará  prototype.constructor de Person (padre).
 //Para evitarlo, aplicamos prototype.constructor a Customer (hijo)
 
@@ -212,7 +215,8 @@ var Mime = function (name) {
 };
 
 Mime.prototype = Object.create(Person.prototype);
-Mime.prototype.constructor = Mime; //Si no aplicas Object.prototype.constructor a Mime,
+Mime.prototype.constructor = Mime;
+//Si no aplicas Object.prototype.constructor a Mime,
 //tomará  prototype.constructor de Person (padre).
 //Para evitarlo, aplicamos prototype.constructor a Mime (hijo).
 
