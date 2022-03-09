@@ -3,35 +3,32 @@ title: DeviceOrientationEvent.absolute
 slug: Web/API/DeviceOrientationEvent/absolute
 translation_of: Web/API/DeviceOrientationEvent/absolute
 original_slug: Web/API/DeviceOrientationEvent.absolute
+browser-compat: api.DeviceOrientationEvent.absolute
 ---
-{{ ApiRef() }}
+{{apiref("Device Orientation Events")}}
 
-Indique si l'appareil partage des données en référentiel absolut c'est à dire sur avec des cordonnées issu du référentiel terrestre, ou si il partage des données utilisant un référentiel arbitraire déterminé par l'appareil. Voir [Orientation et mouvement expliqué](/en/DOM/Orientation_and_motion_data_explained) pour plus de détails.
+Cette propriété indique si l'appareil fournit des données d'orientation dans un repère absolu (utilisant les coordonnées par rapport à la Terre) ou s'il utilise un repère arbitraire propre. Voir [le guide sur les données d'orientation et de déplacement](/fr/docs/Web/Events/Orientation_and_motion_data_explained) pour plus de détails.
 
 ## Syntaxe
 
-    var absolute = instanceOfDeviceOrientationEvent.absolute;
+```js
+let absolute = instanceOfDeviceOrientationEvent.absolute;
+```
 
-`DeviceOrientationEvent.absolute` retourne un booléen :
-
-- `true` : si les données d'orientation dans `instanceOfDeviceOrientationEvent` est proposer dans un référentiel terrestre.
-- `false` : si les données d'orientation utilisent un référentiel arbitraire.
+_`absolute`_ vaut `true` si les données d'orientation fournies par l'évènement `instanceOfDeviceOrientationEvent` sont fournies comme la différence entre l'orientation de l'appareil et celle du repère terrestre ou `false` si les données d'orientation sont fournies relativement à un repère arbitraire fixé par l'appareil.
 
 ## Spécifications
 
-| Spécification                                | Statuts                                  | Commentaires           |
-| -------------------------------------------- | ---------------------------------------- | ---------------------- |
-| {{SpecName('Device Orientation')}} | {{Spec2('Device Orientation')}} | Initial specification. |
+{{Specifications}}
 
-## Compatibilité entre les navigateurs
+## Compatibilité des navigateurs
 
-{{ page("/en-US/docs/Web/API/DeviceOrientationEvent","Browser_compatibility") }}
+{{Compat}}
 
 ## Voir aussi
 
-- {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en/Detecting_device_orientation)
-- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
-- {{ domxref("window.ondeviceorientation") }}
-
-{{ event("deviceorientation") }}
+- [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
+- [Détecter l'orientation d'un appareil](/fr/docs/Web/Events/Detecting_device_orientation)
+- [Guide sur les données d'orientation et de déplacement](/fr/docs/Web/Events/Orientation_and_motion_data_explained)
+- [`window.ondeviceorientation`](/fr/docs/Web/API/window/ondeviceorientation)
+- [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
