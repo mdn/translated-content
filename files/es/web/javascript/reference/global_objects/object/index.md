@@ -80,7 +80,7 @@ No hay ningún método en un Objeto que sirva para borrar sus propiedades (como 
 
   - : Devuelve un arreglo que contiene todos los valores correspondientes a las propiedades enumerables de tipo cadena de texto **pertenecientes** a un objeto dado.
 
-  ## Propiedades de instancia
+## Propiedades de instancia
 
 - {{jsxref("Object.prototype.constructor")}}
   - : Especifica la función que crea el prototipo de un objeto.
