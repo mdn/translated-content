@@ -141,7 +141,7 @@ let o = new Object(true);
 let o = new Object(Boolean());
 ```
 
-## Prototipos del objeto
+### Prototipos del objeto
 
 Cuando altere el comportamiento de los métodos existentes en `Object.prototype`, considere inyectrar el código envolviendo la extensión antes o después de la lógica existente. Por ejemplo, este código (no testeado) ejecutará precondicionalmente la lógica modificada antes que la lógica predefinida o la ejecución de cualquier otra extensión.
 
