@@ -1,67 +1,56 @@
 ---
-title: window.clearInterval
+title: clearInterval()
 slug: Web/API/clearInterval
 tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - JavaScript timers
-  - Window
+  - API
+  - HTML DOM
+  - JavaScript タイマー
+  - メソッド
+  - リファレンス
+  - clearInterval
+browser-compat: api.clearInterval
 translation_of: Web/API/WindowOrWorkerGlobalScope/clearInterval
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearInterval
 ---
-<div>{{ApiRef}}</div>
+{{APIRef("HTML DOM")}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+グローバルの **`clearInterval()`** メソッドは、以前に {{domxref("setInterval", "setInterval()")}} の呼び出しによって確立されたタイマーを利用した繰り返し動作を取り消します。
 
-<p>{{domxref("window.setInterval", "setInterval")}} を使用して設定された繰り返し動作をキャンセルします。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+clearInterval(intervalID)
+```
 
-<pre class="syntaxbox"><em>window</em>.clearInterval(<var>intervalID</var>)
-</pre>
+### 引数
 
-<ul>
- <li><code>intervalID</code>: キャンセルする繰り返し動作の識別子。この ID は <code>setInterval()</code> の戻り値です。</li>
-</ul>
+- `intervalID`
+  - : 取り消す繰り返し動作の識別子です。この ID は対応する `setInterval()` の呼び出しの返値です。
 
-<h2 id="Example" name="Example">例</h2>
+{{domxref("setInterval", "setInterval()")}} と {{domxref("setTimeout", "setTimeout()")}} で使用する ID のプールが共有されていることは注目に値します。つまり、技術的には `clearInterval()` と {{domxref("clearTimeout", "clearTimeout()")}} を交換することができます。
+しかし、わかりやすくするために、そうすることは避けるべきです。
 
-<p>{{domxref("window.setInterval", "setInterval()", "example")}} の例を参照して下さい。</p>
+### 返値
 
-<h2 id="Specification" name="Specification">仕様</h2>
+{{jsxref("undefined")}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>仕様書</th>
-   <th>策定状況</th>
-   <th>コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-setInterval', 'WindowOrWorkerGlobalScope.clearInterval()')}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>最新の仕様で、メソッドを <code>WindowOrWorkerGlobalScope</code> ミックスインに移動。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#dom-setInterval", "WindowTimers.setInterval()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## 例
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+[`setInterval()` の例](/ja/docs/Web/API/setInterval#examples)を参照してください。
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.clearInterval")}}</p>
+## 仕様書
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Specifications}}
 
-<ul>
- <li><a href="/ja/docs/JavaScript/Timers" title="JavaScript/Timers">JavaScript timers</a></li>
- <li>{{domxref("window.setTimeout")}}</li>
- <li>{{domxref("window.setInterval")}}</li>
- <li>{{domxref("window.clearTimeout")}}</li>
- <li>{{domxref("window.requestAnimationFrame")}}</li>
- <li><a href="/ja/docs/JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
-</ul>
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [JavaScript タイマー](/ja/docs/JavaScript/Timers)
+- {{domxref("setTimeout")}}
+- {{domxref("setInterval")}}
+- {{domxref("clearTimeout")}}
+- {{domxref("Window.requestAnimationFrame")}}
+- [_デーモン_ 管理](/ja/docs/JavaScript/Timers/Daemons)
