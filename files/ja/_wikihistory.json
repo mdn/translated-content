@@ -21161,15 +21161,15 @@
       "shuuji3"
     ]
   },
-  "Web/API/Screen/onorientationchange": {
-    "modified": "2020-10-15T21:52:15.970Z",
+  "Web/API/Screen/orientation": {
+    "modified": "2020-10-15T21:52:16.035Z",
     "contributors": [
       "mfuji09",
       "shuuji3"
     ]
   },
-  "Web/API/Screen/orientation": {
-    "modified": "2020-10-15T21:52:16.035Z",
+  "Web/API/Screen/orientationchange_event": {
+    "modified": "2020-10-15T21:52:15.970Z",
     "contributors": [
       "mfuji09",
       "shuuji3"
