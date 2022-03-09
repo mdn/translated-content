@@ -3,108 +3,105 @@ title: Window.requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
 tags:
   - API
-  - Animations
-  - DOM
-  - DOM Reference
+  - アニメーション
   - Drawing
   - Games
   - Graphics
-  - Intermediate
-  - JavaScript timers
-  - Method
+  - HTML DOM
+  - 中級者
+  - JavaScript タイマー
+  - メソッド
   - Performance
-  - Reference
-  - Scheduling
+  - リファレンス
+  - スケジュール
   - Window
   - requestAnimationFrame
+  - Polyfill
+browser-compat: api.Window.requestAnimationFrame
 translation_of: Web/API/window/requestAnimationFrame
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>window.requestAnimationFrame()</code></strong> メソッドは、ブラウザにアニメーションを行いたいことを知らせ、指定した関数を呼び出して次の再描画の前にアニメーションを更新することを要求します。このメソッドは、再描画の前に呼び出されるコールバック 1 個を引数として取ります。</p>
+**`window.requestAnimationFrame()`** メソッドは、ブラウザーにアニメーションを行いたいことを知らせ、指定した関数を呼び出して次の再描画の前にアニメーションを更新することを要求します。このメソッドは、再描画の前に呼び出されるコールバック 1 個を引数として取ります。
 
-<div class="note"><strong>メモ:</strong> 次の再描画時に別のフレームをアニメーションさせたいときは、コールバックルーチン自身で <code>requestAnimationFrame()</code> を呼ばなければなりません。</div>
+> **Note:** 次の再描画時に別のフレームをアニメーションさせたいときは、コールバックルーチン自身で `requestAnimationFrame()` を呼び出さなければなりません。 `requestAnimationFrame()` は 1 ショットです。
 
-<p>このメソッドは、いつでも画面上でアニメーションの更新準備が整った時に呼び出してください。これにより、ブラウザの次の再描画が実行される前にアニメーション関数が呼び出されることを要求します。このコールバックの回数は、たいてい毎秒 60 回ですが、一般的に多くのブラウザーでは W3C の勧告に従って、ディスプレイのリフレッシュレートに合わせて行われます。ただし、コールバックの確率は、バックグラウンドのタブや隠れた {{ HTMLElement("iframe") }} では、パフォーマンス向上やバッテリー消費を減らすために低くなるでしょう。</p>
+このメソッドは、いつでも画面上でアニメーションの更新準備が整った時に呼び出してください。これにより、ブラウザーの次の再描画が実行される前にアニメーション関数が呼び出されることを要求します。このコールバックの回数は、たいてい毎秒 60 回ですが、一般的に多くのブラウザーでは W3C の勧告に従って、ディスプレイのリフレッシュレートに合わせて行われます。ただし、コールバックの確率は、バックグラウンドのタブや隠れた {{ HTMLElement("iframe") }} では、パフォーマンス向上やバッテリー消費を減らすために低くなるでしょう。
 
-<p>コールバックメソッドには、1 個の引数 {{domxref("DOMHighResTimeStamp")}} が渡されます。これは、<code>requestAnimationFrame</code> の発火開始によりコールバックがキューに追加された時点の現在時刻を示します。単一フレーム内で複数のコールバックがあり、前のコールバックで計算負荷が生じていいても、各コールバックは同じタイムスタンプを受け取ります。このタイムスタンプは、ミリ秒単位の十進数ですが、その最小精度は 1ms (1000 µs) です。</p>
+コールバックメソッドには、1 個の引数 {{domxref("DOMHighResTimeStamp")}} が渡されます。これは現在の時刻を（[time origin](/ja/docs/Web/API/DOMHighResTimeStamp#the_time_origin)からの経過ミリ秒数で）示します。
+`requestAnimationFrame()` によってキューに入れられた複数のコールバックが 1 つのフレームで起動し始めると、以前のすべてのコールバックのワークロードの計算中に時間が経過しても、それぞれが同じタイムスタンプを受け取ります（以下のコード例では、タイムスタンプが変化したとき、つまり最初のコールバックでフレームを動作させています）。このタイムスタンプは、ミリ秒単位の小数ですが、最小精度は 1ms（1000μs）です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+> **Warning:** アニメーションが 1 フレームでどれだけ進んだかを計算する場合、常に第 1 引数（または現在時刻を取得する他の方法）を使用するようにしてください、**そうしないと、アニメーションはリフレッシュレートの高い画面では速く実行されます**。これを行う方法については、以下の例を参照してください。
 
-<pre class="syntaxbox">window.requestAnimationFrame(callback);
-</pre>
+## 構文
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+```js
+window.requestAnimationFrame(callback);
+```
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>次の再描画でアニメーションを更新する時に呼び出す関数を指定します。コールバック関数は 1 個の引数 {{domxref("DOMHighResTimeStamp")}} を受け取ります。この引数は、<code>requestAnimationFrame</code> がコールバックの呼び出しを開始した現在時刻 ( {{domxref('performance.now()')}} から返された時刻 ) を示します。</dd>
-</dl>
+### 引数
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+- `callback`
+  - : 次の再描画でアニメーションを更新する時に呼び出す関数を指定します。コールバック関数は 1 個の引数 {{domxref("DOMHighResTimeStamp")}} を受け取ります。この引数は、`requestAnimationFrame` がコールバックの呼び出しを開始した時点の時刻、すなわち {{domxref('performance.now()')}} から返された時刻を示します。
 
-<p>コールバックリスト内のエントリーを一意に識別するための、倍精度整数値の <code>requestID</code> を返します。この値は非ゼロ値ですが、値そのものを推定することはできないでしょう。この値を {{domxref("window.cancelAnimationFrame()")}} に渡すことで、コールバック関数の更新を中止できます。</p>
+## 返値
 
-<h2 id="Notes" name="Notes">例</h2>
+`long` 整数値で、リクエスト ID、コールバックリスト内のエントリーを一意に識別するための、` long` 整数値の `requestID` を返します。この値は非ゼロ値ですが、値そのものを推定することはできないでしょう。この値を {{domxref("window.cancelAnimationFrame()")}} に渡すことで、コールバック関数の更新を中止できます。
 
-<pre class="brush: js">var start = null;
-var element = document.getElementById('SomeElementYouWantToAnimate');
+## 例
+
+この例では、ある要素を 2 秒間（2000 ミリ秒）動作させています。要素は 0.1px/ms の速度で右に移動するので、その相対位置（CSS ピクセル単位）はアニメーションの開始からの経過時間（ミリ秒）の関数として `0.1 * elapsed` で計算することができます。要素の最終的な位置は、初期位置から右へ 200px （`0.1 * 2000`）となります。
+
+```js
+const element = document.getElementById('some-element-you-want-to-animate');
+let start, previousTimeStamp;
+let done = false
 
 function step(timestamp) {
-  if (!start) start = timestamp;
-  var progress = timestamp - start;
-  element.style.transform = 'translateX(' + Math.min(progress / 10, 200) + 'px)';
-  if (progress &lt; 2000) {
-    window.requestAnimationFrame(step);
+  if (start === undefined) {
+    start = timestamp;
+    }
+  const elapsed = timestamp - start;
+
+  if (previousTimeStamp !== timestamp) {
+    // ここで Math.min() を使用して、要素がちょうど 200px で止まるようにします。
+    const count = Math.min(0.1 * elapsed, 200);
+    element.style.transform = 'translateX(' + count + 'px)';
+    if (count === 200) done = true;
+  }
+
+  if (elapsed < 2000) { // Stop the animation after 2 seconds
+    previousTimeStamp = timestamp
+    !done && window.requestAnimationFrame(step);
   }
 }
 
 window.requestAnimationFrame(step);
-</pre>
+```
 
-<h2 id="Notes_2" name="Notes_2">メモ</h2>
+## メモ
 
-<p>Edge のバージョン17以前と Internet Explorer は、描画サイクルの前に <code>requestAnimationFrame</code> を確実に発行するとは限りません。</p>
+Edge のバージョン 17 以前と Internet Explorer は、描画サイクルの前に `requestAnimationFrame` を確実に発行するとは限りません。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#animation-frames', 'requestAnimationFrame')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>変更なし、以前のものを置き換える</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('RequestAnimationFrame', '#dom-windowanimationtiming-requestanimationframe', 'requestAnimationFrame')}}</td>
-   <td>{{Spec2('RequestAnimationFrame')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.Window.requestAnimationFrame")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Window.mozAnimationStartTime")}}</li>
- <li>{{domxref("Window.cancelAnimationFrame()")}}</li>
- <li><a href="http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html">mozRequestAnimationFrame</a> - ブログ投稿</li>
- <li><a href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame for smart animating</a> - ブログ投稿</li>
- <li><a href="http://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Animating with javascript: from setInterval to requestAnimationFrame</a> - ブログ投稿</li>
- <li><a href="http://blogs.msdn.com/b/ie/archive/2011/07/05/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-1.aspx">Using PC Hardware more efficiently in HTML5: New Web Performance APIs, Part 1</a> - ブログ投稿</li>
- <li><a href="http://www.testufo.com/#test=animation-time-graph">TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations</a></li>
- <li>Paul Irish: <a class="external external-icon" href="http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision">requestAnimationFrame API: now with sub-millisecond precision</a></li>
-</ul>
+- {{domxref("Window.cancelAnimationFrame()")}}
+- [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html)
+  \- ブログ投稿
+- [requestAnimationFrame
+  for smart animating](https://paulirish.com/2011/requestanimationframe-for-smart-animating/) - ブログ投稿
+- [Animating
+  with javascript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - ブログ投稿
+- [TestUFO: Test your web
+  browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
+- Paul Irish: [requestAnimationFrame
+  API: now with sub-millisecond precision](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision)
+- [ポリフィル](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)
