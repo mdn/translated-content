@@ -114,7 +114,7 @@ Las siguientes charlas son una excelente manera de entender ARIA:
 
 ## Archivando errores
 
-[Archivar errores de ARIA en navegadores, lectores de pantalla y bibliotecas JavaScript.](/en-US/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
+[Archivar errores de ARIA en navegadores, lectores de pantalla y bibliotecas JavaScript.](/es/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
 
 ## Temas relacionados
 
