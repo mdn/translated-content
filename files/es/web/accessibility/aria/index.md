@@ -87,7 +87,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 
 - [Escribir widgets JavaScript navegables por teclado](/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   -: Elementos integrados como {{HTMLElement("input")}}, {{HTMLElement("button")}} etc. tienen accesibilidad de teclado integrado. Si 'falsifica' estos con {{HTMLElement("div")}}s y ARIA, debe asegurarse de que sus widgets sean accesibles desde el teclado.
-- [Regiones en vivo](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [Regiones en vivo](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Las regiones activas brindan sugerencias a los lectores de pantalla sobre cómo manejar los cambios en el contenido de una página.
 - [Uso de regiones en vivo de ARIA para anunciar cambios de contenido](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
   - : Un breve resumen de las regiones en vivo, por los creadores del software de lectura de pantalla JAWS. Las regiones en vivo también son compatibles con NVDA con Firefox y VoiceOver con Safari.
