@@ -1,46 +1,45 @@
 ---
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - drag and drop
 translation_of: Web/API/DataTransfer/clearData
+browser-compat: api.DataTransfer.clearData
 ---
 {{APIRef("HTML Drag and Drop API")}}
 
-La méthode DataTransfer.clearData() retire l'opération de {{domxref("DataTransfer","glisser-déposer")}} pour le format donné. Si la donnée pour le format ciblé n'existe pas, cette méthode n'aura aucun effet.
+La méthode **`DataTransfer.clearData()`** retire les données du type indiqué de l'opération de glisser-déposer. S'il n'existe pas de données pour le type indiqué, cette méthode n'a aucun effet.
 
-> **Note :** Si cette méthode est appelée sans argument, ou que le format donné est une  {{domxref("DOMString","chaîne de caractères")}}  vide, les données de tous les formats seront retirées.
+Si cette méthode est appelée sans argument ou que le format est une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) vide, la suppression des données concernera tous les types.
+
+Cette méthode _ne retire pas_ les fichiers de l'opération de glisser-déposer et il est donc possible d'avoir un élément restant avec le type `"Files"` dans la liste [`DataTransfer.types`](/fr/docs/Web/API/DataTransfer/types) si des fichiers font partie du glisser-déposer.
+
+> **Note :** Cette méthode peut uniquement être utilisée dans le gestionnaire d'évènement pour [`dragstart`](/fr/docs/Web/API/Document/dragstart_event), car c'est le seul moment où le magasin de données pour l'opération de glisser-déposer est accessible en écriture.
 
 ## Syntaxe
 
-    void dataTransfer.clearData([format]);
+```js
+DataTransfer.clearData([format]);
+```
 
 ### Paramètres
 
-- format{{optional_inline}}
-  - : Une {{domxref("DOMString","chaîne de caractères")}} représentant le format de donnée à retirer.
-
-### Valeur de retour
-
-Void.
+- `format` {{optional_inline}}
+  - : Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui indique le type de données à retirer. Si ce paramètre est une chaîne vide ou qu'il n'est pas fourni, les données pour l'ensemble des types seront retirées.
 
 ## Exemple
 
-Cette exemple illustre l'utilisation des méthodes {{domxref("DataTransfer.getData()","getData()")}}, {{domxref("DataTransfer.setData()","setData()")}} et {{domxref("DataTransfer.clearData()","clearData()")}} de l'objet {{domxref("DataTransfer")}}.
+Cet exemple illustre l'utilisation des méthodes 
+[`getData()`](/fr/docs/Web/API/DataTransfer/getData),
+[`setData()`](/fr/docs/Web/API/DataTransfer/setData) et `clearData()` de l'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer).
 
 ### HTML
 
 ```html
 <span class="tweaked" id="source" draggable="true">
-  Sélectionnez cet élément, glissez-le et déposez-le dans la Zone de Dépose pour le déplacer.
+  Sélectionnez cet élément, glissez-le dans la zone de dépôt puis relâcher la sélection pour déplacer l'élément.
 </span>
-<span class="tweaked" id="target">Zone de Dépose</span>
-<div>Status: <span id="status">Glissez pour démarrer</span></div>
-<div>Data is: <span id="data">non initialisé</span></div>
+<span class="tweaked" id="target">Zone de dépôt</span>
+<div>État : <span id="status">Glisser pour démarrer</span></div>
+<div>Données : <span id="data">non-initialisée</span></div>
 ```
 
 ### CSS
@@ -66,101 +65,113 @@ span.tweaked {
 
 ```js
 window.addEventListener('DOMContentLoaded', function () {
-  // Séléctionner les éléments HTML
-  var draggable = document.getElementById('source')
-  var dropable = document.getElementById('target')
-  var status = document.getElementById('status')
-  var data = document.getElementById('data')
-  var dropped = false
+  // On sélectionne les éléments HTML
+  let draggable = document.getElementById('source');
+  let droppable = document.getElementById('target');
+  let status = document.getElementById('status');
+  let data = document.getElementById('data');
+  let dropped = false;
 
-  // Enregistrer les évènements
-  draggable.addEventListener('dragstart', dragStartHandler)
-  draggable.addEventListener('dragend', dragEndHandler)
-  dropable.addEventListener('dragover', dragOverHandler)
-  dropable.addEventListener('dragleave', dragLeaveHandler)
-  dropable.addEventListener('drop', dropHandler)
+  // On enregistre les gestionnaires d'évènements
+  draggable.addEventListener('dragstart', dragStartHandler);
+  draggable.addEventListener('dragend', dragEndHandler);
+  droppable.addEventListener('dragover', dragOverHandler);
+  droppable.addEventListener('dragleave', dragLeaveHandler);
+  droppable.addEventListener('drop', dropHandler);
 
   function dragStartHandler (event) {
-    status.innerHTML = 'Glisse en cours'
+    status.textContent = 'Glisser-déposer en cours';
 
-    // Modifier la bordure de l'élément pour indiquer qu'une opération de glisse a démarré
-    event.currentTarget.style.border = '1px dashed blue'
+    // On change la bordure de l'élément cible pour
+    // indiquer que le glisser-déposer a démarré
+    event.currentTarget.style.border = '1px dashed blue';
 
-    // Définir le type et la donnée associée à l'opération de glisse (utilise l'ID de la cible de l'évènement pour la donnée)
-    event.dataTransfer.setData('text/plain', event.target.id)
+    // On  commence par nettoyer les presse-papiers
+    // existants. Cela porte sur tous les types vu qu'on
+    // ne passe pas de type en argument.
 
-    data.innerHTML = event.dataTransfer.getData('text/plain')
+    event.dataTransfer.clearData();
+
+    // On définit le format et les données pour l'opération
+    // on utilise l'identifiant de la cible d'évènement comme
+    // donnée
+    event.dataTransfer.setData('text/plain', event.target.id);
+
+    data.textContent = event.dataTransfer.getData('text/plain');
   }
 
   function dragEndHandler (event) {
     if (!dropped) {
-      status.innerHTML = 'Glisse annulée'
+      status.textContent = 'Glisser-déposer annulé';
     }
 
-    data.innerHTML = event.dataTransfer.getData('text/plain') || 'vide'
+    data.textContent = event.dataTransfer.getData('text/plain') || 'vide';
 
-    // Modifier la bordure de l'élément pour indiquer que l'opération de glisse n'est plus en cours
-    event.currentTarget.style.border = '1px solid black'
+    // On change la bordure afin d'indiquer que le glisser-
+    // déposer n'est plus en cours
+    event.currentTarget.style.border = '1px solid black';
 
     if (dropped) {
-      // Retirer tous les évènements enregistrés précédemment
-      draggable.removeEventListener('dragstart', dragStartHandler)
-      draggable.removeEventListener('dragend', dragEndHandler)
-      dropable.removeEventListener('dragover', dragOverHandler)
-      dropable.removeEventListener('dragleave', dragLeaveHandler)
-      dropable.removeEventListener('drop', dropHandler)
+      // On retire les gestionnaires d'évènements
+      draggable.removeEventListener('dragstart', dragStartHandler);
+      draggable.removeEventListener('dragend', dragEndHandler);
+      droppable.removeEventListener('dragover', dragOverHandler);
+      droppable.removeEventListener('dragleave', dragLeaveHandler);
+      droppable.removeEventListener('drop', dropHandler);
     }
   }
 
   function dragOverHandler (event) {
-    status.innerHTML = 'Dépose disponible'
+    status.textContent = 'Dépôt disponible';
 
-    event.preventDefault()
+    event.preventDefault();
   }
 
   function dragLeaveHandler (event) {
-    status.innerHTML = 'Glisse en cours (la dépose était disponible)'
+    status.textContent = 'Glisser-déposer en cours (le dépôt était disponible)';
 
-    event.preventDefault()
+    event.preventDefault();
   }
 
   function dropHandler (event) {
-    dropped = true
+    dropped = true;
 
-    status.innerHTML = 'Dépose effectuée'
+    status.textContent = 'Dépôt effectué';
 
-    event.preventDefault()
+    event.preventDefault();
 
-    // Récupérer la donnée liée au type « text/plain »
-    var _data = event.dataTransfer.getData('text/plain')
-    var element = document.getElementById(_data)
+    // On récupère les données liées à l'évènement
+    // et qui sont au format « text »
+    let _data = event.dataTransfer.getData('text/plain');
+    let element = document.getElementById(_data);
 
-    // Insérer l'élément source de l'opération de glisse en tant que dernier enfant de l'élément cible de l'opération de dépose
-    event.target.appendChild(element)
+    // On ajoute l'élément source glissé à l'élément qui
+    // est la cible de l'évènement
+    event.target.appendChild(element);
 
-    // Modifier les styles CSS et le texte affiché
-    element.style.cssText = 'border: 1px solid black;display: block; color: red'
-    element.innerHTML = "J'suis dans la Zone de Dépose !"
-
-    // Effacer les données de TOUS les types liés à l'opération de glisse (car on n'a pas donné de paramètre)
-    event.dataTransfer.clearData()
+    // On modifie les styles CSS et le texte affiché
+    element.style.cssText = 'border: 1px solid black;display: block; color: red';
+    element.textContent = 'Je suis dans la zone de dépôt !';
   }
 })
 ```
 
-{{EmbedLiveSample('Exemple', 300, 250)}}
+### Résultat
+
+{{EmbedLiveSample('', 300, 280)}}
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaire         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}} | {{Spec2('HTML WHATWG')}} |                     |
-| {{SpecName('HTML5.1', 'editing.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}             | {{Spec2('HTML5.1')}}     | Définition initiale |
+{{Specifications}}
 
-## Compatibilité
+## Compatibilité des navigateurs
 
-{{Compat("api.DataTransfer.clearData")}}
+{{Compat}}
 
-## À voir également
+## Voir aussi
 
-{{page("/fr/docs/Web/API/DataTransfer", "See also")}}
+- [L'API <i lang="en">Drag and drop</i> pour le glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Les opérations de glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Types de données pour le glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [Glisser-déposer plusieurs objets](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [Test `DataTransfer` - Coller ou glisser ?](https://codepen.io/tech_query/pen/MqGgap)
