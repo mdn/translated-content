@@ -115,7 +115,7 @@ Nous avions besoin de cette fonction car la fonction intégrée du navigateur [
 
 ## Invoquer des fonctions
 
-Vous êtes probablement au clair avec cela maintenant, mais juste au cas où... pour utiliser une fonction après qu'elle ait été définie, vous devez la lancer - ou l'invoquer. Pour ce faire, vous devez inclure le nom de la fonction quelque part dans le code suivi par des parenthèses.
+Vous êtes probablement au clair avec cela maintenant, mais juste au cas où... pour utiliser une fonction après qu'elle ait été définie, vous devez la lancer - ou l'invoquer. Pour ce faire, vous devez inclure le nom de la fonction quelque part dans le code suivi par des parenthèses :
 
 ```js
 function myFunction() {
