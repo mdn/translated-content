@@ -5,67 +5,51 @@ tags:
   - API
   - HTML DOM
   - History
-  - History API
-  - Method
-  - Reference
-  - Web
+  - 履歴 API
+  - メソッド
+  - リファレンス
+browser-compat: api.History.forward
 translation_of: Web/API/History/forward
 ---
-<div>{{APIRef("History API")}}</div>
+{{APIRef("History API")}}
 
-<p><strong><code>History.forward()</code></strong> メソッドにより、ブラウザーはセッション履歴の一つ次のページに移動します。これは {{domxref("History.go", "history.go(1)")}} を呼び出すのと同じ効果があります。</p>
+**`History.forward()`** メソッドにより、ブラウザーはセッション履歴の 1 つ次のページに移動します。これは {{domxref("History.go", "history.go(1)")}} を呼び出すのと同じ効果があります。
 
-<p>このメソッドは{{glossary("asynchronous", "非同期")}}です。移動が完了したことを検知したい場合は {{event("popstate")}} イベントのリスナーを追加してください。</p>
+このメソッドは{{glossary("asynchronous", "非同期")}}です。移動が完了したことを検知したい場合は {{domxref("Window/popstate_event", "popstate")}} イベントのリスナーを追加してください。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">history.forward()</pre>
+```js
+history.forward()
+```
 
-<h2 id="Examples">例</h2>
+## 例
 
-<p>以下の例では、セッション履歴の一つ次のステップへ進めるボタンを作成します。</p>
+以下の例では、セッション履歴の 1 つ次のステップへ進めるボタンを作成します。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;button id='go-forward'&gt;Go Forward!&lt;/button&gt;</pre>
+```html
+<button id='go-forward'>Go Forward!</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">document.getElementById('go-forward').addEventListener('click', e =&gt; {
+```js
+document.getElementById('go-forward').addEventListener('click', e => {
   window.history.forward();
-})</pre>
+})
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "browsers.html#history", "History")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>{{SpecName("HTML5 W3C")}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "browsers.html#history", "History")}}</td>
-   <td>{{Spec2("HTML5 W3C")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.History.forward")}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("History")}}</li>
- <li><a href="/ja/docs/Web/API/History_API/Working_with_the_History_API">History API での作業</a></li>
-</ul>
+- {{domxref("History")}}
+- [履歴 API での作業](/ja/docs/Web/API/History_API/Working_with_the_History_API)
