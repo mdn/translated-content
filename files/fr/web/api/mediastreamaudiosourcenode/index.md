@@ -1,19 +1,22 @@
 ---
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
-tags:
-  - API
-  - Interface
-  - MediaStreamAudioSourceNode
-  - Reference
-  - Web Audio API
 translation_of: Web/API/MediaStreamAudioSourceNode
+browser-compat: api.MediaStreamAudioSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
-L'interface `MediaStreamAudioSourceNode` représente une source audio [WebRTC](/fr/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (comme une webcam ou un micro). C'est un {{domxref("AudioNode")}} qui agit comme une source audio.
+L'interface **`MediaStreamAudioSourceNode`** est un type d'[`AudioNode`](/fr/docs/Web/API/AudioNode) qui traite une source audio dont le média a été récupéré depuis un objet [`MediaStream`](/fr/docs/Web/API/MediaStream), obtenu en utilisant l'API WebRTC ou les API Media Capture ou Streams.
 
-Un `MediaElementSourceNode` n'a pas d'entrée et une seule sortie. On le créé en utilisant la méthode {{domxref("AudioContext.createMediaStreamSource")}}. Le nombre de canaux de sortie est égal au nombre de canaux de {{domxref("AudioMediaStreamTrack")}}. S'il n'y a pas de media stream valide, alors la sortie sera constituée d'un seul canal silencieux.
+Le média peut être obtenu depuis un microphone (avec [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia)) ou depuis un pair distant pendant un appel WebRTC (avec les pistes audio de [`RTCPeerConnection`](/fr/docs/Web/API/RTCPeerConnection)).
+
+Un nœud `MediaStreamAudioSourceNode` ne possède pas d'entrée et possède une seule sortie. Il est créé avec la méthode [`AudioContext.createMediaStreamSource()`](/fr/docs/Web/API/AudioContext/createMediaStreamSource).
+
+`MediaStreamAudioSourceNode` utilise l'audio de la _première_ piste [`MediaStreamTrack`](/fr/docs/Web/API/MediaStreamTrack) dont l'attribut [`kind`](/fr/docs/Web/API/MediaStreamTrack/kind) vaut `audio`. Voir ci-après [l'ordre des pistes](#ordre_des_pistes) pour plus d'informations.
+
+Le nombre de canaux de sortie correspond au nombre de pistes trouvées sur la piste audio sélectionnée.
+
+{{InheritanceDiagram}}
 
 <table class="properties">
   <tbody>
@@ -28,10 +31,7 @@ Un `MediaElementSourceNode` n'a pas d'entrée et une seule sortie. On le créé 
     <tr>
       <th scope="row">Nombre de canaux</th>
       <td>
-        Défini par {{domxref("AudioMediaStreamTrack")}} et passé à
-        la méthode
-        {{domxref("AudioContext.createMediaStreamSource")}} qui
-        le créé.
+        Défini par la première piste audio <a href="/fr/docs/Web/API/MediaStreamTrack"><code>MediaStreamTrack</code></a> passée à <a href="/fr/docs/Web/API/AudioContext/createMediaStreamSource"><code>AudioContext.createMediaStreamSource()</code></a> qui a créé le nœud.
       </td>
     </tr>
   </tbody>
@@ -39,34 +39,52 @@ Un `MediaElementSourceNode` n'a pas d'entrée et une seule sortie. On le créé 
 
 ## Constructeur
 
-- {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode()")}}
-  - : Créé une nouvelle instance de `MediaStreamAudioSourceNode`.
+- [`new MediaStreamAudioSourceNode()`](/fr/docs/Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode)
+  - : Crée un nouvel objet `MediaStreamAudioSourceNode` avec les options indiquées.
 
 ## Propriétés
 
-_Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
+_En complément des propriétés suivantes, `MediaStreamAudioSourceNode` hérite des propriétés de l'interface parente, [`AudioNode`](/fr/docs/Web/API/AudioNode)._
+
+- [`mediaStream`](/fr/docs/Web/API/MediaStreamAudioSourceNode/mediaStream) {{ReadOnlyInline}}
+  - : L'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) utilisé pour la construction de ce `MediaStreamAudioSourceNode`.
 
 ## Méthodes
 
-_Hérite des méthdoes de son parent,_ _{{domxref("AudioNode")}}_.
+_Cette interface hérite des méthodes de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)_.
+
+## Exceptions
+
+- `InvalidStateError` [`DOMException`](/fr/docs/Web/API/DOMException)
+  - : Cette exception est levée si le flux indiqué par le paramètre `mediaStream` ne contient pas de piste audio.
+
+## Notes d'utilisation
+
+### Ordre des pistes
+
+Pour l'interface `MediaStreamTrackAudioSourceNode`, l'ordre des pistes audio du flux est déterminé en prenant les pistes pour lesquelles [`kind`](/fr/docs/Web/API/MediaStreamTrack/kind) vaut `audio`, en triant ces pistes selon les valeurs de leur propriété [`id`](/fr/docs/Web/API/MediaStreamTrack/id) selon l'ordre des points de code Unicode (ce qui correspond généralement à l'ordre alphabétique ou lexicographique lorsque les identifiants sont des chaînes de caractères alphanumériques simples).
+
+La **première** piste est donc la piste dont l'identifiant  `id` est le premier parmi ceux de toutes les pistes audio selon l'ordre des points de code Unicode.
+
+Il est toutefois important de noter que cette règle pour l'ordre a été ajoutée après que cette interface a été introduite dans l'API [Web Audio](/fr/docs/Web/API/Web_Audio_API). Aussi, mieux vaut ne pas s'appuyer trop sur l'hypothèse que l'ordre sera le même d'un navigateur à l'autre ou même d'une version à une autre d'un même navigateur.
+
+L'interface [`MediaStreamTrackAudioSourceNode`](/fr/docs/Web/API/MediaStreamTrackAudioSourceNode) est semblable à `MediaStreamAudioSourceNode`, mais évite ce problème en permettant d'indiquer la piste qu'on souhaite utiliser.
 
 ## Exemple
 
-{{page("/fr-FR/docs/Web/API/AudioContext.createMediaStreamSource","Example")}}
+Voir [`AudioContext.createMediaStreamSource()`](/fr/docs/Web/API/AudioContext/createMediaStreamSource#exemple) pour un exemple de code qui utilise cet objet.
 
 ## Spécifications
 
-| Spécification                                                                                                                                | Statut                               | Commentaire |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#the-mediastreamaudiosourcenode-interface', 'MediaStreamAudioSourceNode')}} | {{Spec2('Web Audio API')}} |             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.MediaStreamAudioSourceNode")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Utilisation de l'API Web Audio](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [API de capture et de diffusion de médias (Media Streams)](/en-US/docs/Web/API/Media_Streams_API)
-- {{domxref("MediaStreamTrackAudioSourceNode")}}
+- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [L'API WebRTC](/fr/docs/Web/API/WebRTC_API)
+- [Les API Media Capture et Streams](/fr/docs/Web/API/Media_Streams_API)
+- [`MediaStreamTrackAudioSourceNode`](/fr/docs/Web/API/MediaStreamTrackAudioSourceNode)
