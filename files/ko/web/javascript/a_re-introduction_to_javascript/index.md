@@ -136,7 +136,7 @@ Number.isNaN([1]) // false
 Number.isNaN([1,2]) // false
 ```
 
-But don’t test for `NaN` using the global {{jsxref("Global_Objects/isNaN", "isNaN()")}} function, [which has unintuitive behavior](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#confusing_special-case_behavior):
+하지만 [직관적이지 않은 동작을 하는](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#혼란스러운_특별_케이스_행동) 전역 {{jsxref("Global_Objects/isNaN", "isNaN()")}} 함수를 사용하여 `NaN` 인지 검사하지 마십시오.
 
 ```js
 isNaN('hello'); // true
