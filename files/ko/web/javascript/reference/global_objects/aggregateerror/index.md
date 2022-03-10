@@ -24,6 +24,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
   - : 에러 메시지, 기본값 `""`.
 - {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
   - : 에러 이름, 기본값 `AggregateError`.
+- `AggregateError`: `errors`
+  - : AggregateError가 인스턴스화되는 이터러블을 본질적으로 반영하는 배열입니다. 예를 들어 `AggregateError()` 생성자를 사용하여 `AggregateError`를 만든 경우 이터러블에서 생성된 배열이 첫 번째 인수로 생성자에 전달되었습니다.
 
 ## Examples
 
@@ -55,16 +57,17 @@ try {
 }
 ```
 
-## Specifications
+## 명세서
 
-| Specification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Promise.any', '#sec-aggregate-error-objects', 'AggregateError')}} |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat("javascript.builtins.AggregateError")}}
 
-## See also
+## 같이 보기
 
+- [Polyfill of `AggregateError` in `core-js`](https://github.com/zloirock/core-js#ecmascript-promise)
 - {{JSxRef("Error")}}
+- {{JSxRef("Promise.any")}}
+
