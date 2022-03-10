@@ -4,79 +4,58 @@ slug: Web/API/History
 tags:
   - API
   - HTML DOM
-  - History API
-  - Interface
-  - Web
+  - 履歴 API
+  - インターフェイス
+  - ウェブ
+browser-compat: api.History
 translation_of: Web/API/History
 ---
-<div>{{ APIRef("History API") }}</div>
+{{ APIRef("History API") }}
 
-<p><strong><code>History</code></strong> インターフェイスで、ブラウザーの<em>セッション履歴</em>、つまり現在のページが読み込まれたタブまたはフレームで訪問したページを操作することができます。</p>
+**`History`** インターフェイスで、ブラウザーの*セッション履歴*、つまり現在のページが読み込まれたタブまたはフレームで訪問したページを操作することができます。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## プロパティ
 
-<p><em><code>History</code> インターフェイスは何もプロパティを継承していません。</em></p>
+_`History` インターフェイスは何もプロパティを継承していません。_
 
-<dl>
- <dt>{{domxref("History.length","length")}} {{readOnlyInline}}</dt>
- <dd>現在読み込まれているページを含むセッション履歴の要素数を表す <code>Integer</code> を返します。たとえば、新しいタブで読み込まれたページのこのプロパティは <code>1</code> を返します。</dd>
- <dt>{{domxref("History.scrollRestoration","scrollRestoration")}}</dt>
- <dd>ウェブアプリケーションが履歴の操作で既定のスクロール位置の復元を明示的に設定できるようにします。このプロパティは <code>auto</code> または <code>manual</code> を指定することができます。</dd>
- <dt>{{domxref("History.state","state")}} {{readOnlyInline}}</dt>
- <dd>履歴スタックの最上位にある状態を表す <code>any</code> の値を返します。これは {{event("popstate")}} イベントを待たずに状態を確認する方法です。</dd>
-</dl>
+- {{domxref("History.length","length")}} {{readOnlyInline}}
+  - : 現在読み込まれているページを含むセッション履歴の要素数を表す `Integer` を返します。たとえば、新しいタブで読み込まれたページのこのプロパティは `1` を返します。
+- {{domxref("History.scrollRestoration","scrollRestoration")}}
+  - : ウェブアプリケーションが履歴の操作で既定のスクロール位置の復元を明示的に設定できるようにします。このプロパティは `auto` または `manual` を指定することができます。
+- {{domxref("History.state","state")}} {{readOnlyInline}}
+  - : 履歴スタックの最上位にある状態を表す `any` の値を返します。これは {{domxref("Window/popstate_event", "popstate")}} イベントを待たずに状態を確認する方法です。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<p><em><code>History</code> インターフェイスは何もメソッドを継承していません。</em></p>
+_`History` インターフェイスは何もメソッドを継承していません。_
 
-<dl>
- <dt>{{domxref("History.back","back()")}}</dt>
- <dd>これは非同期メソッドであり、ユーザーがブラウザーの<kbd>戻る</kbd>ボタンをクリックしたときと同じく、セッション履歴の一つ前のページへ移動します。 <code>history.go(-1)</code> と同等です。
- <div class="note">このメソッドを呼び出して、セッション履歴の最初のページを超えて戻っても何の効果もなく、例外が発生することもありません。</div>
- </dd>
- <dt>{{domxref("History.forward","forward()")}}</dt>
- <dd>これは非同期メソッドであり、ユーザーがブラウザーの<kbd>次へ</kbd>ボタンをクリックしたときと同じく、セッション履歴の一つ次のページへ移動します。これは <code>history.go(1)</code> と同等です。
- <div class="note">このメソッドを呼び出して、セッション履歴の直近のページを超えて進んでも何の効果もなく、例外が発生することもありません。</div>
- </dd>
- <dt>{{domxref("History.go","go()")}}</dt>
- <dd>セッション履歴上で、現在のページからの相対位置で識別されるページを非同期に読み出します。たとえば、 <code>-1</code> は前のページで <code>1</code> は次のページです。範囲外の値を指定した場合 (例えば、セッション履歴に以前訪問したページがないときに <code>-1</code> を指定した場合)、このメソッドは暗黙に何もしません。 <code>go()</code> を引数なし、または <code>0</code> の値で呼び出すと、現在のページを再読み込みします。 Internet Explorer では数値の代わりに文字列を指定することで、履歴リストの中の指定した URL へ移動することができます。</dd>
- <dt>{{domxref("History.pushState","pushState()")}}</dt>
- <dd>指定されたデータを指定されたタイトル (および、指定されていれば URL) でセッション履歴に追加します。このデータは DOM においては透過的でないものとして扱われます。シリアライズ可能な JavaScript を指定することができます。詳しくは、 <a href="/ja/docs/Web/API/History_API/Working_with_the_History_API">History API での作業</a>を参照してください。</dd>
- <dt>{{domxref("History.replaceState","replaceState()")}}</dt>
- <dd>履歴スタックの最新の項目が、指定したデータ、タイトル、指定されていれば URL になるよう更新します。データは DOM では透過的でないものとして扱われます。シリアライズ可能な JavaScript を指定することができます。なお、 Safari 以外のすべてのブラウザーが今のところ <em>title</em> 引数を無視することに注意してください。詳しくは、 <a href="/ja/docs/Web/API/History_API/Working_with_the_History_API">History API での作業</a>を参照してください。</dd>
-</dl>
+- {{domxref("History.back","back()")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+  - : これは非同期メソッドであり、ユーザーがブラウザーの<kbd>戻る</kbd>ボタンをクリックしたときと同じく、セッション履歴の一つ前のページへ移動します。 `history.go(-1)` と同等です。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "browsers.html#the-history-interface", "History")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td><code>scrollRestoration</code> 属性の追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#the-history-interface", "History")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+    このメソッドを呼び出して、セッション履歴の最初のページを超えて戻っても何の効果もなく、例外が発生することもありません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+- {{domxref("History.forward","forward()")}}
 
-<p>{{Compat("api.History")}}</p>
+  - : これは非同期メソッドであり、ユーザーがブラウザーの<kbd>次へ</kbd>ボタンをクリックしたときと同じく、セッション履歴の一つ次のページへ移動します。これは `history.go(1)` と同等です。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+    このメソッドを呼び出して、セッション履歴の直近のページを超えて進んでも何の効果もなく、例外が発生することもありません。
 
-<ul>
- <li>{{domxref("Window.history")}} プロパティは現在のセッションのヒストリーを返します。</li>
-</ul>
+- {{domxref("History.go","go()")}}
+  - : セッション履歴上で、現在のページからの相対位置で識別されるページを非同期に読み出します。たとえば、 `-1` は前のページで `1` は次のページです。範囲外の値を指定した場合 (例えば、セッション履歴に以前訪問したページがないときに `-1` を指定した場合)、このメソッドは暗黙に何もしません。 `go()` を引数なし、または `0` の値で呼び出すと、現在のページを再読み込みします。 Internet Explorer では数値の代わりに文字列を指定することで、履歴リストの中の指定した URL へ移動することができます。
+- {{domxref("History.pushState","pushState()")}}
+  - : 指定されたデータを指定されたタイトル (および、指定されていれば URL) でセッション履歴に追加します。このデータは DOM においては透過的でないものとして扱われます。シリアライズ可能な JavaScript を指定することができます。詳しくは、[履歴 API での作業](/ja/docs/Web/API/History_API/Working_with_the_History_API)を参照してください。
+- {{domxref("History.replaceState","replaceState()")}}
+  - : 履歴スタックの最新の項目が、指定したデータ、タイトル、指定されていれば URL になるよう更新します。データは DOM では透過的でないものとして扱われます。シリアライズ可能な JavaScript を指定することができます。なお、 Safari 以外のすべてのブラウザーが今のところ _title_ 引数を無視することに注意してください。詳しくは、 [履歴 API での作業](/ja/docs/Web/API/History_API/Working_with_the_History_API)を参照してください。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("Window.history")}} プロパティは現在のセッションの履歴を返します。
