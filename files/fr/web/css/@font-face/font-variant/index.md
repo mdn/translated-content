@@ -1,16 +1,12 @@
 ---
 title: font-variant
-slug: Web/CSS/font-variant
-translation_of: Web/CSS/font-variant
-browser-compat: css.properties.font-variant
+slug: Web/CSS/@font-face/font-variant
+translation_of: Web/CSS/@font-face/font-variant
+browser-compat: css.at-rules.font-face.font-variant
 ---
 {{CSSRef}}
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font-variant`** permet de définir tous les paramètres typographiques pour une police de caractères.
-
-On peut aussi utiliser les valeurs de la propriété `font-variant` définies avec la spécification CSS de niveau 2 (première révision), `normal` ou `small-caps`, en utilisant la propriété raccourcie [`font`](/fr/docs/Web/CSS/font).
-
-{{EmbedInteractiveExample("pages/css/font-variant.html")}}
+La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font-variant`** permet de définir tous les paramètres typographiques pour des polices de caractères définies avec la règle [`@font-face`](/fr/docs/Web/CSS/@font-face).
 
 ## Propriétés détaillées correspondantes
 
@@ -64,27 +60,16 @@ font-variant: unset;
 
 ### Utiliser la valeur `small-caps` de `font-variant`
 
-#### HTML
-
-```html
-<p class="normal">Firefox normal</p>
-<p class="small">Firefox petit</p>
-```
-
-#### CSS
+Le CSS suivant sélectionne une police Open Sans locale ou la télécharge, et permet d'utiliser sa propriété `small-caps`.
 
 ```css
-p.normal {
-  font-variant: normal;
-}
-p.small {
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans") format("woff2"),
+       url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
   font-variant: small-caps;
 }
 ```
-
-#### Résultat
-
-{{EmbedLiveSample('', 'Web/CSS/font-variant')}}
 
 ## Spécifications
 
@@ -96,6 +81,12 @@ p.small {
 
 ## Voir aussi
 
-- [`text-transform`](/fr/docs/Web/CSS/text-transform)
-- [`text-combine-upright`](/fr/docs/Web/CSS/text-combine-upright)
-- [`text-orientation`](/fr/docs/Web/CSS/text-orientation)
+- [`font-display`](/fr/docs/Web/CSS/@font-face/font-display)
+- [`font-family`](/fr/docs/Web/CSS/@font-face/font-family)
+- [`font-weight`](/fr/docs/Web/CSS/@font-face/font-weight)
+- [`font-style`](/fr/docs/Web/CSS/@font-face/font-style)
+- [`font-stretch`](/fr/docs/Web/CSS/@font-face/font-stretch)
+- [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings)
+- [`font-variation-settings`](/fr/docs/Web/CSS/@font-face/font-variation-settings)
+- [`src`](/fr/docs/Web/CSS/@font-face/src)
+- Le descripteur [`unicode-range`](/fr/docs/Web/CSS/@font-face/unicode-range)
