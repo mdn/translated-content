@@ -717,7 +717,7 @@ a; // 4
 b; // 2
 ```
 
-But such an anonymous function isn’t useful in isolation — because without a name, there’s no way to call the function. So in practice, anonymous functions are typically used as arguments to other functions or are made callable by immediately assigning them to a variable that can be used to invoke the function:
+하지만 이런 익명 함수는 단독으로 사용하면 유용하지 않은데 이름이 없으면 함수를 호출할 수 없기 때문입니다. 그래서 실제로 익명 함수는 보통 다른 함수의 인수로 사용되거나 함수를 호출하는 데 사용할 수 있는 변수에 즉시 할당함으로 호출가능하도록 만듭니다.
 
 ```js
 var avg = function() {
@@ -729,9 +729,9 @@ var avg = function() {
 };
 ```
 
-That makes the anonymous function invocable by calling `avg()` with some arguments — that is, it’s semantically equivalent to declaring the function using the `function avg()` named-function form.
+이렇게 하면  `avg()` 를 인수와 함께 호출하여 익명 함수를 호출가능하게 합니다. 이것은 명명 함수 형태인 `function avg()` 를 사용하여 함수를 선언하는 것과 의미상 동일합니다. 
 
-But there’s a way that anonymous functions can be useful even without ever being assigned to variables or passed as arguments to other functions: JavaScript provides a mechanism for simultaneously declaring and invoking a function using a single expression. It’s called an [Immediately invoked function expression (IIFE)](/en-US/docs/Glossary/IIFE), and the syntax for using it with an anonymous function looks like this:
+그런데 익명 함수가 변수에 할당되지 않거나 다른 함수에 인수로 넘겨지지 않아도 유용할 수 있는 방법이 있습니다. JavaScript는 단일 구문을 사용하여 함수 선언과 호출이 동시에 일어나는 메커니즘을 제공합니다. 이것은 [즉시 실행 함수 표현식 (IIFE, Immediately invoked function expression)](/ko/docs/Glossary/IIFE) 이라고 불리고, 익명 함수와 함께 사용하는 구문은 다음과 같습니다.
 
 ```js
 (function() {
@@ -739,7 +739,7 @@ But there’s a way that anonymous functions can be useful even without ever bei
 })();
 ```
 
-Further details on IIFEs are out of scope for this introductory article — but a good example of what they’re particularly useful for is in the [Emulating private methods with closures](/en-US/docs/Web/JavaScript/Closures#emulating_private_methods_with_closures) section of the [Closures](/en-US/docs/Web/JavaScript/Closures) article.
+IIFE에 대한 더 자세한 점은 이 입문 내용의 범위를 벗어난 것입니다. 하지만 IIFE가 무엇에 특히 유용한지에 대한 좋은 예제가 [클로저](/ko/docs/Web/JavaScript/Closures) 문서의 [클로저를 이용해서 프라이빗 메소드 흉내내기](/ko/docs/Web/JavaScript/Closures#클로저를_이용해서_프라이빗_메소드_private_method_흉내내기) 구획에 나와 있습니다.
 
 ### 재귀 함수
 
