@@ -1,88 +1,74 @@
 ---
 title: Element.animate()
 slug: Web/API/Element/animate
-tags:
-  - API
 translation_of: Web/API/Element/animate
+browser-compat: api.Element.animate
 ---
-{{APIRef('Web Animations')}} {{SeeCompatTable}}
+{{APIRef('Web Animations')}}
 
-La méthode **`Element.animate()`** est un raccourci permettant de créer et jouer une animation sur un élément. Elle retourne l'instance de type {{domxref("Animation")}} alors créée.
+La méthode **`animate()`** de l'interface [`Element`](/fr/docs/Web/API/Element) est un raccourci permettant de créer, de l'appliquer à un élément puis de la jouer. Elle retourne l'instance [`Animation`](/fr/docs/Web/API/Animation) alors créée.
 
-> **Note :** Les éléments peuvent avoir plusieurs animations. Vous pouvez obtenir une liste des animations qui affectent un élément en appelant {{domxref("Element.getAnimations()")}}.
+> **Note :** Les éléments peuvent avoir plusieurs animations qui leur sont appliquées. Vous pouvez obtenir une liste des animations qui affectent un élément en appelant [`Element.getAnimations()`](/fr/docs/Web/API/Element/getAnimations).
 
 ## Syntaxe
 
 ```js
-element.animate(keyframes, options); 
+animate(keyframes, options);
 ```
 
-### Paramèters
+### Paramètres
 
 - `keyframes`
-  - : Un [objet formatté représentant un ensemble de keyframes](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats).
+  - : Un tableau d'objets représentant les étapes **ou** un objet dont les propriétés sont les tableaux des valeurs sur lesquelles itérer. Voir [les formats de <i lang="en">keyframe</i>](/fr/docs/Web/API/Web_Animations_API/Keyframe_Formats) pour plus de détails.
 - `options`
 
-  - : Un nombre entier (_Integer_) **représentant la durée de l'animation** (en millisecondes), ou un objet (_Object_) **contenant une ou plusieurs propriétés de timing**:
+  - : Soit **un entier** indiquant la durée de l'animation en millisecondes, **ou** un objet qui contient une ou plusieurs propriétés de temporisation décrites dans [le paramètre `options` pour `KeyframeEffect()`](/fr/docs/Web/API/KeyframeEffect/KeyframeEffect#paramètres) et/ou les options suivantes&nbsp;:
 
     - `id {{optional_inline}}`
-      - : Une propriété unique pour `animate()`: une [`DOMString`](/en-US/docs/Web/API/DOMString) qui permet de référencer l'animation.
-
-{{Page("/en-US/docs/Web/API/Web_Animations_API/Animation_timing_properties", "Properties")}}
-
-#### Options à venir
-
-Les options suivantes n'ont pas encore été implémentées, mais seront ajoutées dans un futur proche.
-
-- `composite {{optional_inline}}`
-
-  - : Détermine comment sont combinées les valeurs de cette animation avec d'autres animations qui ne spécifient pas leur propre opération composite. La valeur par défaut est `replace`.
-
-    - `add` induit un effet d'ajout, dans lequel chaque itération successive se construit sur la précédente. Par exemple pour `transform`, une valeur `translateX(-200px)` n'annulerait pas une précédente valeur `rotate(20deg)` mais s'y ajouterait, pour donner `translateX(-200px) rotate(20deg)`.
-    - `accumulate` est similaire mais un peu plus intéressant: `blur(2)` et `blur(5)` deviennent `blur(7) et non` `blur(2) blur(5)`.
-    - `replace`, quand à elle, remplace la précédente valeur par la nouvelle.
-
-- `iterationComposite {{optional_inline}}`
-  - : Détermine comment les valeurs se construisent, d'itération en itération, **dans une même animation**. Peut être définie par `accumulate` ou `replace` (voir ci-dessus). La valeur par défaut est `replace`.
-- `spacing {{optional_inline}}`
-
-  - : Détermine comment les keyframes sans offset temporel devraient être réparties sur la durée de l'animation. La valeur par défaut est `distribute`.
-
-    - `distribute` positionne les keyframes de façon à ce que les différences entre deux offsets de keyframes successifs soient égaux, c'est-à-dire que, sans aucun offset, les keyframes seront distribuées régulièrement / également sur toute la durée de l'animation.
-    - `paced` positionne les keyframes de façon à ce que les distances entre deux valeurs successives d'une propriété spécifiée par "paced" soient égales, c'est-à-dire que plus la différence entre les valeurs de ces propriétés successives est grande, plus les keyframes seront éloignées les unes des autres.
+      - : Une propriété unique pour `animate()`&nbsp;: il s'agit d'une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qu'on pourra utiliser pour faire référence à l'animation en question.
 
 ### Valeur de retour
 
-Retourne un objet de type {{domxref("Animation")}}.
+Renvoie un objet [`Animation`](/fr/docs/Web/API/Animation).
 
-## Exemple
+## Exemples
 
-Dans la démo [Down the Rabbit Hole (with the Web Animation API)](https://codepen.io/rachelnabors/pen/rxpmJL/?editors=0010), la méthode `animate()` est utilisée pour immédiatement créer et jouer une animation sur l'élément `#tunnel,` pour le faire défiler vers le haut, indéfiniment. Remarquez le tableau d'objets définissant les keyframes et le bloc contenant les options de timing de l'animation.
+Dans la démonstration [Dans le terrier du lapin (avec l'API Web Animation)](https://codepen.io/SphinxKnight/pen/NWwQbJz), on utilise la méthode `animate()` pour créer et immédiatement jouer une animation sur l'élément `#tunnel` afin que celui-ci défile vers le haut de façon infinie (voir les bords). Voyez ici les objets passés comme étapes et les options de temporisation.
 
 ```js
 document.getElementById("tunnel").animate([
-  // keyframes
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
+  // étapes/keyframes
+  { transform: 'translateY(0px)' },
+  { transform: 'translateY(-300px)' }
 ], {
-  // timing options
-  duration: 1000,
-  iterations: Infinity
+  // temporisation
+  duration: 1000,
+  iterations: Infinity
 });
 ```
 
+### Étapes initiales ou finales implicites
+
+Pour les navigateurs récents, il est possible d'indiquer uniquement un état de début ou de fin pour une animation (c'est-à-dire une seule étape), c'est le navigateur qui déduira, si possible, l'autre étape (de début ou de fin donc). Prenons comme exemple [cette animation simple](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html), l'objet pour l'étape ressemble à&nbsp;:
+
+```js
+let rotate360 = [
+  { transform: 'rotate(360deg)' }
+];
+```
+
+On a uniquement indiqué l'état final de l'animation, l'état initial est implicite.
+
 ## Spécifications
 
-| Spécification                                                                                    | Statut                               | Commentaire        |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Web Animations', '#the-animatable-interface', 'animate()' )}} | {{Spec2('Web Animations')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.animate")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- {{domxref("Element.getAnimations()")}}
-- {{domxref("Animation")}}
+- [L'API Web Animations](/fr/docs/Web/API/Web_Animations_API)
+- [`Element.getAnimations()`](/fr/docs/Web/API/Element/getAnimations)
+- [`Animation`](/fr/docs/Web/API/Animation)
