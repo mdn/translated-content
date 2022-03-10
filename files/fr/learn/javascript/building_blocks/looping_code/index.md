@@ -521,11 +521,11 @@ Dans cet exercice, nous vous proposons d'écrire un compte à rebours de lanceme
 - Créer une boucle de 10 jusqu'à 0. Nous vous avons fourni un initialiseur — `let i = 10;`
 - Pour chaque itération, créer un nouveau paragraphe à ajouter dans la balise de sortie `<div>` que nous avons selectionnée en utilisant : `const output = document.querySelector('.output');` En commentaire, nous vous avons fourni trois lignes de code qui doivent être utilisées quelque part à l'intérieur de la boucle :
 
-  - `const paragraphe = document.createElement('p');` — crée un nouveau paragraphe.
+  - `const para = document.createElement('p');` — crée un nouveau paragraphe.
   - `output.appendChild(para);` — ajoute le paragraphe à la sortie `<div>`.
-  - `paragraphe.textContent =` — Rend le texte à l'intérieur du paragraphe identique à ce que vous avez entré du côté droit du signe égal.
+  - `para.textContent =` — Rend le texte à l'intérieur du paragraphe identique à ce que vous avez entré du côté droit du signe égal.
 
-- Chaque nombre de l'itération nécessite un texte différent dans le paragraphe de cette itération (vous aurez besoin d'une expression conditionnelle et plusieurs lignes du type : `paragraphe.textContent = )`
+- Chaque nombre de l'itération nécessite un texte différent dans le paragraphe de cette itération (vous aurez besoin d'une expression conditionnelle et plusieurs lignes du type : `para.textContent = )`
 
   - Si le nombre est 10, écrire "Countdown 10" dans le paragraphe.
   - Si le nombre est 0, écrire "Blast off!" dans le paragraphe.
@@ -548,8 +548,8 @@ output.innerHTML = '';
 
 // let i = 10;
 
-// const paragraphe = document.createElement('p');
-// paragraphe.textContent = ;
+// const para = document.createElement('p');
+// para.textContent = ;
 // output.appendChild(para);
 </textarea>
 
