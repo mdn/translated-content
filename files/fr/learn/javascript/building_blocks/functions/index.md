@@ -236,11 +236,11 @@ var madeAString = myArray.join();
 
 Si aucun paramètre n'est inclus pour spécifier un caractère de jointure / délimitation, une virgule est utilisée par défaut.
 
-## La portée des fonctions et les conflits.
+## La portée des fonctions et les conflits
 
 Parlons un peu de la {{glossary("portée")}} — un concept très important lorsque l'on a affaire à des fonctions. Lorsque vous créez une fonction, les variables et les autres choses qui sont définies à l'intérieur de la fonction ont leur propre **portée**, ce qui signifie qu'elles sont enfermées dans leur propre compartiment séparé et qu'elles ne peuvent pas être affectées par d'autres fonctions ou par le code en dehors de la fonction.
 
-Le plus haut niveau en dehors de toutes vos fonctions est appelé la **portée globale**. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe qu'elle partie du code.
+Le plus haut niveau en dehors de toutes vos fonctions est appelé la **portée globale**. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe quelle partie du code.
 
 Le JavaScript est construit de cette façon pour plusieurs raisons —  mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits. Cela peut être fait de manière malveillante ou simplement par accident.
 
