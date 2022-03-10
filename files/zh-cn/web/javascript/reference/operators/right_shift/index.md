@@ -1,69 +1,66 @@
 ---
-title: Right shift (>>)
+title: 右移 (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
-translation_of: Web/JavaScript/Reference/Operators/Right_shift
+tags:
+  - Bitwise operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
+browser-compat: javascript.operators.right_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>The <strong>right shift operator (<code>&gt;&gt;</code>)</strong> shifts the first operand the specified number of bits to the right. Excess bits shifted off to the right are discarded. Copies of the leftmost bit are shifted in from the left. Since the new leftmost bit has the same value as the previous leftmost bit, the sign bit (the leftmost bit) does not change. Hence the name "sign-propagating".</p>
+**右移操作符 (`>>`)** 是将一个操作数按指定移动的位数向右移动，右边移出位被丢弃，左边移出的空位补符号位（最左边那位）。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><code><var>a</var> &gt;&gt; <var>b</var></code>
-</pre>
+```js
+a >> b
+```
 
-<h2 id="Description">Description</h2>
+## 描述
 
-<p>This operator shifts the first operand the specified number of bits to the right. Excess bits shifted off to the right are discarded. Copies of the leftmost bit are shifted in from the left. Since the new leftmost bit has the same value as the previous leftmost bit, the sign bit (the leftmost bit) does not change. Hence the name "sign-propagating".</p>
+**右移操作符 (`>>`)** 是将一个操作数按指定移动的位数向右移动。
+右边移出位将被丢弃，然后用最左边的这一位（符号位）填充左边的空位。
+由于新的数字最左边位与之前数字的最左边位是相同值，故符号位（最左边的位）不会改变，因此被称为“符号位传播” （sign-propagating）.
 
-<p>For example, <code>9 &gt;&gt; 2</code> yields 2:</p>
+例如 `9 >> 2` 得到 2:
 
-<pre class="brush: js">.    9 (base 10): 00000000000000000000000000001001 (base 2)
+```js
+.    9 (十进制): 00000000000000000000000000001001 (二进制)
                   --------------------------------
-9 &gt;&gt; 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
-</pre>
+9 >> 2 (十进制): 00000000000000000000000000000010 (二进制) = 2 (十进制)
+```
 
-<p>Likewise, <code>-9 &gt;&gt; 2</code> yields <code>-3</code>, because the sign is preserved:</p>
+同理, `-9 >> 2` 得到 `-3`, 因为它的符号位得到保留：
 
-<pre class="brush: js">.    -9 (base 10): 11111111111111111111111111110111 (base 2)
+```js
+.    -9 (base 10): 11111111111111111111111111110111 (base 2)
                    --------------------------------
--9 &gt;&gt; 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)
-</pre>
+-9 >> 2 (base 10): 11111111111111111111111111111101 (base 2) = -3 (base 10)
+```
 
-<h2 id="Examples">Examples</h2>
+## 例子
 
-<h3 id="Using_right_shift">Using right shift</h3>
+### 使用右移操作
 
-<pre class="brush: js"> 9 &gt;&gt; 2; //  2
--9 &gt;&gt; 2; // -3
-</pre>
+```js
+ 9 >> 2; //  2
+-9 >> 2; // -3
+```
 
-<h2 id="Specifications">Specifications</h2>
+## 规范
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bitwise-shift-operators', 'Bitwise Shift Operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat("javascript.operators.right_shift")}}</p>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">Bitwise operators in the JS guide</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment">Right shift assignment operator</a></li>
-</ul>
+- [JS 指南中的位运算](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise_operators)
+- [右移赋值操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
