@@ -1,101 +1,77 @@
 ---
-title: WindowOrWorkerGlobalScope.clearTimeout()
+title: clearTimeout()
 slug: Web/API/clearTimeout
 tags:
   - API
   - HTML DOM
-  - Method
-  - Reference
-  - WindowOrWorkerGlobalScope
-  - clearTimeout
   - メソッド
   - リファレンス
-translation_of: Web/API/WindowOrWorkerGlobalScope/clearTimeout
+  - clearTimeout
+browser-compat: api.clearTimeout
+translation_of: Web/API/clearTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
-<div>{{APIRef("HTML DOM")}}</div>
+{{APIRef("HTML DOM")}}
 
-<p><strong><code>clearTimeout()</code></strong> は {{domxref("WindowOrWorkerGlobalScope")}} ミックスインのメソッドで、以前の {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} の呼び出しによって以前に確立されたタイムアウトを解除します。</p>
+グローバルの **`clearTimeout()`** メソッドは、 {{domxref("setTimeout()")}} の呼び出しによって以前に確立されたタイムアウトを解除します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>scope</em>.clearTimeout(<em>timeoutID</em>)
-</pre>
+```js
+clearTimeout(timeoutID)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><em>timeoutID</em></code></dt>
- <dd>解除したいタイマの ID です。 ID は <code>setTimeout()</code> の返値によって取得できます。</dd>
-</dl>
+- `timeoutID`
+  - : 解除したいタイムアウトの識別子です。この ID は対応する `setTimeout()` から返されたものです。
 
-<p>注目すべきは、 {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} および {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} で使用される ID のプールは共有されますので、技術的には <code>clearTimeout()</code> および {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} は互いに交換できます。しかし、明確化のため、そのようなことは避けてください。</p>
+注目すべきは、 {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} で使用される ID のプールは共有されますので、技術的には `clearTimeout()` および {{domxref("clearInterval()")}} は互いに交換できます。しかし、明確化のため、そのようなことは避けてください。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>ウェブページのコンテキストで以下のスクリプトを実行し、ページを一度クリックしてください。１秒後にメッセージがポップアップします。１秒間に複数回ページをクリックしても、アラートは一度しか表示されません。</p>
+ウェブページのコンテキストで以下のスクリプトを実行し、ページを一度クリックしてください。１秒後にメッセージがポップアップします。１秒間に複数回ページをクリックしても、アラートは一度しか表示されません。
 
-<pre class="brush: js">var alarm = {
-  remind: function(aMessage) {
-    alert(aMessage);
-    this.timeoutID = undefined;
-  },
+```js
+const alarm = {
+  remind: function(aMessage) {
+    alert(aMessage);
+    this.timeoutID = undefined;
+  },
 
-  setup: function() {
-    if (typeof this.timeoutID === 'number') {
-      this.cancel();
-    }
+  setup: function() {
+    if (typeof this.timeoutID === 'number') {
+      this.cancel();
+    }
 
-    this.timeoutID = window.setTimeout(function(msg) {
-      this.remind(msg);
-    }.bind(this), 1000, 'Wake up!');
-  },
+    this.timeoutID = setTimeout(function(msg) {
+      this.remind(msg);
+    }.bind(this), 1000, 'Wake up!');
+  },
 
-  cancel: function() {
-    window.clearTimeout(this.timeoutID);
-  }
+  cancel: function() {
+    clearTimeout(this.timeoutID);
+  }
 };
-window.onclick = function() { alarm.setup(); };
-</pre>
+window.addEventListener('click', () => alarm.setup() );
+```
 
-<h2 id="Notes" name="Notes">メモ</h2>
+## メモ
 
-<p><code>clearTimeout()</code> へ妥当ではない ID を渡しても、何の効果もありません。例外は発生しません。</p>
+`clearTimeout()` へ妥当ではない ID を渡しても、何の効果もありません。例外は発生しません。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'WindowOrWorkerGlobalScope.clearTimeout()')}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>最新の仕様で、メソッドを <code>WindowOrWorkerGlobalScope</code> ミックスインに移動。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'clearTimeout()')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.clearTimeout")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.setInterval()")}}</li>
- <li>{{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}</li>
- <li>{{domxref("Window.requestAnimationFrame()")}}</li>
- <li><a href="/ja/docs/JavaScript/Timers/Daemons" title="JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
-</ul>
+- {{domxref("setTimeout()")}}
+- {{domxref("setInterval()")}}
+- {{domxref("clearInterval()")}}
+- {{domxref("Window.requestAnimationFrame()")}}
+- [_Daemons_ 管理](/ja/docs/JavaScript/Timers/Daemons)
