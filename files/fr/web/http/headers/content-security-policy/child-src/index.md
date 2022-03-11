@@ -1,22 +1,12 @@
 ---
-title: 'CSP: child-src'
+title: 'CSP : child-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/child-src
-tags:
-  - CSP
-  - Child
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Sécurité
-  - child-src
-  - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/child-src
+browser-compat: http.headers.csp.Content-Security-Policy.child-src
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`child-src`** définit les sources valides de [web workers](/en-US/docs/Web/API/Web_Workers_API) et de contextes de navigations imbriqués chargés au moyen d'éléments tels que {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}. Pour les workers, les requêtes conformes sont traitées comme des erreurs de réseau fatales par l'agent utilisateur.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) **`child-src`** définit les sources valides de [<i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) et de contextes de navigations imbriqués chargés au moyen d'éléments tels que [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe). Pour les <i lang="en">workers</i>, les requêtes non-conformes sont traitées comme des erreurs de réseau fatales par l'agent utilisateur.
 
 <table class="properties">
   <tbody>
@@ -26,13 +16,12 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`child-src`*
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td>{{Glossary("Fetch directive")}}</td>
+      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
     </tr>
     <tr>
-      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <th scope="row"><a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la
-        directive <code>default-src</code>
+        Oui, si cette directive est absente, l'agent consultera la directive <code>default-src</code>
       </td>
     </tr>
   </tbody>
@@ -40,48 +29,49 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`child-src`*
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive :
+Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
 
-    Content-Security-Policy: child-src <source>;
-    Content-Security-Policy: child-src <source> <source>;
+```http
+Content-Security-Policy: child-src <source>;
+Content-Security-Policy: child-src <source> <source>;
+```
 
 ### Sources
 
-{{page("Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
 
 ## Exemples
 
 ### Cas de violation
 
-Soit cet en-tête CSP :
+Soit cet en-tête CSP&nbsp;:
 
 ```bash
 Content-Security-Policy: child-src https://example.com/
 ```
 
-Cet {{HTMLElement("iframe")}} et ce worker seront bloqués et ne se chargeront pas :
+Cette [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) et ce <i lang="en">worker</i> seront bloqués et ne se chargeront pas&nbsp;:
 
 ```html
 <iframe src="https://not-example.com"></iframe>
 
 <script>
-  var blockedWorker = new Worker("data:application/javascript,...");
+  let blockedWorker = new Worker("data:application/javascript,...");
 </script>
 ```
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                       | Commentaire          |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-child-src", "child-src")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-child-src", "child-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.child-src")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}
-- {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)
+- [`Worker`](/fr/docs/Web/API/Worker), [`SharedWorker`](/fr/docs/Web/API/SharedWorker), [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker)
