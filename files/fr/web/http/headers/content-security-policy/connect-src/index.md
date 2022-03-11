@@ -1,30 +1,21 @@
 ---
-title: 'CSP: connect-src'
+title: 'CSP : connect-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Sécurité
-  - connect-src
-  - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/connect-src
+browser-compat: http.headers.csp.Content-Security-Policy.connect-src
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API qui sont affectées sont :
+La directive [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API concernées sont&nbsp;:
 
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
-- {{domxref("Fetch")}},
-- {{domxref("XMLHttpRequest")}},
-- {{domxref("WebSocket")}},
-- {{domxref("EventSource")}}, and
-- {{domxref("Navigator.sendBeacon()")}}.
+- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#attr-ping),
+- [`fetch()`](/fr/docs/Web/API/fetch),
+- [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest),
+- [`WebSocket`](/fr/docs/Web/API/WebSocket),
+- [`EventSource`](/fr/docs/Web/API/EventSource),
+- [`Navigator.sendBeacon()`](/fr/docs/Web/API/Navigator/sendBeacon).
 
-> **Note :** `connect-src 'self'` ne s'applique pas aux schémas de websocket pour tous les navigateurs. Pour plus d'informations, consulter : <https://github.com/w3c/webappsec-csp/issues/7>.
+> **Note :** `connect-src 'self'` ne s'applique pas aux schémas de websocket pour tous les navigateurs. Pour plus d'informations, consulter [ce ticket](https://github.com/w3c/webappsec-csp/issues/7).
 
 <table class="properties">
   <tbody>
@@ -34,13 +25,12 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`connect-src
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td>{{Glossary("Fetch directive")}}</td>
+      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
     </tr>
     <tr>
-      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la
-        directive <code>default-src</code>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -48,38 +38,42 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`connect-src
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive :
+Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
 
-    Content-Security-Policy: connect-src <source>;
-    Content-Security-Policy: connect-src <source> <source>;
+```http
+Content-Security-Policy: connect-src <source>;
+Content-Security-Policy: connect-src <source> <source>;
+```
 
 ### Sources
 
-{{page("/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src", "common_sources")}}
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
 
 ## Exemples
 
 ### Cas de violation
 
-Soit cet en-tête CSP :
+Soit cet en-tête CSP&nbsp;:
 
 ```bash
 Content-Security-Policy: connect-src https://example.com/
 ```
 
-Les connexions suivantes seront bloquées et ne se chargeront pas :
+Les connexions suivantes seront bloquées et ne se chargeront pas&nbsp;:
 
 ```html
 <a ping="https://not-example.com">
 
 <script>
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://not-example.com/');
   xhr.send();
 
-  var ws = new WebSocket("https://not-example.com/");
+  let ws = new WebSocket("https://not-example.com/");
 
-  var es = new EventSource("https://not-example.com/");
+  let es = new EventSource("https://not-example.com/");
 
   navigator.sendBeacon("https://not-example.com/", { ... });
 </script>
@@ -87,24 +81,21 @@ Les connexions suivantes seront bloquées et ne se chargeront pas :
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-connect-src", "connect-src")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-connect-src", "connect-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.connect-src")}}
+{{Compat}}
 
 ## Notes de compatibilité
 
-- Avant Firefox 23, `xhr-src` était utilisé en lieu et place de la directive `connect-src` et ne s'appliquait qu'à l'API {{domxref("XMLHttpRequest")}}.
+- Avant Firefox 23, `xhr-src` était utilisé en lieu et place de la directive `connect-src` et ne s'appliquait qu'à l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest).
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
-- {{domxref("Fetch")}}
-- {{domxref("XMLHttpRequest")}}
-- {{domxref("WebSocket")}}
-- {{domxref("EventSource")}}
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#attr-ping)
+- [`fetch()`](/fr/docs/Web/API/fetch)
+- [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
+- [`WebSocket`](/fr/docs/Web/API/WebSocket)
+- [`EventSource`](/fr/docs/Web/API/EventSource)
