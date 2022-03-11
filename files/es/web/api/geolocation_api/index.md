@@ -1,5 +1,5 @@
 ---
-title: Uso de geolocalización
+title: API de geolocalización
 slug: Web/API/Geolocation_API
 translation_of: Web/API/Geolocation_API
 original_slug: WebAPI/Using_geolocation
@@ -9,7 +9,7 @@ original_slug: WebAPI/Using_geolocation
 La **API de geolocalización** permite al usuario compartir su ubicación a las aplicaciones web si así lo desea.
 Por razones de privacidad, al usuario se le pide que confirme el permiso para proporcionar información de ubicación.
 
-Las `WebExtensions` que deseen utilizar el objeto `Geolocalización` deben agregar el permiso `"geolocation"` a su manifiesto.
+Las `WebExtensions` que deseen utilizar el objeto `Geolocation` deben agregar el permiso `"geolocation"` a su manifiesto.
 El sistema operativo del usuario le indicará que permita el acceso a la ubicación la primera vez que se solicite.
 
 ## Conceptos y uso
@@ -28,24 +28,24 @@ El desarrollador ahora puede acceder a esta información de ubicación de dos ma
 
 En ambos casos, la llamada al método toma hasta tres argumentos.
 
-- Una devolución de llamada exitosa obligatoria: si la recuperación de la ubicación es exitosa, la devolución de llamada se ejecuta con un objeto {{domxref("GeolocationPosition")}} como su único parámetro, proporcionando acceso a los datos de ubicación.
-- Una devolución de llamada de error opcional: si la recuperación de la ubicación no tiene éxito, la devolución de llamada se ejecuta con un objeto {{domxref("GeolocationPositionError")}} como su único parámetro, proporcionando información de acceso sobre lo que salió mal.
+- Una función obligatoria que será llamada en caso de éxito: si la recuperación de la ubicación es exitosa, la función se ejecuta con un objeto {{domxref("GeolocationPosition")}} como su único parámetro, proporcionando acceso a los datos de ubicación.
+- Una función opcional que será llamada en caso de error: si la recuperación de la ubicación no tiene éxito, la función se ejecuta con un objeto {{domxref("GeolocationPositionError")}} como su único parámetro, proporcionando información de acceso sobre lo que salió mal.
 - Un objeto opcional que proporciona opciones para la recuperación de los datos de posición.
 
-Para obtener más información sobre el uso de la geolocalización, lea [uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
+Para obtener más información sobre el uso de la geolocalización, lea [Uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 
 ## Interfaces
 
 - {{domxref("Geolocation")}}
   - : La clase principal de esta API: contiene métodos para recuperar la posición actual del usuario, observar cambios en su posición y borrar una observación establecida previamente.
 - {{domxref("GeolocationPosition")}}
-  - : Representa la posición de un usuario. Una instancia de `GeolocationPosition` es devuelta por una llamada exitosa a uno de los métodos contenidos dentro de {{domxref("Geolocation")}}, dentro de una devolución de llamada exitosa, y contiene una marca de tiempo más un {{domxref("GeolocationCoordinates")}} instancia de objeto.
+  - : Representa la posición de un usuario. Una instancia de `GeolocationPosition` es devuelta por una llamada exitosa a uno de los métodos contenidos dentro de {{domxref("Geolocation")}}, dentro de una devolución de llamada exitosa, y contiene una marca de tiempo más una instancia de objeto {{domxref("GeolocationCoordinates")}}.
 - {{domxref("GeolocationCoordinates")}}
   - : Representa las coordenadas de la posición de un usuario; una instancia de `GeolocationCoordinates` contiene latitud, longitud y otra información relacionada importante.
 - {{domxref("GeolocationPositionError")}}
   - : Un `GeolocationPositionError` es devuelto por una llamada fallida a uno de los métodos contenidos dentro de {{domxref("Geolocation")}}, dentro de una devolución de llamada de error, y contiene un código y un mensaje de error.
 - {{domxref("Navigator.geolocation")}}
-  - : El punto de entrada a la API. Devuelve una instancia de objeto {{domxref("Geolocalización")}}, desde la cual se puede acceder a todas las demás funciones.
+  - : El punto de entrada a la API. Devuelve una instancia de objeto {{domxref("Geolocation")}}, desde la cual se puede acceder a todas las demás funciones.
 
 ## Ejemplo
 
@@ -61,7 +61,7 @@ Consulte [Uso de la API de geolocalización](/es/docs/Web/API/Geolocation_API/Us
 
 ### Disponibilidad
 
-Dado que Google suele proporcionar la ubicación basada en Wi-Fi, es posible que la API Vanilla Geolocalización no esté disponible en China. Puede utilizar proveedores externos locales como [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), o [Tencent](https://lbs.qq.com/tool/component-geolocation.html). Estos servicios utilizan la dirección IP del usuario y/o una aplicación local para proporcionar un mejor posicionamiento.
+Dado que Google suele proporcionar la ubicación basada en Wi-Fi, es posible que la API _vanilla_ de Geolocalización no esté disponible en China. Puede utilizar proveedores externos locales como [Baidu](https://lbsyun.baidu.com/index.php?title=jspopular/guide/geolocation), [Autonavi](https://lbs.amap.com/api/javascript-api/guide/services/geolocation#geolocation), o [Tencent](https://lbs.qq.com/tool/component-geolocation.html). Estos servicios utilizan la dirección IP del usuario y/o una aplicación local para proporcionar un mejor posicionamiento.
 
 ## Véase también
 
