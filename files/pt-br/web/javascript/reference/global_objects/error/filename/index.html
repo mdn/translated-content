@@ -1,0 +1,42 @@
+---
+ title: Error.prototype.fileName 
+ slug: Web/JavaScript/Reference/Global_Objects/Error/fileName 
+ tags:
+   - JavaScript
+   - Non-standard
+   - Não normalizado
+   - Property 
+   - Propriedade
+   - Prototype 
+   - Protótipo
+  browser-compat: javascript.builtins.Error.fileName
+  translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
+---
+
+<div>{{JSRef}} {{non-standard_header}}</div>
+<p>
+  A propriedade <strong><code>fileName</code></strong> contém o caminho para o
+  arquivo que levantou este erro.
+</p>
+<h2 id="descrição">Descrição</h2>
+<p>
+  Esta propriedade não-padrão contém o caminho para o ficheiro que levantou este
+  erro. Se chamado a partir de um contexto de depuração, as Ferramentas de
+  Desenvolvimento Firefox, por exemplo, "debugger eval code" é devolvido.
+</p>
+<h2 id="exemplos">Exemplos</h2>
+<h3 id="usando-filename">Usando fileName</h3>
+<pre><code>var e = new Error('Não foi possível analisar os dados')
+throw e;
+// e.fileName poderia parecer-se com "file:///C:/example.html"
+</code></pre>
+<h2 id="especificações">Especificações</h2>
+<p>Não faz parte de nenhuma norma.</p>
+<h2 id="compatibilidade-de-navegadores">Compatibilidade de navegadores</h2>
+<p>{{{Compat}}}</p>
+<h2 id="veja-também">Veja também</h2>
+<ul>
+  <li>{{jsxref("Error.prototype.stack")}}}</li>
+  <li>{{jsxref("Error.prototype.columnNumber")}}}}</li>
+  <li>{{jsxref("Error.prototype.lineNumber")}}}}</li>
+</ul>
