@@ -61,19 +61,19 @@ window.addEventListener("keyup", handleKeyUp, true);</pre>
 
 <h4 id="Finger_touch" name="Finger_touch">指でのタッチ</h4>
 
-<p>When developing web applications meant to be installed on touchscreen devices, it’s a good practice to take into consideration the different capabilities in terms of screen resolution and user input. <a href="/ja/docs/Web/Guide/Events/Touch_events">Touch events</a> can help you implement interactive elements and common interaction gestures on touchscreen devices.</p>
+<p>タッチスクリーンデバイスにインストールされることを目的としている Web アプリを開発している時、ディスプレイ解像度とユーザー入力に関して異なる性能を考慮することは良いプラクティスです。<a href="/ja/docs/Web/API/Touch_events">タッチイベント</a>は、タッチスクリーンデバイス上のインタラクションな要素と一般的なインタラクションジェスチャーを実装するのに役立ちます。</p>
 
-<p>If you want to use touch events, you need to add event listeners and specify handler functions, which will be called when the event gets fired:</p>
+<p>タッチイベントを使いたいのであれば、イベントリスナーの追加とイベントが発火された時に呼び出されるハンドラー関数を指定する必要があります。</p>
 
 <pre class="brush: js notranslate">element.addEventListener("touchstart", handleStart, false);
 element.addEventListener("touchcancel", handleCancel, false);
 element.addEventListener("touchend", handleEnd, false);
 element.addEventListener("touchmove", handleMove, false);</pre>
 
-<p>where <code>element</code> is the DOM element you want to register the touch events on.</p>
+<p>ここでの <code>element</code> は、あなたがタッチイベントを登録したい DOM 要素です。
 
 <div class="note">
-<p><strong>注</strong>: For further information about what you can do with touch events, please read our <a href="/ja/docs/Web/Guide/Events/Touch_events">touch events guide</a>.</p>
+<p><strong>注</strong>: タッチイベントでできることについての更なる情報は、<a href="/ja/docs/Web/API/Touch_events">タッチイベントガイド</a>を読んでください。</p>
 </div>
 
 <h4 id="Pointer_Events" name="Pointer_Events">ポインターイベント</h4>
@@ -163,8 +163,8 @@ if (elem.requestFullscreen) {
 <h2 id="Examples" name="Examples">例</h2>
 
 <dl>
- <dt><strong><a href="/ja/DOM/Touch_events#Example">Tracking multiple touch points at a time</a></strong></dt>
- <dd>This example tracks multiple touch points at a time, allowing the user to draw in a <code>{{htmlelement("canvas")}}</code> with more than one finger at a time. It will only work on a browser that supports touch events.</dd>
+ <dt><strong><a href="/ja/DOM/Touch_events#Example">複数のタッチポイントを同時に追跡する</a></strong></dt>
+ <dd>この例は一度に複数のタッチ箇所を追跡しており、ユーザーは <code>{{htmlelement("canvas")}}</code> の中で一本以上の指で同時に描くことができます。タッチイベントをサポートしているブラウザでのみ動きます。</dd>
  <dt><strong><a href="/ja/docs/Web/API/Pointer_Lock_API#example">Simple pointer lock demo</a></strong></dt>
  <dd>We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a <code>{{htmlelement("canvas")}}</code> element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.</dd>
  <dt><strong><a href="http://html5demos.com/contenteditable">コンテンツを編集可能にするデモ</a></strong></dt>
