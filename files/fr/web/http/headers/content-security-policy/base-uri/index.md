@@ -19,8 +19,8 @@ La directive [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Secur
       <td><a href="/fr/docs/Glossary/Document_directive">Directive de document</a></td>
     </tr>
     <tr>
-      <th scope="row"><a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
-      <td>Aucun, ne pas la définir autorise toutes les URL</td>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <td>Non, ne pas définir cette directive autorise toutes les URL</td>
     </tr>
   </tbody>
 </table>
