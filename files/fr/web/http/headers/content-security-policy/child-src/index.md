@@ -48,7 +48,7 @@ On notera que cet ensemble de valeurs peut être utilisé pour toutes les [direc
 
 Soit cet en-tête CSP&nbsp;:
 
-```bash
+```http
 Content-Security-Policy: child-src https://example.com/
 ```
 
