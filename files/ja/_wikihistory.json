@@ -17907,6 +17907,12 @@
       "teoli"
     ]
   },
+  "Web/API/MediaDevices/devicechange_event": {
+    "modified": "2019-03-18T21:42:20.814Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
   "Web/API/MediaDevices/enumerateDevices": {
     "modified": "2019-03-23T22:51:51.373Z",
     "contributors": [
@@ -17934,12 +17940,6 @@
       "yuushimizu",
       "cosmology233",
       "YuichiNukiyama"
-    ]
-  },
-  "Web/API/MediaDevices/ondevicechange": {
-    "modified": "2019-03-18T21:42:20.814Z",
-    "contributors": [
-      "e53e04ac"
     ]
   },
   "Web/API/MediaQueryList": {

@@ -16622,12 +16622,6 @@
       "c1ngular"
     ]
   },
-  "Web/API/MediaDevices/ondevicechange": {
-    "modified": "2019-03-23T22:08:09.338Z",
-    "contributors": [
-      "qzn928"
-    ]
-  },
   "Web/API/MediaElementAudioSourceNode": {
     "modified": "2019-03-23T22:09:55.508Z",
     "contributors": [
@@ -22570,6 +22564,12 @@
       "xilixinluo"
     ]
   },
+  "Web/API/Window/beforeinstallprompt_event": {
+    "modified": "2019-03-23T22:11:25.289Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
   "Web/API/Window/beforeprint_event": {
     "modified": "2020-10-15T21:52:38.969Z",
     "contributors": [
@@ -23053,12 +23053,6 @@
       "hhxxhg",
       "fscholz",
       "charlie"
-    ]
-  },
-  "Web/API/Window/onbeforeinstallprompt": {
-    "modified": "2019-03-23T22:11:25.289Z",
-    "contributors": [
-      "xgqfrms-GitHub"
     ]
   },
   "Web/API/Window/ondevicemotion": {
@@ -47061,6 +47055,12 @@
     "modified": "2020-10-15T22:30:45.773Z",
     "contributors": [
       "sideshowbarker"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/devicechange_event": {
+    "modified": "2019-03-23T22:08:09.338Z",
+    "contributors": [
+      "qzn928"
     ]
   },
   "conflicting/Web/API/MouseEvent/altKey": {
