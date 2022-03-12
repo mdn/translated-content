@@ -25,5 +25,5 @@ Cette page liste un ensemble de techniques utiles à toute personne qui voudrait
   - : L'audio est une partie importante de tout jeu - il ajoute des commentaires et de l'atmosphère. L'audio basé sur le Web arrive à maturité rapidement, mais il y a encore beaucoup de différences de navigateurs à négocier. Cet article fournit un guide détaillé sur la mise en œuvre de l'audio pour les jeux Web, en examinant ce qui fonctionne actuellement sur un éventail aussi large que possible de platesformes.
 - [Détection de collisions en 2D](/fr/docs/Games/Techniques/2D_collision_detection "/fr/docs/Games/Techniques/2D_collision_detection")
   - : Une introduction aux techniques de détection de collisions pour les jeux en deux dimensions.
-- [Carrelage ](/fr/docs/Games/Techniques/Tilemaps)[ ](/fr/docs/Games/Techniques/Tilemaps)
+- [Carrelage](/fr/docs/Games/Techniques/Tilemaps)
   - : Les carreaux sont une technique très populaire dans les jeux 2D pour construire le monde du jeu. Ces articles fournissent une introduction du carrelage (map 2D) et expliquent comment les implémenter avec l'API Canvas.

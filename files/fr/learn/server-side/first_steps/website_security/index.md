@@ -75,7 +75,7 @@ Cette vulnérabilité est présente quand la saisie de l'utilisateur est transmi
 statement = "SELECT * FROM users WHERE name = '" + userName + "';"
 ```
 
-Si l'utilisateur entre un nom correct cela marchera comme voulu. Cependant un utilisateur malveillant peut changer complètement le sens de cette requête SQL pour obtenir la requête qui suit, simplement en ajoutant le texte, **en gras** ci dessous, en tant que nom, cette requête, modifiée, va créer une requête SQL valide qui va supprimer la table `users` et sélectionner toute les données de la table `userinfo` (révèlant les informations de chaque utilisateur). Tout cela est rendu possible à cause du début du texte injecté  (`'a';`) qui va complèter la requête d'origine (`' `est le symbole pour délimiter une chaine de texte en SQL).
+Si l'utilisateur entre un nom correct cela marchera comme voulu. Cependant un utilisateur malveillant peut changer complètement le sens de cette requête SQL pour obtenir la requête qui suit, simplement en ajoutant le texte, **en gras** ci dessous, en tant que nom, cette requête, modifiée, va créer une requête SQL valide qui va supprimer la table `users` et sélectionner toute les données de la table `userinfo` (révèlant les informations de chaque utilisateur). Tout cela est rendu possible à cause du début du texte injecté  (`'a';`) qui va complèter la requête d'origine (`'` est le symbole pour délimiter une chaine de texte en SQL).
 
 ```sql
 SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
@@ -97,7 +97,7 @@ Les frameworks web se chargent bien souvent d'échapper ces caractères à votre
 
 ### Falsification de requête inter-sites (CSRF)
 
-Les attaques CSRF permettent à un utilisateur malveillant d'éxécuter des actions à l'a ide des identifiants d'un autre utilisateur sans que cet utilisateur ne soit informé ou consentant.
+Les attaques CSRF permettent à un utilisateur malveillant d'éxécuter des actions à l'aide des identifiants d'un autre utilisateur sans que cet utilisateur ne soit informé ou consentant.
 
 Ce type d'attaque s'explique mieux avec un exemple. John est l'utilisateur malveillant qui sait qu'un site particulier permet à des utilisateurs authentifiés d'envoyer de l'argent vers un compte particulier en utilisant des requêtes HTTP POST qui incluent le numéro de compte et le montant. John construit un formulaire qui inclut son numéro de compte et un montant dans des champs cachés (invisibles) et le transmet à un autre utilisateur du site (avec le bouton de validation déguisé en un lien vers un site "pour devenir riche".
 
@@ -134,7 +134,7 @@ Quelques autres points que vous pouvez mettre en place :
 - Utilisez une politique de gestion des mots de passe efficace. Encouragez les mots de passe solides avec leur renouvellement fréquent. Prenez en compte une authentification à deux facteurs sur votre site (l'utilisateur, en plus du mot de passe, devra fournir un autre code d'authentification généralement fourni par un matériel physique, que seul l'utilisateur possède, comme un code envoyé sur le téléphone par SMS).
 - Configurez vos serveurs web pour utiliser [HTTPS](/fr/docs/Glossary/https) et [HTTP Strict Transport Security](/fr/docs/Web/Security/HTTP_strict_transport_security) (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec `POST` et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.
 - Tenez vous informé des dernières menaces ([la liste actuelle d'OWASP est ici](/fr/docs/)) et préoccupez vous toujours des vulnerabilités les plus courantes en premier.
-- Utilisez [des outils de recherche de vulnérabilités ](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pour faire automatiquement des recherches de bug sur votre site (votre site pourra également proposer un programme de _buf bounty_ pour déceler des bugs, [comme le fait Mozilla ici](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)).
+- Utilisez [des outils de recherche de vulnérabilités](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pour faire automatiquement des recherches de bug sur votre site (votre site pourra également proposer un programme de _buf bounty_ pour déceler des bugs, [comme le fait Mozilla ici](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)).
 - Ne stockez et n'affichez que les données nécessaires. Par exemple, si votre utilisateur doit stocker des données sensibles comme des informations bancaires, affichez seulement ce qui sera suffisant pour être identifié par l'utilisateur, mais pas suffisament pour être copié par un attaquant et être utilisé sur un autre site. La méthode la plus courante en ce moment est de n'afficher que les quatre derniers chiffres du numéro de carte bancaire.
 
 Les frameworks web peuvent aider à atténuer beaucoup des vulnérabilités les plus courantes.

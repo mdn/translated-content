@@ -38,7 +38,7 @@ Si le module passé en argument n'est pas une instance de {{jsxref("WebAssembly.
 
 ## Les sections personnalisées
 
-Un module wasm contient une série de **sections**. La plupart de ces sections sont spécifiées et validées par la spécification WebAssembly mais les modules peuvent contenir certaines sections « personnalisées » (_custom sections_) qui sont ignorées lors de la phase de validation. Pour plus d'informations, consulter[ l'article sur les structures de haut niveau](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#high-level-structure) qui détaille la structure des sections et les différences entre les sections normales (« connues ») et les sections personnalisées.
+Un module wasm contient une série de **sections**. La plupart de ces sections sont spécifiées et validées par la spécification WebAssembly mais les modules peuvent contenir certaines sections « personnalisées » (_custom sections_) qui sont ignorées lors de la phase de validation. Pour plus d'informations, consulter [l'article sur les structures de haut niveau](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#high-level-structure) qui détaille la structure des sections et les différences entre les sections normales (« connues ») et les sections personnalisées.
 
 Cela permet aux développeurs d'inclure des données personnalisées dans un module WebAssembly pour d'autres desseins. Par exemple, on peut avoir [une section personnalisée `name`](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#name-section), qui permet aux développeurs de fournir des noms pour les fonctions et les variables locales du module (à la façon des « symboles » utilisé pour les programmes compilés).
 

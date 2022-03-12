@@ -80,6 +80,6 @@ Avant Firefox 48 {{geckoRelease(48)}}, les noms les plus récents et la sémanti
 - {{jsxref("ArrayBuffer")}}
 - [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
 - [Web Workers](/fr/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– un bibliothèque simple qui fournit des abstractions pour synchronisers et distribuer des tâches.
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – un bibliothèque simple qui fournit des abstractions pour synchronisers et distribuer des tâches.
 - [La mémoire partagée – un rapide tutoriel](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

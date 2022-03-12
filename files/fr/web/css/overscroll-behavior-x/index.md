@@ -45,7 +45,7 @@ La propriété `overscroll-behavior-x` est définie avec un des mots-clés défi
 
 ## Exemples
 
-Dans l'exemple [`overscroll-behavior-x` ](https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x)(cf. [le code source](https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html) associé), on dispose de deux boîtes de bloc, l'une contenue à l'intérieure de l'autre. La boîte englobante possède une grande largeur avec {{cssxref("width")}} afin que la page puisse défiler horizontalement. La boîte intérieure a une petite largeur (et une petite hauteur, définie avec {{cssxref("height")}}) afin de pouvoir être facilement contenue dans la zone d'affichage mais son contenu possède une grande largeur afin de défiler horizontalement.
+Dans l'exemple [`overscroll-behavior-x`](https://mdn.github.io/css-examples/overscroll-behavior/overscroll-behavior-x) (cf. [le code source](https://github.com/mdn/css-examples/blob/master/overscroll-behavior/overscroll-behavior-x.html) associé), on dispose de deux boîtes de bloc, l'une contenue à l'intérieure de l'autre. La boîte englobante possède une grande largeur avec {{cssxref("width")}} afin que la page puisse défiler horizontalement. La boîte intérieure a une petite largeur (et une petite hauteur, définie avec {{cssxref("height")}}) afin de pouvoir être facilement contenue dans la zone d'affichage mais son contenu possède une grande largeur afin de défiler horizontalement.
 
 Par défaut, lorsqu'on fait défiler la boîte intérieure et qu'on atteint une limite de défilement, c'est toute la page qui commence à défiler. Si ce n'est pas le comportement souhaité, on peut empêcher ça en utilisant `overscroll-behavior-x: contain` sur la boîte intérieure :
 

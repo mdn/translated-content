@@ -7,7 +7,9 @@ tags:
   - SVG Dégradé
 translation_of: Web/SVG/Element/radialGradient
 ---
-{{SVGRef}}L'élément [SVG ](/fr/docs/Web/SVG)**`<radialGradient>`** permet de définir un dégradé radial afin de dessiner un contour, ou de remplir des éléments SVG.
+{{SVGRef}}
+
+L'élément [SVG](/fr/docs/Web/SVG) **`<radialGradient>`** permet de définir un dégradé radial afin de dessiner un contour, ou de remplir des éléments SVG.
 
 ## Contexte d'utilisation
 

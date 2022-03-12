@@ -36,7 +36,7 @@ La méthode **`EventTarget.removeEventListener()`** supprime d'une {{domxref("Ev
     - {{non-standard_inline}} `mozSystemGroup` : Disponible seulement pour le code exécuté dans XBL ou dans le chrome de Firefox, c'est un {{jsxref("Boolean")}} indiquant que l'écouteur a été ajouté au groupe système.
 
 - `useCapture` {{optional_inline}}
-  - : Indique si l'{{domxref("EventListener")}} à retirer a été enregistré comme un` `écouteur capturant, ou non. Si le paramètre est absent, la valeur par défaut est `false` (_faux_).
+  - : Indique si l'[`EventListener`](/fr/docs/Web/API/EventListener) à retirer a été enregistré comme un écouteur capturant, ou non. Si le paramètre est absent, la valeur par défaut est `false` (_faux_).
 
 Si un écouteur est enregistré deux fois, un avec capture et un sans, supprimez chacun séparément. La suppression d'un écouteur de capture n'affecte pas une version non capturante du même écouteur, et vice versa.
 

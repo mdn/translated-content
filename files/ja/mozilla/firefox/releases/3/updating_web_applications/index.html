@@ -12,7 +12,7 @@ original_slug: Updating_web_applications_for_Firefox_3
 
 <h2 id="DOM_changes">DOM の変更</h2>
 
-<p></p><p>外部ドキュメントからのノードは、現在のドキュメントに挿入する前に <a href="/ja/docs/Web/API/Document/importNode" title="外部ドキュメントからノードのコピーを作成し、現在のドキュメントに挿入できるようにします。"><code>document.importNode()</code></a> を使ってクローンを作る (あるいは <a href="/ja/docs/Web/API/Document/adoptNode" title="外部ドキュメントからノードを取り込みます。ノードとそのサブツリーは、(もしあれば) 元あったドキュメントから削除され、ownerDocument が現在のドキュメントに変更されます。そして、そのノードが現在のドキュメントに挿入できるようになります。"><code>document.adoptNode()</code></a> を使って取り込む) べきです。<a href="/ja/docs/Web/API/Node/ownerDocument" title="ownerDocument プロパティは、指定ノードを内包するノードツリーのトップレベルのドキュメントオブジェクトを返します。"><code>Node.ownerDocument</code></a> 問題の詳細については <a class="external" href="https://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a> を参照してください。</p>
+<p>外部ドキュメントからのノードは、現在のドキュメントに挿入する前に <a href="/ja/docs/Web/API/Document/importNode" title="外部ドキュメントからノードのコピーを作成し、現在のドキュメントに挿入できるようにします。"><code>document.importNode()</code></a> を使ってクローンを作る (あるいは <a href="/ja/docs/Web/API/Document/adoptNode" title="外部ドキュメントからノードを取り込みます。ノードとそのサブツリーは、(もしあれば) 元あったドキュメントから削除され、ownerDocument が現在のドキュメントに変更されます。そして、そのノードが現在のドキュメントに挿入できるようになります。"><code>document.adoptNode()</code></a> を使って取り込む) べきです。<a href="/ja/docs/Web/API/Node/ownerDocument" title="ownerDocument プロパティは、指定ノードを内包するノードツリーのトップレベルのドキュメントオブジェクトを返します。"><code>Node.ownerDocument</code></a> 問題の詳細については <a class="external" href="https://www.w3.org/DOM/faq.html#ownerdoc" rel="noopener">W3C DOM FAQ</a> を参照してください。</p>
 
     <p>Firefox では現在このルールを強制していません。Firefox 3 の開発中には強制していた時期もありましたが、このルールを強制すると多くのサイトが機能しなくなってしまうため取りやめになりました。
     将来的な互換性を高めるため、ウェブ開発者にはこのルールに従ってコードを修正することを推奨します。</p>

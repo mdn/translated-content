@@ -107,15 +107,15 @@ Ainsi [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_O
 
 On observe que plusieurs méthodes sont définies au niveau de l'attribut `prototype` d'`Object`, qui seront alors disponibles pour les objets qui héritent d'`Object`, comme nous l'avons vu plus haut.
 
-Vous verrez qu'il existe plein d'exemples de chaine de prototypage dans JavaScript. Vous pouvez essayer de trouver les méthodes et les attributs définis dans les attributs `prototype` des objets globaux comme [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), et ` Array`. Chacun de ces objets possède des éléments au sein de leur attribut prototype. Dès lors que l'on crée une chaine de caractères, comme celle-ci&nbsp;:
+Vous verrez qu'il existe plein d'exemples de chaine de prototypage dans JavaScript. Vous pouvez essayer de trouver les méthodes et les attributs définis dans les attributs `prototype` des objets globaux comme [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), et `Array`. Chacun de ces objets possède des éléments au sein de leur attribut prototype. Dès lors que l'on crée une chaine de caractères, comme celle-ci&nbsp;:
 
 ```js
 let maChaine = 'Ceci est ma chaine de caractères.';
 ```
 
-`maChaine `possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)…
+`maChaine ` possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)…
 
-> **Attention :** L'attribut `prototype` est un des éléments JavaScript qui peut le plus prêter à confusion. On pourrait penser qu'il s'agit du prototype objet de l'objet courant mais ça ne l'est pas (on peut y accéder via `__proto__`). L'attribut `prototype `est un attribut qui contient un objet où l'on définit les éléments dont on va pouvoir hériter.
+> **Attention :** L'attribut `prototype` est un des éléments JavaScript qui peut le plus prêter à confusion. On pourrait penser qu'il s'agit du prototype objet de l'objet courant mais ça ne l'est pas (on peut y accéder via `__proto__`). L'attribut `prototype` est un attribut qui contient un objet où l'on définit les éléments dont on va pouvoir hériter.
 
 ## Revenons sur create()
 

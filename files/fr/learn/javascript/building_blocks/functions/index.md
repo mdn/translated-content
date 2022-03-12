@@ -30,7 +30,7 @@ Les **fonctions** sont un autre concept essentiel de la programmation, qui perme
 
 En JavaScript, vous trouverez des fonctions partout. En fait, nous avons utilisé des fonctions depuis le début du cours ; nous n'en avons simplement pas beaucoup parlé. Toutefois, il est maintenant temps de parler des fonctions de manière explicite et d'explorer réellement leur syntaxe.
 
-Presque à chaque fois que vous utilisez une structure de JavaScript qui utilise une paire de parenthèses — `()` — et que vous n'utilisez **pas** une structure usuelle et intégrée du langage telle que les boucles [for](/fr/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop), [while ](/fr/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while)ou[ do...while ](/fr/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), ou une déclaration [if...else ](/fr/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), vous utilisez une fonction.
+Presque à chaque fois que vous utilisez une structure de JavaScript qui utilise une paire de parenthèses — `()` — et que vous n'utilisez **pas** une structure usuelle et intégrée du langage telle que les boucles [for](/fr/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop), [while](/fr/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while) ou [do...while](/fr/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while), ou une déclaration [if...else](/fr/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements), vous utilisez une fonction.
 
 ## Les fonctions intégrées du navigateur
 
@@ -69,7 +69,7 @@ var myNumber = Math.random();
 
 > **Note :** N'hésitez pas à copier ces lignes dans la console JavaScript de votre navigateur afin de vous familiariser à nouveau avec leur fonctionnalité si vous en ressentez le besoin.
 
-Le langage Javascript a de nombreuses fonctions intégrées pour vous permettre de faire des choses utiles sans devoir écrire tout le code vous-même. En fait, certains codes que vous appelez quand **invoquez** (un mot sophistiqué pour dire lancer ou exécuter) une fonction intégrée du navigateur ne pourraient pas être écrits en JavaScript — la plupart de ces fonctions appellent des parties de code interne du navigateur qui est très majoritairement écrit en langages de bas niveau comme le C++, et non pas en langage web comme JavaScript.
+Le langage JavaScript a de nombreuses fonctions intégrées pour vous permettre de faire des choses utiles sans devoir écrire tout le code vous-même. En fait, certains codes que vous appelez quand vous **invoquez** (un mot sophistiqué pour dire lancer ou exécuter) une fonction intégrée du navigateur ne pourraient pas être écrits en JavaScript — la plupart de ces fonctions appellent des parties de code interne du navigateur qui est très majoritairement écrit en langages de bas niveau comme le C++, et non pas en langage web comme JavaScript.
 
 Gardez à l'esprit que certaines fonctions intégrées du navigateur ne font pas partie du noyau du langage JavaScript — certaines font partie des APIs du navigateur qui sont construites à partir du langage par défaut pour apporter encore plus de fonctionnalités ( consultez cette [section antérieure de notre cours](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript) pour une description plus détaillée ). Nous aborderons l'utilisation des APIs du navigateur plus en détail dans un module ultérieur.
 
@@ -83,7 +83,7 @@ Vous n'aurez pas besoin d'apprendre les rouages des objets structurés du JavaSc
 
 ## Fonctions personnalisées
 
-Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html ](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html)tiré de l'article [les boucles dans le code ](/fr/Apprendre/JavaScript/Building_blocks/Looping_code)(voir aussi le [code source ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)complet), nous avons inclus une fonction personnalisée `draw()`qui ressemblait à ça :
+Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) tiré de l'article [les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) complet), nous avons inclus une fonction personnalisée `draw()`qui ressemblait à ça :
 
 ```js
 function draw() {
@@ -103,7 +103,7 @@ Cette fonction dessine 100 cercles aléatoires dans un élément {{htmlelement("
 draw();
 ```
 
-au lieu de devoir ré-écrire tout le code à chaque fois que nous voulons la répéter. De plus, les fonctions peuvent contenir tous les codes qu'il vous plaira — vous pouvez même appeler d'autres fonctions à l'intérieur d'une fonction. Par exemple, la fonction ci-dessus appelle la fonction `random()` trois fois, comme définie par le code suivant :
+au lieu de devoir ré-écrire tout le code à chaque fois que nous voulons la répéter. De plus, les fonctions peuvent contenir tout le code qu'il vous plaira — vous pouvez même appeler d'autres fonctions à l'intérieur d'une fonction. Par exemple, la fonction ci-dessus appelle la fonction `random()` trois fois, comme définie par le code suivant :
 
 ```js
 function random(number) {
@@ -236,11 +236,11 @@ var madeAString = myArray.join();
 
 Si aucun paramètre n'est inclus pour spécifier un caractère de jointure / délimitation, une virgule est utilisée par défaut.
 
-## La portée des fonctions et les conflits.
+## La portée des fonctions et les conflits
 
 Parlons un peu de la {{glossary("portée")}} — un concept très important lorsque l'on a affaire à des fonctions. Lorsque vous créez une fonction, les variables et les autres choses qui sont définies à l'intérieur de la fonction ont leur propre **portée**, ce qui signifie qu'elles sont enfermées dans leur propre compartiment séparé et qu'elles ne peuvent pas être affectées par d'autres fonctions ou par le code en dehors de la fonction.
 
-Le plus haut niveau en dehors de toutes vos fonctions est appelé la **portée globale**. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe qu'elle partie du code.
+Le plus haut niveau en dehors de toutes vos fonctions est appelé la **portée globale**. Les valeurs définies dans la portée globale sont accessibles à partir de n'importe quelle partie du code.
 
 Le JavaScript est construit de cette façon pour plusieurs raisons —  mais principalement à cause de la sécurité et de l'organisation. Parfois, vous ne voulez pas que vos variables soient accessibles depuis toutes les autres parties du code — des script externes appelés depuis l'extérieur de la fonction pourraient interférer avec votre code et causer des problèmes parce qu'ils utilisent les mêmes noms de variables que d'autres parties du code, provoquant des conflits. Cela peut être fait de manière malveillante ou simplement par accident.
 

@@ -33,7 +33,7 @@ XPath utilise une notation en chemin (à l'instar des URL) pour naviguer dans la
 - [Transformer du XML avec XSLT](/fr/docs/Web/XSLT/Transforming_XML_with_XSLT)
   - : XSLT utilise XPath afin de cibler les segments d'un document XML pour ensuite les transformer.
 - [Fragments de code XPath](/fr/docs/Web/XPath/Snippets)
-  - : Un ensemble d'exemples de code réutilisables en JavaScript qui utilisent les API [DOM Level 3 XPath ](https://www.w3.org/TR/DOM-Level-3-XPath/).
+  - : Un ensemble d'exemples de code réutilisables en JavaScript qui utilisent les API [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/).
 - [Qu'est-ce que XSLT ? (en anglais)](https://www.xml.com/pub/a/2000/08/holman/)
   - : Une introduction à XSLT et XPath sans besoin de connaissances préalables. Le contexte, la structure, les concepts ainsi qu'une terminologie introductive sont fournis au lecteur.
 

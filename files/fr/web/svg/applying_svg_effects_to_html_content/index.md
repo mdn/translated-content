@@ -106,7 +106,7 @@ p {
 }
 ```
 
-Ce code crée une zone cliquable en forme de cercle et de rectangle associé à l'ID` #clipping-path-1` qui est référencé dans le CSS. `clip-path` peut être associé à n'importe quel élément avec la classe `target`.
+Ce code crée une zone cliquable en forme de cercle et de rectangle associé à l'ID `#clipping-path-1` qui est référencé dans le CSS. `clip-path` peut être associé à n'importe quel élément avec la classe `target`.
 
 Vous pouvez faire des changements en temps réel et vous rendre compte qu'ils affectent immédiatement le rendu HTML. Par exemple, vous pouvez redimensionner le cercle à l'aide du `clip-path` établi ci-dessus :
 

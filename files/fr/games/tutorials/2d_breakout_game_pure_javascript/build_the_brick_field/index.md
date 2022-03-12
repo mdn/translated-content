@@ -71,7 +71,7 @@ function drawBricks() {
 }
 ```
 
-Une nouvelle fois, nous parcourons les colonnes et les lignes pour attribuer une position `x` et `y `à chaque brique, et nous dessinons les briques — de taille : `brickWidth` x `brickHeight`  — sur le canevas, pour chaque itération de la boucle. Le problème est que nous les affichons toutes au même endroit, aux coordonnées `(0,0)`. Ce dont nous avons besoin d'inclure ce sont quelques calculs qui vont définir la position `x` et `y` de chaque brique à chaque passage dans la boucle :
+Une nouvelle fois, nous parcourons les colonnes et les lignes pour attribuer une position `x` et `y` à chaque brique, et nous dessinons les briques — de taille : `brickWidth` x `brickHeight`  — sur le canevas, pour chaque itération de la boucle. Le problème est que nous les affichons toutes au même endroit, aux coordonnées `(0,0)`. Ce dont nous avons besoin d'inclure ce sont quelques calculs qui vont définir la position `x` et `y` de chaque brique à chaque passage dans la boucle :
 
 ```js
 var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
@@ -119,6 +119,6 @@ Exercice : essayez de changer le nombre de briques dans une colonne ou dans une 
 ## Prochaines étapes
 
 Nous avons donc maintenant des briques !  
-Mais la balle n'a toujours aucune interaction avec elles. Nous allons donc changer ça dans le chapitre sept : [Détection des collisions ](/fr/docs/)
+Mais la balle n'a toujours aucune interaction avec elles. Nous allons donc changer ça dans le chapitre sept : [Détection des collisions](/fr/docs/)
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}

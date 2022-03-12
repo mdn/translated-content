@@ -5,7 +5,7 @@ translation_of: Web/API/Document/height
 ---
 {{APIRef("DOM")}} {{Obsolete_header}}
 
-> **Note :** Apparu avec {{Gecko("6.0")}},` document.height n'est plus supporté`. Utilisez à la place `document.body.clientHeight`. Voir {{domxref("element.clientHeight")}}.
+> **Note :** Apparu avec Gecko 6.0, `document.height` n'est plus supporté. Utilisez à la place `document.body.clientHeight`. Voir [`element.clientHeight`](/fr/docs/Web/API/Element/clientHeight).
 
 ## Résumé
 

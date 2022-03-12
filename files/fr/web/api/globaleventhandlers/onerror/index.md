@@ -27,7 +27,7 @@ window.onerror = function(messageOrEvent, source, noligne, nocolonne, erreur) { 
 
 Paramètres de la fonction :
 
-- `message `: message d'erreur (chaîne ou objet évènement). Disponible comme `event` (sic !) dans le gestionnaire de HTML `onerror=""` et aussi comme objet évènement lors de l'envoi d'un [Event](/en-US/docs/Web/API/Event) à `window,` auquel cas les autres arguments ne seront pas fournis (au contraire de [ErrorEvent](/en-US/docs/Web/API/ErrorEvent), qui amène le passage de l'ensemble complet des arguments à `window.onerror`, tandis que seul l'objet d'évènement d'erreur est  passé aux gestionnaires de` window.addEventListener('error'))`
+- `message`&nbsp;: message d'erreur (chaîne ou objet évènement). Disponible comme `event` (sic&nbsp;!) dans le gestionnaire de HTML `onerror=""`.
 - source : l'URL du script où l'erreur a été déclenchée (chaîne)
 - noligne : le numéro de ligne où l'erreur a été déclenchée (nombre)
 - nocolonne : le numéro de colonne où l'erreur a été déclenchée (nombre)

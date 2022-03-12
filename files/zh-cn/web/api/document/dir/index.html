@@ -41,55 +41,7 @@ document.dir = "rtl";
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{CompatVersionUnknown}} [1]</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Firefox 23之前， <code>Document.dir属性返回</code> "ltr" 无论在根元素{{htmlelement("html")}} 的dir属性上如何设置。 并且如果在文档标签<code>&lt;html&gt;上设置了方向</code>, <code>Document.dir在改变时不会生效</code>(虽然随后检索<code>Document.dir属性发现他的确改变了</code>)。 但是, 如果这个属性没有被设置在标签 <code>&lt;html&gt;</code> 上并且改变的该属性状态， 无论是页面可是区域的改变还是<code>Document.dir属性的改变都会正确的反映这一变化。</code></p>
+{{Compat("api.Document.dir")}}
 
 <h2 id="参见">参见</h2>
 

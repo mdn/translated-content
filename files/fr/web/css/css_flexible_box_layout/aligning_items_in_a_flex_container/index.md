@@ -66,7 +66,7 @@ Dans l'exemple qui suit, la valeur d'`align-items` est `stretch`. Vous pouvez es
 
 La propriété `align-items` définit la valeur de la propriété `align-self` pour l'ensemble des objets flexibles. Cela signifie qu'on peut utiliser la propriété `align-self` de façon explicite, sur un élément donné, afin de préciser son alignement. La propriété `align-self` prend en charge les mêmes valeurs que `align-items` ainsi qu'un mot-clé `auto` qui reprendra la valeur définie sur le conteneur flexible.
 
-Dans le prochain exemple, le conteneur flexible a `align-items: flex-start`, ce qui signifie que les éléments sont tous alignés au début de l'axe secondaire. On utilise le sélecteur `first-child` afin de cibler le premier élément fils pour lequel on indique `align-self: stretch` ; un autre élément a été sélectionné via la classe `selected` et est paramétré avec ` align-self: ``center`. Vous pouvez modifier la valeur de `align-items` ou changer les valeurs d'`align-self` sur les éléments afin d'observer le fonctionnement.
+Dans le prochain exemple, le conteneur flexible a `align-items: flex-start`, ce qui signifie que les éléments sont tous alignés au début de l'axe secondaire. On utilise le sélecteur `first-child` afin de cibler le premier élément fils pour lequel on indique `align-self: stretch` ; un autre élément a été sélectionné via la classe `selected` et est paramétré avec `align-self: center`. Vous pouvez modifier la valeur de `align-items` ou changer les valeurs d'`align-self` sur les éléments afin d'observer le fonctionnement.
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-self.html", '100%', 650)}}
 

@@ -27,7 +27,7 @@ Le timing est contrôlé avec une grande précision et une latence faible, ce qu
 
 La Web Audio API permet également de contrôler la _spatialisation_ du son. En utilisant un système basé sur le modèle _émetteur - récepteur,_ elle permet le contrôle de la balance ainsi que la gestion de l'atténuation du son en fonction de la distance, ou effet doppler, induite par un déplacement de la source sonore (ou de l'auditeur).
 
-> **Note :** Vous pouvez lire d'avantage de détails sur la Web Audio API en vous rendant sur notre article[ Concepts de base de la Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> **Note :** Vous pouvez lire davantage de détails sur l'API <i lang="en">Web Audio</i> en vous rendant sur notre article [Les concepts de base de l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
 ## Interface de la Web Audio API
 
@@ -113,14 +113,14 @@ Une fois que le signal audio a été traité, ces interfaces définissent sa des
 - {{event("audioprocess")}} (event)
   - : L'évènement `audioprocess` est émis lorsque le buffer d'entrée d'un {{domxref("ScriptProcessorNode")}} de la Web Audio API est prêt à être traité.
 - {{domxref("AudioProcessingEvent")}}
-  - : L'objet  `AudioProcessingEvent `est envoyé aux fonctions de callback qui écoutent l'évènement `audioprocess.`
+  - : L'objet `AudioProcessingEvent` est envoyé aux fonctions de rappel (<i lang="en">callback</i>) qui écoutent l'évènement `audioprocess`.
 
 ### Traitement audio hors ligne ou en tâche de fond
 
 Il est possible de traiter et exporter un graphe audio très rapidement en tâche de fond — en l'exportant dans un {{domxref("AudioBuffer")}} plutôt que sur les enceintes du matériel — grâce aux objets suivants.
 
 - {{domxref("OfflineAudioContext")}}
-  - : Un objet **`OfflineAudioContext`** est un {{domxref("AudioContext")}} qui représente un graphe de traitement audio construit à partir de noeuds audio. A la différence du `AudioContext `standard, un `OfflineAudioContext` n'exporte pas vraiment le son, mais le génère, aussi vite que possible, dans un buffer.
+  - : Un objet **`OfflineAudioContext`** est une interface [`AudioContext`](/fr/docs/Web/API/AudioContext) qui représente un graphe de traitement audio construit à partir de nœuds audio. À la différence d'une interface `AudioContext` standard, une interface `OfflineAudioContext` n'exporte pas vraiment le son, mais le génère *aussi vite que possible* dans un buffer.
 - {{event("complete")}} (event)
   - : Un évènement `complete` est émis lorsque le rendu d'un {{domxref("OfflineAudioContext")}} est terminé.
 - {{domxref("OfflineAudioCompletionEvent")}}

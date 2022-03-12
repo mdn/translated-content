@@ -124,11 +124,17 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a UNIX timestam
 
 <h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
 
-<p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
+<p>The <code>step</code> attribute is a number that specifies the granularity that the value must adhere to, or the special value <code>any</code>, which is described below. Only values which are equal to the basis for stepping (<code>{{anch("min")}}</code> if specified, {{htmlattrxref("value", "input")}} otherwise, and an appropriate default value if neither of those is provided) are valid.</p>
+
+<p>A string value of <code>any</code> means that no stepping is implied, and any value is allowed (barring other constraints, such as <code>{{anch("min")}}</code> and <code>{{anch("max")}}</code>).</p>
+
+<div class="note notecard">
+<p><strong>참고:</strong> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.</p>
+</div>
 
 <p><code>date</code> 입력 칸의 <code>step</code> 값은 날짜 단위, 즉 밀리초 단위로 86,400,000 ✕ <code>step</code>로 처리합니다. 기본값은 1로, 하루를 나타냅니다.</p>
 
-<div class="blockIndicator note">
+<div class="note notecard">
 <p><strong>참고:</strong> <code>date</code> 입력 칸에서 <code>step</code>의 값으로 <code>any</code>를 지정하면 <code>1</code>과 같습니다.</p>
 </div>
 

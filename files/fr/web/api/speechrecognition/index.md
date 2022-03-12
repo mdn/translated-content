@@ -14,7 +14,7 @@ translation_of: Web/API/SpeechRecognition
 
 ## Propriétés
 
-_` SpeechRecognition``  `hérite également des propriétés de son interface parente, {{domxref("EventTarget")}}._
+*`SpeechRecognition` hérite également des propriétés de son interface parente, [`EventTarget`](/fr/docs/Web/API/EventTarget).*
 
 - {{domxref("SpeechRecognition.grammars")}}
   - : Retourne et définit une collection d'objets {{domxref("SpeechGrammar")}} représentant les grammaires qui seront comprises par `SpeechRecognition`.

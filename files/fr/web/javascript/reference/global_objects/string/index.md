@@ -55,7 +55,7 @@ En utilisant la seconde notation, il est impossible de supprimer ou d'affecter u
 
 ### Comparer des chaînes de caractères
 
-Les développeurs C utilisent la fonction `strcmp()` pour comparer des chaînes de caractères. En JavaScript, il est possible d'utiliser [les opérateurs inférieur et supérieur ](/fr/docs/Web/JavaScript/Reference/Operators):
+Les développeurs C utilisent la fonction `strcmp()` pour comparer des chaînes de caractères. En JavaScript, il est possible d'utiliser [les opérateurs inférieur et supérieur](/fr/docs/Web/JavaScript/Reference/Operators)&nbsp;:
 
 ```js
 let a = "a";

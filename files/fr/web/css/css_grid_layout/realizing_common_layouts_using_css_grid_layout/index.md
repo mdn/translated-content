@@ -461,7 +461,7 @@ Le résultat est plutôt abouti mais on a parfois des cartes qui ont beaucoup pl
 
 ![The layout has gaps as there is not space to layout a two track item.](11-grid-auto-flow-sparse.png)
 
-Si on veut éviter ces trous, on peut utiliser la règle {{cssxref("grid-auto-flow")}}`: dense `sur le conteneur de la grille. Attention à utiliser cette valeur car l'ordre logique n'est plus respecté. Aussi, il ne faut utiliser cette valeur uniquement lorsqu'il n'y a pas d'ordre pour les objets. Avec cette valeur, la navigation au clavier (_tab order_) continue de suivre l'ordre des éléments du document et pas l'ordre d'affichage des objets sur la grille.
+Si on veut éviter ces trous, on peut utiliser la règle {{cssxref("grid-auto-flow")}}`: dense` sur le conteneur de la grille. Attention à utiliser cette valeur car l'ordre logique n'est plus respecté. Aussi, il ne faut utiliser cette valeur uniquement lorsqu'il n'y a pas d'ordre pour les objets. Avec cette valeur, la navigation au clavier (_tab order_) continue de suivre l'ordre des éléments du document et pas l'ordre d'affichage des objets sur la grille.
 
 ```html hidden
 <ul class="listing">

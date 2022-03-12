@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Set/entries
 ---
 {{JSRef}}
 
-La méthode **`entries()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Itérateurs) qui contient un tableau composé de **`[valeur, valeur]`** pour chaque élément de l'objet `Set`, dans leur ordre d'insertion. En raison de leur structure, les objets `Set` n'ont pas de clé (`key`), à la différence des objets `Map`. Pour garder une structure et une API sembables à celle d'un objet `Map`, chaque entrée (_entry_) aura la même valeur pour la _clé_ (_key_) et pour la _valeur_ (_value_), c'est pourquoi un tableau de` [valeur, valeur]` est renvoyé.
+La méthode **`entries()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Itérateurs) qui contient un tableau composé de **`[valeur, valeur]`** pour chaque élément de l'objet `Set`, dans leur ordre d'insertion. En raison de leur structure, les objets `Set` n'ont pas de clé (`key`), à la différence des objets `Map`. Pour garder une structure et une API sembables à celle d'un objet `Map`, chaque entrée (_entry_) aura la même valeur pour la _clé_ (_key_) et pour la _valeur_ (_value_), c'est pourquoi un tableau de `[valeur, valeur]` est renvoyé.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-entries.html")}}
 

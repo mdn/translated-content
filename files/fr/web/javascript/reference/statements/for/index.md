@@ -24,7 +24,7 @@ L'instruction **`for`** crée une boucle composée de trois expressions optionne
 - `initialisation`
   - : Une expression (pouvant être une expression d'affectation) ou une déclaration de variable. Cette expression est évaluée une fois avant que la boucle démarre. On utilise généralement une variable qui agit comme un compteur. Cette expression peut éventuellement déclarer de nouvelles variables avec le mot-clé `var` ou `let`. Les variables déclarées avec `var` se situent dans la même portée que la boucle `for` (elles ne sont pas locales au sein de la boucle), les variables déclarées avec `let` sont locales à la boucle. Le résultat de l'expression n'est pas utilisé.
 - `condition`
-  - : Une expression qui est évaluée avant chaque itération de la boucle. Si cette expression est vérifiée, l'`instruction `est exécutée. Ce test est optionnel. S'il n'est pas présent, la condition sera toujours vérifiée. Si l'expression n'est pas vérifiée (i.e. vaut `false`), l'exécution se poursuivra à la première expression qui suit la boucle `for`.
+  - : Une expression qui est évaluée avant chaque itération de la boucle. Si cette expression est vérifiée, l'`instruction` est exécutée. Ce test est optionnel. S'il n'est pas présent, la condition sera toujours vérifiée. Si l'expression n'est pas vérifiée (i.e. vaut `false`), l'exécution se poursuivra à la première expression qui suit la boucle `for`.
 - `expression_finale`
   - : Une expression qui est évaluée à la fin de chaque itération. Cela se produit avant l'évaluation de l'expression `condition`. Cette expression est généralement utilisée pour mettre à jour ou incrémenter le compteur qu'est la variable d'initialisation.
 - `instruction`

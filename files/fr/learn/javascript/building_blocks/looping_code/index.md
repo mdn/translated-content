@@ -240,9 +240,9 @@ Cela nous donne la sortie suivante :
 
 {{ EmbedLiveSample('Sortie', '100%', 60) }}
 
-> **Note :** Vous pouvez trouver aussi cet [exemple de code sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) (et[ le voir tourner en live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
+> **Note :** Vous pouvez trouver aussi cet [exemple de code sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) (et [le voir tourner en live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
 
-Cela montre une boucle utiliser pour itérer sur les éléments d'un tableau et faire quelque chose avec chacun d'eux — un schéma très commun en JavaScript. Ici :
+Cela montre une boucle utilisée pour itérer sur les éléments d'un tableau et faire quelque chose avec chacun d'eux — un schéma très commun en JavaScript. Ici :
 
 1.  L'itérateur, `i`, commence à `0` (`let i = 0`).
 2.  On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important  — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
@@ -280,7 +280,7 @@ for (let i = 0; i < cats.length; i++) {
 
 ## Quitter une boucle avec break
 
-Si vous voulez quitter une boucle avant que toutes les itérations aient été terminées, vous pouvez utiliser l'instruction [break](/fr/docs/Web/JavaScript/Reference/Instructions/break). Nous l'avons déjà rencontré dans l'article précédent lorsque nous examinions les [instructions switch ](/fr/Apprendre/JavaScript/Building_blocks/conditionals#Instruction_switch): lorsqu'un argument est rencontré dans une instruction switch qui correspond à l'expression d'entrée, l'instruction break quitte immédiatement l'instruction switch et passe au code après elle.
+Si vous voulez quitter une boucle avant que toutes les itérations aient été terminées, vous pouvez utiliser l'instruction [break](/fr/docs/Web/JavaScript/Reference/Instructions/break). Nous l'avons déjà rencontré dans l'article précédent lorsque nous examinions les [instructions switch](/fr/Apprendre/JavaScript/Building_blocks/conditionals#Instruction_switch)&nbsp;: lorsqu'un argument est rencontré dans une instruction switch qui correspond à l'expression d'entrée, l'instruction break quitte immédiatement l'instruction switch et passe au code après elle.
 
 C'est la même chose avec les boucles – un `break` quittera immédiatement la boucle et fera passer le navigateur sur n'importe quel code qui le suit.
 
@@ -370,7 +370,7 @@ bouton.addEventListener('click', function() {
 
     1.  Nous commençons le compteur à `0`, exécutons la boucle jusqu'à ce que le compteur ne soit plus inférieur à `contacts.length`, et incrémentons `i` par 1 après chaque itération de la boucle.
     2.  À l'intérieur de la boucle, nous divisons d'abord le contact actuel (`contacts[i]`) au caractère deux-points et stockons les deux valeurs résultantes dans un tableau appelé `splitContact`.
-    3.  Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0] `(le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère` dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
+    3.  Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0]` (le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère` dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
 
 5.  Si le nom du contact ne correspond pas à la recherche entrée, le texte du paragraphe est défini sur "Contact not found." et la boucle continue son itération.
 
@@ -440,9 +440,9 @@ Ici la sortie :
 {{ EmbedLiveSample('Passer_des_itérations_avec_continue', '100%', 100) }}
 
 1.  Dans ce cas, l'entrée doit être un nombre (`num`). La boucle `for` est dotée d'un compteur commençant à 1 (car nous ne sommes pas intéressés par 0 dans ce cas), une condition de sortie indiquant que la boucle s'arrêtera lorsque le compteur deviendra plus grand que l'entrée `num`, et un itérateur ajoutera 1 au compteur à chaque fois.
-2.  À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant [Math.sqrt(i), ](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt)[, ](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/sqrt)puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que [Math.floor() ](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor)fait au nombre auquel il est passé).
+2.  À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant [Math.sqrt(i)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt0, puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que [Math.floor()](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor) fait au nombre auquel il est passé).
 3.  Si la racine carrée et la racine carrée arrondie ne sont pas égales les unes aux autres (`! ==`), cela signifie que la racine carrée n'est pas un entier, donc cela ne nous intéresse pas. Dans un tel cas, nous utilisons l'instruction `continue` pour passer à l'itération de la boucle suivante sans enregistrer le numéro n'importe où.
-4.  Si la racine carrée est un entier, nous passons complètement le bloc if pour que l'instruction `continue` ne soit pas exécutée; à la place, nous concaténons la valeur `i `actuelle plus un espace sur la fin du contenu du paragraphe.
+4.  Si la racine carrée est un entier, nous passons complètement le bloc if pour que l'instruction `continue` ne soit pas exécutée; à la place, nous concaténons la valeur `i` actuelle plus un espace sur la fin du contenu du paragraphe.
 
 > **Note :** Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/integer-squares.html) (aussi [voir en ligne](http://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
@@ -459,7 +459,7 @@ D'abord, regardons la boucle [while](/fr/docs/Web/JavaScript/Reference/Instructi
       final-expression
     }
 
-Cela fonctionne de manière très similaire à la boucle for, sauf que la variable de départ est définie avant la boucle, et l'expression finale est incluse dans la boucle après le code à exécuter — plutôt que ces deux éléments soient inclus dans les parenthèses. La condition de sortie est incluse dans les parenthèses, précédées du mot-clé `while `au lieu de `for`.
+Cela fonctionne de manière très similaire à la boucle for, sauf que la variable de départ est définie avant la boucle, et l'expression finale est incluse dans la boucle après le code à exécuter — plutôt que ces deux éléments soient inclus dans les parenthèses. La condition de sortie est incluse dans les parenthèses, précédées du mot-clé `while` au lieu de `for`.
 
 Les mêmes trois éléments sont toujours présents, et ils sont toujours définis dans le même ordre que dans la boucle for - cela est logique, car vous devez toujours définir un initialiseur avant de pouvoir vérifier s'il a atteint la condition de sortie ; la condition finale est ensuite exécutée après l'exécution du code à l'intérieur de la boucle (une itération a été effectuée), ce qui ne se produira que si la condition de sortie n'a pas encore été atteinte.
 
@@ -481,7 +481,7 @@ while (i < cats.length) {
 
 > **Note :** Cela fonctionne toujours comme prévu regardez le ici [GitHub](http://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) ([Voir en ligne](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html) le code complet).
 
-La boucle[ do...while](/fr/docs/Web/JavaScript/Reference/Instructions/do...while) est très similaire, mais dénote une variation par rapport à la structure de la boucle while :
+La boucle [do...while](/fr/docs/Web/JavaScript/Reference/Instructions/do...while) est très similaire, mais dénote une variation par rapport à la structure de la boucle while :
 
     initializer
     do {
@@ -490,11 +490,11 @@ La boucle[ do...while](/fr/docs/Web/JavaScript/Reference/Instructions/do...while
       final-expression
     } while (exit-condition)
 
-Dans ce cas, l'initialiseur vient en premier, avant que la boucle ne commence. Le mot-clé `do `précède directement les accolades contenant le code à exécuter et l'expression finale.
+Dans ce cas, l'initialiseur vient en premier, avant que la boucle ne commence. Le mot-clé `do` précède directement les accolades contenant le code à exécuter et l'expression finale.
 
 Le différentiateur ici est que la condition de sortie vient après tout, enveloppée entre parenthèses et précédée d'un mot-clé `while`. Dans une boucle `do ... while`, le code à l'intérieur des accolades est toujours exécuté une fois avant que la vérification ne soit effectuée pour voir si elle doit être exécutée à nouveau (dans while et for, la vérification arrive en premier, donc le code pourrait ne jamais être exécuté ).
 
-Réécrivons notre exemple de listing de chat pour utiliser une boucle `do ... while `:
+Réécrivons notre exemple de listing de chat pour utiliser une boucle `do ... while`&nbsp;:
 
 ```js
 let i = 0;
@@ -657,7 +657,7 @@ Nous vous avons déjà fourni les éléments suivants :
 - `refused.textContent +=` — le début de la ligne qui va concaténer un élément à la fin du `refused.textContent`.
 - `admitted.textContent +=` — le début de la ligne qui va concaténer un élément à la fin du `admitted.textContent`.
 
-Question bonus — après avoir accompli les tâches ci-dessus, il vous restera deux listes de noms séparées par des virgules, mais elles seront mal présentées— il y aura des virgules à la fin de chacune d'elles. Pouvez-vous faire en sorte d'écrire des lignes de code qui coupent les dernières virgules dans chacune d'elles, et ajoute un arrêt total à la fin ? Jetez un oeil à l'article [Méthodes utiles pour les chaînes de caractères ](/fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile)pour obtenir de l'aide.
+Question bonus — après avoir accompli les tâches ci-dessus, il vous restera deux listes de noms séparées par des virgules, mais elles seront mal présentées— il y aura des virgules à la fin de chacune d'elles. Pouvez-vous faire en sorte d'écrire des lignes de code qui coupent les dernières virgules dans chacune d'elles, et ajoute un arrêt total à la fin ? Jetez un oeil à l'article [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile) pour obtenir de l'aide.
 
 Si vous faites une erreur, vous pourrez toujours ré-initialiser l'exemple avec le bouton "Reset". Si vous êtes vraiment bloqué, appuyez sur le bouton "Show solution" pour voir une solution.
 
@@ -830,7 +830,7 @@ Nous recommandons `for`, au moins pour commencer, car elle est probablement la p
 
 Cet article vous a révélé les concepts basiques et les différentes options disponibles pour créer des boucles en JavaScript. Vous devriez à présent être en mesure de comprendre en quoi les boucles constituent un bon mécanisme lorsqu'il s'agit de répéter une action dans le code, et vous devez être impatient de les utiliser dans vos propres exemples !
 
-S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article ou à [nous contacter ](/fr/Apprendre#Nous_contacter)pour demander de l'aide.
+S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article ou à [nous contacter](/fr/Apprendre#Nous_contacter) pour demander de l'aide.
 
 ## Voir aussi
 

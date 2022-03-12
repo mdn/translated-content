@@ -1,0 +1,380 @@
+---
+title: async和await:让异步编程更简单
+slug: conflicting/Learn/JavaScript/Asynchronous/Promises
+translation_of: Learn/JavaScript/Asynchronous/Async_await
+original_slug: Learn/JavaScript/Asynchronous/Async_await
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</div>
+
+<p class="summary"><a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async functions</a> 和 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a></code> 关键字是最近添加到JavaScript语言里面的。它们是ECMAScript 2017 JavaScript版的一部分（参见<a href="/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla">ECMAScript Next support in Mozilla</a>）。简单来说，它们是基于promises的语法糖，使异步代码更易于编写和阅读。通过使用它们，异步代码看起来更像是老式同步代码，因此它们非常值得学习。本文为您提供了您需要了解的内容。</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">先决条件:</th>
+   <td>基本的计算机知识，较好理解 JavaScript 基础，以及理解一般异步代码和 promises 。</td>
+  </tr>
+  <tr>
+   <th scope="row">目标:</th>
+   <td>理解并使用 promise</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="asyncawait_基础">async/await 基础</h2>
+
+<p>在代码中使用 async / await 有两个部分。</p>
+
+<h3 id="async_关键字">async 关键字</h3>
+
+<p>首先，我们使用 <code>async</code> 关键字，把它放在函数声明之前，使其成为 <a href="/en-US/docs/Web/JavaScript/Reference/Statements/async_function">async function</a>。异步函数是一个知道怎样使用 <code>await</code> 关键字调用异步代码的函数。</p>
+
+<p>尝试在浏览器的JS控制台中键入以下行：</p>
+
+<pre class="brush: js notranslate">function hello() { return "Hello" };
+hello();</pre>
+
+<p>该函数返回“Hello” —— 没什么特别的，对吧？</p>
+
+<p>如果我们将其变成异步函数呢？请尝试以下方法：</p>
+
+<pre class="brush: js notranslate">async function hello() { return "Hello" };
+hello();</pre>
+
+<p>哈。现在调用该函数会返回一个 promise。这是异步函数的特征之一 —— 它保证函数的返回值为 promise。</p>
+
+<p>你也可以创建一个异步函数表达式（参见 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function">async function expression</a> ），如下所示:</p>
+
+<pre class="brush: js notranslate">let hello = async function() { return "Hello" };
+hello();</pre>
+
+<p>你可以使用箭头函数：</p>
+
+<pre class="brush: js notranslate">let hello = async () =&gt; { return "Hello" };</pre>
+
+<p>这些都基本上是一样的。</p>
+
+<p>要实际使用promise完成时返回的值，我们可以使用<code>.then()</code>块，因为它返回的是 promise：</p>
+
+<pre class="brush: js notranslate">hello().then((value) =&gt; console.log(value))</pre>
+
+<p>甚至只是简写如</p>
+
+<pre class="brush: js notranslate">hello().then(console.log)</pre>
+
+<p>这就像我们在上一篇文章中看到的那样。</p>
+
+<p>将 <code>async</code> 关键字加到函数申明中，可以告诉它们返回的是 promise，而不是直接返回值。此外，它避免了同步函数为支持使用 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">await</span></font> 带来的任何潜在开销。在函数声明为 <code>async</code> 时，JavaScript引擎会添加必要的处理，以优化你的程序。爽！</p>
+
+<h3 id="await关键字">await关键字</h3>
+
+<p>当 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/await">await</a> 关键字与异步函数一起使用时，它的真正优势就变得明显了 —— 事实上， <strong><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">await</span></font> 只在异步函数里面才起作用</strong>。它可以放在任何异步的，基于 promise 的函数之前。它会暂停代码在该行上，直到 promise 完成，然后返回结果值。在暂停的同时，其他正在等待执行的代码就有机会执行了。</p>
+
+<p>您可以在调用任何返回Promise的函数时使用 <strong><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">await</span></font></strong>，包括Web API函数。</p>
+
+<p>这是一个简单的示例：</p>
+
+<pre class="brush: js notranslate">async function hello() {
+  return greeting = await Promise.resolve("Hello");
+};
+
+hello().then(alert);</pre>
+
+<p>当然，上面的示例不是很有用，但它确实展示了语法。让我们继续，看一个真实示例。</p>
+
+<h2 id="使用_asyncawait_重写_promise_代码"> 使用 async/await 重写 promise 代码</h2>
+
+<p>让我们回顾一下我们在上一篇文章中简单的 fetch 示例：</p>
+
+<pre class="brush: js notranslate">fetch('coffee.jpg')
+.then(response =&gt; response.blob())
+.then(myBlob =&gt; {
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+})
+.catch(e =&gt; {
+  console.log('There has been a problem with your fetch operation: ' + e.message);
+});</pre>
+
+<p>到现在为止，你应该对 promises 及其工作方式有一个较好的理解。让我们将其转换为使用async / await看看它使事情变得简单了多少：</p>
+
+<pre class="brush: js notranslate">async function myFetch() {
+  let response = await fetch('coffee.jpg');
+  let myBlob = await response.blob();
+
+  let objectURL = URL.createObjectURL(myBlob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+}
+
+myFetch()
+.catch(e =&gt; {
+  console.log('There has been a problem with your fetch operation: ' + e.message);
+});</pre>
+
+<p>它使代码简单多了，更容易理解 —— 去除了到处都是 <code>.then()</code> 代码块！</p>
+
+<p>由于 <code>async</code> 关键字将函数转换为 promise，您可以重构以上代码 —— 使用 promise 和 await 的混合方式，将函数的后半部分抽取到新代码块中。这样做可以更灵活：</p>
+
+<pre class="brush: js notranslate">async function myFetch() {
+  let response = await fetch('coffee.jpg');
+  return await response.blob();
+}
+
+myFetch().then((blob) =&gt; {
+  let objectURL = URL.createObjectURL(blob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+});</pre>
+
+<p>您可以尝试自己输入示例，或运行我们的 <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await.html">live example</a> （另请参阅<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await.html">source code</a>）。</p>
+
+<h3 id="它到底是如何工作的？">它到底是如何工作的？</h3>
+
+<p>您会注意到我们已经将代码封装在函数中，并且我们在 <code>function</code> 关键字之前包含了 <code>async</code> 关键字。这是必要的 –– 您必须创建一个异步函数来定义一个代码块，在其中运行异步代码; <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">await</span></font> 只能在异步函数内部工作。</p>
+
+<p>在<code>myFetch()</code>函数定义中，您可以看到代码与先前的 promise 版本非常相似，但存在一些差异。不需要附加 <code>.then()</code> 代码块到每个promise-based方法的结尾，你只需要在方法调用前添加 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">await</span></font> 关键字，然后把结果赋给变量。<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">await</span></font> 关键字使JavaScript运行时暂停于此行，允许其他代码在此期间执行，直到异步函数调用返回其结果。一旦完成，您的代码将继续从下一行开始执行。例如：</p>
+
+<pre class="brush: js notranslate">let response = await fetch('coffee.jpg');</pre>
+
+<p>解析器会在此行上暂停，直到当服务器返回的响应变得可用时。此时 <code>fetch()</code> 返回的 promise 将会完成（fullfilled），返回的 response 会被赋值给 <code>response</code> 变量。一旦服务器返回的响应可用，解析器就会移动到下一行，从而创建一个<code><a href="/en-US/docs/Web/API/Blob">Blob</a></code>。Blob这行也调用基于异步promise的方法，因此我们也在此处使用<code>await</code>。当操作结果返回时，我们将它从<code>myFetch()</code>函数中返回。</p>
+
+<p>这意味着当我们调用<code>myFetch()</code>函数时，它会返回一个promise，因此我们可以将<code>.then()</code>链接到它的末尾，在其中我们处理显示在屏幕上的<code>blob</code>。</p>
+
+<p>你可能已经觉得“这真的很酷！”，你是对的 —— 用更少的.<code>then()</code>块来封装代码，同时它看起来很像同步代码，所以它非常直观。</p>
+
+<h3 id="添加错误处理">添加错误处理</h3>
+
+<p>如果你想添加错误处理，你有几个选择。</p>
+
+<p>您可以将同步的 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> 结构和 <code>async/await</code> 一起使用 。此示例扩展了我们上面展示的第一个版本代码：</p>
+
+<pre class="brush: js notranslate">async function myFetch() {
+  try {
+    let response = await fetch('coffee.jpg');
+    let myBlob = await response.blob();
+
+    let objectURL = URL.createObjectURL(myBlob);
+    let image = document.createElement('img');
+    image.src = objectURL;
+    document.body.appendChild(image);
+  } catch(e) {
+    console.log(e);
+  }
+}
+
+myFetch();</pre>
+
+<p><code>catch() {}</code> 代码块会接收一个错误对象 <code>e</code> ; 我们现在可以将其记录到控制台，它将向我们提供详细的错误消息，显示错误被抛出的代码中的位置。</p>
+
+<p>如果你想使用我们上面展示的第二个（重构）代码版本，你最好继续混合方式并将 <code>.catch()</code> 块链接到 <code>.then()</code> 调用的末尾，就像这样：</p>
+
+<pre class="brush: js notranslate">async function myFetch() {
+  let response = await fetch('coffee.jpg');
+  return await response.blob();
+}
+
+myFetch().then((blob) =&gt; {
+  let objectURL = URL.createObjectURL(blob);
+  let image = document.createElement('img');
+  image.src = objectURL;
+  document.body.appendChild(image);
+})
+.catch((e) =&gt;
+  console.log(e)
+);</pre>
+
+<p>这是因为 <code>.catch()</code> 块将捕获来自异步函数调用和promise链中的错误。如果您在此处使用了<code>try/catch</code> 代码块，则在调用 <code>myFetch()</code> 函数时，您仍可能会收到未处理的错误。</p>
+
+<p>您可以在GitHub上找到这两个示例：</p>
+
+<ul>
+ <li><a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html">simple-fetch-async-await-try-catch.html</a> (参见 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-try-catch.html">源码</a>)</li>
+ <li><a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html">simple-fetch-async-await-promise-catch.html</a> (参见 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/simple-fetch-async-await-promise-catch.html">源码</a>)</li>
+</ul>
+
+<h2 id="等待Promise.all">等待Promise.all()</h2>
+
+<p><code>async / await</code> 建立在 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promises</a> 之上，因此它与promises提供的所有功能兼容。这包括<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all()</a></code> –– 你完全可以通过调用 <code>await</code> <code>Promise.all()</code> 将所有结果返回到变量中，就像同步代码一样。让我们再次回到<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/promise-all.html">上一篇中看到的例子</a>。在单独的选项卡中打开它，以便您可以与下面显示的新版本进行比较和对比。</p>
+
+<p>将其转换为 async / await（请参阅 <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-all-async-await.html">样例</a> 和 <a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-all-async-await.html">源码</a>），现在看起来像这样：</p>
+
+<pre class="brush: js notranslate">async function fetchAndDecode(url, type) {
+  let response = await fetch(url);
+
+  let content;
+
+  if(type === 'blob') {
+    content = await response.blob();
+  } else if(type === 'text') {
+    content = await response.text();
+  }
+
+  return content;
+}
+
+async function displayContent() {
+  let coffee = fetchAndDecode('coffee.jpg', 'blob');
+  let tea = fetchAndDecode('tea.jpg', 'blob');
+  let description = fetchAndDecode('description.txt', 'text');
+
+  let values = await Promise.all([coffee, tea, description]);
+
+  let objectURL1 = URL.createObjectURL(values[0]);
+  let objectURL2 = URL.createObjectURL(values[1]);
+  let descText = values[2];
+
+  let image1 = document.createElement('img');
+  let image2 = document.createElement('img');
+  image1.src = objectURL1;
+  image2.src = objectURL2;
+  document.body.appendChild(image1);
+  document.body.appendChild(image2);
+
+  let para = document.createElement('p');
+  para.textContent = descText;
+  document.body.appendChild(para);
+}
+
+displayContent()
+.catch((e) =&gt;
+  console.log(e)
+);</pre>
+
+<p>可以看到 <code>fetchAndDecode()</code> 函数只进行了一丁点的修改就转换成了异步函数。请看<code>Promise.all()</code> 行：</p>
+
+<pre class="brush: js notranslate">let values = await Promise.all([coffee, tea, description]);</pre>
+
+<p>在这里，通过使用<code>await</code>，我们能够在三个promise的结果都可用的时候，放入<code>values</code>数组中。这看起来非常像同步代码。我们需要将所有代码封装在一个新的异步函数<code>displayContent()</code> 中，尽管没有减少很多代码，但能够将大部分代码从 <code>.then()</code> 代码块移出，使代码得到了简化，更易读。</p>
+
+<p>为了错误处理，我们在 <code>displayContent()</code> 调用中包含了一个 <code>.catch()</code> 代码块;这将处理两个函数中出现的错误。</p>
+
+<div class="blockIndicator note">
+<p><strong>注意</strong>: 也可以在异步函数中使用同步 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause">finally</a></code> 代码块代替 <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally">.finally()</a></code> 异步代码块，以显示操作如何进行的最终报告——您可以在我们的 <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/promise-finally-async-await.html">live example</a> （查看<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/promise-finally-async-await.html">源代码</a>）中看到这一点。</p>
+</div>
+
+<h2 id="asyncawait的缺陷">async/await的缺陷</h2>
+
+<p>了解<code>Async/await</code>是非常有用的，但还有一些缺点需要考虑。</p>
+
+<p><code>Async/await</code> 让你的代码看起来是同步的，在某种程度上，也使得它的行为更加地同步。 <code>await</code> 关键字会阻塞其后的代码，直到promise完成，就像执行同步操作一样。它确实可以允许其他任务在此期间继续运行，但您自己的代码被阻塞。</p>
+
+<p>这意味着您的代码可能会因为大量<code>await</code>的promises相继发生而变慢。每个<code>await</code>都会等待前一个完成，而你实际想要的是所有的这些promises同时开始处理（就像我们没有使用<code>async/await</code>时那样）。</p>
+
+<p>有一种模式可以缓解这个问题——通过将 <code>Promise</code> 对象存储在变量中来同时开始它们，然后等待它们全部执行完毕。让我们看一些证明这个概念的例子。</p>
+
+<p>我们有两个可用的例子 —— <a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a>（参见<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/slow-async-await.html">source code</a>）和<a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a>（参见<a href="https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/async-await/fast-async-await.html">source code</a>）。它们都以自定义promise函数开始，该函数使用<code>setTimeout()</code> 调用伪造异步进程：</p>
+
+<pre class="brush: js notranslate">function timeoutPromise(interval) {
+  return new Promise((resolve, reject) =&gt; {
+    setTimeout(function(){
+      resolve("done");
+    }, interval);
+  });
+};</pre>
+
+<p>然后每个包含一个 <code>timeTest()</code> 异步函数，等待三个 <code>timeoutPromise()</code> 调用：</p>
+
+<pre class="brush: js notranslate">async function timeTest() {
+  ...
+}</pre>
+
+<p>每一个都以记录开始时间结束，查看 <code>timeTest()</code> promise 需要多长时间才能完成，然后记录结束时间并报告操作总共需要多长时间：</p>
+
+<pre class="brush: js notranslate">let startTime = Date.now();
+timeTest().then(() =&gt; {
+  let finishTime = Date.now();
+  let timeTaken = finishTime - startTime;
+  alert("Time taken in milliseconds: " + timeTaken);
+})</pre>
+
+<p><code>timeTest()</code> 函数在每种情况下都不同。</p>
+
+<p>在<a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/slow-async-await.html">slow-async-await.html</a>示例中，<code>timeTest()</code> 如下所示：</p>
+
+<pre class="brush: js notranslate">async function timeTest() {
+  await timeoutPromise(3000);
+  await timeoutPromise(3000);
+  await timeoutPromise(3000);
+}</pre>
+
+<p>在这里，我们直接等待所有三个timeoutPromise（）调用，使每个调用3秒钟。后续的每一个都被迫等到最后一个完成 - 如果你运行第一个例子，你会看到弹出框报告的总运行时间大约为9秒。</p>
+
+<p>在<a href="https://mdn.github.io/learning-area/javascript/asynchronous/async-await/fast-async-await.html">fast-async-await.html</a>示例中，<code>timeTest()</code> 如下所示：</p>
+
+<pre class="brush: js notranslate">async function timeTest() {
+  const timeoutPromise1 = timeoutPromise(3000);
+  const timeoutPromise2 = timeoutPromise(3000);
+  const timeoutPromise3 = timeoutPromise(3000);
+
+  await timeoutPromise1;
+  await timeoutPromise2;
+  await timeoutPromise3;
+}</pre>
+
+<p>在这里，我们将三个Promise对象存储在变量中，这样可以同时启动它们关联的进程。</p>
+
+<p>接下来，我们等待他们的结果 - 因为promise都在基本上同时开始处理，promise将同时完成;当您运行第二个示例时，您将看到弹出框报告总运行时间仅超过3秒！</p>
+
+<p>您必须仔细测试您的代码，并在性能开始受损时牢记这一点。</p>
+
+<p>另一个小小的不便是你必须将等待执行的promise封装在异步函数中。</p>
+
+<h2 id="Asyncawait_的类方法">Async/await 的类方法</h2>
+
+<p>最后值得一提的是，我们可以在类/对象方法前面添加<code>async</code>，以使它们返回promises，并<code>await</code>它们内部的promises。查看 <a href="/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes">ES class code we saw in our object-oriented JavaScript article</a>，然后查看使用异步方法的修改版本：</p>
+
+<pre class="brush: js notranslate">class Person {
+  constructor(first, last, age, gender, interests) {
+    this.name = {
+      first,
+      last
+    };
+    this.age = age;
+    this.gender = gender;
+    this.interests = interests;
+  }
+
+  async greeting() {
+    return await Promise.resolve(`Hi! I'm ${this.name.first}`);
+  };
+
+  farewell() {
+    console.log(`${this.name.first} has left the building. Bye for now!`);
+  };
+}
+
+let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);</pre>
+
+<p>第一个实例方法可以使用如下：</p>
+
+<pre class="brush: js notranslate">han.greeting().then(console.log);</pre>
+
+<h2 id="浏览器的支持">浏览器的支持</h2>
+
+<p>决定是否使用 async/await 时的一个考虑因素是支持旧浏览器。它们适用于大多数浏览器的现代版本，与promise相同; 主要的支持问题存在于Internet Explorer和Opera Mini。</p>
+
+<p>如果你想使用async/await但是担心旧的浏览器支持，你可以考虑使用<a href="https://babeljs.io/">BabelJS</a>库 —— 这允许你使用最新的JavaScript编写应用程序，让Babel找出用户浏览器需要的更改。在遇到不支持async/await 的浏览器时，Babel的 polyfill 可以自动提供适用于旧版浏览器的实现。</p>
+
+<h2 id="总结">总结</h2>
+
+<p>async/await提供了一种很好的，简化的方法来编写更易于阅读和维护的异步代码。即使浏览器支持在撰写本文时比其他异步代码机制更受限制，但无论是现在还是将来，都值得学习和考虑使用。</p>
+
+<p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</p>
+
+<h2 id="本章内容">本章内容</h2>
+
+<ul>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts">异步编程的基本概念</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing">JavaScript异步简介</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">合作异步的JavaScript：超时和间隔</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises">使用Promises：优雅的异步编程</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await">使用async和await：让异步更简单</a></li>
+ <li><a href="/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">选择正确的方法</a></li>
+</ul>

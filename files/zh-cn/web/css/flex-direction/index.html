@@ -126,65 +126,7 @@ flex-direction: unset;</code></pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("18.0")}} (behind a pref) <sup><a href="#bc1">[1]</a> <a href="#bc2">[2]</a></sup><br>
-    {{CompatGeckoDesktop("20.0")}} <sup><a href="#bc2">[2]</a></sup></td>
-   <td>21.0{{ property_prefix("-webkit") }}</td>
-   <td>
-    <p>10 {{ property_prefix("-ms") }}<br>
-     11</p>
-   </td>
-   <td>12.10</td>
-   <td>
-    <p>7 {{ property_prefix("-webkit") }}</p>
-   </td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>12.10</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p><sup><a name="bc1">[1]</a></sup> 要激活Firefox 18和19的flexbox支持，用户必须将about：config首选项“layout.css.flexbox.enabled”更改为true。</p>
-
-<p><sup><a name="bc2">[2]</a></sup> 从Firefox 28开始支持多行flexbox。</p>
-
-<p>除了无前缀的支持外，Gecko 48.0{{geckoRelease("48.0")}}由于web兼容性原因，在首选项“layout.css.prefixes.webkit”之后增加了-webkit前缀版本的支持，默认设为false。 由于Gecko 49.0 {{geckoRelease("49.0")}}，首选项默认为true。</p>
+{{Compat("css.properties.flex-direction")}}
 
 <h2 id="参考">参考</h2>
 

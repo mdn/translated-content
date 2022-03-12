@@ -17,4 +17,4 @@ Voir aussi [Type Mime](/fr/docs/Glossary/MIME_type)
 
 ### Culture générale
 
-- [MIME ](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions)sur Wikipédia
+- [MIME](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions) sur Wikipédia

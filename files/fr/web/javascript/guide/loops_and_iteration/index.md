@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Guide/Boucles_et_itération
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}
 
-Les boucles permettent de répéter des actions simplement et rapidement. Ce chapitre du[ guide JavaScript](/fr/docs/Web/JavaScript/Guide) présente les différentes instructions qu'il est possible d'utiliser en JavaScript pour effectuer des itérations.
+Les boucles permettent de répéter des actions simplement et rapidement. Ce chapitre du [guide JavaScript](/fr/docs/Web/JavaScript/Guide) présente les différentes instructions qu'il est possible d'utiliser en JavaScript pour effectuer des itérations.
 
 Les boucles permettent de répéter des actions simplement et rapidement. Une boucle peut être vue comme une version informatique de « copier N lignes » ou de « faire X fois quelque chose ». Par exemple, en JavaScript, on pourrait traduire « Faire 5 pas vers l'est » avec cette boucle :
 
@@ -48,7 +48,7 @@ Voici ce qui se passe quand une boucle `for` s'exécute :
 1.  L'expression initiale `expressionInitiale` est exécutée si elle est présente. Généralement, on utilise cette expression pour initialiser un ou plusieurs compteurs dont on se servira dans la boucle. Il est possible d'utiliser des expressions plus complexes si besoin. Elle peut servir à déclarer des variables.
 2.  L'expression `condition` est évaluée, si elle vaut `true`, les instructions contenues dans la boucle sont exécutées. Si la valeur de `condition` est `false`, la boucle `for` se termine. Si la condition est absente, elle est considérée comme `true`.
 3.  L'instruction `instruction` est exécutée. Si l'on souhaite exécuter plusieurs instructions, on utilisera un bloc d'instructions (`{ ... }`) afin de les grouper.
-4.  Si elle est présente, l'expression de mise à jour` expressionIncrément` est exécutée.
+4.  Si elle est présente, l'expression de mise à jour `expressionIncrément` est exécutée.
 5.  On retourne ensuite à l'étape 2.
 
 ### **Exemple**
@@ -97,7 +97,7 @@ L'instruction {{jsxref("statements/do...while", "do...while")}} permet de répé
       instruction
     while (condition);
 
-`instruction` est exécutée au moins une fois avant que la condition soit vérifiée. Pour utiliser plusieurs instructions à cet endroit, on utilisera une instruction de bloc (`{ ... }`) pour regrouper différentes instructions. Si la `condition` est vérifiée, l'instruction est à nouveau exécutée. À la fin de chaque exécution, la condition est vérifiée. Quand la condition n'est plus vérifiée (vaut `false` ou une valeur équivalente), l'exécution de l'instruction` do...while` est stoppée et le contrôle passe à l'instruction suivante.
+`instruction` est exécutée au moins une fois avant que la condition soit vérifiée. Pour utiliser plusieurs instructions à cet endroit, on utilisera une instruction de bloc (`{ ... }`) pour regrouper différentes instructions. Si la `condition` est vérifiée, l'instruction est à nouveau exécutée. À la fin de chaque exécution, la condition est vérifiée. Quand la condition n'est plus vérifiée (vaut `false` ou une valeur équivalente), l'exécution de l'instruction `do…while` est stoppée et le contrôle passe à l'instruction suivante.
 
 ### Exemple
 
@@ -118,7 +118,7 @@ Une instruction {{jsxref("statements/while", "while")}} permet d'exécuter une i
     while (condition)
       instruction
 
-Si la condition n'est pas vérifiée, l'instruction` instruction` n'est pas exécutée et le contrôle passe directement à l'instruction suivant la boucle.
+Si la condition n'est pas vérifiée, l'instruction `instruction` n'est pas exécutée et le contrôle passe directement à l'instruction suivant la boucle.
 
 Le test de la condition s'effectue avant d'exécuter `instruction`. Si la condition renvoie `true` (ou une valeur équivalente), `instruction` sera exécutée et la condition sera testée à nouveau. Si la condition renvoie `false` (ou une valeur équivalente), l'exécution s'arrête et le contrôle est passé à l'instruction qui suit `while`.
 
@@ -195,7 +195,7 @@ La première forme permet d'interrompre la boucle la plus imbriquée (ou le `swi
 
 ### Exemple **1**
 
-Dans l'exemple qui suit, on itère sur un tableau grâce à une boucle jusqu'à trouver un élément dont la valeur est `valeurTest `:
+Dans l'exemple qui suit, on itère sur un tableau grâce à une boucle jusqu'à trouver un élément dont la valeur est `valeurTest`&nbsp;:
 
 ```js
 for (i = 0; i < a.length; i++) {
@@ -238,7 +238,7 @@ L'instruction {{jsxref("statements/continue","continue")}} permet de reprendre u
 L'instruction `continue` s'utilise donc de la façon suivante :
 
 1.  `continue;`
-2.  `continue `_`label;`_
+2.  `continue` _`label;`_
 
 ### Exemple 1
 
