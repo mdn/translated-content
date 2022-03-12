@@ -57,7 +57,7 @@ let result = cookieStore.delete('cookie1');
 console.log(result);
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
