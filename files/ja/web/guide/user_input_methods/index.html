@@ -89,14 +89,14 @@ element.addEventListener("touchmove", handleMove, false);</pre>
 
 <h4 id="Pointer_lock" name="Pointer_lock">ポインターロック</h4>
 
-<p>In some cases, typically game development, you might need to access mouse events even when the cursor goes past the boundary of the browser or screen: the {{domxref("Pointer_Lock_API")}} gives you full control of the pointing device.</p>
+<p>典型的なゲーム開発では、ブラウザやスクリーンの境界を超えた時でさえもマウスイベントにアクセスすることが必要なケースがあるかもしれません。<a href="/ja/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a> はポインティングデバイスの全ての制御を可能にします。</p>
 
-<p>This is the code to request pointer lock on an <code>element</code>:</p>
+<p>以下は <code>element</code> にポインターロックをリクエストしているコードです。</p>
 
 <pre class="brush: js notranslate">element.requestPointerLock();</pre>
 
 <div class="note">
-<p><strong>注</strong>: For a full tutorial and reference, read our {{domxref("Pointer_Lock_API")}} page.</p>
+<p><strong>注</strong>: 全てのチュートリアルとリファレンスは、<a href="/ja/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a> のページを読んでください。</p>
 </div>
 
 <h4 id="Screen_Orientation" name="Screen_Orientation">画面の回転</h4>
@@ -166,8 +166,8 @@ if (elem.requestFullscreen) {
 <dl>
  <dt><strong><a href="/ja/DOM/Touch_events#Example">Tracking multiple touch points at a time</a></strong></dt>
  <dd>This example tracks multiple touch points at a time, allowing the user to draw in a <code>{{htmlelement("canvas")}}</code> with more than one finger at a time. It will only work on a browser that supports touch events.</dd>
- <dt><strong><a href="/ja/docs/Web/API/Pointer_Lock_API#example">Simple pointer lock demo</a></strong></dt>
- <dd>We've written a simple pointer lock demo to show you how to use it to set up a simple control system. The demo uses JavaScript to draw a ball inside a <code>{{htmlelement("canvas")}}</code> element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse.</dd>
+ <dt><strong><a href="/ja/docs/Web/API/Pointer_Lock_API#example">シンプルなポインターロックデモ</a></strong></dt>
+ <dd>シンプルなコントロールシステムをセットアップするためのポインターロックの使い方を紹介するために、シンプルなポインターロックデモを記載しています。このデモでは <code>{{htmlelement("canvas")}}</code> 要素の中にボールを描くために JavaScript を使っています。canvas をクリックすると、ポインターロックはその後、マウスポインターの除去と直接マウスを使ってボールを移動させるために利用されます。</dd>
  <dt><strong><a href="http://html5demos.com/contenteditable">コンテンツを編集可能にするデモ</a></strong></dt>
  <dd>このデモは、編集可能なドキュメントセクションを作成することに利用できる contenteditable がどのように動くか表示しており、その状態はその後 <a href="/ja/docs/Web/API/Web_Storage_API">ローカルストレージ</a>を使い保存されます。</dd>
 </dl>
