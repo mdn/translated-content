@@ -6474,7 +6474,7 @@
       "Jabi"
     ]
   },
-  "Web/API/EventSource/onopen": {
+  "Web/API/EventSource/open_event": {
     "modified": "2019-03-23T22:03:59.180Z",
     "contributors": [
       "Hoosep"
@@ -15038,13 +15038,6 @@
       "WriestTavo"
     ]
   },
-  "Web/HTML/Index": {
-    "modified": "2019-01-16T22:12:02.767Z",
-    "contributors": [
-      "raecillacastellana",
-      "pekechis"
-    ]
-  },
   "Web/HTML/Inline_elements": {
     "modified": "2019-03-23T22:46:15.359Z",
     "contributors": [
@@ -20480,13 +20473,6 @@
       "jorge_castro"
     ]
   },
-  "Web/SVG/Index": {
-    "modified": "2019-01-16T22:36:49.773Z",
-    "contributors": [
-      "jwhitlock",
-      "ComplementosMozilla"
-    ]
-  },
   "Web/SVG/SVG_1.1_Support_in_Firefox": {
     "modified": "2019-03-23T23:43:25.545Z",
     "contributors": [
@@ -21559,6 +21545,13 @@
       "wbamberg"
     ]
   },
+  "conflicting/Web/HTML": {
+    "modified": "2019-01-16T22:12:02.767Z",
+    "contributors": [
+      "raecillacastellana",
+      "pekechis"
+    ]
+  },
   "conflicting/Web/HTML/Element": {
     "modified": "2020-01-21T22:36:54.135Z",
     "contributors": [
@@ -21821,6 +21814,13 @@
     "modified": "2019-11-03T14:52:14.998Z",
     "contributors": [
       "totopizzahn"
+    ]
+  },
+  "conflicting/Web/SVG": {
+    "modified": "2019-01-16T22:36:49.773Z",
+    "contributors": [
+      "jwhitlock",
+      "ComplementosMozilla"
     ]
   },
   "conflicting/Web/Web_Components/Using_custom_elements": {

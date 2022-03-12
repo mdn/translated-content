@@ -13,12 +13,6 @@
       "kom2727"
     ]
   },
-  "Games/Index": {
-    "modified": "2020-12-05T03:39:50.081Z",
-    "contributors": [
-      "movegun1027"
-    ]
-  },
   "Games/Introduction": {
     "modified": "2019-06-03T20:16:02.213Z",
     "contributors": [
@@ -572,12 +566,6 @@
     "contributors": [
       "alattalatta",
       "HyunSeob"
-    ]
-  },
-  "Glossary/Index": {
-    "modified": "2019-05-26T04:17:19.834Z",
-    "contributors": [
-      "alattalatta"
     ]
   },
   "Glossary/Internet": {
@@ -1865,12 +1853,6 @@
     "modified": "2020-07-16T22:25:13.523Z",
     "contributors": [
       "byoung_hyun"
-    ]
-  },
-  "Learn/Index": {
-    "modified": "2020-07-16T22:33:40.026Z",
-    "contributors": [
-      "alattalatta"
     ]
   },
   "Learn/JavaScript": {
@@ -9915,13 +9897,6 @@
       "gblue1223"
     ]
   },
-  "Web/Guide/Index": {
-    "modified": "2020-12-07T13:40:57.143Z",
-    "contributors": [
-      "peterbe",
-      "alattalatta"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-05-30T06:59:50.297Z",
     "contributors": [
@@ -11092,12 +11067,6 @@
       "alattalatta"
     ]
   },
-  "Web/HTML/Index": {
-    "modified": "2020-01-19T02:45:39.384Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/HTML/Inline_elements": {
     "modified": "2020-02-12T03:45:21.056Z",
     "contributors": [
@@ -11715,12 +11684,6 @@
     "contributors": [
       "nesez",
       "Simtu"
-    ]
-  },
-  "Web/HTTP/Index": {
-    "modified": "2020-02-05T12:28:02.372Z",
-    "contributors": [
-      "alattalatta"
     ]
   },
   "Web/HTTP/Messages": {
@@ -17342,6 +17305,18 @@
       "limkukhyun"
     ]
   },
+  "conflicting/Games": {
+    "modified": "2020-12-05T03:39:50.081Z",
+    "contributors": [
+      "movegun1027"
+    ]
+  },
+  "conflicting/Glossary": {
+    "modified": "2019-05-26T04:17:19.834Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
   "conflicting/Glossary/TCP": {
     "modified": "2020-01-12T14:32:05.700Z",
     "contributors": [
@@ -17349,10 +17324,9 @@
     ]
   },
   "conflicting/Learn": {
-    "modified": "2020-07-16T22:22:13.258Z",
+    "modified": "2020-07-16T22:33:40.026Z",
     "contributors": [
-      "Netaras",
-      "KwanHong_Lee66"
+      "alattalatta"
     ]
   },
   "conflicting/Learn/CSS/Building_blocks": {
@@ -17581,13 +17555,22 @@
     ]
   },
   "conflicting/Web/Guide": {
-    "modified": "2019-03-23T23:41:47.329Z",
+    "modified": "2020-12-07T13:40:57.143Z",
     "contributors": [
-      "teoli",
-      "Jiyoon",
-      "Unixcruiser",
-      "Netaras",
-      "Sebuls"
+      "peterbe",
+      "alattalatta"
+    ]
+  },
+  "conflicting/Web/HTML": {
+    "modified": "2020-01-19T02:45:39.384Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "conflicting/Web/HTTP": {
+    "modified": "2020-02-05T12:28:02.372Z",
+    "contributors": [
+      "alattalatta"
     ]
   },
   "conflicting/Web/JavaScript/Guide": {

@@ -1191,8 +1191,8 @@
 /zh-CN/docs/Server-sent_events/EventSource	/zh-CN/docs/Web/API/EventSource
 /zh-CN/docs/Server-sent_events/EventSource/EventSource	/zh-CN/docs/Web/API/EventSource/EventSource
 /zh-CN/docs/Server-sent_events/EventSource/close	/zh-CN/docs/Web/API/EventSource/close
-/zh-CN/docs/Server-sent_events/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/onerror
-/zh-CN/docs/Server-sent_events/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/onopen
+/zh-CN/docs/Server-sent_events/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/error_event
+/zh-CN/docs/Server-sent_events/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/open_event
 /zh-CN/docs/Server-sent_events/Using_server-sent_events	/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events
 /zh-CN/docs/Site_Compatibility_for_Firefox_19	/zh-CN/docs/Mozilla/Firefox/Releases/19/Site_compatibility
 /zh-CN/docs/Site_Compatibility_for_Firefox_21	/zh-CN/docs/Mozilla/Firefox/Releases/21/Site_compatibility
@@ -1333,6 +1333,8 @@
 /zh-CN/docs/Web/API/Event/isChar	/zh-CN/docs/Web/API/UIEvent/isChar
 /zh-CN/docs/Web/API/Event/pageY	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/Event/禁用时间冒泡	/zh-CN/docs/Web/API/Event/cancelBubble
+/zh-CN/docs/Web/API/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/error_event
+/zh-CN/docs/Web/API/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/open_event
 /zh-CN/docs/Web/API/EventTarget.dispatchEvent	/zh-CN/docs/Web/API/EventTarget/dispatchEvent
 /zh-CN/docs/Web/API/EventTarget.removeEventListener	/zh-CN/docs/Web/API/EventTarget/removeEventListener
 /zh-CN/docs/Web/API/FetchController	/zh-CN/docs/Web/API/AbortController
@@ -2014,6 +2016,7 @@
 /zh-CN/docs/Web/HTML/Global_attributes/x-ms-加速装置键	/zh-CN/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /zh-CN/docs/Web/HTML/Global_attributes/x-ms-格式-检测	/zh-CN/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Global_attributes/accesskey
+/zh-CN/docs/Web/HTML/Index	/zh-CN/docs/conflicting/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Web/HTML/Inline_elements
 /zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/speculative_parsing
