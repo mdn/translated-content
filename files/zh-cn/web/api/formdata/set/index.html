@@ -10,7 +10,7 @@ translation_of: Web/API/FormData/set
 <p><code>set()</code> 和 {{domxref("FormData.append")}} 不同之处在于：如果某个 key 已经存在，<code>set()</code> 会直接覆盖所有该 key 对应的值，而 {{domxref("FormData.append")}} 则是在该 key 的最后位置再追加一个值。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 该方法在 <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a> 可用。</p>
+<p><strong>注意</strong>: 该方法在 <a href="/zh-CN/docs/Web/API/Web_Workers_API">Web Workers</a> 可用。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -26,9 +26,10 @@ formData.set(name, value, filename);</pre>
  <dt><code>name</code></dt>
  <dd>字段名称。</dd>
  <dt><code>value</code></dt>
- <dd>字段的值，如果是传入两个参数的方式，那么该值是一个 {{domxref("USVString")}}，如果不是，将被转成一个字符串。如果是传入三个参数的方式，那么该值将是一个布尔值（{{domxref("Blob")}}），文件（{{domxref("File")}}），或者一个 {{domxref("USVString")}}，如果不是，将被转成一个字符串。</dd>
- <dt><code>filename </code>{{optional_inline}}</dt>
- <dd>当第二个参数传递的是一个blob对象（{{domxref("Blob")}}）或者file对象（{{domxref("File")}}），filename参数就代表传给服务端的文件名（一个{{domxref("USVString")}}）。{{domxref("Blob")}} 对象的默认文件名是 "blob"。</dd>
+ <dd>字段的值，该值可以是一个 {{domxref("USVString")}} 或 {{domxref("Blob")}}（包括其子类，例如 {{domxref("File")}}），如果不是这两个指定的类型，其将被转成一个字符串。</dd>
+ <dt><code>filename</code> {{optional_inline}}</dt>
+ <dd>当第二个参数传递的是一个 blob 对象（{{domxref("Blob")}}）或者 file 对象（{{domxref("File")}}），filename 参数就代表传给服务端的文件名（一个 {{domxref("USVString")}}）。
+  {{domxref("Blob")}} 对象的默认文件名是 "blob"，{{domxref("File")}} 对象的默认文件名则为其 “name” 属性</dd>
 </dl>
 
 <div class="note">
