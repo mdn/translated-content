@@ -1,400 +1,455 @@
 ---
-title: Using Fetch
+title: Fetch 사용하기
 slug: Web/API/Fetch_API/Using_Fetch
+tags:
+  - API
+  - BODY
+  - Experimental
+  - Fetch
+  - Guide
+  - HTTP
+  - Promise
+  - Response
+  - request
 translation_of: Web/API/Fetch_API/Using_Fetch
-original_slug: Web/API/Fetch_API/Fetch의_사용법
 ---
-[Fetch API](/ko/docs/Web/API/Fetch_API)를 이용하면 Request나 Response와 같은 HTTP의 파이프라인을 구성하는 요소를 조작하는것이 가능합니다. 또한 {{domxref("GlobalFetch.fetch","fetch()")}} 메서드를 이용하는 것으로 비동기 네트워크 통신을 알기쉽게 기술할 수 있습니다.
 
-이전에 이러한 기능을  {{domxref("XMLHttpRequest")}}에서 제공하고 있었습니다. Fetch는 이러한 API의 대체제로 {{domxref("ServiceWorker_API", "Service Workers")}}같은 기술로 간단히 이용하는것이 가능합니다. 또한 CORS나 HTTP확장같은  HTTP에 관련한 개념을 모아 정의하고 있습니다.
+{{DefaultAPISidebar("Fetch API")}}
 
-Fetch의 기본 스펙은`jQuery.ajax()`와 기본적으로 두가지가 다르다는 사실에 유념해야합니다.
+[Fetch API](/ko/docs/Web/API/Fetch_API)는 HTTP 파이프라인을 구성하는 요청과 응답 등의 요소를 JavaScript에서 접근하고 조작할 수 있는 인터페이스를 제공합니다. Fetch API가 제공하는 전역 {{domxref("fetch()")}} 메서드로 네트워크의 리소스를 쉽게 비동기적으로 가져올 수도 있습니다.
 
-- `fetch()`로 부터 반환되는 Promise 객체는 **HTTP error 상태를 reject하지 않습니다.** HTTP Status Code가 404나 500을 반환하더라도요. 대신 ok 상태가 false인 resolve가 반환되며, 네트워크 장애나 요청이 완료되지 못한 상태에는 reject가 반환됩니다.
-- 보통 `fetch`는 **쿠키를 보내거나 받지 않습니다.**  사이트에서 사용자 세션을 유지 관리해야하는 경우 인증되지 않는 요청이 발생합니다. 쿠키를 전송하기 위해서는 자격증명(credentials) 옵션을 반드시 설정해야 합니다.
-  [2017년 8월 25일](https://github.com/whatwg/fetch/pull/585) 이후. 기본 자격증명(credentials) 정책이 `same-origin` 으로 변경되었습니다. 파이어폭스는 61.0b13 이후 변경되었습니다.
+이전에는 이런 기능을 {{domxref("XMLHttpRequest")}}를 사용해 할 수 있었습니다. Fetch는 더 좋은 대체제면서, [서비스 워커](/ko/docs/Web/API/Service_Worker_API) 등 다른 기술에서도 쉽게 사용할 수 있는 API입니다. 또한 [CORS](/ko/docs/Web/HTTP/CORS)와 같이 HTTP와 관련된 다른 개념들을 한 곳에 모아서 정의할 수 있는 논리적인 장소도 제공합니다.
 
-기본적인 fetch는 누구라도 알기쉽고 간단하게 작성할 수 있습니다. 아래의 코드를 봐주시기 바랍니다.
+`fetch` 명세는 `jQuery.ajax()`와 크게 두 가지에서 다릅니다.
+
+- `fetch()`가 반환하는 프로미스 객체는 404, 500과 같은 **HTTP 오류 상태를 수신해도 거부되지 않습니다.** `fetch()`의 프로미스는 서버에서 헤더를 포함한 응답을 받는 순간 정상적으로 이행합니다. 대신, 응답의 상태가 200-299를 벗어날 경우 {{domxref("Response.ok", "ok")}} 속성이 `false`로 설정됩니다. 프로미스가 거부되는 경우는 네트워크 연결이 실패하는 경우를 포함, 아예 요청을 완료하지 못한 경우로 한정됩니다.
+- 자격 증명(`credentials`) [옵션](/ko/docs/Web/API/fetch#매개변수)을 제공하지 않은 경우, `fetch()`는 **교차 출처 쿠키를 전송하지 않습니다.** ([2018년 4월](https://github.com/whatwg/fetch/pull/585) 이후, 자격 증명 정책의 기본 값이 `same-origin`으로 변경됐습니다.)
+
+기본적인 Fetch 요청은 매우 쉽게 만들 수 있습니다. 아래 코드를 살펴보세요.
 
 ```js
 fetch('http://example.com/movies.json')
-  .then(function(response) {
-    return response.json();
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+```
+
+위 코드는 네트워크에서 JSON 파일을 가져와서 콘솔에 출력합니다. 가장 단순한 형태의 `fetch()`는 가져오고자 하는 리소스의 경로를 나타내는 하나의 인수만 받습니다. 응답은 {{domxref("Response")}} 객체로 표현되며, 직접 JSON 응답 본문을 받을 수는 없습니다.
+
+{{domxref("Response")}} 객체 역시 JSON 응답 본문을 그대로 포함하지는 않습니다. `Response`는 HTTP 응답 전체를 나타내는 객체로, JSON 본문 콘텐츠를 추출하기 위해서는 {{domxref("Response.json()", "json()")}} 메서드를 호출해야 합니다. `json()`은 응답 본문 텍스트를 JSON으로 파싱한 결과로 이행하는, 또 다른 프로미스를 반환합니다.
+
+> **참고:** 다른 유형의 본문 콘텐츠를 추출할 수 있는 비슷한 메서드들을 [본문](#본문) 절에서 확인하세요.
+
+Fetch 요청은 가져오려는 리소스의 지시문이 아닌, [`Content-Security-Policy`](/ko/docs/Web/HTTP/Headers/Content-Security-Policy) 헤더의 `connect-src` 지시문에 의해 제어됩니다.
+
+## 요청 옵션 제공
+
+`fetch()` 메서드에는 선택적으로 두 번째 매개변수도 제공할 수 있습니다. 이 매개변수, `init` 객체를 사용하면 여러가지 설정을 제어할 수 있습니다.
+
+{{domxref("fetch()")}} 문서를 방문해 사용 가능한 전체 옵션의 목록과, 각각의 옵션에 대한 자세한 설명을 확인하세요.
+
+```js
+// POST 메서드 구현 예제
+async function postData(url = '', data = {}) {
+  // 옵션 기본 값은 *로 강조
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE 등
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json',
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data), // body의 데이터 유형은 반드시 "Content-Type" 헤더와 일치해야 함
+  });
+  return response.json(); // JSON 응답을 네이티브 JavaScript 객체로 파싱
+}
+
+postData('https://example.com/answer', { answer: 42 }).then((data) => {
+  console.log(data); // JSON 데이터가 `data.json()` 호출에 의해 파싱됨
+});
+```
+
+`mode: "no-cors"`를 지정하면, 요청에 제한된 헤더만 포함할 수 있는 점을 주의하세요. 사용 가능한 헤더는 다음과 같습니다.
+
+- `Accept`
+- `Accept-Language`
+- `Content-Language`
+- `Content-Type`, 값으로는 `application/x-www-form-urlencoded`, `multipart/form-data`, 또는 `text/plain`
+
+## 자격 증명을 포함한 요청 전송
+
+브라우저가 요청을 전송할 때 자격 증명을 포함하도록 하려면 `fetch()` 메서드에 전달하는 `init` 객체에 `credential: 'include'`를 추가하세요. 동일 출처와 교차 출처 요청 모두에 사용할 수 있습니다.
+
+```js
+fetch('https://example.com', {
+  credentials: 'include',
+});
+```
+
+> **참고:** `credentials: 'include'`를 추가한 경우, `Access-Control-Allow-Origin`에 와일드카드를 사용할 수 없습니다. 자격 증명을 포함하려는 경우에는 반드시 정확한 출처를 지정해야 합니다. CORS 해제 확장 프로그램을 사용하더라도 와일드카드를 지정한 요청은 실패할 것입니다.
+
+> **참고:** 자격 증명 옵션의 값에 상관 없이, 브라우저는 프리플라이트 요청에는 자격 증명을 전송하지 않아야 합니다. 자세한 정보는 [CORS > 인증정보를 포함한 요청](/ko/docs/Web/HTTP/CORS#인증정보를_포함한_요청)을 참고하세요.
+
+요청 URL이 스크립트와 같은 출처일 때만 자격 증명을 전송하려면 `credentials: 'same-origin'`을 추가하세요.
+
+```js
+// 스크립트의 출처도 'https://example.com'
+
+fetch('https://example.com', {
+  credentials: 'same-origin',
+});
+```
+
+브라우저가 요청에서 자격 증명을 전송하지 않도록 하려면 `credentials: 'omit'`을 사용하세요.
+
+```js
+fetch('https://example.com', {
+  credentials: 'omit',
+});
+```
+
+## JSON 데이터 업로드
+
+{{domxref("fetch()")}}를 사용하면 JSON 인코딩된 데이터를 POST 요청에 포함할 수 있습니다.
+
+```js
+const data = { username: 'example' };
+
+fetch('https://example.com/profile', {
+  method: 'POST', // 또는 'PUT'
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(data),
+})
+.then((response) => response.json())
+.then((data) => {
+  console.log('성공:', data);
+})
+.catch((error) => {
+  console.error('실패:', error);
+});
+```
+
+## 파일 업로드
+
+{{domxref("fetch()")}}와 `<input type="file">` 입력 칸 요소, {{domxref("FormData.FormData","FormData()")}}를 사용해서 파일을 업로드할 수 있습니다.
+
+```js
+const formData = new FormData();
+const fileField = document.querySelector('input[type="file"]');
+
+formData.append('username', 'abc123');
+formData.append('avatar', fileField.files[0]);
+
+fetch('https://example.com/profile/avatar', {
+  method: 'PUT',
+  body: formData,
+})
+.then((response) => response.json())
+.then((result) => {
+  console.log('성공:', result);
+})
+.catch((error) => {
+  console.error('실패:', error);
+});
+```
+
+## 다수의 파일 업로드
+
+{{domxref("fetch()")}}와 `<input type="file" multiple>` 입력 칸 요소, {{domxref("FormData.FormData","FormData()")}}를 사용해서 여러 파일을 업로드할 수 있습니다.
+
+```js
+const formData = new FormData();
+const photos = document.querySelector('input[type="file"][multiple]');
+
+formData.append('title', '제주도 수학여행');
+for (let i = 0; i < photos.files.length; i++) {
+  formData.append(`photos_${i}`, photos.files[i]);
+}
+
+fetch('https://example.com/posts', {
+  method: 'POST',
+  body: formData,
+})
+.then((response) => response.json())
+.then((result) => {
+  console.log('성공:', result);
+})
+.catch((error) => {
+  console.error('실패:', error);
+});
+```
+
+## 텍스트 파일을 한 줄씩 처리하기
+
+응답에서 읽어오는 데이터 청크는 줄 단위로 깔끔하게 나뉘지 않으며, 문자열도 아니고 `Uint8Array`입니다. 텍스트 파일을 가져와서 줄 단위로 처리하고자 한다면, '줄' 단위로 나누는 작업은 직접 구현해야 합니다. 이 예제는 줄 단위 반복기를 생성해서 파일을 처리하는 예시입니다. (너무 복잡해지지 않도록 텍스트 파일은 UTF-8로 가정하고, 네트워크 오류는 고려하지 않습니다.)
+
+```js
+async function* makeTextFileLineIterator(fileURL) {
+  const utf8Decoder = new TextDecoder('utf-8');
+  const response = await fetch(fileURL);
+  const reader = response.body.getReader();
+  let { value: chunk, done: readerDone } = await reader.read();
+  chunk = chunk ? utf8Decoder.decode(chunk) : '';
+
+  const re = /\n|\r|\r\n/gm;
+  let startIndex = 0;
+  let result;
+
+  for (;;) {
+    let result = re.exec(chunk);
+    if (!result) {
+      if (readerDone) {
+        break;
+      }
+      let remainder = chunk.substr(startIndex);
+      ({ value: chunk, done: readerDone } = await reader.read());
+      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : '');
+      startIndex = re.lastIndex = 0;
+      continue;
+    }
+    yield chunk.substring(startIndex, result.index);
+    startIndex = re.lastIndex;
+  }
+  if (startIndex < chunk.length) {
+    // 마지막 줄이 개행 문자로 끝나지 않았을 때
+    yield chunk.substr(startIndex);
+  }
+}
+
+async function run() {
+  for await (let line of makeTextFileLineIterator(urlOfFile)) {
+    processLine(line);
+  }
+}
+
+run();
+```
+
+## fetch의 성공 여부 확인
+
+{{domxref("fetch()")}} 프로미스는 네트워크에 오류가 있었거나, 서버의 CORS 설정이 잘못된 경우 {{jsxref("TypeError")}}로 거부합니다. 그러나 이 두 경우는 권한 등 설정의 문제고, 404와 같은 응답은 네트워크 오류가 아니므로 거부하지 않습니다. `fetch()`가 성공했는지를 정확히 알아내려면 프로미스의 이행 여부를 확인한 후, {{domxref("Response.ok")}} 속성의 값이 `true`인지도 확인해야 합니다.
+
+```js
+fetch('flowers.jpg')
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error('네트워크 응답이 올바르지 않습니다.');
+    }
+    return response.blob();
   })
-  .then(function(myJson) {
-    console.log(JSON.stringify(myJson));
+  .then((myBlob) => {
+    myImage.src = URL.createObjectURL(myBlob);
+  })
+  .catch((error) => {
+    console.error('fetch에 문제가 있었습니다.', error);
   });
 ```
 
-네트워크에서 JSON 파일을 가져 와서 콘솔에 인쇄합니다. 간단한 `fetch()` 사용 흐름은 인수 한개(가져올 자원의 경로)를 가져오고 응답을 포함하는 약속 ({{domxref ( "Response")}} 개체)을 반환하는 것입니다.
+## 요청 객체를 직접 제공
 
-이것은 단순한 HTTP Response이며, 실제 JSON이 아닙니다. response 객체로부터 사진을 가져오기 위해서는 {{domxref("Body.json","json()")}} 메서드를 사용할 필요가 있습니다. ({{domxref("Body")}}의 믹스인 (역주:php의 트레이드와 같은것입니다. )으로 정의되어, 이것은 {{domxref("Request")}} 객체와 {{domxref("Response")}} 객체의 쌍방에 구현되어 있습니다.
-
-<div class="note"><p><strong>노트</strong>: http Request와 http Response의 Body mixin은 Body 컨텐츠를 다른 mine 타입으로 사용하는 비슷한 메서드를 제공하고 있습니다.  상세한 내용은 {{anch("Body")}} 섹션을 참고해 주시기 바랍니다.</p></div>
-
-Fetch Reqeust는 검색된 리소스로부터의 지시가 아닌 [CSP](/ko/docs/Security/CSP/CSP_policy_directives)의`connect-src`의 디렉티브(directive)에 의해 제어됩니다.
-
-### 리퀘스트의 옵션 적용
-
-`fetch()` 메서드에 두번째 파라미터를 적용하는것도 가능합니다. `init` 오브젝트는 다른 여러 세팅을 컨트롤 할 수 있게 해줍니다.
-
-모든 설정 가능한 옵션의 상세 설명은 {{domxref("GlobalFetch.fetch","fetch()")}}를 참고해주시기 바랍니다.
-
-    // Example POST method implementation:
-
-    postData('http://example.com/answer', {answer: 42})
-      .then(data => console.log(JSON.stringify(data))) // JSON-string from `response.json()` call
-      .catch(error => console.error(error));
-
-    function postData(url = '', data = {}) {
-      // Default options are marked with *
-        return fetch(url, {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, cors, *same-origin
-            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'same-origin', // include, *same-origin, omit
-            headers: {
-                'Content-Type': 'application/json',
-                // 'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            redirect: 'follow', // manual, *follow, error
-            referrer: 'no-referrer', // no-referrer, *client
-            body: JSON.stringify(data), // body data type must match "Content-Type" header
-        })
-        .then(response => response.json()); // parses JSON response into native JavaScript objects
-    }
-
-### 자격 증명(credentials)이 포함된 Request 요청
-
-자격 증명이 포함된 인증서를 보내도록 하려면 `fetch()` 메서드에 `credentials: 'include'`를 추가하도록 합니다. 이것은 cross-origin 요청에서도 사용됩니다.
-
-    fetch('https://example.com', {
-      credentials: 'include'
-    })
-
-요청하려는 URL이 호출 스크립트와 동일한 origin을 가지고 있을때만 자격증명을 전송하려면 `credentials: 'same-origin'`를 추가해 주시기 바랍니다.
-
-    // The calling script is on the origin 'https://example.com'
-
-    fetch('https://example.com', {
-      credentials: 'same-origin'
-    })
-
-브라우저의 보안을 유지하는것 대신 자격증명을 포함하지 않는것을 원한다면 `credentials: 'omit'`를 작성해 주시기 바랍니다.
-
-    fetch('https://example.com', {
-      credentials: 'omit'
-    })
-
-### Uploading JSON data
-
-POST프로토콜로 JSON인코딩된 데이터를 보내기 위해 {{domxref("GlobalFetch.fetch","fetch()")}}를 사용합니다.
-
-    var url = 'https://example.com/profile';
-    var data = {username: 'example'};
-
-    fetch(url, {
-      method: 'POST', // or 'PUT'
-      body: JSON.stringify(data), // data can be `string` or {object}!
-      headers:{
-        'Content-Type': 'application/json'
-      }
-    }).then(res => res.json())
-    .then(response => console.log('Success:', JSON.stringify(response)))
-    .catch(error => console.error('Error:', error));
-
-### Uploading a file
-
-`<input type="file" />` input엘리먼트, {{domxref("FormData.FormData","FormData()")}}, {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}를 사용하여 파일을 업로드 할 수 있습니다.
-
-    var formData = new FormData();
-    var fileField = document.querySelector('input[type="file"]');
-
-    formData.append('username', 'abc123');
-    formData.append('avatar', fileField.files[0]);
-
-    fetch('https://example.com/profile/avatar', {
-      method: 'PUT',
-      body: formData
-    })
-    .then(response => response.json())
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', JSON.stringify(response)));
-
-### Uploading multiple files
-
-`<input type="file" multiple />` input엘리먼트와{{domxref("FormData.FormData","FormData()")}}, {{domxref("GlobalFetch.fetch","fetch()")}}를 사용하여 파일 다중업로드를 할 수 있습니다.
-
-    var formData = new FormData();
-    var photos = document.querySelector('input[type="file"][multiple]');
-
-    formData.append('title', 'My Vegas Vacation');
-    for (var i = 0; i < photos.files.length; i++) {
-      formData.append('photos', photos.files[i]);
-    }
-
-    fetch('https://example.com/posts', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(response => console.log('Success:', JSON.stringify(response)))
-    .catch(error => console.error('Error:', error));
-
-### 문서 파일을 열단위로 처리하기
-
-응답하는 곳에서 읽는 덩어리들은 줄 단위로 깔끔하게 떨어지지 않으며 문자열이 아니라 Uint8Arrys(8비트 부호 없는 정수)입니다. 만약 텍스트 파일은 fetch하고 이것을 줄 단위로 처리하고자 한다면, 이런 복잡함을 다루는 것은 사용자에게 달려있습니다. 아래의 예시는 line iterator를 생성하여 처리하는 한가지 방법을 보여주고 있습니다. (간단하게 하기위해, 텍스트는 UTF-8이라고 가정하며,  fetch errors를 다루지 않는다고 합시다).
-
-    async function* makeTextFileLineIterator(fileURL) {
-      const utf8Decoder = new TextDecoder("utf-8");
-      let response = await fetch(fileURL);
-      let reader = response.body.getReader();
-      let {value: chunk, done: readerDone} = await reader.read();
-      chunk = chunk ? utf8Decoder.decode(chunk) : "";
-
-      let re = /\n|\r|\r\n/gm;
-      let startIndex = 0;
-      let result;
-
-      for (;;) {
-        let result = re.exec(chunk);
-        if (!result) {
-          if (readerDone) {
-            break;
-          }
-          let remainder = chunk.substr(startIndex);
-          ({value: chunk, done: readerDone} = await reader.read());
-          chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
-          startIndex = re.lastIndex = 0;
-          continue;
-        }
-        yield chunk.substring(startIndex, result.index);
-        startIndex = re.lastIndex;
-      }
-      if (startIndex < chunk.length) {
-        // last line didn't end in a newline char
-        yield chunk.substr(startIndex);
-      }
-    }
-
-    for await (let line of makeTextFileLineIterator(urlOfFile)) {
-      processLine(line);
-    }
-
-### fetch의 성공 여부를 체크
-
-한가지 예를 들자면, 네트워크 error가 발생했을때 또는 CORS 가 서버단에서 잘못 설정되어있다면 {{domxref("GlobalFetch.fetch","fetch()")}} promise 객체는 {{jsxref("TypeError")}} 메시지와 함께 반려 할것입니다. 비록 이 현상은 보통 허가 이슈나 그와 비슷한 것을 의미할지라도, 404 는 네트워크 error를 구성하지는 않습니다.  성공적인 `fetch()` 를 체크하는 정확한 방법은 promise 객체가 해결되었는지를 체크하는 것을 포함합니다. 그리고 {{domxref("Response.ok")}} property 가 "true"의 값을 가지고 있는지 확인하는 것입니다. 코드는 아래와 같이 구현될겁니다:
-
-    fetch('flowers.jpg').then(function(response) {
-      if(response.ok) {
-        return response.blob();
-      }
-      throw new Error('Network response was not ok.');
-    }).then(function(myBlob) {
-      var objectURL = URL.createObjectURL(myBlob);
-      myImage.src = objectURL;
-    }).catch(function(error) {
-      console.log('There has been a problem with your fetch operation: ', error.message);
-    });
-
-### request 객체를 fetch로 전달
-
-`fetch()`를 사용해 요청한 리소스의 경로를 전달하는것 대신{{domxref("Request.Request","Request()")}} 생성자를 사용해 Request 객체를 작성하여 `fetch()` 메서드를 인수로 전달하는것도 가능합니다.
-
-    var myHeaders = new Headers();
-
-    var myInit = { method: 'GET',
-                   headers: myHeaders,
-                   mode: 'cors',
-                   cache: 'default' };
-
-    var myRequest = new Request('flowers.jpg', myInit);
-
-    fetch(myRequest).then(function(response) {
-      return response.blob();
-    }).then(function(myBlob) {
-      var objectURL = URL.createObjectURL(myBlob);
-      myImage.src = objectURL;
-    });
-
-`fetch()`메서드의 인수와 똑같은 인수를 `Request()`객체에 전달하여 적용하는것이 가능합니다. 또한 Request 객체의 클론을 생성하기 위해 이미 존재하는 Request 객체를 전달하는것도 가능합니다.
+`fetch()` 호출에 리소스의 경로를 제공하는 대신, {{domxref("Request.Request", "Request()")}} 생성자로 생성한 요청 객체를 인자로 전달할 수도 있습니다.
 
 ```js
-var anotherRequest = new Request(myRequest,myInit);
+const myHeaders = new Headers();
+
+const myRequest = new Request('flowers.jpg', {
+  method: 'GET',
+  headers: myHeaders,
+  mode: 'cors',
+  cache: 'default',
+});
+
+fetch(myRequest)
+  .then((response) => response.blob())
+  .then((myBlob) => {
+    myImage.src = URL.createObjectURL(myBlob);
+  });
 ```
 
-이것은 Request와 Resposne의 Body를 하나만 사용하고 있으므로 사용성이 높습니다.필요하면 `init` 객체를 변화시켜 Response나 Request를 재사용할 수 있도록 복사합니다. The copy must be made before the body is read, and reading the body in the copy will also mark it as read in the original request.
-
-<div class="note"><p><strong>노트</strong>: {{domxref("Request.clone","clone()")}} 메서드를 사용해 Request 객체의 클론을 생성할 수 있습니다. 다른 카피 메서드와 약간 다른 의미가 있습니다. 이전 요청의 body가 이미 읽어들여진 경우 전자는  실패하지만 <code>clone()</code>메서드는 실패하지 않습니다. 이 기능은 Response와 동일합니다.</p></div>
-
-## Headers
-
-{{domxref("Headers")}} 인터페이스에서  {{domxref("Headers.Headers","Headers()")}} 생성자를 사용해 헤더 객체를 생성할 수 있습니다. 헤더 객체는 Key와 Value로 이루어진 간단한 multi-map입니다.
+`Request()` 생성자는 `fetch()` 메서드와 동일한 매개변수를 받습니다. 기존에 존재하는 요청 객체를 전달해서 복사본을 생성하는 것도 가능합니다.
 
 ```js
-var content = "Hello World";
-var myHeaders = new Headers();
-myHeaders.append("Content-Type", "text/plain");
-myHeaders.append("Content-Length", content.length.toString());
-myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
+const anotherRequest = new Request(myRequest, myInit);
 ```
 
-똑같이 배열을 전달하거나 객체 리터럴을 생성자에 전달하는것으로 생성할 수 있습니다.
+요청과 응답 본문은 한 번만 읽을 수 있으므로, 복사본 생성은 꽤 유용합니다. 이런 식으로 복사본을 생성하면, 기존에 생성해둔 요청/응답 객체를 다시 사용하되 `init` 옵션만 교체할 수도 있습니다. 복사본은 원본의 본문을 읽기 전에 생성해야 합니다.
+
+> **참고:** 복사본 생성만을 위한 {{domxref("Request.clone", "clone()")}} 메서드도 있습니다. 생성자와 이 메서드 모두, 이미 본문을 읽은 요청 또는 응답을 복사하려고 시도하면 실패합니다. 복사본의 본문을 읽어도 원본에는 영향을 주지 않습니다.
+
+## 헤더
+
+{{domxref("Headers")}} 인터페이스의 {{domxref("Headers.Headers", "Headers()")}} 생성자를 사용해서 자신만의 헤더 객체를 생성할 수 있습니다. 헤더 객체는 이름과 값을 연결하는 간단한 맵입니다.
 
 ```js
-myHeaders = new Headers({
-  "Content-Type": "text/plain",
-  "Content-Length": content.length.toString(),
-  "X-Custom-Header": "ProcessThisImmediately",
+const content = 'Hello World';
+const myHeaders = new Headers();
+myHeaders.append('Content-Type', 'text/plain');
+myHeaders.append('Content-Length', content.length.toString());
+myHeaders.append('X-Custom-Header', 'ProcessThisImmediately');
+```
+
+생성자에 2차원 배열이나 객체 리터럴을 전달하는 것으로도 같은 결과를 얻을 수 있습니다.
+
+```js
+const myHeaders = new Headers({
+  'Content-Type': 'text/plain',
+  'Content-Length': content.length.toString(),
+  'X-Custom-Header': 'ProcessThisImmediately',
 });
 ```
 
-다음과 같은 코드로 헤더의 내용을 들여다 볼 수 있습니다.
+헤더의 내용은 아래와 같이 가져올 수 있습니다.
 
 ```js
-console.log(myHeaders.has("Content-Type")); // true
-console.log(myHeaders.has("Set-Cookie")); // false
-myHeaders.set("Content-Type", "text/html");
-myHeaders.append("X-Custom-Header", "AnotherValue");
+console.log(myHeaders.has('Content-Type')); // true
+console.log(myHeaders.has('Set-Cookie')); // false
+myHeaders.set('Content-Type', 'text/html');
+myHeaders.append('X-Custom-Header', 'AnotherValue');
 
-console.log(myHeaders.get("Content-Length")); // 11
-console.log(myHeaders.getAll("X-Custom-Header")); // ["ProcessThisImmediately", "AnotherValue"]
+console.log(myHeaders.get('Content-Length')); // 11
+console.log(myHeaders.get('X-Custom-Header')); // ['ProcessThisImmediately', 'AnotherValue']
 
-myHeaders.delete("X-Custom-Header");
-console.log(myHeaders.getAll("X-Custom-Header")); // [ ]
+myHeaders.delete('X-Custom-Header');
+console.log(myHeaders.get('X-Custom-Header')); // null
 ```
 
-이러한 몇몇개의 조작법은 {{domxref("ServiceWorker_API","ServiceWorkers")}}에서밖에 도움되지 않지만 헤더를 조작하기 위해서 보다 나은 API를 제공하고 있습니다.
+헤더 객체의 몇몇 작업은 [서비스 워커](/ko/docs/Web/API/Service_Worker_API)에서나 유용하지만, 그래도 훨씬 편한 API를 통해서 헤더를 조작할 수 있습니다.
 
-모든 Header 메서드는 유효한 HTTP 헤더가 전달되지 않았을 경우 TypeError을 반환합니다. immutable Guard(다음 섹션 참고)가 설정되어 있는 경우에도 TypeError를 반환합니다. TypeError를 반환하지 않고 실패하는 경우도 있습니다. 다음 예를 참고해주시기 바랍니다.
+`Headers`의 모든 헤더 메서드는 유효하지 않은 HTTP 헤더 이름을 받았을 때 `TypeError`를 던집니다. 변경 메서드는 불변 보호([아래 참고](#보호))가 존재하면 `TypeError`를 던집니다. 그 외에는 실패할 때 조용하게 실패합니다. 다음은 조용한 실패 코드의 예시입니다.
 
 ```js
-var myResponse = Response.error();
+const myResponse = Response.error();
 try {
-  myResponse.headers.set("Origin", "http://mybank.com");
-} catch(e) {
-  console.log("은행이 아니잖아요!!");
+  myResponse.headers.set('Origin', 'http://mybank.com');
+} catch (e) {
+  console.log('은행인 척 할 수 없어요!');
 }
 ```
 
-헤더의 좋은 사용법으로 처리하기 전에 컨텐츠 타입으로 올바른가의 여부를 판별하는 방법이 있습니다. 예를 들어,
+콘텐츠를 파싱하기 전에 유효한 형식인지 확인할 때 헤더 객체를 유용하게 사용할 수 있습니다. 다음은 그 예시입니다.
 
-    fetch(myRequest).then(function(response) {
-        var contentType = response.headers.get('content-type');
-        if(contentType && contentType.includes('application/json')) {
-          return response.json();
-        }
-        throw new TypeError("Oops, we haven't got JSON!");
-      })
-      .then(function(json) { /* process your JSON further */ })
-      .catch(function(error) { console.log(error); });
+```js
+fetch(myRequest)
+  .then((response) => {
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new TypeError('앗, JSON이 아닙니다!');
+    }
+    return response.json();
+  })
+  .then((data) => {
+    /* 데이터 처리 */
+  })
+  .catch((error) => console.error(error));
+```
 
 ### 가드
 
-헤더는 리퀘스트를 송신할 수 있으며 리스폰스를 수신할 수 있습니다. 어떤 정보를 수정할 수 있게 하기 위해, 혹은 수정하기 위해 여러 종류의 제어가 가능합니다. 헤더는 guard 프로퍼티는 이것을 가능하게 합니다. 가드는 Request나 Response에 포함되지 않지만  헤더 객체에서 조작 가능한 여러 메서드들의 사용 가능 여부에 영향을 미칩니다.
+헤더는 요청으로 전송할 수도 있고 응답으로 받을 수도 있으며 어떤 정보를 수정할 수 있고 수정할 수 없는지 다양한 제한이 존재하기 때문에, 헤더 객체는 '가드'(_guard_) 속성을 갖습니다. 가드 속성은 웹에 노출되진 않지만, 헤더 객체에 허용되는 변경 작업의 범위에 영향을 줍니다.
 
-가드의 설정값은 다음과 같습니다.
+가능한 가드 값은 다음과 같습니다.
 
-- `none`: 기본치
-- `request`: ({{domxref("Request.headers")}})에서 얻은 헤더 객체에 대한 가드
-- `request-no-cors`: {{domxref("Request.mode")}} `no-cors`에 생성된 ({{domxref("Request.headers")}})에서 사용할 수 있는 값만 헤더에 확보함
-- `response`: ({{domxref("Response.headers")}}) Response에서 얻은 객체애 대한 가드
-- `immutable`: 대개 ServiceWorker에서 사용됨. 헤더의 설정을 읽기 전용으로 바꿈.
+- `none`: 기본 값입니다.
+- `request`: 요청({{domxref("Request.headers")}})에서 획득한 헤더 객체를 보호합니다.
+- `request-no-cors`: {{domxref("Request.mode")}}가 `no-cors`인 요청에서 획득한 헤더 객체를 보호합니다.
+- `response`: 응답({{domxref("Response.headers")}})에서 획득한 헤더 객체를 보호합니다.
+- `immutable`: 헤더 객체를 읽기 전용으로 설정합니다. 대부분 서비스 워커에서 사용합니다.
 
-<div class="note"><p><strong>메모</strong>: <code>request</code>에서 가드된 헤더의<code>Content-Length</code> 헤더는 추가나 변경할 수 없는 가능성이 있습니다.  마찬가지로 리스폰스 헤더에 <code>Set-Cookie</code>를 삽입하는것은 불가능합니다.ServiceWorker는 동기 Reponse를 추출하여 쿠키를 설정합니다.</p></div>
+> **참고:** 가드가 적용된 응답 헤더에는 `Content-Length` 헤더를 추가하거나 설정할 수 없습니다. 마찬가지로,`Set-Cookie` 헤더 또한 응답에 추가할 수 없습니다. 즉, 서비스 워커에서 응답을 합성해서 쿠키를 설정하는 것은 불가능합니다.
 
-## Response 객체
+## 응답 객체
 
-위에서 본 바와 같이 {{domxref("Response")}} 인스턴스들은 fetch() promise가 resolve됬을때 반환됩니다.
+위에서 본 바와 같이 {{domxref("Response")}} 인스턴스는 `fetch()` 프로미스가 이행할 때 반환됩니다.
 
-아래는 어떤 리스폰스 객체라도 공통으로 사용되는 리스폰스 프로퍼티입니다.
+다음은 응답 객체에서 아마 가장 많이 사용하게 될 속성들입니다.
 
-- {{domxref("Response.status")}} — HTTP Status의 정수치, 기본값 200
-- {{domxref("Response.statusText")}} — HTTP Status 코드의 메서드와 일치하는 문자열, 기본값은 "OK"
-- {{domxref("Response.ok")}} 상술한 프로퍼티에서 사용한 HTTP Status 코드가 200에서 299중 하나임을 체크하는 값, {{domxref("Boolean")}}를 반환
+- {{domxref("Response.status")}} — 상태 코드 값을 담은 정수 값입니다. 기본 값은 200입니다.
+- {{domxref("Response.statusText")}} — 상태 코드 메시지를 담은 문자열 값입니다. 기본 값은 빈 문자열입니다. 참고로 [HTTP/2는 상태 메시지를 지원하지 않습니다.](https://fetch.spec.whatwg.org/#concept-response-status-message)
+- {{domxref("Response.ok")}} — 위쪽 예제에서 사용했듯, 상태 코드가 200 이상 299 이하인지 간단하게 확인할 수 있는 불리언 값입니다.
 
-Response 객체는 개발자의 손에 의해 동적으로 만드는것이 가능합니다. 이 방법은 {{domxref("ServiceWorker_API", "ServiceWorkers")}}내에서 활약할 때가 많습니다. 예를들어 Request를 획득했을 때  {{domxref("FetchEvent.respondWith","respondWith()")}}메서드에 의해 커스텀된 리스폰스를 반환하는 경우가 있습니다.
+응답 객체는 JavaScript에서 직접 생성할 수도 있지만, 이런 응답은 수신한 요청에 대해 {{domxref("FetchEvent.respondWith", "respondWith()")}} 메서드로 직접 응답해야 하는 [서비스 워커](/ko/docs/Web/API/Service_Worker_API)에서나 활약할 수 있습니다.
 
 ```js
-var myBody = new Blob();
+const myBody = new Blob();
 
-addEventListener('fetch', function(event) {
+addEventListener('fetch', function (event) {
+  // fetch를 가로채는 ServiceWorker
   event.respondWith(
     new Response(myBody, {
-      headers: { "Content-Type" : "text/plain" }
+      headers: { 'Content-Type': 'text/plain' },
     })
-  );
+  );
 });
 ```
 
-{{domxref("Response.Response","Response()")}} 생성자는 파라미터로써 두개의 객체를 전달하는것이 가능합니다.첫번째는 Response Body, 두번째는 초기화 객체({{domxref("Request.Request","Request()")}}의 클론을 생성하는 방법과 비슷합니다.) 입니다.
+{{domxref("Response.Response","Response()")}} 생성자는 두 개의 선택적 인자를 받습니다. 하나는 응답 본문으로 쓰고, 다른 하나는{{domxref("Request.Request","Request()")}}가 받는 것과 비슷한 옵션 객체입니다.
 
-<div class="note"><p><strong>付記</strong>: 정적 메서드 {{domxref("Response.error","error()")}}는 단순한 에러 Response를 반환합니다. {{domxref("Response.redirect","redirect()")}} 메서드 또한 지정한 URL에 리다이렉트할 Response를 반환합니다. 이것들은 Service Workers에서만 사용되고 있습니다.</p></div>
+> **참고:** {{domxref("Response.error","error()")}} 정적 메서드는 오류 응답을 반환합니다. 마찬가지로, {{domxref("Response.redirect","redirect()")}}는 지정한 URL로 리다이렉트를 유발하는 응답을 생성합니다. 이 두 메서드 역시 서비스 워커에서만 의미가 있습니다.
 
-## Body
+## 본문
 
-Request, Response 둘다 Body를 가지고 있습니다. body는 아래에서 기술한 타입들 중 하나의 인스턴스입니다.
+요청과 응답 모두 본문 데이터를 포함할 수 있습니다. 본문 데이터는 아래 목록의 유형 중 하나의 인스턴스입니다.
 
 - {{domxref("ArrayBuffer")}}
-- {{domxref("ArrayBufferView")}} (Uint8Array같은 TypedArray)
-- {{domxref("Blob")}}/File
+- {{domxref("ArrayBufferView")}} (`Uint8Array` 등등)
+- {{domxref("Blob")}}/{{domxref("File")}}
 - 문자열
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
 
-{{domxref("Body")}} 믹스인은 {{domxref("Request")}}나{{domxref("Response")}}에 구현되어, 콘텐츠를 추출하기 위해 아래의 메서드가 정의되어 있습니다. 이러한 메서드들은 전부 최종적으로 요청으로 반환된 값을 내장하고 있는 promise를 반환합니다.
+{{domxref("Request")}}와 {{domxref("Response")}} 인터페이스는 본문을 추출할 수 있는 다음의 메서드들을 공유합니다. 추출 메서드는 모두 프로미스를 반환하며, 이 프로미스가 실제 본문 데이터로 이행합니다.
 
-- {{domxref("Body.arrayBuffer","arrayBuffer()")}}
-- {{domxref("Body.blob","blob()")}}
-- {{domxref("Body.json","json()")}}
-- {{domxref("Body.text","text()")}}
-- {{domxref("Body.formData","formData()")}}
+- {{domxref("Request.arrayBuffer()")}} / {{domxref("Response.arrayBuffer()")}}
+- {{domxref("Request.blob()")}} / {{domxref("Response.blob()")}}
+- {{domxref("Request.formData()")}} / {{domxref("Response.formData()")}}
+- {{domxref("Request.json()")}} / {{domxref("Response.json()")}}
+- {{domxref("Request.text()")}} / {{domxref("Response.text()")}}
 
-이것들은 비 텍스트 데이터를 XHR보다 훨씬 간단하게 사용하는것을 도와줍니다.
+본문 추출 메서드들을 사용하면 XHR을 사용할 때보다 더 쉽게 비 텍스트 데이터를 처리할 수 있습니다.
 
-Request 바디는 body 파라미터를 전달하는 것으로 설정할 수 있습니다.
+요청 본문은 `body` 속성을 설정하는 것으로 추가할 수 있습니다.
 
 ```js
-var form = new FormData(document.getElementById('login-form'));
-fetch("/login", {
-  method: "POST",
-  body: form
-})
+const form = new FormData(document.getElementById('login-form'));
+fetch('/login', {
+  method: 'POST',
+  body: form,
+});
 ```
 
-Both request and response (and by extension the `fetch()` function), will try to intelligently determine the content type. A request will also automatically set a `Content-Type` header if none is set in the dictionary.
+요청과 응답, 그리고 더 나아가 `fetch()` 함수는 본문을 보고 콘텐츠 유형을 알아내려고 시도합니다. 또한, 요청은 따로 명시하지 않았으면 `Content-Type`을 헤더를 자동으로 설정합니다.
 
-## Feature detection(특징 추출)
+## 기능 감지
 
-Fetch API support는{{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} or {{domxref("GlobalFetch.fetch","fetch()")}} on the {{domxref("Window")}} or {{domxref("Worker")}}로 존재여부를 확인함으로써 추출할 수 있습니다. 예를 들어:
+Fetch API는 {{domxref("Window")}}나 {{domxref("Worker")}} 스코프에 {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}}, 또는 {{domxref("fetch()")}}의 존재 여부로 지원 여부를 확인할 수 있습니다.
 
-    if (window.fetch) {
-        // run my fetch request here
-    } else {
-        // do something with XMLHttpRequest?
+```js
+if (window.fetch) {
+  // fetch로 요청 보내기
+} else {
+  // XMLHttpRequest 사용하기?
+}
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Polyfill</h2>
+## 명세
 
-Fetch를 지원하지 않는 브라우저를 위해 미지원 브라우저를 위한 [Fetch Polyfill](https://github.com/github/fetch)이 지원되고 있습니다.
-
-## Specifications
-
-| Specification                | Status                   | Comment            |
-| ---------------------------- | ------------------------ | ------------------ |
+| Specification         | Status             | Comment            |
+| --------------------- | ------------------ | ------------------ |
 | {{SpecName('Fetch')}} | {{Spec2('Fetch')}} | Initial definition |
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat("api.fetch")}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility"><span>관련항목</span></h2>
-
-<div id="compat-mobile"></div>
+## 같이 보기
 
 - [ServiceWorker API](/ko/docs/Web/API/ServiceWorker_API)
-- [HTTP 액세스 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
 - [HTTP](/ko/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch examples on Github](https://github.com/mdn/fetch-examples/)
-
-{{DefaultAPISidebar("Fetch API")}}
+- [Fetch 폴리필](https://github.com/github/fetch)
+- [Github의 Fetch 예제](https://github.com/mdn/fetch-examples/)
