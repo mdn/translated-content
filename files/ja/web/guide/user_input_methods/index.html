@@ -78,10 +78,10 @@ element.addEventListener("touchmove", handleMove, false);</pre>
 
 <h4 id="Pointer_Events" name="Pointer_Events">ポインターイベント</h4>
 
-<p>When dealing with devices that incorporate multiple forms of input, like mouse, finger touch and pen input, it might be hard to develop a solution that works for all these different control mechanisms. <a href="http://www.w3.org/TR/pointerevents/">Pointer Events</a> help developers more easily manage events across devices by normalizing the handling of each one. A pointer can be any point of contact on the screen made by a mouse cursor, pen, touch (including multi-touch), or other pointing input device. The events for handling generic pointer input look a lot like those for mouse: <code>pointerdown</code>, <code>pointermove</code>, <code>pointerup</code>, <code>pointerover</code>, <code>pointerout</code>, etc.</p>
+<p>マウス、指でのタッチ、ペン入力など複数の入力形式が内蔵されているデバイスを扱う時、全てのこれら異なる制御の仕組みを機能させるソリューションを開発することは難しいかもしれません。<a href="http://www.w3.org/TR/pointerevents/">Pointer Events</a> は、デバイス毎の扱いを標準化することにより、開発者がデバイスを横断してイベントを管理することをより簡単にするのに役立ちます。マウスカーソル、ペン、タッチ（マルチタッチを含む）、またはその他のポインティング入力デバイスによって、ポインターはスクリーン上のあらゆる接点となることができます。汎用的なポインター入力を扱うためのイベントは、<code>pointerdown</code>、<code>pointermove</code>、<code>pointerup</code>、<code>pointerover</code>、<code>pointerout</code> などのマウス用のイベントとよく似ています。</p>
 
 <div class="note">
-<p><strong>注</strong>: Pointer Events are not widely supported yet, but a <a href="https://github.com/mozilla/pointer.js">pointer.js polyfill</a> is available on Mozilla Github.</p>
+<p><strong>注</strong>: Pointer Events はまだ広くサポートされていませんが、<a href="https://github.com/mozilla/pointer.js">pointer.js polyfill</a> は Mozilla Github で利用可能です。</p>
 </div>
 
 <h3 id="Implement_controls" name="Implement_controls">コントロールの実装</h3>
