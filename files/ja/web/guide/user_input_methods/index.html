@@ -129,23 +129,23 @@ if (elem.requestFullscreen) {
 
 <h4 id="Drag_Drop" name="Drag_Drop">ドラッグ＆ドロップ</h4>
 
-<p><a href="/ja/docs/Web/Guide/HTML/Drag_and_drop">Drag &amp; Drop</a> allows your application’s users to click and hold the mouse button down over an element, drag it to another location, and release the mouse button to drop the element there.</p>
+<p><a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API">ドラッグ＆ドロップ API</a> によりあなたのアプリケーションのユーザーは、クリックして要素を超えてマウスボタンを押し続け、他の場所にドラッグし、そしてその要素を移動先にドロップするためにマウスボタンを離すことができます。</p>
 
-<p>Here is an example that allows a section of content to be dragged.</p>
+<p>以下は、コンテンツのセクションにドラッグできるようにする例です。</p>
 
 <pre class="brush: html notranslate">&lt;div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')"&gt;
     This text &lt;strong&gt;may&lt;/strong&gt; be dragged.
  &lt;/div&gt;</pre>
 
-<p>in which we:</p>
+<p>私たちが実装する点は以下です:</p>
 
 <ul>
- <li>Set the <a href="/ja/docs/Web/HTML/Global_attributes#draggable"><code>draggable</code></a> attribute to true on the element that you wish to make draggable</li>
- <li>Add a listener for the <a href="/ja/docs/Web/Events/dragstart"><code>dragstart</code></a> event and set the drag data within this listener</li>
+ <li>ドラッグ可能にしたい要素の <a href="/ja/docs/Web/HTML/Global_attributes#attr-draggable"><code>draggable</code></a> 属性を true にセットします。</li>
+ <li><a href="/ja/docs/Web/API/Document/dragstart_event"><code>dragstart</code></a> イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。</li>
 </ul>
 
 <div class="note">
-<p><strong>注</strong>: You can find more information in the <a href="/ja/docs/Web/Guide/HTML/Drag_and_drop">MDN Drag &amp; Drop documentation</a>.</p>
+<p><strong>注</strong>: <a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API">MDN のドラッグ＆ドロップドキュメント</a>でもっと情報を確認することができます。</p>
 </div>
 
 <h4 id="contentEditable" name="contentEditable">コンテンツを編集可能にする</h4>
