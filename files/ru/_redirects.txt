@@ -290,6 +290,7 @@
 /ru/docs/Sample_.htaccess_file	/ru/docs/Learn/Server-side/Apache_Configuration_htaccess
 /ru/docs/Tools/Debugger/How_to/Отладка_кода_внутри_eval	/ru/docs/Tools/Debugger/How_to/Debug_eval_sources
 /ru/docs/Tools/Debugger/How_to/Работа_с_минифицированным_кодом	/ru/docs/Tools/Debugger/How_to/Pretty-print_a_minified_file
+/ru/docs/Tools/Index	/ru/docs/conflicting/Tools
 /ru/docs/Tools/Page_Inspector/How_to/Otkrytie_Inspektora	/ru/docs/Tools/Page_Inspector/How_to/Open_the_Inspector
 /ru/docs/Tools/Page_Inspector/How_to/Vybor_elementa	/ru/docs/Tools/Page_Inspector/How_to/Select_an_element
 /ru/docs/Tools/Page_Inspector/How_to/Исследовать_event_listeners	/ru/docs/Tools/Page_Inspector/How_to/Examine_event_listeners

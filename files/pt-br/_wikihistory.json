@@ -5001,7 +5001,7 @@
       "ronrother"
     ]
   },
-  "Web/API/EventSource/onerror": {
+  "Web/API/EventSource/error_event": {
     "modified": "2019-03-18T21:30:45.574Z",
     "contributors": [
       "ronrother"

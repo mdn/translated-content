@@ -214,7 +214,7 @@
 /fr/docs/Apprendre/HTML/Tableaux/Basics	/fr/docs/Learn/HTML/Tables/Basics
 /fr/docs/Apprendre/HTML/Tableaux/Structuring_planet_data	/fr/docs/Learn/HTML/Tables/Structuring_planet_data
 /fr/docs/Apprendre/HTML/Écrire_une_simple_page_HTML	/fr/docs/conflicting/Learn/Getting_started_with_the_web
-/fr/docs/Apprendre/Index	/fr/docs/Learn/Index
+/fr/docs/Apprendre/Index	/fr/docs/conflicting/Learn
 /fr/docs/Apprendre/Infrastructure	/fr/docs/Learn/Common_questions
 /fr/docs/Apprendre/JavaScript	/fr/docs/Learn/JavaScript
 /fr/docs/Apprendre/JavaScript/Building_blocks	/fr/docs/Learn/JavaScript/Building_blocks
@@ -1262,6 +1262,7 @@
 /fr/docs/Firefox_8_for_developers	/fr/docs/Mozilla/Firefox/Releases/8
 /fr/docs/Firefox_9_for_developers	/fr/docs/Mozilla/Firefox/Releases/9
 /fr/docs/Firefox_pour_les_développeurs	/fr/docs/Mozilla/Firefox/Releases
+/fr/docs/Games/Index	/fr/docs/conflicting/Games
 /fr/docs/Games/Workflows	/fr/docs/Games/Tutorials
 /fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 /fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field	/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
@@ -1473,7 +1474,7 @@
 /fr/docs/Glossaire/Identificateur	/fr/docs/Glossary/Identifier
 /fr/docs/Glossaire/Image_matricielle	/fr/docs/Glossary/Raster_image
 /fr/docs/Glossaire/Immuable	/fr/docs/Glossary/Immutable
-/fr/docs/Glossaire/Index	/fr/docs/Glossary/Index
+/fr/docs/Glossaire/Index	/fr/docs/conflicting/Glossary
 /fr/docs/Glossaire/IndexedDB	/fr/docs/Glossary/IndexedDB
 /fr/docs/Glossaire/Injection_SQL	/fr/docs/Glossary/SQL_Injection
 /fr/docs/Glossaire/Input_method_editor	/fr/docs/Glossary/Input_method_editor
@@ -1747,6 +1748,7 @@
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
 /fr/docs/Glossary/Gaia	/fr/docs/orphaned/Glossary/Gaia
 /fr/docs/Glossary/Gonk	/fr/docs/orphaned/Glossary/Gonk
+/fr/docs/Glossary/Index	/fr/docs/conflicting/Glossary
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/orphaned/Glossary/Modern_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
 /fr/docs/Glossary/Origine	/fr/docs/Glossary/Origin
@@ -2014,7 +2016,7 @@
 /fr/docs/HTTP/Headers/Vary	/fr/docs/Web/HTTP/Headers/Vary
 /fr/docs/HTTP/Headers/WWW-Authenticate	/fr/docs/Web/HTTP/Headers/WWW-Authenticate
 /fr/docs/HTTP/Headers/X-Frame-Options	/fr/docs/Web/HTTP/Headers/X-Frame-Options
-/fr/docs/HTTP/Index	/fr/docs/Web/HTTP/Index
+/fr/docs/HTTP/Index	/fr/docs/conflicting/Web/HTTP
 /fr/docs/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
 /fr/docs/HTTP/Méthode/CONNECT	/fr/docs/Web/HTTP/Methods/CONNECT
 /fr/docs/HTTP/Méthode/DELETE	/fr/docs/Web/HTTP/Methods/DELETE
@@ -2964,7 +2966,7 @@
 /fr/docs/Jeux	/fr/docs/Games
 /fr/docs/Jeux/Anatomie	/fr/docs/Games/Anatomy
 /fr/docs/Jeux/Exemples	/fr/docs/Games/Examples
-/fr/docs/Jeux/Index	/fr/docs/Games/Index
+/fr/docs/Jeux/Index	/fr/docs/conflicting/Games
 /fr/docs/Jeux/Introduction	/fr/docs/Games/Introduction
 /fr/docs/Jeux/Introduction_to_HTML5_Game_Gevelopment_(summary)	/fr/docs/Games/Introduction_to_HTML5_Game_Development
 /fr/docs/Jeux/Publier_jeux	/fr/docs/Games/Publishing_games
@@ -2997,6 +2999,7 @@
 /fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS	/fr/docs/Learn/CSS/First_steps/What_is_CSS
 /fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens	/fr/docs/Learn/CSS/Styling_text/Styling_links
 /fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
+/fr/docs/Learn/Index	/fr/docs/conflicting/Learn
 /fr/docs/Learn/JavaScript/Asynchronous/Async_await	/fr/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
 /fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/fr/docs/conflicting/Learn/JavaScript/Asynchronous
 /fr/docs/Learn/JavaScript/Asynchronous/Concepts	/fr/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
@@ -3083,6 +3086,7 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/Differences_entre_les_implementations_api	/fr/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 /fr/docs/Mozilla/Add-ons/WebExtensions/Exemples	/fr/docs/Mozilla/Add-ons/WebExtensions/Examples
 /fr/docs/Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome	/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
+/fr/docs/Mozilla/Add-ons/WebExtensions/Index	/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions
 /fr/docs/Mozilla/Add-ons/WebExtensions/Intercepter_requêtes_HTTP	/fr/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 /fr/docs/Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs	/fr/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 /fr/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/fr/docs/Mozilla/Add-ons/WebExtensions/API
@@ -3219,7 +3223,7 @@
 /fr/docs/Outils/Eyedropper	/fr/docs/Tools/Eyedropper
 /fr/docs/Outils/Firefox_OS_Simulator_clone	/fr/docs/Tools/Firefox_OS_Simulator_clone
 /fr/docs/Outils/Frise_chronologique	/fr/docs/conflicting/Tools/Performance/Waterfall
-/fr/docs/Outils/Index	/fr/docs/Tools/Index
+/fr/docs/Outils/Index	/fr/docs/conflicting/Tools
 /fr/docs/Outils/Inspecteur	/fr/docs/Tools/Page_Inspector
 /fr/docs/Outils/Inspecteur/3-pane_mode	/fr/docs/Tools/Page_Inspector/3-pane_mode
 /fr/docs/Outils/Inspecteur/Comment	/fr/docs/Tools/Page_Inspector/How_to
@@ -3404,6 +3408,7 @@
 /fr/docs/Tools/Debugger/How_to/Break_on_a_DOM_event	/fr/docs/Tools/Debugger/Break_on_DOM_mutation
 /fr/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	/fr/docs/conflicting/Tools/Debugger/How_to/Set_Watch_Expressions
 /fr/docs/Tools/Debugger/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
+/fr/docs/Tools/Index	/fr/docs/conflicting/Tools
 /fr/docs/Tools/Page_Inspector/How_to/Examiner_et_éditer_le_code_HTML	/fr/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML
 /fr/docs/Tools/Page_Inspector/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /fr/docs/Tools/Web_Console/Keyboard_shortcuts	/fr/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts
@@ -3646,6 +3651,7 @@
 /fr/docs/Web/API/Event.stopPropagation	/fr/docs/Web/API/Event/stopPropagation
 /fr/docs/Web/API/Event/Comparaison_des_cibles_d_évènements	/fr/docs/Web/API/Event/Comparison_of_Event_Targets
 /fr/docs/Web/API/Event/createEvent	/fr/docs/conflicting/Web/API/Document/createEvent
+/fr/docs/Web/API/EventSource/onopen	/fr/docs/Web/API/EventSource/open_event
 /fr/docs/Web/API/EventTarget/attachEvent	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventTarget/detachEvent	/fr/docs/Web/API/EventTarget/removeEventListener
 /fr/docs/Web/API/EventTarget/fireEvent	/fr/docs/Web/API/EventTarget/dispatchEvent
@@ -4504,6 +4510,7 @@
 /fr/docs/Web/HTML/HTML5/Liste_des_éléments_HTML5	/fr/docs/conflicting/Web/HTML/Element
 /fr/docs/Web/HTML/Image_avec_ressources_origines_multiples_CORS_activees	/fr/docs/Web/HTML/CORS_enabled_image
 /fr/docs/Web/HTML/Images_avec_le_contrôle_d_accès_HTTP	/fr/docs/Web/HTML/CORS_enabled_image
+/fr/docs/Web/HTML/Index	/fr/docs/conflicting/Web/HTML
 /fr/docs/Web/HTML/Inline_elemente	/fr/docs/Web/HTML/Inline_elements
 /fr/docs/Web/HTML/Introduction	/fr/docs/Learn/HTML/Introduction_to_HTML
 /fr/docs/Web/HTML/Introduction_to_HTML5	/fr/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
@@ -4534,6 +4541,7 @@
 /fr/docs/Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent	/fr/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /fr/docs/Web/HTTP/FAQ_sur_le_préchargement_des_liens	/fr/docs/Web/HTTP/Link_prefetching_FAQ
 /fr/docs/Web/HTTP/Headers/Serveur	/fr/docs/Web/HTTP/Headers/Server
+/fr/docs/Web/HTTP/Index	/fr/docs/conflicting/Web/HTTP
 /fr/docs/Web/HTTP/Méthode	/fr/docs/Web/HTTP/Methods
 /fr/docs/Web/HTTP/Méthode/CONNECT	/fr/docs/Web/HTTP/Methods/CONNECT
 /fr/docs/Web/HTTP/Méthode/DELETE	/fr/docs/Web/HTTP/Methods/DELETE
@@ -5498,6 +5506,7 @@
 /fr/docs/Web/MathML/Exemples	/fr/docs/Web/MathML/Examples
 /fr/docs/Web/MathML/Exemples/Dériver_la_Formule_Quadratique	/fr/docs/Web/MathML/Examples/Deriving_the_Quadratic_Formula
 /fr/docs/Web/MathML/Exemples/MathML_Theoreme_de_Pythagore	/fr/docs/Web/MathML/Examples/MathML_Pythagorean_Theorem
+/fr/docs/Web/MathML/Index	/fr/docs/conflicting/Web/MathML
 /fr/docs/Web/Media/Formats/Questions_sur_le_soutien	/fr/docs/Web/Media/Formats/Support_issues
 /fr/docs/Web/Media/Formats/Types_des_images	/fr/docs/Web/Media/Formats/Image_types
 /fr/docs/Web/Performance/Budgets_de_performance	/fr/docs/Web/Performance/Performance_budgets
@@ -5517,6 +5526,7 @@
 /fr/docs/Web/Reference/API	/fr/docs/orphaned/Web/Reference/API
 /fr/docs/Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML	/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
 /fr/docs/Web/SVG/Element/cercle	/fr/docs/Web/SVG/Element/circle
+/fr/docs/Web/SVG/Index	/fr/docs/conflicting/Web/SVG
 /fr/docs/Web/SVG/SVG_en_tant_qu_image	/fr/docs/Web/SVG/SVG_as_an_Image
 /fr/docs/Web/SVG/Sources_compatibilite	/fr/docs/Web/SVG/Compatibility_sources
 /fr/docs/Web/SVG/Tutoriel	/fr/docs/Web/SVG/Tutorial
@@ -5594,6 +5604,7 @@
 /fr/docs/Web/XPath/Fonctions/translate	/fr/docs/Web/XPath/Functions/translate
 /fr/docs/Web/XPath/Fonctions/true	/fr/docs/Web/XPath/Functions/true
 /fr/docs/Web/XPath/Fonctions/unparsed-entity-url	/fr/docs/Web/XPath/Functions/unparsed-entity-url
+/fr/docs/Web/XSLT/Index	/fr/docs/conflicting/Web/XSLT
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Définition_de_paramètres	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 /fr/docs/Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_avancé	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
@@ -5607,7 +5618,7 @@
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Les_liaisons_JavaScript_XSLT	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 /fr/docs/Web/XSLT/L'interface_XSLT_JavaScript_dans_Gecko/Ressources	/fr/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Resources
 /fr/docs/Web/XSLT/Paramètres_des_instructions_de_traitement	/fr/docs/Web/XSLT/PI_Parameters
-/fr/docs/Web/XSLT/Sommaire	/fr/docs/Web/XSLT/Index
+/fr/docs/Web/XSLT/Sommaire	/fr/docs/conflicting/Web/XSLT
 /fr/docs/Web/XSLT/Transformations_XML_avec_XSLT	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT
 /fr/docs/Web/XSLT/Transformations_XML_avec_XSLT/Autres_ressources	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 /fr/docs/Web/XSLT/Transformations_XML_avec_XSLT/La_référence_XSLT_XPath_de_Netscape	/fr/docs/Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference

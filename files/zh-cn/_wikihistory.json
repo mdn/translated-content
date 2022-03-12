@@ -12997,13 +12997,13 @@
       "Char-Ten"
     ]
   },
-  "Web/API/EventSource/onerror": {
+  "Web/API/EventSource/error_event": {
     "modified": "2019-03-23T22:09:23.181Z",
     "contributors": [
       "Char-Ten"
     ]
   },
-  "Web/API/EventSource/onopen": {
+  "Web/API/EventSource/open_event": {
     "modified": "2019-03-23T22:16:16.621Z",
     "contributors": [
       "kameii"
@@ -32750,13 +32750,6 @@
       "pans9"
     ]
   },
-  "Web/HTML/Index": {
-    "modified": "2019-03-21T11:52:09.419Z",
-    "contributors": [
-      "RainSlide",
-      "xcffl"
-    ]
-  },
   "Web/HTML/Inline_elements": {
     "modified": "2020-08-05T19:04:54.777Z",
     "contributors": [
@@ -47557,6 +47550,13 @@
     "contributors": [
       "xuxun",
       "wbamberg"
+    ]
+  },
+  "conflicting/Web/HTML": {
+    "modified": "2019-03-21T11:52:09.419Z",
+    "contributors": [
+      "RainSlide",
+      "xcffl"
     ]
   },
   "conflicting/Web/HTML/Element": {

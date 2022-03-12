@@ -196,6 +196,7 @@
 /ko/docs/Firefox_3_for_developers	/ko/docs/Mozilla/Firefox/Releases/3
 /ko/docs/Focus_management_in_HTML	/ko/docs/Web/API/Document/hasFocus
 /ko/docs/Full_page_zoom	/ko/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
+/ko/docs/Games/Index	/ko/docs/conflicting/Games
 /ko/docs/Games/Tutorials/2D_breakout_game_Phaser/득점	/ko/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
@@ -210,6 +211,7 @@
 /ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기	/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /ko/docs/Glossary/Client_hints	/ko/docs/Web/HTTP/Client_hints
 /ko/docs/Glossary/Header	/ko/docs/Glossary/HTTP_header
+/ko/docs/Glossary/Index	/ko/docs/conflicting/Glossary
 /ko/docs/Glossary/Transmission_Control_Protocol_(TCP)	/ko/docs/conflicting/Glossary/TCP
 /ko/docs/Glossary/동적_프로그래밍_언어	/ko/docs/Glossary/Dynamic_programming_language
 /ko/docs/Glossary/배열	/ko/docs/Glossary/array
@@ -313,6 +315,7 @@
 /ko/docs/Learn/HTML/Forms/Your_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
 /ko/docs/Learn/HTML/Howto/데이터_속성_사용하기	/ko/docs/Learn/HTML/Howto/Use_data_attributes
 /ko/docs/Learn/HTML/Multimedia_and_embedding/ideo_and_audio_content	/ko/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+/ko/docs/Learn/Index	/ko/docs/conflicting/Learn
 /ko/docs/Learn/JavaScript/Asynchronous/Async_await	/ko/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
 /ko/docs/Learn/JavaScript/Asynchronous/Concepts	/ko/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
 /ko/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/ko/docs/conflicting/Learn/JavaScript/Asynchronous
@@ -612,6 +615,7 @@
 /ko/docs/Web/Guide/HTML/폼/HTML_폼_구성_방법	/ko/docs/Learn/Forms/How_to_structure_a_web_form
 /ko/docs/Web/Guide/HTML/폼/My_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
 /ko/docs/Web/Guide/HTML/폼/Sending_and_retrieving_form_data	/ko/docs/Learn/Forms/Sending_and_retrieving_form_data
+/ko/docs/Web/Guide/Index	/ko/docs/conflicting/Web/Guide
 /ko/docs/Web/Guide/XML_파싱_및_직렬화	/ko/docs/Web/Guide/Parsing_and_serializing_XML
 /ko/docs/Web/Guide/그래픽	/ko/docs/Web/Guide/Graphics
 /ko/docs/Web/HTML/Canvas	/ko/docs/Web/API/Canvas_API
@@ -642,11 +646,13 @@
 /ko/docs/Web/HTML/Global_attributes/클래스	/ko/docs/Web/HTML/Global_attributes/class
 /ko/docs/Web/HTML/HTML5/HTML5_element_list	/ko/docs/Web/HTML/Element
 /ko/docs/Web/HTML/HTML에서_폼	/ko/docs/Learn/Forms
+/ko/docs/Web/HTML/Index	/ko/docs/conflicting/Web/HTML
 /ko/docs/Web/HTML/Introduction	/ko/docs/Learn/HTML/Introduction_to_HTML
 /ko/docs/Web/HTTP/Access_control_CORS	/ko/docs/Web/HTTP/CORS
 /ko/docs/Web/HTTP/Access_control_CORS/Errors	/ko/docs/Web/HTTP/CORS/Errors
 /ko/docs/Web/HTTP/Access_control_CORS/Errors/CORSDidNotSucceed	/ko/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed
 /ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types	/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+/ko/docs/Web/HTTP/Index	/ko/docs/conflicting/Web/HTTP
 /ko/docs/Web/HTTP/User_agent를_이용한_브라우저_감지	/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /ko/docs/Web/HTTP/상태_코드	/ko/docs/Web/HTTP/Status
 /ko/docs/Web/JavaScript/About	/ko/docs/Web/JavaScript/About_JavaScript
