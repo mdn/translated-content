@@ -16,18 +16,18 @@ Le pseudo-élément **`::-moz-range-thumb`** représente le curseur qui se dépl
 
 ## Exemples
 
+### HTML
+
+```html
+<input type="range" min="0" max="100" step="5" value="50"/>
+```
+
 ### CSS
 
 ```css
 input[type=range]::-moz-range-thumb {
   background-color: green;
 }
-```
-
-### HTML
-
-```html
-<input type="range" min="0" max="100" step="5" value="50"/>
 ```
 
 ### Résultat

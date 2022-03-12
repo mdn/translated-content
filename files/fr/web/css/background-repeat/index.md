@@ -97,6 +97,34 @@ background-repeat: unset;
 
 ## Exemples
 
+### HTML
+
+```html
+<ol>
+  <li>no-repeat
+    <div class="un"></div>
+  </li>
+  <li>repeat
+    <div class="deux"></div>
+  </li>
+  <li>repeat-x
+    <div class="trois"></div>
+  </li>
+  <li>repeat-y
+    <div class="quatre"></div>
+  </li>
+  <li>space
+    <div class="cinq"></div>
+  </li>
+  <li>round
+    <div class="six"></div>
+  </li>
+  <li>repeat-x, repeat-y (plusieurs images)
+    <div class="sept"></div>
+  </li>
+</ol>
+```
+
 ### CSS
 
 ```css
@@ -142,34 +170,6 @@ div {
                      repeat-y;
   height: 144px;
 }
-```
-
-### HTML
-
-```html
-<ol>
-  <li>no-repeat
-    <div class="un"></div>
-  </li>
-  <li>repeat
-    <div class="deux"></div>
-  </li>
-  <li>repeat-x
-    <div class="trois"></div>
-  </li>
-  <li>repeat-y
-    <div class="quatre"></div>
-  </li>
-  <li>space
-    <div class="cinq"></div>
-  </li>
-  <li>round
-    <div class="six"></div>
-  </li>
-  <li>repeat-x, repeat-y (plusieurs images)
-    <div class="sept"></div>
-  </li>
-</ol>
 ```
 
 ### Résultat

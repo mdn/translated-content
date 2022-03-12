@@ -82,6 +82,12 @@ div {
 
 Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le premier dégradé utilise `padding-box` pour `background-origin` et l'arrière-plan s'inscrit donc à l'intérieur de la bordure. Le second dégradé utilise `content-box` et apparaît donc uniquement derrière le contenu.
 
+#### HTML
+
+```html
+<div class="box">Coucou !</div>
+```
+
 #### CSS
 
 ```css
@@ -96,12 +102,6 @@ Dans cet exemple, la boîte possède une bordure épaisse en pointillés. Le pre
   background-origin: padding-box, content-box;
   background-repeat: no-repeat;
 }
-```
-
-#### HTML
-
-```html
-<div class="box">Coucou !</div>
 ```
 
 #### Résultat

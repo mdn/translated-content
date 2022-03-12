@@ -51,6 +51,12 @@ Le but de ce descripteur est de segmenter les ressources liées aux polices afin
 
 Dans cet exemple, on crée un élément HTML [`<div>`](/fr/docs/Web/HTML/Element/div) pour lequel on veut que l'esperluette soit mise en forme avec une police différente. Pour que le résultat soit apparent, on utilisera une police sans empattement pour le texte (_Helvetica_) et une police avec des empattements (_Times New Roman_) pour l'esperluette.
 
+### HTML
+
+```html
+<div>Me & You = Us</div>
+```
+
 ### CSS
 
 Dans la feuille de style CSS, on définit une règle [`@font-face`](/fr/docs/Web/CSS/@font-face) qui n'inclue qu'un seul caractère. Cela signifie que seul ce caractère sera affiché avec cette police. On aurait également pu encadrer l'esperluette dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) et appliquer une autre règle sur cet élément, mais on aurait alors eu un balisage plus lourd et une règle spécifique en plus sur la feuille de style.
@@ -66,12 +72,6 @@ div {
   font-size: 4em;
   font-family: Ampersand, Helvetica, sans-serif;
 }
-```
-
-### HTML
-
-```html
-<div>Me & You = Us</div>
 ```
 
 ### Résultat

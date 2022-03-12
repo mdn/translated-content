@@ -16,18 +16,18 @@ Le pseudo-élément **`::-moz-range-track`** est un pseudo-élément spécifique
 
 ## Exemples
 
+### HTML
+
+```html
+<input type="range" min="0" max="100" step="5" value="50"/>
+```
+
 ### CSS
 
 ```css
 input[type=range]::-moz-range-track {
   background-color: green;
 }
-```
-
-### HTML
-
-```html
-<input type="range" min="0" max="100" step="5" value="50"/>
 ```
 
 ### Résultat
