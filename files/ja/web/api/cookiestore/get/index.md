@@ -73,7 +73,7 @@ var cookie = CookieStore.get(options);
 
 ## 例
 
-この例では、"cookie1" という名前の Cookie を返します。もし Cookie が見つかれば、プロミスの結果は1つの Cookie の詳細を含むオブジェクトになります。
+この例では、"cookie1" という名前の Cookie を返します。もし Cookie が見つかれば、プロミスの結果は 1 つの Cookie の詳細を含むオブジェクトになります。
 
 ```js
 let cookie = cookieStore.get('cookie1');
