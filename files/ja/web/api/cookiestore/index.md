@@ -21,9 +21,9 @@ browser-compat: api.CookieStore
 - {{domxref("CookieStore.delete()")}}
   - : `delete()` メソッドは与えられた名前またはオプションオブジェクトを持つ Cookie を削除します。削除が完了すると解決される {{jsxref("Promise")}} が返されます。
 - {{domxref("CookieStore.get()")}}
-  - : `get()` メソッドは与えられた名前またはオプションオブジェクトで 1 つの Cookie を取得します。1 つのCookieの詳細に解決される {{jsxref("Promise")}} を返します。
+  - : `get()` メソッドは与えられた名前またはオプションオブジェクトで 1 つの Cookie を取得します。1 つの Cookie の詳細に解決される {{jsxref("Promise")}} を返します。
 - {{domxref("CookieStore.getAll()")}}
-  - : `getAll()` メソッドはマッチするすべてのCookieを取得します。Cookie のリストに解決される {{jsxref("Promise")}} を返します。
+  - : `getAll()` メソッドはマッチするすべての Cookie を取得します。Cookie のリストに解決される {{jsxref("Promise")}} を返します。
 - {{domxref("CookieStore.set()")}}
   - : `set()` メソッドは与えられた名前と値またはオプションオブジェクトを Cookie に設定し、Cookie が設定されると解決される {{jsxref("Promise")}} を返します。
 

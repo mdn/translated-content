@@ -64,7 +64,7 @@ Cookie の設定が完了すると {{jsxref("Undefined")}} に解決される {{
 - {{jsxref("TypeError")}}
   - : 与えられた値での Cookie の設定に失敗した場合にスローされます。
 - {{domxref("DOMException")}} `SecurityError`
-  - : オリジンがURLに {{glossary("serialize")}} されない場合にスローされます。
+  - : オリジンが URL に {{glossary("serialize")}} されない場合にスローされます。
 
 ## 例
 
