@@ -8,20 +8,19 @@ tags:
   - NeedsContent
 translation_of: Web/API/EventListener
 ---
-<p>{{APIRef("DOM Events")}}</p>
+{{APIRef("DOM Events")}}
 
-<p><strong><code>EventListener</code></strong> インターフェースは、{{domxref("EventTarget")}} オブジェクトによってディスパッチされたイベントを処理できるオブジェクトを表します。</p>
+**`EventListener`** インターフェースは、{{domxref("EventTarget")}} オブジェクトによってディスパッチされたイベントを処理できるオブジェクトを表します。
 
-<div class="blockIndicator note">
-<p>レガシーコンテンツとの互換性が必要なため、<code>EventListener</code> は、関数、<code>handleEvent()</code>メソッドをもつオブジェクト両方を受け入れます。<br>
- これを以下の <a href="/ja/docs/Web/API/EventListener$edit#Example">例</a> に示します。</p>
-</div>
 
-<h2 id="プロパティ">プロパティ</h2>
+> **Note:** レガシーコンテンツとの互換性が必要なため、`EventListener` は、関数、`handleEvent()` メソッドをもつオブジェクト両方を受け入れます。  
+> これを以下の [例](#例) に示します。
 
-<p>このインターフェースはいかなるプロパティを実装も継承もしません。</p>
+## プロパティ
 
-<h2 id="Method_overview" name="Method_overview">メソッドの概要</h2>
+このインターフェースはいかなるプロパティを実装も継承もしません。
+
+## メソッドの概要
 
 <table class="standard-table">
  <tbody>
@@ -31,37 +30,42 @@ translation_of: Web/API/EventListener
  </tbody>
 </table>
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<h3 id="handleEvent" name="handleEvent()">handleEvent()</h3>
+### handleEvent()
 
-<p>このメソッドは、<code>EventListener</code> インターフェースが登録されたイベントタイプについて、そのイベントが発生するたびに呼び出されます。</p>
+このメソッドは、`EventListener` インターフェースが登録されたイベントタイプについて、そのイベントが発生するたびに呼び出されます。
 
-<pre class="eval">void handleEvent(
+```js
+void handleEvent(
   in Event event
 );
-</pre>
+```
 
-<h5 id="Parameters" name="Parameters">引数</h5>
+##### 引数
 
-<dl>
- <dt><code>event</code></dt>
- <dd>発生した DOM {{ domxref("Event") }} イベント。</dd>
-</dl>
+- **`event`**
+  - : 発生した DOM {{ domxref("Event") }} イベント。
 
-<h3 id="Remarks" name="Remarks">補記</h3>
+### 補記
 
-<p>このインターフェースは <code><span class="nowiki">[function]</span></code> フラグが付いているため、すべての JavaScript <a href="/JavaScript/Reference/Global_Objects/Function">Function</a> オブジェクトで自動的に実装されています。このような実装で {{ manch("handleEvent") }} メソッドを呼び出すと、自動的にその機能が実行されます。</p>
+このインターフェースは `[function]` フラグが付いているため、すべての JavaScript [Function](/ja/JavaScript/Reference/Global_Objects/Function) オブジェクトで自動的に実装されています。このような実装で {{ manch("handleEvent") }} メソッドを呼び出すと、自動的にその機能が実行されます。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre>&lt;button id="btn"&gt;Click here!&lt;/button&gt;</pre>
+```html
+<button id="btn">Click here!</button>
 
-<h3 id="JavaScript">JavaScript</h3>
+<p id="funcOutput"></p>
+<p id="handleEvtOutput"></p>
+```
 
-<pre>const buttonElement = document.getElementById('btn');
+### JavaScript
+
+```js
+const buttonElement = document.getElementById('btn');
 
 // Add a handler for the 'click' event by providing a callback function.
 // Whenever the element is clicked, a pop-up with "Element clicked!" will
@@ -77,20 +81,16 @@ buttonElement.addEventListener('click', {
     alert('Element clicked through handleEvent property!');
   }
 });
-</pre>
+```
 
-<h3 id="Result">Result</h3>
+### Result
 
-<p>{{EmbedLiveSample('Example')}}</p>
+{{EmbedLiveSample('Example')}}
 
-<h3 id="See_Also">See Also:</h3>
+### See Also:
 
-<ul>
- <li><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener</a></li>
-</ul>
+- [addEventListener](/ja/docs/Web/API/EventTarget/addEventListener)
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}</li>
-</ul>
+- {{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}
