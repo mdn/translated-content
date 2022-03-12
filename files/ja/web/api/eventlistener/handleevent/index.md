@@ -19,32 +19,29 @@ browser-compat: api.EventListener.handleEvent
 ---
 {{APIRef("DOM Events")}}
 
-The {{domxref("EventListener")}} method
-**`handleEvent()`** method is called by the
-{{Glossary("user agent")}} when an event is sent to the
-`EventListener`, in order to handle events that occur on an observed
-{{domxref("EventTarget")}}.
+{{domxref("EventListener")}} の **`handleEvent()`** メソッドは、
+監視されている {{domxref("EventTarget")}} 上で発生するイベントを処理するために
+`EventListener` へとイベントが送られたとき、 {{Glossary("user agent")}} によって呼び出されます。
 
-## Syntax
+## 構文
 
 ```js
 eventListener.handleEvent(event);
 ```
 
-### Parameters
+### 引数
 
 - **`event`**
-  - : An {{domxref("Event")}} object describing the event that has been fired and needs
-    to be processed.
+  - : イベントが発火してから、処理が必要となるイベントが記述された {{domxref("Event")}} オブジェクト。
 
-### Return value
+### 戻り値
 
 None.
 
-## Specifications
+## 仕様
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザー実装状況
 
 {{Compat}}
