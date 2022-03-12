@@ -25,7 +25,7 @@ targetElement.insertAdjacentElement(position, element);
 
 - `position`
 
-  - : {{domxref("DOMString")}} で、 `targetElement` の相対位置を表します。以下の何れかの文字列一致する必要があります（大文字小文字の区別なし）。
+  - : {{domxref("DOMString")}} で、 `targetElement` の相対位置を表します。以下の何れかの文字列と一致する必要があります（大文字小文字の区別なし）。
 
     - `'beforebegin'`: `targetElement` 自体の前。
     - `'afterbegin'`: `targetElement` の直下、最初の子の前。
