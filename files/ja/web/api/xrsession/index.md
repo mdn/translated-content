@@ -40,9 +40,9 @@ _以下にリストしたプロパティに加えて、`XRSession` は親イン�
 - {{DOMxRef("XRSession.preferredReflectionFormat", "preferredReflectionFormat")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : ライティング推定テクスチャデータに使用されるこのセッションの優先反射フォーマットを返します。
 - {{DOMxRef("XRSession.renderState", "renderState")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : 画像のレンダリング方法に影響を与えるオプションを含む{{domxref("XRRenderState")}}オブジェクト This includes things such as the near and far clipping planes (distances defining how close and how far away objects can be and still get rendered), as well as field of view information.
+  - : 画像のレンダリング方法に影響を与えるオプションを含む {{domxref("XRRenderState")}} オブジェクト。 これには近距離や遠距離のクリッピングプレーン(オブジェクトをどれだけ近づけたり遠ざけたりしてもレンダリングされるかを定義する距離)や、視野情報などが含まれます。
 - {{DOMxRef("XRSession.visibilityState", "visibilityState")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : A string indicating whether or not the session's imagery is visible to the user, and if so, if it's being visible but not currently the target for user events.
+  - : セッションの画像がユーザーに表示されているかどうか、表示されているが現在はユーザーイベントのターゲットではないかどうかを示す文字列。
 
 ## Methods
 
