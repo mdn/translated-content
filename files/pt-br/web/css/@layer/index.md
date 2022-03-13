@@ -22,7 +22,7 @@ A [regra at (at-rule)](/pt-BR/docs/Web/CSS/At-rule) **`@layer`** define uma _cam
 }
 ```
 
-## Síntaxe
+## Sintaxe
 
 Você pode utilizar o `@layer` para criar uma camada de cascata de três maneiras. A primeira é como no exemplo acima, criando um bloco com o `@layer` e inserindo as regras CSS dentro deste bloco.
 
@@ -99,7 +99,7 @@ Se uma camada não tiver seu nome declarado, como por exemplo:
 ```
 Então uma camada anônima é criada. Ela funciona da mesma maneira das camadas nomeadas, porém novas regras não podem ser adicionadas à essa camada.
 
-## Síntaxe formal
+## Sintaxe formal
 
 {{CSSSyntax}}
 
