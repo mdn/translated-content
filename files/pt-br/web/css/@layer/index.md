@@ -9,14 +9,12 @@ tags:
   - Web
   - camada
   - cascata
-  - layer
-  - cascade
-  
+
 browser-compat: css.at-rules.layer
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-A [regra at (at-rule)](/pt-BR/docs/Web/CSS/At-rule) **`@layer`** define uma _camada de cascata_. Dentro dessa camada, as regras CSS dentro de uma camada de cascata fazem parte da mesma cascata, dando mais controle sobre a cascata para os desenvolvedores web.
+A [regra at (at-rule)](/pt-BR/docs/Web/CSS/At-rule) **`@layer`** define uma _camada de cascata_. Dentro dessa camada, as regras CSS fazem parte da mesma cascata, dando mais controle sobre as cascatas para os desenvolvedores web.
 
 ```css
 @layer temas {
