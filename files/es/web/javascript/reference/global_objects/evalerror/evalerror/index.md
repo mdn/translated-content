@@ -21,7 +21,7 @@ new EvalError(message, fileName, lineNumber)
 - `message` {{optional_inline}}
   - : Descripción del error humanamente legible
 - `fileName` {{optional_inline}}
-  - : El nombre del archivo que contiene el código que causó la excepción.
+  - : El nombre del archivo que contiene el código que causó la excepción
 - `lineNumber` {{optional_inline}}
   - : El número de línea del código que causó la excepción
 
