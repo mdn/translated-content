@@ -11,385 +11,342 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p><code><strong>reduce()</strong></code> 方法对数组中的每个元素执行一个由您提供的<strong>reducer</strong>函数(升序执行)，将其结果汇总为单个返回值。</p>
+**`reduce()`** 方法对数组中的每个元素按序执行一个由您提供的 **reducer** 函数，每一次运行 **reducer** 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值。
 
-<div>{{EmbedInteractiveExample("pages/js/array-reduce.html")}}</div>
+第一次执行回调函数时，不存在“上一次的计算结果”。如果需要回调函数从数组索引为 0 的元素开始执行，则需要传递初始值。否则，数组索引为 0 的元素将被作为初始值 *initialValue*，迭代器将从第二个元素开始执行（索引为 1 而不是 0）。
 
-<div>
-<p><strong>reducer</strong> 函数接收4个参数:</p>
+下面的例子能够帮助你理解 `reduce()` 的用处——计算数组所有元素的总和：
 
-<ol>
- <li>Accumulator (acc) (累计器)</li>
- <li>Current Value (cur) (当前值)</li>
- <li>Current Index (idx) (当前索引)</li>
- <li>Source Array (src) (源数组)</li>
-</ol>
+{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
 
-<p>您的 <strong>reducer</strong> 函数的返回值分配给累计器，该返回值在数组的每个迭代中被记住，并最后成为最终的单个结果值。</p>
-</div>
+**reducer** 逐个遍历数组元素，每一步都将当前元素的值与上一步的计算结果相加（上一步的计算结果是当前元素之前所有元素的总和）——直到没有更多的元素被相加。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre><var>arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])</var></pre>
+```js
+// Arrow function
+reduce((previousValue, currentValue) => { /* ... */ } )
+reduce((previousValue, currentValue, currentIndex) => { /* ... */ } )
+reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ } )
+reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
 
-<h3 id="参数">参数</h3>
+// Callback function
+reduce(callbackFn)
+reduce(callbackFn, initialValue)
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>执行数组中每个值 (如果没有提供 <code>initialValue则第一个值除外</code>)的函数，包含四个参数：
- <dl>
-  <dt><strong><code>accumulator</code></strong></dt>
-  <dd>
-  <p>累计器累计回调的返回值; 它是上一次调用回调时返回的累积值，或<code>initialValue</code>（见于下方）。</p>
-  </dd>
-  <dt><code>currentValue</code></dt>
-  <dd>数组中正在处理的元素。</dd>
-  <dt><code>index</code> {{optional_inline}}</dt>
-  <dd>数组中正在处理的当前元素的索引。 如果提供了<code>initialValue</code>，则起始索引号为0，否则从索引1起始。</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>调用<code>reduce()</code>的数组</dd>
- </dl>
- </dd>
- <dt><code>initialValue</code>{{optional_inline}}</dt>
- <dd>作为第一次调用 <code>callback</code>函数时的第一个参数的值。 如果没有提供初始值，则将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。</dd>
-</dl>
+// Inline callback function
+reduce(function(previousValue, currentValue) { /* ... */ })
+reduce(function(previousValue, currentValue, currentIndex) { /* ... */ })
+reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
+reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ }, initialValue)
+```
 
-<h3 id="返回值">返回值</h3>
+### 参数
 
-<p>函数累计处理的结果</p>
+- `callbackFn`
+  - : 一个 “reducer” 函数，包含四个参数：
+    - `previousValue`：上一次调用 `callbackFn` 时的返回值。在第一次调用时，若指定了初始值  `initialValue`，其值则为 `initialValue`，否则为数组索引为 0 的元素 `array[0]`。
+    - `currentValue`：数组中正在处理的元素。在第一次调用时，若指定了初始值  `initialValue`，其值则为数组索引为 0 的元素 `array[0]`，否则为 `array[1]`。
+    - `currentIndex`：数组中正在处理的元素的索引。若指定了初始值 `initialValue`，则起始索引号为 0，否则从索引 1 起始。
+    - `array`：用于遍历的数组。
+- `initialValue` {{optional_inline}}
+  - : 作为第一次调用 `callback` 函数时参数 *previousValue* 的值。若指定了初始值 `initialValue`，则 `currentValue` 则将使用数组第一个元素；否则 `previousValue` 将使用数组第一个元素，而 `currentValue` 将使用数组第二个元素。
 
-<h2 id="描述">描述</h2>
+### 返回值
 
-<p><code>reduce</code>为数组中的每一个元素依次执行<code>callback</code>函数，不包括数组中被删除或从未被赋值的元素，接受四个参数：</p>
+使用 “reducer” 回调函数遍历整个数组后的结果。
 
-<ul>
- <li><code>accumulator 累计器</code></li>
- <li><code>currentValue 当前值</code></li>
- <li><code>currentIndex 当前索引</code></li>
- <li><code>array 数组</code></li>
-</ul>
+### 异常
 
-<p>回调函数第一次执行时，<code>accumulator</code> 和<code>currentValue</code>的取值有两种情况：如果调用<code>reduce()</code>时提供了<code>initialValue</code>，<code>accumulator</code>取值为<code>initialValue</code>，<code>currentValue</code>取数组中的第一个值；如果没有提供 <code>initialValue</code>，那么<code>accumulator</code>取数组中的第一个值，<code>currentValue</code>取数组中的第二个值。</p>
+- {{jsxref("TypeError")}}
+  - : 数组为空且初始值 `initialValue` 未提供。
 
-<div class="note">
-<p><strong>备注：</strong>如果没有提供<code>initialValue</code>，reduce 会从索引1的地方开始执行 callback 方法，跳过第一个索引。如果提供<code>initialValue</code>，从索引0开始。</p>
-</div>
+## 描述
 
-<p>如果数组为空且没有提供<code>initialValue</code>，会抛出{{jsxref("TypeError")}} 。如果数组仅有一个元素（无论位置如何）并且没有提供<code>initialValue</code>， 或者有提供<code>initialValue</code>但是数组为空，那么此唯一值将被返回并且<code>callback</code>不会被执行。</p>
+ECMAScript 规范描述了 `reduce()` 的行为：
 
-<p>提供初始值通常更安全，正如下面的例子，如果没有提供<code>initialValue</code>，则可能有四种输出：</p>
+> *callbackfn* 应是一个接受四个参数的函数，`reduce` 对于数组中第一个元素之后的每一个元素，按升序各调用一次回调函数。
+>
+> *callbackfn* 被调用时会传入四个参数：
+>
+> - *previousValue*（前一次调用 *callbackfn* 得到的返回值）
+> - *currentValue*（数组中正在处理的元素）
+> - *currentIndex*（数组中正在处理的元素的索引）
+> - 被遍历的对象
+>
+> 回调函数第一次执行时，*previousValue* 和 *currentValue* 的取值有两种情况：
+> - 如果调用 `reduce()` 时提供了 *initialValue*，*previousValue* 取值则为 *initialValue*，*currentValue* 则取数组中的第一个值。
+> - 如果没有提供 *initialValue*，那么 *previousValue* 取数组中的第一个值，*currentValue* 取数组中的第二个值。
+>
+> 如果数组为空且为指定初始值 *initialValue*，则会抛出 {{jsxref("TypeError")}}。
+>
+> `reduce` 不会直接改变调用它的对象，但对象可被调用的 *callbackfn* 所改变。
+>
+> 遍历的元素范围是在第一次调用 *callbackfn* 之前确定的。所以即使有元素在调用开始后被追加到数组中，这些元素也不会被 *callbackfn* 访问。如果数组现有的元素发生了变化，传递给 *callbackfn* 的值将会是元素被 `reduce` 访问时的值（即发生变化后的值）；在调用 `reduce` 开始后，尚未被访问的元素若被删除，则其将不会被 `reduce` 访问。
 
-<pre class="brush: js">var maxCallback = ( acc, cur ) =&gt; Math.max( acc.x, cur.x );
-var maxCallback2 = ( max, cur ) =&gt; Math.max( max, cur );
+如果数组仅有一个元素（无论位置如何）并且没有提供初始值 *initialValue*，或者有提供 *initialValue* 但是数组为空，那么此唯一值将被返回且 `callbackfn` 不会被执行。
 
-// reduce() 没有初始值
-[ { x: 2 }, { x: 22 }, { x: 42 } ].reduce( maxCallback ); // NaN
-[ { x: 2 }, { x: 22 }            ].reduce( maxCallback ); // 22
-[ { x: 2 }                       ].reduce( maxCallback ); // { x: 2 }
-[                                ].reduce( maxCallback ); // TypeError
+提供初始值 *initialValue* 通常更安全，正如下面的例子，如果没有提供 *initialValue*，则 `reduce` 方法会因数组长度的不同（大于 1、等于 1、等于 0）而有不同的表现：
 
-// map/reduce; 这是更好的方案，即使传入空数组或更大数组也可正常执行
-[ { x: 22 }, { x: 42 } ].map( el =&gt; el.x )
-                        .reduce( maxCallback2, -Infinity );
-</pre>
+```js
+const getMax = (a, b) => Math.max(a, b);
 
-<h3 id="reduce_如何运行">reduce() 如何运行</h3>
+// callback is invoked for each element in the array starting at index 0
+[1, 100].reduce(getMax, 50); // 100
+[    50].reduce(getMax, 10); // 50
 
-<p>假如运行下段<code>reduce()</code>代码：</p>
+// callback is invoked once for element at index 1
+[1, 100].reduce(getMax);     // 100
 
-<pre class="brush:js">[0, 1, 2, 3, 4].reduce(function(accumulator, currentValue, currentIndex, array){
-  return accumulator + currentValue;
-});
-</pre>
+// callback is not invoked
+[    50].reduce(getMax);     // 50
+[      ].reduce(getMax, 1);  // 1
 
-<p>callback 被调用四次，每次调用的参数和返回值如下表：</p>
+[      ].reduce(getMax);     // TypeError
+```
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"><code>callback</code></th>
-   <th scope="col"><code>accumulator</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>currentIndex</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">return value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">first call</th>
-   <td><code>0</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>1</code></td>
-  </tr>
-  <tr>
-   <th scope="row">second call</th>
-   <td><code>1</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>3</code></td>
-  </tr>
-  <tr>
-   <th scope="row">third call</th>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>6</code></td>
-  </tr>
-  <tr>
-   <th scope="row">fourth call</th>
-   <td><code>6</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
- </tbody>
+### 无初始值时 reduce() 如何运行
+
+假如运行以下无初始值的 `reduce()` 代码：
+
+```js
+const array = [15, 16, 17, 18, 19];
+
+function reducer(previous, current, index, array) {
+  const returns = previous + current;
+  console.log(`previous: ${previous}, current: ${current}, index: ${index}, returns: ${returns}`);
+  return returns;
+}
+
+array.reduce(reducer);
+```
+
+callback 被调用四次，每次调用的参数和返回值如下表：
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">
+        <code><var>callback</var></code> iteration
+      </th>
+      <th scope="col">
+        <code><var>previousValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentIndex</var></code>
+      </th>
+      <th scope="col">
+        <code><var>array</var></code>
+      </th>
+      <th scope="col">return value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">first call</th>
+      <td><code>15</code></td>
+      <td><code>16</code></td>
+      <td><code>1</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>31</code></td>
+    </tr>
+    <tr>
+      <th scope="row">second call</th>
+      <td><code>31</code></td>
+      <td><code>17</code></td>
+      <td><code>2</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>48</code></td>
+    </tr>
+    <tr>
+      <th scope="row">third call</th>
+      <td><code>48</code></td>
+      <td><code>18</code></td>
+      <td><code>3</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>66</code></td>
+    </tr>
+    <tr>
+      <th scope="row">fourth call</th>
+      <td><code>66</code></td>
+      <td><code>19</code></td>
+      <td><code>4</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>85</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>由<code>reduce</code>返回的值将是最后一次回调返回值（10）。</p>
+由 `reduce()` 返回的值将是最后一次回调返回值（`85`）。
 
-<p>你还可以使用{{jsxref("Functions/Arrow_functions", "箭头函数","",1)}}来代替完整的函数。 下面的代码将产生与上面的代码相同的输出：</p>
+### 有初始值时 reduce() 如何运行
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce((prev, curr) =&gt; prev + curr );</pre>
+在这里，我们以相同的算法 reduce 同一个数组，但提供 `10` 作为初始值：
 
-<p>如果你打算提供一个初始值作为<code>reduce()</code>方法的第二个参数，以下是运行过程及结果：</p>
+```js
+[15, 16, 17, 18, 19].reduce( (previousValue, currentValue, currentIndex, array) => previousValue + currentValue, 10 )
+```
 
-<pre class="brush: js">[0, 1, 2, 3, 4].reduce((accumulator, currentValue, currentIndex, array) =&gt; {
-    return accumulator + currentValue
-}, 10)
-</pre>
-
-<table>
- <thead>
-  <tr>
-   <th scope="col"><code>callback</code></th>
-   <th scope="col"><code>accumulator</code></th>
-   <th scope="col"><code>currentValue</code></th>
-   <th scope="col"><code>currentIndex</code></th>
-   <th scope="col"><code>array</code></th>
-   <th scope="col">return value</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">first call</th>
-   <td><code>10</code></td>
-   <td><code>0</code></td>
-   <td><code>0</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>10</code></td>
-  </tr>
-  <tr>
-   <th scope="row">second call</th>
-   <td><code>10</code></td>
-   <td><code>1</code></td>
-   <td><code>1</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>11</code></td>
-  </tr>
-  <tr>
-   <th scope="row">third call</th>
-   <td><code>11</code></td>
-   <td><code>2</code></td>
-   <td><code>2</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>13</code></td>
-  </tr>
-  <tr>
-   <th scope="row">fourth call</th>
-   <td><code>13</code></td>
-   <td><code>3</code></td>
-   <td><code>3</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>16</code></td>
-  </tr>
-  <tr>
-   <th scope="row">fifth call</th>
-   <td><code>16</code></td>
-   <td><code>4</code></td>
-   <td><code>4</code></td>
-   <td><code>[0, 1, 2, 3, 4]</code></td>
-   <td><code>20</code></td>
-  </tr>
- </tbody>
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">
+        <code><var>callback</var></code> iteration
+      </th>
+      <th scope="col">
+        <code><var>previousValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentValue</var></code>
+      </th>
+      <th scope="col">
+        <code><var>currentIndex</var></code>
+      </th>
+      <th scope="col">
+        <code><var>array</var></code>
+      </th>
+      <th scope="col">return value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">first call</th>
+      <td><code>10</code></td>
+      <td><code>15</code></td>
+      <td><code>0</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>25</code></td>
+    </tr>
+    <tr>
+      <th scope="row">second call</th>
+      <td><code>25</code></td>
+      <td><code>16</code></td>
+      <td><code>1</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>41</code></td>
+    </tr>
+    <tr>
+      <th scope="row">third call</th>
+      <td><code>41</code></td>
+      <td><code>17</code></td>
+      <td><code>2</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>58</code></td>
+    </tr>
+    <tr>
+      <th scope="row">fourth call</th>
+      <td><code>58</code></td>
+      <td><code>18</code></td>
+      <td><code>3</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>76</code></td>
+    </tr>
+    <tr>
+      <th scope="row">fifth call</th>
+      <td><code>76</code></td>
+      <td><code>19</code></td>
+      <td><code>4</code></td>
+      <td><code>[15, 16, 17, 18, 19]</code></td>
+      <td><code>95</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<p>这种情况下<code>reduce()</code>返回的值是<code>20</code>。</p>
+这种情况下 `reduce()` 返回的值是 `95`。
 
-<h2 id="例子">例子</h2>
+## 示例
 
+### 求数组所有值的和
 
+```js
+let sum = [0, 1, 2, 3].reduce(function (previousValue, currentValue) {
+  return previousValue + currentValue
+}, 0)
+// sum is 6
+```
 
+你也可以写成箭头函数的形式：
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id="数组里所有值的和">数组里所有值的和</h3>
-
-<pre class="brush: js">var sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
-  return accumulator + currentValue;
-}, 0);
-// 和为 6</pre>
-
-<p>你也可以写成箭头函数的形式：</p>
-
-<pre class="brush: js">var total = [ 0, 1, 2, 3 ].reduce(
-  ( acc, cur ) =&gt; acc + cur,
+```js
+let total = [ 0, 1, 2, 3 ].reduce(
+  ( previousValue, currentValue ) => previousValue + currentValue,
   0
-);</pre>
+)
+```
 
-<h3 id="累加对象数组里的值">累加对象数组里的值</h3>
+### 累加对象数组里的值
 
-<p>要累加对象数组中包含的值，必须提供初始值，以便各个item正确通过你的函数。</p>
+要累加对象数组中包含的值，**必须**提供 *initialValue*，以便各个 item 正确通过你的函数。
 
-<pre class="brush: js">var initialValue = 0;
-var sum = [{x: 1}, {x:2}, {x:3}].reduce(function (accumulator, currentValue) {
-    return accumulator + currentValue.x;
-},initialValue)
-
-console.log(sum) // logs 6</pre>
-
-<p>你也可以写成箭头函数的形式：</p>
-
-<pre class="brush: js">var initialValue = 0;
-var sum = [{x: 1}, {x:2}, {x:3}].reduce(
-    (accumulator, currentValue) =&gt; accumulator + currentValue.x
-    ,initialValue
-);
+```js
+let initialValue = 0
+let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(function (previousValue, currentValue) {
+    return previousValue + currentValue.x
+}, initialValue)
 
 console.log(sum) // logs 6
-</pre>
+```
 
-<h3 id="将二维数组转化为一维">将二维数组转化为一维</h3>
+你也可以写成箭头函数的形式：
 
-<pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-  function(a, b) {
-    return a.concat(b);
+```js
+let initialValue = 0
+let sum = [{x: 1}, {x: 2}, {x: 3}].reduce(
+    (previousValue, currentValue) => previousValue + currentValue.x
+    , initialValue
+)
+
+console.log(sum) // logs 6
+```
+
+### 将二维数组转化为一维
+
+```js
+let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+  function(previousValue, currentValue) {
+    return previousValue.concat(currentValue)
   },
   []
-);
+)
 // flattened is [0, 1, 2, 3, 4, 5]
-</pre>
+```
 
-<p>你也可以写成箭头函数的形式：</p>
+你也可以写成箭头函数的形式：
 
-<pre class="brush: js">var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
- ( acc, cur ) =&gt; acc.concat(cur),
- []
-);
+```js
+let flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+  ( previousValue, currentValue ) => previousValue.concat(currentValue),
+  []
+)
+```
 
-</pre>
+### 计算数组中每个元素出现的次数
 
-<h3 id="计算数组中每个元素出现的次数">计算数组中每个元素出现的次数</h3>
+```js
+let names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice']
 
-<pre class="brush: js">var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
-
-var countedNames = names.reduce(function (allNames, name) {
+let countedNames = names.reduce(function (allNames, name) {
   if (name in allNames) {
-    allNames[name]++;
+    allNames[name]++
   }
   else {
-    allNames[name] = 1;
+    allNames[name] = 1
   }
-  return allNames;
-}, {});
+  return allNames
+}, {})
 // countedNames is:
-// { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }</pre>
+// { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
+```
 
-<h3 id="按属性对object分类">按属性对object分类</h3>
+### 按属性对 object 分类
 
-<pre class="brush: js">var people = [
+```js
+let people = [
   { name: 'Alice', age: 21 },
   { name: 'Max', age: 20 },
   { name: 'Jane', age: 20 }
@@ -397,16 +354,16 @@ var countedNames = names.reduce(function (allNames, name) {
 
 function groupBy(objectArray, property) {
   return objectArray.reduce(function (acc, obj) {
-    var key = obj[property];
+    let key = obj[property]
     if (!acc[key]) {
-      acc[key] = [];
+      acc[key] = []
     }
-    acc[key].push(obj);
-    return acc;
-  }, {});
+    acc[key].push(obj)
+    return acc
+  }, {})
 }
 
-var groupedPeople = groupBy(people, 'age');
+let groupedPeople = groupBy(people, 'age')
 // groupedPeople is:
 // {
 //   20: [
@@ -415,13 +372,15 @@ var groupedPeople = groupBy(people, 'age');
 //   ],
 //   21: [{ name: 'Alice', age: 21 }]
 // }
-</pre>
+```
 
-<h3 id="使用扩展运算符和initialValue绑定包含在对象数组中的数组">使用扩展运算符和initialValue绑定包含在对象数组中的数组</h3>
+### 使用扩展运算符和 initialValue 绑定包含在对象数组中的数组
 
-<pre class="brush: js">// friends - 对象数组
-// where object field "books" - list of favorite books
-var friends = [{
+
+```js
+// friends - an array of objects
+// where object field "books" is a list of favorite books
+let friends = [{
   name: 'Anna',
   books: ['Bible', 'Harry Potter'],
   age: 21
@@ -433,49 +392,59 @@ var friends = [{
   name: 'Alice',
   books: ['The Lord of the Rings', 'The Shining'],
   age: 18
-}];
+}]
 
 // allbooks - list which will contain all friends' books +
 // additional list contained in initialValue
-var allbooks = friends.reduce(function(prev, curr) {
-  return [...prev, ...curr.books];
-}, ['Alphabet']);
+let allbooks = friends.reduce(function(previousValue, currentValue) {
+  return [...previousValue, ...currentValue.books]
+}, ['Alphabet'])
 
 // allbooks = [
 //   'Alphabet', 'Bible', 'Harry Potter', 'War and peace',
 //   'Romeo and Juliet', 'The Lord of the Rings',
 //   'The Shining'
 // ]
-</pre>
+```
 
-<h3 id="数组去重">数组去重</h3>
+### 数组去重
 
-<div class="note">
-<p><strong>备注：</strong> 如果你正在使用一个可以兼容{{jsxref("Set")}} 和 {{jsxref("Array.from()")}} 的环境， 你可以使用<code>let orderedArray = Array.from(new Set(myArray));</code> 来获得一个相同元素被移除的数组。</p>
-</div>
+> **备注：** 如果你正在使用一个可以兼容{{jsxref("Set")}} 和 {{jsxref("Array.from()")}} 的环境，你可以使用`let arrayWithNoDuplicates = Array.from(new Set(myArray))` 来获得一个相同元素被移除的数组。
 
-<pre class="brush: js">let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
-let myOrderedArray = myArray.reduce(function (accumulator, currentValue) {
-  if (accumulator.indexOf(currentValue) === -1) {
-    accumulator.push(currentValue)
+```js
+let myArray = ['a', 'b', 'a', 'b', 'c', 'e', 'e', 'c', 'd', 'd', 'd', 'd']
+let myArrayWithNoDuplicates = myArray.reduce(function (previousValue, currentValue) {
+  if (previousValue.indexOf(currentValue) === -1) {
+    previousValue.push(currentValue)
   }
-  return accumulator
+  return previousValue
 }, [])
 
-console.log(myOrderedArray)</pre>
+console.log(myArrayWithNoDuplicates)
+```
 
-<pre class="brush: js">let arr = [1,2,1,2,3,5,4,5,3,4,4,4,4];
-let result = arr.sort().reduce((init, current) =&gt; {
-    if(init.length === 0 || init[init.length-1] !== current) {
-        init.push(current);
-    }
-    return init;
+### 使用 .reduce() 替换 .filter().map()
+
+使用 {{jsxref("Array.filter()")}} 和 {{jsxref("Array.map()")}} 会遍历数组两次，而使用具有相同效果的 {{jsxref("Array.reduce()")}} 只需要遍历一次，这样做更加高效。（如果你喜欢 `for` 循环，你可用使用 {{jsxref("Array.forEach()")}} 以在一次遍历中实现过滤和映射数组）
+
+```js
+const numbers = [-5, 6, 2, 0];
+
+const doubledPositiveNumbers = numbers.reduce((previousValue, currentValue) => {
+  if (currentValue > 0) {
+    const doubled = currentValue * 2;
+    previousValue.push(doubled);
+  }
+  return previousValue;
 }, []);
-console.log(result); //[1,2,3,4,5]</pre>
 
-<h3 id="按顺序运行Promise">按顺序运行Promise</h3>
+console.log(doubledPositiveNumbers); // [12, 4]
+```
 
-<pre class="brush: js">/**
+### 按顺序运行 Promise
+
+```js
+/**
  * Runs promises from array of functions that can return promises
  * in chained manner
  *
@@ -484,190 +453,95 @@ console.log(result); //[1,2,3,4,5]</pre>
  */
 function runPromiseInSequence(arr, input) {
   return arr.reduce(
-    (promiseChain, currentFunction) =&gt; promiseChain.then(currentFunction),
+    (promiseChain, currentFunction) => promiseChain.then(currentFunction),
     Promise.resolve(input)
-  );
+  )
 }
 
 // promise function 1
 function p1(a) {
-  return new Promise((resolve, reject) =&gt; {
-    resolve(a * 5);
-  });
+  return new Promise((resolve, reject) => {
+    resolve(a * 5)
+  })
 }
 
 // promise function 2
 function p2(a) {
-  return new Promise((resolve, reject) =&gt; {
-    resolve(a * 2);
-  });
+  return new Promise((resolve, reject) => {
+    resolve(a * 2)
+  })
 }
 
 // function 3  - will be wrapped in a resolved promise by .then()
 function f3(a) {
- return a * 3;
+ return a * 3
 }
 
 // promise function 4
 function p4(a) {
-  return new Promise((resolve, reject) =&gt; {
-    resolve(a * 4);
-  });
+  return new Promise((resolve, reject) => {
+    resolve(a * 4)
+  })
 }
 
-const promiseArr = [p1, p2, f3, p4];
+const promiseArr = [p1, p2, f3, p4]
 runPromiseInSequence(promiseArr, 10)
-  .then(console.log);   // 1200
-</pre>
+  .then(console.log)   // 1200
+```
 
-<h3 id="功能型函数管道">功能型函数管道</h3>
+### 使用函数组合实现管道
 
-<pre class="brush: js">// Building-blocks to use for composition
-const double = x =&gt; x + x;
-const triple = x =&gt; 3 * x;
-const quadruple = x =&gt; 4 * x;
+```js
+// Building-blocks to use for composition
+const double = x => x + x
+const triple = x => 3 * x
+const quadruple = x => 4 * x
 
 // Function composition enabling pipe functionality
-const pipe = (...functions) =&gt; input =&gt; functions.reduce(
-    (acc, fn) =&gt; fn(acc),
-    input
-);
+const pipe = (...functions) => initialValue => functions.reduce(
+    (acc, fn) => fn(acc),
+    initialValue
+)
 
 // Composed functions for multiplication of specific values
-const multiply6 = pipe(double, triple);
-const multiply9 = pipe(triple, triple);
-const multiply16 = pipe(quadruple, quadruple);
-const multiply24 = pipe(double, triple, quadruple);
+const multiply6 = pipe(double, triple)
+const multiply9 = pipe(triple, triple)
+const multiply16 = pipe(quadruple, quadruple)
+const multiply24 = pipe(double, triple, quadruple)
 
 // Usage
-multiply6(6); // 36
-multiply9(9); // 81
-multiply16(16); // 256
-multiply24(10); // 240
-</pre>
+multiply6(6)   // 36
+multiply9(9)   // 81
+multiply16(16) // 256
+multiply24(10) // 240
+```
 
-<h3 id="使用_reduce实现map">使用 reduce实现map</h3>
+### 使用 reduce 实现 map
 
-<pre class="brush: js">if (!Array.prototype.mapUsingReduce) {
-  Array.prototype.mapUsingReduce = function(callback, thisArg) {
-    return this.reduce(function(mappedArray, currentValue, index, array) {
-      mappedArray[index] = callback.call(thisArg, currentValue, index, array)
+```js
+if (!Array.prototype.mapUsingReduce) {
+  Array.prototype.mapUsingReduce = function(callback, initialValue) {
+    return this.reduce(function(mappedArray, currentValue, currentIndex, array) {
+      mappedArray[currentIndex] = callback.call(initialValue, currentValue, currentIndex, array)
       return mappedArray
     }, [])
   }
 }
 
 [1, 2, , 3].mapUsingReduce(
-  (currentValue, index, array) =&gt; currentValue + index + array.length
+  (currentValue, currentIndex, array) => currentValue + currentIndex + array.length
 ) // [5, 7, , 10]
-</pre>
+```
 
-<h2 id="Polyfill">Polyfill</h2>
+## 规范
 
-<pre class="brush: js">// Production steps of ECMA-262, Edition 5, 15.4.4.21
-// Reference: http://es5.github.io/#x15.4.4.21
-// https://tc39.github.io/ecma262/#sec-array.prototype.reduce
-if (!Array.prototype.reduce) {
-  Object.defineProperty(Array.prototype, 'reduce', {
-    value: function(callback /*, initialValue*/) {
-      if (this === null) {
-        throw new TypeError( 'Array.prototype.reduce ' +
-          'called on null or undefined' );
-      }
-      if (typeof callback !== 'function') {
-        throw new TypeError( callback +
-          ' is not a function');
-      }
+{{Specifications}}
 
-      // 1. Let O be ? ToObject(this value).
-      var o = Object(this);
+## 浏览器兼容性
 
-      // 2. Let len be ? ToLength(? Get(O, "length")).
-      var len = o.length &gt;&gt;&gt; 0;
+{{Compat}}
 
-      // Steps 3, 4, 5, 6, 7
-      var k = 0;
-      var value;
+## 参见
 
-      if (arguments.length &gt;= 2) {
-        value = arguments[1];
-      } else {
-        while (k &lt; len &amp;&amp; !(k in o)) {
-          k++;
-        }
-
-        // 3. If len is 0 and initialValue is not present,
-        //    throw a TypeError exception.
-        if (k &gt;= len) {
-          throw new TypeError( 'Reduce of empty array ' +
-            'with no initial value' );
-        }
-        value = o[k++];
-      }
-
-      // 8. Repeat, while k &lt; len
-      while (k &lt; len) {
-        // a. Let Pk be ! ToString(k).
-        // b. Let kPresent be ? HasProperty(O, Pk).
-        // c. If kPresent is true, then
-        //    i.  Let kValue be ? Get(O, Pk).
-        //    ii. Let accumulator be ? Call(
-        //          callbackfn, undefined,
-        //          « accumulator, kValue, k, O »).
-        if (k in o) {
-          value = callback(value, o[k], k, o);
-        }
-
-        // d. Increase k by 1.
-        k++;
-      }
-
-      // 9. Return accumulator.
-      return value;
-    }
-  });
-}
-</pre>
-
-<p>如果您需要兼容不支持<code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">Object.defineProperty</a></code>的JavaScript引擎，那么最好不要 polyfill <code>Array.prototype</code>方法，因为你无法使其成为<strong>不可枚举</strong>的。</p>
-
-<h2 id="规范">规范</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.21', 'Array.prototype.reduce')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>初始定语. 实施于 JavaScript 1.8.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.reduce', 'Array.prototype.reduce')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.reduce', 'Array.prototype.reduce')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
-
-<div>
-
-
-<p>{{Compat("javascript.builtins.Array.reduce")}}</p>
-</div>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.reduceRight()")}}</li>
-</ul>
+- [Polyfill of `Array.prototype.reduce` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- {{jsxref("Array.prototype.reduceRight()")}}
