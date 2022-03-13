@@ -517,6 +517,7 @@
 /pt-BR/docs/Web/API/Element/accessKey	/pt-BR/docs/Web/API/HTMLElement/accessKey
 /pt-BR/docs/Web/API/Element/addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/Event/Comparativo_entre_Event_Targets	/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets
+/pt-BR/docs/Web/API/EventSource/onerror	/pt-BR/docs/Web/API/EventSource/error_event
 /pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage
 /pt-BR/docs/Web/API/FileReader/onload	/pt-BR/docs/Web/API/FileReader/load_event
 /pt-BR/docs/Web/API/FullscreenOptions	/pt-BR/docs/orphaned/Web/API/FullscreenOptions

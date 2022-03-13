@@ -145,7 +145,7 @@ Regardons maintenant un exemple qui illustre parfaitement en quoi les boucles so
 </html>
 ```
 
-{{ EmbedLiveSample('Exemple', '100%', 400) }}
+{{EmbedLiveSample('', '100%', 400)}}
 
 #### Principe de boucle
 
@@ -197,13 +197,13 @@ Regardons maintenant un vrai exemple, afin de visualiser leurs actions plus clai
 ```js
 const chats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
 let info = "Mes chat s'appellent ";
-const paragraphe = document.querySelector('p');
+const para = document.querySelector('p');
 
 for (let i = 0; i < chats.length; i++) {
   info += chats[i] + ', ';
 }
 
-paragraphe.textContent = info;
+para.textContent = info;
 ```
 
 ### Sortie
@@ -224,13 +224,13 @@ Cela nous donne la sortie suivante :
     <script>
     const chats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
     let info = "Mes chats s'appellent ";
-    const paragraphe = document.querySelector('p');
+    const para = document.querySelector('p');
 
     for (let i = 0; i < chats.length; i++) {
       info += chats[i] + ', ';
     }
 
-    paragraphe.textContent = info;
+    para.textContent = info;
 
     </script>
 
@@ -238,7 +238,7 @@ Cela nous donne la sortie suivante :
 </html>
 ```
 
-{{ EmbedLiveSample('Sortie', '100%', 60) }}
+{{EmbedLiveSample('', '100%', 60)}}
 
 > **Note :** Vous pouvez trouver aussi cet [exemple de code sur GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/basic-for.html) (et [le voir tourner en live](http://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
 
@@ -298,7 +298,7 @@ Maintenant sur le JavaScript :
 
 ```js
 const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-const paragraphe = document.querySelector('p');
+const para = document.querySelector('p');
 const input = document.querySelector('input');
 const bouton = document.querySelector('button');
 
@@ -309,10 +309,10 @@ bouton.addEventListener('click', function() {
   for (let i = 0; i < contacts.length; i++) {
     let splitContact = contacts[i].split(':');
     if (splitContact[0] === searchName) {
-      paragraphe.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
       break;
     } else {
-      paragraphe.textContent = 'Contact not found.';
+      para.textContent = 'Contact not found.';
     }
   }
 });
@@ -337,7 +337,7 @@ bouton.addEventListener('click', function() {
 
     <script>
     const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-    const paragraphe = document.querySelector('p');
+    const para = document.querySelector('p');
     const input = document.querySelector('input');
     const bouton = document.querySelector('button');
 
@@ -348,10 +348,10 @@ bouton.addEventListener('click', function() {
       for (let i = 0; i < contacts.length; i++) {
         let splitContact = contacts[i].split(':');
         if (splitContact[0] === searchName) {
-          paragraphe.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+          para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
           break;
         } else {
-          paragraphe.textContent = 'Contact not found.';
+          para.textContent = 'Contact not found.';
         }
       }
     });
@@ -361,7 +361,7 @@ bouton.addEventListener('click', function() {
 </html>
 ```
 
-{{ EmbedLiveSample('Résultat', '100%', 100) }}
+{{EmbedLiveSample('', '100%', 100)}}
 
 1.  Tout d'abord, nous avons quelques définitions de variables — nous avons un tableau d'informations de contact, avec chaque élément étant une chaîne contenant un nom et un numéro de téléphone séparés par deux points.
 2.  Ensuite, nous attachons un écouteur d'événement au bouton (`bouton`), de sorte que quand il est pressé, du code est exécuté pour effectuer la recherche et renvoyer les résultats.
@@ -391,7 +391,7 @@ for (let i = 1; i <= num; i++) {
     continue;
   }
 
-  paragraphe.textContent += i + ' ';
+  para.textContent += i + ' ';
 }
 ```
 
@@ -413,12 +413,12 @@ Ici la sortie :
   <p>Output: </p>
 
     <script>
-    const paragraphe = document.querySelector('p');
+    const para = document.querySelector('p');
     const input = document.querySelector('input');
     const bouton = document.querySelector('button');
 
     bouton.addEventListener('click', function() {
-      paragraphe.textContent = 'Output: ';
+      para.textContent = 'Output: ';
       let num = input.value;
       input.value = '';
       input.focus();
@@ -428,7 +428,7 @@ Ici la sortie :
           continue;
         }
 
-        paragraphe.textContent += i + ' ';
+        para.textContent += i + ' ';
       }
     });
     </script>
@@ -437,7 +437,7 @@ Ici la sortie :
 </html>
 ```
 
-{{ EmbedLiveSample('Passer_des_itérations_avec_continue', '100%', 100) }}
+{{EmbedLiveSample('', '100%', 100)}}
 
 1.  Dans ce cas, l'entrée doit être un nombre (`num`). La boucle `for` est dotée d'un compteur commençant à 1 (car nous ne sommes pas intéressés par 0 dans ce cas), une condition de sortie indiquant que la boucle s'arrêtera lorsque le compteur deviendra plus grand que l'entrée `num`, et un itérateur ajoutera 1 au compteur à chaque fois.
 2.  À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant [Math.sqrt(i)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt0, puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que [Math.floor()](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Math/floor) fait au nombre auquel il est passé).
@@ -521,11 +521,11 @@ Dans cet exercice, nous vous proposons d'écrire un compte à rebours de lanceme
 - Créer une boucle de 10 jusqu'à 0. Nous vous avons fourni un initialiseur — `let i = 10;`
 - Pour chaque itération, créer un nouveau paragraphe à ajouter dans la balise de sortie `<div>` que nous avons selectionnée en utilisant : `const output = document.querySelector('.output');` En commentaire, nous vous avons fourni trois lignes de code qui doivent être utilisées quelque part à l'intérieur de la boucle :
 
-  - `const paragraphe = document.createElement('p');` — crée un nouveau paragraphe.
+  - `const para = document.createElement('p');` — crée un nouveau paragraphe.
   - `output.appendChild(para);` — ajoute le paragraphe à la sortie `<div>`.
-  - `paragraphe.textContent =` — Rend le texte à l'intérieur du paragraphe identique à ce que vous avez entré du côté droit du signe égal.
+  - `para.textContent =` — Rend le texte à l'intérieur du paragraphe identique à ce que vous avez entré du côté droit du signe égal.
 
-- Chaque nombre de l'itération nécessite un texte différent dans le paragraphe de cette itération (vous aurez besoin d'une expression conditionnelle et plusieurs lignes du type : `paragraphe.textContent = )`
+- Chaque nombre de l'itération nécessite un texte différent dans le paragraphe de cette itération (vous aurez besoin d'une expression conditionnelle et plusieurs lignes du type : `para.textContent = )`
 
   - Si le nombre est 10, écrire "Countdown 10" dans le paragraphe.
   - Si le nombre est 0, écrire "Blast off!" dans le paragraphe.
@@ -548,8 +548,8 @@ output.innerHTML = '';
 
 // let i = 10;
 
-// const paragraphe = document.createElement('p');
-// paragraphe.textContent = ;
+// const para = document.createElement('p');
+// para.textContent = ;
 // output.appendChild(para);
 </textarea>
 
@@ -637,9 +637,9 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_Lancer_le_compte_à_rebours', '100%', 780) }}
+{{EmbedLiveSample('', '100%', 780)}}
 
-## Apprentissage actif : remplir une liste d'invités.
+## Apprentissage actif : remplir une liste d'invités
 
 Dans cet exercice, nous vous proposons de prendre une liste d'invités stockée dans un tableau et de la mettre sur une liste d'invités. Mais cela n'est pas si simple — nous ne voulons pas laisser entrer Phil et Lola parce que ce sont des goinfres et qu'ils sont mal élevés, et ils mangent toujours toute la nourriture ! Nous avons deux listes, une pour les invités admis, une pour ceux que l'on refuse.
 
@@ -792,7 +792,7 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample("Apprentissage_actif_remplir_une_liste_d'invités.", '100%', 580) }}
+{{EmbedLiveSample("", '100%', 580)}}
 
 ## Quel type de boucle utiliser ?
 

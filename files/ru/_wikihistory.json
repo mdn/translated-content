@@ -5037,14 +5037,6 @@
       "vm10111957r"
     ]
   },
-  "Tools/Index": {
-    "modified": "2020-07-16T22:36:06.095Z",
-    "contributors": [
-      "wbamberg",
-      "Aleksej",
-      "Mingun"
-    ]
-  },
   "Tools/Keyboard_shortcuts": {
     "modified": "2020-11-06T04:42:55.218Z",
     "contributors": [
@@ -24051,6 +24043,14 @@
       "dimon4ezzz",
       "Aleksej",
       "uleming"
+    ]
+  },
+  "conflicting/Tools": {
+    "modified": "2020-07-16T22:36:06.095Z",
+    "contributors": [
+      "wbamberg",
+      "Aleksej",
+      "Mingun"
     ]
   },
   "conflicting/Tools/Performance": {

@@ -12997,13 +12997,13 @@
       "Char-Ten"
     ]
   },
-  "Web/API/EventSource/onerror": {
+  "Web/API/EventSource/error_event": {
     "modified": "2019-03-23T22:09:23.181Z",
     "contributors": [
       "Char-Ten"
     ]
   },
-  "Web/API/EventSource/onopen": {
+  "Web/API/EventSource/open_event": {
     "modified": "2019-03-23T22:16:16.621Z",
     "contributors": [
       "kameii"
@@ -16620,12 +16620,6 @@
       "SolitudeRA",
       "xgqfrms-GitHub",
       "c1ngular"
-    ]
-  },
-  "Web/API/MediaDevices/ondevicechange": {
-    "modified": "2019-03-23T22:08:09.338Z",
-    "contributors": [
-      "qzn928"
     ]
   },
   "Web/API/MediaElementAudioSourceNode": {
@@ -22570,6 +22564,12 @@
       "xilixinluo"
     ]
   },
+  "Web/API/Window/beforeinstallprompt_event": {
+    "modified": "2019-03-23T22:11:25.289Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
   "Web/API/Window/beforeprint_event": {
     "modified": "2020-10-15T21:52:38.969Z",
     "contributors": [
@@ -23053,12 +23053,6 @@
       "hhxxhg",
       "fscholz",
       "charlie"
-    ]
-  },
-  "Web/API/Window/onbeforeinstallprompt": {
-    "modified": "2019-03-23T22:11:25.289Z",
-    "contributors": [
-      "xgqfrms-GitHub"
     ]
   },
   "Web/API/Window/ondevicemotion": {
@@ -32754,13 +32748,6 @@
     "modified": "2019-12-03T17:54:04.795Z",
     "contributors": [
       "pans9"
-    ]
-  },
-  "Web/HTML/Index": {
-    "modified": "2019-03-21T11:52:09.419Z",
-    "contributors": [
-      "RainSlide",
-      "xcffl"
     ]
   },
   "Web/HTML/Inline_elements": {
@@ -47063,6 +47050,12 @@
       "sideshowbarker"
     ]
   },
+  "conflicting/Web/API/MediaDevices/devicechange_event": {
+    "modified": "2019-03-23T22:08:09.338Z",
+    "contributors": [
+      "qzn928"
+    ]
+  },
   "conflicting/Web/API/MouseEvent/altKey": {
     "modified": "2019-03-24T00:16:10.184Z",
     "contributors": [
@@ -47557,6 +47550,13 @@
     "contributors": [
       "xuxun",
       "wbamberg"
+    ]
+  },
+  "conflicting/Web/HTML": {
+    "modified": "2019-03-21T11:52:09.419Z",
+    "contributors": [
+      "RainSlide",
+      "xcffl"
     ]
   },
   "conflicting/Web/HTML/Element": {
