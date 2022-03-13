@@ -141,7 +141,7 @@ p {
 
 ### Declarando regras para camadas pré-existentes
 
-No exemplo seguinte, duas camadas são criadas sem regras definidas, e depois são aplicadas regras CSS para as duas camadas. A camada `base` define a cor, borda, font-size e padding. A camada `especial` layer define uma cor diferente. Como o `especial` vem depois na definição das camadas, a cor que ele carrega é utilizada e o texto será mostrado com a cor `rebeccapurple`. Todas as outras regras da camada `base` ainda são aplicadas.
+No exemplo seguinte, duas camadas são criadas sem regras definidas, e depois são aplicadas regras CSS para as duas camadas. A camada `base` define as propriedades color, border, font-size e padding. A camada `especial` layer define um valor de color diferente. Como o `especial` vem depois na definição das camadas, a cor que ele carrega é utilizada e o texto será mostrado com a cor `rebeccapurple`. Todas as outras regras da camada `base` ainda são aplicadas.
 
 #### HTML
 
