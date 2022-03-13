@@ -44,7 +44,7 @@ avec le résultat attendu que `a` et `b` obtiennent la même valeur de 5. C'est 
 
 ## Tableau
 
-Le tableau suivant est classé de la plus haute (0) à la plus basse (19) précédence.
+Le tableau suivant est classé de la plus haute (19) à la plus basse (1) précédence.
 
 <table class="fullwidth-table">
   <tbody>
