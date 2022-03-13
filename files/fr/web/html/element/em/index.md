@@ -95,7 +95,7 @@ Habituellement, cet élément est affiché avec une police italique. Cependant, 
 
 Lorsqu'on débute en développement web, on peut être dérouté de voir plusieurs éléments qui produisent des résultats similaires. `<em>` et `<i>` sont un exemple courant, car ils mettent tous deux le texte en italique. Quelle est la différence&nbsp;? Laquelle doit-on utiliser&nbsp;?
 
-Par défaut, le résultat visuel est le même. Cependant, la signification sémantique est différente. L'élément `<em>` représente l'accentuation de son contenu, tandis que l'élément `<i>` représente le texte qui se détache de la prose normale, comme un mot étranger, les pensées d'un personnage fictif, ou lorsque le texte fait référence à la définition d'un mot au lieu de représenter son sens sémantique. (Le titre d'une œuvre, comme le nom d'un livre ou d'un film, devrait utiliser `<cite>`).
+Par défaut, le résultat visuel est le même. Cependant, la signification sémantique est différente. L'élément `<em>` représente l'accentuation de son contenu, tandis que l'élément `<i>` représente le texte qui se détache de la prose normale, comme un mot étranger, les pensées d'un personnage fictif, ou lorsque le texte fait référence à la définition d'un mot au lieu de représenter son sens sémantique. (Le titre d'une œuvre, comme le nom d'un livre ou d'un film, devrait utiliser `<cite>`.)
 
 Cela signifie que le choix de l'option à utiliser dépend de la situation. Ni l'un ni l'autre ne sont destinés à des fins purement décoratives, c'est à cela que sert le style CSS.
 
