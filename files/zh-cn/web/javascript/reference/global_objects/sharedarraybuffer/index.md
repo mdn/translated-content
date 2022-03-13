@@ -2,135 +2,138 @@
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 tags:
-  - ArrayBuffer
-  - Service Worker
+  - Class
+  - JavaScript
   - Shared Memory
   - SharedArrayBuffer
   - TypedArrays
-  - Web Worker
-  - Worker
-  - 共享内存
-  - 实验的
-  - 构造函数
 translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>SharedArrayBuffer</code></strong> 对象用来表示一个通用的，固定长度的原始二进制数据缓冲区，类似于 {{jsxref("ArrayBuffer")}} 对象，它们都可以用来在共享内存（shared memory）上创建视图。与 <code>ArrayBuffer</code> 不同的是，<code><strong>SharedArrayBuffer</strong></code> 不能被分离。</p>
+**`SharedArrayBuffer`** 对象用来表示一个通用的、固定长度的原始二进制数据缓冲区，类似于 {{jsxref("ArrayBuffer")}} 对象，它们都可以用来在共享内存（shared memory）上创建视图。与 `ArrayBuffer` 不同的是，**`SharedArrayBuffer`** 不能被{{Glossary("Transferable Objects", "转移")}}。
 
-<div class="note">
-  <p><strong>备注：</strong>作为对<a href="https://meltdownattack.com/">Spectre</a>的响应，所有主流浏览器均默认于2018年1月5日禁用<code>SharedArrayBuffer</code>。 Chrome在启用了网站隔离功能的平台上的<a href="https://bugs.chromium.org/p/chromium/issues/detail?id=821270">v67中重新启用</a>了该功能，以防止出现Spectre风格的漏洞。</p>
-</div>
+## 描述
 
-<p>{{EmbedInteractiveExample("pages/js/sharedarraybuffer-constructor.html")}}</p>
+### 分配及共享内存
 
-<h2 id="语法">语法</h2>
+为了将一个 {{jsxref("SharedArrayBuffer")}} 对象从一个用户代理共享到另一个用户代理（另一个页面的主进程或者当前页面的一个 `worker`）从而实现共享内存，我们需要运用  [`postMessage`](/zh-CN/docs/Web/API/Worker/postMessage) 和[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
 
-<pre class="syntaxbox">new SharedArrayBuffer(length)
-</pre>
+结构化克隆算法接收 `SharedArrayBuffers` 对象，或被映射到一个新的 `SharedArrayBuffers` 对象上的 `TypedArrays` 对象。在这两种情况下，这个新的 `SharedArrayBuffer` 对象会被传递到目标用户代理的接收函数上，从而在目标用户代理产生一个新的私有 `SharedArrayBuffer` 对象（正如 {{jsxref("ArrayBuffer")}} 一样）。但是，这两个 `SharedArrayBuffer` 对象指向的共享数据块其实是同一个，所以某一代理对数据块的修改在另一个代理中可见。
 
-<h3 id="参数">参数</h3>
-
-<dl>
- <dt><code>length</code></dt>
- <dd>所创建的数组缓冲区的大小，以字节(byte)为单位。</dd>
-</dl>
-
-<h3 id="返回值">返回值</h3>
-
-<p>一个大小指定的新 <code>SharedArrayBuffer</code> 对象。其内容被初始化为 0。</p>
-
-<h2 id="描述">描述</h2>
-
-<h3 id="分配及共享内存">分配及共享内存</h3>
-
-<p>为了将一个{{jsxref("SharedArrayBuffer")}} 对象从一个用户代理共享到另一个用户代理（另一个页面的主进程或者当前页面的一个 <code>worker</code> ）从而实现共享内存，我们需要运用 <code><a href="/en-US/docs/Web/API/Worker/postMessage">postMessage</a></code> 和结构化克隆算法（ <a href="/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm">structured cloning</a> ）。</p>
-
-<p>结构化克隆算法接收被映射到一个新的 <code>SharedArrayBuffers</code> 对象上的 <code>SharedArrayBuffers</code> 对象与 <code>TypedArrays</code> 对象。在这两种映射下，这个新的 <code>SharedArrayBuffer</code> 对象会被传递到目标用户代理的接收函数上，导致在目标用户代理产生了一个新的私有 <code>SharedArrayBuffer</code> 对象（正如 {{jsxref("ArrayBuffer")}} 一样）。然而，这两个 <code>SharedArrayBuffer</code> 对象指向的共享数据块其实是同一个，并且在某一代理中的一个块的副作用将最终导致另一个代理具有可见性。</p>
-
-<pre class="brush: js">let sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 worker.postMessage(sab);
-</pre>
+```
 
-<h3 id="通过原子操作更新及同步来共享内存">通过原子操作更新及同步来共享内存</h3>
+### 通过原子操作更新及同步共享内存
 
-<p>共享内存能被同时创建和更新于工作者线程或主线程。依赖于系统（CPU，操作系统，浏览器），变化传递给所有上下文环境需要一段时间。需要通过 {{jsxref("Atomics", "atomic", "", 1)}} 操作来进行同步。</p>
+共享内存能被同时创建和更新于 `worker` 线程或主线程。依赖于系统（CPU、操作系统、浏览器），变化传递给所有上下文环境需要一段时间。因此需要通过{{jsxref("Atomics", "原子", "", 1)}}操作来进行同步。
 
-<h3 id="接受_SharedArrayBuffer_对象的API">接受 <code>SharedArrayBuffer</code> 对象的API</h3>
+### 接受 SharedArrayBuffer 对象的API
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.bufferData()")}}</li>
- <li>{{domxref("WebGLRenderingContext.bufferSubData()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.getBufferSubData()")}}</li>
-</ul>
+- {{domxref("WebGLRenderingContext.bufferData()")}}
+- {{domxref("WebGLRenderingContext.bufferSubData()")}}
+- {{domxref("WebGL2RenderingContext.getBufferSubData()")}}
 
-<h3 id="需要_new_运算符来构造">需要 <code>new</code> 运算符来构造</h3>
+### 安全需求
 
-<p><code>SharedArrayBuffer</code> 需要 {{jsxref("Operators/new", "new")}} 运算符来构造一个构造函数. 作为函数来调用一个 <code>SharedArrayBuffer</code> 构造函数时，如果不用 <code>new</code> 运算符，将会抛出一个 {{jsxref("TypeError")}} 异常。</p>
+为应对[幽灵漏洞](https://zh.wikipedia.org/wiki/幽灵漏洞)，所有主流浏览器均默认[于2018年1月5日禁用SharedArrayBuffer](https://blog.mozilla.org/security/2018/01/03/mitigations-landing-new-class-timing-attack/)。在 2020 年，一种新的、安全的方法已经标准化，以重新启用 `SharedArrayBuffer`。通过一些安全措施，[`postMessage()`](/zh-CN/docs/Web/API/Window/postMessage) 将不再抛出有关 `SharedArrayBuffer` 对象的异常，跨线程共享内存也变得可用：
 
-<pre class="brush: js example-bad">var sab = SharedArrayBuffer(1024);
+作为基准需求，你的文档需处于[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中。
+
+对于顶级文档，需要设置两个 HTTP 消息头以跨域隔离你的站点：
+
+- [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) 设置为 `same-origin`（保护源站免受攻击）
+- [`Cross-Origin-Embedder-Policy`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) 设置为 `require-corp`（保护源站免受侵害）
+
+```plain
+Cross-Origin-Opener-Policy: same-origin
+Cross-Origin-Embedder-Policy: require-corp
+```
+
+为检查跨域隔离是否生效，你可以检查 [`crossOriginIsolated`](/zh-CN/docs/Web/API/crossOriginIsolated) 属性在窗口和 `worker` 上下文中是否可用：
+
+```js
+if (crossOriginIsolated) {
+  // Post SharedArrayBuffer
+} else {
+  // Do something else
+}
+```
+
+参阅 [Planned changes to shared memory](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes)，以了解共享内存在浏览器中的变更计划（例如，Firefox 79）。
+
+### 始终使用 new 运算符来构造 SharedArrayBuffer
+
+`SharedArrayBuffer` 必须使用 {{jsxref("Operators/new", "new")}} 运算符来构造。作为函数来调用 `SharedArrayBuffer()` 构造函数（如果不用 `new` 运算符），将会抛出 {{jsxref("TypeError")}} 异常。
+
+```js example-bad
+var sab = SharedArrayBuffer(1024);
 // TypeError: calling a builtin SharedArrayBuffer constructor
-// 必须用 new 来构造</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good">var sab = new SharedArrayBuffer(1024);</pre>
+```js example-good
+var sab = new SharedArrayBuffer(1024);
+```
 
-<h2 id="属性">属性</h2>
+## 构造函数
 
-<dl>
- <dt><code>SharedArrayBuffer.length</code></dt>
- <dd><code>SharedArrayBuffer</code> 构造函数的 length 属性值为1。 </dd>
- <dt>{{jsxref("SharedArrayBuffer.prototype")}}</dt>
- <dd>允许所有 <code>SharedArrayBuffer</code> 对象的附加属性。</dd>
-</dl>
+- [`SharedArrayBuffer()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer)
+  - : 创建一个 `SharedArrayBuffer` 对象。
 
-<h2 id="SharedArrayBuffer_原型对象"><code>SharedArrayBuffer</code> 原型对象</h2>
+## 实例属性
 
-<p>所有 <code>SharedArrayBuffer</code> 实例继承自 {{jsxref("SharedArrayBuffer.prototype")}}。</p>
+- {{jsxref("SharedArrayBuffer.prototype.byteLength")}}
+  - : 数组的大小（以字节为单位）。这是在构造数组时建立的，不能更改（**只读**）。
 
-<h3 id="属性_2">属性</h3>
+## 实例方法
 
-<p>{{page('zh-CN/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype','Properties')}}</p>
+- {{jsxref("SharedArrayBuffer.slice", "SharedArrayBuffer.prototype.slice(begin, end)")}}
+  - : 返回一个新的 `SharedArrayBuffer`，其为源数组从 `begin` 字节到 `end` 字节（不含 `end` 字节）的拷贝。若 `begin` 或 `end` 为负数，则表示从数组末尾开始的索引。
 
-<h3 id="方法">方法</h3>
+## 示例
 
-<p>{{page('zh-CN/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype','Methods')}}</p>
+### 创建一个新的 SharedArrayBuffer
 
-<h2 id="规范">规范</h2>
+```js
+var sab = new SharedArrayBuffer(1024);
+```
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-sharedarraybuffer-objects', 'SharedArrayBuffer')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Initial definition in ES2017.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-sharedarraybuffer-objects', 'SharedArrayBuffer')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+### 截取 SharedArrayBuffer
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+```js
+sab.slice();    // SharedArrayBuffer { byteLength: 1024 }
+sab.slice(2);   // SharedArrayBuffer { byteLength: 1022 }
+sab.slice(-2);  // SharedArrayBuffer { byteLength: 2 }
+sab.slice(0, 1); // SharedArrayBuffer { byteLength: 1 }
+```
 
-<p>{{Compat("javascript.builtins.SharedArrayBuffer")}}</p>
+### 在 WebGL buffer 中使用
 
-<h2 id="相关链接">相关链接</h2>
+```js
+const canvas = document.querySelector('canvas');
+const gl = canvas.getContext('webgl');
+const buffer = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+gl.bufferData(gl.ARRAY_BUFFER, sab, gl.STATIC_DRAW);
+```
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Typed_arrays">JavaScript typed arrays</a></li>
- <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
- <li><a href="https://github.com/lars-t-hansen/parlib-simple">parlib-simple </a>– a simple library providing synchronization and work distribution abstractions.</li>
- <li><a href="https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md">Shared Memory – a brief tutorial</a></li>
- <li>
-  <p><a href="https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/">A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks</a></p>
- </li>
-</ul>
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{jsxref("Atomics")}}
+- {{jsxref("ArrayBuffer")}}
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple)——一个提供同步和工作分配抽象的简单库。
+- [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
+- [A Taste of JavaScript's New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)
