@@ -17,8 +17,8 @@ browser-compat: css.at-rules.layer
 A [regra at (at-rule)](/pt-BR/docs/Web/CSS/At-rule) **`@layer`** define uma _camada de cascata_. Dentro dessa camada, as regras CSS fazem parte da mesma cascata, dando mais controle sobre as cascatas para os desenvolvedores web.
 
 ```css
-@layer temas {
-  /* cria uma nova camada CSS chamada "temas". */
+@layer utilitarios {
+  /* cria uma nova camada CSS chamada "utilitarios". */
 }
 ```
 
@@ -27,7 +27,7 @@ A [regra at (at-rule)](/pt-BR/docs/Web/CSS/At-rule) **`@layer`** define uma _cam
 Você pode utilizar o `@layer` para criar uma camada de cascata de três maneiras. A primeira é como no exemplo acima, criando um bloco com o `@layer` e inserindo as regras CSS dentro deste bloco.
 
 ```css
-@layer temas {
+@layer utilitarios {
   .padding-sm {
     padding: .5rem;
   }
@@ -41,13 +41,13 @@ Você pode utilizar o `@layer` para criar uma camada de cascata de três maneira
 A camada de cascata também pode ser criada com o {{cssxref("@import")}}, neste caso as regras estarão no arquivo CSS importado:
 
 ```css
-@import(temas.css) layer(temas);
+@import(utilitarios.css) layer(utilitarios);
 ```
 
 Você também pode criar uma camada de cascata nomeada sem atrelar à nenhum estilo. Você pode definir uma única camada:
 
 ```css
-@layer temas;
+@layer utilitarios;
 ```
 
 Ou, múltiplas camadas de uma vez só, como por exemplo:
