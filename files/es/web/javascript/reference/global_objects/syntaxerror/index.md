@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/SyntaxError
 
 {{JSRef}}
 
-El objeto **`SyntaxError`** represta un error cuando se trata de interpretar código que resulta ser inválido sintácticamente. Esto ocurre cuando el motor de JavaScript encuentra tokens o que el orden de estos no es conforme a la sinstaxis del lenguaje cuando se parsea código.
+El objeto **`SyntaxError`** represta un error cuando se trata de interpretar código que resulta ser inválido sintácticamente. Esto ocurre cuando el motor de JavaScript encuentra el orden de los tokens o los token mismos no son conformes a la sinstaxis del lenguaje cuando se analiza el código.
 
 ## Constructor
 
