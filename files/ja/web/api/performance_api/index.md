@@ -80,4 +80,4 @@ To test your browser's support for the {{domxref("Performance")}} interface, run
 
 ## あわせて参照
 
-- [A Primer for Web Performance Timing APIs](http://w3c.github.io/perf-timing-primer/)
+- [A Primer for Web Performance Timing APIs](https://w3c.github.io/perf-timing-primer/)
