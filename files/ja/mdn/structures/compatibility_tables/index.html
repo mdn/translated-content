@@ -1,10 +1,10 @@
 ---
-title: 互換性一覧表とブラウザー互換性データリポジトリ (BCD)
+title: 互換性一覧表とブラウザーの互換性データリポジトリ (BCD)
 slug: MDN/Structures/Compatibility_tables
 tags:
   - MDN Meta
   - ガイド
-  - ブラウザー互換性
+  - ブラウザーの互換性
   - 互換性テーブル
   - 互換性一覧表
   - 構造
@@ -259,7 +259,7 @@ translation_of: MDN/Structures/Compatibility_tables
   }
 }</pre>
 
-<p>API の場合、上位 2 つのレベルを <code>api.<em>name-of-the-interface</em></code> として定義し、次に上位の <code>__compat</code> セクションでインターフェイスの全体的なブラウザ互換性を定義し、インターフェイス内に含まれるメソッド、プロパティ、およびコンストラクタのそれぞれのサブ機能を定義します。基本的な構造は以下のようになります。</p>
+<p>API の場合、上位 2 つのレベルを <code>api.<em>name-of-the-interface</em></code> として定義し、次に上位の <code>__compat</code> セクションでインターフェイスの全体的なブラウザーの互換性を定義し、インターフェイス内に含まれるメソッド、プロパティ、およびコンストラクタのそれぞれのサブ機能を定義します。基本的な構造は以下のようになります。</p>
 
 <pre class="brush: json notranslate">{
   "api": {
@@ -289,7 +289,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <h2 id="Adding_data_Advanced_cases" name="Adding_data_Advanced_cases">データの追加: 高度な場合</h2>
 
-<p>ブラウザの互換性データには、いくつかの高度な機能があります。このセクションの目的は、最も一般的なものをリストアップし、それぞれの例を提供して、あなた自身の互換性データにそれらを実装する方法を示すことです。</p>
+<p>ブラウザーの互換性データには、いくつかの高度な機能があります。このセクションの目的は、最も一般的なものをリストアップし、それぞれの例を提供して、あなた自身の互換性データにそれらを実装する方法を示すことです。</p>
 
 <h3 id="Including_a_footnote" name="Including_a_footnote">脚注を含める</h3>
 
@@ -302,7 +302,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <h3 id="Including_a_vendor_prefix" name="Including_a_vendor_prefix">ベンダープレフィックスを含める</h3>
 
-<p>ある機能が、あるブラウザでベンダープレフィックス付きでサポートされている場合、ブラウザの互換性データでそのことを明確にしたいと思うでしょう。Firefoxにおいて、 <code>-moz-</code> プレフィックスによりサポートされている機能を想像してください。互換性データでこれを指定するには、該当する "firefox" サブメンバーの中に "prefix" サブメンバーを追加する必要があります。これは次のようになります。</p>
+<p>ある機能が、あるブラウザでベンダープレフィックス付きでサポートされている場合、ブラウザーの互換性データでそのことを明確にしたいと思うでしょう。Firefoxにおいて、 <code>-moz-</code> プレフィックスによりサポートされている機能を想像してください。互換性データでこれを指定するには、該当する "firefox" サブメンバーの中に "prefix" サブメンバーを追加する必要があります。これは次のようになります。</p>
 
 <pre class="brush: json notranslate">"firefox": {
   "version_added": true,
@@ -396,7 +396,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <p>時々、ブラウザが仕様とは異なる名前で機能をサポートすることがあります。これは例えば、あるブラウザがある機能の実験的なサポートを早くから追加していて、仕様が安定する前に名前が変わってしまったというような場合が考えられます。</p>
 
-<p>このようなケースをブラウザの互換性データに含めるには、"alternative_name"メンバの中に代替名を指定するサポート情報ポイントを含めます。</p>
+<p>このようなケースをブラウザーの互換性データに含めるには、"alternative_name"メンバの中に代替名を指定するサポート情報ポイントを含めます。</p>
 
 <div class="blockIndicator note">
 <p><strong>注:</strong> 代替名は正確なエイリアスではないかもしれません。標準バージョンとは異なる動作をするかもしれません。</p>
@@ -406,7 +406,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <ul>
  <li>バージョン 4 以降では <code>border-top-right-radius</code> という標準的な名前でサポートされています。</li>
- <li>バージョン 49 以降では、ブラウザの互換性を考慮し、<code>-webkit-</code>プレフィクスと共に使用されます。</li>
+ <li>バージョン 49 以降では、ブラウザーの互換性を考慮し、<code>-webkit-</code>プレフィクスと共に使用されます。</li>
  <li>バージョン 1 以降では <code>-moz-border-radius-topright</code> という代替名を使用しています。このエイリアスのサポートはバージョン12で削除されました。</li>
 </ul>
 
@@ -450,7 +450,7 @@ git push</pre>
 
 <h2 id="Inserting_the_data_into_MDN_pages" name="Inserting_the_data_into_MDN_pages">MDN ページへのデータの挿入</h2>
 
-<p>一度あなたの新しいデータがメインリポジトリに含められたら、{{TemplateLink("Compat")}} マクロを使って、MDNページ上でそのデータに基づいてブラウザの互換性一覧表を動的に生成することができます。これは、JSONデータを探索して、互換性一覧表を生成したい機能を表すオブジェクトを見つけるために必要なドット記法を唯一のパラメータとして受け取ります。</p>
+<p>一度あなたの新しいデータがメインリポジトリに含められたら、{{TemplateLink("Compat")}} マクロを使って、MDNページ上でそのデータに基づいてブラウザーの互換性一覧表を動的に生成することができます。これは、JSONデータを探索して、互換性一覧表を生成したい機能を表すオブジェクトを見つけるために必要なドット記法を唯一のパラメータとして受け取ります。</p>
 
 <p><br>
  マクロ呼び出しの上に、他のコントリビューターにとって使いやすくするために、編集モードのMDNでコントリビューターにのみ表示される隠しテキストを追加します。</p>

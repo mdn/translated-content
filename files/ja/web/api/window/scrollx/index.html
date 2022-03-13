@@ -40,7 +40,7 @@ translation_of: Web/API/Window/scrollX
 
 <pre class="brush:js">window.pageXOffset == window.scrollX; // 常に true</pre>
 
-<p>クロスブラウザー互換性のため、<code>window.scrollX</code> ではなく <code>window.pageXOffset</code> を使用します。<em>さらに</em>、古いバージョンの Internet Explorer (IE9 以前) はいずれもサポートしていないため、チェックの上、なければ他の非標準の方法で回避する必要があります。以下に互換性を確保した例を示します。</p>
+<p>クロスブラウザーの互換性のため、<code>window.scrollX</code> ではなく <code>window.pageXOffset</code> を使用します。<em>さらに</em>、古いバージョンの Internet Explorer (IE9 以前) はいずれもサポートしていないため、チェックの上、なければ他の非標準の方法で回避する必要があります。以下に互換性を確保した例を示します。</p>
 
 <pre class="brush:js">var x = (window.pageXOffset !== undefined)
   ? window.pageXOffset

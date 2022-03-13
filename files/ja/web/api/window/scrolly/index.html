@@ -46,7 +46,7 @@ window.scrollByPages(1);</pre>
 
 <pre class="brush: js">window.pageYOffset === window.scrollY; // 常に true</pre>
 
-<p>クロスブラウザー互換性のため、<code>window.scrollY</code> ではなく <code>window.pageYOffset</code> を使用します。<em>さらに</em>、古いバージョンの Internet Explorer (IE9 以前) はいずれもサポートしていないため、チェックの上、なければ他の非標準の方法で回避する必要があります。以下に互換性を確保した例を示します。</p>
+<p>クロスブラウザーの互換性のため、<code>window.scrollY</code> ではなく <code>window.pageYOffset</code> を使用します。<em>さらに</em>、古いバージョンの Internet Explorer (IE9 以前) はいずれもサポートしていないため、チェックの上、なければ他の非標準の方法で回避する必要があります。以下に互換性を確保した例を示します。</p>
 
 <pre class="brush:js">var supportPageOffset = window.pageXOffset !== undefined;
 var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");

@@ -175,7 +175,7 @@ translation_of: Web/CSS/Media_Queries/Using_media_queries
 Media Queries Level 4 仕様書では、例えば幅や高さについて、よりすっきりとした "range" 型を持つ特性を使ってメディアクエリーを作れるよう構文が拡張されました。
 Level 4 はこのようなクエリーを書くために*範囲コンテキスト*を追加しています。例えば、幅について `max-` の特性を使用する場合は、以下のように書くことができます。
 
-> **Note:** Media Queries Level 4 仕様は、最新のブラウザーはそれなりに対応していますが、一部のメディア機能には十分に対応していません。詳細は [`@media` ブラウザー互換性一覧表](/ja/docs/Web/CSS/@media#ブラウザーの互換性)を参照してください。
+> **Note:** Media Queries Level 4 仕様は、最新のブラウザーはそれなりに対応していますが、一部のメディア機能には十分に対応していません。詳細は [`@media` ブラウザーの互換性一覧表](/ja/docs/Web/CSS/@media#ブラウザーの互換性)を参照してください。
 
 ```css
 @media (max-width: 30em) { ... }
