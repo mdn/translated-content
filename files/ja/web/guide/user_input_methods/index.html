@@ -98,14 +98,14 @@ element.addEventListener("touchmove", handleMove, false);</pre>
 <p><strong>注</strong>: 全てのチュートリアルとリファレンスは、<a href="/ja/docs/Web/API/Pointer_Lock_API">Pointer Lock API</a> のページを読んでください。</p>
 </div>
 
-<h4 id="Screen_Orientation" name="Screen_Orientation">画面の回転</h4>
+<h4 id="Screen_Orientation" name="Screen_Orientation">画面の向き</h4>
 
-<p>When screen orientation matters for your application, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the <a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Screen Orientation API</a>.</p>
+<p>画面の向きがあなたのアプリケーションの問題である時、<a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Screen Orientation API</a> を通して画面の向きの状態を参照し、状態が変化した時に通知し、そして画面の向きを特定の状態（大抵はポートレートもしくはランドスケープ）に固定することができます。</p>
 
-<p>Orientation data can be retrieved through the {{domxref("screen.orientation")}} attribute or through the <a href="/ja/docs/Web/Guide/CSS/Media_queries#orientation"><code>orientation</code></a> media feature. When <code>screen.orientation</code> changes, the {{domxref("screen.orientationchange")}} event is fired on the screen object. Locking the screen orientation is made possible by invoking the {{domxref("screen.lockOrientation")}} method, while the {{domxref("screen.unlockOrientation")}} method removes all the previous screen locks that have been set.</p>
+<p>画面の向きのデータは {{domxref("screen.orientation")}} 属性、または <a href="/ja/docs/Web/CSS/@media/orientation"><code>orientation</code></a> メディア特性を通して取得することができます。<code>screen.orientation</code> が変化した時、{{domxref("screen.orientationchange")}} イベントがスクリーンオブジェクトで発火されます。{{domxref("screen.lockOrientation")}} メソッドを呼ぶことで画面の向きを固定することができます。また、{{domxref("screen.unlockOrientation")}} メソッドはそれまで設定されていた画面のロックを全て解除します。</p>
 
 <div class="note">
-<p><strong>注</strong>: More information about the Screen Orientation API can be found in <a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">Managing screen orientation</a>.</p>
+<p><strong>注</strong>: Screen Orientation API についてのより多くの情報は<a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">画面の向きの管理</a>で確認することができます。</p>
 </div>
 
 <h4 id="Fullscreen" name="Fullscreen">全画面</h4>
@@ -175,7 +175,7 @@ if (elem.requestFullscreen) {
 
 <ul>
  <li><a href="/ja/docs/Web/Guide/DOM/Events/Touch_events">タッチイベントガイド</a></li>
- <li><a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">画面の回転の管理</a></li>
+ <li><a href="/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation">画面の向きの管理</a></li>
  <li><a href="/ja/docs/Web/API/Fullscreen_API">全画面モードの使用</a></li>
  <li><a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items">複数のアイテムのドラッグ＆ドロップ</a></li>
  <li><a href="/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations">ドラッグ操作ガイド</a></li>
