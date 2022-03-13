@@ -21,7 +21,7 @@ WebXR Device API の API である **`XRSession`** は進行中の XR セッシ�
 
 {{InheritanceDiagram}}
 
-## Properties
+## プロパティ
 
 _以下にリストしたプロパティに加えて、`XRSession` は親インターフェイス<!--の-->である {{domxref("EventTarget")}} からプロパティを継承します。_
 
@@ -44,7 +44,7 @@ _以下にリストしたプロパティに加えて、`XRSession` は親イン�
 - {{DOMxRef("XRSession.visibilityState", "visibilityState")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : セッションの画像がユーザーに表示されているかどうか、表示されているが現在はユーザーイベントのターゲットではないかどうかを示す文字列。
 
-## Methods
+## メソッド
 
 _`XRSession` provides the following methods in addition to those inherited from its parent interface, {{domxref("EventTarget")}}._
 
@@ -65,7 +65,7 @@ _`XRSession` provides the following methods in addition to those inherited from 
 - {{DOMxRef("XRSession.updateRenderState", "updateRenderState()")}}
   - : Updates the properties of the session's render state.
 
-## Events
+## イベント
 
 _The following events are delivered to `XRSession` objects._
 
@@ -88,7 +88,7 @@ _The following events are delivered to `XRSession` objects._
 - {{domxref("XRSession.visibilitychange_event", "visibilitychange")}}
   - : An {{domxref("XRSessionEvent")}} which is sent to the session when its visibility state as indicated by the {{domxref("XRSession.visibilityState", "visibilityState")}} changes. Also available through the `onvisibilitychange` event handler property.
 
-## Example
+## 例
 
 This example establishes a new `XRSession` in `inline` mode so that it can be displayed within an HTML element, avoiding the need for a dedicated AR or VR viewing device such as a headset.
 
@@ -116,10 +116,10 @@ if (XR) {
 }
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
