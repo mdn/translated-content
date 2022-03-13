@@ -18,38 +18,14 @@ translation_of: Web/API/EventListener
 
 ## プロパティ
 
-このインターフェースはいかなるプロパティを実装も継承もしません。
-
-## メソッドの概要
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>void <a href="#handleEvent()">handleEvent</a>(in Event event);</code></td>
-  </tr>
- </tbody>
-</table>
+_このインターフェースはいかなるプロパティを実装も継承もしません。_
 
 ## メソッド
 
-### handleEvent()
+_このインターフェイスはメソッドを継承しません。_
 
-このメソッドは、`EventListener` インターフェースが登録されたイベントタイプについて、そのイベントが発生するたびに呼び出されます。
-
-```js
-void handleEvent(
-  in Event event
-);
-```
-
-##### 引数
-
-- **`event`**
-  - : 発生した DOM {{ domxref("Event") }} イベント。
-
-### 補記
-
-このインターフェースは `[function]` フラグが付いているため、すべての JavaScript [Function](/ja/JavaScript/Reference/Global_Objects/Function) オブジェクトで自動的に実装されています。このような実装で {{ manch("handleEvent") }} メソッドを呼び出すと、自動的にその機能が実行されます。
+- {{domxref("EventListener.handleEvent()")}}
+  - : 指定されたタイプのイベントが発生するたびに呼び出される関数。
 
 ## 例
 
@@ -66,31 +42,39 @@ void handleEvent(
 
 ```js
 const buttonElement = document.getElementById('btn');
+const funcOutput = document.getElementById('funcOutput');
+const handleEvtOutput = document.getElementById('handleEvtOutput');
 
-// Add a handler for the 'click' event by providing a callback function.
-// Whenever the element is clicked, a pop-up with "Element clicked!" will
-// appear.
+// コールバック関数を用意して、'click' イベントのハンドラを追加する。
+// 要素がクリックされたとき、
+// id "funcOutput" の p タグに "Element clicked through function!" と出力されます。
 buttonElement.addEventListener('click', function (event) {
-  alert('Element clicked through function!');
+  funcOutput.textContent = 'Element clicked through function!';
 });
 
-// For compatibility, a non-function object with a `handleEvent` property is
-// treated just the same as a function itself.
+// 互換性のために `handleEvent` プロパティを持つ非関数オブジェクトは、
+// 関数と同じもののように扱われます。
+// コールバック関数と同じように id "handleEvtOutput" の p タグに、
+// "Element clicked through handleEvent property!" と出力されます。
 buttonElement.addEventListener('click', {
   handleEvent: function (event) {
-    alert('Element clicked through handleEvent property!');
+    handleEvtOutput.textContent = 'Element clicked through handleEvent property!';
   }
 });
 ```
 
-### Result
+### 結果
 
 {{EmbedLiveSample('Example')}}
 
-### See Also:
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+### 関連情報
 
 - [addEventListener](/ja/docs/Web/API/EventTarget/addEventListener)
-
-## 関連情報
-
-- {{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}
