@@ -12,19 +12,19 @@ translation_of: Web/HTTP/Overview
 
 <p class="summary"><strong>HTTP是一种能够获取如 HTML 这样的网络资源的 </strong>{{glossary("protocol")}}(通讯协议)。<strong>它是在 Web 上进行数据交换的基础，是一种 client-server 协议，也就是说，请求通常是由像浏览器这样的接受方发起的。一个完整的Web文档通常是由不同的子文档拼接而成的，像是文本、布局描述、图片、视频、脚本等等。</strong></p>
 
-<p><img alt="A Web document is the composition of different resources" src="https://mdn.mozillademos.org/files/13677/Fetching_a_page.png" style="height: 319px; width: 545px;"></p>
+<p><img alt="A Web document is the composition of different resources" src="https://mdn.mozillademos.org/files/13677/Fetching_a_page.png"></p>
 
 <p>客户端和服务端通过交换各自的消息（与数据流正好相反）进行交互。由像浏览器这样的客户端发出的消息叫做 <em>requests</em>，被服务端响应的消息叫做 <em>responses。</em></p>
 
-<p class="clear"><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png" style="float: left; height: 299px; padding-bottom: 15px; padding-right: 20px; width: 418px;">HTTP被设计于20世纪90年代初期，是一种可扩展的协议。它是应用层的协议，通过{{glossary("TCP")}}，或者是{{glossary("TLS")}}－加密的TCP连接来发送，理论上任何可靠的传输协议都可以使用。因为其良好的扩展性，时至今日，它不仅被用来传输超文本文档，还用来传输图片、视频或者向服务器发送如HTML表单这样的信息。HTTP还可以根据网页需求，仅获取部分Web文档内容更新网页。</p>
+<p class="clear"><img alt="HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer." src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png">HTTP被设计于20世纪90年代初期，是一种可扩展的协议。它是应用层的协议，通过{{glossary("TCP")}}，或者是{{glossary("TLS")}}－加密的TCP连接来发送，理论上任何可靠的传输协议都可以使用。因为其良好的扩展性，时至今日，它不仅被用来传输超文本文档，还用来传输图片、视频或者向服务器发送如HTML表单这样的信息。HTTP还可以根据网页需求，仅获取部分Web文档内容更新网页。</p>
 
 <h2 id="基于HTTP的组件系统">基于HTTP的组件系统</h2>
 
 <p>HTTP是一个client-server协议：请求通过一个实体被发出，实体也就是用户代理。大多数情况下，这个用户代理都是指浏览器，当然它也可能是任何东西，比如一个爬取网页生成维护搜索引擎索引的机器爬虫。</p>
 
-<p>每一个发送到服务器的请求，都会被服务器处理并返回一个消息，也就是<em>response。</em>在这个请求与响应之间，还有许许多多的被称为 {{Glossary("Proxy_server", "proxies")}} 的实体，他们的作用与表现各不相同，比如有些是网关，还有些是{{glossary("Cache", "caches")}}等。</p>
+<p>每一个发送到服务器的请求，都会被服务器处理并返回一个消息，也就是<em>response</em>。在这个请求与响应之间，还有许许多多的被称为 {{Glossary("Proxy_server", "proxies")}} 的实体，他们的作用与表现各不相同，比如有些是网关，还有些是{{glossary("Cache", "caches")}}等。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13679/Client-server-chain.png" style="height: 121px; width: 819px;"></p>
+<p><img src="https://mdn.mozillademos.org/files/13679/Client-server-chain.png"></p>
 
 <p>实际上，在一个浏览器和处理请求的服务器之间，还有路由器、调制解调器等许多计算机。由于Web的层次设计，那些在网络层和传输层的细节都被隐藏起来了。HTTP位于最上层的应用层。虽然底层对于分析网络问题非常重要，但是大多都跟对HTTP的描述不相干。</p>
 
@@ -139,12 +139,12 @@ Content-Type: text/html
 
 <p>HTTP请求的一个例子：</p>
 
-<p><img alt="A basic HTTP request" src="https://mdn.mozillademos.org/files/13687/HTTP_Request.png" style="height: 336px; width: 693px;"></p>
+<p><img alt="A basic HTTP request" src="https://mdn.mozillademos.org/files/13687/HTTP_Request.png"></p>
 
 <p>请求由以下元素组成：</p>
 
 <ul>
- <li>一个HTTP的<a href="/en-US/docs/Web/HTTP/Methods">method</a>，经常是由一个动词像{{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} 或者一个名词像{{HTTPMethod("OPTIONS")}}，{{HTTPMethod("HEAD")}}来定义客户端的动作行为。通常客户端的操作都是获取资源（GET方法）或者发送<a href="/en-US/docs/Web/Guide/HTML/Forms">HTML form</a>表单值（POST方法），虽然在一些情况下也会有其他操作。</li>
+ <li>一个HTTP的<a href="/en-US/docs/Web/HTTP/Methods">method</a>，经常是由一个动词像{{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} 或者一个名词像{{HTTPMethod("OPTIONS")}}，{{HTTPMethod("HEAD")}}来定义客户端的动作行为。通常客户端的操作都是获取资源（GET方法）或者发送<a href="/zh-CN/docs/Learn/Forms">HTML form</a>表单（POST方法），虽然在一些情况下也会有其他操作。</li>
  <li>要获取的资源的路径，通常是上下文中就很明显的元素资源的URL，它没有{{glossary("protocol")}} （<code>http://</code>），{{glossary("domain")}}（<code>developer.mozilla.org</code>），或是TCP的{{glossary("port")}}（HTTP一般在80端口）。</li>
  <li>HTTP协议版本号。</li>
  <li>为服务端表达其他信息的可选头部<a href="/en-US/docs/Web/HTTP/Headers">headers</a>。</li>
@@ -155,7 +155,7 @@ Content-Type: text/html
 
 <p>HTTP响应的一个例子：</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13691/HTTP_Response.png" style="height: 494px; width: 758px;"></p>
+<p><img src="https://mdn.mozillademos.org/files/13691/HTTP_Response.png"></p>
 
 <p>响应报文包含了下面的元素：</p>
 
