@@ -34,7 +34,7 @@ El objeto **`SyntaxError`** represta un error cuando se trata de interpretar có
 
 ## Ejemplos
 
-### Atrapando un SyntaxError
+### Controlando un SyntaxError
 
 ```js
 try {
