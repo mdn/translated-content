@@ -3,58 +3,46 @@ title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
 tags:
   - API
-  - Device Memory API
+  - 端末メモリー API
   - Navigator
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
   - deviceMemory
-  - memory
+  - メモリー
 translation_of: Web/API/Navigator/deviceMemory
 ---
-<div>{{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}</div>
+{{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}
 
-<p><span class="seoSummary"><strong><code>deviceMemory</code></strong> は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、端末のおよそのメモリ量をギガバイト単位で返します。</span>この値は概数で、最も近い２の指数に切り下げ、1024で割った数字になります。また、とても低性能または高性能の端末を使用している人のプライバシーを守るため、上限値と下限値が使用されます。</p>
+**`deviceMemory`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、端末のおよそのメモリ量をギガバイト単位で返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+報告される値は、フィンガープリントを抑制するために概数になっています。この値は、最も近い 2 の累乗に切り捨て、その値を 1024 で割ることによって概算されています。その後、メモリーが非常に少ない、または非常に多い端末の所有者のプライバシーを保護するため、下限と上限の範囲内に丸められます。
 
-<pre class="syntaxbox"><em>memoryAmount</em> = navigator.deviceMemory</pre>
+## 構文
 
-<h3 id="Value" name="Value">値</h3>
+```js
+memoryAmount = navigator.deviceMemory
+```
 
-<p>浮動小数点値で <code>0.25</code>, <code>0.5</code>, <code>1</code>, <code>2</code>, <code>4</code>, <code>8</code> のうちのいずれかです。</p>
+### 値
 
-<h2 id="Example" name="Example">例</h2>
+浮動小数点値で  `0.25`, `0.5`, `1`, `2`, `4`, `8` のうちのいずれかです。
 
-<pre class="brush: js">const memory = navigator.deviceMemory
-console.log (`This device has at least ${memory}GiB of RAM.`)
-</pre>
+## 例
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+```js
+const memory = navigator.deviceMemory
+console.log (`この端末には ${memory}GiB 以上の RAM があります。`)
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Device Memory","#sec-device-memory-js-api","deviceMemory")}}</td>
-   <td>{{Spec2("Device Memory")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("api.Navigator.deviceMemory")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/ja/docs/Web/API/Device_Memory_API">Device Memory API</a></li>
- <li>{{HTTPHeader("Device-Memory")}} HTTP header</li>
-</ul>
+## 関連情報
+
+- [端末メモリー API](/ja/docs/Web/API/Device_Memory_API)
+- HTTP の {{HTTPHeader("Device-Memory")}} ヘッダー
