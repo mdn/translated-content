@@ -118,4 +118,4 @@ Las siguientes charlas son una excelente manera de entender ARIA:
 
 ## Temas relacionados
 
-[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/en-US/docs/Web/Guide/AJAX), [JavaScript](/en-US/docs/Web/JavaScript)
+[Accesibilidad](/es/docs/Web/Accessibility), [AJAX](/es/docs/Web/Guide/AJAX), [JavaScript](/es/docs/Web/JavaScript)
