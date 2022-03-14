@@ -5,7 +5,7 @@ translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 ---
 ## Introduction
 
-Cet exemple montre comment cérer une serveur d'API WebSocket API utilisant Java d'Oracle.
+Cet exemple montre comment créer une serveur d'API WebSocket API utilisant Java d'Oracle.
 
 Bien que d'autres languages exécutés côté serveur peuvent être utilisés pour créer un serveur de WebSocket, cet exemple utilise Java d'Oracle pour simplifier le code en exemple.
 
