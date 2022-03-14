@@ -8,6 +8,7 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 original_slug: Web/JavaScript/Referencia/Objetos_globales/SyntaxError
+browser-compat: javascript.builtins.SyntaxError
 ---
 
 {{JSRef}}
