@@ -31,17 +31,17 @@ Esta barra de progreso se construye usando un {{HTMLElement("div")}}, que no tie
 Además de colocarlos directamente en el marcado, los atributos ARIA se pueden agregar al elemento y actualizar dinámicamente usando un código JavaScript como este:
 
 ```js
-// Find the progress bar <div> in the DOM.
+// Obteniendo la barra de progreso <div> en el DOM
 var progressBar = document.getElementById("percent-loaded");
 
-// Set its ARIA roles and states,
+// Configurando estados y roles ARIA
 // so that assistive technologies know what kind of widget it is.
 progressBar.setAttribute("role", "progressbar");
 progressBar.setAttribute("aria-valuemin", 0);
 progressBar.setAttribute("aria-valuemax", 100);
 
-// Create a function that can be called at any time to update
-// the value of the progress bar.
+// Función que se puede llamar en cualquier momento para actualizar
+// el valor de la barra de progreso
 function updateProgress(percentComplete) {
   progressBar.setAttribute("aria-valuenow", percentComplete);
 }
@@ -79,7 +79,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 ## Mejoras simples de ARIA
 
 - [Mejora de la navegación de páginas con referencias de ARIA](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
-  - : Una buena introducción al uso de los puntos de referencia de ARIA para mejorar la navegación de la página web para los usuarios de lectores de pantalla. [Consulte también las notas de implementación históricas de ARIA](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) y ejemplos en sitios reales (actualizado en julio de 2011 ).
+  - : Una buena introducción al uso de los puntos de referencia de ARIA para mejorar la navegación de la página web para los usuarios de lectores de pantalla. [Consulte también las notas de implementación históricas de ARIA](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) y ejemplos en sitios reales (actualizado en julio de 2011).
 - [Mejorando la accesibilidad de los formularios](/es/docs/Web/Accessibility/ARIA/forms)
   - : ¡ARIA no es solo para contenido dinámico! Aprenda a mejorar la accesibilidad de los formularios HTML utilizando atributos ARIA adicionales.
 
