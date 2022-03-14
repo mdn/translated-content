@@ -30,7 +30,7 @@ Esto puede ocurrir cuando:
 - {{jsxref("Error.prototype.message", "RangeError.prototype.message")}}
   - : Mensaje de error.
 - {{jsxref("Error.prototype.name", "RangeError.prototype.name")}}
-  - : Nombre del error, Heredado de {{jsxref("Error")}}.
+  - : Nombre del error. Heredado de {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "RangeError.prototype.fileName")}}
   - : Ruta al archivo que generó este error. Heredado de {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.lineNumber", "RangeError.prototype.lineNumber")}}
