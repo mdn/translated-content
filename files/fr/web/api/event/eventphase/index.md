@@ -20,7 +20,7 @@ Indique quelle phase du flux d'événements est actuellement évaluée.
 var phase = event.eventPhase;
 ```
 
-Retourne un entier qui spécifie la phase courante d'évaluation du flux d'événements. Les valeurs possibles sont listées dans {{anch("Constantes de phase d'événement")}}.
+Retourne un entier qui spécifie la phase courante d'évaluation du flux d'événements. Les valeurs possibles sont listées dans [Constantes de phase d'événement](#constantes_de_phase_d'événement).
 
 ## Constantes
 

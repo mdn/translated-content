@@ -32,11 +32,11 @@ En complément des attributs pris en charge par l'ensemble des éléments {{HTML
 
 | Attribut                           | Description                                                                                                                                                            |
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("max")}}`             | La valeur maximale qui peut être acceptée.                                                                                                                             |
-| `{{anch("min")}}`             | La valeur minimale qui peut être acceptée.                                                                                                                             |
-| `{{anch("placeholder")}}` | Une valeur fournie comme exemple affiché lorsque le champ est vide.                                                                                                    |
-| `{{anch("readonly")}}`     | Un attribut booléen qui contrôle si le champ est en lecture seule.                                                                                                     |
-| `{{anch("step")}}`             | Le pas à utiliser pour incrémenter la valeur à l'aide du contrôle fourni par l'agent utilisateur. Cet incrément est également utilisé pour la validation de la valeur. |
+| [`max`](#max)             | La valeur maximale qui peut être acceptée.                                                                                                                             |
+| [`min`](#min)             | La valeur minimale qui peut être acceptée.                                                                                                                             |
+| [`placeholder`](#placeholder) | Une valeur fournie comme exemple affiché lorsque le champ est vide.                                                                                                    |
+| [`readonly`](#readonly)     | Un attribut booléen qui contrôle si le champ est en lecture seule.                                                                                                     |
+| [`step`](#step)             | Le pas à utiliser pour incrémenter la valeur à l'aide du contrôle fourni par l'agent utilisateur. Cet incrément est également utilisé pour la validation de la valeur. |
 
 ### {{htmlattrdef("max")}}
 
@@ -56,9 +56,9 @@ Cette valeur doit être inférieure ou égale à l'attribut `max`.
 
 ### {{htmlattrdef("step")}}
 
-L'attribut `step` est un nombre qui définit la granularité de la valeur ou le mot-clé `any`. Seule les valeurs qui sont des multiples de cet attribut depuis le seuil `{{anch("min")}}` sont valides.
+L'attribut `step` est un nombre qui définit la granularité de la valeur ou le mot-clé `any`. Seule les valeurs qui sont des multiples de cet attribut depuis le seuil [`min`](#min) sont valides.
 
-Lorsque la chaîne de caractères `any` est utilisée, cela indique qu'aucun incrément spécifique n'est défini et que toute valeur (comprise entre `{{anch("min")}}` et `{{anch("max")}}`) est valide.
+Lorsque la chaîne de caractères `any` est utilisée, cela indique qu'aucun incrément spécifique n'est défini et que toute valeur (comprise entre [`min`](#min) et [`max`](#max)) est valide.
 
 > **Note :** Lorsque les données saisies par l'utilisateur ne correspondent pas à l'incrément indiqué, l'agent utilisateur pourra arrondir à la valeur valide la plus proche (en choisissant les nombres les plus grands lorsque deux sont équidistants.
 
@@ -68,7 +68,7 @@ Pour les champs `number`, l'incrément par défaut est 1 et ne permet donc que d
 
 Les éléments `<input type="number">` simplifient la saisie de valeurs numériques dans un formulaire. Lorsqu'on crée un tel contrôle, des mécanismes de validation automatiques sont appliqués afin de vérifier que le texte saisi est bien un nombre. Généralement un contrôle de saisie numérique incluera des boutons avec des curseurs pour augmenter/réduire la valeur.
 
-> **Attention :** On notera qu'un utilisateur peut toujours saisir des valeurs qui ne sont pas numériques dans de tels champs (par exemple avec un navigateur de bureau). Toutefois, ce comportement semble différer selon les navigateurs (voir {{bug(1398528)}}). Les valeurs non-numériques seront considérées comme invalide (cf. {{anch("Validation")}} ci-après).
+> **Attention :** On notera qu'un utilisateur peut toujours saisir des valeurs qui ne sont pas numériques dans de tels champs (par exemple avec un navigateur de bureau). Toutefois, ce comportement semble différer selon les navigateurs (voir {{bug(1398528)}}). Les valeurs non-numériques seront considérées comme invalide (cf. [Validation](#validation) ci-après).
 
 > **Note :** Il est important de rappeler qu'un utilisateur peut tout à fait modifier le code HTML qui est utilisé. Le site ne doit donc pas se reposer sur les mécanismes de validation qui existent côté client pour considérer qu'une valeur est saine. Pour des raisons de contrôle et de sécurité, les valeurs envoyées via un formulaire doivent être vérifiées côté serveur.
 
@@ -351,7 +351,7 @@ Après avoir déclaré quelques variables, on ajoute un gestionnaire d'évèneme
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>Un nombre ou une valeur vide.</td>
     </tr>
     <tr>

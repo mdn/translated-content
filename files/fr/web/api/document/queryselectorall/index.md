@@ -26,7 +26,7 @@ elementList = parentNode.querySelectorAll(selectors);
 - `selecteurs`
   - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs [sélecteurs CSS](/fr/docs/Web/CSS/CSS_Selectors) ; s'il n'y en a pas, une exception  `SyntaxError` est lancée. Voir [localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs en vue d'identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés, séparés par une virgule.
 
-> **Note :** Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir {{anch ("Echapper des caractères spéciaux")}} pour plus d'informations.
+> **Note :** Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Echapper des caractères spéciaux](#echapper_des_caractères_spéciaux) pour plus d'informations.
 
 ### Valeur renvoyée
 

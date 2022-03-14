@@ -53,10 +53,10 @@ En complément des attributs pris en charge par l'ensemble des éléments {{HTML
 
 | Attribut                       | Description                                                                                                                                             |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("max")}}`         | La semaine (avec l'année) la plus tardive qui est considérée comme valide.                                                                              |
-| `{{anch("min")}}`         | La semaine (avec l'année) la plus tôt qui est considérée comme valide.                                                                                  |
-| `{{anch("readonly")}}` | Un booléen qui indique si l'utilisateur peut modifier la valeur du champ.                                                                               |
-| `{{anch("step")}}`         | Le pas qui est utilisé pour incrémenter la valeur du champ. Cet incrément est utilisé par l'interface utilisateur et également pour vérifier la valeur. |
+| [`max`](#max)         | La semaine (avec l'année) la plus tardive qui est considérée comme valide.                                                                              |
+| [`min`](#min)         | La semaine (avec l'année) la plus tôt qui est considérée comme valide.                                                                                  |
+| [`readonly`](#readonly) | Un booléen qui indique si l'utilisateur peut modifier la valeur du champ.                                                                               |
+| [`step`](#step)         | Le pas qui est utilisé pour incrémenter la valeur du champ. Cet incrément est utilisé par l'interface utilisateur et également pour vérifier la valeur. |
 
 ### {{htmlattrdef("max")}}
 
@@ -84,7 +84,7 @@ _À l'heure où ces lignes sont écrites, la signification de la valeur `"any"` 
 
 Ces contrôles peuvent être pratiques selon certains aspects : ils permettent de sélectionner une semaine de façon simple, les données envoyées au serveur sont normalisées quelle que soit la langue ou le navigateur de l'utilisateur. Toutefois, en raison de la prise en charge des navigateurs actuellement limitée, `<input type="week">` pose quelques défis.
 
-Nous verrons par la suite quelques cas d'utilisation simples puis complexes avant de voir comment gérer l'hétérogénéité des différents navigateurs (cf. {{anch("Gérer la prise en charge des navigateurs")}}).
+Nous verrons par la suite quelques cas d'utilisation simples puis complexes avant de voir comment gérer l'hétérogénéité des différents navigateurs (cf. [Gérer la prise en charge des navigateurs](#gérer_la_prise_en_charge_des_navigateurs)).
 
 ### Utilisation simple
 
@@ -320,7 +320,7 @@ function populateWeeks() {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente une semaine et une année ou la chaîne vide.

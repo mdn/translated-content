@@ -60,7 +60,7 @@ Ici nous récupérons une image à travers le réseau et l'insérons dans un él
 
 Bien sûr, il s'agit seulement d'une réponse HTTP, pas exactement de l'image. Pour extraire le contenu de l'image de la réponse, nous utilisons la méthode {{domxref("Body.blob","blob()")}} (définie sur le mixin {{domxref("Body")}}, qui est implémenté autant par les objets {{domxref("Request")}} que par les objets {{domxref("Response")}}).
 
-> **Note :** Le mixin Body a aussi des méthodes similaires pour extraire d'autres types contenu ; pour plus d'informations regardez la section {{anch("Corps")}}.
+> **Note :** Le mixin Body a aussi des méthodes similaires pour extraire d'autres types contenu ; pour plus d'informations regardez la section [Corps](#corps).
 
 Un objet `objectURL` est ensuite créé à partir du {{domxref("Blob")}} extrait, puis est inseré dans {{domxref("img")}}.
 

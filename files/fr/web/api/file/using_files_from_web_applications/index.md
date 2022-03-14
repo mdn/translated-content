@@ -289,7 +289,7 @@ Le code HTML qui présente l'interface ressemble à ceci:
 </div>
 ```
 
-Ce code définit notre élément fichier {{ HTMLElement("input") }}, ainsi qu'un lien qui appelle le sélecteur de fichiers (l'élément `input` étant masqué pour éviter l'affichage de la si peu séduisante interface utilisateur). Vous pouvez vous reporter à la section {{ anch("Using hidden file input elements using the click() method") }} pour des explications détaillées sur cette partie de code ainsi que sur la méthode appelant le sélecteur de fichiers.
+Ce code définit notre élément fichier {{ HTMLElement("input") }}, ainsi qu'un lien qui appelle le sélecteur de fichiers (l'élément `input` étant masqué pour éviter l'affichage de la si peu séduisante interface utilisateur). Vous pouvez vous reporter à la section [Using hidden file input elements using the click() method](#using_hidden_file_input_elements_using_the_click_method) pour des explications détaillées sur cette partie de code ainsi que sur la méthode appelant le sélecteur de fichiers.
 
 Voici la méthode `handleFiles()` :
 

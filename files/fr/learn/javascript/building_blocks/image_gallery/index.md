@@ -44,7 +44,7 @@ Pour réaliser cette évaluation, vous devez récupérer le fichier [ZIP](https:
 
 Vous pouvez également utiliser un site comme [JSBin](http://jsbin.com/) ou  [Thimble](https://thimble.mozilla.org/) pour effectuer votre évalution. Vous pouvez copier le code HTML,CSS et JavaScript dans l'un de ces éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas de panneaux JavaScript/CSS séparés, n'hésitez pas à utiliser les éléments `<script>`/`<style>` dans la page HTML.
 
-> **Note :** Si vous êtes bloqué, demandez-nous de l'aide — voir la section {{anch("Évaluation ou aide supplémentaire")}} au bas de cette page.
+> **Note :** Si vous êtes bloqué, demandez-nous de l'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
 
 ## Résumé du projet
 

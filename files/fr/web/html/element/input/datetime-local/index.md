@@ -56,9 +56,9 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 | Attribut               | Description                                                                                                                                        |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("max")}}` | La date la plus avancée qui peut être saisie.                                                                                                      |
-| `{{anch("min")}}` | La date la plus reculée qui peut être saisie.                                                                                                      |
-| `{{anch("step")}}` | Le pas à utiliser pour l'incrément quand on utilise les boutons d'augmentation/diminution. Cet incrément est également utilisé pour la validation. |
+| [`max`](#max) | La date la plus avancée qui peut être saisie.                                                                                                      |
+| [`min`](#min) | La date la plus reculée qui peut être saisie.                                                                                                      |
+| [`step`](#step) | Le pas à utiliser pour l'incrément quand on utilise les boutons d'augmentation/diminution. Cet incrément est également utilisé pour la validation. |
 
 ### {{htmlattrdef("max")}}
 
@@ -115,7 +115,7 @@ Les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max", "input")
 Par conséquent :
 
 - Seuls les jours de juin 2017 peuvent être sélectionnés et seules les heures entre 08h30 et 16h30 pourront être sélectionnées..
-- Selon le navigateur utilisé, il est possible ou non de sélectionner des heures invalides (cf. {{anch("Validation")}}).
+- Selon le navigateur utilisé, il est possible ou non de sélectionner des heures invalides (cf. [Validation](#validation)).
 
 > **Note :** L'attribut {{htmlattrxref("step", "input")}} devrait pouvoir être utilisé afin de faire varier l'incrément, en jours, pour sélectionner la date (par exemple afin de ne pouvoir sélectionner que les samedi). En revanche, à l'heure où nous rédigeons cet article, aucune implémentation ne semble proposer cette fonctionnalité.
 
@@ -524,7 +524,7 @@ daySelect.onchange = function() {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente une date et une heure (selon le fuseau horaire local) ou bien

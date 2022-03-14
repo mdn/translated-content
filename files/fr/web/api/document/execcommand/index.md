@@ -39,7 +39,7 @@ prise en charge ou si elle est désactivée.
 
 - `aCommandName`
   - : Une chaîne de caractères {{domxref("DOMString")}} indiquant le nom de la commande à
-    exécuter. Voir {{anch("Commands")}} pour une liste de commandes possibles.
+    exécuter. Voir [Commands](#commands) pour une liste de commandes possibles.
 - `aShowDefaultUI`
   - : Un booléen ({{jsxref("Boolean")}}) indiquant si l'interface utilisateur par défaut
     devrait être affichée. Ce n'est pas implémenté par Mozilla.

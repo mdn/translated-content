@@ -19,7 +19,7 @@ La `console` est accessible de n'importe quel objet global, {{domxref("Window")}
 console.log("Failed to open the specified link")
 ```
 
-Cette page documente les {{anch("Methods", "méthodes")}} disponibles pour l'objet `console` et donne quelques {{anch("Usage", "exemples d'utilisation")}}.
+Cette page documente les [méthodes](#methods) disponibles pour l'objet `console` et donne quelques [exemples d'utilisation](#usage).
 
 {{AvailableInWorkers}}
 

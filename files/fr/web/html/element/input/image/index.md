@@ -25,15 +25,15 @@ En complément des attributs pris en charge par l'ensemble des éléments {{HTML
 
 | Attribute                              | Description                                                                                                                                                                                                               |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("alt")}}`                 | Texte de remplacement lorsque l'image ne peut pas être affichée                                                                                                                                                           |
-| `{{anch("formaction")}}`         | L'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut {{htmlattrxref("action", "form")}} du formulaire s'il est défini.                                                  |
-| `{{anch("formenctype")}}`     | Une chaîne de caractères qui indique le type d'encodage à utiliser pour les données du formulaire.                                                                                                                        |
-| `{{anch("formmethod")}}`         | La méthode HTTP à utiliser pour envoyer le formulaire.                                                                                                                                                                    |
-| `{{anch("formnovalidate")}}` | Un booléen qui, lorsqu'il est présent, indique que les champs du formulaire ne sont pas soumis [aux contraintes de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) avant l'envoi des données au serveur. |
-| `{{anch("formtarget")}}`         | Le contexte de navigation dans lequel charger la réponse du serveur reçue après l'envoi du formulaire.                                                                                                                    |
-| `{{anch("height")}}`             | La hauteur, en pixels CSS, à laquelle dessiner l'image                                                                                                                                                                    |
-| `{{anch("src")}}`                 | L'URL à partir de laquelle charger l'image                                                                                                                                                                                |
-| `{{anch("width")}}`             | La largeur, en pixels CSS, à laquelle dessiner l'image                                                                                                                                                                    |
+| [`alt`](#alt)                 | Texte de remplacement lorsque l'image ne peut pas être affichée                                                                                                                                                           |
+| [`formaction`](#formaction)         | L'URL à laquelle envoyer les données du formulaire. Cette valeur prend le pas sur l'attribut {{htmlattrxref("action", "form")}} du formulaire s'il est défini.                                                  |
+| [`formenctype`](#formenctype)     | Une chaîne de caractères qui indique le type d'encodage à utiliser pour les données du formulaire.                                                                                                                        |
+| [`formmethod`](#formmethod)         | La méthode HTTP à utiliser pour envoyer le formulaire.                                                                                                                                                                    |
+| [`formnovalidate`](#formnovalidate) | Un booléen qui, lorsqu'il est présent, indique que les champs du formulaire ne sont pas soumis [aux contraintes de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) avant l'envoi des données au serveur. |
+| [`formtarget`](#formtarget)         | Le contexte de navigation dans lequel charger la réponse du serveur reçue après l'envoi du formulaire.                                                                                                                    |
+| [`height`](#height)             | La hauteur, en pixels CSS, à laquelle dessiner l'image                                                                                                                                                                    |
+| [`src`](#src)                 | L'URL à partir de laquelle charger l'image                                                                                                                                                                                |
+| [`width`](#width)             | La largeur, en pixels CSS, à laquelle dessiner l'image                                                                                                                                                                    |
 
 ### {{htmlattrdef("alt")}}
 
@@ -120,7 +120,7 @@ L'attribut suivant a été défini en HTML4 pour les champs de type `image` mais
 
 | Attribute                  | Description                                                                                                                                                                                                                        |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("usemap")}}` | Le nom d'une carte d'images cliquables ({{HTMLElement("map")}}) à utiliser pour l'image. Cet élément est obsolète et c'est l'élément {{HTMLElement("img")}} qui devrait être utilisé pour créer des cartes à la place. |
+| [`usemap`](#usemap) | Le nom d'une carte d'images cliquables ({{HTMLElement("map")}}) à utiliser pour l'image. Cet élément est obsolète et c'est l'élément {{HTMLElement("img")}} qui devrait être utilisé pour créer des cartes à la place. |
 
 ### {{htmlattrdef("usemap")}}
 
@@ -290,7 +290,7 @@ On voit ici `object-position` qui permet de dessiner l'image à paritr du coin s
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Aucune, l'attribut <code>value</code> ne devrait pas être utilisé.
       </td>

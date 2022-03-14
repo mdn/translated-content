@@ -40,7 +40,7 @@ L'objet **`Intl`** est l'espace de noms pour l'API d'Internationalisation d'ECMA
 
 ## Identification et choix de la locale
 
-Les constructeurs d'internationalisation, ainsi que plusieurs autres méthodes spécifiques à une langue dans d'autres constructeurs (voir ci-dessous {{anch("See_also", "Voir aussi")}}), utilisent un schéma commun pour identifier les locales et déterminer celle qu'ils utiliseront effectivement : ils acceptent tous les arguments `locales` et `options`, et ils négocient les locales demandées face aux locales qu'ils supportent, en utilisant un algorithme spécifié dans la propriété `options.localeMatcher`.
+Les constructeurs d'internationalisation, ainsi que plusieurs autres méthodes spécifiques à une langue dans d'autres constructeurs (voir ci-dessous [Voir aussi](#see_also)), utilisent un schéma commun pour identifier les locales et déterminer celle qu'ils utiliseront effectivement : ils acceptent tous les arguments `locales` et `options`, et ils négocient les locales demandées face aux locales qu'ils supportent, en utilisant un algorithme spécifié dans la propriété `options.localeMatcher`.
 
 ### Argument `locales`
 

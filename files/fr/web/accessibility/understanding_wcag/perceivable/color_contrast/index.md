@@ -20,7 +20,7 @@ Lors de la conception d'interfaces lisibles pour différentes capacités de visi
 
 Ces ratios ne s'appliquent pas au texte "accessoire", comme les contrôles inactifs, les logotypes ou le texte purement décoratif.
 
-Voir la section {{anch("Solution")}} ci-dessous pour plus d'informations.
+Voir la section [Solution](#solution) ci-dessous pour plus d'informations.
 
 Un bon contraste des couleurs sur votre site profite à tous vos utilisateurs, mais celà est particulièrement intéressant pour les utilisateurs souffrant de certains types de daltonisme et d'autres particularités similaires, qui rencontrent un faible contraste et ont du mal à faire la différence entre des couleurs proches. En effet, ces utilisateurs ne voient pas les zones claires et sombres aussi facilement que ceux sans ces particularités et ont donc du mal à voir les bords, les bordures et d'autres détails.
 

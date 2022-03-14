@@ -33,9 +33,9 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 | Attribut               | Description                                                                                                                                                |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("max")}}` | La valeur maximale autorisée.                                                                                                                              |
-| `{{anch("min")}}` | La valeur minimale autorisée.                                                                                                                              |
-| `{{anch("step")}}` | Le pas utilisé pour incrémenter la valeur du champ. Cette valeur est utilisée pour l'interface utilisateur du contrôle et pour la validation de la valeur. |
+| [`max`](#max) | La valeur maximale autorisée.                                                                                                                              |
+| [`min`](#min) | La valeur minimale autorisée.                                                                                                                              |
+| [`step`](#step) | Le pas utilisé pour incrémenter la valeur du champ. Cette valeur est utilisée pour l'interface utilisateur du contrôle et pour la validation de la valeur. |
 
 ### {{htmlattrdef("max")}}
 
@@ -322,7 +322,7 @@ Pour compléter les exemples précédents, on pourra consulter l'article suivant
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui contient
         la représentation textuelle de la valeur numérique sélectionnée. On

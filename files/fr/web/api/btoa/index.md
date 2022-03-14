@@ -18,7 +18,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 
 La méthode `WindowOrWorkerGlobalScope.btoa()` crée une chaîne ASCII codée en base 64 à partir d'un objet {{jsxref ("String")}} dans lequel chaque caractère de la chaîne est traité comme un octet de données binaires.
 
-> **Note :** étant donné que cette fonction traite chaque caractère comme un octet de données binaires, quel que soit le nombre d'octets composant le caractère, une exception `InvalidCharacterError` est déclenchée si le {{Glossary("code point")}} d'un caractère quelconque est en dehors de la plage 0x00 à 0xFF. Voir {{anch("Chaînes Unicode")}} pour un exemple montrant comment encoder des chaînes avec des caractères en dehors de la plage 0x00 à 0xFF.
+> **Note :** étant donné que cette fonction traite chaque caractère comme un octet de données binaires, quel que soit le nombre d'octets composant le caractère, une exception `InvalidCharacterError` est déclenchée si le {{Glossary("code point")}} d'un caractère quelconque est en dehors de la plage 0x00 à 0xFF. Voir [Chaînes Unicode](#chaînes_unicode) pour un exemple montrant comment encoder des chaînes avec des caractères en dehors de la plage 0x00 à 0xFF.
 
 ## Syntaxe
 

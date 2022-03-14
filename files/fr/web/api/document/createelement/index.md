@@ -16,7 +16,7 @@ Dans un document [HTML](/fr/docs/Web/HTML), la méthode **`document.createElemen
 - tagName
   - : Une chaîne de caractères ({{domxref("DOMString")}}) spécifiant le type d’élément à créer. Le {{domxref("Node.nodeName", "nodeName")}} (_nom du noeud_) de l’élément créé est initialisé avec la valeur de `tagName`. N’utilisez pas le nom qualifié (comme `"html:a"`) avec cette méthode. Quand elle est appelée sur un document HTML, `createElement()` convertit `tagName` en minuscules avant de créer l’élément. Dans Firefox, Opera et Chrome, `createElement(null)` fonctionne comme `createElement("null")`.
 - options{{optional_inline}}
-  - : Un objet `ElementCreationOptions` facultatif contenant une seule propriété nommée `is` dont la valeur est le nom de balise d’un élément personnalisé précédemment défini avec `customElements.define()`. Voir {{anch("Web component example")}} pour plus de détails.
+  - : Un objet `ElementCreationOptions` facultatif contenant une seule propriété nommée `is` dont la valeur est le nom de balise d’un élément personnalisé précédemment défini avec `customElements.define()`. Voir [Web component example](#web_component_example) pour plus de détails.
 
 ### Valeur de retour
 

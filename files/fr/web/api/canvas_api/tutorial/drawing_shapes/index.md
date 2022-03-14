@@ -179,7 +179,7 @@ Le résultat ressemble à ce qui suit :
 
 Si vous voulez voir les lignes d'interconnexion, vous pouvez enlever les lignes qui appellent `moveTo()`.
 
-> **Note :** Pour en savoir plus sur la fonction `arc()`, voir la section {{anch("Arcs")}} ci-dessous.
+> **Note :** Pour en savoir plus sur la fonction `arc()`, voir la section [Arcs](#arcs) ci-dessous.
 
 ### Les lignes
 
@@ -381,7 +381,7 @@ function dessiner() {
 
 ### Rectangles
 
-En plus des trois méthodes que nous avons vues dans {{anch("Dessin de rectangles")}}, qui dessinent des formes rectangulaires directement sur le canevas, il y a la méthode `rect()`, qui ajoute un trajet rectangulaire à un trajet actuellement ouvert.
+En plus des trois méthodes que nous avons vues dans [Dessin de rectangles](#dessin_de_rectangles), qui dessinent des formes rectangulaires directement sur le canevas, il y a la méthode `rect()`, qui ajoute un trajet rectangulaire à un trajet actuellement ouvert.
 
 - {{domxref("CanvasRenderingContext2D.rect", "rect(x, y, largeur, hauteur)")}}
   - : Dessine un rectangle dont l'angle supérieur gauche est spécifié par (`x`, `y`), avec les `largeur` et `hauteur` spécifiées.

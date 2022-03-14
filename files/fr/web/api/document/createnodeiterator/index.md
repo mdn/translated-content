@@ -139,7 +139,7 @@ var nodeIterator = document.createNodeIterator(root, whatToShow, filter);
     </table>
 
 - `filter` {{ optional_inline() }}
-  - : Un objet implémentant l'interface {{ domxref("NodeFilter") }} ; sa méthode `acceptNode()` sera appelée pour chaque nœud du sous-arbre basé à la racine qui est accepté comme inclus par l'indicateur whatToShow pour déterminer s'il faut ou non l'inclure dans la liste des nœuds iterables (une simple fonction de rappel peut également être utilisée à la place). La méthode devrait retourner l'un des `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT` ou `NodeFilter.FILTER_SKIP`. Voir l'{{anch("Exemple")}}.
+  - : Un objet implémentant l'interface {{ domxref("NodeFilter") }} ; sa méthode `acceptNode()` sera appelée pour chaque nœud du sous-arbre basé à la racine qui est accepté comme inclus par l'indicateur whatToShow pour déterminer s'il faut ou non l'inclure dans la liste des nœuds iterables (une simple fonction de rappel peut également être utilisée à la place). La méthode devrait retourner l'un des `NodeFilter.FILTER_ACCEPT`, `NodeFilter.FILTER_REJECT` ou `NodeFilter.FILTER_SKIP`. Voir l'[Exemple](#exemple).
 
 > **Note :** Avant Gecko 12.0 {{geckoRelease("12.0")}}, cette méthode acceptait un quatrième paramètre facultatif (`entityReferenceExpansion`). Cela ne faisait pas partie de la spécification DOM4 et a donc été supprimé. Ce paramètre indiquait si les enfants des nœuds de référence d'entité étaient visibles ou non par l'itérateur. Puisque de tels noeuds n'ont jamais été créés dans les navigateurs, ce paramètre n'a eu aucun effet.
 

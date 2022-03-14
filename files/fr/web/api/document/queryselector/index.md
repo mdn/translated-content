@@ -29,7 +29,7 @@ element = document.querySelector(sélecteurs);
 - `selectors` (sélecteurs)
   - : une  {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs sélecteurs à comparer. La chaîne doit être composée de sélecteurs CSS valides ; sinon une exception `SYNTAX_ERR` est lancée. Voir [Localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs) pour plus d'informations sur les sélecteurs et leur gestion.
 
-> **Note :** les caractères qui n'appartiennent pas à la syntaxe standard CSS doivent être échappés par un antislash ("\\"). Puisque JavaScript utilise aussi cette barre pour l'échappement, une attention particulière est nécessaire quand des chaînes comprennent ces caractères. Voir {{anch("Caractère spécial d'échappement")}} pour plus d'informations.
+> **Note :** les caractères qui n'appartiennent pas à la syntaxe standard CSS doivent être échappés par un antislash ("\\"). Puisque JavaScript utilise aussi cette barre pour l'échappement, une attention particulière est nécessaire quand des chaînes comprennent ces caractères. Voir [Caractère spécial d'échappement](#caractère_spécial_d'échappement) pour plus d'informations.
 
 ### Valeur retournée
 

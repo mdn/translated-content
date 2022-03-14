@@ -102,10 +102,10 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 | Attribut                       | Description                                                                                                                                        |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("max")}}`         | L'heure la plus tardive qui est accepté, au format `"hh:mm"`.                                                                                      |
-| `{{anch("min")}}`         | L'heure la plus tôt qui est acceptée au format `"hh:mm"`.                                                                                          |
-| `{{anch("readonly")}}` | Un attribut booléen qui, lorsqu'il est présent, indique que le contenu du champ ne peut pas être édité par l'utilisateur.                          |
-| `{{anch("step")}}`         | Le pas à utiliser pour l'incrément quand on utilise les boutons d'augmentation/diminution. Cet incrément est également utilisé pour la validation. |
+| [`max`](#max)         | L'heure la plus tardive qui est accepté, au format `"hh:mm"`.                                                                                      |
+| [`min`](#min)         | L'heure la plus tôt qui est acceptée au format `"hh:mm"`.                                                                                          |
+| [`readonly`](#readonly) | Un attribut booléen qui, lorsqu'il est présent, indique que le contenu du champ ne peut pas être édité par l'utilisateur.                          |
+| [`step`](#step)         | Le pas à utiliser pour l'incrément quand on utilise les boutons d'augmentation/diminution. Cet incrément est également utilisé pour la validation. |
 
 > **Note :** À la différence d'autres types de donnée, les valeurs pour les heures sont sur un domaine **périodique**. Cela signifie qu'une fois la valeur maximale dépassée, on revient à la valeur minimale (autrement dit, on fait le tour de l'horloge). Ainsi, si on indique `min` avec la valeur `"14:00"` et `max` avec la valeur `"2:00"`, cela signifie que les valeurs autorisées sont comprises entre 2 heures de l'après-midi et jusqu'à 2 heures du matin le jour suivant.
 
@@ -454,7 +454,7 @@ function populateMinutes() {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente un heure (avec des minutes) ou bien une chaîne de caractères

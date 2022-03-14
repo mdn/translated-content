@@ -426,7 +426,7 @@ Cela équivaut à :
 name = name + ' dit bonjour !';
 ```
 
-Lorsque nous exécutons des tests vrai/faux (par exemple, dans des conditions — voir {{anch ("Structures conditionnelles", "ci-dessous")}}, nous utilisons des [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), par exemple :
+Lorsque nous exécutons des tests vrai/faux (par exemple, dans des conditions — voir [ci-dessous](#structures_conditionnelles), nous utilisons des [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), par exemple :
 
 | Operator | Name                                            | Example                    |
 | -------- | ----------------------------------------------- | -------------------------- |

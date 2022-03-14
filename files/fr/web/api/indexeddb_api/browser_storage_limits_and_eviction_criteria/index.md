@@ -24,7 +24,7 @@ Même dans le même navigateur, en utilisant la même méthode de stockage, il e
 Généralement, les deux principaux types de stockage sont les suivants :
 
 - Persistant : ce sont des données qui doivent être conservées pendant une longue période. Elles ne seront évincéés que si l'utilisateur le choisit (par exemple, dans Firefox, il existe un bouton "nettoyer stockage" dans la boîte de dialogue d'informations sur la page pour chaque page).
-- Temporaire : il s'agit de données qui n'ont pas besoin de persister très longtemps. Elles seront évacuées en-dessous d'un minimum d'utilisation ({{anch("LRU policy")}}) lorsque les limites de stockage sont atteintes.
+- Temporaire : il s'agit de données qui n'ont pas besoin de persister très longtemps. Elles seront évacuées en-dessous d'un minimum d'utilisation ([LRU policy](#lru_policy)) lorsque les limites de stockage sont atteintes.
 
 Par défaut, le stockage temporaire sera utilisé dans la plupart des contextes d'utilisation (par exemple, des applications Web standard) et le persistant pour les applications installées (par exemple, les applications Firefox installées sur le système d'exploitation Firefox OS / Firefox de bureau, les applications Chrome).
 
@@ -41,7 +41,7 @@ Dans Firefox, vous pouvez choisir le type de stockage que vous souhaitez utilis
 
 Dans Firefox, quand le stockage persistant est choisi, l'utilisateur reçoit une fenêtre de dialogue d'interface utilisateur pour l'avertir que ces données persisteront et lui demander s'il en est satisfait.
 
-Les données de stockage temporaire ne provoquent aucune fenêtre de dialogue vers l'utilisateur, mais il y a des {{anch("Limites de stockage")}}.
+Les données de stockage temporaire ne provoquent aucune fenêtre de dialogue vers l'utilisateur, mais il y a des [Limites de stockage](#limites_de_stockage).
 
 ### "Default storage" dans Firefox _(stockage par défaut)_
 

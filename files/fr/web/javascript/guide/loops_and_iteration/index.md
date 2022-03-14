@@ -27,14 +27,14 @@ Il y a différents types de boucles mais elles se ressemblent toutes au sens où
 
 Voici les différentes boucles fournies par JavaScript :
 
-- {{anch("Linstruction for")}}
-- {{anch("Linstruction do...while")}}
-- {{anch("Linstruction while")}}
-- {{anch("Linstruction label")}}
-- {{anch("Linstruction break")}}
-- {{anch("Linstruction continue")}}
-- {{anch("Linstruction for...in")}}
-- {{anch("Linstruction for...of")}}
+- [Linstruction for](#linstruction_for)
+- [Linstruction do...while](#linstruction_do...while)
+- [Linstruction while](#linstruction_while)
+- [Linstruction label](#linstruction_label)
+- [Linstruction break](#linstruction_break)
+- [Linstruction continue](#linstruction_continue)
+- [Linstruction for...in](#linstruction_for...in)
+- [Linstruction for...of](#linstruction_for...of)
 
 ## L'instruction for
 

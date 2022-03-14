@@ -16,7 +16,7 @@ Les objets `File` sont généralements obtenus à partir de :
 - l’objet {{domxref("DataTransfer")}} d’une opération de glisser-déposer ;
 - l’API `mozGetAsFile()` de l’élément {{domxref("HTMLCanvasElement")}}.
 
-Dans Gecko, le code privilégié peut créer des objets `File` représentant tout fichier local sans nécessiter une interaction de l’utilisateur ou de l’utilisatrice (voir {{anch("Notes d’implémentation")}} pour plus d’informations.)
+Dans Gecko, le code privilégié peut créer des objets `File` représentant tout fichier local sans nécessiter une interaction de l’utilisateur ou de l’utilisatrice (voir [Notes d’implémentation](#notes_d’implémentation) pour plus d’informations.)
 
 Un objet `File` est un genre spécifique de {{domxref("Blob")}}, et peut être utilisé dans tout contexte où un blob peut l’être. En particulier, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, et {{domxref("XMLHttpRequest", "", "send()")}} acceptent indifféremment des `Blob`s et des `File`s.
 

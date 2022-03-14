@@ -23,7 +23,7 @@ La façon dont le texte saisi est traité dépend du navigateur utilisé. Sur le
 
 La valeur de l'attribut {{htmlattrxref("value", "input")}} d'un tel élément contient une chaîne de caractères ({{domxref("DOMString")}}) dont la valeur est le texte qui est en cours de saisie dans le contrôle. Si l'utilisateur n'a pas encore saisi d'information, la valeur est une chaîne vide. Si l'attribut booléen {{htmlattrxref("required")}} est utilisé, le mot de passe doit contenir une valeur non vide afin que le formulaire puisse être envoyé.
 
-Si l'attribut {{htmlattrxref("pattern", "input")}} est indiqué, le contenu du contrôle doit respecter l'expression rationnelle indiquée par l'attribut. Pour plus d'informations, voir la section {{anch("Validation")}} ci-après.
+Si l'attribut {{htmlattrxref("pattern", "input")}} est indiqué, le contenu du contrôle doit respecter l'expression rationnelle indiquée par l'attribut. Pour plus d'informations, voir la section [Validation](#validation) ci-après.
 
 > **Note :** Il n'est pas possible d'utiliser les caractères de fin de ligne (_Line Feed_) (code U+000A) et de retour chariot (_Carriage Return_) (code U+000D) dans la valeur d'un champ `"password"`. Lorsqu'on saisit la valeur, ces caractères sont retirés si besoin.
 
@@ -33,12 +33,12 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 | Attribut                           | Description                                                                                               |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `{{anch("maxlength")}}`     | Le nombre de caractères maximal qui peut être écrit dans ce champ.                                        |
-| `{{anch("minlength")}}`     | Le nombre de caractères minimal qui peut être écrit dans ce champ pour qu'il soit considéré comme valide. |
-| `{{anch("pattern")}}`         | Une expression rationnelle à laquelle doit correspondre le texte saisi pour être valide.                  |
-| `{{anch("placeholder")}}` | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                 |
-| `{{anch("readonly")}}`     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                              |
-| `{{anch("size")}}`             | Un nombre qui indique le nombre de caractères affichés par le champ.                                      |
+| [`maxlength`](#maxlength)     | Le nombre de caractères maximal qui peut être écrit dans ce champ.                                        |
+| [`minlength`](#minlength)     | Le nombre de caractères minimal qui peut être écrit dans ce champ pour qu'il soit considéré comme valide. |
+| [`pattern`](#pattern)         | Une expression rationnelle à laquelle doit correspondre le texte saisi pour être valide.                  |
+| [`placeholder`](#placeholder) | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                 |
+| [`readonly`](#readonly)     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                              |
+| [`size`](#size)             | Un nombre qui indique le nombre de caractères affichés par le champ.                                      |
 
 ### {{htmlattrdef("maxlength")}}
 
@@ -56,7 +56,7 @@ Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validatio
 
 {{page("/fr/docs/Web/HTML/Element/input/text", "pattern-include")}}
 
-L'utilisation d'un motif pour les mots de passe est fortement recommandée. Elle permet de s'assurer que les mots de passe saisis respectent des critères de complexité suffisants pour être robustes. Voir la section {{anch("Validation")}} ci-après pour plus de détails et d'exemples.
+L'utilisation d'un motif pour les mots de passe est fortement recommandée. Elle permet de s'assurer que les mots de passe saisis respectent des critères de complexité suffisants pour être robustes. Voir la section [Validation](#validation) ci-après pour plus de détails et d'exemples.
 
 {{page("/fr/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}
 
@@ -213,7 +213,7 @@ L'attribut {{htmlattrxref("inputmode", "input")}} vaut `number`, ce qui incite l
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères qui représente un mot de passe (la chaîne peut
         éventuellement être vide).

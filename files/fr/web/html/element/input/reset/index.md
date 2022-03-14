@@ -110,7 +110,7 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères qui est utilisée comme intitulé pour le bouton.
       </td>

@@ -17,7 +17,7 @@ Ce guide est constitué d'une série d'articles qui vous aideront à maîtriser 
 
 ## Prérequis
 
-Avant de vous lancer dans  ce module, vous devez au moins avoir travaillé notre [Introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML). À partir de là, vous devriez trouver les {{anch("Éléments de base")}} faciles à comprendre et également être capable de vous servir du guide pour  les [widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs).
+Avant de vous lancer dans  ce module, vous devez au moins avoir travaillé notre [Introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML). À partir de là, vous devriez trouver les [Éléments de base](#éléments_de_base) faciles à comprendre et également être capable de vous servir du guide pour  les [widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs).
 
 Le reste du module est toutefois un peu plus difficile — il est facile de placer des widgets de formulaire dans une page, mais vous ne pourrez pas en faire vraiment quelque chose sans utiliser quelques fonctionnalités plus avancées, les CSS et le JavaScript. C'est pourquoi, avant de regarder ces autres parties, nous vous recommandons de faire un détour et de procéder d'abord à l'étude des [CSS](/fr/Apprendre/CSS/Introduction_à_CSS) et du [JavaScript](/fr/docs/Apprendre/JavaScript).
 

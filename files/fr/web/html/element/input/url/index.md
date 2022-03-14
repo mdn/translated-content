@@ -25,7 +25,7 @@ La valeur de l'attribut {{htmlattrxref("value", "input")}} contient une chaîne 
 1.  Une chaîne de caractères vide ("") qui indique que l'utilisateur n'a pas saisi de valeur ou que la valeur a été retirée.
 2.  Une seule URL bien formée. Cela ne signifie pas nécessairement que l'adresse existe mais qu'elle est formatée correctement. Autrement dit, la chaîne de caractères respecte la forme `"schema://restedelurl"`.
 
-Voir {{anch("Validation")}} pour plus de détails sur le format des URL et leur validation.
+Voir [Validation](#validation) pour plus de détails sur le format des URL et leur validation.
 
 ## Attributs supplémentaires
 
@@ -33,13 +33,13 @@ En complément des attributs qui fonctionnent pour tous les types d'éléments {
 
 | Attribut                           | Description                                                                                                        |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `{{anch("maxlength")}}`     | La longueur maximale de l'URL, exprimée en nombre de caractères UTF-16, afin qu'elle soit considérée comme valide. |
-| `{{anch("minlength")}}`     | La longueur minimale de l'URL, exprimée en nombre de caractères UTF-16, afin qu'elle soit considérée comme valide. |
-| `{{anch("pattern")}}`         | Une expression rationnelle que doit respecter la valeur afin d'être considérée comme valide.                       |
-| `{{anch("placeholder")}}` | Une valeur d'exemple à afficher lorsqu'aucune valeur n'est saisie dans le champ.                                   |
-| `{{anch("readonly")}}`     | Un attribut booléen qui indique si le champ est en lecture seule et ne peut être édité par l'utilisateur.          |
-| `{{anch("size")}}`             | Le nombre de caractères qui doivent être visibles à l'écran.                                                       |
-| `{{anch("spellcheck")}}`     | Une chaîne de caractères qui contrôle si la vérification orthographique doit être activée.                         |
+| [`maxlength`](#maxlength)     | La longueur maximale de l'URL, exprimée en nombre de caractères UTF-16, afin qu'elle soit considérée comme valide. |
+| [`minlength`](#minlength)     | La longueur minimale de l'URL, exprimée en nombre de caractères UTF-16, afin qu'elle soit considérée comme valide. |
+| [`pattern`](#pattern)         | Une expression rationnelle que doit respecter la valeur afin d'être considérée comme valide.                       |
+| [`placeholder`](#placeholder) | Une valeur d'exemple à afficher lorsqu'aucune valeur n'est saisie dans le champ.                                   |
+| [`readonly`](#readonly)     | Un attribut booléen qui indique si le champ est en lecture seule et ne peut être édité par l'utilisateur.          |
+| [`size`](#size)             | Le nombre de caractères qui doivent être visibles à l'écran.                                                       |
+| [`spellcheck`](#spellcheck)     | Une chaîne de caractères qui contrôle si la vérification orthographique doit être activée.                         |
 
 ### {{htmlattrdef("maxlength")}}
 
@@ -73,8 +73,8 @@ Il est possible (mais déconseillé) d'utiliser ces attributs non-standard sur l
 
 | Attribut                           | Description                                                                                                                                                                                                                                                                                                                                                          |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("autocorrect")}}` | Autorise ou non la correction automatique lors de l'édition de ce champ. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                                                                   |
-| `{{anch("mozactionhint")}}` | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. Cet attribut est destiné à fournir un libellé équivoque pour la touche du clavier virtuel présenté à l'utilisateur. **Uniquement pris en charge par Firefox pour Android.** |
+| [`autocorrect`](#autocorrect) | Autorise ou non la correction automatique lors de l'édition de ce champ. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                                                                   |
+| [`mozactionhint`](#mozactionhint) | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. Cet attribut est destiné à fournir un libellé équivoque pour la touche du clavier virtuel présenté à l'utilisateur. **Uniquement pris en charge par Firefox pour Android.** |
 
 ### {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
 
@@ -283,7 +283,7 @@ En plus des exemples précédents, vous pouvez consulter [l'exemple de validatio
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente une URL ou une chaîne de caractères vide.

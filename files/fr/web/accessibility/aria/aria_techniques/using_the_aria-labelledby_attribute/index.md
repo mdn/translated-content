@@ -16,7 +16,7 @@ L’attribut `aria-labelledby` est utilisé pour indiquer les ID des éléments 
 
 `aria-labelledby` est très similaire à l’attribut [aria-describedby](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-describedby) : un label décrit la nature d’un objet, alors qu’une description fournit plus d’informations pouvant être utiles à l’utilisateur.
 
-L’attribut `aria-labelledby` n’est pas uniquement utilisé avec les éléments de formulaire ; il peut également être utilisé pour associer un texte statique avec des composants, des groupes d’éléments, des panneaux, des zones possédant un titre, des définitions, etc. La section {{ anch("Exemples") }} ci-dessous fournit plus d’informations sur l’utilisation de cet attribut dans ces cas précis.
+L’attribut `aria-labelledby` n’est pas uniquement utilisé avec les éléments de formulaire ; il peut également être utilisé pour associer un texte statique avec des composants, des groupes d’éléments, des panneaux, des zones possédant un titre, des définitions, etc. La section [Exemples](#exemples) ci-dessous fournit plus d’informations sur l’utilisation de cet attribut dans ces cas précis.
 
 L’attribut `aria-labelledby` peut être utilisé en conjonction avec l’élément {{ HTMLElement("label") }} (à l’aide de l’attribut `for`) pour améliorer la compatibilité avec les agents utilisateurs qui ne prennent pas encore en charge ARIA.
 

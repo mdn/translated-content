@@ -59,7 +59,7 @@ Vous pouvez les appeler "hypothèses" ou "intuitions". Ce n'est pas une approche
 
 Par exemple, si vous habitez en Europe de l'Ouest ou en Amérique du Nord, vous devez savoir que la plupart des gens utilisent des ordinateurs de bureau/portable Windows et Mac, et que les navigateurs principaux sont Chrome, Firefox, Safari, IE, et Edge. Vous n'aurez sûrement besoin que de tester uniquement les dernières versions des trois premiers, étant donné que ces navigateurs reçoivent des mises à jour régulières. Pour Edge et IE vous n'aurez que besoin de tester les deux dernières versions ; ils doivent tous aller dans le niveau de grade A.
 
-> **Note :** Vous ne pouvez avoir qu'une seule version d'IE ou d'Edge installée sur une machine à la fois, vous aurez donc probablement besoin d'utiliser une machine virtuelle, ou une autre stratégie pour faire les tests nécessaires. Voir {{anch("Virtual machines")}} plus tard.
+> **Note :** Vous ne pouvez avoir qu'une seule version d'IE ou d'Edge installée sur une machine à la fois, vous aurez donc probablement besoin d'utiliser une machine virtuelle, ou une autre stratégie pour faire les tests nécessaires. Voir [Virtual machines](#virtual_machines) plus tard.
 
 Beaucoup de personnes utilisent iOS et Android, vous aurez donc aussi besoin de tester les dernières versions d'iOS Safari, les deux dernières versions de l'ancien Android stock browser, et Chrome et Firefox pour iOS et Android. Idéalement, vous devriez tester sur un téléphone et une tablette de chaque système d'exploitation, afin de vous assurer que les designs responsives fonctionnent bien.
 
@@ -162,7 +162,7 @@ Vous avez aussi dû remarquer que le bouton n'est pas utilisable en se servant d
 Ces critères de test sont utiles, parce que :
 
 - Ils vous donnent une série d'étapes à suivre lorsque vous jouer des tests.
-- Ils peuvent être facilement transformés en listes d'instructions à suivre pour les groupes d'utilisateurs lorsqu'ils effectuent des tests (par ex. "essayer d'activer les bouton en utilisant votre souris, et ensuite le clavier...") — voir {{anch("User testing")}}, voir plus bas.
+- Ils peuvent être facilement transformés en listes d'instructions à suivre pour les groupes d'utilisateurs lorsqu'ils effectuent des tests (par ex. "essayer d'activer les bouton en utilisant votre souris, et ensuite le clavier...") — voir [User testing](#user_testing), voir plus bas.
 - Ils peuvent aussi apporter une base pour rédiger les tests automatiques. C'est plus simple d'écrire de tels tests si vous savez exactement ce que vous voulez tester, et quelles sont les conditions de succès (voir Utiliser un outil d'automatisation pour les tests automatiques de navigateurs, plus tard dans cette série).
 
 ## Mettre en place ensemble un labo de test
@@ -269,7 +269,7 @@ Nous aborderons comment utiliser de tels outils plus tard dans ce module.
 
 Avant de poursuivre, nous finirons cet article en abordant les tests utilisateurs — cela peut être une bonne option si vous avez un groupe d'utilisateurs volontaires pour tester votre nouvelle fonctionnalité. Ne perdez pas de vue que cela peut être aussi peu ou beaucoup sophistiqué que vous le désirez — votre groupe d'utilisateurs peut être un groupe d'amis, un groupe de collègues, ou un groupe de volontaires bénévoles ou rémunérés, cela dépend si vous avez de l'argent à dépenser en test.
 
-La plupart du temps vous permettrez à vos utilisateurs de regarder la page ou la vue contenant la nouvelle fonctionnalité sur un serveur de développement, de cette manière vous n'exposez pas le site final ou les modifications en direct avant qu'il ne soit terminé. Vous devez leur recommander de suivre certaines étapes et de rapporter les résultats qu'ils ont obtenu. Il est important d'établir une liste d'étapes (parfois appelé script) vous aurez ainsi plus de résultats fiables se rapportant à ce que vous essayez de tester. Nous avons mentionné cela dans la section {{anch("What are you going to test")}} plus haut — c'est facile de transformer les critères de test détaillés ici en étapes à suivre. Par exemple, ce qui suit devrait fonctionner pour un utilisateur voyant :
+La plupart du temps vous permettrez à vos utilisateurs de regarder la page ou la vue contenant la nouvelle fonctionnalité sur un serveur de développement, de cette manière vous n'exposez pas le site final ou les modifications en direct avant qu'il ne soit terminé. Vous devez leur recommander de suivre certaines étapes et de rapporter les résultats qu'ils ont obtenu. Il est important d'établir une liste d'étapes (parfois appelé script) vous aurez ainsi plus de résultats fiables se rapportant à ce que vous essayez de tester. Nous avons mentionné cela dans la section [What are you going to test](#what_are_you_going_to_test) plus haut — c'est facile de transformer les critères de test détaillés ici en étapes à suivre. Par exemple, ce qui suit devrait fonctionner pour un utilisateur voyant :
 
 - Cliquez plusieurs fois sur le bouton en point d'interrogation en utilisant votre souris sur votre ordinateur de bureau. Rafraîchir la fenêtre du navigateur.
 - Sélectionnez et activer plusieurs fois le bouton en point d'interrogation en utilisant votre clavier sur votre ordinateur de bureau.

@@ -77,7 +77,7 @@ Le nom peut inclure les caractères suivants :
 
 ### message
 
-Au moins, cette propriété doit être définie pour chaque chaîne. Le membre `"message"` contient une chaîne localisée qui peut contenir {{anch("placeholders")}}. Vous pouvez utiliser :
+Au moins, cette propriété doit être définie pour chaque chaîne. Le membre `"message"` contient une chaîne localisée qui peut contenir [placeholders](#placeholders). Vous pouvez utiliser :
 
 - _$placeholder_name$_ (case insensitive) pour insérer un espace réservé particulier (par exemple $URL$ dans l'exemple ci-dessus) dans votre chaîne.
 - `$1`, `$2`, `$3`, etc. pour insérer directement les valeurs obtenues à partir d'un {{WebExtAPIRef("i18n.getMessage()")}} appel dans votre chaîne.
@@ -112,7 +112,7 @@ Chaque définition de sous-chaîne d'espace réservé possède un certain nombre
 
 #### Nom placeholder
 
-Le nom de l'espace réservé est utilisé pour représenter l'espace réservé dans la chaîne de substitution (par exemple `"url"` devient `$url$`). Il est insensible à la casse et peut contenir les mêmes caractères qu'une chaîne de message {{anch("name")}}.
+Le nom de l'espace réservé est utilisé pour représenter l'espace réservé dans la chaîne de substitution (par exemple `"url"` devient `$url$`). Il est insensible à la casse et peut contenir les mêmes caractères qu'une chaîne de message [name](#name).
 
 #### contenu
 

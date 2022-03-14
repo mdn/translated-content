@@ -296,7 +296,7 @@ draw();
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>A {{domxref("DOMString")}} used as the button's label</td>
     </tr>
     <tr>

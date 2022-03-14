@@ -9,7 +9,7 @@ La methode **`write()`** de {{domxref("Clipboard")}} écrie des données arbit
 
 Avant de pouvoir écrire dans le presse-papier, vous devez utiliser [Permissions API](/en-US/docs/Web/API/Permissions_API) pour avoir l'autorisation `"clipboard-write"`.
 
-> **Note :** Browser support for the asynchronous clipboard APIs is still in the process of being implemented. Be sure to check the {{anch("Browser compatibility", "compatibility table")}} as well as {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more information.
+> **Note :** Browser support for the asynchronous clipboard APIs is still in the process of being implemented. Be sure to check the [compatibility table](#browser_compatibility) as well as {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more information.
 
 ## Syntax
 

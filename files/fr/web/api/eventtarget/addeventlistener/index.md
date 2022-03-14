@@ -24,7 +24,7 @@ target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-stan
 - `type`
   - : Une chaîne sensible à la casse représentant le [type d'évènement](/fr/docs/Web/Events) à écouter.
 - `listener`
-  - : L'objet qui recevra un évènement (c'est-à-dire un objet qui implémente l'interface {{domxref("Event")}}) lorsqu'un évènement du type spécifié se produit. Cet argument doit être un objet implémentant l'interface {{domxref("EventListener")}} ou une [fonction](/fr/docs/Web/JavaScript/Guide/Functions) JavaScript. Voir {{anch("The_event_listener_callback", "Fonction de rappel (<i>callback</i> pour le gestionnaire d'évènement)")}} pour plus de détails sur le fonctionnement d'une fonction de rappel.
+  - : L'objet qui recevra un évènement (c'est-à-dire un objet qui implémente l'interface {{domxref("Event")}}) lorsqu'un évènement du type spécifié se produit. Cet argument doit être un objet implémentant l'interface {{domxref("EventListener")}} ou une [fonction](/fr/docs/Web/JavaScript/Guide/Functions) JavaScript. Voir [Fonction de rappel (<i>callback</i> pour le gestionnaire d'évènement)](#the_event_listener_callback) pour plus de détails sur le fonctionnement d'une fonction de rappel.
 - `options` {{optional_inline}}
 
   - : Un objet options spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
@@ -34,7 +34,7 @@ target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-stan
     - `once`
       - : Un booléen ({{jsxref("Boolean")}}) indiquant que `listener` doit être invoqué au plus une fois après avoir été ajouté. Si `true` (vrai), `listener` sera automatiquement supprimé après son appel.
     - `passive`
-      - : Un booléen ({{jsxref("Boolean")}}) qui, si `true`, indique que la fonction spécifiée par `listener` n'appellera jamais {{domxref("Event.preventDefault", "preventDefault()")}}. Si un écouteur passif appelle `preventDefault()`, l'agent utilisateur ne fera rien d'autre que de générer un avertissement dans la console. Voir {{anch("Improving_scrolling_performance_with_passive_listeners","Améliorer les performances du défilement avec des gestionnaires passifs")}} pour en apprendre davantage.
+      - : Un booléen ({{jsxref("Boolean")}}) qui, si `true`, indique que la fonction spécifiée par `listener` n'appellera jamais {{domxref("Event.preventDefault", "preventDefault()")}}. Si un écouteur passif appelle `preventDefault()`, l'agent utilisateur ne fera rien d'autre que de générer un avertissement dans la console. Voir [Amélioration des performances de défilement avec les écouteurs passifs](#amélioration_des_performances_de_défilement_avec_les_écouteurs_passifs) pour en apprendre davantage.
     - `mozSystemGroup` {{non-standard_inline}}
       - : Un booléen ({{jsxref("Boolean")}}) indiquant que l'écouteur doit être ajouté au groupe système. Disponible uniquement pour le code s'exécutant dans XBL ou dans le {{glossary("chrome")}} du navigateur Firefox.
 
@@ -340,7 +340,7 @@ Cliquez les conteneurs _extérieur_, _milieu_, _intérieurs_ respectivement pour
 
 {{EmbedLiveSample('Exemple_d\'utilisation_des_options', '', '320')}}
 
-Avant d'utiliser une valeur particulière dans l'objet `options`, c'est une bonne idée de s'assurer que le navigateur de l'utilisateur la prend en charge, du fait qu'elles sont un ajout que tous les navigateurs n'ont pas pris en charge historiquement. Voir {{anch("Safely_detecting_option_support", "Détection sûre du support des options")}} pour les détails.
+Avant d'utiliser une valeur particulière dans l'objet `options`, c'est une bonne idée de s'assurer que le navigateur de l'utilisateur la prend en charge, du fait qu'elles sont un ajout que tous les navigateurs n'ont pas pris en charge historiquement. Voir [Détection sûre du support des options](#safely_detecting_option_support) pour les détails.
 
 ### Ajout d'un écouteur annulable
 
@@ -375,7 +375,7 @@ function modifyText() {
 }
 ```
 
-Dans l'exemple ci-dessus, nous modifions le code de l'exemple {{anch('Add_a_simple_listener', 'Ajouter un écouteur simple')}} de telle sorte qu'après que le contenu de la deuxième ligne soit devenu « trois », nous appelons `abort()` à partir du {{domxref("AbortController")}} que nous avons passé à l'appel `addEventListener()`. Cela a pour résultat que la valeur reste à "trois" pour toujours, parce que nous n'avons plus de code écoutant un évènement de clic.
+Dans l'exemple ci-dessus, nous modifions le code de l'exemple [Ajouter un écouteur simple](#ajouter_un_écouteur_simple) de telle sorte qu'après que le contenu de la deuxième ligne soit devenu « trois », nous appelons `abort()` à partir du {{domxref("AbortController")}} que nous avons passé à l'appel `addEventListener()`. Cela a pour résultat que la valeur reste à "trois" pour toujours, parce que nous n'avons plus de code écoutant un évènement de clic.
 
 #### Résultat
 

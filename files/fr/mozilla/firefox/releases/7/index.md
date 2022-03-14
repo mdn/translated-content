@@ -125,7 +125,7 @@ Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui ra
 
 ### Changements dans le système de compilation
 
-- L'API d'intégration d'ActiveX n'est plus compilée et son support a été retiré du système de compilation. Des interfaces ont également été supprimées, voir {{anch("Interfaces supprimées")}}.
+- L'API d'intégration d'ActiveX n'est plus compilée et son support a été retiré du système de compilation. Des interfaces ont également été supprimées, voir [Interfaces supprimées](#interfaces_supprimées).
 - Vous n'avez plus besoin de préciser `-Zc:wchar_t-` lors de la compilation sous Windows. Pour plus de détails, voir [la documentation sur la compilation](/fr/docs/Developer_Guide/Build_Instructions#Build_and_install).
 
 ### Changements dans les interfaces

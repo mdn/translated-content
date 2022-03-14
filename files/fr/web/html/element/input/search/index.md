@@ -21,7 +21,7 @@ La valeur de l'attribut {{htmlattrxref("value", "input")}} contient une chaîne 
 maRecherche.value;
 ```
 
-Si aucune contrainte de validation n'est imposée (cf. {{anch("Validation")}} pour plus de détails), la valeur peut être un texte ou une chaîne de caractères vide.
+Si aucune contrainte de validation n'est imposée (cf. [Validation](#validation) pour plus de détails), la valeur peut être un texte ou une chaîne de caractères vide.
 
 ## Attributs supplémentaires
 
@@ -29,13 +29,13 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 | Attribut                           | Description                                                                                                                                            |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `{{anch("maxlength")}}`     | Le nombre de caractères maximal qui peut être écrit dans ce champ.                                                                                     |
-| `{{anch("minlength")}}`     | Le nombre de caractères minimal qui peut être écrit dans ce champ pour qu'il soit considéré comme valide.                                              |
-| `{{anch("pattern")}}`         | Une expression rationnelle à laquelle doit correspondre le texte saisi pour être valide.                                                               |
-| `{{anch("placeholder")}}` | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                                                              |
-| `{{anch("readonly")}}`     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                                                                           |
-| `{{anch("size")}}`             | Un nombre qui indique le nombre de caractères affichés par le champ.                                                                                   |
-| `{{anch("spellcheck")}}`     | Cet attribut contrôle l'activation de la vérification orthographique sur le champ ou si la vérification orthographique par défaut doit être appliquée. |
+| [`maxlength`](#maxlength)     | Le nombre de caractères maximal qui peut être écrit dans ce champ.                                                                                     |
+| [`minlength`](#minlength)     | Le nombre de caractères minimal qui peut être écrit dans ce champ pour qu'il soit considéré comme valide.                                              |
+| [`pattern`](#pattern)         | Une expression rationnelle à laquelle doit correspondre le texte saisi pour être valide.                                                               |
+| [`placeholder`](#placeholder) | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                                                              |
+| [`readonly`](#readonly)     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                                                                           |
+| [`size`](#size)             | Un nombre qui indique le nombre de caractères affichés par le champ.                                                                                   |
+| [`spellcheck`](#spellcheck)     | Cet attribut contrôle l'activation de la vérification orthographique sur le champ ou si la vérification orthographique par défaut doit être appliquée. |
 
 ### {{htmlattrdef("maxlength")}}
 
@@ -71,10 +71,10 @@ Les attributs non-standard suivants sont disponibles pour les champs de recherch
 
 | Attribut                           | Description                                                                                                                                                                                                                                                                                                                                       |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("autocorrect")}}` | Une chaîne de caractères qui indique si la correction automatique doit être appliquée à ce champ texte. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                 |
-| `{{anch("incremental")}}` | Cet attribut indique si des évènements {{event("search")}} doivent être envoyés afin de mettre à jour les résultats de la recherche tandis que l'utilisateur continue d'éditer la valeur du champ. **Uniquement WebKit et Blink (Safari, Chrome, Opera, etc.).**                                                                             |
-| `{{anch("mozactionhint")}}` | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. La valeur de cet attribut est utilisée comme libellé pour la touche adéquate du clavier virtuel. **Uniquement pris en charge par Firefox pour Android.** |
-| `{{anch("results")}}`         | Le nombre maximum d'éléments qui devraient être affichés comme recherches précédentes dans la liste déroulante du champ. **Uniquement pris en charge par Safari.**                                                                                                                                                                                |
+| [`autocorrect`](#autocorrect) | Une chaîne de caractères qui indique si la correction automatique doit être appliquée à ce champ texte. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                 |
+| [`incremental`](#incremental) | Cet attribut indique si des évènements {{event("search")}} doivent être envoyés afin de mettre à jour les résultats de la recherche tandis que l'utilisateur continue d'éditer la valeur du champ. **Uniquement WebKit et Blink (Safari, Chrome, Opera, etc.).**                                                                             |
+| [`mozactionhint`](#mozactionhint) | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. La valeur de cet attribut est utilisée comme libellé pour la touche adéquate du clavier virtuel. **Uniquement pris en charge par Firefox pour Android.** |
+| [`results`](#results)         | Le nombre maximum d'éléments qui devraient être affichés comme recherches précédentes dans la liste déroulante du champ. **Uniquement pris en charge par Safari.**                                                                                                                                                                                |
 
 ### {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
 
@@ -357,7 +357,7 @@ Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente la valeur contenue dans le champ de recherche.

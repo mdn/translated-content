@@ -607,7 +607,7 @@ Voici un tableau listant les caractères spéciaux qu'il est possible d'utiliser
 |             |                                                                                                                                                                                                      |
 | `\xXX`      | Le caractère dont l'encodage Latin-1 est spécifié par deux chiffres hexadécimaux entre 00 et FF. Ainsi, \xA9 correspond à la séquence hexadécimale pour le caractère copyright.                      |
 |             |                                                                                                                                                                                                      |
-| `\uXXXX`    | Le caractère Unicode spécifié par quatre chiffres hexadécimaux _XXXX_. Ainsi, \u00A9 correspondra à la séquence Unicode du symbole copyright. Voir {{anch("Unicode escape sequences")}}. |
+| `\uXXXX`    | Le caractère Unicode spécifié par quatre chiffres hexadécimaux _XXXX_. Ainsi, \u00A9 correspondra à la séquence Unicode du symbole copyright. Voir [Unicode escape sequences](#unicode_escape_sequences). |
 | `\u{XXXXX}` | Échappement de codes Unicode. Par exemple, \u{2F804} est équivalent à la combinaison d'échappements « simples » \uD87E\uDC04.                                                                        |
 
 #### Les caractères d'échappement

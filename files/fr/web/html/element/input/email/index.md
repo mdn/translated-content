@@ -20,10 +20,10 @@ Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"email"`*
 La valeur d'un tel élément {{HTMLElement("input")}}, contenue dans l'attribut {{htmlattrxref("value", "input")}}, contient une chaîne de caractères qui est automatiquement validée afin de vérifier que c'est une adresse électronique valide. Pour être plus précis, trois formes sont considérées valides :
 
 1.  Une chaîne de caractères vide ("") qui indique que l'utilisateur n'a saisi aucune valeur ou que la valeur a été retirée.
-2.  Une adresse électronique bien-formée. Cela ne signifie pas que l'adresse en question existe mais qu'elle est correctement formatée. Autrement dit, elle respecte une structure `"nom@domaine.tld"`. Cette règle est un peu plus complexe (cf. {{anch("Validation")}} pour l'algorithme exact).
+2.  Une adresse électronique bien-formée. Cela ne signifie pas que l'adresse en question existe mais qu'elle est correctement formatée. Autrement dit, elle respecte une structure `"nom@domaine.tld"`. Cette règle est un peu plus complexe (cf. [Validation](#validation) pour l'algorithme exact).
 3.  Si et seulement si l'attribut {{htmlattrxref("multiple", "input")}} est indiqué, la valeur peut être une liste d'adresses électroniques correctes, séparées par des virgules. Chaque blanc situé avant et après chaque adresse sera retiré.
 
-Pour plus de détails, se référer à la section {{anch("Validation")}} sur la façon dont les adresses mails sont validées.
+Pour plus de détails, se référer à la section [Validation](#validation) sur la façon dont les adresses mails sont validées.
 
 ## Attributs supplémentaires
 
@@ -31,14 +31,14 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 | Attribut                           | Description                                                                                                                                            |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `{{anch("maxlength")}}`     | Le nombre de caractères maximal qui peut être écrit dans ce champ.                                                                                     |
-| `{{anch("minlength")}}`     | Le nombre de caractères minimal qui peut être écrit dans ce champ pour qu'il soit considéré comme valide.                                              |
-| `{{anch("multiple")}}`     | Un attribut booléen qui indique si plusieurs adresses électroniques peuvent être saisies et séparées par des virgules.                                 |
-| `{{anch("pattern")}}`         | Une expression rationnelle à laquelle doit correspondre le texte saisi pour être valide.                                                               |
-| `{{anch("placeholder")}}` | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                                                              |
-| `{{anch("readonly")}}`     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                                                                           |
-| `{{anch("size")}}`             | Un nombre qui indique le nombre de caractères affichés par le champ.                                                                                   |
-| `{{anch("spellcheck")}}`     | Cet attribut contrôle l'activation de la vérification orthographique sur le champ ou si la vérification orthographique par défaut doit être appliquée. |
+| [`maxlength`](#maxlength)     | Le nombre de caractères maximal qui peut être écrit dans ce champ.                                                                                     |
+| [`minlength`](#minlength)     | Le nombre de caractères minimal qui peut être écrit dans ce champ pour qu'il soit considéré comme valide.                                              |
+| [`multiple`](#multiple)     | Un attribut booléen qui indique si plusieurs adresses électroniques peuvent être saisies et séparées par des virgules.                                 |
+| [`pattern`](#pattern)         | Une expression rationnelle à laquelle doit correspondre le texte saisi pour être valide.                                                               |
+| [`placeholder`](#placeholder) | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                                                              |
+| [`readonly`](#readonly)     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                                                                           |
+| [`size`](#size)             | Un nombre qui indique le nombre de caractères affichés par le champ.                                                                                   |
+| [`spellcheck`](#spellcheck)     | Cet attribut contrôle l'activation de la vérification orthographique sur le champ ou si la vérification orthographique par défaut doit être appliquée. |
 
 ### {{htmlattrdef("maxlength")}}
 
@@ -54,7 +54,7 @@ Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validatio
 
 ### {{htmlattrdef("multiple")}}
 
-A Boolean attribute which, if present, indicates that the user can enter a list of multiple e-mail addresses, separated by commas and, optionally, whitespace characters. See {{anch("Allowing multiple e-mail addresses")}} for details.
+A Boolean attribute which, if present, indicates that the user can enter a list of multiple e-mail addresses, separated by commas and, optionally, whitespace characters. See [Allowing multiple e-mail addresses](#allowing_multiple_e-mail_addresses) for details.
 
 > **Note :** Normally, if you specify the {{htmlattrxref("required", "input")}} attribute, the user must enter a valid e-mail address for the field to be considered valid. However, if you add the `multiple` attribute, a list of zero e-mail addresses (an empty string, or one which is entirely whitespace) is a valid value. In other words, the user does not have to enter even one e-mail address when `multiple` is specified, regardless of the value of `required`.
 
@@ -78,8 +78,8 @@ Les attributs non-standard suivant sont disponibles pour les champs d'email dans
 
 | Attribute                          | Description                                                                                                                                                                                                                                                                                                                                       |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("autocorrect")}}` | Une chaîne de caractères qui indique si la correction automatique doit être appliquée à ce champ texte. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                 |
-| `{{anch("mozactionhint")}}` | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. La valeur de cet attribut est utilisée comme libellé pour la touche adéquate du clavier virtuel. **Uniquement pris en charge par Firefox pour Android.** |
+| [`autocorrect`](#autocorrect) | Une chaîne de caractères qui indique si la correction automatique doit être appliquée à ce champ texte. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                 |
+| [`mozactionhint`](#mozactionhint) | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. La valeur de cet attribut est utilisée comme libellé pour la touche adéquate du clavier virtuel. **Uniquement pris en charge par Firefox pour Android.** |
 
 ### {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
 
@@ -315,7 +315,7 @@ L'élément {{HTMLElement("label")}} qui précède l'élément `<input>` permett
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) représentant
         une adresse électronique ou une chaîne vide.

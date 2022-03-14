@@ -246,7 +246,7 @@ Il est logique que les feuilles de style des développeurs web remplacent les fe
 
 ## Activité : jouer dans la cascade
 
-Dans cette activité, nous vous engageons à tenter l'expérience suivante : écrire une règle redéfinissant les couleurs de police et de fond pour les liens par défaut. La contrainte est de réinitialiser la couleur d'arrière-plan en blanc sans utiliser de valeur `<color>`. Vous pouvez par contre utiliser l'une des valeurs spéciales que nous avons examinées dans la section {{anch("Contrôler_lhéritage")}} dans une nouvelle règle.
+Dans cette activité, nous vous engageons à tenter l'expérience suivante : écrire une règle redéfinissant les couleurs de police et de fond pour les liens par défaut. La contrainte est de réinitialiser la couleur d'arrière-plan en blanc sans utiliser de valeur `<color>`. Vous pouvez par contre utiliser l'une des valeurs spéciales que nous avons examinées dans la section [Contrôler_lhéritage](#contrôler_lhéritage) dans une nouvelle règle.
 
 Si vous faites une erreur, vous pouvez toujours remettre à zéro l'exemple live à l'aide du bouton <kbd>Reset</kbd>. Si vous êtes vraiment coincé, [jetez un coup d'œil à la solution ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-cascade).
 

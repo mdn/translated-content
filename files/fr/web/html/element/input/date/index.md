@@ -15,7 +15,7 @@ Les éléments {{htmlelement("input")}} dont l'attribut `type` vaut **`date`** p
 
 {{EmbedInteractiveExample("pages/tabbed/input-date.html", "tabbed-shorter")}}
 
-L'apparence du contrôle affiché dépend du navigateur utilisé et la prise en charge de cette fonctionnalité est hétérogène (cf. la section {{anch("Compatibilité des navigateurs")}} pour plus de détails). Pour les navigateurs qui ne prennent pas en charge ce type d'élément `<input>`, c'est un simple [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text) qui sera affiché.
+L'apparence du contrôle affiché dépend du navigateur utilisé et la prise en charge de cette fonctionnalité est hétérogène (cf. la section [Compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus de détails). Pour les navigateurs qui ne prennent pas en charge ce type d'élément `<input>`, c'est un simple [`<input type="text">`](/fr/docs/Web/HTML/Element/input/text) qui sera affiché.
 
 ## Valeur
 
@@ -48,9 +48,9 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 | Attribut               | Description                                                                                                                                        |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("max")}}` | La date la plus avancée qui peut être saisie.                                                                                                      |
-| `{{anch("min")}}` | La date la plus reculée qui peut être saisie.                                                                                                      |
-| `{{anch("step")}}` | Le pas à utiliser pour l'incrément quand on utilise les boutons d'augmentation/diminution. Cet incrément est également utilisé pour la validation. |
+| [`max`](#max) | La date la plus avancée qui peut être saisie.                                                                                                      |
+| [`min`](#min) | La date la plus reculée qui peut être saisie.                                                                                                      |
+| [`step`](#step) | Le pas à utiliser pour l'incrément quand on utilise les boutons d'augmentation/diminution. Cet incrément est également utilisé pour la validation. |
 
 ### {{htmlattrdef("max")}}
 
@@ -426,7 +426,7 @@ daySelect.onchange = function() {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente une date ou qui est vide.

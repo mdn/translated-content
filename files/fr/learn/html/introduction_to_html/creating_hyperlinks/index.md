@@ -60,7 +60,7 @@ La page d'accueil de la BBC, par exemple, contient un nombre important de liens 
 
 ## Anatomie d'un lien
 
-Un lien élémentaire se crée en intégrant le texte (ou tout autre contenu, cf. {{anch("Liens de niveau bloc")}}) que vous voulez transformer en lien dans un élément {{htmlelement("a")}} et en lui affectant un attribut {{htmlattrxref("href", "a")}} (également connu comme étant une **Hypertext Reference**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
+Un lien élémentaire se crée en intégrant le texte (ou tout autre contenu, cf. [Liens de niveau bloc](#liens_de_niveau_bloc)) que vous voulez transformer en lien dans un élément {{htmlelement("a")}} et en lui affectant un attribut {{htmlattrxref("href", "a")}} (également connu comme étant une **Hypertext Reference**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
 
 ```html
 <p>Je suis en train de créer un lien à

@@ -30,12 +30,12 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 | Attribut                           | Description                                                                                                                                  |
 | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("maxlength")}}`     | Le nombre de caractères maximal, exprimé en points de code UTF-16, qui peut être écrit dans ce champ.                                        |
-| `{{anch("minlength")}}`     | Le nombre de caractères minimal, exprimé en points de code UTF-16, qui peut être écrit dans ce champ pour qu'il soit considéré comme valide. |
-| `{{anch("pattern")}}`         | Une expression rationnelle à laquelle doit correspondre le numéro de téléphone saisi pour être valide.                                       |
-| `{{anch("placeholder")}}` | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                                                    |
-| `{{anch("readonly")}}`     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                                                                 |
-| `{{anch("size")}}`             | Un nombre qui indique le nombre de caractères affichés par le champ.                                                                         |
+| [`maxlength`](#maxlength)     | Le nombre de caractères maximal, exprimé en points de code UTF-16, qui peut être écrit dans ce champ.                                        |
+| [`minlength`](#minlength)     | Le nombre de caractères minimal, exprimé en points de code UTF-16, qui peut être écrit dans ce champ pour qu'il soit considéré comme valide. |
+| [`pattern`](#pattern)         | Une expression rationnelle à laquelle doit correspondre le numéro de téléphone saisi pour être valide.                                       |
+| [`placeholder`](#placeholder) | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                                                    |
+| [`readonly`](#readonly)     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                                                                 |
+| [`size`](#size)             | Un nombre qui indique le nombre de caractères affichés par le champ.                                                                         |
 
 ### {{htmlattrdef("maxlength")}}
 
@@ -67,8 +67,8 @@ Les attributs non-standard suivant sont disponibles pour les champs textuels mai
 
 | Attribute                          | Description                                                                                                                                                                                                                                                                                                                                       |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("autocorrect")}}` | Indique si la correction automatique doit être appliquée à ce champ texte. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                                              |
-| `{{anch("mozactionhint")}}` | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. La valeur de cet attribut est utilisée comme libellé pour la touche adéquate du clavier virtuel. **Uniquement pris en charge par Firefox pour Android.** |
+| [`autocorrect`](#autocorrect) | Indique si la correction automatique doit être appliquée à ce champ texte. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                                              |
+| [`mozactionhint`](#mozactionhint) | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. La valeur de cet attribut est utilisée comme libellé pour la touche adéquate du clavier virtuel. **Uniquement pris en charge par Firefox pour Android.** |
 
 ### {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
 
@@ -82,7 +82,7 @@ Les attributs non-standard suivant sont disponibles pour les champs textuels mai
 
 Les numéros de téléphone peuvent jouer un rôle important dans certains formulaires web. Un site de commerce en ligne, par exemple, peut vouloir enregistrer le numéro de téléphone d'un utilisateur pour le contacter lors de la livraison. Toutefois, un des problèmes relatifs aux numéros de téléphone est la variété de formats qui existent à travers le monde. Il est donc difficile (voire impossible) de valider les valeurs automatiquement.
 
-> **Note :** Des mécanismes de validation particuliers peuvent être ajoutés si besoin (cf. {{anch("Validation")}} ci-après).
+> **Note :** Des mécanismes de validation particuliers peuvent être ajoutés si besoin (cf. [Validation](#validation) ci-après).
 
 ### Claviers adaptés
 
@@ -145,7 +145,7 @@ Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de larg
 
 {{EmbedLiveSample("La_longueur_de_la_valeur", 600, 40)}}
 
-> **Note :** Ces deux attributs jouent un rôle lors de la {{anch("validation", "Validation")}}. Dans l'exemple précédent, la valeur sera considérée comme invalide si elle contient moins de 9 caractères ou plus de 14. La plupart des navigateurs ne permettront pas de saisir une valeur plus longue que la taille maximale.
+> **Note :** Ces deux attributs jouent un rôle lors de la [Validation](#validation). Dans l'exemple précédent, la valeur sera considérée comme invalide si elle contient moins de 9 caractères ou plus de 14. La plupart des navigateurs ne permettront pas de saisir une valeur plus longue que la taille maximale.
 
 ### Fournir une valeur par défaut
 
@@ -418,7 +418,7 @@ input:valid+span:after {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente un numéro de téléphone ou qui est vide.

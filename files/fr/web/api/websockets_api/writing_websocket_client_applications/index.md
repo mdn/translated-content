@@ -117,7 +117,7 @@ exampleSocket.onmessage = function (event) {
 
 ### Réception et interprétation d'objets JSON
 
-Considérons l'application de chat évoquée dans {{ anch("Utilisation de JSON pour transmettre des objets") }}. Le client peut recevoir différents types de paquets de données, tels que:
+Considérons l'application de chat évoquée dans [Utilisation de JSON pour transmettre des objets](#utilisation_de_json_pour_transmettre_des_objets). Le client peut recevoir différents types de paquets de données, tels que:
 
 - établissement d'une liaison (handshaking)
 - message texte

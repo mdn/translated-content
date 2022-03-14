@@ -88,7 +88,7 @@ Vous en apprendrez plus sur ces APIs ci-dessous.
 
 Certains navigateurs modernes prennent en charge la nouvelle API {{domxref("Cache")}}. Cette API a été conçue pour stocker les réponses HTTP de requêtes données et est très utile pour stocker des ressources du site afin qu'il soit accessible sans connexion réseau par exemple. Le cache est généralement utilisé avec l'[API Service Worker](/fr/docs/Web/API/Service_Worker_API), mais ce n'est pas obligatoire.
 
-L'utilisation du Cache et des Service Workers est un sujet avancé, nous ne le traiterons pas en détail dans cet article, nous ne montrerons qu'un simple exemple dans la section {{anch("Stockage hors-ligne de ressources")}} plus bas.
+L'utilisation du Cache et des Service Workers est un sujet avancé, nous ne le traiterons pas en détail dans cet article, nous ne montrerons qu'un simple exemple dans la section [Stockage hors-ligne de ressources](#stockage_hors-ligne_de_ressources) plus bas.
 
 ## Stocker des données simples — web storage
 

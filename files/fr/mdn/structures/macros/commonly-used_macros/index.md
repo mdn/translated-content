@@ -150,7 +150,7 @@ Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).
 
 ### Template badges
 
-These macros are mostly used on the [WebAPI](/en-US/docs/WebAPI) page. See {{anch("Creating new badges")}} for information on creating a new badge.
+These macros are mostly used on the [WebAPI](/en-US/docs/WebAPI) page. See [Creating new badges](#creating_new_badges) for information on creating a new badge.
 
 ### Page or section header indicators
 
