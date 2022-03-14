@@ -72,7 +72,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 - [Introducción a ARIA](/es/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
   - : Una introducción rápida a cómo hacer que el contenido dinámico sea accesible con ARIA. Véase también el clásico [introducción a ARIA de Gez Lemon](https://dev.opera.com/articles/view/introduction-to-wai-aria/), de 2008.
 - [Videos de lectores de pantalla usando ARIA](https://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/)
-  - : vea ejemplos reales y simplificados de toda la web, incluidos videos de ARIA "antes" y "después".
+  - : Vea ejemplos reales y simplificados de toda la web, incluidos videos de ARIA "antes" y "después".
 - [Usando ARIA](https://w3c.github.io/using-aria/)
   - : Una guía práctica para desarrolladores. Sugiere qué atributos ARIA usar en elementos HTML. Las sugerencias se basan en las realidades de la implementación.
 
