@@ -2,12 +2,12 @@
 title: 연산자 우선순위
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
 tags:
+  - Guide
   - JavaScript
   - Operator
   - 연산자
   - 우선순위
 translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
-original_slug: Web/JavaScript/Reference/Operators/연산자_우선순위
 ---
 {{jsSidebar("Operators")}}
 
@@ -183,7 +183,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
 
 ## 표
 
-다음 표는 우선순위 내림차순(21부터 1까지)으로 정렬되어 있습니다.
+다음 표는 우선순위 내림차순(19부터 1까지)으로 정렬되어 있습니다.
 
 <table class="fullwidth-table">
   <tbody>
@@ -194,13 +194,13 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
       <th>연산자</th>
     </tr>
     <tr>
-      <td>21</td>
+      <td>19</td>
       <td>{{jsxref("Operators/Grouping", "그룹", "", 1)}}</td>
       <td>없음</td>
       <td><code>( … )</code></td>
     </tr>
     <tr>
-      <td colspan="1" rowspan="5">20</td>
+      <td rowspan="5">18</td>
       <td>
         {{jsxref("Operators/Property_Accessors", "멤버 접근", "#점_표기법", 1)}}
       </td>
@@ -216,14 +216,14 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/new","new")}} (매개변수 리스트 존재)
+        {{jsxref("Operators/new","new")}} (인자 리스트 제공)
       </td>
       <td>없음</td>
       <td><code>new … ( … )</code></td>
     </tr>
     <tr>
       <td>
-        <p><a href="/ko/docs/Web/JavaScript/Guide/Functions">함수 호출</a></p>
+        <a href="/ko/docs/Web/JavaScript/Guide/Functions">함수 호출</a>
       </td>
       <td>좌결합성</td>
       <td>
@@ -233,50 +233,56 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining"
-          >Optional chaining</a
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining"
+          >옵셔널 체이닝</a
         >
       </td>
       <td>좌결합성</td>
       <td><code>?.</code></td>
     </tr>
     <tr>
-      <td rowspan="1">19</td>
+      <td>17</td>
       <td>
-        {{jsxref("Operators/new","new")}} (매개변수 리스트 생략)
+        {{jsxref("Operators/new","new")}} (인자 리스트 생략)
       </td>
       <td>우결합성</td>
       <td><code>new …</code></td>
     </tr>
     <tr>
-      <td rowspan="2">18</td>
+      <td rowspan="2">16</td>
       <td>
-        {{jsxref("Operators/Arithmetic_Operators","후위 증가","#Increment", 1)}}
+        <a
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Increment"
+          >후위 증가</a
+        >
       </td>
-      <td colspan="1" rowspan="2">없음</td>
+      <td rowspan="2">없음</td>
       <td><code>… ++</code></td>
     </tr>
     <tr>
       <td>
-        {{jsxref("Operators/Arithmetic_Operators","후위 감소","#Decrement", 1)}}
+        <a
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Decrement"
+          >후위 감소</a
+        >
       </td>
       <td><code>… --</code></td>
     </tr>
     <tr>
-      <td colspan="1" rowspan="10">17</td>
+      <td rowspan="10">15</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_NOT"
           >논리 NOT</a
         >
       </td>
-      <td colspan="1" rowspan="10">우결합성</td>
+      <td rowspan="10">우결합성</td>
       <td><code>! …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_NOT"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT"
           >비트 NOT</a
         >
       </td>
@@ -285,7 +291,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_plus"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_plus"
           >단항 양부호</a
         >
       </td>
@@ -294,7 +300,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Unary_negation"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation"
           >단항 부정</a
         >
       </td>
@@ -303,7 +309,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Increment"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Increment"
           >전위 증가</a
         >
       </td>
@@ -312,7 +318,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Decrement"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Decrement"
           >전위 감소</a
         >
       </td>
@@ -335,10 +341,10 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
       <td><code>await …</code></td>
     </tr>
     <tr>
-      <td>16</td>
+      <td>14</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Exponentiation"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Exponentiation"
           >거듭제곱</a
         >
       </td>
@@ -346,11 +352,11 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
       <td><code>… ** …</code></td>
     </tr>
     <tr>
-      <td rowspan="3">15</td>
+      <td rowspan="3">13</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Multiplication"
-          >곱셈</a
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Multiplication"
+          >곱하기</a
         >
       </td>
       <td colspan="1" rowspan="3">좌결합성</td>
@@ -359,8 +365,8 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Division"
-          >나눗셈</a
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Division"
+          >나누기</a
         >
       </td>
       <td><code>… / …</code></td>
@@ -368,45 +374,45 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Remainder"
           >나머지</a
         >
       </td>
       <td><code>… % …</code></td>
     </tr>
     <tr>
-      <td rowspan="2">14</td>
+      <td rowspan="2">12</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition"
-          >덧셈</a
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Addition"
+          >더하기</a
         >
       </td>
-      <td colspan="1" rowspan="2">좌결합성</td>
+      <td rowspan="2">좌결합성</td>
       <td><code>… + …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Subtraction"
-          >뺄셈</a
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Subtraction"
+          >빼기</a
         >
       </td>
       <td><code>… - …</code></td>
     </tr>
     <tr>
-      <td rowspan="3">13</td>
+      <td rowspan="3">11</td>
       <td>
-        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Left_shift"
           >비트 왼쪽 시프트</a
         >
       </td>
-      <td colspan="1" rowspan="3">좌결합성</td>
+      <td rowspan="3">좌결합성</td>
       <td><code>… &#x3C;&#x3C; …</code></td>
     </tr>
     <tr>
       <td>
-        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Right_shift"
           >비트 오른쪽 시프트</a
         >
       </td>
@@ -414,27 +420,27 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     </tr>
     <tr>
       <td>
-        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators"
+        <a href="/ko/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift"
           >비트 부호 없는 오른쪽 시프트</a
         >
       </td>
       <td><code>… >>> …</code></td>
     </tr>
     <tr>
-      <td rowspan="6">12</td>
+      <td rowspan="6">10</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than_operator"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Less_than"
           >미만</a
         >
       </td>
-      <td colspan="1" rowspan="6">좌결합성</td>
+      <td rowspan="6">좌결합성</td>
       <td><code>… &#x3C; …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Less_than__or_equal_operator"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal"
           >이하</a
         >
       </td>
@@ -443,7 +449,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_operator"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Greater_than"
           >초과</a
         >
       </td>
@@ -452,7 +458,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Greater_than_or_equal_operator"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal"
           >이상</a
         >
       </td>
@@ -467,20 +473,20 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
       <td><code>… instanceof …</code></td>
     </tr>
     <tr>
-      <td rowspan="4">11</td>
+      <td rowspan="4">9</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Equality"
           >동등</a
         >
       </td>
-      <td colspan="1" rowspan="4">좌결합성</td>
+      <td rowspan="4">좌결합성</td>
       <td><code>… == …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Inequality"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Inequality"
           >부등</a
         >
       </td>
@@ -489,7 +495,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality"
           >일치</a
         >
       </td>
@@ -498,17 +504,17 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
     <tr>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Nonidentity"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Strict_inequality"
           >불일치</a
         >
       </td>
       <td><code>… !== …</code></td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>7</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_AND"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_AND"
           >비트 AND</a
         >
       </td>
@@ -516,10 +522,10 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
       <td><code>… &#x26; …</code></td>
     </tr>
     <tr>
-      <td>9</td>
+      <td>7</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR"
           >비트 XOR</a
         >
       </td>
@@ -527,10 +533,10 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
       <td><code>… ^ …</code></td>
     </tr>
     <tr>
-      <td>8</td>
+      <td>6</td>
       <td>
         <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_OR"
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_OR"
           >비트 OR</a
         >
       </td>
@@ -538,7 +544,28 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
       <td><code>… | …</code></td>
     </tr>
     <tr>
-      <td>7</td>
+      <td>5</td>
+      <td>
+        <a
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_AND"
+          >논리 AND</a
+        >
+      </td>
+      <td>좌결합성</td>
+      <td><code>… &#x26;&#x26; …</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">4</td>
+      <td>
+        <a
+          href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR"
+          >논리 OR</a
+        >
+      </td>
+      <td>좌결합성</td>
+      <td><code>… || …</code></td>
+    </tr>
+    <tr>
       <td>
         <a
           href="/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
@@ -549,47 +576,25 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
       <td><code>… ?? …</code></td>
     </tr>
     <tr>
-      <td>6</td>
-      <td>
-        <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_AND"
-          >논리 AND</a
-        >
-      </td>
-      <td>좌결합성</td>
-      <td><code>… &#x26;&#x26; …</code></td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>
-        <a
-          href="/ko/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_OR"
-          >논리 OR</a
-        >
-      </td>
-      <td>좌결합성</td>
-      <td><code>… || …</code></td>
-    </tr>
-    <tr>
-      <td>4</td>
+      <td>3</td>
       <td>
         <a
           href="/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
-          >조건</a
+          >조건 (삼항)</a
         >
       </td>
       <td>우결합성</td>
       <td><code>… ? … : …</code></td>
     </tr>
     <tr>
-      <td rowspan="13">3</td>
-      <td rowspan="13">
+      <td rowspan="18">2</td>
+      <td rowspan="16">
         <a
           href="/ko/docs/Web/JavaScript/Reference/Operators/Assignment_Operators"
           >할당</a
         >
       </td>
-      <td rowspan="13">우결합성</td>
+      <td rowspan="16">우결합성</td>
       <td><code>… = …</code></td>
     </tr>
     <tr>
@@ -629,9 +634,17 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
       <td><code>… |= …</code></td>
     </tr>
     <tr>
-      <td rowspan="2">2</td>
+      <td><code>… &#x26;&#x26;= …</code></td>
+    </tr>
+    <tr>
+      <td><code>… ||= …</code></td>
+    </tr>
+    <tr>
+      <td><code>… ??= …</code></td>
+    </tr>
+    <tr>
       <td>{{jsxref("Operators/yield", "yield")}}</td>
-      <td colspan="1" rowspan="2">우결합성</td>
+      <td rowspan="2">우결합성</td>
       <td><code>yield …</code></td>
     </tr>
     <tr>
