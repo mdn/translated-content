@@ -76,7 +76,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 - [Usando ARIA](https://w3c.github.io/using-aria/)
   - : Una guía práctica para desarrolladores. Sugiere qué atributos ARIA usar en elementos HTML. Las sugerencias se basan en las realidades de la implementación.
 
-## Simple ARIA enhancements
+## Mejoras simples de ARIA
 
 - [Mejora de la navegación de páginas con referencias de ARIA](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : Una buena introducción al uso de los puntos de referencia de ARIA para mejorar la navegación de la página web para los usuarios de lectores de pantalla. [Consulte también las notas de implementación históricas de ARIA](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) y ejemplos en sitios reales (actualizado en julio de 2011 ).
