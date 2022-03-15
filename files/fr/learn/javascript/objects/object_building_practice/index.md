@@ -59,7 +59,7 @@ Pour commencer, faites des copies locales de nos fichiers [`index.html`](https:
 
 1.  Un document  HTML très simple contenant un élément {{HTMLElement("h1")}} , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements  pour appliquer notre CSS et notre JavaScript à notre HTML ;
 2.  Quelques styles très simples qui servent principalement à mettre en forme et placer le `<h1>`, et se débarasser de toutes barres de défilement ou de marges autour du pourtour de notre page (afin que cela paraisse plus sympathique et élégant) ;
-3.  Un peu de JavaScript qui sert à paramétrer l'élément  `<canvas>` et fournir les fonctions globalles que nous utiliserons.
+3.  Un peu de JavaScript qui sert à paramétrer l'élément  `<canvas>` et fournir les fonctions globales que nous utiliserons.
 
 La première partie du script ressemble à ceci :
 
@@ -76,7 +76,7 @@ Ce script prend une référence à l'élément  `<canvas>` et ensuite invoqu
 
 Après, nous configurons  les variables `width` (largeur) et `height`(hauteur),  et la largeur et la hauteur de l'élément canvas (représentés par les propriétés  `canvas.width` et `canvas.height` ) afin qu'elles soient identiques à la fenêtre du navigateur (la surface sur laquelle apparaît la page web— Ceci peut être tiré des propriétés {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}).
 
-Vous verrez qu'ici nous enchaînons les assignations des valeurs des différentes variables ensemble à des fins de rapidité. Ceci est parfaitement autorisé.
+Vous verrez qu'ici nous enchaînons les assignations de valeurs des différentes variables ensemble à des fins de rapidité. Ceci est parfaitement autorisé.
 
 Le dernier morceau du script ressemble à ceci :
 
