@@ -3,83 +3,61 @@ title: WindowEventHandlers.onpopstate
 slug: Web/API/WindowEventHandlers/onpopstate
 tags:
   - API
-  - DOM
-  - Event Handler
+  - イベントハンドラー
   - HTML DOM
   - HTML5
-  - Window
-  - WindowEventHandlers
-  - onpopstate
-  - イベント
+  - NeedsSpecTable
   - プロパティ
+  - Window
+  - イベント
+browser-compat: api.WindowEventHandlers.onpopstate
 translation_of: Web/API/WindowEventHandlers/onpopstate
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary">{{domxref("WindowEventHandlers")}} ミックスインの <strong><code>onpopstate</code></strong> プロパティは、ウィンドウの <code><a href="/ja/docs/Web/API/Window/popstate_event">popstate</a></code> イベントを処理するための {{event("Event_handlers", "event handler")}} です。</span></p>
+**`onpopstate`** は {{domxref("WindowEventHandlers")}} ミックスインのプロパティで、ウィンドウの [`popstate`](/ja/docs/Web/API/Window/popstate_event) イベントを処理するための[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)です。
 
-<p><code>popstate</code> イベントは、同じ文書の2つの履歴項目の間で、アクティブな履歴項目が変わるたびにウィンドウに発行されます。アクティブな履歴項目が <code>history.pushState()</code> を呼び出したことで作成されたり、 <code>history.replaceState()</code> を呼び出したことで影響されたりした場合、 <code>popstate</code> イベントの <code>state</code> プロパティが履歴項目の状態オブジェクトのコピーを保持します。</p>
+`popstate` イベントは、同じ文書の2つの履歴項目の間で、アクティブな履歴項目が変わるたびにウィンドウに発行されます。アクティブな履歴項目が `history.pushState()` を呼び出したことで作成されたり、 `history.replaceState()` を呼び出したことで影響されたりした場合、 `popstate` イベントの状態オブジェクトが履歴項目の状態オブジェクトのコピーを保持します。
 
-<div class="note">
-<p><strong>メモ</strong>: <code>history.pushState()</code> 又は <code>history.replaceState()</code> を呼び出すことは、 <code>popstate</code> イベントのトリガーにはなりません。 <code>popstate</code> イベントは、戻るボタンをクリックしたり (又は JavaScript で <code>history.back()</code> を呼び出したり)、同じ文書で2つの履歴項目間を移動したりするように、ブラウザーのアクションを実行することのみがトリガーになります。</p>
-</div>
+> **Note:** `history.pushState()` または `history.replaceState()` を呼び出すこと自体は、 `popstate` イベントのトリガーにはなりません。 `popstate` イベントは、戻るボタンをクリックしたり（または JavaScript で `history.back()` を呼び出したり）、同じ文書で 2 つの履歴項目間を移動したりするように、ブラウザーのアクションを実行することのみがトリガーになります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">window.onpopstate = <em>funcRef</em>;
-</pre>
+```js
+window.onpopstate = funcRef;
+```
 
-<ul>
- <li><code>funcRef</code> は、ハンドラ関数です。</li>
-</ul>
+- `funcRef` はハンドラー関数です。
 
-<h2 id="The_popstate_event" name="The_popstate_event">例</h2>
+## 例
 
-<p>例えば、<code>http://example.com/example.html</code> のページで次のコードを実行すると、示されているようにアラートを生成します。</p>
+例えば、`http://example.com/example.html` のページで次のコードを実行すると、示されているようにアラートを生成します。
 
-<pre class="brush:js">window.onpopstate = function(event) {
+```js
+window.onpopstate = function(event) {
   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
 };
 
 history.pushState({page: 1}, "title 1", "?page=1");
 history.pushState({page: 2}, "title 2", "?page=2");
 history.replaceState({page: 3}, "title 3", "?page=3");
-history.back(); // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
-history.back(); // alerts "location: http://example.com/example.html, state: null
-history.go(2);  // alerts "location: http://example.com/example.html?page=3, state: {"page":3}
-</pre>
+history.back(); // "location: http://example.com/example.html?page=1, state: {"page":1}" とアラート
+history.back(); // "location: http://example.com/example.html, state: null" とアラート
+history.go(2);  // "location: http://example.com/example.html?page=3, state: {"page":3}" とアラート
+```
 
-<p>なお、元の履歴項目 (<code>http://example.com/example.html</code> の場合) には関連付けられる状態オブジェクトがありませんが、それでも2回目の <code>history.back()</code> の呼び出し後に項目がアクティブになったとき、 <code>popstate</code> イベントが発行されます。</p>
+なお、元の履歴項目（この場合は `http://example.com/example.html`）には関連付けられる状態オブジェクトがありませんが、それでも 2 回目の `history.back()` の呼び出し後に項目がアクティブになったとき、 `popstate` イベントが発行されます。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#handler-window-onpopstate', 'onpopstate')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.WindowEventHandlers.onpopstate")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("window.history")}}</li>
- <li><a href="/ja/docs/Web/Guide/DOM/Manipulating_the_browser_history">ブラウザーの履歴の操作</a></li>
- <li><a href="/ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example">AJAX ナビゲーションの例</a></li>
-</ul>
+- {{domxref("window.history")}}
+- [ブラウザーの履歴の操作](/ja/docs/Web/API/History_API)
+- [AJAX ナビゲーションの例](/ja/docs/Web/API/History_API/Example)
