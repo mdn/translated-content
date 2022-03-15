@@ -41,7 +41,7 @@ Si ce dernier l'autorise, un {{domxref("MediaStream")}} est transmis au callback
     ```
 
 - errorCallback
-  - : Lorsque l'appel échoue, la fonction spécifiée dans `errorCallback` est appelée avec comme seul argument l'objet {{domxref("MediaStreamError")}}. Cet objet ressemble à {{domxref("DOMException")}}. Voir {anch("Erreurs")}} plus bas sur cette page pour voir quelle erreur peut arriver.
+  - : Lorsque l'appel échoue, la fonction spécifiée dans `errorCallback` est appelée avec comme seul argument l'objet {{domxref("MediaStreamError")}}. Cet objet ressemble à {{domxref("DOMException")}}. Voir [Erreurs](#erreurs) plus bas sur cette page pour voir quelle erreur peut arriver.
 
 ### Valeur de retour
 

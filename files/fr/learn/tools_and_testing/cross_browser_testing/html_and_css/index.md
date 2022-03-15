@@ -101,7 +101,7 @@ D'autres éditeurs populaires ont des packages de linting similaires. Voir, par 
 
 Les outils de développement inclus dans la plupart des navigateurs fournissent également des outils pour traquer les erreurs, en particulier pour le CSS.
 
-> **Note :** Les erreurs HTML n'ont pas tendance à se montrer facilement avec les outils de dev, étant donné que le navigateur va essayer de corriger en fermant automatiquement mal les balises ; le validateur W3C est la meilleure façon d'obtenir des erreurs HTML — voir [Validation](#validation) plus haut.
+> **Note :** Les erreurs HTML n'ont pas tendance à se montrer facilement avec les outils de dev, étant donné que le navigateur va essayer de corriger en fermant automatiquement mal les balises ; le validateur W3C est la meilleure façon d'obtenir des erreurs HTML — voir [La validation](#la_validation) plus haut.
 
 As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
 
@@ -117,7 +117,7 @@ Attaquons-nous maintenant à certains des problèmes HTML et CSS les plus couran
 
 C'est un problème courant, particulièrement lorsque vous devez supporter de vieux navigateurs (comme les anciennes versions d'IE) ou que vous utilisez des fonctionnalités qui sont implémentées en utilisant des préfixes CSS. En général, les fonctionnalités principales du HTML et du CSS (comme les éléments HTML basiques, les couleurs et styles de texte principaux de CSS) marchent sur la plupart des navigateurs que vous voulez supporter ; la majorité des problèmes sont découverts lorsque que vous commencez à vouloir utiliser des nouveautés comme [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox), ou [HTML5 video/audio](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery), ou encore plus récent, [CSS Grids](/fr/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout) ou [-webkit-background-clip: text](/fr/docs/Learn/CSS/Styling_boxes/Advanced_box_effects#-webkit-background-clip_text).
 
-Une fois que vous avez identifié une liste des potentielles technologies à problèmes que vous allez utiliser, c'est une bonne initiative des rechercher sur quels navigateurs elles sont supportées, et quelles techniques associées sont utiles. Voir [Finding help](#finding_help) plus bas.
+Une fois que vous avez identifié une liste des potentielles technologies à problèmes que vous allez utiliser, c'est une bonne initiative des rechercher sur quels navigateurs elles sont supportées, et quelles techniques associées sont utiles. Voir [Trouver de l'aide](#trouver_de_laide) plus bas.
 
 #### Comportement naturel du HTML
 
@@ -125,7 +125,7 @@ Certains problèmes peuvent être résolus, seulement en tirant parti des réact
 
 Les éléments HTML non reconnus sont traités par les navigateurs comme des éléments inline anonymes (véritablement des éléments inline avec aucune valeur sémantiques, similaires aux éléments {{htmlelement("span")}} ). Vous pouvez toujours vous référez à eux avec leurs noms, et les styler avec du CSS, par exemple — vous avez juste besoin de vous assurer qu'ils se comportent comme vous le voulez, par exemple configurer `display: block;` sur tous les nouveaux éléments sémantiques (comme {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), mais seulement sur les vieilles versions d'IE qui ne les reconnaissent pas (donc, IE 8 et plus faible). De cette façon les nouveaux navigateurs peuvent juste utiliser le code normalement, mais les anciennes versions d'IE seront également capables de styler ces éléments.
 
-> **Note :** Voir [IE conditional comments](#ie_conditional_comments) pour une application efficace.
+> **Note :** Voir [Les commentaires conditionnels d'IE](#les_commentaires_conditionnels_die) pour une application efficace.
 
 Des éléments HTML plus complexes comme [\<video>](/fr/docs/Web/HTML/Element/video), [\<audio>](/fr/docs/Web/HTML/Element/audio), et [\<canvas>](/fr/docs/Web/HTML/Element/canvas) (et encore d'autres) ont des mécanismes naturels pour que les recours soient ajoutés, qui se basent sur le même principe décrit plus haut. Vous pouvez ajouter un contenu de repli entre la balise ouvrante et fermante, et les navigateurs ne supportant pas la feature vont effectivement ignorer les éléments extérieurs et exécuter le contenu imbriqué.
 

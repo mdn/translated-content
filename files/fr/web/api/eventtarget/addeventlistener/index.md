@@ -24,7 +24,7 @@ target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-stan
 - `type`
   - : Une chaîne sensible à la casse représentant le [type d'évènement](/fr/docs/Web/Events) à écouter.
 - `listener`
-  - : L'objet qui recevra un évènement (c'est-à-dire un objet qui implémente l'interface {{domxref("Event")}}) lorsqu'un évènement du type spécifié se produit. Cet argument doit être un objet implémentant l'interface {{domxref("EventListener")}} ou une [fonction](/fr/docs/Web/JavaScript/Guide/Functions) JavaScript. Voir [Fonction de rappel (<i>callback</i> pour le gestionnaire d'évènement)](#the_event_listener_callback) pour plus de détails sur le fonctionnement d'une fonction de rappel.
+  - : L'objet qui recevra un évènement (c'est-à-dire un objet qui implémente l'interface {{domxref("Event")}}) lorsqu'un évènement du type spécifié se produit. Cet argument doit être un objet implémentant l'interface {{domxref("EventListener")}} ou une [fonction](/fr/docs/Web/JavaScript/Guide/Functions) JavaScript. Voir [Fonction de rappel (<i>callback</i>) pour le gestionnaire d'évènement](#fonction_de_rappel_pour_le_gestionnaire_dévènement) pour plus de détails sur le fonctionnement d'une fonction de rappel.
 - `options` {{optional_inline}}
 
   - : Un objet options spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
@@ -54,7 +54,7 @@ target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-stan
 
 ## Notes d'utilisation
 
-### Utilisation d'une fonction de rappel (_callback_)
+### Fonction de rappel pour le gestionnaire d'évènement
 
 L'écouteur d'évènement peut être spécifié, soit comme une fonction de rappel (_callback_), soit comme un objet qui implémente {{domxref("EventListener")}} dont la méthode {{domxref("EventListener.handleEvent", "handleEvent()")}} sert de fonction de rappel.
 
@@ -72,7 +72,7 @@ function eventHandler(event) {
 }
 ```
 
-### Détection la prise en charge d'`options`
+### Détection sûre de la prise en charge d'`options`
 
 Dans les anciennes versions de la spécification DOM, le troisième paramètre de `addEventListener()` était une valeur booléenne indiquant s'il fallait ou non utiliser la capture. Au fil du temps, il est devenu clair que davantage d'options étaient nécessaires. Plutôt que d'ajouter davantage de paramètres à la fonction (ce qui complique énormément les choses lors du traitement des valeurs optionnelles), le troisième paramètre a été changé en un objet pouvant contenir diverses propriétés définissant les valeurs des options pour configurer le processus de suppression de l'écouteur d'évènement.
 
@@ -340,7 +340,7 @@ Cliquez les conteneurs _extérieur_, _milieu_, _intérieurs_ respectivement pour
 
 {{EmbedLiveSample('Exemple_d\'utilisation_des_options', '', '320')}}
 
-Avant d'utiliser une valeur particulière dans l'objet `options`, c'est une bonne idée de s'assurer que le navigateur de l'utilisateur la prend en charge, du fait qu'elles sont un ajout que tous les navigateurs n'ont pas pris en charge historiquement. Voir [Détection sûre du support des options](#safely_detecting_option_support) pour les détails.
+Avant d'utiliser une valeur particulière dans l'objet `options`, c'est une bonne idée de s'assurer que le navigateur de l'utilisateur la prend en charge, du fait qu'elles sont un ajout que tous les navigateurs n'ont pas pris en charge historiquement. Voir [Détection sûre de la prise en charge d'`options`](#détection_sûre_de_la_prise_en_charge_doptions) pour les détails.
 
 ### Ajout d'un écouteur annulable
 

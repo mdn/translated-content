@@ -301,7 +301,7 @@ for (var i in customerData) {
 }
 ```
 
-La méthode `result` d’une requête venant d'un appel à `add()` est la clé de la valeur qui vient d'être ajoutée. Dans ce cas, ce devrait être équivalent à la propriété `ssn` de l'objet qui vient d'être ajouté, puisque l'objet de stockage utilise la propriété `ssn` pour le key path. Notez que la fonction `add()` requiert qu'aucun objet déjà présent dans la base ait la même clé. Si vous essayez de modifier une entrée existante, ou si vous ne vous en occupez pas, vous pouvez utiliser la fonction `put()`, comme montré plus loin dans la section [Updating an entry in the database](#updating_an_entry_in_the_database).
+La méthode `result` d’une requête venant d'un appel à `add()` est la clé de la valeur qui vient d'être ajoutée. Dans ce cas, ce devrait être équivalent à la propriété `ssn` de l'objet qui vient d'être ajouté, puisque l'objet de stockage utilise la propriété `ssn` pour le key path. Notez que la fonction `add()` requiert qu'aucun objet déjà présent dans la base ait la même clé. Si vous essayez de modifier une entrée existante, ou si vous ne vous en occupez pas, vous pouvez utiliser la fonction `put()`, comme montré plus loin dans la section [Mettre à jour une entrée dans la base de données](#mettre_à_jour_une_entrée_dans_la_base_de_données).
 
 ### Supprimer des données dans la base de données
 

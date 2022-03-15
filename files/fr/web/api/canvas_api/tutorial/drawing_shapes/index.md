@@ -179,7 +179,7 @@ Le résultat ressemble à ce qui suit :
 
 Si vous voulez voir les lignes d'interconnexion, vous pouvez enlever les lignes qui appellent `moveTo()`.
 
-> **Note :** Pour en savoir plus sur la fonction `arc()`, voir la section [Arcs](#arcs) ci-dessous.
+> **Note :** Pour en savoir plus sur la fonction `arc()`, voir la section [Les arcs](#les_arcs) ci-dessous.
 
 ### Les lignes
 

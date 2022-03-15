@@ -48,7 +48,7 @@ _Hérite des propriétés de son parent,_ `AudioNode`.
 - {{domxref("AudioListener.setOrientation()")}}
   - : Définit l'orientation de l'auditeur.
 - {{domxref("AudioListener.setPosition()")}}
-  - : Définit la position de l'auditeur. Consulter [Deprecated features](#deprecated_features)  pour savoir pourquoi cette méthode est désormais obsolète.
+  - : Définit la position de l'auditeur. Consulter [Fonctionnalités obsolètes](#fonctionnalités_obsolètes)  pour savoir pourquoi cette méthode est désormais obsolète.
 
 ## Fonctionnalités obsolètes
 

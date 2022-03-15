@@ -251,7 +251,7 @@ Vous ne devriez jamais faire cela autant que possible - beaucoup de gens compten
 
 Étant donné que l'écran est beaucoup plus étroit sur les appareils mobiles, il est très courant d'utiliser des requêtes multimédia et d'autres technologies pour réduire le menu de navigation à une minuscule icône en haut de l'écran, sur laquelle vous pouvez appuyer pour afficher le menu uniquement si c'est nécessaire - lorsque le site est visualisé sur mobile. Ceci est généralement représenté par une icône "trois lignes horizontales" et le motif de conception est par conséquent appelé "menu hamburger".
 
-Lorsque vous implémentez un tel menu, vous devez vous assurer que le contrôle qui le révèle est accessible par les mécanismes de contrôle appropriés (normalement tactile pour mobile), comme indiqué dans [Control mechanisms](#control_mechanisms) ci-dessus, et que le reste de la page est déplacé ou caché d'une manière ou d'une autre pendant l'accès au menu, afin d'éviter toute confusion lors de la navigation. .
+Lorsque vous implémentez un tel menu, vous devez vous assurer que le contrôle qui le révèle est accessible par les mécanismes de contrôle appropriés (normalement tactile pour mobile), comme indiqué dans [Mécanismes de contrôle](#mécanismes_de_contrôle) ci-dessus, et que le reste de la page est déplacé ou caché d'une manière ou d'une autre pendant l'accès au menu, afin d'éviter toute confusion lors de la navigation. .
 
 Cliquez ici pour un  [good hamburger menu example](http://fritz-weisshart.de/meg_men/).
 

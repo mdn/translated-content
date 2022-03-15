@@ -16,7 +16,7 @@ Les objets `File` sont généralements obtenus à partir de :
 - l’objet {{domxref("DataTransfer")}} d’une opération de glisser-déposer ;
 - l’API `mozGetAsFile()` de l’élément {{domxref("HTMLCanvasElement")}}.
 
-Dans Gecko, le code privilégié peut créer des objets `File` représentant tout fichier local sans nécessiter une interaction de l’utilisateur ou de l’utilisatrice (voir [Notes d’implémentation](#notes_d’implémentation) pour plus d’informations.)
+Dans Gecko, le code privilégié peut créer des objets `File` représentant tout fichier local sans nécessiter une interaction de l’utilisateur ou de l’utilisatrice (voir [Notes d'implémentation](#notes_dimplémentation) pour plus d’informations.)
 
 Un objet `File` est un genre spécifique de {{domxref("Blob")}}, et peut être utilisé dans tout contexte où un blob peut l’être. En particulier, {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, et {{domxref("XMLHttpRequest", "", "send()")}} acceptent indifféremment des `Blob`s et des `File`s.
 
@@ -70,7 +70,7 @@ _L’interface `File` ne définit aucune méthode, mais hérite des méthodes de
 
 {{Compat("api.File")}}
 
-### Notes d’implémentation
+### Notes d'implémentation
 
 - Dans Gecko, vous pouvez utiliser API depuis du code chrome. Voir [Using the DOM File API in chrome code](/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails. Pour l’utiliser depuis du code chrome, JSM, ou portée Bootstrap, vous devez l’importer en utilisant `Cu.importGlobalProperties(['File']);`
 - À partir de Gecko 6.0 {{geckoRelease("6.0")}}, le code privilégié (par exemple au sein d’une extension) peut passer un objet {{interface("nsIFile")}} au constructeur DOM `File` pour spécifier le fichier à référencer.

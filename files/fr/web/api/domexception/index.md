@@ -22,7 +22,7 @@ Chaque exception a un **nom**, qui est une courte chaîne identifiant l'erreur o
 ## Propriétés
 
 - {{domxref("DOMException.code")}} {{deprecated_inline}} {{readOnlyInline}}
-  - : Renvoie un court message qui contient l'un des [constantes de code d'erreur](#noms_d'erreur) ou 0 si aucun ne correspond. Ce champ est utilisé pour des raisons historiques. Les nouvelles exceptions DOM ne l'utilisent plus : elles mettent cette information dans l'attribut {{domxref("DOMException.name")}}.
+  - : Renvoie un court message qui contient l'un des [constantes de code d'erreur](#noms_derreur) ou 0 si aucun ne correspond. Ce champ est utilisé pour des raisons historiques. Les nouvelles exceptions DOM ne l'utilisent plus : elles mettent cette information dans l'attribut {{domxref("DOMException.name")}}.
 - {{domxref("DOMException.message")}} {{readOnlyInline}}
   - : Returne une {{domxref("DOMString")}} (_chaîne de caractères_) représentant un message ou une description associé avec le [nom d'erreur](/en-US/docs/Web/API/DOMException#Error_names) donné.
 - {{domxref("DOMException.name")}} {{readOnlyInline}}

@@ -181,7 +181,7 @@ Les textes alternatifs sont très importants pour l'accessibilité — si une p
 
 > **Note :** Pour plus d'informations, lisez [Text alternatives](/fr/docs/Learn/Accessibility/HTML#Text_alternatives).
 
-L'oubli de texte alt peut être testé de bien des façons, par exemple en utilisant le [Auditing tools](#auditing_tools) d'accessibilité.
+L'oubli de texte alt peut être testé de bien des façons, par exemple en utilisant [les outils d'audit](#les_outils_daudit) d'accessibilité.
 
 Le texte alt est légèrement plus complexe pour du contenu vidéo ou audio. Il y a une manière de gérer l'affichage du texte (par ex. les sous-titres) et de les afficher quand la vidéo est jouée, sous le forme de l'élément {{htmlelement("track")}}, et du format [WebVTT](/fr/docs/Web/API/Web_Video_Text_Tracks_Format) (voir [Ajouter des légendes et des sous-titres à des vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour un tutoriel détaillé). [La compatibilité entre navigateur](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Compatibilit%C3%A9_entre_navigateurs) pour cette fonction est assez bonne, mais si vous voulez fournir des textes alternatifs pour de l'audio ou supporter les vieux navigateurs, une simple transcription du texte présenté quelque part sur la page ou sur une page séparée peut être une bonne idée.
 
@@ -476,7 +476,7 @@ VO a beaucoup de commandes clavier, et nous n'allons pas toutes les lister ici. 
   </tbody>
 </table>
 
-Cela peut paraître comme beaucoup de commandes, mais pas tant que ça que vous vous y habituez, et VO vous rappelle régulièrement quels commandes utiliser dans quels cas. Essayer de tester VO maintenant ; vous pouvez dorénavant essayer de tester certains de nos exemples dans la section [Screenreader testing](#screenreader_testing).
+Cela peut paraître comme beaucoup de commandes, mais pas tant que ça que vous vous y habituez, et VO vous rappelle régulièrement quels commandes utiliser dans quels cas. Essayer de tester VO maintenant ; vous pouvez dorénavant essayer de tester certains de nos exemples dans la section [Test avec lecteur d'écran](#test_avec_lecteur_décran).
 
 #### NVDA
 

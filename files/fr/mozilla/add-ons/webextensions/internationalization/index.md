@@ -138,7 +138,7 @@ Un autre champ que vous devez spécifier dans votre fichier manifest.json est [d
 "default_locale": "en"
 ```
 
-Cela spécifie un paramètre régional par défaut à utiliser si l'extension n'inclut pas de chaîne localisée pour les paramètres régionaux actuels du navigateur. Toutes les chaînes de message qui ne sont pas disponibles dans les paramètres régionaux du navigateur proviennent des paramètres régionaux par défaut. Il y a d'autres détails à connaître en termes de la façon dont le navigateur sélectionne les chaînes — voir [Localized string selection](#localized_string_selection).
+Cela spécifie un paramètre régional par défaut à utiliser si l'extension n'inclut pas de chaîne localisée pour les paramètres régionaux actuels du navigateur. Toutes les chaînes de message qui ne sont pas disponibles dans les paramètres régionaux du navigateur proviennent des paramètres régionaux par défaut. Il y a d'autres détails à connaître en termes de la façon dont le navigateur sélectionne les chaînes — voir [Sélection de chaîne localisée](#sélection_de_chaîne_localisée).
 
 ## CSS dépendant des paramètres régionaux
 
@@ -150,7 +150,7 @@ header {
 }
 ```
 
-Ceci est utile, bien que vous fassiez mieux de gérer une telle situation en utilisant [Predefined messages](#predefined_messages).
+Ceci est utile, bien que vous fassiez mieux de gérer une telle situation en utilisant [Messages prédéfinis](#messages_prédéfinis).
 
 ## Récupération des chaînes de messages de JavaScript
 
@@ -265,7 +265,7 @@ Supposons que `default_locale` soit défini sur `fr`, et que les paramètres ré
 
 ## Messages prédéfinis
 
-Le module i18n nous fournit des messages prédéfinis, que nous pouvons appeler de la manière que nous l'avons vu précédemment dans [Calling message strings from manifests and extension CSS](#calling_message_strings_from_manifests_and_extension_css). Par exemple :
+Le module i18n nous fournit des messages prédéfinis, que nous pouvons appeler de la manière que nous l'avons vu précédemment dans [Récupération des chaînes localisées dans le manifest](#récupération_des_chaînes_localisées_dans_le_manifest). Par exemple :
 
     __MSG_extensionName__
 

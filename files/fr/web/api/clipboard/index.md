@@ -25,7 +25,7 @@ Le presse-papiers du système est exposé via la propriété globale {{domxref("
 
 Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur ou l’utilisatrice n’a pas accordé les permissions requises en utilisant l’[API permissions](/docs/Web/API/Permissions_API), et la permission `"clipboard-read"` ou `"clipboard-write"` selon le besoin.
 
-> **Note :** En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section [Clipboard availability](#clipboard_availability) pour plus de détails.
+> **Note :** En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section [Disponibilité du presse-papiers](#disponibilité_du_presse-papiers) pour plus de détails.
 
 Toutes les méthodes de l’API clipboard fonctionnent de manière asynchrone ; elles renvoient une {{jsxref("Promise")}} qui est résolue une fois que l’accès au presse-papiers a réussi. La promesse est rejetée si l’accès au presse-papiers est refusé.
 
