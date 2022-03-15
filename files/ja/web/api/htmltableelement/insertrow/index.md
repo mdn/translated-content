@@ -1,67 +1,103 @@
 ---
-title: HTMLTableElement.insertRow
+title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - メソッド
+  - NeedsMobileBrowserCompatibility
+  - リファレンス
+browser-compat: api.HTMLTableElement.insertRow
 translation_of: Web/API/HTMLTableElement/insertRow
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p><code>insertRow</code> は、テーブル内に新しい行を挿入します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox">var <em>row</em> = <em>HTMLTableElement</em>.insertRow(<em>index</em>);</pre>
-<ul>
- <li><a href="/ja/docs/DOM/HTMLTableElement" title="DOM/HTMLTableElement"><code>HTMLTableElement</code></a>: HTML table 要素への参照</li>
- <li><code>index</code>: 新しい行の行番号（ 0 が一行目）</li>
- <li><code>row</code>: 新しい行への参照が割り当てられる<br>
-  <code>index</code> に -1 または行数に等しい場合、行は最後の行として追加される。<br>
-  <code>index</code> が省略したり、行数より大きい場合、エラーが発生する。</li>
- <li>テーブル内に既に複数の <code>tbody</code> 要素が存在する場合、新しい行は最後の tbody 要素に挿入されます。<br>
-  特定の tbody 要素に行を挿入するには、以下の様にします。
-  <pre><code>var <em>specific_tbody</em> = document.getElementById(<em>tbody_id</em>);
-var <em>row</em> = specific_tbody.insertRow(<em>index</em>)</code></pre>
- </li>
-</ul>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:html">&lt;table id="TableA"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Old top row&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+{{APIRef("HTML DOM")}}
 
-&lt;script type="text/javascript"&gt;
+**`HTMLTableElement.insertRow()`** メソッドは、新しい行を表す ({{HtmlElement("tr")}}) をこの {{HtmlElement("table")}} に挿入し、その新しい行への参照を返します。
 
+表に複数の {{HtmlElement("tbody")}} 要素があった場合、既定では、新しい行は最後の `<tbody>` に挿入されます。指定した `<tbody>` にこの行を挿入するには、次のようにします。
+
+```js
+let specific_tbody = document.getElementById(tbody_id);
+let row = specific_tbody.insertRow(index)
+```
+
+> **Note:** `insertRow()` は、表に直接行を挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<tr>` 要素を作成する場合のように、行を個別に追加する必要はありません。
+
+## 構文
+
+```js
+var newRow = HTMLTableElement.insertRow(index);
+```
+
+{{domxref("HTMLTableElement")}} は HTML の {{HtmlElement("table")}} 要素への参照です。
+
+### 引数
+
+- `index` {{optional_inline}}
+  - : 新しい行の位置です。 `index` が `-1` または行数と同じであった場合は、最後の行として追加されます。
+    `index` を省略した場合の既定値は `-1` です。
+
+### 返値
+
+新しい行を参照する {{domxref("HTMLTableRowElement")}} です。
+
+### 例外
+
+- `IndexSizeError` {{domxref("DOMException")}}
+  - : `index` が行数よりも大きい場合に発生します。
+
+## 例
+
+この例では `insertRow(-1)` を使用して、表に新しい行を追加します。
+
+それから {{domxref("HTMLTableRowElement.insertCell()")}} を使用して新しいセルをその行に追加します。（有効な HTML にするためには、 `<tr>` には 1 つ以上の `<td>` 要素が必要です。）最後に、 {{domxref("Document.createTextNode()")}} と {{domxref("Node.appendChild()")}} を使用してそのセルにテキストを追加します。
+
+### HTML
+
+```html
+<table id="my-table">
+  <tr><td>行 1</td></tr>
+  <tr><td>行 2</td></tr>
+  <tr><td>行 3</td></tr>
+</table>
+```
+
+### JavaScript
+
+```js
 function addRow(tableID) {
-  // table 要素への参照を取得し、変数に代入
-  var tableRef = document.getElementById(tableID);
+  // 表への参照を取得
+  let tableRef = document.getElementById(tableID);
 
-  // テーブルのインデックス 0 の行（一行目）に行を挿入
-  var newRow   = tableRef.insertRow(0);
+  // 表の末尾に行を挿入
+  let newRow = tableRef.insertRow(-1);
 
-  // 一行目にセルを挿入
-  var newCell  = newRow.insertCell(0);
+  // その行の 0 の位置にセルを挿入
+  let newCell = newRow.insertCell(0);
 
-  // 作成したセルにテキストノードを挿入
-  var newText  = document.createTextNode('New top row')
+  // そのセルにテキストノードを追加
+  let newText = document.createTextNode('新しい最下行');
   newCell.appendChild(newText);
 }
 
-// 引数にテーブルの id を指定して関数 addRow() を実行
-addRow('TableA');
+// addRow() を表の ID で呼び出す
+addRow('my-table');
+```
 
-&lt;/script&gt;</pre>
-<ul>
- <li>HTML 文書を valid なものとするには、tr 要素か td 要素の内、少なくとも一つが必要です。</li>
- <li><code>insertRow</code> は直接テーブルに行を挿入し、<strong>新しい行への参照を返します</strong>。<a href="/ja/docs/DOM/document.createElement" title="DOM/document.createElement"><code>document.createElement()</code></a> などで新たに tr 要素を作成する必要はありません。</li>
-</ul>
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+### 結果
 
-<p>{{Compat("api.HTMLTableElement.insertRow")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-39872903">DOM Level 2 HTML: insertRow</a></li>
-</ul>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLTableRowElement.insertCell()")}}
+- 行を表す HTML 要素: {{domxref("HTMLTableRowElement")}}
