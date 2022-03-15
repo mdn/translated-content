@@ -3189,6 +3189,7 @@
 /ja/docs/Web/API/MediaDevices/ondevicechange	/ja/docs/Web/API/MediaDevices/devicechange_event
 /ja/docs/Web/API/MediaQueryList/onchange	/ja/docs/Web/API/MediaQueryList/change_event
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
+/ja/docs/Web/API/MediaStream/onaddtrack	/ja/docs/Web/API/MediaStream/addtrack_event
 /ja/docs/Web/API/MediaStreamConstraints	/ja/docs/conflicting/Web/API/MediaDevices/getUserMedia
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
