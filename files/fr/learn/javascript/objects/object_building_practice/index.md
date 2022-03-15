@@ -264,7 +264,7 @@ Voilà pour les bases — essayez d'enregistrer et de rafraîchir pour tester vo
 
 Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notre programme, afin que nos balles sachent quand elles ont frappé une autre balle.
 
-1.  Tout d'abord, ajoutez la définition de méthode suivante ci-dessous où vous avez défini la méthode `update()` (c'est-à-dire le bloc `Ball.prototype.update`).
+1.  Tout d'abord, ajoutez la définition de la méthode suivante sous la définition de la méthode `update()` (c'est-à-dire le bloc `Ball.prototype.update`)&nbsp;:
 
     ```js
     Ball.prototype.collisionDetect = function() {
@@ -285,7 +285,7 @@ Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notr
     Cette méthode est un peu complexe, donc ne vous inquiétez pas si vous ne comprenez pas exactement comment cela fonctionne pour le moment. Regardons cela pas-à-pas :
 
     - Pour chaque balle _b_, nous devons vérifier chaque autre balle pour voir si elle est entrée en collision avec *b*. Pour ce faire, on inspecte toutes les balles du tableau `balls[]` dans une boucle `for`.
-    - Immédiatement à l'intérieur de cette boucle `for`, une instruction `if` vérifie si la balle courante  *b'* , inspectée dans la boucle, n'est égale à la balle *b. Le code correspondant est :*  `b'!== b`_._ En effet, nous ne voulons pas vérifier si une balle _b_ est entrée en collision avec elle-même ! Nous contrôlons donc si la balle actuelle _b_—dont la méthode `collisionDetect()` est invoquée—est distincte de la balle _b'_ inspectée dans la boucle*.* Ainsi le bloc de code venant après l'instruction `if` ne s'exécutera que si les balles _b_ et _b'_ ne sont pas identiques.
+    - Immédiatement à l'intérieur de cette boucle `for`, une instruction `if` vérifie si la balle courante  *b'* , inspectée dans la boucle, n'est pas égale à la balle *b. Le code correspondant est :*  `b'!== b`_._ En effet, nous ne voulons pas vérifier si une balle _b_ est entrée en collision avec elle-même ! Nous contrôlons donc si la balle actuelle _b_—dont la méthode `collisionDetect()` est invoquée—est distincte de la balle _b'_ inspectée dans la boucle*.* Ainsi le bloc de code venant après l'instruction `if` ne s'exécutera que si les balles _b_ et _b'_ ne sont pas identiques.
     - Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans [2D collision detection](/fr/docs/Games/Techniques/2D_collision_detection).
     - Si une collision est détectée, le code à l'intérieur de l'instruction interne `if` est exécuté. Dans ce cas, nous définissons simplement la propriété `color` des deux cercles à une nouvelle couleur aléatoire. Nous aurions pu faire quelque chose de bien plus complexe, comme faire rebondir les balles de façon réaliste, mais cela aurait été beaucoup plus complexe à mettre en œuvre. Pour de telles simulations de physique, les développeurs ont tendance à utiliser des bibliothèques de jeux ou de physiques telles que [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
 
