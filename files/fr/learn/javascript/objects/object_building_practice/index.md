@@ -107,9 +107,9 @@ function Ball(x, y, velX, velY, color, size) {
 Ici, nous incluons des paramètres qui définissent  des propriétés dont chaque balle aura besoin pour fonctionner dans notre programme :
 
 - Les coordonnées `x` et `y`  — les coordonnées verticales et horizontales où la balle débutera sur l'écran. Ceci peut se trouver entre 0 (coin à gauche en haut) et la valeur de la hauteur et de la largeur de la fenêtre du navigateur (coin en bas à droite).
-- Une vitesse horizontale et verticale (`velX` et `velY`) — à chaque balle est attribuée une vitesse horizontale et verticale; en termes réels ces valeurs seront régulièrement ajoutéés aux valeurs de la coordonnée `x`/`y` quand nous commencerons à animer les balles, afin de les faire bouger d'autant sur chaque vignette (frame).
-- `color` — chaque balle a une couleur.
-- `size` — chaque balle a une taille — ce sera son rayon mesuré en pixels.
+- Une vitesse horizontale et verticale (`velX` et `velY`) — à chaque balle est attribuée une vitesse horizontale et verticale; en termes réels, ces valeurs seront régulièrement ajoutées aux valeurs de la coordonnée `x`/`y` quand nous commencerons à animer les balles, afin de les faire bouger d'autant sur chaque vignette (frame).
+- Une couleur `color` — chaque balle a une couleur.
+- Une taille `size` — chaque balle a une taille. Ce sera son rayon mesuré en pixels.
 
 Ceci règle le problème des propriétés mais qu'en est il des méthodes ? Nous voulons maintenant amener nos balles à faire quelque chose dans notre programme.
 
