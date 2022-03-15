@@ -1,5 +1,5 @@
 ---
-title: 互換性一覧表とブラウザーの互換性データリポジトリ (BCD)
+title: 互換性一覧表とブラウザー互換性データリポジトリ (BCD)
 slug: MDN/Structures/Compatibility_tables
 tags:
   - MDN Meta
@@ -289,7 +289,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <h2 id="Adding_data_Advanced_cases" name="Adding_data_Advanced_cases">データの追加: 高度な場合</h2>
 
-<p>ブラウザーの互換性データには、いくつかの高度な機能があります。このセクションの目的は、最も一般的なものをリストアップし、それぞれの例を提供して、あなた自身の互換性データにそれらを実装する方法を示すことです。</p>
+<p>ブラウザー互換性データには、いくつかの高度な機能があります。このセクションの目的は、最も一般的なものをリストアップし、それぞれの例を提供して、あなた自身の互換性データにそれらを実装する方法を示すことです。</p>
 
 <h3 id="Including_a_footnote" name="Including_a_footnote">脚注を含める</h3>
 
@@ -302,7 +302,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <h3 id="Including_a_vendor_prefix" name="Including_a_vendor_prefix">ベンダープレフィックスを含める</h3>
 
-<p>ある機能が、あるブラウザでベンダープレフィックス付きでサポートされている場合、ブラウザーの互換性データでそのことを明確にしたいと思うでしょう。Firefoxにおいて、 <code>-moz-</code> プレフィックスによりサポートされている機能を想像してください。互換性データでこれを指定するには、該当する "firefox" サブメンバーの中に "prefix" サブメンバーを追加する必要があります。これは次のようになります。</p>
+<p>ある機能が、あるブラウザでベンダープレフィックス付きでサポートされている場合、ブラウザー互換性データでそのことを明確にしたいと思うでしょう。Firefoxにおいて、 <code>-moz-</code> プレフィックスによりサポートされている機能を想像してください。互換性データでこれを指定するには、該当する "firefox" サブメンバーの中に "prefix" サブメンバーを追加する必要があります。これは次のようになります。</p>
 
 <pre class="brush: json notranslate">"firefox": {
   "version_added": true,
@@ -396,7 +396,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <p>時々、ブラウザが仕様とは異なる名前で機能をサポートすることがあります。これは例えば、あるブラウザがある機能の実験的なサポートを早くから追加していて、仕様が安定する前に名前が変わってしまったというような場合が考えられます。</p>
 
-<p>このようなケースをブラウザーの互換性データに含めるには、"alternative_name"メンバの中に代替名を指定するサポート情報ポイントを含めます。</p>
+<p>このようなケースをブラウザー互換性データに含めるには、"alternative_name"メンバの中に代替名を指定するサポート情報ポイントを含めます。</p>
 
 <div class="blockIndicator note">
 <p><strong>注:</strong> 代替名は正確なエイリアスではないかもしれません。標準バージョンとは異なる動作をするかもしれません。</p>
