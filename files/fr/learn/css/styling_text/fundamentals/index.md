@@ -262,7 +262,7 @@ CSS fournit quatre propriétés communes pour modifier le poids et l'emphase vis
 - {{cssxref("font-style")}} : utilisé pour appliquer ou enlever le style italique. Les valeurs possibles sont les suivantes (vous ne l'utiliserez que rarement, sauf si vous souhaitez désactiver le style italique pour une raison quelconque) :
 
   - `normal` : fige le texte en police normale (suppression du style italique existant).
-  - `italic `: met le texte en  _version italique de la police_ si elle est disponible ; si elle n'existe pas, le style italique sera émulé avec l'option oblique à la place.
+  - `italic`&nbsp;: met le texte en  _version italique de la police_ si elle est disponible ; si elle n'existe pas, le style italique sera émulé avec l'option oblique à la place.
   - `oblique` : force le texte à utiliser une version simulée de fonte italique, créée en _inclinant la version normale_.
 
 - {{cssxref("font-weight")}} : définit la graisse du texte. La propriété peut avoir de nombreuses valeurs s'il y a de nombreuses variantes de polices disponibles (comme _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), mais en réalité, vous les utiliserez rarement en dehors de `normal` et `bold` (gras):

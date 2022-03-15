@@ -94,7 +94,7 @@ De nombreuses pages anciennes utilisent la notation suivante pour indiquer que l
 
 ### L'attribut method
 
-Cet attribut définit comment les données sont envoyées. Le [Protocole HTTP ](/fr/docs/Web/HTTP)fournit plusieurs façons d'envoyer une requête. Les données des formulaires HTML peuvent être envoyées via au moins deux méthodes : la méthode `GET` et la méthode `POST`.
+Cet attribut définit comment les données sont envoyées. Le [Protocole HTTP](/fr/docs/Web/HTTP) fournit plusieurs façons d'envoyer une requête. Les données des formulaires HTML peuvent être envoyées via au moins deux méthodes : la méthode `GET` et la méthode `POST`.
 
 Pour bien comprendre la différence entre ces deux méthodes, il convient d'examiner comment le protocole HTTP marche. Chaque fois qu'on veut atteindre une ressource sur Internet, le navigateur envoie une requête à une URL. Une requête HTTP consiste en deux parties : un en-tête (header) qui contient les métadonnées sur les capacités du navigateur, et un corps (body) qui contient les informations nécessaires au serveur pour effectuer la requête.
 
@@ -167,7 +167,7 @@ Quand le formulaire est soumis avec la méthode `POST`, aucune donnée n'est ajo
 
     say=Hi&to=Mom
 
-L'en-tête `Content-Length `indique la taille du corps, et l'en-tête `Content-Type` indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.
+L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-Type` indique le type de ressources envoyées au serveur. Nous discuterons de ces en-têtes dans un moment.
 
 > **Note :** Vous trouverez cet exemple sur GitHub — voyez [post-method.html](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html) (à voir [directement aussi](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
@@ -238,7 +238,7 @@ if __name__ == "__main__":
 
 Les deux prototypes référencés dans le code ci‑dessus sont les suivants :
 
-- [form.html ](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros « à rediriger sur `/hello` quand le formulaire est soumis ».)
+- [`form.html`](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html)&nbsp;: Le même formulaire que celui vu plus haut dans la section [La méthode POST](#the_post_method) mais avec l'attribut `action` défini à la valeur `\{{url_for('hello')}}`. (C'est un modèle [Jinja2](https://jinja.pocoo.org/docs/2.9/), qui est HTML à la base mais peut contenir des appels à du code Python qui fait tourner le serveur web mis entre accolades. `url_for('hello')` dit en gros « à rediriger sur `/hello` quand le formulaire est soumis ».)
 - [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html) : Ce modèle contient juste une ligne qui renvoie les deux éléments de donnée qui lui sont passées lors du rendu. Cela est effectué par l'intermédiaire de la fonction `hello()` vue plus haut qui s'exécute quand l'URL `/hello` est chargée dans le navigateur.
 
 > **Note :** À nouveau, ce code ne fonctionnera pas si vous tentez de le charger directement dans le navigateur. Python fonctionne un peu différemment de PHP — pour exécuter ce code localement il est nécessaire d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask avec « `pip3 install flask` ». À ce moment‑là vous pourrez exécuter l'exemple avec « `python3 python-example.py` », puis en allant sur « `localhost:5000` » dans votre navigateur.

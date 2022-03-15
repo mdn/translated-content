@@ -428,6 +428,10 @@
 /zh-TW/docs/Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術	/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /zh-TW/docs/Learn/HTML/Tables/基礎	/zh-TW/docs/Learn/HTML/Tables/Basics
 /zh-TW/docs/Learn/How_to_contribute	/zh-TW/docs/orphaned/Learn/How_to_contribute
+/zh-TW/docs/Learn/JavaScript/Asynchronous/Async_await	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/zh-TW/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous
+/zh-TW/docs/Learn/JavaScript/Asynchronous/Concepts	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/zh-TW/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/zh-TW/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
 /zh-TW/docs/Learn/JavaScript/Building_blocks/函數	/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions
 /zh-TW/docs/Learn/JavaScript/Building_blocks/回傳值	/zh-TW/docs/Learn/JavaScript/Building_blocks/Return_values
 /zh-TW/docs/Learn/JavaScript/Building_blocks/建立自己的功能函數	/zh-TW/docs/Learn/JavaScript/Building_blocks/Build_your_own_function

@@ -1094,6 +1094,10 @@
 /zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form	/zh-CN/docs/Learn/Forms/Your_first_form
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/其他嵌入技术	/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 /zh-CN/docs/Learn/HTML/Multimedia_and_embedding/在网页中添加矢量图形	/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
+/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous
+/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
+/zh-CN/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
 /zh-CN/docs/Learn/JavaScript/First_steps/变量	/zh-CN/docs/Learn/JavaScript/First_steps/Variables
 /zh-CN/docs/Learn/JavaScript/First_steps/第一点	/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash
 /zh-CN/docs/Learn/JavaScript/Objects/Inheritance	/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
@@ -1187,8 +1191,8 @@
 /zh-CN/docs/Server-sent_events/EventSource	/zh-CN/docs/Web/API/EventSource
 /zh-CN/docs/Server-sent_events/EventSource/EventSource	/zh-CN/docs/Web/API/EventSource/EventSource
 /zh-CN/docs/Server-sent_events/EventSource/close	/zh-CN/docs/Web/API/EventSource/close
-/zh-CN/docs/Server-sent_events/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/onerror
-/zh-CN/docs/Server-sent_events/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/onopen
+/zh-CN/docs/Server-sent_events/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/error_event
+/zh-CN/docs/Server-sent_events/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/open_event
 /zh-CN/docs/Server-sent_events/Using_server-sent_events	/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events
 /zh-CN/docs/Site_Compatibility_for_Firefox_19	/zh-CN/docs/Mozilla/Firefox/Releases/19/Site_compatibility
 /zh-CN/docs/Site_Compatibility_for_Firefox_21	/zh-CN/docs/Mozilla/Firefox/Releases/21/Site_compatibility
@@ -1273,6 +1277,7 @@
 /zh-CN/docs/Web/API/Document/onfullscreenchange	/zh-CN/docs/conflicting/Web/API/Document/fullscreenchange_event
 /zh-CN/docs/Web/API/Document/onfullscreenerror	/zh-CN/docs/Web/API/Document/fullscreenerror_event
 /zh-CN/docs/Web/API/Document/onreadystatechange	/en-US/docs/Web/API/Document/readystatechange_event
+/zh-CN/docs/Web/API/Document/onvisibilitychange	/zh-CN/docs/conflicting/Web/API/Document/visibilitychange_event
 /zh-CN/docs/Web/API/Document/rouchmove_event	/zh-CN/docs/Web/API/Document/touchmove_event
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/activeElement	/zh-CN/docs/Web/API/Document/activeElement
 /zh-CN/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/zh-CN/docs/Web/API/Document/elementFromPoint
@@ -1328,6 +1333,8 @@
 /zh-CN/docs/Web/API/Event/isChar	/zh-CN/docs/Web/API/UIEvent/isChar
 /zh-CN/docs/Web/API/Event/pageY	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/Event/禁用时间冒泡	/zh-CN/docs/Web/API/Event/cancelBubble
+/zh-CN/docs/Web/API/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/error_event
+/zh-CN/docs/Web/API/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/open_event
 /zh-CN/docs/Web/API/EventTarget.dispatchEvent	/zh-CN/docs/Web/API/EventTarget/dispatchEvent
 /zh-CN/docs/Web/API/EventTarget.removeEventListener	/zh-CN/docs/Web/API/EventTarget/removeEventListener
 /zh-CN/docs/Web/API/FetchController	/zh-CN/docs/Web/API/AbortController
@@ -1408,6 +1415,7 @@
 /zh-CN/docs/Web/API/KeyboardEvent/which	/zh-CN/docs/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
 /zh-CN/docs/Web/API/MediaCapabilitiesInfo	/zh-CN/docs/Web/API/MediaCapabilities/encodingInfo
+/zh-CN/docs/Web/API/MediaDevices/ondevicechange	/zh-CN/docs/conflicting/Web/API/MediaDevices/devicechange_event
 /zh-CN/docs/Web/API/MediaStream.addTrack	/zh-CN/docs/Web/API/MediaStream/addTrack
 /zh-CN/docs/Web/API/MouseEvent/which	/zh-CN/docs/conflicting/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/MouseWheelEvent	/zh-CN/docs/conflicting/Web/API/WheelEvent
@@ -1466,6 +1474,7 @@
 /zh-CN/docs/Web/API/ParentNode.childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/ParentNode/childElementCount	/zh-CN/docs/Web/API/Element/childElementCount
 /zh-CN/docs/Web/API/Performance.now()	/zh-CN/docs/Web/API/Performance/now
+/zh-CN/docs/Web/API/Performance/onresourcetimingbufferfull	/zh-CN/docs/Web/API/Performance/resourcetimingbufferfull_event
 /zh-CN/docs/Web/API/Performance/内存	/zh-CN/docs/Web/API/Performance/memory
 /zh-CN/docs/Web/API/Position	/zh-CN/docs/Web/API/GeolocationPosition
 /zh-CN/docs/Web/API/Position/coords	/zh-CN/docs/Web/API/GeolocationPosition/coords
@@ -1599,6 +1608,8 @@
 /zh-CN/docs/Web/API/Window/crypto	/zh-CN/docs/Web/API/crypto_property
 /zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/Web/API/Window/mozAnimationStartTIme	/zh-CN/docs/Web/API/Animation/startTime
+/zh-CN/docs/Web/API/Window/onappinstalled	/zh-CN/docs/Web/API/Window/appinstalled_event
+/zh-CN/docs/Web/API/Window/onbeforeinstallprompt	/zh-CN/docs/Web/API/Window/beforeinstallprompt_event
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
 /zh-CN/docs/Web/API/Window/ongamepadconnected	/zh-CN/docs/conflicting/Web/API/Window/gamepadconnected_event
 /zh-CN/docs/Web/API/Window/ongamepaddisconnected	/zh-CN/docs/Web/API/Window/gamepaddisconnected_event
@@ -2005,6 +2016,7 @@
 /zh-CN/docs/Web/HTML/Global_attributes/x-ms-加速装置键	/zh-CN/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /zh-CN/docs/Web/HTML/Global_attributes/x-ms-格式-检测	/zh-CN/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /zh-CN/docs/Web/HTML/Global_attributes/摩缺	/zh-CN/docs/Web/HTML/Global_attributes/accesskey
+/zh-CN/docs/Web/HTML/Index	/zh-CN/docs/conflicting/Web/HTML
 /zh-CN/docs/Web/HTML/Inline_elemente	/zh-CN/docs/Web/HTML/Inline_elements
 /zh-CN/docs/Web/HTML/Introduction	/zh-CN/docs/learn/HTML/Introduction_to_HTML
 /zh-CN/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/zh-CN/docs/Glossary/speculative_parsing
@@ -2284,12 +2296,12 @@
 /zh-CN/docs/learn/JavaScript/Building_blocks/事件	/zh-CN/docs/Learn/JavaScript/Building_blocks/Events
 /zh-CN/docs/learn/JavaScript/Building_blocks/相片走廊	/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery
 /zh-CN/docs/learn/JavaScript/异步	/zh-CN/docs/Learn/JavaScript/Asynchronous
-/zh-CN/docs/learn/JavaScript/异步/Async_await	/zh-CN/docs/Learn/JavaScript/Asynchronous/Async_await
-/zh-CN/docs/learn/JavaScript/异步/Choosing_the_right_approach	/zh-CN/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach
+/zh-CN/docs/learn/JavaScript/异步/Async_await	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
+/zh-CN/docs/learn/JavaScript/异步/Choosing_the_right_approach	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous
 /zh-CN/docs/learn/JavaScript/异步/Promises语法	/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises
-/zh-CN/docs/learn/JavaScript/异步/概念	/zh-CN/docs/Learn/JavaScript/Asynchronous/Concepts
+/zh-CN/docs/learn/JavaScript/异步/概念	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
 /zh-CN/docs/learn/JavaScript/异步/简介	/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing
-/zh-CN/docs/learn/JavaScript/异步/超时和间隔	/zh-CN/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals
+/zh-CN/docs/learn/JavaScript/异步/超时和间隔	/zh-CN/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
 /zh-CN/docs/learn/Performance/CSS_performance	/zh-CN/docs/Learn/Performance/CSS
 /zh-CN/docs/learn/Performance/dns-prefetch	/zh-CN/docs/Web/Performance/dns-prefetch
 /zh-CN/docs/learn/Performance/感知性能	/zh-CN/docs/Learn/Performance/perceived_performance

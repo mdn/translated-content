@@ -29,13 +29,6 @@
       "BNedry"
     ]
   },
-  "Games/Index": {
-    "modified": "2019-01-16T21:55:43.323Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Games/Introduction": {
     "modified": "2019-04-23T09:34:16.784Z",
     "contributors": [
@@ -1712,12 +1705,6 @@
     "modified": "2019-03-23T22:40:36.312Z",
     "contributors": [
       "loella16",
-      "xdelatour"
-    ]
-  },
-  "Glossary/Index": {
-    "modified": "2019-01-16T21:55:44.075Z",
-    "contributors": [
       "xdelatour"
     ]
   },
@@ -4792,12 +4779,6 @@
       "Dralyab",
       "loella16",
       "tonybengue"
-    ]
-  },
-  "Learn/Index": {
-    "modified": "2020-07-16T22:33:36.900Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Learn/JavaScript": {
@@ -9328,12 +9309,6 @@
       "RoyalPanda"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Index": {
-    "modified": "2019-03-18T21:01:44.832Z",
-    "contributors": [
-      "hellosct1"
-    ]
-  },
   "Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard": {
     "modified": "2019-07-03T05:46:49.789Z",
     "contributors": [
@@ -10661,13 +10636,6 @@
   },
   "Tools/Firefox_OS_Simulator_clone": {
     "modified": "2020-07-16T22:36:22.890Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
-  "Tools/Index": {
-    "modified": "2020-07-16T22:36:03.885Z",
     "contributors": [
       "wbamberg",
       "xdelatour"
@@ -15556,7 +15524,7 @@
       "Plotisateur"
     ]
   },
-  "Web/API/EventSource/onopen": {
+  "Web/API/EventSource/open_event": {
     "modified": "2020-10-15T22:17:18.152Z",
     "contributors": [
       "SphinxKnight",
@@ -32084,13 +32052,6 @@
       "SphinxKnight"
     ]
   },
-  "Web/HTML/Index": {
-    "modified": "2019-01-16T18:47:13.379Z",
-    "contributors": [
-      "SphinxKnight",
-      "tregagnon"
-    ]
-  },
   "Web/HTML/Inline_elements": {
     "modified": "2019-04-06T13:04:18.081Z",
     "contributors": [
@@ -32915,14 +32876,6 @@
       "callmemagnus",
       "aymericsorek",
       "mmahouachi"
-    ]
-  },
-  "Web/HTTP/Index": {
-    "modified": "2019-03-23T22:26:53.499Z",
-    "contributors": [
-      "tonybengue",
-      "SphinxKnight",
-      "xdelatour"
     ]
   },
   "Web/HTTP/Link_prefetching_FAQ": {
@@ -40091,12 +40044,6 @@
       "Powlow"
     ]
   },
-  "Web/MathML/Index": {
-    "modified": "2019-01-16T22:05:50.107Z",
-    "contributors": [
-      "xdelatour"
-    ]
-  },
   "Web/Media": {
     "modified": "2019-03-18T21:32:54.694Z",
     "contributors": [
@@ -41018,12 +40965,6 @@
       "yank7",
       "Wismill",
       "Nothus"
-    ]
-  },
-  "Web/SVG/Index": {
-    "modified": "2019-01-16T21:57:35.980Z",
-    "contributors": [
-      "xdelatour"
     ]
   },
   "Web/SVG/SVG_animation_with_SMIL": {
@@ -42141,12 +42082,6 @@
       "Fredchat"
     ]
   },
-  "Web/XSLT/Index": {
-    "modified": "2019-06-17T11:21:18.591Z",
-    "contributors": [
-      "Arzak656"
-    ]
-  },
   "Web/XSLT/PI_Parameters": {
     "modified": "2019-03-23T23:44:06.266Z",
     "contributors": [
@@ -42318,6 +42253,19 @@
       "dattaz"
     ]
   },
+  "conflicting/Games": {
+    "modified": "2019-01-16T21:55:43.323Z",
+    "contributors": [
+      "wbamberg",
+      "xdelatour"
+    ]
+  },
+  "conflicting/Glossary": {
+    "modified": "2019-01-16T21:55:44.075Z",
+    "contributors": [
+      "xdelatour"
+    ]
+  },
   "conflicting/Glossary/Chrome": {
     "modified": "2019-03-23T23:48:48.795Z",
     "contributors": [
@@ -42351,7 +42299,7 @@
     ]
   },
   "conflicting/Learn": {
-    "modified": "2020-07-16T22:22:13.196Z",
+    "modified": "2020-07-16T22:33:36.900Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -42744,6 +42692,12 @@
       "Sheppy"
     ]
   },
+  "conflicting/Mozilla/Add-ons/WebExtensions": {
+    "modified": "2019-03-18T21:01:44.832Z",
+    "contributors": [
+      "hellosct1"
+    ]
+  },
   "conflicting/Mozilla/Add-ons/WebExtensions/API/menus/overrideContext": {
     "modified": "2019-07-03T07:58:27.877Z",
     "contributors": [
@@ -42754,6 +42708,13 @@
     "modified": "2020-10-15T22:23:34.113Z",
     "contributors": [
       "hellosct1"
+    ]
+  },
+  "conflicting/Tools": {
+    "modified": "2020-07-16T22:36:03.885Z",
+    "contributors": [
+      "wbamberg",
+      "xdelatour"
     ]
   },
   "conflicting/Tools/Debugger/How_to/Set_Watch_Expressions": {
@@ -43481,6 +43442,13 @@
       "Fredchat"
     ]
   },
+  "conflicting/Web/HTML": {
+    "modified": "2019-01-16T18:47:13.379Z",
+    "contributors": [
+      "SphinxKnight",
+      "tregagnon"
+    ]
+  },
   "conflicting/Web/HTML/Element": {
     "modified": "2019-03-23T23:39:45.493Z",
     "contributors": [
@@ -43496,6 +43464,14 @@
     "modified": "2019-03-23T22:41:06.193Z",
     "contributors": [
       "loella16",
+      "xdelatour"
+    ]
+  },
+  "conflicting/Web/HTTP": {
+    "modified": "2019-03-23T22:26:53.499Z",
+    "contributors": [
+      "tonybengue",
+      "SphinxKnight",
       "xdelatour"
     ]
   },
@@ -43878,6 +43854,12 @@
       "SphinxKnight"
     ]
   },
+  "conflicting/Web/MathML": {
+    "modified": "2019-01-16T22:05:50.107Z",
+    "contributors": [
+      "xdelatour"
+    ]
+  },
   "conflicting/Web/Progressive_web_apps": {
     "modified": "2019-03-18T20:52:18.657Z",
     "contributors": [
@@ -43935,6 +43917,12 @@
       "JeffD"
     ]
   },
+  "conflicting/Web/SVG": {
+    "modified": "2019-01-16T21:57:35.980Z",
+    "contributors": [
+      "xdelatour"
+    ]
+  },
   "conflicting/Web/Web_Components": {
     "modified": "2020-10-15T22:12:01.555Z",
     "contributors": [
@@ -43949,6 +43937,12 @@
       "Mgjbot",
       "Elethiomel",
       "Fredchat"
+    ]
+  },
+  "conflicting/Web/XSLT": {
+    "modified": "2019-06-17T11:21:18.591Z",
+    "contributors": [
+      "Arzak656"
     ]
   },
   "orphaned/Glossary/Gaia": {

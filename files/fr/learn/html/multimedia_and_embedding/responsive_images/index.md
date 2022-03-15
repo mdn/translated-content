@@ -73,7 +73,7 @@ Ce type de problème n'existait pas quand le web a vu le jour, du début jusqu'a
 
 ## Comment créer des images adaptatives ?
 
-Dans ce paragraphe, nous allons examiner les deux problèmes illustrés ci-dessus et montrer comment les résoudre à l'aide des fonctions d'images adaptatives du HTML. Notez que nous nous focaliserons sur l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) du HTML dans cette section, comme vous avez pu le voir dans la zone de contenu de l'exemple ci-dessus — l'image d'en-tête du site n'est là que pour la décoration, et donc implémenté en utilisant des images de fond du CSS. CSS a [sans doute de meilleurs outils ](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/)que le HTML pour la conception adaptative : nous en parlerons dans le module CSS à venir.
+Dans ce paragraphe, nous allons examiner les deux problèmes illustrés ci-dessus et montrer comment les résoudre à l'aide des fonctions d'images adaptatives du HTML. Notez que nous nous focaliserons sur l'élément [`<img>`](/fr/docs/Web/HTML/Element/Img) du HTML dans cette section, comme vous avez pu le voir dans la zone de contenu de l'exemple ci-dessus — l'image d'en-tête du site n'est là que pour la décoration, et donc implémenté en utilisant des images de fond du CSS. CSS a [sans doute de meilleurs outils](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/) que le HTML pour la conception adaptative : nous en parlerons dans le module CSS à venir.
 
 ### Commutations de résolution : tailles différentes
 
