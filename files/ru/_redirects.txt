@@ -283,6 +283,17 @@
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
+/ru/docs/Mozilla/Firefox/Privacy	/ru/docs/Web/Privacy
+/ru/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/ru/docs/Web/Privacy/Redirect_tracking_protection
+/ru/docs/Mozilla/Firefox/Privacy/State_Partitioning	/ru/docs/Web/Privacy/State_Partitioning
+/ru/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/ru/docs/Web/Privacy/Storage_Access_Policy
+/ru/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors	/ru/docs/Web/Privacy/Storage_Access_Policy/Errors
+/ru/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll	/ru/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+/ru/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission	/ru/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+/ru/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign	/ru/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+/ru/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/ru/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+/ru/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/ru/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
+/ru/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/ru/docs/Web/Privacy/Tracking_Protection
 /ru/docs/Plugins/Roadmap	/ru/docs/Glossary/Plugin
 /ru/docs/Plugins/План	/ru/docs/Glossary/Plugin
 /ru/docs/Quirks_Mode_and_Standards_Mode	/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode

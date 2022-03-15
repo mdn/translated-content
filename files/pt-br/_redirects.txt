@@ -447,6 +447,17 @@
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /pt-BR/docs/Mozilla/Firefox/Novas_funcionalidades	/pt-BR/docs/Mozilla/Firefox/Experimental_features
+/pt-BR/docs/Mozilla/Firefox/Privacy	/pt-BR/docs/Web/Privacy
+/pt-BR/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/pt-BR/docs/Web/Privacy/Redirect_tracking_protection
+/pt-BR/docs/Mozilla/Firefox/Privacy/State_Partitioning	/pt-BR/docs/Web/Privacy/State_Partitioning
+/pt-BR/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/pt-BR/docs/Web/Privacy/Storage_Access_Policy
+/pt-BR/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors	/pt-BR/docs/Web/Privacy/Storage_Access_Policy/Errors
+/pt-BR/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll	/pt-BR/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+/pt-BR/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission	/pt-BR/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+/pt-BR/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign	/pt-BR/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+/pt-BR/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/pt-BR/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+/pt-BR/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/pt-BR/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
+/pt-BR/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/pt-BR/docs/Web/Privacy/Tracking_Protection
 /pt-BR/docs/Mozilla/Firefox/Releases/3/Zoom_de_página_inteira	/pt-BR/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /pt-BR/docs/Quirks_Mode_and_Standards_Mode	/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /pt-BR/docs/SVG	/pt-BR/docs/Web/SVG

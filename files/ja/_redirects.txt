@@ -2795,6 +2795,17 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /ja/docs/Mozilla/Add-ons/WebExtensions/デバッグ	https://extensionworkshop.com/documentation/develop/debugging/
 /ja/docs/Mozilla/Add-ons/WebExtensions/前提条件	/ja/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
+/ja/docs/Mozilla/Firefox/Privacy	/ja/docs/Web/Privacy
+/ja/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/ja/docs/Web/Privacy/Redirect_tracking_protection
+/ja/docs/Mozilla/Firefox/Privacy/State_Partitioning	/ja/docs/Web/Privacy/State_Partitioning
+/ja/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/ja/docs/Web/Privacy/Storage_Access_Policy
+/ja/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors	/ja/docs/Web/Privacy/Storage_Access_Policy/Errors
+/ja/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll	/ja/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+/ja/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission	/ja/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+/ja/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign	/ja/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+/ja/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/ja/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+/ja/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/ja/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
+/ja/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/ja/docs/Web/Privacy/Tracking_Protection
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
 /ja/docs/NPAPI/Constants	/ja/docs/Glossary/Plugin

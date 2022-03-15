@@ -489,6 +489,17 @@
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/快捷選單項	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/開發工具面板	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶體驗最佳實踐	https://extensionworkshop.com/documentation/develop/user-experience-best-practices/
+/zh-TW/docs/Mozilla/Firefox/Privacy	/zh-TW/docs/Web/Privacy
+/zh-TW/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/zh-TW/docs/Web/Privacy/Redirect_tracking_protection
+/zh-TW/docs/Mozilla/Firefox/Privacy/State_Partitioning	/zh-TW/docs/Web/Privacy/State_Partitioning
+/zh-TW/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/zh-TW/docs/Web/Privacy/Storage_Access_Policy
+/zh-TW/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors	/zh-TW/docs/Web/Privacy/Storage_Access_Policy/Errors
+/zh-TW/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll	/zh-TW/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+/zh-TW/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission	/zh-TW/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+/zh-TW/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign	/zh-TW/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+/zh-TW/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/zh-TW/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+/zh-TW/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/zh-TW/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
+/zh-TW/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/zh-TW/docs/Web/Privacy/Tracking_Protection
 /zh-TW/docs/Mozilla/Firefox/Releases/2/Firefox_2_的安全功能	/zh-TW/docs/Mozilla/Firefox/Releases/2/Security_changes
 /zh-TW/docs/Mozilla/Firefox/Releases/2/新增消息來源閱讀工具	/zh-TW/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements

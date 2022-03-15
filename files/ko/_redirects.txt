@@ -370,6 +370,17 @@
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/create	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/create
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/getTargetElement	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 /ko/docs/Mozilla/Add-ons/WebExtensions/API/contextMenus/onShown	/ko/docs/Mozilla/Add-ons/WebExtensions/API/menus/onShown
+/ko/docs/Mozilla/Firefox/Privacy	/ko/docs/Web/Privacy
+/ko/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/ko/docs/Web/Privacy/Redirect_tracking_protection
+/ko/docs/Mozilla/Firefox/Privacy/State_Partitioning	/ko/docs/Web/Privacy/State_Partitioning
+/ko/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/ko/docs/Web/Privacy/Storage_Access_Policy
+/ko/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors	/ko/docs/Web/Privacy/Storage_Access_Policy/Errors
+/ko/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll	/ko/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+/ko/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission	/ko/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+/ko/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign	/ko/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+/ko/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/ko/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+/ko/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/ko/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
+/ko/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/ko/docs/Web/Privacy/Tracking_Protection
 /ko/docs/Mozilla/애드온들	/ko/docs/Mozilla/Add-ons
 /ko/docs/Mozilla/애드온들/AMO/Policy/Featured	https://extensionworkshop.com/documentation/publish/recommended-extensions/
 /ko/docs/Mozilla/애드온들/Listing	https://extensionworkshop.com/documentation/develop/create-an-appealing-listing/

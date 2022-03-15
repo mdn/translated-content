@@ -1155,6 +1155,17 @@
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/匹配模板	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/实现一个设置页面	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展插件	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
+/zh-CN/docs/Mozilla/Firefox/Privacy	/zh-CN/docs/Web/Privacy
+/zh-CN/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/zh-CN/docs/Web/Privacy/Redirect_tracking_protection
+/zh-CN/docs/Mozilla/Firefox/Privacy/State_Partitioning	/zh-CN/docs/Web/Privacy/State_Partitioning
+/zh-CN/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/zh-CN/docs/Web/Privacy/Storage_Access_Policy
+/zh-CN/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors	/zh-CN/docs/Web/Privacy/Storage_Access_Policy/Errors
+/zh-CN/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll	/zh-CN/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+/zh-CN/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission	/zh-CN/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+/zh-CN/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign	/zh-CN/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+/zh-CN/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/zh-CN/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+/zh-CN/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/zh-CN/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
+/zh-CN/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/zh-CN/docs/Web/Privacy/Tracking_Protection
 /zh-CN/docs/Mozilla/附加组件	/zh-CN/docs/Mozilla/Add-ons
 /zh-CN/docs/Mozilla_event_reference	/zh-CN/docs/Web/Events
 /zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event

@@ -1237,6 +1237,17 @@
 /es/docs/Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension	/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/Tutorial	/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Accion_navegador	/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+/es/docs/Mozilla/Firefox/Privacy	/es/docs/Web/Privacy
+/es/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/es/docs/Web/Privacy/Redirect_tracking_protection
+/es/docs/Mozilla/Firefox/Privacy/State_Partitioning	/es/docs/Web/Privacy/State_Partitioning
+/es/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/es/docs/Web/Privacy/Storage_Access_Policy
+/es/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors	/es/docs/Web/Privacy/Storage_Access_Policy/Errors
+/es/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll	/es/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+/es/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission	/es/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+/es/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign	/es/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+/es/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/es/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+/es/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/es/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
+/es/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/es/docs/Web/Privacy/Tracking_Protection
 /es/docs/Plantillas_en_Firefox_3	/es/docs/Mozilla/Firefox/Releases/3/Templates
 /es/docs/Portada	/es/docs/Web
 /es/docs/Preguntas_frecuentes_sobre_CSS	/es/docs/Learn/CSS/Howto/CSS_FAQ

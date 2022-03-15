@@ -1356,6 +1356,17 @@
 /pl/docs/MDN/rozpocznij_mdn	/pl/docs/MDN/Contribute/Getting_started
 /pl/docs/MathML	/pl/docs/Web/MathML
 /pl/docs/Mozilla/Add-ons/WebExtensions/Twój_pierwszy_WebExtension	/pl/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
+/pl/docs/Mozilla/Firefox/Privacy	/pl/docs/Web/Privacy
+/pl/docs/Mozilla/Firefox/Privacy/Redirect_tracking_protection	/pl/docs/Web/Privacy/Redirect_tracking_protection
+/pl/docs/Mozilla/Firefox/Privacy/State_Partitioning	/pl/docs/Web/Privacy/State_Partitioning
+/pl/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy	/pl/docs/Web/Privacy/Storage_Access_Policy
+/pl/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors	/pl/docs/Web/Privacy/Storage_Access_Policy/Errors
+/pl/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll	/pl/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
+/pl/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission	/pl/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
+/pl/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign	/pl/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedForeign
+/pl/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker	/pl/docs/Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedTracker
+/pl/docs/Mozilla/Firefox/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign	/pl/docs/Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
+/pl/docs/Mozilla/Firefox/Privacy/Tracking_Protection	/pl/docs/Web/Privacy/Tracking_Protection
 /pl/docs/Narzędzia	/pl/docs/Tools
 /pl/docs/Narzędzia/Debugger	/pl/docs/Tools/Debugger
 /pl/docs/Narzędzia/Debugger/How_to	/pl/docs/Tools/Debugger/How_to
