@@ -1,138 +1,100 @@
 ---
 title: BlobBuilder
 slug: Web/API/BlobBuilder
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Obsolete
 translation_of: Web/API/BlobBuilder
+browser-compat: api.BlobBuilder
 ---
-{{APIRef("File API")}}{{ obsolete_header}}
+{{APIRef("File API")}}{{ deprecated_header}}
 
-L'interface `BlobBuilder` fournit une manière simple de construire des objets {{domxref("Blob")}}. Il suffit de créer un `BlobBuilder` et de lui ajouter des données  en appellant la méthode {{manch("append")}}. Une fois finalisé, l'appel à la méthode {{manch("getBlob")}} permet de récupérer un {{domxref("Blob")}} contenant les données envoyées au constructeur dudit Blob.
+> **Note :** L'interface `BlobBuilder` a été dépréciée pour être remplacée par le constructeur [`Blob`](/fr/docs/Web/API/Blob).
 
-> **Note :** L'interface `BlobBuilder` est désormais déconseillé (deprecated) au profit du nouveau constructeur {{domxref('Blob')}}.
+L'interface **`BlobBuilder`** fournit une méthode simple pour construire des objets [`Blob`](/fr/docs/Web/API/Blob). Pour cela, on créera un objet `BlobBuilder` et on ajoutera des fragments de données en appelant la méthode [`append()`](#append). Une fois qu'on a terminé de construire le blob, on peut appeler [`getBlob()`](#getblob) afin de récupérer l'objet [`Blob`](/fr/docs/Web/API/Blob) qui contient les données fournies au constructeur de blob.
 
 ## Aperçu des méthodes
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>
-        <code
-          >void <a href="/en-US/docs/Web/API/BlobBuilder#append()">append</a>(in
-          ArrayBuffer data);</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          >void <a href="/en-US/docs/Web/API/BlobBuilder#append()">append</a>(in
-          Blob data);</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          >void <a href="/en-US/docs/Web/API/BlobBuilder#append()">append</a>(in
-          String data, [optional] in String endings);</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          >Blob
-          <a href="/en-US/docs/Web/API/BlobBuilder#getBlob()">getBlob</a
-          >([optional] in DOMString contentType);</code
-        >
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code
-          >File
-          <a href="/en-US/docs/Web/API/BlobBuilder#getFile()">getFile</a>(in
-          DOMString name, [optional] in DOMString contentType);</code
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+* <code>void <a href="/fr/docs/Web/API/BlobBuilder#append()">append</a>(in ArrayBuffer data);</code>
+* <code>void <a href="/fr/docs/Web/API/BlobBuilder#append()">append</a>(in Blob data);</code>
+* <code>void <a href="/fr/docs/Web/API/BlobBuilder#append()">append</a>(in String data, [optional] in String endings);</code>
+* <code>Blob <a href="/fr/docs/Web/API/BlobBuilder#getblob()">getBlob</a>([optional] in DOMString contentType);</code>
+* <code>File <a href="/fr/docs/Web/API/BlobBuilder#getfile()">getFile</a>(in DOMString name, [optional] in DOMString contentType);</code>
+
 
 ## Méthodes
 
-### append()
+### `append()`
 
-Ajoute le contenu de l'objet JavaScript spécifié au {{domxref("Blob")}} en construction. Si la valeur spécifiée n'est pas un {{domxref("Blob")}}, un [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), ou une [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), la valeur est forcée (coerced) à string avant d'être ajoutée au blob.
+Ajoute le contenu de l'objet JavaScript indiqué à l'objet [`Blob`](/fr/docs/Web/API/Blob) en cours de construction. Si la valeur fournie n'est pas un [`Blob`](/fr/docs/Web/API/Blob), [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), ou une chaîne de caractères [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), la valeur est convertie en une chaîne de caractères avant d'être ajoutée au blob.
 
-    void append(
-      in ArrayBuffer data
-    );
+```js
+void append(
+  in ArrayBuffer data
+);
 
-    void append(
-      in Blob data
-    );
+void append(
+  in Blob data
+);
 
-
-    void append(
-      in String data,
-      [optional] in String endings
-    );
+void append(
+  in String data,
+  [optional] in String endings
+);
+```
 
 #### Paramètres
 
 - `data`
-  - : Les données à ajouter au {{domxref("Blob")}} en construction.
+  - : Les données à ajouter à l'objet [`Blob`](/fr/docs/Web/API/Blob) en cours de construction.
 - `endings`
-  - : Spécifie comment les chaînes (strings) contenant des `\n` doivent être rendues. Cela peut être `"transparent"` (endings inchangés) ou `"native"` (les endings sont changés pour respecter la convention du système de fichier de l'OS de l'hôte). Par défault, la valeur est `"transparent"`.
+  - : Indique la façon dont les chaînes de caractères contenant `\n` doivent être écrites. La valeur de cet argument peut être `"transparent"` (les fins de lignes ne sont pas modifiées) ou `"native"` (les fins de lignes sont modifiées afin de correspondre à la convention utilisée par le système de fichier du système d'exploitation). La valeur par défaut est `"transparent"`.
 
-### getBlob()
+### `getBlob()`
 
-Retourne l'objet {{domxref("Blob")}} qui a été construit en utilisant les données passées en argument des différents appels à {{manch("append")}}.
+Renvoie l'objet [`Blob`](/fr/docs/Web/API/Blob) qui a été construit avec les données ajoutées lors des appels successifs à [`append()`](#append).
 
-    Blob getBlob(
-      in DOMString contentType {{optional_inline}}
-    );
+```js
+Blob getBlob(
+  in DOMString contentType {{optional_inline}}
+);
+```
 
 #### Paramètres
 
-- contentType {{optional_inline}}
-  - : Le type MIME des données  retournées par le {{domxref("Blob")}}. Ce sera la valeur de la propriété 'type' de l'objet `Blob`.
+- `contentType` {{optional_inline}}
+  - : Le type MIME des données à renvoyer dans l'objet [`Blob`](/fr/docs/Web/API/Blob). Cette valeur sera utilisée pour la propriété `type` de l'objet `Blob`.
 
 #### Valeur de retour
 
-Un objet {{domxref("Blob")}} contenant toutes les données passées en argument de chaque appel à  {{manch("append")}} depuis la création du `BlobBuilder`. Cela remet aussi à zéro (reset) le `BlobBuilder` de tel sorte que le prochain appel à {{manch("append")}} démarrera la création d'un nouveau blob vierge.
+Un objet [`Blob`](/fr/docs/Web/API/Blob) qui contient l'ensemble des données passées lors des appels à [`append()`](#append) depuis la construction de l'objet `BlobBuilder`. Cette méthode réinitialise également l'objet `BlobBuilder` courant afin que le prochain appel à [`append()`](#append) démarre la création d'un nouveau blob.
 
-### getFile() {{non-standard_inline}}
+### `getFile()` {{non-standard_inline}}
 
-Retourne un objet {{domxref("File")}}.
+Renvoie un nouvel objet [`File`](/fr/docs/Web/API/File).
 
-    File getFile(
-      in DOMString name,
-      [optional] in DOMString contentType
-    );
+```js
+File getFile(
+  in DOMString name,
+  [optional] in DOMString contentType
+);
+```
 
 #### Paramètres
 
-- name
+- `name`
   - : Le nom du fichier.
-- contentType {{optional_inline}}
-  - : Le type MIME des données  retournées par le {{domxref("File")}}. Ce sera la valeur de la propriété 'type' de l'objet `File`.
+- `contentType` {{optional_inline}}
+  - : Le type MIME des données à renvoyer dans l'objet [`File`](/fr/docs/Web/API/File). Cette valeur sera utilisée pour la valeur de la propriété `type` de l'objet `File`.
 
-#### Valeur deretour
+#### Valeur de retour
 
-Un objet {{domxref("File")}}.
+Un objet [`File`](/fr/docs/Web/API/File).
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("api.BlobBuilder")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{spec("http://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder", "File API Specification: BlobBuilder", "ED")}}
-- {{domxref("Blob")}}
-- {{domxref("File")}}
+- [La spécification de `BlobBuilder` au sein de l'API File](https://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder)
+- [`Blob`](/fr/docs/Web/API/Blob)
+- [`File`](/fr/docs/Web/API/File)
