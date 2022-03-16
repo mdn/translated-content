@@ -115,7 +115,7 @@ Ceci règle le problème des propriétés mais qu'en est il des méthodes ? Nous
 
 ### Dessiner la balle
 
-En premier lieu ajoutez la méthode `draw()` au `prototype` de `Ball()` :
+En premier lieu, ajoutez la méthode `draw()` au `prototype` de `Ball()` :
 
 ```js
 Ball.prototype.draw = function() {
@@ -132,13 +132,13 @@ En utilisant cette fonction, nous pouvons dire à notre balle de se dessiner sur
 - Ensuite, nous utilisons [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) pour définir de quelle couleur nous voulons que la forme soit — nous lui attribuons la valeur de la propriété `color` de notre balle.
 - Après, nous utilisons la méthode [`arc()`](/fr/docs/Web/API/CanvasRenderingContext2D/arc) pour tracer une forme en arc sur le papier. Ses paramètres sont :
 
-  - Les positions `x` et `y` du centre de l'arc — nous specifions donc les propriétés `x` et `y` de notre balle.
-  - Le rayon de l'arc — nous specifions la propriété `size` de notre balle.
-  - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degrés et `2 * PI` qui est l'équivalent de 360 degrés en radians (malheureusement  vous êtes obligés  de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement  `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
+  - Les positions `x` et `y` du centre de l'arc — nous spécifions donc les propriétés `x` et `y` de notre balle.
+  - Le rayon de l'arc — nous spécifions la propriété `size` de notre balle.
+  - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degré et `2 * PI` qui est l'équivalent de 360 degrés en radians (malheureusement, vous êtes obligés de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement  `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
 
-- En dernière position nous utilisons la méthode [`fill()`](/fr/docs/Web/API/CanvasRenderingContext2D/fill) qui est habituellement utilisée pour spécifier que nous souhaitons mettre fin au dessin que nous avons commencé avec `beginPath()`, et remplir la surface délimitée avec la couleur que nous avions spécifiée plus tôt avec `fillStyle`.
+- En dernière position, nous utilisons la méthode [`fill()`](/fr/docs/Web/API/CanvasRenderingContext2D/fill) qui est habituellement utilisée pour spécifier que nous souhaitons mettre fin au dessin que nous avons commencé avec `beginPath()`, et remplir la surface délimitée avec la couleur que nous avions spécifiée plus tôt avec `fillStyle`.
 
-Vous pouvez déjà commencer à tester votre objet.
+Vous pouvez déjà commencer à tester votre objet&nbsp;:
 
 1.  Sauvegardez le code et chargez le fichier html dans un navigateur.
 2.  Ouvrez la console JavaScript du navigateur et actualisez la page afin que la taille du canvas change et prenne la petite taille restante de la fenêtre lorsque la console est ouverte.
