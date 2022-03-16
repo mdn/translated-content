@@ -195,7 +195,7 @@ Dans les quatre cas, nous vérifions:
 - Si la coordonnée `y` est plus grande que la hauteur du `canvas` (la balle est en train de sortir par le bas).
 - Si la coordonnée `y` est plus petite que `0` (la balle est en train de sortir par le haut).
 
-Dans chaque cas, nous incluons la taille `size` de la balle dans les calculs parce que les coordonnées  `x`/`y`  sont situées au centre de la balle mais nous voulons que le pourtour de la balle rebondisse sur le rebord  — nous ne voulons pas que la balle sorte à moitié hors de l'écran avant de commencer à rebondir vers l'arrière.
+Dans chaque cas, nous incluons la taille (`size`) de la balle dans les calculs parce que les coordonnées `x`/`y` sont situées au centre de la balle, mais nous voulons que le pourtour de la balle rebondisse sur le rebord — nous ne voulons pas que la balle sorte à moitié hors de l'écran avant de commencer à rebondir vers l'arrière.
 
 Les deux dernières lignes ajoutent la valeur `velX` à la coordonnée `x` et la valeur `velY` à la coordonnée `y` — la balle est en effet mise en mouvement chaque fois que cette méthode est invoquée.
 
