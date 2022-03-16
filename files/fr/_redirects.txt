@@ -3743,6 +3743,7 @@
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/orphaned/Web/API/ServiceWorkerState
+/fr/docs/Web/API/SharedWorkerGlobalScope/onconnect	/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
 /fr/docs/Web/API/StorageEstimate	/fr/docs/conflicting/Web/API/StorageManager/estimate
 /fr/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/fr/docs/conflicting/Web/API/Pointer_events

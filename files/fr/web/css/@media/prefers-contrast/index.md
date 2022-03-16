@@ -34,12 +34,12 @@ Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
 
 ```css
 .contrast {
-  color: grey;
+  color: grey;
 }
 
 @media (prefers-contrast: high) {
   .contrast {
-    color: black;
+    color: black;
   }
 }
 ```

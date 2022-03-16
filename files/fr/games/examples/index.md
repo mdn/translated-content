@@ -11,7 +11,7 @@ original_slug: Jeux/Exemples
 ---
 {{GamesSidebar}}
 
-Cette page liste un grand nombre de démos de technologies web impressionnantes vous permettant de vous inspirer et de vous amuser. Une preuve de ce qui peut être fait avec Javascript, WebGL et autres. Les deux premières sections listent des jeux tandis que la troisième est une liste de démos de technologies web.
+Cette page liste un grand nombre de démos de technologies web impressionnantes vous permettant de vous inspirer et de vous amuser. Une preuve de ce qui peut être fait avec Javascript, WebGL et autres. Les deux premières sections listent des jeux tandis que la troisième est une liste de démos de technologies web.
 
 ## Démos/Jeux gratuits
 
@@ -20,11 +20,11 @@ Cette page liste un grand nombre de démos de technologies web impressionnantes 
 - [Beloola](http://www.beloola.com)
   - : Plateforme sociale de réalité virtuelle web pour les passionnés. Expérience disponible à la fois sur écrans 2D et casques de réalité virtuelle (_Paramètres / Passer en mode VR_)
 - [Tanx](http://playcanv.as/p/aP0oxhUr)
-  - : Un jeu de combat de tanks multijoueurs, créé avec [PlayCanvas](https://playcanvas.com/).
+  - : Un jeu de combat de tanks multijoueurs, créé avec [PlayCanvas](https://playcanvas.com/).
 - [Hyper Vanguard Force](https://robertsspaceindustries.com/comm-link/transmission/14704-Hyper-Vanguard-Force)
   - : Un "space shooter" _(tireur de l'espace)_ à défilement vertical.
 - [Swooop](http://playcanv.as/p/JtL2iqIH)
-  - : Un jeu d'aviation : contrôle ton avion et récupère les joyaux. Aussi créé avec [PlayCanvas](https://playcanvas.com/).
+  - : Un jeu d'aviation : contrôle ton avion et récupère les joyaux. Aussi créé avec [PlayCanvas](https://playcanvas.com/).
 - [Save the Day](https://ga.me/games/save-the-day)
   - : Volez à bord de votre hélicoptère de sauvetage vers la zone sinistrée et sauvez les victimes coincées (ga.me).
 - [Polycraft](https://ga.me/games/polycraft)
@@ -32,9 +32,9 @@ Cette page liste un grand nombre de démos de technologies web impressionnantes 
 - [HexGL](http://hexgl.bkcore.com/)
   - : Un jeu de course futuriste rythmé.
 - [Dead Trigger 2](http://beta.unity3d.com/jonas/DT2/)
-  - : Un jeu d'action avec des zombies, créé avec [Unity3D](http://unity3d.com/).
+  - : Un jeu d'action avec des zombies, créé avec [Unity3D](http://unity3d.com/).
 - [Angry Bots](http://beta.unity3d.com/jonas/AngryBots/)
-  - : Une démo de jeu de tir futuriste à la 3ème personne, créé avec [Unity3D](http://unity3d.com/).
+  - : Une démo de jeu de tir futuriste à la 3ème personne, créé avec [Unity3D](http://unity3d.com/).
 - [Nutmeg](http://sandbox.photonstorm.com/html5/nutmeg/)
   - : Jeu de plateforme action rétro.
 - [Back to Candyland](http://www.zibbo.com/game/match-3-games-top/back-to-candyland-episode-1)
@@ -62,7 +62,7 @@ Cette page liste un grand nombre de démos de technologies web impressionnantes 
 - [BrowserQuest](http://browserquest.mozilla.org/)
   - : Un MMORPG crée par the Little Workshop et Mozilla.
 - [Shoot The Rocks](https://arcade.ly/games/asteroids/)
-  - : Un jeu de tir solo 2D Canvas, dans le style des classiques Asteroids d' Atari, jeux d' arcade depuis 1979.
+  - : Un jeu de tir solo 2D Canvas, dans le style des classiques Asteroids d' Atari, jeux d' arcade depuis 1979.
 - [Star Citadel](https://arcade.ly/games/starcastle/)
   - : Une nouvelle version de Star Castle, le classique jeu d'arcade 1980 de Cinematronics, construit avec Canvas 2D.
 
@@ -102,9 +102,9 @@ Cette page liste un grand nombre de démos de technologies web impressionnantes 
 - [Rainbow Firestorm](http://codepen.io/jackrugile/pen/AokpF)
   - : Des particules de couleur arc-en-ciel, tombant comme de la pluie, rebondissent sur un terrain d'orbes.
 - [Crowd Simulation](http://visualiser.fr/babylon/crowd/)
-  - : Simulation d'une foule de personnes agitées  voulant rejoindre des directions opposées.
+  - : Simulation d'une foule de personnes agitées voulant rejoindre des directions opposées.
 - [SVG Masking Experiment](http://codepen.io/noeldelgado/pen/ByxQjL)
-  - : Une machine à rayons X, créée en utilisant un calque SVG.
+  - : Une machine à rayons X, créée en utilisant un calque SVG.
 - [Realistic Water Simulation](https://www.shadertoy.com/view/Ms2SD1)
   - : De l'eau en mouvement, comme les vagues d'un océan.
 - [Dungeon demo](http://www.haxor.xyz/demos/1.0/dungeon/)
@@ -114,7 +114,7 @@ Cette page liste un grand nombre de démos de technologies web impressionnantes 
 - [Flight Stream](https://callumprentice.github.io/apps/flight_stream/index.html)
   - : Globe en 3D avec des itinéraires d'avions simulés.
 - [WebGL filters](http://pixelscommander.com/polygon/htmlgl/demo/filters.html)
-  - : Démo montrant comment WebGL peut être utilisé pour ajouter des effets à des éléments HTML.
+  - : Démo montrant comment WebGL peut être utilisé pour ajouter des effets à des éléments HTML.
 - [SVG isometic tiles](http://codepen.io/AshKyd/pen/zxmgzV)
   - : Génère des tuiles isométriques avec une matrice SVG.
 - [ThreeJS App Player](https://jsfiddle.net/jetienne/rkth90c9/)

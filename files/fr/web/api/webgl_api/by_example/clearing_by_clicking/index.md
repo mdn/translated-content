@@ -64,8 +64,8 @@ canvas {
 window.addEventListener("load", function setupWebGL (evt) {
   "use strict"
 
-  // On fait le ménage : le gestionnaire se supprime lui-
-  // même car il n'a besoin d'être exécuté qu'une fois.
+  // On fait le ménage : le gestionnaire se supprime lui-
+  // même car il n'a besoin d'être exécuté qu'une fois.
   window.removeEventListener(evt.type, setupWebGL, false);
 
   // On ajoute le même gestionnaire de clic sur le canevas
@@ -90,8 +90,8 @@ window.addEventListener("load", function setupWebGL (evt) {
         || canvas.getContext("experimental-webgl");
       if (!gl) {
         alert("Échec de la récupération du \n"
-          + "contexte WebGL. Votre navigateur peut ne pas \n"
-          + " supporter WebGL.");
+          + "contexte WebGL. Votre navigateur peut ne pas \n"
+          + " supporter WebGL.");
         return;
       }
       gl.viewport(0, 0,

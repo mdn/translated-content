@@ -30,7 +30,7 @@ Comment faire pour que cette sous-fenêtre apparaisse ? Trois méthodes :
 - **_Au clavier._** _Ctrl + Shift + I_, sauf pour :
 
   - **Internet Explorer.** _F12_
-  - **Mac OS X.** *⌘ + ⌥ + I*
+  - **Mac OS X.** *⌘ + ⌥ + I*
 
 - **_Via les menus._**
 

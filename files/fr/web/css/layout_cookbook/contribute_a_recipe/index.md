@@ -55,7 +55,7 @@ Dans l'en-tête, il y a deux blocs pour le style. Le premier concerne les élém
 
 Le HTML du composant doit être ajouté deux fois. Pour commencer dans la section avec la classe `preview` puis dans l'élément `textarea` `playable-html`.
 
-Le CSS éditable (celui du second bloc de l'en-tête) doit également être recopié dans la section  `playable-css`.
+Le CSS éditable (celui du second bloc de l'en-tête) doit également être recopié dans la section  `playable-css`.
 
 Pour voir un exemple existant et comprendre les différentes parties, vous pouvez consulter [center.html](https://github.com/mdn/css-examples/blob/master/css-cookbook/center.html) qui est utilisé sur la page [Comment centrer un élément](/fr/docs/Web/CSS/Layout_cookbook/Center_an_element).
 

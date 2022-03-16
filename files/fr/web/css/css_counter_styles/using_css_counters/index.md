@@ -18,7 +18,7 @@ La valeur d'un compteur peut être manipulée grâce aux propriétés {{cssxref(
 
 ### Manipuler la valeur d'un compteur
 
-Pour utiliser un compteur CSS, il faut d'abord réinitialiser sa valeur (0 par défaut) à l'aide de {{cssxref("counter-reset")}}. Pour incrémenter un compteur initialisé, on peut utiliser {{cssxref("counter-increment")}}. Attention le nom du compteur ne peut pas être `none`, `inherit` ou `initial`.
+Pour utiliser un compteur CSS, il faut d'abord réinitialiser sa valeur (0 par défaut) à l'aide de {{cssxref("counter-reset")}}. Pour incrémenter un compteur initialisé, on peut utiliser {{cssxref("counter-increment")}}. Attention le nom du compteur ne peut pas être `none`, `inherit` ou `initial`.
 
 ### Afficher un compteur
 

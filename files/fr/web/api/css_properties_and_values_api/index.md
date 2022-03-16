@@ -14,7 +14,7 @@ translation_of: Web/API/CSS_Properties_and_Values_API
 
 ## Exemples
 
-L'exemple suivant utilise {{domxref('CSS.registerProperty')}} en [JavaScript](/fr/docs/Web/JavaScript) pour typer une [propriété CSS personnalisée](/fr/docs/Web/CSS/--*), `--ma-couleur` en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur :
+L'exemple suivant utilise {{domxref('CSS.registerProperty')}} en [JavaScript](/fr/docs/Web/JavaScript) pour typer une [propriété CSS personnalisée](/fr/docs/Web/CSS/--*), `--ma-couleur` en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur&nbsp;:
 
 ```js
 window.CSS.registerProperty({
@@ -25,7 +25,7 @@ window.CSS.registerProperty({
 });
 ```
 
-Le même enregistrement peut se faire en [CSS](/fr/docs/Web/CSS) en utilisant la règle [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}} :
+Le même enregistrement peut se faire en [CSS](/fr/docs/Web/CSS) en utilisant la règle [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}}&nbsp;:
 
 ```css
 @property --ma-couleur {

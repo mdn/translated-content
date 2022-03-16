@@ -14,7 +14,7 @@ La propriété **`perspective`** détermine la distance entre le plan d'équatio
 
 {{EmbedInteractiveExample("pages/css/perspective.html")}}
 
-Les parties des éléments 3D qui se situent derrière l'utilisateur (c'est-à-dire ceux pour lesquels leur coordonnée en z est plus grande que la valeur de la propriété `perspective`) ne sont pas dessiné.
+Les parties des éléments 3D qui se situent derrière l'utilisateur (c'est-à-dire ceux pour lesquels leur coordonnée en z est plus grande que la valeur de la propriété `perspective`) ne sont pas dessiné.
 
 Par défaut, le point de fuite est placé au centre de l'élément mais il peut être déplacé grâce à la propriété {{cssxref("perspective-origin")}}.
 
@@ -138,7 +138,7 @@ perspective: unset;
     perspective: 500px;
 }
 .pers650 {
-    perspective: 650px;
+    perspective: 650px;
 }
 
 /* On définit le div pour le conteneur, */

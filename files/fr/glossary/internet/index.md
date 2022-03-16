@@ -19,4 +19,4 @@ Internet est un réseau mondial constitué de réseaux. Ce réseau utilise le pr
 ### Culture générale
 
 - [Internet](http://fr.wikipedia.org/wiki/Internet) sur Wikipédia
-- [How the Internet works](/fr/Learn/How_the_Internet_works) (introduction pour les débutants, article en anglais)
+- [How the Internet works](/fr/Learn/How_the_Internet_works) (introduction pour les débutants, article en anglais)

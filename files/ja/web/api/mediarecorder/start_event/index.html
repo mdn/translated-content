@@ -1,6 +1,6 @@
 ---
-title: MediaRecorder.onpause
-slug: Web/API/MediaRecorder/onpause
+title: MediaRecorder.onstart
+slug: Web/API/MediaRecorder/start_event
 tags:
   - API
   - Audio
@@ -10,42 +10,32 @@ tags:
   - Property
   - Reference
   - Video
-  - onpause
-translation_of: Web/API/MediaRecorder/onpause
+  - onstart
+translation_of: Web/API/MediaRecorder/onstart
+original_slug: Web/API/MediaRecorder/onstart
 ---
-<p>{{APIRef("Media Recorder API")}}</p>
+<div>{{APIRef("Media Recorder API")}}</div>
 
-<p><span class="seoSummary"><strong><code>MediaRecorder.onpause</code></strong> イベントハンドラ（<a href="/ja/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> の一部）は <code>pause</code> イベントを処理します。 これにより、一時停止中のメディアの記録に応答してコードを実行できます。</span></p>
+<p><strong><code>MediaRecorder.onstartevent</code></strong> ハンドラ（<a href="/ja/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> の一部）は <code>start</code> イベントを処理します。 これにより、<code>MediaRecorder</code> によってメディアの記録が開始されたことに応答してコードを実行できるようにします。</p>
 
-<p><code>pause</code> イベントは、{{domxref("MediaRecorder.pause()")}} メソッドを呼び出した結果としてスローされます。</p>
+<p><code>start</code> イベントは、{{domxref("MediaRecorder.start()")}} メソッドを呼び出した結果としてスローされます。 この時点で、データは {{domxref("Blob")}} に集められ始めます。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox">MediaRecorder.onpause = function(event) { ... }
-MediaRecorder.addEventListener('pause', function(event) { ... })
-</pre>
+<pre class="syntaxbox">MediaRecorder.onstart = function(event) { ... }
+MediaRecorder.addEventListener('start', function(event) { ... })</pre>
 
 <h2 id="Example" name="Example">例</h2>
 
 <pre class="brush: js">...
 
-  pause.onclick = function() {
-    if(mediaRecorder.state === "recording") {
-      mediaRecorder.pause();
-      // 記録を一時停止
-    } else if(mediaRecorder.state === "paused") {
-      mediaRecorder.resume();
-      // 記録を再開
-    }
+  record.onclick = function() {
+    mediaRecorder.start();
+    console.log("レコーダーが起動しました");
   }
 
-  mediaRecorder.onpause = function() {
-    // 記録の一時停止に
-    // 応答して何かをする
-  }
-
-  mediaRecorder.onresume = function() {
-    // 記録の再開に
+  mediaRecorder.onstart = function() {
+    // 記録の開始に
     // 応答して何かをする
   }
 
@@ -65,7 +55,7 @@ MediaRecorder.addEventListener('pause', function(event) { ... })
    <th scope="col">コメント</th>
   </tr>
   <tr>
-   <td>{{SpecName("MediaStream Recording", "#widl-MediaRecorder-onpause", "MediaRecorder.onpause")}}</td>
+   <td>{{SpecName("MediaStream Recording", "#widl-MediaRecorder-onstart", "MediaRecorder.onstart")}}</td>
    <td>{{Spec2("MediaStream Recording")}}</td>
    <td>初期定義</td>
   </tr>
@@ -76,7 +66,7 @@ MediaRecorder.addEventListener('pause', function(event) { ... })
 
 
 
-<p>{{Compat("api.MediaRecorder.onpause")}}</p>
+<p>{{Compat("api.MediaRecorder.onstart")}}</p>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

@@ -62,4 +62,4 @@ _Aucune méthode spécifique ; hérite des méthodes de son parent, {{domxref("H
 
 ## Voir aussi
 
-- Éléments HTML implémentant cette interface   : {{HTMLElement("th")}} et {{HTMLElement("td")}} par héritage via {{domxref("HTMLTableHeaderCellElement")}} et {{domxref("HTMLTableDataCellElement")}}.
+- Éléments HTML implémentant cette interface   : {{HTMLElement("th")}} et {{HTMLElement("td")}} par héritage via {{domxref("HTMLTableHeaderCellElement")}} et {{domxref("HTMLTableDataCellElement")}}.

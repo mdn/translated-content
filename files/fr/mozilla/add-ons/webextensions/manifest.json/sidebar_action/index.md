@@ -72,7 +72,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
           propriété <code>browser_style</code>.
         </p>
         <p>
-          Dans Firefox, la feuille de style peut être vue sur 
+          Dans Firefox, la feuille de style peut être vue sur
           chrome://browser/content/extension.css, ou
           chrome://browser/content/extension-mac.css sur OS X. Lors de la
           définition des dimensions, savez que cette feiulle de style est
@@ -151,7 +151,7 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
           >, tout comme une page Web normale.
         </p>
         <p>
-           Contrairement à une page Web normale, JavaScript en cours d'exécution
+           Contrairement à une page Web normale, JavaScript en cours d'exécution
           dans le panneau peut accéder à toutes les
           <a href="/fr/Add-ons/WebExtensions/API">APIs des WebExtension</a> (à
           condition, bien sûr, que l'extension ait les
@@ -216,14 +216,14 @@ La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés list
 
 ```json
 "sidebar_action": {
-  "default_icon": "sidebar.svg",
-  "default_title": "Ma barre latérale !",
-  "default_panel": "sidebar.html",
+  "default_icon": "sidebar.svg",
+  "default_title": "Ma barre latérale !",
+  "default_panel": "sidebar.html",
   "browser_style": true
 }
 ```
 
-Pour un exemple simple d'une extension qui utilise une barre latérale, regarder  [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+Pour un exemple simple d'une extension qui utilise une barre latérale, regarder  [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
 
 ## Compatibilité du navigateur
 

@@ -5,14 +5,14 @@ translation_of: Web/API/DedicatedWorkerGlobalScope
 ---
 {{APIRef("Web Workers API")}}
 
-L'objet **`DedicatedWorkerGlobalScope`** (le contexte global du {{domxref("Worker")}}) est accessible au moyen du mot clé {{domxref("window.self","self")}}. Certaines fonctions globales additionnelles, des espaces de nom d'objets, et des constructeurs, non associés typiquement au contexte global d'un worker, et néanmoins disponibles, sont listés dans la  [Référence JavaScript](/fr/docs/Web/JavaScript/Reference). Consultez aussi : [Fonctions et classes disponibles dans les Web Workers](/fr/docs/Web/Guide/Needs_categorization/Functions_available_to_workers).
+L'objet **`DedicatedWorkerGlobalScope`** (le contexte global du {{domxref("Worker")}}) est accessible au moyen du mot clé {{domxref("window.self","self")}}. Certaines fonctions globales additionnelles, des espaces de nom d'objets, et des constructeurs, non associés typiquement au contexte global d'un worker, et néanmoins disponibles, sont listés dans la  [Référence JavaScript](/fr/docs/Web/JavaScript/Reference). Consultez aussi : [Fonctions et classes disponibles dans les Web Workers](/fr/docs/Web/Guide/Needs_categorization/Functions_available_to_workers).
 
 ## Propriétés
 
 _Cette interface hérite des propriétés de l'interface {{domxref("WorkerGlobalScope")}}, et de son parent {{domxref("EventTarget")}}, et implémente ainsi les propriétés de {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, et {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("DedicatedWorkerGlobalScope.name")}} {{readOnlyinline}}
-  - : Le nom du {{domxref("Worker")}} optionnellement donné lors de la création du worker avec le constructeur {{domxref("Worker.Worker", "Worker()")}}. Il est souvent utilisé pour du débogage.
+  - : Le nom du {{domxref("Worker")}} optionnellement donné lors de la création du worker avec le constructeur {{domxref("Worker.Worker", "Worker()")}}. Il est souvent utilisé pour du débogage.
 
 ### Propriétés héritées de WorkerGlobalScope
 
@@ -43,7 +43,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("WorkerGlobalSco
 - {{domxref("WorkerGlobalScope.close()")}}
   - : Annule toute tâche en attente dans la boucle d'événement du `WorkerGlobalScope`, mettant alors fin à ce contexte précis.
 - {{domxref("DedicatedWorkerGlobalScope.postMessage")}}
-  - : Envoie un message — qui peut comprendre  `n'importe quel` objet JavaScript — au document parent qui a préalablement engendré le worker.
+  - : Envoie un message — qui peut comprendre  `n'importe quel` objet JavaScript — au document parent qui a préalablement engendré le worker.
 
 ### Héritées de WorkerGlobalScope
 

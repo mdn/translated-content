@@ -30,7 +30,7 @@ transform: translateY(50%);
     <tr>
       <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
       <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
       <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
     </tr>
   </thead>

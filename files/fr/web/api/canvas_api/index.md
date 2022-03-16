@@ -9,7 +9,7 @@ Ajouté en [HTML5](/fr/docs/Web/Guide/HTML/HTML5), l'élément {{HTMLElement("ca
 
 Les applications Mozilla ont commencé à supporter `<canvas>` à partir de Gecko 1.8 (c'est-à-dire [Firefox 1.5](/fr/docs/Mozilla/Firefox/Releases/1.5)). L'élément a été introduit à l'origine par Apple pour le Dashboard d'OS X et pour Safari. Internet Explorer supporte `<canvas>` depuis la version 9 et ultérieures&nbsp;; pour les versions précédentes d'IE, une page peut effectuer ce support de `<canvas>` en incluant un script depuis le projet [«&nbsp;<i lang="en">Explorer Canvas</i>&nbsp;»](https://github.com/arv/explorercanvas) de Google.
 
-L'élément \<canvas> est aussi utilisé par [WebGL](/fr/docs/Web/API/WebGL_API) pour afficher des graphismes 3D avec accélération matérielle sur des pages web.
+L'élément \<canvas> est aussi utilisé par [WebGL](/fr/docs/Web/API/WebGL_API) pour afficher des graphismes 3D avec accélération matérielle sur des pages web.
 
 ## Exemple
 
@@ -38,8 +38,8 @@ ctx.fillRect(10, 10, 100, 100);
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'green';
@@ -88,7 +88,7 @@ window.addEventListener('load', drawCanvas);
 - {{domxref("OffscreenCanvas")}}{{experimental_inline}}
 - {{domxref("Path2D")}} {{experimental_inline}}{{domxref("ImageBitmapRenderingContext")}}{{experimental_inline}}
 
-Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebGL](/en-US/docs/Web/WebGL).
+Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebGL](/en-US/docs/Web/WebGL).
 
 {{domxref("CanvasCaptureMediaStream")}} est lié.
 
@@ -115,26 +115,26 @@ Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebG
 ### Bibliothèques
 
 - [Fabric.js](http://fabricjs.com) est une bibliothèque open-source qui peut analyser du code SVG.
-- [Kinetic.js](https://github.com/ericdrowell/KineticJS) est une bibliothèque open-source concentrée sur l'interactivité pour les applications mobiles et de bureau.
-- [Paper.js](http://paperjs.org/) est une bibliothèque open-source qui rajoute un système de dessin vectoriel au canvas HTML5.
+- [Kinetic.js](https://github.com/ericdrowell/KineticJS) est une bibliothèque open-source concentrée sur l'interactivité pour les applications mobiles et de bureau.
+- [Paper.js](http://paperjs.org/) est une bibliothèque open-source qui rajoute un système de dessin vectoriel au canvas HTML5.
 - [Origami.js](http://origamijs.com/docs/) est une bibliothèque légère open-source pour canvas.
 - [libCanvas](http://libcanvas.github.com/) est un framework canvas puissant et léger.
-- [Processing.js](http://processingjs.org) est un portage du langage de visuaisation Processing.
-- [PlayCanvas](https://playcanvas.com/) est un moteur de jeu open-source.
-- [Pixi.js](http://www.pixijs.com/) est un moteur de jeu open-source.
-- [PlotKit](http://www.liquidx.net/plotkit/) est une bibliothèque permettant de réaliser des diagrammes et des graphiques.
-- [Rekapi](https://github.com/jeremyckahn/rekapi) est une API d'animation par key-framing pour Canvas.
-- [PhiloGL](http://senchalabs.github.com/philogl/) est un framework WebGL pour la visualisation de données, pour la programmation créative et pour le developpement de jeux.
-- [JavaScript InfoVis Toolkit](http://thejit.org/) crée des visualisation de données interactives en 2D avec canvas pour le Web.
+- [Processing.js](http://processingjs.org) est un portage du langage de visuaisation Processing.
+- [PlayCanvas](https://playcanvas.com/) est un moteur de jeu open-source.
+- [Pixi.js](http://www.pixijs.com/) est un moteur de jeu open-source.
+- [PlotKit](http://www.liquidx.net/plotkit/) est une bibliothèque permettant de réaliser des diagrammes et des graphiques.
+- [Rekapi](https://github.com/jeremyckahn/rekapi) est une API d'animation par key-framing pour Canvas.
+- [PhiloGL](http://senchalabs.github.com/philogl/) est un framework WebGL pour la visualisation de données, pour la programmation créative et pour le developpement de jeux.
+- [JavaScript InfoVis Toolkit](http://thejit.org/) crée des visualisation de données interactives en 2D avec canvas pour le Web.
 - [EaselJS](http://www.createjs.com/easeljs) est une bibliothèque gratuite/open-source qui facilite l'utilisation de canvas pour faire des jeux ou de l'art
-- [Scrawl-canvas](http://scrawl.rikweb.org.uk/) est une autre bibliothèque open-source pour créer et manipuler des éléments 2D dans canvas
-- [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) est une bibliothèque open-source pour créer des cartes thermiques basées sur canvas
+- [Scrawl-canvas](http://scrawl.rikweb.org.uk/) est une autre bibliothèque open-source pour créer et manipuler des éléments 2D dans canvas
+- [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) est une bibliothèque open-source pour créer des cartes thermiques basées sur canvas
 
 ## Spécifications
 
 | Specification                                                                                                | Status                           | Comment |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Voir aussi
 

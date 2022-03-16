@@ -10,7 +10,7 @@ translation_of: Web/SVG/Element/text
 ---
 {{SVGRef}}{{Draft("Cette version n'est pas à jour relativement à la version anglaise de référence, merci d'en tenir compte.")}}
 
-L'élément SVG `text` définit un élément graphique contenant du texte. Notez  qu'il est possible d'y appliquer un dégradé, un motif, un tracé spécifique (clipping path), un masque ou un filtre.
+L'élément SVG `text` définit un élément graphique contenant du texte. Notez qu'il est possible d'y appliquer un dégradé, un motif, un tracé spécifique (clipping path), un masque ou un filtre.
 
 Si du texte est écrit dans le SVG sans être intégré dans un balise \<text>, il ne sera pas affiché. Le texte n'est pas _caché_ par défaut, la propriété display ne le montre simplement pas.
 
@@ -45,11 +45,11 @@ L'élément \<text> est utilisé pour dessiner des caractères de texte. L'exemp
 </svg>
 ```
 
-Le texte en SVG peut être pivoté. L'exemple de code suivant démontre la rotation de texte à l'aide de l'attribut transform.
+Le texte en SVG peut être pivoté. L'exemple de code suivant démontre la rotation de texte à l'aide de l'attribut transform.
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
-  <text x="10"  y="20"
+  <text x="10"  y="20"
         transform="rotate(30 20,40)">
     SVG Text Rotation example
   </text>
@@ -60,11 +60,11 @@ Le texte SVG peut également être stylisé avec du CSS contenant les propriét�
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="100px" height="50px">
-  <text x="10"  y="20"
-        style="font-family: Times New Roman;
-               font-size  : 24;
-               stroke     : #00ff00;
-               fill       : #0000ff;">
+  <text x="10"  y="20"
+        style="font-family: Times New Roman;
+               font-size  : 24;
+               stroke     : #00ff00;
+               fill       : #0000ff;">
     SVG text styling
   </text>
 </svg>
@@ -74,10 +74,10 @@ Le texte SVG peut également être stylisé avec du CSS contenant les propriét�
 
 ### Attributs globaux
 
-- [Conditional processing attributes](/fr/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Core attributes](/fr/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Graphical event attributes](/fr/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Presentation attributes](/fr/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Conditional processing attributes](/fr/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing")&nbsp;»
+- [Core attributes](/fr/SVG/Attribute#Core "en/SVG/Attribute#Core")&nbsp;»
+- [Graphical event attributes](/fr/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent")&nbsp;»
+- [Presentation attributes](/fr/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation")&nbsp;»
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -96,7 +96,7 @@ Le texte SVG peut également être stylisé avec du CSS contenant les propriét�
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGTextElement`](/fr/DOM/SVGTextElement "en/DOM/SVGTextElement").
+Cet élément implémente l'interface [`SVGTextElement`](/fr/DOM/SVGTextElement "en/DOM/SVGTextElement").
 
 ## Compatibilité des navigateurs
 

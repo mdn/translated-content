@@ -42,5 +42,5 @@ original_slug: Web/CSS/CSS_Masks
 
 | Spécification                                                                    | État                         | Commentaires         |
 | -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Masks")}}                                                 | {{Spec2("CSS Masks")}} |                      |
+| {{SpecName("CSS Masks")}}                                                 | {{Spec2("CSS Masks")}} |                      |
 | {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}     | Définition initiale. |

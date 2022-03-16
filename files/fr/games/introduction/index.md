@@ -11,7 +11,7 @@ original_slug: Jeux/Introduction
 ---
 {{GamesSidebar}}
 
-Le Web d'aujourd'hui est désormais une plate-forme viable pour créer des jeux époustouflants et de bonne qualité, mais aussi et surtout pour distribuer ces jeux. Imaginez tous les jeux qui peuvent être créés...
+Le Web d'aujourd'hui est désormais une plate-forme viable pour créer des jeux époustouflants et de bonne qualité, mais aussi et surtout pour distribuer ces jeux. Imaginez tous les jeux qui peuvent être créés...
 
 Grâce aux technologies web actuelles et aux navigateurs récents, il est tout à fait possible de créer un jeu excellent pour le Web. Et nous ne parlons pas ici de jeux de cartes ou de jeux sociaux multi-joueurs déjà créés il y a longtemps, avec Flash®, mais bien de jeux de tirs en 3D, de RPG etc. Grâce aux améliorations des performances des compilateurs juste-à-temps [JavaScript](/fr/docs/JavaScript "/fr/docs/JavaScript") et aux nouvelles APIs, vous pouvez construire des jeux vidéo qui fonctionnent dans un navigateur (ou sur des plateformes HTML5 comme [Firefox OS](/fr/docs/Mozilla/Firefox_OS "/fr/docs/Mozilla/Firefox_OS")) sans compromettre les performances.
 
@@ -39,7 +39,7 @@ En tant que développeur de jeux vidéo, que vous soyez seul ou fassiez partie d
 
 1.  La portée du Web est phénoménale : il est partout. Les jeux construits avec HTML5 peuvent fonctionner sur les smartphones, les tablettes, les PCs et les télévisions connectées.
 2.  La visibilité de votre jeu et le marketing en sont améliorés. En effet, la promotion de votre jeu n'est pas limitée à un "app store" _(magasin d'applications)_ maîtrisé par quelqu'un d'autre. Vous pouvez tout à fait promouvoir et faire la publicité de votre jeu sur le Web lui-même comme sur d'autres médias. Les liens, les partages effectués sur le Web sont autant d'avantages pour atteindre de nouveaux utilisateurs.
-3.  Vous disposez d'un contrôle à un endroit important : les paiements. Il n'est pas nécessaire pour vous de reverser 30% de vos revenus à  d'autres simplement parce que votre jeu fait partie de leur écosystème. Vous pouvez décider de votre propre politique tarifaire et utiliser le service de paiement que vous voulez.
+3.  Vous disposez d'un contrôle à un endroit important : les paiements. Il n'est pas nécessaire pour vous de reverser 30% de vos revenus à d'autres simplement parce que votre jeu fait partie de leur écosystème. Vous pouvez décider de votre propre politique tarifaire et utiliser le service de paiement que vous voulez.
 4.  Le contrôle, encore. Vous pouvez mettre à jour votre jeu dès que vous le souhaitez. Vous n'avez pas à attendre l'approbation de quelqu'un d'une autre entreprise décidant si oui ou non tel ou tel correctif sera livré aujourd'hui ou demain.
 5.  L'analytique. Plutôt que de vous reposer sur des décisions et influences externes quant aux données dont vous avez besoin, vous pouvez collecter les statistiques que vous voulez, ou bien utiliser un outil analytique tiers de votre choix afin de mesurer les ventes et la portée de votre jeu.
 6.  Vous pouvez gérer la relation clientèle de façon plus directe, sans que les retours des clients soient limités aux mécanismes d'un magasin d'application. Soyez directement au contact de vos clients, sans intermédiaire.

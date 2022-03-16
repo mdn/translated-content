@@ -41,7 +41,7 @@ Cet exemple change l'arrière-plan d'un bloc {{ HTMLElement("div") }} chaque foi
 </style>
 ```
 
-Le CSS défini par le bloc {{ HTMLElement("style") }} ci-dessus est utilisé par notre {{ HTMLElement("div") }} pour afficher un élément, ayant l'id "canvasbg", en arrière-plan.
+Le CSS défini par le bloc {{ HTMLElement("style") }} ci-dessus est utilisé par notre {{ HTMLElement("div") }} pour afficher un élément, ayant l'id "canvasbg", en arrière-plan.
 
 ```js
 var c = 0x00;

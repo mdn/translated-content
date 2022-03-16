@@ -21,9 +21,9 @@ translate3d(tx, ty, tz)
 ### Valeurs
 
 - `tx`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) qui représente l'abscisse du vecteur de translation (équivalente au déplacement horizontal).
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) qui représente l'abscisse du vecteur de translation (équivalente au déplacement horizontal).
 - `ty`
-  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) qui représente l'ordonnée du vecteur de translation (équivalente au déplacement vertical).
+  - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) qui représente l'ordonnée du vecteur de translation (équivalente au déplacement vertical).
 - `tz`
   - : Une valeur de type [`<length>`](/fr/docs/Web/CSS/length) qui représente la composante en profondeur du vecteur de translation (équivalente au déplacement en profondeur). La valeur ne peut pas être de type [`<percentage>`](/fr/docs/Web/CSS/percentage), si c'est le cas, la règle décrivant la transformation sera considérée comme invalide.
 

@@ -73,7 +73,7 @@ q {
 
 | Spécification                                                                | État                             | Commentaires        |
 | ---------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("CSS3 Content", "#quotes", "quotes")}}             | {{Spec2("CSS3 Content")}} |                     |
+| {{SpecName("CSS3 Content", "#quotes", "quotes")}}             | {{Spec2("CSS3 Content")}} |                     |
 | {{SpecName('CSS2.1', 'generate.html#quotes', 'quotes')}} | {{Spec2('CSS2.1')}}         | Définition initiale |
 
 {{cssinfo}}

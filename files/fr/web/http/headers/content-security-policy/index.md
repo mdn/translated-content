@@ -41,7 +41,7 @@ Les directives de récupération (ou _fetch directives_ en anglais) contrôlent 
 - {{CSP("child-src")}}
   - : Définit les sources valides pour les [web workers](/fr/docs/Web/API/Web_Workers_API) et les éléments qui représentent des contextes de navigation imbriqués tels que {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}.
 
-> **Attention :** Plutôt que la directive **`child-src`**, si vous souhaitez réguler les contextes de navigation imbriqués et les workers séparément, vous pouvez utiliser respectivement les directives {{CSP("frame-src")}} et {{CSP("worker-src")}}.
+> **Attention :** Plutôt que la directive **`child-src`**, si vous souhaitez réguler les contextes de navigation imbriqués et les workers séparément, vous pouvez utiliser respectivement les directives {{CSP("frame-src")}} et {{CSP("worker-src")}}.
 
 - {{CSP("connect-src")}}
   - : Restreint les URL qui peuvent être chargées via des scripts.
@@ -97,7 +97,7 @@ Les directives de navigation permettent par exemple de paramétrer les emplaceme
 - {{CSP("form-action")}}
   - : Restreint les URL qui peuvent être utilisées comme cibles pour envoyer des formulaires depuis un contexte donné.
 - {{CSP("frame-ancestors")}}
-  - : Définit les parent valides qui peuvent intégrer une page grâce aux éléments {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, ou {{HTMLElement("applet")}}.
+  - : Définit les parent valides qui peuvent intégrer une page grâce aux éléments {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, ou {{HTMLElement("applet")}}.
 - {{CSP("navigate-to")}}{{experimental_inline}}
   - : Restreint les URL vers lesquelles on peut naviguer depuis un document, quel que soit le moyen de navigation (un lien, un formulaire, `window.location`, `window.open`, etc.)
 
@@ -177,12 +177,12 @@ Pour plus d'exemples, consulter [les recommandations de Mozilla pour la sécurit
 
 | Spécification                                            | État                                                 | Commentaires                                                                                                                                                                |
 | -------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{specName("CSP 3.0")}}                         | {{Spec2('CSP 3.0')}}                         | Ajout de `manifest-src`, `navigation-to`, `report-to`, `strict-dynamic`, `worker-src`. `frame-src` n'est plus déprécié. `report-uri` est déprécié au profit de `report-to`. |
+| {{specName("CSP 3.0")}}                         | {{Spec2('CSP 3.0')}}                         | Ajout de `manifest-src`, `navigation-to`, `report-to`, `strict-dynamic`, `worker-src`. `frame-src` n'est plus déprécié. `report-uri` est déprécié au profit de `report-to`. |
 | {{specName("Mixed Content")}}                 | {{Spec2("Mixed Content")}}                 | Ajout de `block-all-mixed-content`.                                                                                                                                         |
 | {{specName("Subresource Integrity")}}         | {{Spec2("Subresource Integrity")}}         | Ajout de `require-sri-for`.                                                                                                                                                 |
 | {{specName("Upgrade Insecure Requests")}} | {{Spec2("Upgrade Insecure Requests")}} | Ajout de `upgrade-insecure-requests`.                                                                                                                                       |
 | {{specName("CSP 1.1")}}                         | {{Spec2("CSP 1.1")}}                         | Ajout de `base-uri`, `child-src`, `form-action`, `frame-ancestors`, `plugin-types`, `referrer`, `reflected-xss` et `report-uri`. Dépréciation de `frame-src`.               |
-| {{specName("CSP 1.0")}}                         | {{Spec2("CSP 1.0")}}                         | Définition de `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, report-uri, `sandbox`, `script-src` et `style-src`.              |
+| {{specName("CSP 1.0")}}                         | {{Spec2("CSP 1.0")}}                         | Définition de `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, report-uri, `sandbox`, `script-src` et `style-src`.              |
 
 ## Compatibilité des navigateurs
 

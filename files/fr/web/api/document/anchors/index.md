@@ -4,7 +4,7 @@ slug: Web/API/Document/anchors
 translation_of: Web/API/Document/anchors
 original_slug: Web/API/Document/Document.anchors
 ---
-{{APIRef("DOM")}} {{deprecated_header()}}
+{{APIRef("DOM")}} {{deprecated_header()}}
 
 `anchors` retourne une liste de toutes les ancres du document.
 
@@ -21,7 +21,7 @@ if ( document.anchors.length >= 5 ) {
 }
 ```
 
-L'exemple suivant remplit un tableau avec chaque ancre présente sur la page :
+L'exemple suivant remplit un tableau avec chaque ancre présente sur la page :
 
 ```html
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ function init() {
 
 ## Notes
 
-Pour des raisons de rétrocompatibilité, la liste d'ancres retournée contient seulement les ancres créées avec l'attribut `name`, pas celles créées avec l'attribut `id`.
+Pour des raisons de rétrocompatibilité, la liste d'ancres retournée contient seulement les ancres créées avec l'attribut `name`, pas celles créées avec l'attribut `id`.
 
 ## Spécification
 

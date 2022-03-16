@@ -83,7 +83,7 @@ class ExpandingList extends HTMLUListElement {
 customElements.define('expanding-list', ExpandingList, { extends: 'ul' });
 ```
 
-Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante :
+Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante&nbsp;:
 
 ```js
 let expandingList = document.createElement('ul', { is : 'expanding-list' })
@@ -97,7 +97,7 @@ Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/
 
 | Spécification                                                                                                    | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
+| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 
@@ -114,4 +114,4 @@ Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Node.insertBefore()")}}
 - {{domxref("Node.hasChildNodes()")}}
-- {{domxref("document.createElementNS()")}} — pour spécifier explicitement l’URI de l’espace de noms de l’élément.
+- {{domxref("document.createElementNS()")}} — pour spécifier explicitement l’URI de l’espace de noms de l’élément.

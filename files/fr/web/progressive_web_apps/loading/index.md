@@ -12,7 +12,7 @@ Dans les articles précédents, nous avons abordé les APIs qui nous aident à f
 
 ## Première visualisation signifiante
 
-Il est important de fournir quelque chose qui ait du sens pour l'utilisateur dès que possible  — plus il attend que la page se charge, plus il y a de chances qu'il s'en aille plutôt que d'attendre que tout soit fini. Nous devrions être capable de lui montrer au moins une vue basique de la page qu'il veut voir avec des emplacements où du contenu supplémentaire sera chargé à un moment donné.
+Il est important de fournir quelque chose qui ait du sens pour l'utilisateur dès que possible  — plus il attend que la page se charge, plus il y a de chances qu'il s'en aille plutôt que d'attendre que tout soit fini. Nous devrions être capable de lui montrer au moins une vue basique de la page qu'il veut voir avec des emplacements où du contenu supplémentaire sera chargé à un moment donné.
 
 Ceci peut être réalisé grâce au chargement progressif — également appelé [Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading). Tout ceci consiste en retardant autant que possible le plus de ressources que possible (HTML, CSS, JavaScript), et ne charger immédiatement que celles qui sont réellement nécessaire pour la toute première expérience.
 
@@ -144,7 +144,7 @@ Rappelez-vous qu'il y a de nombreuses façons d'optimiser les temps de chargemen
 
 Nous ne le ferons pas car l'application elle-même dépend de JavaScript — sans lui, la liste des jeux ne sera même pas chargée et le code du Service Worker ne s'exécutera pas.
 
-Nous pourrions réécrire le processus de chargement  pour charger non seulement les images mais aussi les éléments complets composés des descriptions complètes et des liens. Cela fonctionnerait comme un défilement infini — charger les éléments de la liste seulement quand l'utilisateur fait défiler la page vers le bas. De cette façon, la structure HTML initiale sera minimale, le temps de chargement encore plus court et nous aurions des bénéfices de performance encore meilleurs.
+Nous pourrions réécrire le processus de chargement pour charger non seulement les images mais aussi les éléments complets composés des descriptions complètes et des liens. Cela fonctionnerait comme un défilement infini — charger les éléments de la liste seulement quand l'utilisateur fait défiler la page vers le bas. De cette façon, la structure HTML initiale sera minimale, le temps de chargement encore plus court et nous aurions des bénéfices de performance encore meilleurs.
 
 ## Conclusion
 

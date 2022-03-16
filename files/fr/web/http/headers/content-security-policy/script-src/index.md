@@ -96,13 +96,13 @@ Cette directive CSP autorisera tous les scripts {{HTMLElement("script")}} embarq
 </script>
 ```
 
-Vous pouvez aussi utiliser un nonce pour autoriser spécifiquement certains éléments {{HTMLElement("script")}} embarqués :
+Vous pouvez aussi utiliser un nonce pour autoriser spécifiquement certains éléments {{HTMLElement("script")}} embarqués :
 
 ```bash
 Content-Security-Policy: script-src 'nonce-2726c7f26c'
 ```
 
-Vous devrez alors définir ce nonce sur l'élément {{HTMLElement("script")}} :
+Vous devrez alors définir ce nonce sur l'élément {{HTMLElement("script")}} :
 
 ```html
 <script nonce="2726c7f26c">

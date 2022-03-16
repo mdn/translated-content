@@ -12,7 +12,7 @@ translation_of: Web/API/WebGLRenderingContext/texParameter
 ---
 {{APIRef("WebGL")}}
 
-Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définissent les paramètres de texture.
+Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) définissent les paramètres de texture.
 
 ## Syntaxe
 
@@ -23,16 +23,16 @@ Les méthodes **`WebGLRenderingContext.texParameter[fi]()`** de l'[API WebGL](
 
 - cible
 
-  - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
+  - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
 
-    - `gl.TEXTURE_2D` : une texture bi-dimensionelle.
-    - `gl.TEXTURE_CUBE_MAP` : une texte appliquée sur un cube.
-    - Lorsqu'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
+    - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionelle.
+    - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texte appliquée sur un cube.
+    - Lorsqu'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
 
-      - `gl.TEXTURE_3D` : une texture tri-dimensionnelle.
-      - `gl.TEXTURE_2D_ARRAY` : une texture bi-dimensionnelle en tableau.
+      - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
+      - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture bi-dimensionnelle en tableau.
 
-Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de texture à définir. Le paramètre `param` est un {{domxref("GLfloat")}} ou un {{domxref("GLint")}} indiquant la valeur pour le paramètre `nomp` indiqué.
+Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de texture à définir. Le paramètre `param` est un {{domxref("GLfloat")}} ou un {{domxref("GLint")}} indiquant la valeur pour le paramètre `nomp` indiqué.
 
 <table class="standard-table">
   <thead>
@@ -74,7 +74,7 @@ Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de 
     </tr>
     <tr>
       <td><code>gl.TEXTURE_WRAP_T</code></td>
-      <td>Fonction d'emballage pour la coordonnée de texture <code>t</code></td>
+      <td>Fonction d'emballage pour la coordonnée de texture <code>t</code></td>
       <td>
         <code>gl.REPEAT</code> (valeur par
         défaut),<code>gl.CLAMP_TO_EDGE</code>, <code>gl.MIRRORED_REPEAT</code>.
@@ -137,7 +137,7 @@ Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de 
     <tr>
       <td><code>gl.TEXTURE_WRAP_R</code></td>
       <td>
-        Fonction d'emballage pour la coordonnée de texture  <code>r</code>
+        Fonction d'emballage pour la coordonnée de texture  <code>r</code>
       </td>
       <td>
         <code>gl.REPEAT</code> (valeur par défaut),

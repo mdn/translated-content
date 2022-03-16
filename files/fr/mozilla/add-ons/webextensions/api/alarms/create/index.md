@@ -39,7 +39,7 @@ browser.alarms.create(
     L'objet `alarmInfo` peut contenir les propriétés suivantes :
 
     - `when`{{optional_inline}}
-      - : `double`. Le moment où l'alarme se déclenchera en premier. L'instant est indiquée comme une valeur absolue, exprimée en [millisecondes depuis epoch](https://fr.wikipedia.org/wiki/Heure_Unix). Pour obtenir le nombre de millisecondes entre l'époque et l'heure actuelle, on pourra utiliser {{jsxref("Date.now")}}. Si cette valeur est utilisée, il ne faut pas fournir `delayInMinutes`.
+      - : `double`. Le moment où l'alarme se déclenchera en premier. L'instant est indiquée comme une valeur absolue, exprimée en [millisecondes depuis epoch](https://fr.wikipedia.org/wiki/Heure_Unix). Pour obtenir le nombre de millisecondes entre l'époque et l'heure actuelle, on pourra utiliser {{jsxref("Date.now")}}. Si cette valeur est utilisée, il ne faut pas fournir `delayInMinutes`.
     - `delayInMinutes`{{optional_inline}}
       - : `double`. Le moment où l'alarme se déclenchera en premier exprimée de façon relative au moment où l'alarme est créée. Si cette option est utilisée, il ne faut pas fournir `when`.
     - `periodInMinutes`{{optional_inline}}

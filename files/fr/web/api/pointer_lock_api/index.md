@@ -13,7 +13,7 @@ original_slug: WebAPI/Pointer_Lock
 ---
 {{DefaultAPISidebar("Pointer Lock API")}}
 
-**Pointer lock** (en français _Verrouillage du pointeur_, précedement appelé mouse lock) permet d'obtenir des informations sur le déplacement de la souris à travers le temps, et ne se cantonne pas à fournir la position absolue du curseur sur l'écran. Cette interface donne accès aux données brutes de la souris, permet de verrouiller la cible des évènements à un élément unique, limiter jusqu'où le mouvement de la souris peut aller dans une direction donnée et cacher le curseur de la vue.
+**Pointer lock** (en français _Verrouillage du pointeur_, précedement appelé mouse lock) permet d'obtenir des informations sur le déplacement de la souris à travers le temps, et ne se cantonne pas à fournir la position absolue du curseur sur l'écran. Cette interface donne accès aux données brutes de la souris, permet de verrouiller la cible des évènements à un élément unique, limiter jusqu'où le mouvement de la souris peut aller dans une direction donnée et cacher le curseur de la vue.
 
 Cette API est utile pour les applications qui ont besoin d'écouter la souris pour contrôler des mouvements ou faire pivoter des objets sur leurs axes. Les jeux 3D de type FPS (First Person Shooter), les outils de modelisation, les vidéos immersives ou encore les cartes satellites sont autant de candidats idéals. L'utilisateur peut en effet changer l'angle de vue en bougeant simplement sa souris et sans cliquer sur aucun bouton ce qui les laisse donc disponibles pour effectuer d'autres actions.
 
@@ -21,9 +21,9 @@ Comme Pointer lock continue de déclencher des évènements même quand le curse
 
 ## Concepts de base
 
-Pointer Lock partage des similtudes avec la [capture de souris](/fr/docs/Web/API/Element/setCapture). La capture de souris offre un flot ininterrompu d'évènements sur un élément cible quand la souris glisse mais s'arrête quand le bouton est relaché. Pour cette raison, Pointer lock diffère de la capture de souris sur les points suivants :
+Pointer Lock partage des similtudes avec la [capture de souris](/fr/docs/Web/API/Element/setCapture). La capture de souris offre un flot ininterrompu d'évènements sur un élément cible quand la souris glisse mais s'arrête quand le bouton est relaché. Pour cette raison, Pointer lock diffère de la capture de souris sur les points suivants :
 
-- Persistance. Pointer lock ne libère pas la souris tant qu'un appel explicite à l'API n'a pas été effectué ou que l'utilisateur n'a pas fait un mouvement spécifique.
+- Persistance. Pointer lock ne libère pas la souris tant qu'un appel explicite à l'API n'a pas été effectué ou que l'utilisateur n'a pas fait un mouvement spécifique.
 - Ne se limite pas aux bordures du navigateur ou de l'écran.
 - Continue de déclencher des évènements peu importe l'état des boutons de la souris.
 - Cache le curseur.
@@ -34,7 +34,7 @@ Cette section fournit une brève description de chaque propriété et méthode a
 
 ### requestPointerLock()
 
-L'API Pointer lock, de manière similaire à l'[API Fullscreen](/fr/docs/Web/Guide/DOM/Using_full_screen_mode), étend les les éléments DOM en ajoutant une nouvelle méthode, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. Comme le préfixe fournisseur a récemment été retiré, vous devriez utiliser la syntaxe ci-dessous, par exemple pour demander un verrouillage deu pointeur sur un élément `canvas`:
+L'API Pointer lock, de manière similaire à l'[API Fullscreen](/fr/docs/Web/Guide/DOM/Using_full_screen_mode), étend les les éléments DOM en ajoutant une nouvelle méthode, {{domxref("Element.requestPointerLock","requestPointerLock()")}}. Comme le préfixe fournisseur a récemment été retiré, vous devriez utiliser la syntaxe ci-dessous, par exemple pour demander un verrouillage deu pointeur sur un élément `canvas`:
 
 ```js
 canvas.requestPointerLock = canvas.requestPointerLock ||
@@ -46,9 +46,9 @@ canvas.requestPointerLock()
 
 ### pointerLockElement et exitPointerLock()
 
-L'API Pointer Lock étend également l'interface {{domxref("Document")}}, ajoutant à la fois une nouvelle propriété et une nouvelle méthode. La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utilisée pour accéder à l'élément actuellement verrouillé (s'il y en a). La méthode {{domxref("Document.exitPointerLock","exitPointerLock()")}}  est utilisée pour libérer le verrou du pointeur.
+L'API Pointer Lock étend également l'interface {{domxref("Document")}}, ajoutant à la fois une nouvelle propriété et une nouvelle méthode. La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utilisée pour accéder à l'élément actuellement verrouillé (s'il y en a). La méthode {{domxref("Document.exitPointerLock","exitPointerLock()")}}  est utilisée pour libérer le verrou du pointeur.
 
-La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utile pour déterminer si un élément est actuellement verrouillé (pour une vérification booléenne par exemple) et également pour obtenir une référence vers l'élément s'il existe.
+La propriété {{domxref("Document.pointerLockElement","pointerLockElement")}}  est utile pour déterminer si un élément est actuellement verrouillé (pour une vérification booléenne par exemple) et également pour obtenir une référence vers l'élément s'il existe.
 
 Voici un exemple d'utilisation de `pointerLockElement`:
 

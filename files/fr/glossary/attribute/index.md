@@ -19,7 +19,7 @@ Un _attribut_ vient compléter un {{Glossary("tag")}}. Sa présence peut être r
 <h2 style="background-color:yellow";>Titre</h2>
 ```
 
-On peut aussi trouver des attributs sans valeur quand elle n'est pas nécessaire.
+On peut aussi trouver des attributs sans valeur quand elle n'est pas nécessaire.
 
 ```html
 <!-- Un tag avec un attribut indiquant que le champ est requis -->

@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isPrototypeOf
 ---
 {{JSRef}}
 
-La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la chaîne de prototypes d'un autre objet.
+La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la chaîne de prototypes d'un autre objet.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-isprototypeof.html")}}
 
@@ -26,16 +26,16 @@ La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la 
 ### Paramètres
 
 - `objet`
-  - : L'objet dont la chaîne de prototypes sera parcourue.
+  - : L'objet dont la chaîne de prototypes sera parcourue.
 
 ### Valeur de retour
 
-Un {{jsxref("Boolean")}} indiquant si l'objet appelant se trouve dans sa chaîne de prototypes de l'objet indiqué.
+Un {{jsxref("Boolean")}} indiquant si l'objet appelant se trouve dans sa chaîne de prototypes de l'objet indiqué.
 
 ### Erreurs déclenchées
 
 - {{jsxref("TypeError")}}
-  - : Une exception {{jsxref("TypeError")}} est déclenchée si `prototypeObj` est `undefined` ou `null`.
+  - : Une exception {{jsxref("TypeError")}} est déclenchée si `prototypeObj` est `undefined` ou `null`.
 
 ## Description
 
@@ -43,7 +43,7 @@ La méthode isPrototypeOf () vous permet de vérifier si un objet existe ou non 
 
 ## Exemples
 
-Cet exemple montre que `Bidule.prototype`, `Truc.prototype`, `Machin.prototype` et `Object.prototype` font bien partie de la chaîne de prototype pour l'objet `bidule` :
+Cet exemple montre que `Bidule.prototype`, `Truc.prototype`, `Machin.prototype` et `Object.prototype` font bien partie de la chaîne de prototype pour l'objet `bidule` :
 
 ```js
 function Machin() {}
@@ -61,9 +61,9 @@ console.log(Machin.prototype.isPrototypeOf(bidule)); // true
 console.log(Object.prototype.isPrototypeOf(bidule)); // true
 ```
 
-La méthode `isPrototypeOf()`, avec l'opérateur {{jsxref("Operators/instanceof", "instanceof")}} en particulier, s'avère particulièrement utile si vous avez du code qui ne peut fonctionner que lorsqu'il traite des objets descendant d'une chaîne de prototypes donnée, par ex., pour garantir que certaines méthodes ou propriétés seront présentes dans cet objet.
+La méthode `isPrototypeOf()`, avec l'opérateur {{jsxref("Operators/instanceof", "instanceof")}} en particulier, s'avère particulièrement utile si vous avez du code qui ne peut fonctionner que lorsqu'il traite des objets descendant d'une chaîne de prototypes donnée, par ex., pour garantir que certaines méthodes ou propriétés seront présentes dans cet objet.
 
-Par exemple, vérifier que `bidule` descend bien de `Machin.prototype` :
+Par exemple, vérifier que `bidule` descend bien de `Machin.prototype`&nbsp;:
 
 ```js
 if (Toto.prototype.isPrototypeOf(bidule)) {
@@ -76,9 +76,9 @@ if (Toto.prototype.isPrototypeOf(bidule)) {
 | Spécification                                                                                                                        | Statut                       | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                                     | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

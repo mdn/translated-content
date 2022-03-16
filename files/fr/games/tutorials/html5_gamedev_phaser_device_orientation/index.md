@@ -6,7 +6,7 @@ original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR
 ---
 {{GamesSidebar}}
 
-Dans ce tutoriel, nous allons passer par le processus de construction d'un jeu mobile HTML5 qui utilise les API  [Device Orientation](/fr/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes)  et [Vibration](/fr/docs/Web/API/Vibration_API)   pour améliorer le "gameplay" et est construit avec le "framework" [Phaser](http://phaser.io/). La connaissance JavaScript de base est recommandée pour tirer le meilleur parti de ce tutoriel.
+Dans ce tutoriel, nous allons passer par le processus de construction d'un jeu mobile HTML5 qui utilise les API [Device Orientation](/fr/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) et [Vibration](/fr/docs/Web/API/Vibration_API) pour améliorer le "gameplay" et est construit avec le "framework" [Phaser](http://phaser.io/). La connaissance JavaScript de base est recommandée pour tirer le meilleur parti de ce tutoriel.
 
 ## Exemple de jeu
 
@@ -16,7 +16,7 @@ A la fin de ce tutoriel, vous aurez une démo entièrement fonctionnelle du jeu 
 
 ## Le framework Phaser
 
-[Phaser](http://phaser.io/) est un framework pour créer des jeux mobiles et PC en utilisant les technologies HTML5. Malgré son manque de maturité, la communauté est assez active, et il évolue rapidement.  Les sources sont [sur GitHub](https://github.com/photonstorm/phaser), lisez y la [documentation](http://docs.phaser.io/) de base, jetez un œil aux [exemples](http://examples.phaser.io/). Le framework Phaser offre un ensemble d'outils qui permettent d'accélérer le développement et aident à mettre en oeuvre les tâches courantes nécessaires au développement d'un  jeu.
+[Phaser](http://phaser.io/) est un framework pour créer des jeux mobiles et PC en utilisant les technologies HTML5. Malgré son manque de maturité, la communauté est assez active, et il évolue rapidement. Les sources sont [sur GitHub](https://github.com/photonstorm/phaser), lisez y la [documentation](http://docs.phaser.io/) de base, jetez un œil aux [exemples](http://examples.phaser.io/). Le framework Phaser offre un ensemble d'outils qui permettent d'accélérer le développement et aident à mettre en oeuvre les tâches courantes nécessaires au développement d'un jeu.
 
 ## Mise en place du projet
 
@@ -90,7 +90,7 @@ La première valeur est le nom de l'état et la seconde est l'objet que nous vou
 
 ## Gestion des états du jeu
 
-Les états du jeu dans Phaser sont différentes phases du jeu. Dans notre cas, ils sont chargés depuis des fichiers Javascript pour mieux les maintenir par la suite. Dans ce jeu nous avons les états : `Boot (démarrage)`, `Preloader (préchargement)`, `MainMenu (menu principal)`, `Howto` _(comment jouer)_ et `Game (jeu)`. `Boot` s'occupe d'initialiser quelques paramètres, `Preloader` charge tous les graphismes et les sons, `MainMenu` est le menu avec le bouton start, `Howto` affiche les instructions "comment jouer" et `Game`, est l'état qui permet de  jouer. Passons rapidement au contenu de ces états.
+Les états du jeu dans Phaser sont différentes phases du jeu. Dans notre cas, ils sont chargés depuis des fichiers Javascript pour mieux les maintenir par la suite. Dans ce jeu nous avons les états : `Boot (démarrage)`, `Preloader (préchargement)`, `MainMenu (menu principal)`, `Howto` _(comment jouer)_ et `Game (jeu)`. `Boot` s'occupe d'initialiser quelques paramètres, `Preloader` charge tous les graphismes et les sons, `MainMenu` est le menu avec le bouton start, `Howto` affiche les instructions "comment jouer" et `Game`, est l'état qui permet de jouer. Passons rapidement au contenu de ces états.
 
 ### Boot.js _(démarrage)_
 
@@ -116,7 +116,7 @@ Ball.Boot.prototype = {
 };
 ```
 
-Le principal objet "`Ball`"  est défini et nous ajoutons deux variables appelées `_WIDTH` et `_HEIGHT` qui sont la largeur et la hauteur du caneva du jeu — elles nous aideront à positionner les éléments à l'écran. Nous chargeons d'abord deux images qui seront utilisées plus tard dans l'état `Preload` _(préchargement)_ pour montrer la progression du chargement de tous les autres éléments. La fonction `create` contient une configuration de base : nous configurons la mise à l'échelle et l'alignement du canevas et passons à l'état `Preload` lorsque tout est prêt.
+Le principal objet "`Ball`"  est défini et nous ajoutons deux variables appelées `_WIDTH` et `_HEIGHT` qui sont la largeur et la hauteur du caneva du jeu — elles nous aideront à positionner les éléments à l'écran. Nous chargeons d'abord deux images qui seront utilisées plus tard dans l'état `Preload` _(préchargement)_ pour montrer la progression du chargement de tous les autres éléments. La fonction `create` contient une configuration de base : nous configurons la mise à l'échelle et l'alignement du canevas et passons à l'état `Preload` lorsque tout est prêt.
 
 ### Preloader.js _(préchargement)_
 
@@ -199,7 +199,7 @@ L'état `Howto` affiche les instructions du jeu à l'écran avant de commencer l
 
 ### Game.js (jeu)
 
-L'état `game` à partir du fichier `Game.js` est le lieu où toute la magie opère. Toute l'initialisation est dans la fonction `create ()` (lancée une fois au début du jeu). Après cela, certaines fonctionnalités nécessiteront d'autres codes à contrôler — nous écrirons nos propres fonctions pour gérer des tâches plus complexes. En particulier, notez  la fonction `update ()` exécutée à chaque frame, qui met à jour des choses telles que la position de la balle.
+L'état `game` à partir du fichier `Game.js` est le lieu où toute la magie opère. Toute l'initialisation est dans la fonction `create ()` (lancée une fois au début du jeu). Après cela, certaines fonctionnalités nécessiteront d'autres codes à contrôler — nous écrirons nos propres fonctions pour gérer des tâches plus complexes. En particulier, notez la fonction `update ()` exécutée à chaque frame, qui met à jour des choses telles que la position de la balle.
 
 ```js
 Ball.Game = function(game) {};
@@ -240,17 +240,17 @@ ball.body.setCircle(10, 11, 11);
 ball.body.linearDamping = 1;
 ```
 
-On ajoute un "sprite" à une place donnée sur l'écran en utilisant l'image `'ball'`. On ajoute aussi le point de repère de tous les calculs physiques ( '`anchor`' ) au milieu de la balle,  permettant au moteur physique d'arcade (qui gère toute la physique du mouvement de la balle) et en définissant la taille du corps pour la détection de collision . La propriété `bounce` est utilisée pour définir le rebondissement de la balle quand elle frappe les obstacles.
+On ajoute un "sprite" à une place donnée sur l'écran en utilisant l'image `'ball'`. On ajoute aussi le point de repère de tous les calculs physiques ( '`anchor`' ) au milieu de la balle,  permettant au moteur physique d'arcade (qui gère toute la physique du mouvement de la balle) et en définissant la taille du corps pour la détection de collision . La propriété `bounce` est utilisée pour définir le rebondissement de la balle quand elle frappe les obstacles.
 
 ### Contrôle de la balle
 
-C'est déjà sympa d'avoir une balle prête à être lancée dans la zone de jeu, mais c'est aussi important de pouvoir le faire. Maintenant on va ajouter la possibilité de contrôler la balle avec le clavier sur les ordinateurs, et ensuite on ajoutera l'implémentation de l'API  Device Orientation ( _gyroscope_). Maintenant, concentrons-nous sur le clavier en ajoutant la ligne suivante pour la fonction `create()` :
+C'est déjà sympa d'avoir une balle prête à être lancée dans la zone de jeu, mais c'est aussi important de pouvoir le faire. Maintenant on va ajouter la possibilité de contrôler la balle avec le clavier sur les ordinateurs, et ensuite on ajoutera l'implémentation de l'API Device Orientation ( _gyroscope_). Maintenant, concentrons-nous sur le clavier en ajoutant la ligne suivante pour la fonction `create()` :
 
 ```js
 this.keys = this.game.input.keyboard.createCursorKeys();
 ```
 
-Comme vous pouvez le voir, Phaser a une fonction spéciale  `createCursorKeys()` qui nous donnera un objet avec des gestionnaires d'événements pour les quatre touches fléchées : haut, bas, gauche et droite.
+Comme vous pouvez le voir, Phaser a une fonction spéciale  `createCursorKeys()` qui nous donnera un objet avec des gestionnaires d'événements pour les quatre touches fléchées : haut, bas, gauche et droite.
 
 Ensuite, nous allons ajouter le code suivant dans la fonction `update ()`, il sera lancé à chaque "frame". L'objet `this.keys` sera vérifié aux pressions de touche du joueur, la balle réagira donc en conséquence :
 
@@ -271,9 +271,9 @@ else if(this.keys.down.isDown) {
 
 De cette manière on peut vérifier quelle touche est pressée à un moment donné et appliquer une force définie à la balle, ce qui a pour effet d'augmenter sa vélocité dans la bonne direction.
 
-## Implémentation de l'API Device Orientation (_gyroscopique_)
+## Implémentation de l'API Device Orientation (_gyroscopique_)
 
-La particularité du jeu est qu'il utilise l'API gyroscopique sur les mobiles. Grâce à elle, vous pouvez jouer au jeu en inclinant l'appareil dans la direction où vous voulez que la balle aille. Voilà le code de la fonction  `create()` qui l'implémente :
+La particularité du jeu est qu'il utilise l'API gyroscopique sur les mobiles. Grâce à elle, vous pouvez jouer au jeu en inclinant l'appareil dans la direction où vous voulez que la balle aille. Voilà le code de la fonction  `create()` qui l'implémente :
 
 ```js
 window.addEventListener("deviceorientation", this.handleOrientation, true);
@@ -485,6 +485,6 @@ Ceci est simplement une démonstration de travail d'un jeu qui pourrait avoir be
 
 ## Résumé
 
-J'espère que ce tutoriel vous aidera à plonger dans le développement de jeux en 2D et vous inspirera pour créer des jeux géniaux par vous-même. Vous pouvez jouer au jeu de démonstration [Cyber Orb](http://orb.enclavegames.com/) et consulter son [code source sur GitHub](https://github.com/EnclaveGames/Cyber-Orb).
+J'espère que ce tutoriel vous aidera à plonger dans le développement de jeux en 2D et vous inspirera pour créer des jeux géniaux par vous-même. Vous pouvez jouer au jeu de démonstration [Cyber Orb](http://orb.enclavegames.com/) et consulter son [code source sur GitHub](https://github.com/EnclaveGames/Cyber-Orb).
 
 HTML5 nous donne des outils bruts, les frameworks construits au-dessus deviennent plus rapides et meilleurs, alors c'est un bon moment pour le développement de jeux web. Dans ce tutoriel, nous avons utilisé Phaser, mais il existe un certain nombre d' [autres frameworks](http://html5devstarter.enclavegames.com/#frameworks) qui méritent d'être considérés aussi, comme [ImpactJS](http://impactjs.com/), [Construct 2](https://www.scirra.com/construct2) ou [PlayCanvas](http://playcanvas.com/) — cela dépend de vos préférences, de vos compétences en codage (ou de leur absence), de l'échelle du projet, des exigences et d'autres aspects. Vous devriez les regarder tous et décider lequel convient le mieux à vos besoins.

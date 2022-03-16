@@ -11,7 +11,7 @@ translation_of: Games/Techniques/2D_collision_detection
 ---
 {{GamesSidebar}}
 
-Les algorithmes de détection de collisions dans les jeux en 2 dimensions dépendent de la forme des objets à détecter (par exemple : rectangle contre rectangle, cercle contre rectangle, cercle contre cercle…). Habituellement, il est préférable d’utiliser une forme générique appelée masque de collision (« *hitbox* ») qui couvrira l’entité. Ainsi, les collisions ne seront pas assurées au pixel près mais cela permettra d’avoir de bonnes performances pour un grand nombre d’entités à tester.
+Les algorithmes de détection de collisions dans les jeux en 2 dimensions dépendent de la forme des objets à détecter (par exemple&nbsp;: rectangle contre rectangle, cercle contre rectangle, cercle contre cercle…). Habituellement, il est préférable d’utiliser une forme générique appelée masque de collision («&nbsp;*hitbox*&nbsp;») qui couvrira l’entité. Ainsi, les collisions ne seront pas assurées au pixel près mais cela permettra d’avoir de bonnes performances pour un grand nombre d’entités à tester.
 
 Cet article donne un résumé des techniques les plus utilisées pour la détection des collisions dans les jeux en deux dimensions.
 
@@ -24,9 +24,9 @@ var rect1 = {x: 5, y: 5, width: 50, height: 50}
 var rect2 = {x: 20, y: 10, width: 10, height: 10}
 
 if (rect1.x < rect2.x + rect2.width &&
-   rect1.x + rect1.width > rect2.x &&
-   rect1.y < rect2.y + rect2.height &&
-   rect1.height + rect1.y > rect2.y) {
+   rect1.x + rect1.width > rect2.x &&
+   rect1.y < rect2.y + rect2.height &&
+   rect1.height + rect1.y > rect2.y) {
     // collision détectée !
 }
 
@@ -65,25 +65,25 @@ if (distance < circle1.radius + circle2.radius) {
 
 Cet algorithme permet de détecter une collision entre deux polygones _convexes_. Cet algorithme est plus compliqué à implémenter que les deux précédents mais il est bien plus puissant. La complexité d’un tel algorithme induit de prendre en considération l’optimisation des performances (voir section suivante).
 
-L’implémentation de cet algorithme est hors de propos sur cette page, nous vous conseillons les articles suivants :
+L’implémentation de cet algorithme est hors de propos sur cette page, nous vous conseillons les articles suivants&nbsp;:
 
-1.  [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/) ;
-2.  [(Anglais) Collision detection and response (en)](http://www.metanetsoftware.com/technique/tutorialA.html) ;
-3.  [Collision detection Using the Separating Axis Theorem (en)](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169) ;
-4.  [SAT (Separating Axis Theorem) (en)](http://www.codezealot.org/archives/55) ;
+1.  [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)&nbsp;;
+2.  [(Anglais) Collision detection and response (en)](http://www.metanetsoftware.com/technique/tutorialA.html)&nbsp;;
+3.  [Collision detection Using the Separating Axis Theorem (en)](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)&nbsp;;
+4.  [SAT (Separating Axis Theorem) (en)](http://www.codezealot.org/archives/55)&nbsp;;
 5.  [Separation of Axis Theorem (SAT) for Collision Detection (en)](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/).
 
 ## Performances
 
-Alors que la plupart de ces algorithmes de détection de collision sont très simples à calculer, cela peut être une perte de ressources de tester _chaque entité_ avec les autres entités. Habituellement les jeux découpent les collisions en deux phases : large (« *broad* ») et étroite (« *narrow* »).
+Alors que la plupart de ces algorithmes de détection de collision sont très simples à calculer, cela peut être une perte de ressources de tester _chaque entité_ avec les autres entités. Habituellement les jeux découpent les collisions en deux phases&nbsp;: large («&nbsp;*broad*&nbsp;») et étroite («&nbsp;*narrow*&nbsp;»).
 
 ### Phase large
 
-La phase large sert à récupérer une liste d’entités qui _pourraient_ entrer en collision. Cela peut être facilement implémenté avec une structure de données spaciale qui vous donnera une meilleure idée d’où est situé chaque entité et de ce qui existe autour d’elle. Par exemple :
+La phase large sert à récupérer une liste d’entités qui _pourraient_ entrer en collision. Cela peut être facilement implémenté avec une structure de données spaciale qui vous donnera une meilleure idée d’où est situé chaque entité et de ce qui existe autour d’elle. Par exemple&nbsp;:
 
-- Les _Quad Trees_ (exemple : [JavaScript QuadTree Implementation (en)](http://blogs.adobe.com/digitalmedia/2011/03/javascript-quadtree-implementation/)) ;
-- Les _R-Trees_ (voir [R-Tree sur Wikipedia.org (en)](http://en.wikipedia.org/wiki/R-tree)) ;
-- Une « *hashmap* ».
+- Les _Quad Trees_ (exemple&nbsp;: [JavaScript QuadTree Implementation (en)](http://blogs.adobe.com/digitalmedia/2011/03/javascript-quadtree-implementation/))&nbsp;;
+- Les _R-Trees_ (voir [R-Tree sur Wikipedia.org (en)](http://en.wikipedia.org/wiki/R-tree))&nbsp;;
+- Une «&nbsp;*hashmap*&nbsp;».
 
 ### Phase étroite
 

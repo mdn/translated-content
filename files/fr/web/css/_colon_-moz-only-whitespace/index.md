@@ -63,5 +63,5 @@ Cette pseudo-classe a été renommée en `:blank` dans {{SpecName("CSS4 Selector
 
 ## Voir aussi
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
 - {{CSSxRef(":empty")}}

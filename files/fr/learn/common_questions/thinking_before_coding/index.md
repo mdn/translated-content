@@ -8,16 +8,16 @@ tags:
 translation_of: Learn/Common_questions/Thinking_before_coding
 original_slug: Apprendre/Commencez_votre_projet_web
 ---
-Cette article présente l'étape primordiale de n'importe quel projet  définir ce qu'on souhaite accomplir avec.
+Cette article présente l'étape primordiale de n'importe quel projet définir ce qu'on souhaite accomplir avec.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis </th>
+      <th scope="row">Prérequis </th>
       <td>Aucun</td>
     </tr>
     <tr>
-      <th scope="row">Objectif </th>
+      <th scope="row">Objectif </th>
       <td>
         Apprendre à définir les objectifs pour donner une direction à votre
         projet.
@@ -30,7 +30,7 @@ Cette article présente l'étape primordiale de n'importe quel projet  définir
 
 Lors du démarrage d'un projet web, beaucoup de gens se concentrent sur l'aspect technique. Bien sûr, vous devez être familier avec la technique, mais ce qui importe vraiment est _ce que vous_ _voulez accomplir_. Oui, cela semble évident, mais de trop nombreux projets échouent, pas à cause d'un manque de savoir-faire technique, mais à cause d'un manque d'objectifs et de vision.
 
-Alors, quand vous aurez une idée et que vous voudrez la concrétiser en un site web, il y a quelques questions auxquelles vous devrez répondre avant toute autre chose
+Alors, quand vous aurez une idée et que vous voudrez la concrétiser en un site web, il y a quelques questions auxquelles vous devrez répondre avant toute autre chose
 
 - Qu'est-ce que je veux accomplir exactement ?
 - Comment un site web aiderait à atteindre mes objectifs ?
@@ -40,7 +40,7 @@ Se poser ces questions et y répondre constituent la _conceptualisation_ du proj
 
 ## Pédagogie active
 
-_Il n'y a pas la pédagogie active disponible pour l'instant. [S'il-vous-plaît, pensez à contribuer pour enrichir ce contenu !](/fr/docs/MDN/Getting_started)_
+_Il n'y a pas la pédagogie active disponible pour l'instant. [S'il-vous-plaît, pensez à contribuer pour enrichir ce contenu !](/fr/docs/MDN/Getting_started)_
 
 ## Aller plus loin
 
@@ -50,11 +50,11 @@ La technique est évidemment essentielle. Les musiciens doivent maîtriser leur 
 
 Une discussion d'une heure avec des amis est un bon début, mais ce sera insuffisant. Vous devez vous asseoir et structurer vos idées pour avoir une vision claire du chemin que vous devrez parcourir afin de concrétiser vos idées. Pour ce faire, il vous suffit d'un stylo, de quelques feuilles de papier et d'un peu de temps pour répondre au moins aux questions suivantes.
 
-> **Note :** Il existe d'innombrables moyens pour mener à bien des idées de projet. Nous ne pouvons pas tous les mentionner ici (un livre entier ne suffirait pas). Ce que nous allons présenter ici est une méthode simple pour gérer ce que les professionnels appellent [l'idéation](https://fr.wikipedia.org/wiki/Id%C3%A9ation), [la planification](https://fr.wikipedia.org/wiki/Planification) et [la gestion de projet](https://fr.wikipedia.org/wiki/Gestion_de_projet).
+> **Note :** Il existe d'innombrables moyens pour mener à bien des idées de projet. Nous ne pouvons pas tous les mentionner ici (un livre entier ne suffirait pas). Ce que nous allons présenter ici est une méthode simple pour gérer ce que les professionnels appellent [l'idéation](https://fr.wikipedia.org/wiki/Id%C3%A9ation), [la planification](https://fr.wikipedia.org/wiki/Planification) et [la gestion de projet](https://fr.wikipedia.org/wiki/Gestion_de_projet).
 
 ### Qu'est-ce que je veux accomplir exactement ?
 
-C'est la question la plus importante à laquelle vous devez répondre, car il en découle tout le reste. Énumérez tous les objectifs que vous souhaitez atteindre. Ce peut être n'importe quoi  vendre des biens pour faire de l'argent, exprimer des opinions politiques, rencontrer de nouveaux amis, donner des concerts avec des musiciens, collectionner des images de chat ou autre chose encore.
+C'est la question la plus importante à laquelle vous devez répondre, car il en découle tout le reste. Énumérez tous les objectifs que vous souhaitez atteindre. Ce peut être n'importe quoi vendre des biens pour faire de l'argent, exprimer des opinions politiques, rencontrer de nouveaux amis, donner des concerts avec des musiciens, collectionner des images de chat ou autre chose encore.
 
 Supposons que vous êtes un musicien. Vous pourriez souhaiter
 
@@ -92,7 +92,7 @@ Comment un site web peut-il m'aider à atteindre mes objectifs ? En répondant �
 
 ### Qu'est-ce qui doit être fait, et dans quel ordre, pour atteindre mes objectifs ?
 
-Maintenant que vous savez ce que vous voulez accomplir, il est temps de transformer ces objectifs en mesures concrètes. Note  vos objectifs ne sont pas nécessairement gravés dans la pierre. Ils évoluent au fil du temps, même dans le cadre du projet, si vous rencontrez des obstacles inattendus ou tout simplement si vous changez d'avis.
+Maintenant que vous savez ce que vous voulez accomplir, il est temps de transformer ces objectifs en mesures concrètes. Note vos objectifs ne sont pas nécessairement gravés dans la pierre. Ils évoluent au fil du temps, même dans le cadre du projet, si vous rencontrez des obstacles inattendus ou tout simplement si vous changez d'avis.
 
 Plutôt qu'une longue explication, revenons à notre exemple avec ce tableau
 
@@ -189,5 +189,5 @@ Comme vous pouvez le voir, l'idée simple: « Je veux faire un site » génère 
 
 ## Prochaines étapes
 
-- Commencer à apprendre la technique  [Comment fonctionne l'Internet ?](/fr/Apprendre/Fonctionnement_Internet)
-- Approfondir le design et la conception  [Conception d'une page web](/fr/Apprendre/Concevoir_page_web)
+- Commencer à apprendre la technique  [Comment fonctionne l'Internet ?](/fr/Apprendre/Fonctionnement_Internet)
+- Approfondir le design et la conception  [Conception d'une page web](/fr/Apprendre/Concevoir_page_web)

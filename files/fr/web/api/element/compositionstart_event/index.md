@@ -62,7 +62,7 @@ inputElement.addEventListener('compositionstart', (event) => {
 body {
   padding: .2rem;
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .control {

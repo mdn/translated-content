@@ -54,13 +54,13 @@ Vous pouvez déterminer le nombre de pages de l'historique en accédant à la va
 var numberOfEntries = window.history.length;
 ```
 
-> **Note :** Internet Explorer supporte le passage d'une URL sous forme de chaîne de caractères comme paramètre de la méthode `go()`; ce comportement est non standard et non supporté par Gecko.
+> **Note :** Internet Explorer supporte le passage d'une URL sous forme de chaîne de caractères comme paramètre de la méthode `go()`; ce comportement est non standard et non supporté par Gecko.
 
 ## Ajouter et modifier des entrées de l'historique
 
 HTML5 a introduit les méthodes [history.pushState()](</fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur#La_méthode_pushState()>) et [history.replaceState()](</fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur#La_méthode_replaceState()>), qui permettent, respectivement, d'ajouter et de modifier des entrées de l'historique. Ces méthodes fonctionnent conjointement avec l'événement [onpopstate](/fr/docs/Web/API/WindowEventHandlers/onpopstate).
 
-L'utilisation de `history.pushState()` change le référent créé habituellement dans l'en-tête HTTP pour les objets [`XMLHttpRequest`](/en/DOM/XMLHttpRequest), chaque fois que son état a été changé. Le référent sera l'URL de la page dont l'objet window est `this` au moment de la création de l'objet [`XMLHttpRequest`](/en/DOM/XMLHttpRequest).
+L'utilisation de `history.pushState()` change le référent créé habituellement dans l'en-tête HTTP pour les objets [`XMLHttpRequest`](/en/DOM/XMLHttpRequest), chaque fois que son état a été changé. Le référent sera l'URL de la page dont l'objet window est `this` au moment de la création de l'objet [`XMLHttpRequest`](/en/DOM/XMLHttpRequest).
 
 ### Exemple de la méthode pushState()
 
@@ -73,7 +73,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 Cela va provoquer l'apparition dans la barre de navigation de http\://mozilla.org/bar.html, mais ne provoquera pas le chargement effectif de `bar.html` ni même le test d'existence de `bar.html`.
 
-Supposons à présent que l'utilisateur accède à la page http\://google.com, puis clique sur l'icône "Recul". La barre de navigation va alors afficher http\://mozilla.org/bar.html, et si vous lisez l'`history.state`, vous obtiendrez le `stateObj`.  L'événement `popstate` ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à `bar.html`.
+Supposons à présent que l'utilisateur accède à la page http\://google.com, puis clique sur l'icône "Recul". La barre de navigation va alors afficher http\://mozilla.org/bar.html, et si vous lisez l'`history.state`, vous obtiendrez le `stateObj`.  L'événement `popstate` ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à `bar.html`.
 
 Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer en http\://mozilla.org/foo.html et le document va recevoir un autre événement `popstate`, qui comportera, cette fois, un état null. Dans ce cas aussi, revenir en arrière ne modifie pas le contenu du document par rapport à ce qu'il était à l'étape précédente, cela bien qu'il ait pu être mis à jour manuellement sur réception de l'événement `popstate`.
 
@@ -90,7 +90,7 @@ Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer
 
 On peut assimiler l'appel à `pushState()` à l'affectation `window.location = "#foo"`, en cela que l'un comme l'autre auront pour effet de créer et déclencher une autre entrée de l'historique associée au document courant. Mais `pushState()` a quelques avantages :
 
-- La nouvelle URL peut être quelconque pourvu qu'elle ait la même origine que l'URL courante. En revanche, affecter `window.location` vous maintient  au même {{ domxref("document") }} seulement si vous modifiez uniquement le hash.
+- La nouvelle URL peut être quelconque pourvu qu'elle ait la même origine que l'URL courante. En revanche, affecter `window.location` vous maintient au même {{ domxref("document") }} seulement si vous modifiez uniquement le hash.
 - Vous n'êtes pas contraint de modifier l'URL si vous ne le voulez pas. Par contre, affecter `window.location = "#foo";` crée une nouvelle entrée de l'historique seulement si le hash courant n'est pas `#foo`.
 - Vous pouvez associer des données quelconques avec votre nouvelle entrée de l'historique. Avec l'approche basée sur le hash, il est nécessaire de coder toute donnée pertinente en une chaîne courte.
 
@@ -135,7 +135,7 @@ Voir {{ domxref("window.onpopstate") }} pour un exemple d'utilisation.
 
 ### Lire l'état courant
 
-Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec  `pushState()` ou `replaceState()`) et qu'ensuite l'utilisateur redémarre le navigateur.  Quand votre page sera rechargée, elle recevra l'événement  onload , mais pas l'événement popstate.  Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.
+Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec  `pushState()` ou `replaceState()`) et qu'ensuite l'utilisateur redémarre le navigateur.  Quand votre page sera rechargée, elle recevra l'événement onload , mais pas l'événement popstate.  Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.
 
 Vous pouvez lire l'état de l'entrée courante de l'historique sans devoir attendre un événement `popstate` en utilisant la propriété `history.state` comme ceci :
 

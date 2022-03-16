@@ -90,7 +90,7 @@ li::marker {
    content:  counters(listCounter, '.', upper-roman) ') ';
 }
 li::before {
-  content:  counters(listCounter, ".") " == " counters(listCounter, ".", lower-roman) ;
+  content:  counters(listCounter, ".") " == " counters(listCounter, ".", lower-roman) ;
 }
 ```
 
@@ -141,7 +141,7 @@ li::marker {
    content: counters(count, '.', upper-alpha) ') ';
 }
 li::before {
-  content: counters(count, ".", decimal-leading-zero) " == " counters(count, ".", lower-alpha);
+  content: counters(count, ".", decimal-leading-zero) " == " counters(count, ".", lower-alpha);
 }
 ```
 

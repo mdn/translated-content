@@ -28,7 +28,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `tabId`{{optional_inline}}
   - : `integer`. L'auditeur ne sera appelé que pour les requêtes provenant du {{WebExtAPIRef("tabs.Tab", "tab")}} identifié par cet ID.
 - `windowId`{{optional_inline}}
-  - : `integer`. L'auditeur ne sera appelé que pour les requêtes provenant du  {{WebExtAPIRef("windows.Window", "window")}} identifié par cet ID.
+  - : `integer`. L'auditeur ne sera appelé que pour les requêtes provenant du  {{WebExtAPIRef("windows.Window", "window")}} identifié par cet ID.
 - incognito {{optional_inline}}
   - : `boolean`. Si elles sont fournies, les demandes qui ne correspondent pas à l'état incognito (`true` ou `false`) seront filtrées.
 

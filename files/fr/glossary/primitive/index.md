@@ -21,7 +21,7 @@ Excepté dans les cas de `null` ou `undefined`, pour chaque valeur primitive il 
 - {{jsxref("String")}} pour la primitive `string` ;
 - {{jsxref("Number")}} pour la primitive `number` ;
 - {{jsxref("Boolean")}} pour la primitive `boolean` ;
-- {{jsxref("Symbol")}} pour la primitive `symbol`
+- {{jsxref("Symbol")}} pour la primitive `symbol`
 
 La méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/valueOf) de ces objets retourne la valeur primitive encapsulée correspondante.
 

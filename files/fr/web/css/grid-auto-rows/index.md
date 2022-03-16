@@ -46,9 +46,9 @@ grid-auto-rows: minmax(20%, 80vmax);
 /* Gestion de plusieurs pistes */
 grid-auto-rows: min-content max-content auto;
 grid-auto-rows: 100px 150px 390px;
-​​​​​​​grid-auto-rows: 10% 33.3%;
+grid-auto-rows: 10% 33.3%;
 grid-auto-rows: 0.5fr 3fr 1fr;
-​​​​​​​grid-auto-rows: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
+grid-auto-rows: minmax(100px, auto) minmax(max-content, 2fr) minmax(20%, 80vmax);
 grid-auto-rows: 100px minmax(100px, auto) 10% 0.5fr fit-content(400px);
 
 
@@ -78,7 +78,7 @@ grid-auto-rows: unset;
   - : Une notation fonctionnelle qui définit un intervalle de taille entre `min` et `max`. Si `max` est inférieur à `min`, `max` est ignoré et la fonction est traitée comme un minimum. En tant que maximum, elle joue le rôle d'une valeur `<flex>` qui définit le facteur de flexibilité de la piste. En tant que minimum, elle est gérée comme zéro (ou comme le contenu minimal si le conteneur de la grille impose une contrainte de contenu minimal).
 - `auto`
 
-  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
+  - : Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.
 
     > **Note :** Les pistes de taille `auto` (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.
 
@@ -108,9 +108,9 @@ grid-auto-rows: unset;
 
 ```html
 <div id="grid">
-  <div id="item1"></div>
-  <div id="item2"></div>
-  <div id="item3"></div>
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
 </div>
 ```
 

@@ -20,7 +20,7 @@ WebSockets communique via une connexion [TCP (Transmission Control Protocol)](ht
 Constructeur :
 
 ```java
-ServerSocket(int port)
+ServerSocket(int port)
 ```
 
 Lors de l'instanciation de la classe ServerSocket, celle-ci est liée au numéro de port renseigné par le paramètre _port_.
@@ -58,7 +58,7 @@ Méthodes :
 Méthode :
 
 ```java
-write(byte[] b, int off, int len)
+write(byte[] b, int off, int len)
 ```
 
 En débutant à partir de la position _off_, écrit _`len`_ octets du tableau d'octets fourni.
@@ -68,7 +68,7 @@ En débutant à partir de la position _off_, écrit _`len`_ octets du tableau d'
 Méthodes :
 
 ```java
-read(byte[] b, int off, int len)
+read(byte[] b, int off, int len)
 ```
 
 Reads up to _len_ bytes of data from the input stream into an array of bytes.

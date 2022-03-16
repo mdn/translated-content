@@ -65,4 +65,4 @@ li:last-child {
 - {{cssxref(":first-child")}}
 - {{cssxref(":nth-child")}}
 - {{cssxref(":last-of-type")}}
-- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":-moz-last-node")}} {{Non-standard_Inline}}

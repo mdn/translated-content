@@ -37,7 +37,7 @@ La **méthode HTTP DELETE** supprime la ressource indiquée.
     </tr>
     <tr>
       <th scope="row">
-        Autorisée dans les 
+        Autorisée dans les
         <a
           href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires"
           >formulaires HTML</a
@@ -60,7 +60,7 @@ La **méthode HTTP DELETE** supprime la ressource indiquée.
 
 ### Réponses
 
-Si une méthode `DELETE` est appliquée avec succès, il y a plusieurs codes de statut de réponse possibles :
+Si une méthode `DELETE` est appliquée avec succès, il y a plusieurs codes de statut de réponse possibles&nbsp;:
 
 - Un code de statut {{HTTPStatus("202")}} (`Accepted`) si l'action est en passe de réussir mais n'a pas encore été confirmée.
 - Un code de statut {{HTTPStatus("204")}} (`No Content`) si l'action a été confirmée et qu'aucune information supplémentaire n'est à fournir.

@@ -12,7 +12,7 @@ Dans une [Grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), une **cellule de grille
 
 ![Diagram showing an individual cell on the grid.](1_grid_cell.png)
 
-Si vous ne placez pas d'éléments à l'aide de l'une des méthodes de placement de grille, les enfants directs du conteneur de grille seront placés un dans chaque cellule individuelle par l'algorithme de placement automatique. Les {{glossary("Grid Tracks", "pistes")}}  de ligne ou colonne supplémentaire seront créées par la création des cellules nécessaires pour contenir tous les éléments.
+Si vous ne placez pas d'éléments à l'aide de l'une des méthodes de placement de grille, les enfants directs du conteneur de grille seront placés un dans chaque cellule individuelle par l'algorithme de placement automatique. Les {{glossary("Grid Tracks", "pistes")}}  de ligne ou colonne supplémentaire seront créées par la création des cellules nécessaires pour contenir tous les éléments.
 
 Dans l'exemple, nous avons créé une grille de trois colonnes. Les cinq éléments sont placés dans des cellules de la grille le long d'une rangée initiale de trois cellules de la grille, puis par l'ajout d'une nouvelle ligne pour les deux autres.
 

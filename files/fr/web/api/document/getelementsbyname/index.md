@@ -54,7 +54,7 @@ La méthode **getElementsByName** fonctionne différemment dans différents navi
 
 | Spécification                                                                                                                | Statut                               | Commentaire         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                     |
+| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |                     |
 | {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | Définition initiale |
 
 ## Voir aussi

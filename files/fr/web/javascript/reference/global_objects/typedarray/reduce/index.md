@@ -65,7 +65,7 @@ var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reduce', '%TypedArray%.prototype.reduce')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

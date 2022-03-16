@@ -10,7 +10,7 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Bases de l'informatique,
         <a
@@ -24,7 +24,7 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         En savoir davantage sur l'impact des éléments et attributs HTML le
         l'optimisation des performances pour le web.

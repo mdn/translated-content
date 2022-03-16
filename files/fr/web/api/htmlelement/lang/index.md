@@ -35,7 +35,7 @@ if (document.documentElement.lang === "en") {
 
 ## Notes
 
-Les codes de langues renvoyés par cette propriété sont définis dans la [RFC 1766](http://tools.ietf.org/html/rfc1766). Par exemple, « en » pour anglais, « ja » pour japonais, « es » pour espagnol, « fr » pour français, etc. La valeur par défaut de cet attribut est `unknown` (inconnue). Notez que cet attribut, bien que valide au niveau de chaque élément individuel, et le plus souvent spécifié pour le nœud racine du document.
+Les codes de langues renvoyés par cette propriété sont définis dans la [RFC 1766](http://tools.ietf.org/html/rfc1766). Par exemple, «&nbsp;en&nbsp;» pour anglais, «&nbsp;ja&nbsp;» pour japonais, «&nbsp;es&nbsp;» pour espagnol, «&nbsp;fr&nbsp;» pour français, etc. La valeur par défaut de cet attribut est `unknown` (inconnue). Notez que cet attribut, bien que valide au niveau de chaque élément individuel, et le plus souvent spécifié pour le nœud racine du document.
 
 Ne marche qu'avec l'attribut `lang`, et non avec `xml:lang`.
 
@@ -43,4 +43,4 @@ Ne marche qu'avec l'attribut `lang`, et non avec `xml:lang`.
 
 | Spécification                                                                | Statut                       | Commentaires |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('DOM2 HTML', 'html.html#ID-59132807', 'id')}} | {{Spec2('DOM2 HTML')}} |              |
+| {{SpecName('DOM2 HTML', 'html.html#ID-59132807', 'id')}} | {{Spec2('DOM2 HTML')}} |              |

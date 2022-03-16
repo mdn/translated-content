@@ -19,7 +19,7 @@ En réalité, les classes sont juste des [fonctions](/fr/docs/Web/JavaScript/Ref
 
 ### Les déclarations de classes
 
-Pour utiliser une déclaration de classe simple, on utilisera le mot-clé `class`, suivi par le nom de la classe que l'on déclare (ici « Rectangle »).
+Pour utiliser une déclaration de classe simple, on utilisera le mot-clé `class`, suivi par le nom de la classe que l'on déclare (ici «&nbsp;Rectangle&nbsp;»).
 
 ```js
 class Rectangle {
