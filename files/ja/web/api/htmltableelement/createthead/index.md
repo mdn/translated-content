@@ -1,27 +1,43 @@
 ---
-title: HTMLTableElement.createTHead
+title: HTMLTableElement.createTHead()
 slug: Web/API/HTMLTableElement/createTHead
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - メソッド
+  - NeedsSpecTable
+  - リファレンス
+browser-compat: api.HTMLTableElement.createTHead
 translation_of: Web/API/HTMLTableElement/createTHead
 ---
-<div>
- {{ ApiRef() }}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p><b>createTHead</b> は、テーブル内に新たに {{htmlelement("thead")}} 要素を生成します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><i>HTMLElementObject</i> = table.createTHead()</pre>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js">var mytable = document.getElementById("mytable");
+{{APIRef("HTML DOM")}}
 
-var myhead = mytable.createTHead();
+**`createTHead()`** は {{domxref("HTMLTableElement")}} オブジェクトのメソッドで、この {{HtmlElement("table")}} に関連付けられた {{HTMLElement("thead")}} 要素を返します。表内にヘッダーが存在しない場合、このメソッドはそれを作成して返します。
 
-//チェック用コード: myhead == mytable.tHead</pre>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>既にテーブル内に thead 要素が存在した場合、このメソッドはその thead 要素を返します。</p>
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-70313345">createTHead</a></li>
-</ul>
+> **Note:** ヘッダーが存在しない場合、 `createTHead()` は新しいヘッダーを表に直接挿入します。ヘッダーは、 {{domxref("Document.createElement()")}} を使用して新しい `<thead>` 要素を作成する場合とは異なり、別途追加する必要はありません。
+
+## 構文
+
+```js
+table.createTHead();
+```
+
+### 返値
+
+{{domxref("HTMLTableSectionElement")}}
+
+## 例
+
+```js
+let myhead = mytable.createTHead();
+// myhead == mytable.tHead は真になります
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
