@@ -41,7 +41,7 @@ browser.browserAction.setPopup(
 
         Ceci peut pointer vers un fichier empaqueté dans l'extension (par exemple, créé à l'aide de {{WebExtAPIRef("extension.getURL")}}), ou un document distant (par exemple `https://example.org/`).
 
-        Si une chaîne vide (`""`) est passée ici, le popup est désactivé, et l'extension recevra les événements {{WebExtAPIRef("browserAction.onClicked")}}.
+        Si une chaîne vide (`""`) est passée ici, le popup est désactivé, et l'extension recevra les événements {{WebExtAPIRef("browserAction.onClicked")}}.
 
         Si le `popup` est `null`:
 

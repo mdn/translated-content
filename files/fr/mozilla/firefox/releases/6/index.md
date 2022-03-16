@@ -79,7 +79,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 - Avant, la pseudo-classe [`:hover`](/fr/docs/Web/CSS/:hover) n'était pas appliquée aux sélecteurs de classe quand on était en mode quirks, par exemple, `.someclass:hover` ne fonctionne pas. Cette bizarrerie a été enlevée.
 - La pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) peut être appliquée à l'élément [`<progress>`](/fr/docs/Web/HTML/Element/progress). Cela n'est pas un standard, mais nous espérons que ce soit adopté par les autres navigateurs car c'est utile.
 - La valeur `-moz-win-exclude-glass` a été ajoutée à la propriété CSS [`-moz-appearance`](/fr/docs/Web/CSS/-moz-appearance) afin d'exclure des zones opaques dans les effets d'Aero Glass sur les systèmes Windows.
-- Le [bug 658949](https://bugzilla.mozilla.org/show_bug.cgi?id=658949) change la façon dont le symbole dièse (#) est traité dans les données URI qui peut briser les feuilles de style CSS qui contiennent un tel symbole.
+- Le [bug 658949](https://bugzilla.mozilla.org/show_bug.cgi?id=658949) change la façon dont le symbole dièse (#) est traité dans les données URI qui peut briser les feuilles de style CSS qui contiennent un tel symbole.
 
 ### DOM
 
@@ -94,7 +94,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 
 - `navigator.securityPolicy`, qui a depuis longtemps retourné une chaîne vide, a simplement été supprimé.
 - [`BlobBuilder`](/fr/docs/Web/API/BlobBuilder) est maintenant implémenté, même si pour l'instant il est préfixé (vous devez utiliser `MozBlobBuilder`).
-- [`document.height`](/fr/docs/Web/API/Document/height) et [`document.width`](/fr/docs/Web/API/Document/width) ont été supprimées. [bug 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
+- [`document.height`](/fr/docs/Web/API/Document/height) et [`document.width`](/fr/docs/Web/API/Document/width) ont été supprimées. [bug 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
 - Les propriétés `entities` et `notations` de l'objet [`DocumentType`](/fr/docs/Web/API/DocumentType), qui n'ont jamais été implémentées et renvoyées toujours `null`, ont été retirées, car elles ont également été enlevées de la spécification.
 - L'interface `DOMConfiguration` et la propriété `document.domConfig` qu'elle utilisait ont été supprimées, elles n'ont jamais été supportées et ont depuis été retirées de la spécification DOM.
 - L'évènement `hashchange` comprend désormais [les champs `newURL` et `oldURL`](/fr/docs/DOM/window.onhashchange#The_hashchange_event).
@@ -109,7 +109,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 - La fonction `EventTarget` de la méthode [`addEventListener()`](/fr/docs/XPCOM_Interface_Reference/nsIDOMEventTarget) est désormais facultative, car ça l'est dans WebKit (et aussi dans la dernière version de la spécification).
 - La propriété `mozResponseArrayBuffer` de l'objet [`XMLHttpRequest`](/fr/docs/XMLHttpRequest) a été remplacé par les propriétés `responseType` et `response`.
 - La propriété [`element.dataset`](/fr/docs/Web/API/Element/dataset) a été ajoutée à l'interface [`HTMLElement`](/fr/docs/DOM/HTMLElement) permettant d'accéder aux attributs globaux [`data-*` global attributes](/fr/docs/HTML/Global_attributes#attr-data-*) d'un élément.
-- L'interface [`CustomEvent`](/fr/docs/Web/API/CustomEvent) a été implémentée. (voir [bug 427537](https://bugzilla.mozilla.org/show_bug.cgi?id=427537))
+- L'interface [`CustomEvent`](/fr/docs/Web/API/CustomEvent) a été implémentée. (voir [bug 427537](https://bugzilla.mozilla.org/show_bug.cgi?id=427537))
 - Pour des raisons de sécurité, les URIs `data:` et `javascript:` n'héritent plus de l'environnment de sécurité de la page active lorsque l'utilisateur les saisit dans la barre d'adresse, mais un nouvel environnment de sécurité vide est créé. Par exemple, le script chargé en entrant l'URI `javascript:` dans la barre d'adresse n'a plus accès aux méthodes DOM et similaires. Ces URIs continueront à travailler comme avant lorsqu'elles sont utilisées par le script.
 
 ### JavaScript
@@ -147,7 +147,7 @@ Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit 
 - Le support des microrésumés a été enlevé, ils n'ont jamais été très utilisés, n'étaient pas très détectable et continuer leur support été d'apporter des améliorations à Places (favoris et historique) à l'architecture difficile.
 - WebGL supporte maintenant l'extension [`OES_texture_float`](http://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt).
 - Le nouvel outil [Ardoise](/fr/docs/Outils/Ardoise) offre un endroit pratique pour expérimenter du code JavaScript.
-- La méthode `console.trace()` a été ajouté à [ConsoleAPI](/fr/docs/Tools/Web_Console) (voir [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
+- La méthode `console.trace()` a été ajouté à [ConsoleAPI](/fr/docs/Tools/Web_Console) (voir [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 
@@ -199,29 +199,29 @@ Pour des conseils utiles sur la mise à jour des extensions pour Firefox 6, voir
 - [`nsIStructuredCloneContainer`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStructuredCloneContainer)
   - : Un conteneur pour les objets qui ont été sérialisé à l'aide de [l'algorithme de clonage structuré](/en/HTML/Structured_clones).
 - [`nsITelemetry`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITelemetry)
-  - : Implémentation du support de la télémétrie permettant d'enregistrer des données de télémétrie pour être utilisé pour présenter des histogrammes à des fins de suivi des performances. Voir [bug 649502](https://bugzilla.mozilla.org/show_bug.cgi?id=649502) et [bug 585196](https://bugzilla.mozilla.org/show_bug.cgi?id=585196).
+  - : Implémentation du support de la télémétrie permettant d'enregistrer des données de télémétrie pour être utilisé pour présenter des histogrammes à des fins de suivi des performances. Voir [bug 649502](https://bugzilla.mozilla.org/show_bug.cgi?id=649502) et [bug 585196](https://bugzilla.mozilla.org/show_bug.cgi?id=585196).
 - [`nsITimedChannel`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimedChannel)
-  - : Voir [bug 576006](https://bugzilla.mozilla.org/show_bug.cgi?id=576006).
+  - : Voir [bug 576006](https://bugzilla.mozilla.org/show_bug.cgi?id=576006).
 - [`nsIWebSocketListener`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebSocketListener)
-  - : Voir [bug 640003](https://bugzilla.mozilla.org/show_bug.cgi?id=640003).
+  - : Voir [bug 640003](https://bugzilla.mozilla.org/show_bug.cgi?id=640003).
 - [`nsIWebSocketProtocol`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebSocketProtocol)
-  - : Voir [bug 640003](https://bugzilla.mozilla.org/show_bug.cgi?id=640003).
+  - : Voir [bug 640003](https://bugzilla.mozilla.org/show_bug.cgi?id=640003).
 
 #### Interfaces supprimées
 
 Les interfaces suivantes ont été supprimées car elles n'étaient plus indispensables :
 
-- `nsIDOMDocumentEvent` (voir [bug 655517](https://bugzilla.mozilla.org/show_bug.cgi?id=655517))
-- `nsIDOMDocumentTraversal` (voir [bug 655514](https://bugzilla.mozilla.org/show_bug.cgi?id=655514))
-- `nsIDOMDocumentRange` (voir [bug 655513](https://bugzilla.mozilla.org/show_bug.cgi?id=655513))
-- `IWeaveCrypto` (voir [bug 651596](https://bugzilla.mozilla.org/show_bug.cgi?id=651596))
-- `nsIDOM3DocumentEvent` (voir [bug 481863](https://bugzilla.mozilla.org/show_bug.cgi?id=481863))
+- `nsIDOMDocumentEvent` (voir [bug 655517](https://bugzilla.mozilla.org/show_bug.cgi?id=655517))
+- `nsIDOMDocumentTraversal` (voir [bug 655514](https://bugzilla.mozilla.org/show_bug.cgi?id=655514))
+- `nsIDOMDocumentRange` (voir [bug 655513](https://bugzilla.mozilla.org/show_bug.cgi?id=655513))
+- `IWeaveCrypto` (voir [bug 651596](https://bugzilla.mozilla.org/show_bug.cgi?id=651596))
+- `nsIDOM3DocumentEvent` (voir [bug 481863](https://bugzilla.mozilla.org/show_bug.cgi?id=481863))
 - `nsIDOMAbstractView`
 - `nsILiveTitleNotificationSubject`
-- `nsIPlugin` (voir [bug 637253](https://bugzilla.mozilla.org/show_bug.cgi?id=637253))
-- `nsIPluginInstance` (voir [bug 637253](https://bugzilla.mozilla.org/show_bug.cgi?id=637253))
-- `nsIHTMLEditRules` (voir [bug 633750](https://bugzilla.mozilla.org/show_bug.cgi?id=633750))
-- [`nsIXSLTProcessorObsolete`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXSLTProcessorObsolete) (voir [bug 649534](https://bugzilla.mozilla.org/show_bug.cgi?id=649534))
+- `nsIPlugin` (voir [bug 637253](https://bugzilla.mozilla.org/show_bug.cgi?id=637253))
+- `nsIPluginInstance` (voir [bug 637253](https://bugzilla.mozilla.org/show_bug.cgi?id=637253))
+- `nsIHTMLEditRules` (voir [bug 633750](https://bugzilla.mozilla.org/show_bug.cgi?id=633750))
+- [`nsIXSLTProcessorObsolete`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXSLTProcessorObsolete) (voir [bug 649534](https://bugzilla.mozilla.org/show_bug.cgi?id=649534))
 
 ### Autres changements
 

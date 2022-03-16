@@ -16,7 +16,7 @@ Mais au bout du compte, la plus grande partie du contenu des documents XML devra
 
 Actuellement, Gecko (le moteur de rendu de Mozilla et Firefox) supporte deux formats de feuilles de styles XML. Pour le contrôle basique de l'apparence -- fontes, couleurs, position, etc. -- Gecko utilise [CSS](fr/CSS), tiré du [DHTML](fr/DHTML). Toutes les spécifications CSS1 et la majorité des CSS2 sont supportées, le support du tout récent CSS3 est en développement. Pour plus d'information à propos de CSS, consultez le site [Eric Meyer's CSS pages](http://www.meyerweb.com/eric/css/).
 
-Nous nous intéressons ici au second type de feuilles de styles supporté par Gecko : la feuille de style XSLT. XSLT signifie _eXtensible Stylesheet Language/Transform_. XSLT permet à un concepteur de feuilles de styles de transformer un document XML de départ de deux façons significatives : manipuler et réordonner le contenu (une réorganisation complète de celui-ci est possible si on le désire), et le transférer dans un autre format (dans le cas de Mozilla, on se concentre sur sa conversion à la volée en HTML pour permettre son affichage dans le navigateur).
+Nous nous intéressons ici au second type de feuilles de styles supporté par Gecko&nbsp;: la feuille de style XSLT. XSLT signifie _eXtensible Stylesheet Language/Transform_. XSLT permet à un concepteur de feuilles de styles de transformer un document XML de départ de deux façons significatives&nbsp;: manipuler et réordonner le contenu (une réorganisation complète de celui-ci est possible si on le désire), et le transférer dans un autre format (dans le cas de Mozilla, on se concentre sur sa conversion à la volée en HTML pour permettre son affichage dans le navigateur).
 
 ### Référence XSLT/XPath
 

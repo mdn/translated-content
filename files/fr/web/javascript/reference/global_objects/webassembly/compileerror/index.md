@@ -37,7 +37,7 @@ _Le constructeur `CompileError` ne possède aucune propriété propre. En revanc
 - `WebAssembly.CompileError.prototype.constructor`
   - : Définit la fonction qui crée le prototype d'une instance.
 - {{jsxref("Error.prototype.message", "WebAssembly.CompileError.prototype.message")}}
-  - : Le message qui décrit l'erreur. Bien qu'ECMA-262 indique que  l'instance devrait fournir sa propre propriété `message`, pour [SpiderMonkey](/fr/docs/SpiderMonkey), celle-ci est héritée depuis {{jsxref("Error.prototype.message")}}.
+  - : Le message qui décrit l'erreur. Bien qu'ECMA-262 indique que l'instance devrait fournir sa propre propriété `message`, pour [SpiderMonkey](/fr/docs/SpiderMonkey), celle-ci est héritée depuis {{jsxref("Error.prototype.message")}}.
 - {{jsxref("Error.prototype.name", "WebAssembly.CompileError.prototype.name")}}
   - : Le nom de l'erreur. Cette propriété est héritée depuis {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "WebAssembly.CompileError.prototype.fileName")}}

@@ -22,43 +22,43 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="-3 0 33 10" xmlns="http://www.w3.org/2000/svg">
-  <!-- Pas de tiret -->
-  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
+  <!-- Pas de tiret -->
+  <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
-  <!-- Pas de décalage -->
-  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
-        stroke-dasharray="3 1" />
+  <!-- Pas de décalage -->
+  <line x1="0" y1="3" x2="30" y2="3" stroke="black"
+        stroke-dasharray="3 1" />
 
-  <!--
-  Le début des tirets est décalé
+  <!--
+  Le début des tirets est décalé
   de 3 unités vers la gauche
-  -->
-  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="3" />
+  -->
+  <line x1="0" y1="5" x2="30" y2="5" stroke="black"
+        stroke-dasharray="3 1"
+        stroke-dashoffset="3" />
 
-  <!--
-  Le début des tirets est décalé
-  de 3 unités vers la droite (-3)
-  -->
-  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="-3" />
+  <!--
+  Le début des tirets est décalé
+  de 3 unités vers la droite (-3)
+  -->
+  <line x1="0" y1="7" x2="30" y2="7" stroke="black"
+        stroke-dasharray="3 1"
+        stroke-dashoffset="-3" />
 
-  <!--
+  <!--
   Le début des tirets est décalé
   de 1 unité vers la gauche
   ce qui affiche la même chose que l'exemple précédent
-  -->
-  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
-        stroke-dasharray="3 1"
-        stroke-dashoffset="1" />
+  -->
+  <line x1="0" y1="9" x2="30" y2="9" stroke="black"
+        stroke-dasharray="3 1"
+        stroke-dashoffset="1" />
 
-  <!--
-  Lignes rouges pour indiquer la position
-  de départ des tirets
-  -->
-  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" />
+  <!--
+  Lignes rouges pour indiquer la position
+  de départ des tirets
+  -->
+  <path d="M0,5 h-3 M0,7 h3 M0,9 h-1" stroke="rgba(255,0,0,.5)" />
 </svg>
 ```
 

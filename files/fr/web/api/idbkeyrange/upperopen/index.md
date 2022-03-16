@@ -55,7 +55,7 @@ function displayData() {
 
 | Spécification                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-upperOpen', 'upperOpen')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-upperOpen', 'upperOpen')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité avec les navigateurs
 

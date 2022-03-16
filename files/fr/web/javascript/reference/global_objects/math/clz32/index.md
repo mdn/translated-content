@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Math/clz32
 ---
 {{JSRef}}
 
-La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la représentation binaire sur 32 bits d'un nombre.
+La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la représentation binaire sur 32 bits d'un nombre.
 
 {{EmbedInteractiveExample("pages/js/math-clz32.html")}}
 
@@ -32,13 +32,13 @@ Le nombre de bits à zéro en tête de la représentation binaire sur 32 bits du
 
 ## Description
 
-"`clz32`" est un raccourci pour CountLeadingZeroes32 (en français, « compter les zéros de tête »).
+"`clz32`" est un raccourci pour CountLeadingZeroes32 (en français, « compter les zéros de tête&nbsp;»).
 
 Si `x` n'est pas un nombre, il sera d'abord converti en nombre puis converti en un entier non signé sur 32 bits.
 
 Si l'entier non signé sur 32 bits résultant vaut `0`, la fonction renverra `32`, car tous les bits valent `0`.
 
-Cette fonction est particulièrement utile aux systèmes qui compilent du code JavaScript, comme [Emscripten](/fr/docs/Emscripten).
+Cette fonction est particulièrement utile aux systèmes qui compilent du code JavaScript, comme [Emscripten](/fr/docs/Emscripten).
 
 ## Exemples
 

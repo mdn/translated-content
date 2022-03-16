@@ -37,7 +37,7 @@ Dans les exemples suivants, on utilisera la fonction utilitaire JavaScript `getR
 - Nettoie le buffer avec `clear`
 - Applique le contexte initialisé
 
-S'il y a une erreur, la fonction affiche un message d'erreur et renvoie `null`.
+S'il y a une erreur, la fonction affiche un message d'erreur et renvoie `null`.
 
 Enfin, tout le code JavaScript est exécuté par une fonction immédiatement appelée (une technique plutôt commune avec JavaScript). La déclaration de la fonction et son invocation seront cachées.
 

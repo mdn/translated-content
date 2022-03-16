@@ -40,7 +40,7 @@ L'interface **`BiquadFilterNode`** représente un simple filtre de bas niveau, c
 ## Constructeur
 
 - {{domxref("BiquadFilterNode.BiquadFilterNode", "BiquadFilterNode()")}}
-  - : Crée une nouvelle instance d'un objet  `BiquadFilterNode`.
+  - : Crée une nouvelle instance d'un objet  `BiquadFilterNode`.
 
 ## Propriétés
 
@@ -73,13 +73,13 @@ _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
         <tr>
           <th scope="row"><code>lowpass</code></th>
           <td>
-            Filtre standard passe-bas résonnant de second ordre avec atténuation de
+            Filtre standard passe-bas résonnant de second ordre avec atténuation de
             12dB/octave. Les fréquences inférieures au seuil sont inchangées; les
             fréquences supérieures sont atténuées.
           </td>
           <td>La fréquence de coupure</td>
           <td>
-            Indique comment la fréquence a culminé autour de la coupure. Plus la
+            Indique comment la fréquence a culminé autour de la coupure. Plus la
             valeur est élevée, plus le point culminant est haut
           </td>
           <td>Non utilisé</td>
@@ -87,13 +87,13 @@ _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
         <tr>
           <th scope="row"><code>highpass</code></th>
           <td>
-            Filtre standard passe-haut résonnant de second ordre avec atténuation de
+            Filtre standard passe-haut résonnant de second ordre avec atténuation de
             12dB/octave. Les fréquences inférieures à la fréquence de coupure sont
             atténuées, les fréquences supérieures sont inchangées.
           </td>
           <td>La fréquence de coupure</td>
           <td>
-            Indique comment la fréquence a culminé autour de la coupure. Plus la
+            Indique comment la fréquence a culminé autour de la coupure. Plus la
             valeur est élevée, plus le point culminant est haut
           </td>
           <td>Non utilisé</td>
@@ -101,13 +101,13 @@ _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
         <tr>
           <th scope="row"><code>bandpass</code></th>
           <td>
-            Filtre standard passe-bande de second ordre. Les fréquences en dehors de
+            Filtre standard passe-bande de second ordre. Les fréquences en dehors de
             la plage donnée de fréquences sont atténués, et les fréquences à
             l'intérieur sont inchangées.
           </td>
           <td>Le centre de la gamme de fréquences.</td>
           <td>
-            Contrôle la largeur de la bande de fréquences. Plus Q est grande, plus
+            Contrôle la largeur de la bande de fréquences. Plus Q est grande, plus
             la bande de fréquences est grande.
           </td>
           <td>Non utilisé</td>
@@ -193,7 +193,7 @@ _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
           </td>
           <td>
             Contrôle finement la transition à la fréquence moyenne. Plus ce
-            paramètre est grand, plus la transition est fine et large.
+            paramètre est grand, plus la transition est fine et large.
           </td>
           <td>Non utilisé</td>
         </tr>
@@ -205,7 +205,7 @@ _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
 _Hérite des propriétés de son parent,_ _{{domxref("AudioNode")}}_.
 
 - {{domxref("BiquadFilterNode.getFrequencyResponse()")}}
-  - : A partir des valeurs courantes des paramètres de filtre, calcule la fréquence de réponse pour des fréquences spécifiées dans le tableau de fréquences _frequencyHz_ passé en paramètre.
+  - : A partir des valeurs courantes des paramètres de filtre, calcule la fréquence de réponse pour des fréquences spécifiées dans le tableau de fréquences _frequencyHz_ passé en paramètre.
 
 ## Exemples
 

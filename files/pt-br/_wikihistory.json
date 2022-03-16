@@ -2345,12 +2345,6 @@
       "GiovanniHD201E"
     ]
   },
-  "Learn/Release_notes": {
-    "modified": "2020-10-15T20:54:28.940Z",
-    "contributors": [
-      "3ltons"
-    ]
-  },
   "Learn/Server-side": {
     "modified": "2020-07-16T22:36:01.419Z",
     "contributors": [
@@ -16183,6 +16177,12 @@
     "contributors": [
       "alexalannunes",
       "AlanCezarAraujo"
+    ]
+  },
+  "conflicting/Learn": {
+    "modified": "2020-10-15T20:54:28.940Z",
+    "contributors": [
+      "3ltons"
     ]
   },
   "conflicting/Learn/CSS/Building_blocks/Cascade_and_inheritance": {

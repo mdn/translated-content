@@ -23,7 +23,7 @@ Aucun.
 ### Attributs optionnels
 
 - `terminate`
-  - : Défini à `yes`, il indique que l'exécution doit être interrompue. La valeur par défaut est `no` : dans ce cas, le message est envoyé et l'exécution se poursuit.
+  - : Défini à `yes`, il indique que l'exécution doit être interrompue. La valeur par défaut est `no`&nbsp;: dans ce cas, le message est envoyé et l'exécution se poursuit.
 
 ### Type
 

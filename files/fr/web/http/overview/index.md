@@ -29,7 +29,7 @@ Chaque requête individuelle est envoyée au serveur, qui la traite et fournit u
 
 En réalité, il y a plus d'un ordinateur entre un navigateur et le serveur qui traite la requête : il y a les routeurs, les modems et bien plus. Grâce à la construction en couche du Web, ces intermédiaires sont cachés dans les couches réseau et transport. HTTP est bâti sur la couche applicative. Bien qu'elles puissent s'avérer importantes lorsqu'il s'agit de diagnostiquer des problèmes réseau, les couches inférieures ne sont pas pertinentes ici pour décrire HTTP.
 
-### Le client : l'agent  utilisateur
+### Le client : l'agent utilisateur
 
 L'_agent utilisateur_ correspond à n'importe quel outil qui agit pour le compte de l'utilisateur. Ce rôle est principalement rempli par le navigateur web ; les exceptions étant les programmes utilisés par des ingénieurs et développeurs web pour le débogage de leurs applications.
 
@@ -47,7 +47,7 @@ D'une part, un serveur n'est pas nécessairement une machine unique et d'autre p
 
 ### Les _proxys_
 
-Entre le navigateur Web et le serveur, de nombreux ordinateurs et machines relaient les messages HTTP. En raison de la structure en couches superposées des technologies web, la plupart des opérations  au niveau du transport, du réseau ou au niveau physique sont transparents pour la couche HTTP, ce qui peut avoir un impact significatif sur les performances. Les opérations au niveau de la couche applicative sont généralement appelées **proxy**. Ceux-ci peuvent être transparents ou non (en changeant les requêtes qui passent par eux), et peuvent effectuer de nombreuses tâches :
+Entre le navigateur Web et le serveur, de nombreux ordinateurs et machines relaient les messages HTTP. En raison de la structure en couches superposées des technologies web, la plupart des opérations au niveau du transport, du réseau ou au niveau physique sont transparents pour la couche HTTP, ce qui peut avoir un impact significatif sur les performances. Les opérations au niveau de la couche applicative sont généralement appelées **proxy**. Ceux-ci peuvent être transparents ou non (en changeant les requêtes qui passent par eux), et peuvent effectuer de nombreuses tâches :
 
 - mettre en cache (le cache peut alors être public ou privé, comme le cache du navigateur)
 - filtrer (comme un antivirus, contrôle parental…)

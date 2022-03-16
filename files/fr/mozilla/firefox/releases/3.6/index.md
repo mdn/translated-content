@@ -63,11 +63,11 @@ Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) 
 
 #### Autres changements CSS
 
-- L'unité de longueur [`rem`](/fr/docs/CSS/longueur) de [CSS3 Values and Units](http://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
-- [`image-rendering`](/fr/docs/Web/CSS/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
-- [`text-align`](/fr/docs/Web/CSS/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
+- L'unité de longueur [`rem`](/fr/docs/CSS/longueur) de [CSS3 Values and Units](http://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
+- [`image-rendering`](/fr/docs/Web/CSS/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
+- [`text-align`](/fr/docs/Web/CSS/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
 - Les changements DOM sur des éléments utilisant les types de [`display`](/fr/docs/Web/CSS/display) table fonctionnent beaucoup mieux.
-- Ajout de [`:-moz-locale-dir(ltr)`](</fr/docs/Web/CSS/:-moz-locale-dir(ltr)>) et [`:-moz-locale-dir(rtl)`](</fr/docs/Web/CSS/:-moz-locale-dir(rtl)>) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
+- Ajout de [`:-moz-locale-dir(ltr)`](</fr/docs/Web/CSS/:-moz-locale-dir(ltr)>) et [`:-moz-locale-dir(rtl)`](</fr/docs/Web/CSS/:-moz-locale-dir(rtl)>) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
 - Ajout de la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) correspondant aux éléments [`<input>`](/fr/docs/Web/HTML/Element/input) `checkbox` dont l'attribut `indeterminate` est `true`.
 - Les plugins fenêtrés ne sont plus affichés par la propriété CSS tranforms, car ils ne peuvent pas être correctement tranformés par le compositeur.
 
@@ -98,7 +98,7 @@ Gecko 1.9.2 introduit JavaScript 1.8.2, qui ajoute un certain nombre de fonction
 - Glisser-déposer de fichiers
   - : L'objet [`DataTransfer`](/fr/docs/DragDrop/DataTransfer) fournit à présent aux observateurs de glisser-déposer une liste des fichiers glissés.
 - Vérification pour voir si un élément correspond à un sélecteur CSS
-  - : La nouvelle méthode `element.mozMatchesSelector` permet de déterminer si un élément correspond bien à un sélecteur CSS. Voir [bug 518003](https://bugzilla.mozilla.org/show_bug.cgi?id=518003).
+  - : La nouvelle méthode `element.mozMatchesSelector` permet de déterminer si un élément correspond bien à un sélecteur CSS. Voir [bug 518003](https://bugzilla.mozilla.org/show_bug.cgi?id=518003).
 - [Dispositf de détection de l'orientation](/fr/docs/Detecting_device_orientation)
   - : Le contenu peut à présent détecter l'orientation de l'appareil s'il dispose d'un accéléromètre, à l'aide de l'évènement `MozOrientation`. Firefox 3.6 gère notamment l'accéléromètre des ordinateurs portables Mac.
 - [Détection des changements de largeur et hauteur d'un document](/fr/docs/Mozilla_event_reference/MozScrolledAreaChanged)
@@ -106,12 +106,12 @@ Gecko 1.9.2 introduit JavaScript 1.8.2, qui ajoute un certain nombre de fonction
 
 <!---->
 
-- La méthode `getBoxObjectFor()` a été **supprimée**, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir [bug 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571). La bibliothèque [MooTools](http://mootools.net/) qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.
+- La méthode `getBoxObjectFor()` a été **supprimée**, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir [bug 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571). La bibliothèque [MooTools](http://mootools.net/) qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.
 - Les nouvelles propriétés [`mozInnerScreenX`](/fr/docs/DOM/window.mozInnerScreenX) et [`mozInnerScreenY`](/fr/docs/DOM/window.mozInnerScreenY) sur les objets DOM window on été ajoutés ; ils renvoient les coordonnées à l'écran du coin supérieur gauche de la zone de visualisation de la fenêtre.
 - La nouvelle propriété `mozScreenPixelsPerCSSPixel` de [`nsIDOMWindowUtils`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils) uniquement accessible depuis le chrome, fournit un facteur de conversion entre les pixels CSS et les pixels à l'écran ; cette valeur peut varier selon le niveau de zoom du contenu.
-- Lorsque l'identifiant de fragment de document de l'URL de la page change (la partie après le caractère « # » (dièse)), un nouvel évènement `hashchange` est envoyé à la page. Consultez [window.onhashchange](/fr/docs/DOM/window.onhashchange) pour plus d'informations. [bug 385434](https://bugzilla.mozilla.org/show_bug.cgi?id=385434)
-- L'attribut [`document.readyState`](/fr/docs/DOM/document.readyState) est désormais supporté. [bug 347174](https://bugzilla.mozilla.org/show_bug.cgi?id=347174 'FIXED: Implement document.readystate == "complete"')
-- Gestion de l'attribut HTML5 [`element.classList`](/fr/docs/DOM/element.classList) pour permettre une gestion plus aisée de l'attribut class. [bug 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257)
+- Lorsque l'identifiant de fragment de document de l'URL de la page change (la partie après le caractère « # » (dièse)), un nouvel évènement `hashchange` est envoyé à la page. Consultez [window.onhashchange](/fr/docs/DOM/window.onhashchange) pour plus d'informations. [bug 385434](https://bugzilla.mozilla.org/show_bug.cgi?id=385434)
+- L'attribut [`document.readyState`](/fr/docs/DOM/document.readyState) est désormais supporté. [bug 347174](https://bugzilla.mozilla.org/show_bug.cgi?id=347174 'FIXED: Implement document.readystate == "complete"')
+- Gestion de l'attribut HTML5 [`element.classList`](/fr/docs/DOM/element.classList) pour permettre une gestion plus aisée de l'attribut class. [bug 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257)
 - `localName` et `namespaceURI` dans les documents HTML se comportent à présent comme dans les documents XHTML : `localName` est renvoyé en minuscules et la propriété `namespaceURI` pour les éléments HTML est `"http://www.w3.org/1999/xhtml"`.
 - [`element.getElementsByTagNameNS`](/fr/docs/DOM/element.getElementsByTagNameNS) son argument n'est plus en minuscules, alors en lettres majuscules ASCII dans l'argument établit des chaînes contre des éléments HTML échouent. Cela est vrai aussi pour [`document.getElementsByTagNameNS`](/fr/docs/DOM/document.getElementsByTagNameNS).
 - Ajout de la gestion des adresses dans la géolocalisation via l'interface [`nsIDOMGeoPositionAddress`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress) et d'un nouveau champ dans [`nsIDOMGeoPosition`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition).
@@ -147,9 +147,9 @@ Si vous êtes un développeur d'extensions, vous devriez commencer par lire [Upd
 - [Énumération des propriétés d'une requête](/fr/docs/mozIStorageStatementParams#Enumeration_of_properties)
   - : Vous pouvez maintenant utiliser [`for...in`](/fr/docs/Guide_JavaScript_1.5/Instructions_de_manipulation_d%27objets#L%27instruction_for...in) pour énumérer toutes les propriétés d'une déclaration.
 - mozIStorageStatement's getParameterIndex a changé de comportement entre Firefox 3.5 et 3.6.
-  - : Voir [bug 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) pour plus de détails.
+  - : Voir [bug 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) pour plus de détails.
 - Liaison asynchrone de plusieurs ensembles de paramètres pour exécution d'une requête.
-  - : Voir [bug 490085](https://bugzilla.mozilla.org/show_bug.cgi?id=490085) pour plus de détails.
+  - : Voir [bug 490085](https://bugzilla.mozilla.org/show_bug.cgi?id=490085) pour plus de détails.
 
 ### Préférences
 
@@ -165,13 +165,13 @@ Voir [Updating themes for Firefox 3.6](/fr/docs/Updating_themes_for_Firefox_3.6)
 ### Divers
 
 - Firefox n'a plus la charge des modules tiers installé dans son répertoire des modules internes. Cela contribue à assurer la stabilité en empêchant des composants tiers buggés d'être exécuté. Les développeurs qui installent des composants de cette façon doivent [refaire leurs modules sous forme de paquets XPI](/fr/docs/Migrating_raw_components_to_add-ons) afin qu'ils puissent être installés normalement.
-- `contents.rdf` n'est plus pris en charge pour l'enregistrement chrome dans les extensions. Vous devez maintenant utiliser le fichier [`chrome.manifest`](/fr/docs/Install_Manifests). Voir [bug 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008).
-- La barre de menu peut être cachée automatiquement. Voir [bug 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256).
-- Ajout du support de l'attribut `container-live-role` aux objets. Voir [bug 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829).
-- Suppression de la liaison `tabs-closebutton`. Voir [bug 500971](https://bugzilla.mozilla.org/show_bug.cgi?id=500971).
-- Ajout du support de `nsISound` pour jouer des sons en fonction des évènements qui ont eu lieu. Voir [bug 502799](https://bugzilla.mozilla.org/show_bug.cgi?id=502799).
-- La syntaxe pour les méthodes de [`nsITreeView`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView) : [`nsITreeView.canDrop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()>) et [`nsITreeView.drop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#drop()>), a changé pour supporter la nouvelle API glisser & déposer introduite dans Gecko 1.9. Voir [bug 455590](https://bugzilla.mozilla.org/show_bug.cgi?id=455590).
-- Ajout du support pour aligner le curseur de la souris sur le bouton par défaut de la boîte de dialogue ou l'assistant de Windows, voir [bug 76053](https://bugzilla.mozilla.org/show_bug.cgi?id=76053 'FIXED: Windows mouse integration: "Snap to default button in dialog boxes"'). Cela est traitée automatiquement par la boîte de dialogue et l'assistant. Mais si une application XUL crée une fenêtre en utilisant l'élément `window` et qu'il a un bouton par défaut, il doit appeler [`nsIDOMChromeWindow.notifyDefaultButtonLoaded()`](</fr/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()>) dans le gestionnaire d'événements onload de la fenêtre.
+- `contents.rdf` n'est plus pris en charge pour l'enregistrement chrome dans les extensions. Vous devez maintenant utiliser le fichier [`chrome.manifest`](/fr/docs/Install_Manifests). Voir [bug 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008).
+- La barre de menu peut être cachée automatiquement. Voir [bug 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256).
+- Ajout du support de l'attribut `container-live-role` aux objets. Voir [bug 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829).
+- Suppression de la liaison `tabs-closebutton`. Voir [bug 500971](https://bugzilla.mozilla.org/show_bug.cgi?id=500971).
+- Ajout du support de `nsISound` pour jouer des sons en fonction des évènements qui ont eu lieu. Voir [bug 502799](https://bugzilla.mozilla.org/show_bug.cgi?id=502799).
+- La syntaxe pour les méthodes de [`nsITreeView`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView) : [`nsITreeView.canDrop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()>) et [`nsITreeView.drop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#drop()>), a changé pour supporter la nouvelle API glisser & déposer introduite dans Gecko 1.9. Voir [bug 455590](https://bugzilla.mozilla.org/show_bug.cgi?id=455590).
+- Ajout du support pour aligner le curseur de la souris sur le bouton par défaut de la boîte de dialogue ou l'assistant de Windows, voir [bug 76053](https://bugzilla.mozilla.org/show_bug.cgi?id=76053 'FIXED: Windows mouse integration: "Snap to default button in dialog boxes"'). Cela est traitée automatiquement par la boîte de dialogue et l'assistant. Mais si une application XUL crée une fenêtre en utilisant l'élément `window` et qu'il a un bouton par défaut, il doit appeler [`nsIDOMChromeWindow.notifyDefaultButtonLoaded()`](</fr/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()>) dans le gestionnaire d'événements onload de la fenêtre.
 - Pour l'interface [`nsILocalFileMac`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFileMac), deux méthodes ont étés retirées : `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
 - Le nouveau module de code [`NetUtils.jsm`](/fr/docs/JavaScript_code_modules/NetUtil.jsm) apporte une méthode facile à utiliser pour copier les données de manière asynchrone à partir d'un flux d'entrée vers un flux de sortie.
 - Le nouveau module de code [`openLocationLastURL.jsm`](/fr/docs/JavaScript_code_modules/openLocationLastURL.jsm), facilite la lecture et la modification de la valeur de l'URL gardée en mémoire de la boîte de dialogue "Ouvrir le fichier", tout en prenant bien en compte le mode de navigation privée.
@@ -234,7 +234,7 @@ Les modifications suivantes ont été faites :
 
 ### Changements dans l'accessibilitée du code
 
-- L'[évènement d'accessibilité](/fr/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) `EVENT_REORDER` est maintenant envoyé quand les enfants de `frames` et d'`iframes` changent, ainsi que lors de la modification du document principal des enfants. Voir [bug 420845](https://bugzilla.mozilla.org/show_bug.cgi?id=420845).
+- L'[évènement d'accessibilité](/fr/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) `EVENT_REORDER` est maintenant envoyé quand les enfants de `frames` et d'`iframes` changent, ainsi que lors de la modification du document principal des enfants. Voir [bug 420845](https://bugzilla.mozilla.org/show_bug.cgi?id=420845).
 - Désormais toute sélection en cours est correctement supprimée avant de sélectionner une ligne spécifique.
 
 ## Voir également

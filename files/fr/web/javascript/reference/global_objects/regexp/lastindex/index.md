@@ -57,9 +57,9 @@ Renvoie `["", undefined]`, un tableau dont le premier élément est la chaîne v
 | Spécification                                                                                                | Statut                       | Commentaires                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. JavaScript 1.5 : `lastIndex` est une propriété d'une instance de `RegExp` et n'est pas une propriété directe de `RegExp`. |
-| {{SpecName('ES5.1', '#sec-15.10.7.5', 'RegExp.lastIndex')}}                             | {{Spec2('ES5.1')}}     |                                                                                                                                                |
-| {{SpecName('ES6', '#sec-properties-of-regexp-instances', 'RegExp.lastIndex')}}     | {{Spec2('ES6')}}         |                                                                                                                                                |
-| {{SpecName('ESDraft', '#sec-properties-of-regexp-instances', 'RegExp.lastIndex')}} | {{Spec2('ESDraft')}} |                                                                                                                                                |
+| {{SpecName('ES5.1', '#sec-15.10.7.5', 'RegExp.lastIndex')}}                             | {{Spec2('ES5.1')}}     |                                                                                                                                                |
+| {{SpecName('ES6', '#sec-properties-of-regexp-instances', 'RegExp.lastIndex')}}     | {{Spec2('ES6')}}         |                                                                                                                                                |
+| {{SpecName('ESDraft', '#sec-properties-of-regexp-instances', 'RegExp.lastIndex')}} | {{Spec2('ESDraft')}} |                                                                                                                                                |
 
 ## Compatibilité des navigateurs
 

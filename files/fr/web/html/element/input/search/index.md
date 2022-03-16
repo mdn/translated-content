@@ -376,7 +376,7 @@ Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [
         {{htmlattrxref("autocomplete", "input")}},
         {{htmlattrxref("list", "input")}},
         {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("required", "input")}}, {{htmlattrxref("size", "input")}}.
+        {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("required", "input")}}, {{htmlattrxref("size", "input")}}.
       </td>
     </tr>
     <tr>

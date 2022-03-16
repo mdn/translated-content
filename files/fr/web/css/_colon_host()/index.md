@@ -11,7 +11,7 @@ translation_of: Web/CSS/:host()
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host()`** permet de sélectionner l'hôte du _shadow DOM_ contenant le CSS à utiliser, uniquement si le sélecteur passé en argument correspond à l'élément hôte.
 
-Le scénario principal pour utiliser cette fonction consiste à vouloir cibler une certaine classe d'éléments personnalisés : pour cela, on passera la classe comme argument de la fonction `:host()`. Cette fonction ne peut pas être utilisée avec un sélecteur de descendant, pour cela il faudra utiliser  {{cssxref(":host-context()")}}.
+Le scénario principal pour utiliser cette fonction consiste à vouloir cibler une certaine classe d'éléments personnalisés : pour cela, on passera la classe comme argument de la fonction `:host()`. Cette fonction ne peut pas être utilisée avec un sélecteur de descendant, pour cela il faudra utiliser  {{cssxref(":host-context()")}}.
 
 > **Note :** Cette fonction n'a aucun effet si elle est utilisée en dehors d'un _shadow DOM_.
 
@@ -19,7 +19,7 @@ Le scénario principal pour utiliser cette fonction consiste à vouloir cibler u
 /* On cible l'hôte du shadow DOM uniquement s'il
    correspond au sélecteur passé en argument */
 :host(.special-custom-element) {
-  font-weight: bold;
+  font-weight: bold;
 }
 ```
 

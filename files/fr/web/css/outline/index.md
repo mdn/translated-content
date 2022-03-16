@@ -117,7 +117,7 @@ Utiliser la propriété `outline` avec une valeur `0` ou `none` supprimera le st
 
 - {{cssxref(":focus")}}
 - [Comment concevoir des indicateurs de focus utiles et utilisables (en anglais)](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
-- [_Understanding Success Criterion 2.4.7  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html)
+- [_Understanding Success Criterion 2.4.7  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html)
 
 ## Spécifications
 

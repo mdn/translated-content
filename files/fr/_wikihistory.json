@@ -19238,7 +19238,7 @@
       "Arzak656"
     ]
   },
-  "Web/API/SharedWorkerGlobalScope/onconnect": {
+  "Web/API/SharedWorkerGlobalScope/connect_event": {
     "modified": "2020-10-15T22:26:31.419Z",
     "contributors": [
       "Arzak656"

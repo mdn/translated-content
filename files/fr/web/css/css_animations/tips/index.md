@@ -107,7 +107,7 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 Si on retire la propriété {{cssxref("animation-name")}} appliquée à un élément, l'animation s'arrêtera au prochain état défini. Si on souhaite plutôt que l'animation se termine et parvienne à un point d'arrêt, il faudra utiliser une autre approche. Voici quelques pistes :
 
-1.  L'animation doit être la plus isolée possible et on ne doit pas reposer sur  `animation-direction: alternate`. Il faut une animation explicitement séquencée qui parcourt l'ensemble de l'animation en un cycle.
+1.  L'animation doit être la plus isolée possible et on ne doit pas reposer sur  `animation-direction: alternate`. Il faut une animation explicitement séquencée qui parcourt l'ensemble de l'animation en un cycle.
 2.  Utiliser JavaScript pour retirer l'animation lorsque l'évènement `animationiteration` se déclenche.
 
 Ces pistes sont utilisées dans la démonstration suivante :

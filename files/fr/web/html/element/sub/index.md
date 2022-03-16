@@ -140,8 +140,8 @@ Voici certains cas d'utilisation (non exhaustifs) pour `<sub>` :
 
 | Spécification                                                                                                                                        | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;;')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;;')}} | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

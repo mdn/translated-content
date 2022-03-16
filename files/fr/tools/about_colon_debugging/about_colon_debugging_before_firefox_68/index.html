@@ -20,12 +20,12 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 
 <p>Quand about:debugging ouvre, a votre gauche, vous allez voir une barre latérale permettant de basculer entre les deux vues principales: une pour add-ons et une pour workers.</p>
 
-<p>Que system add-ons apparaisse ou non dans la liste sur cette page dépends sur les configurations de préférences de <code>devtools.aboutdebugging.showSystemAddons</code>. Si vous devez voir system add-ons, naviguez ver <code>about:config</code> et assurez-vous que la valeur est réglée sur <code>true</code>.</p>
+<p>Que system add-ons apparaisse ou non dans la liste sur cette page dépends sur les configurations de préférences de <code>devtools.aboutdebugging.showSystemAddons</code>. Si vous devez voir system add-ons, naviguez ver <code>about:config</code> et assurez-vous que la valeur est réglée sur <code>true</code>.</p>
 
 <h2 id="Add-ons">Add-ons</h2>
 
 <div class="note">
-<p>La section Add-ons dans about:debugging soutien seulement les restartless add-ons, en incluent <a href="/en-US/Add-ons/Bootstrapped_extensions">basic bootstrapped extensions</a>, <a href="/en-US/Add-ons/SDK">Add-on SDK add-ons</a>, et <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</p>
+<p>La section Add-ons dans about:debugging soutien seulement les restartless add-ons, en incluent <a href="/en-US/Add-ons/Bootstrapped_extensions">basic bootstrapped extensions</a>, <a href="/en-US/Add-ons/SDK">Add-on SDK add-ons</a>, et <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</p>
 </div>
 
 <p>Cette page vous permet de faire deux choses :</p>
@@ -40,23 +40,23 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 <h3 id="Connecter_l’Add-on_Debugger"><strong>Connecter l’Add-on Debugger</strong></h3>
 
 <div class="note">
-<p>NNotez qu’en ce moment, il est recommandé d’utiliser le Browser Toolbox, pas l’Add-on Debugger, pour le débogage de WebExtensions. Regardez <a href="/en-US/Add-ons/WebExtensions/Debugging">Debugging WebExtensions</a> pour plus de détails.</p>
+<p>NNotez qu’en ce moment, il est recommandé d’utiliser le Browser Toolbox, pas l’Add-on Debugger, pour le débogage de WebExtensions. Regardez <a href="/en-US/Add-ons/WebExtensions/Debugging">Debugging WebExtensions</a> pour plus de détails.</p>
 </div>
 
 <p>La page Add-ons dans about:debugging vous donnes une liste de tous les restartless add-ons qui sont actuellement installés (notez que cette liste pourrait avoir des add-ons inclus qui sont venus préinstaller avec votre Firefox). À côté de chaque entrée est un bouton appeler "Debug".</p>
 
 <p>Si le bouton "Debug" est désactivé, cocher la boite "Enable add-on debugging".</p>
 
-<p>Si vous cliquez "Debug", vous allez voir un dialogue vous demandant d’accepter une connexion entrante. Cliquez "OK", et <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> va commencer dans une fenêtre séparée. Notez que parfois la fenêtre débogueur est cacher par la fenêtre principale de Firefox.</p>
+<p>Si vous cliquez "Debug", vous allez voir un dialogue vous demandant d’accepter une connexion entrante. Cliquez "OK", et <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> va commencer dans une fenêtre séparée. Notez que parfois la fenêtre débogueur est cacher par la fenêtre principale de Firefox.</p>
 
 <p>{{EmbedYouTube("tGGcA3bT3VA")}}</p>
 
-<p>Allez voir la page sure <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> pour toutes les chose vous pouvez faires avec cet outil.</p>
+<p>Allez voir la page sure <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> pour toutes les chose vous pouvez faires avec cet outil.</p>
 
 <div class="note">
-<p><a id="Enabling_add-on_debugging" name="Enabling_add-on_debugging">Le </a>bouton "Enable add-on debugging" fonctionne en allumant les preferences <code>devtools.chrome.enabled</code> et <code>devtools.debugger.remote-enabled</code>. Les deux préférences doivent être true pour activer add-on debugging. Cocher la boite définit les deux préférences sur <code>true</code>, et décocher les définit sur <code>false</code>.</p>
+<p><a id="Enabling_add-on_debugging" name="Enabling_add-on_debugging">Le </a>bouton "Enable add-on debugging" fonctionne en allumant les preferences <code>devtools.chrome.enabled</code> et <code>devtools.debugger.remote-enabled</code>. Les deux préférences doivent être true pour activer add-on debugging. Cocher la boite définit les deux préférences sur <code>true</code>, et décocher les définit sur <code>false</code>.</p>
 
-<p>Vous pouvez aussi modifier les préférences directement dans about:config, ou par cocher "Enable browser chrome and add-on debugging toolboxes" et "Enable remote debugging" dans <a href="/en-US/docs/Tools/Tools_Toolbox#Settings">Developer Tools Settings</a>.</p>
+<p>Vous pouvez aussi modifier les préférences directement dans about:config, ou par cocher "Enable browser chrome and add-on debugging toolboxes" et "Enable remote debugging" dans <a href="/en-US/docs/Tools/Tools_Toolbox#Settings">Developer Tools Settings</a>.</p>
 </div>
 
 <h3 id="Charger_un_add-on_temporaire">Charger un add-on temporaire</h3>
@@ -81,13 +81,13 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 <h4 id="Avant_Firefox_48">Avant Firefox 48</h4>
 
 <ul>
- <li>Si vous modifiez des fichiers charger à la demande, comme <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> ou <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, les modifications que vous faites sont détectés et ramassés automatiquement, et vous les verrez la prochaine fois le script de contenu est charger ou le popup se montre.</li>
- <li>Si vous modifiez des fichiers qui restent chargés tout le temps, comme <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background </a>vous pouvez trouver les changements vous avez faites par désactiver et réactiver l’add-on dans la page about:addons.</li>
- <li>Si vous modifiez des fichiers qui sont analyses qu’à l’installation, comme le fichier  <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>, vous allez devoir recommencer Firefox, et puis charger l’add-on encore.</li>
+ <li>Si vous modifiez des fichiers charger à la demande, comme <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> ou <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, les modifications que vous faites sont détectés et ramassés automatiquement, et vous les verrez la prochaine fois le script de contenu est charger ou le popup se montre.</li>
+ <li>Si vous modifiez des fichiers qui restent chargés tout le temps, comme <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background </a>vous pouvez trouver les changements vous avez faites par désactiver et réactiver l’add-on dans la page about:addons.</li>
+ <li>Si vous modifiez des fichiers qui sont analyses qu’à l’installation, comme le fichier  <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a>, vous allez devoir recommencer Firefox, et puis charger l’add-on encore.</li>
 </ul>
 
 <div class="note">
-<p>Notez qu’avant Firefox 48, charger l’add-on encore par appuyant "Load Temporary Add-on" sans recommencer Firefox <em>ne fonctionne pas</em>.</p>
+<p>Notez qu’avant Firefox 48, charger l’add-on encore par appuyant "Load Temporary Add-on" sans recommencer Firefox <em>ne fonctionne pas</em>.</p>
 </div>
 
 <h4 id="A_partir_de_Firefox_48">A partir de Firefox 48</h4>
@@ -98,11 +98,11 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 <p>De Firefox 48 et plus tard:</p>
 
 <ul>
- <li>Comme avant: Si vous modifiez des fichiers charger à la demande, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> ou <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, les modifications sont détectées et ramassées automatiquement, et vous les verrez la prochaine fois le script de contenu est charger ou le popup se montre.</li>
+ <li>Comme avant: Si vous modifiez des fichiers charger à la demande, <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> ou <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, les modifications sont détectées et ramassées automatiquement, et vous les verrez la prochaine fois le script de contenu est charger ou le popup se montre.</li>
  <li>Il y a une meilleure façon de gérer les autres cas: cliquez le bouton "Reload" à côté du bouton "Debug". Cela fait ce qu’il dit:
   <ul>
-   <li>Le rechargement des scripts persistants, comme <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a></li>
-   <li>Analyser le fichier manifest.json encore, donc change à <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> ou n’importe autre clé prendras effet.</li>
+   <li>Le rechargement des scripts persistants, comme <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a></li>
+   <li>Analyser le fichier manifest.json encore, donc change à <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> ou n’importe autre clé prendras effet.</li>
   </ul>
  </li>
 </ul>
@@ -113,11 +113,11 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 
 <h2 id="Tabs">Tabs</h2>
 
-<p>Dans Firefox 49 et plus tard, une page Tabs est disponible dans <code>about:debugging</code> — cela vous donne une liste complète de tous les onglets débogables ouverts dans l’instance courent Firefox.</p>
+<p>Dans Firefox 49 et plus tard, une page Tabs est disponible dans <code>about:debugging</code> — cela vous donne une liste complète de tous les onglets débogables ouverts dans l’instance courent Firefox.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13617/about-debugging-tabs.png" style="display: block; height: 628px; margin: 0px auto; width: 900px;"></p>
 
-<p>Chaque entrée tab à un bouton <em>Debug</em> à-côté — quand cliquer, ceci va ouvrir un toolbox spécifique à l’onglet, vous permettant de déboguer les contenus de cet onglet.</p>
+<p>Chaque entrée tab à un bouton <em>Debug</em> à-côté — quand cliquer, ceci va ouvrir un toolbox spécifique à l’onglet, vous permettant de déboguer les contenus de cet onglet.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/13619/about-debugging-tabs-toolbox.png" style="display: block; height: 628px; margin: 0px auto; width: 900px;"></p>
 
@@ -132,7 +132,7 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 <ul>
  <li>All registered <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a></li>
  <li>All registered <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a></li>
- <li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Dedicated_workers">Dedicated Workers</a></li>
+ <li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Dedicated_workers">Dedicated Workers</a></li>
 </ul>
 
 <p>Vous pouvez connectez les outils de développeurs à chaque worker, et envoyer des notifications push au service workers.</p>
@@ -152,7 +152,7 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 <p><img alt="" src="https://mdn.mozillademos.org/files/14488/service-worker-status.png" style="display: block; height: 555px; margin-left: auto; margin-right: auto; width: 900px;"></p>
 
 <div class="note">
-<p>Cette section utilise une démo simple de ServiceWorker, hébergé a  <a href="https://serviceworke.rs/push-simple/">https://serviceworke.rs/push-simple/</a>.</p>
+<p>Cette section utilise une démo simple de ServiceWorker, hébergé a  <a href="https://serviceworke.rs/push-simple/">https://serviceworke.rs/push-simple/</a>.</p>
 </div>
 
 <h3 id="Débogage_de_workers">Débogage de workers</h3>
@@ -165,7 +165,7 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 
 <h3 id="Enregistrement_des_workers">Enregistrement des workers</h3>
 
-<p>Premièrement, vous n’allez voir aucun worker lister sous <em>Service Workers</em> ou <em>Shared Workers</em>. Aussitôt qu’un worker est enregistrer, la liste est mis-a-jour:</p>
+<p>Premièrement, vous n’allez voir aucun worker lister sous <em>Service Workers</em> ou <em>Shared Workers</em>. Aussitôt qu’un worker est enregistrer, la liste est mis-a-jour:</p>
 
 <p>{{EmbedYouTube("wy4kyWFhFF4")}}</p>
 
@@ -208,5 +208,5 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 <ul>
  <li>Si vous utilisez une fenêtre Private Browsing.</li>
  <li>Si vos preferences d’Historique sont mis a "Never Remember History" ou "Always use private browsing mode".</li>
- <li>Si la préférence de <code>dom.serviceWorkers.enable</code> est réglé sur false dans <code>about:config</code>.</li>
+ <li>Si la préférence de <code>dom.serviceWorkers.enable</code> est réglé sur false dans <code>about:config</code>.</li>
 </ul>

@@ -16,7 +16,7 @@ Une application courante de XSLT dans les navigateurs est la transformation de c
 
 L'élément `<body>` de l'article contient maintenant des éléments HTML (des balises `<strong>` et `<em>`, voir la figure 2). Le document XML contient à la fois des éléments HTML et éléments XML, mais un seul espace de nommage est nécessaire, pour les éléments XML. Comme il n'existe pas d'espace de nommage HTML, et que l'utilisation de l'espace de nommage XHTML forcerait le XSL à créer un document XML qui pourrait ne pas se comporter comme un document HTML, le nœud `xsl:output` de la feuille de style assure que le document résultant sera bien traité comme du HTML. Pour les éléments XML, nous avons besoin de notre propre espace de nommage, [`http://devedge.netscape.com/2002/de`](http://devedge.netscape.com/2002/de), à qui nous donnons le préfixe myNS `(xmlns:myNS="http://devedge.netscape.com/2002/de")`.
 
-**Figure 2 : fichier XML (example2.xml)voir l'exemple | voir le source** Document XML (example2.xml): \<div style="background: #EEE; font-size: 1.1em; line-height: 1.1em; border: dashed #666 1px; padding: 15px 20px 15px 20px; overflow: auto;">
+**Figure 2&nbsp;: fichier XML (example2.xml)voir l'exemple | voir le source** Document XML (example2.xml): \<div style="background: #EEE; font-size: 1.1em; line-height: 1.1em; border: dashed #666 1px; padding: 15px 20px 15px 20px; overflow: auto;">
 
     <?xml version="1.0"?>
     <?xml-stylesheet type="text/xsl" href="example.xsl"?>
@@ -34,7 +34,7 @@ L'élément `<body>` de l'article contient maintenant des éléments HTML (des b
 
 La feuille de style XSL utilisée aura besoin de deux espaces de nommage - un pour les éléments XSLT et un pour nos propres éléments XML utilisés dans le document XML. La sortie de la feuille de style XSL est définie à `HTML` à l'aide de l'élément `xsl:output`. En définissant la sortie comme étant du code HTML et en n'ayant pas d'espace de nommage pour les éléments résultants (coloré en bleu), ces éléments seront traités comme des éléments HTML.
 
-**Figure 3 : feuille de style XSL avec 2 espaces de nommage** (example2.xsl) feuille de style XSL (example2.xsl):
+**Figure 3&nbsp;: feuille de style XSL avec 2 espaces de nommage** (example2.xsl) feuille de style XSL (example2.xsl):
 
       <?xml version="1.0"?>
       <xsl:stylesheet version="1.0"
@@ -47,7 +47,7 @@ La feuille de style XSL utilisée aura besoin de deux espaces de nommage - un po
 
 Un modèle s'appliquant au nœud racine du document XML est créé et utilisé pour créer la structure de base de la page HTML.
 
-**Figure 4 : Création du document HTML de base** feuille de style XSL (example2.xsl):
+**Figure 4&nbsp;: Création du document HTML de base** feuille de style XSL (example2.xsl):
 
       ...
       <xsl:template match="/">
@@ -71,7 +71,7 @@ Un modèle s'appliquant au nœud racine du document XML est créé et utilisé p
               <xsl:value-of select="/myNS:Article/myNS:Title"/>
             </span> <br />
 
-            Auteurs :   <br />
+            Auteurs&nbsp;:   <br />
               <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
           </p>
 
@@ -85,16 +85,16 @@ Un modèle s'appliquant au nœud racine du document XML est créé et utilisé p
       </xsl:template>
       ...
 
-Nous avons besoin de trois `xsl:template` supplémentaires pour parachever l'exemple. Le premier `xsl:template` est utilisé pour les nœuds `Author`, alors que le deuxième traite le nœud `body`. Le troisième possède une règle de correspondance générale qui lui permet de s'appliquer à chaque nœud et chaque attribut. Cela est nécessaire afin de préserver les éléments HTML présents dans le document XML : il s'appliquant à tous, et les recopie dans le document HTML créé par la transformation.
+Nous avons besoin de trois `xsl:template` supplémentaires pour parachever l'exemple. Le premier `xsl:template` est utilisé pour les nœuds `Author`, alors que le deuxième traite le nœud `body`. Le troisième possède une règle de correspondance générale qui lui permet de s'appliquer à chaque nœud et chaque attribut. Cela est nécessaire afin de préserver les éléments HTML présents dans le document XML&nbsp;: il s'appliquant à tous, et les recopie dans le document HTML créé par la transformation.
 
-**Figure 5 : Les 3 modèles finaux** feuille de style XSL (example2.xsl):
+**Figure 5&nbsp;: Les 3 modèles finaux** feuille de style XSL (example2.xsl):
 
       ...
       <xsl:template match="myNS:Author">
          --   <xsl:value-of select="." />
 
         <xsl:if test="@company">
-         ::   <strong>  <xsl:value-of select="@company" />  </strong>
+        &nbsp;::   <strong>  <xsl:value-of select="@company" />  </strong>
         </xsl:if>
 
         <br />
@@ -113,9 +113,9 @@ Nous avons besoin de trois `xsl:template` supplémentaires pour parachever l'exe
       </xsl:template>
       ...
 
-La feuille de style XSLT finale est donc :
+La feuille de style XSLT finale est donc&nbsp;:
 
-**Figure 6 : feuille de style XSLT finale voir l'exemple | voir le source** feuille de style XSL :
+**Figure 6&nbsp;: feuille de style XSLT finale voir l'exemple | voir le source** feuille de style XSL&nbsp;:
 
       <?xml version="1.0"?>
       <xsl:stylesheet version="1.0"
@@ -162,7 +162,7 @@ La feuille de style XSLT finale est donc :
            --   <xsl:value-of select="." />
 
           <xsl:if test="@company">
-           ::   <b>  <xsl:value-of select="@company" />  </b>
+          &nbsp;::   <b>  <xsl:value-of select="@company" />  </b>
           </xsl:if>
 
           <br />

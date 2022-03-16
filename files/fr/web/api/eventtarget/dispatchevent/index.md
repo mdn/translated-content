@@ -11,7 +11,7 @@ translation_of: Web/API/EventTarget/dispatchEvent
 ---
 {{APIRef("DOM Events")}}
 
-Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} (_cible_) spécifiée (synchrone) en appelant les {{domxref("EventListener")}} (_écouteurs_)  dans l'ordre approprié. Le processus normal de traitement de l'évènement (y compris les phases de capture et l'éventuelle propagation) s'applique aussi aux évènements diffusés manuellement avec `dispatchEvent()`.
+Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} (_cible_) spécifiée (synchrone) en appelant les {{domxref("EventListener")}} (_écouteurs_)  dans l'ordre approprié. Le processus normal de traitement de l'évènement (y compris les phases de capture et l'éventuelle propagation) s'applique aussi aux évènements diffusés manuellement avec `dispatchEvent()`.
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ Envoie un {{domxref("Event")}} (_évènement_) à la {{domxref("EventTarget")}} 
 
 ### Valeur retournée
 
-- La valeur de retour est  `false` (_faux_) si l'évènement est annulable et au moins l'un des gestionnaires d'événements qui ont géré cet événement appelé {{domxref ("Event.preventDefault ()")}}. Sinon, elle est `true` (_vrai_).
+- La valeur de retour est  `false` (_faux_) si l'évènement est annulable et au moins l'un des gestionnaires d'événements qui ont géré cet événement appelé {{domxref ("Event.preventDefault ()")}}. Sinon, elle est `true` (_vrai_).
 
 La méthode `dispatchEvent` lance une exception `UNSPECIFIED_EVENT_TYPE_ERR` si le type de l'évènement n'a pas été spécifié par son initialisation avant l'appel de la méthode ou s'il est `null` ou une chaîne vide. Les exceptions lancées par les gestionnaires d'évènements sont signalées comme exceptions non interceptées ; les gestionnaires d'événements s'exécutent sur une pile d'appels imbriquée : ils bloquent l'appelant jusqu'à ce qu'ils se terminent, mais les exceptions ne se propagent pas à l'appelant.
 

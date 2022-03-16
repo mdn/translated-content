@@ -28,11 +28,11 @@ Firefox 3 corrige un bug de sécurité dans les éléments `frame` et `iframe` q
 
 #### Changements concernant l'élément SCRIPT
 
-L'élément \<script> dans les documents HTML servis en mode `text/html` doit à présent être obligatoirement accompagné d'une balise fermante \</script>, même si aucun contenu n'est fourni entre les deux balises. Dans les versions précédentes de Firefox, il était possible de faire ceci :
+L'élément \<script> dans les documents HTML servis en mode `text/html` doit à présent être obligatoirement accompagné d'une balise fermante \</script>, même si aucun contenu n'est fourni entre les deux balises. Dans les versions précédentes de Firefox, il était possible de faire ceci&nbsp;:
 
     <script ... />
 
-Le balisage doit à présent respecter les spécifications HTML (si c'est effectivement du HTML), il devient donc obligatoire de placer une balise de fermeture séparément, comme ceci :
+Le balisage doit à présent respecter les spécifications HTML (si c'est effectivement du HTML), il devient donc obligatoire de placer une balise de fermeture séparément, comme ceci&nbsp;:
 
     <script ...></script>
 
@@ -42,11 +42,11 @@ Ce changement améliore tant la compatibilité que la sécurité.
 
 #### Changements concernant les tailles de police basées sur les unités em et ex
 
-Les valeurs de taille de police (`font-size`) utilisant les unités em et ex étaient auparavant affectées selon la taille de police minimale spécifiée par l'utilisateur : si une police était affichée plus grande à cause de la taille de police minimale, les unités em et ex pour les tailles de police étaient adaptées en fonction. Ce comportement était incohérent avec la manière dont les tailles de police en pourcentage fonctionnaient.
+Les valeurs de taille de police (`font-size`) utilisant les unités em et ex étaient auparavant affectées selon la taille de police minimale spécifiée par l'utilisateur&nbsp;: si une police était affichée plus grande à cause de la taille de police minimale, les unités em et ex pour les tailles de police étaient adaptées en fonction. Ce comportement était incohérent avec la manière dont les tailles de police en pourcentage fonctionnaient.
 
-Les valeurs de `font-size` sont à présent basées sur une « taille de police désirée » qui n'est pas affectée par la taille minimale de police de l'utilisateur. Autrement dit, les tailles de police sont toujours calculées selon l'intention du concepteur du site et ne sont ajustées selon la taille de police minimale qu'après coup.
+Les valeurs de `font-size` sont à présent basées sur une «&nbsp;taille de police désirée&nbsp;» qui n'est pas affectée par la taille minimale de police de l'utilisateur. Autrement dit, les tailles de police sont toujours calculées selon l'intention du concepteur du site et ne sont ajustées selon la taille de police minimale qu'après coup.
 
-Consultez le {{ Bug(322943) }} pour une démonstration (doit être visionnée avec une taille de police minimale supérieure ou égale à 6 pour voir la différence : les deux cascades de boîtes se comportent différemment dans Firefox 2, car la taille de police basée sur des unités em est décalée par la taille de police minimale).
+Consultez le {{ Bug(322943) }} pour une démonstration (doit être visionnée avec une taille de police minimale supérieure ou égale à 6 pour voir la différence&nbsp;: les deux cascades de boîtes se comportent différemment dans Firefox 2, car la taille de police basée sur des unités em est décalée par la taille de police minimale).
 
 ### Changements concernant la sécurité
 
@@ -56,20 +56,20 @@ Dans les versions précédentes de Firefox, toute page web pouvait charger des s
 
 Firefox 3 ne permet plus au contenu web que d'accéder aux éléments dans les espaces chrome://browser/ et chrome://toolkit/. Ces fichiers sont prévus pour être accessibles au contenu web. Tous les autres contenus chrome y sont par contre à présent inaccessibles.
 
-Une possibilité existe cependant pour les extensions désirant rendre le contenu accessible aux pages web. Ces extensions peuvent spécifier un paramètre spécial dans leur fichier chrome.manifest comme ceci :
+Une possibilité existe cependant pour les extensions désirant rendre le contenu accessible aux pages web. Ces extensions peuvent spécifier un paramètre spécial dans leur fichier chrome.manifest comme ceci&nbsp;:
 
     content mypackage location/ contentaccessible=yes
 
 Cette manipulation ne devrait pas être nécessaire la plupart du temps, mais elle existe toutefois pour les rares cas où elle reste indispensable. Notez qu'il n'est pas exclu que Firefox avertisse l'utilisateur de cette utilisation du paramètre `contentaccessible`, étant donné qu'il constitue un risque potentiel de sécurité.
 
-> **Note :** Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci :
+> **Note :** Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci&nbsp;:
 >
 >     content mypackage location/
 >     content mypackage location/ contentaccessible=yes
 
 #### Champs d'envoi de fichiers (upload)
 
-Dans les versions précédentes de Firefox, un certain nombre de cas existaient où le chemin entier du fichier envoyé par l'utilisateur était lisible par une application web. Pour des raisons de confidentialité, ce n'est plus possible dans Firefox 3 ; à présent seul le nom du fichier lui-même est visible par l'application web.
+Dans les versions précédentes de Firefox, un certain nombre de cas existaient où le chemin entier du fichier envoyé par l'utilisateur était lisible par une application web. Pour des raisons de confidentialité, ce n'est plus possible dans Firefox 3&nbsp;; à présent seul le nom du fichier lui-même est visible par l'application web.
 
 ### Changements dans JavaScript
 

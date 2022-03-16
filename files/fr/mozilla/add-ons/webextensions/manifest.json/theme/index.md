@@ -46,7 +46,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 
 Utilisez la clé du thème pour définir un thème statique à appliquer à Firefox.
 
-> **Note :** Si vous voulez inclure un thème avec une extension, veuillez voir l'API  {{WebExtAPIRef("theme")}}.
+> **Note :** Si vous voulez inclure un thème avec une extension, veuillez voir l'API  {{WebExtAPIRef("theme")}}.
 
 > **Note :** Depuis mai 2019, les thèmes doivent être signés pour être installés ({{bug(1545109)}}). Voir [Signature et distribution votre extension](/fr/docs/Mozilla/Add-ons/Distribution) pour plus de détails.
 
@@ -128,9 +128,9 @@ La clé du thème est un objet qui prend les propriétés suivantes:
           <li>
             <code>"additional_backgrounds_alignment":</code> un tableau
             énumérant les valeurs définissant l'alignement des éléments
-            correspondants du tableau 
+            correspondants du tableau
             <code>"additional_backgrounds":</code>.<br />Les options
-            d'alignement comprennent  : <code>"bottom" <em>(bas)</em></code
+            d'alignement comprennent  : <code>"bottom" <em>(bas)</em></code
             >, <code>"center" <em>(centre)</em></code
             >, <code>"left" <em>(gauche)</em></code
             >, <code>"right" <em>(droite)</em></code
@@ -243,7 +243,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
         <div class="warning">
           <p>
             <strong>Attention :</strong> La propriété
-            <code>additional_backgrounds</code> est experimentale.  Il est
+            <code>additional_backgrounds</code> est experimentale. Il est
             actuellement accepté dans les versions finale de Firefox, mais son
             comportement est sujet à changement.
           </p>
@@ -251,7 +251,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
         <p>
           Un tableau d'URLs pour les images de fond supplémentaires à ajouter à
           la zone d'en-tête et à afficher derrière l'image
-          <code>"theme_frame"</code> :  Ces images superposent la première image
+          <code>"theme_frame"</code> :  Ces images superposent la première image
           du tableau en haut, la dernière image du tableau en bas.
         </p>
         <p>Optionel.</p>
@@ -268,7 +268,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
 
 ### Couleurs
 
-Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"`  étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
+Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"`  étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
 
 <table class="standard-table">
   <tbody>
@@ -311,7 +311,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
             <strong>Attention :</strong> <code>accentcolor</code> a été supprimé
             dans Firefox 70. Vous commencerez à recevoir des avertissements dans
             Firefox 65 et plus tard si vous chargez un thème qui utilise cette
-            propriété. Utilisez  <code>frame</code> à la place.
+            propriété. Utilisez  <code>frame</code> à la place.
           </p>
         </div>
         <p>
@@ -336,7 +336,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
       <td>
         <p>
           La couleur du texte et des icônes dans le signet et les barres de
-          recherche. De plus, si <code>tab_text</code> n'est pas défini, il
+          recherche. De plus, si <code>tab_text</code> n'est pas défini, il
           définit la couleur du texte de l'onglet actif et si les
           <code>icons</code> ne sont pas définies, la couleur des icônes de la
           barre d'outils. Fourni en tant qu'alias compatible Chrome pour
@@ -414,9 +414,9 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans <code>frame</code>, 
+            contraste bien avec celles utilisées dans <code>frame</code>,
             <code>frame_inactive</code>, <code>button_background_active</code>,
-            et  <code>button_background_hover</code>.
+            et  <code>button_background_hover</code>.
           </p>
         </div>
         <pre class="brush: json">
@@ -441,9 +441,9 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans <code>frame</code>, 
+            contraste bien avec celles utilisées dans <code>frame</code>,
             <code>frame_inactive</code>, <code>button_background_active</code>,
-            et  <code>button_background_hover</code>.
+            et  <code>button_background_hover</code>.
           </p>
         </div>
         <pre class="brush: json">
@@ -521,7 +521,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celle utilisée dans 
+            contraste bien avec celle utilisée dans
             <code>ntp_background</code>.
           </p>
         </div>
@@ -776,8 +776,8 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans 
-            <code>tab_selected</code> ou <code>frame</code> et 
+            contraste bien avec celles utilisées dans
+            <code>tab_selected</code> ou <code>frame</code> et
             <code>frame_inactive</code>.
           </p>
         </div>
@@ -862,8 +862,8 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans 
-            <code>tab_selected</code> ou <code>frame</code> et 
+            contraste bien avec celles utilisées dans
+            <code>tab_selected</code> ou <code>frame</code> et
             <code>frame_inactive</code>.
           </p>
         </div>
@@ -1062,7 +1062,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <p>
           Ici, le champ <code>toolbar_field_highlight</code> spécifie que la
           couleur de surbrillance est un vert clair, alors que le texte est
-          réglé sur un vert foncé à vert moyen en utilisant le texte 
+          réglé sur un vert foncé à vert moyen en utilisant le texte
           <code>toolbar_field_highlight_text</code>.
         </p>
       </td>
@@ -1078,7 +1078,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> S'assurer que la couleur utilisée contraste
-            bien avec celles utilisées dans 
+            bien avec celles utilisées dans
             <code>toolbar_field_highlight</code>.
           </p>
         </div>
@@ -1139,7 +1139,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans 
+            contraste bien avec celles utilisées dans
             <code>toolbar_field</code>.
           </p>
         </div>
@@ -1167,7 +1167,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
         <div class="note">
           <p>
             <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans 
+            contraste bien avec celles utilisées dans
             <code>toolbar_field_focus</code>.
           </p>
         </div>
@@ -1320,7 +1320,7 @@ En outre, cette clé accepte diverses propriétés qui sont des alias pour l'une
         <p>Optional.</p>
         <p>
           Un tableau de valeurs d'énumérations définissant, comme l'élément de
-          tableau  <code>"additional_backgrounds":</code> correspondant de
+          tableau  <code>"additional_backgrounds":</code> correspondant de
           répétition. Les options comprennent :
         </p>
         <ul>

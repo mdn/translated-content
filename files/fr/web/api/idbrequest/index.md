@@ -18,7 +18,7 @@ L'interface **`IDBRequest`** de l'API IndexedDB donne accès par ses gestionnair
 
 Cet objet **`IDBRequest`** ne contient aucune information sur le résultat de l'opération, mais dès qu'une information est disponible un événement est déclenché. L'objet **`IDBRequest`** utilise ses gestionnaires d'événements pour le capter et mettre l'information à disposition.
 
-Toute les opération asynchrone retourne immédiatement une instance **`IDBRequest`** avec une propriété `readyState` défini à `'pending'` qui passe à  `'done'` lorsque la requête réussie ou échoue. Quand l'état passe à `done`, chaque requête retourne `result` et `error`, et un évènement est envoyé sur la requête. Quand l'état est sur `pending`, chaque accès à `result` ou `error` lève une exception `InvalidStateError`.
+Toute les opération asynchrone retourne immédiatement une instance **`IDBRequest`** avec une propriété `readyState` défini à `'pending'` qui passe à  `'done'` lorsque la requête réussie ou échoue. Quand l'état passe à `done`, chaque requête retourne `result` et `error`, et un évènement est envoyé sur la requête. Quand l'état est sur `pending`, chaque accès à `result` ou `error` lève une exception `InvalidStateError`.
 
 Pour faire simple, chaque méthode asynchrome retourne un objet de requête. Si l'opération réussi, le résultat est disponible dans la propriété `result` et un évènement `success` est lancé ({{domxref("IDBRequest.onsuccess")}}). Si une erreur est rencontrée, une exeption est disponible dans la propriété `error` et un évènement `error` est lancé ({{domxref("IDBRequest.onerror")}}).
 
@@ -41,7 +41,7 @@ _Hérite des propriétés de {{domxref("EventTarget")}}._
 - {{domxref("IDBRequest.transaction","transaction")}} {{readonlyInline}}
   - : La propriété **`transaction`** de l'interface **`IDBRequest`** renvoie la {{domxref("IDBTransaction","transaction")}} dans laquelle on fait la requête. La propriété peut renvoyer `null` si requête se fait sans transaction, comme un objet IDBRequest renvoyé par {{domxref("IDBFactory.open")}} dans ce cas on est juste connecté à la base de données.
 - {{domxref("IDBRequest.readyState","readyState")}} {{readonlyInline}}
-  - : La propriété **`readyState`** de l'interface **`IDBRequest`** renvoie l'état de la requête. Chaque requête débute avec un statut `pending` et passe au statut `done` quand la requête réussie ou échoue.
+  - : La propriété **`readyState`** de l'interface **`IDBRequest`** renvoie l'état de la requête. Chaque requête débute avec un statut `pending` et passe au statut `done` quand la requête réussie ou échoue.
 
 ## Méthodes
 

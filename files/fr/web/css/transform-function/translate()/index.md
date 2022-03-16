@@ -28,7 +28,7 @@ transform: translate(30%, 50%);
 ### Valeurs
 
 - Avec une seule valeur `<length-percentage>`
-  - : Cette valeur  est de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) et représente l'abscisse (la coordonnée horizontale) du vecteur de translation. La composante verticale du vecteur de translation sera nulle. Ainsi, `translate(2px)` est équivalent à `translate(2px, 0)`. Une valeur en pourcentage sera relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
+  - : Cette valeur est de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) et représente l'abscisse (la coordonnée horizontale) du vecteur de translation. La composante verticale du vecteur de translation sera nulle. Ainsi, `translate(2px)` est équivalent à `translate(2px, 0)`. Une valeur en pourcentage sera relative à la largeur de la boîte de référence définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box).
 - Avec deux valeurs `<length-percentage>`
   - : Ces valeurs sont de type [`<length>`](/fr/docs/Web/CSS/length) ou [`<percentage>`](/fr/docs/Web/CSS/percentage) et décrivent respectivement l'abscisse (la coordonnée horizontale) et l'ordonnée (la coordonnée verticale) du vecteur de translation. Un premier pourcentage sera relatif à la largeur de la boîte de référence et un deuxième pourcentage sera relatif à sa hauteur (la boîte de référence étant définie par la propriété [`transform-box`](/fr/docs/Web/CSS/transform-box)).
 

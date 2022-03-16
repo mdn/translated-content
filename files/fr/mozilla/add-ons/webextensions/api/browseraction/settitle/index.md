@@ -59,7 +59,7 @@ browser.browserAction.setTitle(
 
 ## Exemples
 
-Ce code change le titre entre "ceci" et "ça" chaque fois  que l'utilisateur clique sur l'action du navigateur :
+Ce code change le titre entre "ceci" et "ça" chaque fois que l'utilisateur clique sur l'action du navigateur :
 
 ```js
 function toggleTitle(title) {

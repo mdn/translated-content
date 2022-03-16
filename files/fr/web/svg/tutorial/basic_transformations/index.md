@@ -53,7 +53,7 @@ Appliquer une rotation à un élément est assez simple : il suffit d'utiliser l
 </svg>
 ```
 
-Cet exemple montre un carré pivoté de 45°. La valeur de la rotation doit être définie en degrés.
+Cet exemple montre un carré pivoté de 45°. La valeur de la rotation doit être définie en degrés.
 
 {{ EmbedLiveSample('Rotation', '31', '31') }}
 

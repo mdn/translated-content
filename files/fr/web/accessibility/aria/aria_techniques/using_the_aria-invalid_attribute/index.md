@@ -14,7 +14,7 @@ Cette technique présente l’utilisation de l’attribut [`aria-invalid`](http:
 
 L’attribut `aria-invalid` est utilisé pour indiquer que la valeur saisie dans un champ de saisie n’est pas conforme au format attendu par l’application. Cela comprend les formats tels que les adresses électroniques ou les numéros de téléphone. `aria-invalid` peut également être utilisé pour indiquer qu’un champ obligatoire n’a pas été rempli. L’attribut devrait être programmatiquement défini comme étant le résultat du processus de validation.
 
-Cet attribut peut être utilisé avec n’importe quel élément de formulaire HTML typique ; il n’est pas limité aux éléments auxquels a été assigné un `rôle` ARIA.
+Cet attribut peut être utilisé avec n’importe quel élément de formulaire HTML typique&nbsp;; il n’est pas limité aux éléments auxquels a été assigné un `rôle` ARIA.
 
 ### Valeurs
 
@@ -39,7 +39,7 @@ Les agents utilisateurs devraient informer l’utilisateur lorsqu’un champ n�
 
 ### Exemples
 
-#### Exemple 1 : validation d’un formulaire de base
+#### Exemple 1&nbsp;: validation d’un formulaire de base
 
 L’extrait de code suivant décrit une version simplifiée de deux champs de formulaire avec une fonction de validation de la saisie attachée à la perte de focus. Notez que la valeur par défaut de `aria-required` étant `false`, il n’est pas strictement nécessaire d’ajouter à entrer.
 
@@ -51,9 +51,9 @@ L’extrait de code suivant décrit une version simplifiée de deux champs de fo
         onblur="checkValidity('courriel', '@', 'L’adresse électronique saisie n’est pas valide');"/>
 ```
 
-Remarquez qu’il n’est pas nécessaire de valider les champs de saisie immédiatement à la perte de focus ; l’application peut attendre jusqu’à la soumission du formulaire (bien que ce ne soit pas particulièrement recommandé).
+Remarquez qu’il n’est pas nécessaire de valider les champs de saisie immédiatement à la perte de focus&nbsp;; l’application peut attendre jusqu’à la soumission du formulaire (bien que ce ne soit pas particulièrement recommandé).
 
-L’extrait de code ci-dessous décrit une fonction de validation très simple qui ne vérifie que la présence d’un caractère particulier (en réalité, la validation sera un peu plus sophistiquée) :
+L’extrait de code ci-dessous décrit une fonction de validation très simple qui ne vérifie que la présence d’un caractère particulier (en réalité, la validation sera un peu plus sophistiquée)&nbsp;:
 
 ```js
 function checkValidity(aID, aSearchTerm, aMsg){
@@ -69,7 +69,7 @@ function checkValidity(aID, aSearchTerm, aMsg){
 }
 ```
 
-L’extrait de code ci-dessous décrit des fonctions d’alertes, qui ajoutent (ou suppriment) le message d’erreur :
+L’extrait de code ci-dessous décrit des fonctions d’alertes, qui ajoutent (ou suppriment) le message d’erreur&nbsp;:
 
 ```js
 function updateAlert(msg) {

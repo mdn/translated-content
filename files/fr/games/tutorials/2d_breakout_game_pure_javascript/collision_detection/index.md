@@ -15,7 +15,7 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisi
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-Il s'agit de la **7ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Workflows/Breakout_game_from_scratch). Vous pouvez trouver le code source tel qu'il devrait être après avoir complété cette leçon à : [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
+Il s'agit de la **7ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Workflows/Breakout_game_from_scratch). Vous pouvez trouver le code source tel qu'il devrait être après avoir complété cette leçon à : [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
 
 Les briques apparaissent à l'écran, mais le jeu n'est toujours pas intéressant car la balle les traverse. Nous devons ajouter une détection des collisions afin qu’elle puisse rebondir sur les briques et les casser.
 
@@ -58,7 +58,7 @@ function collisionDetection() {
 }
 ```
 
-Ajoutez le bloc ci-dessus à votre code, sous la fonction `keyUpHandler()` .
+Ajoutez le bloc ci-dessus à votre code, sous la fonction `keyUpHandler()` .
 
 ## Faire disparaître les briques après qu'elles aient été touchées
 
@@ -98,7 +98,7 @@ function drawBricks() {
 
 ## Suivi et mise à jour de l'état dans la fonction de détection de collision
 
-Nous devons maintenant impliquer la propriété de `status` de brique dans la fonction `collisionDetection()`: si la brique est active (son statut est `1`), nous vérifierons si une collision a lieu ; Si une collision se produit, nous allons définir l'état de la brique donnée sur `0` afin qu'elle ne soit pas affichée à l'écran. Mettez à jour votre fonction `collisionDetection()` comme indiqué ci-dessous:
+Nous devons maintenant impliquer la propriété de `status` de brique dans la fonction `collisionDetection()`: si la brique est active (son statut est `1`), nous vérifierons si une collision a lieu ; Si une collision se produit, nous allons définir l'état de la brique donnée sur `0` afin qu'elle ne soit pas affichée à l'écran. Mettez à jour votre fonction `collisionDetection()` comme indiqué ci-dessous:
 
 ```js
 function collisionDetection() {
@@ -134,6 +134,6 @@ Exercice: changez la couleur de la balle lorsqu'elle frappe une brique.
 
 ## Prochaine étape
 
-Nous ne sommes plus très loin de la fin ;  poursuivons ! Dans le huitième chapitre, nous verrons comment [Track the score and win](/fr/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
+Nous ne sommes plus très loin de la fin&nbsp;; poursuivons&nbsp;! Dans le huitième chapitre, nous verrons comment [Track the score and win](/fr/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}

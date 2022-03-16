@@ -15,14 +15,14 @@ translation_of: Web/API/PeriodicWave
 ---
 {{ APIRef("Web Audio API") }}
 
-L'objet **`PeriodicWave`** permet de définir une forme d'onde personnalisée, pouvant être utilisée comme sortie d'un {{domxref("OscillatorNode")}}.
+L'objet **`PeriodicWave`** permet de définir une forme d'onde personnalisée, pouvant être utilisée comme sortie d'un {{domxref("OscillatorNode")}}.
 
-`PeriodicWave` n'a ni entrée ni sortie ; elle doit être créée avec {{domxref("AudioContext.createPeriodicWave()")}} et être assignée à un OscillatorNode avec {{domxref("OscillatorNode.setPeriodicWave()")}}.
+`PeriodicWave` n'a ni entrée ni sortie ; elle doit être créée avec {{domxref("AudioContext.createPeriodicWave()")}} et être assignée à un OscillatorNode avec {{domxref("OscillatorNode.setPeriodicWave()")}}.
 
 ## Constructeur
 
 - {{domxref("PeriodicWave.PeriodicWave()")}}
-  - : Crée une `PeriodicWave` (onde périodique) avec toutes les valeurs optionelles mises par défaut. Pour établir des valeurs personnalisées, il faut utiliser le constructeur {{domxref("AudioContext.createPeriodicWave()")}}.
+  - : Crée une `PeriodicWave` (onde périodique) avec toutes les valeurs optionelles mises par défaut. Pour établir des valeurs personnalisées, il faut utiliser le constructeur {{domxref("AudioContext.createPeriodicWave()")}}.
 
 ## Propriétés
 

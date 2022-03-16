@@ -6,7 +6,7 @@ original_slug: Web/API/DeviceOrientationEvent.absolute
 ---
 {{ ApiRef() }}
 
-Indique si l'appareil partage des données en référentiel absolut c'est à dire sur avec des cordonnées issu du référentiel terrestre, ou si il partage des données utilisant un référentiel arbitraire déterminé par l'appareil. Voir [Orientation et mouvement expliqué](/en/DOM/Orientation_and_motion_data_explained) pour plus de détails.
+Indique si l'appareil partage des données en référentiel absolut c'est à dire sur avec des cordonnées issu du référentiel terrestre, ou si il partage des données utilisant un référentiel arbitraire déterminé par l'appareil. Voir [Orientation et mouvement expliqué](/en/DOM/Orientation_and_motion_data_explained) pour plus de détails.
 
 ## Syntaxe
 

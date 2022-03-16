@@ -29,7 +29,7 @@ L’évènement **`DOMContentLoaded`** est émis lorsque le document HTML initia
   </tbody>
 </table>
 
-La cible originale pour cet évènement est le {{domxref("Document")}} qui a terminé de charger. Vous pouvez observer cet évènement sur l’interface `Window` pour le gérer dans les phases de capture ou de bouillonnement. Pour plus de détails, veuillez consulter la page de l’évènement {{domxref("Document/DOMContentLoaded_event", "Document: DOMContent​Loaded event")}}.
+La cible originale pour cet évènement est le {{domxref("Document")}} qui a terminé de charger. Vous pouvez observer cet évènement sur l’interface `Window` pour le gérer dans les phases de capture ou de bouillonnement. Pour plus de détails, veuillez consulter la page de l’évènement {{domxref("Document/DOMContentLoaded_event", "Document: DOMContentLoaded event")}}.
 
 L'évènement [`load`](/fr/docs/Web/API/Window/load_event), très différent, doit être utilisé uniquement pour détecter qu'une page est entièrement chargée. C'est une erreur répandue d'utiliser [`load`](/fr/docs/Web/API/Window/load_event) là où `DOMContentLoaded` serait beaucoup plus approprié.
 
@@ -39,7 +39,7 @@ L'évènement [`load`](/fr/docs/Web/API/Window/load_event), très différent, do
 
 ## Accélérer
 
-Si vous voulez que le DOM soit analysé aussi rapidement que possible après que l’utilisateur ou l’utilisatrice a demandé la page, vous pouvez [rendre votre JavaScript asynchrone](/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) et [optimiser le chargement des feuilles de style](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Ces dernières, sans optimisation, ralentissent le chargement de la page parce qu’elles sont chargées en parallèle, et « subtilisent » de la bande passante au document html principal.
+Si vous voulez que le DOM soit analysé aussi rapidement que possible après que l’utilisateur ou l’utilisatrice a demandé la page, vous pouvez [rendre votre JavaScript asynchrone](/fr/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) et [optimiser le chargement des feuilles de style](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery). Ces dernières, sans optimisation, ralentissent le chargement de la page parce qu’elles sont chargées en parallèle, et «&nbsp;subtilisent&nbsp;» de la bande passante au document html principal.
 
 ## Exemples
 
@@ -63,5 +63,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 ## Voir aussi
 
-- Évènements associés : {{event("load")}}, {{event("readystatechange")}}, {{event("beforeunload")}}, {{event("unload")}}
-- Cet évènement sur les cibles {{domxref("Document")}} : {{domxref("Document/DOMContentLoaded_event", "Document: DOMContent​Loaded event")}}
+- Évènements associés&nbsp;: {{event("load")}}, {{event("readystatechange")}}, {{event("beforeunload")}}, {{event("unload")}}
+- Cet évènement sur les cibles {{domxref("Document")}}&nbsp;: {{domxref("Document/DOMContentLoaded_event", "Document: DOMContentLoaded event")}}

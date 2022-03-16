@@ -65,7 +65,7 @@ Aucune méthode spécifique; hérite des méthodes de son parent, {{domxref("Aud
 
 | Spécification                                                                        | Statuts                              | Commentaire |
 | ------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#GainNode-section', 'GainNode')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#GainNode-section', 'GainNode')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

@@ -267,7 +267,7 @@ En plus des opérations arithmétiques standards (+,-,\*,/), JavaScript fournit 
           href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_arithm%C3%A9tiques#Reste_(.25)"
           >Reste</a
         >
-        (<code>%</code>)<br /> 
+        (<code>%</code>)<br />
       </td>
       <td>
         Opérateur binaire. Renvoie le reste entier de la division entre les deux
@@ -437,7 +437,7 @@ Les opérateurs de décalage sont énumérés dans le tableau qui suit.
       </td>
       <td>
         <code>9&#x3C;&#x3C;2</code> renvoie 36, car 1001, décalé de 2 bits à
-        gauche, devient  100100, dont la représentation en base 10 est  36.
+        gauche, devient 100100, dont la représentation en base 10 est 36.
       </td>
     </tr>
     <tr>
@@ -454,7 +454,7 @@ Les opérateurs de décalage sont énumérés dans le tableau qui suit.
       </td>
       <td>
         <code>9>>2</code> renvoie 2, car 1001, décalé de 2 bits à droite,
-        devient 10 représentant 2. De même  <code>-9>>2</code> renvoie -3, car
+        devient 10 représentant 2. De même  <code>-9>>2</code> renvoie -3, car
         le signe est préservé.
       </td>
     </tr>
@@ -770,7 +770,7 @@ L'opérateur `void` indique qu'une expression doit être évaluée sans retourne
 
 L'opérateur `void` peut être utilisé pour spécifier une expression comme un lien hypertexte, l'expression est évaluée mais n'est pas chargée à la place du document actuel.
 
-Le fragment de code  qui suit crée un lien hypertexte qui ne fait rien lorsque l'utilisateur clique dessus. Lorsqu'on clique sur le lien, `void(0)` est évalué à `undefined`, n'ayant aucun effet.
+Le fragment de code qui suit crée un lien hypertexte qui ne fait rien lorsque l'utilisateur clique dessus. Lorsqu'on clique sur le lien, `void(0)` est évalué à `undefined`, n'ayant aucun effet.
 
 ```html
 <A HREF="javascript:void(0)">Cliquer ici pour ne rien faire</A>

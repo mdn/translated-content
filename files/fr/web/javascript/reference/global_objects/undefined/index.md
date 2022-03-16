@@ -50,7 +50,7 @@ var x;
 if (x === undefined) {
    // ces instructions seront exécutées
 }
-if (x !== undefined) {
+if (x&nbsp;!== undefined) {
    // ces instructions ne seront pas exécutées
 }
 ```
@@ -59,7 +59,7 @@ if (x !== undefined) {
 
 ### L'opérateur `typeof` et `undefined`
 
-L'opérateur {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}} peut également être utilisé :
+L'opérateur {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}} peut également être utilisé&nbsp;:
 
 ```js
 var x;
@@ -103,9 +103,9 @@ if (y === void 0) {
 | Spécification                                                            | État                         | Commentaires                                          |
 | ------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1', '#sec-4.3.9', 'undefined')}}             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-undefined', 'undefined')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-undefined', 'undefined')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-undefined', 'undefined')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-undefined', 'undefined')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

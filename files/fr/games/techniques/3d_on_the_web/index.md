@@ -51,11 +51,11 @@ Il y a aussi la [construction d'une démo de base avec l'article A-Frame](/fr/do
 
 Le codage de WebGL brut est assez complexe, mais vous aurez envie de le maîtriser à long terme, car vos projets seront plus avancés (consultez notre [documentation WebGL](/fr/docs/Web/API/WebGL_API) pour commencer). Pour les projets de monde réel, vous utiliserez probablement aussi un "framework" pour accélérer le développement et vous aider à gérer le projet. L'utilisation d'un "framework" pour les jeux 3D permet également d'optimiser les performances, car les outils que vous utilisez vous permettent de vous concentrer sur la construction du jeu.
 
-La bibliothèque 3D JavaScript la plus populaire est [Three.js](http://threejs.org/), un outil polyvalent qui rend les techniques 3D plus simples à implémenter. Il existe d'autres bibliothèques et cadres de développement de jeux populaires qui valent la peine d'être regardés ; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) et [Babylon.js](http://www.babylonjs.com/) sont parmi les plus reconnaissables avec une documentation riche, des éditeurs en ligne et des communautés actives.
+La bibliothèque 3D JavaScript la plus populaire est [Three.js](http://threejs.org/), un outil polyvalent qui rend les techniques 3D plus simples à implémenter. Il existe d'autres bibliothèques et cadres de développement de jeux populaires qui valent la peine d'être regardés ; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) et [Babylon.js](http://www.babylonjs.com/) sont parmi les plus reconnaissables avec une documentation riche, des éditeurs en ligne et des communautés actives.
 
 ### Construction d'une démo de base avec A-Frame
 
-A-Frame est un "framework" web pour construire des expériences 3D et de la réalité virtuelle. Sous le capot, il s'agit d'un "framework" three.js avec un modèle déclaratif entité-composant, ce qui signifie que nous pouvons construire des scènes avec seulement du HTML. Voir la page [Construction d'une démo de base avec A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) pour le processus étape par étape de création de la démo .
+A-Frame est un "framework" web pour construire des expériences 3D et de la réalité virtuelle. Sous le capot, il s'agit d'un "framework" three.js avec un modèle déclaratif entité-composant, ce qui signifie que nous pouvons construire des scènes avec seulement du HTML. Voir la page [Construction d'une démo de base avec A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) pour le processus étape par étape de création de la démo .
 
 ### Construction d'une démo de base avec Babylon.js
 
@@ -67,7 +67,7 @@ PlayCanvas est un moteur de jeu 3D WebGL populaire ouvert sur GitHub, avec un é
 
 ### Construction d'une démo de base avec Three.js
 
-Three.js, comme toute autre bibliothèque, vous donne un énorme avantage : au lieu d'écrire des centaines de lignes de code WebGL pour construire quelque chose d'intéressant, vous pouvez utiliser des fonctions intégrées pour le faire beaucoup plus facilement et plus rapidement. Voir la page [Construction d'une démo de base avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)  pour le processus étape par étape de création de la démo .
+Three.js, comme toute autre bibliothèque, vous donne un énorme avantage : au lieu d'écrire des centaines de lignes de code WebGL pour construire quelque chose d'intéressant, vous pouvez utiliser des fonctions intégrées pour le faire beaucoup plus facilement et plus rapidement. Voir la page [Construction d'une démo de base avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)  pour le processus étape par étape de création de la démo .
 
 ### Autres outils
 

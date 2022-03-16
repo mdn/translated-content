@@ -20,7 +20,7 @@ original_slug: >-
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr%C3%B4le_clavier")}}
 
-C'est la **3<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
+C'est la **3<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 
 C'est agréable de voir notre balle bouger, mais elle disparaît rapidement de l'écran, ce qui limite le plaisir que nous pouvons avoir avec elle ! Pour y pallier, nous allons mettre en place une détection de collision très simple (qui sera expliquée plus tard en détail) pour faire rebondir la balle sur les quatre bords de la toile.
 
@@ -62,7 +62,7 @@ if(y + dy > canvas.height) {
 }
 ```
 
-Si la position en y de la balle est supérieure à  la hauteur du canvas (soit 480 pixels dans cette leçon) on inverse encore la vitesse de la balle.
+Si la position en y de la balle est supérieure à la hauteur du canvas (soit 480 pixels dans cette leçon) on inverse encore la vitesse de la balle.
 
 On peut rassembler les deux conditions en une grâce au "ou" qui s'écrit || en JavaScript :
 

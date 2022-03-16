@@ -15,9 +15,9 @@ L'interface **`Credential`**, rattachée à l'[API Credential Management](/fr/do
 
 ## Propriétés
 
-- {{domxref("Credential.id")}} {{readonlyInline}}
+- {{domxref("Credential.id")}} {{readonlyInline}}
   - : Une chaîne de caractères qui est l'identifiant des informations d'authentification. Cela peut être un GUID, un nom d'utilisateur ou une adresse électronique.
-- {{domxref("Credential.type")}} {{readonlyInline}}
+- {{domxref("Credential.type")}} {{readonlyInline}}
 
   - : Une chaîne de caractères qui décrit le type d'information d'authentification utilisée. Les valeurs valides sont
 

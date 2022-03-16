@@ -18,7 +18,7 @@ original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr�
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
-C'est la **4<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
+C'est la **4<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
 
 La balle rebondit librement partout et vous pourriez la regarder indéfiniment... Mais il n'y a pas d'interaction avec le joueur. Ce n'est pas un jeu si vous ne pouvez pas le contrôler ! Nous allons donc ajouter une interaction avec le joueur : une raquette contrôlable.
 
@@ -91,9 +91,9 @@ function keyUpHandler(e) {
 }
 ```
 
-Quand on presse une touche du clavier, l'information est stockée dans une variable. La variable concernée est mis sur `true`. Quand la touche est relachée, la variable revient à  `false`.
+Quand on presse une touche du clavier, l'information est stockée dans une variable. La variable concernée est mis sur `true`. Quand la touche est relachée, la variable revient à  `false`.
 
-Les deux fonctions prennent un événement comme paramètre, représenté par la variable `e`. De là, vous pouvez obtenir des informations utiles : la propriété `key` contient les informations sur la touche qui a été enfoncée.  La plupart des navigateurs utilisent `ArrowRight` et `ArrowLeft` pour les touches de flèche gauche/droite, mais nous devons également tester `Right` and `Left` pour prendre en charge les navigateurs IE/Edge. Si la touche gauche est enfoncé, la variable `leftPressed` est mise à `true`, et lorsqu'elle est relâchée, la variable `leftPressed` est mise à `false`. Le même principe s'applique à la touche droite et à la variable `RightPressed`.
+Les deux fonctions prennent un événement comme paramètre, représenté par la variable `e`. De là, vous pouvez obtenir des informations utiles : la propriété `key` contient les informations sur la touche qui a été enfoncée.  La plupart des navigateurs utilisent `ArrowRight` et `ArrowLeft` pour les touches de flèche gauche/droite, mais nous devons également tester `Right` and `Left` pour prendre en charge les navigateurs IE/Edge. Si la touche gauche est enfoncé, la variable `leftPressed` est mise à `true`, et lorsqu'elle est relâchée, la variable `leftPressed` est mise à `false`. Le même principe s'applique à la touche droite et à la variable `RightPressed`.
 
 ### La logique du déplacement de la raquette
 

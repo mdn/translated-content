@@ -60,7 +60,7 @@ nombres.sort(comparaisonNombres);
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

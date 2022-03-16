@@ -10,11 +10,11 @@ translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and
 original_slug: >-
   Accessibilité/Aperçu_d_applications_Web_et_de_composants_dynamiques_accessibles
 ---
-Le Web est en perpétuelle évolution. En effet, les sites à contenu statique sont de plus en plus remplacés par des sites dynamiques à l’utilisation assez proche des applications de bureaux. Les sites Web dynamiques utilisent abondamment JavaScript et AJAX. Les designers créent des widgets et des éléments d'interface grâce aux langages du Web notamment HTML, CSS et Javascript. Ce tournant dans l’histoire du Web permet d'améliorer grandement l'expérience utilisateur et l'utilisation sur mobile (responsive). Mais certains utilisateurs peuvent être exclus par manque d'accessibilité. En effet, JavaScript avait la réputation d'être inaccessible aux technologies d'assistance tel que les interpréteurs d’écran. Or, il existe maintenant des techniques pour rendre le Web accessible à une large palette d’utilisateurs.
+Le Web est en perpétuelle évolution. En effet, les sites à contenu statique sont de plus en plus remplacés par des sites dynamiques à l’utilisation assez proche des applications de bureaux. Les sites Web dynamiques utilisent abondamment JavaScript et AJAX. Les designers créent des widgets et des éléments d'interface grâce aux langages du Web notamment HTML, CSS et Javascript. Ce tournant dans l’histoire du Web permet d'améliorer grandement l'expérience utilisateur et l'utilisation sur mobile (responsive). Mais certains utilisateurs peuvent être exclus par manque d'accessibilité. En effet, JavaScript avait la réputation d'être inaccessible aux technologies d'assistance tel que les interpréteurs d’écran. Or, il existe maintenant des techniques pour rendre le Web accessible à une large palette d’utilisateurs.
 
 ## Problématique
 
-La plupart des librairies JavaScript proposent des composants côté client qui miment le comportement familier des interfaces de bureaux classiques. Carrousels, barres de menu et d’autres composants peuvent être créés avec JavaScript, CSS et HTML. Mais du moment que les spécifications HTML 4 ne proposaient pas de tags pour décrire sémantiquement ce type de composants, les développeurs se contentaient d'éléments génériques tel que le tag `<div>` ou le tag `<span>`. Or, si d’apparence ces composants ressemblaient parfaitement à ceux spécifiques aux applications de bureau, on ne disposait pas d'informations sémantiques suffisantes pour les rendres accessibles aux technologies d’assistance. L’accès au contenu dynamique d’une page Web peut devenir problématique plus particulièrement pour les utilisateurs qui, pour une raison ou pour une autre ne peuvent pas voir l’écran. Les niveaux de stock, les indicateurs de progression... modifient le DOM de telle sorte que les technologies d'assistance n’y ont pas accès. C'est dans ce contexte que [ARIA](/fr/ARIA) entre en jeu.
+La plupart des librairies JavaScript proposent des composants côté client qui miment le comportement familier des interfaces de bureaux classiques. Carrousels, barres de menu et d’autres composants peuvent être créés avec JavaScript, CSS et HTML. Mais du moment que les spécifications HTML 4 ne proposaient pas de tags pour décrire sémantiquement ce type de composants, les développeurs se contentaient d'éléments génériques tel que le tag `<div>` ou le tag `<span>`. Or, si d’apparence ces composants ressemblaient parfaitement à ceux spécifiques aux applications de bureau, on ne disposait pas d'informations sémantiques suffisantes pour les rendres accessibles aux technologies d’assistance. L’accès au contenu dynamique d’une page Web peut devenir problématique plus particulièrement pour les utilisateurs qui, pour une raison ou pour une autre ne peuvent pas voir l’écran. Les niveaux de stock, les indicateurs de progression... modifient le DOM de telle sorte que les technologies d'assistance n’y ont pas accès. C'est dans ce contexte que [ARIA](/fr/ARIA) entre en jeu.
 
 _Exemple 1: Code d_’_une tabulation sans informations ARIA. Il n'y a aucune information permettant de décrire la forme du widget et ses fonctions._
 
@@ -44,13 +44,13 @@ _Example 2: Telles qu'elles sont représentées ci-dessous, les tabulations peuv
 
 ## ARIA
 
-[WAI-ARIAI](https://www.w3.org/WAI/standards-guidelines/aria/), les spécifications concernant les applications **internet "riches" et accessibles** sont publiées par l’iniative du [W3C sur l’accessibilité](https://www.w3.org/WAI/), et fournissent la sémantique essentielle au bon fonctionnement des lecteurs d'écran. ARIA permet aux développeurs de décrire en quelque sorte leurs widgets plus finement en ajoutant des attributs spéciaux à leurs balises. Ces spécifications comblent le vide qui existait entre les spécifications du standard HTML et des widgets. ARIA spécifie des rôles et des états permettant de décrire en quelque sorte le fonctionnement des widgets d’interfaces utilisateurs les plus connus.
+[WAI-ARIAI](https://www.w3.org/WAI/standards-guidelines/aria/), les spécifications concernant les applications **internet "riches" et accessibles** sont publiées par l’iniative du [W3C sur l’accessibilité](https://www.w3.org/WAI/), et fournissent la sémantique essentielle au bon fonctionnement des lecteurs d'écran. ARIA permet aux développeurs de décrire en quelque sorte leurs widgets plus finement en ajoutant des attributs spéciaux à leurs balises. Ces spécifications comblent le vide qui existait entre les spécifications du standard HTML et des widgets. ARIA spécifie des rôles et des états permettant de décrire en quelque sorte le fonctionnement des widgets d’interfaces utilisateurs les plus connus.
 
 > **Attention :** Beaucoup d’entre eux ont été ajouté plus tard dans HTML5, et **les développeurs devraient toujours préférer utiliser la balise HTML correspondante plutôt qu’utiliser ARIA**.
 
 Les spécifications ARIA distinguent 3 types d’attributs : rôles, états et propriétés. Les rôles sont utilisés pour les widgets ne faisant pas partie des spécifications HTML 4 comme des sliders, menus, barres, boites de dialogue... Les propriétés sont utilisées pour représenter les caractéristiques de ces widgets, elles décrivent les caractéristiques de ces widgets comme s'il sont déplaçables avec la souris, requièrent un élément ou ont un popup associés à eux. Les états, comme leur nom l'indique, servent à representer l'état actuel de ces éléments en informant les technologies d'assistance s'il est occupé, désactivé, sélectionné ou masqué.
 
-Les attributs ARIA ont été conçus de façon à être interprétés directement par les navigateurs Web et interagir directement avec les APIs d'accessibilité natives des systèmes d'exploitation. Quand les spécifications ARIA sont implementées, les technologies d'assistance peuvent interagir avec les widgets JavaScript personnalisés de la même façon qu'ils interagissent avec leurs équivalents de bureau. Les technologies d'assistance peuvent ainsi fournir une expérience utilisateur homogène.
+Les attributs ARIA ont été conçus de façon à être interprétés directement par les navigateurs Web et interagir directement avec les APIs d'accessibilité natives des systèmes d'exploitation. Quand les spécifications ARIA sont implementées, les technologies d'assistance peuvent interagir avec les widgets JavaScript personnalisés de la même façon qu'ils interagissent avec leurs équivalents de bureau. Les technologies d'assistance peuvent ainsi fournir une expérience utilisateur homogène.
 
 _Example 3 : L'exemple ci-dessous ajoute des attributs ARIA aux balises déjà présentes._
 
@@ -77,15 +77,15 @@ _Example 3 : L'exemple ci-dessous ajoute des attributs ARIA aux balises déjà p
 </div>
 ```
 
-Les versions récentes des navigateurs majeurs du marché fournissent un support ARIA Firefox, Chrome, Safari, Internet Explorer... De nombreuses technologies d'assistance libres d’accès tel que NVDA et Orca fournissent aussi un support ARIA. Le support de ces spécifications est aussi de plus en plus présent dans les balises des librairies JavaScript : JQuery UI, YUI, Google Closure et Dojo Dijit.
+Les versions récentes des navigateurs majeurs du marché fournissent un support ARIA Firefox, Chrome, Safari, Internet Explorer... De nombreuses technologies d'assistance libres d’accès tel que NVDA et Orca fournissent aussi un support ARIA. Le support de ces spécifications est aussi de plus en plus présent dans les balises des librairies JavaScript : JQuery UI, YUI, Google Closure et Dojo Dijit.
 
 ### Les changement représentationnels
 
-Les changements représentationnels incluent l'utilisation du CSS pour changer l'apparence du contenu (mettre une bordure rouge autour de données invalides, changer la couleur de fond d’une case à cocher), le faire apparaitre ou disparaitre.
+Les changements représentationnels incluent l'utilisation du CSS pour changer l'apparence du contenu (mettre une bordure rouge autour de données invalides, changer la couleur de fond d’une case à cocher), le faire apparaitre ou disparaitre.
 
 #### Les Changements d'états
 
-Les attributs pour décrire l’état actuel d'un widget sont fournis, par exemple :
+Les attributs pour décrire l’état actuel d'un widget sont fournis, par exemple&nbsp;:
 
 - **`aria-checked`** indique l’état d'une case à cocher ou d'un bouton radio,
 - **`aria-disabled`** indique qu’un élément est visible, mais désactivé,
@@ -137,7 +137,7 @@ var showTip = function(el) {
 
 ARIA permet aux développeurs de déclarer un rôle sémantique pour un élément qui produirait des sémantiques fausses. Par exemple, quand une liste non ordonnée est utilisée pour créer un menu, {{ HTMLElement("ul") }} devrait avoir un **`role`** de `menubar` et chaque {{ HTMLElement("li") }} devrait avoir un **`role`** de `menuitem`. Le **`role`** d'un élément ne doit pas changer. À la place, il faut supprimer l'élément original et le remplacer par un nouveau **`role`**.
 
-Considérons une zone d’écriture, soit une zone qui permet à l’utilisateur d’éditer une partie de son texte, sans changer de contexte. Cette zone a un mode "vue", dans lequel le texte n’est pas éditable, et un mode "édition", dans lequel le texte peut être modifié. Un développeur peut être tenté d’implémenter le mode "vue" avec un texte en lecture seule via l’élément {{ HTMLElement("input") }} et en configurant le  **`role`**  ARIA à  `button`, puis passe au mode "édition" en rendant l’élément écrivable et en supprimant le **`role`** attribué dans le mode "édition" (puisque les éléments de type {{ HTMLElement("input") }} ont leur propre rôle sémantique).
+Considérons une zone d’écriture, soit une zone qui permet à l’utilisateur d’éditer une partie de son texte, sans changer de contexte. Cette zone a un mode "vue", dans lequel le texte n’est pas éditable, et un mode "édition", dans lequel le texte peut être modifié. Un développeur peut être tenté d’implémenter le mode "vue" avec un texte en lecture seule via l’élément {{ HTMLElement("input") }} et en configurant le  **`role`**  ARIA à  `button`, puis passe au mode "édition" en rendant l’élément écrivable et en supprimant le **`role`** attribué dans le mode "édition" (puisque les éléments de type {{ HTMLElement("input") }} ont leur propre rôle sémantique).
 
 Ne faites pas ça. À la place, il vaut mieux implémenter le mode "vue" avec un autre élément, comme {{ HTMLElement("div") }} ou {{ HTMLElement("span") }} avec un **`role`** de `button`, et le mode "édition" avec un élément texte {{ HTMLElement("input") }}.
 

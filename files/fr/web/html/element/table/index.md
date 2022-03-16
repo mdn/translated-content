@@ -73,7 +73,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
   - : Cet attribut à valeurs multiples définit la manière dont les traits doivent apparaître au sein du tableau. Il peut avoir les valeurs suivantes :
 
     - `none`, les traits ne doivent pas être affichés, c'est la valeur par défaut
-    - `groups`, les traits sont uniquement affichés entre les groupes de lignes du tableau (définis par les éléments {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} et {{HTMLElement("tfoot")}})  et entre les groupes de colonnes (définis par les éléments {{HTMLElement("col")}} et {{HTMLElement("colgroup")}})
+    - `groups`, les traits sont uniquement affichés entre les groupes de lignes du tableau (définis par les éléments {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} et {{HTMLElement("tfoot")}})  et entre les groupes de colonnes (définis par les éléments {{HTMLElement("col")}} et {{HTMLElement("colgroup")}})
     - `rows`, les traits seront affichées entre les lignes du tableau
     - `columns`, les lignes seront affichées entre les colonnes du tableau
     - `all`, tous les traits seront affichés (entre les lignes et entre les colonnes).
@@ -288,7 +288,7 @@ Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs {{h
 
 - [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/Apprendre/HTML/Tableaux/Advanced#Tableaux_pour_des_utisateurs_malvoyants)
 - [Les tableaux avec des en-têtes sur plusieurs niveaux • Tutoriels d'accesibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/multi-level/)
-- [H43 : Utiliser les attributs `id` et `headers` afin d'associer les cellules de données et les cellules d'en-tête dans les tableaux | Techniques W3C pour  WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
+- [H43 : Utiliser les attributs `id` et `headers` afin d'associer les cellules de données et les cellules d'en-tête dans les tableaux | Techniques W3C pour WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
 ## Résumé technique
 
@@ -322,7 +322,7 @@ Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs {{h
             L'un ou l'autre de ces deux cas de figure :
             <ul>
               <li>
-                zéro ou plusieurs éléments  {{HTMLElement("tbody")}}
+                zéro ou plusieurs éléments  {{HTMLElement("tbody")}}
               </li>
               <li>un ou plusieurs éléments {{HTMLElement("tr")}}</li>
             </ul>
@@ -354,8 +354,8 @@ Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs {{h
 
 | Spécification                                                                                            | État                             | Commentaires |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','tables.html#the-table-element','table element')}}     | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-table-element','table element')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG','tables.html#the-table-element','table element')}}     | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C','tabular-data.html#the-table-element','table element')}} | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

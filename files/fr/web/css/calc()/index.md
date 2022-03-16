@@ -10,7 +10,7 @@ translation_of: Web/CSS/calc()
 ---
 {{CSSRef}}
 
-La fonction **`calc()`** peut être utilisée à n'importe quel endroit où une {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est nécessaire. Grâce à `calc()`, il est possible de réaliser des calculs pour déterminer la valeur d'une propriété CSS.
+La fonction **`calc()`** peut être utilisée à n'importe quel endroit où une {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est nécessaire. Grâce à `calc()`, il est possible de réaliser des calculs pour déterminer la valeur d'une propriété CSS.
 
 ```css
 /* property: calc(expression) */
@@ -39,7 +39,7 @@ L'opérande dans l'expression peut utiliser n'importe quelle syntaxe de longueur
 - Une division par zéro aboutit à une erreur qui est générée par le parseur HTML.
 - Les opérateurs `+` et `-` **doivent toujours être entouré d'espaces**. Par exemple l'opérande de `calc(50% -8px)` sera interprété comme une valeur en pourcentage suivie d'une longueur négative, l'expression est invalide. L'opérande de `calc(50% - 8px)` est une valeur en pourcentage suivie d'un signe moins et d'une longueur. Et ainsi, `calc(8px + -50%)` est interprété comme une longueur suivi d'un signe plus et d'un pourcentage négatif.
 - Les opérateurs `*` et `/` ne nécessitent pas d'espaces, mais les ajouter pour conserver la cohérence est recommandé.
-- Les expressions mathématiques manipulant des pourcentages pour les hauteurs et largeurs de colonnes d'un tableau, de groupes de colonne, de lignes d'un tableau ou de groupes de lignes contribuant à un tableau organisé de façon automatique ou en disposition fixe pourront être traitées comme si c'était `auto` qui avait été utilisé.
+- Les expressions mathématiques manipulant des pourcentages pour les hauteurs et largeurs de colonnes d'un tableau, de groupes de colonne, de lignes d'un tableau ou de groupes de lignes contribuant à un tableau organisé de façon automatique ou en disposition fixe pourront être traitées comme si c'était `auto` qui avait été utilisé.
 - Il est possible d'imbriquer des fonctions `calc()`, auquel cas, les appels « internes » sont considérés comme des parenthèses.
 
 ### Syntaxe formelle
@@ -50,7 +50,7 @@ L'opérande dans l'expression peut utiliser n'importe quelle syntaxe de longueur
 
 ### Positionner un objet sur l’écran avec une marge
 
-`calc()` rend le positionnement des objets facile en définissant une marge. Dans cet exemple, le CSS crée une bannière qui s'étend sur toute la fenêtre, avec un espace de 40 pixels entre chaque bout de la bannière et les bords de la fenêtre :
+`calc()` rend le positionnement des objets facile en définissant une marge. Dans cet exemple, le CSS crée une bannière qui s'étend sur toute la fenêtre, avec un espace de 40 pixels entre chaque bout de la bannière et les bords de la fenêtre :
 
 ```css
 .banniere {

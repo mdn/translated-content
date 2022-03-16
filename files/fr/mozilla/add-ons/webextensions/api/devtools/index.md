@@ -33,7 +33,7 @@ Pour utiliser cette API, vous devez disposer de la [permission API](/fr/Add-ons/
 
 > **Note :**
 >
-> Cette API est basé sur l'API  [`chrome.downloads`](https://developer.chrome.com/extensions/downloads) de Chromium.
+> Cette API est basé sur l'API  [`chrome.downloads`](https://developer.chrome.com/extensions/downloads) de Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

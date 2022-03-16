@@ -33,7 +33,7 @@ text-emphasis-position: unset;
 
 ## Position privilégiée
 
-La position des marques d'emphase varie en fonction du langage. Par exemple, en japonais, on préfère les placer au dessus à droite. En revanche, pour le chinois, on préfèrera en bas à droite. Le tableau qui suit illustre les différences, notamment entre le chinois, le mongolien et le japonais  :
+La position des marques d'emphase varie en fonction du langage. Par exemple, en japonais, on préfère les placer au dessus à droite. En revanche, pour le chinois, on préfèrera en bas à droite. Le tableau qui suit illustre les différences, notamment entre le chinois, le mongolien et le japonais  :
 
 <table>
   <caption>

@@ -18,12 +18,12 @@ Par défaut, les mises à jour ne contiennent que les changements apportés à l
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
-Lorsque le rôle `log` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes :
+Lorsque le rôle `log` est ajouté à un élément, ou qu’un tel élément devient visible, l’agent utilisateur devrait suivre les étapes suivantes&nbsp;:
 
-- Présenter l’élément ayant un rôle de journal à l’API d’accessibilité du système d’exploitation ;
+- Présenter l’élément ayant un rôle de journal à l’API d’accessibilité du système d’exploitation&nbsp;;
 - Déclencher un événement journal accessible à l’aide de l’API d’accessibilité du système d’exploitation si elle le prend en charge.
 
-Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence :
+Les technologies d’assistance devraient être à l’écoute de tels événements et les notifier à l’utilisateur en conséquence&nbsp;:
 
 - Les lecteurs d'écran devraient annoncer les changements intervenus dans le fichier de journalisation lorsque l'utilisateur est inactif, à moins que `aria-live="assertive"` soit défini, dans quel cas l'utilisateur peut être interrompu.
 - Les loupes d'écran devraient indiquer visuellement la disponibilité d'une mise à jour du fichier de journalisation.
@@ -32,7 +32,7 @@ Les technologies d’assistance devraient être à l’écoute de tels événeme
 
 ### Exemples
 
-#### Exemple 1 : Ajout du rôle dans du code HTML
+#### Exemple 1&nbsp;: Ajout du rôle dans du code HTML
 
 L’extrait de code ci-dessous montre comment le rôle `log` est ajouté directement dans le code source HTML.
 
@@ -40,7 +40,7 @@ L’extrait de code ci-dessous montre comment le rôle `log` est ajouté directe
 <div id=”liveregion” class=”region” role=”log”></div>
 ```
 
-#### Exemple 2 : Extrait d’un exemple d’application
+#### Exemple 2&nbsp;: Extrait d’un exemple d’application
 
 Cet extrait de code crée le journal dans une application de chat AJAX.
 
@@ -57,10 +57,10 @@ Cet extrait de code crée le journal dans une application de chat AJAX.
 
 Voir l’[exemple](http://codetalks.org/source/live/chat.html) sur CodeTalks pour plus d’informations.
 
-#### Exemples concrets :
+#### Exemples concrets&nbsp;:
 
-- <http://test.cita.illinois.edu/aria/live/live1.php> ;
-- <http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/> ;
+- <http://test.cita.illinois.edu/aria/live/live1.php>&nbsp;;
+- <http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/>&nbsp;;
 - <http://codetalks.org/source/live/chat.html> \[[notes](http://codetalks.org/source/live/chat_notes.html)].
 
 ### Notes
@@ -78,4 +78,4 @@ Voir l’[exemple](http://codetalks.org/source/live/chat.html) sur CodeTalks pou
 
 ### Autres ressources
 
-- Bonnes pratiques ARIA – Implémentation des zones live : [#LiveRegions](http://www.w3.org/TR/wai-aria-practices/#LiveRegions).
+- Bonnes pratiques ARIA – Implémentation des zones live&nbsp;: [#LiveRegions](http://www.w3.org/TR/wai-aria-practices/#LiveRegions).
