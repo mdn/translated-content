@@ -298,14 +298,14 @@ mark.projects = ["navigator"];</pre>
 
 <p>위의 구문을 실행한 직후, <code>mark</code>객체는 <code>"none"</code>이라는 값을 가지는 전문분야<code>(specialty)</code>속성을 가지게 됩니다.아래의 그림들은 해당 속성을 추가한 후 엔지니어<code>(Engineer)</code> 프로토타입에 대해 해당 속성을 재정의 했을 경우 각 객체에 미치는 영향을 보여줍니다.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png" style="height: 519px; width: 833px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4422/=figure8.4.png"><br>
  <strong>속성의 추가</strong></p>
 
 <h2 id="좀_더_유연한_생성자들">좀 더 유연한 생성자들</h2>
 
 <p>지금까지 살펴 본 생성자 함수들은 인스턴스를 생성하면서 동시에 속성값을 지정할 수 없었습니다. 자바의 경우, 인스턴스를 생성 시 생성자에 인자들을 넘겨주어 인스턴스의 속성들을 초기화 할 수 있습니다. 다음의 예제 그림들은 자바처럼 인스턴스 생성 시 속성값을 설정하는 방법을 보여줍니다.</p>
 
-<p><img alt="" class="internal"  src="/@api/deki/files/4423/=figure8.5.png" style="height: 481px; width: 1012px;"><br>
+<p><img alt="" class="internal"  src="/@api/deki/files/4423/=figure8.5.png"><br>
  <small><strong>Specifying properties in a constructor, take 1</strong></small></p>
 
 <p>다음의 표는 자바와 자바스크립트 각각의 생성자와 객체에 대한 정의를 보여 줍니다. </p>
@@ -411,7 +411,7 @@ jane.machine == "belau"
 
 <p>지금까지, 원형 객체를 생성한 후, 그 새로운 객체 자신의 속성과 속성 값을 지정하는 것을 살펴 보았습니다. 프로토타입 체인상에서 해당 생성자가 상위 객체에 대한 생성자를 직접 호출 함으로써 더 많은 속성을 추가하도록 할 수 있습니다. 다음의 그림은 새로운 정의 방법을 보여 줍니다.</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png" style="height: 534px; width: 1063px;"><br>
+<p><img alt="" class="internal" src="/@api/deki/files/4430/=figure8.6.png"><br>
  <small><strong>생성자내에서 속성들 정의, 그림 2</strong></small></p>
 
 <p>그럼 좀 더 상세하게 생성자 내에서 속성들을 정의하는 것을 살펴 보겠습니다. 다음은 엔지니어(<code>Engineer)</code> 생성자의 새로운 정의입니다:</p>
