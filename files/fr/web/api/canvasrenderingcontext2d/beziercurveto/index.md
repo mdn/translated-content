@@ -93,7 +93,7 @@ Cet exemple dessine une courbe cubique de Bézier simple en utilisant `bezierCur
 
 #### JavaScript
 
-La courbe débute au point spécifié par `moveTo()` : (30, 30). Le premier point de contrôle est placé à (120, 160), le second à (180, 10) et le point d'arrivée à (220, 140).
+La courbe débute au point spécifié par `moveTo()`&nbsp;: (30, 30). Le premier point de contrôle est placé à (120, 160), le second à (180, 10) et le point d'arrivée à (220, 140).
 
 ```js
 const canvas = document.getElementById("canvas");

@@ -31,4 +31,4 @@ window.onclose = resetThatServerThing;
 
 | Spécification                                                                                    | Statut                           | Commentaires |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onclose','onclose')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onclose','onclose')}} | {{Spec2('HTML WHATWG')}} |              |

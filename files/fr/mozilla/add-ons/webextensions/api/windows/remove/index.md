@@ -73,7 +73,7 @@ document.querySelector('#close').addEventListener(async ({ button, }) => { try {
 } catch (error) { console.error('Closing failed:', error); } });
 ```
 
-Dans Firefox, la même chose pourrait être réalisée avec la propriété de création de fenêtre  `.allowScriptsToClose` et `window.close()`.
+Dans Firefox, la même chose pourrait être réalisée avec la propriété de création de fenêtre  `.allowScriptsToClose` et `window.close()`.
 
 {{WebExtExamples}}
 

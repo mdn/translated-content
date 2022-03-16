@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/push
 ---
 {{JSRef}}
 
-La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.
+La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}
 
@@ -31,11 +31,11 @@ La nouvelle valeur de la propriété {{jsxref("Array.length", "length")}} de l'o
 
 ## Description
 
-La méthode `push` permet d'ajouter des valeurs à un tableau.
+La méthode `push` permet d'ajouter des valeurs à un tableau.
 
 `push` est une méthode générique. Cette méthode peut ainsi être utilisée avec les méthodes {{jsxref("Function.call()")}} ou {{jsxref("Function.apply()")}} sur des objets similaires aux tableaux.
 
-La méthode `push` se base sur la propriété `length` pour déterminer à partir de quel index les valeurs données doivent être insérées. Si la propriété `length` ne peut pas être convertie en nombre, l'index utilisé est 0. Si la propriété `length` n'est pas définie, elle est alors créée.
+La méthode `push` se base sur la propriété `length` pour déterminer à partir de quel index les valeurs données doivent être insérées. Si la propriété `length` ne peut pas être convertie en nombre, l'index utilisé est 0. Si la propriété `length` n'est pas définie, elle est alors créée.
 
 Bien que `push` soit une méthode générique, elle ne peut pas être utilisée sur les chaînes de caractères ou sur l'objet `arguments` car ils sont immuables.
 
@@ -43,7 +43,7 @@ Bien que `push` soit une méthode générique, elle ne peut pas être utilisée 
 
 ### Ajouter des éléments à un tableau
 
-Le code suivant crée un tableau `sports` contenant à sa création deux éléments, auxquels sont ajoutés deux nouveaux éléments. La variable `total` contient la nouvelle taille du tableau.
+Le code suivant crée un tableau `sports` contenant à sa création deux éléments, auxquels sont ajoutés deux nouveaux éléments. La variable `total` contient la nouvelle taille du tableau.
 
 ```js
 var sports = ["plongée", "baseball"];

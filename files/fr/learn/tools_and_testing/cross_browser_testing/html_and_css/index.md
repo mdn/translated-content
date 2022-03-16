@@ -58,7 +58,7 @@ Commençons et regardons comment nous pouvons réduire les erreurs en navigateur
 
 Nous disions dans le [premier article de cette série](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#Testingdiscovery) que c'était une bonne stratégie de commencer à tester sur une paire de navigateurs modernes sur desktop/mobile, afin de vous assurer que votre site fonctionne pour l'essentiel, avant de commencer à se concentrer sur les problèmes en navigateur croisé.
 
-Dans nos articles [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) et [Debugging CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS), nous avancions quelques conseils très basiques sur le débogage HTML/CSS — si vous ne maîtrisez pas ces bases, vous devriez sans aucun doute aller étudier ces articles avant de continuer.
+Dans nos articles [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) et [Debugging CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS), nous avancions quelques conseils très basiques sur le débogage HTML/CSS — si vous ne maîtrisez pas ces bases, vous devriez sans aucun doute aller étudier ces articles avant de continuer.
 
 Il s'agit essentiellement de vérifier si votre code HTML et CSS est bien conçu et s'il ne contient aucune erreur de syntaxe.
 
@@ -70,7 +70,7 @@ Pour le HTML, la validation implique de s'assurer que toutes vos balises sont co
 
 ![The HTML validator homepage](validator.png)
 
-Le CSS a une histoire semblable — vous devez vérifier que vos noms de propriétés sont correctement épelés, ques les valeurs des propriétés sont correctement épelées et qu'elles sont valides pour les propriétés auxquelles elles s'appliquent, que vous n'oubliez aucune accolades ouvrantes et fermantes. Les W3C a un [CSS Validator](http://jigsaw.w3.org/css-validator/) également disponible à cet effet.
+Le CSS a une histoire semblable — vous devez vérifier que vos noms de propriétés sont correctement épelés, ques les valeurs des propriétés sont correctement épelées et qu'elles sont valides pour les propriétés auxquelles elles s'appliquent, que vous n'oubliez aucune accolades ouvrantes et fermantes. Les W3C a un [CSS Validator](http://jigsaw.w3.org/css-validator/) également disponible à cet effet.
 
 ### Les linters
 
@@ -121,9 +121,9 @@ Une fois que vous avez identifié une liste des potentielles technologies à pro
 
 #### Comportement naturel du HTML
 
-Certains problèmes peuvent être résolus, seulement en tirant parti des réactions naturelles du HTML/CSS.
+Certains problèmes peuvent être résolus, seulement en tirant parti des réactions naturelles du HTML/CSS.
 
-Les éléments HTML non reconnus sont traités par les navigateurs comme des éléments inline anonymes (véritablement des éléments inline avec aucune valeur sémantiques, similaires aux éléments {{htmlelement("span")}} ). Vous pouvez toujours vous référez à eux avec leurs noms, et les styler avec du CSS, par exemple — vous avez juste besoin de vous assurer qu'ils se comportent comme vous le voulez, par exemple configurer `display: block;` sur tous les nouveaux éléments sémantiques (comme {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), mais seulement sur les vieilles versions d'IE qui ne les reconnaissent pas (donc, IE 8 et plus faible). De cette façon les nouveaux navigateurs peuvent juste utiliser le code normalement, mais les anciennes versions d'IE seront également capables de styler ces éléments.
+Les éléments HTML non reconnus sont traités par les navigateurs comme des éléments inline anonymes (véritablement des éléments inline avec aucune valeur sémantiques, similaires aux éléments {{htmlelement("span")}} ). Vous pouvez toujours vous référez à eux avec leurs noms, et les styler avec du CSS, par exemple — vous avez juste besoin de vous assurer qu'ils se comportent comme vous le voulez, par exemple configurer `display: block;` sur tous les nouveaux éléments sémantiques (comme {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), mais seulement sur les vieilles versions d'IE qui ne les reconnaissent pas (donc, IE 8 et plus faible). De cette façon les nouveaux navigateurs peuvent juste utiliser le code normalement, mais les anciennes versions d'IE seront également capables de styler ces éléments.
 
 > **Note :** Voir {{anch("IE conditional comments")}} pour une application efficace.
 
@@ -230,7 +230,7 @@ Observons un exemple — une simple boîte stylée avec du CSS, qui a certains s
 
 ![](blingy-button.png)
 
-> **Note :** Vous pouvez également voir cet exemple exécuté en direct sur GitHub comme [button-with-fallback.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (voir aussi le [code source](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
+> **Note :** Vous pouvez également voir cet exemple exécuté en direct sur GitHub comme [button-with-fallback.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (voir aussi le [code source](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
 
 Le bouton a un nombre de déclarations qui le style, mais les deux qui nous intéressent le plus sont les suivantes :
 
@@ -254,11 +254,11 @@ button:active {
 }
 ```
 
-Ici on fournit un {{cssxref("background-color")}} [RGBA](</fr/docs/Web/CSS/color_value#rgba()>) qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !
+Ici on fournit un {{cssxref("background-color")}} [RGBA](</fr/docs/Web/CSS/color_value#rgba()>) qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !
 
 ![](unreadable-button.png)
 
-Pour résoudre ce problème, nous avons ajouté une deuxième déclaration `background-color`, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur `background-color` ; lorsqu'il sélectionne la deuxième déclaration `background-color`, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.
+Pour résoudre ce problème, nous avons ajouté une deuxième déclaration `background-color`, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur `background-color` ; lorsqu'il sélectionne la deuxième déclaration `background-color`, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.
 
 > **Note :** Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/fr/docs/Web/CSS/@font-face) et [`@supports`](/fr/docs/Web/CSS/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
 
@@ -310,7 +310,7 @@ form > #date
 
 (L'input `date` du formulaire n'est pas directement dans le `<form>` ; vous feriez mieux d'utiliser un sélecteur descendant général plutôt qu'un sélecteur d'enfant).
 
-Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type), [`:not`](/fr/docs/Web/CSS/:not), [`::selection`](/fr/docs/Web/CSS/::selection), etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie [Selectivizr](http://selectivizr.com/) de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme  [jQuery](http://jquery.com/) ou [MooTools](http://mootools.net/).
+Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type), [`:not`](/fr/docs/Web/CSS/:not), [`::selection`](/fr/docs/Web/CSS/::selection), etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie [Selectivizr](http://selectivizr.com/) de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme  [jQuery](http://jquery.com/) ou [MooTools](http://mootools.net/).
 
 1.  Afin de tester cet exemple, faites une copie locale de [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). Si vous le regarder s'exécuter en direct, vous verrez qu'il contient deux paragraphes, dont l'un est stylé. Nous avons sélectionné le paragraphe avec `p:first-child`, qui ne fonctionne pas sur les anciennes versions d'IE.
 2.  Maintenant télécharger [MooTools](http://mootools.net/) et [Selectivizr](http://selectivizr.com/), et placez-les dans le même répertoire que votre fichier HTML.
@@ -345,13 +345,13 @@ background-image: -webkit-gradient(linear,left center,right center,from(green),t
 background-image: linear-gradient(to right,green,yellow);
 ```
 
-La première ligne déclare une propriété {{cssxref("transform")}} avec un préfixe `-webkit-` — c'était nécessaire pour que la transformation fonctionne sur Chrome, etc jusqu'à ce que la fonctionnalité soit finalisée et beaucoup de navigateurs ont ajouté une version de la propriété sans préfixes (au moment de la rédaction, Chrome supportait les deux versions).
+La première ligne déclare une propriété {{cssxref("transform")}} avec un préfixe `-webkit-` — c'était nécessaire pour que la transformation fonctionne sur Chrome, etc jusqu'à ce que la fonctionnalité soit finalisée et beaucoup de navigateurs ont ajouté une version de la propriété sans préfixes (au moment de la rédaction, Chrome supportait les deux versions).
 
 Les trois dernières images montrent trois versions différentes de la fonction [`linear-gradient()`](/fr/docs/Web/CSS/linear-gradient), qui est utilisée pour générer un dégradé linéaire dans la background d'un élément :
 
 1.  La première a un préfixe `-moz-`, et montre une version plutôt ancienne de la syntaxe (Firefox)
 2.  La seconde a un préfixe `-webkit-`, et montre encore une vieille version de la syntaxe de la propriété (également issue d'une vraiment vieille version du moteur Wekkit)
-3.  La troisième n'a pas de préfixe, et montre la version finale de la syntaxe (inclue dans  [CSS Image Values and Replaced Content Module Level 3 spec](https://drafts.csswg.org/css-images-3/#linear-gradients), qui définit cette fonctionnalité).
+3.  La troisième n'a pas de préfixe, et montre la version finale de la syntaxe (inclue dans  [CSS Image Values and Replaced Content Module Level 3 spec](https://drafts.csswg.org/css-images-3/#linear-gradients), qui définit cette fonctionnalité).
 
 Les fonctionnalités préfixées sont supposées ne jamais être utilisées dans des sites web en production — elles sont susceptibles de changer ou d'être supprimées sans avertissement, et causent des problèmes en navigateur croisé. C'est particulièrement un problème lorsque les développeurs décident de n'utiliser que la version `-webkit-` d'une propriété — ce qui veut dire que le site ne fonctionnera pas sur d'autres navigateurs. En fait, cela arrive tellement souvent que d'autres navigateurs ont commencé à implémenter les versions préfixées `-webkit-` de plusieurs propriétés CSS, ils marcheront donc avec un tel code. L'utilisation des préfixes fournit par chaque navigateur a récemment déclinée précisément à cause de ce type de problèmes, mais il en reste encore certain qui demandent de l'attention.
 
@@ -368,7 +368,7 @@ Essayez cet exemple simple :
     var test = document.getElementById('hplogo');
     ```
 
-5.  Maintenant essayez d'appliquer une nouvelle valeur pour la propriété CSS qui vous intéresse sur cet élément ; vous pouvez le faire en utilisant la propriété [style](/fr/docs/Web/API/HTMLElement/style) de l'élément, par exemple essayez de taper ça dans votre console Javascript :
+5.  Maintenant essayez d'appliquer une nouvelle valeur pour la propriété CSS qui vous intéresse sur cet élément ; vous pouvez le faire en utilisant la propriété [style](/fr/docs/Web/API/HTMLElement/style) de l'élément, par exemple essayez de taper ça dans votre console Javascript :
 6.  ```js
     test.style.transform = 'rotate(90deg)'
     test.style.webkitTransform = 'rotate(90deg)'
@@ -390,9 +390,9 @@ Cela vous assurera que tous les navigateurs qui supportent n'importe laquelle de
 
 Bien entendu, appliquer cela à de nombreuses différentes règles CSS peut devenir très fastidieux. Il est préférable d'utiliser des outils d'automatisation qui le font pour vous. Et de tels outils existent :
 
-La [prefix-free JavaScript library](http://leaverou.github.io/prefixfree/) peut être jointe à une page, et détectera automatiquement quels sont les aptitudes détenues par navigateurs en analysant la page et en ajoutant les préfixes appropriés. C'est très facile et pratique à utiliser, bien qu'il ait quelques inconvénients (voir le lien au-dessus pour plus de détails), et on peut discuter du fait qu'analyser chaque feuille de style de votre site et ajouter des préfixes lors de l'exécution peut être un fardeau pour la puissance de traitement de l'ordinateur pour un grand site.
+La [prefix-free JavaScript library](http://leaverou.github.io/prefixfree/) peut être jointe à une page, et détectera automatiquement quels sont les aptitudes détenues par navigateurs en analysant la page et en ajoutant les préfixes appropriés. C'est très facile et pratique à utiliser, bien qu'il ait quelques inconvénients (voir le lien au-dessus pour plus de détails), et on peut discuter du fait qu'analyser chaque feuille de style de votre site et ajouter des préfixes lors de l'exécution peut être un fardeau pour la puissance de traitement de l'ordinateur pour un grand site.
 
-Une autre solution est d'ajouter automatiquement les préfixes pendant le développement, et cela (et d'autres choses à venir) peut être fait en utilisant des outils comme [Autoprefixer](https://github.com/postcss/autoprefixer) et [PostCSS](http://postcss.org/). Ces outils peuvent être utilisés de diverses manières, par exemple Autoprefixer a une [version en ligne](http://autoprefixer.github.io/) qui vous permet d'entrer votre CSS non préfixé sur la gauche, et vous donne une version avec préfixes ajoutés sur la droite. Vous pouvez sélectionner quels navigateurs vous voulez afin de vous assurer de bien supporter en utilisant la notation définie dans [Autoprefixer options](https://github.com/postcss/autoprefixer#options)&nbsp;; pour plus de détails, voir aussi [Browserslist queries](https://github.com/ai/browserslist#queries), qui est basé dessus. Comme exemple, la requête suivante sélectionnera les deux dernières versions de tous le navigateurs principaux et les versions d'IE  supérieure à la 9.
+Une autre solution est d'ajouter automatiquement les préfixes pendant le développement, et cela (et d'autres choses à venir) peut être fait en utilisant des outils comme [Autoprefixer](https://github.com/postcss/autoprefixer) et [PostCSS](http://postcss.org/). Ces outils peuvent être utilisés de diverses manières, par exemple Autoprefixer a une [version en ligne](http://autoprefixer.github.io/) qui vous permet d'entrer votre CSS non préfixé sur la gauche, et vous donne une version avec préfixes ajoutés sur la droite. Vous pouvez sélectionner quels navigateurs vous voulez afin de vous assurer de bien supporter en utilisant la notation définie dans [Autoprefixer options](https://github.com/postcss/autoprefixer#options)&nbsp;; pour plus de détails, voir aussi [Browserslist queries](https://github.com/ai/browserslist#queries), qui est basé dessus. Comme exemple, la requête suivante sélectionnera les deux dernières versions de tous le navigateurs principaux et les versions d'IE supérieure à la 9.
 
     last 2 versions, ie > 9
 
@@ -437,10 +437,10 @@ Un autre problème qui peut survenir est la différence de mise en page entre le
 
 La plupart du travail de mise en page sur le web aujourd'hui et réalisé en utilisant les [floats](/fr/docs/Learn/CSS/CSS_layout/Floats) — c'est parce que les floats sont bien supportés (depuis IE 4, bien qu'il y ait un certain nombre de bugs qui auront besoin d'être examinés si vous essayez de supporter IE aussi loin). Il n'y a néanmoins pas de véritables explications sur la mise en page — utiliser les floats comme nous les utilisons est un vrai hack — et ils ont de sérieuses limites (par ex. voir [Why Flexbox?](/fr/docs/Learn/CSS/CSS_layout/Flexbox#Why_Flexbox))
 
-Plus récemment, des mécanismes dédiés à la disposition ont fait leur apparition, comme [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox) et [CSS Grids](/fr/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout), qui rendent les tâches ordinaires de disposition bien plus simples et enlèvent les défauts. Ils ne sont cependant pas bien supportés dans les navigateurs :
+Plus récemment, des mécanismes dédiés à la disposition ont fait leur apparition, comme [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox) et [CSS Grids](/fr/docs/Learn/CSS/CSS_layout/Grids#Native_CSS_Grids_with_Grid_Layout), qui rendent les tâches ordinaires de disposition bien plus simples et enlèvent les défauts. Ils ne sont cependant pas bien supportés dans les navigateurs :
 
 - Les grilles CSS sont très récentes ; au moment de la rédaction, elles n'étaient [supportées](http://gridbyexample.com/browsers/) que par les toutes nouvelles versions des navigateurs modernes.
-- Flexbox est [bien supportée](/fr/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility) dans les navigateurs modernes, mais amène des problèmes dans les vieux navigateurs. IE9 ne le supporte pas du tout, et IE 10 et les vieilles versions d'iOS/desktop Safari supportent respectivement des vieilles versions incompatibles des spécifications de flexbox. Ceci amène à s'intéresser au jonglage des préfixes de navigateur si vous voulez essayer d'utiliser flexbox sur tous ces navigateurs (voir [Advanced Cross-Browser Flexbox](https://dev.opera.com/articles/advanced-cross-browser-flexbox/) pour vous faire une idée).
+- Flexbox est [bien supportée](/fr/docs/Learn/CSS/CSS_layout/Flexbox#Cross_browser_compatibility) dans les navigateurs modernes, mais amène des problèmes dans les vieux navigateurs. IE9 ne le supporte pas du tout, et IE 10 et les vieilles versions d'iOS/desktop Safari supportent respectivement des vieilles versions incompatibles des spécifications de flexbox. Ceci amène à s'intéresser au jonglage des préfixes de navigateur si vous voulez essayer d'utiliser flexbox sur tous ces navigateurs (voir [Advanced Cross-Browser Flexbox](https://dev.opera.com/articles/advanced-cross-browser-flexbox/) pour vous faire une idée).
 
 Les fonctionnalités de disposition ne sont pas aussi simples pour fournir des solutions de repli que de simples couleurs, ombres ou dégradés. Si les propriétés de disposition sont ignorées, la totalité de votre design sera réduit en pièces. De ce fait, vous devez utiliser une fonctionnalité de détection pour détecter si les navigateurs qui consultent votre site supportent ces caractéristiques de disposition, et appliquer différentes dispositions de manière sélective selon le résultat (nous couvrirons les fonctionnalités de détection dans un article à venir).
 
@@ -454,13 +454,13 @@ Le design responsive est la pratique de créer des dispositions web qui s'adapte
 
 La résolution est également très préoccupante — par exemple, les appareils mobiles sont moins susceptibles d'avoir besoin de grosses images lourdes que des ordinateurs de bureau, et ont davantage tendance à avoir des connexions internet plus lentes et sans doute un échange de données coûteux qui gaspille la bande passante qui est un problème supplémentaire. De plus, certains appareils peuvent avoir une gamme de plusieurs résolutions, ce qui veut dire que des petites images peuvent s'afficher pixelisées. Il y a un nombre de techniques qui vous permette de travailler autour de tels problèmes, des simples [mobile first media queries](/fr/Apps/Progressive/Responsive/Mobile_first), aux plus complexes [responsive image techniques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes).
 
-Une autre difficulté qui peut présenter des problèmes c'est le support des fonctionnalités par les navigateurs qui rendent les techniques suscitées possibles. Les media queries ne sont pas supportés sur IE 8 ou plus vieux, donc si vous voulez utiliser une disposition mobile en premier lieu puis une disposition pour ordinateur de bureau qui applique aux vieilles versions d'IE, vous devrez appliquer un media querie {{glossary("polyfill")}} à votre page, comme [css3-mediaqueries-js](https://code.google.com/archive/p/css3-mediaqueries-js/) ou [Respond.js](https://github.com/scottjehl/Respond).
+Une autre difficulté qui peut présenter des problèmes c'est le support des fonctionnalités par les navigateurs qui rendent les techniques suscitées possibles. Les media queries ne sont pas supportés sur IE 8 ou plus vieux, donc si vous voulez utiliser une disposition mobile en premier lieu puis une disposition pour ordinateur de bureau qui applique aux vieilles versions d'IE, vous devrez appliquer un media querie {{glossary("polyfill")}} à votre page, comme [css3-mediaqueries-js](https://code.google.com/archive/p/css3-mediaqueries-js/) ou [Respond.js](https://github.com/scottjehl/Respond).
 
 ## Trouver de l'aide
 
 Il y bien d'autres problèmes que vous allez rencontrer avec le HTML et le CSS ; la chose la plus important à vraiment savoir est de comment trouver des solutions en ligne.
 
-Parmi les meilleures sources d'information de support il y a Mozilla Developer Network (c'est où vous vous trouvez actuellement !), [stackoverflow.com](http://stackoverflow.com/) et [caniuse.com](http://caniuse.com/).
+Parmi les meilleures sources d'information de support il y a Mozilla Developer Network (c'est où vous vous trouvez actuellement !), [stackoverflow.com](http://stackoverflow.com/) et [caniuse.com](http://caniuse.com/).
 
 Pour utiliser le Mozilla Developer Network (MDN), la plupart des gens font une recherche de la technologie sur laquelle ils essayent de trouver des informations, et ajoutent le terme "mdn", par exemple "mdn HTML5 video". MDN contient plusieurs types de contenus utiles :
 
@@ -468,9 +468,9 @@ Pour utiliser le Mozilla Developer Network (MDN), la plupart des gens font une r
 - D'autres références de support, par ex. [Media formats supported by the HTML audio and video elements](/fr/docs/Web/HTML/Supported_media_formats).
 - Des tutoriaux utiles qui résolvent des problèmes spécifiques, par exemple [Créer un lecteur vidéo en navigateur croisé](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player).
 
-[caniuse.com](http://caniuse.com/) fournit des informations de support, tout au long avec des ressources externes. Par exemple, voir <http://caniuse.com/#search=video> (vous avez juste à entrer la fonctionnalité que vous recherchez dans la boîte de recherche)
+[caniuse.com](http://caniuse.com/) fournit des informations de support, tout au long avec des ressources externes. Par exemple, voir <http://caniuse.com/#search=video> (vous avez juste à entrer la fonctionnalité que vous recherchez dans la boîte de recherche)
 
-[stackoverflow.com](http://stackoverflow.com/) (SO) est un forum en ligne où vous pouvez poser des questions et avez un ensemble de développeurs partageant leurs solutions, observez les commentaires passés, et aidez les autres développeurs. Nous vous conseillons de chercher et de regarder s'il existe déjà une réponse à votre question, avant de poster une nouvelle question. Par exemple, nous avons cherché pour "cross browser html5 video" sur SO, et très rapidement la solution [HTML5 Video with full cross browser compatibility](http://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility) est remontée.
+[stackoverflow.com](http://stackoverflow.com/) (SO) est un forum en ligne où vous pouvez poser des questions et avez un ensemble de développeurs partageant leurs solutions, observez les commentaires passés, et aidez les autres développeurs. Nous vous conseillons de chercher et de regarder s'il existe déjà une réponse à votre question, avant de poster une nouvelle question. Par exemple, nous avons cherché pour "cross browser html5 video" sur SO, et très rapidement la solution [HTML5 Video with full cross browser compatibility](http://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility) est remontée.
 
 Par ailleurs, essayez de chercher votre moteur de recherche favori pour trouver une réponse à vos problèmes. C'est souvent utile de chercher les messages d'erreur spécifiques si vous en avez — d'autres développeurs seront susceptibles d'avoir les mêmes problèmes que vous
 

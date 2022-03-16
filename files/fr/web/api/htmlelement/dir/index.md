@@ -33,11 +33,11 @@ para.dir = "rtl";
 
 ## Notes
 
-La direction d'écriture du texte sur un élément est celle dans laquelle le texte est disposé (pour permettre le support de systèmes multilingues). Les langues arabes et l'hébreu sont des exemples typiques de langues qui utiliseront la direction « rtl » (de droite à gauche).
+La direction d'écriture du texte sur un élément est celle dans laquelle le texte est disposé (pour permettre le support de systèmes multilingues). Les langues arabes et l'hébreu sont des exemples typiques de langues qui utiliseront la direction «&nbsp;rtl&nbsp;» (de droite à gauche).
 
-Une image peut avoir sont attribut `dir` positionné à « rtl », auquel cas les attributs `title` et `alt` seront formatés et définis comme allant de droite à gauche.
+Une image peut avoir sont attribut `dir` positionné à «&nbsp;rtl&nbsp;», auquel cas les attributs `title` et `alt` seront formatés et définis comme allant de droite à gauche.
 
-Lorsqu'un tableau a sa direction définie comme « rtl », l'ordre des colonnes va de droite à gauche.
+Lorsqu'un tableau a sa direction définie comme «&nbsp;rtl&nbsp;», l'ordre des colonnes va de droite à gauche.
 
 {{ gecko_callout_heading("7.0") }}
 
@@ -47,4 +47,4 @@ Avant Gecko 7.0 {{ geckoRelease("7.0") }}, il était possible que la valeur renv
 
 | Spécification                                                                                                                                                                  | Statut                       | Commentaire |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('DOM2 HTML', 'html.html#ID-52460740', 'dir')}} — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-52460740) (non normative) | {{Spec2('DOM2 HTML')}} |             |
+| {{SpecName('DOM2 HTML', 'html.html#ID-52460740', 'dir')}} — [traduction](http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-52460740) (non normative) | {{Spec2('DOM2 HTML')}} |             |

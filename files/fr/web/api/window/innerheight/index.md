@@ -22,12 +22,12 @@ Récupère la hauteur (en pixels) de la partie visible de la fenêtre de navigat
 
 ### Valeur
 
-Renvoie la hauteur de la partie visible de la fenêtre de navigation. La propriété `window.innerHeight` est accessible en lecture seulement ; elle n'a pas de valeur par défaut.
+Renvoie la hauteur de la partie visible de la fenêtre de navigation. La propriété `window.innerHeight` est accessible en lecture seulement ; elle n'a pas de valeur par défaut.
 
 ## Notes
 
-- La propriété `window.innerHeight` est supportée par tout objet assimilé à une fenêtre _{{domxref("window")}}_, un cadre _frame_ , un ensemble de cadres *frameset*, ou une fenêtre secondaire.
-- Il existe un [algorithme](https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7) pour calculer la hauteur de la partie visible de la fenêtre en excluant la barre de défilement horizontale si est elle affichée.
+- La propriété `window.innerHeight` est supportée par tout objet assimilé à une fenêtre _{{domxref("window")}}_, un cadre _frame_ , un ensemble de cadres *frameset*, ou une fenêtre secondaire.
+- Il existe un [algorithme](https://bugzilla.mozilla.org/show_bug.cgi?id=189112#c7) pour calculer la hauteur de la partie visible de la fenêtre en excluant la barre de défilement horizontale si est elle affichée.
 
 ## Exemples
 
@@ -49,11 +49,11 @@ var intOuterFramesetHeight = top.innerHeight;
 {{todo("ajouter ici un lien vers une démo interactive")}}
 
 - Pour modifier les dimensions d'une fenêtre, voir {{domxref("window.resizeBy()")}} et {{domxref("window.resizeTo()")}}.
-- Pour récupérer la hauteur extérieure d'une fenêtre, c'est-à-dire la hauteur de la fenêtre du navigateur dans sa totalité, voir {{domxref("window.outerHeight")}}.
+- Pour récupérer la hauteur extérieure d'une fenêtre, c'est-à-dire la hauteur de la fenêtre du navigateur dans sa totalité, voir {{domxref("window.outerHeight")}}.
 
 ### Exemple graphique
 
-L'illustration suivante montre la différence entre `outerHeight` et `innerHeight`.
+L'illustration suivante montre la différence entre `outerHeight` et `innerHeight`.
 
 ![Illustration de la différence entre innerHeight et outerHeight](firefoxinnervsouterheight2.png)
 

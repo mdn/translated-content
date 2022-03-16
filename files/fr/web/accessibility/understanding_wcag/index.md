@@ -41,8 +41,8 @@ WCAG 2.1 comprend:
 
 - En savoir plus sur WCAG 2.1:
 
-  - Deque: [WCAG 2.1:  Quelle est la suite des directives d'accessibilité](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
-  - TPG:  [Directives pour l'Accessibilité des Contenus Web (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
+  - Deque: [WCAG 2.1:  Quelle est la suite des directives d'accessibilité](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
+  - TPG:  [Directives pour l'Accessibilité des Contenus Web (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
 
 ## Statut juridique
 

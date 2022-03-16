@@ -19,19 +19,19 @@ translation_of: Learn/JavaScript/First_steps/Math
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
-À ce point du didacticiel, nous parlerons de « mathématiques en JavaScript » — comment utiliser les {{Glossary("Operator","operators")}} et autres fonctionnalités pour manier avec succès les nombres pour faire nos bricolages.
+À ce point du didacticiel, nous parlerons de «&nbsp;mathématiques en JavaScript&nbsp;» — comment utiliser les {{Glossary("Operator","operators")}} et autres fonctionnalités pour manier avec succès les nombres pour faire nos bricolages.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vocabulaire courant de l'informatique, bases de HTML et CSS,
         compréhension de ce que fait JavaScript.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Se familiariser avec les bases des maths en JavaScript.</td>
     </tr>
   </tbody>
@@ -39,25 +39,25 @@ translation_of: Learn/JavaScript/First_steps/Math
 
 ## Tout le monde aime les maths
 
-Mouais, peut‑être pas. Certains parmi nous aiment les maths, d'autres les détestent depuis qu'il leur a fallu apprendre les tables de multiplication et les longues divisions à l'école, d'autres se situent entre les deux. Mais personne ne peut nier que les mathématiques sont une connaissance fondamentale dont il n'est pas possible de se passer. Cela devient particulièrement vrai lorsque nous apprenons à programmer en JavaScript (ou tout autre langage d'ailleurs) — une grande part de ce que nous faisons reposant en effet sur le traitement de données numériques, le calcul de nouvelles valeurs, etc. ; vous ne serez donc pas étonné d'apprendre que JavaScript dispose d'un ensemble complet de fonctions mathématiques.
+Mouais, peut‑être pas. Certains parmi nous aiment les maths, d'autres les détestent depuis qu'il leur a fallu apprendre les tables de multiplication et les longues divisions à l'école, d'autres se situent entre les deux. Mais personne ne peut nier que les mathématiques sont une connaissance fondamentale dont il n'est pas possible de se passer. Cela devient particulièrement vrai lorsque nous apprenons à programmer en JavaScript (ou tout autre langage d'ailleurs) — une grande part de ce que nous faisons reposant en effet sur le traitement de données numériques, le calcul de nouvelles valeurs, etc.&nbsp;; vous ne serez donc pas étonné d'apprendre que JavaScript dispose d'un ensemble complet de fonctions mathématiques.
 
 Cet article ne traite que des éléments de base nécessaires pour débuter.
 
 ### Types de nombres
 
-En programmation, même l'ordinaire système des nombres décimaux que nous connaissons tous si bien est plus compliqué qu'on ne pourrait le croire. Nous utilisons divers termes pour décrire différents types de nombres décimaux, par exemple :
+En programmation, même l'ordinaire système des nombres décimaux que nous connaissons tous si bien est plus compliqué qu'on ne pourrait le croire. Nous utilisons divers termes pour décrire différents types de nombres décimaux, par exemple&nbsp;:
 
-- **Entier :** (_Integer_ en anglais) c'est un nombre sans partie fractionnaire, comme son nom l'indique, par exemple 10, 400 ou -5
-- **Nombre à virgule flottante :** (_float_ en anglais) il a un **point** de séparation entre la partie entière et la partie fractionnaire (là où en France nous mettons une virgule), par exemple 12**.**5 et 56**.**7786543
-- **Doubles** : (pour double précision) ce sont des nombres à virgule flottante de précision supérieure aux précédents (on les dit plus précis en raison du plus grand nombre de décimales possibles).
+- **Entier&nbsp;:** (_Integer_ en anglais) c'est un nombre sans partie fractionnaire, comme son nom l'indique, par exemple 10, 400 ou -5
+- **Nombre à virgule flottante&nbsp;:** (_float_ en anglais) il a un **point** de séparation entre la partie entière et la partie fractionnaire (là où en France nous mettons une virgule), par exemple 12**.**5 et 56**.**7786543
+- **Doubles**&nbsp;: (pour double précision) ce sont des nombres à virgule flottante de précision supérieure aux précédents (on les dit plus précis en raison du plus grand nombre de décimales possibles).
 
-Nous disposons même de plusieurs systèmes de numération ! Le décimal a pour base 10 (ce qui signifie qu'il se sert de chiffres entre 0 et 9 dans chaque rang), mais il en existe d'autres :
+Nous disposons même de plusieurs systèmes de numération&nbsp;! Le décimal a pour base 10 (ce qui signifie qu'il se sert de chiffres entre 0 et 9 dans chaque rang), mais il en existe d'autres&nbsp;:
 
 - **Binaire** — utilisé par le plus bas niveau de langage des ordinateurs, il est composé de 0 et de 1.
 - **Octal** — de base 8, utilise les chiffres entre 0 et 7 dans chaque rang.
 - **Hexadécimal** — de base 16, utilise les chiffres entre 0 et 9 puis les lettres de a à f dans chaque rang. Vous avez peut-être déjà rencontré ces nombres en définissant des couleurs dans les [CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Values_and_units#hexadecimal_values).
 
-**Avant que votre cervelle ne se mette à bouillir, stop !** Pour commencer, nous ne nous intéresserons qu'aux nombres décimaux dans ce cours ; vous aurez rarement besoin de vous servir des autres types, peut-être même jamais.
+**Avant que votre cervelle ne se mette à bouillir, stop&nbsp;!** Pour commencer, nous ne nous intéresserons qu'aux nombres décimaux dans ce cours&nbsp;; vous aurez rarement besoin de vous servir des autres types, peut-être même jamais.
 
 L'autre bonne nouvelle, c'est que contrairement à d'autres langages de programmation, JavaScript n'a qu'un seul type de donnée pour les nombres, vous l'avez deviné : {{jsxref("Number")}}. Cela signifie que, en JavaScript, quels que soient les types de nombre avec lesquels vous travaillerez, vous les manipulerez tous exactement de la même façon.
 
@@ -69,7 +69,7 @@ Amusons‑nous avec quelques chiffres pour nous familiariser avec la syntaxe de 
 
 **[Ouvrir la console dans une nouvelle fenêtre](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
-1.  Premièrement, déclarons une paire de variables et initialisons‑les respectivement avec un entier et un nombre avec des décimales, puis saisissons les noms des variables à nouveau pour vérifier que tout est correct :
+1.  Premièrement, déclarons une paire de variables et initialisons‑les respectivement avec un entier et un nombre avec des décimales, puis saisissons les noms des variables à nouveau pour vérifier que tout est correct&nbsp;:
 
     ```js
     var myInt = 5;
@@ -79,7 +79,7 @@ Amusons‑nous avec quelques chiffres pour nous familiariser avec la syntaxe de 
     ```
 
 2.  Les nombres sont saisis sans guillemets — essayez de déclarer et initialiser deux ou trois variables de plus contenant des nombres avant de continuer.
-3.  Maintenant vérifions que les deux variables d'origine sont du même type de donnée. En JavaScript, l'opérateur nommé {{jsxref("Operators/typeof", "typeof")}} est prévu pour cela. Entrez les deux lignes ci‑dessous comme indiqué :
+3.  Maintenant vérifions que les deux variables d'origine sont du même type de donnée. En JavaScript, l'opérateur nommé {{jsxref("Operators/typeof", "typeof")}} est prévu pour cela. Entrez les deux lignes ci‑dessous comme indiqué&nbsp;:
 4.  ```js
     typeof myInt;
     typeof myFloat;
@@ -124,7 +124,7 @@ Number(myNumber) + 3;
 
 ## Opérateurs arithmétiques
 
-Ce sont les opérateurs de base pour effectuer diverses opérations :
+Ce sont les opérateurs de base pour effectuer diverses opérations&nbsp;:
 
 <table class="standard-table">
   <thead>
@@ -181,7 +181,7 @@ Ce sont les opérateurs de base pour effectuer diverses opérations :
 
 Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, mais ce serait bien de tester si vous avez bien compris la syntaxe. Entrez les exemples ci‑dessous dans la [console des outils de développement JavaScript](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) ou servez vous de la console intégrée plus haut, comme vous préférez, pour vous familiariser avec la syntaxe.
 
-1.  Essayez de saisir quelques exemples simples de votre cru, comme :
+1.  Essayez de saisir quelques exemples simples de votre cru, comme&nbsp;:
 
     ```js
     10 + 7
@@ -189,7 +189,7 @@ Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, m
     60 % 3
     ```
 
-2.  Déclarez et initialisez quelques variables, puis utilisez‑les dans des opérations — les variables se comporteront exactement comme les valeurs qu'elles contiennent pour les besoins de l'opération. Par exemple :
+2.  Déclarez et initialisez quelques variables, puis utilisez‑les dans des opérations — les variables se comporteront exactement comme les valeurs qu'elles contiennent pour les besoins de l'opération. Par exemple&nbsp;:
 
     ```js
     var num1 = 10;
@@ -198,7 +198,7 @@ Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, m
     num2 / num1;
     ```
 
-3.  Pour terminer cette partie, entrez quelques expressions plus compliquées, comme :
+3.  Pour terminer cette partie, entrez quelques expressions plus compliquées, comme&nbsp;:
 
     ```js
     5 + 10 * 3;
@@ -206,23 +206,23 @@ Nous n'avons certainement pas besoin de vous apprendre les quatre opérations, m
     num2 + num1 / 8 + 2;
     ```
 
-Certaines opérations de cet ensemble ne vous renvoient peut-être pas le résultat attendu ; le paragraphe qui suit vous explique pourquoi.
+Certaines opérations de cet ensemble ne vous renvoient peut-être pas le résultat attendu&nbsp;; le paragraphe qui suit vous explique pourquoi.
 
 ### Priorité des opérateurs
 
-Revenons sur le dernier exemple ci‑dessus, en supposant que `num2` contient la valeur 50 et `num1` contient 10 (comme défini plus haut) :
+Revenons sur le dernier exemple ci‑dessus, en supposant que `num2` contient la valeur 50 et `num1` contient 10 (comme défini plus haut)&nbsp;:
 
 ```js
 num2 + num1 / 8 + 2;
 ```
 
-En tant qu'humain, vous pouvez lire « *50 plus 10 égale 60 »*, puis « *8 plus 2 égale 10 »* et finalement « *60 divisé par 10 égale 6 »*.
+En tant qu'humain, vous pouvez lire «&nbsp;*50 plus 10 égale 60&nbsp;»*, puis «&nbsp;*8 plus 2 égale 10&nbsp;»* et finalement «&nbsp;*60 divisé par 10 égale 6&nbsp;»*.
 
-Mais le navigateur _calcule « 10 sur 8 égale 1.25 »_, puis « *50 plus 1.25 plus 2 égale 53.25 »*.
+Mais le navigateur _calcule «&nbsp;10 sur 8 égale 1.25&nbsp;»_, puis «&nbsp;*50 plus 1.25 plus 2 égale 53.25&nbsp;»*.
 
 Cela est dû aux **priorités entre opérateurs** — certains sont appliqués avant d'autres dans une opération (on parle d'une expression en programmation). En JavaScript, la priorité des opérateurs est identique à celle enseignée à l'école — Multiplication et Division sont toujours effectuées en premier, suivies d'Addition et Soustraction (le calcul est toujours exécuté de la gauche vers la droite).
 
-Si vous voulez contourner les règles de priorité des opérateurs, vous pouvez mettre entre parenthèses les parties que vous souhaitez voir calculées en premier. Pour obtenir un résultat égal à 6, nous devons donc écrire :
+Si vous voulez contourner les règles de priorité des opérateurs, vous pouvez mettre entre parenthèses les parties que vous souhaitez voir calculées en premier. Pour obtenir un résultat égal à 6, nous devons donc écrire&nbsp;:
 
 ```js
 (num2 + num1) / (8 + 2);
@@ -234,34 +234,34 @@ Essayez-le et voyez.
 
 ## Opérateurs d'incrémentation et de décrémentation
 
-Quelquefois vous aurez besoin d'ajouter ou retrancher 1 à une valeur de variable de manière répétitive. On effectue commodément cette opération à l'aide des opérateurs d'incrémentation (`++`) ou de décrementation (`--`). Nous nous sommes servis de `++` dans le jeu « Devinez le nombre » dans notre article [Première plongée dans le JavaScript](/fr/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) pour ajouter 1 à la variable `guessCount` pour décompter le nombre de suppositions restantes après chaque tour.
+Quelquefois vous aurez besoin d'ajouter ou retrancher 1 à une valeur de variable de manière répétitive. On effectue commodément cette opération à l'aide des opérateurs d'incrémentation (`++`) ou de décrementation (`--`). Nous nous sommes servis de `++` dans le jeu «&nbsp;Devinez le nombre&nbsp;» dans notre article [Première plongée dans le JavaScript](/fr/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) pour ajouter 1 à la variable `guessCount` pour décompter le nombre de suppositions restantes après chaque tour.
 
 ```js
 guessCount++;
 ```
 
-> **Note :** Ces opérateurs sont couramment utilisés dans des [boucles ;](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration) nous les verrons plus loin dans ce cours. Par exemple, disons que vous voulez parcourir une liste de prix et ajouter les taxes à chacun. Vous utiliserez une boucle pour obtenir chaque valeur une à une et exécuterez le calcul voulu pour ajouter les taxes à chacune. L'incrément s'utilise pour aller à la valeur suivante. Nous avons mis un exemple concret montrant comment faire — voyez‑le tout de suite, examinez le code source et notez les opérateurs d'incrémentation ! Nous reverrons les boucles en détail plus loin dans ce cours.
+> **Note :** Ces opérateurs sont couramment utilisés dans des [boucles&nbsp;;](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration) nous les verrons plus loin dans ce cours. Par exemple, disons que vous voulez parcourir une liste de prix et ajouter les taxes à chacun. Vous utiliserez une boucle pour obtenir chaque valeur une à une et exécuterez le calcul voulu pour ajouter les taxes à chacune. L'incrément s'utilise pour aller à la valeur suivante. Nous avons mis un exemple concret montrant comment faire — voyez‑le tout de suite, examinez le code source et notez les opérateurs d'incrémentation&nbsp;! Nous reverrons les boucles en détail plus loin dans ce cours.
 
-Jouons avec ces opérateurs dans la console. Notez d'abord qu'il n'est pas possible de les appliquer directement à un nombre, ce qui peut paraître étrange, mais cet opérateur assigne à une variable une nouvelle valeur mise à jour, il n'agit pas sur la valeur elle‑même. Ce qui suit renvoie une erreur :
+Jouons avec ces opérateurs dans la console. Notez d'abord qu'il n'est pas possible de les appliquer directement à un nombre, ce qui peut paraître étrange, mais cet opérateur assigne à une variable une nouvelle valeur mise à jour, il n'agit pas sur la valeur elle‑même. Ce qui suit renvoie une erreur&nbsp;:
 
 ```js
 3++;
 ```
 
-Vous ne pouvez donc incrémenter qu'une variable déjà existante. Essayez ceci :
+Vous ne pouvez donc incrémenter qu'une variable déjà existante. Essayez ceci&nbsp;:
 
 ```js
 var num1 = 4;
 num1++;
 ```
 
-Ok, curieuse la ligne 2 ! En écrivant cela, elle renvoie la valeur 4 — c'est dû au fait que l'explorateur renvoie la valeur courante, _puis_ incrémente la variable. Vous constaterez qu'elle a bien été incrémentée si vous demandez de la revoir :
+Ok, curieuse la ligne 2&nbsp;! En écrivant cela, elle renvoie la valeur 4 — c'est dû au fait que l'explorateur renvoie la valeur courante, _puis_ incrémente la variable. Vous constaterez qu'elle a bien été incrémentée si vous demandez de la revoir&nbsp;:
 
 ```js
 num1;
 ```
 
-C'est pareil avec `--` : essayez ce qui suit
+C'est pareil avec `--`&nbsp;: essayez ce qui suit
 
 ```js
 var num2 = 6;
@@ -273,7 +273,7 @@ num2;
 
 ## Opérateurs d'assignation
 
-Les opérateurs d'assignation sont ceux qui fixent la valeur d'une variable. Nous avons déjà utilisé plusieurs fois le plus élémentaire, `=` — il donne à la variable de gauche la valeur indiquée à droite :
+Les opérateurs d'assignation sont ceux qui fixent la valeur d'une variable. Nous avons déjà utilisé plusieurs fois le plus élémentaire, `=` — il donne à la variable de gauche la valeur indiquée à droite&nbsp;:
 
 ```js
 var x = 3; // x contient la valeur 3
@@ -292,7 +292,7 @@ Mais il existe des types plus complexes, qui procurent des raccourcis utiles pou
 
 Saisissez quelques uns de ces exemples dans la console pour avoir une idée de leur fonctionnement. Dans chaque cas, voyez si vous avez deviné la valeur avant de saisir la deuxième ligne.
 
-Notez que vous pouvez opportunément utiliser une autre variable comme opérateur sur la droite de chaque expression, par exemple :
+Notez que vous pouvez opportunément utiliser une autre variable comme opérateur sur la droite de chaque expression, par exemple&nbsp;:
 
 ```js
 var x = 3; // x contient la valeur 3
@@ -302,7 +302,7 @@ x *= y; // x contient maintenant la valeur 12
 
 > **Note :** Il y a des tas d'[autres opérateurs d'assignation disponibles](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment_operators), mais ceux‑ci sont les plus courants que vous devez les connaître dès maintenant.
 
-## Apprentissage actif : dimensionner une boîte à canevas
+## Apprentissage actif&nbsp;: dimensionner une boîte à canevas
 
 Dans cet exercice, vous allez manier quelques nombres et opérateurs pour changer la taille d'une boîte. La boîte est tracée à l'aide de l'API de navigateur nommée {{domxref("Canvas API", "", "", "true")}}. Pas besoin de savoir comment elle fonctionne — concentrez-vous simplement sur les mathématiques pour l'instant. Les largeur et hauteur de la boîte (en pixels) sont définies par les variables `x` et `y`, qui sont toutes deux initialisées avec la valeur 50.
 
@@ -336,14 +336,14 @@ Parfois nous avons besoin d'exécuter des tests vrai/faux (true/false), puis d'a
 
 > **Note :** Vous verrez peut‑être certaines personnes utiliser `==` et `!=` pour leurs test d'égalité ou non-égalité. Ces opérateurs sont valides en JavaScript, mais différents de `===`/`!==`. Les versions avec deux caractères testent si les valeurs sont les mêmes, mais pas si les types de données sont les mêmes. Les versions strictes à trois caractères testent à la fois l'égalité des valeurs _et_ des types de données. Il y a moins d'erreurs avec les versions strictes, donc nous vous engageons à les utiliser dans tous les cas.
 
-Si vous entrez certaines de ces valeurs dans une console, vous constaterez que toutes renvoient une valeur `true`/`false` — les booléens mentionnés dans l'article précédent. Ces opérateurs sont très utiles car il nous permettent de prendre des décisions dans le code, et ils sont utilisés chaque fois que nous avons besoin de faire un choix. Par exemple, les booléens s'utilisent pour :
+Si vous entrez certaines de ces valeurs dans une console, vous constaterez que toutes renvoient une valeur `true`/`false` — les booléens mentionnés dans l'article précédent. Ces opérateurs sont très utiles car il nous permettent de prendre des décisions dans le code, et ils sont utilisés chaque fois que nous avons besoin de faire un choix. Par exemple, les booléens s'utilisent pour&nbsp;:
 
 - Afficher l'étiquette textuelle ad-hoc sur un bouton selon qu'une fonctionnalité est active ou pas
 - Afficher un message de fin de jeu si un jeu est terminé ou un message de victoire si le jeu a été remporté
 - Afficher des remerciements saisonniers corrects selon la saison de vacances
 - Faire un zoom avant ou arrière sur une carte selon le niveau de zoom choisi
 
-Nous verrons comment coder cette logique quand nous étudierons les directives conditionnelles dans un article ultérieur. Pour le moment, regardons un exemple rapide :
+Nous verrons comment coder cette logique quand nous étudierons les directives conditionnelles dans un article ultérieur. Pour le moment, regardons un exemple rapide&nbsp;:
 
 ```html
 <button>Démarrer la machine</button>
@@ -359,7 +359,7 @@ btn.addEventListener('click', updateBtn);
 function updateBtn() {
   if (btn.textContent === 'Démarrer la machine') {
     btn.textContent = 'Arrêter la machine';
-    txt.textContent = 'La machine est en marche !';
+    txt.textContent = 'La machine est en marche&nbsp;!';
   } else {
     btn.textContent = 'Démarrer la machine';
     txt.textContent = 'La machine est arrêtée.';
@@ -371,7 +371,7 @@ function updateBtn() {
 
 **[Ouvrir dans une nouvelle fenêtre](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
 
-Vous pouvez voir l'utilisation de l'opérateur d'égalité stricte dans la fonction `updateBtn()`. Dans ce cas, nous ne testons pas si deux expressions mathématiques ont la même valeur — nous testons si le contenu textuel d'un bouton contient une certaine chaîne — mais c'est toujours le même principe. Si le bouton affiche « Démarrer la machine » quand on le presse, nous changeons son étiquette en « Arrêter la machine » et mettons à jour l'étiquette comme il convient. Si le bouton indique « Arrêter la machine » au moment de le presser, nous basculons l'étiquette à nouveau.
+Vous pouvez voir l'utilisation de l'opérateur d'égalité stricte dans la fonction `updateBtn()`. Dans ce cas, nous ne testons pas si deux expressions mathématiques ont la même valeur — nous testons si le contenu textuel d'un bouton contient une certaine chaîne — mais c'est toujours le même principe. Si le bouton affiche «&nbsp;Démarrer la machine&nbsp;» quand on le presse, nous changeons son étiquette en «&nbsp;Arrêter la machine&nbsp;» et mettons à jour l'étiquette comme il convient. Si le bouton indique «&nbsp;Arrêter la machine&nbsp;» au moment de le presser, nous basculons l'étiquette à nouveau.
 
 > **Note :** Un contrôle qui alterne entre deux états porte généralement le nom de **toggle** (bascule). Il bascule d'un état à l'autre — allumé, éteint, etc.
 

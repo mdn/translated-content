@@ -28,7 +28,7 @@ Une chaîne de caractères qui représente l'heure de la date indiquée dans un 
 
 Une instance de {{jsxref("Date")}} représente un instant précis dans le temps. Appeler {{jsxref("Date.toString", "toString()")}} renverra la date formatée de façon à être lisible par un humain, en anglais américain. Pour le moteur JavaScript [SpiderMonkey](/fr/docs/SpiderMonkey), ceci consiste en la partie « date » (jour, mois, année) suivie de la partie « heure » (heures, minutes, secondes, et fuseau horaire). Parfois, il est préférable d'obtenir seulement la partie « heure » ; c'est ce que renvoie la méthode `toTimeString().`
 
-La méthode `toTimeString()` est particulièrement utile parce que les moteurs implémentant [ECMA-262](/fr/docs/JavaScript/Language_Resources) peuvent obtenir des résultats différents avec la méthode {{jsxref("Date.prototype.toString()", "toString()")}} (en effet, le format dépend de l'implémentation). Ceci peut empêcher les manipulations de textes simples d'avoir des résultats cohérents au sein des différents moteurs/navigateurs.
+La méthode `toTimeString()` est particulièrement utile parce que les moteurs implémentant [ECMA-262](/fr/docs/JavaScript/Language_Resources) peuvent obtenir des résultats différents avec la méthode {{jsxref("Date.prototype.toString()", "toString()")}} (en effet, le format dépend de l'implémentation). Ceci peut empêcher les manipulations de textes simples d'avoir des résultats cohérents au sein des différents moteurs/navigateurs.
 
 ## Exemple
 
@@ -46,9 +46,9 @@ console.log(d.toTimeString()); // 14:39:07 GMT-0600 (PDT)
 | Spécification                                                                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES3')}}                                                                                                 | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.9.5.4', 'Date.prototype.toTimeString')}}                             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.9.5.4', 'Date.prototype.toTimeString')}}                             | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-date.prototype.totimestring', 'Date.prototype.toTimeString')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

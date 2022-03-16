@@ -31,7 +31,7 @@ Aucun.
 | `gl.INVALID_OPERATION`             | La commande indiquée n'est pas permise dans l'état courant. La commande est ignorée et l'indicateur d'erreur est positionné.                                                        |
 | `gl.INVALID_FRAMEBUFFER_OPERATION` | Le tampon d'images actuellement lié n'est pas complet lors d'une tentative de rendu ou de relecture.                                                                                |
 | `gl.OUT_OF_MEMORY`                 | Plus assez de mémoire restante pour exécuter la commande.                                                                                                                           |
-| `gl.CONTEXT_LOST_WEBGL`            | Si le contexte WebGL est perdu, cette erreur est retournée lors du premier appel à `getError`. Après cela et jusqu'à ce que le contexte soit restauré, elle retourne `gl.NO_ERROR`. |
+| `gl.CONTEXT_LOST_WEBGL`            | Si le contexte WebGL est perdu, cette erreur est retournée lors du premier appel à `getError`. Après cela et jusqu'à ce que le contexte soit restauré, elle retourne `gl.NO_ERROR`. |
 
 ## Exemples
 

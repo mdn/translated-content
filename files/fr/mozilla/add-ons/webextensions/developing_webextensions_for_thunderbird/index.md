@@ -15,6 +15,6 @@ Vous aborderez le codage d'une extension pour Thunderbird de la même manière q
 
 ## Voir aussi
 
-- [Thunderbird specific WebExtension API documentation](https://thunderbird-webextensions.readthedocs.io/en/latest/)
+- [Thunderbird specific WebExtension API documentation](https://thunderbird-webextensions.readthedocs.io/en/latest/)
 - [Browser support for JavaScript APIs](/fr/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
 - [Browser compatibility for manifest.json](/fr/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)

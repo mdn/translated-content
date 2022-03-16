@@ -55,7 +55,7 @@ Si la méthode `toString()` est appelée sur une fonction créée avec le constr
 | {{SpecName('ES1')}}                                                                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1.                                                           |
 | [`Function.prototype.toString()`](https://tc39.github.io/Function-prototype-toString-revision/#sec-introduction)         | Brouillon                    | Standardise la chaîne de caractères utilisée pour les fonctions natives ainsi que la gestion des fins de ligne. |
 | {{SpecName('ES6', '#sec-function.prototype.tostring', 'Function.prototype.toString')}}     | {{Spec2('ES6')}}         | Critères supplémentaires ajoutés sur la représentation de la chaîne.                                            |
-| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                                 |
+| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                                 |
 
 ## Compatibilité des navigateurs
 

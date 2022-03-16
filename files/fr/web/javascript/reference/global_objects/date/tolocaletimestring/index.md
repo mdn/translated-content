@@ -74,7 +74,7 @@ console.log(date.toLocaleTimeString("en-US"));
 console.log(date.toLocaleTimeString("en-GB"));
 // → "04:00:00"
 
-// le coréen  utilise une heure sur 12h avec AM/PM
+// le coréen utilise une heure sur 12h avec AM/PM
 console.log(date.toLocaleTimeString("ko-KR"));
 // → "오전 4:00:00"
 

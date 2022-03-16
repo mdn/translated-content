@@ -56,7 +56,7 @@ dataview.getFloat32(1); // 3
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
 | {{SpecName('ES2015', '#sec-dataview.prototype.setfloat32', 'DataView.prototype.setFloat32')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setfloat32', 'DataView.prototype.setFloat32')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.setfloat32', 'DataView.prototype.setFloat32')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

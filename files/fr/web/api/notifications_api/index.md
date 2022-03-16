@@ -33,7 +33,7 @@ De là, l'utilisateur peut choisir d'autoriser les notifications de cette origin
 
 > **Note :** Depuis Firefox 44, les autorisations pour les notifications et le push ont été fusionnées. Si l'autorisation est accordée pour les notifications, le push sera également activé.
 
-Ensuite, une nouvelle notification est créée à l'aide du constructeur {{domxref ("Notification.Notification", "Notification ()")}}. Auquel on doit passé un titre en argument et il peut éventuellement recevoir un objet d'options pour personnalisés la notification, telles que la direction du texte, le corps du texte, l'icône à afficher, le son de notification à lire, etc.
+Ensuite, une nouvelle notification est créée à l'aide du constructeur {{domxref ("Notification.Notification", "Notification ()")}}. Auquel on doit passé un titre en argument et il peut éventuellement recevoir un objet d'options pour personnalisés la notification, telles que la direction du texte, le corps du texte, l'icône à afficher, le son de notification à lire, etc.
 
 En outre, la spécification de l'API Notifications spécifie un certain nombre d'ajouts à l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API), pour permettre aux service worker de déclencher des notifications.
 

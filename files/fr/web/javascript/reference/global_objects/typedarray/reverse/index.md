@@ -40,7 +40,7 @@ console.log(uint8); // Uint8Array [3, 2, 1]
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

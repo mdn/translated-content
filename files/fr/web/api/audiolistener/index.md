@@ -20,7 +20,7 @@ Il est important de noter qu'il n'y a qu'un seul auditeur par contexte, et qu'il
 
 _Hérite des propriétés de son parent,_ `AudioNode`.
 
-> **Note :** Les valeurs de position, d'orientation, et du haut de la tête peuvent être définies et lues à l'aide de différentes syntaxes. Par exemple, l'accès se fait à l'aide de la propriété, `AudioListener.positionX`, tandis que la même propriété est définir à l'aide de `AudioListener.positionX.value`. C'est pourquoi ces valeurs ne sont pas marquées  en lecture seule, bien qu'elles apparaissent comme tel dans la spécification IDL.
+> **Note :** Les valeurs de position, d'orientation, et du haut de la tête peuvent être définies et lues à l'aide de différentes syntaxes. Par exemple, l'accès se fait à l'aide de la propriété, `AudioListener.positionX`, tandis que la même propriété est définir à l'aide de `AudioListener.positionX.value`. C'est pourquoi ces valeurs ne sont pas marquées en lecture seule, bien qu'elles apparaissent comme tel dans la spécification IDL.
 
 - {{domxref("AudioListener.positionX")}}
   - : Position de l'auditeur avec des coordonnées cartésiennes selon la règle de la main droite. La valeur par défaut est 0.
@@ -29,11 +29,11 @@ _Hérite des propriétés de son parent,_ `AudioNode`.
 - {{domxref("AudioListener.positionZ")}}
   - : Position longitudinale (avant et arrière) de l'auditeur avec des coordonnées cartésiennes selon la règle de la main droite. La valeur par défaut est 0.
 - {{domxref("AudioListener.forwardX")}}
-  - : Position horizontale de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes  linéairement l'une de l'autre. La valeur par défaut est 0.
+  - : Position horizontale de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est 0.
 - {{domxref("AudioListener.forwardY")}}
-  - : Position verticale de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes  linéairement l'une de l'autre. La valeur par défaut est 0.
+  - : Position verticale de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est 0.
 - {{domxref("AudioListener.forwardZ")}}
-  - : Position longitudinale (avant et arrière) de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est 0.
+  - : Position longitudinale (avant et arrière) de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est 0.
 - {{domxref("AudioListener.upX")}}
   - : Position horizontale du haut de la tête de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est 0.
 - {{domxref("AudioListener.upY")}}
@@ -48,7 +48,7 @@ _Hérite des propriétés de son parent,_ `AudioNode`.
 - {{domxref("AudioListener.setOrientation()")}}
   - : Définit l'orientation de l'auditeur.
 - {{domxref("AudioListener.setPosition()")}}
-  - : Définit la position de l'auditeur. Consulter {{anch("Deprecated features")}}  pour savoir pourquoi cette méthode est désormais obsolète.
+  - : Définit la position de l'auditeur. Consulter {{anch("Deprecated features")}}  pour savoir pourquoi cette méthode est désormais obsolète.
 
 ## Fonctionnalités obsolètes
 
@@ -57,7 +57,7 @@ _Hérite des propriétés de son parent,_ `AudioNode`.
 - {{domxref("AudioListener.speedOfSound")}} {{obsolete_inline}}
   - : Nombre flottant à double précision représentant la vitesse du son, en _mètres par seconde_.
 
-Dans une version précédente de la spécification, les propriétés `dopplerFactor` et `speedOfSound` et la méthode `setPosition()` lpouvaient être utilisés pour contrôler un effet doppler appliqué à un {{domxref("AudioBufferSourceNode")}} connecté en aval - ils pouvaient être transposés en fonction de la vitesse relative du {{domxref("PannerNode")}}, et de l'{{domxref("AudioListener")}}. Ces fonctionnalités soulevaient un certain nombre de problèmes :
+Dans une version précédente de la spécification, les propriétés `dopplerFactor` et `speedOfSound` et la méthode `setPosition()` lpouvaient être utilisés pour contrôler un effet doppler appliqué à un {{domxref("AudioBufferSourceNode")}} connecté en aval - ils pouvaient être transposés en fonction de la vitesse relative du {{domxref("PannerNode")}}, et de l'{{domxref("AudioListener")}}. Ces fonctionnalités soulevaient un certain nombre de problèmes :
 
 - Seuls les {{domxref("AudioBufferSourceNode")}} étaient transposés, pas les autres noeuds source.
 - Le comportement à adopter lorsqu'un {{domxref("AudioBufferSourceNode")}} était connecté à plusieurs {{domxref("PannerNode")}} n'était pas clair.
@@ -73,7 +73,7 @@ C'est la raison pour laquelle elles ont été supprimées.
 
 | Spécification                                                                                    | Statut                               | Commentaire |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioListener-section', 'AudioListener')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#AudioListener-section', 'AudioListener')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

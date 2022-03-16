@@ -112,7 +112,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                                                | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-getKey-IDBRequest-any-key', 'getKey()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-getKey-IDBRequest-any-key', 'getKey()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

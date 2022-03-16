@@ -121,7 +121,7 @@ Cette directive CSP autorisera toutes les feuilles de styles embarquées telles 
 <div style="display:none">Foo</div>
 ```
 
-Vous pouvez aussi utiliser un nonce pour autoriser spécifiquement certains éléments {{HTMLElement("style")}} :
+Vous pouvez aussi utiliser un nonce pour autoriser spécifiquement certains éléments {{HTMLElement("style")}} :
 
 ```bash
 Content-Security-Policy: style-src 'nonce-2726c7f26c'

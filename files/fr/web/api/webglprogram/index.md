@@ -8,7 +8,7 @@ translation_of: Web/API/WebGLProgram
 ---
 {{APIRef("WebGL")}}
 
-Le **WebGLProgram** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et il est une combinaison de deux {{domxref ("WebGLShader")}} compilés constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ces dernier sont ensuite liés dans un programme utilisable.
+Le **WebGLProgram** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et il est une combinaison de deux {{domxref ("WebGLShader")}} compilés constitués d'un shader de sommet et d'un shader de fragment (tous deux écrits en GLSL). Ces dernier sont ensuite liés dans un programme utilisable.
 
 ```js
 var programme = gl.createProgram();
@@ -25,13 +25,13 @@ if ( !gl.getProgramParameter( programme, gl.LINK_STATUS) ) {
 }
 ```
 
-Voir {{domxref("WebGLShader")}} pour des informations sur la création de `shaderDeSommet` et de `shaderDeFragment` dans le programme ci-dessus.
+Voir {{domxref("WebGLShader")}} pour des informations sur la création de `shaderDeSommet` et de `shaderDeFragment` dans le programme ci-dessus.
 
 ## Exemples
 
-### Utilisation du programme
+### Utilisation du programme
 
-Les étapes pour travailler effectivement avec le programme impliquent d'indiquer à la GPU d'utiliser le programme, de lier les données et les options de configuration appropriées, et enfin, de dessiner quelque chose à l'écran.
+Les étapes pour travailler effectivement avec le programme impliquent d'indiquer à la GPU d'utiliser le programme, de lier les données et les options de configuration appropriées, et enfin, de dessiner quelque chose à l'écran.
 
 ```js
 // Utiliser le programme
@@ -46,9 +46,9 @@ gl.vertexAttribPointer(attributeLocation, 3, gl.FLOAT, false, 0, 0);
 gl.drawArrays(gl.TRIANGLES, 0, 3);
 ```
 
-### Suppression du programme
+### Suppression du programme
 
-S'il y a une erreur lors de l'édition de liens du programme, ou si vous voulez supprimer un programme existant, alors c'est tout simple, il suffit d'exécuter {{domxref ("WebGLRenderingContext.deleteProgram()")}}. Cela libère la mémoire du programme lié.
+S'il y a une erreur lors de l'édition de liens du programme, ou si vous voulez supprimer un programme existant, alors c'est tout simple, il suffit d'exécuter {{domxref ("WebGLRenderingContext.deleteProgram()")}}. Cela libère la mémoire du programme lié.
 
 ```js
 gl.deleteProgram(programme);

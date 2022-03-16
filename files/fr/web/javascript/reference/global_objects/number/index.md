@@ -74,22 +74,22 @@ L'objet `Number` est principalement utilisé dans les cas de figure suivants :
 
 ## Les instances de `Number`
 
-Toutes les instances de `Number` héritent de {{jsxref("Number.prototype")}}. Il est possible de modifier le prototype du constructeur `Number` pour affecter toutes les instances de `Number`.
+Toutes les instances de `Number` héritent de {{jsxref("Number.prototype")}}. Il est possible de modifier le prototype du constructeur `Number` pour affecter toutes les instances de `Number`.
 
 ### Méthodes
 
 - {{jsxref("Number.prototype.toExponential()" ,"Number.prototype.toExponential(<var>fractionDigits</var>)")}}
-  - : Retourne une chaîne représentant le nombre en notation exponentielle.
+  - : Retourne une chaîne représentant le nombre en notation exponentielle.
 - {{jsxref("Number.prototype.toFixed()", "Number.prototype.toFixed(<var>digits</var>)")}}
-  - : Retourne une chaîne représentant le nombre avec la notation virgule fixe.
-- {{jsxref("Number.prototype.toLocaleString()", "Number.prototype.toLocaleString([<var>locales</var> [, <var>options</var>]])")}}
-  - : Retourne une chaîne avec une représentation sensible à la langue de ce nombre. Surcharge la méthode {{jsxref("Object.prototype.toLocaleString()")}}.
+  - : Retourne une chaîne représentant le nombre avec la notation virgule fixe.
+- {{jsxref("Number.prototype.toLocaleString()", "Number.prototype.toLocaleString([<var>locales</var> [, <var>options</var>]])")}}
+  - : Retourne une chaîne avec une représentation sensible à la langue de ce nombre. Surcharge la méthode {{jsxref("Object.prototype.toLocaleString()")}}.
 - {{jsxref("Number.prototype.toPrecision()", "Number.prototype.toPrecision(<var>precision</var>)")}}
   - : Retourne une chaîne représentant le nombre avec une précision donnée en notation virgule fixe ou exponentielle.
 - {{jsxref("Number.prototype.toString()", "Number.prototype.toString([<var>radix</var>])")}}
-  - : Retourne une chaîne représentant le nombre dans une base numérique (radix) donnée. Surcharge la méthode {{jsxref("Object.prototype.toString()")}}.
+  - : Retourne une chaîne représentant le nombre dans une base numérique (radix) donnée. Surcharge la méthode {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Number.prototype.valueOf()")}}
-  - : Retourne la valeur primitive de l'objet spécifié. Surcharge la méthode {{jsxref("Object.prototype.valueOf()")}}.
+  - : Retourne la valeur primitive de l'objet spécifié. Surcharge la méthode {{jsxref("Object.prototype.valueOf()")}}.
 
 ## Exemples
 

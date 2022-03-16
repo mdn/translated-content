@@ -53,13 +53,13 @@ La propriété `overscroll-behavior-x` est définie avec un des mots-clés défi
 }
 ```
 
-Voir {{cssxref("overscroll-behavior")}}  pour un exemple complet et plus de détails.
+Voir {{cssxref("overscroll-behavior")}}  pour un exemple complet et plus de détails.
 
 ## Spécifications
 
 | Spécification                                                                                                                | État                                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ |
-| {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior-y', 'overscroll-behavior-y')}} | {{Spec2('Overscroll Behavior')}} |              |
+| {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior-y', 'overscroll-behavior-y')}} | {{Spec2('Overscroll Behavior')}} |              |
 
 {{cssinfo}}
 

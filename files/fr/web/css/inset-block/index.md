@@ -91,5 +91,5 @@ div {
 
 ## Voir aussi
 
-- Les propriétés physiques correspondantes : {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
+- Les propriétés physiques correspondantes : {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
 - Les propriétés influençant les propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

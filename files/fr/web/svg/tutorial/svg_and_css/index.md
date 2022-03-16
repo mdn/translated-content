@@ -39,7 +39,7 @@ Créez un nouveau document SVG en tant que fichier texte brut, `doc.svg`. Copiez
 </defs>
 
 <text id="heading" x="-280" y="-270">Démonstration SVG</text>
-<text  id="caption" x="-280" y="-250">Déplacez le pointeur de
+<text id="caption" x="-280" y="-250">Déplacez le pointeur de
  votre souris sur la fleur.</text>
 
 <g id="flower">
@@ -423,7 +423,7 @@ Voici comment se présente la structure du document SVG désormais.
   </defs>
 
   <text id="heading" x="-280" y="-270">Démonstration SVG</text>
-  <text  id="caption" x="-280" y="-250">Déplacez le pointeur de votre souris sur la fleur.</text>
+  <text id="caption" x="-280" y="-250">Déplacez le pointeur de votre souris sur la fleur.</text>
 
   <g id="flower">
     <circle id="overlay" cx="0" cy="0" r="200" stroke="none" fill="url(#fade)"/>

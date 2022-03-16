@@ -52,7 +52,7 @@ Avec l'exemple suivant, on force une rupture avant chaque élément de titre `h2
 
 ## Les ruptures entre les lignes
 
-On peut aussi utiliser les propriétés {{cssxref("orphans")}} et {{cssxref("widows")}}. La propriété  `orphans` contrôle le nombre de lignes qui restent à la fin d'un fragment et la propriété `widows` contrôle le nombre de lignes qui restent au début d'un fragment.
+On peut aussi utiliser les propriétés {{cssxref("orphans")}} et {{cssxref("widows")}}. La propriété  `orphans` contrôle le nombre de lignes qui restent à la fin d'un fragment et la propriété `widows` contrôle le nombre de lignes qui restent au début d'un fragment.
 
 Les propriétés `orphans` et `widows` prennent un entier comme valeur et qui indique le nombre de lignes à avoir à la fin ou au début d'un fragment. On notera que ces propriétés ne fonctionnent qu'à l'intérieur d'un conteneur de bloc (un paragraphe par exemple). Si le bloc contient un nombre de lignes inférieur au nombre précisé pour la propriété, toutes les lignes resteront groupées ensemble.
 

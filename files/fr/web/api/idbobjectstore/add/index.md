@@ -49,7 +49,7 @@ Cette méthode peut lever une exception {{domxref("DOMException")}} ayant l'un d
     <tr>
       <td><code>TransactionInactiveError</code></td>
       <td>
-        La transaction pour cet objet  {{domxref("IDBObjectStore")}}
+        La transaction pour cet objet  {{domxref("IDBObjectStore")}}
         est inactive.
       </td>
     </tr>
@@ -154,7 +154,7 @@ function addData() {
 
 | Spécification                                                                                                            | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-add-IDBRequest-any-value-any-key', 'add()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-add-IDBRequest-any-value-any-key', 'add()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

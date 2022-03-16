@@ -14,7 +14,7 @@ original_slug: Apprendre/Commencer_avec_le_web/Les_bases_CSS
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_HTML", "Apprendre/Commencer_avec_le_web/Les_bases_JavaScript","Apprendre/Commencer_avec_le_web")}}
 
-Les CSS (_Cascading Style Sheets_ en anglais, ou « feuilles de style en cascade ») sont le code utilisé pour mettre en forme une page web. _Les bases des CSS_ présentent ce qu'il faut savoir pour commencer. Nous répondrons à des questions comme : Comment rendre mon texte rouge ou noir ? Comment faire apparaître mon contenu à tel endroit de l'écran ? Comment décorer ma page web avec une image ou une couleur d'arrière-plan ?
+Les CSS (_Cascading Style Sheets_ en anglais, ou « feuilles de style en cascade ») sont le code utilisé pour mettre en forme une page web. _Les bases des CSS_ présentent ce qu'il faut savoir pour commencer. Nous répondrons à des questions comme : Comment rendre mon texte rouge ou noir ? Comment faire apparaître mon contenu à tel endroit de l'écran ? Comment décorer ma page web avec une image ou une couleur d'arrière-plan ?
 
 ## Donc, que sont les CSS, réellement ?
 
@@ -46,7 +46,7 @@ Regardons un peu plus en détails ce que nous avons écrit en CSS :
 
 ![Diagramme expliquant les différents éléments d'une déclaration CSS](CSS.svg)
 
-Cette structure s'appelle **un ensemble de règles** (ou seulement « une règle »). Les différentes parties se nomment :
+Cette structure s'appelle **un ensemble de règles** (ou seulement « une règle »). Les différentes parties se nomment :
 
 - Sélecteur
   - : C'est le nom de l'élément HTML situé au début de l'ensemble de règles. Il permet de sélectionner les éléments sur lesquels appliquer le style souhaité (en l'occurence, les éléments `p`). Pour mettre en forme un élément différent, il suffit de changer le sélecteur.
@@ -117,20 +117,20 @@ Maintenant que nous avons vu quelques bases de CSS, ajoutons quelques règles et
     }
     ```
 
-    > **Note :** Tout ce qui est entre `/*` et `*/` dans un document CSS est un **commentaire**  **de CSS.**  Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.
+    > **Note :** Tout ce qui est entre `/*` et `*/` dans un document CSS est un **commentaire**  **de CSS.**  Le navigateur l'ignorera dans le rendu du code. C'est un endroit commode pour écrire des notes à propos de ce que vous faites.
 
 4.  Ensuite, fixons les tailles des différents textes contenus dans le corps du HTML ({{htmlelement("h1")}}, {{htmlelement("li")}}, et {{htmlelement("p")}}). Nous allons également centrer le texte du titre et donner une taille de ligne et un espacement de caractère entre les lettres pour que le contenu du corps (_body_) du document soit plus lisible :
 
     ```css
     h1 {
-      font-size: 60px;
-      text-align: center;
+      font-size: 60px;
+      text-align: center;
     }
 
     p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
+      font-size: 16px;
+      line-height: 2;
+      letter-spacing: 1px;
     }
     ```
 
@@ -244,7 +244,7 @@ Dans cet article, nous n'avons fait qu'effleurer les bases de CSS. Pour continue
 ## Dans ce module
 
 - [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web ?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
+- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
 - [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
 - [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
 - [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)

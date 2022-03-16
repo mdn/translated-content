@@ -104,7 +104,7 @@ Voici le résultat en direct :
 
 Construire manuellement une requête HTTP peut devenir fastidieux. Heureusement, une [spécification XMLHttpRequest](http://www.w3.org/TR/XMLHttpRequest/) récente fournit un moyen pratique et plus simple pour traiter les demandes de données de formulaire avec l'objet {{domxref("XMLHttpRequest/FormData", "FormData")}}.
 
-L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} peut s'utiliser pour construire des données de formulaire pour la transmission ou pour obtenir les données des élément de formulaire de façon à gérer leur mode d'envoi. Notez que les objets {{domxref("XMLHttpRequest/FormData", "FormData")}} sont en écriture seule (« write only »), ce qui signifie que vous pouvez les modifier, mais pas récupérer leur contenu.
+L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} peut s'utiliser pour construire des données de formulaire pour la transmission ou pour obtenir les données des élément de formulaire de façon à gérer leur mode d'envoi. Notez que les objets {{domxref("XMLHttpRequest/FormData", "FormData")}} sont en écriture seule («&nbsp;write only »), ce qui signifie que vous pouvez les modifier, mais pas récupérer leur contenu.
 
 L'utilisation de cet objet est détaillée dans [Utiliser les objets FormData](/fr/docs/Web/API/FormData/Utilisation_objets_FormData), mais voici deux exemples :
 
@@ -150,7 +150,7 @@ Voici le résultat directement :
 
 #### Utiliser un objet FormData lié à un élément form
 
-Vous pouvez également lier un objet `FormData` à un élément {{HTMLElement("form")}} et  créer ainsi un `FormData` représentant les données contenues dans le formulaire.
+Vous pouvez également lier un objet `FormData` à un élément {{HTMLElement("form")}} et créer ainsi un `FormData` représentant les données contenues dans le formulaire.
 
 Le HTML est classique :
 
@@ -424,7 +424,7 @@ Voici le résultat en direct :
 
 Selon le navigateur, l'envoi de données de formulaire par JavaScript peut être facile ou difficile. L'objet {{domxref("XMLHttpRequest/FormData", "FormData")}} en est généralement la cause et n'hésitez pas à utiliser un « polyfill » ([prothèse d'émulation](https://fr.wikipedia.org/wiki/Polyfill)) pour cela sur les navigateurs anciens :
 
-- [Ces primitives](https://gist.github.com/3120320) sont des « polyfills » de  `FormData` avec des {{domxref("Using_web_workers","worker")}}.
+- [Ces primitives](https://gist.github.com/3120320) sont des « polyfills » de  `FormData` avec des {{domxref("Using_web_workers","worker")}}.
 - [HTML5-formdata](https://github.com/francois2metz/html5-formdata) tente d'opérer un « polyfill » de l'objet `FormData`, mais il requiert un [File API](http://www.w3.org/TR/FileAPI/)
 - [Ce « polyfill »](https://github.com/jimmywarting/FormData) fournit la plupart des nouvelles méthodes dont `FormData` dispose (entrées, clés, valeurs et prise en charge de `for...of`)
 

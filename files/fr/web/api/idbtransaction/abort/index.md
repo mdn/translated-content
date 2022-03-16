@@ -89,7 +89,7 @@ function addData() {
 
 | Spécification                                                                                | État                         | Commentaires |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBTransaction-abort-void', 'abort')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBTransaction-abort-void', 'abort')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

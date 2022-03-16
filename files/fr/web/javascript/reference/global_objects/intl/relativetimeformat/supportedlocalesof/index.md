@@ -54,7 +54,7 @@ Si on dispose d'un environnement qui supporte les locales indonésienne et allem
 
 | Spécification                                                                                                                              | État                    | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-Intl.RelativeTimeFormat.supportedLocalesOf) | Proposition de niveau 3 |              |
+| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-Intl.RelativeTimeFormat.supportedLocalesOf) | Proposition de niveau 3 |              |
 
 ## Compatibilité des navigateurs
 

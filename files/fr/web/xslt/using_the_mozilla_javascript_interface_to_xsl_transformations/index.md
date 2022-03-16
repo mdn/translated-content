@@ -11,7 +11,7 @@ Ce document décrit l'interface JavaScript pour le moteur de traitement XSLT (Tr
 
 ### Création de XSLTProcessor
 
-Pour commencer, nous avons besoin de créer un objet [XSLTProcessor](fr/XSLTProcessor) :
+Pour commencer, nous avons besoin de créer un objet [XSLTProcessor](fr/XSLTProcessor)&nbsp;:
 
     var processor = new XSLTProcessor();
 
@@ -37,7 +37,7 @@ Nous pouvons utiliser les méthodes [`transformToDocument()`](#transformToDocume
 
 #### transformToDocument
 
-`transformToDocument()` prend un argument, le nœud source à transformer, et retourne un nouveau `Document` DOM avec les résultats de la transformation :
+`transformToDocument()` prend un argument, le nœud source à transformer, et retourne un nouveau `Document` DOM avec les résultats de la transformation&nbsp;:
 
     var newDocument = processor.transformToDocument(domToBeTransformed);
 
@@ -47,7 +47,7 @@ L'objet résultant est un `HTMLDocument` si la [méthode de sortie](http://www.w
 
 Nous pouvons également utiliser `transformToFragment()` qui retournera un nœud `DocumentFragment` DOM. C'est très efficace car l'adjonction d'un fragment à un autre nœud adjoint de façon transparente tous les descendants de ce fragment, et le fragment lui-même n'est pas fusionné. Les fragment sont donc utiles pour déplacer les nœuds et les stocker sans les éléments inutiles d'un objet document entier.
 
-`transformToFragment` prend deux arguments : le document source à transformer (comme ci-dessus) et un objet `Document` qui possèdera le fragment (tous les fragments doivent être possédés par un document).
+`transformToFragment` prend deux arguments&nbsp;: le document source à transformer (comme ci-dessus) et un objet `Document` qui possèdera le fragment (tous les fragments doivent être possédés par un document).
 
     var ownerDocument = document.implementation.createDocument("", "test", null);
     var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocument);

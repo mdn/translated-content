@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
 
 Supprime toutes les visites de l'historique du navigateur.
 
-Cette fonction déclenche {{WebExtAPIRef("history.onVisitRemoved")}} une seule fois, avec  `allHistory` défini sur `true` et un argument `urls` vide.
+Cette fonction déclenche {{WebExtAPIRef("history.onVisitRemoved")}} une seule fois, avec  `allHistory` défini sur `true` et un argument `urls` vide.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

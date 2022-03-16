@@ -166,7 +166,7 @@ while(treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 
 | Spécification                                                                                                                                                    | Statut                                       | Commentaire                                                                                               |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-document-createtreewalker', 'Document.createTreeWalker')}}                                         | {{Spec2('DOM WHATWG')}}             | Suppression du paramètre `expandEntityReferences`. Les paramètres facultatifs  `whatToShow` et `filter` . |
+| {{SpecName('DOM WHATWG', '#dom-document-createtreewalker', 'Document.createTreeWalker')}}                                         | {{Spec2('DOM WHATWG')}}             | Suppression du paramètre `expandEntityReferences`. Les paramètres facultatifs  `whatToShow` et `filter` . |
 | {{SpecName('DOM2 Traversal_Range', 'traversal.html#NodeIteratorFactory-createTreeWalker', 'Document.createTreeWalker')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale.                                                                                      |
 
 ## Compatibilité des navigateurs

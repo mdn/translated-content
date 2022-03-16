@@ -18,15 +18,15 @@ Une chaîne de caractères qui décrit l'état actuel de la demande. Ce sera l'u
 - `"uninitialized"`
   - : Le filtre n'est pas entièrement initialisé. Aucune fonction de filtrage ne peut être appelée.
 - `"transferringdata"`
-  - : Le canal sous-jacent transfère actuellement des données qui seront acheminées vers l'extension dans un ou plusieurs événements  {{WebExtAPIRef("webRequest.StreamFilter.ondata", "ondata")}}. L'extension peut appeler des fonctions de filtrage telles que  {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}, ou  {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}.
+  - : Le canal sous-jacent transfère actuellement des données qui seront acheminées vers l'extension dans un ou plusieurs événements  {{WebExtAPIRef("webRequest.StreamFilter.ondata", "ondata")}}. L'extension peut appeler des fonctions de filtrage telles que  {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}, ou  {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}.
 - `"finishedtransferringdata"`
-  - : Le canal sous-jacent a terminé le transfert des données. Dans cet état, l'extension peut toujours écrire des données de réponse en utilisant la fonction  {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}  du filtre.
+  - : Le canal sous-jacent a terminé le transfert des données. Dans cet état, l'extension peut toujours écrire des données de réponse en utilisant la fonction  {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}  du filtre.
 - `"suspended"`
-  - :  Le transfert de données est actuellement suspendu. Dans cet état, l'extension peut reprendre la requête en appelant la fonction  {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}} et peut écrire les données de réponse en utilisant la fonction  {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}  du filtre.
+  - :  Le transfert de données est actuellement suspendu. Dans cet état, l'extension peut reprendre la requête en appelant la fonction  {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}} et peut écrire les données de réponse en utilisant la fonction  {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}  du filtre.
 - `"closed"`
   - : L'extension a fermé la requête en appelant la fonction {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}} du filtre. Le filtre ne déclenchera plus d'événements, et l'extension ne peut pas appeler de fonctions de filtrage.
 - `"disconnected"`
-  - :  L'extension a déconnecté le filtre de la requête en appelant la fonction  {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} du filtre. Toutes les autres données seront livrées directement, sans passer par le filtre. Le filtre ne déclenchera plus d'événements, et l'extension ne peut pas appeler de fonctions de filtrage.
+  - :  L'extension a déconnecté le filtre de la requête en appelant la fonction  {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} du filtre. Toutes les autres données seront livrées directement, sans passer par le filtre. Le filtre ne déclenchera plus d'événements, et l'extension ne peut pas appeler de fonctions de filtrage.
 - `"failed"`
   - : Une erreur s'est produite et le filtre a été déconnecté de la requête. L'extension peut trouver un message d'erreur dans {{WebExtAPIRef("webRequest.StreamFilter.error", "error")}}, et ne peut appeler aucune fonction de filtrage.
 

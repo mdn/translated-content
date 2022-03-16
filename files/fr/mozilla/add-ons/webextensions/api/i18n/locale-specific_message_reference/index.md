@@ -85,9 +85,9 @@ Au moins, cette propriété doit être définie pour chaque chaîne. Le membre `
 Autres points à noter :
 
 - Tout nombre de signes dollar consécutifs apparaissant dans les chaînes est remplacé par le même nombre de signes dollar moins un. donc, $$ > $, $$$ > $$, etc.
-- Lorsque le fichier de paramètres régionaux est lu, les jetons correspondant à  `/\$([a-z0-9_@]+)\$/i` sont remplacés par la valeur correspondante de l'objet "placeholders" de la chaîne. Ces substitutions se produisent avant le traitement des  `/\$\d/` jetons dans le message.
+- Lorsque le fichier de paramètres régionaux est lu, les jetons correspondant à  `/\$([a-z0-9_@]+)\$/i` sont remplacés par la valeur correspondante de l'objet "placeholders" de la chaîne. Ces substitutions se produisent avant le traitement des  `/\$\d/` jetons dans le message.
 - Lorsqu'une chaîne locale est utilisée, les jetons correspondant à `/\$\d+/` sont remplacés par les remplacements passés à {{WebExtAPIRef("i18n.getMessage()")}}.
-- `getMessage()` ne traitera pas les appels avec plus de 9  placeholders/substitutions.
+- `getMessage()` ne traitera pas les appels avec plus de 9 placeholders/substitutions.
 
 ### description
 
@@ -116,7 +116,7 @@ Le nom de l'espace réservé est utilisé pour représenter l'espace réservé d
 
 #### contenu
 
-L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript).
+L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript).
 
 #### exemple
 

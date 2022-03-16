@@ -1,5 +1,5 @@
 ---
-title: Lignes  directrices pour les fragments de code
+title: Lignes directrices pour les fragments de code
 slug: MDN/Guidelines/Code_guidelines
 tags:
   - CSS

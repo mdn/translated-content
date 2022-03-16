@@ -7,7 +7,7 @@ translation_of: Web/API/Node/normalize
 
 ## Résumé
 
-Place le nœud spécifié et tout son sous-arbre dans une forme « normale ». Dans un sous-arbre normalisé, aucun nœud texte n'est vide et il n'y a pas de nœuds texte adjacents.
+Place le nœud spécifié et tout son sous-arbre dans une forme «&nbsp;normale&nbsp;». Dans un sous-arbre normalisé, aucun nœud texte n'est vide et il n'y a pas de nœuds texte adjacents.
 
 ## Syntaxe
 

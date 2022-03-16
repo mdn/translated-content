@@ -40,7 +40,7 @@ original_slug: Outils/Performance/Call_Tree
 
 <p><em>Durée individuelle</em> est calculé depuis <em>Coût individuel </em>comme un pourcentage du nombre total d'échantillons dans la portion sélectionnée de l'enregistrement.</p>
 
-<p>Dans la version actuelle de l'arbre d'appel, ce sont les colones les plus importantes. Les fonctions avec un <em>Cout individuel</em> important sont de bons candidats pour de l'optimisation, soit parce qu’elles prennent beaucoup de temps à s'exécuter, soit parce qu'elles sont appelées très souvent.</p>
+<p>Dans la version actuelle de l'arbre d'appel, ce sont les colones les plus importantes. Les fonctions avec un <em>Cout individuel</em> important sont de bons candidats pour de l'optimisation, soit parce qu’elles prennent beaucoup de temps à s'exécuter, soit parce qu'elles sont appelées très souvent.</p>
 
 <p>Cette capture d'écran révèle ce que l'on savait déjà : <code>bubbleSort()</code> est un algorithme très inefficace. Il y a à peu près 6 fois plus d'échantillons dans <code>bubbleSort()</code> que de dans <code>selectionSort()</code>, et 13 fois plus dans que dans <code>quickSort()</code>.</p>
 
@@ -111,8 +111,6 @@ original_slug: Outils/Performance/Call_Tree
 <div class="note">
 <p>Par défaut, l'arbre d'appel ne sépare par les données de plateforme dans des fonctions séparées, car elles ajoutent beaucoup de nuisance et ces détails ont peu de chances d'être utiles à des personnes ne travaillant sur le développement de Firefox. Si vous voulez cependant voir ces détails, il faut cocher l'option "Afficher les données de la plateforme Gecko" dans les <a href="/fr/docs/Tools/Performance/UI_Tour#Toolbar">options</a>.</p>
 </div>
-
-<p> </p>
 
 <h2 id="Utiliser_un_arbre_inversé_(_Bottom-Up)">Utiliser un arbre inversé ( Bottom-Up)</h2>
 

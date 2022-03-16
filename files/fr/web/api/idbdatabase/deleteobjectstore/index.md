@@ -37,7 +37,7 @@ Cette méthode peut lever une {{domxref("DOMException")}} d'un de ces types suiv
 
 | Exception                  | Description                                                                                                                                                                                                                                                      |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `InvalidStateError`        | Levée si la méthode n'est pas appelée lors d'une transaction en mode `versionchange`. Pour les anciens navigateurs basés sur WebKit, il faut d'abord appeler la méthode  {{domxref("IDBVersionChangeRequest.setVersion")}}.                       |
+| `InvalidStateError`        | Levée si la méthode n'est pas appelée lors d'une transaction en mode `versionchange`. Pour les anciens navigateurs basés sur WebKit, il faut d'abord appeler la méthode  {{domxref("IDBVersionChangeRequest.setVersion")}}.                       |
 | `TransactionInactiveError` | Levée si la méthode est appelée sur une base de données qui n'existe pas (ex. elle a été effacée). Pour les versions antérieures à Firefox 41, ce dernier déclenchait une erreur `InvalidStateError`, cela est désormais corrigé (cf. {{bug("1176165")}}). |
 | `NotFoundError`            | Levée lors de la suppression d'un magasin d'objets qui n'existe pas. Les noms sont sensibles à la casse.                                                                                                                                                         |
 
@@ -88,8 +88,8 @@ Dans cet exemple, on ouvre une connexion à la base de données et dans le gesti
 
 | Spécification                                                                                                                                    | État                             | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-deleteObjectStore-void-DOMString-name', 'deleteObjectStore()')}} | {{Spec2('IndexedDB')}}     |              |
-| {{SpecName("IndexedDB 2", "#dom-idbdatabase-deleteobjectstore", "deleteObjectStore()")}}                             | {{Spec2("IndexedDB 2")}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-deleteObjectStore-void-DOMString-name', 'deleteObjectStore()')}} | {{Spec2('IndexedDB')}}     |              |
+| {{SpecName("IndexedDB 2", "#dom-idbdatabase-deleteobjectstore", "deleteObjectStore()")}}                             | {{Spec2("IndexedDB 2")}} |              |
 
 ## Compatibilité des navigateurs
 

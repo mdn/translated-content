@@ -24,7 +24,7 @@ Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs
 
 ```css
 :future(p, span) {
-  display: none;
+  display: none;
 }
 ```
 
@@ -33,12 +33,12 @@ Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs
 ```html
 <video controls preload="metadata">
   <source src="video.mp4" type="video/mp4" />
-  <source src="video.webm" type="video/webm" />
-  <track label="Français" kind="subtitles" srclang="fr" src="subtitles.vtt" default>
+  <source src="video.webm" type="video/webm" />
+  <track label="Français" kind="subtitles" srclang="fr" src="subtitles.vtt" default>
 </video>
 ```
 
-### WebVTT 
+### WebVTT
 
     FICHIER WEBVTT
 

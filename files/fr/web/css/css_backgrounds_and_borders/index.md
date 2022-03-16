@@ -83,6 +83,6 @@ translation_of: Web/CSS/CSS_Backgrounds_and_Borders
 
 | Spécification                                | État                                     | Commentaires |
 | -------------------------------------------- | ---------------------------------------- | ------------ |
-| {{SpecName('CSS3 Backgrounds')}} | {{Spec2('CSS3 Backgrounds')}} |              |
-| {{SpecName('CSS2.1', 'box.html')}} | {{Spec2('CSS2.1')}}                 |              |
-| {{SpecName('CSS1', '#border')}}     | {{Spec2('CSS1')}}                 |              |
+| {{SpecName('CSS3 Backgrounds')}} | {{Spec2('CSS3 Backgrounds')}} |              |
+| {{SpecName('CSS2.1', 'box.html')}} | {{Spec2('CSS2.1')}}                 |              |
+| {{SpecName('CSS1', '#border')}}     | {{Spec2('CSS1')}}                 |              |

@@ -28,11 +28,11 @@ var request = myIndex.get(key);
 ## Exceptions
 
 - `TransactionInactiveError`
-  - : Cette exception ( {{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) dont dépend l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet de cet index est inactive.
+  - : Cette exception ( {{domxref("DOMException")}}) est levée si la transaction ({{domxref("IDBTransaction")}}) dont dépend l'accès ({{domxref("IDBObjectStore")}}) au magasin d'objet de cet index est inactive.
 - `DataError`
   - : Cette exception ({{domxref("DOMException")}}) est levée si la clé ou l'intervalle de clé ({{domxref("IDBKeyRange")}}) est invalide.
 - `InvalidStateError`
-  - : Cette exception ({{domxref("DOMException")}}) est levée si l'index à été supprimé.
+  - : Cette exception ({{domxref("DOMException")}}) est levée si l'index à été supprimé.
 
 ## Exemple
 
@@ -89,7 +89,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                                        | Ètat                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-get-IDBRequest-any-key', 'get()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité avec les navigateurs
 

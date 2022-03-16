@@ -23,7 +23,7 @@ La vue **`DataView`** fournit une interface de bas niveau pour lire et écrire d
 ### Paramètres
 
 - `buffer`
-  - : Un {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}}{{experimental_inline}} existant à utiliser pour la mise en mémoire du nouvel objet `DataView`.
+  - : Un {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}}{{experimental_inline}} existant à utiliser pour la mise en mémoire du nouvel objet `DataView`.
 - `décalageOctets` {{optional_inline}}
   - : Le décalage, exprimé en octets, pour trouver le premier octet significatif du buffer à représenter dans la vue. Si ce paramètre n'est pas fourni, la vue commencera au premier octet du buffer.
 - `longueurOctets` {{optional_inline}}

@@ -13,7 +13,7 @@ translation_of: Web/API/DataTransfer/clearData
 
 La méthode DataTransfer.clearData() retire l'opération de {{domxref("DataTransfer","glisser-déposer")}} pour le format donné. Si la donnée pour le format ciblé n'existe pas, cette méthode n'aura aucun effet.
 
-> **Note :** Si cette méthode est appelée sans argument, ou que le format donné est une  {{domxref("DOMString","chaîne de caractères")}}  vide, les données de tous les formats seront retirées.
+> **Note :** Si cette méthode est appelée sans argument, ou que le format donné est une  {{domxref("DOMString","chaîne de caractères")}}  vide, les données de tous les formats seront retirées.
 
 ## Syntaxe
 
@@ -154,7 +154,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 | Spécification                                                                                                                            | Statut                           | Commentaire         |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}} | {{Spec2('HTML WHATWG')}} |                     |
+| {{SpecName('HTML WHATWG', 'interaction.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}} | {{Spec2('HTML WHATWG')}} |                     |
 | {{SpecName('HTML5.1', 'editing.html#dom-datatransfer-cleardata','DataTransfer.clearData()')}}             | {{Spec2('HTML5.1')}}     | Définition initiale |
 
 ## Compatibilité

@@ -16,7 +16,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host`** permet de cibler
 ```css
 /* Cible la racine d'un hôte de shadow DOM */
 :host {
-  font-weight: bold;
+  font-weight: bold;
 }
 ```
 
@@ -28,7 +28,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host`** permet de cibler
 
 Les fragments de code qui suivent sont extraits du dépôt d'exemple [_host-selectors_](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([voir le résultat _live_](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-Dans cet exemple, on dispose d'un élément personnalisé `<context-span>`  qui peut contenir du texte :
+Dans cet exemple, on dispose d'un élément personnalisé `<context-span>`  qui peut contenir du texte :
 
 ```html
 <h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>

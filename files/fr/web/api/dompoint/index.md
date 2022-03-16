@@ -44,7 +44,7 @@ _`DOMPoint` hérite des propriétés de son parent {{domxref("DOMPointReadOnly")
 
 ## Exemples
 
-Dans l' [API WebVR](/fr/docs/Web/API/WebVR_API) (_VR = réalité virtuelle_), les valeurs `DOMPoint` sont utilisées pour représenter les points dans l'espace de coordonnées dans lequel l'affichage monté sur la tête de l'utilisateur existe. Dans l'extrait suivant, la position du VR HMD peut être récupérée en saisissant d'abord une référence à l'état actuel du capteur de position avec {{domxref("PositionSensorVRDevice.getState")}}, puis en accédant au résultat de la  {{domxref("VRPositionState.position","position")}} de la propriété {{domxref("VRPositionState")}}, qui renvoie un `DOMPoint`. Notez ci-dessous l'utilisation de `position.x`, `position.y` et `position.z`.
+Dans l' [API WebVR](/fr/docs/Web/API/WebVR_API) (_VR = réalité virtuelle_), les valeurs `DOMPoint` sont utilisées pour représenter les points dans l'espace de coordonnées dans lequel l'affichage monté sur la tête de l'utilisateur existe. Dans l'extrait suivant, la position du VR HMD peut être récupérée en saisissant d'abord une référence à l'état actuel du capteur de position avec {{domxref("PositionSensorVRDevice.getState")}}, puis en accédant au résultat de la  {{domxref("VRPositionState.position","position")}} de la propriété {{domxref("VRPositionState")}}, qui renvoie un `DOMPoint`. Notez ci-dessous l'utilisation de `position.x`, `position.y` et `position.z`.
 
 ```js
 function setView() {

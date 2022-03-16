@@ -30,11 +30,11 @@ Si aucun label n'as été specifié
 
 ### Warnings
 
-Si `label` est specifié mais n'existe pas `countReset()` renvoie cet avertissement :
+Si `label` est specifié mais n'existe pas `countReset()` renvoie cet avertissement :
 
     Counter "counter-name" doesn’t exist.
 
-Si `label` n'est pas specifé et que `count()` n'as pas encore été appellé `countReset()` renvoie cette avertissement :
+Si `label` n'est pas specifé et que `count()` n'as pas encore été appellé `countReset()` renvoie cette avertissement :
 
     Counter "default" doesn’t exist.
 
@@ -69,7 +69,7 @@ Le retour de la console ressemblera à ceci :
 
 Pour information l'appel à `console.counterReset()` remet à zero la valeur du compteur par défaut.
 
-S'il on passe la variable `user` comme argument pour `label` et que l'on effectue un premier appel de la fonction `count()`, avec la chaine "bob" puis un second appel avec la chaine "alice" :
+S'il on passe la variable `user` comme argument pour `label` et que l'on effectue un premier appel de la fonction `count()`, avec la chaine "bob" puis un second appel avec la chaine "alice" :
 
 ```js
 var user = "";
@@ -96,7 +96,7 @@ On obtiendra ce retour dans la console
     "bob: 0"
     "alice: 3"
 
-Remettre à zero le compteur "bob" change uniquement la valeur de celui-ci. La valeur du compteur "alice" reste inchangée.
+Remettre à zero le compteur "bob" change uniquement la valeur de celui-ci. La valeur du compteur "alice" reste inchangée.
 
 ## Specifications
 

@@ -36,7 +36,7 @@ Safari ne reconnaît pas ces événements.
 
 | Specification                                                                                        | Status                           | Comment |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#handler-window-onafterprint', 'onafterprint')}} | {{Spec2('HTML WHATWG')}} |         |
+| {{SpecName('HTML WHATWG', '#handler-window-onafterprint', 'onafterprint')}} | {{Spec2('HTML WHATWG')}} |         |
 
 ## Compatibilité des navigateurs
 

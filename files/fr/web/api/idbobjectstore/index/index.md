@@ -80,7 +80,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                                                            | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-index-IDBIndex-DOMString-name', 'index()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-index-IDBIndex-DOMString-name', 'index()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

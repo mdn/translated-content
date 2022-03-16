@@ -3,7 +3,7 @@ title: WindowEventHandlers.onhashchange
 slug: Web/API/WindowEventHandlers/onhashchange
 translation_of: Web/API/WindowEventHandlers/onhashchange
 ---
-{{APIRef("HTML DOM")}}L'événement **hashchange** est déclenché lorsque le hash de l'url change (cf. {{domxref("Window.location", "location.hash")}}).
+{{APIRef("HTML DOM")}}L'événement **hashchange** est déclenché lorsque le hash de l'url change (cf. {{domxref("Window.location", "location.hash")}}).
 
 ## Syntaxe
 
@@ -38,9 +38,9 @@ function locationHashChanged() {
 window.onhashchange = locationHashChanged;
 ```
 
-## L'événement hashchange
+## L'événement hashchange
 
-Lorsque l'observateur d'événement déclenche l'événement hashchange il passe en paramêtres les arguments suivante:
+Lorsque l'observateur d'événement déclenche l'événement hashchange il passe en paramêtres les arguments suivante:
 
 <table class="standard-table">
   <tbody>
@@ -62,7 +62,7 @@ Lorsque l'observateur d'événement déclenche l'événement hashchange il pass
   </tbody>
 </table>
 
-### Une solution autour de event.newURL et event.oldURL
+### Une solution autour de event.newURL et event.oldURL
 
 ```js
 //insérez ce bout de code au début de votre code pour observer les changements de hash dans l'URL
@@ -76,15 +76,15 @@ if(!window.HashChangeEvent)(function(){
 }());
 ```
 
-###  
+###  
 
-## Spécifications 
+## Spécifications
 
 | Spécifications                                                                                       | Statut                           | Commentaires |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     |              |
-| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}         | {{Spec2('HTML5.1')}}     |              |
+| {{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}     | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 
@@ -93,5 +93,5 @@ if(!window.HashChangeEvent)(function(){
 ## Voir aussi
 
 - [Manipuler l'historique du navigateur](/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur)
-- Méthodes [history.pushState() et history.replaceState()](/fr/docs/Web/API/Window/history)
-- L'événement [popstate](/fr/docs/Web/API/WindowEventHandlers/onpopstate)
+- Méthodes [history.pushState() et history.replaceState()](/fr/docs/Web/API/Window/history)
+- L'événement [popstate](/fr/docs/Web/API/WindowEventHandlers/onpopstate)

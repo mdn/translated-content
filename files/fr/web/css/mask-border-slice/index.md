@@ -22,7 +22,7 @@ Le diagramme ci-avant illustre l'emplacement de chaque région.
 - Les zones 5 à 8 sont les zones de côtés. Ces zones peuvent être [répétées, redimensionnées, ou modifiées](/fr/docs/Web/CSS/mask-border-repeat) afin que le masque de bordule final aient les mêmes dimensions que l'élément.
 - La zone 9 est la zone centrale. Par défaut, elle n'est pas utilisée mais elle pourra être utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
 
-Les propriétés {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}} et  {{cssxref("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque final.
+Les propriétés {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}} et  {{cssxref("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque final.
 
 ## Syntaxe
 

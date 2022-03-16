@@ -14,7 +14,7 @@ original_slug: Accessibilité/ARIA/Guides_ARIA
 - Labelliser les composants composés (Composite Widgets) et des zones (Regions)
 - Gérer le focus dans les composants composés (`aria-activedescendant` vs roving tabindex)
 - Utiliser les rôles de points de repère (Landmark Roles)
-- Traiter les actualisations dynamiques & des zones « Live »
+- Traiter les actualisations dynamiques & des zones «&nbsp;Live&nbsp;»
 - Mode Virtuel contre mode non virtuel dans les produits de technologies d’assistance
 - Utiliser le Glisser & déposer
 - Notifier les utilisateurs sur les lecteurs d’écran non-ARIA

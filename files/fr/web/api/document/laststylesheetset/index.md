@@ -27,7 +27,7 @@ var lastSheetSet = document.lastStyleSheetSet;
 if (!lastSheetSet) {
   lastSheetSet = "Sheet not yet changed";
 }
-console.log("The last sheet set is: " + lastSheetSet);
+console.log("The last sheet set is: " + lastSheetSet);
 ```
 
 ## Voir aussi
@@ -39,4 +39,4 @@ console.log("The last sheet set is: " + lastSheetSet);
 
 ## Spécifications
 
-- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [HTML5: Alternate Style Sheets](http://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)

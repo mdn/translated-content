@@ -67,23 +67,23 @@ Tester un site web est une tâche complexe, car c'est une opération qui comport
 
 Django fournit un framework de test avec une petite hiérarchie de classes construites sur la librairie standard de Python [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest "(in Python v3.5)"). Malgré son nom, ce framework de test est utilisable pour les tests unitaires aussi bien que pour les tests d'intégration. Le framework Django ajoute les méthodes et les outils d'une API pour aider à tester un site web et les comportements spécifiques à Django. Ces méthodes vous permettent de simuler des requêtes, d'insérer des données de test et d'inspecter la sortie de votre application. Django fournit aussi une API ([LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)) et des outils pour [utiliser d'autres frameworks de test](https://docs.djangoproject.com/en/2.1/topics/testing/advanced/#other-testing-frameworks). Par exemple vous pouvez intégrer le célèbre framework [Selenium](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) pour simuler l'interaction entre un utilisateur et un vrai navigateur.
 
-Pour écrire un test, vous partez de l'une des classes de test de base fournies par Django (ou par _unittest_) ([SimpleTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)), et ensuite vous écrivez des méthodes séparées pour vérifier que telle fonctionnalité se comporte comme prévu (les tests utilisent des méthodes "assert" pour vérifier qu'une expression retourne `True` ou `False`, ou que deux valeurs sont égales, etc.). Quant vous commencez à lancer un test, le framework exécute les méthodes de test écrites dans vos classes dérivées. Les méthodes de test sont lancées de manière indépendante, avec en commun un réglage initial (_setUp_) et/ou un comportement de fin (_tearDown_) définis dans la classe, comme indiqué ci-dessous.
+Pour écrire un test, vous partez de l'une des classes de test de base fournies par Django (ou par _unittest_) ([SimpleTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#liveservertestcase)), et ensuite vous écrivez des méthodes séparées pour vérifier que telle fonctionnalité se comporte comme prévu (les tests utilisent des méthodes "assert" pour vérifier qu'une expression retourne `True` ou `False`, ou que deux valeurs sont égales, etc.). Quant vous commencez à lancer un test, le framework exécute les méthodes de test écrites dans vos classes dérivées. Les méthodes de test sont lancées de manière indépendante, avec en commun un réglage initial (_setUp_) et/ou un comportement de fin (_tearDown_) définis dans la classe, comme indiqué ci-dessous.
 
 ```python
 class YourTestClass(TestCase):
-    def setUp(self):
-        # Setup run before every test method.
-        pass
+    def setUp(self):
+        # Setup run before every test method.
+        pass
 
-    def tearDown(self):
-        # Clean up run after every test method.
-        pass
+    def tearDown(self):
+        # Clean up run after every test method.
+        pass
 
-    def test_something_that_will_pass(self):
-        self.assertFalse(False)
+    def test_something_that_will_pass(self):
+        self.assertFalse(False)
 
-    def test_something_that_will_fail(self):
-        self.assertTrue(False)
+    def test_something_that_will_fail(self):
+        self.assertTrue(False)
 ```
 
 La meilleure classe de base pour la plupart des tests est [django.test.TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase). Cette classe de test crée une base de données vide avant que ses tests ne soient lancés, et lance toutes les fonctions de test dans sa propre transaction. La classe possède aussi un [Client](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client "django.test.Client") de test, que vous pouvez utiliser pour simuler l'interaction entre un utilisateur et le code au niveau de la vue. Dans les sections suivantes, nous allons nous concentrer sur les tests unitaires, créés en utilisant la classe de base [TestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#testcase).
@@ -94,25 +94,25 @@ La meilleure classe de base pour la plupart des tests est [django.test.TestCase]
 
 Vous pouvez tester tous les aspects de votre code, mais non les librairies ou fonctionnalités faisant partie de Python ou de Django.
 
-Ainsi par exemple, considérez le modèle `Author` défini ci-dessous. Vous n'avez pas besoin de tester explicitement que `first_name` et `last_name` ont été stockés correctement comme `CharField` dans la base de données, car c'est là quelque chose de défini par Django (cependant, bien sûr, vous allez inévitablement tester cette fonctionnalité pendant le développement). Vous n'avez pas non plus besoin de tester que `date_of_birth` a été validé comme champ date, car, encore une fois, cela est implémenté par Django.
+Ainsi par exemple, considérez le modèle `Author` défini ci-dessous. Vous n'avez pas besoin de tester explicitement que `first_name` et `last_name` ont été stockés correctement comme `CharField` dans la base de données, car c'est là quelque chose de défini par Django (cependant, bien sûr, vous allez inévitablement tester cette fonctionnalité pendant le développement). Vous n'avez pas non plus besoin de tester que `date_of_birth` a été validé comme champ date, car, encore une fois, cela est implémenté par Django.
 
 En revanche, vous pouvez tester que les textes utilisés pour les labels (_First name, Last name, Date of birth, Died_), ainsi que le respect de la taille allouée au champ texte (100 caractères), car c'est là une partie de votre propre design et quelque chose qui pourrait être cassé/modifié dans le futur.
 
 ```python
 class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    date_of_birth = models.DateField(null=True, blank=True)
+    date_of_death = models.DateField('Died', null=True, blank=True)
 
-    def get_absolute_url(self):
-        return reverse('author-detail', args=[str(self.id)])
+    def get_absolute_url(self):
+        return reverse('author-detail', args=[str(self.id)])
 
-    def __str__(self):
-        return '%s, %s' % (self.last_name, self.first_name)
+    def __str__(self):
+        return '%s, %s' % (self.last_name, self.first_name)
 ```
 
-De même, vous pouvez tester que les méthodes personnalisées `get_absolute_url()` et `__str__()` se comportent comme prévu, car elles appartiennent à votre logique code/métier. Dans le cas de `get_absolute_url()`, vous pouvez supposer que la méthode Django `reverse()` a été implémentée correctement, aussi ce que vous allez tester, c'est que la vue associée a été effectivement définie.
+De même, vous pouvez tester que les méthodes personnalisées `get_absolute_url()` et `__str__()` se comportent comme prévu, car elles appartiennent à votre logique code/métier. Dans le cas de `get_absolute_url()`, vous pouvez supposer que la méthode Django `reverse()` a été implémentée correctement, aussi ce que vous allez tester, c'est que la vue associée a été effectivement définie.
 
 > **Note :** Les lecteurs attentifs auront noté que nous pourrions aussi vouloir limiter les dates de naissance et de décès à des valeurs sensibles, et vérifier que le décès intervient après la naissance. En Django, cette contrainte est ajoutée à vos classes de formulaires (bien que vous puissiez définir des validateurs pour les champs du modèle et des validateurs de modèles, ceux-ci ne sont utilisés qu'au niveau du formulaire s'ils sont appelés par la méthode clean() du modèle. Cela requière un ModelForm ou bien la méthode clean() du modèle a besoin d'être appelée explicitement.)
 
@@ -122,14 +122,14 @@ Avec cela en tête, commençons à voir comment définir et lancer des tests.
 
 Avant d'entrer dans le détail de "que tester", voyons d'abord brièvement _où_ et _comment_ les tests sont définis.
 
-Django utilise le [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery "(in Python v3.5)") du module unittest, qui va chercher des tests, sous le répertoire de travail actuel, dans tous les fichiers dont le nom contient le pattern **test.py**. Du moment que vous nommez vos fichiers de manière appropriée, vous pouvez utiliser n'importe quelle structure. Nous vous recommandons de créer un module pour coder vos tests, et d'avoir des fichiers distincts pour les modèles, les vues, les formulaires et tout autre type de code que vous avez besoin de tester. Par exemple :
+Django utilise le [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery "(in Python v3.5)") du module unittest, qui va chercher des tests, sous le répertoire de travail actuel, dans tous les fichiers dont le nom contient le pattern **test.py**. Du moment que vous nommez vos fichiers de manière appropriée, vous pouvez utiliser n'importe quelle structure. Nous vous recommandons de créer un module pour coder vos tests, et d'avoir des fichiers distincts pour les modèles, les vues, les formulaires et tout autre type de code que vous avez besoin de tester. Par exemple :
 
     catalog/
-      /tests/
-        __init__.py
-        test_models.py
-        test_forms.py
-        test_views.py
+      /tests/
+        __init__.py
+        test_models.py
+        test_forms.py
+        test_views.py
 
 Créez une structure de fichier comme montré ci-dessus, dans votre projet _LocalLibrary_. Le ficheir **\_\_init\_\_.py** doit être vide (il dit simplement à Python que ce répertoire est un package). Vous pouvez créer les trois fichiers de test en copiant et renommant le fichier de test du squelette **/catalog/tests.py**.
 
@@ -139,7 +139,7 @@ Créez une structure de fichier comme montré ci-dessus, dans votre projet _Loca
 
 Ouvrez le fichier **/catalog/tests/test_models.py**. Ce fichier doit importer `django.test.TestCase`, comme indiqué ci-après :
 
-Open **/catalog/tests/test_models.py**. The file should import `django.test.TestCase`, as shown:
+Open **/catalog/tests/test_models.py**. The file should import `django.test.TestCase`, as shown:
 
 ```python
 from django.test import TestCase
@@ -153,26 +153,26 @@ Ajoutez la classe de test ci-dessous à la fin du fichier. La classe montre comm
 
 ```python
 class YourTestClass(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        print("setUpTestData: Run once to set up non-modified data for all class methods.")
-        pass
+    @classmethod
+    def setUpTestData(cls):
+        print("setUpTestData: Run once to set up non-modified data for all class methods.")
+        pass
 
-    def setUp(self):
-        print("setUp: Run once for every test method to setup clean data.")
-        pass
+    def setUp(self):
+        print("setUp: Run once for every test method to setup clean data.")
+        pass
 
-    def test_false_is_false(self):
-        print("Method: test_false_is_false.")
-        self.assertFalse(False)
+    def test_false_is_false(self):
+        print("Method: test_false_is_false.")
+        self.assertFalse(False)
 
-    def test_false_is_true(self):
-        print("Method: test_false_is_true.")
-        self.assertTrue(False)
+    def test_false_is_true(self):
+        print("Method: test_false_is_true.")
+        self.assertTrue(False)
 
-    def test_one_plus_one_equals_two(self):
-        print("Method: test_one_plus_one_equals_two.")
-        self.assertEqual(1 + 1, 2)
+    def test_one_plus_one_equals_two(self):
+        print("Method: test_one_plus_one_equals_two.")
+        self.assertEqual(1 + 1, 2)
 ```
 
 La nouvelle classe définit deux méthodes que vous pouvez utiliser pour une configuration pré-test (par exemple, pour créer des modèles ou d'autres objets dont vous aurez besoin pour les tests) :
@@ -180,11 +180,11 @@ La nouvelle classe définit deux méthodes que vous pouvez utiliser pour une con
 - `setUpTestData()` est appelée une fois au début du lancement des tests pour un réglage au niveau de la classe. Vous pouvez l'utiliser pour créer des objets qui ne sont pas destinés à être modifiés ou changés dans les méthodes de test.
 - `setUp()` est appelée avant chaque fonction de test pour définir des objets qui peuvent être modifiés par le test (chaque fonction de test obtiendra une version "fraîche" de ces objets).
 
-> **Note :** Les classes de test ont aussi une méthode `tearDown()`, que nous n'avons pas utilisée. Cette méthode n'est pas particulièrement utile pour les tests avec bases de données, dans la mesure où la classe de base `TestCase` prend soin pour vous de supprimer la base de données utilisées pour les tests.
+> **Note :** Les classes de test ont aussi une méthode `tearDown()`, que nous n'avons pas utilisée. Cette méthode n'est pas particulièrement utile pour les tests avec bases de données, dans la mesure où la classe de base `TestCase` prend soin pour vous de supprimer la base de données utilisées pour les tests.
 
 En dessous de ces méthodes, nous avons un certain nombre de méthodes de test, qui utilisent des fonctions `Assert`, pour tester si certaines conditions sont vraies, fausses ou égales (`AssertTrue`, `AssertFalse`, `AssertEqual`). Si la condition ne renvoie pas le résultat escompté, le test plante et renvoie une erreur à votre console.
 
-Les méthodes `AssertTrue`, `AssertFalse` et `AssertEqual` sont des assertions standard fournies par **unittest**. Il y a d'autres assertions standard dans le framework, et aussi des [assertions spécifiques à Django](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#assertions), pour tester si une vue redirige (`assertRedirects`), pour tester si tel template a été utilisé (`assertTemplateUsed`), etc.
+Les méthodes `AssertTrue`, `AssertFalse` et `AssertEqual` sont des assertions standard fournies par **unittest**. Il y a d'autres assertions standard dans le framework, et aussi des [assertions spécifiques à Django](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#assertions), pour tester si une vue redirige (`assertRedirects`), pour tester si tel template a été utilisé (`assertTemplateUsed`), etc.
 
 > **Note :** Normallement vous ne devriez **pas** inclure de fonctions **print()** dans vos tests, comme montré ci-dessus. Nous avons fait cela uniquement pour que vous puissiez voir dans la console (dans la section suivante) l'ordre dans lequel les fonctions de setup sont appelées.
 
@@ -198,7 +198,7 @@ python3 manage.py test
 
 Cette commande va lancer la recherche de tous les fichiers ayant la forme **test.py** sous le répertoire courant, et lancer tous les tests définis, en utilisant les classes de base appropriées (ici nous avons un certain nombre de fichiers de test, mais pour le moment seul **/catalog/tests/test_models.py** contient des tests). Par défaut, chaque test ne fera de rapport qu'en cas d'échec, avec ensuite un résumé du test.
 
-> **Note :** Si vous obtenez des erreurs telles que : `ValueError: Missing staticfiles manifest entry ...`, cela peut être dû au fait que le test ne lance pas *collectstatic* par défaut, et que votre application utilise une classe de storage qui le requiert (voyez [manifest_strict](https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) pour plus d'information). Il y a plusieurs façons de remédier à ce problème - la plus facile est de lancer tout simplement *collectstatic* avant de lancer les tests :
+> **Note :** Si vous obtenez des erreurs telles que : `ValueError: Missing staticfiles manifest entry ...`, cela peut être dû au fait que le test ne lance pas *collectstatic* par défaut, et que votre application utilise une classe de storage qui le requiert (voyez [manifest_strict](https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage.manifest_strict) pour plus d'information). Il y a plusieurs façons de remédier à ce problème - la plus facile est de lancer tout simplement *collectstatic* avant de lancer les tests :
 >
 > ```bash
 > python3 manage.py collectstatic
@@ -222,8 +222,8 @@ Method: test_one_plus_one_equals_two.
 FAIL: test_false_is_true (catalog.tests.tests_models.YourTestClass)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "D:\Github\django_tmp\library_w_t_2\locallibrary\catalog\tests\tests_models.py", line 22, in test_false_is_true
-    self.assertTrue(False)
+  File "D:\Github\django_tmp\library_w_t_2\locallibrary\catalog\tests\tests_models.py", line 22, in test_false_is_true
+    self.assertTrue(False)
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
@@ -233,11 +233,11 @@ FAILED (failures=1)
 Destroying test database for alias 'default'...
 ```
 
-Ici nous voyons que nous avons eu un échec pour un test, et nous pouvons voir exactement quelle fonction a planté et pourquoi (cet échec était prévu, car `False` n'est pas `True` !).
+Ici nous voyons que nous avons eu un échec pour un test, et nous pouvons voir exactement quelle fonction a planté et pourquoi (cet échec était prévu, car `False` n'est pas `True` !).
 
 > **Note :** La chose la plus importante à apprendre de la sortie de test ci-dessus est qu'il est bien mieux d'utiliser des noms descriptifs/informatifs pour vos objets et méthodes.
 
-Le texte en **gras** ci-dessus n'apparaîtra pas normalement dans la sortie de test (elle est générée par les fonctions `print()` dans nos tests). Cela montre comment la méthode `setUpTestData()` est appelée une fois pour l'ensemble de classe, tandis que `setUp()` est appelée avant chaque méthode.
+Le texte en **gras** ci-dessus n'apparaîtra pas normalement dans la sortie de test (elle est générée par les fonctions `print()` dans nos tests). Cela montre comment la méthode `setUpTestData()` est appelée une fois pour l'ensemble de classe, tandis que `setUp()` est appelée avant chaque méthode.
 
 La section suivante mnotre comment vous pouvez lancer des test spécifiques, et comment contrôler la quantité d'information fournie par les tests.
 
@@ -253,7 +253,7 @@ Les niveaux de verbosité sont 0, 1, 2 et 3, avec "1" comme valeur par défaut.
 
 ### Lancer des tests spécifiques
 
-Si vous voulez lancer une sous-sélection parmi vos tests, vous pouvez le faire en spécifiant le chemin complet (avec des points) vers le ou les package(s), module, sous-classe de `TestCase` ou méthode :
+Si vous voulez lancer une sous-sélection parmi vos tests, vous pouvez le faire en spécifiant le chemin complet (avec des points) vers le ou les package(s), module, sous-classe de `TestCase` ou méthode :
 
 ```bash
 # Run the specified module
@@ -279,25 +279,25 @@ Maintenant que nous savons comment lancer nos tests et quel genre de choses nous
 
 Comme nous l'avons dit ci-dessus, nous devrions tester tout ce qui relève de notre design, ou tout ce qui est défini par du code que nous avons écrit nous-mêmes, mais pas les bibliothèques ou le code qui est déjà testé par Django ou par l'équipe qui développe Python.
 
-Par exemple, considérez le modèle `Author` ci-dessous. Ici nous devrions tester les labels de tous les champs, car, bien que nous n'ayons pas explicitement spécifié la plupart d'entre eux, nous avons un design qui dit ce que ces valeurs devraient être. Si nous ne testons pas ces valeurs, nous ne savons pas que les labels des champs ont les valeurs souhaitées. De même, alors que nous sommes tranquilles sur le fait que Django créera un champ de la longueur indiquée, il est intéressant de lancer un test spécifique pour s'assurer qu'il a été implémenté comme prévu.
+Par exemple, considérez le modèle `Author` ci-dessous. Ici nous devrions tester les labels de tous les champs, car, bien que nous n'ayons pas explicitement spécifié la plupart d'entre eux, nous avons un design qui dit ce que ces valeurs devraient être. Si nous ne testons pas ces valeurs, nous ne savons pas que les labels des champs ont les valeurs souhaitées. De même, alors que nous sommes tranquilles sur le fait que Django créera un champ de la longueur indiquée, il est intéressant de lancer un test spécifique pour s'assurer qu'il a été implémenté comme prévu.
 
 ```python
 class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    date_of_birth = models.DateField(null=True, blank=True)
-    date_of_death = models.DateField('Died', null=True, blank=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    date_of_birth = models.DateField(null=True, blank=True)
+    date_of_death = models.DateField('Died', null=True, blank=True)
 
-    def get_absolute_url(self):
-        return reverse('author-detail', args=[str(self.id)])
+    def get_absolute_url(self):
+        return reverse('author-detail', args=[str(self.id)])
 
-    def __str__(self):
-        return f'{self.last_name}, {self.first_name}'
+    def __str__(self):
+        return f'{self.last_name}, {self.first_name}'
 ```
 
 Ouvrez notre **/catalog/tests/test_models.py**, et remplacez tout le code qui s'y trouve par le code de test ci-après pour le modèle `Author`.
 
-Vous voyez que nous importons d'abord `TestCase` et faisons dériver d'elle notre classe de test (`AuthorModelTest`) en utilisant un nom descriptif, de façon à pouvoir identifier aisément dans la sortie tout test qui échoue. Nous appelons ensuite `setUpTestData()` afin de créer un objet _author_, que nous utiliserons mais que nous ne modifierons jamais dans aucun de nos tests.
+Vous voyez que nous importons d'abord `TestCase` et faisons dériver d'elle notre classe de test (`AuthorModelTest`) en utilisant un nom descriptif, de façon à pouvoir identifier aisément dans la sortie tout test qui échoue. Nous appelons ensuite `setUpTestData()` afin de créer un objet _author_, que nous utiliserons mais que nous ne modifierons jamais dans aucun de nos tests.
 
 ```python
 from django.test import TestCase
@@ -351,26 +351,26 @@ self.assertEquals(field_label, 'first name')
 
 Les choses intéressantes à noter sont :
 
-- Nous ne pouvons obtenir le `verbose_name` directement en utilisant `author.first_name.verbose_name`, car `author.first_name` est une _chaîne_ (non un moyen d'accéder à l'objet `first_name`, que nous pourrions utiliser pour accéder à ses propriétés). À la place nous devons utiliser l'attribut `_meta` de author afin d'obtenir une instance de ses champs et utiliser celle-ci pour demander l'information que nous cherchons.
-- Nous avons fait le choix d'utiliser `assertEquals(field_label,'first name')` plutôt que `assertTrue(field_label == 'first name')`. La raison en est que, en cas d'échec du test, la sortie vous dira, dans le premier cas, quel est effectivement le label du champ, ce qui rend un peu plus facile le débogage du problème.
+- Nous ne pouvons obtenir le `verbose_name` directement en utilisant `author.first_name.verbose_name`, car `author.first_name` est une _chaîne_ (non un moyen d'accéder à l'objet `first_name`, que nous pourrions utiliser pour accéder à ses propriétés). À la place nous devons utiliser l'attribut `_meta` de author afin d'obtenir une instance de ses champs et utiliser celle-ci pour demander l'information que nous cherchons.
+- Nous avons fait le choix d'utiliser `assertEquals(field_label,'first name')` plutôt que `assertTrue(field_label == 'first name')`. La raison en est que, en cas d'échec du test, la sortie vous dira, dans le premier cas, quel est effectivement le label du champ, ce qui rend un peu plus facile le débogage du problème.
 
-> **Note :** Les tests pour les labels de `last_name` et `date_of_birth`, ainsi que le test de la longueur du champ `last_name`, ont été omis. Ajoutez vos propres versions maintenant, en suivant les conventions de nommage et les approches que nous vous avons montrées ci-dessus.
+> **Note :** Les tests pour les labels de `last_name` et `date_of_birth`, ainsi que le test de la longueur du champ `last_name`, ont été omis. Ajoutez vos propres versions maintenant, en suivant les conventions de nommage et les approches que nous vous avons montrées ci-dessus.
 
-Il nous faut également tester nos méthodes personnalisées. Essentiellement, celles-ci vérifient uniquement que le nom de l'objet a été construit comme prévu, en utilisant le format "Last name", "First name", et que l'URL que nous obtenons pour un élément `Author` est telle que nous l'attendons.
+Il nous faut également tester nos méthodes personnalisées. Essentiellement, celles-ci vérifient uniquement que le nom de l'objet a été construit comme prévu, en utilisant le format "Last name", "First name", et que l'URL que nous obtenons pour un élément `Author` est telle que nous l'attendons.
 
 ```python
 def test_object_name_is_last_name_comma_first_name(self):
-    author = Author.objects.get(id=1)
-    expected_object_name = f'{author.last_name}, {author.first_name}'
-    self.assertEquals(expected_object_name, str(author))
+    author = Author.objects.get(id=1)
+    expected_object_name = f'{author.last_name}, {author.first_name}'
+    self.assertEquals(expected_object_name, str(author))
 
 def test_get_absolute_url(self):
-    author = Author.objects.get(id=1)
-    # This will also fail if the urlconf is not defined.
-    self.assertEquals(author.get_absolute_url(), '/catalog/author/1')
+    author = Author.objects.get(id=1)
+    # This will also fail if the urlconf is not defined.
+    self.assertEquals(author.get_absolute_url(), '/catalog/author/1')
 ```
 
-Maintenant lancez les tests. Si vous avez créé le modèle `Author` comme décrit dans le tutoriel sur les modèles, il est assez probable que vous allez obtenir une erreur pour le label `date_of_death`, comme montré ci-dessous. Le test plante parce qu'il a été écrit en s'attendant à ce que la définition du label suive cette convention de Django : ne pas mettre en capitale la première lettre du label (Django le fait pour vous).
+Maintenant lancez les tests. Si vous avez créé le modèle `Author` comme décrit dans le tutoriel sur les modèles, il est assez probable que vous allez obtenir une erreur pour le label `date_of_death`, comme montré ci-dessous. Le test plante parce qu'il a été écrit en s'attendant à ce que la définition du label suive cette convention de Django : ne pas mettre en capitale la première lettre du label (Django le fait pour vous).
 
 ```bash
 ======================================================================
@@ -431,38 +431,38 @@ from django.utils import timezone
 from catalog.forms import RenewBookForm
 
 class RenewBookFormTest(TestCase):
-    def test_renew_form_date_field_label(self):
-        form = RenewBookForm()
-        self.assertTrue(form.fields['renewal_date'].label == None or form.fields['renewal_date'].label == 'renewal date')
+    def test_renew_form_date_field_label(self):
+        form = RenewBookForm()
+        self.assertTrue(form.fields['renewal_date'].label == None or form.fields['renewal_date'].label == 'renewal date')
 
-    def test_renew_form_date_field_help_text(self):
-        form = RenewBookForm()
-        self.assertEqual(form.fields['renewal_date'].help_text, 'Enter a date between now and 4 weeks (default 3).')
+    def test_renew_form_date_field_help_text(self):
+        form = RenewBookForm()
+        self.assertEqual(form.fields['renewal_date'].help_text, 'Enter a date between now and 4 weeks (default 3).')
 
-    def test_renew_form_date_in_past(self):
-        date = datetime.date.today() - datetime.timedelta(days=1)
-        form = RenewBookForm(data={'renewal_date': date})
-        self.assertFalse(form.is_valid())
+    def test_renew_form_date_in_past(self):
+        date = datetime.date.today() - datetime.timedelta(days=1)
+        form = RenewBookForm(data={'renewal_date': date})
+        self.assertFalse(form.is_valid())
 
-    def test_renew_form_date_too_far_in_future(self):
-        date = datetime.date.today() + datetime.timedelta(weeks=4) + datetime.timedelta(days=1)
-        form = RenewBookForm(data={'renewal_date': date})
-        self.assertFalse(form.is_valid())
+    def test_renew_form_date_too_far_in_future(self):
+        date = datetime.date.today() + datetime.timedelta(weeks=4) + datetime.timedelta(days=1)
+        form = RenewBookForm(data={'renewal_date': date})
+        self.assertFalse(form.is_valid())
 
-    def test_renew_form_date_today(self):
-        date = datetime.date.today()
-        form = RenewBookForm(data={'renewal_date': date})
-        self.assertTrue(form.is_valid())
+    def test_renew_form_date_today(self):
+        date = datetime.date.today()
+        form = RenewBookForm(data={'renewal_date': date})
+        self.assertTrue(form.is_valid())
 
-    def test_renew_form_date_max(self):
-        date = timezone.localtime() + datetime.timedelta(weeks=4)
-        form = RenewBookForm(data={'renewal_date': date})
-        self.assertTrue(form.is_valid())
+    def test_renew_form_date_max(self):
+        date = timezone.localtime() + datetime.timedelta(weeks=4)
+        form = RenewBookForm(data={'renewal_date': date})
+        self.assertTrue(form.is_valid())
 ```
 
-Les deux premières fonctions testent que le `label` et le `help_text` du champ sont tels qu'on les attend. Nous devons accéder au champ en utilisant le dictionnaire du champ (p. ex. `form.fields['renewal_date']`). Notez bien ici que nous devons aussi tester si la valeur du label est `None`, car même si Django rend le label correct, il retournera `None` si la valeur n'est pas définie _explicitement_.
+Les deux premières fonctions testent que le `label` et le `help_text` du champ sont tels qu'on les attend. Nous devons accéder au champ en utilisant le dictionnaire du champ (p. ex. `form.fields['renewal_date']`). Notez bien ici que nous devons aussi tester si la valeur du label est `None`, car même si Django rend le label correct, il retournera `None` si la valeur n'est pas définie _explicitement_.
 
-Les autres fonctions testent que le formulaire est valide avec des dates de renouvellement situées à l'intérieur des limites acceptables, et invalide avec des valeurs en dehors de ces limites. Notez comment nous construisons des valeurs de dates de test autour de notre date actuelle (`datetime.date.today()`) en utilisant `datetime.timedelta()` (dans ce cas en spécifiant un nombre de jours ou de semaines). Ensuite nous créons juste le formulaire en lui passant nos données, et nous testons s'il est valide.
+Les autres fonctions testent que le formulaire est valide avec des dates de renouvellement situées à l'intérieur des limites acceptables, et invalide avec des valeurs en dehors de ces limites. Notez comment nous construisons des valeurs de dates de test autour de notre date actuelle (`datetime.date.today()`) en utilisant `datetime.timedelta()` (dans ce cas en spécifiant un nombre de jours ou de semaines). Ensuite nous créons juste le formulaire en lui passant nos données, et nous testons s'il est valide.
 
 > **Note :** Ici nous n'utilisons pas réellement la base de données ni le client de test. Envisagez de modifier ces tests pour utiliser [SimpleTestCase](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.SimpleTestCase).
 >
@@ -472,9 +472,9 @@ C'est tout pour les formulaires; nous en avons d'autres, mais ils sont automatiq
 
 ### Vues
 
-Pour valider le comportement de notre vue, nous utilisons le [client](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client) de test de Django. Cette classe se comporte comme un navigateur web fictif que nous pouvons utiliser pour simuler des requêtes `GET` et `POST` à une URL donnée, et observer la réponse. Nous pouvons voir à peu près tout au sujet de la réponse, depuis le HTTP bas-niveau (entêtes et codes de statut résultants) jusqu'au template que nous utilisons pour rendre le HTML et aux données de contexte que nous lui passons. Nous pouvons aussi voir la chaîne des redirections (s'il y en a) et vérifier l'URL et le code de statut à chaque étape. Cela nous permet de vérifier que chaque vue se comporte comme prévu.
+Pour valider le comportement de notre vue, nous utilisons le [client](https://docs.djangoproject.com/en/2.1/topics/testing/tools/#django.test.Client) de test de Django. Cette classe se comporte comme un navigateur web fictif que nous pouvons utiliser pour simuler des requêtes `GET` et `POST` à une URL donnée, et observer la réponse. Nous pouvons voir à peu près tout au sujet de la réponse, depuis le HTTP bas-niveau (entêtes et codes de statut résultants) jusqu'au template que nous utilisons pour rendre le HTML et aux données de contexte que nous lui passons. Nous pouvons aussi voir la chaîne des redirections (s'il y en a) et vérifier l'URL et le code de statut à chaque étape. Cela nous permet de vérifier que chaque vue se comporte comme prévu.
 
-Commençons avec l'une de nos vues les plus simples, celle qui fournit une liste de tous les auteurs. Elle est affichée à l'URL **/catalog/authors/** (une URL nommée 'authors' dans la configuration des URL).
+Commençons avec l'une de nos vues les plus simples, celle qui fournit une liste de tous les auteurs. Elle est affichée à l'URL **/catalog/authors/** (une URL nommée 'authors' dans la configuration des URL).
 
 ```python
 class AuthorListView(generic.ListView):
@@ -493,47 +493,47 @@ from django.urls import reverse
 from catalog.models import Author
 
 class AuthorListViewTest(TestCase):
-    @classmethod
-    def setUpTestData(cls):
-        # Create 13 authors for pagination tests
-        number_of_authors = 13
+    @classmethod
+    def setUpTestData(cls):
+        # Create 13 authors for pagination tests
+        number_of_authors = 13
 
-        for author_id in range(number_of_authors):
-            Author.objects.create(
+        for author_id in range(number_of_authors):
+            Author.objects.create(
                 first_name=f'Christian {author_id}',
                 last_name=f'Surname {author_id}',
             )
 
-    def test_view_url_exists_at_desired_location(self):
-        response = self.client.get('/catalog/authors/')
-        self.assertEqual(response.status_code, 200)
+    def test_view_url_exists_at_desired_location(self):
+        response = self.client.get('/catalog/authors/')
+        self.assertEqual(response.status_code, 200)
 
-    def test_view_url_accessible_by_name(self):
-        response = self.client.get(reverse('authors'))
-        self.assertEqual(response.status_code, 200)
+    def test_view_url_accessible_by_name(self):
+        response = self.client.get(reverse('authors'))
+        self.assertEqual(response.status_code, 200)
 
-    def test_view_uses_correct_template(self):
-        response = self.client.get(reverse('authors'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'catalog/author_list.html')
+    def test_view_uses_correct_template(self):
+        response = self.client.get(reverse('authors'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'catalog/author_list.html')
 
-    def test_pagination_is_ten(self):
-        response = self.client.get(reverse('authors'))
-        self.assertEqual(response.status_code, 200)
-        self.assertTrue('is_paginated' in response.context)
-        self.assertTrue(response.context['is_paginated'] == True)
-        self.assertTrue(len(response.context['author_list']) == 10)
+    def test_pagination_is_ten(self):
+        response = self.client.get(reverse('authors'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue('is_paginated' in response.context)
+        self.assertTrue(response.context['is_paginated'] == True)
+        self.assertTrue(len(response.context['author_list']) == 10)
 
-    def test_lists_all_authors(self):
-        # Get second page and confirm it has (exactly) remaining 3 items
-        response = self.client.get(reverse('authors')+'?page=2')
-        self.assertEqual(response.status_code, 200)
-        self.assertTrue('is_paginated' in response.context)
-        self.assertTrue(response.context['is_paginated'] == True)
-        self.assertTrue(len(response.context['author_list']) == 3)
+    def test_lists_all_authors(self):
+        # Get second page and confirm it has (exactly) remaining 3 items
+        response = self.client.get(reverse('authors')+'?page=2')
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue('is_paginated' in response.context)
+        self.assertTrue(response.context['is_paginated'] == True)
+        self.assertTrue(len(response.context['author_list']) == 3)
 ```
 
-Tous les tests utilisent le client (qui appartient à notre classe dérivée de `TestCase`), afin de simuler une requête `GET` et d'obtenir une réponse. La première version vérifie une URL spécifique (note : seulement le chemin spécifique, sans le domaine), tandis que la seconde génère une URL à partir de son nom tel qu'il se trouve dans la configuration des URL.
+Tous les tests utilisent le client (qui appartient à notre classe dérivée de `TestCase`), afin de simuler une requête `GET` et d'obtenir une réponse. La première version vérifie une URL spécifique (note : seulement le chemin spécifique, sans le domaine), tandis que la seconde génère une URL à partir de son nom tel qu'il se trouve dans la configuration des URL.
 
 ```python
 response = self.client.get('/catalog/authors/')
@@ -542,7 +542,7 @@ response = self.client.get(reverse('authors'))
 
 Une fois que nous avons la réponse, nous lui demandons son code de statut, le template utilisé, si la réponse est paginée ou non, le nombre d'éléments retournés et le nombre total d'éléments.
 
-> **Note :** Si, dans votre fichier **/catalog/views.py**, vous mettez la variable `paginate_by` à un nombre autre que 10, assurez-vous de mettre à jour les lignes qui testent le nombre correct d'éléments affichés dans les templates paginés, ci-dessus et dans les sections qui suivent. Par exemple, si vous mettez à 5 la variable pour la liste des auteurs, changez ainsi la ligne ci-dessus :
+> **Note :** Si, dans votre fichier **/catalog/views.py**, vous mettez la variable `paginate_by` à un nombre autre que 10, assurez-vous de mettre à jour les lignes qui testent le nombre correct d'éléments affichés dans les templates paginés, ci-dessus et dans les sections qui suivent. Par exemple, si vous mettez à 5 la variable pour la liste des auteurs, changez ainsi la ligne ci-dessus :
 >
 > ```python
 > self.assertTrue(len(response.context['author_list']) == 5)
@@ -552,7 +552,7 @@ La variable la plus intéressante que nous montrons ci-dessus est `response.cont
 
 #### Vues limitées aux utilisateurs connectés
 
-Dans certains cas, vous voudrez tester une vue qui est limitée aux seuls utilisateurs connectés. Par exemple notre vue `LoanedBooksByUserListView` est très semblable à notre vue précédente, mais n'est accessible qu'aux utilisateurs connectés, et n'affiche que des enregistrements de type `BookInstance` qui sont empruntés par l'utilisateur courant, ont le statut 'on loan', et sont triés 'le plus ancien en premier'.
+Dans certains cas, vous voudrez tester une vue qui est limitée aux seuls utilisateurs connectés. Par exemple notre vue `LoanedBooksByUserListView` est très semblable à notre vue précédente, mais n'est accessible qu'aux utilisateurs connectés, et n'affiche que des enregistrements de type `BookInstance` qui sont empruntés par l'utilisateur courant, ont le statut 'on loan', et sont triés 'le plus ancien en premier'.
 
 ```python
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -567,9 +567,9 @@ class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
         return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
 ```
 
-Ajoutez le code de test suivant à **/catalog/tests/test_views.py**. Ici nous utilisons d'abord la méthode `SetUp()` pour créer des logins de comptes d'utilisateurs et des objets de type `BookInstance` (avec leurs livres et autres enregistrements associés), que nous utiliserons plus tard dans les tests. La moitié des livres sont empruntés par chaque utilisateur-test, mais nous avons initialement mis le statut de tous les livres à "maintenance". Nous avons utilisé `SetUp()` plutôt que `setUpTestData()`, parce que nous allons modifier plus tard certains de ces objets.
+Ajoutez le code de test suivant à **/catalog/tests/test_views.py**. Ici nous utilisons d'abord la méthode `SetUp()` pour créer des logins de comptes d'utilisateurs et des objets de type `BookInstance` (avec leurs livres et autres enregistrements associés), que nous utiliserons plus tard dans les tests. La moitié des livres sont empruntés par chaque utilisateur-test, mais nous avons initialement mis le statut de tous les livres à "maintenance". Nous avons utilisé `SetUp()` plutôt que `setUpTestData()`, parce que nous allons modifier plus tard certains de ces objets.
 
-> **Note :** Le code de `setUp()` ci-dessous crée un livre avec un `Language` spécifique, mais _votre_ code n'inclut peut-être pas le modèle `Language`, étant donné que celui-ci a été créé lors d'un _défi_. Si c'est le cas, commentez simplement les bouts de code qui créent ou importent des objets de type Language. Vous devrez aussi le faire dans la section `RenewBookInstancesViewTest` qui suit.
+> **Note :** Le code de `setUp()` ci-dessous crée un livre avec un `Language` spécifique, mais _votre_ code n'inclut peut-être pas le modèle `Language`, étant donné que celui-ci a été créé lors d'un _défi_. Si c'est le cas, commentez simplement les bouts de code qui créent ou importent des objets de type Language. Vous devrez aussi le faire dans la section `RenewBookInstancesViewTest` qui suit.
 
 ```python
 import datetime
@@ -580,19 +580,19 @@ from django.contrib.auth.models import User # Required to assign User as a borro
 from catalog.models import BookInstance, Book, Genre, Language
 
 class LoanedBookInstancesByUserListViewTest(TestCase):
-    def setUp(self):
-        # Create two users
-        test_user1 = User.objects.create_user(username='testuser1', password='1X<ISRUkw+tuK')
-        test_user2 = User.objects.create_user(username='testuser2', password='2HJ1vRV0Z&3iD')
+    def setUp(self):
+        # Create two users
+        test_user1 = User.objects.create_user(username='testuser1', password='1X<ISRUkw+tuK')
+        test_user2 = User.objects.create_user(username='testuser2', password='2HJ1vRV0Z&3iD')
 
         test_user1.save()
-        test_user2.save()
+        test_user2.save()
 
-        # Create a book
-        test_author = Author.objects.create(first_name='John', last_name='Smith')
-        test_genre = Genre.objects.create(name='Fantasy')
-        test_language = Language.objects.create(name='English')
-        test_book = Book.objects.create(
+        # Create a book
+        test_author = Author.objects.create(first_name='John', last_name='Smith')
+        test_genre = Genre.objects.create(name='Fantasy')
+        test_language = Language.objects.create(name='English')
+        test_book = Book.objects.create(
             title='Book Title',
             summary='My book summary',
             isbn='ABCDEFG',
@@ -601,17 +601,17 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
         )
 
         # Create genre as a post-step
-        genre_objects_for_book = Genre.objects.all()
-        test_book.genre.set(genre_objects_for_book) # Direct assignment of many-to-many types not allowed.
-        test_book.save()
+        genre_objects_for_book = Genre.objects.all()
+        test_book.genre.set(genre_objects_for_book) # Direct assignment of many-to-many types not allowed.
+        test_book.save()
 
-        # Create 30 BookInstance objects
-        number_of_book_copies = 30
-        for book_copy in range(number_of_book_copies):
-            return_date = timezone.localtime() + datetime.timedelta(days=book_copy%5)
-            the_borrower = test_user1 if book_copy % 2 else test_user2
-            status = 'm'
-            BookInstance.objects.create(
+        # Create 30 BookInstance objects
+        number_of_book_copies = 30
+        for book_copy in range(number_of_book_copies):
+            return_date = timezone.localtime() + datetime.timedelta(days=book_copy%5)
+            the_borrower = test_user1 if book_copy % 2 else test_user2
+            status = 'm'
+            BookInstance.objects.create(
                 book=test_book,
                 imprint='Unlikely Imprint, 2016',
                 due_back=return_date,
@@ -619,86 +619,86 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
                 status=status,
             )
 
-    def test_redirect_if_not_logged_in(self):
-        response = self.client.get(reverse('my-borrowed'))
-        self.assertRedirects(response, '/accounts/login/?next=/catalog/mybooks/')
+    def test_redirect_if_not_logged_in(self):
+        response = self.client.get(reverse('my-borrowed'))
+        self.assertRedirects(response, '/accounts/login/?next=/catalog/mybooks/')
 
-    def test_logged_in_uses_correct_template(self):
-        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
-        response = self.client.get(reverse('my-borrowed'))
+    def test_logged_in_uses_correct_template(self):
+        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
+        response = self.client.get(reverse('my-borrowed'))
 
-        # Check our user is logged in
-        self.assertEqual(str(response.context['user']), 'testuser1')
-        # Check that we got a response "success"
-        self.assertEqual(response.status_code, 200)
+        # Check our user is logged in
+        self.assertEqual(str(response.context['user']), 'testuser1')
+        # Check that we got a response "success"
+        self.assertEqual(response.status_code, 200)
 
-        # Check we used correct template
-        self.assertTemplateUsed(response, 'catalog/bookinstance_list_borrowed_user.html')
+        # Check we used correct template
+        self.assertTemplateUsed(response, 'catalog/bookinstance_list_borrowed_user.html')
 ```
 
-Pour vérifier que la vue redirige à une page de login si l'utilisateur n'est pas connecté, nous utilisons `assertRedirects`, comme montré dans `test_redirect_if_not_logged_in()`. Pour vérifier que la page est affichée pour un utilisateur connecté, nous connectons d'abord notre utilisateur-test, et ensuite nous accédons de nouveau à la page et vérifions que nous obtenons un `status_code` de 200 (succès).
+Pour vérifier que la vue redirige à une page de login si l'utilisateur n'est pas connecté, nous utilisons `assertRedirects`, comme montré dans `test_redirect_if_not_logged_in()`. Pour vérifier que la page est affichée pour un utilisateur connecté, nous connectons d'abord notre utilisateur-test, et ensuite nous accédons de nouveau à la page et vérifions que nous obtenons un `status_code` de 200 (succès).
 
 Le reste des test vérifie que notre vue ne retourne que les livres qui sont prêtés à notre emprunteur courant. Copiez ce code et collez le à la fin de la classe de test ci-dessus.
 
 ```python
-    def test_only_borrowed_books_in_list(self):
-        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
-        response = self.client.get(reverse('my-borrowed'))
+    def test_only_borrowed_books_in_list(self):
+        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
+        response = self.client.get(reverse('my-borrowed'))
 
-        # Check our user is logged in
-        self.assertEqual(str(response.context['user']), 'testuser1')
-        # Check that we got a response "success"
-        self.assertEqual(response.status_code, 200)
+        # Check our user is logged in
+        self.assertEqual(str(response.context['user']), 'testuser1')
+        # Check that we got a response "success"
+        self.assertEqual(response.status_code, 200)
 
-        # Check that initially we don't have any books in list (none on loan)
-        self.assertTrue('bookinstance_list' in response.context)
-        self.assertEqual(len(response.context['bookinstance_list']), 0)
+        # Check that initially we don't have any books in list (none on loan)
+        self.assertTrue('bookinstance_list' in response.context)
+        self.assertEqual(len(response.context['bookinstance_list']), 0)
 
-        # Now change all books to be on loan
-        books = BookInstance.objects.all()[:10]
+        # Now change all books to be on loan
+        books = BookInstance.objects.all()[:10]
 
-        for book in books:
-            book.status = 'o'
-            book.save()
+        for book in books:
+            book.status = 'o'
+            book.save()
 
-        # Check that now we have borrowed books in the list
-        response = self.client.get(reverse('my-borrowed'))
-        # Check our user is logged in
-        self.assertEqual(str(response.context['user']), 'testuser1')
-        # Check that we got a response "success"
-        self.assertEqual(response.status_code, 200)
+        # Check that now we have borrowed books in the list
+        response = self.client.get(reverse('my-borrowed'))
+        # Check our user is logged in
+        self.assertEqual(str(response.context['user']), 'testuser1')
+        # Check that we got a response "success"
+        self.assertEqual(response.status_code, 200)
 
-        self.assertTrue('bookinstance_list' in response.context)
+        self.assertTrue('bookinstance_list' in response.context)
 
-        # Confirm all books belong to testuser1 and are on loan
-        for bookitem in response.context['bookinstance_list']:
-            self.assertEqual(response.context['user'], bookitem.borrower)
-            self.assertEqual('o', bookitem.status)
+        # Confirm all books belong to testuser1 and are on loan
+        for bookitem in response.context['bookinstance_list']:
+            self.assertEqual(response.context['user'], bookitem.borrower)
+            self.assertEqual('o', bookitem.status)
 
-    def test_pages_ordered_by_due_date(self):
-        # Change all books to be on loan
-        for book in BookInstance.objects.all():
-            book.status='o'
-            book.save()
+    def test_pages_ordered_by_due_date(self):
+        # Change all books to be on loan
+        for book in BookInstance.objects.all():
+            book.status='o'
+            book.save()
 
-        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
-        response = self.client.get(reverse('my-borrowed'))
+        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
+        response = self.client.get(reverse('my-borrowed'))
 
-        # Check our user is logged in
-        self.assertEqual(str(response.context['user']), 'testuser1')
-        # Check that we got a response "success"
-        self.assertEqual(response.status_code, 200)
+        # Check our user is logged in
+        self.assertEqual(str(response.context['user']), 'testuser1')
+        # Check that we got a response "success"
+        self.assertEqual(response.status_code, 200)
 
-        # Confirm that of the items, only 10 are displayed due to pagination.
-        self.assertEqual(len(response.context['bookinstance_list']), 10)
+        # Confirm that of the items, only 10 are displayed due to pagination.
+        self.assertEqual(len(response.context['bookinstance_list']), 10)
 
-        last_date = 0
-        for book in response.context['bookinstance_list']:
-            if last_date == 0:
-                last_date = book.due_back
-            else:
+        last_date = 0
+        for book in response.context['bookinstance_list']:
+            if last_date == 0:
+                last_date = book.due_back
+            else:
                 self.assertTrue(last_date <= book.due_back)
-                last_date = book.due_back
+                last_date = book.due_back
 ```
 
 Vous pourriez aussi ajouter les tests de pagination, si vous voulez !
@@ -714,38 +714,38 @@ from catalog.forms import RenewBookForm
 
 @permission_required('catalog.can_mark_returned')
 def renew_book_librarian(request, pk):
-    """View function for renewing a specific BookInstance by librarian."""
-    book_instance = get_object_or_404(BookInstance, pk=pk)
+    """View function for renewing a specific BookInstance by librarian."""
+    book_instance = get_object_or_404(BookInstance, pk=pk)
 
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
+    # If this is a POST request then process the Form data
+    if request.method == 'POST':
 
-        # Create a form instance and populate it with data from the request (binding):
-        book_renewal_form = RenewBookForm(request.POST)
+        # Create a form instance and populate it with data from the request (binding):
+        book_renewal_form = RenewBookForm(request.POST)
 
-        # Check if the form is valid:
-        if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
-            book_instance.due_back = form.cleaned_data['renewal_date']
-            book_instance.save()
+        # Check if the form is valid:
+        if form.is_valid():
+            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            book_instance.due_back = form.cleaned_data['renewal_date']
+            book_instance.save()
 
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('all-borrowed'))
+            # redirect to a new URL:
+            return HttpResponseRedirect(reverse('all-borrowed'))
 
-    # If this is a GET (or any other method) create the default form
-    else:
-        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        book_renewal_form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+    # If this is a GET (or any other method) create the default form
+    else:
+        proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
+        book_renewal_form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
 
     context = {
         'book_renewal_form': book_renewal_form,
         'book_instance': book_instance,
     }
 
-    return render(request, 'catalog/book_renew_librarian.html', context)
+    return render(request, 'catalog/book_renew_librarian.html', context)
 ```
 
-Nous allons devoir tester que la vue n'est disponible qu'aux utilisateurs ayant la permission `can_mark_returned`, et que les utilisateurs sont bien redirigés vers une page d'erreur HTTP 404 s'ils essaient de renouveler une `BookInstance` inexistante. Nous devons vérifier que la valeur initiale du formulaire est remplie avec une date de trois semaines dans le futur, et que si la validation réussit, nous sommes redirigés vers la vue "tous les livres empruntés". Dans le cadre des tests sur l'échec de la validation, nous allons aussi vérifier que notre formulaire envoie les bons messages d'erreur.
+Nous allons devoir tester que la vue n'est disponible qu'aux utilisateurs ayant la permission `can_mark_returned`, et que les utilisateurs sont bien redirigés vers une page d'erreur HTTP 404 s'ils essaient de renouveler une `BookInstance` inexistante. Nous devons vérifier que la valeur initiale du formulaire est remplie avec une date de trois semaines dans le futur, et que si la validation réussit, nous sommes redirigés vers la vue "tous les livres empruntés". Dans le cadre des tests sur l'échec de la validation, nous allons aussi vérifier que notre formulaire envoie les bons messages d'erreur.
 
 Ajoutez la première partie de la classe de test ci-dessous à la fin du fichier **/catalog/tests/test_views.py**. Cela crée deux utilisateurs et deux instances de livres, mais ne donne qu'à un seul utilisateur la permission d'accéder à la vue. Le code pour autoriser les permissions durant les tests est montrée en gras :
 
@@ -805,75 +805,75 @@ class RenewBookInstancesViewTest(TestCase):
         )
 ```
 
-Ajoutez les tests suivants à la fin de la classe de test. Ils vérifient que seuls les utilisateurs avec les bonnes permissions (_testuser2_) peuvent accéder à la vue. Nous vérifions tous les cas : quand l'utilisateur n'est pas connecté, quand un utilisateur est connecté mais n'a pas les permissions requises, quand l'utilisateur a les permissions mais n'est pas l'emprunteur (ce test devrait réussir), et ce qui se passe quand ils tentent d'accéder à une `BookInstance` inexistante. Nous vérifions aussi que le bon template est utilisé.
+Ajoutez les tests suivants à la fin de la classe de test. Ils vérifient que seuls les utilisateurs avec les bonnes permissions (_testuser2_) peuvent accéder à la vue. Nous vérifions tous les cas : quand l'utilisateur n'est pas connecté, quand un utilisateur est connecté mais n'a pas les permissions requises, quand l'utilisateur a les permissions mais n'est pas l'emprunteur (ce test devrait réussir), et ce qui se passe quand ils tentent d'accéder à une `BookInstance` inexistante. Nous vérifions aussi que le bon template est utilisé.
 
 ```python
    def test_redirect_if_not_logged_in(self):
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
-        # Manually check redirect (Can't use assertRedirect, because the redirect URL is unpredictable)
-        self.assertEqual(response.status_code, 302)
-        self.assertTrue(response.url.startswith('/accounts/login/'))
+        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
+        # Manually check redirect (Can't use assertRedirect, because the redirect URL is unpredictable)
+        self.assertEqual(response.status_code, 302)
+        self.assertTrue(response.url.startswith('/accounts/login/'))
 
-    def test_redirect_if_logged_in_but_not_correct_permission(self):
-        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
-        self.assertEqual(response.status_code, 403)
+    def test_redirect_if_logged_in_but_not_correct_permission(self):
+        login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
+        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
+        self.assertEqual(response.status_code, 403)
 
-    def test_logged_in_with_permission_borrowed_book(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance2.pk}))
+    def test_logged_in_with_permission_borrowed_book(self):
+        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
+        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance2.pk}))
 
-        # Check that it lets us login - this is our book and we have the right permissions.
-        self.assertEqual(response.status_code, 200)
+        # Check that it lets us login - this is our book and we have the right permissions.
+        self.assertEqual(response.status_code, 200)
 
-    def test_logged_in_with_permission_another_users_borrowed_book(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
+    def test_logged_in_with_permission_another_users_borrowed_book(self):
+        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
+        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
 
-        # Check that it lets us login. We're a librarian, so we can view any users book
-        self.assertEqual(response.status_code, 200)
+        # Check that it lets us login. We're a librarian, so we can view any users book
+        self.assertEqual(response.status_code, 200)
 
-    def test_HTTP404_for_invalid_book_if_logged_in(self):
+    def test_HTTP404_for_invalid_book_if_logged_in(self):
         # unlikely UID to match our bookinstance!
-        test_uid = uuid.uuid4()
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk':test_uid}))
-        self.assertEqual(response.status_code, 404)
+        test_uid = uuid.uuid4()
+        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
+        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk':test_uid}))
+        self.assertEqual(response.status_code, 404)
 
-    def test_uses_correct_template(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
-        self.assertEqual(response.status_code, 200)
+    def test_uses_correct_template(self):
+        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
+        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
+        self.assertEqual(response.status_code, 200)
 
-        # Check we used correct template
-        self.assertTemplateUsed(response, 'catalog/book_renew_librarian.html')
+        # Check we used correct template
+        self.assertTemplateUsed(response, 'catalog/book_renew_librarian.html')
 ```
 
 Ajoutez la méthode de test suivante, comme montré ci-dessous. Elle vérifie que la date initiale pour le formulaire est trois semaines dans le futur. Notez comment nous pouvons accéder à la valeur initiale de ce champ de formulaire (en gras).
 
 ```python
-    def test_form_renewal_date_initially_has_date_three_weeks_in_future(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
-        self.assertEqual(response.status_code, 200)
+    def test_form_renewal_date_initially_has_date_three_weeks_in_future(self):
+        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
+        response = self.client.get(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}))
+        self.assertEqual(response.status_code, 200)
 
-        date_3_weeks_in_future = datetime.date.today() + datetime.timedelta(weeks=3)
-        self.assertEqual(response.context['form'].initial['renewal_date'], date_3_weeks_in_future)
+        date_3_weeks_in_future = datetime.date.today() + datetime.timedelta(weeks=3)
+        self.assertEqual(response.context['form'].initial['renewal_date'], date_3_weeks_in_future)
 ```
 
-> **Attention :** Si vous utilisez la class de formulaire `RenewBookModelForm(forms.ModelForm)` à la place de la classe `RenewBookForm(forms.Form)`, le nom du champ est **'due_back'** et non **'renewal_date'**.
+> **Attention :** Si vous utilisez la class de formulaire `RenewBookModelForm(forms.ModelForm)` à la place de la classe `RenewBookForm(forms.Form)`, le nom du champ est **'due_back'** et non **'renewal_date'**.
 
 Le test suivant (ajoutez-le à la classe également) vérifie que la vue redirige vers une liste de tous les livres empruntés si le renouvellement réussit. Ce qui diffère ici est que, pour la première fois, nous montrons comment vous pouvez `POST`er des données en utilisant le client. Les données postées forment le second argument de la fonction post, et elles sont spécifiées comme un dictionnaire de clés/valeurs.
 
 ```python
-    def test_redirects_to_all_borrowed_book_list_on_success(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        valid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=2)
-        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future})
-        self.assertRedirects(response, reverse('all-borrowed'))
+    def test_redirects_to_all_borrowed_book_list_on_success(self):
+        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
+        valid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=2)
+        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future})
+        self.assertRedirects(response, reverse('all-borrowed'))
 ```
 
-> **Attention :** La vue _all-borrowed_ a été ajoutée comme _défi_, et votre code peut, à la place, rediriger vers la page d'accueil '/'. Si c'est le cas, modifiez les deux dernières lignes du code de test pour qu'elles ressemblent au code ci-dessous. L'expression `follow=True` dans la requête s'assure que la requête retourne l'URL de la destination finale (donc vérifie `/catalog/` plutôt que `/`).
+> **Attention :** La vue _all-borrowed_ a été ajoutée comme _défi_, et votre code peut, à la place, rediriger vers la page d'accueil '/'. Si c'est le cas, modifiez les deux dernières lignes du code de test pour qu'elles ressemblent au code ci-dessous. L'expression `follow=True` dans la requête s'assure que la requête retourne l'URL de la destination finale (donc vérifie `/catalog/` plutôt que `/`).
 >
 > ```python
 >  response = self.client.post(reverse('renew-book-librarian', kwargs={'pk':self.test_bookinstance1.pk,}), {'renewal_date':valid_date_in_future}, follow=True )
@@ -883,19 +883,19 @@ Le test suivant (ajoutez-le à la classe également) vérifie que la vue redirig
 Copiez les deux dernières fonctions dans la classe, comme indiqué ci-dessous. Elles testent de nouveau des requêtes POST, mais dans ce cas avec des dates de renouvellement invalides. Nous utilisons la méthode assertFormError() pour vérifier que les messages d'erreur sont ceux que nous attendons.
 
 ```python
-    def test_form_invalid_renewal_date_past(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        date_in_past = datetime.date.today() - datetime.timedelta(weeks=1)
-        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': date_in_past})
-        self.assertEqual(response.status_code, 200)
-        self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal in past')
+    def test_form_invalid_renewal_date_past(self):
+        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
+        date_in_past = datetime.date.today() - datetime.timedelta(weeks=1)
+        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': date_in_past})
+        self.assertEqual(response.status_code, 200)
+        self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal in past')
 
-    def test_form_invalid_renewal_date_future(self):
-        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
-        invalid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=5)
-        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': invalid_date_in_future})
-        self.assertEqual(response.status_code, 200)
-        self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal more than 4 weeks ahead')
+    def test_form_invalid_renewal_date_future(self):
+        login = self.client.login(username='testuser2', password='2HJ1vRV0Z&3iD')
+        invalid_date_in_future = datetime.date.today() + datetime.timedelta(weeks=5)
+        response = self.client.post(reverse('renew-book-librarian', kwargs={'pk': self.test_bookinstance1.pk}), {'renewal_date': invalid_date_in_future})
+        self.assertEqual(response.status_code, 200)
+        self.assertFormError(response, 'form', 'renewal_date', 'Invalid date - renewal more than 4 weeks ahead')
 ```
 
 Le même genre de technique peut être utilisé pour tester les autres vues.
@@ -938,7 +938,7 @@ Le prochain (et dernier) tutoriel montre comment vous pouvez déployer votre mer
 ## À voir également
 
 - [Writing and running tests](https://docs.djangoproject.com/en/2.1/topics/testing/overview/) (Django docs)
-- [Writing your first Django app, part 5 > Introducing automated testing](https://docs.djangoproject.com/en/2.1/intro/tutorial05/) (Django docs)
+- [Writing your first Django app, part 5 > Introducing automated testing](https://docs.djangoproject.com/en/2.1/intro/tutorial05/) (Django docs)
 - [Testing tools reference](https://docs.djangoproject.com/en/2.1/topics/testing/tools/) (Django docs)
 - [Advanced testing topics](https://docs.djangoproject.com/en/2.1/topics/testing/advanced/) (Django docs)
 - [A Guide to Testing in Django](http://toastdriven.com/blog/2011/apr/10/guide-to-testing-in-django/) (Toast Driven Blog, 2011)
