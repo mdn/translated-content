@@ -1,22 +1,12 @@
 ---
-title: 'CSP: manifest-src'
+title: 'CSP : manifest-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Manifest
-  - Reference
-  - Security
-  - Sécurité
-  - manifest-src
-  - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/manifest-src
+browser-compat: http.headers.csp.Content-Security-Policy.manifest-src
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`manifest-src`** spécifie quel [manifeste](/en-US/docs/Web/Manifest) peut être appliqué à la ressource.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`manifest-src`** spécifie [le manifeste](/fr/docs/Web/Manifest) qui peut être appliqué à la ressource.
 
 <table class="properties">
   <tbody>
@@ -26,13 +16,12 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`manifest-src`** s
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td>{{Glossary("Fetch directive")}}</td>
+      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
     </tr>
     <tr>
-      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la
-        directive <code>default-src</code>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -40,26 +29,30 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`manifest-src`** s
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive :
+Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
 
-    Content-Security-Policy: manifest-src <source>;
-    Content-Security-Policy: manifest-src <source> <source>;
+```http
+Content-Security-Policy: manifest-src <source>;
+Content-Security-Policy: manifest-src <source> <source>;
+```
 
 ### Sources
 
-{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
 
 ## Exemples
 
-### Violation cases
+### Cas de violation
 
-Soit cet en-tête CSP :
+Soit cet en-tête CSP&nbsp;:
 
-```bash
+```http
 Content-Security-Policy: manifest-src https://example.com/
 ```
 
-Cet élément {{HTMLElement("link")}} sera bloqué et ne se chargera pas :
+Cet élément [`<link>`](/fr/docs/Web/HTML/Element/link) sera bloqué et ne se chargera pas :
 
 ```html
 <link rel="manifest" href="https://not-example.com/manifest">
@@ -67,16 +60,14 @@ Cet élément {{HTMLElement("link")}} sera bloqué et ne se chargera pas :
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-manifest-src", "manifest-src")}} | {{Spec2('CSP 3.0')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.manifest-src")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- [Web app manifest](/en-US/docs/Web/Manifest)
-- {{HTMLElement("link")}}
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [Les manifestes d'application web](/fr/docs/Web/Manifest)
+- [`<link>`](/fr/docs/Web/HTML/Element/link)
