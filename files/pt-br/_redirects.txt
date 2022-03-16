@@ -75,7 +75,7 @@
 /pt-BR/docs/Aprender/JavaScript/Objetos/Object_building_practice	/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice
 /pt-BR/docs/Aprender/JavaScript/Objetos/Object_prototypes	/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes
 /pt-BR/docs/Aprender/Learning_and_getting_help	/pt-BR/docs/Learn/Learning_and_getting_help
-/pt-BR/docs/Aprender/Release_notes	/pt-BR/docs/Learn/Release_notes
+/pt-BR/docs/Aprender/Release_notes	/pt-BR/docs/conflicting/Learn
 /pt-BR/docs/CSS	/pt-BR/docs/Web/CSS
 /pt-BR/docs/CSS/@page	/pt-BR/docs/Web/CSS/@page
 /pt-BR/docs/CSS/At-rule	/pt-BR/docs/Web/CSS/At-rule
@@ -405,6 +405,7 @@
 /pt-BR/docs/Learn/JavaScript/First_steps/Variáveis	/pt-BR/docs/Learn/JavaScript/First_steps/Variables
 /pt-BR/docs/Learn/JavaScript/Objects/Inheritance	/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS	/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+/pt-BR/docs/Learn/Release_notes	/pt-BR/docs/conflicting/Learn
 /pt-BR/docs/Learn/Server-side/Django/Hospedagem	/pt-BR/docs/Learn/Server-side/Django/Deployment
 /pt-BR/docs/Learn/Server-side/Django/Introdução	/pt-BR/docs/Learn/Server-side/Django/Introduction
 /pt-BR/docs/Learn/Server-side/Django/Sessões	/pt-BR/docs/Learn/Server-side/Django/Sessions
