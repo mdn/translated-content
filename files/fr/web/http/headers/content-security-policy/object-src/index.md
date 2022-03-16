@@ -1,26 +1,16 @@
 ---
-title: 'CSP: object-src'
+title: 'CSP : object-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/object-src
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Object
-  - Reference
-  - Security
-  - Sécurité
-  - object-src
-  - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/object-src
+browser-compat: http.headers.csp.Content-Security-Policy.object-src
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`object-src`** spécifie les sources valides pour les éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`object-src`** spécifie les sources valides pour les éléments [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet).
 
-Pour définir des types autorisés pour les éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}, voir la directive {{CSP("plugin-types")}}.
+Pour définir des types autorisés pour les éléments [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet), voir la directive [`plugin-types`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types).
 
-> **Note :** Les éléments contrôlés par `object-src` sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité `sandbox` et `allow` pour `<iframe>`). De ce fait, il est [recommandé](https://csp.withgoogle.com/docs/strict-csp.html) de restreindre cette directive, c'est-à-dire la définir explicitement à `object-src 'none'` dans la mesure du possible.
+> **Note :** Les éléments contrôlés par `object-src` sont considérés comme des éléments HTML historiques et qui ne recevront pas de nouvelles fonctionnalités standardisées (comme les attributs de sécurité `sandbox` et `allow` pour `<iframe>`). Ainsi, il est [recommandé](https://csp.withgoogle.com/docs/strict-csp.html) de restreindre cette directive en définissant `object-src 'none'`.
 
 <table class="properties">
   <tbody>
@@ -30,13 +20,13 @@ Pour définir des types autorisés pour les éléments {{HTMLElement("object")}}
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td>{{Glossary("Fetch directive")}}</td>
+      <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
     </tr>
     <tr>
-      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
         Oui, si cette directive est absente, l'agent utilisateur consultera la
-        directive <code>default-src</code>
+        directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -44,26 +34,30 @@ Pour définir des types autorisés pour les éléments {{HTMLElement("object")}}
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être autorisées pour cette directive :
+Une ou plusieurs sources peuvent être autorisées pour cette directive&nbsp;:
 
-    Content-Security-Policy: object-src <source>;
-    Content-Security-Policy: object-src <source> <source>;
+```http
+Content-Security-Policy: object-src <source>;
+Content-Security-Policy: object-src <source> <source>;
+```
 
 ### Sources
 
-{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
 
 ## Exemples
 
 ### Cas de violation
 
-Soit cet en-tête CSP :
+Soit cet en-tête CSP&nbsp;:
 
-```bash
+```http
 Content-Security-Policy: object-src https://example.com/
 ```
 
-Ces éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}} seront bloqués et ne se chargeront pas :
+Ces éléments [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet) seront bloqués et ne se chargeront pas&nbsp;:
 
 ```html
 <embed src="https://not-example.com/flash"></embed>
@@ -73,17 +67,14 @@ Ces éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElem
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-object-src", "object-src")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-object-src", "object-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.object-src")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}
-- {{CSP("plugin-types")}}
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed), et [`<applet>`](/fr/docs/Web/HTML/Element/applet)
+- [`plugin-types`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types)
