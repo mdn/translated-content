@@ -188,7 +188,7 @@ Ball.prototype.update = function() {
 
 Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord du `canvas`. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc, par exemple, si la balle se déplaçait vers le haut (`velY` positif) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (`velY` négatif).
 
-Dans les quatre cas, nous vérifions:
+Dans les quatre cas, nous vérifions&nbsp;:
 
 - Si la coordonnée `x` est plus grande que la largeur du `canvas` (la balle est en train de sortir du côté droit).
 - Si la coordonnée `x` est plus petite que `0` (la balle est en train de sortir du côté gauche).
