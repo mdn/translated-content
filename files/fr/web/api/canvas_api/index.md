@@ -3,7 +3,7 @@ title: API canvas
 slug: Web/API/Canvas_API
 translation_of: Web/API/Canvas_API
 ---
-{{IncludeSubnav("/fr/docs/Jeux")}} {{CanvasSidebar}}
+{{CanvasSidebar}}
 
 Ajouté en [HTML5](/fr/docs/Web/Guide/HTML/HTML5), l'élément {{HTMLElement("canvas")}} est un nouvel élément qui peut être utilisé pour dessiner des graphismes via des scripts [JavaScript](/fr/docs/JavaScript). Par exemple, Il peut être utilisé pour dessiner des graphes, faire des compositions de photos, des animations, ou même faire du traitement ou de l'affichage de vidéos en temps réel.
 

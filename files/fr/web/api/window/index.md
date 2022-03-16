@@ -66,9 +66,9 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Renvoie l'élément dans lequel la fenêtre est intégrée, ou null si la fenêtre n'est pas intégrée.
 - {{domxref("Window.frames")}} {{readOnlyInline}}
   - : Renvoie un tableau des sous-cadres dans la fenêtre en cours.
-- {{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("Window.fullScreen")}}
   - : Cette propriété indique si la fenêtre est affichée en plein écran ou non.
-- {{domxref("Window.globalStorage")}} {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- {{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
   - : Non supporté depuis Gecko 13 (Firefox 13). Utilisez {{domxref("Window.localStorage")}} à la place.
     Était : divers objets de stockage utilisés pour stocker des données sur plusieurs pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
@@ -85,19 +85,19 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Récupère/définit l'emplacement, ou l'URL en cours, de l'objet de fenêtre.
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
   - : Renvoie l'objet de la barre d'adresse, dont la visibilité peut être inversée dans la fenêtre.
-- {{domxref("Window.localStorage")}} {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Window.localStorage")}} {{readOnlyInline}}
   - : Renvoie une référence à l'objet de stockage local utilisé pour stocker les données accessibles uniquement par l'origine qui les a créées.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : Renvoie l'objet barre de menus, dont la visibilité peut être inversée dans la fenêtre.
-- {{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.messageManager")}}
   - : Renvoie l'objet [gestionnaire de messages](/fr-FR/docs/The_message_manager) pour cette fenêtre.
-- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}} {{Deprecated_inline}}
+- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}} {{Deprecated_inline}}
   - : Le temps en millisecondes depuis l'instant auquel le cycle d'animation en cours a commencé.
-- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}
   - : Renvoie la coordonnée horizontale (X) du coin supérieur gauche du point de vue de la fenêtre, en coordonnées d'écran. Cette valeur est restituée en pixels CSS. Voir `mozScreenPixelsPerCSSPixel` dans {{interface("nsIDOMWindowUtils")}} pour un facteur de conversion pour s'adapter aux pixels de l'écran si nécessaire.
-- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Renvoie la coordonnée verticale (Y) du coin supérieur gauche du point de vue de la fenêtre, en coordonnées d'écran. Cette valeur est indiquée en pixels CSS. Voir `mozScreenPixelsPerCSSPixel` pour un facteur de conversion pour s'adapter aux pixels de l'écran si nécessaire.
-- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Renvoie le nombre de fois où le document en cours a été réaffiché à l'écran dans cette fenêtre. Cela peut être utilisé pour calculer les performances d'affichage.
 - {{domxref("Window.name")}}
   - : Récupère / définit le nom de la fenêtre.
@@ -227,7 +227,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Renvoie l'objet de sélection représentant les éléments sélectionnés.
 - {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
   - : Renvoie le navigateur à la page d'accueil.
-- {{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.matchMedia()")}}
   - : Renvoie un objet {{domxref("MediaQueryList")}} représentant la chaîne d'interrogation de média spécifiée.
 - {{domxref("Window.maximize()")}}
   - : {{todo("NeedsContents")}}
@@ -249,7 +249,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Renvoie le texte saisi par l'utilisateur dans une boîte de dialogue à invite.
 - {{domxref("Window.releaseEvents()")}} {{Non-standard_inline}} {{Deprecated_inline}}
   - : Annule la capture des évènements d'un certain type par la fenêtre.
-- {{domxref("Window.requestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.requestAnimationFrame()")}}
   - : Indique au navigateur qu'une animation est en cours, en demandant au navigateur de planifier une redessinage de la fenêtre lors de l'image d'animation suivante.
 - {{domxref("Window.requestIdleCallback()")}}  {{experimental_inline}}
   - : Active la planification de tâches pendant les périodes d'inactivité du navigateur.
@@ -368,9 +368,9 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 - {{domxref("Window.ondevicelight")}}
   - : Propriété de gestionnaire d'événements pour tous les changements de niveaux de luminosité ambiante.
-- {{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondevicemotion")}}
   - : Appelé si l'accéléromètre détecte un changement (pour les appareils mobiles).
-- {{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondeviceorientation")}}
   - : Appelé lorsque l'orientation est modifiée (pour les appareils mobiles).
 - {{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}} Chrome only
   - : Propriété de gestionnaire d'événements pour tout changement d'orientation de l'appareil.
@@ -389,7 +389,7 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 <!---->
 
-- {{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("WindowEventHandlers.onhashchange")}}
   - : Propriété de gestionnaire d'événements pour les événements {{event('hashchange')}} dans la fenêtre ; appelé lorsque la partie de l'URL après la marque hash ("#") change.
 - {{domxref("Window.onappinstalled")}}
   - : Appelé lorsque la page est installée en tant que webapp. Voir l'événement {{event('appinstalled')}}.
@@ -446,7 +446,7 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 <!---->
 
-- {{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.onmozbeforepaint")}}
   - : Propriété de gestionnaire d'événements pour l'événement MozBeforePaint, qui est déclenché avant de repeindre la fenêtre si l'événement a été demandé par un appel à la méthode {{domxref("Window.mozRequestAnimationFrame()")}}.
 - {{domxref("WindowEventHandlers.onoffline")}}
   - : Appelé lorsque la connexion réseau est perdue. Voir l'événement {{event("offline")}}.
@@ -461,7 +461,7 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 <!---->
 
-- {{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("WindowEventHandlers.onpopstate")}}
   - : Appelé quand le bouton arrière est pressé.
 - {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}
   - : Gestionnaire d'événements pour les événements de rejet {{jsxref("Promise")}} gérés.

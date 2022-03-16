@@ -14,7 +14,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contrôle_clavier
 ---
-{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
 

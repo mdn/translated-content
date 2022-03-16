@@ -8,7 +8,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/lastStyleSheetSet
 ---
-{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}
+{{ APIRef("DOM") }}
 
 Renvoie le dernier jeu de feuilles de styles activé ; cette valeur de la propriété change chaque fois que la propriété {{ domxref("document.selectedStyleSheetSet") }} est modifiée.
 

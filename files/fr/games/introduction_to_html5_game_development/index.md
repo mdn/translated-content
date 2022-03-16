@@ -9,7 +9,7 @@ tags:
 translation_of: Games/Introduction_to_HTML5_Game_Development_(summary)
 original_slug: Jeux/Introduction_to_HTML5_Game_Gevelopment_(summary)
 ---
-{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
+{{GamesSidebar}}
 
 ## Avantages
 

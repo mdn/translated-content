@@ -11,8 +11,6 @@ translation_of: Games/Techniques/Audio_for_Web_Games
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/fr/docs/Jeux")}}
-
 L'audio représente une chose essentielle dans n'importe quel jeu vidéo; il apporte de l'information et contribue à l'atmosphère du jeu. La prise en charge de l'audio a évolué de manière rapide mais il reste encore beaucoup de différences de prise en charge entre les navigateurs. Nous avons souvent besoin de décider quelles parties de notre contenu audio est intéressant et laquelle ne l'est pas, et mettre en place une stratégie en conséquence. Cet article fournit un guide détaillé sur l'implémentation de l'audio dans les jeux HTML5, détaillant quels choix technologiques fonctionneront sur le plus grand nombre de navigateurs.
 
 ## Avertissement sur l'audio sur mobile

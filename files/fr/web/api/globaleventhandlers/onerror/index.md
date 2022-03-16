@@ -31,7 +31,7 @@ Paramètres de la fonction :
 - source : l'URL du script où l'erreur a été déclenchée (chaîne)
 - noligne : le numéro de ligne où l'erreur a été déclenchée (nombre)
 - nocolonne : le numéro de colonne où l'erreur a été déclenchée (nombre)
-- erreur : un [Error Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) (objet) {{gecko_minversion_inline("31.0")}}
+- erreur : un [Error Object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) (objet)
 
 ### element.onerror (et `window.addEventListener('error')`)
 

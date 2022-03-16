@@ -95,5 +95,3 @@ Le package EXSLT Strings fournit des fonctions permettant la manipulation de cha
 ### Voir également
 
 - [Site Web d'EXSLT](http://www.exslt.org/)
-
-{{ languages( { "en": "en/EXSLT", "es": "es/EXSLT", "ja": "ja/EXSLT", "pl": "pl/EXSLT" } ) }}

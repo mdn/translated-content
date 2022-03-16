@@ -4,7 +4,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 translation_of: Games/Tutorials/2D_breakout_game_Phaser
 original_slug: Games/Workflows/2D_breakout_game_Phaser
 ---
-{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
+{{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
 

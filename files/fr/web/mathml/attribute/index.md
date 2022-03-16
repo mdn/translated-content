@@ -12,7 +12,7 @@ Cette référence est une liste, dans l'ordre alphabétique, des attributs MathM
 
 > **Note :**
 >
-> - Les éléments MathML {{ MathMLElement("mstyle") }} et {{ MathMLElement("math") }} {{ gecko_minversion_inline("7.0") }} acceptent tous les attributs de tous les éléments de présentations MathML.
+> - Les éléments MathML {{ MathMLElement("mstyle") }} et {{ MathMLElement("math") }} acceptent tous les attributs de tous les éléments de présentations MathML.
 > - Voir les [valeurs](/fr/docs/MathML/Attributes/Values) pour des notes sur les valeurs et les unités utilisées en MathML.
 > - Les attributs `background`, `color`, `fontfamily`, `fontsize`, `fontstyle`, `fontweight` et `xlink:href` sont dépréciés.
 > - Les attributs [XLink](/fr/docs/Glossaire/XLink) `xlink:actuate`, `xlink:href`, `xlink:show` et `xlink:type` sur les éléments MathML sont dépréciés.

@@ -12,7 +12,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over
 ---
-{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contr%C3%B4le_clavier", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 

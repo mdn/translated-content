@@ -8,7 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-broken
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
+{{Non-standard_header}}{{CSSRef}}
 
 La [p](/en-US/docs/Web/CSS)[seudo-class CSS](/fr/docs/Web/CSS/Pseudo-classes) `:-moz-broken` s'adapte aux éléments qui représentent des liens cassés vers des images.
 

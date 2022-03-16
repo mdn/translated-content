@@ -30,7 +30,7 @@ _Cette interface hérite aussi des propriétés de ses parents_ _{{domxref("UIEv
 
 - {{domxref("MouseEvent.button")}} {{readonlyinline}}
   - : Le chiffre représentant le bouton qui est pressé lorsque l'événement est lancé.
-- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}{{gecko_minversion_inline("15.0")}}
+- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
   - : Les boutons qui sont pressés alors que l'événement est lancé.
 - {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
   - : La coordonnée en X du pointeur de la souris dans les coordonnées locales (contenu du DOM).
@@ -104,7 +104,7 @@ _Cette interface hérite aussi des propriétés de ses parents_ _{{domxref("UIEv
 
 _Cette interface hérite aussi des méthodes de ses parents_ _{{domxref("UIEvent")}} et {{domxref("Event")}}._
 
-- {{domxref("MouseEvent.getModifierState")}}(){{gecko_minversion_inline("15.0")}}
+- {{domxref("MouseEvent.getModifierState")}}()
   - : Retourne l'état actuel de la touche de modification spécifiée. Voir {{domxref("KeyboardEvent.getModifierState")}}() pour plus de détails.
 - {{domxref("MouseEvent.initMouseEvent()")}} {{deprecated_inline}}
   - : initialise la valeur de l'`MouseEvent` créé. Si l'évènement a déjà été diffusé, la méthode ne produit rien.

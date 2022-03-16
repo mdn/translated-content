@@ -58,8 +58,6 @@ var numberOfEntries = window.history.length;
 
 ## Ajouter et modifier des entrées de l'historique
 
-{{ gecko_minversion_header("2") }}
-
 HTML5 a introduit les méthodes [history.pushState()](</fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur#La_méthode_pushState()>) et [history.replaceState()](</fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur#La_méthode_replaceState()>), qui permettent, respectivement, d'ajouter et de modifier des entrées de l'historique. Ces méthodes fonctionnent conjointement avec l'événement [onpopstate](/fr/docs/Web/API/WindowEventHandlers/onpopstate).
 
 L'utilisation de `history.pushState()` change le référent créé habituellement dans l'en-tête HTTP pour les objets [`XMLHttpRequest`](/en/DOM/XMLHttpRequest), chaque fois que son état a été changé. Le référent sera l'URL de la page dont l'objet window est `this` au moment de la création de l'objet [`XMLHttpRequest`](/en/DOM/XMLHttpRequest).

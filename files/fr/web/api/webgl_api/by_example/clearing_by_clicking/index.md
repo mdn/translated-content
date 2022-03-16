@@ -11,8 +11,6 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Clearing_by_clicking
 original_slug: Web/API/WebGL_API/By_example/Appliquer_une_couleur_à_la_souris
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Cr%C3%A9er_une_animation_color%C3%A9e")}}
 
 Dans cet article, on voit comment combiner les interactions de l'utilisateur et les opérations graphiques. Plus précisément, dans cet exemple, chaque clic de l'utilisateur déclenchera l'application d'une couleur aléatoire dans le contexte de rendu.

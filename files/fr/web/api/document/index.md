@@ -72,11 +72,11 @@ _Cette interface hérite aussi des interfaces {{domxref("Node")}} et {{domxref("
   - : alias de {{domxref("Document.characterSet")}}. Utilisez cette propriété à la place.
 - {{domxref("Document.lastStyleSheetSet")}} {{readonlyinline}}
   - : retourne le nom de l'ensemble de feuilles de style qui a été activé en dernier. A la valeur `null` jusqu'à ce que la feuille de style soit modifiée en définissant la valeur de  {{domxref("document.selectedStyleSheetSet","selectedStyleSheetSet")}}.
-- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}} {{gecko_minversion_inline("8.0")}}
+- {{domxref("Document.mozSyntheticDocument")}} {{non-standard_inline}}
   - : retourne un {{jsxref("Boolean")}} qui est `true` _(vrai)_ seulement si le document est synthétique, tel qu'une image autonome, une vidéo, un fichier audio ou similaire.
-- {{domxref("Document.mozFullScreenElement")}} {{readonlyinline}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreenElement")}} {{readonlyinline}} {{non-standard_inline}}
   - : L'élément qui est actuellement affiché en mode plein écran pour ce document.
-- {{domxref("Document.mozFullScreenEnabled")}} {{readonlyinline}} {{non-standard_inline}} {{gecko_minversion_inline("9.0")}}
+- {{domxref("Document.mozFullScreenEnabled")}} {{readonlyinline}} {{non-standard_inline}}
   - : `true` _(vrai)_ si l'appel  {{domxref("Element.mozRequestFullscreen()")}}  est réussi dans le document courant.
 - {{domxref("Document.pointerLockElement")}} {{readonlyinline}} {{experimental_inline}}
   - : renvoie l'ensemble d'éléments en tant que cible pour les événements de la souris lorsque le pointeur est verrouillé. `null` si le verrouillage est en attente, le pointeur est déverrouillé ou la cible se trouve dans un autre document.
@@ -162,7 +162,7 @@ L'interface Document, pour les documents HTML, hérite de l'interface *{{domxref
   - : Renvoie l'URI (Uniform Ressource Identifier : _identifiant uniforme de ressource_) du document courant.
 - {{domxref("Document.plugins")}} {{readonlyinline}}
   - : Renvoie une liste des plugins disponibles.
-- {{domxref("Document.readyState")}} {{readonlyinline}}  {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Document.readyState")}} {{readonlyinline}}
   - : retourne l'état du chargement du document.
 - {{domxref("Document.referrer")}} {{readonlyinline}}
   - : Renvoie l'URI de la page qui a amené à cette page.
@@ -204,7 +204,7 @@ L'interface Document, pour les documents HTML, hérite de l'interface *{{domxref
   - : représente le code de gestion d'évènements pour l'évènement {{event("pointerlockchange")}} .
 - {{domxref("Document.onpointerlockerror")}} {{experimental_inline}}
   - : représente le code de gestion d'évènements pour l'évènement {{event("pointerlockerror")}} .
-- {{domxref("Document.onreadystatechange")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Document.onreadystatechange")}}
   - : représente le code de gestion d'évènements pour l'évènement {{event("readystatechange")}} .
 - {{domxref("Document.onselectionchange")}} {{experimental_inline}}
   - : est un  {{event("Event_handlers", "event handler")}} _( gestionnaire d'évènements)_ représentant le code à appeler quand l'élément {{event("selectionchange")}} est relevé.
@@ -295,22 +295,22 @@ _Cette interface hérite également des interfaces {{domxref ("Node")}} et {{dom
   - : remplace les entités, normalise les noeuds de texte, etc.
 - {{domxref("Document.registerElement()")}} {{experimental_inline}}
   - : Enregistre un composant Web.
-- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Document.releaseCapture()")}} {{non-standard_inline}}
   - : Libère la capture de la souris en cours s'il s'agit d'un élément de ce document.
 - {{domxref("Document.releaseEvents()")}} {{non-standard_inline}} {{Deprecated_inline}}
   - : voir {{domxref("Window.releaseEvents()")}}.
 - {{domxref("Document.routeEvent()")}} {{non-standard_inline}} {{obsolete_inline(24)}}
   - : Voir {{domxref("Window.routeEvent()")}}.
-- {{domxref("Document.mozSetImageElement()")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Document.mozSetImageElement()")}} {{non-standard_inline}}
   - : Vous permet de modifier l'élément utilisé comme image d'arrière-plan pour un ID d'élément spécifié.
 
 L'interface `Document` est étendue avec l'interface {{domxref("ParentNode")}} :
 
 - {{domxref("document.getElementById","document.getElementById(String id)")}}
   - : retourne une référence d'objet à l'élément identifié.
-- {{domxref("document.querySelector","document.querySelector(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+- {{domxref("document.querySelector","document.querySelector(String selector)")}}
   - : Renvoie le premier noeud `Element` dans le document, dans l'ordre du document, qui correspond aux sélecteurs spécifiés.
-- {{domxref("document.querySelectorAll","document.querySelectorAll(String selector)")}} {{gecko_minversion_inline("1.9.1")}}
+- {{domxref("document.querySelectorAll","document.querySelectorAll(String selector)")}}
   - : retourne une liste de tous les noeuds éléments inclus dans le document qui correspondent aux sélecteurs spécifiés.
 
 L'interface Document est étendue avec l'interface  {{domxref("XPathEvaluator")}} :
@@ -377,9 +377,9 @@ L'interface Document est étendue avec l'interface  {{domxref("XPathEvaluator")
 
 Mozilla définit un ensemble de propriétés non-standard créées seulement pour le contenu XUL :
 
-- {{domxref("document.currentScript")}} {{non-standard_inline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("document.currentScript")}} {{non-standard_inline}}
   - : retourne l'élément {{HTMLElement("script")}} qui est en cours d'exécution.
-- {{domxref("document.documentURIObject")}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("document.documentURIObject")}}
   - : (extensions Mozilla seulement) retourne l'objet  {{Interface("nsIURI")}} représentant l'URI du document. Cette propriété a seulement une signification spéciale dans le code JavaScript privilégié (avec les privilèges UniversalXPConnect).
 - {{domxref("document.popupNode")}}
   - : retourne le noeud ouvert lors de l'appel d'une fenêtre contextuelle.

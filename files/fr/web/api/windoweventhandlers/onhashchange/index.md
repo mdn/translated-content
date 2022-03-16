@@ -50,12 +50,12 @@ Lorsque l'observateur d'événement déclenche l'événement hashchange il pass
       <td class="header">Description</td>
     </tr>
     <tr>
-      <td><code>newURL</code> {{gecko_minversion_inline("6.0")}}</td>
+      <td><code>newURL</code></td>
       <td><code>DOMString</code></td>
       <td>Le nouvel URL où le navigateur est.</td>
     </tr>
     <tr>
-      <td><code>oldURL</code> {{gecko_minversion_inline("6.0")}}</td>
+      <td><code>oldURL</code></td>
       <td><code>DOMString</code></td>
       <td>L'ancien URL où le navigateur se trouvait.</td>
     </tr>

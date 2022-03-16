@@ -15,8 +15,6 @@ translation_of: Web/API/TimeRanges
 ---
 {{ APIRef }}
 
-{{ gecko_minversion_header("2.0") }}
-
 L'interface TimeRanges est utilisée pour représenter un ensemble de plages de temps, principalement dans le but de savoir quelles portions du média ont été mises en mémoire tampon lors du chargement avec les éléments {{ HTMLElement("audio") }} et {{ HTMLElement("video") }}.
 
 Un objet TimeRanges comprend une ou plusieurs plages de temps, chacune définie par une position de début et de fin. On récupère ces valeurs en utilisant les méthodes start() et end(), en passant en paramètre l'index de la plage de temps que l'on souhaite récupérer.

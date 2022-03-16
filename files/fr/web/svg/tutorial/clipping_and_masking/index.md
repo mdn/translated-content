@@ -92,5 +92,3 @@ Vous pouvez voir dans cet exemple un cercle rouge sur un fond bleu. Le contour j
 Un des outils les plus puissants parmis l'arsenal du développeur web est `display: none`. Il n'est donc pas étonnant qu'il ait été décidé que cette propriété CSS serait également intégrée à SVG, de même que `visibility` et `clip` définis en CSS 2. Pour ré-afficher un élément précédemment caché avec `display: none` il est important de savoir que la valeur initiale des éléments SVG est `inline`.
 
 {{ PreviousNext("SVG/Tutoriel/Transformations_de_base", "Web/SVG/Tutoriel/Contenu_embarque_SVG") }}
-
-{{ languages( { "en": "en/SVG/Tutorial/Clipping_and_masking" } ) }}

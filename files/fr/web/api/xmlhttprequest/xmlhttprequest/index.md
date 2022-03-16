@@ -41,7 +41,7 @@ Firefox 16 a ajouté un paramètre non standard au constructeur qui peut activer
 
 ### Paramètres (non standard)
 
-- `objParameters` {{gecko_minversion_inline("16.0")}}
+- `objParameters`
 
   - : Il y a deux drapeaux qui peuvent être activés
 

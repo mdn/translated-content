@@ -11,8 +11,6 @@ original_slug: Jeux/Anatomie
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/fr/docs/Jeux")}}
-
 Cet article se concentre sur l'anatomie et le flux de la plupart des jeux video à partir d'un point de vue technique, concernant la manière dont la boucle principale devrait tourner. Cela aide les débutants dans l'arène du développement à comprendre  ce qui est requis quand il est question de bâtir un jeu et comment les standards du web comme JavaScript leur est offert comme outil. Les programmeurs de jeux expérimentés et nouveaux dans le développement web pourront aussi en tirer bénéfice.
 
 ## Présenter, accepter, interpréter, calculer, repéter

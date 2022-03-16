@@ -48,7 +48,6 @@ translation_of: Web/API/XMLHttpRequest/response
           Used by Firefox to allow retrieving partial {{domxref("Blob")}}
           data from progress events. This lets your progress event handler start
           processing data while it's still being received.
-          {{gecko_minversion_inline("12.0")}}
         </p>
       </td>
     </tr>
@@ -68,7 +67,6 @@ translation_of: Web/API/XMLHttpRequest/response
         </p>
         <p>
           This mode currently only works in Firefox.
-          {{gecko_minversion_inline("9.0")}}
         </p>
       </td>
     </tr>
@@ -90,7 +88,6 @@ translation_of: Web/API/XMLHttpRequest/response
         </p>
         <p>
           This mode currently only works in Firefox.
-          {{gecko_minversion_inline("9.0")}}
         </p>
       </td>
     </tr>
