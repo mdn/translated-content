@@ -45,7 +45,7 @@ try {
 }
 ```
 
-### Creating a SyntaxError
+### Creando un SyntaxError
 
 ```js
 try {
