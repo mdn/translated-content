@@ -2702,6 +2702,7 @@
 /ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/非同期	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/How_browsers_work
+/ja/docs/Learn/Release_notes	/ja/docs/conflicting/Learn_5c079fa29d8d329cb43586076f0bb7bf
 /ja/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry	/ja/docs/orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 /ja/docs/Link_prefetching_FAQ	/ja/docs/Web/HTTP/Link_prefetching_FAQ
 /ja/docs/Localization	/ja/docs/Glossary/Localization
@@ -3020,7 +3021,7 @@
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/Stacking_without_z-index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/The_stacking_context	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 /ja/docs/Web/API/AbstractWorker	/ja/docs/Web/API/Worker
-/ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/Web/API/Worker/onerror
+/ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Apps.mgmt.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/Apps.mgmt.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/Web/API/AudioBufferSourceNode.onended	/ja/docs/Web/API/AudioScheduledSourceNode/ended_event
@@ -3188,6 +3189,12 @@
 /ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
 /ja/docs/Web/API/MediaDevices/ondevicechange	/ja/docs/Web/API/MediaDevices/devicechange_event
 /ja/docs/Web/API/MediaQueryList/onchange	/ja/docs/Web/API/MediaQueryList/change_event
+/ja/docs/Web/API/MediaRecorder/ondataavailable	/ja/docs/Web/API/MediaRecorder/dataavailable_event
+/ja/docs/Web/API/MediaRecorder/onerror	/ja/docs/conflicting/Web/API/MediaRecorder/error_event
+/ja/docs/Web/API/MediaRecorder/onpause	/ja/docs/Web/API/MediaRecorder/pause_event
+/ja/docs/Web/API/MediaRecorder/onresume	/ja/docs/Web/API/MediaRecorder/resume_event
+/ja/docs/Web/API/MediaRecorder/onstart	/ja/docs/Web/API/MediaRecorder/start_event
+/ja/docs/Web/API/MediaRecorder/onstop	/ja/docs/Web/API/MediaRecorder/stop_event
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/MediaStream/onaddtrack	/ja/docs/Web/API/MediaStream/addtrack_event
 /ja/docs/Web/API/MediaStreamConstraints	/ja/docs/conflicting/Web/API/MediaDevices/getUserMedia
@@ -3393,6 +3400,7 @@
 /ja/docs/Web/API/WindowTimers/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowTimers/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
+/ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
 /ja/docs/Web/API/XMLHttpRequest/onreadystatechange	/ja/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ja/docs/Web/API/XMLHttpRequest/openRequest	/ja/docs/orphaned/Web/API/XMLHttpRequest/openRequest

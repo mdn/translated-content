@@ -16683,19 +16683,19 @@
       "forgamer"
     ]
   },
+  "Web/API/MediaRecorder/dataavailable_event": {
+    "modified": "2020-10-15T22:28:21.731Z",
+    "contributors": [
+      "BMud",
+      "baixiaocun"
+    ]
+  },
   "Web/API/MediaRecorder/isTypeSupported": {
     "modified": "2019-06-06T05:26:50.779Z",
     "contributors": [
       "forgamer",
       "Ende93",
       "wakingking77"
-    ]
-  },
-  "Web/API/MediaRecorder/ondataavailable": {
-    "modified": "2020-10-15T22:28:21.731Z",
-    "contributors": [
-      "BMud",
-      "baixiaocun"
     ]
   },
   "Web/API/MediaRecorder/pause": {
