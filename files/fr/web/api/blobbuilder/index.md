@@ -4,7 +4,7 @@ slug: Web/API/BlobBuilder
 translation_of: Web/API/BlobBuilder
 browser-compat: api.BlobBuilder
 ---
-{{APIRef("File API")}}{{ deprecated_header}}
+{{APIRef("File API")}}{{deprecated_header}}
 
 > **Note :** L'interface `BlobBuilder` a été dépréciée pour être remplacée par le constructeur [`Blob`](/fr/docs/Web/API/Blob).
 
@@ -12,13 +12,11 @@ L'interface **`BlobBuilder`** fournit une méthode simple pour construire des ob
 
 ## Aperçu des méthodes
 
-
-* <code>void <a href="/fr/docs/Web/API/BlobBuilder#append()">append</a>(in ArrayBuffer data);</code>
-* <code>void <a href="/fr/docs/Web/API/BlobBuilder#append()">append</a>(in Blob data);</code>
-* <code>void <a href="/fr/docs/Web/API/BlobBuilder#append()">append</a>(in String data, [optional] in String endings);</code>
-* <code>Blob <a href="/fr/docs/Web/API/BlobBuilder#getblob()">getBlob</a>([optional] in DOMString contentType);</code>
-* <code>File <a href="/fr/docs/Web/API/BlobBuilder#getfile()">getFile</a>(in DOMString name, [optional] in DOMString contentType);</code>
-
+- <code>void <a href="/fr/docs/Web/API/BlobBuilder#append">append</a>(in ArrayBuffer data);</code>
+- <code>void <a href="/fr/docs/Web/API/BlobBuilder#append">append</a>(in Blob data);</code>
+- <code>void <a href="/fr/docs/Web/API/BlobBuilder#append">append</a>(in String data, [optional] in String endings);</code>
+- <code>Blob <a href="/fr/docs/Web/API/BlobBuilder#getblob">getBlob</a>([optional] in DOMString contentType);</code>
+- <code>File <a href="/fr/docs/Web/API/BlobBuilder#getfile">getFile</a>(in DOMString name, [optional] in DOMString contentType);</code>
 
 ## Méthodes
 
