@@ -200,10 +200,10 @@ The Vue CLI comes with a built-in development server. This allows you to run you
 
 In your terminal, try running (or if you prefer yarn). Your terminal should output something like the following:` npm run serve``yarn serve `
 
-    INFO  Starting development server...
+    INFO Starting development server...
     98% after emitting CopyPlugin
 
-     DONE  Compiled successfully in 18121ms
+     DONE Compiled successfully in 18121ms
 
       App running at:
       - Local:   <http://localhost:8080/>

@@ -160,7 +160,7 @@ Pour le transfert RTMP, vous pouvez utiliser le [module Nginx RTMP](https://gith
 
 ### Icecast
 
-Le serveur [Icecast](http://www.icecast.org/) est une technologie open source pour diffuser des média en streaming. Maintenu par [Xiph.org Foundation](http://www.xiph.org/), il diffuse les formats Ogg Vorbis/Theora ainsi que MP3 et AAC  via le protocole SHOUTcast.
+Le serveur [Icecast](http://www.icecast.org/) est une technologie open source pour diffuser des média en streaming. Maintenu par [Xiph.org Foundation](http://www.xiph.org/), il diffuse les formats Ogg Vorbis/Theora ainsi que MP3 et AAC via le protocole SHOUTcast.
 
 > **Note :** SHOUTcast et Icecast font partie des technologies les plus répandues et les plus populaires, mais il existe de nombreux [autres systèmes de diffusion en streaming disponibles](http://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 

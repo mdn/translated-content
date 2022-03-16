@@ -49,7 +49,7 @@ Les événements ont trois fonctions :
       - : Un objet avec les propriétés suivantes :
 
         - `id`{{optional_inline}}
-          - : `string`. L'ID de l'extension  de module partagé importé mise à jour. Ceci n'est présent que si la valeur de `raison` est  `shared_module_update`.
+          - : `string`. L'ID de l'extension de module partagé importé mise à jour. Ceci n'est présent que si la valeur de `raison` est  `shared_module_update`.
         - `previousVersion`{{optional_inline}}
           - : `string`. La version précédente de l'extension vient d'être mise à jour. Ceci n'est pas présent si la valeur de `raison` est `mise à jour`.
         - `reason`

@@ -44,6 +44,6 @@ Déclenche une {{jsxref("DOMException")}} si la longueur de la chaîne passée e
 ## Voir aussi
 
 - [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
-- [Les  URL de `données`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [Les URL de `données`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
 - {{domxref("WindowOrWorkerGlobalScope.btoa","window.btoa()")}}
 - [Components.utils.importGlobalProperties](/fr-FR/docs/Components.utils.importGlobalProperties)

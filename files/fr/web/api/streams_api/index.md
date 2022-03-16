@@ -41,7 +41,7 @@ Vous pouvez aussi écrire des données vers les flux en utilisant {{domxref("Wri
 ### Writable streams
 
 - {{domxref("WritableStream")}}
-  - : Propose un standard d'abstraction afin d'écrire des flux de données vers une destination, ce qu'on appel un sink (un _aggregateur de flux_). Cet objet s'accompagne  d'un built-in backpressure et d'un système de queue.
+  - : Propose un standard d'abstraction afin d'écrire des flux de données vers une destination, ce qu'on appel un sink (un _aggregateur de flux_). Cet objet s'accompagne d'un built-in backpressure et d'un système de queue.
 - {{domxref("WritableStreamDefaultWriter")}}
   - : Correspond à un flux inscriptible par défaut pouvant être utilisé afin d'écire des chunks (plus petit morceaux) de données vers un flux inscriptible.
 - {{domxref("WritableStreamDefaultController")}}

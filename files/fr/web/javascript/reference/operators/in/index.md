@@ -52,7 +52,7 @@ var voiture = {marque&nbsp;: "Honda", modèle&nbsp;: "Accord", année&nbsp;: 199
 "Accord" in voiture // renvoie false
 ```
 
-L'opérande droit doit toujours être du type objet (et pas un autre type primitif). Par exemple, on peut utiliser une  chaîne créée avec le constructeur `String`, mais pas une chaîne littérale.
+L'opérande droit doit toujours être du type objet (et pas un autre type primitif). Par exemple, on peut utiliser une chaîne créée avec le constructeur `String`, mais pas une chaîne littérale.
 
 ```js
 var couleur1 = new String("vert");

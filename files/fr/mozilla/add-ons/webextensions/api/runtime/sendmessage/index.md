@@ -41,7 +41,7 @@ var sending = browser.runtime.sendMessage(
 
 - `extensionId`{{optional_inline}}
 
-  - : `string`. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) dans  manifest.json, `extensionId` doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.
+  - : `string`. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' [applications](/fr/Add-ons/WebExtensions/manifest.json/applications) dans mnifest.json, `extensionId` doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.
 
     Si `extensionId` est omis, le message sera envoyé à votre propre extension.
 

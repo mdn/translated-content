@@ -207,7 +207,7 @@ La valeur spéciale `<all_urls>` correspond à toutes les URL sous l’un des sc
       <td>
         <p><code>https://*/path</code></p>
         <p>
-          Correspondance aux URLs  HTTPS sur n'importe quel hôte, dont le chemin
+          Correspondance aux URLs HTTPS sur n'importe quel hôte, dont le chemin
           est "path".
         </p>
       </td>

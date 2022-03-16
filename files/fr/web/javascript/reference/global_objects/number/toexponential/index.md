@@ -42,7 +42,7 @@ La valeur renvoyée est une chaîne de caractères correspondant à la représen
 
 Si la méthode `toExponential()` est utilisée avec un littéral numérique et que celui-ci ne possède aucun exposant ou séparateur décimal ("."), il faut laisser un ou plusieurs espaces entre le littéral et le point indiquant l'appel de la méthode. Cela permet d'éviter que le point, permettant d'accéder à la méthode, soit confondu avec un séparateur décimal.
 
-Si un nombre possède plus de chiffres décimaux que `nbChiffresDécimaux`, le nombre est arrondi au nombre le plus proche, représenté avec `nbChiffresDécimaux` pour la partie fractionnaire. Voir la discussion sur les arrondis dans la page  de la méthode {{jsxref("Number.toFixed", "toFixed()")}} pour plus de détails, la même méthode est utilisée pour `toExponential()`.
+Si un nombre possède plus de chiffres décimaux que `nbChiffresDécimaux`, le nombre est arrondi au nombre le plus proche, représenté avec `nbChiffresDécimaux` pour la partie fractionnaire. Voir la discussion sur les arrondis dans la page de la méthode {{jsxref("Number.toFixed", "toFixed()")}} pour plus de détails, la même méthode est utilisée pour `toExponential()`.
 
 ## Exemples
 

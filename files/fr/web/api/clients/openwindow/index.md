@@ -20,7 +20,7 @@ ServiceWorkerClients.openWindow(url).then(function(WindowClient) {
 ### Paramètres
 
 - `url`
-  - : Une {{domxref("USVString")}} représentant l'URL que le client veut ouvrir dans une nouvelle fenêtre. Généralement, cette valeur doit être une URL de la même  origine que le script d'origine.
+  - : Une {{domxref("USVString")}} représentant l'URL que le client veut ouvrir dans une nouvelle fenêtre. Généralement, cette valeur doit être une URL de la même origine que le script d'origine.
 
 ### Valeur de retour
 

@@ -437,7 +437,7 @@ Les opérateurs de décalage sont énumérés dans le tableau qui suit.
       </td>
       <td>
         <code>9&#x3C;&#x3C;2</code> renvoie 36, car 1001, décalé de 2 bits à
-        gauche, devient  100100, dont la représentation en base 10 est  36.
+        gauche, devient 100100, dont la représentation en base 10 est 36.
       </td>
     </tr>
     <tr>
@@ -770,7 +770,7 @@ L'opérateur `void` indique qu'une expression doit être évaluée sans retourne
 
 L'opérateur `void` peut être utilisé pour spécifier une expression comme un lien hypertexte, l'expression est évaluée mais n'est pas chargée à la place du document actuel.
 
-Le fragment de code  qui suit crée un lien hypertexte qui ne fait rien lorsque l'utilisateur clique dessus. Lorsqu'on clique sur le lien, `void(0)` est évalué à `undefined`, n'ayant aucun effet.
+Le fragment de code qui suit crée un lien hypertexte qui ne fait rien lorsque l'utilisateur clique dessus. Lorsqu'on clique sur le lien, `void(0)` est évalué à `undefined`, n'ayant aucun effet.
 
 ```html
 <A HREF="javascript:void(0)">Cliquer ici pour ne rien faire</A>

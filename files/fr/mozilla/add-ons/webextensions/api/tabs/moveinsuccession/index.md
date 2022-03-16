@@ -33,7 +33,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
 ### Paramètres
 
 - `tabIds`
-  - : `array` of `integer`. Un tableau  d'`ID`s. L'ordre des éléments dans le tableau définit la relation des onglets. Tout `ID` d'onglet invalide, ou l'`ID` d'onglet correspondant à des onglets qui ne sont pas dans la même fenêtre que `tabId` (ou le premier onglet du tableau, si  `tabId` est omis), sera ignoré - ils conserveront leurs successeurs et prédécesseurs actuels.
+  - : `array` of `integer`. Un tableau d'`ID`s. L'ordre des éléments dans le tableau définit la relation des onglets. Tout `ID` d'onglet invalide, ou l'`ID` d'onglet correspondant à des onglets qui ne sont pas dans la même fenêtre que `tabId` (ou le premier onglet du tableau, si  `tabId` est omis), sera ignoré - ils conserveront leurs successeurs et prédécesseurs actuels.
 - `tabId` {{optional_inline}}
   - : `integer.` L'`ID` de l'onglet qui succédera au dernier onglet du tableau `tabIds`. Si cet `ID` est invalide ou {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, le dernier onglet n'aura pas de successeur. Par défaut {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
 - `options` {{optional_inline}}

@@ -119,7 +119,7 @@ function String() {
 
 ### Modifier le constructeur d'une fonction
 
-La plupart du temps, cette  propriété est utilisée afin de définir une fonction en tant que constructeur, c'est-à-dire qu'on l'appellera avec **`new`** et en « attachant » la chaîne de prototypes.
+La plupart du temps, cette propriété est utilisée afin de définir une fonction en tant que constructeur, c'est-à-dire qu'on l'appellera avec **`new`** et en « attachant » la chaîne de prototypes.
 
 ```js
 function Parent() {}

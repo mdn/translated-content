@@ -54,7 +54,7 @@ Les événements ont trois fonctions :
       - : Un `objet` contenant les détails de la modification survenue. Ses propriétés sont les suivantes :
 
         - `removed`
-          - : Un `booléen` défini sur `true` si un cookie a été supprimé et sinon  false.
+          - : Un `booléen` défini sur `true` si un cookie a été supprimé et sinon false.
         - `cookie`
           - : Un objet {{WebExtAPIRef('cookies.Cookie')}} contenant les informations sur le cookie qui a été défini ou supprimé.
         - `cause`

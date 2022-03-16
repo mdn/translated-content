@@ -25,7 +25,7 @@ Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changemen
 
 ### CSS
 
-- La valeur `none` pour {{cssxref("user-select", "-moz-user-select")}} a maintenant le même comportement que la valeur `-moz-none`, alignant  Gecko sur WebKit (Chrome, Safari), Presto (Opera) et Trident (Internet Explorer) ({{bug("816298")}}).
+- La valeur `none` pour {{cssxref("user-select", "-moz-user-select")}} a maintenant le même comportement que la valeur `-moz-none`, alignant Gecko sur WebKit (Chrome, Safari), Presto (Opera) et Trident (Internet Explorer) ({{bug("816298")}}).
 - Dans des contenus XHTML, la valeur `auto` de {{cssxref("hyphens", "-moz-hyphens")}} appliquait incorrectement des règles de césure quand le langage n'était pas explicitement défini. Cela a été corrigé par ({{bug("702121")}}).
 - Une valeur `auto` a été ajoutée pour la propriété CSS {{cssxref("-moz-orient")}}. La valeur `auto` est équivalente à `horizontal` quand appliquée à {{HTMLElement("meter")}} et {{HTMLElement("progress")}} ({{bug("835883")}}).
 

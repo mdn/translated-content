@@ -155,7 +155,7 @@ try {
 
 #### Objet d'erreur personnalisé ES5
 
-> **Attention :** Tous les navigateurs incluent le constructeur `CustomError` dans la pile  d'appel lorsqu'une déclaration prototypale est utilisée.
+> **Attention :** Tous les navigateurs incluent le constructeur `CustomError` dans la pile d'appel lorsqu'une déclaration prototypale est utilisée.
 
 ```js
 function CustomError(machin, message, nomFichier, numeroLigne) {

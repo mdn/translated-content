@@ -21,7 +21,7 @@ Un tableau de ces objets est renvoyé par {{WebExtAPIRef('commands.getAll()')}}.
 
 ## Type
 
-Les valeurs de ce type  sont des objets. Ils contiennent les propriétés suivantes :
+Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
 - `name`{{optional_inline}}
   - : `string`. Nom de la commande. Cela sera passé dans l'écouteur de l'événement  {{WebExtAPIRef('commands.onCommand')}}.

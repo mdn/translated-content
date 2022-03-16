@@ -98,7 +98,7 @@ Du point de vue HTML, l'app shell est tout ce qui est à l'extérieur de la sect
 </html>
 ```
 
-La section {{htmlelement("head")}} contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et  app.js — c'est là où notre application JavaScript est initialisée. Le {{htmlelement("body")}} est divisé en {{htmlelement("header")}} (contenant les images liées), {{htmlelement("main")}} la page (avec le titre, la description et un emplacement pour le contenu) et  {{htmlelement("footer")}} (le copyright et les liens).
+La section {{htmlelement("head")}} contient certaines informations de base telles que le titre, la description et des liens vers les CSS, le manifeste web, le fichier JS contenant les jeux et app.js — c'est là où notre application JavaScript est initialisée. Le {{htmlelement("body")}} est divisé en {{htmlelement("header")}} (contenant les images liées), {{htmlelement("main")}} la page (avec le titre, la description et un emplacement pour le contenu) et  {{htmlelement("footer")}} (le copyright et les liens).
 
 Le seul travail de l'application est de lister toutes les entrées A-Frame de la compétition js13kGames 2017. Comme vous pouvez le voir, c'est un site web en une page tout ce qu'il y a de plus ordinaire - le but est d'avoir quelque chose de simple afin que nous puissions nous concentrer sur l'implémentation des réelles fonctionnalités PWA.
 
@@ -158,7 +158,7 @@ button.addEventListener('click', function(e) {
 });
 ```
 
-Le dernier bloc crée des notifications qui affichent  un élément choisi au hasard dans la liste des jeux:
+Le dernier bloc crée des notifications qui affichent un élément choisi au hasard dans la liste des jeux:
 
 ```js
 function randomNotification() {

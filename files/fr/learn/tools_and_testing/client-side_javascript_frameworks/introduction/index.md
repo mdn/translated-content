@@ -44,7 +44,7 @@ There are many frameworks out there, but currently the "big four" are considered
 
 ### Ember
 
-[Ember](https://emberjs.com/) was initially released in December 2011 as a continuation of work that started in the [SproutCore](https://en.wikipedia.org/wiki/SproutCore) project. It is an older framework that has less users than more modern alternatives  such as React and Vue, but it still enjoys a fair amount of popularity due to its stability, community support, and some clever coding principles.
+[Ember](https://emberjs.com/) was initially released in December 2011 as a continuation of work that started in the [SproutCore](https://en.wikipedia.org/wiki/SproutCore) project. It is an older framework that has less users than more modern alternatives such as React and Vue, but it still enjoys a fair amount of popularity due to its stability, community support, and some clever coding principles.
 
 [Start learning Ember](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
 

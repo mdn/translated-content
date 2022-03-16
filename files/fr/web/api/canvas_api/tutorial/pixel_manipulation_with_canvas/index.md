@@ -17,13 +17,13 @@ L'objet {{domxref("ImageData")}} représente les données de pixels sous-jacente
 - `height`
   - : La hauteur de l'image en pixels.
 - `data`
-  - : Un {{jsxref("Uint8ClampedArray")}} représentant un tableau monodimensionnel contenant les données dans l'ordre RVBA, ayant des valeurs entières entre 0 et  255 (inclus).
+  - : Un {{jsxref("Uint8ClampedArray")}} représentant un tableau monodimensionnel contenant les données dans l'ordre RVBA, ayant des valeurs entières entre 0 et 255 (inclus).
 
 La propriété `data` retourne un tableau {{jsxref("Uint8ClampedArray")}} auquel on peut accéder pour voir plus en détail les données brutes des pixels ; chaque pixel est représenté par quatre valeurs sur un octet (rouge, vert, bleu et alpha, dans cet ordre ; c'est-à-dire, le format "RVBA").  Chaque composante de couleur est représentée par un entier entre 0 et 255. Chaque composante reçoit un indice à l'intérieur du tableau, la composante rouge du pixel supérieur gauche étant à l'indice 0 à l'intérieur du tableau. Les pixels continuent ensuite de gauche à droite, puis vers le bas, jusqu'au bout du tableau.
 
 Le {{jsxref("Uint8ClampedArray")}} contient `height`_(hauteur)_ × `width`*(largeur)*  × 4 octets, dont les valeurs d'indices vont de 0 à (`height`×`width`×4)-1.
 
-Par exemple, pour lire la valeur de la composante bleue d'un pixel situé en colonne 200, ligne 50  de l'image, vous pouvez faire ce qui suit&nbsp;:
+Par exemple, pour lire la valeur de la composante bleue d'un pixel situé en colonne 200, ligne 50 de l'image, vous pouvez faire ce qui suit&nbsp;:
 
 ```js
 composanteBleue = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];
@@ -115,7 +115,7 @@ ctx.putImageData(monImageData, 0, 0);
 
 ### Niveaux de gris et inversion de couleurs
 
-Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction  grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipedia pour plus d'informations.
+Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de [putImageData()](/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData). La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction grayscale _(niveaux de gris)_ fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir [Niveaux de gris](https://fr.wikipedia.org/wiki/Niveau_de_gris) sur Wikipedia pour plus d'informations.
 
 ```html hidden
 <canvas id="canevas" width="300" height="227"></canvas>

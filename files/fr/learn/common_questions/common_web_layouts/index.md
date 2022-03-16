@@ -111,7 +111,7 @@ Dans cet exemple, regardez bien l'image (B1) située directement sous l'en-tête
 
 …mais non&nbsp;! B1 et B2 flottent autour du contenu principal. Rappelez-vousce mot-clé&nbsp;: "flotte" (_float_ en anglais) - nous y reviendrons lorsque vous commencerez à apprendre le {{Glossary("CSS")}}.
 
-Pourquoi êtes-vous porté à penser qu'il s'agit d'une disposition à trois colonnes&nbsp;? Eh bien, pour trois raisons&nbsp;: parce que l'image en haut à droite est en forme de L, parce que B1 semble être une colonne soutenant un contenu principal décalé vers la gauche et parce le "M" et le "I" du logo de  MICA forment une ligne de force verticale.
+Pourquoi êtes-vous porté à penser qu'il s'agit d'une disposition à trois colonnes&nbsp;? Eh bien, pour trois raisons&nbsp;: parce que l'image en haut à droite est en forme de L, parce que B1 semble être une colonne soutenant un contenu principal décalé vers la gauche et parce le "M" et le "I" du logo de MICA forment une ligne de force verticale.
 
 Il s'agit ici d'un bon exemple d'une mise en page classique qui a été rehaussée avec un peu de créativité. Les dispositions simples sont plus faciles à mettre en place, mais ne devraient pas restreindre votre créativité.
 

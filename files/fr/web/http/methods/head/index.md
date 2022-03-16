@@ -10,7 +10,7 @@ original_slug: Web/HTTP/Méthode/HEAD
 ---
 {{HTTPSidebar}}
 
-La **méthode HTTP `HEAD`** demande les en-têtes qui seraient retournés si la ressource spécifiée était demandée avec une méthode HTTP {{HTTPMethod("GET")}}. Une telle requête peut être envoyée avant de procéder au téléchargement d'une  ressource volumineuse, par exemple pour économiser de la bande passante.
+La **méthode HTTP `HEAD`** demande les en-têtes qui seraient retournés si la ressource spécifiée était demandée avec une méthode HTTP {{HTTPMethod("GET")}}. Une telle requête peut être envoyée avant de procéder au téléchargement d'une ressource volumineuse, par exemple pour économiser de la bande passante.
 
 Une réponse issue d'une requête `HEAD` ne doit pas avoir de corps. Si tel est le cas, elle doit être ignorée. Toutefois, les {{glossary("En-têtes d'entité", "en-têtes d'entité")}} décrivant le contenu du corps, comme {{HTTPHeader("Content-Length")}}, peuvent être inclus dans la réponse. Ils ne sont pas liés au corps de la réponse `HEAD` , qui doit être vide, mais au corps d'une réponse issue d'une requête similaire utilisant la méthode {{HTTPMethod("GET")}}.
 

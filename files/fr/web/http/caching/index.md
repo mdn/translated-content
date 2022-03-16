@@ -28,7 +28,7 @@ Un cache privé est dédié à un seul utilisateur. Il se peut que vous ayez dé
 
 Un cache partagé est un cache qui stocke les réponses pour qu’elles soient réutilisées par plus d’un utilisateur. Par exemple, un fournisseur d’accès à Internet ou votre entreprise peut avoir mis en place un proxy web au sein de son infrastructure de réseau local pour servir des utilisateurs multiples, de sorte que les ressources populaires sont réutilisées plusieurs fois, réduisant le trafic réseau et la latence.
 
-## Cibles des opérations de  cache
+## Cibles des opérations de cache
 
 La mise en cache HTTP est optionnelle, mais réutiliser une ressource en cache est généralement souhaitable. Cependant, les caches HTTP communs se limitent typiquement à mettre en cache les réponses à des requêtes {{HTTPMethod("GET")}} et peuvent décliner les autres méthodes. La clé de cache primaire consiste en la méthode de requête et l’URI ciblée (souvent, seule l’URI est utilisée, car seules des requêtes GET sont ciblées par la mise en cache). Voici des formes courantes d’entrées de cache&nbsp;:
 
@@ -110,7 +110,7 @@ Cette technique a un avantage de plus : mettre à jour deux ressources en cache 
 
 ![How the revved cache mechanism works.](http_revved_fix_typo.png)
 
-La version de révision ajoutée à la ressource révisée n'a pas à être sous une forme classique de chaîne de version comme  1.1.3, ou une suite monotone de chiffres. Cela peut être n'importe quoi qui prévienne une collision : un hash ou une date.
+La version de révision ajoutée à la ressource révisée n'a pas à être sous une forme classique de chaîne de version comme 1.1.3, ou une suite monotone de chiffres. Cela peut être n'importe quoi qui prévienne une collision : un hash ou une date.
 
 ## Validation de cache
 
@@ -120,7 +120,7 @@ Quand on arrive au moment d'expiration d'un document en cache, il est soit valid
 
 ### ETags
 
-L'en-tête réponse {{HTTPHeader("ETag")}} est une valeur "*opaque-to-the-user agent"*  qui peut être utilisée comme un validateur fort. Cela signifie que l'agent-utilisateur HTTP, comme un navigateur, par exemple, ne sait pas ce que cette chaîne  représente et ne peut prévoir quelle pourrait être sa valeur. Si l'en-tête `ETag` est une partie de la réponse pour une ressource, le client peut délivrer un  {{HTTPHeader("If-None-Match")}} dans l'en-tête des futures requêtes, dans le but de valider les ressources en cache.
+L'en-tête réponse {{HTTPHeader("ETag")}} est une valeur "*opaque-to-the-user agent"*  qui peut être utilisée comme un validateur fort. Cela signifie que l'agent-utilisateur HTTP, comme un navigateur, par exemple, ne sait pas ce que cette chaîne représente et ne peut prévoir quelle pourrait être sa valeur. Si l'en-tête `ETag` est une partie de la réponse pour une ressource, le client peut délivrer un  {{HTTPHeader("If-None-Match")}} dans l'en-tête des futures requêtes, dans le but de valider les ressources en cache.
 
 L'en-tête de réponse {{HTTPHeader("Last-Modified")}} peut être utilisée comme un validateur faible. Il est dit "faible" car il a une précision à la seconde prés. Si l'en-tête  `Last-Modified` est présente dans une réponse, alors le client peut délivrer une en-tête de requête {{HTTPHeader("If-Modified-Since")}} pour valider le document en cache.
 
@@ -128,13 +128,13 @@ Quand une requête en validation est faite, le serveur peut : soit ignorer la re
 
 ## Varier les réponses
 
-L'en-tête de réponse HTTP {{HTTPHeader("Vary")}} détermine comment répondre aux futures en-têtes de requêtes  et décider s'il faut utiliser une réponse en cache plutôt qu'en demander une fraîche au serveur d'origine.
+L'en-tête de réponse HTTP {{HTTPHeader("Vary")}} détermine comment répondre aux futures en-têtes de requêtes et décider s'il faut utiliser une réponse en cache plutôt qu'en demander une fraîche au serveur d'origine.
 
 Quand un cache reçoit une requête qui peut être satisfaite par une réponse en cache qui a un champ d'en-tête  `Vary` il ne devra pas utiliser cette réponse à moins que tous les champs d'en-tête cités dans l'en-tête `Vary` ne soient communs aux deux : la requête originale (en cache) et la nouvelle requête.
 
 ![The Vary header leads cache to use more HTTP headers as key for the cache.](http_vary.png)
 
-Cela peut être très utile pour servir du contenu dynamique par exemple. Quand on se sert de l'en-tête  `Vary: User-Agent`, les serveurs de cache devront considérer l'agent utilisateur pour décider de servir la page du cache. Si vous servez du contenu varié aux utilisateurs de mobiles, cela vous aidera à éviter qu'un cache puisse servir, par erreur, une version "Desktop" de votre site. En plus, cela aidera Google et d'autres moteurs de recherche  à découvrir la version mobile d'une page et peut aussi les avertir qu'aucun "masquage" ([Cloaking](https://en.wikipedia.org/wiki/Cloaking)) n'est à craindre.
+Cela peut être très utile pour servir du contenu dynamique par exemple. Quand on se sert de l'en-tête  `Vary: User-Agent`, les serveurs de cache devront considérer l'agent utilisateur pour décider de servir la page du cache. Si vous servez du contenu varié aux utilisateurs de mobiles, cela vous aidera à éviter qu'un cache puisse servir, par erreur, une version "Desktop" de votre site. En plus, cela aidera Google et d'autres moteurs de recherche à découvrir la version mobile d'une page et peut aussi les avertir qu'aucun "masquage" ([Cloaking](https://en.wikipedia.org/wiki/Cloaking)) n'est à craindre.
 
     Vary: User-Agent
 

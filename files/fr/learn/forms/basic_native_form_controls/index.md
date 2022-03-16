@@ -158,7 +158,7 @@ Il ajoute une contrainte de validation spéciale du champ&nbsp;; le navigateur r
 
 ### Champs texte multilignes
 
-Un champ texte sur plusieurs lignes  se définit avec l'élément {{HTMLElement("textarea")}}, et non avec l'élément {{HTMLElement("input")}}.
+Un champ texte sur plusieurs lignes se définit avec l'élément {{HTMLElement("textarea")}}, et non avec l'élément {{HTMLElement("input")}}.
 
 ```html
     <textarea cols="30" rows="10"></textarea>
@@ -470,7 +470,7 @@ Un problème avec les curseurs est qu'il n'offrent aucun moyen visue de savoir q
 <span class="beancount"></span>
 ```
 
-et en  JavaScript&nbsp;:
+et en JavaScript&nbsp;:
 
 ```js
 var beans = document.querySelector('#beans');

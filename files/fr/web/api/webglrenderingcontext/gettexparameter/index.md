@@ -107,7 +107,7 @@ La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr-F
         <tr>
           <td><code>gl.TEXTURE_BASE_LEVEL</code></td>
           <td>{{domxref("GLint")}}</td>
-          <td>Niveau  de mipmap de texture</td>
+          <td>Niveau de mipmap de texture</td>
           <td>Toutes valeurs int.</td>
         </tr>
         <tr>
@@ -144,7 +144,7 @@ La méthode **`WebGLRenderingContext.getTexParameter()`** de l'[API WebGL](/fr-F
         <tr>
           <td><code>gl.TEXTURE_MAX_LEVEL</code></td>
           <td>{{domxref("GLint")}}</td>
-          <td>Niveau maximum  de mipmap de texture en tableau</td>
+          <td>Niveau maximum de mipmap de texture en tableau</td>
           <td>Toutes valeurs int.</td>
         </tr>
         <tr>

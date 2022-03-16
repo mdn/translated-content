@@ -294,7 +294,7 @@ Dans la leçon suivante, nous étudirons comment CSS est structuré.
 
 ## Dans ce cours
 
-1.  [Qu'est ce que  CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
+1.  [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
 2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
 3.  [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
 4.  [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)

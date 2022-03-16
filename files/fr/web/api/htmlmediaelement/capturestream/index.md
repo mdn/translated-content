@@ -56,7 +56,7 @@ Voir [Recording a media element](/en-US/docs/Web/API/MediaStream_Recording_API/R
 
 ### Firefox-notes spécifiques
 
-Avant Firefox 51, vous ne pouviez pas utiliser `captureStream()` sur un élément média dont la source était, lui-même, un objet {{domxref("MediaStream")}} (comme un élément {{HTMLElement("video")}} présentant un flux reçu à travers un {{domxref("RTCPeerConnection")}}). Au commencement de  51, ça fonctionne. ce qui veut dire que vous pouvez capturer le flux d'un élément video et utiliser {{domxref("MediaRecorder")}} pour l'enregistrer. Voir {{bug(1259788)}} pour plus de détails.
+Avant Firefox 51, vous ne pouviez pas utiliser `captureStream()` sur un élément média dont la source était, lui-même, un objet {{domxref("MediaStream")}} (comme un élément {{HTMLElement("video")}} présentant un flux reçu à travers un {{domxref("RTCPeerConnection")}}). Au commencement de 51, ça fonctionne. ce qui veut dire que vous pouvez capturer le flux d'un élément video et utiliser {{domxref("MediaRecorder")}} pour l'enregistrer. Voir {{bug(1259788)}} pour plus de détails.
 
 Cependant, `captureStream()` reste préfixé `mozCaptureStream()` sur Firefox pour une bonne raison: il y a quelques etrangetés dans l'implémentation actuelle qui mérite d'être soulignées :
 

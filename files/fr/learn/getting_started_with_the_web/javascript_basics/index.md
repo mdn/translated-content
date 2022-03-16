@@ -299,7 +299,7 @@ if (iceCream === 'chocolat') {
 }
 ```
 
-L'expression contenue dans `if ( ... )` correspond au test — Ici, on utilise l'opérateur d'égalité (décrit plus haut) pour comparer la variable iceCream avec la chaîne de caractères `chocolat` pour voir si elles sont égales. Si cette comparaison renvoie `true`, le premier bloc de code sera exécuté. Sinon, le premier bloc est sauté et  c'est le code du second bloc, celui présent après  `else`, qui est exécuté.
+L'expression contenue dans `if ( ... )` correspond au test — Ici, on utilise l'opérateur d'égalité (décrit plus haut) pour comparer la variable iceCream avec la chaîne de caractères `chocolat` pour voir si elles sont égales. Si cette comparaison renvoie `true`, le premier bloc de code sera exécuté. Sinon, le premier bloc est sauté et c'est le code du second bloc, celui présent après  `else`, qui est exécuté.
 
 ### Fonctions
 

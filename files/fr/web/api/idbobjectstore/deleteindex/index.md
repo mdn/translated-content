@@ -48,7 +48,7 @@ var db;
 // Requête d'ouverture de la base de données "toDoList"
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-// Gère  l'échec de l'ouverture de la base
+// Gère l'échec de l'ouverture de la base
 DBOpenRequest.onerror = function(event) {
   note.innerHTML += '<li>La base de donnée n\'as pas peut être ouverte.</li>';
 };
@@ -64,7 +64,7 @@ DBOpenRequest.onsuccess = function(event) {
   displayData();
 };
 
-// Ce gestionnaire d'événement nécessite  un nouveau numéro de version de la base de données.
+// Ce gestionnaire d'événement nécessite un nouveau numéro de version de la base de données.
 // Si la base n'existe pas un nouveau numéro de version est généré par la méthode d'ouverture de connexion window.indexDB.open .
 
 DBOpenRequest.onupgradeneeded = function(event) {

@@ -158,7 +158,7 @@ Les événements ont trois fonctions :
 
 ### Ordre de résolution DNS lorsque BlockingResponse est utilisé
 
-En ce qui concerne la résolution DNS lorsque BlockingResponse est utilisé avec  OnBeforeRequest : Dans le canal HTTP, avec réponse de blocage se produit avant la résolution DNS et avant la connexion spéculative. Pour les autres canaux, une connexion spéculative peut provoquer des requêtes DNS avant onBeforeRequest. Cet ordre n'est pas quelque chose sur quoi un développeur d'extension devrait se fier, car il peut varier d'un navigateur à l'autre, et encore moins d'une version de navigateur à l'autre, et encore moins d'un canal de requête à l'autre. Référez-vous [à la clarification du problème de BugZilla fournie par les développeurs Mozilla sur la commande de la résolution DNS](https://bugzilla.mozilla.org/show_bug.cgi?id=1466099)
+En ce qui concerne la résolution DNS lorsque BlockingResponse est utilisé avec OnBeforeRequest : Dans le canal HTTP, avec réponse de blocage se produit avant la résolution DNS et avant la connexion spéculative. Pour les autres canaux, une connexion spéculative peut provoquer des requêtes DNS avant onBeforeRequest. Cet ordre n'est pas quelque chose sur quoi un développeur d'extension devrait se fier, car il peut varier d'un navigateur à l'autre, et encore moins d'une version de navigateur à l'autre, et encore moins d'un canal de requête à l'autre. Référez-vous [à la clarification du problème de BugZilla fournie par les développeurs Mozilla sur la commande de la résolution DNS](https://bugzilla.mozilla.org/show_bug.cgi?id=1466099)
 
 ## Exemples
 

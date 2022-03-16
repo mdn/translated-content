@@ -13,7 +13,7 @@ translation_of: Web/API/Document/querySelectorAll
 
 La méthode **`querySelectorAll()`**  de {{domxref("Element")}} renvoie une {{domxref("NodeList")}} statique représentant une liste des éléments du document qui correspondent au groupe de sélecteurs spécifiés.
 
-> **Note :** Cette méthode est implémentée à partir de {{domxref("ParentNode")}}, méthode  du mixin {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} .
+> **Note :** Cette méthode est implémentée à partir de {{domxref("ParentNode")}}, méthode du mixin {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} .
 
 ## Syntaxe
 

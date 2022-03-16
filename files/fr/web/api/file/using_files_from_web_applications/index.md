@@ -410,7 +410,7 @@ Il est nécessaire de prévoir quelques étapes préparatoires avant le téléch
 3.  La requête de téléchargement de l'image est ouverte par l'appel à la méthode `open()` du XMLHttpRequest, démarrant la création d'une requête POST.
 4.  Le type MIME pour le téléchargement est défini en appelant la fonction `overrideMimeType()` du `XMLHttpRequest`. Nous utilisons ici un type MIME générique&nbsp;; vous pouvez selon les cas définir ou ne définir aucun type MIME.
 5.  L'objet `FileReader` est utilisé pour la conversion du fichier en chaîne binaire.
-6.  La fonction `send()` du  XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
+6.  La fonction `send()` du XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
 
 > **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }}&nbsp;; utilisez plutôt la méthode standard `send(Blob data)`.
 

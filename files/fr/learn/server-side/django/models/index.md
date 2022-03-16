@@ -49,7 +49,7 @@ Vous pourriez aussi utiliser les modèles pour définir des listes d'options (co
 
 Le choix du modèle étant posé, nous avons à considérer les relations entre les objets. Django permet d'établir trois types de relation : les relations un à un qui mettent en relation un et un seul objet avec un autre (`OneToOneField`), les relations un à n qui partage l'appartenance d'un objet à avec d'autres (`ForeignKey`) et les relations n à n qui associent des groupes d'objets entre-eux (`ManyToManyField`).
 
-Avec ces éléments présents à l'esprit, le diagramme  de classes UML ci-dessous décrit les objets de la bibliothèque.
+Avec ces éléments présents à l'esprit, le diagramme de classes UML ci-dessous décrit les objets de la bibliothèque.
 
 ![LocalLibrary Model UML](local_library_model_uml.png)
 

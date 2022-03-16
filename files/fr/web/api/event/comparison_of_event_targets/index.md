@@ -81,7 +81,7 @@ Il y a 5 cibles à considérer :
       </td>
       <td>
         {{ Non-standard_inline() }} Si l'évènement a été reciblé pour
-        quelque raison autre que  un passage de limite anonyme, il sera défini
+        quelque raison autre que un passage de limite anonyme, il sera défini
         sur la cible avant le reciblage. Par exemple, les évènements de souris
         sont reciblés vers leur noeud parent quand ils surviennent sur des
         noeuds de texte ({{ Bug("185889") }}), et, dans ce cas,

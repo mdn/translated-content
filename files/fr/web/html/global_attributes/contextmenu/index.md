@@ -43,7 +43,7 @@ Voici quelques exemples de personnalisations de menus. Le code HTML pourra être
       <menuitem label="Augmenter la taille de la police" onclick="incFont()"></menuitem>
       <menuitem label="Réduire la taille de la police" onclick="decFont()"></menuitem>
     </menu>
-    <li contextmenu="ChangeImage" id="changeImage">Sur cette ligne : on peut  utiliser l'option "Changer l'image" du menu.</li><br />
+    <li contextmenu="ChangeImage" id="changeImage">Sur cette ligne : on peut utiliser l'option "Changer l'image" du menu.</li><br />
     <img src="https://developer.mozilla.org/media/img/promote/promobutton_mdn5.png" contextmenu="ChangeImage" id="promoButton" />
     <menu type="context" id="ChangeImage">
       <menuitem label="Changer l'image" onclick="changeImage()"></menuitem>

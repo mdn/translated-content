@@ -63,7 +63,7 @@ L'instruction {{jsxref("Instructions/break","break")}} peut optionnellement êtr
 
 ### Utiliser `switch`
 
-Dans l'exemple suivant, si l'expression `expr` vaut "Bananes", le programme trouve la correspondance et exécute l'instruction associée. Lorsque l'instruction `break` est trouvée, le programme « sort » de l'instruction `switch` et continue l'exécution avec les instructions  suivantes. Si `break` n'avait pas été utilisé, l'instruction du cas "Cerises" aurait également été exécutée.
+Dans l'exemple suivant, si l'expression `expr` vaut "Bananes", le programme trouve la correspondance et exécute l'instruction associée. Lorsque l'instruction `break` est trouvée, le programme « sort » de l'instruction `switch` et continue l'exécution avec les instructions suivantes. Si `break` n'avait pas été utilisé, l'instruction du cas "Cerises" aurait également été exécutée.
 
 ```js
 switch (expr) {

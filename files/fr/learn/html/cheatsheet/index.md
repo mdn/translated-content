@@ -232,7 +232,7 @@ mais &#x3C;code>celui-ci représente du code&#x3C;/code>.</pre
       <td>{{HTMLElement("video")}}</td>
       <td id="video-example">
         <pre class="brush: html">
-&#x3C;video controls  width="250"
+&#x3C;video controls width="250"
   src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
   L'élément &#x3C;code>video&#x3C;/code> n'est pas pris en charge.
 &#x3C;/video></pre

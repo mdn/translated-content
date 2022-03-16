@@ -72,7 +72,7 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
-Gretel écoute la connexion  et vérifie que l'expéditeur est vraiment Hansel:
+Gretel écoute la connexion et vérifie que l'expéditeur est vraiment Hansel:
 
 ```js
 var portFromHansel;

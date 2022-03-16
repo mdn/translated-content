@@ -9,7 +9,7 @@ translation_of: Web/API/DOMObject
 ---
 {{APIRef("DOM")}}{{Obsolete_header}}
 
-L'interface obsolète **`DOMObject`** était utilisée dans les versions antérieures de la spécification DOM comme classe de base  pour tout type de données. Les spécifications maintenant utilisent simplement le type {{jsxref("Object")}} JavaScript .
+L'interface obsolète **`DOMObject`** était utilisée dans les versions antérieures de la spécification DOM comme classe de base pour tout type de données. Les spécifications maintenant utilisent simplement le type {{jsxref("Object")}} JavaScript .
 
 ## Spécifications
 

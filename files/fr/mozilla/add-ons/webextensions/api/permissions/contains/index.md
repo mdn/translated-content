@@ -17,7 +17,7 @@ Vérifiez si l'extension a les permissions listées dans l'objet  {{WebExtAPIRef
 
 L'argument `Permissions` peut contenir une propriété origine, qui est un tableau de [permissions hôtes](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions), ou une propriété  `permissions` , qui est un tableau de [permissions API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions), ou les deux.
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). La promesse est remplie avec true  seulement si toute l'extension possède actuellement toutes les permissions données. Pour les permissions d'hôtes, si le modèle de permissions if the extension's permissions [pattern-match](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). La promesse est remplie avec true seulement si toute l'extension possède actuellement toutes les permissions données. Pour les permissions d'hôtes, si le modèle de permissions if the extension's permissions [pattern-match](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
 
 ## Syntaxe
 

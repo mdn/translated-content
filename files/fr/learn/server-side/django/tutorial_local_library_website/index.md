@@ -1,5 +1,5 @@
 ---
-title: 'Django Didactique: Site web "Bibliothèque  locale"'
+title: 'Django Didactique: Site web "Bibliothèque locale"'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 tags:
   - Apprentissage

@@ -51,7 +51,7 @@ switch (document.readyState) {
 }
 ```
 
-### readystatechange comme alternative à  DOMContentLoaded
+### readystatechange comme alternative à DOMContentLoaded
 
 ```js
 // alternative à DOMContentLoaded

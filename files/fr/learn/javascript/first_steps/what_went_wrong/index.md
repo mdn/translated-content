@@ -67,7 +67,7 @@ Pour commencer, revenons à notre jeu de devinettes numériques — sauf que cet
 
 Antérieurement dans le cours, nous vous avons demandé de taper quelques commandes JavaScript simples dans la [console JavaScript](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) [des outils de développement](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs) (si vous ne pouvez pas vous rappeler comment l'ouvrir dans votre navigateur, suivez le lien précédent pour savoir comment). Ce qui est encore plus utile, c'est que la console vous donne des messages d'erreur chaque fois qu'une erreur de syntaxe existe dans le JavaScript qui est introduit dans le moteur JavaScript du navigateur. Maintenant partons en chasse !
 
-1.  Allez à l'onglet dans lequel est affiché `number-game-errors.html`, et ouvrez la console  JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent&nbsp;: ![](not-a-function.png)
+1.  Allez à l'onglet dans lequel est affiché `number-game-errors.html`, et ouvrez la console JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent&nbsp;: ![](not-a-function.png)
 2.  C'est une erreur très facile à trouver, et le navigateur vous fournit quelques indices pour vous en sortir (la copie d'écran ci‑dessus provient de Firefox, mais les autres navigateurs donnent des indications semblables). De gauche à droite, nous avons :
 
     - Une croix rouge indiquant que c'est une erreur.
@@ -132,7 +132,7 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 ### Erreurs de syntaxe&nbsp;: troisième tour
 
 1.  Maintenant si vous essayez de jouer, cela ira mieux — tout se déroule correctement, jusqu'à ce que vous arriviez à la fin, soit en devinant le bon chiffre, soit en épuisant le nombre de tentatives permises.
-2.  Arrivé là, le jeu échoue à nouveau et vous rencontrez la même erreur qu'au début — "TypeError: resetButton.addeventListener is not a function"&nbsp;! Mais cette fois‑ci, elle vient de la ligne  94.
+2.  Arrivé là, le jeu échoue à nouveau et vous rencontrez la même erreur qu'au début — "TypeError: resetButton.addeventListener is not a function"&nbsp;! Mais cette fois‑ci, elle vient de la ligne 94.
 3.  En regardant cette ligne, il est facile de voir que nous avons fait ici la même erreur que précédemment. Il nous suffit de changer `addeventListener` en `addEventListener`. Faites‑le.
 
 ## Une erreur de logique
@@ -173,7 +173,7 @@ Puis, nous passons le résultat de l'appel de `Math.random()` à [`Math.floor()`
 
     Math.floor(Math.random()) + 1
 
-Garder la partie entière d'un nombre décimal compris entre 0 et 1 renvoie toujours 0, y ajouter 1 donne toujours  1. Il faut multiplier le nombre aléatoire par 100 avant de l'arrondir par défaut. La ligne suivante nous donne un entier aléatoire entre 0 et  99&nbsp;:
+Garder la partie entière d'un nombre décimal compris entre 0 et 1 renvoie toujours 0, y ajouter 1 donne toujours 1. Il faut multiplier le nombre aléatoire par 100 avant de l'arrondir par défaut. La ligne suivante nous donne un entier aléatoire entre 0 et 99&nbsp;:
 
 ```js
 Math.floor(Math.random()*100);

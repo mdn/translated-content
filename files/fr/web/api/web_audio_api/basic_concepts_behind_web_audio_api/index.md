@@ -91,13 +91,13 @@ L'alternative est d'utiliser un format entrelacé:
 
     LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR (pour un buffer de 16 trames)
 
-Ce format est communément utilisé pour stocker et lire du son avec très peu de traitement, comme par exemple pour un flux de  MP3 décodé.
+Ce format est communément utilisé pour stocker et lire du son avec très peu de traitement, comme par exemple pour un flux de MP3 décodé.
 
 La Web Audio API expose \*uniquement\* des buffer linéaires, car elle est faite pour le traitement du son. Elle fonctionne en linéaire, mais convertit les données au format entrelacé au moment de les envoyer à la carte son pour qu'elles soient jouées. A l'inverse, lorsqu'un MP3 est décodé, le format d'origine entrelacé est converti en linéaire pour le traitement.
 
 ## Canaux audio
 
-Une mémoire tampon audio peut contenir différents nombres de canaux, depuis les configurations simple mono (un seul canal) ou stéréo (canal gauche et canal droit) en allant jusquà des configurations plus complexe comme le quad ou le 5.1, pour lesquels chaque canal contient plusieurs échantillons de sons, ce qui permet une expérience sonore plus riche. Les canaux sont généralement représentés par les abbréviations standard  détaillées dans le tableau ci-après :
+Une mémoire tampon audio peut contenir différents nombres de canaux, depuis les configurations simple mono (un seul canal) ou stéréo (canal gauche et canal droit) en allant jusquà des configurations plus complexe comme le quad ou le 5.1, pour lesquels chaque canal contient plusieurs échantillons de sons, ce qui permet une expérience sonore plus riche. Les canaux sont généralement représentés par les abbréviations standard détaillées dans le tableau ci-après :
 
 <table class="standard-table">
   <tbody>
@@ -234,7 +234,7 @@ Lorsque le nombre de canaux n'est pas le même en entrée et en sortie, on effec
       <td>
         <em>Conversion descendante de quad vers mono</em>.<br />Les quatre
         canaux de sortie (<code>L</code>, <code>R</code>, <code>SL</code>, et
-        <code>SR</code>) sont  combinés pour produire l'unique canal de sortie
+        <code>SR</code>) sont combinés pour produire l'unique canal de sortie
         (<code>M</code>).<br /><code
           >output.M = 0.25 * (input.L + input.R + </code
         ><code>input.SL + input.SR</code><code>)</code>
@@ -325,7 +325,7 @@ Lorsque le nombre de canaux n'est pas le même en entrée et en sortie, on effec
         <code>channelInterpretation</code> avait la valeur
         <code>discrete</code>.<br />La spécification autorise explicitement la
         définition à venir de nouvelles configurations de sortie pour les
-        enceintes. Ce cas de figure  n'est par conséquent pas garanti dans le
+        enceintes. Ce cas de figure n'est par conséquent pas garanti dans le
         futur, car le comportement des navigateurs pour un nombre spécifique de
         canaux pourrait être amené à changer.
       </td>

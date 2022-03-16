@@ -31,7 +31,7 @@ _Il faut modifier le lien pour cibler la version téléchargeable de votre exemp
 
 ## Choix effectués
 
-_Expliquez ici les décisions prises pour réaliser cette  recette. Pourquoi avez-vous choisi telle méthode de disposition ? Vous pouvez inclure ici d'autres exemples. Cette section est assez flexible car la complexité d'une recette peut varier grandement._
+_Expliquez ici les décisions prises pour réaliser cette recette. Pourquoi avez-vous choisi telle méthode de disposition ? Vous pouvez inclure ici d'autres exemples. Cette section est assez flexible car la complexité d'une recette peut varier grandement._
 
 ## Méthodes de recours ou alternatives
 

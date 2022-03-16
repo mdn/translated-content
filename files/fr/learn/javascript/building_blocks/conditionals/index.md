@@ -531,7 +531,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var select = document.querySelector(\'select\');\nvar list = document.querySelector(\'ul\');\nvar h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n  var choice = select.value;\n  var days = 31;\n  if(choice === \'February\') {\n    days = 28;\n  } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n    days = 30;\n  }\n\n  createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n  list.innerHTML = \'\';\n  h1.textContent = choice;\n for(var i = 1; i <= days; i++) {\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = i;\n    list.appendChild(listItem);\n  }\n }\n\ncreateCalendar(31,\'January\');';
+var jsSolution = 'var select = document.querySelector(\'select\');\nvar list = document.querySelector(\'ul\');\nvar h1 = document.querySelector(\'h1\');\n\nselect.onchange = function() {\n var choice = select.value;\n var days = 31;\n if(choice === \'February\') {\n    days = 28;\n  } else if(choice === \'April\' || choice === \'June\' || choice === \'September\'|| choice === \'November\') {\n    days = 30;\n  }\n\n createCalendar(days, choice);\n}\n\nfunction createCalendar(days, choice) {\n list.innerHTML = \'\';\n h1.textContent = choice;\n for(var i = 1; i <= days; i++) {\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = i;\n    list.appendChild(listItem);\n  }\n }\n\ncreateCalendar(31,\'January\');';
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -606,7 +606,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-const jsSolution = 'const select = document.querySelector(\'select\');\nlet html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n  let choice = select.value;\n\n  switch(choice) {\n    case \'black\':\n      update(\'black\',\'white\');\n      break;\n    case \'white\':\n      update(\'white\',\'black\');\n      break;\n    case \'purple\':\n      update(\'purple\',\'white\');\n      break;\n    case \'yellow\':\n      update(\'yellow\',\'darkgray\');\n      break;\n    case \'psychedelic\':\n      update(\'lime\',\'purple\');\n      break;\n  }\n}\n\nfunction update(bgColor, textColor) {\n  html.style.backgroundColor = bgColor;\n  html.style.color = textColor;\n}';
+const jsSolution = 'const select = document.querySelector(\'select\');\nlet html = document.querySelector(\'.output\');\n\nselect.onchange = function() {\n let choice = select.value;\n\n switch(choice) {\n    case \'black\':\n      update(\'black\',\'white\');\n      break;\n    case \'white\':\n      update(\'white\',\'black\');\n      break;\n    case \'purple\':\n      update(\'purple\',\'white\');\n      break;\n    case \'yellow\':\n      update(\'yellow\',\'darkgray\');\n      break;\n    case \'psychedelic\':\n      update(\'lime\',\'purple\');\n      break;\n  }\n}\n\nfunction update(bgColor, textColor) {\n html.style.backgroundColor = bgColor;\n html.style.color = textColor;\n}';
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);

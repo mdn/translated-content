@@ -67,7 +67,7 @@ Liens:
 
 ### HTML
 
-- Les obsolètes `et non conformes bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributs de l'élement `<body> ` ont été activés en mode  non-quirks ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
+- Les obsolètes `et non conformes bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributs de l'élement `<body> ` ont été activés en mode non-quirks ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
 - Les [imports HTML](/fr/docs/Web/Web_Components/HTML_Imports) sont maintenant supportés ([bug 877072](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)).
 
 ### JavaScript

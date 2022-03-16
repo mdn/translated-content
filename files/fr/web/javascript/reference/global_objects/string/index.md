@@ -109,7 +109,7 @@ Pour ces raisons, il peut y avoir certains problèmes quand le code attend une c
 Un objet `String` peut toujours être converti en son équivalent primitif grâce à la méthode [`valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/valueOf).
 
 ```js
-console.log(eval(s2.valueOf())); // renvoie  4
+console.log(eval(s2.valueOf())); // renvoie 4
 ```
 
 ### Échappement des caractères

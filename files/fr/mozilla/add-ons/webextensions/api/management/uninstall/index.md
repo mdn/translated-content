@@ -51,7 +51,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Désinstallez l'extension dont l'ID est "my-addon-id", en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annué la désinstallation.
 
-Notez que nous n'avons réussi un gestionnaire d'exécution, car si la désinstallation  réussit, l'extension n'est plus disponible pour le gérer.
+Notez que nous n'avons réussi un gestionnaire d'exécution, car si la désinstallation réussit, l'extension n'est plus disponible pour le gérer.
 
 ```js
 var id = "my-addon-id";

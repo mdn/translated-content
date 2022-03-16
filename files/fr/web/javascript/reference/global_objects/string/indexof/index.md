@@ -39,12 +39,12 @@ L'indice de la première occurrence de la valeur indiquée, `-1` si elle n'est p
 Les caractères dans une chaîne de caractères sont indexés de la gauche à la droite. L'indice du premier caractère est 0, celui du dernier caractère (d'une chaîne `str`) est `str.length - 1.`
 
 ```js
-"Blue Whale".indexOf("Blue");     // retourne  0
+"Blue Whale".indexOf("Blue");     // retourne 0
 "Blue Whale".indexOf("Blute");    // retourne -1
-"Blue Whale".indexOf("Whale", 0); // retourne  5
-"Blue Whale".indexOf("Whale", 5); // retourne  5
-"Blue Whale".indexOf("");         // retourne  0
-"Blue Whale".indexOf("", 9);      // retourne  9
+"Blue Whale".indexOf("Whale", 0); // retourne 5
+"Blue Whale".indexOf("Whale", 5); // retourne 5
+"Blue Whale".indexOf("");         // retourne 0
+"Blue Whale".indexOf("", 9);      // retourne 9
 "Blue Whale".indexOf("", 10);     // retourne 10
 "Blue Whale".indexOf("", 11);     // retourne 10
 ```

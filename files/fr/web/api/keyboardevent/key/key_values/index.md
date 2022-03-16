@@ -616,7 +616,7 @@ Modifiers are special keys which are used to generate special characters or caus
     <tr>
       <td><code>"Insert"</code></td>
       <td>
-        The Insert key, <kbd>Ins</kbd>. Toggles  between inserting and
+        The Insert key, <kbd>Ins</kbd>. Toggles between inserting and
         overwriting text.
       </td>
       <td><code>VK_INSERT</code> (0x2D)</td>

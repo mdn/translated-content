@@ -30,7 +30,7 @@ Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés su
 - `hostOnly`
   - : Un `booléen`, `true` si le cookie est un cookie hôte uniquement (c'est à dire que l'hôte de la requête doit correspondre exactement au domaine du cookie), ou  `false` dans la case contraire.
 - `httpOnly`
-  - : Un `booléen`, `true` si le cookie est marqué comme  HttpOnly (c'est à dire le cookie est inaccessible aux scripts côté client), ou `false` dans le cas contraire.
+  - : Un `booléen`, `true` si le cookie est marqué comme HttpOnly (c'est à dire le cookie est inaccessible aux scripts côté client), ou `false` dans le cas contraire.
 - `name`
   - : Une `chaîne` représentant le nom du cookie.
 - `path`

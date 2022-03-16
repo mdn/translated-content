@@ -18,7 +18,7 @@ Crée un nouveau groupe intégré dans la console Web. Contrairement à {{domxre
 
 Appellez {{domxref("console.groupEnd()")}} pour revenir au groupe parent.
 
-Voir [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_console) dans la documentation  de {{domxref("console")}}  pour plus de détails et des exemples.
+Voir [Using groups in the console](/fr/docs/Web/API/console#Using_groups_in_the_console) dans la documentation de {{domxref("console")}}  pour plus de détails et des exemples.
 
 {{AvailableInWorkers}}
 

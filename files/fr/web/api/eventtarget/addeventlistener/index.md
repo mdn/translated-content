@@ -757,7 +757,7 @@ for (let i=0, j=0 ; i<els.length ; i++) {
 
 // Cas 4
 for (let i=0, j=0 ; i<els.length ; i++) {
-  /* faire des tas de choses avec  j */
+  /* faire des tas de choses avec j */
   function processEvent(e) {/*faire quelque chose*/};
   els[j].addEventListener("click", processEvent, false);
 }

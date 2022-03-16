@@ -40,7 +40,7 @@ var setting = browser.cookies.set(
 - `firstPartyDomain`{{optional_inline}}
   - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie sera associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir [Isolement de la première partie](/fr/Add-ons/WebExtensions/API/cookies#Isolement_de_la_première_partie).
 - `httpOnly`{{optional_inline}}
-  - : Un `booléen` qui spécifie si le cookie doit être marqué comme  HttpOnly (`true`), ou pas (false). S’il est omis, la valeur par défaut est `false`.
+  - : Un `booléen` qui spécifie si le cookie doit être marqué comme HttpOnly (`true`), ou pas (false). S’il est omis, la valeur par défaut est `false`.
 - `name`{{optional_inline}}
   - : Une `chaîne` représentant le nom du cookie. S’il est omis, il est vide par défaut.
 - `path`{{optional_inline}}

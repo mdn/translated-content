@@ -140,7 +140,7 @@ La même chose mais avec un défilement animé :
 
 ```js
 var showBookmark = (function () {
-  var  _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
+  var _useHash, _scrollX, _scrollY, _nodeX, _nodeY, _itFrame, _scrollId = -1, _bookMark,
    /*
    * nDuration: la durée, exprimée en millisecondes, pour chaque frame
    * nFrames: le nombre de frames pour chaque défilement

@@ -32,11 +32,11 @@ La méthode **`evaluate()`** renvoie un {{domxref("XPathResult")}} basé sur une
 ## Exemples
 
 ```js
- var  headings  =  document .  evaluate  ( " / html / body //h2", document, null, XPathResult.ANY_TYPE, null);
+ var headings  =  document .  evaluate  ( " / html / body //h2", document, null, XPathResult.ANY_TYPE, null);
  /* Cherche le document pour tout élément h2.
  * Le résultat sera probablement un itérateur de noeuds non ordonné. */
- var  thisHeading  =  headings .  iterateNext  (  )  ;
- var  alertText  =   "Level 2 headings in this document are:\n"  ;
+ var thisHeading  =  headings .  iterateNext  (  )  ;
+ var alertText  =   "Level 2 headings in this document are:\n"  ;
  while   ( thisHeading )   {
   alertText  +  =  thisHeading . textContent  +   "\n"  ;
   thisHeading  =  headings .  iterateNext  (  )  ;

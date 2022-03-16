@@ -34,7 +34,7 @@ Highlights:
 
 ### HTML
 
-- Experimentally implemented, behind a pref, {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}} property, To activate it  set `dom.image.srcset.enable` to `true` ({{Bug(870021)}}).
+- Experimentally implemented, behind a pref, {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}} property, To activate it set `dom.image.srcset.enable` to `true` ({{Bug(870021)}}).
 - [**id**](/fr/docs/Web/HTML/Global_attributes/id) and [**class**](/fr/docs/Web/HTML/Global_attributes/class) are now true [global attributes](/fr/docs/Web/HTML/Global_attributes) and also apply to XML elements, in a namespace or not ({{bug(741295)}}).
 
 ### JavaScript

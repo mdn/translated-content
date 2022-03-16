@@ -300,7 +300,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 Chaque section peut avoir un titre (ou aucun si vous indiquez la valeur `None`) et des champs regroupés à l'aide de tuples enregistrés dans un dictionnaire — le schéma de déclaration peut paraître compliqué à décrire mais assez aisé à comprendre à la lecture du code ci-dessus formaté pour être plus compréhensible.
 
-Le résultat de cette description devrait vous apparaître de manière analogue à celle présente  ci-dessous :
+Le résultat de cette description devrait vous apparaître de manière analogue à celle présente ci-dessous :
 
 ![Admin Site - Improved BookInstance Detail with sections](admin_improved_bookinstance_detail_sections.png)
 

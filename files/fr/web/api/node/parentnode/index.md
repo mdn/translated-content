@@ -23,7 +23,7 @@ La propriété en lecture seule **parentNode** renvoie le parent du nœud spéci
 
 ```js
 if (node.parentNode) {
-  // supprime un noeud  de l'arbre,
+  // supprime un noeud de l'arbre,
   // sauf s'il a déjà été supprimé
   node.parentNode.removeChild(node);
 }

@@ -3,7 +3,7 @@ title: Ecrire des applications client WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
-Les WebSockets représentent une technologie, basée sur le protocole web socket, qui permet d'établir une session de communication bilatérale entre un navigateur web et un serveur. Un navigateur web est un exemple typique de client websocket typique mais le protocole n'est  dépendant d'aucune plateforme.
+Les WebSockets représentent une technologie, basée sur le protocole web socket, qui permet d'établir une session de communication bilatérale entre un navigateur web et un serveur. Un navigateur web est un exemple typique de client websocket typique mais le protocole n'est dépendant d'aucune plateforme.
 
 > **Note :** Un exemple d'utilisation des WebSockets à travers un système de chat sera mis à disposition sous forme de code dès que nos infrastructures seront en mesure de supporter les WebSockets.
 
@@ -39,13 +39,13 @@ Le constructeur peut renvoyer des exceptions:
 
 ### Erreurs de connexion
 
-Si une erreur se produit lors de la tentative de connexion, un  évènement nommé "error" est d'abord renvoyé à l'objet  [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) (invoquant ainsi son gestionnaire d'évènement `onerror`) suivi d'un évènement [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) (qui invoque alors son gestionnaire d'évènement `onclose`) indiquant la raison de la clôture.
+Si une erreur se produit lors de la tentative de connexion, un évènement nommé "error" est d'abord renvoyé à l'objet  [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) (invoquant ainsi son gestionnaire d'évènement `onerror`) suivi d'un évènement [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) (qui invoque alors son gestionnaire d'évènement `onclose`) indiquant la raison de la clôture.
 
 A partir de Firefox 11, un message d'erreur descriptif est envoyé à la console de la plateforme Mozilla, et un code de fermeture tel que défini dans la [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) est envoyé à travers l'évènement [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent).
 
 ### Exemples
 
-Cet  exemple simple crée un nouvel objet WebSocket, qui se connecte au serveur à l'adresse `ws://www.example.com/socketserver`. Un protocole spécifique "protocolOne" est indiqué dans cette exemple, bien qu'il ne soit pas obligatoire.
+Cet exemple simple crée un nouvel objet WebSocket, qui se connecte au serveur à l'adresse `ws://www.example.com/socketserver`. Un protocole spécifique "protocolOne" est indiqué dans cette exemple, bien qu'il ne soit pas obligatoire.
 
 ```js
 var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");

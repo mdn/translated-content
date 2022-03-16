@@ -61,7 +61,7 @@ function addData() {
   transaction.oncomplete = function(event) {
     note.innerHTML += '<li>Transaction terminée : modification de la base de données terminée.</li>';
   };
-  // En  cas d'échec de l'ouverture de la transaction
+  // En cas d'échec de l'ouverture de la transaction
   transaction.onerror = function(event) {
     note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" s\'est produite, échec de la transaction.</li>';
   };

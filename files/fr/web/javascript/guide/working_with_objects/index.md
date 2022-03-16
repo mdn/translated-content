@@ -276,7 +276,7 @@ Les objets peuvent également être créés en utilisant la méthode [`Object.cr
 ```js
 // Propriétés pour animal et encapsulation des méthodes
 let Animal = {
-  type: "Invertébrés",        // Valeur par défaut  value of properties
+  type: "Invertébrés",        // Valeur par défaut value of properties
   afficherType : function() {  // Une méthode pour afficher le type Animal
     console.log(this.type);
   }

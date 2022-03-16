@@ -52,7 +52,7 @@ La propriété `line-height` peut être définie grâce :
 ### Valeurs
 
 - `normal`
-  - : Le comportement dépend de l'agent utilisateur. Pour les navigateurs de bureau, l'agent utilisateur prend généralement une valeur environ égale à 1.2  selon la valeur de `font-family`.
+  - : Le comportement dépend de l'agent utilisateur. Pour les navigateurs de bureau, l'agent utilisateur prend généralement une valeur environ égale à 1.2 selon la valeur de `font-family`.
 - `<number>`
   - : La valeur utilisée est **sans unité** (type {{cssxref("&lt;number&gt;")}}) et correspond à un facteur multiplicateur de la taille de fonte utilisée. La valeur calculée est la même que celle définie avec `<number>`. Dans la plupart des cas, c'est la méthode qu'on privilégiera pour définir `line-height` et éviter les effets de l'héritage.
 - `<length>`
@@ -75,7 +75,7 @@ La propriété `line-height` peut être définie grâce :
 div { line-height: 1.2;   font-size: 10pt }   /* number */
 div { line-height: 1.2em; font-size: 10pt }   /* length */
 div { line-height: 120%;  font-size: 10pt }   /* percentage */
-div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif }
+div { font: 10pt/1.2 Georgia,"Bitstream Charter",serif }
 ```
 
 ### Notes

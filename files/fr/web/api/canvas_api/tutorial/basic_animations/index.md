@@ -28,7 +28,7 @@ Voici les étapes à suivre à chaque image dessinée (frame) :
 3.  **Dessiner les formes animées**
     Vous effectuez toutes les opérations pour afficher l'image.
 4.  **Restaurer l'état du canevas**
-    Si l'état du canevas a été sauvegardé, vous  restaurez cet état avant le prochain rendu.
+    Si l'état du canevas a été sauvegardé, vous restaurez cet état avant le prochain rendu.
 
 ## Contrôle d'une animation
 

@@ -116,7 +116,7 @@ window.addEventListener("load", drawCanvas);
 
 ## Notes spécifiques à Gecko
 
-- A partir de Gecko 2.0 {{geckoRelease("2.0")}}, le fait de spécifier des valeurs non finies  déclenche maintenant `NOT_SUPPORTED_ERR` au lieu de `SYNTAX_ERR`.
+- A partir de Gecko 2.0 {{geckoRelease("2.0")}}, le fait de spécifier des valeurs non finies déclenche maintenant `NOT_SUPPORTED_ERR` au lieu de `SYNTAX_ERR`.
 
 ## Voir aussi
 

@@ -28,7 +28,7 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
         <a
           href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
           >installation des outils de base</a
-        >, bases  de la
+        >, bases de la
         <a href="/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
           >manipulation des fichiers</a
         >, fondamentaux du HTML (comme décrit dans <a
@@ -145,7 +145,7 @@ Cela ne fait pas grande différence à l'affichage dans des circonstances normal
 
 C'est une bonne pratique, cela donne une page se chargeant plus rapidement et en douceur.
 
-De toutes manières, vous ne devez pas altérer la taille de vos images avec les attributs  HTML . Si vous réglez la taille de l'image trop grande, vous aurez un résultat avec beaucoup de "grain", flou ou trop petit et vous dépensez de la bande passante en téléchargeant une image qui ne convient pas aux besoins de l'utilisateur.  Votre image peut aussi sortir distordue, si vous n'en maintenez pas le bon  [Format d'image](https://fr.wikipedia.org/wiki/Format_d%27image). Vous devriez utiliser un éditeur d'images pour la mettre à la bonne taille avant de la mettre dans votre page web.
+De toutes manières, vous ne devez pas altérer la taille de vos images avec les attributs HTML . Si vous réglez la taille de l'image trop grande, vous aurez un résultat avec beaucoup de "grain", flou ou trop petit et vous dépensez de la bande passante en téléchargeant une image qui ne convient pas aux besoins de l'utilisateur.  Votre image peut aussi sortir distordue, si vous n'en maintenez pas le bon  [Format d'image](https://fr.wikipedia.org/wiki/Format_d%27image). Vous devriez utiliser un éditeur d'images pour la mettre à la bonne taille avant de la mettre dans votre page web.
 
 > **Note :** Si vous devez absolument modifier une taille d' image, vous devriez vous servir de  [CSS](/fr/Apprendre/CSS) .
 
@@ -182,7 +182,7 @@ Nous avons encore quelques petites choses pour vous :
 - Réglez l'image à une bonne taille :  `width` et `height` ( conseil : c'est 200px wide (large) and 171px high (haut)), puis expérimentez d'autres valeurs pour en appréhender les effets.
 - Mettez un  `title`  sur l'image.
 
-Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton  _Reset_ .  Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
+Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton _Reset_ .  Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
 
 ```html hidden
 <h2>Live output</h2>
@@ -339,7 +339,7 @@ Une meilleure solution consiste en l'utilisation des éléments HTML5 {{htmlelem
 
 L'élément {{htmlelement("figcaption")}}  dit au navigateur et aux technologies d'assistance que la légende décrit le contenu de l'autre élément {{htmlelement("figure")}}.
 
-> **Note :** D'un  point de vue accessibilité, les légendes ont un rôle différent du texte {{htmlattrxref('alt','img')}}. Le texte {{htmlattrxref('alt','img')}} ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
+> **Note :** D'un point de vue accessibilité, les légendes ont un rôle différent du texte {{htmlattrxref('alt','img')}}. Le texte {{htmlattrxref('alt','img')}} ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
 
 Un objet \<figure> n'est pas forcé de contenir une image. C'est une unité de contenu indépendante qui :
 
@@ -356,7 +356,7 @@ Dans cette section, nous allons vous demander de récupérer le code fini de la 
 - Encapsulez-le dans un élément {{htmlelement("figure")}} .
 - Copiez le texte de l'attribut, enlevez l'attribut  `title`  et mettez le texte dans un élément  {{htmlelement("figcaption")}} sous l'image.
 
-Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton  _Reset_ .  Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
+Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton _Reset_ .  Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
 
 ```html hidden
 <h2>Live output</h2>

@@ -20,7 +20,7 @@ La méthode **`HTMLTableElement.insertRow()`** insère une nouvelle ligne dans l
 
 - [`HTMLTableElement`](/en-US/docs/DOM/HTMLTableElement) est une référence à un élément table HTML.
 - `indice` est l'indice de ligne de la nouvelle ligne.
-- `ligne` reçoit la référence à la nouvelle ligne. Une référence à un [HTMLTableRowElement](/en-US/docs/Web/API/HTMLTableRowElement). Si l'indice est -1 ou est égal au nombre de lignes, la ligne est ajoutée comme dernière ligne. Si `indice` est plus grand que le nombre de lignes, une exception IndexSizeError sera générée. Si indice est omis, sa  valeur sera -1 par défaut.
+- `ligne` reçoit la référence à la nouvelle ligne. Une référence à un [HTMLTableRowElement](/en-US/docs/Web/API/HTMLTableRowElement). Si l'indice est -1 ou est égal au nombre de lignes, la ligne est ajoutée comme dernière ligne. Si `indice` est plus grand que le nombre de lignes, une exception IndexSizeError sera générée. Si indice est omis, sa valeur sera -1 par défaut.
 - Si une table a plusieurs éléments `tbody`, par défaut, la nouvelle ligne est ajoutée dans le dernier `tbody`. Pour insérer la ligne dans un `tbody` particulier :
   ` var tbody_particulier``=document.getElementById(id_tbody); var ligne=tbody_particulier.``insertRow(indice) `
 

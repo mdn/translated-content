@@ -35,7 +35,7 @@ Un nouvel objet {{domxref("XMLHttpRequest")}}. L'objet doit être au minimum ini
 
 ## La syntaxe de Firefox non-standard
 
-Firefox 16 a ajouté un paramètre non standard au constructeur qui peut activer le mode anonyme (voir {{Bug("692677")}}). Mettre le drapeau `mozAnon` à `true` revient à être identique au constructeur [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) décrit dans de vieilles versions des  specifications de XMLHttpRequest.
+Firefox 16 a ajouté un paramètre non standard au constructeur qui peut activer le mode anonyme (voir {{Bug("692677")}}). Mettre le drapeau `mozAnon` à `true` revient à être identique au constructeur [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) décrit dans de vieilles versions des specifications de XMLHttpRequest.
 
     const request = new XMLHttpRequest(paramsDictionary);
 

@@ -26,7 +26,7 @@ Il y a trois valeurs possibles pour cette propriété: `"round"`, `"bevel"` et `
 - `"bevel"` (biseau)
   - : Remplit une zone triangulaire supplémentaire entre les extrémités des segments connectés.
 - `"miter"` (onglet)
-  - : Les segments raccordés  sont reliés entre eux en prolongeant leurs bors extérieurs en un seul point, ce qui a pour effet de remplir uen zone supplémentaire en forme de losange. Ce paramètre est affecté par la proriété {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}. Valeur par dafaut.
+  - : Les segments raccordés sont reliés entre eux en prolongeant leurs bors extérieurs en un seul point, ce qui a pour effet de remplir uen zone supplémentaire en forme de losange. Ce paramètre est affecté par la proriété {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}. Valeur par dafaut.
 
 ## Exemples
 

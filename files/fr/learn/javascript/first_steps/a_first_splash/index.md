@@ -565,7 +565,7 @@ Ce bloc de code assez long réinitialise complètement les paramètres du jeu (l
 
 **À ce stade, vous devriez avoir un jeu (simple) entièrement fonctionnel — félicitations!**
 
-Pour finir, c'est le moment de faire une synthèse sur  quelques caractéristiques importantes du code ;  vous les avez déjà vues, sans forcément vous en rendre compte.
+Pour finir, c'est le moment de faire une synthèse sur quelques caractéristiques importantes du code ;  vous les avez déjà vues, sans forcément vous en rendre compte.
 
 ### Boucles
 
@@ -602,7 +602,7 @@ Voyons une dernière amélioration avant d'aborder cette discussion. Ajoutez la 
 guessField.focus();
 ```
 
-Cette ligne utilise la méthode{{domxref("HTMLElement.focus", "focus()")}} pour placer automatiquement le curseur dans le champ texte {{htmlelement ("input")}} dès le chargement de la page, permettant à l'utilisateur de commencer à taper sa première proposition de suite sans avoir à cliquer préalablement dans le champ. Ce n'est qu'un petit ajout, mais cela améliore la convivialité  en donnant à l'utilisateur une bonne idée visuelle de ce qu'il doit faire pour jouer.
+Cette ligne utilise la méthode{{domxref("HTMLElement.focus", "focus()")}} pour placer automatiquement le curseur dans le champ texte {{htmlelement ("input")}} dès le chargement de la page, permettant à l'utilisateur de commencer à taper sa première proposition de suite sans avoir à cliquer préalablement dans le champ. Ce n'est qu'un petit ajout, mais cela améliore la convivialité en donnant à l'utilisateur une bonne idée visuelle de ce qu'il doit faire pour jouer.
 
 Analysons ce qui se passe ici un peu plus en détail. En JavaScript, tout est objet. Un objet JavaScript possède des propriétés, chacune définissant une caractéristique. Vous pouvez créer vos propres objets, mais cela est une notion assez avancée, nous ne la couvrirons que beaucoup plus tard dans le cours. Pour l'instant, nous allons discuter brièvement des objets intégrés que contient votre navigateur, ce qui vous permet de faire beaucoup de choses utiles.
 
@@ -646,7 +646,7 @@ Jouons un peu avec certains objets du navigateur.
 
     Le navigateur va retourner `undefined`, parce que `value` n'existe pas dans le paragraphe.
 
-7.  Pour changer le texte dans le paragraphe vous aurez besoin de  la propriété {{domxref("Node.textContent", "textContent")}} à la place.
+7.  Pour changer le texte dans le paragraphe vous aurez besoin de la propriété {{domxref("Node.textContent", "textContent")}} à la place.
     Essayez ceci :
 
     ```js

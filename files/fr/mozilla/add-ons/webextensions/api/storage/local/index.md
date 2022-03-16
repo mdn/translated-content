@@ -26,7 +26,7 @@ Lorsque l'extension est désinstallée, son stockage local associé est effacé.
 
 Toujours dans Firefox, vous pouvez empêcher le navigateur d'effacer le stockage local lors de la désinstallation en visitant "about:config" et en définissant les deux préférences de navigateur suivantes sur `true`: "keepUuidOnUninstall" et "keepStorageOnUninstall". Cette fonctionnalité est fournie pour aider les développeurs à tester leurs extensions. Les extensions elles-mêmes ne sont pas en mesure de modifier ces préférences.
 
-Bien que cette API soit similaire à {{domxref("Window.localStorage")}} il est recommandé de ne pas utiliser `Window.localStorage` dans le code d'extension. Firefox effacera les données stockées par les extensions à l'aide de l'API localStorage dans divers scénarios  où les utilisateurs effacent leur historique de navigation et leurs données pour des raisons de confidentialité, tandis que les données enregistrées avec l'API storage.local seront correctement conservées dans ces scénarios.
+Bien que cette API soit similaire à {{domxref("Window.localStorage")}} il est recommandé de ne pas utiliser `Window.localStorage` dans le code d'extension. Firefox effacera les données stockées par les extensions à l'aide de l'API localStorage dans divers scénarios où les utilisateurs effacent leur historique de navigation et leurs données pour des raisons de confidentialité, tandis que les données enregistrées avec l'API storage.local seront correctement conservées dans ces scénarios.
 
 ## Méthodes
 

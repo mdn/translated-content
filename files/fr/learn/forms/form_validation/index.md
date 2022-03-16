@@ -152,7 +152,7 @@ Vous trouverez ci-dessous quelques exemples pour vous donner une idée de base d
 - `[a-z]` — correspond à tout caractère de la plage a–z, en minuscules seulement (utilisez `[A-Za-z]` pour minuscules et majuscules et `[A-Z]` pour les majuscules uniquement).
 - `a.c` — correspond à a, suivi par n'importe quel caractère,suivi par c.
 - `a{5}` — correspond à a, 5 fois.
-- `a{5,7}` — correspond à  a, 5 à 7 fois, mais ni plus, ni moins.
+- `a{5,7}` — correspond à a, 5 à 7 fois, mais ni plus, ni moins.
 
 Vous pouvez utiliser des nombres ou d'autres caractères dans ces expressions, comme&nbsp;:
 
@@ -400,7 +400,7 @@ Propriétés de l'API de validation des contraintes
 | `validity`                 | Un objet {{domxref("ValidityState")}} qui décrit l'état de validité de l'élément.                                                                                                                                                                                                    |
 | `validity.customError`     | Renvoie `true` si l'élément à une erreur personnalisée, `false` a contrario.                                                                                                                                                                                                                 |
 | `validity.patternMismatch` | Renvoie `true` si la valeur de l'élément ne correspond pas au motif fourni, `false` dans le cas contraire. Si la méthode renvoie `true`, l'élément fera partie de la pseudo-classe CSS {{cssxref(":invalid")}}.                                                                     |
-| `validity.rangeOverflow`   | Renvoie `true` si la valeur de l'élément est supérieure au maximum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des  pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                   |
+| `validity.rangeOverflow`   | Renvoie `true` si la valeur de l'élément est supérieure au maximum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                                   |
 | `validity.rangeUnderflow`  | Renvoie `true` si la valeur de l'élément est plus petite que le minimum défini, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                               |
 | `validity.stepMismatch`    | Renvoie `true` si la valeur de l'élément ne correspond pas aux règles définies par l'attribut `step`,`false` a contrario. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                    |
 | `validity.tooLong`         | Renvoie `true` si la taille de l'élément est supérieure à la longueur maximum définie, `false` dans le cas contraire. Si le retour est `true`, l'élément fera partie des pseudo-classes CSS {{cssxref(":invalid")}} et {{cssxref(":out-of-range")}}.                        |

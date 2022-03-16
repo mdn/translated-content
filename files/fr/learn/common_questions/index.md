@@ -58,7 +58,7 @@ Questions relatives aux outils/logiciels que vous pouvez utiliser pour construir
 
 Cette section rassemble les questions liées à l'esthétique, la structure des pages, aux techniques d'accessibilité, etc.
 
-- [Comment démarrer dans la conception  de mon site web?](/fr/docs/Learn/Common_questions/Thinking_before_coding)
+- [Comment démarrer dans la conception de mon site web?](/fr/docs/Learn/Common_questions/Thinking_before_coding)
   - : Cet article couvre la première étape la plus importante de tous les projets: définir ce que vous voulez accomplir avec.
 - [Que contiennent les mises en page classiques?](/fr/docs/Learn/Common_questions/Common_web_layouts)
   - : Lorsque vous concevez des pages pour votre site Web, il est bon d'avoir une idée des mises en page les plus courantes. Cet article présente quelques mises en page typiques du web, en analysant les parties qui composent chacune d'entre elles.

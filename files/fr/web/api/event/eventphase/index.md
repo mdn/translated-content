@@ -65,7 +65,7 @@ Ces valeurs décrivent quelle est la phase du flux d'événements actuellement �
       <td>
         L'événement est arrivé à
         {{domxref("EventTarget", "the event's target", "", 1)}}.
-        Les écouteurs d'événements  enregistrés pour cette phase sont appelés à
+        Les écouteurs d'événements enregistrés pour cette phase sont appelés à
         ce moment. Si {{domxref("Event.bubbles")}} vaut
         <code>false</code> (<em>faux</em>), le traitement de l'événement est
         terminé une fois la phase complète.

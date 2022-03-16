@@ -47,8 +47,8 @@ Comme vous l'avez déjà vu dans votre apprentissage de HTML et CSS, le texte d'
 
 Les propriétés CSS utilisées pour le style de texte appartiennent généralement à deux catégories, que nous verrons séparément dans cet article :
 
-- **Styles de la police de caractères** : ces propriétés concernent la fonte appliquée au  texte, affectant sa police, sa taille, sa graisse, si elle est italique, etc.
-- **Styles de composition du texte** : ces propriétés influent sur les espacements et autres dispositions de mise en page du texte, permettant de modifier, par exemple, l'espacement entre lignes et entre caractères, et la manière de disposer le texte  dans la boîte de contenu.
+- **Styles de la police de caractères** : ces propriétés concernent la fonte appliquée au texte, affectant sa police, sa taille, sa graisse, si elle est italique, etc.
+- **Styles de composition du texte** : ces propriétés influent sur les espacements et autres dispositions de mise en page du texte, permettant de modifier, par exemple, l'espacement entre lignes et entre caractères, et la manière de disposer le texte dans la boîte de contenu.
 
 > **Note :** Gardez à l'esprit que le texte à l'intérieur d'un élément est affecté comme une seule entité. Vous ne pouvez pas sélectionner et mettre en forme des sous-sections de texte, sauf si vous les enveloppez dans un élément approprié (tel que {{htmlelement ("span")}} ou {{htmlelement ("strong")}}, ou utilisez un texte pseudo-élément spécifique comme [::first-letter](/fr/docs/Web/CSS/::first-letter) (sélectionne la première lettre du texte d'un élément), [::first-line](/fr/docs/Web/CSS/::first-line) (sélectionne la première ligne du texte d'un élément) ou [::selection](/fr/docs/Web/CSS/::selection) (sélectionne le texte actuellement mis en surbrillance par le curseur) .
 

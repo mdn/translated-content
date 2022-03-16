@@ -321,7 +321,7 @@ console.log(noms.sort(annuaireAllemand.compare).join(', '));
 // Affiche "Hochberg, Hönigswald, Holzman"
 ```
 
-Certains mots allemands se conjuguent avec des umlauts supplémentaires, de sorte que dans les dictionnaires, le fait d'ignorer les umlauts pour le tri  est perceptible (sauf lors du tri de mots ne différant _que_ par des umlauts, comme *schon* avant _schön_).
+Certains mots allemands se conjuguent avec des umlauts supplémentaires, de sorte que dans les dictionnaires, le fait d'ignorer les umlauts pour le tri est perceptible (sauf lors du tri de mots ne différant _que_ par des umlauts, comme *schon* avant _schön_).
 
 ```js
 var dictionnaireAllemand = new Intl.Collator('de-DE-u-co-dict');

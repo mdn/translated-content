@@ -46,7 +46,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 XXX writeme == Notes == Une méthode semblable existe pour \<code>Element\</code>
 
-## Obtenir la classe  des éléments test
+## Obtenir la classe des éléments test
 
 C'est la méthode d'opération la plus couramment utilisée.
 

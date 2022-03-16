@@ -45,7 +45,7 @@ Quand l'API `browserAction`, vous pouvez :
 - {{WebExtAPIRef("browserAction.setIcon()")}}
   - : Définit l'icône de l'action du navigateur.
 - {{WebExtAPIRef("browserAction.setPopup()")}}
-  - : Définit le document HTML à ouvrir en popup lorsque l'utilisateur clique  sur l'icône de l'action du navigateur.
+  - : Définit le document HTML à ouvrir en popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur.
 - {{WebExtAPIRef("browserAction.getPopup()")}}
   - : Permet de définir le document HTML en tant que popup de l'action du navigateur.
 - {{WebExtAPIRef("browserAction.openPopup()")}}
@@ -65,7 +65,7 @@ Quand l'API `browserAction`, vous pouvez :
 - {{WebExtAPIRef("browserAction.enable()")}}
   - : Active l'action du navigateur pour un onglet. Par défaut, les actions du navigateur sont activées pour tous les onglets.
 - {{WebExtAPIRef("browserAction.disable()")}}
-  - : Désactive l'action du navigateur pour un onglet, ce qui signifie  qu'il ne peut pas être cliqué lorsque cet onglet est actif.
+  - : Désactive l'action du navigateur pour un onglet, ce qui signifie qu'il ne peut pas être cliqué lorsque cet onglet est actif.
 - {{WebExtAPIRef("browserAction.isEnabled()")}}
   - : Vérifie si l'action du navigateur est activée ou non.
 

@@ -186,7 +186,7 @@ stopBtn.onclick = function() {
 
 Il n'y a pas de fonction  `stop()`  disponible sur {{domxref("HTMLMediaElement")}}s,  nous le mettons donc en `pause()`  et, dans le même temps, définissons la valeur `currentTime` sur 0.
 
-Ensuite, nos boutons de rembobinage et d’avance rapide - ajoutez les blocs suivants au bas de votre  code:
+Ensuite, nos boutons de rembobinage et d’avance rapide - ajoutez les blocs suivants au bas de votre code:
 
 ```js
 rwdBtn.onclick = function() {
@@ -317,7 +317,7 @@ Un fichier WebVTT typique ressemblera à ceci:
 Pour que ceci soit affiché avec la lecture du média HTML, vous devez:
 
 - Enregistrez-le en tant que fichier .vtt dans un endroit approprié.
-- Lien vers le fichier .vtt avec  l'élément {{htmlelement("track")}} . `<track>`  devrait être placé dans `<audio>` ou `<video>`,  mais après tout `<source>` éléments .  Utilisez l’attribut {{htmlattrxref ("kind", "track")}} pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez {{htmlattrxref ("srclang", "track")}} pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
+- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>`  devrait être placé dans `<audio>` ou `<video>`,  mais après tout `<source>` éléments .  Utilisez l’attribut {{htmlattrxref ("kind", "track")}} pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez {{htmlattrxref ("srclang", "track")}} pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
 
 Voici un exemple:
 

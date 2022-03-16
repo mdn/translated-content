@@ -226,7 +226,7 @@ Si vous utilisez la méthode `GET` à la place, une chaîne comme celle-ci sera 
 
 #### Un petit framework vanilla
 
-Tout celà est fait automatiquement par le serveur quand vous envoyez un {{ HTMLElement("form") }}. Mais si vous voulez faire la même chose en utilisant JavaScript vous devez _tout_ dire à l'interprète. Pour celà, la manière d'envoyer des formulaires en *pure* AJAX est trop compliquée pour être expliquée ici. Pour cette raison, nous avons posté un **framework complet (mais tout de  même didactique)**, qui est capable d'utiliser les quatres méthodes de *submit* , et aussi de **transférer des fichiers**:
+Tout celà est fait automatiquement par le serveur quand vous envoyez un {{ HTMLElement("form") }}. Mais si vous voulez faire la même chose en utilisant JavaScript vous devez _tout_ dire à l'interprète. Pour celà, la manière d'envoyer des formulaires en *pure* AJAX est trop compliquée pour être expliquée ici. Pour cette raison, nous avons posté un **framework complet (mais tout de même didactique)**, qui est capable d'utiliser les quatres méthodes de *submit* , et aussi de **transférer des fichiers**:
 
 ```html
 <!doctype html>

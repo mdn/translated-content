@@ -5,7 +5,7 @@ translation_of: Web/API/AnalyserNode/maxDecibels
 ---
 {{ APIRef("Web Audio API") }}
 
-La propriété **`maxDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un nombre  flottant à double précision représentant la puissance maximum de l'intervalle pour l'analyse des données FFT, pour une conversion vers des valeurs non signées ou des nombres flottants — en d'autres termes, elle spécifie la valeur maximum pour l'intervalle de résultats des méthodes `getFloatFrequencyData()` et `getByteFrequencyData()`.
+La propriété **`maxDecibels`** de l'objet {{ domxref("AnalyserNode") }} est un nombre flottant à double précision représentant la puissance maximum de l'intervalle pour l'analyse des données FFT, pour une conversion vers des valeurs non signées ou des nombres flottants — en d'autres termes, elle spécifie la valeur maximum pour l'intervalle de résultats des méthodes `getFloatFrequencyData()` et `getByteFrequencyData()`.
 
 Sa valeur par défaut est `-30`.
 

@@ -51,7 +51,7 @@ DBOpenRequest.onsuccess = function(event) {
 };
 
 function clearData() {
-  // ouvre une transaction de lecture / écriture  prête pour le nettoyage
+  // ouvre une transaction de lecture / écriture prête pour le nettoyage
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // en cas de succès de l'ouverture de la transaction

@@ -27,7 +27,7 @@ La chose la plus importante à comprendre avant que nous ne commencions est que,
 
 Un shader est un programme, écrit en utilisant le [OpenGL ES Shading Language](https://www.khronos.org/files/opengles_shading_language.pdf) (GLSL), qui utilise les informations des sommets constituant une forme, et qui génère les données nécessaires pour faire un rendu des pixels à l'écran : nommément, les positions des pixels et leurs couleurs.
 
-Deux fonctions de shader sont exécutées lors du dessin d'un contenu WebGL : le **shader  de sommet** et le **shader de fragment**. Vous les écrivez en GLSL et vous passez le texte du code à WebGL pour qu'il soit compilé pour exécution dans la GPU. Pris conjointement, un ensemble de shaders de sommet et de fragment sont appelés un **programme shader**.
+Deux fonctions de shader sont exécutées lors du dessin d'un contenu WebGL : le **shader de sommet** et le **shader de fragment**. Vous les écrivez en GLSL et vous passez le texte du code à WebGL pour qu'il soit compilé pour exécution dans la GPU. Pris conjointement, un ensemble de shaders de sommet et de fragment sont appelés un **programme shader**.
 
 Jetons un coup d'œil rapide aux deux types de shaders, en gardant présent à l'esprit l'exemple du dessin d'une forme 2D dans le contexte WebGL.
 

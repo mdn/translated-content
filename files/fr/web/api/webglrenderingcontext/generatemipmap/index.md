@@ -26,7 +26,7 @@ Les mipmaps sont utilisées pour créer de la distance avec des objets. Une mipm
 
   - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible) de la texture active dont les mipmaps seront générées. Valeurs possibles :
 
-    - `gl.TEXTURE_2D`&nbsp;: une  texture bi-dimensionnelle.
+    - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionnelle.
     - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texture appliquée sur un cube.
     - Lorsqu'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
 

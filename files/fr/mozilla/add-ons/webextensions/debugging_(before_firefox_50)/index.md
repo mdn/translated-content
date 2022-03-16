@@ -141,7 +141,7 @@ Les scripts en arrière-plan sont toujours disponibles dans le débogueur si l'e
 
 Pour utiliser le débogueur JavaScript, sélectionnez l'onglet Débogueur dans la boîte à outils du navigateur. Le travail suivant est donc de trouver le code de votre extension  : pour ce faire [cliquez dans la boite de recherche et tapez le nom de la source](/fr/docs/Tools/Debugger/How_to/Search_and_filter).
 
-Une fois que vous avez trouvé votre source, vous pouvez définir des points d'arrêt, passer en revue le code et  faire [tout ce que vous vous attendez à pouvoir faire dans un débogueur](/fr/docs/Tools/Debugger).
+Une fois que vous avez trouvé votre source, vous pouvez définir des points d'arrêt, passer en revue le code et faire [tout ce que vous vous attendez à pouvoir faire dans un débogueur](/fr/docs/Tools/Debugger).
 
 {{EmbedYouTube("3edeJiG38ZA")}}
 

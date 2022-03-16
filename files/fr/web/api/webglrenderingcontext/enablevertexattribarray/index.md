@@ -42,7 +42,7 @@ De toute façon, puisque les attributs ne peuvent pas être utilisés sauf s'ils
 
 ### Erreurs
 
-Pour vérifier d'éventuelles erreurs  après l'appel à `enableVertexAttribArray()`, appelez {{domxref("WebGLRenderingContext.getError", "getError()")}}.
+Pour vérifier d'éventuelles erreurs après l'appel à `enableVertexAttribArray()`, appelez {{domxref("WebGLRenderingContext.getError", "getError()")}}.
 
 - `WebGLRenderingContext.INVALID_VALUE`
   - : L'`indice` spécifié est invalide, c'est-à-dire qu'il est supérieur ou égal au nombre maximal d'entrées autorisées dans la liste des attributs de sommet du contexte, comme indiqué par la valeur de `WebGLRenderingContext.MAX_VERTEX_ATTRIBS`.

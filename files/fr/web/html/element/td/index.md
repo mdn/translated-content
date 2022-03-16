@@ -199,7 +199,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
       <th scope="row">Omission de balises</th>
       <td>
         La balise de début est obligatoire. La balise de fin peut être absente
-        si l'élément est immédiatement suivi par  un élément
+        si l'élément est immédiatement suivi par un élément
         {{HTMLElement("th")}} ou un élément {{HTMLElement("td")}}
         ou s'il n'y a plus aucune donnée dans l'élément parent.
       </td>

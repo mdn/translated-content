@@ -89,7 +89,7 @@ var updating = browser.menus.update(
     - `parentId` {{optional_inline}}
       - : `integer` ou `string`. L'ID d'un élément de menu parent ; ceci fait de l'élément un enfant d'un élément précédemment ajouté. Remarque : Si vous avez créé plus d'un élément de menu, les éléments seront placés dans un sous-menu. Le parent du sous-menu sera étiqueté avec le nom de l'extension.
     - `targetUrlPatterns` {{optional_inline}}
-      - : `array` de `string`. Similairer à `documentUrlPatterns`, mais vous permet de filtrer en fonction de la `href` des balises d'ancre et l'attribut `src` des balises  img/audio/video. Ce paramètre prend en charge n'importe quel schéma d'URL, même ceux qui ne sont généralement pas autorisés dans un modèle de correspondance.
+      - : `array` de `string`. Similairer à `documentUrlPatterns`, mais vous permet de filtrer en fonction de la `href` des balises d'ancre et l'attribut `src` des balises img/audio/video. Ce paramètre prend en charge n'importe quel schéma d'URL, même ceux qui ne sont généralement pas autorisés dans un modèle de correspondance.
     - `title` {{optional_inline}}
 
       - : `string`. Le texte à afficher dans le poste. Obligatoire sauf si le `type` est "separateur".

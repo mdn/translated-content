@@ -178,7 +178,7 @@ YAxisPoint(13);
 emptyObj.x + "," + emptyObj.y; // "0,13"
 ```
 
-Si on souhaite supporter le cas où la fonction liée  d'une fonction liée en utilisant seulement `new`, ou juste en l'appellant, la fonction cible doit outrepasser cette restriction.
+Si on souhaite supporter le cas où la fonction liée d'une fonction liée en utilisant seulement `new`, ou juste en l'appellant, la fonction cible doit outrepasser cette restriction.
 
 ### Créer des raccourcis
 

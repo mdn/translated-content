@@ -269,12 +269,12 @@ thing<span class="punctuation token">.</span>style<span class="punctuation token
    <td>
     <p>L'argument à  <code>error()</code>.</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js">console<span class="punctuation token">.</span><span class="function token">error<span class="punctuation token">(</span></span><span class="string token">"an error"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7143/api-error.png" style="display: block; margin-left: auto; margin-right: auto;">
     <p>A partir de Firefox 31, la console affiche la pile complète des erreurs&nbsp;:</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js"><span class="keyword token">function</span> <span class="function token">error<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   console<span class="punctuation token">.</span><span class="function token">error<span class="punctuation token">(</span></span><span class="string token">"an error"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span>
@@ -297,12 +297,12 @@ thing<span class="punctuation token">.</span>style<span class="punctuation token
    <td>
     <p>Si l'insertion fonctionne, rien. Si l'insertion ne fonctionne pas l'argument&nbsp;:</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js">console<span class="punctuation token">.</span><span class="function token">assert<span class="punctuation token">(</span></span><span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"My assertion always fails"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7139/api-assert.png" style="display: block; margin-left: auto; margin-right: auto;">
     <p>A partir de Firefox 31, la console affiche la pile complète des insertions&nbsp;:</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js"><span class="keyword token">function</span> <span class="function token">assertion<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
   console<span class="punctuation token">.</span><span class="function token">assert<span class="punctuation token">(</span></span><span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"assertion failed"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="punctuation token">}</span>
@@ -334,7 +334,7 @@ thing<span class="punctuation token">.</span>style<span class="punctuation token
    <td>
     <p>L'argument à <code>warn()</code>.</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js">console<span class="punctuation token">.</span><span class="function token">warn<span class="punctuation token">(</span></span><span class="string token">"a warning"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7155/api-warn.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -356,7 +356,7 @@ thing<span class="punctuation token">.</span>style<span class="punctuation token
    <td>
     <p>L'argument à <code>info()</code>.</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js">console<span class="punctuation token">.</span><span class="function token">info<span class="punctuation token">(</span></span><span class="string token">"some info"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7145/api-info.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -378,7 +378,7 @@ thing<span class="punctuation token">.</span>style<span class="punctuation token
    <td>
     <p>Le label fourni, si présent, et le nombre d'occurrences que <code>count()</code> a appelé avec le label donné.</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js">console<span class="punctuation token">.</span><span class="function token">count<span class="punctuation token">(</span></span>user<span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
     <p><img alt="" src="https://mdn.mozillademos.org/files/7359/api-count.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
@@ -389,14 +389,14 @@ thing<span class="punctuation token">.</span>style<span class="punctuation token
    <td>
     <p><code>L'argument à log()</code>.</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js">console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"logged"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7147/api-log.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
   <tr>
    <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.trace"><code>trace()</code></a></td>
    <td>Trace de la pile.
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js">console<span class="punctuation token">.</span><span class="function token">trace<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7159/api-trace.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -405,7 +405,7 @@ thing<span class="punctuation token">.</span>style<span class="punctuation token
    <td>
     <p>Liste les propriétés d'un objet.</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js"><span class="keyword token">var</span> user <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById<span class="punctuation token">(</span></span><span class="string token">'user'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 console<span class="punctuation token">.</span><span class="function token">dir<span class="punctuation token">(</span></span>user<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7157/api-dir.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
@@ -415,7 +415,7 @@ console<span class="punctuation token">.</span><span class="function token">dir<
    <td>
     <p>Notifie que le timer a démarré.</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js">console<span class="punctuation token">.</span><span class="function token">time<span class="punctuation token">(</span></span><span class="string token">"t"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7149/api-time.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -424,7 +424,7 @@ console<span class="punctuation token">.</span><span class="function token">dir<
    <td>
     <p>Durée du timer.</p>
 
-    <pre class="brush: js  language-js notranslate">
+    <pre class="brush: js language-js notranslate">
 <code class="language-js">console<span class="punctuation token">.</span><span class="function token">timeEnd<span class="punctuation token">(</span></span><span class="string token">"t"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
     <img alt="" src="https://mdn.mozillademos.org/files/7151/api-timeEnd.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
   </tr>
@@ -449,7 +449,7 @@ console<span class="punctuation token">.</span><span class="function token">dir<
 
 <p>Depuis Firefox 31, il est possible d'utiliser le spécificateur de format <code>"%c"</code> pour personnaliser les messages console&nbsp;:</p>
 
-<pre class="brush: js  language-js notranslate"><code class="language-js">console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"%cMy stylish message"</span><span class="punctuation token">,</span> <span class="string token">"color: red; font-style: italic"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js language-js notranslate"><code class="language-js">console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"%cMy stylish message"</span><span class="punctuation token">,</span> <span class="string token">"color: red; font-style: italic"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
 <div><img alt="" src="https://mdn.mozillademos.org/files/7739/console-style.png" style="display: block; height: 52px; margin-left: auto; margin-right: auto; width: 293px;"></div>
 

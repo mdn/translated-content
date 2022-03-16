@@ -53,7 +53,7 @@ Ces URL seront récrites avant que la requête soit envoyée, signifiant qu'aucu
 <img src="https://not-example.com/image.png">
 ```
 
-Les conversions navigationnelles vers des ressources externes amènent un risque significatif  de dysfonctionnement étant donné que des requêtes peuvent n'être pas converties, par exemple celles-ci :
+Les conversions navigationnelles vers des ressources externes amènent un risque significatif de dysfonctionnement étant donné que des requêtes peuvent n'être pas converties, par exemple celles-ci :
 
 ```html
 <a href="https://example.com/">Home</a>

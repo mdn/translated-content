@@ -174,7 +174,7 @@ Le nouvel enregistrement défini l'objet pour cette nouvelle application avec le
 
 Dès à présent, la base de données doit être décrite. Il est souvent recommandé pour minimiser une transition délicate d'utiliser la même base de données en développement et en production. La documentation concernant les [bases de données](https://docs.djangoproject.com/fr/2.2/ref/settings/#databases) prises en charge sont bien décrites sur le site du projet Django.
 
-Le système de gestion de base de données (SGBD) SQLite sera utilisé dans le projet de cette série didactique ; nous n'aurons pas d'accès concurents massifs et ce système ne requiert pas  de paramétrages complémentaires. Ci-dessous la définition dans **settings.py** est nécessaire pour utiliser ce SGBD :
+Le système de gestion de base de données (SGBD) SQLite sera utilisé dans le projet de cette série didactique ; nous n'aurons pas d'accès concurents massifs et ce système ne requiert pas de paramétrages complémentaires. Ci-dessous la définition dans **settings.py** est nécessaire pour utiliser ce SGBD :
 
 ```python
 DATABASES = {

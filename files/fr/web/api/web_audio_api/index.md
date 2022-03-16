@@ -55,7 +55,7 @@ Conteneurs et définitions qui donnent sa forme au graphe audio
 - {{domxref("AudioBufferSourceNode")}}
   - : Un objet **`AudioBufferSourceNode`** est une source audio composée de données audio montées en mémoire dans un {{domxref("AudioBuffer")}}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
 - {{domxref("MediaElementAudioSourceNode")}}
-  - : Un objet **`MediaElementAudio.SourceNode`** est une source audio composée d'un élément  HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
+  - : Un objet **`MediaElementAudio.SourceNode`** est une source audio composée d'un élément HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }}. C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
 - {{domxref("MediaStreamAudioSourceNode")}}
   - : Un objet **`MediaStreamAudio.SourceNode`** est une source audio composée d'un [WebRTC](/en-US/docs/WebRTC) {{domxref("MediaStream")}} (tel qu'une webcam ou un microphone). C'est un {{domxref("AudioNode")}} qui se comporte comme une source audio.
 

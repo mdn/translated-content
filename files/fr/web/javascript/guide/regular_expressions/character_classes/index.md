@@ -33,7 +33,7 @@ Les classes de caractères permettent de distinguer différents ensembles de car
         </p>
         <p>
           Ainsi, <code>/.n/</code> correspond à  'un' et 'en' dans "Un baobab
-          nain en cours de  croissance" mais pas à 'nain'.
+          nain en cours de croissance" mais pas à 'nain'.
         </p>
         <p>
           Si le marqueur <code>s</code> (<em>dotAll</em>) est utilisé, le point

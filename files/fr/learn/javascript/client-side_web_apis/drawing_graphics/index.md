@@ -61,7 +61,7 @@ Autour de 2006-2007, Mozilla a commencé à travailler sur une implémentation e
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
 
-Cet article se concentrera principalement sur les canvas 2D, car le code WebGL brut est très complexe. Nous montrerons cependant comment utiliser une bibliothèque WebGL pour créer une scène 3D plus facilement, et vous pourrez  par la suite suivre le tutoriel [WebGL](/fr/Apprendre/WebGL), qui couvre le code WebGL brut.
+Cet article se concentrera principalement sur les canvas 2D, car le code WebGL brut est très complexe. Nous montrerons cependant comment utiliser une bibliothèque WebGL pour créer une scène 3D plus facilement, et vous pourrez par la suite suivre le tutoriel [WebGL](/fr/Apprendre/WebGL), qui couvre le code WebGL brut.
 
 > **Note :** Canvas est très bien pris en charge parmi les différents navigateurs, à l'exception de IE 8 (et inférieur) pour les canvas 2D, et IE 11 (et inférieur) pour WebGL.
 

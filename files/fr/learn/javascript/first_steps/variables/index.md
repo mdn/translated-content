@@ -229,7 +229,7 @@ myName = 'Chris';
 myAge = 37;
 ```
 
-Revenez à la console maintenant et saisissez‑y ces deux lignes. Constatez que la console renvoie en confirmation la  valeur assignée à la variable dans chaque cas. Vous pouvez, à nouveau, faire renvoyer par la console les valeurs de variable en saisissant simplement son nom dans la console — essayez encore&nbsp;:
+Revenez à la console maintenant et saisissez‑y ces deux lignes. Constatez que la console renvoie en confirmation la valeur assignée à la variable dans chaque cas. Vous pouvez, à nouveau, faire renvoyer par la console les valeurs de variable en saisissant simplement son nom dans la console — essayez encore&nbsp;:
 
 ```js
 myName;

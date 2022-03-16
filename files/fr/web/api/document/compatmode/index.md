@@ -23,7 +23,7 @@ Indique si le document est affiché en mode dégradé ([Quirks mode](/fr/docs/Mo
 <!---->
 
 - mode
-  - : est une  valeur énumérée qui peut être :
+  - : est une valeur énumérée qui peut être :
 
 <!---->
 

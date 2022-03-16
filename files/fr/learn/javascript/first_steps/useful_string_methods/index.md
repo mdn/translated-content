@@ -174,7 +174,7 @@ Cette commande doit renvoyer le nombre 7, parce que «&nbsp;mozilla&nbsp;» comp
 
 ### Retrouver un caractère donné dans une chaîne
 
-Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver&nbsp;; par exemple, pour retrouver le premier caractère, vous devez  écrire ceci&nbsp;:
+Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver&nbsp;; par exemple, pour retrouver le premier caractère, vous devez écrire ceci&nbsp;:
 
 ```js
 browserType[0];
@@ -327,7 +327,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n                 \'Merry Christmas my love\',\n                 \'A happy Christmas to all the family\',\n                 \'You\\\'re all I want for Christmas\',\n                 \'Get well soon\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n  var input = greetings[i];\n  if(greetings[i].indexOf(\'Christmas\') !== -1) {\n    var result = input;\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n                 \'Merry Christmas my love\',\n                 \'A happy Christmas to all the family\',\n                 \'You\\\'re all I want for Christmas\',\n                 \'Get well soon\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Christmas\') !== -1) {\n    var result = input;\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}';
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -396,7 +396,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i < cities.length; i++) {\n  var input = cities[i];\n  var lower = input.toLowerCase();\n  var firstLetter = lower.slice(0,1);\n  var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n  var result = capitalized;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -477,7 +477,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n  var input = stations[i];\n  var code = input.slice(0,3);\n  var semiC = input.indexOf(\';\');\n  var name = input.slice(semiC + 1);\n  var result = code + \': \' + name;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
 
 
 textarea.addEventListener('input', updateCode);

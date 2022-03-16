@@ -15,7 +15,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-Nous allons maintenant aborder les problèmes Javascript en navigateur croisé et comment les résoudre. Cela comprend des informations sur l'utilisation  des outils de dev des navigateurs pour localiser et fixer les problèmes, l'utilisation des Polyfills et de librairies pour contourner les problèmes, utiliser les fonctionnalités modernes de Javascript sur des vieux navigateurs, et plus encore.
+Nous allons maintenant aborder les problèmes Javascript en navigateur croisé et comment les résoudre. Cela comprend des informations sur l'utilisation des outils de dev des navigateurs pour localiser et fixer les problèmes, l'utilisation des Polyfills et de librairies pour contourner les problèmes, utiliser les fonctionnalités modernes de Javascript sur des vieux navigateurs, et plus encore.
 
 <table class="standard-table">
   <tbody>
@@ -460,7 +460,7 @@ var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 ```
 
-Dans le cas de l'API Web Audio, les principaux points d'entrée pour utiliser l'API étaient supportés dans Chrome/Opera via les versions préfixées `webkit` (ils supportent dorénavant les versions non préfixées). Le moyen le plus simple de contourner cette situation est de créer une nouvelle version des objets qui sont  préfixés dans certains navigateurs, et de la rendre égale à la version non préfixée, OU à la version préfixée (OU n'importe quelles versions préfixées qui méritent d'être éxaminées) — quelle que soit celle supportée par le navigateur affichant le site elle sera utilisée.
+Dans le cas de l'API Web Audio, les principaux points d'entrée pour utiliser l'API étaient supportés dans Chrome/Opera via les versions préfixées `webkit` (ils supportent dorénavant les versions non préfixées). Le moyen le plus simple de contourner cette situation est de créer une nouvelle version des objets qui sont préfixés dans certains navigateurs, et de la rendre égale à la version non préfixée, OU à la version préfixée (OU n'importe quelles versions préfixées qui méritent d'être éxaminées) — quelle que soit celle supportée par le navigateur affichant le site elle sera utilisée.
 
 Ensuite utilisez cet objet pour manipuler l'API, plutôt que l'original. Dans ce cas nous créons un constructeur [AudioContext](/fr/docs/Web/API/AudioContext) modifié, puis nous créons une nouvelle instance de contexte audio à utiliser pour notre codage Web Audio.
 

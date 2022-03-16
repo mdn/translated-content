@@ -57,7 +57,7 @@ Il n'est donc pas étonnant que les créateurs du HTML fournissent un moyen de s
 
 ### Comment fonctionne un tableau ?
 
-L'avantage du tableau tient dans sa rigueur. L'information est facilement interprétée par  des associations visuelles entre les en‑têtes de lignes et colonnes. Cherchez dans la table ci-dessous par exemple et trouvez une planète géante gazeuse du système jovien avec 62 lunes. Vous pouvez trouver la réponse en associant les en-têtes de lignes et colonnes pertinents.
+L'avantage du tableau tient dans sa rigueur. L'information est facilement interprétée par des associations visuelles entre les en‑têtes de lignes et colonnes. Cherchez dans la table ci-dessous par exemple et trouvez une planète géante gazeuse du système jovien avec 62 lunes. Vous pouvez trouver la réponse en associant les en-têtes de lignes et colonnes pertinents.
 
 <table>
   <caption>
@@ -204,7 +204,7 @@ Lorsque cela est fait correctement, même les personnes malvoyantes peuvent inte
 
 ### Style de tableau
 
-Vous pouvez également [regarder sur l'exemple réel](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) sur GitHub ! Vous remarquerez sur celui-ci que le tableau est légèrement plus lisible  — car le tableau figurant ci-dessus présente un style minimal, alors que sa version sur GitHub est liée à un  CSS plus signifiant.
+Vous pouvez également [regarder sur l'exemple réel](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) sur GitHub ! Vous remarquerez sur celui-ci que le tableau est légèrement plus lisible  — car le tableau figurant ci-dessus présente un style minimal, alors que sa version sur GitHub est liée à un CSS plus signifiant.
 
 Ne vous faites pas d'illusions ; pour obtenir un tableau avec un certain effet sur le web, vous devez fournir un minimum d'informations de style avec [CSS](/fr/docs/Learn/CSS), ainsi qu'une structure solide avec HTML. Dans ce module nous nous concentrons sur la partie HTML ; pour en savoir plus sur la partie CSS, vous devrez lire notre article [Style et tableaux](/fr/docs/Learn/CSS/Styling_boxes/Styling_tables) quand vous aurez fini ici.
 
@@ -489,7 +489,7 @@ Ce qui nous donne comme résultat :
 
 {{EmbedLiveSample("Premier_exemple")}}
 
-Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne  (nous aurions probablement défini une `classe` dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément `<col>`. Les éléments `<col>` sont utilisés dans un conteneur `<colgroup>` juste en-dessous de la balise `<table>`. Nous pourrions créer le même effet que  celui vu plus haut en spécifiant notre tableau comme suit&nbsp;:
+Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne  (nous aurions probablement défini une `classe` dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément `<col>`. Les éléments `<col>` sont utilisés dans un conteneur `<colgroup>` juste en-dessous de la balise `<table>`. Nous pourrions créer le même effet que celui vu plus haut en spécifiant notre tableau comme suit&nbsp;:
 
 ### Autres exemples
 

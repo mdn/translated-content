@@ -179,7 +179,7 @@ Si vous n'avez pas compris quelque chose, n'hésitez pas à relire l'article, ou
 
 ## Voir aussi
 
-- [Fonctions  en profondeur](/fr/docs/Web/JavaScript/Reference/Functions) — Un guide détaillé couvrant des information plus avancées sur les fonctions.
+- [Fonctions en profondeur](/fr/docs/Web/JavaScript/Reference/Functions) — Un guide détaillé couvrant des information plus avancées sur les fonctions.
 - [Fonction Callback en JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — Une façon courante en JavaScript consiste à passer une fonction à une autre en tant qu'argument, qui est alors appelée à l'intérieur de la première fonction. Cela va au delà de la portée de ce cours, mais mériterait d'être étudier rapidement.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

@@ -87,9 +87,9 @@ var monObjet  = {};
 var monNonObjet = Object.create(null);
 
 chaîneSimple instanceof String; //false car le prototype vaut undefined
-maChaîne  instanceof String; // true
+maChaîne instanceof String; // true
 newChaîne instanceof String; // true
-maChaîne  instanceof Object; // true
+maChaîne instanceof Object; // true
 
 monObjet instanceof Object;  // true, bien que le protoype soit undefined
 ({}) instanceof Object;      // true, comme pour le cas précédent

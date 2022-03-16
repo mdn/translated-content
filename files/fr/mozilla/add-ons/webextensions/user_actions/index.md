@@ -14,7 +14,7 @@ Certaines API WebExtension exécutent des fonctions qui sont généralement exé
 - une action du navigateur avec un popup affichera le popup lorsque l'utilisateur clique dessus, mais il y a aussi une API {{WebExtAPIRef("browserAction.openPopup")}} permettant à une extension d'ouvrir le popup en programmation.
 - si une extension ajoute une barre latérale, elle est généralement ouverte par l'utilisateur via une partie de l'interface utilisateur intégrée du navigateur, comme le menu Affichage/Barre latérale. Mais il y a aussi une API  {{WebExtAPIRef("sidebarAction.open")}} permettant à une extension d'ouvrir leur barre latérale en programmation.
 
-Pour suivre le principe de "pas de  surprises", des APIs comme celle-ci ne peuvent être appelées que de l'intérieur du gestionnaire pour une action de l'utilisateur. Les actions de l'utilisateur comprennent ce qui suit :
+Pour suivre le principe de "pas de surprises", des APIs comme celle-ci ne peuvent être appelées que de l'intérieur du gestionnaire pour une action de l'utilisateur. Les actions de l'utilisateur comprennent ce qui suit :
 
 - Cliquez sur l'action du navigateur ou de la page de l'extension.
 - Sélection d'un élément de menu contextuel défini par l'extension.

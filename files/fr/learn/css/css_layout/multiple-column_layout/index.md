@@ -184,7 +184,7 @@ body {
 
 {{ EmbedLiveSample('Style_des_colonnes', '100%', 400) }}
 
-Notez que  la règle ne prend pas de largeur en soi. Elle se place dans l'espace créé avec  `column-gap`. Pour faire un peu plus d'espace d'un côté ou de l'autre de la règle, vous devez augmenter la taille de l'espace entre les colonnes.
+Notez que la règle ne prend pas de largeur en soi. Elle se place dans l'espace créé avec  `column-gap`. Pour faire un peu plus d'espace d'un côté ou de l'autre de la règle, vous devez augmenter la taille de l'espace entre les colonnes.
 
 ## Colonnes et coupures
 

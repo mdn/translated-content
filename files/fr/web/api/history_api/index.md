@@ -92,7 +92,7 @@ Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer
 
 On peut assimiler l'appel à `pushState()` à l'affectation `window.location = "#foo"`, en cela que l'un comme l'autre auront pour effet de créer et déclencher une autre entrée de l'historique associée au document courant. Mais `pushState()` a quelques avantages :
 
-- La nouvelle URL peut être quelconque pourvu qu'elle ait la même origine que l'URL courante. En revanche, affecter `window.location` vous maintient  au même {{ domxref("document") }} seulement si vous modifiez uniquement le hash.
+- La nouvelle URL peut être quelconque pourvu qu'elle ait la même origine que l'URL courante. En revanche, affecter `window.location` vous maintient au même {{ domxref("document") }} seulement si vous modifiez uniquement le hash.
 - Vous n'êtes pas contraint de modifier l'URL si vous ne le voulez pas. Par contre, affecter `window.location = "#foo";` crée une nouvelle entrée de l'historique seulement si le hash courant n'est pas `#foo`.
 - Vous pouvez associer des données quelconques avec votre nouvelle entrée de l'historique. Avec l'approche basée sur le hash, il est nécessaire de coder toute donnée pertinente en une chaîne courte.
 
@@ -137,7 +137,7 @@ Voir {{ domxref("window.onpopstate") }} pour un exemple d'utilisation.
 
 ### Lire l'état courant
 
-Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec  `pushState()` ou `replaceState()`) et qu'ensuite l'utilisateur redémarre le navigateur.  Quand votre page sera rechargée, elle recevra l'événement  onload , mais pas l'événement popstate.  Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.
+Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec  `pushState()` ou `replaceState()`) et qu'ensuite l'utilisateur redémarre le navigateur.  Quand votre page sera rechargée, elle recevra l'événement onload , mais pas l'événement popstate.  Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.
 
 Vous pouvez lire l'état de l'entrée courante de l'historique sans devoir attendre un événement `popstate` en utilisant la propriété `history.state` comme ceci :
 

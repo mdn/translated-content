@@ -42,7 +42,7 @@ Un objet {{domxref("ImageData")}}  contenant les données de l'image pour le rec
 ### Erreurs renvoyées
 
 - `IndexSizeError`
-  - : Renvoyé si l'un des arguments de  largeur ou de hauteur est égal à zéro.
+  - : Renvoyé si l'un des arguments de largeur ou de hauteur est égal à zéro.
 
 ## Exemples
 

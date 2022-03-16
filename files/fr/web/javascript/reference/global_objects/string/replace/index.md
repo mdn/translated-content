@@ -27,7 +27,7 @@ La chaîne de caractère originale reste inchangée.
 ### Paramètres
 
 - `regexp` (modèle)
-  - : Un objet ou un littéral {{jsxref("RegExp")}}. La ou les correspondances sont remplacées  par `nouvSouschn` ou par la valeur retournée par la `fonction` indiquée.
+  - : Un objet ou un littéral {{jsxref("RegExp")}}. La ou les correspondances sont remplacées par `nouvSouschn` ou par la valeur retournée par la `fonction` indiquée.
 - `souschn` (modèle)
   - : Une {{jsxref("String")}} qui est à remplacer par `nouvSouschn`. Elle est traitée comme une chaîne de caractères verbatim et elle n'est _pas_ interprétée comme une expression régulière. Seule la première occurrence sera remplacée.
 - `nouvSouschn` (remplacement)

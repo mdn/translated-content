@@ -27,7 +27,7 @@ La méthode **`Number.parseFloat()`** analyse et convertit une chaîne de caract
 
 ### Valeur de retour
 
-Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères passée en argument. Si le premier caractère de la chaîne ne peut pas être converti en un nombre, la  valeur {{jsxref("NaN")}} sera renvoyée.
+Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères passée en argument. Si le premier caractère de la chaîne ne peut pas être converti en un nombre, la valeur {{jsxref("NaN")}} sera renvoyée.
 
 ## Description
 

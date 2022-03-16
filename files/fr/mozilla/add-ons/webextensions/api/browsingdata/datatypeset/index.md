@@ -20,7 +20,7 @@ Il contient un certains nombres de propriétés booléennes. Le nom de chaque pr
 
 Ce type est utilisé :
 
-- dans {{WebExtAPIRef("browsingData.remove()")}} pour décrire les types  de données à supprimer
+- dans {{WebExtAPIRef("browsingData.remove()")}} pour décrire les types de données à supprimer
 - dans {{WebExtAPIRef("browsingData.settings()")}} pour décrire les types de données actuellement sélectionnés dans la fonction  "effacer l'historique" du navigateur.
 
 ## Type

@@ -77,7 +77,7 @@ if ('ab'.substr(-1) != 'b') {
   /**
    *  Obtenir la sous-chaîne d'une chaîne
    *  @param  {entier}  début     où démarrer la sous-chaîne
-   *  @param  {entier}  longueur  combien de caractères à retourner
+   *  @param  {entier}  longueur combien de caractères à retourner
    *  @return {chaîne}
    */
   String.prototype.substr = function(substr) {

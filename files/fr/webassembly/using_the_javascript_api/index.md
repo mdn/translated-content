@@ -7,7 +7,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
 Si vous avez déjà [compilé un module depuis un autre langage en utilisant des outils comme Emscripten](/fr/docs/WebAssembly/C_to_wasm), ou [chargé et éxecuté vous-même le code](/fr/docs/WebAssembly/Loading_and_running), l'étape suivante est d'en apprendre plus à propos des autres fonctionnalités de l'API JavaScript WebAssembly. Cet article vous enseigne ce que vous aurez besoin de connaître.
 
-> **Note :** Si vous n'êtes pas familier avec les concepts de base mentionnés dans cet article et vous avez besoin de plus d'explication, lisez  d'abord [WebAssembly concepts](/fr/docs/WebAssembly/Concepts).
+> **Note :** Si vous n'êtes pas familier avec les concepts de base mentionnés dans cet article et vous avez besoin de plus d'explication, lisez d'abord [WebAssembly concepts](/fr/docs/WebAssembly/Concepts).
 
 ## Quelques exemples simples
 
@@ -81,7 +81,7 @@ Starting soon in Firefox, in addition to viewing WebAssembly as text, developers
 
 ## Memory
 
-Dans le modèle mémoire bas niveau de WebAssembly, la mémoire est représentée comme une suite continue de bytes non typés appelée [Linear Memory](http://webassembly.org/docs/semantics/#linear-memory). Cette mémoire linéaire est accessible en écriture et  en lecture par des instructions [load et store ](http://webassembly.org/docs/semantics/#linear-memory-accesses)à l'intérieur du module. Dans ce modèle de mémoire, les instructions load et store peuvent accéder à n'importe quel byte de la mémoire linéaire, ce qui est nécessaire à une réprésentation fidèle de concepts C/C++ comme les pointeurs.
+Dans le modèle mémoire bas niveau de WebAssembly, la mémoire est représentée comme une suite continue de bytes non typés appelée [Linear Memory](http://webassembly.org/docs/semantics/#linear-memory). Cette mémoire linéaire est accessible en écriture et en lecture par des instructions [load et store ](http://webassembly.org/docs/semantics/#linear-memory-accesses)à l'intérieur du module. Dans ce modèle de mémoire, les instructions load et store peuvent accéder à n'importe quel byte de la mémoire linéaire, ce qui est nécessaire à une réprésentation fidèle de concepts C/C++ comme les pointeurs.
 
 Cependant contrairement à une implémentation native d'un programe C/C++ dans laquelle l'espace de mémoire disponible recouvre celle de l'ensemble du processus, la mémoire accessible par une instance particulière de WebAssembly est un espace mémoire spécifique  — potentiellement très réduit — contenu dans une objet mémoire WebAssembly. Ceci permet à une application web unique d'utiliser des librairies indépendantes — Chacune d'entre elles pouvant utiliser en interne WebAssembly— avec des espaces mémoires séparés qui sont complètement isolés les uns des autres.
 
@@ -250,7 +250,7 @@ Vous pouvez voir la mise en application du concept de multiplicité dans notre a
 
 ## Résumé
 
-Cet article  a couvert les bases de l'utilisation de l'API WebAssembly JavaScript nécessaires à l'inclusion d'un module WebAssembly dans un contexte JavaScript, afin d'utiliser les fonctions du module dans ce contexte,  et de se familiairiser avec la manipulation de la mémoire et des tables WebAssembly. Nous avons terminé en évoquant le concept de multiplicité.
+Cet article a couvert les bases de l'utilisation de l'API WebAssembly JavaScript nécessaires à l'inclusion d'un module WebAssembly dans un contexte JavaScript, afin d'utiliser les fonctions du module dans ce contexte,  et de se familiairiser avec la manipulation de la mémoire et des tables WebAssembly. Nous avons terminé en évoquant le concept de multiplicité.
 
 ## A voir également
 

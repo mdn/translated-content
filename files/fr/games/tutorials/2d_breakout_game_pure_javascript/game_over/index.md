@@ -36,7 +36,7 @@ if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
 
 Au lieu de permettre à la balle de rebondir sur les quatre murs, nous n'en autoriserons que trois désormais — gauche, haut et droite. Toucher le mur du bas mettra fin à la partie.
 
-Nous allons  donc modifier le second bloc `if` (qui gère le déplacement sur l'axe vertical, y) en y ajoutant un `else if` qui déclenchera un Game Over si la balle entre en collision avec le mur du bas. Pour l'instant nous allons rester simple, afficher un message d'alerte et redémarrer le jeu en rechargeant la page.
+Nous allons donc modifier le second bloc `if` (qui gère le déplacement sur l'axe vertical, y) en y ajoutant un `else if` qui déclenchera un Game Over si la balle entre en collision avec le mur du bas. Pour l'instant nous allons rester simple, afficher un message d'alerte et redémarrer le jeu en rechargeant la page.
 
 Tout d'abord remplacer l'appel initial à `setInterval()`
 
@@ -64,7 +64,7 @@ if(y + dy < ballRadius) {
 
 ## Faire rebondir la balle sur la raquette
 
-La dernière chose à faire dans cette leçon est de créer une sorte de détection de collision entre la raquette et la balle, de sorte qu'elle puisse rebondir et revenir dans la zone de jeu. La chose la plus facile à faire est de vérifier si le centre de la balle se  trouve entre les bords droit et gauche du paddle. Mettez à jour le dernier bout de code que vous venez de modifier, comme-ci dessous :
+La dernière chose à faire dans cette leçon est de créer une sorte de détection de collision entre la raquette et la balle, de sorte qu'elle puisse rebondir et revenir dans la zone de jeu. La chose la plus facile à faire est de vérifier si le centre de la balle se trouve entre les bords droit et gauche du paddle. Mettez à jour le dernier bout de code que vous venez de modifier, comme-ci dessous :
 
 ```js
 if(y + dy < ballRadius) {

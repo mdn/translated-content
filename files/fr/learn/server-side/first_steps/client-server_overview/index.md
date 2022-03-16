@@ -86,7 +86,7 @@ Chaque ligne de la requête contient des informations sur celle-ci. La première
 Les premières et secondes lignes contiennent la plupart des données déjà évoquées précédemment :
 
 - Le type de la requête (`GET`).
-- La cible de la  ressource URL (`/en-US/search`).
+- La cible de la ressource URL (`/en-US/search`).
 - Les paramètres URL (`q=La%2relation%2Client%2-%2Bserveur&topic=apps&topic=html&topic=css&topic=js&topic=api&topic=webdev`).
 - Le site web cible/hôte (developer.mozilla.org).
 - La fin de la première ligne inclut aussi une petite chaîne identifiant la version spécifique du protocole (`HTTP/1.1`).
@@ -190,7 +190,7 @@ X-Cache-Info: not cacheable; request wasn't a GET or HEAD
 Content-Length: 0
 ```
 
-> **Note :** Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application [Fiddler](https://www.telerik.com/download/fiddler) , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. [Websniffer](http://websniffer.cc/), [Wireshark](https://www.wireshark.org/)) ou des extensions de navigateur comme  [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et  éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le [Network Monitor](/fr/docs/Tools/Network_Monitor) dans Firefox).
+> **Note :** Les requêtes et réponses montrées dans ces exemples ont été capturées avec l'application [Fiddler](https://www.telerik.com/download/fiddler) , mais vous pouvez avoir des informations similaires en utilisant des "renifleurs" web  (e.g. [Websniffer](http://websniffer.cc/), [Wireshark](https://www.wireshark.org/)) ou des extensions de navigateur comme  [HttpFox](https://addons.mozilla.org/en-US/firefox/addon/httpfox/). Vous pouvez essayer seul. Utilisez tous les outils recommandés, naviguez sur des sites et éditez des profils de données pour explorer les différentes requêtes et réponses. La plupart des navigateurs modernes ont aussi des outils qui gérent les requêtes réseau, par exemple le [Network Monitor](/fr/docs/Tools/Network_Monitor) dans Firefox).
 
 ## Les sites statiques
 
@@ -202,9 +202,9 @@ Voyons comment tout cela marche en révisant un diagramme d'architecture de site
 
 ![A simplified diagram of a static web server.](Basic%20Static%20App%20Server.png)
 
-Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP `GET` spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse  HTTP contenant le document et un  [HTTP Response status code](/fr/docs/Web/HTTP/Status) ( statut codé de la réponse HTTP) qui est  "`200 OK`" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "`404 Not Found`"  si le fichier est absent sur le serveur , ou bien "`301 Moved Permanently`" si le fichier existe mais a été déplacé vers une nouvelle localisation.
+Quand un utilisateur veut naviguer jusqu'à une page, le navigateur envoie une requête HTTP `GET` spécifiant l'URL de sa page HTML. Le serveur retourne le document demandé depuis son système de fichiers et retourne une réponse HTTP contenant le document et un  [HTTP Response status code](/fr/docs/Web/HTTP/Status) ( statut codé de la réponse HTTP) qui est  "`200 OK`" (indiquant le succés de l'opération). Le serveur peut retourner un statut différent, par exemple "`404 Not Found`"  si le fichier est absent sur le serveur , ou bien "`301 Moved Permanently`" si le fichier existe mais a été déplacé vers une nouvelle localisation.
 
-Le serveur d'un site statique n'aura à faire face qu'à des requêtes  GET vu qu'il ne stocke aucune donnée modifiable. Il ne change pas non plus ses réponses basées sur les données des requêtes HTTP (c'est à dire les paramètres URL ou les cookies).
+Le serveur d'un site statique n'aura à faire face qu'à des requêtes GET vu qu'il ne stocke aucune donnée modifiable. Il ne change pas non plus ses réponses basées sur les données des requêtes HTTP (c'est à dire les paramètres URL ou les cookies).
 
 Comprendre comment fonctionnent les sites statiques est sans aucun doute trés utile à l'apprentissage de la programmation côté serveur car les sites dynamiques gèrent les requêtes pour les fichiers statiques (CSS, JavaScript, images statiques , etc.) exactement de la même manière.
 
@@ -240,7 +240,7 @@ Une opération de mise à jour d'un enregistrement dans la base de données sera
 
 Le travail d'une application Web consiste à recevoir des requêtes HTTP et à renvoyer des réponses HTTP. Bien que l'interaction avec une base de données pour obtenir ou mettre à jour des informations soit une tâche très courante, le code peut faire d'autres choses en même temps, ou ne pas interagir du tout avec une base de données.Un bon exemple de tâche supplémentaire qu'une application Web pourrait exécuter serait l'envoi d'un courrier électronique aux utilisateurs pour confirmer leur inscription sur le site. Le site peut également effectuer une journalisation ou d’autres opérations.
 
-### Renvoyer autre chose que  du HTML
+### Renvoyer autre chose que du HTML
 
 Le code de site Web côté serveur ne doit pas nécessairement renvoyer des extraits / fichiers HTML dans la réponse. Au lieu de cela, il peut créer et renvoyer de manière dynamique d'autres types de fichiers (texte, PDF, CSV, etc.) ou même des données (JSON, XML, etc.).L'idée de renvoyer des données à un navigateur Web afin qu'il puisse mettre à jour de manière dynamique son propre contenu ({{glossary ("AJAX")}}) existe depuis un certain temps. Plus récemment, les "applications à page unique" sont devenues populaires, le site Web entier étant écrit avec un seul fichier HTML mis à jour de manière dynamique en cas de besoin. Les sites Web créés à l'aide de ce style d'application génèrent des coûts de calcul considérables entre le serveur et le navigateur Web, ce qui peut donner l'impression que les sites Web se comportent beaucoup plus comme des applications natives (très réactives, etc.).
 
@@ -266,7 +266,7 @@ urlpatterns = [
 
 > **Note :** Les premiers paramètres des fonctions url () peuvent paraître un peu bizarres (par exemple, r '^ junior / $') car ils utilisent une technique de correspondance de modèle appelée "expressions régulières" (RegEx ou RE). Vous n'avez pas besoin de savoir comment fonctionnent les expressions régulières à ce stade, car elles nous permettent également de faire correspondre les modèles de l'URL (plutôt que les valeurs codées en dur ci-dessus) et de les utiliser comme paramètres dans nos fonctions d'affichage. À titre d'exemple, un RegEx très simple pourrait dire "faire correspondre une seule lettre majuscule, suivie de 4 à 7 lettres minuscules".
 
-L'infrastructure Web permet également à une fonction d'affichage d'extraire facilement des informations de la base de données. La structure de nos données est définie dans des modèles, qui sont des classes Python qui définissent les champs à stocker dans la base de données sous-jacente. Si nous avons un modèle nommé Team avec un champ "team_type", nous pouvons utiliser une syntaxe de requête simple pour récupérer toutes les équipes ayant un type particulier.L’exemple ci-dessous donne la liste de toutes les équipes ayant le type d’équipe exact (sensible à la casse) de "junior" - notez le format: nom du champ (team_type) suivi du  double underscore, puis du type de match à utiliser (ici nous utilisons: exact). ). Il existe de nombreux autres types de match et nous pouvons les enchaîner. Nous pouvons également contrôler l'ordre et le nombre de résultats retournés.
+L'infrastructure Web permet également à une fonction d'affichage d'extraire facilement des informations de la base de données. La structure de nos données est définie dans des modèles, qui sont des classes Python qui définissent les champs à stocker dans la base de données sous-jacente. Si nous avons un modèle nommé Team avec un champ "team_type", nous pouvons utiliser une syntaxe de requête simple pour récupérer toutes les équipes ayant un type particulier.L’exemple ci-dessous donne la liste de toutes les équipes ayant le type d’équipe exact (sensible à la casse) de "junior" - notez le format: nom du champ (team_type) suivi du double underscore, puis du type de match à utiliser (ici nous utilisons: exact). ). Il existe de nombreux autres types de match et nous pouvons les enchaîner. Nous pouvons également contrôler l'ordre et le nombre de résultats retournés.
 
 ```python
 #best/views.py

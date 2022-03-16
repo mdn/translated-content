@@ -141,7 +141,7 @@ input.button {
 L'élément {{HTMLElement("button")}} présente deux problèmes potentiels&nbsp;:
 
 - un bogue dans certaines anciennes versions d'Internet Explorer. Lorsque l'utilisateur clique sur le bouton, ce n'est pas le contenu de l'attribut {{htmlattrxref("value", "button")}} qui est envoyé, mais le contenu HTML disponible entre balises de début et de fin de l'élément {{HTMLElement("button")}}. Ce n'est un problème que si vous voulez envoyer une telle valeur, par exemple si le traitement des données dépend du bouton sur lequel l'utilisateur clique.
-- certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut  pour l'attribut {{htmlattrxref("type","button")}}, donc il est recommandé de toujours définir l'attribut {{htmlattrxref("type","button")}} pour les éléments {{HTMLElement("button")}}.
+- certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut pour l'attribut {{htmlattrxref("type","button")}}, donc il est recommandé de toujours définir l'attribut {{htmlattrxref("type","button")}} pour les éléments {{HTMLElement("button")}}.
 
 ```html
 <!-- Cliquer sur ce boutton envoie «&nbsp;<em>Do A</em>&nbsp;» au lieu de «&nbsp;A&nbsp;» dans certains cas -->
@@ -208,7 +208,7 @@ Même si des scripts comme Modernizr sont très attentifs aux performances, le c
 
 ## Conclusion
 
-Comme vous pouvez le constater, opérer avec des navigateurs historiques  n'est pas qu'une question de formulaires. C'est tout un ensemble de techniques&nbsp;; mais les maîtriser toutes dépasserait le cadre de cet article.
+Comme vous pouvez le constater, opérer avec des navigateurs historiques n'est pas qu'une question de formulaires. C'est tout un ensemble de techniques&nbsp;; mais les maîtriser toutes dépasserait le cadre de cet article.
 
 Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/Web/Guide/HTML/Forms_in_HTML), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Débuter_sur_MDN).
 

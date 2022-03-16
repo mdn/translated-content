@@ -17,7 +17,7 @@ original_slug: Apprendre/JavaScript/Building_blocks/Image_gallery
 ---
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
-Maintenant que nous avons examiné les blocs fondamentaux de construction de JavaScript,  nous allons tester vos connaissances sur les boucles, les fonctions, les conditions et les événements  en vous aidant à créer un élément assez commun que vous verrez  sur de nombreux sites web. Une galerie JavaScript animée.
+Maintenant que nous avons examiné les blocs fondamentaux de construction de JavaScript,  nous allons tester vos connaissances sur les boucles, les fonctions, les conditions et les événements en vous aidant à créer un élément assez commun que vous verrez sur de nombreux sites web. Une galerie JavaScript animée.
 
 <table class="standard-table">
   <tbody>
@@ -110,7 +110,7 @@ Il ne reste que notre `<button>` d'assombrissement — nous vous avons fourni un
 2.  Si le nom de classe est `"dark"`, changer la classe du `<button>` pour `"light"` (avec [`setAttribute()`](/fr/docs/Web/API/Element/setAttribute)), son contenu textuel par "Lighten", et le {{cssxref("background-color")}} du voile d'assombrissement `<div>` par `"rgba(0,0,0,0.5)"`.
 3.  Si le nom de classe n'est pas `"dark"`, changer la classe du `<button>` pour `"dark"`, son contenu textuel par "Darken", et le {{cssxref("background-color")}} du voile d'assombrissement `<div>` par `"rgba(0,0,0,0)"`.
 
-Les lignes suivantes fournissent une base pour réaliser les changements  décrits aux points 2 et 3.
+Les lignes suivantes fournissent une base pour réaliser les changements décrits aux points 2 et 3.
 
 ```js
 btn.setAttribute('class', xxx);

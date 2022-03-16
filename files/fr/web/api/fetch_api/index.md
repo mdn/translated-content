@@ -41,7 +41,7 @@ Les navigateurs ont commencé à ajouter le support expérimental des interfaces
 ## Mixin de Fetch
 
 - {{domxref("Body")}}
-  - : Fournit les méthodes relatives au corps de la requête/réponse, vous permettant  de déclarer quel est son type de contenu et comment il doit être manipulé.
+  - : Fournit les méthodes relatives au corps de la requête/réponse, vous permettant de déclarer quel est son type de contenu et comment il doit être manipulé.
 
 ## Spécifications
 

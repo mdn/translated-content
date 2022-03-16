@@ -29,7 +29,7 @@ Tous les onglets ne peuvent pas être masqués :
 
 La première fois qu'une extension cache un onglet, le navigateur indiquera à l'utilisateur que l'onglet est caché, leur montrera comment ils peuvent accéder à l'onglet caché et leur donnera l'option de désactiver l'extension à la place.
 
-Pour utiliser cette API, vous devez disposer de  la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabHide".
+Pour utiliser cette API, vous devez disposer de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "tabHide".
 
 ## Syntaxe
 

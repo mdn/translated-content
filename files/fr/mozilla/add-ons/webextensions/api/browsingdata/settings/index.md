@@ -43,7 +43,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 - `dataRemovalPermitted`
   - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chacune aura la valeur  `true` si l'administrateur du périphérique a autorisé l'utilisateur à supprimer ce type, et `false` dans le cas contraire.
 
-Si une erreur se produit, la  promise sera rejetée avec un message d'erreur.
+Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
 ## Compatibilité du navigateur
 

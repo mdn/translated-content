@@ -3,7 +3,7 @@ title: Attributs SVG de base
 slug: Web/SVG/Attribute/Core
 translation_of: Web/SVG/Attribute/Core
 ---
-Les _attributs SVG de base_ sont  tous les attributs communs pouvant être spécifiés sur n'importe quel élément SVG.
+Les _attributs SVG de base_ sont tous les attributs communs pouvant être spécifiés sur n'importe quel élément SVG.
 
 - `id`
 - `lang`

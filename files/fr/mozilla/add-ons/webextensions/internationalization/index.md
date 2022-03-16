@@ -21,7 +21,7 @@ L'API [WebExtensions](/fr/Add-ons/WebExtensions) dispose d'un module assez prati
 
 ## Anatomie d'une extension internationnalisée
 
-Une extension internationnalisée peut contenir les mêmes caractéristiques que n'importe quelle autre extension — [scripts d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts), etc. — mais elle a également  des parties supplémentaires pour lui permettre de basculer entre différentes locales. Ceux-ci sont résumés dans l'arborescence suivante :
+Une extension internationnalisée peut contenir les mêmes caractéristiques que n'importe quelle autre extension — [scripts d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts), [scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts), etc. — mais elle a également des parties supplémentaires pour lui permettre de basculer entre différentes locales. Ceux-ci sont résumés dans l'arborescence suivante :
 
 - extension-root-directory/
 
@@ -192,7 +192,7 @@ Disons que le lien a été cliqué sur `https://developer.mozilla.org`. Après l
 
     You clicked https://developer.mozilla.org.
 
-### Utilisation  de l'espace réservé direct
+### Utilisation de l'espace réservé direct
 
 Il est possible d'insérer vos variables (`$1`, `$2`, `$3`, etc.) directement dans les chaînes de message, par exemple nous pourrions réécrire le membre `"notificationContent"` comme ceci :
 

@@ -73,7 +73,7 @@ function echec(){
   obj.toto = "bipbip"; // renvoie une TypeError
   delete obj.toto;     // renvoie une TypeError
   delete obj.roxor;    // renvoie true car l'attribut n' a pas été ajouté
-  obj.bipbip = "arf";  // renvoie une  TypeError
+  obj.bipbip = "arf";  // renvoie une TypeError
 }
 
 echec();

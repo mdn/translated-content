@@ -414,7 +414,7 @@ Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre d
 
 
 
-Maintenant nous avons juste besoin d'un commutateur JavaScript pour déterminer si le script est en cours d'exécution ou non. Cette bascule  est très simple : si au moment du chargement de la page notre script est en cours d'exécution, il supprime la classe no-widget et ajoute la classe widget, échangeant ainsi la visibilité de l'élément {{HTMLElement("select")}} et du widget personnalisé.
+Maintenant nous avons juste besoin d'un commutateur JavaScript pour déterminer si le script est en cours d'exécution ou non. Cette bascule est très simple : si au moment du chargement de la page notre script est en cours d'exécution, il supprime la classe no-widget et ajoute la classe widget, échangeant ainsi la visibilité de l'élément {{HTMLElement("select")}} et du widget personnalisé.
 
 
 

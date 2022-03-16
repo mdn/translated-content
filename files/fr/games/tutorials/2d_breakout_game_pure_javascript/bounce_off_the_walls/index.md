@@ -62,7 +62,7 @@ if(y + dy > canvas.height) {
 }
 ```
 
-Si la position en y de la balle est supérieure à  la hauteur du canvas (soit 480 pixels dans cette leçon) on inverse encore la vitesse de la balle.
+Si la position en y de la balle est supérieure à la hauteur du canvas (soit 480 pixels dans cette leçon) on inverse encore la vitesse de la balle.
 
 On peut rassembler les deux conditions en une grâce au "ou" qui s'écrit || en JavaScript :
 

@@ -45,7 +45,7 @@ Vous pouvez utiliser `{{domxref("document")}}.baseURI` pour obtenir l'URL de bas
 
 L'URL de base d'un _element_ en HTML est normalement équivalente à celle du document dans lequel se trouve le noeud.
 
-Si le document contient des attributs [`xml:base`](/fr/docs/Introduction_%C3%A0_XML/xml:base) (ce que vous ne devriez pas faire dans les documents HTML), l'`element.baseURI` prend en compte l'attribut `xml:base` des parents de l'élément  lors du calcul de l'URL de base. Voir [xml:base](/fr/docs/Introduction_%C3%A0_XML/xml:base) pour plus de détails.
+Si le document contient des attributs [`xml:base`](/fr/docs/Introduction_%C3%A0_XML/xml:base) (ce que vous ne devriez pas faire dans les documents HTML), l'`element.baseURI` prend en compte l'attribut `xml:base` des parents de l'élément lors du calcul de l'URL de base. Voir [xml:base](/fr/docs/Introduction_%C3%A0_XML/xml:base) pour plus de détails.
 
 Vous pouvez utiliser `{{domxref("element")}}.baseURI` pour obtenir l'URL de base d'un élément.
 

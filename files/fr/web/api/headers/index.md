@@ -74,7 +74,7 @@ monHeader.append('Content-Type', 'text/xml');
 monHeader.get('Content-Type') // doit retourner 'text/xml'
 ```
 
-La même chose peut être accomplie en passant par un array d'array  un littéral d'objet au constructeur.
+La même chose peut être accomplie en passant par un array d'array un littéral d'objet au constructeur.
 
 ```js
 var mesHeaders = new Headers({

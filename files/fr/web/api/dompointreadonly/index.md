@@ -16,7 +16,7 @@ L'interface **`DOMPointReadOnly`** spécifie les propriétés standard utilisée
 ## Constructeur
 
 - {{domxref("DOMPointReadOnly.DOMPointReadOnly","DOMPointReadOnly()")}}
-  - : Défini pour créer un nouvel objet `DOMPointReadOnly`, mais notez que ce constructeur ne peut pas être appelé par un JavaScript tiers : ce faisant, il retourne un  typeError "constructeur illégal" .
+  - : Défini pour créer un nouvel objet `DOMPointReadOnly`, mais notez que ce constructeur ne peut pas être appelé par un JavaScript tiers : ce faisant, il retourne un typeError "constructeur illégal" .
 
 ## Méthodes
 

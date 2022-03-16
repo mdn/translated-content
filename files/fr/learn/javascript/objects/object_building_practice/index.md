@@ -24,7 +24,7 @@ Dans l'article précédent, nous avons passé en revue l'essentiel de la théori
       <td>
         <p>
           Connaissance basique de l'informatique, une compréhension basique du
-          HTML et du CSS, une familiarité avec  les bases du JavaScript (voir
+          HTML et du CSS, une familiarité avec les bases du JavaScript (voir
           <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et
           <a href="/fr/docs/Learn/JavaScript/Building_blocks"
             >Les blocs de construction</a
@@ -74,7 +74,7 @@ const height = canvas.height = window.innerHeight;
 
 Ce script prend une référence à l'élément `<canvas>` et ensuite invoque la méthode [`getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) sur lui, nous donnant ainsi un contexte sur lequel nous pouvons commencer à dessiner. La variable résultante  (`ctx`)  est l'objet qui représente directement la surface du Canvas où nous pouvons dessiner et qui nous permet de dessiner des formes 2D sur ce dernier.
 
-Après, nous configurons  les variables `width` (largeur) et `height`(hauteur),  et la largeur et la hauteur de l'élément canvas (représentés par les propriétés `canvas.width` et `canvas.height` ) afin qu'elles soient identiques à la fenêtre du navigateur (la surface sur laquelle apparaît la page web— Ceci peut être tiré des propriétés {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}).
+Après, nous configurons les variables `width` (largeur) et `height`(hauteur),  et la largeur et la hauteur de l'élément canvas (représentés par les propriétés `canvas.width` et `canvas.height` ) afin qu'elles soient identiques à la fenêtre du navigateur (la surface sur laquelle apparaît la page web— Ceci peut être tiré des propriétés {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}).
 
 Vous verrez qu'ici nous enchaînons les assignations de valeurs des différentes variables ensemble à des fins de rapidité. Ceci est parfaitement autorisé.
 
@@ -104,7 +104,7 @@ function Ball(x, y, velX, velY, color, size) {
 }
 ```
 
-Ici, nous incluons des paramètres qui définissent  des propriétés dont chaque balle aura besoin pour fonctionner dans notre programme :
+Ici, nous incluons des paramètres qui définissent des propriétés dont chaque balle aura besoin pour fonctionner dans notre programme :
 
 - Les coordonnées `x` et `y` — les coordonnées verticales et horizontales où la balle débutera sur l'écran. Ceci peut se trouver entre 0 (coin à gauche en haut) et la valeur de la hauteur et de la largeur de la fenêtre du navigateur (coin en bas à droite).
 - Une vitesse horizontale et verticale (`velX` et `velY`) — à chaque balle est attribuée une vitesse horizontale et verticale; en termes réels, ces valeurs seront régulièrement ajoutées aux valeurs de la coordonnée `x`/`y` quand nous commencerons à animer les balles, afin de les faire bouger d'autant sur chaque vignette (frame).
@@ -186,14 +186,14 @@ Ball.prototype.update = function() {
 }
 ```
 
-Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord  du canvas. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc par exemple, si la balle se déplaçait vers le haut (positif `velY`) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (negatif `velY`).
+Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord du canvas. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc par exemple, si la balle se déplaçait vers le haut (positif `velY`) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (negatif `velY`).
 
 Dans les quatre cas nous :
 
 - Verifions si la coordonnée `x` est plus grande que la largeur du canvas (la balle est en train de sortir du côté droit).
 - Verifions si la coordonnée `x` est plus petite que 0 (la balle est en train de sortir du côté gauche).
 - Verifions si la coordonnée `y` est plus grande que la hauteur du canvas (la balle est en train de sortir par le bas).
-- Verifions si la coordonnée `y` est plus petite que 0 (la balle est en train de sortir par le  haut).
+- Verifions si la coordonnée `y` est plus petite que 0 (la balle est en train de sortir par le haut).
 
 Dans chaque cas, nous incluons la taille `size` de la balle dans les calculs parce que les coordonnées  `x`/`y`  sont situées au centre de la balle mais nous voulons que le pourtour de la balle rebondisse sur le rebord  — nous ne voulons pas que la balle sorte à moité hors de l'écran avant de commencer à rebondir vers l'arrière.
 
@@ -289,7 +289,7 @@ Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notr
     - Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans [2D collision detection](/fr/docs/Games/Techniques/2D_collision_detection).
     - Si une collision est détectée, le code à l'intérieur de l'instruction interne `if` est exécuté. Dans ce cas, nous définissons simplement la propriété `color` des deux cercles à une nouvelle couleur aléatoire. Nous aurions pu faire quelque chose de bien plus complexe, comme faire rebondir les balles de façon réaliste, mais cela aurait été beaucoup plus complexe à mettre en œuvre. Pour de telles simulations de physique, les développeurs ont tendance à utiliser des bibliothèques de jeux ou de physiques telles que [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
 
-2.  Vous devez également appeler cette méthode dans chaque image de l'animation. Ajouter le code ci-dessous  juste après la ligne `balls[i].update();`:
+2.  Vous devez également appeler cette méthode dans chaque image de l'animation. Ajouter le code ci-dessous juste après la ligne `balls[i].update();`:
 
     ```js
     balls[i].collisionDetect();

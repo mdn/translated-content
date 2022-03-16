@@ -60,7 +60,7 @@ Il y a longtemps, sur le Web, il était courant d'utiliser des **cadres** pour c
 
 Un peu plus tard (fin des années 90, début des années 2000), la technique des greffons est devenue très populaire, citons les [applets Java](/fr/docs/Glossary/Java) et [Flash](/fr/docs/Glossary/Adobe_Flash) — ils permettaient aux développeurs web d'intégrer du contenu riche dans des pages web telles que des vidéos et des animations, ce qui n'était tout simplement pas possible avec le HTML. L'intégration de ces techniques a été réalisée grâce à des éléments comme {{htmlelement("object")}} et {{htmlelement("embed")}}, un peu moins utilisé. Ils étaient très utiles à l'époque. Ils sont depuis tombés en désuétude en raison de nombreux problèmes&nbsp;: accessibilité, sécurité, taille de fichier et autres ; de nos jours, la plupart des mobiles ne prennent plus en charge de tels greffons, et les ordinateurs de bureau sont en train de les abandonner.
 
-Enfin, l'élément {{htmlelement("iframe")}} est apparu (avec d'autres moyens d'intégration de contenu, comme {{htmlelement("canvas")}}, {{htmlelement("video")}}, etc). Cet élément permet d'intégrer un document web entier dans un autre, comme s'il s'agissait d'un élément {{htmlelement("img")}}} ou d'un autre élément de ce type. Il  est régulièrement utilisé aujourd'hui.
+Enfin, l'élément {{htmlelement("iframe")}} est apparu (avec d'autres moyens d'intégration de contenu, comme {{htmlelement("canvas")}}, {{htmlelement("video")}}, etc). Cet élément permet d'intégrer un document web entier dans un autre, comme s'il s'agissait d'un élément {{htmlelement("img")}}} ou d'un autre élément de ce type. Il est régulièrement utilisé aujourd'hui.
 
 Maintenant que la leçon d'histoire est terminée, passons à autre chose et voyons comment utiliser certains d'entre eux.
 
@@ -227,7 +227,7 @@ Cet exemple inclut les éléments de base essentiels nécessaires à l'utilisati
 - {{htmlattrxref('frameborder','iframe')}}
   - : Si défini à la valeur 1, demande à l'explorateur de tracer une bordure entre cadres, c'est le comportement par défaut. 0 supprime la bordure. L'utilisation d'un tel attribut n'est plus trop recommandée, car le même résultat peut être obtenu en mieux avec {{cssxref('border')}}`: none;` dans le {{Glossary('CSS')}}.
 - {{htmlattrxref('src','iframe')}}
-  - : Cet attribut, comme  avec {{htmlelement("video")}} ou {{htmlelement("img")}}, contient un chemin vers l'URL du document à intégrer.
+  - : Cet attribut, comme avec {{htmlelement("video")}} ou {{htmlelement("img")}}, contient un chemin vers l'URL du document à intégrer.
 - {{htmlattrxref('width','iframe')}} and {{htmlattrxref('height','iframe')}}
   - : Ces attributs définissent la largeur et la hauteur souhaitée pour `<iframe>`.
 - **Contenu de repli**
@@ -276,7 +276,7 @@ Si c'est absolument nécessaire, vous pouvez ajouter des permissions une à une 
 
 > **Note :** Mettre le code dans le «&nbsp;bac à sable&nbsp;» n'offre aucune protection si les attaquants peuvent tromper les gens pour qu'ils visitent directement du contenu malveillant (en dehors d'un `<iframe>`). S'il y a la moindre chance que certain contenu soit malveillant (par exemple, du contenu d'utilisateur inconnu), veuillez le servir vers votre site principal à partir d'un autre {{glossary("domaine")}}.
 
-#### Configurer  les directives CSP
+#### Configurer les directives CSP
 
 {{Glossary("CSP")}} est un acronyme pour «&nbsp;**[content security policy](/fr/docs/Web/Security/CSP)** » (politique de sécurité du contenu)&nbsp;; les directives CSP fournissent un [ensemble d'en‑têtes HTTP](/fr/docs/Web/Security/CSP/CSP_policy_directives) (métadonnées adressées en même temps que les pages Web quand elles sont diffusées à partir d'un serveur web) conçues pour améliorer la sécurité des documents HTML. Quand elles sont destinées à sécuriser les `<iframe>`, vous pouvez _[configurer votre serveur pour qu'il adresse une en‑tête appropriée `X-Frame-Options`](/fr/docs/Web/HTTP/X-Frame-Options)._ Elle empêchera d'autres sites Web d'intégrer votre contenu dans leurs pages (ce qui pourrait permettre le {{interwiki('wikipedia','détournement de clic')}} ou accueillir d'autres attaques)&nbsp;; c'est exactement ce que les développeurs de MDN ont fait, comme nous l'avons vu plus haut.
 
@@ -318,7 +318,7 @@ Voici un exemple utilisant l'élément {{htmlelement("embed")}} pour intégrer u
 
 Plutôt horrible, n'est-ce pas ? Le HTML généré par l'outil Adobe Flash avait tendance à être encore pire, utilisant un élément \<objet> avec un élément \<embed> intégré pour couvrir toutes les bases (voir un exemple.) Flash a même été utilisé avec succès comme contenu de repli pour la vidéo HTML5, pendant un certain temps, mais cela est de plus en plus souvent considéré comme non nécessaire.
 
-Regardons maintenant un exemple avec `<object>`&nbsp;; il intègre  un PDF dans une  (voir  [l'exemple en direct](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) et le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html))&nbsp;:
+Regardons maintenant un exemple avec `<object>`&nbsp;; il intègre un PDF dans une  (voir  [l'exemple en direct](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) et le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html))&nbsp;:
 
 ```html
 <object data="mypdf.pdf" type="application/pdf"

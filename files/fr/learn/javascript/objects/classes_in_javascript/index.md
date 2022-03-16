@@ -120,7 +120,7 @@ function Brick() {
 }
 ```
 
-Vous pouvez hériter des propriétés `width` et `height` en procédant comme ceci (Mais  également en suivant bien sûr les différentes étapes décrites ci dessous) :
+Vous pouvez hériter des propriétés `width` et `height` en procédant comme ceci (Mais également en suivant bien sûr les différentes étapes décrites ci dessous) :
 
 ```js
 function BlueGlassBrick() {
@@ -135,7 +135,7 @@ Notez que nous n'avons spécifié que `this` au sein de `call()` — Aucun autre
 
 ## Définir le prototype de Professeur() et son constructeur référent.
 
-Pour le moment tout va bien, mais nous avons un petit problème. Nous avons défini un  nouveau constructeur et ce dernier possède une propriété `prototype`, qui par défaut ne contient qu'une référence à la fonction constructrice elle même. En revanche il ne contient pas les méthodes de la propriété `prototype` du constructeur `Personne()`. Pour le constater, vous pouvez par exemple entrer `Professeur.prototype.constructor` dans la console JavaScript pour voir ce qu'il en est. Le nouveau constructeur n'a en aucun cas hérité de ces méthodes. Pour le constater, comparez les sorties de `Personne.prototype.saluer` et de `Professeur.prototype.saluer`
+Pour le moment tout va bien, mais nous avons un petit problème. Nous avons défini un nouveau constructeur et ce dernier possède une propriété `prototype`, qui par défaut ne contient qu'une référence à la fonction constructrice elle même. En revanche il ne contient pas les méthodes de la propriété `prototype` du constructeur `Personne()`. Pour le constater, vous pouvez par exemple entrer `Professeur.prototype.constructor` dans la console JavaScript pour voir ce qu'il en est. Le nouveau constructeur n'a en aucun cas hérité de ces méthodes. Pour le constater, comparez les sorties de `Personne.prototype.saluer` et de `Professeur.prototype.saluer`
 
 Notre classe `Professeur()` doit hériter des méthodes définies dans le prototype de `Personne()`. Aussi comment procéder pour obtenir ce résultat&nbsp;?
 
@@ -189,13 +189,13 @@ Sauvegardez et actualisez, et essayez d'accéder aux propriétés et méthodes d
     professeur1.matiere;
     professeur1.saluer();Ffa
 
-Tout cela devrait parfaitement fonctionner. Les instructions des lignes 1,2,3  et 6 accèdent à des membres hérités de la classe générique `Personne()` via son constructeur, tandis que la ligne 4 accède de façon plus spécifique à un membre qui n'est disponible que via le constructeur de la classe spécialisée `Professeur()`.
+Tout cela devrait parfaitement fonctionner. Les instructions des lignes 1,2,3 et 6 accèdent à des membres hérités de la classe générique `Personne()` via son constructeur, tandis que la ligne 4 accède de façon plus spécifique à un membre qui n'est disponible que via le constructeur de la classe spécialisée `Professeur()`.
 
 **Note**: Si vous rencontrez un problème afin de faire fonctionner ce code comparez le à notre [version finalisée](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (Ou regarder tourner [notre demo en ligne](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html)).
 
 La méthode que nous avons détaillée ici n'est pas la seule permettant de mettre en place l'héritage de classes en JavaScript, mais elle fonctionne parfaitement et elle vous permet d'avoir une bonne idée de comment implémenter l'héritage en JavaScript.
 
-Vous pourriez également être intéressé par certaines des nouvelles fonctionnalités de {{glossary("ECMAScript")}} qui nous permettent de mettre en place l'héritage d'une façon beaucoup plus élégante en JavaScript (Voir [Classes](/fr/docs/Web/JavaScript/Reference/Classes)). Nous ne les avons pas développées ici parce qu'elles ne sont actuellement pas supportées par tous les navigateurs. Toutes les autres constructions dont nous avons discuté dans cette série d'articles sont supportées par IE9 et les versions moins récentes et il existe des méthodes qui prennent plus en  charge les navigateurs moins récents.
+Vous pourriez également être intéressé par certaines des nouvelles fonctionnalités de {{glossary("ECMAScript")}} qui nous permettent de mettre en place l'héritage d'une façon beaucoup plus élégante en JavaScript (Voir [Classes](/fr/docs/Web/JavaScript/Reference/Classes)). Nous ne les avons pas développées ici parce qu'elles ne sont actuellement pas supportées par tous les navigateurs. Toutes les autres constructions dont nous avons discuté dans cette série d'articles sont supportées par IE9 et les versions moins récentes et il existe des méthodes qui prennent plus en charge les navigateurs moins récents.
 
 Un moyen habituel est d'utiliser les librairies JavaScript — La plupart des options populaires ont une sélection de fonctionnalités disponibles pour réaliser l'héritage plus facilement et plus rapidement.
 
@@ -203,7 +203,7 @@ Un moyen habituel est d'utiliser les librairies JavaScript — La plupart des op
 
 ## Un exercice plus complexe.
 
-Dans notre [section sur la programmation orientée objet](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters) nous avons également inclus  une classe `Etudiant` comme un concept qui hérite de toutes les fonctionnalités de la classe `Personne`, et qui a également une méthode `saluer()` differente de celle de `Personne` qui est beaucoup moins formelle que la méthode `saluer()` de `Professeur()`. Jetez un oeil à ce à quoi ressemble la méthode `saluer()` de la classe `Etudiant` dans cette section et essayez d'implémenter votre propre constructeur `Etudiant()` qui hérite de toutes les fonctionnalités de `Personne()` et la fonction `saluer()` différente.
+Dans notre [section sur la programmation orientée objet](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS#Object-oriented_programming_from_10000_meters) nous avons également inclus une classe `Etudiant` comme un concept qui hérite de toutes les fonctionnalités de la classe `Personne`, et qui a également une méthode `saluer()` differente de celle de `Personne` qui est beaucoup moins formelle que la méthode `saluer()` de `Professeur()`. Jetez un oeil à ce à quoi ressemble la méthode `saluer()` de la classe `Etudiant` dans cette section et essayez d'implémenter votre propre constructeur `Etudiant()` qui hérite de toutes les fonctionnalités de `Personne()` et la fonction `saluer()` différente.
 
 **Note**: Si vous rencontrez un problème afin de faire fonctionner ce code comparez le à notre [version finalisée](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-student.html) (Ou regarder tourner [notre demo en ligne](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-student.html)).
 
@@ -217,11 +217,11 @@ Pour résumer, vous avez de façon basique trois types de propriétés/méthodes
 
 Si vous êtes encore dans la confusion par rapport aux différents types ne vous inquiétez pas c'est normal — vous êtes encore entrain d'apprendre et la familiarité apparaîtra avec la pratique.
 
-## Quand devez-vous utiliser  l'héritage en JavaScript?
+## Quand devez-vous utiliser l'héritage en JavaScript?
 
 Particulièrement après ce dernier article, vous pourriez penser "woa c'est compliqué". Bien, vous avez vu juste, prototypes et héritages représentent une partie des aspects les plus complexes de JavaScript, mais une bonne partie de la puissance et de la flexibilité de JavaScript vient de sa structure Objet et de l'héritage et il est vraiment très important de comprendre comment cela fonctionne.
 
-D'une certaine manière, vous utilisez l'héritage à plein temps — Que vous utilisiez différentes fonctionnalités d'une WebAPI , ou une méthode/propriété définie par défaut  sur un objet prédéfini du navigateur que vous invoquez sur vos chaînes de caractères, tableaux etc., vous utilisez de façon implicite l'héritage.
+D'une certaine manière, vous utilisez l'héritage à plein temps — Que vous utilisiez différentes fonctionnalités d'une WebAPI , ou une méthode/propriété définie par défaut sur un objet prédéfini du navigateur que vous invoquez sur vos chaînes de caractères, tableaux etc., vous utilisez de façon implicite l'héritage.
 
 En termes d'utilisation de l'héritage dans votre propre code, vous ne l'utiliserez probablement pas si souvent et spécialement pour débuter avec, et dans les petits projets — C'est une perte de temps d'utiliser les objets et l'héritage par amour pour cette pratique quand vous n'en avez pas besoin. Mais à mesure que les bases de votre code s'élargissent vous trouverez cette façon de faire probablement très utile. Si vous trouvez utile et plus pratique de commencer en créant un certain nombre d'objets spécialisés partageant les mêmes fonctionnalités, alors créer un objet générique qui contiendra toutes les fonctionnalités communes dont les objets spécialisés hériteront vous apparaîtra être une pratique peut être plus confortable et efficace par la suite.
 
@@ -250,7 +250,7 @@ Dans le prochain article, nous jetterons un regard sur comment travailler avec l
 ## Dans ce module
 
 - [Les bases de l'Objet](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript  Orienté Objet pour débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+- [JavaScript Orienté Objet pour débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
 - [Prototypes d'Objet](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
 - [L'héritage en JavaScript](/fr/docs/Learn/JavaScript/Objects/Inheritance)
 - [Travailler avec les données JSON](/fr/docs/Learn/JavaScript/Objects/JSON)

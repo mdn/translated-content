@@ -201,7 +201,7 @@ L'état `Howto` affiche les instructions du jeu à l'écran avant de commencer l
 
 ### Game.js (jeu)
 
-L'état `game` à partir du fichier `Game.js` est le lieu où toute la magie opère. Toute l'initialisation est dans la fonction `create ()` (lancée une fois au début du jeu). Après cela, certaines fonctionnalités nécessiteront d'autres codes à contrôler — nous écrirons nos propres fonctions pour gérer des tâches plus complexes. En particulier, notez  la fonction `update ()` exécutée à chaque frame, qui met à jour des choses telles que la position de la balle.
+L'état `game` à partir du fichier `Game.js` est le lieu où toute la magie opère. Toute l'initialisation est dans la fonction `create ()` (lancée une fois au début du jeu). Après cela, certaines fonctionnalités nécessiteront d'autres codes à contrôler — nous écrirons nos propres fonctions pour gérer des tâches plus complexes. En particulier, notez la fonction `update ()` exécutée à chaque frame, qui met à jour des choses telles que la position de la balle.
 
 ```js
 Ball.Game = function(game) {};
@@ -246,7 +246,7 @@ On ajoute un "sprite" à une place donnée sur l'écran en utilisant l'image `'b
 
 ### Contrôle de la balle
 
-C'est déjà sympa d'avoir une balle prête à être lancée dans la zone de jeu, mais c'est aussi important de pouvoir le faire. Maintenant on va ajouter la possibilité de contrôler la balle avec le clavier sur les ordinateurs, et ensuite on ajoutera l'implémentation de l'API  Device Orientation ( _gyroscope_). Maintenant, concentrons-nous sur le clavier en ajoutant la ligne suivante pour la fonction `create()` :
+C'est déjà sympa d'avoir une balle prête à être lancée dans la zone de jeu, mais c'est aussi important de pouvoir le faire. Maintenant on va ajouter la possibilité de contrôler la balle avec le clavier sur les ordinateurs, et ensuite on ajoutera l'implémentation de l'API Device Orientation ( _gyroscope_). Maintenant, concentrons-nous sur le clavier en ajoutant la ligne suivante pour la fonction `create()` :
 
 ```js
 this.keys = this.game.input.keyboard.createCursorKeys();

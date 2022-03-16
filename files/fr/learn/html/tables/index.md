@@ -35,4 +35,4 @@ Ce module contient les articles suivants :
 ## Évaluation des connaissances
 
 - [Structuration de données sur les planètes](/fr/docs/Learn/HTML/Tables/Structuring_planet_data)
-  - : Pour une évaluation des connaissances en matière de tableaux, nous vous  fournissons quelques données sur les planètes du système solaire et nous vous demandons de les structurer sous forme de tableau HTML.
+  - : Pour une évaluation des connaissances en matière de tableaux, nous vous fournissons quelques données sur les planètes du système solaire et nous vous demandons de les structurer sous forme de tableau HTML.

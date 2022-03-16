@@ -22,7 +22,7 @@ Définit si les changements de zoom persisteront pour l'origine de la page ou ne
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 - "per-origin"
-  - : Tous les autres onglets ayant la même origine que cet onglet auront les changements de zoom qui leur sont appliqués. Cette étendue n'est disponible que si  if {{WebExtAPIRef("tabs.zoomSettingsMode")}} est "automatique".
+  - : Tous les autres onglets ayant la même origine que cet onglet auront les changements de zoom qui leur sont appliqués. Cette étendue n'est disponible que si if {{WebExtAPIRef("tabs.zoomSettingsMode")}} est "automatique".
 - "per-tab"
   - : Les changements de zoom ne prennent effet que dans cet onglet et les changements de zoom dans les autres onglets n'affectent pas le zoom de cet onglet. De plus, les changements de zoom `per-tab` ont réinitialisés lors de la navigation ; la navigation dans un onglet charge toujours les pages avec `per-origin` de zoom d'origine.
 

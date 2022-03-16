@@ -135,7 +135,7 @@ Par convention, on souligne en pointillés les abréviations et il n’est pas j
 
 #### Liens
 
-Hyperliens  la façon dont vous accédez à de nouveaux endroits sur le Web :
+Hyperliens la façon dont vous accédez à de nouveaux endroits sur le Web :
 
 ```html
 <p> Visiter la  <a href="https://www.mozilla.org"> Page d'accueil de Mozilla </a>.</p>
@@ -354,7 +354,7 @@ imgThumb.onblur = hideImg;
 
 Les deux premières lignes exécutent les fonctions lorsque le pointeur de la souris survole et cesse de survoler la vignette, respectivement. Cela ne nous permettra toutefois pas d'accéder à la vue agrandie à l'aide du clavier ; pour cela, nous avons inclus les deux dernières lignes, qui exécutent les fonctions lorsque l'image est nette et floue (lorsque la mise au point s'arrête). Cela peut être fait en tapant sur l'image, car nous avons inclus  `tabindex="0"` dessus.
 
-L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/GlobalEventHandlers/onclick) après avoir  pressé <kbd>Entrée</kbd>  sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)).
+L'événement [click](/fr/docs/Web/API/Element/click_event) est intéressant — cela semble dépendre de la souris, mais la plupart des navigateurs activent les gestionnaires d'événement [element.onclick](/fr/docs/Web/API/GlobalEventHandlers/onclick) après avoir pressé <kbd>Entrée</kbd>  sur un lien ou un élément de formulaire ciblé, ou lorsqu'un tel élément est touché sur un écran tactile. Cependant, cela ne fonctionne pas par défaut lorsque vous autorisez un événement à ne pas être mis au point par défaut à l'aide de tabindex. Dans ce cas, vous devez détecter précisément le moment exact où cette touche est enfoncée (voir [Remettre l'accessibilité au clavier](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)).
 
 ## Résumé
 

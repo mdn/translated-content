@@ -64,7 +64,7 @@ Voir [la section sur l'utilisation de cet attribut ci-après](#format) pour plus
 
 L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisateur quant à l'information attendue dans le champ. Cet attribut devrait être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte ne doit pas contenir de saut à la ligne.
 
-Si le contenu du contrôle respecte une directionnalité donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible  d'utiliser l'algorithme de formatage bidirectionnel Unicode (cf. {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}}).
+Si le contenu du contrôle respecte une directionnalité donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode (cf. {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}}).
 
 > **Note :** On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder` car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir  {{SectionOnPage("/fr/docs/Web/HTML/Element/input", "Libellés et textes indicatifs")}} pour plus d'informations.
 

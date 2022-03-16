@@ -10,7 +10,7 @@ translation_of: Web/API/BlobBuilder
 ---
 {{APIRef("File API")}}{{ obsolete_header}}
 
-L'interface `BlobBuilder` fournit une manière simple de construire des objets {{domxref("Blob")}}. Il suffit de créer un `BlobBuilder` et de lui ajouter des données  en appellant la méthode {{manch("append")}}. Une fois finalisé, l'appel à la méthode {{manch("getBlob")}} permet de récupérer un {{domxref("Blob")}} contenant les données envoyées au constructeur dudit Blob.
+L'interface `BlobBuilder` fournit une manière simple de construire des objets {{domxref("Blob")}}. Il suffit de créer un `BlobBuilder` et de lui ajouter des données en appellant la méthode {{manch("append")}}. Une fois finalisé, l'appel à la méthode {{manch("getBlob")}} permet de récupérer un {{domxref("Blob")}} contenant les données envoyées au constructeur dudit Blob.
 
 > **Note :** L'interface `BlobBuilder` est désormais déconseillé (deprecated) au profit du nouveau constructeur {{domxref('Blob')}}.
 
@@ -101,7 +101,7 @@ Retourne l'objet {{domxref("Blob")}} qui a été construit en utilisant les donn
 #### Paramètres
 
 - contentType {{optional_inline}}
-  - : Le type MIME des données  retournées par le {{domxref("Blob")}}. Ce sera la valeur de la propriété 'type' de l'objet `Blob`.
+  - : Le type MIME des données retournées par le {{domxref("Blob")}}. Ce sera la valeur de la propriété 'type' de l'objet `Blob`.
 
 #### Valeur de retour
 
@@ -121,7 +121,7 @@ Retourne un objet {{domxref("File")}}.
 - name
   - : Le nom du fichier.
 - contentType {{optional_inline}}
-  - : Le type MIME des données  retournées par le {{domxref("File")}}. Ce sera la valeur de la propriété 'type' de l'objet `File`.
+  - : Le type MIME des données retournées par le {{domxref("File")}}. Ce sera la valeur de la propriété 'type' de l'objet `File`.
 
 #### Valeur deretour
 

@@ -150,7 +150,7 @@ Voici le résultat directement :
 
 #### Utiliser un objet FormData lié à un élément form
 
-Vous pouvez également lier un objet `FormData` à un élément {{HTMLElement("form")}} et  créer ainsi un `FormData` représentant les données contenues dans le formulaire.
+Vous pouvez également lier un objet `FormData` à un élément {{HTMLElement("form")}} et créer ainsi un `FormData` représentant les données contenues dans le formulaire.
 
 Le HTML est classique :
 

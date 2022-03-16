@@ -61,7 +61,7 @@ Illustrons cela par un exemple. Le terme _signature_ peut avoir différentes sig
 
 ## Utiliser la macro \\{{Glossary}}
 
-Le glossaire devient beaucoup plus utile lorsque le lecteur peut atteindre les définitions depuis un autre document sans avoir à  naviguer hors de ce document. C'est la raison pour laquelle nous vous incitons à créer des liens vers le glossaire dès que vous le pouvez, en utilisant la macro {{TemplateLink("Glossary")}} :
+Le glossaire devient beaucoup plus utile lorsque le lecteur peut atteindre les définitions depuis un autre document sans avoir à naviguer hors de ce document. C'est la raison pour laquelle nous vous incitons à créer des liens vers le glossaire dès que vous le pouvez, en utilisant la macro {{TemplateLink("Glossary")}} :
 
 | Macro                                                      | Result                                               | Note                                                                                                                                                    |
 | ---------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |

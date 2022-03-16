@@ -27,7 +27,7 @@ L'interface **TextMetrics** représente la dimension d'un texte dans le canevas,
 - {{domxref("TextMetrics.actualBoundingBoxAscent")}} {{readonlyInline}}
   - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par l'attribut {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et le haut du rectangle de délimitation utilisé pour restituer le texte.
 - {{domxref("TextMetrics.actualBoundingBoxDescent")}} {{readonlyInline}}
-  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par l'attribut {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et  le bas du rectangle de délimitation utilisé pour restituer le texte.
+  - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par l'attribut {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et le bas du rectangle de délimitation utilisé pour restituer le texte.
 - {{domxref("TextMetrics.emHeightAscent")}} {{readonlyInline}}
   - : est un `double` donnant la distance en pixels CSS entre la ligne horizontale indiquée par la propriété {{domxref ("CanvasRenderingContext2D.textBaseline")}}, et le haut du carré _em_ dans la boîte de ligne.
 - {{domxref("TextMetrics.emHeightDescent")}} {{readonlyInline}}

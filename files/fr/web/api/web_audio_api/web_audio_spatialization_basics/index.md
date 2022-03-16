@@ -18,9 +18,9 @@ Dans cet article nous allons nous concentrer sur la position de l'auditeur et du
 
 > **Note :** Trouver les bonnes valeurs pour que le cas d'utilisation fonctionne bien et semble réaliste n'est pas toujours évident et peur prendre du temps, et il faut souvent continuer à modifier les valeurs par la suite. Nous discuterons ceci plus en détail en parcourant le code qui suit.
 
-Les autres options  disponibles, que nous ne traiterons pas ici, sont :
+Les autres options disponibles, que nous ne traiterons pas ici, sont :
 
-- `setOrientation()`: disponible à la fois pour l'auditeur et le panoramique for both the listener and panner, cette méthode paramètre l'orientation. Elle prend six valeurs: les trois premières représentent un vecteur frontal dans l'espace 3D  (imaginez une personne et la direction dans laquelle pointe son nez) and les trois autre un vecteur de direction verticale  dans l'espace 3D space (imaginez la même personne et la direction vers laquelle pointe le haut de sa tête)
+- `setOrientation()`: disponible à la fois pour l'auditeur et le panoramique for both the listener and panner, cette méthode paramètre l'orientation. Elle prend six valeurs: les trois premières représentent un vecteur frontal dans l'espace 3D  (imaginez une personne et la direction dans laquelle pointe son nez) and les trois autre un vecteur de direction verticale dans l'espace 3D space (imaginez la même personne et la direction vers laquelle pointe le haut de sa tête)
 - `setVelocity()`: disponible uniquement pour le panoramique; permet de paramétrer la vitesse à laquelle une source audio se déplace, à l'aide d'un vecteur de vitesse dans l'espace 3D (valeurs X, Y, et Z). When set, the browser will apply a doppler shift effect.
 - `coneInnerAngle`, `coneOuterAngle`, and `coneOuterGain`: Available for the panner only, these allow you to set an angle inside/outside of which the volume will be reduced by the specified gain value. This is done to specify directional audio sources, but the default is 360/360/0, respectively, meaning that by default you get an omnidirectional sound source.
 

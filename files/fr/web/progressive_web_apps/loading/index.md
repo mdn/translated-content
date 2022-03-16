@@ -144,7 +144,7 @@ Rappelez-vous qu'il y a de nombreuses façons d'optimiser les temps de chargemen
 
 Nous ne le ferons pas car l'application elle-même dépend de JavaScript — sans lui, la liste des jeux ne sera même pas chargée et le code du Service Worker ne s'exécutera pas.
 
-Nous pourrions réécrire le processus de chargement  pour charger non seulement les images mais aussi les éléments complets composés des descriptions complètes et des liens. Cela fonctionnerait comme un défilement infini — charger les éléments de la liste seulement quand l'utilisateur fait défiler la page vers le bas. De cette façon, la structure HTML initiale sera minimale, le temps de chargement encore plus court et nous aurions des bénéfices de performance encore meilleurs.
+Nous pourrions réécrire le processus de chargement pour charger non seulement les images mais aussi les éléments complets composés des descriptions complètes et des liens. Cela fonctionnerait comme un défilement infini — charger les éléments de la liste seulement quand l'utilisateur fait défiler la page vers le bas. De cette façon, la structure HTML initiale sera minimale, le temps de chargement encore plus court et nous aurions des bénéfices de performance encore meilleurs.
 
 ## Conclusion
 

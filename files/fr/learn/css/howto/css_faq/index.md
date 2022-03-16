@@ -66,7 +66,7 @@ Ce comportement est différent depuis CSS2. Une propriété CSS peut maintenant 
 
 CSS ne permet de faire dériver un style d'un autre. Voire [l'article d'Eric Meyer à propos de la position du groupe de travail](http://archivist.incutio.com/viewlist/css-discuss/2685). Par contre, assigner plusieurs classes à un seul élément peut produire le même effet.
 
-## Comment  assigner de multiples classes à un élément?
+## Comment assigner de multiples classes à un élément?
 
 Il est possible d'assigner aux éléments HTML de multiples classes en les listant dans l'attribut `class` en séparant chaque classe d'un espace.
 

@@ -20,7 +20,7 @@ var gettingCookies = browser.cookies.getAll();
 gettingCookies.then(onGot, onError);
 ```
 
-La propriété `runtime.lastError` est définie lorsqu'une fonction asynchrone a une condition  d'erreur qu'elle doit signaler à son appelant.
+La propriété `runtime.lastError` est définie lorsqu'une fonction asynchrone a une condition d'erreur qu'elle doit signaler à son appelant.
 
 Si vous applez une fonction asynchrone qui veut définir `lastError`, vous devez vérifier l'erreur lorsque vous gérez le résultat de la fonction. Si  `lastError` a été défini et que vous ne cochez pas dans la fonction de rappel, une erreur sera générée.
 

@@ -288,7 +288,7 @@ Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs {{h
 
 - [Utiliser les tableaux HTML pour les personnes souffrant de troubles de la vision](/fr/Apprendre/HTML/Tableaux/Advanced#Tableaux_pour_des_utisateurs_malvoyants)
 - [Les tableaux avec des en-têtes sur plusieurs niveaux • Tutoriels d'accesibilité web W3C WAI (en anglais)](https://www.w3.org/WAI/tutorials/tables/multi-level/)
-- [H43 : Utiliser les attributs `id` et `headers` afin d'associer les cellules de données et les cellules d'en-tête dans les tableaux | Techniques W3C pour  WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
+- [H43 : Utiliser les attributs `id` et `headers` afin d'associer les cellules de données et les cellules d'en-tête dans les tableaux | Techniques W3C pour WCAG 2.0 (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
 ## Résumé technique
 

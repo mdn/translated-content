@@ -76,7 +76,7 @@ Les événements ont trois fonctions:
 
 ## Exemples
 
-Dans cet exemple, l'extension "blue\@mozilla.org" envoie un message  à l'extension "red\@mozilla.org":
+Dans cet exemple, l'extension "blue\@mozilla.org" envoie un message à l'extension "red\@mozilla.org":
 
 ```js
 // sender: browser.runtime.id == "blue@mozilla.org"

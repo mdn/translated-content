@@ -68,7 +68,7 @@ var querying = browser.tabs.query(
     - `windowId`{{optional_inline}}
       - : `integer`. L'ID de la fenêtre parente, ou  {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} pour la fenêtre en cours.
     - `windowType`{{optional_inline}}
-      - : {{WebExtAPIRef('tabs.WindowType')}}. Le type de fenêtre dans lequel les onglets y  sont.
+      - : {{WebExtAPIRef('tabs.WindowType')}}. Le type de fenêtre dans lequel les onglets y sont.
 
 ### Valeur retournée
 

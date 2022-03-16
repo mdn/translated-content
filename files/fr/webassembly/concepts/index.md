@@ -101,7 +101,7 @@ Vous pouvez trouver toute la documentation sur Emscripten à l'adresse [emscript
 
 Voulez vous construire votre propre compilateur ou vos propres outils ou faire une librairie JavaScript qui génère du WebAssembly à la volée ?
 
-De la même manière que les langages assembleur physiques, le format binaire du  WebAssembly a une représentation textuelle. Ces deux formats ont un fonctionnement équivalents. Vous pouvez écrire ou générer ce format à la main et ensuite le convertir au format binaire avec un des nombreux [outils de conversion texte vers binaire WebAssembly](http://webassembly.org/getting-started/advanced-tools/).
+De la même manière que les langages assembleur physiques, le format binaire du WebAssembly a une représentation textuelle. Ces deux formats ont un fonctionnement équivalents. Vous pouvez écrire ou générer ce format à la main et ensuite le convertir au format binaire avec un des nombreux [outils de conversion texte vers binaire WebAssembly](http://webassembly.org/getting-started/advanced-tools/).
 
 Pour un guide simple sur comment réaliser ceci, regarder notre article [Convertir le WebAssembly au format text en wasm](/fr/docs/WebAssembly/Text_format_to_wasm).
 

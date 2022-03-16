@@ -40,7 +40,7 @@ Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/Add-o
 - {{WebExtAPIRef("sessions.forgetClosedTab()")}}
   - : Supprime un onglet fermé de la liste des onglets récemment fermés du navigateur.
 - {{WebExtAPIRef("sessions.forgetClosedWindow()")}}
-  - : Supprime une fenêtre  fermée  de la liste des fenêtres  récemment fermées du navigateur.
+  - : Supprime une fenêtre fermée de la liste des fenêtres récemment fermées du navigateur.
 - {{WebExtAPIRef("sessions.getRecentlyClosed()")}}
   - : Renvoie un tableau d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, représentant des fenêtres et des onglets qui ont été fermés dans la session de navigation actuelle (c'est-à-dire l'heure écoulée depuis le démarrage du navigateur).
 - {{WebExtAPIRef("sessions.restore()")}}

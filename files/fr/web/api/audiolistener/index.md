@@ -20,7 +20,7 @@ Il est important de noter qu'il n'y a qu'un seul auditeur par contexte, et qu'il
 
 _Hérite des propriétés de son parent,_ `AudioNode`.
 
-> **Note :** Les valeurs de position, d'orientation, et du haut de la tête peuvent être définies et lues à l'aide de différentes syntaxes. Par exemple, l'accès se fait à l'aide de la propriété, `AudioListener.positionX`, tandis que la même propriété est définir à l'aide de `AudioListener.positionX.value`. C'est pourquoi ces valeurs ne sont pas marquées  en lecture seule, bien qu'elles apparaissent comme tel dans la spécification IDL.
+> **Note :** Les valeurs de position, d'orientation, et du haut de la tête peuvent être définies et lues à l'aide de différentes syntaxes. Par exemple, l'accès se fait à l'aide de la propriété, `AudioListener.positionX`, tandis que la même propriété est définir à l'aide de `AudioListener.positionX.value`. C'est pourquoi ces valeurs ne sont pas marquées en lecture seule, bien qu'elles apparaissent comme tel dans la spécification IDL.
 
 - {{domxref("AudioListener.positionX")}}
   - : Position de l'auditeur avec des coordonnées cartésiennes selon la règle de la main droite. La valeur par défaut est 0.
@@ -29,9 +29,9 @@ _Hérite des propriétés de son parent,_ `AudioNode`.
 - {{domxref("AudioListener.positionZ")}}
   - : Position longitudinale (avant et arrière) de l'auditeur avec des coordonnées cartésiennes selon la règle de la main droite. La valeur par défaut est 0.
 - {{domxref("AudioListener.forwardX")}}
-  - : Position horizontale de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes  linéairement l'une de l'autre. La valeur par défaut est 0.
+  - : Position horizontale de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est 0.
 - {{domxref("AudioListener.forwardY")}}
-  - : Position verticale de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes  linéairement l'une de l'autre. La valeur par défaut est 0.
+  - : Position verticale de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est 0.
 - {{domxref("AudioListener.forwardZ")}}
   - : Position longitudinale (avant et arrière) de l'orientation vers l'avant de l'auditeur avec le même système de coordonnées cartésiennnes que les valeurs de position (`positionX`, `positionY`, and `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est 0.
 - {{domxref("AudioListener.upX")}}

@@ -38,7 +38,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Obtenez le facteur de zoom  pour l'onglet actuel :
+Obtenez le facteur de zoom pour l'onglet actuel :
 
 ```js
 function onGot(zoom) {

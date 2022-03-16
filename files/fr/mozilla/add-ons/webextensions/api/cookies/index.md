@@ -20,7 +20,7 @@ Pour utiliser cette API, vous devez inclure l'[API permission](/fr/Add-ons/WebEx
 
 ## Permissions
 
-Pour utiliser cette API, un module complémentaire doit spécifier la  [permission d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" dans son manifest, ainsi que les [permissions host](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour tous les sites pour lesquels il souhaite accéder aux cookies. L'add-on peut lire ou écrire des cookies qui pourraient être lus ou écrits  par une URL correspondant aux permissions de l'hôte. Par exemple :
+Pour utiliser cette API, un module complémentaire doit spécifier la  [permission d'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "cookies" dans son manifest, ainsi que les [permissions host](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour tous les sites pour lesquels il souhaite accéder aux cookies. L'add-on peut lire ou écrire des cookies qui pourraient être lus ou écrits par une URL correspondant aux permissions de l'hôte. Par exemple :
 
 - `http://*.example.com/`
 
@@ -31,7 +31,7 @@ Pour utiliser cette API, un module complémentaire doit spécifier la  [permissi
 
     Il ne peut _pas_ :
 
-    - Lire un cookie  sécurisé pour `www.example.com`.
+    - Lire un cookie sécurisé pour `www.example.com`.
 
 - `http://www.example.com/`
 

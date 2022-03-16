@@ -123,7 +123,7 @@ Par exemple, avec TalkBack activé:
 7.  Appuyez deux fois pour le sélectionner. Vous pouvez maintenant glisser à gauche et à droite pour vous déplacer entre les rubriques et les points de repère ARIA.
 8.  Pour revenir au mode par défaut, entrez de nouveau dans le menu contextuel local en balayant l'écran vers le haut, le curseur à droite, sélectionnez "Par défaut", puis tapez deux fois pour l'activer.
 
-**Note:**  Voir  aussi [Get started on Android with TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) pour obtenir une documentation plus complète.
+**Note:**  Voir aussi [Get started on Android with TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) pour obtenir une documentation plus complète.
 
 ### iOS VoiceOver
 

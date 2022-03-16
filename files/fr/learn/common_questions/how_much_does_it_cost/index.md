@@ -105,7 +105,7 @@ Assurez-vous d'avoir suffisamment de bande passante :
 
 ##### Comprendre ce qu'est la « bande passante »
 
-Le tarif d'un hébergeur  variera en fonction de la bande passante consommée par votre site web. Celle-ci dépend du nombre de visiteurs (humains ou robots) sur une période donnée et de l'espace occupé par votre contenu (c'est pour cette raison que la plupart des gens stockent leurs vidéos sur Youtube, Dailymotion et Vimeo). Par exemple, votre fournisseur peut avoir une formule qui permet d'avoir jusqu'à plusieurs milliers de visiteurs par jours pour une bande passante raisonnable (cette définition de « raisonnable » peut varier d'un fournisseur à l'autre). Grosso modo, un hébergement personnalisé moyen et qui vous permet de servir suffisamment de visiteurs coûte entre 10 et 15 euros par mois.
+Le tarif d'un hébergeur variera en fonction de la bande passante consommée par votre site web. Celle-ci dépend du nombre de visiteurs (humains ou robots) sur une période donnée et de l'espace occupé par votre contenu (c'est pour cette raison que la plupart des gens stockent leurs vidéos sur Youtube, Dailymotion et Vimeo). Par exemple, votre fournisseur peut avoir une formule qui permet d'avoir jusqu'à plusieurs milliers de visiteurs par jours pour une bande passante raisonnable (cette définition de « raisonnable » peut varier d'un fournisseur à l'autre). Grosso modo, un hébergement personnalisé moyen et qui vous permet de servir suffisamment de visiteurs coûte entre 10 et 15 euros par mois.
 
 > **Note :** Un débit « illimité » n'existe pas en réalité. Si vous consommez beaucoup de bande passante, attendez-vous à devoir payer en conséquence.
 

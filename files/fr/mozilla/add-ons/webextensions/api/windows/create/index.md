@@ -63,7 +63,7 @@ var creating = browser.windows.create(
     - `tabId` {{optional_inline}}
       - : `integer`. Si inclus, déplace un onglet de l'ID spécifié d'une fenêtre existante dans la nouvelle fenêtre.
     - `titlePreface` {{optional_inline}}
-      - : `string`. Utilisez ceci pour ajouter une chaîne au début du titre de la fenêtre du navigateur. Selon le système d'exploitation sous-jacent, cela pourrait ne pas fonctionner sur les fenêtres du navigateur qui n'ont pas de titre (comme  about:blank dans Firefox).
+      - : `string`. Utilisez ceci pour ajouter une chaîne au début du titre de la fenêtre du navigateur. Selon le système d'exploitation sous-jacent, cela pourrait ne pas fonctionner sur les fenêtres du navigateur qui n'ont pas de titre (comme about:blank dans Firefox).
     - `top` {{optional_inline}}
       - : `integer`. Le nombre de pixels pour positionner la nouvelle fenêtre à partir du bord supérieur de l'écran. Si elle n'est pas spécifiée, la nouvelle fenêtre est naturellement décalée à partir de la dernière fenêtre ciblée. Cette valeur est ignorée pour les panneaux. (Dans Firefox, cette valeur est actuellement ignorée pour les popups  (bug 1271047) mais peut être définie en utilisant browser.windows.update().)
     - `type` {{optional_inline}}

@@ -47,14 +47,14 @@ function addData() {
 	// un nouvel objet prêt à être emmagasiné
 	newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
-	// ouvre une transaction de lecture / écriture  prête au traitement des données sur la connexion
+	// ouvre une transaction de lecture / écriture prête au traitement des données sur la connexion
 	var transaction = db.transaction(["toDoList"], "readwrite");
 
 	// en cas de succès de l'ouverture de la transaction
 	transaction.oncomplete = function(event) {
 		note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
 	};
-	// en  cas d'échec de l'ouverture de la transaction
+	// en cas d'échec de l'ouverture de la transaction
 	transaction.onerror = function(event) {
 		note.innerHTML += '<li>L\'erreur: "' + transaction.error +'" c\'est produite échec de la transaction.</li>';
 	};

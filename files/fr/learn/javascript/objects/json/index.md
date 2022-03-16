@@ -45,9 +45,9 @@ Le JavaScript Object Notation (JSON) est un format standard utilisé pour repré
 
 {{glossary("JSON")}} est un format de données semblable à la syntaxe des objets JavaScript, qui a été popularisé par [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford). Malgré sa syntaxe très similaire à celle des objets littéraux JavaScript, JSON peut être utilisé indépendamment de ce langage et ainsi, de nombreux autres langages de programmation disposent de fonctionnalités permettant d'analyser la syntaxe du JSON et d'en générer.
 
-Le JSON se présente sous la forme  d'une chaîne de caractères —utile lorsque vous souhaitez transmettre les données sur un réseau. Il a donc besoin d'être converti en un objet JavaScript natif lorsque vous souhaitez accéder aux données. Ce n'est pas vraiment un souci puisque le JavaScript fournit un objet global [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) disposant des méthodes pour assurer la conversion entre les deux.
+Le JSON se présente sous la forme d'une chaîne de caractères —utile lorsque vous souhaitez transmettre les données sur un réseau. Il a donc besoin d'être converti en un objet JavaScript natif lorsque vous souhaitez accéder aux données. Ce n'est pas vraiment un souci puisque le JavaScript fournit un objet global [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) disposant des méthodes pour assurer la conversion entre les deux.
 
-> **Note :** Convertir une chaîne de caractères en un objet natif se nomme **analyse syntaxique (parsage)** tandis que le contraire porte le nom  de la **linéarisation (stringification)**.
+> **Note :** Convertir une chaîne de caractères en un objet natif se nomme **analyse syntaxique (parsage)** tandis que le contraire porte le nom de la **linéarisation (stringification)**.
 
 Un objet JSON peut être stocké dans son propre fichier qui se présente simplement sous la forme d'un fichier texte avec l'extension `.json` et le {{glossary("MIME type")}} `application/json`.
 
@@ -349,7 +349,7 @@ On commence par créer un objet JavaScript puis on vérifie son contenu avant de
 
 ## Résumé
 
-Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans vos programmes, incluant les méthodes de  création et d'analyse syntaxique (parsage)  du JSON  et d'accès aux données qu'il contient. Dans le prochain article, nous débuterons l'apprentissage du Javascript orienté objet.
+Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans vos programmes, incluant les méthodes de création et d'analyse syntaxique (parsage)  du JSON et d'accès aux données qu'il contient. Dans le prochain article, nous débuterons l'apprentissage du Javascript orienté objet.
 
 ## Voir aussi
 

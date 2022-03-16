@@ -1,5 +1,5 @@
 ---
-title: Fonctionnalités principales des  framework
+title: Fonctionnalités principales des framework
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features
 ---

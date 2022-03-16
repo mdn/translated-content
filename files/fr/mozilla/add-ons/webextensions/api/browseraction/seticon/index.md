@@ -43,7 +43,7 @@ var settingIcon = browser.browserAction.setIcon(
 
       - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` ou `object`. Il s'agit soit d'un seul objet `ImageData` ou un dictionnaire d'objet.
 
-        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas  être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété  est un objet`ImageData`, et son nom est sa taille, comme ceci :
+        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet`ImageData`, et son nom est sa taille, comme ceci :
 
         ```json
         {

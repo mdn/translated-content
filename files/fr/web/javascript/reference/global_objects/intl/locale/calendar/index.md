@@ -49,7 +49,7 @@ La propriété `calendar` renvoie la partie de la locale qui indique le calendri
     <tr>
       <td><code>ethioaa</code></td>
       <td>
-        Calendrier éthiopique, Amete Alem (an 0 situé environ à  5493 ans avant
+        Calendrier éthiopique, Amete Alem (an 0 situé environ à 5493 ans avant
         notre ère)
       </td>
     </tr>

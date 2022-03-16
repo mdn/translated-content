@@ -60,7 +60,7 @@ Prenons un exemple pour éclaircir tout ça. Ici, on a deux boîtes qui contienn
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}
 
-Lorsqu'on change de mode d'écriture, on change la direction utilisée pour l'axe de bloc et celle pour l'axe en ligne. Avec un mode d'écriture `horizontal-tb`, la direction de bloc va de haut en bas  avec un mode d'écriture `vertical-rl`, la direction de bloc va de droite à gauche. Ainsi, la **dimension de bloc** correspond toujours à la direction selon laquelle les blocs sont affichés sur la page pour le mode d'écriture utilisé. La **dimension en ligne** correspond toujours à la direction selon laquelle les phrases sont écrites.
+Lorsqu'on change de mode d'écriture, on change la direction utilisée pour l'axe de bloc et celle pour l'axe en ligne. Avec un mode d'écriture `horizontal-tb`, la direction de bloc va de haut en bas avec un mode d'écriture `vertical-rl`, la direction de bloc va de droite à gauche. Ainsi, la **dimension de bloc** correspond toujours à la direction selon laquelle les blocs sont affichés sur la page pour le mode d'écriture utilisé. La **dimension en ligne** correspond toujours à la direction selon laquelle les phrases sont écrites.
 
 Ce schéma illustre les deux dimensions pour un mode d'écriture horizontal.
 

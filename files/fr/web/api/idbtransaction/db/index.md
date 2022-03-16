@@ -55,7 +55,7 @@ function addData() {
   transaction.oncomplete = function(event) {
     note.innerHTML += '<li>Transaction complété : modification de la base de données terminée.</li>';
   };
-  // En  cas d'échec de l'ouverture de la transaction
+  // En cas d'échec de l'ouverture de la transaction
   transaction.onerror = function(event) {
     note.innerHTML += '<li>Erreur transaction non ouverte, doublons interdits.</li>';
   };

@@ -51,7 +51,7 @@ Pour débuter cet exercice, vous devez&nbsp;:
 
 ## Résumé du projet
 
-Vous avez les fichiers nécessaires à la création d'un modèle de papier à en-tête. Rassemblez les dossiers. Il  faut :
+Vous avez les fichiers nécessaires à la création d'un modèle de papier à en-tête. Rassemblez les dossiers. Il faut :
 
 ### La lettre
 

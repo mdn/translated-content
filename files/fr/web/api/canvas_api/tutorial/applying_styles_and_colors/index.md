@@ -707,7 +707,7 @@ Nous allons regarder la propriété de la `font` _(police de caratères)_ et la 
 
 ## Règles de remplissage Canvas
 
-Lors de l'utilisation de `fill` (ou {{domxref ("CanvasRenderingContext2D.clip", "clip")}} et {{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}}) , déterminez si un point est à l'intérieur ou à l'extérieur d'un chemin et ainsi, s'il est rempli ou non. Ceci est utile lorsqu'un chemin en croise  un autre ou est imbriqué.
+Lors de l'utilisation de `fill` (ou {{domxref ("CanvasRenderingContext2D.clip", "clip")}} et {{domxref("CanvasRenderingContext2D.isPointInPath", "isPointinPath")}}) , déterminez si un point est à l'intérieur ou à l'extérieur d'un chemin et ainsi, s'il est rempli ou non. Ceci est utile lorsqu'un chemin en croise un autre ou est imbriqué.
 
 Deux valeurs sont possibles :
 

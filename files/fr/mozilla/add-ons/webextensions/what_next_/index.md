@@ -10,7 +10,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/que_faire_ensuite
 ---
 {{AddonSidebar}}
 
-Vous serez maintenant prêt à commencer à transformer votre idée pour une extension de navigateur dans la réalité. Avant de commencer ce périple, ça vaut la peine d'être au courant de quelques choses  qui vous aides à en faire une.
+Vous serez maintenant prêt à commencer à transformer votre idée pour une extension de navigateur dans la réalité. Avant de commencer ce périple, ça vaut la peine d'être au courant de quelques choses qui vous aides à en faire une.
 
 Vous pouvez trouver plus d'informations sur de nombreux sujets abordés sur cette page sur [l'atelier d'extension](https://extensionworkshop.com), un site web dédié à vous aider à écrire, tester, publier et distribuer des extensions pour Firefox.
 
@@ -46,7 +46,7 @@ Lorsqu'une extension de navigateur est soumise à la signature, elle fait l'obje
 
 Si vous choisissez de lister l'extension de votre navigateur sur AMO, votre extension pourrait figurer sur le site Web d'AMO, dans le gestionnaire de modules complémentaires du navigateur Firefox ou ailleurs sur un site Web de Mozilla. Nous avons compilé une liste de directives sur la manière dont les extensions sont sélectionnées pour être mises en avant. En suivant ces directives, vous donnez à votre extension les meilleures chances d'être sélectionnée.
 
-[En savoir plus sur la  façon de faire figurer vos modules complémentaires dans l'atelier d'extension](https://extensionworkshop.com/documentation/publish/recommended-extensions/)
+[En savoir plus sur la façon de faire figurer vos modules complémentaires dans l'atelier d'extension](https://extensionworkshop.com/documentation/publish/recommended-extensions/)
 
 ## Continuez votre expérience d'apprentissage
 

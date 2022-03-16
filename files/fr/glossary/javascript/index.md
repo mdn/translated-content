@@ -13,7 +13,7 @@ JavaScript (JS) est un langage de programmation principalement utilisé côté c
 
 Ne pas confondre JavaScript avec {{interwiki("wikipedia","Java_(langage)","le langage de programmation Java")}}. "Java" et "JavaScript" sont des marques commerciales ou des marques déposées d'Oracle aux États-Unis et dans d'autres pays. Cependant, les deux langages de programmation ont une syntaxe, une sémantique et des utilisations très différentes.
 
-D'abord pensé comme un langage côté serveur par Brendan Eich (alors employé de  Netscape Corporation), JavaScript arrive sur le navigateur Netscape Navigator 2.0 en Septembre 1995. Le succès est immédiat, et {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduit JavaScript sous le nom de JScript en août 1996.
+D'abord pensé comme un langage côté serveur par Brendan Eich (alors employé de Netscape Corporation), JavaScript arrive sur le navigateur Netscape Navigator 2.0 en Septembre 1995. Le succès est immédiat, et {{glossary("Microsoft Internet Explorer", "Internet Explorer 3.0")}} introduit JavaScript sous le nom de JScript en août 1996.
 
 En novembre 1996, Netscape commence à travailler avec ECMA International pour faire de JavaScript un standard. Depuis lors, la standardisation de JavaScript est appelée ECMAScript, et correspond à la spécification ECMA-262, dont la dernière (9<sup>e</sup>) édition est disponible depuis juin 2018.
 
@@ -31,7 +31,7 @@ Récemment, JavaScript est revenu du côté serveur grâce au succès de la plat
 
 - Le {{Link("/fr-FR/docs/Web/JavaScript/Guide")}} sur MDN
 - [The "javascripting" workshop](http://nodeschool.io/#workshoppers) sur NodeSchool
-- Les [cours  JavaScript](http://www.codecademy.com/tracks/javascript) sur codecademy.com
+- Les [cours JavaScript](http://www.codecademy.com/tracks/javascript) sur codecademy.com
 - [John Resig's Learning Advanced JavaScript](http://ejohn.org/apps/learn/)
 
 ### Références techniques

@@ -31,7 +31,7 @@ Aucun.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un [tableau](Web/JavaScript/Reference/Global_Objects/array) d'objets  de moteur de recherche. Chaque objet de moteur de recherche peut contenir les propriétés suivantes :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un [tableau](Web/JavaScript/Reference/Global_Objects/array) d'objets de moteur de recherche. Chaque objet de moteur de recherche peut contenir les propriétés suivantes :
 
 - `name`
   - : `string`. Le nom du moteur de recherche.

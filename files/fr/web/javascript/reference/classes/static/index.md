@@ -89,7 +89,7 @@ class StaticMethodCall{
     // 'appel de la méthode statique'
   }
 
-  static  staticMethod(){
+  static staticMethod(){
     return 'appel de la méthode statique.';
   }
 }

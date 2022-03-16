@@ -140,7 +140,7 @@ Si `font` est définie comme une propriété raccourcie :
 ### CSS
 
 ```css
-/* La corps de la police sera  12px */
+/* La corps de la police sera 12px */
 /* La hauteur de ligne 14px et la   */
 /* famille de polices sans-serif    */
 

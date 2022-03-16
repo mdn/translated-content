@@ -147,7 +147,7 @@ Nous mettons un cadre ({{cssxref("border")}}) tout autour du tableau, cadre néc
   Ceci est couplé avec une largeur {{cssxref("width")}} de 100%, ce qui signifie que le tableau remplira complétement tout conteneur dans lequel il sera placé et sera bien adaptable (même s'il aura besoin de quelques aménagements complémentaires pour avoir bel aspect avec les largeurs d'écran étroites).
 
 - La valeur `collapse` pour {{cssxref("border-collapse")}} est une bonne pratique courante pour toute mise en page de tableau. Par défaut, quand vous définissez des encadrements pour les éléments d'un tableau, il y a un espace entre eux, comme le montre cette illustration : ![Encadrement des éléments d'un tableau](cadre_1.png) Cela n'a pas l'air très joli (même si c'est peut-être le look que vous voulez, qui sait ?) Avec `border-collapse : collapse;`, les bordures se condensent en une seule, ce qui est beaucoup mieux :![Avec border-collapse: collapse; les encadrements se condensent](cadre_2.png)
-- Nous avons mis un cadre ({{cssxref("border")}}) tout autour du tableau, cadre nécessaire car nous encadrerons  plus tard l'intitulé et le pied de page — si vous n'avez pas d'encadrement général du tableau, terminer par un espacement donne un aspect insolite et peu net.
+- Nous avons mis un cadre ({{cssxref("border")}}) tout autour du tableau, cadre nécessaire car nous encadrerons plus tard l'intitulé et le pied de page — si vous n'avez pas d'encadrement général du tableau, terminer par un espacement donne un aspect insolite et peu net.
 - Nous avons défini une valeur pour le remplissage ({{cssxref("padding")}}) des éléments {{htmlelement("th")}} et {{htmlelement("td")}} — cela donne un peu d'air aux données et facilite la lecture de la table.
 
 À ce stade, le tableau a déjà meilleure mine :
@@ -232,7 +232,7 @@ Nous avons également ajouté un gradient linéaire aux éléments {{htmlelement
 
 #### Zébrures
 
-Nous avons souhaité dédier un paragraphe séparé à la  mise en place de **zèbrures** — une alternance de coloris des lignes faisant ressortir les données des tableaux, facilitant leur lecture et leur analyse. Ajoutez le CSS suivant au bas de votre fichier `style.css` :
+Nous avons souhaité dédier un paragraphe séparé à la mise en place de **zèbrures** — une alternance de coloris des lignes faisant ressortir les données des tableaux, facilitant leur lecture et leur analyse. Ajoutez le CSS suivant au bas de votre fichier `style.css` :
 
 ```css
 tbody tr:nth-child(odd) {

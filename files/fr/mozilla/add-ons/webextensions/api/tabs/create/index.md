@@ -36,7 +36,7 @@ var creating = browser.tabs.create(
     - `active`{{optional_inline}}
       - : `boolean`. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est `false`, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à  `true`.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Utilisez-le pour créer un onglet dont l'ID de cookie estCette option n'est disponible que si l'extension a  la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies".`
+      - : `string`. Utilisez-le pour créer un onglet dont l'ID de cookie estCette option n'est disponible que si l'extension a la  [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies".`
     - `index`{{optional_inline}}
       - : `integer`. La position que l'onglet devrait prendre dans la fenêtre. La valeur fournie sera comprise entre zéro et le nombre d'onglets dans la fenêtre.
     - `openerTabId`{{optional_inline}}

@@ -24,7 +24,7 @@ Une {{domxref("DOMString")}} _(chaîne de caractères)_ qui représente la parti
 
 ## Exemple
 
-Cet exemple affiche "id" dans une  fenêtre d'alerte.
+Cet exemple affiche "id" dans une fenêtre d'alerte.
 
 ### Contenu HTML
 
@@ -48,7 +48,7 @@ element.addEventListener("click", function() {
 
 Le nom local d'un attribut est la partie du nom qualifié de cet attribut avant les deux points. les noms qualifiés sont utilisés en XML, dans les espaces de nom de certains documents.
 
-> **Note :** dans {{Gecko("1.9.2")}} et avant, cette propriété renvoie le nom en majuscule pour les attributs HTML du  DOM HTML (contrairement aux atttributs XHTML ). Dans les versions plus récentes, en accord avec HTML5, cette propriété renvoie la casse correspondante au DOM utilisé, c'est-à-dire en minuscule pour les attributs du DOM XHTMl et du DOM HTML.
+> **Note :** dans {{Gecko("1.9.2")}} et avant, cette propriété renvoie le nom en majuscule pour les attributs HTML du DOM HTML (contrairement aux atttributs XHTML ). Dans les versions plus récentes, en accord avec HTML5, cette propriété renvoie la casse correspondante au DOM utilisé, c'est-à-dire en minuscule pour les attributs du DOM XHTMl et du DOM HTML.
 
 ## Spécifications
 

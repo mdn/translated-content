@@ -21,7 +21,7 @@ En 1990, lorsqu'il présente sa vision du {{Glossary("World Wide Web","Web")}}, 
 
 ## Concept et syntaxe
 
-Un document HTML est un document texte brut structuré par des {{Glossary("Element","éléments")}}. Les éléments sont encadrés par des {{Glossary("Tag","balises")}} ouvrantes et fermantes associées. Chaque balise  commence et se termine par les caractères inférieur et supérieur (`<>`). Il existe quelques balises _vides_ qui ne contiennent pas de texte, comme par exemple {{htmlelement("img")}}.
+Un document HTML est un document texte brut structuré par des {{Glossary("Element","éléments")}}. Les éléments sont encadrés par des {{Glossary("Tag","balises")}} ouvrantes et fermantes associées. Chaque balise commence et se termine par les caractères inférieur et supérieur (`<>`). Il existe quelques balises _vides_ qui ne contiennent pas de texte, comme par exemple {{htmlelement("img")}}.
 
 On peut préciser les balises HTML avec des {{Glossary("Attribute","attributs")}} pour fournir des informations complémentaires qui vont modifier la façon dont le navigateur va interpréter l'élément :
 
