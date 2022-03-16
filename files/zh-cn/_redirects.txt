@@ -1416,6 +1416,7 @@
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
 /zh-CN/docs/Web/API/MediaCapabilitiesInfo	/zh-CN/docs/Web/API/MediaCapabilities/encodingInfo
 /zh-CN/docs/Web/API/MediaDevices/ondevicechange	/zh-CN/docs/conflicting/Web/API/MediaDevices/devicechange_event
+/zh-CN/docs/Web/API/MediaRecorder/ondataavailable	/zh-CN/docs/Web/API/MediaRecorder/dataavailable_event
 /zh-CN/docs/Web/API/MediaStream.addTrack	/zh-CN/docs/Web/API/MediaStream/addTrack
 /zh-CN/docs/Web/API/MouseEvent/which	/zh-CN/docs/conflicting/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/MouseWheelEvent	/zh-CN/docs/conflicting/Web/API/WheelEvent

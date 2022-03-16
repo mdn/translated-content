@@ -9269,7 +9269,7 @@
       "draedful"
     ]
   },
-  "Web/API/MediaRecorder/ondataavailable": {
+  "Web/API/MediaRecorder/dataavailable_event": {
     "modified": "2020-10-15T21:52:00.316Z",
     "contributors": [
       "mechtool",
