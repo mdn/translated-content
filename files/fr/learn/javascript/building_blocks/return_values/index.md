@@ -58,7 +58,7 @@ Nous avons vu ce bloc de code dans notre premier article sur les fonctions. Nous
 
 Si vous regardez la page de référence MDN sur le remplacement de fonction, vous verrez une section intitulée [Valeur retournée](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value). Il est utile de savoir et de comprendre quelles sont les valeurs retournées par les fonctions, nous avons donc essayé d'inclure cette information partout où cela était possible.
 
-Certaines fonctions ne retournent pas de valeur comme telle (dans nos pages de référence, la valeur de retour est définie comme `void` ou `undefined` dans de tels cas). Par exemple, dans la fonction [displayMessage() ](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) construite dans l'article précédent, aucune valeur spécifique n'est retournée comme résultat de la fonction appelée. Il y a seulement une boîte qui apparaît, c'est tout&nbsp;!
+Certaines fonctions ne retournent pas de valeur comme telle (dans nos pages de référence, la valeur de retour est définie comme `void` ou `undefined` dans de tels cas). Par exemple, dans la fonction [`displayMessage()`](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) construite dans l'article précédent, aucune valeur spécifique n'est retournée comme résultat de la fonction appelée. Il y a seulement une boîte qui apparaît, c'est tout !
 
 Généralement, une valeur de retour est utilisée lorsque la fonction est une étape intermédiaire dans un programme. Ces valeurs intermédiaires doivent être d'abord évaluées par une fonction, le résultat renvoyé pourra être ensuite utilisé dans l'étape suivante du programme.
 

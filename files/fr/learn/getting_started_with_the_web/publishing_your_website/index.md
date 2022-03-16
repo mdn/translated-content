@@ -87,7 +87,7 @@ Pour en savoir plus, voyez [GitHub Pages Help](https://docs.github.com/en/github
 - [Qu'est-ce qu'un serveur web](/fr/docs/Learn/Common_questions/What_is_a_web_server)
 - [Comprendre les noms de domaine](/fr/docs/Learn/Common_questions/What_is_a_domain_name)
 - [Combien ça coûte de faire quelque chose sur le Web ?](/fr/docs/Learn/Common_questions/How_much_does_it_cost)
-- [Deploy a Website ](https://www.codecademy.com/learn/deploy-a-website): un bon tutoriel de Codecademy qui va plus un peu plus loin et qui montre quelques techniques supplémentaires.
+- [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website)&nbsp;: un bon tutoriel de Codecademy qui va plus un peu plus loin et qui montre quelques techniques supplémentaires.
 - [Hébergement de sites web statiques gratuit ou peu cher](http://alignedleft.com/resources/cheap-web-hosting), un billet en anglais par Scott Murray qui permet d'avoir une meilleure idée des services disponibles.
 
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}

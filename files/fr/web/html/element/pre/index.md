@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/pre
 ---
 {{HTMLRef}}
 
-L'élément HTML** `<pre>`** représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
+L'élément HTML **`<pre>`** représente du texte préformaté, généralement écrit avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
 
 > **Note :** Il est nécessaire d'échapper les caractères '`<`' en '`&lt;`' afin de s'assurer que le code écrit entre les éléments ne soit pas interprété de façon involontaire.
 
@@ -70,7 +70,7 @@ Pour légender un tel diagramme, on pourra utiliser une combinaison d'éléments
     </figure>
 
 - [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content)
-- _[H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H86.html)_[ (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
+- [_H86: Providing text alternatives for ASCII art, emoticons, and leetspeak | W3C Techniques for WCAG 2.0_ (en anglais)](https://www.w3.org/TR/WCAG20-TECHS/H86.html)
 
 ## Résumé technique
 

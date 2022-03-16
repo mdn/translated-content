@@ -35,7 +35,7 @@ Un moteur JavaScript utilise des nombres flottant à précision simple sur 64 bi
 
 Pour résoudre ce problème, on peut utiliser `Math.fround()` afin de transformer un nombre représenté sur 64 bits en un nombre représenté sur 32 bits. Pour le moteur JavaScript, la valeur sera toujours représentée sur 64 bits mais elle aura été « arrondie » à partir du 23e bit de la mantisse. Si le nombre passé en argument se situe en dehors de l'intervalle représentable sur 32 bits, la méthode renverra {{jsxref("Infinity")}} ou `-Infinity`.
 
-`fround `étant une méthode statique de `Math`, il faut utiliser `Math.fround()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`fround` étant une méthode statique de `Math`, il faut utiliser `Math.fround()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 

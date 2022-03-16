@@ -169,7 +169,7 @@ Regardons sur un exemple concret la façon de composer un formulaire HTML. Cela 
 
 ### HTML
 
-Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier[ article de ce guide](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML "/en-US/docs/HTML/Forms/My_first_HTML_form") ; il ne comporte que quelques identifiants supplémentaires et un titre.
+Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier [article de ce guide](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML "/en-US/docs/HTML/Forms/My_first_HTML_form") ; il ne comporte que quelques identifiants supplémentaires et un titre.
 
 ```html
 <form>
@@ -202,7 +202,7 @@ C'est ici que le « fun » commence ! Avant de commencer à coder, nous avons be
 
 1.  L'[image de fond](/files/4151/background.jpg "The postcard background") de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.
 2.  Une police de machine à écrire : [« Secret Typewriter » de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
-3.  Une police d'écriture manuelle : [ « Journal » de fontsquirrel.com ](http://www.fontsquirrel.com/fonts/Journal)— téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
+3.  Une police d'écriture manuelle : [«&nbsp;Journal&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
 
 
 

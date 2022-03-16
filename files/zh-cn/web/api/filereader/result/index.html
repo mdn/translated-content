@@ -35,59 +35,7 @@ translation_of: Web/API/FileReader/result
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本特性支持</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}<sup>[1]</sup></td>
-   <td>7</td>
-   <td>10<sup>[2]</sup></td>
-   <td>12.02<sup>[3]</sup></td>
-   <td>6.0.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特性</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本特性支持</td>
-   <td>32</td>
-   <td>3</td>
-   <td>10</td>
-   <td>11.5</td>
-   <td>6.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 早于 Gecko 2.0 beta 7 (Firefox 4.0 beta 7)的版本，所有 {{domxref("Blob")}} 的参数归属于 {{domxref("File")}}；现在已经更新为正确的技术规范。早于Gecko 13.0 {{geckoRelease("13.0")}} 的版本，<code>FileReader.error</code> 属性返回一个 {{domxref("FileError")}} 对象，这个接口已经被移除。现在根据最新的FileAPI 草案<code>FileReader.error返回一个</code>{{domxref("DOMError")}} 对象。</p>
-
-<p>[2] IE9拥有<a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>。</p>
-
-<p>[3] Opera 11.1版本拥有<a href="http://www.opera.com/docs/specs/presto28/file/">partial support</a>。</p>
+{{Compat("api.FileReader.result")}}
 
 <h2 id="参见">参见</h2>
 

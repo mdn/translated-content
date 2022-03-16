@@ -10,7 +10,7 @@ tags:
   - lecture seule
 translation_of: Web/API/Document/location
 ---
-La propriété en lecture seule **`Document.location`**` renvoie un objet` {{domxref("Location")}}, contenant les informations sur l'URL du document et fournit des moyens pour modifier cette URL ou charger une autre URL.
+La propriété en lecture seule **`Document.location`** renvoie un objet [`Location`](/fr/docs/Web/API/Location), contenant les informations sur l'URL du document et fournit des moyens pour modifier cette URL ou charger une autre URL.
 
 Bien que `Document.location` soit un objet  `Location` en _lecture seule_, vous pouvez lui assigner un {{domxref("DOMString")}}. Cela signifie que vous pouvez dans la plupart des cas utiliser document.location comme s'il s'agissait d'une chaîne de caractères: `document.location = 'http://www.example.com'` est un synonyme de `document.location.href = 'http://www.example.com'`.
 

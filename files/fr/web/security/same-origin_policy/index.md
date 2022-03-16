@@ -24,7 +24,7 @@ Les cookies utilisent une définition de l'origine différente de celle qui vien
 
 ## Changer l'origine
 
-Une page peut changer son origine dans une certaine mesure. Un script peut définir la valeur de `document.domain `vers un suffixe du domaine courant. S'il procéde ainsi, le domaine le plus court sera utilisé pour les prochaines vérifications d'origines. Par exemple, un script dans la page `http://store.company.com/dir/other.html` exécute le code suivant :
+Une page peut changer son origine dans une certaine mesure. Un script peut définir la valeur de `document.domain` vers un suffixe du domaine courant. S'il procéde ainsi, le domaine le plus court sera utilisé pour les prochaines vérifications d'origines. Par exemple, un script dans la page `http://store.company.com/dir/other.html` exécute le code suivant :
 
     document.domain = "company.com";
 
@@ -43,12 +43,12 @@ La same-origin policy contrôle les interactions entre deux origines différente
 Voici quelques exemples de ressources qui peuvent être embarqués malgré leur origine incompatible avec la same-origin policy :
 
 - JavaScript avec `<script src="..."></script>`. Les messages d'erreur de syntaxe ne sont disponibles que pour les scripts ayant la même origine.
-- CSS avec` <link rel="stylesheet" href="...">`. Étant donnée la [souplesse des règles de syntaxe](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) du CSS, les CSS d'origine différentes nécessitent une entête `Content-Type` correcte. Les restrictions varient selon les navigateurs : [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) et [Opera](http://www.opera.com/support/kb/view/943/).
+- CSS avec `<link rel="stylesheet" href="...">`. Étant donnée la [souplesse des règles de syntaxe](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) du CSS, les CSS d'origine différentes nécessitent une entête `Content-Type` correcte. Les restrictions varient selon les navigateurs : [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) et [Opera](http://www.opera.com/support/kb/view/943/).
 - Images avec [`<img>`](/fr/docs/HTML/Element/Img). Les formats d'image supportés, comprenant PNG, JPEG, GIF, BMP, SVG...
 - Fichiers média avec [`<video>`](/fr/docs/HTML/Element/video) et [`<audio>`](/fr/docs/HTML/Element/audio).
 - Objets avec [`<object>`](/fr/docs/HTML/Element/object), [`<embed>`](/fr/docs/HTML/Element/embed) et [`<applet>`](/fr/docs/HTML/Element/applet).
 - Fontes de polices avec [`@font-face`](/fr/docs/CSS/@font-face). Certain navigateurs autorisent les fontes cross-origin, d'autres appliquent la same-origin policy.
-- N'importe quoi avec [`<frame>`](/fr/docs/HTML/Element/frame) et [`<iframe>`](/fr/docs/HTML/Element/iframe). Un site peut utiliser l'entête[` X-Frame-Options`](/fr/docs/HTTP/X-Frame-Options) pour interdire cela depuis une page n'ayant pas la même origine.
+- N'importe quoi avec [`<frame>`](/fr/docs/HTML/Element/frame) et [`<iframe>`](/fr/docs/HTML/Element/iframe). Un site peut utiliser l'entête [`X-Frame-Options`](/fr/docs/HTTP/X-Frame-Options) pour interdire cela depuis une page n'ayant pas la même origine.
 
 ### Autoriser l'accès cross-origin
 

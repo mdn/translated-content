@@ -40,7 +40,7 @@ Maintenant que nous avons examiné les blocs fondamentaux de construction de Jav
 
 ## Point de départ
 
-Pour réaliser cette évaluation, vous devez récupérer le fichier[ ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) et le décompresser quelque par sur votre ordinateur.
+Pour réaliser cette évaluation, vous devez récupérer le fichier [ZIP](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/gallery/gallery-start.zip?raw=true) et le décompresser quelque par sur votre ordinateur.
 
 Vous pouvez également utiliser un site comme [JSBin](http://jsbin.com/) ou  [Thimble](https://thimble.mozilla.org/) pour effectuer votre évalution. Vous pouvez copier le code HTML,CSS et JavaScript dans l'un de ces éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas de panneaux JavaScript/CSS séparés, n'hésitez pas à utiliser les éléments `<script>`/`<style>` dans la page HTML.
 

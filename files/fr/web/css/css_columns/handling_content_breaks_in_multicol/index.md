@@ -13,7 +13,7 @@ Le contenu est coupé entre les colonnes d'une disposition multi-colonnes de la 
 
 ## Quelques notions de bases sur la fragmentation
 
-[Le module de spécification CSS Fragmentation ](https://www.w3.org/TR/css-break-3/)détaille la façon dont le contenu peut être coupé entre les conteneur de fragmentation. Pour une disposition multi-colonnes, le conteneur de fragmentation correspond à la boîte de colonne.
+[Le module de spécification CSS Fragmentation](https://www.w3.org/TR/css-break-3/) détaille la façon dont le contenu peut être coupé entre les conteneur de fragmentation. Pour une disposition multi-colonnes, le conteneur de fragmentation correspond à la boîte de colonne.
 
 Le contenu d'une boîte de colonne peut être varié et une coupure peut être malvenue à certains endroits. On préfèrerait par exemple qu'une légende ne soit pas séparée de l'image entre une colonne et la suivante. Les propriétés relatives à la fragmentation permettent de contrôler certains aspects de ces coupures.
 

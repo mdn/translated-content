@@ -348,7 +348,7 @@ On peut définir des méthodes pour un type d'objet en incluant la définition d
 ```js
 function afficheVoiture() {
   let resultat = `Une belle ${this.modele}, fabriquée en ${this.annee} par ${this.fabricant}`;
-  console.log(résultat);
+  console.log(resultat);
 }
 ```
 

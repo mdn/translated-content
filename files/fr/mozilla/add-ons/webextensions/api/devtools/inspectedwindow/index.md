@@ -17,7 +17,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 
 L'API `devtools.inspectedWindow` permet à un extension de devtools d'interagir avec la fenêtre sur laquelle les outils de développement sont attachés.
 
-Comme toutes les APIs de `devtools`, cette API n'est disponible que pour exécuter le code dans le document défini dans la clé [devtools_page](/fr/Add-ons/WebExtensions/manifest.json/devtools_page) du manifest.json, où dans d'autres documents devtools créés par l'extension (tels que le document hébergé par un panneau, l'extension créée). Voir [Extension des outils de développement ](/fr/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
+Comme toutes les APIs de `devtools`, cette API n'est disponible que pour exécuter le code dans le document défini dans la clé [devtools_page](/fr/Add-ons/WebExtensions/manifest.json/devtools_page) du manifest.json, où dans d'autres documents devtools créés par l'extension (tels que le document hébergé par un panneau, l'extension créée). Voir [Extension des outils de développement](/fr/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
 
 ## Propriétés
 

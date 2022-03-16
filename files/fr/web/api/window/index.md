@@ -165,7 +165,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Renvoie un objet {{domxref("VisualViewport")}} représentant le point de vue visuel pour une fenêtre donnée.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Renvoie une référence à la fenêtre en cours.
-- `window[0]`,` window[1]`, etc.
+- `window[0]`, `window[1]`, etc.
   - : Renvoie une référence à l'objet `window` dans les cadres. Voir {{domxref("Window.frames")}}} pour plus de détails.
 
 ### Propriétés implémentées depuis ailleurs

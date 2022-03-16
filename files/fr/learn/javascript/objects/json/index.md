@@ -355,8 +355,8 @@ Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans 
 
 - [La page de référence sur l'objet JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [La page de référence sur l'objet XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest)
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [Les méthodes de requêtes HTTP ](/fr/docs/Web/HTTP/Methods)
-- [Le site web officiel  avec un lien vers les normes de l' ECMA](http://json.org)
+- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Les méthodes de requêtes HTTP](/fr/docs/Web/HTTP/Methods)
+- [Le site web officiel  avec un lien vers les normes de l' ECMA](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

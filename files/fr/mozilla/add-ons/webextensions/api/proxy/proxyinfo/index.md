@@ -49,7 +49,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
     Par exemple, si vous voulez envoyer "nom d'utilisateur" et "mot de passe" pour l'authentification "basique", vous pouvez définir la propriété `proxyAuthorizationHeader` à `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`
 
-- `connectionIsolationKey `{{optional_inline}}
+- `connectionIsolationKey` {{optional_inline}}
   - : `string.` Une clé optionnelle utilisée pour l'isolation supplémentaire de cette connexion proxy.
 
 ## Compatibilité du navigateur

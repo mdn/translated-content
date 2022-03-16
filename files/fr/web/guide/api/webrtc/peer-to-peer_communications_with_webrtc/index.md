@@ -16,7 +16,7 @@ Un bon tutoriel sur les fonctionnalités de base de WebRTC peut-être trouvé su
 
 Il est possible de faire un appel simple de personne à personne  (y compris à ceux utilisant Chrome) à [apprtc.appspot.com](https://apprtc.appspot.com/).
 
-Un article de [Hacks](https://hacks.mozilla.org/category/webrtc/) décrit avec précision ce qu'il se passe dans une connexion `RTCPeerConnecion `([lien](https://hacks.mozilla.org/2013/05/embedding-webrtc-video-chat-right-into-your-website/)) :
+Un article de [Hacks](https://hacks.mozilla.org/category/webrtc/) décrit avec précision ce qu'il se passe dans une connexion `RTCPeerConnecion` ([lien](https://hacks.mozilla.org/2013/05/embedding-webrtc-video-chat-right-into-your-website/)) :
 
 ![Basics of RTCPeerConnection call setup](webRTC-BasicsOfHowItWorks2.png)
 

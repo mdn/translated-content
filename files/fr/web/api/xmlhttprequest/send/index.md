@@ -34,7 +34,7 @@ Si aucun "header"{{HTTPHeader("Accept")}} n'a été paramétré dans {{domxref("
   - : Le corps des données à envoyer dans la requête XHR. Cela peut être :
 
     - Un {{domxref("Document")}}, dans quel cas il est sérialisé avant d'être envoyé.
-    - Un `XMLHttpRequestBodyInit` , dont le which [standard ](https://fetch.spec.whatwg.org/#bodyinit)[Fetch](https://fetch.spec.whatwg.org/#bodyinit) peut être un  {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, ou un objet  {{domxref("USVString")}} .
+    - Un `XMLHttpRequestBodyInit` qui, selon [la spécification `Fetch` (en anglais)](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit), peut être un [`Blob`](/fr/docs/Web/API/Blob), [`BufferSource`](/fr/docs/Web/API/BufferSource), [`FormData`](/fr/docs/Web/API/FormData), [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams) ou un objet [`USVString`](/fr/docs/Web/API/USVString).
     - `null`
 
     Si la valeur du corps n'est pas spécifiée, la valeur par défaut `null` est employée.

@@ -16,4 +16,4 @@ TOFU est utilisé dans le protocole SSH, dans [HTTP Public Key Pinning](/fr/docs
 
 - [HTTP Public Key Pinning](/fr/docs/Web/HTTP/Public_Key_Pinning) ({{Glossary("HPKP")}})
 - {{HTTPHeader("Public-Key-Pins")}}
-- Wikipedia : [TOFU ](https://en.wikipedia.org/wiki/Trust_on_first_use)(en)
+- Wikipedia : [TOFU (en anglais)](https://en.wikipedia.org/wiki/Trust_on_first_use)

@@ -19,7 +19,7 @@ Avec la mise à disposition des Streams en JavaScript, tout ceci a changé — v
 
 Il y a aussi d'autres avantages — vous pouvez détecter quand un flux commence ou prend fin, chaîner les flux entre eux, traiter les erreurs et annuler les flux si nécessaire et vous adapter à la vitesse de lecture du flux.
 
-L'usage basique des Streams s'articule autour de la mise à disposition des réponses sous forme de flux. Par exemple, la réponse {{domxref("Body")}} retourné par une requête [fetch ](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch)réussie peut être exposée en tant que {{domxref("ReadableStream")}}, vous pourrez ainsi le lire en utilisant un lecteur créé par {{domxref("ReadableStream.getReader()")}}, l'annuler avec {{domxref("ReadableStream.cancel()")}}, etc.
+L'usage basique des <i lang="en">Streams</i> s'articule autour de la mise à disposition des réponses sous forme de flux. Par exemple, le corps de réponse retourné par une [requête `fetch`](/fr/docs/Web/API/fetch) réussie peut être exposé en tant que [`ReadableStream`](/fr/docs/Web/API/ReadableStream) — vous pourrez ainsi le lire en utilisant un lecteur créé par [`ReadableStream.getReader()`](/fr/docs/Web/API/ReadableStream/getReader), l'annuler avec [`ReadableStream.cancel()`](/fr/docs/Web/API/ReadableStream/cancel), etc.
 
 Un usage plus avancé consiste à créer son propre flux en utilisant le constructeur {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}, pour traiter par exemple les données à l'intérieur d'un [service worker](/docs/Web/API/Service_Worker_API).
 

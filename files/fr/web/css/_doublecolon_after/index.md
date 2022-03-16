@@ -92,9 +92,9 @@ On peut mettre en forme du texte ou des images avec la propriété {{cssxref("co
 
 ### Bulles d’information
 
-Dans l'exemple suivant, on illustre le [pseudo-élément](/fr-FR/docs/Web/CSS/Pseudo-elements) `::after `avec l'expression CSS {{cssxref("attr()")}} et un attribut de données personnalisé `data-descr` afin de créer une _bulle d'information_ de type glossaire en CSS pur.
+Dans l'exemple suivant, on illustre le [pseudo-élément](/fr-FR/docs/Web/CSS/Pseudo-elements) `::after` avec l'expression CSS {{cssxref("attr()")}} et un attribut de données personnalisé `data-descr` afin de créer une _bulle d'information_ de type glossaire en CSS pur.
 
-On peut également aider les utilisateurs de clavier avec cette technique, en ajoutant un `tabindex` de `0` pour faire un `span` focusable, et en utilisant la sélection `:focus`. Cela montre à quel point les options `::before` and `::after `peuvent être flexibles, bien que, pour l'expérience la plus accessible, un widget de divulgation sémantique créé d'une autre manière serait probablement plus approprié..
+On peut également aider les utilisateurs de clavier avec cette technique, en ajoutant un `tabindex` de `0` pour faire un `span` focusable, et en utilisant la sélection `:focus`. Cela montre à quel point les options `::before` and `::after` peuvent être flexibles, bien que, pour l'expérience la plus accessible, un widget de divulgation sémantique créé d'une autre manière serait probablement plus approprié..
 
 #### HTML
 

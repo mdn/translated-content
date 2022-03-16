@@ -39,13 +39,13 @@ Il existe plusieurs types [d'attributs de réponse](http://www.w3.org/TR/XMLHttp
 
 ### Analyser et manipuler la propriété `responseXML`
 
-Si vous utlisez `XMLHttpRequest `pour obtenir le contenu d'un fichier XML distant, la propriété `responseXML `sera un Objet DOM contenant le document XML parsé, qui peut être difficile à manipuler et analyser. Il y a quatres moyens principaux d'analyser ce document XML :
+Si vous utilisez `XMLHttpRequest` pour obtenir le contenu d'un fichier XML distant, la propriété `responseXML` sera un objet DOM contenant le document XML parsé, qui peut être difficile à manipuler et analyser. Il y a quatre moyens principaux d'analyser ce document XML&nbsp;:
 
-1.  Utiliser [XPath](/en-US/docs/XPath) pour localiser des parties.
-2.  Utiliser [JXON](/en-US/docs/JXON) pour le convertir en Objet structuré JavaScript.
-3.  Manuellement [parser et serializer le XML](/en-US/docs/Parsing_and_serializing_XML) en chaînes de caractères ou en objets.
-4.  Utiliser [XMLSerializer](/en-US/docs/XMLSerializer) pour serializer **le DOM en chaînes ou en fichiers.**
-5.  [RegExp ](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp)peut être utlisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne, si vous utlisez RegExp en prenant en compte ces sauts. Toutefois, cette méthode est un "dernier recours", car si le code XML change légèrement, la méthode échouera probablement.
+1.  Utiliser [XPath](/en-US/docs/XPath) pour localiser des parties.
+2.  Utiliser [JXON](/en-US/docs/JXON) pour le convertir en Objet structuré JavaScript.
+3.  Manuellement [parser et serializer le XML](/en-US/docs/Parsing_and_serializing_XML) en chaînes de caractères ou en objets.
+4.  Utiliser [XMLSerializer](/en-US/docs/XMLSerializer) pour serializer **le DOM en chaînes ou en fichiers.**
+5.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ### Analyser et manipuler une propriété `responseText` contenant un document HTML
 
@@ -53,9 +53,9 @@ Si vous utlisez `XMLHttpRequest `pour obtenir le contenu d'un fichier XML distan
 
 Si vous utilisez `XMLHttpRequest` pour récupérer le contenu d'une page HTML distante, la propriété `responseText` est une chaîne de caractères contenant une "soupe" de tous les tags HTML, qui peut être difficile à manipuler et à analyser. Il y a trois moyens principaux d'analyser cette soupe de HTML :
 
-1.  Utiliser la propriété `XMLHttpRequest.responseXML`.
-2.  Injecter le contenu dans le body d'un [fragment de document](/en-US/docs/Web/API/DocumentFragment) via `fragment.body.innerHTML` et traverser le DOM du fragment.
-3.  [RegExp ](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp)peut être utlisé si vous connaissez à l'avance le contenu du document HTML dans responseText. Vous pouvez supprimer les sauts de ligne, si vous utlisez RegExp en prenant en compte ces sauts. Toutefois, cette méthode est un "dernier recours", car si le code XML change légèrement, la méthode échouera probablement.
+1.  Utiliser la propriété `XMLHttpRequest.responseXML`.
+2.  Injecter le contenu dans le body d'un [fragment de document](/en-US/docs/Web/API/DocumentFragment) via `fragment.body.innerHTML` et traverser le DOM du fragment.
+3.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ## Gérer les données binaires
 
@@ -508,7 +508,7 @@ La syntaxe de ce script est la suivante:
 
 > **Note :** La meilleure façon d'envoyer du contenu binaire est de passer par [ArrayBuffers](/en-US/docs/JavaScript/Typed_arrays/ArrayBuffer) ou [Blobs](/en-US/docs/DOM/Blob) en conjonction avec la méthode [`send()`](/en-US/docs/DOM/XMLHttpRequest#send%28%29) et possiblement avec la méthode [`readAsArrayBuffer()`](</en-US/docs/DOM/FileReader#readAsArrayBuffer()>) de l'API [`FileReader`](/en-US/docs/DOM/FileReader). Mais dans la mesure où le but de ce script est de fonctionner avec des données [chaînifiable](/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify), nous avons utilisé la méthode [`sendAsBinary()`](/en-US/docs/DOM/XMLHttpRequest#sendAsBinary%28%29) en conjonction avec la méthode [`readAsBinaryString()`](/en-US/docs/DOM/FileReader#readAsBinaryString%28%29) de l'API [`FileReader`](/en-US/docs/DOM/FileReader). Du coup, le script ci-dessous n'a de sens que quand vous voulez transférer de petits fichiers. Si vous n'avez pas l'intention de transférer des données binaires, songez plutôt à utilisez l'API [`FormData`](/en-US/docs/DOM/XMLHttpRequest/FormData).
 
-> **Note :** La méthode non-strandard `sendAsBinary `est dépréciée à partir de Gecko 31 {{ geckoRelease(31) }} et sera prochainement supprimée. La méthode standard `send(Blob data)` peut être utilisée à la place.
+> **Note :** La méthode non-standard `sendAsBinary` est dépréciée à partir de Gecko 31 et sera prochainement supprimée. La méthode standard `send(Blob data)` peut être utilisée à la place.
 
 ### Utiliser les objets FormData
 
@@ -715,11 +715,11 @@ oReq.send(null);
 
 {{fx_minversion_note(5, "Les versions de Firefox avant Firefox 5 pouvaient utiliser <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> pour demander un accès cross-site. Ce n'est plus supporté, me^me si cela ne produit aucun avertissement et que la demande de permission est toujours présente.")}}
 
-La manière recommandée d'activer les requêtes cross-sites est d'utiliser le header HTTP `Access-Control-Allow-Origin `dans la réponse du XMLHttpRequest.
+La manière recommandée d'activer les requêtes intersites est d'utiliser l'en-tête HTTP `Access-Control-Allow-Origin` dans la réponse du `XMLHttpRequest`.
 
 ### XMLHttpRequests stoppées
 
-Si vous vous retrouvez avec une XMLHttpRequest ayant `status=0` et `statusText=null`, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été [`UNSENT`](http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent). Une cause probable est lorsque [l'origine `XMLHttpRequest` ](http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin) (lors de la création de l'objet XMLHttpRequest) a changé quand l'objet XMLHttpRequest est déjà open(). Ce cas peut se produire par exemple lorsque l'on a une XMLHttpRequest qui est lancée sur un évènement onunload d'une fenêtre: l'objet XMLHttpRequest est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est à dire open()) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement "activate" de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son événement "unload" lancé.
+Si vous vous retrouvez avec une `XMLHttpRequest` ayant `status=0` et `statusText=null`, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent). Une cause probable est lorsque [l'origine `XMLHttpRequest`](https://www.w3.org/TR/2010/CR-XMLHttpRequest-20100803/#xmlhttprequest-origin) (lors de la création de l'objet `XMLHttpRequest`) a changé quand l'objet `XMLHttpRequest` est déjà `open()`. Ce cas peut se produire par exemple lorsque l'on a une `XMLHttpRequest` qui est lancée sur un évènement `onunload` d'une fenêtre&nbsp;: l'objet `XMLHttpRequest` est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est-à-dire `open()`) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement `activate` de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son évènement `unload` lancé.
 
 ## Utiliser XMLHttpRequest depuis un module JavaScript / un composant XPCOM
 

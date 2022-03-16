@@ -42,7 +42,7 @@ var getting = browser.cookies.get(
     - `storeId`{{optional_inline}}
       - : Une `chaîne` représentant l'ID du {{WebExtAPIRef("cookies.CookieStore", "cookie store")}} dans lequel rechercher le cookie (tel que renvoyé par  {{WebExtAPIRef("cookies.getAllCookieStores()")}}). Par défault, le cookie store du contexte d'exécution actuel sera utilisé.
     - `url`
-      - : Une `chaîne` représentant l'URL avec laquelle le cookie à récupérer est associé. Cet argument peut être une URL complète, auquel cas toute donnée suivant le chemin d'URL (par exemple la chaîne de requête) est simplement ignorée. Si les [ permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions) pour cette URL ne sont pas spécifiées dans le [fichier manifeste](/fr/Add-ons/WebExtensions/manifest.json) de l'extension, l'appel de l'API échouera.
+      - : Une `chaîne` représentant l'URL avec laquelle le cookie à récupérer est associé. Cet argument peut être une URL complète, auquel cas toute donnée suivant le chemin d'URL (par exemple la chaîne de requête) est simplement ignorée. Si les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions) pour cette URL ne sont pas spécifiées dans le [fichier manifeste](/fr/Add-ons/WebExtensions/manifest.json) de l'extension, l'appel de l'API échouera.
 
 ### Valeur retournée
 

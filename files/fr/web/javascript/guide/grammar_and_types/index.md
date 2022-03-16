@@ -409,7 +409,7 @@ Comprendre le fonctionnement des virgules supplémentaires est important. Cepend
 
 Le type booléen possède deux valeurs littérales : `true` et `false`.
 
-Il ne faut pas confondre les valeurs `true` et `false` du type primitif booléen et les valeurs true et false de l'objet `Boolean`. L'objet `Boolean` permet de créer un objet autour du type de donnée booléen. Voir la page sur l'objet[ `Boolean`](/fr/docs/JavaScript/Reference/Objets_globaux/Boolean) pour plus d'informations.
+Il ne faut pas confondre les valeurs `true` et `false` du type primitif booléen et les valeurs true et false de l'objet `Boolean`. L'objet `Boolean` permet de créer un objet autour du type de donnée booléen. Voir la page sur l'objet [`Boolean`](/fr/docs/JavaScript/Reference/Objets_globaux/Boolean) pour plus d'informations.
 
 ### Les littéraux numériques
 

@@ -33,7 +33,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
     > - L'élément {{HTMLElement("meta")}} doit appartenir à l'élément {{HTMLElement("head")}} et doit apparaître parmi les **512 premiers octets de la page**. En effet, certains navigateurs ne consultent seulement ces premiers octets pour déterminer l'encodage utilisé pour la page.
     > - L'élément {{HTMLElement("meta")}} ne représente qu'une partie de l'[algorithme déterminant le jeu de caractères](https://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#encoding-sniffing-algorithm) à appliquer sur la page par le navigateur. Ainsi, l'en-tête HTTP Content-Type et tous les éléments BOM auront une priorité supérieure à cet élément.
     > - Définir le jeu de caractères utilisé grâce à cet attribut représente une bonne pratique et est fortement recommandé. Si aucun encodage n'est défini pour la page, plusieurs techniques XSS peuvent porter atteinte à l'utilisateur (voir l'exemple de la [technique XSS de recours à UTF-7](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7)). Toujours renseigner cet élément meta protégera contre ces dangers.
-    > - L'élément {{HTMLElement("meta")}} est un synonyme de `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` utilisé avant HTML5. Ici *`IANAcharset` *correspond à la valeur de l'attribut {{htmlattrxref("charset", "meta")}} correspondant. Bien qu'elle soit obsolète et qu'elle ne soit plus recommandée, cette syntaxe est toujours autorisée.
+    > - L'élément {{HTMLElement("meta")}} est un synonyme de `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` utilisé avant HTML5. Ici *`IANAcharset`* correspond à la valeur de l'attribut {{htmlattrxref("charset", "meta")}} correspondant. Bien qu'elle soit obsolète et qu'elle ne soit plus recommandée, cette syntaxe est toujours autorisée.
 
 - {{htmlattrdef("content")}}
   - : Cet attribut fournit la valeur associée avec l'attribut {{htmlattrxref("http-equiv", "meta")}} ou l'attribut {{htmlattrxref("name", "meta")}} suivant le contexte utilisé.
@@ -88,7 +88,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
     - `description`, contient un résumé concis et pertinent du contenu de la page. Plusieurs navigateurs, dont Firefox et Opera, utilisent cette métadonnée comme description de la page lorsque celle-ci est mise dans les favoris.
     - `generator`, contient l'identifiant du logiciel ayant généré la page (pas de contrainte de format)
     - `keywords`, contient une liste de mots-clés séparés par des virgules. Ces mots-clés sont pertinents et relatifs au contenu de la page.
-    - `referrer` qui contrôle [l'en-tête HTTP `Referer` ](/fr/docs/Web/HTTP/Headers/Referer)attachée aux requêtes envoyées à partir du document :
+    - `referrer` qui contrôle [l'en-tête HTTP `Referer`](/fr/docs/Web/HTTP/Headers/Referer) attachée aux requêtes envoyées à partir du document :
 
       <table class="standard-table">
         <caption>

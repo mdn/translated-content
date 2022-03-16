@@ -383,7 +383,7 @@ montrera le texte `button` lorsqu'on cliquera dessus. Attention, seul le code ex
 </button>
 ```
 
-Ici, on utilise `this `à l'intérieur d'une fonction et il n'est pas défini en amont. Il renvoie donc l'objet global (l'objet `window` pour un navigateur avec du code non-strict).
+Ici, on utilise `this` à l'intérieur d'une fonction et il n'est pas défini en amont. Il renvoie donc l'objet global (l'objet `window` pour un navigateur avec du code non-strict).
 
 ## Spécifications
 

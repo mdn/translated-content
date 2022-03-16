@@ -2007,13 +2007,6 @@
       "AngelSankturio"
     ]
   },
-  "Tools/Index": {
-    "modified": "2020-07-16T22:36:02.468Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz"
-    ]
-  },
   "Tools/JSON_viewer": {
     "modified": "2020-07-16T22:36:31.343Z",
     "contributors": [
@@ -3038,7 +3031,7 @@
       "MatthiasRubin"
     ]
   },
-  "Web/API/FileReader/onload": {
+  "Web/API/FileReader/load_event": {
     "modified": "2019-03-23T22:41:15.437Z",
     "contributors": [
       "rehne93",
@@ -13536,6 +13529,13 @@
       "Ar-sch.de",
       "DDSD",
       "Dria"
+    ]
+  },
+  "conflicting/Tools": {
+    "modified": "2020-07-16T22:36:02.468Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz"
     ]
   },
   "conflicting/Web/API": {

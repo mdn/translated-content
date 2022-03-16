@@ -20,7 +20,7 @@ L'opérateur de groupement `( )` contrôle la précédence de l'évaluation dans
 
 ## Description
 
-L'opérateur de groupement consiste en une paire de parenthèses encadrant une expression et permettant de surcharger la [précédence normale des opérateurs ](/fr/docs/JavaScript/Reference/Operateurs/Précédence_des_opérateurs)afin que les expressions dont la précédence est plus basse soient évaluées avant.
+L'opérateur de groupement consiste en une paire de parenthèses encadrant une expression et permettant de surcharger la [précédence normale des opérateurs](/fr/docs/JavaScript/Reference/Operateurs/Précédence_des_opérateurs) afin que les expressions dont la précédence est plus basse soient évaluées avant.
 
 ## Exemples
 

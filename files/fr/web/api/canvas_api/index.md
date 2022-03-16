@@ -7,7 +7,7 @@ translation_of: Web/API/Canvas_API
 
 Ajouté en [HTML5](/fr/docs/Web/Guide/HTML/HTML5), l'élément {{HTMLElement("canvas")}} est un nouvel élément qui peut être utilisé pour dessiner des graphismes via des scripts [JavaScript](/fr/docs/JavaScript). Par exemple, Il peut être utilisé pour dessiner des graphes, faire des compositions de photos, des animations, ou même faire du traitement ou de l'affichage de vidéos en temps réel.
 
-Les applications Mozilla ont commencé à supporter \<canvas> à partir de Gecko 1.8 (c'est-à-dire [Firefox 1.5](/fr/docs/Firefox_1.5_pour_les_développeurs)). L'élément a été introduit à l'origine par Apple pour le [Dashboard d'OS X](http://www.apple.com/macosx/features/dashboard/) et pour Safari. Internet Explorer supporte \<canvas> depuis la version 9 et ultérieures, pour les versions précédentes d'IE, une page peut effectuer ce support de \<canvas> en incluant un script depuis le projet [Explorer Canvas  ](http://excanvas.sourceforge.net/)de Google.
+Les applications Mozilla ont commencé à supporter `<canvas>` à partir de Gecko 1.8 (c'est-à-dire [Firefox 1.5](/fr/docs/Mozilla/Firefox/Releases/1.5)). L'élément a été introduit à l'origine par Apple pour le Dashboard d'OS X et pour Safari. Internet Explorer supporte `<canvas>` depuis la version 9 et ultérieures&nbsp;; pour les versions précédentes d'IE, une page peut effectuer ce support de `<canvas>` en incluant un script depuis le projet [«&nbsp;<i lang="en">Explorer Canvas</i>&nbsp;»](https://github.com/arv/explorercanvas) de Google.
 
 L'élément \<canvas> est aussi utilisé par [WebGL](/fr/docs/Web/API/WebGL_API) pour afficher des graphismes 3D avec accélération matérielle sur des pages web.
 

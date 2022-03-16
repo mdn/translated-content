@@ -283,7 +283,7 @@ Le serveur répond avec un en-tête `Access-Control-Allow-Methods` et indique qu
 
 Le serveur envoie également l'en-tête `Access-Control-Allow-Headers` avec une valeur "`X-PINGOTHER, Content-Type`" qui confirme que les en-têtes souhaités sont autorisés pour la requête principale. Comme `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` est une liste d'en-têtes acceptables séparés par des virgules.
 
-Enfin, l'en-tête {{HTTPHeader("Access-Control-Max-Age")}} indique avec une valeur exprimée en secondes, la durée pendant laquelle cette réponse préliminaire peut être mise en cache avant la prochaine requête préliminaire. Ici, la réponse est 86400 secondes, ce qui correspond à 24 heures. On notera ici que chaque navigateur possède[ un maximum interne](/fr/docs/Web/HTTP/Headers/Access-Control-Max-Age) qui a la priorité lorsque `Access-Control-Max-Age` lui est supérieur.
+Enfin, l'en-tête {{HTTPHeader("Access-Control-Max-Age")}} indique avec une valeur exprimée en secondes, la durée pendant laquelle cette réponse préliminaire peut être mise en cache avant la prochaine requête préliminaire. Ici, la réponse est 86400 secondes, ce qui correspond à 24 heures. On notera ici que chaque navigateur possède [un maximum interne](/fr/docs/Web/HTTP/Headers/Access-Control-Max-Age) qui a la priorité lorsque `Access-Control-Max-Age` lui est supérieur.
 
 #### Requêtes préliminaires et redirection
 

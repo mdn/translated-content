@@ -15,7 +15,7 @@ Il s'agit du seul fichier qui doit être présent dans chaque extension. Il cont
 
 Ce manifeste peut également contenir des pointeurs vers plusieurs autres types de fichiers :
 
-- [page d'arrière-plan ](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts): implémentez une logique à longue durée.
+- [page d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts)&nbsp;: implémentez une logique à longue durée.
 - Icônes pour l'extension et tous les boutons qu'elle peut définir.
 - [Sidebars, popups, et options pages](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): Documents HTML qui fournissent du contenu pour divers composants de l'interface utilisateur.
 - [Script de contenu](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) : interagissez avec les pages Web (Notez que ce n'est pas le même que javaScript dans un élément {{HTMLElement("script")}} au sein d'une page).

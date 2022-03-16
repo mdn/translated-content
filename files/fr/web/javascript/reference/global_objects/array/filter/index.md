@@ -133,7 +133,7 @@ console.log(filtreTexte(fruits, 'm')); // ['pomme', 'mangue'];
 
 ### Implémentation avec la syntaxe ECMAScript 2015 (ES6)
 
-L'exemple suivant utilise [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), et le mot clé [`const` ](/fr/docs/Web/JavaScript/Reference/Instructions/const)disponible en ES6.
+L'exemple suivant utilise [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), et le mot clé [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const) disponible en ES6.
 
 ```js
 const fruits = ['pomme', 'banane', 'raisin', 'mangue'];

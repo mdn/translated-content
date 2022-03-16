@@ -73,7 +73,7 @@ Dans l'exemple qui suit, on ouvre une transaction et un magasin d'objets. Ensuit
 
 `myIndex.getKey('Bungle')` est ensuite utilisé afin d'obtenir la clé primaire de l'enregistrement pour lequel `lName` vaut `Bungle`. Le résultat de cette requête est imprimé dans la console lorsque la fonction de rappel (_callback_) de succès est déclenché.
 
-Enfin, on parcourt les enregistrements pour remplir un tableau HTML. Le dépôt [IDBIndex-example ](https://github.com/mdn/IDBIndex-example)contient un exemple complet ([ainsi qu'une démonstration](https://mdn.github.io/IDBIndex-example/)).
+Enfin, on parcourt les enregistrements pour remplir un tableau HTML. Le dépôt [`indexeddb-examples`](https://github.com/mdn/IDBIndex-example) contient un exemple complet ([voir l'exemple en direct](https://mdn.github.io/indexeddb-examples/idbindex/)).
 
 ```js
 function displayDataByIndex() {

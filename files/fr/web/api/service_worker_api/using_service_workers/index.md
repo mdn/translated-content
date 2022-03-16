@@ -258,7 +258,7 @@ this.addEventListener('fetch', function(event) {
 
 `caches.match(event.request)` permet de mettre en correspondance chaque ressource demandée sur le réseau avec la ressource équivalente en cache, si elle se trouve être disponible. La comparaison est effectuée via l'url et diverses en-têtes, comme habituellement avec des requêtes HTTP normales.
 
-Voici quelques autres options disponibles pour que la magie opère (voir la [documentation de l'API Fetch ](/fr/docs/Web/API/Fetch_API)pour plus d'informations sur les objets {{domxref("Request")}} et {{domxref("Response")}}.)
+Voici quelques autres options disponibles pour que la magie opère (voir la [documentation de l'API Fetch](/fr/docs/Web/API/Fetch_API) pour plus d'informations sur les objets [`Request`](/fr/docs/Web/API/Request) et [`Response`](/fr/docs/Web/API/Response)).
 
 1.  Le constructeur `{{domxref("Response.Response","Response()")}}` permet de créer une réponse personnalisée. Dans cet exemple, une chaîne de caractères est simplement retournée :
 

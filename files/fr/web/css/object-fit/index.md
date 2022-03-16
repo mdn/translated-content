@@ -1,35 +1,33 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/object-fit
+browser-compat: css.properties.object-fit
 ---
 {{CSSRef}}
 
-La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/Élément_remplacé) ({{HTMLElement("img")}} ou {{HTMLElement("video")}} par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
+La propriété CSS **`object-fit`** définit la façon dont le contenu d'un [élément remplacé](/fr/docs/Web/CSS/Replaced_element) ([`<img>`](/fr/docs/Web/HTML/Element/Img) ou [`<video>`](/fr/docs/Web/HTML/Element/video) par exemple) doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur.
 
 {{EmbedInteractiveExample("pages/css/object-fit.html")}}
 
 Selon la valeur utilisée pour `object-fit`, l'élément peut être rogné, mis à l'échelle ou étiré, afin de remplir la boîte qui le contient.
 
-> **Note :** Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété {{cssxref("object-position")}}.
+> **Note :** Il est possible de modifier l'alignement du contenu de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété [`object-position`](/fr/docs/Web/CSS/object-position).
 
 ## Syntaxe
 
 ```css
 /* Valeurs avec un mot-clé */
-object-fit: fill;
 object-fit: contain;
 object-fit: cover;
+object-fit: fill;
 object-fit: none;
 object-fit: scale-down;
 
 /* Valeurs globales */
 object-fit: inherit;
 object-fit: initial;
+object-fit: revert;
 object-fit: unset;
 ```
 
@@ -38,7 +36,7 @@ La propriété `object-fit` peut être définie grâce à l'un des mots-clés su
 ### Valeurs
 
 - `contain`
-  - : Le contenu remplacé est dimensionné pour maintenir ses proportions tout en étant ajusté à la boîte de contenu : sa taille réelle est résolue en utilisant la largeur et la hauteur de l'élément comme contraintes de contenant.
+  - : Le contenu remplacé est dimensionné pour maintenir ses proportions tout en étant ajusté à la boîte de contenu&nbsp;: sa taille réelle est résolue en utilisant la largeur et la hauteur de l'élément comme contraintes de contenant.
 - `cover`
   - : Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu. La taille réelle est calculée pour couvrir la zone décrite par la hauteur et la largeur de l'élément. Si les ratios de l'objet et de la boîte ne correspondent pas, le contenu remplacé sera rogné.
 - `fill`
@@ -48,71 +46,68 @@ La propriété `object-fit` peut être définie grâce à l'un des mots-clés su
 - `scale-down`
   - : Le contenu est dimensionné comme si `none` ou `contain` étaient spécifiés, on prend celui qui aboutirait à une taille réelle plus petite.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### HTML
+### Appliquer `object-fit` à une image
+
+#### HTML
 
 ```html
-<div>
+<section>
   <h2>object-fit: fill</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill"/>
+  <img class="fill" src="mdn_logo_only_color.png" alt="Logo MDN">
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="fill narrow"/>
+  <img class="fill narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
 
   <h2>object-fit: contain</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain"/>
+  <img class="contain" src="mdn_logo_only_color.png" alt="Logo MDN">
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="contain narrow"/>
+  <img class="contain narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
 
   <h2>object-fit: cover</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover"/>
+  <img class="cover" src="mdn_logo_only_color.png" alt="Logo MDN">
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="cover narrow"/>
+  <img class="cover narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
 
   <h2>object-fit: none</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none"/>
+  <img class="none" src="mdn_logo_only_color.png" alt="Logo MDN">
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="none narrow"/>
+  <img class="none narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
 
   <h2>object-fit: scale-down</h2>
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down"/>
+  <img class="scale-down" src="mdn_logo_only_color.png" alt="Logo MDN">
 
-  <img src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo" class="scale-down narrow"/>
-
-</div>
+  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="Logo MDN">
+</section>
 ```
 
-### CSS
+#### CSS
 
 ```css
 h2 {
-  font-family: 'Courier New', monospace;
+  font-family: Courier New, monospace;
   font-size: 1em;
   margin: 1em 0 0.3em;
-}
-
-div {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  height: 940px;
 }
 
 img {
   width: 150px;
   height: 100px;
   border: 1px solid #000;
+  margin: 10px 0;
 }
 
 .narrow {
   width: 100px;
   height: 150px;
-  margin-top: 10px;
 }
 
 .fill {
@@ -136,29 +131,24 @@ img {
 }
 ```
 
-### Résultat
+#### Résultat
 
-{{EmbedLiveSample('Exemples', 500, 450)}}
+{{EmbedLiveSample('', 500, 1100)}}
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires                                          |
-| -------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('CSS4 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS4 Images')}} | Les mots-clés `from-image` et `flip` ont été ajoutés. |
-| {{SpecName('CSS3 Images', '#the-object-fit', 'object-fit')}} | {{Spec2('CSS3 Images')}} | Définition initiale.                                  |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.object-fit")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{cssxref("background-size")}}
-- Les autres propriétés CSS liées aux images :
+- [`background-size`](/fr/docs/Web/CSS/background-size)
 
-  - {{cssxref("object-position")}}
-  - {{cssxref("image-orientation")}}
-  - {{cssxref("image-rendering")}}
-  - {{cssxref("image-resolution")}}
+- Les autres propriétés CSS liées aux images&nbsp;:
+  - [`object-position`](/fr/docs/Web/CSS/object-position)
+  - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
+  - [`image-rendering`](/fr/docs/Web/CSS/Image-rendering)
+  - [`image-resolution`](/fr/docs/Web/CSS/image-resolution)

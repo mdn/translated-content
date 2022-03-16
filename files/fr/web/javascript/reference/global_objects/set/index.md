@@ -22,7 +22,7 @@ L'objet **`Set`** (Ensemble en français) permet de stocker des valeurs _uniques
 ### Paramètres
 
 - `itérable`
-  - : Paramètre optionnel. Si un objet [itérable ](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)est donné comme argument, l'ensemble de ses éléments sera ajouté au nouvel objet Set. Si {{jsxref("null")}} est fourni comme argument ou qu'aucun argument n'est fourni, il sera traité comme {{jsxref("undefined")}}.
+  - : Paramètre optionnel. Si un objet [itérable](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) est donné comme argument, l'ensemble de ses éléments sera ajouté au nouvel objet Set. Si {{jsxref("null")}} est fourni comme argument ou qu'aucun argument n'est fourni, il sera traité comme {{jsxref("undefined")}}.
 
 ### Valeur de retour
 

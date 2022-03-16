@@ -86,7 +86,7 @@ Contrairement à d'autres méthodes de recherche d'éléments, comme  {{domxref(
 </html>
 ```
 
-S'il n'y a pas d'élément avec l'`id` fourni, cette fonction retourne `null`. A noter que le paramètre `id` est sensible à la casse, ainsi` document.getElementById("Main")` retournera `null` au lieu de l'élément `<div id="main">` étant donné que "M" et "m" sont différents pour cette méthode.
+S'il n'y a pas d'élément avec l'identifiant (`id`) fourni, cette fonction retourne `null`. À noter que le paramètre `id` est sensible à la casse, ainsi `document.getElementById("Main")` retournera `null` au lieu de l'élément `<div id="main">` étant donné que «&nbsp;M&nbsp;» et «&nbsp;m&nbsp;» sont différents pour cette méthode.
 
 **Les éléments absents du document** ne sont pas cherchés par `getElementById()`. Quand vous créez un élément et y assignez un ID, vous devez insérer l'élément dans l'arbre du document avec {{domxref("Node.insertBefore()")}} ou une méthode similaire avant de pouvoir y accéder avec `getElementById()` :
 

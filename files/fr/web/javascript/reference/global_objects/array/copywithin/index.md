@@ -28,9 +28,9 @@ La méthode **`copyWithin()`** effectue une copie superficielle (_shallow copy_)
 
 - `cible`
 
-  - : Indice à partir duquel la séquence sera copiée. Si la valeur est négative, `cible `sera compté à partir de la fin du tableau.
+  - : Indice à partir duquel la séquence sera copiée. Si la valeur est négative, `cible` sera compté à partir de la fin du tableau.
 
-    Si `cible `est supérieur ou égal à `arr.length`, rien ne sera copié. Si `cible` est positionné apès `début`, la séquence copiée sera réduite pour correspondre à `arr.length`.
+    Si `cible` est supérieur ou égal à `arr.length`, rien ne sera copié. Si `cible` est positionné apès `début`, la séquence copiée sera réduite pour correspondre à `arr.length`.
 
 - `début` {{optional_inline}}
   - : Indice de début de la séquence a copier. Si la valeur est négative, `début` sera compté à partir de la fin du tableau. Si `début` est omis, `copyWithin` copiera à partir du début du tableau (par défaut 0).

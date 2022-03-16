@@ -48,7 +48,7 @@ animation-timing-function: initial;
 animation-timing-function: unset;
 ```
 
-Pour les animations cadencées (_keyframed_), la fonction s'applique entre chaque étape (ou _[keyframes](/fr/docs/Web/CSS/@keyframes)_) plutôt que sur l'animation dans son ensemble. Autrement dit, la fonction de _timing_ est appliquée au début et à la fin de l'étape de l'animation.
+Pour les animations cadencées (_keyframed_), la fonction s'applique entre chaque étape (ou [`@keyframes`](/fr/docs/Web/CSS/@keyframes)) plutôt que sur l'animation dans son ensemble. Autrement dit, la fonction de _timing_ est appliquée au début et à la fin de l'étape de l'animation.
 
 Une fonction de progression pour une animation qui est définie pour une étape sera appliquée à cette étape en particulier. Si aucune fonction n'est définie pour l'étape, ce sera la fonction de progression de toute l'animation qui sera utilisée.
 

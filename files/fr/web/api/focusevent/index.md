@@ -27,7 +27,7 @@ _Hértite des propriétés de son parent domxref("UIEvent")}} et indirectement d
 
 ## Méthodes
 
-_Aucune méthode spécifique ; Hérite des propriétés de son parent _{{domxref("UIEvent")}}_ et indirectement de {{domxref("Event")}}_.
+*Aucune méthode spécifique&nbsp;; hérite des propriétés de son parent [`UIEvent`](/fr/docs/Web/API/UIEvent) et indirectement de [`Event`](/fr/docs/Web/API/Event).*
 
 ## Spécifications
 

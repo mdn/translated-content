@@ -49,7 +49,7 @@ Tous les objets `Int32Array` héritent de {{jsxref("TypedArray.prototype", "%Typ
 ### Propriétés
 
 - `Int32Array.prototype.constructor`
-  - : Renvoie la fonction qui a créé le prototype de l'instance. Par défaut, ce sera le constructeur natif` Int32Array`.
+  - : Renvoie la fonction qui a créé le prototype de l'instance. Par défaut, ce sera le constructeur natif `Int32Array`.
 - {{jsxref("TypedArray.prototype.buffer", "Int32Array.prototype.buffer")}} {{readonlyInline}}
   - : Renvoie l'{{jsxref("ArrayBuffer")}} référencée par l'objet `Int32Array`. Cette propriété est déterminée lors de la construction de l'objet et n'est accessible qu'en **lecture seule**.
 - {{jsxref("TypedArray.prototype.byteLength", "Int32Array.prototype.byteLength")}} {{readonlyInline}}

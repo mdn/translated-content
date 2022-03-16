@@ -1,13 +1,8 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
-tags:
-  - API
-  - DOM
-  - Liste
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/NodeList/forEach
+browser-compat: api.NodeList.forEach
 ---
 {{APIRef("DOM")}}
 
@@ -30,7 +25,7 @@ La méthode **`forEach()`** de l'interface {{domxref("NodeList")}} appelle le ra
     - _`listObj`_
       - : L'objet NodeList auquel `forEach()` est appliqué.
 
-- ` thisArg`` {{Optional_inline}}  `
+- `thisArg` {{Optional_inline}}
   - : Valeur à utiliser comme {{jsxref("this")}} lors de l'exécution du `callback` (_rappel_).
 
 ### Valeur retournée
@@ -86,14 +81,11 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 ## Spécifications
 
-| Spécification                                                                    | Statut                           | Commentaire                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}} | {{ Spec2('DOM WHATWG') }} | Définit `NodeList` comme `iterable<Node> `(_noeud itérable_)     |
-| {{SpecName("WebIDL", "#es-forEach", "forEach")}}                 | {{Spec2("WebIDL")}}         | Définit `forEach` sur les déclarations `iterable` (_itératives_) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.NodeList.forEach")}}
+{{Compat}}
 
 ## Voir aussi
 

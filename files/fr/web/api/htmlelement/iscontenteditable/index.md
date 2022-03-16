@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLElement/isContentEditable
 ---
 {{ APIRef("HTML DOM") }}
 
-La propriété en lecture seule **`HTMLElement.isContentEditable`** renvoie un  {{jsxref("Boolean")}} qui est `true `_(vrai)_ si le contenu de l'élément est éditable ; sinon elle renvoie `false`_(faux)_.
+La propriété en lecture seule **`HTMLElement.isContentEditable`** renvoie un booléen qui est `true` _(vrai)_ si le contenu de l'élément est éditable&nbsp;; sinon elle renvoie `false` _(faux)_.
 
 ## Syntaxe
 

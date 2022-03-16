@@ -35,7 +35,7 @@ Il est possible de construire une expression rationnelle de deux façons :
 
 ## Écrire une expression rationnelle
 
-Le motif d'une expression rationnelle est composé de caractères simples (comme `/abc/`), ou de caractères simples et spéciaux, comme `/ab*c/` ou `/Chapitre (\d+)\.\d*/ `. Le dernier exemple utilise des parenthèses qui permettent d'avoir une « mémoire ». La correspondance avec le motif contenu entre parenthèses pourra être utilisée par la suite. Ceci est décrit avec [ce paragraphe](#parentheses).
+Le motif d'une expression rationnelle est composé de caractères simples (comme `/abc/`), ou de caractères simples et spéciaux, comme `/ab*c/` ou `/Chapitre (\d+)\.\d*/`. Le dernier exemple utilise des parenthèses qui permettent d'avoir une « mémoire ». La correspondance avec le motif contenu entre parenthèses pourra être utilisée par la suite. Ceci est décrit avec [ce paragraphe](#parentheses).
 
 ### Utiliser des motifs simples
 
@@ -651,7 +651,7 @@ Pour qu'une partie de la chaîne de caractère corresponde mais que la correspon
 
 ## Utiliser les expressions rationnelles
 
-Les expresssions régulières sont utilisées avec les méthodes ` test``  `et` exec` de l'objet` RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+Les expresssions régulières sont utilisées avec les méthodes `test` et `exec` de l'objet `RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
 | Méthode                                                  | Description                                                                                                                                                                                        |
 | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -663,7 +663,7 @@ Les expresssions régulières sont utilisées avec les méthodes ` test``  `et` 
 | {{jsxref("String.replace", "replace")}}     | Une méthode de l'objet `String` qui recherche une correspondance dans une chaîne de caractères et qui remplace la correspondance par une chaîne de substitution.                                   |
 | {{jsxref("String.split", "split")}}         | Une méthode de l'objet `String` qui utilise une expression régulière ou une chaîne de caractères pour découper une chaîne de caractères en un tableau comprenant les fragments résultants.         |
 
-Pour savoir si un motif est présent au sein d'une chaîne de caractères, utiliser les méthodes` test` ou `search`. Pour obtenir plus d'informations (moins rapidement) on utilisera les méthodes `exec` ou `match`. Si on utilise `exec` ou `match` et qu'une correspondance est trouvée, ces méthodes renverront un tableau et mettront à jour des propriétés de l'objet global `RegExp` et aussi de l'instance de `RegExp` associée à l'expression rationnelle. Si aucune correspondance n'est trouvée, la méthode `exec` renverra `null` (qui est automatiquement converti à `false` lors d'un test conditionnel).
+Pour savoir si un motif est présent au sein d'une chaîne de caractères, utiliser les méthodes `test` ou `search`. Pour obtenir plus d'informations (moins rapidement) on utilisera les méthodes `exec` ou `match`. Si on utilise `exec` ou `match` et qu'une correspondance est trouvée, ces méthodes renverront un tableau et mettront à jour des propriétés de l'objet global `RegExp` et aussi de l'instance de `RegExp` associée à l'expression rationnelle. Si aucune correspondance n'est trouvée, la méthode `exec` renverra `null` (qui est automatiquement converti à `false` lors d'un test conditionnel).
 
 Dans l'exemple qui suit, le script utilise la méthode `exec` pour trouver une correspondance dans une chaîne de caractères.
 

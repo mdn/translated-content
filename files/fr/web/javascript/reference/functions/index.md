@@ -162,8 +162,8 @@ Une expression de fonction fléchée possède une syntaxe plus courte et est li�
     param => expression
 
 - `param`
-  - : Le nom d'un argument. S'il n'y a pas d'arguments, cela doit être indiqué par `()`.  S'il y a un seul argument, les parenthèses ne sont pas obligatoires (par exemple :  `toto => 1`).
-- `instructions `ou` expression`
+  - : Le nom d'un argument. S'il n'y a pas d'arguments, cela doit être indiqué par `()`.  S'il y a un seul argument, les parenthèses ne sont pas obligatoires (par exemple :  `toto => 1`).
+- `instructions` ou `expression`
   - : S'il y a plusieurs instructions, elles doivent être encadrées par des accolades. Une expression unique ne doit pas obligatoirement être entourée d'accolades. L'expression est également la valeur de retour implicite de la fonction.
 
 ### Le constructeur `Function`
@@ -398,7 +398,7 @@ function externe() {
 resultat = externe()(20); // renvoie 20 et non pas 10
 ```
 
-Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x `de la fonction` interne` et la variable `x `de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le  `x` de la fonction interne l'emporte sur le `x `de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
+Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x` de la fonction `interne` et la variable `x` de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le  `x` de la fonction interne l'emporte sur le `x` de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
 
 ## Définition des méthodes
 
@@ -607,7 +607,7 @@ Bien que cette fonction ressemble à une déclaration de fonction, il s'agit en 
 
 En JavaScript, les gestionnaires d'événements [DOM](/fr/docs/DOM) (_event handlers_ en anglais) sont des fonctions (différentes des objets contenant une méthode `handleEvent` dans d'autres langages de liaison avec le DOM -_binding languages_ en anglais). Les fontions ont l'objet [event](/fr/docs/DOM/event) comme seul et unique paramètre. Comme tous les autres paramètres, si l'objet événement, n'a pas besoin d'être utilisé, il peut être absent de la liste des paramètres formels.
 
-Les objets d'un document HTML susceptibles de recevoir des événements peuvent être par exemple : `window` (objets` Window`, y compris les objets frames), `document` (les objets `HTMLDocument`), et les éléments (les objets `Element`). Au sein du [DOM HTML](https://www.w3.org/TR/DOM-Level-2-HTML/), les objets recevant des événements possède des propriétés gestionnaires d'événements. Ces propriétés sont les noms des événements en minuscules préfixés par « on » (par exemple `onfocus`). Une autre façon, plus fiable, d'ajouter des auditeurs d'événements, est offert par les [événements DOM de niveau 2](https://www.w3.org/TR/DOM-Level-2-Events/).
+Les objets d'un document HTML susceptibles de recevoir des événements peuvent être par exemple : `window` (objets `Window`, y compris les objets frames), `document` (les objets `HTMLDocument`), et les éléments (les objets `Element`). Au sein du [DOM HTML](https://www.w3.org/TR/DOM-Level-2-HTML/), les objets recevant des événements possède des propriétés gestionnaires d'événements. Ces propriétés sont les noms des événements en minuscules préfixés par « on » (par exemple `onfocus`). Une autre façon, plus fiable, d'ajouter des auditeurs d'événements, est offert par les [événements DOM de niveau 2](https://www.w3.org/TR/DOM-Level-2-Events/).
 
 Note : Les événements font partie de la logique DOM et non de celle de JavaScript. (JavaScript n'est qu'un langage permettant de manipuler le DOM.)
 
@@ -756,7 +756,7 @@ resultat = padZeros(5,4);  // renvoie "0005"
 
 ### Déterminer si une fonction existe
 
-Il est possible de déterminer si oui ou non une fonction existe en utilisant l'opérateur `typeof`. Dans l'exemple qui suit, on teste pour savoir si l'objet` window` possède une propriété appelé `noFunc` qui serait une fonction. Si c'est le cas, elle sera utilisée, sinon on fera autre chose.
+Il est possible de déterminer si oui ou non une fonction existe en utilisant l'opérateur `typeof`. Dans l'exemple qui suit, on teste pour savoir si l'objet `window` possède une propriété appelé `noFunc` qui serait une fonction. Si c'est le cas, elle sera utilisée, sinon on fera autre chose.
 
 ```js
  if ('function' === typeof window.noFunc) {

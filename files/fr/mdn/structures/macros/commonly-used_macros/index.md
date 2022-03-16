@@ -5,9 +5,9 @@ translation_of: MDN/Structures/Macros/Commonly-used_macros
 ---
 {{MDNSidebar}}
 
-Cette page présente un grand nombre de macros à usage général créées pour une utilisation avec MDN. Pour avoir des informations sur l'utilisation de ces macros, voir [Utilisation des macros ](https://developer.mozilla.org/fr/docs/MDN/Contribute/Structures/Macros "/fr/docs/MDN/Contribute/Content/Macros")et [Utiliser les liens macros ](/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros "/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros"). Voir [les autres macros ](/fr/docs/MDN/Contribute/Structures/Macros/Other "/fr/docs/MDN/Contribute/Structures/Macros/Other")pour avoir des informations sur les macros qui sont rarement utilisées, ou utilisées dans des contextes spécifiques, ou obsolètes. Il y a aussi une liste complète de [toutes les macros MDN](/fr/docs/templates "/fr/docs/templates").
+Cette page présente un grand nombre de macros à usage général créées pour une utilisation avec MDN. Pour avoir des informations sur l'utilisation de ces macros, voir [Utilisation des macros](https://developer.mozilla.org/fr/docs/MDN/Contribute/Structures/Macros "/fr/docs/MDN/Contribute/Content/Macros") et [Utiliser les liens macros](/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros "/fr/docs/MDN/Contribute/Editor/Links#Using_link_macros"). Voir [les autres macros](/fr/docs/MDN/Contribute/Structures/Macros/Other "/fr/docs/MDN/Contribute/Structures/Macros/Other") pour avoir des informations sur les macros qui sont rarement utilisées, ou utilisées dans des contextes spécifiques, ou obsolètes. Il y a aussi une liste complète de [toutes les macros MDN](/fr/docs/templates "/fr/docs/templates").
 
-Voir aussi le[ Guide style CSS ](/fr/docs/MDN/Contribute/Guidelines/CSS_style_guide "/fr/docs/MDN/Contribute/Guidelines/CSS_style_guide")pour l'utilisation des styles disponibles.
+Voir aussi le [Guide style CSS](/fr/docs/MDN/Contribute/Guidelines/CSS_style_guide "/fr/docs/MDN/Contribute/Guidelines/CSS_style_guide") pour l'utilisation des styles disponibles.
 
 ## Linking
 
@@ -15,7 +15,7 @@ Voir aussi le[ Guide style CSS ](/fr/docs/MDN/Contribute/Guidelines/CSS_style_gu
 
 En général, vous ne devez pas utiliser des macros pour créer des liens arbitraires. Utilisez le **Lien** dans l'interface de l'éditeur pour créer des liens.
 
-- La macro {{TemplateLink("Glossary")}} crée un lien vers une entrée du[ glossaire](https://developer.mozilla.org/fr/docs/Glossaire) MDN. Cette macro accepte un paramètre obligatoire et deux optionnels:
+- La macro {{TemplateLink("Glossary")}} crée un lien vers une entrée du [glossaire](https://developer.mozilla.org/fr/docs/Glossaire) MDN. Cette macro accepte un paramètre obligatoire et deux optionnels:
 
   1.  Le nom d'un terme (comme "HTML").
   2.  Le texte à afficher dans l'article au lieu du nom du terme (ce qui devrait être rarement utilisé). {{optional_inline}}
@@ -35,7 +35,7 @@ Il existe différentes macros pour des liens vers des pages dans les zones de r�
 - {{TemplateLink("domxref")}} links to pages in the DOM reference; if you include parentheses at the end, the template knows to display the link to look like a function name. For example, \\{{domxref("document.getElementsByName()")}} results in {{ domxref("document.getElementsByName()") }} while `\{\{domxref("Node")\}\}` results in {{ domxref("Node") }}.
 - {{TemplateLink("event")}} links to pages in the DOM Event reference, for example: \\{{event("change")}} results in {{event("change")}}.
 - {{TemplateLink("HTMLElement")}} links to an HTML element in the HTML Reference.
-- {{TemplateLink("htmlattrxref")}} links to an HTML attribute, either a global attribute description if you only specify the attribute name or an attribute associated with a specific element if you specify an attribute name and an element name. For example, `\{\{htmlattrxref("lang")\}\} `will create this link: {{htmlattrxref("lang")}}.` ` `\{\{htmlattrxref("type","input")\}\}` will create this link: {{htmlattrxref("type","input")}}.
+- {{TemplateLink("htmlattrxref")}} links to an HTML attribute, either a global attribute description if you only specify the attribute name or an attribute associated with a specific element if you specify an attribute name and an element name. For example, `\{\{htmlattrxref("lang")\}\}` will create this link: {{htmlattrxref("lang")}}. `\{\{htmlattrxref("type","input")\}\}` will create this link: {{htmlattrxref("type","input")}}.
 - {{TemplateLink("jsxref")}} links to a page in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference "en-US/docs/Web/JavaScript/Reference").
 - {{TemplateLink("SVGAttr")}} links to a specific SVG attribute. For example, `\{\{SVGAttr("d")\}\}` creates this link: {{SVGAttr("d")}}.
 - {{TemplateLink("SVGElement")}} links to an SVG element in the SVG Reference.
@@ -126,7 +126,7 @@ Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).
 
 ##### Syntax
 
-`\{{deprecated_inline}}` or` \{{deprecated_inline("gecko5")}}`
+`\{{deprecated_inline}}` or `\{{deprecated_inline("gecko5")}}`
 
 ##### Examples
 
@@ -141,7 +141,7 @@ Don't use the parameter in any browser-agnostic area (HTML, APIs, JS, CSS, …).
 
 ##### Syntax
 
-`\{{obsolete_inline}}` or` \{{obsolete_inline("js1.8.5")}}`
+`\{{obsolete_inline}}` or `\{{obsolete_inline("js1.8.5")}}`
 
 ##### Examples
 

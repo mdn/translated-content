@@ -10,7 +10,7 @@ translation_of: Web/API/Attr/prefix
 ---
 {{APIRef("DOM")}}
 
-La propriété **`Attr.prefix `**en lecture seule renvoie le préfixe de l'espace de noms de l'attribut spécifié ou null si aucun préfixe n'est spécifié
+La propriété **`Attr.prefix`** en lecture seule renvoie le préfixe de l'espace de noms de l'attribut spécifié ou `null` si aucun préfixe n'est spécifié.
 
 > **Note :** Avant DOM4, cette API a été définie dans l'interface {{domxref ("Node")}}.
 

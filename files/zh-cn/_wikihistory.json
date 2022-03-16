@@ -4173,40 +4173,6 @@
       "oceanMIH"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Async_await": {
-    "modified": "2020-12-08T06:58:32.883Z",
-    "contributors": [
-      "byrde",
-      "woniuxingdong",
-      "qwei",
-      "plainnany",
-      "jakio6",
-      "awarmy",
-      "cochn",
-      "wangfangping"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Choosing_the_right_approach": {
-    "modified": "2020-12-08T07:27:41.218Z",
-    "contributors": [
-      "byrde",
-      "icetea_cover",
-      "rubyKC",
-      "shangruitong",
-      "PYGC",
-      "wangfangping",
-      "tjls"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Concepts": {
-    "modified": "2020-07-16T22:33:29.726Z",
-    "contributors": [
-      "alice201601",
-      "grape",
-      "HermitSun",
-      "oceanMIH"
-    ]
-  },
   "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-12-09T00:17:16.227Z",
     "contributors": [
@@ -4234,22 +4200,6 @@
       "wangfangping",
       "kafm",
       "zijieee"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Timeouts_and_intervals": {
-    "modified": "2020-08-14T06:09:20.310Z",
-    "contributors": [
-      "Pada",
-      "You2er",
-      "WinterCicada",
-      "zhangbig0",
-      "mizhon",
-      "yuqing521",
-      "Alendia",
-      "grape",
-      "wangfangping",
-      "puddlejumper26",
-      "oceanMIH"
     ]
   },
   "Learn/JavaScript/Building_blocks/Events": {
@@ -11302,12 +11252,6 @@
       "githubyangwei"
     ]
   },
-  "Web/API/Document/onvisibilitychange": {
-    "modified": "2020-10-15T22:25:06.098Z",
-    "contributors": [
-      "wangzhongchunongithub"
-    ]
-  },
   "Web/API/Document/open": {
     "modified": "2020-10-15T21:52:24.168Z",
     "contributors": [
@@ -13053,13 +12997,13 @@
       "Char-Ten"
     ]
   },
-  "Web/API/EventSource/onerror": {
+  "Web/API/EventSource/error_event": {
     "modified": "2019-03-23T22:09:23.181Z",
     "contributors": [
       "Char-Ten"
     ]
   },
-  "Web/API/EventSource/onopen": {
+  "Web/API/EventSource/open_event": {
     "modified": "2019-03-23T22:16:16.621Z",
     "contributors": [
       "kameii"
@@ -13440,18 +13384,6 @@
     "contributors": [
       "zhangchen",
       "qhy90223"
-    ]
-  },
-  "Web/API/FileReader/onabort": {
-    "modified": "2019-04-18T04:11:44.611Z",
-    "contributors": [
-      "allan2coder"
-    ]
-  },
-  "Web/API/FileReader/onload": {
-    "modified": "2019-03-23T22:21:51.910Z",
-    "contributors": [
-      "Cattla"
     ]
   },
   "Web/API/FileReader/readAsArrayBuffer": {
@@ -16690,12 +16622,6 @@
       "c1ngular"
     ]
   },
-  "Web/API/MediaDevices/ondevicechange": {
-    "modified": "2019-03-23T22:08:09.338Z",
-    "contributors": [
-      "qzn928"
-    ]
-  },
   "Web/API/MediaElementAudioSourceNode": {
     "modified": "2019-03-23T22:09:55.508Z",
     "contributors": [
@@ -16757,19 +16683,19 @@
       "forgamer"
     ]
   },
+  "Web/API/MediaRecorder/dataavailable_event": {
+    "modified": "2020-10-15T22:28:21.731Z",
+    "contributors": [
+      "BMud",
+      "baixiaocun"
+    ]
+  },
   "Web/API/MediaRecorder/isTypeSupported": {
     "modified": "2019-06-06T05:26:50.779Z",
     "contributors": [
       "forgamer",
       "Ende93",
       "wakingking77"
-    ]
-  },
-  "Web/API/MediaRecorder/ondataavailable": {
-    "modified": "2020-10-15T22:28:21.731Z",
-    "contributors": [
-      "BMud",
-      "baixiaocun"
     ]
   },
   "Web/API/MediaRecorder/pause": {
@@ -18309,7 +18235,7 @@
       "ziyunfei"
     ]
   },
-  "Web/API/Performance/onresourcetimingbufferfull": {
+  "Web/API/Performance/resourcetimingbufferfull_event": {
     "modified": "2019-03-23T22:09:51.120Z",
     "contributors": [
       "Pada"
@@ -22615,6 +22541,13 @@
       "ziyunfei"
     ]
   },
+  "Web/API/Window/appinstalled_event": {
+    "modified": "2019-03-18T21:40:44.436Z",
+    "contributors": [
+      "Aaron_Zhung",
+      "echoArray"
+    ]
+  },
   "Web/API/Window/applicationCache": {
     "modified": "2019-03-23T23:31:44.274Z",
     "contributors": [
@@ -22629,6 +22562,12 @@
     "modified": "2019-03-23T22:12:59.387Z",
     "contributors": [
       "xilixinluo"
+    ]
+  },
+  "Web/API/Window/beforeinstallprompt_event": {
+    "modified": "2019-03-23T22:11:25.289Z",
+    "contributors": [
+      "xgqfrms-GitHub"
     ]
   },
   "Web/API/Window/beforeprint_event": {
@@ -23114,19 +23053,6 @@
       "hhxxhg",
       "fscholz",
       "charlie"
-    ]
-  },
-  "Web/API/Window/onappinstalled": {
-    "modified": "2019-03-18T21:40:44.436Z",
-    "contributors": [
-      "Aaron_Zhung",
-      "echoArray"
-    ]
-  },
-  "Web/API/Window/onbeforeinstallprompt": {
-    "modified": "2019-03-23T22:11:25.289Z",
-    "contributors": [
-      "xgqfrms-GitHub"
     ]
   },
   "Web/API/Window/ondevicemotion": {
@@ -32822,13 +32748,6 @@
     "modified": "2019-12-03T17:54:04.795Z",
     "contributors": [
       "pans9"
-    ]
-  },
-  "Web/HTML/Index": {
-    "modified": "2019-03-21T11:52:09.419Z",
-    "contributors": [
-      "RainSlide",
-      "xcffl"
     ]
   },
   "Web/HTML/Inline_elements": {
@@ -46649,6 +46568,56 @@
       "shenhao"
     ]
   },
+  "conflicting/Learn/JavaScript/Asynchronous": {
+    "modified": "2020-12-08T07:27:41.218Z",
+    "contributors": [
+      "byrde",
+      "icetea_cover",
+      "rubyKC",
+      "shangruitong",
+      "PYGC",
+      "wangfangping",
+      "tjls"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Introducing": {
+    "modified": "2020-07-16T22:33:29.726Z",
+    "contributors": [
+      "alice201601",
+      "grape",
+      "HermitSun",
+      "oceanMIH"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Promises": {
+    "modified": "2020-12-08T06:58:32.883Z",
+    "contributors": [
+      "byrde",
+      "woniuxingdong",
+      "qwei",
+      "plainnany",
+      "jakio6",
+      "awarmy",
+      "cochn",
+      "wangfangping"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df": {
+    "modified": "2020-08-14T06:09:20.310Z",
+    "contributors": [
+      "Pada",
+      "You2er",
+      "WinterCicada",
+      "zhangbig0",
+      "mizhon",
+      "yuqing521",
+      "Alendia",
+      "grape",
+      "wangfangping",
+      "puddlejumper26",
+      "oceanMIH"
+    ]
+  },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents": {
     "modified": "2019-03-23T23:14:19.406Z",
     "contributors": [
@@ -46848,6 +46817,12 @@
       "sunnylost"
     ]
   },
+  "conflicting/Web/API/Document/visibilitychange_event": {
+    "modified": "2020-10-15T22:25:06.098Z",
+    "contributors": [
+      "wangzhongchunongithub"
+    ]
+  },
   "conflicting/Web/API/DocumentOrShadowRoot/elementFromPoint": {
     "modified": "2019-03-23T23:19:33.886Z",
     "contributors": [
@@ -46972,6 +46947,18 @@
       "ziyunfei"
     ]
   },
+  "conflicting/Web/API/FileReader/abort_event": {
+    "modified": "2019-04-18T04:11:44.611Z",
+    "contributors": [
+      "allan2coder"
+    ]
+  },
+  "conflicting/Web/API/FileReader/load_event": {
+    "modified": "2019-03-23T22:21:51.910Z",
+    "contributors": [
+      "Cattla"
+    ]
+  },
   "conflicting/Web/API/File_and_Directory_Entries_API/Introduction": {
     "modified": "2019-03-23T23:17:06.579Z",
     "contributors": [
@@ -47061,6 +47048,12 @@
     "modified": "2020-10-15T22:30:45.773Z",
     "contributors": [
       "sideshowbarker"
+    ]
+  },
+  "conflicting/Web/API/MediaDevices/devicechange_event": {
+    "modified": "2019-03-23T22:08:09.338Z",
+    "contributors": [
+      "qzn928"
     ]
   },
   "conflicting/Web/API/MouseEvent/altKey": {
@@ -47557,6 +47550,13 @@
     "contributors": [
       "xuxun",
       "wbamberg"
+    ]
+  },
+  "conflicting/Web/HTML": {
+    "modified": "2019-03-21T11:52:09.419Z",
+    "contributors": [
+      "RainSlide",
+      "xcffl"
     ]
   },
   "conflicting/Web/HTML/Element": {

@@ -14,7 +14,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
-{{AddonSidebar()}}Envoi un message unique depuis le script d'arrière plan d'extension (ou autre scripts accrédité, comme les scripts popup ou les scripts de page d'options) vers n'importe quel [script de contenu ](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)concerné par l'extension et qui s'execute dans l'onglet spécifié.Ce message sera reçu dans script de contenu par n'importe quel gestionnaire d'évènements à l'écoute de l'évènement
+{{AddonSidebar()}}Envoi un message unique depuis le script d'arrière plan d'extension (ou autre scripts accrédité, comme les scripts popup ou les scripts de page d'options) vers n'importe quel [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) concerné par l'extension et qui s'execute dans l'onglet spécifié.Ce message sera reçu dans script de contenu par n'importe quel gestionnaire d'évènements à l'écoute de l'évènement
 
 {{WebExtAPIRef("runtime.onMessage")}}. Les gestionnaires d'évènements peuvent optionellement envoyé une réponse en retour au script d'arrière plan en utilisant l'argument `sendResponse`.
 

@@ -38,7 +38,7 @@ Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur
 
 > **Note :** Un grand nombre de navigateurs enverront un [`Entête d'origine`](/en-US/docs/HTTP/Access_control_CORS#Origin). Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse [403 Forbidden](/en-US/docs/HTTP/Response_codes#403) si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci.
 
-> **Note :** L'URI de la requête (`/chat `dans notre cas), n'a pas de signification particulièrement dans les spécifications en usage : elle permet simplement, par convention, de disposer d'une multitude d'applications en parallèle grâce à WebSocket. Par exemple `exemple.com/chat` peut être associée à une API/une application de dialogue multiutilisateurs lorsque `/game` invoquera son homologue pour un jeu.
+> **Note :** L'URI de la requête (`/chat` dans notre cas) n'a pas de signification particulièrement dans les spécifications en usage&nbsp;: elle permet simplement, par convention, de disposer d'une multitude d'applications en parallèle grâce à WebSocket. Par exemple, `exemple.com/chat` peut être associée à une API/une application de dialogue multiutilisateurs lorsque `/game` invoquera son homologue pour un jeu.
 
 > **Note :** [Les codes réguliers (_c-à-d défini par le protocole standard_) HTTP](/en-US/docs/HTTP/Response_codes) ne peuvent être utilisés qu'**_avant_** la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée.
 
@@ -69,7 +69,7 @@ Le client ou le serveur peuvent choisir d'envoyer un message à n'importe quel m
 
 ### Format
 
-> **Attention :** Dans cette partie, `payload `équivaut en bon français à _charge utile_. C'est-à-dire les données qui ne font pas partie du fonctionnement de la trame mais de l'échange entre le serveur et le client. Ainsi j'ai traduit `payload data comme des données utiles. `
+> **Attention :** Dans cette partie, `payload` équivaut en bon français à _charge utile_. C'est-à-dire les données qui ne font pas partie du fonctionnement de la trame mais de l'échange entre le serveur et le client. Ainsi «&nbsp;<i lang="en">payload data</i>&nbsp;» est traduit par «&nbsp;données utiles&nbsp;».
 
 Chaque trame (dans un sens ou dans un autre) suit le schéma suivant :
 
@@ -130,7 +130,7 @@ Si le bit MASK a été fixé (et il devrait l'être, pour les messages client-se
 
 ### La fragmentation des messages
 
-Les champs FIN et opcodes fonctionnent ensemble pour envoyer un message découpé en une multitude de trames. C'est ce que l'on appele la _fragmentation des messages_. La fragmentation est seulement possible avec les opcodes de `0x0 `à `0x2`.
+Les champs FIN et opcodes fonctionnent ensemble pour envoyer un message découpé en une multitude de trames. C'est ce que l'on appelle la _fragmentation des messages_. La fragmentation est seulement possible avec les opcodes de `0x0` à `0x2`.
 
 Souvenez-vous de l'intérêt de l'opcode et ce qu'il implique dans l'échange des trames. Pour _0x1_ c'est du texte, pour _0x2_ des données binaires, etc. Toutefois pour _0x0_, la frame est dite "continue" (elle s'ajoute à la précédente). En voici un exemple plus clair, où il y a en réalité deux textes de message (sur 4 trames différentes)&nbsp;:
 
@@ -190,7 +190,7 @@ Ou son équivalent :
     Sec-WebSocket-Protocol: soap
     Sec-WebSocket-Protocol: wamp
 
-Le serveur doit désormais choisir l'un des protocoles suggérés par le client et qu'il peut prendre en charge. S'il peut en prendre plus d'un, le premier envoyé par le client sera privilégié. Dans notre exemple, le client envoit `soap `et `wamp`, le serveur qui supporte les deux enverra donc :
+Le serveur doit désormais choisir l'un des protocoles suggérés par le client et qu'il peut prendre en charge. S'il peut en prendre plus d'un, le premier envoyé par le client sera privilégié. Dans notre exemple, le client envoit `soap` et `wamp`, le serveur qui supporte les deux enverra donc&nbsp;:
 
     Sec-WebSocket-Protocol: soap
 

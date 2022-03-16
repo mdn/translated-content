@@ -44,7 +44,7 @@ Dans cet exemple, une instance `FormData` contenant les valeurs des champs « us
 
 ## Récupération d’un objet FormData dans un formulaire HTML
 
-Pour construire un objet `FormData` contenant les données d’un élément HTML {{ HTMLElement("form") }} existant, spécifiez cet élément lors de la création de l’objet` `:
+Pour construire un objet `FormData` contenant les données d'un élément HTML [`<form>`](/fr/docs/Web/HTML/Element/form) existant, spécifiez cet élément lors de la création de l'objet&nbsp;:
 
 ```js
 var formData = new FormData(someFormElement);

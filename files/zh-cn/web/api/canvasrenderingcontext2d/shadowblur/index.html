@@ -104,68 +104,7 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="WebKitBlink-specific_注解">WebKit/Blink-specific 注解</h3>
-
-<ul>
- <li>在基于 WebKit- 和 Blink- 的浏览器中，除了此属性外，还实现了一个不规范的并且不赞成使用的方法 <code>ctx.setShadow()</code> 。
-
-  <pre class="brush: js">setShadow(width, height, blur, color, alpha);
-setShadow(width, height, blur, graylevel, alpha);
-setShadow(width, height, blur, r, g, b, a);
-setShadow(width, height, blur, c, m, y, k, a);
-</pre>
- </li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D.shadowBlur")}}
 
 <h2 id="参见">参见</h2>
 

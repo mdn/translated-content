@@ -20,7 +20,7 @@ translation_of: Web/MathML/Element/mfenced
 - class, id, style
   - : Afin d'être utilisés avec les [feuilles de styles](/fr/docs/CSS).
 - close
-  - : Une chaîne de caractère pour le délimiteur fermant. La valeur par défaut est « `) `» et tous les blancs sont tronqués.
+  - : Une chaîne de caractère pour le délimiteur fermant. La valeur par défaut est «&nbsp;`)`&nbsp;» et tous les blancs sont tronqués.
 - href {{Deprecated_Inline()}}
   - : Un hyperlien pointant vers un URI donné.
 - mathbackground {{Deprecated_Inline()}}

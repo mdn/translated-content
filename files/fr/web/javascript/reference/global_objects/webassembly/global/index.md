@@ -38,7 +38,7 @@ Aucune.
 
 ## Instances de `WebAssembly.Global`
 
-Toutes les instances de `Global` héritent du [prototype ](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype)du constructeur `Global()`. Ce prototype peut être modifié afin d'avoir un impact sur l'ensemble des instances de `Global`.
+Toutes les instances de `Global` héritent du [prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype) du constructeur `Global()`. Ce prototype peut être modifié afin d'avoir un impact sur l'ensemble des instances de `Global`.
 
 ### Propriétés des instances
 
@@ -79,7 +79,7 @@ WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
 });
 ```
 
-> **Note :** Cet exemple est[ utilisable sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et [son code source est également disponible](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+> **Note :** Cet exemple est [utilisable sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et [son code source est également disponible](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
 
 ## Spécifications
 

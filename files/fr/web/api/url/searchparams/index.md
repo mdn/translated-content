@@ -10,7 +10,7 @@ tags:
   - URLSearchParameters
 translation_of: Web/API/URL/searchParams
 ---
-{{APIRef("URL API")}} La propriété en lecture seule **`searchParams`** de l'interface {{domxref("URL")}} retourneun objet {{domxref("URLSearchParams")}} permettant d'accéder aux arguments décodésde la requête GET contenu dans l'URL.
+{{APIRef("URL API")}} La propriété en lecture seule **`searchParams`** de l'interface {{domxref("URL")}} retourne un objet {{domxref("URLSearchParams")}} permettant d'accéder aux arguments décodés de la requête GET contenue dans l'URL.
 
 {{AvailableInWorkers}}
 

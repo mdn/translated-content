@@ -22,7 +22,7 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 
   - [le Blog WebKit](https://www.webkit.org/blog/) et [Planet WebKit](http://planet.webkit.org/) rassemblent les meilleurs articles par les déveoppeurs WebKit.
   - [l](https://www.chromestatus.com/features)e site État de la p[lateforme Chrome](https://www.chromestatus.com/features) est aussi importante.
-  - ainsi que le[ site web Apple .](https://developer.apple.com/technologies/safari/)
+  - ainsi que le [site web Apple](https://developer.apple.com/technologies/safari/).
 
 ### Documentation indépendante
 
@@ -200,7 +200,7 @@ Modernizr.load({
 
 L'équipe de Modernizr fait une maintenance opportune de grande liste de «&nbsp;[polyfills »](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Prenez celui dont vous avez besoin.
 
-> **Note :** Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de [ la documentation de Modernizr](http://modernizr.com/docs/).
+> **Note :** Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de [la documentation de Modernizr](http://modernizr.com/docs/).
 
 ### Faites attention aux performances
 

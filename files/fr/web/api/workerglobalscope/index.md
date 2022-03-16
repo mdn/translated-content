@@ -63,7 +63,7 @@ Cette interface hérite des méthodes de l'interface {{domxref ("EventTarget")}}
 - {{domxref("WorkerGlobalScope.close()")}}
   - : Ignore toutes les tâches mises en file d'attente dans la boucle d'événements de `WorkerGlobalScope`, fermant ainsi cette portée particulière.
 - {{domxref("WorkerGlobalScope.importScripts()")}}
-  - : Importe un ou plusieurs scripts dans la portée du worker. Vous pouvez en spécifier autant que vous le souhaitez, séparés par des virgules. Par exemple:` importScripts('foo.js', 'bar.js');`
+  - : Importe un ou plusieurs scripts dans la portée du worker. Vous pouvez en spécifier autant que vous le souhaitez, séparés par des virgules. Par exemple&nbsp;: `importScripts('foo.js', 'bar.js');`
 
 ### Méthodes non standard
 

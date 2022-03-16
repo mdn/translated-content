@@ -5,7 +5,7 @@ translation_of: Web/API/AudioBuffer/copyToChannel
 ---
 {{ APIRef("Web Audio API") }}
 
-La méthode `copyToChannel() `de l'interface {{ domxref("AudioBuffer") }} copie les échantillons du tableau source vers le canal de l'`AudioBuffer` spécifié.
+La méthode `copyToChannel()` de l'interface [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) copie les échantillons du tableau source vers le canal de l'`AudioBuffer` spécifié.
 
 ## Syntaxe
 

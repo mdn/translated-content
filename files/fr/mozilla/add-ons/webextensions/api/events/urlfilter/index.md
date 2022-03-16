@@ -88,7 +88,7 @@ Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier 
 
 - `ports`{{optional_inline}}
 
-  - : `array` de `(integer `ou` array of integer`). Un tableau qui peut contenir des entiers et des tableaux d'entiers. Les entiers sont interprétés comme des numéros de port, tandis que les tableaux d'entiers sont interprétés comme des plages de ports. Correspond si le port de l'URL correspond à un numéro de port ou est contenu dans des plages.
+  - : `array` de (`integer` ou `array of integer`). Un tableau qui peut contenir des entiers et des tableaux d'entiers. Les entiers sont interprétés comme des numéros de port, tandis que les tableaux d'entiers sont interprétés comme des plages de ports. Correspond si le port de l'URL correspond à un numéro de port ou est contenu dans des plages.
 
     - Par exemple: `[80, 443, [1000, 1200]]` correspond à toutes les demandes sur les ports 80, 443, et dans la plage 1000-1200.
 

@@ -31,7 +31,7 @@ Le nombre de millisecondes écoulées entre le premier janvier 1970 00:00:00 UTC
 
 ## Description
 
-Si la `valeurJour` est en dehors des limites du mois courant, `setDate()` mettra à jour l'objet` `{{jsxref("Date")}} en conséquence.
+Si la `valeurJour` est en dehors des limites du mois courant, `setDate()` mettra à jour l'objet {{jsxref("Date")}} en conséquence.
 
 Par exemple, si 0 est fourni pour `valeurJour`, la date sera défini sur le dernier jour du mois précédent.
 

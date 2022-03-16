@@ -35,7 +35,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `string`. L'URL du cadre de l'élément sur lequel le menu contextuel a été cliqué, s'il était dans un cadre
 - `linkText` {{optional_inline}}
   - : `string`. Si l'élément est un lien, le texte du lien. Si le lien ne contient aucun texte, l'URL elle-même est donnée ici.
-- `linkUrl `{{optional_inline}}
+- `linkUrl` {{optional_inline}}
   - : `string`. Si l'élément est un lien, l'URL vers laquelle il pointe.
 - `mediaType` {{optional_inline}}
   - : `string`. Une de "image", "video", ou "audio" si le menu contextuel a été activé sur l'un de ces types d'éléments.
@@ -47,7 +47,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `string`. L'URL de la page sur laquelle l'élément de menu a été cliqué. Cette propriété n'est pas présente si le clic s'est produit dans un contexte où il n'y a pas de page en cours, comme dans le cas d'une action du navigateur.
 - `parentMenuItemId` {{optional_inline}}
   - : `integer` ou `string`. L'ID parent, le cas échéant, pour l'élément cliqué.
-- `selectionText `{{optional_inline}}
+- `selectionText` {{optional_inline}}
   - : `string`. Si du texte a été sélectionné dans la page, il contient le texte sélectionné.
 - `srcUrl` {{optional_inline}}
   - : `string`. Sera présent pour les éléments avec une URL "src".

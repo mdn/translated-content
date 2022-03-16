@@ -131,69 +131,8 @@ original_slug: Web/HTML/Elemento/form
 &lt;/form&gt;
 </pre>
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
-<p>{{ CompatibilityTable() }}</p>
-<div id="compat-desktop">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Característica</th>
-        <th>Chrome</th>
-        <th>Firefox (Gecko)</th>
-        <th>Internet Explorer</th>
-        <th>Opera</th>
-        <th>Safari</th>
-      </tr>
-      <tr>
-        <td>Soporte básico</td>
-        <td>1.0</td>
-        <td>{{ CompatGeckoDesktop("1.0") }}</td>
-        <td>{{ CompatVersionUnknown() }}</td>
-        <td>{{ CompatVersionUnknown() }}</td>
-        <td>{{ CompatVersionUnknown() }}</td>
-      </tr>
-      <tr>
-        <td>atributo <code>novalidate</code></td>
-        <td>1.0</td>
-        <td>{{ CompatGeckoDesktop("2.0") }}</td>
-        <td>{{ CompatNo() }}</td>
-        <td>{{ CompatUnknown() }}</td>
-        <td>{{ CompatUnknown() }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div id="compat-mobile">
-  <table class="compat-table">
-    <tbody>
-      <tr>
-        <th>Característica</th>
-        <th>Android</th>
-        <th>Firefox Mobile (Gecko)</th>
-        <th>IE Mobile</th>
-        <th>Opera Mobile</th>
-        <th>Safari Mobile</th>
-      </tr>
-      <tr>
-        <td>Soporte básico</td>
-        <td>{{ CompatVersionUnknown() }}</td>
-        <td>{{ CompatGeckoMobile("1.0") }}</td>
-        <td>{{ CompatVersionUnknown() }}</td>
-        <td>{{ CompatVersionUnknown() }}</td>
-        <td>{{ CompatVersionUnknown() }}</td>
-      </tr>
-      <tr>
-        <td>atributo <code>novalidate</code></td>
-        <td>{{ CompatUnknown() }}</td>
-        <td>{{ CompatGeckoMobile("2.0") }}</td>
-        <td>{{ CompatUnknown() }}</td>
-        <td>{{ CompatUnknown() }}</td>
-        <td>{{ CompatUnknown() }}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<p>Notas para Google Chrome</p>
-<p>La interfaz de usuario para peticiones auto-complete en Google Chrome varía dependiendo de si <code>autocomplete</code> está establecido en <code>off</code> en elementos <code>input</code> así como su formulario. Específicamente, cuando un formulario tiene <code>autocomplete</code> establecido en <code>off</code> y sus campos <code>autocomplete</code> de sus elementos input <strong>no</strong> están establecidos, entonces si el usuario pregunta por sugerencias de autocompletado para el elemento input, Chrome podrá mostrar un mensaje diciendo "El autocompletado ha sido desactivado para este formulario." Por otro lado, si el formulario y el elemento input tienen <code>autocomplete</code> establecido como <code>off</code>, el navegador no mostrará este mensaje. Por esta razón, debe establecer <code>autocomplete</code> en <code>off</code> para cada input que tiene autocompletado personalizado.</p>
+{{Compat("html.elements.form")}}
+
 <h2 id="Consulte_también">Consulte también</h2>
 <p>Otros elementos que son usados para crear formularios: {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("input") }},{{ HTMLElement("keygen") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("meter") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("output") }}, {{ HTMLElement("progress") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }}.</p>
 <p>{{ languages( { "fr": "fr/HTML/Element/Form" } ) }}</p>

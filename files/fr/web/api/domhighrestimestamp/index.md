@@ -37,7 +37,7 @@ Dans Firefox, vous pouvez aussi activer `privacy.resistFingerprinting`, la préc
 
 ## Propriétés
 
-*Ce *type* n'a pas de propriétés. C'est une valeur à virgule flottante double précision.*
+*Ce type n'a pas de propriétés. C'est une valeur à virgule flottante double précision.*
 
 ### Valeur
 

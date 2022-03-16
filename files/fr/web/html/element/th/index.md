@@ -43,7 +43,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont :
 
-    - `left `: le contenu de la cellule est alligné à gauche de la cellule (la valeur par défaut de cet attribut)
+    - `left`&nbsp;: le contenu de la cellule est alligné à gauche de la cellule (la valeur par défaut de cet attribut)
     - `center` : le contenu de la cellule est centré horizontalement
     - `right` : le contenu de la cellule est aligné à droite de la cellule
     - `justify` : insert des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié

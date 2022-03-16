@@ -78,7 +78,7 @@ L'exemple simple affiché ci-dessus n'est pas très beau, mais il est parfaiteme
 
 C'est parce que le visuel ne raconte pas toute l'histoire. Nous utilisons la couleur et la taille des caractères pour attirer l'attention des utilisateurs malvoyants sur les parties les plus utiles du contenu, comme le menu de navigation et les liens connexes, mais qu'en est-il des personnes malvoyantes par exemple, qui pourraient ne pas trouver très utiles des concepts tels que le «&nbsp;rose&nbsp;» et la «&nbsp;grande police&nbsp;» ?
 
-> **Note :** Les daltoniens représentent environ [8% de la population mondiale](http://www.color-blindness.com/2006/04/28/colorblind-population/) ou, en d'autres termes, environ 1 homme sur 12 et 1 femme sur 200 sont daltoniens. Les personnes aveugles et malvoyantes représentent environ 4 à 5 % de la population mondiale (en 2012, il y avait [285 millions de personnes aveugles et malvoyantes](https://fr.wikipedia.org/wiki/D%C3%A9ficience_visuelle) dans le monde, alors que la population totale était [d'environ 7 milliards ](https://fr.wikipedia.org/wiki/Population_mondiale)d'habitants).
+> **Note :** Les daltoniens représentent environ [8% de la population mondiale](http://www.color-blindness.com/2006/04/28/colorblind-population/) ou, en d'autres termes, environ 1 homme sur 12 et 1 femme sur 200 sont daltoniens. Les personnes aveugles et malvoyantes représentent environ 4 à 5 % de la population mondiale (en 2012, il y avait [285 millions de personnes aveugles et malvoyantes](https://fr.wikipedia.org/wiki/D%C3%A9ficience_visuelle) dans le monde, alors que la population totale était [d'environ 7 milliards](https://fr.wikipedia.org/wiki/Population_mondiale) d'habitants).
 
 Dans votre code HTML, vous pouvez marquer des sections de contenu selon leur fonction — vous pouvez utiliser des éléments qui représentent sans ambiguïté les sections de contenu décrites ci-dessus, et les technologies d'assistance comme les lecteurs d'écran peuvent reconnaître ces éléments et vous aider avec des tâches comme «&nbsp;trouver la navigation principale&nbsp;» ou «&nbsp;trouver le contenu principal ». Comme nous l'avons mentionné plus tôt dans le cours, le fait de [ne pas utiliser la bonne structure d'éléments et la bonne sémantique pour le bon travail a un certain nombre de conséquences](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure).
 
@@ -281,7 +281,7 @@ Vous devriez avoir maintenant une meilleure idée de la façon de structurer une
 
 ## Voir aussi
 
-- [Using HTML sections and outlines ](/fr/docs/Web/HTML/Element/Heading_Elements): Guide avancé des éléments de la sémantique et des algorithmes descriptifs du HTML5.
+- [Using HTML sections and outlines](/fr/docs/Web/HTML/Element/Heading_Elements)&nbsp;: Guide avancé des éléments de la sémantique et des algorithmes descriptifs du HTML5.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML")}}
 

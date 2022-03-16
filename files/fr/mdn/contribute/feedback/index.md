@@ -58,4 +58,4 @@ Comme évoqué plus haut, n'hésitez pas à contribuer vous-même pour corriger 
 
 ### Problèmes sur le site
 
-Si vous rencontrez un problème avec le site ou avez de nouvelles idées pour celui-ci, vous pouvez [créer un ticket à l'équipe de développement de MDN](hhttps://github.com/mdn/yari/issues).
+Si vous rencontrez un problème avec le site ou avez de nouvelles idées pour celui-ci, vous pouvez [créer un ticket à l'équipe de développement de MDN](https://github.com/mdn/yari/issues).

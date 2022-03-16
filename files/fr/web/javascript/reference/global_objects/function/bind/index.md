@@ -48,7 +48,7 @@ Une fonction liée possède les propriétés internes suivantes :
 - **`[[Call]]`**
   - : Exécute le code associé à cet objet. Invoqué par une expression d'appel de fonction. Les arguments de la méthode interne sont constitués d'une valeur `this` et d'une liste contenant les arguments passés à la fonction par une expression d'appel.
 
-Lorsqu'une fonction liée est appelée, elle appelle la méthode interne `[[Call]]` dans `[[BoundTargetFunction]]`, avec les arguments suivants `Call(boundThis, ...args)`. _Là où _`boundThis` est `[[BoundThis]]`, `args` est `[[BoundArguments]]`, suivi des arguments passés par l'appel de fonction.
+Lorsqu'une fonction liée est appelée, elle appelle la méthode interne `[[Call]]` dans `[[BoundTargetFunction]]`, avec les arguments suivants `Call(boundThis, ...args)`. _Là où_ `boundThis` est `[[BoundThis]]`, `args` est `[[BoundArguments]]`, suivi des arguments passés par l'appel de fonction.
 
 Une fonction liée peut également être construite à l'aide de l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Ce faisant, on agit comme si la fonction cible avait été construite. La valeur fournie `this` est ignorée, tandis que des arguments préparés sont fournis à la fonction émulée.
 

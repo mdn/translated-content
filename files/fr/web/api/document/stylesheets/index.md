@@ -5,7 +5,9 @@ translation_of: Web/API/DocumentOrShadowRoot/styleSheets
 translation_of_original: Web/API/Document/styleSheets
 original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
-{{APIRef}}La propriété **`Document.styleSheets `**est en lecture seule et retourne une liste {{domxref("StyleSheetList")}} d'objets {{domxref("StyleSheet")}}, qui font référence à l'ensemble des feuilles de style contenues ou embarquées dans le document.
+{{APIRef}}
+
+La propriété **`Document.styleSheets`** est en lecture seule et retourne une liste [`StyleSheetList`](/fr/docs/Web/API/StyleSheetList) d'objets [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet), qui font référence à l'ensemble des feuilles de style contenues ou embarquées dans le document.
 
 ## Syntaxe
 
@@ -13,7 +15,7 @@ original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 
 L'objet retourné est une liste {{domxref("StyleSheetList")}}.
 
-Il s'agit d'une collection ordonnée d'objets {{domxref("StyleSheet")}}. `styleSheetList.item(index)` ou  `styleSheetList{{ mediawiki.External('<em>index</em>') }}` retourne un seul objet stylesheet par son `index `(`index` débute par 0).
+Il s'agit d'une collection ordonnée d'objets [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet). `styleSheetList.item(index)` ou `styleSheetList[index]` retourne un seul objet stylesheet par son `index` (`index` débute par 0).
 
 ## Spécification
 

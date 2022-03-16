@@ -40,7 +40,7 @@ var request = objectStore.get(cle);
 
 Dans le code suivant , on ouvre une {{domxref("IDBTransaction","transaction")}} sur la {{domxref("IDBDatabase","connexion")}} à la base de données, pour avoir l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet dans lequel on veut retrouver la valeur d'un enregistrement.
 
-La méthode **`get() `**sert à retrouver la valeur de l'enregistrement dont la clé est `Walk dog` dans magasin d'objets _`toDoList`_
+La méthode **`get()`** sert à retrouver la valeur de l'enregistrement dont la clé est `Walk dog` dans le magasin d'objets _`toDoList`_.
 
 ```js
 // ouvre la connexion à la base de données

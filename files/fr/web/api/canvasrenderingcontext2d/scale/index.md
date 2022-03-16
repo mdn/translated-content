@@ -91,7 +91,7 @@ window.addEventListener("load", drawCanvas);
 
 ### Utilisation de `scale` pour un retournement horizontal ou vertical
 
-Vous pouvez utiliser `ctx.scale(-1, 1)` pour retourner le contexte horizontalement et `ctx.scale(1, -1) `pour le retourner verticalement.
+Vous pouvez utiliser `ctx.scale(-1, 1)` pour retourner le contexte horizontalement et `ctx.scale(1, -1)` pour le retourner verticalement.
 
 #### Code jouable 2
 

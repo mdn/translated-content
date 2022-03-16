@@ -28,7 +28,7 @@ L'envoi asynchrone de données arbitraires est connu sous le nom AJAX, qui signi
 
 
 
-Historiquement, {{domxref("XMLHttpRequest")}} a été conçu pour récupérer et envoyer du XML comme format d'échange. Cependant,[ JSON](/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON) a remplacé XML et est de plus en plus courant aujourd'hui.
+Historiquement, {{domxref("XMLHttpRequest")}} a été conçu pour récupérer et envoyer du XML comme format d'échange. Cependant, [JSON](/fr/docs/Web/JavaScript/Reference/Objets_globaux/JSON) a remplacé XML et est de plus en plus courant aujourd'hui.
 
 Mais ni XML ni JSON ne s'adaptent à l'encodage des demandes de données de formulaire. Les données de formulaire (`application/x-www-form-urlencoded`) sont constituées de listes de paires clé/valeur codées par URL. Pour la transmission de données binaires, la requête HTTP est transformée en données `multipart/form‑data`.
 

@@ -1871,7 +1871,7 @@ Il n'y a pas actuellement suffisemment d'implémentation pour obtenir des compor
 
 ### Widget `range`
 
-Il n'y a pas de méthode standard pour changer le style de la poignée de` range` et Opera n'a aucun moyen de modifier le rendu par défaut du widget `range`.
+Il n'y a pas de méthode standard pour changer le style de la poignée de `range` et Opera n'a aucun moyen de modifier le rendu par défaut du widget `range`.
 
 <table>
   <thead>

@@ -37,7 +37,7 @@ Exemple de JavaScript :
     const attributID = div1.getAttribute("id");
     //=> "div1"
 
-    cont alignement = div1.getAttribute("align");
+    const alignement = div1.getAttribute("align");
     //=> null
 
 ## Description

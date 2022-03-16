@@ -18,7 +18,7 @@ Une [action de page](/fr/Add-ons/WebExtensions/Page_actions) est une icône cliq
 
 ![](page-action.png)
 
-Vous pouvez écouter les clics sur l'icône, ou spécifié une [fenêtre contextuelle ](/fr/Add-ons/WebExtensions/Popups)qui s'ouvre  lorsque l'icone est cliquée.
+Vous pouvez écouter les clics sur l'icône, ou spécifié une [fenêtre contextuelle](/fr/Add-ons/WebExtensions/Popups) qui s'ouvre  lorsque l'icone est cliquée.
 
 Si vous spécifiez une fenêtre contextuelle, vous pouvez définir son contenu et son comportement en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. Le JavaScript s'exécutant dans la fenêtre contextuelle accède à toutes les mêmes API WebExtension que vos scripts d'arrière-plan.
 

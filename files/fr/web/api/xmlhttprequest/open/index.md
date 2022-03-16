@@ -19,7 +19,7 @@ La méthode **`open()`** de {{domxref("XMLHttpRequest")}} instancie une nouvelle
 ### Paramètres
 
 - `method`
-  - : La méthode  [HTTP request ](/en-US/docs/Web/HTTP/Methods) à utiliser telles que : `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`, etc. Ignorée pour les URL non-HTTP(S).
+  - : La méthode [de requête HTTP](/fr/docs/Web/HTTP/Methods) à utiliser telles que `GET`, `POST`, `PUT`, `DELETE`, etc. Ignorée pour les URL non-HTTP(S).
 - `url`
   - : Une {{domxref("DOMString")}} représentant l'URL à laquelle envoyer la requête.
 - `async` {{optional_inline}}

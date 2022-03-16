@@ -46,7 +46,7 @@ Les deux méthodes, `atob()` et `btoa()`, fonctionnent sur des chaînes de carac
 
   - : Dans cet article, nous publions une bibliothèque dont les buts sont :
 
-    - de créer une interface pour les chaînes de caractères à la façon du langage [C](https://fr.wikipedia.org/wiki/C_%28langage%29) (i.e. un tableau de code de caractères —[ `ArrayBufferView`](/fr/docs/Web/API/ArrayBufferView) en JavaScript) basée sur l'interface JavaScript [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer),
+    - de créer une interface pour les chaînes de caractères à la façon du langage [C](https://fr.wikipedia.org/wiki/C_%28langage%29) (i.e. un tableau de code de caractères — [`ArrayBufferView`](/fr/docs/Web/API/ArrayBufferView) en JavaScript) basée sur l'interface JavaScript [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer),
     - de créer un ensemble de méthodes pour ces objets qui fonctionnent **sur des tableaux de nombres** plutôt que sur chaînes de caractères JavaScript immuables,
     - de travailler avec d'autres encodages Unicode, y compris ceux différent d'UTF-16 qui est l'encodage par défaut de JavaScript pour les [`DOMString`](/fr/docs/Web/API/DOMString).
 

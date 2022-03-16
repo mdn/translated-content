@@ -99,7 +99,7 @@ En plus de dessiner des formes opaques sur la toile, nous pouvons également des
 - {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}
   - : Applique la valeur de transparence spécifiée à toutes les formes futures tracées sur le Canvas. La valeur doit être comprise entre 0.0 (complètement transparent) à 1.0 (complètement opaque). Cette valeur est de 1,0 (complètement opaque) par défaut.
 
-La propriété` globalAlpha` peut être utile si vous voulez dessiner un grand nombre de formes sur la toile avec la même transparence, mais sinon, il est généralement plus utile de définir la transparence sur les formes individuelles lors de la définition de leurs couleurs.
+La propriété `globalAlpha` peut être utile si vous voulez dessiner un grand nombre de formes sur la toile avec la même transparence, mais sinon, il est généralement plus utile de définir la transparence sur les formes individuelles lors de la définition de leurs couleurs.
 
 Parce que `strokeStyle` et `fillStyle` acceptent les valeurs de couleur rvba CSS, nous pouvons utiliser la notation suivante pour attribuer une couleur transparente.
 
@@ -262,12 +262,12 @@ Bien que légèrement ennuyeux quand on travaille avec des graphismes 2D évolut
 
 La propriété `lineCap` détermine comment les extrêmités de chaque ligne sont dessinées. Il y a trois valeurs possibles pour la propriété : `butt`, `round` et `square`. Par défaut, la propriété est définie à `butt`.
 
-- `butt `_(bout)_
+- `butt` _(bout)_
   - : L'extrémité des lignes est en angle droit.
-- `round `_(rond)_
+- `round` _(rond)_
   - : Les extrémités sont arrondies.
-- `square `_(carré)_
-  - : Les extrémités sont en angle droit en ajoutant une extension d'une largeur égale à la ligne et une hauteur égale à la moitié de la largeur de la ligne.
+- `square` _(carré)_
+  - : Les extrémités sont en angle droit en ajoutant une extension d'une largeur égale à la ligne et une hauteur égale à la moitié de la largeur de la ligne.
 
 Dans cet exemple, nous avons tracé trois lignes, chacune avec une valeur différente pour la propriété `lineCap`. Nous avons par ailleurs ajouté deux guides pour voir exactement les différences entre les trois lignes. Chacune de ces trois lignes est identique entre les deux traits bleus.
 
@@ -316,14 +316,14 @@ La propriété `lineJoin` détermine comment deux segments (lignes, arcs ou cour
 
 Il existe trois valeurs possibles pour cette propriété : `round`, `bevel` et `miter`. Par défaut, cette propriété est définie à `miter`. Notez que le paramètre `lineJoin` n'a pas d'effet si les deux segments connectés ont la même direction, parce qu'aucune zone de jointure ne sera ajoutée dans ce cas.
 
-- `round `_(rond)_
-  - : Arrondit les angles des segments en ajoutant un arc de cercle centré à l'extrémité commune des segments connectés. Le rayon de ces angles arrondis est égal à la moitié de la largeur du trait.
-- `bevel `_(biseau)_
-  - : Ajoute un triangle à l'extrémité commune des segments connectés.
-- `miter `_(onglet)_
+- `round` _(rond)_
+  - : Arrondit les angles des segments en ajoutant un arc de cercle centré à l'extrémité commune des segments connectés. Le rayon de ces angles arrondis est égal à la moitié de la largeur du trait.
+- `bevel` _(biseau)_
+  - : Ajoute un triangle à l'extrémité commune des segments connectés.
+- `miter` _(onglet)_
   - : Les segments connectés sont reliés en prolongeant leurs bords extérieurs pour se connecter en un seul point, avec pour effet de remplir une zone supplémentaire en forme de losange. Ce paramètre est effectué par la propriété miterLimit qui est expliquée ci-dessous.
 
-L'exemple ci-dessous dessine trois chemins différents, démontrant chacun de ces trois paramètres de propriété` lineJoin` ; la sortie est montrée ci-dessus.
+L'exemple ci-dessous dessine trois chemins différents, démontrant chacun de ces trois paramètres de propriété `lineJoin`&nbsp;; la sortie est montrée ci-dessus.
 
 ```js
 function draw() {

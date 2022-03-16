@@ -285,7 +285,7 @@ Maintenant que nous avons couvers les considérations de l'accessibilité pour l
 
 Il y a plusieurs outils d'audit disponibles que vous pouvez placer sur vos pages web, lesquels les examinerons et retournerons une liste de problèmes d'accessibilité présents sur la page. A titre d'exemple :
 
-- [Tenon ](https://tenon.io): une assez bonne appli en ligne qui traverse le code à une URL fournie et qui retourne les résultats sur les erreurs d'acessibilité comprenant les indicateurs, ds erreurs spécifiques accompagnés des critères WCAG qu'elles affectent, et des suggestion de résolutions.
+- [Tenon](https://tenon.io)&nbsp;: une assez bonne appli en ligne qui traverse le code à une URL fournie et qui retourne les résultats sur les erreurs d'acessibilité comprenant les indicateurs, ds erreurs spécifiques accompagnés des critères WCAG qu'elles affectent, et des suggestion de résolutions.
 - [tota11y](http://khan.github.io/tota11y/) : Un outil d'accessibilité de la Khan Academy qui prend la forme d'une librairie JavaScript que vous attachez à votre page pour apporter plusieurs outils d'accessibilité.
 - [Wave](http://wave.webaim.org/): Un autre outil en ligne de test d'accessibilité qui accepte une adresse web et retourne une utile vue annotée de la page avec les problèmes d'accessibilité surlignés.
 

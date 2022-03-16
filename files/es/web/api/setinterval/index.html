@@ -610,76 +610,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <h2 id="Compatibilidad">Compatibilidad</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)<sup>[2]</sup></th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop("1")}}</td>
-   <td>4.0</td>
-   <td>4.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>Soporta parámetros para callback<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>10.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Característica</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>1.0</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoMobile("1")}}</td>
-   <td>6.0</td>
-   <td>6.0</td>
-   <td>1.0</td>
-  </tr>
-  <tr>
-   <td>Soporta parámetros para callback<sup>[1]</sup></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Whether it supports the optional parameters when in its first form or not.</p>
-
-<p>[2] Anterior a Firefox 13, Firefox pasaba un parametro adicional al callback, indicando el "actual lateness" del timeout en milisegundos. Este parámetro no estandar dejó de usarse en versiones posteriores a Firefox 13. No es recomendable que extensiones basadas en XPCOM para Firefox usen setInterval(), ya que las actualizaciones pueden causar el que el objeto {{domxref("Window")}} se actualice perdiendo los temporizadores. Deberás usar en su lugar {{interface("nsITimer")}}.</p>
+{{Compat("api.setInterval")}}
 
 <h2 id="Ver_más">Ver más</h2>
 

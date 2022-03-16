@@ -68,7 +68,7 @@ The Paciello Group propose des [informations sur l'état du support des zones "L
 - aria-labelledby :
   - : L’attribut `aria-labelledby=[LISTE_ID]` est utilisé pour associer un ou des libellés à une zone. Le fonctionnement est similaire à celui d'`aria-controls` mais les références d'id pointent vers les libellés associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
 - aria-describedby :
-  - : L’attribut `aria-describedby=[LISTE_ID]` est utilisé pour associer une ou des descriptions à une zone. Le fonctionnement est similaire à celui d'`aria-controls `mais les références d'id pointent vers les textes descriptifs associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
+  - : L'attribut `aria-describedby=[LISTE_ID]` est utilisé pour associer une ou des descriptions à une zone. Le fonctionnement est similaire à celui d'`aria-controls` mais les références d'identifiant pointent vers les textes descriptifs associés aux blocs identifiés, et les références multiples sont également séparées par un espace.
 
 ### Cas d’étude avancé&nbsp;: liste de contacts
 

@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 L'événement se déclenche lorsqu'un thème fourni en tant qu'extension de navigateur est appliqué ou supprimé, plus précisément :
 
 - Quand un [thème statique](/fr/Add-ons/Themes/Theme_concepts#Static_themes) est installé
-- Quand un [thème dynamique ](/fr/Add-ons/WebExtensions/API/theme)appelle [`theme.update()`](/fr/Add-ons/WebExtensions/API/theme/update) ou [`theme.reset()`](/fr/Add-ons/WebExtensions/API/theme/update)
+- Quand un [thème dynamique](/fr/Add-ons/WebExtensions/API/theme) appelle [`theme.update()`](/fr/Add-ons/WebExtensions/API/theme/update) ou [`theme.reset()`](/fr/Add-ons/WebExtensions/API/theme/update)
 - Quand un thème est désinstallé
 
 Notez que cet événement n'est pas déclenché pour les thèmes intégrés.

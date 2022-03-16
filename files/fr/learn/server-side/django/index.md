@@ -18,7 +18,7 @@ Aucune connaissance sur ce framework n'est requise. Il vous faudra seulement com
 
 Une connaissance générale en programmation et plus précisement en [Python](/fr/docs/Glossaire/Python) est recommandée, mais pas nécessaire pour comprendre la majeure partie de ce module.
 
-> **Note :** Python est un des languages les plus faciles à apprendre, lire et comprendre pour les novices. Ceci dit, si vous voulez mieux comprendre ce module, il existe beaucoup de livres gratuits et de tutoriaux sur internet (les nouveaux programmeurs pourraient être intéressés par la page du[ Python pour les non-programmeurs](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) dans la documentation sur le site officiel de Python: python.org).
+> **Note :** Python est un des languages les plus faciles à apprendre, lire et comprendre pour les novices. Ceci dit, si vous voulez mieux comprendre ce module, il existe beaucoup de livres gratuits et de tutoriaux sur internet (les nouveaux programmeurs pourraient être intéressés par la page du [Python pour les non-programmeurs](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers) dans la documentation sur le site officiel de Python: python.org).
 
 ## Guides
 

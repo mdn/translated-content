@@ -1,20 +1,12 @@
 ---
 title: mask-clip
 slug: Web/CSS/mask-clip
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/mask-clip
+browser-compat: css.properties.mask-clip
 ---
 {{CSSRef}}
 
-La propriété **`mask-clip`** définit la zone qui est modifiée par un masque. Le contenu « peint » sera restreint à cette zone.
-
-{{cssinfo}}
-
-## Syntaxe
+La propriété [CSS](/fr/docs/Web/CSS) **`mask-clip`** définit la zone qui est modifiée par un masque. Le contenu «&nbsp;peint&nbsp;» sera restreint à cette zone.
 
 ```css
 /* Valeurs de type <geometry-box> */
@@ -29,19 +21,20 @@ mask-clip: view-box;
 /* Valeurs avec un mot-clé */
 mask-clip: no-clip;
 
-/* Valeurs multiples */
-mask-clip: padding-box, no-clip;
-mask-clip: view-box, fill-box, border-box;
-
 /* Mots-clés non-standards */
 -webkit-mask-clip: border;
 -webkit-mask-clip: padding;
 -webkit-mask-clip: content;
 -webkit-mask-clip: text;
 
+/* Valeurs multiples */
+mask-clip: padding-box, no-clip;
+mask-clip: view-box, fill-box, border-box;
+
 /* Valeurs globales */
 mask-clip: inherit;
 mask-clip: initial;
+mask-clip: revert;
 mask-clip: unset;
 ```
 
@@ -52,65 +45,52 @@ Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une
 ### Valeurs
 
 - `content-box`
-  - : La partie qui est « peinte » est rognée sur la boîte de contenu.
+  - : La partie qui est peinte est rognée sur la boîte de contenu.
 - `padding-box`
-  - : La partie qui est « peinte » est rognée sur la boîte de _padding_.
+  - : La partie qui est peinte est rognée sur la boîte de remplissage (<i lang="en">padding</i>).
 - `border-box`
-  - : La partie qui est « peinte » est rognée sur la boîte de bordure.
+  - : La partie qui est peinte est rognée sur la boîte de bordure.
 - `margin-box`
-  - : La partie qui est « peinte » est rognée sur la boîte de marge.
+  - : La partie qui est peinte est rognée sur la boîte de marge.
 - `fill-box`
-  - : La partie qui est « peinte » est rognée sur la boîte contenant l'objet.
+  - : La partie qui est peinte est rognée sur la boîte contenant l'objet.
 - `stroke-box`
-  - : La partie qui est « peinte » est rognée sur la boîte contenant le contour.
+  - : La partie qui est peinte est rognée sur la boîte contenant le contour.
 - `view-box`
-  - : C'est le _viewport_ du plus proche SVG qui est utilisé comme boîte de référence. Si l'attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée le _viewport_, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîtes sont basées sur la hauteur et la largeur de l'attribut `viewBox`.
+  - : C'est le <i lang="en">viewport</i> du plus proche SVG qui est utilisé comme boîte de référence. Si l'attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée le <i lang="en">viewport</i>, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîte sont basées sur la hauteur et la largeur de l'attribut `viewBox`.
 - `no-clip`
-  - : La partie qui est « peinte » n'est pas rognée.
+  - : La partie qui est peinte n'est pas rognée.
+- `border` {{non-standard_inline}}
+  - : Synonyme de `border-box`.
+- `padding` {{non-standard_inline}}
+  - : Synonyme de `padding-box`.
+- `content` {{non-standard_inline}}
+  - : Synonyme de `content-box`.
+- `text` {{non-standard_inline}}
+  - : L'image est rognée selon la forme du texte de l'élément.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### CSS
+Vous pouvez modifier la valeur `mask-clip` dans l'exemple qui suit. Si vous utilisez un navigateur basé sur Chromium, modifiez la valeur de `-webkit-mask-clip`.
 
-```css
-#masked {
-  width: 100px;
-  height: 100px;
-  background-color: #8cffa0;
-  margin: 20px;
-  border: 20px solid #8ca0ff;
-  padding: 20px;
-  -webkit-mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg);
-  mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg);
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-clip: border;
-  mask-clip: border-box;
-}
-```
-
-### HTML
-
-```html
-<div id="masked"></div>
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples", "220px", "250px")}}
+{{EmbedGHLiveSample("css-examples/masking/mask-clip.html", '100%', 800)}}
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName("CSS Masks", "#the-mask-clip", "mask-clip")}} | {{Spec2("CSS Masks")}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mask-clip")}}
+{{Compat}}
+
+## Voir aussi
+
+- [Rognage et masquage en CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)

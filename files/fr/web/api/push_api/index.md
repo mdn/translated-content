@@ -51,7 +51,7 @@ Activer un service worker pour délivrer un message Push peut accroître l'utili
 
 ## Complément au Service worker
 
-Les ajouts à [l'API Service Worker ](/fr/docs/Web/API/Service_Worker_API)suivants ont été spécifiés dans l'API Push, pour fournir un point d'entrée à l'utilisation de messages Push pour surveiller et répondre aux événements de changement liés aux messages push et aux souscriptions.
+Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API) suivants ont été spécifiés dans l'API <i lang="en">Push</i>, pour fournir un point d'entrée à l'utilisation de messages `Push` pour surveiller et répondre aux évènements de changement liés aux messages `Push` et aux souscriptions.
 
 - {{domxref("ServiceWorkerRegistration.pushManager")}} {{readonlyinline}}
   - : Retourne une référence de l'interface {{domxref("PushManager")}} pour gèrer les souscriptions push incluant la souscription, récupèrer une souscription existante, et accèder au statut des permissions push. C'est le point d'entrée dans l'utilisation de la communication push.

@@ -373,7 +373,7 @@ function updateBtn() {
 
 Vous pouvez voir l'utilisation de l'opérateur d'égalité stricte dans la fonction `updateBtn()`. Dans ce cas, nous ne testons pas si deux expressions mathématiques ont la même valeur — nous testons si le contenu textuel d'un bouton contient une certaine chaîne — mais c'est toujours le même principe. Si le bouton affiche «&nbsp;Démarrer la machine&nbsp;» quand on le presse, nous changeons son étiquette en «&nbsp;Arrêter la machine&nbsp;» et mettons à jour l'étiquette comme il convient. Si le bouton indique «&nbsp;Arrêter la machine&nbsp;» au moment de le presser, nous basculons l'étiquette à nouveau.
 
-> **Note :** Un contrôle qui alterne entre deux états porte généralement le nom de **toggle** (bascule). Il bascule d'un état l'autre — allumé, éteint, etc.
+> **Note :** Un contrôle qui alterne entre deux états porte généralement le nom de **toggle** (bascule). Il bascule d'un état à l'autre — allumé, éteint, etc.
 
 ## Résumé
 

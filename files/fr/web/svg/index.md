@@ -24,7 +24,7 @@ SVG est une [recommandation du W3C](http://www.w3.org/Graphics/SVG/) et est bas�
 
 SVG est un format d'images vectorielles. Les images vectorielles peuvent être redimensionnées sans perte de qualité, tandis que ce n'est pas possible avec des images matricielles (bitmap).
 
-SVG est une norme développée par le [World Wide Web Consortium (W3C) ](https://www.w3.org/)depuis 1999.
+SVG est une norme développée par le [World Wide Web Consortium (W3C)](https://www.w3.org/) depuis 1999.
 
 ## Documentation
 
@@ -78,13 +78,13 @@ Comme HTML, SVG dispose d'un modèle de document (DOM) et d'évènements, et est
 - [svg-wow.org](http://svg-wow.org/)
 - Extension Firefox ([Grafox](http://schepers.cc/grafox/)) pour ajouter la gestion d'un sous-ensemble des animations SMIL
 - Manipulation interactive de [photos](http://people.mozilla.com/~vladimir/demos/photos.svg)
-- [Transformations HTML ](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/)utilisant `foreignObject` de SVG
+- [Transformations HTML](http://starkravingfinkle.org/blog/2007/07/firefox-3-svg-foreignobject/) utilisant `foreignObject` de SVG
 
 ### Cartes, graphiques, jeux et expérimentations 3D
 
 Bien qu'un peu de SVG puisse contribuer à améliorer le contenu du web, voici quelques exemples d'utilisation poussée du SVG.
 
-- Un[ Tetris en SVG](http://www.codedread.com/yastframe.php) et [Connect 4](http://www.treebuilder.de/svg/connect4.svg)
+- Un [Tetris en SVG](http://www.codedread.com/yastframe.php) et [Connect 4](http://www.treebuilder.de/svg/connect4.svg)
 - Jeu [Find the State](http://dev.w3.org/SVG/tools/svgweb/samples/svg-files/USStates.svg)
 - [Boîte 3D](http://www.treebuilder.de/default.asp?file=441875.xml) et [boîtes 3D](http://www.treebuilder.de/default.asp?file=206524.xml)
 - [jVectorMap](http://jvectormap.com/) (pour représenter des cartes interactives avec des données) (en anglais)

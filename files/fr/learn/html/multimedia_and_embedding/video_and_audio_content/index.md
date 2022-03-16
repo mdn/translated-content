@@ -75,7 +75,7 @@ Les fonctionnalités de ce code sont :
 - {{htmlattrxref("src","video")}}
   - : De la même manière que pour l'élément {{htmlelement("img")}}, l'attribut `src` (source) contient le chemin vers la vidéo que vous voulez intégrer.  Cela fonctionne de la même manière.
 - {{htmlattrxref("controls","video")}}
-  - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/%C3%89pilepsie).) Vous devez vous servir de l'attribut  `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript ](/fr/docs/Web/API/HTMLMediaElement)adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
+  - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/%C3%89pilepsie).) Vous devez vous servir de l'attribut  `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript](/fr/docs/Web/API/HTMLMediaElement) adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
 - Le paragraphe dans la balise `<video>`
   - : Cela peut s'appeler solution de repli ou contenu de secours (fallback content) — si le navigateur accédant à la page ne supporte pas l'élément `<video>`, cela offre un texte alternatif qui peut être ce que vous voulez&nbsp;; dans ce cas nous avons mis un lien direct au fichier vidéo, afin que l'utilisateur puisse au moins y accéder sans avoir à se soucier du navigateur qu'il utilise.
 
@@ -165,7 +165,7 @@ Voici les nouvelles fonctionnalités&nbsp;:
     - `"auto"`&nbsp;: mettre le fichier média dans un tampon
     - `"metadata"`&nbsp;: ne mettre que les métadonnées dans le tampon
 
-Vous trouverez cet exemple [prêt pour l'interprétation](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) sur Github ( voir aussi le [ code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)). Notez que nous n'avons pas inséré l'attribut `autoplay` dans la version en direct — si la vidéo débute dès le chargement de la page, vous ne pourrez pas voir le poster&nbsp;!
+Vous trouverez cet exemple [prêt pour l'interprétation](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) sur Github ( voir aussi le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html)). Notez que nous n'avons pas inséré l'attribut `autoplay` dans la version en direct — si la vidéo débute dès le chargement de la page, vous ne pourrez pas voir le poster !
 
 ### L'élément  \<audio>
 
@@ -183,7 +183,7 @@ Vous verrez quelque chose de ce genre dans un navigateur&nbsp;:
 
 ![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
-> **Note :** Vous pouver [lancer la démo de l'audio en direct ](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html)sur Github (voir aussi le [code source de l'interpréteur](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
+> **Note :** Vous pouver [lancer la démo de l'audio en direct](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) sur Github (voir aussi le [code source de l'interpréteur](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
 Cela prend moins de place qu'une vidéo, et il n'y a pas de composante visuelle — il est juste nécessaire d'afficher les contrôles de lecture de l'audio. Voici les autres différences avec les vidéos HTML5&nbsp;:
 
@@ -254,7 +254,7 @@ Pour plus de détails, lisez [Ajouter des légendes et des sous‑titres aux vid
 
 Pour cet exercice, nous aimerions (idéalement) que vous partiez «&nbsp;dans le monde&nbsp;» pour enregistrer vos propres vidéos et pistes audio — la plupart des téléphones actuels vous permettent facilement de le faire, et, à condition que vous puissiez le transférer sur l'ordinateur, vous pouvez l'utiliser. Vous allez devoir convertir dans les formats adaptés, WebM et MP4 pour la vidéo,  MP3 et Ogg pour l'audio. Il y a de nombreux progammes vous permettant de faire ça sans difficulté comme [Miro Video Converter](http://www.mirovideoconverter.com/) et [Audacity](https://sourceforge.net/projects/audacity/). Nous aimerions que vous essayiez !
 
-Si vous ne pouvez enregistrer ni vidéo ni audio, alors, n'hésitez pas à vous servir de nos  [échantillons audio et vidéo ](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content)pour réaliser cet exercice. Vous pouvez aussi utiliser notre échantillon-code de référence.
+Si vous ne pouvez enregistrer ni vidéo ni audio, alors, n'hésitez pas à vous servir de nos [échantillons audio et vidéo](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/video-and-audio-content) pour réaliser cet exercice. Vous pouvez aussi utiliser notre échantillon-code de référence.
 
 Il vous faudra :
 
@@ -276,8 +276,8 @@ Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages
 - {{htmlelement("video")}}
 - {{htmlelement("source")}}
 - {{htmlelement("track")}}
-- [ Ajouter des légendes et sous-titres aux vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [Intégration Audio et Vidéo ](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery): de nombreux détails sur la manière de mettre de la vidéo et audio sur le web avec HTML et JavaScript.
+- [Ajouter des légendes et sous-titres aux vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [Intégration Audio et Vidéo](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery)&nbsp;: de nombreux détails sur la manière de mettre de la vidéo et audio sur le web avec HTML et JavaScript.
 - [Manipuler l'Audio et la Vidéo](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation): de nombreux détails pour manipuler l'audio et la vidéo avec JavaScript (par ex. en ajoutant des filtres).
 - Options automatisées pour la [traduction multimédia](http://www.inwhatlanguage.com/blog/translate-video-audio/).
 

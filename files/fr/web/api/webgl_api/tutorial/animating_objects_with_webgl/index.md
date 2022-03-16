@@ -19,7 +19,7 @@ Commençons par faire tourner le carré. La première chose dont nous avons beso
 var squareRotation = 0.0;
 ```
 
-Maintenant, nous devons modifier la fonction `drawScene() `pour appliquer la rotation courante du carré quand on le dessine. Après déplacement à la position de dessin initiale du carré, nous appliquons la rotation comme suit&nbsp;:
+Maintenant, nous devons modifier la fonction `drawScene()` pour appliquer la rotation courante du carré quand on le dessine. Après déplacement à la position de dessin initiale du carré, nous appliquons la rotation comme suit&nbsp;:
 
       mat4.rotate(modelViewMatrix,  // matrice de destination
                   modelViewMatrix,  // matrice de rotation

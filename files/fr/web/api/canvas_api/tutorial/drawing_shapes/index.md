@@ -496,8 +496,7 @@ Nous reviendrons sur `fillStyle` plus en détail plus loin dans ce tutoriel. Pou
 
 ## Objets Path2D
 
-Comme nous l'avons vu dans le dernier exemple, il peut y avoir une série de trajets et d'instructions de dessin pour dessiner des objets sur votre canevas. Pour simplifier le code et améliorer les performances, l'objet {{domxref("Path2D")}}, disponible dans les versions récentes des navigateurs, vous permet de mettre en cache ou d'enregistrer ces instrucions de dessin. Vous pourrez alors rejouer vos trajets rapidement.
-Voyons comment nous pouvons construire un objet `Path2D `:
+Comme nous l'avons vu dans le dernier exemple, il peut y avoir une série de trajets et d'instructions de dessin pour dessiner des objets sur votre canevas. Pour simplifier le code et améliorer les performances, l'objet [`Path2D`](/fr/docs/Web/API/Path2D), disponible dans les versions récentes des navigateurs, vous permet de mettre en cache ou d'enregistrer ces instructions de dessin. Vous pourrez alors rejouer vos trajets rapidement. Voyons comment nous pouvons construire un objet `Path2D`&nbsp;:
 
 - {{domxref("Path2D.Path2D", "Path2D()")}}
   - : Le constructor **`Path2D()`** retourne un objet `Path2D` nouvellement instancié, optionellement avec un autre trajet comme argument (crée une copie), ou optionellement avec une chaîne constituée de données de [trajet SVG](/fr-FR/docs/Web/SVG/Tutorial/Paths).

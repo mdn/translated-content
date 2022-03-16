@@ -8,7 +8,7 @@ translation_of: Web/SVG/Attribute/stroke-dasharray
 ---
 L'attribut `stroke-dasharray` contrôle le motif et l'espacement entre les segments utilisés pour tracer le contour d'un élément via l'attribut stroke. L'attribut définit ainsi un motif constitué d'une suite de segments et de vides dont la forme se rapprochera d'une ligne de pointillés.
 
-> **Note :** Comme il s'agit d'un attribut de présentation, `stroke-dasharray `peut aussi être utilisé directement dans une feuille de style CSS.
+> **Note :** Comme il s'agit d'un attribut de présentation, `stroke-dasharray` peut aussi être utilisé directement dans une feuille de style CSS.
 
 Les éléments suivants peuvent utiliser l'attribut `stroke-dasharray`: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}}
 

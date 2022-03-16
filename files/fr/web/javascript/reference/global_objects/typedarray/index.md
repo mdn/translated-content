@@ -43,8 +43,8 @@ Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau p
   - : Lorsque le constructeur est appelé avec un argument `tableauTypé`, qui peut être un tableau typé de n'importe quel type (par exemple `Int32Array`), le `tableauTypé` est copié dans un nouveau tableau typé. Chaque valeur du `tableauTypé` est convertie dans le type correspondant du nouveau tableau. Enfin, la longueur du tableau typé est fixée avec la longueur de `tableauTypé`.
 - `objet`
   - : Lorsque le constructeur est invoqué avec un argument `objet`, un nouveau tableau typé est créé avec la méthode `TypedArray.from()`.
-- `tampon`,` décalageOctet`, `longueur`
-  - : Lorsque le constructeur est appelé avec un `tampon` (_buffer_) ainsi qu'avec les paramètres optionnels `décalageOctet` et `longueur`, un nouveau tableau typé est créé comme une vue pour l'objet {{jsxref("ArrayBuffer")}}. Les paramètres `décalageOctet` et `longueur` permettent de définir l'intervalle de mémoire du buffer qui est présenté dans la vue qu'est le tableau typé. Si les deux derniers paramètres sont absents, l'ensemble du `tampon` sera considéré. Si `longueur `est absent, on considèrera l'ensemble de `tampon` à partir de l'octet _décalageOctet_.
+- `tampon`, `décalageOctet`, `longueur`
+  - : Lorsque le constructeur est appelé avec un `tampon` (_buffer_) ainsi qu'avec les paramètres optionnels `décalageOctet` et `longueur`, un nouveau tableau typé est créé comme une vue pour l'objet {{jsxref("ArrayBuffer")}}. Les paramètres `décalageOctet` et `longueur` permettent de définir l'intervalle de mémoire du buffer qui est présenté dans la vue qu'est le tableau typé. Si les deux derniers paramètres sont absents, l'ensemble du `tampon` sera considéré. Si `longueur` est absent, on considèrera l'ensemble de `tampon` à partir de l'octet _décalageOctet_.
 
 ## Description
 

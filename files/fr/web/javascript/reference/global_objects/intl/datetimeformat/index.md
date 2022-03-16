@@ -143,17 +143,17 @@ L'objet **`Intl.DateTimeFormat`** est un constructeur d'objets permettant de for
 - {{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
   - : Renvoie un tableau contenant les locales supportées parmis les locales fournies, sans qu'il soit nécessaire de recourir à la locale par défaut de l'implémentation.
 
-## Instances de` DateTimeFormat`
+## Instances de `DateTimeFormat`
 
 ### Propriétés
 
-Les instances de` DateTimeFormat()` héritent des propriétés suivantes depuis leur prototype :
+Les instances de `DateTimeFormat()` héritent des propriétés suivantes depuis leur prototype :
 
 {{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/DateTimeFormat/prototype','Properties')}}
 
 ### Méthodes
 
-Les instances de` DateTimeFormat()` héritent des propriétés suivantes depuis leur prototype :
+Les instances de `DateTimeFormat()` héritent des propriétés suivantes depuis leur prototype :
 
 {{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/DateTimeFormat/prototype','Méthodes')}}
 

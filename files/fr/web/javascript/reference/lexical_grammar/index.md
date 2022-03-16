@@ -206,7 +206,7 @@ Les mots-clés suivants sont réservés dans les anciennes spécifications ECMAS
 - `transient`
 - `volatile`
 
-Par ailleurs, les littéraux `null`, `true`, et` false` sont réservés dans ECMAScript pour leur usage normal.
+Par ailleurs, les littéraux `null`, `true`, et `false` sont réservés dans ECMAScript pour leur usage normal.
 
 ### Utilisation des mots-clés réservés
 

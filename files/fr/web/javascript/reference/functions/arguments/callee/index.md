@@ -23,7 +23,7 @@ La propriété **`arguments.callee`** contient la fonction en cours d'exécution
 
 ### Pourquoi `arguments.callee` a-t-il été retiré du mode strict ES5 ?
 
-(adapté d'une réponse[ Stack Overflow par olliej](http://stackoverflow.com/a/235760/578288 "http://stackoverflow.com/a/235760/578288"))
+(adapté d'une réponse [Stack Overflow par olliej](http://stackoverflow.com/a/235760/578288 "http://stackoverflow.com/a/235760/578288"))
 
 Aux débuts de JavaScript, il n'était pas possible d'utiliser des expressions de fonction avec des noms. Il était donc impossible de faire une expression de fonction récursive.
 

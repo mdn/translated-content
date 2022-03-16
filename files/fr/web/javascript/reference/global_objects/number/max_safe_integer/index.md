@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MAX_SAFE_INTEGER
 ---
 {{JSRef}}
 
-La constante **`Number.MAX_SAFE_INTEGER `**représente la valeur (sûre) maximale d’un nombre entier en JavaScript (2^53 -1).
+La constante **`Number.MAX_SAFE_INTEGER`** représente la valeur (sûre) maximale d’un nombre entier en JavaScript (2^53 -1).
 
 > **Note :** Pour représenter des entiers supérieurs à cette valeur, on pourra utiliser le type {{jsxref("BigInt")}}.
 

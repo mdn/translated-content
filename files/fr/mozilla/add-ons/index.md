@@ -53,7 +53,7 @@ En 2020, Mozilla sortira une nouvelle expérience Firefox pour Android. Le nouve
 
 Si vous maintenez un module complémentaire historique utilisant XUL ou le SDK Add-on, nous vous recommandons de le porter vers une extension WebExtensions. [Voici quelques ressources MDN à propos du portage d'extension](/fr/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
 
-Nous avons rassemblé [un ensemble de ressources](https://wiki.mozilla.org/Add-ons/developer/communication) sur un page wiki afin d'aider les développeurs pendant cette phase de transition. Pour commencer, vous pouvez utiliser l'outil [Lookup ](https://compatibility-lookup.services.mozilla.com/)afin de détecter si votre module complémentaire est impacté.
+Nous avons rassemblé [un ensemble de ressources](https://wiki.mozilla.org/Add-ons/developer/communication) sur un page wiki afin d'aider les développeurs pendant cette phase de transition. Pour commencer, vous pouvez utiliser l'outil [Lookup](https://compatibility-lookup.services.mozilla.com/) afin de détecter si votre module complémentaire est impacté.
 
 ## Publier des modules
 

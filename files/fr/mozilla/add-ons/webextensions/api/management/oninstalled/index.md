@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 
 Action quand une extension est installée.
 
-Cette API requière l'[API de permission ](/fr/Add-ons/WebExtensions/manifest.json/permissions)"management".
+Cette API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
 ## Syntaxe
 

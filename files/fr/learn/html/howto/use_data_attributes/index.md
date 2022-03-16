@@ -63,7 +63,7 @@ article[data-columns='4'] {
 }
 ```
 
-Tout cela est visible dans l'exemple[ JSBin](https://jsbin.com/ujiday/2/edit).
+Tout cela est visible dans l'exemple [JSBin](https://jsbin.com/ujiday/2/edit).
 
 Les attributs data peuvent aussi être stockés pour inclure des informations qui changent constamment, telles que les cores dans un jeu. L'utilisation des sélecteurs CSS et de l'accès par le JavaScript permettent ici de créer des effets sympas sans avoir à écrire vos propres routines d'affichage. Regardez cet exemple de [capture vidéo d'écran](https://www.youtube.com/watch?v=On_WyUB1gOk) où sont utilisés les contenus générés et les transitions CSS ([exemple JSBin](https://jsbin.com/atawaz/3/edit)).
 

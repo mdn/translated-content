@@ -21,7 +21,7 @@ La propriété **`length`** définit le nombre de paramètres attendus par la fo
 
 ### Propriété du constructeur `Function`
 
-Le constructeur {{jsxref("Function")}} est lui-même un objet {{jsxref("Function")}}. Sa propriété` length` vaut 1. Les attributs de cette propriété sont : Écrivable : `false`, Énumérable : `false`, Configurable : `true`.
+Le constructeur {{jsxref("Function")}} est lui-même un objet {{jsxref("Function")}}. Sa propriété `length` vaut 1. Les attributs de cette propriété sont : Écrivable : `false`, Énumérable : `false`, Configurable : `true`.
 
 ### Propriété du prototype de `Function`
 

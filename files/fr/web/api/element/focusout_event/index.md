@@ -4,7 +4,7 @@ slug: Web/API/Element/focusout_event
 translation_of: Web/API/Element/focusout_event
 original_slug: Web/Events/focusout
 ---
-L'évènement `focusout `est déclenché lorsqu'un élément du DOM est sur le point de perdre le focus. La différence principale entre cet événement et [blur](</en-US/docs/Mozilla_event_reference/blur_(event)>) est que ce dernier ne se propage pas.
+L'évènement `focusout` est déclenché lorsqu'un élément du DOM est sur le point de perdre le focus. La différence principale entre cet évènement et [`blur`](/fr/docs/Web/API/Element/blur_event) est que ce dernier ne se propage pas.
 
 ## Informations générales
 

@@ -71,7 +71,7 @@ Lorsqu'on utilise des mécanismes de conversion de types avec les symboles, on a
 
 - Lorsqu'on tente de convertir un symbole en un nombre, cela provoquera une exception {{jsxref("TypeError")}} (par exemple avec `+sym` ou `sym | 0`).
 - L'égalité faible permet d'obtenir `true` avec ` Object(sym) == sym``. `
-- `Symbol("toto") + "truc" `lève une exception {{jsxref("TypeError")}} (le symbole ne peut pas être converti en une chaîne de caractères), cela permet par exemple d'éviter de créer (sans s'en rendre compte) des noms de propriétés basés sur des symboles.
+- `Symbol("toto") + "truc"` lève une exception {{jsxref("TypeError")}} (le symbole ne peut pas être converti en une chaîne de caractères), cela permet par exemple d'éviter de créer (sans s'en rendre compte) des noms de propriétés basés sur des symboles.
 - La méthode utilisant la conversion avec {{jsxref("String","String()")}} fonctionnera comme un appel à {{jsxref("Symbol.prototype.toString()")}}. En revanche, `new String(sym)` renverra une erreur.
 
 ## Propriétés

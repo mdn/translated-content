@@ -73,7 +73,7 @@ Dans la plupart des cas, les moteurs utilisent cette approche rapide. Toutefois,
 
 ## L'optimisation intelligente des propriétés héritées
 
-Lors des accès prédictibles, on trouve _généralement_ la propriété en un nombre constant de sauts le long de la chaîne. Les objets de chaîne n'acquièrent _généralement_ pas de nouvelle propriétés et l'objet final n'est _généralement_ pas affecté par une [suppression](Opérateurs/L_opérateur_delete) de propriétés. Enfin, **la modification de **`[[Prototype]]` est** rare**.  Ces hypothèses sont nécessaires pour éviter de « sauter » sur chacun des prototypes. Les différents moteurs optent pour différentes approches afin d'optimiser les propriétés héritées de façon intelligente.
+Lors des accès prédictibles, on trouve _généralement_ la propriété en un nombre constant de sauts le long de la chaîne. Les objets de chaîne n'acquièrent _généralement_ pas de nouvelle propriétés et l'objet final n'est _généralement_ pas affecté par une [suppression](Opérateurs/L_opérateur_delete) de propriétés. Enfin, **la modification de `[[Prototype]]` est rare**. Ces hypothèses sont nécessaires pour éviter de « sauter » sur chacun des prototypes. Les différents moteurs optent pour différentes approches afin d'optimiser les propriétés héritées de façon intelligente.
 
 - La forme de l'objet _final_ qui contient la propriété héritée peut être vérifiée.
 

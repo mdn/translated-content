@@ -51,7 +51,7 @@ Cet  exemple simple crée un nouvel objet WebSocket, qui se connecte au serveur 
 var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
 ```
 
-Lorsque la connexion est établie, la propriété `readyState` de l'objet `exampleSocket `prend la valeur `CONNECTING`. Sa valeur devient  `OPEN` une fois que la connexion est prête à transférer des données.
+Lorsque la connexion est établie, la propriété `readyState` de l'objet `exampleSocket` prend la valeur `CONNECTING`. Sa valeur devient `OPEN` une fois que la connexion est prête à transférer des données.
 
 Pour ouvrir une connexion flexible quant aux protocoles supportés, on spécifie une liste de protocoles:
 

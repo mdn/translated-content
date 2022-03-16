@@ -23,5 +23,5 @@ Ceci nous permet de nous assurer que nous pouvons utiliser des caractères issus
 
 ### Culture générale
 
-- [Character encoding on W3C ](https://www.w3.org/International/articles/definitions-characters/)(en)
+- [Character encoding on W3C (en anglais)](https://www.w3.org/International/articles/definitions-characters/)
 - Le [Codage des Caractères](https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res) sur Wikipédia

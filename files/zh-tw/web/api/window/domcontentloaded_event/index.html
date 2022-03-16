@@ -67,61 +67,7 @@ original_slug: Web/Events/DOMContentLoaded
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>0.2</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>9.0</td>
-   <td>9.0</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p><span style="font-size: 14px; line-height: 18px;">Bubbling for this event is supported by at least Gecko 1.9.2, Chrome 6, and Safari 4.</span></p>
-
-<h3 id="Cross-browser_fallback">Cross-browser fallback</h3>
-
-<p>Internet Explorer 8 supports the &lt;code&gt;readystatechange&lt;/code&gt; event, which can be used to detect that the DOM is ready. In earlier version of Internet Explorer, this state can be detected by regularily trying to execute &lt;code&gt;document.documentElement.doScroll("left");&lt;/code&gt;, as this snippet will throw an error until the DOM is ready.</p>
-
-<p>General-purpose JS libraries such as jQuery offer cross-browser methods to detect that the DOM is ready. There are also standalone scripts that offer this feature : <a href="https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js" title="https://github.com/dperini/ContentLoaded/blob/master/src/contentloaded.js">contentloaded.js</a> (supports only one listener) and <a href="https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js" title="https://github.com/addyosmani/jquery.parts/blob/master/jquery.documentReady.js">jquery.documentReady.js</a> (doesn't depend on jQuery, despite its name).</p>
+{{Compat("api.Window.DOMContentLoaded_event")}}
 
 <h2 id="Related_Events">Related Events</h2>
 

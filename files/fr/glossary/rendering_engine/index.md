@@ -20,4 +20,4 @@ Un **moteur de rendu** est un logiciel qui trace du texte et des images à l'éc
 ### Référence technique
 
 - [Documentation Gecko](/fr/docs/Gecko)
-- [Venkatraman.R - Behind Browsers (Part 1, Basics) ](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)
+- [Venkatraman.R - Behind Browsers (Part 1, Basics)](https://medium.com/@ramsunvtech/behind-browser-basics-part-1-b733e9f3c0e6)

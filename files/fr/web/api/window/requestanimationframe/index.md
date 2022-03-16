@@ -70,7 +70,7 @@ requestAnimationFrame(step);
 
 ### Notes pour Chrome
 
-La syntaxe correcte, dans Chrome, pour annuler l'exécution est` window.cancelAnimationFrame()`. Dans les anciennes versions, `window.webkitCancelAnimationFrame()` & `window.webkitCancelRequestAnimationFrame() sont obsolètes` mais sont toujours supportées pour le moment.
+La syntaxe correcte dans Chrome pour annuler l'exécution est `window.cancelAnimationFrame()`. Dans les anciennes versions, `window.webkitCancelAnimationFrame()` et `window.webkitCancelRequestAnimationFrame()` sont obsolètes mais sont toujours supportées pour le moment.
 
 ## Specification
 

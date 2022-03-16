@@ -66,4 +66,4 @@ Ainsi, en raison de (1) chaque guillemet simple (') dans la chaîne d'entrée es
 ### Culture générale
 
 - {{Interwiki("wikipedia","Injection_SQL","Injection SQL")}} sur Wikipedia
-- [Explication de l'injection SQL ](https://www.owasp.org/index.php/SQL_Injection)sur OWASP (Open Web Application Security Project) (en)
+- [Explication de l'injection SQL](https://www.owasp.org/index.php/SQL_Injection) sur OWASP (Open Web Application Security Project) (en)

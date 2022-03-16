@@ -25,7 +25,7 @@ Les contextes qui ne sont pas servis locallement doivent être servis avec *http
 
 ## Détection des fonctionnalités
 
-Les pages peuvent utiliser la détection de fonctionnalités pour vérifier si elles sont dans un context sécurisé ou non en utilisant le booléen `isSecureContext `qui est présent dans le scope global.
+Les pages peuvent utiliser la détection de fonctionnalités pour vérifier si elles sont dans un context sécurisé ou non en utilisant le booléen `isSecureContext` qui est présent dans le scope global.
 
 ```js
 if (window.isSecureContext) {

@@ -252,7 +252,7 @@ table {
 }
 ```
 
-- Plus haut, nous avons vu comment on utilisait le sélecteur {{cssxref(":nth-child")}} pour sélectionner un élément enfant. Il est aussi possible de donner une formule en paramètre afin qu'il sélectionne une suite d'éléments. La formule 2n-1 sélectionne tous les enfants impairs (1, 3, 5, etc.) et la formule 2n sélectionne tous les enfants pairs (2, 4, 6, etc.). Nous avons utilisé les mots-clés `odd` (impair) et `even `(pair) dans notre code ; ils font exactement la même chose que les formules susmentionnées. Dans ce cas, nous donnons aux lignes paires et impaires des couleurs différentes (clinquantes)
+- Plus haut, nous avons vu comment on utilisait le sélecteur {{cssxref(":nth-child")}} pour sélectionner un élément enfant. Il est aussi possible de donner une formule en paramètre afin qu'il sélectionne une suite d'éléments. La formule 2n-1 sélectionne tous les enfants impairs (1, 3, 5, etc.) et la formule 2n sélectionne tous les enfants pairs (2, 4, 6, etc.). Nous avons utilisé les mots-clés `odd` (impair) et `even` (pair) dans notre code ; ils font exactement la même chose que les formules susmentionnées. Dans ce cas, nous donnons aux lignes paires et impaires des couleurs différentes (clinquantes)
 - Nous avons également ajouté un motif d'arrière-plan répétitif sur toutes les lignes ; il donne un peu de bruit (un `.png` semi-transparent avec un peu de distorsion visuelle) pour donner une certaine texture.
 - Finalement, nous avons donné à toute la table une couleur de fond unie de façon à ce que les navigateurs qui ne prennent pas en charge le sélecteur `:nth-child` disposent encore d'une teinte de fond pour les lignes du corps de tableau.
 

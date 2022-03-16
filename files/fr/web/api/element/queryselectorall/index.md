@@ -109,7 +109,7 @@ let inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1, pas 0 !
 ```
 
-Dans cet exemple, en sélectionnant `.outer .inner` dans le contexte `<div> `avec la classe `select`, l'élément avec la classe `.inner` est toujours trouvé, même si `.outer` n'est pas un descendant de l'élément sur lequel la recherche est effectuée (`.select`). Par défaut, `querySelectorAll()` vérifie uniquement que le dernier élément du sélecteur se trouve dans la portée de la recherche.
+Dans cet exemple, en sélectionnant `.outer .inner` dans le contexte `<div>` avec la classe `select`, l'élément avec la classe `.inner` est toujours trouvé, même si `.outer` n'est pas un descendant de l'élément sur lequel la recherche est effectuée (`.select`). Par défaut, `querySelectorAll()` vérifie uniquement que le dernier élément du sélecteur se trouve dans la portée de la recherche.
 
 La pseudo-classe [`:scope`](/fr/docs/Web/CSS/:scope) restaure le comportement attendu, ne faisant correspondre les sélecteurs que sur les descendants de l'élément de base&nbsp;:
 

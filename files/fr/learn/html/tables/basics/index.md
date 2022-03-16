@@ -545,7 +545,7 @@ Recréez le tableau en suivant les étapes ci-dessous.
 7.  Ajoutez une couleur de fond différente et une bordure pour la sixième colonne, pour signifier que c'est une journée spéciale et qu'elle enseigne à une nouvelle classe. Les valeurs de votre attribut `style` sont `background-color:#DCC48E; border:4px solid #C1437A;`
 8.  Les deux derniers jours sont libres, alors pas de couleur de fond mais une largeur à spécifier ; la valeur de votre attribut `style` est `width: 42px;`
 
-Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vérifier votre travail, vous pouvez trouver notre version [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) (à[ voir aussi](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) directement) sur GitHub .
+Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vérifier votre travail, vous pouvez trouver notre version [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) (à [voir aussi](http://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) directement) sur GitHub .
 
 ## Résumé
 

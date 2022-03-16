@@ -23,7 +23,7 @@ L'accesseur **`byteLength`** est une propriété représentant la longueur, expr
 
 ## Description
 
-La propriété `byteLength` est une propriété accesseur/mutateur dont le mutateur vaut  `undefined`. Cela signifie que cette propriété est en lecture seule. Cette valeur est déterminée lorsque l'objet `DataView` est construit et ne peut pas être changée. Si `DataView` ne définit pas de décalage avec `byteOffset` ou ne spécifie pas `byteLength`, ce sera la `byteLength` de l'objet `ArrayBuffer` ou `SharedArrayBuffer `référencé qui sera renvoyée.
+La propriété `byteLength` est une propriété accesseur/mutateur dont le mutateur vaut  `undefined`. Cela signifie que cette propriété est en lecture seule. Cette valeur est déterminée lorsque l'objet `DataView` est construit et ne peut pas être changée. Si `DataView` ne définit pas de décalage avec `byteOffset` ou ne spécifie pas `byteLength`, ce sera la `byteLength` de l'objet `ArrayBuffer` ou `SharedArrayBuffer` référencé qui sera renvoyée.
 
 ## Exemples
 

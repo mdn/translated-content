@@ -1869,6 +1869,7 @@
 /ja/docs/Firefox_9_for_developers	/ja/docs/Mozilla/Firefox/Releases/9
 /ja/docs/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Full_page_zoom	/ja/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
+/ja/docs/Games/Index	/ja/docs/conflicting/Games
 /ja/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/ja/docs/Games/Introduction_to_HTML5_Game_Development
 /ja/docs/Games/Workflows	/ja/docs/Games/Tutorials
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -1891,6 +1892,7 @@
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
+/ja/docs/Glossary/Index	/ja/docs/conflicting/Glossary
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
@@ -2693,11 +2695,14 @@
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form	/ja/docs/Learn/Forms/Your_first_form
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn/Forms/Your_first_form/Example
 /ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型	/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
+/ja/docs/Learn/Index	/ja/docs/conflicting/Learn
+/ja/docs/Learn/JavaScript/Asynchronous/Concepts	/ja/docs/Learn/JavaScript/Asynchronous/Introducing
 /ja/docs/Learn/JavaScript/Objects/Inheritance	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/Objects/Object-oriented_JS	/ja/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/Objects/継承	/ja/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /ja/docs/Learn/JavaScript/非同期	/ja/docs/Learn/JavaScript/Asynchronous
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/How_browsers_work
+/ja/docs/Learn/Release_notes	/ja/docs/conflicting/Learn_5c079fa29d8d329cb43586076f0bb7bf
 /ja/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry	/ja/docs/orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
 /ja/docs/Link_prefetching_FAQ	/ja/docs/Web/HTTP/Link_prefetching_FAQ
 /ja/docs/Localization	/ja/docs/Glossary/Localization
@@ -2784,6 +2789,7 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels
+/ja/docs/Mozilla/Add-ons/WebExtensions/Index	/ja/docs/conflicting/Mozilla/Add-ons/WebExtensions
 /ja/docs/Mozilla/Add-ons/WebExtensions/ThunderbirdにおけるWebExtensionsによるアドイン開発	/ja/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 /ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/ja/docs/Mozilla/Add-ons/WebExtensions/API
 /ja/docs/Mozilla/Add-ons/WebExtensions/Walkthrough	/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
@@ -2811,7 +2817,7 @@
 /ja/docs/Notification_object/tag	/ja/docs/Web/API/Notification/tag
 /ja/docs/Notification_object/title	/ja/docs/Web/API/Notification/title
 /ja/docs/Offline_resources_in_Firefox/Using_audio_and_video_in_Firefox	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/ja/docs/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
+/ja/docs/Online_and_offline_events	/ja/docs/conflicting/Web/API/Navigator/onLine
 /ja/docs/Other_JavaScript_tools	/ja/docs/Tools
 /ja/docs/Parsing_and_serializing_XML	/ja/docs/Web/Guide/Parsing_and_serializing_XML
 /ja/docs/Plugins/Guide/Constants	/ja/docs/Glossary/Plugin
@@ -2937,6 +2943,7 @@
 /ja/docs/Tools/Debugger_(before_Firefox_52)/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)/Keyboard_shortcuts
 /ja/docs/Tools/Debugger_(before_Firefox_52)/Settings	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)/Settings
 /ja/docs/Tools/Debugger_(before_Firefox_52)/UI_Tour	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)/UI_Tour
+/ja/docs/Tools/Index	/ja/docs/conflicting/Tools
 /ja/docs/Tools/Memory/Comparing_heap_snapshots	/ja/docs/Tools/Memory/Basic_operations
 /ja/docs/Tools/Memory/Open_the_Memory_tool	/ja/docs/Tools/Memory/Basic_operations
 /ja/docs/Tools/Memory/Take_a_heap_snapshot	/ja/docs/Tools/Memory/Basic_operations
@@ -3014,7 +3021,7 @@
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/Stacking_without_z-index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/The_stacking_context	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 /ja/docs/Web/API/AbstractWorker	/ja/docs/Web/API/Worker
-/ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/Web/API/Worker/onerror
+/ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/Apps.mgmt.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/Apps.mgmt.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/Web/API/AudioBufferSourceNode.onended	/ja/docs/Web/API/AudioScheduledSourceNode/ended_event
@@ -3055,6 +3062,7 @@
 /ja/docs/Web/API/CSSMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule
 /ja/docs/Web/API/CSS_Painting_API/ガイド	/ja/docs/Web/API/CSS_Painting_API/Guide
+/ja/docs/Web/API/CSS_Typed_Object_Model_API	/ja/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model
 /ja/docs/Web/API/CanvasRenderingContext2D.addHitRegion	/ja/docs/Web/API/CanvasRenderingContext2D/addHitRegion
 /ja/docs/Web/API/CanvasRenderingContext2D.clearHitRegions	/ja/docs/Web/API/CanvasRenderingContext2D/clearHitRegions
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
@@ -3097,6 +3105,8 @@
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/Web/Events/Event_handlers
+/ja/docs/Web/API/EventSource/onerror	/ja/docs/Web/API/EventSource/error_event
+/ja/docs/Web/API/EventSource/onmessage	/ja/docs/Web/API/EventSource/message_event
 /ja/docs/Web/API/EventTarget.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/EventTarget.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
@@ -3110,6 +3120,9 @@
 /ja/docs/Web/API/File/fileName	/ja/docs/conflicting/Web/API/File/name
 /ja/docs/Web/API/File/fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/Web/API/File/size	/ja/docs/Web/API/Blob/size
+/ja/docs/Web/API/FileReader/onabort	/ja/docs/conflicting/Web/API/FileReader/abort_event
+/ja/docs/Web/API/FileReader/onerror	/ja/docs/conflicting/Web/API/FileReader/error_event
+/ja/docs/Web/API/FileReader/onload	/ja/docs/conflicting/Web/API/FileReader/load_event
 /ja/docs/Web/API/Geolocation.clearWatch	/ja/docs/Web/API/Geolocation/clearWatch
 /ja/docs/Web/API/Geolocation.getCurrentPosition	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/Geolocation.watchPosition	/ja/docs/Web/API/Geolocation/watchPosition
@@ -3175,10 +3188,20 @@
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
+/ja/docs/Web/API/MediaDevices/ondevicechange	/ja/docs/Web/API/MediaDevices/devicechange_event
+/ja/docs/Web/API/MediaQueryList/onchange	/ja/docs/Web/API/MediaQueryList/change_event
+/ja/docs/Web/API/MediaRecorder/ondataavailable	/ja/docs/Web/API/MediaRecorder/dataavailable_event
+/ja/docs/Web/API/MediaRecorder/onerror	/ja/docs/conflicting/Web/API/MediaRecorder/error_event
+/ja/docs/Web/API/MediaRecorder/onpause	/ja/docs/Web/API/MediaRecorder/pause_event
+/ja/docs/Web/API/MediaRecorder/onresume	/ja/docs/Web/API/MediaRecorder/resume_event
+/ja/docs/Web/API/MediaRecorder/onstart	/ja/docs/Web/API/MediaRecorder/start_event
+/ja/docs/Web/API/MediaRecorder/onstop	/ja/docs/Web/API/MediaRecorder/stop_event
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
+/ja/docs/Web/API/MediaStream/onaddtrack	/ja/docs/Web/API/MediaStream/addtrack_event
 /ja/docs/Web/API/MediaStreamConstraints	/ja/docs/conflicting/Web/API/MediaDevices/getUserMedia
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
+/ja/docs/Web/API/Navigator/Online_and_offline_events	/ja/docs/conflicting/Web/API/Navigator/onLine
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
 /ja/docs/Web/API/NavigatorID/appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/NavigatorID/appName	/ja/docs/Web/API/Navigator/appName
@@ -3190,7 +3213,7 @@
 /ja/docs/Web/API/NavigatorLanguage.languages	/ja/docs/Web/API/Navigator/languages
 /ja/docs/Web/API/NavigatorLanguage/language	/ja/docs/Web/API/Navigator/language
 /ja/docs/Web/API/NavigatorLanguage/languages	/ja/docs/Web/API/Navigator/languages
-/ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
+/ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ja/docs/conflicting/Web/API/Navigator/onLine
 /ja/docs/Web/API/NavigatorOnLine/onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/NavigatorStorage	/ja/docs/orphaned/Web/API/NavigatorStorage
 /ja/docs/Web/API/NavigatorStorage/storage	/ja/docs/orphaned/Web/API/NavigatorStorage/storage
@@ -3235,6 +3258,7 @@
 /ja/docs/Web/API/Node/prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/Web/API/Element
+/ja/docs/Web/API/Performance/onresourcetimingbufferfull	/ja/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/PositionOptions	/ja/docs/conflicting/Web/API/Geolocation/getCurrentPosition
@@ -3262,6 +3286,7 @@
 /ja/docs/Web/API/Response/useFinalURL	/ja/docs/orphaned/Web/API/Response/useFinalURL
 /ja/docs/Web/API/SVGTests	/ja/docs/orphaned/Web/API/SVGTests
 /ja/docs/Web/API/SVGTransformable	/ja/docs/orphaned/Web/API/SVGTransformable
+/ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
 /ja/docs/Web/API/ScrollToOptions	/ja/docs/conflicting/Web/API/Window/scroll
 /ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/conflicting/Web/API/caches
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
@@ -3334,6 +3359,7 @@
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/Window/getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
 /ja/docs/Web/API/Window/onafterprint	/ja/docs/Web/API/WindowEventHandlers/onafterprint
+/ja/docs/Web/API/Window/onappinstalled	/ja/docs/conflicting/Web/API/Window/appinstalled_event
 /ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/Web/API/Window/onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/Web/API/Window/onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
@@ -3341,7 +3367,7 @@
 /ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
 /ja/docs/Web/API/Window/ongamepadconnected	/ja/docs/conflicting/Web/API/Window/gamepadconnected_event
 /ja/docs/Web/API/Window/ongamepaddisconnected	/ja/docs/conflicting/Web/API/Window/gamepaddisconnected_event
-/ja/docs/Web/API/Window/oninstall	/ja/docs/Web/API/Window/onappinstalled
+/ja/docs/Web/API/Window/oninstall	/ja/docs/conflicting/Web/API/Window/appinstalled_event
 /ja/docs/Web/API/Window/onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
 /ja/docs/Web/API/Window/onkeyup	/ja/docs/Web/API/GlobalEventHandlers/onkeyup
 /ja/docs/Web/API/Window/onmousedown	/ja/docs/Web/API/GlobalEventHandlers/onmousedown
@@ -3375,6 +3401,7 @@
 /ja/docs/Web/API/WindowTimers/clearTimeout	/ja/docs/Web/API/clearTimeout
 /ja/docs/Web/API/WindowTimers/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
+/ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
 /ja/docs/Web/API/XMLHttpRequest/onreadystatechange	/ja/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ja/docs/Web/API/XMLHttpRequest/openRequest	/ja/docs/orphaned/Web/API/XMLHttpRequest/openRequest
@@ -3625,6 +3652,7 @@
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_checkbox_role	/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role
 /ja/docs/Web/Accessibility/ARIA/widgets/overview	/ja/docs/Web/Accessibility/ARIA/widgets
 /ja/docs/Web/Accessibility/Accessibility_FAQ	/ja/docs/Web/Accessibility/FAQ
+/ja/docs/Web/Accessibility/Index	/ja/docs/conflicting/Web/Accessibility
 /ja/docs/Web/Apps/Build/Manipulating_media	/ja/docs/Web/Guide/Audio_and_video_delivery
 /ja/docs/Web/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video	/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ja/docs/Web/Apps/Build/Manipulating_media/Live_streaming_web_audio_and_video	/ja/docs/Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
@@ -3999,6 +4027,7 @@
 /ja/docs/Web/Guide/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/Guide/HTML/Obsolete_things_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/ja/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
+/ja/docs/Web/Guide/Index	/ja/docs/conflicting/Web/Guide
 /ja/docs/Web/Guide/Localizations_and_character_encodings	/ja/docs/orphaned/Web/Guide/Localizations_and_character_encodings
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
@@ -4102,6 +4131,7 @@
 /ja/docs/Web/HTML/HTML_Elements/strong	/ja/docs/Web/HTML/Element/strong
 /ja/docs/Web/HTML/HTML_Elements/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/Web/HTML/HTML_Elements/var	/ja/docs/Web/HTML/Element/var
+/ja/docs/Web/HTML/Index	/ja/docs/conflicting/Web/HTML
 /ja/docs/Web/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/HTML/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/ja/docs/Glossary/speculative_parsing
@@ -4132,6 +4162,7 @@
 /ja/docs/Web/HTTP/HTTP_response_codes	/ja/docs/Web/HTTP/Status
 /ja/docs/Web/HTTP/Headers/Feature-Policy/vr	/ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
+/ja/docs/Web/HTTP/Index	/ja/docs/conflicting/Web/HTTP
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Status
 /ja/docs/Web/HTTP/Response_codes/204	/ja/docs/Web/HTTP/Status/204
@@ -4389,6 +4420,7 @@
 /ja/docs/Web/JavaScript/Typed_arrays/Uint32Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
 /ja/docs/Web/Manifest/serviceworker	/ja/docs/orphaned/Web/Manifest/serviceworker
+/ja/docs/Web/MathML/Index	/ja/docs/conflicting/Web/MathML
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Introduction
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Progressive_web_apps/Responsive/Media_types	/ja/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
@@ -4426,6 +4458,7 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
+/ja/docs/Web/SVG/Index	/ja/docs/conflicting/Web/SVG
 /ja/docs/Web/Security/CSP	/ja/docs/Web/HTTP/CSP
 /ja/docs/Web/Security/CSP/CSP_policy_directives	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
 /ja/docs/Web/Security/CSP/Default_CSP_restrictions	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
@@ -4458,6 +4491,7 @@
 /ja/docs/Web/Web_Components/Custom_Elements	/ja/docs/Web/Web_Components/Using_custom_elements
 /ja/docs/Web/Web_Components/HTML_Imports	/ja/docs/conflicting/Web/Web_Components
 /ja/docs/Web/Web_Components/Status_in_Firefox	/ja/docs/orphaned/Web/Web_Components/Status_in_Firefox
+/ja/docs/Web/XPath/Index	/ja/docs/conflicting/Web/XPath
 /ja/docs/Web/XSLT/Elements	/ja/docs/Web/XSLT/Element
 /ja/docs/Web/XSLT/Elements/apply-imports	/ja/docs/Web/XSLT/Element/apply-imports
 /ja/docs/Web/XSLT/Elements/apply-templates	/ja/docs/Web/XSLT/Element/apply-templates
@@ -4494,6 +4528,7 @@
 /ja/docs/Web/XSLT/Elements/variable	/ja/docs/Web/XSLT/Element/variable
 /ja/docs/Web/XSLT/Elements/when	/ja/docs/Web/XSLT/Element/when
 /ja/docs/Web/XSLT/Elements/with-param	/ja/docs/Web/XSLT/Element/with-param
+/ja/docs/Web/XSLT/Index	/ja/docs/conflicting/Web/XSLT
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example
 /ja/docs/Web/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Basic_Example	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Basic_Example
@@ -4512,6 +4547,7 @@
 /ja/docs/WebAPI/Proximity	/ja/docs/Web/API/Proximity_Events
 /ja/docs/WebAPI/Using_Web_Notifications	/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ja/docs/WebAPI/Using_geolocation	/ja/docs/Web/API/Geolocation_API
+/ja/docs/WebAssembly/Index	/ja/docs/conflicting/WebAssembly
 /ja/docs/WebGL	/ja/docs/Web/API/WebGL_API
 /ja/docs/WebGL/Adding_2D_content_to_a_WebGL_context	/ja/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ja/docs/WebGL/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
@@ -4608,7 +4644,7 @@
 /ja/docs/XPath/Functions/translate	/ja/docs/Web/XPath/Functions/translate
 /ja/docs/XPath/Functions/true	/ja/docs/Web/XPath/Functions/true
 /ja/docs/XPath/Functions/unparsed-entity-url	/ja/docs/Web/XPath/Functions/unparsed-entity-url
-/ja/docs/XPath/Index	/ja/docs/Web/XPath/Index
+/ja/docs/XPath/Index	/ja/docs/conflicting/Web/XPath
 /ja/docs/XPath/Snippets	/ja/docs/Web/XPath/Snippets
 /ja/docs/XPath:Axes	/ja/docs/Web/XPath/Axes
 /ja/docs/XPath:Functions	/ja/docs/Web/XPath/Functions
@@ -4678,7 +4714,7 @@
 /ja/docs/XSLT/Elements/variable	/ja/docs/Web/XSLT/Element/variable
 /ja/docs/XSLT/Elements/when	/ja/docs/Web/XSLT/Element/when
 /ja/docs/XSLT/Elements/with-param	/ja/docs/Web/XSLT/Element/with-param
-/ja/docs/XSLT/Index	/ja/docs/Web/XSLT/Index
+/ja/docs/XSLT/Index	/ja/docs/conflicting/Web/XSLT
 /ja/docs/XSLT/PI_Parameters	/ja/docs/Web/XSLT/PI_Parameters
 /ja/docs/XSLT/The_XSLT_JavaScript_Interface_in_Gecko	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko
 /ja/docs/XSLT/The_XSLT_JavaScript_Interface_in_Gecko/Advanced_Example	/ja/docs/Web/XSLT/XSLT_JS_interface_in_Gecko/Advanced_Example

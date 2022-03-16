@@ -25,7 +25,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule. Les valeurs possibles sont :
 
-    - `left `: le contenu de la cellule est alligné à gauche de la cellule
+    - `left`&nbsp;: le contenu de la cellule est alligné à gauche de la cellule
     - `center` : le contenu de la cellule est centré horizontalement
     - `right` : le contenu de la cellule est aligné à droite de la cellule
     - `justify` : insert des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié

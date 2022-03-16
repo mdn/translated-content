@@ -42,19 +42,19 @@ La méthode **`HTMLCanvasElement.getContext()`** retourne un contexte de dessin 
 
     attributs de contexte 2d :
 
-    - **`alpha `**: booléen indiquant que le canevas contient un canal alpha. Si positionné à `false`, le navigateur saura ainsi que l'arrière-plan est toujours opaque, ce qui peut alors accélérer le dessin de contenus et d'images transparents.
-    - {{non-standard_inline}} (Gecko seulement) **`willReadFrequently `**: booléen indiquant si de nombreuses opérations de relecture sont prévues ou non. Cela forcera l'utilisation d'un canevas 2D logiciel (au lieu d'un canevas accéléré matériellement) et peut faire économiser de la mémoire lors d'appels fréquents à {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}}. Cette option est seulement disponible si l'indicateur `gfx.canvas.willReadFrequently.enable` est positionné à `true` (ce qui, par défaut, est seulement le cas pour B2G/Firefox OS).
-    - {{non-standard_inline}} (Blink seulement) **`storage `**: chaîne indiquant quel stockage est utilisé ("persistent" par défaut).
+    - **`alpha`**&nbsp;: booléen indiquant que le canevas contient un canal alpha. Si positionné à `false`, le navigateur saura ainsi que l'arrière-plan est toujours opaque, ce qui peut alors accélérer le dessin de contenus et d'images transparents.
+    - {{non-standard_inline}} (Gecko seulement) **`willReadFrequently`**&nbsp;: booléen indiquant si de nombreuses opérations de relecture sont prévues ou non. Cela forcera l'utilisation d'un canevas 2D logiciel (au lieu d'un canevas accéléré matériellement) et peut faire économiser de la mémoire lors d'appels fréquents à [`getImageData()`](/fr/docs/Web/API/CanvasRenderingContext2D/getImageData). Cette option est seulement disponible si l'indicateur `gfx.canvas.willReadFrequently.enable` est positionné à `true` (ce qui, par défaut, est seulement le cas pour B2G/Firefox OS).
+    - {{non-standard_inline}} (Blink seulement) **`storage`**&nbsp;: chaîne indiquant quel stockage est utilisé (`persistent` par défaut).
 
     attributs de contexte WebGL :
 
-    - **`alpha `**: booléen indiquant que le canevas contient un tampon alpha.
-    - **`depth `**: booléen indiquant que le tampon de dessin a un tampon de profondeur d'au moins 16 bits.
-    - **`stencil `**: booléen indiquant que le tampon de dessin a un tampon stencil d'au moins 8 bits.
-    - **`antialias `**: booléen indiquant si un anti-aliasing doit être effectué ou non.
-    - **`premultipliedAlpha `**: booléen indiquant que le composeur de page supposera que le tampon de dessin contient des couleurs avec alpha pré-multiplié.
-    - **`preserveDrawingBuffer `**: si la valeur est is true, les tampons ne seront pas effacés et conserveront leurs valeurs jusqu'à ce qu'elles soient effacées ou réécrites par l'auteur.
-    - **`failIfMajorPerformanceCaveat`** : booléen indiquant qu'un contexte sera créé si la performance du système est faible.
+    - **`alpha`**&nbsp;: booléen indiquant que le canevas contient un tampon alpha.
+    - **`depth`**&nbsp;: booléen indiquant que le tampon de dessin a un tampon de profondeur d'au moins 16 bits.
+    - **`stencil`**&nbsp;: booléen indiquant que le tampon de dessin a un tampon stencil d'au moins 8 bits.
+    - **`antialias`**&nbsp;: booléen indiquant si un anti-aliasing doit être effectué ou non.
+    - **`premultipliedAlpha`**&nbsp;: booléen indiquant que le composeur de page supposera que le tampon de dessin contient des couleurs avec alpha pré-multiplié.
+    - **`preserveDrawingBuffer`**&nbsp;: si la valeur est `true`, les tampons ne seront pas effacés et conserveront leurs valeurs jusqu'à ce qu'elles soient effacées ou réécrites par l'auteur.
+    - **`failIfMajorPerformanceCaveat`** : booléen indiquant qu'un contexte sera créé si la performance du système est faible.
 
 ### Valeur retournée :
 

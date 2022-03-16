@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/link
 ---
 {{HTMLRef}}
 
-L'élément HTML** `<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers [une feuille de style](/fr/docs/Glossaire/CSS), vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
+L'élément HTML **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers [une feuille de style](/fr/docs/Glossaire/CSS), vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
 
 {{EmbedInteractiveExample("pages/tabbed/link.html")}}
 

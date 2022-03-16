@@ -132,7 +132,7 @@ Nous avons terminé cette étape ! Vous savez comment configurer et utiliser le 
 
 La cadriciel Django réalise une excellente assistance avec la création d'un site d'administration de base en utilisant les données des enregistrements effectués :
 
-- Pour chaque modèle, les enregistrements sont identifiés par le résultat de la méthode` __str__()`, et les détails sont accessibles par des vues dédiées. Par défaut, ces vues et formulaires disposent d'un menu en haut et vous pouvez opérer des opérations de suppressions en bloc en sélectionnant les enregistrements.
+- Pour chaque modèle, les enregistrements sont identifiés par le résultat de la méthode `__str__()`, et les détails sont accessibles par des vues dédiées. Par défaut, ces vues et formulaires disposent d'un menu en haut et vous pouvez opérer des opérations de suppressions en bloc en sélectionnant les enregistrements.
 - Le détail de chaque modèle est contenu dans un formulaire où chaque champ est affiché verticalement dans l'ordre de déclaration de ces derniers dans le modèle d'objet.
 
 mais vous avez la possibilité de personnaliser le comportement du site d'administration. Vous allez pouvoir notamment faire :

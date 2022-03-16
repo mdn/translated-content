@@ -111,7 +111,7 @@ let myVariable = 'Bob';
 myVariable = 'Étienne';
 ```
 
-Notez que les variables peuvent contenir des[ types différents de données](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives)&nbsp;:
+Notez que les variables peuvent contenir des [types différents de données](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives) :
 
 <table class="standard-table">
   <thead>
@@ -392,7 +392,7 @@ Dans cette section, nous allons incorporer une autre image au site en utilisant 
 
 5.  Sauvegardez tous les fichiers puis chargez `index.html` dans le navigateur. Maintenant, si vous cliquez sur l'image, elle doit changer pour l'autre !
 
-Dans cet exemple, nous utilisons une référence vers l'élement {{htmlelement("img")}} grâce à la variable `myImage`. Ensuite, nous égalons la propriété du gestionnaire d'événement `onclick `de cette variable à une fonction sans nom (une fonction anonyme). Maintenant chaque fois que cet élément est cliqué :
+Dans cet exemple, nous utilisons une référence vers l'élement {{htmlelement("img")}} grâce à la variable `myImage`. Ensuite, nous égalons la propriété du gestionnaire d'événement `onclick` de cette variable à une fonction sans nom (une fonction anonyme). Maintenant chaque fois que cet élément est cliqué :
 
 1.  nous récupèrons la valeur de l'attribut `src` de l'image.
 2.  nous utilisons une structure conditionnelle pour voir si la valeur de `src` est égale au chemin de l'image originale :
