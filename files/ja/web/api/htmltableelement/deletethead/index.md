@@ -1,21 +1,55 @@
 ---
-title: HTMLTableElement.deleteTHead
+title: HTMLTableElement.deleteTHead()
 slug: Web/API/HTMLTableElement/deleteTHead
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - メソッド
+  - NeedsSpecTable
+  - リファレンス
+browser-compat: api.HTMLTableElement.deleteTHead
 translation_of: Web/API/HTMLTableElement/deleteTHead
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p><strong>deleteTHead</strong> は、テーブル内の {{htmlelement("thead")}} 要素を削除します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><em>HTMLTableElement</em>.deleteTHead()</pre>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js;gutter:false">mytable.deleteTHead();</pre>
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-38310198">deleteTHead</a></li>
-</ul>
+{{APIRef("HTML DOM")}}
+
+**`HTMLTableElement.deleteTHead()`** は、 {{HTMLElement("thead")}} 要素をこの {{HtmlElement("table")}} から取り除きます。
+
+## 構文
+
+```js
+HTMLTableElement.deleteTHead();
+```
+
+## 例
+
+この例は、 JavaScript を使用して表のヘッダーを削除します。
+
+### HTML
+
+```html
+<table>
+  <thead><th>名前</th><th>職業</th></thead>
+  <tr><td>Bob</td><td>配管工</td></tr>
+  <tr><td>Jim</td><td>屋根職人</td></tr>
+</table>
+```
+
+### JavaScript
+
+```js
+let table = document.querySelector('table');
+table.deleteTHead();
+```
+
+### 結果
+
+{{EmbedLiveSample("Example")}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
