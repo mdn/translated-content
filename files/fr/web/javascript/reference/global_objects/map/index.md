@@ -43,7 +43,7 @@ Dans les versions précédentes des brouillons ECMAScript 2015 (ES6) `-0` et `+0
 
 Les {{jsxref("Object", "objets","",1)}} sont similaires aux `Maps`, chacun manipulant des clés associées à des valeurs, récupérant ces valeurs, supprimant des clés... Il n'y avait auparavant pas d'alternatives natives et c'est pourquoi, historiquement, les objets JavaScript ont été utilisés comme des `Maps`. Malgré tout, il y a des différences importantes entre `Objects` et `Maps` qui permettent de distinguer une utilisation des objets `Map` plus efficace :
 
-- Un `Object` possède un prototype, certaines clés par défaut peuvent donc entrer en collision avec les clés qu'on souhaite créer. À partir d'ES5, on peut écrire `map =` {{jsxref("Object.create", "Object.create(null)")}} mais cette formulation est rarement utilisée.
+- Un `Object` possède un prototype, certaines clés par défaut peuvent donc entrer en collision avec les clés qu'on souhaite créer. À partir d'ES5, on peut écrire `map =` {{jsxref("Object.create", "Object.create(null)")}} mais cette formulation est rarement utilisée.
 - Les clés d'une `Map` sont ordonnées tandis que les clés d'un objet n'ont pas d'ordre particulier. Ainsi, quand on parcourt une `Map`, on obtient les clés selon leur ordre d'insertion. On notera qu'à partir d'ECMAScript 2015, la spécification pour les objets indique de conserver l'ordre de création pour les clés qui sont des chaînes et des symboles.
 - Les clés d'un `Object` sont des {{jsxref("String", "chaînes de caractères","",1)}} ou des symboles (cf. {{jsxref("Symbol")}}), alors que pour une `Map` ça peut être n'importe quelle valeur.
 - Il est possible d'obtenir facilement la taille d'une `Map` avec `size`. En revanche, pour un `Object` il faudra compter « manuellement ».

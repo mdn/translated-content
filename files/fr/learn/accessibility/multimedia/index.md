@@ -50,7 +50,7 @@ Mais ne désespérez pas - nous vous aiderons ici à naviguer parmi les techniqu
 
 ## Simple images
 
-Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article [HTML&nbsp;: une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML)  —  vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d’un texte alternatif que les lecteurs d’écran peuvent lire et lire à leurs utilisateurs.
+Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article [HTML&nbsp;: une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML), vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d’un texte alternatif que les lecteurs d’écran peuvent lire et lire à leurs utilisateurs.
 
 Par exemple:
 

@@ -53,13 +53,13 @@ Dans cet article, nous écrirons une démo classique de "balles bondissantes", p
 
 ![](bouncing-balls.png)
 
-Cet exemple utilise l'[API Canvas](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) pour dessiner les balles sur l'écran, et l'API [requestAnimationFrame](/fr/docs/Web/API/window/requestAnimationFrame)  pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous expérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation **détection de collision**).
+Cet exemple utilise l'[API Canvas](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) pour dessiner les balles sur l'écran, et l'API [requestAnimationFrame](/fr/docs/Web/API/window/requestAnimationFrame) pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous expérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation **détection de collision**).
 
 Pour commencer, faites des copies locales de nos fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Ces fichiers contiennent respectivement :
 
-1.  Un document  HTML très simple contenant un élément {{HTMLElement("h1")}} , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements  pour appliquer notre CSS et notre JavaScript à notre HTML ;
-2.  Quelques styles très simples qui servent principalement à mettre en forme et placer le `<h1>`, et se débarasser de toutes barres de défilement ou de marges autour du pourtour de notre page (afin que cela paraisse plus sympathique et élégant) ;
-3.  Un peu de JavaScript qui sert à paramétrer l'élément  `<canvas>` et fournir les fonctions globales que nous utiliserons.
+1.  Un document HTML très simple contenant un élément {{HTMLElement("h1")}} , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements pour appliquer notre CSS et notre JavaScript à notre HTML ;
+2.  Quelques styles très simples qui servent principalement à mettre en forme et placer le `<h1>`, et se débarasser de toutes barres de défilement ou de marges autour du pourtour de notre page (afin que cela paraisse plus sympathique et élégant) ;
+3.  Un peu de JavaScript qui sert à paramétrer l'élément  `<canvas>` et fournir les fonctions globales que nous utiliserons.
 
 La première partie du script ressemble à ceci :
 
@@ -106,8 +106,8 @@ function Ball(x, y, velX, velY, color, size) {
 
 Ici, nous incluons des paramètres qui définissent  des propriétés dont chaque balle aura besoin pour fonctionner dans notre programme :
 
-- Les coordonnées `x` et `y`  — les coordonnées verticales et horizontales où la balle débutera sur l'écran. Ceci peut se trouver entre 0 (coin à gauche en haut) et la valeur de la hauteur et de la largeur de la fenêtre du navigateur (coin en bas à droite).
-- Une vitesse horizontale et verticale (`velX` et `velY`) — à chaque balle est attribuée une vitesse horizontale et verticale; en termes réels, ces valeurs seront régulièrement ajoutées aux valeurs de la coordonnée `x`/`y` quand nous commencerons à animer les balles, afin de les faire bouger d'autant sur chaque vignette (frame).
+- Les coordonnées `x` et `y` — les coordonnées verticales et horizontales où la balle débutera sur l'écran. Ceci peut se trouver entre 0 (coin à gauche en haut) et la valeur de la hauteur et de la largeur de la fenêtre du navigateur (coin en bas à droite).
+- Une vitesse horizontale et verticale (`velX` et `velY`) — à chaque balle est attribuée une vitesse horizontale et verticale; en termes réels, ces valeurs seront régulièrement ajoutées aux valeurs de la coordonnée `x`/`y` quand nous commencerons à animer les balles, afin de les faire bouger d'autant sur chaque vignette (frame).
 - Une couleur `color` — chaque balle a une couleur.
 - Une taille `size` — chaque balle a une taille. Ce sera son rayon mesuré en pixels.
 
@@ -115,7 +115,7 @@ Ceci règle le problème des propriétés mais qu'en est il des méthodes ? Nous
 
 ### Dessiner la balle
 
-En premier lieu, ajoutez la méthode `draw()` au `prototype` de `Ball()` :
+En premier lieu, ajoutez la méthode `draw()` au `prototype` de `Ball()` :
 
 ```js
 Ball.prototype.draw = function() {
@@ -132,11 +132,11 @@ En utilisant cette fonction, nous pouvons dire à notre balle de se dessiner sur
 - Ensuite, nous utilisons [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) pour définir de quelle couleur nous voulons que la forme soit — nous lui attribuons la valeur de la propriété `color` de notre balle.
 - Après, nous utilisons la méthode [`arc()`](/fr/docs/Web/API/CanvasRenderingContext2D/arc) pour tracer une forme en arc sur le papier. Ses paramètres sont :
 
-  - Les positions `x` et `y` du centre de l'arc — nous spécifions donc les propriétés `x` et `y` de notre balle.
-  - Le rayon de l'arc — nous spécifions la propriété `size` de notre balle.
-  - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degré et `2 * PI` qui est l'équivalent de 360 degrés en radians (malheureusement, vous êtes obligés de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement  `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
+  - Les positions `x` et `y` du centre de l'arc — nous spécifions donc les propriétés `x` et `y` de notre balle.
+  - Le rayon de l'arc — nous spécifions la propriété `size` de notre balle.
+  - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degré et `2 * PI` qui est l'équivalent de 360 degrés en radians (malheureusement, vous êtes obligés de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement  `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
 
-- En dernière position, nous utilisons la méthode [`fill()`](/fr/docs/Web/API/CanvasRenderingContext2D/fill) qui est habituellement utilisée pour spécifier que nous souhaitons mettre fin au dessin que nous avons commencé avec `beginPath()`, et remplir la surface délimitée avec la couleur que nous avions spécifiée plus tôt avec `fillStyle`.
+- En dernière position, nous utilisons la méthode [`fill()`](/fr/docs/Web/API/CanvasRenderingContext2D/fill) qui est habituellement utilisée pour spécifier que nous souhaitons mettre fin au dessin que nous avons commencé avec `beginPath()`, et remplir la surface délimitée avec la couleur que nous avions spécifiée plus tôt avec `fillStyle`.
 
 Vous pouvez déjà commencer à tester votre objet&nbsp;:
 
@@ -248,9 +248,9 @@ Maintenant, rendons cela amusant. Nous allons commencer à ajouter des balles au
     Notre fonction `loop()` fonctionne comme suit :
 
     - On définit la couleur de remplissage du canvas en noir semi-transparent, puis dessine un rectangle de couleur sur toute la largeur et la hauteur du canvas, en utilisant `fillRect()` (les quatre paramètres fournissent une coordonnée de départ, une largeur et une hauteur pour le rectangle dessiné). Cela sert à masquer le dessin de l'image précédente avant que la suivante ne soit dessinée. Si vous ne faites pas cela, vous verrez juste de longs serpents se faufiler autour de la toile au lieu de balles qui bougent ! La couleur du remplissage est définie sur semi-transparent, `rgba (0,0,0,.25)`, pour permettre aux quelques images précédentes de briller légèrement, produisant les petites traînées derrière les balles lorsqu'elles se déplacent. Si vous avez changé 0.25 à 1, vous ne les verrez plus du tout. Essayez de faire varier ce dernier nombre (entre 0 et 1) pour voir l'effet qu'il a.
-    - On crée un nouvel objet `Ball()` avec des attributs générés aléatoirement grâce à la fonction `random()`, puis on ajoute l'objet au tableau, mais seulement lorsque le nombre de balles dans le tableau est inférieur à 25. Donc quand on a 25 balles à l'écran, plus aucune balle supplémentaire n'apparaît. Vous pouvez essayer de faire varier le nombre dans `balls.length <25` pour obtenir plus, ou moins de balles à l'écran. En fonction de la puissance de traitement de votre ordinateur / navigateur, spécifier plusieurs milliers de boules peut ralentir l'animation de façon très significative !
-    - Le programme boucle à travers tous les objets du tableau sur chacun desquels il exécute la fonction `draw()` et `update()` pour dessiner à l'écran chaque balle et faire les mises à jour de chaque attribut avant le prochain rafraîchissement.
-    - Exécute à nouveau la fonction à l'aide de la méthode `requestAnimationFrame()` — lorsque cette méthode est exécutée en permanence et a reçu le même nom de fonction, elle exécute cette fonction un nombre défini de fois par seconde pour créer une animation fluide. Cela se fait généralement de manière récursive — ce qui signifie que la fonction s'appelle elle-même à chaque fois qu'elle s'exécute, de sorte qu'elle sera répétée encore et encore.
+    - On crée un nouvel objet `Ball()` avec des attributs générés aléatoirement grâce à la fonction `random()`, puis on ajoute l'objet au tableau, mais seulement lorsque le nombre de balles dans le tableau est inférieur à 25. Donc quand on a 25 balles à l'écran, plus aucune balle supplémentaire n'apparaît. Vous pouvez essayer de faire varier le nombre dans `balls.length <25` pour obtenir plus, ou moins de balles à l'écran. En fonction de la puissance de traitement de votre ordinateur / navigateur, spécifier plusieurs milliers de boules peut ralentir l'animation de façon très significative !
+    - Le programme boucle à travers tous les objets du tableau sur chacun desquels il exécute la fonction `draw()` et `update()` pour dessiner à l'écran chaque balle et faire les mises à jour de chaque attribut avant le prochain rafraîchissement.
+    - Exécute à nouveau la fonction à l'aide de la méthode `requestAnimationFrame()` — lorsque cette méthode est exécutée en permanence et a reçu le même nom de fonction, elle exécute cette fonction un nombre défini de fois par seconde pour créer une animation fluide. Cela se fait généralement de manière récursive — ce qui signifie que la fonction s'appelle elle-même à chaque fois qu'elle s'exécute, de sorte qu'elle sera répétée encore et encore.
 
 3.  Finallement mais non moins important, ajoutez la ligne suivante au bas de votre code — nous devons appeler la fonction une fois pour démarrer l'animation.
 
@@ -284,9 +284,9 @@ Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notr
 
     Cette méthode est un peu complexe, donc ne vous inquiétez pas si vous ne comprenez pas exactement comment cela fonctionne pour le moment. Regardons cela pas-à-pas&nbsp;:
 
-    - Pour chaque balle _b_, nous devons vérifier chaque autre balle pour voir si elle est entrée en collision avec *b*. Pour ce faire, on inspecte toutes les balles du tableau `balls[]` dans une boucle `for`.
-    - Immédiatement à l'intérieur de cette boucle `for`, une instruction `if` vérifie si la balle courante  *b'* , inspectée dans la boucle, n'est pas égale à la balle *b. Le code correspondant est :*  `b'!== b`_._ En effet, nous ne voulons pas vérifier si une balle _b_ est entrée en collision avec elle-même ! Nous contrôlons donc si la balle actuelle _b_—dont la méthode `collisionDetect()` est invoquée—est distincte de la balle _b'_ inspectée dans la boucle*.* Ainsi le bloc de code venant après l'instruction `if` ne s'exécutera que si les balles _b_ et _b'_ ne sont pas identiques.
-    - Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans [2D collision detection](/fr/docs/Games/Techniques/2D_collision_detection).
+    - Pour chaque balle _b_, nous devons vérifier chaque autre balle pour voir si elle est entrée en collision avec *b*. Pour ce faire, on inspecte toutes les balles du tableau `balls[]` dans une boucle `for`.
+    - Immédiatement à l'intérieur de cette boucle `for`, une instruction `if` vérifie si la balle courante *b'* , inspectée dans la boucle, n'est pas égale à la balle *b. Le code correspondant est :* `b'!== b`_._ En effet, nous ne voulons pas vérifier si une balle _b_ est entrée en collision avec elle-même ! Nous contrôlons donc si la balle actuelle _b_—dont la méthode `collisionDetect()` est invoquée—est distincte de la balle _b'_ inspectée dans la boucle*.* Ainsi le bloc de code venant après l'instruction `if` ne s'exécutera que si les balles _b_ et _b'_ ne sont pas identiques.
+    - Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans [2D collision detection](/fr/docs/Games/Techniques/2D_collision_detection).
     - Si une collision est détectée, le code à l'intérieur de l'instruction interne `if` est exécuté. Dans ce cas, nous définissons simplement la propriété `color` des deux cercles à une nouvelle couleur aléatoire. Nous aurions pu faire quelque chose de bien plus complexe, comme faire rebondir les balles de façon réaliste, mais cela aurait été beaucoup plus complexe à mettre en œuvre. Pour de telles simulations de physique, les développeurs ont tendance à utiliser des bibliothèques de jeux ou de physiques telles que [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
 
 2.  Vous devez également appeler cette méthode dans chaque image de l'animation. Ajouter le code ci-dessous  juste après la ligne `balls[i].update();`:

@@ -269,7 +269,7 @@ if (x === 5 || 7 || 10 || 20) {
 }
 ```
 
-Dans ce cas, la condition dans le `if(...)`sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité « si x est égal à 5, ou bien 7 est vrai » — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement ! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR :
+Dans ce cas, la condition dans le `if(...)`sera toujours évaluée à vrai puisque 7 (ou toute autre valeur non nulle) est toujours `true`. Cette condition dit en réalité «&nbsp;si x est égal à 5, ou bien 7 est vrai&nbsp;» — ce qui est toujours le cas. Ce n'est pas ce que nous voulons logiquement&nbsp;! Pour que cela fonctionne, vous devez définir un test complet entre chaque opérateur OR&nbsp;:
 
 ```js
 if (x === 5 || x === 7 || x === 10 ||x === 20) {

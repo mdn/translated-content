@@ -128,12 +128,12 @@ Pour comparer un grand nombre de chaînes de caractères, par exemple pour trier
 | Spécification                                                                                                                            | État                             | Commentaires                                         |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                                                 | {{Spec2('ES3')}}             | Définition initiale. Implémentée avec JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.5.4.9', 'String.prototype.localeCompare')}}                                         | {{Spec2('ES5.1')}}         |                                                      |
-| {{SpecName('ES6', '#sec-string.prototype.localecompare', 'String.prototype.localeCompare')}}             | {{Spec2('ES6')}}             |                                                      |
-| {{SpecName('ESDraft', '#sec-string.prototype.localecompare', 'String.prototype.localeCompare')}}         | {{Spec2('ESDraft')}}     |                                                      |
+| {{SpecName('ES5.1', '#sec-15.5.4.9', 'String.prototype.localeCompare')}}                                         | {{Spec2('ES5.1')}}         |                                                      |
+| {{SpecName('ES6', '#sec-string.prototype.localecompare', 'String.prototype.localeCompare')}}             | {{Spec2('ES6')}}             |                                                      |
+| {{SpecName('ESDraft', '#sec-string.prototype.localecompare', 'String.prototype.localeCompare')}}         | {{Spec2('ESDraft')}}     |                                                      |
 | {{SpecName('ES Int 1.0', '#sec-13.1.1', 'String.prototype.localeCompare')}}                                     | {{Spec2('ES Int 1.0')}} | Définition des paramètres `locale` et `option`       |
-| {{SpecName('ES Int 2.0', '#sec-13.1.1', 'String.prototype.localeCompare')}}                                     | {{Spec2('ES Int 2.0')}} |                                                      |
-| {{SpecName('ES Int Draft', '#sec-String.prototype.localeCompare', 'String.prototype.localeCompare')}} | {{Spec2('ES Int Draft')}} |                                                      |
+| {{SpecName('ES Int 2.0', '#sec-13.1.1', 'String.prototype.localeCompare')}}                                     | {{Spec2('ES Int 2.0')}} |                                                      |
+| {{SpecName('ES Int Draft', '#sec-String.prototype.localeCompare', 'String.prototype.localeCompare')}} | {{Spec2('ES Int Draft')}} |                                                      |
 
 ## Compatibilité des navigateurs
 

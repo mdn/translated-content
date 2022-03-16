@@ -69,7 +69,7 @@ var myNumber = Math.random();
 
 > **Note :** N'hésitez pas à copier ces lignes dans la console JavaScript de votre navigateur afin de vous familiariser à nouveau avec leur fonctionnalité si vous en ressentez le besoin.
 
-Le langage JavaScript a de nombreuses fonctions intégrées pour vous permettre de faire des choses utiles sans devoir écrire tout le code vous-même. En fait, certains codes que vous appelez quand vous **invoquez** (un mot sophistiqué pour dire lancer ou exécuter) une fonction intégrée du navigateur ne pourraient pas être écrits en JavaScript — la plupart de ces fonctions appellent des parties de code interne du navigateur qui est très majoritairement écrit en langages de bas niveau comme le C++, et non pas en langage web comme JavaScript.
+Le langage JavaScript a de nombreuses fonctions intégrées pour vous permettre de faire des choses utiles sans devoir écrire tout le code vous-même. En fait, certains codes que vous appelez quand vous **invoquez** (un mot sophistiqué pour dire lancer ou exécuter) une fonction intégrée du navigateur ne pourraient pas être écrits en JavaScript — la plupart de ces fonctions appellent des parties de code interne du navigateur qui est très majoritairement écrit en langages de bas niveau comme le C++, et non pas en langage web comme JavaScript.
 
 Gardez à l'esprit que certaines fonctions intégrées du navigateur ne font pas partie du noyau du langage JavaScript — certaines font partie des APIs du navigateur qui sont construites à partir du langage par défaut pour apporter encore plus de fonctionnalités ( consultez cette [section antérieure de notre cours](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript) pour une description plus détaillée ). Nous aborderons l'utilisation des APIs du navigateur plus en détail dans un module ultérieur.
 
@@ -83,7 +83,7 @@ Vous n'aurez pas besoin d'apprendre les rouages des objets structurés du JavaSc
 
 ## Fonctions personnalisées
 
-Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) tiré de l'article [les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) complet), nous avons inclus une fonction personnalisée `draw()`qui ressemblait à ça :
+Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) tiré de l'article [les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) complet), nous avons inclus une fonction personnalisée `draw()`qui ressemblait à ça :
 
 ```js
 function draw() {
@@ -103,7 +103,7 @@ Cette fonction dessine 100 cercles aléatoires dans un élément {{htmlelement("
 draw();
 ```
 
-au lieu de devoir ré-écrire tout le code à chaque fois que nous voulons la répéter. De plus, les fonctions peuvent contenir tout le code qu'il vous plaira — vous pouvez même appeler d'autres fonctions à l'intérieur d'une fonction. Par exemple, la fonction ci-dessus appelle la fonction `random()` trois fois, comme définie par le code suivant :
+au lieu de devoir ré-écrire tout le code à chaque fois que nous voulons la répéter. De plus, les fonctions peuvent contenir tout le code qu'il vous plaira — vous pouvez même appeler d'autres fonctions à l'intérieur d'une fonction. Par exemple, la fonction ci-dessus appelle la fonction `random()` trois fois, comme définie par le code suivant :
 
 ```js
 function random(number) {

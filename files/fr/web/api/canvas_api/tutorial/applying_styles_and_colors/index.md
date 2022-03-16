@@ -267,7 +267,7 @@ La propriété `lineCap` détermine comment les extrêmités de chaque ligne son
 - `round` _(rond)_
   - : Les extrémités sont arrondies.
 - `square` _(carré)_
-  - : Les extrémités sont en angle droit en ajoutant une extension d'une largeur égale à la ligne et une hauteur égale à la moitié de la largeur de la ligne.
+  - : Les extrémités sont en angle droit en ajoutant une extension d'une largeur égale à la ligne et une hauteur égale à la moitié de la largeur de la ligne.
 
 Dans cet exemple, nous avons tracé trois lignes, chacune avec une valeur différente pour la propriété `lineCap`. Nous avons par ailleurs ajouté deux guides pour voir exactement les différences entre les trois lignes. Chacune de ces trois lignes est identique entre les deux traits bleus.
 
@@ -317,9 +317,9 @@ La propriété `lineJoin` détermine comment deux segments (lignes, arcs ou cour
 Il existe trois valeurs possibles pour cette propriété : `round`, `bevel` et `miter`. Par défaut, cette propriété est définie à `miter`. Notez que le paramètre `lineJoin` n'a pas d'effet si les deux segments connectés ont la même direction, parce qu'aucune zone de jointure ne sera ajoutée dans ce cas.
 
 - `round` _(rond)_
-  - : Arrondit les angles des segments en ajoutant un arc de cercle centré à l'extrémité commune des segments connectés. Le rayon de ces angles arrondis est égal à la moitié de la largeur du trait.
+  - : Arrondit les angles des segments en ajoutant un arc de cercle centré à l'extrémité commune des segments connectés. Le rayon de ces angles arrondis est égal à la moitié de la largeur du trait.
 - `bevel` _(biseau)_
-  - : Ajoute un triangle à l'extrémité commune des segments connectés.
+  - : Ajoute un triangle à l'extrémité commune des segments connectés.
 - `miter` _(onglet)_
   - : Les segments connectés sont reliés en prolongeant leurs bords extérieurs pour se connecter en un seul point, avec pour effet de remplir une zone supplémentaire en forme de losange. Ce paramètre est effectué par la propriété miterLimit qui est expliquée ci-dessous.
 

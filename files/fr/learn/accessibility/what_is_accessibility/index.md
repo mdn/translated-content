@@ -139,7 +139,7 @@ D'autre part, si vous travaillez sur un site web de galerie présentant des œuv
 
 Pour montrer que vous vous souciez de l'accessibilité et que vous en avez pensé, publiez sur votre site une déclaration d'accessibilité détaillant votre politique en matière d'accessibilité et les mesures que vous avez prises pour rendre le site accessible. Si quelqu'un se plaint de ce que votre site a un problème d'accessibilité, commencez un dialogue avec elle, faites preuve d'empathie et prenez les mesures qui s'imposent pour tenter de résoudre le problème.
 
-> **Note :** Notre article [Gérer les problèmes courants d'accessibilité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Using_native_keyboard_accessibility) couvre les spécificités d'accessibilité qui doivent être testées plus en détail.
+> **Note :** Notre article [Gérer les problèmes courants d'accessibilité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibilité#Using_native_keyboard_accessibility) couvre les spécificités d'accessibilité qui doivent être testées plus en détail.
 
 Résumer :
 

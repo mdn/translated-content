@@ -91,7 +91,7 @@ Compléter la fonction `result()` :
 5.  Dans le deuxième block `if`, on vérifie que le bouton radio `uk` a été coché. Si c'est le cas, nous voulons convertir les valeurs de poids et de température de l'histoire. Les pounds et les farenheit deviennent des stones et des centigrades. Procédez comme suit :
 
     1.  Cherchez la formule pour convertir les pounds en stones et les fareinheit en centigrades.
-    2.  Dans la ligne qui définit la variable `weight` (poids), remplacez 300 par un calcul qui convertit 300 pounds en stones. Le tout englobé dans un `Math.round()` à la fin duquel vous concatenez `'stone'`.
+    2.  Dans la ligne qui définit la variable `weight` (poids), remplacez 300 par un calcul qui convertit 300 pounds en stones. Le tout englobé dans un `Math.round()` à la fin duquel vous concatenez `'stone'`.
     3.  Dans la ligne qui définit la variable `temperature`, remplacez 94 par un calcul qui convertit 94 fahrenheit en centigrades. Le tout englobé dans un `Math.round()` à la fin duquel vous concatenez `'centigrade'`.
     4.  Juste sous la définition des deux variables, ajoutez deux lignes de remplacement de chaînes supplémentaires qui remplacent '94 farhenheit' par les contenus de la variable `temperature`, et '300 pounds' par les contenus de la variable `weight`.
 

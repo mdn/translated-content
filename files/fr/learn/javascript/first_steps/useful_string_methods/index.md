@@ -51,7 +51,7 @@ let string = 'Ceci est une chaîne';
 
 votre variable devient une instance de l'objet `String`, et par conséquent possède un grand nombre de propriétés et de méthodes associées. Allez sur la page de l'objet {{jsxref("String")}} et regardez la liste sur le côté de la page&nbsp;!
 
-**Avant que votre cervelle ne commence à bouillir, pas de panique !** Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous en utiliserez certaines assez souvent. Nous allons les voir maintenant.
+**Avant que votre cervelle ne commence à bouillir, pas de panique !** Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous en utiliserez certaines assez souvent. Nous allons les voir maintenant.
 
 Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés, ou utiliser la [console de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
 
@@ -254,7 +254,7 @@ La méthode prend deux paramètres — la chaîne que vous voulez remplacer et l
 browserType.replace('moz','van');
 ```
 
-À noter : pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire : `browserType = browserType.replace('moz','van');`.
+À noter&nbsp;: pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire&nbsp;: `browserType = browserType.replace('moz','van');`.
 
 ## Apprendre en pratiquant
 

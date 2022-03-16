@@ -47,11 +47,11 @@ Les propriétés suivantes ont été dépréciées. Si elle est disponible, la m
 - `attributes`
   - : Cette propriété retourne désormais toujours `NULL`.
 - `childNodes` {{deprecated_inline}}
-  - : Cette propriété retourne désormais toujours `un` {{domxref("NodeList")}}  vide.
+  - : Cette propriété retourne désormais toujours `un` {{domxref("NodeList")}} vide.
 - `firstChild` {{deprecated_inline}}
   - : Cette propriété retourne désormais toujours `NULL`.
 - `isId` {{readOnlyInline}}
-  - : Indique si l'attribut est un "attribut ID". Un "attribut ID" étant un attribut dont la valeur devrait être unique dans un document DOM. En HTML DOM, "id" est le seul attribut ID, mais les documents XML peuvent en définir d'autres. Qu'un attribut soit unique ou non est souvent déterminé par  un {{Glossary("DTD")}}  ou une autre description de schéma.
+  - : Indique si l'attribut est un "attribut ID". Un "attribut ID" étant un attribut dont la valeur devrait être unique dans un document DOM. En HTML DOM, "id" est le seul attribut ID, mais les documents XML peuvent en définir d'autres. Qu'un attribut soit unique ou non est souvent déterminé par un {{Glossary("DTD")}} ou une autre description de schéma.
 - `lastChild` {{deprecated_inline}}
   - : Cette propriété retourne désormais toujours `NULL`.
 - `nextSibling`

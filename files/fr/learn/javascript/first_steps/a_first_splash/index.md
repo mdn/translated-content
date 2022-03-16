@@ -280,7 +280,7 @@ Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir 
 
 Les opérateurs en JavaScript nous permettent d'effectuer des tests, de faire des calculs, de joindre des chaînes ensemble et d'autres choses de ce genre.
 
-Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les [outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes « Exemple » exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous :
+Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les [outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
 
 ```html hidden
 <!DOCTYPE html>
@@ -666,6 +666,6 @@ Chaque élément d'une page possède une propriété de `style` , qui contient e
 
 ## C'est fini pour le moment...
 
-Vous voilà parvenu au bout de cet exemple, bravo ! Essayez votre code enfin complété ou [jouez avec notre version finale ici](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Si vous ne parvenez pas à faire fonctionner l'exemple, vérifiez-le par rapport [au code source.](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)
+Vous voilà parvenu au bout de cet exemple, bravo ! Essayez votre code enfin complété ou [jouez avec notre version finale ici](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Si vous ne parvenez pas à faire fonctionner l'exemple, vérifiez-le par rapport [au code source.](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}

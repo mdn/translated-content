@@ -27,7 +27,7 @@ Il y a une erreur avec la façon dont une fonction est appelée . Cela peut êtr
 
 ## Exemple
 
-Parce qu'il n'y a pas d'opérateur "+" pour concaténer la chaîne de caractères, JavaScript s'attend à trouver une parenthèse après "PI : ", qu'il considère comme  l'argument de la fonction `log`.
+Parce qu'il n'y a pas d'opérateur "+" pour concaténer la chaîne de caractères, JavaScript s'attend à trouver une parenthèse après "PI : ", qu'il considère comme l'argument de la fonction `log`.
 
 ```js example-bad
 console.log("PI: " Math.PI);

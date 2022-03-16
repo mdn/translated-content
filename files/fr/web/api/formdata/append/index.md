@@ -33,9 +33,9 @@ formData.append(name, value, filename);
 - `name`
   - : Le nom de la clé dont les données sont contenues dans `value`.
 - `value`
-  - : La valeur du champ clé. Elle peut être une {{domxref("USVString")}} ou un {{domxref("Blob")}} (incluant les sous-classes comme {{domxref("File")}}).
+  - : La valeur du champ clé. Elle peut être une {{domxref("USVString")}} ou un {{domxref("Blob")}} (incluant les sous-classes comme {{domxref("File")}}).
 - `filename` {{optional_inline}}
-  - : Le nom du fichier envoyé au serveur (a {{domxref("USVString")}}), quand un {{domxref("Blob")}} ou un {{domxref("File")}} est passé en second paramètre. Le nom du fichier par défaut pour des objets {{domxref("Blob")}} est "blob". Le nom du fichier par défaut pour des objets {{domxref("File")}} est le nom du fichier de l'objet.
+  - : Le nom du fichier envoyé au serveur (a {{domxref("USVString")}}), quand un {{domxref("Blob")}} ou un {{domxref("File")}} est passé en second paramètre. Le nom du fichier par défaut pour des objets {{domxref("Blob")}} est "blob". Le nom du fichier par défaut pour des objets {{domxref("File")}} est le nom du fichier de l'objet.
 
 > **Note :** Si vous spécifiez un {{domxref("Blob")}} comme donnée rattachée à un objet de type `FormData`, le nom de fichier envoyé au serveur sera dans l'entête "Content-Disposition" mais peut varier selon le navigateur.
 

@@ -45,13 +45,13 @@ Pour commencer, faite une copie locale de [index-finished.html](https://github.c
 
 ## Le projet en bref
 
-Notre jeu des balles est assez sympa, mais maintenant il s'agit de le rendre plus interactif en y ajoutant un viseur contrôlé par l'utilisateur, qui va détruire une balle s'il la touche. Nous voulons aussi tester votre capacité en programmation orientée objet en créant un object `Shape()` dont le viseur et les balles peuvent hériter. Pour terminer, nous voulons créer un compteur qui permet d'afficher combien de balles il nous reste encore à détruire.
+Notre jeu des balles est assez sympa, mais maintenant il s'agit de le rendre plus interactif en y ajoutant un viseur contrôlé par l'utilisateur, qui va détruire une balle s'il la touche. Nous voulons aussi tester votre capacité en programmation orientée objet en créant un object `Shape()` dont le viseur et les balles peuvent hériter. Pour terminer, nous voulons créer un compteur qui permet d'afficher combien de balles il nous reste encore à détruire.
 
 Ce screenshot vous donne une idée du résultat final:
 
 ![](bouncing-evil-circle.png)
 
-Si vous voulez en savoir plus, regardez [l'exemple fini ](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
+Si vous voulez en savoir plus, regardez [l'exemple fini ](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
 
 ## Vos objectifs
 
@@ -61,21 +61,21 @@ Cette section décrit ce que vous aurez à faire.
 
 Pour commencer, modifions le constructeur de l'objet `Ball()` pour qu'il devienne le constructeur de `Shape()` puis créons en un nouveau pour `Ball()`&nbsp;:
 
-1.  Le constructeur `Shape()` devra définir les propriétés `x`, `y`, `velX`, et `velY` de la même manière que le constructeur `Ball()` auparavant, mais sans les propriétés `color` et `size`.
-2.  `Shape()` doit aussi définir une nouvelle propriété `exists`, qui servira à identifier les balles qu'il reste à détruire dans la fenêtre (celles qui n'ont pas encore été détruites). Elle doit retourner un booléen (`true`/`false`).
-3.  Le constructeur `Ball()` doit hériter des propriétés `x`, `y`, `velX`, `velY`, et `exists` du constructeur `Shape()`.
-4.  `Ball()` doit aussi définir les propriétés `color` et `size`, comme à l'origine.
-5.  N'oubliez pas de définir le prototype de `Ball()` et son constructeur de manière approprié.
+1.  Le constructeur `Shape()` devra définir les propriétés `x`, `y`, `velX`, et `velY` de la même manière que le constructeur `Ball()` auparavant, mais sans les propriétés `color` et `size`.
+2.  `Shape()` doit aussi définir une nouvelle propriété `exists`, qui servira à identifier les balles qu'il reste à détruire dans la fenêtre (celles qui n'ont pas encore été détruites). Elle doit retourner un booléen (`true`/`false`).
+3.  Le constructeur `Ball()` doit hériter des propriétés `x`, `y`, `velX`, `velY`, et `exists` du constructeur `Shape()`.
+4.  `Ball()` doit aussi définir les propriétés `color` et `size`, comme à l'origine.
+5.  N'oubliez pas de définir le prototype de `Ball()` et son constructeur de manière approprié.
 
 Les méthodes `draw()`, `update()`, et `collisionDetect()` doivent fonctionnées comme avant, sans être modifiées.
 
-Vous devrez ajouter un nouveau paramètre au constructeur `new Ball() ( ... )` — le paramètre `exists` doit être le 5ème et être égal à `true`.
+Vous devrez ajouter un nouveau paramètre au constructeur `new Ball() ( ... )` — le paramètre `exists` doit être le 5ème et être égal à `true`.
 
 Vous pouvez recharger la page — tout doit fonctionner comme avant, même après les modifications que vous avez effectuées sur les objets.
 
 ### Définition du EvilCircle() (viseur)
 
-Il est temps de vous équipez ! — le `EvilCircle()`! Dans notre jeu, nous allons créer un viseur mais nous allons nous servir de l'objet `Shape()` pour le définir. Vous voudrez certainement en ajouter un (plusieurs) autre plus tard, qu'un autre joueur ou l'ordinateur pourra contrôler. Vous n'irez probablement pas bien loin avec un seul viseur, mais ce sera suffisant pour le moment !
+Il est temps de vous équipez ! — le `EvilCircle()`! Dans notre jeu, nous allons créer un viseur mais nous allons nous servir de l'objet `Shape()` pour le définir. Vous voudrez certainement en ajouter un (plusieurs) autre plus tard, qu'un autre joueur ou l'ordinateur pourra contrôler. Vous n'irez probablement pas bien loin avec un seul viseur, mais ce sera suffisant pour le moment !
 
 Le constructeur du `EvilCircle()` doit hériter des propriétés `x`, `y`, `velX`, `velY`, et `exists` de `Shape()`, mais `velX` et `velY` doivent toujours être égales à 20.
 
@@ -86,7 +86,7 @@ Le constructeur doit aussi définir ses propres propriétés:
 - `color` — `'white'`
 - `size` — `10`
 
-Une fois de plus, souvenez-vous de définir vos propriétés héritées en paramètre du constructeur et de définir le prototype et son constructeur de manière appropriée.
+Une fois de plus, souvenez-vous de définir vos propriétés héritées en paramètre du constructeur et de définir le prototype et son constructeur de manière appropriée.
 
 ### Définir les méthodes du EvilCircle() (viseur)
 

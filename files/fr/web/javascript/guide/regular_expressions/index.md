@@ -651,7 +651,7 @@ Pour qu'une partie de la chaîne de caractère corresponde mais que la correspon
 
 ## Utiliser les expressions rationnelles
 
-Les expresssions régulières sont utilisées avec les méthodes `test` et `exec` de l'objet `RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+Les expresssions régulières sont utilisées avec les méthodes `test` et `exec` de l'objet `RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
 | Méthode                                                  | Description                                                                                                                                                                                        |
 | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

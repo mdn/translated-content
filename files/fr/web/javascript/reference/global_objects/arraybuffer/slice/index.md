@@ -33,7 +33,7 @@ Un nouvel objet `ArrayBuffer`.
 
 ## Description
 
-La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) paramètre `fin`. Si le paramètre `début` ou  `fin` est négatif, il fera référence à l'indice à partir de la fin du tableau et non pas à l'indice à partir du début du tableau.
+La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) paramètre `fin`. Si le paramètre `début` ou `fin` est négatif, il fera référence à l'indice à partir de la fin du tableau et non pas à l'indice à partir du début du tableau.
 
 ## Exemples
 

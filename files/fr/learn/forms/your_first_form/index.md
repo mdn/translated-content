@@ -151,7 +151,7 @@ Nous avons désormais notre formulaire HTML, et si vous le regardez dans votre n
 
 ![](form-no-style.png)
 
-> **Note :** Si vous pensez que vous n'avez pas écrit un code HTML correct, faites la comparaison avec celui de notre exemple terminé — voyez  [first-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form.html) (ou [également directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
+> **Note :** Si vous pensez que vous n'avez pas écrit un code HTML correct, faites la comparaison avec celui de notre exemple terminé — voyez [first-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form.html) (ou [également directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
 
 Les formulaires sont notoirement embêtants à présenter joliment. Apprendre la mise en page ou la décoration des formulaires sort du cadre de cet article, donc pour le moment nous allons simplement ajouter quelques indications au CSS pour lui donner un air convenable.
 
@@ -259,7 +259,7 @@ Pour nommer vos données vous devez utiliser l'attribut `name` pour identifier b
   ...
 ```
 
-Dans notre exemple, le formulaire enverra trois informations nommées respectivement « `user_name` », «&nbsp;`user_email`&nbsp;» et « `user_message` ». Ces informations seront envoyées à l'URL « `/my-handling-form-page` » avec la méthode HTTP POST.
+Dans notre exemple, le formulaire enverra trois informations nommées respectivement «&nbsp;`user_name`&nbsp;», «&nbsp;`user_email`&nbsp;» et «&nbsp;`user_message`&nbsp;». Ces informations seront envoyées à l'URL « `/my-handling-form-page` » avec la méthode HTTP POST.
 
 Du côté du serveur, le script à l'URL « `/my-handling-form-page` » recevra les données sous forme d'une liste de trois éléments clé/valeur intégrés à la requête HTTP. À vous de définir comment ce script va manipuler les données. Chacun des langages serveurs (PHP, Python, Ruby, Java, C#, etc.) a son propre mécanisme pour traiter ces données. Il n'appartient pas à ce guide d'approfondir ce sujet, mais si vous souhaitez en savoir plus, nous avons mis quelques exemples dans l'article [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires).
 

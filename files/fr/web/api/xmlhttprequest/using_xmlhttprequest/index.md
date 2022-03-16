@@ -41,10 +41,10 @@ Il existe plusieurs types [d'attributs de réponse](http://www.w3.org/TR/XMLHttp
 
 Si vous utilisez `XMLHttpRequest` pour obtenir le contenu d'un fichier XML distant, la propriété `responseXML` sera un objet DOM contenant le document XML parsé, qui peut être difficile à manipuler et analyser. Il y a quatre moyens principaux d'analyser ce document XML&nbsp;:
 
-1.  Utiliser [XPath](/en-US/docs/XPath) pour localiser des parties.
-2.  Utiliser [JXON](/en-US/docs/JXON) pour le convertir en Objet structuré JavaScript.
-3.  Manuellement [parser et serializer le XML](/en-US/docs/Parsing_and_serializing_XML) en chaînes de caractères ou en objets.
-4.  Utiliser [XMLSerializer](/en-US/docs/XMLSerializer) pour serializer **le DOM en chaînes ou en fichiers.**
+1.  Utiliser [XPath](/en-US/docs/XPath) pour localiser des parties.
+2.  Utiliser [JXON](/en-US/docs/JXON) pour le convertir en Objet structuré JavaScript.
+3.  Manuellement [parser et serializer le XML](/en-US/docs/Parsing_and_serializing_XML) en chaînes de caractères ou en objets.
+4.  Utiliser [XMLSerializer](/en-US/docs/XMLSerializer) pour serializer **le DOM en chaînes ou en fichiers.**
 5.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ### Analyser et manipuler une propriété `responseText` contenant un document HTML
@@ -53,8 +53,8 @@ Si vous utilisez `XMLHttpRequest` pour obtenir le contenu d'un fichier XML dista
 
 Si vous utilisez `XMLHttpRequest` pour récupérer le contenu d'une page HTML distante, la propriété `responseText` est une chaîne de caractères contenant une "soupe" de tous les tags HTML, qui peut être difficile à manipuler et à analyser. Il y a trois moyens principaux d'analyser cette soupe de HTML :
 
-1.  Utiliser la propriété `XMLHttpRequest.responseXML`.
-2.  Injecter le contenu dans le body d'un [fragment de document](/en-US/docs/Web/API/DocumentFragment) via `fragment.body.innerHTML` et traverser le DOM du fragment.
+1.  Utiliser la propriété `XMLHttpRequest.responseXML`.
+2.  Injecter le contenu dans le body d'un [fragment de document](/en-US/docs/Web/API/DocumentFragment) via `fragment.body.innerHTML` et traverser le DOM du fragment.
 3.  [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) peut être utilisé si vous connaissez à l'avance le contenu du document XML. Vous pouvez supprimer les sauts de ligne si vous utilisez `RegExp` en prenant en compte ces sauts. Toutefois, cette méthode est un «&nbsp;dernier recours&nbsp;», car si le code XML change légèrement, la méthode échouera probablement.
 
 ## Gérer les données binaires

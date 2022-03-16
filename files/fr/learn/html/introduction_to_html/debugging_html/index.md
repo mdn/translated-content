@@ -75,8 +75,8 @@ HTML ne craint pas les erreurs de syntaxe, car les navigateurs l'analysent de ma
 Voici le moment venu d'étudier le caractère permissif du code HTML.
 
 1.  Primo, télécharchez notre démo [debug-example](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) et enregistrez‑le localement. Cette démo est délibérement écrite avec des erreurs pour que nous puissions les examiner (le balisage HTML est dit **malformé**, par opposition à **bien-formé**).
-2.  Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci :![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](fr-html-errone.png)
-3.  Constatons que ce n'est pas terrible ; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément `body` est affiché) :
+2.  Ensuite, ouvrez‑le dans un navigateur. Vous verrez quelque chose comme ceci&nbsp;:![Un simple document HTML intitulé « Exemples de HTML à déboguer » et quelques informations sur les erreurs HTML courantes, telles que les éléments non fermés ou mal imbriqués et des attributs non fermés. ](fr-html-errone.png)
+3.  Constatons que ce n'est pas terrible&nbsp;; examinons le code source pour voir ce que nous pouvons en faire (seul le contenu de l'élément `body` est affiché)&nbsp;:
 
             <h1>Exemple de HTML à déboguer</h1>
 

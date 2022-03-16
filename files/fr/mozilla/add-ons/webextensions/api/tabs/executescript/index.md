@@ -58,7 +58,7 @@ var executing = browser.tabs.executeScript(
     - `allFrames` {{optional_inline}}
       - : `boolean`. Si `true`, le code sera injecté dans toutes les cadres de la page courante. Si `true` et `frameId` est défini, alors il y aura une erreur, frameId et allFrames sont mutuellement exclusifs. Si c'est `false`, le code n'est injecté que dans le cadre supérieur. La valeur par défaut est `false`.
     - `code` {{optional_inline}}
-      - : `string`. Code à injecter, sous la forme d’une chaine de texte. **Attention :** n’utilisez pas cette propriété pour interpoler des données non sûres dans JavaScript, car cela pourrait introduire une faille de sécurité.
+      - : `string`. Code à injecter, sous la forme d’une chaine de texte. **Attention :** n’utilisez pas cette propriété pour interpoler des données non sûres dans JavaScript, car cela pourrait introduire une faille de sécurité.
     - `file` {{optional_inline}}
       - : `string`. Chemin d’accès à un fichier contenant le code à injecter. Dans Firefox, les URL relatives ne commençant pas à la racine de l'extension sont résolues par rapport à l'URL de la page en cours. Dans Chrome, ces URL sont résolues par rapport à l’URL de base de l’extension. Pour travailler avec plusieurs navigateurs, vous pouvez spécifier le chemin comme une URL relative, en commençant à la racine de l’extension, comme ceci : `"/path/to/script.js"`.
     - `frameId` {{optional_inline}}

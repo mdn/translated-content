@@ -8,7 +8,7 @@ original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR
 
 {{IncludeSubnav("/fr/docs/Jeux")}}
 
-Dans ce tutoriel, nous allons passer par le processus de construction d'un jeu mobile HTML5 qui utilise les API  [Device Orientation](/fr/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes)  et [Vibration](/fr/docs/Web/API/Vibration_API)   pour améliorer le "gameplay" et est construit avec le "framework" [Phaser](http://phaser.io/). La connaissance JavaScript de base est recommandée pour tirer le meilleur parti de ce tutoriel.
+Dans ce tutoriel, nous allons passer par le processus de construction d'un jeu mobile HTML5 qui utilise les API [Device Orientation](/fr/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) et [Vibration](/fr/docs/Web/API/Vibration_API) pour améliorer le "gameplay" et est construit avec le "framework" [Phaser](http://phaser.io/). La connaissance JavaScript de base est recommandée pour tirer le meilleur parti de ce tutoriel.
 
 ## Exemple de jeu
 
@@ -18,7 +18,7 @@ A la fin de ce tutoriel, vous aurez une démo entièrement fonctionnelle du jeu 
 
 ## Le framework Phaser
 
-[Phaser](http://phaser.io/) est un framework pour créer des jeux mobiles et PC en utilisant les technologies HTML5. Malgré son manque de maturité, la communauté est assez active, et il évolue rapidement.  Les sources sont [sur GitHub](https://github.com/photonstorm/phaser), lisez y la [documentation](http://docs.phaser.io/) de base, jetez un œil aux [exemples](http://examples.phaser.io/). Le framework Phaser offre un ensemble d'outils qui permettent d'accélérer le développement et aident à mettre en oeuvre les tâches courantes nécessaires au développement d'un  jeu.
+[Phaser](http://phaser.io/) est un framework pour créer des jeux mobiles et PC en utilisant les technologies HTML5. Malgré son manque de maturité, la communauté est assez active, et il évolue rapidement. Les sources sont [sur GitHub](https://github.com/photonstorm/phaser), lisez y la [documentation](http://docs.phaser.io/) de base, jetez un œil aux [exemples](http://examples.phaser.io/). Le framework Phaser offre un ensemble d'outils qui permettent d'accélérer le développement et aident à mettre en oeuvre les tâches courantes nécessaires au développement d'un jeu.
 
 ## Mise en place du projet
 
@@ -92,7 +92,7 @@ La première valeur est le nom de l'état et la seconde est l'objet que nous vou
 
 ## Gestion des états du jeu
 
-Les états du jeu dans Phaser sont différentes phases du jeu. Dans notre cas, ils sont chargés depuis des fichiers Javascript pour mieux les maintenir par la suite. Dans ce jeu nous avons les états : `Boot (démarrage)`, `Preloader (préchargement)`, `MainMenu (menu principal)`, `Howto` _(comment jouer)_ et `Game (jeu)`. `Boot` s'occupe d'initialiser quelques paramètres, `Preloader` charge tous les graphismes et les sons, `MainMenu` est le menu avec le bouton start, `Howto` affiche les instructions "comment jouer" et `Game`, est l'état qui permet de  jouer. Passons rapidement au contenu de ces états.
+Les états du jeu dans Phaser sont différentes phases du jeu. Dans notre cas, ils sont chargés depuis des fichiers Javascript pour mieux les maintenir par la suite. Dans ce jeu nous avons les états : `Boot (démarrage)`, `Preloader (préchargement)`, `MainMenu (menu principal)`, `Howto` _(comment jouer)_ et `Game (jeu)`. `Boot` s'occupe d'initialiser quelques paramètres, `Preloader` charge tous les graphismes et les sons, `MainMenu` est le menu avec le bouton start, `Howto` affiche les instructions "comment jouer" et `Game`, est l'état qui permet de jouer. Passons rapidement au contenu de ces états.
 
 ### Boot.js _(démarrage)_
 

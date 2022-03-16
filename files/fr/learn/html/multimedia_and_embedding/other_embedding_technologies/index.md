@@ -268,7 +268,7 @@ L'utilisation de HTTPS nécessite un certificat de sécurité, ce qui peut être
 
 #### Toujours utiliser l'attribut  `sandbox`
 
-Pour minimiser la possibilité que des attaquants commettent des actions néfastes  sur votre site Web, vous deviez donner au contenu intégré uniquement les permissions nécessaires pour qu'il  fasse son travail. Bien sûr, cela est aussi valable pour votre propre contenu. Le conteneur de code, dans lequel il peut être utilisé de manière appropriée — ou pour des tests — sans pouvoir causer aucun dommage (accidentel ou malveillant) au reste de la base du code s'appelle un [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)) (_bac à sable_).
+Pour minimiser la possibilité que des attaquants commettent des actions néfastes sur votre site Web, vous deviez donner au contenu intégré uniquement les permissions nécessaires pour qu'il fasse son travail. Bien sûr, cela est aussi valable pour votre propre contenu. Le conteneur de code, dans lequel il peut être utilisé de manière appropriée — ou pour des tests — sans pouvoir causer aucun dommage (accidentel ou malveillant) au reste de la base du code s'appelle un [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)) (_bac à sable_).
 
 Un contenu en dehors du «&nbsp;bac à sable&nbsp;» peut faire beaucoup trop de choses (exécuter du JavaScript, soumettre des formulaires, des fenêtres «&nbsp;popup&nbsp;», etc.). Par défaut, vous devez imposer toute restriction disponible avec un attribut `sandbox` sans paramètres, comme montré dans notre exemple précédent.
 

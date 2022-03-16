@@ -190,7 +190,7 @@ Tableaux pour la présentation des données tabulées.
 
 Vous pouvez voir un bon exemple simple de  [table-css.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/table-css.html) et ([en direct](https://mdn.github.io/learning-area/accessibility/css/table-css.html)).
 
-En appliquant les propriétés du module CSS des tableaux, vous pourrez adapter les tables HTML à votre design avec une apparence pas trop affreuse. Il est judicieux de vous assurer que les en-têtes de table se démarquent (normalement en gras), et de zébrer les lignes via le pseudo-sélecteur `:nth-child(n)` pour faciliter la lecture.
+En appliquant les propriétés du module CSS des tableaux, vous pourrez adapter les tables HTML à votre design avec une apparence pas trop affreuse. Il est judicieux de vous assurer que les en-têtes de table se démarquent (normalement en gras), et de zébrer les lignes via le pseudo-sélecteur `:nth-child(n)` pour faciliter la lecture.
 
 ### Couleur et contraste de couleur
 
@@ -293,7 +293,7 @@ function validate(e) {
 
 La validation du formulaire réel serait beaucoup plus complexe que cela : vous voudriez vérifier que le nom saisi ressemble réellement à un nom, que l’âge entré est en réalité un nombre et qu’il est réaliste (par exemple, pas un nombre négatif, ni à quatre chiffres). Ici, nous venons d'implémenter la vérification simple qu'une valeur a été renseignée dans chaque champ de saisie (`if(testItem.input.value === '')`).
 
-Une fois la validation effectuée, si les tests réussissent, le formulaire est soumis. S'il y a des erreurs  (`if(errorList.innerHTML !== '')`) nous arrêtons la soumission du formulaire ( à l'aide de [event.preventDefault()](/fr/docs/Web/API/Event/preventDefault)), et affichons tous les messages d'erreur créés (voir ci-dessous). Ce mécanisme signifie que les erreurs ne seront affichées que s’il y a des erreurs, ce qui est meilleur pour la facilité d’utilisation.
+Une fois la validation effectuée, si les tests réussissent, le formulaire est soumis. S'il y a des erreurs (`if(errorList.innerHTML !== '')`) nous arrêtons la soumission du formulaire ( à l'aide de [event.preventDefault()](/fr/docs/Web/API/Event/preventDefault)), et affichons tous les messages d'erreur créés (voir ci-dessous). Ce mécanisme signifie que les erreurs ne seront affichées que s’il y a des erreurs, ce qui est meilleur pour la facilité d’utilisation.
 
 Pour chaque entrée pour laquelle aucune valeur n'a été renseignée lors de la soumission du formulaire, nous créons un élément de liste avec un lien et l'insérons dans la liste `errorList`.
 

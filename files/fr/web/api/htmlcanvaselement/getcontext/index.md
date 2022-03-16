@@ -54,7 +54,7 @@ La méthode **`HTMLCanvasElement.getContext()`** retourne un contexte de dessin 
     - **`antialias`**&nbsp;: booléen indiquant si un anti-aliasing doit être effectué ou non.
     - **`premultipliedAlpha`**&nbsp;: booléen indiquant que le composeur de page supposera que le tampon de dessin contient des couleurs avec alpha pré-multiplié.
     - **`preserveDrawingBuffer`**&nbsp;: si la valeur est `true`, les tampons ne seront pas effacés et conserveront leurs valeurs jusqu'à ce qu'elles soient effacées ou réécrites par l'auteur.
-    - **`failIfMajorPerformanceCaveat`** : booléen indiquant qu'un contexte sera créé si la performance du système est faible.
+    - **`failIfMajorPerformanceCaveat`** : booléen indiquant qu'un contexte sera créé si la performance du système est faible.
 
 ### Valeur retournée :
 

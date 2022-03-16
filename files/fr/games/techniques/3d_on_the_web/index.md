@@ -55,7 +55,7 @@ La bibliothèque 3D JavaScript la plus populaire est [Three.js](http://threejs.o
 
 ### Construction d'une démo de base avec A-Frame
 
-A-Frame est un "framework" web pour construire des expériences 3D et de la réalité virtuelle. Sous le capot, il s'agit d'un "framework" three.js avec un modèle déclaratif entité-composant, ce qui signifie que nous pouvons construire des scènes avec seulement du HTML. Voir la page [Construction d'une démo de base avec A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) pour le processus étape par étape de création de la démo .
+A-Frame est un "framework" web pour construire des expériences 3D et de la réalité virtuelle. Sous le capot, il s'agit d'un "framework" three.js avec un modèle déclaratif entité-composant, ce qui signifie que nous pouvons construire des scènes avec seulement du HTML. Voir la page [Construction d'une démo de base avec A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) pour le processus étape par étape de création de la démo .
 
 ### Construction d'une démo de base avec Babylon.js
 

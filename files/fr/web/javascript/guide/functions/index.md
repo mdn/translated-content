@@ -488,7 +488,7 @@ var créerAnimal = function(nom) {  // La fonction externe définit une variable
 }
 ```
 
-L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
+L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
 
 ## Utiliser l'objet `arguments`
 

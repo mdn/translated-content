@@ -62,7 +62,7 @@ L'objet passé à la fonction, éventuellement modifié.
 
 ## Description
 
-`Object.defineProperties` permet principalement de définir toutes les propriétés  de l'objet `obj` correspondant aux propriétés énumérable de `props`.
+`Object.defineProperties` permet principalement de définir toutes les propriétés de l'objet `obj` correspondant aux propriétés énumérable de `props`.
 
 ## Exemples
 

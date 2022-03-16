@@ -72,7 +72,7 @@ Les étapes concrètes nécessaires pour délivrer l'en-tête HPKP dépendent du
 
 > **Note :** Ces exemples utilisent un a max-age de deux mois et incluent aussi tous les sous-domaines. Il est conseillé de vérifier que cela convient à votre serveur.
 
-Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant les valeurs en pointillé des lignes `pin-sha256="..."`&nbsp;:
+Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant les valeurs en pointillé des lignes `pin-sha256="..."`&nbsp;:
 
 #### Apache
 

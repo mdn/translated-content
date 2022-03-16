@@ -45,4 +45,4 @@ Ce module contient les articles suivants, qui vous présenteront les bases théo
 ## Voir aussi
 
 - Literacy [Web intermédiaire 1&nbsp;: Introduction au CSS](/fr/docs/)
-  - : Un excellent cours de base de la fondation Mozilla qui explore et teste de nombreuses compétences évoquées dans le module _Introduction à CSS_. Approfondissements à propos de l'application de styles sur les éléments HTML d'une page Web, les sélecteurs CSS, les attributs et valeurs.P
+  - : Un excellent cours de base de la fondation Mozilla qui explore et teste de nombreuses compétences évoquées dans le module _Introduction à CSS_. Approfondissements à propos de l'application de styles sur les éléments HTML d'une page Web, les sélecteurs CSS, les attributs et valeurs.P

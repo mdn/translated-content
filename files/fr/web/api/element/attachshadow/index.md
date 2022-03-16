@@ -19,7 +19,7 @@ La méthode **`Element.attachShadow()`** attache un arbre Shadow DOM à un élé
 
     - `mode`&nbsp;: une chaîne de caractères spécifiant le *mode d'encapsulation* de l'arbre du Shadow DOM, parmi les options suivantes&nbsp;:
       - `open`&nbsp;: spécifie une encapsulation ouverte.
-      - `closed` : spécifie une encapsulation fermée.
+      - `closed`&nbsp;: spécifie une encapsulation fermée.
 
 ### Retour
 

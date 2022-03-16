@@ -114,7 +114,7 @@ La version de révision ajoutée à la ressource révisée n'a pas à être sous
 
 ## Validation de cache
 
-La revalidation est ciblée quand l'utilisateur clique le bouton de rechargement (actualisation). Elle est aussi ciblée pendant une navigation normale si la réponse en cache inclus l'en-tête  "`Cache-control: must-revalidate`". Un autre facteur est la préférence des validations de cache, paramétrées dans le panneau des préférences dans `Advanced->Cache`. Il y a une option pour forcer la validation chaque fois qu'un document est chargé.
+La revalidation est ciblée quand l'utilisateur clique le bouton de rechargement (actualisation). Elle est aussi ciblée pendant une navigation normale si la réponse en cache inclus l'en-tête "`Cache-control: must-revalidate`". Un autre facteur est la préférence des validations de cache, paramétrées dans le panneau des préférences dans `Advanced->Cache`. Il y a une option pour forcer la validation chaque fois qu'un document est chargé.
 
 Quand on arrive au moment d'expiration d'un document en cache, il est soit validé soit redemandé. La validation ne peut intervenir que si le serveur a fourni soit un validateur fort _(strong validator_) soit un faible (_weak validator_).
 

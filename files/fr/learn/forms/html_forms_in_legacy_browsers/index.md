@@ -200,7 +200,7 @@ Modernizr.load({
 
 L'équipe de Modernizr fait une maintenance opportune de grande liste de «&nbsp;[polyfills »](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills). Prenez celui dont vous avez besoin.
 
-> **Note :** Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de [la documentation de Modernizr](http://modernizr.com/docs/).
+> **Note :** Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de [la documentation de Modernizr](http://modernizr.com/docs/).
 
 ### Faites attention aux performances
 

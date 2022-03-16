@@ -162,7 +162,7 @@ Une expression de fonction fléchée possède une syntaxe plus courte et est li�
     param => expression
 
 - `param`
-  - : Le nom d'un argument. S'il n'y a pas d'arguments, cela doit être indiqué par `()`.  S'il y a un seul argument, les parenthèses ne sont pas obligatoires (par exemple :  `toto => 1`).
+  - : Le nom d'un argument. S'il n'y a pas d'arguments, cela doit être indiqué par `()`. S'il y a un seul argument, les parenthèses ne sont pas obligatoires (par exemple&nbsp;: `toto => 1`).
 - `instructions` ou `expression`
   - : S'il y a plusieurs instructions, elles doivent être encadrées par des accolades. Une expression unique ne doit pas obligatoirement être entourée d'accolades. L'expression est également la valeur de retour implicite de la fonction.
 
@@ -398,7 +398,7 @@ function externe() {
 resultat = externe()(20); // renvoie 20 et non pas 10
 ```
 
-Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x` de la fonction `interne` et la variable `x` de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le  `x` de la fonction interne l'emporte sur le `x` de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
+Le conflit de nom apparaît avec l'instruction `return x` et vient de la dénomination commune de l'argument `x` de la fonction `interne` et la variable `x` de la fonction `externe`. La chaîne de portée est, pour cet exemple : {`interne`, `externe`, objet globalt}. On voit alors que le `x` de la fonction interne l'emporte sur le `x` de la fonction externe. 20 (`x` de la fonction `interne`) est donc renvoyé plutôt que 10 (`x` de la fonction `externe`).
 
 ## Définition des méthodes
 

@@ -172,7 +172,7 @@ Chaque approche a ses avantages, ce que nous ne développerons pas pour l'instan
 
 Vous pouvez aussi rencontrer les termes de code **côté serveur** et **côté client**, notamment dans le contexte du développement web. Le code **côté client** est du code exécuté sur l'ordinateur de l'utilisateur : quand une page web est vue, le code côté client de la page est téléchargé, puis exécuté et affiché par le navigateur. Dans ce module JavaScript, nous parlons explicitement de **JavaScript côté client**.
 
-Le code **côté serveur** quant à lui est exécuté sur le serveur, puis ses résultats sont téléchargés et affichés par le navigateur. Citons comme langages web côté serveur populaires le PHP, Python, Ruby, et ASP.NET. Et JavaScript ! JavaScript peut aussi s'utiliser comme un langage **côté serveur**, par exemple dans le populaire environnement Node.js — vous pouvez en apprendre plus sur le JavaScript côté serveur dans notre article [Programmation de Sites Web côté serveur](/fr/docs/Learn/Server-side).
+Le code **côté serveur** quant à lui est exécuté sur le serveur, puis ses résultats sont téléchargés et affichés par le navigateur. Citons comme langages web côté serveur populaires le PHP, Python, Ruby, et ASP.NET. Et JavaScript&nbsp;! JavaScript peut aussi s'utiliser comme un langage **côté serveur**, par exemple dans le populaire environnement Node.js — vous pouvez en apprendre plus sur le JavaScript côté serveur dans notre article [Programmation de Sites Web côté serveur](/fr/docs/Learn/Server-side).
 
 ### Code dynamique contre code statique
 
