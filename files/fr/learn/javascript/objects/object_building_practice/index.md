@@ -161,7 +161,7 @@ Vous pouvez déjà commencer à tester votre objet.
 
 ### Mettre à jour les données de la balle
 
-Nous pouvons dessiner la balle dans n'importe quelle position, mais actuellement pour commencer à la bouger, nous aurons besoin d'une sorte de fonction de mise à jour. Insérez donc le code suivant à la fin de votre fichier JavaScript pour ajouter une méthode `update()` au `prototype` de `Ball()`:
+Nous pouvons dessiner la balle dans n'importe quelle position, mais actuellement pour commencer à la bouger, nous aurons besoin d'une sorte de fonction de mise à jour. Insérez donc le code suivant à la fin de votre fichier JavaScript pour ajouter une méthode `update()` au `prototype` de `Ball()`&nbsp;:
 
 ```js
 Ball.prototype.update = function() {
