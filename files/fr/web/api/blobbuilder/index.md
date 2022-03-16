@@ -54,7 +54,7 @@ Renvoie l'objet [`Blob`](/fr/docs/Web/API/Blob) qui a été construit avec les d
 
 ```js
 Blob getBlob(
-  in DOMString contentType {{optional_inline}}
+  in DOMString contentType // facultatif
 );
 ```
 
@@ -95,6 +95,6 @@ Un objet [`File`](/fr/docs/Web/API/File).
 
 ## Voir aussi
 
-- [La spécification de `BlobBuilder` au sein de l'API File](https://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder)
+- [La spécification de `BlobBuilder` au sein de l'API File (en anglais)](https://dev.w3.org/2009/dap/file-system/file-writer.html#idl-def-BlobBuilder)
 - [`Blob`](/fr/docs/Web/API/Blob)
 - [`File`](/fr/docs/Web/API/File)
