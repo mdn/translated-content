@@ -45,13 +45,13 @@ Pour commencer, faite une copie locale de [index-finished.html](https://github.
 
 ## Le projet en bref
 
-Notre jeu des balles est assez sympa, mais maintenant il s'agit de le rendre plus interactif en y ajoutant un viseur contrôlé par l'utilisateur, qui va détruire une balle s'il l'a touche. Nous voulons aussi tester votre capacité en programmation orientée objet en créant un object `Shape()` dont le viseur et les balles peuvent hériter. Pour terminer, nous voulons créer un compteur qui permet d'afficher combien de balles il nous reste encore à détruire.
+Notre jeu des balles est assez sympa, mais maintenant il s'agit de le rendre plus interactif en y ajoutant un viseur contrôlé par l'utilisateur, qui va détruire une balle s'il la touche. Nous voulons aussi tester votre capacité en programmation orientée objet en créant un object `Shape()` dont le viseur et les balles peuvent hériter. Pour terminer, nous voulons créer un compteur qui permet d'afficher combien de balles il nous reste encore à détruire.
 
 Ce screenshot vous donne une idée du résultat final:
 
 ![](bouncing-evil-circle.png)
 
-Si vous voulez en savoir plus, regardez l'exemple fini [finished example](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !)
+Si vous voulez en savoir plus, regardez [l'exemple fini ](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (n'en profitez pas pour récupérer le code source !).
 
 ## Vos objectifs
 
