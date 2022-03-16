@@ -1,22 +1,14 @@
 ---
-title: 'CSP: form-action'
+title: 'CSP : form-action'
 slug: Web/HTTP/Headers/Content-Security-Policy/form-action
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Security
-  - Sécurité
-  - form
-  - form-action
 translation_of: Web/HTTP/Headers/Content-Security-Policy/form-action
+browser-compat: http.headers.csp.Content-Security-Policy.form-action
 ---
 {{HTTPSidebar}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** restreint les URL pouvant être utilisées comme cibles de soumissions de formulaires depuis un contexte donné.
+La directive [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`form-action`** restreint les URL pouvant être utilisées comme cibles d'envoi de formulaire depuis un contexte donné.
 
-> **Attention :** La question de savoir si `form-action` doit bloquer les redirections après une soumission de formulaire est encore [débattue](https://github.com/w3c/webappsec-csp/issues/8) et les implantations des navigateurs sur cet aspect sont incohérentes (par exemple Firefox 57 ne les bloque pas, contrairement à Chrome 63).
+> **Attention :** La question de savoir si `form-action` doit bloquer les redirections après une soumission de formulaire est encore [débattue](https://github.com/w3c/webappsec-csp/issues/8) et les implémentations des navigateurs sur cet aspect sont hétérogènes (par exemple Firefox 57 ne les bloque pas, contrairement à Chrome 63).
 
 <table class="properties">
   <tbody>
@@ -26,58 +18,62 @@ La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action
     </tr>
     <tr>
       <th scope="row">Type de directive</th>
-      <td>{{Glossary("Navigation directive")}}</td>
+      <td><a href="/fr/docs/Glossary/Navigation_directive">Directive de navigation</a></td>
     </tr>
     <tr>
-      <th scope="row">{{CSP("default-src")}} par défaut</th>
-      <td>Non, ne pas la définir autorise toutes les adresses.</td>
+      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <td>Non, ne pas définir cette directive autorise toutes les adresses.</td>
     </tr>
   </tbody>
 </table>
 
 ## Syntaxe
 
-Une ou plusieurs sources peuvent être utilisées pour cette directive :
+Une ou plusieurs sources peuvent être utilisées pour cette directive&nbsp;:
 
-    Content-Security-Policy: form-action <source>;
-    Content-Security-Policy: form-action <source> <source>;
+```http
+Content-Security-Policy: form-action <source>;
+Content-Security-Policy: form-action <source> <source>;
+```
 
 ### Sources
 
-{{page("fr/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#directives_associées)).
 
 ## Exemples
 
-### Configuration par balise \<meta>
+### Configuration avec la balise \<meta>
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="form-action 'none'">
 ```
 
-### Configuration par Apache
+### Configuration avec Apache
 
-```bash
+```html
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "form-action 'none';"
 </IfModule>
 ```
 
-### Configuration par Nginx
+### Configuration avec Nginx
 
-```bash
+```
 add_header Content-Security-Policy "form-action 'none';"
 ```
 
 ### Cas de violation
 
-Utiliser un élément {{HTMLElement("form")}} avec un attribut `action` défini à un script embarqué JavaScript résultera en une violation de CSP :
+Utiliser un élément [`<form>`](/fr/docs/Web/HTML/Element/Form) avec un attribut `action` contenant un script JavaScript résultera dans ce cas en une violation de CSP&nbsp;:
 
 ```html example-bad
 <meta http-equiv="Content-Security-Policy" content="form-action 'none'">
 
-<form action="javascript:alert('Foo')" id="form1" method="post">
-  <input type="text" name="fieldName" value="fieldValue">
-  <input type="submit" id="submit" value="submit">
+<form action="javascript:console.log('toto')" id="form1" method="post">
+  <input type="text" name="nomChamp" value="valeurChamp">
+  <input type="submit" id="submit" value="Envoyer">
 </form>
 
 // Error: Refused to send form data because it violates the following
@@ -86,16 +82,13 @@ Utiliser un élément {{HTMLElement("form")}} avec un attribut `action` défini 
 
 ## Spécifications
 
-| Spécification                                                                        | Statut                       | Commentaire          |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-form-action", "form-action")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-form-action", "form-action")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.form-action")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{HTTPheader("Content-Security-Policy")}}
-- {{HTMLElement("form")}}
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [`<form>`](/fr/docs/Web/HTML/Element/Form)
