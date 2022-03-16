@@ -1,27 +1,43 @@
 ---
-title: HTMLTableElement.createTFoot
+title: HTMLTableElement.createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - メソッド
+  - NeedsSpecTable
+  - リファレンス
+browser-compat: api.HTMLTableElement.createTFoot
 translation_of: Web/API/HTMLTableElement/createTFoot
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p><b>createTFoot</b> は、テーブル内に新たに {{htmlelement("tfoot")}} 要素を生成します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><i>HTMLTableElement</i> = table.createTFoot()</pre>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js">var mytable = document.getElementsByClassName("mytable")[0];
+{{APIRef("HTML DOM")}}
 
-var myfoot = mytable.createTFoot();
+**`createTFoot()`** は {{domxref("HTMLTableElement")}} オブジェクトのメソッドで、この {{HtmlElement("table")}} に関連付けられた {{HTMLElement("tfoot")}} 要素を返します。表内にフッターが存在しない場合、このメソッドはそれを作成して返します。
 
-//チェック用コード: myfoot == mytable.tFoot</pre>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>既にテーブル内に <code>tfoot</code> 要素が存在した場合、このメソッドはその <code>tfoot</code> 要素を返します。</p>
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-8453710">createTFoot</a></li>
-</ul>
+> **Note:** フッターが存在しない場合、 `createTFoot()` は新しいフッターを表に直接挿入します。 {{domxref("Document.createElement()")}} を使用して新しい `<tfoot>` 要素を作成する場合とは異なり、フッターを別途追加する必要はありません。
+
+## 構文
+
+```js
+table.createTFoot();
+```
+
+### 返値
+
+{{domxref("HTMLTableSectionElement")}}
+
+## 例
+
+```js
+let myfoot = mytable.createTFoot();
+// myfoot == mytable.tFoot は真になります
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
