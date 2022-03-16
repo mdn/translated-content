@@ -1,21 +1,56 @@
 ---
-title: HTMLTableElement.deleteTFoot
+title: HTMLTableElement.deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - メソッド
+  - NeedsSpecTable
+  - リファレンス
+browser-compat: api.HTMLTableElement.deleteTFoot
 translation_of: Web/API/HTMLTableElement/deleteTFoot
 ---
-<div>
- {{ ApiRef }}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p><b>deleteTFoot</b> は、テーブル内の {{htmlelement("tfoot")}} 要素を削除します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><i>HTMLTableElement</i>.deleteTFoot()</pre>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js;gutter:false;">mytable.deleteTFoot();</pre>
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-78363258">deleteTFoot</a></li>
-</ul>
+{{APIRef("HTML DOM")}}
+
+**`HTMLTableElement.deleteTFoot()`** は、 {{HTMLElement("tfoot")}} 要素をこの {{HtmlElement("table")}} から取り除きます。
+
+## 構文
+
+```js
+HTMLTableElement.deleteTFoot();
+```
+
+## 例
+
+この例は、 JavaScript を使用して表のフッターを削除します。
+
+### HTML
+
+```html
+<table>
+  <thead><th>名前</th><th>スコア</th></thead>
+  <tr><td>Bob</td><td>541</td></tr>
+  <tr><td>Jim</td><td>225</td></tr>
+  <tfoot><th>平均</th><td>383</td></tfoot>
+</table>
+```
+
+### JavaScript
+
+```js
+let table = document.querySelector('table');
+table.deleteTFoot();
+```
+
+### 結果
+
+{{EmbedLiveSample("Example")}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
