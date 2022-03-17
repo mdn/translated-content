@@ -141,7 +141,7 @@
 | source code | 原始碼 | 源代碼 |
 | programming | 程式設計／程設 | 編程 |
 | config/configuration | 組態 | 配置 |
-| (browser) extension | 套件／擴充功能 | 插件 |
+| (browser) extension | 套件／擴充功能 | 扩展 |
 | plugin | 外掛 | 插件 |
 | (file) extension | 副檔名 | 擴展名 |
 | array | 陣列 | 數組 |
