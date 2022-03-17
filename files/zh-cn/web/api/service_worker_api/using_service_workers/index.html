@@ -177,7 +177,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 <ol>
  <li>外面的代码块做了一个特性检查，在注册之前确保 service worker 是支持的。</li>
  <li>接着，我们使用 {{domxref("ServiceWorkerContainer.register()") }} 函数来注册站点的 service worker，service worker 只是一个驻留在我们的 app 内的一个 JavaScript 文件 (注意，这个文件的url 是相对于 origin， 而不是相对于引用它的那个 JS 文件)。</li>
- <li> <code>scope</code> 参数是选填的，可以被用来指定你想让 service worker 控制的内容的子目录。在这个例子例，我们指定了 <code>'/sw-test/'</code>，表示 app 的 origin 下的所有内容。如果你留空的话，默认值也是这个值， 我们在指定只是作为例子。</li>
+ <li> <code>scope</code> 参数是选填的，可以被用来指定你想让 service worker 控制的内容的子目录。在这个例子里，我们指定了 <code>'/sw-test/'</code>，表示 app 的 origin 下的所有内容。如果你留空的话，默认值也是这个值， 我们在指定只是作为例子。</li>
  <li><code>.then()</code> 函数链式调用我们的 promise，当 promise resolve 的时候，里面的代码就会执行。</li>
  <li>最后面我们链了一个 <code>.catch()</code> 函数，当 promise rejected 才会执行。</li>
 </ol>
