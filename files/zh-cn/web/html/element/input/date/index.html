@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/input/date
 
 <p>日期类{{htmlelement("input")}}元素会创建一个让用户输入一个日期的输入区域，可以使用自动验证内容的文本框，也可以使用特殊的日期选择器界面。结果值包括年份，月份和日期，但不包括时间。<a href="/en-US/docs/Web/HTML/Element/input/time">time</a> 和 <a href="/en-US/docs/Web/HTML/Element/input/datetime-local">datetime-local</a>输入类支持 time 和 date/time 输入。</p>
 
-<p>通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，具体细节请参阅{{anch("Browser compatibility")}}（浏览器兼容性）。在不支持的浏览器当中，控件因此会被优雅的降级为普通的<a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a>输入框。</p>
+<p>通常来说控件的 UI 界面因浏览器的不同而有变化，到目前为止此控件还不被所有浏览器支持，具体细节请参阅<a href="#浏览器兼容性">浏览器兼容性</a>。在不支持的浏览器当中，控件因此会被优雅的降级为普通的<a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a>输入框。</p>
 
 <div id="Basic_example">
 <pre class="brush: html">&lt;input id="date" type="date"&gt;</pre>
@@ -73,7 +73,7 @@ dateControl.value = '2017-06-01';</pre>
 
 <p>日期控件，一开始听起来可能觉得很方便。它们不仅提供了一个简单的日期选择 UI 界面，还规范了发往后台的数据格式，无论用户在什么区域。但是，由于浏览器支持的限制，&lt;input type="date"&gt; 仍然存在一些问题。</p>
 
-<p>我们将探寻一些关于 &lt;input type="date"&gt; 基础的和更复杂的的用法，然后就以后减轻浏览器支持问题提供建议（请参阅{{anch("Handling browser support")}}）。</p>
+<p>我们将探寻一些关于 &lt;input type="date"&gt; 基础的和更复杂的的用法，然后就以后减轻浏览器支持问题提供建议（请参阅<a href="#处理浏览器支持问题">处理浏览器支持问题</a>）。</p>
 
 <h3 id="日期控件基本用法">日期控件基本用法</h3>
 
@@ -109,13 +109,13 @@ dateControl.value = '2017-06-01';</pre>
 
 <h3 id="控制输入框大小">控制输入框大小</h3>
 
-<p><code>&lt;input type="date"&gt;</code> 不支持表单属性 {{htmlattrxref("size", "input")}}. 对于大小需求，你必须祈求于 <a href="/en-US/docs/Web/CSS">CSS</a> 的帮助。</p>
+<p><code>&lt;input type="date"&gt;</code> 不支持表单属性 {{htmlattrxref("size", "input")}}. 对于大小需求，你必须祈求于 <a href="/en-US/docs/Web/CSS">CSS</a> 的帮助。</p>
 
 <h2 id="验证">验证</h2>
 
 <p>默认情况下，<code>&lt;input type="date"&gt;</code> 对输入的值不会做任何校验。 UI 实现通常不会让你输入任何不适日期的东西 — 这一点很有帮助 — 但是你任然可以留空或者  (在被优雅降级为 <code>text</code> 类型的输入框) 输入一个不合法的值 (例如： 4 月 32 号)。</p>
 
-<p>如果你使用 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("min", "input")}} 属性去限制可用日期  (参见 {{anch("Setting maximum and minimum dates")}}),对于支持的浏览器来说如果你尝试提交一个超出给定范围的日期，那么它将抛出一个错误。然而， 你必须检查这些结果以确保他们在这些日期范围内， 因为只有在用户设备上完全支持日期选择器的情况下，才能执行这些操作。</p>
+<p>如果你使用 {{htmlattrxref("min", "input")}} 和 {{htmlattrxref("min", "input")}} 属性去限制可用日期  (参见 <a href="#设置日期最大和最小值">设置日期最大和最小值</a>),对于支持的浏览器来说如果你尝试提交一个超出给定范围的日期，那么它将抛出一个错误。然而， 你必须检查这些结果以确保他们在这些日期范围内， 因为只有在用户设备上完全支持日期选择器的情况下，才能执行这些操作。</p>
 
 <p>另外， 您可以使用 {{htmlattrxref("required", "input")}} 属性强制填写日期， 如果你尝试提交一个未填写日期的域那么将会抛出错误。 至少在大多数浏览器是可以工作的。</p>
 
@@ -167,15 +167,15 @@ input:valid+span:after {
 <p><strong>重要</strong>: HTML 表单验证并不能替代脚本去确保输入值是有效的格式。一些人很容易调整 HTML 绕过验证，或者完全移除验证.。当然一些人也可能很容易的绕过你的验证，直接把数据提交到你的服务器。如果你的服务器无法验证它接收到的数据，当提交了不正确的数据之后可能会导致灾难性的后果 (或者数据量太大，错误的类型等等).</p>
 </div>
 
-<h2 id="手持設備浏览器支持">手持設備浏览器支持</h2>
+<h2 id="处理浏览器支持问题">处理浏览器支持问题</h2>
 
-<p>正如刚才提到的，在编写本文时使用日期输入的主要问题就是 {anch("Browser compatibility", "browser support")}}（浏览器支持）. 举一个例子， 在安卓系统的 Firefox 中选择器是这样子的：</p>
+<p>正如刚才提到的，在编写本文时使用日期输入的主要问题就是 <a href="#浏览器兼容性">浏览器兼容性</a>。举一个例子， 在安卓系统的 Firefox 中选择器是这样子的：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14915/date-picker-fxa.png" style="display: block; margin: 0 auto;"></p>
 
 <p>在不支持的浏览器上会被降级为文本输入框， 但这同时带来了用户界面不统一（呈现的控件不同）和数据处理方面的问题。</p>
 
-<p>第二个问题更为严重；正如我们早些时候提到的，对于日期输入框， 实际值总是会被格式化微 <code>yyyy-mm-dd</code>. 另一方面对于文本输入框，默认情况下浏览器并不知道日期格式应该怎么样被格式化， 而且人们书写日期格式的方式有很多，例如：</p>
+<p>第二个问题更为严重；正如我们早些时候提到的，对于日期输入框， 实际值总是会被格式化微 <code>yyyy-mm-dd</code>。另一方面对于文本输入框，默认情况下浏览器并不知道日期格式应该怎么样被格式化， 而且人们书写日期格式的方式有很多，例如：</p>
 
 <ul>
  <li><code>ddmmyyyy</code></li>
@@ -443,9 +443,9 @@ daySelect.onchange = function() {
 
 {{Compat("html.elements.input.input-date")}}
 
-<h2 id="也可以参见">也可以参见</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
- <li>通用的 {{HTMLElement("input")}} 元素 和 用于操作他的接口，{{domxref("HTMLInputElement")}}</li>
+ <li>通用的 {{HTMLElement("input")}} 元素 和 用于操作他的接口，{{domxref("HTMLInputElement")}}</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/The_native_form_widgets#Date_and_time_picker">Date and Time picker tutorial</a></li>
 </ul>

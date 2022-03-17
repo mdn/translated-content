@@ -30,7 +30,7 @@ translation_of: Web/HTML/Element/input/datetime-local
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#取值">取值</a></strong></td>
    <td>一个表示日期和时间的 {{domxref("DOMString")}}（本地时区）或空值。</td>
   </tr>
   <tr>
@@ -147,7 +147,7 @@ dateControl.value = '2017-06-01T08:30';</pre>
 
 <p>默认情况下 <code>&lt;input type="datetime-local"&gt;</code> 不对输入内容进行验证。用户交互（UI）的实现通常不允许你输入不是日期/时间的值 —— 这非常有用 —— 但用户也仍会在不填写任何值的情况下提交数据，或者输入一个不无效的日期/时间（如：4 月 32 日）。</p>
 
-<p>你可以使用 {{htmlattrxref("min", "input")}} 及 {{htmlattrxref("max", "input")}} 来限制可选择的日期（参见 anch("设定日期时间的最大值和最小值")），并且使用 {{htmlattrxref("required", "input")}} 属性使日期/时间为强制的输入项。这样做的结果是，可以使相应的浏览器在你输入一个超出范围的日期或不输入时显示一个错误信息。</p>
+<p>你可以使用 {{htmlattrxref("min", "input")}} 及 {{htmlattrxref("max", "input")}} 来限制可选择的日期（参见 <a href="#设定日期时间的最大值和最小值">设定日期时间的最大值和最小值</a>），并且使用 {{htmlattrxref("required", "input")}} 属性使日期/时间为强制的输入项。这样做的结果是，可以使相应的浏览器在你输入一个超出范围的日期或不输入时显示一个错误信息。</p>
 
 <p>让我们来看个例子，这里我们设置日期/时间的最小值和最大值，并且设置该项为必填：</p>
 
