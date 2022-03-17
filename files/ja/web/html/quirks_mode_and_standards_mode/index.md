@@ -19,7 +19,7 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 <h2 id="How_does_Mozilla_determine_which_mode_to_use.3F" name="How_does_Mozilla_determine_which_mode_to_use.3F">ブラウザーが利用するモードを決定する方法</h2>
 
-<a href="/ja/docs/HTML" title="HTML">HTML</a> 文書については、ブラウザーは文書の先頭にある DOCTYPE を使用して、後方互換モードで処理するか、標準準拠モードで処理するかを決定します。ページで確実に完全標準準拠モードが使用されるようにするには、以下のサンプルのような DOCTYPE を使用するようにしてください。
+[HTML](/ja/docs/HTML) 文書については、ブラウザーは文書の先頭にある DOCTYPE を使用して、後方互換モードで処理するか、標準準拠モードで処理するかを決定します。ページで確実に完全標準準拠モードが使用されるようにするには、以下のサンプルのような DOCTYPE を使用するようにしてください。
 
 ```html
 <!DOCTYPE html>
@@ -33,25 +33,25 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 </html>
 ```
 
-この例にある DOCTYPE の <code>&lt;!DOCTYPE html&gt;</code> はもっともシンプルな形式であり、HTML5 で推奨されているもののひとつです。以前のバージョンの HTML 標準では他の形式を推奨していましたが、現行のブラウザーはすべて（旧式の Internet Explorer 6 でさえ）、この DOCTYPE に対して完全標準準拠モードを使用します。より複雑な DOCTYPE を使用すべき理由はありません。他の DOCTYPE を使用する場合は、ほぼ互換モードや後方互換モードが適用されるおそれがあります。
+この例にある DOCTYPE の `<!DOCTYPE html>` はもっともシンプルな形式であり、HTML5 で推奨されているもののひとつです。以前のバージョンの HTML 標準では他の形式を推奨していましたが、現行のブラウザーはすべて（旧式の Internet Explorer 6 でさえ）、この DOCTYPE に対して完全標準準拠モードを使用します。より複雑な DOCTYPE を使用すべき理由はありません。他の DOCTYPE を使用する場合は、ほぼ互換モードや後方互換モードが適用されるおそれがあります。
 
 DOCTYPE は HTML 文書の先頭に置くようにしてください。 Internet Explorer 9 以前ではコメントや XML 宣言などが DOCTYPE の前に存在すると、後方互換モードが適用されます。
 
 HTML5 では、 DOCTYPE の用途は完全標準準拠モードを適用させることだけです。古いバージョンの HTML 標準では DOCTYPE に他の意味を与えていましたが、後方互換モードと標準準拠モードの切り替え以外の目的で DOCTYPE を使用するブラウザーはありませんでした。
 
-<a href="http://hsivonen.iki.fi/doctype/">さまざまなブラウザーのモード選択の詳細な説明</a>もご覧ください。
+[さまざまなブラウザーのモード選択の詳細な説明](https://hsivonen.iki.fi/doctype/)もご覧ください。
 
 <h3 id="XHTML" name="XHTML">XHTML</h3>
 
-<code>Content-Type</code> HTTP ヘッダで <code>application/xhtml+xml</code> を使用して、ページを <a href="/ja/docs/XHTML" title="XHTML">XHTML</a> として提供する場合は、文書で常に完全標準準拠モードを使用しますので、標準準拠モードを有効化するための DOCTYPE は不要です。ただし Internet Explorer 8 は<code>application/xhtml+xml</code> でページを提供すると、ページを表示せずに未知の形式のファイルを<a href="/ja/docs/XHTML#Support" title="XHTML">ダウンロードするダイアログボックス</a>を表示します。これは、最初に XHTML をサポートした Internet Explorer がバージョン 9 であるためです。
+`Content-Type` HTTP ヘッダで `application/xhtml+xml` を使用して、ページを [XHTML](/ja/docs/XHTML) として提供する場合は、文書で常に完全標準準拠モードを使用しますので、標準準拠モードを有効化するための DOCTYPE は不要です。ただし Internet Explorer 8 は<code>application/xhtml+xml</code> でページを提供すると、ページを表示せずに未知の形式のファイルを[ダウンロードするダイアログボックス](/ja/docs/XHTML#Support)を表示します。これは、最初に XHTML をサポートした Internet Explorer がバージョン 9 であるためです。
 
-<code>text/html</code> の MIME タイプを使用して XHTML 形式のコンテンツを提供する場合は、ブラウザーが HTML として読み込みますので、標準準拠モードを使用するために DOCTYPE が必要です。
+`text/html` の MIME タイプを使用して XHTML 形式のコンテンツを提供する場合は、ブラウザーが HTML として読み込みますので、標準準拠モードを使用するために DOCTYPE が必要です。
 
 <h2 id="What_are_the_differences_between_the_modes.3F" name="What_are_the_differences_between_the_modes.3F">どのモードが使われているかを確認するには</h2>
 
-Firefox では、コンテキストメニューで <em>ページの情報を表示</em> を選択して、<em>描画モード</em> を確認してください。
+Firefox では、コンテキストメニューで *ページの情報を表示* を選択して、*描画モード* を確認してください。
 
-Internet Explorer では、 <em>F12</em> を押下して、<em>ドキュメントモード</em> を確認してください。
+Internet Explorer では、 *F12* を押下して、*ドキュメントモード* を確認してください。
 
 <h2 id="What_are_the_differences_between_the_modes.3F" name="What_are_the_differences_between_the_modes.3F">モードの違い</h2>
 
