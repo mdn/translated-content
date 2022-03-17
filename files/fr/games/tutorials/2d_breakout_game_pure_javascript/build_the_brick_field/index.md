@@ -12,7 +12,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
-{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}
 

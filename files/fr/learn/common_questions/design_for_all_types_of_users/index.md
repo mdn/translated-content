@@ -10,8 +10,6 @@ tags:
 translation_of: Learn/Common_questions/Design_for_all_types_of_users
 original_slug: Apprendre/Concevoir_site_tous_types_utilisateurs
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 Cet article aborde les concepts de bases pour vous aider à construire des sites web accessibles à tous.
 
 <table class="standard-table">

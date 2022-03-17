@@ -33,5 +33,3 @@ L'ensemble de nœuds correspondant à l'`objet` spécifié.
 ### Support par Gecko
 
 Supporté par Gecko 1.9 et ultérieur.
-
-{{ languages( { "en": "en/EXSLT/exsl/node-set", "es": "es/EXSLT/exsl/node-set", "ja": "ja/EXSLT/exsl/node-set" } ) }}

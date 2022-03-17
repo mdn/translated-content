@@ -13,8 +13,6 @@ translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/fr/docs/Jeux")}}
-
 Cet article explique l'ensemble des bases théoriques utiles à connaître lorsque vous commencez à travailler avec la 3D.
 
 ## Système de coordonnées

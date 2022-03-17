@@ -90,5 +90,3 @@ Ce système n'est actuellement pas supporté par Opera, Safari et les versions a
 #### Ne pas se baser sur un comportement cohérent de la répétition d'une touche, pour l'instant
 
 Malheureusement, `onkeydown` peut ou non être répété suivant le système d'exploitation utilisé. Consultez le {{ Bug(91592) }} dans la base de données Bugzilla.
-
-{{ languages( { "en": "en/Key-navigable_custom_DHTML_widgets", "ja": "ja/Key-navigable_custom_DHTML_widgets" } ) }}

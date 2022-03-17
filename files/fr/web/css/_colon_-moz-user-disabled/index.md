@@ -8,7 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-user-disabled
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
+{{Non-standard_header}}{{CSSRef}}
 
 La [pseudo-classe CSS](/fr/docs/Web/CSS/Pseudo-classes) `:-moz-user-disabled` correspond aux éléments représentant des images qui n'ont pas été chargées car elles ont été entièrement désactivées dans les préférences de l'utilisateur.
 

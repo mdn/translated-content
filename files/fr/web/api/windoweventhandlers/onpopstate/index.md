@@ -5,8 +5,6 @@ translation_of: Web/API/WindowEventHandlers/onpopstate
 ---
 {{ ApiRef() }}
 
-{{ gecko_minversion_header("2") }}
-
 ### Résumé
 
 Un gestionnaire d'évènement pour l'évènement `popstate` de la fenêtre.

@@ -22,7 +22,7 @@ L'interface **`History`** permet de manipuler l'historique de navigation du navi
   - : Retourne un {{domxref("DOMString")}} de l‘URL suivante dans l'historique de navigation. Cette propriété n‘a jamais été rendu disponible au contenu web ni supporté par aucun autre navigateur.
 - {{domxref("History.previous")}} {{readOnlyInline}} {{ non-standard_inline() }} {{ obsolete_inline(26) }}
   - : Retourne un {{domxref("DOMString")}} de l‘URL précédente dans l'historique de navigation.
-- {{domxref("History.state")}} {{readOnlyInline}} {{ gecko_minversion_inline("2.0") }}
+- {{domxref("History.state")}} {{readOnlyInline}}
   - : Retourne une value `any` représentant l'état le plus haut de l‘historique de navigation. C‘est une manière de vérifier cet état sans avoir à attendre un évenement {{event("popstate")}}.
 
 ## Méthodes
@@ -43,13 +43,13 @@ _L‘interface `History`_ _n‘hérite d‘aucune méthode._
 
 - {{domxref("History.go()")}}
   - : Charge une page dans l‘historique de navigation, identifiée par sa position relative à la page courante, par exemple `-1` pour la page précédente ou `1` pour la page suivante. Lorsque `integerDelta` sort du cadre de l‘historique (aka. -1 alors qu‘il n‘y a pas de page précédente), cette méthode n‘aura aucun effet et ne déclenchera pas d'exception. Appeler `go()` sans paramètres ou un paramètre autre qu'un `Integer` n‘a aucun effet (sauf par Internet Explorer, [qui supporte les URLs en String comme paramètre](<http://msdn.microsoft.com/en-us/library/ms536443(VS.85).aspx>)).
-- {{domxref("History.pushState()")}} {{ gecko_minversion_inline("2.0") }}
+- {{domxref("History.pushState()")}}
 
   - : Insère les paramètres fournis dans la pile de l‘historique de navigation avec un titre donné et, si fourni, l‘URL. Les données sont traitées comme opaque par le DOM; il est nécessaire de spécifier chaque objet JavaScript devant être sérialisé. Notez que Firefox ignore actuellement le paramètre titre; pour plus d'informations, voir [Manipuler l'historique du navigateur](/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur).
 
     > **Note :** De Gecko 2.0 {{ geckoRelease("2.0") }} jusqu‘à Gecko 5.0 {{ geckoRelease("5.0") }}, l‘objet donné est sérialisé via JSON. A partir de Gecko 6.0 {{ geckoRelease("6.0") }}, cet objet est sérialisé via [the structured clone algorithm](/en/DOM/The_structured_clone_algorithm). Cela permet une plus large variété d‘objets pouvant être passé.
 
-- {{domxref("History.replaceState()")}} {{ gecko_minversion_inline("2.0") }}
+- {{domxref("History.replaceState()")}}
 
   - : Modifie la page la plus récente dans la pile de l‘historique de navigation pour avoir les données, titre, et si spécifiée, URL. Les données sont traitées comme opaque par le DOM; il est nécessaire de spécifier chaque objet JavaScript devant être sérialisé. Notez que Firefox ignore actuellement le paramètre titre; pour plus d'informations, voir [Manipuler l'historique du navigateur](/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur).
 

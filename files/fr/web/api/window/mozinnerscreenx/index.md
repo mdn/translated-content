@@ -10,7 +10,7 @@ tags:
   - Window
 translation_of: Web/API/Window/mozInnerScreenX
 ---
-{{APIRef}}{{gecko_minversion_header("1.9.2")}}
+{{APIRef}}
 
 ## Résumé
 

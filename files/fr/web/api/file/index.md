@@ -33,7 +33,7 @@ Voir [Utiliser des fichiers à partir d'applications web](/fr/docs/Web/API/File/
 
 - {{domxref("File.lastModified")}} {{readonlyinline}}
   - : Renvoie le temps de dernière modification du fichier, exprimé en millisecondes écoulées depuis l’ère UNIX (1er janvier 1970 à minuit).
-- {{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}} {{gecko_minversion_inline("15.0")}}
+- {{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}}
   - : Renvoie la {{jsxref("Date")}} de dernière modification du fichier.
 - {{domxref("File.name")}} {{readonlyinline}}
   - : Renvoie le nom du fichier.

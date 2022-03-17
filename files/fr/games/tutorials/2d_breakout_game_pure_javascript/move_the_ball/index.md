@@ -12,7 +12,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
-{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs")}}
 

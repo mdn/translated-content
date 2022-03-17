@@ -11,8 +11,6 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Raining_rectangles
 original_slug: Web/API/WebGL_API/By_example/Une_pluie_de_rectangle
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}
 
 Cet exemple permet de créer un jeu simple qui illustre ce qu'il est possible de faire avec du « découpage », des animations et des interactions utilisateur.
