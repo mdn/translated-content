@@ -10111,12 +10111,6 @@
       "sh7dm"
     ]
   },
-  "Web/API/ServiceWorker/onstatechange": {
-    "modified": "2020-10-15T22:25:53.618Z",
-    "contributors": [
-      "sh7dm"
-    ]
-  },
   "Web/API/ServiceWorker/scriptURL": {
     "modified": "2020-10-15T22:25:53.547Z",
     "contributors": [
@@ -10125,6 +10119,12 @@
   },
   "Web/API/ServiceWorker/state": {
     "modified": "2020-10-15T22:25:53.597Z",
+    "contributors": [
+      "sh7dm"
+    ]
+  },
+  "Web/API/ServiceWorker/statechange_event": {
+    "modified": "2020-10-15T22:25:53.618Z",
     "contributors": [
       "sh7dm"
     ]

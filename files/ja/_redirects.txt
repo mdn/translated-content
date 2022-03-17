@@ -3216,6 +3216,7 @@
 /ja/docs/Web/API/NavigatorOnLine/onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/NavigatorStorage	/ja/docs/orphaned/Web/API/NavigatorStorage
 /ja/docs/Web/API/NavigatorStorage/storage	/ja/docs/orphaned/Web/API/NavigatorStorage/storage
+/ja/docs/Web/API/NetworkInformation/onchange	/ja/docs/Web/API/NetworkInformation/change_event
 /ja/docs/Web/API/Node.appendChild	/ja/docs/Web/API/Node/appendChild
 /ja/docs/Web/API/Node.attributes	/ja/docs/Web/API/Element/attributes
 /ja/docs/Web/API/Node.baseURIObject	/ja/docs/Web/API/Node
@@ -4159,8 +4160,10 @@
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSPreflightDidNotSucceed	/ja/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSRequestNotHttp	/ja/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 /ja/docs/Web/HTTP/HTTP_response_codes	/ja/docs/Web/HTTP/Status
+/ja/docs/Web/HTTP/Headers/Cookie2	/ja/docs/conflicting/Web/HTTP/Headers/Cookie
 /ja/docs/Web/HTTP/Headers/Feature-Policy/vr	/ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr	/ja/docs/conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking
+/ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
 /ja/docs/Web/HTTP/Index	/ja/docs/conflicting/Web/HTTP
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Status

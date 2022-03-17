@@ -1483,6 +1483,10 @@
 /zh-CN/docs/Web/API/PositionOptions	/zh-CN/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /zh-CN/docs/Web/API/PositionOptions/timeout	/zh-CN/docs/conflicting/Web/API/Geolocation/getCurrentPosition_058087067b28ad25fff974fd59827fb6
 /zh-CN/docs/Web/API/RTCConfiguration	/zh-CN/docs/conflicting/Web/API/RTCPeerConnection/RTCPeerConnection
+/zh-CN/docs/Web/API/RTCPeerConnection/onaddstream	/zh-CN/docs/Web/API/RTCPeerConnection/addstream_event
+/zh-CN/docs/Web/API/RTCPeerConnection/ondatachannel	/zh-CN/docs/Web/API/RTCPeerConnection/datachannel_event
+/zh-CN/docs/Web/API/RTCPeerConnection/onicecandidate	/zh-CN/docs/conflicting/Web/API/RTCPeerConnection/icecandidate_event
+/zh-CN/docs/Web/API/RTCPeerConnection/ontrack	/zh-CN/docs/Web/API/RTCPeerConnection/track_event
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Response/克隆	/zh-CN/docs/Web/API/Response/clone
 /zh-CN/docs/Web/API/SVGPathElement/getTotalLength	/zh-CN/docs/Web/API/SVGGeometryElement/getTotalLength
@@ -1503,6 +1507,7 @@
 /zh-CN/docs/Web/API/Selection.isCollapsed	/zh-CN/docs/Web/API/Selection/isCollapsed
 /zh-CN/docs/Web/API/Selection.removeRange	/zh-CN/docs/Web/API/Selection/removeRange
 /zh-CN/docs/Web/API/Selection/从Document中删除	/zh-CN/docs/Web/API/Selection/deleteFromDocument
+/zh-CN/docs/Web/API/ServiceWorker/onstatechange	/zh-CN/docs/Web/API/ServiceWorker/statechange_event
 /zh-CN/docs/Web/API/ServiceWorkerGlobalScope/caches	/zh-CN/docs/conflicting/Web/API/caches
 /zh-CN/docs/Web/API/StorageEstimate	/zh-CN/docs/conflicting/Web/API/StorageManager/estimate
 /zh-CN/docs/Web/API/Streams_API/使用可读文件流	/zh-CN/docs/Web/API/Streams_API/Using_readable_streams
@@ -2048,6 +2053,8 @@
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/require-sri-for	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/sandbox	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox
 /zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy__by_cnvoid/upgrade-insecure-requests	/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests
+/zh-CN/docs/Web/HTTP/Headers/Cookie2	/zh-CN/docs/conflicting/Web/HTTP/Headers/Cookie
+/zh-CN/docs/Web/HTTP/Headers/Set-Cookie2	/zh-CN/docs/conflicting/Web/HTTP/Headers/Set-Cookie
 /zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/zh-CN/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /zh-CN/docs/Web/HTTP/Response_codes	/zh-CN/docs/Web/HTTP/Status
 /zh-CN/docs/Web/HTTP/Response_codes/100	/zh-CN/docs/Web/HTTP/Status/100

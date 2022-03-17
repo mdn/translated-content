@@ -10539,12 +10539,6 @@
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Cookie2": {
-    "modified": "2020-10-15T22:29:27.166Z",
-    "contributors": [
-      "FernandoKGA"
-    ]
-  },
   "Web/HTTP/Headers/Cross-Origin-Resource-Policy": {
     "modified": "2020-10-15T22:29:30.347Z",
     "contributors": [
@@ -10803,12 +10797,6 @@
     "modified": "2020-10-15T22:31:49.288Z",
     "contributors": [
       "ooVictorFranco"
-    ]
-  },
-  "Web/HTTP/Headers/Set-Cookie2": {
-    "modified": "2020-10-15T22:31:37.734Z",
-    "contributors": [
-      "FernandoKGA"
     ]
   },
   "Web/HTTP/Headers/SourceMap": {
@@ -16505,6 +16493,18 @@
     "modified": "2020-04-19T11:26:06.291Z",
     "contributors": [
       "marcio1002"
+    ]
+  },
+  "conflicting/Web/HTTP/Headers/Cookie": {
+    "modified": "2020-10-15T22:29:27.166Z",
+    "contributors": [
+      "FernandoKGA"
+    ]
+  },
+  "conflicting/Web/HTTP/Headers/Set-Cookie": {
+    "modified": "2020-10-15T22:31:37.734Z",
+    "contributors": [
+      "FernandoKGA"
     ]
   },
   "conflicting/Web/JavaScript/Equality_comparisons_and_sameness": {

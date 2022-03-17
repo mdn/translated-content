@@ -488,6 +488,11 @@
 /ko/docs/Web/API/Position	/ko/docs/Web/API/GeolocationPosition
 /ko/docs/Web/API/PositionOptions	/ko/docs/Web/API/Geolocation/getCurrentPosition
 /ko/docs/Web/API/RTCConfiguration	/ko/docs/Web/API/RTCPeerConnection/RTCPeerConnection
+/ko/docs/Web/API/RTCPeerConnection/onconnectionstatechange	/ko/docs/Web/API/RTCPeerConnection/connectionstatechange_event
+/ko/docs/Web/API/RTCPeerConnection/ondatachannel	/ko/docs/Web/API/RTCPeerConnection/datachannel_event
+/ko/docs/Web/API/RTCPeerConnection/onicecandidate	/ko/docs/Web/API/RTCPeerConnection/icecandidate_event
+/ko/docs/Web/API/RTCPeerConnection/onicegatheringstatechange	/ko/docs/conflicting/Web/API/RTCPeerConnection/icegatheringstatechange_event
+/ko/docs/Web/API/RTCPeerConnection/ontrack	/ko/docs/Web/API/RTCPeerConnection/track_event
 /ko/docs/Web/API/RandomSource	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/RandomSource/getRandomValues	/ko/docs/Web/API/Crypto/getRandomValues
 /ko/docs/Web/API/Screen.lockOrientation	/ko/docs/Web/API/Screen/lockOrientation
@@ -497,6 +502,7 @@
 /ko/docs/Web/API/Screen.orientation	/ko/docs/Web/API/Screen/orientation
 /ko/docs/Web/API/Screen.orientation/window.screen.orientation	/ko/docs/Web/API/Screen/orientation
 /ko/docs/Web/API/Screen/onorientationchange	/ko/docs/Web/API/Screen/orientationchange_event
+/ko/docs/Web/API/ServiceWorker/onstatechange	/ko/docs/Web/API/ServiceWorker/statechange_event
 /ko/docs/Web/API/Streams_API/컨셉	/ko/docs/Web/API/Streams_API/Concepts
 /ko/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/ko/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /ko/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
