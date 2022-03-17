@@ -14,8 +14,6 @@ original_slug: Web/HTML/Element/Input/月份
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}</div>
 
-
-
 <p>这个控件在各个浏览器支持都不同，目前是支持部分浏览器。在桌面上支持情况为 Chrome/Opera 和 Edge 。在移动端支持大部分现代浏览器。在其他浏览器中，这个控件会被优雅的降级到<code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
 <p>对于那些使用不支持的浏览器的用户，Chrome / Opera 月份控制如下图所示。单击右侧的向下箭头会显示日期选择器，以便您选择日期;你必须手动输入时间。</p>
@@ -88,19 +86,19 @@ monthControl.value = '1978-06';</pre>
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
+   <td><code><a href="#attr-max">max</a></code></td>
    <td>The latest year and month to accept as a valid input</td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#attr-min">min</a></code></td>
    <td>The earliest year and month to accept as a valid input</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#attr-readonly">readonly</a></code></td>
    <td>A Boolean which, if present, indicates that the input's value can't be edited</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#attr-step">step</a></code></td>
    <td>A stepping interval to use when incrementing and decrementing the value of the input field</td>
   </tr>
  </tbody>
@@ -184,7 +182,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>By default, <code>&lt;input type="month"&gt;</code> does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still not fill in a date and submit, or enter an invalid date (e.g. the 32th of April).</p>
 
-<p>You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see anch("Setting maximum and minimum dates")), and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.</p>
+<p>You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see <a href="#设置最长和最短日期">Setting maximum and minimum dates</a>, and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.</p>
 
 <p>Let's look at an example — here we've set minimum and maximum dates, and also made the field required:</p>
 
