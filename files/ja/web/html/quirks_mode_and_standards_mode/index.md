@@ -17,7 +17,7 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ウェブブラウザーのレイアウトエンジンが利用するモードは、後方互換 (Quirks) モード、準標準 (Almost Standards) モード、完全標準 (Full Standards) モードの3種類になりました。<strong>後方互換モード</strong>では、レイアウトは Navigator 4 や Internet Explorer 5 のような非標準の動作をエミュレートします。これは、ウェブ標準が広く採用される前に作られたウェブサイトをサポートするために必要です。<strong>完全標準準拠モード</strong>では、HTML や CSS の仕様書で書かれている通りに動作します (そのように期待されています)。<strong>ほぼ標準準拠モード</strong>では、ほぼ標準準拠モードのトリガーとなる DOCTYPE を利用している実際のページについて表示を損なう可能性を考慮した、ごく少数の互換動作が実装されています。
 
-<h2 id="How_does_Mozilla_determine_which_mode_to_use.3F" name="How_does_Mozilla_determine_which_mode_to_use.3F">ブラウザーが利用するモードを決定する方法</h2>
+## ブラウザーが利用するモードを決定する方法
 
 [HTML](/ja/docs/HTML) 文書については、ブラウザーは文書の先頭にある DOCTYPE を使用して、後方互換モードで処理するか、標準準拠モードで処理するかを決定します。ページで確実に完全標準準拠モードが使用されるようにするには、以下のサンプルのような DOCTYPE を使用するようにしてください。
 
@@ -41,13 +41,13 @@ HTML5 では、 DOCTYPE の用途は完全標準準拠モードを適用させ�
 
 [さまざまなブラウザーのモード選択の詳細な説明](https://hsivonen.iki.fi/doctype/)もご覧ください。
 
-<h3 id="XHTML" name="XHTML">XHTML</h3>
+### XHTML
 
 `Content-Type` HTTP ヘッダで `application/xhtml+xml` を使用して、ページを [XHTML](/ja/docs/XHTML) として提供する場合は、文書で常に完全標準準拠モードを使用しますので、標準準拠モードを有効化するための DOCTYPE は不要です。ただし Internet Explorer 8 は<code>application/xhtml+xml</code> でページを提供すると、ページを表示せずに未知の形式のファイルを[ダウンロードするダイアログボックス](/ja/docs/XHTML#Support)を表示します。これは、最初に XHTML をサポートした Internet Explorer がバージョン 9 であるためです。
 
 `text/html` の MIME タイプを使用して XHTML 形式のコンテンツを提供する場合は、ブラウザーが HTML として読み込みますので、標準準拠モードを使用するために DOCTYPE が必要です。
 
-<h2 id="What_are_the_differences_between_the_modes.3F" name="What_are_the_differences_between_the_modes.3F">どのモードが使われているかを確認するには</h2>
+## どのモードが使われているかを確認するには
 
 Firefox では、コンテキストメニューで *ページの情報を表示* を選択して、*描画モード* を確認してください。
 
