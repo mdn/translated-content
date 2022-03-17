@@ -32,7 +32,7 @@ Cet exemple montre l'utilisation de `firstChild` et la manière dont les nœuds 
 </script>
 ```
 
-Dans le code ci-dessus, la [console](/fr/docs/Web/API/Console) affichera « #text » car un nœud texte a été inséré pour préserver les blancs entre la fin des balises ouvrantes \<p> et \<span>. **Tout** [espace](/fr/docs/Gestion_des_espaces_dans_le_DOM) provoquera l'insertion d'un nœud `#text` , qu'il s'agisse d'un simple espace ou de plusieurs, de retours à la ligne, tabulations, etc.
+Dans le code ci-dessus, la [console](/fr/docs/Web/API/Console) affichera «&nbsp;#text&nbsp;» car un nœud texte a été inséré pour préserver les blancs entre la fin des balises ouvrantes \<p> et \<span>. **Tout** [espace](/fr/docs/Gestion_des_espaces_dans_le_DOM) provoquera l'insertion d'un nœud `#text` , qu'il s'agisse d'un simple espace ou de plusieurs, de retours à la ligne, tabulations, etc.
 
 Un autre nœud `#text` est inséré entre les balises de fermeture \</span> et \</p>.
 
@@ -47,9 +47,9 @@ Si ces espaces sont retirés du code source, les nœuds `#text` n'apparaîtront 
 </script>
 ```
 
-À présent, l'alerte affichera « SPAN ».
+À présent, l'alerte affichera «&nbsp;SPAN&nbsp;».
 
-Pour éviter le problème avec `node.firstChild`  renvoyant des noeuds `#text` ou `#comment`,  {{domxref("ParentNode.firstElementChild")}}  peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois,  `node.firstElementChild` nécessite un "shim" pour Internet Explorer 9 et antérieurs.
+Pour éviter le problème avec `node.firstChild`  renvoyant des noeuds `#text` ou `#comment`,  {{domxref("ParentNode.firstElementChild")}}  peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois,  `node.firstElementChild` nécessite un "shim" pour Internet Explorer 9 et antérieurs.
 
 ## Spécification
 

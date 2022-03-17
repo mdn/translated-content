@@ -54,7 +54,7 @@ Aucune.
 
 | Spécification                                                                                | État                         | Commentaires |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-close-void', 'close()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-close-void', 'close()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

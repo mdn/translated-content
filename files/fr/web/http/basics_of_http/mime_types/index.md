@@ -262,7 +262,7 @@ Lorsque le type MIME est absent ou lorsque le client détecte que le type MIME a
 Les types MIME ne sont pas la seule façon existante pour gérer le format d'un document :
 
 - Les extensions de fichiers sont parfois utilisées, comme sur les systèmes d'exploitation Microsoft Windows. Tous les systèmes d'exploitation ne considèrent pas l'extension comme signifiante (en particulier Linux et Mac OS). De la même manière que pour les types MIME externes, il n'est pas garanti que le contenu soit effectivement du type correspondant à l'extension du document.
-- Nombres magiques : La syntaxe de différents fichiers permet de déterminer le fichier en analysant son contenu, ainsi les fichiers GIF commencent par les valeurs hexadécimales 47 49 46 38 soit \[GIF89], les fichiers PNG quant à eux commencent par 89 50 4E 47 soit \[.PNG]. Néanmoins, tous les types de fichiers ne permettent pas d'utiliser des nombres magiques, il ne s'agit donc pas d'une technique infaillible.
+- Nombres magiques : La syntaxe de différents fichiers permet de déterminer le fichier en analysant son contenu, ainsi les fichiers GIF commencent par les valeurs hexadécimales 47 49 46 38 soit \[GIF89], les fichiers PNG quant à eux commencent par 89 50 4E 47 soit \[.PNG]. Néanmoins, tous les types de fichiers ne permettent pas d'utiliser des nombres magiques, il ne s'agit donc pas d'une technique infaillible.
 
 ## Voir aussi
 

@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 
 Effacer le cache du navigateur.
 
-Notez que cette fonction puisse prendre un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}}, elle sera ignorée. Le cache entier est toujours effacé lors de l'utilisation de cette fonction.
+Notez que cette fonction puisse prendre un objet  {{WebExtAPIRef("browsingData.RemovalOptions")}}, elle sera ignorée. Le cache entier est toujours effacé lors de l'utilisation de cette fonction.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

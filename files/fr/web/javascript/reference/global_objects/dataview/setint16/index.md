@@ -56,7 +56,7 @@ dataview.getInt16(1); // 3
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée par ECMAScript 2015 (ES6).            |
 | {{SpecName('ES2015', '#sec-dataview.prototype.setint16', 'DataView.prototype.setInt16')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.setint16', 'DataView.prototype.setInt16')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.setint16', 'DataView.prototype.setInt16')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

@@ -15,7 +15,7 @@ WebAssembly est un nouveau type de code qui peut être exécuté dans un navigat
 
 WebAssembly représente une avancée fondamentale de la plateforme web. Il permet d'exécuter du code (éventuellement écrit depuis différents langages) sur le Web avec des performances similaires aux applications natives.
 
-WebAssembly est conçu pour être utilisé de pair avec JavaScript. Grâce à l'API JavaScript WebAssembly, on peut charger des modules WebAssembly au sein d'une application JavaScript et partager des fonctionnalités entre les deux. Cela permet de tirer parti des performances de WebAssembly et de la flexibilité de JavaScript, même si on ne sait pas écrire du code WebAssembly.
+WebAssembly est conçu pour être utilisé de pair avec JavaScript. Grâce à l'API JavaScript WebAssembly, on peut charger des modules WebAssembly au sein d'une application JavaScript et partager des fonctionnalités entre les deux. Cela permet de tirer parti des performances de WebAssembly et de la flexibilité de JavaScript, même si on ne sait pas écrire du code WebAssembly.
 
 WebAssembly est conçu comme un standard web par le [groupe communautaire du W3C pour WebAssembly](https://www.w3.org/community/webassembly/) auquel participe les différents éditeurs de navigateur.
 

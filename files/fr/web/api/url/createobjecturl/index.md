@@ -35,7 +35,7 @@ Voir [Utilisation de l’objet URLs pour afficher des images](/fr/docs/Web/API/F
 
 À chaque fois que vous appelez `createObjectURL()`, une nouvelle URL d’objet est créée, même si vous en avez déjà créée une pour le même objet. Chacune d’elles doit être libérée en appelant {{domxref("URL.revokeObjectURL()")}} lorsque vous n’en avez plus besoin.
 
-Les navigateurs libèrent automatiquement les URL d’objet lorsque le document est déchargé (_unload_) ; cependant, pour une performance et une utilisation de la mémoire optimales, si vous avez la possiblité de les libérer explictement sans danger, vous devriez le faire.
+Les navigateurs libèrent automatiquement les URL d’objet lorsque le document est déchargé (_unload_)&nbsp;; cependant, pour une performance et une utilisation de la mémoire optimales, si vous avez la possiblité de les libérer explictement sans danger, vous devriez le faire.
 
 ### Utiliser les URL d’objet pour les flux de média
 
@@ -68,7 +68,7 @@ Dans d’anciennes versions de la spécification de Media Source, attacher un fl
         <p>
           Extension MediaSource.<br />Les anciennes versions de cette
           spécification utilisaient <code>createObjectURL()</code> pour les
-          objets {{domxref("MediaStream")}} ; ce n’est plus supporté.
+          objets {{domxref("MediaStream")}}&nbsp;; ce n’est plus supporté.
         </p>
       </td>
     </tr>

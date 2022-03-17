@@ -24,7 +24,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `bookmarkId` {{optional_inline}}
   - : `string`. L'ID du signet dans lequel le menu contextuel a été cliqué.
 - `button` {{optional_inline}}
-  - : `integer`. Quel bouton de la souris a été enfoncé. Les valeurs sont les mêmes que pour  [`MouseEvent.button`](/fr/docs/Web/API/MouseEvent/button).
+  - : `integer`. Quel bouton de la souris a été enfoncé. Les valeurs sont les mêmes que pour  [`MouseEvent.button`](/fr/docs/Web/API/MouseEvent/button).
 - `checked` {{optional_inline}}
   - : `boolean`. Un _flag_ indiquant si une case à cocher ou un élément radio a été vérifié après avoir été cliqué.
 - `editable`
@@ -42,7 +42,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `menuItemId`
   - : `integer` ou `string`. ID de l'élément de menu sur lequel vous avez cliqué.
 - `modifiers`
-  - : `Array` de`string`. Un tableau contenant toutes les touches de modification qui ont été pressées lorsque l'élément a été cliqué. Les valeurs possibles sont : "Alt", "Command", "Ctrl", "MacCtrl", et "Shift". Sur un Mac, si l'utilisateur a la touche Ctrl enfoncée, alors  "Ctrl" et "MacCtrl" sont inclus.
+  - : `Array` de`string`. Un tableau contenant toutes les touches de modification qui ont été pressées lorsque l'élément a été cliqué. Les valeurs possibles sont : "Alt", "Command", "Ctrl", "MacCtrl", et "Shift". Sur un Mac, si l'utilisateur a la touche Ctrl enfoncée, alors  "Ctrl" et "MacCtrl" sont inclus.
 - `pageUrl` {{optional_inline}}
   - : `string`. L'URL de la page sur laquelle l'élément de menu a été cliqué. Cette propriété n'est pas présente si le clic s'est produit dans un contexte où il n'y a pas de page en cours, comme dans le cas d'une action du navigateur.
 - `parentMenuItemId` {{optional_inline}}

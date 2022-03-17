@@ -187,7 +187,7 @@ Dans cet exemple (basé sur le précédent), on ajoute un attribut `media` sur l
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------ |
 | {{SpecName('HTML WHATWG', 'semantics.html#the-style-element', 'style')}}         | {{Spec2('HTML WHATWG')}} | Ajout de l'attribut `nonce`.         |
 | {{SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style')}} | {{Spec2('HTML5 W3C')}}     | L'attribut `type` devient optionnel. |
-| {{SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style')}}                 | {{Spec2('HTML4.01')}}     |                                      |
+| {{SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style')}}                 | {{Spec2('HTML4.01')}}     |                                      |
 
 ## Compatibilité des navigateurs
 

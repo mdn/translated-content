@@ -63,7 +63,7 @@ Ceci démontre 2 choses :
 
 ## Spécifications
 
-- [DOM Level 2 Core : setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-F68F082) (non normative)
+- [DOM Level 2 Core&nbsp;: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-F68F082) (non normative)
 - [HTML5 : API dans les documents HTML](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)
 
 ## Compatibilité des navigateurs

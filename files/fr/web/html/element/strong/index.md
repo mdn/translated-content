@@ -36,7 +36,7 @@ Il est important de savoir que `<b></b>` ne doit pas être utilisé, à part dan
 
 ### `<em>` ou `<strong>` ?
 
-En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'élément représente une « importance forte » de son contenu. Il est important de faire la différence. L'emphase (`<em>` étant l'élément HTML équivalent) permet de changer le sens d'une phrase : par exemple :  « J'_adore_ les licornes » et « J'adore les _licornes_ ». `<strong>` est utilisé pour augmenter l'importance de certaines portions de phrases : « **Attention !** C'est **très dangereux** ».  `<strong>` et `<em>` peuvent être imbriqués pour augmenter relativement l'importance ou l'emphase d'un texte.
+En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'élément représente une « importance forte » de son contenu. Il est important de faire la différence. L'emphase (`<em>` étant l'élément HTML équivalent) permet de changer le sens d'une phrase : par exemple :  « J'_adore_ les licornes » et « J'adore les _licornes_ ». `<strong>` est utilisé pour augmenter l'importance de certaines portions de phrases : « **Attention !** C'est **très dangereux** ».  `<strong>` et `<em>` peuvent être imbriqués pour augmenter relativement l'importance ou l'emphase d'un texte.
 
 ## Exemples
 
@@ -128,9 +128,9 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
 
 | Spécification                                                                                                            | État                             | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-strong-element', '&lt;strong&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-strong-element', '&lt;strong&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-STRONG', '&lt;strong&gt;')}}                     | {{Spec2('HTML4.01')}}     |              |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-strong-element', '&lt;strong&gt;')}}             | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-strong-element', '&lt;strong&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML4.01', 'struct/text.html#edef-STRONG', '&lt;strong&gt;')}}                     | {{Spec2('HTML4.01')}}     |              |
 
 ## Compatibilité des navigateurs
 

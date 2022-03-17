@@ -105,9 +105,9 @@ o.propertyIsEnumerable('premièreMéthode'); // renvoie false
 | Spécification                                                                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES3')}}                                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                                             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                                             | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

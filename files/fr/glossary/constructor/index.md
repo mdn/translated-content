@@ -22,7 +22,7 @@ function Overloaded(arg1, arg2, ...,argN){
 }
 ```
 
-Pour appeler le constructeur d'une classe en JavaScript, utilisez un opérateur `new` pour affecter une nouvelle {{glossary("Object reference","référence d'objet")}} à une {{glossary("Variable","variable")}}.
+Pour appeler le constructeur d'une classe en JavaScript, utilisez un opérateur `new` pour affecter une nouvelle {{glossary("Object reference","référence d'objet")}} à une {{glossary("Variable","variable")}}.
 
 ```js
 function Default() {

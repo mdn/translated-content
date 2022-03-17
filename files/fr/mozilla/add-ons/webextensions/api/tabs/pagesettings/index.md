@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/PageSettings
 ---
 {{AddonSidebar}}
 
-Le type **`tabs.PageSettings`** est utilisé pour contrôler le rendu d'un onglet au format PDF par la méthode  {{WebExtAPIRef("tabs.saveAsPDF()")}}.
+Le type **`tabs.PageSettings`** est utilisé pour contrôler le rendu d'un onglet au format PDF par la méthode  {{WebExtAPIRef("tabs.saveAsPDF()")}}.
 
 Toutes ses propriétés sont facultatives.
 
@@ -41,7 +41,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `footerCenter` {{optional_inline}}
   - : `string`. Le texte du pied de page central de la page. Défaut : ''.
 - `footerLeft` {{optional_inline}}
-  - : `string`. Le texte pour le pied gauche de la page. Par défaut :  '\&PT'.
+  - : `string`. Le texte pour le pied gauche de la page. Par défaut :  '\&PT'.
 - `footerRight` {{optional_inline}}
   - : `string`. Le texte pour le pied droit de la page. Par défaut : '\&D'.
 - `headerCenter` {{optional_inline}}

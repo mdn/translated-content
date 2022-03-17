@@ -32,7 +32,7 @@ new Intl.DisplayNames(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} のページをご覧ください。次の Unicode 拡張キーが利用できます。
+  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページをご覧ください。次の Unicode 拡張キーが利用できます。
 
     - `nu`
       - : 使用する数値書式です。

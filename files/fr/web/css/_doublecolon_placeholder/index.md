@@ -22,7 +22,7 @@ Seul un sous-ensemble des propriétés CSS peut être utilisé avec un sélecteu
 
 - Toutes les propriétés liées aux polices de caractères : {{cssxref("font")}}, {{cssxref("font-kerning")}}, {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{cssxref("font-weight")}}, {{cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}} et {{cssxref("font-family")}}
 - La propriété {{cssxref("color")}}
-- Toutes les propriétés liées à l'arrière-plan : {{cssxref("background-color")}}, {{cssxref("background-clip")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}},  {{cssxref("background-attachment")}} et {{cssxref("background-blend-mode")}}
+- Toutes les propriétés liées à l'arrière-plan : {{cssxref("background-color")}}, {{cssxref("background-clip")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}},  {{cssxref("background-attachment")}} et {{cssxref("background-blend-mode")}}
 - {{cssxref("word-spacing")}}, {{cssxref("letter-spacing")}}, {{cssxref("text-decoration")}}, {{cssxref("text-transform")}} et {{cssxref("line-height")}}
 - {{cssxref("text-shadow")}}, {{cssxref("text-decoration")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}} et {{cssxref("vertical-align")}}.
 
@@ -38,7 +38,7 @@ Seul un sous-ensemble des propriétés CSS peut être utilisé avec un sélecteu
 
 ```css
 input::placeholder {
-  color: red;
+  color: red;
 }
 ```
 

@@ -23,7 +23,7 @@ N'importe quel type de donnée.
 
 ## Exemples
 
-Quand le code suivant est utilisé dans un service worker pour répondre à un message _push_ en envoyant les données reçues par {{domxref("PushMessageData")}} au contexte principal via un [message](/fr/docs/Web/API/Channel_Messaging_API), l'objet de l'évènement `onmessage` sera un `ExtendableMessageEvent`.
+Quand le code suivant est utilisé dans un service worker pour répondre à un message _push_ en envoyant les données reçues par {{domxref("PushMessageData")}} au contexte principal via un [message](/fr/docs/Web/API/Channel_Messaging_API), l'objet de l'évènement `onmessage` sera un `ExtendableMessageEvent`.
 
 ```js
 var port;

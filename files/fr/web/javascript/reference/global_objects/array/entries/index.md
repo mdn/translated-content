@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/entries
 ---
 {{JSRef}}
 
-La méthode **`entries()`** renvoie un nouvel objet de type  **`Array Iterator`** qui contient le couple clef/valeur pour chaque éléments du tableau.
+La méthode **`entries()`** renvoie un nouvel objet de type  **`Array Iterator`** qui contient le couple clef/valeur pour chaque éléments du tableau.
 
 {{EmbedInteractiveExample("pages/js/array-entries.html")}}
 

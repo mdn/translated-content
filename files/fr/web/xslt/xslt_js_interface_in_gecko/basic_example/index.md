@@ -10,7 +10,7 @@ original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko/Exemple_basique
 
 L'exemple que nous allons voir va charger un fichier XML et lui appliquer une transformation XSL. Nous utiliserons les mêmes fichiers que dans l'exemple [Génération de HTML](fr/XSLT_dans_Gecko/G%c3%a9n%c3%a9ration_de_HTML) de l'article [XSLT dans Gecko](fr/XSLT_dans_Gecko). Le fichier XML décrit un article et le fichier XSL formate les informations pour l'affichage.
 
-**Figure 4 : fichier XML**
+**Figure 4&nbsp;: fichier XML**
 
 Document XML (example1.xml):
 
@@ -28,7 +28,7 @@ Document XML (example1.xml):
         </myNS:Body>
       </myNS:Article>
 
-**Figure 5 : feuille de style XSLT**
+**Figure 5&nbsp;: feuille de style XSLT**
 
 feuille de style XSL (example1.xsl):
 
@@ -60,7 +60,7 @@ feuille de style XSL (example1.xsl):
                   <xsl:value-of select="/myNS:Article/myNS:Title"/>
                 </span> <br />
 
-                Auteurs :   <br />
+                Auteurs&nbsp;:   <br />
                   <xsl:apply-templates select="/myNS:Article/myNS:Authors/myNS:Author"/>
                 </p>
 
@@ -77,7 +77,7 @@ feuille de style XSL (example1.xsl):
            --   <xsl:value-of select="." />
 
           <xsl:if test="@company">
-           ::   <strong>  <xsl:value-of select="@company" />  </strong>
+          &nbsp;::   <strong>  <xsl:value-of select="@company" />  </strong>
           </xsl:if>
 
           <br />
@@ -98,7 +98,7 @@ feuille de style XSL (example1.xsl):
 
 L'exemple charge en mémoire les deux fichiers .xsl (`xslStylesheet`) et .xml (`xmlDoc`) à l'aide de `XMLHTTPRequest` synchrone. Le fichier .xsl est alors importé (`xsltProcessor.importStylesheet(xslStylesheet)`) et la transformation exécutée (`xsltProcessor.transformToFragment(xmlDoc, document)`). Cela permet d'extraire des données après le chargement de la page, sans avoir à la rafraîchir.
 
-**Figure 6 : Exemple voir l'exemple**
+**Figure 6&nbsp;: Exemple voir l'exemple**
 
     var xslStylesheet;
     var xsltProcessor = new XSLTProcessor();

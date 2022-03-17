@@ -33,7 +33,7 @@ Un nouvel objet `ArrayBuffer`.
 
 ## Description
 
-La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) paramètre `fin`. Si le paramètre `début` ou  `fin` est négatif, il fera référence à l'indice à partir de la fin du tableau et non pas à l'indice à partir du début du tableau.
+La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) paramètre `fin`. Si le paramètre `début` ou `fin` est négatif, il fera référence à l'indice à partir de la fin du tableau et non pas à l'indice à partir du début du tableau.
 
 ## Exemples
 
@@ -50,7 +50,7 @@ var buf2 = buf1.slice(0)
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée dans EMCAScript 6.                    |
 | {{SpecName('ES6', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

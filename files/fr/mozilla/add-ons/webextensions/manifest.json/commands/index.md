@@ -41,7 +41,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 
 Utilisez la clé **`commands`** pour définir un ou plusieurs raccourcis clavier pour votre extension.
 
-Chaque raccourci clavier est défini avec un **nom**, une **combination de clé**, et un **description**. Une fois que vous avez défini des commandes dans le fichier `manifest.json`, de votre extension, vous pouvez écouter leurs combinaisons de touches associées avec l'API JavaScript  {{WebExtAPIRef("commands")}}.
+Chaque raccourci clavier est défini avec un **nom**, une **combination de clé**, et un **description**. Une fois que vous avez défini des commandes dans le fichier `manifest.json`, de votre extension, vous pouvez écouter leurs combinaisons de touches associées avec l'API JavaScript  {{WebExtAPIRef("commands")}}.
 
 ## Syntaxe
 
@@ -137,7 +137,7 @@ browser.commands.onCommand.addListener(function(command) {
 
 ### Raccourcis spéciaux
 
-Il existe 3 **raccourci spéciaux avec des actions par défaut**, pour lesquels l'événement  {{WebExtAPIRef("commands.onCommand")}} n'est pas déclenché :
+Il existe 3 **raccourci spéciaux avec des actions par défaut**, pour lesquels l'événement  {{WebExtAPIRef("commands.onCommand")}} n'est pas déclenché :
 
 - `_execute_browser_action`: fonctionne comme un clic sur une [action de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) de l'extension.
 - `_execute_page_action`: fonctionne comme un clic sur une [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions) de l'extension.

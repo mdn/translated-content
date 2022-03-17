@@ -20,7 +20,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ## **Notes d'utilisation**
 
-- Au sein d'une citation ({{HTMLElement("q")}}) ou dans un autre bloc ({{HTMLElement("blockquote")}}), le texte surligné marque généralement du texte référencé en dehors de la citation  ou qui est indiqué pour demander une attention particulière bien que l'auteur ne considère pas ce texte comme important.
+- Au sein d'une citation ({{HTMLElement("q")}}) ou dans un autre bloc ({{HTMLElement("blockquote")}}), le texte surligné marque généralement du texte référencé en dehors de la citation ou qui est indiqué pour demander une attention particulière bien que l'auteur ne considère pas ce texte comme important.
 - Au sein du texte principal, le texte surligné marque du texte d'une pertinence partiulière pour l'utilisateur (par exemple lorsqu'il recherche un terme en particulier).
 - `<mark>` ne doit pas être utilisé pour de la coloration syntaxique, c'est l'élément {{HTMLElement("span")}} qui devra être utilisé.
 - `<mark>` ne doit pas être confondu avec {{HTMLElement("strong")}}. L'élément {{HTMLElement("strong")}} est utilisé afin d'indiquer des fragments de texte _importants_ alors que `<mark>` est utilisé afin d'indiquer des fragments de texte _pertinents_.
@@ -151,8 +151,8 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
 
 | Spécification                                                                                                        | État                             | Commentaires |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element','&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element','&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

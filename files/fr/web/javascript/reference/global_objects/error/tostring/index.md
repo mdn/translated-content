@@ -24,7 +24,7 @@ Une chaîne de caractères représentant l'objet {{jsxref("Error")}}.
 
 ## Description
 
-L'objet {{jsxref("Error")}} surcharge la méthode {{jsxref("Object.prototype.toString()")}} héritée par tous les objets. Sa sémantique est la suivante (en partant du principe que {{jsxref("Object")}} et {{jsxref("String")}} ont leurs valeurs originales) :
+L'objet {{jsxref("Error")}} surcharge la méthode {{jsxref("Object.prototype.toString()")}} héritée par tous les objets. Sa sémantique est la suivante (en partant du principe que {{jsxref("Object")}} et {{jsxref("String")}} ont leurs valeurs originales) :
 
 ```js
 Error.prototype.toString = function () {

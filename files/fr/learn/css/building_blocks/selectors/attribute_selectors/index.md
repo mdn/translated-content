@@ -11,7 +11,7 @@ Dans l'étude de HTML, nous avons vu les attributs d'un élément. En CSS, on pe
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Maîtrise élémentaire de l'informatique,
         <a
@@ -30,7 +30,7 @@ Dans l'étude de HTML, nous avons vu les attributs d'un élément. En CSS, on pe
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Découvrir les sélecteurs d'attribut et comment les utiliser.</td>
     </tr>
   </tbody>

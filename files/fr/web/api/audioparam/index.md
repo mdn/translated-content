@@ -26,16 +26,16 @@ Chaque `AudioParam` a une liste d'événements, initialement vide, qui définit 
 _Hérite des propriétés de son parent, `AudioNode`._
 
 - {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
-  - : Volume initial tel que défini par l'{{domxref ("AudioNode")}} qui crée l'`AudioParam`.
-- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
-  - : Valeur maximum de la plage nominale (effective).
+  - : Volume initial tel que défini par l'{{domxref ("AudioNode")}} qui crée l'`AudioParam`.
+- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+  - : Valeur maximum de la plage nominale (effective).
 - {{domxref("AudioParam.minValue")}} {{readonlyinline}}
-  - : Valeur minimum de la plage nominale (effective).
+  - : Valeur minimum de la plage nominale (effective).
 
 <!---->
 
 - {{domxref("AudioParam.value")}}
-  - : Volume, exprimé sous forme de nombre flottant, initialement défini par la valeur de `AudioParam.defaultValue`. Même s'il peut être modifié, toute modification qui a lieu alors que des événements d'automatisation sont prévus - événements programmés en utilisant les méthodes de la `AudioParam` - est ignorée, sans lever aucune exception
+  - : Volume, exprimé sous forme de nombre flottant, initialement défini par la valeur de `AudioParam.defaultValue`. Même s'il peut être modifié, toute modification qui a lieu alors que des événements d'automatisation sont prévus - événements programmés en utilisant les méthodes de la `AudioParam` - est ignorée, sans lever aucune exception
 
 ## Méthodes
 
@@ -86,7 +86,7 @@ biquadFilter.gain.value = 25;
 
 | Spécification                                                                            | Statut                               | Commentaire |
 | ---------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioParam-section', 'AudioParam')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#AudioParam-section', 'AudioParam')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

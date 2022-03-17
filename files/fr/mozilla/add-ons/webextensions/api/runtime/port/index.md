@@ -48,7 +48,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `object`. Si le port a été déconnecté en raison d'une erreur, il sera défini sur un objet avec un `message`, de propriété de chaîne, vous donnant plus d'informations sur l'erreur. Voir `onDisconnect`.
 - `onDisconnect`
 
-  - : `object`. Cela contient les fonctions `addListener()` et `removeListener()` communes à tous les événements pour les extensions créées à l'aide des API. WebExtension. Les fonctions de l'écouteur seront appelées lorsque l'autre extrémité aura appelé `Port.disconnect()`. Cet événement ne sera déclenché qu'une fois pour chaque port. La fonction d'écouteur recevra l'objet `Port`. Si le port a été déconnecté en raison d'une erreur, l'argument `Port` contiendra une propriété  `error` donnant plus d'informations sur l'erreur :
+  - : `object`. Cela contient les fonctions `addListener()` et `removeListener()` communes à tous les événements pour les extensions créées à l'aide des API. WebExtension. Les fonctions de l'écouteur seront appelées lorsque l'autre extrémité aura appelé `Port.disconnect()`. Cet événement ne sera déclenché qu'une fois pour chaque port. La fonction d'écouteur recevra l'objet `Port`. Si le port a été déconnecté en raison d'une erreur, l'argument `Port` contiendra une propriété  `error` donnant plus d'informations sur l'erreur :
 
     ```js
     port.onDisconnect.addListener((p) => {
@@ -58,14 +58,14 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
     });
     ```
 
-    Notez que dans Google Chrome `port.error` n'est pas supporté: utilisez plutôt  {{WebExtAPIRef("runtime.lastError")}} pour obtenir le message d'erreur.
+    Notez que dans Google Chrome `port.error` n'est pas supporté: utilisez plutôt  {{WebExtAPIRef("runtime.lastError")}} pour obtenir le message d'erreur.
 
 - `onMessage`
   - : `object`. Cela contient les fonctions `addListener()` et `removeListener()` communes à tous les événements pour les extensions créées à l'aide des API WebExtension. Les fonctions de l'écouteur seront appelées lorsque l'autre extrémité aura envoyé un message à ce port. L'écouteur recevra l'objet JSON envoyé par l'autre extrémité.
 - `postMessage`
   - : `function`. Envoyer un message à l'autre extrémité. Cela prend un argument, qui est un objet JSON représentant le message à envoyer. Il sera fourni à tout script écoutant l'événement `onMessage` du port, ou à l'application native si ce port est connecté à une application native.
 - `sender`{{optional_inline}}
-  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contient des informations sur l'expéditeur du message. ette propriété ne sera présente que sur les ports transmis aux écouteurs `onConnect`/`onConnectExternal`.
+  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contient des informations sur l'expéditeur du message. ette propriété ne sera présente que sur les ports transmis aux écouteurs `onConnect`/`onConnectExternal`.
 
 ## Compatibilité du navigateur
 

@@ -55,7 +55,7 @@ Les propriétés d'un objet qui n'ont pas été affectées auront la valeur [`un
 maVoiture.color; // undefined
 ```
 
-On peut aussi définir ou accéder à des propriétés JavaScript en utilisant une notation avec les crochets (voir la page sur [les accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors) pour plus de détails). Les objets sont parfois appelés « tableaux associatifs ». Cela peut se comprendre, car chaque propriété est associée avec une chaîne de caractères qui permet d'y accéder. Ainsi, par exemple, on peut accéder aux propriétés de l'objet `maVoiture` de la façon suivante :
+On peut aussi définir ou accéder à des propriétés JavaScript en utilisant une notation avec les crochets (voir la page sur [les accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors) pour plus de détails). Les objets sont parfois appelés «&nbsp;tableaux associatifs&nbsp;». Cela peut se comprendre, car chaque propriété est associée avec une chaîne de caractères qui permet d'y accéder. Ainsi, par exemple, on peut accéder aux propriétés de l'objet `maVoiture` de la façon suivante :
 
 ```js
 maVoiture["fabricant"] = "Ford";
@@ -276,7 +276,7 @@ Les objets peuvent également être créés en utilisant la méthode [`Object.cr
 ```js
 // Propriétés pour animal et encapsulation des méthodes
 let Animal = {
-  type: "Invertébrés",        // Valeur par défaut  value of properties
+  type: "Invertébrés",        // Valeur par défaut value of properties
   afficherType : function() {  // Une méthode pour afficher le type Animal
     console.log(this.type);
   }
@@ -348,7 +348,7 @@ On peut définir des méthodes pour un type d'objet en incluant la définition d
 ```js
 function afficheVoiture() {
   let resultat = `Une belle ${this.modele}, fabriquée en ${this.annee} par ${this.fabricant}`;
-  console.log(résultat);
+  console.log(resultat);
 }
 ```
 

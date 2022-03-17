@@ -125,9 +125,9 @@ align-self: unset;
 
 ```html
 <div class="flex-container">
-  <p class="element-flex center">Milieu</p>
-  <p class="element-flex baseline">Base</p>
-  <p class="element-flex stretch">Étiré</p>
+  <p class="element-flex center">Milieu</p>
+  <p class="element-flex baseline">Base</p>
+  <p class="element-flex stretch">Étiré</p>
 </div>
 ```
 
@@ -139,7 +139,7 @@ align-self: unset;
 
 | Spécification                                                                                    | État                                     | Commentaires         |
 | ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-align-self", "align-self")}} | {{Spec2("CSS3 Box Alignment")}} |                      |
+| {{SpecName("CSS3 Box Alignment", "#propdef-align-self", "align-self")}} | {{Spec2("CSS3 Box Alignment")}} |                      |
 | {{SpecName("CSS3 Flexbox", "#propdef-align-self", "align-self")}}         | {{Spec2("CSS3 Flexbox")}}         | Définition initiale. |
 
 {{cssinfo}}

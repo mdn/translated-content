@@ -11,7 +11,7 @@ translation_of: Web/API/WebGLRenderingContext/deleteBuffer
 ---
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.deleteBuffer()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) supprime le {{domxref ("WebGLBuffer")}} indiqué. Cette méthode n'a aucun effet si le tampon a déjà été supprimé.
+La méthode **`WebGLRenderingContext.deleteBuffer()`** de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) supprime le {{domxref ("WebGLBuffer")}} indiqué. Cette méthode n'a aucun effet si le tampon a déjà été supprimé.
 
 ## Syntaxe
 

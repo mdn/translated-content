@@ -46,7 +46,7 @@ Aucun.
 <!---->
 
 - `data-type`
-  - : Définit si les éléments doivent être ordonnés alphabétiquement ou numériquement. Les valeurs autorisées sont `text` et `number` ; `text` est la valeur par défaut.
+  - : Définit si les éléments doivent être ordonnés alphabétiquement ou numériquement. Les valeurs autorisées sont `text` et `number`&nbsp;; `text` est la valeur par défaut.
 
 ### Type
 

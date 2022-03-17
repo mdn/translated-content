@@ -10,8 +10,6 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Boilerplate_1
 original_slug: Web/API/WebGL_API/By_example/Modèle_1
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL","Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique")}}
 
 Dans cet article, on décrit les fragments de code qui seront réutilisés pour les exemples suivants (où ils seront masqués pour une meilleur lisibilité). Parmi ce code, on définit une fonction JavaScript utilitaire qui permet de simplifier l'initialisation de WebGL.
@@ -37,7 +35,7 @@ Dans les exemples suivants, on utilisera la fonction utilitaire JavaScript `getR
 - Nettoie le buffer avec `clear`
 - Applique le contexte initialisé
 
-S'il y a une erreur, la fonction affiche un message d'erreur et renvoie `null`.
+S'il y a une erreur, la fonction affiche un message d'erreur et renvoie `null`.
 
 Enfin, tout le code JavaScript est exécuté par une fonction immédiatement appelée (une technique plutôt commune avec JavaScript). La déclaration de la fonction et son invocation seront cachées.
 
