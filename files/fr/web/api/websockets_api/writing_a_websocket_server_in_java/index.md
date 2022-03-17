@@ -9,7 +9,7 @@ Cet exemple montre comment créer un serveur d'API WebSocket API utilisant Java 
 
 Bien que d'autres languages exécutés côté serveur peuvent être utilisés pour créer un serveur de WebSocket, cet exemple utilise Java d'Oracle pour simplifier le code en exemple.
 
-Ce serveur respecte la [RFC 6455](http://tools.ietf.org/html/rfc6455), dont il prend uniquement en charge les connexions depuis Chrome 16, Firefox 11, IE 10 et au delà.
+Ce serveur respecte la [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455), dont il prend uniquement en charge les connexions depuis Chrome 16, Firefox 11, IE 10 et au-delà.
 
 ## Premiers pas
 
