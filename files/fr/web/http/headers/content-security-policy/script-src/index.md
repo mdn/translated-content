@@ -72,7 +72,7 @@ document.getElementById("btn").addEventListener('click', faireQuelqueChose);
 
 ### Scripts embarqués non fiables
 
-> **Note :** Bloquer les styles et scripts embarqués est l'une des stratégies de sécurité majeures que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettront de les autoriser.
+> **Note :** Bloquer les styles et scripts embarqués est l'une des stratégies de sécurité principales que CSP propose. Toutefois, si vous en avez absolument besoin, il existe des mécanismes qui vous permettront de les autoriser.
 
 Vous pouvez autoriser les scripts embarqués et les gestionnaires d'évènements par attributs en spécifiant la valeur `'unsafe-inline'`, des nonces ou des empreintes correspondant au script.
 

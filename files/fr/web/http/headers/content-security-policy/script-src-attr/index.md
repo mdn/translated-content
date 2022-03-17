@@ -6,7 +6,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.script-src-attr
 ---
 {{HTTPSidebar}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) **`script-src-attr`** indique les sources valides pour les gestionnaires d'évènement déclarés dans le document HTML. Cela inclut les scripts déclarés à même les attributs comme `onclick`, mais pas les URL chargées directement par des éléments [`<script>`](/fr/docs/Web/HTML/Element/script).
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`script-src-attr`** indique les sources valides pour les gestionnaires d'évènement déclarés dans le document HTML. Cela inclut les scripts déclarés à même les attributs comme `onclick`, mais pas les URL chargées directement par des éléments [`<script>`](/fr/docs/Web/HTML/Element/script) (voir [`script-src-elem`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) pour ces derniers).
 
 <table class="properties">
   <tbody>
@@ -21,7 +21,7 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-
     <tr>
       <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src"><code>script-src</code></a>, qui a pour valeur par défaut celle de la directive <code>default-src</code>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src"><code>script-src</code></a>, qui a pour valeur par défaut celle de la directive <code>default-src</code>.
       </td>
     </tr>
   </tbody>
@@ -36,7 +36,7 @@ Content-Security-Policy: script-src-attr <source>;
 Content-Security-Policy: script-src-attr <source> <source>;
 ```
 
-`script-src-attr` peut être utilisé avec [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)&nbsp;:
+`script-src-attr` peut être utilisée avec [`script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)&nbsp;:
 
 ```http
 Content-Security-Policy: script-src <source>;
