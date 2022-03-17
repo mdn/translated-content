@@ -86,7 +86,7 @@ translation_of: Web/API/WebXR_Device_API
 <ul>
  <li>在用户事件句柄总或者在用户启动 <a href="/en-US/docs/Web/Progressive_web_apps">web 应用</a>中执行的 <code>requestSession()</code> 调用；</li>
  <li>文档是可信赖的，其中的内容是可靠的、及时更新的以及有着重点；</li>
- <li>用户有明确的使用沉浸式 VR 模式的意图，后文中 {{anch("User intent")}} 一节将有详细描述。</li>
+ <li>用户有明确的使用沉浸式 VR 模式的意图，后文中，<a href="#用户意图">用户意图</a>一节将有详细描述。</li>
 </ul>
 
 <p>如果上述三点均满足， <code>requestSession()</code> 返回的 Promise 将被 resolve，新的 {{domxref("XRSession")}} 对象被传入完成时的处理函数中。如果有不满足的情况，将会根据具体场景抛出异常，比如当没有权限进入沉浸式模式情况下， <code>SecurityError</code> 将被抛出。</p>
