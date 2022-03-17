@@ -92,6 +92,12 @@ p_list = doc.getElementsByTagName("para");
    </td>
   </tr>
   <tr>
+    <td><code>Node</code></td>
+    <td>
+      <p><code>document</code> 내에 있는 모든 객체는 일종의 노드입니다. 이 객체는 HTML 문서에서, element 노드가 될 수 있지만 text 노드나 attribute노드가 될 수도 있습니다.</p>
+    </td>
+  </tr>
+  <tr>
    <td><code>element</code></td>
    <td>
     <p><code>element</code> 는 DOM API 의 member 에 의해 return 된 element 또는 <code>element</code> type 의 node 를 의미한다. <a href="/ko/docs/Web/API/Document/createElement">document.createElement()</a> method 가 <code>node</code> 를 참조하는 object 를 리턴한다고 말하는 대신, 이 method 가 DOM 안에서 생생되는 <code>element</code> 를 리턴한다고 좀 더 단순하게 말할 수 있다. <code>element</code> 객체들은 DOM <code>Element</code> interface 와 함께 좀 더 기본적인 <code>Node</code> interface 를 구현한 것이기 때문에 이 reference 에는 두 가지가 모두 포함되었다고 생각하면 된다.</p>
