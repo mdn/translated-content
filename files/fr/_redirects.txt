@@ -3742,6 +3742,7 @@
 /fr/docs/Web/API/SVGStylable	/fr/docs/orphaned/Web/API/SVGStylable
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
+/fr/docs/Web/API/ServiceWorker/onstatechange	/fr/docs/Web/API/ServiceWorker/statechange_event
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/orphaned/Web/API/ServiceWorkerState
 /fr/docs/Web/API/SharedWorkerGlobalScope/onconnect	/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage

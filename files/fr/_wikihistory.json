@@ -19078,7 +19078,7 @@
       "nobe4"
     ]
   },
-  "Web/API/ServiceWorker/onstatechange": {
+  "Web/API/ServiceWorker/statechange_event": {
     "modified": "2019-03-23T22:37:05.749Z",
     "contributors": [
       "nobe4"

@@ -717,8 +717,10 @@
 /pt-BR/docs/Web/HTTP/Gerenciamento_de_Conexão_em_HTTP_1.x	/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /pt-BR/docs/Web/HTTP/HTTP	/pt-BR/docs/Web/HTTP/Caching
 /pt-BR/docs/Web/HTTP/Headers/Conexão	/pt-BR/docs/Web/HTTP/Headers/Connection
+/pt-BR/docs/Web/HTTP/Headers/Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Cookie
 /pt-BR/docs/Web/HTTP/Headers/Expira	/pt-BR/docs/Web/HTTP/Headers/Expires
 /pt-BR/docs/Web/HTTP/Headers/Localização	/pt-BR/docs/Web/HTTP/Headers/Location
+/pt-BR/docs/Web/HTTP/Headers/Set-Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Set-Cookie
 /pt-BR/docs/Web/HTTP/Mensagens	/pt-BR/docs/Web/HTTP/Messages
 /pt-BR/docs/Web/HTTP/Redirecionamento	/pt-BR/docs/Web/HTTP/Redirections
 /pt-BR/docs/Web/JavaScript/Enumerabilidade_e_posse_de_propriedades	/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
