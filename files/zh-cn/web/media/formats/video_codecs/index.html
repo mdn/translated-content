@@ -55,7 +55,7 @@ original_slug: Web/Media/Formats/视频编解码器
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a></td>
   </tr>
   <tr>
-   <th scope="row">{{anch("MP4V-ES")}}</th>
+   <th scope="row"><a href="#mp4v-es">MP4V-ES</a></th>
    <td>MPEG-4 Video Elemental Stream</td>
    <td><a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>, <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a></td>
   </tr>
@@ -235,7 +235,7 @@ original_slug: Web/Media/Formats/视频编解码器
 
 <p><a href="https://mdn.mozillademos.org/files/16684/Ringing-effects.png"><img alt="Example of the ringing effect" src="https://mdn.mozillademos.org/files/16684/Ringing-effects.png" style="height: 368px; width: 350px;"></a></p>
 
-<p>Note the blue and pink fringes around the edges of the star above (as well as the stepping and other significant compression artifacts). Those fringes are the ringing effect. Ringing is similar in some respects to {{anch("Mosquito noise", "mosquito noise")}}, except that while the ringing effect is more or less steady and unchanging, mosquito noise shimmers and moves.</p>
+<p>Note the blue and pink fringes around the edges of the star above (as well as the stepping and other significant compression artifacts). Those fringes are the ringing effect. Ringing is similar in some respects to <a href="#mosquito_noise">mosquito noise</a>, except that while the ringing effect is more or less steady and unchanging, mosquito noise shimmers and moves.</p>
 
 <p>RInging is another type of artifact that can make it particularly difficult to read text contained in your images.</p>
 
@@ -257,7 +257,7 @@ original_slug: Web/Media/Formats/视频编解码器
 
 <h3 id="Mosquito_noise">Mosquito noise</h3>
 
-<p><strong>Mosquito noise</strong> is a temporal artifact which presents as noise or <strong>edge busyness</strong> that appears as a flickering haziness or shimmering that roughly follows outside the edges of objects with hard edges or sharp transitions between foreground objects and the background. The effect can be similar in appearance to {{anch("Ringing", "ringing")}}.</p>
+<p><strong>Mosquito noise</strong> is a temporal artifact which presents as noise or <strong>edge busyness</strong> that appears as a flickering haziness or shimmering that roughly follows outside the edges of objects with hard edges or sharp transitions between foreground objects and the background. The effect can be similar in appearance to <a href="#ringing">ringing</a>.</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/16687/mosquito-effect-sm.png" style="height: 393px; width: 400px;"></p>
 
@@ -316,7 +316,7 @@ original_slug: Web/Media/Formats/视频编解码器
 
 <h3 id="AV1">AV1</h3>
 
-<p>The <strong>AOMedia Video 1</strong> (<strong>AV1</strong>) codec is an open format designed by the <a href="https://aomedia.org/">Alliance for Open Media</a> specifically for internet video. It achieves higher data compression rates than {{anch("VP9")}} and {{anch("HEVC", "H.265/HEVC")}}, and as much as 50% higher rates than <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">AVC</a>. AV1 is fully royalty-free and is designed for use by both the {{HTMLElement("video")}} element and by <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>.</p>
+<p>The <strong>AOMedia Video 1</strong> (<strong>AV1</strong>) codec is an open format designed by the <a href="https://aomedia.org/">Alliance for Open Media</a> specifically for internet video. It achieves higher data compression rates than <a href="#vp9">VP9</a> and {{anch("HEVC", "H.265/HEVC")}}, and as much as 50% higher rates than <a href="/en-US/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)">AVC</a>. AV1 is fully royalty-free and is designed for use by both the {{HTMLElement("video")}} element and by <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a>.</p>
 
 <p>AV1 currently offers three profiles: <strong>main</strong>, <strong>high</strong>, and <strong>professional</strong> with increasing support for color depths and chroma subsampling. In addition, a series of <strong>levels</strong> are specified, each defining limits on a range of attributes of the video. These attributes include frame dimensions, image area in pixels, display and decode rates, average and maximum bit rates, and limits on the number of tiles and tile columns used in the encoding/decoding process.</p>
 
@@ -1375,7 +1375,7 @@ original_slug: Web/Media/Formats/视频编解码器
 
 <p>VP9's main profile supports only 8-bit color depth at 4:2:0 chroma subsampling levels, but its profiles include support for deeper color and the full range of chroma subsampling modes. It supports several HDR imiplementations, and offers substantial freedom in selecting frame rates, aspect ratios, and frame sizes.</p>
 
-<p>VP9 is widely supported by browsers, and hardware implementations of the codec are fairly common. VP9 is one of the two video codecs mandated by <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a> (the other being {{anch("VP8")}}). Of note, however, is that Safari supports neither WebM nor VP9, so if you choose to use VP9, be sure to offer a fallback format such as AVC or HEVC for iPhone, iPad, and Mac users.</p>
+<p>VP9 is widely supported by browsers, and hardware implementations of the codec are fairly common. VP9 is one of the two video codecs mandated by <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a> (the other being <a href="#vp8">VP8</a>). Of note, however, is that Safari supports neither WebM nor VP9, so if you choose to use VP9, be sure to offer a fallback format such as AVC or HEVC for iPhone, iPad, and Mac users.</p>
 
 <p>Aside from the lack of Safari support, VP9 is a good choice if you are able to use a WebM container and are able to provide a fallback video in a format such as AVC or HEVC for Safari users. This is especially true if you wish to use an open codec rather than a proprietary one. If you can't provide a fallback and aren't willing to sacrifice Safari compatibility, VP9 in WebM is a good option. Otherwise, you should probably consider a different codec.</p>
 
@@ -1525,7 +1525,7 @@ original_slug: Web/Media/Formats/视频编解码器
 
 <ol>
  <li>
-  <p>A <strong><a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a></strong> container using the <strong>{{anch("VP8")}}</strong> codec for video and the <strong><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Opus">Opus</a></strong> codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.</p>
+  <p>A <strong><a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a></strong> container using the <strong><a href="#vp8">VP8</a></strong> codec for video and the <strong><a href="/en-US/docs/Web/Media/Formats/Audio_codecs#Opus">Opus</a></strong> codec for audio. These are all open, royalty-free formats which are generally well-supported, although only in quite recent browsers, which is why a fallback is a good idea.</p>
 
   <pre class="brush: js">&lt;video controls src="filename.webm"&gt;&lt;/video&gt;
 </pre>
@@ -1587,7 +1587,7 @@ original_slug: Web/Media/Formats/视频编解码器
 
 <h4 id="Recording_video">Recording video</h4>
 
-<p>Given the constraints on how close to lossless you can get, you might consider using {{anch("AVC")}} or {{anch("AV1")}}. For example, if you're using the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> to record video, you might use code like the following when creating your {{domxref("MediaRecorder")}} object:</p>
+<p>Given the constraints on how close to lossless you can get, you might consider using {{anch("AVC")}} or <a href="#av1">AV1</a>. For example, if you're using the <a href="/en-US/docs/Web/API/MediaStream_Recording_API">MediaStream Recording API</a> to record video, you might use code like the following when creating your {{domxref("MediaRecorder")}} object:</p>
 
 <pre class="brush: js">const kbps = 1024;
 const Mbps = kbps*kbps;
@@ -1599,7 +1599,7 @@ const options = {
 
 let recorder = new MediaRecorder(sourceStream, options);</pre>
 
-<p>This example creates a <code>MediaRecorder</code> configured to record {{anch("AV1")}} video using BT.2100 HDR in 12-bit color with 4:4:4 chroma subsampling and <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#FLAC">FLAC</a> for lossless audio. The resulting file will use a bit rate of no more than 800 Mbps shared between the video and audio tracks. You will likely need to adjust these values depending on hardware performance, your requirements, and the specific codecs you choose to use. This bit rate is obviously not realistic for network transmission and would likely only be used locally.</p>
+<p>This example creates a <code>MediaRecorder</code> configured to record <a href="#av1">AV1</a> video using BT.2100 HDR in 12-bit color with 4:4:4 chroma subsampling and <a href="/en-US/docs/Web/Media/Formats/Audio_codecs#FLAC">FLAC</a> for lossless audio. The resulting file will use a bit rate of no more than 800 Mbps shared between the video and audio tracks. You will likely need to adjust these values depending on hardware performance, your requirements, and the specific codecs you choose to use. This bit rate is obviously not realistic for network transmission and would likely only be used locally.</p>
 
 <p>Breaking down the value of the <code>codecs</code> parameter into its dot-delineated properties, we see the following:</p>
 
@@ -1613,7 +1613,7 @@ let recorder = new MediaRecorder(sourceStream, options);</pre>
  <tbody>
   <tr>
    <td><code>av01</code></td>
-   <td>The four-character code (4CC) designation identifying the {{anch("AV1")}} codec.</td>
+   <td>The four-character code (4CC) designation identifying the <a href="#av1">AV1</a> codec.</td>
   </tr>
   <tr>
    <td><code>2</code></td>

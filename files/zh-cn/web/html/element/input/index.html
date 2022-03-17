@@ -687,7 +687,7 @@ translation_of: Web/HTML/Element/input
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the input has no minimum length.</p>
 
- <p>The input will fail <a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.</p>
+ <p>The input will fail <a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See <a href="#client-side_validation">Client-side validation</a> for more information.</p>
  </dd>
  <dt>{{ htmlattrdef("multiple") }}{{ HTMLVersionInline(5) }}</dt>
  <dd>This Boolean attribute indicates whether the user can enter more than one value.这个属性指示用户能否输入多个值。这个属性仅在<strong>type</strong>属性为 email 或 file 的时候生效 ; 否则被忽视。</dd>
@@ -719,7 +719,7 @@ translation_of: Web/HTML/Element/input
  <dd>元素在当前文档的 Tab 导航顺序中的位置。</dd>
  <dt id="htmlattrdefformenctype">{{htmlattrdef('title')}}</dt>
  <dd>
- <p>Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a <code>for</code> attribute set to the form control's {{htmlattrdef('id')}} attribute. See {{anch("Labels")}} below.</p>
+ <p>Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a <code>for</code> attribute set to the form control's {{htmlattrdef('id')}} attribute. See <a href="#labels">Labels</a> below.</p>
  </dd>
  <dt>{{ htmlattrdef("type") }}</dt>
  <dd>要呈现的控件类型。有关各个类型的信息，请参阅 {{anch("Form &lt;input&gt; types")}}，其中包含指向每个类型的更多信息的链接。</dd>

@@ -29,7 +29,7 @@ original_slug: Web/HTML/Element/Input/月份
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>一个 {{domxref("DOMString")}} 代表一个月，一年，或者是空。</td>
   </tr>
   <tr>
@@ -108,7 +108,7 @@ monthControl.value = '1978-06';</pre>
 
 <h3 id="htmlattrdef(max)">{{htmlattrdef("max")}}</h3>
 
-<p>The latest year and month, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string in "<code>yyyy-MM</code>" format, then the element has no maximum value.</p>
+<p>The latest year and month, in the string format discussed in the <a href="#value">Value</a> section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string in "<code>yyyy-MM</code>" format, then the element has no maximum value.</p>
 
 <p>This value must specify a year-month pairing later than or equal to the one specified by the <code>min</code> attribute.</p>
 
@@ -140,7 +140,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>我们在往下看更多关于<code>&lt;input type="month"&gt;</code>基础和更多的高级的用法</p>
 
-<p>, 下面将讲有关缓解浏览器支持问题的建议 (请参阅{{anch("Handling browser support")}}).</p>
+<p>, 下面将讲有关缓解浏览器支持问题的建议 (请参阅<a href="#handling_browser_support">Handling browser support</a>).</p>
 
 <h3 id="Basic_uses_of_month">Basic uses of month</h3>
 
@@ -169,7 +169,7 @@ monthControl.value = '1978-06';</pre>
 
 <ul>
  <li>月份只有在 2017 年八月份到 1900 年一月可以选择 — 在这个控件里这个范围以外的月份不能滚动选择。</li>
- <li>Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).</li>
+ <li>Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see <a href="#validation">Validation</a>) but still available (e.g. Chrome).</li>
 </ul>
 
 <div class="note">

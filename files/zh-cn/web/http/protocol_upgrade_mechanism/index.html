@@ -7,7 +7,7 @@ translation_of: Web/HTTP/Protocol_upgrade_mechanism
 
 <p><a href="/en/HTTP" title="en/HTTP">HTTP协议</a> 提供了一种特殊的机制，这一机制允许将一个已建立的连接升级成新的、不相容的协议。这篇指南涵盖了其工作原理和使用场景。</p>
 
-<p>通常来说这一机制总是由客户端发起的 （不过也有例外，比如说可以由服务端发起{{anch("Server-initiated upgrade to TLS", "升级到传输层安全协议（TLS）")}}）， 服务端可以选择是否要升级到新协议。借助这一技术，连接可以以常用的协议启动（如HTTP/1.1），随后再升级到HTTP2甚至是WebSockets.</p>
+<p>通常来说这一机制总是由客户端发起的 （不过也有例外，比如说可以由服务端发起<a href="#server-initiated_upgrade_to_tls">升级到传输层安全协议（TLS）</a>）， 服务端可以选择是否要升级到新协议。借助这一技术，连接可以以常用的协议启动（如HTTP/1.1），随后再升级到HTTP2甚至是WebSockets.</p>
 
 <p>注意：HTTP/2 明确禁止使用此机制，这个机制只属于HTTP/1.1</p>
 

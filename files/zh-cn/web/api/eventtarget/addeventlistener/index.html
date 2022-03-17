@@ -39,7 +39,7 @@ Non-standard_inline}});  // Gecko/Mozilla only
  <ul>
   <li><code>capture</code>:  {{jsxref("Boolean")}}，表示 <code>listener</code> 会在该类型的事件捕获阶段传播到该 <code>EventTarget</code> 时触发。</li>
   <li><code>once</code>:  {{jsxref("Boolean")}}，表示 <code>listener 在添加之后最多只调用一次。如果是</code> <code>true，</code> <code>listener</code> 会在其被调用之后自动移除。</li>
-  <li><code>passive</code>: {{jsxref("Boolean")}}，设置为true时，表示 <code>listener</code> 永远不会调用 <code>preventDefault()</code>。如果 listener 仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。查看 {{anch("使用 passive 改善的滚屏性能")}} 了解更多.</li>
+  <li><code>passive</code>: {{jsxref("Boolean")}}，设置为true时，表示 <code>listener</code> 永远不会调用 <code>preventDefault()</code>。如果 listener 仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。查看 <a href="#使用_passive_改善的滚屏性能">使用 passive 改善的滚屏性能</a> 了解更多.</li>
   <li><code>signal</code>：{{domxref("AbortSignal")}}，该 <code>AbortSignal</code> 的 {{domxref("AbortController/abort()", "abort()")}} 方法被调用时，监听器会被移除。</li>
   <li>{{non-standard_inline}}<code> mozSystemGroup</code>: 只能在 XBL 或者是 Firefox' chrome 使用，这是个 {{jsxref("Boolean")}}，表示 <code>listener </code>被添加到 system group。</li>
  </ul>
