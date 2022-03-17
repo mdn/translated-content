@@ -52,7 +52,3 @@ HTML5 では、 DOCTYPE の用途は完全標準準拠モードを適用させ�
 Firefox では、コンテキストメニューで *ページの情報を表示* を選択して、*描画モード* を確認してください。（[Firefox のページ情報ウィンドウ](https://support.mozilla.org/ja/kb/firefox-page-info-window)）
 
 Internet Explorer では、 *F12* を押下して、*ドキュメントモード* を確認してください。
-
-<h2 id="What_are_the_differences_between_the_modes.3F" name="What_are_the_differences_between_the_modes.3F">モードの違い</h2>
-
-それぞれのモードの違いについては、<a href="/ja/docs/Mozilla_Quirks_Mode_Behavior" title="Mozilla_Quirks_Mode_Behavior">互換モード一覧</a> および <a href="/ja/docs/Mozilla/Gecko_Almost_Standards_Mode" title="Gecko%27s_%22Almost_Standards%22_Mode">準標準準拠モード</a> をご覧ください。
