@@ -75,7 +75,7 @@
 /pt-BR/docs/Aprender/JavaScript/Objetos/Object_building_practice	/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice
 /pt-BR/docs/Aprender/JavaScript/Objetos/Object_prototypes	/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes
 /pt-BR/docs/Aprender/Learning_and_getting_help	/pt-BR/docs/Learn/Learning_and_getting_help
-/pt-BR/docs/Aprender/Release_notes	/pt-BR/docs/Learn/Release_notes
+/pt-BR/docs/Aprender/Release_notes	/pt-BR/docs/conflicting/Learn
 /pt-BR/docs/CSS	/pt-BR/docs/Web/CSS
 /pt-BR/docs/CSS/@page	/pt-BR/docs/Web/CSS/@page
 /pt-BR/docs/CSS/At-rule	/pt-BR/docs/Web/CSS/At-rule
@@ -405,6 +405,7 @@
 /pt-BR/docs/Learn/JavaScript/First_steps/Variáveis	/pt-BR/docs/Learn/JavaScript/First_steps/Variables
 /pt-BR/docs/Learn/JavaScript/Objects/Inheritance	/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
 /pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS	/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
+/pt-BR/docs/Learn/Release_notes	/pt-BR/docs/conflicting/Learn
 /pt-BR/docs/Learn/Server-side/Django/Hospedagem	/pt-BR/docs/Learn/Server-side/Django/Deployment
 /pt-BR/docs/Learn/Server-side/Django/Introdução	/pt-BR/docs/Learn/Server-side/Django/Introduction
 /pt-BR/docs/Learn/Server-side/Django/Sessões	/pt-BR/docs/Learn/Server-side/Django/Sessions
@@ -517,6 +518,7 @@
 /pt-BR/docs/Web/API/Element/accessKey	/pt-BR/docs/Web/API/HTMLElement/accessKey
 /pt-BR/docs/Web/API/Element/addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/Event/Comparativo_entre_Event_Targets	/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets
+/pt-BR/docs/Web/API/EventSource/onerror	/pt-BR/docs/Web/API/EventSource/error_event
 /pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage
 /pt-BR/docs/Web/API/FileReader/onload	/pt-BR/docs/Web/API/FileReader/load_event
 /pt-BR/docs/Web/API/FullscreenOptions	/pt-BR/docs/orphaned/Web/API/FullscreenOptions
@@ -715,8 +717,10 @@
 /pt-BR/docs/Web/HTTP/Gerenciamento_de_Conexão_em_HTTP_1.x	/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /pt-BR/docs/Web/HTTP/HTTP	/pt-BR/docs/Web/HTTP/Caching
 /pt-BR/docs/Web/HTTP/Headers/Conexão	/pt-BR/docs/Web/HTTP/Headers/Connection
+/pt-BR/docs/Web/HTTP/Headers/Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Cookie
 /pt-BR/docs/Web/HTTP/Headers/Expira	/pt-BR/docs/Web/HTTP/Headers/Expires
 /pt-BR/docs/Web/HTTP/Headers/Localização	/pt-BR/docs/Web/HTTP/Headers/Location
+/pt-BR/docs/Web/HTTP/Headers/Set-Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Set-Cookie
 /pt-BR/docs/Web/HTTP/Mensagens	/pt-BR/docs/Web/HTTP/Messages
 /pt-BR/docs/Web/HTTP/Redirecionamento	/pt-BR/docs/Web/HTTP/Redirections
 /pt-BR/docs/Web/JavaScript/Enumerabilidade_e_posse_de_propriedades	/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties

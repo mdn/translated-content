@@ -9,7 +9,7 @@ translation_of: Web/API/HTMLStyleElement
 
 ### Notes
 
-Consultez les pages suivantes pour plus d'informations sur certains des objets utilisés pour manipuler les propriétés CSS depuis le DOM :
+Consultez les pages suivantes pour plus d'informations sur certains des objets utilisés pour manipuler les propriétés CSS depuis le DOM&nbsp;:
 
 - [L'objet DOM element.style](fr/DOM/element.style)
 - [L'objet DOM stylesheet](fr/DOM/stylesheet)
@@ -35,7 +35,7 @@ ou directement sur cet élément à l'aide de `element.style.propertyName` (par 
 
 De plus, lorsque cette propriété est définie sur un élément, elle écrase et efface tout style qui peut avoir été défini ailleurs pour cette propriété particulière de l'élément. Par exemple, définir la propriété `border` écrasera les réglages définis ailleurs pour la propriété `border` de cet élément dans la section `head` du document ou dans des feuilles de style externes. Cependant, cela n'affectera pas les autres déclarations de propriétés pour les styles de cet élément, comme `padding`, `margin` ou `font` par exemple.
 
-Pour changer le style d'un élément particulier, l'exemple suivant peut être adapté :
+Pour changer le style d'un élément particulier, l'exemple suivant peut être adapté&nbsp;:
 
 ```html
 <html>
@@ -82,7 +82,7 @@ L'objet `style` représente une règle de style individuelle. Contrairement aux 
 _in-line_
 d'un élément particulier.
 
-Mais il y a plus important que les deux propriétés exposées ici, c'est l'utilisation de l'objet `style` pour définir des propriétés de style individuelles sur un élément :
+Mais il y a plus important que les deux propriétés exposées ici, c'est l'utilisation de l'objet `style` pour définir des propriétés de style individuelles sur un élément&nbsp;:
 
     <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
       "http://www.w3.org/TR/html4/loose.dtd">
@@ -109,7 +109,7 @@ Les attributs **media** et **type** du style peuvent être donnés ou non. Notez
     var el = document.getElementById("un-element");
     el.setAttribute("style", "background-color:darkblue;");
 
-Soyez cependant conscient que `setAttribute` écrasera toute propriété de style qui pourrait déjà avoir été définie dans l'objet style de cet élément. Si l'élément « un-element » ci-dessus avait déjà un attribut indiquant par exemple `style="font-size: 18px"`, cette valeur serait supprimée par l'utilisation de `setAttribute`.
+Soyez cependant conscient que `setAttribute` écrasera toute propriété de style qui pourrait déjà avoir été définie dans l'objet style de cet élément. Si l'élément «&nbsp;un-element&nbsp;» ci-dessus avait déjà un attribut indiquant par exemple `style="font-size: 18px"`, cette valeur serait supprimée par l'utilisation de `setAttribute`.
 
 ##### Propriétés
 

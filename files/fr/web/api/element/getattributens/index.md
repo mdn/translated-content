@@ -10,7 +10,7 @@ translation_of: Web/API/Element/getAttributeNS
 ---
 {{APIRef("DOM")}}
 
-**`getAttributeNS()`** est une méthode de l'interface {{domxref("Element")}} qui renvoie la valeur chaîne de l'attribut avec l'espace de noms et le nom donnés. Si l'attribut nommé n'existe pas, cette valeur sera soit `null`, soit `""` (une chaîne vide) ; voir {{ Anch("Notes") }} pour plus de détails.
+**`getAttributeNS()`** est une méthode de l'interface {{domxref("Element")}} qui renvoie la valeur chaîne de l'attribut avec l'espace de noms et le nom donnés. Si l'attribut nommé n'existe pas, cette valeur sera soit `null`, soit `""` (une chaîne vide)&nbsp;; voir {{ Anch("Notes") }} pour plus de détails.
 
 ## Syntaxe
 
@@ -25,7 +25,7 @@ translation_of: Web/API/Element/getAttributeNS
 
 ### Valeur de retour
 
-La valeur de chaîne de caractères de l'attribut spécifié. Si  l'attribut n'existe pas, le résultat est `null`.
+La valeur de chaîne de caractères de l'attribut spécifié. Si l'attribut n'existe pas, le résultat est `null`.
 
 > **Note :** Les versions antérieures de la spécification DOM avaient cette méthode décrite comme renvoyant une chaîne vide pour des attributs inexistants, mais elle n'était généralement pas implémentée de cette façon, car null a plus de sens. La spécification DOM4 indique maintenant que cette méthode devrait retourner null pour les attributs inexistants.
 
@@ -76,7 +76,7 @@ Dans un document HTML5, il faut utiliser `test:foo` pour accéder à l'attribut 
 
 Les espaces de noms sont uniquement pris en charge dans les documents XML, Les documents HTML5 doivent utiliser à la place `getAttribute()` .
 
-La méthode `getAttributeNS` diffère de {{domxref("element.getAttribute()", "getAttribute()")}} en ce qu'elle permet de spécifier les attributs faisant partie d'un espace de noms particulier, comme dans l'exemple précédent, où l'attribut fait partie d'un espace de noms fictif « specialspace » de mozilla.
+La méthode `getAttributeNS` diffère de {{domxref("element.getAttribute()", "getAttribute()")}} en ce qu'elle permet de spécifier les attributs faisant partie d'un espace de noms particulier, comme dans l'exemple précédent, où l'attribut fait partie d'un espace de noms fictif «&nbsp;specialspace&nbsp;» de mozilla.
 
 Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer une chaîne vide plutôt que null pour les attributs inexistants. Cependant, la plupart des navigateurs ont renvoyé null. À partir de DOM4, la spécification dit maintenant de retourner null. Cependant, certains navigateurs plus anciens renvoient une chaîne vide. Pour cette raison, vous devez utiliser {{domxref("element.hasAttributeNS ()","hasAttributeNS ()")}} pour vérifier l'existence d'un attribut avant d'appeler `getAttributeNS()` s'il est possible que l'attribut demandé n'existe pas sur l'élément spécifié.
 
@@ -86,8 +86,8 @@ Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer un
 
 | Spécification                                                                                                    | État                             | Commentaire                                                                                                                                                                                                 |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("DOM WHATWG", "#dom-element-getattributens", "Element.getAttributeNS()")}} | {{Spec2("DOM WHATWG")}} |                                                                                                                                                                                                             |
-| {{SpecName("DOM3 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM3 Core")}}     | Specifie qu'une exception `NOT_SUPPORTED_ERR`  est levée si l'agent utilisateur ne supporte pas la fonctionnalité `"XML"`. Spécifie également que `null` doit être passé pour n'avoir aucun espace de noms. |
+| {{SpecName("DOM WHATWG", "#dom-element-getattributens", "Element.getAttributeNS()")}} | {{Spec2("DOM WHATWG")}} |                                                                                                                                                                                                             |
+| {{SpecName("DOM3 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM3 Core")}}     | Specifie qu'une exception `NOT_SUPPORTED_ERR`  est levée si l'agent utilisateur ne supporte pas la fonctionnalité `"XML"`. Spécifie également que `null` doit être passé pour n'avoir aucun espace de noms. |
 | {{SpecName("DOM2 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}                 | {{Spec2("DOM2 Core")}}     | Définition initiale                                                                                                                                                                                         |
 
 ## Compatibilité des navigateurs

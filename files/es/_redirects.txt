@@ -1543,6 +1543,7 @@
 /es/docs/Web/API/Element/onwheel	/es/docs/Web/API/GlobalEventHandlers/onwheel
 /es/docs/Web/API/ElementosHTMLparaVideo	/es/docs/Web/API/HTMLVideoElement
 /es/docs/Web/API/Event/createEvent	/es/docs/Web/API/Document/createEvent
+/es/docs/Web/API/EventSource/onopen	/es/docs/Web/API/EventSource/open_event
 /es/docs/Web/API/Fetch_API/Conceptos_basicos	/es/docs/Web/API/Fetch_API/Basic_concepts
 /es/docs/Web/API/Fetch_API/Utilizando_Fetch	/es/docs/Web/API/Fetch_API/Using_Fetch
 /es/docs/Web/API/File/fileName	/es/docs/conflicting/Web/API/File/name
@@ -1954,6 +1955,7 @@
 /es/docs/Web/HTML/Elementos_en_línea	/es/docs/Web/HTML/Inline_elements
 /es/docs/Web/HTML/Gestión_del_foco_en_HTML	/es/docs/Web/API/Document/hasFocus
 /es/docs/Web/HTML/Imagen_con_CORS_habilitado	/es/docs/Web/HTML/CORS_enabled_image
+/es/docs/Web/HTML/Index	/es/docs/conflicting/Web/HTML
 /es/docs/Web/HTML/Microdatos	/es/docs/Web/HTML/Microdata
 /es/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/es/docs/Glossary/speculative_parsing
 /es/docs/Web/HTML/Referencia	/es/docs/Web/HTML/Reference
@@ -1961,7 +1963,7 @@
 /es/docs/Web/HTML/Transision_adaptativa_DASH	/es/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /es/docs/Web/HTML/anipular_video_por_medio_de_canvas	/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /es/docs/Web/HTML/microformatos	/es/docs/Web/HTML/microformats
-/es/docs/Web/HTML/Índice	/es/docs/Web/HTML/Index
+/es/docs/Web/HTML/Índice	/es/docs/conflicting/Web/HTML
 /es/docs/Web/HTTP/Access_control_CORS	/es/docs/Web/HTTP/CORS
 /es/docs/Web/HTTP/Basics_of_HTTP/Datos_URIs	/es/docs/Web/HTTP/Basics_of_HTTP/Data_URIs
 /es/docs/Web/HTTP/Basics_of_HTTP/Identificación_recursos_en_la_Web	/es/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
@@ -2533,6 +2535,7 @@
 /es/docs/Web/Reference/Events/transitionend	/es/docs/Web/API/HTMLElement/transitionend_event
 /es/docs/Web/Reference/Events/wheel	/es/docs/Web/API/Element/wheel_event
 /es/docs/Web/SVG/Element/glifo	/es/docs/Web/SVG/Element/glyph
+/es/docs/Web/SVG/Index	/es/docs/conflicting/Web/SVG
 /es/docs/Web/SVG/Tutorial/Introducción	/es/docs/Web/SVG/Tutorial/Introduction
 /es/docs/Web/Security/Same-origin_politica	/es/docs/Web/Security/Same-origin_policy
 /es/docs/Web/Security/Securing_your_site/desactivar_autocompletado_formulario	/es/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion

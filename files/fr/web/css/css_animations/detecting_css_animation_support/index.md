@@ -24,7 +24,7 @@ var animation = false,
   keyframeprefix = '',
   domPrefixes = 'Webkit Moz O ms Khtml'.split(' '),
   pfx  = '',
-  elem = document.createElement('div');
+  elem = document.createElement('div');
 
 if( elem.style.animationName !== undefined ) { animation = true; }
 
@@ -43,7 +43,7 @@ if( animation === false ) {
 
 Pour commencer, on définit quelques variables et on part de l'hypothèse que les animations ne sont pas prises en charge en définissant `animation` avec `false`. On utilise la chaîne de caractères `animationstring` avec la valeur "animation" car celle-ci représentera le nom de la propriété qu'on souhaite définir. On crée également un tableau contenant les préfixes des différents navigateurs afin de pouvoir parcourir ces différents cas et qu'on utilisera avec la variable `pfx` qu'on définit pour le moment avec la chaîne vide.
 
-Ensuite, on vérifie si la propriété CSS {{cssxref("animation-name")}}  on est définie sur l'élément représenté par la variable `elem`. Cela signifie alors que le navigateur prend en charge les animations CSS sans préfixe.
+Ensuite, on vérifie si la propriété CSS {{cssxref("animation-name")}}  on est définie sur l'élément représenté par la variable `elem`. Cela signifie alors que le navigateur prend en charge les animations CSS sans préfixe.
 
 Si le navigateur ne prend pas en charge la version sans préfixe et que `animation` vaut toujours `false`, on parcourt les différents préfixes des principaux navigateurs et on modifie le nom de `AnimationName` de la même façon.
 

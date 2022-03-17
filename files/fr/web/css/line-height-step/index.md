@@ -36,13 +36,13 @@ Dans l'exemple suivant, la hauteur de la boîte des lignes pour chaque paragraph
 
 ```css
 :root {
-  font-size: 12pt;
-  --my-grid: 18pt;
-  line-height-step: var(--my-grid);
+  font-size: 12pt;
+  --my-grid: 18pt;
+  line-height-step: var(--my-grid);
 }
 h1 {
-  font-size: 20pt;
-  margin-top: calc(2 * var(--my-grid));
+  font-size: 20pt;
+  margin-top: calc(2 * var(--my-grid));
 }
 ```
 

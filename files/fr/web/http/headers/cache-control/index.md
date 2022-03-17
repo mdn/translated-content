@@ -66,7 +66,7 @@ Les règles standard `Cache-Control` suivantes peuvent être utilisées par un s
     Cache-Control: max-age=<seconds>
     Cache-Control: s-maxage=<seconds>
 
-### Extensions de `Cache-Control`
+### Extensions de `Cache-Control`
 
 Les directives Extension `Cache-Control` ne font pas partie du document sur les normes de base de la mise en cache HTTP. Vérifiez leur prise en charge dans la [table de compatibilité](#Browser_compatibility) ; les agents-utilisateurs qui ne les reconnaissent pas doivent les ignorer.
 

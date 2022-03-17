@@ -15,11 +15,11 @@ translation_of: Web/API/Clipboard
 ---
 {{APIRef("Clipboard API")}}
 
-> **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une {{interwiki("wikipedia", "Mémoire_tampon", "mémoire tampon")}} temporaire, parfois appelée « tampon de collage », qui peut être accédé par la plupart ou tous les programmes de l’environnement via des {{interwiki("wikipedia", "Interface_de_programmation", "interfaces de programmation")}} définies.
+> **Note :** Le **presse-papiers** est un tampon de données utilisé pour le stockage ou le transfert à court terme de données, éventuellement entre documents ou applications. Il est généralement mis en œuvre sous la forme d’une {{interwiki("wikipedia", "Mémoire_tampon", "mémoire tampon")}} temporaire, parfois appelée «&nbsp;tampon de collage&nbsp;», qui peut être accédé par la plupart ou tous les programmes de l’environnement via des {{interwiki("wikipedia", "Interface_de_programmation", "interfaces de programmation")}} définies.
 >
 > Une application typique accède aux fonctionnalités du presse-papiers en associant des {{interwiki("wikipedia", "Entr%C3%A9es-sorties", "entrées utilisateur")}} telles que des {{interwiki("wikipedia", "Raccourci_clavier", "raccourcis clavier")}}, des éléments de {{interwiki("wikipedia", "Menu_(informatique)", "menus")}}, etc. à ces interfaces.
 
-L’interface **`Clipboard`** implémente l’[API clipboard](/en-US/docs/Web/API/Clipboard_API), qui fournit — si l’utilisateur ou l’utilisatrice accorde sa permission — un accès en lecture et en écriture au contenu du presse-papiers du système. L’API clipboard peut être utilisée pour implémenter les fonctionnalités couper, copier et coller dans une application web.
+L’interface **`Clipboard`** implémente l’[API clipboard](/en-US/docs/Web/API/Clipboard_API), qui fournit — si l’utilisateur ou l’utilisatrice accorde sa permission — un accès en lecture et en écriture au contenu du presse-papiers du système. L’API clipboard peut être utilisée pour implémenter les fonctionnalités couper, copier et coller dans une application web.
 
 Le presse-papiers du système est exposé via la propriété globale {{domxref("Navigator.clipboard")}}.
 
@@ -27,7 +27,7 @@ Les appels aux méthodes de l’objet `Clipboard` échoueront si l’utilisateur
 
 > **Note :** En réalité, actuellement, les prérequis des navigateurs pour accéder au presse-papiers varient significativement. Veuillez consulter la section {{anch("Clipboard availability")}} pour plus de détails.
 
-Toutes les méthodes de l’API clipboard fonctionnent de manière asynchrone ; elles renvoient une {{jsxref("Promise")}} qui est résolue une fois que l’accès au presse-papiers a réussi. La promesse est rejetée si l’accès au presse-papiers est refusé.
+Toutes les méthodes de l’API clipboard fonctionnent de manière asynchrone&nbsp;; elles renvoient une {{jsxref("Promise")}} qui est résolue une fois que l’accès au presse-papiers a réussi. La promesse est rejetée si l’accès au presse-papiers est refusé.
 
 ## Méthodes
 
@@ -36,7 +36,7 @@ _`Clipboard` est basé sur l’interface {{domxref("EventTarget")}}, et inclut l
 - {{domxref("Clipboard.read()","read()")}}
   - : Demande des données arbitraires (telles que des images) depuis le presse-papiers, et renvoie une {{jsxref("Promise")}}. Quand les données ont été obtenues, la promesse est résolue avec un objet {{domxref("DataTransfer")}} qui fournit les données.
 - {{domxref("Clipboard.readText()","readText()")}}
-  - : Demande du texte depuis le presse-papiers du système ; renvoie une `Promise` qui est résolue avec une {{domxref("DOMString")}} contenant le texte du presse-papiers une fois disponible.
+  - : Demande du texte depuis le presse-papiers du système&nbsp;; renvoie une `Promise` qui est résolue avec une {{domxref("DOMString")}} contenant le texte du presse-papiers une fois disponible.
 - {{domxref("Clipboard.write()","write()")}}
   - : Écrit des données arbitraires dans le presse-papiers du système. Cette opération asynchrone signale quand elle a terminé en résolvant la `Promise` renvoyée.
 - {{domxref("Clipboard.writeText()","writeText()")}}

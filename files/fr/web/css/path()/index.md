@@ -10,7 +10,7 @@ La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`path()`
 ## Syntaxe
 
 ```css
-path( [[<'fill-rule'>,]?<string>)
+path( [[<'fill-rule'>,]?<string>)
 ```
 
 ### Paramètres

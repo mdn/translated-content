@@ -2345,12 +2345,6 @@
       "GiovanniHD201E"
     ]
   },
-  "Learn/Release_notes": {
-    "modified": "2020-10-15T20:54:28.940Z",
-    "contributors": [
-      "3ltons"
-    ]
-  },
   "Learn/Server-side": {
     "modified": "2020-07-16T22:36:01.419Z",
     "contributors": [
@@ -5001,7 +4995,7 @@
       "ronrother"
     ]
   },
-  "Web/API/EventSource/onerror": {
+  "Web/API/EventSource/error_event": {
     "modified": "2019-03-18T21:30:45.574Z",
     "contributors": [
       "ronrother"
@@ -10545,12 +10539,6 @@
       "FernandoKGA"
     ]
   },
-  "Web/HTTP/Headers/Cookie2": {
-    "modified": "2020-10-15T22:29:27.166Z",
-    "contributors": [
-      "FernandoKGA"
-    ]
-  },
   "Web/HTTP/Headers/Cross-Origin-Resource-Policy": {
     "modified": "2020-10-15T22:29:30.347Z",
     "contributors": [
@@ -10809,12 +10797,6 @@
     "modified": "2020-10-15T22:31:49.288Z",
     "contributors": [
       "ooVictorFranco"
-    ]
-  },
-  "Web/HTTP/Headers/Set-Cookie2": {
-    "modified": "2020-10-15T22:31:37.734Z",
-    "contributors": [
-      "FernandoKGA"
     ]
   },
   "Web/HTTP/Headers/SourceMap": {
@@ -16185,6 +16167,12 @@
       "AlanCezarAraujo"
     ]
   },
+  "conflicting/Learn": {
+    "modified": "2020-10-15T20:54:28.940Z",
+    "contributors": [
+      "3ltons"
+    ]
+  },
   "conflicting/Learn/CSS/Building_blocks/Cascade_and_inheritance": {
     "modified": "2019-03-23T22:55:03.103Z",
     "contributors": [
@@ -16505,6 +16493,18 @@
     "modified": "2020-04-19T11:26:06.291Z",
     "contributors": [
       "marcio1002"
+    ]
+  },
+  "conflicting/Web/HTTP/Headers/Cookie": {
+    "modified": "2020-10-15T22:29:27.166Z",
+    "contributors": [
+      "FernandoKGA"
+    ]
+  },
+  "conflicting/Web/HTTP/Headers/Set-Cookie": {
+    "modified": "2020-10-15T22:31:37.734Z",
+    "contributors": [
+      "FernandoKGA"
     ]
   },
   "conflicting/Web/JavaScript/Equality_comparisons_and_sameness": {

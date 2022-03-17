@@ -127,7 +127,7 @@ Cela montre une hiérarchie d'objets avec les objets suivants :
 - `Manager` est basé sur `Employee`. Il ajoute la propriété `reports` (« les rapports » dont la valeur par défaut est un tableau vide, destiné à avoir pour valeur un tableau d'objets `Employee`).
 - `WorkerBee` est également basé sur `Employee`. Il ajoute la propriété `projects` (« les projets » dont la valeur par défaut est un tableau vide, destiné à avoir pour valeur un tableau de chaînes de caractères).
 - `SalesPerson` est basé sur `WorkerBee`. Il ajoute la propriété `quota` (dont la valeur par défaut est 100). Il surcharge la propriété `dept` avec la valeur « ventes », indiquant que tous les vendeurs sont dans le même département.
-- `Engineer` est basé sur `WorkerBee`. Il ajoute la propriété `machine` (dont la valeur par défaut est une chaîne de caractères vide) et surcharge également la propriété `dept` avec la valeur « ingénierie ».
+- `Engineer` est basé sur `WorkerBee`. Il ajoute la propriété `machine` (dont la valeur par défaut est une chaîne de caractères vide) et surcharge également la propriété `dept` avec la valeur «&nbsp;ingénierie&nbsp;».
 
 ## La création de la hiérarchie
 

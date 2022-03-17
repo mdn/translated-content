@@ -72,5 +72,5 @@ Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en 
 
 ## Voir aussi
 
-- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
+- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
 - [_Inclusive Components: Card_ (en anglais)](https://inclusive-components.design/cards/)

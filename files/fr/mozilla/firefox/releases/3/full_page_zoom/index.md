@@ -20,7 +20,7 @@ L'exemple qui suit montre l'utilisation du zoom pour la fenêtre de navigation a
 
 ### Exemple (xul:iframe)
 
-Il est également possible d'utiliser la fonction fullZoom pour un xul:iframe. Cependant, comme un iframe n'a pas de propriété `markupDocumentViewer`, il faut d'abord obtenir cette valeur :
+Il est également possible d'utiliser la fonction fullZoom pour un xul:iframe. Cependant, comme un iframe n'a pas de propriété `markupDocumentViewer`, il faut d'abord obtenir cette valeur&nbsp;:
 
     var zoom = 1.5;
     var iframe = document.getElementById("authorFrame");

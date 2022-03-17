@@ -52,9 +52,9 @@ isNaN(1 + undefined);  // true
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-4.3.11', 'null value')}}         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-null-value', 'null value')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-null-value', 'null value')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-4.3.11', 'null value')}}         | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-null-value', 'null value')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-null-value', 'null value')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

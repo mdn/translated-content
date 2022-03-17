@@ -42,7 +42,7 @@ Points forts:
 
 ### JavaScript
 
-- Le [constructeur `RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) ne se lance plus lorsque le premier argument est un `RegExp` et que le second argument `flags` est présent ({{bug(1108949)}}).
+- Le [constructeur `RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) ne se lance plus lorsque le premier argument est un `RegExp` et que le second argument `flags` est présent ({{bug(1108949)}}).
 - La propriété {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} est désormais obsolète et émet un avertissement de console (voir {{bug(1140428)}} et cette [annonce de plate-forme](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
 - L'implémentation de l'objet {{jsxref("Proxy")}} a été mise à jour pour se conformer davantage à la spécification ES6 :
 
@@ -51,7 +51,7 @@ Points forts:
 
 - Lors de l'utilisation des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`), un terminateur de ligne (`\n`) n'est plus autorisé après les arguments de fonction fléchée (`() \n => {}`) ({{bug(1141392)}}).
 - {{jsxref("RegExp.prototype.toString")}} est maintenant une fonction générique ({{bug(1079919)}}).
-- L'argument de `flags` non standard de {{jsxref("String.prototype.match()")}}, {{jsxref("String.prototype.search()")}}, et {{jsxref("String.prototype.replace()")}} est désormais obsolètee et émet un avertissement de console ({{bug(1142351)}}).
+- L'argument de `flags` non standard de {{jsxref("String.prototype.match()")}}, {{jsxref("String.prototype.search()")}}, et {{jsxref("String.prototype.replace()")}} est désormais obsolètee et émet un avertissement de console ({{bug(1142351)}}).
 - Le comportement try/catch de {{jsxref("Object.assign()")}} a été supprimé pour se conformer au dernier projet ES6 ({{bug(1103344)}}).
 
 ### Interfaces/APIs/DOM
@@ -79,7 +79,7 @@ _Pas de changement._
 
 ### Miscelleanous
 
-- Le support des polices [WOFF2](/fr/docs/Web/Guide/WOFF) est désormais activé par défaut dans la version finale de Firefox (Beta et Release, en plus de Nightly et Developer Edition) ({{bug(1084026)}}).
+- Le support des polices [WOFF2](/fr/docs/Web/Guide/WOFF) est désormais activé par défaut dans la version finale de Firefox (Beta et Release, en plus de Nightly et Developer Edition) ({{bug(1084026)}}).
 - L'option de ligne de commande [`-remote`](/fr/docs/Mozilla/Command_Line_Options#-remote_remote_command) a été supprimée ({{bug(1080319)}}).
 - Prise en charge des nouveaux [emoji de couleur chair Unicode 8.0](http://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) ({{bug(1153460)}}).
 

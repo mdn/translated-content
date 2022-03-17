@@ -34,7 +34,7 @@ var gettingInfo = browser.management.get(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet  {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} , contenant les informations sur l'extension. La promise sera rejetée si aucune extension avec l'ID donné n'est installée ou si l'appelant ne peut pas accéder à l'extension.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet  {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} , contenant les informations sur l'extension. La promise sera rejetée si aucune extension avec l'ID donné n'est installée ou si l'appelant ne peut pas accéder à l'extension.
 
 ## Compatibilité du navigateur
 

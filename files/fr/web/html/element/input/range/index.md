@@ -18,7 +18,7 @@ Si le navigateur de l'utilisateur ne prend pas en charge le type `range`, il uti
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractères {{domxref("DOMString")}} qui correspond à la représentation textuelle du nombre sélectionnée. La valeur n'est jamais une chaîne vide (`""`). La valeur par défaut est celle médiane entre le minimum et le maximum (sauf si la valeur maximale indiquée est inférieure à la valeur minimale, auquel cas la valeur par défaut est celle de l'attribut `min`).  Voici un fragment de code illustrant cet algorithme pour le choix de la valeur par défaut :
+L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractères {{domxref("DOMString")}} qui correspond à la représentation textuelle du nombre sélectionnée. La valeur n'est jamais une chaîne vide (`""`). La valeur par défaut est celle médiane entre le minimum et le maximum (sauf si la valeur maximale indiquée est inférieure à la valeur minimale, auquel cas la valeur par défaut est celle de l'attribut `min`).  Voici un fragment de code illustrant cet algorithme pour le choix de la valeur par défaut :
 
 ```js
 defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
@@ -106,7 +106,7 @@ Cet exemple permet à l'utilisateur de choisir une valeur entre 0 et 3.14 sans a
 
 ### Ajouter des marques et des étiquettes
 
-La spécification HTML fournit une certaine flexibilité aux navigateurs pour représenter le contrôle de saisie. La spécification indique comment ajouter des informations pour certains niveaux de l'intervalle grâce à l'attribut  {{htmlattrxref("list", "input")}} et à un élément {{HTMLElement("datalist")}}. En revanche, il n'y a pas de spécifications précises quant aux marques (tirets) positionnés le long du contrôle.
+La spécification HTML fournit une certaine flexibilité aux navigateurs pour représenter le contrôle de saisie. La spécification indique comment ajouter des informations pour certains niveaux de l'intervalle grâce à l'attribut  {{htmlattrxref("list", "input")}} et à un élément {{HTMLElement("datalist")}}. En revanche, il n'y a pas de spécifications précises quant aux marques (tirets) positionnés le long du contrôle.
 
 #### Aperçus
 
@@ -278,9 +278,9 @@ Ensuite, on applique quelques règles CSS. Voici la règle CSS pour l'élément 
 ```css
 .slider-wrapper {
   display: inline-block;
-  width: 20px;
-  height: 150px;
-  padding: 0;
+  width: 20px;
+  height: 150px;
+  padding: 0;
 }
 ```
 
@@ -288,11 +288,11 @@ Ensuite, on applique une transformation sur l'élément `<input>` au sein de l'e
 
 ```css
 .slider-wrapper input {
-  width: 150px;
-  height: 20px;
-  margin: 0;
-  transform-origin: 75px 75px;
-  transform: rotate(-90deg);
+  width: 150px;
+  height: 20px;
+  margin: 0;
+  transform-origin: 75px 75px;
+  transform: rotate(-90deg);
 }
 ```
 

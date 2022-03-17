@@ -35,7 +35,7 @@ Pour désactiver l'ancrage sur l'ensemble du document, on pourra appliquer la pr
 
 ```css
 body {
-  overflow-anchor: none;
+  overflow-anchor: none;
 }
 ```
 
@@ -43,7 +43,7 @@ Pour désactiver cette fonctionnalité sur une certaine partie du document, on c
 
 ```css
 .container {
-  overflow-anchor: none;
+  overflow-anchor: none;
 }
 ```
 

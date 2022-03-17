@@ -34,7 +34,7 @@ Les objets `Set` sont des ensembles de valeurs. Il est possible d'itérer sur le
 
 ### Égalité des valeurs
 
-Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des valeurs contenues. Cette égalité n'est pas la même que celle de l'opérateur ===. Notamment, pour les objets `Set`, `+0` (qui, selon l'égalité stricte, est égal à `-0`) et `-0` sont des valeurs différentes. Cela a toutefois été changé avec la dernière version d'ECMAScript 2015 (ES6). Voir le tableau de compatibilité ci-après quant à la prise en charge de l'égalité des clés pour `0` et `-0`.
+Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des valeurs contenues. Cette égalité n'est pas la même que celle de l'opérateur ===. Notamment, pour les objets `Set`, `+0` (qui, selon l'égalité stricte, est égal à `-0`) et `-0` sont des valeurs différentes. Cela a toutefois été changé avec la dernière version d'ECMAScript 2015 (ES6). Voir le tableau de compatibilité ci-après quant à la prise en charge de l'égalité des clés pour `0` et `-0`.
 
 {{jsxref("NaN")}} and {{jsxref("undefined")}} peuvent être enregistrés dans un objet `Set`. `NaN` est considéré comme `NaN` (bien que `NaN !== NaN`).
 

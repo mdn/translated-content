@@ -112,7 +112,7 @@ Dans l'exemple suivant, on a un contrôle `"tel"` avec un attribut `placeholder`
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       placeholder="01 23 45 67 89">
+       placeholder="01 23 45 67 89">
 ```
 
 {{EmbedLiveSample('Textes_indicatifs_-_placeholders', 600, 40)}}
@@ -127,7 +127,7 @@ La taille physique de la boîte de saisie peut être contrôlée avec l'attribut
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20">
+       size="20">
 ```
 
 {{EmbedLiveSample('La_taille_physique', 600, 40)}}
@@ -140,7 +140,7 @@ Dans l'exemple qui suit, on crée un contrôle qui mesure 20 caractères de larg
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       size="20" minlength="9" maxlength="14">
+       size="20" minlength="9" maxlength="14">
 ```
 
 {{EmbedLiveSample("La_longueur_de_la_valeur", 600, 40)}}
@@ -153,29 +153,29 @@ Il est possible de fournir une valeur par défaut en renseignant au préalable l
 
 ```html
 <input id="telNo" name="telNo" type="tel"
-       value="01 23 45 67 89">
+       value="01 23 45 67 89">
 ```
 
 {{EmbedLiveSample("Fournir_une_valeur_par_défaut", 600, 40)}}
 
 #### Afficher des suggestions
 
-Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi lesquelles l'utilisateur pourra choisir (il pourra également saisir la valeur de son choix si celle-ci ne fait pas partie de la liste). Pour cela, on utilisera l'attribut {{htmlattrxref("list", "input")}} dont la valeur est l'identifiant d'un élément  {{HTMLElement("datalist")}} qui contient autant d'éléments  {{HTMLElement("option")}} que de valeurs suggérées. C'est la valeur de l'attribut `value` de chaque élément `<option>` qui sera utilisée comme suggestion.
+Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi lesquelles l'utilisateur pourra choisir (il pourra également saisir la valeur de son choix si celle-ci ne fait pas partie de la liste). Pour cela, on utilisera l'attribut {{htmlattrxref("list", "input")}} dont la valeur est l'identifiant d'un élément  {{HTMLElement("datalist")}} qui contient autant d'éléments  {{HTMLElement("option")}} que de valeurs suggérées. C'est la valeur de l'attribut `value` de chaque élément `<option>` qui sera utilisée comme suggestion.
 
 ```html
 <input id="telNo" name="telNo" type="tel" list="defaultTels">
 
 <datalist id="defaultTels">
-  <option value="01 23 45 67 89">
-  <option value="02 45 67 89 01">
-  <option value="03 45 67 89 12">
-  <option value="04 56 87 98 32">
+  <option value="01 23 45 67 89">
+  <option value="02 45 67 89 01">
+  <option value="03 45 67 89 12">
+  <option value="04 56 87 98 32">
 </datalist>
 ```
 
 {{EmbedLiveSample("Afficher_des_suggestions", 600, 40)}}
 
-Avec l'élément {{HTMLElement("datalist")}} contenant ces différentes valeurs  {{HTMLElement("option")}}, le navigateur affichera une liste déroulante (ou un autre élément d'interface utilisateur) afin que l'utilisateur puisse éventuellement choisir parmi les suggestions. Lorsque l'utilisateur saisit dans le contrôle, la liste des suggestions est restreinte à celles qui correspondent encore.
+Avec l'élément {{HTMLElement("datalist")}} contenant ces différentes valeurs  {{HTMLElement("option")}}, le navigateur affichera une liste déroulante (ou un autre élément d'interface utilisateur) afin que l'utilisateur puisse éventuellement choisir parmi les suggestions. Lorsque l'utilisateur saisit dans le contrôle, la liste des suggestions est restreinte à celles qui correspondent encore.
 
 ## Validation
 

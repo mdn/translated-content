@@ -36,7 +36,7 @@ var uninstalling = browser.management.uninstall(
 
   - : `object`. l'objet qui peut contenir une propriété unique, `showConfirmDialog`. Si `showConfirmDialog` est `true`, le navigateur affiche une boie de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé.
 
-    - Si `id` est l'ID de l'extension appelant, `showConfirmDialog` est par défaut à `false`.
+    - Si `id` est l'ID de l'extension appelant, `showConfirmDialog` est par défaut à `false`.
     - Si `id` est l'ID d'une extension différente, cette option est ignorée et la boite de dialogue de confirmation s'affche toujours.
 
 ### Valeur retournée
@@ -51,7 +51,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Désinstallez l'extension dont l'ID est "my-addon-id", en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annué la désinstallation.
 
-Notez que nous n'avons réussi un gestionnaire d'exécution, car si la désinstallation  réussit, l'extension n'est plus disponible pour le gérer.
+Notez que nous n'avons réussi un gestionnaire d'exécution, car si la désinstallation réussit, l'extension n'est plus disponible pour le gérer.
 
 ```js
 var id = "my-addon-id";

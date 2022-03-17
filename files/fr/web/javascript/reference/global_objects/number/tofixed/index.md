@@ -32,13 +32,13 @@ Une chaîne de caractères qui représente le nombre indiqué avec une notation 
 ### Exceptions causées
 
 - {{jsxref("RangeError")}}
-  - : Cette exception est renvoyée si `nbChiffres` est trop grand ou trop petit. Les valeurs comprises, au sens large, entre 0 et 100, n'entraîneront pas de `RangeError`. Les différentes implémentations peuvent ou non supporter des valeurs plus petites et/ou plus grandes.
+  - : Cette exception est renvoyée si `nbChiffres` est trop grand ou trop petit. Les valeurs comprises, au sens large, entre 0 et 100, n'entraîneront pas de `RangeError`. Les différentes implémentations peuvent ou non supporter des valeurs plus petites et/ou plus grandes.
 - {{jsxref("TypeError")}}
   - : Cette exception est renvoyée si cette méthode est invoquée depuis un objet qui n'est pas de type numérique.
 
 ## Description
 
-`toFixed()` renvoie une chaîne de caractères représentant `objetNumber` sans notation exponentielle et qui possède exactement `nbChiffres` pour la partie fractionnaire. Le nombre est arrondi si nécessaire et la partie fractionnaire est complétée par des zéros si nécessaire pour obtenir la longueur souhaitée. Si le `objetNumber` est supérieur ou égal à `1e+21`, la méthode utilise simplement {{jsxref("Number.prototype.toString()")}} et renvoie une chaîne en notation exponentielle.
+`toFixed()` renvoie une chaîne de caractères représentant `objetNumber` sans notation exponentielle et qui possède exactement `nbChiffres` pour la partie fractionnaire. Le nombre est arrondi si nécessaire et la partie fractionnaire est complétée par des zéros si nécessaire pour obtenir la longueur souhaitée. Si le `objetNumber` est supérieur ou égal à `1e+21`, la méthode utilise simplement {{jsxref("Number.prototype.toString()")}} et renvoie une chaîne en notation exponentielle.
 
 > **Attention :** En raison du standard [IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754) qui est utilisé par JavaScript pour représenter les nombres, tous les nombres décimaux ne sont pas représentés exactement en JavaScript, ce qui peut mener à des résultats inattendus (comme `0.1 + 0.2 === 0.3` qui renvoie `false`).
 
@@ -65,9 +65,9 @@ numObj.toFixed(6);      // Renvoie '12345.678900' : des zéros sont ajoutés
 | Spécification                                                                                                    | État                         | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.5', 'Number.prototype.toFixed')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.7.4.5', 'Number.prototype.toFixed')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-number.prototype.tofixed', 'Number.prototype.toFixed')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

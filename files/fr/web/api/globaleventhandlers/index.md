@@ -115,7 +115,7 @@ Les propriétés des évènements, de la forme `onXYZ`, sont définies sur {{dom
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : est un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) représentant le code à appeler lorsque l'événement {{event("mouseup")}} est déclenché.
 - {{domxref("GlobalEventHandlers.onmousewheel")}} {{Non-standard_inline}} {{Deprecated_inline}}
-  - : est un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) représentant le code à appeler lorsque l'événement {{event("mousewheel")}} est déclenché. Déprécié. Utiliser  `onwheel` à la place.
+  - : est un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) représentant le code à appeler lorsque l'événement {{event("mousewheel")}} est déclenché. Déprécié. Utiliser  `onwheel` à la place.
 - {{ domxref("GlobalEventHandlers.onwheel") }}
   - : est un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) représentant le code à appeler lorsque l'événement {{event("wheel")}} est déclenché.
 - {{domxref("GlobalEventHandlers.onpause")}}

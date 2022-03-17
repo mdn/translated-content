@@ -327,7 +327,7 @@ L'instruction {{jsxref("statements/for...of","for...of")}} crée une boucle qui 
       instruction
     }
 
-Dans l'exemple suivant, on illustre la différence entre une boucle `for...of` et une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in).  `for...in` parcourt les noms des propriétés d'un objet alors que `for...of` parcourt les **valeurs** des propriétés :
+Dans l'exemple suivant, on illustre la différence entre une boucle `for...of` et une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in).  `for...in` parcourt les noms des propriétés d'un objet alors que `for...of` parcourt les **valeurs** des propriétés :
 
 ```js
 let arr = [3, 5, 7];

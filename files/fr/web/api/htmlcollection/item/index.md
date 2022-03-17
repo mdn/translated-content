@@ -18,7 +18,7 @@ L'élement à la position spécifiée, ou null si la position est inférieure à
 
 ## Description
 
-La méthode `item()` retourne un élément numéroté d'une HTMLCollection. En Javascript, il est plus simple de traiter une HTMLCollection comme un tableau et d'utiliser les indexes comme pour les tableaux.
+La méthode `item()` retourne un élément numéroté d'une HTMLCollection. En Javascript, il est plus simple de traiter une HTMLCollection comme un tableau et d'utiliser les indexes comme pour les tableaux.
 
 ## Exemple
 

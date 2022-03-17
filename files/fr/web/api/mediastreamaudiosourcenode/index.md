@@ -11,7 +11,7 @@ translation_of: Web/API/MediaStreamAudioSourceNode
 ---
 {{APIRef("Web Audio API")}}
 
-L'interface `MediaStreamAudioSourceNode` représente une source audio [WebRTC](/fr/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (comme une webcam ou un micro). C'est un {{domxref("AudioNode")}} qui agit comme une source audio.
+L'interface `MediaStreamAudioSourceNode` représente une source audio [WebRTC](/fr/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (comme une webcam ou un micro). C'est un {{domxref("AudioNode")}} qui agit comme une source audio.
 
 Un `MediaElementSourceNode` n'a pas d'entrée et une seule sortie. On le créé en utilisant la méthode {{domxref("AudioContext.createMediaStreamSource")}}. Le nombre de canaux de sortie est égal au nombre de canaux de {{domxref("AudioMediaStreamTrack")}}. S'il n'y a pas de media stream valide, alors la sortie sera constituée d'un seul canal silencieux.
 

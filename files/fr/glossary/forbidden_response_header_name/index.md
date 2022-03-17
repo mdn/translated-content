@@ -16,4 +16,4 @@ _Un nom d'en-tête de réponse interdit est un_ nom d'[en-tête HTTP](/fr/docs/H
 
 | Spécification                                                                                                        | Statut                   | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ----------- |
-| {{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}} | {{Spec2('Fetch')}} |             |
+| {{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}} | {{Spec2('Fetch')}} |             |

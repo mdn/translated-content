@@ -58,8 +58,8 @@ unicode-bidi: unset;
 
 ```css
 .bible-quote {
-  direction: rtl;
-  unicode-bidi: embed;
+  direction: rtl;
+  unicode-bidi: embed;
 }
 ```
 
