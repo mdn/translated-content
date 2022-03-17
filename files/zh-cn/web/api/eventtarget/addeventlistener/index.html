@@ -33,7 +33,7 @@ Non-standard_inline}});  // Gecko/Mozilla only
  <dt><code>type</code></dt>
  <dd>表示监听<a href="/zh-CN/docs/Web/Events">事件类型</a>的字符串。</dd>
  <dt><code>listener</code></dt>
- <dd>当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。<code>listener</code> 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Functions">函数</a>。有关回调本身的详细信息，请参阅{{anch("The event listener callback")}} </dd>
+ <dd>当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。<code>listener</code> 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Functions">函数</a>。有关回调本身的详细信息，请参阅<a href="#事件监听回调">事件监听回调</a> </dd>
  <dt>options {{optional_inline}}</dt>
  <dd>一个指定有关 <code>listener </code>属性的可选参数<strong>对象</strong>。可用的选项如下：
  <ul>
@@ -319,7 +319,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <p>{{ EmbedLiveSample('options用法示例', 600, 310, '', 'Web/API/EventTarget/addEventListener') }}</p>
 
-<p>在使用<code>options</code>对象中具体的值前，最好确保用户的浏览器支持它，因为这些是历史上并非所有浏览器都支持的附加功能。你可以查看{{anch("Safely detecting option support")}}以了解更多</p>
+<p>在使用<code>options</code>对象中具体的值前，最好确保用户的浏览器支持它，因为这些是历史上并非所有浏览器都支持的附加功能。你可以查看<a href="#option支持的安全检测">option支持的安全检测</a>以了解更多</p>
 
 <h2 id="备注">备注</h2>
 
