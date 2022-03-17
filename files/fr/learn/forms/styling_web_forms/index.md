@@ -16,11 +16,11 @@ original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 
 > Dans cet article, nous allons apprendre comment utiliser [les CSS](/fr/docs/CSS "/fr/docs/CSS") avec les formulaires [HTML](/fr/docs/HTML "/fr/docs/HTML") pour (espérons-le) améliorer leur apparence. Étonnamment, ceci peut être délicat. Pour des raisons techniques et historiques, les widgets de formulaires ne s'allient pas très bien avec CSS. À cause de ces difficultés, de nombreux développeurs préfèrent [construire leurs propres widgets HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés "/fr/docs/HTML/Formulaires/Comment_créer_des_blocs_de_formulaires_personnalisés") pour avoir plus de maîtrise sur leur apparence. Toutefois, avec les navigateurs modernes, les web designers ont de plus en plus d'emprise sur l'apparence de leurs formulaires. Voyons cela de plus près.
 
-## Pourquoi est-ce si difficile de modifier l'apparence des formulaires avec CSS ?
+## Pourquoi est-ce si difficile de modifier l'apparence des formulaires avec CSS&nbsp;?
 
-Dans la jeunesse du Web — aux alentours de 1995 — les formulaires ont été ajoutés au HTML dans la [spécification HTML 2](http://www.ietf.org/rfc/rfc1866.txt). À cause de la complexité des formulaires, ceux qui les mettaient en œuvre ont préféré s'appuyer sur le système d'exploitation sous‑jacent pour les gérer et les afficher.
+Dans la jeunesse du Web — aux alentours de 1995 — les formulaires ont été ajoutés au HTML dans la [spécification HTML 2](http://www.ietf.org/rfc/rfc1866.txt). À cause de la complexité des formulaires, ceux qui les mettaient en œuvre ont préféré s'appuyer sur le système d'exploitation sous‑jacent pour les gérer et les afficher.
 
-Quelques années plus tard, les CSS ont été créées et ce qui était une nécessité technique — c'est-à-dire, utiliser des widgets natifs pour les contrôles de formulaire — est devenu un préalable stylistique. Dans la jeunesse des CSS, l'apparence des formulaires n'était pas une priorité.
+Quelques années plus tard, les CSS ont été créées et ce qui était une nécessité technique — c'est-à-dire, utiliser des widgets natifs pour les contrôles de formulaire — est devenu un préalable stylistique. Dans la jeunesse des CSS, l'apparence des formulaires n'était pas une priorité.
 
 Comme les utilisateurs étaient habitués à l'apparence visuelle de leurs plateformes respectives, les fournisseurs de navigateurs étaient réticents à rendre possible la modification de l'apparence des formulaires. Et pour être honnête, il est toujours extrêmement difficile de reconstruire tous les contrôles pour que leur apparence soit modifiable.
 
@@ -32,7 +32,7 @@ Actuellement, quelques difficultés subsistent dans l'utilisation des CSS avec l
 
 #### Le bon
 
-L'apparence de certains éléments peut être modifiée sans poser beaucoup de problèmes suivant les diverses plateformes. Ceci inclut les éléments structurels suivants :
+L'apparence de certains éléments peut être modifiée sans poser beaucoup de problèmes suivant les diverses plateformes. Ceci inclut les éléments structurels suivants&nbsp;:
 
 1.  {{HTMLElement("form")}}
 2.  {{HTMLElement("fieldset")}}
@@ -61,7 +61,7 @@ Pour changer l'apparence [des éléments facilement modifiables](/fr/docs/HTML/F
 
 ### Champs de recherche
 
-Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peut être un peu complexe à modifier. Sur les navigateurs utilisant WebKit (Chrome, Safari, etc.) vous devrez utiliser la propriété CSS propriétaire `-webkit-appearance`. Nous allons aborder le sujet plus en détails dans dans l'article : [Apparence avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms "/fr/docs/Apparence_avancée_des_formulaires_HTML").
+Les boîtes de recherche sont le seul type de champ textuel dont l'apparence peut être un peu complexe à modifier. Sur les navigateurs utilisant WebKit (Chrome, Safari, etc.) vous devrez utiliser la propriété CSS propriétaire `-webkit-appearance`. Nous allons aborder le sujet plus en détails dans dans l'article&nbsp;: [Apparence avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms "/fr/docs/Apparence_avancée_des_formulaires_HTML").
 
 #### Exemple
 
@@ -86,7 +86,7 @@ Comme vous pouvez le voir sur la capture d'écran pour Chrome, les deux champs o
 
 ### Texte et polices de caractères
 
-Les fonctionnalités liées au texte et aux polices de caractères dans les CSS peuvent être utilisées facilement avec n'importe quel widget (et oui, vous pouvez utiliser {{cssxref("@font-face")}} avec les formulaires). Toutefois, le comportement des navigateurs est souvent incompatible. Par défaut, certains éléments comme {{cssxref("font-family")}} {{cssxref("font-size")}} n'héritent pas de leurs parents. De nombreux navigateurs utilisent les valeurs du système d'exploitation. Pour que l'apparence des formulaires soit cohérente avec le reste de votre contenu, vous pouvez ajouter les règles suivantes à votre feuille de style :
+Les fonctionnalités liées au texte et aux polices de caractères dans les CSS peuvent être utilisées facilement avec n'importe quel widget (et oui, vous pouvez utiliser {{cssxref("@font-face")}} avec les formulaires). Toutefois, le comportement des navigateurs est souvent incompatible. Par défaut, certains éléments comme {{cssxref("font-family")}} {{cssxref("font-size")}} n'héritent pas de leurs parents. De nombreux navigateurs utilisent les valeurs du système d'exploitation. Pour que l'apparence des formulaires soit cohérente avec le reste de votre contenu, vous pouvez ajouter les règles suivantes à votre feuille de style&nbsp;:
 
 ```css
 button, input, select, textarea {
@@ -105,7 +105,7 @@ Il existe un débat animé sur le fait qu'un formulaire ait une meilleure appare
 
 Tous les champs textuels sont compatibles avec les différentes propriétés du modèle de boîte CSS ({{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}} et {{cssxref("border")}}). Toutefois, comme précédemment les navigateurs s'appuient sur l'apparence par défaut du système d'exploitation. C'est votre décision de choisir si vous souhaitez intégrer vos formulaires à votre contenu du point de vue de l'apparence. Si vous souhaitez conserver l'apparence originale des blocs, vous aurez des difficultés à leur donner des dimensions cohérentes.
 
-**Chacun des blocs a ses propres règles concernant les bordures, la marge intérieure (padding) et extérieure (margin).** Si vous souhaitez qu'ils aient tous la même dimension, vous devrez utiliser la propriété {{cssxref("box-sizing")}} :
+**Chacun des blocs a ses propres règles concernant les bordures, la marge intérieure (padding) et extérieure (margin).** Si vous souhaitez qu'ils aient tous la même dimension, vous devrez utiliser la propriété {{cssxref("box-sizing")}}&nbsp;:
 
 ```css
 input, textarea, select, button {
@@ -124,13 +124,13 @@ Dans la capture d'écran ci-dessous, la colonne de gauche n'utilise pas {{cssxre
 
 ### Positionnement
 
-Le positionnement des formulaires HTML n'est pas un problème de manière générale. Seulement deux éléments nécessitent une attention particulière :
+Le positionnement des formulaires HTML n'est pas un problème de manière générale. Seulement deux éléments nécessitent une attention particulière&nbsp;:
 
 #### legend
 
 L'apparence de l'élément {{HTMLElement("legend")}} est facile à modifier à l'exception de sa position. Dans chaque navigateur, l'élément {{HTMLElement("legend")}} est positionné au-dessus de la bordure supérieure de son élément {{HTMLElement("fieldset")}} parent. Il n'existe aucune manière de changer sa position dans le flux HTML. Vous pouvez toutefois le positionner de manière absolue ou relative en utilisant la propriété {{cssxref("position")}}, sinon, ce sera une partie de la bordure de l'élément `fieldset`.
 
-Comme l'élément {{HTMLElement("legend")}} est très important pour des raisons d'accessibilité (nous parlerons des techniques pour l'assistance à propos de l'attribut  `label` de chaque élément de formulaire du `fieldset`), il est souvent associé à un intitulé, puis caché à l'accessibilité, comme ceci :
+Comme l'élément {{HTMLElement("legend")}} est très important pour des raisons d'accessibilité (nous parlerons des techniques pour l'assistance à propos de l'attribut  `label` de chaque élément de formulaire du `fieldset`), il est souvent associé à un intitulé, puis caché à l'accessibilité, comme ceci :
 
 ##### HTML
 
@@ -176,17 +176,17 @@ Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier [ar
   <h1>à: Mozilla</h1>
 
   <div id="from">
-    <label for="name">de :</label>
+    <label for="name">de&nbsp;:</label>
     <input type="text" id="name" name="user_name">
   </div>
 
   <div id="reply">
-    <label for="mail">répondre à :</label>
+    <label for="mail">répondre à&nbsp;:</label>
     <input type="email" id="mail" name="user_email">
   </div>
 
   <div id="message">
-    <label for="msg">Votre message :</label>
+    <label for="msg">Votre message&nbsp;:</label>
     <textarea id="msg" name="user_message"></textarea>
   </div>
 
@@ -201,17 +201,17 @@ Le HTML n'est qu'à peine plus développé que celui de l'exemple du premier [ar
 C'est ici que le « fun » commence ! Avant de commencer à coder, nous avons besoin de trois ressources supplémentaires :
 
 1.  L'[image de fond](/files/4151/background.jpg "The postcard background") de la carte postale — téléchargez cette image et sauvegardez‑la dans le même répertoire que votre fichier HTML de travail.
-2.  Une police de machine à écrire : [« Secret Typewriter » de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
-3.  Une police d'écriture manuelle : [«&nbsp;Journal&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
+2.  Une police de machine à écrire&nbsp;: [«&nbsp;Secret Typewriter&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
+3.  Une police d'écriture manuelle&nbsp;: [«&nbsp;Journal&nbsp;» de fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — téléchargez le fichier TTF dans le même répertoire que ci‑dessus.
 
 
 
-Les polices demandent un supplément de traitement avant de débuter :
+Les polices demandent un supplément de traitement avant de débuter&nbsp;:
 
 1.  Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de fontsquirrel.
 2.  En utilisant le formulaire, téléversez les fichiers de polices et créez un kit de polices pou le Web. Téléchargez le kit sur votre ordinateur.
 3.  Décompressez le fichier zip fourni.
-4.  Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs ; voyez notre article sur les [Web fonts](/fr/docs/Learn/CSS/Styling_text/Web_fonts) pour des informations plus détaillées.
+4.  Dans le contenu décompressé vous trouverez deux fichiers `.woff` et deux fichiers `.woff2`. Copiez ces quatre fichiers dans un répertoire nommé `fonts`, dans le même répertoire que ci‑dessus. Nous utilisons deux fichiers différents pour maximiser la compatibilité avec les navigateurs&nbsp;; voyez notre article sur les [Web fonts](/fr/docs/Learn/CSS/Styling_text/Web_fonts) pour des informations plus détaillées.
 
 ### Le CSS
 

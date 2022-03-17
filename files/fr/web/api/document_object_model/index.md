@@ -24,7 +24,7 @@ Pour mieux comprendre le fonctionnement du DOM, [une introduction est disponible
 - {{domxref("Document")}}
 - {{domxref("DocumentFragment")}}
 - {{domxref("DocumentType")}}
-- {{domxref("DOMError")}}  {{deprecated_inline}}
+- {{domxref("DOMError")}}  {{deprecated_inline}}
 - {{domxref("DOMException")}}
 - {{domxref("DOMImplementation")}}
 - {{domxref("DOMString")}}

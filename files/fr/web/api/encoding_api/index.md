@@ -12,7 +12,7 @@ translation_of: Web/API/Encoding_API
 
 L'`API Encoding` fournit un mecanisme de traitement de texte dans plusieurs {{Glossary("character encoding", "character encodings")}}, incluant les encodings non-{{Glossary("UTF-8")}}.
 
-L'API fournit quatres interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} et {{domxref("TextEncoderStream")}}.
+L'API fournit quatres interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEncoder")}}, {{domxref("TextDecoderStream")}} et {{domxref("TextEncoderStream")}}.
 
 ## Interfaces
 

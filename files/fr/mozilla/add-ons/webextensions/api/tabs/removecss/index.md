@@ -41,11 +41,11 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
     - `code`{{optional_inline}}
       - : `string`. CSS à supprimer, en tant que chaîne de texte. Cela doit correspondre exactement à une chaîne CSS précédemment insérée dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
     - `cssOrigin`{{optional_inline}}
-      - : `string`. Cela peut prendre l'une des deux valeurs suivantes : "user", pour CSS ajouté en tant que feuille de style utilisateur, ou "author" pour CSS ajouté en tant que feuille de style auteur. Si cette option a été définie précédemment par  {{WebExtAPIRef("tabs.insertCSS()")}}, elle doit correspondre exactement.
+      - : `string`. Cela peut prendre l'une des deux valeurs suivantes : "user", pour CSS ajouté en tant que feuille de style utilisateur, ou "author" pour CSS ajouté en tant que feuille de style auteur. Si cette option a été définie précédemment par  {{WebExtAPIRef("tabs.insertCSS()")}}, elle doit correspondre exactement.
     - `file`{{optional_inline}}
       - : `string`. Chemin d'accès à un fichier contenant le CSS à supprimer. Cela doit correspondre exactement à un fichier CSS préalablement inséré dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
     - `frameId`{{optional_inline}}
-      - : `integer`. Le cadre à partir duquel supprimer le CSS. La valeur par défaut est `0` (l'image de niveau supérieur).
+      - : `integer`. Le cadre à partir duquel supprimer le CSS. La valeur par défaut est `0` (l'image de niveau supérieur).
     - `matchAboutBlank`{{optional_inline}}
       - : `boolean`. si `true`, le CSS sera supprimé des cadres "about:blank" et "about:srcdoc" intégrés si votre extension a accès à leur document parent. Par défaut à `false`.
 

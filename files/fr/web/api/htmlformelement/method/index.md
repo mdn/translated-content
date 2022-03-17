@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLFormElement/method
 ---
 {{APIRef("HTML DOM")}}
 
-La propriété **`HTMLFormElement.method`** représente la méthode HTTP utilisée pour soumettre un formulaire.
+La propriété **`HTMLFormElement.method`** représente la méthode HTTP utilisée pour soumettre un formulaire.
 
 ## Syntaxe
 

@@ -38,7 +38,7 @@ La plupart de ces opérations requièrent les [permissions d'APIs](/fr/Add-ons/W
 - {{WebExtAPIRef("management.getSelf()")}}
   - : Renvoie des informations sur l'appel du module complémentaire.
 - {{WebExtAPIRef("management.install()")}}
-  - : Installe un thème particulier, étant donné son URL à l'adresse  [addons.mozilla.org](https://addons.mozilla.org).
+  - : Installe un thème particulier, étant donné son URL à l'adresse  [addons.mozilla.org](https://addons.mozilla.org).
 - {{WebExtAPIRef("management.uninstall()")}}
   - : Désinstalle un module complémenaire particulier, compte tenu de son ID.
 - {{WebExtAPIRef("management.uninstallSelf()")}}

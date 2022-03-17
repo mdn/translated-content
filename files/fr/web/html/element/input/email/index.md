@@ -290,7 +290,7 @@ C'est pour cela qu'on indique la chaîne de caractères "Merci de fournir unique
 
 ## Exemples
 
-Dans l'exemple qui suit, on peut saisir une adresse électronique qui contient au plus 256 caractères. La boîte de saisie affichera au plus 64 caractères et contiendra le texte  `"user@example.gov"` comme indication lorsque le champ est vide. On trouve également l'attribut {{htmlattrxref("multiple", "input")}} qui permet de saisir zéro ou plusieurs adresses séparées par des virgules (cf. ci-avant). Enfin, l'attribut {{htmlattrxref("list", "input")}} utilisé indique un identifiant d'un élément {{HTMLElement("datalist")}} dont les éléments {{HTMLElement("option")}} déterminent les valeurs suggérées qui peuvent être sélectionnées par l'utilisateur.
+Dans l'exemple qui suit, on peut saisir une adresse électronique qui contient au plus 256 caractères. La boîte de saisie affichera au plus 64 caractères et contiendra le texte  `"user@example.gov"` comme indication lorsque le champ est vide. On trouve également l'attribut {{htmlattrxref("multiple", "input")}} qui permet de saisir zéro ou plusieurs adresses séparées par des virgules (cf. ci-avant). Enfin, l'attribut {{htmlattrxref("list", "input")}} utilisé indique un identifiant d'un élément {{HTMLElement("datalist")}} dont les éléments {{HTMLElement("option")}} déterminent les valeurs suggérées qui peuvent être sélectionnées par l'utilisateur.
 
 L'élément {{HTMLElement("label")}} qui précède l'élément `<input>` permettra d'afficher un libellé avant la boîte de saisie. Le lien entre les deux est fait grâce à l'attribut `for` qui contient `"emailAddress"` qui est l'identifiant de l'élément {{HTMLElement("input")}}. Grâce à cette association, cliquer sur l'étiquette permettra de placer le focus sur le champ de saisie.
 
@@ -338,7 +338,7 @@ L'élément {{HTMLElement("label")}} qui précède l'élément `<input>` permett
         {{htmlattrxref("multiple", "input")}},
         {{htmlattrxref("pattern", "input")}},
         {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}}, {{htmlattrxref("required", "input")}}
+        {{htmlattrxref("readonly", "input")}}, {{htmlattrxref("required", "input")}}
         et {{htmlattrxref("size", "input")}}
       </td>
     </tr>

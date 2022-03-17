@@ -44,7 +44,7 @@ La méthode `formatToParts()` est peut être utilisée lorsqu'on met en forme de
 Les valeurs possibles pour l'attribut `type` sont :
 
 - `currency`
-  - : Le suffixe associé à la devise. Ce peut être le symbole "$", "€" ou bien le nom de la devise "Dollar", "Euro" selon la façon dont `currencyDisplay`  est indiquée.
+  - : Le suffixe associé à la devise. Ce peut être le symbole "$", "€" ou bien le nom de la devise "Dollar", "Euro" selon la façon dont `currencyDisplay`  est indiquée.
 - `decimal`
   - : Le séparateur décimal utilisé (".").
 - `fraction`

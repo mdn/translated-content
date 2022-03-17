@@ -10,6 +10,7 @@ La méthode **`animate()`** de l'interface [`Element`](/fr/docs/Web/API/Element)
 
 > **Note :** Les éléments peuvent avoir plusieurs animations qui leur sont appliquées. Vous pouvez obtenir une liste des animations qui affectent un élément en appelant [`Element.getAnimations()`](/fr/docs/Web/API/Element/getAnimations).
 
+
 ## Syntaxe
 
 ```js

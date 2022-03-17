@@ -75,7 +75,7 @@ Un dégradé linéaire est défini par un axe&nbsp;: la _ligne du dégradé_ et 
 
 La ligne du dégradé est définie par le centre de la boîte contenant l'image et par un angle. Les couleurs du dégradé sont déterminées par deux ou plusieurs points&nbsp;: le point de départ, le point d'arrivée et, éventuellement entre, des points d'arrêts de couleur.
 
-Le _point de départ_  est situé sur la ligne du dégradé où la première couleur commence. Le _point d'arrivée_ est situé là où la dernière couleur finit. Chacun de ces deux points est défini par l'intersection de la ligne du dégradé avec une ligne perpendiculaire du coin de la boîte correspondant. Le point de fin peut être considéré comme le symétrique du point de départ. Ces définitions relativement complexes peuvent mener à des effets intéressants intitulés «&nbsp;coins magiques&nbsp;»&nbsp;: les coins les plus proches des points de départ et d'arrivée ont la même couleur (respectivement) que ces deux points.
+Le _point de départ_ est situé sur la ligne du dégradé où la première couleur commence. Le _point d'arrivée_ est situé là où la dernière couleur finit. Chacun de ces deux points est défini par l'intersection de la ligne du dégradé avec une ligne perpendiculaire du coin de la boîte correspondant. Le point de fin peut être considéré comme le symétrique du point de départ. Ces définitions relativement complexes peuvent mener à des effets intéressants intitulés «&nbsp;coins magiques&nbsp;»&nbsp;: les coins les plus proches des points de départ et d'arrivée ont la même couleur (respectivement) que ces deux points.
 
 #### Personnaliser des dégradés
 

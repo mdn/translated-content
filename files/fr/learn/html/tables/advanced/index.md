@@ -1,5 +1,5 @@
 ---
-title: 'Tableaux HTML :  dispositions avancées et accessibilité'
+title: 'Tableaux HTML&nbsp;:  dispositions avancées et accessibilité'
 slug: Learn/HTML/Tables/Advanced
 tags:
   - Accessibilité
@@ -23,12 +23,12 @@ original_slug: Apprendre/HTML/Tableaux/Advanced
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
-Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.
+Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases de HTML (voir
         <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
@@ -37,7 +37,7 @@ Dans le second article de ce module, nous examinerons quelques dispositions avan
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         En apprendre plus sur les fonctionnalités HTML plus avancées et
         l'accessibilité aux tableaux.
@@ -62,13 +62,13 @@ Comme vous pouvez le voir sur le bref exemple ci-dessus, le titre consiste en un
 
 Le titre est placé directement sous la balise `<table>`.
 
-> **Note :** L'attribut {{htmlattrxref("summary","table")}} peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`,  car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant  (il n'apparaît pas dans la page).
+> **Note :** L'attribut {{htmlattrxref("summary","table")}} peut aussi être utilisé dans un élément `<table>` pour fournir une description — il sera lu également par les lecteurs d'écran. Toutefois, nous nous devons de recommander plutôt l'utilisation de l'élément `<caption>`,  car `summary` est considéré comme {{glossary("deprecated", "obsolète")}} par la norme HTML5, et ne peut être lu par l'utilisateur courant  (il n'apparaît pas dans la page).
 
-### Apprentissage actif : Ajouter un titre
+### Apprentissage actif&nbsp;: Ajouter un titre
 
 Essayons en revisitant un exemple rencontré dans l'article précédent.
 
-1.  Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML : notions de base](/fr/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
+1.  Ouvrez le planning du professeur de langue de la fin de [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics#Active_learning_colgroup_and_col) ou faites une copie locale du fichier [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html).
 2.  Ajoutez un titre approprié pour le tableau.
 3.  Enregistrez votre code et ouvrez-le dans un navigateur pour voir à quoi il ressemble.
 
@@ -82,11 +82,11 @@ Ces éléments ne rendent pas le tableau plus accessible aux utilisateurs de lec
 
 Pour les utiliser :
 
-- L'élément `<thead>` doit couvrir la partie du tableau qui est l'en-tête — ce sera en général la première ligne contenant les en-têtes de colonnes, mais pas toujours. Dans le code, si vous utilisez les éléments  {{htmlelement("col")}}/{{htmlelement("colgroup")}}, l'en-tête du tableau devrait venir juste en-dessous de ceux-ci.
-- L'élément `<tfoot>` doit envelopper la partie du tableau qui est le pied de page — ce peut être une dernière ligne contenant, par exemple, la somme des rangées précédentes. Vous pouvez inclure l'élément \<tfoot>  à la suite du code contenant le corps du tableau, là où vous souhaitez le trouver, ou juste en-dessous de l'élément \<thead> (le navigateur l'affichera toujours en pied de tableau).
-- L'élément `<tbody>`  doit couvrir toutes les parties du tableau non contenues dans un \<thead> ou un \<tfoot>. Il pourra apparaître dans le code, sous la déclaration de l'en-tête ou du pied de page, selon la façon dont vous avez décidé de le structurer (voir les notes ci‑dessus).
+- L'élément `<thead>` doit couvrir la partie du tableau qui est l'en-tête — ce sera en général la première ligne contenant les en-têtes de colonnes, mais pas toujours. Dans le code, si vous utilisez les éléments  {{htmlelement("col")}}/{{htmlelement("colgroup")}}, l'en-tête du tableau devrait venir juste en-dessous de ceux-ci.
+- L'élément `<tfoot>` doit envelopper la partie du tableau qui est le pied de page — ce peut être une dernière ligne contenant, par exemple, la somme des rangées précédentes. Vous pouvez inclure l'élément \<tfoot>  à la suite du code contenant le corps du tableau, là où vous souhaitez le trouver, ou juste en-dessous de l'élément \<thead> (le navigateur l'affichera toujours en pied de tableau).
+- L'élément `<tbody>`  doit couvrir toutes les parties du tableau non contenues dans un \<thead> ou un \<tfoot>. Il pourra apparaître dans le code, sous la déclaration de l'en-tête ou du pied de page, selon la façon dont vous avez décidé de le structurer (voir les notes ci‑dessus).
 
-> **Note :** `<tbody>` est toujours inclus dans tous les tableaux, implicitement si vous ne l'avez pas spécifié dans votre code. Pour le vérifier, ouvrez un tableau ne contenant pas l'élément `<tbody>` et regardez le code HTML dans les [outils de développement de votre navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) — vous verrez que le navigateur a ajouté cette balise pour vous. Si vous vous demandez pourquoi  vous ennuyer à gérer ce qui est ajouté automatiquement — parce que cela vous donne plus de contrôle sur la structure et l'apparence de votre tableau.
+> **Note :** `<tbody>` est toujours inclus dans tous les tableaux, implicitement si vous ne l'avez pas spécifié dans votre code. Pour le vérifier, ouvrez un tableau ne contenant pas l'élément `<tbody>` et regardez le code HTML dans les [outils de développement de votre navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) — vous verrez que le navigateur a ajouté cette balise pour vous. Si vous vous demandez pourquoi vous ennuyer à gérer ce qui est ajouté automatiquement — parce que cela vous donne plus de contrôle sur la structure et l'apparence de votre tableau.
 
 ### Apprentissage actif : Ajout d'une structure au tableau
 
@@ -96,7 +96,7 @@ Mettons en œuvre ces nouveaux éléments.
 2.  Essayez de les ouvrir dans un navigateur — vous verrez que cela paraît correct, mais gagnerait à être amélioré. La ligne "SUM" qui contient les totaux des montants dépensés semble être au mauvais endroit et il manque certains détails du code.
 3.  Mettez la ligne d'en-têtes en évidence avec l'élément `<thead>` , la ligne des totaux ("SUM") dans un `<tfoot>`, et le reste du contenu dans un `<tbody>`.
 4.  Enregistrez et actualisez, et vous verrez que l'ajout de l'élément `<tfoot>` a renvoyé la ligne "SUM" en bas du tableau.
-5.  Ensuite, ajoutez un attribut {{htmlattrxref("colspan","td")}}  pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne « Coût ».
+5.  Ensuite, ajoutez un attribut {{htmlattrxref("colspan","td")}}  pour générer une cellule Total ("SUM") couvrant les quatre premières colonnes, ainsi le nombre réel apparaît au pied de la colonne «&nbsp;Coût&nbsp;».
 6.  Ajoutons un style supplémentaire au tableau, pour vous donner une idée de l'utilité de ces éléments pour l'application des CSS. Dans le \<head> du document HTML, vous pouvez voir un élément {{htmlelement("style")}} vide, ajoutez les lignes suivantes de code CSS :
 
     ```css
@@ -176,7 +176,7 @@ Le code de votre tableau fini devrait ressembler à quelque chose comme :
         <thead>
           <tr>
             <th>Achats</th>
-            <th>Où ?</th>
+            <th>Où&nbsp;?</th>
             <th>Date</th>
             <th>Avis</th>
             <th>Coût (€)</th>
@@ -226,7 +226,7 @@ Le code de votre tableau fini devrait ressembler à quelque chose comme :
 
 {{ EmbedLiveSample("Apprentissage_actif_Ajout_d'une_structure_au_tableau", '100%', 300, "", "", "hide-codepen-jsfiddle") }}
 
-> **Note :** Vous pouvez aussi le trouver sur Github  [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([voir aussi le résultat](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html) directement).
+> **Note :** Vous pouvez aussi le trouver sur Github  [spending-record-finished.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/spending-record-finished.html) ([voir aussi le résultat](http://mdn.github.io/learning-area/html/tables/advanced/spending-record-finished.html) directement).
 
 ## Tableaux imbriqués
 
@@ -289,14 +289,14 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
   </caption>
   <tbody>
     <tr>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
       <th colspan="3" scope="colgroup">Vêtements</th>
       <th colspan="2" scope="colgroup">Accessoires</th>
     </tr>
     <tr>
-      <td> </td>
-      <td> </td>
+      <td></td>
+      <td></td>
       <th scope="col">Pantalons</th>
       <th scope="col">Jupes</th>
       <th scope="col">Robes</th>
@@ -350,25 +350,25 @@ Rappelons brièvement comment nous utilisons les tableaux de données. Un tablea
 
 Mais que faire si vous ne pouvez pas créer ces associations visuelles ? Comment pouvez-vous lire un tableau comme celui ci-dessus ? Les personnes malvoyantes utilisent souvent un lecteur d'écran qui leur lit les informations des pages web. Ce n'est pas un problème quand vous lisez du texte brut, mais l'interprêtation d'un tableau peut constituer un défi pour une personne aveugle. Néanmoins, avec le balisage approprié, nous pouvons remplacer des associations visuelles par des associations programmées.
 
-> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/ "Vision Impairment Data").
+> **Note :** Il y a environ 253 millions de personnes vivant avec des déficiences visuelles selon les  [données de l'OMS en 2017](http://www.who.int/mediacentre/factsheets/fs282/fr/ "Vision Impairment Data").
 
 Cette partie de l'article indique des techniques avancées pour rendre les tableaux les plus accessibles possible.
 
 ### Utilisation des en-têtes de colonnes et de lignes
 
-Les lecteurs d'écran identifieront tous les en-têtes et les utiliseront pour réaliser automatiquement les associations entre ces en-têtes et les cellules correspondantes.  La combinaison des en-têtes des colonnes et des lignes doit permettre d'identifier et d'interprêter les données de chaque cellule. Ainsi, les utilisateurs de lecteurs d'écran peuvent accéder aux données d'une façon similaire à celle des utilisateurs voyants.
+Les lecteurs d'écran identifieront tous les en-têtes et les utiliseront pour réaliser automatiquement les associations entre ces en-têtes et les cellules correspondantes.  La combinaison des en-têtes des colonnes et des lignes doit permettre d'identifier et d'interprêter les données de chaque cellule. Ainsi, les utilisateurs de lecteurs d'écran peuvent accéder aux données d'une façon similaire à celle des utilisateurs voyants.
 
 Nous avons déjà traité des en-têtes dans notre article précédent — voir [Ajouter des en-têtes avec \<th>](/fr/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements) .
 
 ### L'attribut `scope`
 
-Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut {{htmlattrxref("scope","th")}}. Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguité un en-tête de colonne comme étant un en-tête de colonne ainsi :
+Aux balises `<th>`, sujet de l'article précédent, ajoutons l'attribut {{htmlattrxref("scope","th")}}. Il peut être mentionné dans un élément `<th>` pour indiquer précisément à un lecteur d'écran si la cellule contient un en-tête de colonne ou de ligne — par exemple, sommes‑nous dans un en-tête de ligne, ou de colonne ? En revenant à notre exemple d'enregistrement de dépenses vu plus tôt, il est possible de définir sans ambiguité un en-tête de colonne comme étant un en-tête de colonne ainsi&nbsp;:
 
 ```html
 <thead>
   <tr>
     <th scope="col">Achats</th>
-    <th scope="col">Ou ?</th>
+    <th scope="col">Ou&nbsp;?</th>
     <th scope="col">Date</th>
     <th scope="col">Avis</th>
     <th scope="col">Coût (€)</th>
@@ -390,24 +390,24 @@ Et chaque ligne pourrait également avoir une définition de son en-tête comme 
 
 Les lecteurs d'écran reconnaîtront un balisage structuré comme celui-ci et permettront à leurs utilisateurs de lire en une fois une colonne ou une ligne entière par exemple.
 
-`scope` a deux autres valeurs possibles — `colgroup` et `rowgroup`. Elles sont utilisées pour les en-têtes qui couvrent plusieurs colonnes ou lignes. Si vous revenez au tableau « Articles vendus... » au début de ce paragraphe du présent article, vous voyez que la cellule « Vêtements » se trouve au-dessus des cellules  « Pantalons », « Jupes » et « Robes ». Toutes ces cellules sont marquées comme en-têtes (`<th>`), mais « Vêtements » est un en-tête de niveau supérieur qui définit trois « sous-en-têtes ». « Vêtements » comportera donc un attribut  `scope="colgroup"`, alors que les autres doivent recevront un attribut `scope="col"`.
+`scope` a deux autres valeurs possibles — `colgroup` et `rowgroup`. Elles sont utilisées pour les en-têtes qui couvrent plusieurs colonnes ou lignes. Si vous revenez au tableau «&nbsp;Articles vendus...&nbsp;» au début de ce paragraphe du présent article, vous voyez que la cellule «&nbsp;Vêtements&nbsp;» se trouve au-dessus des cellules  «&nbsp;Pantalons&nbsp;», «&nbsp;Jupes&nbsp;» et «&nbsp;Robes&nbsp;». Toutes ces cellules sont marquées comme en-têtes (`<th>`), mais «&nbsp;Vêtements&nbsp;» est un en-tête de niveau supérieur qui définit trois «&nbsp;sous-en-têtes&nbsp;». «&nbsp;Vêtements&nbsp;» comportera donc un attribut  `scope="colgroup"`, alors que les autres doivent recevront un attribut `scope="col"`.
 
 ### Les attributs `id` et `headers`
 
 Une alternative à l'usage de l'attribut `scope` est l'utilisation des attributs {{htmlattrxref("id")}} et {{htmlattrxref("headers", "td")}} pour créer une association entre en-têtes et cellules. Ils sont utilisés de la manière suivante :
 
 1.  Vous ajoutez un identifiant unique `id` à chaque élément `<th>`.
-2.  Vous ajoutez un attribut `headers` à chaque élément  `<td>` . Chaque attribut `headers` doit contenir une liste des `id` de tous les éléments \<th> qu'il contient, séparés par des espaces.
+2.  Vous ajoutez un attribut `headers` à chaque élément  `<td>` . Chaque attribut `headers` doit contenir une liste des `id` de tous les éléments \<th> qu'il contient, séparés par des espaces.
 
 Votre tableau HTML possède donc la position explicite de chaque cellule dans le tableau, définie par les en-têtes de chaque colonne et chaque ligne qui en font partie, un peu comme dans une feuille de calcul. Pour un bon fonctionnement, le tableau a réellement besoin d'en-têtes de colonnes et de lignes.
 
-En revenant à notre exemple de tableau des dépenses et des coûts, les deux extraits précédents pourraient être réécrits ainsi :
+En revenant à notre exemple de tableau des dépenses et des coûts, les deux extraits précédents pourraient être réécrits ainsi&nbsp;:
 
 ```html
 <thead>
   <tr>
     <th id="purchase">Achats</th>
-    <th id="location">Où ?</th>
+    <th id="location">Où&nbsp;?</th>
     <th id="date">Date</th>
     <th id="evaluation">Avis</th>
     <th id="cost">Coût (€)</th>
@@ -427,16 +427,16 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 </tbody>
 ```
 
-> **Note :** Cette méthode crée des associations très précises entre en-têtes et données mais elle utilise **beaucoup** plus de balisage et ne laisse aucune marge d'erreur.  L'approche `scope` est généralement suffisante pour la plupart des tableaux.
+> **Note :** Cette méthode crée des associations très précises entre en-têtes et données mais elle utilise **beaucoup** plus de balisage et ne laisse aucune marge d'erreur.  L'approche `scope` est généralement suffisante pour la plupart des tableaux.
 
-### Apprentissage actif : jouer avec `scope` et `headers`
+### Apprentissage actif&nbsp;: jouer avec `scope` et `headers`
 
 1.  Pour cet exercice final, nous aimerions que vous fassiez une copie locale de [items‑sold.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/minimal-table.css), dans un nouveau répertoire.
 2.  Maintenant essayez d'ajouter un attribut `scope` approprié pour améliorer ce tableau.
 3.  Enfin, essayez avec une autre copie du fichier initial, de faire un tableau plus accessible en utilisant les attributs `id` et `headers`.
 
-> **Note :** Vous pouvez contrôler votre travail en le comparant à nos exemples finis  — voir [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))
->          et [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
+> **Note :** Vous pouvez contrôler votre travail en le comparant à nos exemples finis  — voir [items-sold-scope.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-scope.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-scope.html))
+> et [items-sold-headers.html](https://github.com/mdn/learning-area/blob/master/html/tables/advanced/items-sold-headers.html) ([voir aussi directement](http://mdn.github.io/learning-area/html/tables/advanced/items-sold-headers.html)).
 
 ## Résumé
 
@@ -446,6 +446,6 @@ Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais 
 
 ## Dans ce module
 
-- [Tableaux HTML : notions de base](/fr/docs/Learn/HTML/Tables/Basics)
+- [Tableaux HTML&nbsp;: notions de base](/fr/docs/Learn/HTML/Tables/Basics)
 - [Tableaux HTML : dispositions avancées et accessibilité](/fr/docs/Learn/HTML/Tables/Advanced)
 - [Structuration de données sur les planètes](/fr/docs/Learn/HTML/Tables/Structuring_planet_data)

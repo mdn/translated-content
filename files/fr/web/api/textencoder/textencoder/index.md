@@ -5,7 +5,7 @@ translation_of: Web/API/TextEncoder/TextEncoder
 ---
 {{APIRef("Encoding API")}}
 
-Le constructeur **`TextEncoder()`** retourne un nouvel objet {{DOMxRef("TextEncoder")}} utf-8.
+Le constructeur **`TextEncoder()`** retourne un nouvel objet {{DOMxRef("TextEncoder")}} utf-8.
 
 ## Syntaxe
 

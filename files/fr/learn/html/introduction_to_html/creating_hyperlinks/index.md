@@ -215,7 +215,7 @@ Autres conseils :
 - Ne répétez pas l'URL dans le texte du lien — les URL sont moches, et elles le sont encore plus à entendre quand un lecteur d'écran les épèle.
 - Ne dites pas « lien » ou « liens vers... » dans le texte du lien, ce n'est que du rabâchage. Les lecteurs d'écran indiquent aux gens qu'il y a un lien. Les utilisateurs visuels verront aussi qu'il y a un lien, du fait que les liens sont généralement de couleur différente et soulignés (de façon générale, cette convention tacite ne devrait pas être trahie, car les utilisateurs y sont très habitués).
 - Faites que vos étiquettes de lien soient aussi courtes que possible : les liens longs agacent particulièrement les utilisateurs de lecteurs d'écran, qui doivent en écouter la lecture entière.
-- Minimiser les cas où plusieurs copies d'un même texte pointent vers des emplacements différents. Afficher une liste de liens hors contexte peut poser problème aux utilisateurs de lecteurs d'écran : ainsi plusieurs liens tous étiquetés « cliquez ici », « cliquez ici », « cliquez ici » seront source de confusion.
+- Minimiser les cas où plusieurs copies d'un même texte pointent vers des emplacements différents. Afficher une liste de liens hors contexte peut poser problème aux utilisateurs de lecteurs d'écran&nbsp;: ainsi plusieurs liens tous étiquetés « cliquez ici », « cliquez ici », « cliquez ici » seront source de confusion.
 
 ### Utilisez des liens relatifs partout où c'est possible
 

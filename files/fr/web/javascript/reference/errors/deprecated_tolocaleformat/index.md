@@ -39,7 +39,7 @@ console.log(date);
 
 ### Utiliser une syntaxe standard grâce à l'API ECMAScript Intl
 
-Le standard ECMA-402 (l'API ECMAScript Intl) définit des objets et méthodes standards qui permettent de mettre en forme des dates et heures (disponible à partir de Chrome 24, de Firefox 29, d'IE11 et de  Safari10).
+Le standard ECMA-402 (l'API ECMAScript Intl) définit des objets et méthodes standards qui permettent de mettre en forme des dates et heures (disponible à partir de Chrome 24, de Firefox 29, d'IE11 et de Safari10).
 
 Si on souhaite uniquement formater une date, on pourra utiliser la méthode {{jsxref("Date.prototype.toLocaleDateString")}}.
 

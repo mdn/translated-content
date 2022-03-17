@@ -37,9 +37,9 @@ Les descripteurs inconnus ne sont pas valides et sont ignorés, mais n'invaliden
 
 ## Exemples
 
-Ajout d'une vérification de type à la {{cssxref('--*', 'propriété personnalisée')}} `--my-color` en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur :
+Ajout d'une vérification de type à la {{cssxref('--*', 'propriété personnalisée')}} `--my-color` en tant que couleur et que valeur par défaut, sans lui permettre d'hériter de sa valeur&nbsp;:
 
-Utilisation de la règle [CSS](/en-US/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}} :
+Utilisation de la règle [CSS](/en-US/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/At-rule) {{cssxref('@property')}}&nbsp;:
 
 ```css
 @property --my-color {
@@ -49,7 +49,7 @@ Utilisation de la règle [CSS](/en-US/docs/Web/CSS) [at-rule](/fr/docs/Web/CSS/A
 }
 ```
 
-Équivalent avec la fonction [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}} :
+Équivalent avec la fonction [JavaScript](/en-US/docs/Web/JavaScript) {{domxref('CSS.registerProperty')}}&nbsp;:
 
 ```js
 window.CSS.registerProperty({

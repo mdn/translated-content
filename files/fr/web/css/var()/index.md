@@ -34,7 +34,7 @@ Le premier argument de la fonction est le nom de la propriété qu'on veut subst
 - `<declaration-value>`
   - : Une valeur de subsitution qui peut être utilisée afin que la règle soit valide si la valeur du premier argument ne peut être utilisée ici.
 
-## Exemples​
+## Exemples
 
 ```css
 :root{

@@ -10,7 +10,7 @@ translation_of: Web/API/Blob/type
 ---
 {{APIRef("File API")}}
 
-La propriété **`type`** de l'objet [`Blob`](fr/docs/Web/API/Blob) fourni le type MIME (Internet media type) d'un fichier. Celle-ci retourne une chaîne de caractère vide si le type n'a pas pu être déterminé.
+La propriété **`type`** de l'objet [`Blob`](fr/docs/Web/API/Blob) fourni le type MIME (Internet media type) d'un fichier. Celle-ci retourne une chaîne de caractère vide si le type n'a pas pu être déterminé.
 
 ## Syntaxe
 

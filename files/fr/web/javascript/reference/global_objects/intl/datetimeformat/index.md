@@ -49,7 +49,7 @@ L'objet **`Intl.DateTimeFormat`** est un constructeur d'objets permettant de for
     - `formatMatcher`
       - : L'algorithme de correspondance à utiliser pour le formattage. Les valeurs possibles sont `"basic"` et `"best fit"` ; par défaut `"best fit"`. Voir les paragraphes suivants pour des informations concernant l'usage de cette propriété.
 
-    Les propriétés suivantes décrivent les composants date-heure à utiliser pour le formattage de la sortie.  Les implémentations ont pour obligation de supporter au minimum les ensembles suivants :
+    Les propriétés suivantes décrivent les composants date-heure à utiliser pour le formattage de la sortie.  Les implémentations ont pour obligation de supporter au minimum les ensembles suivants :
 
     - `weekday, year, month, day, hour, minute, second`
     - `weekday, year, month, day`

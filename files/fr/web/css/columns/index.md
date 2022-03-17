@@ -57,10 +57,10 @@ La propriété `columns` se définit avec un ou deux valeurs parmi celles décri
 
 ```css
 .exemple {
-  margin: 0;
-  height: 90px;
-  border: 3px solid black;
-  columns: 3;
+  margin: 0;
+  height: 90px;
+  border: 3px solid black;
+  columns: 3;
 }
 ```
 

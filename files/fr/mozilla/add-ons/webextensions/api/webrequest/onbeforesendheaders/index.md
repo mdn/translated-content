@@ -25,7 +25,7 @@ Pour modifier les en-têtes de façon asynchrone : passez `"blocking"` dans `ext
 
 Si vous utilisez le `"blocking"`, vous devez avoir la ["permission de l'API "webRequestBlocking"](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) dans votre manifest.json.
 
-Il est possible d'étendre le conflit ici. Si deux extensions écoutent `onBeforeSendHeaders` pour la même requête, le deuxième auditeur verra les modifications apportées par le premier auditeur et pourra annuler les modifications apportées par le premier auditeur. Par exemple, si le premier auditeur ajoute un en-tête `Cookie`, et que le deuxième auditeur supprime tous les en-têtes `Cookie`, les modifications apportées par le premier auditeur seront perdues. Si vous voulez voir les en-têtes qui sont effectivement envoyés, sans risque qu'une autre extension les modifie par la suite, utilisez {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}, bien que vous ne puissiez pas modifier les en-têtes sur cet événement.
+Il est possible d'étendre le conflit ici. Si deux extensions écoutent `onBeforeSendHeaders` pour la même requête, le deuxième auditeur verra les modifications apportées par le premier auditeur et pourra annuler les modifications apportées par le premier auditeur. Par exemple, si le premier auditeur ajoute un en-tête `Cookie`, et que le deuxième auditeur supprime tous les en-têtes `Cookie`, les modifications apportées par le premier auditeur seront perdues. Si vous voulez voir les en-têtes qui sont effectivement envoyés, sans risque qu'une autre extension les modifie par la suite, utilisez {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}, bien que vous ne puissiez pas modifier les en-têtes sur cet événement.
 
 Tous les en-têtes réellement envoyés ne sont pas toujours inclus dans `requestHeaders`. En particulier, les en-têtes liés à la mise en cache (par exemple, `Cache-Control`, `If-Modified-Since`, `If-None-Match`) ne sont jamais envoyés. De plus, le comportement peut différer d'un navigateur à l'autre.
 
@@ -82,7 +82,7 @@ Les événements ont trois fonctions :
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
     - `"blocking"`: rendre la requête synchrone, ce qui vous permet de modifier les en-têtes de requête
-    - `"requestHeaders"`: inclure les en-têtes de requête dans l'objet `details`  transmis à l'auditeur
+    - `"requestHeaders"`: inclure les en-têtes de requête dans l'objet `details`  transmis à l'auditeur
 
 ## Objets supplémentaires
 

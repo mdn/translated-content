@@ -14,7 +14,7 @@ translation_of: Web/HTTP/Headers
 
 Les en-têtes HTTP permettent au client et au serveur de transmettre des informations supplémentaires avec la requête ou la réponse. Un en-tête de requête est constitué de son nom (insensible à la casse) suivi d'un deux-points `:`, puis de sa valeur (sans saut de ligne). L'espace blanc avant la valeur est ignoré.
 
-Des en-têtes propriétaires personnalisés peuvent être ajoutés en utilisant le préfixe `X-`, mais cette convention a été abandonnée en juin 2012, en raison des inconvénients qu'elle a présenté lorsque des champs non standard sont devenus standard dans [RFC 6648](https://tools.ietf.org/html/rfc6648); les autres en-têtes possibles sont listés dans une [liste IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml) et ont été définis dans la [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA maintient également une [liste des propositions de nouveaux entêtes HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).
+Des en-têtes propriétaires personnalisés peuvent être ajoutés en utilisant le préfixe `X-`, mais cette convention a été abandonnée en juin 2012, en raison des inconvénients qu'elle a présenté lorsque des champs non standard sont devenus standard dans [RFC 6648](https://tools.ietf.org/html/rfc6648); les autres en-têtes possibles sont listés dans une [liste IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml) et ont été définis dans la [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA maintient également une [liste des propositions de nouveaux entêtes HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).
 
 Les en-têtes peuvent être groupés selon leur contexte :
 
@@ -375,13 +375,13 @@ HTTP Public Key Pinning a été déprécié et supprimé au profit de Certificat
   - : contrôle le préchargement DNS, fonctionnalité par laquelle les navigateurs effectuent de manière proactive la résolution du nom de domaine sur les deux liens que l'utilisateur peut choisir de suivre ainsi que les URL des éléments référencés par le document, y compris les images, CSS, JavaScript, etc.
 - {{HTTPHeader("X-Firefox-Spdy")}} {{deprecated_inline}} {{non-standard_inline}}
   - : ...
-- {{HTTPHeader("X-Pingback")}} {{non-standard_inline}}
+- {{HTTPHeader("X-Pingback")}} {{non-standard_inline}}
   - : ...
 - {{HTTPHeader("X-Requested-With")}}
   - : ...
-- {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
+- {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
   - : indique comment une page doit être indexée dans les résultats publics des moteurs de recherche ; cet en-tête est équivalent à `<meta name="robots" content="...">`
-- {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
+- {{HTTPHeader("X-UA-Compatible")}} {{non-standard_inline}}
   - : Utilisé par Internet Explorer pour signaler quel mode de document utiliser.
 
 ## Contribuer

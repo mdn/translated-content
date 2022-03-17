@@ -92,8 +92,7 @@ _Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNod
         </tr>
         <tr>
           <th scope="row"><code>bandpass</code></th>
-          <td>
-            Filtre standard passe-bande de second ordre. Les fréquences en dehors de la plage donnée de fréquences sont atténués, et les fréquences à l'intérieur sont inchangées.
+          <td>            Filtre standard passe-bande de second ordre. Les fréquences en dehors de la plage donnée de fréquences sont atténués, et les fréquences à l'intérieur sont inchangées.
           </td>
           <td>Le centre de la gamme de fréquences.</td>
           <td>

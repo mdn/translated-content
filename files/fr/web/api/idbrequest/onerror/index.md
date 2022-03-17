@@ -54,7 +54,7 @@ L'exemple suivant demande un titre d'enregistrement donné, `onsuccess` obtient 
 
 | Spécification                                                                        | Statut                       | Commentaire |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-onerror', 'onerror')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBRequest-onerror', 'onerror')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité des navigateurs
 

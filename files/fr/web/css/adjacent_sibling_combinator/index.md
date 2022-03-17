@@ -52,7 +52,7 @@ li:first-of-type + li {
 | Spécification                                                                                                                | État                                 | Commentaires                                           |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
 | {{SpecName('CSS4 Selectors', '#adjacent-sibling-combinators', 'next-sibling combinator')}}     | {{Spec2('CSS4 Selectors')}} | Renomme ce sélecteur en « _next-sibling combinator_ ». |
-| {{SpecName('CSS3 Selectors', '#adjacent-sibling-combinators', 'Adjacent sibling combinator')}} | {{Spec2('CSS3 Selectors')}} |                                                        |
+| {{SpecName('CSS3 Selectors', '#adjacent-sibling-combinators', 'Adjacent sibling combinator')}} | {{Spec2('CSS3 Selectors')}} |                                                        |
 | {{SpecName('CSS2.1', 'selector.html#adjacent-selectors', 'Adjacent sibling selectors')}}         | {{Spec2('CSS2.1')}}             | Définition initiale.                                   |
 
 ## Compatibilité des navigateurs

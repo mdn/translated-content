@@ -48,7 +48,7 @@ Une chaîne de caractères JSON qui représente la valeur indiquée.
 La fonction `JSON.stringify()` convertit un objet en JSON :
 
 - L'ordre des propriétés des objets qui ne sont pas des tableaux n'est pas garanti. Par la suite, ne pas supposer que cet ordre soit respecté.
-- Les objets {{jsxref("Boolean")}}, {{jsxref("Number")}} et {{jsxref("String")}} sont convertis en leur valeur primitive correspondante, en accord avec la sémantique traditionnelle.
+- Les objets {{jsxref("Boolean")}}, {{jsxref("Number")}} et {{jsxref("String")}} sont convertis en leur valeur primitive correspondante, en accord avec la sémantique traditionnelle.
 - Si {{jsxref("undefined")}}, une fonction ou un symbole est rencontré lors de la conversion , il est soit omis ( quand il se trouve dans un objet ) ou ramené à {{jsxref("null")}} ( quand il se trouve dans un tableau). `JSON.stringify()` peut également renvoyer `undefined` lorsqu'il reçoit des valeurs « brutes » qui ne sont pas objectifiées comme par exemple `JSON.stringify(function(){})` ou `JSON.stringify(undefined)`.
 - Toutes les propriétés liées aux symboles (cf. {{jsxref("Symbol")}}) seront complètement ignorées , même lorsque la fonction `remplaçant` est utilisée.
 - Les propriétés qui ne sont pas énumérables seront ignorées.
@@ -183,7 +183,7 @@ L'argument `espace` est utilisé pour contrôler les espacements utilisés dans 
 ```js
 JSON.stringify({ a: 2 }, null, ' ');
 // '{
-//  "a": 2
+//  "a": 2
 // }'
 ```
 
@@ -193,8 +193,8 @@ Dans l'exemple suivant on utilise la tabulation pour rendre lisible le résultat
 JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // renverra
 // '{
-//     "uno": 1,
-//     "dos": 2
+//   "uno": 1,
+//   "dos": 2
 // }'
 ```
 

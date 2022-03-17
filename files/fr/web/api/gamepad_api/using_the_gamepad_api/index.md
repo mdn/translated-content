@@ -213,6 +213,7 @@ Cet exemple illustre comment utiliser l'objet [`Gamepad`](/fr/docs/Web/API/Gamep
 let haveEvents = 'ongamepadconnected' in window;
 let controllers = {};
 
+
 function connecthandler(e) {
   addgamepad(e.gamepad);
 }

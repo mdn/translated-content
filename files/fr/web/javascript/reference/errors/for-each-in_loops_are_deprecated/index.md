@@ -19,7 +19,7 @@ Avertissement.
 
 ## Quel est le problème ?
 
-L'instruction {{jsxref("Instructions/for_each...in", "for each (variable in obj)")}} présente à partir de JavaScript 1.6 est une instruction dépréciée et est amenée à disparaître dans un avenir proche.
+L'instruction {{jsxref("Instructions/for_each...in", "for each (variable in obj)")}} présente à partir de JavaScript 1.6 est une instruction dépréciée et est amenée à disparaître dans un avenir proche.
 
 ## Exemples
 

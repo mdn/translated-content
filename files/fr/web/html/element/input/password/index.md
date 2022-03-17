@@ -252,7 +252,7 @@ L'attribut {{htmlattrxref("inputmode", "input")}} vaut `number`, ce qui incite l
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
         {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
-        et 
+        et
         {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
       </td>
     </tr>

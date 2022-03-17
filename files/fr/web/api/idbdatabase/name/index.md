@@ -58,7 +58,7 @@ DBOpenRequest.onsuccess = function(event) {
 
 | Spécification                                                                    | État                         | Commentaires |
 | -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-name', 'name')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

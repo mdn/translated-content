@@ -10,7 +10,7 @@ tags:
   - l10n
 translation_of: Web/CSS/:-moz-locale-dir(ltr)
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9.2")}}
+{{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-locale-dir(ltr)`** correspond à un élément si l'interface utilisateur est affichée de gauche à droite. Ceci est déterminé par la préférence `intl.uidirection.`_`locale`_ (où _`locale`_ est le language courant) qui est fixé à "ltr".
 

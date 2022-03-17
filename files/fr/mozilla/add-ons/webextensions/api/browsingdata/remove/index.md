@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 
 Supprime les données de navigation spécifiées.
 
-Les données de navigation à supprimer sont spécifiées dans l'option  `dataTypes`, qui est un objet  {{WebExtAPIRef("browsingData.DataTypeSet")}}.
+Les données de navigation à supprimer sont spécifiées dans l'option  `dataTypes`, qui est un objet  {{WebExtAPIRef("browsingData.DataTypeSet")}}.
 
 Vous pouvez utiliser l'option `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, pour contrôler à quelle distance remonter dans le temps pour supprimer des données et supprimer les données uniquement à partir de pages Web normales ou pour supprimer des données hébergées d'applications et extensions aussi.
 

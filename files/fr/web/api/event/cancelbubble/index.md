@@ -30,7 +30,7 @@ La propriété **`Event.cancelBubble`** est un alias historique de {{domxref("Ev
 
 | Spécification                                                                                | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', '#dom-event-cancelbubble', 'cancelBubble')}} | {{Spec2('DOM WHATWG')}} |             |
+| {{SpecName('DOM WHATWG', '#dom-event-cancelbubble', 'cancelBubble')}} | {{Spec2('DOM WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

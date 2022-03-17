@@ -14,13 +14,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 
 Cet article vous montre comment créer une extension Firefox, du début à la fin. L'extension ajoute une bordure de couleur rouge sur toutes les pages chargées depuis le site "mozilla.org" ou n'importe lequel de ses sous-domaines.
 
-Le code source de cet exemple est disponible sur GitHub : <https://github.com/mdn/webextensions-examples/tree/master/borderify>.
+Le code source de cet exemple est disponible sur GitHub&nbsp;: <https://github.com/mdn/webextensions-examples/tree/master/borderify>.
 
 Pour commencer, il vous faut Firefox (dans la version 45 ou avec une version supérieure).
 
 ## Écriture de l'extension
 
-Créez un nouveau répertoire et déplacez vous à l'intérieur. Par exemple, dans votre ligne de commande/terminal vous pourriez le faire comme ceci :
+Créez un nouveau répertoire et déplacez vous à l'intérieur. Par exemple, dans votre ligne de commande/terminal vous pourriez le faire comme ceci&nbsp;:
 
 ```bash
 mkdir borderify
@@ -29,7 +29,7 @@ cd borderify
 
 ### manifest.json
 
-Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire `borderify` et tapez-y le contenu suivant :
+Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire `borderify` et tapez-y le contenu suivant&nbsp;:
 
 ```json
 {
@@ -54,9 +54,9 @@ Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire
 }
 ```
 
-- Les trois premières clés : [`manifest_version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), et [`version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) sont obligatoires et contiennent des métadonnées fondamentales nécessaires au module.
-- [`description`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) est optionnelle, mais recommandée : elle s'affiche dans le gestionnaire de module.
-- [`icons`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) est optionnelle, mais recommandée : elle permet d'établir l'icône du module qui s'affichera dans le gestionnaire de module.
+- Les trois premières clés&nbsp;: [`manifest_version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), et [`version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) sont obligatoires et contiennent des métadonnées fondamentales nécessaires au module.
+- [`description`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) est optionnelle, mais recommandée&nbsp;: elle s'affiche dans le gestionnaire de module.
+- [`icons`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) est optionnelle, mais recommandée&nbsp;: elle permet d'établir l'icône du module qui s'affichera dans le gestionnaire de module.
 
 La clé la plus intéressante ici est [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts), qui demande à Firefox de charger un script dans toutes les pages dont l'URL correspond à un motif de correspondance de domaines spécifique. Dans notre cas, nous demandons à Firefox de charger un script appelé `borderify.js` dans toutes les pages HTTP ou HTTPS du domaine "mozilla.org" et tous ses sous-domaines.
 
@@ -106,7 +106,7 @@ Ce script sera chargé dans chaque page où le domaine correspond au motif fourn
 
 ## Essai
 
-D'abord, vérifiez de nouveau que les bons fichiers sont au bon endroit :
+D'abord, vérifiez de nouveau que les bons fichiers sont au bon endroit&nbsp;:
 
     borderify/
         icons/
@@ -126,13 +126,13 @@ Une autre alternative est d’exécuter l'extension depuis la ligne de commande 
 
 ### Test
 
-Rendez-vous sur une page web du domaine "mozilla.org". Vous devriez y voir une bordure rouge qui entoure la page :
+Rendez-vous sur une page web du domaine "mozilla.org". Vous devriez y voir une bordure rouge qui entoure la page&nbsp;:
 
 {{EmbedYouTube("rxBQl2Z9IBQ")}}
 
-> **Note :** Toutefois, n'essayez pas ce module sur addons.mozilla.org ! Les scripts de contenu sont bloqués sur ce domaine.
+> **Note :** Toutefois, n'essayez pas ce module sur addons.mozilla.org&nbsp;! Les scripts de contenu sont bloqués sur ce domaine.
 
-Expérimentez un peu en modifiant le contenu du script, en changeant par exemple la couleur de la bordure ou en altérant le contenu de la page. Puis sauvegardez le content script, rechargez les fichiers du module en cliquant sur le bouton « Recharger » dans about:debugging. Les changements sont immédiats :
+Expérimentez un peu en modifiant le contenu du script, en changeant par exemple la couleur de la bordure ou en altérant le contenu de la page. Puis sauvegardez le content script, rechargez les fichiers du module en cliquant sur le bouton « Recharger » dans about:debugging. Les changements sont immédiats&nbsp;:
 
 {{EmbedYouTube("NuajE60jfGY")}}
 
@@ -142,9 +142,9 @@ Expérimentez un peu en modifiant le contenu du script, en changeant par exemple
 
 Afin que d'autres personnes puissent utiliser votre module, il vous faut l'empaqueter et le soumettre à la signature de Mozilla. Pour en apprendre plus, voir ["Publier votre extension"](/fr/docs/orphaned/Mozilla/Add-ons/WebExtensions/Package_your_extension_).
 
-## Et ensuite ?
+## Et ensuite&nbsp;?
 
-Maintenant que vous avez eu une introduction au processus de développement d'une WebExtension pour Firefox, voici quelques suggestions pour la suite :
+Maintenant que vous avez eu une introduction au processus de développement d'une WebExtension pour Firefox, voici quelques suggestions pour la suite&nbsp;:
 
 - [Rédiger une extension plus complexe](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension)
 - [En lire d'avantage sur l'anatomie d'une WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)

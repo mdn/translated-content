@@ -222,7 +222,7 @@ C'est ce second problème qui est le plus important. Comme nous l'avons mentionn
 - `mm-dd-yyyy HH:mm` (heure exprimée sur 24 heures)
 - etc.
 
-Une façon de contourner ce problème est de placer un attribut {{htmlattrxref("pattern", "input")}} dans l'élément ` <input type="``datetime-local"> `. Bien que cet élément n'utilise pas cet attribut, s'il est converti en `<input type="text">` par le navigateur, le motif sera alors utilisé. Vous pouvez par exemple essayer le code suivant dans un navigateur qui ne prend pas en charge `<input type="datetime-local">` :
+Une façon de contourner ce problème est de placer un attribut {{htmlattrxref("pattern", "input")}} dans l'élément ` <input type="``datetime-local"> `. Bien que cet élément n'utilise pas cet attribut, s'il est converti en `<input type="text">` par le navigateur, le motif sera alors utilisé. Vous pouvez par exemple essayer le code suivant dans un navigateur qui ne prend pas en charge `<input type="datetime-local">` :
 
 ```html
 <form>

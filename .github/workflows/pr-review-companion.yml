@@ -61,13 +61,13 @@ jobs:
         run: |
           7z x build.zip -obuild -bb1
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
            repository: mdn/yari
            path: yari
 
       - name: Install Python
-        uses: actions/setup-python@v2.2.2
+        uses: actions/setup-python@v3
         with:
           python-version: "3.8"
 

@@ -35,6 +35,7 @@ Il est important de noter qu'il n'y a qu'un seul auditeur par contexte, et qu'il
 - [`AudioListener.upZ`](/fr/docs/Web/API/AudioListener/upZ)
   - : La position longitudinale (avant et arrière) du haut de la tête de la personne qui écoute avec le même système de coordonnées cartésiennes que les valeurs de position (`positionX`, `positionY`, et `positionZ`). Les valeurs de direction vers l'avant et vers le haut sont indépendantes linéairement l'une de l'autre. La valeur par défaut est 0.
 
+
 ## Méthodes
 
 - [`AudioListener.setOrientation()`](/fr/docs/Web/API/AudioListener/setOrientation) {{deprecated_inline}}

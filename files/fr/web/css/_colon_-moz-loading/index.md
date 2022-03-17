@@ -8,7 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-loading
 ---
-{{CSSRef}}{{Non-standard_header}}{{gecko_minversion_header("1.9")}}
+{{CSSRef}}{{Non-standard_header}}
 
 La pseudo-classe **`:-moz-loading`** correspond aux éléments qui ne peuvent être affichés, car ils n'ont pas été chargés (par exemple les images qui n'ont pas encore été transférées sur le réseau). On notera que les images _en cours de chargement_ (le fichier est arrivé et est en train d'être traité pour affichage par le navigateur) ne sont pas ciblées par cette pseudo-classse.
 
