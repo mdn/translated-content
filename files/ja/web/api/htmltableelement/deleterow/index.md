@@ -1,40 +1,71 @@
 ---
-title: HTMLTableElement.deleteRow
+title: HTMLTableElement.deleteRow()
 slug: Web/API/HTMLTableElement/deleteRow
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - メソッド
+  - NeedsSpecTable
+  - リファレンス
+browser-compat: api.HTMLTableElement.deleteRow
 translation_of: Web/API/HTMLTableElement/deleteRow
 ---
-<div>
- {{ApiRef()}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p><strong>deleteRow</strong> は、テーブルから行を取り除きます。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><em>HTMLTableElement</em>.deleteRow(<em>index</em>)</pre>
-<h3 id="Return_Value" name="Return_Value">戻り値</h3>
-<p>無し</p>
-<h3 id="Parameters" name="Parameters">引数</h3>
-<dl>
- <dt>
-  <code>index</code></dt>
- <dd>
-  削除対象行のインデックス（ 0 を一行目とする行番号。整数で指定）<br>
-  但し <code>-1</code> は最終行を削除する特別なインデックスとなります。<br>
-  <code>-1</code> 以外の負数は無効です。</dd>
-</dl>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js">mytable.deleteRow(1);
-// delete the second row</pre>
-<h2 id="Exceptions" name="Exceptions">例外</h2>
-<dl>
- <dt>
-  <code>INDEX_SIZE_ERR</code></dt>
- <dd>
-  行数以上のインデックスを引数に指定した場合に、もしくは <code>-1</code> 以外の負数を指定した場合に、この例外がスローされます。</dd>
-</dl>
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-13114938">deleteRow</a></li>
-</ul>
+{{APIRef("HTML DOM")}}
+
+**`HTMLTableElement.deleteRow()`** メソッドは、特定の行 ({{HtmlElement("tr")}}) をこの {{HtmlElement("table")}} から削除します。
+
+## 構文
+
+```js
+HTMLTableElement.deleteRow(index)
+```
+
+### 引数
+
+- `index`
+  - : `index` は整数で、削除する行を表します。
+    ただし、特殊な値 `-1` を使用すると、表の最後の行を削除することができます。
+
+### 返値
+
+返値なし
+
+### 例外
+
+引数で指定された削除する行番号が、利用可能な行数以上である場合、あるいは負の数で、表の最終行を表す特別な値 `-1` ではない場合、例外 `INDEX_SIZE_ERR` が発生します。
+
+## 例
+
+この例は、 JavaScript を使用して表の 2 番目の行を削除します。
+
+### HTML
+
+```html
+<table>
+  <tr><td>セル 1.1</td><td>セル 1.2</td><td>セル 1.3</td></tr>
+  <tr><td>セル 2.1</td><td>セル 2.2</td><td>セル 2.3</td></tr>
+  <tr><td>セル 3.1</td><td>セル 3.2</td><td>セル 3.3</td></tr>
+</table>
+```
+
+### JavaScript
+
+```js
+let table = document.querySelector('table');
+
+// 2 番目の行を削除
+table.deleteRow(1);
+```
+
+### 結果
+
+{{EmbedLiveSample("Example")}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
