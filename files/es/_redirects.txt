@@ -1114,7 +1114,8 @@
 /es/docs/Learn/CSS/First_steps/Como_funciona_CSS	/es/docs/Learn/CSS/First_steps/How_CSS_works
 /es/docs/Learn/CSS/First_steps/Como_se_estructura_CSS	/es/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /es/docs/Learn/CSS/First_steps/Qué_es_CSS	/es/docs/Learn/CSS/First_steps/What_is_CSS
-/es/docs/Learn/CSS/First_steps/Usa_tu_nuevo_conocimiento	/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge
+/es/docs/Learn/CSS/First_steps/Usa_tu_nuevo_conocimiento	/es/docs/Learn/CSS/First_steps/Styling_a_biography_page
+/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/es/docs/Learn/CSS/First_steps/Styling_a_biography_page
 /es/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
 /es/docs/Learn/CSS/Introduction_to_CSS/Cascada_y_herencia	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 /es/docs/Learn/CSS/Introduction_to_CSS/Combinaciones_y_selectores_multiples	/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators

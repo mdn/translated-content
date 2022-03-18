@@ -2997,6 +2997,7 @@
 /fr/docs/Le_principe_de_fermeture_en_JavaScript:Résolution_d'identifiants,_contextes_d'exécution_et_visibilité_des_variables	/fr/docs/Web/JavaScript/Closures
 /fr/docs/Le_principe_de_fermeture_en_JavaScript:Utilisation_des_fermetures	/fr/docs/Web/JavaScript/Closures
 /fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS	/fr/docs/Learn/CSS/First_steps/What_is_CSS
+/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/fr/docs/Learn/CSS/First_steps/Styling_a_biography_page
 /fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens	/fr/docs/Learn/CSS/Styling_text/Styling_links
 /fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Learn/Index	/fr/docs/conflicting/Learn

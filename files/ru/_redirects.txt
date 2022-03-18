@@ -171,6 +171,7 @@
 /ru/docs/Learn/CSS/CSS_layout/Навыки_позиционирования	/ru/docs/Learn/CSS/CSS_layout/Position_skills
 /ru/docs/Learn/CSS/CSS_layout/Нормальный_поток	/ru/docs/Learn/CSS/CSS_layout/Normal_Flow
 /ru/docs/Learn/CSS/CSS_layout/Отзывчивый_дизайн	/ru/docs/Learn/CSS/CSS_layout/Responsive_Design
+/ru/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/ru/docs/Learn/CSS/First_steps/Styling_a_biography_page
 /ru/docs/Learn/CSS/First_steps/Как_структурирован_CSS	/ru/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /ru/docs/Learn/CSS/First_steps/Что_такое_CSS	/ru/docs/Learn/CSS/First_steps/What_is_CSS
 /ru/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
@@ -386,6 +387,7 @@
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
+/ru/docs/Web/API/Window/ondeviceorientation	/ru/docs/conflicting/Web/API/Window/deviceorientation_event
 /ru/docs/Web/API/Window/ongamepadconnected	/ru/docs/conflicting/Web/API/Window/gamepadconnected_event
 /ru/docs/Web/API/Window/ongamepaddisconnected	/ru/docs/conflicting/Web/API/Window/gamepaddisconnected_event
 /ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property

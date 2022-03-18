@@ -453,6 +453,7 @@
 /de/docs/Web/API/WebGL_API/Tutorial/Texturen_in_WebGL_verwenden	/de/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /de/docs/Web/API/WebSocket/onclose	/de/docs/Web/API/WebSocket/close_event
 /de/docs/Web/API/Window.alert	/de/docs/Web/API/Window/alert
+/de/docs/Web/API/Window/ondevicemotion	/de/docs/Web/API/Window/devicemotion_event
 /de/docs/Web/API/Window/performance	/de/docs/Web/API/performance_property
 /de/docs/Web/API/Window/setTimeout	/de/docs/Web/API/setTimeout
 /de/docs/Web/API/WindowBase64	/de/docs/Web/API/WindowOrWorkerGlobalScope

@@ -3051,7 +3051,7 @@
       "xcxAscar"
     ]
   },
-  "Learn/CSS/First_steps/Using_your_new_knowledge": {
+  "Learn/CSS/First_steps/Styling_a_biography_page": {
     "modified": "2020-07-16T22:28:05.597Z",
     "contributors": [
       "dlnb526",
@@ -22711,12 +22711,25 @@
       "Jiang-Xuan"
     ]
   },
+  "Web/API/Window/devicemotion_event": {
+    "modified": "2019-03-18T21:39:10.384Z",
+    "contributors": [
+      "pinpinye",
+      "Mmzer"
+    ]
+  },
   "Web/API/Window/deviceorientation_event": {
     "modified": "2019-04-11T18:37:50.677Z",
     "contributors": [
       "estelle",
       "fscholz",
       "laobubu"
+    ]
+  },
+  "Web/API/Window/deviceorientationabsolute_event": {
+    "modified": "2020-10-15T22:09:12.548Z",
+    "contributors": [
+      "webber007"
     ]
   },
   "Web/API/Window/dialogArguments": {
@@ -23047,25 +23060,6 @@
       "hhxxhg",
       "fscholz",
       "charlie"
-    ]
-  },
-  "Web/API/Window/ondevicemotion": {
-    "modified": "2019-03-18T21:39:10.384Z",
-    "contributors": [
-      "pinpinye",
-      "Mmzer"
-    ]
-  },
-  "Web/API/Window/ondeviceorientation": {
-    "modified": "2019-03-18T21:38:06.143Z",
-    "contributors": [
-      "Aaron_Zhung"
-    ]
-  },
-  "Web/API/Window/ondeviceorientationabsolute": {
-    "modified": "2020-10-15T22:09:12.548Z",
-    "contributors": [
-      "webber007"
     ]
   },
   "Web/API/Window/ondragdrop": {
@@ -47245,6 +47239,12 @@
     "contributors": [
       "teoli",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/Window/deviceorientation_event": {
+    "modified": "2019-03-18T21:38:06.143Z",
+    "contributors": [
+      "Aaron_Zhung"
     ]
   },
   "conflicting/Web/API/Window/gamepadconnected_event": {
