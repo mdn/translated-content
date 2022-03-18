@@ -2,28 +2,49 @@
 title: HTMLTableElement.rows
 slug: Web/API/HTMLTableElement/rows
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - NeedsBrowserCompatibility
+  - NeedsSpecTable
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+  - 表の行
+  - rows
+browser-compat: api.HTMLTableElement.rows
 translation_of: Web/API/HTMLTableElement/rows
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p><strong>rows</strong> は、テーブル内の全ての<a href="/ja/docs/DOM/tableRow" title="DOM/tableRow">行</a>のコレクションを返します。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><i>HTMLCollectionObject</i> = table.rows</pre>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js">var mytable = document.getElementById("mytable");
+{{APIRef("HTML DOM")}}
 
-var myrows = mytable.rows; // mytable の行コレクション
-var firstRow = mytable.rows[0]; // mytable の最初の行
-var lastRow = mytable.rows[ mytable.rows.length - 1 ]; // mytable の最後の行</pre>
-<h2 id="Notes" name="Notes">注記</h2>
-<p>Table オブジェクトの rows プロパティによって返されるコレクションには {{htmlelement("thead")}} 内、{{htmlelement("tfoot")}} 内、{{htmlelement("tfoot")}} 内、{{htmlelement("tbody")}} 内の、全ての行が含まれます。</p>
-<p>テーブルセクション要素 (<code>thead</code>、<code>tfoot</code>、<code>tbody</code>) の <code>rows</code> プロパティには、そのテーブルセクション要素の行のみが含まれます。</p>
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6156016">rows</a></li>
- <li><a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506">HTMLcollection</a></li>
-</ul>
+{{domxref("HTMLTableElement")}} の **`rows`** プロパティは読み取り専用で、表のすべての行を表す生きた {{domxref("HTMLCollection")}} を返し、すべての {{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("tbody")}} 要素に含まれる行を示します。
+
+プロパティ自身は読み取り専用ですが、返されたオブジェクトは生きており、内容を変更することができます。
+
+## 構文
+
+```js
+HTMLCollectionObject = table.rows;
+```
+
+### 値
+
+{{domxref("HTMLCollection")}} で、 {{domxref("HTMLTableRowElement")}} オブジェクトのライブで更新されるリストを提供し、この表に含まれるすべての {{HTMLElement("tr")}} 要素を表します。これにより、この表のすべての行を、手作業で探す必要なくすばやくアクセスすることができます。
+
+## 例
+
+```js
+myrows = mytable.rows;
+firstRow = mytable.rows[0];
+lastRow = mytable.rows.item(mytable.rows.length-1);
+```
+
+これは、配列構文（2 行目）と {{domxref("HTMLCollection.item()")}} メソッド（3 行目）の両方を使用して、表の個々の行を取得する方法を示しています。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
