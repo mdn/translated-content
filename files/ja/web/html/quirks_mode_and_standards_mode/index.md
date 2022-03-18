@@ -45,7 +45,7 @@ HTML5 では、DOCTYPE の用途は完全標準準拠モードを適用させる
 
 ### XHTML
 
-`Content-Type` HTTP ヘッダで `application/xhtml+xml` を使用して、ページを [XHTML](/ja/docs/XHTML) として提供する場合は、文書で常に完全標準準拠モードを使用しますので、標準準拠モードを有効化するための DOCTYPE は不要です。ただし Internet Explorer 8 は<code>application/xhtml+xml</code> でページを提供すると、ページを表示せずに未知の形式のファイルを[ダウンロードするダイアログボックス](/ja/docs/XHTML#Support)を表示します。これは、最初に XHTML をサポートした Internet Explorer がバージョン 9 であるためです。
+`Content-Type` HTTP ヘッダーで `application/xhtml+xml` を使用して、ページを [XHTML](/ja/docs/XHTML) として提供する場合は、文書で常に完全標準準拠モードを使用しますので、標準準拠モードを有効化するための DOCTYPE は不要です。ただし Internet Explorer 8 は<code>application/xhtml+xml</code> でページを提供すると、ページを表示せずに未知の形式のファイルを[ダウンロードするダイアログボックス](/ja/docs/XHTML#Support)を表示します。これは、最初に XHTML をサポートした Internet Explorer がバージョン 9 であるためです。
 
 `text/html` の MIME タイプを使用して XHTML 形式のコンテンツを提供する場合は、ブラウザーが HTML として読み込みますので、標準準拠モードを使用するために DOCTYPE が必要です。
 
