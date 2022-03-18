@@ -31,7 +31,7 @@ Host: www.example.com
 Connection: upgrade
 Upgrade: example/1, foo/2</pre>
 
-<p>根据之前的请求的协议，可能需要其他头部信息，例如：从HTTP/1.1升级到<a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> 允许配置有关 WebSocket 连接的头部详细信息，以及在连接时提供一定程度的安全性。查看 {{anch("Upgrading to a WebSocket connection")}} 获取更多信息。</p>
+<p>根据之前的请求的协议，可能需要其他头部信息，例如：从HTTP/1.1升级到<a href="/en-US/docs/Web/API/WebSocket">WebSocket</a> 允许配置有关 WebSocket 连接的头部详细信息，以及在连接时提供一定程度的安全性。查看 <a href="#升级到websocket协议的连接">升级到WebSocket协议的连接</a> 获取更多信息。</p>
 
 <p>如果服务器决定升级这次连接，就会返回一个 {{HTTPStatus(101, "101 Switching Protocols")}} 响应状态码，和一个要切换到的协议的头部字段Upgrade。 如果服务器没有（或者不能）升级这次连接，它会忽略客户端发送的 <code>"Upgrade</code> 头部字段，返回一个常规的响应：例如一个{{HTTPStatus(200, "200 OK")}}).</p>
 
@@ -204,7 +204,7 @@ Connection: Upgrade
     and what to do if this text is seen ...
 &lt;/html&gt;</pre>
 
-<p>If the client receiving the <code>"426 Upgrade Required"</code> response is willing and able to upgrade to TLS, it should then start the same process covered above under {{anch("Client-initiated upgrade to TLS")}}.</p>
+<p>If the client receiving the <code>"426 Upgrade Required"</code> response is willing and able to upgrade to TLS, it should then start the same process covered above under <a href="#client-initiated_upgrade_to_http_over_tls">Client-initiated upgrade to HTTP over TLS</a>.</p>
 
 <h2 id="References">References</h2>
 
