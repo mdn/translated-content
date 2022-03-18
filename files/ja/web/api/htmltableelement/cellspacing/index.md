@@ -2,30 +2,46 @@
 title: HTMLTableElement.cellSpacing
 slug: Web/API/HTMLTableElement/cellSpacing
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
+  - API
+  - HTML DOM
+  - HTMLTableElement
+  - NeedsSpecTable
+  - プロパティ
+  - リファレンス
+  - cellSpacing
+  - 非推奨
+browser-compat: api.HTMLTableElement.cellSpacing
 translation_of: Web/API/HTMLTableElement/cellSpacing
 ---
-<div>
- {{ ApiRef() }}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p><b>cellSpacing</b> は、テーブルのセル間の幅の取得 / 設定に用います。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox"><i>HTMLTableElement</i>.cellSpacing =<i>spacing</i>; //設定
-<var>spacing</var> =<i>HTMLTableElement</i>.cellSpacing; //取得</pre>
-<ul>
- <li>変数 <var>spacing</var> は "10" の様なピクセル値（絶対値、単位無し）、または "10%" の様な相対値となります。</li>
-</ul>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js">// セル間の間隔を 10 ピクセルに設定する例
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
+代わりに CSS の {{cssxref("border-spacing")}} プロパティを使うべきですが、旧式の {{domxref("HTMLTableElement")}} インターフェースの **`cellSpacing`** プロパティは、表のセルを表す個々の {{HTMLElement("th")}} および {{HTMLElement("td")}} 要素の周りの間隔を表わします。任意の 2 つのセルは、それぞれの `cellSpacing` の合計値で区切られます。
+
+## 構文
+
+```js
+HTMLTableElement.cellSpacing = spacing;
+var spacing = HTMLTableElement.cellSpacing;
+```
+
+### 値
+
+{{domxref("DOMString")}} で、ピクセル数 (例えば `"10"`) またはパーセント値 (`"10%"` など) です。
+
+## 例
+
+This example sets cell spacing for a given table to 10 pixels.
+
+```js
 var t = document.getElementById('TableA');
-t.cellSpacing = "10";</pre>
-<h2 id="Specification" name="Specification">仕様書</h2>
-<ul>
- <li>W3C DOM 2 HTML 仕様書: <a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68907883">
-  <i>
-   HTMLTableElement</i>
-  .cellSpacing</a>.</li>
-</ul>
+t.cellSpacing = "10";
+```
+
+## 仕様書
+
+- W3C DOM 2 HTML Specification [_HTMLTableElement_
+  .cellSpacing](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-68907883).
+
+## ブラウザーの互換性
+
+{{Compat}}
