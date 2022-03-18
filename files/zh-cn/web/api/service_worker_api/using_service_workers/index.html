@@ -221,6 +221,10 @@ imgLoad('myLittleVader.jpg').then(function(response) {
  <br>
  <code>install</code> 事件会在注册完成之后触发。<code>install</code> 事件一般是被用来填充你的浏览器的离线缓存能力。为了达成这个目的，我们使用了 Service Worker 的新的标志性的存储 API — {{domxref("cache")}} — 一个 service worker 上的全局对象，它使我们可以存储网络响应发来的资源，并且根据它们的请求来生成key。这个 API 和浏览器的标准的缓存工作原理很相似，但是是特定你的域的。它会一直持久存在，直到你告诉它不再存储，你拥有全部的控制权。</p>
 
+<div class="note">
+<p><span style="font-size: 14px;"><strong>注意</strong></span>: Cache API 并不被每个浏览器支持。（查看 <a href="#browser support">Browser support</a> 部分了解更多信息。） 如果你现在就想使用它，可以考虑采用一个 polyfill，比如  <a href="https://github.com/Polymer/topeka/blob/master/sw.js">Google topeka demo</a>，或者把你的资源存储在 <a href="/zh-CN/docs/Glossary/IndexedDB">IndexedDB</a> 中。</p>
+</div>
+
 <p>让我们从一个代码示例来开始这个部分——这是 <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18">这是我们的 service worker 里的第一块代码</a> ：</p>
 
 <pre class="brush: js notranslate">this.addEventListener('install', function(event) {
