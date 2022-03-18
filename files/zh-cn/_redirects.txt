@@ -1038,6 +1038,7 @@
 /zh-CN/docs/Learn/CSS/CSS_layout/定位	/zh-CN/docs/Learn/CSS/CSS_layout/Positioning
 /zh-CN/docs/Learn/CSS/CSS_layout/网格	/zh-CN/docs/Learn/CSS/CSS_layout/Grids
 /zh-CN/docs/Learn/CSS/First_steps/CSS如何运行	/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works
+/zh-CN/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page
 /zh-CN/docs/Learn/CSS/First_steps/开始	/zh-CN/docs/Learn/CSS/First_steps/Getting_started
 /zh-CN/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
 /zh-CN/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors
@@ -1617,6 +1618,9 @@
 /zh-CN/docs/Web/API/Window/onappinstalled	/zh-CN/docs/Web/API/Window/appinstalled_event
 /zh-CN/docs/Web/API/Window/onbeforeinstallprompt	/zh-CN/docs/Web/API/Window/beforeinstallprompt_event
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
+/zh-CN/docs/Web/API/Window/ondevicemotion	/zh-CN/docs/Web/API/Window/devicemotion_event
+/zh-CN/docs/Web/API/Window/ondeviceorientation	/zh-CN/docs/conflicting/Web/API/Window/deviceorientation_event
+/zh-CN/docs/Web/API/Window/ondeviceorientationabsolute	/zh-CN/docs/Web/API/Window/deviceorientationabsolute_event
 /zh-CN/docs/Web/API/Window/ongamepadconnected	/zh-CN/docs/conflicting/Web/API/Window/gamepadconnected_event
 /zh-CN/docs/Web/API/Window/ongamepaddisconnected	/zh-CN/docs/Web/API/Window/gamepaddisconnected_event
 /zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange

@@ -381,6 +381,7 @@
 /pt-BR/docs/Learn/CSS/First_steps/Como_CSS_e_estruturado	/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /pt-BR/docs/Learn/CSS/First_steps/Iniciando	/pt-BR/docs/Learn/CSS/First_steps/Getting_started
 /pt-BR/docs/Learn/CSS/First_steps/O_que_e_CSS	/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS
+/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/pt-BR/docs/Learn/CSS/First_steps/Styling_a_biography_page
 /pt-BR/docs/Learn/CSS/Howto/CSS_Perguntas_Frequentes	/pt-BR/docs/Learn/CSS/Howto/CSS_FAQ
 /pt-BR/docs/Learn/Common_questions/Como_a_internet_funciona	/pt-BR/docs/Learn/Common_questions/How_does_the_Internet_work
 /pt-BR/docs/Learn/Common_questions/Como_configurar_um_servidor_de_testes_local	/pt-BR/docs/Learn/Common_questions/set_up_a_local_testing_server

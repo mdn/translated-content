@@ -4231,7 +4231,7 @@
       "snakada"
     ]
   },
-  "Learn/CSS/First_steps/Using_your_new_knowledge": {
+  "Learn/CSS/First_steps/Styling_a_biography_page": {
     "modified": "2020-07-16T22:28:04.164Z",
     "contributors": [
       "Uemmra3",
@@ -18215,6 +18215,12 @@
       "e53e04ac"
     ]
   },
+  "Web/API/MediaStreamTrack/ended_event": {
+    "modified": "2019-03-18T21:45:14.196Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
   "Web/API/MediaStreamTrack/id": {
     "modified": "2020-10-15T22:00:11.011Z",
     "contributors": [
@@ -18247,27 +18253,8 @@
       "e53e04ac"
     ]
   },
-  "Web/API/MediaStreamTrack/onended": {
-    "modified": "2019-03-18T21:45:14.196Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaStreamTrack/onmute": {
-    "modified": "2020-10-15T22:00:10.968Z",
-    "contributors": [
-      "YujiSoftware",
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaStreamTrack/onoverconstrained": {
+  "Web/API/MediaStreamTrack/overconstrained_event": {
     "modified": "2019-03-18T21:45:17.038Z",
-    "contributors": [
-      "e53e04ac"
-    ]
-  },
-  "Web/API/MediaStreamTrack/onunmute": {
-    "modified": "2019-03-18T21:45:15.060Z",
     "contributors": [
       "e53e04ac"
     ]
@@ -24375,12 +24362,6 @@
       "AshfaqHossain",
       "ethertank",
       "Potappo"
-    ]
-  },
-  "Web/API/Window/ondevicemotion": {
-    "modified": "2020-10-15T22:28:07.002Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/API/Window/open": {
@@ -48327,6 +48308,19 @@
       "Wind1808"
     ]
   },
+  "conflicting/Web/API/MediaStreamTrack/mute_event": {
+    "modified": "2020-10-15T22:00:10.968Z",
+    "contributors": [
+      "YujiSoftware",
+      "e53e04ac"
+    ]
+  },
+  "conflicting/Web/API/MediaStreamTrack/unmute_event": {
+    "modified": "2019-03-18T21:45:15.060Z",
+    "contributors": [
+      "e53e04ac"
+    ]
+  },
   "conflicting/Web/API/Navigator/onLine": {
     "modified": "2019-03-23T23:53:08.504Z",
     "contributors": [
@@ -48427,6 +48421,12 @@
     "contributors": [
       "Marsf",
       "YuichiNukiyama"
+    ]
+  },
+  "conflicting/Web/API/Window/devicemotion_event": {
+    "modified": "2020-10-15T22:28:07.002Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/API/Window/gamepadconnected_event": {

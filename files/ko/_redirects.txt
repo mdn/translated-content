@@ -286,6 +286,7 @@
 /ko/docs/Learn/CSS/CSS_layout/위치잡기	/ko/docs/Learn/CSS/CSS_layout/Positioning
 /ko/docs/Learn/CSS/CSS_layout/이전_브라우저_지원	/ko/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers
 /ko/docs/Learn/CSS/CSS_layout/일반_흐름	/ko/docs/Learn/CSS/CSS_layout/Normal_Flow
+/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/ko/docs/Learn/CSS/First_steps/Styling_a_biography_page
 /ko/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
 /ko/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 /ko/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance	/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance

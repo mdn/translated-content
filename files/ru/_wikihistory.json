@@ -2226,7 +2226,7 @@
       "Immdevrov"
     ]
   },
-  "Learn/CSS/First_steps/Using_your_new_knowledge": {
+  "Learn/CSS/First_steps/Styling_a_biography_page": {
     "modified": "2020-12-03T17:31:51.841Z",
     "contributors": [
       "RoPy73",
@@ -11290,12 +11290,6 @@
     "contributors": [
       "Mitrr",
       "ShantyHoz"
-    ]
-  },
-  "Web/API/Window/ondeviceorientation": {
-    "modified": "2019-03-23T22:29:46.961Z",
-    "contributors": [
-      "timur-gilauri"
     ]
   },
   "Web/API/Window/onpaint": {
@@ -24227,6 +24221,12 @@
     "contributors": [
       "Steln",
       "akhabibullina"
+    ]
+  },
+  "conflicting/Web/API/Window/deviceorientation_event": {
+    "modified": "2019-03-23T22:29:46.961Z",
+    "contributors": [
+      "timur-gilauri"
     ]
   },
   "conflicting/Web/API/Window/gamepadconnected_event": {

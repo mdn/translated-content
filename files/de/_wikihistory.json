@@ -4018,6 +4018,13 @@
       "AndreasWebdev"
     ]
   },
+  "Web/API/Window/devicemotion_event": {
+    "modified": "2019-03-18T21:15:10.920Z",
+    "contributors": [
+      "clepsydra",
+      "m9898"
+    ]
+  },
   "Web/API/Window/dump": {
     "modified": "2019-03-23T23:34:35.263Z",
     "contributors": [
@@ -4066,13 +4073,6 @@
       "vssn",
       "Hansschmucker",
       "AdamNiezielinski"
-    ]
-  },
-  "Web/API/Window/ondevicemotion": {
-    "modified": "2019-03-18T21:15:10.920Z",
-    "contributors": [
-      "clepsydra",
-      "m9898"
     ]
   },
   "Web/API/Window/openDialog": {
