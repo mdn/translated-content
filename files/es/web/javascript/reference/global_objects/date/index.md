@@ -146,7 +146,7 @@ Sumado a los métodos para leer y manipular los componentes individuales de la f
 
 ### Distintas maneras de crear un objeto Date
 
-Los siguientes ejemplos muestras distintas maneras de crear fechas en JavaScript:
+Los siguientes ejemplos muestran distintas maneras de crear fechas en JavaScript:
 
 > **Nota:** Transformar las cadenas de fechas con el constructor `Date` (y `Date.parse`, son equivalentes) es escasamente recomendado debido las diferencias e inconsistencias entre navegadores.
 
@@ -194,7 +194,7 @@ date.setFullYear(22); date.getFullYear()  // 22 (no 1922, no 2022)
 
 Los siguientes ejemplos muestran como determinar el tiempo transcurrido entre dos fechas JavaScript en milisegundos.
 
-Debido a las diferentes duraciones de los días (debido a los cambios horarios para aprovechar la luz del sol), meses, y años, expresar el tiempo transcurrido en unidades mayores a horas, minutos y segundos requiere abordar un numero de incovenientes, y deberia ser revisado minuciosamente antes de intentarse.
+Debido a las diferentes duraciones de los días (debido a los cambios horarios para aprovechar la luz del sol), meses, y años, expresar el tiempo transcurrido en unidades mayores a horas, minutos y segundos requiere abordar un número de inconvenientes, y deberia ser revisado minuciosamente antes de intentarse.
 
 ```js
 // Usando objetos Date
@@ -251,3 +251,4 @@ En este caso, es más importante retornar únicamente un entero que una simple d
 ## Véase también
 
 - {{jsxref("Date/Date", "Date()")}} constructor
+
