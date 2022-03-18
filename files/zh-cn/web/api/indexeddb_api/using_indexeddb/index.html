@@ -119,7 +119,7 @@ request.onsuccess = function(event) {
 
 <h3 id="创建和更新数据库版本号">创建和更新数据库版本号</h3>
 
-<p>当你创建一个新的数据库或者增加已存在的数据库的版本号（当{{ anch("打开数据库")}}时，指定一个比之前更大的版本号）， <code>onupgradeneeded</code> 事件会被触发，<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> 对象会作为参数传递给绑定在 <code>request.result</code>（例如例子中的 <code>db</code>）上的 <code>onversionchange </code>事件处理函数，你应该在此创建该版本需要的对象仓库（object store）。</p>
+<p>当你创建一个新的数据库或者增加已存在的数据库的版本号（当<a href="#打开数据库">打开数据库</a>时，指定一个比之前更大的版本号）， <code>onupgradeneeded</code> 事件会被触发，<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBVersionChangeEvent">IDBVersionChangeEvent</a> 对象会作为参数传递给绑定在 <code>request.result</code>（例如例子中的 <code>db</code>）上的 <code>onversionchange </code>事件处理函数，你应该在此创建该版本需要的对象仓库（object store）。</p>
 
 <p>要更新数据库的 schema，也就是创建或者删除对象存储空间，需要实现<span style="line-height: 21px;"> </span><code style="font-size: 14px; color: rgb(51, 51, 51);">onupgradeneeded</code><span style="line-height: 21px;"> 处理程序，这个处理程序将会作为一个允许你处理对象存储空间的 </span><code style="font-size: 14px; color: rgb(51, 51, 51);">versionchange</code><span style="line-height: 21px;"> 事务的一部分被调用。</span></p>
 
@@ -321,7 +321,7 @@ customerData.forEach(function(customer) {
   };
 });</pre>
 
-<p>调用 call() 方法产生的请求的 result 是被添加的数据的键。所以在该例中，它应该全等于被添加对象的 ssn 属性，因为对象仓库使用 ssn 属性作为键路径（key path)。注意，add() 方法的调用时，对象仓库中不能存在相同键的对象。如果你想修改一个已存在的条目，或者你不关心该数据是否已存在，你可以使用 put() 方法，就像下面 {{ anch("Updating an entry in the database") }} 模块所展示的。</p>
+<p>调用 call() 方法产生的请求的 result 是被添加的数据的键。所以在该例中，它应该全等于被添加对象的 ssn 属性，因为对象仓库使用 ssn 属性作为键路径（key path)。注意，add() 方法的调用时，对象仓库中不能存在相同键的对象。如果你想修改一个已存在的条目，或者你不关心该数据是否已存在，你可以使用 put() 方法，就像下面 <a href="#更新数据库中的记录">更新数据库中的记录</a> 模块所展示的。</p>
 
 <h2 id="从数据库中删除数据">从数据库中删除数据</h2>
 

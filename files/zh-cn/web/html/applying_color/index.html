@@ -14,9 +14,9 @@ translation_of: Web/HTML/Applying_color
 
 <p>幸运的是，在 HTML 中添加颜色非常容易，而且几乎可以加在任何地方。</p>
 
-<p>我们将会谈及添加颜色所需要的大部分内容，包括 {{anch("可设置颜色的内容", "一系列可以着色的元素与相关的 CSS 属性")}}，{{anch("如何描述颜色", "如何描述颜色")}}，以及{{anch("使用颜色", "在样式表与脚本中使用颜色的方法")}}。同时我们还会了解如何{{anch("让用户选择颜色", "让用户选择颜色")}}。</p>
+<p>我们将会谈及添加颜色所需要的大部分内容，包括 <a href="#可设置颜色的内容">一系列可以着色的元素与相关的 CSS 属性</a>，<a href="#如何描述颜色">如何描述颜色</a>，以及<a href="#使用颜色">在样式表与脚本中使用颜色的方法</a>。同时我们还会了解如何<a href="#让用户选择颜色">让用户选择颜色</a>。</p>
 
-<p>然后我们会通过简短的讨论总结如何 {{anch("机智地运用颜色", "机智地运用颜色")}}：如何选择合适的颜色，同时考虑不同视力水平的人的需求。</p>
+<p>然后我们会通过简短的讨论总结如何 <a href="#机智地运用颜色">机智地运用颜色</a>：如何选择合适的颜色，同时考虑不同视力水平的人的需求。</p>
 
 <h2 id="可设置颜色的内容">可设置颜色的内容</h2>
 
@@ -48,8 +48,8 @@ translation_of: Web/HTML/Applying_color
 <p>Every element is a box with some sort of content, and has a background and a border in addition to whatever contents the box may have.</p>
 
 <dl>
- <dt>{{anch("Borders")}}</dt>
- <dd>See the section {{anch("Borders")}} for a list of the CSS properties you can use to set the colors of a box's borders.</dd>
+ <dt><a href="#边框">Borders</a></dt>
+ <dd>See the section <a href="#边框">Borders</a> for a list of the CSS properties you can use to set the colors of a box's borders.</dd>
  <dt>{{cssxref("background-color")}}</dt>
  <dd>The background color to use in areas of the element that have no foreground content.</dd>
  <dt>{{cssxref("column-rule-color")}}</dt>
@@ -228,7 +228,7 @@ th {
 
 <h2 id="使用颜色">使用颜色</h2>
 
-<p>Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under {{anch("Things that can have color")}}, there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.</p>
+<p>Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under <a href="#可设置颜色的内容">Things that can have color</a>, there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.</p>
 
 <h3 id="在样式表中指定颜色">在样式表中指定颜色</h3>
 
@@ -327,7 +327,7 @@ th {
 
 <p>There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own {{interwiki("wikipedia", "color picker")}}, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using <code>"color"</code> as the value of its {{htmlattrxref("type", "input")}} attribute.</p>
 
-<p>The <code>&lt;input&gt;</code> element represents a color only in the {{anch("Hexadecimal string notation", "hexadecimal string notation")}} covered above.</p>
+<p>The <code>&lt;input&gt;</code> element represents a color only in the <a href="#十六进制颜色码">hexadecimal string notation</a> covered above.</p>
 
 <h3 id="示例：选择一个颜色">示例：选择一个颜色</h3>
 
@@ -409,7 +409,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <h4 id="填满调色板">填满调色板</h4>
 
-<p>Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See {{anch("Color and accessibility")}} for a brief explanation of why this matters.</p>
+<p>Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See <a href="#颜色与可访问性">Color and accessibility</a> for a brief explanation of why this matters.</p>
 
 <p>A few examples (all free to use as of the time this list was last revised):</p>
 
