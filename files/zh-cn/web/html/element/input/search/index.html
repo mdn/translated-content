@@ -51,7 +51,7 @@ translation_of: Web/HTML/Element/input/search
 <pre class="brush: js notranslate">searchTerms = mySearch.value;
 </pre>
 
-<p>如果没有针对输入的验证约束 (请参见 <code>{{anch("Validation")}}</code>)，该值可以是任何文本字符串或空字符串 (<code>""</code>)。</p>
+<p>如果没有针对输入的验证约束 (请参见<a href="#验证方式">验证方式</a>)，该值可以是任何文本字符串或空字符串 (<code>""</code>)。</p>
 
 <h2 id="其他属性">其他属性</h2>
 
@@ -66,59 +66,59 @@ translation_of: Web/HTML/Element/input/search
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("list")}}</code></td>
+   <td><code><a href="#list">list</a></code></td>
    <td><code>&lt;datalist&gt;</code> 元素的 ID，其中包含可选的预定义自动完成选项。</td>
   </tr>
   <tr>
-   <td><code>{{anch("maxlength")}}</code></td>
+   <td><code><a href="#maxlength">maxlength</a></code></td>
    <td>输入应接受的最大字符数。</td>
   </tr>
   <tr>
-   <td><code>{{anch("minlength")}}</code></td>
+   <td><code><a href="#minlength">minlength</a></code></td>
    <td>输入可以且仍被认为有效的最小字符数。</td>
   </tr>
   <tr>
-   <td><code>{{anch("pattern")}}</code></td>
+   <td><code><a href="#pattern">pattern</a></code></td>
    <td>输入内容必须匹配的正则表达式才能有效。</td>
   </tr>
   <tr>
-   <td><code>{{anch("placeholder")}}</code></td>
+   <td><code><a href="#placeholder">placeholder</a></code></td>
    <td>空时在输入字段中显示的示例值。</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#readonly">readonly</a></code></td>
    <td>一个布尔属性，指示输入的内容是否应为只读。</td>
   </tr>
   <tr>
-   <td><code>{{anch("size")}}</code></td>
+   <td><code><a href="#size">size</a></code></td>
    <td>一个数字，指示输入字段应宽多少个字符。</td>
   </tr>
   <tr>
-   <td><code>{{anch("spellcheck")}}</code></td>
+   <td><code><a href="#spellcheck">spellcheck</a></code></td>
    <td>控制是否对输入字段启用拼写检查，或者是否应使用默认拼写检查配置。</td>
   </tr>
  </tbody>
 </table>
 
-<p id="htmlattrdeflist">{{page("/zh-CN/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
+<p id="list">{{page("/zh-CN/docs/Web/HTML/Element/input/text", "list", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefmaxlength">{{htmlattrdef("maxlength")}}</h3>
+<h3 id="maxlength">maxlength</h3>
 
 <p>用户可以在搜索字段中输入的最大字符数（以 UTF-16 代码为单位）。 必须为 0 或更高的整数。 如果未指定 <code>maxlength</code> 或指定了无效值，则搜索字段没有最大长度。 此值还必须大于或等于 <code>minlength</code> 的值。</p>
 
 <p>如果输入到字段中的文本的长度大于 <code>maxlength</code> UTF-16 代码单元的长度，则输入无法通过约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）。</p>
 
-<h3 id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</h3>
+<h3 id="minlength">minlength</h3>
 
 <p>用户可以在搜索字段中输入的最小字符数（以 UTF-16 代码为单位）。 该值必须是小于或等于 <code>maxlength</code> 指定的值的非负整数值。 如果未指定 <code>minlength</code> 或指定了无效值，则搜索输入没有最小长度。</p>
 
 <p>如果在字段中输入的文本的长度小于 <code>minlength</code> UTF-16 代码单元的长度，则搜索字段将无法通过约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）。</p>
 
-<h3 id="htmlattrdefpattern">{{htmlattrdef("pattern")}}</h3>
+<h3 id="pattern">pattern</h3>
 
 <p>{{page("/zh-CN/docs/Web/HTML/Element/input/text", "pattern-include")}}</p>
 
-<p>有关详细信息和示例，请参见 {{anch("Specifying a pattern")}} 部分。</p>
+<p>有关详细信息和示例，请参见 <a href="#指定模式">指定模式</a> 部分。</p>
 
 <p>{{page("/zh-CN/docs/Web/HTML/Element/input/text", "placeholder", 0, 1, 2)}}</p>
 
@@ -126,7 +126,7 @@ translation_of: Web/HTML/Element/input/search
 
 <p>{{page("/zh-CN/docs/Web/HTML/Element/input/text", "size", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefspellcheck">{{htmlattrdef("spellcheck")}}</h3>
+<h3 id="spellcheck">spellcheck</h3>
 
 <p>{{page("/zh-CN/docs/Web/HTML/Element/input/text", "spellcheck-include")}}</p>
 
@@ -143,29 +143,29 @@ translation_of: Web/HTML/Element/input/search
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("autocorrect")}}</code></td>
+   <td><code><a href="#autocorrect">autocorrect</a></code></td>
    <td>编辑此输入字段时是否允许自动更正。<strong>Safari only.</strong></td>
   </tr>
   <tr>
-   <td><code>{{anch("incremental")}}</code></td>
+   <td><code><a href="#incremental">incremental</a></code></td>
    <td>是否发送重复的 {{event("search")}} 事件以允许在用户仍在编辑字段的值时更新实时搜索结果。<strong>WebKit and Blink only (Safari, Chrome, Opera, etc.).</strong></td>
   </tr>
   <tr>
-   <td><code>{{anch("mozactionhint")}}</code></td>
+   <td><code><a href="#mozactionhint">mozactionhint</a></code></td>
    <td>一个字符串，指示当用户在编辑字段时按 <kbd>Enter</kbd> 或 <kbd>Return</kbd> 键时将执行的操作类型； 用于确定虚拟键盘上该键的适当标签。<strong>Firefox for Android only.</strong></td>
   </tr>
   <tr>
-   <td><code>{{anch("results")}}</code></td>
+   <td><code><a href="#results">results</a></code></td>
    <td>先前搜索查询的下拉列表中应显示的最大项目数。<strong>Safari only.</strong></td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="htmlattrdefautocorrect_non-standard_inline">{{htmlattrdef("autocorrect")}} {{non-standard_inline}}</h3>
+<h3 id="autocorrect">autocorrect</h3>
 
 <p>{{page("/zh-CN/docs/Web/HTML/Element/input/text", "autocorrect-include")}}</p>
 
-<h3 id="htmlattrdefincremental_non-standard_inline">{{htmlattrdef("incremental")}} {{non-standard_inline}}</h3>
+<h3 id="incremental">incremental</h3>
 
 <div id="incremental-include">
 <p>布尔值 <code>incremental</code> 属性是 WebKit 和 Blink 扩展 （因此被 Safari, Opera, Chrome 等支持）如果存在，它会告诉 {{Glossary("user agent")}} 将输入作为实时搜索进行处理。 当用户编辑字段的值时，用户代理将 <code>{{event("search")}}</code> 事件发送到代表搜索框的 <code>{{domxref("HTMLInputElement")}}</code> 对象。这允许您的代码在用户编辑搜索时实时更新搜索结果。</p>
@@ -175,14 +175,14 @@ translation_of: Web/HTML/Element/input/search
 <p><code>search</code> 事件受速率限制，因此发送事件的频率不会超过实现定义的间隔。</p>
 </div>
 
-<h3 id="htmlattrdefmozactionhint_non-standard_inline">{{htmlattrdef("mozactionhint")}} {{non-standard_inline}}</h3>
+<h3 id="mozactionhint">mozactionhint</h3>
 
 <p>{{page("/zh-CN/docs/Web/HTML/Element/input/text", "mozactionhint-include")}}</p>
 
-<h3 id="htmlattrdefresults_non-standard_inline">{{htmlattrdef("results")}} {{non-standard_inline}}</h3>
+<h3 id="results">results</h3>
 
 <div id="results-include">
-<p><code>results</code> 属性是一个数字值（仅受 Safari 支持），可让您覆盖要在 <code>{{HTMLElement("input")}}</code> 元素的本机提供的先前搜索查询的下拉菜单中显示的最大条目数。</p>
+<p><code>results</code> 属性是一个数字值（仅受 Safari 支持），可让您覆盖要在 <code>{{HTMLElement("input")}}</code> 元素的本机提供的先前搜索查询的下拉菜单中显示的最大条目数。</p>
 
 <p>该值必须是非负十进制数字。 如果未提供或给出了无效值，则使用浏览器的默认最大条目数。</p>
 </div>

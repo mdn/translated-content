@@ -131,19 +131,19 @@ startTime.addEventListener("input", function() {
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
+   <td><code><a href="#max">max</a></code></td>
    <td>The latest time to accept, in the syntax described under <a href="#time_value_format">Time value format</a></td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#min">min</a></code></td>
    <td>The earliest time to accept as a valid input</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#readonly">readonly</a></code></td>
    <td>A Boolean attribute which, if present, indicates that the contents of the <code>time</code> input should not be user-editable</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#step">step</a></code></td>
    <td>The stepping interval to use both for user interfaces purposes and during constraint validation</td>
   </tr>
  </tbody>
@@ -151,17 +151,17 @@ startTime.addEventListener("input", function() {
 
 <div class="callout-box">Unlike many data types, time values have a <strong>periodic domain</strong>, meaning that the values reach the highest possible value, then wrap back around to the beginning again. For example, specifying a <code>min</code> of <code>14:00</code> and a <code>max</code> of <code>2:00</code> means that the permitted time values start at 2:00 PM, run through midnight to the next day, ending at 2:00 AM.</div>
 
-<h3 id="htmlattrdefmax">{{htmlattrdef("max")}}</h3>
+<h3 id="max">max</h3>
 
 <p>A string indicating the latest time to accept, specified in the same <a href="#time_value_format">time value format</a> as described above. If the specified string isn't a valid time, no maximum value is set.</p>
 
-<h3 id="htmlattrdefmin">{{htmlattrdef("min")}}</h3>
+<h3 id="min">min</h3>
 
 <p>A string specifying the earliest time to accept, given in the <a href="#time_value_format">time value format</a> described previously. If the value specified isn't a valid time string, no minimum value is set.</p>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/text", "readonly", 0, 1, 2)}}</p>
 
-<h3 id="htmlattrdefstep">{{htmlattrdef("step")}}</h3>
+<h3 id="step">step</h3>
 
 <p>{{page("/en-US/docs/Web/HTML/Element/input/number", "step-include")}}</p>
 
