@@ -27,34 +27,32 @@ Lorsque la lecture de la source audio est terminée, elle boucle. Il est possibl
 
 ```js
 function getData() {
-  source = contexteAudio.createBufferSource();
-  requete = new XMLHttpRequest();
+  source = audioCtx.createBufferSource();
+  request = new XMLHttpRequest();
 
-  requete.open('GET', 'viper.ogg', true);
+  request.open('GET', 'viper.ogg', true);
+  request.responseType = 'arraybuffer';
 
-  requete.responseType = 'arraybuffer';
+  request.onload = function() {
+    var audioData = request.response;
 
+    audioCtx.decodeAudioData(audioData, function(buffer) {
+        myBuffer = buffer;
+        songLength = buffer.duration;
+        source.buffer = myBuffer;
+        source.playbackRate.value = playbackControl.value;
+        source.connect(audioCtx.destination);
+        source.loop = true;
 
-  requete.onload = function() {
-    var donneesAudio = requete.response;
-    
-    contexteAudio.decodeAudioData
-        maMemoireTampon = buffer;
-        dureeMorceau = buffer.duration;
-        source.buffer = maMemoireTampon;
-        source.playbackRate.
-        source.connect(conte
-        s
-     
-        
-           
-             },
-                            
-      function(e){"Erreur lors du décodage des données audio " + e.err});
+        loopstartControl.setAttribute('max', Math.floor(songLength));
+        loopendControl.setAttribute('max', Math.floor(songLength));
+      },
+
+      function(e){"Erreur lors du décodage des données " + e.err});
 
   }
 
-  requete.send();
+  request.send();
 }
 
   ...

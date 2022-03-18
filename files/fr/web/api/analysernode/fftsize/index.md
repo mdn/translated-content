@@ -28,54 +28,54 @@ Un nombre entier non signé.
 L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lines 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var analyser = audioCtx.createAnalyser();
 
   ...
 
-analyseur.fftSize = 2048;
-var tailleMemoireTampon = analyseur.fftSize;
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
-analyseur.getByteTimeDomainData(tableauDonnees);
+analyser.fftSize = 2048;
+var bufferLength = analyser.frequencyBinCount;
+var dataArray = new Uint8Array(bufferLength);
+analyser.getByteTimeDomainData(dataArray);
 
-// dessine un oscilloscope de la source audio
+// dessine un oscilloscope pour la source audio courante
 
-function dessiner() {
+function draw() {
 
-      dessin = requestAnimationFrame(dessiner);
-      
-      analyseur.getBy
-      
-      contexteCanvas.
-      contexte
-      
-      contexteCanvas.
-      cont
-      
-      contexteCanvas.beginPa
-      
-      var largeurTran
-      v
-      
-              for(var i = 0; i < tailleMemo
-              
-                var v =
-             
-           
-           
-                              
-                                                                              
-          contexteCanvas.lin
-    
-                             
-                                  
-                                                         
-                                   
-                                  c
-      contexteCanvas.stroke();
+      drawVisual = requestAnimationFrame(draw);
+
+      analyser.getByteTimeDomainData(dataArray);
+
+      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+
+      canvasCtx.lineWidth = 2;
+      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+
+      canvasCtx.beginPath();
+
+      var sliceWidth = WIDTH * 1.0 / bufferLength;
+      var x = 0;
+
+      for(var i = 0; i < bufferLength; i++) {
+
+        var v = dataArray[i] / 128.0;
+        var y = v * HEIGHT/2;
+
+        if(i === 0) {
+          canvasCtx.moveTo(x, y);
+        } else {
+          canvasCtx.lineTo(x, y);
+        }
+
+        x += sliceWidth;
+      }
+
+      canvasCtx.lineTo(canvas.width, canvas.height/2);
+      canvasCtx.stroke();
     };
-                                                            
-    dessiner();
+
+    draw();
 ```
 
 ## Spécifications

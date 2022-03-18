@@ -31,54 +31,48 @@ Un tableau {{domxref("Uint8Array")}}.
 L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 
   ...
 
-analyseur.fftSize = 2048;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
-analyseur.getByteTimeDomainData(tableauDonnees);
+analyser.fftSize = 2048;
+const bufferLength = analyser.fftSize;
+const dataArray = new Uint8Array(bufferLength);
+analyser.getByteTimeDomainData(dataArray);
 
-// dessine un oscilloscope de la source audio
+// dessine un oscilloscope pour la source audio courante
+function draw() {
+  drawVisual = requestAnimationFrame(draw);
+  analyser.getByteTimeDomainData(dataArray);
 
-function dessiner() {
+  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-      dessin = requestAnimationFrame(dessiner);
-      
-      analyseur.getBy
-      
-      contexteCanvas.
-      contexte
-      
-      contexteCanvas.
-      cont
-      
-      contexteCanvas.begin
-      
-      var largeurBarr
-      v
-      
-              for(var i = 0; i < tailleMemo
-              
-                var v =
-             
-           
-           
-                              
-                                                                            
-          contexteCanvas.l
-    
-                             
-                                  
-                                                         
-                                   
-                                  c
-      contexteCanvas.stroke();
-    };
-                                                            
-    dessiner();
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+
+  const sliceWidth = WIDTH * 1.0 / bufferLength;
+  let x = 0;
+
+  canvasCtx.beginPath();
+  for(var i = 0; i < bufferLength; i++) {
+    const v = dataArray[i]/128.0;
+    const y = v * HEIGHT/2;
+
+    if(i === 0)
+      canvasCtx.moveTo(x, y);
+    else
+      canvasCtx.lineTo(x, y);
+
+    x += sliceWidth;
+  }
+
+  canvasCtx.lineTo(WIDTH, HEIGHT/2);
+  canvasCtx.stroke();
+};
+
+draw();
 ```
 
 ## Paramètres
