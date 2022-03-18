@@ -6,7 +6,7 @@ browser-compat: html.elements.img
 ---
 {{HTMLRef}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<img>`**  permet d'intégrer une image dans un document.
+L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
 
 {{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
 
@@ -15,9 +15,9 @@ L'exemple qui précède illustre l'utilisation de l'élément `<img>`&nbsp;:
 - L'attribut `src` est **obligatoire**, et contient le chemin vers l'image qu'on veut intégrer.
 - L'attribut `alt` contient une description textuelle de l'image, ce qui n'est pas obligatoire mais **extrêmement utile** pour l'accessibilité. En effet, les outils de lecture d'écran utilisent cette description pour la lire afin que les personnes sachent ce que l'image représente. Ce texte alternatif sera également affiché sur la page si l'image ne peut pas être chargée (par exemple s'il y a des erreurs réseau, du blocage de contenu ou un lien périmé).
 
-Il existe de nombreux autres attributs&nsbp;:
+Il existe de nombreux autres attributs&nbsp;:
 
-- Le contrôle du [référent](/fr/docs/Web/HTTP/Headers/Referrer-Policy) et de la politique de gestion des ressources d'origines multiples ({{glossary("CORS")}}) avec les attributs `crossorigin` et `referrerpolicy`.
+- Le contrôle du [référent](/fr/docs/Web/HTTP/Headers/Referrer-Policy) et de la politique de gestion des ressources d'origines multiples ([CORS](/fr/docs/Glossary/CORS)) avec les attributs `crossorigin` et `referrerpolicy`.
 - `width` et `height` qui permettent de définir la taille intrinsèque de l'image, lui permettant ainsi de prendre l'espace nécessaire avant son chargement (évitant ainsi d'avoir des décalages indésirables lors du chargement de la page).
 - Des indications <i lang="en">responsives</i> avec `sizes` et `srcset` (voir également l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) et [le tutoriel sur les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)).
 
@@ -30,14 +30,14 @@ Le standard HTML n'indique pas les formats d'image qui doivent être pris en cha
 Les formats d'image qu'on rencontre le plus fréquemment sur le Web sont&nbsp;:
 
 - [APNG (<i lang="en">Animated Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics) pour les séquences animées avec une compression sans perte (le format GIF est moins performant)
-- [AVIF (<i lang="en">AV1 Image File Format</i>)](/fr/docs/Web/Media/Formats/Image_types#avif_image) pour les images et les images animées avec de hautes performances
+- [AVIF (<i lang="en">AV1 Image File Format</i>)](/fr/docs/Web/Media/Formats/Image_types#avif) pour les images et les images animées avec de hautes performances
 - [GIF (<i lang="en">Graphics Interchange Format</i>)](/fr/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format) pour les images et animations _simples_
 - [JPEG (<i lang="en">Joint Photographic Expert Group image</i>)](/fr/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image) pour une compression avec pertes d'images statiques, il s'agit du format le plus utilisé
 - [PNG (<i lang="en">Portable Network Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) pour une compression avec pertes d'images statiques, de meilleure qualité que le JPEG
 - [SVG (<i lang="en">Scalable Vector Graphics</i>)](/fr/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) pour un format d'image vectorielle (qui permet de dessiner une image précisément à différentes échelles)
-- [WebP (<i lang="en">Web Picture format</i>)](/fr/docs/Web/Media/Formats/Image_types#webp_image) pour les images statiques et animées
+- [WebP (<i lang="en">Web Picture format</i>)](/fr/docs/Web/Media/Formats/Image_types#webp) pour les images statiques et animées
 
-Les formats comme [WebP](/fr/docs/Web/Media/Formats/Image_types#webp_image) et [AVIF](/fr/docs/Web/Media/Formats/Image_types#avif_image) sont recommandés, car avec de meilleures performances que PNG, JPEG, GIF tant pour les images animées que statiques. WebP dispose d'une large prise en charge tandis qu'AVIF n'est pas pris en charge par Safari.
+Les formats comme [WebP](/fr/docs/Web/Media/Formats/Image_types#webp) et [AVIF](/fr/docs/Web/Media/Formats/Image_types#avif) sont recommandés, car avec de meilleures performances que PNG, JPEG, GIF tant pour les images animées que statiques. WebP dispose d'une large prise en charge tandis qu'AVIF n'est pas pris en charge par Safari.
 
 SVG reste le format recommandé pour les images qui doivent être dessinées avec précision quelle que soit la taille.
 
@@ -45,9 +45,9 @@ SVG reste le format recommandé pour les images qui doivent être dessinées ave
 
 Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gestionnaire d'évènement [`onerror`](/fr/docs/Web/HTML/Global_attributes#onerror) a été défini pour intercepter l'évènement [`error`](/fr/docs/Web/API/Element/error_event), le gestionnaire sera appelé. Cela peut arriver pour plusieurs raisons&nbsp;:
 
-- L'attribut `src` est vide (`""`) ou absent (`null` pour le DOM)
-- L'URL utilisée pour l'attribut `src` est la même que celle de la page courante
-- L'image est corrompue et ne peut être chargée ainsi
+- L'attribut `src` est vide (`""`) ou absent (`null` pour le DOM).
+- L'URL utilisée pour l'attribut `src` est la même que celle de la page courante.
+- L'image est corrompue et ne peut être chargée ainsi.
 - Les métadonnées associées à l'image sont corrompues de telle façon qu'il est impossible de connaître ses dimensions et qu'aucune dimension n'a été fournie pour les attributs de l'élément `<img>`.
 - Le format de l'image n'est pas pris en charge par l'agent utilisateur (généralement le navigateur).
 
@@ -62,7 +62,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     > **Note :** Il se peut que les navigateurs n'affichent pas l'image, cela peut se produire si&nbsp;:
     >
     > - Le navigateur n'est pas doté d'une interface visuelle
-    > - La personne a configuré son navigateur poru ne pas afficher les images (afin d'économiser de la bande passante ou pour des raisons de vie privée)
+    > - La personne a configuré son navigateur pour ne pas afficher les images (afin d'économiser de la bande passante ou pour des raisons de vie privée)
     > - L'image est invalide ou son format n'est pas pris en charge
     >
     > Dans ces situations, le navigateur peut remplacer l'image avec le texte fourni par cet attribut. Aussi, il est grandement préférable de fournir une valeur utile pour `alt` dès que possible.
@@ -73,7 +73,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
 - `crossorigin`
 
-  - : Indique que la récupération de l'image doit être effectuée avec une requête CORS. Les données provenant d'une [image chargée via une requête CORS](/fr/docs/Web/HTML/CORS_enabled_image)  peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sans que celui-ci soit considéré comme [corrompu (<i lang="en">tainted</i>)](/fr/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)".
+  - : Indique que la récupération de l'image doit être effectuée avec une requête CORS. Les données provenant d'une [image chargée via une requête CORS](/fr/docs/Web/HTML/CORS_enabled_image)  peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sans que celui-ci soit considéré comme [corrompu (<i lang="en">tainted</i>)](/fr/docs/Web/HTML/CORS_enabled_image#canevas_corrompu_et_sécurité).
 
     Si l'attribut `crossorigin` _n'est pas_ indiqué, une requête sans CORS sera effectuée (c'est-à-dire sans l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Headers/Origin)) et le navigateur marquera la page comme potentiellement corrompue, empêchant d'accéder aux données de l'image et empêchant son utilisation dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
 
@@ -253,7 +253,7 @@ Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l
 
 ### Utiliser l'attribut `srcset`
 
-Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une version du logo en haute résolution. Pour les appareils avec une haute résolution, celle-ci sera chargée à la place à la place de l'image indiquée par `src`. Pour les agents utilisateur qui prennent en charge l'attribut `srcset`, l'image référencée par l'attribut `src` sera considérée comme une candidate avec le descripteur `1x`.
+Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une version du logo en haute résolution. Pour les appareils avec une haute résolution, celle-ci sera chargée à la place à la place de l'image indiquée par `src`. Pour les agents utilisateurs qui prennent en charge l'attribut `srcset`, l'image référencée par l'attribut `src` sera considérée comme une candidate avec le descripteur `1x`.
 
 ```html
 <img src="favicon72.png" alt="Logo MDN" srcset="favicon144.png 2x">
@@ -263,7 +263,7 @@ Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une v
 
 ### Utiliser les attributs `srcset` et `sizes`
 
-L'attribut `src` est ignoré par les agents utilisateur qui le prennent en charge lorsque les descripteurs `w` sont présents. Lorsque la condition `(max-width: 600px)` est respectée, l'image large de 200 pixels sera chargée (car c'est celle qui est la plus proche de `200px`). Dans les autres cas, c'est l'autre image qui est chargée.
+L'attribut `src` est ignoré par les agents utilisateurs qui le prennent en charge lorsque les descripteurs `w` sont présents. Lorsque la condition `(max-width: 600px)` est respectée, l'image large de 200 pixels sera chargée (car c'est celle qui est la plus proche de `200px`). Dans les autres cas, c'est l'autre image qui est chargée.
 
 ```html
 <img src="clock-demo-200px.png"
@@ -294,16 +294,16 @@ La valeur d'un attribut `alt` devrait toujours décrire le contenu de l'image de
 #### Bonne pratique
 
 ```html example-good
-<img alt="Un manchot Rockhopper sur une plage." src="penguin.jpg">
+<img alt="Un manchot Rockhopper sur une plage." src="pingouin.jpg">
 ```
 
 Lorsque l'attribut `alt` n'est pas présent sur une image, certains lecteurs d'écran pourront annoncer le nom du fichier de l'image. Cela peut être source de confusion si le nom du fichier n'est pas représentatif du contenu de l'image.
 
-- [_An alt Decision Tree • Images • WAI Web Accessibility Tutorials_ (en anglais)](https://www.w3.org/WAI/tutorials/images/decision-tree/)
-- [_Alt-texts: The Ultimate Guide — Axess Lab_ (en anglais)](https://axesslab.com/alt-texts/)
-- [_How to Design Great Alt Text: An Introduction - Deque_ (en anglais)](https://www.deque.com/blog/great-alt-text-introduction/)
-- [Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [_Understanding Success Criterion 1.1.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+- [Un arbre de décision pour `alt` • Images • Tutoriel WAI sur l'accessibilité web (en anglais)](https://www.w3.org/WAI/tutorials/images/decision-tree/)
+- [Texte alternatif&nbsp;: le guide ultime — <i lang="en">Axess Lab</i> (en anglais)](https://axesslab.com/alt-texts/)
+- [Comment optimiser votre texte alternatif&nbsp;: une introduction — Deque (en anglais)](https://www.deque.com/blog/great-alt-text-introduction/)
+- [MDN Comprendre les règles WCAG 1.1](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Comprendre les critères de succès 1.1.1 | W3C Comprendre WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ### L'attribut `title`
 
@@ -313,7 +313,7 @@ L'attribut `title` ne devrait pas être utilisé afin de compléter les informat
 
 La valeur de l'attribut `title` est généralement affichée via une bulle d'information qui apparaît au survol du curseur sur l'image. Bien que cet attribut _puisse_ fournir des informations supplémentaires, on ne doit pas s'attendre à ce que toute personne le voit&nbsp;: par exemple lorsque la navigation est effectuée au clavier ou sur un écran tactile. Si les informations à afficher sont particulièrement importantes ou utiles, on utilisera les méthodes évoquées ci-avant plutôt que `title`.
 
-- [Using the HTML title attribute - updated | The Paciello Group](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
+- [Utiliser l'attribut HTML `title` — mis à jour | <i lang="en">The Paciello Group</i> (en anglais)](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
 
 ## Résumé technique
 
@@ -377,7 +377,7 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>
-      <td>[`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement)</td>
+      <td><a href="/fr/docs/Web/API/HTMLImageElement"><code>HTMLImageElement</code></a></td>
     </tr>
   </tbody>
 </table>
@@ -392,7 +392,7 @@ La valeur de l'attribut `title` est généralement affichée via une bulle d'inf
 
 ## Voir aussi
 
-- [Apprendre - Les images en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Apprendre — Les images en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [Guide sur les formats et types de fichier pour les images](/fr/docs/Web/Media/Formats/Image_types)
 - [Les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 - Les éléments HTML&nbsp;:

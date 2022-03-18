@@ -6,7 +6,7 @@ browser-compat: html.elements.input.input-month
 ---
 {{HTMLRef("Input_types")}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`"month"`** permettent de créer des contrôles où l'utilisateur peut saisir un mois et année. La valeur associée à un tel élément suit le format `"YYYY-MM"`, où `YYYY` représente l'année sur quatre chiffre et `MM` le mois sur deux chiffres.
+Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`month`** permettent de créer des contrôles où l'utilisatrice ou l'utilisateur peut saisir un mois et année. La valeur associée à un tel élément suit le format `YYYY-MM`, où `YYYY` représente l'année sur quatre chiffre et `MM` le mois sur deux chiffres.
 
 {{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 
@@ -49,9 +49,9 @@ Voici un aperçu du contrôle sous Edge&nbsp;:
 
 ## Valeur
 
-Une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui représente la valeur du mois et de l'année saisies via le contrôle, au format YYYY-MM (c'est-à-dire une année sur 4 chiffres suivi d'un tiret (`"-"`) suivi du mois sur deux chiffres). Le format détaillé est [décrit dans l'article sur les formats des dates/heures](/fr/docs/Web/HTML/Date_and_time_formats#représentation_des_mois).
+Une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui représente la valeur du mois et de l'année saisies via le contrôle, au format `YYYY-MM` (c'est-à-dire une année sur 4 chiffres suivi d'un tiret (`-`) suivi du mois sur deux chiffres). Le format détaillé est [décrit dans l'article sur les formats des dates/heures](/fr/docs/Web/HTML/Date_and_time_formats#représentation_des_mois).
 
-Il est possible de définir une valeur par défaut pour le contrôle en utilisant l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-value"><code>value</code></a> de la façon suivante&nbsp;:
+Il est possible de définir une valeur par défaut pour le contrôle en utilisant l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) de la façon suivante&nbsp;:
 
 ### Fournir une valeur par défaut
 
@@ -62,21 +62,21 @@ Il est possible de définir une valeur par défaut pour le contrôle en utilisan
 
 {{EmbedLiveSample('', 600, 60)}}
 
-On notera que la façon dont la date est affichée peut varier selon la locale de l'utilisateur et être présentée sous un format différent. En revanche, d'un point de vue technique, la valeur de l'attribut `value` suivra toujours le format `YYYY-MM`.
+On notera que la façon dont la date est affichée peut varier selon la locale de l'utilisatrice ou l'utilisateur et être présentée sous un format différent. En revanche, d'un point de vue technique, la valeur de l'attribut `value` suivra toujours le format `YYYY-MM`.
 
 Par exemple, lorsque le formulaire précédent sera envoyé vers le serveur, l'information sera transmise de cette façon&nbsp;: `bday-month=1978-06`.
 
 ### Définir la valeur en JavaScript
 
-Il est également possible de manipuler la date en JavaScript grâce à la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement).
+Il est également possible de manipuler la date en JavaScript grâce à la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
-```html hidden
+```html
 <label for="bday-month">Quel est le mois de votre naissance ?</label>
 <input id="bday-month" type="month" name="bday-month" value="2017-06">
 ```
 
-```js hidden
-var monthControl = document.querySelector('input[type="month"]');
+```js
+let monthControl = document.querySelector('input[type="month"]');
 monthControl.value = '1978-06';
 ```
 
@@ -86,32 +86,29 @@ monthControl.value = '1978-06';
 
 En complément des attributs pris en charge par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/Input), les champs pour les mois gèrent les attributs suivants&nbsp;:
 
-### list
+### `list`
 
-La valeur de cet attribut est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document.
-L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit la liste de valeurs prédéfinies à suggérer à l'utilisatrice ou à l'utilisateur.
-Toute valeur de la liste qui n'est pas compatible avec ce type de champ n'est pas incluse dans les options suggérées.
-Les valeurs fournies sont des suggestions et pas des valeurs imposées&nbsp;: il reste possible de sélectionner des valeurs en dehors de cette liste.
+La valeur de cet attribut est l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document. L'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) fournit la liste de valeurs prédéfinies à suggérer à l'utilisatrice ou à l'utilisateur. Toute valeur de la liste qui n'est pas compatible avec ce type de champ n'est pas incluse dans les options suggérées. Les valeurs fournies sont des suggestions et pas des valeurs imposées&nbsp;: il reste possible de sélectionner des valeurs en dehors de cette liste.
 
-### max
+### `max`
 
-Le mois le plus tardif, indiqué avec l'année, sous la forme d'une chaîne de caractères au format `"yyyy-MM"`. Si la valeur saisie dans le champ (représentée par l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-value"><code>value</code></a>) est supérieure à cette date, [la validation échouera](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Si la valeur fournie n'est pas une chaîne de caractères au format correct, aucun maximum ne sera fixé pour la valeur du contrôle.
+Le mois le plus tardif, indiqué avec l'année, sous la forme d'une chaîne de caractères au format `yyyy-MM`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)) est supérieure à cette date, [la validation échouera](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur fournie n'est pas une chaîne de caractères au format correct, aucun maximum ne sera fixé pour la valeur du contrôle.
 
 Cette valeur doit être supérieure ou égale à celle indiquée par l'attribut `min`.
 
-### min
+### `min`
 
-Le mois le plus tôt, indiqué avec l'année, sous la forme d'une chaîne de caractères au format `"yyyy-MM"`. Si la valeur saisie dans le champ (représentée par l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-value"><code>value</code></a>) est antérieure à cette date, [la validation échouera](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Si la valeur fournie pour cet attribut n'est pas une chaîne de caractères au format correct, aucun minimum ne sera fixé pour la valeur du contrôle.
+Le mois le plus tôt, indiqué avec l'année, sous la forme d'une chaîne de caractères au format `yyyy-MM`. Si la valeur saisie dans le champ (représentée par l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value)) est antérieure à cette date, [la validation échouera](/fr/docs/Web/Guide/HTML/Constraint_validation). Si la valeur fournie pour cet attribut n'est pas une chaîne de caractères au format correct, aucun minimum ne sera fixé pour la valeur du contrôle.
 
 Cette valeur doit être inférieure ou égale à celle indiquée par l'attribut `max`.
 
-### readonly
+### `readonly`
 
-Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisateur. La valeur de l'attribut `value` peut toutefois être modifiée grâce à du code JavaScript qui changerait la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement).
+Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut pas être édité par l'utilisatrice ou l'utilisateur. La valeur de l'attribut `value` peut toutefois être modifiée grâce à du code JavaScript, qui changerait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
 > **Note :** Un champ en lecture seule pouvant ne pas avoir de valeur, l'attribut `required` n'aura aucun effet si l'attribut `readonly` est défini.
 
-### step
+### `step`
 
 L'attribut `step` est un nombre qui indique le «&nbsp;pas&nbsp;» suivi par le compteur. Il peut également prendre la valeur spéciale `any` (décrite ci-après). Seules les valeurs qui suivent cette progression (à partir de `min` ou de `value` si ces attributs sont fournis) seront considérées comme valides.
 
@@ -123,7 +120,7 @@ Pour les champs `month`, la valeur de l'attribut `step` est exprimée en mois et
 
 ## Utiliser `<input type="month">`
 
-Un élément `<input>` de type `month` permet d'avoir une interface utilisateur simple d'utilisation pour choisir un mois et également de respecter un même format, quelle que soit la locale de l'utilisateur. Toutefois, `<input type="month">` n'est pas pris en charge par l'ensemble des navigateurs ce qui peut poser problème.
+Un élément `<input>` de type `month` permet d'avoir une interface utilisateur simple d'utilisation pour choisir un mois et également de respecter un même format, quelle que soit la locale de l'utilisatrice ou l'utilisateur. Toutefois, `<input type="month">` n'est pas pris en charge par l'ensemble des navigateurs ce qui peut poser problème.
 
 Nous verrons ici quelques cas d'utilisation, simples puis complexes et nous aborderons ensuite comment gérer l'absence de prise en charge.
 
@@ -142,7 +139,7 @@ Dans son expression la plus simple, il suffit d'employer un élément `<input>` 
 
 ### Indiquer une date maximale et une date minimale
 
-On peut utiliser les attributs <a href="/fr/docs/Web/HTML/Element/Input#attr-min"><code>min</code></a> et <a href="/fr/docs/Web/HTML/Element/Input#attr-max"><code>max</code></a> afin de restreindre la période pendant laquelle l'utilisateur peut choisir un mois. Dans l'exemple qui suit, on définit une date au plus tôt avec `1900-01` et une date au plus tard avec `2017-08`&nbsp;:
+On peut utiliser les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/Input#attr-max) afin de restreindre la période pendant laquelle l'utilisatrice ou l'utilisateur peut choisir un mois. Dans l'exemple qui suit, on définit une date au plus tôt avec `1900-01` et une date au plus tard avec `2017-08`&nbsp;:
 
 ```html
 <form>
@@ -167,7 +164,7 @@ Grâce ce fragment de code&nbsp;:
 
 Par défaut, `<input type="month">` n'applique pas de validation particulière sur la valeur saisie. C'est l'interface utilisateur qui ne permet pas de choisir autre chose qu'un mois.
 
-Les attributs <a href="/fr/docs/Web/HTML/Element/Input#attr-min"><code>min</code></a> et <a href="/fr/docs/Web/HTML/Element/Input#attr-max"><code>max</code></a> permettent de limiter la période valide et l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-required"><code>required</code></a> rend le champ obligatoire. Avec ces attributs, les navigateurs afficheront un message d'erreur si la date choisie est hors de la période ou si la valeur est vide.
+Les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min) et [`max`](/fr/docs/Web/HTML/Element/Input#attr-max) permettent de limiter la période valide et l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) rend le champ obligatoire. Avec ces attributs, les navigateurs afficheront un message d'erreur si la date choisie est hors de la période ou si la valeur est vide.
 
 Prenons un exemple avec une période délimitée et un champ obligatoire&nbsp;:
 
@@ -185,7 +182,7 @@ Prenons un exemple avec une période délimitée et un champ obligatoire&nbsp;:
 </form>
 ```
 
-Si vous tentez d'envoyer le formulaire avec une date incomplète ou en dehors de cette période, le navigateur doit afficher un message d'erreur. Voici le résultat _live_&nbsp;:
+Si vous tentez d'envoyer le formulaire avec une date incomplète ou en dehors de cette période, le navigateur doit afficher un message d'erreur. Voici le résultat en direct&nbsp;:
 
 {{EmbedLiveSample('', 600, 120)}}
 
@@ -222,7 +219,7 @@ input:valid+span:after {
 }
 ```
 
-> **Attention :** Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour un utilisateur de modifier le code HTML du site ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
+> **Attention :** Il est également important de vérifier le format de la valeur saisie côté serveur&nbsp;! En effet, il est tout à fait possible pour la personne naviguant le site de modifier le code HTML ou d'envoyer des données au serveur sans passer par le formulaire. Il est donc nécessaire de contrôler la valeur avant de s'en servir dans la logique de l'application côté serveur afin d'éviter des conséquences malheureuses.
 
 ## Gérer la prise en charge des navigateurs
 
@@ -232,15 +229,15 @@ Comme évoqué plus haut, le problème principal relatif à ces contrôles est l
 
 Les navigateurs qui ne prennent pas en charge cette fonctionnalité basculent sur un contrôle textuel classique mais cela pose problème à la fois en termes de cohérence de l'interface utilisateur et aussi par rapport à la gestion des données.
 
-C'est ce deuxième aspect qui est le plus problématique. Comme nous l'avons mentionné, la valeur d'une date saisie dans un contrôle `<input type="month">` est toujours normalisée au format `"YYYY-MM"`. En revanche, avec un champ textuel, le navigateur ne convertit pas la valeur saisie et les personnes peuvent très bien écrire un mois sous plusieurs formes&nbsp;:
+C'est ce deuxième aspect qui est le plus problématique. Comme nous l'avons mentionné, la valeur d'une date saisie dans un contrôle `<input type="month">` est toujours normalisée au format `YYYY-MM`. En revanche, avec un champ textuel, le navigateur ne convertit pas la valeur saisie et les personnes peuvent très bien écrire un mois sous plusieurs formes&nbsp;:
 
 - `MMYYYY`
 - `MM/YYYY`
 - `MM-YYYY`
 - `YYYY-MM`
-- etc.
+- …et ainsi de suite.
 
-Une façon de contourner ce problème consiste à utiliser l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-pattern"><code>pattern</code></a> sur l'élément `<input type="month">`. Bien que le contrôle de type `month` ne gère pas cet attribut, ce dernier sera pris en charge par le champ texte. Vous pouvez essayer l'exemple suivant dans un navigateur qui ne prend pas en charge le contrôle de saisie des mois&nbsp;:
+Une façon de contourner ce problème consiste à utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) sur l'élément `<input type="month">`. Bien que le contrôle de type `month` ne gère pas cet attribut, ce dernier sera pris en charge par le champ texte. Vous pouvez essayer l'exemple suivant dans un navigateur qui ne prend pas en charge le contrôle de saisie des mois&nbsp;:
 
 ```html
 <form>
@@ -261,7 +258,7 @@ Une façon de contourner ce problème consiste à utiliser l'attribut <a href="/
 
 Si vous tentez d'envoyer ce formulaire, vous verrez un message d'erreur si la valeur saisie ne respecte pas le format `nnnn-nn`, où `n` est un chiffre entre 0 et 9. Bien entendu, cela n'empêche pas de saisir des dates inexistantes ou au mauvais format.
 
-De plus, cela présage que l'utilisateur comprenne le format dans lequel il faut saisir la valeur. Bref, le problème subsiste.
+De plus, cela présage que l'utilisatrice ou l'utilisateur comprenne le format dans lequel il faut saisir la valeur. Bref, le problème subsiste.
 
 ```css hidden
 div {
@@ -290,7 +287,7 @@ input:valid+span:after {
 }
 ```
 
-La meilleure façon de gérer la saisie de mois pour l'ensemble des navigateurs consiste actuellement à saisir le mois et l'année dans deux contrôles séparés, représentés chacun par un élément [`<select>`](/fr/docs/Web/HTML/Element/select). On peut également utiliser certaines bibliothèques JavaScript telles que [jQuery date picker](https://jqueryui.com/datepicker/) ou le plugin [jQuery timepicker](https://timepicker.co/).
+La meilleure façon de gérer la saisie de mois pour l'ensemble des navigateurs consiste actuellement à saisir le mois et l'année dans deux contrôles séparés, représentés chacun par un élément [`<select>`](/fr/docs/Web/HTML/Element/select). On peut également utiliser certaines bibliothèques JavaScript telles que [le sélecteur de date (<i lang="en">jQuery date picker</i>)](https://jqueryui.com/datepicker/) ou le plugin [sélecteur d'heure jQuery (<i lang="en">jQuery timepicker</i>)](https://timepicker.co/).
 
 ## Exemples
 
@@ -366,7 +363,7 @@ input:valid+span:after {
 }
 ```
 
-Une partie intéressante du code est celle qui permet de détecter la prise en charge de fonctionnalité. Pour détecter si le navigateur prend en charge ce contrôle, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont on modifie le type afin qu'il vaille `month` puis on vérifie immédiatement la valeur associée au type : les navigateurs qui ne prennent pas en charge la fonctionnalité renverront `text`, car le champ `month` a automatiquement transformé en `text`. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif (celui construit avec les éléments [`<select>`](/fr/docs/Web/HTML/Element/select)).
+Une partie intéressante du code est celle qui permet de détecter la prise en charge de fonctionnalité. Pour détecter si le navigateur prend en charge ce contrôle, on crée un nouvel élément [`<input>`](/fr/docs/Web/HTML/Element/Input) dont on modifie le type afin qu'il vaille `month` puis on vérifie immédiatement la valeur associée au type&nbsp;: les navigateurs qui ne prennent pas en charge la fonctionnalité renverront `text`, car le champ `month` a automatiquement transformé en `text`. Si c'est le cas, on masque le sélecteur natif et on affiche le sélecteur alternatif (celui construit avec les éléments [`<select>`](/fr/docs/Web/HTML/Element/select)).
 
 ```js
 // On définit des variables
@@ -411,7 +408,7 @@ function populateYears() {
 }
 ```
 
-> **Note :** Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia](https://fr.wikipedia.org/wiki/Num%C3%A9rotation_ISO_des_semaines#Ann%C3%A9es_longues)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
+> **Note :** Attention, certaines années peuvent contenir 53 semaines&nbsp;! (cf. [cet article Wikipédia](https://fr.wikipedia.org/wiki/Numérotation_ISO_des_semaines#Années_longues)) Il vous faudra prendre cela en compte si vous souhaitez développer des applications réelles.
 
 ## Spécifications
 
@@ -424,8 +421,10 @@ function populateYears() {
 ## Voir aussi
 
 - L'élément générique [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface DOM qui permet de le manipuler&nbsp;: [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement)
-- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-- [Un tutoriel à propos des sélecteurs de dates et d'heures](/fr/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
-- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date), [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/fr/docs/Web/HTML/Element/input/week)
+- [Les formats de date et d'heure utilisés en HTML](/fr/docs/Web/HTML/Date_and_time_formats)
+- [Un tutoriel à propos des sélecteurs de dates et d'heures](/fr/docs/Learn/Forms/Basic_native_form_controls#sélection_de_date_et_heure)
+- [`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local)
+- [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date)
+- [`<input type="time">`](/fr/docs/Web/HTML/Element/input/time)
+- [`<input type="week">`](/fr/docs/Web/HTML/Element/input/week)
 - [La compatibilité des propriétés CSS pour les contrôles de formulaires](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
-
