@@ -26,7 +26,7 @@ Upgrade: example/1, foo/2
 </pre>
 
 <p><br>
- 根據之前的請求的協議，可能需要其他頭部信息，例如：從HTTP/1.1升級到WebSocket 允許配置有關 WebSocket 連接的頭部詳細信息，以及在連接時提供一定程度的安全性。查看 {{anch("Upgrading to a WebSocket connection")}} 獲取更多信息。</p>
+ 根據之前的請求的協議，可能需要其他頭部信息，例如：從HTTP/1.1升級到WebSocket 允許配置有關 WebSocket 連接的頭部詳細信息，以及在連接時提供一定程度的安全性。查看 <a href="#upgrading_to_a_websocket_connection">Upgrading to a WebSocket connection</a> 獲取更多信息。</p>
 
 <p>如果服務器決定升級這次連接，就會返回一個 {{HTTPStatus(101, "101 Switching Protocols")}} 響應狀態碼，和一個要切換到的協議的頭部字段Upgrade。 如果服務器沒有（或者不能）升級這次連接，它會忽略客戶端發送的 "Upgrade 頭部字段，返回一個常規的響應：例如一個{{HTTPStatus(200, "200 OK")}}).</p>
 
