@@ -63,7 +63,7 @@ window.addEventListener("keyup", handleKeyUp, true);</pre>
 
 <p>タッチスクリーンデバイスにインストールされることを目的としている Web アプリを開発している時、ディスプレイ解像度とユーザー入力に関して異なる性能を考慮することは良いプラクティスです。<a href="/ja/docs/Web/API/Touch_events">タッチイベント</a>は、タッチスクリーンデバイス上のインタラクションな要素と一般的なインタラクションジェスチャーを実装するのに役立ちます。</p>
 
-<p>タッチイベントを使いたいのであれば、イベントリスナーの追加とイベントが発火された時に呼び出されるハンドラー関数を指定する必要があります。</p>
+<p>タッチイベントを使いたいのであれば、イベントリスナーを追加して、イベントが発火された時に呼び出されるハンドラー関数を指定する必要があります。</p>
 
 <pre class="brush: js notranslate">element.addEventListener("touchstart", handleStart, false);
 element.addEventListener("touchcancel", handleCancel, false);
