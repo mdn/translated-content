@@ -8,7 +8,7 @@ original_slug: Web/HTTP/CORS/Errors/CORSAllowOriginManquant
 
 ## Symptomes
 
-     Raison&nbsp;: l’en-tête CORS «&nbsp;Access-Control-Allow-Origin&nbsp;» est manquant.
+     Raison: l'en-tête CORS «Access-Control-Allow-Origin» est manquant.
 
 ## Quel est le problème ?
 
