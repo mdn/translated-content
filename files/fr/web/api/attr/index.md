@@ -9,7 +9,7 @@ translation_of: Web/API/Attr
 ---
 {{APIRef("DOM")}}
 
-Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupart des méthodes DOM, vous auriez probablement récupéré l'attribut directement comme une chaîne (par exemple, {{domxref ("element.getAttribute()")}}, mais certaines fonctions (par exemple, {{domxref ("element.getAttributeNode()" )}}) ou des moyens d'itération donnent des types Attr.
+Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupart des méthodes DOM, vous auriez probablement récupéré l'attribut directement comme une chaîne (par exemple, {{domxref ("element.getAttribute()")}}, mais certaines fonctions (par exemple, {{domxref ("element.getAttributeNode()" )}}) ou des moyens d'itération donnent des types Attr.
 
 > **Attention :** À partir de Gecko 7.0 {{geckoRelease ("7.0")}}, ceux qui vont être retirés afficheront des messages d'avertissement dans la console. Vous devriez modifier votre code en conséquence. Voir [Propriétés et méthodes dépréciées](#propriétés_et_méthodes_dépréciées) pour une liste complète.
 
@@ -27,7 +27,7 @@ Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupa
   - : L'élément contenant l'attribut.
 
 > **Note :** DOM Niveau 4 a supprimé cette propriété . L'hypothèse était que puisque nous obtenons un objet Attr d'un {{domxref("Element")}}, nous devrions déjà connaître les éléments associés.
-> Comme cela n'est pas vrai quand les objets `Attr`  sont retournés par {{domxref("Document.evaluate")}}, le DOM Living Standard a réintroduit la propriété.
+> Comme cela n'est pas vrai quand les objets `Attr`  sont retournés par {{domxref("Document.evaluate")}}, le DOM Living Standard a réintroduit la propriété.
 >
 > Gecko affiche une note de dépréciation à partir de Gecko 7.0 {{geckoRelease("7.0")}}. Cette note a été supprimée dans Gecko 49.0 {{geckoRelease("49.0")}}.
 
@@ -47,11 +47,11 @@ Les propriétés suivantes ont été dépréciées. Si elle est disponible, la m
 - `attributes`
   - : Cette propriété retourne désormais toujours `NULL`.
 - `childNodes` {{deprecated_inline}}
-  - : Cette propriété retourne désormais toujours `un` {{domxref("NodeList")}}  vide.
+  - : Cette propriété retourne désormais toujours `un` {{domxref("NodeList")}} vide.
 - `firstChild` {{deprecated_inline}}
   - : Cette propriété retourne désormais toujours `NULL`.
 - `isId` {{readOnlyInline}}
-  - : Indique si l'attribut est un "attribut ID". Un "attribut ID" étant un attribut dont la valeur devrait être unique dans un document DOM. En HTML DOM, "id" est le seul attribut ID, mais les documents XML peuvent en définir d'autres. Qu'un attribut soit unique ou non est souvent déterminé par  un {{Glossary("DTD")}}  ou une autre description de schéma.
+  - : Indique si l'attribut est un "attribut ID". Un "attribut ID" étant un attribut dont la valeur devrait être unique dans un document DOM. En HTML DOM, "id" est le seul attribut ID, mais les documents XML peuvent en définir d'autres. Qu'un attribut soit unique ou non est souvent déterminé par un {{Glossary("DTD")}} ou une autre description de schéma.
 - `lastChild` {{deprecated_inline}}
   - : Cette propriété retourne désormais toujours `NULL`.
 - `nextSibling`

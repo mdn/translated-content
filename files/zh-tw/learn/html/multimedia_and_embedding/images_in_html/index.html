@@ -98,7 +98,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/HTML中的圖片
 <p>您應該在<code>alt</code>屬性中確切寫些什麼？ 這取決於圖片為何而出現；也就是說，如果圖片不顯示，您將損失什麼：</p>
 
 <ul>
- <li><strong>裝飾： </strong>你可以用 {{anch("CSS_背景圖片")}} 加入裝飾圖片，但如果必須使用HTML，可以添加一個空的 <code>alt=""</code>。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。</li>
+ <li><strong>裝飾： </strong>你可以用 <a href="#css_背景圖片">CSS_背景圖片</a> 加入裝飾圖片，但如果必須使用HTML，可以添加一個空的 <code>alt=""</code>。如果圖片不是內容的一部分，那麼就不應該讓螢幕閱讀器浪費時間去閱讀它。</li>
  <li><strong>內容： </strong>如果您的圖片提供了重要的資訊，請在簡短的<code>alt</code>文字中提供相同的資訊，甚至最好在所有人都能看到的主要文字中提供相同的資訊。請不要撰寫冗餘替代文字，試想如果所有段落都在主要內容中寫了兩次，對於用視力觀看的使用者有多煩人。如果圖像在正文中已充分敘述，請使用 <code>alt=""</code>。</li>
  <li><strong>連結：</strong> 如果你在{{htmlelement("a")}} 標籤中放了圖片使其轉入連結，你仍應該提供<a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%E4%BD%BF%E7%94%A8%E6%98%8E%E7%A2%BA%E7%9A%84%E5%AD%97%E8%A9%9E">明確的字詞</a>。在这种情况下，您可以根據適合你的情況，将其写在相同的<code>&lt;a&gt;</code>元素内，或是写在图像的<code>alt</code> 属性内。</li>
  <li><strong>文字：</strong> 請不要在圖片中寫字。如果你的主要目的是為標題加上下拉式陰影，你可以<a href="/en-US/docs/Web/CSS/text-shadow">使用CSS</a>更甚於在圖片中描繪文字。 但如果你無法避免這麼做，也請將文字敘述加在<code>alt</code> 属性内。</li>

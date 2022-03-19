@@ -123,14 +123,14 @@ Comme test, vous pouvez désactiver le CSS d'un site et voir à quel point il es
 
 - Firefox : Sélectionnez _Affichage > Style de page > Aucun style_ depuis le menu principal.
 - Safari : Sélectionnez _Développement > Désactiver les styles_ depuis le menu principale (pour activer le menu _Développement_, choisissez _Safari_ > _Préférences_ > _Avancés_ > _Montrer le menu développement dans la barre de menu_).
-- Chrome : Installez l'extension Web Developer Toolbar, puis redémarrer le navigateur. Cliquez sur l'icône engrenage qui apparaîtra, puis sélectionnez _CSS_ > _Désactiver tous les styles._
+- Chrome : Installez l'extension Web Developer Toolbar, puis redémarrer le navigateur. Cliquez sur l'icône engrenage qui apparaîtra, puis sélectionnez _CSS_ > _Désactiver tous les styles._
 - Edge : Sélectionnez _Vue_ > _Style_ > _Aucun style_ depuis le menu principal.
 
 #### Utiliser l'accessibilité native du clavier
 
 Certaines fonctionnalités HTML peuvent être sélectionnées en utilisant uniquement le clavier — c'est le comportement par défaut, disponible depuis les prémices du web. Les éléments qui ont cette capacité sont les plus communs qui permettent à l'utilisateur d'interagir avec les pages web, à savoir les liens, {{htmlelement("button")}}s, et les éléments des formulaire comme {{htmlelement("input")}}.
 
-Vous pouvez essayer ceci en utilisant notre exemple [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — ouvrez le dans un nouvel onglet, et essayez de presser la touche tab ; après quelques pressions, vous devriez voir la focalisation du tab commencer à se déplacer entre les différents éléments focalisables ; les éléments focalisés ont un style de mise en avant par défaut dans tous les navigateurs (cela diffère peu entre les différents navigateurs) donc vous pouvez dire quel éléments est focalisé.
+Vous pouvez essayer ceci en utilisant notre exemple [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — ouvrez le dans un nouvel onglet, et essayez de presser la touche tab ; après quelques pressions, vous devriez voir la focalisation du tab commencer à se déplacer entre les différents éléments focalisables ; les éléments focalisés ont un style de mise en avant par défaut dans tous les navigateurs (cela diffère peu entre les différents navigateurs) donc vous pouvez dire quel éléments est focalisé.
 
 ![](button-focused-unfocused.png)
 
@@ -161,8 +161,8 @@ a:focus, input:focus, button:focus, select:focus {
 Parfois ça n'est pas possible d'éviter la perte de l'accessibilité clavier. Vous pouvez avoir hérité d'un site où la sémantique n'est pas parfaite (peut-être que vous vous êtes retrouvé avec un CMS horrible qui génère des boutons créés avec des `<div>`s), ou que vous utilisez un contrôle complexe qui n'a pas d'accessibilité clavier intégré, comme l'élément {{htmlelement("video")}} (étonnamment, Opera est le seul navigateur qui vous permet de tabuler dans l'élément `<video>` avec les contrôles par défaut du navigateur). Vous avez quelques options ici :
 
 1.  Créer des contrôles personnalisés en utilisant les éléments `<button>` (sur lequel nous pouvons tabuler par défaut !) et JavaScript pour les relier à leur fonction. Pour des bons exemples voir [Creating a cross-browser video player](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player).
-2.  Créer des raccourcis clavier en utilisant JavaScript, les fonctions sont activés quand vous appuyez sur une certaine touche du clavier. Voir [Desktop mouse and keyboard controls](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour des exemples en rapport avec le jeu qui peuvent être adaptés à d'autres fins.
-3.  Utilisez des approches intéressantes pour simuler le comportement d'un bouton. Prenez par exemple notre exemple [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Nous donnons à nos faux boutons `<div>` la capacité d'être focalisé (y compris avec la tabulation) en donnant à chacun d'entre eux l'attribut `tabindex="0"` (voir l'[article tabindex](https://webaim.org/techniques/keyboard/tabindex) de WebAIM pour plus de détails utiles). Cela nous permet de tabuler sur les boutons, mais pas de les activer avec la toucher Entrée/Retour. Pour faire cela, nous devons ajouter ce petit bout de tromperie en JavaScript :
+2.  Créer des raccourcis clavier en utilisant JavaScript, les fonctions sont activés quand vous appuyez sur une certaine touche du clavier. Voir [Desktop mouse and keyboard controls](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour des exemples en rapport avec le jeu qui peuvent être adaptés à d'autres fins.
+3.  Utilisez des approches intéressantes pour simuler le comportement d'un bouton. Prenez par exemple notre exemple [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Nous donnons à nos faux boutons `<div>` la capacité d'être focalisé (y compris avec la tabulation) en donnant à chacun d'entre eux l'attribut `tabindex="0"` (voir l'[article tabindex](https://webaim.org/techniques/keyboard/tabindex) de WebAIM pour plus de détails utiles). Cela nous permet de tabuler sur les boutons, mais pas de les activer avec la toucher Entrée/Retour. Pour faire cela, nous devons ajouter ce petit bout de tromperie en JavaScript :
 4.  ```js
     document.onkeydown = function(e) {
       if(e.keyCode === 13) { // The Enter/Return key
@@ -171,19 +171,19 @@ Parfois ça n'est pas possible d'éviter la perte de l'accessibilité clavier. V
     };
     ```
 
-    Ici nous ajoutons un listener à l'objet `document` pour détecter quand une touche a été appuyée sur le clavier. Nous vérifions quelle touche a été pressée avec la propriété d'évènement d'objet [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) ; si c'est le code de la touche qui retourne Entrée/Retour, on exécute la fonction stockée dans le `onclick` du bouton en utilisant `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément courant qui est focalisé sur la page.
+    Ici nous ajoutons un listener à l'objet `document` pour détecter quand une touche a été appuyée sur le clavier. Nous vérifions quelle touche a été pressée avec la propriété d'évènement d'objet [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) ; si c'est le code de la touche qui retourne Entrée/Retour, on exécute la fonction stockée dans le `onclick` du bouton en utilisant `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément courant qui est focalisé sur la page.
 
 > **Note :** Cette technique ne fonctionnera que si vous configurer vos propres gestionnaires d'évènement avec les propriétés de gestion d'évènement (par ex. `onclick`). `addEventListener` ne fonctionnera pas. C'est beaucoup de prises de tête pour construire la fonctionnalité de retour. Et il y a d'autres problèmes rattachés avec. Vaut mieux commencer par utiliser les bons éléments pour leurs buts initiaux.
 
 #### Les textes alternatifs
 
-Les textes alternatifs sont très importants pour l'accessibilité — si une personne a un trouble visuel ou auditif qui l'empêche de voir ou d'entendre un contenu, alors c'est un problème. Le texte alternatif le plus simple disponible est le modeste attribut `alt`, que nous devrions inclure dans toutes les images qui contiennent un contenu pertinent. Il peut contenir une description de l'image qui transmet clairement son sens et son contenu sur la page, pour être récupéré par un lecteur d'écran et lu à l'utilisateur.
+Les textes alternatifs sont très importants pour l'accessibilité — si une personne a un trouble visuel ou auditif qui l'empêche de voir ou d'entendre un contenu, alors c'est un problème. Le texte alternatif le plus simple disponible est le modeste attribut `alt`, que nous devrions inclure dans toutes les images qui contiennent un contenu pertinent. Il peut contenir une description de l'image qui transmet clairement son sens et son contenu sur la page, pour être récupéré par un lecteur d'écran et lu à l'utilisateur.
 
 > **Note :** Pour plus d'informations, lisez [Text alternatives](/fr/docs/Learn/Accessibility/HTML#Text_alternatives).
 
 L'oubli de texte alt peut être testé de bien des façons, par exemple en utilisant [les outils d'audit](#les_outils_daudit) d'accessibilité.
 
-Le texte alt est légèrement plus complexe pour du contenu vidéo ou audio. Il y a une manière de gérer l'affichage du texte (par ex. les sous-titres) et de les afficher quand la vidéo est jouée, sous le forme de l'élément {{htmlelement("track")}}, et du format [WebVTT](/fr/docs/Web/API/Web_Video_Text_Tracks_Format) (voir [Ajouter des légendes et des sous-titres à des vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour un tutoriel détaillé). [La compatibilité entre navigateur](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Compatibilit%C3%A9_entre_navigateurs) pour cette fonction est assez bonne, mais si vous voulez fournir des textes alternatifs pour de l'audio ou supporter les vieux navigateurs, une simple transcription du texte présenté quelque part sur la page ou sur une page séparée peut être une bonne idée.
+Le texte alt est légèrement plus complexe pour du contenu vidéo ou audio. Il y a une manière de gérer l'affichage du texte (par ex. les sous-titres) et de les afficher quand la vidéo est jouée, sous le forme de l'élément {{htmlelement("track")}}, et du format [WebVTT](/fr/docs/Web/API/Web_Video_Text_Tracks_Format) (voir [Ajouter des légendes et des sous-titres à des vidéos HTML5](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) pour un tutoriel détaillé). [La compatibilité entre navigateur](/fr/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video#Compatibilit%C3%A9_entre_navigateurs) pour cette fonction est assez bonne, mais si vous voulez fournir des textes alternatifs pour de l'audio ou supporter les vieux navigateurs, une simple transcription du texte présenté quelque part sur la page ou sur une page séparée peut être une bonne idée.
 
 #### Relations et contexte entre élément
 
@@ -213,7 +213,7 @@ Il y a quelques autres considérations que vous devriez prendre en compte.
 
 #### Couleur et contraste
 
-Lorsque vous choisissez une palette de couleurs pour votre site web, vous devez vous assurer que la couleur du texte (au premier plan) contraste bien avec la couleur d'arrière-plan. Votre design peut avoir l'air cool, mais ce n'est pas bon si les personnes avec un handicap visuel comme le daltonisme ne peuvent pas lire votre contenu. Utilisez un outil comme le [Color Contrast Checker](http://webaim.org/resources/contrastchecker/) de WebAIM si votre palette contraste suffisamment.
+Lorsque vous choisissez une palette de couleurs pour votre site web, vous devez vous assurer que la couleur du texte (au premier plan) contraste bien avec la couleur d'arrière-plan. Votre design peut avoir l'air cool, mais ce n'est pas bon si les personnes avec un handicap visuel comme le daltonisme ne peuvent pas lire votre contenu. Utilisez un outil comme le [Color Contrast Checker](http://webaim.org/resources/contrastchecker/) de WebAIM si votre palette contraste suffisamment.
 
 Une autre astuce est de ne pas compter sur une couleur seule pour les indications/informations, comme ça ne sera pas bon pour ceux qui ne peuvent pas voir la couleur. Plutôt que de marquer en rouge les champs requis d'un formulaire, par exemple, marquez-les avec un astérisque et en rouge.
 
@@ -250,13 +250,13 @@ Les implémentations JavaScript plus complexes peuvent mener à des problèmes a
 
 L'un des domaines de problématique principal pour l'accessibilité c'est les applis complexes qui nécessitent des contrôles de formulaires compliqués (comme les sélecteurs de date) et le contenu dynamique qui se met souvent à jour et de façon incrémentale.
 
-Les contrôles de formulaire compliqués non natifs sont problématiques parce qu'ils ont tendance à nécessiter beaucoup de `<div>`s imbriquées, et le navigateur ne sait pas quoi faire par défaut avec elles. Si vous les inventer vous-même, vous devez vous assurer qu'ils sont accessibles par le clavier ; si vous utilisez des structures externes, revoyez en profondeur les options disponibles pour voir à quel point elles sont accessibles avant de vous plonger dedans. [Bootstrap](http://getbootstrap.com/) à l'air d'être assez bon pour l'accessibilité, par exemple, bien que [Making Bootstrap a Little More Accessible](https://www.sitepoint.com/making-bootstrap-accessible/) de Rhiana Heath aborde certain de ses problèmes (principalement en rapport avec le contraste des couleurs), et examine certaines solutions.
+Les contrôles de formulaire compliqués non natifs sont problématiques parce qu'ils ont tendance à nécessiter beaucoup de `<div>`s imbriquées, et le navigateur ne sait pas quoi faire par défaut avec elles. Si vous les inventer vous-même, vous devez vous assurer qu'ils sont accessibles par le clavier ; si vous utilisez des structures externes, revoyez en profondeur les options disponibles pour voir à quel point elles sont accessibles avant de vous plonger dedans. [Bootstrap](http://getbootstrap.com/) à l'air d'être assez bon pour l'accessibilité, par exemple, bien que [Making Bootstrap a Little More Accessible](https://www.sitepoint.com/making-bootstrap-accessible/) de Rhiana Heath aborde certain de ses problèmes (principalement en rapport avec le contraste des couleurs), et examine certaines solutions.
 
 Le contenu dynamique régulièrement mis à jour peut-être un problème parce que les utilisateurs de lecteur d'écran peuvent le manquer, spécialement si les mises à jour sont inattendues. Si vous avez une appli en single-page avec un contenu principal dans un panneau qui est régulièrement mis à jour en utilisant [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest) ou [Fetch](/fr/docs/Web/API/Fetch_API), un utilisateur utilisant un lecteur d'écran peut rater ces mises à jour.
 
 #### WAI-ARIA
 
-Avez-vous besoin d'utiliser une fonctionnalité complexe, ou à la place vous le faîte avec une bonne vieille sémantique HTML ? Si vous avez besoin de complexité, vous devriez songer à utiliser [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) (Accessible Rich Internet Applications), une spécification qui fournit une sémantique (sous la forme des nouveaux attributs HTML) pour les objets comme les contrôles complexes de formulaire et les panneaux mis à jour qui peuvent être compris par la plupart des navigateurs et les lecteurs d'écran.
+Avez-vous besoin d'utiliser une fonctionnalité complexe, ou à la place vous le faîte avec une bonne vieille sémantique HTML ? Si vous avez besoin de complexité, vous devriez songer à utiliser [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) (Accessible Rich Internet Applications), une spécification qui fournit une sémantique (sous la forme des nouveaux attributs HTML) pour les objets comme les contrôles complexes de formulaire et les panneaux mis à jour qui peuvent être compris par la plupart des navigateurs et les lecteurs d'écran.
 
 Pour traiter avec les widgets complexes de formulaire, vous devez utiliser les attributs ARIA comme `roles` pour déclarer quel rôle les différents éléments on dans un widget (par exemple, est-ce qu'ils sont un onglet, ou un panneau ?), `aria-disabled` pour dire si un contrôle est désactivé ou pas, etc.
 
@@ -273,7 +273,7 @@ Voici un exemple :
 <p><span id="LiveRegion1" aria-live="polite" aria-atomic="false"></span></p>
 ```
 
-Vous pouvez voir un exemple en action sur l'exemple [ARIA (Accessible Rich Internet Applications) Live Regions](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm) de Freedom Scientific — le paragraphe surligné doit mettre à jour son contenu toutes les 10 secondes, et un lecteur d'écran doit le lire à l'utilisateur. [ARIA Live Regions - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm) apporte un autre exemple utile.
+Vous pouvez voir un exemple en action sur l'exemple [ARIA (Accessible Rich Internet Applications) Live Regions](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm) de Freedom Scientific — le paragraphe surligné doit mettre à jour son contenu toutes les 10 secondes, et un lecteur d'écran doit le lire à l'utilisateur. [ARIA Live Regions - Atomic](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegionsAtomic.htm) apporte un autre exemple utile.
 
 Nous n'avons pas de place pour couvrir WAI-ARIA en détail ici, vous pouvez en apprendre beaucoup plus à ce propos sur [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
 
@@ -292,7 +292,7 @@ Il y a plusieurs outils d'audit disponibles que vous pouvez placer sur vos pages
 Observons un exemple, en utilisant Tenon.
 
 1.  Aller sur la [page d'accueil de Tenon](https://tenon.io).
-2.  Entrez l'URL de notre exemple de [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) dans l'entrée texte en haut de la page (ou l'URL d'une autre page que vous aimeriez analyser) et appuyez sur _Analyse your Webpage_.
+2.  Entrez l'URL de notre exemple de [bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) dans l'entrée texte en haut de la page (ou l'URL d'une autre page que vous aimeriez analyser) et appuyez sur _Analyse your Webpage_.
 3.  Défilez vers le bas jusqu'à que vous trouviez la section d'erreur/signalement, comme montré ci-dessous.
 
 ![](tenon-screenshot.png)
@@ -303,7 +303,7 @@ Il y a également des options que vous pouvez examiner (voir le lien _Show Optio
 
 ### Les outils d'automatisation
 
-[Deque's aXe tool](https://www.deque.com/products/axe/) va un peu plus loin que les outils d'audit que nous avons mentionné plus haut. Comme les autres, il vérifie les pages et retourne des erreurs d'accessibilité. Sa forme immédiate la plus utile est sûrement son extension navigateur :
+[Deque's aXe tool](https://www.deque.com/products/axe/) va un peu plus loin que les outils d'audit que nous avons mentionné plus haut. Comme les autres, il vérifie les pages et retourne des erreurs d'accessibilité. Sa forme immédiate la plus utile est sûrement son extension navigateur :
 
 - [aXe pour Chrome](http://bitly.com/aXe-Chrome)
 - [aXe pour Firefox](http://bit.ly/aXe-Firefox)
@@ -326,7 +326,7 @@ La plupart du temps, les lecteurs d'écran sont des applis séparées, qui s'ex�
 
 Commençons à effectuer quelques tests avec deux lecteurs d'écran différents pour vous donner une idée générale de comment ils fonctionnent et de comment tester avec eux.
 
-> **Note :** [Designing for Screen Reader Compatibility](http://webaim.org/techniques/screenreader/) de WebAIM fournit des informations utiles à propos de l'utilisation des lecteurs d'écran et qu'est-ce qui est le plus efficace pour les lecteurs d'écran. Aller également voir [Screen Reader User Survey #6 Results](http://webaim.org/projects/screenreadersurvey6/#used) pour des statistiques intéressantes concernant l'utilisation de lecteur d'écran.
+> **Note :** [Designing for Screen Reader Compatibility](http://webaim.org/techniques/screenreader/) de WebAIM fournit des informations utiles à propos de l'utilisation des lecteurs d'écran et qu'est-ce qui est le plus efficace pour les lecteurs d'écran. Aller également voir [Screen Reader User Survey #6 Results](http://webaim.org/projects/screenreadersurvey6/#used) pour des statistiques intéressantes concernant l'utilisation de lecteur d'écran.
 
 #### VoiceOver
 
@@ -652,7 +652,7 @@ Maintenant que vous vous êtes habitué à utiliser un lecteur d'écran, nous ai
 - Regardez [good-links.html](http://mdn.github.io/learning-area/accessibility/html/good-links.html), et notez comment est-ce qu'ils ont du sens vus hors contexte. Ce n'est pas le cas avec [bad-links.html](http://mdn.github.io/learning-area/accessibility/html/bad-links.html) — ceux sont juste tous des "click here".
 - Regardez [good-form.html](http://mdn.github.io/learning-area/accessibility/html/good-form.html), et regardez comment les entrées du formulaire sont décrites en utilisant leurs libellés parce que nous avons utilisé l'élément `<label>` correctement. Dans [bad-form.html](http://mdn.github.io/learning-area/accessibility/html/bad-form.html), ils ne sont que des "blank" sur toute la ligne, totalement inutiles.
 - Regardez notre exemple [punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), et observez comment le lecteur d'écran est capable d'associer les colonnes et les lignes de contenu et de les lires toutes ensembles, parce que nous avons défini les entêtes correctement. Dans [bad-table.html](http://mdn.github.io/learning-area/accessibility/html/bad-table.html), aucune des cellules ne peut être associée du tout. Notez que NVDA a étonnamment l'air d'assez bien se comporter lorsque vous n'avez qu'un seul tableau sur une page ; à la place vous pouvez essayer [WebAIM's table test page](http://webaim.org/articles/nvda/tables.htm).
-- Jetez un œil à [WAI-ARIA live regions example](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm) que nous avons vu plus tôt, et observez comment le lecteur d'écran va continuer de lire la section qui se met à constamment à jour dès qu'elle se met à jour.
+- Jetez un œil à [WAI-ARIA live regions example](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm) que nous avons vu plus tôt, et observez comment le lecteur d'écran va continuer de lire la section qui se met à constamment à jour dès qu'elle se met à jour.
 
 ### Test utilisateur
 

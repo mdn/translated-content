@@ -40,9 +40,9 @@ getNapier(); // 2.718281828459045
 | Spécification                                                    | Statut                       | Commentaires                                          |
 | ---------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.1.1', 'Math.E')}} | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.e', 'Math.E')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.e', 'Math.E')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.8.1.1', 'Math.E')}} | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-math.e', 'Math.E')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-math.e', 'Math.E')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

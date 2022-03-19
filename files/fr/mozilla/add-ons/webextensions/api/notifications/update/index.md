@@ -31,7 +31,7 @@ var updating = browser.notifications.update(
 ### Paramètres
 
 - `id`
-  - : `string`. L'ID de la notification à mettre à jour. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.
+  - : `string`. L'ID de la notification à mettre à jour. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.
 - `options`
   - : {{WebExtAPIRef('notifications.NotificationOptions')}}. Définit le nouveau contenu et le nouveau comportement de la notification.
 
@@ -45,7 +45,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Cet exemple utilise `update()` pour mettre à jour une notification de progression. Cliquez sur l'action du navigateur pour afficher la notification et lancer un  {{WebExtAPIRef("alarms", "alarm")}}, que nous utilisons pour mettre à jour l'indicateur de progression de la notification.
+Cet exemple utilise `update()` pour mettre à jour une notification de progression. Cliquez sur l'action du navigateur pour afficher la notification et lancer un  {{WebExtAPIRef("alarms", "alarm")}}, que nous utilisons pour mettre à jour l'indicateur de progression de la notification.
 
 Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications). Notez également que Firefox ne prend pas en charge l'attribut de `progress`.
 

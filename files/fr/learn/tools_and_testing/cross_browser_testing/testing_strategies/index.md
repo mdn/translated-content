@@ -280,7 +280,7 @@ La plupart du temps vous permettrez à vos utilisateurs de regarder la page ou l
 
 Lorsque vous exécutez les tests, cela peut aussi être une bonne idée de :
 
-- Configurer si possible un profil navigateur séparé, avec les extensions et ces autres types de choses des navigateurs désactivées, et exécuter vos tests sur ce profile (voir [Utiliser le Profile Manager pour créer et retirer des profiles Firefox](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles) et [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), par exemple).
+- Configurer si possible un profil navigateur séparé, avec les extensions et ces autres types de choses des navigateurs désactivées, et exécuter vos tests sur ce profile (voir [Utiliser le Profile Manager pour créer et retirer des profiles Firefox](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles) et [Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824), par exemple).
 - Utiliser le mode navigation privée sur votre navigateur lorsque vous exécutez vos tests, quand il est disponible (par ex. [Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) sur Firefox, [Incognito Mode](https://support.google.com/chrome/answer/95464) sur Chrome) grâce à cela les cookies et les fichiers temporaires ne seront pas sauvegardés.
 
 Ces étapes sont conçues pour s'assurer que le navigateur que vous êtes en train de tester est aussi "pure" que possible. C-à-d qu'il n'y a rien d'installé qui pourrait affecter les résultats des tests.
@@ -291,7 +291,7 @@ Ces étapes sont conçues pour s'assurer que le navigateur que vous êtes en tra
 
 ## Résumé
 
-Après avoir lu cet article vous devriez maintenant avoir une bonne idée de ce que vous pouvez faire pour identifier votre liste de public cible/navigateur cible, et ensuite efficacement mener à bien vos tests en navigateur croisé en se basant sur cette liste.
+Après avoir lu cet article vous devriez maintenant avoir une bonne idée de ce que vous pouvez faire pour identifier votre liste de public cible/navigateur cible, et ensuite efficacement mener à bien vos tests en navigateur croisé en se basant sur cette liste.
 
 La prochaine fois nous tournerons notre attention sur les problèmes concrets de votre code que vos tests peuvent révéler, en commençant avec le HTML et le CSS.
 

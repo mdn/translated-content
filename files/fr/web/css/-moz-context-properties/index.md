@@ -67,7 +67,7 @@ Une fois que c'est fait, on peut utiliser les valeurs {{cssxref("fill")}} et {{c
                        fill='context-fill red' stroke='context-stroke' fill-opacity='0.5'/></svg>">
 ```
 
-Ici, l'attribut `src` de l'image correspond à une URI de données qui contient une simple image SVG. L'élément `<rect>` est paramétré afin de récupérer les valeurs `fill` et `stroke` telles que fournies par les propriétés {{cssxref("fill")}} et {{cssxref("stroke")}} de l'élément `<img>` grâce aux mots-clés `context-fill`/`context-stroke`. On utilise aussi une couleur de secours pour le remplissage (`fill`) (qui sera utilisée si le SVG est chargé en dehors de tout contexte, dans un nouvel onglet par exemple). On notera que, si une couleur est directement définie sur le SVG et qu'une couleur contextuelle (ici celle fournie par l'image) est également indiquée, ce sera cette dernière qui l'emportera.
+Ici, l'attribut `src` de l'image correspond à une URI de données qui contient une simple image SVG. L'élément `<rect>` est paramétré afin de récupérer les valeurs `fill` et `stroke` telles que fournies par les propriétés {{cssxref("fill")}} et {{cssxref("stroke")}} de l'élément `<img>` grâce aux mots-clés `context-fill`/`context-stroke`. On utilise aussi une couleur de secours pour le remplissage (`fill`) (qui sera utilisée si le SVG est chargé en dehors de tout contexte, dans un nouvel onglet par exemple). On notera que, si une couleur est directement définie sur le SVG et qu'une couleur contextuelle (ici celle fournie par l'image) est également indiquée, ce sera cette dernière qui l'emportera.
 
 > **Note :** vous pouvez consulter [un exemple complet sur notre dépôt Github](https://mdn.github.io/css-examples/moz-context-properties/).
 

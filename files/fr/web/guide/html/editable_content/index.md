@@ -28,7 +28,7 @@ Et voici le résultat obtenu avec ce fragment HTML&nbsp;:
 
 ## Exécuter des commandes
 
-Lorsqu'un élément HTML a un attribut `contenteditable` qui vaut `true`, la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) devient disponible. Cela permet d'exécuter des [commandes](/fr/docs/Web/API/Document/execCommand#commandes) our manipuler les contenus de la région éditable. Certaines commandes affectent la sélection du document en mettant par exemple en forme le texte (gras, italique, etc.) tandis que d'autres insèrent de nouveaux éléments (par exemple un nouveau lien) ou portent sur tout une ligne (par exemple pour l'indenter). Lorsqu'on utilise `contentEditable`, appeler `execCommand()` aura un impact sur l'ensemble de l'élément éditable courant qui est actif.
+Lorsqu'un élément HTML a un attribut `contenteditable` qui vaut `true`, la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) devient disponible. Cela permet d'exécuter des [commandes](/fr/docs/Web/API/Document/execCommand#commandes) pour manipuler les contenus de la région éditable. Certaines commandes affectent la sélection du document en mettant par exemple en forme le texte (gras, italique, etc.) tandis que d'autres insèrent de nouveaux éléments (par exemple un nouveau lien) ou portent sur tout une ligne (par exemple pour l'indenter). Lorsqu'on utilise `contentEditable`, appeler `execCommand()` aura un impact sur l'ensemble de l'élément éditable courant qui est actif.
 
 ## Différences de génération de balisage
 

@@ -10,7 +10,7 @@ tags:
   - Souris
 translation_of: Web/API/Element/setCapture
 ---
-{{ APIRef("DOM") }}{{ gecko_minversion_header("2.0") }}
+{{ APIRef("DOM") }}
 
 Appelez cette méthode pendant la gestion d'un évènement de la souris pour recibler tous les évènements de la souris sur cet élément jusqu'à ce que le bouton de la souris soit relâché ou que soit appelée {{ domxref("document.releaseCapture()") }}.
 

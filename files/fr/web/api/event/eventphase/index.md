@@ -65,7 +65,7 @@ Ces valeurs décrivent quelle est la phase du flux d'événements actuellement �
       <td>
         L'événement est arrivé à
         {{domxref("EventTarget", "the event's target", "", 1)}}.
-        Les écouteurs d'événements  enregistrés pour cette phase sont appelés à
+        Les écouteurs d'événements enregistrés pour cette phase sont appelés à
         ce moment. Si {{domxref("Event.bubbles")}} vaut
         <code>false</code> (<em>faux</em>), le traitement de l'événement est
         terminé une fois la phase complète.
@@ -96,22 +96,22 @@ Pour plus de détails, voir [section 3.1, Event dispatch and DOM event flow](htt
 ```html
 <h4>Event Propagation Chain</h4>
 <ul>
-  <li>Click 'd1'</li>
-  <li>Analyse event propagation chain</li>
-  <li>Click next div and repeat the experience</li>
-  <li>Change Capturing mode</li>
-  <li>Repeat the experience</li>
+  <li>Click 'd1'</li>
+  <li>Analyse event propagation chain</li>
+  <li>Click next div and repeat the experience</li>
+  <li>Change Capturing mode</li>
+  <li>Repeat the experience</li>
 </ul>
 <input type="checkbox" id="chCapture" />
 <label for="chCapture">Use Capturing</label>
- <div id="d1">d1
-  <div id="d2">d2
-      <div id="d3">d3
-          <div id="d4">d4</div>
-      </div>
-  </div>
- </div>
- <div id="divInfo"></div>
+ <div id="d1">d1
+  <div id="d2">d2
+      <div id="d3">d3
+          <div id="d4">d4</div>
+      </div>
+  </div>
+ </div>
+ <div id="divInfo"></div>
 ```
 
 ### CSS
@@ -195,8 +195,8 @@ function Clear() {
 
 | Spécification                                                                                        | Statut                           | Commentaire         |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#dom-event-eventphase", "Event.eventPhase")}}     | {{Spec2("DOM WHATWG")}} |                     |
-| {{SpecName("DOM4", "#dom-event-eventphase", "Event.eventPhase")}}             | {{Spec2("DOM4")}}         |                     |
+| {{SpecName("DOM WHATWG", "#dom-event-eventphase", "Event.eventPhase")}}     | {{Spec2("DOM WHATWG")}} |                     |
+| {{SpecName("DOM4", "#dom-event-eventphase", "Event.eventPhase")}}             | {{Spec2("DOM4")}}         |                     |
 | {{SpecName("DOM2 Events", "#Events-Event-eventPhase", "Event.eventPhase")}} | {{Spec2("DOM2 Events")}} | Première définition |
 
 ## Compatibilité des navigateurs

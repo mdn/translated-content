@@ -19,10 +19,10 @@ translation_of: Web/API/HTMLElement
 | {{domxref("element.accessKey", "accessKey")}} {{HTMLVersionInline(5)}}             | {{domxref("DOMString")}}     | La touche de navigation clavier assignée à l'élément.                          |
 | {{domxref("element.accessKeyLabel", "accessKeyLabel")}} {{HTMLVersionInline(5)}} | {{domxref("DOMString")}}     | Une chaîne de caractères définissant la touche de navigation clavier assignée. |
 | {{domxref("element.className", "className")}}                                              | {{domxref("DOMString")}}     | Le nom de la classe [CSS](/fr/docs/CSS) définie pour l'élément.                |
-| {{domxref("element.dataset", "dataset")}} {{HTMLVersionInline(5)}}                 | {{domxref("DOMStringMap")}} | Un tableau associatif des attributs  `data-*` de l'élément.                    |
+| {{domxref("element.dataset", "dataset")}} {{HTMLVersionInline(5)}}                 | {{domxref("DOMStringMap")}} | Un tableau associatif des attributs  `data-*` de l'élément.                    |
 | {{domxref("element.dir", "dir")}}                                                              | {{domxref("DOMString")}}     | L'attribut `dir` de l'élément.                                                 |
 | {{domxref("element.id", "id")}}                                                                  | {{domxref("DOMString")}}     | L'ID de l'élément.                                                             |
-| {{domxref("element.lang", "lang")}}                                                          | {{domxref("DOMString")}}     | L'attribut  `lang` de l'élément.                                               |
+| {{domxref("element.lang", "lang")}}                                                          | {{domxref("DOMString")}}     | L'attribut  `lang` de l'élément.                                               |
 | {{domxref("element.title", "title")}}                                                          | {{domxref("DOMString")}}     | L'attribut `title` de l'élément.                                               |
 
 ## Méthodes
@@ -37,7 +37,7 @@ translation_of: Web/API/HTMLElement
 
 | Spécification                                                                                    | Statut                           | Commentaires |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'elements.html#htmlelement', 'HTMLElement')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML WHATWG', 'elements.html#htmlelement', 'HTMLElement')}} | {{Spec2('HTML WHATWG')}} |              |
 
 ## Compatibilité des navigateurs
 

@@ -48,11 +48,11 @@ span:only-child {
 </div>
 
 <div>
-  <span>
+  <span>
     Ce span est l'un des deux
     enfants de son parent
   </span>
-  <span>
+  <span>
     Ce span est l'un des deux
     enfants de son parent
   </span>

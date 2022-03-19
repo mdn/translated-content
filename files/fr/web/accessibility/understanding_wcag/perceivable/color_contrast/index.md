@@ -101,7 +101,7 @@ div {
 }
 
 .mauvais {
-  background-color: #400064;
+  background-color: #400064;
 }
 ```
 

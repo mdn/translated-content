@@ -217,7 +217,7 @@ reportPerimeter(square1.length, reportList);
 <pre class="brush: js">import {default as randomSquare} from './modules/square.mjs';</pre>
 
 <div class="note">
-<p><strong>备注：</strong>重命名导出项的as语法在下面的{{anch("Renaming imports and exports")}}部分中进行了说明。</p>
+<p><strong>备注：</strong>重命名导出项的as语法在下面的<a href="#重命名导出与导入">重命名导出与导入</a>部分中进行了说明。</p>
 </div>
 
 <h2 id="避免命名冲突">避免命名冲突</h2>
@@ -410,7 +410,7 @@ import { Triangle } from './modules/triangle.mjs';</pre>
 
 <p>浏览器中可用的JavaScript模块功能的最新部分是动态模块加载。 这允许您仅在需要时动态加载模块，而不必预先加载所有模块。 这有一些明显的性能优势; 让我们继续阅读，看看它是如何工作的。</p>
 
-<p>这个新功能允许您将<code>import()</code>作为函数调用，将其作为参数传递给模块的路径。 它返回一个 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>，它用一个模块对象来实现（参见{{anch("Creating a module object")}}），让你可以访问该对象的导出，例如</p>
+<p>这个新功能允许您将<code>import()</code>作为函数调用，将其作为参数传递给模块的路径。 它返回一个 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>，它用一个模块对象来实现（参见<a href="#创建模块对象">创建模块对象</a>），让你可以访问该对象的导出，例如</p>
 
 <pre class="brush: js">import('/modules/myModule.mjs')
   .then((module) =&gt; {

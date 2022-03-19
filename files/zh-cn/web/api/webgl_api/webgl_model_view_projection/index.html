@@ -421,7 +421,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 <p><img alt="Filling the W component and creating some projection." src="https://mdn.mozillademos.org/files/11379/part4.png" style="height: 531px; width: 800px;"></p>
 
-<p>看到那个深蓝色的小三角形吗？那是添加到对象上的另一个面，因为形状的旋转导致了该角延伸到裁剪空间之外，从而导致该角被裁剪掉。有关如何使用更复杂的矩阵来帮助控制和防止裁剪的介绍，请参照下面的 {{anch("Perspective matrix")}}。</p>
+<p>看到那个深蓝色的小三角形吗？那是添加到对象上的另一个面，因为形状的旋转导致了该角延伸到裁剪空间之外，从而导致该角被裁剪掉。有关如何使用更复杂的矩阵来帮助控制和防止裁剪的介绍，请参照下面的 <a href="#perspective_matrix">Perspective matrix</a>。</p>
 
 <h3 id="练习_4">练习</h3>
 
@@ -506,7 +506,7 @@ var w = (2 * 0) + (3 * 0) + (4 * scaleFactor) + (1 * scaleFactor)
 };
 </pre>
 
-<p>尽管结果相同，但重要的步骤还是在顶点着色器中。与其直接修改顶点，不如将其乘以一个附加的 <strong>{{anch("Projection matrix", "projection matrix")}}</strong>，该矩阵将3D点投影到2D绘图表面上：</p>
+<p>尽管结果相同，但重要的步骤还是在顶点着色器中。与其直接修改顶点，不如将其乘以一个附加的 <strong><a href="#projection_matrix">projection matrix</a></strong>，该矩阵将3D点投影到2D绘图表面上：</p>
 
 <pre class="brush: glsl">// 确保以相反的顺序读取转换矩阵
 gl_Position = projection * model * vec4(position, 1.0);

@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Object/toLocaleString
 ---
 {{JSRef}}
 
-La méthode **`toLocaleString()`** renvoie une chaine de caractères représentant l'objet. Cette méthode est destinée à être surchargée par les objets dérivés à des fins spécifiques pour prendre en compte les locales.
+La méthode **`toLocaleString()`** renvoie une chaine de caractères représentant l'objet. Cette méthode est destinée à être surchargée par les objets dérivés à des fins spécifiques pour prendre en compte les locales.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
 
@@ -25,9 +25,9 @@ Une chaîne de caractères qui représente l'objet en tenant compte de la locale
 
 ## Description
 
-La méthode `toLocaleString` renvoie le résultat de l'appel à la méthode {{jsxref("Object.toString", "toString()")}}.
+La méthode `toLocaleString` renvoie le résultat de l'appel à la méthode {{jsxref("Object.toString", "toString()")}}.
 
-Cette fonction est destinée à fournir aux objets une méthode générique `toLocaleString`, même si tous ne peuvent l'utiliser. Voir la liste ci-dessous.
+Cette fonction est destinée à fournir aux objets une méthode générique `toLocaleString`, même si tous ne peuvent l'utiliser. Voir la liste ci-dessous.
 
 ### Objets surchargeant la méthode toLocaleString
 
@@ -40,9 +40,9 @@ Cette fonction est destinée à fournir aux objets une méthode générique `to
 | Spécification                                                                                                                        | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.2.4.3', 'Object.prototype.toLocaleString')}}                                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.2.4.3', 'Object.prototype.toLocaleString')}}                                     | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

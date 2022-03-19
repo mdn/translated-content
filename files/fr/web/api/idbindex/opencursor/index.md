@@ -120,7 +120,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                                                                                                    | État                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-openCursor-IDBRequest-any-range-IDBCursorDirection-direction', 'openCursor()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

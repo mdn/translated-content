@@ -60,7 +60,7 @@ class MonTableauTypé extends Uint8Array {
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

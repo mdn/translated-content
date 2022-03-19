@@ -40,11 +40,11 @@ Une mise en page à colonnes multiples est une méthode de disposition du conten
 
 ## Un exemple élémentaire
 
-Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes, souvent nommée  « *multicol* ». Vous pourrez effectuer le suivi de cet article en  [téléchargeant le fichier de depart multicol](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) et en ajoutant la CSS aux emplacements appropriés. En fin de section, vous verrez un exemple en direct de ce à quoi le code final peut ressembler.
+Nous allons maintenant explorer la disposition du contenu sur plusieurs colonnes, souvent nommée  «&nbsp;*multicol* ». Vous pourrez effectuer le suivi de cet article en  [téléchargeant le fichier de depart multicol](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) et en ajoutant la CSS aux emplacements appropriés. En fin de section, vous verrez un exemple en direct de ce à quoi le code final peut ressembler.
 
-Notre point de départ contient un HTML très simple ; une enveloppe de la classe `container` dans laquelle nous avons placé un en‑tête et quelques paragraphes.
+Notre point de départ contient un HTML très simple&nbsp;; une enveloppe de la classe `container` dans laquelle nous avons placé un en‑tête et quelques paragraphes.
 
-L'élément {{htmlelement("div")}} de la classe `container` sera notre conteneur multi‑colonnes. Nous basculons dans une disposition _multicol_ en utilisant l'une des deux propriétés {{cssxref("column-count")}} ou {{cssxref("column-width")}}. La propriété `column-count` crée autant de colonnes que la valeur indiquée, donc si vous ajoutez la CSS suivante et actalisez la page, vous obtiendrez une disposition sur trois colonnes :
+L'élément {{htmlelement("div")}} de la classe `container` sera notre conteneur multi‑colonnes. Nous basculons dans une disposition _multicol_ en utilisant l'une des deux propriétés {{cssxref("column-count")}} ou {{cssxref("column-width")}}. La propriété `column-count` crée autant de colonnes que la valeur indiquée, donc si vous ajoutez la CSS suivante et actalisez la page, vous obtiendrez une disposition sur trois colonnes&nbsp;:
 
 ```css
 .container {
@@ -125,21 +125,21 @@ body {
 
 ## Style des colonnes
 
-Les colonnes créées avec _multicol_ ne peuvent pas être stylisées individuellement. Il n'y a aucun moyen de faire en sorte qu'une colonne soit plus large qu'une autre, ou de modifier l'arrière‑plan ou la couleur du texte d'une seule colonne. Il y a deux moyens de modifier l'affichage des colonnes :
+Les colonnes créées avec _multicol_ ne peuvent pas être stylisées individuellement. Il n'y a aucun moyen de faire en sorte qu'une colonne soit plus large qu'une autre, ou de modifier l'arrière‑plan ou la couleur du texte d'une seule colonne. Il y a deux moyens de modifier l'affichage des colonnes&nbsp;:
 
 - modifier la taille de l'espacement entre colonnes avec {{cssxref("column-gap")}}.
 - ajouter une règle entre colonnes avec {{cssxref("column-rule")}}.
 
-En utilisant l'exemple ci‑dessus, changeons la taille de l'espacement entre colonnes avec la propriété `column-gap` :
+En utilisant l'exemple ci‑dessus, changeons la taille de l'espacement entre colonnes avec la propriété `column-gap`&nbsp;:
 
 ```css
 .container {
-  column-width: 200px;
+  column-width: 200px;
   column-gap: 20px;
 }
 ```
 
-Vous pouvez tester diverses valeurs — la propriété accepte n'importe quelle unité de longueur. Ajoutons maintenant une règle entre colonnes avec `column-rule`. De la même manière qu'avec la propriété {{cssxref("border")}} rencontrée dans les articles précédents, `column-rule`, forme abrégée de {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}} et  {{cssxref("column-rule-width")}}, accepte les mêmes valeurs.
+Vous pouvez tester diverses valeurs — la propriété accepte n'importe quelle unité de longueur. Ajoutons maintenant une règle entre colonnes avec `column-rule`. De la même manière qu'avec la propriété {{cssxref("border")}} rencontrée dans les articles précédents, `column-rule`, forme abrégée de {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}} et  {{cssxref("column-rule-width")}}, accepte les mêmes valeurs.
 
 ```css
 .container {
@@ -184,7 +184,7 @@ body {
 
 {{ EmbedLiveSample('Style_des_colonnes', '100%', 400) }}
 
-Notez que  la règle ne prend pas de largeur en soi. Elle se place dans l'espace créé avec  `column-gap`. Pour faire un peu plus d'espace d'un côté ou de l'autre de la règle, vous devez augmenter la taille de l'espace entre les colonnes.
+Notez que la règle ne prend pas de largeur en soi. Elle se place dans l'espace créé avec  `column-gap`. Pour faire un peu plus d'espace d'un côté ou de l'autre de la règle, vous devez augmenter la taille de l'espace entre les colonnes.
 
 ## Colonnes et coupures
 

@@ -56,7 +56,7 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
 - {{domxref("XMLHttpRequest.timeout")}}
   - : Un entier `unsigned long` qui représente le nombre de millisecondes qu'une requête peut prendre avant d'être terminée automatiquement.
 - {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) appelé lorsque la requête a expiré. {{gecko_minversion_inline("12.0")}}
+  - : Un gestionnaire d'évènement ({{event("Event_handlers", "event handler")}}) appelé lorsque la requête a expiré.
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : Un objet {{domxref("XMLHttpRequestUpload")}} qui représente le processus d'_upload_.
 - {{domxref("XMLHttpRequest.withCredentials")}}
@@ -72,7 +72,7 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
   - : Un booléen. S'il est vrai, la politique d'origine unique ne sera pas vérifiée pour la requête.
 - {{domxref("XMLHttpRequest.mozBackgroundRequest")}}
   - : Un booléen qui indique si l'objet représente une requête de service en arrière-plan.
-- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}}{{gecko_minversion_inline("2.0")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}
+- {{domxref("XMLHttpRequest.mozResponseArrayBuffer")}} {{obsolete_inline("6")}} {{ReadOnlyInline}}
   - : Un objet {{jsxref("ArrayBuffer")}} qui est la réponse à la requête sous la forme d'un tableau typé JavaScript.
 - {{domxref("XMLHttpRequest.multipart")}}{{obsolete_inline("22")}}
   - : **Cette fonctionnalité spécifique à Gecko a été retirée avec Firefox/Gecko 22.** Veuillez utiliser [les évènements serveurs](/fr/docs/Web/API/Server-sent_events) ou [les web sockets](/fr/docs/Web/API/WebSockets_API) ou encore la propriété `responseText` des évènements de progression.
@@ -83,7 +83,7 @@ Le gestionnaire `onreadystatechange`, comme propriété des instances `XMLHttpRe
 
 D'autres gestionnaires d'évènements ont également été implémentés dans différents navigateurs (`onload`, `onerror`, `onprogress`, etc.). Voir le guide [Manipuler XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest).
 
-La plupart des navigateurs récents gère également les évènements via la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} (en plus des méthodes  `on*`).
+La plupart des navigateurs récents gère également les évènements via la méthode {{domxref("EventTarget.addEventListener", "addEventListener()")}} (en plus des méthodes  `on*`).
 
 ## Méthodes
 

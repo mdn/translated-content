@@ -11,7 +11,7 @@ original_slug: Web/CSS/Sélecteurs_descendant
 ---
 {{CSSRef("Selectors")}}
 
-Le **combinateur de descendance**, représenté par un blanc (ou plusieurs blancs à la suite) permet de combiner deux sélecteurs  (sous la forme `sélecteur₁ sélecteur₂`) afin de cibler les éléments qui correspondent au second sélecteur uniquement si ceux-ci ont un élément ancêtre qui correspond au premier sélecteur. Les sélecteurs qui utilisent ce combinateur sont souvent appelés des sélecteurs de descendants.
+Le **combinateur de descendance**, représenté par un blanc (ou plusieurs blancs à la suite) permet de combiner deux sélecteurs  (sous la forme `sélecteur₁ sélecteur₂`) afin de cibler les éléments qui correspondent au second sélecteur uniquement si ceux-ci ont un élément ancêtre qui correspond au premier sélecteur. Les sélecteurs qui utilisent ce combinateur sont souvent appelés des sélecteurs de descendants.
 
 ```css
 /* Les éléments <li> qui sont des descendants */
@@ -70,9 +70,9 @@ li li {
 
 | Spécification                                                                                                    | État                                 | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#descendant-combinators", "descendant combinator")}}     | {{Spec2("CSS4 Selectors")}} |                      |
-| {{SpecName('CSS3 Selectors', '#descendant-combinators', 'descendant combinator')}}     | {{Spec2('CSS3 Selectors')}} |                      |
-| {{SpecName('CSS2.1', 'selector.html#descendant-selectors', 'descendant selectors')}} | {{Spec2('CSS2.1')}}             |                      |
+| {{SpecName("CSS4 Selectors", "#descendant-combinators", "descendant combinator")}}     | {{Spec2("CSS4 Selectors")}} |                      |
+| {{SpecName('CSS3 Selectors', '#descendant-combinators', 'descendant combinator')}}     | {{Spec2('CSS3 Selectors')}} |                      |
+| {{SpecName('CSS2.1', 'selector.html#descendant-selectors', 'descendant selectors')}} | {{Spec2('CSS2.1')}}             |                      |
 | {{SpecName('CSS1', '#contextual-selectors', 'contextual selectors')}}                     | {{Spec2('CSS1')}}             | Définition initiale. |
 
 ## Compatibilité des navigateurs

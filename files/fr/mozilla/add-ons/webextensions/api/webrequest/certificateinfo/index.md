@@ -14,9 +14,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 ---
 {{AddonSidebar()}}
 
-Un objet décrivant un seul [certificat X.509](https://tools.ietf.org/html/rfc5280).
+Un objet décrivant un seul [certificat X.509](https://tools.ietf.org/html/rfc5280).
 
-L'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné par l'objet {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API inclut une propriété de  `certificats` qui est un tableau de ces objets.
+L'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné par l'objet {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API inclut une propriété de  `certificats` qui est un tableau de ces objets.
 
 ## Type
 

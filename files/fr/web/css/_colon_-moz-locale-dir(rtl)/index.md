@@ -10,7 +10,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-locale-dir(rtl)
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9.2")}}
+{{Non-standard_header}}{{CSSRef}}
 
 La [pseudo-classe CSS](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-locale-dir(rtl)`** correspond à un élément si l'interface utilisateur est affichée de droite à gauche. Elle est déterminée par la préférence `intl.uidirection.`_`locale`_ (où _`locale`_ est la langue courante) qui est fixée à `"rtl"`.
 

@@ -59,8 +59,8 @@ new RegExp('\n').toString() === "/\\n/"; // true à partir d'ES5
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.1.                                                                                        |
 | {{SpecName('ES5.1', '#sec-15.9.5.2', 'RegExp.prototype.toString')}}                             | {{Spec2('ES5.1')}}     | `source` renvoie désormais "(?:)" (et non "") pour les expressions vides. La définition du comportement pour les échappements a été ajoutée. |
-| {{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                                                                                                              |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                                                              |
+| {{SpecName('ES6', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                                                                                                              |
+| {{SpecName('ESDraft', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                                                              |
 
 ## Compatibilité des navigateurs
 

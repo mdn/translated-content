@@ -30,7 +30,7 @@ Un `BaseAudioContext` peut être une cible d'événements, il implémente donc l
 - {{domxref("BaseAudioContext.listener")}} {{readonlyInline}}
   - : Renvoie l'objet {{domxref("AudioListener")}}, utilisé pour la spatialisation 3D.
 - {{domxref("BaseAudioContext.sampleRate")}} {{readonlyInline}}
-  - : Renvoie un float représentant la fréquence d'échantillonnage (en échantillons par seconde) utilisée par tous les nœuds dans ce contexte. La fréquence d'échantillonnage d'un {{domxref("AudioContext")}} ne peut pas être modifiée.
+  - : Renvoie un float représentant la fréquence d'échantillonnage (en échantillons par seconde) utilisée par tous les nœuds dans ce contexte. La fréquence d'échantillonnage d'un {{domxref("AudioContext")}} ne peut pas être modifiée.
 - {{domxref("BaseAudioContext.state")}} {{readonlyInline}}
   - : Renvoie l'état actuel de l'`AudioContext`.
 
@@ -80,7 +80,7 @@ _Implémente également les méthodes de l'interface_ {{domxref("EventTarget")}}
 - {{domxref("BaseAudioContext.createWaveShaper()")}}
   - : Crée un {{domxref("WaveShaperNode")}}, qui est utilisé pour implémenter des effets de distorsion non linéaires.
 - {{domxref("BaseAudioContext.decodeAudioData()")}}
-  - : Décode de manière asynchrone les données de fichiers audio contenues dans un {{domxref("ArrayBuffer")}}. Dans ce cas, le ArrayBuffer est généralement chargé à partir de l'attribut `response` d'un {{domxref("XMLHttpRequest")}} après avoir défini le `responseType` sur `arraybuffer`. Cette méthode ne foncionne que sur des fichiers complets et non sur des fragments de fichiers audio.
+  - : Décode de manière asynchrone les données de fichiers audio contenues dans un {{domxref("ArrayBuffer")}}. Dans ce cas, le ArrayBuffer est généralement chargé à partir de l'attribut `response` d'un {{domxref("XMLHttpRequest")}} après avoir défini le `responseType` sur `arraybuffer`. Cette méthode ne foncionne que sur des fichiers complets et non sur des fragments de fichiers audio.
 - {{domxref("BaseAudioContext.resume()")}}
   - : Reprend la progression du temps dans un contexte audio précédemment suspendu / mis en pause.
 

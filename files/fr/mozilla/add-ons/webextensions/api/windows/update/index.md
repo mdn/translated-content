@@ -55,7 +55,7 @@ var updating = browser.windows.update(
 
 ### Valeur de retour
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}}  contenant les détails de la fenêtre mise à jour. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}}  contenant les détails de la fenêtre mise à jour. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité du navigateur
 

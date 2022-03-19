@@ -52,7 +52,7 @@ Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validatio
 
 ### {{htmlattrdef("pattern")}}
 
-L'attribut `pattern` est une expression rationnelle que doit respecter la valeur ({{htmlattrxref("value")}}) du champ afin d'être [valide](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Cette expression rationnelle doit être une expression rationnelle valide pour JavaScript (telle qu'utilisée par {{jsxref("RegExp")}} et telle que documentée dans [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_régulières)). Le marqueur `'u'` est fourni par le navigateur lors de la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode plutôt que comme des caractères ASCII. Aucune barre oblique (/) ne devrait être utilisée autour du motif.
+L'attribut `pattern` est une expression rationnelle que doit respecter la valeur ({{htmlattrxref("value")}}) du champ afin d'être [valide](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation). Cette expression rationnelle doit être une expression rationnelle valide pour JavaScript (telle qu'utilisée par {{jsxref("RegExp")}} et telle que documentée dans [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_régulières)). Le marqueur `'u'` est fourni par le navigateur lors de la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode plutôt que comme des caractères ASCII. Aucune barre oblique (/) ne devrait être utilisée autour du motif.
 
 Si l'expression rationnelle est invalide ou que cet attribut n'est pas défini, l'attribut est ignoré.
 
@@ -64,9 +64,9 @@ Voir [la section sur l'utilisation de cet attribut ci-après](#format) pour plus
 
 L'attribut `placeholder` est une chaîne de caractères fournissant une courte indication à l'utilisateur quant à l'information attendue dans le champ. Cet attribut devrait être un mot ou une phrase courte qui illustre le type de donnée attendu plutôt qu'un message explicatif. Le texte ne doit pas contenir de saut à la ligne.
 
-Si le contenu du contrôle respecte une directionnalité donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible  d'utiliser l'algorithme de formatage bidirectionnel Unicode (cf. {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}}).
+Si le contenu du contrôle respecte une directionnalité donnée ({{Glossary("LTR")}} ou {{Glossary("RTL")}}) et que le texte indicatif doit être présenté dans l'autre sens, il est possible d'utiliser l'algorithme de formatage bidirectionnel Unicode (cf. {{SectionOnPage("/en-US/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm", "Overriding BiDi using Unicode control characters")}}).
 
-> **Note :** On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder` car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir  {{SectionOnPage("/fr/docs/Web/HTML/Element/input", "Libellés et textes indicatifs")}} pour plus d'informations.
+> **Note :** On évitera, tant que faire se peut, d'utiliser l'attribut `placeholder` car il n'est pas sémantiquement très utile pour expliquer le formulaire et car il peut causer certains problèmes avec le contenu. Voir  {{SectionOnPage("/fr/docs/Web/HTML/Element/input", "Libellés et textes indicatifs")}} pour plus d'informations.
 
 ### {{htmlattrdef("readonly")}}
 
@@ -360,7 +360,7 @@ En plus des exemples précédents, vous pouvez consulter les articles [Un premie
         {{htmlattrxref("autocomplete", "input")}},
         {{htmlattrxref("list", "input")}},
         {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("required", "input")}}, {{htmlattrxref("readonly", "input")}},
+        {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("required", "input")}}, {{htmlattrxref("readonly", "input")}},
         {{htmlattrxref("size", "input")}}.
       </td>
     </tr>

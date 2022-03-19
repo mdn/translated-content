@@ -19,7 +19,7 @@ Lorsqu'il n'y a pas de valeur pour `grid-column-end`, si `grid-column-start` est
 
 Lorsqu'il n'y a pas de valeur pour `grid-row-end`, si `grid-row-start` est un identifiant de zone, `grid-row-end` sera défini avec cet identifiant, sinon il sera défini avec `auto`.
 
-Lorsqu'il n'y  a pas de valeur pour `grid-column-start`, si `grid-row-start` est un identifiant de zone, les quatres propriétés seront définies avec cette valeur. Sinon, elles vaudront `auto`.
+Lorsqu'il n'y a pas de valeur pour `grid-column-start`, si `grid-row-start` est un identifiant de zone, les quatres propriétés seront définies avec cette valeur. Sinon, elles vaudront `auto`.
 
 La propriété `grid-area` peut également prendre comme valeur un identifiant personnalisé ({{cssxref("&lt;custom-ident&gt;")}}) qui pourra être utilisé comme nom pour une zone de la grille placée grâce à la propriété {{cssxref("grid-template-areas")}}.
 

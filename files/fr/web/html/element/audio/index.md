@@ -231,7 +231,7 @@ En plus des dialogues parlés, les sous-titres et les transcriptions doivent ég
     00:00:52 --> 00:01:02
     [sur un ton énervé] Vous rendez la poulette ou c'est plus vous qui donnez à manger aux lapins ?
 
-Une autre bonne pratique consiste à fournir du contenu comme un lien de téléchargement comme méthode alternative pour les personnes qui utilisent un navigateur qui ne prend pas en charge `<audio>` :
+Une autre bonne pratique consiste à fournir du contenu comme un lien de téléchargement comme méthode alternative pour les personnes qui utilisent un navigateur qui ne prend pas en charge `<audio>`&nbsp;:
 
 ```html
 <audio controls>

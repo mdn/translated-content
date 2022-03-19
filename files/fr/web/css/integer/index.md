@@ -61,6 +61,6 @@ _5          Les caractères spéciaux ne sont pas acceptés
 
 {{Compat("css.types.integer")}}
 
-##  Voir aussi
+##  Voir aussi
 
 - {{cssxref("&lt;number&gt;")}}

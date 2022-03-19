@@ -8,7 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-handler-disabled
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9.1")}}
+{{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-handler-disabled`** permet de cibler un élément qui ne peut pas être affiché car le gestionnaire associé a été désactivé par l'utilisateur.
 

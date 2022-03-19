@@ -28,57 +28,51 @@ Un tableau {{domxref("Uint8Array")}}.
 
 ## Exemple
 
-L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
+L'exemple suivant montre comment créer simplement un  `AnalyserNode` avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/)  (et en particulier [app.js lignes 128–205](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 
 ```js
-var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
-var analyseur = contexteAudio.createAnalyser();
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const analyser = audioCtx.createAnalyser();
 
   ...
 
-analyseur.fftSize = 2048;
-var tailleMemoireTampon = analyseur.frequencyBinCount;
-var tableauDonnees = new Uint8Array(tailleMemoireTampon);
-analyseur.getByteTimeDomainData(tableauDonnees);
+analyser.fftSize = 2048;
+const bufferLength = analyser.fftSize;
+const dataArray = new Uint8Array(bufferLength);
+analyser.getByteTimeDomainData(dataArray);
 
-// dessine un oscilloscope de la source audio
+// dessine un oscilloscope pour la source audio courante
+function draw() {
+  drawVisual = requestAnimationFrame(draw);
+  analyser.getByteTimeDomainData(dataArray);
 
-function dessiner() {
+  canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+  canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 
-      dessin = requestAnimationFrame(dessiner);
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
 
-      analyseur.getByteTimeDomainData(tableauDonnees);
+  const sliceWidth = WIDTH * 1.0 / bufferLength;
+  let x = 0;
 
-      contexteCanvas.fillStyle = 'rgb(200, 200, 200)';
-      contexteCanvas.fillRect(0, 0, LARGEUR, HAUTEUR);
+  canvasCtx.beginPath();
+  for(var i = 0; i < bufferLength; i++) {
+    const v = dataArray[i]/128.0;
+    const y = v * HEIGHT/2;
 
-      contexteCanvas.lineWidth = 2;
-      contexteCanvas.strokeStyle = 'rgb(0, 0, 0)';
+    if(i === 0)
+      canvasCtx.moveTo(x, y);
+    else
+      canvasCtx.lineTo(x, y);
 
-      contexteCanvas.beginPath();
+    x += sliceWidth;
+  }
 
-      var largeurBarre = WIDTH * 1.0 / tailleMemoireTampon;
-      var x = 0;
+  canvasCtx.lineTo(WIDTH, HEIGHT/2);
+  canvasCtx.stroke();
+};
 
-      for(var i = 0; i < tailleMemoireTampon; i++) {
-
-        var v = tableauDonnees[i] / 128.0;
-        var y = v * HAUTEUR/2;
-
-        if(i === 0) {
-          contexteCanvas.moveTo(x, y);
-        } else {
-          contexteCanvas.lineTo(x, y);
-        }
-
-        x += largeurBarre;
-      }
-
-      contexteCanvas.lineTo(canvas.width, canvas.height/2);
-      contexteCanvas.stroke();
-    };
-
-    dessiner();
+draw();
 ```
 
 ## Paramètres
@@ -90,7 +84,7 @@ function dessiner() {
 
 | Spécification                                                                                                                                                        | Statut                               | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AnalyserNode-getByteTimeDomainData-void-Uint8Array-array', 'getByteTimeDomainData()')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AnalyserNode-getByteTimeDomainData-void-Uint8Array-array', 'getByteTimeDomainData()')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

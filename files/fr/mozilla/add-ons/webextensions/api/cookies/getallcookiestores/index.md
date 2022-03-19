@@ -52,7 +52,7 @@ var getting = browser.cookies.getAllCookieStores();
 getting.then(logStores);
 ```
 
-Chaque membre du tableau `cookieStores` est un objet  {{WebExtAPIRef("cookies.CookieStore")}}.
+Chaque membre du tableau `cookieStores` est un objet  {{WebExtAPIRef("cookies.CookieStore")}}.
 
 {{WebExtExamples}}
 

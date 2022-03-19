@@ -11,9 +11,9 @@ translation_of: Web/API/Document/querySelectorAll
 ---
 {{APIRef("DOM")}}
 
-La méthode **`querySelectorAll()`**  de {{domxref("Element")}} renvoie une {{domxref("NodeList")}} statique représentant une liste des éléments du document qui correspondent au groupe de sélecteurs spécifiés.
+La méthode **`querySelectorAll()`**  de {{domxref("Element")}} renvoie une {{domxref("NodeList")}} statique représentant une liste des éléments du document qui correspondent au groupe de sélecteurs spécifiés.
 
-> **Note :** Cette méthode est implémentée à partir de {{domxref("ParentNode")}}, méthode  du mixin {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} .
+> **Note :** Cette méthode est implémentée à partir de {{domxref("ParentNode")}}, méthode du mixin {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} .
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ elementList = parentNode.querySelectorAll(selectors);
 ### Paramètres
 
 - `selecteurs`
-  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs [sélecteurs CSS](/fr/docs/Web/CSS/CSS_Selectors) ; s'il n'y en a pas, une exception  `SyntaxError` est lancée. Voir [localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs en vue d'identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés, séparés par une virgule.
+  - : une {{domxref("DOMString")}} (_chaîne de caractères_) qui contient un ou plusieurs [sélecteurs CSS](/fr/docs/Web/CSS/CSS_Selectors) ; s'il n'y en a pas, une exception  `SyntaxError` est lancée. Voir [localisation des éléments DOM avec les sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) pour plus d'informations sur l'utilisation des sélecteurs en vue d'identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés, séparés par une virgule.
 
 > **Note :** Les caractères qui ne font pas partie de la syntaxe CSS standard doivent être échappés à l'aide d'une barre oblique inverse. Puisque JavaScript utilise également l'échappement en retour arrière, un soin particulier doit être pris lors de l'écriture de littéraux de chaîne utilisant ces caractères. Voir [Échapper des caractères spéciaux](/fr/docs/Web/API/Document/querySelector#échapper_des_caractères_spéciaux) pour plus d'informations.
 
@@ -32,7 +32,7 @@ elementList = parentNode.querySelectorAll(selectors);
 
 Une {{domxref("NodeList")}} statique contenant un objet {{domxref("Element")}} pour chaque élément qui correspond à au-moins un des sélecteurs spécifiés ou une {{domxref("NodeList")}} vide si aucune correspondance n'est trouvée .
 
-> **Note :** Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste retournée sera toujours vide.
+> **Note :** Si les `selectors` spécifiés contiennent un [pseudo-element CSS](/fr/docs/Web/CSS/Pseudo-elements), la liste retournée sera toujours vide.
 
 ### Exceptions
 
@@ -41,13 +41,13 @@ Une {{domxref("NodeList")}} statique contenant un objet {{domxref("Element")}} p
 
 ## Exemples
 
-Pour obtenir une {{domxref("NodeList")}} (_liste de noeuds_) de tous les éléments {{HTMLElement("p")}}  dans le document :
+Pour obtenir une {{domxref("NodeList")}} (_liste de noeuds_) de tous les éléments {{HTMLElement("p")}}  dans le document :
 
 ```js
 const matches = document.querySelectorAll("p");
 ```
 
-Cet exemple renvoie la liste de tous les éléments `div` du `document` dont l'attribut de classe a pour valeur "`note`" ou "`alert`" :
+Cet exemple renvoie la liste de tous les éléments `div` du `document` dont l'attribut de classe a pour valeur "`note`" ou "`alert`" :
 
 ```js
 const matches = document.querySelectorAll("div.note, div.alert");
@@ -89,7 +89,7 @@ highlightedItems.forEach(function(userItem) {
 
 ## Notes d'utilisation
 
-`querySelectorAll()` se comporte différemment des bibliothèques DOM JavaScript les plus courantes, ce qui peut entraîner des résultats inattendus.
+`querySelectorAll()` se comporte différemment des bibliothèques DOM JavaScript les plus courantes, ce qui peut entraîner des résultats inattendus.
 
 ### HTML
 
@@ -144,4 +144,4 @@ inner.length; // 0
 - {{domxref("document.querySelector")}}
 - {{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}
 - {{domxref("ParentNode.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}
-- [Extraits de code pour `querySelector`](/fr/docs/Code_snippets/QuerySelector)
+- [Extraits de code pour `querySelector`](/fr/docs/Code_snippets/QuerySelector)

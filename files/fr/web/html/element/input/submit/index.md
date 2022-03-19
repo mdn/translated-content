@@ -60,7 +60,7 @@ Une chaîne de caractères qui identifie la méthode d'encodage à utiliser pour
 - `application/x-www-form-urlencoded`
   - : Les informations sont envoyées sous la forme d'une chaîne de caractères ajoutée à l'URL en utilisant l'algorithme de {{jsxref("encodeURI", "encodeURI()")}}. **Cette valeur est la valeur par défaut.**
 - `multipart/form-data`
-  - : Cette valeur utilise l'API {{domxref("FormData")}} pour gérer les données et permet d'*uploader*des fichiers. Cet encodage _doit_ être utilisé s'il y a des éléments  {{HTMLElement("input")}} de {{htmlattrxref("type", "input")}} `"file"` ([`<input type="file">`](/fr/docs/Web/HTML/Element/input/file)).
+  - : Cette valeur utilise l'API {{domxref("FormData")}} pour gérer les données et permet d'*uploader*des fichiers. Cet encodage _doit_ être utilisé s'il y a des éléments  {{HTMLElement("input")}} de {{htmlattrxref("type", "input")}} `"file"` ([`<input type="file">`](/fr/docs/Web/HTML/Element/input/file)).
 - `text/plain`
   - : Les données sont envoyées comme texte simple. Cette valeur est généralement utile pour déboguer car elle permet de voir facilement les données envoyées.
 

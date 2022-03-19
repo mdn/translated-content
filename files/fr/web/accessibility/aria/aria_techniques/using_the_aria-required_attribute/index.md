@@ -18,7 +18,7 @@ L’attribut `aria-required` est utilisé pour indiquer que l’utilisateur doit
 
 ### Valeurs
 
-`true` ou `false` (Valeur par défaut : `false`)
+`true` ou `false` (Valeur par défaut&nbsp;: `false`)
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 
@@ -30,7 +30,7 @@ Remarquez que cet attribut ne changera pas automatiquement la présentation du c
 
 ### Exemples
 
-#### Exemple 1 : un formulaire simple
+#### Exemple 1&nbsp;: un formulaire simple
 
 ```html
 <form action="post">
@@ -49,12 +49,12 @@ Remarquez que cet attribut ne changera pas automatiquement la présentation du c
 
 ### Utilisé dans les rôles ARIA
 
-- Combobox ;
-- Gridcell ;
-- Listbox ;
-- Radiogroup ;
-- Spinbutton ;
-- [Textbox](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_textbox) ;
+- Combobox&nbsp;;
+- Gridcell&nbsp;;
+- Listbox&nbsp;;
+- Radiogroup&nbsp;;
+- Spinbutton&nbsp;;
+- [Textbox](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_textbox)&nbsp;;
 - Tree.
 
 ### Techniques ARIA connexes
@@ -63,6 +63,6 @@ Remarquez que cet attribut ne changera pas automatiquement la présentation du c
 
 ### Autres ressources
 
-- [Spécification WAI-ARIA pour `aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required) ;
-- [WAI-ARIA Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform) (Règles WAI-ARIA de création de formulaires) ;
+- [Spécification WAI-ARIA pour `aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required)&nbsp;;
+- [WAI-ARIA Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform) (Règles WAI-ARIA de création de formulaires)&nbsp;;
 - [Validation de condition](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) en {{ HTMLVersionInline("5") }}.

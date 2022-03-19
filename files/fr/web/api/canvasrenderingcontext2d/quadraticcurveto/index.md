@@ -98,7 +98,7 @@ contexte2D.stroke();
 
 | Spécification                                                                                                                                                        | Statut                           | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-quadraticcurveto", "CanvasRenderingContext2D.quadraticCurveTo")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

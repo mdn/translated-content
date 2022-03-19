@@ -26,7 +26,7 @@ Intl.DisplayNames.supportedLocalesOf(locales, options)
 ### 引数
 
 - `locales`
-  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} のページを参照してください。
+  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
 
   - : 以下のプロパティを持つオブジェクトです。

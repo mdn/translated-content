@@ -21,7 +21,7 @@ La méthode `insertAdjacentElement()` insère un noeud d'élément donné à une
 
 - position
 
-  - : Un objet {{domxref("DOMString")}} (_chaîne de caractères_) représentant la position par rapport à `targetElement` ; cela doit correspondre ( sans prendre en compte la casse ) à une des chaînes suivantes :
+  - : Un objet {{domxref("DOMString")}} (_chaîne de caractères_) représentant la position par rapport à `targetElement` ; cela doit correspondre ( sans prendre en compte la casse ) à une des chaînes suivantes :
 
     - `'beforebegin'` : Avant `targetElement` lui-même.
     - `'afterbegin'` : A l'intérieur de `targetElement`, avant son premier enfant.
@@ -76,7 +76,7 @@ afterBtn.addEventListener('click', function() {
 });
 ```
 
-Une démo de notre [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) est disponible sur Github ( avec le [code source](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) ). Nous avons un ensemble d'éléments {{htmlelement("div")}} dans un conteneur. Quand un élément reçoit un clic, il est sélectionné et vous pouvez appuyer sur les boutons _Insert before_ (_insérer avant_) et _Insert after_ (_insérer après_) pour insérer de nouveaux divs avant ou après l'élement sélectionné en utilisant `insertAdjacentElement()`.
+Une démo de notre [insertAdjacentElement.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html) est disponible sur Github ( avec le [code source](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html) ). Nous avons un ensemble d'éléments {{htmlelement("div")}} dans un conteneur. Quand un élément reçoit un clic, il est sélectionné et vous pouvez appuyer sur les boutons _Insert before_ (_insérer avant_) et _Insert after_ (_insérer après_) pour insérer de nouveaux divs avant ou après l'élement sélectionné en utilisant `insertAdjacentElement()`.
 
 ## Spécification
 

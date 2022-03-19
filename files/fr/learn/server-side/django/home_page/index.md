@@ -67,8 +67,8 @@ La liste des URLs dont nous aurons besoin se résume à :
 
 - `catalog/` — Pour la page d'accueil.
 - `catalog/books/` — Pour la liste des livres.
-- `catalog/authors/` — Pour la liste des auteurs.
-- `catalog/book/<id>` — Pour disposer du détail de chacun des livres mis en prêt et identifié par identifiant `<id>` unique (le troisième livre enregistré est consultable dans le détail via l'URL `/catalog/book/3`).
+- `catalog/authors/` — Pour la liste des auteurs.
+- `catalog/book/<id>` — Pour disposer du détail de chacun des livres mis en prêt et identifié par identifiant `<id>` unique (le troisième livre enregistré est consultable dans le détail via l'URL `/catalog/book/3`).
 - `catalog/author/<id>` — De la même manière, le détail de chacun des auteurs enregistrés, identifié de la même manière par sa clé primaire *`<id>`*.
 
 Bien que les données dépendent du contenu de la base de données, les trois premières URLs retournent les résultats de requêtes sans informations supplémentaires ; c'est le cas de la page d'accueil qui donnera des décomptes de contenus et des pages sur la liste des livres ou des auteurs.
@@ -107,7 +107,7 @@ urlpatterns = [
 
 La fonction `path()` sert à définir les éléments suivants :
 
-- Un modèle d'URL qui, dans le cas présent, est une chaîne vide : `''`. Nous évoquerons ultérieurement les modèles d'URL plus en détail quand nous travaillerons les autres vues.
+- Un modèle d'URL qui, dans le cas présent, est une chaîne vide : `''`. Nous évoquerons ultérieurement les modèles d'URL plus en détail quand nous travaillerons les autres vues.
 - Une fonction de vue, ici `views.index`, qui sera sollicitée quand le modèle d'URL sera détecté et une fonction Python qui sera appelée pour traiter l'appel d'URL est présent dans le fichier **views.py** du module `catalog`.
 
 Le paramètre `name` utilisé dans la fonction `path()` permet aussi de définir un identifiant unique qui sert à lier les pages vers celle-ci au sein de l'application. Vous pouvez alors l'utiliser à l'envers en routant dynamiquement des pages en lien vers cette ressource :
@@ -185,7 +185,7 @@ Vous pouvez en faire l'expérience dès à présent, après avoir redémarré vo
 
 Django utilise un langage pour les gabarits qui permet de résoudre certains sujets liés aux pages HTML. En l'occurrence, dans le site web de la bibliothèque nous aurons des bandeaux de navigateur et autres codes d'en-tête à réutiliser. Dans une vision classique, il faudrait récrire dans chaque page le même code pour obtenir le même rendu. Si cela peut se concevoir pour quelques pages, ce procédé devient vite inopérant voire risqué avec un site dynamique complet.
 
-Le langage de gabarit de Django permet de définir un modèle de base puis de l'étendre ensuite. L'extrait de code ci-dessous vient du fichier de gabarit **base_generic.html**, vous constaterez qu'il s'y mélange du code HTML et des sections nommées contenu dans entre des marqueurs `block` et `endblock` qui peut contenir ou non des données.
+Le langage de gabarit de Django permet de définir un modèle de base puis de l'étendre ensuite. L'extrait de code ci-dessous vient du fichier de gabarit **base_generic.html**, vous constaterez qu'il s'y mélange du code HTML et des sections nommées contenu dans entre des marqueurs `block` et `endblock` qui peut contenir ou non des données.
 
 > **Note :** Les marqueurs de gabarits sont des fonctions que vous pouvez utiliser dans un modèle pour parcourir des listes, effectuer des opérations conditionnelles en fonction de la valeur d'une variable, etc. Outre les balises de modèle, la syntaxe de gabarit vous permet de référencer les variables qui sont transmises au modèle à partir de la vue et d'utiliser des filtres de gabarit pour mettre en forme les variables (par exemple, pour convertir une chaîne en minuscule).
 
@@ -208,7 +208,7 @@ Dans l'extrait ci-dessous vous avec trois sections nommées qui pourront être r
 </html>
 ```
 
-Lorsque l'on définit un gabarit pour une vue particulière, il convient de définir une base de gabarit et d'utiliser la balise `extends` dans une page complémentaire comme dans l'exemple ci-dessous. Ensuite, il est nécessaire de préciser les sections qui seront modifiées en utilisant les balises `block`/`endblock` qui définissent le début et la fin de section.
+Lorsque l'on définit un gabarit pour une vue particulière, il convient de définir une base de gabarit et d'utiliser la balise `extends` dans une page complémentaire comme dans l'exemple ci-dessous. Ensuite, il est nécessaire de préciser les sections qui seront modifiées en utilisant les balises `block`/`endblock` qui définissent le début et la fin de section.
 
 À titre indicatif, l'extrait ci-dessous présente la manière d'activer à l'aide de la balise `extends` le remplacement de la section `content`. La page HTML générée inclura la structure de la page définie plus haut et le code généré à la fois pour la section `title`, mais avec les éléments nouveaux, ci-dessous, pour la section `content`.
 
@@ -223,7 +223,7 @@ Lorsque l'on définit un gabarit pour une vue particulière, il convient de déf
 
 #### Le gabarit de base de la bibliothèque
 
-Nous allons nous appuyer sur le gabarit ci-dessous pour construire la page de base de la bibliothèque locale. Vous le constatez, il contient des éléments HTML et des blocs dédiés Django pour spécifier trois sections `title`, `sidebar`, et `content`. La section `title` contient un titre par défaut. De même la section `sidebar` contient un lien vers la liste des livres et des auteurs qui pourra être modifié ensuite.
+Nous allons nous appuyer sur le gabarit ci-dessous pour construire la page de base de la bibliothèque locale. Vous le constatez, il contient des éléments HTML et des blocs dédiés Django pour spécifier trois sections `title`, `sidebar`, et `content`. La section `title` contient un titre par défaut. De même la section `sidebar` contient un lien vers la liste des livres et des auteurs qui pourra être modifié ensuite.
 
 > **Note :** Il y a aussi deux balises supplémentaires : `url` et `load static`. Elles seront étudiées dans le chapitre suivant.
 
@@ -298,9 +298,9 @@ Maintenant créez le fichier HTML **_index.html_** dans le dossier **/locallibra
 
 Dans la section contenu dynamique, des emplacements réservés sont définis pour pouvoir y insérer le contenu de variable qui sont identifiées à l'intérieur de doubles accolades (ouvrantes et fermantes). Pour une meilleure visibilité ces emplacements et les variables nommées sont identifiées en caractères gras dans l'extrait de code ci-dessus.
 
-> **Note :** Vous pouvez constater simplement que les balises de gabarit (fonctions) et les balises de variables sont entre accolades ; double accolades pour une variable (`\{{ num_books }}`), et simple accolade avec le pourcentage (`{% extends "base_generic.html" %}`) pour les balises.
+> **Note :** Vous pouvez constater simplement que les balises de gabarit (fonctions) et les balises de variables sont entre accolades ; double accolades pour une variable (`\{{ num_books }}`), et simple accolade avec le pourcentage (`{% extends "base_generic.html" %}`) pour les balises.
 
-Gardez en mémoire que les variables utilisées dans les gabarits sont des clés d'un dictionnaire `context` transmis à la fonction `render()` de la vue (revenez à l'exemple plus haut, ou l'extrait ci-dessous). La fonction `render()` traitera le dictionnaire pour restituer une page HTML où les variables nommées auront été remplacées par leur valeur dans le dictionnaire.
+Gardez en mémoire que les variables utilisées dans les gabarits sont des clés d'un dictionnaire `context` transmis à la fonction `render()` de la vue (revenez à l'exemple plus haut, ou l'extrait ci-dessous). La fonction `render()` traitera le dictionnaire pour restituer une page HTML où les variables nommées auront été remplacées par leur valeur dans le dictionnaire.
 
 ```python
 context = {
@@ -352,21 +352,21 @@ Par défaut Django ne sait pas où sont vos gabarits, vous devez lui indiquer o�
 
 ```python
 TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
-        ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
-    },
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
 ]
 ```
 

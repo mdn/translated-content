@@ -42,7 +42,7 @@ Une action de page est une icône que votre extension ajoute dans la barre d'URL
 
 Votre extension peut éventuellement fournir une fenêtre contextuelle associée dont le contenu est spécifié en utilisant HTML, CSS et JavaScript.
 
-Si vous fournissez une fenêtre contextuelle, celle-ci est ouverte lorsque l'utilisateur clique sur l'icône, et l'exécution de votre JavaScript dans la fenêtre contextuelle peut gérer l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de fenêtre contextuelle, un clic événement est envoyé à votre extension aux [scripts d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages) quand l'utilisateur clique sur l'icône.
+Si vous fournissez une fenêtre contextuelle, celle-ci est ouverte lorsque l'utilisateur clique sur l'icône, et l'exécution de votre JavaScript dans la fenêtre contextuelle peut gérer l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de fenêtre contextuelle, un clic événement est envoyé à votre extension aux [scripts d'arrière plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_pages) quand l'utilisateur clique sur l'icône.
 
 Vous pouvez également créer et activer des actions de page par programme en utilisant l'[API pageAction](/fr/Add-ons/WebExtensions/API/pageAction).
 
@@ -195,7 +195,7 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
     <tr>
       <td><code>hide_matches</code></td>
       <td>
-        <code>Tableau de Match Pattern sauf </code> <code>&#x3C;all_urls></code>
+        <code>Tableau de Match Pattern sauf </code> <code>&#x3C;all_urls></code>
       </td>
       <td>
         <p>

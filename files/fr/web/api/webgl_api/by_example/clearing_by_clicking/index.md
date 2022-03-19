@@ -11,8 +11,6 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Clearing_by_clicking
 original_slug: Web/API/WebGL_API/By_example/Appliquer_une_couleur_à_la_souris
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Cr%C3%A9er_une_animation_color%C3%A9e")}}
 
 Dans cet article, on voit comment combiner les interactions de l'utilisateur et les opérations graphiques. Plus précisément, dans cet exemple, chaque clic de l'utilisateur déclenchera l'application d'une couleur aléatoire dans le contexte de rendu.
@@ -66,8 +64,8 @@ canvas {
 window.addEventListener("load", function setupWebGL (evt) {
   "use strict"
 
-  // On fait le ménage : le gestionnaire se supprime lui-
-  // même car il n'a besoin d'être exécuté qu'une fois.
+  // On fait le ménage : le gestionnaire se supprime lui-
+  // même car il n'a besoin d'être exécuté qu'une fois.
   window.removeEventListener(evt.type, setupWebGL, false);
 
   // On ajoute le même gestionnaire de clic sur le canevas
@@ -92,8 +90,8 @@ window.addEventListener("load", function setupWebGL (evt) {
         || canvas.getContext("experimental-webgl");
       if (!gl) {
         alert("Échec de la récupération du \n"
-          + "contexte WebGL. Votre navigateur peut ne pas \n"
-          + " supporter WebGL.");
+          + "contexte WebGL. Votre navigateur peut ne pas \n"
+          + " supporter WebGL.");
         return;
       }
       gl.viewport(0, 0,

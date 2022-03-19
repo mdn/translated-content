@@ -72,8 +72,8 @@ if ( !Date.prototype.toISOString ) {
 | Spécification                                                                                                        | État                         | Commentaires                                          |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.9.5.43', 'Date.prototype.toISOString')}}                         | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8. |
-| {{SpecName('ES6', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.toisostring', 'Date.prototype.toISOString')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

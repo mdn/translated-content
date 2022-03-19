@@ -4,7 +4,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 translation_of: Games/Tutorials/2D_breakout_game_Phaser
 original_slug: Games/Workflows/2D_breakout_game_Phaser
 ---
-{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Games")}}
+{{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
 
@@ -12,7 +12,7 @@ Dans ce tutoriel étape par étape, nous créons un simple jeu mobile **MDN Brea
 
 Chaque étape a des échantillons modifiables, disponibles pour jouer avec, de sorte que vous pouvez voir à quoi devraient ressembler les étapes intermédiaires. Vous apprendrez les bases de l'utilisation du framework Phaser pour implémenter les mécanismes fondamentaux du jeu comme le rendu et le mouvement des images, la détection des collisions, les mécanismes de contrôle, les fonctions d'aide spécifiques aux cadres, les animations et les interpolations, les états gagnants et perdants.
 
-Pour tirer le meilleur parti de cette série d'articles, vous devez déjà avoir des connaissances de base ou intermédiaires en [JavaScript](/fr/Learn/Getting_started_with_the_web/JavaScript_basics). Après avoir parcouru ce tutoriel, vous devriez être capable de construire vos propres jeux Web simples avec Phaser.
+Pour tirer le meilleur parti de cette série d'articles, vous devez déjà avoir des connaissances de base ou intermédiaires en [JavaScript](/fr/Learn/Getting_started_with_the_web/JavaScript_basics). Après avoir parcouru ce tutoriel, vous devriez être capable de construire vos propres jeux Web simples avec Phaser.
 
 ![](mdn-breakout-phaser.png)
 
@@ -37,11 +37,11 @@ Toutes les leçons - et les différentes versions du jeu [MDN Breakout game](htt
 15. [Boutons](/fr/docs/Games/Workflows/2D_Breakout_game_Phaser/Buttons)
 16. [Mode de jeu aléatoire](/fr/docs/Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay)
 
-Comme note sur les parcours d'apprentissage — en commençant par le JavaScript pur est le meilleur moyen d'acquérir une solide connaissance du développement de jeux en ligne. Si vous n'êtes pas déjà familier avec le développement de jeux en JavaScript pur, nous vous suggérons de travailler d'abord avec l'homologue de cette série, [2D breakout game using pure JavaScript](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript).
+Comme note sur les parcours d'apprentissage — en commençant par le JavaScript pur est le meilleur moyen d'acquérir une solide connaissance du développement de jeux en ligne. Si vous n'êtes pas déjà familier avec le développement de jeux en JavaScript pur, nous vous suggérons de travailler d'abord avec l'homologue de cette série, [2D breakout game using pure JavaScript](/fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript).
 
 Après cela, vous pouvez choisir n'importe quel framework que vous voulez et l'utiliser pour vos projets ; nous avons choisi Phaser car c'est un bon framework solide, avec un bon support et une communauté disponible, et un bon ensemble de plugins. Les cadres accélèrent le temps de développement et aident à prendre soin des parties ennuyeuses, vous permettant ainsi de vous concentrer sur les choses amusantes. Cependant, les frameworks ne sont pas toujours parfaits, donc si quelque chose d'inattendu se produit ou si vous voulez écrire des fonctionnalités que le framework ne fournit pas, vous aurez besoin de connaissances en JavaScript pur.
 
-> **Note :** Cette série d'articles peut être utilisée comme matériel pour des ateliers pratiques de développement de jeux. Vous pouvez également utiliser la fonction [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) basé sur ce tutoriel si vous voulez donner une conférence sur le développement d'un jeu avec Phaser.
+> **Note :** Cette série d'articles peut être utilisée comme matériel pour des ateliers pratiques de développement de jeux. Vous pouvez également utiliser la fonction [Gamedev Phaser Content Kit](https://github.com/end3r/Gamedev-Phaser-Content-Kit) basé sur ce tutoriel si vous voulez donner une conférence sur le développement d'un jeu avec Phaser.
 
 ## Prochaines étapes
 

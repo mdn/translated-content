@@ -28,7 +28,7 @@ Un entier, compris entre 0 et 23 qui indique l'heure de la date indiquée selon 
 
 ### Utiliser `getHours()`
 
-La seconde instruction ci-dessous assigne la valeur 23 à la variable `heure`, selon la valeur de l'objet {{jsxref("Date")}} `noel95`.
+La seconde instruction ci-dessous assigne la valeur 23 à la variable `heure`, selon la valeur de l'objet {{jsxref("Date")}} `noel95`.
 
 ```js
 var noel95 = new Date("December 25, 1995 23:15:00");
@@ -42,9 +42,9 @@ console.log(heure); //23
 | Spécification                                                                                                | État                         | Commentaires                                          |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.18', 'Date.prototype.getHours')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.gethours', 'Date.prototype.getHours')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.gethours', 'Date.prototype.getHours')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.9.5.18', 'Date.prototype.getHours')}}                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.gethours', 'Date.prototype.getHours')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.gethours', 'Date.prototype.getHours')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

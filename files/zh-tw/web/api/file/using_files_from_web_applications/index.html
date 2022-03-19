@@ -5,7 +5,7 @@ tags:
   - 待翻譯
 translation_of: Web/API/File/Using_files_from_web_applications
 ---
-<p> {{ gecko_minversion_header("1.9.2") }}</p>
+<p>{{ gecko_minversion_header("1.9.2") }}</p>
 
 <p>現在可以透過新增至HTML5 DOM的File API讓web內容要求使用者選取本地端的檔案後讀取被選取檔案中的內容。檔案的選取動作可以使用HTML的 <a href="/en/DOM/HTMLInputElement" title="en/DOM/Input"><code>input</code></a> 元素，或是用拖曳檔案（drag and drop）的方式來完成。</p>
 
@@ -228,7 +228,7 @@ function dragover(e) {
 &lt;/div&gt;
 </pre>
 
-<p>This establishes our file {{ HTMLElement("input") }} element, as well as a link that invokes the file picker, since we keep the file input hidden to prevent that less-than-attractive UI from being displayed. This is explained above in the section {{ anch("Using hidden file input elements using the click() method") }}, as is the <code>doClick()</code> method that invokes the file picker.</p>
+<p>This establishes our file {{ HTMLElement("input") }} element, as well as a link that invokes the file picker, since we keep the file input hidden to prevent that less-than-attractive UI from being displayed. This is explained above in the section <a href="#使用click()_方法隱藏檔案輸入元素">Using hidden file input elements using the click() method</a>, as is the <code>doClick()</code> method that invokes the file picker.</p>
 
 <p>The <code>handleFiles()</code> method follows:</p>
 
