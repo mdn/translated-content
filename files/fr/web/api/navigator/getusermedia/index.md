@@ -1,61 +1,54 @@
 ---
-title: NavigatorUserMedia.getUserMedia()
+title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
-tags:
-  - API
-  - Deprecated
-  - Media
-  - WebRTC
-  - getusermedia
 translation_of: Web/API/Navigator/getUserMedia
 original_slug: NavigatorUserMedia.getUserMedia
+browser-compat: api.Navigator.getUserMedia
 ---
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}
 
-La fonction obsolète **Navigator.getUserMedia()** demande à l'utilisateur la permission d'utiliser une entrée vidéo (ex: une webcam ou un écran partagé) ou audio (ex: un microphone) de l'utilisateur.
+La méthode obsolète **Navigator.getUserMedia()** demande à la personne la permission d'utiliser une entrée vidéo (par exemple une caméra ou un écran partagé) et une entrée audio (par exemple un microphone) comme source pour un flux média ([`MediaStream`](/fr/docs/Web/API/MediaStream)).
 
-Si ce dernier l'autorise, un {{domxref("MediaStream")}} est transmis au callback spécifié, il contient les pistes audio et/ou vidéo des entrées autorisées. Si l'utilisateur refuse l'accès, que le périphérique n'existe pas, ou qu'une erreur quelconque se produit, le callback d'erreur est alors exécuté avec comme paramètre un objet {{domxref("MediaStreamError")}}, il décrit l'erreur qui vient de se produire. Si l'utilisateur ne fait aucun choix, aucun callback n'est exécuté.
+Si la permission est accordée, un objet `MediaStream` dont les pistes proviennent de ces appareils est transmis à la fonction de rappel. Si la permission est refusée, que le périphérique n'existe pas, ou qu'une erreur quelconque se produit, c'est la fonction de rappel d'erreur qui est exécutée, avec comme paramètre un objet [`MediaStreamError`](/fr/docs/Web/API/MediaStreamError) qui décrit l'erreur qui vient de se produire. Si l'utilisatrice ou l'utilisateur ne fait aucun choix, aucune des deux fonctions de rappel n'est exécutée.
 
-> **Note :** Il s'agit d'une ancienne méthode, veuillez utiliser la méthode {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} à la place. Bien qu'elle ne soit pas techniquement obsolète, l'utilisation de callbacks l'est, les spécifications encouragent fortamment l'utilisation de la nouvelle version avec {{jsxref("promise", "promesses")}}.
+> **Note :** Il s'agit d'une méthode historique, veuillez utiliser la méthode [`navigator.mediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) à la place. Bien qu'elle ne soit pas techniquement obsolète, l'utilisation de fonctions de rappels pour celle-ci est indiqué comme obsolète dans la spécification qui encourage l'utilisation de la nouvelle version utilisant les promesses.
 
 ## Syntaxe
 
-    navigator.getUserMedia(constraints, successCallback, errorCallback);
+```js
+navigator.getUserMedia(constraints, successCallback, errorCallback);
+```
 
 ### Paramètres
 
-- constraints
-  - : Un objet {{domxref("MediaStreamConstraints")}} spécifiant les types de médias que vous souhaitez recevoir, ainsi que les contraintes pour chaque type de média. Pour plus de détails, voir la section [constraints](/fr/docs/Web/API/MediaDevices/getUserMedia#Syntaxe) de la méthode {{domxref("MediaDevices.getUserMedia()")}}, ainsi que l'article [Capacités, constraintes, et configurations](/fr/docs/Web/API/Media_Streams_API/Constraints).
-- successCallback
+- `constraints`
+  - : Un objet spécifiant les types de médias à récupérer, ainsi que les contraintes pour chaque type de média. Pour plus de détails, voir la section [contraintes](/fr/docs/Web/API/MediaDevices/getUserMedia#paramètres) de la méthode [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia), ainsi que l'article [Capacités, constraintes, et configurations](/fr/docs/Web/API/Media_Streams_API/Constraints).
+- `successCallback`
 
-  - : Une fonction qui est invoquée lorsque la demande d'accès aux entrées média est acceptée. Cette fonction est appellée avec un paramètre: l'objet {{domxref("MediaStream")}} qui contient les flux de médias. Votre callback peut assigner le stream l'objet que vous désirez (ex: un élément {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), comme dans l'exemple suivant:
+  - : Une fonction qui est invoquée lorsque la demande d'accès aux entrées média est acceptée. Cette fonction est appelée avec un paramètre&nbsp;: l'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) qui contient les flux de médias. La fonction de rappel peut alors affecter le flux à l'objet souhaité (par exemple un élément [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video)), comme dans l'exemple suivant&nbsp;:
 
     ```js
     function(stream) {
        var video = document.querySelector('video');
        video.src = window.URL.createObjectURL(stream);
        video.onloadedmetadata = function(e) {
-          // Do something with the video here.
+          // Faire quelque chose avec la vidéo.
        };
     }
     ```
 
-- errorCallback
-  - : Lorsque l'appel échoue, la fonction spécifiée dans `errorCallback` est appelée avec comme seul argument l'objet {{domxref("MediaStreamError")}}. Cet objet ressemble à {{domxref("DOMException")}}. Voir {anch("Erreurs")}} plus bas sur cette page pour voir quelle erreur peut arriver.
+- `errorCallback`
+  - : Lorsque l'appel échoue, la fonction indiquée par cet argument est appelée, avec comme seul paramètre l'objet [`MediaStreamError`](/fr/docs/Web/API/MediaStreamError). Cet objet ressemble à [`DOMException`](/fr/docs/Web/API/DOMException).
 
 ### Valeur de retour
 
-{{domxref("undefined")}}.
+[`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined).
 
-### Erreurs
-
-{{page("/fr/docs/Web/API/MediaDevices/getUserMedia", "Errors")}}
-
-## **Exemples**
+## Exemples
 
 ### Largeur et hauteur
 
-Voici un exemple de l'utilisation de `getUserMedia()`, avec les différentes mises en oeuvres pour couvrir les préfixes navigateurs. Remarquez que ceci est la façon dépréciée de procéder. Regardez les [exemples](/en-US/docs/Web/API/MediaDevices/getUserMedia#Frame_rate) sous la section {{domxref("MediaDevices.getUserMedia()")}} pour les exemples modernes.
+Voici un exemple d'utilisation de `getUserMedia()` qui contient notamment les techniques pour gérer la compatibilité avec les différents préfixes des navigateurs. On notera bien que ce qui suit correspond à la façon déconseillée de procéder. Consultez [ces exemples](/fr/docs/Web/API/MediaDevices/getUserMedia#taux_dimages) de la page [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) pour de meilleures pratiques.
 
 ```js
 navigator.getUserMedia = navigator.getUserMedia ||
@@ -72,17 +65,17 @@ if (navigator.getUserMedia) {
          };
       },
       function(err) {
-         console.log("The following error occurred: " + err.name);
+         console.log("L'erreur suivante s'est produite : " + err.name);
       }
    );
 } else {
-   console.log("getUserMedia not supported");
+   console.log("getUserMedia n'est pas pris en charge");
 }
 ```
 
 ## Permissions
 
-Pour utiliser `getUserMedia()` dans une application installable (par exemple une application Firefox OS), vous devez spécifier un ou plusieurs des champs suivants dans le fichier de manifest.
+Pour utiliser `getUserMedia()` dans une application installable, vous devez spécifier un ou plusieurs des champs suivants dans le fichier de manifeste.
 
 ```js
 "permissions": {
@@ -95,23 +88,17 @@ Pour utiliser `getUserMedia()` dans une application installable (par exemple une
 }
 ```
 
-See [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) and [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) for more information.
-
-## Spécifications
-
-| Spécifications                                                                                                                       | Statut                               | Commentaire          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Media Capture', '#navigatorusermedia-interface-extensions', 'navigator.getUserMedia')}} | {{Spec2('Media Capture')}} | Définition initiale. |
+Voir [`permission: audio-capture`](/fr/docs/Web/Apps/Developing/App_permissions#audio-capture) et [`permission: video-capture`](/fr/docs/Web/Apps/Developing/App_permissions#video-capture) pour plus d'informations.
 
 ## Compatibilité des navigateurs
 
-> **Attention :** Le nouveau code doit utiliser {{domxref("Navigator.mediaDevices.getUserMedia()")}} à la place.
+> **Attention :** Du nouveau code devrait utiliser [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) à la place.
 
-{{Compat("api.Navigator.getUserMedia")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{domxref("MediaDevices.getUserMedia()")}} qui remplace cette méthode dépréciée.
-- [WebRTC](/en-US/docs/WebRTC) - page d'introduction aux APIS
-- [MediaStream API](/en-US/docs/WebRTC/MediaStream_API) - L'API des Media Streams Objects
-- [Taking webcam photos](/en-US/docs/WebRTC/taking_webcam_photos) - un tutoriel à propos de l'utilisation de  `getUserMedia()` pour prendre des photos plutôt que des vidéos.
+- [`MediaDevices.getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) qui remplace cette méthode dépréciée.
+- [La page d'introduction à l'API WebRTC](/fr/docs/Web/API/WebRTC_API)
+- L'API [<i lang="en">MediaStream</i>](/fr/docs/Web/API/Media_Streams_API) pour les flux média
+- [Prendre des photos avec la webcam](/fr/docs/Web/API/WebRTC_API/Taking_still_photos) - un tutoriel sur l'utilisation de `getUserMedia()` pour prendre des photos plutôt que des vidéos.
