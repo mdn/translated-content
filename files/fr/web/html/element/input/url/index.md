@@ -6,13 +6,13 @@ browser-compat: html.elements.input.input-url
 ---
 {{HTMLRef("Input_types")}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`url`** sont employées afin de permettre à un utilisateur de saisir ou d'éditer une URL.
+Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`url`** sont employées afin de permettre à une utilisatrice ou un utilisateur de saisir ou d'éditer une URL.
 
 {{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}
 
 La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'elle est vide ou formatée correctement avant que le formulaire puisse être envoyé. Les pseudo-classes [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont appliquées automatiquement selon le cas de figure.
 
-> **Note :** Les navigateurs qui ne prennent pas en charge le type `url` utiliseront à la place un élément {{HTMLElement("input/text", "text")}}.
+> **Note :** Les navigateurs qui ne prennent pas en charge le type `url` utiliseront à la place un élément [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
 
 <table class="properties">
   <tbody>
@@ -51,8 +51,8 @@ La valeur saisie est automatiquement validée par le navigateur qui vérifie qu'
 
 La valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) contient une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) dont la valeur est automatiquement vérifiée afin de s'assurer que sa syntaxe est bien celle d'une URL. De façon plus précise, seuls deux formats sont autorisés&nbsp;:
 
-1.  Une chaîne de caractères vide ("") qui indique que l'utilisatrice ou l'utilisateur n'a pas saisi de valeur ou que la valeur a été retirée.
-2.  Une seule URL bien formée. Cela ne signifie pas nécessairement que l'adresse existe mais qu'elle est formatée correctement. Autrement dit, la chaîne de caractères respecte la forme `"schema://restedelurl"`.
+1. Une chaîne de caractères vide (`""`) qui indique que l'utilisatrice ou l'utilisateur n'a pas saisi de valeur ou que la valeur a été retirée.
+2. Une seule URL bien formée. Cela ne signifie pas nécessairement que l'adresse existe mais qu'elle est formatée correctement. Autrement dit, la chaîne de caractères respecte la forme `schema://restedelurl`.
 
 Voir [la section sur la validation](#validation) pour plus de détails sur le format des URL et leur validation.
 
@@ -88,13 +88,13 @@ Voir [la section ci-après sur le format](#utiliser_un_format_particulier) pour 
 
 ### `readonly`
 
-Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript qui changerait la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement).
+Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
 > **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
 
 ### `size`
 
-L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à 0 et la valeur par défaut est 20. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS [`font`](/fr/docs/Web/CSS/font)) utilisée.
+L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à `0` et la valeur par défaut est `20`. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS [`font`](/fr/docs/Web/CSS/font)) utilisée.
 
 Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on pourra utiliser l'attribut [`maxlength`](#maxlength).
 
@@ -106,13 +106,12 @@ Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent �
   - : La vérification orthographique est désactivée pour l'élément.
 - `true`
   - : La vérification orthographique est activée pour l'élément.
-- "" (la chaîne vide) ou aucune valeur
+- `""` (la chaîne vide) ou aucune valeur
   - : C'est le comportement par défaut de l'élément qui est utilisé pour déterminer si la vérification est active ou non. Cela peut être déduit de la valeur `spellcheck` sur un élément parent ou d'autres facteurs.
 
-Un champ de saisi peut avoir la vérification orthographique activée s'il n'utilise pas l'attribut [`readonly`](#readonly") et qu'il n'est pas désactivé.
+Un champ de saisi peut avoir la vérification orthographique activée s'il n'utilise pas l'attribut [`readonly`](#readonly) et qu'il n'est pas désactivé.
 
 La valeur renvoyée par la lecture de `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique pour le contrôle (par exemple si des préférences au sein [de l'agent utilisateur](/fr/docs/Glossary/User_agent) surchargent ce paramètre.
-
 
 ## Attributs non-standard
 
@@ -131,13 +130,13 @@ Un attribut spécifique à Safari qui indique si la correction automatique doit 
 
 Un attribut spécifique à Mozilla, pris en charge par Firefox sur Android qui fournit une indication sur le type d'action réalisée lors de l'appui sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> pendant l'édition du champ. Cette information est utilisée pour décider du libellé à afficher sur la touche <kbd>Entrée</kbd> du clavier virtuel.
 
-> **Note :** [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=14906611490661).
+> **Note :** [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
 
-Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche Entrée.
+Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche <kbd>Entrée</kbd>.
 
 ## Utiliser des champs de saisie d'URL
 
-Lorsqu'on crée un champ avec un attribut `type` qui vaut `url`, on obtient une validation automatique qui vérifie que le format de la valeur respecte bien celui d'une URL. Cela permet par exemple d'éviter des cas où des utilisateurs laissent une coquille dans la saisie d'une adresse d'un site web.
+Lorsqu'on crée un champ avec un attribut `type` qui vaut `url`, on obtient une validation automatique qui vérifie que le format de la valeur respecte bien celui d'une URL. Cela permet, par exemple, d'éviter des cas où des utilisatrices ou utilisateurs laissent une coquille dans la saisie d'une adresse d'un site web.
 
 Toutefois, ce mécanisme ne vérifie pas que l'URL saisie existe bien. Seule une vérification de format est effectuée.
 
@@ -155,13 +154,13 @@ Actuellement, l'ensemble des navigateurs implémentent ce type de champ comme un
 
 La valeur du champ est considérée valide lorsqu'elle est vide ou qu'il s'agit d'une URL correctement formatée, autrement elle est invalide. Si on ajoute l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required), la valeur vide n'est plus valide, il est nécessaire de saisir une valeur.
 
-Ainsi, si l'utilisateur saisit l'URL `http://www.example.com`, voici ce qui sera envoyé vers le serveur&nbsp;: `monURL=http%3A%2F%2Fwww.example.com` (on notera la façon dont certains caractères sont échappés).
+Ainsi, si l'utilisatrice ou l'utilisateur saisit l'URL `http://www.example.com`, voici ce qui sera envoyé vers le serveur&nbsp;: `monURL=http%3A%2F%2Fwww.example.com` (on notera la façon dont certains caractères sont échappés).
 
 ### Textes indicatifs (<i lang="en">placeholders</i>)
 
-Il est parfois utile de fournir une indication sur le type de donnée attendu. Sur les pages pour lesquelles la place est restreinte, on ne peut pas se servir de l'étiquette du champ. On peut alors utiliser un texte indicatif qui apparaît lorsque la valeur du champ est vide et qui est retiré dès que l'utilisateur saisit quelqu chose. Pour cela, on utilise l'attribut `placeholder`.
+Il est parfois utile de fournir une indication sur le type de donnée attendu. Sur les pages pour lesquelles la place est restreinte, on ne peut pas se servir de l'étiquette du champ. On peut alors utiliser un texte indicatif qui apparaît lorsque la valeur du champ est vide et qui est retiré dès que l'utilisatrice ou l'utilisateur saisit quelqu chose. Pour cela, on utilise l'attribut `placeholder`.
 
-Dans l'exemple qui suit, le contrôle contient le texte indicatif `"http://www.example.com"`. Dans le résultat, vous pouvez voir comment ce texte disparaît/réapparaît lorsqu'on saisit une valeur dans le contrôle.
+Dans l'exemple qui suit, le contrôle contient le texte indicatif `http://www.example.com`. Dans le résultat, vous pouvez voir comment ce texte disparaît/réapparaît lorsqu'on saisit une valeur dans le contrôle.
 
 ```html
 <input id="monURL" name="monURL" type="url"
@@ -215,7 +214,7 @@ On peut fournir une valeur par défaut grâce à l'attribut [`value`](/fr/docs/W
 
 #### Fournir des suggestions
 
-On peut également fournir une liste d'options parmi lesquelles l'utilisateur peut choisir via l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list). Cette liste ne limite pas l'utilisateur à ces choix mais permet de choisir certaines URL fréquemment utilisées plus facilement. Cette liste peut également être utilisée par l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/Input#attr-autocomplete). La valeur de l'attribut `list` est un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) que de valeurs suggérées. La valeur de l'attribut `value` de chacun de ces éléments `<option>` correspondra à la valeur qui sera suggérée dans le champ de saisie.
+On peut également fournir une liste d'options parmi lesquelles la personne saisissant une URL peut choisir via l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list). Cette liste ne limite pas l'utilisatrice ou l'utilisateur à ces choix mais permet de choisir certaines URL fréquemment utilisées plus facilement. Cette liste peut également être utilisée par l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/Input#attr-autocomplete). La valeur de l'attribut `list` est un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui contient autant d'éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) que de valeurs suggérées. La valeur de l'attribut `value` de chacun de ces éléments `<option>` correspondra à la valeur qui sera suggérée dans le champ de saisie.
 
 ```html
 <input id="monURL" name="monURL" type="url"
@@ -285,7 +284,7 @@ Vous pouvez essayer d'envoyer le formulaire précédent sans valeur saisie et vo
 
 S'il faut restreindre l'URL plus fortement, on peut utiliser l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) afin d'indiquer une [expression rationnelle](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) que la valeur saisie doit respecter afin d'être valide.
 
-Prenons comme exemple la construction d'un formulaire de support pour les employés de MaBoîte Inc. Ce formulaire permet d'indiquer à un service une des pages du site interne qui pose problème. Dans l'exemple simplifié, l'utilisateur indique l'URL de la page problématique ainsi qu'un message descriptif. Ici, on souhaite que l'URL saisit ne soit valide que si elle correspond au domaine `maboite`.
+Prenons comme exemple la construction d'un formulaire de support pour les employés de MaBoîte Inc. Ce formulaire permet d'indiquer à un service une des pages du site interne qui pose problème. Dans l'exemple simplifié, l'utilisatrice ou l'utilisateur indique l'URL de la page problématique ainsi qu'un message descriptif. Ici, on souhaite que l'URL saisit ne soit valide que si elle correspond au domaine `maboite`.
 
 Les contrôles de type `url` utilisant la validation native pour vérifier que c'est une URL bien formée et une validation spécifique via l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern), on peut implémenter cette contrainte facilement&nbsp;:
 
@@ -318,7 +317,7 @@ input:valid+span:after {
 ```html
 <form>
   <div>
-    <label for="myURL">Veuillez saisir l'adresse de la page problématique:</label>
+    <label for="myURL">Veuillez saisir l'adresse de la page problématique :</label>
     <input id="myURL" name="myURL" type="url"
            required pattern=".*\.maboite\..*"
            title="L'URL doit être sur le domaine maboite.">
@@ -340,19 +339,19 @@ input:valid+span:after {
 
 Si on étudie le contrôle, on peut voir qu'on commence par utiliser l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) afin de rendre le champ obligatoire.
 
-Ensuite, on utilise l'attribut `pattern` avec l'expression rationnelle `".*\.maboite\..*"`. Cette expression rationnelle indique que la chaîne de caractères saisie doit contenir des caractères quelconques suivis d'un point, suivi de "maboite", suivi d'un point, suivi de n'importe quels caractères.
+Ensuite, on utilise l'attribut `pattern` avec l'expression rationnelle `.*\.maboite\..*`. Cette expression rationnelle indique que la chaîne de caractères saisie doit contenir des caractères quelconques suivis d'un point, suivi de `maboite`, suivi d'un point, suivi de n'importe quels caractères.
 
 Cette expression rationnelle est loin d'être parfaite mais suffit pour les besoins de cet exemple.
 
-Il est conseillé d'utiliser l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) quand on utilise l'attribut `pattern`. Dans ce cas, l'attribut `title` doit alors décrire l'expression rationnelle (et l'explication de la contrainte) plutôt que le rôle du champ. En effet, la valeur contenue dans `title` pourrait alors être affichée ou vocalisée comme message d'erreur. Un navigateur pourra ainsi affiche un message&nbsp;: "Le texte saisi ne respecte pas le format souhaité." suivi du texte contenu dans `title`. Si la valeur de `title` est simplement "URL", le message complet obtenu serait "Le texte saisi ne respecte pas le format souhaité. URL" (ce qui n'est pas très parlant).
+Il est conseillé d'utiliser l'attribut [`title`](/fr/docs/Web/HTML/Global_attributes#attr-title) quand on utilise l'attribut `pattern`. Dans ce cas, l'attribut `title` doit alors décrire l'expression rationnelle (et l'explication de la contrainte) plutôt que le rôle du champ. En effet, la valeur contenue dans `title` pourrait alors être affichée ou vocalisée comme message d'erreur. Un navigateur pourra ainsi affiche un message&nbsp;: «&nbsp;Le texte saisi ne respecte pas le format souhaité.&nbsp;» suivi du texte contenu dans `title`. Si la valeur de `title` est simplement `URL`, le message complet obtenu serait «&nbsp;Le texte saisi ne respecte pas le format souhaité. URL&nbsp;» (ce qui n'est pas très parlant).
 
-C'est pourquoi nous avons écrit "L'URL doit être sur le domaine maboite" qui est plus détaillé.
+C'est pourquoi nous avons écrit «&nbsp;L'URL doit être sur le domaine maboite&nbsp;» qui est plus détaillé.
 
 > **Note :** Si vous rencontrez des problèmes avec ces expressions rationnelles et qu'elles ne semblent pas fonctionner correctement, vérifiez la console de votre navigateur. Il est possible que des messages d'erreur y soient affichés et puissent vous aider à diagnostiquer le problème.
 
 ## Exemples
 
-En plus des exemples précédents, vous pouvez consulter [l'exemple de validation de format sur GitHub](https://github.com/mdn/learning-area/blob/master/html/forms/url-example/index.html) (et voir [le résultat <i lang="en">live</i>](https://mdn.github.io/learning-area/html/forms/url-example/)).
+En plus des exemples précédents, vous pouvez consulter [l'exemple de validation de format sur GitHub](https://github.com/mdn/learning-area/blob/main/html/forms/url-example/index.html) (et voir [le résultat <i lang="en">live</i>](https://mdn.github.io/learning-area/html/forms/url-example/)).
 
 ## Spécifications
 

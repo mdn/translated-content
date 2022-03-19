@@ -6,7 +6,7 @@ browser-compat: html.elements.input.input-search
 ---
 {{HTMLRef}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`search`** permettent de saisir des termes de recherche. Sur le plan fonctionnel, ils sont identiques aux champs de saisie textuels ([`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text)), c'est leur mise en forme qui peut être différente selon [les agents utilisateur](/fr/docs/Glossary/User_agent).
+Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`search`** permettent de saisir des termes de recherche. Sur le plan fonctionnel, ils sont identiques aux champs de saisie textuels ([`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text)), c'est leur mise en forme qui peut être différente selon [les agents utilisateurs](/fr/docs/Glossary/User_agent).
 
 {{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
 
@@ -47,13 +47,13 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `typ
 
 ## Valeur
 
-La valeur de l'attribut <a href="/fr/docs/Web/HTML/Element/Input#attr-value"><code>value</code></a> contient une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui représente la valeur du champ de recherche. En JavaScript, on peut récupérer cette information grâce à la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement).
+La valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) contient une chaîne de caractères ([`DOMString`](/fr/docs/Web/API/DOMString)) qui représente la valeur du champ de recherche. En JavaScript, on peut récupérer cette information grâce à la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
 ```js
 termesRecherche = monChampSearch.value;
 ```
 
-Si aucune contrainte de validation n'est imposée (cf. [validation](#validation) pour plus de détails), la valeur peut être un texte ou une chaîne de caractères vide.
+Si aucune contrainte de validation n'est imposée (cf. la section [Validation](#validation) pour plus de détails), la valeur peut être un texte ou une chaîne de caractères vide.
 
 ## Attributs supplémentaires
 
@@ -71,37 +71,37 @@ Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si 
 
 ### `minlength`
 
-Le nombre minimal de caractères (exprimé en nombre de points de code UTF-16) que l'utilisateur peut saisir dans le champ. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `minlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille minimale. La valeur indiquée par cet attribut doit être inférieure à `maxlength`.
+Le nombre minimal de caractères (exprimé en nombre de points de code UTF-16) que l'utilisatrice ou l'utilisateur peut saisir dans le champ. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `minlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille minimale. La valeur indiquée par cet attribut doit être inférieure à `maxlength`.
 
 Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si la longueur du texte est inférieure à `minlength` en nombre de points de code UTF-16.
 
 ### `pattern`
 
-L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à <a href="/fr/docs/Web/HTML/Element/Input#attr-value"><code>value</code></a>, que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/Guide/HTML/Constraint_validation) . Le contenu de `pattern` doit être une expression rationnelle JavaScript valide (voir la documentation sur le type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions). Le marqueur `'u'` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non ASCII. Il ne faut pas entourer l'expression de barres obliques.
+L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Element/Input#attr-value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/Guide/HTML/Constraint_validation). Le contenu de `pattern` doit être une expression rationnelle JavaScript valide (voir la documentation sur le type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions). Le marqueur `'u'` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non ASCII. Il ne faut pas entourer l'expression de barres obliques.
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
 
 > **Note :** On utilisera l'attribut [`title`](/fr/docs/Web/HTML/Element/Input#attr-title) pour définir le texte que la plupart des navigateurs afficheront comme bulle d'information afin d'expliquer les contraintes imposées par l'expression rationnelle. Il faut également inclure un texte explicatif à proximité du champ.
 
-Voir [indiquer un motif](#indiquer_un_motif) pour plus de détails et un exemple.
+Voir la section [Indiquer un motif](#indiquer_un_motif) pour plus de détails et un exemple.
 
 ### `placeholder`
 
 L'attribut `placeholder` est une chaîne de caractères qui fournit une indication courte sur le type d'information attendue dans le champ. Ce devrait être un mot ou une phrase courte qui illustre le type de données attendu plutôt qu'un message explicatif. Le texte _ne doit pas_ inclure de saut de ligne ou de retour chariot.
 
-Si le contenu du contrôle utilise une direction (écriture de gauche à droite ou de droite à gauche), mais que le texte indicatif doit être présenté dans la direction inverse, vous pouvez utiliser des caractères de formatage pour l'algorithme bidirectionnel Unicode dans la valeur. Voir [comment utiliser des contrôles Unicode pour le texte bidirectionnel](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
+Si le contenu du contrôle utilise une direction (écriture de gauche à droite ou de droite à gauche), mais que le texte indicatif doit être présenté dans la direction inverse, vous pouvez utiliser des caractères de formatage pour l'algorithme bidirectionnel Unicode dans la valeur. Voir [Comment utiliser des contrôles Unicode pour le texte bidirectionnel (en anglais)](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
-> **Note :** On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [la section sur l'utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
+> **Note :** On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [L'utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
-Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript qui changerait la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement).
+Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` rattachée à l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
 > **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
 
 ### `size`
 
-L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à 0 et la valeur par défaut est 20. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS [`font`](/fr/docs/Web/CSS/font)) utilisée.
+L'attribut `size` est une valeur numérique qui indique la largeur idéale du champ, exprimée en nombre de caractères. Sa valeur doit être un nombre supérieur à `0` et la valeur par défaut est `20`. Comme les caractères peuvent avoir une largeur différente entre eux, on ne doit pas s'attendre à ce que cette taille permette exactement de voir les n caractères, le contrôle résultant pourra être plus étroit ou plus large que le nombre indiqué en fonction des caractères saisis et de la police (voir la propriété CSS [`font`](/fr/docs/Web/CSS/font)) utilisée.
 
 Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent être saisis. Il indique uniquement, de façon approximative, le nombre de caractères visibles au même moment. Pour imposer une contrainte de taille sur la longueur maximale de la valeur saisissable, on pourra utiliser l'attribut [`maxlength`](#maxlength).
 
@@ -113,12 +113,12 @@ Cet attribut _n'impose pas_ de limite sur le nombre de caractères qui peuvent �
   - : La vérification orthographique est désactivée pour l'élément.
 - `true`
   - : La vérification orthographique est activée pour l'élément.
-- "" (la chaîne vide) ou aucune valeur
+- `""` (la chaîne vide) ou aucune valeur
   - : C'est le comportement par défaut de l'élément qui est utilisé pour déterminer si la vérification est active ou non. Cela peut être déduit de la valeur `spellcheck` sur un élément parent ou d'autres facteurs.
 
 Un champ de saisi peut avoir la vérification orthographique activée s'il n'utilise pas l'attribut [`readonly`](#readonly") et qu'il n'est pas désactivé.
 
-La valeur renvoyée par la lecture de `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique pour le contrôle (par exemple si des préférences au sein [de l'agent utilisateur](/fr/docs/Glossary/User_agent) surchargent ce paramètre.
+La valeur renvoyée par la lecture de `spellcheck` peut ne pas refléter l'état réel de la vérification orthographique pour le contrôle (par exemple, si des préférences au sein [de l'agent utilisateur](/fr/docs/Glossary/User_agent) surchargent ce paramètre).
 
 ## Attributs non-standard
 
@@ -135,7 +135,7 @@ Un attribut spécifique à Safari qui indique si la correction automatique doit 
 
 ### `incremental`
 
-Un attribut booléen spécifique à WebKit et Blink (donc pris en charge par les navigateurs Safari, Opera, Chrome, etc.) qui indique à l'agent utilisateur de traiter la recherche en continu. Lorsque cet attribut est présent et lorsque l'utilisateur édite la valeur du champ, l'agent utilisateur envoie des évènements [`search`](/fr/docs/Web/API/HTMLInputElement/search_event) sur l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui représente le champ de recherche. Ainsi, on peut gérer, avec du code, la mise à jour continue des résultats de recherche.
+Un attribut booléen spécifique à WebKit et Blink (donc pris en charge par les navigateurs Safari, Opera, Chrome, etc.) qui indique à l'agent utilisateur de traiter la recherche en continu. Lorsque cet attribut est présent et lorsque l'utilisatrice ou l'utilisateur édite la valeur du champ, l'agent utilisateur envoie des évènements [`search`](/fr/docs/Web/API/HTMLInputElement/search_event) sur l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui représente le champ de recherche. Ainsi, on peut gérer, avec du code, la mise à jour continue des résultats de recherche.
 
 Si l'attribut `incremental` n'est pas indiqué, l'évènement [`search`](/fr/docs/Web/API/HTMLInputElement/search_event) est uniquement envoyé lorsque la recherche est déclenchée (avec l'appui sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> à l'édition du champ).
 
@@ -145,9 +145,9 @@ La fréquence maximale à laquelle l'évènement `search` est envoyé est défin
 
 Un attribut spécifique à Mozilla, pris en charge par Firefox sur Android qui fournit une indication sur le type d'action réalisée lors de l'appui sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> pendant l'édition du champ. Cette information est utilisée pour décider du libellé à afficher sur la touche <kbd>Entrée</kbd> du clavier virtuel.
 
-> **Note :** [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=14906611490661).
+> **Note :** [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
 
-Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche Entrée.
+Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche <kbd>Entrée</kbd>.
 
 ### `results`
 
@@ -213,7 +213,7 @@ Un des problèmes posé par les formulaires de recherche est leur accessibilité
 En revanche, pour les personnes qui utilisent des technologies d'assistance, cela peut être source de confusion. Une façon de résoudre ce problème sans modifier l'organisation visuelle est d'utiliser les fonctionnalités [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics)&nbsp;:
 
 - Utiliser un attribut `role` avec la valeur `search` sur l'élément `<form>` permettra aux lecteurs d'écran d'indiquer le formulaire comme étant un formulaire de recherche.
-- Si cela n'est pas suffisant, il est possible d'utiliser l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) sur l'élément `<input>`. Cet attribut peut contenir un texte descriptif qui sera lu à voix haute par un lecteur d'écran. Il s'agit d'un équivalent non-visuel de `<label>`.
+- Si cela n'est pas suffisant, il est possible d'utiliser l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) sur l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input). Cet attribut peut contenir un texte descriptif qui sera lu à voix haute par un lecteur d'écran. Il s'agit d'un équivalent non-visuel de `<label>`.
 
 Prenons un exemple&nbsp;:
 
@@ -228,13 +228,13 @@ Prenons un exemple&nbsp;:
 </form>
 ```
 
-Voici le résultat obtenu grâce à ce fragment de HTML&nbsp;:
+Voici le résultat obtenu grâce à ce fragment HTML&nbsp;:
 
 {{EmbedLiveSample("", 600, 40)}}
 
 Il n'y a aucune différence visuelle avec l'exemple précédent mais avec cette deuxième version, les personnes qui utilisent un lecteur d'écran disposeront de plus d'informations.
 
-> **Note :** Voir [Signposts/Landmarks](/fr/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
+> **Note :** Voir [Panneaux/points de repère](/fr/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) pour plus d'informations à propos de ces fonctionnalités relatives à l'accessibilité.
 
 ### Paramétrer la taille physique
 
@@ -313,13 +313,13 @@ input:valid ~ span:after {
 }
 ```
 
-Voici le résultat obtenu :
+Voici le résultat obtenu&nbsp;:
 
 {{EmbedLiveSample('', 600, 40)}}
 
 De plus, si on essaie d'envoyer le formulaire sans aucun terme de recherche, le navigateur affichera un message. Voici par exemple, le résultat dans Firefox&nbsp;:
 
-![Champ de formulaire avec un message attaché indiquant 'veuillez remplir ce formulaire'](firefox-required-message.png)
+![Champ de formulaire avec un message attaché indiquant 'veuillez compléter ce champ'](message-requis-firefox.png)
 
 Différents messages peuvent être affichés selon le type d'erreur liée à la saisie, voir les exemples qui suivent.
 
@@ -332,7 +332,7 @@ Dans l'exemple qui suit, la valeur saisie dans le champ de recherche doit mesure
 ```html
 <form>
   <div>
-    <label for="mySearch">Rechercher un utilisateur</label>
+    <label for="mySearch">Rechercher une utilisatrice ou un utilisateur</label>
     <input type="search" id="mySearch" name="q"
     placeholder="ID de 4 à 8 char." required
     size="30" minlength="4" maxlength="8">
@@ -368,7 +368,7 @@ Si vous essayez de soumettre une valeur qui est plus petite que 4 caractères, v
 
 ### Indiquer un motif
 
-L'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Valider une valeur avec une expression rationnelle](/fr/docs/Learn/Forms/Form_validation) pour une introduction).
+L'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) permet d'indiquer une expression rationnelle que doit respecter la valeur saisie pour être considérée valide (cf. [Validation selon une expression régulière](/fr/docs/Learn/Forms/Form_validation#validation_selon_une_expression_régulière) pour une introduction).
 
 Prenons un exemple. Imaginons qu'on veuille rechercher un produit grâce à son identifiant et que les identifiants commencent par deux lettres, suivies de 4 chiffres. Dans l'exemple qui suit, le formulaire n'accepte qu'une valeur dont la taille est comprise entre 4 et 8 caractères et qui commence par deux lettres puis termine par 4 chiffres.
 
@@ -409,7 +409,7 @@ Voici le résultat obtenu avec ce fragment HTML&nbsp;:
 
 ## Exemples
 
-Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) ([voir la démonstration <i lang="en">live</i>](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [`website-aria-roles`](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) ([voir la démonstration <i lang="en">live</i>](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
 
 ## Spécifications
 
@@ -422,7 +422,6 @@ Vous pouvez consulter un exemple de formulaire de recherche dans notre exemple [
 ## Voir aussi
 
 - [Les formulaires HTML](/fr/docs/Learn/Forms)
-- [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) DOM qu'il implémente
+- [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) DOM qui le porte
 - [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text)
 - [La compatibilité des propriétés CSS](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
-

@@ -188,7 +188,7 @@ Si vous tentez d'envoyer le formulaire avec une date incomplète ou en dehors de
 
 Voici une capture d'écran qui illustre le résultat obtenu avec un navigateur prenant en charge cette fonctionnalité&nbsp;:
 
-![Le champ mois, lorsqu'il est requis, dans Chrome](month-required.png)
+![Le champ mois, lorsqu'il est requis, dans Chrome](champ-mois-requis.png)
 
 Voici ensuite la feuille de style CSS utilisée dans l'exemple précédent. On utilise [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) afin de mettre en forme le contrôle selon que la valeur saisie est invalide. Les icônes ajoutées sont placées dans un élément [`<span>`](/fr/docs/Web/HTML/Element/span) à part car Chrome ne permet pas de gérer du contenu généré à même le contrôle ni de mettre en forme ce contenu généré.
 
@@ -287,7 +287,7 @@ input:valid+span:after {
 }
 ```
 
-La meilleure façon de gérer la saisie de mois pour l'ensemble des navigateurs consiste actuellement à saisir le mois et l'année dans deux contrôles séparés, représentés chacun par un élément [`<select>`](/fr/docs/Web/HTML/Element/select). On peut également utiliser certaines bibliothèques JavaScript telles que [le sélecteur de date (<i lang="en">jQuery date picker</i>)](https://jqueryui.com/datepicker/) ou le plugin [sélecteur d'heure jQuery (<i lang="en">jQuery timepicker</i>)](https://timepicker.co/).
+La meilleure façon de gérer la saisie de mois pour l'ensemble des navigateurs consiste actuellement à saisir le mois et l'année dans deux contrôles séparés, représentés chacun par un élément [`<select>`](/fr/docs/Web/HTML/Element/select). On peut également utiliser certaines bibliothèques JavaScript telles que [le sélecteur de date (<i lang="en">jQuery date picker</i>)](https://jqueryui.com/datepicker/) ou le plugin de [sélecteur d'heure jQuery (<i lang="en">jQuery timepicker</i>)](https://timepicker.co/).
 
 ## Exemples
 

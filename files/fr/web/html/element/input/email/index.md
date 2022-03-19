@@ -297,9 +297,9 @@ Le formulaire ([`<form>`](/fr/docs/Web/HTML/Element/Form)) contient un élément
 
 Si on regarde le champ de saisie pour l'adresse électronique, on voit que les deux attributs [`size`](/fr/docs/Web/HTML/Element/Input#attr-size) et [`maxlength`](/fr/docs/Web/HTML/Element/Input#attr-maxlength) ont la valeur 64 (on affiche une boîte de saisie large de 64 caractères et on ne peut saisir une adresse électronique d'au plus 64 caractères). L'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) est présent et l'adresse électronique est donc obligatoire pour l'envoi du formulaire.
 
-L'attribut [`placeholder`](/fr/docs/Web/HTML/Element/Input#attr-placeholder) indique qu'une valeur semblable à `"nomutilisateur@beststartupever.com"` est attendue. L'intérêt de cette valeur est double&nbsp;: on indique qu'il faut saisir une adresse mail et on suggère que cette adresse provient d'un compte beststartupever.com. Le type `email` permet de valider le texte saisi afin de vérifier qu'il s'agit d'une adresse électronique valide. Si la valeur saisie n'est pas une adresse valide, un message d'erreur sera affiché&nbsp;:
+L'attribut [`placeholder`](/fr/docs/Web/HTML/Element/Input#attr-placeholder) indique qu'une valeur semblable à `"nomutilisateur@beststartupever.com"` est attendue. L'intérêt de cette valeur est double&nbsp;: on indique qu'il faut saisir une adresse mail et on suggère que cette adresse provient d'un compte `beststartupever.com`. Le type `email` permet de valider le texte saisi afin de vérifier qu'il s'agit d'une adresse électronique valide. Si la valeur saisie n'est pas une adresse valide, un message d'erreur sera affiché&nbsp;:
 
-![](enter-valid-email-address.png)
+![](saisir-une-adresse-electronique-valide.png)
 
 Si on utilise uniquement les attributs qu'on vient de décrire, on restreint les valeurs saisissables aux adresses électroniques valides de 64 caractères. Or, on veut également valider le fait que l'adresse respecte le format `_nomutilisateur_@beststartupever.com`. C'est pourquoi on utilise l'attribut [`pattern`](/fr/docs/Web/HTML/Element/Input#attr-pattern) avec la valeur `".+@beststartupever.com"`. Cette valeur est une expression rationnelle qui permet de vérifier que la chaîne de caractère contient un ou plusieurs caractères quelconques, ensuite suivi d'une arobase (`@`) puis du nom de domaine `beststartupever.com`.
 
@@ -309,7 +309,7 @@ Lorsqu'on utilise l'attribut `pattern`. il est conseillé d'utiliser l'attribut 
 
 C'est pour cela qu'on indique la chaîne de caractères «&nbsp;Merci de fournir uniquement une adresse Best Startup Ever&nbsp;». Le message complet obtenu sera donc&nbsp;: «&nbsp;Le texte saisi ne correspond pas au motif requis. Merci de fournir uniquement une adresse Best Startup Ever.&nbsp;»
 
-![](email-pattern-match-bad.png)
+![](adresse-electronique-mauvais-motif.png)
 
 > **Note :** Si vous rencontrez des problèmes à propos de l'expression rationnelle, n'hésitez pas à ouvrir la console du navigateur. Cette dernière peut contenir des messages d'erreur aidant à diagnostiquer et résoudre le problème.
 

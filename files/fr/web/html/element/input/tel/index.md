@@ -6,13 +6,13 @@ browser-compat: html.elements.input.input-tel
 ---
 {{HTMLRef}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`"tel"`** permettent de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email) et [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url), la valeur saisie n'est pas automatiquement validée selon un format donné, car les formats des numéros de téléphone varient à travers le monde.
+Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`tel`** permettent de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email) et [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url), la valeur saisie n'est pas automatiquement validée selon un format donné, car les formats des numéros de téléphone varient à travers le monde.
 
 {{EmbedInteractiveExample("pages/tabbed/input-tel.html", "tabbed-standard")}}
 
 Bien que les champs de saisie de numéro de téléphone soient fonctionnellement identiques aux champs de saisie textuels (`<input type="text">`), ils permettent, notamment pour les navigateurs mobiles, de présenter un clavier optimisé pour la saisie d'un numéro de téléphone. L'utilisation d'un tel champ permet également d'appliquer une validation personnalisée de façon ciblée.
 
-> **Note :** Les navigateurs qui ne prennent pas en charge le type `"tel"` utiliseront à la place un contrôle [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
+> **Note :** Les navigateurs qui ne prennent pas en charge le type `tel` utiliseront à la place un contrôle [`<input type="text">`](/fr/docs/Web/HTML/Element/Input/text).
 
 ## Résumé technique
 
@@ -21,7 +21,7 @@ Bien que les champs de saisie de numéro de téléphone soient fonctionnellement
     <tr>
       <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
-        Une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>`DOMString`</code></a>) qui représente un numéro de téléphone ou qui est vide.
+        Une chaîne de caractères (<a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>) qui représente un numéro de téléphone ou qui est vide.
       </td>
     </tr>
     <tr>
@@ -73,13 +73,13 @@ Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si 
 
 ### `minlength`
 
-Le nombre minimal de caractères (exprimé en nombre de points de code UTF-16) que l'utilisateur peut saisir dans le champ. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `minlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille minimale. La valeur indiquée par cet attribut doit être inférieure à `maxlength`.
+Le nombre minimal de caractères (exprimé en nombre de points de code UTF-16) que l'utilisatrice ou l'utilisateur peut saisir dans le champ. Cette valeur doit être un entier positif ou nul. Si aucune valeur n'est fournie pour `minlength` ou qu'une valeur invalide est fournie, il n'y a pas de contrainte de taille minimale. La valeur indiquée par cet attribut doit être inférieure à `maxlength`.
 
 Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si la longueur du numéro de téléphone est inférieure à `minlength` en nombre de points de code UTF-16.
 
 ### `pattern`
 
-L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à <a href="/fr/docs/Web/HTML/Element/Input#attr-value"><code>value</code></a>, que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/Guide/HTML/Constraint_validation) . Le contenu de `pattern` doit être une expression rationnelle JavaScript valide (voir la documentation sur le type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions). Le marqueur `'u'` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non ASCII. Il ne faut pas entourer l'expression de barres obliques.
+L'attribut `pattern`, lorsqu'il est utilisé, est une expression rationnelle qui impose un format à [`value`](/fr/docs/Web/HTML/Element/Input#attr-value), que cette dernière doit respecter afin que le champ soit [valide](/fr/docs/Web/Guide/HTML/Constraint_validation) . Le contenu de `pattern` doit être une expression rationnelle JavaScript valide (voir la documentation sur le type [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) et [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_Expressions). Le marqueur `'u'` est utilisé à la compilation de l'expression rationnelle afin que le motif soit traité comme une séquence de points de code Unicode et non ASCII. Il ne faut pas entourer l'expression de barres obliques.
 
 Si aucune expression rationnelle n'est fournie ou que celle-ci est invalide, aucune contrainte de format ne sera appliquée et cet attribut sera ignoré complètement.
 
@@ -93,11 +93,11 @@ L'attribut `placeholder` est une chaîne de caractères qui fournit une indicati
 
 Si le contenu du contrôle utilise une direction (écriture de gauche à droite ou de droite à gauche), mais que le texte indicatif doit être présenté dans la direction inverse, vous pouvez utiliser des caractères de formatage pour l'algorithme bidirectionnel Unicode dans la valeur. Voir [comment utiliser des contrôles Unicode pour le texte bidirectionnel](https://www.w3.org/International/questions/qa-bidi-unicode-controls) pour plus d'informations.
 
-> **Note :** On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [la section sur l'utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
+> **Note :** On évitera d'utiliser l'attribut `placeholder` si possible. Il n'est pas aussi utile que d'autres sur le plan sémantique pour expliquer le formulaire et il peut causer des problèmes techniques avec le contenu. Voir [Utilisation de libellés et de textes indicatifs](/fr/docs/Web/HTML/Element/Input#utilisation_de_libellés) pour plus d'informations.
 
 ### `readonly`
 
-Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript qui changerait la propriété [`HTMLInputElement.value`](/fr/docs/Web/API/HTMLInputElement).
+Un attribut booléen qui, s'il est présent, indique que le champ ne peut pas être édité dans le formulaire. La valeur du champ (portée par l'attribut `value`) peut toutefois être modifiée par du code JavaScript, qui changerait la propriété `value` rattachée à [l'interface `HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement).
 
 > **Note :** Un champ en lecture seule ne pouvant pas avoir de valeur, l'attribut `required` n'a pas d'effet particulier sur les champs pour lesquels `readonly` est appliqué.
 
@@ -124,13 +124,13 @@ Un attribut spécifique à Safari qui indique si la correction automatique doit 
 
 Un attribut spécifique à Mozilla, pris en charge par Firefox sur Android qui fournit une indication sur le type d'action réalisée lors de l'appui sur <kbd>Entrée</kbd> ou <kbd>Retour</kbd> pendant l'édition du champ. Cette information est utilisée pour décider du libellé à afficher sur la touche <kbd>Entrée</kbd> du clavier virtuel.
 
-> **Note :** [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=14906611490661).
+> **Note :** [Ce comportement a été standardisé](https://html.spec.whatwg.org/#input-modalities:-the-enterkeyhint-attribute) avec l'attribut universel [`enterkeyhint`](/fr/docs/Web/HTML/Global_attributes#attr-enterkeyhint), mais ce dernier n'est pas encore largement implémenté. En ce qui concerne l'implémentation dans Firefox, voir [le bug 1490661](https://bugzilla.mozilla.org/show_bug.cgi?id=1490661).
 
-Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche Entrée.
+Les valeurs autorisées sont&nbsp;: `go`, `done`, `next`, `search`, et `send`. Le navigateur décide alors, en fonction de cette indication, du libellé à appliquer sur la touche <kbd>Entrée</kbd>.
 
 ## Utiliser `<input type="tel">`
 
-Les numéros de téléphone peuvent jouer un rôle important dans certains formulaires web. Un site de commerce en ligne, par exemple, peut vouloir enregistrer le numéro de téléphone d'un utilisateur pour le contacter lors de la livraison. Toutefois, un des problèmes relatifs aux numéros de téléphone est la variété de formats qui existent à travers le monde. Il est donc difficile (voire impossible) de valider les valeurs automatiquement.
+Les numéros de téléphone peuvent jouer un rôle important dans certains formulaires web. Un site de commerce en ligne, par exemple, peut vouloir enregistrer le numéro de téléphone d'une utilisatrice ou un utilisateur pour le contacter lors de la livraison. Toutefois, un des problèmes relatifs aux numéros de téléphone est la variété de formats qui existent à travers le monde. Il est donc difficile (voire impossible) de valider les valeurs automatiquement.
 
 > **Note :** Des mécanismes de validation particuliers peuvent être ajoutés si besoin (cf. [Validation](#validation) ci-après).
 
@@ -157,9 +157,9 @@ Rien de bien surprenant ici. Lorsque les données seront envoyées au serveur, e
 
 ### Textes indicatifs (<i lang="en">placeholders</i>)
 
-Il est parfois utile de fournir une indication quant au format attendu. Or, il est possible que la disposition de la page ne permette pas de fournir des étiquettes détaillées. C'est pourquoi on peut utiliser des textes indicatifs via l'attribut `placeholder`. Ces valeurs seront affichées dans le champ et disparaîtront dès que l'utilisateur saisira quelque chose (et réapparaîtront si la valeur redevient vide). Un tel texte indicatif doit servir de suggestion quant au format souhaité.
+Il est parfois utile de fournir une indication quant au format attendu. Or, il est possible que la disposition de la page ne permette pas de fournir des étiquettes détaillées. C'est pourquoi on peut utiliser des textes indicatifs via l'attribut `placeholder`. Ces valeurs seront affichées dans le champ et disparaîtront dès que l'utilisatrice ou l'utilisateur saisira quelque chose (et réapparaîtront si la valeur redevient vide). Un tel texte indicatif doit servir de suggestion quant au format souhaité.
 
-Dans l'exemple suivant, on a un contrôle `"tel"` avec un attribut `placeholder` qui vaut `"01 23 45 67 89"`. Vous pouvez manipuler le résultat obtenu pour voir comment ce texte est affiché selon qu'une valeur saisie ou que le champ est vide&nbsp;:
+Dans l'exemple suivant, on a un contrôle `tel` avec un attribut `placeholder` qui vaut `01 23 45 67 89`. Vous pouvez manipuler le résultat obtenu pour voir comment ce texte est affiché selon qu'une valeur saisie ou que le champ est vide&nbsp;:
 
 ```html
 <input id="telNo" name="telNo" type="tel"
@@ -228,7 +228,7 @@ Si on souhaite aller plus loin, on peut fournir une liste de suggestions parmi l
 
 {{EmbedLiveSample("", 600, 40)}}
 
-Avec l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) contenant ces différentes valeurs [`<option>`](/fr/docs/Web/HTML/Element/Option), le navigateur affichera une liste déroulante (ou un autre élément d'interface utilisateur) afin que l'utilisateur puisse éventuellement choisir parmi les suggestions. Lorsque l'utilisateur saisit dans le contrôle, la liste des suggestions est restreinte à celles qui correspondent encore.
+Avec l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) contenant ces différentes valeurs [`<option>`](/fr/docs/Web/HTML/Element/Option), le navigateur affichera une liste déroulante (ou un autre élément d'interface utilisateur) afin que l'utilisatrice ou l'utilisateur puisse éventuellement choisir parmi les suggestions. Lorsqu'on saisit dans le contrôle, la liste des suggestions est restreinte à celles qui correspondent encore.
 
 ## Validation
 
@@ -337,7 +337,7 @@ input:valid+span:after {
 
 {{EmbedLiveSample("", 700, 130)}}
 
-Vous pouvez ici voir que la valeur est considérée comme invalide si elle ne suit pas le format xx xx xx xx xx. Ce format peut peut-être être utile pour certaines régions mais attention, dans une application réelle, il faudra s'adapter à des cas plus complexes selon la locale de l'utilisateur.
+Vous pouvez ici voir que la valeur est considérée comme invalide si elle ne suit pas le format `xx xx xx xx xx`. Ce format peut peut-être être utile pour certaines régions mais attention, dans une application réelle, il faudra s'adapter à des cas plus complexes selon la locale de l'utilisatrice ou l'utilisateur.
 
 ## Exemples
 
@@ -438,7 +438,7 @@ Voici le résultat obtenu&nbsp;:
 
 Attention, cet exemple n'est qu'une illustration du problème associé à la gestion internationale des numéros de téléphone. Il serait prétentieux d'affirmer qu'étendre ce mécanisme à chaque pays suffirait à garantir la bonne saisie d'un numéro de téléphone.
 
-Bien entendu, si cette complexité est trop importante, on peut également faire le choix de contrôler la valeur côté serveur avant de faire un retour à l'utilisateur.
+Bien entendu, si cette complexité est trop importante, on peut également faire le choix de contrôler la valeur côté serveur avant de faire un retour à l'utilisatrice ou l'utilisateur.
 
 ```css hidden
 div {

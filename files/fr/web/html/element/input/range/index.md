@@ -6,13 +6,13 @@ translation_of: Web/HTML/Element/input/range
 ---
 {{HTMLRef("Input_types")}}
 
-Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`range`** permettent à l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de [`number`](/fr/docs/Web/HTML/Element/input/number) par exemple).
+Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`range`** permettent à l'utilisatrice ou l'utilisateur d'indiquer une valeur numérique comprise entre deux bornes. La valeur précise n'est pas considérée comme importante. Ces éléments sont généralement représentés avec un curseur sur une ligne ou comme un bouton de potentiel et non pas comme un champ de saisie (à la façon de [`number`](/fr/docs/Web/HTML/Element/input/number) par exemple).
 
-Ce genre de <i lang="en">widget</i> n'étant pas précis, ce type ne devrait pas être utilisé lorsque la valeur exacte fournie par l'utilisateur est importante.
+Ce genre de <i lang="en">widget</i> n'étant pas précis, ce type ne devrait pas être utilisé lorsque la valeur exacte fournie est importante.
 
 {{EmbedInteractiveExample("pages/tabbed/input-range.html", "tabbed-standard")}}
 
-Si le navigateur de l'utilisateur ne prend pas en charge le type `range`, il utilisera le type [`text`](/fr/docs/Web/HTML/Element/Input/text) à la place.
+Si le navigateur de l'utilisatrice ou l'utilisateur ne prend pas en charge le type `range`, il utilisera le type [`text`](/fr/docs/Web/HTML/Element/Input/text) à la place.
 
 <table class="properties">
   <tbody>
@@ -52,9 +52,9 @@ Si le navigateur de l'utilisateur ne prend pas en charge le type `range`, il uti
 Il n'existe pas de motif de validation. Cependant, voici les formes de validation automatiques qui sont appliquées&nbsp;:
 
 - Si la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Input#attr-value) est quelque chose qui ne peut pas être converti en nombre décimal, la validation échoue.
-- La valeur ne doit pas être inférieure à [`min`](/fr/docs/Web/HTML/Element/Input#attr-min). La valeur minimale par défaut est 0.
-- La valeur ne doit pas être supérieure à [`max`](/fr/docs/Web/HTML/Element/Input#attr-max). La valeur maximale par défaut est 0.
-- La valeur doit être un multiple de [`step`](/fr/docs/Web/HTML/Element/Input#attr-step). La valeur par défaut est 1.
+- La valeur ne doit pas être inférieure à [`min`](/fr/docs/Web/HTML/Element/Input#attr-min). La valeur minimale par défaut est `0`.
+- La valeur ne doit pas être supérieure à [`max`](/fr/docs/Web/HTML/Element/Input#attr-max). La valeur maximale par défaut est `0`.
+- La valeur doit être un multiple de [`step`](/fr/docs/Web/HTML/Element/Input#attr-step). La valeur par défaut est `1`.
 
 ## Valeur
 
@@ -109,25 +109,24 @@ Semblable à la propriété CSS non-standard `moz-orient` qui agit sur les élé
 
 > **Note :** Les attributs suivants ne s'appliquent pas aux contrôles d'intervalle (`<input type="range">`)&nbsp;: `accept`, `alt`, `checked`, `dirname`, `formaction`, `formenctype`, `formmethod`, `formnovalidate`, `formtarget`, `height`, `maxlength`, `minlength`, `multiple`, `pattern`, `placeholder`, `readonly`, `required`, `size`, `src`, et `width`. Si l'un de ces attributs est inclus, il sera ignoré.
 
-
 ## Exemples
 
-Bien que le type `number` permette à l'utilisateur de saisir un nombre avec certaines contraintes optionnelles (par exemple pour que la valeur soit comprise entre un minimum et un maximum), ce type nécessite de saisir une valeur spécifique. Le type `range` permet de saisir une valeur lorsque l'exactitude de celle-ci importe peu.
+Bien que le type `number` permette à l'utilisatrice ou l'utilisateur de saisir un nombre avec certaines contraintes optionnelles (par exemple, pour que la valeur soit comprise entre un minimum et un maximum), ce type nécessite de saisir une valeur spécifique. Le type `range` permet de saisir une valeur lorsque l'exactitude de celle-ci importe peu.
 
 Voici quelques scénarios où un contrôle de saisie avec un intervalle est plus pertinent&nbsp;:
 
 - Les contrôles relatifs à l'audio pour le volume, la balance ou les filtres.
-- Les contrôles relatifs à la configuration des couleurs (canaux, transparence, luminosité, etc.)
-- Les contrôles relatifs à la configuration de jeux vidéos (difficulté, distance de visibilité, taille du monde généré, etc.)
+- Les contrôles relatifs à la configuration des couleurs (canaux, transparence, luminosité, etc.).
+- Les contrôles relatifs à la configuration de jeux vidéos (difficulté, distance de visibilité, taille du monde généré, etc.).
 - La longueur du mot de passe pour les mots de passe générés par un gestionnaire de mots de passe.
 
 De façon générale, si une utilisatrice ou un utilisateur est plutôt intéressé dans un pourcentage représentant la distance entre la borne minimale et la borne maximale, un intervalle de saisie sera plus pertinent (par exemple, pour le volume, on pensera plutôt «&nbsp;augmenter le volume jusqu'à la moitié du maximum&nbsp;» que «&nbsp;mettre le volume à 0.5&nbsp;»).
 
 ### Indiquer le minimum et le maximum
 
-Par défaut, le minimum vaut 0 et le maximum vaut 100. Si ces bornes ne conviennent pas, on peut facilement les changer via les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min) et/ou [`max`](/fr/docs/Web/HTML/Element/Input#attr-max). Ces attributs acceptent des nombres décimaux.
+Par défaut, le minimum vaut `0` et le maximum vaut `100`. Si ces bornes ne conviennent pas, on peut facilement les changer via les attributs [`min`](/fr/docs/Web/HTML/Element/Input#attr-min) et/ou [`max`](/fr/docs/Web/HTML/Element/Input#attr-max). Ces attributs acceptent des nombres décimaux.
 
-Par exemple, afin de demander à un utilisateur de choisir une valeur approximative dans l'intervalle \[-10 , 10], on pourra utiliser&nbsp;:
+Par exemple, afin de demander à une utilisatrice ou un utilisateur de choisir une valeur approximative dans l'intervalle `[-10, 10]`, on pourra utiliser&nbsp;:
 
 ```html
 <input type="range" min="-10" max="10">
@@ -137,7 +136,7 @@ Par exemple, afin de demander à un utilisateur de choisir une valeur approximat
 
 ### Définir la granularité
 
-Par défaut, la granularité vaut 1, ce qui signifie que la valeur est toujours un entier. Cela peut être modifié grâce à l'attribut [`step`](/fr/docs/Web/HTML/Global_attributes#attr-step) qui permet de contrôler la granularité. Ainsi, si on souhaite une valeur comprise entre 5 et 10 et précise avec deux chiffres après la virgule, on pourra utiliser l'attribut `step` avec la valeur 0.01&nbsp;:
+Par défaut, la granularité vaut `1`, ce qui signifie que la valeur est toujours un entier. Cela peut être modifié grâce à l'attribut [`step`](/fr/docs/Web/HTML/Element/Input#attr-step) qui permet de contrôler la granularité. Ainsi, si on souhaite une valeur comprise entre `5` et `10` et précise avec deux chiffres après la virgule, on pourra utiliser l'attribut `step` avec la valeur `0.01`&nbsp;:
 
 #### Utiliser l'attribut `step`
 
@@ -149,7 +148,7 @@ Par défaut, la granularité vaut 1, ce qui signifie que la valeur est toujours 
 
 #### Utiliser l'attribut `step` avec `any`
 
-Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Global_attributes#attr-step)&nbsp;:
+Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombre de décimales, on pourra utiliser la valeur `any` pour l'attribut [`step`](/fr/docs/Web/HTML/Element/Input#attr-step)&nbsp;:
 
 ```html
 <input type="range" min="0" max="3.14" step="any">
@@ -157,7 +156,7 @@ Si on souhaite prendre en charge n'importe quelle valeur, quel que soit le nombr
 
 {{EmbedLiveSample("", 600, 40)}}
 
-Cet exemple permet de choisir une valeur entre 0 et 3.14 sans aucune restriction quant à la partie décimale.
+Cet exemple permet de choisir une valeur entre `0` et `3.14` sans aucune restriction quant à la partie décimale.
 
 ### Ajouter des marques et des étiquettes
 
@@ -204,7 +203,7 @@ Voici ce qu'on obtient lorsque le navigateur ne prend pas en charge cette foncti
 
 ##### Un contrôle avec des marques
 
-Dans l'exemple qui suit, le contrôle utilise un attribut `list` qui indique l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui définit un ensemble de marques à appliquer sur le contrôle. Il y en a ici 11&nbsp;: une marque pour 0% puis une marque tous les 10%. Chaque point pour lequel on souhaite afficher une marque est représenté par un élément [`<option>`](/fr/docs/Web/HTML/Element/Option) dont la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Option#attr-value) correspond à l'emplacement de la marque.
+Dans l'exemple qui suit, le contrôle utilise un attribut `list` qui indique l'identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) qui définit un ensemble de marques à appliquer sur le contrôle. Il y en a ici 11&nbsp;: une marque pour `0%` puis une marque tous les `10%`. Chaque point pour lequel on souhaite afficher une marque est représenté par un élément [`<option>`](/fr/docs/Web/HTML/Element/Option) dont la valeur de l'attribut [`value`](/fr/docs/Web/HTML/Element/Option#attr-value) correspond à l'emplacement de la marque.
 
 <table class="fullwidth standard-table">
   <tbody>
@@ -231,8 +230,7 @@ Dans l'exemple qui suit, le contrôle utilise un attribut `list` qui indique l'i
 &#x3C;option value="100">&#x3C;/option>
 &#x3C;/datalist>
 
-</pre
-        >
+</pre>
       </td>
       <th>Capture d'écran</th>
     </tr>
@@ -258,7 +256,6 @@ Dans l'exemple qui suit, le contrôle utilise un attribut `list` qui indique l'i
 ##### Un contrôle avec des marques et des étiquettes
 
 Il est possible d'ajouter des étiquettes grâce à l'attribut [`label`](/fr/docs/Web/HTML/Element/Option#attr-label) des éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) correspondants aux marques.
-
 
 <table class="fullwidth standard-table">
   <tbody>
@@ -384,7 +381,7 @@ Et ensuite, on met en forme l'élément `<input>` situé dans cet espace réserv
 }
 ```
 
-La taille du contrôle est de 150 pixels de long sur 20 pixels de haut. Les marges sont nulles et [`transform-origin`](/fr/docs/Web/CSS/transform-origin) déplace au milieu de l'espace le centre de rotation (75 étant la moitié de 150). Enfin, on applique une rotation anti-horaire de 90°. On obtient comme résultat un contrôle d'intervalle vertical où le maximum est situé en haut et où le minimum est situé en bas.
+La taille du contrôle est de 150 pixels de long sur 20 pixels de haut. Les marges sont nulles et [`transform-origin`](/fr/docs/Web/CSS/transform-origin) déplace au milieu de l'espace le centre de rotation (75 étant la moitié de 150). Enfin, on applique une rotation antihoraire de `90°`. On obtient comme résultat un contrôle d'intervalle vertical où le maximum est situé en haut et où le minimum est situé en bas.
 
 {{EmbedLiveSample("", 200, 200, "orientation_sample3.png")}}
 
@@ -472,10 +469,10 @@ input[type="range"] {
 ## Voir aussi
 
 - [Les formulaires HTML](/fr/docs/Learn/Forms)
-- [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface  [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) sur laquelle l'élément du DOM correspondant est basé
+- [`<input>`](/fr/docs/Web/HTML/Element/Input) et l'interface [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) sur laquelle l'élément du DOM correspondant est basé
 - [`<input type="number">`](/fr/docs/Web/HTML/Element/input/number)
-- [`validityState.rangeOverflow`](/fr/docs/Web/API/validityState/rangeOverflow) et [`validityState.rangeUnderflow`](/fr/docs/Web/API/validityState/rangeUnderflow)
+- [`validityState.rangeOverflow`](/fr/docs/Web/API/validityState/rangeOverflow)
+- [`validityState.rangeUnderflow`](/fr/docs/Web/API/validityState/rangeUnderflow)
 - [Contrôler plusieurs paramètres avec `ConstantSourceNode`](/fr/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Mettre en forme un contrôle d'intervalle (en anglais)](https://css-tricks.com/sliding-nightmare-understanding-range-input)
 - [Compatibilité des propriétés CSS](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
-
