@@ -1,0 +1,200 @@
+---
+title: calc
+slug: Web/CSS/calc
+translation_of: Web/CSS/calc()
+original_slug: Web/CSS/calc()
+---
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
+
+<h2 id="Sumario">Sumario</h2>
+
+<p>La función CSS <code>calc()</code> puede ser usada en cualquier sitio donde {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, o {{cssxref("&lt;integer&gt;")}} sea requerido. <code>Con calc()</code> puedes realizar cálculos para determinar valores de propiedades CSS.</p>
+
+<p>Es posible anidar llamadas a <code>calc()</code> dentro de otras llamadas <code>calc()</code>.</p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox">calc(<em>expresión</em>)</pre>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+ <dt>expresión</dt>
+ <dd>Una expresión matemática cuyo resultado es usado como valor para la propiedad sobre la cual se aplica.</dd>
+</dl>
+
+<h3 id="Expresiones">Expresiones</h3>
+
+<p>{{todo("mod,min,max : http://hacks.mozilla.org/2010/06/css3-calc/")}}La expresión puede ser una combinación de los siguientes operadores:</p>
+
+<dl>
+ <dt><strong>+</strong></dt>
+ <dd>Suma</dd>
+ <dt><strong>-</strong></dt>
+ <dd>Resta</dd>
+ <dt><strong>*</strong></dt>
+ <dd>Multiplicación. Al menos uno de los argumentos debe ser un {{cssxref("&lt;number&gt;")}}.</dd>
+ <dt><strong>/</strong></dt>
+ <dd>División. El divisor debe ser un {{cssxref("&lt;number&gt;")}}.</dd>
+</dl>
+
+<p>Los operandos en la expresión pueden ser valores tanto positivos como negativos. Puedes usar diferentes unidades para cada valor si lo deseas. Es recomendable el uso de paréntesis para añadir legibilidad a la expresión o para forzar precedencia en las operaciones en caso necesario.</p>
+
+<div class="note"><strong>Nota:</strong> La división por cero dará lugar a un error generado por el analizador de HTML del navegador.</div>
+
+<div class="note"><strong>Nota:</strong> las operaciones + y - siempre deben estar separadas de sus operandos mediante espacios en blanco. La expresión <code>calc(50% -8px)</code> será tomada como un operando de porcentaje seguido de otro operando de signo negativo (una expresión inválida, dado que no hay operador en medio), mientras que la expresión <code>calc(50% - 8px)</code> es un porcentaje seguido de una operación de resta.<br>
+Los operadores <code>* y</code> <code>/</code> no requieren espacio en blanco, pero es recomendable añadirlo por consistencia.</div>
+
+<dl>
+</dl>
+
+<h2 id="Ejemplos">Ejemplos</h2>
+
+<h3 id="Añadir_un_margen_a_un_objeto_en_pantalla">Añadir un margen a un objeto en pantalla</h3>
+
+<p><code>calc()</code> hace más fácil añadir márgenes a un objeto en determinadas circunstancias. En este ejemplo, CSS crea un espacio horizontal de color amarillo que llena el ancho de la ventana con un hueco de 40 pixels en ambos lados:</p>
+
+<pre class="brush: css">.banner {
+  position: absolute;
+  left: 40px;
+  width: 90%;               /* salvaguarda para navegadores que no reconocen calc() */
+  width: calc(100% - 80px);
+  border: solid black 1px;
+  box-shadow: 1px 2px;
+  background-color: yellow;
+  padding: 6px;
+  text-align: center;
+}
+</pre>
+
+<pre class="brush: html">&lt;div class="banner"&gt;This is a banner!&lt;/div&gt;</pre>
+
+<p>{{ EmbedLiveSample('Positioning_an_object_on_screen_with_a_margin', '100%', '60') }}</p>
+
+<h3 id="Entradas_de_formulario_que_se_ajustan_automáticamente_al_ancho_de_su_contenedor">Entradas de formulario que se ajustan automáticamente al ancho de su contenedor</h3>
+
+<p>Otro caso de uso para<code> calc()</code> es asegurar que los campos de un formulario llenan el espacio disponible sin pasarse de los límites de su contenedor mientras mantienen el margen apropiado.</p>
+
+<p>Echémosle un vistazo al CSS:</p>
+
+<pre class="brush: css">input {
+  padding: 2px;
+  display: block;
+  width: 98%;               /* salvaguarda para navegadores que no reconocen calc() */
+  width: calc(100% - 1em);
+}
+
+#formbox {
+  width: 130px;             /* salvaguarda para navegadores que no reconocen calc() */
+  width: calc(100% / 6);
+  border: 1px solid black;
+  padding: 4px;
+}
+</pre>
+
+<p>El formulario usa 1/6 del ancho disponible. Para asegurar que los campos de entrada tienen el tamaño adecuado, usamos  <code>calc()</code> de nuevo para establecer el ancho que deberían tener (el de su contenedor) menos 1em. Para probar esto, usaremos el siguiente HTML:</p>
+
+<pre class="brush: html">&lt;form&gt;
+  &lt;div id="formbox"&gt;
+  &lt;label&gt;Type something:&lt;/label&gt;
+  &lt;input type="text"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+<p>{{ EmbedLiveSample('Automatically_sizing_form_fields_to_fit_their_container', '100%', '80') }}</p>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Values', '#calc-notation', 'calc()')}}</td>
+   <td>{{Spec2('CSS3 Values')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_en_navegadores">Compatibilidad en navegadores</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>19 (WebKit 536.3) {{property_prefix("-webkit")}}<br>
+    26</td>
+   <td>{{CompatGeckoDesktop("2")}} {{property_prefix("-moz")}}<br>
+    {{CompatGeckoDesktop("16")}}</td>
+   <td>9</td>
+   <td>-</td>
+   <td>6 {{property_prefix("-webkit")}} (buggy)</td>
+  </tr>
+  <tr>
+   <td>On gradients' color stops</td>
+   <td>19 (WebKit 536.3) {{property_prefix("-webkit")}}<br>
+    27 (maybe 26)</td>
+   <td>{{CompatGeckoDesktop("19")}}</td>
+   <td>9</td>
+   <td>-</td>
+   <td>6 {{property_prefix("-webkit")}} (buggy)</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Característica</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Mobile</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Soporte básico</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("2")}} {{property_prefix("-moz")}}<br>
+    {{CompatGeckoMobile("16")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+  <tr>
+   <td>On gradients' color stops</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile("19")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See_also" name="See_also">Ver también</h2>
+
+<ul>
+ <li><a href="https://hacks.mozilla.org/2010/06/css3-calc/" title="Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog">Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog</a></li>
+</ul>

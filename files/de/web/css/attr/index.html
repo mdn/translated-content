@@ -1,0 +1,190 @@
+---
+title: attr
+slug: Web/CSS/attr
+tags:
+  - CSS
+  - CSS Funktion
+  - Layout
+  - Referenz
+  - Web
+translation_of: Web/CSS/attr()
+original_slug: Web/CSS/attr()
+---
+<p>{{ CSSRef() }}</p>
+
+<h2 id="Übersicht">Übersicht</h2>
+
+<p>Die <code>attr()</code> <a href="/de/docs/Web/CSS">CSS</a> Funktion wird verwendet, um einen Wert eines Attributs des ausgewählten Elements abzurufen und innerhalb des Stylesheets zu verwenden. Sie kann auch für <a href="/de/docs/Web/CSS/Pseudo-elements">Pseudoelemente</a> verwendet werden. In diesem Fall wird der Wert des Attributs seines ursprünglichen Elements zurückgegeben.</p>
+
+<p>Die <code>attr()</code> Funktion kann innerhalb jeder CSS Eigenschaft verwendet werden. {{ experimental_inline() }}</p>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox notranslate"><a href="/de/docs/Web/CSS/Wertdefinitionssyntax" title="CSS/Value_definition_syntax">Formale Syntax</a>: attr( attribute-name &lt;type-or-unit&gt;? [, &lt;fallback&gt; ]? )
+</pre>
+
+<h3 id="Werte">Werte</h3>
+
+<dl>
+ <dt><code>attribute-name</code></dt>
+ <dd>Entspricht dem Namen des Attributs des HTML Elements, das durch CSS referenziert wird.</dd>
+ <dt><code>&lt;type-</code>or-unit&gt;</dt>
+ <dd>Ist ein Schlüsselwort, das den Typ oder die Einheit des Attributwerts angibt, da in HTML einige Attribute implizite Einheiten haben. Falls die Verwendung von <code>&lt;type-or-unit&gt;</code> als Wert für das angegebene Attribut ungültig ist, ist der <code>attr()</code> Ausdruck ebenfalls ungültig. Falls nicht angegeben, wird standardmäßig <code>string</code> verwendet. Nachfolgend ist eine Liste aller Werte aufgeführt:
+ <table class="standard-table">
+  <thead>
+   <tr>
+    <th scope="col">Schlüsselwort</th>
+    <th scope="col">Assoziierter Typ</th>
+    <th scope="col">Anmerkung</th>
+    <th scope="col">Standardwert</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td><code>string</code></td>
+    <td>{{cssxref("&lt;string&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;string&gt;")}} Wert behandelt. Er wird nicht erneut geparst, insbesondere werden die Zeichen wie angegeben verwendet, anstatt dass CSS Escapes zu anderen Zeichen umgewandelt werden.</td>
+    <td>An empty string</td>
+   </tr>
+   <tr>
+    <td><code>color</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;color&gt;")}}</td>
+    <td>Der Attributwert wird als Hash (3- oder 6-Werthash) oder als Schlüsselwort interpretiert. Er muss ein gültiger CSS {{cssxref("&lt;string&gt;")}} Wert sein.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>currentColor</code></td>
+   </tr>
+   <tr>
+    <td><code>url</code> {{ experimental_inline() }}</td>
+    <td>{{ cssxref("&lt;uri&gt;") }}</td>
+    <td>Der Attributwert wird als ein String interpretiert, wie er in einer <code>url()</code> Funktion verwendet wird. Relative URLs werden relativ zum ursprünglichen Dokument interpretiert, nicht relativ zum Stylesheet.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td>Die URL <code>about:invalid</code>, die auf ein nicht existierendes Dokument mit einer allgemeinen Fehlermeldung verweist.</td>
+   </tr>
+   <tr>
+    <td><code>integer</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;integer&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;integer&gt;")}} Wert interpretiert. Falls er nicht gültig ist, d. h. keine Ganzzahl oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0</code> oder, falls <code>0</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>number</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;number&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;number&gt;")}} Wertinterpretiert. Falls er nicht gültig ist, d. h. keine Zahl oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0</code> oder, falls <code>0</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>length</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;length&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;length&gt;")}} Wert interpretiert, der die Einheit beinhaltet (z. B. <code>12.5em</code>). Falls er ungültig ist, d. h. keine Länge oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Falls die angegebene Einheit eine relative Länge ist, wandelt <code>attr()</code>sie in eine absolute Länge um.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0</code> oder, falls <code>0</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>em</code>, <code>ex</code>, <code>px</code>, <code>rem</code>, <code>vw</code>, <code>vh</code>, <code>vmin</code>, <code>vmax</code>, <code>mm</code>, <code>cm</code>, <code>in</code>, <code>pt</code>, oder <code>pc</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;length&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;number&gt;")}} Wert ohne Einheit interpretiert (z. B. <code>12.5</code>) und in einen {{cssxref("&lt;length&gt;")}} Wert mit der angegebenen Einheit umgewandelt. Falls er nicht gültig ist, d. h. keine Zahl oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Falls die angegebene Einheit eine relative Länge ist, wandelt <code>attr()</code>sie in eine absolute Länge um.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0</code> oder, falls <code>0</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>angle</code> {{ experimental_inline() }}</td>
+    <td>{{ cssxref("&lt;angle&gt;") }}</td>
+    <td>Der Attributwert wird als CSS {{ cssxref("&lt;angle&gt;") }} Wert interpretiert, der die Einheit beinhaltet (z. B. <code>30.5deg</code>). Falls er ungültig ist, d. h. kein Winkel oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0deg</code> oder, falls <code>0deg</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>deg</code>, <code>grad</code>, <code>rad</code> {{ experimental_inline() }}</td>
+    <td>{{ cssxref("&lt;angle&gt;") }}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;number&gt;")}} Wert ohne Einheit interpretiert (z. B. <code>12.5</code>) und in einen {{ cssxref("&lt;angle&gt;") }} Wert mit der angegebenen Einheit umgewandelt. Falls er nicht gültig ist, d. h. keine Zahl oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0deg</code> oder, falls <code>0deg</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>time</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;time&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;time&gt;")}} Wert interpretiert, der die Einheit beinhaltet (z. B. <code>30.5ms</code>). Falls er ungültig ist, d. h. keine Zeit oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0s</code> oder, falls <code>0s</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>s</code>, <code>ms</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;time&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;number&gt;")}} Wert ohne Einheit interpretiert (z. B. <code>12.5</code>) und in einen {{cssxref("&lt;time&gt;")}} Wert mit der angegebenen Einheit umgewandelt. Falls er nicht gültig ist, d. h. keine Zeit oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0s</code> oder, falls <code>0s</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>frequency</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;frequency&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;frequency&gt;")}} Wert interpretiert, der die Einheit beinhaltet (z. B. <code>30.5kHz</code>). Falls er ungültig ist, d. h. keine Frequenz oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0Hz</code> oder, falls <code>0Hz</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>Hz</code>, <code>kHz</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;frequency&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;number&gt;")}} Wert ohne Einheit interpretiert (z. B. <code>12.5</code>) und in einen {{cssxref("&lt;frequency&gt;")}} Wert mit der angegebenen Einheit umgewandelt. Falls er nicht gültig ist, d. h. keine Frequenz oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0Hz</code> oder, falls <code>0Hz</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+   <tr>
+    <td><code>%</code> {{ experimental_inline() }}</td>
+    <td>{{cssxref("&lt;percentage&gt;")}}</td>
+    <td>Der Attributwert wird als CSS {{cssxref("&lt;number&gt;")}} Wert ohne Einheit interpretiert (z. B. <code>12.5</code>) und in einen {{cssxref("&lt;percentage&gt;")}} Wert umgewandelt. Falls er nicht gültig ist, d. h. keine Zahl oder außerhalb des Bereichs, der von der CSS Eigenschaft akzeptiert wird, wird der Standardwert verwendet.<br>
+     Falls der Wert als Länge verwendet wird, wandelt <code>attr()</code>ihn in eine absolute Länge um.<br>
+     Voran- und nachgestellte Leerzeichen werden abgeschnitten.</td>
+    <td><code>0%</code> oder, falls <code>0%</code> kein gültiger Wert für die Eigenschaft ist, der Minimalwert der Eigenschaft.</td>
+   </tr>
+  </tbody>
+ </table>
+ </dd>
+ <dt><code>&lt;fallback&gt;</code></dt>
+ <dd>Der Wert, der verwendet wird, falls das zugehörige Attribut fehlt oder einen ungültigen Wert beinhaltet. Der Fallbackwert muss gültig sein, auch wenn er nicht verwendet wird, und darf keinen weiteren <code>attr()</code> Ausdruck beinhalten. Falls <code>attr()</code> nicht der einzige Wert einer Eigenschaft ist, muss dessen <code>&lt;fallback&gt;</code> Wert von dem Typ sein, der durch <code>&lt;type-or-unit&gt;</code> definiert wird. Falls nicht angegeben, wird CSS den Standardwert verwenden, der für jeden <code>&lt;type-or-unit&gt;</code> Wert angegeben ist.</dd>
+</dl>
+
+<h2 id="Beispiele">Beispiele</h2>
+
+<pre class="brush: css notranslate">p:before {
+  content:attr(data-foo) " ";
+}
+</pre>
+
+<pre class="brush: html notranslate">&lt;p data-foo="Hallo"&gt;Welt&lt;/p&gt;
+</pre>
+
+<h3 id="Ergebnis">Ergebnis</h3>
+
+<p>{{ EmbedLiveSample("Beispiele", '100%', '60') }}</p>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spezifikation</th>
+   <th scope="col">Status</th>
+   <th scope="col">Anmerkung</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{ SpecName('CSS3 Values', '#attr', 'attr()') }}</td>
+   <td>{{ Spec2('CSS3 Values') }}</td>
+   <td>Fügt zwei optionale Parameter hinzu; kann in allen Eigenschaften verwendet werden; kann andere Werte als {{cssxref("&lt;string&gt;")}} zurückliefern. Diese Änderungen sind als experimentell {{ experimental_inline() }} markiert und können jederzeit während der CR Phase verworfen werden, falls die Browserunterstützung nicht groß genug ist.</td>
+  </tr>
+  <tr style="vertical-align: top;">
+   <td style="vertical-align: top;">{{ SpecName('CSS2.1', 'generate.html#x18', 'attr()') }}</td>
+   <td style="vertical-align: top;">{{ Spec2('CSS2.1') }}</td>
+   <td style="vertical-align: top;">Beschränkt auf die {{ cssxref("content") }} Eigenschaft; gibt immer {{cssxref("&lt;string&gt;")}} zurück.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_Kompatibilität">Browser Kompatibilität</h2>
+
+{{Compat("css.types.attr")}}

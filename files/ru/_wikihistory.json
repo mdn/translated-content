@@ -12258,7 +12258,7 @@
       "corocoto"
     ]
   },
-  "Web/CSS/:host()": {
+  "Web/CSS/:host_function": {
     "modified": "2020-10-15T22:34:25.488Z",
     "contributors": [
       "DianaLoiko"
@@ -13449,7 +13449,7 @@
       "opereverzeva"
     ]
   },
-  "Web/CSS/attr()": {
+  "Web/CSS/attr": {
     "modified": "2020-11-04T08:52:00.007Z",
     "contributors": [
       "chrisdavidmills",
@@ -13706,7 +13706,7 @@
       "Sergey.Vdovareize"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:08:45.108Z",
     "contributors": [
       "chrisdavidmills",
@@ -13726,7 +13726,7 @@
       "ukarim"
     ]
   },
-  "Web/CSS/clamp()": {
+  "Web/CSS/clamp": {
     "modified": "2020-11-05T09:58:41.585Z",
     "contributors": [
       "chrisdavidmills",
@@ -13864,7 +13864,7 @@
       "opereverzeva"
     ]
   },
-  "Web/CSS/filter-function/blur()": {
+  "Web/CSS/filter-function/blur": {
     "modified": "2020-11-05T09:45:49.226Z",
     "contributors": [
       "chrisdavidmills",
@@ -14300,7 +14300,7 @@
       "Kikubaaqudgha"
     ]
   },
-  "Web/CSS/minmax()": {
+  "Web/CSS/minmax": {
     "modified": "2020-11-16T09:06:31.536Z",
     "contributors": [
       "chrisdavidmills",
@@ -14614,7 +14614,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/transform-function/rotate()": {
+  "Web/CSS/transform-function/rotate": {
     "modified": "2020-11-19T16:06:20.905Z",
     "contributors": [
       "chrisdavidmills",
@@ -14622,21 +14622,21 @@
       "bad4iz"
     ]
   },
-  "Web/CSS/transform-function/rotate3d()": {
+  "Web/CSS/transform-function/rotate3d": {
     "modified": "2020-11-19T16:07:43.767Z",
     "contributors": [
       "chrisdavidmills",
       "gorbatova"
     ]
   },
-  "Web/CSS/transform-function/scale3d()": {
+  "Web/CSS/transform-function/scale3d": {
     "modified": "2020-11-30T10:19:29.644Z",
     "contributors": [
       "chrisdavidmills",
       "bad4iz"
     ]
   },
-  "Web/CSS/transform-function/skew()": {
+  "Web/CSS/transform-function/skew": {
     "modified": "2020-11-30T10:26:05.313Z",
     "contributors": [
       "chrisdavidmills",
@@ -14667,7 +14667,7 @@
       "delfin211"
     ]
   },
-  "Web/CSS/url()": {
+  "Web/CSS/url": {
     "modified": "2020-10-15T22:33:29.454Z",
     "contributors": [
       "toylievallanur1"

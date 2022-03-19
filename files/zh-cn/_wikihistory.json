@@ -25143,18 +25143,18 @@
       "zhangchen"
     ]
   },
-  "Web/CSS/:host()": {
+  "Web/CSS/:host-context()": {
+    "modified": "2020-10-15T22:22:18.002Z",
+    "contributors": [
+      "jhjocelyn"
+    ]
+  },
+  "Web/CSS/:host_function": {
     "modified": "2020-10-15T22:16:54.122Z",
     "contributors": [
       "karma2014",
       "no1xsyzy",
       "764777472"
-    ]
-  },
-  "Web/CSS/:host-context()": {
-    "modified": "2020-10-15T22:22:18.002Z",
-    "contributors": [
-      "jhjocelyn"
     ]
   },
   "Web/CSS/:hover": {
@@ -27243,7 +27243,7 @@
       "jcplus"
     ]
   },
-  "Web/CSS/attr()": {
+  "Web/CSS/attr": {
     "modified": "2020-11-04T08:52:10.558Z",
     "contributors": [
       "chrisdavidmills",
@@ -27872,7 +27872,7 @@
       "SheltonDong"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:08:38.821Z",
     "contributors": [
       "chrisdavidmills",
@@ -27910,7 +27910,7 @@
       "ziyunfei"
     ]
   },
-  "Web/CSS/clamp()": {
+  "Web/CSS/clamp": {
     "modified": "2020-11-05T09:58:52.297Z",
     "contributors": [
       "chrisdavidmills",
@@ -28112,7 +28112,7 @@
       "Darrel.Hsu"
     ]
   },
-  "Web/CSS/counter()": {
+  "Web/CSS/counter": {
     "modified": "2020-11-09T07:18:40.908Z",
     "contributors": [
       "chrisdavidmills",
@@ -28139,7 +28139,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/counters()": {
+  "Web/CSS/counters": {
     "modified": "2020-11-09T07:19:47.276Z",
     "contributors": [
       "chrisdavidmills",
@@ -28246,7 +28246,7 @@
       "ran"
     ]
   },
-  "Web/CSS/element()": {
+  "Web/CSS/element": {
     "modified": "2020-11-10T11:07:35.733Z",
     "contributors": [
       "chrisdavidmills",
@@ -28262,7 +28262,7 @@
       "alongite"
     ]
   },
-  "Web/CSS/env()": {
+  "Web/CSS/env": {
     "modified": "2020-11-10T11:12:04.536Z",
     "contributors": [
       "chrisdavidmills",
@@ -28294,7 +28294,7 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/blur()": {
+  "Web/CSS/filter-function/blur": {
     "modified": "2020-11-05T09:45:54.071Z",
     "contributors": [
       "chrisdavidmills",
@@ -28302,7 +28302,7 @@
       "cheetooo"
     ]
   },
-  "Web/CSS/filter-function/brightness()": {
+  "Web/CSS/filter-function/brightness": {
     "modified": "2020-11-05T09:57:28.957Z",
     "contributors": [
       "chrisdavidmills",
@@ -28310,14 +28310,14 @@
       "cheetooo"
     ]
   },
-  "Web/CSS/filter-function/contrast()": {
+  "Web/CSS/filter-function/contrast": {
     "modified": "2020-11-09T07:21:22.300Z",
     "contributors": [
       "chrisdavidmills",
       "shirlay-Chang"
     ]
   },
-  "Web/CSS/filter-function/drop-shadow()": {
+  "Web/CSS/filter-function/drop-shadow": {
     "modified": "2020-11-10T10:59:15.589Z",
     "contributors": [
       "chrisdavidmills",
@@ -28325,7 +28325,7 @@
       "deajax"
     ]
   },
-  "Web/CSS/filter-function/grayscale()": {
+  "Web/CSS/filter-function/grayscale": {
     "modified": "2020-11-10T11:21:16.375Z",
     "contributors": [
       "chrisdavidmills",
@@ -28333,7 +28333,7 @@
       "MichealXie"
     ]
   },
-  "Web/CSS/filter-function/opacity()": {
+  "Web/CSS/filter-function/opacity": {
     "modified": "2020-11-16T09:08:21.720Z",
     "contributors": [
       "chrisdavidmills",
@@ -29177,7 +29177,7 @@
       "smilewalker"
     ]
   },
-  "Web/CSS/max()": {
+  "Web/CSS/max": {
     "modified": "2020-11-16T09:03:04.400Z",
     "contributors": [
       "chrisdavidmills",
@@ -29199,7 +29199,7 @@
       "monsuns"
     ]
   },
-  "Web/CSS/min()": {
+  "Web/CSS/min": {
     "modified": "2020-11-16T09:04:41.929Z",
     "contributors": [
       "chrisdavidmills",
@@ -29226,7 +29226,7 @@
       "sunnylost"
     ]
   },
-  "Web/CSS/minmax()": {
+  "Web/CSS/minmax": {
     "modified": "2020-11-16T09:06:57.403Z",
     "contributors": [
       "chrisdavidmills",
@@ -29637,7 +29637,7 @@
       "BKHK"
     ]
   },
-  "Web/CSS/repeat()": {
+  "Web/CSS/repeat": {
     "modified": "2020-11-18T14:44:47.276Z",
     "contributors": [
       "chrisdavidmills",
@@ -30064,7 +30064,7 @@
       "FredWe"
     ]
   },
-  "Web/CSS/transform-function/matrix()": {
+  "Web/CSS/transform-function/matrix": {
     "modified": "2020-11-16T09:00:25.677Z",
     "contributors": [
       "chrisdavidmills",
@@ -30077,21 +30077,21 @@
       "tonnylyz"
     ]
   },
-  "Web/CSS/transform-function/matrix3d()": {
+  "Web/CSS/transform-function/matrix3d": {
     "modified": "2020-11-16T09:01:45.264Z",
     "contributors": [
       "chrisdavidmills",
       "mdn_idealist"
     ]
   },
-  "Web/CSS/transform-function/perspective()": {
+  "Web/CSS/transform-function/perspective": {
     "modified": "2020-11-16T09:11:13.696Z",
     "contributors": [
       "chrisdavidmills",
       "eeeeeeeason"
     ]
   },
-  "Web/CSS/transform-function/rotate()": {
+  "Web/CSS/transform-function/rotate": {
     "modified": "2020-11-19T16:06:30.046Z",
     "contributors": [
       "chrisdavidmills",
@@ -30101,7 +30101,7 @@
       "FlowingRiver"
     ]
   },
-  "Web/CSS/transform-function/rotate3d()": {
+  "Web/CSS/transform-function/rotate3d": {
     "modified": "2020-11-19T16:07:52.729Z",
     "contributors": [
       "chrisdavidmills",
@@ -30113,28 +30113,28 @@
       "Serifx"
     ]
   },
-  "Web/CSS/transform-function/rotateX()": {
+  "Web/CSS/transform-function/rotateX": {
     "modified": "2020-11-19T16:09:23.631Z",
     "contributors": [
       "chrisdavidmills",
       "CharCat"
     ]
   },
-  "Web/CSS/transform-function/rotateY()": {
+  "Web/CSS/transform-function/rotateY": {
     "modified": "2020-11-19T16:10:17.879Z",
     "contributors": [
       "chrisdavidmills",
       "CharCat"
     ]
   },
-  "Web/CSS/transform-function/rotateZ()": {
+  "Web/CSS/transform-function/rotateZ": {
     "modified": "2020-11-30T10:07:54.353Z",
     "contributors": [
       "chrisdavidmills",
       "CharCat"
     ]
   },
-  "Web/CSS/transform-function/scale()": {
+  "Web/CSS/transform-function/scale": {
     "modified": "2020-11-30T10:16:03.265Z",
     "contributors": [
       "chrisdavidmills",
@@ -30142,21 +30142,21 @@
       "Jack-Q"
     ]
   },
-  "Web/CSS/transform-function/scaleX()": {
+  "Web/CSS/transform-function/scaleX": {
     "modified": "2020-11-30T10:21:00.840Z",
     "contributors": [
       "chrisdavidmills",
       "xgqfrms-GitHub"
     ]
   },
-  "Web/CSS/transform-function/scaleY()": {
+  "Web/CSS/transform-function/scaleY": {
     "modified": "2020-11-30T10:22:06.571Z",
     "contributors": [
       "chrisdavidmills",
       "xgqfrms"
     ]
   },
-  "Web/CSS/transform-function/skew()": {
+  "Web/CSS/transform-function/skew": {
     "modified": "2020-11-30T10:26:15.757Z",
     "contributors": [
       "chrisdavidmills",
@@ -30165,29 +30165,21 @@
       "fr1ee"
     ]
   },
-  "Web/CSS/transform-function/skewX()": {
+  "Web/CSS/transform-function/skewX": {
     "modified": "2020-11-30T10:27:30.549Z",
     "contributors": [
       "chrisdavidmills",
       "CharCat"
     ]
   },
-  "Web/CSS/transform-function/skewY()": {
-    "modified": "2020-11-30T10:28:32.252Z",
-    "contributors": [
-      "chrisdavidmills",
-      "CharCat",
-      "Kuichen"
-    ]
-  },
-  "Web/CSS/transform-function/translate()": {
+  "Web/CSS/transform-function/translate": {
     "modified": "2020-11-30T10:30:52.319Z",
     "contributors": [
       "chrisdavidmills",
       "jiang-hr"
     ]
   },
-  "Web/CSS/transform-function/translate3d()": {
+  "Web/CSS/transform-function/translate3d": {
     "modified": "2020-11-30T12:59:28.646Z",
     "contributors": [
       "chrisdavidmills",
@@ -30198,7 +30190,7 @@
       "zxk7516"
     ]
   },
-  "Web/CSS/transform-function/translateY()": {
+  "Web/CSS/transform-function/translateY": {
     "modified": "2020-11-30T13:01:20.573Z",
     "contributors": [
       "chrisdavidmills",
@@ -30308,7 +30300,7 @@
       "LiNengNeng"
     ]
   },
-  "Web/CSS/url()": {
+  "Web/CSS/url": {
     "modified": "2019-03-23T22:25:44.664Z",
     "contributors": [
       "zhyupe"
@@ -30336,7 +30328,7 @@
       "MrFish"
     ]
   },
-  "Web/CSS/var()": {
+  "Web/CSS/var": {
     "modified": "2020-11-04T09:10:48.035Z",
     "contributors": [
       "chrisdavidmills",
@@ -47512,6 +47504,14 @@
       "cungen",
       "teoli",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/CSS/transform-function/skewX": {
+    "modified": "2020-11-30T10:28:32.252Z",
+    "contributors": [
+      "chrisdavidmills",
+      "CharCat",
+      "Kuichen"
     ]
   },
   "conflicting/Web/Guide": {

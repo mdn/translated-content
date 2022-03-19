@@ -1,0 +1,274 @@
+---
+title: repeating-radial-gradient()
+slug: Web/CSS/gradient/repeating-radial-gradient
+tags:
+  - CSS
+  - CSS Function
+  - CSS Images
+  - Function
+  - Gradients
+  - Graphics
+  - Layout
+  - Reference
+  - Web
+translation_of: Web/CSS/gradient/repeating-radial-gradient()
+original_slug: Web/CSS/gradient/repeating-radial-gradient()
+browser-compat: css.types.image.gradient.repeating-radial-gradient
+---
+<div>{{CSSRef}}</div>
+
+<p>CSS函数<strong><code>repeating-radial-gradient()</code></strong> 创建一个从原点辐射的重复渐变组成的{{cssxref("&lt;image&gt;")}} 。它类似于{{cssxref("radial-gradient")}} 并且采用相同的参数，但是它会在所有方向上重复颜色，以覆盖其整个容器。函数的结果是  {{cssxref("&lt;gradient&gt;")}} 数据类型的对象， 是一种特殊的{{cssxref("&lt;image&gt;")}}类型。</p>
+
+<pre class="brush: css no-line-numbers notranslate">/* 一个从容器中心点开始的重复渐变,
+   从红色开始，渐变到蓝色，再渐变到绿色 */
+repeating-radial-gradient(circle at center, red 0, blue, green 30px);
+</pre>
+
+<p>每次重复时，色标位置的偏移量都是基准渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的色值应该与第一个色标的色值保持一致；如果不一致的话，会导致非常突兀的渐变效果。</p>
+
+<p>与其他渐变一样，线形重复渐变没有提供<a href="https://developer.mozilla.org/en-US/docs/CSS/image#no_intrinsic">固定的尺寸</a>； 即, 它没有原始尺寸或首选尺寸，也没有首选的比列。它将自适应于对应元素的尺寸。</p>
+
+<div class="note">
+<p><strong>提示：</strong> 因为 <code>&lt;gradient&gt;</code> 属于<code>&lt;image&gt;</code> 数据类型，所以只能在可以使用 <code>&lt;image&gt;</code>的地方使用它们。因此<code>repeating-linear-gradient()</code> 不适用于{{Cssxref("background-color")}} 以及使用{{cssxref("&lt;color&gt;")}} 数据类型的地方。</p>
+</div>
+
+<h2 id="语法">语法</h2>
+
+<h3 id="值">值</h3>
+
+<dl>
+ <dt>{{cssxref("&lt;position&gt;")}}</dt>
+ <dd><code>position</code>与 {{cssxref("background-position")}} 或者 {{cssxref("transform-origin")}}类似。默认值为 <code>center</code>.</dd>
+ <dt>{{cssxref("&lt;angle&gt;")}}</dt>
+ <dd>渐变轴的角度。角度顺时针增加，默认值为<code>0deg</code>。</dd>
+ <dt>{{cssxref("&lt;shape&gt;")}}</dt>
+ <dd>渐变的形状。圆形（渐变的形状是一个半径不变的正圆）或椭圆形（轴对称椭圆）。默认值为椭圆。默认值为椭圆形，即 <code>ellipse</code>。</dd>
+ <dt><code>&lt;extent-keyword&gt;</code></dt>
+ <dd>关键字用于描述边缘轮廓的具体位置。以下为关键字常量：</dd>
+ <dd>
+ <table class="standard-table">
+  <tbody>
+   <tr>
+    <th>Keyword</th>
+    <th>Description</th>
+   </tr>
+   <tr>
+    <td><code>closest-side</code></td>
+    <td>渐变的边缘形状与容器距离渐变中心点最近的一边相切（圆形）或者至少与距离渐变中心点最近的垂直和水平边相切（椭圆）。</td>
+   </tr>
+   <tr>
+    <td><code>closest-corner</code></td>
+    <td>渐变的边缘形状与容器距离渐变中心点最近的一个角相交。</td>
+   </tr>
+   <tr>
+    <td><code>farthest-side</code></td>
+    <td>与 <code>closest-side</code>相反，边缘形状与容器距离渐变中心点最远的一边相切（或最远的垂直和水平边）。</td>
+   </tr>
+   <tr>
+    <td><code>farthest-corner</code></td>
+    <td>渐变的边缘形状与容器距离渐变中心点最远的一个角相交。</td>
+   </tr>
+  </tbody>
+ </table>
+
+ <div class="note">
+ <p><strong>提示:</strong> 早期的草案中还包含其他关键字(<code>cover</code> and <code>contain</code>) ，分别相当于标准关键字 <span class="st"><code>farthest-corner</code></span> 和 <code>closest-side</code>,。但因为在某些实现中丢弃了这些旧的关键字，所以请仅使用标准关键字。</p>
+ </div>
+ </dd>
+ <dt><code>&lt;color-stop&gt;</code></dt>
+ <dd>表示某个确定位置的固定色值，包含一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value" title="CSS 数据类型 &lt;color> 表示一种标准RGB色彩空间（sRGB color space）的颜色。一种颜色可以用以下任意的方式来描述："><code>&lt;color&gt;</code></a>值加上可选的位置值（相对虚拟渐变射线的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/percentage" title="CSS 数据类型 &lt;percentage> 表述一个百分比值。许多 CSS 属性 可以取百分比值，经常用以根据父对象来确定大小。Percentages are formed by a &lt;number> immediately followed by the percentage sign %. Just as is the case with all other units in CSS, there isn't a space between the '%' and the number."><code>&lt;percentage&gt;</code></a>或者<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/length" title="是表示距离尺寸的一种css数据格式。它由一个 &lt;number> 后紧随一个长度单位（px，em，pt，in，mm，...）组成。和任何 CSS 尺寸一样，数字和单位之间没有空格。&lt;number> 0之后的长度单位是可选的。"><code>&lt;length&gt;</code></a>长度值）。 百分比值<code>0%</code>，或者长度值<code>0</code>，表示渐变中心点；百分比值<code>100%</code>表示渐变射线与边缘形状相交的点。 其间的百分比值线性对应渐变射线上的点。</dd>
+</dl>
+
+<h3 id="形式语法">形式语法</h3>
+
+<pre class="syntaxbox notranslate">repeating-radial-gradient(
+       [[ circle  || <a href="/en-US/docs/CSS/length">&lt;length&gt;</a> ]                     [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
+        [ ellipse || [<a href="/en-US/docs/CSS/length">&lt;length&gt;</a> | <a href="/en-US/docs/CSS/percentage">&lt;percentage&gt;</a> ]{2}] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
+        [[ circle | ellipse ] || &lt;extent-keyword&gt; ] [at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>]? , |
+                                                     at <a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a>   ,    &lt;color-stop&gt; [ , &lt;color-stop&gt; ]+ )
+        \---------------------------------------------------------------/\--------------------------------/
+                  定义轮廓、尺寸和结束形状的位置                                    色标列表
+
+where &lt;extent-keyword&gt; = closest-corner | closest-side | farthest-corner | farthest-side
+  and<code> &lt;color-stop&gt; = &lt;color&gt; [ &lt;percentage&gt; | &lt;length&gt; ]?</code></pre>
+
+<h2 id="示例">示例</h2>
+
+<p>径向渐变沿着一条轴线进行渲染。在每个轴线的端点处可以指定一个半径。可以想象为创建了两个“圆”，每个圆的中心位置用点指定，大小由半径值指定。渐变从内圆的圆周向外延伸到外圆的圆周。</p>
+
+<h3 id="黑白相间的渐变">黑白相间的渐变</h3>
+
+
+<pre class="brush: css notranslate" class="hidden">div {
+  display: block;
+  width: 50%;
+  height: 80px;
+  border-color: #000000;
+  padding: 10px;
+}
+#grad1 {
+  background: -webkit-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: -moz-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: -ms-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: -o-repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+  text-shadow: 1px 1px 0pt black;
+  color: white;
+  border: 1px solid black;
+  height:5.5em;
+}
+</pre>
+
+<p>{{EmbedLiveSample('Black_and_white_gradient', '300px', '120px', '')}}</p>
+
+<pre class="brush: css notranslate">background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);</pre>
+
+<h3 id="Farthest-corner渐变">Farthest-corner渐变</h3>
+
+
+<pre class="brush: css notranslate" class="hidden">div {
+  display: block;
+  width: 50%;
+  height: 80px;
+  border-radius: 10px;
+  border-color: #000000;
+  padding: 10px;
+}
+#grad1 {
+  background: -webkit-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+  background: -moz-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+  background: -ms-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+  background: -o-repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+  background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);
+  text-shadow: 1px 1px 0pt blue;
+  color: white;
+  border: 1px solid black;
+  height:5.5em;
+}
+</pre>
+
+<p>{{EmbedLiveSample('Farthest-corner', '300px', '120px', '')}}</p>
+
+<pre class="brush: css notranslate">background: repeating-radial-gradient(ellipse farthest-corner, red, black 5%, blue 5%, green 10%);</pre>
+
+<h2 id="规格">规格</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">规格</th>
+   <th scope="col">状态</th>
+   <th scope="col">备注</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Images', '#repeating-gradients', 'repeating-radial-gradient()')}}</td>
+   <td>{{Spec2('CSS3 Images')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support (on {{cssxref("background")}} and {{cssxref("background-image")}})</td>
+   <td>10 {{property_prefix("-webkit")}}</td>
+   <td>{{CompatGeckoDesktop("1.9.2")}}{{property_prefix("-moz")}}<br>
+    {{CompatGeckoDesktop("16")}}<sup>[1]</sup></td>
+   <td>10</td>
+   <td>12 {{property_prefix("-o")}}<br>
+    12.5</td>
+   <td>5.1 {{property_prefix("-webkit")}}</td>
+  </tr>
+  <tr>
+   <td>On {{cssxref("border-image")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop("29")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>On any other property that accept {{cssxref("&lt;image&gt;")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Interpolation hints (a percent without a color)</td>
+   <td>40</td>
+   <td>{{CompatGeckoDesktop("36")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Basic support (on {{cssxref("background")}} and {{cssxref("background-image")}})</td>
+   <td>4.4</td>
+   <td>{{CompatGeckoMobile("46")}}</td>
+   <td>10</td>
+   <td>12.1</td>
+   <td>7.1</td>
+  </tr>
+  <tr>
+   <td>On {{cssxref("border-image")}}</td>
+   <td>{{CompatGeckoMobile("29")}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>On any other property that accept {{cssxref("&lt;image&gt;")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Before Firefox 36, Gecko didn't apply gradient on the pre-multiplied color space, leading to shade of grey unexpectedly appearing when used with transparency. Since Firefox 42, the prefixed version of gradients can be disabled by setting <code>layout.css.prefixes.gradients</code> to <code>false</code>.</p>
+
+<p>In addition to the unprefixed support, Gecko 44.0 {{geckoRelease("44.0")}} added support for a <code>-webkit</code> prefixed version of the function for web compatibility reasons behind the preference <code>layout.css.prefixes.webkit</code>, defaulting to <code>false</code>. Since Gecko 49.0 {{geckoRelease("49.0")}} the preference defaults to <code>true</code>.</p>
+
+<h2 id="参阅：">参阅：</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/Guide/CSS/Using_CSS_gradients">使用渐变</a></li>
+ <li>其他渐变方法: {{cssxref("radial-gradient")}}, {{cssxref("linear-gradient")}}, {{cssxref("repeating-linear-gradient")}}</li>
+</ul>
