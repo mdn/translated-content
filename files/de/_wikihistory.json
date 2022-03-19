@@ -5776,7 +5776,7 @@
       "bee8bit"
     ]
   },
-  "Web/CSS/attr()": {
+  "Web/CSS/attr": {
     "modified": "2020-11-04T08:51:28.043Z",
     "contributors": [
       "chrisdavidmills",
@@ -6269,7 +6269,7 @@
       "tonra"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:07:46.370Z",
     "contributors": [
       "chrisdavidmills",
@@ -7402,19 +7402,19 @@
       "ramiy"
     ]
   },
-  "Web/CSS/transform-function/translate3d()": {
+  "Web/CSS/transform-function/translate3d": {
     "modified": "2020-12-11T16:32:16.509Z",
     "contributors": [
       "Johuspect"
     ]
   },
-  "Web/CSS/transform-function/translateY()": {
+  "Web/CSS/transform-function/translateY": {
     "modified": "2020-12-11T16:48:39.299Z",
     "contributors": [
       "Johuspect"
     ]
   },
-  "Web/CSS/transform-function/translateZ()": {
+  "Web/CSS/transform-function/translateZ": {
     "modified": "2020-12-11T16:58:23.802Z",
     "contributors": [
       "Johuspect"
@@ -7465,7 +7465,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/url()": {
+  "Web/CSS/url": {
     "modified": "2020-10-15T22:01:29.787Z",
     "contributors": [
       "valentinprotiuc"
