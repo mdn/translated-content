@@ -40,14 +40,14 @@ Les propriétés et méthodes suivantes fournissent des informations et fonction
 - [`WebGLRenderingContext.isContextLost()`](/fr/docs/Web/API/WebGLRenderingContext/isContextLost)
   - : Renvoie `true` si le contexte est perdu et `false` sinon.
 - [`WebGLRenderingContext.makeXRCompatible()`](/fr/docs/Web/API/WebGLRenderingContext/makeXRCompatible)
-  - : S'assure que le contecte est compatible avec le matériel de réalité mixte, recréant si besoin le contexte avec une nouvelle configuration. Cette méthode peut être utilisée pour démarrer une application dont l'affichage commence en 2D puis passe ensuite dans un mode de réalité virtuelle ou augmentée.
+  - : S'assure que le contexte est compatible avec le matériel de réalité mixte, recréant si besoin le contexte avec une nouvelle configuration. Cette méthode peut être utilisée pour démarrer une application dont l'affichage commence en 2D puis passe ensuite dans un mode de réalité virtuelle ou augmentée.
 
 ## Vue et rognage
 
 - [`WebGLRenderingContext.scissor()`](/fr/docs/Web/API/WebGLRenderingContext/scissor)
   - : Définit la boîte de découpe (<i lang="en">scissor box</i>).
 - [`WebGLRenderingContext.viewport()`](/fr/docs/Web/API/WebGLRenderingContext/viewport)
-  - : Définit la zone d'affichage (<i lang="en">the viewport</i>).
+  - : Définit la zone d'affichage (<i lang="en">viewport</i>).
 
 ## Informations sur l'état
 
@@ -125,18 +125,18 @@ Les propriétés et méthodes suivantes fournissent des informations et fonction
 - [`WebGLRenderingContext.createBuffer()`](/fr/docs/Web/API/WebGLRenderingContext/createBuffer)
   - : Crée un objet `WebGLBuffer`.
 - [`WebGLRenderingContext.deleteBuffer()`](/fr/docs/Web/API/WebGLRenderingContext/deleteBuffer)
-  - : Supprimer un objet `WebGLBuffer`.
+  - : Supprime un objet `WebGLBuffer`.
 - [`WebGLRenderingContext.getBufferParameter()`](/fr/docs/Web/API/WebGLRenderingContext/getBufferParameter)
   - : Renvoie des informations à propos du tampon.
 - [`WebGLRenderingContext.isBuffer()`](/fr/docs/Web/API/WebGLRenderingContext/isBuffer)
   - : Renvoie un booléen indiquant si le tampon passé est valide.
 
-## <i lang="en">Framebuffers</i>
+## Tampons d'image (<i lang="en">framebuffers</i>)
 
 - [`WebGLRenderingContext.bindFramebuffer()`](/fr/docs/Web/API/WebGLRenderingContext/bindFramebuffer)
   - : Lie un objet `WebGLFrameBuffer` à une cible donnée.
 - [`WebGLRenderingContext.checkFramebufferStatus()`](/fr/docs/Web/API/WebGLRenderingContext/checkFramebufferStatus)
-  - : Renvoie le statut du <i lang="en">framebuffer</i>.
+  - : Renvoie le statut du tampon d'image (<i lang="en">framebuffer</i>).
 - [`WebGLRenderingContext.createFramebuffer()`](/fr/docs/Web/API/WebGLRenderingContext/createFramebuffer)
   - : Crée un objet `WebGLFrameBuffer`.
 - [`WebGLRenderingContext.deleteFramebuffer()`](/fr/docs/Web/API/WebGLRenderingContext/deleteFramebuffer)
@@ -146,7 +146,7 @@ Les propriétés et méthodes suivantes fournissent des informations et fonction
 - [`WebGLRenderingContext.framebufferTexture2D()`](/fr/docs/Web/API/WebGLRenderingContext/framebufferTexture2D)
   - : Attache une image de texture à un objet `WebGLFrameBuffer`.
 - [`WebGLRenderingContext.getFramebufferAttachmentParameter()`](/fr/docs/Web/API/WebGLRenderingContext/getFramebufferAttachmentParameter)
-  - : Renvoie des informations à propos du <i lang="en">framebuffer</i>.
+  - : Renvoie des informations à propos du tampon d'image (<i lang="en">framebuffer</i>).
 - [`WebGLRenderingContext.isFramebuffer()`](/fr/docs/Web/API/WebGLRenderingContext/isFramebuffer)
   - : Renvoie un booléen indiquant si l'objet `WebGLFrameBuffer` passé est valide.
 - [`WebGLRenderingContext.readPixels()`](/fr/docs/Web/API/WebGLRenderingContext/readPixels)
@@ -279,7 +279,7 @@ Les propriétés et méthodes suivantes fournissent des informations et fonction
 - [`WebGLRenderingContext.drawArrays()`](/fr/docs/Web/API/WebGLRenderingContext/drawArrays)
   - : Effectue le rendu des primitives à partir des données de tableaux.
 - [`WebGLRenderingContext.drawElements()`](/fr/docs/Web/API/WebGLRenderingContext/drawElements)
-  - : Effectue le rendu des primitives à partir des données d'élément..
+  - : Effectue le rendu des primitives à partir des données d'élément.
 - [`WebGLRenderingContext.finish()`](/fr/docs/Web/API/WebGLRenderingContext/finish)
   - : Bloque l'exécution jusqu'à ce que les commandes précédemment appelées soient terminées.
 - [`WebGLRenderingContext.flush()`](/fr/docs/Web/API/WebGLRenderingContext/flush)

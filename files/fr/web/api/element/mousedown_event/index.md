@@ -8,7 +8,7 @@ browser-compat: api.Element.mousedown_event
 
 L'évènement **`mousedown`** est déclenché à partir d'un [`Element`](/fr/docs/Web/API/Element) lorsqu'on appuie sur le bouton d'un dispositif de pointage (une souris par exemple) pendant que le curseur est sur l'élément.
 
-> **Note :** Cet évènement est différent de [`click`](/fr/docs/Web/API/Element/click_event). `click` est déclenché après qu'un clic "entier" ait eu lieu (c'est-à-dire quand le bouton a été pressé puis relâché tandis que le pointeur était sur le même élément). `mousedown` est déclenché dès qu'on appuie sur le bouton.
+> **Note :** Cet évènement est différent de [`click`](/fr/docs/Web/API/Element/click_event). `click` est déclenché après qu'un clic «&nbsp;entier&nbsp;» a eu lieu (c'est-à-dire quand le bouton a été pressé puis relâché tandis que le pointeur était sur le même élément). `mousedown` est déclenché dès qu'on appuie sur le bouton.
 
 <table class="properties">
   <tbody>
@@ -48,7 +48,7 @@ Voir [la page sur l'évènement `mousemove`](/fr/docs/Web/API/Element/mousemove_
 ## Voir aussi
 
 - [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- D'autres évènements connexes
+- D'autres évènements connexes&nbsp;:
   - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
   - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
   - [`click`](/fr/docs/Web/API/Element/click_event)

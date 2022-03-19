@@ -6,9 +6,9 @@ original_slug: Web/Guide/API/Gamepad
 ---
 {{DefaultAPISidebar("Gamepad API")}}
 
-HTML5 a introduit de nombreuses briques technologiques qui permettent le développement de jeux interactifs. Les fonctionnalités offertes par `<canvas>`, WebGL, `<audio>`, et `<video>`, ainsi que les API JavaScript correspondantes, ont suffisamment gagné en maturité pour réaliser des tâches qui nécessitaient auparavant du code natif. L'API Gamepad est un outil qui permet d'accéder et d'utiliser les manettes et autres contrôleurs de jeux.
+HTML5 a introduit de nombreuses briques technologiques qui permettent le développement de jeux interactifs. Les fonctionnalités offertes par `<canvas>`, WebGL, `<audio>`, et `<video>`, ainsi que les API JavaScript correspondantes, ont suffisamment gagné en maturité pour réaliser des tâches qui nécessitaient auparavant du code natif. L'API <i lang="en">Gamepad</i> est un outil qui permet d'accéder et d'utiliser les manettes et autres contrôleurs de jeux.
 
-L'API [Gamepad](/fr/docs/Web/API/Gamepad_API) introduit de nouveaux évènements sur l'objet [`Window`](/fr/docs/Web/API/Window) qui permettent de lire l'état de la manette. En plus de ces évènements, l'API ajoute également un objet [`Gamepad`](/fr/docs/Web/API/Gamepad), qui permet de connaître l'état d'une manette connectée et une méthode [`navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) qu'on peut utiliser pour obtenir la liste des manettes connues sur la page.
+L'API [<i lang="en">Gamepad</i>](/fr/docs/Web/API/Gamepad_API) introduit de nouveaux évènements sur l'objet [`Window`](/fr/docs/Web/API/Window) qui permettent de lire l'état de la manette. En plus de ces évènements, l'API ajoute également un objet [`Gamepad`](/fr/docs/Web/API/Gamepad), qui permet de connaître l'état d'une manette connectée et une méthode [`navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) qu'on peut utiliser pour obtenir la liste des manettes connues sur la page.
 
 ## Connecter une manette
 
@@ -26,7 +26,7 @@ window.addEventListener("gamepadconnected", function(e) {
 });
 ```
 
-Chaque manette dispose d'un identifiant unique qui lui est associé et qui est disponible via propriété [`gamepad`](/fr/docs/Web/API/GamepadEvent/gamepad) de l'évènement.
+Chaque manette dispose d'un identifiant unique qui lui est associé et qui est disponible via la propriété [`gamepad`](/fr/docs/Web/API/GamepadEvent/gamepad) de l'évènement.
 
 ## Déconnecter une manette
 
@@ -64,7 +64,7 @@ L'exemple qui précède illustre également comment la propriété `gamepad` peu
 
 ## Utiliser l'objet `Gamepad`
 
-Comme vous pouvez le voir, les évènements **gamepad** présentés ci-avant incluent une propriété `gamepad` rattachée à l'objet de l'évènement. Cette propriété fournit un objet [`Gamepad`](/fr/docs/Web/API/Gamepad). On peut utiliser cet objet afin de déterminer la manette qui a causé l'évènement (avec son identifiant), car plusieurs manettes pourraient être connectées simultanément. On peut faire bien plus avec cet objet [`Gamepad`](/fr/docs/Web/API/Gamepad), y compris garder une référence vers celui-ci et l'utiliser pour déterminer les boutons et axes utilisés à tout moment. Une telle utilisation est souvent nécessaire pour les jeux ou les pages interactives lorsqu'il faut connaître l'état de la manette à l'instant T et l'état dans lequel elle sera au moment du prochain évènement.
+Comme vous pouvez le voir, les évènements `gamepad` présentés ci-avant incluent une propriété `gamepad` rattachée à l'objet de l'évènement. Cette propriété fournit un objet [`Gamepad`](/fr/docs/Web/API/Gamepad). On peut utiliser cet objet afin de déterminer la manette qui a causé l'évènement (avec son identifiant), car plusieurs manettes pourraient être connectées simultanément. On peut faire bien plus avec cet objet [`Gamepad`](/fr/docs/Web/API/Gamepad), y compris garder une référence vers celui-ci et l'utiliser pour déterminer les boutons et axes utilisés à tout moment. Une telle utilisation est souvent nécessaire pour les jeux ou les pages interactives lorsqu'il faut connaître l'état de la manette à l'instant T et l'état dans lequel elle sera au moment du prochain évènement.
 
 Généralement, ces opérations sont effectuées en utilisant un objet [`Gamepad`](/fr/docs/Web/API/Gamepad) avec une boucle d'animation (par exemple avec [`requestAnimationFrame`](/fr/docs/Web/API/Window/requestAnimationFrame)), où on peut développer la logique du jeu afin de choisir quoi faire pour la <i lang="en">frame</i> courante selon l'état de la (ou des) manette(s).
 
@@ -94,9 +94,9 @@ Les propriétés d'un objet [`Gamepad`](/fr/docs/Web/API/Gamepad) sont&nbsp;:
     - `pressed`
       - : Un booléen qui indique si le bouton est actuellement enfoncé/appuyé (`true`) ou relâché (`false`).
     - `value`
-      - : Un nombre flottant utilisée pour représenter la valeur des boutons analogiques comme les gâchettes. Les valeurs sont normalisées sur l'intervalle \[0.0,1.0\], avec 0.0 qui représente un bouton sur lequel il n'y a aucune pression et 1.0 qui représente un bouton complètement appuyé/enfoncé.
+      - : Un nombre flottant utilisée pour représenter la valeur des boutons analogiques comme les gâchettes. Les valeurs sont normalisées sur l'intervalle `[0.0, 1.0]`, avec `0.0` qui représente un bouton sur lequel il n'y a aucune pression et `1.0` qui représente un bouton complètement appuyé/enfoncé.
 - `axes`
-  - : Un tableau qui représente les contrôles où des axes sont présents sur l'appareil (par exemple les joysticks analogiques). Chaque élément du tableau est une valeur flottante sur l'intervalle \[-1.0,1.0] qui représente la position sur un axe, de la valeur la plus faible (-1.0), à la valeur la plus haute (1.0).
+  - : Un tableau qui représente les contrôles où des axes sont présents sur l'appareil (par exemple les joysticks analogiques). Chaque élément du tableau est une valeur flottante sur l'intervalle `[-1.0, 1.0]` qui représente la position sur un axe, de la valeur la plus faible (`-1.0`), à la valeur la plus haute (`1.0`).
 - `timestamp`
   - : : Un objet [`DOMHighResTimeStamp`](/fr/docs/Web/API/DOMHighResTimeStamp) indiquant le dernier instant auquel les données des manettes ont été mises à jour. Cela permet de déterminer si les données fournies par `axes` et `button` ont été mises à jour par le matériel. Cette valeur doit être relative à l'attribut `navigationStart` de l'interface [`PerformanceTiming`](/fr/docs/Web/API/PerformanceTiming). Les valeurs augmentent de façon monotone, ce qui signifie qu'on peut les comparer pour déterminer l'ordre des mises à jour (les valeurs les plus récentes seront toujours supérieures aux valeurs antérieures). Cette propriété n'est actuellement pas prise en charge par Firefox.
 
@@ -107,9 +107,10 @@ Les propriétés d'un objet [`Gamepad`](/fr/docs/Web/API/Gamepad) sont&nbsp;:
 Prenons un exemple simple, qui affiche les informations de connexion d'une seule manette (on ignore ici les connexions des manettes qui auraient lieu après) et qui permet de déplacer une balle sur l'écran à l'aide des quatre boutons situés sur le côté droit de la manette. Vous pouvez [voir la démonstration en direct](https://chrisdavidmills.github.io/gamepad-buttons/), ainsi que [le code source correspondant](https://github.com/chrisdavidmills/gamepad-buttons/tree/master) sur GitHub.
 
 Pour commencer, on déclare quelques variables&nbsp;:
+
 - `gamepadInfo` qui correspond au paragraphe dans lequel on écrit les informations de connexion
 - `ball` qui est la balle qu'on souhaite déplacer
-- `start` qui est la variable utilisée comme identifiant pour `requestAnimation Frame`
+- `start` qui est la variable utilisée comme identifiant pour `requestAnimationFrame()`
 - `a` et `b` qui serviront de modificateurs de position pour la balle
 
 On a également (dans le code, mais pas ici par souci de concision), des variables pour faciliter l'accès à [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) et [`cancelAnimationFrame()`](/fr/docs/Web/API/Window/cancelAnimationFrame) dans les différents navigateurs.
@@ -133,7 +134,7 @@ window.addEventListener("gamepadconnected", function(e) {
 });
 ```
 
-On gère également l'évènement [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) pour vérifier si la manette a été déconnectée. Si c'est le cas, on arrête la boucle [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) loop (voir après) et on réinitialise les informations affichées sur la manette.
+On gère également l'évènement [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) pour vérifier si la manette a été déconnectée. Si c'est le cas, on arrête la boucle [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) (voir après) et on réinitialise les informations affichées sur la manette.
 
 ```js
 window.addEventListener("gamepaddisconnected", function(e) {
@@ -255,7 +256,7 @@ function addgamepad(gamepad) {
 
   d.appendChild(a);
 
-  // See https://github.com/luser/gamepadtest/blob/master/index.html
+  // Voir https://github.com/luser/gamepadtest/blob/master/index.html
   let start = document.getElementById("start");
   if (start) {
     start.style.display = "none";

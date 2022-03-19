@@ -8,7 +8,7 @@ browser-compat: api.Element.mouseup_event
 
 L'évènement **`mouseup`** est déclenché à partir d'un [`Element`](/fr/docs/Web/API/Element) lorsqu'un bouton d'un dispositif de pointage (une souris ou un pavé tactile par exemple) est relâché lorsque le pointeur est sur cet élément.
 
-L'évènement `mouseup` peut être vu comme le contrepoint de l'évènement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) qui se produisent lorsqu'on _appuie_ sur un bouton.
+L'évènement `mouseup` peut être vu comme le contrepoint de l'évènement [`mousedown`](/fr/docs/Web/API/Element/mousedown_event) qui se produit lorsqu'on _appuie_ sur un bouton.
 
 <table class="properties">
   <tbody>
@@ -48,7 +48,7 @@ Voir [la page sur l'évènement `mousemove`](/fr/docs/Web/API/Element/mousemove_
 ## Voir aussi
 
 - [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-- D'autres évènements connexes
+- D'autres évènements connexes&nbsp;:
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
   - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)
   - [`click`](/fr/docs/Web/API/Element/click_event)

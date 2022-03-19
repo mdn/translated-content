@@ -10,7 +10,7 @@ La méthode **`DataTransfer.clearData()`** retire les données du type indiqué 
 
 Si cette méthode est appelée sans argument ou que le format est une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString) vide, la suppression des données concernera tous les types.
 
-Cette méthode _ne retire pas_ les fichiers de l'opération de glisser-déposer et il est donc possible d'avoir un élément restant avec le type `"Files"` dans la liste [`DataTransfer.types`](/fr/docs/Web/API/DataTransfer/types) si des fichiers font partie du glisser-déposer.
+Cette méthode _ne retire pas_ les fichiers de l'opération de glisser-déposer et il est donc possible d'avoir un élément restant avec le type `Files` dans la liste [`DataTransfer.types`](/fr/docs/Web/API/DataTransfer/types) si des fichiers font partie du glisser-déposer.
 
 > **Note :** Cette méthode peut uniquement être utilisée dans le gestionnaire d'évènement pour [`dragstart`](/fr/docs/Web/API/Document/dragstart_event), car c'est le seul moment où le magasin de données pour l'opération de glisser-déposer est accessible en écriture.
 
@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', function () {
     // indiquer que le glisser-déposer a démarré
     event.currentTarget.style.border = '1px dashed blue';
 
-    // On  commence par nettoyer les presse-papiers
+    // On commence par nettoyer les presse-papiers
     // existants. Cela porte sur tous les types vu qu'on
     // ne passe pas de type en argument.
 
@@ -174,4 +174,4 @@ window.addEventListener('DOMContentLoaded', function () {
 - [Les opérations de glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [Types de données pour le glisser-déposer](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
 - [Glisser-déposer plusieurs objets](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [Test `DataTransfer` - Coller ou glisser ?](https://codepen.io/tech_query/pen/MqGgap)
+- [Test `DataTransfer` — Coller ou glisser&nbsp;?](https://codepen.io/tech_query/pen/MqGgap)

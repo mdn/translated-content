@@ -12,7 +12,7 @@ L'arbre du DOM inclut les éléments tels que [`<body>`](/fr/docs/Web/HTML/Eleme
 
 {{InheritanceDiagram}}
 
-L'interface `Document` décrit les propriétés et méthodes communes à toutes sortes de documents. Selon le type de document (par exemple [HTML](/fr/docs/Web/HTML), [XML](/fr/docs/Web/XML), SVG, etc.), une API plus grande pourra être disponible. Ainsi, les documents HTML, servis avec le type de contenu `"text/html"` implémenteront également l'interface [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument) tandis que les documents XML et SVG implémenteront l'interface [`XMLDocument`](/fr/docs/Web/API/XMLDocument).
+L'interface `Document` décrit les propriétés et méthodes communes à toutes sortes de documents. Selon le type de document (par exemple [HTML](/fr/docs/Web/HTML), [XML](/fr/docs/Web/XML), SVG, etc.), une API plus grande pourra être disponible. Ainsi, les documents HTML, servis avec le type de contenu `text/html` implémenteront également l'interface [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument) tandis que les documents XML et SVG implémenteront l'interface [`XMLDocument`](/fr/docs/Web/API/XMLDocument).
 
 ## Constructeur
 
@@ -27,45 +27,45 @@ _Cette interface hérite également des interfaces [`Node`](/fr/docs/Web/API/Nod
   - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui possède le focus.
 - [`Document.body`](/fr/docs/Web/API/Document/body)
   - : Renvoie le nœud [`<body>`](/fr/docs/Web/HTML/Element/body) ou [`<frameset>`](/fr/docs/Web/HTML/Element/frameset) du document courant.
-- [`Document.characterSet`](/fr/docs/Web/API/Document/characterSet){{ReadOnlyInline}}
+- [`Document.characterSet`](/fr/docs/Web/API/Document/characterSet) {{ReadOnlyInline}}
   - : Renvoie le jeu de caractères utilisé par le document.
 - [`Document.childElementCount`](/fr/docs/Web/API/Document/childElementCount) {{readonlyInline}}
   - : Renvoie le nombre d'éléments enfants pour le document courant.
 - [`Document.children`](/fr/docs/Web/API/Document/children) {{readonlyInline}}
-  - : Renvoie les éléments enfants pour le doocument courant.
-- [`Document.compatMode`](/fr/docs/Web/API/Document/compatMode) {{Experimental_Inline}}{{ReadOnlyInline}}
+  - : Renvoie les éléments enfants pour le document courant.
+- [`Document.compatMode`](/fr/docs/Web/API/Document/compatMode) {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Indique si le document est rendu à l'écran selon le mode _quirks_ ou _strict_.
-- [`Document.contentType`](/fr/docs/Web/API/Document/contentType) {{Experimental_Inline}}{{ReadOnlyInline}}
+- [`Document.contentType`](/fr/docs/Web/API/Document/contentType) {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Renvoie le type MIME du document courant.
-- [`Document.currentScript`](/fr/docs/Web/API/Document/currentScript){{ReadOnlyInline}}
+- [`Document.currentScript`](/fr/docs/Web/API/Document/currentScript) {{ReadOnlyInline}}
   - : Renvoie l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) dont le script est actuellement en cours de traitement et [qui n'est pas un module JavaScript](https://github.com/whatwg/html/issues/997).
-- [`Document.doctype`](/fr/docs/Web/API/Document/doctype){{ReadOnlyInline}}
-  - : Renvoie la définition du type de document (<i lang="en">Document Type Definition (DTD)</i>) du document courant.
-- [`Document.documentElement`](/fr/docs/Web/API/Document/documentElement){{ReadOnlyInline}}
-  - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui est un enfant direct du document. Pour les documents HTML, il s'agit normalement de [`HTMLHtmlElement`](/fr/docs/Web/API/HTMLHtmlElement) qui représente l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) du document.
-- [`Document.documentURI`](/fr/docs/Web/API/Document/documentURI){{ReadOnlyInline}}
+- [`Document.doctype`](/fr/docs/Web/API/Document/doctype) {{ReadOnlyInline}}
+  - : Renvoie la définition du type de document (<i lang="en">Document Type Definition</i> ou DTD) du document courant.
+- [`Document.documentElement`](/fr/docs/Web/API/Document/documentElement) {{ReadOnlyInline}}
+  - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui est un enfant direct du document. Pour les documents HTML, il s'agit normalement d'un objet [`HTMLHtmlElement`](/fr/docs/Web/API/HTMLHtmlElement) qui représente l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) du document.
+- [`Document.documentURI`](/fr/docs/Web/API/Document/documentURI) {{ReadOnlyInline}}
   - : Renvoie l'emplacement du document sous la forme d'une chaîne de caractères.
-- [`Document.embeds`](/fr/docs/Web/API/Document/embeds){{ReadOnlyInline}}
+- [`Document.embeds`](/fr/docs/Web/API/Document/embeds) {{ReadOnlyInline}}
   - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments embarqués (via [`<embed>`](/fr/docs/Web/HTML/Element/embed)) dans le document.
 - [`Document.firstElementChild`](/fr/docs/Web/API/Document/firstElementChild) {{readonlyInline}}
   - : Renvoie le premier élément enfant du document courant.
 - [`Document.fonts`](/fr/docs/Web/API/Document/fonts)
   - : Renvoie l'interface [`FontFaceSet`](/fr/docs/Web/API/FontFaceSet) pour le document courant.
-- [`Document.forms`](/fr/docs/Web/API/Document/forms){{ReadOnlyInline}}
+- [`Document.forms`](/fr/docs/Web/API/Document/forms) {{ReadOnlyInline}}
   - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des éléments [`<form>`](/fr/docs/Web/HTML/Element/Form) du document.
 - [`Document.fullscreenElement`](/fr/docs/Web/API/Document/fullscreenElement) {{ReadOnlyInline}}
   - : Renvoie l'élément actuellement en mode plein écran pour ce document.
-- [`Document.head`](/fr/docs/Web/API/Document/head){{ReadOnlyInline}}
+- [`Document.head`](/fr/docs/Web/API/Document/head) {{ReadOnlyInline}}
   - : Renvoie l'élément [`<head>`](/fr/docs/Web/HTML/Element/head) pour le document courant.
-- [`Document.hidden`](/fr/docs/Web/API/Document/hidden){{ReadOnlyInline}}
+- [`Document.hidden`](/fr/docs/Web/API/Document/hidden) {{ReadOnlyInline}}
   - : Renvoie une valeur booléenne qui indique si la page est considérée masquée ou non.
-- [`Document.images`](/fr/docs/Web/API/Document/images){{ReadOnlyInline}}
+- [`Document.images`](/fr/docs/Web/API/Document/images) {{ReadOnlyInline}}
   - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) des images du document.
-- [`Document.implementation`](/fr/docs/Web/API/Document/implementation){{ReadOnlyInline}}
+- [`Document.implementation`](/fr/docs/Web/API/Document/implementation) {{ReadOnlyInline}}
   - : Renvoie l'implémentation du DOM associée au document courant.
 - [`Document.lastElementChild`](/fr/docs/Web/API/Document/lastElementChild) {{readonlyInline}}
   - : Renvoie le dernier élément enfant du document courant.
-- [`Document.links`](/fr/docs/Web/API/Document/links){{ReadOnlyInline}}
+- [`Document.links`](/fr/docs/Web/API/Document/links) {{ReadOnlyInline}}
   - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) contenant l'ensemble des hyperliens du document.
 - [`Document.mozSyntheticDocument`](/fr/docs/Web/API/Document/mozSyntheticDocument) {{Non-standard_Inline}}
   - : Renvoie `true` uniquement si le document est synthétique (par exemple une page indépendante, un fichier audio ou vidéo).
@@ -73,21 +73,21 @@ _Cette interface hérite également des interfaces [`Node`](/fr/docs/Web/API/Nod
   - : Renvoie l'objet [`Element`](/fr/docs/Web/API/Element) pour l'élément affiché en mode d'incrustation vidéo (<i lang="en">picture-in-picture</i>) pour ce document.
 - [`Document.pictureInPictureEnabled`](/fr/docs/Web/API/Document/pictureInPictureEnabled) {{ReadOnlyInline}}
   - : Renvoie `true` si la fonctionnalité d'incrustation vidéo est activée.
-- [`Document.plugins`](/fr/docs/Web/API/Document/plugins){{ReadOnlyInline}}
+- [`Document.plugins`](/fr/docs/Web/API/Document/plugins) {{ReadOnlyInline}}
   - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) contenant les plugins disponibles.
 - [`Document.pointerLockElement`](/fr/docs/Web/API/Document/pointerLockElement) {{ReadOnlyInline}}
   - : Renvoie l'élément définit comme cible pour les évènements de souris pendant que le pointeur est verrouillé. Cette propriété vaut `null` si le verrouillage est en cours, si le pointeur est déverrouillé ou si la cible est située dans un autre document.
-- [`Document.featurePolicy`](/fr/docs/Web/API/Document/featurePolicy) {{Experimental_Inline}}{{ReadOnlyInline}}
+- [`Document.featurePolicy`](/fr/docs/Web/API/Document/featurePolicy) {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Renvoie l'interface [`FeaturePolicy`](/fr/docs/Web/API/FeaturePolicy) qui fournit une API pour l'introspection des règles de fonctionnalité (<i lang="en">feature policies</i>) appliquées au document.
-- [`Document.scripts`](/fr/docs/Web/API/Document/scripts){{ReadOnlyInline}}
+- [`Document.scripts`](/fr/docs/Web/API/Document/scripts) {{ReadOnlyInline}}
   - : Renvoie un objet [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) contenant les éléments [`<script>`](/fr/docs/Web/HTML/Element/script) du document.
-- [`Document.scrollingElement`](/fr/docs/Web/API/Document/scrollingElement){{ReadOnlyInline}}
+- [`Document.scrollingElement`](/fr/docs/Web/API/Document/scrollingElement) {{ReadOnlyInline}}
   - : Renvoie une référence à l'objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément qui fait défiler le document.
 - [`Document.styleSheets`](/fr/docs/Web/API/Document/styleSheets) {{ReadOnlyInline}}
   - : Renvoie un objet [`StyleSheetList`](/fr/docs/Web/API/StyleSheetList) contenant les objets [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet) pour les feuilles de style CSS liées explicitement ou embarquées dans le document.
-- [`Document.timeline`](/fr/docs/Web/API/Document/timeline) {{Experimental_Inline}}{{ReadOnlyInline}}
+- [`Document.timeline`](/fr/docs/Web/API/Document/timeline) {{Experimental_Inline}} {{ReadOnlyInline}}
   - : Renvoie la chronologie, sous la forme d'une instance [`DocumentTimeline`](/fr/docs/Web/API/DocumentTimeline), qui est automatiquement créée au chargement de la page.
-- [`Document.visibilityState`](/fr/docs/Web/API/Document/visibilityState){{ReadOnlyInline}}
+- [`Document.visibilityState`](/fr/docs/Web/API/Document/visibilityState) {{ReadOnlyInline}}
   - : Renvoie une chaîne de caractères qui indique l'état de visibilité du document. Les valeurs possibles sont `visible`, `hidden`, `prerender`, et `unloaded`.
 
 ### Extensions pour `HTMLDocument`
@@ -96,7 +96,7 @@ _L'interface `Document` pour les documents HTML hérite de l'interface [`HTMLDoc
 
 - [`Document.cookie`](/fr/docs/Web/API/Document/cookie)
   - : Renvoie une liste, dont les éléments sont séparés par des points-virgules, des cookies du document ou permet de définir un cookie.
-- [`Document.defaultView`](/fr/docs/Web/API/Document/defaultView){{ReadOnlyInline}}
+- [`Document.defaultView`](/fr/docs/Web/API/Document/defaultView) {{ReadOnlyInline}}
   - : Renvoie une référence à l'objet de la fenêtre.
 - [`Document.designMode`](/fr/docs/Web/API/Document/designMode)
   - : Permet d'accéder ou de définir la possibilité d'éditer l'ensemble du document.
@@ -104,22 +104,22 @@ _L'interface `Document` pour les documents HTML hérite de l'interface [`HTMLDoc
   - : Permet d'accéder ou de définir la directionnalité (écriture de droite à gauche ou de gauche à droite) du document.
 - [`Document.domain`](/fr/docs/Web/API/Document/domain) {{Deprecated_Inline}}
   - : Permet d'accéder ou de définir le domaine du document courant.
-- [`Document.lastModified`](/fr/docs/Web/API/Document/lastModified){{ReadOnlyInline}}
+- [`Document.lastModified`](/fr/docs/Web/API/Document/lastModified) {{ReadOnlyInline}}
   - : Renvoie la date à laquelle le document a été modifié pour la dernière fois.
-- [`Document.location`](/fr/docs/Web/API/Document/location){{ReadOnlyInline}}
+- [`Document.location`](/fr/docs/Web/API/Document/location) {{ReadOnlyInline}}
   - : Renvoie l'URI du document courant.
-- [`Document.readyState`](/fr/docs/Web/API/Document/readyState){{ReadOnlyInline}}
+- [`Document.readyState`](/fr/docs/Web/API/Document/readyState) {{ReadOnlyInline}}
   - : Renvoie l'état de chargement du document.
-- [`Document.referrer`](/fr/docs/Web/API/Document/referrer){{ReadOnlyInline}}
+- [`Document.referrer`](/fr/docs/Web/API/Document/referrer) {{ReadOnlyInline}}
   - : Renvoie l'URI de la page qui a lié vers cette page.
 - [`Document.title`](/fr/docs/Web/API/Document/title)
   - : Permet d'accéder ou de définir le titre du document courant.
-- [`Document.URL`](/fr/docs/Web/API/Document/URL){{ReadOnlyInline}}
+- [`Document.URL`](/fr/docs/Web/API/Document/URL) {{ReadOnlyInline}}
   - : Renvoie l'emplacement du document sous la forme d'une chaîne de caractères.
 
 ### Gestionnaires d'évènement
 
-_L'interface `Document` est étendue avec des gestionnaires d'évènement supplémentaires définis dans [GlobalEventHandlers](/fr/docs/Web/API/GlobalEventHandlers#event_handlers)._
+_L'interface `Document` est étendue avec des gestionnaires d'évènement supplémentaires définis dans l'interface [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers#gestionnaires_dévènement)._
 
 - [`GlobalEventHandlers.onselectionchange`](/fr/docs/Web/API/GlobalEventHandlers/onselectionchange) {{Experimental_Inline}}
   - : Un [gestionnaire d'évènement](/fr/docs/Web/Events/Event_handlers) qui représente le code à appeler lorsque l'évènement [`selectionchange`](/fr/docs/Web/API/Document/selectionchange_event) est déclenché.
@@ -130,13 +130,13 @@ _L'interface `Document` est étendue avec des gestionnaires d'évènement suppl�
   - : Permet d'accéder ou de définir la couleur des liens actifs pour le corps du document.
 - [`Document.all`](/fr/docs/Web/API/Document/all) {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fournit un accès à tous les éléments du document. Elle renvoie un objet [`HTMLAllCollection`](/fr/docs/Web/API/HTMLAllCollection) dont la racine est le nœud du document. Il s'agit d'une propriété historique non-standard qui ne devrait pas être utilisée.
-- [`Document.anchors`](/fr/docs/Web/API/Document/anchors) {{Deprecated_Inline}}{{ReadOnlyInline}}
+- [`Document.anchors`](/fr/docs/Web/API/Document/anchors) {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Renvoie une liste de toutes les ancres du document.
-- [`Document.applets`](/fr/docs/Web/API/Document/applets) {{Deprecated_Inline}}{{ReadOnlyInline}}
+- [`Document.applets`](/fr/docs/Web/API/Document/applets) {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Renvoie une liste ordonnée des applets contenus dans le document.
 - [`Document.bgColor`](/fr/docs/Web/API/Document/bgColor) {{Deprecated_Inline}}
   - : Permet d'accéder ou de définir la couleur d'arrière-plan du document courant.
-- [`Document.charset`](/fr/docs/Web/API/Document/characterSet) {{Deprecated_Inline}}{{ReadOnlyInline}}
+- [`Document.charset`](/fr/docs/Web/API/Document/characterSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Un synonyme de [`Document.characterSet`](/fr/docs/Web/API/Document/characterSet), cette dernière devrait être utilisée à la place.
 - [`Document.fgColor`](/fr/docs/Web/API/Document/fgColor) {{Deprecated_Inline}}
   - : Permet d'accéder ou de définir la couleur de premier plan ou la couleur du texte du document courant.
@@ -144,19 +144,19 @@ _L'interface `Document` est étendue avec des gestionnaires d'évènement suppl�
   - : `true` lorsque le document est en [mode plein écran](/fr/docs/Web/API/Fullscreen_API).
 - [`Document.height`](/fr/docs/Web/API/Document/height) {{Non-standard_Inline}} {{deprecated_inline}}
   - : Permet d'accéder ou de définir la hauteur du document courant.
-- [`Document.inputEncoding`](/fr/docs/Web/API/Document/characterSet) {{Deprecated_Inline}}{{ReadOnlyInline}}
+- [`Document.inputEncoding`](/fr/docs/Web/API/Document/characterSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Un synonyme de [`Document.characterSet`](/fr/docs/Web/API/Document/characterSet), cette dernière devrait être utilisée à la place.
-- [`Document.lastStyleSheetSet`](/fr/docs/Web/API/Document/lastStyleSheetSet) {{deprecated_inline}}{{ReadOnlyInline}}
+- [`Document.lastStyleSheetSet`](/fr/docs/Web/API/Document/lastStyleSheetSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Renvoie le nom de la feuille de styles qui a été activée en dernière. Vaut `null` jusqu'à ce que la feuille de style soit changée avec la définition de la valeur [`selectedStyleSheetSet`](/fr/docs/Web/API/Document/selectedStyleSheetSet).
 - [`Document.linkColor`](/fr/docs/Web/API/Document/linkColor) {{Deprecated_Inline}}
   - : Permet d'accéder ou de définir la couleur des hyperliens contenus dans le document.
-- [`Document.preferredStyleSheetSet`](/fr/docs/Web/API/Document/preferredStyleSheetSet) {{deprecated_inline}}{{ReadOnlyInline}}
+- [`Document.preferredStyleSheetSet`](/fr/docs/Web/API/Document/preferredStyleSheetSet) {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Renvoie l'ensemble de feuilles de styles préféré comme indiqué par l'autrice ou l'auteur de la page.
 - [`Document.rootElement`](/fr/docs/Web/API/Document/rootElement) {{Deprecated_Inline}}
   - : Agit comme [`Document.documentElement`](/fr/docs/Web/API/Document/documentElement), mais uniquement pour les éléments racines [`<svg>`](/fr/docs/Web/SVG/Element/svg). C'est cette dernière qu'il faudra utiliser à la place.
 - [`Document.selectedStyleSheetSet`](/fr/docs/Web/API/Document/selectedStyleSheetSet) {{deprecated_inline}}
   - : Renvoie l'ensemble de feuilles de styles actuellement utilisé.
-- [`Document.styleSheetSets`](/fr/docs/Web/API/Document/styleSheetSets) {{deprecated_inline}}{{ReadOnlyInline}}
+- [`Document.styleSheetSets`](/fr/docs/Web/API/Document/styleSheetSets) {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Renvoie une liste des ensembles de feuilles de styles disponibles sur le document.
 - [`Document.vlinkColor`](/fr/docs/Web/API/Document/vlinkColor) {{Deprecated_Inline}}
   - : Permet d'accéder ou de définir la couleur des hyperliens visités.
@@ -167,7 +167,7 @@ _L'interface `Document` est étendue avec des gestionnaires d'évènement suppl�
 - [`Document.xmlStandalone`](/fr/docs/Web/API/Document/xmlStandalone) {{deprecated_inline}}
   - : Renvoie `true` si la déclaration XML indique que le document est autonome (par exemple qu'une partie externe du DTD affecte le contenu du document), `false` sinon.
 - [`Document.xmlVersion`](/fr/docs/Web/API/Document/xmlVersion) {{deprecated_inline}}
-  - : Renvoie le numéro de version tel qu'indiqué dans la déclaration XML, ou `"1.0"` si la déclaration est absente.
+  - : Renvoie le numéro de version tel qu'indiqué dans la déclaration XML, ou `1.0` si la déclaration est absente.
 
 ## Méthodes
 
@@ -354,19 +354,19 @@ L'écoute de ces évènements peut être effectuée avec `addEventListener()` ou
 - [`drop`](/fr/docs/Web/API/Document/drop_event)
   - : Déclenché lorsqu'un élément ou une sélection de texte est déposée sur une zone de dépôt valide. Également disponible avec la propriété [`ondrop`](/fr/docs/Web/API/GlobalEventHandlers/ondrop).
 
-### Évènements liés au mode plein-écran
+### Évènements liés au mode plein écran
 
 - [`fullscreenchange`](/fr/docs/Web/API/Document/fullscreenchange_event)
-  - : Déclenché lorsque le document rentre ou sort du mode [plein-écran](/fr/docs/Web/API/Fullscreen_API/Guide).
+  - : Déclenché lorsque le document rentre ou sort du mode [plein écran](/fr/docs/Web/API/Fullscreen_API/Guide).
 - [`fullscreenerror`](/fr/docs/Web/API/Document/fullscreenerror_event)
-  - : Déclenché en cas d'erreur lors d'une tentative d'entrée ou de sortie du mode [plein-écran](/fr/docs/Web/API/Fullscreen_API/Guide).
+  - : Déclenché en cas d'erreur lors d'une tentative d'entrée ou de sortie du mode [plein écran](/fr/docs/Web/API/Fullscreen_API/Guide).
 
 ### Évènements clavier
 
 - [`keydown`](/fr/docs/Web/API/Document/keydown_event)
   - : Déclenché lors de l'appui sur une touche. Également disponible avec la propriété [`onkeydown`](/fr/docs/Web/API/GlobalEventHandlers/onkeydown).
-- [`keypress`](/fr/docs/Web/API/Document/keypress_event)
-  - : Déclenché lors de l'appui sur une touche qui produit un caractère. {{Deprecated_Inline}} Également disponible avec la propriété [`onkeypress`](/fr/docs/Web/API/GlobalEventHandlers/onkeypress).
+- [`keypress`](/fr/docs/Web/API/Document/keypress_event) {{Deprecated_Inline}}
+  - : Déclenché lors de l'appui sur une touche qui produit un caractère. Également disponible avec la propriété [`onkeypress`](/fr/docs/Web/API/GlobalEventHandlers/onkeypress).
 - [`keyup`](/fr/docs/Web/API/Document/keyup_event)
   - : Déclenché lors du relâchement d'une touche. Également disponible avec la propriété [`onkeyup`](/fr/docs/Web/API/GlobalEventHandlers/onkeyup).
 
@@ -454,7 +454,7 @@ Firefox définit certaines méthodes non-standard&nbsp;:
 
 Microsoft définit certaines propriétés non-standard&nbsp;:
 
-- [`Document.fileSize`](/fr/docs/Web/API/Document/fileSize){{Non-standard_Inline}} {{deprecated_inline}}
+- [`Document.fileSize`](/fr/docs/Web/API/Document/fileSize)\* {{Non-standard_Inline}} {{deprecated_inline}}
   - : Renvoie la taille du document, exprimée en octets. Cette propriété n'est plus prise en charge à partir d'Internet Explorer 11.
 
 ## Spécifications

@@ -15,23 +15,23 @@ Le gain est une valeur sans unité, qui change éventuellement avec le temps, qu
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row"><dfn>Nombre d'entrées</dfn></th>
+      <th scope="row">Nombre d'entrées</th>
       <td><code>1</code></td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Nombre de sorties</dfn></th>
+      <th scope="row">Nombre de sorties</th>
       <td><code>1</code></td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Mode de comptage des canaux</dfn></th>
+      <th scope="row">Mode de comptage des canaux</th>
       <td><code>"max"</code></td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Nombre de canaux</dfn></th>
+      <th scope="row">Nombre de canaux</th>
       <td><code>2</code> (inutilisés dans le mode de comptage par défaut)</td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Interprétation des canaux</dfn></th>
+      <th scope="row">Interprétation des canaux</th>
       <td><code>"speakers"</code></td>
     </tr>
   </tbody>
@@ -40,14 +40,14 @@ Le gain est une valeur sans unité, qui change éventuellement avec le temps, qu
 ## Constructeur
 
 - [`GainNode()`](/fr/docs/Web/API/GainNode/GainNode)
-  - : Crée une nouvelle instance d'un objet `GainNode`. Il est aussi possible d'utiliser la méthode de construction [`BaseAudioContext.createGain()`](/fr/docs/Web/API/BaseAudioContext/createGain). Voir [créer un objet `AudioNode`](/fr/docs/Web/API/AudioNode#créer_un_objet_audionode)
+  - : Crée une nouvelle instance d'un objet `GainNode`. Il est aussi possible d'utiliser la méthode de construction [`BaseAudioContext.createGain()`](/fr/docs/Web/API/BaseAudioContext/createGain). Voir [créer un objet `AudioNode`](/fr/docs/Web/API/AudioNode#créer_un_objet_audionode).
 
 ## Propriétés
 
-_Hérite des propritétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)_.
+_Hérite des propritétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)._
 
 - [`GainNode.gain`](/fr/docs/Web/API/GainNode/gain) {{readonlyinline}}
-  - : Est un [`AudioParam` de type `a-rate`](/fr/docs/Web/API/AudioParam#a-rate) représentant le montant du gain à appliquer. Il faut modifier [`AudioParam.value`](/fr/docs/Web/API/AudioParam/value) ou utiliser les méthodes fournies par `AudioParam` pour changer l'effet du gain.
+  - : Est un [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate) représentant le montant du gain à appliquer. Il faut modifier [`AudioParam.value`](/fr/docs/Web/API/AudioParam/value) ou utiliser les méthodes fournies par `AudioParam` pour changer l'effet du gain.
 
 ## Méthodes
 
@@ -67,4 +67,4 @@ Voir la page sur [`BaseAudioContext.createGain()`](/fr/docs/Web/API/BaseAudioCon
 
 ## Voir aussi
 
-- [Utiliser l'API Web Audio](/fr/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web_Audio_API/Using_Web_Audio_API)

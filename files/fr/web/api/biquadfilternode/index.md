@@ -29,7 +29,7 @@ L'interface **`BiquadFilterNode`** représente un simple filtre de bas niveau, c
       <td><code>2</code> (pas utilisés dans le mode de comptage par défaut)</td>
     </tr>
     <tr>
-      <th scope="row"><dfn>Interprétation du canal</dfn></th>
+      <th scope="row">Interprétation du canal</th>
       <td><code>"speakers"</code></td>
     </tr>
   </tbody>
@@ -42,7 +42,7 @@ L'interface **`BiquadFilterNode`** représente un simple filtre de bas niveau, c
 
 ## Propriétés
 
-_Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)_.
+_Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)._
 
 - [`BiquadFilterNode.frequency`](/fr/docs/Web/API/BiquadFilterNode/frequency)
   - : Un objet [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: c'est un nombre flottant à double précision représentant une fréquence de l'algorithme de filtrage, exprimée en Hertz.
@@ -51,7 +51,7 @@ _Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNod
 - [`BiquadFilterNode.Q`](/fr/docs/Web/API/BiquadFilterNode/Q)
   - : Un objet [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: c'est un nombre flottant à double précision représentant un [facteur de qualité](https://en.wikipedia.org/wiki/Q_factor).
 - [`BiquadFilterNode.gain`](/fr/docs/Web/API/BiquadFilterNode/gain) {{readonlyInline}}
-  - : Un objet [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: c'est un nombre flottant à double précision représentant le [gain](https://fr.wikipedia.org/wiki/Gain_(%C3%A9lectronique)) utilisé dans l'algorithme de filtrage.
+  - : Un objet [`AudioParam`](/fr/docs/Web/API/AudioParam) de type [`a-rate`](/fr/docs/Web/API/AudioParam#a-rate)&nbsp;: c'est un nombre flottant à double précision représentant le [gain](https://fr.wikipedia.org/wiki/Gain_(électronique)) utilisé dans l'algorithme de filtrage.
 - [`BiquadFilterNode.type`](/fr/docs/Web/API/BiquadFilterNode/type)
 
   - : Une chaîne de caractères définissant le type d'algorithme de filtrage que le nœud implémente.
@@ -170,14 +170,14 @@ _Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNod
 
 ## Méthodes
 
-_Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)_.
+_Hérite des propriétés de son parent, [`AudioNode`](/fr/docs/Web/API/AudioNode)._
 
 - [`BiquadFilterNode.getFrequencyResponse()`](/fr/docs/Web/API/BiquadFilterNode/getFrequencyResponse)
   - : À partir des valeurs courantes des paramètres de filtre, calcule la fréquence de réponse pour des fréquences spécifiées dans le tableau de fréquences `frequencyHz` passé en paramètre.
 
 ## Exemples
 
-Voir la page [`AudioContext.createBiquadFilter`](/fr/docs/Web/API/BaseAudioContext/createBiquadFilter#exemple) pour un exemple de code illustrant comment utiliser un objet `AudioContext` afin de créer un nœud de filtre  create a Biquad filter node.
+Voir la page [`AudioContext.createBiquadFilter`](/fr/docs/Web/API/BaseAudioContext/createBiquadFilter#exemple) pour un exemple de code illustrant comment utiliser un objet `AudioContext` afin de créer un nœud de filtre.
 
 ## Spécifications
 
@@ -189,4 +189,4 @@ Voir la page [`AudioContext.createBiquadFilter`](/fr/docs/Web/API/BaseAudioConte
 
 ## Voir aussi
 
-- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

@@ -8,7 +8,7 @@ browser-compat: api.AudioBufferSourceNode.buffer
 
 La propriété **`buffer`** de l'interface [`AudioBufferSourceNode`](/fr/docs/Web/API/AudioBufferSourceNode) donne la possibilité de lire un son en utilisant un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) comme ressource audio.
 
-Si la propriété `buffer` a la valeur `null`, le nœud génère un canal unique silencieux (chaque échantillon vaut 0).
+Si la propriété `buffer` a la valeur `null`, le nœud génère un canal unique silencieux (chaque échantillon vaut `0`).
 
 ## Syntaxe
 
@@ -18,11 +18,11 @@ AudioBufferSourceNode.buffer = soundBuffer;
 
 ### Valeur
 
-Un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) qui contient les données représentant le son que le noeud va lire.
+Un objet [`AudioBuffer`](/fr/docs/Web/API/AudioBuffer) qui contient les données représentant le son que le nœud va lire.
 
 ## Exemple
 
-> **Note :** Pour un exemple complet, voir [cette démonstration](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [le code source correspondant](https://github.com/mdn/webaudio-examples/tree/master/audio-buffer).
+> **Note :** Pour un exemple complet, voir [cette démonstration](https://mdn.github.io/webaudio-examples/audio-buffer/), ou [le code source correspondant](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html).
 
 ```js
 let AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -87,5 +87,5 @@ button.onclick = function() {
 
 ## Voir aussi
 
-- [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [L'API Web Audio](/fr/docs/Web/API/Web_Audio_API)
+- [Utiliser l'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [L'API <i lang="en">Web Audio</i>](/fr/docs/Web/API/Web_Audio_API)
