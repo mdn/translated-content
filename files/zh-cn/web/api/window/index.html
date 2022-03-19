@@ -103,9 +103,9 @@ translation_of: Web/API/Window
  <dd>返回嵌入窗口的元素，如果未嵌入窗口，则返回null。</dd>
  <dt>{{domxref("Window.frames")}} {{readOnlyInline}}</dt>
  <dd>返回当前窗口中所有子窗体的数组。</dd>
- <dt>{{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}</dt>
+ <dt>{{domxref("Window.fullScreen")}}</dt>
  <dd>此属性表示窗口是否以全屏显示。</dd>
- <dt>{{domxref("Window.globalStorage")}} {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}</dt>
+ <dt>{{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}</dt>
  <dd>Gecko 13 (Firefox 13) 开始废弃。使用 {{domxref("Window.localStorage")}} 替代它。<br>
  原本是：用于存储跨页面数据的多重存储对象。</dd>
  <dt>{{domxref("Window.history")}} {{ReadOnlyInline}}</dt>
@@ -122,19 +122,19 @@ translation_of: Web/API/Window
  <dd>获取、设置 window 对象的 location, 或者当前的 URL.</dd>
  <dt>{{domxref("Window.locationbar")}} {{ReadOnlyInline}}</dt>
  <dd>返回 locationbar 对象，其可视性可以在窗口中切换。</dd>
- <dt>{{domxref("Window.localStorage")}} {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}</dt>
+ <dt>{{domxref("Window.localStorage")}} {{readOnlyInline}}</dt>
  <dd>返回用来存储只能在创建它的源下访问的数据的本地存储对象的引用</dd>
  <dt>{{domxref("Window.menubar")}} {{ReadOnlyInline}}</dt>
  <dd>返回菜单条对象，它的可视性可以在窗口中切换</dd>
- <dt>{{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Window.messageManager")}}</dt>
  <dd>返回窗口的 <a href="/en-US/docs/The_message_manager">message manager</a> 对象。</dd>
- <dt>{{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}} {{Deprecated_inline}}</dt>
+ <dt>{{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}} {{Deprecated_inline}}</dt>
  <dd>返回当前动画循环开始经过的毫秒数</dd>
- <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{non-standard_inline}} {{gecko_minversion_inline("1.9.2")}}</dt>
+ <dt>{{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}} {{non-standard_inline}}</dt>
  <dd>Returns the horizontal (X) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> in {{interface("nsIDOMWindowUtils")}} for a conversion factor to adapt to screen pixels if needed.</dd>
- <dt>{{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}} {{gecko_minversion_inline("1.9.2")}}</dt>
+ <dt>{{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}</dt>
  <dd>Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See <code>mozScreenPixelsPerCSSPixel</code> for a conversion factor to adapt to screen pixels if needed.</dd>
- <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Window.mozPaintCount")}} {{non-standard_inline}} {{ReadOnlyInline}}</dt>
  <dd>Returns the number of times the current document has been rendered to the screen in this window. This can be used to compute rendering performance.</dd>
  <dt>{{domxref("Window.name")}}</dt>
  <dd>获取/设置窗口的名称。</dd>
@@ -264,7 +264,7 @@ translation_of: Web/API/Window
  <dd>Returns the selection object representing the selected item(s).</dd>
  <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Returns the browser to the home page.</dd>
- <dt>{{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("Window.matchMedia()")}}</dt>
  <dd>Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.</dd>
  <dt>{{domxref("Window.maximize()")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
@@ -286,7 +286,7 @@ translation_of: Web/API/Window
  <dd>返回用户在提示对话框中输入的文本。</dd>
  <dt>{{domxref("Window.releaseEvents()")}} {{Non-standard_inline}} {{Deprecated_inline}}</dt>
  <dd>释放捕获特定类型事件的窗口。</dd>
- <dt>{{domxref("Window.requestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Window.requestAnimationFrame()")}}</dt>
  <dd>告诉浏览器一个动画正在进行中，请求浏览器为下一个动画帧重新绘制窗口。</dd>
  <dt>{{domxref("Window.requestIdleCallback()")}} {{experimental_inline}}</dt>
  <dd>启用在浏览器空闲期间对任务进行调度。</dd>
@@ -371,9 +371,9 @@ translation_of: Web/API/Window
  <dd>An event handler property dispatched before a user is prompted to save a web site to a home screen on mobile.</dd>
  <dt>{{domxref("Window.ondevicelight")}}</dt>
  <dd>An event handler property for any ambient light levels changes</dd>
- <dt>{{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("Window.ondevicemotion")}}</dt>
  <dd>Called if accelerometer detects a change (For mobile devices)</dd>
- <dt>{{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}</dt>
+ <dt>{{domxref("Window.ondeviceorientation")}}</dt>
  <dd>Called when the orientation is changed (For mobile devices)</dd>
  <dt>{{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}} Chrome only</dt>
  <dd>An event handler property for any device orientation changes.</dd>
@@ -383,7 +383,7 @@ translation_of: Web/API/Window
  <dd>Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).</dd>
  <dt>{{domxref("Window.ongamepaddisconnected")}}</dt>
  <dd>Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).</dd>
- <dt>{{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("Window.onmozbeforepaint")}}</dt>
  <dd>An event handler property for the <code>MozBeforePaint</code> event, which is sent before repainting the window if the event has been requested by a call to the {{domxref("Window.mozRequestAnimationFrame()")}} method.</dd>
  <dt>{{domxref("Window.onpaint")}}</dt>
  <dd>An event handler property for paint events on the window.</dd>
@@ -434,7 +434,7 @@ translation_of: Web/API/Window
  <dd>Called when a resource fails to load OR when an error occurs at runtime. See {{event("error")}} event.</dd>
  <dt>{{domxref("GlobalEventHandlers.onfocus")}}</dt>
  <dd>Called after the window receives or regains focus. See {{event("focus")}} events.</dd>
- <dt>{{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}</dt>
+ <dt>{{domxref("WindowEventHandlers.onhashchange")}}</dt>
  <dd>An event handler property for {{event('hashchange')}} events on the window; called when the part of the URL after the hash mark ("#") changes.</dd>
  <dt>{{domxref("GlobalEventHandlers.oninput")}}</dt>
  <dd>Called when the value of an &lt;input&gt; element changes</dd>
@@ -468,7 +468,7 @@ translation_of: Web/API/Window
  <dd>Called when the user navigates away from the page, before the onunload event. See {{event("pagehide")}} event.</dd>
  <dt>{{domxref("WindowEventHandlers.onpageshow")}}</dt>
  <dd>Called after all resources and the DOM are fully loaded. See {{event("pageshow")}} event.</dd>
- <dt>{{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}</dt>
+ <dt>{{domxref("WindowEventHandlers.onpopstate")}}</dt>
  <dd>Called when a back button is pressed.</dd>
  <dt>{{domxref("GlobalEventHandlers.onreset")}}</dt>
  <dd>Called when a form is reset</dd>
