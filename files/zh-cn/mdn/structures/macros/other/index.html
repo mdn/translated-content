@@ -80,7 +80,7 @@ tags:
 
 <ul>
   <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/SectionOnPage.ejs">SectionOnPage</a></code> 宏创建一个链接到一个部分的名称和包含该部分的文章的短语。例如，<code>\{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</code> 输出以下内容：<em>{{SectionOnPage("/en-US/docs/Mozilla/Firefox/Releases/21", "Changes for Web developers")}}</em>。</li>
-  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/manch.ejs">manch</a></code> 在当前接口中插入一个方法的链接；这仅用于接口文档页面。 <code>\{{manch("foo")}}</code> 产生 <code>&lt;code&gt;&lt;a href=&quot;current/path#foo&quot;&gt;foo()&lt;/a&gt;&lt;/code&gt;</code> ({{ manch("foo") }})。</li>
+  <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/manch.ejs">manch</a></code> 在当前接口中插入一个方法的链接；这仅用于接口文档页面。 <code>\{{manch("foo")}}</code> 产生 <code>&lt;code&gt;&lt;a href=&quot;current/path#foo&quot;&gt;foo()&lt;/a&gt;&lt;/code&gt;</code> (<a href="#foo()"><code>foo()</code></a>)。</li>
   <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Link.ejs">Link</a></code> 宏在 MDN 上插入到指定页面的链接，使用页面标题作为要单击的可见字符串，并从页面的 SEO 摘要中提取工具提示。</li>
   <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LinkItem.ejs">LinkItem</a></code> 宏插入到指定 URL 的链接，将指示的文本作为要单击的可见字符串。该链接会自动选取目标页面的摘要作为其工具提示。这与 <code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/Link.ejs">Link</a></code> 的不同之处在于您必须指定标题。</li>
   <li><code><a href="https://github.com/mdn/yari/tree/master/kumascript/macros/LinkItemDL.ejs">LinkItemDL</a></code> 宏插入指向指定 URL 的链接，指示文本为 {{HTMLElement("dt")}}，这也是链接。 {{HTMLElement("dd")}} 元素包含指定页面的摘要。</li>
