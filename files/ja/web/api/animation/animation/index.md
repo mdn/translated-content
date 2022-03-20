@@ -1,60 +1,50 @@
 ---
 title: Animation()
 slug: Web/API/Animation/Animation
+tags:
+  - API
+  - Animation
+  - アニメーション
+  - コンストラクター
+  - リファレンス
+  - ウェブアニメーション API
+browser-compat: api.Animation.Animation
 translation_of: Web/API/Animation/Animation
 ---
-<p>{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}</p>
+{{ APIRef("Web Animations API") }}
 
-<p><a href="/ja/docs/Web/API/Web_Animations_API">ウェブアニメーション API</a> の <strong><code>Animation()</code></strong> コンストラクタは新たに <code>Animation</code> オブジェクトのインスタンスを返します。</p>
+**`Animation()`** は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) のコンストラクターで、新しい `Animation` オブジェクトのインスタンスを返します。
 
-<h2 id="Syntax">Syntax</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>animation</em> = new Animation([<em>effect</em>][, <em>timeline</em>]);</pre>
+```js
+var animation = new Animation([effect][, timeline]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### 引数
 
-<dl>
- <dt><code>effect</code> {{optional_inline}}</dt>
- <dd>The target effect, as an object based on the {{domxref("AnimationEffectReadOnly")}} interface, to assign to the animation. Although in the future other effects such as <code>SequenceEffect</code>s or <code>GroupEffect</code>s might be possible, the only kind of effect currently available is {{domxref("KeyframeEffect")}}. This can be <code>null</code> (which is the default) to indicate that there should be no effect applied.</dd>
- <dt><code>timeline</code> {{optional_inline}}</dt>
- <dd>Specifies the <code>timeline</code> with which to associate the animation, as an object of a type based on the {{domxref("AnimationTimeline")}} interface. Currently the only timeline type available is {{domxref("DocumentTimeline")}}, but in the future there my be timelines associated with gestures or scrolling, for example. The default value is {{domxref("Document.timeline")}}, but this can be set to <code>null</code> as well.</dd>
-</dl>
+- `effect` {{optional_inline}}
+  - : アニメーションに割り当てる、 {{domxref("AnimationEffect")}} インターフェイスに基づくオブジェクトとして対象となる効果です。将来的には `SequenceEffect` や `GroupEffect` などの他の効果も利用できるようになるかもしれませんが、現在のところ利用できる効果は {{domxref("KeyframeEffect")}} だけです。これは `null` （これが既定値です）にすると、効果を適用しないことを示します。
+- `timeline` {{optional_inline}}
+  - : アニメーションを関連付ける `timeline` を指定します。 {{domxref("AnimationTimeline")}} インターフェイスに基づく型のオブジェクトを指定します。現在利用できるタイムラインは {{domxref("DocumentTimeline")}} だけですが、将来的にはジェスチャーやスクロールに関連するタイムラインも利用できるようになるかもしれません。既定値は {{domxref("Document.timeline")}} ですが、`null` に設定することも可能です。
 
-<h2 id="Examples">Examples</h2>
+## 例
 
-<p>In the <a href="http://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010">Follow the White Rabbit example</a>, the <code>Animation()</code> constructor is used to create an <code>Animation</code> for the <code>rabbitDownKeyframes</code> using the document's <code>timeline</code>:</p>
+[「白兎を追え」の例](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010)では、 `Animation()` コンストラクターを使用して `Animation` を `rabbitDownKeyframes` に対して、文書の `timeline` を使用して生成しています。
 
-<pre class="brush: js">var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
-</pre>
+```js
+var rabbitDownAnimation = new Animation(rabbitDownKeyframes, document.timeline);
+```
 
-<h2 id="Specifications">Specifications</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Animations', '#dom-animation-animation', 'Animation()' )}}</td>
-   <td>{{Spec2('Web Animations')}}</td>
-   <td>Editor's draft.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.Animation.Animation")}}</p>
-</div>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Animations_API">Web Animations API</a></li>
- <li>{{domxref("Animation")}}</li>
-</ul>
+- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
+- {{domxref("Animation")}}
