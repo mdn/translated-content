@@ -1,44 +1,44 @@
 ---
-title: Console.trace()
+title: console.trace()
 slug: Web/API/console/trace
 tags:
   - API
   - Chrome
   - DOM
-  - Debugging
+  - デバッグ
   - Firefox
-  - Method
-  - NeedsBrowserCompatibility
+  - メソッド
   - String
-  - Web Development
-  - console
+  - ウェブ開発
   - console.trace()
   - trace
-  - web console
+  - ウェブコンソール
+browser-compat: api.console.trace
 translation_of: Web/API/Console/trace
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>{{domxref("console")}} インタフェースの <code><strong>trace()</strong></code> メソッドは、<a href="/ja/docs/Tools/Web_Console">Web コンソール</a>にスタックトレースを出力します。</p>
+**`console.trace()`** メソッドは、[ウェブコンソール](/ja/docs/Tools/Web_Console)にスタックトレースを出力します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>詳細や使用例については、{{domxref("console")}} のドキュメントの <a href="/ja/docs/Web/API/console#Stack_traces">スタックトレース</a> をご覧ください。</p>
+詳細や使用例については、{{domxref("console")}} のドキュメントの[スタックトレース](/ja/docs/Web/API/console#スタックトレース)をご覧ください。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">console.trace( [...<var>any</var>, ...<var>data</var> ]);</pre>
+```js
+console.trace( [...any, ...data ]);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>...<var>any</var>, ...<var>data</var></code> {{optional_inline}}</dt>
- <dd>コンソールにスタックトレースとともに出力されるゼロ個以上のオブジェクト。これらは、{{domxref("console.log()")}}<span class="tlid-translation translation" lang="ja"><span title="">メソッドに渡される場合と同じ方法でアセンブルおよびフォーマットされます。</span></span></dd>
-</dl>
+- `...any, ...data` {{optional_inline}}
+  - : スタックトレースと共にコンソールに出力する 0 個以上のオブジェクトです。これらは {{domxref("console.log()")}} メソッドに渡したのと同じ方法で構成され書式化されます。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">function foo() {
+```js
+function foo() {
   function bar() {
     console.trace();
   }
@@ -46,41 +46,20 @@ translation_of: Web/API/Console/trace
 }
 
 foo();
-</pre>
+```
 
-<p>コンソールには次のようなトレースが表示されます。</p>
+コンソールには次のようなトレースが表示されます。
 
-<pre>bar
+```
+bar
 foo
-&lt;anonymous&gt;</pre>
+<anonymous>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#trace", "console.trace()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>最初の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.Console.trace")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+{{Compat}}
