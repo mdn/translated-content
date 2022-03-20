@@ -108,7 +108,7 @@ original_slug: Outils/DevToolsAPI
  <dt>
  <h5 id="getToolDefinitionMap()"><code>getToolDefinitionMap()</code></h5>
  </dt>
- <dd>Returns a toolId → {{anch("ToolDefinition")}} map for tools that are enabled.</dd>
+ <dd>Returns a toolId → {{anch("ToolDefinition")}} map for tools that are enabled.</dd>
  <dt>
  <h5 id="getToolDefinitionArray()"><code>getToolDefinitionArray()</code></h5>
  </dt>
@@ -275,7 +275,7 @@ original_slug: Outils/DevToolsAPI
  <br>
  <strong>Return value:</strong><br>
  A {{domxref("Promise")}} that is fulfilled with the {{anch("ToolPanel")}} object of the loaded panel once the tool has loaded.<br>
-  </dd>
+  </dd>
  <dt>
  <h5 id="selectTool(toolId)"><code>selectTool(toolId)</code></h5>
  </dt>
@@ -342,7 +342,7 @@ original_slug: Outils/DevToolsAPI
  <br>
  <strong>Return value:</strong><br>
  A {{domxref("Promise")}} that is fulfilled once the new host is ready.<br>
-  </dd>
+  </dd>
  <dt>
  <h5 id="reloadTarget(force)"><code>reloadTarget(force)</code></h5>
  </dt>
@@ -799,7 +799,7 @@ gDevTools.once("netmonitor-init").then(toolbox =&gt; {
 
 <p>Register a tool</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">gDevTools<span class="punctuation token">.</span><span class="function token">registerTool</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js">gDevTools<span class="punctuation token">.</span><span class="function token">registerTool</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
   <span class="comment token">// FIXME: missing key related properties.</span>
   id<span class="punctuation token">:</span> <span class="string token">"inspector"</span><span class="punctuation token">,</span>
   icon<span class="punctuation token">:</span> <span class="string token">"chrome://browser/skin/devtools/inspector-icon.png"</span><span class="punctuation token">,</span>
@@ -820,7 +820,7 @@ gDevTools.once("netmonitor-init").then(toolbox =&gt; {
 
 <p>Open a tool, or select it if the toolbox is already open:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">let</span> target <span class="operator token">=</span> TargetFactory<span class="punctuation token">.</span><span class="function token">forTab</span><span class="punctuation token">(</span>gBrowser<span class="punctuation token">.</span>selectedTab<span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">let</span> target <span class="operator token">=</span> TargetFactory<span class="punctuation token">.</span><span class="function token">forTab</span><span class="punctuation token">(</span>gBrowser<span class="punctuation token">.</span>selectedTab<span class="punctuation token">)</span><span class="punctuation token">;</span>
 <span class="keyword token">let</span> toolbox <span class="operator token">=</span> gDevTools<span class="punctuation token">.</span><span class="function token">openToolbox</span><span class="punctuation token">(</span>target<span class="punctuation token">,</span> <span class="keyword token">null</span><span class="punctuation token">,</span> <span class="string token">"inspector"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 
 toolbox<span class="punctuation token">.</span><span class="function token">once</span><span class="punctuation token">(</span><span class="string token">"inspector-ready"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>event<span class="punctuation token">,</span> panel<span class="punctuation token">)</span> <span class="punctuation token">{</span>
@@ -830,7 +830,7 @@ toolbox<span class="punctuation token">.</span><span class="function token">once
 
 <p>Add a sidebar to an existing tool:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">let</span> sidebar <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ToolSidebar</span><span class="punctuation token">(</span>xulTabbox<span class="punctuation token">,</span> toolPanel<span class="punctuation token">,</span> <span class="string token">"toolId"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">let</span> sidebar <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ToolSidebar</span><span class="punctuation token">(</span>xulTabbox<span class="punctuation token">,</span> toolPanel<span class="punctuation token">,</span> <span class="string token">"toolId"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 sidebar<span class="punctuation token">.</span><span class="function token">addTab</span><span class="punctuation token">(</span><span class="string token">"tab1"</span><span class="punctuation token">,</span> <span class="string token">"chrome://browser/content/.../tab1.xhtml"</span><span class="punctuation token">,</span> <span class="keyword token">true</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 sidebar<span class="punctuation token">.</span><span class="function token">addTab</span><span class="punctuation token">(</span><span class="string token">"tab2"</span><span class="punctuation token">,</span> <span class="string token">"chrome://browser/content/.../tab2.xhtml"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
 sidebar<span class="punctuation token">.</span><span class="function token">show</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>

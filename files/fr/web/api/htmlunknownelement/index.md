@@ -11,11 +11,11 @@ L’interface **`HTMLUnknownElement`** représente un élément HTML invalide et
 
 ## Propriétés
 
-_Pas de propriété spécifique ; hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
+_Pas de propriété spécifique&nbsp;; hérite des propriétés de son parent, {{DOMxRef("HTMLElement")}}._
 
 ## Méthodes
 
-_Pas de méthode spécifique ; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
+_Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent, {{DOMxRef("HTMLElement")}}._
 
 ## Spécifications
 
@@ -30,5 +30,5 @@ _Pas de méthode spécifique ; hérite des méthodes de son parent, {{DOMxRef(
 
 ## Voir aussi
 
-- Les éléments HTML obsolètes ou non standard implémentant cette interface : {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}
+- Les éléments HTML obsolètes ou non standard implémentant cette interface&nbsp;: {{HTMLElement("bgsound")}}, {{HTMLElement("blink")}}, {{HTMLElement("isindex")}}, {{HTMLElement("multicol")}}, {{HTMLElement("nextid")}}, {{HTMLElement("rb")}}, {{HTMLElement("spacer")}}
 - {{DOMxRef("SVGUnknownElement")}}

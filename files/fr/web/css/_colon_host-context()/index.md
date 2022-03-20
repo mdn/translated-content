@@ -21,7 +21,7 @@ Un cas d'usage fréquent consiste à utilise un sélecteur de descendant — `h1
 /* Cible un hôte uniquement si c'est un descendant
    du sélecteur passé en argument */
 :host-context(h1) {
-  font-weight: bold;
+  font-weight: bold;
 }
 
 :host-context(main article) {

@@ -5,11 +5,11 @@ translation_of: Web/API/PointerEvent
 ---
 {{ APIRef("Pointer Events") }}
 
-L'interface **`PointerEvent`** représente les données de l'état d'un événément du DOM produit par un pointeur, tels que la géométrie du point de contact, le type d'appareil qui a généré l'événément, l'intensité de pression qui a été appliquée au contact de la surface, etc.
+L'interface **`PointerEvent`** représente les données de l'état d'un événément du DOM produit par un pointeur, tels que la géométrie du point de contact, le type d'appareil qui a généré l'événément, l'intensité de pression qui a été appliquée au contact de la surface, etc.
 
-Un *pointeur* est une représentation agnostique de tout appareil de saisie (tels qu'une souris, un stylet, ou un point de contact sur une surface tactile). Le pointeur peut cibler des coordonnées spécifiques (ou une collection de coordonnées) sur la surface de contact telle qu'un écran.
+Un *pointeur* est une représentation agnostique de tout appareil de saisie (tels qu'une souris, un stylet, ou un point de contact sur une surface tactile). Le pointeur peut cibler des coordonnées spécifiques (ou une collection de coordonnées) sur la surface de contact telle qu'un écran.
 
-Le *test de ciblage* d'un pointeur est le processus qu'un navigateur utilise pour déterminer l'élément pour un événément de pointeur. Typiquement, cela est déterminé en considérant la position du pointeur ainsi que l'agencement visuel des éléments dans un document sur l'écran.
+Le *test de ciblage* d'un pointeur est le processus qu'un navigateur utilise pour déterminer l'élément pour un événément de pointeur. Typiquement, cela est déterminé en considérant la position du pointeur ainsi que l'agencement visuel des éléments dans un document sur l'écran.
 
 ## Constructeurs
 
@@ -29,13 +29,13 @@ _Cette interface hérite des proprétés de {{domxref("MouseEvent")}} et {{domxr
 - {{ domxref('PointerEvent.pressure')}} {{readonlyInline}}
   - : La pressure normalisée de l'influx du pointeur dans un intervalle compris entre 0 et 1, où 0 et 1 représentent respectivement la pression minimale et maximale que l'appareil est capable de détecter.
 - {{ domxref('PointerEvent.tangentialPressure')}} {{readonlyInline}}
-  - : La pression tangentielle normalisée d'un influx de pointeur (également nommée compression ou contrainte cylindrique), où 0 et 1 représentent respectivement la pression minimale et maximale que l'appareil est capable de détecter.
+  - : La pression tangentielle normalisée d'un influx de pointeur (également nommée compression ou contrainte cylindrique), où 0 et 1 représentent respectivement la pression minimale et maximale que l'appareil est capable de détecter.
 - {{ domxref('PointerEvent.tiltX')}} {{readonlyInline}}
   - : Le plan de l'angle (en dégrés, dans un intervalle compris entre -90 et 90) entre le plan Y-Z et le plan contenant à la fois l'axe du transducteur (ex. : un crayon stylet) et l'axe Y.
 - {{ domxref('PointerEvent.tiltY')}} {{readonlyInline}}
   - : Le plan de l'angle (en dégrés, dans un intervalle compris entre -90 et 90) entre le plan X-Z et le plan contenant à la fois l'axe du transducteur (ex. : un crayon stylet) et l'axe X.
 - {{ domxref('PointerEvent.twist')}} {{readonlyInline}}
-  - : La rotation en degrés et dans le sens des aiguilles d'une montre, d'un transducteur (ex. : crayon stylet) autour de axe principal, avec une valeur comprise dans un intervalle entre 0 et 359.
+  - : La rotation en degrés et dans le sens des aiguilles d'une montre, d'un transducteur (ex. : crayon stylet) autour de axe principal, avec une valeur comprise dans un intervalle entre 0 et 359.
 - {{ domxref('PointerEvent.pointerType')}} {{readonlyInline}}
   - : Indique le type d'appareil qui a provoqué l'événément (souris, stylet, touché, etc.)
 - {{ domxref('PointerEvent.isPrimary')}} {{readonlyInline}}
@@ -44,13 +44,13 @@ _Cette interface hérite des proprétés de {{domxref("MouseEvent")}} et {{domxr
 ## Methods
 
 - {{ domxref('PointerEvent.getCoalescedEvents()')}} {{deprecated_inline}}
-  - : Retourne une séquence de toutes les instances de `PointerEvent` qui ont été dirigées vers l'événément {{event("pointermove")}} envoyé.
+  - : Retourne une séquence de toutes les instances de `PointerEvent` qui ont été dirigées vers l'événément {{event("pointermove")}} envoyé.
 
 ## Types d'événéments de pointeur
 
-L'interface `PointerEvent` a plusieurs types d'événéments. Pour déterminer quel événément s'est produit, regardez la propriété {{ domxref("Event.type", "type") }} de l'événément.
+L'interface `PointerEvent` a plusieurs types d'événéments. Pour déterminer quel événément s'est produit, regardez la propriété {{ domxref("Event.type", "type") }} de l'événément.
 
-> **Note :** Il est important de remarquer que dans beaucoup de cas, à la fois les événéments du pointeur et de la souris sont envoyés (afin de laisser la logique interagir avec l'utilisateur même lorsqu'elle n'est pas spécifique à un type de pointeur) . Si vous utilisez les événéments de pointeur, vous devez exécuter {{ domxref("event.preventDefault()") }} afin d'empêcher l'événément de la souris d'être également envoyée.
+> **Note :** Il est important de remarquer que dans beaucoup de cas, à la fois les événéments du pointeur et de la souris sont envoyés (afin de laisser la logique interagir avec l'utilisateur même lorsqu'elle n'est pas spécifique à un type de pointeur) . Si vous utilisez les événéments de pointeur, vous devez exécuter {{ domxref("event.preventDefault()") }} afin d'empêcher l'événément de la souris d'être également envoyée.
 
 - {{event('pointerover')}}
   - : Cet événément est déclenché lorsqu'un appareil de pointage est déplacé vers la zone du test de ciblage d'un élément.
@@ -69,7 +69,7 @@ L'interface `PointerEvent` a plusieurs types d'événéments. Pour déterminer 
 - {{event('pointerleave')}}
   - : Cet événément est déclenché lorsqu'un appareil de pointage est déplacé en dehors de la zone de ciblage d'un élément. Pour les appareils avec un stylet, cet événément est déclenché lorsque le stylet quitte la zone de portée pour être détectée au survol par le numériseur.
 - {{event('gotpointercapture')}}
-  - : Cet événément est déclenché lorsqu'un élément est capturé par un pointeur.
+  - : Cet événément est déclenché lorsqu'un élément est capturé par un pointeur.
 - {{event('lostpointercapture')}}
   - : Cet événément est déclenché après qu'un pointeur ait relâché sa capture.
 

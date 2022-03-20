@@ -2007,13 +2007,6 @@
       "AngelSankturio"
     ]
   },
-  "Tools/Index": {
-    "modified": "2020-07-16T22:36:02.468Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz"
-    ]
-  },
   "Tools/JSON_viewer": {
     "modified": "2020-07-16T22:36:31.343Z",
     "contributors": [
@@ -4025,6 +4018,13 @@
       "AndreasWebdev"
     ]
   },
+  "Web/API/Window/devicemotion_event": {
+    "modified": "2019-03-18T21:15:10.920Z",
+    "contributors": [
+      "clepsydra",
+      "m9898"
+    ]
+  },
   "Web/API/Window/dump": {
     "modified": "2019-03-23T23:34:35.263Z",
     "contributors": [
@@ -4073,13 +4073,6 @@
       "vssn",
       "Hansschmucker",
       "AdamNiezielinski"
-    ]
-  },
-  "Web/API/Window/ondevicemotion": {
-    "modified": "2019-03-18T21:15:10.920Z",
-    "contributors": [
-      "clepsydra",
-      "m9898"
     ]
   },
   "Web/API/Window/openDialog": {
@@ -5783,7 +5776,7 @@
       "bee8bit"
     ]
   },
-  "Web/CSS/attr()": {
+  "Web/CSS/attr": {
     "modified": "2020-11-04T08:51:28.043Z",
     "contributors": [
       "chrisdavidmills",
@@ -6276,7 +6269,7 @@
       "tonra"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:07:46.370Z",
     "contributors": [
       "chrisdavidmills",
@@ -7409,19 +7402,19 @@
       "ramiy"
     ]
   },
-  "Web/CSS/transform-function/translate3d()": {
+  "Web/CSS/transform-function/translate3d": {
     "modified": "2020-12-11T16:32:16.509Z",
     "contributors": [
       "Johuspect"
     ]
   },
-  "Web/CSS/transform-function/translateY()": {
+  "Web/CSS/transform-function/translateY": {
     "modified": "2020-12-11T16:48:39.299Z",
     "contributors": [
       "Johuspect"
     ]
   },
-  "Web/CSS/transform-function/translateZ()": {
+  "Web/CSS/transform-function/translateZ": {
     "modified": "2020-12-11T16:58:23.802Z",
     "contributors": [
       "Johuspect"
@@ -7472,7 +7465,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/url()": {
+  "Web/CSS/url": {
     "modified": "2020-10-15T22:01:29.787Z",
     "contributors": [
       "valentinprotiuc"
@@ -13536,6 +13529,13 @@
       "Ar-sch.de",
       "DDSD",
       "Dria"
+    ]
+  },
+  "conflicting/Tools": {
+    "modified": "2020-07-16T22:36:02.468Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz"
     ]
   },
   "conflicting/Web/API": {

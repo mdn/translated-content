@@ -11,19 +11,19 @@ translation_of: Web/API/Storage
 ---
 {{APIRef("Web Storage API")}}
 
-L'interface **`Storage`** de l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API) donne accès au stockage de session (`SessionStorage`) ou au stockage local (`LocalStorage`) pour un domaine donné, vous permettant par exemple d'ajouter, de modifier ou de supprimer des éléments enregistrés.
+L'interface **`Storage`** de l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API) donne accès au stockage de session (`SessionStorage`) ou au stockage local (`LocalStorage`) pour un domaine donné, vous permettant par exemple d'ajouter, de modifier ou de supprimer des éléments enregistrés.
 
-Si vous voulez manipuler le stockage de session pour un domaine, appelez la méthode {{domxref("Window.sessionStorage")}}. Si vous voulez manipuler le stockage local pour un domaine, appelez la méthode {{domxref("Window.localStorage")}}.
+Si vous voulez manipuler le stockage de session pour un domaine, appelez la méthode {{domxref("Window.sessionStorage")}}. Si vous voulez manipuler le stockage local pour un domaine, appelez la méthode {{domxref("Window.localStorage")}}.
 
 ## Propriétés
 
 - {{domxref("Storage.length")}} {{readonlyInline}}
-  - : Renvoie un entier représentant le nombre d'éléments contenus dans l'objet `Storage`.
+  - : Renvoie un entier représentant le nombre d'éléments contenus dans l'objet `Storage`.
 
 ## Méthodes
 
 - {{domxref("Storage.key()")}}
-  - : Lorsqu'on lui passe un nombre `n`, cette méthode renvoie le nom de la n-ième clé dans le stockage.
+  - : Lorsqu'on lui passe un nombre `n`, cette méthode renvoie le nom de la n-ième clé dans le stockage.
 
 <!---->
 
@@ -38,7 +38,7 @@ Si vous voulez manipuler le stockage de session pour un domaine, appelez la mét
 
 ## Exemples
 
-Nous accédons ici à un objet `Storage` en appelant `localStorage`. Nous testons d'abord si le stockage local contient des éléments en utilisant `!localStorage.getItem('bgcolor')`. Si oui, nous exécutons une fonction appelée `setStyles()` qui récupère les éléments en utilisant {{domxref("Storage.getItem()")}}, et utilise ces valeurs pour mettre à jour les styles de page. Sinon, nous exécutons une autre fonction appelée `populateStorage()`, qui utilise {{domxref("Storage.setItem()")}} pour régler les valeurs des éléments, puis qui exécute `setStyles()`.
+Nous accédons ici à un objet `Storage` en appelant `localStorage`. Nous testons d'abord si le stockage local contient des éléments en utilisant `!localStorage.getItem('bgcolor')`. Si oui, nous exécutons une fonction appelée `setStyles()` qui récupère les éléments en utilisant {{domxref("Storage.getItem()")}}, et utilise ces valeurs pour mettre à jour les styles de page. Sinon, nous exécutons une autre fonction appelée `populateStorage()`, qui utilise {{domxref("Storage.setItem()")}} pour régler les valeurs des éléments, puis qui exécute `setStyles()`.
 
 ```js
 if(!localStorage.getItem('bgcolor')) {

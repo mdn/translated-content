@@ -75,7 +75,7 @@ console.log(itérateur.next().value); // 20
 | Spécification                                                                                            | Statut                       | Commentaires         |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-generatorfunction-objects', 'GeneratorFunction')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-generatorfunction-objects', 'GeneratorFunction')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

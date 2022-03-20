@@ -50,14 +50,14 @@ translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criter
 
 <ul>
  <li>持久化存储：这种数据是希望长久保留的，只有的当用户选择清除才会被删除掉（比如，<font><font>在Firefox中，您可以通过转到</font></font><em><font><font>“首选项”</font></font></em><font><font>并使用“ </font></font><em><font><font>隐私和安全”&gt;“Cookie和站点数据”</font></font></em><font><font>下的选项，</font><font>选择删除所有存储的数据或仅删除所选来源的存储数据</font></font>）。</li>
- <li>临时存储：这种数据不用保存很久，当最近一次使用时{{anch("Storage limits")}}达到限制大小就会被自动清理掉（{{anch("LRU policy")}}）。</li>
+ <li>临时存储：这种数据不用保存很久，当最近一次使用时<a href="#储存限制">储存限制</a>达到限制大小就会被自动清理掉（<a href="#lru策略">LRU策略</a>）。</li>
 </ul>
 
 <p><font>在Firefox中，当使用持久存储时，会向用户提供一个UI弹出窗口，提醒他们这些数据将持续存在，并询问他们是否对此感到满意。</font><font>临时数据存储不会引发任何用户提示。</font></p>
 
 <p><font>默认的是临时存储；开发人员可以选择使用</font>{{domxref("StorageManager.persist()")}}方法使用持久储存。</p>
 
-<h2 id="数据存储在哪里？"><font><font>数据存储在哪里？</font></font></h2>
+<h2 id="数据存储在哪里？">数据存储在哪里？</h2>
 
 <p><font>每种存储类型代表一个单独的存储库。</font><font>这是用户Firefox配置文件下目录的实际映射（其他浏览器可能略有不同）：</font></p>
 

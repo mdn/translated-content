@@ -39,7 +39,7 @@ url.pathname = 'démonstration.html';
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 ```
 
-L'interface {{domxref("URLSearchParams")}}  peut être utilisée pour construire et manipuler la chaîne de requête de l'URL.
+L'interface {{domxref("URLSearchParams")}}  peut être utilisée pour construire et manipuler la chaîne de requête de l'URL.
 
 Pour obtenir les paramètres de recherche à partir de l'URL de la fenêtre en cours :
 
@@ -58,7 +58,7 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 ## Constructeur
 
 - {{domxref("URL.URL", "URL()")}} {{experimental_inline}}
-  - : Crée et retourne un objet `URL`  composé des paramètres donnés.
+  - : Crée et retourne un objet `URL`  composé des paramètres donnés.
 
 ## Propriétés
 
@@ -98,7 +98,7 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 - {{domxref("URL.search")}}
   - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant un `'?'` suivi par les paramètres de l'URL.
 - {{domxref("URL.searchParams")}}
-  - : Retourne un objet {{domxref("URLSearchParams")}}  permettant d'accéder aux arguments de requête GET contenus dans l'URL.
+  - : Retourne un objet {{domxref("URLSearchParams")}}  permettant d'accéder aux arguments de requête GET contenus dans l'URL.
 - {{domxref("URL.username")}}
   - : Est une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant le nom d'utilisateur spécifié avant le nom de domaine.
 
@@ -109,12 +109,12 @@ L'interface `URL` implémente les méthodes définies dans _{{domxref("URLUtils"
 - {{domxref("URLUtils.toString()")}}
   - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant l'URL entière. C'est un synonyme de {{domxref("URLUtils.href")}}, mais il ne peut pas être utilisé pour modifier la valeur.
 - {{domxref("URL.toJSON()")}}
-  - : Retourne une {{domxref("DOMString")}}   _(chaîne de caractères)_ contenant l'URL entière. Il retourne la même chaîne que la propriété `href` .
+  - : Retourne une {{domxref("DOMString")}}   _(chaîne de caractères)_ contenant l'URL entière. Il retourne la même chaîne que la propriété `href` .
 
 ## Méthodes statiques
 
 - {{ domxref("URL.createObjectURL()") }}
-  - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant un "blob URL" unique ; c'est une URL avec `blob :` son schéma suivi d'une chaîne opaque identifiant de manière unique l'objet dans le navigateur.
+  - : Retourne une {{domxref("DOMString")}} _(chaîne de caractères)_ contenant un "blob URL" unique ; c'est une URL avec `blob :` son schéma suivi d'une chaîne opaque identifiant de manière unique l'objet dans le navigateur.
 - {{ domxref("URL.revokeObjectURL()") }}
   - : Révoque un objet URL précédemment créé avec {{domxref ("URL.createObjectURL ()")}}.
 

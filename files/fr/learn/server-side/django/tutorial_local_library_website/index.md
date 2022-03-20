@@ -1,5 +1,5 @@
 ---
-title: 'Django Didactique: Site web "Bibliothèque  locale"'
+title: 'Django Didactique: Site web "Bibliothèque locale"'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 tags:
   - Apprentissage
@@ -23,7 +23,7 @@ Le premier article de cette série didactique explique ce que vous apprendrez et
         <a href="/fr/docs/Learn/Server-side/Django/Introduction"
           >l'introduction</a
         >. Pour les articles suivants avoir mis à jour l'environnement comme
-        décrit précédemment. 
+        décrit précédemment.
       </td>
     </tr>
     <tr>

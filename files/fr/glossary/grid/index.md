@@ -12,7 +12,7 @@ Une grille _CSS_ est définie en utilisant la valeur `grid` de la propriété `d
 
 La grille que vous définissez avec ces propriétés est décrite comme une _grille explicite_.
 
-Si vous placez du contenu en dehors de cette grille explicite, ou si vous comptez sur le placement automatique, l'algorithme de grille doit créer une {{glossary("grid tracks", "piste")}} (_track_) de ligne ou de colonne supplémentaire pour contenir {{glossary("grid item", "éléments de grille")}} (_grid items_), des pistes supplémentaires seront alors créées dans la grille implicite. La grille implicite est la grille créée automatiquement en raison de l'ajout de contenu en dehors des pistes définies.
+Si vous placez du contenu en dehors de cette grille explicite, ou si vous comptez sur le placement automatique, l'algorithme de grille doit créer une {{glossary("grid tracks", "piste")}} (_track_) de ligne ou de colonne supplémentaire pour contenir {{glossary("grid item", "éléments de grille")}} (_grid items_), des pistes supplémentaires seront alors créées dans la grille implicite. La grille implicite est la grille créée automatiquement en raison de l'ajout de contenu en dehors des pistes définies.
 
 Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes et 2 lignes. La troisième ligne de la grille est une piste de ligne de grille implicite, formée en raison des 2 éléments en plus, par rapport aux 6 qui remplissent les pistes explicites.
 
@@ -70,4 +70,4 @@ Dans l'exemple ci-dessous, nous avons créé une grille explicite de 3 colonnes 
 
 ### En lire plus
 
-- Guide des grilles CSS : _[Les  concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_
+- Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)_

@@ -33,7 +33,7 @@ Voici un exemple de valeur pour l'attribut **`integrity`** avec un hash sha384 e
 Vous pouvez générer des _hashes_ SRI en ligne de commande avec OpenSSL en utilisant une commande de ce genre :
 
 ```bash
-cat FILENAME.js | openssl dgst -sha384 -binary | openssl enc -base64 -A
+cat FILENAME.js | openssl dgst -sha384 -binary | openssl enc -base64 -A
 ```
 
 Il existe également, **SRI Hash Generator** : <https://srihash.org/> qui est un utilitaire en ligne permettant de générer des _hashes_ SRI.
@@ -65,8 +65,8 @@ Les navigateurs gèrent SRI en effectuant les étapes suivantes :
 
 | Spécification                                    | État                                         | Commentaires |
 | ------------------------------------------------ | -------------------------------------------- | ------------ |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |              |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |              |
+| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |              |
+| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |              |
 
 ## Compatibilité des navigateurs
 

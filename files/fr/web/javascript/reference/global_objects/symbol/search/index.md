@@ -23,7 +23,7 @@ Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@search",
 | Spécification                                                                        | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-symbol.search', 'Symbol.search')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-symbol.search', 'Symbol.search')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

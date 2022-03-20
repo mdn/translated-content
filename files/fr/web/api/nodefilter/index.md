@@ -104,7 +104,7 @@ while ((node = nodeIterator.nextNode())) {
 
 | Spécification                                                                                                            | Statut                                       | Commentaire          |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('DOM WHATWG', '#interface-nodefilter', 'NodeFilter')}}                                 | {{Spec2('DOM WHATWG')}}             |                      |
+| {{SpecName('DOM WHATWG', '#interface-nodefilter', 'NodeFilter')}}                                 | {{Spec2('DOM WHATWG')}}             |                      |
 | {{SpecName('DOM2 Traversal_Range', 'traversal.html#Traversal-NodeFilter', 'NodeFilter')}} | {{Spec2('DOM2 Traversal_Range')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs

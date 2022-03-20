@@ -51,7 +51,7 @@ La conversion entre `s` et `ms` suit la logique suivante : `1s = 1000ms`.
 
 | Spécification                                                                | État                             | Commentaires                         |
 | ---------------------------------------------------------------------------- | -------------------------------- | ------------------------------------ |
-| {{SpecName('CSS4 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS4 Values')}} |                                      |
+| {{SpecName('CSS4 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS4 Values')}} |                                      |
 | {{SpecName('CSS3 Values','#time','&lt;time&gt;')}}         | {{Spec2('CSS3 Values')}} | Définition normative de `s` et `ms`  |
 | {{SpecName('CSS2.1','aural.html#times','&lt;time&gt;')}} | {{Spec2('CSS2.1')}}         | Définition informelle de `s` et `ms` |
 

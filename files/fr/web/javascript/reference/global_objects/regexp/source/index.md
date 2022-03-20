@@ -44,7 +44,7 @@ new RegExp('\n').source === "\\n"; // true à partir d'ES5
 | {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. Avec JavaScript 1.5 : `source` est une propriété de l'instance de {{jsxref("RegExp")}}, ce n'est pas une propriété de l'objet `RegExp`. |
 | {{SpecName('ES5.1', '#sec-15.10.7.1', 'RegExp.prototype.source')}}                             | {{Spec2('ES5.1')}}     | `source` renvoie désormais "(?:)" (et non "") pour les expressions vides. La définition du comportement pour les échappements a été ajoutée.                                                          |
 | {{SpecName('ES6', '#sec-get-regexp.prototype.source', 'RegExp.prototype.source')}}         | {{Spec2('ES6')}}         | `source` est désormais un accesseur lié au prototype plutôt qu'une propriété directement rattachée à l'instance.                                                                                      |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.source', 'RegExp.prototype.source')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                       |
+| {{SpecName('ESDraft', '#sec-get-regexp.prototype.source', 'RegExp.prototype.source')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                       |
 
 ## Compatibilité des navigateurs
 

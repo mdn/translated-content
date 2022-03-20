@@ -101,7 +101,7 @@ Pour un élément {{SVGElement('ellipse')}}, `cx` définit la coordonnées x de 
 
 ## radialGradient
 
-Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite du dégradé](/fr/docs/SVG/Element/stop "/en-US/docs/SVG/Element/stop") à **100%** corresponde au périmètre de ce plus grand cercle.
+Pour un élément {{SVGElement('radialGradient')}}, `cx` définit la coordonnées x du plus grand cercle pour le dégradé radial (c'est-à-dire du plus externe). Le dégradé sera dessiné de telle façon que la [limite du dégradé](/fr/docs/SVG/Element/stop "/en-US/docs/SVG/Element/stop") à **100%** corresponde au périmètre de ce plus grand cercle.
 
 <table class="standard-table">
   <tbody>

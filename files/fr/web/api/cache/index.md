@@ -34,7 +34,7 @@ Vous êtes également responsable de la purge périodique des entrées du cache.
 - {{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}} {{experimental_inline}}
   - : Retourne une {{jsxref("Promise" , "Promesse" )}} qui se résout en un tableau de toutes les requêtes correspondantes dans l'objet {{domxref("Cache")}}.
 - {{domxref("Cache.add", "Cache.add(request)")}} {{experimental_inline}}
-  - : Prend une URL, la récupère et ajoute l'objet réponse associé au cache donné. C'est une fonctionnalité équivalente à l'appel de fetch(), puis à l'utilisation de Cache.put() pour ajouter les résultats  au cache.
+  - : Prend une URL, la récupère et ajoute l'objet réponse associé au cache donné. C'est une fonctionnalité équivalente à l'appel de fetch(), puis à l'utilisation de Cache.put() pour ajouter les résultats au cache.
 - {{domxref("Cache.addAll", "Cache.addAll(requests)")}} {{experimental_inline}}
   - : Prend un tableau d'URLs, les récupère, et ajoute les objets réponses associés au cache donné.
 - {{domxref("Cache.put", "Cache.put(request, response)")}} {{experimental_inline}}
@@ -52,9 +52,9 @@ Le code utilise alors {{domxref("Cache.match", "Cache.match(request, options)")}
 
 Le code gère les exceptions déclenchées par l'opération de {{domxref("Globalfetch.fetch","fetch()")}}. A noter qu'une réponse HTTP en erreur (e.g., 404) ne déclenchera pas une exception. Elle retournera un objet de réponse normal qui dispose du code d'erreur approprié.
 
-Cet extrait de code illustre également une bonne pratique pour versionner les caches utilisés par le service worker. Bien qu'il y ait seulement un cache dans cet exemple, la même approche peut être utilisée pour des caches multiples. Il associe un identifiant  court avec un nom de cache versionné et spécifique. Le code supprime aussi tous les caches qui ne sont pas nommés dans `CURRENT_CACHES`.
+Cet extrait de code illustre également une bonne pratique pour versionner les caches utilisés par le service worker. Bien qu'il y ait seulement un cache dans cet exemple, la même approche peut être utilisée pour des caches multiples. Il associe un identifiant court avec un nom de cache versionné et spécifique. Le code supprime aussi tous les caches qui ne sont pas nommés dans `CURRENT_CACHES`.
 
-> **Note :** In Chrome, visit chrome://inspect/#service-workers and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
+> **Note :** In Chrome, visit chrome://inspect/#service-workers and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [service-worker.js](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
 
 ```js
 var CACHE_VERSION = 1;

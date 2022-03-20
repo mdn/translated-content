@@ -12,7 +12,7 @@ original_slug: Web/API/Element/onwheel
 ---
 {{ ApiRef("DOM") }}
 
-La propriété `onwheel` renvoie le code du gestionnaire d'évènements `onwheel` de l'élément courrant.
+La propriété `onwheel` renvoie le code du gestionnaire d'évènements `onwheel` de l'élément courrant.
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ element.onwheel = function() { .. }
 
 | Spécification                                                                                    | Statut                           | Commentaire |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG','webappapis.html#handler-onwheel','onwheel')}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG','webappapis.html#handler-onwheel','onwheel')}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 

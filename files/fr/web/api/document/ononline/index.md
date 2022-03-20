@@ -20,12 +20,12 @@ Un évènement "`online`" est lancé sur le `<body>` (_corps_) de chaque page qu
 Vous pouvez enregistrer les écouteurs de ces événements de plusieurs manières habituelles :
 
 - en utilisant [`addEventListener`](/en/DOM/element.addEventListener) sur `window`, `document` ou `document.body`
-- en définissant les propriétés `.ononline` ou `.onoffline` sur `document` ou `document.body` sur un objet  `Function` JavaScript. (**Note :** l'utilisation de `window.ononline` ou `window.onoffline` ne fonctionnera pas pour des raisons de compatibilité).
-- en spécifiant les attributs `ononline="..."` ou `onoffline="..."` sur la balise `<body>`  dans le balisage HTML.
+- en définissant les propriétés `.ononline` ou `.onoffline` sur `document` ou `document.body` sur un objet  `Function` JavaScript. (**Note :** l'utilisation de `window.ononline` ou `window.onoffline` ne fonctionnera pas pour des raisons de compatibilité).
+- en spécifiant les attributs `ononline="..."` ou `onoffline="..."` sur la balise `<body>`  dans le balisage HTML.
 
 ## Exemple
 
-Il existe  [un cas de test simple](https://bugzilla.mozilla.org/attachment.cgi?id=220609) que vous pouvez exécuter pour vérifier le fonctionnement des évènements.
+Il existe  [un cas de test simple](https://bugzilla.mozilla.org/attachment.cgi?id=220609) que vous pouvez exécuter pour vérifier le fonctionnement des évènements.
 
 ## Références
 

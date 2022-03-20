@@ -31,7 +31,7 @@ Au delà de l'élément racine du document (ici l'élément `html`), un nouveau 
 - Les légendes de tableau ou les éléments avec `display: table-caption`
 - Les éléments de blocs pour lesquels `overflow` a une valeur différente de `visible`
 - `display: flow-root`
-- Les éléments avec {{cssxref("contain", "contain: layout", "#layout")}}, `content` ou `strict`
+- Les éléments avec {{cssxref("contain", "contain: layout", "#layout")}}, `content` ou `strict`
 - [Les élément flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox)
 - [Les éléments de grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)
 - [Les conteneurs multi-colonnes](fr/docs/Web/CSS/CSS_Columns/Concepts_base_multi-colonnes)
@@ -79,7 +79,7 @@ Dans ce guide, nous avons approfondi les notions relatives aux contextes de form
 
 ## Voir aussi
 
-- [Contexte de formatage de bloc (ou *Block Formatting Context* (BFC) en anglais)](/fr/docs/Web/CSS/Block_formatting_context)
+- [Contexte de formatage de bloc (ou *Block Formatting Context* (BFC) en anglais)](/fr/docs/Web/CSS/Block_formatting_context)
 - [Modèle de formatage visuel](/fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle)
 - [Modèle de boîte CSS](/fr/docs/Web/CSS/Modèle_de_boîte_CSS)
 

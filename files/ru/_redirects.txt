@@ -171,6 +171,7 @@
 /ru/docs/Learn/CSS/CSS_layout/Навыки_позиционирования	/ru/docs/Learn/CSS/CSS_layout/Position_skills
 /ru/docs/Learn/CSS/CSS_layout/Нормальный_поток	/ru/docs/Learn/CSS/CSS_layout/Normal_Flow
 /ru/docs/Learn/CSS/CSS_layout/Отзывчивый_дизайн	/ru/docs/Learn/CSS/CSS_layout/Responsive_Design
+/ru/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/ru/docs/Learn/CSS/First_steps/Styling_a_biography_page
 /ru/docs/Learn/CSS/First_steps/Как_структурирован_CSS	/ru/docs/Learn/CSS/First_steps/How_CSS_is_structured
 /ru/docs/Learn/CSS/First_steps/Что_такое_CSS	/ru/docs/Learn/CSS/First_steps/What_is_CSS
 /ru/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
@@ -290,6 +291,7 @@
 /ru/docs/Sample_.htaccess_file	/ru/docs/Learn/Server-side/Apache_Configuration_htaccess
 /ru/docs/Tools/Debugger/How_to/Отладка_кода_внутри_eval	/ru/docs/Tools/Debugger/How_to/Debug_eval_sources
 /ru/docs/Tools/Debugger/How_to/Работа_с_минифицированным_кодом	/ru/docs/Tools/Debugger/How_to/Pretty-print_a_minified_file
+/ru/docs/Tools/Index	/ru/docs/conflicting/Tools
 /ru/docs/Tools/Page_Inspector/How_to/Otkrytie_Inspektora	/ru/docs/Tools/Page_Inspector/How_to/Open_the_Inspector
 /ru/docs/Tools/Page_Inspector/How_to/Vybor_elementa	/ru/docs/Tools/Page_Inspector/How_to/Select_an_element
 /ru/docs/Tools/Page_Inspector/How_to/Исследовать_event_listeners	/ru/docs/Tools/Page_Inspector/How_to/Examine_event_listeners
@@ -352,6 +354,7 @@
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/username	/ru/docs/Web/API/HTMLAnchorElement/username
 /ru/docs/Web/API/HTMLImageElement.Image	/ru/docs/Web/API/HTMLImageElement/Image
 /ru/docs/Web/API/KeyboardEvent/which	/ru/docs/Web/API/UIEvent/which
+/ru/docs/Web/API/MediaRecorder/ondataavailable	/ru/docs/Web/API/MediaRecorder/dataavailable_event
 /ru/docs/Web/API/MouseEvent/which	/ru/docs/conflicting/Web/API/UIEvent/which
 /ru/docs/Web/API/NetworkInformation/connection	/ru/docs/Web/API/Navigator/connection
 /ru/docs/Web/API/Node.appendChild	/ru/docs/Web/API/Node/appendChild
@@ -371,6 +374,7 @@
 /ru/docs/Web/API/PositionError	/ru/docs/Web/API/GeolocationPositionError
 /ru/docs/Web/API/PositionOptions	/ru/docs/conflicting/Web/API/Geolocation/getCurrentPosition
 /ru/docs/Web/API/RandomSource/getRandomValues	/ru/docs/Web/API/Crypto/getRandomValues
+/ru/docs/Web/API/ServiceWorker/onstatechange	/ru/docs/Web/API/ServiceWorker/statechange_event
 /ru/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ru/docs/conflicting/Web/API/Pointer_events
 /ru/docs/Web/API/USB/onconnect	/ru/docs/Web/API/USB/connect_event
 /ru/docs/Web/API/USB/ondisconnect	/ru/docs/Web/API/USB/disconnect_event
@@ -383,6 +387,7 @@
 /ru/docs/Web/API/WebRTC_API/связь	/ru/docs/Web/API/WebRTC_API/Connectivity
 /ru/docs/Web/API/Window/crypto	/ru/docs/Web/API/crypto_property
 /ru/docs/Web/API/Window/mozAnimationStartTime	/ru/docs/Web/API/Animation/startTime
+/ru/docs/Web/API/Window/ondeviceorientation	/ru/docs/conflicting/Web/API/Window/deviceorientation_event
 /ru/docs/Web/API/Window/ongamepadconnected	/ru/docs/conflicting/Web/API/Window/gamepadconnected_event
 /ru/docs/Web/API/Window/ongamepaddisconnected	/ru/docs/conflicting/Web/API/Window/gamepaddisconnected_event
 /ru/docs/Web/API/Window/performance	/ru/docs/Web/API/performance_property
@@ -410,6 +415,7 @@
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 /ru/docs/Web/CSS/:blank	/ru/docs/Web/CSS/:-moz-only-whitespace
+/ru/docs/Web/CSS/:host()	/ru/docs/Web/CSS/:host_function
 /ru/docs/Web/CSS/Adjacent_sibling_selectors	/ru/docs/Web/CSS/Adjacent_sibling_combinator
 /ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy	/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /ru/docs/Web/CSS/CSS_Background_and_Borders	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders
@@ -440,16 +446,18 @@
 /ru/docs/Web/CSS/Media_Queries/Тестирование_медиа_запросы	/ru/docs/Web/CSS/Media_Queries/Testing_media_queries
 /ru/docs/Web/CSS/Reference/background-blend-mode	/ru/docs/Web/CSS/background-blend-mode
 /ru/docs/Web/CSS/Using_CSS_variables	/ru/docs/Web/CSS/Using_CSS_custom_properties
-/ru/docs/Web/CSS/attr	/ru/docs/Web/CSS/attr()
+/ru/docs/Web/CSS/attr()	/ru/docs/Web/CSS/attr
 /ru/docs/Web/CSS/box_model	/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-/ru/docs/Web/CSS/calc	/ru/docs/Web/CSS/calc()
-/ru/docs/Web/CSS/clamp	/ru/docs/Web/CSS/clamp()
-/ru/docs/Web/CSS/filter-function/blur	/ru/docs/Web/CSS/filter-function/blur()
-/ru/docs/Web/CSS/minmax	/ru/docs/Web/CSS/minmax()
-/ru/docs/Web/CSS/transform-function/rotate	/ru/docs/Web/CSS/transform-function/rotate()
-/ru/docs/Web/CSS/transform-function/rotate3d	/ru/docs/Web/CSS/transform-function/rotate3d()
-/ru/docs/Web/CSS/transform-function/scale3d	/ru/docs/Web/CSS/transform-function/scale3d()
-/ru/docs/Web/CSS/transform-function/skew	/ru/docs/Web/CSS/transform-function/skew()
+/ru/docs/Web/CSS/calc()	/ru/docs/Web/CSS/calc
+/ru/docs/Web/CSS/clamp()	/ru/docs/Web/CSS/clamp
+/ru/docs/Web/CSS/filter-function/blur()	/ru/docs/Web/CSS/filter-function/blur
+/ru/docs/Web/CSS/minmax()	/ru/docs/Web/CSS/minmax
+/ru/docs/Web/CSS/transform-function/rotate()	/ru/docs/Web/CSS/transform-function/rotate
+/ru/docs/Web/CSS/transform-function/rotate3d()	/ru/docs/Web/CSS/transform-function/rotate3d
+/ru/docs/Web/CSS/transform-function/scale3d()	/ru/docs/Web/CSS/transform-function/scale3d
+/ru/docs/Web/CSS/transform-function/skew()	/ru/docs/Web/CSS/transform-function/skew
+/ru/docs/Web/CSS/url()	/ru/docs/Web/CSS/url
+/ru/docs/Web/CSS/var()	/ru/docs/Web/CSS/var
 /ru/docs/Web/CSS/Действительное_значение	/ru/docs/Web/CSS/actual_value
 /ru/docs/Web/CSS/Замещаемый_элемент	/ru/docs/Web/CSS/Replaced_element
 /ru/docs/Web/CSS/Псевдо-классы	/ru/docs/Web/CSS/Pseudo-classes

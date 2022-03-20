@@ -82,7 +82,7 @@ Même si toutes les unités exprimeront une valeur nulle identique, l'unité **d
 
 | Spécification                                                            | État                             | Commentaires         |
 | ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS4 Values')}} |                      |
+| {{SpecName('CSS4 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS4 Values')}} |                      |
 | {{SpecName('CSS3 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs

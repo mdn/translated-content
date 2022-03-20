@@ -28,7 +28,7 @@ Si la valeur `aria-valuemax` n’est pas déterminée, ou si `aria-valuemin` n�
 
 ### Exemples
 
-#### Exemple 1:
+#### Exemple 1:
 
 L’extrait de code ci-dessous montre un curseur basique avec une valeur maximale de 10.
 
@@ -40,15 +40,15 @@ L’extrait de code ci-dessous montre un curseur basique avec une valeur maximal
 
 ### Utilisés avec les rôles ARIA
 
-- [progressbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_progressbar) ;
-- [scrollbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_scrollbar) ;
-- [slider](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_slider) ;
+- [progressbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_progressbar)&nbsp;;
+- [scrollbar](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_scrollbar)&nbsp;;
+- [slider](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_slider)&nbsp;;
 - [spinbutton](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_spinbutton).
 
 ### Techniques ARIA connexes
 
-- [aria-valuemin](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin) ;
-- [aria-valuenow](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow) ;
+- [aria-valuemin](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuemin)&nbsp;;
+- [aria-valuenow](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuenow)&nbsp;;
 - [aria-valuetext](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_l_attribut_aria-valuetext).
 
 ### Autres ressources

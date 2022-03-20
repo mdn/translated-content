@@ -53,7 +53,7 @@ Cette interface hérite de {{domxref("EventTarget")}}.
 - {{domxref("IDBTransaction.onabort")}} {{readonlyInline}}
   - : Ce gestionnaire permet de gérer l'évènement `abort` qui est déclenché lorsque la transaction a été interrompue.
 - {{domxref("IDBTransaction.oncomplete")}} {{readonlyInline}}
-  - : Ce gestionnaire permet de gérer l'évènement `complete` qui est  déclenché lorsque la transaction se finit correctement.
+  - : Ce gestionnaire permet de gérer l'évènement `complete` qui est déclenché lorsque la transaction se finit correctement.
 - {{domxref("IDBTransaction.onerror")}} {{readonlyInline}}
   - : Ce gestionnaire permet de gérer l'évènement `error` qui est déclenché lorsqu'une erreur empêche la transaction de se finir correctement.
 

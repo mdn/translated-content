@@ -69,7 +69,7 @@ if (!Uint8Array.prototype.fill) {
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.fill', 'TypedArray.prototype.fill')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.fill', 'TypedArray.prototype.fill')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.fill', 'TypedArray.prototype.fill')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

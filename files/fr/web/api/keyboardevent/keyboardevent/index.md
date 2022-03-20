@@ -11,7 +11,7 @@ translation_of: Web/API/KeyboardEvent/KeyboardEvent
 ---
 {{APIRef("DOM Events")}}
 
-Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent")}}.
+Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEvent")}}.
 
 ## Syntaxe
 
@@ -20,7 +20,7 @@ Le constructeur **`KeyboardEvent()`** crée un nouveau {{domxref("KeyboardEven
 ### Valeurs
 
 - typeArg
-  - : Une représentation du nom de l'évènement sous forme de {{domxref("DOMString")}}.
+  - : Une représentation du nom de l'évènement sous forme de {{domxref("DOMString")}}.
 - KeyboardEventInit{{optional_inline}}
 
   - : Un dictionnaire `KeyboardEventInit` ayant les champs suivants :

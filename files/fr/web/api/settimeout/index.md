@@ -11,7 +11,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
 {{APIRef("HTML DOM")}}
 
-La méthode **`setTimeout()`**, rattachée au *mixin*  {{domxref("WindowOrWorkerGlobalScope")}} (et qui succède à `window.setTimeout()`) permet de définir un « minuteur » (_timer_) qui exécute une fonction ou un code donné après la fin du délai indiqué.
+La méthode **`setTimeout()`**, rattachée au *mixin*  {{domxref("WindowOrWorkerGlobalScope")}} (et qui succède à `window.setTimeout()`) permet de définir un « minuteur » (_timer_) qui exécute une fonction ou un code donné après la fin du délai indiqué.
 
 ## Syntaxe
 
@@ -36,7 +36,7 @@ La méthode **`setTimeout()`**, rattachée au *mixin*  {{domxref("WindowOrWorke
 
 La valeur renvoyée par la fonction est un entier qui représente un identifiant du minuteur créé par l'appel à `setTimeout()`. Cet identifiant pourra être passé à la méthode {{domxref("WindowOrWorkerGlobalScope.clearTimeout","clearTimeout()")}} afin d'annuler ce minuteur donné.
 
-Il peut être utile de savoir que `setTimeout()` et {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} partagent le même ensemble d'identifiants et que  `clearTimeout()` et {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} sont, techniquement, interchangeables. Toutefois pour des raisons de lisibilité et de maintenance, mieux vaut les utiliser par paires plutôt que de les mélanger.
+Il peut être utile de savoir que `setTimeout()` et {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} partagent le même ensemble d'identifiants et que  `clearTimeout()` et {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} sont, techniquement, interchangeables. Toutefois pour des raisons de lisibilité et de maintenance, mieux vaut les utiliser par paires plutôt que de les mélanger.
 
 Le moteur d'exécution garantit qu'un identifiant donné ne sera pas réutilisé par un appel ultérieur à `setTimeout()` ou `setInterval()` pour un même objet (une fenêtre ou un _worker_). En revanche, différents objets possèdent chacun leurs ensembles d'identifiants.
 
@@ -210,7 +210,7 @@ setTimeout(monTableau.maMéthode, 1500, '1');
 // affiche "undefined" après 1.5 seconde
 ```
 
-La fonction `monTableau.maMéthode` est pasée à `setTimeout` et, lorsqu'elle est appelée, `this` n'est pas défini et le moteur utilise la valeur par défaut : `window`. Il n'y apas d'option qui permettent de passer une valeur  `thisArg` à `setTimeout()` comme on peut le faire avec {{jsxref("Array.prototype.forEach()")}} ou {{jsxref("Array.prototype.reduce()")}} par exemple. Aussi, utiliser `call()` afin de définir `this` ne fonctionnera pas non plus.
+La fonction `monTableau.maMéthode` est pasée à `setTimeout` et, lorsqu'elle est appelée, `this` n'est pas défini et le moteur utilise la valeur par défaut : `window`. Il n'y apas d'option qui permettent de passer une valeur  `thisArg` à `setTimeout()` comme on peut le faire avec {{jsxref("Array.prototype.forEach()")}} ou {{jsxref("Array.prototype.reduce()")}} par exemple. Aussi, utiliser `call()` afin de définir `this` ne fonctionnera pas non plus.
 
 ```js
 setTimeout.call(monTableau, monTableau.maMéthode, 2000);
@@ -277,7 +277,7 @@ setTimeout(cb, 0);
 setInterval(f, 0);
 ```
 
-Pour Chrome et Firefox, la limitation est active à partir du cinquième appel de fonction de rappel,  Safari active la limitation à partir du sixième et Edge à partir du troisième. Gecko traite `setInterval()` de la même façon depuis la [version 56](/fr/docs/Mozilla/Firefox/Releases/56).
+Pour Chrome et Firefox, la limitation est active à partir du cinquième appel de fonction de rappel,  Safari active la limitation à partir du sixième et Edge à partir du troisième. Gecko traite `setInterval()` de la même façon depuis la [version 56](/fr/docs/Mozilla/Firefox/Releases/56).
 
 [Par le passé](http://code.google.com/p/chromium/issues/detail?id=792#c10), certains navigateurs implémentaient cette limite différemment (pour les appels à `setInterval()` quelle que soit leur provenance ou lorsqu'un appel `setTimeout()` était imbriqué dans un autre pour un certain nombre de niveaux d'imbrication.
 
@@ -291,9 +291,9 @@ Pour implémenter un minuteur de 0ms, on pourra utiliser {{domxref("window.postM
 
 Afin de réduire la charge (ainsi que la consommation d'énergie associée) des onglets en arrière-plan, les minuteurs ne sont déclenchés au maximum qu'une fois par seconde pour les onglets inactifs.
 
-Firefox implémente ce comportement depuis Firefox 5 (cf.  {{bug(633421)}}) et la valeur du seuil de 1000ms peut être paramétrée via la préférence `dom.min_background_timeout_value`. Chrome implémente ce comportement depuis la version 11 ([crbug.com/66078](http://crbug.com/66078)).
+Firefox implémente ce comportement depuis Firefox 5 (cf.  {{bug(633421)}}) et la valeur du seuil de 1000ms peut être paramétrée via la préférence `dom.min_background_timeout_value`. Chrome implémente ce comportement depuis la version 11 ([crbug.com/66078](http://crbug.com/66078)).
 
-Firefox pour Android utilise un minimum de 15 minutes depuis Firefox 14 (cf.  {{bug(736602)}}) et les onglets en arrière-plan peuvent être déchargés complètement.
+Firefox pour Android utilise un minimum de 15 minutes depuis Firefox 14 (cf.  {{bug(736602)}}) et les onglets en arrière-plan peuvent être déchargés complètement.
 
 > **Note :** Firefox 50 ne limite plus la réactivité des onglets en arrière-plan si un contexte Web Audio API {{domxref("AudioContext")}} joue un son. Firefox 51 élargit le spectre en supprimant la limitation si un objet {{domxref("AudioContext")}} est présent dans l'onglet, même sans jouer de son. Cela a permis de résoudre différents problèmes avec certaines applications qui jouent de la musique en arrière-plan.
 

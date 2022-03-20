@@ -40,7 +40,7 @@ document.getElementById("infoText2").innerHTML += document.getElementById("myTex
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | {{SpecName('HTML WHATWG', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}} | {{Spec2('HTML WHATWG')}} | Pas de changement de la dernière image, {{SpecName('HTML5.1')}}                                |
 | {{SpecName('HTML5.1', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}     | {{Spec2('HTML5.1')}}     | L'image de {{SpecName('HTML WHATWG')}}, n'est pas changée par {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}     | {{Spec2('HTML5 W3C')}}     | Image de  {{SpecName('HTML WHATWG')}},  definition initiale.                                   |
+| {{SpecName('HTML5 W3C', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}     | {{Spec2('HTML5 W3C')}}     | Image de  {{SpecName('HTML WHATWG')}},  definition initiale.                                   |
 
 ## Compatibilité des navigateurs
 
