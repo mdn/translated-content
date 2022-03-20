@@ -1,31 +1,41 @@
 ---
-title: Console.countReset()
+title: console.countReset()
 slug: Web/API/console/countReset
-translation_of: Web/API/Console/countReset
+tags:
+  - API
+  - DOM
+  - デバッグ
+  - メソッド
+  - リファレンス
+  - ウェブ開発
+  - console
+  - ウェブコンソール
+browser-compat: api.console.countReset
+translation_of: Web/API/console/countReset
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p><strong><code>console.countReset()</code></strong> は{{domxref("console.count()")}}で使われたカウンターをリセットします。</p>
+**`console.countReset()`** は {{domxref("console.count()")}} で使われたカウンターをリセットします。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax">Syntax</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">console.countReset(<var>[label]</var>);
-</pre>
+```js
+console.countReset([label]);
+```
 
-<h3 id="Parameters">Parameters</h3>
+### 引数
 
-<dl>
- <dt><code>label</code> {{optional_inline}}</dt>
- <dd>{{jsxref("String")}}。<code>label</code>を与えると<code>countReset()</code>は<code>label</code>に対応するカウンターを0にリセットします。<code>label</code>を省略すると<code>countReset()</code>は<code>default</code>のカウンターを0にリセットします。</dd>
-</dl>
+- `label` {{optional_inline}}
+  - : 文字列です。指定した場合、 `countReset()` はそのラベルに対するカウントを 0 にリセットします。省略した場合は、 `countReset()` は default のカウンターを 0 にリセットします。
 
-<h2 id="Examples">Examples</h2>
+## 例
 
-<p>例えば、以下のコードについて考えます:</p>
+例えば、次のようなコードがあったとします。
 
-<pre class="brush: js notranslate">let user = "";
+```js
+let user = "";
 
 function greet() {
   console.count();
@@ -38,22 +48,25 @@ user = "alice";
 greet();
 greet();
 console.count();
-console.countReset();</pre>
+console.countReset();
+```
 
-<p>コンソールの出力は、以下のようになります:</p>
+コンソールへの出力は、次のようになります。
 
-<pre class="eval notranslate">"default: 1"
+```
+"default: 1"
 "default: 2"
 "default: 3"
 "default: 4"
 "default: 0"
-</pre>
+```
 
-<p><code>console.counterReset()</code>の呼び出しによって<code>default</code>のカウンターが0になったことに注意してください。</p>
+`console.counterReset()` の呼び出しによって default のカウンターが 0 にリセットされたことに注意してください。
 
-<p>始めの <code>count()</code> で引数 <code>label</code> に変数 <code>user</code> を、また 2 番目の <code>count()</code> で文字列 "alice" を与えました:</p>
+変数 `user` を `label` 引数として、最初の `count()` の呼び出しには文字列 "bob" を、 2 回目の呼び出しには文字列 "alice" を渡してみます。
 
-<pre class="brush: js notranslate">let user = "";
+```js
+let user = "";
 
 function greet() {
   console.count(user);
@@ -66,39 +79,25 @@ user = "alice";
 greet();
 greet();
 console.countReset("bob");
-console.count("alice");</pre>
+console.count("alice");
+```
 
-<p>すると、以下のように出力されます:</p>
+以下のように出力されます。
 
-<pre class="eval notranslate">"bob: 1"
+```
+"bob: 1"
 "alice: 1"
 "alice: 2"
 "bob: 0"
-"alice: 3"</pre>
+"alice: 3"
+```
 
-<p><code>bob</code>のカウンターをリセットしたとき他のカウンターに影響を与えません。<code>alice</code>のカウンターが変更されていないことがわかります。</p>
+"bob" のカウンターをリセットしたとき他のカウンターに影響を与えません。 "alice" のカウンターは変更されません。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#count", "console.countReset()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.Console.countReset")}}</p>
+{{Compat}}
