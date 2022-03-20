@@ -1,38 +1,40 @@
 ---
-title: Console.count()
+title: console.count()
 slug: Web/API/console/count
 tags:
   - API
   - DOM
-  - Debugging
-  - Method
-  - NeedsBrowserCompatibility
-  - Web Development
-  - web console
-translation_of: Web/API/Console/count
+  - デバッグ
+  - メソッド
+  - リファレンス
+  - ウェブ開発
+  - ウェブコンソール
+browser-compat: api.console.count
+translation_of: Web/API/console/count
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p><strong><code>console.count()</code></strong> は<code>count()</code> を個々に呼び出した回数を記録します。</p>
+**`console.count()`** メソッドは、 `count()` を実際に呼び出した回数を記録します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">console.count(<var>[label]</var>);</pre>
+```js
+console.count([label]);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>label</code> {{Optional_Inline}}</dt>
- <dd>{{jsxref("String")}}。<code>label</code> を与えると、この関数は特定のラベルを伴って <code>count()</code> を呼び出した回数を記録します。<code>label</code> を省略すると、この関数は<code>default</code>というラベルを伴って <code>count()</code> を呼び出したかのように振る舞います</dd>
-</dl>
+- `label` {{Optional_Inline}}
+  - : 文字列です。指定した場合、 `count()` はそのラベルを用いて呼び出した回数を出力します。省略した場合は、 `count()` は "default" ラベルで呼び出されたように動作します。
 
-<h2 id="Examples">Examples</h2>
+## 例
 
-<p>例えば、以下のコードについて考えます:</p>
+例えば、次のようなコードがあったとします。
 
-<pre class="brush: js notranslate">let user = "";
+```js
+let user = "";
 
 function greet() {
   console.count();
@@ -44,20 +46,24 @@ greet();
 user = "alice";
 greet();
 greet();
-console.count();</pre>
+console.count();
+```
 
-<p>コンソールの出力は、以下のようになります:</p>
+コンソールへの出力は、次のようになります。
 
-<pre class="brush: none; notranslate">"default: 1"
+```
+"default: 1"
 "default: 2"
 "default: 3"
-"default: 4"</pre>
+"default: 4"
+```
 
-<p>特にラベルが指定されなかったので表示されているラベルは <code>default</code> となっています。</p>
+特にラベルが指定されていないので、表示されているラベルは `default` となっています。
 
-<p>始めの <code>count()</code> で引数 <code>label</code> に変数 <code>user</code> を、また 2 番目の <code>count()</code> で文字列 "alice" を与えました:</p>
+変数 `user` を `label` 引数として、最初の `count()` の呼び出しには文字列 "bob" を、 2 回目の呼び出しには文字列 "alice" を渡してみます。
 
-<pre class="brush: js notranslate">let user = "";
+```js
+let user = "";
 
 function greet() {
   console.count(user);
@@ -69,38 +75,24 @@ greet();
 user = "alice";
 greet();
 greet();
-console.count("alice");</pre>
+console.count("alice");
+```
 
-<p>すると、以下のように出力されます:</p>
+以下のように出力されます。
 
-<pre class="notranslate">"bob: 1"
+```
+"bob: 1"
 "alice: 1"
 "alice: 2"
-"alice: 3"</pre>
+"alice: 3"
+```
 
-<p><code>label</code> の値のみに基づいて、個々の呼び出し回数を管理しています。</p>
+`label` の値のみに基づいて、個々の呼び出し回数を管理しています。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#count", "console.count()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.Console.count")}}</p>
+{{Compat}}
