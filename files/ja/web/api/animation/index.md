@@ -1,119 +1,112 @@
 ---
 title: Animation
 slug: Web/API/Animation
+tags:
+  - API
+  - アニメーション
+  - インターフェイス
+  - リファレンス
+  - ウェブアニメーション
+  - waapi
+  - ウェブアニメーション API
+browser-compat: api.Animation
 translation_of: Web/API/Animation
 ---
-<div>{{ APIRef("ウェブアニメーション") }}{{SeeCompatTable}}</div>
+{{ APIRef("Web Animations") }}
 
-<p><a href="/ja/docs/Web/API/Web_Animations_API">ウェブアニメーション API</a><strong> </strong>における<strong> <code>Animation</code></strong> インターフェースは単一のアニメーションプレーヤーを表し、アニメーションノードやソースに対する再生制御やタイムラインを提供します。</p>
+**`Animation`** は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)のインターフェイスで、アニメーションプレイヤーを表し、アニメーションノードやソースに対する再生制御やタイムラインを提供します。
 
-<h2 id="コンストラクタ">コンストラクタ</h2>
+{{InheritanceDiagram}}
 
-<dl>
- <dt>{{domxref("Animation.Animation()", "Animation()")}}</dt>
- <dd>新たに <code>Animation</code> オブジェクトのインスタンスを生成します。</dd>
-</dl>
+## コンストラクター
 
-<h2 id="プロパティ">プロパティ</h2>
+- {{domxref("Animation.Animation()", "Animation()")}}
+  - : 新しい `Animation` オブジェクトのインスタンスを生成します。
 
-<dl>
- <dt>{{domxref("Animation.currentTime")}}</dt>
- <dd>再生中か停止中かに関わらずアニメーションの現在時間をミリ秒で表します。もしアニメーションに {{domxref("AnimationTimeline", "timeline")}} が無い、またはアニメーションが有効では無かったりまだ再生させていない場合、この値は <code>null</code> となります。</dd>
-</dl>
+## プロパティ
 
-<dl>
- <dt>{{domxref("Animation.effect")}}</dt>
- <dd>対象のアニメーションに紐付いた {{domxref("AnimationEffectReadOnly")}} の取得および設定を行います。このプロパティ値は通常 {{domxref("KeyframeEffect")}} オブジェクトになります。</dd>
- <dt>{{domxref("Animation.finished")}} {{readOnlyInline}}</dt>
- <dd>対象アニメーションの終了時に Promise を返します。</dd>
-</dl>
+- {{domxref("Animation.currentTime")}}
+  - : このアニメーションの現在時刻の値で、ミリ秒単位です。再生中か停止中かは問いません。アニメーションに {{domxref("AnimationTimeline", "timeline")}} がなかったり、無効であったり、まだ再生されていなかったりした場合は、この値は `null` になります。
+- {{domxref("Animation.effect")}}
+  - : このアニメーションに関連付けられた {{domxref("AnimationEffect")}} を取得または設定します。これはふつう、 {{domxref("KeyframeEffect")}} オブジェクトになります。
+- {{domxref("Animation.finished")}} {{readOnlyInline}}
+  - : このアニメーションにおいて現在完了しているプロミスを返します。
+- {{domxref("Animation.id")}}
+  - : このアニメーションを識別するための `String` を取得または設定します。
+- {{domxref("Animation.pending")}} {{readonlyinline}}
+  - : このアニメーションが現在、再生待ちや再生中の一時停止などの非同期操作を待機しているかどうかを示します。
+- {{domxref("Animation.playState")}} {{readOnlyInline}}
+  - : 列挙型の値で、アニメーションの再生状態を示す列挙値を返します。
+- {{domxref("Animation.playbackRate")}}
+  - : このアニメーションの再生速度を取得または設定します。
+- {{domxref("Animation.ready")}} {{readOnlyInline}}
+  - : このアニメーションの準備ができているかどうかを示すプロミスを返します。
+- {{domxref("animation.replaceState")}}
+  - : アニメーションの置換状態を返します。 `active` ならばアニメーションが置き換えられたこと、 `persisted` ならば {{domxref("Animation.persist()")}} が呼び出されたことを示します。
+- {{domxref("Animation.startTime")}}
+  - : アニメーションの再生が始まる予定の時刻を取得または設定します。
+- {{domxref("Animation.timeline")}}
+  - : このアニメーションに関連付けられる {{domxref("AnimationTimeline", "timeline")}} を取得または設定します。
 
-<dl>
- <dt>{{domxref("Animation.id")}}</dt>
- <dd>アニメーションを識別するための <code>String</code> の取得および設定を行います。</dd>
- <dt>{{domxref("Animation.pending")}} {{readonlyinline}}</dt>
- <dd>アニメーションが再生の初期化や再生停止といった非同期処理のため現在待ち状態にあるかどうかを示します。</dd>
- <dt>{{domxref("Animation.playState")}} {{readOnlyInline}}</dt>
- <dd>アニメーションの再生状況を示す列挙型の値を返します。</dd>
-</dl>
+## メソッド
 
-<dl>
- <dt>{{domxref("Animation.playbackRate")}}</dt>
- <dd>アニメーションの再生速度の取得および設定をします。</dd>
-</dl>
+- {{domxref("Animation.cancel()")}}
+  - : このアニメーションで発生したすべての {{domxref("KeyframeEffect", "keyframeEffects")}} を消去し、再生を中止します。
+- {{domxref("animation.commitStyles()")}}
+  - : アニメーションの終了時のスタイル状態を、そのアニメーションが削除された後でも、アニメーションしている要素にコミットします。これは、アニメーション終了時のスタイル状態を `style` 属性内のプロパティの形で動作している要素に書き込むことで行われます。
+- {{domxref("Animation.finish()")}}
+  - : 再生位置をアニメーションのどちらかの端まで移動します。アニメーションが通常再生中か逆再生中かによって変わります。
+- {{domxref("Animation.pause()")}}
+  - : アニメーションの再生を一時停止します。
+- {{domxref("animation.persist()")}}
+  - : ブラウザーの[アニメーションの自動削除](#アニメーションの自動削除)の動作により、アニメーションが削除された場合、明示的にアニメーションを持続させます。
+- {{domxref("Animation.play()")}}
+  - : アニメーションの再生を開始または再開します。また、前回終了したアニメーションを再度開始します。
+- {{domxref("Animation.reverse()")}}
+  - : 再生方向を反転させ、アニメーションの開始位置で停止させます。アニメーションが終了しているか未再生の場合は、末尾から先頭に向けて再生されます。
+- {{domxref("Animation.updatePlaybackRate()")}}
+  - : アニメーションの再生位置を同期させた後の速度を設定します。
 
-<dl>
- <dt>{{domxref("Animation.ready")}} {{readOnlyInline}}</dt>
- <dd>対象アニメーションの再生準備ができた時点で Promise を返します。</dd>
-</dl>
+## イベント
 
-<dl>
- <dt>{{domxref("Animation.startTime")}}</dt>
- <dd>アニメーションが再生される所定時間の取得および設定を行います。</dd>
-</dl>
+- {{domxref("Animation.cancel_event", "cancel")}}
+  - : {{domxref("Animation.cancel()")}} メソッドが呼び出されるか、アニメーションの再生状態が他の状態から `"idle"` へ遷移した場合に発行されます。
+- {{domxref("Animation.finish_event" , "finish")}}
+  - : アニメーションの再生が終了した時に発行されます。
+- {{domxref("animation.remove_event", "remove")}}
+  - : アニメーションが取り除かれた時 (すなわち、 `active` 置換状態に遷移した時）に発行されます。
 
-<dl>
- <dt>{{domxref("Animation.timeline")}}</dt>
- <dd>対象のアニメーションに紐づいた {{domxref("AnimationTimeline", "timeline")}} の取得および設定を行います。</dd>
-</dl>
+## アニメーションの自動削除
 
-<h3 id="イベントハンドラ">イベントハンドラ</h3>
+同じ要素に多数のアニメーションを起動させることが可能です。それらが不定である場合（つまり前方充填）、巨大なアニメーションリストとなり、メモリリークを発生させる可能性があります。このため、最近のブラウザーは Web Animations 仕様の一部を実装しており、開発者が明示的に指定しない限り、前方充填アニメーションのオーバーライドを自動的に削除しています。
 
-<dl>
- <dt>{{domxref("Animation.oncancel")}}</dt>
- <dd><code>cancel</code> イベントのイベントハンドラーの取得および設定を行います。</dd>
- <dt>{{domxref("Animation.onfinish")}}</dt>
- <dd><code>finish</code> イベントのイベントハンドラーの取得および設定を行います。</dd>
-</dl>
+このことは、簡単な[不定アニメーションの置き換えデモ](https://mdn.github.io/dom-examples/web-animations-api/replace-indefinite-animations.html)で実際に見ることができます。関連する JavaScript の機能は以下の通りです。
 
-<h2 id="メソッド">メソッド</h2>
+- {{domxref("animation.commitStyles()")}} により、アニメーションされる要素にアニメーションの終了時のスタイル状態を、そのアニメーションが削除された後でも適用されるようにコミットします。
+- {{domxref("animation/remove_event", "remove")}} イベントは {{domxref("Animation")}} インターフェイス上で、アニメーションを削除した（すなわち置換状態が `active` になった）ときに発行されます。
+- {{domxref("animation.persist()")}} はアニメーションを明示的に保持させたい場合に使用します。
+- {{domxref("animation.replaceState")}} はアニメーションの置換状態を返します。アニメーションが削除された場合は `active` となり、{{domxref("Animation.persist", "persist()")}} が呼び出された場合は `persisted` となります。
 
-<dl>
- <dt>{{domxref("Animation.cancel()")}}</dt>
- <dd>対象アニメーションによる全ての {{domxref("KeyframeEffect", "keyframeEffects")}} を消去し、再生を中断します。</dd>
-</dl>
+## アクセシビリティの考慮
 
-<dl>
- <dt>{{domxref("Animation.finish()")}}</dt>
- <dd>アニメーションが通常再生中の場合は終了を、逆再生中の場合は開始時点を設定します。</dd>
-</dl>
+注意欠陥多動性障碍（ADHD）などの認知能力に不安のある方にとって、まばたきや点滅するアニメーションは問題となることがあります。さらに、ある種の動作は、前庭障害、てんかん、片頭痛、スコトピック過敏症の引き金になることがあります。
 
-<dl>
- <dt>{{domxref("Animation.pause()")}}</dt>
- <dd>再生中のアニメーションを一時停止します。</dd>
-</dl>
+アニメーションを一時停止したり、無効にしたりするメカニズムを提供したり、[動作縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)を使って、アニメーションなしの操作を希望するユーザーのために補完的な操作を提供することを検討してください。
 
-<dl>
- <dt>{{domxref("Animation.play()")}}</dt>
- <dd>アニメーションを再生もしくは再開します。既に終了しているアニメーションについては再度再生を行います。</dd>
-</dl>
+- [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
+- [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
+- [MDN WCAG を理解する　ガイドライン 2.2 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [Understanding Success Criterion 2.2.2  | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
-<dl>
- <dt>{{domxref("Animation.reverse()")}}</dt>
- <dd>アニメーションを逆再生し、開始時点で終了します。アニメーションが終了しているまたは未再生の場合は終わりから最初まで再生します。</dd>
- <dt>{{domxref("Animation.updatePlaybackRate()")}}</dt>
- <dd>対象アニメーション再生位置を同期後、アニメーションの再生速度を設定します。</dd>
-</dl>
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Animations", "#the-animation-interface", "Animation")}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+{{Compat}}
 
+## 関連情報
 
-
-<p>{{Compat("api.Animation")}}</p>
+- [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
