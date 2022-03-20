@@ -1,64 +1,44 @@
 ---
-title: Console.profile()
+title: console.profile()
 slug: Web/API/console/profile
 tags:
   - API
   - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
+  - デバッグ
+  - メソッド
+  - 標準外
+  - リファレンス
+  - ウェブ開発
   - profile
-  - web console
+  - ウェブコンソール
+browser-compat: api.console.profile
 translation_of: Web/API/Console/profile
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}{{Non-standard_header}}
 
-<p>パフォーマンスプロファイル (例えば <a href="/ja/docs/Tools/Performance">Firefox の パフォーマンスツール</a>) の記録を開始します。</p>
+**`console.profile()`** はパフォーマンスプロファイル（例えば [Firefox の パフォーマンスツール](/ja/docs/Tools/Performance)）の記録を開始します。
 
-<p>任意でプロファイル名を引数として与えることができ、複数のプロファイルを記録している場合に特定のプロファイルのみ停止することができます。引数の解釈方法については、{{domxref("Console.profileEnd()")}} をご覧ください。</p>
+任意でプロファイル名を引数として与えることができ、複数のプロファイルを記録している場合に特定のプロファイルのみ停止することができます。引数の解釈方法については、{{domxref("console.profileEnd()")}} をご覧ください。
 
-<p>{{domxref("Console.profileEnd()")}} を呼び出すと、記録を終了します。</p>
+{{domxref("console.profileEnd()")}} を呼び出すと、記録を終了します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">console.profile(<em>profileName</em>);
-</pre>
+```js
+console.profile(profileName);
+```
 
-<h2 id="Parameters" name="Parameters">引数</h2>
+## 引数
 
-<dl>
- <dt><code>profileName</code></dt>
- <dd>プロファイルにつける名前。省略可能です。</dd>
-</dl>
+- `profileName`
+  - : プロファイルにつける名前。省略可能です。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consoleprofilelabel", "console.profile()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## 関連情報
 
-<p>{{Compat("api.Console.profile")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("Console.profileEnd()")}}</li>
-</ul>
+- {{domxref("console.profileEnd()")}}
