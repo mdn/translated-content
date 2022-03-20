@@ -1,67 +1,56 @@
 ---
-title: console.timeEnd
-slug: Web/API/Console/timeEnd
+title: console.timeEnd()
+slug: Web/API/console/timeEnd
 tags:
   - API
   - DOM
-  - Debugging
-  - Method
-  - Non-standard
-  - Web Development
+  - デバッグ
+  - メソッド
+  - ウェブ開発
   - console
-  - web console
-translation_of: Web/API/Console/timeEnd
+  - ウェブコンソール
+browser-compat: api.console.timeEnd
+translation_of: Web/API/console/timeEnd
 ---
-<div>{{APIRef("Console API")}}{{Non-standard_header}}</div>
+{{APIRef("Console API")}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`console.timeEnd()`** は、以前 {{domxref("console.time()")}} の呼び出しで開始したタイマーを停止します。
 
-<p>{{domxref("console.time()")}} の呼び出しによって開始したタイマーを停止します。</p>
+詳細や使用例については、ドキュメントの[タイマー](/ja/docs/Web/API/console#タイマー)を参照して下さい。
 
-<p>詳細や使用例については、 {{domxref("console")}} のページの 『<a href="/ja/docs/Web/API/console#Timers">タイマー</a>』 の章を参照して下さい。</p>
+{{AvailableInWorkers}}
 
-<p>{{AvailableInWorkers}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+console.timeEnd(label);
+```
 
-<pre class="syntaxbox">console.timeEnd(<var>timerName</var>);
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `label`
+  - : 停止するタイマーの名前です。停止させると、経過時間が自動的に[ウェブコンソール](/ja/docs/Tools/Web_Console)に停止した時刻を示すインジケーターと共に表示されます。
 
-<dl>
- <dt><code>timerName</code></dt>
- <dd>停止するタイマーの名前。停止時に、この名前を伴って <a href="/ja/docs/Tools/Web_Console">Web コンソール</a>に経過時間が表示されます。</dd>
-</dl>
+## 例
 
-<h2 id="Specification" name="Specification">仕様</h2>
+```js
+console.time("answer time");
+alert("Click to continue");
+console.timeLog("answer time");
+alert("Do a bunch of other stuff...");
+console.timeEnd("answer time");
+```
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consoletimeendlabel", "console.timeEnd()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+上記の例の出力結果は、ユーザーが最初のアラートボックスを解除するのにかかった時間と、その後に 2 番目のアラートを解除するのにかかった時間を示します。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+![](timer_output.png)
 
-<p>{{Compat("api.Console.timeEnd")}}</p>
+タイマーの名前は `timeLog()` を使ってタイマーの値を記録するときに表示され、停止するときに再び表示されることに注意してください。さらに、 timeEnd() の呼び出しは、タイマーが時間を追跡しなくなったことを明確にするために、 "timer ended" という追加の情報を持っています。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 仕様書
 
-<ul>
- <li>{{domxref("console.time")}}</li>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示</a></li>
- <li><a href="http://getfirebug.com/wiki/index.php/Console_API#console.timeEnd.28name.29">Console API - FirebugWiki</a></li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
