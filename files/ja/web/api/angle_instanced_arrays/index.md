@@ -3,84 +3,88 @@ title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
 tags:
   - API
-  - Reference
+  - リファレンス
   - WebGL
-  - WebGL extension
+  - WebGL 拡張機能
+browser-compat: api.ANGLE_instanced_arrays
 translation_of: Web/API/ANGLE_instanced_arrays
 ---
-<div>{{APIRef("WebGL")}}</div>
+{{APIRef("WebGL")}}
 
-<p><code><strong>ANGLE_instanced_arrays</strong></code> この拡張機能は<a href="/ja/docs/Web/API/WebGL_API">WebGL API</a>の一部です。 同じ頂点データ、プリミティブカウント、およびタイプを共有する場合は、同じオブジェクトまたは同様のオブジェクトのグループを複数回描画できます。</p>
+**`ANGLE_instanced_arrays`** 拡張機能は [WebGL API](/ja/docs/Web/API/WebGL_API) の一部であり、同じ頂点データ、プリミティブカウント、およびタイプを共有している同じオブジェクトまたは同様のオブジェクトのグループを複数回描画することができます。
 
-<p>{{domxref("WebGLRenderingContext.getExtension()")}} メソッドを使用して WebGL拡張を利用できます. 詳細については、<a href="/ja/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a>の<a href="/ja/docs/Web/API/WebGL_API/Using_Extensions">Using Extensions</a>も参照してください。</p>
+WebGL 拡張機能は {{domxref("WebGLRenderingContext.getExtension()")}} メソッドを使用することで利用できるようになります。詳しくは、 [WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial) の [拡張機能の使用](/ja/docs/Web/API/WebGL_API/Using_Extensions)も参照してください。
 
-<div class="note">
-<p><strong>Availability:</strong> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context 既定では and the constants and methods are available without the "<code>ANGLE</code>" suffix.</p>
+> **Note:** この拡張機能は {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} のコンテキストでのみ利用可能です。 {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} のコンテキストでは、この機能は既定で使用することができ、定数やメソッドは "`ANGLE`" 接尾辞なしで使用することができます。
+>
+> "ANGLE" という名前ですが、この拡張機能は ANGLE ライブラリーを使用していれば、 Windows でなくてもハードウェアが対応していればあらゆる端末で動作します。 "ANGLE" は単に、この拡張機能が ANGLE ライブラリーの作者によって書かれたことを示しているだけです。
 
-<p>Despite the name "ANGLE", this extension works on any device if the hardware supports it and not just on Windows when using the ANGLE library. "ANGLE" just indicates that this extension has been written by the ANGLE library authors.</p>
-</div>
+## 定数
 
-<h2 id="Constants" name="Constants">定数</h2>
+この拡張機能は新しい定数を公開します。これは {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} メソッドで使用することができます。
 
-<p>この拡張は新た定数を公開します。この定数は{{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}}メソッドで使用できます：</p>
+- `ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE`
+  - : {{domxref("WebGL_API/Types", "GLint")}} で、 {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} で `pname` 引数として使用されたときにインスタンス化されたレンダリングに用いられる序数を記述したものを返します。
 
-<dl>
- <dt><code>ext.VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE</code></dt>
- <dd>Returns a {{domxref("GLint")}} describing the frequency divisor used for instanced rendering when used in the {{domxref("WebGLRenderingContext.getVertexAttrib()", "gl.getVertexAttrib()")}} as the <code>pname</code> parameter.</dd>
-</dl>
+## メソッド
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+この拡張機能は 3 つの新しいメソッドを公開します。
 
-<p>この拡張機能は3つの新しいメソッドを公開しています。</p>
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
+  - : {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} と同様に動作しますが、要素の範囲の複数のインスタンスが実行され、反復ごとにインスタンスが進む点が異なります。
+- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}
+  - : {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} と同様に動作しますが、要素のセットの複数のインスタンスが実行され、各セット間でインスタンスが進む点が異なります。
+- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}
+  - : プリミティブの複数のインスタンスを {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} および {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}} で描画する際に一般頂点属性が進む速度を変更します。
 
-<dl>
- <dt>{{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}</dt>
- <dd>
- <p>Behaves identically to {{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} except that multiple instances of the range of elements are executed, and the instance advances for each iteration.</p>
- </dd>
- <dt>{{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}</dt>
- <dd>
- <p>Behaves identically to {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} except that multiple instances of the set of elements are executed and the instance advances between each set.</p>
- </dd>
- <dt>{{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}</dt>
- <dd>
- <p>Modifies the rate at which generic vertex attributes advance when rendering multiple instances of primitives with {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}} and {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}.</p>
- </dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+次の例は、与えられた図形を 1 回の draw 呼び出しで複数回描画する方法です。
+> **Warning:** 以下は教育的なものであり、製品レベルのコードではありません。レンダリングループ内や使用直前にデータ/バッファを構築することは、一般的に避けるべきです。
 
-<p>Enabling the extension:</p>
+```js
+// 拡張機能を有効化
+const ext = gl.getExtension('ANGLE_instanced_arrays');
 
-<pre class="brush: js">var ext = gl.getExtension('ANGLE_instanced_arrays');
-</pre>
+// 通常通りに図形バッファーを関連付ける
+gl.bindBuffer(gl.ARRAY_BUFFER, geometryVertexBuffer);
+gl.enableVertexAttribArray(vertexPositionAttributeLocation);
+gl.vertexAttribPointer(vertexPositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+// 位置バッファーを構築
+const instancePositions = [];
+for (const instance of instances) {
+  instancePositions.push(
+    instance.position.x,
+    instance.position.y,
+    instance.position.z
+  );
+}
+const instancePositionBuffer = createWebGLBufferFromData(instancePositions);
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ANGLE_instanced_arrays', '', 'ANGLE_instanced_arrays')}}</td>
-   <td>{{Spec2('ANGLE_instanced_arrays')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+// 他の属性と同様に、このインスタンスと位置バッファーを関連付け
+gl.bindBuffer(gl.ARRAY_BUFFER, instancePositionBuffer);
+gl.enableVertexAttribArray(instancePositionAttributeLocation);
+gl.vertexAttribPointer(instancePositionAttributeLocation, 3, gl.FLOAT, false, 0, 0);
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+// 属性をインスタンスとしてマークし、すべての頂点ではなく、それぞれ（1 つ）のインスタンスを進めます。
+ext.vertexAttribDivisorANGLE(instancePositionAttributeLocation, 1);
 
-<p>{{Compat("api.ANGLE_instanced_arrays")}}</p>
+// それぞれのインスタンスについて、図形を描画します。
+ext.drawArraysInstancedANGLE(gl.TRIANGLES, 0, numGeometryVertices, instances.length);
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 仕様書
 
-<ul>
- <li>{{domxref("WebGLRenderingContext.getExtension()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}</li>
- <li>{{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}</li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("WebGLRenderingContext.getExtension()")}}
+- {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
+- {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
+- {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}
