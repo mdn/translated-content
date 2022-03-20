@@ -1,69 +1,51 @@
 ---
-title: Console.warn()
+title: console.warn()
 slug: Web/API/console/warn
 tags:
   - API
   - DOM
-  - Debugging
-  - Method
+  - デバッグ
+  - メソッド
   - NeedsBrowserCompatibility
-  - Web Development
-  - web console
+  - ウェブ開発
+  - ウェブコンソール
+browser-compat: api.console.warn
 translation_of: Web/API/Console/warn
 ---
-<div>{{APIRef("Console API")}}{{non-standard_header}}</div>
+{{APIRef("Console API")}}
 
-<p>Web コンソールに警告メッセージを出力します。</p>
+**`console.warn()`** メソッドは、ウェブコンソールに警告メッセージを出力します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p>{{Note("Firefox では、Web コンソールでこれらのログの隣に小さな感嘆符のアイコンを表示します。")}}</p>
+> **Note:** Chrome と Firefox では、警告メッセージはウェブコンソール上で小さな感嘆符の隣に表示されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">console.warn(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.warn(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```js
+console.warn(obj1 [, obj2, ..., objN]);
+console.warn(msg [, subst1, ..., substN]);
+```
 
-<h2 id="Parameters" name="Parameters">引数</h2>
+## 引数
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>出力する JavaScript オブジェクトのリスト。各オブジェクトを文字列で表現したものを、リストの並び順に追記して出力します。</dd>
- <dt><code>msg</code></dt>
- <dd>0 個以上の置換文字列を含む JavaScript 文字列。</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd><code>msg</code> 内の置換文字列を置き換える JavaScript オブジェクト。これにより、出力形式を高度に制御できます。</dd>
-</dl>
+- `obj1` ... `objN`
+  - : 出力する JavaScript オブジェクトのリスト。各オブジェクトを文字列で表現したものを、リストの並び順に追記して出力します。
+- `msg`
+  - : 0 個以上の置換文字列を含む JavaScript 文字列。
+- `subst1` ... `substN`
+  - : `msg` 内の置換文字列を置き換える JavaScript オブジェクト。これにより、出力形式を高度に制御できます。
 
-<p>詳しくは {{domxref("console")}} のドキュメントで、<a href="/ja/docs/Web/API/console#Outputting_text_to_the_console">コンソールにテキストを出力する</a> をご覧ください。</p>
+詳しくは {{domxref("console")}} のドキュメントで、[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)をご覧ください。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consolewarnobject--object-", "console.warn()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Console.warn")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示</a></li>
-</ul>
+- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](https://msdn.microsoft.com/library/gg589530)
