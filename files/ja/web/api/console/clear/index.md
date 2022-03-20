@@ -1,44 +1,30 @@
 ---
-title: clear()
+title: console.clear()
 slug: Web/API/console/clear
 tags:
   - API
-  - Debugging
-  - Method
-  - Reference
+  - デバッグ
+  - メソッド
+  - リファレンス
   - console
-  - web console
+  - ウェブコンソール
+browser-compat: api.console.clear
 translation_of: Web/API/Console/clear
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p><code>console.clear()</code>は実行環境が許可する場合、コンソールをクリアします。</p>
+**`console.clear()`** メソッドは、実行環境が許可すれば、コンソールを消去します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">console.clear();</pre>
+```js
+console.clear();
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#clear", "console.clear()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.Console.clear")}}</p>
+{{Compat}}
