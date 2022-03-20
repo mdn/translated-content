@@ -39,7 +39,7 @@ String.prototype.trimRight.name === "trimEnd";
 
 ## Exemples
 
-L'exemple qui suit illustre comment afficher la chaîne "   toto":
+L'exemple qui suit illustre comment afficher la chaîne "   toto":
 
 ```js
 var str = "   toto  ";

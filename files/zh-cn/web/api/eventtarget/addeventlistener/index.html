@@ -33,13 +33,13 @@ Non-standard_inline}});  // Gecko/Mozilla only
  <dt><code>type</code></dt>
  <dd>表示监听<a href="/zh-CN/docs/Web/Events">事件类型</a>的字符串。</dd>
  <dt><code>listener</code></dt>
- <dd>当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。<code>listener</code> 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Functions">函数</a>。有关回调本身的详细信息，请参阅{{anch("The event listener callback")}} </dd>
+ <dd>当所监听的事件类型触发时，会接收到一个事件通知（实现了 {{domxref("Event")}} 接口的对象）对象。<code>listener</code> 必须是一个实现了 {{domxref("EventListener")}} 接口的对象，或者是一个<a href="/zh-CN/docs/Web/JavaScript/Guide/Functions">函数</a>。有关回调本身的详细信息，请参阅<a href="#事件监听回调">事件监听回调</a> </dd>
  <dt>options {{optional_inline}}</dt>
  <dd>一个指定有关 <code>listener </code>属性的可选参数<strong>对象</strong>。可用的选项如下：
  <ul>
   <li><code>capture</code>:  {{jsxref("Boolean")}}，表示 <code>listener</code> 会在该类型的事件捕获阶段传播到该 <code>EventTarget</code> 时触发。</li>
   <li><code>once</code>:  {{jsxref("Boolean")}}，表示 <code>listener 在添加之后最多只调用一次。如果是</code> <code>true，</code> <code>listener</code> 会在其被调用之后自动移除。</li>
-  <li><code>passive</code>: {{jsxref("Boolean")}}，设置为true时，表示 <code>listener</code> 永远不会调用 <code>preventDefault()</code>。如果 listener 仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。查看 {{anch("使用 passive 改善的滚屏性能")}} 了解更多.</li>
+  <li><code>passive</code>: {{jsxref("Boolean")}}，设置为true时，表示 <code>listener</code> 永远不会调用 <code>preventDefault()</code>。如果 listener 仍然调用了这个函数，客户端将会忽略它并抛出一个控制台警告。查看 <a href="#使用_passive_改善的滚屏性能">使用 passive 改善的滚屏性能</a> 了解更多.</li>
   <li><code>signal</code>：{{domxref("AbortSignal")}}，该 <code>AbortSignal</code> 的 {{domxref("AbortController/abort()", "abort()")}} 方法被调用时，监听器会被移除。</li>
   <li>{{non-standard_inline}}<code> mozSystemGroup</code>: 只能在 XBL 或者是 Firefox' chrome 使用，这是个 {{jsxref("Boolean")}}，表示 <code>listener </code>被添加到 system group。</li>
  </ul>
@@ -319,7 +319,7 @@ el.addEventListener("click", () =&gt; { modifyText("four"); }, false);</pre>
 
 <p>{{ EmbedLiveSample('options用法示例', 600, 310, '', 'Web/API/EventTarget/addEventListener') }}</p>
 
-<p>在使用<code>options</code>对象中具体的值前，最好确保用户的浏览器支持它，因为这些是历史上并非所有浏览器都支持的附加功能。你可以查看{{anch("Safely detecting option support")}}以了解更多</p>
+<p>在使用<code>options</code>对象中具体的值前，最好确保用户的浏览器支持它，因为这些是历史上并非所有浏览器都支持的附加功能。你可以查看<a href="#option支持的安全检测">option支持的安全检测</a>以了解更多</p>
 
 <h2 id="备注">备注</h2>
 

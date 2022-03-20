@@ -30,7 +30,7 @@ Un nombre qui représente le plus grand entier inférieur ou égal à la valeur 
 
 ## Description
 
-`floor()` est une méthode statique de l'objet `Math`, elle doit toujours être utilisée avec la syntaxe  `Math.floor()`, elle ne doit pas être utilisée avec un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
+`floor()` est une méthode statique de l'objet `Math`, elle doit toujours être utilisée avec la syntaxe  `Math.floor()`, elle ne doit pas être utilisée avec un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
 > **Note :** `Math.floor(null)` renvoie `0` et pas {{jsxref("NaN")}}.
 

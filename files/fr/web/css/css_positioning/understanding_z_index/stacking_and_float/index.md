@@ -11,21 +11,21 @@ original_slug: Web/CSS/Comprendre_z-index/Empilement_et_float
 Pour les blocs flottants, l'ordre d'empilement est légèrement différent. Les blocs flottants sont disposés entre les blocs non positionnés et les blocs positionnés. Voici l'ordre d'empilement :
 
 1.  L'arrière-plan et les bordures de l'élément racine du document
-2.  Les blocs qui descendent les uns des autres et qui sont situés dans le flux normal, dans l'ordre dans lequel ils apparaissent (pour HTML) ;
-3.  Les blocs flottants ;
+2.  Les blocs qui descendent les uns des autres et qui sont situés dans le flux normal, dans l'ordre dans lequel ils apparaissent (pour HTML)&nbsp;;
+3.  Les blocs flottants&nbsp;;
 4.  Les éléments enfants positionnés, dans leur ordre d'apparence (pour HTML).
 
 En fait, comme on le voit avec l'exemple ci-après, l'arrière-plan et la bordure du bloc non positionné (DIV n°4) ne sont pas impactés par les blocs flottants alors que le contenu est affecté. Il s'agit du comportement standard de la propriété CSS {{cssxref("float")}}.
 
 Ce comportement peut être expliqué en améliorant la liste précédente :
 
-1.  L'arrière-plan et les bordures de l'élément racine ;
-2.  Les blocs enfants dans le flux normal, dans leur ordre d'apparence (en HTML) ;
-3.  Les blocs flottants ;
-4.  Les éléments « en-ligne » enfants dans le flux normal ;
+1.  L'arrière-plan et les bordures de l'élément racine&nbsp;;
+2.  Les blocs enfants dans le flux normal, dans leur ordre d'apparence (en HTML)&nbsp;;
+3.  Les blocs flottants&nbsp;;
+4.  Les éléments «&nbsp;en-ligne&nbsp;» enfants dans le flux normal&nbsp;;
 5.  Les éléments enfants positionnés, dans leur ordre d'apparence (en HTML).
 
-> **Note :** Dans l'exemple qui suit, tous les blocs sont transparents, excepté celui qui n'est pas positionné, montrant ainsi l'ordre d'empilement. Si l'on réduit l'opacité du bloc non positionné (DIV #4), il se produit quelque chose d'étrange : l'arrière-plan et la bordure de cet élément se placent par dessus les blocs flottants et les blocs positionnés. Il s'agit d'une interprétation particulière des spécifications CSS : l'application de l'opacité crée un nouveau contexte d'empilement (voir l'article : [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) de Philip Walton ou son excellente traduction de Vincent De Oliveira, [Ce que personne ne vous a dit sur z-index](https://iamvdo.me/blog/comprendre-z-index-et-les-contextes-dempilement) et, bien-sûr, la [spécification](https://www.w3.org/TR/CSS2/zindex.html)).
+> **Note :** Dans l'exemple qui suit, tous les blocs sont transparents, excepté celui qui n'est pas positionné, montrant ainsi l'ordre d'empilement. Si l'on réduit l'opacité du bloc non positionné (DIV #4), il se produit quelque chose d'étrange&nbsp;: l'arrière-plan et la bordure de cet élément se placent par dessus les blocs flottants et les blocs positionnés. Il s'agit d'une interprétation particulière des spécifications CSS : l'application de l'opacité crée un nouveau contexte d'empilement (voir l'article : [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) de Philip Walton ou son excellente traduction de Vincent De Oliveira, [Ce que personne ne vous a dit sur z-index](https://iamvdo.me/blog/comprendre-z-index-et-les-contextes-dempilement) et, bien-sûr, la [spécification](https://www.w3.org/TR/CSS2/zindex.html)).
 
 {{EmbedLiveSample("Code_source_de_lexemple", 600, 250)}}
 

@@ -13,13 +13,13 @@ original_slug: Web/CSS/Layout_cookbook/Centrer_un_element
 ---
 {{CSSRef}}
 
-Comment centrer une boîte dans une autre boîte ? Centrer à la fois horizontalement et verticalement était difficile avant l'arrivée des boîtes flexibles (_flexbox_), mais c'est désormais beaucoup plus simple grâce aux propriétés du module de spécification _Box Alignment_.
+Comment centrer une boîte dans une autre boîte ? Centrer à la fois horizontalement et verticalement était difficile avant l'arrivée des boîtes flexibles (_flexbox_), mais c'est désormais beaucoup plus simple grâce aux propriétés du module de spécification _Box Alignment_.
 
 ![an element centered inside a larger box](cookbook-center.png)
 
 ## Spécifications sommaires
 
-Centrer un élément à la fois horizontalement et verticalement dans un autre élément.
+Centrer un élément à la fois horizontalement et verticalement dans un autre élément.
 
 ## Recette
 
@@ -31,10 +31,10 @@ Centrer un élément à la fois horizontalement et verticalement dans un autre 
 
 Pour centrer une boîte dans une autre, on a donné au contenant une propriété `display: flex`.
 
-Ensuite, on a paramétré {{cssxref("align-items")}} avec la valeur `center` pour centrer la boîte verticalement, et {{cssxref("justify-content")}} avec la valeur `center` pour centrer horizontalement.
+Ensuite, on a paramétré {{cssxref("align-items")}} avec la valeur `center` pour centrer la boîte verticalement, et {{cssxref("justify-content")}} avec la valeur `center` pour centrer horizontalement.
 
-À l'avenir, nous pourrons peut-être centrer les éléments sans avoir à transformer le parent en contenant flexible, puisque les propriétés de Box Alignment utilisées ici sont aussi faites pour s'appliquer à une disposition en bloc classique.
-Cependant, sa prise en charge dans ce cas (disposition en bloc) est actuellement limitée ; l'utilisation de Flexbox pour centrer est donc, pour le moment, la technique la plus robuste.
+À l'avenir, nous pourrons peut-être centrer les éléments sans avoir à transformer le parent en contenant flexible, puisque les propriétés de Box Alignment utilisées ici sont aussi faites pour s'appliquer à une disposition en bloc classique.
+Cependant, sa prise en charge dans ce cas (disposition en bloc) est actuellement limitée ; l'utilisation de Flexbox pour centrer est donc, pour le moment, la technique la plus robuste.
 
 ## Compatibilité des navigateurs
 

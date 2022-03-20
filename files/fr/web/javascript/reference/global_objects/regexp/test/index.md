@@ -31,7 +31,7 @@ Un booléen : `true` ou `false` selon qu'une correspondance a été trouvée ent
 
 ## Description
 
-On utilisera `test()` dès qu'on souhaite savoir si une partie d'une chaîne de caractères correspond à une expression rationnelle (similaire à la méthode {{jsxref("String.prototype.search()")}}). Pour obtenir plus d'informations (mais une exécution moins rapide), on utilisera la méthode {{jsxref("RegExp.prototype.exec()", "exec()")}} (similaire à la méthode {{jsxref("String.prototype.match()")}}). Comme avec {{jsxref("RegExp.prototype.exec()", "exec()")}} (et même en combinant les deux), des appels successifs à `test()` sur une même instance d'une expression rationnelle permettent de rechercher après la dernière occurence. Cette méthode est différente de `search` car elle renvoie un booléen et non la position de la correspondance si elle est trouvée (ou `-1` sinon).
+On utilisera `test()` dès qu'on souhaite savoir si une partie d'une chaîne de caractères correspond à une expression rationnelle (similaire à la méthode {{jsxref("String.prototype.search()")}}). Pour obtenir plus d'informations (mais une exécution moins rapide), on utilisera la méthode {{jsxref("RegExp.prototype.exec()", "exec()")}} (similaire à la méthode {{jsxref("String.prototype.match()")}}). Comme avec {{jsxref("RegExp.prototype.exec()", "exec()")}} (et même en combinant les deux), des appels successifs à `test()` sur une même instance d'une expression rationnelle permettent de rechercher après la dernière occurence. Cette méthode est différente de `search` car elle renvoie un booléen et non la position de la correspondance si elle est trouvée (ou `-1` sinon).
 
 ## Exemples
 
@@ -102,7 +102,7 @@ console.log(compterMots("Ah que coucou Bob")); // 4
 
 ## Notes spécifiques à Firefox
 
-Pour les versions antérieures à Firefox 8.0, l'implémentation de `test()` était erronée. Quand la méthode était appelée sans aucun paramètre, elle effectuait son test par rapport à la dernière entrée (la propriété `RegExp.input`) et non par rapport à la chaîne `"undefined"`. Ce comportement a été corrigé  ; désormais `/undefined/.test()` retourne bien `true` au lieu d'une erreur.
+Pour les versions antérieures à Firefox 8.0, l'implémentation de `test()` était erronée. Quand la méthode était appelée sans aucun paramètre, elle effectuait son test par rapport à la dernière entrée (la propriété `RegExp.input`) et non par rapport à la chaîne `"undefined"`. Ce comportement a été corrigé  ; désormais `/undefined/.test()` retourne bien `true` au lieu d'une erreur.
 
 ## Voir aussi
 

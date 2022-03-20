@@ -62,7 +62,7 @@ Reflect.has(obj, "bonbon");  // false
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.has', 'Reflect.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.has', 'Reflect.has')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.has', 'Reflect.has')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -5,11 +5,11 @@ translation_of: Web/API/Console/clear
 ---
 {{APIRef("Console API")}}
 
-Vide la console.
+Vide la console.
 
 Tous les messages de la console seront supprimés et remplacés par un message de confirmation ("Console was cleared").
 
-À noter: sur Google Chrome, `console.clear()` n'a aucun effet si l'utilisateur a coché "Preserve log upon navigation" dans les [paramètres de l'inspecteur](https://developer.chrome.com/devtools/docs/settings#preserve-log%20upon%20navigation).
+À noter: sur Google Chrome, `console.clear()` n'a aucun effet si l'utilisateur a coché "Preserve log upon navigation" dans les [paramètres de l'inspecteur](https://developer.chrome.com/devtools/docs/settings#preserve-log%20upon%20navigation).
 
 ## Syntaxe
 

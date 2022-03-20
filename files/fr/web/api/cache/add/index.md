@@ -15,7 +15,7 @@ translation_of: Web/API/Cache/add
 ---
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-La méthode **`add()`** de l'interface {{domxref("Cache")}} accepte une URL, la récupère, et ajoute l'objet réponse qui en résulte dans le cache. La méthode `add()` est équivalent au code suivant :
+La méthode **`add()`** de l'interface {{domxref("Cache")}} accepte une URL, la récupère, et ajoute l'objet réponse qui en résulte dans le cache. La méthode `add()` est équivalent au code suivant :
 
 ```js
 fetch(url).then(function(response) {
@@ -26,9 +26,9 @@ fetch(url).then(function(response) {
 })
 ```
 
-Pour des opérations plus complexes, il faut utiliser {{domxref("Cache.put","Cache.put()")}} directement.
+Pour des opérations plus complexes, il faut utiliser {{domxref("Cache.put","Cache.put()")}} directement.
 
-> **Note :** `add()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.
+> **Note :** `add()` écrasera toute paire clé/valeur précedemment stockée en cache et qui correspond à la requête.
 
 ## Syntaxe
 
@@ -41,11 +41,11 @@ cache.add(request).then(function() {
 ### Paramètres
 
 - request
-  - : La requête à mettre en cache. Ce paramètre peut être un objet {{domxref("Request", "Requête")}} ou une URL.
+  - : La requête à mettre en cache. Ce paramètre peut être un objet {{domxref("Request", "Requête")}} ou une URL.
 
 ### Retour
 
-Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
+Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
 
 ### Exceptions
 
@@ -61,12 +61,12 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
       <td><code>TypeError</code></td>
       <td>
         <p>
-          Le schéma d'URL n'est pas <code>http</code> ou <code>https</code>.
+          Le schéma d'URL n'est pas <code>http</code> ou <code>https</code>.
         </p>
         <p>
-          Le statut de la réponse n'est pas dans les 200 (i.e., une requête qui
+          Le statut de la réponse n'est pas dans les 200 (i.e., une requête qui
           a échoué.) Cela peut arriver si la requête échoue, mais également si
-          la requête est une <em>cross-origin no-cors</em> (auquel cas le statut
+          la requête est une <em>cross-origin no-cors</em> (auquel cas le statut
           retourné est systématiquement 0.)
         </p>
       </td>
@@ -76,7 +76,7 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue en void.
 
 ## Exemples
 
-Ce bloc de code attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} qui gère la phase d'installation de l'application. Cela consite à appeler {{domxref("CacheStorage.open")}} afin de créer un nouveau cache, puis à utiliser {{domxref("Cache.add")}} pour y ajouter des ressources.
+Ce bloc de code attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} qui gère la phase d'installation de l'application. Cela consite à appeler {{domxref("CacheStorage.open")}} afin de créer un nouveau cache, puis à utiliser {{domxref("Cache.add")}} pour y ajouter des ressources.
 
 ```js
 this.addEventListener('install', function(event) {
@@ -100,6 +100,6 @@ this.addEventListener('install', function(event) {
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
 - {{domxref("WorkerGlobalScope.caches")}}

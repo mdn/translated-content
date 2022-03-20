@@ -34,13 +34,13 @@ var gettingAll = browser.windows.getAll(
   - : `object`. Cela contrôle ce que les objets {{WebExtAPIRef('windows.Window')}} sont récupérés.
 
     - `populate`{{optional_inline}}
-      - : `boolean` Par défaut à `false`.  S'il est défini sur `true`, chaque objet {{WebExtAPIRef('windows.Window')}} aura une propriété `tabs` qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les tabs de cette fenêtre. Les objets `Tab` contiendront les propriétés `url`, `title` et `favIconUrl` uniquement si le fichier manifest de l'extension contient les permissions `"tabs"`.
+      - : `boolean` Par défaut à `false`.  S'il est défini sur `true`, chaque objet {{WebExtAPIRef('windows.Window')}} aura une propriété `tabs` qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les tabs de cette fenêtre. Les objets `Tab` contiendront les propriétés `url`, `title` et `favIconUrl` uniquement si le fichier manifest de l'extension contient les permissions `"tabs"`.
     - `windowTypes`{{optional_inline}}
       - : `Un ensemble d'objets` {{WebExtAPIRef('windows.WindowType')}}. Si cette option est définie, les objets {{WebExtAPIRef('windows.Window')}} renvoyés seront filtrés en fonction de leur type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un ensemble d'objets  {{WebExtAPIRef('windows.Window')}}, représentant toutes les fenêtres qui correspondent aux critères donnés. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un ensemble d'objets  {{WebExtAPIRef('windows.Window')}}, représentant toutes les fenêtres qui correspondent aux critères donnés. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité du navigateur
 

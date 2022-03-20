@@ -1,0 +1,146 @@
+---
+title: var()
+slug: Web/CSS/var
+translation_of: Web/CSS/var()
+original_slug: Web/CSS/var()
+---
+<div>{{CSSRef}}</div>
+
+<p>A função <a href="/pt-BR/docs/Web/CSS">CSS</a>  <strong><code>var()</code></strong> pode ser usada para inserir o valor de uma <a href="/pt-BR/docs/Web/CSS/--*">custom property</a> (propriedade personalizada) substituindo qualquer parte do valor de outra propriedade.</p>
+
+<pre class="brush: css line-numbers  language-css no-line-numbers notranslate"><code class="language-css"><span class="function token">var</span><span class="punctuation token">(</span>--header-color, blue<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+
+<p>A função <code>var()</code> não pode ser usada em nomes de propriedades, seletores ou qualquer outra coisa além de valores de propriedades. (Isso geralmente produz sintaxe inválida, ou então um valor cujo significado não tem conexão com a variável.)</p>
+
+<h2 id="Sintaxe">Sintaxe</h2>
+
+<p>O primeiro argumento da função é o nome da propriedade personalizada a ser substituída. O segundo argumento opcional da função serve como valor alternativo. Se a propriedade personalizada referenciada pelo primeiro argumento for inválida, a função usará o segundo valor.</p>
+
+{{csssyntax}}
+
+<div class="note">
+<p>Nota: A sintaxe do argumento alternativo, assim como as propriedades personalizadas, permite o uso de vírgulas. Por exemplo, <code>var(--foo, red, blue)</code> define como argumento alternativo <code>red, blue</code>; isto é, qualquer coisa entre a primeira vírgula e o fim da função é considerado como valor do como argumento alternativo.</p>
+</div>
+
+<h3 id="Valores">Valores</h3>
+
+<dl>
+ <dt>&lt;custom-property-name&gt;</dt>
+ <dd>O nome da propriedade personalizada referenciada é representada por um identificador que começa com dois traços. As propriedades personalizadas são exclusivamente para uso por autores e usuários; O CSS nunca lhes dará um significado além do que é apresentado aqui.</dd>
+ <dt>&lt;declaration-value&gt;</dt>
+ <dd>O valor do argumento alternativo é usado caso a propriedade personalizada seja inválida no contexto utilizado. Este valor pode conter qualquer caractere, exceto alguns caracteres com significado especial como novas linhas, colchetes de fechamento perdidos, ex.<code>)</code>, <code>]</code>, ou <code>}</code>, ponto e vírgula de primeiro nível, ou sinais de exclamação.</dd>
+</dl>
+
+<h2 id="Exemplos">Exemplos</h2>
+
+<pre class="brush: css notranslate">:root {
+  --main-bg-color: pink;
+}
+
+body {
+  background-color: var(--main-bg-color);
+}
+</pre>
+
+<pre class="brush: css notranslate">/* Argumento alternativo */
+/* No estilo de componente: */
+.component .header {
+  color: var(--header-color, blue);
+}
+
+.component .text {
+  color: var(--text-color, black);
+}
+
+/* No estilo de grandes aplicações: */
+.component {
+  --text-color: #080; /* header-color não está definido e, desse modo, permanece azul, o valor do argumento alternativo */
+}
+</pre>
+
+<h2 id="Especificações">Especificações</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificação</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comentário</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Variables', '#using-variables', 'var()')}}</td>
+   <td>{{Spec2('CSS3 Variables')}}</td>
+   <td>Definição inicial</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Recurso</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Suporte básico</td>
+   <td>48<sup>[1]</sup><br>
+    49</td>
+   <td>15063<sup>[2]</sup></td>
+   <td>{{CompatGeckoDesktop("29")}}<sup>[3]</sup><br>
+    {{CompatGeckoDesktop("31")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>36</td>
+   <td>9.3<sup>[4]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Recurso</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+  </tr>
+  <tr>
+   <td>Suporte básico</td>
+   <td>50</td>
+   <td>{{CompatGeckoDesktop("29")}}</td>
+   <td>{{CompatNo}}</td>
+   <td>37</td>
+   <td>9.3<sup>[3]</sup></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] No Chrome 48 este recurso é habilitado na configuração "Experimental Web Platform features" em <code>chrome://flags</code>.</p>
+
+<p>[2] Veja <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/status/csscustompropertiesakacssvariables/?q=css%20var">Edge Platform Status</a> e <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/changelog/desktop/15063/">15063 Build Release Notes (2017-03-20)</a>.</p>
+
+<p>[3] Esse recurso é implementado com base na preferência <code>layout.css.variables.enabled</code>, cujo padrão é <code>false</code> e usando a antiga sintaxe <code>var-<var>variablename</var></code> no Gecko 29. A partir do Gecko 31 esta preferência é habiliitada por padrão e a nova <code>--<var>variablename</var></code> sintaxe é utilizada. A partir do Gecko 55, a preferência <code>layout.css.variables.enabled</code> foi removida completamente, assim o recurso está habilitado permanentemente e não pode ser desabilitado.</p>
+
+<p>[4] Veja {{webkitbug(19660)}}.</p>
+
+<h2 id="Veja_também">Veja também</h2>
+
+<ul>
+ <li><a href="/pt-BR/docs/Web/CSS/Using_CSS_variables">Utilizando variáveis CSS</a></li>
+</ul>

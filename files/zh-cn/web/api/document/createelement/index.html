@@ -24,7 +24,7 @@ translation_of: Web/API/Document/createElement
  <dt><var>tagName</var></dt>
  <dd>指定要创建元素类型的字符串,创建元素时的 {{domxref("Node.nodeName", "nodeName")}} 使用 <code>tagName</code> 的值为初始化，该方法不允许使用限定名称(如:"html:a")，在 HTML 文档上调用 <code>createElement()</code> 方法创建元素之前会将<code>tagName</code> 转化成小写，在 Firefox、Opera 和 Chrome 内核中，<code>createElement(null)</code> 等同于 <code>createElement("null")</code></dd>
  <dt><var>options</var>{{optional_inline}}</dt>
- <dd>一个可选的参数 <code>ElementCreationOptions</code> 是包含一个属性名为 <code>is</code> 的对象，该对象的值是用 <code>customElements.define()</code> 方法定义过的一个自定义元素的标签名。为了向前兼容较老版本的 <a href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>, 有一些浏览器会允许你传一个值为自定义元素的标签名的字符串作为该参数的值。可以参考本页下方的 {{anch("Web component example")}} Google 的 <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> 文档仔细了解如何使用该参数。</dd>
+ <dd>一个可选的参数 <code>ElementCreationOptions</code> 是包含一个属性名为 <code>is</code> 的对象，该对象的值是用 <code>customElements.define()</code> 方法定义过的一个自定义元素的标签名。为了向前兼容较老版本的 <a href="https://www.w3.org/TR/custom-elements/">Custom Elements specification</a>, 有一些浏览器会允许你传一个值为自定义元素的标签名的字符串作为该参数的值。可以参考本页下方的 <a href="#web_component_示例">Web component 示例</a> Google 的 <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a> 文档仔细了解如何使用该参数。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>

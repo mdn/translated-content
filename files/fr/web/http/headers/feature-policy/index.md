@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/Feature-Policy
 ---
 {{HTTPSidebar}}
 
-L'en-tête HTTP **`Feature-Policy`** est un mécanisme permettant de permettre ou d'interdire l'utilisation de fonctionnalités du navigateur dans son propre cadre et dans ceux de tous les éléments {{HTMLElement("iframe")}} que le document contient.
+L'en-tête HTTP **`Feature-Policy`** est un mécanisme permettant de permettre ou d'interdire l'utilisation de fonctionnalités du navigateur dans son propre cadre et dans ceux de tous les éléments {{HTMLElement("iframe")}} que le document contient.
 
 > **Note :** Cet en-tête est toujours au stade expérimental, et est sujet à être modifié à tout moment. Méfiez-vous en si vous souhaitez l'implanter sur vos sites. Il a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article sera mis à jour pour refléter ce changement.
 

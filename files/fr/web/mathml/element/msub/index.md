@@ -29,10 +29,10 @@ Rendu dans votre navigateur: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 ```html
 <math>
 
-  <msub>
-    <mi>X</mi>
-    <mn>1</mn>
-  </msub>
+  <msub>
+    <mi>X</mi>
+    <mn>1</mn>
+  </msub>
 
 </math>
 ```

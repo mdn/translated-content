@@ -122,7 +122,7 @@ Aucune fonctionnalité de vérification native côté client n'est implémentée
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}} et 
+        {{htmlattrxref("type", "input")}} et
         {{htmlattrxref("value", "input")}}
       </td>
     </tr>

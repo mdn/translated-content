@@ -18,14 +18,14 @@ Vous pouvez exécuter quelque code que ce soit à l'intérieur du thread du work
 
 Les données sont envoyées entre les workers et le thread principal au moyen d'un sytème de messages — des deux côtés les messages sont envoyés en utilisant la méthode `postMessage()`, et la réponse leur parvient au moyen du gestionnaire d'événement `onmessage` (le message est contenu dans l'attribut `data` de l'événement {{event("Message")}}.) Les données sont copiées plutôt que partagées.
 
-Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente.  De plus, les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour les E/S réseau, à l'exception que les attributs `responseXML` et `channel` de `XMLHttpRequest` retournent toujours `null`.
+Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente.  De plus, les workers peuvent utiliser [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) pour les E/S réseau, à l'exception que les attributs `responseXML` et `channel` de `XMLHttpRequest` retournent toujours `null`.
 
 En plus des workers dédiés, il y a d'autres types de worker :
 
 - Les workers partagés sont des workers qui peuvent être utilisés par de multiples scripts s'exécutant dans différentes fenêtres, IFrames, etc., aussi longtemps qu'ils sont dans le même domaine que le worker. Leur fonctionnement est un petit plus complexe que les workers dédiés — les scripts doivent communiquer via un port actif. Consultez {{domxref("SharedWorker")}} pour plus de détails.
 - Les [ServiceWorkers](/en-US/docs/Web/API/ServiceWorker_API) fonctionnent essentiellement comme des serveurs proxy placés entre des applications web, et le navigateur et le réseau (lorsque disponibles). Ils sont destinés (entre autres choses) à permettre la création de véritables expériences déconnectées, interceptant les requêtes du réseau et prenant des décisions appropriées en fonction de la disponibilité du réseau et de la mise à jours des ressources situées sur le serveur. Ils permettront aussi d'accéder à des notifications poussées (push) et à des APIs synchronisées en arrière-plan.
 - Les Workers Chrome sont un type de worker spécifique à Firefox que vous pouvez utiliser si vous développez des extensions et que vous voulez y utiliser des workers et avoir accès aux [js-ctypes](/fr/docs/Mozilla/js-ctypes) dans votre worker. Consulter {{domxref("ChromeWorker")}} pour plus de détails.
-- Les [Audio Workers](/fr/docs/Web/API/Web_Audio_API#Audio_Workers) donne la possibilité d'effectuer directement dans le contexte d'un worker web un traitement audio scripté.
+- Les [Audio Workers](/fr/docs/Web/API/Web_Audio_API#Audio_Workers) donne la possibilité d'effectuer directement dans le contexte d'un worker web un traitement audio scripté.
 
 > **Note :** Selon les [Spécifications de Web Worker](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), les erreurs dans les workers ne devraient pas déborder (voir {{bug(1188141)}}). Cela a été implémenté dans Firefox 42.
 

@@ -104,7 +104,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
   }
 }</pre>
 
-<p>这个文件是一个标准的 JSON — 其中每个成员都是一个带有名称的对象，里面包含一个 <code>message</code>（消息）和一个 <code>description</code>（描述）。这些项目都是字符串。<code>$URL$</code> 是一个占位符，在 WebExtension 调用 <code>notificationContent</code> 成员时将被一个子字符串替换。你将在接下来的{{anch("从 JavaScript 检索消息字符串")}}章节中了解如何使用。</p>
+<p>这个文件是一个标准的 JSON — 其中每个成员都是一个带有名称的对象，里面包含一个 <code>message</code>（消息）和一个 <code>description</code>（描述）。这些项目都是字符串。<code>$URL$</code> 是一个占位符，在 WebExtension 调用 <code>notificationContent</code> 成员时将被一个子字符串替换。你将在接下来的<a href="#从_javascript_检索消息字符串">从 JavaScript 检索消息字符串</a>章节中了解如何使用。</p>
 
 <div class="note">
 <p><strong>注意：</strong>你可以在 <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference">Locale-Specific Message reference</a> 里找到更多有关  <code>messages.json</code> 文件中内容的信息。</p>
@@ -143,7 +143,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
 
 <pre class="brush: json">"default_locale": "en"</pre>
 
-<p>如果扩展没有包含浏览器当前语言区域的本地化字符串，则会使用该字段所指定的默认语言区域。任何浏览器语言区域下不可用的消息字符串都将用默认语言区域的字符串替换。有关浏览器如何选择字符串，还有一些细节需要注意 — 详见{{anch("选择本地化的字符串")}}。</p>
+<p>如果扩展没有包含浏览器当前语言区域的本地化字符串，则会使用该字段所指定的默认语言区域。任何浏览器语言区域下不可用的消息字符串都将用默认语言区域的字符串替换。有关浏览器如何选择字符串，还有一些细节需要注意 — 详见<a href="#选择本地化的字符串">选择本地化的字符串</a>。</p>
 
 <h2 id="依赖语言区域的_CSS">依赖语言区域的 CSS</h2>
 
@@ -153,7 +153,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Internationalization
   background-image: url(../images/__MSG_extensionName__/header.png);
 }</pre>
 
-<p>这很有用，不过在这种情况下使用{{anch("预定义消息")}}来处理或许会更好。</p>
+<p>这很有用，不过在这种情况下使用<a href="#预定义消息">预定义消息</a>来处理或许会更好。</p>
 
 <h2 id="从_JavaScript_检索消息字符串">从 JavaScript 检索消息字符串</h2>
 
@@ -283,7 +283,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <h2 id="预定义消息">预定义消息</h2>
 
-<p>i18n 模块为我们提供了一些预定义的消息，我们可以用之前在 {{anch("Calling message strings from manifests and extension CSS")}} 中看到的相同的方式调用。例如：</p>
+<p>i18n 模块为我们提供了一些预定义的消息，我们可以用之前在 <a href="#在_manifests_中检索本地化的字符串">在 manifests 中检索本地化的字符串</a> 中看到的相同的方式调用。例如：</p>
 
 <pre>__MSG_extensionName__</pre>
 

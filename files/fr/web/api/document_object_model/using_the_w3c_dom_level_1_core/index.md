@@ -8,7 +8,7 @@ Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier 
 
 ## Définition d'un arbre de contenu
 
-Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM)) :
+Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur [les espaces dans le DOM](/fr/docs/Gestion_des_espaces_dans_le_DOM))&nbsp;:
 
     <html>
     <head>
@@ -24,11 +24,11 @@ Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un 
 
 Lorsque Mozilla examine un document, un arbre de contenu est construit et ensuite utilisé pour l'affichage.
 
-Les termes utilisés pour décrire des arbres apparaissent souvent dans le DOM Level 1 Core. Chacune des boîtes dessinées dans l'arbre ci-dessus est un nœud dans l'arbre. La ligne au dessus d'un nœud représente une relation parent-enfant : le nœud supérieur est le parent, et le nœud inférieur est l'enfant. Deux enfants du même parent sont par conséquent des frères du même niveau. De même, on peut se référer à des ancêtres et des descendants. (Parler de cousins devient un peu compliqué par contre.)
+Les termes utilisés pour décrire des arbres apparaissent souvent dans le DOM Level 1 Core. Chacune des boîtes dessinées dans l'arbre ci-dessus est un nœud dans l'arbre. La ligne au dessus d'un nœud représente une relation parent-enfant&nbsp;: le nœud supérieur est le parent, et le nœud inférieur est l'enfant. Deux enfants du même parent sont par conséquent des frères du même niveau. De même, on peut se référer à des ancêtres et des descendants. (Parler de cousins devient un peu compliqué par contre.)
 
 ## Ce que permet le DOM Level 1 Core
 
-Le DOM Level 1 permet de modifier l'arbre du contenu*selon vos désirs*. Il est suffisamment puissant pour construire n'importe quel document HTML depuis rien. Il permet aux auteurs de modifier quoi que ce soit dans le document, depuis un script, à n'importe quel moment. La manière la plus simple pour les auteurs de pages Web de modifier le DOM dynamiquement est d'utiliser JavaScript. En JavaScript, le document est accessible de la même manière qu'il l'était dans les navigateurs plus anciens : depuis la propriété `document` de l'objet global. Cet objet `document` implémente l'[interface Document](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#i-Document) de la spécification DOM Level 1 du W3C.
+Le DOM Level 1 permet de modifier l'arbre du contenu*selon vos désirs*. Il est suffisamment puissant pour construire n'importe quel document HTML depuis rien. Il permet aux auteurs de modifier quoi que ce soit dans le document, depuis un script, à n'importe quel moment. La manière la plus simple pour les auteurs de pages Web de modifier le DOM dynamiquement est d'utiliser JavaScript. En JavaScript, le document est accessible de la même manière qu'il l'était dans les navigateurs plus anciens&nbsp;: depuis la propriété `document` de l'objet global. Cet objet `document` implémente l'[interface Document](http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#i-Document) de la spécification DOM Level 1 du W3C.
 
 ## Un exemple simple
 

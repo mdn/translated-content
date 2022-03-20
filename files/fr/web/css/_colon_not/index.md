@@ -25,7 +25,7 @@ La [spécificité](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
 >
 > - Attention à ne pas écrire de sélecteurs inutiles à l'aide de cette pseudo-classe. Ainsi, `:not(*)` va exclure tous les éléments et ne sera jamais appliqué.
 > - À l'inverse, il est possible d'augmenter la [spécificitié](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) d'un sélecteur. Ainsi. `toto:not(truc)` ciblera les mêmes éléments que `toto`, mais avec une spécificité plus forte.
-> - `:not(toto){}` ciblera tout élément qui n'est pas `toto`, **notamment {{HTMLElement("html")}} et {{HTMLElement("body")}}**.
+> - `:not(toto){}` ciblera tout élément qui n'est pas `toto`, **notamment {{HTMLElement("html")}} et {{HTMLElement("body")}}**.
 > - Ce sélecteur ne s'applique qu'à un seul élément. Il ne peut pas être utilisé afin d'exclure tous les ancêtres. Ainsi, `body :not(table) a` s'appliquera aux liens contenus dans un tableau car {{HTMLElement("tr")}} ne sera pas ciblé par la partie `:not()` du sélecteur.
 
 ## Syntaxe
