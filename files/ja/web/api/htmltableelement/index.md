@@ -2,146 +2,88 @@
 title: HTMLTableElement
 slug: Web/API/HTMLTableElement
 tags:
-  - DOM
-  - DOM Reference
+  - API
+  - HTML DOM
+  - インターフェイス
+  - リファレンス
+browser-compat: api.HTMLTableElement
 translation_of: Web/API/HTMLTableElement
 ---
-<div>
- {{ApiRef}}</div>
-<p><code>table</code> オブジェクトは、 HTML の table 要素のレイアウトやプレゼンテーションを操作する為の特別なプロパティとメソッドを提供する <a href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-64060425"><code>HTMLTableElement</code></a> インタフェースを公開します。<br>
- 係るプロパティとメソッドは、{{domxref("Element")}} オブジェクトインタフェースからも継承により操作可能となっています。</p>
-<h2 id="Properties" name="Properties">プロパティ</h2>
-<dl>
- <dt>
-  {{domxref("HTMLTableElement.caption")}}</dt>
- <dd>
-  対象テーブルの caption 要素を返す</dd>
- <dt>
-  {{domxref("HTMLTableElement.tHead")}}</dt>
- <dd>
-  対象テーブルの thead 要素を返す</dd>
- <dt>
-  {{domxref("HTMLTableElement.tFoot")}}</dt>
- <dd>
-  対象テーブルの tfoot 要素を返す</dd>
- <dt>
-  {{domxref("HTMLTableElement.rows")}}</dt>
- <dd>
-  対象テーブルの行を返す</dd>
- <dt>
-  {{domxref("HTMLTableElement.tBodies")}}</dt>
- <dd>
-  対象テーブルの tbody 要素を返す</dd>
-</dl>
-<dl>
- <dt>
-  {{domxref("HTMLTableElement.align")}} {{Deprecated_inline}}</dt>
- <dd>
-  対象テーブルの align 属性の取得 / 設定</dd>
- <dt>
-  {{domxref("HTMLTableElement.bgColor")}} {{Deprecated_inline}}</dt>
- <dd>
-  対象テーブルの bgcolor 属性の取得 / 設定</dd>
- <dt>
-  {{domxref("HTMLTableElement.border")}} {{Deprecated_inline}}</dt>
- <dd>
-  対象テーブルの border 属性の取得 / 設定</dd>
- <dt>
-  {{domxref("HTMLTableElement.cellPadding")}}</dt>
- <dd>
-  対象テーブルの cellpadding 属性の取得 / 設定</dd>
- <dt>
-  {{domxref("HTMLTableElement.cellSpacing")}}</dt>
- <dd>
-  対象テーブルの cellspacing 属性の取得 / 設定</dd>
- <dt>
-  {{domxref("HTMLTableElement.frame")}}</dt>
- <dd>
-  対象テーブルのどの方向の辺にボーダーを表示するか、あるいはしないかを設定</dd>
- <dt>
-  {{domxref("HTMLTableElement.rules")}}</dt>
- <dd>
-  対象テーブルの 行 / 列 / グループ のボーダーの表示の有無を設定</dd>
- <dt>
-  {{domxref("HTMLTableElement.summary")}}</dt>
- <dd>
-  対象テーブルの summary 属性（概要）の取得 / 設定</dd>
- <dt>
-  {{domxref("HTMLTableElement.width")}}</dt>
- <dd>
-  対象テーブルの width 属性の取得 / 設定</dd>
-</dl>
-<h2 id="Methods" name="Methods">メソッド</h2>
-<dl>
- <dt>
-  {{domxref("HTMLTableElement.createTHead")}}</dt>
- <dd>
-  対象テーブル内に thead 要素を生成</dd>
- <dt>
-  {{domxref("HTMLTableElement.deleteTHead")}}</dt>
- <dd>
-  対象テーブル内の thead 要素の削除</dd>
- <dt>
-  {{domxref("HTMLTableElement.createTFoot")}}</dt>
- <dd>
-  対象テーブル内に tfoot 要素を生成</dd>
- <dt>
-  {{domxref("HTMLTableElement.deleteTFoot")}}</dt>
- <dd>
-  対象テーブル内の tfoot 要素の削除</dd>
- <dt>
-  {{domxref("HTMLTableElement.createCaption")}}</dt>
- <dd>
-  対象テーブル内に caption 要素を生成</dd>
- <dt>
-  {{domxref("HTMLTableElement.deleteCaption")}}</dt>
- <dd>
-  対象テーブル内の caption 要素の削除</dd>
- <dt>
-  {{domxref("HTMLTableElement.insertRow")}}</dt>
- <dd>
-  対象テーブル内に新たな行を挿入</dd>
- <dt>
-  {{domxref("HTMLTableElement.deleteRow")}}</dt>
- <dd>
-  対象テーブル内の行の削除</dd>
-</dl>
-<h2 id="Specifications" name="Specifications">仕様</h2>
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "tabular-data.html#the-table-element", "HTMLTableElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>optional -1 for indexRow + sortable + stopSorting()</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "tabular-data.html#the-table-element", "HTMLTableElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-64060425', 'HTMLTableElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-64060425', 'HTMLTableElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+{{APIRef("HTML DOM")}}
 
-<p>{{Compat("api.HTMLTableElement")}}</p>
+**`HTMLTableElement`** インターフェイスは、（継承元でもある通常の {{DOMxRef("HTMLElement")}} オブジェクトのインターフェイスのほかに） HTML 文書内の表のレイアウトと表現を操作するための特別なプロパティやメソッドを提供します。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-<ul>
- <li>{{HTMLElement("table")}} - <code>HTMLTableElement</code> インタフェースを持つ HTML 要素</li>
-</ul>
-<p><span id="cke_bm_222C" class="hidden"> </span></p>
+{{InheritanceDiagram}}
+
+## プロパティ
+
+_親である {{DOMxRef("HTMLElement")}} からプロパティを継承しています。_
+
+- {{DOMxRef("HTMLTableElement.caption")}}
+  - : {{DOMxRef("HTMLTableCaptionElement")}} で、この要素の子要素のうち最初の {{HTMLElement("caption")}} を表します。見つからなければ `null` になります。設定する場合は、そのオブジェクトが `<caption>` ではなかった場合、 {{DOMxRef("DOMException")}} が `HierarchyRequestError` の名前で発生します。正しいオブジェクトが与えられた場合は、この要素の最初の子要素として挿入され、この要素の子要素に `<caption>` があれば、最初のものがツリーから取り除かれます。
+- {{DOMxRef("HTMLTableElement.tHead")}}
+  - : {{DOMxRef("HTMLTableSectionElement")}} で、この要素の子要素のうち最初の {{HTMLElement("thead")}} を表します。見つからなければ `null` になります。設定する場合は、そのオブジェクトが `<thead>` ではなかった場合、 {{DOMxRef("DOMException")}} が `HierarchyRequestError` の名前で発生します。正しいオブジェクトが与えられた場合は、この要素の {{HTMLElement("caption")}} や {{HTMLElement("colgroup")}} を除いた最初の子要素の前に、または該当する要素がなければ最後の子要素として挿入され、この要素の子要素に `<thead>` があれば、最初のものがツリーから取り除かれます。
+- {{DOMxRef("HTMLTableElement.tFoot")}}
+  - : {{DOMxRef("HTMLTableSectionElement")}} で、この要素の子要素のうち最初の {{HTMLElement("tfoot")}} を表します。見つからなければ `null` になります。設定する場合は、そのオブジェクトが `<tfoot>` ではなかった場合、 {{DOMxRef("DOMException")}} が `HierarchyRequestError` の名前で発生します。正しいオブジェクトが与えられた場合は、この要素の {{HTMLElement("caption")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}} を除いた最初の子要素の前に、または該当する要素がなければ最後の子要素として挿入され、この要素の子要素に `<tfoot>` があれば、最初のものがツリーから取り除かれます。
+- {{DOMxRef("HTMLTableElement.rows")}}{{ReadOnlyInline}}
+  - : 生きた {{DOMxRef("HTMLCollection")}} で、この要素のすべての行を含みます。すなわち、この要素の子であるすべての {{HTMLElement("tr")}} 、またはこの要素の子要素である {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} の何れかの子要素です。 `<thead>` のメンバーの行が最初に、ツリー順に現れ、 `<tbody>` のメンバーがその後に、やはりツリー順に現れます。 `HTMLCollection` は生きており、 `HTMLTableElement` が変化するたびに自動的に更新されます。
+- {{DOMxRef("HTMLTableElement.tBodies")}}{{ReadOnlyInline}}
+  - : 生きた {{DOMxRef("HTMLCollection")}} で、この要素のすべての {{HTMLElement("tbody")}} を含みます。 `HTMLCollection` は生きており、 `HTMLTableElement` が変化するたびに自動的に更新されます。
+
+### 廃止されたプロパティ
+
+> **Warning:** 以下のプロパティは廃止されました。使用は避けてください。
+
+- {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
+  - : {{DOMxRef("DOMString")}} で、 {{HTMLAttrxRef("align", "table")}} 属性を反映した列挙型の値が入ります。これは、周囲のコンテキストに対する要素の内容物の配置を示します。利用可能な値は `"left"`, `"right"`, `"center"` です。
+- {{DOMxRef("HTMLTableElement.bgColor")}} {{deprecated_inline}}
+  - : {{DOMxRef("DOMString")}} で、セルの背景色が入ります。これは廃止された {{HTMLAttrxRef("bgColor", "table")}} 属性を反映します。
+- {{DOMxRef("HTMLTableElement.border")}} {{deprecated_inline}}
+  - : {{DOMxRef("DOMString")}} で、表の境界の幅がピクセル数で入ります。これは廃止された {{HTMLAttrxRef("border", "table")}} 属性を反映します。
+- {{DOMxRef("HTMLTableElement.cellPadding")}} {{deprecated_inline}}
+  - : {{DOMxRef("DOMString")}} で、セルの内容とセルの境界の間の水平・垂直空間の幅がピクセル数で入ります。これは廃止された {{HTMLAttrxRef("cellpadding", "table")}} 属性を反映します。
+- {{DOMxRef("HTMLTableElement.cellSpacing")}} {{deprecated_inline}}
+  - : {{DOMxRef("DOMString")}} で、セル間の水平・垂直の距離がピクセル数で入ります。これは廃止された {{HTMLAttrxRef("cellspacing", "table")}} 属性を反映します。
+- {{DOMxRef("HTMLTableElement.frame")}} {{deprecated_inline}}
+  - : {{DOMxRef("DOMString")}} で、表の外部境界の種類が入ります。これは廃止された {{HTMLAttrxRef("frame", "table")}} 属性を反映し、 `"void"`, `"above"`, `"below"`, `"hsides"`, `"vsides"`, `"lhs"`, `"rhs"`, `"box"`, `"border"` のうちの何れかを取ります。
+- {{DOMxRef("HTMLTableElement.rules")}} {{deprecated_inline}}
+  - : {{DOMxRef("DOMString")}} で、表の内部の境界の種類が入ります。これは廃止された {{HTMLAttrxRef("rules", "table")}} 属性を反映し、 `"none"`, `"groups"`, `"rows"`, `"cols"`, `"all"` のうちのいずれかを取ります。
+- {{DOMxRef("HTMLTableElement.summary")}} {{deprecated_inline}}
+  - : {{DOMxRef("DOMString")}} で、目的の説明や表の構造が入ります。これは廃止された {{HTMLAttrxRef("summary", "table")}} 属性を反映します。
+- {{DOMxRef("HTMLTableElement.width")}} {{deprecated_inline}}
+  - : {{DOMxRef("DOMString")}} で、表全体の推奨される幅を表すピクセル数またはパーセント値が入ります。これは廃止された {{HTMLAttrxRef("width", "table")}} 属性を反映します。
+
+## メソッド
+
+_親である {{DOMxRef("HTMLElement")}} からプロパティを継承しています。_
+
+- {{DOMxRef("HTMLTableElement.createTHead()")}}
+  - : {{DOMxRef("HTMLTableSectionElement")}} で、この要素の子要素のうち最初の {{HTMLElement("thead")}} を返します。見つからなかった場合は、新しいものを作成し、 {{HTMLElement("caption")}} や {{HTMLElement("colgroup")}} を除く最初の要素の直前、そのような要素がなければ最後の要素として挿入します。
+- {{DOMxRef("HTMLTableElement.deleteTHead()")}}
+  - : この要素の子要素のうち、最初の {{HTMLElement("thead")}} を取り除きます。
+- {{DOMxRef("HTMLTableElement.createTFoot()")}}
+  - : {{DOMxRef("HTMLTableSectionElement")}} で、この要素の子要素のうち最初の {{HTMLElement("tfoot")}} を返します。見つからなかった場合は、新しいものを作成し、最後の要素として挿入します。
+- {{DOMxRef("HTMLTableElement.deleteTFoot()")}}
+  - : この要素の子要素のうち最初の {{HTMLElement("tfoot")}} を取り除きます。
+- {{DOMxRef("HTMLTableElement.createTBody()")}}
+  - : {{DOMxRef("HTMLTableSectionElement")}} で、この要素の子要素である新しい {{HTMLElement("tbody")}} を返します。これはツリー内で最後の {{HTMLElement("tbody")}} 要素の直後に挿入しますが、そのような要素が存在しない場合は最後の要素として挿入します。
+- {{DOMxRef("HTMLTableElement.createCaption()")}}
+  - : {{DOMxRef("HTMLElement")}} で、この要素の子要素のうち最初の {{HTMLElement("caption")}} を返します。存在しない場合は、新しく作成してこの {{HTMLElement("table")}} 要素の最初の子としてツリーに挿入します。
+- {{DOMxRef("HTMLTableElement.deleteCaption()")}}
+  - : この要素の子要素のうち最初の {{HTMLElement("caption")}} を返します。
+- {{DOMxRef("HTMLTableElement.insertRow()")}}
+  - : {{DOMxRef("HTMLTableRowElement")}} でこの表の新しい行を返します。この行を行の集合の中で、 {{HTMLElement("tr")}} 要素のうち、指定された `index` の位置のものの直前に挿入されます。必要に応じて {{HTMLElement("tbody")}} を生成します。 `index` が `-1` であった場合、新しい行が行の集合に追加されます。 `index` が `-1` よりも小さかったり、行の集合に含まれる行数よりも大きかったりした場合は、 {{DOMxRef("DOMException")}} が `IndexSizeError` の値で発生します。
+- {{DOMxRef("HTMLTableElement.deleteRow()")}}
+  - : 引数で指定された `index` に対応する行を取り除きます。 `index` の値が `-1` であった場合は、最後の行を取り除きます。 `-1` より小さかったり、行の集合に含まれる行数よりも大きかったりした場合は、 {{DOMxRef("DOMException")}} が `IndexSizeError` の値で発生します。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("table")}}
