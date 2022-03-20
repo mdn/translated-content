@@ -1,56 +1,36 @@
 ---
-title: Console.groupEnd()
+title: console.groupEnd()
 slug: Web/API/console/groupEnd
 tags:
   - API
   - DOM
-  - Debugging
-  - Method
-  - NeedsBrowserCompatibility
-  - Web Development
-  - web console
+  - デバッグ
+  - メソッド
+  - ウェブ開発
+  - ウェブコンソール
+browser-compat: api.console.groupEnd
 translation_of: Web/API/Console/groupEnd
 ---
-<p>{{APIRef("Console API")}}{{Non-standard_header}}</p>
+{{APIRef("Console API")}}
 
-<p><a href="/ja/docs/Tools/Web_Console">Web コンソール</a>で、現在のインライングループから出ます。詳細および使用例は {{domxref("console")}} のドキュメントで、<a href="/ja/docs/Web/API/console#Using_groups_in_the_console">コンソールでグループを使用する</a> をご覧ください。</p>
+**`console.groupEnd()`** メソッドは、[ウェブコンソール](/ja/docs/Tools/Web_Console)で現在のインライングループから出ます。詳細および使用例は {{domxref("console")}} のドキュメントで、[コンソールでのグループの使用](/ja/docs/Web/API/console#コンソールでのグループの使用)をご覧ください。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">console.groupEnd();
-</pre>
+```js
+console.groupEnd();
+```
 
-<h2 id="Parameters" name="Parameters">引数</h2>
+## 引数
 
-<p>なし。</p>
+なし。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consolegroupend", "console.groupEnd()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Console.groupEnd")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+{{Compat}}
