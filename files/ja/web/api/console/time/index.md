@@ -1,64 +1,44 @@
 ---
-title: Console.time()
-slug: Web/API/Console/time
+title: console.time()
+slug: Web/API/console/time
 tags:
   - API
   - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
+  - デバッグ
   - メソッド
-translation_of: Web/API/Console/time
+  - ウェブ開発
+  - ウェブコンソール
+browser-compat: api.console.time
+translation_of: Web/API/console/time
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>処理時間がどれくらいかを計測するために使用することができるタイマーを開始します。各タイマーに一意の名前を付ければ、ページ内に10,000個までのタイマーを実行させることができます。同じ名前を引数として {{domxref("console.timeEnd()")}} を呼び出すと、タイマー開始からの経過時間がミリ秒単位で出力されます。</p>
+**`console.time()`** メソッドは、長い処理がどれくらいかかるかを計測することができるタイマーを起動します。それぞれのタイマーに固有の名前を付けると、そのページに 10,000 個までのタイマーを実行させることができます。同じ名前を引数として {{domxref("console.timeEnd()")}} を呼び出すと、タイマー開始からの経過時間がミリ秒単位で出力されます。
 
-<p>詳細や使用例については、 {{domxref("console")}} のページの 『<a href="/ja/docs/Web/API/console#Timers">タイマー</a>』 を参照して下さい。</p>
+詳細や使用例については、 {{domxref("console")}} のページの[タイマー](/ja/docs/Web/API/console#タイマー)を参照して下さい。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">console.time(<var>label</var>);
-</pre>
+```js
+console.time(label);
+```
 
-<h2 id="Parameters" name="Parameters">引数</h2>
+## 引数
 
-<dl>
- <dt><code><var>label</var></code></dt>
- <dd>新しいタイマーにつける名前。各タイマーの識別に用います。同じ名前を使用して {{domxref("console.timeEnd()")}} を呼び出すと、タイマーを終了して時間をコンソールに出力します。</dd>
-</dl>
+- `label`
+  - : 新しいタイマーにつける名前です。それぞれのタイマーの識別に用います。同じ名前を使用して {{domxref("console.timeEnd()")}} を呼び出すと、タイマーを終了して時間をコンソールに出力します。
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#consoletimelabel", "console.time()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Console.time")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Console.timeEnd()")}}</li>
- <li>{{domxref("Console.timeLog()")}}</li>
- <li><a class="external" href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
-</ul>
+- {{domxref("console.timeEnd()")}}
+- {{domxref("console.timeLog()")}}
