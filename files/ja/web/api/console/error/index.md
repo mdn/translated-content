@@ -1,77 +1,49 @@
 ---
-title: Console.error()
-slug: Web/API/Console/error
+title: console.error()
+slug: Web/API/console/error
 tags:
   - API
   - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
-translation_of: Web/API/Console/error
+  - デバッグ
+  - メソッド
+  - ウェブ開発
+  - ウェブコンソール
+browser-compat: api.console.error
+translation_of: Web/API/console/error
 ---
-<div>{{APIRef("Console API")}}</div>
+{{APIRef("Console API")}}
 
-<p>デバッガの Web コンソールにエラーメッセージを出力します。</p>
+**`console.error()`** メソッドは、エラーメッセージをウェブコンソールに出力します。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">console.error(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.error(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-console.exception(<em>obj1</em> [, <em>obj2</em>, ..., <em>objN</em>]);
-console.exception(<em>msg</em> [, <em>subst1</em>, ..., <em>substN</em>]);
-</pre>
+```js
+console.error(obj1 [, obj2, ..., objN]);
+console.error(msg [, subst1, ..., substN]);
+```
 
-<div class="note">
-<p><strong>補足:</strong> <code>console.exception()</code> は、<code>console.error()</code> の別名です。これらは機能的に同じものです。</p>
-</div>
+### 引数
 
-<h3 id="引数">引数</h3>
+- `obj1` ... `objN`
+  - : 出力する JavaScript オブジェクトのリスト。 各オブジェクトの文字列表現が記述順で出力されます。
+- `msg`
+  - : 0 個以上の置換文字列 (substitution strings) を含む JavaScript 文字列です。
+- `subst1` ... `substN`
+  - : `msg` 内の置換文字列を置換する JavaScript オブジェクト。これにより、出力の書式の詳細な制御が可能となります。
 
-<dl>
- <dt><code>obj1</code> ... <code>objN</code></dt>
- <dd>出力する JavaScript オブジェクトのリスト。 各オブジェクトの文字列表現が記述順で出力されます。</dd>
- <dt><code>msg</code></dt>
- <dd>0 個以上の置換文字列 (<span style="color: green;">substitution strings</span>) を含む JavaScript 文字列。</dd>
- <dt><code>subst1</code> ... <code>substN</code></dt>
- <dd><code>msg</code> 内の置換文字列を置換するJavaScript オブジェクト。これにより、出力の書式の詳細な制御が可能となります。</dd>
-</dl>
+詳細については、{{domxref("console")}} ドキュメント内の[コンソールへのテキストの出力](/ja/docs/Web/API/console#コンソールへのテキストの出力)を参照してください。
 
-<p>詳細については、{{domxref("console")}} ドキュメント内の <a href="/ja/docs/Web/API/console#Outputting_text_to_the_console">コンソールへのテキスト出力</a> を参照してください。</p>
+## 仕様書
 
-<h2 id="仕様">仕様</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#error", "console.error()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+{{Compat}}
 
-<div>
+## 関連情報
 
-
-<p>{{Compat("api.Console.error")}}</p>
-</div>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="http://www.opera.com/dragonfly/documentation/console/">Opera Dragonfly documentation: Console</a></li>
- <li><a href="http://msdn.microsoft.com/library/gg589530">MSDN: Using the F12 Tools Console to View Errors and Status</a></li>
- <li><a href="https://developers.google.com/chrome-developer-tools/docs/console#errors_and_warnings">Chrome Developer Tools: Using the Console</a></li>
-</ul>
+- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](http://msdn.microsoft.com/library/gg589530)
+- [Chrome Developer Tools: Using the Console](https://developers.google.com/web/tools/chrome-devtools/console/api#error)
