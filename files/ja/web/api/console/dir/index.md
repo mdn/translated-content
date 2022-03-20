@@ -1,65 +1,48 @@
 ---
-title: Console.dir()
-slug: Web/API/Console/dir
+title: console.dir()
+slug: Web/API/console/dir
 tags:
   - API
   - DOM
-  - Debugging
-  - Method
-  - Reference
-  - Web Development
+  - デバッグ
+  - メソッド
+  - リファレンス
+  - ウェブ開発
   - console
-  - web console
+  - ウェブコンソール
+browser-compat: api.console.dir
 translation_of: Web/API/Console/dir
 ---
-<p>{{APIRef("Console API")}}</p>
+{{APIRef("Console API")}}
 
-<p><span class="seoSummary">{{domxref("Console")}} の <strong><code>dir()</code></strong> メソッドは、指定された JavaScript オブジェクトのプロパティの対話的なリストを表示します。</span>出力は折り畳み式の階層的なリストで表示され、子オブジェクトの中身を見ることができます。</p>
+**`console.dir()`** メソッドは、指定された JavaScript オブジェクトのプロパティの対話的なリストを表示します。出力は折り畳み式の階層的なリストで表示され、子オブジェクトの中身を見ることができます。
 
-<p>言い換えれば <code>console.dir()</code> は指定された JavaScript オブジェクトのプロパティをすべてコンソール上で見る方法であり、開発者は簡単にオブジェクトのプロパティを得ることができます。</p>
+言い換えれば `console.dir()` は指定された JavaScript オブジェクトのプロパティをすべてコンソール上で見る方法であり、開発者は簡単にオブジェクトのプロパティを得ることができます。
 
-<p>{{AvailableInWorkers}}</p>
+{{AvailableInWorkers}}
 
-<p><img alt="console-dir.png" class="default internal" src="/@api/deki/files/6081/=console-dir.png"></p>
+![console-dir.png](console-dir.png)
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">console.dir(<var>object</var>);
-</pre>
+```js
+console.dir(object);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>object</var></code></dt>
- <dd>プロパティを出力する JavaScript オブジェクトです。</dd>
-</dl>
+- `object`
+  - : プロパティを出力する JavaScript オブジェクトです。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Console API", "#dir", "console.dir()")}}</td>
-   <td>{{Spec2("Console API")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Console.dir")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a class="external" href="http://msdn.microsoft.com/library/gg589530">MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示</a></li>
- <li><a href="https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject">Chrome Console API reference</a></li>
-</ul>
+- [MSDN: F12 ツールのコンソールを使ったエラーおよびステータスの表示](https://msdn.microsoft.com/library/gg589530)
+- [Chrome Console API reference](https://developers.google.com/chrome-developer-tools/docs/console-api#consoledirobject)
