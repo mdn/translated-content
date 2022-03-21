@@ -44,7 +44,7 @@ IDBReq.onsuccess = function(){
 <p>{{domxref("IDBDatabase.mozCreateFileHandle","mozCreateFileHandle()")}}接受两个参数：名称和可选类型。 这两个都是描述性的，数据库不使用。 但是，它们对于{{domxref("FileHandle")}}对象很重要，因为它可以生成{{domxref("File")}}对象，这些对象继承自己的{{domxref("File.name","name")}}和{{domxref("File.type","type")}}的值。 就是说，由于名称与任何实际文件名都不匹配，因此它可以是一个空字符串，甚至不必是唯一的。</p>
 
 <div class="note">
-<p><strong>Note:</strong> the above code only creates a "temporary file" that exists only while you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a more permanent location, like the database itself. See {{Anch("File storage")}} below to learn more about this.</p>
+<p><strong>Note:</strong> the above code only creates a "temporary file" that exists only while you hold the {{domxref("FileHandle")}} instance. If you want a file to survive a page refresh/app relaunch, you need to store the handle in a more permanent location, like the database itself. See <a href="#文件储存">文件储存</a> below to learn more about this.</p>
 </div>
 
 <h3 id="执行读写操作">执行读写操作</h3>

@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
 ---
 {{AddonSidebar()}}
 
-Crée un URI de données codant une image de la zone visible de l'onglet donné. Vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode.
+Crée un URI de données codant une image de la zone visible de l'onglet donné. Vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

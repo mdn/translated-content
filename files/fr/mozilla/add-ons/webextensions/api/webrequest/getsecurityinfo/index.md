@@ -18,9 +18,9 @@ Utilisez cette fonction pour obtenir des informations détaillées sur la connex
 
 Vous passez à cette fonction la `requestId` pour la requête en question, et quelques paramètres supplémentaires optionnels. Il retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue à un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
 
-Vous ne pouvez appeler cette fonction qu'à partir de l'écouteur  {{WebExtAPIRef("webRequest.onHeadersReceived")}}. La `requestId` peut être trouvée dans l'objet `details` object qui est passé dans l'écouteur.
+Vous ne pouvez appeler cette fonction qu'à partir de l'écouteur  {{WebExtAPIRef("webRequest.onHeadersReceived")}}. La `requestId` peut être trouvée dans l'objet `details` object qui est passé dans l'écouteur.
 
-Vous devez également passer l'option "blocking" à  `webRequest.onHeadersReceived.addListener()`. Ainsi, pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires pour utiliser les écouteurs `webRequest`  (la permission "webRequest" et la [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour le hôte).
+Vous devez également passer l'option "blocking" à  `webRequest.onHeadersReceived.addListener()`. Ainsi, pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires pour utiliser les écouteurs `webRequest`  (la permission "webRequest" et la [permission hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour le hôte).
 
 ## Syntaxe
 
@@ -40,10 +40,10 @@ var gettingInfo = browser.webRequest.getSecurityInfo(
   - : `object`. Un objet qui peut contenir l'une des propriétés suivantes, toutes facultatives :
 
     - `certificateChain` {{optional_inline}}
-      - : `boolean`. Si `true`, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si `false`, 
+      - : `boolean`. Si `true`, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si `false`,
         il n'inclura que le certificat du serveur. La valeur par défaut est `false`.
     - `rawDER` {{optional_inline}}
-      - : `boolean`. Si true, chaque propriété {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} dans le {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} contiendra une propriété `rawDER`. Il contient le DER-encoded ASN.1 qui comprend les données du certificat.
+      - : `boolean`. Si true, chaque propriété {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} dans le {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} contiendra une propriété `rawDER`. Il contient le DER-encoded ASN.1 qui comprend les données du certificat.
 
 ### Valeur retournée
 

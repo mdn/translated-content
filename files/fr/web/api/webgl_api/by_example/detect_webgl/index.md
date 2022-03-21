@@ -11,7 +11,7 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Detect_WebGL
 original_slug: Web/API/WebGL_API/By_example/Détecter_WebGL
 ---
-{{IncludeSubnav("/fr/Apprendre")}}{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}
+{{PreviousNext("Apprendre/WebGL/Par_exemple","Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs")}}
 
 Dans cet exemple, on voit comment détecter un contexte de rendu {{Glossary("WebGL")}} et afficher le résultat à l'utilisateur.
 

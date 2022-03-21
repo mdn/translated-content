@@ -26,7 +26,7 @@ ou
 
 Le nom de la directive associée à une fonctionnalité.
 
-#### `Origine` {{Optional_inline}}
+#### `Origine` {{Optional_inline}}
 
 Une URL d'origine sur lequel vérifier la disponibilité de la fonctionnalité. Si omise, sa valeur par défaut est utilisée.
 
@@ -36,7 +36,7 @@ Un {{JSxRef("Boolean")}} valant `true` si et seulement si la fonctionnalité est
 
 ## Exemple
 
-Cet exemple demande au document s'il lui est permis par Feature Policy d'utiliser l'API Camera (appareil photo). Notez que l'API Camera pourrait être restreinte par l'API Permissions si l'utilisateur n'a pas encore accordé la permission.
+Cet exemple demande au document s'il lui est permis par Feature Policy d'utiliser l'API Camera (appareil photo). Notez que l'API Camera pourrait être restreinte par l'API Permissions si l'utilisateur n'a pas encore accordé la permission.
 
 ```js
 // D'abord, récupère le Feature Policy
@@ -46,10 +46,10 @@ const featurePolicy = document.featurePolicy
 const estPermise = featurePolicy.allowsFeature("camera")
 
 if (estPermise)
-  console.log("FP autorise l'appareil photo.")
+  console.log("FP autorise l'appareil photo.")
 
 else
-  console.log("FP n'autorise pas l'appareil photo.")
+  console.log("FP n'autorise pas l'appareil photo.")
 ```
 
 ## Spécifications

@@ -22,7 +22,7 @@ Une valeur {{domxref("RequestMode")}}.
 
 ## Exemple
 
-Dans le bout de code suivant, nous créons une nouvelle requête en utilisant le constructeur {{domxref("Request.Request()")}}  (pour une image située dans le même répertoire que le script), puis on stocke le mode de la requête dans une variable:
+Dans le bout de code suivant, nous créons une nouvelle requête en utilisant le constructeur {{domxref("Request.Request()")}}  (pour une image située dans le même répertoire que le script), puis on stocke le mode de la requête dans une variable:
 
 ```js
 var myRequest = new Request('flowers.jpg');

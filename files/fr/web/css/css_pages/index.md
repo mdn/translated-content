@@ -35,6 +35,6 @@ translation_of: Web/CSS/CSS_Pages
 
 | Spécification                                | État                                     | Commentaires |
 | -------------------------------------------- | ---------------------------------------- | ------------ |
-| {{SpecName('CSS3 Paged Media')}} | {{Spec2('CSS3 Paged Media')}} |              |
-| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} |              |
-| {{SpecName('CSS2.1')}}                 | {{Spec2('CSS2.1')}}                 |              |
+| {{SpecName('CSS3 Paged Media')}} | {{Spec2('CSS3 Paged Media')}} |              |
+| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} |              |
+| {{SpecName('CSS2.1')}}                 | {{Spec2('CSS2.1')}}                 |              |

@@ -25,7 +25,7 @@ Les types de champs disponibles sont :
 - `{{HTMLElement("input/button", "button")}}` : un bouton sans comportement défini.
 - `{{HTMLElement("input/checkbox", "checkbox")}}` : une case à cocher qui permet de sélectionner/déselectionner une valeur
 - `{{HTMLElement("input/color", "color")}}` : {{HTMLVersionInline("5")}} un contrôle qui permet de définir une couleur.
-- `{{HTMLElement("input/date", "date")}}` : {{HTMLVersionInline("5")}} un contrôle qui permet de saisir une date (composé d'un jour,  d'un mois et d'une année).
+- `{{HTMLElement("input/date", "date")}}` : {{HTMLVersionInline("5")}} un contrôle qui permet de saisir une date (composé d'un jour,  d'un mois et d'une année).
 - `{{HTMLElement("input/datetime-local", "datetime-local")}}` : {{HTMLVersionInline("5")}} un contrôle qui permet de saisir une date et une heure (sans fuseau horaire).
 - `{{HTMLElement("input/email", "email")}}` : {{HTMLVersionInline("5")}} un champ qui permet de saisir une adresse éléctronique.
 - `{{HTMLElement("input/file", "file")}}` : un contrôle qui permet de sélectionner un fichier. L'attribut **`accept`** définit les types de fichiers qui peuvent être sélectionnés.
@@ -122,7 +122,7 @@ L'attribut `list` n'est pas pris en charge pour les types `hidden`, `password`, 
 
 Une chaîne de caractères qui définit le nom associé au champ. Ce nom sera envoyé avec la valeur lors de l'envoi du formulaire.
 
-Lorsqu'un champ a un nom, cette valeur devient une propriété de  {{domxref("HTMLFormElement.elements")}} qu'on pourra utiliser en JavaScript (ex. si on a un attribut `name` qui vaut `hat-size` :
+Lorsqu'un champ a un nom, cette valeur devient une propriété de  {{domxref("HTMLFormElement.elements")}} qu'on pourra utiliser en JavaScript (ex. si on a un attribut `name` qui vaut `hat-size` :
 
 ```js
 let form = document.querySelector("form");

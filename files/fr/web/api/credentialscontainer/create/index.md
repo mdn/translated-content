@@ -33,14 +33,14 @@ La méthode **`create()`**, rattachée à l'interface {{domxref("CredentialsCont
 
       - `id`: (obligatoire) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
       - `name`: {{optional_inline}} {{domxref("USVString")}}
-      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
+      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
       - `password`: (required) {{domxref("USVString")}}
 
     - federated : {{optional_inline}} un objet {{domxref("FederatedCredentialInit")}}. Cet objet contient le nécessaire pour créer/obtenir des informations d'authentification fédérées. Les propriétés disponibles sont :
 
       - `id`: (required) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.
       - `name`: {{optional_inline}} {{domxref("USVString")}}
-      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
+      - `iconURL`: {{optional_inline}} {{domxref("USVString")}}
       - `provider`: (required) {{domxref("USVString")}}
       - `protocol`: {{optional_inline}} {{domxref("USVString")}}
 

@@ -492,10 +492,10 @@ p {
 .shape1 { clip-path: circle(25%); }
 .shape2 { clip-path: circle(25% at 25% 25%); }
 .shape3 { clip-path: fill-box    circle(25% at 25% 25%); }
-.shape4 { clip-path: stroke-box  circle(25% at 25% 25%); }
+.shape4 { clip-path: stroke-box circle(25% at 25% 25%); }
 .shape5 { clip-path: view-box    circle(25% at 25% 25%); }
-.shape6 { clip-path: margin-box  circle(25% at 25% 25%); }
-.shape7 { clip-path: border-box  circle(25% at 25% 25%); }
+.shape6 { clip-path: margin-box circle(25% at 25% 25%); }
+.shape7 { clip-path: border-box circle(25% at 25% 25%); }
 .shape8 { clip-path: padding-box circle(25% at 25% 25%); }
 .shape9 { clip-path: content-box circle(25% at 25% 25%); }
 

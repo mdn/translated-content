@@ -89,7 +89,7 @@ L'{{domxref("IDBIndex","accès")}} au nouvel index.
   - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} dont dépend cet {{domxref("IDBObjectStore","accès")}} au magasin d'objet n'est pas en {{domxref("IDBTransaction.mode","mode")}} `versionchange`.
 - `TransactionInactiveError`
   - : Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.
-    [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165) ).
+    [bug 1176165](https://bugzilla.mozilla.org/show_bug.cgi?id=1176165) ).
 - `ConstraintError`
   - : Cette {{domxref("DOMException","exeption")}} si un index avec le même nom (case sensible) existe déjà sur le magasin d'objet.
 
@@ -105,7 +105,7 @@ var db;
 // Requête d'ouverture de la base de données "toDoList"
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-// Gère  l'échec de l'ouverture de la base
+// Gère l'échec de l'ouverture de la base
 DBOpenRequest.onerror = function(event) {
   note.innerHTML += '<li>La base de donnée n\'as pas peut être ouverte.</li>';
 };
@@ -121,7 +121,7 @@ DBOpenRequest.onsuccess = function(event) {
   displayData();
 };
 
-// Ce gestionnaire d'événement nécessite  un nouveau numéro de version de la basse de données.
+// Ce gestionnaire d'événement nécessite un nouveau numéro de version de la basse de données.
 // Si la base n'existe pas un nouveau numéro de version est généré par la méthode d'ouverture de connexion window.indexDB.open .
 
 DBOpenRequest.onupgradeneeded = function(event) {
@@ -150,7 +150,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 | Spécification                                                                                                                                                                                                                                | Statut                       | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-createIndex-IDBIndex-DOMString-name-DOMString-sequence-DOMString--keyPath-IDBIndexParameters-optionalParameters', 'createIndex()')}} | {{Spec2('IndexedDB')}} |             |
+| {{SpecName('IndexedDB', '#widl-IDBObjectStore-createIndex-IDBIndex-DOMString-name-DOMString-sequence-DOMString--keyPath-IDBIndexParameters-optionalParameters', 'createIndex()')}} | {{Spec2('IndexedDB')}} |             |
 
 ## Compatibilité avec les navigateurs
 

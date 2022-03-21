@@ -58,7 +58,7 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 }
 
 /* ------------ */
-/* Style  Chic  */
+/* Style Chic  */
 /* ------------ */
 
 .select {
@@ -198,7 +198,7 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 }
 
 /* ------------ */
-/* Style  Chic  */
+/* Style Chic  */
 /* ------------ */
 
 .select {
@@ -338,7 +338,7 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 }
 
 /* ------------ */
-/* Style  Chic  */
+/* Style Chic  */
 /* ------------ */
 
 .select {

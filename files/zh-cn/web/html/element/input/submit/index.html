@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/input/submit
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("值")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>{{domxref("DOMString")}} 展示在按钮的标签内</td>
   </tr>
   <tr>
@@ -48,7 +48,7 @@ translation_of: Web/HTML/Element/input/submit
  </tbody>
 </table>
 
-<h2 id="Value">Value</h2>
+<h2 id="值">值</h2>
 
 <p><code>&lt;input type="submit"&gt;</code> 元素的 {{htmlattrxref("value", "input")}} 属性 包含一个展示在按钮标签上的 {{domxref("DOMString")}}，否则按钮没有正确的 value 值。</p>
 
@@ -79,35 +79,35 @@ translation_of: Web/HTML/Element/input/submit
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("formaction")}}</code></td>
+   <td><code><a href="#formaction">formaction</a></code></td>
    <td>提交表单数据的 URL； 覆盖表单的{{htmlattrxref("action", "form")}} 属性（如果有）</td>
   </tr>
   <tr>
-   <td><code>{{anch("formenctype")}}</code></td>
+   <td><code><a href="#formenctype">formenctype</a></code></td>
    <td>一个字符串，指定用于表单数据的编码类型</td>
   </tr>
   <tr>
-   <td><code>{{anch("formmethod")}}</code></td>
+   <td><code><a href="#formmethod">formmethod</a></code></td>
    <td>提交表单时使用的 HTTP 方法 ({{HTTPMethod("get")}} 或 {{HTTPMethod("post")}}) </td>
   </tr>
   <tr>
-   <td><code>{{anch("formnovalidate")}}</code></td>
+   <td><code><a href="#formnovalidate">formnovalidate</a></code></td>
    <td>一个布尔值，如果存在，则意味着在将数据提交给服务器之前，表单的字段将不受约束验证（<a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>）</td>
   </tr>
   <tr>
-   <td><code>{{anch("formtarget")}}</code></td>
+   <td><code><a href="#formtarget">formtarget</a></code></td>
    <td>提交表单后，将服务器返回的响应加载到 {{Glossary("browsing context")}} 中</td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="htmlattrdefformaction">{{htmlattrdef("formaction")}}</h3>
+<h3 id="formaction">formaction</h3>
 
 <p>一个字符串，指示要将数据提交到的 URL。 这优先于拥有 {{HTMLElement("input")}} 的 {{HTMLElement("form")}} 元素上的 {{htmlattrxref("action", "form")}} 属性。</p>
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformenctype">{{htmlattrdef("formenctype")}}</h3>
+<h3 id="formenctype">formenctype</h3>
 
 <p>一个字符串，标识在将表单数据提交到服务器时要使用的编码方法。 有三个允许的值：</p>
 
@@ -124,7 +124,7 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformmethod">{{htmlattrdef("formmethod")}}</h3>
+<h3 id="formmethod">formmethod</h3>
 
 <p>一个字符串，指示提交表单数据时要使用的 HTTP 方法； 此值将覆盖拥有表单上给出的任何 {{htmlattrxref("method", "form")}} 属性。 允许的值为：</p>
 
@@ -139,13 +139,13 @@ translation_of: Web/HTML/Element/input/submit
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformnovalidate">{{htmlattrdef("formnovalidate")}}</h3>
+<h3 id="formnovalidate">formnovalidate</h3>
 
 <p>布尔属性，如果存在，则指定在提交给服务器之前不应对表单进行验证。 这将覆盖元素拥有表单上的 {{htmlattrxref("novalidate", "form")}} 属性的值。</p>
 
 <p>此属性在 <code><a href="/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素和{{HTMLElement("button")}} 元素上也可用。</p>
 
-<h3 id="htmlattrdefformtarget">{{htmlattrdef("formtarget")}}</h3>
+<h3 id="formtarget">formtarget</h3>
 
 <p>一个字符串，它指定一个名称或关键字，该名称或关键字指示提交表单后在何处显示收到的响应。 该字符串必须是<strong>浏览上下文</strong>的名称 (即选项卡，窗口或 {{HTMLElement("iframe")}}。 此处指定的值将覆盖 {{HTMLElement("form")}} 上拥有此输入的 {{htmlattrxref("target", "form")}} 属性。</p>
 

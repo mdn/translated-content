@@ -35,7 +35,7 @@ if (element.localName == "browser" &&
 
 Ce n'est pas une valeur calculée qui est le résultat d'une recherche d'espace de noms basée sur un examen des déclarations d'espace de noms dans la portée. L'URI de l'espace de noms d'un nœud est fixé au moment de la création du nœud.
 
-Dans Firefox 3.5 et antérieurs, l'URI d'espace de noms pour les éléments HTML dans un document HTML est `null`. Dans les versions postérieures, en conformité avec HTML5, c'est [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) comme dans XHTML. {{gecko_minversion_inline("1.9.2")}}
+Dans Firefox 3.5 et antérieurs, l'URI d'espace de noms pour les éléments HTML dans un document HTML est `null`. Dans les versions postérieures, en conformité avec HTML5, c'est [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) comme dans XHTML.
 
 Vous pouvez créer un élément avec l'`namespaceURI` spécifié en utilisant la méthode DOM niveau 2 [document.createElementNS](/fr/docs/Web/API/Document/createElementNS).
 

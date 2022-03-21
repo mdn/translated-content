@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Opérateurs/Assignement
 ---
 {{jsSidebar("Operators")}}
 
-L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'une variable. Il est possible d'ajouter une valeur à plusieurs variables en chaînant les variables.
+L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'une variable. Il est possible d'ajouter une valeur à plusieurs variables en chaînant les variables.
 
 {{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
 

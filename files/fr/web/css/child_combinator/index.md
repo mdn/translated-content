@@ -60,7 +60,7 @@ div > span {
 
 | Spécification                                                                                        | État                                 | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS4 Selectors', '#child-combinators', 'child combinator')}}     | {{Spec2('CSS4 Selectors')}} |                      |
+| {{SpecName('CSS4 Selectors', '#child-combinators', 'child combinator')}}     | {{Spec2('CSS4 Selectors')}} |                      |
 | {{SpecName('CSS3 Selectors', '#child-combinators', 'child combinators')}}     | {{Spec2('CSS3 Selectors')}} | Aucune modification. |
 | {{SpecName('CSS2.1', 'selector.html#child-selectors', 'child selectors')}} | {{Spec2('CSS2.1')}}             | Définition initiale. |
 

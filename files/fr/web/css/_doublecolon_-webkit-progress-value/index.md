@@ -20,11 +20,11 @@ Le pseudo-élément **`::-webkit-progress-value`** permet de représenter la por
 
 ```css
 progress {
-  -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 ::-webkit-progress-value {
-  background-color: orange;
+  background-color: orange;
 }
 ```
 

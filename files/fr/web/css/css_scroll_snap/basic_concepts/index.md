@@ -10,7 +10,7 @@ original_slug: Web/CSS/CSS_Scroll_Snap/Concepts_de_base
 ---
 {{CSSRef}}
 
-[Le module de spécification CSS _Scroll Snap_](https://drafts.csswg.org/css-scroll-snap-1/) fournit des outils pour « accrocher » sur certains points lors du défilement dans un document. Un tel comportement peut s'avérer utile pour obtenir un résultat analogue à certaines applications (qu'elles soient mobiles ou non).
+[Le module de spécification CSS _Scroll Snap_](https://drafts.csswg.org/css-scroll-snap-1/) fournit des outils pour «&nbsp;accrocher&nbsp;» sur certains points lors du défilement dans un document. Un tel comportement peut s'avérer utile pour obtenir un résultat analogue à certaines applications (qu'elles soient mobiles ou non).
 
 ## Principes fondamentaux
 

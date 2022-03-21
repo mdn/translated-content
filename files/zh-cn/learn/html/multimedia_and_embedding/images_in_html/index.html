@@ -99,7 +99,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 <p>你到底应该在 <code>alt</code> 里写点什么呢？这首先取决于为什么这张图片会在这儿，换句话说，如果这张图片没显示出来，会少了什么：</p>
 
 <ul>
- <li><strong>装饰：</strong>如果图片只是用于装饰，而不是内容的一部分，可以写一个空的<code>alt=""</code> 。例如，屏幕阅读器不会浪费时间对用户读出不是核心需要的内容。实际上装饰性图片就不应该放在HTML文件里， {{anch("CSS background images")}}才应该用于插入装饰图片，但如果这种情况无法避免， <code>alt=""</code>会是最佳处理方案。</li>
+ <li><strong>装饰：</strong>如果图片只是用于装饰，而不是内容的一部分，可以写一个空的<code>alt=""</code> 。例如，屏幕阅读器不会浪费时间对用户读出不是核心需要的内容。实际上装饰性图片就不应该放在HTML文件里， <a href="#css_背景图片">CSS 背景图片</a>才应该用于插入装饰图片，但如果这种情况无法避免， <code>alt=""</code>会是最佳处理方案。</li>
  <li><strong>内容：</strong>如果你的图片提供了重要的信息，就要在<code>alt</code>文本中简要的提供相同的信息，甚至更近一步，把这些信息写在主要的文本内容里，这样所有人都能看见。不要写冗余的备选文本（如果在主要文本中将所有的段落都重复两遍，对于没有失明的用户来说多烦啊！），如果在主要文本中已经对图片进行了充分的描述，写<code>alt=""</code>就好。</li>
  <li><strong>链接：</strong>如果你把图片嵌套在{{htmlelement("a")}}标签里，来把图片变成链接，那你还必须<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#用清晰的链接措辞。">提供无障碍的链接文本</a>。在这种情况下，你可以写在同一个<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">&lt;a&gt;</span></font>元素里，或者写在图片的<code>alt</code>属性里，随你喜欢。</li>
  <li><strong>文本：</strong>你不应该将文本放到图像里。例如，如果你的主标题需要有阴影，你可以<a href="/zh-CN/docs/Web/CSS/text-shadow">用CSS</a>来达到这个目的，而不是把文本放到图片里。如果真的必须这么做，那就把文本也放到<code>alt</code>里。</li>

@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sqrt
 ---
 {{JSRef}}
 
-La fonction **`Math.sqrt()`** renvoie la racine carrée d'un nombre. Cette fonction est définie par :
+La fonction **`Math.sqrt()`** renvoie la racine carrée d'un nombre. Cette fonction est définie par&nbsp;:
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mi>M</mi><mi>a</mi><mi>t</mi><mi>h</mi><mo>.</mo><mi>s</mi><mi>q</mi><mi>r</mi><mi>t</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><msqrt><mi>x</mi></msqrt><mo>=</mo><mtext>l'unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 0, \mathtt{Math.sqrt(x)} = \sqrt{x} = \text{the unique} \; y \geq 0 \; \text{such that} \; y^2 = x</annotation></semantics></math>
 
@@ -53,9 +53,9 @@ Math.sqrt(-0); // -0
 | Spécification                                                            | État                         | Commentaires                                          |
 | ------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}}     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.sqrt', 'Math.sqrt')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.8.2.17', 'Math.sqrt')}}     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-math.sqrt', 'Math.sqrt')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-math.sqrt', 'Math.sqrt')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

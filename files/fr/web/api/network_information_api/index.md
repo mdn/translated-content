@@ -39,8 +39,8 @@ let preloadVideo = true;
 var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
 if (connection) {
   if (connection.effectiveType === 'cellular') {
-    preloadVideo = false;
-  }
+    preloadVideo = false;
+  }
 }
 ```
 

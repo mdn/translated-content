@@ -43,7 +43,7 @@ console.log(mapped instanceof Array);    // true
 | Spécification                                                                        | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-symbol.species', 'Symbol.species')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

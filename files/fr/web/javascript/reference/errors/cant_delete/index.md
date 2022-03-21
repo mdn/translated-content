@@ -29,7 +29,7 @@ Cette erreur ne se produit qu'en [mode strict](/fr/docs/Web/JavaScript/Reference
 
 ## Exemples
 
-Les propriétés non-configurables ne sont pas très fréquentes mais il est possible d'en créer grâce à {{jsxref("Object.defineProperty()")}} ou à  {{jsxref("Object.freeze()")}}.
+Les propriétés non-configurables ne sont pas très fréquentes mais il est possible d'en créer grâce à {{jsxref("Object.defineProperty()")}} ou à  {{jsxref("Object.freeze()")}}.
 
 ```js example-bad
 "use strict";

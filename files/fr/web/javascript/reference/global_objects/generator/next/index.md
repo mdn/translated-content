@@ -80,7 +80,7 @@ g.next(2);
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-generator.prototype.next', 'Generator.prototype.next')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.next', 'Generator.prototype.next')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-generator.prototype.next', 'Generator.prototype.next')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

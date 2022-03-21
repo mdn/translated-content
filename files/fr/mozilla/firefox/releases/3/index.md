@@ -148,7 +148,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 #### Nouveaux composants et fonctionnalités
 
 - [Bibliothèque FUEL](/fr/FUEL)
-  - : FUEL sert à améliorer la productivité des développeurs d'extensions en minimisant certaines des formalités XPCOM et en ajoutant certaines idées « modernes » de JavaScript.
+  - : FUEL sert à améliorer la productivité des développeurs d'extensions en minimisant certaines des formalités XPCOM et en ajoutant certaines idées «&nbsp;modernes&nbsp;» de JavaScript.
 
 <!---->
 
@@ -223,12 +223,12 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 - **Enregistrement de votre session.** Firefox 3 vous demande si vous désirez enregistrer vos onglets ouverts lorsque vous quittez Firefox.
 - **Comportement d'ouverture dans des onglets optimisé.** L'ouverture d'un dossier de marque-pages dans des onglets ajoute une série de nouveaux onglets au lieu de remplacer les onglets existants.
 - **Barres d'adresse et de recherche plus faciles à redimensionner.** Il est à présent aisé de redimensionner les barres d'adresse et de recherche grâce à une poignée de redimensionnement située entre les deux.
-- **Améliorations dans la sélection de texte.** Il est à présent possible de sélectionner plusieurs sections de texte à l'aide de la touche Ctrl (Command sur Macintosh). Un double clic avec déplacement sélectionne en mode « mot à mot ». Un triple clic sélectionne tout le paragraphe.
+- **Améliorations dans la sélection de texte.** Il est à présent possible de sélectionner plusieurs sections de texte à l'aide de la touche Ctrl (Command sur Macintosh). Un double clic avec déplacement sélectionne en mode «&nbsp;mot à mot&nbsp;». Un triple clic sélectionne tout le paragraphe.
 - **Barre de recherche.** La barre de recherche dans la page s'ouvre avec le contenu de la sélection courante.
 - **Gestion des plugins.** Les utilisateurs peuvent désactiver des plugins particuliers dans le gestionnaire de modules complémentaires.
 - **Intégration dans Windows Vista.** Les menus de Firefox s'affichent à présent avec le thème natif de Vista.
 - **Intégration dans Mac OS X.** Firefox utilise le correcteur orthographique de Mac OS X et gère [Growl](http://growl.info/) pour les notifications de téléchargements terminés et de mises à jour disponibles.
-- **Bouton « Star ».** Le nouveau bouton en forme d'étoile dans la Barre d'adresse permet d'ajouter rapidement un marque-page en un clic. Un second clic permet de ranger et de mettre des étiquettes sur le nouveau marque-page.
+- **Bouton «&nbsp;Star&nbsp;».** Le nouveau bouton en forme d'étoile dans la Barre d'adresse permet d'ajouter rapidement un marque-page en un clic. Un second clic permet de ranger et de mettre des étiquettes sur le nouveau marque-page.
 - **Étiquettes.** Vous pouvez associer des étiquettes à vos marque-pages pour les trier facilement par sujet.
 - **Barre d'adresse et autocomplétion.** Entrez le titre ou l'étiquette d'une page dans la Barre d'adresse pour retrouver rapidement le site que vous cherchez dans votre historique et vos marque-pages. Des indicateurs reprenant l'icône du site, le marque-page et les étiquettes associés vous aident à savoir d'où viennent les résultats.
 - **Dossier de marque-pages intelligent.** Le nouveau Classeur de Firefox permet d'accéder rapidement à vous pages récemment marquées et étiquetées, ainsi qu'aux pages que vous visitez fréquemment.
@@ -241,7 +241,7 @@ Pour les développeurs qui désirent prendre connaissance de toutes les nouvelle
 
 ### Sécurité et vie privée
 
-- **Informations sur un site en un clic.** Vous voulez en savoir plus sur le site affiché ? Cliquez sur son icône dans la Barre d'adresse pour en connaître le propriétaire. Les informations d'identité sont affichées plus clairement et plus faciles à comprendre.
+- **Informations sur un site en un clic.** Vous voulez en savoir plus sur le site affiché&nbsp;? Cliquez sur son icône dans la Barre d'adresse pour en connaître le propriétaire. Les informations d'identité sont affichées plus clairement et plus faciles à comprendre.
 - **Protection contre les logiciels malveillants.** Firefox 3 vous avertit si vous vous rendez sur un site connu pour installer des virus, spywares, troyens ou d'autres logiciels dangereux. Vous pouvez voir à quoi cet avertissement ressemble en [visitant cette page](https://www.mozilla.com/firefox/its-an-attack.html).
 - **Protection contre les sites contrefaits améliorée.** Lorsque vous visitez une page suspectée d'être une contrefaçon, une page spéciale s'affiche au lieu du contenu de la page avec un avertissement. [Visitez cette page](https://www.mozilla.com/firefox/its-a-trap.html) pour voir à quoi elle ressemble.
 - **Erreurs SSL plus faciles à comprendre.** Les erreurs présentées lorsqu'un certificat SSL invalide est rencontré ont été clarifiées pour qu'il soit plus facile de comprendre la nature du problème.

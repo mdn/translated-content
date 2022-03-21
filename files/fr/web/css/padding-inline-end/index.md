@@ -10,7 +10,7 @@ translation_of: Web/CSS/padding-inline-end
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-La propriété **`padding-inline-end`** définit le décalage avec la fin de la zone de remplissage d'un élément, selon le mode d'écriture, la directionnalité et l'orientation du texte. Elle correspond à la propriété {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} ou {{cssxref("padding-left")}} selon les valeurs définies pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
+La propriété **`padding-inline-end`** définit le décalage avec la fin de la zone de remplissage d'un élément, selon le mode d'écriture, la directionnalité et l'orientation du texte. Elle correspond à la propriété {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} ou {{cssxref("padding-left")}} selon les valeurs définies pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
 Les autres parties « logiques » du remplissage sont définies grâce aux propriétés {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}} et {{cssxref("padding-inline-start")}}.
 

@@ -601,11 +601,11 @@
 /zh-TW/docs/Web/CSS/CSS_網格_布局	/zh-TW/docs/Web/CSS/CSS_Grid_Layout
 /zh-TW/docs/Web/CSS/Common_CSS_Questions	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-TW/docs/Web/CSS/Descendant_selectors	/zh-TW/docs/Web/CSS/Descendant_combinator
-/zh-TW/docs/Web/CSS/attr	/zh-TW/docs/Web/CSS/attr()
+/zh-TW/docs/Web/CSS/attr()	/zh-TW/docs/Web/CSS/attr
 /zh-TW/docs/Web/CSS/border-image/border-image	/zh-TW/docs/orphaned/Web/CSS/border-image/border-image
 /zh-TW/docs/Web/CSS/radial-gradient	/zh-TW/docs/orphaned/Web/CSS/radial-gradient()
 /zh-TW/docs/Web/CSS/radial-gradient()	/zh-TW/docs/orphaned/Web/CSS/radial-gradient()
-/zh-TW/docs/Web/CSS/transform-function/translate3d	/zh-TW/docs/Web/CSS/transform-function/translate3d()
+/zh-TW/docs/Web/CSS/transform-function/translate3d()	/zh-TW/docs/Web/CSS/transform-function/translate3d
 /zh-TW/docs/Web/CSS/參考	/zh-TW/docs/Web/CSS/Reference
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing
 /zh-TW/docs/Web/CSS/繼承	/zh-TW/docs/Web/CSS/inheritance

@@ -34,7 +34,7 @@ var uninstallingSelf = browser.management.uninstallSelf(
   - : `object`. L'objet qui peut comporter deux propriétés, toutes deux facultatives :
 
     - `showConfirmDialog{{optional_inline}}`
-      - : Boolean. Si `showConfirmDialog` est `true`, le navigateur  affiche la boite  de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé. Par défaut à `false`.
+      - : Boolean. Si `showConfirmDialog` est `true`, le navigateur affiche la boite de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé. Par défaut à `false`.
     - `dialogMessage{{optional_inline}}`
       - : String. Un message supplémentaire qui sera affiché dans la boite de dialogue de confirmation.
 
@@ -50,7 +50,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Désinsallez l'extension, en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annulé la désinstallation.
 
-Notez que n'avons pas passé un gestionnaire d'éxécution, car si la desinstallation  réussit, l'extension n'est plus disponible pour le gérer.
+Notez que n'avons pas passé un gestionnaire d'éxécution, car si la desinstallation réussit, l'extension n'est plus disponible pour le gérer.
 
 ```js
 function onCanceled(error) {

@@ -20,13 +20,13 @@ Dans cet article nous vous montrons comment appliquer un style CSS à un documen
     <tr>
       <th scope="row">Prérequis :</th>
       <td>
-        Connaissances élémentaires en informatique, <a
+        Connaissances élémentaires en informatique, <a
           href="/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
           >suite logicielle de base installée</a
-        >, compréhension élémentaire du <a
+        >, compréhension élémentaire du <a
           href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          > travail avec des fichiers</a
-        >, des bases en HTML (cf. <a
+          > travail avec des fichiers</a
+        >, des bases en HTML (cf. <a
           href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction à HTML</a
         >.)
@@ -42,9 +42,9 @@ Dans cet article nous vous montrons comment appliquer un style CSS à un documen
   </tbody>
 </table>
 
-## D'abord un peu de HTML
+## D'abord un peu de HTML
 
-Notre point de départ est un document HTML. Pour suivre la leçon en travaillant sur votre ordinateur, vous pouvez copier le code ci-dessous. Collez le dans un fichier en utilisant un éditeur de code, puis sauvegardez le sous le nom `index.html`.
+Notre point de départ est un document HTML. Pour suivre la leçon en travaillant sur votre ordinateur, vous pouvez copier le code ci-dessous. Collez le dans un fichier en utilisant un éditeur de code, puis sauvegardez le sous le nom `index.html`.
 
 ```html
 <!doctype html>
@@ -74,21 +74,21 @@ Notre point de départ est un document HTML. Pour suivre la leçon en travaillan
 </html>
 ```
 
-> **Note :** Si vous lisez cet article sur un appareil ou dans un environnement où il n'est pas aisé de créer des fichiers, pas de soucis — des éditeurs de code live sont proposés ci-dessous ; vous pourrez ainsi tester les exemples de code directement dans cette page.
+> **Note :** Si vous lisez cet article sur un appareil ou dans un environnement où il n'est pas aisé de créer des fichiers, pas de soucis — des éditeurs de code live sont proposés ci-dessous ; vous pourrez ainsi tester les exemples de code directement dans cette page.
 
-## Ajouter CSS à notre document
+## Ajouter CSS à notre document
 
-Pour commencer, on doit signaler au document HTML que nous souhaitons utiliser des règles CSS. Vous rencontrerez trois possibilités pour appliquer CSS à un document HTML. Nous nous contenterons de présenter la méthode la plus utilisée  — créer un lien vers la feuille de style CSS depuis l'en-tête du document HTML.
+Pour commencer, on doit signaler au document HTML que nous souhaitons utiliser des règles CSS. Vous rencontrerez trois possibilités pour appliquer CSS à un document HTML. Nous nous contenterons de présenter la méthode la plus utilisée  — créer un lien vers la feuille de style CSS depuis l'en-tête du document HTML.
 
-Avec votre éditeur de code, dans le dossier où se trouve le document HTML, créez un fichier et sauvegardez le sous le nom `styles.css`. L'extension `.css` indique que c'est un fichier CSS.
+Avec votre éditeur de code, dans le dossier où se trouve le document HTML, créez un fichier et sauvegardez le sous le nom `styles.css`. L'extension `.css` indique que c'est un fichier CSS.
 
-Pour lier `styles.css` à `index.html` ajoutez la ligne suivante dans la section {{htmlelement("head")}} du document HTML :
+Pour lier `styles.css` à `index.html` ajoutez la ligne suivante dans la section {{htmlelement("head")}} du document HTML :
 
 ```html
 <link rel="stylesheet" href="styles.css">
 ```
 
-Cet élément {{htmlelement("link")}} indique au navigateur la présence d'une feuille de style, grâce à l'attribut `rel` ; la valeur de l'attribut `href` donne la localisation du fichier CSS. Pour tester que le lien fonctionne, nous allons définir une règle dans `styles.css`. Grâce à votre éditeur de code, ajoutez les lignes suivantes à la feuille de style CSS :
+Cet élément {{htmlelement("link")}} indique au navigateur la présence d'une feuille de style, grâce à l'attribut `rel` ; la valeur de l'attribut `href` donne la localisation du fichier CSS. Pour tester que le lien fonctionne, nous allons définir une règle dans `styles.css`. Grâce à votre éditeur de code, ajoutez les lignes suivantes à la feuille de style CSS :
 
 ```css
 h1 {
@@ -96,15 +96,15 @@ h1 {
 }
 ```
 
-Dans votre éditeur de code, sauvegardez vos documents HTML et CSS puis rechargez la page HTML dans votre navigateur. Le titre de niveau un en haut du document devrait maintenant apparaître en rouge. Si c'est le cas, félicitations — vous avez appliqué avec succès une règle CSS à votre document HTML. Si ce n'est pas le cas, vérifiez scrupuleusement que vous avez tout bien fait comme indiqué.
+Dans votre éditeur de code, sauvegardez vos documents HTML et CSS puis rechargez la page HTML dans votre navigateur. Le titre de niveau un en haut du document devrait maintenant apparaître en rouge. Si c'est le cas, félicitations — vous avez appliqué avec succès une règle CSS à votre document HTML. Si ce n'est pas le cas, vérifiez scrupuleusement que vous avez tout bien fait comme indiqué.
 
-Pour suivre le reste de ce tutoriel, vous pouvez continuer à éditer `styles.css` sur votre machine, ou utiliser l'éditeur interactif proposé ci-dessous. L'éditeur interactif se comporte comme si le CSS dans le premier cadre était lié au document HTML, exactement comme sur votre machine après les manipulations précédentes.
+Pour suivre le reste de ce tutoriel, vous pouvez continuer à éditer `styles.css` sur votre machine, ou utiliser l'éditeur interactif proposé ci-dessous. L'éditeur interactif se comporte comme si le CSS dans le premier cadre était lié au document HTML, exactement comme sur votre machine après les manipulations précédentes.
 
 ## Mettre en forme des éléments HTML
 
 En passant la couleur de police des titres en rouge nous avons vu comment sélectionner et mettre en forme un élément HTML.
 
-Cela est réalisé grâce à un sélecteur d'élément — dans la règle CSS, le sélecteur correspond au nom d'un élément HTML. Pour appliquer un style à tous les paragraphes du document HTML on utilisera le sélecteur `p`. Voilà la règle pour passer en vert tous les paragraphes :
+Cela est réalisé grâce à un sélecteur d'élément — dans la règle CSS, le sélecteur correspond au nom d'un élément HTML. Pour appliquer un style à tous les paragraphes du document HTML on utilisera le sélecteur `p`. Voilà la règle pour passer en vert tous les paragraphes :
 
 ```css
 p {
@@ -112,7 +112,7 @@ p {
 }
 ```
 
-On peut cibler plusieurs éléments d'un coup en les listant, séparés par une virgule. Si je veux que tous les paragraphes et tous les items de liste soient verts j'écrirai la règle suivante :
+On peut cibler plusieurs éléments d'un coup en les listant, séparés par une virgule. Si je veux que tous les paragraphes et tous les items de liste soient verts j'écrirai la règle suivante :
 
 ```css
 p, li {
@@ -124,11 +124,11 @@ Testez cela dans l'éditeur interacif ci-dessous (éditer les boîtes de code) o
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started1.html", '100%', 900)}}
 
-## Changer le comportement par défaut des éléments
+## Changer le comportement par défaut des éléments
 
-Quand on observe un document HTML bien formé, même simple comme notre exemple, on peut voir comment un navigateur le rend lisible par une mise en forme par défaut. Les titres sont écrits en gras dans une taille plus grande, les items des listes sont précédés d'une puce. Les navigateurs ont leurs feuilles de style internes qu'ils appliquent par défaut à toutes les pages ; sans cela, tout le texte s'agglutinerait en paquet et il faudrait tout mettre en forme à partir de zéro. Tous les navigateurs modernes rendent les contenus HTML par défaut essentiellement de la même manière.
+Quand on observe un document HTML bien formé, même simple comme notre exemple, on peut voir comment un navigateur le rend lisible par une mise en forme par défaut. Les titres sont écrits en gras dans une taille plus grande, les items des listes sont précédés d'une puce. Les navigateurs ont leurs feuilles de style internes qu'ils appliquent par défaut à toutes les pages ; sans cela, tout le texte s'agglutinerait en paquet et il faudrait tout mettre en forme à partir de zéro. Tous les navigateurs modernes rendent les contenus HTML par défaut essentiellement de la même manière.
 
-On recherche pourtant souvent autre chose que ce rendu par défaut. Il suffit alors de sélectionner l'élément HTML dont on veut modifier le rendu et d'écrire la règle CSS pour réaliser cette mise en forme.  Un bon exemple est notre `<ul>`, une liste non ordonnée. Ses items sont marqués par des puces et si on décide de se débarrasser de ces puces, on peut le faire comme suit :
+On recherche pourtant souvent autre chose que ce rendu par défaut. Il suffit alors de sélectionner l'élément HTML dont on veut modifier le rendu et d'écrire la règle CSS pour réaliser cette mise en forme.  Un bon exemple est notre `<ul>`, une liste non ordonnée. Ses items sont marqués par des puces et si on décide de se débarrasser de ces puces, on peut le faire comme suit :
 
 ```css
 li {
@@ -138,15 +138,15 @@ li {
 
 Ajoutez cette règle dans votre CSS et testez en l'effet.
 
-Cherchez maintenant sur MDN quelles sont les valeurs possibles pour la propriété `list-style-type`. Dans la page pour [`list-style-type`](/fr/docs/Web/CSS/list-style-type) vous trouverez un exemple interactif en haut de page, vous pourrez tester quelques valeurs ; toutes les valeurs autorisées sont détaillées dans le reste de la page.
+Cherchez maintenant sur MDN quelles sont les valeurs possibles pour la propriété `list-style-type`. Dans la page pour [`list-style-type`](/fr/docs/Web/CSS/list-style-type) vous trouverez un exemple interactif en haut de page, vous pourrez tester quelques valeurs ; toutes les valeurs autorisées sont détaillées dans le reste de la page.
 
-En parcourant la page de documentation, vous découvrirez qu'au lieu de supprimer les puces, vous pouvez en changer l'aspect — essayez la valeur `square` pour obtenir des puces carrées.
+En parcourant la page de documentation, vous découvrirez qu'au lieu de supprimer les puces, vous pouvez en changer l'aspect — essayez la valeur `square` pour obtenir des puces carrées.
 
 ## Ajouter une classe
 
-Jusqu'ici, nous avons mis en forme des éléments HTML repérés par leur nom de balise. Cela fonctionne tant que vous voulez appliquer le même style à tous les éléments de ce type dans le document. La plupart du temps ce n'est pas le comportement désiré ; il faut donc trouver une méthode pour sélectionner un sous-ensemble des éléments à mettre en forme sans changer l'apparence des autres éléments du même type. L'approche la plus commune pour obtenir ce comportement est d'ajouter une classe (pensez à une étiquette) aux éléments HTML à mettre en forme puis de sélectionner cette classe.
+Jusqu'ici, nous avons mis en forme des éléments HTML repérés par leur nom de balise. Cela fonctionne tant que vous voulez appliquer le même style à tous les éléments de ce type dans le document. La plupart du temps ce n'est pas le comportement désiré ; il faut donc trouver une méthode pour sélectionner un sous-ensemble des éléments à mettre en forme sans changer l'apparence des autres éléments du même type. L'approche la plus commune pour obtenir ce comportement est d'ajouter une classe (pensez à une étiquette) aux éléments HTML à mettre en forme puis de sélectionner cette classe.
 
-Dans le document HTML, ajouter un  [attribut class](/fr/docs/Web/HTML/Attributs_universels/class) au deuxième item de la liste :
+Dans le document HTML, ajouter un  [attribut class](/fr/docs/Web/HTML/Attributs_universels/class) au deuxième item de la liste :
 
 ```html
 <ul>
@@ -156,7 +156,7 @@ Dans le document HTML, ajouter un  [attribut class](/fr/docs/Web/HTML/Attributs
 </ul>
 ```
 
-Dans votre CSS vous pouvez maintenant cibler la classe `special` grâce à un sélecteur fait du nom de la classe précédé d'un point. Ajoutez le code suivant à votre feuille de style :
+Dans votre CSS vous pouvez maintenant cibler la classe `special` grâce à un sélecteur fait du nom de la classe précédé d'un point. Ajoutez le code suivant à votre feuille de style :
 
 ```css
 .special {
@@ -167,9 +167,9 @@ Dans votre CSS vous pouvez maintenant cibler la classe `special` grâce à un
 
 Sauvegardez et rechargez la page HTML dans votre navigateur pour observer le résultat.
 
-Vous pouvez attribuer la classe `special` à tout élément dans votre document HTML, dans le navigateur il sera rendu comme le deuxième item de la liste. Par exemple, vous pourriez appliquer ce style à l'élément `<span>` du premier paragraphe.
+Vous pouvez attribuer la classe `special` à tout élément dans votre document HTML, dans le navigateur il sera rendu comme le deuxième item de la liste. Par exemple, vous pourriez appliquer ce style à l'élément `<span>` du premier paragraphe.
 
-Vous verrez parfois des règles avec un sélecteur qui combine le nom de l'élément HTML avec celui de la classe  :
+Vous verrez parfois des règles avec un sélecteur qui combine le nom de l'élément HTML avec celui de la classe  :
 
 ```css
 li.special {
@@ -188,11 +188,11 @@ span.special {
 }
 ```
 
-Comme vous pouvez bien l'imaginer, certaines classes s'appliquent à un grand nombre d'éléments et il n'est pas pensable de devoir éditer la feuille de style à chaque modification du document HTML. Les sélecteurs composé du nom de l'élément suivi de celui de la classe sont donc plutôt réservés aux situations où la règle ne s'applique qu'à un élément unique.
+Comme vous pouvez bien l'imaginer, certaines classes s'appliquent à un grand nombre d'éléments et il n'est pas pensable de devoir éditer la feuille de style à chaque modification du document HTML. Les sélecteurs composé du nom de l'élément suivi de celui de la classe sont donc plutôt réservés aux situations où la règle ne s'applique qu'à un élément unique.
 
 ## Style en fonction de la position
 
-Il y a des situations où vous voudrez que le style d'un élément s'adapte en fonction de sa position dans le document. De nombreux sélecteurs permettent de réaliser ce type de comportement, voyons les plus simples. Dans notre document HTML il y a deux éléments `<em>` — l'un dans un paragraphe l'autre dans l'item d'une liste. On peut cibler le `<em>` imbriqué dans l'élément `<li>` avec un **combinateur descendant** qui prend la forme suivante **:** deux sélecteurs séparés par un espace.
+Il y a des situations où vous voudrez que le style d'un élément s'adapte en fonction de sa position dans le document. De nombreux sélecteurs permettent de réaliser ce type de comportement, voyons les plus simples. Dans notre document HTML il y a deux éléments `<em>` — l'un dans un paragraphe l'autre dans l'item d'une liste. On peut cibler le `<em>` imbriqué dans l'élément `<li>` avec un **combinateur descendant** qui prend la forme suivante **:** deux sélecteurs séparés par un espace.
 
 Ajoutez la règle suivante à votre feuille de style :
 
@@ -202,9 +202,9 @@ li em {
 }
 ```
 
-Ce sélecteur cible tout élément `<em>` à l'intérieur (descendant) d'un `<li>`. Ainsi, dans notre exemple, le `<em>` dans le troisième item de la liste sera maintenant pourpre, alors que celui du paragraphe est inchangé.
+Ce sélecteur cible tout élément `<em>` à l'intérieur (descendant) d'un `<li>`. Ainsi, dans notre exemple, le `<em>` dans le troisième item de la liste sera maintenant pourpre, alors que celui du paragraphe est inchangé.
 
-On pourrait maintenant essayer d'appliquer un style à un paragraphe quand il vient juste après un titre de niveau un dans le HTML. Pour obtenir cela, on place un `+`  (le **combinateur de frères et sœurs adjacents**) entre les sélecteurs.
+On pourrait maintenant essayer d'appliquer un style à un paragraphe quand il vient juste après un titre de niveau un dans le HTML. Pour obtenir cela, on place un `+`  (le **combinateur de frères et sœurs adjacents**) entre les sélecteurs.
 
 Ajoutez cette règle à votre feuille de style :
 
@@ -214,11 +214,11 @@ h1 + p {
 }
 ```
 
-L'exemple live ci-dessous inclut les deux règles précédentes. Essayez d'ajouter une règle qui passe \<span> en rouge s'il est dans un paragraphe. Votre règle est correcte, si après sauvegarde du CSS et rafraîchissement du HTML dans le navigateur, le \<span> du premier paragraphe est rouge mais celui du premier item de la liste est inchangé.
+L'exemple live ci-dessous inclut les deux règles précédentes. Essayez d'ajouter une règle qui passe \<span> en rouge s'il est dans un paragraphe. Votre règle est correcte, si après sauvegarde du CSS et rafraîchissement du HTML dans le navigateur, le \<span> du premier paragraphe est rouge mais celui du premier item de la liste est inchangé.
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
-> **Note :** A ce point, on a déjà découvert plusieurs méthodes CSS pour cibler les éléments et pourtant on vient à peine de commencer ! Nous passerons en revue plus systématiquement tous ces sélecteurs dans la leçon [CSS Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors) du cours suivant.
+> **Note :** A ce point, on a déjà découvert plusieurs méthodes CSS pour cibler les éléments et pourtant on vient à peine de commencer ! Nous passerons en revue plus systématiquement tous ces sélecteurs dans la leçon [CSS Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors) du cours suivant.
 
 ## Mise en forme basée sur l'état
 
@@ -234,7 +234,7 @@ a:visited {
 }
 ```
 
-On peut changer l'aspect des liens survolés, par exemple en supprimant le soulignement, avec la règle suivante :
+On peut changer l'aspect des liens survolés, par exemple en supprimant le soulignement, avec la règle suivante :
 
 ```css
 a:hover {
@@ -246,17 +246,17 @@ Dans l'exemple live ci-dessous, vous pouvez explorer les valeurs des différents
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}}
 
-Nous avons supprimé le soulignement quand le lien est survolé.Vous pourriez supprimer le soulignement quel que soit l'état du lien. Dans un vrai site, il est quand même important que le visiteur sache qu'un lien est un lien. Le soulignement donne un indice important aux visiteurs pour réaliser qu'un bout de texte dans un paragraphe est cliquable — c'est le comportement auquel ils sont habitués. Avec le contrôle que donne CSS, les changements de style peuvent parfois rendre le document moins accessible — à chaque fois que nécessaire nous nous efforcerons de signaler les pièges classiques dans cette direction.
+Nous avons supprimé le soulignement quand le lien est survolé.Vous pourriez supprimer le soulignement quel que soit l'état du lien. Dans un vrai site, il est quand même important que le visiteur sache qu'un lien est un lien. Le soulignement donne un indice important aux visiteurs pour réaliser qu'un bout de texte dans un paragraphe est cliquable — c'est le comportement auquel ils sont habitués. Avec le contrôle que donne CSS, les changements de style peuvent parfois rendre le document moins accessible — à chaque fois que nécessaire nous nous efforcerons de signaler les pièges classiques dans cette direction.
 
-> **Note :** dans ce cours et à travers le site MDN, vous rencontrerez souvent la notion d'[accessibilité](/fr/docs/Apprendre/a11y) : les règles pour que nos pages soient compréhensibles et utilisables par tous.
+> **Note :** dans ce cours et à travers le site MDN, vous rencontrerez souvent la notion d'[accessibilité](/fr/docs/Apprendre/a11y)&nbsp;: les règles pour que nos pages soient compréhensibles et utilisables par tous.
 >
-> Vos visiteurs peuvent consulter votre page depuis un ordinateur équipé d'une souris ou d'un trackpad, ou depuis un téléphone avec un écran tactile. Ils peuvent aussi utiliser un lecteur d'écran qui parcourt le contenu du document. Ils pourraient avoir besoin d'un affichage en grands caractères, ou parcourir votre site en ne naviguant qu'avec le clavier.
+> Vos visiteurs peuvent consulter votre page depuis un ordinateur équipé d'une souris ou d'un trackpad, ou depuis un téléphone avec un écran tactile. Ils peuvent aussi utiliser un lecteur d'écran qui parcourt le contenu du document. Ils pourraient avoir besoin d'un affichage en grands caractères, ou parcourir votre site en ne naviguant qu'avec le clavier.
 >
-> Un document HTML pur est généralement accessible à tous — il est important que les mises en forme appliquées ne le rendent pas moins accessible.
+> Un document HTML pur est généralement accessible à tous — il est important que les mises en forme appliquées ne le rendent pas moins accessible.
 
-## Associer sélecteurs et combinateurs
+## Associer sélecteurs et combinateurs
 
-On peut associer sélecteurs et combinateurs. Par exemple :
+On peut associer sélecteurs et combinateurs. Par exemple :
 
 ```css
 /* sélectionne tout <span> à l'intérieur d'un <p>, lui-même à l'intérieur d'un <article>  */
@@ -266,7 +266,7 @@ article p span { ... }
 h1 + ul + p { ... }
 ```
 
-On peut aussi combiner les types multiples. Essayez d'ajouter les règles suivantes à votre feuille de style :
+On peut aussi combiner les types multiples. Essayez d'ajouter les règles suivantes à votre feuille de style&nbsp;:
 
 ```css
 body h1 + p .special {
@@ -276,17 +276,17 @@ body h1 + p .special {
 }
 ```
 
-Cette règle cible tout élément dont l'attribut class vaut `special`, à l'intérieur d'un `<p>`, qui vient juste après un `<h1>`, à l'intérieur de `<body>`. Ouf !
+Cette règle cible tout élément dont l'attribut class vaut `special`, à l'intérieur d'un `<p>`, qui vient juste après un `<h1>`, à l'intérieur de `<body>`. Ouf !
 
-Dans notre document HTML le seul élément mis en forme selon la règle ci-dessus est `<span class="special">`.
+Dans notre document HTML le seul élément mis en forme selon la règle ci-dessus est `<span class="special">`.
 
-Pas de panique, cela peut sembler compliqué pour le moment — avec un peu de pratique du CSS, vous maîtriserez très bientôt tout cela.
+Pas de panique, cela peut sembler compliqué pour le moment — avec un peu de pratique du CSS, vous maîtriserez très bientôt tout cela.
 
 ## Bilan
 
-Dans ce tutoriel nous avons vu plusieurs façons de mettre en forme un document grâce aux règles CSS. En progressant dans les leçons de ce cours, nous développerons ces connaissances.
+Dans ce tutoriel nous avons vu plusieurs façons de mettre en forme un document grâce aux règles CSS. En progressant dans les leçons de ce cours, nous développerons ces connaissances.
 
-Vous en savez pourtant déjà assez pour : mettre en forme un texte ; utiliser différentes méthodes pour sélectionner les éléments HTML visés ; et recherchez les propriétés et les valeurs dans la documentation MDN.
+Vous en savez pourtant déjà assez pour : mettre en forme un texte ; utiliser différentes méthodes pour sélectionner les éléments HTML visés ; et recherchez les propriétés et les valeurs dans la documentation MDN.
 
 Dans la leçon suivante, nous étudirons comment CSS est structuré.
 
@@ -294,8 +294,8 @@ Dans la leçon suivante, nous étudirons comment CSS est structuré.
 
 ## Dans ce cours
 
-1.  [Qu'est ce que  CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
-2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+1.  [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS)
+2.  [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
+3.  [Comment CSS est structuré](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
 4.  [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
 5.  [Utiliser vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

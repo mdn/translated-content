@@ -14,7 +14,7 @@ The **`XMLHttpRequestEventTarget.onload`** is the function called when an {{domx
 
 ### Values
 
-- `callback` is the function to be executed when the request completes successfully. It receives a {{domxref("ProgressEvent")}} object as its first argument. The value of *this* (i.e. the context) is the same {{domxref("XMLHttpRequest")}} this callback is related to.
+- `callback` is the function to be executed when the request completes successfully. It receives a {{domxref("ProgressEvent")}} object as its first argument. The value of *this* (i.e. the context) is the same {{domxref("XMLHttpRequest")}} this callback is related to.
 
 ## Example
 

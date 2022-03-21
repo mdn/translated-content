@@ -76,7 +76,7 @@ Autrement, on peut utiliser cette commande :
 
 Les arguments `-map` correspondent aux fichiers d'entrée dans l'ordre dans lequel ils sont fournis. Il doit y en avoir un pour chaque fichier. L'argument `-adaptation_sets` permet de les affecter à différents ensembles d'adaptation. Par exemple, cela crée un ensemble (0) qui contient les flux 0, 1, 2 et 3 (les vidéos) et un autre ensemble (1) qui contient uniquement le flux 4 (l'audio).
 
-On pourra alors placer le fichier de manifeste créé à côté des fichiers vidéo sur le serveur web ou sur le CDN. DASH fonctionne via HTTP donc il suffit simplement que votre serveur prenne en charge les requêtes d'intervalles d'octets (byte range requests) et qu'il puisse servir les fichiers `.mpd` avec `mimetype="application/dash+xml"`.
+On pourra alors placer le fichier de manifeste créé à côté des fichiers vidéo sur le serveur web ou sur le CDN. DASH fonctionne via HTTP donc il suffit simplement que votre serveur prenne en charge les requêtes d'intervalles d'octets (byte range requests) et qu'il puisse servir les fichiers `.mpd` avec `mimetype="application/dash+xml"`.
 
 ## Utiliser DASH, côté client
 

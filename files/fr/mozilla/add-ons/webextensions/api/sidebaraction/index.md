@@ -18,7 +18,7 @@ Obtient et définit les propriétés de la barre latérale d'une extension.
 Une [barre latérale](/fr/Add-ons/WebExtensions/Sidebars) est un volet qui s'affiche à gauche ou à droite de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface utilisateur qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner une barre latérale à afficher. En utilisant la clé [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action) manifest.json, une extension peut définir sa propre barre latérale.
 En utilisant l'API `sidebarAction` décrite ici, une extension peut obtenir et définir les propriétés de la barre latérale.
 
-L'API `sidebarAction` est étroitement modélisée sur l'API  {{WebExtAPIRef("browserAction")}}.
+L'API `sidebarAction` est étroitement modélisée sur l'API  {{WebExtAPIRef("browserAction")}}.
 
 L'API sidebarAction est basée sur l'[API sidebarAction](https://dev.opera.com/extensions/sidebar-action-api/) d'Opéra. Toutefois, notez que les éléments suivants ne sont pas encore pris en charge : `setBadgeText()`, `getBadgeText()`, `setBadgeBackgroundColor()`, `getBadgeBackgroundColor()`, `onFocus`, `onBlur`.
 

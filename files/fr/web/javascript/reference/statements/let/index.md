@@ -181,7 +181,7 @@ truc.montrerPrivee();
 Cette technique permet d'obtenir un état privé « statique ». Ainsi, dans l'exemple qui précède, toutes les instances de `Truc` partageront la même `portéePrivée`.
 Il était possible d'obtenir un tel isolement avec `var` mais il fallait passer par des fonctions isolées (généralement des fonctions immédiatement appelées (_IIFE_)).
 
-### Zone morte temporaire (_Temporal Dead Zone_ / TDZ)  et les erreurs liées à `let`
+### Zone morte temporaire (_Temporal Dead Zone_ / TDZ)  et les erreurs liées à `let`
 
 Lorsqu'on redéclare une même variable au sein d'une même portée de bloc, cela entraîne une exception {{jsxref("SyntaxError")}}.
 

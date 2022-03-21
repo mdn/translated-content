@@ -14,7 +14,7 @@ translation_of: Web/CSS/@media/device-height
 
 ## Syntaxe
 
-La caractéristique `device-height` est définie comme une longueur (type  {{cssxref("&lt;length&gt;")}}). C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-device-height`** et **`max-device-height`** afin d'utiliser des critères de minimum et maximum.
+La caractéristique `device-height` est définie comme une longueur (type  {{cssxref("&lt;length&gt;")}}). C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-device-height`** et **`max-device-height`** afin d'utiliser des critères de minimum et maximum.
 
 ## Exemples
 

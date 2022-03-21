@@ -21,7 +21,7 @@ Firefox permet à l'utilisateur de définir ses propres couleurs pour les arriè
 Sa valeur sous-jacente est une chaîne qui peut prendre l'une des valeurs suivantes:
 
 - "high-contrast-only": applique les choix de l'utilisateur uniquement lorsqu'un thème à contraste élevé est sélectionné. C'est la valeur par défaut.
-- "never":  n'applique jamais les choix de l'utilisateur
+- "never":  n'applique jamais les choix de l'utilisateur
 - "always": Toujours appliquer les choix de l'utilisateur.
 
 ## Compatibilité du navigateur

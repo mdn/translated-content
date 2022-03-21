@@ -5,7 +5,7 @@ translation_of: Web/API/AudioBuffer/duration
 ---
 {{ APIRef("Web Audio API") }}
 
-La propriéré `duration`  de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre flottant à double précision représentant la durée, en secondes, des données PCM stockées dans le buffer.
+La propriéré `duration`  de l'interface {{ domxref("AudioBuffer") }} renvoie un nombre flottant à double précision représentant la durée, en secondes, des données PCM stockées dans le buffer.
 
 ## Syntaxe
 
@@ -49,7 +49,7 @@ bouton.onclick = function() {
 
 | Spécification                                                                                    | Statut                               | Commentaire |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBuffer-duration', 'duration')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBuffer-duration', 'duration')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 
