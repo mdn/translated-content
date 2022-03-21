@@ -3,54 +3,43 @@ title: ClipboardEvent.clipboardData
 slug: Web/API/ClipboardEvent/clipboardData
 tags:
   - API
-  - Clipboard API
+  - Clipboard
+  - クリップボード API
   - ClipboardEvent
-  - Experimental
-  - Method
-  - Read-only
+  - Cut
+  - 実験的
+  - プロパティ
+  - 読み取り専用
+  - copy
+  - paste
+browser-compat: api.ClipboardEvent.clipboardData
 translation_of: Web/API/ClipboardEvent/clipboardData
 ---
-<p>{{ apiref("Clipboard API") }} {{SeeCompatTable}}</p>
+{{ apiref("Clipboard API") }} {{SeeCompatTable}}
 
-<p><code><strong>ClipboardEvent.clipboardData</strong></code> プロパティは、{{domxref("DataTransfer")}} オブジェクトを保持し、次のように使用します:</p>
+**`ClipboardEvent.clipboardData`** プロパティは、{{domxref("DataTransfer")}} オブジェクトを保持し、次のように使用します。
 
-<ul>
- <li>{{event("cut")}} および {{event("copy")}} イベントハンドラからクリップボードに置かれるデータを指定します。これは、{{domxref("DataTransfer.setData", "setData(format, data)")}} の呼び出しで行います。</li>
- <li>{{event("paste")}} イベントハンドラから貼り付けられるデータを取得します。これは、{{domxref("DataTransfer.getData", "getData(format)")}} の呼び出しで行います。</li>
-</ul>
+- クリップボードに置かれるデータを {{domxref("Element/cut_event", "cut")}} および {{domxref("Element/copy_event", "copy")}} のイベントハンドラーから指定するため。ふつう、{{domxref("DataTransfer.setData", "setData(format, data)")}} の呼び出しで行います。
+- 貼り付けられるデータを {{domxref("Element/paste_event", "paste")}} イベントハンドラーから取得するため。ふつう、{{domxref("DataTransfer.getData", "getData(format)")}} の呼び出しで行います。
 
-<p>詳しい情報は、{{event("cut")}} および {{event("copy")}}、{{event("paste")}} イベントのドキュメントを参照してください。</p>
+詳しい情報は、{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントのドキュメントを参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>data</em> = <em>ClipboardEvent</em>.clipboardData</pre>
+```js
+data = ClipboardEvent.clipboardData
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Clipboard API', '#widl-ClipboardEvent-clipboardData', 'ClipboardEvent.clipboardData') }}</td>
-   <td>{{ Spec2('Clipboard API') }}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ClipboardEvent.clipboardData")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+## 関連情報
 
-<ul>
- <li>Copy 関連イベント： {{event("copy")}}, {{event("cut")}}, {{event("paste")}}</li>
- <li>このプロパティが属する {{domxref("ClipboardEvent")}} インターフェイス。</li>
-</ul>
+- Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
+- 所属先の {{domxref("ClipboardEvent")}} インターフェイス
+- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
