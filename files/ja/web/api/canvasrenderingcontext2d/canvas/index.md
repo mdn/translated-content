@@ -1,56 +1,50 @@
 ---
 title: CanvasRenderingContext2D.canvas
 slug: Web/API/CanvasRenderingContext2D/canvas
+tags:
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - プロパティ
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.canvas
 translation_of: Web/API/CanvasRenderingContext2D/canvas
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><a href="/ja/docs/Web/API/Canvas_API">Canvas API</a> の一部である<code><strong>CanvasRenderingContext2D.canvas</strong></code> プロパティは、context に関連づけられた {{domxref("HTMLCanvasElement")}}  オブジェクトへの読み込み専用の参照です。 {{HTMLElement("canvas")}} に関連づけられていない場合は {{jsxref("null")}} になることがあります。</p>
+**`CanvasRenderingContext2D.canvas`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) の一部で、このコンテキストに関連付けられた {{domxref("HTMLCanvasElement")}} オブジェクトへの読み取り専用の参照です。 {{HTMLElement("canvas")}} に関連づけられていない場合は {{jsxref("null")}} になることがあります。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var><em>ctx</em></var>.canvas;</pre>
+```js
+ctx.canvas;
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<p>以下の例は HTML ドキュメントに次の {{HTMLElement("canvas")}} 要素があるものとしています:</p>
+この {{HTMLElement("canvas")}} 要素があるとします。
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p><code>CanvasRenderingContext2D</code> の中にある canvas 要素への参照を <code>canvas</code> プロパティから取得できます:</p>
+`CanvasRenderingContext2D` の中にある canvas 要素への参照は、 `canvas` プロパティから取得することができます。
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.canvas // HTMLCanvasElement
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-canvas", "CanvasRenderingContext2D.canvas")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.CanvasRenderingContext2D.canvas")}}</p>
-
-<h2 id="参考情報">参考情報</h2>
-
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}} インターフェース</li>
- <li><a href="/ja/docs/Web/API/Canvas_API">Canvas API</a></li>
-</ul>
+- {{domxref("CanvasRenderingContext2D")}} インターフェイス
+- [キャンバス API](/ja/docs/Web/API/Canvas_API)
