@@ -5,146 +5,85 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Property
-  - Reference
-  - Référence(2)
+  - プロパティ
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.textBaseline
 translation_of: Web/API/CanvasRenderingContext2D/textBaseline
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D API の <code><strong>CanvasRenderingContext2D.textBaseline</strong></code> プロパティは、テキストを描画するときに用いられる現在のテキストのベースライン (基準線) を指定します。</p>
+**`CanvasRenderingContext2D.textBaseline`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキストのベースライン（基準線）を指定します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var><em>ctx</em>.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";</var>
-</pre>
+```js
+ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographic" || "bottom";
+```
 
-<h3 id="オプション">オプション</h3>
+### オプション
 
-<p>指定可能な値:</p>
+指定可能な値は次の通りです。
 
-<dl>
- <dt>top</dt>
- <dd>テキストベースラインは em square 一辺が 1 em の正方形  の上になります。</dd>
- <dt>hanging</dt>
- <dd>テキストベースラインは hanging ベースラインになります。</dd>
- <dt>middle</dt>
- <dd>テキストベースラインは em square の真ん中になります。</dd>
- <dt>alphabetic (default value)</dt>
- <dd>テキストベースラインは標準的な alphabetic ベースラインになります。</dd>
- <dt>ideographic</dt>
- <dd>テキストベースラインは ideographic ベースラインになります。文字の主要範囲の底辺が alphabetic ベースラインの下からはみ出る場合があるのに対し、このラインは主要範囲の底辺そのものを表します。(中国語、日本語、韓国語で意味を持ちます。)</dd>
- <dt>bottom</dt>
- <dd>テキストベースラインは bounding box の下辺になります。ideographic ベースラインとの違いは、ディセンダー (descenders) をも含めて底辺を決めるかどうかです。</dd>
-</dl>
+- `"top"`
+  - : テキストのベースラインは em の高さの範囲 (em square) の上になります。
+- `"hanging"`
+  - : テキストのベースラインは hanging ベースラインになります（チベット語などのインド系の文字で使用されます）。
+- `"middle"`
+  - : テキストのベースラインは em の高さの範囲の中央になります。
+- `"alphabetic"`
+  - : テキストのベースラインは標準的なアルファベットベースラインになります。既定値です。
+- `"ideographic"`
+  - : テキストのベースラインは表意文字ベースラインになります。文字の主要範囲の底辺がアルファベットベースラインの下からはみ出る場合があるのに対し、このラインは主要範囲の底辺そのものを表します。(中国語、日本語、韓国語で意味を持ちます。)
+- `"bottom"`
+  - : テキストのベースラインは囲みボックスの下辺になります。表意文字ベースラインとの違いは、表意文字ベースラインがディセンダー (descenders) を考慮しないことです。
 
-<p>デフォルト値は <code>alphabetic</code> です。</p>
+既定値は `"alphabetic"` です。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="Using_the_textBaseline_property" name="Using_the_textBaseline_property"><code>textBaseline</code> プロパティの使用例</h3>
+### 様々なプロパティ値の比較
 
-<p>さまざまなベースライン設定を行う例です。</p>
+この例では、様々な `textBaseline` プロパティ値を例示します。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas" width="550" height="500"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas" width="550" height="500"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-var baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
+const baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
 ctx.font = '36px serif';
 ctx.strokeStyle = 'red';
 
 baselines.forEach(function (baseline, index) {
-    ctx.textBaseline = baseline;
-    var y = 75 + index * 75;
-    ctx.beginPath(); ctx.moveTo(0, y + 0.5); ctx.lineTo(550, y + 0.5); ctx.stroke();
-    ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
+  ctx.textBaseline = baseline;
+  const y = 75 + index * 75;
+  ctx.beginPath();
+  ctx.moveTo(0, y + 0.5);
+  ctx.lineTo(550, y + 0.5);
+  ctx.stroke();
+  ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
 });
-</pre>
+```
 
-<p>以下のコードを編集すると、canvas の変更個所をその場で確認できます:</p>
+#### 結果
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+{{ EmbedLiveSample('Comparison_of_property_values', 700, 550) }}
 
-<pre class="brush: html">&lt;canvas id="canvas" width="550" height="500" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-var baselines = ['top', 'hanging', 'middle', 'alphabetic', 'ideographic', 'bottom'];
-ctx.font = '36px serif';
-ctx.strokeStyle = 'red';
-baselines.forEach(function (baseline, index) {
-    ctx.textBaseline = baseline;
-    var y = 75 + index * 75;
-    ctx.beginPath(); ctx.moveTo(0, y + 0.5); ctx.lineTo(550, y + 0.5); ctx.stroke();
-    ctx.fillText('Abcdefghijklmnop (' + baseline + ')', 0, y);
-});
-&lt;/textarea&gt;</pre>
+## 仕様書
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
-var code = textarea.value;
+{{Specifications}}
 
-function drawCanvas() {
-  ctx.save();
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-  ctx.restore();
-}
+## ブラウザーの互換性
 
-reset.addEventListener('click', function() {
-  textarea.value = code;
-  drawCanvas();
-});
+{{Compat}}
 
-edit.addEventListener('click', function() {
-  textarea.focus();
-})
+## 関連情報
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
-</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Playable_code', 700, 700) }}</p>
-
-<h2 id="仕様">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textbaseline", "CanvasRenderingContext2D.textBaseline")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
-
-
-
-<p>{{Compat("api.CanvasRenderingContext2D.textBaseline")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>このメソッドを定義するインターフェイスである {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- このメソッドを定義しているするインターフェイスである {{domxref("CanvasRenderingContext2D")}}
