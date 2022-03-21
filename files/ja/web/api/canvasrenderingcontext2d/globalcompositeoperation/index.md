@@ -3,142 +3,83 @@ title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 tags:
   - API
-  - Blending
+  - 混色
   - Canvas
   - CanvasRenderingContext2D
   - Compositing
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.globalCompositeOperation
 translation_of: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D.globalCompositeOperation</strong></code>プロパティは、新たな図形を描くときに適用する合成処理の種類を定めます。種類は文字列で、合成やブレンドモードのいずれが用いられるのかを決めます。</p>
+**`CanvasRenderingContext2D.globalCompositeOperation`** はキャンバス 2D API のプロパティで、新たな図形を描くときに適用する合成演算の種類を定めます。
 
-<p>なお、<a href="/ja/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a>の<a href="/ja/docs/Web/API/Canvas_API/Tutorial/Compositing">Compositing and clipping</a>の章をご参照ください。</p>
+[キャンバスのチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)の[合成とクリッピング](/ja/docs/Web/API/Canvas_API/Tutorial/Compositing)の章も参照してください。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var><em>ctx</em>.globalCompositeOperation = 種類;</var></pre>
+```js
+ctx.globalCompositeOperation = type;
+```
 
-<h3 id="種類">種類</h3>
-<p>{{EmbedLiveSample("Compositing_example", 750, 7300, ""
-,"../../ja/docs/Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p><p>
+`type` は文字列で、使用する合成と混色モードの演算を識別します。
 
-</p><h2 id="例">例</h2>
+### 種類
 
-<h3 id="Using_the_globalAlpha_property" name="Using_the_globalAlpha_property"><code>globalCompositeOperation</code>プロパティの使い方</h3>
+{{EmbedLiveSample("Compositing_example", 750, 6900, ""
+  ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
-<p>つぎに抜き書きした簡単なコードは、描かれたふたつの矩形の重なりを<code>globalCompositeOperation</code>プロパティによって除いています。</p>
+## 例
 
-<h4 id="HTML">HTML</h4>
+### 合成演算の変更
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+この例では `globalCompositeOperation` プロパティを使用して、 2 つの矩形が重なり合う部分で自分自身を除外して描画しています。
 
-<h4 id="JavaScript">JavaScript</h4>
+#### HTML
 
-<pre class="brush: js; highlight[4]">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+```html
+<canvas id="canvas"></canvas>
+```
 
-ctx.globalCompositeOperation = "xor";
+#### JavaScript
 
-ctx.fillStyle = "blue";
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.globalCompositeOperation = 'xor';
+
+ctx.fillStyle = 'blue';
 ctx.fillRect(10, 10, 100, 100);
 
-ctx.fillStyle = "red";
+ctx.fillStyle = 'red';
 ctx.fillRect(50, 50, 100, 100);
-</pre>
+```
 
-<p>以下のコードを書き替えると、Canvasの中身がどう変わるか実際に確かめられます。</p>
+#### 結果
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+{{ EmbedLiveSample('Changing_the_composite_operation', 700, 180) }}
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:120px;"&gt;
-ctx.globalCompositeOperation = "xor";
+## 仕様書
 
-ctx.fillStyle = "blue";
-ctx.fillRect(10, 10, 100, 100);
+{{Specifications}}
 
-ctx.fillStyle = "red";
-ctx.fillRect(50, 50, 100, 100);&lt;/textarea&gt;
-</pre>
+## ブラウザーの互換性
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+{{Compat}}
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+### WebKit/Blink 特有のメモ
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+- WebKit および Blink ベースのブラウザーでは、このプロパティに加えて標準外で非推奨のメソッド `ctx.setCompositeOperation()` が実装されています。
+- `"plus-darker"` および `"darker"` は Chrome 48 で取り除かれました。代替策を探している人は、 `"darken"` を使用してください。
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+### Gecko 特有のメモ
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+- 初期のキャンバス仕様の草案では、値として "darker" が定められていました。しかし、 Firefox はバージョン 4 で "darker" の対応をやめました ({{bug(571532)}})。[このブログ記事](https://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker)では、 `"difference"` を使用して `"darker"` に近い効果が得られることを示していますので参照してください。
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 380) }}</p>
+## 関連情報
 
-<h2 id="仕様">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-globalcompositeoperation", "CanvasRenderingContext2D.globalCompositeOperation")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Compositing')}}</td>
-   <td>{{Spec2('Compositing')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
-
-<p>{{Compat("api.CanvasRenderingContext2D.globalCompositeOperation")}}</p>
-
-<h2 id="WebKitBlinkについての注釈">WebKit/Blinkについての注釈</h2>
-
-<ul>
- <li>WebKit-とBlink-にもとづくブラウザでは、このプロパティのほかに標準でなく推奨されないメソッド<code>ctx.setCompositeOperation()</code>が実装されています。</li>
-</ul>
-
-<h2 id="Geckoについての注釈">Geckoについての注釈</h2>
-
-<ul>
- <li>初期のCanvas仕様の草案には、値として"darker"が定められていました。しかし、Firefoxはバージョン4で"darker"を除きました({{bug(571532)}}). なお、"darker"に近い効果が得られる値として<code>difference</code>を使うことについて、<a href="http://dropshado.ws/post/77229081704/firefox-doesnt-support-canvas-composite-darker">ブログ記事</a>の紹介が参考になります。</li>
-</ul>
-
-<h2 id="参考情報">参考情報</h2>
-
-<ul>
- <li>インタフェースを定義する{{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.globalAlpha")}}</li>
-</ul>
+- このプロパティを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.globalAlpha")}}
