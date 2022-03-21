@@ -12,12 +12,12 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 <p><strong>Примечание:</strong>  В JavaScript существует много других способов управления асинхронным поведением и потоком выполнения, включая такой относительно  новый элемент языка JavaScript как <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/Techniques/Promises">промисы</a> (promises).</p>
 </div>
 
-<p>Модуль Async имеет массу полезных методов (см. документацию <a class="external external-icon" href="http://caolan.github.io/async/docs.html" rel="noopener">the documentation</a>). Вот некоторые наиболее важные функции:</p>
+<p>Модуль Async имеет массу полезных методов (см. документацию <a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html" rel="noopener">the documentation</a>). Вот некоторые наиболее важные функции:</p>
 
 <ul>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#parallel" rel="noopener">async.parallel()</a></code> для осуществления любых операций, которые должны выполняться параллельно.</li>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#series" rel="noopener">async.series()</a></code> если нужно иметь уверенность, что асинхронные операции выполняются последовательно.</li>
- <li><code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> для операций, которые должны выполняться последовательно, причём каждая операция зависит от результатов предыдущих операций.</li>
+ <li><code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> для осуществления любых операций, которые должны выполняться параллельно.</li>
+ <li><code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> если нужно иметь уверенность, что асинхронные операции выполняются последовательно.</li>
+ <li><code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code> для операций, которые должны выполняться последовательно, причём каждая операция зависит от результатов предыдущих операций.</li>
 </ul>
 
 <h2 class="highlight-spanned" id="Почему_это_необходимо"><span class="highlight-span">Почему это необходимо?</span></h2>
@@ -43,7 +43,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <h2 class="highlight-spanned" id="Параллельные_асинхронные_операции"><span class="highlight-span">Параллельные асинхронные операции</span></h2>
 
-<p>Метод <code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#parallel" rel="noopener">async.parallel()</a></code> используется для параллельного выполнения нескольких асинхронных операций.</p>
+<p>Метод <code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#parallel" rel="noopener">async.parallel()</a></code> используется для параллельного выполнения нескольких асинхронных операций.</p>
 
 <p>Первый аргумент в <code>async.parallel()</code> - это коллекция асинхронных функций, которые требуется выполнить (массив, объект или другой итерируемый элемент). Каждая функция получает колбэк-функцию <code>callback(err, result)</code> , которую она должна вызвать при завершении, с ошибкой <code>err</code> (может быть <code>null</code>) и, возможно, со значением результата <code>results</code>.</p>
 
@@ -67,7 +67,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <h2 class="highlight-spanned" id="Последовательные_асинхронные_операции"><span class="highlight-span">Последовательные асинхронные операции</span></h2>
 
-<p>Для выполнения нескольких асинхронных операций последовательно используется метод <code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#series" rel="noopener">async.series()</a></code> , при этом <span class="highlight-span">последующие функции не зависят от результатов предыдущих функций</span>. Метод определяется и ведёт себя так же, как и <code>async.parallel()</code>.</p>
+<p>Для выполнения нескольких асинхронных операций последовательно используется метод <code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#series" rel="noopener">async.series()</a></code> , при этом <span class="highlight-span">последующие функции не зависят от результатов предыдущих функций</span>. Метод определяется и ведёт себя так же, как и <code>async.parallel()</code>.</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">async</span><span class="punctuation token">.</span><span class="function token">series</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
   one<span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>callback<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
@@ -103,7 +103,7 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_us
 
 <h2 class="highlight-spanned" id="Последовательные_зависимые_асинхронные_операции"><span class="highlight-span">Последовательные зависимые асинхронные операции</span></h2>
 
-<p>Выполнение нескольких асинхронных операций последовательно, когда каждая операция зависит от результатов предыдущих операций, осуществляется методом <code><a class="external external-icon" href="http://caolan.github.io/async/docs.html#waterfall" rel="noopener">async.waterfall()</a></code>.</p>
+<p>Выполнение нескольких асинхронных операций последовательно, когда каждая операция зависит от результатов предыдущих операций, осуществляется методом <code><a class="external external-icon" href="https://caolan.github.io/async/v3/docs.html#waterfall" rel="noopener">async.waterfall()</a></code>.</p>
 
 <p>Функции-callback, которая вызываются асинхронными функциями , содержит <code>null</code> как первый аргумент, и результаты в следующих аргументах. Каждая функция в последовательности (кроме первой) как аргументы использует результаты предыдущих функция, а колбэк-функция является последним аргументом. Когда  операции завершаются, вызывается финальная колбэк-функция, аргументы которой - объект err и результат последней операции. Как это работает, станет более ясным после рассмотрения примера - фрагмента кода, приведённого ниже ( пример взят из документации <em>async</em>):</p>
 
