@@ -17,7 +17,7 @@ Le contenu mixte passif est du contenu servi avec HTTP et inclus dans une page w
 
 Voici les éléments qui sont considérées comme du contenu passif lorsqu'ils sont servis par des requêtes HTTP&nbsp;:
 
-- [`<img>`](/fr/docs/Web/HTML/Element/img) (l'attribut `src`)
+- [`<img>`](/fr/docs/Web/HTML/Element/Img) (l'attribut `src`)
 - [`<audio>`](/fr/docs/Web/HTML/Element/audio) (l'attribut `src`)
 - [`<video>`](/fr/docs/Web/HTML/Element/video) (l'attribut `src`)
 - Les sous-ressources d'un élément [`<object>`](/fr/docs/Web/HTML/Element/object) (lorsqu'un tel élément effectue des requêtes HTTP)
@@ -74,7 +74,7 @@ Les outils de développement de Firefox affichent un message d'avertissement dan
 
 ![Une capture d'écran de la console avec un message d'avertissement sur le contenu mixte.](mixed_content_-_net_pane.png)
 
-En complément de ces alertes dans la console web, vous pouvez également utiliser [<i lang="en">Content Security Policy (CSP)</i>](/fr/docs/Web/HTTP/CSP) pour rapporter de tels problèmes. Vous pouvez aussi utiliser un outil en ligne comme [SSL-check](http://www.jitbit.com/sslcheck/) ou [Missing Padlock](https://www.missingpadlock.com/) qui vérifiera votre site de façon récursive pour trouver des liens vers du contenu non-sécurisé.
+En complément de ces alertes dans la console web, vous pouvez également utiliser [<i lang="en">Content Security Policy (CSP)</i>](/fr/docs/Web/HTTP/CSP) pour rapporter de tels problèmes. Vous pouvez aussi utiliser un outil en ligne comme [SSL-check](https://www.jitbit.com/sslcheck/) ou [Missing Padlock](https://www.missingpadlock.com/) qui vérifiera votre site de façon récursive pour trouver des liens vers du contenu non-sécurisé.
 
 À partir de Firefox 23, le contenu mixte actif est bloqué par défaut (et le contenu mixte passif peut être bloqué via une préférence). Pour que la détection de telles requêtes soit plus simple, elles sont affichées dans l'onglet Sécurité de la console&nbsp;:
 

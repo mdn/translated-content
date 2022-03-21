@@ -13,7 +13,7 @@ Si les pages de votre site web sont servies avec HTTPS, [tout le contenu mixte a
 
 On notera que le blocage d'un tel contenu mixte se produit pour Chrome. Aussi, si votre site web fonctionne en HTTPS pour ce navigateur, il fonctionnera également pour Firefox pour les aspects de blocage de contenu mixte.
 
-Pour détecter de tels problèmes, vous pouvez utiliser un outil en ligne comme [SSL-check](http://www.jitbit.com/sslcheck/), [Missing Padlock](https://www.missingpadlock.com), ou un logiciel comme [HTTPSChecker](https://httpschecker.net/how-it-works), voire un outil en ligne de commande comme [mcdetect](https://github.com/agis/mcdetect). S'il n'y a aucune alerte, votre site web devrait être correct de ce point de vue là&nbsp;!
+Pour détecter de tels problèmes, vous pouvez utiliser un outil en ligne comme [SSL-check](https://www.jitbit.com/sslcheck/), [Missing Padlock](https://www.missingpadlock.com), ou un logiciel comme [HTTPSChecker](https://httpschecker.net/how-it-works), voire un outil en ligne de commande comme [mcdetect](https://github.com/agis/mcdetect). S'il n'y a aucune alerte, votre site web devrait être correct de ce point de vue là&nbsp;!
 
 ## Comment réparer votre site web
 
