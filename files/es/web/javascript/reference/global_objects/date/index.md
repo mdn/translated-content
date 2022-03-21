@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date
 
 Los objetos **`Date`** representan en JavaScript un momento fijo en el tiempo en un formato independiente. El objeto `Date` contiene un `Number` que representa los milisegundos transcurridos desde el 1 de Enero de 1970 UTC.
 
-> **Nota:** TC39 está corriendo en [Temporal](https://tc39.es/proposal-temporal/docs/index.html), una nueva API de Date/Time. Lee más acerca de ello en el [Igalia blog](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/). Aún no está lista para su uso en producción.
+> **Nota:** TC39 está trabajando en [Temporal](https://tc39.es/proposal-temporal/docs/index.html), una nueva API de Date/Time. Lee más acerca de ello en el [blog Igalia](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/). Aún no está lista para su uso en producción.
 
 ## Descripción
 
@@ -19,7 +19,7 @@ Una fecha en JavaScript es fundamentalmente especificada como el número de mili
 
 > **Nota:** Es importante tener en cuenta que mientras el valor de la hora en el núcleo del objeto `Date` está en UTC, los métodos básicos para recibir la fecha y la hora o sus derivados trabajan todos en la zona horaria local (por ejemplo: máquina huesped).
 
-Se debe tener en cuenta que el valor máximo de `Date` no es el mismo que el valor máximo del entero seguro (`Number.MAX_SAFE_INTEGER` es 9,007,199,254,740,991). En su lugar, fue definido en ECMA-262 que un máximo de ±100,000,000 (cien millones) días relativos al 1 de Enero de 1970, UTC (que es, 20 de Abril de 271821 a. e. c. \~ 13 de Septiembre de 275760 a. e. c.) pueden ser representados por el objeto estandar `Date` (equivalente a ±8,640,000,000,000,000 milisegundos).
+Se debe tener en cuenta que el valor máximo de `Date` no es el mismo que el valor del máximo entero seguro (`Number.MAX_SAFE_INTEGER` es 9,007,199,254,740,991). En su lugar, fue definido en ECMA-262 que un máximo de ±100,000,000 (cien millones) días relativos al 1 de Enero de 1970, UTC (que es, 20 de Abril de 271821 a. e. c. \~ 13 de Septiembre de 275760 a. e. c.) pueden ser representados por el objeto estandar `Date` (equivalente a ±8,640,000,000,000,000 milisegundos).
 
 ### Formato de fecha y conversiones de zona horaria
 
