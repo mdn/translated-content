@@ -5,126 +5,119 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.textAlign
 translation_of: Web/API/CanvasRenderingContext2D/textAlign
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D API の <code><strong>CanvasRenderingContext2D.textAlign</strong></code> プロパティは、テキストを描画するときに用いられる現在のテキスト配置を指定します。CanvasRenderingContext2D.<strong>fillText</strong> メソッドの x の値に基づいて配置されることに注意してください。従って textAlign="center" は、テキストを x-50%*width の位置から描画します。</p>
+**`CanvasRenderingContext2D.textAlign`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキスト配置を指定します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+配置は {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} メソッドの x の値からの相対になります。 `textAlign` が `"center"` であれば、テキストの左端は `x - (textWidth / 2)` になります。
 
-<pre class="syntaxbox"><var><em>ctx</em>.textAlign = "left" || "right" || "center" || "start" || "end";</var>
-</pre>
+## 構文
 
-<h3 id="Options" name="Options">オプション</h3>
+```js
+ctx.textAlign = "left" || "right" || "center" || "start" || "end";
+```
 
-<p>指定可能な値:</p>
+### オプション
 
-<dl>
- <dt>left</dt>
- <dd>テキストを左揃えにします。</dd>
- <dt>right</dt>
- <dd>テキストを右揃えにします。</dd>
- <dt>center</dt>
- <dd>テキストを中央揃えにします。</dd>
- <dt>start</dt>
- <dd>テキストを行の標準な開始位置から配置します (左から右へのロケールは左揃え、右から左へのロケールは右揃え)。</dd>
- <dt>end</dt>
- <dd>テキストを行の標準な最終位置から配置します(左から右へのロケールは右揃え、右から左へのロケールは左揃え)。</dd>
-</dl>
+指定可能な値は次の通りです。
 
-<p>デフォルト値は <code>start</code> です。</p>
+- `"left"`
+  - : テキストを左揃えにします。
+- `"right"`
+  - : テキストを右揃えにします。
+- `"center"`
+  - : テキストを中央揃えにします。
+- `"start"`
+  - : テキストをその行の標準的な先頭位置に配置します（左書きロケールでは左揃え、右書きのロケールでは右揃え）。
+- `"end"`
+  - : テキストをその行の標準的な末尾位置に配置します（左書きロケールでは右揃え、右書きのロケールでは左揃え）。
 
-<h2 id="Examples" name="Examples">例</h2>
+既定値は `"start"` です。
 
-<h3 id="Using_the_textAlign_property" name="Using_the_textAlign_property"><code>textAlign</code> プロパティの使用例</h3>
+## 例
 
-<p>さまざまなテキスト配置を設定するために <code>textAlign</code> プロパティを使用する、シンプルなコードスニペットです。</p>
+### 全般的なテキスト配置
 
-<h4 id="HTML" name="HTML">HTML</h4>
+この例では、 `textAlign` プロパティの 3 つの「物理的な」値、 `"left"`, `"center"`, `"right"` を示しています。
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+#### HTML
 
-<h4 id="JavaScript" name="JavaScript">JavaScript</h4>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+#### JavaScript
 
-ctx.font = "48px serif";
-ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);
-</pre>
+```js
+const canvas = document.getElementById('canvas');
+canvas.width = 350;
+const ctx = canvas.getContext('2d');
+const x = canvas.width / 2;
 
-<p>以下のコードを編集すると、canvas の変更個所をその場で確認できます:</p>
+ctx.beginPath();
+ctx.moveTo(x, 0);
+ctx.lineTo(x, canvas.height);
+ctx.stroke();
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+ctx.font = '30px serif';
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="編集" /&gt;
-  &lt;input id="reset" type="button" value="リセット" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-ctx.font = "48px serif";
-ctx.textAlign = "left";
-ctx.strokeText("Hello world", 0, 100);&lt;/textarea&gt;
-</pre>
+ctx.textAlign = 'left';
+ctx.fillText('左揃え', x, 40);
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+ctx.textAlign = 'center';
+ctx.fillText('中央揃え', x, 85);
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+ctx.textAlign = 'right';
+ctx.fillText('右揃え', x, 130);
+```
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+#### 結果
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+{{ EmbedLiveSample('General_text_alignment', 700, 180) }}
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+### 書字方向に依存したテキストの配置
 
-<p>{{EmbedLiveSample('Playable_code', 700, 360)}}</p>
+この例では、 `textAlign` プロパティの 2 つの書字方向に依存する値、 `"start"` と `"end"`を示しています。なお、 {{domxref("CanvasRenderingContext2D.direction", "direction")}} プロパティは手動で `"ltr"` と指定していますが、これは英語のテキストに対する既定値でもあります。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+#### HTML
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-textalign", "CanvasRenderingContext2D.textAlign")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+#### JavaScript
 
-<p>{{Compat("api.CanvasRenderingContext2D.textAlign")}}</p>
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+ctx.font = '30px serif';
+ctx.direction = 'ltr';
 
-<ul>
- <li>このメソッドを定義するインターフェイスである {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+ctx.textAlign = 'start';
+ctx.fillText('先頭揃え', 0, 50);
+
+ctx.textAlign = 'end';
+ctx.fillText('末尾揃え', canvas.width, 120);
+```
+
+#### 結果
+
+{{ EmbedLiveSample('Direction-dependent_text_alignment', 700, 180) }}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- このメソッドを定義しているするインターフェイスである {{domxref("CanvasRenderingContext2D")}}
