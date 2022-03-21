@@ -5,123 +5,71 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Experimental
-  - Property
-  - Reference
+  - 実験的
+  - プロパティ
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.direction
 translation_of: Web/API/CanvasRenderingContext2D/direction
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}} {{SeeCompatTable}}
 
-<p>Canvas 2D API の <code><strong>CanvasRenderingContext2D.direction</strong></code> プロパティは、テキストを描画するときに使用する現在の書字方向を指定します。</p>
+**`CanvasRenderingContext2D.direction`** はキャンバス 2D API のプロパティで、テキストを描画する際に使用する現在の書字方向を指定します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var><em>ctx</em>.direction = "ltr" || "rtl" || "inherit";</var>
-</pre>
+```js
+ctx.direction = "ltr" || "rtl" || "inherit";
+```
 
-<h3 id="Options" name="Options">オプション</h3>
+### オプション
 
-<p>指定可能な値:</p>
+指定可能な値は下記の通りです。
 
-<dl>
- <dt>ltr</dt>
- <dd>テキストの書字方向を left-to-right にします。</dd>
- <dt>rtl</dt>
- <dd>テキストの書字方向を right-to-left にします。</dd>
- <dt>inherit</dt>
- <dd>テキストの書字方向は {{HTMLElement("canvas")}} 要素または {{domxref("Document")}} から適宜継承します。</dd>
-</dl>
+- `"ltr"`
+  - : テキストの書字方向を左書き (left-to-right) にします。
+- `"rtl"`
+  - : テキストの書字方向を右書き (right-to-left) にします。
+- `"inherit"`
+  - : テキストの書字方向を {{HTMLElement("canvas")}} 要素または {{domxref("Document")}} から適宜継承します。既定値です。
 
-<p>デフォルト値は <code>inherit</code> です。</p>
+既定値は `"inherit"` です。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_the_direction_property" name="Using_the_direction_property"><code>direction</code> プロパティの使用例</h3>
+### 書字方向の変更
 
-<p>さまざまな書字方向を設定するために <code>direction</code> プロパティを使用する、シンプルなコードスニペットです。</p>
+この例では、 2 つのテキストを描画しています。最初のものは左から右へ、 2 番目は右から左へ描画します。`ltr` の "Hi!" は `rtl` では "!Hi" になることに注意してください。
 
-<h4 id="HTML" name="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript" name="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+```js
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
 
-ctx.font = "48px serif";
-ctx.direction = "ltr";
-ctx.strokeText("Hello world", 0, 100);
-</pre>
+ctx.font = '48px serif';
+ctx.fillText('Hi!', 150, 50);
+ctx.direction = 'rtl';
+ctx.fillText('Hi!', 150, 130);
+```
 
-<p>以下のコードを編集すると、canvas の変更個所をその場で確認できます:</p>
+#### 結果
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+{{ EmbedLiveSample('Changing_text_direction', 700, 180) }}
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="編集" /&gt;
-  &lt;input id="reset" type="button" value="リセット" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-ctx.font = "48px serif";
-ctx.direction = "ltr";
-ctx.strokeText("Hello world", 0, 100);&lt;/textarea&gt;
-</pre>
+## 仕様書
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+{{Specifications}}
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+## ブラウザーの互換性
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+{{Compat}}
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+## 関連情報
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
-
-<p>{{EmbedLiveSample('Playable_code', 700, 360)}}</p>
-
-<h2 id="Specifications" name="Specifications">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-direction", "CanvasRenderingContext2D.direction")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
-
-<p>{{Compat("api.CanvasRenderingContext2D.direction")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>このメソッドを定義するインターフェイスである {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- このメソッドを定義するインターフェイスである {{domxref("CanvasRenderingContext2D")}}
