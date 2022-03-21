@@ -5,129 +5,84 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Experimental
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.imageSmoothingEnabled
 translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
-<div>{{APIRef}} {{SeeCompatTable}}</div>
+{{APIRef}}
 
-<p>Canvas 2D API の <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.imageSmoothingEnabled</code></strong> プロパティ は、画像が滑らか（true：既定値）か、またはそうではない（false）かによって、変化するように設定できます。<code>imageSmoothingEnabled</code> プロパティを取得すると、設定された最新の値が返されます。</p>
+**`imageSmoothingEnabled`** は {{domxref("CanvasRenderingContext2D")}} インターフェイスのプロパティで、キャンバス 2D API の一部です。スケーリングされた画像を平滑化するか (`true`、既定値) またはしないか (`false`) を決定します。 `imageSmoothingEnabled` プロパティを取得すると、最後に設定された値が返されます。
 
-<p>このプロパティは、たとえばキャンバスをスケーリングするような、<span>ピクセル</span><span>アート</span><span>をテーマにした</span><span>ゲームに役立ちます。</span> 既定のリサイズアルゴリズムは、ぼやかし効果をかけることで、美しいピクセルを崩してしまいます。このような場合、このプロパティを <code>false</code> に設定します。{{cssxref("image-rendering")}} プロパティも確認してください。</p>
+このプロパティは、ピクセルアートを使用するゲームやその他のアプリで有用です。画像を拡大するとき、既定のリサイズアルゴリズムではピクセルがぼけてしまいます。このプロパティを `false` に設定すると、ピクセルの鮮明さを維持します。
 
-<h2 id="構文">構文</h2>
+> **Note:** 平滑化の品質は、  {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} プロパティで調整することができます。
 
-<pre class="syntaxbox"><var><em>ctx</em>.imageSmoothingEnabled = value;</var></pre>
+## 構文
 
-<h3 id="オプション">オプション</h3>
+```js
+ctx.imageSmoothingEnabled = value;
+```
 
-<dl>
- <dt><code>value</code></dt>
- <dd>滑らかな画像かどうかを示す {{jsxref("Boolean")}} 値。</dd>
-</dl>
+### オプション
 
-<h2 id="例">例</h2>
+- `value`
+  - : 画像を滑らかに拡大するかどうかを示す論理値です。既定値は `true` です。
 
-<h3 id="Using_the_globalAlpha_property" name="Using_the_globalAlpha_property"><code>imageSmoothingEnabled</code> プロパティを使用する</h3>
+## 例
 
-<p>これは、スケーリングされた画像で <code>imageSmoothingEnabled</code> property プロパティを使用するコードスニペットです。</p>
+### 画像の平滑化を無効化
 
-<h4 id="HTML">HTML</h4>
+この例では 3 つの画像を比較します。最初の画像は自然なサイズで描画され、 2 番目は画像の平滑化を有効にしたまま 3 倍に拡大して描画し、 3 番目は画像の平滑化を無効にして 3 倍に拡大して描画しています。
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+#### HTML
 
-<h4 id="JavaScript">JavaScript</h4>
+```html
+<canvas id="canvas" width="460" height="210"></canvas>
+```
 
-<pre class="brush: js; highlight[7-10]">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+#### JavaScript
 
-var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+```js
+const canvas = document.getElementById('canvas');
+
+const ctx = canvas.getContext('2d');
+ctx.font = '16px sans-serif';
+ctx.textAlign = 'center';
+
+const img = new Image();
+img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
 img.onload = function() {
- ctx.mozImageSmoothingEnabled = false;
- ctx.webkitImageSmoothingEnabled = false;
- ctx.msImageSmoothingEnabled = false;
- ctx.imageSmoothingEnabled = false;
- ctx.drawImage(img, 0, 0, 400, 200);
+  const w = img.width,
+        h = img.height;
+
+  ctx.fillText('Source', w * .5, 20);
+  ctx.drawImage(img, 0, 24, w, h);
+
+  ctx.fillText('Smoothing = TRUE', w * 2.5, 20);
+  ctx.imageSmoothingEnabled = true;
+  ctx.drawImage(img, w, 24, w * 3, h * 3);
+
+  ctx.fillText('Smoothing = FALSE', w * 5.5, 20);
+  ctx.imageSmoothingEnabled = false;
+  ctx.drawImage(img, w * 4, 24, w * 3, h * 3);
 };
-</pre>
+```
 
-<p>以下のコードを編集して、canvas で変更がライブアップデートされることを確認してみてください：</p>
+#### 結果
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+{{ EmbedLiveSample('Disabling_image_smoothing', 700, 240) }}
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:140px;"&gt;
-var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
-img.onload = function() {
- ctx.mozImageSmoothingEnabled = false;
- ctx.webkitImageSmoothingEnabled = false;
- ctx.msImageSmoothingEnabled = false;
- ctx.imageSmoothingEnabled = false;
- ctx.drawImage(img, 0, 0, 400, 200);
-};&lt;/textarea&gt;
-</pre>
+## 仕様書
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+{{Specifications}}
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+## ブラウザーの互換性
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+{{Compat}}
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+## 関連情報
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Playable_code', 700, 400) }}</p>
-
-<h2 id="仕様">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-imagesmoothingenabled", "CanvasRenderingContext2D.imageSmoothingEnabled")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
-
-<p>{{Compat("api.CanvasRenderingContext2D.imageSmoothingEnabled")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>このプロパティを定義しているインターフェース： {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{cssxref("image-rendering")}}</li>
-</ul>
+- このプロパティを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.imageSmoothingQuality")}}
+- {{cssxref("image-rendering")}}
