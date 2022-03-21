@@ -3,61 +3,49 @@ title: ClipboardEvent
 slug: Web/API/ClipboardEvent
 tags:
   - API
-  - Clipboard API
-  - Event
-  - Experimental
-  - Interface
+  - Clipboard
+  - クリップボード API
+  - Cut
+  - イベント
+  - 実験的
+  - インターフェイス
+  - copy
+  - paste
 translation_of: Web/API/ClipboardEvent
 ---
-<p>{{APIRef("Clipboard API")}} {{SeeCompatTable}}</p>
+{{APIRef("Clipboard API")}} {{SeeCompatTable}}
 
-<p><strong><code>ClipboardEvent</code></strong> インターフェイスは、 クリップボードの変更に関連する情報を提供するイベントを表します。すなわち、{{event("cut")}} と {{event("copy")}}、{{event("paste")}} イベントです。</p>
+**`ClipboardEvent`** インターフェイスは、 クリップボードの変更に関連する情報を提供するイベントを表します。すなわち、{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} イベントです。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+{{InheritanceDiagram}}
 
-<p><em>親 {{domxref("Event")}} からのプロパティも継承します。</em></p>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}</dt>
- <dd>ユーザーが開始した {{event("cut")}} または {{event("copy")}}、{{event("paste")}} 操作によって影響を受けたデータとその MIME タイプを含む {{domxref("DataTransfer")}} オブジェクト。</dd>
-</dl>
+- {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
+  - : 指定した引数で `ClipboardEvent` イベントを生成します。
 
-<h2 id="Constructor" name="Constructor">コンストラクタ</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}</dt>
- <dd>指定したパラメータで <code>ClipboardEvent</code> イベントを生成する。</dd>
-</dl>
+_親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+  - : ユーザーが開始した {{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} 操作によって影響を受けたデータとその MIME タイプを含む {{domxref("DataTransfer")}} オブジェクト。
 
-<p><em>固有のメソッドはありません。親 {{domxref("Event")}} からのメソッドを継承します。</em></p>
+## メソッド
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+_固有のメソッドはありません。親である {{domxref("Event")}} から継承したメソッドがあります。_
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Clipboard API', '#clipboard-event-interfaces', 'ClipboardEvent') }}</td>
-   <td>{{ Spec2('Clipboard API') }}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+{{Specifications}}
 
-<p>{{Compat("api.ClipboardEvent")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+{{Compat}}
 
-<ul>
- <li>Copy 関連イベント： {{event("copy")}}, {{event("cut")}}, {{event("paste")}}</li>
-</ul>
+## 関連情報
+
+- Copy 関連イベント： {{domxref("Element/copy_event", "copy")}}, {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/paste_event", "paste")}}
+- [クリップボード API](/ja/docs/Web/API/Clipboard_API)
+- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
+- [Image support for Async Clipboard article](https://web.dev/image-support-for-async-clipboard/)
