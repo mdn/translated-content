@@ -1,46 +1,52 @@
 ---
 title: CanvasRenderingContext2D.lineCap
 slug: Web/API/CanvasRenderingContext2D/lineCap
+tags:
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - プロパティ
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.lineCap
 translation_of: Web/API/CanvasRenderingContext2D/lineCap
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<div>Canvas 2D APIの<code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineCap</code></strong> プロパティは、描線の端点の形状を設定します。</div>
+**`CanvasRenderingContext2D.lineCap`** はキャンバス 2D API のプロパティで、描く線の端点の形状を設定します。
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> 描線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、 {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、 {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} のメソッドで行われます。</p>
-</div>
+> **Note:** 線は {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}}、{{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} の各メソッドで描画されます。
 
-<h2 id="Syntax">Syntax</h2>
+## 構文
 
-<pre class="syntaxbox"><em>ctx</em>.lineCap = "butt" || "round" || "square";
-</pre>
+```js
+ctx.lineCap = "butt" || "round" || "square";
+```
 
-<h3 id="Options">Options</h3>
+### オプション
 
-<dl>
- <dt><code>"butt"</code></dt>
- <dd>端点は四角く切られます。デフォルト値です。</dd>
- <dt><code>"round"</code></dt>
- <dd>端点は丸くなります。</dd>
- <dt><code>"square"</code></dt>
- <dd>端点に線幅と同じ幅で高さが半分の四角形が描き加えられます。</dd>
-</dl>
+- `"butt"`
+  - : 端点が四角く切られます。既定値です。
+- `"round"`
+  - : 端点が丸くなります。
+- `"square"`
+  - : 端点は、線の太さと同じ幅、半分の高さのボックスが追加されて四角くなります。
 
-<h2 id="Examples">Examples</h2>
+## 例
 
-<h3 id="線の先端の形を変える">線の先端の形を変える</h3>
+### 線の先端の形を変える
 
-<p>この例では直線の端点を丸めています。</p>
+この例では直線の端点を丸めています。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[7]">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -49,23 +55,24 @@ ctx.lineWidth = 15;
 ctx.lineCap = 'round';
 ctx.lineTo(100, 100);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Changing_the_shape_of_line_caps', 700, 180) }}</p>
+{{ EmbedLiveSample('Changing_the_shape_of_line_caps', 700, 180) }}
 
-<h3 id="先端形状の比較">先端形状の比較</h3>
+### 先端形状の比較
 
-<p>次の例では、<code>lineCap</code> プロパティがそれぞれ異なる3本の線を描画しています。その違いを観察するために、2本の補助線を引いています。3本の線はそれぞれこの補助線直上を始点および終点として描かれています。</p>
+次の例では、`lineCap` プロパティがそれぞれ異なる 3 本の線を描画しています。その違いを観察するために、 2 本の補助線を引いています。 3 本の線はそれぞれこの補助線直上を始点および終点として描かれています。
 
-<p>左の線はデフォルトのオプション <code>"butt"</code> の場合の描線で、補助線のところで丁度切れています。2つ目の<code>"round"</code> オプションの場合の線は、補助線の部分の先に半円が追加された格好になっています。右側の<code>"square"</code> オプションによる描線は、線の幅と同じ幅で高さが半分の四角形が追加されています。</p>
+左の線は既定のオプションである `"butt"` の場合の線で、補助線のところで丁度切れています。 2 つ目の`"round"` オプションの場合の線は、補助線の部分の先に半円が追加された格好になっています。右側の`"square"` オプションによる描線は、線の幅と同じ幅で高さが半分の四角形が追加されています。
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+```html hidden
+<canvas id="canvas" width="150" height="150"></canvas>
+```
 
-<pre class="brush: js">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const lineCap = ['butt', 'round', 'square'];
 
@@ -80,7 +87,7 @@ ctx.stroke();
 
 // Draw lines
 ctx.strokeStyle = 'black';
-for (let i = 0; i &lt; lineCap.length; i++) {
+for (let i = 0; i < lineCap.length; i++) {
   ctx.lineWidth = 15;
   ctx.lineCap = lineCap[i];
   ctx.beginPath();
@@ -88,44 +95,26 @@ for (let i = 0; i &lt; lineCap.length; i++) {
   ctx.lineTo(25 + i * 50, 140);
   ctx.stroke();
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Comparison_of_line_caps", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
+{{EmbedLiveSample("Comparison_of_line_caps", "180", "180",
+  "canvas_linecap.png")}}
 
-<h2 id="Specifications">Specifications</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-linecap", "CanvasRenderingContext2D.lineCap")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+### WebKit/Blink 特有のメモ
 
-<p>{{Compat("api.CanvasRenderingContext2D.lineCap")}}</p>
+- WebKit および Blink ベースのブラウザーでは、このプロパティに加えて標準外で非推奨のメソッド `ctx.setLineCap()` が実装されています。
 
-<h3 id="WebKitBlink-specific_notes">WebKit/Blink-specific notes</h3>
+## 関連情報
 
-<ul>
- <li>In WebKit- and Blink-based Browsers, a non-standard and deprecated method <code>ctx.setLineCap()</code> is implemented in addition to this property.</li>
-</ul>
-
-<h2 id="See_also">See also</h2>
-
-<ul>
- <li>The interface defining this property: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineWidth")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineJoin")}}</li>
- <li><a href="/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors">Applying styles and color</a></li>
-</ul>
+- The interface defining this property: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineWidth")}}
+- {{domxref("CanvasRenderingContext2D.lineJoin")}}
+- [スタイルと色の適用](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
