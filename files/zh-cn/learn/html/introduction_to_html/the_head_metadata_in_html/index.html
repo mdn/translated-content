@@ -99,7 +99,11 @@ translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 <p><img alt="同时包含中文和藏文的网页。将页面编码设置为gbk后，藏语无法正常显示。" src="https://mdn.mozillademos.org/files/17391/%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF.png" style="display: block; height: 318px; margin: 0px auto; width: 650px;"></p>
 
 <div class="note">
-<p><strong>注</strong>: 一些浏览器（比如Chrome）会自动修正错误的编码，所以取决于你所使用的浏览器，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为<code>utf-8</code>，来避免在其他浏览器中可能出现的潜在问题。</p>
+<p><strong>译者注</strong>：你将你的字符集设置为 <code>GBK</code> 后，并不只是上图中的藏语无法显示，就连中文也无法正确显示了，请不要担心，这不是你的问题。毋庸置疑的是，<code>GBK</code> 能正确显示简体中文，不能显示藏文（原文想表达的就是这个意思）。至于为什么没有达到预期效果，这里需要知道一个概念，保存的文本文件（txt，html，css等）都是有编码格式的，一般会显示在编辑器的右下位置。这里设置的 <code>&lt;meta charset="GBK"&gt;</code> 只是告诉浏览器，它应该用什么编码打开这个页面，如果文件编码是 <code>utf-8</code>，却设置 <code>GBK</code> 来打开它，就会出现乱码，反之亦然。不妨试试先把示例中的文件编码格式设置为 <code>GBK</code>，再设置 <code>&lt;meta charset="GBK"&gt;</code>，此时就能看到和截图一样的只有藏文显示不出来了（验证 <code>GBK</code> 无法显示藏文）。所以，为了让页面支持各种语言，你应该将文件的编码和文档中的 <code>&lt;meta charset="utf-8"&gt;</code> 同时设置为 <code>utf-8</code>。</p>
+</div>
+  
+<div class="note">
+<p><strong>注</strong>：一些浏览器（比如Chrome）会自动修正错误的编码，所以取决于你所使用的浏览器，你或许不会看到这个问题。无论如何，你仍然应该为你的页面手动设置编码为<code>utf-8</code>，来避免在其他浏览器中可能出现的潜在问题。</p>
 </div>
 
 <h3 id="交互式学习：_体验字符集">交互式学习： 体验字符集</h3>
