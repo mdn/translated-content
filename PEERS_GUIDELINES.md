@@ -83,6 +83,9 @@ The review teams for each locale are:
   - [@sergiogval](https://github.com/sergiogval)
   - [@lasr21](https://github.com/lasr21)
   - [@tuxxy](https://github.com/tuxxy)
+  - [@Graywolf9](https://github.com/Graywolf9)
+  - [@davbrito](https://github.com/davbrito)
+  - [@Vallejoanderson](https://github.com/vallejoanderson)
 
 ---
 
