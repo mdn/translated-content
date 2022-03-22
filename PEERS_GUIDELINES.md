@@ -80,7 +80,6 @@ The review teams for each locale are:
   team, which consists of:
   - [@JuanVqz](https://github.com/JuanVqz)
   - [@dacalderonp](https://github.com/dacalderonp)
-  - [@sergiogval](https://github.com/sergiogval)
   - [@lasr21](https://github.com/lasr21)
   - [@tuxxy](https://github.com/tuxxy)
   - [@Graywolf9](https://github.com/Graywolf9)
