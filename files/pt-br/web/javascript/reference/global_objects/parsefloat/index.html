@@ -1,25 +1,35 @@
 ---
 title: parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
+tags:
+  - JavaScript
+  - Method
+  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
+browser-compat: javascript.builtins.parseFloat
 ---
-<div>
-<div>
+
 <div>{{jsSidebar("Objects")}}</div>
-</div>
-</div>
 
-<p>A função <code><strong>parseFloat()</strong></code><strong> </strong>analisa um argumento string e retorna um número de ponto flutuante.</p>
 
-<h2 id="Síntaxe">Síntaxe</h2>
+<p>A função <code>parseFloat</code> analisa um argumento (convertendo-o para uma string primeiro caso necessário) e retorna um número de ponto flutuante (número decimal).</p>
 
-<pre class="syntaxbox">parseFloat(<em>string</em>)</pre>
+{{EmbedInteractiveExample("pages/js/globalprops-parsefloat.html")}}
+
+<h2 id="Sintaxe">Sintaxe</h2>
+
+<pre class="brush: js">parseFloat(string)</pre>
 
 <h3 id="Parâmetros">Parâmetros</h3>
 
 <dl>
  <dt><code>string</code></dt>
- <dd>Uma string que representa o valor a ser analisado.</dd>
+ <dd>O valor para analisar. Se este argumento não é uma string, então ele é convertido para uma, usando a operação abstrata <code><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></code>. Espaços em branco são ignorados.</dd>
+</dl>
+
+<h3 id="Retorna">Retorna</h3>
+<dl>
+  <dd>Um número de ponto flutuante da <code>string</code> dada. Ou {{jsxref("NaN")}} quando o primeiro carácter, diferente de um espaço em branco, não pôde ser convertido para um número</dd>
 </dl>
 
 <h2 id="Descrição">Descrição</h2>
@@ -38,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 <h3 id="parseFloat_retornando_um_número"><code>parseFloat</code> retornando um número</h3>
 
-<p>O exemplo a seguir sempre retorna <strong>3.14</strong></p>
+<p>O exemplo a seguir sempre retorna <code>3.14</code>:</p>
 
 <pre class="brush:js">parseFloat("3.14");
 parseFloat("314e-2");
@@ -46,14 +56,14 @@ parseFloat("0.0314E+2");
 parseFloat("3.14more non-digit characters");
 </pre>
 
-<h3 id="parseFloat_retornando_NaN"><code>parseFloat</code> retornando NaN</h3>
+<h3 id="parseFloat_retornando_NaN"><code>parseFloat</code> retornando <code>NaN</code>:</h3>
 
 <p>O exemplo a seguir retorna <code>NaN</code></p>
 
 <pre class="brush: js">parseFloat("FF2");
 </pre>
 
-<h3 id="A_função_stricter_parse">A função stricter parse</h3>
+<h3 id="A_função_stricter_parse">Uma função de análise estrita</h3>
 
 <p><span id="result_box" lang="pt"><span>As vezes é útil</span> <span>ter uma maneira</span> <span>mais rigorosa</span> <span>para analisar</span> <span>valores float</span><span>,</span> <span>expressões regulares podem</span> <span>ajudar:</span></span></p>
 
@@ -78,88 +88,11 @@ console.log(filterFloat('hop1.61803398875'));  // NaN
 <p>Observe que este código é somente um exemplo; ele<span id="result_box" lang="pt"> <span>não aceita</span> <span>números válidos</span><span>, tais como</span> <span>1.</span> <span>ou</span> <span>0,5</span><span>.</span></span></p>
 
 <h2 id="Especificações">Especificações</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Especificações</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comentário</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Definição inicial.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.2.3', 'parseFloat')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-parsefloat-string', 'parseFloat')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-parsefloat-string', 'parseFloat')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
 
-<h2 id="Compátibilidade_nos_navegadores">Compátibilidade nos navegadores</h2>
-
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="Compatibilidade">Compatibilidade</h2>
+{{Compat}}
 
 <h2 id="Veja_também">Veja também</h2>
 
