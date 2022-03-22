@@ -3,73 +3,61 @@ title: Boolean() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 tags:
   - Boolean
-  - Constructor
+  - コンストラクター
   - JavaScript
-  - Reference
+  - リファレンス
+browser-compat: javascript.builtins.Boolean.Boolean
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Boolean()</code></strong> コンストラクターは {{jsxref("Boolean")}} オブジェクトを生成するために使用します。</p>
+**`Boolean()`** コンストラクターは {{jsxref("Boolean")}} オブジェクトを生成するために使用します。
 
-<div>{{EmbedInteractiveExample("pages/js/boolean-constructor.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/boolean-constructor.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+new Boolean()
+new Boolean(value)
+```
 
-<pre class="syntaxbox notranslate">new Boolean([<var>value</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `value` {{optional_inline}}
+  - : この `Boolean` オブジェクトの初期値です。
 
-<dl>
- <dt><code><var>value</var></code> {{optional_inline}}</dt>
- <dd><code>Boolean</code> オブジェクトの初期値です。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### `Boolean` を生成して初期値を `false` とする
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_false" name="Creating_Boolean_objects_with_an_initial_value_of_false">false の初期値を持った Boolean オブジェクト</h3>
-
-<pre class="brush: js notranslate">var bNoParam = new Boolean();
+```js
+var bNoParam = new Boolean();
 var bZero = new Boolean(0);
 var bNull = new Boolean(null);
 var bEmptyString = new Boolean('');
 var bfalse = new Boolean(false);
-</pre>
+```
 
-<h3 id="Creating_Boolean_objects_with_an_initial_value_of_true" name="Creating_Boolean_objects_with_an_initial_value_of_true">true の初期値を持った Boolean オブジェクト</h3>
+### `Boolean` を生成して初期値を `true` とする
 
-<pre class="brush: js notranslate">var btrue = new Boolean(true);
+```js
+var btrue = new Boolean(true);
 var btrueString = new Boolean('true');
 var bfalseString = new Boolean('false');
 var bSuLin = new Boolean('Su Lin');
 var bArrayProto = new Boolean([]);
-var bObjProto = new Boolean({});</pre>
+var bObjProto = new Boolean({});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-boolean-constructor', 'Boolean constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Boolean.Boolean")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Glossary/Boolean">Boolean</a></li>
-</ul>
+- [Boolean](/ja/docs/Glossary/Boolean)
