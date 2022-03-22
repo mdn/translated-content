@@ -6,11 +6,11 @@ original_slug: Outils/Memory/Aggregate_view
 ---
 <div>{{ToolsSidebar}}</div><p>Avant Firefox 48 il s'agissait de la vue par défaut. Après Firefox 48, la <a href="/fr/docs/Tools/Memory/Tree_map_view">vue "Carte proportionnelle"</a> est la vue par défaut. Pour afficher la vue "Agrégats", il suffit de le sélectionner dans la liste déroulante "vue" :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13028/memory-tool-switch-view.png" style="display: block; height: 270px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-switch-view.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette vue ressemble à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13030/memory-tool-aggregate-view.png" style="display: block; height: 267px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-aggregate-view.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cela représente un tableau qui affiche une liste triée du contenu de la heap. Il y a trois façons différentes de visualiser la heap :</p>
 
@@ -28,7 +28,7 @@ original_slug: Outils/Memory/Aggregate_view
 
 <p>Il s'agit du tri par défaut qui ressemble à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13030/memory-tool-aggregate-view.png" style="display: block; height: 267px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-aggregate-view.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette option regroupe la heap par grandes catégories :</p>
 
@@ -60,17 +60,17 @@ original_slug: Outils/Memory/Aggregate_view
 
 <p>A coté du nom de chaque type, on trouve une icône en forme de trois étoiles en triangle :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13054/memory-tool-in-group-icon.png" style="display: block; height: 136px; margin-left: auto; margin-right: auto; width: 496px;"></p>
+<p><img alt="" src="memory-tool-in-group-icon.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cliquer sur cette icône affichera toutes les instances de ce type. Par exemple cliquer sur l'icône de <code>Array</code> affichera les quatre instances :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13032/memory-tool-in-group.png" style="display: block; height: 267px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-in-group.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Pour chaque instance, on peut voir <a href="/fr/docs/Tools/Memory/Dominators#Shallow_and_retained_size"> taille retenue et la taille de l'objet</a> de cette instance. Dans ce cas, il est possible de voir que les trois premiers tableaux ont une taille importante (5% du total de la heap) et une traille retenue encore plus importante (26% du total).</p>
 
 <p>Dans la partie droite, on retrouve un panneau qui affiche simplement une phrase. Sélectionner un noeud affichera <a href="/fr/docs/Tools/Memory/Dominators_view#Retaining_Paths_panel"> chemins de rétention :</a></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13034/memory-tool-in-group-retaining-paths.png" style="display: block; height: 360px; margin-left: auto; margin-right: auto; width: 716px;"></p>
+<p><img alt="" src="memory-tool-in-group-retaining-paths.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>{{EmbedYouTube("uLjzrvx_VCg")}}</p>
 
@@ -82,7 +82,7 @@ original_slug: Outils/Memory/Aggregate_view
 
 <p>Une liste de toutes les fonctions qui ont alloué des objets s'affichera alors. Cette liste est triée par la taille des allocations :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13040/memory-tool-call-stack.png" style="display: block; height: 322px; margin-left: auto; margin-right: auto; width: 762px;"><br>
+<p><img alt="" src="memory-tool-call-stack.png" style="display: block; margin-left: auto; margin-right: auto;"><br>
  La structure de ce tri ressemble fortement à celle de <a href="/fr/docs/Tools/Performance/Call_Tree">l'Arbre d'appel</a>, à ceci près qu'il montre les allocations plutôt que des échantillons de processus. Par exemple, la première ligne ligne affiche que :</p>
 
 <ul>
@@ -108,13 +108,13 @@ original_slug: Outils/Memory/Aggregate_view
 
 <p>Quelque chose comme ceci devrait apparaitre&nbsp;:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13040/memory-tool-call-stack.png" style="display: block; height: 322px; margin-left: auto; margin-right: auto; width: 762px;"></p>
+<p><img alt="" src="memory-tool-call-stack.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cela révèle que 93% sont allouées par des fonctions appelées depuis "alloc.js", à la ligne 35 (le premier appel à <code>createToolbars()</code>).</p>
 
 <p>Afin de savoir exactement d'où est allouée la mémoire, il est possible de développer la ligne&nbsp;:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13042/memory-tool-call-stack-expanded.png" style="display: block; height: 530px; margin-left: auto; margin-right: auto; width: 762px;"></p>
+<p><img alt="" src="memory-tool-call-stack-expanded.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>C'est dans ce cas que les colonnes "Octets" et "Somme" sont utiles. Elles révèlent en effet la taille et le nombre des allocations faites à ce point précis.</p>
 
@@ -132,7 +132,7 @@ original_slug: Outils/Memory/Aggregate_view
 
 <p>Voici à quoi ressemble l'arbre après avoir coché l'option "Inverser l'arbre" :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13044/memory-tool-inverted-call-stack.png" style="display: block; height: 141px; margin-left: auto; margin-right: auto; width: 762px;"></p>
+<p><img alt="" src="memory-tool-inverted-call-stack.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Maintenant, la première ligne affiche directement l'appel <code>createToolbarButton()</code> qui correspond à l'allocation de 89% de la heap de la page.</p>
 

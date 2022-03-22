@@ -20,7 +20,7 @@ original_slug: Outils/Performance/Scenarios/Intensive_JavaScript
 
 <p>Le site de démonstration ressemble à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11031/js-worker-demo.png" style="display: block; height: 677px; margin-left: auto; margin-right: auto; width: 1000px;">Il y trois contrôles :</p>
+<p><img alt="" src="js-worker-demo.png" style="display: block; margin-left: auto; margin-right: auto;">Il y trois contrôles :</p>
 
 <ul>
  <li>un bouton de sélection qui permet de contrôler comment exécuter le JavaScript : soit d'un seul bloc dans le thread principal, soit en plusieurs parties avec <code>requestAnimationFrame()</code>, soit en utilisant un thread séparé grâce à un worker.</li>
@@ -39,7 +39,7 @@ original_slug: Outils/Performance/Scenarios/Intensive_JavaScript
 
 <p>Le résultat sera différent d'une machine à l'autre, mais globalement il devrait ressembler à ceci :</p>
 
-<p><a id="js-blocking-overview" name="js-blocking-overview"><img alt="" src="https://mdn.mozillademos.org/files/10891/perf-js-blocking-overview.png" style="display: block; height: 113px; margin-left: auto; margin-right: auto; width: 800px;"></a></p>
+<p><a id="js-blocking-overview"><img alt="" src="perf-js-blocking-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
 <p>La partie haute est la <a href="/fr/docs/Tools/Performance/UI_Tour#Waterfall_overview">vue d'ensemble de la chronologie</a>. Cela donne une vue compressée de la <a href="/fr/docs/Tools/Performance/Waterfall">Chronologie</a>, qui affiche quels types d'opérations le navigateur effectue durant l'enregistrement. La partie rose indique que le navigateur effectue principalement des <a href="/fr/docs/Tools/Performance/Waterfall#Markers">calculs CSS et potentiellement des reflows</a>: il s'agit des animations CSS qui s'exécutent tout au long du profil. Il y a également des gros blocs orange, représentant l'exécution de JavaScript, il y a un bloc par appui de bouton "Do pointless computations!".</p>
 
@@ -47,13 +47,13 @@ original_slug: Outils/Performance/Scenarios/Intensive_JavaScript
 
 <p>Il est possible de sélectionner une de ces périodes afin d'obtenir des informations plus précises dans la vue principale de la chronologie :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10895/perf-js-blocking-waterfall.png" style="display: block; height: 306px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="perf-js-blocking-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Ici, lorsque le bouton est pressé, le navigateur a exécuté une fonction JavaScript, ou une série de fonctions qui ont bloqué le thread principal pendant 71.73ms, soit plus de trois fois le budget de temps pour une frame (1000ms/60frames = 16.67ms par frame).</p>
 
 <p>Mais quelle est cette fonction qui prend tant de temps ? En passant à la vue du <a href="/fr/docs/Tools/Performance/Flame_Chart">Flame Chart</a> (Graphique JS), il est possible de le découvrir :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10893/perf-js-blocking-flame-chart.png" style="display: block; height: 230px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="perf-js-blocking-flame-chart.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cela révèle la pile d'appels JavaScript à cet instant de l'exécution. Sur le haut de la pile, on trouve une fonction nommée <code>calculatePrimes()</code>, le nom du fichier dans laquelle elle est contenue ainsi que le numéro de ligne à laquelle elle se trouve est également affiché. Le code incriminé est le suivant :</p>
 
@@ -130,7 +130,7 @@ function doPointlessComputationsWithBlocking() {
 
 <p>Il est maintenant temps de tester cette version. Pour cela on répète les étapes précédentes. Cette fois par contre, l'enregistrement devrait ressembler à ceci :</p>
 
-<p><a id="js-raf-overview" name="js-raf-overview"><img alt="" src="https://mdn.mozillademos.org/files/10897/perf-js-raf-overview.png" style="display: block; height: 112px; margin-left: auto; margin-right: auto; width: 800px;"></a></p>
+<p><a id="js-raf-overview"><img alt="" src="perf-js-raf-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></a></p>
 
 <p>Au lieu <a href="#js-blocking-overview">d'un seul bloc organe continu</a>, chaque pression de bouton révèle une longue séquence de courts blocs orange. Ces blocs sont tous espacés d'une frame, et chacun représente une des fonctions appelées par <code>requestAnimationFrame()</code>. Il est à noter qu'il n'y a eu que deux pressions de bouton dans ce profil.</p>
 
@@ -218,7 +218,7 @@ function calculatePrimes(iterations, multiplier) {
 
 <p>Comment s'en tire cette version ? Pour le savoir, il suffit de sélectionner "Use a worker", et de capturer un nouveau profil. Il devrait ressembler à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10899/perf-js-worker-overview.png" style="display: block; height: 112px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="perf-js-worker-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Dans ce profil, le bouton a été pressé trois fois. <a href="#js-blocking-overview">Comparé à l'original</a>, chaque pression de bouton est visible dans le résumé sous la forme de deux blocs orange très courts :</p>
 

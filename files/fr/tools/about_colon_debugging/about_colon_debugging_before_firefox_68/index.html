@@ -15,7 +15,7 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 <ul>
  <li>Cliquez "about:debugging" dans la barre URL de Firefox.</li>
  <li><em>Dans</em> Tools &gt; Web Developer menu, cliquez sur "Service Workers".</li>
- <li>Sélectionnez Web Developer menu sous menu Hamburger (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png" style="height: 20px; width: 22px;">), puis sélectionnez "Service Workers".</li>
+ <li>Sélectionnez Web Developer menu sous menu Hamburger (<img alt="" src="hamburger.png">), puis sélectionnez "Service Workers".</li>
 </ul>
 
 <p>Quand about:debugging ouvre, a votre gauche, vous allez voir une barre latérale permettant de basculer entre les deux vues principales: une pour add-ons et une pour workers.</p>
@@ -35,7 +35,7 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
  <li>Connectez l’<a href="/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a> a tout restartless add-ons</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15009/debugger-revised.png" style="display: block; height: 612px; margin-left: auto; margin-right: auto; width: 700px;"></p>
+<p><img alt="" src="debugger-revised.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Connecter_l’Add-on_Debugger"><strong>Connecter l’Add-on Debugger</strong></h3>
 
@@ -115,11 +115,11 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 
 <p>Dans Firefox 49 et plus tard, une page Tabs est disponible dans <code>about:debugging</code> — cela vous donne une liste complète de tous les onglets débogables ouverts dans l’instance courent Firefox.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13617/about-debugging-tabs.png" style="display: block; height: 628px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="about-debugging-tabs.png"></p>
 
 <p>Chaque entrée tab à un bouton <em>Debug</em> à-côté — quand cliquer, ceci va ouvrir un toolbox spécifique à l’onglet, vous permettant de déboguer les contenus de cet onglet.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13619/about-debugging-tabs-toolbox.png" style="display: block; height: 628px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="about-debugging-tabs-toolbox.png"></p>
 
 <div class="note">
 <p>Notez que cette fonctionnalité n’est pas immédiatement utile pour le débogage des onglets desktop— vous pouvez ouvrir le toolbox pour déboguer un onglet déjà assez facilement— mais cela va devenir beaucoup plus utile quand <code>about:debugging</code> commence le support pour remote debugging, et cette page peut commencer à lister les onglets disponibles pour le débogage sur navigateurs mobiles, des simulateurs, etc. allez voir {{bug(1212802)}} pour les nouvelles sur ce domaine.</p>
@@ -137,7 +137,7 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 
 <p>Vous pouvez connectez les outils de développeurs à chaque worker, et envoyer des notifications push au service workers.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13058/about-debugging-workers.png" style="display: block; height: 642px; margin-left: auto; margin-right: auto; width: 784px;"></p>
+<p><img alt="" src="about-debugging-workers.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="État_de_service_worker">État de service worker</h3>
 
@@ -149,7 +149,7 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
  <li><em>"Stopped"</em>: le service worker est installer et activer, mais a été terminer apprêt avoir été inactif.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14488/service-worker-status.png" style="display: block; height: 555px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="service-worker-status.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <div class="note">
 <p>Cette section utilise une démo simple de ServiceWorker, hébergé a  <a href="https://serviceworke.rs/push-simple/">https://serviceworke.rs/push-simple/</a>.</p>
@@ -181,7 +181,7 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 
 <p>A partir de Firefox 48, vous allez voir un lien appeler "unregister" à-côté de chaque service worker enregistrees:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13056/unregister-sw.png" style="display: block; margin-left: auto; margin-right: auto; width: 700px;"></p>
+<p><img alt="" src="unregister-sw.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cliquez le lien pour désinscrire le service worker.</p>
 
@@ -200,7 +200,7 @@ original_slug: Outils/about:debugging/about:debugging_before_Firefox_68
 <div>
 <p>Dans Firefox 49+, un message d’avertissement va être afficher dans la section Service Workers dans la page Workers si les service workers ne sont pas compatibles avec les configurations actuelles du navigateur, et donc ne peuvent pas être utiliser ou déboguer.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13613/sw-not-compatible.png" style="display: block; height: 705px; margin: 0px auto; width: 1011px;"></p>
+<p><img alt="" src="sw-not-compatible.png" style="display: block; margin: 0px auto;"></p>
 </div>
 
 <p>Des Service workers peuvent être indisponible pour plusieurs raisons:</p>

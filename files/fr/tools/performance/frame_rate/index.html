@@ -34,13 +34,13 @@ original_slug: Outils/Performance/Frame_rate
 
 <p>Le graphique du frame rate se trouve dans la <a href="/fr/docs/Tools/Performance/UI_Tour#Recording_overview">vue d'ensemble de l'enregistrement</a> de l'outil Performance. Il prend un simple timestamp lorsque le navigateur finit une frame, et l'utilise pour connaitre le frame rate tout au long de l'enregistrement.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11025/perf-frame-rate.png" style="display: block; height: 66px; margin-left: auto; margin-right: auto; width: 900px;">L'axe X est le temps dans le profil. Il y a trois annotations : le frame rate maximum, le frame rate minimum, et le frame rate moyen.</p>
+<p><img alt="" src="perf-frame-rate.png" style="display: block; margin-left: auto; margin-right: auto;">L'axe X est le temps dans le profil. Il y a trois annotations : le frame rate maximum, le frame rate minimum, et le frame rate moyen.</p>
 
 <h2 id="Utiliser_le_graphique_du_frame_rate">Utiliser le graphique du frame rate</h2>
 
 <p>Le principal intérêt de ce graphique est que tout comme la <a href="/fr/docs/Tools/Web_Console">Console web</a>, il donne une indication rapide d'ou le site peut avoir des problèmes et permet une analyse plus approfondie par d'autres outils. Voici par exemple une capture d'écran d'un profil de performance :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11023/perf-fr-waterfall.png" style="display: block; height: 413px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="perf-fr-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Il est possible de voir que le frame rate moyen est raisonnable, mais qu'il existe cependant trois endroits où le frame rate s'effondre pendant 10 millisecondes. Cela causera certainement un freeze considérable dans les animations de la page.</p>
 
@@ -48,12 +48,12 @@ original_slug: Outils/Performance/Frame_rate
 
 <p>Sélectioner une partie de l'enregistrement contenant une chute permet de zoomer sur cette partie. La vue principale de la <a href="/fr/docs/Tools/Performance/Waterfall">Chronologie</a> en dessous affiche alors les informations de cette portion uniquement. Il est alors possible de trouver le coupable :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11027/perf-zoom.png" style="display: block; height: 504px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="perf-zoom.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Il y a ici une fonction JavaScript exécutée à la suite d'un évènement de clic qui bloque le processus principal pendant 170 millisecondes.</p>
 
 <p>Pour savoir de quelle fonction il s'agit exactement, il faut passer au <a href="/fr/docs/Tools/Performance/Flame_Chart">Flame Chart (Graphique JS)</a> pour voir la pile d'appels à ce moment donné :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11021/perf-fr-flame-chart.png" style="display: block; height: 413px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="perf-fr-flame-chart.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>La fonction coupable est <code>doPointlessComputations()</code>, et est définie dans "main.js". Pour régler ce problème, il est possible de séparer cette fonction en plusieurs parties et d'exécuter ces parties dans <code><a href="/fr/docs/Web/API/window/requestAnimationFrame">requestAnimationFrame</a></code>, ou bien même d'exécuter la fonction dans un <a href="/fr/docs/Web/API/Web_Workers_API/Using_web_workers">worker</a>. L'article <a href="/fr/docs/Tools/Performance/Scenarios/Intensive_JavaScript">JavaScript intensif</a> expose des stratégies pour résoudre ce genre de problèmes.</p>

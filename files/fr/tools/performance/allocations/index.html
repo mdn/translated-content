@@ -22,7 +22,7 @@ original_slug: Outils/Performance/Allocations
 
 <p>La vue allocations ressemble à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12393/allocations-view-1.png" style="display: block; height: 156px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="allocations-view-1.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette vue fait périodiquement des échantillons des allocations qui sont faites durant l'enregistrement. Chaque ligne représente une fonction pour laquelle au moins un échantillon d'allocation a été pris durant l'enregistrement.</p>
 
@@ -44,7 +44,7 @@ original_slug: Outils/Performance/Allocations
 
 <p>À côté de chaque nom de fonction, se trouve une flèche de développement. Cliquer sur celle-ci affichera l'endroit d'où la fonction a été appelée :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12397/allocations-view-2.png" style="display: block; height: 155px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="allocations-view-2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Ici, il est possible de voir que <code>signalLater()</code> a été appelée depuis deux endroits :<code> removeInner()</code> et <code>setSelectionInner()</code>. Il est ainsi possible de remonter l'arbre d'appel et de mieux comprendre le contexte de ces allocations.</p>
 
@@ -55,7 +55,7 @@ original_slug: Outils/Performance/Allocations
 
 <p>Les colonnes de coût sont séparées en "Self" et en "Total". La colonne "Self" correspond aux échantillons pris seulement dans cette fonction. La colonne "Total" correspond aux échantillons pris dans cette fonction ou dans les fonctions appelées par cette fonction. Au premier niveau, ces deux colones sont les mêmes, vu que la vue représente les dernières fonctions (il s'agit d'une vue inversée de l'arbre d'appel). Mais, si l'on remonte l'arbre en développant les lignes, alors la différence devient visible.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12397/allocations-view-2.png" style="display: block; height: 155px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="allocations-view-2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Ici, 8904 échantillons ont été pris dans <code>signalLater()</code>. Mais <code>signalLater()</code> a été appelé depuis deux endroits : <code>removeInner()</code> et <code>setSelectionInner()</code>. Mais ces deux fonctions ont 0 en Self Count, ce qui veut dire qu'aucune allocation n'a été faite depuis ces fonctions. Cependant<code> removeInner()</code> a 8901 en Total Count, tandis que <code>setSelectionInner()</code> a seulement 3 en Total Count. Cela révèle que sur les 8904 allocations faites dans <code>signalLater()</code>, toutes sauf trois proviennent de la branche <code>removeInner()</code>.</p>
 
@@ -69,7 +69,7 @@ original_slug: Outils/Performance/Allocations
 
 <p>Les passages du ramasse-miette sont affichés en rouge dans la vue <a href="/fr/docs/Tools/Performance/Waterfall">Chronologie</a>, et sont des véritables points noirs pour la réactivité, ils peuvent en effet prendre jusqu'a des centaines de millisecondes :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12399/allocations-view-long-gc.png" style="display: block; height: 160px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="" src="allocations-view-long-gc.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Que faire en cas de passage intempestif du ramasse-miette ? SpiderMonkey utilise un <a href="https://dxr.mozilla.org/mozilla-central/rev/584870f1cbc5d060a57e147ce249f736956e2b62/js/src/gc/GCRuntime.h#192">ensemble complexe d'heuristiques</a> pour déterminer quand et quel type de passage de ramasse-miette est nécessaire.</p>
 

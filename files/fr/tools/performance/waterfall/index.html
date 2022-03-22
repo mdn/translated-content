@@ -12,7 +12,7 @@ original_slug: Outils/Performance/Waterfall
 <p>Donc, si vous voyez un problème de performance - une chute du frame rate par exemple - vous pouvez utiliser la chronologie pour voir ce que le navigateur faisait à ce moment de l'enregistrement.</p>
 </div>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10951/perf-waterfall.png" style="display: block; height: 568px; margin-left: auto; margin-right: auto; width: 972px;"></p>
+<p><img alt="" src="perf-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>L'axe X représente le temps. Les opérations enregistrées, appelées marqueurs sont affichées sous la forme de barres de couleur horizontales. Ces marqueurs sont disposés en cascade pour refléter le caractère séquentiel de l'exécution du navigateur.</p>
 
@@ -37,7 +37,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Le code JavaScript qui est exécuté en réponse à un évènement DOM.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange.png"></td>
    <td style="width: 45%;">
     <dl>
      <dt>Type de l'évènement</dt>
@@ -64,7 +64,7 @@ original_slug: Outils/Performance/Waterfall
      JavaScript URI<br>
      Event Handler</strong></p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange.png"></td>
    <td>
     <dl>
      <dt>Pile</dt>
@@ -78,7 +78,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Le temps passé à parser le HTML de la page.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange.png"></td>
    <td>
     <dl>
      <dt>Pile</dt>
@@ -92,7 +92,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Le temps passé à parser le XML de la page.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10703/orange.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange.png"></td>
    <td>
     <dl>
      <dt>Pile</dt>
@@ -106,7 +106,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Le calcul des styles qui s'appliquent aux éléments de la page.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10707/purple.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="purple.png"></td>
    <td>
     <dl>
      <dt>Causes du recalcul</dt>
@@ -130,7 +130,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Le calcul des positions et de la taille des éléments de la page. Cette opération est parfois appelée "reflow".</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10707/purple.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="purple.png"></td>
    <td></td>
   </tr>
   <tr>
@@ -139,7 +139,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Affichage des pixels à l'écran</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10705/green.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="green.png"></td>
    <td></td>
   </tr>
   <tr>
@@ -148,7 +148,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p><a href="/fr/docs/Tools/Performance/Waterfall#Garbage_collection">évènement de garbage collection</a>. Les évènements GC non incrémentaux sont nommés "non incrémentiel".</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="red.png"></td>
    <td>
     <dl>
      <dt>Raison</dt>
@@ -173,7 +173,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Semblable au ramasse-miette, mais pour les objets C++. Voir <a href="http://blog.kylehuey.com/post/27564411715/cycle-collection">l'article de blog de Kyle Huey sur le cycle collection</a>.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="red.png"></td>
    <td>
     <dl>
      <dt><strong>Type</strong></dt>
@@ -187,7 +187,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Préparation/préoptimisation pour le Cycle Collection.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10709/red.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="red.png"></td>
    <td><span class="hidden"> </span>
     <p><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><strong>Type</strong></p>
     <span class="hidden"> </span>
@@ -203,7 +203,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>La période entre les appels à <code>console.time()</code> et <code>console.timeEnd()</code>.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10955/gray.png" style="height: 54px; width: 60px;"></td>
+   <td><img alt="" src="gray.png"></td>
    <td>
     <dl>
      <dt>Nom du timer</dt>
@@ -221,7 +221,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Un appel unique à <code><a href="/fr/docs/Web/API/Console/timeStamp">console.timeStamp()</a></code>.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10953/blue.png" style="height: 54px; width: 60px;"></td>
+   <td><img alt="" src="blue.png"></td>
    <td>
     <dl>
      <dt>Label</dt>
@@ -235,7 +235,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>L'évènement <code><a href="/en-US/docs/Web/Events/DOMContentLoaded">DOMContentLoaded</a></code> du document</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/12191/red.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="red.png"></td>
    <td></td>
   </tr>
   <tr>
@@ -244,7 +244,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>L'évènement <code><a href="/en-US/docs/Web/Events/load">load</a></code> du document.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/12193/blue.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="blue.png"></td>
    <td></td>
   </tr>
   <tr>
@@ -253,7 +253,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Affiché lorsque le thread principal envoie un message à un worker, ou reçoit un message d'un worker.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/12195/orange2.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange2.png"></td>
    <td>
     <p>Un parmi :</p>
 
@@ -271,7 +271,7 @@ original_slug: Outils/Performance/Waterfall
 
     <p>Affiché lorsque le worker envoie un message à un worker, ou reçoit un message du thread principal.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/12197/orange2-hollow.png" style="height: 21px; width: 60px;"></td>
+   <td><img alt="" src="orange2-hollow.png"></td>
    <td>
     <p>Un parmi :</p>
 
@@ -292,7 +292,7 @@ original_slug: Outils/Performance/Waterfall
 
 <p>Il est possible de contrôler quels marqueurs sont affichés en utilisant le bouton dans la <a href="/fr/docs/Tools/Performance/UI_Tour#Toolbar">barre d'outils </a>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13238/perf-markers.png" style="display: block; height: 694px; margin-left: auto; margin-right: auto; width: 799px;"></p>
+<p><img alt="" src="perf-markers.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Motifs_de_la_chronologie">Motifs de la chronologie</h2>
 
@@ -302,7 +302,7 @@ original_slug: Outils/Performance/Waterfall
 
 <p>Le motif suivant est très courant dans la vue de la chronologie :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10711/perf-timeline-waterfall.png" style="display: block; height: 286px; margin-left: auto; margin-right: auto; width: 727px;"></p>
+<p><img alt="" src="perf-timeline-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>C'est une visualisation de l´algorithme de base qu'utilise le navigateur pour mettre à jour la page en réponse à un évènement :</p>
 
@@ -331,7 +331,7 @@ original_slug: Outils/Performance/Waterfall
 
 <p>En utilisant l'outil frame rate et la « chronologie », il est facile de voir lorsque des fonctions JavaScript posent problème. Dans la capture d´écran ci-dessous, un zoom a été fait sur une fonction JS qui cause une chute du frame rate :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10973/perf-js-blocking-waterfall.png" style="display: block; height: 432px; margin-left: auto; margin-right: auto; width: 1128px;"></p>
+<p><img alt="" src="perf-js-blocking-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>L'article <a href="/fr/docs/Tools/Performance/Scenarios/Intensive_JavaScript">JavaScript Intensif</a> montre comment la « chronologie » peut mettre en évidence les problèmes de réactivité causés par des fonctions JavaScript trop gourmandes, et comment utiliser des méthodes asynchrones pour garder le thread principal réactif.</p>
 
@@ -403,7 +403,7 @@ function calculatePrimes() {
 
 <p>La sortie de la Chronologie ressemblera à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10967/perf-console-time.png" style="display: block; height: 430px; margin-left: auto; margin-right: auto; width: 1192px;"></p>
+<p><img alt="" src="perf-console-time.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Le marqueur est nommé par l'argument passé à <code>console.time()</code>, et lorsque le marqueur est sélectionné, il est possible de voir la pile du programme dans l'encadré sur le coté droit.</p>
 
@@ -436,7 +436,7 @@ function runTimer(t) {
 
 <p>La Chronologie affichera un marqueur pour la période entre <code>time()</code> et <code>timeEnd()</code>, et s’il est sélectionné, la pile async apparaitra dans l'encadré :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11179/async-stack.png" style="display: block; height: 378px; margin-left: auto; margin-right: auto; width: 352px;"></p>
+<p><img alt="" src="async-stack.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Marqueurs_de_temps">Marqueurs de temps</h3>
 
@@ -478,4 +478,4 @@ function calculatePrimes() {
 
 <p>Dans la Chronologie, vous verrez quelque chose comme ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10971/perf-timestamp.png" style="display: block; height: 530px; margin-left: auto; margin-right: auto; width: 1192px;"></p>
+<p><img alt="" src="perf-timestamp.png" style="display: block; margin-left: auto; margin-right: auto;"></p>

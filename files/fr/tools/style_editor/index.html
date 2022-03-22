@@ -24,7 +24,7 @@ original_slug: Outils/Éditeur_de_style
 
 <p>Pour ouvrir l'Éditeur de Style, choisissez l'option "Éditeur de Style" du menu "Développement Web" (qui lui-même est un sous-menu du menu "Outils"). La <a href="/fr/docs/Tools/DevTools_Window" title="/fr/docs/Tools/DevTools_Window">Boite à outils</a> apparaitra alors en bas de la fenêtre du navigateur, avec l'Éditeur de Style activé :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/6941/style-editor.png" style="display: block; height: 238px; margin-left: auto; margin-right: auto; width: 816px;"></p>
+<p><img alt="" src="style-editor.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>L'Éditeur de Style est divisé en trois grandes parties :</p>
 
@@ -50,13 +50,13 @@ original_slug: Outils/Éditeur_de_style
 
 <p>L'Éditeur de Style supporte l’autocomplétion. Commencez simplement à taper et il vous affichera une liste de suggestions :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/6943/style-editor-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;">Vous pouvez désactiver cette fonctionnalité dans les <a href="/en-US/docs/Tools_Toolbox#Style_Editor">Paramètres de l'Éditeur de Style</a>.</p>
+<p><img alt="" src="style-editor-autocomplete.png" style="display: block; margin-left: auto; margin-right: auto;">Vous pouvez désactiver cette fonctionnalité dans les <a href="/en-US/docs/Tools_Toolbox#Style_Editor">Paramètres de l'Éditeur de Style</a>.</p>
 
 <h2 id="Le_volet_média">Le volet média</h2>
 
 <p>L'éditeur de Style affiche un volet sur la partie droite dès que la feuille de style sélectionnée contient des <a href="/fr/docs/Web/CSS/Media_queries">règles <code>@media</code></a>. Le volet liste les règles et fournit un lien vers la ligne de la feuille de style définissant la règle. Cliquez sur une des entrées pour basculer sur la règle. La règle est affichée grisée, si la média query n'est pas actuellement appliquée.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8649/editeur-style-media.png" style="height: 320px; width: 900px;"></p>
+<p><img alt="" src="style-editor-media-sidebar-detail.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Le volet média est très utile quand associé à la <a href="/fr/docs/Outils/Vue_adaptative">Vue adaptative</a> pour créer et déboguer des mises en pages responsive :</p>
 
@@ -82,7 +82,7 @@ original_slug: Outils/Éditeur_de_style
 
 <p>Cela veut dire que si vous utilisez par exemple Sass, l'éditeur affichera et permettra d'éditer les fichiers Sass plutôt que le CSS généré grâce à eux.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/6939/style-editor-sourcemap-820.png" style="display: block; margin-left: auto; margin-right: auto;">Pour que cela fonctionne, il est nécessaire de :</p>
+<p><img alt="" src="style-editor-sourcemap-820.png" style="display: block; margin-left: auto; margin-right: auto;">Pour que cela fonctionne, il est nécessaire de :</p>
 
 <ul>
  <li>Utiliser un préprocesseur de CSS qui respecte la <a href="https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit">proposition de "Source Map" Revision 3</a>. Aujourd’hui cela signifie utiliser la version 3.3.0 de <a href="http://sass-lang.com/">Sass</a>, ou la <a href="http://roots.io/using-less-source-maps/">version 1.5.0 de Less</a>. D'autres préprocesseurs sont actuellement en train de travailler pour devenir compatible ou considèrent le faire.</li>

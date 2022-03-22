@@ -28,10 +28,6 @@ original_slug: Outils/Inspecteur_accessibilite
 
 <h2 id="Accéder_à_l'inspecteur_d'accessibilité">Accéder à l'inspecteur d'accessibilité</h2>
 
-<p>L'inspecteur d'accessibilité est disponible par défaut à partir de Firefox 63 :</p>
-
-<p><img alt="L'onglet de l'inspecteur d'accessibilité, désactivé, dans les outils de développement de Firefox et avec un bouton intitulé « Activer les fonctionnalités d'accessibilité »" src="https://mdn.mozillademos.org/files/16366/Screen_Shot_2018-11-30_at_11.58.54.png" style="border-style: solid; border-width: 1px; height: 700px; width: 1986px;"></p>
-
 <p>Par défaut, les fonctionnalités des outils de développement dédiées à l'accessibilité sont désactivées (sauf si elles ont été activées depuis un autre onglet ou que le moteur d'accessibilité de Firefox est déjà démarré si vous utiliser un lecteur d'écran ou un outil de test). Ces fonctionnalités sont désactivées, car le moteur d'accessibilité fonctionne en arrière-plan et peut consommer des ressources et diminuer les performances qui sont des indicateurs qu'on pourrait suivre via d'autres onglets (<a href="/fr/docs/Outils/Memory">Mémoire</a> et <a href="/fr/docs/Outils/Performance">Performances</a> par exemple). De même, on peut ne pas vouloir diminuer les performances du navigateur. C'est pour ces raisons que ces fonctionnalités sont désactivées par défaut et qu'il faut les « éteindre » à moins que vous les utilisiez activement.</p>
 
 <p>Vous pouvez activer ces fonctionnalités en cliquant sur le bouton « Activer les fonctionnalités d'accessibilité ».</p>
@@ -46,7 +42,7 @@ original_slug: Outils/Inspecteur_accessibilite
 
 <p>Le panneau d'accessibilité, lorsqu'il est activé, ressemble à ceci :</p>
 
-<p><img alt="Le panneau d'accessibilité des outils de développement Firefox, activé, qui montre deux panneaux d'informations ainsi qu'un bouton pour désactiver les fonctionnalités d'accessibilité." src="https://mdn.mozillademos.org/files/16022/accessibility-inspector-panel-on.png" style="border-style: solid; border-width: 1px; height: 654px; width: 1692px;"></p>
+<p><img alt='Shows issue checker toolbar with "contrast" and "text label" options' src="accessibility-inspector-tabbing_order.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Sur le côté gauche, on a un arbre hiérarchique qui représente l'ensemble des éléments de l'arbre d'accessibilité de la page courante. Les éléments qui possèdent des éléments fils disposent d'une flèche sur laquelle on peut cliquer afin d'afficher les éléments fils et d'accéder aux niveaux inférieurs de la hiérarchie. Chaque objet de cet arbre possède deux propriétés qui sont affichées :</p>
 
@@ -63,7 +59,7 @@ original_slug: Outils/Inspecteur_accessibilite
  <li><em>actions</em> — une liste d'actions qui peuvent être effectuées sur l'élément. Ainsi, un bouton poussoir (<code>pushbutton</code>) disposerait de l'action "Press" (pour « appuyer ») tandis qu'un lien aurait l'action "Jump" (pour « aller à »).</li>
  <li><em>value</em> — la valeur de l'élément. Cette propriété peut avoir un sens différent selon le type d'élément. Ainsi, un champ d'un formulaire (<em>role</em>: <em>entry</em>) aurait comme valeur celle qui est saisie dans le champ. Pour un hyperlien, la valeur associée serait l'URL indiquée dansvia l'attribut <code>href</code> de l'élément <code>&lt;a&gt;</code>.</li>
  <li><em>DOMNode</em> — le type de nœud du DOM que représente l'élément de l'arbre d'accessibilité. Vous pouvez cliquer sur l'icône de ciblage situé à la droite de la valeur afin de sélectionner le nœud dans l'<a href="/fr/docs/Outils/Inspecteur">inspecteur</a>. Survoler cette icône surlignera le nœud sur la page.<br>
-  <img alt="La propriété DOMNode, située dans l'inspecteur d'accessibilité avec l'icône de ciblage qui permet de mettre en avant l'élément correspondant sur la page." src="https://mdn.mozillademos.org/files/16025/dom-node-target-icon.png" style="height: 55px; width: 294px;"></li>
+  <img alt="DOMNode property in accessibility inspector with target icon highlighted" src="dom-node-target-icon.png"></li>
  <li><em>description</em> — une description plus détaillée fournie par l'élément ; c'est généralement la valeur de l'attribut <code>title</code>.</li>
  <li><em>help</em> — cette propriété n'est pas implémentée par Gecko et renvoie toujours la chaîne de caractères vide. Cette propriété a été retirée de l'inspecteur dans Firefox 62 ({{bug(1467643)}}).</li>
  <li><em>keyboardShortcut</em> — un raccourci clavier qui permet d'activer l'élément, comme indiqué avec l'attribut <code>accessKey</code>. Cette propriété fonctionne correctement à partir de Firefox 62 ({{bug("1467381")}}).</li>
@@ -90,11 +86,11 @@ original_slug: Outils/Inspecteur_accessibilite
 
 <p>Il est possible d'afficher l'arbre accessibilité en JSON avec un clic droit sur une ligne dans le panneau Accessibilité et en cliquant sur "<strong>Afficher JSON" </strong>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16423/print_to_json.png" style="border: 1px solid black; display: block; height: 238px; margin: 0px auto; width: 800px;"></p>
+<p><strong><img alt="Print to JSON right-click menu in left panel" src="accessibility-inspector-print_tree_to_json.png" style="border-style: solid; border-width: 1px;"></strong></p>
 
 <p>Cela ouvrira un nouvel onglet avec la partie de l'arbre d'accessibilité chargé dans la visualisation JSON :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16424/accessibility_json.png" style="display: block; height: 586px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="Accessibility tree loaded in new tab JSON viewer" src="accessibility_json.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Une fois ouvert, il est possible de sauvegarder ou copier les données. La visualisation JSON peut également afficher le JSON "brut" dans in onglet séparé.</p>
 
@@ -106,9 +102,9 @@ original_slug: Outils/Inspecteur_accessibilite
 
 <p>Une option supplémentaire devient disponible dans le menu contextuel de la page (menu accessible via clic-droit) et dans l'onglet HTML de l'inspecteur (clic-droit sur l'élément) :</p>
 
-<p><img alt="Le menu contextuel dans la zone d'affichage du navigateur avec l'option « Inspecter les propriétés d'accessibilité » surlignée" src="https://mdn.mozillademos.org/files/16028/web-page-context-menu.png" style="border-style: solid; border-width: 1px; height: 798px; width: 1200px;"></p>
+<p><img alt="Le menu contextuel dans la zone d'affichage du navigateur avec l'option « Inspecter les propriétés d'accessibilité » surlignée" src="web-page-context-menu.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p><img alt="Le menu contextuel de l'inspecteur du DOM avec l'option « Afficher les propriétés d'accessibilité » surlignée" src="https://mdn.mozillademos.org/files/16020/dom-inspector-context-menu.png" style="border-style: solid; border-width: 1px; height: 803px; width: 1200px;"></p>
+<p><img alt="Le menu contextuel de l'inspecteur du DOM avec l'option « Afficher les propriétés d'accessibilité » surlignée" src="dom-inspector-context-menu.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Lorsque vous choisissez l'option « Inspecter les propriétés d'accessibilité » via le menu contextuel, cela ouvre automatiquement le panneau « Accessibilité » des outils de développement et affiche l'élément dans l'arbre d'accessibilité ainsi que ses propriétés.</p>
 
@@ -122,7 +118,7 @@ original_slug: Outils/Inspecteur_accessibilite
 
 <p>Dans l'exemple suivant, on peut voir que l'image a été surlignée, que son rôle est <em><code>graphic</code></em> et que son nom est <code><em>"Road, Asphalt, Sky, Clouds, Fall"</em></code>. On peut également voir le ratio de contraste des couleurs, ici 3.46, qui apparaît dans la barre d'informations au-dessus de l'image.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16302/image_accessibility.png" style="border: 1px solid black; display: block; height: 347px; margin: 0px auto; width: 451px;"></p>
+<p><img alt='image has been highlighted and graphic, "Road, Asphalt, Sky, Clouds, Fall", and Contrast:3.46 warning sign, appears in the information bar above it' src="image_accessibility.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h4 id="Contraste_des_couleurs">Contraste des couleurs</h4>
 
@@ -130,13 +126,13 @@ original_slug: Outils/Inspecteur_accessibilite
  <br>
  Par exemple :</p>
 
-<p><img alt="A screenshot of colour contrast highlighter where text contrast if below the AA WCAG threshold." src="https://mdn.mozillademos.org/files/16459/Screen_Shot_2019-01-29_at_10.11.13.png" style="display: block; height: 237px; margin: 0px auto; width: 357px;"></p>
+<p><img alt="A screenshot of color contrast highlighter with warning sign where text contrast if below the AA WCAG threshold." src="screen_shot_2019-01-29_at_10.11.13.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Le contraste des couleurs du texte sur l'image est de 2.86. Cette valeur, trop faible, indique que le contraste peut ne pas être suffisant pour la lecture. On peut également voir dans cette illustration le symbole triangulaire qui alerte sur le non-respect des règles d'accessibilité.</p>
 
 <p>À partir de Firefox 65, afficher cette information pour un texte aillant une image de fond complexe (i.e un dégradé), donnera une plage de valeurs de contraste. Par exemple :</p>
 
-<p><img alt="A screenshot of colour contrast highlighter where for text over gradient background with contrast satisfying the AAA WCAG guidelines." src="https://mdn.mozillademos.org/files/16460/Screen_Shot_2019-01-29_at_10.21.07.png" style="display: block; height: 434px; margin: 0px auto; width: 1484px;"></p>
+<p><img alt="A screenshot of color contrast highlighter with checked sign where for text over gradient background with contrast satisfying the AAA WCAG guidelines." src="screen_shot_2019-01-29_at_10.21.07.png" style="display: block; margin: 0px auto;"></p>
 
 <p>On voit avec cette image que le niveau de contraste va de 4.72 à 5.98. Ces nombres sont suivis de la note "AAA" et d'une coche verte qui indique que le texte possède un niveau de contraste supérieur ou égal à 4.5:1 ou plus et qu'il respecte les règles de contraste amélioré, correspondant au niveau AAA.</p>
 
@@ -148,9 +144,9 @@ original_slug: Outils/Inspecteur_accessibilite
 
 <p>Les icônes pour les deux sélecteurs (accessibilité et inspecteur HTML) varient légèrement, comme on peut le voir dans ces deux captures d'écran :</p>
 
-<p><img alt="Le bouton pour l'inspecteur du DOM est encadré et on peut voir la bulle d'informations « Sélectionner un élément de la page »" src="https://mdn.mozillademos.org/files/16024/dom-inspector-picker.png" style="border-style: solid; border-width: 1px; height: 677px; width: 1716px;"></p>
+<p><img alt="Le bouton pour l'inspecteur du DOM est encadré et on peut voir la bulle d'informations « Sélectionner un élément de la page »" src="dom-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p><img alt="Le bouton de l'inspecteur d'accessibilité est encadré en rouge et on peut voir la bulle d'informations « Sélectionner un objet accessible de la page »" src="https://mdn.mozillademos.org/files/16023/accessibility-inspector-picker.png" style="border-style: solid; border-width: 1px; height: 677px; width: 1717px;"></p>
+<p><img alt="Le bouton de l'inspecteur d'accessibilité est encadré en rouge et on peut voir la bulle d'informations « Sélectionner un objet accessible de la page »" src="accessibility-inspector-picker.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Lorsqu'on clique sur un élément de la page grâce à ce sélecteur, on peut voir l'élément sélectionné dans l'arbre d'accessibilité du panneau et le sélecteur est alors désactivé. Pour garder le sélecteur actif tout en voyant les éléments ciblés mis en avant dans l'arbre d'accessibilité, vous pouvez maintenir la touche <kbd>Maj</kbd> lors du ciblage (l'arbre d'accessibilité pointera vers l'élément survolé tant que la touche <kbd>Maj</kbd> sera enfoncée).</p>
 
@@ -160,11 +156,11 @@ original_slug: Outils/Inspecteur_accessibilite
 
 <p>L'inspecteur d'accessibilité peut s'avérer particulièrement utile pour localiser les problèmes d'accessibilité. On peut l'utiliser pour dénicher les éléments qui n'ont pas d'équivalent textuel correct (les images sans attribut <code>alt</code> ou les champs de formulaire sans libellé), car ils auront la propriété <code>name</code> qui vaudra <code>null</code>. Par exemple :</p>
 
-<p><img alt="Un champ de formulaire surligné dans la page et pour lequel les informations sont affichées dans le panneau accessibilité où on voit que la propriété name est null car cet élément n'a pas de libellé associé" src="https://mdn.mozillademos.org/files/16027/use-case-no-label.png" style="border-style: solid; border-width: 1px; height: 1180px; width: 1182px;"></p>
+<p><img alt="Un champ de formulaire surligné dans la page et pour lequel les informations sont affichées dans le panneau accessibilité où on voit que la propriété name est null car cet élément n'a pas de libellé associé" src="use-case-no-label.png" style="border-style: solid; border-width: 1px;"></p>
 
 <p>Cet outil est également utile pour vérifier la sémantique des éléments. On peut utiliser le menu contextuel « Inspecter les propriétés d'accessibilité » afin de vérifier rapidement si un élément possède le bon rôle (autrement dit : est-ce qu'un bouton est vraiment indiqué comme un bouton ? est-ce qu'un lien apparaît réellement comme un lien ? etc..</p>
 
-<p><img alt="Un élément d'interface qui ressemble à un bouton mais pour lequel les informations affichées dans le panneau accessibilité montrent qu'il n'est pas un bouton mais un élément de section pour lequel la propriété name vaut null" src="https://mdn.mozillademos.org/files/16026/use-case-fake-button.png" style="border-style: solid; border-width: 1px; height: 1180px; width: 1182px;"></p>
+<p><img alt="Un élément d'interface qui ressemble à un bouton mais pour lequel les informations affichées dans le panneau accessibilité montrent qu'il n'est pas un bouton mais un élément de section pour lequel la propriété name vaut null" src="use-case-fake-button.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

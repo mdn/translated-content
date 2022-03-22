@@ -26,7 +26,7 @@ original_slug: Outils/Performance/Call_Tree
 
 <p>Nous avons <a href="/fr/docs/Tools/Performance/UI_Tour#Zooming_in">zoomé</a> dans une partie de l'enregistrement qui montre un long marker JavaScript :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10981/perf-call-tree.png" style="display: block; height: 574px; margin-left: auto; margin-right: auto; width: 1052px;"></p>
+<p><img alt="" src="perf-call-tree.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>L'arbre d'appel présente les résultats dans un tableau. Chaque ligne représente une fonction dans laquelle au moins un échantillon a été pris, et les lignes sont classées par nombre d'échantillons pris dans la fonction.</p>
 
@@ -48,7 +48,7 @@ original_slug: Outils/Performance/Call_Tree
 
 <p>A coté de chaque nom de fonction, se trouve une flèche d'expansion : cliquer sur celle-ci révèle le chemin allant de l'appel de la fonction jusqu'a la racine. Par exemple, il est possible d'étendre l'entrée pour <code>bubbleSort()</code> :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10983/perf-call-tree-expanded-bubblesort.png" style="display: block; height: 512px; margin-left: auto; margin-right: auto; width: 1054px;"></p>
+<p><img alt="" src="perf-call-tree-expanded-bubblesort.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>On peut donc voir que le graphique d'appel est comme ceci :</p>
 
@@ -62,7 +62,7 @@ original_slug: Outils/Performance/Call_Tree
 
 <p>Quelques fois, il y a plus d'un chemin menant à la même fonction. Essayons par exemple d'étendre la ligne de <code>swap()</code>:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10985/perf-call-tree-expanded-sawp.png" style="display: block; height: 636px; margin-left: auto; margin-right: auto; width: 1052px;"></p>
+<p><img alt="" src="perf-call-tree-expanded-sawp.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Il y a 253 échantillons qui ont été pris à l'intérieur de<code> swap()</code>. Mais <code>swap()</code> a été accédé par deux chemins différents car <code>bubbleSort()</code> <code>et selectionSort()</code> l'utilisent tous deux. Il est également possible de voir que 252 des 253 échantillons ont été pris dans la branche <code>bubbleSort()</code>, et uniquement un dans la branche <code>selectionSort()</code>.</p>
 
@@ -94,7 +94,7 @@ original_slug: Outils/Performance/Call_Tree
 
 <p>Dans notre exemple, il y a 679 échantillons assignés à <em>Gecko </em>- le deuxième plus gros groupe après <code>bubbleSort()</code>. étendons donc cela :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10987/perf-call-tree-expanded-gecko.png" style="display: block; height: 478px; margin-left: auto; margin-right: auto; width: 1050px;"></p>
+<p><img alt="" src="perf-call-tree-expanded-gecko.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cela révèle que 614 de ces échantillons, soit environ 20% du cout total, viennent de l'appel de <code>sort()</code>. Si nous regardons au code de la fonction, il devient évident que le cout élevé des données de plateforme viennent des appels répétés à <code>console.log()</code>:</p>
 
@@ -118,4 +118,4 @@ original_slug: Outils/Performance/Call_Tree
 
 <p>Pour afficher cette vue, cliquer sur l'icône en forme d'engrenage dans la partie droite et de cliquer sur <strong>L'arbre d'appel</strong>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16093/performance_menu_invert_call_tree.png" style="border-style: solid; border-width: 1px; display: block; height: 201px; margin: 0 auto; width: 492px;"></p>
+<p><img alt="" src="performance_menu_invert_call_tree.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>

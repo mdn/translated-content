@@ -10634,13 +10634,6 @@
       "louloutche"
     ]
   },
-  "Tools/Firefox_OS_Simulator_clone": {
-    "modified": "2020-07-16T22:36:22.890Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Tools/JSON_viewer": {
     "modified": "2020-07-16T22:36:31.458Z",
     "contributors": [
@@ -11133,13 +11126,6 @@
     "contributors": [
       "maximelore",
       "wbamberg"
-    ]
-  },
-  "Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE": {
-    "modified": "2020-07-16T22:35:40.616Z",
-    "contributors": [
-      "wbamberg",
-      "maximelore"
     ]
   },
   "Tools/Remote_Debugging/Thunderbird": {

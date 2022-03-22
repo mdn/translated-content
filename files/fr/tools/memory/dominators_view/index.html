@@ -16,7 +16,7 @@ original_slug: Outils/Memory/Dominators_view
 
 <p>Pour afficher la vue des Dominants, il faut sélectionner "Dominants" dans le menu déroulant "Afficher" :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13627/dominators-1.png" style="display: block; height: 230px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="dominators-1.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Cette vue est constituée de deux panneaux:</p>
 
@@ -25,7 +25,7 @@ original_slug: Outils/Memory/Dominators_view
  <li>Le panneau des <a href="/fr/docs/Tools/Memory/Dominators_view#Retaining_Paths_panel">Chemins de rétention</a> (depuis Firefox 47) affiche les 5 plus courts chemins de rétention pour un noeud.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13629/dominators-2.png" style="display: block; margin: 0px auto;"></p>
+<p><img alt="" src="dominators-2.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="Arbre_des_Dominants">Arbre des Dominants</h3>
 
@@ -48,7 +48,7 @@ original_slug: Outils/Memory/Dominators_view
 
 <p>Les lignes sont classées par la taille de mémoire retenue. Par exemple :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13631/dominators-3.png" style="display: block; height: 228px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-3.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Dans cette capture d'écran, il est possible de voir qu'il y a cinq linges en dessus de "GC roots". Les deux premiers objets sont "Call" et "Window", et retiennent respectivement 21% et 8% de la mémoire totale de la capture. Il est également possible de voir qu'ils ont une taille (shallow) réduite, donc quasiment toute la mémoire retenue vient d'objets qu'ils dominent.</p>
 
@@ -56,7 +56,7 @@ original_slug: Outils/Memory/Dominators_view
 
 <p>Par exemple, cliquer sur le premier objet "Window" affichera ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13633/dominators-4.png" style="display: block; height: 292px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-4.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Il est possible de voir que "Window" domine un objet "CSS2Properties", dont la taille retenue est de 2ù de la capture. Encore une fois, la taille de l'objet est faible, quasiment toute sa taille retenue est due aux objets dominés. En cliquant sur l'icone en fore de triangle à coté de la fonction, il est possible de voir ces noeuds.</p>
 
@@ -68,7 +68,7 @@ original_slug: Outils/Memory/Dominators_view
 
 <p>Dans la barre d'outils, il y a une liste déroulante : "Nommer selon" :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13635/dominators-5.png" style="display: block; height: 224px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="dominators-5.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Par défaut, l'option sélectionnée est "Type". Il est possible de choisir "Call Stack" à la place pour savoir exactement d'ou dans le code les objets sont alloués.</p>
 
@@ -94,7 +94,7 @@ original_slug: Outils/Memory/Dominators_view
 
 <p>Pour voir le chemin de rétention, il suffit de sélectionner un noeud dans le panneau de l'arbre des Dominants :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13637/dominators-6.png" style="display: block; height: 415px; margin: 0px auto; width: 800px;"></p>
+<p><img alt="" src="dominators-6.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Ici, un objet a été sélectionné et l'on peut voir un unique chemin jusqu'a la racine GC.</p>
 
@@ -104,7 +104,7 @@ original_slug: Outils/Memory/Dominators_view
 
 <p>Parfois, il y a plus d'un seul chemin de rétention :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13639/dominators-7.png" style="display: block; height: 455px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-7.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Ici, il y a deux chemins depuis le noeud <code>DocumentPrototype</code> vers la racine GC. Si seulement l'un des des deux venait à être supprimé, le noeud ne serait pas détruit par le garbage collector, puisqu'il serait toujours retenu par l'autre chemin.</p>
 
@@ -136,15 +136,15 @@ original_slug: Outils/Memory/Dominators_view
 
 <p>Les trois tableaux seront les trois premières racines GC, chacun retenant à peu près 23% de la mémoire totale de la capture :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13641/dominators-8.png" style="display: block; height: 165px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-8.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Étendre un tableau affichera les objets (monstres) qu'il contient. Chaque monstre à une taille réduite de 160 octets. Cette taille inclut les variables int "eye" et "tentacle-count". Chaque monstre à une taille retenue plus grande, car ils retiennent la string utilisée pour stocker le nom du monstre :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13643/dominators-9.png" style="display: block; height: 327px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-9.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Tout cela se rapproche précisément du <a href="/fr/docs/Tools/Memory/Monster_example#allocation-graph">graph mémoire attendu</a>. Une chose curieuse cependant, où est passé l'objet qui contient ces trois tableaux ? En regardant le chemin de rétention pour un des tableaux, il est possible de le voir :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13645/dominators-10.png" style="display: block; height: 467px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="dominators-10.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Ici, il est possible de voir l'objet retenant le tableau; et même qu'il s'agit du tableau de monstres <code>friendly</code>. Dans la capture d'écran ci-dessus, ce n'est pas visible, cependant ce tableau est aussi enraciné directement à la racine GC. Donc si l'objet arrête de référencer le tableau, celui-ci ne serait toujours pas éligible au garbage collector.</p>
 

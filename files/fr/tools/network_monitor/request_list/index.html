@@ -10,7 +10,7 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <h2 id="Liste_des_requêtes_réseau">Liste des requêtes réseau</h2>
 
-<p>Par défaut, le moniteur affiche une liste de toutes les requêtes faites lors du chargement de la page, à raison d'une par ligne :<img alt="" src="https://mdn.mozillademos.org/files/16258/Network_request_list.png" style="border: 1px solid black; display: block; height: 328px; margin: 0px auto; width: 900px;">Il est également vidé par défaut lors d'un changement de page ou du rafraîchissement de la page. Vous avez la possibilité de modifier ce comportement en cochant "Activer les journaux persistants" dans les <a href="/fr/docs/Tools_Toolbox#Common_preferences">paramètres</a> des outils de développement.</p>
+<p>Par défaut, le moniteur affiche une liste de toutes les requêtes faites lors du chargement de la page, à raison d'une par ligne :<img alt="" src="network_request_list.png" style="border: 1px solid black; display: block; margin: 0px auto;">Il est également vidé par défaut lors d'un changement de page ou du rafraîchissement de la page. Vous avez la possibilité de modifier ce comportement en cochant "Activer les journaux persistants" dans les <a href="/fr/docs/Tools_Toolbox#Common_preferences">paramètres</a> des outils de développement.</p>
 
 <h3 id="Champs_des_requêtes_réseau">Champs des requêtes réseau</h3>
 
@@ -22,21 +22,12 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <p>Cliquer sur un en-tête de colonne trie la liste par rapport à cette colonne. "<strong>Réinitialiser les colonnes</strong>" remet le tri par défaut.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16627/network_monitor_header_right_click.png" style="display: block; margin: 0 auto;"></p>
+<p><img alt="Screenshot of the context menu for selecting columns to display in the Network monitor" src="network_monitor_columns_menu.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Voici une liste des colonnes disponibles:</p>
 
 <ul>
- <li><strong>État </strong>: le code de statut HTTP renvoyé. Il est indiqué par une icône de couleur : Le code exact est affiché juste après l'icône.
-
-  <ul>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/13136/1x.png" style="height: 17px; width: 17px;">un cercle bleu pour les codes d'information (1XX codes). Cela inclut notamment le code 101 (Changement de protocole) pour les upgrades <a href="/fr/docs/Web/API/WebSocket">WebSocket</a>.</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10941/200.png" style="height: 17px; width: 17px;"> un cercle vert pour le succès (codes 2XX),</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10945/300.png" style="height: 17px; width: 17px;"> un triangle orange pour la redirection (3XX)</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10943/4-500.png" style="height: 17px; width: 17px;"> un carré rouge pour les erreurs (4XX et 5XX).</li>
-   <li><img alt="" src="https://mdn.mozillademos.org/files/10947/cached.png" style="height: 17px; width: 17px;"> un cercle gris pour les réponses récupérées dans le cache du navigateur</li>
-  </ul>
- </li>
+ <li><strong>État </strong>: le code de statut HTTP renvoyé. Il est indiqué par une icône de couleur : Le code exact est affiché juste après l'icône.</li>
  <li><strong>Méthode </strong>: la méthode de la requête HTTP.</li>
  <li><strong>Fichier </strong>: nom du fichier requis.</li>
  <li><strong>Protocole:</strong> Le protocole réseau utilisé pour transférer les donnée.</li>
@@ -63,13 +54,13 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <p>Si le fichier est une image, survoler son nom de fichier affichera un aperçu de l'image :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16257/image_preview.png" style="border: 1px solid black; display: block; height: 334px; margin: 0px auto; width: 900px;"></p>
+<p><img alt="" src="image_preview.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <h4 id="Icônes_sécurité">Icônes sécurité</h4>
 
 <p>Le Moniteur réseau affiche une icône dans la colonne "Domaine" :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16194/network_message_list_63.png" style="border: 1px solid black; display: block; height: 191px; margin: 0 auto; width: 845px;"></p>
+<p><img alt="" src="network_message_list_63.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <p>Cela donne une information supplémentaire concernant la sécurité de la requête :</p>
 
@@ -82,27 +73,27 @@ original_slug: Outils/Moniteur_réseau/request_list
  </thead>
  <tbody>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11655/https.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="https.svg"></td>
    <td>HTTPS</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11653/https-weak.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="https-weak.svg"></td>
    <td>HTTPS faible (un encodage faible par exemple )</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11649/https-failed.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="https-failed.svg"></td>
    <td>HTTPS invalide (un certificat invalide par exemple)</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11651/http.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="http.svg"></td>
    <td>HTTP</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/11657/localhost.svg" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="localhost.svg"></td>
    <td>Localhost</td>
   </tr>
   <tr>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/16192/tracker_icon.png" style="height: 16px; width: 16px;"></td>
+   <td><img alt="" src="tracker_icon.png"></td>
    <td>Indique que l'URL appartient à un traqueur connu qui serait bloqué si le blocage de contenu était activé.</td>
   </tr>
  </tbody>
@@ -126,7 +117,10 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <p>La liste des requêtes affiche également une chronologie des différentes parties de chaque requête :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16259/timeline.png" style="border: 1px solid black; display: block; height: 331px; margin: 0px auto; width: 900px;">La chronologie de chaque requête est donnée relativement aux autres, de telle façon que vous puissiez voir le temps de chargement total. Pour plus d'informations concernant le code couleur utilisé ici, consultez la section <a href="/fr/docs/Tools/Network_Monitor#Timings">Délais</a> de cette page.</p>
+
+<p><img alt="" src="timeline.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+
+<p></p>La chronologie de chaque requête est donnée relativement aux autres, de telle façon que vous puissiez voir le temps de chargement total. Pour plus d'informations concernant le code couleur utilisé ici, consultez la section <a href="/fr/docs/Tools/Network_Monitor#Timings">Délais</a> de cette page.</p>
 
 <p>La chronologie contient également deux lignes verticales :</p>
 
@@ -143,7 +137,7 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <p>Pour voir comme une page s'en sort sans une ressource, il est possible de bloquer une URL spécifique depuis la liste de requêtes.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16701/beforeBlocking.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
+<p><img alt="" src="beforeblocking.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <ol>
  <li>Survoler la requête voulue.</li>
@@ -151,11 +145,11 @@ original_slug: Outils/Moniteur_réseau/request_list
  <li>Lors du rechargement de la page, l'URL en question sera bloquée et un message ajouté sur la ligne pour indiquer que la ressources a été bloqué par les outils de développement.</li>
 </ol>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16700/afterBlocking.png" style="border: 1px solid black; display: block; height: 865px; margin: 0px auto; width: 1136px;"></p>
+<p><img alt="" src="afterblocking.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>Pour débloquer l'URL :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16702/unblockUrl.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
+<p><img alt="" src="unblockurl.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <ol>
  <li>Survoler la requête voulue.</li>
@@ -291,7 +285,7 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <p>Pour trouver toutes les erreurs 404, il est possible de taper "404" et la recherche complétera automatiquement par "status-code:404" :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16677/404_filter.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
+<p><img alt="" src="404_filter.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
 
 <h3 id="Menu_contextuel">Menu contextuel</h3>
 
@@ -363,7 +357,7 @@ original_slug: Outils/Moniteur_réseau/request_list
 
 <p>Ces options crée une <a href="https://w3c.github.io/web-performance/specs/HAR/Overview.html">Archive HTTP</a> (HAR) pour toutes les requêtes listées. Ce format permet d'exporter des informations détaillées sur les requêtes réseau. "Tout copier" copie le contenu dans le presse-papiers. "Tout enregistrer" ouvre une fenêtre pour sauvegarder l'archive sur un disque. Le nouveau menu 'HAR' (en haut à droite) inclut également ces options, ainsi qu'une option pour importer un HAR :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16056/har-dropdown.png" style="border-style: solid; border-width: 1px; height: 262px; width: 723px;"></p>
+<p><img alt="" src="har-dropdown.png" style="border-style: solid; border-width: 1px;"></p>
 
 <h2 id="Fonctionnalités_du_Moniteur_Réseau">Fonctionnalités du Moniteur Réseau</h2>
 

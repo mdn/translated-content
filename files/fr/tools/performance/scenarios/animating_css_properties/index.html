@@ -22,7 +22,7 @@ original_slug: Outils/Performance/Scenarios/Animating_CSS_properties
 
 <p>Le processus que le navigateur utilise pour mettre à jour la page lorsqu'une propriété CSS a changé peut être décrit comme une chronologie consistant des étapes suivantes :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10821/css-rendering-waterfall.png" style="display: block; height: 203px; margin-left: auto; margin-right: auto; width: 546px;"></p>
+<p><img alt="" src="css-rendering-waterfall.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <ol>
  <li><strong>Recalculate Style (recalculer le style) </strong>: à chaque fois qu'une propriété CSS d'un élément change, le navigateur doit recalculer les styles calculés.</li>
@@ -47,7 +47,7 @@ original_slug: Outils/Performance/Scenarios/Animating_CSS_properties
  <tbody>
   <tr>
    <td>Les propriétés qui impactent la forme d'un élément ou sa position déclenchent une recalculation du style, une disposition, et un repaint.</td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10825/layout.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10823/paint.png" style="height: 26px; width: 123px;"></td>
+   <td><img alt="" src="recalculate-style.png"> <img alt="" src="layout.png"> <img alt="" src="paint.png"></td>
    <td>
     <p><code><a href="/fr/docs/Web/CSS/left">left</a></code><br>
      <code><a href="/fr/docs/Web/CSS/max-width">max-width</a></code><br>
@@ -60,14 +60,14 @@ original_slug: Outils/Performance/Scenarios/Animating_CSS_properties
    <td>
     <p>Les propriétés qui n'impactent pas la forme d'un élément ou sa position, mais qui ne sont pas dans leur propre calque, ne déclenchent pas de disposition (layout)</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10835/layout-faint.png" style="height: 52px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10823/paint.png" style="height: 26px; width: 123px;"></td>
+   <td><img alt="" src="recalculate-style.png"> <img alt="" src="layout-faint.png"> <img alt="" src="paint.png"></td>
    <td>
     <p><code><a href="/fr/docs/Web/CSS/color">color</a></code></p>
    </td>
   </tr>
   <tr>
    <td>Les propriétés dans leur propre calque ne déclenchent même pas un repaint, car la mise à jour est gérée dans la composition.</td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10835/layout-faint.png" style="height: 52px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10839/paint-faint.png" style="height: 26px; width: 123px;"></td>
+   <td><img alt="" src="recalculate-style.png"> <img alt="" src="layout-faint.png"> <img alt="" src="paint-faint.png"></td>
    <td><code><a href="/fr/docs/Web/CSS/transform">transform</a></code><br>
     <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code></td>
   </tr>
@@ -86,7 +86,7 @@ original_slug: Outils/Performance/Scenarios/Animating_CSS_properties
 
 <p>Si vous voulez expérimenter en même temps, le site de la démo est disponible <a href="http://mdn.github.io/performance-scenarios/animation-transform-margin/index.html">ici</a>. Il ressemble à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/11029/css-animations-demo.png" style="display: block; height: 677px; margin-left: auto; margin-right: auto; width: 1000px;">Le site comporte deux boutons : un pour démarrer/arrêter l'animation, et un groupe pour sélectionner le type d'animation.</p>
+<p><img alt="" src="css-animations-demo.png" style="display: block; margin-left: auto; margin-right: auto;">Le site comporte deux boutons : un pour démarrer/arrêter l'animation, et un groupe pour sélectionner le type d'animation.</p>
 
 <p>Il y a quelques éléments, et ceux-ci ont les propriétés CSS <code><a href="/fr/docs/Web/CSS/linear-gradient">linear-gradient</a></code> et <code><a href="/fr/docs/Web/CSS/box-shadow">box-shadow</a></code>, car elles sont relativement couteuses.</p>
 
@@ -100,19 +100,19 @@ original_slug: Outils/Performance/Scenarios/Animating_CSS_properties
 
 <p>En ouvrant l'enregistrement, ce que vous verrez dépend grandement de votre machine et de la charge du système, mais cela devrait ressembler à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10853/margin-recording.png" style="display: block; height: 237px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="margin-recording.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette capture d'écran montre trois vues distinctes : une vue d'ensemble de la chronologie, le frame rate, et les détails de la frise chronologique.</p>
 
 <h4 id="Vue_densemble_de_la_chronologie">Vue d'ensemble de la chronologie</h4>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10857/margin-timeline-overview.png" style="display: block; height: 58px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="margin-timeline-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Il s'agit d'une représentation compressée de la <a href="/fr/docs/Tools/Performance/Waterfall">Chronologie</a>. La prédominance du vert révèle que <a href="/fr/docs/Tools/Performance/Timeline#timeline-color-coding">la page passe beaucoup de temps à peindre.</a>.</p>
 
 <h4 id="Frame_rate">Frame rate</h4>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10859/margin-frame-rate.png" style="display: block; height: 64px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="margin-frame-rate.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette partie montre le <a href="/fr/docs/Tools/Performance/Frame_rate">frame rate</a>. Le frame rate moyen est de 46.67fps, bien en dessous de la cible de 60fps. Pire, le frame rate n'est pas du tout constant, avec un nombre conséquent de décentes dans les 20fps. Il est donc peu probable que l'animation soit fluide, surtout si une interaction utilisateur est ajoutée.</p>
 
@@ -120,7 +120,7 @@ original_slug: Outils/Performance/Scenarios/Animating_CSS_properties
 
 <p>Le reste de l'enregistrement montre la vue de la chronologie. En faisant défiler un peu, on trouve le pattern suivant :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10861/margin-timeline.png" style="display: block; height: 532px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="margin-timeline.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cela représente la <a href="/fr/docs/Tools/Performance/Scenarios/Animating_CSS_properties#The_CSS_rendering_waterfall">chronologie du rendu</a>. À chaque frame de l'animation, les styles de chaque élément sont recalculés, puis composés en une seule disposition, et enfin le repaint a lieu.</p>
 
@@ -132,17 +132,17 @@ original_slug: Outils/Performance/Scenarios/Animating_CSS_properties
 
 <p>En cliquant sélectionnant l'option "Use transform", et en effectuant un nouvel enregistrement, on obtient quelque chose ressemblant à ceci :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10863/transform-recording.png" style="display: block; height: 234px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="transform-recording.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h4 id="Vue_densemble_de_la_chronologie_2">Vue d'ensemble de la chronologie</h4>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10869/transform-timeline-overview.png" style="display: block; height: 57px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="transform-timeline-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>En comparaison avec la <a href="/fr/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Waterfall_overview"> version utilisant margin</a>, on remarque beaucoup moins de vert et beaucoup plus de rose, ce qui peut être <a href="/fr/docs/Tools/Performance/Waterfall#timeline-color-coding">soit du positionnement soit de la recalculation de style.</a></p>
 
 <h4 id="Frame_rate_2">Frame rate</h4>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10865/transform-frame-rate.png" style="display: block; height: 62px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="transform-frame-rate.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>En comparaison avec la <a href="/fr/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Waterfall_overview"> version utilisant margin</a>, cela semble bien mieux. Le frame rate moyen est quasiment à 60fps et le frame rate est quasiment constant.</p>
 
@@ -150,6 +150,6 @@ original_slug: Outils/Performance/Scenarios/Animating_CSS_properties
 
 <p>La frise chronologique montre la raison pour laquelle le frame rate s'est amélioré. The timeline view shows the reason for the improved frame rate. Contrairement à la <a href="/fr/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Waterfall_overview"> version utilisant margin</a> aucun temps n'est dépensé dans la disposition ou dans paint :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10867/transform-timeline.png" style="display: block; height: 384px; margin-left: auto; margin-right: auto; width: 800px;"></p>
+<p><img alt="" src="transform-timeline.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Dans ce cas-là, utiliser <code>transform</code> a considérablement amélioré la performance du site, et l'outil de performance permet de voir comment et pourquoi.</p>

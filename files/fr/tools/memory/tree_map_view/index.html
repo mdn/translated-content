@@ -33,14 +33,14 @@ original_slug: Outils/Memory/Tree_map_view
 
 <p>Voici quelques captures d'exemple, tel qu'elles apparaissent dans la vue carte proportionnelle :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13048/treemap-domnodes.png" style="display: block; margin-left: auto; margin-right: auto; width: 844px;"></p>
+<p><img alt="" src="treemap-domnodes.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette carte provient de l'exemple <a href="/fr/docs/Tools/Memory/DOM_allocation_example"> d'allocation DOM</a>, qui crée simplement un grand nombre de nœuds DOM. (200 objets <code><a href="/fr/docs/Web/API/HTMLDivElement">HTMLDivElement</a></code> et 4000 objets <code><a href="/fr/docs/Web/API/HTMLSpanElement">HTMLSpanElement</a></code>). Il est possible de voir que quasiment tout l'espace occupé dans la heap l'est par les objets <code>HTMLSpanElement</code> crées.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13046/treemap-monsters.png" style="display: block; margin-left: auto; margin-right: auto; width: 844px;"></p>
+<p><img alt="" src="treemap-monsters.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette carte vient de l'exemple <a href="/fr/docs/Tools/Memory/Monster_example">allocation de monstres</a>, qui représente trois tableaux contenant chacun 5000 monstres. Chaque monstre possède un nom aléatoire. Il est possible de voir que la heap est occupée principalement par les strings utilisés pour le nom des monstres, ainsi que par les objets utilisé pour contenir les autres attributs des monstres.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13050/treemap-bbc.png" style="display: block; margin-left: auto; margin-right: auto; width: 844px;"></p>
+<p><img alt="" src="treemap-bbc.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette carte provient de <a href="http://www.bbc.com/">http://www.bbc.com/</a>, et est probablement plus représentative de la vie réelle que les exemples. Il est possible de voir qu'une partie beaucoup plus importante de la heap est occupée par les scripts qui sont chargés depuis un grand nombre d'origines.</p>

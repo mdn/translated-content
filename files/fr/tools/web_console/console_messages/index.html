@@ -8,11 +8,11 @@ original_slug: Outils/Console_Web/Console_messages
 
 <p>La majorité de la Console Web est occupée par le panneau d'affichage des messages&nbsp;:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13278/console-messages.png" style="display: block; height: 278px; margin-left: auto; margin-right: auto; width: 877px;"></p>
+<p><img alt="Screenshot of the web console, highlighting the messages area" src="console-messages-fx79.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Chaque message est affiché sur une nouvelle ligne.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5585/web-console-message-annotated.png" style="display: block; height: 152px; margin-left: auto; margin-right: auto; width: 795px;"></p>
+<p><img alt="Screenshot of a single console message, with its parts annotated" src="console-msg-annotated.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <table class="standard-table">
  <tbody>
@@ -75,7 +75,7 @@ original_slug: Outils/Console_Web/Console_messages
 
 <p>Les requêtes résseau sont affichées sous cette forme&nbsp;:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5593/web-console-message-request-annotated.png" style="display: block; height: 139px; margin-left: auto; margin-right: auto; width: 664px;"></p>
+<p><img alt="Screenshot of a network response message, with its parts annotated" src="response-msg-annotated.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <table class="standard-table">
  <tbody>
@@ -92,9 +92,8 @@ original_slug: Outils/Console_Web/Console_messages
    <td>
     <p>La méthode HTTP utilisée</p>
 
-    <p>Si la requête à été faite avec <a href="/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, il y a une notre aditionelle :</p>
+    <p>Si la requête à été faite avec <a href="/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>, il y a une notre aditionelle.</p>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/10167/web-console-xhr.png" style="display: block; height: 51px; margin-left: auto; margin-right: auto; width: 648px;"></p>
    </td>
   </tr>
   <tr>
@@ -116,67 +115,27 @@ original_slug: Outils/Console_Web/Console_messages
 
 <p>Les logs de messages réseaux ne sont pas montrés par defaut. Utiliser la fonction filtre pour les afficher.</p>
 
-<h4 id="XHR">XHR</h4>
-
-<p>From Firefox 38 onwards, the Web Console indicates when a network request was made as an <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a>:</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/10167/web-console-xhr.png" style="display: block; height: 51px; margin-left: auto; margin-right: auto; width: 648px;"></p>
-
-<p>Also from Firefox 38 onwards, you can <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Filtering_and_searching">filter</a> the network requests so as to only see XMLHttpRequests.</p>
-
-<p>Like normal network request log messages, logs of XMLHttpRequests are not shown by default. Use the <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Filtering_and_searching">filtering</a> feature to show them.</p>
-
 <h3 id="Erreurs_et_avertissements_JavaScript">Erreurs et avertissements JavaScript</h3>
 
-<p>Les messages JavaScript ressemblent à&nbsp;:</p>
+<p>Les erreurs JavaScript contiennent un lien "En savoir plus" qui emmène vers <a href="/fr/docs/Web/JavaScript/Reference/Errors">la référence des erreurs JavaScript</a> pour plus d'informations sur comment régler ces erreurs&nbsp;:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7101/js-error-annotated.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p>{{EmbedYouTube("OabJc2QR6o0")}}</p>
 
-<h3 id="sect1"></h3>
+<h3 id="CSS">CSS</h3>
 
-<h3 id="Erreurs_CSS_avertissements_et_évènements_de_reflow">Erreurs CSS, avertissements et évènements de <em>reflow</em></h3>
+<div class="note">
+<p><strong>Note :</strong> Les avertissements CSS et les messages quant au <i lang="en">reflow</i> ne sont pas affichés par défaut, pour des raisons de performances (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1452143">le bug 1452143</a>). Il faut utiliser <a href="/fr/docs/Tools/Web_Console/Console_messages#filtrage_par_catégorie">le filtrage</a> pour les afficher.</p>
+</div>
 
-<p>Les messages CSS ressemblent à ceci&nbsp;:</p>
+<p>Certains messages CSS contiennent, à gauche, un triangle permettant de révéler le détail de l'erreur. En cliquant dessus, vous aurez plus d'informations à propos de l'erreur et le détails des nœuds DOM concernés par l'erreur.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/5585/web-console-message-annotated.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
-
-<p>Par défaut, les avertissements CSS ne sont pas affichés.</p>
-
-<h4 id="Évènements_de_reflow">Évènements de reflow</h4>
-
-<p>La Console Web logue aussi les évènements de reflow. Un reflow est le nom donné à une opération pendant laquelle le navigateur calcule la disposition de tout ou partie de la page.<br>
- Les reflows se produisent lorsqu'un changement est arrivé dans la page et que la navigateur pense qu'il en affecte la disposition. Plusieurs évènements peuvent déclencher des reflows, incluant&nbsp;: redimensionner la fenêtre du navigateur, activer des pseudo-classes comme&nbsp;:hover ou manipuler le DOM en JavaScript.<br>
- <br>
- Parce que les reflows peuvent être très coûteux en calculs et affecter directement l'interface utilisateur, ils peuvent avoir un grand impact sur la réactivité d'un site ou d'une application web. En loguant les évènements de reflow, la Console Web peut vous donner une idée du moment auquel ces évènements sont déclenchés, combien de temps ils prennent à s'exécuter et si les reflows sont synchrones et déclenchés par du JavaScript, quel code les a déclenchés.<br>
- <br>
- Les évènements de reflow sont affichés dans la catégorie CSS, en tant que messages "Log", bien séparés des erreurs et avertissements CSS. Par défaut, ils sont désactivés. Vous pouvez les activer en cliquant sur le bouton "CSS" dans la boite à outils et en sélectionnant "Log".<br>
- <br>
- Chaque message porte une étiquette "reflow" et montre le temps qui a fallu pour exécuter le reflow&nbsp;:<br>
- <br>
- <img alt="" src="https://mdn.mozillademos.org/files/7087/web-console-reflow-asynch.png" style="height: 53px; width: 554px;"><br>
- Si le reflow est synchrone et a été déclenché par du JavaScript, un lien vers la ligne de code qui a déclenché le reflow est aussi affiché&nbsp;:</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/7089/web-console-reflow-synch.png"><br>
- Cliquez sur le lien pour ouvrir le fichier dans le <a href="/fr/docs/Tools/Debugger">Débogueur</a>.</p>
-
-<h4 id="Reflows_synchrones_et_asynchrones">Reflows synchrones et asynchrones</h4>
-
-<p>Si un changement est fait et qu'il invalide la disposition courante - par exemple, la fenêtre du navigateur est redimensionnée ou du JavaScript modifie le CSS d'un élément - la disposition n'est pas recalculée immédiatement. A la place, le reflow se produit de façon asynchrone, lorsque le navigateur décide que cela est nécessaire ; en général, lorsque le navigateur redessine ("repaint"). De cette façon, le navigateur peut enregistrer une série de changements invalidants et recalculer leurs effets en une seule fois. Cependant, si du code JavaScript lit un style qui a été modifié, alors le navigateur doit réaliser un reflow synchrone pour calculer le style calculé ("<em>computed style</em>") à retourner.</p>
-
-<p>Par exemple, le code suivant provoque un reflow immédiat et synchrone au moment de l'appel à window.getComputedStyle(thing).height&nbsp;:</p>
-
-<pre class="brush: js notranslate"><code class="language-js"><span class="keyword token">var</span> thing <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById<span class="punctuation token">(</span></span><span class="string token">"the-thing"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-thing<span class="punctuation token">.</span>style<span class="punctuation token">.</span>display <span class="operator token">=</span> <span class="string token">"inline-block"</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> thingHeight <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">getComputedStyle<span class="punctuation token">(</span></span>thing<span class="punctuation token">)</span><span class="punctuation token">.</span>height<span class="punctuation token">;</span></code>
-</pre>
-
-<p>A cause de cela, c'est une bonne idée d'éviter l'entrelacement des appels en écriture et en lecture des styles d'un élément lors de la manipulation du DOM, parce que chaque fois que vous relisez un style qui a été invalidé par un précédent appel en écriture, vous forcez un reflow synchrone.</p>
+<p><img alt="" src="css_warnings.png" style="display: block; margin: 0px auto;"></p>
 
 <h3 id="Avertissements_et_erreurs_de_sécurité">Avertissements et erreurs de sécurité</h3>
 
 <p>Les avertissements et les erreurs de sécurité ressemblent à ceci&nbsp;:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7107/sec-error-annotated.png" style="display: block; margin-left: auto; margin-right: auto;">Les messages de sécurité affichés dans la console web aident les développeurs à trouver les vulnérabilités de leur site qu’elles soient potentielles ou effectives. De plus, beaucoup de ces messages sont enrichissants pour les développeurs car ils finissent par un lien "En savoir plus" qui redirige sur une page contenant des informations et des conseils pour minimiser le problème.</p>
+<p>Les messages de sécurité affichés dans la console web aident les développeurs à trouver les vulnérabilités de leur site qu’elles soient potentielles ou effectives. De plus, beaucoup de ces messages sont enrichissants pour les développeurs car ils finissent par un lien "En savoir plus" qui redirige sur une page contenant des informations et des conseils pour minimiser le problème.</p>
 
 <p>La liste complète des messages de sécurité est la suivante&nbsp;:</p>
 
@@ -247,224 +206,118 @@ thing<span class="punctuation token">.</span>style<span class="punctuation token
 
 <p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=863874">Le Bug 863874</a> est le méta-bug pour l'affichage des messages d'erreurs de sécurité dans la console web. Si vous avez d'autres idées pour des fonctionnalités utiles comme celles décrites ici, ou si vous êtes intéressé pour contribuer, jetez un coup d'œil au méta-bug et à ses dépendances.</p>
 
-<h3 id="Message_console_API">Message console API</h3>
+<h3 id="Journalisation">Journalisation</h3>
 
-<p><br>
- <img alt="" src="https://mdn.mozillademos.org/files/7105/console-api-message-annotated.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<div class="note">
+<p>Les messages de journalisation des <a href="/fr/docs/Web/API/SharedWorker"><i lang="en">Shared Workers</i></a>, <a href="/fr/docs/Web/API/Service_Worker_API"><i lang="en">Service Workers</i></a>, des modules complémentaires et des <a href="/fr/docs/Mozilla/API/ChromeWorkers"><i lang="en">Chrome Workers</i></a> ne sont pas affichés par défaut. Il faut utiliser <a href="/fr/docs/Tools/Web_Console/Console_messages#filtrage_par_catégorie">le filtrage</a> pour les afficher.</p>
+</div>
 
-<p>Cette section décrit les messages web console des appels API qui affichent véritablement quelque chose. Pour des informations plus génériques sur la console API il est possible de se référer à sa <a href="/fr/docs/Web/API/console">page de documentation</a>.</p>
+<p>La catégorie Journalisation inclut les messages enregistrés avec <a href="/fr/docs/Web/API/console">l'API Console</a>.</p>
 
-<h4 id="Messages_derreurs">Messages d'erreurs</h4>
+<p>La console web prend en charge les messages de <a href="/fr/docs/Web/API/console">l'API Console</a> suivants&nbsp;:</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">API</th>
-   <th scope="col">Contenu du message</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.error"><code>error()</code></a></td>
-   <td>
-    <p>L'argument à  <code>error()</code>.</p>
+<ul>
+ <li><a href="/fr/docs/Web/API/console/assert"><code>assert()</code></a></li>
+ <li><code><a href="/fr/docs/Web/API/console/clear">clear()</a></code></li>
+ <li><a href="/fr/docs/Web/API/console/count"><code>count()</code></a></li>
+ <li><a href="/fr/docs/Web/API/console/dir"><code>dir()</code></a></li>
+ <li><a href="/fr/docs/Web/API/console/dirxml"><code>dirxml()</code></a></li>
+ <li><a href="/fr/docs/Web/API/console/error"><code>error()</code></a></li>
+ <li><code>exception()</code></li>
+ <li><code><a href="/fr/docs/Web/API/console/group">group()</a></code></li>
+ <li><code><a href="/fr/docs/Web/API/console/groupEnd">groupEnd()</a></code></li>
+ <li><code>info()</code></li>
+ <li><a href="/fr/docs/Web/API/console/log"><code>log()</code></a></li>
+ <li><a href="/fr/docs/Web/API/console/table"><code>table()</code></a></li>
+ <li><a href="/fr/docs/Web/API/console/time"><code>time()</code></a></li>
+ <li><a href="/fr/docs/Web/API/console/timeEnd"><code>timeEnd()</code></a></li>
+ <li><a href="/fr/docs/Web/API/console/trace"><code>trace()</code></a></li>
+ <li><a href="/fr/docs/Web/API/console/warn"><code>warn()</code></a></li>
+</ul>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js">console<span class="punctuation token">.</span><span class="function token">error<span class="punctuation token">(</span></span><span class="string token">"an error"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-    <img alt="" src="https://mdn.mozillademos.org/files/7143/api-error.png" style="display: block; margin-left: auto; margin-right: auto;">
-    <p>A partir de Firefox 31, la console affiche la pile complète des erreurs&nbsp;:</p>
+<p>La console affiche la trace de la pile d'appel pour tous les messages d'erreur&nbsp;:</p>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js"><span class="keyword token">function</span> <span class="function token">error<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error<span class="punctuation token">(</span></span><span class="string token">"an error"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js">function toto() {
+  console.error("ça explose");
+}
 
-<span class="keyword token">function</span> <span class="function token">call_error<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="function token">error<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function truc() {
+  toto();
+}
 
-<span class="function token">call_error<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+function faireQqc() {
+ truc();
+}
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/7745/console-error-stack.png" style="display: block; height: 109px; margin-left: auto; margin-right: auto; width: 497px;"></p>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.exception"><code>exception()</code></a></td>
-   <td>Un alias de <code>error()</code>.</td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.assert"><code>assert()</code></a></td>
-   <td>
-    <p>Si l'insertion fonctionne, rien. Si l'insertion ne fonctionne pas l'argument&nbsp;:</p>
+faireQqc();</pre>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js">console<span class="punctuation token">.</span><span class="function token">assert<span class="punctuation token">(</span></span><span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"My assertion always fails"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-    <img alt="" src="https://mdn.mozillademos.org/files/7139/api-assert.png" style="display: block; margin-left: auto; margin-right: auto;">
-    <p>A partir de Firefox 31, la console affiche la pile complète des insertions&nbsp;:</p>
+<p><img alt="" src="error-stack.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js"><span class="keyword token">function</span> <span class="function token">assertion<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">assert<span class="punctuation token">(</span></span><span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"assertion failed"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<h3 id="Serveur">Serveur</h3>
 
-<span class="keyword token">function</span> <span class="function token">call_assertion<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="function token">assertion<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<div class="note">
+<p>La journalisation des messages côté serveur a été introduite avec Firefox 43 puis retirée avec Firefox 56. Vous pouvez installer l'extension <a href="https://addons.mozilla.org/fr/firefox/addon/chromelogger/">Chrome Logger</a> pour retrouver cette fonctionnalité.</p>
+</div>
 
-<span class="function token">call_assertion<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<p>Avec l'extension <a href="https://addons.mozilla.org/fr/firefox/addon/chromelogger/">Chrome Logger</a>, la console web peut afficher les messages envoyés par le serveur. Cela permet d'utiliser la console web pour déboguer du code côté serveur.</p>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/7743/console-assert-stack.png" style="display: block; height: 111px; margin-left: auto; margin-right: auto; width: 497px;"></p>
-   </td>
-  </tr>
- </tbody>
-</table>
+<p>Cette extension utilise le protocole <a href="https://craig.is/writing/chrome-logger">Chrome Logger</a>. Voici un rapide résumé de son fonctionnement&nbsp;:</p>
 
-<h4 id="Messages_davertissement">Messages d'avertissement</h4>
+<ul>
+ <li>Votre code côté serveur (Python, PHP, Node.js, etc) inclut une bibliothèque qui fournit une API de console.</li>
+ <li>Le code côté serveur utilise cette API pour la journalisation.</li>
+ <li>La bibliothèque côté serveur crée des objets JSON à partir des messages et les encode pour les transmettre.</li>
+ <li>Les messages sont transmis au client sous la forme d'un en-tête de réponse HTTP intitulé <code>X-ChromeLogger-Data</code>.</li>
+ <li>La console décode ces en-têtes et les affiche.</li>
+</ul>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">API</th>
-   <th scope="col">Contenu du message</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.warn"><code>warn()</code></a></td>
-   <td>
-    <p>L'argument à <code>warn()</code>.</p>
+<p>Pour trouver une bibliothèque correspondant côté serveur, voir <a href="https://craig.is/writing/chrome-logger">la documentation de Chrome Logger</a>.</p>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js">console<span class="punctuation token">.</span><span class="function token">warn<span class="punctuation token">(</span></span><span class="string token">"a warning"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-    <img alt="" src="https://mdn.mozillademos.org/files/7155/api-warn.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
-  </tr>
- </tbody>
-</table>
+<h3 id="Interpréteur_entréesortie">Interpréteur entrée/sortie</h3>
 
-<h4 id="Messages_dinformation">Messages d'information</h4>
+<p>Les commandes envoyées au navigateur avec <a href="/fr/docs/Tools/Web_Console/The_command_line_interpreter" title="#command-line">l'interpréteur JavaScript de la console web</a>, et les réponses correspondantes sont affichées parmi les messages de la console.</p>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">API</th>
-   <th scope="col">Contenu du message</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.info"><code>info()</code></a></td>
-   <td>
-    <p>L'argument à <code>info()</code>.</p>
+<p>Pour les réponses qui contiennent des objets ou des variables, les options de menu contextuel suivantes sont disponibles&nbsp;:</p>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js">console<span class="punctuation token">.</span><span class="function token">info<span class="punctuation token">(</span></span><span class="string token">"some info"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-    <img alt="" src="https://mdn.mozillademos.org/files/7145/api-info.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
-  </tr>
- </tbody>
-</table>
+<dl>
+ <dt>Faire apparaitre dans l'inspecteur</dt>
+ <dd>Afficher le nœud DOM sélectionner dans l'onglet Inspecteur.</dd>
+ <dt>Enregistrer comme variable globale</dt>
+ <dd>Créer une variable globale (intitulée <code>temp0</code>, ou <code>temp1</code>, etc.) dont la valeur est celle de l'objet sélectionné. Le nom de la variable apparaît en entrée de l'interpréteur et sa valeur apparaît comme une réponse.</dd>
+ <dt>Copier l'objet</dt>
+ <dd>Copier l'objet sélectionné dans le presse-papier.</dd>
+</dl>
 
-<h4 id="Message_de_log">Message de log</h4>
+<h2 id="Filtrer_et_rechercher">Filtrer et rechercher</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">API</th>
-   <th scope="col">Contenu du message</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.count"><code>count()</code></a></td>
-   <td>
-    <p>Le label fourni, si présent, et le nombre d'occurrences que <code>count()</code> a appelé avec le label donné.</p>
+<h3 id="Filtrer_par_catégorie">Filtrer par catégorie</h3>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js">console<span class="punctuation token">.</span><span class="function token">count<span class="punctuation token">(</span></span>user<span class="punctuation token">.</span>value<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<p>Vous pouvez utiliser la barre d'outils située en haut afin de limiter les résultats affichés.</p>
 
-    <p><img alt="" src="https://mdn.mozillademos.org/files/7359/api-count.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.log"><code>log()</code></a></td>
-   <td>
-    <p><code>L'argument à log()</code>.</p>
+<p><img alt="Capture d'écran illustrant la console web avec la barre d'outils mise en évidence" src="console-toolbar.png" style="display: block; margin-left: auto; margin-right: auto;">Pour voir les messages d'une ou plusieurs catégories précises, on cliquera sur le bouton correspondant à la catégorie voulue (<strong>Erreurs</strong>, <strong>CSS</strong>, etc.).</p>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js">console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"logged"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-    <img alt="" src="https://mdn.mozillademos.org/files/7147/api-log.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.trace"><code>trace()</code></a></td>
-   <td>Trace de la pile.
-    <pre class="brush: js language-js notranslate">
-<code class="language-js">console<span class="punctuation token">.</span><span class="function token">trace<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-    <img alt="" src="https://mdn.mozillademos.org/files/7159/api-trace.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.dir"><code>dir()</code></a></td>
-   <td>
-    <p>Liste les propriétés d'un objet.</p>
+<p>Pour les catégories Erreurs et Avertissements, lorsqu'on les désactive, un nombre apparaît près le texte du bouton pour indiquer le nombre de messages disponibles pour le type correspondant. Par exemple, "Avertissements (25)".</p>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js"><span class="keyword token">var</span> user <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById<span class="punctuation token">(</span></span><span class="string token">'user'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">dir<span class="punctuation token">(</span></span>user<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-    <img alt="" src="https://mdn.mozillademos.org/files/7157/api-dir.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.time"><code>time()</code></a></td>
-   <td>
-    <p>Notifie que le timer a démarré.</p>
+<p>Les requêtes réseaux avec des codes de réponse sur les intervalles 400-499 (erreur du client) et 500-599 (erreur du serveur) sont considérées comme des erreurs. Leur affichage est contrôlé par le bouton <strong>Erreurs</strong> et non par le bouton <strong>Requêtes</strong>.</p>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js">console<span class="punctuation token">.</span><span class="function token">time<span class="punctuation token">(</span></span><span class="string token">"t"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-    <img alt="" src="https://mdn.mozillademos.org/files/7149/api-time.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.timeEnd"><code>timeEnd()</code></a></td>
-   <td>
-    <p>Durée du timer.</p>
+<h3 id="Filtrer_par_texte">Filtrer par texte</h3>
 
-    <pre class="brush: js language-js notranslate">
-<code class="language-js">console<span class="punctuation token">.</span><span class="function token">timeEnd<span class="punctuation token">(</span></span><span class="string token">"t"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
-    <img alt="" src="https://mdn.mozillademos.org/files/7151/api-timeEnd.png" style="display: block; margin-left: auto; margin-right: auto;"></td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Console.table"><code>table()</code></a></td>
-   <td>
-    <div class="geckoVersionNote">
-    <p>Ce message est une des nouveautés de Firefox 34.</p>
-    </div>
+<p>Pour ne voir que les messages qui contiennent une chaîne de caractères donnée, saisissez le texte voulu dans le champ intitulé "Filtrer". Ainsi, si vous entrez le texte img dans ce champ, vous pourrez obtenir une liste comme celle-ci&nbsp;:</p>
 
-    <p>Affiche des données de tableau comme un tableau.</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+<p><img alt="" src="console_clear_filter.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<h4 id="Messages_groupés">Messages groupés</h4>
+<p>Un icône de croix apparaît à l'extrémité droite du champ lorsqu'un texte a été saisi. En cliquant dessus, cela supprime le filtre et affiche la liste non-filtrée.</p>
 
-<p>il est possible d'utiliser<code> console.group()</code> pour créer des groupes indentés dans la console. Voir <a href="/fr/docs/Web/API/console#Using_groups_in_the_console">Using groups in the console</a> pour plus d'informations.</p>
+<p>Vous pouvez exclure un texte choisi en utilisant <code>-</code> comme préfixe. Ainsi, <code>-img</code> affichera uniquement les messages qui <em>ne contiennent pas</em> la chaîne de caractères <code>img</code>.</p>
 
-<h4 id="Personnalisation_des_messages">Personnalisation des messages</h4>
+<h3 id="Filtrer_avec_des_expressions_rationnelles">Filtrer avec des expressions rationnelles</h3>
 
-<p>Depuis Firefox 31, il est possible d'utiliser le spécificateur de format <code>"%c"</code> pour personnaliser les messages console&nbsp;:</p>
+<p>Il est aussi possible d'utiliser une epxression rationnelle afin de filtrer ce qui est affiché dans la console. Dans la vidéo suivante, on voit comment filtrer en utilisant deux expressions rationnelles&nbsp;: <code>/(cool|rad)/</code> et <code>/(cool)/</code>.</p>
 
-<pre class="brush: js language-js notranslate"><code class="language-js">console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">"%cMy stylish message"</span><span class="punctuation token">,</span> <span class="string token">"color: red; font-style: italic"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<p>{{EmbedYouTube("E6bGOe2fvW0")}}</p>
 
-<div><img alt="" src="https://mdn.mozillademos.org/files/7739/console-style.png" style="display: block; height: 52px; margin-left: auto; margin-right: auto; width: 293px;"></div>
+<p>Là encore, on peut prendre l'opposé d'une expression rationnelle en la préfixant avec <code>-</code>. Ainsi, <code>-/(cool|rad)/</code> affichera uniquement les messages <em>qui ne suivent pas</em> l'expression rationnelle <code>/(cool|rad)/</code>.</p>
 
-<h3 id="Messages_dentréesortie">Messages d'entrée/sortie</h3>
+<h3 id="Purger_le_journal">Purger le journal</h3>
 
-<p>Les commandes envoyées au navigateur en utilisant <a href="#command-line" title="#command-line">la ligne de commande de la Console Web</a>, et les réponses correspondantes, sont affichés de cette façon&nbsp;:</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/5587/web-console-message-input-output.png" style="display: block; height: 68px; margin-left: auto; margin-right: auto; width: 554px;">La barre gris foncé indique qu'il s'agit de messages d'entrée/sortie, tandis que la direction de la flèche indique si il s’agit d'une entrée ou d'une sortie.</p>
-
-<h3 id="Filtrer_et_rechercher"><a name="filtering-and-searching">Filtrer et rechercher</a></h3>
-
-<p>Vous pouvez utiliser la barre d'outils en haut pour filtrer l'affichage&nbsp;:</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/5601/web-console-toolbar-highlighted.png" style="display: block; height: 401px; margin-left: auto; margin-right: auto; width: 924px;">To see only messages of particular types, click the button labeled with that type ("Net", "CSS", and so on). Clicking the main part of the button toggles that type on or off, while clicking the arrow on the right gives you more fine-grained filter options within that type (for example, whether to display errors and warnings).</p>
-
-<p>To see only messages that contain a specific string, type in the text box labeled "Filter output".</p>
-
-<p>Enfin, vous pouvez aussi vider la Console Web de tous ses messages.</p>
+<p>Enfin, vous pouvez utiliser l'icône de la poubelle située à gauche pour vider le contenu de la console. Lorsque la console est vidée, le cache de la console est également vidé. Cela empêche la réapparition des messages d'erreur précédemment affichés lors de la réouverture de la console.</p>

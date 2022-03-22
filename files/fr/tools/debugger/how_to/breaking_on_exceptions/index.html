@@ -6,22 +6,15 @@ original_slug: Outils/Débogueur/Comment/Breaking_on_exceptions
 ---
 <div>{{ToolsSidebar}}</div>
 
-<h4 id="Firefox_version_64">Firefox version 64</h4>
+<div>Pour que le débogueur s'arrête sur une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Error">exception</a>, on cochera les cases suivantes dans <a href="/fr/docs/Tools/Debugger/UI_Tour#liste_des_points_darrêts">la liste des points d'arrêt</a>&nbsp;:</div>
 
-<div>Pour que le Débogueur s'arrête sur les <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Error">exceptions</a>, il suffit de cliquer sur une de ces cases à cocher dans la <a href="/fr/docs/Tools/Debugger/UI_Tour#Breakpoints_list">Liste des points d'arrêt</a> :</div>
+<ul>
+ <li>Pause sur les exceptions</li>
+ <li>Pause sur les exceptions interceptées</li>
+</ul>
 
-<div><img alt="Screen shot from 64.0+build3-0ubuntu0.16.04.1" src="https://mdn.mozillademos.org/files/16397/version64UI.png" style="height: 167px; width: 506px;"></div>
+<div><img alt="Une capture d'écran illustrant les deux cases à cocher" src="version64ui.png"></div>
 
-<h4 id="Versions_antérieures">Versions antérieures</h4>
+<p>Lorsqu'une exception est déclenchée, la ligne où elle se produit est mise en évidence dans le panneau des sources avec une ligne ondulée rouge sous le code problématique. Une bulle d'information décrit l'exception. À partir de Firefox 80, un triangle permet de révéler la pile d'appel correspondante.</p>
 
-<p>Pour que le Débogueur s'arrête sur les <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Error">exceptions</a>, Il faut cliquer sur ce bouton : <img alt="" src="https://mdn.mozillademos.org/files/14410/debugger-exceptions.png" style="height: 26px; margin-bottom: -7px; width: 25px;"> dans la <a href="/fr/docs/Tools/Debugger/UI_Tour#Toolbar">barre d'outils.</a></p>
-
-<p>{{EmbedYouTube("UWIO_UM827k")}}</p>
-
-<p>Le bouton à trois états possibles, cliquer sur celui-ci passe d'un état au suivant.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14416/debugger-exceptions.png" style="height: 26px; margin-bottom: -7px; width: 25px;"> : ne s'arrête sur aucune exception. C'est l'état par défaut.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14412/uncaught-exceptions.png" style="height: 26px; margin-bottom: -7px; width: 25px;"> : ne s'arrête que les exceptions <a href="/fr/docs/Web/JavaScript/Reference/Statements/try...catch">qui ne sont pas attrapées</a>.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14414/all-exceptions.png" style="height: 26px; margin-bottom: -7px; width: 25px;"> : s'arrête sur toutes les exceptions.</p>
+<p><img alt="Capture d'écran de la bulle d'information d'une exception" src="exception-tooltip-stacktrace.png" style="border-style: solid; border-width: 1px;"></p>

@@ -20,13 +20,13 @@ original_slug: Outils/Memory/Dominators
 
 <p>Dans les implémentations modernes de JavaScript, le runtime décide de quand un objet n'est plus nécessaire en se basant sur <em>l'accessibilité</em>. Dans ce système, la heap est représentée par un ou plusieurs graphes. Chaque noeud dans le graphe représente un objet, et chaque connexion entre les noeuds (edge) représente une référence d'un objet à un autre. Le graphe commence au noeud racine, indiqué dans les diagrammes suivant par un "R" :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12383/memory-graph.svg" style="display: block; height: 268px; margin-left: auto; margin-right: auto; width: 384px;"></p>
+<p><img alt="" src="memory-graph.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Lors du passage du ramasse-miette, le runtime parcourt le graphe à partir de la racine et marque chaque objet qu'il trouve. Tous les objets qui ne sont pas trouvés dans ce parcours, ne sont pas accessibles et peuvent être désalloués.</p>
 
 <p>Donc lorsqu'un objet devient inaccessible (par exemple parce qu'il était référencé par une seule variable locale qui sort du scope actuel) alors tout objet qu'il référence devient également inaccessible à son tour (sauf s’il était référencé par d'autres objets qui sont eux toujours accessibles) :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12375/memory-graph-unreachable.svg" style="display: block; height: 267px; margin-left: auto; margin-right: auto; width: 383px;"></p>
+<p><img alt="" src="memory-graph-unreachable.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>A l'inverse, cela veut dire que des objets sont gardés en vie tant qu'un autre objet accessible comporte une référence à cet objet.</p>
 
@@ -45,16 +45,16 @@ original_slug: Outils/Memory/Dominators
 
 <p>Un concept lié à cela est le concept de <em>dominants</em>. Un noeud B "domine" le noeud A si tous les chemins depuis la racine jusqu'à A passent par B :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12379/memory-graph-dominators.svg" style="display: block; height: 309px; margin-left: auto; margin-right: auto; width: 471px;"></p>
+<p><img alt="" src="memory-graph-dominators.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Si un des noeuds dominants du noeud A est libéré, alors le noeud A lui-même devient éligible au ramasse-miette.</p>
 
 <p><a id="immediate_dominator" name="immediate_dominator">Si le noeud B domine le noeud A mais ne domine aucun des dominants de A, alors B est le <em>dominant immédiat </em>de A :</a></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12381/memory-graph-immediate-dominator.svg" style="display: block; height: 309px; margin-left: auto; margin-right: auto; width: 467px;"></p>
+<p><img alt="" src="memory-graph-immediate-dominator.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p><a id="multiple-paths" name="multiple-paths">Une subtilité ici est que si un objet A est référencé par deux autres objets B et C, alors aucun de ces deux objets n'est un dominant de A</a>, car il est possible de retirer soit B soit C du graphe et A serait alors toujours référencé par son autre référent. À la place, le dominant immédiat de A est le premier ancêtre commun :<br>
- <img alt="" src="https://mdn.mozillademos.org/files/12331/memory-graph-dominator-multiple-references.svg" style="display: block; height: 283px; margin-left: auto; margin-right: auto; width: 211px;"></p>
+  <img alt="" src="memory-graph-dominator-multiple-references.svg" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Voir_Aussi">Voir Aussi</h2>
 

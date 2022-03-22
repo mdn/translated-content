@@ -16,7 +16,7 @@ original_slug: Outils/Débogueur/Source_map_errors
 
 <p>Dès lors qu'une erreur arrive, un message apparaitra dans la <a href="/fr/docs/Outils/Console_Web">Console</a>. Le message affichera le message d'erreur, l'URL de la ressource, et l'URL de la source map :</p>
 
-<p><img alt="Error from invalid JSON" src="https://mdn.mozillademos.org/files/15423/invalid-json.png" style="border-style: solid; border-width: 1px; display: block; height: 57px; margin: 0px auto; width: 744px;"></p>
+<p><img alt="Error from invalid JSON" src="invalid-json.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Ici, l'URL de la ressource URL indique que <code>bundle.js</code> mentionne une source map, et l'URL de la source map montre ou trouver la source map en elle-même (avec un chemin relatif à la ressource). L'erreur indique que la source map n'est pas un JSON valide.</p>
 
@@ -24,7 +24,7 @@ original_slug: Outils/Débogueur/Source_map_errors
 
 <h2 id="La_source_map_est_inexistante_ou_inaccessible">La source map est inexistante ou inaccessible</h2>
 
-<p><img alt="Source map file is missing" src="https://mdn.mozillademos.org/files/15429/missing-map.png" style="border-style: solid; border-width: 1px; display: block; height: 42px; margin: 0px auto; width: 733px;"></p>
+<p><img alt="Source map file is missing" src="missing-map.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>La solution ici est de vérifier que le fichier est bien accessible par le navigateur (le fichier existe, et l'URL est bonne).</p>
 
@@ -37,17 +37,17 @@ original_slug: Outils/Débogueur/Source_map_errors
  <li><code>Error: "version" is a required argument</code></li>
 </ul>
 
-<p><img alt='Error: "version" is a required argument' src="https://mdn.mozillademos.org/files/15425/missing-field.png" style="border-style: solid; border-width: 1px; display: block; height: 45px; margin: 0px auto; width: 743px;"></p>
+<p><img alt='Error: "version" is a required argument' src="missing-field.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="Source_originale_manquante">Source originale manquante</h2>
 
 <p>Une source originale peut manquer. Il est possible d'avoir cette erreur en tentant d'ouvrir une source originale dans le Débogueur. Le message est un peu différent dans ce cas :</p>
 
-<p><img alt="Debugger source tab showing the error" src="https://mdn.mozillademos.org/files/15421/Screenshot%20from%202017-09-15%2014-32-02.png" style="border-style: solid; border-width: 1px; display: block; height: 35px; margin: 0px auto; width: 727px;"></p>
+<p><img alt="Debugger source tab showing the error" src="screenshot_from_2017-09-15_14-32-02.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>Ici, l'erreur sera également affichée dans l'onglet source du Débogueur :</p>
 
-<p><img alt="Debugger source tab showing the error" src="https://mdn.mozillademos.org/files/15427/debugger-tab.png" style="border-style: solid; border-width: 1px; display: block; height: 109px; margin: 0px auto; width: 616px;"></p>
+<p><img alt="Debugger source tab showing the error" src="debugger-tab.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h2 id="NetworkError_lors_de_la_récupération_d'une_ressource">NetworkError lors de la récupération d'une ressource</h2>
 

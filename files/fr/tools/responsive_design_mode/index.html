@@ -22,7 +22,7 @@ original_slug: Outils/Vue_adaptative
 
 <ul>
  <li>Dans le <strong>menu de Firefox</strong>, sélectionner le sous-menu <strong>Développement</strong> puis <strong>vue adaptative</strong> (ou le menu Outils si la barre de menus est affichée ou si vous êtes sur macOS).</li>
- <li>Appuyer sur le bouton <strong>vue adaptative</strong> de la <a href="/fr/docs/Tools/Tools_Toolbox#Toolbar">barre d’outils de développement</a>:<img alt="" src="https://mdn.mozillademos.org/files/16318/RDM_button.png" style="display: block; height: 664px; margin-left: auto; margin-right: auto; width: 852px;"></li>
+ <li>Appuyer sur le bouton <strong>vue adaptative</strong> de la <a href="/fr/docs/Tools/Tools_Toolbox#Toolbar">barre d’outils de développement</a>:<img alt="" src="rdm_button.png" style="display: block; margin-left: auto; margin-right: auto;"></li>
  <li>Utiliser le raccourci clavier <strong>Ctrl+Maj+M</strong>, ou <strong>Cmd+Option+M</strong> pour macOS.</li>
 </ul>
 
@@ -34,11 +34,11 @@ original_slug: Outils/Vue_adaptative
 <p><strong>Note:</strong> L'appareil sélectioné ainsi que l'orientation (portrait/paysage) sera sauvegardé entre deux sessions.</p>
 </div>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16319/RDM.png" style="display: block; height: 805px; margin-left: auto; margin-right: auto; width: 852px;"></p>
+<p><img alt="" src="responsive_ui.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Il est possible d'afficher ou de cacher la boîte à outils indépendamment de la vue adaptative elle-même :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16320/RDMdevtools.png" style="display: block; height: 799px; margin-left: auto; margin-right: auto; width: 852px;">Quand la vue adaptative est activée, il est possible de continuer à naviguer comme vous le feriez normalement dans la zone de contenu redimensionnée.</p>
+<p><img alt="" src="rdmdevtools.png" style="display: block; margin-left: auto; margin-right: auto;">Quand la vue adaptative est activée, il est possible de continuer à naviguer comme vous le feriez normalement dans la zone de contenu redimensionnée.</p>
 
 <h2 id="Sélectionner_un_appareil">Sélectionner un appareil</h2>
 
@@ -69,60 +69,7 @@ original_slug: Outils/Vue_adaptative
 
 <p>Il est également possible de prévisualiser les propriétés des appareils existants en survolant leur nom dans le menu des appareils.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14797/RDM%20Custom%20Device.gif" style="display: block; height: 800px; margin: 0px auto; width: 800px;"></p>
-
-<h2 id="Contrôler_les_appareils">Contrôler les appareils</h2>
-
-<p>Il est possible de fournir des valeurs personnalisées pour la plupart des propriétés d'un appareil.</p>
-
-<h3 id="Modifier_la_taille_d'écran">Modifier la taille d'écran</h3>
-
-<p>Pour modifier la taille d'écran, il faut cliquer sur les valeurs en dessous de la zone d'affichage et les modifier :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14939/rdm-set-size-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 948px;"></p>
-
-<p>Il est également possible de déplacer le coin en bas à droite de la zone d'affichage.</p>
-
-<p>Depuis Firefox 59, il est possible d'éditer les tailles d'écran avec le clavier. Lorsque les dimensions sont sélectionnées (ou que le curseur d'écriture est dedans). Il est également possible d'utiliser les flèches haut et bas de 1px.</p>
-
-<p>Pour changer les dimensions plus rapidement, il est possible d'utiliser maj pour itérer de 10pixels en 10 pixels.</p>
-
-<h3 id="Modifier_le_ratio_pixel_de_l'appareil">Modifier le ratio pixel de l'appareil</h3>
-
-<p>Pour définir un ratio personnalisé, il faut cliquer sur la boite "DPR" et sélectionner la valeur voulue.<img alt="" src="https://mdn.mozillademos.org/files/14941/rdm-set-dpr-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 948px;"></p>
-
-<h3 id="Activerdésactiver_la_simulation_du_touch">Activer/désactiver la simulation du touch</h3>
-
-<p>Pour ce faire, il faut cliquer sur l'icône en forme de doigt :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14935/rdm-toggle-touch-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 948px;">Lorsque la simulation est activée, les évènements de la souris sont transformés en évènements <a href="/fr/docs/Web/Guide/API/DOM/Events/Touch_events">évènements touch</a>.</p>
-
-<h3 id="Contrôler_le_comportement_de_rechargement_de_page">Contrôler le comportement de rechargement de page</h3>
-
-<p>Depuis Firefox 60 le menu de sélection <em>Actualiser quand... </em>a été rajouté :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/15841/reload-behavior-controls.png" style="display: block; margin: 0 auto;"></p>
-
-<p>Cliquer dessus affiche deux options qui sont toutes deux désactivées par défaut :</p>
-
-<ul>
- <li>Actualiser lors de l'activation/désactivation de la simulation tactile.</li>
- <li>Actualiser lors du changement d'agent utilisateur.</li>
-</ul>
-
-<p>Avant Firefox 60, ces actualisations étaient automatiques, car certains comportements de la page n'étaient pas fonctionnels sinon. Par exemple, certaines pages vérifient la compatibilité tactile au chargement, et n'ajoute des évènements que si tel est le cas.</p>
-
-<p>Cependant, si vous n'êtes pas intéressé par de telles fonctionnalités (par exemple si vous avez juste envie de vérifier la mise en page dans différentes résolutions), ces rechargements peuvent s'avérer ennuyants. Il est donc utile de pouvoir contrôler ces rechargements.</p>
-
-<p>Lors d'un changement de certaines options, un message d'avertissement est affiché pour vous prévenir que les rechargements ne sont plus automatiques, et précise comment réactiver ce comportement :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/15840/page-reload-warning.png" style="display: block; margin: 0 auto;"></p>
-
-<h3 id="Activerdésactiver_l'orientation">Activer/désactiver l'orientation</h3>
-
-<p>Pour alterner entre les orientations d'écran portrait et paysage, il suffit de cliquer sur l'icône à droite de la sélection d'appareils :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14937/rdm-toggle-orientation-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 948px;"></p>
+<p>{{EmbedYouTube("SA0RlGtOCmE")}}</p>
 
 <h2 id="Bridage_réseau">Bridage réseau</h2>
 
@@ -199,12 +146,6 @@ original_slug: Outils/Vue_adaptative
  </tbody>
 </table>
 
-<p>Pour sélectionner un réseau il faut cliquer sur la liste déroulante qui par défaut vaut "Aucune limitation" :<img alt="" src="https://mdn.mozillademos.org/files/14945/rdm-network-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 948px;"></p>
+<p>Pour sélectionner un réseau il faut cliquer sur la liste déroulante qui par défaut vaut "Aucune limitation" :</p>
 
-<h2 id="Prendre_une_capture_d'écran">Prendre une capture d'écran</h2>
-
-<p>Pour prendre une capture d'écran, il suffit de cliquer sur l'icône en forme d'appareil photo :</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/14943/rdm-screenshot-2.png" style="display: block; height: 758px; margin-left: auto; margin-right: auto; width: 948px;">Les captures d'écran sont enregistrées à l'emplacement de téléchargement par défaut de Firefox.</p>
-
-<p>Depuis Firefox 53, si la case "Enregistrer dans le presse-papier" est cochée dans la page des <a href="/fr/docs/Tools/Settings">paramètres</a> alors, la capture d'écran sera aussi enregistrée dans le presse-papier du système d'exploitation.</p>
+<p><img alt="" src="rdm_throttling.png" style="display: block; margin-left: auto; margin-right: auto;"></p>

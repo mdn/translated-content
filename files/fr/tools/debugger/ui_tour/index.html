@@ -24,27 +24,23 @@ original_slug: Outils/Débogueur/Visite_guidée_de_l_interface_utilisateur
  </li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16840/debugger_uiTour_01.png" style="border: 1px solid black; display: block; height: 598px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_01.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Panneau_de_la_liste_des_sources">Panneau de la liste des sources</h2>
 
 <p>Le panneau de la liste des sources liste tous les fichiers sources JavaScript qui sont chargés dans la page, et permet d'en sélectionner un pour le déboguer. Les sources sont triées par origine, puis organisées selon la structure de dossier depuis lesquels elles sont chargées.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16841/debugger_uiTour_02.png" style="border: 1px solid black; display: block; height: 598px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_02.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Il est possible de <a href="/fr/docs/Tools/Debugger/How_to/Search#Searching_for_files">rechercher un fichier</a> en utilisant le raccourci clavier <kbd>Ctrl</kbd> + <kbd>P</kbd> (<kbd>Cmd</kbd> + <kbd>P</kbd> sur Mac).</p>
 
 <p>Depuis Firefox 69 les extensions Web sont listés en utilisant le nom de l'extension plutôt que son identifiant.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16868/source_list_pane.png" style="border: 1px solid black; display: block; height: 324px; margin: 0px auto; width: 373px;"></p>
+<p><img alt="" src="source_list_pane.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
 <p>Il est possible de simplifier la liste des fichiers dans la liste des sources avec un clic droit sur un dossier, et une sélection de "définir comme répertoire racine".</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16122/directory-root.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
-
 <p>Maintenant, la racine de la liste des sources est la racine du projet, rendant ainsi la navigation bien plus pratique.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/16123/directory-root-02.png" style="border: 1px sollid black; display: block; height: 408px; margin: 0 auto; width: 480px;"></p>
 
 <h3 id="Onglet_Structure">Onglet Structure</h3>
 
@@ -54,7 +50,7 @@ original_slug: Outils/Débogueur/Visite_guidée_de_l_interface_utilisateur
 
 <p>Ce panneau affiche le fichier JavaScript actuellement chargé.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16843/debugger_uiTour_02.5.png" style="border: 1px solid black; display: block; height: 598px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_02.5.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Lorsque le panneau des sources est sélectionné, il est possible de <a href="/fr/docs/Tools/Debugger/How_to/Search#Searching_within_a_file">rechercher une string dans le fichier</a> en utilisant  <kbd>Ctrl</kbd> + <kbd>F</kbd> (<kbd>Cmd</kbd> + <kbd>F</kbd> sur Mac).</p>
 
@@ -66,7 +62,7 @@ original_slug: Outils/Débogueur/Visite_guidée_de_l_interface_utilisateur
  <li>La ligne 100 a un point d'arrêt conditionnel.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16842/debugger_uiTour_03.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_03.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>La troisième colonne affiche d'avantage d'informations sur les point d'arrêt. Par exemple le point de sortie console ligne 85 affiche la valeur de <em>tableRow </em>dans la console, et le point d'arrêt conditionnel à la ligne 100 a pour condition que <em>todolist </em>soit <em>undefined.</em></p>
 
@@ -74,7 +70,7 @@ original_slug: Outils/Débogueur/Visite_guidée_de_l_interface_utilisateur
 
 <p>La barre d'outils est située en haut du panneau de droite :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16844/debugger_toolbar.png" style="display: block; height: 126px; margin-left: auto; margin-right: auto; width: 236px;"></p>
+<p><img alt="" src="debugger_toolbar_with_settings_menu_four_items.jpg"></p>
 
 <p>Cette barre est composée de :</p>
 
@@ -95,25 +91,25 @@ original_slug: Outils/Débogueur/Visite_guidée_de_l_interface_utilisateur
 
 <p>Sous la barre d'outils, se trouve une liste de tous les points d'arrêt. À côté de chaque point, il y a une case à cocher qui permet <a href="/fr/docs/Tools/Debugger/How_to/Disable_breakpoints">d'activer/désactiver le point d'arrêt</a> :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16845/debugger_uiTour_breakpoints.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_breakpoints.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Expressions_espionnes">Expressions espionnes</h2>
 
 <p>Il est possible d'ajouter des expressions espionnes dans la barre de droite. Celles-ci seront évaluées lorsque le code est en pause :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14845/watch-expressions.png" style="display: block; height: 769px; margin-left: auto; margin-right: auto; width: 504px;"></p>
+<p><img alt="" src="watch-expressions.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Infobulle_de_variable">Infobulle de variable</h2>
 
 <p>Survoler une variable dans le code source affichera une infobulle contentant sa valeur :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14851/tooltip-1.gif" style="display: block; height: 522px; margin-left: auto; margin-right: auto; width: 988px;"></p>
+<p><img alt="" src="tooltip-1.gif" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h2 id="Pile_dexécution_call_stack">Pile d'exécution (call stack)</h2>
 
 <p>Lorsque le Débogueur est en pause, une pile d'exécution est affichée :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16846/debugger_uiTour_call_stack.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="" src="debugger_uitour_call_stack.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Chaque niveau de la pile à sa propre ligne, avec le nom de la fonction, le nom de fichier, et le numéro de ligne. Cliquer sur cette ligne ouvre la source dans le panneau des sources.</p>
 
@@ -121,6 +117,6 @@ original_slug: Outils/Débogueur/Visite_guidée_de_l_interface_utilisateur
 
 <p>Dans le panneau de droite, se trouve un élément nommé "Portées". Lorsque le Débogueur est arrêté, il est possible d'étendre cette section pour afficher tous les objets qui sont dans la portée du programme en ce point :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/16847/debugger_uiTour_scopes.png" style="border: 1px solid black; display: block; height: 445px; margin-left: auto; margin-right: auto; width: 922px;"></p>
+<p><img alt="A screenshot of the Debugger, with the Scopes pane highlighted" src="debugger_scopes_fx78.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Les objets sont triés par portée : du plus local au plus global (Window dans la plupart des scripts de page web).</p>

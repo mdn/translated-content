@@ -3166,7 +3166,6 @@
 /fr/docs/Outils/Débogage_distant	/fr/docs/Tools/Remote_Debugging
 /fr/docs/Outils/Débogage_distant/Chrome_Desktop	/fr/docs/Tools/Remote_Debugging/Chrome_Desktop
 /fr/docs/Outils/Débogage_distant/Debugging_Firefox_Desktop	/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_Desktop
-/fr/docs/Outils/Débogage_distant/Debugging_Firefox_for_Android_with_WebIDE_clone	/fr/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE
 /fr/docs/Outils/Débogage_distant/Thunderbird	/fr/docs/Tools/Remote_Debugging/Thunderbird
 /fr/docs/Outils/Débogueur	/fr/docs/Tools/Debugger
 /fr/docs/Outils/Débogueur/Comment	/fr/docs/Tools/Debugger/How_to
@@ -3222,7 +3221,6 @@
 /fr/docs/Outils/Editeur_Web_Audio	/fr/docs/Tools/Web_Audio_Editor
 /fr/docs/Outils/Editeur_de_shaders	/fr/docs/Tools/Shader_Editor
 /fr/docs/Outils/Eyedropper	/fr/docs/Tools/Eyedropper
-/fr/docs/Outils/Firefox_OS_Simulator_clone	/fr/docs/Tools/Firefox_OS_Simulator_clone
 /fr/docs/Outils/Frise_chronologique	/fr/docs/conflicting/Tools/Performance/Waterfall
 /fr/docs/Outils/Index	/fr/docs/conflicting/Tools
 /fr/docs/Outils/Inspecteur	/fr/docs/Tools/Page_Inspector

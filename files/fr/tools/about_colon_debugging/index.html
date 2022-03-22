@@ -4,209 +4,250 @@ slug: Tools/about:debugging
 translation_of: Tools/about:debugging
 original_slug: Outils/about:debugging
 ---
-<div>{{ToolsSidebar}}</div>
+<p>{{ToolsSidebar}}</p>
 
-<p>The about:debugging page provides a single place from which you can attach the Firefox Developer Tools to a number of debugging targets. At the moment it supports three main sorts of targets: restartless add-ons, tabs, and workers.</p>
+<p>The <code>about:debugging</code> page provides a single place from which you can attach the Firefox Developer Tools to a number of debugging targets. At the moment it supports three main sorts of targets: restartless add-ons, tabs, and workers.</p>
 
 <h2 id="Opening_the_aboutdebugging_page">Opening the about:debugging page</h2>
 
-<p>There are several different ways to open about:debugging:</p>
+<p>There are two ways to open <code>about:debugging</code>:</p>
 
 <ul>
- <li>Type "about:debugging" in the Firefox URL bar.</li>
- <li><em>New in Firefox 47</em>: in the Tools &gt; Web Developer menu, click "Service Workers".</li>
- <li><em>New in Firefox 47</em>: click the wrench icon (<img alt="" src="https://mdn.mozillademos.org/files/12710/wrench-icon.png" style="height: 21px; width: 21px;">), which is in the main toolbar or under the Hamburger menu (<img alt="" src="https://mdn.mozillademos.org/files/12712/hamburger.png" style="height: 20px; width: 22px;">), then select "Service Workers".</li>
+ <li>Type <code>about:debugging</code> in the Firefox URL bar.</li>
+ <li>In the <strong>Tools</strong> &gt; <strong>Browser Tools</strong> menu, click <strong>Remote Debugging</strong>.</li>
 </ul>
 
-<p>When about:debugging opens, on the left-hand side, you'll see a sidebar enabling you to switch between the two main views: one for add-ons and one for workers.</p>
+<p>When about:debugging opens, on the left-hand side, you'll see a sidebar with two options and information about your remote debugging setup:</p>
 
-<p>Le fait que les modules complémentaires système apparaisent dans cette liste ou non, dépend de la préférence <code>devtools.aboutdebugging.showSystemAddons</code>. Pour afficher ces modules complémentaires, il est nécéssaire de la passer à <code>true</code> dans <code>about:config</code>.</p>
+<dl>
+ <dt>Setup</dt>
+ <dd>Use the Setup tab to configure the connection to your remote device.</dd>
+ <dt>This Firefox</dt>
+ <dd>Provides information about temporary extensions you have loaded for debugging, extensions that are installed in Firefox, the tabs that you currently have open, and service workers running on Firefox.</dd>
+</dl>
 
-<h2 id="Add-ons">Add-ons</h2>
+<p><img alt="" src="about_debugging_setup.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
 
-<div class="note">
-<p>The Add-ons section in about:debugging only supports restartless add-ons, including <a href="/en-US/Add-ons/Bootstrapped_extensions">basic bootstrapped extensions</a>, <a href="/en-US/Add-ons/SDK">Add-on SDK add-ons</a>, and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</p>
+<p>If your <code>about:debugging</code> page is different from the one displayed here, go to <code>about:config</code>, find and set the option <code>devtools.aboutdebugging.new-enabled</code> to <strong>true</strong>.</p>
+
+<h2 id="Setup_tab">Setup tab</h2>
+
+<h3 id="Connecting_to_a_remote_device">Connecting to a remote device</h3>
+
+<p>Firefox supports debugging over USB with Android devices, using the about:debugging page.</p>
+
+<p>Before you connect:</p>
+
+<ol>
+ <li>Enable Developer settings on your Android device.</li>
+ <li>Enable USB debugging in the Android Developer settings.</li>
+ <li>Enable <strong>Remote Debugging via USB</strong> in the Advanced Settings in Firefox on the Android device.</li>
+ <li>Connect the Android device to your computer using a USB cable.</li>
+</ol>
+
+<p>If your device doesn't appear in the lefthand side of the about:debugging page, try clicking the <strong>Refresh devices</strong> button.</p>
+
+<p><strong>If it still doesn't appear</strong>, it may be because the link between your Android device and your computer is not authorized yet. First make sure you have installed <a href="https://developer.android.com/studio/command-line/adb.html">Android Debug Bridge</a> from Android Tools on your computer in order for it to be able to connect to your device. Next, disable every debugging setting already activated and repeat the steps described before. Your device should show a popup to authorize your computer to connect to it — accept this and then click the <strong>Refresh devices</strong> button again. The device should appear.</p>
+
+<div class="notecard note">
+<p><strong>Note</strong>: You do not need to install the full Android Studio SDK. Only adb is needed.</p>
 </div>
 
-<p>This page enables you to do two things:</p>
+<p>To start a debugging session, first open the page that you wish to debug and then click <strong>Connect</strong> next to the device name to open a connection to it. If the connection was successful, you can now click the name of the device to switch to a tab with information about the device.</p>
+
+<p><img alt="Screenshot of the debugging page for an Android device" src="device_information.png" style="border: 1px solid black; display: block; margin: 0 auto;"></p>
+
+<p>The information on this page is the same as the information on the <strong>This Firefox</strong> tab, but instead of displaying information for your computer, it displays the information for the remote device with the addition of a <strong>Tabs</strong> section with an entry for each of the tabs open on the remote device.</p>
+
+<p>Note: If the version of Firefox on your remote device is more than one major version older than the version running on your computer, you may see a message like the following:</p>
+
+<p><img alt="The connected browser has an old version (68.2.0). The minimum supported version (69.0a1). This is an unsupported setup and may cause DevTools to fail. Please update the connected browser." src="version_warning.png" style="display: block; margin: 0 auto;"></p>
+
+<p>In Firefox 76 and above, the message can look like the following:</p>
+
+<p><img alt="This version of Firefox cannot debug Firefox for Android (68). We recommend installing Firefox for Android Nightly on your phone for testing. More details" src="fxand-68-error.png"></p>
+
+<p>See <a href="#">Connection for Firefox for Android 68</a> for more information.</p>
+
+<p>In the image above, there are three tabs open: <strong>Network or cache Recipe</strong>, <strong>Nightly Home</strong>, and <strong>About Nightly</strong>. To debug the contents of one of these tabs, click the <strong>Inspect</strong> button next to its title. When you do, the Developer Tools open in a new tab.</p>
+
+<p><img alt="Screenshot showing the remote debugging window, with the editable URL bar" src="remote-debugger-w-url-buttons.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+
+<p>Above the usual list of tools, you can see information about the device you are connected to, including the fact that you are connected (in this example) via USB, to Firefox Preview, on a Pixel 2, as well as the title of the page that you are debugging, and the address of the page.</p>
+
+<p>Starting in Firefox 78, the URL bar is editable, so that you can change the URL used by the browser on the remote device, by typing in Firefox for Desktop. You can also reload the page by clicking the <strong>Reload</strong> button next to the URL bar, and (starting 79), navigate backward or forward in the browsing history with the <strong>Back</strong> and <strong>Forward</strong> buttons.</p>
+
+<h3 id="Connecting_over_the_Network">Connecting over the Network</h3>
+
+<p>You can connect to a Firefox Debug server on your network, or on your debugging machine using the <strong>Network Location</strong> settings of the about:debugging page.</p>
+
+<p><img alt="" src="network_location.png" style="display: block; margin: 0px auto;"></p>
+
+<p>Enter the location and port on which the debugger server is running. When you do, it is added to the Network locations list along with the devices, as shown below:</p>
+
+<p><img alt="" src="connect_network_location.png" style="display: block; margin: 0 auto;"></p>
+
+<h2 id="This_Firefox">This Firefox</h2>
+
+<p>The <strong>This Firefox</strong> tab combines the features of Extensions, Tabs, and Workers into a single tab with the following sections:</p>
+
+<dl>
+ <dt>Temporary Extensions</dt>
+ <dd>Displays a list of the extensions that you have loaded using the <strong>Load Temporary Add-on</strong> button.</dd>
+ <dt>Extensions</dt>
+ <dd>This section lists information about the extensions that you have installed on your system.</dd>
+ <dt>Service Workers, Shared Workers, and Other Workers</dt>
+ <dd>There are three sections on this page that deal with Service Workers, Shared Workers, and Other Workers.</dd>
+</dl>
+
+<p><img alt="" src="about_debugging_this_firefox.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+
+<p>Whether internal extensions appear in the list on this page depends on the setting of the <code>devtools.aboutdebugging.showHiddenAddons</code> preference. If you need to see these extensions, navigate to <code>about:config</code> and make sure that the preference is set to <code>true</code>.</p>
+
+<h2 id="Extensions">Extensions</h2>
+
+<h3 id="Loading_a_temporary_extension">Loading a temporary extension</h3>
+
+<p>With the <strong>Load Temporary Add-on</strong> button you can temporarily load a web extension from a directory on disk. Click the button, navigate to the directory containing the add-on and select its manifest file. The temporary extension is then displayed under the <strong>Temporary Extensions</strong> header.</p>
+
+<p>You don't have to package or sign the extension before loading it, and it stays installed until you restart Firefox.</p>
+
+<p>The major advantages of this method, compared with installing an add-on from an XPI, are:</p>
 
 <ul>
- <li>Load an add-on temporarily from disk</li>
- <li>Connect the <a href="/en-US/Add-ons/Add-on_Debugger">Add-on Debugger</a> to any restartless add-ons</li>
+ <li>You don't have to rebuild an XPI and reinstall when you change the add-on's code;</li>
+ <li>You can load an add-on without signing it and without needing to disable signing.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15009/debugger-revised.png" style="display: block; height: 612px; margin-left: auto; margin-right: auto; width: 700px;"></p>
+<p>Once you have loaded a temporary extension, you can see information about it and perform operations on it.</p>
 
-<h3 id="Connecting_the_Add-on_Debugger">Connecting the Add-on Debugger</h3>
+<p><img alt="Screenshot of the debugging information panel for a temporary extension" src="temporary_extension.png" style="display: block; margin: 0 auto;"></p>
 
-<div class="note">
-<p>Note that at the moment, it's recommended that you use the Browser Toolbox, not the Add-on Debugger, for debugging WebExtensions. See <a href="/en-US/Add-ons/WebExtensions/Debugging">Debugging WebExtensions</a> for all the details.</p>
-</div>
+<p>You can use the following buttons:</p>
 
-<p>The Add-ons page in about:debugging lists all restartless add-ons that are currently installed (note that this list may include add-ons that came preinstalled with your Firefox). Next to each entry is a button labeled "Debug".</p>
+<dl>
+ <dt>Inspect</dt>
+ <dd>Loads the extension in the debugger.</dd>
+ <dt>Reload</dt>
+ <dd>Reloads the temporary extension. This is handy when you have made changes to the extension.</dd>
+ <dt>Remove</dt>
+ <dd>Unloads the temporary extension.</dd>
+</dl>
 
-<p>If the "Debug" button is disabled, check the "Enable add-on debugging" box.</p>
+<p>Other information about the extension is displayed:</p>
 
-<p>If you click "Debug", you'll see a dialog asking you to accept an incoming connection. Click "OK", and the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> will start in a separate window. Note that sometimes the debugger window is hidden by the main Firefox window.</p>
+<dl>
+ <dt>Location</dt>
+ <dd>The location of the extension's source code on your local system.</dd>
+ <dt>Extension ID</dt>
+ <dd>The temporary ID assigned to the extension.</dd>
+ <dt>Internal UUID</dt>
+ <dd>The internal UUID assigned to the extension.</dd>
+ <dt>Manifest URL</dt>
+ <dd>If you click the link, the manifest for this extension is loaded in a new tab.</dd>
+</dl>
 
-<p>{{EmbedYouTube("tGGcA3bT3VA")}}</p>
+<h3 id="Updating_a_temporary_extension">Updating a temporary extension</h3>
 
-<p>See the page on the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> for all the things you can do with this tool.</p>
-
-<div class="note">
-<p><a id="Enabling_add-on_debugging" name="Enabling_add-on_debugging">The "Enable add-on debugging" button</a> works by turning on the <code>devtools.chrome.enabled</code> and <code>devtools.debugger.remote-enabled</code> preferences. Both preferences must be true to enable add-on debugging. Checking the box sets both preferences to <code>true</code>, and unchecking it sets them both to <code>false</code>.</p>
-
-<p>You can also modify the preferences directly in about:config, or by checking "Enable browser chrome and add-on debugging toolboxes" and "Enable remote debugging" in the <a href="/en-US/docs/Tools/Tools_Toolbox#Settings">Developer Tools Settings</a>.</p>
-</div>
-
-<h3 id="Loading_a_temporary_add-on">Loading a temporary add-on</h3>
-
-<p>With the "Load Temporary Add-on" button you can load any sort of restartless add-on temporarily, from a directory on disk. Just click the button, navigate to the directory containing the add-on's file, and select any file in that directory. The temporary add-on will be displayed under the "Temporary Extensions" header.</p>
-
-<p>You don't have to package or sign the add-on. The add-on will stay installed until you restart Firefox.</p>
-
-<p>{{EmbedYouTube("sAM78GU4P34")}}</p>
-
-<p>The big advantages of this method, compared with installing an add-on from an XPI, are:</p>
+<p>If you install an extension in this way, what happens when you update the extension?</p>
 
 <ul>
- <li>you don't have to rebuild an XPI and reinstall when you change the add-on's code</li>
- <li>you can load an add-on without signing it and without needing to disable signing.</li>
-</ul>
-
-<h3 id="Updating_a_temporary_add-on">Updating a temporary add-on</h3>
-
-<p>If you install the add-on in this way, what happens when you update the add-on's files?</p>
-
-<h4 id="Before_Firefox_48">Before Firefox 48</h4>
-
-<ul>
- <li>If you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
- <li>If you change files that stay loaded the whole time, like <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a>, then you can pick up changes you've made by disabling and then re-enabling the add-on in the about:addons page.</li>
- <li>If you change files that are only parsed at install time, like the <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> file, you'll need to restart Firefox, then load the add-on again.</li>
-</ul>
-
-<div class="note">
-<p>Note that before Firefox 48, loading the add-on again by pressing "Load Temporary Add-on" without restarting Firefox <em>does not work</em>.</p>
-</div>
-
-<h4 id="Firefox_48_onwards">Firefox 48 onwards</h4>
-
-<ul>
-</ul>
-
-<p>From Firefox 48 onwards:</p>
-
-<ul>
- <li>as before: if you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
- <li>there's a better way to handle the other cases: click the "Reload" button next to the "Debug" button. This does what it says:
+ <li>If you change files that are loaded on demand, like <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">content scripts</a> or <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2">popups</a>, then changes you make are picked up automatically, and you'll see them the next time the content script is loaded or the popup is shown.</li>
+ <li>For other changes, click the <strong>Reload</strong> button. This does what it says:
   <ul>
-   <li>reloading any persistent scripts, such as <a href="/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">background scripts</a></li>
-   <li>parsing the manifest.json file again, so changes to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> or any other keys will take effect.</li>
+   <li>Reloads any persistent scripts, such as <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts">background scripts</a></li>
+   <li>Parses the <code>manifest.json</code> file again, so changes to <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">permissions</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts">content_scripts</a></code>, <code><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> or any other keys take effect</li>
   </ul>
  </li>
 </ul>
 
-<div class="note">
-<p>Note that in Firefox 49 onwards, the Reload button is only enabled for temporary add-ons. It will be disabled for all other add-ons.</p>
-</div>
+<h3 id="Installed_Extensions">Installed Extensions</h3>
 
-<h2 id="Tabs">Tabs</h2>
+<p>The permanently installed extensions are listed in the next section, <strong>Extensions</strong>. For each one, you see something like the following:</p>
 
-<p>In Firefox 49 onwards, a Tabs page is available in <code>about:debugging</code> — this provides a complete list of all the debuggable tabs open in the current Firefox instance.</p>
+<p><img alt="Screenshot of the debugging information panel for an installed extension" src="installed_extension.png" style="display: block; margin: 0 auto;"></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13617/about-debugging-tabs.png" style="display: block; height: 628px; margin: 0px auto; width: 900px;"></p>
+<p>The <strong>Inspect</strong> button, and the <strong>Extension ID</strong> and <strong>Internal UUID</strong> fields are the same as for temporary extensions.</p>
 
-<p>Each tab entry has a <em>Debug</em> button next to it — when clicked, this will open up a toolbox specific to that tab, allowing you to debug that tab's contents.</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/13619/about-debugging-tabs-toolbox.png" style="display: block; height: 628px; margin: 0px auto; width: 900px;"></p>
+<p>Just as it does with temporarily loaded extensions, the link next to <strong>Manifest URL</strong> opens the loaded manifest in a new tab.</p>
 
 <div class="note">
-<p>Note that this feature isn't that immediately useful to debugging desktop tabs — you can open up a toolbox to debug a tab easily enough already — but this will become far more useful when <code>about:debugging</code> starts to support remote debugging, and this page can begin to list tabs available for debugging on mobile device browsers, simulators, etc. See {{bug(1212802)}} for the latest on this work.</p>
+<p><strong>Note:</strong> It's recommended that you use the Browser Toolbox, not the Add-on Debugger, for debugging WebExtensions. See <a href="https://extensionworkshop.com/documentation/develop/debugging/">Debugging WebExtensions</a> for all the details.</p>
 </div>
+
+<p>The Add-ons section in about:debugging lists all web extensions that are currently installed. Next to each entry is a button labeled <strong>Inspect</strong>.</p>
+
+<div class="notecard note">
+<p><strong>Note:</strong> This list may include add-ons that came preinstalled with Firefox.</p>
+</div>
+
+<p>If you click <strong>Inspect</strong>, the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> will start in a new tab.</p>
+
+<p>{{EmbedYouTube("efCpDNuNg_c")}}</p>
+
+<p>See the page on the <a href="/en-US/docs/Mozilla/Add-ons/Add-on_Debugger">Add-on Debugger</a> for all the things you can do with this tool.</p>
 
 <h2 id="Workers">Workers</h2>
 
-<p>The Workers page shows your workers, categorised as follows:</p>
+<p>The Workers section shows all the workers you've got registered on your Firefox, categorized as follows:</p>
 
 <ul>
  <li>All registered <a href="/en-US/docs/Web/API/Service_Worker_API">Service Workers</a></li>
  <li>All registered <a href="/en-US/docs/Web/API/SharedWorker">Shared Workers</a></li>
- <li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#Dedicated_workers">Dedicated Workers</a></li>
+ <li>Other workers, including <a href="/en-US/docs/Web/API/ChromeWorker">Chrome Workers</a> and <a href="/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#dedicated_workers">Dedicated Workers</a></li>
 </ul>
 
 <p>You can connect the developer tools to each worker, and send push notifications to service workers.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13058/about-debugging-workers.png" style="display: block; height: 642px; margin-left: auto; margin-right: auto; width: 784px;"></p>
+<p><img alt="" src="about_debugging_workers.png" style="border: 1px solid black; display: block; margin-left: auto; margin-right: auto;"></p>
 
 <h3 id="Service_worker_state">Service worker state</h3>
 
-<p>From Firefox 52, the list of service workers shows the state of the service worker in its <a href="https://developers.google.com/web/fundamentals/instant-and-offline/service-worker/lifecycle">lifecycle</a>. Three states are distinguished:</p>
+<p>The list of service workers shows the state of the service worker in its <a href="https://developers.google.com/web/fundamentals/primers/service-workers/lifecycle">lifecycle</a>. Three states are possible:</p>
 
 <ul>
- <li><em>"Registering"</em>: this covers all states between the service worker's initial registration, and its assuming control of pages. That is, it subsumes the "installing", "activating", and "waiting" states.</li>
- <li><em>"Running"</em>: the service worker is currently running. It's installed and activated, and is currently handling events.</li>
- <li><em>"Stopped"</em>: the service worker is installed and activated, but has been terminated after being idle.</li>
+ <li><em>Registering</em>: this covers all states between the service worker's initial registration, and its assuming control of pages. That is, it subsumes the <em>installing</em>, <em>activating</em>, and <em>waiting</em> states.</li>
+ <li><em>Running</em>: the service worker is currently running. It's installed and activated, and is currently handling events.</li>
+ <li><em>Stopped</em>: the service worker is installed and activated, but has been terminated after being idle.</li>
 </ul>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14488/service-worker-status.png" style="display: block; height: 555px; margin-left: auto; margin-right: auto; width: 900px;"></p>
+<p><img alt="Screenshot of the debugging panel for a service worker that is in the Running state" src="sample_service_worker.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<div class="note">
 <p>This section uses a simple ServiceWorker demo, hosted at <a href="https://serviceworke.rs/push-simple/">https://serviceworke.rs/push-simple/</a>.</p>
-</div>
-
-<h3 id="Debugging_workers">Debugging workers</h3>
-
-<p>For a service worker, if it is already running, you'll see two buttons next to it, labeled "Debug" and "Push". If it's not already running, you'll see one button, labeled "Start": click this to start the service worker.</p>
-
-<p>Clicking "Debug" connects the JavaScript Debugger and Console to this worker. You can set breakpoints, step through code, watch variables, evaluate code, and so on:</p>
-
-<p>{{EmbedYouTube("Z8ax79sHWDU")}}</p>
-
-<h3 id="Registering_workers">Registering workers</h3>
-
-<p>At first, you won't see any workers listed under <em>Service Workers</em> or <em>Shared Workers</em>. As soon as a worker is registered, the listing is updated:</p>
-
-<p>{{EmbedYouTube("wy4kyWFhFF4")}}</p>
 
 <div class="note">
-<p>Before Firefox 47, service workers were only shown when they were actually running.</p>
+<p><strong>Note</strong>: From Firefox 79 onwards, you can access similar information on the Service Workers registered on a particular domain by going to the Firefox DevTools <a href="/en-US/docs/Tools/Application">Application panel</a>.</p>
 </div>
 
 <h3 id="Unregistering_service_workers">Unregistering service workers</h3>
 
-<div class="geckoVersionNote">
-<p>New in Firefox 48.</p>
-</div>
-
-<p>Starting in Firefox 48, you'll see a link named "unregister" next to each registered service worker:</p>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/13056/unregister-sw.png" style="display: block; margin-left: auto; margin-right: auto; width: 700px;"></p>
-
-<p>Click the link to unregister the service worker.</p>
+<p>Click the <strong>Unregister</strong> button to unregister the service worker.</p>
 
 <h3 id="Sending_push_events_to_service_workers">Sending push events to service workers</h3>
 
-<div class="note">
-<p>Sending push events in about:debugging is new in Firefox 47.</p>
-</div>
-
-<p>To debug push notifications, you can set a breakpoint in the <a href="/en-US/docs/Web/API/PushEvent">push event</a> listener. However, you can also debug push notifications locally, without needing the server. Just click the "Push" button to send a push event to the service worker:</p>
-
-<p>{{EmbedYouTube("62SkLyA-Zno")}}</p>
+<p>To debug push notifications, you can set a breakpoint in the <a href="/en-US/docs/Web/API/PushEvent">push event</a> listener. However, you can also debug push notifications locally, without needing the server. Click the <strong>Push</strong> button to send a push event to the service worker.</p>
 
 <h3 id="Service_workers_not_compatible">Service workers not compatible</h3>
 
 <div>
-<p>In Firefox 49+, a warning message will be displayed in the Service Workers section of the Workers page if service workers are incompatible with the current browser configuration, and therefore cannot be used or debugged.</p>
+<p>A warning message is displayed at the top of the <strong>This Firefox</strong> tab if service workers are incompatible with the current browser configuration, and therefore cannot be used or debugged.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13613/sw-not-compatible.png" style="display: block; height: 705px; margin: 0px auto; width: 1011px;"></p>
+<p><img alt="" src="worker_warning.png" style="display: block; margin: 0px auto;"></p>
 </div>
 
-<p>Service workers can be unavailable for several reasons:</p>
+<p>Service workers can be unavailable if the <code>dom.serviceWorkers.enable</code> preference is set to false in <code>about:config</code>.</p>
+
+<h2 id="Connection_to_Firefox_for_Android_68">Connection to Firefox for Android 68</h2>
+
+<p>Releases of Firefox for Android that are based on version 68 cannot be debugged from desktop Firefox versions 69 or later, because of the difference in release versions. Until such time as Firefox for Android is updated to a newer major release, in synch with desktop Firefox, you should use one of the following Firefox for Android versions:</p>
 
 <ul>
- <li>If you are using a Private Browsing window.</li>
- <li>If your History preference is set to "Never Remember History" or "Always use private browsing mode".</li>
- <li>If the <code>dom.serviceWorkers.enable</code> preference is set to false in <code>about:config</code>.</li>
+ <li><a href="https://play.google.com/store/apps/details?id=org.mozilla.fenix">Firefox Preview</a>, if your desktop Firefox is the main release or Developer Edition</li>
+ <li><a href="https://play.google.com/store/apps/details?id=org.mozilla.fenix">Firefox for Android Nightly</a></li>
 </ul>
+
+<p>If you prefer to test with the main release of Firefox for Android (i.e., based on release 68), you can do so with the desktop <a href="https://support.mozilla.org/en-US/kb/switch-to-firefox-extended-support-release-esr">Firefox Extended Support Release (ESR)</a>, which is also based on version 68.</p>
+
+<p>Note that <code>about:debugging</code> is not enabled by default in Firefox ESR.  To enable it, open the <a href="https://support.mozilla.org/en-US/kb/about-config-editor-firefox">Configuration Editor</a> (<code>about:config</code>) and set <code>devtools.aboutdebugging.new-enabled</code> to <strong>true</strong>.</p>
+
+<p>If you used a higher version of Firefox prior to installing Firefox ESR, you will be prompted to create a new user profile, in order to protect your user data. For more information, see <a href="https://support.mozilla.org/en-US/kb/dedicated-profiles-firefox-installation#w_what-happens-to-my-profile-if-i-downgrade-to-a-previous-version-of-firefox">What happens to my profile if I downgrade to a previous version of Firefox?</a></p>

@@ -16,7 +16,7 @@ original_slug: Outils/Performance/Flame_Chart
 
 <p>Voici une capture d'écran montrant le Flame Chart pour une section d'un profil :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10989/perf-flame-chart-overview.png" style="display: block; height: 622px; margin-left: auto; margin-right: auto; width: 1676px;"></p>
+<p><img alt="" src="perf-flame-chart-overview.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Tout d'abord, vous pouvez remarquer que dans le <a href="/fr/docs/Tools/Performance/UI_Tour#Recording_overview">panneau de vue globale de l'enregistrement</a>. Ici, une petite partie de l'enregistrement est sélectionné et affiché dans le Flame Chart. Le Flame Chart affiche beaucoup de données, donc pour obtenir des résultats pertinents, il est souvent nécessaire de zoomer.</p>
 
@@ -75,13 +75,13 @@ original_slug: Outils/Performance/Flame_Chart
 
 <p>Tout d'abord, sélectionnons toute la partie durant laquelle le programme était actif :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10991/perf-flame-chart-zoomed-out.png" style="display: block; height: 350px; margin-left: auto; margin-right: auto; width: 1212px;"></p>
+<p><img alt="" src="perf-flame-chart-zoomed-out.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>L'appel<code>sortAll()</code>, tout en haut et coloré en mauve court du début du programme à la fin. En dessous, on trouve en couleur olive les appels que cette fonction fait à <code>sort()</code>. Encore en dessous, comme les dents d'une scie, on trouve les appels à chacun des algorithmes de tri.</p>
 
 <p>Zoomons un peu :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10993/perf-flame-chart-zoom-1.png" style="display: block; height: 350px; margin-left: auto; margin-right: auto; width: 1212px;"></p>
+<p><img alt="" src="perf-flame-chart-zoom-1.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette partie dure à peu près 140ms, et montre plus de détails sur les fonctions appelées par <code>sort()</code>. Le code de <code>sort()</code> est celui-ci :</p>
 
@@ -97,7 +97,7 @@ original_slug: Outils/Performance/Flame_Chart
 
 <p>Zoomons une deuxième fois :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/10995/perf-flame-chart-zoom-2.png" style="display: block; height: 348px; margin-left: auto; margin-right: auto; width: 1212px;"></p>
+<p><img alt="" src="perf-flame-chart-zoom-2.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
 <p>Cette partie dure environ 20ms. Nous pouvons voir que les boites violettes en dessous de <code>bubbleSort()</code> sont les appels à <code>swap()</code>. Si voulions tous les compter, l'Arbre d'appel nous dirait facilement qu'il en existe 253 (le nombre d'échantillons pris dans cette fonction) . Tous les échantillons dans cette portion sont en dessous de <code>bubbleSort()</code>, mais l'on peut voir dans l'arbre d'appel que le profil contient un appel dans <code>selectionSort()</code>.</p>
 
