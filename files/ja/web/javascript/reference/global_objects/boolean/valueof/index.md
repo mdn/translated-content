@@ -4,82 +4,51 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 tags:
   - Boolean
   - JavaScript
-  - Method
+  - メソッド
   - Prototype
+  - リファレンス
+browser-compat: javascript.builtins.Boolean.valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>valueOf()</strong></code> メソッドは、{{jsxref("Boolean")}} オブジェクトのプリミティブ値を返します。</p>
+**`valueOf()`** メソッドは、{{jsxref("Boolean")}} オブジェクトのプリミティブ値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/boolean-valueof.html")}}
 
+## 構文
 
+```js
+valueOf()
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 返値
 
-<pre class="syntaxbox"><code><var>bool</var>.valueOf()</code></pre>
+この {{jsxref("Boolean")}} オブジェクトのプリミティブ値です。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+## 解説
 
-<p>与えられた {{jsxref("Boolean")}} オブジェクトのプリミティブ値です。</p>
+`valueOf()` は {{jsxref("Boolean")}} のメソッドで、 `Boolean` オブジェクトのプリミティブ値または論理値データ型としての `Boolean` リテラルを返します。
 
-<h2 id="Description" name="Description">説明</h2>
+このメソッドはたいてい JavaScript によって内部的に呼び出され、コードで明示的に呼び出されることはありません。
 
-<p><code>valueOf</code> メソッドは、{{jsxref("Boolean")}} オブジェクトのプリミティブ値か真偽値データ型としての {{jsxref("Boolean")}} リテラルを返します。</p>
+## 例
 
-<p>このメソッドはたいてい JavaScript によって内部的に呼び出され、コードで明示的に呼び出されることはありません。</p>
+### `valueOf()` の使用
 
-<h2 id="Examples" name="Examples">例</h2>
+```js
+x = new Boolean();
+myVar = x.valueOf(); // false を myVar に代入
+```
 
-<h3 id="Using_valueOf" name="Using_valueOf"><code>valueOf</code> を使う</h3>
+## 仕様書
 
-<pre>x = new Boolean();
-myVar = x.valueOf()      // myVar に false が代入される
-</pre>
+{{Specifications}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">使用</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>初期定義。JavaScript 1.1 で実装。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.6.4.3', 'Boolean.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-boolean.prototype.valueof', 'Boolean.prototype.valueOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## 関連情報
 
-<div>
-
-
-<p>{{Compat("javascript.builtins.Boolean.valueOf")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連項目</h2>
-
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}
