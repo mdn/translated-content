@@ -28,7 +28,7 @@ Voici les éléments qui sont considérées comme du contenu passif lorsqu'ils s
 
 Pour le cas du contenu mixte actif, l'attaquant pourrait réécrire la réponse pour inclure du code JavaScript malveillant. Le contenu actif malveillant pourrait alors voler les informations d'authentification, récupérer des données sensibles ou tenter d'installer des logiciels malveillants sur le système (en tirant parti des vulnérabilités ou du système de plugin du navigateur par exemple).
 
-Le risque induit par le contenu mixte dépend du type de site web que la personne visite et de la sensibilité des données exposées par le site en question. La page web pourrait contenir des données publiques par ailleurs ou des données privées, accessibles uniquement après authentification. Si la page web est publique et ne contient pas de données sensibles à propos de l'utilisateur, utiliser le contenu mixte actif permettra toujours à un attaquant de rediriger la personne vers d'autres pages HTTP et de voler les cookies HTTP de ces sites.
+Le risque induit par le contenu mixte dépend du type de site web que la personne visite et de la sensibilité des données exposées par le site en question. La page web pourrait contenir des données publiques par ailleurs ou des données privées, accessibles uniquement après authentification. Si la page web est publique et ne contient pas de données sensibles à propos de l'utilisatrice ou l'utilisateur, utiliser le contenu mixte actif permettra toujours à un attaquant de rediriger la personne vers d'autres pages HTTP et de voler les cookies HTTP de ces sites.
 
 #### Exemples de contenu actif
 
@@ -54,7 +54,7 @@ La plupart des navigateurs empêchent le chargement *du contenu mixte actif*. D'
 Les navigateurs _peuvent_ autoriser le chargement de ressources mixtes locales. Cela inclut les URL avec le schéma `file:` et le contenu servi depuis les adresses locales (par exemple `http://127.0.0.1/`).
 
 - Firefox 55 et les versions ultérieures permettent le chargement de contenu mixte sur l'adresse `http://127.0.0.1/` (voir [le bug 903966](https://bugzilla.mozilla.org/show_bug.cgi?id=903966)),
-- Firefox 84 et les versions ultérieures permettent le chargement de contenu mixte sur les URLS `http://localhost/` et `http://*.localhost/` (voir [le bug 1220810](https://bugzilla.mozilla.org/show_bug.cgi?id=1220810)),
+- Firefox 84 et les versions ultérieures permettent le chargement de contenu mixte sur les URL `http://localhost/` et `http://*.localhost/` (voir [le bug 1220810](https://bugzilla.mozilla.org/show_bug.cgi?id=1220810)).
 - Chrome permet le chargement de contenu mixte sur `http://127.0.0.1/` et `http://localhost/`.
 - Safari bloque tout chargement de contenu mixte.
 
@@ -70,7 +70,7 @@ Firefox prend en charge cette fonctionnalité de façon expérimentale, elle peu
 
 ## Avertissement dans les outils de développement de Firefox
 
-Les outils de développement de Firefox affichent un message d'avertissement dans l'onglet Réseau lorsqu'une page a ce problème. La ressource chargée en HTTP sera affichée en rouge avec le texte "contenu mixte", et un lien vers cette page.
+Les outils de développement de Firefox affichent un message d'avertissement dans l'onglet Réseau lorsqu'une page a ce problème. La ressource chargée en HTTP sera affichée en rouge avec le texte «&nbsp;contenu mixte&nbsp;», et un lien vers cette page.
 
 ![Une capture d'écran de la console avec un message d'avertissement sur le contenu mixte.](mixed_content_-_net_pane.png)
 
@@ -82,11 +82,11 @@ En complément de ces alertes dans la console web, vous pouvez également utilis
 
 Pour corriger ce type d'erreur, toutes les requêtes HTTP devraient être remplacées par des requêtes HTTPS. La plupart du temps, les problèmes de contenu mixte portent sur les fichiers JavaScript, les feuilles de styles, les images, les vidéos ou d'autres médias.
 
-> **Note :** La console affichera un message si [la mise à niveau du contenu mixte passif](#mise_à_niveau_des_ressources_mixtes_passives) a réussi (plutôt qu'un avertissement de "Chargement du contenu mixte d'affichage (non sécurisé)").
+> **Note :** La console affichera un message si [la mise à niveau du contenu mixte passif](#mise_à_niveau_des_ressources_mixtes_passives) a réussi (plutôt qu'un avertissement de «&nbsp;Chargement du contenu mixte d'affichage (non sécurisé)&nbsp;»).
 
 ## Voir aussi
 
-- [La spécification du W3C sur le contenu mixte](https://w3c.github.io/webappsec/specs/mixedcontent/)
+- [La spécification du W3C sur le contenu mixte (en anglais)](https://w3c.github.io/webappsec/specs/mixedcontent/)
 - [Comment corriger un site avec du contenu mixte bloqué](/fr/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
