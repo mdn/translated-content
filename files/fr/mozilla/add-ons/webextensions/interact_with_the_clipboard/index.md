@@ -10,7 +10,7 @@ La gestion du presse-papier avec les extensions s'effectue avec l'objet [`naviga
 
 > **Note :** L'API [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) est un ajout relativement récent à la spécification et peut ne pas être complètement implémentée par l'ensemble des navigateurs. Cet article décrit certaines des limitations, mais il est préférable de vérifier les tableaux de compatibilité de chaque méthode avant de les utiliser.
 
-La différence entre les deux API peut se décrire ainsi&nbsp;: [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) est analogue aux actions de copier/coller/couper du clavier en échangeant des données entre une page web et un presse-papier tandis [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) permet de lire et d'écrire des données arbitraires dans le presse-papier.
+La différence entre les deux API peut se décrire ainsi&nbsp;: [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) est analogue aux actions de copier/coller/couper du clavier en échangeant des données entre une page web et un presse-papier tandis que [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) permet de lire et d'écrire des données arbitraires dans le presse-papier.
 
 [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) fournit des méthodes séparées pour la lecture et l'écriture&nbsp;:
 
@@ -158,11 +158,11 @@ Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/m
 
 ## Compatibilité des navigateurs
 
-### navigator.clipboard
+### `navigator.clipboard`
 
 {{Compat("api.Clipboard")}}
 
-### clipboard.setImageData
+### `clipboard.setImageData`
 
 {{Compat("webextensions.api.clipboard")}}
 
