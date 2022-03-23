@@ -3264,6 +3264,7 @@
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/Web/API/Element
 /ja/docs/Web/API/Performance/onresourcetimingbufferfull	/ja/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event
+/ja/docs/Web/API/PermissionStatus/onchange	/ja/docs/Web/API/PermissionStatus/change_event
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/PositionOptions	/ja/docs/conflicting/Web/API/Geolocation/getCurrentPosition
