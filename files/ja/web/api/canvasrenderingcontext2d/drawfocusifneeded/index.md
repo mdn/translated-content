@@ -1,124 +1,123 @@
 ---
 title: CanvasRenderingContext2D.drawFocusIfNeeded()
 slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
+tags:
+  - API
+  - アクセシビリティ
+  - Canvas
+  - CanvasRenderingContext2D
+  - メソッド
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
 translation_of: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D APIの<code><strong>CanvasRenderingContext2D</strong></code><strong><code>.drawFocusIfNeeded()</code></strong>メソッドは、パラメーターで与えられた要素がフォーカスした時に、現在のパスもしくは与えられたパスの周りにフォーカスリングを描画します。</p>
+**`CanvasRenderingContext2D.drawFocusIfNeeded()`** はキャンバス 2D API のメソッドで、引数で与えられた要素にフォーカスが当たった時に、現在のパスもしくは指定されたパスの周りにフォーカスリングを描画します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <var><em>ctx</em>.drawFocusIfNeeded(element);<var>
-void <var><em>ctx</em>.drawFocusIfNeeded(path, element);</var></var></var>
-</pre>
+```js
+void ctx.drawFocusIfNeeded(element);
+void ctx.drawFocusIfNeeded(path, element);
+```
 
-<h3 id="パラメーター">パラメーター</h3>
+### 引数
 
-<dl>
- <dt>element</dt>
- <dd>フォーカスしたかどうかをチェックする要素。</dd>
- <dt><code>path</code></dt>
- <dd>利用する {{domxref("Path2D")}} パス。</dd>
-</dl>
+- element
+  - : フォーカスしたかどうかをチェックする要素。
+- `path`
+  - : 利用する {{domxref("Path2D")}} パス。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="drawFocusIfNeededメソッドを使う"><code>drawFocusIfNeeded</code>メソッドを使う</h3>
+### ボタンのフォーカスの管理
 
-<p>これは、<code>drawFocusIfNeeded</code>メソッドを使った簡単なコードです</p>
+この例では、キャンバス上に 2 つのボタンを描画します。 `drawFocusIfNeeded()` メソッドは、必要に応じてフォーカスリングを描画するために使用されます。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;
-  &lt;input id="button" type="range" min="1" max="12"&gt;
-&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas">
+  <button id="button1">続ける</button>
+  <button id="button2">終了</button>
+</canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[9]">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var button = document.getElementById("button");
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const button1 = document.getElementById('button1');
+const button2 = document.getElementById('button2');
 
-button.focus();
+document.addEventListener('focus', redraw, true);
+document.addEventListener('blur', redraw, true);
+canvas.addEventListener('click', handleClick, false);
+redraw();
 
-ctx.beginPath();
-ctx.rect(10, 10, 30, 30);
-ctx.drawFocusIfNeeded(button);
-</pre>
-
-<p>下のコードを編集すると、変更がリアルタイムにcanvasに反映されます:</p>
-
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
-
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;
-&lt;input id="button" type="range" min="1" max="12"&gt;
-&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-button.focus();
-ctx.beginPath();
-ctx.rect(10, 10, 30, 30);
-ctx.drawFocusIfNeeded(button);&lt;/textarea&gt;
-</pre>
-
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var button = document.getElementById("button");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
+function redraw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+  drawButton(button1, 20, 20);
+  drawButton(button2, 20, 80);
 }
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+function handleClick(e) {
+  // Calculate click coordinates
+  const x = e.clientX - canvas.offsetLeft;
+  const y = e.clientY - canvas.offsetTop;
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+  // 必要に応じて button1 をフォーカスする
+  drawButton(button1, 20, 20);
+  if (ctx.isPointInPath(x, y)) {
+    button1.focus();
+  }
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+  // 必要に応じて button2 をフォーカスする
+  drawButton(button2, 20, 80);
+  if (ctx.isPointInPath(x, y)) {
+    button2.focus();
+  }
+}
 
-<p>{{EmbedLiveSample('Playable_code', 700, 360)}}</p>
+function drawButton(el, x, y) {
+  const active = document.activeElement === el;
+  const width = 150;
+  const height = 40;
 
-<h2 id="仕様">仕様</h2>
+  // ボタンの背景
+  ctx.fillStyle = active ? 'pink' : 'lightgray';
+  ctx.fillRect(x, y, width, height);
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-drawfocusifneeded", "CanvasRenderingContext2D.drawFocusIfNeeded")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+  // ボタンのテキスト
+  ctx.font = '15px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = active ? 'blue' : 'black';
+  ctx.fillText(el.textContent, x + width / 2, y + height / 2);
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+  // クリック可能な領域を定義
+  ctx.beginPath();
+  ctx.rect(x, y, width, height);
 
-<p>{{Compat("api.CanvasRenderingContext2D.drawFocusIfNeeded")}}</p>
+  // 必要に応じてフォーカスリングを描画
+  ctx.drawFocusIfNeeded(el);
+}
+```
 
-<h2 id="関連情報">関連情報</h2>
+#### 結果
 
-<ul>
- <li>{{domxref("CanvasRenderingContext2D")}} インタフェースがこのメソッドを定義しています。</li>
-</ul>
+{{EmbedLiveSample('Managing_button_focus', 700, 180)}}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
