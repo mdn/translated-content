@@ -2,49 +2,50 @@
 title: Boolean.prototype.toSource()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
 tags:
-- Boolean
-- Deprecated
-- JavaScript
-- Method
-- Non-standard
-- Obsolete
-- Prototype
+  - Boolean
+  - Deprecated
+  - JavaScript
+  - メソッド
+  - 標準外
+  - 非推奨
+  - Prototype
+browser-compat: javascript.builtins.Boolean.toSource
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toSource
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p><code><strong>toSource()</strong></code> メソッドは、オブジェクトのソースコードを表す文字列を返します。</p>
+**`toSource()`** メソッドは、オブジェクトのソースコードを表す文字列を返します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><var>booleanObj</var>.toSource()
-	Boolean.toSource()</pre>
-	
-<h3 id="Return_value">返値</h3>
+```js
+toSource()
+```
 
-<p>オブジェクトのソースコードを表す文字列です。</p>
+### 返値
 
-<h2 id="Examples">例</h2>
+このオブジェクトのソースコードを表す文字列です。
 
-<h3 id="Native_function">ネイティブ関数</h3>
+## 例
 
-<p>組み込みの {{jsxref("Boolean")}} オブジェクトでは、 <code>toSource</code> はソースコードが利用できないことを示す以下の文字列を返します。</p>
+### ネイティブ関数
 
-<pre class="brush: js">function Boolean() {
+組み込みの {{jsxref("Boolean")}} オブジェクトでは、 `toSource` はソースコードが利用できないことを示す以下の文字列を返します。
+
+```js
+function Boolean() {
     [native code]
 }
-</pre>
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<p>いずれの標準仕様にも組み込まれていません。</p>
+いずれの標準仕様にも組み込まれていません。
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.Boolean.toSource")}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
