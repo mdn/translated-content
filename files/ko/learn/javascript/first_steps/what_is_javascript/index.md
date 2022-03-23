@@ -12,20 +12,21 @@ tags:
   - l10n:priority
 translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다! 이 글은 JavaScript를 넓게 보면서 "뭔가요?", "뭘 하나요?"와 같은 질문을 답변하고, 여러분이 JavaScript에 친숙해지도록 도와드립니다.
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
-      <th scope="row">전제 조건:</th>
-      <td><p>기본적인 컴퓨터 능력, HTML과 CSS 기초.</p></td>
+      <th scope="row">필요한 사전 지식:</th>
+      <td>기본적인 컴퓨터 능력, HTML과 CSS 기초.</td>
     </tr>
     <tr>
       <th scope="row">목표:</th>
       <td>
-        JavaScript가 뭔지, 어떤 일을 할 수 있는 지, 웹사이트에 어떻게 적용하는지
+        JavaScript가 뭔지, 어떤 일을 할 수 있는지, 웹 사이트에 어떻게 적용하는지 알아보기
         알기.
       </td>
     </tr>
@@ -34,23 +35,23 @@ MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다! 이 글은 Jav
 
 ## 둘러보기
 
-자바스크립트는 복잡한 무언가(주기적으로 내용이 갱신되는 기능이나 능동적인 지도, 변화하는 2D/3D 그래픽, 동영상 등)를 웹페이지에 적용할 수 있게 하는 스크립트 혹은 프로그래밍 언어입입니다. 자바스크립트는 표준 웹 기술이라는 레이어 케이크에서 세번째 층이라고 볼 수 있습니다. 다른 두 층(HTML과 CSS)에 대한 보다 자세한 정보는 학습 영역의 다른 부분에서 찾아 볼 수 있습니다.
+JavaScript는 웹 페이지에서 복잡한 기능을 구현할 수 있도록 하는 스크립팅 언어 또는 프로그래밍 언어입니다. 페이지의 내용이 — 가만히 정적인 정보만 보여주는 것이 아니라 — 주기적으로 갱신되거나, 사용자와 상호작용이 가능하거나, 애니메이션이 적용된 2D/3D 그래픽을 볼 수 있다면 JavaScript가 관여하고 있을 거라고 생각해도 좋습니다. JavaScript는 표준 웹 기술이라는 케이크의 세 번째 층입니다. 다른 두 개([HTML](/ko/docs/Learn/HTML)과 [CSS](/ko/docs/Learn/CSS))는 학습장의 다른 곳에서 자세히 알아봤습니다.
 
-<img alt="" src="https://mdn.mozillademos.org/files/13502/cake.png" style="display: block; margin: 0 auto;">
+![](cake.png)
 
-- {{glossary("HTML")}}은 제공할 웹 컨텐츠의 구조와 의미를 문단, 제목, 표, 삽입 이미지, 동영상 등으로 정의하고 부여하는 마크업 언어입니다.
-- {{glossary("CSS")}}는 배경색, 폰트 등의 레이아웃등을 지정하여 HTML 컨텐츠를 꾸며주는 스타일 규칙 언어입니다.
-- {{glossary("JavaScript")}}는 동적으로 컨텐츠를 바꾸고, 멀티미디어를 다루고, 움직이는 이미지 그리고 꽤나 많은 다른 일(물론, 전부는 아니지만 몇 줄만의 자바스크립트 코드로 얻는 결과는 놀라울겁니다.)들을 할 수 있는 스크립트 언어입니다.
+- {{glossary("HTML")}}은 웹 콘텐츠의 구조를 짜고 의미를 부여하는 마크업 언어입니다. 예를 들어 페이지의 어디가 문단이고, 헤딩이고, 데이터 표와 외부 이미지/비디오인지 정의합니다.
+- {{glossary("CSS")}}는 HTML 콘텐츠에 스타일을 적용할 수 있는 스타일 규칙 언어입니다. 배경색을 추가하고, 글꼴을 바꾸고, 콘텐츠를 신문처럼 다열 레이아웃으로 배치할 수 있습니다.
+- {{glossary("JavaScript")}}는 동적으로 콘텐츠를 바꾸고, 멀티미디어를 제어하고, 애니메이션을 추가하는 등 거의 모든 것을 만들 수 있는 스크립팅 언어입니다. (정말 모든게 가능하지는 않겠지만, JavaScript 코드 몇 줄만으로도 놀라운 결과를 이룰 수 있습니다)
 
-3개의 요소들은 각각 유기적으로 잘 구성되어 있습니다. 예제와 같이 간단한 폼을 만들어 봅시다. HTML을 사용하여 그 구조와 목적에 맞게 마크업 할 수 있습니다:
+이렇게 세 층은 서로의 위에 유기적으로 잘 올라가있습니다. 연습 삼아 간단한 텍스트 레이블을 만들어봅시다. HTML로, 아래처럼 텍스트에 구조와 목적을 부여할 수 있습니다.
 
 ```html
 <p>Player 1: Chris</p>
 ```
 
-<img alt="" src="https://mdn.mozillademos.org/files/13422/just-html.png" style="height: 28px; width: 108px;">
+![](just-html.png)
 
-그리고 CSS를 추가하여 이쁘게 꾸밀 수도 있습니다:
+CSS를 추가하면 보기 좋게 꾸밀 수 있습니다.
 
 ```css
 p {
@@ -58,20 +59,20 @@ p {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
-  cursor:pointer;
+  cursor: pointer;
 }
 ```
 
-<img alt="" src="https://mdn.mozillademos.org/files/13424/html-and-css.png" style="height: 48px; width: 187px;">
+![](html-and-css.png)
 
-그러고 마지막으로 약간의 자바스크립트로 동적인 기능을 추가할 수 있습니다:
+마지막으로는 JavaScript를 곁들여 동적인 기능을 추가할 수 있습니다.
 
 ```js
 const para = document.querySelector('p');
@@ -79,324 +80,366 @@ const para = document.querySelector('p');
 para.addEventListener('click', updateName);
 
 function updateName() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
+  const name = prompt('Enter a new name');
+  para.textContent = `Player 1: ${name}`;
 }
 ```
 
-{{ EmbedLiveSample('A_high-level_definition', '100%', 80, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('둘러보기', '100%', 80) }}
 
-마지막 버전의 텍스트 라벨을 클릭하여 어떻게 되는 지 확인해봅시다. (이 데모는 Github에서도 볼 수 있습니다. [source code](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html) 나 [run it live](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)를 참고해보세요!)
+바로 위의 텍스트 레이블을 클릭해서 어떤 일이 일어나는지 확인해보세요. (이 데모는 GitHub에서도 볼 수 있습니다. [소스코드](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html)를 읽거나 [실행된 모습](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)을 확인해보세요)
 
-자바스크립트는 보다 더 많은 일들을 할 수 있습니다. 이제 더 자세한 내용을 살펴봅시다!
+JavaScript는 이것보다 훨씬 많은 일을 할 수 있습니다. 어떤 일이 가능한지 자세히 알아봅시다.
 
-## 그래서, 진짜 어떤 일을 할 수 있나요?
+## 그래서 어떤 일을 할 수 있나요?
 
-자바스크립트 언어의 핵심은 다음과 같은 일들을 할 수 있게하는 프로그래밍 기능들로 구성되어 있습니다:
+클라이언트 사이드 JavaScript 언어의 핵심은 다음과 같은 일을 가능하게 해주는 프로그래밍 기능들로 구성됩니다.
 
-- 변수안에 값을 저장할 수 있습니다. 위의 예시를 보면, 작성된 새로운 이름을 `name`이라는 변수에 저장하였습니다.
-- 프로그밍에서 '문자열(strings)'이라고 불리는 문자들도 조작 가능합니다. 위 예시에 보면 "Player 1:"이라는 문자열을 `name`이라고 만든 변수와 겹합하여 "Player 1: Chris"라는 글을 완성할 수 있었습니다.
-- 웹 페이지상의 이벤트에 응답하는 코드를 작성할 수 있습니다. 예제에서 사용한 {{Event("click")}} 이벤트를 통해 요소가 언제 클릭되고, 텍스트 라벨을 업데이트 시킬지 정정의하였습니다.
-- 그리고 더 많은 것들!
+- 변수에 값을 저장할 수 있습니다. 바로 위의 예제를 보면, 요청해서 받은 새로운 이름을 `name`이라는 변수에 저장합니다.
+- 프로그래밍에서 "문자열"(string)이라고 부르는, 텍스트 조각을 조작합니다. 위 예제에서는 문자열 "플레이어 1: "과 `name` 변수의 값을 합쳐 온전한 텍스트 레이블("Player 1: Chris")을 생성합니다.
+- 웹 페이지에서 발생하는 어떤 이벤트에 코드가 응답하도록 합니다. 예제에서는 {{event("click")}} 이벤트를 사용해서 레이블을 클릭하는 순간을 탐지하고, 그 후에 텍스트 레이블을 업데이트하고 있습니다.
+- 그밖에 더 많은 것들!
 
-하지만 더욱 흥미진진한 것은 코어 자바스크립트 언어(*core JavaScript* language) 기반의 기능성입니다. 소위 **Application Programming Interfaces** (**APIs**) 라는 것은 여러분의 자바스크립트 코드에 사용할 수 있는 추가적인 강력한 마법들을 제공합니다.
+하지만 위 목록보다 더 흥미진진한건 클라이언트 사이드 JavaScript 언어 위에 올라가있는 기능들입니다. **애플리케이션 프로그래밍 인터페이스**(**API**)라고 부르는 이 기능들은 여러분의 JavaScript 코드에서 사용할 수 있는 강력한 마법을 추가로 제공합니다.
 
-API는 이미 만들어진 코드의 집합체라고 볼 수 있으며, 개발자들이 만들기 어렵고 힘든 부분을 쉽게 구현하도록 하는 프로그램이라고 볼 수 있습니다. 마치 집에서 가구를 만들 때 직접 디자인하고, 재료를 구하고, 재단하고, 못을 박고 하는 등 혼자서 모든 것을 하는 대신 가구 만들기 키트를 사는 것과 같다고 보면 됩니다.
+API는 개발자가 직접 구현하기는 어렵거나 불가능한 기능들을 미리 만들어서 제공하는 것입니다. 가구 DIY 키트 같은 거죠. 미리 재단된 판과 나사로 책장을 조립하는 게, 디자인하고 적합한 목재를 찾아서 올바른 크기와 모양으로 자른 후 적합한 크기의 나사를 찾아서 마침내 책장으로 만드는 것보다 훨씬 쉬운 법입니다.
 
-일반적으로 두 종류로 구분됩니다.
+API는 일반적으로 두 개의 범주로 분류할 수 있습니다.
 
-<img alt="" src="https://mdn.mozillademos.org/files/13508/browser.png" style="display: block; height: 511px; margin: 0px auto; width: 815px;">
+![](browser.png)
 
-**Browser API**는 웹 브라우저에 설치된 API들로, 컴퓨터 환경구성으로 부터 데이터를 보이게 하고 복잡한 일들을 하게 합니다. 예를 들어:
+**브라우저 API**는 웹 브라우저에 내장된 API로, 현재 컴퓨터 환경에 관한 데이터를 제공하거나 여러가지 유용하고 복잡한 일을 수행합니다.
 
-- [DOM (Document Object Model) API](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) 는 동적으로 페이지의 스타일을 정하는 등 HTML과 CSS를 알맞게 조정하는 역할을 합니다. 우리가 매일 보는 팝업창이나, 위의 사진과 같이 컨텐츠들이 보여지는 것들이 모두 DOM의 결과라고 볼 수 있습니다.
-- [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation)은 지리적인 정보를 검색하게 해줍니다. 이는 [Google Maps](https://www.google.com/maps)이 어떻게 위치를 찾고 지도에 표시하는지 알 수 있게 합니다.
-- [Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) 와 [WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API) API는 2D와 3D 그래픽을 만들 수 있도록 합니다. 이러한 웹 기술을 사용하여 다양하고 재미있는 것들을 지원합니다. —[Chrome Experiments](https://www.chromeexperiments.com/webgl) 와 [webglsamples](http://webglsamples.org/)을 참조해보세요.
-- HTMLMediaElement 와 [WebRTC](/en-US/docs/Web/API/WebRTC_API) 같은 [Audio and Video API](https://developer.mozilla.org/en-US/Apps/Fundamentals/Audio_and_video_delivery)는 음악과 비디오를 웹 페이지 상에서 재생하고, 웹캠으로 캡처하고 다른 컴퓨터에 표시하는 등의 멀티미디어를 활용할 수 있는 재미있는 기술을 지원합니다. ([Snapshot demo](http://chrisdavidmills.github.io/snapshot/)를 한번 참조해보세요.)
+- [DOM (Document Object Model) API](/ko/docs/Web/API/Document_Object_Model)로 HTML 콘텐츠를 추가, 제거, 변경하고, 동적으로 페이지에 스타일을 추가하는 등 HTML/CSS를 조작할 수 있습니다. 페이지 위에 뜨는 팝업창이나, (위쪽의 간단한 예제처럼) 새로운 콘텐츠가 나타나는 것을 본 적이 있으면 DOM이 동작한 겁니다.
+- [Geolocation API](/ko/docs/Web/API/Geolocation)로 지리정보를 가져올 수 있습니다. [Google 지도](https://www.google.com/maps)에서 여러분의 위치를 찾아 지도에 그릴 수 있는 이유가 바로 이 API입니다.
+- [Canvas](/ko/docs/Web/API/Canvas_API)와 [WebGL API](/ko/docs/Web/API/WebGL_API)로 애니메이션을 적용한 2D와 3D 그래픽을 만들 수 있습니다. 두 웹 기술을 사용해서 만들 수 있는 놀라운 결과를 엿보려면 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome)와 [webglsamples](https://webglsamples.org/)를 방문하세요.
+- {{domxref("HTMLMediaElement")}}와 {{domxref("WebRTC API", "WebRTC")}}를 포함하는 [오디오와 비디오 API](/en-US/docs/Web/Guide/Audio_and_video_delivery)로는 멀티미디어를 사용한 흥미로운 일을 할 수 있습니다. 예를 들어 오디오나 비디오를 웹 페이지에서 바로 재생하거나, 여러분의 웹캠으로 비디오를 찍어 다른 사람의 화면에 보여줄 수 있습니다. (간단한 [스냅샷 데모](https://chrisdavidmills.github.io/snapshot/)를 방문해서 감을 잡아보세요)
 
-<div class="note"><p><strong>Note</strong>: 대부분의 데모 코드들은 오래된 브라우저에서는 실행이 안될 수 있으니, FireFox, Chrome, Edge, Opera와 같은 최신의 브라우저를 사용하는 것을 추천합니다.  실제 배포가 되는 코드처럼 여러 사용자가 사용할 수 있음을 고려하여 <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing">cross browser testing</a>(여러 브라우저를 이용하여 테스트)를 해보는 것이 좋습니다.</p></div>
+> **참고:** 구형 브라우저에서는 위 예제 중 많은 수가 동작하지 않습니다. 웹 기술을 시험할 땐 Firefox, Chrome, Edge, Safari처럼 모던 브라우저를 사용하는 편이 좋습니다.
+> 이후에 프로덕션 코드 (고객이 사용하게 될 코드) 배포에 다가가게 되면 [크로스 브라우저 테스트](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing)를 고려하세요.
 
-**Third party API** 는 브라우저에 기본적으로 설치된 API가 아닌 인터넷에서 개인적으로 정보와 코드를 얻어 프로그래밍한 것을 말합니다. 예를 들어:
+**서드파티 API**는 브라우저에 탑재되지 않은 API로, 웹의 어딘가에서 직접 코드와 정보를 찾아야 합니다.
 
-- [Twitter API](https://dev.twitter.com/overview/documentation)는 웹사이트에 가장 최근의 트윗을 보여주도록 합니다.
-- [Google Maps API](https://developers.google.com/maps/)와  [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)는 웹사이트에 원하는 지도를 넣어주고 추가기능을 지원합니다.
+- [Twitter API](https://developer.twitter.com/en/docs)로 여러분의 최신 트윗을 웹 사이트가 보여주도록 구현할 수 있습니다.
+- [Google 지도 API](https://developers.google.com/maps/)와 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)로 웹 사이트에 지도를 삽입하고, 지도 관련 기능을 추가할 수 있습니다.
 
-<div class="note"><p><strong>Note</strong>: 이러한 API 들은 고급 과정이며, 이 과정에서는 다루지 않을 것입니다. 이 API들에 대한 보다 자세한 정보는 <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs">Client-side web APIs module</a>에서 살펴보세요.</p></div>
+> **참고:** 위의 서드파티 API는 고급 기능으로, 이 과정에서는 다루지 않습니다. [클라이언트 사이드 웹 API 과정](/ko/docs/Learn/JavaScript/Client-side_web_APIs)에서 알아보세요.
 
-물론 이것말고도 엄청나게 다양한 API들이 존재합니다!  하지만, 이 수업을 듣고 Facebook, Google Maps, Instagram등을 만들 수는 없으니 흥분하지는 말길 바랍니다. 이것보다 우리는 먼저 기본적인 것에 대해 배울 것이고 이것이 곧 이 수업을 진행하는 목적입니다. 자 시작해봅시다!
+여기 나열된 항목 말고도 훨씬 다양한 API들이 존재합니다! 하지만 아직 너무 앞서나가진 마세요. JavaScript를 하루 배운 것으로 차세대 Facebook, Google 지도, Instagram을 만들 수는 없는 법입니다. 아직 배워야 할 기본이 많이 남았고, 기본을 배우는 것이 이 과정을 보는 이유이니, 시작해 봅시다!
 
 ## 웹 페이지에서 JavaScript는 어떤 일을 하나요?
 
-여기서 몇가지 코드를 실제로 살펴보고, 페이지에서 자바스크립트가 언제 어떻게 작동하는지 알아 볼 것입니다.
+이제부턴 코드를 살펴보면서, 페이지에서 JavaScript를 돌리면 어떤 일이 일어나는지도 알아보겠습니다.
 
-브라우저에서 웹페이지를 불러올 때 어떤 일이 발생하는지 생각해봅시다(먼저 [How CSS works](/en-US/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work)를 읽어 보세요.). 브라우저에서 웹페이지를 불러올 때, 실행 환경(브라우저 탭)안에서 HTML, CSS, Javascript 코드가 실행됩니다. 이는 마치 공장에서 원재료(코드)가 일련의 과정을 거쳐 제품(웹페이지)으로 탄생되는 것과 같습니다.
+브라우저가 웹 페이지를 불러오면 어떤 일이 발생하는지 간단하게 복습해봅시다([CSS 동작 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works#CSS_는_실제로_어떻게_작동합니까)에서 먼저 알아봤습니다). 웹 페이지를 브라우저로 불러오면, 브라우저는 여러분의 코드(HTML, CSS, JavaScript)를 실행 환경(브라우저 탭)에서 실행합니다. 원자재(코드)를 가져와서 상품(웹 페이지)을 생산하는 공장처럼 생각할 수 있습니다.
 
-<img alt="" src="https://mdn.mozillademos.org/files/13504/execution.png" style="display: block; margin: 0 auto;">
+![](execution.png)
 
-자바스크립트는 HTML과 CSS가 결합되고 웹페이지 상에서 올려진 후, 브라우저의 자바스크립트 엔진에 의해 실행됩니다. 이는 페이지의 구조와 스타일등을 정해놓고, 자바스크립트가 실행된다는 것과 같은 의미입니다.
+JavaScript는 DOM (Document Object Model) API를 통해 HTML과 CSS를 동적으로 수정, 사용자 인터페이스를 업데이트하는 일에 가장 많이 쓰입니다. 참고로 웹 문서(페이지)의 코드는 보통 문서 상에 나타나는 순서 그대로 불러와 실행합니다. 수정하려는 HTML과 CSS 코드보다 JavaScript를 먼저 불러와 실행해버리면 오류가 발생할 수 있습니다. 아래의 [스크립트 로딩 전략](#스크립트_로딩_전략)에서 이 문제의 해결법을 알아보겠습니다.
 
-동적으로 사용자 인터페이스를 업데이트하는 자바스크립트의 사용은 Document Object Model API를 통해 HTML과 CSS를 수정하는 것으로 좋은 현상입니다. 만약 자바 스크립트가 HTML과 CSS 전에 실행되었다면 문제가 분명 발생할 것입니다.
+### 브라우저 보안
 
-### 브라우저 보안성
+각각의 브라우저 탭은 코드를 실행하기 위한 독립적인 그릇(기술 용어로 "실행 환경"이라고 부릅니다)입니다. 독립적이라는 것은 대부분의 탭이 서로에게서 완전히 분리되어 한 탭의 코드가 다른 탭의 코드, 또는 다른 사이트에 직접적인 영향을 줄 수 없다는 뜻입니다. 이건 중요한 보안 절차입니다. 만약 이런 제약이 없으면 해커들이 다른 웹 사이트에서 정보를 훔치는 것을 포함해 여러가지 나쁜 일을 하는 코드를 작성할 것입니다.
 
-각각의 브라우저 탭들은 코드가 실행되는 개별적인 구성(이러한 것은 "실행 환경"이라고 지칭한다)입니다. 이는 각 탭의 대부분의 경우는 완전히 독립적이고, 하나의 탭의 코드는 다른 탭이나 웹사이트에 직접적으로 영향을 줄 수 없다는 의미입니다 . 이는 보안성에 좋은 방법입니다. 만약 이러한 부분이 없다면, 해커들이 다른 웹사이트로 부터 정보를 가로채는 등 악랄한 짓들을 할 수 있습니다.
+> **참고:** 두 개의 다른 웹 사이트/탭 사이에서 코드와 정보를 안전하게 주고받을 수 있는 방법이 있지만, 지금 과정과는 거리가 멀기 때문에 여기서는 다루지 않겠습니다.
 
-<div class="note"><p><strong>Note</strong>: 물론 코드나 정보를 동떨어진 웹사이트나 탭으로 전송할 수 있는 안전한 방식이 존재합니다. 하지만 지금 과정과는 거리가 멀기 때문에 여기서는 다루지 않도록 하겠습니다.</p></div>
+### JavaScript 실행 순서
 
-### 자바스크립트 실행 순서
-
-브라우저에서 자바스크립트를 만났을 때 일반적으로는 위에서 아래 순서대로 실행됩니다. 이는 순서에 주의해서 코드를 작성해야한다는 의미입니다. 예를 들어, 아래의 첫번째 예제를 통해 자바스크립트 블록을 반환해봅시다:
+브라우저가 JavaScript 블록을 마주치면, 일반적으로는 순서대로 위에서 아래로 실행합니다. 따라서 코드 배치 순서에도 주의를 기울여야 합니다. 예를 들기 위해 맨 위의 첫 예제 코드로 돌아가봅시다.
 
 ```js
 const para = document.querySelector('p');
-//HTML 요소 중 p태그를 선택
 
 para.addEventListener('click', updateName);
-//para에 저장된 객체가 클릭되었을 때 updateName 함수를 실행
 
 function updateName() {
-  let name = prompt('Enter a new name');
-  //'Enter a new name'과 입력란 출력하여 입력받은 값을 name에 저장
-  para.textContent = 'Player 1: ' + name;
-  //papa(p태그)에 새로운 문자열 저장
+  const name = prompt('Enter a new name');
+  para.textContent = `Player 1: ${name}`;
 }
 ```
 
-먼저 p태그의 요소를 para변수에 저장합니다(1번줄). 그리고 event listener를 붙여(3번줄) p태그가 클릭되었을 때 `updateName()`코드 블록(중괄호로 묶여있는 부분)이 (5-8번줄) 실행되도록 합니다. `updateName()` 코드 블록(이렇게 계속적으로 사용할 수 있는 코드 블럭을 함수라고 합니다.). 사용자로 하여금 새로운 이름을 입력받기를 요청하고, 사용자가 이름을 입력하면 화면에 출력하게 됩니다.
+위 코드는 텍스트 문단을 선택(1번 줄)해서 이벤트 수신기를 부착(3번 줄)하여, 사용자가 문단을 클릭하면 `updateName()` 코드 블록(5번 ~ 8번 줄)을 실행하도록 합니다. `updateName()` 코드 블록(이렇게 재사용 가능하도록 나눠놓은 코드 블록을 "함수"라고 합니다)은 사용자에게 새로운 이름을 물어보고, 그 이름을 문단에 삽입해서 화면을 업데이트합니다.
 
-만약 1번줄과 3번줄을 바꿨다면 코드는 실행되지 않을 것입니다. 대신 브라우저의 개발자 콘솔창에 다음과 같은 에러 알림이 뜰 것입니다. — `TypeError: para is undefined`. 이는 para라는 객체가 아직 존재하지 않는다는 뜻으로, para라는 변수에 event listener는 추가할 수 없습니다
+만약 1번 줄의 코드와 3번 줄의 코드 순서를 서로 바꿔서 실행했으면 원하는 동작 대신 [브라우저 개발자 콘솔](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)에 오류, `TypeError: para is undefined`가 나타나며, `para` 객체가 아직 존재하지 않으므로 이벤트 수신기를 부착할 수도 없다는 뜻입니다.
 
-<div class="note"><p><strong>Note</strong>: 이는 매우 일반적인 에러이기 때문에, 프로그램을 실행할 때 코드 상에서 사용되는 객체에 대해 주의할 필요가 있습니다.</p></div>
+> **참고:** 이 오류는 아주 흔하게 볼 수 있는 오류 중 하나입니다. 여러분의 코드 안에서 참조하는 객체가 존재하는지 주의하세요.
 
-### 해석형 언어와 컴파일러형 언어
+### 인터프리터와 컴파일러
 
-프로그래밍을 하는 입장에서 인터프리트와 컴파일이라는 개념에 대해서는 들어보았을 것입니다. 자바스크립트는 해석형 언어입니다. 따라서 코드가 위에서 아래로 순차적으로 실행되고 그 즉시 결과가 반환됩니다. 브라우저에서 동작하기 전에 다른 방식으로 코드를 변환할 필요가 없습니다.
+프로그래밍에서의 **인터프리터**와 **컴파일러**라는 단어를 들어본 적이 있는지 생각해보세요. 인터프리터를 사용하는 언어에서는 코드를 위에서 아래로 실행하고, 코드 구동 결과는 즉시 반환됩니다. 브라우저에서 JavaScript 코드를 실행하기 전에 다른 형태로 변환할 필요가 없다는 점을 기억하세요. 코드는 프로그래머가 읽을 수 있는 형태로 입력되고, 별도의 처리 없이 그대로 실행됩니다.
 
-반면에 컴파일러형 언어는 컴퓨터에 의해 동작되기전 다른 형식으로 변환하는 언어입니다. 예를 들면 C/C++과 같은 언어는 어셈블리어로 컴파일되어 동작됩니다.
+반면, 컴파일러를 사용하는 컴파일 언어에서는 컴퓨터가 코드를 실행하기 전에 다른 형태로 변환(컴파일)해야 합니다. 예를 들어, C/C++에서는 코드를 컴파일러로 기계언어로 변환하여, 그 결과를 컴퓨터가 실행합니다. 프로그램은 프로그램의 원본 소스 코드에서 생성한 이진 형식(바이너리)으로부터 실행됩니다.
 
-이 둘의 관점은 각각의 장점을 가지고 있으니 다음장 부터 한번 알아봅시다.
+JavaScript는 가볍고, 인터프리터를 사용하는 프로그래밍 언어입니다. 웹 브라우저는 JavaScript 코드를 원문 텍스트 형식으로 입력받아 실행합니다. 기술적인 측면으로 따지자면, 대부분의 모던 JavaScript 인터프리터들은 사실 **JIT 컴파일**(just-in-time 컴파일)이라는 기술을 사용해 성능을 향상하기는 합니다. 스크립트의 실행과 동시에 소스 코드를 더 빠르게 실행할 수 있는 이진 형태로 변환하여 최대한 높은 실행 속도를 얻는 방법입니다. 하지만 JavaScript는 여전히 인터프리터 언어로 분류됩니다. 컴파일을 먼저 해놔야 하는 것이 아니라 런타임에 일어나기 때문입니다.
 
-### 서버측 코드와 클라이언트측 코드
+두 방법 모두 각자의 장점을 가지고 있으나, 여기서 그 부분까지 논하지는 않겠습니다.
 
-웹 개발 맥락에서 서버측과 클라이언트측 코드에 대해 들어보았을 것입니다. 클라이언트측 코드란 사용자의 컴퓨터에서 작동되는 코드입니다. 만약 웹페이지를 보고자 한다면, 클라이언트측 코드가 사용자의 컴퓨터로 다운로드되고 브라우저가 이를 표시합니다. 이러한 자바스크립트 모듈을 정확히는 클라이언트측 자바스크립트라고 합니다.
+### 서버 사이드와 클라이언트 사이드 코드
 
-반면 서버측 코드는 서버에서 작동되고, 그 결과가 사용자의 브라우저에 넘어가 표시됩니다. PHP, Python, Ruby, ASP.NET등이 서버측 웹 언어의 대표적 예라고 볼 수 있습니다. 물론 자바스크립트도 가능합니다! 유명한 Node.js란 환경을 통해 서버측에서도 자바스크립트가 사용 가능합니다. [Dynamic Websites – Server-side programming](/en-US/docs/Learn/Server-side)에서 서버측 자바스크립트에 대해 더 알 수 있습니다.
+웹 개발에 관련한 또 다른 용어로 **서버 사이드 코드**와 **클라이언트 사이드 코드**를 들어봤나요? 클라이언트 사이드 코드는 사용자의 컴퓨터에서 동작하는 코드입니다. 웹 페이지를 방문하면 브라우저가 페이지 내의 클라이언트 사이드 코드를 다운로드하고 실행해서 화면에 띄웁니다. 바로 이 과정에서 다루는 것은, 정확히는 **클라이언트 사이드 JavaScript**입니다.
 
-### 동적 VS 정적 코드
+반대로 서버 사이드 코드는 서버에서 동작하는 코드로, 그 실행 결과를 브라우저가 다운로드해서 화면에 띄우게 됩니다. 유명한 서버 사이드 웹 언어로는 PHP, Python, Ruby, ASP.NET, 그리고... JavaScript가 있습니다! JavaScript는 브라우저 뿐만 아니라, 많은 사람들이 사용하는 Node.js 환경처럼 서버 사이드 언어로도 사용할 수 있습니다. 서버 사이드 JavaScript에 관해서는 [동적 웹 사이트 – 서버 사이드 프로그래밍](/ko/docs/Learn/Server-side) 과정에서 더 알아보세요.
 
-"동적"이라는 말은 클라이언트측 서버측 언어 모두를 가르킵니다. 이는 각기 다른 상황에서 적절한 정보가 보이고, 컨텐츠를 웹페이지나 앱 상에 계속적으로 노출시키는 역할을 합니다. 서버측 코드는 데이터베이스로 부터 데이터를 던지는 등 동적으로 새로운 컨텐츠들을 만듭니다. 반면에, 클라이언트측 자바스크립트는 새로운 HTML 표를 만들어 서버에서 요청한 데이터를 뿌려 사용자에게 보이는 등 동적으로 브라우저 안에서 작동됩니다. 이 둘 사이는 서로 미묘한 차이가 있지만, 서로 연관되어 있고 서버측 클라이언트측의 관계와 접근에 대해 알 필요가 있습니다.
+### 동적 코드와 정적 코드
 
-동적으로 바뀌지 않는 페이지를 "정적"페이지라고 합니다. (항상 같은 콘텐츠를 보여줍니다.)
+클라이언트 사이드 JavaScript와 서버 사이드 언어들 모두 **동적**이라는 단어로 설명할 수 있습니다. 동적인 이유는 웹 페이지/웹 앱의 서로 다른 상황에 서로 다른 화면을 보여줄 수 있고, 필요하면 새로운 콘텐츠를 생성할 수 있기 때문입니다. 서버 사이드 코드는 서버에서 새로운 콘텐츠를 생성 — 데이터베이스에서 데이터를 가져오는 등 — 합니다. 클라이언트 사이드 JavaScript는 클라이언트의 브라우저 내에서 새로운 콘텐츠를 생성 — 새로운 HTML 표를 생성하고, 서버에서 받아온 데이터로 채운 후, 사용자가 보고 있는 웹 페이지에 표시 — 합니다. 두 맥락 내에서 '동적'이라는 단어의 정확한 뜻은 약간 다르지만, 그럼에도 서로 연관되어 있으며, 두 방법(서버와 클라이언트 사이드)을 보통 함께 사용합니다.
+
+동적으로 바뀌는 내용을 포함하지 않는 웹 페이지를 **정적**인 페이지라고 합니다. 정적인 페이지는 항상 같은 콘텐츠만 보여줍니다.
 
 ## 웹 페이지에 JavaScript를 어떻게 넣나요?
 
-자바스크립트는 CSS와 같은 방식으로 HTML 페이지에 적용됩니다. CSS는 외부의 스타일시트를 적용하기 위해 link 요소를 사용하거나 내부의 스타일시트를 적용하기 위해 style 요소를 사용하는 반면,자바스크립트는 HTML상에서 오직 script 태크만으로 사용이 가능합니다. 어떻게 작동되는지 한번 살펴봅시다.
+CSS와 비슷한 방법으로 JavaScript를 HTML 코드에 적용할 수 있습니다. CSS가 {{htmlelement("link")}} 요소로 외부 스타일 시트를 적용하고, {{htmlelement("style")}} 요소로 내부 스타일 시트를 적용했다면, JavaScript는 한 종류의 HTML 친구만 요구합니다. 바로 {{htmlelement("script")}} 요소입니다. 어떻게 사용하는지 알아보겠습니다.
 
-### HTML 내부의 자바스크립트
+### 내부 JavaScript
 
-1.  먼저, 예제로 주어진 [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)파일을 저장합니다.
-2.  파일을 브라우저와 편집기 상에서 둘다 엽니다. HTML으로 만든 클릭 버튼이 있는 간단한 웹페이지를 볼 수 있습니다.
-3.  그런다음, 편집기로 가서 `</body>` 태그 직전에 다음의 코드를 추가하도록 합니다:
+1. 먼저, 예제 파일인 [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)을 여러분의 컴퓨터로 복사하세요. 적당한 폴더에 저장하면 됩니다.
+2. 브라우저와 텍스트 편집기로 1번의 파일을 여세요. HTML 코드가 클릭 가능한 버튼 하나를 포함하는 간단한 웹 페이지를 만드는 것을 확인할 수 있습니다.
+3. 텍스트 편집기로 가서 아래의 코드를 추가하세요. 닫는 `</head>` 태그 바로 앞에 넣어주세요.
 
-    ```html
-    <script>
+   ```html
+   <script>
 
-      // JavaScript goes here
+     // JavaScript goes here
 
-    </script>
-    ```
+   </script>
+   ```
 
-그러고 아래의 자바스크립트 코드를 \<script>\</script>사이에 넣음으로서 페이지 상에서 동작이 가능하게끔 할 수 있습니다.( 위 코드에서 "// JavaScript goes here" 부분에 아래의 코드를 추가하면 됩니다.)
+4. 이제 {{htmlelement("script")}} 요소 안에 JavaScript를 넣어서 웹 페이지를 조금 흥미롭게 만들어보겠습니다. 밑의 코드를 "// JavaScript goes here" 바로 아래에 넣어주세요.
 
-```js
-document.addEventListener("DOMContentLoaded", function() {
-  function createParagraph() {
-    let para = document.createElement('p');
-    para.textContent = 'You clicked the button!';
-    document.body.appendChild(para);
-  }
+   ```js
+   document.addEventListener('DOMContentLoaded', () => {
+     function createParagraph() {
+       const para = document.createElement('p');
+       para.textContent = 'You clicked the button!';
+       document.body.appendChild(para);
+     }
 
-  const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll('button');
 
-  for(let i = 0; i < buttons.length ; i++) {
-    buttons[i].addEventListener('click', createParagraph);
-  }
-});
-```
+     for (const button of buttons) {
+       button.addEventListener('click', createParagraph);
+     }
+   });
+   ```
 
-1.  파일을 저장하고 새로고침을 눌러보세요. 이제 버튼을 클릭하면 새로운 문단이 아래쪽에 생기는 것을 볼 수 있습니다.
+5. 파일을 저장하고 브라우저에서 페이지를 새로고침하세요. 이제 버튼을 클릭하는 순간 새로운 문단이 생성돼 밑에 추가되는 모습을 볼 수 있습니다.
 
-<div class="blockIndicator note"><p>각각의 문법에 대해서는 이후 더 자세히 다루기 때문에, 동작여부만 확인하고 넘어가도 무방합니다.</p></div>
+> **참고:** 예제가 잘 동작하지 않으면 각 단계를 다시 차근차근 시도하면서 모두 정확히 따라했는지 확인해보세요.
+> 시작 코드를 저장할 때 `.html` 파일로 저장했나요?
+> {{htmlelement("script")}} 요소를 닫는 `</head>` 요소 바로 앞에 배치했나요?
+> JavaScript 코드를 정확히 보이는 그대로 입력했나요? **JavaScript는 대소문자를 구별하고 매우 까다로우므로 구문을 예제 그대로 입력하지 않으면 동작하지 않을 수 있습니다.**
 
-<div class="note"><p><strong>Note</strong>: 만약 예제가 실행되지 않는다면,  돌아가서 올바른지 한 번 더 체크해보도록 하세요. 혹시 저장할 때 확장자를 .html 로 하지 않았나요? 혹시 {{htmlelement("script")}} 를<code>&#x3C;/body></code> 태그 뒤에 붙인 건 아닌가요?  다음과 같이 자바스크립트를 작성했나요? <strong>자바스크립트는 까다로운 언어이기 때문에 정확하게 문법을 지킬 필요가 있습니다. 그렇지 않으면 제대로 동작하지 않을 수 도 있습니다.</strong></p></div>
+> **참고:** 완성된 예제 코드를 GitHub의 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)에서 볼 수 있습니다. ([실제로 동작하는 모습도 확인해보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html))
 
-<div class="note"><p><strong>Note</strong>: 깃허브에서도 이 코드를 볼 수 있습니다. <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html">apply-javascript-internal.html</a> (<a href="http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html">see it live too</a>).</p></div>
+### 외부 JavaScript
 
-### 외부의 자바스크립트
+내부 JavaScript는 잘 동작했지만, JavaScript를 외부 파일로 분리하고 싶으면 어떡할까요? 지금 알아보겠습니다.
 
-만약에 외부 파일로 자바스크립트를 위치시키고 싶다면 어떻게 할까요? 이에 대해서 알아봅니다.
+1. 위의 HTML 파일과 같은 폴더에 새로운 파일을 만드세요. `script.js`라는 이름을 붙여줍니다. 확장자를 .js로 지정했는지 다시 확인하세요. JavaScript 파일을 인식하는 방법입니다.
+2. 현재 {{htmlelement("script")}} 요소를 다음 코드로 대체하세요.
 
-1.  먼저, HTML 파일이 있는 디렉토리에 `script.js`라는 새로운 파일을 만듭니다. 파일의 확장자가 .js이면 그 파일이 자바스크립트로 이루어져 있음을 뜻합니다.
-2.  아래의 태그를 HTML 코드에 복사 후 저장합니다.
-3.       <script src="script.js" defer></script>
-4.  script.js 의 내용을 다음과 같이 바꿉니다.
+   ```html
+   <script src="script.js" defer></script>
+   ```
 
-        function createParagraph() {
-          let para = document.createElement('p');
-          para.textContent = 'You clicked the button!';
-          document.body.appendChild(para);
-        }
+3. `script.js` 파일 안에 아래 내용을 입력하세요.
 
-        const buttons = document.querySelectorAll('button');
+   ```js
+   function createParagraph() {
+     const para = document.createElement('p');
+     para.textContent = 'You clicked the button!';
+     document.body.appendChild(para);
+   }
 
-        for(let i = 0; i < buttons.length ; i++) {
-          buttons[i].addEventListener('click', createParagraph);
-        }
+   const buttons = document.querySelectorAll('button');
 
-5.  저장하고 브라우저를 새로고침하면 앞과 똑같은 결과가 나올것입니다. 똑같이 작동하기 때문에 이제 자바스크립트는 외부에서 만들 수 있음을 알 수 있습니다. 이는 코드를 만들고 구성하는 입장에서 좋으며, 여러 HTML파일로 부터 재사용이 가능합니다. 더군다나 HTML은 스크립트의 본문이 외부로 분리되어 간결해집니다.
+   for (const button of buttons) {
+     button.addEventListener('click', createParagraph);
+   }
+   ```
 
-<div class="blockIndicator note"><p><strong>Note</strong>: 깃허브에서 이 버전을 볼 수 있습니다. <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html">apply-javascript-external.html</a> 그리고 <a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js">script.js</a> (<a href="http://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html">see it live too</a>).</p></div>
+4. 저장하고 브라우저를 새로고침하세요. 아까와 같은 모습을 볼 수 있습니다! 분명히 동작은 같지만, JavaScript 파일을 외부 파일로 분리할 수 있었습니다. 보통은, 코드도 정리하고 여러 HTML 파일에서 같은 코드를 재사용할 수 있도록, 스크립트를 외부 파일로 분리하는 것이 좋습니다.
+
+> **참고:** 완성된 예제 코드를 GitHub의 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)과 [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js)에서 볼 수 있습니다. ([실제로 동작하는 모습도 확인해보세요](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html))
 
 ### 인라인 JavaScript 처리기
 
-실제 HTML 속에 포함된 자바스크립트코드를 함께 쓸 수 있습니다. 이는 다음과 같으니 참고해보세요:
+가끔은 HTML에 JavaScript 코드가 포함된 모습을 볼 수도 있습니다. 아래 코드처럼요.
 
 ```js example-bad
 function createParagraph() {
-  let para = document.createElement('p');
+  const para = document.createElement('p');
   para.textContent = 'You clicked the button!';
   document.body.appendChild(para);
 }
-//HTML 내의 <scirpt>태그 내부에 작성
 ```
 
 ```html example-bad
 <button onclick="createParagraph()">Click me!</button>
 ```
 
-이는 다음과 같은 예제로 볼 수 있습니다.
+예제로 확인해보세요.
 
-이 데모 예제는 \<button>태그에 onclick속성에 대한 값을 함수이름으로 넣어 버튼이 클릭될 때마다 함수가 실행되도록 작성하였습니다.
+{{ EmbedLiveSample('인라인_JavaScript_처리기', '100%', 150) }}
 
-**하지만, 이 방법은 효율적이지 않습니다.** 이는 자바스크립트와 함께 HTML 소스를 복잡하게 할 수 있습니다. 또한 함수를 만들기 위한 모든 버튼 마다 `onclick="createParagraph()"` 속성을 포함해야합니다.
+위 예제는 이전의 두 예제와 완전히 같은 기능을 가지고 있지만, {{htmlelement("button")}} 요소가 버튼 클릭 동작을 `onclick` 인라인 처리기로 포함한다는 점만 다릅니다.
 
-JavaScript 코드만으로도 모든 버튼에 함수를 연결할 수 있습니다. 위의 내용을 의도한대로 수정한다면 다음과 같습니다:
+**하지만, 이 방법을 사용하지 말아주세요.** JavaScript로 HTML 코드를 물들이는 것은 나쁜 방법일 뿐더러 비효율적입니다. JavaScript를 적용하려는 모든 버튼마다 일일히 `onclick="createParagraph()"`를 추가해야 하니까요.
 
-    const buttons = document.querySelectorAll('button');
-    //모든 <button>태그를 List 형태로 buttons 변수에 저장한다.
+### 대신 addEventListener 사용하기
 
-    for (let i = 0; i < buttons.length ; i++) {
-      buttons[i].addEventListener('click', createParagraph);
-    }
-    //복수이기 때문에 for를 사용해 루프를 돌린다.
+HTML에 JavaScript를 직접 넣는 대신, 순수한 JavaScript 방법을 사용하세요. `querySelectorAll()` 함수를 사용하면 현재 페이지 내의 모든 버튼을 선택할 수 있습니다. 그 후 반복과 `addEventListener()`로 버튼 하나씩 처리기를 부착하세요. 다음과 같은 모습이 될 것입니다.
 
-이 코드는 onclick 속성 코드 보다 조금 길어보이지만, 페이지가 많든, 버튼의 수가 많든 적든 상관없이 모든 버튼들이 같은 기능을 할 수 있도록 합니다. 물론 자바스크립트 코드를 변경할 필요가 없습니다.
+```js
+const buttons = document.querySelectorAll('button');
 
-<div class="note"><p><strong>Note</strong>:  <code>apply-javascript.html 수정을 해보고 버튼을 한 번 추가해 보세요.</code> 실행해보면 버튼 하나하나 클릭할 때 마다 글이 보일 것입니다. 꽤 깔끔하지 않은가요?</p></div>
+for (const button of buttons) {
+  button.addEventListener('click', createParagraph);
+}
+```
 
-### 스크립트의 로딩 방법
+`onclick` 특성을 사용하는 방법보다 좀 길긴 하지만, 대신 페이지 내에 버튼이 몇 개가 있어도, 아니면 몇 개가 추가되고 제거됐는지 상관하지 않고, 그리고 JavaScript를 바꿔줄 필요 없이 모든 버튼에 대해 동작합니다.
 
-작성된 스크립트를 브라우저가 적절한 때에 로딩하는것에 대해 몇가지 이슈가 있습니다. 중요한 것은 모든 HTML 요소는 순서대로 페이지에 로드된다는 것입니다. 만약 당신이 자바스크립트를 이용해 HTML 요소를 조작할 경우(정확하게는 DOM), 자바스크립트 코드가 조작 대상인 HTML 요소보다 먼저 실행된다면 조작할 요소가 존재하지 않는 상태이기 때문에 제대로 동작하지 않을 것입니다.
+> **참고:** 여러분 컴퓨터의 `apply-javascript.html`을 수정해서 버튼 몇 개를 추가해보세요. 브라우저를 새로고침해보면, 아무 버튼이나 눌러도 새로운 문단이 생성되는 모습을 볼 수 있습니다. 멋지지 않나요?
 
-위의 코드 예제에서, 내부와 외부의 자바스크립트는 HTML Document의 `body`가 해석되기 전인 `head `부분에 로드되고 실행되었습니다. 이는 에러를 일으킬 수 있습니다. 그래서 여기에 사용되는 몇가지 해결방법들이 있습니다.
+### 스크립트 로딩 전략
 
-**내부 자바스크립트 예제**에서는 다음과 같이 구성하면 됩니다:
+스크립트를 적절한 시점에 불러오는 일에는 몇 가지 문제가 있습니다. 뭐든지 보이는 것만큼 간단하지는 않은 법이죠. 흔히 마주치게 되는 문제는, 페이지의 모든 HTML은 순서 그대로 불러온다는 점입니다. JavaScript를 사용해서 페이지 내의 요소 — 더 정확하게는 [Document Object Model](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model) — 를 조작하려고 할 때, 해당 요소를 포함한 HTML 코드보다 JavaScript를 먼저 불러와버리면 코드가 올바르게 동작하지 못할 것입니다.
 
-    document.addEventListener("DOMContentLoaded", function() {
-      ...
-    });
+앞선 내부와 외부 JavaScript 예제에서는 HTML 본문을 읽기 전에 문서의 헤드에서 JavaScript를 불러와 실행합니다. 여기서 문제가 생길 여지가 있으므로, 예방할 수 있는 방법을 사용했었습니다.
 
-이 이벤트리스너는 `"DOMContentLoad" `이벤트가 발생되었을 때` function()`을 실행한다는 의미입니다. ([이벤트 리스너](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)에 관해서는 이번 코스에서 다루게 됩니다.) `"DOMContentLoad"` 이벤트는 브라우저가 완전히 로드되고 해석될때 발생됩니다. `function(){}` 내부의 자바스크립트 구문은 이벤트가 발생되기 전까지는 실행되지 않습니다. 따라서 모든 `body`태그의 요소가 로드된 이후 자바스크립트 코드가 실행되도록 만들어 에러를 피할 수 있습니다.
+내부 예제에서는 코드 주위에 이런 구조를 볼 수 있습니다.
 
-**외부 자바스크립트** 예제에서는 좀더 최신의 자바스크립트 문법인 `async `속성을 사용하게 됩니다. 일반적으로 `HTML`요소를 로딩하는 중 `<scirpt>`태그를 만나면 JavaScript의 내용이 모두 다운될 때까지 `HTML`로딩은 멈추게 되는데, `async`요소는 비동기방식으로 `<script>`태그에 도달했을 때 브라우저에게 `HTML `요소를 멈추지 않고 다운받도록 유지시킵니다.
+```js
+document.addEventListener('DOMContentLoaded', () => {
+  ...
+});
+```
 
-    <script src="script.js" async></script>
+이건 이벤트, 그중에서도 HTML 본문 전체를 불러와 읽었다는 것을 나타내는 브라우저 `DOMContentLoaded` 이벤트를 수신하는 수신기입니다. 이 블록 내부의 JavaScript는 이벤트가 발생하기 전에는 실행되지 않으므로 로딩 시점으로 인한 오류를 예방할 수 있습니다. (이후 과정에서 [이벤트에 대해](/ko/docs/Learn/JavaScript/Building_blocks/Events) 알아보겠습니다)
 
-이 경우 `script`와 `HTML`은 모두 동시에 로드되고 작동할 것입니다.
+외부 예제에서는 더 최신 기법을 사용해 문제 발생을 억제합니다. `defer` 특성은 브라우저가 `<script>` 태그를 마주쳐도 그 이후의 HTML 콘텐츠를 계속 불러오도록 지정합니다.
 
-<div class="blockIndicator note"><p><strong>Note</strong>: 외부 스크립트 경우 async 속성을 사용하면 되기 때문에 내부 스크립트처럼 DOMContentLoaded이벤트를 사용할 필요가 없습니다. 하지만 async속성은 외부 스크립트의 경우만 동작합니다.</p></div>
+```js
+<script src="script.js" defer></script>
+```
 
-예전 방식은 `scirpt `요소를 `body`태그의 맨 끝에 넣는 방법이었습니다(`</body>` 바로 위에). 이 방식을 사용해도 `body`태그가 모두 로드된 이후 `scirpt`가 실행되게 만들 수 있습니다. 문제는 이 방법과 `DOMContentLoaded`를 이용한 방법 모두` HTML DOM`이 로드되기 전까지 `script`의 로딩과 파싱이 완전히 차단된다는 것입다. 이는 많은 자바스크립트 코드를 다루는 규모가 큰 사이트의 경우 사이트를 느리게 만드는 중요한 성능 문제를 야기할 수 있습니다. 이것이 `async `속성을 사용해야 하는 이유입니다!
+이렇게 하면 스크립트와 HTML을 동시에 불러오므로 오류가 발생하지 않습니다.
 
-<div class="blockIndicator note"><p><strong>Note</strong>: 자바스크립트의 비동기 개념은 이해하는데 시간이 오래 걸리기 때문에, 지금 이해되지 않는다면 현재 단계에선 외부 스크립트 방식만 사용하고 넘어가도 무방합니다.</p></div>
+> **참고:** `defer` 특성이 오류를 예방하므로, 외부 예제에서는 `DOMContentLoaded`를 사용하지 않았습니다. 내부 예제에서는 `defer` 방법을 사용하지 않았는데, `defer`는 외부 스크립트에만 사용할 수 있기 때문입니다.
 
-#### async & defer
+고전적인 방법은 스크립트 요소를 본문의 맨 마지막(`</body>` 태그 바로 앞)에 배치하는 것입니다. 그러면 모든 HTML을 읽은 후에 스크립트를 불러오게 됩니다. 이 방법의 문제는 HTML DOM을 모두 불러오기 전에는 스크립트의 로딩과 분석이 완전히 중단된다는 점입니다. 그래서 많은 스크립트를 포함하는 대형 사이트에서는 성능이 저하될 수 있습니다.
 
-더 깊게 들어가보면 이러한 코드문제를 해결하기 위한 방법은 실제로 두가지가 있습니다. — `async` 와`defer` 입니다. 두 가지의 차이를 봅시다.
+#### async와 defer
 
-async 스크립트는 페이지 렌더링의 중단 없이 스크립트를 다운로드 하고, 또한 스크립트의 다운로드가 끝나자 마자 이를 실행시킵니다. async는 외부 스크립트끼리의 구체적인 실행 순서는 보장하지 않고, 단지 나머지 페이지가 나타나는 동안 스크립트가 비동기방식으로 다운로드 되어 중단되지 않는다는 것만 보장합니다. async는 각각의 스크립트가 독립적으로, 서로에게 의존하지 않는 관계일 때 적절합니다.
+스크립트 중단 문제를 해결할 수 있는 기능에는 사실 두 가지가 있습니다. `async`와 (위에서 본) `defer`입니다. 어떤 차이점이 있는지 알아봅시다.
 
-아래의 예제를 보시죠:
+`async` 특성을 지정하면 스크립트를 가져오는 동안 페이지 로딩을 중단하지 않습니다. 그러나 스크립트 다운로드가 끝나면 바로 실행되는데, 실행 도중에는 페이지 렌더링이 중단됩니다. 스크립트의 실행 순서를 보장할 방법은 없습니다. 따라서 `async`는 다른 스크립트에 의존하지 않는 독립 스크립트에 사용해야 합니다.
 
-    <script async src="js/vendor/jquery.js"></script>
+`defer` 특성을 지정한 스크립트는 페이지 내에 배치한 순서대로 불러오게 됩니다. 또한 페이지 콘텐츠를 모두 불러오기 전까지는 실행하지 않으므로, 페이지 요소를 수정하거나 추가하는 등 DOM 작업을 기대하는 스크립트에 유용합니다.
 
-    <script async src="js/script2.js"></script>
+다음은 세 개의 스크립트 로딩 전략을 적용했을 때 페이지에 어떤 영향을 주는지 시각적으로 표현한 이미지입니다.
 
-    <script async src="js/script3.js"></script>
+![](async-defer.jpg)
 
-3개의 스크립트를 로딩하지만 이들의 순서는 보장할 수 없습니다. 이는 `script2.js`나 `script3.js`에 있는 함수가` jquery.js`의 함수를 사용한다면 에러를 발생될 수 있다는 것을 의미합니다.
+_[HTML 명세](https://html.spec.whatwg.org/images/asyncdefer.svg)에서 가져와 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스 하에서 축소한 이미지입니다._
 
-Defer는 이와 다르게 순서대로 다운로드 한 후 모든 스크립트와 내용이 다운로드 되었을 때 실행됩니다:
+예를 들어, 아래와 같이 세 개의 스크립트 요소를 가지고 있다고 가정해 보겠습니다.
 
-    <script defer src="js/vendor/jquery.js"></script>
+```html
+<script async src="js/vendor/jquery.js"></script>
 
-    <script defer src="js/script2.js"></script>
+<script async src="js/script2.js"></script>
 
-    <script defer src="js/script3.js"></script>
+<script async src="js/script3.js"></script>
+```
 
-따라서 위의 예제의 경우에는 `jquery.js` -> `script2.js` -> `script3.js` 의 순서가 보장됩니다.
+위 코드로는 스크립트가 HTML의 순서대로 불러와질 것이라고 확실하게 예측할 수 없습니다. `jquery.js`를 `script2.js`와 `script3.js`보다 먼저 불러올 수도 있지만 이후에 불러올 수도 있습니다. 후자의 경우, `script2.js`와 `script3.js`에서 `jquery`에 의존하는 스크립트에서는 오류가 발생할 것입니다. `jquery`가 아직 정의되지 않았으니까요.
 
-요약 :
+`async`는 다수의 백그라운드 스크립트를 최대한 빠르게 불러와야 할 때 사용하세요. 예를 들면 웹 게임을 시작했을 때 사용할 게임 데이터는 곧 필요하긴 하지만 지금 당장 필요한 것은 아니므로, 게임 데이터를 불러온다고 인트로 화면과 타이틀, 메인 메뉴 표시를 중단하지 않을 수 있습니다.
 
-- 만약 scirpt들이 각각의 스크립트에 의존하지 않고 독립적으로 파싱되도 상관없다면, `async` 를 사용합니다.
-- 먄약 sciprt들이 의존하고 하나의 스크립트가 파싱될때까지 기다려야 한다면, `defer` 를 사용하고 각각의 `<script>` 태그들을 실행되길 원하는 순서대로 작성합니다.
+`defer` 특성으로 가져오는 스크립트(아래)는 페이지에 나타난 순서 그대로 불러와서, 페이지 콘텐츠와 위쪽 스크립트 로딩이 끝나면 실행합니다.
+
+```html
+<script defer src="js/vendor/jquery.js"></script>
+
+<script defer src="js/script2.js"></script>
+
+<script defer src="js/script3.js"></script>
+```
+
+위 코드에서는 `script2.js`와 `script3.js`보다 `jquery.js`를 먼저 불러올 것이라고 확신할 수 있습니다. 세 스크립트 모두 페이지 콘텐츠를 모두 불러오기 전엔 실행하지 않으므로, 페이지 요소를 수정해야 하는 등 DOM 조작이 필요하다면 더 유용합니다.
+
+요약하자면,
+
+- `async`와 `defer` 모두, 브라우저가 페이지의 다른 내용(DOM 등등)을 불러오는 동안 스크립트를 별도 스레드에서 불러오게 만듭니다. 덕분에 스크립트를 가져오는 동안 페이지 로딩이 중단되지 않습니다.
+- `async` 특성을 지정한 스크립트는 다운로드가 끝나는 즉시 실행합니다. 실행은 현재 페이지 렌더링을 중단하며, 실행 순서는 보장되지 않습니다.
+- `defer` 특성을 지정한 스크립트는 순서를 유지한 채로 가져오며 모든 콘텐츠를 다 불러온 이후에 실행합니다.
+- 의존성 없는 스크립트를 불러온 즉시 실행하려면 `async`를 사용하세요.
+- 다른 스크립트에 의존하거나 DOM 로딩이 필요한 스크립트에는 `defer`를 사용하고, 원하는 순서에 맞춰서 `<script>` 요소를 배치하세요.
 
 ## 주석
 
-HTML과 CSS와 같이, 자바스크립트에서도 주석문의 사용이 가능합니다. 주석문은 브라우저 실행때는 무시되어 넘어가고 다른 개발자로 하여금 어떻게 구성되고 작동되는지 설명해주는 역할을 합니다(물론 자신의 훗날 코드를 다시 보았을 때 빨리 기억하고, 이해할 수 있게끔 도와주기도 합니다.). 주석문은 매우 유용하고 코딩시 자주 사용됩니다(특히 큰 프로젝트에서). 주석문에는 두가지 종류가 있습니다:
+HTML 및 CSS와 동일하게, JavaScript에서도 브라우저는 무시하는 주석을 작성해서 다른 개발자들(아니면 무슨 일을 했었는지 기억하지 못하는 미래의 여러분)에게 안내를 제공할 수 있습니다. 주석은 엄청 유용합니다. 자주 사용하세요. 특히 대규모 애플리케이션에서는요. 주석에는 두 종류가 있습니다.
 
-- 두개의 슬래시(//)를 통해 한 줄의 주석이 가능합니다.
+- 한 줄 짜리 주석은 맨 앞에 이중 빗금(//)으로 작성합니다.
 
   ```js
-  // I am a comment
+  // 나, 주석
   ```
 
-- /\* 와 \*/를 사용하여 그 사이에 여러 줄의 주석문의 구성이 가능합니다.
+- 여러 줄 주석은 /\*과 \*/의 사이에 작성합니다.
 
   ```js
   /*
-    I am also
-    a comment
+    나 또한
+    주석
   */
   ```
 
-예를 들자면, 앞의 데모예제에 주석문을 다음과 같이 달 수 있습니다.
+그래서, 마지막으로 봤던 JavaScript 예제 코드에 주석을 추가한다면 이런 모습이 되겠죠.
 
 ```js
-// Function: creates a new paragraph and append it to the bottom of the HTML body.
+// 함수: 새로운 문단을 생성해서 HTML 본문 끝에 붙입니다.
 
 function createParagraph() {
-  let para = document.createElement('p');
+  const para = document.createElement('p');
   para.textContent = 'You clicked the button!';
   document.body.appendChild(para);
 }
 
 /*
-  1. Get references to all the buttons on the page and sort them in an array.
-  2. Loop through all the buttons and add a click event listener to each one.
+  1. 페이지 내의 모든 버튼에 대한 참조를 배열 형태로 가져옵니다.
+  2. 버튼 각각을 순회하면서 클릭 이벤트 수신기를 추가합니다.
 
-  When any button is pressed, the createParagraph() function will be run.
+  아무 버튼이나 클릭하면 createParagraph() 함수가 실행됩니다.
 */
 
 const buttons = document.querySelectorAll('button');
 
-for (let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (const button of buttons) {
+  button.addEventListener('click', createParagraph);
 }
 ```
 
+> **참고:** 보통은 많은 주석이 적은 주석보다 낫지만, 너무 많은 주석으로 이 변수가 어떤 변수인지 설명(변수 이름을 더 직관적으로 나타낼 수 있을 수도)하고 있거나 매우 간단한 작업의 설명(코드가 과하게 복잡할지도)에 투자하고 있지는 않은지 주의하세요.
+
 ## 정리
 
-지금까지 우리는 자바스크립트의 첫걸음을 떼었습니다. 여기서 자바스크립트를 왜 사용하고 어떻게 사용하는지에 대한 방법들에 대한 기초적인 부분을 배웠습니다. 여러 예제 코드를 봄으로써, 웹사이트와 다른 곳에서의 코드상 자바스크립트가 어떻게 구성되어있는지 배웠습니다.
+이로써 JavaScript의 세계로 한 걸음 내딛었습니다. 왜 JavaScript를 써야 하는지, 그리고 어떤 일을 할 수 있는지 먼저 알아보기 위해 이론으로 시작했고, 약간의 코드 예제를 봤고, 여러분의 웹 사이트 어디에 JavaScript가 들어갈 수 있는지 등등을 알아봤습니다.
 
-자바스크립트가 지금은 조금 어려울 수 있으나, 걱정하지 마세요. 이 수업은 첫 단계인만큼 앞으로 더 많은 것을 배우기 위해 감각을 키우기 위한 수업입니다. 다음 수업에서 우리는 [plunge straight into the practical](/en-US/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash)를 통해 앞으로 더 나아가고 스스로 자바스크립트 예제를 실행해볼 것입니다.
+지금 당장은 JavaScript가 약간 버겁게 느껴질지도 모르겠지만, 너무 걱정하지 마세요. 이 과정에 걸친 간단한 단계들을 밟다 보면 전체적인 모습이 보일겁니다. 다음 글에서는 [바로 실전으로 들어가서](/ko/docs/Learn/JavaScript/First_steps/A_first_splash) 스스로 JavaScript 예제를 만들어보도록 합시다.
+
+{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+
+## 이 과정은
+
+- [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [JavaScript 첫 걸음](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
+- [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
+- [텍스트 다루기 — JavaScript의 문자열](/ko/docs/Learn/JavaScript/First_steps/Strings)
+- [유용한 문자열 메서드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
+- [평가: 바보같은 이야기 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)
