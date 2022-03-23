@@ -5,121 +5,118 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Method
-  - Reference
+  - Draw String
+  - Draw Text
+  - 文字列の描画
+  - テキストの描画
+  - Fill Text
+  - Filling Text
+  - メソッド
+  - リファレンス
+  - テキスト
+  - fillText
+browser-compat: api.CanvasRenderingContext2D.fillText
 translation_of: Web/API/CanvasRenderingContext2D/fillText
 ---
-<div>{{APIRef}}</div>
+{{APIRef("HTML DOM")}}
 
-<p>Canvas 2D API の <code><strong>CanvasRenderingContext2D.fillText()</strong></code> メソッドは、指定した位置 <em>(x, y)</em> にテキストを塗りつぶして描画します。省略可能な第 4 引数である最大幅を与えると、この幅に収まるようにテキストを縮小します。</p>
+{{domxref("CanvasRenderingContext2D")}} の **`fillText()`** はキャンバス 2D API のメソッドで、指定した座標にテキスト文字列を描画し、その文字を現在の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} で塗りつぶします。オプションの引数で、描画されるテキストの最大幅を指定すると、{{Glossary("user agent", "ユーザーエージェント")}}は、この幅に収まるようにテキストを圧縮したり、フォントサイズを縮小したりします。
 
-<p>テキストの輪郭線を描画するための {{domxref("CanvasRenderingContext2D.strokeText()")}} メソッドもご覧ください。</p>
+このメソッドは現在のパスを変更することなく直接描画を行うため、その後の {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} や {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} の呼び出しには影響を与えません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+テキストのフォントやレイアウト構成は、 {{domxref("CanvasRenderingContext2D.font","font")}}、{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction","direction")}} の各プロパティで定義されたものを使用して描画が行われます。
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fillText(text, x, y [, maxWidth]);</var>
-</pre>
+> **Note:** 文字列の文字の輪郭を描画するには、そのコンテキストで {{domxref("CanvasRenderingContext2D.strokeText", "strokeText()")}} メソッドを呼び出してください。
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+## 構文
 
-<dl>
- <dt><code>text</code></dt>
- <dd>現在の {{domxref("CanvasRenderingContext2D.font","font")}}、{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction","direction")}} の値を使用して描画するテキスト。</dd>
- <dt><code>x</code></dt>
- <dd>テキストの描画を始める、x 軸の座標。</dd>
- <dt><code>y</code></dt>
- <dd>テキストの描画を始める、y 軸の座標。</dd>
- <dt><code>maxWidth</code> {{optional_inline}}</dt>
- <dd>描画する最大幅。この引数が指定され、指定文字列の幅がこの幅より広く算出された場合、フォントはより水平方向に凝縮されたフォント (そのようなフォントが利用可能、もしくは、現在のフォントを水平方向に縮小することによって適度に読みやすいフォントに合成できる場合) か、より小さなフォントを用いるように調整されます。</dd>
-</dl>
+```js
+CanvasRenderingContext2D.fillText(text, x, y [, maxWidth]);
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+### 引数
 
-<h3 id="Using_the_fillText_method" name="Using_the_fillText_method"><code>fillText</code> メソッドの使用例</h3>
+- `text`
+  - : {{domxref("DOMString")}} で、このコンテキストに描画するテキスト文字列を指定します。テキストは、 {{domxref("CanvasRenderingContext2D.font","font")}}、{{domxref("CanvasRenderingContext2D.textAlign","textAlign")}}、{{domxref("CanvasRenderingContext2D.textBaseline","textBaseline")}}、{{domxref("CanvasRenderingContext2D.direction","direction")}} の設定を使用して描画されます。
+- `x`
+  - : テキストの描画を始める、x 軸の座標をピクセル単位で指定します。
+- `y`
+  - : テキストの描画を始める、y 軸の座標をピクセル単位で指定します。
+- `maxWidth` {{optional_inline}}
+  - : 描画するテキストの最大幅をピクセル数で指定します。指定しなかった場合、テキストの幅は制限されません。この値を指定すると、ユーザーエージェントはカーニングを調整したり、水平方向に縮小されたフォントを選択したり（利用可能であるか、または品質を損なうことなく生成できる場合）、フォントを縮小したりして、指定した幅にテキストを収めます。
 
-<p><code>fillText</code> メソッドを使用する、シンプルなコードスニペットです。</p>
+### 返値
 
-<h4 id="HTML" name="HTML">HTML</h4>
+{{jsxref("undefined")}}
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+## 例
 
-<h4 id="JavaScript" name="JavaScript">JavaScript</h4>
+### 塗りつぶしたテキストを描画
 
-<pre class="brush: js; highlight:[5]">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+この例では、 "Hello world" という語を `fillText()` メソッドで描画します。
 
-ctx.font = "48px serif";
-ctx.fillText("Hello world", 50, 100);
-</pre>
+#### HTML
 
-<p>以下のコードを編集すると、canvas の変更個所をその場で確認できます:</p>
+まず、描画するためのキャンバスが必要です。このコードでは、幅 400 ピクセル、横 150 ピクセルのコンテキストを作成します。
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+```html
+<canvas id="canvas" width="400" height="150"></canvas>
+```
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="編集" /&gt;
-  &lt;input id="reset" type="button" value="リセット" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-ctx.font = "48px serif";
-ctx.fillText("Hello world", 50, 100);&lt;/textarea&gt;
-</pre>
+#### JavaScript
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+この例の JavaScript コードは次のようになります。
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+ctx.font = '50px serif';
+ctx.fillText('Hello world', 50, 90);
+```
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+このコードでは、 {{HTMLElement("canvas")}} への参照を取得し、その 2D グラフィックコンテキストへの参照を取得します。
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+そして、 {{domxref("CanvasRenderingContext2D", "font")}} を高さ 50 ピクセルの "serif" （ユーザーの既定の{{interwiki("wikipedia", "セリフ_(文字)", "セリフ付き")}}フォント）に設定し、 `fillText()` を呼び出して座標 (50, 90) からテキスト "Hello world" を描画しています。
 
-<p>{{EmbedLiveSample('Playable_code', 700, 360)}}</p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+{{ EmbedLiveSample('Drawing_filled_text', 700, 180) }}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-filltext", "CanvasRenderingContext2D.fillText")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+### テキストの大きさの制限
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+この例は "Hello world" という文字列を、 140 ピクセルの幅に制約して描画します。
 
-<p>{{Compat("api.CanvasRenderingContext2D.fillText")}}</p>
+#### HTML
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+```html
+<canvas id="canvas" width="400" height="150"></canvas>
+```
 
-<ul>
- <li>このメソッドを定義するインターフェイスである {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeText()")}}</li>
-</ul>
+#### JavaScript
+
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.font = '50px serif';
+ctx.fillText('Hello world', 50, 90, 140);
+```
+
+#### 結果
+
+{{ EmbedLiveSample('Restricting_the_text_size', 700, 180) }}
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [テキストの描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+- {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.strokeText()")}}
