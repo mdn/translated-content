@@ -20055,7 +20055,7 @@
       "Wind1808"
     ]
   },
-  "Web/API/PermissionStatus/onchange": {
+  "Web/API/PermissionStatus/change_event": {
     "modified": "2020-10-15T22:20:11.513Z",
     "contributors": [
       "Wind1808"
