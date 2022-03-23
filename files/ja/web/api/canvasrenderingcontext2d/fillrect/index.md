@@ -1,121 +1,88 @@
 ---
 title: CanvasRenderingContext2D.fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
+tags:
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - メソッド
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.fillRect
 translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.fillRect()</code></strong> は座標 <em>(<code>x</code>, <code>y</code>)</em> を始点に、大きさ<code>(width</code>, <code>height</code>) の領域を塗りつぶします。塗りつぶす様式は <code>fillStyle</code> 属性に従います。</span></p>
+**`CanvasRenderingContext2D.fillRect()`** はキャンバス 2D API のメソッドで、塗りつぶした矩形を現在の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} に基づいて描きます。
 
-<h2 id="文法">文法</h2>
+このメソッドはキャンバスに直接描画を行い、現在のパスを変更しません。したがって、その後の {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} の呼び出しには影響しません。
 
-<pre class="syntaxbox">void <var><em>ctx</em>.fillRect(x, y, width, height);</var>
-</pre>
+## 構文
 
-<h3 id="Parameters">Parameters</h3>
+```js
+void ctx.fillRect(x, y, width, height);
+```
 
-<dl>
- <dt><code>x</code></dt>
- <dd>矩形領域の始点のうち、X座標を指定します。</dd>
- <dt><code>y</code></dt>
- <dd>矩形領域の始点のうち、Y座標を指定します。</dd>
- <dt><code>width</code></dt>
- <dd>矩形領域の横幅を指定します。</dd>
- <dt><code>height</code></dt>
- <dd>矩形領域の高さを指定します。</dd>
-</dl>
+`fillRect()` メソッドは塗りつぶした矩形を、 `(x, y)` を始点とし、 `width` と `height` でサイズを指定しで描画します。塗りつぶしのスタイルは、現在の `fillStyle` 属性によって決定されます。
 
-<h2 id="使用例">使用例</h2>
+### 引数
 
-<h3 id="fillRect_の使い方"><code>fillRect</code> の使い方</h3>
+- `x`
+  - : 矩形の開始位置の X 座標です。
+- `y`
+  - : 矩形の開始位置の Y 座標です。
+- `width`
+  - : 矩形の幅です。正の数であれば右方向、負の数であれば左方向です。
+- `height`
+  - : 矩形の高さです。正の数であれば下方向、負の数であれば上方向です。
 
-<p><code>fillRect</code> メソッドを利用した簡単な使用例です。</p>
+## 例
 
-<h4 id="HTML">HTML</h4>
+### 単純な塗りつぶした矩形
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+`fillRect` メソッドを利用した簡単な使用例です。
 
-<h4 id="JavaScript">JavaScript</h4>
+#### HTML
 
-<pre class="brush: js; highlight:[4]">var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+矩形の左上は (20, 10) です。幅は 150 で高さは 100 です。
+
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, 100, 100);
+ctx.fillRect(20, 10, 150, 100);
+```
 
-// キャンバス全体を塗りつぶすには、以下のようにします。
-// ctx.fillRect(0, 0, canvas.width, canvas.height);
-</pre>
+#### 結果
 
-<p>以下のコードを編集して、変更がどのように適用されるか試してみてください。</p>
+{{ EmbedLiveSample('A_simple_filled_rectangle', 700, 180) }}
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+### キャンバス全体の塗りつぶし
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-ctx.fillStyle = "green";
-ctx.fillRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+このコードでは、キャンバス全体を矩形で塗りつぶします。これは、背景を作成し、その上に他のものを描画するのに便利です。このため、矩形の寸法は {{HtmlElement("canvas")}} 要素の `width` と `height` 属性に等しくなるように設定されています。
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+```
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+## 仕様書
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+{{Specifications}}
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+## ブラウザーの互換性
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+{{Compat}}
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+## 関連情報
 
-<h2 id="仕様">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-fillrect", "CanvasRenderingContext2D.fillRect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザ間の互換性">ブラウザ間の互換性</h2>
-
-<p>{{Compat("api.CanvasRenderingContext2D.fillRect")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>このメソッドを定義するインターフェイスである {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillStyle")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.clearRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-</ul>
+- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillStyle")}}
+- {{domxref("CanvasRenderingContext2D.clearRect()")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
