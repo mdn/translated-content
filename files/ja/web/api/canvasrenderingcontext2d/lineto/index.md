@@ -1,118 +1,108 @@
 ---
 title: CanvasRenderingContext2D.lineTo()
 slug: Web/API/CanvasRenderingContext2D/lineTo
+tags:
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - Method
+  - Reference
+browser-compat: api.CanvasRenderingContext2D.lineTo
 translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D API の <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.lineTo()</code></strong> メソッドは、直線でサブパスの終点を <code>x</code> と <code>y</code> の座標へ接続します（この線は実際には描画されません）。</p>
+{{domxref("CanvasRenderingContext2D")}} の **`lineTo()`** はキャンバス 2D API のメソッドで、現在のサブパスに対して、その終点から指定された `(x, y)` 座標に向けて直線を追加します。
 
-<h2 id="構文">構文</h2>
+現在のパスを変更するほかのメソッドと同様に、このメソッドは直悦は何も描画しません。パスをキャンバス上に描くには、 {{domxref("CanvasRenderingContext2D.fill", "fill()")}} または {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使用します。
 
-<pre class="syntaxbox">void <var><em>ctx</em>.lineTo(x, y);</var>
-</pre>
+## 構文
 
-<h3 id="引数">引数</h3>
+```js
+ctx.lineTo(x, y);
+```
 
-<dl>
- <dt><code>x</code></dt>
- <dd>線の終点の x 座標。</dd>
- <dt><code>y</code></dt>
- <dd>線の終点の y 座標。</dd>
-</dl>
+### 引数
 
-<h2 id="例">例</h2>
+- `x`
+  - : 直線の終点となる x 座標。
+- `y`
+  - : 直線の終点となる y 座標。
 
-<h3 id="lineTo_メソッドを使う"><code>lineTo</code> メソッドを使う</h3>
+### 返値
 
-<p>これは lineTo メソッドを使った実にシンプルなコード断片です。{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} を使って直線を描くパスを開始し 、ペンを {{domxref("CanvasRenderingContext.moveTo", "moveTo()")}} で動かし、そして {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} メソッドを使って実際に線を描画します。</p>
+{{jsxref("undefined")}}.
 
-<h4 id="HTML">HTML</h4>
+## 例
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+### 直線の描画
 
-<h4 id="JavaScript">JavaScript</h4>
+この例は、 `lineTo()` メソッドを使用して直線を描きます。
 
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+#### HTML
 
-ctx.beginPath();
-ctx.moveTo(50,50);
-ctx.lineTo(100, 100);
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+The line begins at (30, 50) and ends at (150, 100).
+
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.beginPath();       // 新しいパスを開始
+ctx.moveTo(30, 50);    // ペンを (30, 50) へ移動
+ctx.lineTo(150, 100);  // 直線を (150, 100) へ描く
+ctx.stroke();          // パスを描画
+```
+
+#### 結果
+
+{{ EmbedLiveSample('Drawing_a_straight_line', 700, 180) }}
+
+### 連続線の描画
+
+`lineTo()` （または類似のメソッド）を呼び出すたびに、現在のパスに自動的に追加されます。すなわち、すべての線が描画され、互いに塗りつぶされます。
+この例では、一筆書きで 'M' の文字を描画します。
+
+#### HTML
+
+```html
+<canvas id="canvas"></canvas>
+```
+
+#### JavaScript
+
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.moveTo(90, 130);
+ctx.lineTo(95, 25);
+ctx.lineTo(150, 80);
+ctx.lineTo(205, 25);
+ctx.lineTo(210, 130);
+ctx.lineWidth = 15;
 ctx.stroke();
-</pre>
+```
 
-<p>下のコードを編集して、変更が canvas に直に反映されることを確認してください。</p>
+#### 結果
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+{{ EmbedLiveSample('Drawing_connected_lines', 700, 180) }}
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-ctx.beginPath();
-ctx.moveTo(50,50);
-ctx.lineTo(100, 100);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+## 仕様書
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+{{Specifications}}
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+## ブラウザーの互換性
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+{{Compat}}
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+## 関連情報
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
-
-<h2 id="仕様">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-lineto", "CanvasRenderingContext2D.lineTo")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
-
-<p>{{Compat("api.CanvasRenderingContext2D.lineTo")}}</p>
-
-<h2 id="参考情報">参考情報</h2>
-
-<ul>
- <li>このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.moveTo()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.moveTo()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}
