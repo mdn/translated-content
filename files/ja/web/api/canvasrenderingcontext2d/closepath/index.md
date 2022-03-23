@@ -5,39 +5,41 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Method
-  - Reference
   - メソッド
   - リファレンス
+browser-compat: api.CanvasRenderingContext2D.closePath
 translation_of: Web/API/CanvasRenderingContext2D/closePath
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><strong><code>CanvasRenderingContext2D.closePath()</code></strong> は Canvas 2D API のメソッドで、現在の点から現在のサブパスの開始点までの間に直線を追加することを試みます。図形がすでに閉じていたり、1つしか点がなかったりした場合は、この関数は何もしません。</p>
+**`CanvasRenderingContext2D.closePath()`** はキャンバス 2D API のメソッドで、現在の点から現在のサブパスの開始点までの間に直線を追加することを試みます。図形がすでに閉じていたり、 1 つしか点がなかったりした場合は、この関数は何もしません。
 
-<p>このメソッドは canvas に直接は何も描きません。 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} または {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} メソッドを使用してパスを描くことができます。</p>
+このメソッドはキャンバスには直接は何も描きません。 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} または {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} メソッドを使用してそのパスを描画することができます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <em>ctx</em>.closePath();
-</pre>
+```js
+void ctx.closePath();
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Closing_a_triangle" name="Closing_a_triangle">三角形を閉じる</h3>
+### 三角形を閉じる
 
-<p>この例は最初に三角形の2つの (対角の) 辺を <code>lineTo()</code> メソッドを使用して作成します。その後で、図形の最初と最後の点を自動的に接続する <code>closePath()</code> メソッドで、底辺を作成します。</p>
+この例は最初に三角形の2つの (対角の) 辺を `lineTo()` メソッドを使用して作成します。その後で、図形の最初と最後の点を自動的に接続する `closePath()` メソッドで、底辺を作成します。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The triangle's corners are at (20, 150), (120, 20), and (220, 150).</p>
+三角形の頂点は、 (20, 150), (120, 20), (220, 150) とします。
 
-<pre class="brush: js; highlight:[8]">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -46,30 +48,30 @@ ctx.lineTo(120, 10);   // 上中央へ線を引く
 ctx.lineTo(220, 140);  // 右下の隅へ線を引く
 ctx.closePath();       // 左下の隅へ線を引く
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Closing_a_triangle', 700, 180) }}</p>
+{{ EmbedLiveSample('Closing_a_triangle', 700, 180) }}
 
-<h3 id="Closing_just_one_sub-path" name="Closing_just_one_sub-path">サブパスを1つだけ閉じる</h3>
+### サブパスを 1 つだけ閉じる
 
-<p>この例では、非接続のサブパス3つからなるスマイリーの顔マークを描画します。</p>
+この例では、非接続のサブパス3つからなるスマイリーの顔マークを描画します。
 
-<div class="blockIndicator note">
-<p>メモ: すべての弧について、作成された後で <code>closePath()</code> が呼び出されていますが、最後の弧 (サブパス) のみが閉じられます。</p>
-</div>
+> **Note:** すべての弧について、作成された後で `closePath()` が呼び出されていますが、最後の弧 (サブパス) のみが閉じられます。
 
-<h4 id="HTML_2" name="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<p>最初の2つの弧は顔の目を作成します。最後の弧は口を作成します。</p>
+最初の 2 つの弧は顔の目を作成します。最後の弧は口を作成します。
 
-<pre class="brush: js; highlight:[10]">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -81,38 +83,21 @@ ctx.arc(150, 80, 65, 0, Math.PI);
 ctx.closePath();
 ctx.lineWidth = 6;
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Closing_just_one_sub-path', 700, 180) }}</p>
+{{ EmbedLiveSample('Closing_just_one_sub-path', 700, 180) }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-closepath", "CanvasRenderingContext2D.closePath")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.CanvasRenderingContext2D.closePath")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.beginPath()")}}</li>
-</ul>
+- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.beginPath()")}}
