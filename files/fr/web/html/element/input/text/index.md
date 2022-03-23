@@ -22,7 +22,7 @@ L'attribut {{htmlattrxref("value", "input")}} d'un tel élément contient une ch
 monTextInput.value;
 ```
 
-Si aucune contrainte de validation n'est ajoutée (cf. {{anch("Validation")}} pour plus d'informations), la valeur peut être n'importe quelle chaîne de caractères voire la chaîne vide ("").
+Si aucune contrainte de validation n'est ajoutée (cf. [Validation](#validation) pour plus d'informations), la valeur peut être n'importe quelle chaîne de caractères voire la chaîne vide ("").
 
 ## Attributs supplémentaires
 
@@ -30,13 +30,13 @@ En complément des attributs communs à l'ensemble des éléments {{HTMLElement(
 
 | Attribut                           | Description                                                                                                                                            |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `{{anch("maxlength")}}`     | Le nombre de caractères maximal qui peut être écrit dans ce champ.                                                                                     |
-| `{{anch("minlength")}}`     | Le nombre de caractères minimal qui peut être écrit dans ce champ pour qu'il soit considéré comme valide.                                              |
-| `{{anch("pattern")}}`         | Une expression rationnelle à laquelle doit correspondre le texte saisi pour être valide.                                                               |
-| `{{anch("placeholder")}}` | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                                                              |
-| `{{anch("readonly")}}`     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                                                                           |
-| `{{anch("size")}}`             | Un nombre qui indique le nombre de caractères affichés par le champ.                                                                                   |
-| `{{anch("spellcheck")}}`     | Cet attribut contrôle l'activation de la vérification orthographique sur le champ ou si la vérification orthographique par défaut doit être appliquée. |
+| [`maxlength`](#maxlength)     | Le nombre de caractères maximal qui peut être écrit dans ce champ.                                                                                     |
+| [`minlength`](#minlength)     | Le nombre de caractères minimal qui peut être écrit dans ce champ pour qu'il soit considéré comme valide.                                              |
+| [`pattern`](#pattern)         | Une expression rationnelle à laquelle doit correspondre le texte saisi pour être valide.                                                               |
+| [`placeholder`](#placeholder) | Une valeur d'exemple qui sera affichée lorsqu'aucune valeur n'est saisie.                                                                              |
+| [`readonly`](#readonly)     | Un attribut booléen qui indique si le contenu du champ est en lecture seule.                                                                           |
+| [`size`](#size)             | Un nombre qui indique le nombre de caractères affichés par le champ.                                                                                   |
+| [`spellcheck`](#spellcheck)     | Cet attribut contrôle l'activation de la vérification orthographique sur le champ ou si la vérification orthographique par défaut doit être appliquée. |
 
 ### {{htmlattrdef("maxlength")}}
 
@@ -78,7 +78,7 @@ Un attribut booléen qui, lorsqu'il est présent, indique que le champ ne peut p
 
 L'attribut `size` est un nombre positif qui indique le nombre de caractères affichés à l'écran et qui définit donc la largeur du champ. La valeur par défaut de cet attribut est 20. Étant donné que la largeur des caractères peut varier cet attribut ne permet de définir une largeur exacte mais approximative.
 
-Cet attribut ne définit pas la limite du nombre de caractères saisissables dans le champ mais uniquement, et approximativement, le nombre de caractères qui peuvent être affichés à l'écran simultanément. Pour fixer une taille maximale sur la valeur du champ, on utilisera plutôt l'attribut `{{anch("maxlength")}}`.
+Cet attribut ne définit pas la limite du nombre de caractères saisissables dans le champ mais uniquement, et approximativement, le nombre de caractères qui peuvent être affichés à l'écran simultanément. Pour fixer une taille maximale sur la valeur du champ, on utilisera plutôt l'attribut [`maxlength`](#maxlength).
 
 ### {{htmlattrdef("spellcheck")}}
 
@@ -91,7 +91,7 @@ Cet attribut ne définit pas la limite du nombre de caractères saisissables dan
 - `""` (chaîne de caractères vide) ou aucune valeur
   - : La configuration par défaut de l'élément par rapport à la vérification orthographique sera respectée. Cette configuration par défaut peut provenir de la valeur de `spellcheck` pour les éléments parents ou d'autres facteurs.
 
-Un champ de saisie peut avoir la vérification orthographique activée s'il ne possède pas l'attribut {{anch("readonly")}} et qu'il n'est pas désactivé.
+Un champ de saisie peut avoir la vérification orthographique activée s'il ne possède pas l'attribut [readonly](#readonly) et qu'il n'est pas désactivé.
 
 La valeur renvoyée par l'attribut `spellcheck` peut ne pas refléter l'état réel de la vérification ortographique si certaines préférences de l'agent utilisateur surchargent le paramétrage par défaut.
 
@@ -101,8 +101,8 @@ Les attributs non-standard suivant sont disponibles pour les champs textuels mai
 
 | Attribut                           | Description                                                                                                                                                                                                                                                                                                                                       |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("autocorrect")}}` | Une chaîne de caractères qui indique si la correction automatique doit être appliquée à ce champ texte. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                 |
-| `{{anch("mozactionhint")}}` | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. La valeur de cet attribut est utilisée comme libellé pour la touche adéquate du clavier virtuel. **Uniquement pris en charge par Firefox pour Android.** |
+| [`autocorrect`](#autocorrect) | Une chaîne de caractères qui indique si la correction automatique doit être appliquée à ce champ texte. **Uniquement pris en charge par Safari.**                                                                                                                                                                                                 |
+| [`mozactionhint`](#mozactionhint) | Une chaîne de caractères qui indique le type d'action qui sera effectuée lorsque l'utilisateur appuiera sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ. La valeur de cet attribut est utilisée comme libellé pour la touche adéquate du clavier virtuel. **Uniquement pris en charge par Firefox pour Android.** |
 
 ### {{htmlattrdef("autocorrect")}} {{non-standard_inline}}
 
@@ -344,7 +344,7 @@ En plus des exemples précédents, vous pouvez consulter les articles [Un premie
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente la valeur contenue dans le champ texte.

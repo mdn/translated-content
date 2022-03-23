@@ -40,7 +40,7 @@ Pour plus d'informations, vour l'article principal sur [Feature Policy](/docs/We
     Feature-Policy: <directive> <allowlist>
 
 - `<directive>`
-  - : La directive de Feature Policy sur laquelle appliquer la liste de permissions `allowlist`. Voir {{anch("Directives")}} ci-dessous pour une liste des noms de directives autorisés.
+  - : La directive de Feature Policy sur laquelle appliquer la liste de permissions `allowlist`. Voir [Directives](#directives) ci-dessous pour une liste des noms de directives autorisés.
 - `<allowlist>`
   - : {{page("Web/HTTP/Feature_Policy/Using_Feature_Policy", "allowlist")}}
 

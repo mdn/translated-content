@@ -12,7 +12,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_slider
 
 Cette technique présente l’utilisation du rôle [slider](http://www.w3.org/TR/wai-aria/roles#slider).
 
-Le rôle `slider` est utilisé pour des balises qui permettent à l'utilisateur de sélectionner une valeur dans un intervalle donné. Le rôle `slider` est assigné à la «&nbsp;*molette*&nbsp;», le contrôle qui est ajusté pour modifier la valeur. Typiquement, un autre élément est stylé pour représenter visuellement l'intervalle de valeurs possibles, et le curseur est positionné visuellement pour représenter la valeur dans cet intervalle. Lorsque l'utilisateur interagit avec la molette, l'application doit programmatiquement ajuster l'attribut `aria-valuenow` du curseur de défilement (et si possible `aria-valuetext`) pour refléter la valeur courante. Voir la section {{ anch("Exemples") }} ci-dessous pour plus d'informations.
+Le rôle `slider` est utilisé pour des balises qui permettent à l'utilisateur de sélectionner une valeur dans un intervalle donné. Le rôle `slider` est assigné à la «&nbsp;*molette*&nbsp;», le contrôle qui est ajusté pour modifier la valeur. Typiquement, un autre élément est stylé pour représenter visuellement l'intervalle de valeurs possibles, et le curseur est positionné visuellement pour représenter la valeur dans cet intervalle. Lorsque l'utilisateur interagit avec la molette, l'application doit programmatiquement ajuster l'attribut `aria-valuenow` du curseur de défilement (et si possible `aria-valuetext`) pour refléter la valeur courante. Voir la section [Exemples](#exemples) ci-dessous pour plus d'informations.
 
 #### Clavier et focus
 

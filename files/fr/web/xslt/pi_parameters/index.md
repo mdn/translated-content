@@ -10,7 +10,7 @@ original_slug: Web/XSLT/Paramètres_des_instructions_de_traitement
 
 XSLT permet de passer des paramètres à une feuille de style lors de son exécution. C'était déjà possible depuis quelques temps dans l'[XSLTProcessor](fr/XSLTProcessor) sous JavaScript, mais pas lors de l'utilisation de l'instruction de traitement (_PI_, pour Processing Instruction) `<?xml-stylesheet?>`.
 
-Pour résoudre cela, deux nouvelles PI (Instructions de traitement) ont été implémentées dans [Firefox 2](fr/Firefox_2) (voir {{ Anch("Versions supportées") }} plus bas pour plus de détails), `<?xslt-param?>` et `<?xslt-param-namespace?>`. Ces deux PI peuvent contenir des «&nbsp;pseudo attributs&nbsp;» de la même manière que la PI (Instruction de traitement) `xml-stylesheet`.
+Pour résoudre cela, deux nouvelles PI (Instructions de traitement) ont été implémentées dans [Firefox 2](fr/Firefox_2) (voir la section [Versions supportées](#versions_supportées) plus bas pour plus de détails), `<?xslt-param?>` et `<?xslt-param-namespace?>`. Ces deux PI peuvent contenir des «&nbsp;pseudo attributs&nbsp;» de la même manière que la PI (Instruction de traitement) `xml-stylesheet`.
 
 L'exemple suivant passe les deux paramètres `color` et `size` à la feuille de style style.xsl&nbsp;:
 

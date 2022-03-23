@@ -106,7 +106,7 @@ occasions, comme maintenant.</p>
 
 ### Familles de fontes
 
-Pour définir une police de caractères différente pour le texte, utilisez la propriété {{cssxref("font-family")}} — cela vous permet de spécifier une police (ou une liste de polices) que le navigateur doit appliquer aux éléments sélectionnés. Le navigateur n'appliquera une police de caractères que si elle est disponible sur la machine sur laquelle le site est accessible, sinon, il utilisera une  {{anch("Default fonts", "police par défaut")}} . Un exemple simple pour voir cela :
+Pour définir une police de caractères différente pour le texte, utilisez la propriété {{cssxref("font-family")}} — cela vous permet de spécifier une police (ou une liste de polices) que le navigateur doit appliquer aux éléments sélectionnés. Le navigateur n'appliquera une police de caractères que si elle est disponible sur la machine sur laquelle le site est accessible, sinon, il utilisera une [police par défaut](#polices_par_défaut). Un exemple simple pour voir cela :
 
 ```css
 p {

@@ -48,8 +48,8 @@ See also the [extensions to the Gamepad interface](/en-US/docs/Web/API/Gamepad#E
 
 | Spécification                                                                    | Statut                                   | Commentaire                                                           |
 | -------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Defines the {{anch("Experimental Gamepad extensions")}}. |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Initial definition                                                    |
+| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | Définit les [extensions de manette du jeu expérimentales](#extensions_de_manette_du_jeu_expérimentales). |
+| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | Définition initiale                                                    |
 
 ## Compatibilité du navigateur
 

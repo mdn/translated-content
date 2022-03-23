@@ -152,7 +152,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
     request.send();
     ```
 
-    Voyez la section {{anch("Serving your example from a server", "Servir votre exemple depuis un serveur")}} pour pouvoir tester.
+    Voyez la section [Servir votre exemple depuis un serveur](#servir_votre_exemple_depuis_un_serveur) pour pouvoir tester.
 
 10. Un dernier problème avec cet exemple est qu'il ne montre rien au chargement de la page (mais uniquement à la sélection d'un verset). Pour corriger cela, ajoutez ce qui suit au bas de votre code (juste au-dessus de la balise fermante `</script>`), pour charger le verset 1 par défaut, et s'assurer que l'élément {{htmlelement("select")}} montre toujours la bonne valeur :
 
@@ -331,7 +331,7 @@ Si la réponse n'est pas un succès, nous affichons une erreur dans la console i
 Vous pouvez tester le cas d'échec vous-même :
 
 1.  Faites une copie locale des fichiers d'exemple (téléchargez et dézippez le [fichier ZIP can-store](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/can-store/can-store.zip?raw=true))
-2.  Éxecutez le code via un serveur web (comme vu précédemment dans {{anch("Serving your example from a server", "Servir votre exemple depuis un serveur")}})
+2. Éxecutez le code via un serveur web (comme vu précédemment dans la section [Servir votre exemple depuis un serveur](#servir_votre_exemple_depuis_un_serveur))
 3.  Modifiez le chemin du fichier à récupérer, mettez un nom de fichier qui n'existe pas, comme 'produc.json'.
 4.  Maintenant, chargez le fichier index dans votre navigateur (via `localhost:8000`) et regardez dans la console de développement. Vous verrez un message parmi les lignes "Network request for products.json failed with response 404: File not found" (la requête réseau pour products.json a échoué avec la réponse 404: Fichier non trouvé).
 
