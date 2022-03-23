@@ -80,7 +80,7 @@ ECMAScript 规范描述了 `reduce()` 的行为：
 > - 如果调用 `reduce()` 时提供了 *initialValue*，*previousValue* 取值则为 *initialValue*，*currentValue* 则取数组中的第一个值。
 > - 如果没有提供 *initialValue*，那么 *previousValue* 取数组中的第一个值，*currentValue* 取数组中的第二个值。
 >
-> 如果数组为空且为指定初始值 *initialValue*，则会抛出 {{jsxref("TypeError")}}。
+> 如果数组为空且未指定初始值 *initialValue*，则会抛出 {{jsxref("TypeError")}}。
 >
 > `reduce` 不会直接改变调用它的对象，但对象可被调用的 *callbackfn* 所改变。
 >
