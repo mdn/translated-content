@@ -99,7 +99,7 @@ grid-auto-columns: unset;
 
 ```css
 #grid {
-  width: 100px;
+  height: 100px;
   display: grid;
   grid-template-areas: "a a";
   grid-gap: 10px;
