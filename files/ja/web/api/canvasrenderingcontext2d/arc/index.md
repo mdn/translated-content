@@ -5,175 +5,115 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Method
-  - Reference
+  - メソッド
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.arc
 translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D APIの<strong><code>CanvasRenderingContext2D.arc()</code></strong>メソッドは、パスに円弧を加えます。円弧の中心座標は<em>(x, y)</em>で半径が<em>r</em>、角度<em>startAngle</em>から<em>endAngle</em>まで、<em>anticlockwise</em>の向きに描かれます(デフォルトは時計回り)。</p>
+**`CanvasRenderingContext2D.arc()`** は[キャンバス 2D API](/ja/docs/Web/API/CanvasRenderingContext2D) のメソッドで、サブパスに円弧を加えます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <var><em>ctx</em>.arc(x, y, radius, startAngle, endAngle [, anticlockwise]);</var>
-</pre>
+```js
+void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
+```
 
-<h3 id="引数">引数</h3>
+`arc()` メソッドは (x, y) を中心とし、 `radius` を半径とした円弧を作成します。角度は `startAngle` から `endAngle` まで、 `counterclockwise` で指定された向き（既定では時計回り）に描かれます。
 
-<dl>
- <dt><code>x</code></dt>
- <dd>円弧の中心のx座標値。</dd>
- <dt><code>y</code></dt>
- <dd>円弧の中心のy座標値。</dd>
- <dt><code>radius</code></dt>
- <dd>円弧の半径。</dd>
- <dt><code>startAngle</code></dt>
- <dd>円弧の始まりの角度。x軸の正方向から時計回りに定められるラジアン角。</dd>
- <dt><code>endAngle</code></dt>
- <dd>円弧の終わりの角度。x軸の正方向から時計回りに定められるラジアン角。</dd>
- <dt><code>anticlockwise</code> {{optional_inline}}</dt>
- <dd>省略可能な{{jsxref("Boolean")}}。<code>true</code>は、円弧を反時計回りに始まりから終わりの角度に向けて描きます。デフォルトは時計回り。</dd>
-</dl>
+### 引数
 
-<h2 id="例">例</h2>
+- `x`
+  - : 円弧の中心の水平座標です。
+- `y`
+  - : 円弧の中心の垂直座標です。
+- `radius`
+  - : 円弧の半径です。正の数である必要があります。
+- `startAngle`
+  - : 円弧の始まりの角度を、 X 軸の正の方向から時計回りに定められるラジアン角で表します。
+- `endAngle`
+  - : 円弧の終わりの角度を、 X 軸の正の方向から時計回りに定められるラジアン角で表します。
+- `counterclockwise` {{optional_inline}}
+  - : 省略可能な論理値です。 `true` の場合、円弧を反時計回りに始まりから終わりの角度に向けて描きます。既定値は `fale` （時計回り）です。
 
-<h3 id="Using_the_arc_method" name="Using_the_arc_method"><code>arc()</code>メソッドの使い方</h3>
+## 例
 
-<p>このコードは、単純な円の描き方を示しています。</p>
+### 完全な円の描画
 
-<h4 id="HTML">HTML</h4>
+このコードは、 `arc()` メソッドで完全な円を描く方法を示します。
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+#### HTML
 
-<h4 id="JavaScript">JavaScript</h4>
+```html
+<canvas></canvas>
+```
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+#### JavaScript
+
+円弧の X 座標は 100、 Y 座標は 75、半径は 50 です。円弧を一周させるには、 0 ラジアン（0**°**）の角度で始まり、 2π ラジアン（360**°**）の角度で終わります。
+
+```js
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
 
 ctx.beginPath();
-ctx.arc(75, 75, 50, 0, 2 * Math.PI);
+ctx.arc(100, 75, 50, 0, 2 * Math.PI);
 ctx.stroke();
-</pre>
+```
 
-<p>以下のコードを書き替えると、Canvasの中身がどう変わるか実際に確かめられます。</p>
+#### 結果
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+{{ EmbedLiveSample('Drawing_a_full_circle', 700, 180) }}
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code"&gt;
-ctx.beginPath();
-ctx.arc(50, 50, 50, 0, 2 * Math.PI, false);
-ctx.stroke();&lt;/textarea&gt;
-</pre>
+### 様々な形状のデモ
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+以下の例は様々な形を描くことで、 `arc()` メソッドは何ができるのかを示します。
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
+```html hidden
+<canvas width="150" height="200"></canvas>
+```
+
+```js
+const canvas = document.querySelector('canvas');
+const ctx = canvas.getContext('2d');
+
+// Draw shapes
+for (let i = 0; i <= 3; i++) {
+  for (let j = 0; j <= 2; j++) {
+    ctx.beginPath();
+    let x             = 25 + j * 50;                 // x 座標
+    let y             = 25 + i * 50;                 // y 座標
+    let radius        = 20;                          // 円弧の半径
+    let startAngle    = 0;                           // 円弧の開始位置
+    let endAngle      = Math.PI + (Math.PI * j) / 2; // 円弧の終了位置
+    let counterclockwise = i % 2 == 1;                  // 円弧を描く方向
+
+    ctx.arc(x, y, radius, startAngle, endAngle, counterclockwise);
+
+    if (i > 1) {
+      ctx.fill();
+    } else {
+      ctx.stroke();
+    }
+  }
 }
+```
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
+#### 結果
 
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
+{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210,
+  "canvas_arc.png") }}
 
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
+## 仕様書
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+{{Specifications}}
 
-<h3 id="Different_shapes_demonstrated" name="Different_shapes_demonstrated">異なった形状の実例</h3>
+## ブラウザーの互換性
 
-<p>以下の例は異なった形を描くことで、<code>arc()()</code>メソッドは何ができるのかを示します。</p>
+{{Compat}}
 
-<div class="hidden">
-<h6 id="HTML_2">HTML</h6>
+## 関連情報
 
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
-</pre>
-
-<h6 id="JavaScript_2">JavaScript</h6>
-</div>
-
-<pre class="brush: js">var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-
-// 形状を描く
-// (訳注:横に 180, 270, 360 度の円を3つずつ、縦に時計回りか反時計回りにパスを引いたときの stroke() と fill() を示しています)
-for (var i = 0; i &lt; 4; i++) {
-  for(var j = 0; j &lt; 3; j++) {
-		ctx.beginPath();
-		var x          = 25 + j * 50;                  // x座標
-		var y          = 25 + i * 50;                  // y座標
-		var radius     = 20;                           // 円弧の半径
-		var startAngle = 0;                            // 円弧の開始角
-		var endAngle   = Math.PI + (Math.PI * j) /2;   // 円弧の終了角
-		var anticlockwise  = i % 2 == 1;               // 時計回りか反時計回りか
-
-    ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
-
-    if (i &gt; 1) {
-			ctx.fill();
-		} else {
-			ctx.stroke();
-		}
-	}
-}</pre>
-
-<p>{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}</p>
-
-<h2 id="仕様">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-arc", "CanvasRenderingContext2D.arc")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
-
-
-
-<p>{{Compat("api.CanvasRenderingContext2D.arc")}}</p>
-
-<h2 id="Geckoについての注釈">Geckoについての注釈</h2>
-
-<p>Gecko 2.0{{geckoRelease("2.0")}}より:</p>
-
-<ul>
- <li>引数<code>anticlockwise</code>は省略できます。</li>
- <li>負の半径を与えると{{domxref("DOMError", "IndexSizeError")}}のエラーが起こります("Index or size is negative or greater than the allowed amount"(インデックスまたはサイズが負数か、範囲を超えた値です)).</li>
-</ul>
-
-<h2 id="参考情報">参考情報</h2>
-
-<ul>
- <li>このメソッドのインターフェース {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- 楕円弧を描くには {{domxref("CanvasRenderingContext2D.ellipse()")}} を使用してください。
