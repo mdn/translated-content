@@ -3846,6 +3846,10 @@
 /fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers	/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /fr/docs/Web/API/WorkerGlobalScope/close	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close
 /fr/docs/Web/API/WorkerGlobalScope/onclose	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close_ad209d73ce2abfe0e3fe136acf40e5b4
+/fr/docs/Web/API/WorkerGlobalScope/onerror	/fr/docs/Web/API/WorkerGlobalScope/error_event
+/fr/docs/Web/API/WorkerGlobalScope/onlanguagechange	/fr/docs/Web/API/WorkerGlobalScope/languagechange_event
+/fr/docs/Web/API/WorkerGlobalScope/onoffline	/fr/docs/Web/API/WorkerGlobalScope/offline_event
+/fr/docs/Web/API/WorkerGlobalScope/ononline	/fr/docs/Web/API/WorkerGlobalScope/online_event
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
 /fr/docs/Web/API/XMLHttpRequestEventTarget/onload	/fr/docs/Web/API/XMLHttpRequest/load_event
@@ -3869,6 +3873,10 @@
 /fr/docs/Web/API/event.preventDefault	/fr/docs/Web/API/Event/preventDefault
 /fr/docs/Web/API/navigator.doNotTrack	/fr/docs/Web/API/Navigator/doNotTrack
 /fr/docs/Web/API/notification/Using_Web_Notifications	/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API
+/fr/docs/Web/API/notification/onclick	/fr/docs/Web/API/Notification/click_event
+/fr/docs/Web/API/notification/onclose	/fr/docs/Web/API/Notification/close_event
+/fr/docs/Web/API/notification/onerror	/fr/docs/Web/API/Notification/error_event
+/fr/docs/Web/API/notification/onshow	/fr/docs/Web/API/Notification/show_event
 /fr/docs/Web/API/window.location	/fr/docs/Web/API/window/location
 /fr/docs/Web/API/window.requestAnimationFrame	/fr/docs/Web/API/Window/requestAnimationFrame
 /fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/fr/docs/Web/Accessibility/ARIA/Roles/alert_role

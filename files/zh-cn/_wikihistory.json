@@ -14708,6 +14708,22 @@
       "1Cr18Ni9"
     ]
   },
+  "Web/API/HTMLElement/copy_event": {
+    "modified": "2019-03-24T00:18:09.591Z",
+    "contributors": [
+      "ziyunfei",
+      "teoli",
+      "khalid32"
+    ]
+  },
+  "Web/API/HTMLElement/cut_event": {
+    "modified": "2019-03-24T00:18:03.706Z",
+    "contributors": [
+      "ziyunfei",
+      "teoli",
+      "khalid32"
+    ]
+  },
   "Web/API/HTMLElement/dir": {
     "modified": "2019-03-24T00:16:19.875Z",
     "contributors": [
@@ -14835,36 +14851,20 @@
       "_Coin"
     ]
   },
-  "Web/API/HTMLElement/oncopy": {
-    "modified": "2019-03-24T00:18:09.591Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
-    ]
-  },
-  "Web/API/HTMLElement/oncut": {
-    "modified": "2019-03-24T00:18:03.706Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
-    ]
-  },
-  "Web/API/HTMLElement/onpaste": {
-    "modified": "2019-03-24T00:18:09.700Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
-    ]
-  },
   "Web/API/HTMLElement/outerText": {
     "modified": "2019-03-23T22:14:53.113Z",
     "contributors": [
       "ScaredKitty",
       "weiqinl",
       "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/HTMLElement/paste_event": {
+    "modified": "2019-03-24T00:18:09.700Z",
+    "contributors": [
+      "ziyunfei",
+      "teoli",
+      "khalid32"
     ]
   },
   "Web/API/HTMLElement/pointercancel_event": {
@@ -17939,6 +17939,31 @@
     "modified": "2020-10-15T22:20:51.077Z",
     "contributors": [
       "Oswald111"
+    ]
+  },
+  "Web/API/Notification/click_event": {
+    "modified": "2019-03-23T22:12:07.878Z",
+    "contributors": [
+      "linfeng2gh",
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/Notification/close_event": {
+    "modified": "2019-03-23T22:12:14.658Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/Notification/error_event": {
+    "modified": "2019-03-23T22:12:14.085Z",
+    "contributors": [
+      "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/Notification/show_event": {
+    "modified": "2019-03-23T22:12:09.480Z",
+    "contributors": [
+      "xgqfrms-GitHub"
     ]
   },
   "Web/API/NotificationEvent": {
@@ -24388,31 +24413,6 @@
     "modified": "2020-10-15T22:20:44.715Z",
     "contributors": [
       "earthengine"
-    ]
-  },
-  "Web/API/notification/onclick": {
-    "modified": "2019-03-23T22:12:07.878Z",
-    "contributors": [
-      "linfeng2gh",
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/notification/onclose": {
-    "modified": "2019-03-23T22:12:14.658Z",
-    "contributors": [
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/notification/onerror": {
-    "modified": "2019-03-23T22:12:14.085Z",
-    "contributors": [
-      "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/notification/onshow": {
-    "modified": "2019-03-23T22:12:09.480Z",
-    "contributors": [
-      "xgqfrms-GitHub"
     ]
   },
   "Web/API/notification/permission": {

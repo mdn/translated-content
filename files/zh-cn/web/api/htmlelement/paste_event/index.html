@@ -1,0 +1,58 @@
+---
+title: element.onpaste
+slug: Web/API/HTMLElement/paste_event
+translation_of: Web/API/HTMLElement/onpaste
+original_slug: Web/API/HTMLElement/onpaste
+---
+<p>{{ ApiRef() }}</p>
+<h3 id="Summary" name="Summary">概述</h3>
+<p><strong>onpaste</strong> 属性用来获取或设置当前元素的<code>paste</code>事件的事件处理函数.</p>
+<h3 id="Syntax" name="Syntax">语法</h3>
+<pre class="eval"><em>element</em>.onpaste = <em>functionRef</em>;
+</pre>
+<p><em>functionRef</em> 是一个函数名或者函数表达式.</p>
+<h3 id="Example" name="Example">例子</h3>
+<pre>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;onpaste示例演示&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h3&gt;按说明进行操作!&lt;/h3&gt;
+&lt;textarea id="editor" rows="3" cols="80"&gt;
+尝试在这里粘贴文本!
+&lt;/textarea&gt;
+
+&lt;script type="text/javascript"&gt;
+  function log(txt)
+  {
+    document.getElementById("log").appendChild(document.createTextNode(txt + "\n"));
+  }
+
+  function pasteIntercept(evt)
+  {
+        evt.preventDefault();
+  	log("粘贴被阻止");
+  }
+
+  document.getElementById("editor").addEventListener("paste", pasteIntercept, false);
+&lt;/script&gt;
+
+&lt;h3&gt;Log&lt;/h3&gt;
+&lt;textarea rows="15" cols="80" id="log" readonly="true"&gt;&lt;/textarea&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>上例演示了如何禁止向一个文本域内粘贴文本.</p>
+<h3 id="Notes" name="Notes">备注</h3>
+<p>当用户尝试粘贴文本时会触发<code>paste</code>事件.</p>
+<h3 id="Specification" name="Specification">规范</h3>
+<p>不属于任何公开的规范.</p>
+<h3 id="Notes_2" name="Notes_2">备注</h3>
+<p>没有任何DOM方法可以使用来获取将要粘贴的剪切板中的文字,你可以使用XPCOM接口{{ Interface("nsIClipboard") }}来进行这样的操作.</p>
+<h3 id="See_also" name="See_also">相关链接</h3>
+<ul>
+ <li><code><a href="/zh-cn/DOM/element.oncopy" title="zh-cn/DOM/element.oncopy">oncopy</a></code></li>
+ <li><code><a href="/zh-cn/DOM/element.oncut" title="zh-cn/DOM/element.oncut">oncut</a></code></li>
+</ul>
+<p>{{ languages( {"ja": "ja/DOM/element.onpaste" ,"en": "en/DOM/element.onpaste" } ) }}</p>
