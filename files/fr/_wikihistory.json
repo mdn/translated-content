@@ -18610,6 +18610,31 @@
       "loella16"
     ]
   },
+  "Web/API/Notification/click_event": {
+    "modified": "2020-10-15T21:46:42.833Z",
+    "contributors": [
+      "SphinxKnight",
+      "matthieurambert"
+    ]
+  },
+  "Web/API/Notification/close_event": {
+    "modified": "2020-10-15T22:34:55.643Z",
+    "contributors": [
+      "tomderudder"
+    ]
+  },
+  "Web/API/Notification/error_event": {
+    "modified": "2020-10-15T22:34:55.473Z",
+    "contributors": [
+      "tomderudder"
+    ]
+  },
+  "Web/API/Notification/show_event": {
+    "modified": "2020-10-15T22:34:55.503Z",
+    "contributors": [
+      "tomderudder"
+    ]
+  },
   "Web/API/NotificationEvent": {
     "modified": "2020-09-27T20:47:13.129Z",
     "contributors": [
@@ -21461,8 +21486,22 @@
       "Arzak656"
     ]
   },
+  "Web/API/WorkerGlobalScope/error_event": {
+    "modified": "2020-10-15T21:33:56.757Z",
+    "contributors": [
+      "Arzak656",
+      "jean-pierre.gay"
+    ]
+  },
   "Web/API/WorkerGlobalScope/importScripts": {
     "modified": "2020-10-15T21:36:58.896Z",
+    "contributors": [
+      "Arzak656",
+      "jean-pierre.gay"
+    ]
+  },
+  "Web/API/WorkerGlobalScope/languagechange_event": {
+    "modified": "2020-10-15T21:33:55.141Z",
     "contributors": [
       "Arzak656",
       "jean-pierre.gay"
@@ -21482,28 +21521,14 @@
       "jean-pierre.gay"
     ]
   },
-  "Web/API/WorkerGlobalScope/onerror": {
-    "modified": "2020-10-15T21:33:56.757Z",
-    "contributors": [
-      "Arzak656",
-      "jean-pierre.gay"
-    ]
-  },
-  "Web/API/WorkerGlobalScope/onlanguagechange": {
-    "modified": "2020-10-15T21:33:55.141Z",
-    "contributors": [
-      "Arzak656",
-      "jean-pierre.gay"
-    ]
-  },
-  "Web/API/WorkerGlobalScope/onoffline": {
+  "Web/API/WorkerGlobalScope/offline_event": {
     "modified": "2020-10-15T21:33:24.512Z",
     "contributors": [
       "Arzak656",
       "jean-pierre.gay"
     ]
   },
-  "Web/API/WorkerGlobalScope/ononline": {
+  "Web/API/WorkerGlobalScope/online_event": {
     "modified": "2020-10-15T21:33:24.530Z",
     "contributors": [
       "Arzak656",
@@ -21887,31 +21912,6 @@
   },
   "Web/API/notification/maxActions": {
     "modified": "2020-10-15T22:34:53.286Z",
-    "contributors": [
-      "tomderudder"
-    ]
-  },
-  "Web/API/notification/onclick": {
-    "modified": "2020-10-15T21:46:42.833Z",
-    "contributors": [
-      "SphinxKnight",
-      "matthieurambert"
-    ]
-  },
-  "Web/API/notification/onclose": {
-    "modified": "2020-10-15T22:34:55.643Z",
-    "contributors": [
-      "tomderudder"
-    ]
-  },
-  "Web/API/notification/onerror": {
-    "modified": "2020-10-15T22:34:55.473Z",
-    "contributors": [
-      "tomderudder"
-    ]
-  },
-  "Web/API/notification/onshow": {
-    "modified": "2020-10-15T22:34:55.503Z",
     "contributors": [
       "tomderudder"
     ]
