@@ -1,41 +1,56 @@
 ---
-title: ':-moz-list-bullet'
-slug: 'Web/CSS/:-moz-list-bullet'
+title: '::-moz-list-bullet'
+slug: Web/CSS/:-moz-list-bullet
 tags:
   - CSS
-  - CSS Reference
-  - Non-standard
-translation_of: 'Web/CSS/:-moz-list-bullet'
+  - CSS:Mozilla 拡張
+  - NeedsCompatTable
+  - 標準外
+  - 擬似要素
+  - リファレンス
+  - セレクター
+translation_of: Web/CSS/:-moz-list-bullet
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`::-moz-list-bullet`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-element)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、順序なしリスト ({{htmlelement("ul")}}) のリスト項目 ({{htmlelement("li")}}) のマーカー（通常は点）を表します。
 
-非標準の `:-moz-list-bullet` Mozilla [CSS](/ja/docs/Web/CSS) [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、リスト要素のマーカーを編集するために使用されます。
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```css
+li::-moz-list-bullet
+```
 
-<h3 id="CSS">CSS</h3>
+## 例
 
-<pre class="brush:css">.list li::-moz-list-bullet {
-  font-size: 36px;
+### HTML
+
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+```
+
+### CSS
+
+```css
+::-moz-list-bullet {
+  color: red;
+  font-size: 1.5em;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### 結果
 
-<pre class="brush:html">&lt;ul&gt;
-  &lt;li&gt;Number 1&lt;/li&gt;
-  &lt;li&gt;Number 2&lt;/li&gt;
-  &lt;li&gt;Number 3&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="list"&gt;
-  &lt;li&gt;Number 1&lt;/li&gt;
-  &lt;li&gt;Number 2&lt;/li&gt;
-  &lt;li&gt;Number 3&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{{ EmbedLiveSample('Examples', '', '', '', 'Web/CSS/:-moz-list-bullet') }}
 
-<h3 id="Result" name="Result">結果</h3>
+## 仕様書
 
-<img alt="Image:liug3.jpg" class="internal" src="/@api/deki/files/745/=Liug3.jpg">
+どの仕様にも含まれていません。
+
+## 関連情報
+
+- {{cssxref(":-moz-list-number")}}
+- {{cssxref("::marker")}}
