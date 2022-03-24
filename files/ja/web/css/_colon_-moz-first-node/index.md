@@ -1,47 +1,61 @@
 ---
 title: ':-moz-first-node'
-slug: 'Web/CSS/:-moz-first-node'
+slug: Web/CSS/:-moz-first-node
 tags:
   - CSS
-  - CSS Reference
-  - Non-standard
-translation_of: 'Web/CSS/:-moz-first-node'
+  - CSS:Mozilla 拡張
+  - NeedsCompatTable
+  - 標準外
+  - 擬似クラス
+  - リファレンス
+  - セレクター
+translation_of: Web/CSS/:-moz-first-node
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<h2 id="Summary" name="Summary">概要</h2>
+**`:-moz-first-node`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、他の要素の最初の子要素であるあらゆる要素を表します。 {{Cssxref(":first-child")}} とは異なり、最初の子要素の前に（ホワイトスペース以外の）テキストがあると一致しません。
 
-`:-moz-first-node` [CSS](/ja/docs/Web/CSS) [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、ある要素の最初の子ノードの要素に一致します。最初の子要素の前に (スペースではない) テキストがあると一致しないため、{{Cssxref(":first-child")}} とは動作が異なります。
+> **Note:** 要素の先頭にあるホワイトスペースは `:-moz-first-node` の決定において無視されます。
 
-<p class="note">要素の先頭にある空白文字は `:-moz-first-node` の決定において無視されます。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```css
+:-moz-first-node
+```
 
-<pre class="syntaxbox"><var>span</var>:-moz-first-node { <em>style プロパティ</em> }
-</pre>
+## 例
 
-<h2 id="Example" name="Example">例</h2>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush:css">span:-moz-first-node {
+```css
+span:-moz-first-node {
   background-color: lime;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html"><div>
-  <span>:-moz-first-node</span>
-  <span>:-moz-last-node</span>
-</div>
-</pre>
+```html
+<p>
+  <span>This matches!</span>
+  <span>This doesn't match.</span>
+</p>
 
-{{EmbedLiveSample("Example", "220", "20")}}
+<p>
+  Blahblah.
+  <span>This doesn't match because it's preceded by text.</span>
+</p>
+```
 
-<h2 id="参照">参照</h2>
+### 結果
 
-<ul>
- <li>{{cssxref(":-moz-last-node")}}</li>
- <li>{{cssxref(":first-child")}}</li>
-</ul>
+{{EmbedLiveSample("Examples")}}
+
+## 仕様書
+
+どの標準にも含まれていません。
+
+## 関連情報
+
+- {{cssxref(":-moz-last-node")}}
+- {{cssxref(":first-child")}}
