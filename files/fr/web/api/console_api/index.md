@@ -44,8 +44,8 @@ Consultez [la page de référence de la console](/fr/docs/Web/API/Console#exempl
 ## Voir aussi
 
 - [Documentation des outils de développement de Firefox](/fr/docs/Tools)
-  - [Console web](/fr/docs/Tools/Web_Console) - comment la console web de Firefox traite les appels de l'API Console.
-  - [Débogage à distance](/fr/docs/Tools/Remote_Debugging) - comment voir la sortie de la console lorsque la cible de débogage est un appareil mobile.
-- [Documentation de l'API Console pour les outils de développement de Google Chrome](https://developer.chrome.com/docs/devtools/console/api/)
-- [Documentation pour les outils de développement de Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api)
-- [Documentation de l'API Console pour les outils de dévéloppement de Safari](https://webkit.org/web-inspector/console-object-api/)
+  - [Console web](/fr/docs/Tools/Web_Console) — comment la console web de Firefox traite les appels de l'API Console.
+  - [Débogage à distance](/fr/docs/Tools/Remote_Debugging) — comment voir la sortie de la console lorsque la cible de débogage est un appareil mobile.
+- [Documentation de l'API Console pour les outils de développement de Google Chrome (en anglais)](https://developer.chrome.com/docs/devtools/console/api/)
+- [Documentation pour les outils de développement de Edge (en anglais)](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api)
+- [Documentation de l'API Console pour les outils de dévéloppement de Safari (en anglais)](https://webkit.org/web-inspector/console-object-api/)
