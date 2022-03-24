@@ -2,63 +2,59 @@
 title: Web 入门
 slug: Learn/Getting_started_with_the_web
 tags:
-  - 主页
-  - 发布
-  - 层叠样式表
-  - 指南
-  - 新手
-  - 理论
+  - 初学者
+  - CSS
   - 设计
-  - 超文本标记语言
+  - 指南
+  - HTML
+  - Index
+  - 发布
+  - 理论
 translation_of: Learn/Getting_started_with_the_web
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<div class="summary">
-<p><strong>Web 入门</strong>是一门介绍 Web 开发实用性的简洁系列课程。在这里你将学会如何设置构建简单网页所需的工具并发布你自己的简易代码。</p>
-</div>
+_Web 入门_ 是一个简要的系列，向你介绍 Web 开发的实用性。你将设置你需要的工具来构建一个简单的网页，并发布你自己的简单代码。
 
-<h2 id="建立你的第一个网站">建立你的第一个网站</h2>
+## 你的第一个网站
 
-<p>构建一个专业的网站需要大量的工作，所以如果你是新手，我们鼓励你从小事做起。你不会直接建立另一个 Facebook，但建立一个个人的简单在线网站并不难，所以让我们从这里开始吧。</p>
+创建一个专业的网站需要大量的工作，所以如果你是 Web 开发的新手，我们鼓励你从小事做起。你不可能立马再建一个Facebook，但做一个自己的简单网站并不难，我们将由此开始。
 
-<p>通过按顺序阅读下面列出的文章，你将逐渐建立好你自己的第一个在线网站。让我们开始吧！</p>
+通过阅读下面列出的文章，你将从零开始获得你的第一个在线网页。让我们开始吧!
 
-<h3 id="安装基础软件"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a></h3>
+### 安装基本软件
 
-<p>当提到建站工具的时候，网上有着一大堆工具可供选择。如果你才刚刚起步，你可能会在各种各样的代码编辑器、框架以及测试工具中困惑不已。 在<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a>中我们将一步一步地展示如何安装一些你所需要的基础 Web 开发软件。</p>
+说到建设网站的工具，有很多可供选择的。如果你初入门径，你可能会被外面的一系列代码编辑器、框架和测试工具所迷惑。在[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)中, 我们将逐步向你展示如何安装你需要的软件，以开始基本的 Web 开发。
 
-<h3 id="你的网站看起来是什么样的？"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">你的网站看起来是什么样的？</a></h3>
+### 你的网站会是什么样子？
 
-<p>在开始为你的网站写代码之前，你应该先做好规划。你将展示什么信息？你将使用什么样的字体和颜色？在<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like">你的网站看起来是什么样的？</a>这一块中我们简要讲述了一个简单的方法，你可以根据这个方法来设计和规划网站的内容。</p>
+在你开始为你的网站写代码之前，你应该先计划一下。需要展示什么信息？使用什么字体和颜色？[你的网站会是什么样子的？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)我们概述了一个简单的方法，你可以按照这个方法来规划网站的内容和设计。
 
-<h3 id="文件处理"><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a></h3>
+### 文件处理
 
-<p>一个网站包含很多文件：文本内容、代码、样式表、媒体内容等。当你建立一个网站，你需要给这些文件安排一个合理的结构，并确保它们能够相互联系。<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>这块内容将向你解释如何给你的网站建立一个合理的文件结构以及一些你应该要注意的问题。</p>
+一个网站由许多文件组成：文本内容、代码、样式表、媒体内容，等等。当你建立一个网站时，你需要将这些文件组合成一个合理的结构，并确保它们能够相互交流。[文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)解释了如何为你的网站建立一个合理的文件结构以及你应该注意的问题。
 
-<h3 id="HTML_基础"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML 基础</a></h3>
+### HTML 基础知识
 
-<p>超文本标记语言 ( HTML ) 是用来构建你的网页内容并将其语义化的代码。举例来说， 我的内容是一些段落还是带点的列表？我的网页上有插入图片吗？有数据表格吗？<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML 基础</a>将在你能承受的范围内提供足够的信息让你熟悉 HTML。</p>
+超文本标记语言（HTML）是你用来组织你的网络内容，并赋予它意义和目的的代码。例如，我的内容是一组段落还是一个要点列表？我的页面上是否插入了图片？我有一个数据表吗？在你的接受能力之内，[HTML 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)提供了足够的信息，使你熟悉 HTML 。
 
-<h3 id="CSS_基础"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS 基础</a></h3>
+### CSS 基础知识
 
-<p>层叠样式表 (CSS) 是用来添加样式到你网站的代码。举例来说，你想让文字是黑色还是红色的？在屏幕的何处展示内容？用什么背景图像和颜色来装饰你的网站？<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics">CSS 基础</a>带你完成你需要做的事。</p>
+层叠样式表（CSS）是你用来为你的网站设置样式的代码。例如，你希望文本是黑色还是红色？内容应该画在屏幕的什么地方？应该用什么背景图片和颜色来装饰你的网站？[CSS 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)带你了解你所需要的东西，以便开始使用。
 
-<h3 id="JavaScript_基础"><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/Javascript_basics">JavaScript 基础</a></h3>
+### JavaScript 基础知识
 
-<p>JavaScript 是一种被用来添加交互功能到你的网站的编程语言。比如游戏，或者当按下按钮后会发生的事情，或者将数据输入表格，动态样式效果，动画等等。<a href="/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript 基础</a>将让你了解这门令人激动的语言能做什么，以及如何开始。</p>
+JavaScript是一种编程语言，你用它来给你的网站添加交互功能。例如游戏、当按钮被按下或数据被输入表格时发生的事情、动态造型效果、动画等。[JavaScript 基础知识](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)让你了解这种令人兴奋的语言的可能性，以及如何开始使用。
 
-<h3 id="发布你的网站"><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website">发布你的网站</a></h3>
+### 发布你的网站
 
-<p>当你完成了代码并整理好了构建网站的文件的时候，你需要将它们发布到互联网上以便人们可以找到它。<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website">发布你的网站</a>描述了如何最轻松地发布你的简易代码。</p>
+一旦你完成了编写代码并组织构成你的网站的文件时，你需要把它们全部放在网上，以便人们能够找到它。[发布你的网站](/zh-CN/docs/Learn/Getting_started_with_the_web/Publishing_your_website)描述了如何以最简便的方式将你的简单示例发布至网络。
 
-<h3 id="万维网是怎么工作的"><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84">万维网是怎么工作的?</a></h3>
+### 网站如何运作
 
-<p>当你访问你喜爱的网站时，你可能不知道在这背后有很多复杂的事情正在发生。<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84">万维网是怎么工作的</a>概述了当你通过你的电脑查看一个网页时发生了什么。</p>
+当你访问你最喜欢的网站时，你可能不知道正有很多复杂的事情在后台发生。[网站如何运作](/zh-CN/docs/Learn/Getting_started_with_the_web/How_the_Web_works)概述了当你在电脑上浏览网页时发生的事情。
 
-<h2 id="相关链接">相关链接</h2>
+## 参见
 
-<ul>
- <li><a href="https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g">Web Demystified</a>： 一个由 <a class="external external-icon" href="https://twitter.com/JeremiePat" rel="noopener">Jérémie Patonnier</a> 创作的面向 Web 开发的完全新手的系列视频，讲述了 Web 基础。</li>
- <li><a href="/zh-CN/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards">The web and web standards</a>:这篇文章提供了一些关于Web的有用的背景知识——它是如何产生的，什么是Web标准技术，它们是如何协同工作的，为什么“Web开发人员”是一个很好的职业选择，以及您将在本课程中学习哪些最佳实践。</li>
-</ul>
+- [Web 解密](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): 一系列解释 Web 基础原理的精彩视频，针对 Web 开发的完全初学者。由 [Jérémie Patonnier](https://twitter.com/JeremiePat) 创建。
+- [Web 及 Web 标准](/zh-CN/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards): 这篇文章提供了一些关于网络的背景故事——它是如何诞生的，什么是网络标准技术，它们是如何一起工作的，为什么“Web 开发者”是一个很好的职业选择，以及你将通过该课程了解什么样的最佳实践。
