@@ -1,60 +1,62 @@
 ---
 title: ':-moz-drag-over'
-slug: 'Web/CSS/:-moz-drag-over'
+slug: Web/CSS/:-moz-drag-over
 tags:
   - CSS
-  - 'CSS:Mozilla Extensions'
+  - CSS:Mozilla 拡張
   - Firefox
   - Mozilla
   - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
-translation_of: 'Web/CSS/:-moz-drag-over'
+  - 標準外
+  - 擬似クラス
+  - リファレンス
+  - セレクター
+browser-compat: css.selectors:-moz-drag-over
+translation_of: Web/CSS/:-moz-drag-over
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-[CSS](/ja/docs/Web/CSS) の <strong>`:-moz-drag-over`</strong> [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)で、 {{event("dragover")}} イベントが呼び出される時に要素に一致します。
+**`:-moz-drag-over`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、 {{domxref("HTMLElement/dragover_event", "dragover")}} イベントが呼び出された時に要素に一致します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">:-moz-drag-over
-</pre>
+```css
+:-moz-drag-over
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html notranslate">&lt;table border="1"&gt;
-  &lt;tr&gt;
-    &lt;td width="100px" height="100px"&gt;Drag Over&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table border="1">
+  <tr>
+    <td width="100px" height="100px">Drag Over</td>
+  </tr>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css notranslate">td:-moz-drag-over {
+```css
+td:-moz-drag-over {
   color: red;
 }
-</pre>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
 いずれの標準にも含まれていません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-{{Compat("css.selectors:-moz-drag-over")}}
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>[Mozilla の CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)</li>
- <li>[HTML ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)</li>
-</ul>
+- [Mozilla の CSS 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)
+- [HTML ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
