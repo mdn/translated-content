@@ -49,7 +49,7 @@ localeCompare(compareString, locales, options);
 ### Valor de retorno
 
 Un número **negativo** si `referenceStr` ocurre antes de `compareString`;
-**positivo** si `referenceStr` ocurredespués de `compareString`; `0` si son
+**positivo** si `referenceStr` ocurre después de `compareString`; `0` si son
 equivalentes.
 
 ## Descripción
@@ -104,12 +104,12 @@ items.sort((a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
 
 ### Determinar soporte del navegador para los argumentos extendidos
 
-Los argumentos `locales` y `options` no están soportadas en todos los
+Los argumentos `locales` y `options` no están soportados en todos los
 navegadores aún.
 
 Para determinar si una implementación los soporta, usa el argumento `"i"` (un
 requerimiento de que las etiquetas de lenguaje ilegales sean rechazadas) y
-verifica si se lanza una exepción {{jsxref("RangeError")}}:
+verifica si se lanza una excepción {{jsxref("RangeError")}}:
 
 ```js
 function localeCompareSupportsLocales() {
