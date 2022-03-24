@@ -13,10 +13,10 @@ translation_of: 'Web/CSS/:-moz-only-whitespace'
 <div>{{CSSRef}}{{Non-standard_Header}}</div>
 
 <div class="blockIndicator note">
-<p><strong>メモ:</strong> {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} では、 {{CSSxRef(":empty")}} セレクターが <code style="white-space: nowrap;">:-moz-only-whitespace</code> のように動作するよう変更されましたが、まだこれに対応しているブラウザーはありません。</p>
+<strong>メモ:</strong> {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} では、 {{CSSxRef(":empty")}} セレクターが <code style="white-space: nowrap;">:-moz-only-whitespace</code> のように動作するよう変更されましたが、まだこれに対応しているブラウザーはありません。
 </div>
 
-<p><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>:-moz-only-whitespace</code></strong> <a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>は、{{Glossary("whitespace", "ホワイトスペース")}}のみが入ったテキストノードのみを含む要素に一致します。 (これには空のテキストノードや子ノードを持たない要素も含みます)。</p>
+[CSS](/ja/docs/Web/CSS) の <strong>`:-moz-only-whitespace`</strong> [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、{{Glossary("whitespace", "ホワイトスペース")}}のみが入ったテキストノードのみを含む要素に一致します。 (これには空のテキストノードや子ノードを持たない要素も含みます)。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -57,15 +57,15 @@ div {
 
 <h3 id="Result" name="Result">結果</h3>
 
-<p>{{EmbedLiveSample("Example", "100%", "50")}}</p>
+{{EmbedLiveSample("Example", "100%", "50")}}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
-<p>短期間だけ <code>:blank</code> として {{SpecName("CSS4 Selectors", "#changes-2018-02")}} において定義されましたが、その後に機能的に {{CSSxRef(":empty")}} に統合され、 {{CSSxRef(":blank")}} は空欄の {{HTMLElement("input")}} を意味するように再定義されました。</p>
+短期間だけ `:blank` として {{SpecName("CSS4 Selectors", "#changes-2018-02")}} において定義されましたが、その後に機能的に {{CSSxRef(":empty")}} に統合され、 {{CSSxRef(":blank")}} は空欄の {{HTMLElement("input")}} を意味するように再定義されました。
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
 
-<p>{{Compat("css.selectors.-moz-only-whitespace")}}</p>
+{{Compat("css.selectors.-moz-only-whitespace")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

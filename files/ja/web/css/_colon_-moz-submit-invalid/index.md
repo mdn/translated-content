@@ -16,9 +16,9 @@ translation_of: 'Web/CSS/:-moz-submit-invalid'
 ---
 <div>{{CSSRef}}{{Non-standard_Header}}</div>
 
-<p><strong><code>:-moz-submit-invalid</code></strong> は CSS の<a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>で、 <a href="/ja/docs/Web/CSS/Mozilla_Extensions">Mozilla 拡張</a>であり、フォームの送信 {{HTMLElement("button")}} のうち、内容が<a href="/ja/docs/Learn/Forms#Constraint_Validation">制約の検証</a>で妥当ではないものを表します。</p>
+<strong>`:-moz-submit-invalid`</strong> は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、フォームの送信 {{HTMLElement("button")}} のうち、内容が[制約の検証](/ja/docs/Learn/Forms#Constraint_Validation)で妥当ではないものを表します。
 
-<p>既定では、適用されているスタイルはありません。この擬似クラスを使用して、無効なフォーム欄があった場合の送信ボタンの外見をカスタマイズすることができます。</p>
+既定では、適用されているスタイルはありません。この擬似クラスを使用して、無効なフォーム欄があった場合の送信ボタンの外見をカスタマイズすることができます。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -26,7 +26,7 @@ translation_of: 'Web/CSS/:-moz-submit-invalid'
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("css.selectors.-moz-submit-invalid")}}</p>
+{{Compat("css.selectors.-moz-submit-invalid")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
