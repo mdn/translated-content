@@ -11,9 +11,9 @@ translation_of: 'Web/CSS/:-moz-last-node'
 
 <h2 id="Summary" name="Summary">概要</h2>
 
-<p><code>:-moz-last-node</code> <a href="/ja/docs/Web/CSS">CSS</a> <a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>は、ある要素の最後の子ノードの要素に一致します。最後の子要素の後に (スペースではない) テキストがあると一致しないため、{{ Cssxref(":last-child") }} とは動作が異なります。</p>
+`:-moz-last-node` [CSS](/ja/docs/Web/CSS) [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、ある要素の最後の子ノードの要素に一致します。最後の子要素の後に (スペースではない) テキストがあると一致しないため、{{ Cssxref(":last-child") }} とは動作が異なります。
 
-<p class="note">要素の末尾にある空白文字は <code>:-moz-last-node</code> の決定において無視されます。</p>
+<p class="note">要素の末尾にある空白文字は `:-moz-last-node` の決定において無視されます。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -37,7 +37,7 @@ translation_of: 'Web/CSS/:-moz-last-node'
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample("Example", "220", "20")}}</p>
+{{EmbedLiveSample("Example", "220", "20")}}
 
 <h2 id="参照">参照</h2>
 

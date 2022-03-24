@@ -11,7 +11,7 @@ translation_of: 'Web/CSS/:-moz-list-bullet'
 
 <h2 id="Summary" name="Summary">概要</h2>
 
-<p>非標準の <code>:-moz-list-bullet</code> Mozilla <a href="/ja/docs/Web/CSS">CSS</a> <a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>は、リスト要素のマーカーを編集するために使用されます。</p>
+非標準の `:-moz-list-bullet` Mozilla [CSS](/ja/docs/Web/CSS) [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)は、リスト要素のマーカーを編集するために使用されます。
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -38,4 +38,4 @@ translation_of: 'Web/CSS/:-moz-list-bullet'
 
 <h3 id="Result" name="Result">結果</h3>
 
-<p><img alt="Image:liug3.jpg" class="internal" src="/@api/deki/files/745/=Liug3.jpg"></p>
+<img alt="Image:liug3.jpg" class="internal" src="/@api/deki/files/745/=Liug3.jpg">

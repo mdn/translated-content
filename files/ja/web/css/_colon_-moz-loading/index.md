@@ -17,10 +17,10 @@ translation_of: 'Web/CSS/:-moz-loading'
 ---
 <div>{{CSSRef}}{{Non-standard_header}}{{gecko_minversion_header("1.9")}}</div>
 
-<p><strong><code>:-moz-loading</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の <a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>で <a href="/ja/docs/Web/CSS/Mozilla_Extensions">Mozilla 拡張</a>であり、読み込みが開始されていないために表示できない要素、例えばまだ到着が開始されていない画像などに一致します。なお、読み込み<em>中</em>の画像は、この擬似クラスには一致<em>しません</em>。</p>
+<strong>`:-moz-loading`</strong> は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions)であり、読み込みが開始されていないために表示できない要素、例えばまだ到着が開始されていない画像などに一致します。なお、読み込み<em>中</em>の画像は、この擬似クラスには一致<em>しません</em>。
 
 <div class="note">
-<p><strong>注:</strong> このセレクターは主にテーマ開発者が使用するためのものです。</p>
+<strong>注:</strong> このセレクターは主にテーマ開発者が使用するためのものです。
 </div>
 
 <h2 id="Syntax" name="Syntax">構文</h2>

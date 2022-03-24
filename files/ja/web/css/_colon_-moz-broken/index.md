@@ -13,10 +13,10 @@ translation_of: 'Web/CSS/:-moz-broken'
 ---
 <div>{{CSSRef}}{{Non-standard_header}}{{gecko_minversion_header("1.9")}}</div>
 
-<p><strong><code>:-moz-broken</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/Pseudo-classes">擬似クラス</a>で、 <a href="/ja/docs/Web/CSS/Mozilla_Extensions">Mozilla 拡張</a> であり、壊れた画像リンクを表している要素に一致します。</p>
+<strong>`:-moz-broken`</strong> は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 [Mozilla 拡張](/ja/docs/Web/CSS/Mozilla_Extensions) であり、壊れた画像リンクを表している要素に一致します。
 
 <div class="note">
-<p><strong>注:</strong> このセレクターは、主にテーマ開発者が使用することを意図しているものです。</p>
+<strong>注:</strong> このセレクターは、主にテーマ開発者が使用することを意図しているものです。
 </div>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
@@ -38,15 +38,15 @@ translation_of: 'Web/CSS/:-moz-broken'
 
 <h3 id="Result" name="Result">結果</h3>
 
-<p>{{EmbedLiveSample("Examples")}}</p>
+{{EmbedLiveSample("Examples")}}
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
-<p>標準の一部ではありません。</p>
+標準の一部ではありません。
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("css.selectors.-moz-broken")}}</p>
+{{Compat("css.selectors.-moz-broken")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
