@@ -1,142 +1,102 @@
 ---
 title: CanvasRenderingContext2D.clearRect()
 slug: Web/API/CanvasRenderingContext2D/clearRect
+tags:
+  - API
+  - Canvas
+  - CanvasRenderingContext2D
+  - メソッド
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.clearRect
 translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D</strong></code><strong><code>.clearRect()</code></strong> は、座標 <em>(x, y)</em> を始点とする大きさ <em>(width, height)</em> の領域を、透明色（透明な黒）で塗りつぶします。領域内に描画されていたすべてのコンテンツは消去されます。</p>
+**`CanvasRenderingContext2D.clearRect()`** はキャンバス 2D API のメソッドで、矩形領域のピクセルを、透明な黒に設定することで消去します。
 
-<h2 id="文法">文法</h2>
+> **Note:** `clearRect()` は、[正しいパスの使用](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#drawing_paths)を行わないと、意図しない副作用が発生することがあることに注意してください。 `clearRect()` を呼び出した後、必ず新しいアイテムを描画し始める前に {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} を呼び出してください。
 
-<pre class="syntaxbox">void <var><em>ctx</em>.clearRect(x, y, width, height);</var>
-</pre>
+## 構文
 
-<h3 id="引数">引数</h3>
+```js
+void ctx.clearRect(x, y, width, height);
+```
 
-<dl>
- <dt><code>x</code></dt>
- <dd>矩形領域の始点のX座標を指定します。</dd>
- <dt><code>y</code></dt>
- <dd>矩形領域の始点のY座標を指定します。</dd>
- <dt><code>width</code></dt>
- <dd>矩形領域の幅を指定します。</dd>
- <dt><code>height</code></dt>
- <dd>矩形領域の高さを指定します。</dd>
-</dl>
+`clearRect()` メソッドは、矩形領域のピクセルを透明な黒 (`rgba(0,0,0,0)`) に設定します。矩形の角は `(x, y)` にあり、大きさは `width` と `height` で指定されます。
 
-<h2 id="Usage_notes">Usage notes</h2>
+### 引数
 
-<p><code>clearRect</code> にちなんでよく起きる問題は <a href="/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#Drawing_paths">不適切なパス</a>によって起きています。<code>clearRect</code> を呼んで新しいフレームを描画し始める前に {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} を呼ぶのを忘れないようにして下さい。</p>
+- `x`
+  - : 矩形領域の始点の X 座標を指定します。
+- `y`
+  - : 矩形領域の始点の Y 座標を指定します。
+- `width`
+  - : 矩形領域の幅を指定します。
+- `height`
+  - : 矩形領域の高さを指定します。
 
-<p>訳注:<br>
- clearRect() 自体の動作にパスの設定は関係ありません。「clearRect()の後はbeginPath()を呼ばなければならない」というルールはありません。この注釈は「キャンバスをクリアした後って大体新しいフレームを描画しようとするよね。そのときに beginPath() し忘れておかしなことになっているのを clearRect() のせいにしないようにね」ということを言いたいのだと思います。</p>
+## 例
 
-<h2 id="使用例">使用例</h2>
+### キャンバス全体の消去
 
-<h3 id="clearRect_の使い方"><code>clearRect</code> の使い方</h3>
+このコードでは、キャンバス全体を消去します。これは一般的に、アニメーションの各フレームの開始時に必要とされます。消去される領域の寸法は {{HtmlElement("canvas")}} 要素の `width` と `height` 属性に等しくなるように設定します。
 
-<p><code>clearRect</code> メソッドを使用する単純な例です。</p>
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+```
 
-<h4 id="HTML">HTML</h4>
+### キャンバスの一部を消去
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+この例では、黄色っぽい背景の上に青い三角形を描きます。そして `clearRect()` メソッドでキャンバスの一部を消去しています。
 
-<h4 id="JavaScript">JavaScript</h4>
+#### HTML
 
-<pre class="brush: js; highlight:[11]">var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+```html
+<canvas id="canvas"></canvas>
+```
 
+#### JavaScript
+
+消去する領域はの形状は矩形で、左上の角が (10, 10) になっています。幅は 120、高さは 100 です。
+
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// 黄色い背景を描画
 ctx.beginPath();
+ctx.fillStyle = '#ff6';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+// 青い三角形を描画
+ctx.beginPath();
+ctx.fillStyle = 'blue';
 ctx.moveTo(20, 20);
-ctx.lineTo(200, 20);
-ctx.lineTo(120, 120);
-ctx.closePath(); // パスが閉じるので、三角形の最後の辺も描画される。
-ctx.stroke();
+ctx.lineTo(180, 20);
+ctx.lineTo(130, 130);
+ctx.closePath();
+ctx.fill();
 
-ctx.clearRect(10, 10, 100, 100);
+// キャンバスの一部を消去
+ctx.clearRect(10, 10, 120, 100);
+```
 
-// キャンバス全体を消去するには、以下のようにします。
-// ctx.clearRect(0, 0, canvas.width, canvas.height);
-</pre>
+#### 結果
 
-<p>以下のコードを編集して、変更がどのように適用されるか試してみてください。</p>
+{{EmbedLiveSample('Erasing_part_of_a_canvas', 700, 180)}}
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+## 仕様書
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="playable-buttons"&gt;
-  &lt;input id="edit" type="button" value="Edit" /&gt;
-  &lt;input id="reset" type="button" value="Reset" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="playable-code" style="height:140px;"&gt;
-ctx.beginPath();
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
-ctx.lineTo(120,120);
-ctx.closePath(); // draws last line of the triangle
-ctx.stroke();
+{{Specifications}}
 
-ctx.clearRect(10, 10, 100, 100);&lt;/textarea&gt;
-</pre>
+## ブラウザーの互換性
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+{{Compat}}
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
+## 関連情報
 
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-</pre>
-</div>
-
-<p>{{EmbedLiveSample('Playable_code', 700, 400)}}</p>
-
-<h2 id="仕様">仕様</h2>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-clearrect", "CanvasRenderingContext2D.clearRect")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="ブラウザ間の互換性">ブラウザ間の互換性</h2>
-
-
-
-<p>{{Compat("api.CanvasRenderingContext2D.clearRect")}}</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>このメソッドは以下で定義されています。 {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.fillRect()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.strokeRect()")}}</li>
-</ul>
+- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.fillRect()")}}
+- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
