@@ -28,9 +28,9 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 <p>让我们来看一个典型的场景。一个典型的网站可能会有一张页首图片，这让访问者看起来感到愉快。图片下面可能会添加一些内容图像。页首图像的跨度可能是整个页首的宽度。而内容图像会适应内容纵列的某处。此处有个简单的例子：</p>
 
-<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="https://mdn.mozillademos.org/files/12940/picture-element-wide.png" style="display: block; height: 554px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="https://mdn.mozillademos.org/files/12940/picture-element-wide.png"></p>
 
-<p>这个网页在宽屏设备上表现良好，例如笔记本电脑或台式机（你可以<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">查看在线演示</a>并且在GitHub上查看<a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html">源代码</a>）。我们不会在这一节课中讨论CSS，除了下面提到的那些：</p>
+<p>这个网页在宽屏设备上表现良好，例如笔记本电脑或台式机（你可以<a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">查看在线演示</a>并且在GitHub上查看<a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html">源代码</a>）。我们不会在这一节课中讨论CSS，除了下面提到的那些：</p>
 
 <ul>
  <li>正文内容被设置的最大宽度为1200像素——在高于该宽度的可视窗口中，正文保持在1200像素，并将其本身置于可用空间的中间。在该宽度以下的可视窗口中，正文将保持在可视窗口宽度的100%。</li>
@@ -40,11 +40,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 <p>然而，当你尝试在一个狭小的屏幕设备上查看本页面时，问题就会产生。网页的页眉看起来还可以，但是页眉这张图片占据了屏幕的一大部分的高度，在这个尺寸下，你很难看到在第一张图片内容里的人。</p>
 
-<p><img alt="Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it." src="https://mdn.mozillademos.org/files/12936/non-responsive-narrow.png" style="display: block; height: 793px; margin: 0px auto; width: 320px;"></p>
+<p><img alt="Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it." src="https://mdn.mozillademos.org/files/12936/non-responsive-narrow.png"></p>
 
 <p>一个改进的方法是，当网站在狭窄的屏幕上观看时，显示一幅图片的包含了重要细节的裁剪版本，第二个被裁剪的图片会在像平板电脑这样的中等宽度的屏幕设备上显示，这就是众所周知的<strong>美术设计问题（art direction problem）</strong>。</p>
 
-<p>另外，如果是在小屏手机屏幕上显示网页，那么没有必要在网页上嵌入这样大的图片。这被称之为<strong>分辨率切换问题（resolution switching problem）</strong>。位图有固定数量的像素宽，固定数量的像素高，与 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">矢量图</a> 外观相同，但本质不同。如果显示尺寸大于原始尺寸，一张自身较小的位图看起来会有颗粒感（矢量图则不会）。</p>
+<p>另外，如果是在小屏手机屏幕上显示网页，那么没有必要在网页上嵌入这样大的图片。这被称之为<strong>分辨率切换问题（resolution switching problem）</strong>。位图有固定数量的像素宽，固定数量的像素高，与 <a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">矢量图</a> 外观相同，但本质不同。如果显示尺寸大于原始尺寸，一张自身较小的位图看起来会有颗粒感（矢量图则不会）。</p>
 
 <p>相反，没有必要在比图片实际尺寸小的屏幕上显示一张大图，这样做会浪费带宽——当可以在设备上使用小图像时，手机用户尤其不愿意因为下载用于桌面的大图像而浪费带宽。理想的情况是当访问网站时依靠不同的设备来提供不同的分辨率图片和不同尺寸的图片。</p>
 
@@ -68,7 +68,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 <pre class="brush: html notranslate">&lt;img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy"&gt;</pre>
 
-<p>我们可以使用两个新的属性——{{htmlattrxref("srcset", "img")}} 和 {{htmlattrxref("sizes", "img")}}——来提供更多额外的资源图像和提示，帮助浏览器选择正确的一个资源。你可以看到 <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> 的例子，也可以在GitHub上看到<a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html">source code</a>：</p>
+<p>我们可以使用两个新的属性——{{htmlattrxref("srcset", "img")}} 和 {{htmlattrxref("sizes", "img")}}——来提供更多额外的资源图像和提示，帮助浏览器选择正确的一个资源。你可以看到 <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> 的例子，也可以在GitHub上看到<a href="https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html">source code</a>：</p>
 
 <pre class="brush: html notranslate">&lt;img srcset="elva-fairy-320w.jpg 320w,
              elva-fairy-480w.jpg 480w,
@@ -119,11 +119,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 <h3 id="一些有用的开发工具">一些有用的开发工具</h3>
 
-<p>这里有一些在浏览器中的非常实用的<a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">开发者工具</a>用来帮助制定重要的槽宽度，以及其他你可能会用到的场景。当我在设置槽宽度的时候，我先加载了示例中的无响应的版本（<code>not-responsive.html</code>），然后进入 <a href="/en-US/docs/Tools/Responsive_Design_Mode">响应设计视图</a> （<em>Tools &gt; Web Developer &gt; Responsive Design View），</em>这个工具允许你在不同设备的屏幕宽度场景下查看网页的布局。</p>
+<p>这里有一些在浏览器中的非常实用的<a href="/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">开发者工具</a>用来帮助制定重要的槽宽度，以及其他你可能会用到的场景。当我在设置槽宽度的时候，我先加载了示例中的无响应的版本（<code>not-responsive.html</code>），然后进入 <a href="/zh-CN/docs/Tools/Responsive_Design_Mode">响应设计视图</a> （<em>Tools &gt; Web Developer &gt; Responsive Design View），</em>这个工具允许你在不同设备的屏幕宽度场景下查看网页的布局。</p>
 
-<p>我设置我的视图宽度为 320px，然后再改为 480px；每一次宽度的改变我就进入 <a href="/en-US/docs/Tools/Page_Inspector">DOM 检查 </a>，点击我们感兴趣的 {{htmlelement("img")}} 元素，然后在显示屏右侧的 Box Model 视图选项卡中查看它的大小。 你应该会看到，这种无响应式的做法会让你的图片在不同屏幕宽度下有着固定的宽度。</p>
+<p>我设置我的视图宽度为 320px，然后再改为 480px；每一次宽度的改变我就进入 <a href="/zh-CN/docs/Tools/Page_Inspector">DOM 检查 </a>，点击我们感兴趣的 {{htmlelement("img")}} 元素，然后在显示屏右侧的 Box Model 视图选项卡中查看它的大小。 你应该会看到，这种无响应式的做法会让你的图片在不同屏幕宽度下有着固定的宽度。</p>
 
-<p><img alt="A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels." src="https://mdn.mozillademos.org/files/12932/box-model-devtools.png" style="display: block; height: 845px; margin: 0px auto; width: 480px;"></p>
+<p><img alt="A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels." src="https://mdn.mozillademos.org/files/12932/box-model-devtools.png"></p>
 
 <p>接着, 你可以检查 <code>srcset</code> 是否正常工作，你需要将视图的宽度设置为你想要的，(比如，把宽度设置的比较小，让页面看起来比较狭窄），打开网络检查（<em>Tools &gt; Web Developer &gt; Network），</em>然后重新加载页面。网络检查工具会给你一个列表，里面的文件都是已经被下载来构造网页的。然后你可以在这里看到哪个图像文件被下载了。</p>
 
@@ -131,7 +131,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <p><strong>注意</strong>: 在 Chrome 中测试时，通过如下方式禁用缓存：打开 DevTools ，并选中 Settings &gt; Preferences &gt; Network下Disable cache的选择框。否则，Chrome 会优先选择缓存图片而不是恰好适配的那个。</p>
 </div>
 
-<p><img alt="a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images" src="https://mdn.mozillademos.org/files/12934/network-devtools.png" style="display: block; height: 630px; margin: 0px auto; width: 600px;"></p>
+<p><img alt="a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images" src="https://mdn.mozillademos.org/files/12934/network-devtools.png"></p>
 
 <h3 id="分辨率切换_相同的尺寸_不同的分辨率">分辨率切换: 相同的尺寸, 不同的分辨率</h3>
 
@@ -143,7 +143,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
      src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy"&gt;
 </pre>
 
-<p><img alt="A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image" src="https://mdn.mozillademos.org/files/12942/resolution-example.png" style="display: block; height: 425px; margin: 0px auto; width: 480px;">在这个例子中，下面的CSS会应用在图片上，所以它的宽度在屏幕上是320像素（也称作CSS像素）：</p>
+<p><img alt="A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image" src="https://mdn.mozillademos.org/files/12942/resolution-example.png">在这个例子中，下面的CSS会应用在图片上，所以它的宽度在屏幕上是320像素（也称作CSS像素）：</p>
 
 <pre class="brush: css notranslate">img {
   width: 320px;
@@ -155,11 +155,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 <p>回顾一下，<strong>美术设计问题</strong>涉及要更改显示的图像以适应不同的图像显示尺寸。例如，如果在桌面浏览器上的一个网站上显示一张大的、横向的照片，照片中央有个人，然后当在移动端浏览器上浏览这个网站时，照片会缩小，这时照片上的人会变得非常小，看起来会很糟糕。这种情况可能在移动端显示一个更小的肖像图会更好，这样人物的大小看起来更合适。{{htmlelement("picture")}}元素允许我们这样实现。</p>
 
-<p>回到我们最初的例子 <a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">not-responsive.html</a> ，我们有一张图片需要美术设计：</p>
+<p>回到我们最初的例子 <a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">not-responsive.html</a> ，我们有一张图片需要美术设计：</p>
 
 <pre class="brush: html notranslate">&lt;img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva"&gt;</pre>
 
-<p>让我们改用 {{htmlelement("picture")}}！就像<a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"><code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code></a>，{{htmlelement("picture")}}素包含了一些{{htmlelement("source")}}元素，它使浏览器在不同资源间做出选择，紧跟着的是最重要的{{htmlelement("img")}}元素。<a href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> 的代码如下：</p>
+<p>让我们改用 {{htmlelement("picture")}}！就像<a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content"><code>&lt;video&gt;</code>和<code>&lt;audio&gt;</code></a>，{{htmlelement("picture")}}素包含了一些{{htmlelement("source")}}元素，它使浏览器在不同资源间做出选择，紧跟着的是最重要的{{htmlelement("img")}}元素。<a href="https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html">responsive.html</a> 的代码如下：</p>
 
 <pre class="brush: html notranslate">&lt;picture&gt;
   &lt;source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg"&gt;
@@ -176,7 +176,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 <p>这样的代码允许我们在宽屏和窄屏上都能显示合适的图片，像下面展示的一样：</p>
 
-<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="https://mdn.mozillademos.org/files/12940/picture-element-wide.png" style="display: block; height: 554px; margin: 0px auto; width: 700px;"><img alt="Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen" src="https://mdn.mozillademos.org/files/12938/picture-element-narrow.png" style="display: block; height: 710px; margin: 0px auto; width: 320px;"></p>
+<p><img alt="Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center." src="https://mdn.mozillademos.org/files/12940/picture-element-wide.png"><img alt="Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen" src="https://mdn.mozillademos.org/files/12938/picture-element-narrow.png"></p>
 
 <div class="note">
 <p><strong>注意</strong>: 你应该仅仅当在美术设计场景下使用media属性；当你使用media时，不要在sizes属性中也提供媒体条件。</p>
