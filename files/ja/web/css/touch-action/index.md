@@ -3,18 +3,19 @@ title: touch-action
 slug: Web/CSS/touch-action
 tags:
   - CSS
-  - CSS Property
-  - Pointer Events
-  - Reference
-  - 'recipe:css-property'
+  - CSS プロパティ
   - ポインターイベント
+  - リファレンス
+  - recipe:css-property
+browser-compat: css.properties.touch-action
 translation_of: Web/CSS/touch-action
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<p>CSS の <strong><code>touch-action</code></strong> プロパティは、タッチ画面のユーザーが要素のある領域をどのように操作できるか (例えば、ブラウザー内に組み込まれたパンまたはズーム機能) を設定します。</p>
+**`touch-action`** は CSS のプロパティで、タッチ画面のユーザーが要素のある領域をどのように操作できるか（例えば、ブラウザー内に組み込まれたパンまたはズーム機能）を設定します。
 
-<pre class="brush:css no-line-numbers notranslate">/* キーワード値 */
+```css
+/* キーワード値 */
 touch-action: auto;
 touch-action: none;
 touch-action: pan-x;
@@ -29,132 +30,94 @@ touch-action: manipulation;
 /* グローバル値 */
 touch-action: inherit;
 touch-action: initial;
+touch-action: revert;
 touch-action: unset;
-</pre>
+```
 
-<p>既定で、パン (スクロール) およびピンチ操作はブラウザーとは独立して別に扱われます。{{domxref("Pointer_events", "ポインターイベント", "", 1)}}を使用するアプリケーションは、ブラウザーがタッチジェスチャーの扱いを始めるときに {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベントを受け取ります。ブラウザーがどのジェスチャーを扱うかについての具体的に定義することによって、アプリケーションはジェスチャーを記憶するために {{domxref("HTMLElement/pointermove_event", "pointermove")}} および {{domxref("HTMLElement/pointerup_event", "pointerup")}} リスナーの中で独自の振る舞いを提供することができます。{{domxref("Touch_events", "タッチイベント", "", 1)}}を使用するアプリケーションは、 {{domxref("Event.preventDefault","preventDefault()")}} を呼び出すことでブラウザーがジェスチャーを扱うのを無効にすることができますが、イベントリスナーが呼び出される前に、 <code>touch-action</code> を使用してブラウザーにアプリケーションの目的を知らせるようにもしてください。</p>
+既定でハ、パン（スクロール）およびピンチ操作はブラウザーとは独立して別に扱われます。{{domxref("Pointer_events", "ポインターイベント", "", 1)}}を使用するアプリケーションは、ブラウザーがタッチジェスチャーの扱いを始めるときに {{domxref("HTMLElement/pointercancel_event", "pointercancel")}} イベントを受け取ります。ブラウザーがどのジェスチャーを扱うかについての具体的に定義することによって、アプリケーションはジェスチャーを記憶するために {{domxref("HTMLElement/pointermove_event", "pointermove")}} および {{domxref("HTMLElement/pointerup_event", "pointerup")}} リスナーの中で独自の振る舞いを提供することができます。{{domxref("Touch_events", "タッチイベント", "", 1)}}を使用するアプリケーションは、 {{domxref("Event.preventDefault","preventDefault()")}} を呼び出すことでブラウザーがジェスチャーを扱うのを無効にすることができますが、イベントリスナーが呼び出される前に、 `touch-action` を使用してブラウザーにアプリケーションの目的を知らせるようにもしてください。
 
-<p>ジェスチャーが開始されると、ブラウザーはタッチ要素の <code>touch-action</code> の値を、祖先のうちジェスチャーを実装しているもの (言い換えれば、最初のスクロールを含む要素) まで交差させます。つまり実際には、 <code>touch-action</code> は通常、その要素の子孫のいずれかに <code>touch-action</code> を明示的に指定する必要なく、独自の動作を持つ最上位の要素にのみ適用されます。</p>
+ジェスチャーが開始されると、ブラウザーはタッチ要素の `touch-action` の値を、祖先のうちジェスチャーを実装しているもの (言い換えれば、最初のスクロールを含む要素) まで交差させます。つまり実際には、 `touch-action` は通常、その要素の子孫のいずれかに `touch-action` を明示的に指定する必要なく、独自の動作を持つ最上位の要素にのみ適用されます。
 
-<div class="blockIndicator note">
-<p>ジェスチャーが開始された後、 <code>touch-action</code> の値を変更しても、現在のジェスチャーの動作には影響を与えません。</p>
-</div>
+> **Note:** ジェスチャーが開始された後、 `touch-action` の値を変更しても、現在のジェスチャーの動作には影響を与えません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<p><code>touch-action</code> プロパティは次の何れかの形で指定することができます。</p>
+`touch-action` プロパティは次の何れかの形で指定することができます。
 
-<ul>
- <li><code><a href="#auto">auto</a></code>, <code><a href="#none">none</a></code>, <code><a href="#manipulation">manipulation</a></code> のキーワードのうち一つと、<em>または</em></li>
- <li><code><a href="#pan-x">pan-x</a></code>, <code><a href="#pan-keywords">pan-left</a></code>, <code><a href="#pan-keywords">pan-right</a></code>, and/or one of the keywords <code><a href="#pan-y">pan-y</a></code>, <code><a href="#pan-keywords">pan-up</a></code>, <code><a href="#pan-keywords">pan-down</a></code>, のキーワードのうち一つと、加えて任意のキーワード <code><a href="#pinch-zoom">pinch-zoom</a></code>。</li>
-</ul>
+- キーワード `auto`, `none`, [`manipulation`](#manipulation) のうち一つ、_または_
+- キーワード `pan-x`, `pan-left`, `pan-right` のうち一つと、キーワード `pan-y`, `pan-up`, `pan-down` のうち一つと、加えて任意のキーワード `pinch-zoom`。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt id="auto"><code>auto</code></dt>
- <dd>ブラウザーがすべてのパンやズームのジェスチャーを扱うことを有効にします。</dd>
- <dt id="none"><code>none</code></dt>
- <dd>ブラウザーがすべてのパンやズームのジェスチャーを扱うことを無効にします。</dd>
- <dt id="pan-x"><code>pan-x</code></dt>
- <dd>指１本で水平にパンするジェスチャーを有効にします。 <strong>pan-y</strong>, <strong>pan-up</strong>, <strong>pan-down</strong>, <strong>pinch-zoom</strong> と組み合わせることができます。</dd>
- <dt id="pan-y"><code>pan-y</code></dt>
- <dd>指１本で垂直にパンするジェスチャーを有効にします。 <strong>pan-x</strong>, <strong>pan-left</strong>, <strong>pan-right</strong>, <strong>pinch-zoom</strong> と組み合わせることができます。</dd>
- <dt id="manipulation"><code>manipulation</code></dt>
- <dd>パンおよびズームのジェスチャーは有効にしますが、ダブルタップでのズームなど、標準外の追加的なジェスチャーを無効します。ダブルタップでズームすることを無効にすることで、ユーザーが画面をタップしたとき、ブラウザーが<strong>クリック</strong>イベントの生成を待つ必要がなくなります。これは "<strong>pan-x pan-y pinch-zoom</strong>" の別名です (互換性のために、これも有効です)。</dd>
-</dl>
+- `auto`
+  - : ブラウザーがすべてのパンやズームのジェスチャーを扱うことを有効にします。
+- `none`
+  - : ブラウザーがすべてのパンやズームのジェスチャーを扱うことを無効にします。
+- `pan-x`
+  - : 指 1 本で水平にパンするジェスチャーを有効にします。 **pan-y**, **pan-up**, **pan-down**, **pinch-zoom** と組み合わせることができます。
+- `pan-y`
+  - : 指 1 本で垂直にパンするジェスチャーを有効にします。 **pan-x**, **pan-left**, **pan-right**, **pinch-zoom** と組み合わせることができます。
+- `manipulation`
+  - : パンおよびズームのジェスチャーは有効にしますが、ダブルタップでのズームなど、標準外の追加的なジェスチャーを無効します。ダブルタップでズームすることを無効にすることで、ユーザーが画面をタップしたとき、ブラウザーが**クリック**イベントの生成を待つ必要がなくなります。これは "**pan-x pan-y pinch-zoom**" の別名です (互換性のために、これも有効です)。
+- `pan-left`, `pan-right`, `pan-up`, `pan-down` {{experimental_inline}}
+  - : 指定された方向へのスクロールを始める指 1 本のジェスチャーを有効にします。スクロールが始まると、その方向が予約されることがあります。なお、「上」にスクロールすること (**pan-up**) は、ユーザーが画面の表面を指で下方向にドラッグすることを意味し、同様に **pan-left** はユーザーが指で右にドラッグすることを意味します。より単純な表現がない限り、複数の方向を組み合わせることができます (例えば、 "**pan-left pan-right**" は "**pan-x**" の方がより単純なので不正ですが、 "**pan-left pan-down**" 有効です)。
+- `pinch-zoom`
+  - : 複数の指でのページのパンやズーム有効にします。これは **pan-** のあらゆる値と組み合わせることができます。
 
-<dl>
- <dt id="pan-keywords"><code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code> {{experimental_inline}}</dt>
- <dd>指定された方向へのスクロールを始める指１本のジェスチャーを有効にします。スクロールが始まると、その方向が予約されることがあります。なお、「上」にスクロールすること (<strong>pan-up</strong>) は、ユーザーが画面の表面を指で下方向にドラッグすることを意味し、同様に <strong>pan-left</strong> はユーザーが指で右にドラッグすることを意味します。より単純な表現がない限り、複数の方向を組み合わせることができます (例えば、 "<strong>pan-left pan-right</strong>" は "<strong>pan-x</strong>" の方がより単純なので不正ですが、 "<strong>pan-left pan-down</strong>" 有効です)。</dd>
- <dt id="pinch-zoom"><code>pinch-zoom</code></dt>
- <dd>複数の指でのページのパンやズーム有効にします。これは <strong>pan-</strong> のあらゆる値と組み合わせることができます。</dd>
-</dl>
+## アクセシビリティの考慮
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+`touch-action: none;` の宣言は、ブラウザー内蔵のズーム機能を操作することを阻害することがあります。これは弱視の人がページのコンテンツを読んで理解できるようになることを阻害します。
 
-<p><code>touch-action: none;</code> の宣言は、ブラウザー内蔵のズーム機能を操作することを阻害することがあります。これは弱視の人がページのコンテンツを読んで理解できるようになることを阻害します。</p>
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN "WCAG を理解する ― ガイドライン 1.4 の解説"</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | Understanding WCAG 2.0</a></li>
-</ul>
+## 公式定義
 
-<h2 id="Formal_definition" name="Formal_definition">公式定義</h2>
+{{CSSInfo}}
 
-<p>{{CSSInfo}}</p>
-
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
 <h3 id="すべてのジェスチャーの無効化">すべてのジェスチャーの無効化</h3>
 
-<p>最も一般的な使い方は、要素 (およびスクロールしないその子孫) のすべてのジェスチャーを無効にして、地図やゲームの画面のように、独自のドラッグやズームの振る舞いを提供することです。</p>
+最も一般的な使い方は、要素（およびスクロールしないその子孫）のすべてのジェスチャーを無効にして、地図やゲームの画面のように、独自のドラッグやズームの振る舞いを提供することです。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div id="map"&gt;&lt;/div&gt;</pre>
+```html
+<div id="map"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css notranslate">#map {
-  height: 400px;
-  width: 400px;
-  background: blue;
-  touch-action: none;
+```css
+#map {
+  height: 150vh;
+  width: 70vw;
+  background: linear-gradient(blue, green);
+  touch-action: none;
 }
-</pre>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Disabling_all_gestures')}}</p>
+{{EmbedLiveSample('Disabling_all_gestures')}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#touch-action', 'touch-action')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td><code>pinch-zoom</code> プロパティ値を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 3', '#the-touch-action-css-property', 'touch-action')}}</td>
-   <td>{{Spec2('Pointer Events 3')}}</td>
-   <td><code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code> プロパティ値を追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2', '#the-touch-action-css-property', 'touch-action')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>最新の勧告</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{compat("css.properties.touch-action")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("Pointer_events","Pointer Events")}}</li>
- <li>WebKit Blog <a href="https://webkit.org/blog/5610/more-responsive-tapping-on-ios/" rel="bookmark" title="Permanent Link: More Responsive Tapping on iOS">More Responsive Tapping on iOS</a></li>
- <li>Google Developers Blog <a href="https://developers.google.com/web/updates/2017/01/scrolling-intervention">Making touch scrolling fast by default</a></li>
- <li><a href="/ja/docs/Web/CSS/CSS_Scroll_Snap">スクロールスナップ</a></li>
-</ul>
+- {{cssxref("pointer-events","pointer-events")}}
+- {{domxref("Pointer_events", "ポインターイベント", "", 1)}}
+- WebKit Blog [More Responsive Tapping on iOS](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/ "Permanent Link: More Responsive Tapping on iOS")
+- Google Developers Blog [Making touch scrolling fast by default](https://developers.google.com/web/updates/2017/01/scrolling-intervention)
+- [スクロールスナップ](/ja/docs/Web/CSS/CSS_Scroll_Snap)
