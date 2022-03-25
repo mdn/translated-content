@@ -17611,12 +17611,6 @@
   "Web/API/IDBRequest": {
     "modified": "2020-10-15T22:21:10.055Z"
   },
-  "Web/API/IDBRequest/onsuccess": {
-    "modified": "2020-10-15T22:21:11.208Z",
-    "contributors": [
-      "yuna"
-    ]
-  },
   "Web/API/IDBRequest/success_event": {
     "modified": "2020-10-15T22:21:10.089Z",
     "contributors": [
@@ -21222,6 +21216,18 @@
       "Uemmra3"
     ]
   },
+  "Web/API/ServiceWorkerContainer/controllerchange_event": {
+    "modified": "2020-10-15T22:29:14.196Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/ServiceWorkerContainer/error_event": {
+    "modified": "2020-10-15T22:29:16.925Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/API/ServiceWorkerContainer/getRegistration": {
     "modified": "2020-10-15T22:29:13.888Z",
     "contributors": [
@@ -21236,24 +21242,6 @@
   },
   "Web/API/ServiceWorkerContainer/message_event": {
     "modified": "2020-10-15T22:29:18.958Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/ServiceWorkerContainer/oncontrollerchange": {
-    "modified": "2020-10-15T22:29:14.196Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/ServiceWorkerContainer/onerror": {
-    "modified": "2020-10-15T22:29:16.925Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/ServiceWorkerContainer/onmessage": {
-    "modified": "2020-10-15T22:29:17.104Z",
     "contributors": [
       "Wind1808"
     ]
@@ -48288,6 +48276,12 @@
       "unarist"
     ]
   },
+  "conflicting/Web/API/IDBRequest/success_event": {
+    "modified": "2020-10-15T22:21:11.208Z",
+    "contributors": [
+      "yuna"
+    ]
+  },
   "conflicting/Web/API/MediaDevices/getUserMedia": {
     "modified": "2019-03-18T21:40:37.855Z",
     "contributors": [
@@ -48334,6 +48328,12 @@
     "contributors": [
       "mfuji09",
       "YuichiNukiyama"
+    ]
+  },
+  "conflicting/Web/API/ServiceWorkerContainer/message_event": {
+    "modified": "2020-10-15T22:29:17.104Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "conflicting/Web/API/SpeechRecognition/audiostart_event": {
