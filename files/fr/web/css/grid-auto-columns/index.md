@@ -99,7 +99,7 @@ grid-auto-columns: unset;
 
 ```css
 #grid {
-  width: 100px;
+  height: 100px;
   display: grid;
   grid-template-areas: "a a";
   grid-gap: 10px;
@@ -123,7 +123,7 @@ grid-auto-columns: unset;
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples", "410px", "100px")}}
+{{EmbedLiveSample("Exemples", "410px", "140px")}}
 
 ## Spécifications
 
