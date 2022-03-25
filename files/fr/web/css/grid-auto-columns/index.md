@@ -123,7 +123,7 @@ grid-auto-columns: unset;
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples", "410px", "100px")}}
+{{EmbedLiveSample("Exemples", "410px", "140px")}}
 
 ## Spécifications
 
