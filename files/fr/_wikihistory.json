@@ -17559,14 +17559,8 @@
       "gadgino"
     ]
   },
-  "Web/API/IDBRequest/onerror": {
+  "Web/API/IDBRequest/error_event": {
     "modified": "2019-03-23T22:34:16.420Z",
-    "contributors": [
-      "gadgino"
-    ]
-  },
-  "Web/API/IDBRequest/onsuccess": {
-    "modified": "2019-03-23T22:34:17.762Z",
     "contributors": [
       "gadgino"
     ]
@@ -17589,6 +17583,12 @@
     "modified": "2019-03-23T22:34:18.295Z",
     "contributors": [
       "SphinxKnight",
+      "gadgino"
+    ]
+  },
+  "Web/API/IDBRequest/success_event": {
+    "modified": "2019-03-23T22:34:17.762Z",
+    "contributors": [
       "gadgino"
     ]
   },

@@ -3679,6 +3679,8 @@
 /fr/docs/Web/API/IDBDatabase/onversionchange	/fr/docs/Web/API/IDBDatabase/versionchange_event
 /fr/docs/Web/API/IDBEnvironment/indexedDB	/fr/docs/Web/API/indexedDB
 /fr/docs/Web/API/IDBRequest/blocked_event	/fr/docs/Web/API/IDBOpenDBRequest/blocked_event
+/fr/docs/Web/API/IDBRequest/onerror	/fr/docs/Web/API/IDBRequest/error_event
+/fr/docs/Web/API/IDBRequest/onsuccess	/fr/docs/Web/API/IDBRequest/success_event
 /fr/docs/Web/API/IDBTransaction/onabort	/fr/docs/conflicting/Web/API/IDBTransaction/abort_event_0945f0eeba3f0bcb487692fdcd8d6f40
 /fr/docs/Web/API/IDBTransaction/oncomplete	/fr/docs/conflicting/Web/API/IDBTransaction/complete_event
 /fr/docs/Web/API/IDBTransaction/onerror	/fr/docs/conflicting/Web/API/IDBTransaction/error_event

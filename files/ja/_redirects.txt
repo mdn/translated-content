@@ -3188,6 +3188,7 @@
 /ja/docs/Web/API/IDBFactory.cmp	/ja/docs/Web/API/IDBFactory/cmp
 /ja/docs/Web/API/IDBFactory.deleteDatabase	/ja/docs/Web/API/IDBFactory/deleteDatabase
 /ja/docs/Web/API/IDBFactory.open	/ja/docs/Web/API/IDBFactory/open
+/ja/docs/Web/API/IDBRequest/onsuccess	/ja/docs/conflicting/Web/API/IDBRequest/success_event
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
@@ -3301,6 +3302,9 @@
 /ja/docs/Web/API/SVGTransformable	/ja/docs/orphaned/Web/API/SVGTransformable
 /ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
 /ja/docs/Web/API/ScrollToOptions	/ja/docs/conflicting/Web/API/Window/scroll
+/ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
+/ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorkerContainer/error_event
+/ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/conflicting/Web/API/ServiceWorkerContainer/message_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/conflicting/Web/API/caches
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
