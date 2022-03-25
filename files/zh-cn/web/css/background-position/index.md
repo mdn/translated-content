@@ -7,26 +7,29 @@ tags:
   - CSS Property
   - Reference
 translation_of: Web/CSS/background-position
+browser-compat: css.properties.background-position
 ---
-<p>{{CSSRef}}</p>
 
-<p><strong><code>background-position</code></strong> 为每一个背景图片设置初始位置。 这个位置是相对于由 {{cssxref("background-origin")}} 定义的位置图层的。</p>
+{{CSSRef}}
 
-<p>{{EmbedInteractiveExample("pages/css/background-position.html")}}</p>
+The **`background-position`** [CSS](/zh-CN/docs/Web/CSS) 属性为每一个背景图片设置初始位置。这个位置是相对于由 {{cssxref("background-origin")}} 定义的位置图层的。
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+{{EmbedInteractiveExample("pages/css/background-position.html")}}
 
-<pre class="brush: css">/* Keyword values */
+## 语法
+
+```css
+/* Keyword values */
 background-position: top;
 background-position: bottom;
 background-position: left;
 background-position: right;
 background-position: center;
 
-/* &lt;percentage&gt; values */
+/* <percentage> values */
 background-position: 25% 75%;
 
-/* &lt;length&gt; values */
+/* <length> values */
 background-position: 0 0;
 background-position: 1cm 2cm;
 background-position: 10ch 8em;
@@ -43,237 +46,144 @@ background-position: top right 10px;
 /* Global values */
 background-position: inherit;
 background-position: initial;
+background-position: revert;
 background-position: unset;
-</pre>
+```
 
-<p><code><strong>background-position</strong></code> 属性被指定为一个或多个 &lt;<a href="/zh-CN/docs/Web/CSS/position_value">position</a>&gt; 值，用逗号隔开。</p>
+`background-position` 属性被指定为一个或多个 `<position>` 值，用逗号隔开。
 
-<h3 id="Values" name="Values">值</h3>
+### 值
 
-<ul>
- <li>关键字 <code>center</code>，用来居中背景图片。</li>
- <li>关键字 <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code> 中的一个。用来指定把这个项目<em>（原文为 item）放在哪</em>一个边缘。另一个维度被设置成 50%，所以这个项目（原文为 item）被放在指定边缘的中间位置。</li>
- <li>{{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}。指定相对于左边缘的 x 坐标，y 坐标被设置成 50%。</li>
-</ul>
+- `<position>`
 
-<ul>
- <li>如果一个值是  <code>top</code> 或  <code>bottom</code>，那么另一个值不应该是 <code>top</code> 或 <code>bottom</code>。</li>
- <li>如果一个值是  <code>left</code> 或   <code>right</code>，那么另一个值不应该是 <code>left</code> 或 <code>right</code> 。</li>
-</ul>
+  - : 一个 {{cssxref("&lt;position&gt;")}} 定义一组 x/y 坐标（相对于一个元素盒子模型的边界），来放置项目（原文为 item）。它可以使用一到四个值进行定义。如果使用两个非关键字值，第一个值表示水平位置，第二个值表示垂直位置。如果仅指定一个值，则第二个值默认是 `center`。如果使用三个或四个值，则长度百分比值是前面关键字值的偏移量。
 
-<ul>
- <li>+50px（将图片的左边界对齐容器的中线）</li>
- <li>0px（图片的左边界与容器左边界重合）</li>
- <li>-100px（将图片相对容器左移100px，这意味着图片中部的100px内容将出现在容器中）</li>
- <li>-200px（将图片相对容器左移200px，这意味着图片右部分的100px内容将出现在容器中）</li>
- <li>-250px（将图片相对容器左移250px，这意味着图片的右边界对齐容器的中线）</li>
-</ul>
+    **一个值的语法：** 值可能是：
 
-<p>    另外需要注意，如果背景图片的大小和容器一样，那设置百分比的值将永远无效，因为“容器和图片的差”为0（图片永远填满容器，并且图片的相对位置和容器的相对位置永远重合）。在这种情况下，需要为偏移使用绝对值（例如px）。</p>
+    - 关键字 `center`，用来居中背景图片。
+    - 关键字 `top`、`left`、`bottom`、`right` 中的一个。用来指定把这个项目（原文为 item）放在哪一个边界。另一个维度被设置成 50%，所以这个项目（原文为 item）被放在指定边界的中间位置。
+    - {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}。指定相对于左边界的 x 坐标，y 坐标被设置成 50%。
 
-<dl>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>  一个 {{cssxref("&lt;position&gt;")}} 定义一组 x/y 坐标（相对于一个元素盒子模型的边缘），来放置这个项目<em>（原文为 item）</em>。它可以被定义为一个值或者两个值。如果被定义为两个值，那么第一个值代表水平位置，第二个代表垂直垂直位置。如果只指定一个值，那么第二个值默认为 <code>center</code>。</dd>
- <dd>
- <p><strong>一个值的语法:</strong> 这个值可以是：</p>
- </dd>
- <dd>
- <p><strong>两个值的语法:</strong> 一个定义 x 坐标，另一个定义 y 坐标。每个值可以是：</p>
+    **两个值的语法：** 一个定义 x 坐标，另一个定义 y 坐标。每个值可以是：
 
- <ul>
-  <li>关键字 <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code> 中的一个。 如果这里给出 <code>left</code> 或 <code>right</code>，那么这个值定义 x 轴位置，另一个值定义 y 轴位置。如果这里给出 <code>top</code> 或  <code>bottom</code>，那么这个值定义 y 轴位置，另一个值定义 x 轴位置。</li>
-  <li>{{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}。如果另一个值是  <code>left</code> 或  <code>right</code>，那么这个值（指 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}）定义相对于上边缘的 y 轴位置。 如果两个值都是 <code>&lt;length&gt;</code> 或 <code>&lt;percentage&gt;</code>，那么第一个值定义 x 轴位置，第二个定义 y 轴位置。</li>
- </ul>
+    - 关键字 `top`、`left`、`bottom`、`right` 中的一个。如果这里给出 `left` 或 `right`，那么这个值定义 x 轴位置，另一个值定义 y 轴位置。如果这里给出 `top` 或 `bottom`，那么这个值定义 y 轴位置，另一个值定义 x 轴位置。
+    - {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}。如果另一个值是 `left` 或 `right`， 则该值定义相对于顶部边界的 Y。如果另一个值是 `top` 或 `bottom`，则该值定义相对于左边界的 X。如果两个值都是 `<length>` 或 `<percentage>` 值，则第一个定义 X，第二个定义 Y。
+    - 注意：如果一个值是 `top` 或 `bottom`，那么另一个值不可能是 `top` 或 `bottom`。如果一个值是 `left` 或 `right`，那么另一个值不可能是 `left` 或 `right`。也就是说，例如，`top top` 和 `left right` 是无效的。
+    - 排序：配对关键字时，位置并不重要，因为浏览器可以重新排序，写成 `top left` 或 `left top` 其产生的效果是相同的。使用 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 与关键字配对时顺序非常重要，定义 X 的值放在前面，然后是定义 Y 的值， `right 20px` 和 `20px right` 的效果是不相同的，前者有效但后者无效。`left 20%` 或 `20% bottom` 是有效的，因为 X 和 Y 值已明确定义且位置正确。
+    - 默认值是 `left top` 或者 `0% 0%`。
 
- <p>注意：</p>
- </dd>
- <dd>
- <ul>
- </ul>
+    **三个值的语法：** 两个值是关键字值，第三个是前面值的偏移量：
 
- <p>也就是说，<code>top top</code> 和 <code>left left </code>是无效的。</p>
- </dd>
- <dt>至于百分比：</dt>
- <dd><br>
- 百分比值的偏移指定图片的相对位置和容器的相对位置重合。值0%代表图片的左边界（或上边界）和容器的左边界（上边界）重合。值100%代表图片的右边界（或下边界）和容器的右边界（或下边界）重合。值50%则代表图片的中点和容器的中点重合。<br>
- <br>
- 当指定百分比值的时候，实际上执行了以下的计算公式（该公式可以用数学方式定义图片和容器相对位置重合）：<br>
- <br>
- <code>(container width - image width) * (position x%) = (x offset value)<br>
- (container height - image height) * (position y%) = (y offset value)</code><br>
- <br>
- 使用X坐标来举个例子，假设有一个300px宽的图片，将这个图片使用到一个100px宽的容器中，并且将background-size设置成自动：<br>
- <br>
- <code>100px - 300px = -200px (容器和图片的宽度差)</code><br>
- <br>
- 当对background-position设置值依次为-25%，0%，50%，100%，125%，得到图片相对容器的偏移值为：<br>
- <br>
- <code>-200px * -25% = 50px<br>
- -200px * 0% = 0px<br>
- -200px * 50% = -100px<br>
- -200px * 100% = -200px<br>
- -200px * 125% = -250px</code><br>
- <br>
- 对于这些例子中设置的偏移，图片相对容器真实的偏移值就是：</dd>
- <dt></dt>
-</dl>
+    - 第一个值是关键字 `top`、`left`、`bottom`、`right`，或者 `center`。如果设置为 `left` 或 `right`，则定义了 X。如果设置为 `top` 或 `bottom`，则定义了 Y，另一个关键字值定义了 X。
+    - {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}，如果是第二个值，则是第一个值的偏移量。如果是第三个值，则是第二个值的偏移量。
+    - 单个长度或百分比值是其前面的关键字值的偏移量。一个关键字与两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值的组合无效。
 
-<h3 id="语法规范">语法规范</h3>
+    **四个值的语法：** 第一个和第三个值是定义 X 和 Y 的关键字值。第二个和第四个值是前面 X 和 Y 关键字值的偏移量：
+
+    - 第一个值和第三个值是关键字值 `top`、`left`、`bottom`、 `right` 之一。如果设置为 `left` 或 `right`，则定义了 X。如果设置为 `top` 或 `bottom`，则定义了 Y，另一个关键字值定义了 X。
+    - 第二个和第四个值是 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}}。第二个值是第一个关键字的偏移量。第四个值是第二个关键字的偏移量。
+
+### 关于百分比：
+
+给定背景图像位置的百分比偏移量是相对于容器的。值 0% 表示背景图像的左（或上）边界与容器的相应左（或上）边界对齐，或者说图像的 0% 标记将位于容器的 0% 标记上。值为 100% 表示背景图像的 _右_（或 _下_）边界与容器的 _右_（或 _下_）边界对齐，或者说图像的 100% 标记将位于容器的 100% 标记上。因此 50% 的值表示水平或垂直居中背景图像，因为图像的 50% 将位于容器的 50% 标记处。类似的，`background-position: 25% 75%` 表示图像上的左侧 25% 和顶部 75% 的位置将放置在距容器左侧 25% 和距容器顶部 75% 的容器位置。
+
+基本上发生的情况是从相应的容器尺寸中 _减去_ 背景图像尺寸，然后将结果值的百分比用作从左（或顶部）边界的直接偏移量。
+
+```
+(container width - image width) * (position x%) = (x offset value)
+(container height - image height) * (position y%) = (y offset value)
+```
+
+以 X 轴为例，假设我们有一个 300px 宽的图像，我们在一个 100px 宽的容器中使用它，`background-size` 设置为 `auto`：
+
+```
+100px - 300px = -200px (container & image difference)
+```
+
+因此，位置百分比为 -25%、0%、50%、100%、125%，我们得到这些图像到容器边界偏移值：
+
+```
+-200px * -25% = 50px
+-200px * 0% = 0px
+-200px * 50% = -100px
+-200px * 100% = -200px
+-200px * 125% = -250px
+```
+
+因此，对于我们的示例，使用这些结果值，让**图像**的**左边界**从**容器**的**左边界**偏移：
+
+- \+ 50px （将图像左边界放在 100px 宽容器的中心）
+- 0px （图像左边界与容器左边界重合）
+- \-100px (将图片相对容器左移 100px，这意味着图片中部的 100px 内容将出现在容器中)
+- \-200px (将图片相对容器左移 200px，这意味着图片右部分的 100px 内容将出现在容器中)
+- \-250px (将图片相对容器左移 250px，这意味着图片的右边界对齐容器的中线)
+
+值得一提的是，如果您的 `background-size` 等于给定轴的容器大小，那么该轴的 _百分比_ 位置将不起作用，因为“容器图像差异”将为零。您将需要使用绝对值进行偏移。
+
+## 正式定义
+
+{{cssinfo}}
+
+## 正式语法
 
 {{csssyntax}}
 
-<h2 id="例子">例子</h2>
+## 例子
 
-<p>下面三个例子使用 {{cssxref("background")}} 来创建一个包含一个星星的黄色长方形元素。每个例子中，星星的位置是不一样的。第三个例子阐明了如何</p>
+### 定位背景图像
 
-<p>为两个不同的背景图片指定位置。</p>
+下面三个例子每一个都使用 {{cssxref("background")}} 来创建一个包含一个星星的黄色长方形元素。每个例子中，星星的位置是不一样的。第三个例子阐明了如何为两个不同的背景图片指定位置。
 
-<h4 id="HTML_内容" style="font-size: 1.28571428571429rem;">HTML 内容</h4>
+#### HTML
 
-<pre class="brush: html  language-html" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-html" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;</span>div</span> <span class="attr-name token" style="color: #669900;">class</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>exampleone<span class="punctuation token" style="color: #999999;">"</span></span><span class="punctuation token" style="color: #999999;">&gt;</span></span>Example One<span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;/</span>div</span><span class="punctuation token" style="color: #999999;">&gt;</span></span>
-<span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;</span>div</span> <span class="attr-name token" style="color: #669900;">class</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>exampletwo<span class="punctuation token" style="color: #999999;">"</span></span><span class="punctuation token" style="color: #999999;">&gt;</span></span>Example Two<span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;/</span>div</span><span class="punctuation token" style="color: #999999;">&gt;</span></span>
-<span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;</span>div</span> <span class="attr-name token" style="color: #669900;">class</span><span class="attr-value token" style="color: #0077aa;"><span class="punctuation token" style="color: #999999;">=</span><span class="punctuation token" style="color: #999999;">"</span>examplethree<span class="punctuation token" style="color: #999999;">"</span></span><span class="punctuation token" style="color: #999999;">&gt;</span></span>Example Three<span class="tag token" style="color: #990055;"><span class="tag token"><span class="punctuation token" style="color: #999999;">&lt;/</span>div</span><span class="punctuation token" style="color: #999999;">&gt;</span></span></code></pre>
+```html
+<div class="exampleone">Example One</div>
+<div class="exampletwo">Example Two</div>
+<div class="examplethree">Example Three</div>
+```
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
+#### CSS
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"></div>
+```css
+/* 被所有 div 共享 */
+div {
+  background-color: #ffee99;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 80px;
+  margin-bottom: 12px;
+}
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"></div>
+/* 这些例子使用 `background` 缩写 */
+.exampleone {
+  background: url("startransparent.gif") #ffee99 2.5cm bottom no-repeat;
+}
+.exampletwo {
+  background: url("startransparent.gif") #ffee99 left 4em bottom 1em no-repeat;
+}
 
-<h4 id="CSS_内容" style="font-size: 1.28571428571429rem;">CSS 内容</h4>
+/* 多背景图片：每个图片依次和相应的 `background-position` 匹配 */
+.examplethree {
+  background-image: url("startransparent.gif"), url("catfront.png");
+  background-position: 0px 0px, right 3em bottom 2em;
+}
+```
 
-<pre class="brush: css  language-css" style="padding: 1em 0px 1em 30px; font-size: 14px; white-space: normal;"><code class="language-css" style="font-family: Consolas, Monaco, 'Andale Mono', monospace; direction: ltr; white-space: pre;"><span class="comment token" style="color: #708090;">/* 被所有 div 共享 */</span>
-<span class="selector token" style="color: #669900;">div </span><span class="punctuation token" style="color: #999999;">{</span>
-    <span class="property token" style="color: #990055;">background-color</span><span class="punctuation token" style="color: #999999;">:</span> #FFEE99<span class="punctuation token" style="color: #999999;">;</span>
-    <span class="property token" style="color: #990055;">background-repeat</span><span class="punctuation token" style="color: #999999;">:</span> no-repeat<span class="punctuation token" style="color: #999999;">;</span>
-    <span class="property token" style="color: #990055;">width</span><span class="punctuation token" style="color: #999999;">:</span> 300px<span class="punctuation token" style="color: #999999;">;</span>
-    <span class="property token" style="color: #990055;">height</span><span class="punctuation token" style="color: #999999;">:</span> 80px<span class="punctuation token" style="color: #999999;">;</span>
-    <span class="property token" style="color: #990055;">margin-bottom</span><span class="punctuation token" style="color: #999999;">:</span> 12px<span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span>
+#### 效果
 
+{{EmbedLiveSample('定位背景图像', 420, 200)}}
 
-<span class="comment token" style="color: #708090;">/* 这些例子使用 `background` 缩写 */</span>
-<span class="selector token" style="color: #669900;">.exampleone </span><span class="punctuation token" style="color: #999999;">{</span>
-    <span class="property token" style="color: #990055;">background</span><span class="punctuation token" style="color: #999999;">:</span> <span class="token url" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">url("https://developer.mozilla.org/samples/cssref/images/startransparent.gif")</span> #FFEE99 2.5cm bottom no-repeat<span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span>
-<span class="selector token" style="color: #669900;">.exampletwo </span><span class="punctuation token" style="color: #999999;">{</span>
-    <span class="property token" style="color: #990055;">background</span><span class="punctuation token" style="color: #999999;">:</span> <span class="token url" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">url("https://developer.mozilla.org/samples/cssref/images/startransparent.gif")</span> #FFEE99 3em 50% no-repeat<span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span>
+## 规范
 
-<span class="comment token" style="color: #708090;">/*
-多背景图片：每个图片依次和相应的 `background-position` 匹配
-*/</span>
-<span class="selector token" style="color: #669900;">.examplethree </span><span class="punctuation token" style="color: #999999;">{</span>
-    <span class="property token" style="color: #990055;">background-image</span><span class="punctuation token" style="color: #999999;">:</span>    <span class="token url" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">url("https://developer.mozilla.org/samples/cssref/images/startransparent.gif")</span>,
-                         <span class="token url" style="background: rgba(255, 255, 255, 0.498039); color: #a67f59;">url("https://mdn.mozillademos.org/files/7693/catfront.png")</span><span class="punctuation token" style="color: #999999;">;</span>
-    <span class="property token" style="color: #990055;">background-position</span><span class="punctuation token" style="color: #999999;">:</span> 0px 0px,
-                         center<span class="punctuation token" style="color: #999999;">;</span>
-<span class="punctuation token" style="color: #999999;">}</span></code></pre>
+{{Specifications}}
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"></div>
+## 浏览器兼容性
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"></div>
+{{Compat}}
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"></div>
+## 参阅
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 76px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 95px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 114px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 133px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 152px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 171px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 190px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 209px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 228px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 247px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 266px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 285px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 304px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 323px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 342px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 361px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 380px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 399px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 418px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 437px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 456px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 475px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 494px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 513px; background: 0px 0px;"></div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 532px; background: 0px 0px;"></div>
-
-<h4 id="结果" style="font-size: 1.28571428571429rem;">结果</h4>
-
-<p>{{EmbedLiveSample('例子', 420, 200)}}</p>
-
-<h2 id="Specifications" name="Specifications">规范</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Added support for multiple backgrounds, the four-value syntax and modified the percentage definition to match implementations.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Allows for the mix of keyword values and {{cssxref("&lt;length&gt;")}} and {{cssxref("&lt;percentage&gt;")}} values.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
-
-<p>{{Compat("css.properties.background-position")}}</p>
-
-<h2 id="See_also" name="See_also">参见</h2>
-
-<ul>
- <li>{{cssxref("background-position-x")}}</li>
- <li>{{cssxref("background-position-y")}}</li>
- <li>{{cssxref("background-position-inline")}}</li>
- <li>{{cssxref("background-position-block")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Multiple_backgrounds" title="CSS/Multiple backgrounds">Using multiple backgrounds</a></li>
- <li>{{cssxref("transform-origin")}}</li>
-</ul>
+- {{cssxref("background-position-x")}}
+- {{cssxref("background-position-y")}}
+- [Using multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- {{cssxref("transform-origin")}}
