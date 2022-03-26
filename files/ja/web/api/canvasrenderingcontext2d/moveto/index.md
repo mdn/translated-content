@@ -5,44 +5,46 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Method
-  - Reference
+  - メソッド
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.moveTo
 translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D API の <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.moveTo()</code></strong> メソッドは、新しいサブパスの始点を <code>(x, y)</code> 座標に移動します。</p>
+**`CanvasRenderingContext2D.moveTo()`** はキャンバス 2D API のメソッドで、新しいサブパスの始点を `(x, y)` 座標に移動します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox">void <var><em>ctx</em>.moveTo(x, y);</var>
-</pre>
+```js
+void ctx.moveTo(x, y);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>点の x (水平) 座標。</dd>
- <dt><code>y</code></dt>
- <dd>点の y (鉛直) 座標。</dd>
-</dl>
+- `x`
+  - : 点の x (水平) 座標。
+- `y`
+  - : 点の y (鉛直) 座標。
 
-<h2 id="Parameters" name="Parameters">例</h2>
+## 例
 
-<h3 id="Creating_multiple_sub-paths" name="Creating_multiple_sub-paths">複数のサブパスを作成する</h3>
+### 複数のサブパスの作成
 
-<p>この例は、<code>moveTo()</code> を使用して、1 つのパス内に 2 つのサブパスを作成します。サブパスは両方とも <code>stroke()</code> を 1 回呼び出すことで、レンダリングできます。</p>
+この例は、`moveTo()` を使用して、1 つのパス内に 2 つのサブパスを作成します。サブパスは両方とも `stroke()` の呼び出し 1 回で、描画することができます。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>最初の線は、(50, 50) が始点で (200, 50) が終点です。二番目の線は、(50, 90) が始点で (280, 120) が終点です。</p>
+最初の線は、 (50, 50) が始点で (200, 50) が終点です。 2 番目の線は、(50, 90) が始点で (280, 120) が終点です。
 
-<pre class="brush: js; highlight:[5,7]">var canvas = document.getElementById('canvas');
+```js
+var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
@@ -51,39 +53,22 @@ ctx.lineTo(200, 50);
 ctx.moveTo(50, 90);   // 2 つ目のサブパス
 ctx.lineTo(280, 120);
 ctx.stroke();
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Creating_multiple_sub-paths', 700, 180) }}</p>
+{{ EmbedLiveSample('Creating_multiple_sub-paths', 700, 180) }}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-moveto", "CanvasRenderingContext2D.moveTo")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.CanvasRenderingContext2D.moveTo")}}</p>
-
-<h2 id="参考情報">参考情報</h2>
-
-<ul>
- <li>このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.lineTo()")}}</li>
- <li>{{domxref("CanvasRenderingContext2D.stroke()")}}</li>
-</ul>
+- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("CanvasRenderingContext2D.lineTo()")}}
+- {{domxref("CanvasRenderingContext2D.stroke()")}}
