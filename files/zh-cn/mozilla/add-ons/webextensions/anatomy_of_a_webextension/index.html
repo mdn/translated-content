@@ -1,19 +1,19 @@
 ---
-title: 剖析拓展
+title: 剖析扩展
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 tags:
   - WebExtension
-  - 拓展
-  - 拓展开发
+  - 扩展
+  - 扩展开发
 translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 <div>{{AddonSidebar}}</div>
 
-<p>拓展是指一个包含若干文件的安装包，可直接分发至用户。本文中，我们快速地介绍一遍安装包内可能出现的文件。</p>
+<p>扩展是指一个包含若干文件的安装包，可直接分发至用户。本文中，我们快速地介绍一遍安装包内可能出现的文件。</p>
 
 <h2 id="manifest.json">manifest.json</h2>
 
-<p>这是唯一一个在每个 WebExtension 里面必须存在的文件。它包含了关于这个扩展插件基本的元数据（metadata），比如它的名字、版本和所需权限。并且，它也对 WebExtension 中其他文件进行了链接。</p>
+<p>这是唯一一个在每个扩展里面必须存在的文件。它包含了关于这个扩展插件基本的元数据（metadata），比如它的名字、版本和所需权限。并且，它也对扩展中其他文件进行了链接。</p>
 
 <p>这个 manifest 文件还可以指向其它一些类型的文件：</p>
 
@@ -36,7 +36,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>扩展常常需要独立于任何浏览器窗口或特定网页来维持一种长期的状态或者执行长期的操作。这就是后台脚本（background scripts）的职责。</p>
 
-<p>后台脚本将在拓展加载完毕后开始运行，直到拓展被禁用或卸载。只要获得了相应的<a href="/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，你就可以在脚本中使用任何 <a href="/zh-CN/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
+<p>后台脚本将在扩展加载完毕后开始运行，直到扩展被禁用或卸载。只要获得了相应的<a href="/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，你就可以在脚本中使用任何 <a href="/zh-CN/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
 
 <h3 id="指定后台脚本">指定后台脚本</h3>
 
@@ -103,7 +103,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <ul>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars">侧边栏</a>是一个窗格，它被显示在浏览器窗口左侧，就在网页旁边</li>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">弹出窗口</a>是一个对话框，可以在用户单击<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action">工具栏按钮</a>或<a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">地址栏按钮</a>时显示该对话框</li>
- <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">选项页面</a>是当用户访问拓展在拓展管理器内置的拓展选项页面时内嵌显示的页面。</li>
+ <li><a href="https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages">选项页面</a>是当用户访问扩展在扩展管理器内置的扩展选项页面时内嵌显示的页面。</li>
 </ul>
 
 <p>对于这些组件，你可以创建一个 HTML 文件，并使用 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json</a> 中的特定属性指向它。HTML 文件可以引用 CSS 和 JavaScript 文件，就像普通的网页一样。</p>
@@ -136,7 +136,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>内容脚本无法直接访问普通网页中的脚本，但是可以通过 <code><a href="/zh-CN/docs/Web/API/Window/postMessage">window.postMessage()</a></code> API 来与之传递信息。</p>
 
-<p>通常情况下，当我们讨论内容脚本时，是在指（一类）使用 JavaScript 编写的脚本，但是你也可以用同样的机制来注入 CSS 文件。（译者注：不讨论含有编译器的情况。例如，若你事先引入了可编译 TypeScript 的 JavaScript 内容脚本，不论性能问题，你也很可能可以引入使用 TypeScript 编写的内容脚本：类似这样的情况，在此不计。）</p>
+<p>通常情况下，当我们讨论内容脚本时，我们通常指的是JavaScript，但是你也可以用同样的机制来注入 CSS 样式。（译者注：不讨论含有编译器的情况。例如，若你事先引入了可编译 TypeScript 的 JavaScript 内容脚本，不论性能问题，你也很可能可以引入使用 TypeScript 编写的内容脚本：类似这样的情况，在此不计。）</p>
 
 <p>若想了解更多，请参考<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>。</p>
 
