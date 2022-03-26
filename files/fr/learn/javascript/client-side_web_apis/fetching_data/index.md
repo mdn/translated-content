@@ -88,7 +88,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
 `XMLHttpRequest` (qui est fréquemment abrégé XHR) est une technologie assez vieille maintenant — elle a été inventée par Microsoft dans les années 90 et a été standardisée dans les autres navigateurs il y a longtemps.
 
 1.  Pour commencer cet exemple, faites une copie locale de [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) et des quatre fichiers texte — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), et [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — dans un nouveau répertoire sur votre ordinateur. Dans cet exemple, nous allons charger le verset d'un poème (que vous pourriez bien reconnaître), quand il est sélectionné dans le menu déroulant, en utilisant XHR.
-2.  À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'événement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction  `updateDisplay()`.
+2.  À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'évènement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction  `updateDisplay()`.
 
     ```js
     var verseChoose = document.querySelector('select');
@@ -136,9 +136,9 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
     request.responseType = 'text';
     ```
 
-8.  Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'événement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'événement {{event("load")}} est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
+8.  Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'évènement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'évènement {{event("load")}} est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
 
-    Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'événement `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
+    Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'évènement `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
 
     ```js
     request.onload = function() {
@@ -204,7 +204,7 @@ Voyons comment convertir le dernier exemple, en remplaçant XHR par Fetch.
 
 Tout d'abord, nous invoquons la méthode {{domxref("WindowOrWorkerGlobalScope.fetch()","fetch()")}}, en lui passant l'URL de la ressource que nous voulons récupérer. C'est la version moderne équivalente à {{domxref("XMLHttpRequest.open","request.open()")}} de XHR, et n'avez pas à appeler `.send()` — la requête est exécutée directement.
 
-Ensuite, la méthode {{jsxref("Promise.then",".then()")}} est chaînée à la suite de `fetch()` — cette méthode fait partie des {{jsxref("Promise","Promesses")}}, une fonctionnalité JavaScript moderne qui permet d'effectuer des opérations asynchrones. `fetch()` retourne une promesse, qui est résolue lorsque la réponse est reçue du serveur — et nous utilisons `.then()` pour exécuter du code à ce moment-là. C'est l'équivalent du gestionnaire d'événement `onload` dans la version XHR.
+Ensuite, la méthode {{jsxref("Promise.then",".then()")}} est chaînée à la suite de `fetch()` — cette méthode fait partie des {{jsxref("Promise","Promesses")}}, une fonctionnalité JavaScript moderne qui permet d'effectuer des opérations asynchrones. `fetch()` retourne une promesse, qui est résolue lorsque la réponse est reçue du serveur — et nous utilisons `.then()` pour exécuter du code à ce moment-là. C'est l'équivalent du gestionnaire d'évènement `onload` dans la version XHR.
 
 La fonction définie dans le `.then()` reçoit la réponse du serveur comme paramètre, une fois que la promesse retournée par `fetch()` est résolue. À l'intérieur de cette fonction, nous utilisons la méthode {{domxref("Body.text","text()")}} pour récupérer le contenu de la réponse en texte brut. C'est l'équivalent de `request.responseType = 'text'` dans la version XHR.
 
@@ -368,7 +368,7 @@ Quelques conseils qui pourraient s'avérer utiles :
 - Vous allez devoir utiliser le même modèle que vous avez vu plus tôt dans l'exemple [XHR-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html).
 - Vous devrez ajouter la gestion des erreurs que nous vous avons montré dans la version Fetch de Can Store :
 
-  - La réponse se situe dans `request.response` une fois que l'événement `load` a été déclenché et non dans une promesse.
+  - La réponse se situe dans `request.response` une fois que l'évènement `load` a été déclenché et non dans une promesse.
   - Le meilleur équivalent à `response.ok` en XHR est de vérifier si {{domxref("XMLHttpRequest.status","request.status")}} vaut 200 ou si {{domxref("XMLHttpRequest.readyState","request.readyState")}} est égal à 4.
   - Les propriétés permettant d'obtenir le status et le message en cas d'erreur sont toujours `status` et `statusText` mais elles se situent sur l'objet `request` (XHR) et non sur l'objet `response`.
 
