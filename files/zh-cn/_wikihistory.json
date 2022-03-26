@@ -16953,7 +16953,7 @@
       "libbymc"
     ]
   },
-  "Web/API/MessagePort/onmessage": {
+  "Web/API/MessagePort/message_event": {
     "modified": "2019-03-23T22:16:44.635Z",
     "contributors": [
       "xgqfrms-GitHub"
@@ -23022,6 +23022,18 @@
       "FEhaoxinjie"
     ]
   },
+  "Web/API/Window/message_event": {
+    "modified": "2019-03-18T21:42:57.236Z",
+    "contributors": [
+      "singi2016cn"
+    ]
+  },
+  "Web/API/Window/messageerror_event": {
+    "modified": "2019-03-18T21:36:58.502Z",
+    "contributors": [
+      "eiddie"
+    ]
+  },
   "Web/API/Window/moveBy": {
     "modified": "2019-03-23T23:10:30.097Z",
     "contributors": [
@@ -23672,18 +23684,6 @@
       "micblo"
     ]
   },
-  "Web/API/WindowEventHandlers/onmessage": {
-    "modified": "2019-03-18T21:42:57.236Z",
-    "contributors": [
-      "singi2016cn"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onmessageerror": {
-    "modified": "2019-03-18T21:36:58.502Z",
-    "contributors": [
-      "eiddie"
-    ]
-  },
   "Web/API/WindowEventHandlers/onpopstate": {
     "modified": "2020-10-15T21:07:15.381Z",
     "contributors": [
@@ -23762,22 +23762,6 @@
     "modified": "2020-10-15T22:22:03.822Z",
     "contributors": [
       "LittleIQ"
-    ]
-  },
-  "Web/API/Worker/onmessage": {
-    "modified": "2020-11-04T10:01:25.018Z",
-    "contributors": [
-      "szdytom",
-      "Syclover-u2400",
-      "spatio"
-    ]
-  },
-  "Web/API/Worker/onmessageerror": {
-    "modified": "2020-10-15T22:08:23.141Z",
-    "contributors": [
-      "Syclover-u2400",
-      "hl4a",
-      "xiaoweb"
     ]
   },
   "Web/API/Worker/postMessage": {
@@ -47267,6 +47251,22 @@
     "modified": "2020-10-15T22:21:27.337Z",
     "contributors": [
       "AlexChao"
+    ]
+  },
+  "conflicting/Web/API/Worker/message_event": {
+    "modified": "2020-11-04T10:01:25.018Z",
+    "contributors": [
+      "szdytom",
+      "Syclover-u2400",
+      "spatio"
+    ]
+  },
+  "conflicting/Web/API/Worker/messageerror_event": {
+    "modified": "2020-10-15T22:08:23.141Z",
+    "contributors": [
+      "Syclover-u2400",
+      "hl4a",
+      "xiaoweb"
     ]
   },
   "conflicting/Web/API/XMLHttpRequest/abort_event": {

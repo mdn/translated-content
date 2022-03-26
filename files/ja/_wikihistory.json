@@ -18468,13 +18468,13 @@
       "Marsf"
     ]
   },
-  "Web/API/MessagePort/onmessage": {
+  "Web/API/MessagePort/message_event": {
     "modified": "2019-03-23T22:26:45.245Z",
     "contributors": [
       "Marsf"
     ]
   },
-  "Web/API/MessagePort/onmessageerror": {
+  "Web/API/MessagePort/messageerror_event": {
     "modified": "2020-10-15T22:09:56.803Z",
     "contributors": [
       "YuichiNukiyama"
@@ -21318,13 +21318,6 @@
   "Web/API/ServiceWorkerGlobalScope/oninstall": {
     "modified": "2019-03-23T22:19:50.199Z",
     "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/API/ServiceWorkerGlobalScope/onmessage": {
-    "modified": "2020-10-15T21:51:39.149Z",
-    "contributors": [
-      "Wind1808",
       "YuichiNukiyama"
     ]
   },
@@ -24284,6 +24277,12 @@
       "Potappo"
     ]
   },
+  "Web/API/Window/message_event": {
+    "modified": "2020-10-15T22:23:26.767Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/API/Window/messageerror_event": {
     "modified": "2020-10-15T22:28:20.408Z",
     "contributors": [
@@ -24990,18 +24989,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/WindowEventHandlers/onmessage": {
-    "modified": "2020-10-15T22:23:26.767Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onmessageerror": {
-    "modified": "2020-10-15T22:23:26.765Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/WindowEventHandlers/onpopstate": {
     "modified": "2020-10-15T22:03:55.956Z",
     "contributors": [
@@ -25063,7 +25050,7 @@
       "chikoski"
     ]
   },
-  "Web/API/Worker/onmessageerror": {
+  "Web/API/Worker/messageerror_event": {
     "modified": "2020-10-15T22:32:23.209Z",
     "contributors": [
       "eltociear"
@@ -48336,6 +48323,13 @@
       "Wind1808"
     ]
   },
+  "conflicting/Web/API/ServiceWorkerGlobalScope/message_event": {
+    "modified": "2020-10-15T21:51:39.149Z",
+    "contributors": [
+      "Wind1808",
+      "YuichiNukiyama"
+    ]
+  },
   "conflicting/Web/API/SpeechRecognition/audiostart_event": {
     "modified": "2020-10-15T22:14:17.745Z",
     "contributors": [
@@ -48432,6 +48426,12 @@
     "contributors": [
       "Potappo",
       "T.Ukegawa"
+    ]
+  },
+  "conflicting/Web/API/Window/messageerror_event": {
+    "modified": "2020-10-15T22:23:26.765Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "conflicting/Web/API/Window/scroll": {

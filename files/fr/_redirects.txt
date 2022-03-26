@@ -3842,10 +3842,11 @@
 /fr/docs/Web/API/WindowTimers/clearInterval	/fr/docs/Web/API/clearInterval
 /fr/docs/Web/API/WindowTimers/setTimeout	/fr/docs/Web/API/setTimeout
 /fr/docs/Web/API/Worker.Worker	/fr/docs/Web/API/Worker/Worker
-/fr/docs/Web/API/Worker.onmessage	/fr/docs/Web/API/Worker/onmessage
+/fr/docs/Web/API/Worker.onmessage	/fr/docs/Web/API/Worker/message_event
 /fr/docs/Web/API/Worker.postMessage	/fr/docs/Web/API/Worker/postMessage
 /fr/docs/Web/API/Worker.terminate	/fr/docs/Web/API/Worker/terminate
 /fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers	/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/fr/docs/Web/API/Worker/onmessage	/fr/docs/Web/API/Worker/message_event
 /fr/docs/Web/API/WorkerGlobalScope/close	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close
 /fr/docs/Web/API/WorkerGlobalScope/onclose	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close_ad209d73ce2abfe0e3fe136acf40e5b4
 /fr/docs/Web/API/WorkerGlobalScope/onerror	/fr/docs/Web/API/WorkerGlobalScope/error_event
