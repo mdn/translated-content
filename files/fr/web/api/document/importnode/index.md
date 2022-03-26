@@ -52,7 +52,7 @@ Gecko n'obligeait pas à utiliser [`document.importNode()`](/fr/docs/Web/API/Doc
 
 | Spécification                                                                                                        | Statut                           | Commentaire         |
 | -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName("DOM WHATWG", "#dom-document-importnode", "document.importNode()")}}             | {{Spec2("DOM WHATWG")}} |                     |
+| {{SpecName("DOM WHATWG", "#dom-document-importnode", "document.importNode()")}}             | {{Spec2("DOM WHATWG")}} |                     |
 | {{SpecName("DOM2 Core", "core.html#Core-Document-importNode", "document.importNode()")}} | {{Spec2("DOM2 Core")}}     | Définition initiale |
 
 ## Compatibilité des navigateurs

@@ -43,7 +43,7 @@ La méthode `filter()` appelle une fonction `callback` appelée une fois pour ch
 2.  l'indice de l'élément
 3.  le tableau typé courant
 
-Si le paramètre `thisArg` est fourni, il sera utilisé comme objet `this` lors de l'appel de la fonction `callback`. Sinon, la valeur `undefined` sera utilisée à la place. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur this au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si le paramètre `thisArg` est fourni, il sera utilisé comme objet `this` lors de l'appel de la fonction `callback`. Sinon, la valeur `undefined` sera utilisée à la place. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur this au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 
 `filter()` ne modifie pas le tableau typé sur lequel elle a été appelée.
 
@@ -77,7 +77,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(élém => élém >= 10);
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

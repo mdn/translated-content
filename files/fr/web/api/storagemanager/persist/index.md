@@ -23,12 +23,12 @@ Une {{jsxref('Promise')}} qui se résoud en un {{jsxref('Boolean')}}.
 
 ```js
 if (navigator.storage && navigator.storage.persist)
-  navigator.storage.persist().then(function(persistent) {
-    if (persistent)
-      console.log("Le stockage ne sera pas nettoyé sauf en cas d’action humaine explicite");
-    else
-      console.log("Le stockage peut être nettoyé par l’UA en cas de pression de stockage.");
-  });
+  navigator.storage.persist().then(function(persistent) {
+    if (persistent)
+      console.log("Le stockage ne sera pas nettoyé sauf en cas d’action humaine explicite");
+    else
+      console.log("Le stockage peut être nettoyé par l’UA en cas de pression de stockage.");
+  });
 ```
 
 ## Spécifications

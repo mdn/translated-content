@@ -21,7 +21,7 @@ La fonction `not` évalue une expression booléenne et retourne la valeur oppos�
 
 ### Retour
 
-`True` pour une expression évaluée à `false` ; `false` pour une expression évaluée à `true`.
+`True` pour une expression évaluée à `false`&nbsp;; `false` pour une expression évaluée à `true`.
 
 ### Notes
 

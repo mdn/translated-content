@@ -18,7 +18,7 @@ Cette fonction prend un argument obligatoire `data`, qui doit être un tableau (
 
 Il affiche `data` sous la forme d'un tableau. Chaque élément dans le tableau fourni (Array) sera affiché comme une ligne dans le tableau. (ou les propriétés énumérables s'il s'agit d'un objet)
 
-La première colonne dans le tableau sera intitulé `(index)`. Si `data` est un tableau (Array), alors les valeurs de cette colonne seront les index du tableau (Array). Si `data` est un objet, alors ses valeurs seront les noms des propriétés.À noter (dans Firefox) :  `console.table` est limité à l'affichage de 1000 lignes (la première ligne est l'index étiqueté)
+La première colonne dans le tableau sera intitulé `(index)`. Si `data` est un tableau (Array), alors les valeurs de cette colonne seront les index du tableau (Array). Si `data` est un objet, alors ses valeurs seront les noms des propriétés.À noter (dans Firefox) :  `console.table` est limité à l'affichage de 1000 lignes (la première ligne est l'index étiqueté)
 
 {{AvailableInWorkers}}
 
@@ -38,8 +38,8 @@ console.table(["apples", "oranges", "bananas"]);
 // un objet dont les propriétés sont des chaînes de caractères
 
 function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+  this.firstName = firstName;
+  this.lastName = lastName;
 }
 
 var me = new Person("John", "Smith");

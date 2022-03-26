@@ -27,7 +27,7 @@ Affiche un dialogue modal avec un message et deux boutons, OK et Annuler.
 
 ### Notes
 
-Le texte suivant est commun à cet article, `DOM:window.prompt` et `DOM:window.confirm` Les boîtes de dialogue sont des fenêtres modales : elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant qu'elles ne sont pas fermées. C'est pourquoi il ne faut pas abuser des fonctions créant une boîte de dialogue (ou fenêtre modale).
+Le texte suivant est commun à cet article, `DOM:window.prompt` et `DOM:window.confirm` Les boîtes de dialogue sont des fenêtres modales&nbsp;: elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant qu'elles ne sont pas fermées. C'est pourquoi il ne faut pas abuser des fonctions créant une boîte de dialogue (ou fenêtre modale).
 
 Les applications utilisant le chrome (par exemple les extensions) devront plutôt utiliser les méthodes de [nsIPromptService](fr/NsIPromptService).
 

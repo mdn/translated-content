@@ -25,9 +25,9 @@ Un objet représentant le propriété système donnée.
 
 ### Notes
 
-- xsl:version, un nombre correspondant à la version de XSLT implémentée par le processeur ; pour les processeurs XSLT implémentant la version de XSLT définit dans ce document, ce nombre est 1.0.
+- xsl:version, un nombre correspondant à la version de XSLT implémentée par le processeur&nbsp;; pour les processeurs XSLT implémentant la version de XSLT définit dans ce document, ce nombre est 1.0.
 - xsl:vendor, une chaîne identifiant le vendeur du processeur XSLT.
-- xsl:vendor-url, une chaîne contenant une URL qui identifie le vendeur du processeur XSLT ; généralement, il s'agit de l'adresse de la page Web du vendeur.
+- xsl:vendor-url, une chaîne contenant une URL qui identifie le vendeur du processeur XSLT&nbsp;; généralement, il s'agit de l'adresse de la page Web du vendeur.
 
 ### Définition
 

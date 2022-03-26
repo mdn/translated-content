@@ -116,9 +116,9 @@ En utilisant le fragment ci-avant, on aura le résultat suivant :
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------- |
 | {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Définition initiale. Pas de version étiquetée. |
 | {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}         | Ajout de la version étiquetée.                 |
-| {{SpecName('ES5.1', '#sec-12.7', 'instruction continue')}}                         | {{Spec2('ES5.1')}}     |                                                |
-| {{SpecName('ES6', '#sec-continue-statement', 'instruction continue')}}         | {{Spec2('ES6')}}         |                                                |
-| {{SpecName('ESDraft', '#sec-continue-statement', 'instruction continue')}} | {{Spec2('ESDraft')}} |                                                |
+| {{SpecName('ES5.1', '#sec-12.7', 'instruction continue')}}                         | {{Spec2('ES5.1')}}     |                                                |
+| {{SpecName('ES6', '#sec-continue-statement', 'instruction continue')}}         | {{Spec2('ES6')}}         |                                                |
+| {{SpecName('ESDraft', '#sec-continue-statement', 'instruction continue')}} | {{Spec2('ESDraft')}} |                                                |
 
 ## Compatibilité des navigateurs
 

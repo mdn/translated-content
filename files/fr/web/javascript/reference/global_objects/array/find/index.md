@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/find
 ---
 {{JSRef}}
 
-La méthode **`find()`** renvoie la **valeur** du **premier élément trouvé** dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur {{jsxref("undefined")}} est renvoyée.
+La méthode **`find()`** renvoie la **valeur** du **premier élément trouvé** dans le tableau qui respecte la condition donnée par la fonction de test passée en argument. Sinon, la valeur {{jsxref("undefined")}} est renvoyée.
 
 {{EmbedInteractiveExample("pages/js/array-find.html")}}
 
@@ -28,7 +28,7 @@ Voir aussi la méthode {{jsxref("Array.findIndex", "findIndex()")}} qui renvoie 
 
 - `callback`
 
-  - : Fonction à exécuter sur chaque valeur du tableau, elle prend 3 arguments :
+  - : Fonction à exécuter sur chaque valeur du tableau, elle prend 3 arguments&nbsp;:
 
     - `element`
       - : L'élément actuellement traité dans le tableau.
@@ -48,7 +48,7 @@ La valeur du premier élément du tableau qui réussit le test, sinon {{jsxref("
 
 La méthode `find` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau jusqu'à ce qu'elle retourne une valeur vraie (qui peut être convertie en `true`). Si un élément est trouvé, `find` retourne immédiatement la valeur de l'élément. Autrement, `find` retourne `undefined`. La méthode `callback` est seulement appelée pour les index du tableau pour lesquels on dispose d'une valeur. Elle n'est pas appelée pour les index supprimés ou pour ceux qui n'ont pas de valeur.
 
-La méthode `callback` est appelée avec trois arguments : la valeur de l'élément, l'index de l'élément, et l'objet correspondant au tableau traversé.
+La méthode `callback` est appelée avec trois arguments&nbsp;: la valeur de l'élément, l'index de l'élément, et l'objet correspondant au tableau traversé.
 
 Si le paramètre `thisArg` est fourni à `find`, il sera utilisé comme le `this` pour chaque exécution de la fonction `callback`. S'il n'est pas fourni, alors {{jsxref("undefined")}} sera utilisé.
 

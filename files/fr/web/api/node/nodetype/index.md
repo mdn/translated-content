@@ -19,7 +19,7 @@ La propriété **`nodeType`** peut être utilisée pour distinguer les uns des a
 
     Type = node .nodeType
 
-Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possibles sont listées dans {{anch("Constantes")}}.
+Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possibles sont listées dans [Constantes](#constantes).
 
 ## Constantes
 
@@ -27,7 +27,7 @@ Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possi
 
 | Constante                          | Valeur | Description                                                                                                              |
 | ---------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `Node.ELEMENT_NODE`                | `1`    | Un noeud {{domxref("Element")}}  tel que {{HTMLElement("p")}} ou {{HTMLElement("div")}}`.`           |
+| `Node.ELEMENT_NODE`                | `1`    | Un noeud {{domxref("Element")}}  tel que {{HTMLElement("p")}} ou {{HTMLElement("div")}}`.`           |
 | `Node.TEXT_NODE`                   | `3`    | Le {{domxref("Text")}} actuel de l'{{domxref("Element")}} ou {{domxref("Attr")}}.                        |
 | `Node.PROCESSING_INSTRUCTION_NODE` | `7`    | Une {{domxref("ProcessingInstruction")}} d'un document XML tel que la déclaration `<?xml-stylesheet ... ?>`. |
 | `Node.COMMENT_NODE`                | `8`    | Un noeud {{domxref("Comment")}}.                                                                                   |

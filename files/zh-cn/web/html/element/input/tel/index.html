@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/input/tel
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary">{{HTMLElement("input")}}  <code><strong>"tel"</strong></code> 类型的元素用于让用户输入和编辑电话号码。 Unli 不同于<code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。</span></p>
+<p><span class="seoSummary">{{HTMLElement("input")}} <code><strong>"tel"</strong></code> 类型的元素用于让用户输入和编辑电话号码。 Unli 不同于<code><a href="/en-US/docs/Web/HTML/Element/input/email">&lt;input type="email"&gt;</a></code> 和 <code><a href="/en-US/docs/Web/HTML/Element/input/url">&lt;input type="url"&gt;</a></code> , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。</span></p>
 
 <p>尽管 <code>tel</code> 类型的输入在功能上和 <code>text</code> 输入一致，但它们确实有用; 其中最明显的就是移动浏览器— 特别是在手机上 — 可能会选择提供为输入电话号码而优化的自定义键盘。使用电话号码的特定输入类型也使添加自定义验证和处理电话号码更方便。</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/HTML/Element/input/tel
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>A {{domxref("DOMString")}} representing a telephone number, or empty</td>
   </tr>
   <tr>
@@ -61,7 +61,7 @@ translation_of: Web/HTML/Element/input/tel
 
 <p>电话号码是网络上非常普遍收集的数据类型。例如，在创建任何类型的注册或电子商务网站时，无论出于商业目的还是出于紧急联系目的，您都可能需要向用户索要电话号码。鉴于通常输入的电话号码是多少，不幸的是，用于验证电话号码的 “一刀切” 解决方案是不实际的。</p>
 
-<p>幸运的是，您可以考虑自己网站的要求，并自行实施适当的验证级别。有关详细信息，请参阅下面的 {{anch("Validation")}}</p>
+<p>幸运的是，您可以考虑自己网站的要求，并自行实施适当的验证级别。有关详细信息，请参阅下面的 <a href="#验证">验证</a></p>
 
 <h3 id="自定义键盘">自定义键盘</h3>
 
@@ -130,7 +130,7 @@ translation_of: Web/HTML/Element/input/tel
 <p>{{EmbedLiveSample("Element_value_length", 600, 40) }}</p>
 
 <div class="note">
-<p><strong>注意</strong>: 上述属性确实会影响 {{anch("validation", "Validation")}} — 如果值的长度小于 9 个字符，或者大于 14 个，上述示例的输入将被视为无效。甚至不会让你输入超过最大长度的值。</p>
+<p><strong>注意</strong>: 上述属性确实会影响 <a href="#验证">验证</a> — 如果值的长度小于 9 个字符，或者大于 14 个，上述示例的输入将被视为无效。甚至不会让你输入超过最大长度的值。</p>
 </div>
 
 <h3 id="提供默认选项">提供默认选项</h3>

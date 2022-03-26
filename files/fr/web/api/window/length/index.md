@@ -5,7 +5,7 @@ translation_of: Web/API/Window/length
 ---
 {{ ApiRef() }}
 
-Retourne le nombre de frames (soit des éléments de frame ou iframe) présent sur la page.
+Retourne le nombre de frames (soit des éléments de frame ou iframe) présent sur la page.
 
 ## Syntaxe
 

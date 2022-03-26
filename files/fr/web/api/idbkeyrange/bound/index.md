@@ -80,7 +80,7 @@ function displayData() {
 
 | Spécification                                                                                                                                                                    | État                         | Commentaires |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-bound-IDBKeyRange-any-lower-any-upper-boolean-lowerOpen-boolean-upperOpen', 'bound()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-bound-IDBKeyRange-any-lower-any-upper-boolean-lowerOpen-boolean-upperOpen', 'bound()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

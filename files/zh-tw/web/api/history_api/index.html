@@ -52,8 +52,6 @@ translation_of: Web/API/History_API
 
 <h2 id="加入和修改歷史紀錄">加入和修改歷史紀錄</h2>
 
-<p>{{ gecko_minversion_header("2") }}</p>
-
 <p>HTML5 加入了 <a href="/zh-TW/docs/Web/API/History/pushState"><code>history.pushState()</code></a> 和 <a href="/zh-TW/docs/Web/API/History_API#The_replaceState()_method"><code>history.replaceState()</code></a> 方法，讓你可以加入或修改歷史紀錄。這些方法都可以跟 {{ domxref("window.onpopstate") }} 事件一同應用。</p>
 
 <p>使用 <code>history.pushState()</code>後，會改變 <a href="/zh-TW/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> 時 HTTP 標頭中 referrer 的值。referrer 會是創造 <a href="/zh-TW/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> 物件時的當前視窗文件（<code>this</code>）的 URL。</p>

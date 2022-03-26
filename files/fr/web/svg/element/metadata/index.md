@@ -9,7 +9,7 @@ translation_of: Web/SVG/Element/metadata
 ---
 {{SVGRef}}
 
-L'élément [SVG](/fr/docs/Web/SVG) **`<metadata>`** permet d'ajouter des metadonnées au contenu SVG. Des metadonnées sont des données structurées qui donnent des informations sur le contenu du document. La balise `<metadata>` doit contenir des éléments d'un autre {{Glossary("namespace", "namespaces")}} {{Glossary("XML")}} tel que {{Glossary("RDF")}}, [FOAF](https://fr.wikipedia.org/wiki/FOAF), etc.
+L'élément [SVG](/fr/docs/Web/SVG) **`<metadata>`** permet d'ajouter des metadonnées au contenu SVG. Des metadonnées sont des données structurées qui donnent des informations sur le contenu du document. La balise `<metadata>` doit contenir des éléments d'un autre {{Glossary("namespace", "namespaces")}} {{Glossary("XML")}} tel que {{Glossary("RDF")}}, [FOAF](https://fr.wikipedia.org/wiki/FOAF), etc.
 
 ## Contexte d'utilisation
 

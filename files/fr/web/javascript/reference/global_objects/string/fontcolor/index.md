@@ -32,7 +32,7 @@ Une chaîne de caractères représentant un élément HTML {{HTMLElement("font")
 
 ## Description
 
-Si la couleur est représentée sous forme d'un triplet RVB, le format attendu est `rrvvbb`. Ainsi, pour représenter un rose saumon, les différentes composantes seront rouge = FA,  vert = 80, et bleu = 72, le triplet s'écrit donc "`FA8072`".
+Si la couleur est représentée sous forme d'un triplet RVB, le format attendu est `rrvvbb`. Ainsi, pour représenter un rose saumon, les différentes composantes seront rouge = FA,  vert = 80, et bleu = 72, le triplet s'écrit donc "`FA8072`".
 
 ## Exemples
 
@@ -48,7 +48,7 @@ console.log(worldString.fontcolor("FF00") + " avec la valeur hexadécimale sur c
 // '<font color="FF00">Coucou monde</font> avec la valeur hexadécimale sur cette ligne'
 ```
 
-L'objet {{domxref("HTMLElement.style", "element.style")}} permet d'utiliser l'attribut `style` de l'élément et de le manipuler de façon générique. Par exemple :
+L'objet {{domxref("HTMLElement.style", "element.style")}} permet d'utiliser l'attribut `style` de l'élément et de le manipuler de façon générique. Par exemple :
 
 ```js
 document.getElementById('IDdeVotreElement').style.color = 'red'

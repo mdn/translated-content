@@ -77,7 +77,7 @@ StaticMethodCall.anotherStaticMethod();
 
 ### Depuis les constructeurs de classes et les autres méthodes
 
-Les méthodes statiques ne sont pas directement accessibles via le mot-clé [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this). Il faut les appeler avec le nom de la classe qui préfixe le nom de la méthode statique `NomDeClasse.MéthodeStatique()` (comme pour les autres appels en dehors de la classe) ou avec la propriété `constructor`  : `this.constructor.MéthodeStatique()`.
+Les méthodes statiques ne sont pas directement accessibles via le mot-clé [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this). Il faut les appeler avec le nom de la classe qui préfixe le nom de la méthode statique `NomDeClasse.MéthodeStatique()` (comme pour les autres appels en dehors de la classe) ou avec la propriété `constructor`  : `this.constructor.MéthodeStatique()`.
 
 ```js
 class StaticMethodCall{
@@ -89,7 +89,7 @@ class StaticMethodCall{
     // 'appel de la méthode statique'
   }
 
-  static  staticMethod(){
+  static staticMethod(){
     return 'appel de la méthode statique.';
   }
 }
@@ -100,7 +100,7 @@ class StaticMethodCall{
 | Spécification                                                                                | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -1,0 +1,153 @@
+---
+title: translate()
+slug: Web/CSS/transform-function/translate
+tags:
+  - CSS
+  - CSS Function
+  - CSS Transforms
+  - Reference
+translation_of: Web/CSS/transform-function/translate()
+original_slug: Web/CSS/transform-function/translate()
+---
+<div>{{CSSRef}}</div>
+
+<p><strong><code>translate()</code></strong> 这个 <a href="/en-US/docs/Web/CSS">CSS</a> 函数在水平和/或垂直方向上重新定位元素。 其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/12121/translate.png" style="height: 195px; width: 249px;"></p>
+
+<p>该变换由二维向量构成。 它的坐标定义了元素在每个方向上移动了多少。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="brush: css notranslate">/* Single &lt;length-percentage&gt; values */
+transform: translate(200px);
+transform: translate(50%);
+
+/* Double &lt;length-percentage&gt; values */
+transform: translate(100px, 200px);
+transform: translate(100px, 50%);
+transform: translate(30%, 200px);
+transform: translate(30%, 50%);
+</pre>
+
+<h3 id="值">值</h3>
+
+<dl>
+ <dt>单个 <code>&lt;length-percentage&gt;</code> 作为参数</dt>
+ <dd>该值是 {{cssxref("&lt;length&gt;")}} 或者 {{cssxref("&lt;percentage&gt;")}} 代表翻译向量的横坐标  (horizontal, x-coordinate) . 而向量的纵坐标 (vertical, y-coordinate) 会被默认为 <code>0</code>. 例如, <code>translate(2)</code> 等价于 <code>translate(2, 0)</code> 。 里面还可以填百分比值，百分比值是指 {{cssxref("transform-box")}} 属性定义的参考框的宽度。</dd>
+ <dt>参数是两个 <code>&lt;length-percentage&gt;</code> 构成</dt>
+ <dd>此值描述两个 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 值，分别代表翻译的横坐标  (x-coordinate)  和纵坐标  (y-coordinate)  向量。 百分比作为第一个值表示宽度，第二个部分表示由 {{cssxref("transform-box")}} 属性定义的参考框的高度。</dd>
+</dl>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
+   <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
+   <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
+   <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td colspan="1" rowspan="2">
+    <p>平移不是 ℝ<sup>2</sup> 中的线性变换，因此不能使用矩阵来表示。</p>
+   </td>
+   <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>tx</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>ty</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
+  </tr>
+  <tr>
+   <td><code>[1 0 0 1 tx ty]</code></td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id="形式语法">形式语法</h3>
+
+<pre class="syntaxbox notranslate">translate({{cssxref("&lt;length-percentage&gt;")}} , {{cssxref("&lt;length-percentage&gt;")}}<a href="/en-US/docs/Web/CSS/Value_definition_syntax#Question_mark_()">?</a>)
+</pre>
+
+<h2 id="例子">例子</h2>
+
+<h3 id="使用单个轴平移">使用单个轴平移</h3>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;div&gt;Static&lt;/div&gt;
+&lt;div class="moved"&gt;Moved&lt;/div&gt;
+&lt;div&gt;Static&lt;/div&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css notranslate">div {
+  width: 60px;
+  height: 60px;
+  background-color: skyblue;
+}
+
+.moved {
+  transform: translate(10px); /* Equal to: translateX(10px) or translate(10px, 0) */
+  background-color: pink;
+}
+</pre>
+
+<h4 id="结果">结果</h4>
+
+<p>{{EmbedLiveSample("Using_a_single-axis_translation", 250, 250)}}</p>
+
+<h3 id="y轴和x轴都平移">y轴和x轴都平移</h3>
+
+<h4 id="HTML_2">HTML</h4>
+
+<pre class="brush: html notranslate">&lt;div&gt;Static&lt;/div&gt;
+&lt;div class="moved"&gt;Moved&lt;/div&gt;
+&lt;div&gt;Static&lt;/div&gt;</pre>
+
+<h4 id="CSS_2">CSS</h4>
+
+<pre class="brush: css notranslate">div {
+  width: 60px;
+  height: 60px;
+  background-color: skyblue;
+}
+
+.moved {
+  transform: translate(10px, 10px);
+  background-color: pink;
+}
+</pre>
+
+<h4 id="结果_2">结果</h4>
+
+<p>{{EmbedLiveSample("Combining_y-axis_and_x-axis_translation", 250, 250)}}</p>
+
+<h2 id="规格">规格</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">技术规格</th>
+   <th scope="col">状态</th>
+   <th scope="col">注解</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Transforms', '#funcdef-transform-translate', 'translate()')}}</td>
+   <td>{{Spec2('CSS3 Transforms')}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>请参阅 <code><a href="/en-US/docs/Web/CSS/transform-function#Browser_compatibility">&lt;transform-function&gt;</a></code> 数据类型以获取兼容性信息。</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{cssxref("transform")}}</li>
+ <li>{{cssxref("&lt;transform-function&gt;")}}</li>
+</ul>

@@ -16,7 +16,7 @@ Dans un document [HTML](/fr/docs/Web/HTML), la méthode **`document.createElemen
 - tagName
   - : Une chaîne de caractères ({{domxref("DOMString")}}) spécifiant le type d’élément à créer. Le {{domxref("Node.nodeName", "nodeName")}} (_nom du noeud_) de l’élément créé est initialisé avec la valeur de `tagName`. N’utilisez pas le nom qualifié (comme `"html:a"`) avec cette méthode. Quand elle est appelée sur un document HTML, `createElement()` convertit `tagName` en minuscules avant de créer l’élément. Dans Firefox, Opera et Chrome, `createElement(null)` fonctionne comme `createElement("null")`.
 - options{{optional_inline}}
-  - : Un objet `ElementCreationOptions` facultatif contenant une seule propriété nommée `is` dont la valeur est le nom de balise d’un élément personnalisé précédemment défini avec `customElements.define()`. Voir {{anch("Web component example")}} pour plus de détails.
+  - : Un objet `ElementCreationOptions` facultatif contenant une seule propriété nommée `is` dont la valeur est le nom de balise d’un élément personnalisé précédemment défini avec `customElements.define()`. Voir [Exemple de composant web](#exemple_de_composant_web) pour plus de détails.
 
 ### Valeur de retour
 
@@ -83,7 +83,7 @@ class ExpandingList extends HTMLUListElement {
 customElements.define('expanding-list', ExpandingList, { extends: 'ul' });
 ```
 
-Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante :
+Si nous cherchons à créer une instance de cet élément par programmation, nous devons utiliser un appel tel que montré dans la ligne suivante&nbsp;:
 
 ```js
 let expandingList = document.createElement('ul', { is : 'expanding-list' })
@@ -97,7 +97,7 @@ Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/
 
 | Spécification                                                                                                    | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
+| {{SpecName('DOM WHATWG', "#dom-document-createelement", "Document.createElement")}} | {{Spec2('DOM WHATWG')}} |             |
 
 ## Compatibilité des navigateurs
 
@@ -114,4 +114,4 @@ Le nouvel élément donnera un attribut [`is`](/docs/Web/HTML/Global_attributes/
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Node.insertBefore()")}}
 - {{domxref("Node.hasChildNodes()")}}
-- {{domxref("document.createElementNS()")}} — pour spécifier explicitement l’URI de l’espace de noms de l’élément.
+- {{domxref("document.createElementNS()")}} — pour spécifier explicitement l’URI de l’espace de noms de l’élément.

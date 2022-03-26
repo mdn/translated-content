@@ -64,7 +64,7 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
 
 | Spécification                                                                                    | Statut                   | Commentaire                                 |
 | ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------- |
-| {{SpecName('SVG2', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}}     | {{Spec2('SVG2')}} | Ajout de la valeur `auto` pour `rx` et `ry` |
+| {{SpecName('SVG2', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}}     | {{Spec2('SVG2')}} | Ajout de la valeur `auto` pour `rx` et `ry` |
 | {{SpecName('SVG1.1', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}} | {{Spec2('SVG1.1')}} | Définition initiale                         |
 
 ## Interface DOM

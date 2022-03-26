@@ -14,7 +14,7 @@ Dans cet article, nous verrons comment améliorer les pages web en ajoutant du c
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez au préalable savoir comment
         <a href="/fr/Learn/HTML/Write_a_simple_page_in_HTML"
@@ -23,7 +23,7 @@ Dans cet article, nous verrons comment améliorer les pages web en ajoutant du c
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Savoir comment utiliser du code JavaScript dans un fichier HTML et
         apprendre les bonnes pratiques afin que le code JavaScript utilisé soit
@@ -77,7 +77,7 @@ L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut
 - **Toutes les fonctionnalités doivent être accessibles depuis le clavier.**
 
   - Les utilisateurs doivent pouvoir utiliser la touche de tabulation pour naviguer entre les différents contrôles (les liens, les entrées de formulaires, etc.) en suivant un ordre logique.
-  - Si vous utilisez les événements liés au pointage (les événéments liés à la souris ou au toucher), les fonctionnalités offertes doivent également être accessibles  via le clavier.
+  - Si vous utilisez les événements liés au pointage (les événéments liés à la souris ou au toucher), les fonctionnalités offertes doivent également être accessibles via le clavier.
   - Testez votre site en utilisant uniquement le clavier.
 
 - **N'utilisez pas de limites de temps arbitraires.** Cela prend plus de temps de naviguer au clavier ou d'écouter le contenu lu par un lecteur d'écran. Il est donc impossible de prévoir combien de temps cela prendra pour qu'un utilisateur ou pour que le navigateur accomplisse une tâche donnée.

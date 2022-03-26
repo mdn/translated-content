@@ -8,7 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-handler-crashed
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("2.0")}}
+{{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-handler-crashed`** permet de cibler un élément qui ne peut pas être affiché car le plugin sensé le dessiner a planté.
 

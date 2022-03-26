@@ -70,7 +70,7 @@ p {
 }
 
 .hyphens {
-  -webkit-hyphens: auto;
+  -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
 }

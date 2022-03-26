@@ -22,58 +22,58 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
-  <!--
-  Chemin en haut à gauche:
-  Effet de la valeur "miter"
-  -->
-  <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="miter" />
+  <!--
+  Chemin en haut à gauche:
+  Effet de la valeur "miter"
+  -->
+  <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="miter" />
 
-  <!--
-  Chemin en haut au milieu:
-  Effet de la valeur "round"
-  -->
-  <path d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="round" />
+  <!--
+  Chemin en haut au milieu:
+  Effet de la valeur "round"
+  -->
+  <path d="M7,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="round" />
 
-  <!--
-  Chemin en haut à droite:
-  Effet de la valeur "bevel"
-  -->
-  <path d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="bevel" />
+  <!--
+  Chemin en haut à droite:
+  Effet de la valeur "bevel"
+  -->
+  <path d="M13,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="bevel" />
 
-  <!--
-  Chemin en bas à gauche:
-  Effet de la valeur "miter-clip"
-  se replit sur la valeur par défaut (miter) si non pris en charge
-  -->
-  <path d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="miter-clip" />
+  <!--
+  Chemin en bas à gauche:
+  Effet de la valeur "miter-clip"
+  se replit sur la valeur par défaut (miter) si non pris en charge
+  -->
+  <path d="M3,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="miter-clip" />
 
-  <!--
-  Chemin en bas à droite:
-  Effet de la valeur "arcs"
-  se replit sur la valeur par défaut (miter) si non pris en charge
-  -->
-  <path d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
-        stroke-linejoin="arcs" />
+  <!--
+  Chemin en bas à droite:
+  Effet de la valeur "arcs"
+  se replit sur la valeur par défaut (miter) si non pris en charge
+  -->
+  <path d="M9,11 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5" stroke="black" fill="none"
+        stroke-linejoin="arcs" />
 
-  <!--
-  Lignes roses qui indiquent la position
-  du chemin pour chaque trait
-  -->
-  <g id="highlight">
-    <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
-          stroke="pink" fill="none" stroke-width="0.025" />
-    <circle cx="1" cy="5"   r="0.05" fill="pink" />
-    <circle cx="3" cy="2"   r="0.05" fill="pink" />
-    <circle cx="5" cy="5.5" r="0.05" fill="pink" />
-  </g>
-  <use xlink:href="#highlight" x="6" />
-  <use xlink:href="#highlight" x="12" />
-  <use xlink:href="#highlight" x="2" y="6" />
-  <use xlink:href="#highlight" x="8" y="6" />
+  <!--
+  Lignes roses qui indiquent la position
+  du chemin pour chaque trait
+  -->
+  <g id="highlight">
+    <path d="M1,5 a2,2 0,0,0 2,-3 a3,3 0 0 1 2,3.5"
+          stroke="pink" fill="none" stroke-width="0.025" />
+    <circle cx="1" cy="5"   r="0.05" fill="pink" />
+    <circle cx="3" cy="2"   r="0.05" fill="pink" />
+    <circle cx="5" cy="5.5" r="0.05" fill="pink" />
+  </g>
+  <use xlink:href="#highlight" x="6" />
+  <use xlink:href="#highlight" x="12" />
+  <use xlink:href="#highlight" x="2" y="6" />
+  <use xlink:href="#highlight" x="8" y="6" />
 </svg>
 ```
 
@@ -103,7 +103,7 @@ html,body,svg { height:100% }
 
 ### arcs
 
-> **Note :** La valeur `arcs` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir {{anch("Compatibilité des navigateurs")}} ci-dessous pour plus de détails.
+> **Note :** La valeur `arcs` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
 
 La valeur `arcs` indique qu'un arc est utilisé pour joindre les segments du chemin. L'arc est formé en prolongeant les bords extérieurs du trait au point de liaison, avec la même courbe que ce bord.
 
@@ -120,7 +120,7 @@ html,body,svg { height:100% }
         stroke-linejoin="arcs" />
 
   <!--
-  Lignes roses qui indiquent la position
+  Lignes roses qui indiquent la position
   du chemin pour chaque trait
   -->
   <g id="p">
@@ -195,7 +195,7 @@ html,body,svg { height:100% }
   <path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/>
 
   <!--
-  Lignes roses qui indiquent la position
+  Lignes roses qui indiquent la position
   du chemin pour chaque trait
   -->
   <g>
@@ -216,7 +216,7 @@ html,body,svg { height:100% }
 
 ### miter-clip
 
-> **Note :** La valeur `miter-clip` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir {{anch("Compatibilité des navigateurs")}} ci-dessous pour plus de détails.
+> **Note :** La valeur `miter-clip` a été introduite en SVG2 et n'est pas souvent pris en charge pour le moment, voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) ci-dessous pour plus de détails.
 
 La valeur `miter-clip` indique qu'un angle droit est utilisé pour joindre les segments du chemin. Le coin est formé en prolongeant les bords extérieurs du trait jusqu'à ce qu'ils se joignent.
 
@@ -244,7 +244,7 @@ html,body,svg { height:100% }
   <path d="M0,0 h10" stroke="red" stroke-dasharray="0.05"  stroke-width="0.025"/>
 
   <!--
-  Lignes roses qui indiquent la position
+  Lignes roses qui indiquent la position
   du chemin pour chaque trait
   -->
   <g>

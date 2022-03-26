@@ -74,11 +74,11 @@ En utilisant la fonctionnalité média [`forced-colors`](/fr/docs/Web/CSS/@media
 
 ```html
 <div class="box">
-  <p>Voici une boîte qui utilisera vos préférences de couleurs.</p>
+  <p>Voici une boîte qui utilisera vos préférences de couleurs.</p>
 </div>
 
 <div class="box forced">
-  <p>Voici une boîte qui conservera les couleurs définies par le site.</p>
+  <p>Voici une boîte qui conservera les couleurs définies par le site.</p>
 </div>
 ```
 

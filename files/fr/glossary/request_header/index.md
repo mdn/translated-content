@@ -13,7 +13,7 @@ Un **en-tête de requête** est un {{glossary("header","en-tête HTTP")}} qui pe
 
 Tous les en-têtes apparaissant dans une requête ne sont pas des _en-têtes de requête_. Par exemple, l'en-tête {{HTTPHeader("Content-Length")}} apparaissant dans une requête {{HTTPMethod("POST")}} est en fait un {{glossary("entity header","en-tête d'entité")}} faisant référence à la taille du corps du message de requête. Cependant, ces en-têtes d'entité sont souvent appelés en-têtes de requête dans un tel contexte.
 
-De plus, [CORS](/fr/docs/Glossary/CORS) définit un sous-ensemble d'en-têtes de requête comme {{glossary('simple header','en-têtes simples')}}, en-têtes de requêtes qui sont toujours considérés comme autorisés et non listés explicitement dans les réponses des requêtes de {{glossary("preflight request", "contrôle")}}.
+De plus, [CORS](/fr/docs/Glossary/CORS) définit un sous-ensemble d'en-têtes de requête comme {{glossary('simple header','en-têtes simples')}}, en-têtes de requêtes qui sont toujours considérés comme autorisés et non listés explicitement dans les réponses des requêtes de {{glossary("preflight request", "contrôle")}}.
 
 Quelques en-têtes de requêtes après une requête {{HTTPMethod("GET")}} :
 

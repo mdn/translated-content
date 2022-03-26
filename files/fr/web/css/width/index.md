@@ -9,7 +9,7 @@ translation_of: Web/CSS/width
 ---
 {{CSSRef}}
 
-La propriété **`width`** permet de définir la largeur de la [boîte du contenu](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) d'un élément. Par défaut, sa valeur est **`auto`**, c'est à dire la largeur automatiquement calculée de son contenu. Si {{cssxref("box-sizing")}} vaut `border-box`, la valeur appliquée incluera les dimensions de la boîte d'encadrement (_border_) et de la boîte de remplissage (_padding_).
+La propriété **`width`** permet de définir la largeur de la [boîte du contenu](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) d'un élément. Par défaut, sa valeur est **`auto`**, c'est à dire la largeur automatiquement calculée de son contenu. Si {{cssxref("box-sizing")}} vaut `border-box`, la valeur appliquée incluera les dimensions de la boîte d'encadrement (_border_) et de la boîte de remplissage (_padding_).
 
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
@@ -173,7 +173,7 @@ p.minblue {
 Il faut s'assurer que les éléments sur lesquels on utilise `width` ne sont pas tronqués et ne masquent pas d'autre contenu sur la page lorsque l'utilisateur zoome afin d'agrandir la taille du texte.
 
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.4  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [_Understanding Success Criterion 1.4.4  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## Spécifications
 

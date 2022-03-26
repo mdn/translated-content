@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/ownKeys
 ---
 {{JSRef}}
 
-La méthode statique **`Reflect.ownKeys()`** renvoie un tableau qui contient les clés des propriétés propres (non héritées) de l'objet  `cible`.
+La méthode statique **`Reflect.ownKeys()`** renvoie un tableau qui contient les clés des propriétés propres (non héritées) de l'objet  `cible`.
 
 {{EmbedInteractiveExample("pages/js/reflect-ownkeys.html")}}
 
@@ -57,7 +57,7 @@ La méthode `Reflect.ownKeys` renvoie un tableau dont les éléments sont les cl
 | Spécification                                                                            | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.ownkeys', 'Reflect.ownKeys')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.ownkeys', 'Reflect.ownKeys')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.ownkeys', 'Reflect.ownKeys')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

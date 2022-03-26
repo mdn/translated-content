@@ -60,7 +60,7 @@ function displayData() {
 
 | Spécification                                                                    | État                         | Commentaires |
 | -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-lower', 'lower')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-lower', 'lower')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

@@ -36,7 +36,7 @@ L'objet `document` renvoyé par cette propriété est l'objet principal avec leq
 
 | Spécification                                                                                        | Statut                       | Commentaire          |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("DOM4", "#dom-node-ownerdocument", "Node.ownerDocument")}}         | {{Spec2("DOM4")}}     |                      |
+| {{SpecName("DOM4", "#dom-node-ownerdocument", "Node.ownerDocument")}}         | {{Spec2("DOM4")}}     |                      |
 | {{SpecName("DOM3 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}} | {{Spec2("DOM3 Core")}} | Pas de changement    |
 | {{SpecName("DOM2 Core", "core.html#node-ownerDoc", "Node.ownerDocument")}} | {{Spec2("DOM2 Core")}} | Définition initiale. |
 

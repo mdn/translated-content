@@ -25,7 +25,7 @@ Notez que cet événement n'est _pas_ déclenché pour les erreurs réseau.
 
 ## Exemples
 
-Cet exemple ajoute un écouteur `onerror` qui enregistre la valeur de  {{WebExtAPIRef("webRequest.StreamFilter.error")}}.
+Cet exemple ajoute un écouteur `onerror` qui enregistre la valeur de  {{WebExtAPIRef("webRequest.StreamFilter.error")}}.
 
 ```js
 function listener(details) {

@@ -123,8 +123,8 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 
 | Attribut                   | Definition                                                                                                     |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `{{anch("checked")}}` | Un attribut booléen qui indique si le bouton radio est l'élément sélectionné du groupe.                        |
-| `{{anch("value")}}` | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
+| [`checked`](#checked) | Un attribut booléen qui indique si le bouton radio est l'élément sélectionné du groupe.                        |
+| [`value`](#value) | Une chaîne à utiliser comme valeur pour le bouton radio lors de l'envoi du formulaire si ce bouton est choisi. |
 
 ### {{htmlattrdef("checked")}}
 
@@ -286,7 +286,7 @@ De plus, la légende et le bouton d'envoi ont été mis en forme pour avoir un c
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères {{domxref("DOMString")}} qui représente
         la valeur du bouton radio.

@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
 
 Obtenez un {{WebExtAPIRef("tabs.Tab")}} contenant des informations sur l'onglet dans lequel ce script s'exécute.
 
-Vous pouvez appeler cette fonction dans des contextes comportant un onglet de navigateur, par exemple une [pages d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages). Si vous l'appelez à partir d'un script d'arrière-plan ou d'une fenêtre contextuelle, elle renverra undefined.
+Vous pouvez appeler cette fonction dans des contextes comportant un onglet de navigateur, par exemple une [pages d'options](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages). Si vous l'appelez à partir d'un script d'arrière-plan ou d'une fenêtre contextuelle, elle renverra undefined.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 

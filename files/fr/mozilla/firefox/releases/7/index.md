@@ -89,7 +89,7 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 
-Ces changements affectent les développeurs d'extensions ainsi que les développeurs qui travaillent sur ​​ou avec le code de Mozilla lui-même. Les developpeurs d'extensions doivent voir [Updating extensions for Firefox 7](/fr/docs/Firefox/Updating_extensions_for_Firefox_7) pour plus d'informations.
+Ces changements affectent les développeurs d'extensions ainsi que les développeurs qui travaillent sur ou avec le code de Mozilla lui-même. Les developpeurs d'extensions doivent voir [Updating extensions for Firefox 7](/fr/docs/Firefox/Updating_extensions_for_Firefox_7) pour plus d'informations.
 
 > **Note :** Firefox 7 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
 
@@ -125,7 +125,7 @@ Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui ra
 
 ### Changements dans le système de compilation
 
-- L'API d'intégration d'ActiveX n'est plus compilée et son support a été retiré du système de compilation. Des interfaces ont également été supprimées, voir {{anch("Interfaces supprimées")}}.
+- L'API d'intégration d'ActiveX n'est plus compilée et son support a été retiré du système de compilation. Des interfaces ont également été supprimées, voir [Interfaces supprimées](#interfaces_supprimées).
 - Vous n'avez plus besoin de préciser `-Zc:wchar_t-` lors de la compilation sous Windows. Pour plus de détails, voir [la documentation sur la compilation](/fr/docs/Developer_Guide/Build_Instructions#Build_and_install).
 
 ### Changements dans les interfaces

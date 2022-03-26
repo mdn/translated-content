@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 
 Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.
 
-Notez que `runtime.onInstalled` n'est pas la même chose  {{WebExtAPIRef("management.onInstalled")}}. L'événement  `runtime.onInstalled` est déclenché uniquement pour votre extension. L'événement `browser.management.onInstalled` est déclenché pour toutes les extensions.
+Notez que `runtime.onInstalled` n'est pas la même chose  {{WebExtAPIRef("management.onInstalled")}}. L'événement  `runtime.onInstalled` est déclenché uniquement pour votre extension. L'événement `browser.management.onInstalled` est déclenché pour toutes les extensions.
 
 ## Syntaxe
 
@@ -49,13 +49,13 @@ Les événements ont trois fonctions :
       - : Un objet avec les propriétés suivantes :
 
         - `id`{{optional_inline}}
-          - : `string`. L'ID de l'extension  de module partagé importé mise à jour. Ceci n'est présent que si la valeur de `raison` est  `shared_module_update`.
+          - : `string`. L'ID de l'extension de module partagé importé mise à jour. Ceci n'est présent que si la valeur de `raison` est  `shared_module_update`.
         - `previousVersion`{{optional_inline}}
           - : `string`. La version précédente de l'extension vient d'être mise à jour. Ceci n'est pas présent si la valeur de `raison` est `mise à jour`.
         - `reason`
           - : Une valeur {{WebExtAPIRef('runtime.OnInstalledReason')}}, indiquant la raison pour laquelle cet événement est distribué.
         - `temporary`
-          - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant  [web-ext run](/fr/Add-ons/WebExtensions/Getting_started_with_web-ext). Sinon faux.
+          - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant  [web-ext run](/fr/Add-ons/WebExtensions/Getting_started_with_web-ext). Sinon faux.
 
 ## Compatibilité du navigateur
 

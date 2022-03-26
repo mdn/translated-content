@@ -25,12 +25,12 @@ L'interface {{domxref("CredentialsContainer")}}.
 
 ```js
 if ('credentials' in navigator) {
-  navigator.credentials.get({password: true})
-  .then(function(creds) {
-    // Gérer les informations d'authentification
-  });
+  navigator.credentials.get({password: true})
+  .then(function(creds) {
+    // Gérer les informations d'authentification
+  });
 } else {
-  // Gérer la connexion comme avant
+  // Gérer la connexion comme avant
 };
 ```
 
