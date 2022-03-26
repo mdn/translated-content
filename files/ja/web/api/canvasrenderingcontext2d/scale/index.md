@@ -5,48 +5,50 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Method
-  - Reference
+  - メソッド
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.scale
 translation_of: Web/API/CanvasRenderingContext2D/scale
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>Canvas 2D APIの<code><strong>CanvasRenderingContext2D</strong></code><strong><code>.scale()</code></strong>メソッドは、キャンバス上の長さを縦方向及び横方向に拡縮する変形を適用させます。</p>
+**`CanvasRenderingContext2D.scale()`** はキャンバス 2D API のメソッドで、キャンバス上の長さを縦方向および横方向に拡縮する変形を適用させます。
 
-<p>By default, one unit on the canvas is exactly one pixel. A scaling transformation modifies this behavior. For instance, a scaling factor of 0.5 results in a unit size of 0.5 pixels; shapes are thus drawn at half the normal size. Similarly, a scaling factor of 2.0 increases the unit size so that one unit becomes two pixels; shapes are thus drawn at twice the normal size.</p>
+既定では、キャンバス上の 1 単位は正確に 1 ピクセルです。拡縮変換はこの動作を変更します。例えば、拡大係数が 0.5 の場合、単位は 0.5 ピクセルになり、図形は通常の半分の大きさで描かれます。同様に、拡大係数を 2.0 にすると、1 単位が 2 ピクセルになり、図形は通常の 2 倍の大きさで描画されます。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">void <em>ctx</em>.scale(<em>x</em>, <em>y</em>);
-</pre>
+```js
+void ctx.scale(x, y);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>x</code></dt>
- <dd>水平方向の拡縮係数。負の値を指定すると、縦軸を跨いでピクセルを反転させます。<code>1</code> を指定すると、水平方向には拡縮されません。</dd>
- <dt><code>y</code></dt>
- <dd>垂直方向の拡縮係数。負の値を指定すると、横軸を跨いでピクセルを反転させます。<code>1</code> を指定すると、垂直方向には拡縮されません。</dd>
-</dl>
+- `x`
+  - : 水平方向の拡大係数。負の値を指定すると、縦軸を跨いでピクセルを反転させます。 `1` を指定すると、水平方向には拡縮されません。
+- `y`
+  - : 垂直方向の拡大係数。負の値を指定すると、横軸を跨いでピクセルを反転させます。 `1` を指定すると、垂直方向には拡縮されません。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="図形を拡縮する">図形を拡縮する</h3>
+### 図形を拡縮する
 
-<p>この例は、拡縮された長方形を描きます。比較のため、元の長方形も描かれます。</p>
+この例は、拡縮された長方形を描きます。比較のため、元の長方形も描かれます。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<p>The rectangle has a specified width of 8 and a height of 20. The transformation matrix scales it by 9x horizontally and by 3x vertically. 結果的に、幅は72、高さは60になります。</p>
+矩形は幅 8、高さ 20 で指定する。変換行列はこれを水平方向に 9 倍、垂直方向に 3 倍に拡大する。したがって、最終的なサイズは、幅 72、高さ 60 となります。
 
-<p>キャンバス上の位置が変わることに注意してください。角の位置の指定値が(10, 10)のため、実際の角の位置は(90, 30)になります。</p>
+キャンバス上の位置も変わることに注意してください。角の位置の指定値が (10, 10) のため、実際の角の位置は (90, 30) になります。
 
-<pre class="brush: js; highlight:[5] notranslate">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // 拡縮された長方形
@@ -60,65 +62,50 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 // 原型の長方形
 ctx.fillStyle = 'gray';
 ctx.fillRect(10, 10, 8, 20);
-</pre>
+```
 
-<h4 id="結果">結果</h4>
+#### 結果
 
-<p>拡縮された<span style="color: red;">長方形は赤</span>、<span style="color: gray;">元の長方形は灰色です</span>。</p>
+拡縮された長方形は赤、元の長方形は灰色です。
 
-<p>{{ EmbedLiveSample('図形を拡縮する', 700, 180) }}</p>
+{{ EmbedLiveSample('Scaling_a_shape', 700, 180) }}
 
-<h3 id="垂直・水平方向の反転">垂直・水平方向の反転</h3>
+### 垂直・水平方向の反転
 
-<p>You can use <code>scale(-1, 1)</code> to flip the context horizontally and <code>scale(1, -1)</code> to flip it vertically. In this example, the words "Hello world!" are flipped horizontally.</p>
+コンテキストを水平方向に反転させるには `scale(-1, 1)` を、垂直方向に反転させるには `scale(1, -1)` を使用します。この例では、 "Hello world!" という文字が水平に反転しています。
 
-<p>Note that the call to {{domxref("CanvasRenderingContext2D.fillText()", "fillText()")}} specifies a negative x coordinate. This is to adjust for the negative scaling factor: <code>-280 * -1</code> becomes <code>280</code>, and text is drawn leftwards from that point.</p>
+{{domxref("CanvasRenderingContext2D.fillText()", "fillText()")}} の呼び出しは負の x 座標を指定していることに注意してください。これは負の拡大係数を調整するためで、`-280 * -1` は `280` となり、テキストはその点から左方向に描画されます。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js; highlight:[4] notranslate">const canvas = document.getElementById('canvas');
+```js
+const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.scale(-1, 1);
 ctx.font = '48px serif';
 ctx.fillText('Hello world!', -280, 90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
-</pre>
+```
 
-<h4 id="結果_2">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('垂直・水平方向の反転', 700, 180) }}</p>
+{{ EmbedLiveSample('Flipping_things_horizontally_or_vertically', 700, 180) }}
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-scale", "CanvasRenderingContext2D.scale")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.CanvasRenderingContext2D.scale")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li>このメソッドを定義するインターフェイス: {{domxref("CanvasRenderingContext2D")}}</li>
-</ul>
+- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
