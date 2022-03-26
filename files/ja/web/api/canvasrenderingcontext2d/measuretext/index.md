@@ -5,72 +5,57 @@ tags:
   - API
   - Canvas
   - CanvasRenderingContext2D
-  - Method
-  - Reference
-  - Référence(2)
+  - メソッド
+  - リファレンス
+browser-compat: api.CanvasRenderingContext2D.measureText
 translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code><strong>CanvasRenderingContext2D.measureText()</strong></code> メソッドは、測定したテキストの情報 (例えば幅など) を持つ {{domxref("TextMetrics")}} オブジェクトを返します。</p>
+`CanvasRenderingContext2D.measureText()` メソッドは、測定したテキストの情報（例えば幅など）を持つ {{domxref("TextMetrics")}} オブジェクトを返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">TextMetrics <var><em>ctx</em></var>.measureText(text);</pre>
+```js
+ctx.measureText(text);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt>text</dt>
- <dd>測定する文字列。</dd>
-</dl>
+- text
+  - : 測定する文字列。
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<p>{{domxref("TextMetrics")}} オブジェクト。</p>
+{{domxref("TextMetrics")}} オブジェクト。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>以下の {{HTMLElement("canvas")}} 要素があるとします:</p>
+以下の {{HTMLElement("canvas")}} 要素があるとします。
 
-<pre class="brush: html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;
-</pre>
+```html
+<canvas id="canvas"></canvas>
+```
 
-<p>以下のコードを使用して {{domxref("TextMetrics")}} オブジェクトを得ることができます:</p>
+以下のコードを使用して {{domxref("TextMetrics")}} オブジェクトを得ることができます。
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+```js
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-var text = ctx.measureText("foo"); // TextMetrics オブジェクト
-text.width; // 16;
-</pre>
+let text = ctx.measureText('Hello world');
+console.log(text.width);  // 56;
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-measuretext", "CanvasRenderingContext2D.measureText")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.CanvasRenderingContext2D.measureText")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li>このメソッドを定義するインターフェイスである {{domxref("CanvasRenderingContext2D")}}</li>
- <li>{{domxref("TextMetrics")}}</li>
-</ul>
+- このメソッドを定義しているインターフェイス: {{domxref("CanvasRenderingContext2D")}}
+- {{domxref("TextMetrics")}}
