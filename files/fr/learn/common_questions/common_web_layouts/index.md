@@ -10,8 +10,6 @@ tags:
 translation_of: Learn/Common_questions/Common_web_layouts
 original_slug: Apprendre/Concevoir_page_web
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 Lorsque vous concevez des pages pour votre site Internet, il est utile d'avoir en tête les modèles de mise en page les plus fréquemment utilisés.
 
 <table class="standard-table">

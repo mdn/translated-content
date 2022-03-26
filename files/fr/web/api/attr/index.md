@@ -11,7 +11,7 @@ translation_of: Web/API/Attr
 
 Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupart des méthodes DOM, vous auriez probablement récupéré l'attribut directement comme une chaîne (par exemple, {{domxref ("element.getAttribute()")}}, mais certaines fonctions (par exemple, {{domxref ("element.getAttributeNode()" )}}) ou des moyens d'itération donnent des types Attr.
 
-> **Attention :** À partir de Gecko 7.0 {{geckoRelease ("7.0")}}, ceux qui vont être retirés afficheront des messages d'avertissement dans la console. Vous devriez modifier votre code en conséquence. Voir {{anch("Propriétés et méthodes dépréciées")}} pour une liste complète.
+> **Attention :** À partir de Gecko 7.0 {{geckoRelease ("7.0")}}, ceux qui vont être retirés afficheront des messages d'avertissement dans la console. Vous devriez modifier votre code en conséquence. Voir [Propriétés et méthodes dépréciées](#propriétés_et_méthodes_dépréciées) pour une liste complète.
 
 ## Propriétés
 

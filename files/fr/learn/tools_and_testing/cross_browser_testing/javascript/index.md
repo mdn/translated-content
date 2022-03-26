@@ -281,7 +281,7 @@ if("geolocation" in navigator) {
 
 Vous pouvez également écrire un test de ce type pour une fonctionnalité CSS, par exemple en testant l'existence de _[element.style.property](/fr/docs/Web/API/HTMLElement/style)_ (par ex. `paragraph.style.transform !== undefined`). Mais autant pour CSS que JavaScript, il est probablement préférable d'utiliser une librairie de fonction de détection établie plutôt que d'écrire la votre tout le temps. Modernizr est la norme standard pour les tests de fonction de détection.
 
-Enfin, ne confondez pas fonction de détection avec **le détecteur navigateur** (qui détecte quel navigateur en particulier accède au site) — c'est une terrible pratique qui devrait être découragée à tout prix. Voir {{anch("Using bad browser sniffing code")}}, plus tard, pour plus de détails.
+Enfin, ne confondez pas fonction de détection avec **le détecteur navigateur** (qui détecte quel navigateur en particulier accède au site) — c'est une terrible pratique qui devrait être découragée à tout prix. Voir [Utiliser une mauvaise détection de code de navigateur](#utiliser_une_mauvaise_détection_de_code_de_navigateur), plus tard, pour plus de détails.
 
 > **Note :** Certaines fonctionnalités sont connues pour être indétectables — voir la liste des [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables) de Modernizr.
 
@@ -441,7 +441,7 @@ Beaucoup de développeurs on implémenté de mauvais détecteur de code de navig
 
 > **Note :** Vous devriez lire [History of the browser user-agent string](http://webaim.org/blog/user-agent-string-history/) de Aaron Andersen pour une présentation utile et amusante de cette situation.
 
-La leçon à retenir ici est — ne JAMAIS utiliser de détecteur de code. Le seul cas d'usage pour le détecteur de code de nos jours c'est si vous implémentez un fix pour un bug pour une version très particulière d'un navigateur en particulier. Même dans ce cas, la plupart des bugs sont fixés rapidement dans le cycle rapide des sorties des navigateurs. Cela n'arrive pas très souvent. {{anch("Feature detection")}} est presque toujours une meilleure option — si vous détectez si une fonctionnalité est supportée, vous n'aurez pas besoin de changer votre code quand de nouvelles versions de navigateur sortiront, et les tests sont bien plus fiables.
+La leçon à retenir ici est — ne JAMAIS utiliser de détecteur de code. Le seul cas d'usage pour le détecteur de code de nos jours c'est si vous implémentez un fix pour un bug pour une version très particulière d'un navigateur en particulier. Même dans ce cas, la plupart des bugs sont fixés rapidement dans le cycle rapide des sorties des navigateurs. Cela n'arrive pas très souvent. [La fonctionnalité de détection](#fonctionnalité_de_détection) est presque toujours une meilleure option — si vous détectez si une fonctionnalité est supportée, vous n'aurez pas besoin de changer votre code quand de nouvelles versions de navigateur sortiront, et les tests sont bien plus fiables.
 
 Si vous rejoignez un projet existant où il y a déjà de la détection de navigateur, regardez si elle peut être remplacée avec quelque chose de plus pratique. La détection de navigateur est à l'origine de toutes sortes de bugs curieux, comme {{bug(1308462)}}.
 

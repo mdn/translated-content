@@ -10,7 +10,7 @@ tags:
   - Méthode
 translation_of: Web/API/Document/enableStyleSheetsForSet
 ---
-{{ APIRef("DOM") }}{{ gecko_minversion_header("1.9") }}
+{{ APIRef("DOM") }}
 
 Active les feuilles de styles correspondant au nom spécifié dans l'ensemble de feuilles de styles en cours et désactive toutes les autres (à l'exception de celles sans titre qui sont toujours activées).
 

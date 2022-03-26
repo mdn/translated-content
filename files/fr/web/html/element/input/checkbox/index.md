@@ -47,8 +47,8 @@ En plus des attributs qui sont partagés par l'ensemble des éléments {{HTMLEle
 
 | Attribut                   | Description                                                                                                                          |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `{{anch("checked")}}` | Un attribut booléen. Si celui-ci est présent, la case à cocher sera cochée.                                                          |
-| `{{anch("value")}}` | La chaîne de caractères qui sera utilisée pour représenter la valeur lorsque celle-ci sera envoyée au serveur si la case est cochée. |
+| [`checked`](#checked) | Un attribut booléen. Si celui-ci est présent, la case à cocher sera cochée.                                                          |
+| [`value`](#value) | La chaîne de caractères qui sera utilisée pour représenter la valeur lorsque celle-ci sera envoyée au serveur si la case est cochée. |
 
 ### {{htmlattrdef("checked")}}
 
@@ -68,7 +68,7 @@ L'attribut `value` est partagé par l'ensemble des éléments `<input>` mais il 
 
 Dans l'exemple précédent, il n'y a qu'une seule case à cocher. Dans un scénario réaliste, on aura vraisemblablement plusieurs cases à cocher. Si celles-ci n'ont pas de rapport entre elles, il est possible de les gérer de façon séparée avec des cases à cocher « unitaires » comme illustré précédemment. Toutefois, si les valeurs sont liées entre elles, il est alors nécessaire d'indiquer ce lien.
 
-Dans l'exemple qui suit, on affiche différentes cases à cocher pour représenter les intérets d'un utilisateur (voir l'exemple complet dans la section {{anch("Exemples")}}).
+Dans l'exemple qui suit, on affiche différentes cases à cocher pour représenter les intérets d'un utilisateur (voir l'exemple complet dans la section [Exemples](#exemples)).
 
 ```html
 <fieldset>
@@ -272,7 +272,7 @@ otherCheckbox.onchange = function() {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente la valeur de la case à cocher.

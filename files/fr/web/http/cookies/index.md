@@ -105,7 +105,7 @@ console.log(document.cookie);
 // affiche "yummy_cookie=choco; tasty_cookie=strawberry"
 ```
 
-Prenez garde aux problèmes de sécurité, décrits dans la section {{ anch("Sécurité") }} ci-dessous. Les cookies disponibles via JavaScript peuvent être volés en utilisant les failles XSS.
+Prenez garde aux problèmes de sécurité, décrits dans la section [Sécurité](#sécurité) ci-dessous. Les cookies disponibles via JavaScript peuvent être volés en utilisant les failles XSS.
 
 ## Sécurité
 

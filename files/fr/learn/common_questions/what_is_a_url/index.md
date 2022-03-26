@@ -137,7 +137,7 @@ Pour mieux comprendre les exemples qui suivent, nous nous placerons dans le cont
 
         Compétences/Infrastructure/Comprendre_les_URL
 
-    L'URL ne commence pas pas `/`, le navigateur essaiera de trouver le document visé dans un sous-répertoire de la ressource actuelle. Dans cet exemple, l'URL absolue correspondante du document auquel on souhaite accéder est : `https://developer.mozilla.org/fr/docs/Apprendre/Compétences/Infrastructure/Comprendre_les_URL`
+    L'URL ne commence pas par `/`, le navigateur essaiera de trouver le document visé dans un sous-répertoire de la ressource actuelle. Dans cet exemple, l'URL absolue correspondante du document auquel on souhaite accéder est : `https://developer.mozilla.org/fr/docs/Apprendre/Compétences/Infrastructure/Comprendre_les_URL`
 
 - Remonter dans l'arborescence des dossiers
 

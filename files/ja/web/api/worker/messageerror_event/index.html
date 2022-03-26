@@ -1,0 +1,51 @@
+---
+title: Worker.onmessageerror
+slug: Web/API/Worker/messageerror_event
+tags:
+  - API
+  - Property
+  - Reference
+  - Worker
+  - onmessageerror
+  - イベントハンドラ
+translation_of: Web/API/Worker/onmessageerror
+original_slug: Web/API/Worker/onmessageerror
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p>{{domxref("Worker")}} インターフェイスの <code><strong>onmessageerror</strong></code> イベントハンドラは {{domxref("EventListener")}} であり、 <code>messageerror</code> 型の {{domxref("MessageEvent")}} が <code>Worker</code> インスタンスで発生する度に呼び出されます。 — つまり  {{glossary("Deserialization", "deserialized")}} できないメッセージを受け取ったときです。</p>
+
+<p>{{AvailableInWorkers}}</p>
+
+<h2 id="構文">構文</h2>
+
+<pre class="syntaxbox notranslate">Worker.onmessageerror = function() { ... };</pre>
+
+<h2 id="仕様">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">ステータス</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-worker-onmessageerror', 'onmessageerror')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
+
+
+
+<p>{{Compat("api.Worker.onmessageerror")}}</p>
+
+<h2 id="関連項目">関連項目</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/Channel_Messaging_API/Using_channel_messaging">Using channel messaging</a></li>
+</ul>

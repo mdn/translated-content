@@ -289,7 +289,7 @@ Le code HTML qui présente l'interface ressemble à ceci:
 </div>
 ```
 
-Ce code définit notre élément fichier {{ HTMLElement("input") }}, ainsi qu'un lien qui appelle le sélecteur de fichiers (l'élément `input` étant masqué pour éviter l'affichage de la si peu séduisante interface utilisateur). Vous pouvez vous reporter à la section {{ anch("Using hidden file input elements using the click() method") }} pour des explications détaillées sur cette partie de code ainsi que sur la méthode appelant le sélecteur de fichiers.
+Ce code définit notre élément fichier {{ HTMLElement("input") }}, ainsi qu'un lien qui appelle le sélecteur de fichiers (l'élément `input` étant masqué pour éviter l'affichage de la si peu séduisante interface utilisateur). Vous pouvez vous reporter à la section [Utiliser des éléments `input` masqués de type `file` avec l'événement `click`](#utiliser_des_éléments_input_masqués_de_type_file_avec_lévénement_click) pour des explications détaillées sur cette partie de code ainsi que sur la méthode appelant le sélecteur de fichiers.
 
 Voici la méthode `handleFiles()`&nbsp;:
 
@@ -416,59 +416,59 @@ Il est nécessaire de prévoir quelques étapes préparatoires avant le téléch
 
 ### Gérer le processus de téléchargement d'un fichier de manière asynchrone
 
-```html
+Cet exemple utilise PHP pour la partie serveur et JavaScript pour la partie client. Il illustre comment gérer l'<i lang="en">upload</i> d'un fichier de façon asynchrone.
+
+```js
 <?php
-if (isset($_FILES['myFile'])) {
-    // Exemple:
-    move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
+if (isset($_FILES['monFichier'])) {
+    // Exemple :
+    move_uploaded_file($_FILES['monFichier']['tmp_name'], "uploads/" . $_FILES['monFichier']['name']);
     exit;
 }
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html>
 <head>
     <title>dnd binary upload</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript">
+    <script type="application/javascript">
         function sendFile(file) {
-            var uri = "/index.php";
-            var xhr = new XMLHttpRequest();
-            var fd = new FormData();
-            
-          
-          
-          
-          
-          
-             
-          
-        
-           
-                  
+            const uri = "/index.php";
+            const xhr = new XMLHttpRequest();
+            const fd = new FormData();
+
+            xhr.open("POST", uri, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    alert(xhr.responseText); // gestion de la réponse.
+                }
+            };
+            fd.append('monFichier', file);
+            // Initier un upload multipart/form-data
+            xhr.send(fd);
         }
-    
-   ndow
-   var d
-            dropzone.ondragover = dropz
-                   
+
+        window.onload = function() {
+            const dropzone = document.getElementById("dropzone");
+            dropzone.ondragover = dropzone.ondragenter = function(event) {
+                event.stopPropagation();
                 event.preventDefault();
-   }
-    
-            dropzone.ond
-                  event.stopPropagation();
-                   event.preventDefault();
-       
-         v
-                 
-          
-          
-                                                                                            }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        }
+            }
+
+            dropzone.ondrop = function(event) {
+                event.stopPropagation();
+                event.preventDefault();
+
+                const filesArray = event.dataTransfer.files;
+                for (let i=0; i<filesArray.length; i++) {
+                    sendFile(filesArray[i]);
+                }
+            }
+        }
     </script>
 </head>
 <body>
     <div>
-        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Drag & drop your file here...</div>
+        <div id="dropzone" style="margin:30px; width:500px; height:300px; border:1px dotted grey;">Glisser-déposer votre fichier ici…</div>
     </div>
 </body>
 </html>

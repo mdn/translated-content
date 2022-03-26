@@ -15,7 +15,7 @@ translation_of: >-
 original_slug: >-
   Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher
 ---
-{{GamesSidebar}}{{IncludeSubnav("/fr/docs/Jeux")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
 

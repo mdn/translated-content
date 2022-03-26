@@ -29,10 +29,10 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 
 | Attribut                       | Description                                                                                               |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| `{{anch("accept")}}`     | Un ou plusieurs identifiants de type de fichier décrivants les types de fichier autorisés.                |
-| `{{anch("capture")}}`     | La source à utiliser pour capturer des images ou des vidéos.                                              |
-| `{{anch("files")}}`     | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                  |
-| `{{anch("multiple")}}` | Un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés. |
+| [`accept`](#accept)     | Un ou plusieurs identifiants de type de fichier décrivants les types de fichier autorisés.                |
+| [`capture`](#capture)     | La source à utiliser pour capturer des images ou des vidéos.                                              |
+| [`files`](#files)     | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                  |
+| [`multiple`](#multiple) | Un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés. |
 
 ### {{htmlattrdef("accept")}}
 
@@ -65,7 +65,7 @@ En complément des attributs précédents, les éléments `<input type="file">` 
 
 | Attribut                               | Description                                                                                                                               |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("webkitdirectory")}}` | Un attribut booléen qui indique si l'utilisateur peut choisir un répertoire (ou plusieurs si `{{anch("multiple")}}` est présent). |
+| [`webkitdirectory`](#webkitdirectory) | Un attribut booléen qui indique si l'utilisateur peut choisir un répertoire (ou plusieurs si [`multiple`](#multiple) est présent). |
 
 ### {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
 
@@ -389,7 +389,7 @@ Et voici le résultat :
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente le chemin du fichier sélectionné.

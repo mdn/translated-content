@@ -10,7 +10,7 @@ translation_of: Web/API/BeforeUnloadEvent
 
 L'évènement **`beforeunload`** est déclenché quand la fenêtre, le document et ses ressources sont sur le point d'être déchargées.
 
-Si une chaine non vide est assignée à la propriété `returnValue` de l'évènement, une boite de confirmation apparait pour demander à l'utilisateur de valider le changement d'adresse (voir les exemples ci-dessous). Si aucune valeur n'est fournise, l'évènement est traité silencieusement. Certaines implantations ne demandent confirmation que si le cadre ou tout cadre embarqué reçoit une action utilisateur. Voir {{anch("Browser compatibility")}} pour plus d'informations.
+Si une chaine non vide est assignée à la propriété `returnValue` de l'évènement, une boite de confirmation apparait pour demander à l'utilisateur de valider le changement d'adresse (voir les exemples ci-dessous). Si aucune valeur n'est fournise, l'évènement est traité silencieusement. Certaines implantations ne demandent confirmation que si le cadre ou tout cadre embarqué reçoit une action utilisateur. Voir [Compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'informations.
 
 {{InheritanceDiagram(600, 120)}}
 
