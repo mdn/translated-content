@@ -402,6 +402,7 @@
 /ru/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/WindowTimers.setTimeout	/ru/docs/Web/API/setTimeout
 /ru/docs/Web/API/WindowTimers/setTimeout	/ru/docs/Web/API/setTimeout
+/ru/docs/Web/API/Worker/onmessage	/ru/docs/Web/API/Worker/message_event
 /ru/docs/Web/API/XMLHttpRequest/onreadystatechange	/ru/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ru/docs/Web/API/console.timeEnd	/ru/docs/Web/API/Console/timeEnd
 /ru/docs/Web/API/document.activeElement	/ru/docs/Web/API/Document/activeElement

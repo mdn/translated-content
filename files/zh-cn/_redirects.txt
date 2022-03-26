@@ -1422,6 +1422,7 @@
 /zh-CN/docs/Web/API/MediaDevices/ondevicechange	/zh-CN/docs/conflicting/Web/API/MediaDevices/devicechange_event
 /zh-CN/docs/Web/API/MediaRecorder/ondataavailable	/zh-CN/docs/Web/API/MediaRecorder/dataavailable_event
 /zh-CN/docs/Web/API/MediaStream.addTrack	/zh-CN/docs/Web/API/MediaStream/addTrack
+/zh-CN/docs/Web/API/MessagePort/onmessage	/zh-CN/docs/Web/API/MessagePort/message_event
 /zh-CN/docs/Web/API/MouseEvent/which	/zh-CN/docs/conflicting/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/MouseWheelEvent	/zh-CN/docs/conflicting/Web/API/WheelEvent
 /zh-CN/docs/Web/API/MutationObserverInit	/zh-CN/docs/conflicting/Web/API/MutationObserver/observe_2f2addbfa1019c23a6255648d6526387
@@ -1637,6 +1638,8 @@
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
 /zh-CN/docs/Web/API/WindowBase64/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/WindowBase64/btoa	/zh-CN/docs/Web/API/btoa
+/zh-CN/docs/Web/API/WindowEventHandlers/onmessage	/zh-CN/docs/Web/API/Window/message_event
+/zh-CN/docs/Web/API/WindowEventHandlers/onmessageerror	/zh-CN/docs/Web/API/Window/messageerror_event
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/caches	/zh-CN/docs/Web/API/caches
@@ -1653,6 +1656,8 @@
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/zh-CN/docs/Web/API/setTimeout
 /zh-CN/docs/Web/API/WindowTimers	/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope
 /zh-CN/docs/Web/API/WindowTimers/clearTimeout	/zh-CN/docs/Web/API/clearTimeout
+/zh-CN/docs/Web/API/Worker/onmessage	/zh-CN/docs/conflicting/Web/API/Worker/message_event
+/zh-CN/docs/Web/API/Worker/onmessageerror	/zh-CN/docs/conflicting/Web/API/Worker/messageerror_event
 /zh-CN/docs/Web/API/XMLDocument.load	/zh-CN/docs/Web/API/XMLDocument/load
 /zh-CN/docs/Web/API/XMLHttpRequest/FormData	/zh-CN/docs/Web/API/FormData
 /zh-CN/docs/Web/API/XMLHttpRequest/onreadystatechange	/zh-CN/docs/Web/API/XMLHttpRequest/readystatechange_event

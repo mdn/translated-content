@@ -21440,7 +21440,7 @@
       "jean-pierre.gay"
     ]
   },
-  "Web/API/Worker/onmessage": {
+  "Web/API/Worker/message_event": {
     "modified": "2020-10-15T21:32:57.785Z",
     "contributors": [
       "Arzak656",

@@ -3207,6 +3207,8 @@
 /ja/docs/Web/API/MediaStreamTrack/onmute	/ja/docs/conflicting/Web/API/MediaStreamTrack/mute_event
 /ja/docs/Web/API/MediaStreamTrack/onoverconstrained	/ja/docs/Web/API/MediaStreamTrack/overconstrained_event
 /ja/docs/Web/API/MediaStreamTrack/onunmute	/ja/docs/conflicting/Web/API/MediaStreamTrack/unmute_event
+/ja/docs/Web/API/MessagePort/onmessage	/ja/docs/Web/API/MessagePort/message_event
+/ja/docs/Web/API/MessagePort/onmessageerror	/ja/docs/Web/API/MessagePort/messageerror_event
 /ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/Online_and_offline_events	/ja/docs/conflicting/Web/API/Navigator/onLine
@@ -3306,6 +3308,7 @@
 /ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorkerContainer/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/conflicting/Web/API/ServiceWorkerContainer/message_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/conflicting/Web/API/caches
+/ja/docs/Web/API/ServiceWorkerGlobalScope/onmessage	/ja/docs/conflicting/Web/API/ServiceWorkerGlobalScope/message_event
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
@@ -3402,6 +3405,8 @@
 /ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ja/docs/Glossary/Base64
 /ja/docs/Web/API/WindowBase64/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowBase64/btoa	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/WindowEventHandlers/onmessage	/ja/docs/Web/API/Window/message_event
+/ja/docs/Web/API/WindowEventHandlers/onmessageerror	/ja/docs/conflicting/Web/API/Window/messageerror_event
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ja/docs/Web/API/btoa
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/caches
@@ -3420,6 +3425,7 @@
 /ja/docs/Web/API/WindowTimers/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/setTimeout
 /ja/docs/Web/API/Worker/onerror	/ja/docs/Web/API/Worker/error_event
+/ja/docs/Web/API/Worker/onmessageerror	/ja/docs/Web/API/Worker/messageerror_event
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/caches
 /ja/docs/Web/API/XMLHttpRequest/onreadystatechange	/ja/docs/Web/API/XMLHttpRequest/readystatechange_event
 /ja/docs/Web/API/XMLHttpRequest/openRequest	/ja/docs/orphaned/Web/API/XMLHttpRequest/openRequest
