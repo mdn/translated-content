@@ -12,7 +12,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/permissions
 ---
 {{AddonSidebar}}Permet aux extensions de demander des permissions supplémentaires lors de l'exécution, après leur installation.
 
-Les extensions ont besoin de permissions pour accéder aux nombreuses API WebExtension les plus puissantes. Ils peuvent demander des permissions lors de l'installation en incluant les permissions dont ils ont besoin dans la clé du manifesst.json des [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions). Les principaux avantages de demander des permissions au moment de l'installation sont les suivants:
+Les extensions ont besoin de permissions pour accéder aux nombreuses API WebExtension les plus puissantes. Ils peuvent demander des permissions lors de l'installation en incluant les permissions dont ils ont besoin dans la clé du manifest.json des [`permissions`](/fr/Add-ons/WebExtensions/manifest.json/permissions). Les principaux avantages de demander des permissions au moment de l'installation sont les suivants:
 
 - L'utilisateur est seulement demandé une fois, donc il est moins perturbateur pour eux et une décision plus simple
 - L'extension peut compter sur l'accès aux API dont elle a besoin, car si elle est en cours d'exécution, les permissions ont été accordées.
