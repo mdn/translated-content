@@ -2,64 +2,46 @@
 title: DOMTokenList.value
 slug: Web/API/DOMTokenList/value
 tags:
-- API
-- DOM
-- DOMTokenList
-- Property
-- Reference
-- value
+- プロパティ
+- リファレンス
+browser-compat: api.DOMTokenList.value
 translation_of: Web/API/DOMTokenList/value
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>value</strong></code> は {{domxref("DOMTokenList")}} インターフェイスのプロパティで、リストの値を {{domxref("DOMString")}} として文字列化して返したり、リストを空にして渡された値に設定したりします。</p>
+**`value`** は {{domxref("DOMTokenList")}} インターフェイスのプロパティで、リストの値を {{domxref("DOMString")}} として文字列化して返したり、リストを空にしたり渡された値に設定したりするための{{Glossary("stringifier", "文字列化")}}を行うためのものです。
 
-<h2 id="Syntax">構文</h2>
+## 値
 
-<pre class="brush: js"><var>tokenList</var>.value;</pre>
+リストの内容をシリアライズした文字列です。
+それぞれの項目は空白で区切られます。
 
-<h3 id="Value">値</h3>
+## 例
 
-<p>{{domxref("DOMString")}}</p>
+次の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを {{domxref("Element.classList")}} を使用して `DOMTokenList` として取得し、リストの値を `<span>` の {{domxref("Node.textContent")}} の中に書き込みます。
 
-<h2 id="Examples">例</h2>
+最初に HTML です。
 
-<p>次の例は、 {{domxref("Element.classList")}} を使用して {{htmlelement("span")}} 要素に設定されたクラスのリストを <code>DOMTokenList</code> として取得し、リストの値を <code>&lt;span&gt;</code> の {{domxref("Node.textContent")}} の中に書き込みます。</p>
+```html
+<span class="a b c"></span>
+```
 
-<p>最初に HTML です。</p>
+そして JavaScript です。
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
-
-<p>そして JavaScript です。</p>
-
-<pre class="brush: js">let span = document.querySelector("span");
-let classes = span.classList;
+```js
+const span = document.querySelector("span");
+const classes = span.classList;
 span.textContent = classes.value;
-</pre>
+```
 
-<p>出力結果は以下のようになります。</p>
+出力結果は以下のようになります。
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-value','value')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DOMTokenList.value")}}</p>
+{{Compat}}
