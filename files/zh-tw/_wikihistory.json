@@ -2610,30 +2610,6 @@
       "RJ_Hsiao"
     ]
   },
-  "Tools": {
-    "modified": "2020-07-16T22:44:20.103Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "iigmir",
-      "irvinfly",
-      "Weicheng",
-      "a0983891582",
-      "kingt_tsai",
-      "RJ_Hsiao",
-      "iinnttoo",
-      "yangshiqiangzy",
-      "Somnlent",
-      "benson.peng",
-      "dinoop.p1"
-    ]
-  },
-  "Tools/Firefox_OS_1.1_Simulator": {
-    "modified": "2020-07-16T22:35:58.639Z",
-    "contributors": [
-      "MashKao"
-    ]
-  },
   "Web": {
     "modified": "2020-04-05T02:12:59.455Z",
     "contributors": [

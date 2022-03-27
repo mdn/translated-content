@@ -513,6 +513,7 @@
 /zh-TW/docs/Security/MixedContent/How_to_fix_website_with_mixed_content	/zh-TW/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 /zh-TW/docs/Security/弱簽章演算法	/zh-TW/docs/Web/Security/Weak_Signature_Algorithm
 /zh-TW/docs/Security/缺少安全性的密碼	/zh-TW/docs/Web/Security/Insecure_passwords
+/zh-TW/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /zh-TW/docs/Tools/3D_View	https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html
 /zh-TW/docs/Tools/Browser_Toolbox	https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html
 /zh-TW/docs/Tools/Debugger	https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html
