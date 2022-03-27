@@ -18,11 +18,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <p>这个 manifest 文件还可以指向其它一些类型的文件：</p>
 
 <ul>
- <li><a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">后台脚本</a>: 执行一个长时间运行的逻辑。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#后台脚本">后台脚本</a>: 执行一个长时间运行的逻辑。</li>
  <li><a>图标</a>: 用于扩展插件和任何它可能定义的按钮儿。</li>
- <li><a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_and_options_pages">侧边栏, 弹出窗口, 选项页</a>: 为各式各样用户界面组件提供内容的HTML文件。</li>
- <li><a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">内容脚本</a>: 扩展中包含的JavaScript，你可以注入它们到网页中。</li>
- <li><a href="/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources">网络可访问资源</a>: 使打包好的内容可用于网页与内容脚本中。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#侧边栏，弹出窗口，选项页面">侧边栏, 弹出窗口, 选项页</a>: 为各式各样用户界面组件提供内容的HTML文件。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本">内容脚本</a>: 扩展中包含的JavaScript，你可以注入它们到网页中。</li>
+ <li><a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#网络可访问资源">网络可访问资源</a>: 使打包好的内容可用于网页与内容脚本中。</li>
 </ul>
 
 <p><img alt="" src="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension/webextension-anatomy.png" style="display: block; height: 581px; margin-left: auto; margin-right: auto; width: 600px;"></p>
@@ -31,11 +31,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>除了这些 manifest 中已经列举的项之外，扩展也可以携带额外的 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/extension_pages">Extension pages</a> 和支持的文件。</p>
 
-<h2 id="Background_scripts">后台脚本</h2>
+<h2 id="后台脚本">后台脚本</h2>
 
 <p>扩展常常需要独立于任何浏览器窗口或特定网页来维持一种长期的状态或者执行长期的操作。这就是后台脚本（background scripts）的职责。</p>
 
-<p>后台脚本将在扩展加载完毕后开始运行，直到扩展被禁用或卸载。只要获得了相应的<a href="/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，你就可以在脚本中使用任何 <a href="/zh-CN/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
+<p>后台脚本将在扩展加载完毕后开始运行，直到扩展被禁用或卸载。只要获得了相应的<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，你就可以在脚本中使用任何 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
 
 <h3 id="指定后台脚本">指定后台脚本</h3>
 
@@ -77,13 +77,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 <p>后台脚本在一个被称为后台页面的特殊页面的上下文环境中运行。此环境为其提供了全局变量 <code><a href="/zh-CN/docs/Web/API/Window">window</a></code> ，也提供了所有的标准 DOM API。</p>
 
 <div class="notecard warning">
-  <p><strong>警告:</strong> 在Firefox浏览器中，后台页面不支持使用<a href="/zh-CN/docs/Web/API/Window/alert"><code> alert() </code></a>,<a href="/zh-CN/docs/Web/API/Window/alert"><code> confirm() </code></a>和<a href="/zh-CN/docs/Web/API/Window/alert"><code> prompt() </code></a></p>
+  <p><strong>警告:</strong> 在Firefox浏览器中，后台页面不支持使用 <a href="/zh-CN/docs/Web/API/Window/alert"><code>alert()</code></a>, <a href="/zh-CN/docs/Web/API/Window/alert"><code>confirm()</code></a>和 <a href="/zh-CN/docs/Web/API/Window/alert"><code>prompt()</code></a></p>
  
 </div>
 
 <h4 id="WebExtension_API">WebExtension API</h4>
 
-<p>只要扩展获得了必要的<a href="/zh-CN/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，后台脚本就可以使用所有的 <a href="/zh-CN/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
+<p>只要扩展获得了必要的<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">权限</a>，后台脚本就可以使用所有的 <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API">WebExtension API</a>。</p>
 
 <h4 id="跨域访问">跨域访问</h4>
 
@@ -91,12 +91,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <h4 id="网页内容">网页内容</h4>
 
-<p>后台脚本没有直接访问页面的权限。不过，他们可以在页面中加载<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>（content scripts），并且可以<a href="/zh-CN/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts">通过 message-passing API 与内容脚本通信</a>。</p>
+<p>后台脚本没有直接访问页面的权限。不过，他们可以在页面中加载<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>（content scripts），并且可以<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#后台脚本通信">通过 message-passing API 与内容脚本通信</a>。</p>
 
 <h4 id="内容安全策略">内容安全策略</h4>
 
 <p>根据一个内容安全策略（Content Security Policy），后台脚本不能执行一些可能有危险的操作，例如使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code>。</p>
-<p>详情请参考<a href="/zh-CN/Add-ons/WebExtensions/Content_Security_Policy">内容安全策略</a>。</p>
+<p>详情请参考<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">内容安全策略</a>。</p>
 
 <h2 id="侧边栏，弹出窗口，选项页面">侧边栏，弹出窗口，选项页面</h2>
 
@@ -142,7 +142,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 <p>若想了解更多，请参考<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts">内容脚本</a>。</p>
 
-<h2 id="Web_accessible_resources">网络可访问资源</h2>
+<h2 id="网络可访问资源">网络可访问资源</h2>
 
 <p>网络可访问资源指的是像图片、HTML、CSS 和 JavaScript 一类在扩展中包含的资源文件，并且你可以在内容脚本和页面脚本中访问。这些网络可访问资源可以在页面脚本和内容脚本中通过使用特定的URI方案来引用。<br>
  举个例子来说，如果一个内容脚本想要把一些图片插入网页，你可以在扩展中引入它们并且使他们成为网络可访问资源。接下来，内容脚本就可以创建并追加包含 <code>src</code> 属性的 <a href="/zh-CN/docs/Web/HTML/Element/img">img</a> 标签了。</p>
