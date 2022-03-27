@@ -2,35 +2,34 @@
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
 tags:
-  - API
-  - DOM
-  - Method
-  - Reference
+  - メソッド
+  - リファレンス
+browser-compat: api.DOMTokenList.supports
 translation_of: Web/API/DOMTokenList/supports
 ---
-<p>{{APIRef("DOM")}}{{SeeCompatTable}}</p>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary"><strong><code>supports()</code></strong> は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、渡された <code><var>token</var></code> が関連する属性で対応しているトークンに含まれていれば <code>true</code> を返します。このメソッドは機能に対応しているかを検出するためのものです。</span></p>
+**`supports()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、渡されたトークンが関連する属性で対応しているトークンに含まれていれば `true` を返します。このメソッドは機能に対応しているかを検出するためのものです。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre
-  class="brush: js">let <var>trueOrFalse</var> = <var>element</var>.supports(<var>token</var>)</pre>
+```js
+supports(token);
+```
 
-<h3 id="Parameters">引数</h3>
+## 引数
 
-<dl>
-  <dt><code><var>token</var></code></dt>
-  <dd>{{domxref("DOMString")}} で、問い合わせるトークンが入ります。</dd>
-</dl>
+- `token`
+  - : 問い合わせるトークンが入った文字列です。
 
-<h3 id="Returns">返値</h3>
+### 返値
 
-<p>{{jsxref("Boolean")}} で、トークンが見つかったかどうかを返します。</p>
+論理値で、トークンが見つかったかどうかを返します。
 
-<h2 id="Example">例</h2>
+## 例
 
-<pre class="brush: js">let iframe = document.getElementById('display');
+```js
+const iframe = document.getElementById('display');
 
 if (iframe.sandbox.supports('an-upcoming-feature')) {
   // support code for mystery future feature
@@ -43,27 +42,13 @@ if (iframe.sandbox.supports('allow-scripts')) {
   //
   // (NOTE: This feature is well-supported; this is just an example!)
   //
-}</pre>
+}
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('Credential Management')}}</td>
-      <td>{{Spec2('Credential Management')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DOMTokenList.supports")}}</p>
+{{Compat}}
