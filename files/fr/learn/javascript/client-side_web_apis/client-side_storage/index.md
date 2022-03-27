@@ -743,7 +743,7 @@ self.addEventListener('install', function(e) {
 });
 ```
 
-1.  Le gestionnaire d'événément `install` est enregistré sur `self`. Le mot-clé `self` est un moyen de faire référence au service worker de la portée globale à partir de son fichier.
+1.  Le gestionnaire d'évènement `install` est enregistré sur `self`. Le mot-clé `self` est un moyen de faire référence au service worker de la portée globale à partir de son fichier.
 2.  À l'intérieur du gestionnaire d'installation, on utilise la méthode {{domxref("ExtendableEvent.waitUntil()")}}, disponible sur l'objet événement, pour signaler que le navigateur ne doit pas terminer l'installation du service worker avant que la promesse qu'il contient ne soit résolue avec succès.
 3.  Ici, on voit l'API Cache en action: on utilise la méthode {{domxref("CacheStorage.open()")}} pour ouvrir un nouvel objet cache dans lequel les réponses seront stockées (similaire à un object store IndexedDB). Cette promesse se résout avec un objet {{domxref("Cache")}} représentant le cache du `video-store`.
 4.  On utilise la méthode {{domxref("Cache.addAll()")}} pour récupérer une série de ressources et ajouter leur réponse au cache.
