@@ -2,66 +2,48 @@
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
 tags:
-- API
-- DOM
-- DOMTokenList
-- Property
-- Reference
-- length
+- プロパティ
+- リファレンス
+- 読み取り専用
+browser-compat: api.DOMTokenList.length
 translation_of: Web/API/DOMTokenList/length
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>length</code></strong> は {{domxref("DOMTokenList")}} インターフェイスの読み取り専用プロパティで、オブジェクト内に格納されたオブジェクトの個数を表します。</p>
+**`length`** は {{domxref("DOMTokenList")}} インターフェイスの読み取り専用プロパティで、オブジェクト内に格納されたオブジェクトの個数を整数で表します。
 
-<h2 id="Syntax">構文</h2>
+## 値
 
-<pre class="brush: js"><var>tokenList</var>.length;</pre>
+正の整数、またはリストが空であれ `0` です。
 
-<h3 id="Value">値</h3>
+## 例
 
-<p><code>integer</code> です。</p>
+次の例は、 {{htmlelement("span")}} 要素に設定されたクラスのリストを {{domxref("Element.classList")}} を使用して `DOMTokenList` として取得し、そのリストの長さを `<span>` の {{domxref("Node.textContent")}} の中に書き込みます。
 
-<h2 id="Examples">例</h2>
+最初に HTML です。
 
-<p>次の例は、 {{htmlelement("span")}} 要素に設定されたクラスのリストを {{domxref("Element.classList")}} を使用して <code>DOMTokenList</code> として取得し、そのリストの長さを <code>&lt;span&gt;</code> の {{domxref("Node.textContent")}} の中に書き込みます。</p>
+```html
+<span class="a b c"></span>
+```
 
-<p>最初に HTML です。</p>
+そして JavaScript です。
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
-
-<p>そして JavaScript です。</p>
-
-<pre class="brush: js">let span = document.querySelector("span");
-let classes = span.classList;
-let length = classes.length;
+```js
+const span = document.querySelector("span");
+const classes = span.classList;
+const length = classes.length;
 
 span.textContent = `classList length = ${length}`;
-</pre>
+```
 
-<p>出力結果は以下のようになります。</p>
+出力結果は以下のようになります。
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-length','length')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DOMTokenList.length")}}</p>
+{{Compat}}
