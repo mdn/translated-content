@@ -72,7 +72,7 @@ De même que les styles chargés avec l'en-tête [`Link`](/fr/docs/Web/HTTP/Head
 Link: <https://not-example.com/styles/stylesheet.css>;rel=stylesheet
 ```
 
-Les attributes de style seront aussi bloqués&nbsp;:
+Les attributs de style seront aussi bloqués&nbsp;:
 
 ```html
 <div style="display:none">Toto</div>
@@ -85,7 +85,7 @@ document.querySelector('div').setAttribute('style', 'display:none;');
 document.querySelector('div').style.cssText = 'display:none;';
 ```
 
-Toutefois, les propriétés de styles qui sont définies directement dans l'attribut [`style`](/fr/docs/Web/API/HTMLElement/style) ne seront pas bloquées, permettant aux utilisateurs de manipuler sainement les styles avec JavaScript&nbsp;:
+Toutefois, les propriétés de styles qui sont définies directement dans l'attribut [`style`](/fr/docs/Web/API/HTMLElement/style) ne seront pas bloquées, permettant aux utilisatrices et utilisateurs de manipuler sainement les styles avec JavaScript&nbsp;:
 
 ```js
 document.querySelector('div').style.display = 'none';
@@ -107,7 +107,7 @@ Cette directive CSP autorisera toutes les feuilles de styles embarquées avec l'
 
 ```html
 <style>
-#inline-style { background: red; }
+  #inline-style { background: red; }
 </style>
 
 <div style="display:none">Toto</div>
@@ -123,7 +123,7 @@ Vous devrez alors définir ce nonce sur l'élément [`<style>`](/fr/docs/Web/HTM
 
 ```html
 <style nonce="2726c7f26c">
-#inline-style { background: red; }
+  #inline-style { background: red; }
 </style>
 ```
 

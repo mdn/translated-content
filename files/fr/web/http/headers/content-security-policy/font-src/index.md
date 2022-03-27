@@ -6,7 +6,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.font-src
 ---
 {{HTTPSidebar}}
 
-La directive [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`font-src`** spécifie les sources valides pour les polices de caractères chargées avec [`@font-face`](/fr/docs/Web/CSS/@font-face).
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`font-src`** spécifie les sources valides pour les polices de caractères chargées avec [`@font-face`](/fr/docs/Web/CSS/@font-face).
 
 <table class="properties">
   <tbody>
@@ -52,7 +52,7 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: font-src https://example.com/
 ```
 
-Cette définition de police sera bloquée et ne se chargera pas&nsbp;:
+Cette définition de police sera bloquée et ne se chargera pas&nbsp;:
 
 ```html
 <style>

@@ -55,7 +55,7 @@ Content-Security-Policy: script-src https://example.com/
 Ces scripts seront bloqués et ne seront pas chargés ou exécutés&nbsp;:
 
 ```html
-<script src="https://pas-example.com/js/bibliotheque.js"></script>
+<script src="https://not-example.com/js/bibliotheque.js"></script>
 ```
 
 On notera que les gestionnaires d'évènements déclarés dans les attributs sont aussi bloqués&nbsp;:

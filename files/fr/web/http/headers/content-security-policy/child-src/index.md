@@ -6,7 +6,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.child-src
 ---
 {{HTTPSidebar}}
 
-La directive [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`child-src`** définit les sources valides de [<i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) et de contextes de navigations imbriqués chargés au moyen d'éléments tels que [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe). Pour les <i lang="en">workers</i>, les requêtes non-conformes sont traitées comme des erreurs de réseau fatales par l'agent utilisateur.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`child-src`** définit les sources valides de [<i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) et de contextes de navigations imbriqués chargés au moyen d'éléments tels que [`<frame>`](/fr/docs/Web/HTML/Element/frame) et [`<iframe>`](/fr/docs/Web/HTML/Element/iframe). Pour les <i lang="en">workers</i>, les requêtes non-conformes sont traitées comme des erreurs de réseau fatales par l'agent utilisateur.
 
 <table class="properties">
   <tbody>
@@ -21,7 +21,7 @@ La directive [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Secur
     <tr>
       <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
-        Oui, si cette directive est absente, l'agent consultera la directive <code>default-src</code>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code>
       </td>
     </tr>
   </tbody>

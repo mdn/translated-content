@@ -19,9 +19,9 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-
       <td><a href="/fr/docs/Glossary/Fetch_directive">Directive de récupération</a></td>
     </tr>
     <tr>
-      <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
+      <th scope="row">Valeur par défaut</th>
       <td>
-        Si cette directive est absente, l'agent utilisateur consultera d'abord la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/child-src"><code>child-src</code></a> puis la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src"><code>script-src</code></a> et enfin la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a>.
+        Si cette directive est absente, l'agent utilisateur consultera d'abord la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/child-src"><code>child-src</code></a>, puis la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src"><code>script-src</code></a> et enfin la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a>.
       </td>
     </tr>
   </tbody>
@@ -73,5 +73,5 @@ Content-Security-Policy: worker-src https://example.com/
 ## Voir aussi
 
 - [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [Utiliser CSP pour les <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy)
+- [Utiliser CSP pour les <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers#règles_de_sécurité_du_contenu_content_security_policy_csp)
 - [`Worker`](/fr/docs/Web/API/Worker), [`SharedWorker`](/fr/docs/Web/API/SharedWorker), [`ServiceWorker`](/fr/docs/Web/API/ServiceWorker)

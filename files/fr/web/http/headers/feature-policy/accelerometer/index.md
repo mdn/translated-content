@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Feature-Policy/accelerometer
 translation_of: Web/HTTP/Headers/Feature-Policy/accelerometer
 browser-compat: http.headers.Feature-Policy.accelerometer
 ---
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 La directive `accelerometer` de l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Feature-Policy) contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface [`Accelerometer`](/fr/docs/Web/API/Accelerometer).
 
@@ -14,7 +14,7 @@ La directive `accelerometer` de l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/
 Feature-Policy: accelerometer <allowlist>;
 ```
 
-- \<allowlist>
+- `<allowlist>`
   - : Une liste d'origines pour lesquelles la fonctionnalité est autorisée. Voir [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Feature-Policy#syntaxe).
 
 ## Règle par défaut

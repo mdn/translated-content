@@ -6,16 +6,16 @@ browser-compat: http.headers.csp.Content-Security-Policy.connect-src
 ---
 {{HTTPSidebar}}
 
-La directive [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API concernées sont&nbsp;:
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API concernées sont&nbsp;:
 
-- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#attr-ping),
+- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping),
 - [`fetch()`](/fr/docs/Web/API/fetch),
 - [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest),
 - [`WebSocket`](/fr/docs/Web/API/WebSocket),
 - [`EventSource`](/fr/docs/Web/API/EventSource),
 - [`Navigator.sendBeacon()`](/fr/docs/Web/API/Navigator/sendBeacon).
 
-> **Note :** `connect-src 'self'` ne s'applique pas aux schémas de websocket pour tous les navigateurs. Pour plus d'informations, consulter [ce ticket](https://github.com/w3c/webappsec-csp/issues/7).
+> **Note :** `connect-src 'self'` ne s'applique pas aux schémas de websocket pour tous les navigateurs. Pour plus d'informations, consulter [ce ticket (en anglais)](https://github.com/w3c/webappsec-csp/issues/7).
 
 <table class="properties">
   <tbody>
@@ -94,7 +94,7 @@ Les connexions suivantes seront bloquées et ne se chargeront pas&nbsp;:
 ## Voir aussi
 
 - [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#attr-ping)
+- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping)
 - [`fetch()`](/fr/docs/Web/API/fetch)
 - [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
 - [`WebSocket`](/fr/docs/Web/API/WebSocket)

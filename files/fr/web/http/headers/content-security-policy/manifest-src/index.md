@@ -52,7 +52,7 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: manifest-src https://example.com/
 ```
 
-Cet élément [`<link>`](/fr/docs/Web/HTML/Element/link) sera bloqué et ne se chargera pas :
+Cet élément [`<link>`](/fr/docs/Web/HTML/Element/link) sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
 <link rel="manifest" href="https://not-example.com/manifest">

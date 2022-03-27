@@ -6,7 +6,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.form-action
 ---
 {{HTTPSidebar}}
 
-La directive [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`form-action`** restreint les URL pouvant être utilisées comme cibles d'envoi de formulaire depuis un contexte donné.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`form-action`** restreint les URL pouvant être utilisées comme cibles d'envoi de formulaire depuis un contexte donné.
 
 > **Attention :** La question de savoir si `form-action` doit bloquer les redirections après une soumission de formulaire est encore [débattue](https://github.com/w3c/webappsec-csp/issues/8) et les implémentations des navigateurs sur cet aspect sont hétérogènes (par exemple Firefox 57 ne les bloque pas, contrairement à Chrome 63).
 
@@ -44,7 +44,7 @@ On notera que cet ensemble de valeurs peut être utilisé pour toutes les [direc
 
 ## Exemples
 
-### Configuration avec la balise \<meta>
+### Configuration avec la balise `<meta>`
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="form-action 'none'">

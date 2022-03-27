@@ -6,7 +6,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.base-uri
 ---
 {{HTTPSidebar}}
 
-La directive [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`base-uri`** restreint les URL qui peuvent être utilisées comme valeur d'un élément [`<base>`](/fr/docs/Web/HTML/Element/base). Si cette valeur est absente, alors toutes les adresses sont autorisées. Si cette directive est absente, l'agent utilisateur utilisera la valeur de l'élément [`<base>`](/fr/docs/Web/HTML/Element/base).
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`base-uri`** restreint les URL qui peuvent être utilisées comme valeur d'un élément [`<base>`](/fr/docs/Web/HTML/Element/base). Si cette valeur est absente, alors toutes les adresses sont autorisées. Si cette directive est absente, l'agent utilisateur utilisera la valeur de l'élément [`<base>`](/fr/docs/Web/HTML/Element/base).
 
 <table class="properties">
   <tbody>
@@ -42,7 +42,7 @@ On notera toutefois que certaines de ces valeurs n'ont pas de sens pour `base-ur
 
 ## Exemples
 
-### Configuration avec la balise \<meta>
+### Configuration avec la balise `<meta>`
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="base-uri 'self'">

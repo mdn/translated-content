@@ -6,7 +6,7 @@ browser-compat: http.headers.csp.Content-Security-Policy.navigate-to
 ---
 {{HTTPSidebar}}
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`navigate-to`** restreint les URL vers lesquelles un document peut initier une navigation de quelque manière que ce soit ([`<form>`](/fr/docs/Web/HTML/Element/Form), si [`form-action`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) n'est pas spécifié), [`<a>`](/fr/docs/Web/HTML/Element/a), [`window.location`](/fr/docs/Web/API/Window/location), [`window.open`](/fr/docs/Web/API/Window/open), etc.). Cette contrainte ne concerne que les navigations *initiées* par le document et pas les destinations vers lesquelles il est possible de naviguer depuis le document.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`navigate-to`** restreint les URL vers lesquelles un document peut initier une navigation de quelque manière que ce soit ([`<form>`](/fr/docs/Web/HTML/Element/Form), si [`form-action`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) n'est pas spécifié&nbsp;; [`<a>`](/fr/docs/Web/HTML/Element/a), [`window.location`](/fr/docs/Web/API/Window/location), [`window.open`](/fr/docs/Web/API/Window/open), etc.). Cette contrainte ne concerne que les navigations *initiées* par le document et **pas** les destinations vers lesquelles il est possible de naviguer depuis le document.
 
 > **Note :** Si la directive [`form-action`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) est présente, la directive `navigate-to` ne s'appliquera pas aux navigations causées par les envois de formulaire.
 
@@ -44,7 +44,7 @@ On notera que cet ensemble de valeurs peut être utilisé pour toutes les [direc
 
 ## Exemples
 
-### Configuration avec la balise \<meta>
+### Configuration avec la balise `<meta>`
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="navigate-to 'none'">
@@ -74,8 +74,8 @@ Utiliser l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) avec un attribut
 ## Voir aussi
 
 - [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`form-action`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/form-action) 
-- L'attribut `href` pour l'élément HTML [`<a>`](/fr/docs/Web/HTML/Element/a)
+- [`form-action`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/form-action)
+- L'attribut [`href`](/fr/docs/Web/HTML/Element/a#href) pour l'élément HTML [`<a>`](/fr/docs/Web/HTML/Element/a)
 - [`<form>`](/fr/docs/Web/HTML/Element/Form)
 - [`window.location`](/fr/docs/Web/API/Window/location)
 - [`window.open`](/fr/docs/Web/API/Window/open)

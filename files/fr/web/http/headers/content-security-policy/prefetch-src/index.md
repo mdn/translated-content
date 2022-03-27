@@ -59,7 +59,7 @@ Les requêtes émises par ce code généreront des erreurs de réseau puisque le
 <link rel="prerender" src="https://example.org/"></link>
 ```
 
-## Spécification
+## Spécifications
 
 {{Specifications}}
 

@@ -76,5 +76,5 @@ Ces éléments [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/d
 ## Voir aussi
 
 - [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed), et [`<applet>`](/fr/docs/Web/HTML/Element/applet)
+- [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet)
 - [`plugin-types`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/plugin-types)

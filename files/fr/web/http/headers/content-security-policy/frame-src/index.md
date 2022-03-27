@@ -21,7 +21,7 @@ La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-
     <tr>
       <th scope="row">Utilisation de <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a> par défaut</th>
       <td>
-        Si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/child-src">child-src</a>, qui a pour valeur par défaut celle de la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src">default-src</a>.
+        Si cette directive est absente, l'agent utilisateur consultera la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/child-src"><code>child-src</code></a>, qui a pour valeur par défaut celle de la directive <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src"><code>default-src</code></a>.
       </td>
     </tr>
   </tbody>
