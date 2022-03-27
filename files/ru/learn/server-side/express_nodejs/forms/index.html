@@ -213,57 +213,57 @@ router.post('/genre/create', genre_controller.genre_create_post);
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms/Update_Book_form">Форма для обновления Book</a> — Определение страницы для обновления объектов <code>Book</code>.</li>
 </ol>
 
-<h2 id="Challenge_yourself">Challenge yourself</h2>
+<h2 id="Challenge_yourself">Испытайте себя</h2>
 
-<p>Implement the delete pages for the <code>Book</code>, <code>BookInstance</code>, and <code>Genre</code> models, linking them from the associated detail pages in the same way as our <em>Author delete </em>page. The pages should follow the same design approach:</p>
+<p>Реализуйте страницы удаления для моделей <code>Book</code>, <code>BookInstance</code> и <code>Genre</code>, сделав на них ссылки с соответствующих страниц с подробными сведениями таким же образом, как это было нами сделано для страницы <em>Delete Author</em> («Удалить автора»). Эти страницы должны следовать тем же конструктивным принципам:</p>
 
 <ul>
- <li>If there are references to the object from other objects, then these other objects should be displayed along with a note that this record can't be deleted until the listed objects have been deleted.</li>
- <li>If there are no other references to the object then the view should prompt to delete it. If the user presses the <strong>Delete</strong> button, the record should then be deleted.</li>
+ <li>Если на объект, указанный к удалению, существуют ссылки из других объектов, то должен быть выведен список этих других объектов вместе с сообщением о том, что запись об объекте, указанном к удалению, не может быть удалена до тех пор, пока не будут удалены объекты из списка.</li>
+ <li>Если на объект, указанный к удалению, нет ссылок из других объектов, то шаблон страницы должен вывести вопрос о подтверждении удаления этого объекта. Если пользователь подтвердит удаление нажатием кнопки <strong>Delete</strong>, запись должна быть удалена.</li>
 </ul>
 
-<p>A few tips:</p>
+<p>Несколько подсказок:</p>
 
 <ul>
- <li>Deleting a <code>Genre</code> is just like deleting an <code>Author</code> as both objects are dependencies of <code>Book</code> (so in both cases you can delete the object only when the associated books are deleted).</li>
- <li>Deleting a <code>Book</code> is also similar, but you need to check that there are no associated <code>BookInstances</code>.</li>
- <li>Deleting a <code>BookInstance</code> is the easiest of all, because there are no dependent objects. In this case you can just find the associated record and delete it.</li>
+ <li>Удаление объекта модели <code>Genre</code> очень похоже на удаление объекта модели <code>Author</code>, так как на каждый из этих объектов могут быть ссылки из объектов модели <code>Book</code> (таким образом, в обоих этих случаях вы можете удалить объект только тогда, когда будут удалены объекты модели <code>Book</code>, из которых есть ссылки на объект, указанный к удалению).</li>
+ <li>Удаление объекта модели <code>Book</code> тоже похоже на удаление объекта модели <code>Author</code>, но в этом случае вам нужно будет проверять, нет ли объектов модели <code>BookInstance</code>, из которых есть ссылки на объект, указанный к удалению.</li>
+ <li>Удаление объекта модели <code>BookInstance</code> самое простое из всех, потому что не существует объектов, из которых могут быть ссылки на объект модели <code>BookInstance</code>. В данном случае вы можете просто найти соответствующую запись и удалить ее.</li>
 </ul>
 
-<p>Implement the update pages for the <code>BookInstance</code>, <code>Author</code>, and <code>Genre</code> models, linking them from the associated detail pages in the same way as our <em>Book update </em>page.</p>
+<p>Реализуйте страницы обновления для моделей <code>BookInstance</code>, <code>Author</code> и <code>Genre</code>, сделав на них ссылки с соответствующих страниц с подробными сведениями таким же образом, как это было нами сделано для страницы <em>Update Book</em> («Обновить книгу»).</p>
 
-<p>A few tips:</p>
+<p>Несколько подсказок:</p>
 
 <ul>
- <li>The <em>Book update page</em> we just implemented is the hardest! The same patterns can be used for the update pages for the other objects.</li>
- <li>The <code>Author</code> date of death and date of birth fields, and the <code>BookInstance</code> due_date field are the wrong format to input into the date input field on the form (it requires data in form "YYYY-MM-DD"). The easiest way to get around this is to define a new virtual property for the dates that formats the dates appropriately, and then use this field in the associated view templates.</li>
- <li>If you get stuck, there are examples of the update pages in <a href="https://github.com/mdn/express-locallibrary-tutorial">the example here</a>.</li>
+ <li>Страница <em>Update Book</em> («Обновить книгу»), которую мы только что реализовали, является самой сложной в реализации! Те же приемы можно использовать для страниц обновления объектов других моделей.</li>
+ <li>Свойства объектов модели <code>Author</code> с датой рождения и датой смерти и свойство due_back объектов модели <code>BookInstance</code> имеют неподходящий формат для сохранения в поля с типом 'date' HTML-формы (такие поля требуют, чтобы записываемые в них данные были строками вида "YYYY-MM-DD"). Самый простой способ это обойти&nbsp;— создать новое виртуальное свойство в соответствующей модели для каждого реального свойства с датой, которое преобразует и возвратит дату в нужном формате, а затем использовать это виртуальное свойство в соответствующих шаблонах страниц.</li>
+ <li>Если вы зашли в тупик, обратитесь к реализации страниц обновления в <a href="https://github.com/mdn/express-locallibrary-tutorial">примере вот тут</a>.</li>
 </ul>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="Summary">Резюмируем</h2>
 
-<p><em>Express</em>, node, and third party packages on NPM provide everything you need to add forms to your website. In this article you've learned how to create forms using <em>Pug</em>, validate and sanitize input using <em>express-validator</em>, and add, delete, and modify records in the database.</p>
+<p>Веб-фреймворк <em>Express</em>, среда выполнения «Node.js» и сторонние пакеты, полученные через менеджер пакетов «NPM», обеспечивают всё, что вам потребуется для добавления форм на ваш сайт. В этой статье вы узнали, как создавать формы с помощью языка написания шаблонов <em>Pug</em>, как выполнять валидацию и очистку вводимых пользователем данных с помощью пакета <em>express-validator</em> и как добавлять, удалять и модифицировать записи в базе данных сайта.</p>
 
-<p>You should now understand how to add basic forms and form-handling code to your own node websites!</p>
+<p>Теперь вы должны представлять, как добавить простые формы и управляющий работой форм код на свои собственные сайты, работающие в рамках среды выполнения «Node.js»!</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
- <li><a href="https://www.npmjs.com/package/express-validator">express-validator</a> (npm docs).</li>
+ <li>Пакет <a href="https://www.npmjs.com/package/express-validator">express-validator</a> (документация на сайте менеджера пакетов «npm»).</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="In_this_module">Содержание этого модуля (блока статей)</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction">Express/Node introduction</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment">Setting up a Node (Express) development environment</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Express Tutorial: The Local Library website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Express Tutorial Part 2: Creating a skeleton website</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose">Express Tutorial Part 3: Using a Database (with Mongoose)</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes">Express Tutorial Part 4: Routes and controllers</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Express Tutorial Part 5: Displaying library data</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms">Express Tutorial Part 6: Working with forms</a></li>
- <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs/deployment">Express Tutorial Part 7: Deploying to production</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/Express_Nodejs/Introduction">Введение в Express/Node</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/Express_Nodejs/development_environment">Установка среды разработки в рамках «Node.js» (Express)</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website">Учебник Express: сайт Local Library</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website">Учебник Express, часть 2: Создание скелета сайта</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/Express_Nodejs/mongoose">Учебник Express, часть 3: Использование базы данных (с помощью Mongoose)</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/Express_Nodejs/routes">Учебник Express, часть 4: Маршруты и контроллеры</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data">Учебник Express, часть 5: Отображение данных библиотеки</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/Express_Nodejs/forms">Учебник Express, часть 6: Работа с формами</a></li>
+ <li><a href="/ru/docs/Learn/Server-side/Express_Nodejs/deployment">Учебник Express, часть 7: Ввод сайта в эксплуатацию</a></li>
 </ul>
