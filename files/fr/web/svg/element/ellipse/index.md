@@ -50,7 +50,7 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
 - [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
   - : Plus notamment : {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - Attributs d'événements
-  - : [Attributs d'événément globaux](/fr/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Attributs d'événément graphiques](/fr/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
+  - : [Attributs d'évènement globaux](/fr/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Attributs d'évènement graphiques](/fr/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
 - [Attributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
   - : Plus notamment : {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - Attributs ARIA

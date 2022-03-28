@@ -31,7 +31,7 @@ Une autre tâche courante dans les sites et applications web modernes est de ré
         <a href="/fr/docs/Learn/JavaScript/Objects">les objets JavaScript</a>),
         les
         <a href="/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction"
-          >notions de bases des APIs côté client</a
+          >notions de bases des API côté client</a
         >
       </td>
     </tr>
@@ -73,7 +73,7 @@ C'est une bonne chose puisque :
 - La mise à jour de la page est beaucoup plus rapide et vous n'avez pas à attendre que la page se rafraîchisse, si bien que le site paraît être plus rapide et plus réactif.
 - Moins de données doivent être téléchargées pour mettre à jour la page, et donc moins de bande passante est utilisée. Cela ne fait peut-être pas une grande différence sur un ordinateur de bureau, mais cela peut devenir un problème majeur sur mobile ou dans les pays en développement, qui n'ont pas partout un service Internet ultra-rapide.
 
-Notez que pour accélerer les choses encore davantage, certains sites stockent les ressources et données chez le client lors de sa première visite, si bien que les visites suivantes, les fichiers locaux sont utilisés et non re-téléchargés du serveur. Le contenu n'est rechargé que lorsqu'il a été mis à jour sur le serveur.
+Notez que pour accélérer les choses encore davantage, certains sites stockent les ressources et données chez le client lors de sa première visite, si bien que les visites suivantes, les fichiers locaux sont utilisés et non re-téléchargés du serveur. Le contenu n'est rechargé que lorsqu'il a été mis à jour sur le serveur.
 
 ![A basic web app data flow architecture](web-app-architecture@2x.png)
 
@@ -88,7 +88,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
 `XMLHttpRequest` (qui est fréquemment abrégé XHR) est une technologie assez vieille maintenant — elle a été inventée par Microsoft dans les années 90 et a été standardisée dans les autres navigateurs il y a longtemps.
 
 1.  Pour commencer cet exemple, faites une copie locale de [ajax-start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/ajax-start.html) et des quatre fichiers texte — [verse1.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse1.txt), [verse2.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse2.txt), [verse3.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse3.txt), et [verse4.txt](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/verse4.txt) — dans un nouveau répertoire sur votre ordinateur. Dans cet exemple, nous allons charger le verset d'un poème (que vous pourriez bien reconnaître), quand il est sélectionné dans le menu déroulant, en utilisant XHR.
-2.  À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'événement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction  `updateDisplay()`.
+2.  À l'intérieur de l'élément {{htmlelement("script")}}, ajoutez le code qui suit. Il stocke une référence aux éléments {{htmlelement("select")}} et {{htmlelement("pre")}} dans des variables et définit un gestionnaire d'évènement {{domxref("GlobalEventHandlers.onchange","onchange")}}, pour que, quand la valeur du menu déroulant est changée, la valeur sélectionnée soit passée comme paramètre à la fonction  `updateDisplay()`.
 
     ```js
     var verseChoose = document.querySelector('select');
@@ -136,9 +136,9 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
     request.responseType = 'text';
     ```
 
-8.  Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'événement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'événement {{event("load")}} est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
+8.  Récupérer une ressource sur le réseau est une opération {{glossary("asynchronous","asynchrone")}}, ce qui signifie que vous devez attendre que cette opération se termine (par exemple, que la ressource soit renvoyée) avant de pouvoir récupérer la réponse — sans quoi une erreur est levée. XHR permet d'exécuter du code lorsque la réponse est reçue grâce au gestionnaire d'évènement {{domxref("XMLHttpRequest.onload", "onload")}} — quand l'évènement {{event("load")}} est déclenché. Une fois que la réponse a été reçue, alors la réponse est accessible via la propriété `response` de l'objet XHR utilisé.
 
-    Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'événément `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
+    Ajoutez le bloc de code qui suit toujours au bas de la fonction `updateDisplay()`. Vous verrez qu'à l'intérieur du gestionnaire d'évènement `onload`, nous assignons la propriété [`textContent`](/fr/docs/Web/API/Node/textContent) de `poemDisplay` (l'élément {{htmlelement("pre")}}) à la valeur de la propriété {{domxref("XMLHttpRequest.response", "request.response")}}.
 
     ```js
     request.onload = function() {
@@ -165,7 +165,7 @@ Ces fichiers agiront comme une fausse base de données ; dans une vraie applicat
 
 Certains navigateurs (dont Chrome) n'exécuteront pas de requêtes XHR si vous exécutez votre script simplement à partir d'un fichier local. Cela est dû à des restrictions de sécurité (pour plus d'infos sur la sécurité web, consultez l'article [La sécurité d'un site web](/fr/docs/Learn/Server-side/First_steps/Website_security)).
 
-Pour règler ce problème, vous devez tester l'exemple à travers un serveur web local. Pour savoir comment procéder, lisez [Comment configurer un serveur de test local?](/fr/Apprendre/Common_questions/configurer_un_serveur_de_test_local)
+Pour régler ce problème, vous devez tester l'exemple à travers un serveur web local. Pour savoir comment procéder, lisez [Comment configurer un serveur de test local?](/fr/Apprendre/Common_questions/configurer_un_serveur_de_test_local)
 
 ### Fetch
 
@@ -202,9 +202,9 @@ Voyons comment convertir le dernier exemple, en remplaçant XHR par Fetch.
 
 #### Que se passe-t-il dans le code Fetch?
 
-Tout d'abord, nous invoquons la méthode {{domxref("WindowOrWorkerGlobalScope.fetch()","fetch()")}}, en lui passant l'URL de la ressource que nous voulons récupérer. C'est la version moderne équivalente à {{domxref("XMLHttpRequest.open","request.open()")}} de XHR, et n'avez pas à appeler `.send()` — la requête est exécutée directemment.
+Tout d'abord, nous invoquons la méthode {{domxref("WindowOrWorkerGlobalScope.fetch()","fetch()")}}, en lui passant l'URL de la ressource que nous voulons récupérer. C'est la version moderne équivalente à {{domxref("XMLHttpRequest.open","request.open()")}} de XHR, et n'avez pas à appeler `.send()` — la requête est exécutée directement.
 
-Ensuite, la méthode {{jsxref("Promise.then",".then()")}} est chaînée à la suite de `fetch()` — cette méthode fait partie des {{jsxref("Promise","Promesses")}}, une fonctionnalité JavaScript moderne qui permet d'effectuer des opérations asynchrones. `fetch()` retourne une promesse, qui est résolue lorsque la réponse est reçue du serveur — et nous utilisons `.then()` pour exécuter du code à ce moment là. C'est l'équivalent du gestionnaire d'événément `onload` dans la version XHR.
+Ensuite, la méthode {{jsxref("Promise.then",".then()")}} est chaînée à la suite de `fetch()` — cette méthode fait partie des {{jsxref("Promise","Promesses")}}, une fonctionnalité JavaScript moderne qui permet d'effectuer des opérations asynchrones. `fetch()` retourne une promesse, qui est résolue lorsque la réponse est reçue du serveur — et nous utilisons `.then()` pour exécuter du code à ce moment-là. C'est l'équivalent du gestionnaire d'évènement `onload` dans la version XHR.
 
 La fonction définie dans le `.then()` reçoit la réponse du serveur comme paramètre, une fois que la promesse retournée par `fetch()` est résolue. À l'intérieur de cette fonction, nous utilisons la méthode {{domxref("Body.text","text()")}} pour récupérer le contenu de la réponse en texte brut. C'est l'équivalent de `request.responseType = 'text'` dans la version XHR.
 
@@ -214,7 +214,7 @@ Enfin, dans le corps de la fonction, nous faisons la même chose que nous faisio
 
 ### À propos des promesses
 
-Les promesses peuvent être un peu déroutantes au premier abord, ne vous en souciez pas trop pour l'instant. Vous vous y ferez après un certain temps, d'autant plus après en avoir appris davantage sur les APIs JavaScript modernes — la plupart des APIs récentes utilisent beaucoup les promesses.
+Les promesses peuvent être un peu déroutantes au premier abord, ne vous en souciez pas trop pour l'instant. Vous vous y ferez après un certain temps, d'autant plus après en avoir appris davantage sur les API JavaScript modernes — la plupart des API récentes utilisent beaucoup les promesses.
 
 Regardons à nouveau la structure d'une promesse pour voir si nous pouvons en donner plus de sens.
 
@@ -231,7 +231,7 @@ Si l'on traduit en bon français les instructions JavaScript, on pourrait dire
 - `fetch(url)`&nbsp;: récupérer la ressource située à l'adresse `url`
 - `.then(function() { ... })`: quand c'est fait, exécuter la fonction spécifiée
 
-On dit qu'une promesse est "résolue" (resolved) lorsque l'opération spécifiée à un moment donné est terminée. En l'occurence, l'opération spécifiée est de récupérer une ressource à une URL donnée (en utilisant une requête HTTP) et de retourner la réponse reçue du serveur.
+On dit qu'une promesse est "résolue" (resolved) lorsque l'opération spécifiée à un moment donné est terminée. En l'occurrence, l'opération spécifiée est de récupérer une ressource à une URL donnée (en utilisant une requête HTTP) et de retourner la réponse reçue du serveur.
 
 La fonction passée à `then()` n'est pas exécutée immédiatement — elle est exécutée à un moment dans le futur, dès que la promesse est résolue (c'est à dire qu'elle a retourné la réponse du serveur).
 
@@ -257,7 +257,7 @@ Mais il est plus logique de donner un nom de paramètre qui décrit son contenu 
 
 #### Promesse 2
 
-Voyons maintenant la fonction appelé dans `.then()`:
+Voyons maintenant la fonction appelée dans `.then()`:
 
 ```js
 function(response) {
@@ -322,7 +322,7 @@ fetch('products.json').then(function(response) {
 });
 ```
 
-Cela ressemble à ce que vous avons vu précédemment, sauf que la deuxième promesse est à l'intérieur d'une condition. Cette condition vérifie si la réponse retournée est un succès ou non — la propriété {{domxref("response.ok")}} contient un booléen qui vaut `true` si le statut de la réponse était OK ([statut HTTP 200, "OK"](/fr/docs/Web/HTTP/Status/200)), ou `false` sinon.
+Cela ressemble à ce que vous avez vu précédemment, sauf que la deuxième promesse est à l'intérieur d'une condition. Cette condition vérifie si la réponse retournée est un succès ou non — la propriété {{domxref("response.ok")}} contient un booléen qui vaut `true` si le statut de la réponse était OK ([statut HTTP 200, "OK"](/fr/docs/Web/HTTP/Status/200)), ou `false` sinon.
 
 Si la réponse était un succès, nous déclenchons la deuxième promesse — cette fois-ci en utilisant {{domxref("Body.json","json()")}} et non {{domxref("Body.text","text()")}}, puisque nous voulons récupérer la réponse sous forme de données structurées JSON et non de texte brut.
 
@@ -352,7 +352,7 @@ fetch(url).then(function(response) {
 });
 ```
 
-Cela fonctionne à peu près de la même manière que le précédent, sauf qu'au lieu d'utiliser {{domxref("Body.json","json()")}}, on utilise {{domxref("Body.blob","blob()")}} — en l'occurence, nous voulons récupérer la réponse sous la forme d'un fichier image, et le format de données que nous utilisons est [Blob](/fr/docs/Web/API/Blob) — ce terme est une abbréviation de "Binary Large Object" (large objet binaire) et peut être utilisé pour représenter de gros objets fichier — tels que des fichiers images ou vidéo.
+Cela fonctionne à peu près de la même manière que le précédent, sauf qu'au lieu d'utiliser {{domxref("Body.json","json()")}}, on utilise {{domxref("Body.blob","blob()")}} — en l'occurrence, nous voulons récupérer la réponse sous la forme d'un fichier image, et le format de données que nous utilisons est [Blob](/fr/docs/Web/API/Blob) — ce terme est une abréviation de "Binary Large Object" (large objet binaire) et peut être utilisé pour représenter de gros objets fichier — tels que des fichiers images ou vidéo.
 
 Une fois que nous avons reçu notre blob avec succès, nous créons un objet URL, en utilisant {{domxref("URL.createObjectURL()", "createObjectURL()")}}. Cela renvoie une URL interne temporaire qui pointe vers un blob en mémoire dans le navigateur. Cet objet n'est pas très lisible, mais vous pouvez voir à quoi il ressemble en ouvrant l'application Can Store, Ctrl + Clic droit sur l'image, et sélectionner l'option "Afficher l'image" (peut légèrement varier selon le navigateur que vous utilisez). L'URL créée sera visible à l'intérieur de la barre d'adresse et devrait ressembler à quelque chose comme ça :
 
@@ -368,7 +368,7 @@ Quelques conseils qui pourraient s'avérer utiles :
 - Vous allez devoir utiliser le même modèle que vous avez vu plus tôt dans l'exemple [XHR-basic.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/fetching-data/xhr-basic.html).
 - Vous devrez ajouter la gestion des erreurs que nous vous avons montré dans la version Fetch de Can Store :
 
-  - La réponse se situe dans `request.response` une fois que l'événement `load` a été déclenché et non dans une promesse.
+  - La réponse se situe dans `request.response` une fois que l'évènement `load` a été déclenché et non dans une promesse.
   - Le meilleur équivalent à `response.ok` en XHR est de vérifier si {{domxref("XMLHttpRequest.status","request.status")}} vaut 200 ou si {{domxref("XMLHttpRequest.readyState","request.readyState")}} est égal à 4.
   - Les propriétés permettant d'obtenir le status et le message en cas d'erreur sont toujours `status` et `statusText` mais elles se situent sur l'objet `request` (XHR) et non sur l'objet `response`.
 
@@ -396,7 +396,7 @@ Il y a beaucoup de sujets abordés dans cet article, dont nous n'avons qu'égrat
 - [Introduction aux API du Web](/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction)
 - [Manipuler des documents](/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents)
 - [Récupérer des données du serveur](/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data)
-- [APIs tierces](/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [API tierces](/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs)
 - [Dessiner des éléments graphiques](/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [APIs vidéo et audio](/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
+- [API vidéo et audio](/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
 - [Stockage côté client](/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage)
