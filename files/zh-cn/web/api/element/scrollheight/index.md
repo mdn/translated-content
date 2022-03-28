@@ -3,66 +3,66 @@ title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
 tags:
   - API
+  - CSSOM View
+  - NeedsDHTMLRemovalInExample
+  - Property
+  - Reference
+browser-compat: api.Element.scrollHeight
 translation_of: Web/API/Element/scrollHeight
 ---
-<p>{{ APIRef("DOM") }}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>Element.scrollHeight</code></strong> 这个只读属性是一个元素内容高度的度量，包括由于溢出导致的视图中不可见内容。</p>
+**`Element.scrollHeight`** 这个只读属性是一个元素内容高度的度量，包括由于溢出导致的视图中不可见内容。
 
-<p><code>scrollHeight </code>的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。 没有垂直滚动条的情况下，scrollHeight值与元素视图填充所有内容所需要的最小值{{domxref("Element.clientHeight", "clientHeight")}}相同。包括元素的padding，但不包括元素的border和margin。scrollHeight也包括 {{cssxref("::before")}} 和 {{cssxref("::after")}}这样的伪元素。</p>
+![](scrollheight.png)
 
-<div class="note">
-<p>属性将会对值四舍五入取整。如果需要小数值，使用<span style="line-height: 1.5;">{{ domxref("Element.getBoundingClientRect()") }}.</span></p>
-</div>
+`scrollHeight` 的值等于该元素在不使用滚动条的情况下为了适应视口中所用内容所需的最小高度。没有垂直滚动条的情况下，scrollHeight值与元素视图填充所有内容所需要的最小值{{domxref("Element.clientHeight", "clientHeight")}}相同。包括元素的padding，但不包括元素的border和margin。`scrollHeight` 也包括 {{cssxref("::before")}} 和 {{cssxref("::after")}}这样的伪元素。
+如果元素的内容不需要垂直滚动条就可以容纳，则其 `scrollHeight` 等于{{domref("Element.clientHeight", "clientHeight")}}
 
-<h2 id="Syntax_and_values" name="Syntax_and_values">语法</h2>
+> **备注：** 属性将会对值四舍五入取整。如果需要小数值，使用
+> {{ domxref("Element.getBoundingClientRect()") }}.
 
-<pre class="eval">var <em>intElemScrollHeight</em> = document.getElementById(<em>id_attribute_value</em>).scrollHeight;
-</pre>
+## 值
 
-<p><em>intElemScrollHeight</em><span style="line-height: 1.5;"> 存储着与元素scrollHeight像素值对应的一个整数。scrollHeight是一个只读属性。</span></p>
+与元素的滚动高度像素值相对应的整数。
 
-<h2 id="Example" name="Example">示例</h2>
+## 问题与解决方案
 
-<div id="offsetContainer" style="margin: 26px 0px; border: 4px dashed black; left: 260px; color: black; position: absolute; background-color: rgb(255, 255, 204);">
-<div id="idDiv" style="margin: 24px 29px; padding: 0px 28px; border: 24px solid black; width: 199px; height: 102px; overflow: auto; font-family: Arial, sans-serif; font-size: 13px !important; background-color: white;">
-<p id="PaddingTopLabel" style="margin: 0px; text-align: center; font-family: Arial, sans-serif; font-size: 13px !important; font-style: italic; font-weight: bold;">padding-top</p>
+### 判断元素是否滚动到底
 
-<p>Gentle, individualistic and very loyal, Birman cats fall between Siamese and Persian in character. If you admire cats that are non aggressive, that enjoy being with humans and tend to be on the quiet side, you may well find that Birman cats are just the felines for you.</p>
+`scrollTop`是一个非整数，而`scrollHeight`和`clientHeight`是四舍五入的，因此确定滚动区域是否滚动到底的唯一方法是查看滚动量是否足够接近某个阈值(在本例中为`1`)：
 
-<p><span style="float: right;"><img alt="Image:BirmanCat.jpg" class="internal" src="/@api/deki/files/44/=BirmanCat.jpg"></span>All Birmans have colorpointed features, dark coloration of the face, ears, legs and tail.</p>
+```js
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1
+```
 
-<p>Cat image and text coming from <a class="external" href="http://www.best-cat-art.com/">www.best-cat-art.com</a></p>
+以下内容 _不_ 会一直有效，因为`scrollTop`可能包含小数：
 
-<p id="PaddingBottomLabel" style="margin: 0px; text-align: center; font-family: Arial, sans-serif; font-size: 13px !important; font-style: italic; font-weight: bold;">padding-bottom</p>
-</div>
-<strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px !important; font-weight: bold; left: -32px; position: absolute; top: 85px;">Left</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px !important; font-weight: bold; left: 170px; position: absolute; top: -24px;">Top</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px !important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px !important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong><em>margin-top</em><em>margin-bottom</em><em>border-top</em><em>border-bottom</em><span class="comment">{{ mediawiki.external('if IE') }}&gt;&lt;span id="MrgLeft" style="position: _fckstyle="position: _fckstyle="position: absolute; left: 8px; top: 65px; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;margin-left&lt;/span&gt;&lt;span id="BrdLeft" style="position: absolute; left: 33px; top: 65px; color: white; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;border-left&lt;/span&gt;&lt;span id="PdgLeft" style="position: absolute; left: 55px; top: 65px; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;padding-left&lt;/span&gt;&lt;span id="PdgRight" style="position: absolute; left: 275px; top: 60px; color: black; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl; white-space: nowrap;"&gt;padding-right&lt;/span&gt;&lt;span id="BrdRight" style="position: absolute; left: 310px; top: 65px; color: white; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;border-right&lt;/span&gt;&lt;span id="MrgRight" style="position: absolute; left: 340px; top: 65px; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;margin-right&lt;/span&gt;&lt;!{{ mediawiki.external('endif') }}</span></div>
+```js
+element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight
+```
+### 判断元素是否能滚动
 
-<p style="margin-top: 270px;"><img alt="Image:scrollHeight.png" class="internal" src="/@api/deki/files/840/=ScrollHeight.png"></p>
+当容器不滚动但有溢出的子容器时，这些检查可以确定容器能否滚动：
 
-<h2 id="问题与解决方案">问题与解决方案</h2>
+```js
+window.getComputedStyle(element).overflowY === 'visible'
+window.getComputedStyle(element).overflowY !== 'hidden'
+```
 
-<h3 id="判定元素是否滚动到底">判定元素是否滚动到底</h3>
+## 示例
 
-<p>如果元素滚动到底，下面等式返回true，没有则返回false.</p>
+### 判定用户是否阅读过文本
 
-<pre class="syntaxbox">element.scrollHeight - element.scrollTop === element.clientHeight
-</pre>
+监听 {{domxref("GlobalEventHandlers/onscroll", "onscroll")}} 事件, 这个等价事件可以用来判定用户是否阅读过文本。 (参见 {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}} 属性)。
 
-<p>当容器不滚动但有溢出的子容器时，这些检查可以确定容器能否滚动：</p>
+下面演示中的复选框已禁用，文本区域的内容滚动倒底部时，复选框才能被选中表示同意。
+#### HTML
 
-<pre>window.getComputedStyle(element).overflowY === 'visible' window.getComputedStyle(element).overflowY !== 'hidden'
-</pre>
-
-<h2 id="scrollHeight_Demo" name="scrollHeight_Demo">scrollHeight 演示</h2>
-
-<p>监听 <code><a href="/zh-CN/docs/Web/API/GlobalEventHandlers/onscroll">onscroll</a></code> 事件，这个等式可以用来判定用户是否阅读过文本。（参考<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;"><a href="/en-US/docs/DOM/element.scrollTop" title="en-US/docs/DOM/element.scrollTop">element.scrollTop</a></code><span style="line-height: 1.5;"> 和 </span><code style="font-style: normal; line-height: 1.5;"><a href="/en-US/docs/DOM/element.clientHeight" title="en-US/docs/DOM/element.clientHeight">element.clientHeight</a></code>属性）。例如： </p>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;form name="registration"&gt;
-  &lt;p&gt;
-    &lt;textarea id="rules"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+```html
+<form name="registration">
+  <p>
+    <textarea id="rules">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
 Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
 neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
 velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
@@ -84,71 +84,77 @@ ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maec
 interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
 laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
 nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    &lt;/textarea&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;input type="checkbox" name="accept" id="agree" /&gt;
-    &lt;label for="agree"&gt;I agree&lt;/label&gt;
-    &lt;input type="submit" id="nextstep" value="Next" /&gt;
-  &lt;/p&gt;
-&lt;/form&gt;</pre>
+    </textarea>
+  </p>
+  <p>
+    <input type="checkbox" id="agree" name="accept" />
+    <label for="agree">I agree</label>
+    <input type="submit" id="nextstep" value="Next" />
+  </p>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+#### CSS
 
-<pre class="brush: css">#notice {
-  display: inline-block;
-  margin-bottom: 12px;
-  border-radius: 5px;
-  width: 600px;
-  padding: 5px;
-  border: 2px #7FDF55 solid;
+```css
+#notice {
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  width: 600px;
+  padding: 5px;
+  border: 2px #7FDF55 solid;
 }
 
 #rules {
-  width: 600px;
-  height: 130px;
-  padding: 5px;
-  border: #2A9F00 solid 2px;
-  border-radius: 5px;
-}</pre>
+  width: 600px;
+  height: 130px;
+  padding: 5px;
+  border: #2A9F00 solid 2px;
+  border-radius: 5px;
+}
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+#### JavaScript
 
-<pre class="brush: js">function checkReading () {
-  if (checkReading.read) {
+```js
+function checkReading () {
+  if (checkReading.read) {
     return;
   }
-  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+  checkReading.read = this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
+  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
+  checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
 }
 
 onload = function () {
-  var oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
-}</pre>
+  var oToBeRead = document.getElementById("rules");
+  checkReading.noticeBox = document.createElement("span");
+  document.registration.accept.checked = false;
+  checkReading.noticeBox.id = "notice";
+  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
+  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
+  oToBeRead.onscroll = checkReading;
+  checkReading.call(oToBeRead);
+}
+```
 
-<p>{{ EmbedLiveSample('scrollHeight_Demo', '640', '400') }}</p>
+{{EmbedLiveSample('判定用户是否阅读过文本', '640', '400')}}
 
-<h2 id="Specification" name="Specification" style="line-height: 30px;">说明</h2>
+## 规范
 
-<p><code>scrollHeight</code> MSIE's <abbr title="Dynamic HyperText Markup Language">DHTML</abbr> 对象模型的一部分. <code>scrollHeight</code> 是以下说明的一部分。: {{SpecName("CSSOM View")}}.</p>
+{{Specifications}}
 
-<h2 id="Supported" name="Supported">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Element.scrollHeight")}}</p>
+{{Compat}}
 
-<h2 id="See_Also" name="See_Also">参考资料</h2>
+## 参见
 
-<ul>
- <li><a href="https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)">MSDN: Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9</a></li>
- <li>{{domxref("Element.clientHeight")}}</li>
- <li>{{domxref("Element.offsetHeight")}}</li>
- <li><a href="/en-US/docs/Determining_the_dimensions_of_elements" title="en/Determining_the_dimensions_of_elements">Determining the dimensions of elements</a></li>
-</ul>
+- [MSDN:
+  Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer
+  9](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
+- {{domxref("Element.clientHeight")}}
+- {{domxref("HTMLElement.offsetHeight")}}
+- [Determining
+  the dimensions of elements](/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
