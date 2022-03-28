@@ -2,84 +2,76 @@
 title: DOMTokenList.remove()
 slug: Web/API/DOMTokenList/remove
 tags:
-- API
-- DOM
-- DOMTokenList
-- Method
-- Reference
-- remove
-- メソッド
+  - API
+  - DOM
+  - DOMTokenList
+  - メソッド
+  - リファレンス
+  - remove
+browser-compat: api.DOMTokenList.remove
 translation_of: Web/API/DOMTokenList/remove
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("DOMTokenList")}} インターフェイスの <code><strong>remove()</strong></code> メソッドは、リストから指定された<em>トークン</em>を削除します。</p>
+**`remove()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リストから指定されたトークンを取り除きます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre
-  class="brush: js"><var>tokenList</var>.remove(<var>token1</var>[, <var>token2</var>[, ...<var>tokenN</var>]]);</pre>
+```js
+remove(token);
+remove(token, token);
+remove(token, token, token);
+...
+```
 
-<h3 id="Parameters">引数</h3>
+## 引数
 
-<dl>
-  <dt><code><var>token<em>N</em></var></code></dt>
-  <dd>リストから削除したいトークンを表す {{domxref("DOMString")}} です。リストに文字列がない場合、エラーはスローされず、何も起こりません。</dd>
-</dl>
+- `token`
+  - : リストから取り除きたいトークンを表す文字列です。
+    文字列がリストにない場合は、エラーは発生せず、何も起こりません。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>なし。</p>
+なし。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<p>以下の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを、 {{domxref("Element.classList")}} を使って <code>DOMTokenList</code> として受け取ります。それからリストからトークンを削除し、 <code>&lt;span&gt;</code> の {{domxref("Node.textContent")}} の中にリストを書き込みます。</p>
+以下の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを、 `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用します。それからリストからトークンを取り除き、 `<span>` の {{domxref("Node.textContent")}} の中にリストを書き込みます。
 
-<p>最初に HTML です。</p>
+最初に HTML です。
 
-<pre class="brush: html">&lt;div id="ab" class="a b c"&gt;&lt;/div&gt;
-&lt;div id="a" class="a b c"&gt;&lt;/div&gt;</pre>
+```html
+<div id="ab" class="a b c"></div>
+<div id="a" class="a b c"></div>
+```
 
-<p>そして JavaScript です。</p>
+そして JavaScript です。
 
-<pre class="brush: js">let span = document.getElementById("ab");
-let classes = span.classList;
+```js
+const span = document.getElementById("ab");
+const classes = span.classList;
 classes.remove("c");
 span.textContent = classes;
-</pre>
+```
 
-<p>複数のクラスを一度に削除するために、複数のトークンを渡すことができます。渡す順序は、リスト中に出現する順序と一致している必要はありません。</p>
+複数のクラスを一度に削除するために、複数のトークンを渡すことができます。渡す順序は、リスト中に出現する順序と一致している必要はありません。
 
-<pre class="brush: js">let span2 = document.getElementById("a")
-let classes2 = span2.classList;
+```js
+const span2 = document.getElementById("a")
+const classes2 = span2.classList;
 
 classes2.remove("c", "b");
 span2.textContent = classes2;
-</pre>
+```
 
-<p>出力結果は以下のようになります。</p>
+出力結果は以下のようになります。
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-remove','remove()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DOMTokenList.remove")}}</p>
+{{Compat}}
