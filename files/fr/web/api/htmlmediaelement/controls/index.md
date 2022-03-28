@@ -17,8 +17,7 @@ audio.controls = true;
 
 ### Valeur
 
-A boolean value. A value of `true` means controls will be
-displayed.
+Une valeur booléenne. La valeur `true` signifie que les contrôles seront affiché.
 
 ## Exemple
 
