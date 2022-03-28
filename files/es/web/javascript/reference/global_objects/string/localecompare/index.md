@@ -1,14 +1,14 @@
 ---
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
-browser-compat: javascript.builtins.String.localeCompare
 translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
+browser-compat: javascript.builtins.String.localeCompare
 ---
 {{JSRef}}
 
-El método **`localeCompare()`** retorna un múmero indicando si una cadena de
+El método **`localeCompare()`** retorna un número indicando si una cadena de
 carateres de referencia va antes, después o si es la misma que la cadena dada en
-order alfabético.
+orden alfabético.
 
 {{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
 
@@ -37,10 +37,8 @@ localeCompare(compareString, locales, options);
   - : Estos argumentos configuran el comportamiento de la función y le permiten
     a las aplicaciones especificar el idioma cuyas convenciones de formato se
     deben usar. En implementaciones que ignoran los argumentos `locales` y
-    `options`, la localización usada y la forma el orden alfabético usados son
-    completamente dependientes de la implementación. En implementaciones que
-    ignoran los argumentos `locales` y `options`, la localización y el orden
-    alfabético usados son completamente dependientes de la implementación.
+    `options`, la configuración regional usada y la forma de la cadena devuelta son
+    completamente dependientes de la implementación.
 
     Consulte el
     [constructor de `Intl.Collator()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator)
