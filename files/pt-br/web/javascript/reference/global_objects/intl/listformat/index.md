@@ -86,10 +86,6 @@ console.log(
 //   { "type": "element", "value": "Carro" } ];
 ```
 
-## Polyfill
-
-[formatjs Intl.ListFormat polyfill](https://formatjs.io/docs/polyfills/intl-listformat)
-
 ## Especificações
 
 {{Specifications}}
