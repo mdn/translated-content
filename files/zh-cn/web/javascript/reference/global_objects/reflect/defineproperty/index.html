@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">Reflect.defineProperty(target, propertyKey, attributes)
+<pre class="syntaxbox">Reflect.defineProperty(target, propertyKey, attributes)
 </pre>
 
 <h3 id="参数">参数</h3>
@@ -40,15 +40,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 
 <p><code>Reflect.defineProperty</code> 方法允许精确添加或修改对象上的属性。更多的细节请参阅类似的{{jsxref("Object.defineProperty")}} 。</p>
 
-<div class="blockIndicator note">
-<p><strong>区别：</strong><code>Object.defineProperty </code>返回一个对象，或者如果属性没有被成功定义，抛出一个 {{jsxref("TypeError")}} 。 相比之下，<code>Reflect.defineProperty</code>方法只返回一个 {{jsxref("Boolean")}} ，来说明该属性是否被成功定义。</p>
+<div class="note">
+<p><strong>备注：</strong><code>Object.defineProperty </code>返回一个对象，或者如果属性没有被成功定义，抛出一个 {{jsxref("TypeError")}} 。 相比之下，<code>Reflect.defineProperty</code>方法只返回一个 {{jsxref("Boolean")}} ，来说明该属性是否被成功定义。</p>
 </div>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="使用_Reflect.defineProperty">使用 <code>Reflect.defineProperty()</code></h3>
 
-<pre class="notranslate">let obj = {}
+<pre>let obj = {}
 Reflect.defineProperty(obj, 'x', {value: 7})  // true
 obj.x                                         // 7</pre>
 
@@ -56,7 +56,7 @@ obj.x                                         // 7</pre>
 
 <p>{{jsxref("Object.defineProperty")}} 方法，如果成功则返回一个对象，否则抛出一个 {{jsxref("TypeError")}} 。另外，当定义一个属性时，你也可以使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch">try...catch</a></code> 去捕获其中任何的错误。而因为 <code>Reflect.defineProperty</code> 返回 Boolean 值作为成功的标识，所以只能使用 <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a></code> ：</p>
 
-<pre class="brush: js notranslate">if (Reflect.defineProperty(target, property, attributes)) {
+<pre class="brush: js">if (Reflect.defineProperty(target, property, attributes)) {
   // 成功
 } else {
   // 失败

@@ -55,7 +55,7 @@ class WordCount extends HTMLParagraphElement {
 カスタム要素には 2 つの種類があります。
 
 - スタンドアロンの**自律カスタム要素** — 標準の HTML 要素を継承しません。 HTML 要素としてページ内で記述して使います。例えば、`<popup-info>` あるいは `document.createElement("popup-info")` などです。
-- 基礎となる HTML 要素を継承する**カスタマイズされた組み込み要素**。これらを作成するには、どの要素を拡張するかを指定する必要があり（上記の例で示した通り）、基本要素を記述し、カスタム要素の名前を {{htmlattrxref("is")}} 属性（またはプロパティ）で指定することで使用します。されます。例えば、 `<p is="word-count">` や `document.createElement("p", { is: "word-count" })` のようにします。
+- 基礎となる HTML 要素を継承する**カスタマイズされた組み込み要素**。これらを作成するには、どの要素を拡張するかを指定する必要があり（上記の例で示した通り）、基本要素を記述し、カスタム要素の名前を {{htmlattrxref("is")}} 属性（またはプロパティ）で指定することで使用します。例えば、 `<p is="word-count">` や `document.createElement("p", { is: "word-count" })` のようにします。
 
 ## 簡単な例での作業
 
@@ -80,7 +80,7 @@ class PopUpInfo extends HTMLElement {
 }
 ```
 
-前述のコードスニペットはクラスのコンストラクター ([`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)) の定義を含んでいます。ここでは常に [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しい正しいプロタイプチェーンが確立されるようにします。
+前述のコードスニペットはクラスのコンストラクター ([`constructor()`](/ja/docs/Web/JavaScript/Reference/Classes/constructor)) の定義を含んでいます。ここでは常に [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) を最初に呼び出し、正しいプロタイプチェーンが確立されるようにします。
 
 コンストラクターの内部では、その要素のインスタンスが生成されたときに持つすべての機能を定義します。この場合、カスタム要素にシャドウルートを添付し、いくつかの DOM 操作を使用して要素の内部シャドウ DOM 構造を作成します。それをシャドウルートに添付します。そして最後に、いくつかの CSS をシャドウルートに添付してスタイル付けを行います。
 

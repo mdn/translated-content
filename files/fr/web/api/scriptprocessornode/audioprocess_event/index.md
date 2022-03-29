@@ -71,8 +71,8 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
           nombre de canaux est défini par le paramètre
           <code><em>numberOfInputChannels</em> de la méthode </code
           >{{domxref("AudioContext.createScriptProcessor()")}}.
-          Noter que <code>le<em> AudioBuffer</em></code
-          ><code> retourné</code><em><code> </code></em>est seulement valide
+          Noter que le <em><code>AudioBuffer</em></code
+          > retourné est seulement valide
           dans la portée de la fonction <em><code>onaudioprocess.</code></em>
         </p>
       </td>
@@ -99,7 +99,7 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
 
 | Spécification                                                                                                        | Statut                               | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#AudioProcessingEvent-section', 'AudioProcessingEvent')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilités navigateur
 

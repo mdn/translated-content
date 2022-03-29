@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
 
 L'auditeur de l'événement appelé lorsque l'événement `enabled` est déclenché, indiquant qu'un add-on est maintenant activé.
 
-L'API requière l'[API de permission ](/fr/Add-ons/WebExtensions/manifest.json/permissions)"management"
+L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management"
 
 ## Syntaxe
 
@@ -55,7 +55,7 @@ Enregistrez les noms des extensions lorsqu'ils sont activés :
 
 ```js
 browser.management.onEnabled.addListener((info) => {
-  console.log(info.name + " was enabled");
+  console.log(info.name + " was enabled");
 });
 ```
 

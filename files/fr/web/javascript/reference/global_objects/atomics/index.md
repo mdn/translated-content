@@ -59,7 +59,7 @@ Le méthodes `wait`() et `notify()` sont basées sur les _futex_ Linux (selon le
 
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-atomics-object', 'Atomics')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-atomics-object', 'Atomics')}} | {{Spec2('ESDraft')}} |                      |
 | {{SpecName('ES8', '#sec-atomics-object', 'Atomics')}}     | {{Spec2('ES8')}}         | Définition initiale. |
 
 ## Compatibilité des navigateurs
@@ -71,7 +71,7 @@ Le méthodes `wait`() et `notify()` sont basées sur les _futex_ Linux (selon le
 Avant Firefox 48 {{geckoRelease(48)}}, les noms les plus récents et la sémantique la plus récente n'étaient pas encore implémentés. Les changements qui ont eu lieu entre la version 46 et la version 48 de Firefox sont :
 
 - Les méthodes `Atomics.futexWakeOrRequeue()` et `Atomics.fence()` sont désormais complètement retirées (cf. {{bug(1259544)}} et {{bug(1225028)}}).
-- Les méthodes {{jsxref("Atomics.wait()")}} et  {{jsxref("Atomics.wake()")}} qui étaient nommées `Atomics.futexWait()` ete `Atomics.futexWake()` (cf. {{bug(1260910)}}). Les anciens noms seront  définitivement supprimés à partir de la version 49 ({{bug(1262062)}}). `Atomics.wake()` a été renommé en `Atomics.notify()` à partir de la version 63.
+- Les méthodes {{jsxref("Atomics.wait()")}} et  {{jsxref("Atomics.wake()")}} qui étaient nommées `Atomics.futexWait()` ete `Atomics.futexWake()` (cf. {{bug(1260910)}}). Les anciens noms seront définitivement supprimés à partir de la version 49 ({{bug(1262062)}}). `Atomics.wake()` a été renommé en `Atomics.notify()` à partir de la version 63.
 - Les propriétés `Atomics.OK`, `Atomics.TIMEDOUT`, `Atomics.NOTEQUAL` ont été retirées. La méthode {{jsxref("Atomics.wait()")}} renvoie désormais les chaînes de caractères `"ok"`, `"timed-out"` ou `"not-equal"` (cf. {{bug(1260835)}}).
 - Le paramètre `count` de la méthode {{jsxref("Atomics.wake()")}} a été modifié, sa valeur par défaut est désormais `+Infinity` et non `0` ({{bug(1253350)}}).
 
@@ -80,6 +80,6 @@ Avant Firefox 48 {{geckoRelease(48)}}, les noms les plus récents et la sémanti
 - {{jsxref("ArrayBuffer")}}
 - [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
 - [Web Workers](/fr/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– un bibliothèque simple qui fournit des abstractions pour synchronisers et distribuer des tâches.
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – un bibliothèque simple qui fournit des abstractions pour synchronisers et distribuer des tâches.
 - [La mémoire partagée – un rapide tutoriel](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks (en anglais)](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

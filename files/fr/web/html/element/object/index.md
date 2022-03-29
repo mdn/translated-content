@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/object
 ---
 {{HTMLRef}}
 
-L'élément HTML **`<object>` **représente une ressource externe qui peut être interprétée comme une image, un contexte de navigation imbriqué ou une ressource à traiter comme un _plugin_.
+L'élément HTML **`<object>`** représente une ressource externe qui peut être interprétée comme une image, un contexte de navigation imbriqué ou une ressource à traiter comme un _plugin_.
 
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
 
@@ -21,13 +21,13 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 - {{htmlattrdef("data")}}
   - : L'adresse de la ressource, une URL valide. Au moins un attribut **`data`** et un attribut **`type`** doivent être définis.
 - {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
-  - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément  {{HTMLElement("form")}} du même document.
+  - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément  {{HTMLElement("form")}} du même document.
 - {{htmlattrdef("height")}}
   - : La hauteur de la ressource à afficher, exprimée en pixels [CSS](/fr/docs/Web/CSS) (uniquement en valeur absolue).
 - {{htmlattrdef("name")}}
   - : Le nom du contexte de navigation valide (HTML5) ou du contrôle associé à l'élément (HTML 4).
 - {{htmlattrdef("type")}}
-  - : Le type MIME de la ressource définie par  **`data`**. Au moins un attribut **`data`** et un attribut **`type`** doivent être définis.
+  - : Le type MIME de la ressource définie par  **`data`**. Au moins un attribut **`data`** et un attribut **`type`** doivent être définis.
 - {{htmlattrdef("typemustmatch")}} {{HTMLVersionInline(5)}}
   - : Cet attribut booléen indique si l'attribut `type` doit correspondre [au type MIME](/fr/docs/Glossaire/Type_MIME) de la ressource afin que celle-ci puisse être utilisée.
 - {{htmlattrdef("usemap")}}
@@ -51,7 +51,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 <!---->
 
 - {{htmlattrdef("declare")}} {{HTMLVersionInline(4)}} seulement ; {{Obsolete_Inline("HTML5")}}
-  - : Si cet attribut booléen est présent, l'élément sera seulement une déclaration. L'objet devra donc être instancié par un élément  `<object>` dans la suite du document. En HTML5, il faut répéter l'élément \<object> complètement chaque fois que la ressource est ré-utilisée.
+  - : Si cet attribut booléen est présent, l'élément sera seulement une déclaration. L'objet devra donc être instancié par un élément  `<object>` dans la suite du document. En HTML5, il faut répéter l'élément \<object> complètement chaque fois que la ressource est ré-utilisée.
 
 <!---->
 
@@ -66,14 +66,14 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ```html
 <object data="https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf" type="application/pdf"
-        width="500" height="500" typemustmatch>
-  <p>Vous n'avez pas de plugin PDF mais vous pouvez <a href="https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf">télécharger le fichier.</a></p>
+        width="500" height="500" typemustmatch>
+  <p>Vous n'avez pas de plugin PDF mais vous pouvez <a href="https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-262,%201st%20edition,%20June%201997.pdf">télécharger le fichier.</a></p>
 </object>
 
 <!-- Un exemple avec Flash -->
 <!--
 <object data="animation.swf" type="application/x-shockwave-flash">
-  <param name="param11" value="valeurConf">
+  <param name="param11" value="valeurConf">
 </object>
 -->
 ```
@@ -124,7 +124,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
       <th scope="row"><dfn>Contenu autorisé</dfn></th>
       <td>
         Zéro ou plusieurs éléments {{HTMLElement("param")}} suivis par
-        du 
+        du
         <a
           href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Mod.C3.A8le_de_contenu_transparent"
           >contenu transparent.</a
@@ -157,9 +157,9 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 | Spécification                                                                                                            | État                             | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-object-element', '&lt;object&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-object-element', '&lt;object&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
-| {{SpecName('HTML4.01', 'struct/objects.html#h-13.3', '&lt;object&gt;')}}                         | {{Spec2('HTML4.01')}}     |              |
+| {{SpecName('HTML WHATWG', 'embedded-content.html#the-object-element', '&lt;object&gt;')}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-object-element', '&lt;object&gt;')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML4.01', 'struct/objects.html#h-13.3', '&lt;object&gt;')}}                         | {{Spec2('HTML4.01')}}     |              |
 
 ## Compatibilité des navigateurs
 
@@ -168,5 +168,5 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 ## Voir aussi
 
 - {{HTMLElement("param")}}
-- {{HTMLElement("applet")}} {{Obsolete_Inline}}
+- {{HTMLElement("applet")}} {{Obsolete_Inline}}
 - {{HTMLElement("embed")}}

@@ -12,7 +12,7 @@ translation_of: Web/HTTP/CORS
 ---
 {{HTTPSidebar}}
 
-Le «  _Cross-origin resource sharing_ » (CORS) ou « partage des ressources entre origines multiples » (en français, moins usité) est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un agent utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un agent utilisateur réalise une requête HTTP **multi-origine (_cross-origin_)** lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
+Le «&nbsp; _Cross-origin resource sharing_ » (CORS) ou « partage des ressources entre origines multiples » (en français, moins usité) est un mécanisme qui consiste à ajouter des en-têtes HTTP afin de permettre à un agent utilisateur d'accéder à des ressources d'un serveur situé sur une autre origine que le site courant. Un agent utilisateur réalise une requête HTTP **multi-origine (_cross-origin_)** lorsqu'il demande une ressource provenant d'un domaine, d'un protocole ou d'un port différent de ceux utilisés pour la page courante.
 
 Prenons un exemple de requête multi-origine : une page HTML est servie depuis `http://domaine-a.com` contient un élément [`<img> src`](/fr/docs/Web/HTML/Element/Img#attr-src) ciblant `http://domaine-b.com/image.jpg`. Aujourd'hui, de nombreuses pages web chargent leurs ressources (feuilles CSS, images, scripts) à partir de domaines séparés (par exemple des CDN (_Content Delivery Network_ en anglais ou « Réseau de diffusion de contenu »).
 
@@ -135,7 +135,7 @@ Les lignes 13 à 22 détaillent la réponse HTTP du serveur situé sous le domai
 
 `Access-Control-Allow-Origin: http://toto.example`
 
-On notera que, dans ce cas, aucun autre domaine que `http://toto.example` (tel qu'identifié par l'en-tête `Origin`) ne pourra accéder à la ressource. L'en-tête `Access-Control-Allow-Origin` devrait contenir la valeur qui a été envoyée dans l'en-tête  `Origin` de la requête.
+On notera que, dans ce cas, aucun autre domaine que `http://toto.example` (tel qu'identifié par l'en-tête `Origin`) ne pourra accéder à la ressource. L'en-tête `Access-Control-Allow-Origin` devrait contenir la valeur qui a été envoyée dans l'en-tête  `Origin` de la requête.
 
 ### Requêtes nécessitant une requête préliminaire
 
@@ -283,7 +283,7 @@ Le serveur répond avec un en-tête `Access-Control-Allow-Methods` et indique qu
 
 Le serveur envoie également l'en-tête `Access-Control-Allow-Headers` avec une valeur "`X-PINGOTHER, Content-Type`" qui confirme que les en-têtes souhaités sont autorisés pour la requête principale. Comme `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` est une liste d'en-têtes acceptables séparés par des virgules.
 
-Enfin, l'en-tête {{HTTPHeader("Access-Control-Max-Age")}} indique avec une valeur exprimée en secondes, la durée pendant laquelle cette réponse préliminaire peut être mise en cache avant la prochaine requête préliminaire. Ici, la réponse est 86400 secondes, ce qui correspond à 24 heures. On notera ici que chaque navigateur possède[ un maximum interne](/fr/docs/Web/HTTP/Headers/Access-Control-Max-Age) qui a la priorité lorsque `Access-Control-Max-Age` lui est supérieur.
+Enfin, l'en-tête {{HTTPHeader("Access-Control-Max-Age")}} indique avec une valeur exprimée en secondes, la durée pendant laquelle cette réponse préliminaire peut être mise en cache avant la prochaine requête préliminaire. Ici, la réponse est 86400 secondes, ce qui correspond à 24 heures. On notera ici que chaque navigateur possède [un maximum interne](/fr/docs/Web/HTTP/Headers/Access-Control-Max-Age) qui a la priorité lorsque `Access-Control-Max-Age` lui est supérieur.
 
 #### Requêtes préliminaires et redirection
 
@@ -302,7 +302,7 @@ En attendant que les navigateurs comblent ce manque, il est possible de contourn
 
 S'il n'est pas possible d'appliquer ces changements, on peut également :
 
-1.  Effectuer [une requête simple](#simples) (avec [`Response.url`](/fr/docs/Web/API/Response/url) si on utilise l'API Fetch ou  [`XHR.responseURL`](/fr/docs/Web/API/XMLHttpRequest/responseURL) si on utilise XHR) afin de déterminer l'URL à laquelle aboutirait la requête avec requête préliminaire.
+1.  Effectuer [une requête simple](#simples) (avec [`Response.url`](/fr/docs/Web/API/Response/url) si on utilise l'API Fetch ou  [`XHR.responseURL`](/fr/docs/Web/API/XMLHttpRequest/responseURL) si on utilise XHR) afin de déterminer l'URL à laquelle aboutirait la requête avec requête préliminaire.
 2.  Effectuer la requête initialement souhaitée avec l'URL _réelle_ obtenue à la première étape.
 
 Toutefois, si la requête déclenche une requête préliminaire suite à l'absence de l'en-tête {{HTTPHeader("Authorization")}}, on ne pourra pas utiliser cette méthode de contournement et il sera nécessaire d'avoir accès au serveur pour contourner le problème.

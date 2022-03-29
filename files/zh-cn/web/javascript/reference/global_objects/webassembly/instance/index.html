@@ -18,10 +18,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 <h2 id="构造函数">构造函数</h2>
 
 <div class="warning">
-<p><strong>重要</strong>: 由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用<code>Instance()</code>；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .</p>
+<p><strong>警告：</strong>由于大型模块的实例化代价极高， 开发人员应只在必须同步实例化的时候，才使用<code>Instance()</code>；绝大多数情况应该使用异步方法{{jsxref("WebAssembly.instantiate()")}} .</p>
 </div>
 
-<pre class="syntaxbox notranslate">var myInstance = new WebAssembly.Instance(<em>module</em>, <em>importObject</em>);</pre>
+<pre class="syntaxbox">var myInstance = new WebAssembly.Instance(<em>module</em>, <em>importObject</em>);</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -41,17 +41,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 <dl>
  <dt>{{jsxref("WebAssembly/Instance/exports", "Instance.prototype.exports")}}</dt>
  <dd>返回一个包含此 WebAssembly 模块实例所导出的全部成员的 JS 对象，以便 JavaScript 访问和使用这些成员，这个对象是只读的。</dd>
- <dt></dt>
 </dl>
-
-<div class="hidden">
-<dl>
- <dt></dt>
- <dt>
- <p>译者注：英文版的变动有点大，用例模块暂时不翻译，后来者有心的话可以翻译一下。</p>
- </dt>
-</dl>
-</div>
 
 <h2 id="规格">规格</h2>
 
@@ -72,9 +62,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{Compat("javascript.builtins.WebAssembly.Instance")}}</div>
+{{Compat}}
 
 <h2 id="参考">参考</h2>
 

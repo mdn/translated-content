@@ -24,13 +24,13 @@ Pour les propriétés statiques et pour une unité donnée, un même angle pourr
 Pour représenter une valeur dans le type `<angle>`, on pourra utiliser les unités suivantes :
 
 - `deg`
-  - : Cette unité permet de représenter un angle exprimé en [degrés](<https://fr.wikipedia.org/wiki/Degr%C3%A9_(angle)>). Un cercle complet correspondra à `360deg`. Voici des valeurs pour l'exemple : `0deg`, `90deg`,` 360deg`.
+  - : Cette unité permet de représenter un angle exprimé en [degrés](<https://fr.wikipedia.org/wiki/Degr%C3%A9_(angle)>). Un cercle complet correspondra à `360deg`. Voici des valeurs pour l'exemple : `0deg`, `90deg`, `360deg`.
 - `grad`
-  - : Cette unité permet de représenter un angle exprimé en [grades](<https://fr.wikipedia.org/wiki/Grade_(angle)>). Un cercle complet correspondra à `400grad`. Voici des valeurs pour l'exemple : `0grad`, `100grad`,` 400grad`.
+  - : Cette unité permet de représenter un angle exprimé en [grades](<https://fr.wikipedia.org/wiki/Grade_(angle)>). Un cercle complet correspondra à `400grad`. Voici des valeurs pour l'exemple : `0grad`, `100grad`, `400grad`.
 - `rad`
-  - : Cette unité permet de représenter un angle exprimé en [radians](https://fr.wikipedia.org/wiki/Radian). Un cercle complet correspondra à 2π radians (soit environ `6.2832rad`). Un radian correspond à 180/π degrés. Voici des valeurs pour l'exemple : `0rad`, `1.0708rad`,` 6.2832rad`.
+  - : Cette unité permet de représenter un angle exprimé en [radians](https://fr.wikipedia.org/wiki/Radian). Un cercle complet correspondra à 2π radians (soit environ `6.2832rad`). Un radian correspond à 180/π degrés. Voici des valeurs pour l'exemple : `0rad`, `1.0708rad`, `6.2832rad`.
 - `turn`
-  - : Cette unité représente le nombre de tours qu'effectue l'angle. Un cercle complet correspondra à `1turn`. Voici des valeurs pour l'exemple : `0turn`, `0.25turn`,` 1turn`.
+  - : Cette unité représente le nombre de tours qu'effectue l'angle. Un cercle complet correspondra à `1turn`. Voici des valeurs pour l'exemple : `0turn`, `0.25turn`, `1turn`.
 
 Même si toutes les unités exprimeront une valeur nulle identique, l'unité **doit** **être indiquée** afin de lever l'ambiguïté entre un angle et une valeur de longueur (type {{cssxref("&lt;length&gt;")}}).
 
@@ -82,7 +82,7 @@ Même si toutes les unités exprimeront une valeur nulle identique, l'unité **d
 
 | Spécification                                                            | État                             | Commentaires         |
 | ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS4 Values')}} |                      |
+| {{SpecName('CSS4 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS4 Values')}} |                      |
 | {{SpecName('CSS3 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
 
 ## Compatibilité des navigateurs

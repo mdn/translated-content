@@ -17,7 +17,7 @@ Ce guide est constitué d'une série d'articles qui vous aideront à maîtriser 
 
 ## Prérequis
 
-Avant de vous lancer dans  ce module, vous devez au moins avoir travaillé notre [Introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML). À partir de là, vous devriez trouver les {{anch("Éléments de base")}} faciles à comprendre et également être capable de vous servir du guide pour  les [widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs).
+Avant de vous lancer dans ce module, vous devez au moins avoir travaillé notre [Introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML). À partir de là, vous devriez trouver les [éléments de base](#éléments_de_base) faciles à comprendre et également être capable de vous servir du guide pour les [widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs).
 
 Le reste du module est toutefois un peu plus difficile — il est facile de placer des widgets de formulaire dans une page, mais vous ne pourrez pas en faire vraiment quelque chose sans utiliser quelques fonctionnalités plus avancées, les CSS et le JavaScript. C'est pourquoi, avant de regarder ces autres parties, nous vous recommandons de faire un détour et de procéder d'abord à l'étude des [CSS](/fr/Apprendre/CSS/Introduction_à_CSS) et du [JavaScript](/fr/docs/Apprendre/JavaScript).
 
@@ -30,7 +30,7 @@ Le reste du module est toutefois un peu plus difficile — il est facile de plac
 - [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML "/fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML")
   - : Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.
 
-## Quels sont les widgets pour formulaire disponibles ?
+## Quels sont les widgets pour formulaire disponibles&nbsp;?
 
 - [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
   - : Nous examinons maintenant en détail les fonctionnalités des widgets pour formulaire, en regardant quelles sont les options disponibles pour collecter différentes types de données.
@@ -38,16 +38,16 @@ Le reste du module est toutefois un peu plus difficile — il est facile de plac
 ## Validation et soumission des données de formulaires
 
 - [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)
-  - : Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination ? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
+  - : Cet article examine ce qui arrive quand un utilisateur soumet un formulaire — où les données vont-elles et comment les gère-t-on une fois à destination&nbsp;? Nous examinerons aussi quelques problèmes de sécurité associés à l'envoi des données d'un formulaire.
 - [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
-  - : Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont de format correct pour pouvoir les traiter correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser nos applications. La validation et la soumission des données des formulaires vous aidera à remplir ces objectifs — cet article indique ce qui est nécessaire de savoir.
+  - : Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont de format correct pour pouvoir les traiter correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser nos applications. La validation et la soumission des données des formulaires vous aidera à remplir ces objectifs — cet article indique ce qui est nécessaire de savoir.
 
 ## Guides avancés
 
 - [Comment construire des widgets de formulaires personnalisés](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
   - : Nous allons voir quelques cas où les widgets natifs ne donnent pas ce dont vous avez besoin, pour des raisons fonctionnelles ou de style par exemple. Dans de tels cas, vous pouvez avoir besoin de construire vous même un widget de formulaire en dehors du HTML brut. Cet article explique comment faire, ainsi que les considérations à prendre en compte ce faisant, le tout à l'aide de l'étude d'un cas particulier.
 - [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
-  - : Cet article examine les manières d'utiliser un formulaire pour assembler une requête HTTP et l'adresser par l'intermédiaire d'un JavaScript personnalisé, au lieu d'une soumission standard de formulaire. Il examine aussi pourquoi vous pouvez souhaiter faire ainsi et ce que cela implique corrélativement. (Voir aussi « Utilisation des objets FormData ».)
+  - : Cet article examine les manières d'utiliser un formulaire pour assembler une requête HTTP et l'adresser par l'intermédiaire d'un JavaScript personnalisé, au lieu d'une soumission standard de formulaire. Il examine aussi pourquoi vous pouvez souhaiter faire ainsi et ce que cela implique corrélativement. (Voir aussi «&nbsp;Utilisation des objets FormData&nbsp;».)
 - [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
   - : Cet article couvre les détections de fonctionnalité, etc. Elles doivent être redirigées dans le module de tests croisés entre navigateurs, car la même problématique y sera mieux traitée.
 

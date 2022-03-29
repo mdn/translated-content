@@ -20,7 +20,7 @@ L'API `Notifications` est utilisée pour afficher les notifications de bureau à
 
 Définir `browserSettings.webNotificationsDisabled` à `true` change l'autorisation globale à _refuser_.
 
-Notez que cela n'affectera pas les sites pour lesquels l'utilisateur a défini une préférence par site. Par exemple, si l'utilisateur définit <https://example.org> pour _autoriser_, et une extension place ensuite `browserSettings.webNotificationsDisabled` à `true`, alors les pages sous [https://example.org ](https://example.org)seront toujours autorisées à afficher des notifications..
+Notez que cela n'affectera pas les sites pour lesquels l'utilisateur a défini une préférence par site. Par exemple, si l'utilisateur définit <https://example.org> pour _autoriser_, et une extension place ensuite `browserSettings.webNotificationsDisabled` à `true`, alors les pages sous [https://example.org](https://example.org) seront toujours autorisées à afficher des notifications..
 
 Si vous définissez `browserSettings.webNotificationsDisabled` à `false` la valeur par défaut globale est rétablie.
 

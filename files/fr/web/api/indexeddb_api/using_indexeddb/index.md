@@ -68,9 +68,9 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 Vous avez vu ? Ouvrir une base de données est comme n'importe quelle autre opération — vous avez juste à le "demander".
 
-La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction `open()` retourne un objet [`IDBOpenDBRequest`](/en-US/docs/IndexedDB/IDBOpenDBRequest) avec un résultat  (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet [`IDBRequest`](/en-US/docs/IndexedDB/IDBRequest) avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase).
+La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction `open()` retourne un objet [`IDBOpenDBRequest`](/en-US/docs/IndexedDB/IDBOpenDBRequest) avec un résultat  (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet [`IDBRequest`](/en-US/docs/IndexedDB/IDBRequest) avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de [`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase).
 
-Le second paramètre de la méthode open est la version de la base de données. La version de la base détermine le schéma de celle-ci — Les objets stockés dans la base de données et leur structure. Si la base de données n'existe pas déjà, elle est créée via l'opération `open()`, puis, un événement `onupgradeneeded` est déclenché et vous créez le schéma de la base dans le gestionnaire pour cet événement. Si la base de données existe, mais que vous spécifiez un numéro de version plus élevé, un événement `onupgradeneeded` est déclenché  immédiatement, vous permettant de mettre à jour le schéma dans son gestionnaire – plus d'informations dans [Updating the version of the database](#Updating_the_version_of_the_database) plus bas et la page référence {{ domxref("IDBFactory.open") }}.
+Le second paramètre de la méthode open est la version de la base de données. La version de la base détermine le schéma de celle-ci — Les objets stockés dans la base de données et leur structure. Si la base de données n'existe pas déjà, elle est créée via l'opération `open()`, puis, un événement `onupgradeneeded` est déclenché et vous créez le schéma de la base dans le gestionnaire pour cet événement. Si la base de données existe, mais que vous spécifiez un numéro de version plus élevé, un événement `onupgradeneeded` est déclenché immédiatement, vous permettant de mettre à jour le schéma dans son gestionnaire – plus d'informations dans [Updating the version of the database](#Updating_the_version_of_the_database) plus bas et la page référence {{ domxref("IDBFactory.open") }}.
 
 > **Attention :** Le numéro de version est un nombre "`unsigned long long`" ce qui signifie qu'il peut s'agir d'un entier très grand. Cela veut également dire que vous ne pouvez pas utiliser de réél, sinon, il sera converti au nombre entier le plus proche (inférieur) et la transaction peut ne pas démarrer ou ne pas déclencher l'événement `upgradeneeded`. Par exemple, n'utilisez pas 2.4 comme un numéro de version :
 > `var request = indexedDB.open("MyTestDatabase", 2.4); // Ne faites pas ça, même si la version sera arrondie à 2`
@@ -109,7 +109,7 @@ request.onsuccess = function(event) {
 
 #### Gérer les erreurs
 
-Comme mentionné ci-dessus, les évènements d’erreur génèrent des info-bulles. Ils  sont rattachés à la requête qui a généré l’erreur, puis la bulle de l'évènement est transmis à la transaction, et enfin à l'objet de la base de données. Si vous souhaitez éviter d'ajouter un gestionnaire d'erreurs à chaque requête, vous pouvez en ajouter un unique à l'objet de la base de donnée, de cette manière :
+Comme mentionné ci-dessus, les évènements d’erreur génèrent des info-bulles. Ils sont rattachés à la requête qui a généré l’erreur, puis la bulle de l'évènement est transmis à la transaction, et enfin à l'objet de la base de données. Si vous souhaitez éviter d'ajouter un gestionnaire d'erreurs à chaque requête, vous pouvez en ajouter un unique à l'objet de la base de donnée, de cette manière :
 
 ```js
 db.onerror = function(event) {
@@ -122,7 +122,7 @@ Une des erreurs courantes possibles lorsqu'on ouvre une base de données, c'est 
 
 ### Créer ou mettre à jour une version de base de données
 
-Lorsque vous créez une nouvelle base de données, ou que vous augmentez le numéro de version d'une base existante (en spécifiant un numéro de version supérieur à celui que vous aviez auparavant, lors de {{ anch("Ouvrir une base de données") }}), l'évènement `onupgradeneeded` sera déclenché et un objet `IDBVersionChangeEvent` sera passé à un évènement `onversionchange` dans `request.result` (la variable `db` dans l'exemple). Dans le gestionnaire d’évènement `upgradeneeded`, vous devez créer les objets de stockage requis pour cette version de base :
+Lorsque vous créez une nouvelle base de données, ou que vous augmentez le numéro de version d'une base existante (en spécifiant un numéro de version supérieur à celui que vous aviez auparavant, lors de [Ouvrir une base de données](#ouvrir_une_base_de_données)), l'évènement `onupgradeneeded` sera déclenché et un objet `IDBVersionChangeEvent` sera passé à un évènement `onversionchange` dans `request.result` (la variable `db` dans l'exemple). Dans le gestionnaire d’évènement `upgradeneeded`, vous devez créer les objets de stockage requis pour cette version de base :
 
 ```js
 // Cet évènement est seulement implémenté dans des navigateurs récents
@@ -134,7 +134,7 @@ request.onupgradeneeded = function(event) {
 };
 ```
 
-Dans ce cas, la base de données disposera aussitôt des objets de stockage de la version précédente de la base, donc vous n’aurez pas à créer de nouveau ces objets de stockage. Vous aurez seulement besoin de créer de nouveaux objets de stockage, ou d'en supprimer de la version précédente si vous n'en avez plus besoin. Si vous avez besoin de changer un objet de stockage existant  (par exemple, pour changer la `keyPath`), alors vous devez supprimer l’ancien objet de stockage et le créer à nouveau avec les nouveaux paramètres. Notez que ceci supprimera les informations dans l'objet de stockage ! Si vous avez besoin de sauvegarder ces informations, vous devez les lire et les sauvegarder quelque part avant de mettre à jour la base de données.
+Dans ce cas, la base de données disposera aussitôt des objets de stockage de la version précédente de la base, donc vous n’aurez pas à créer de nouveau ces objets de stockage. Vous aurez seulement besoin de créer de nouveaux objets de stockage, ou d'en supprimer de la version précédente si vous n'en avez plus besoin. Si vous avez besoin de changer un objet de stockage existant  (par exemple, pour changer la `keyPath`), alors vous devez supprimer l’ancien objet de stockage et le créer à nouveau avec les nouveaux paramètres. Notez que ceci supprimera les informations dans l'objet de stockage ! Si vous avez besoin de sauvegarder ces informations, vous devez les lire et les sauvegarder quelque part avant de mettre à jour la base de données.
 
 Essayer de créer un objet de stockage avec un nom déjà existant (ou essayer de supprimer un objet de stockage avec un nom qui n'existe pas encore) renverra une erreur.
 
@@ -144,7 +144,7 @@ Blink/Webkit supporte la version courante de la spécification, telle que livré
 
 ### Structurer la base de données
 
-Maintenant, structurons la base de données. IndexedDB utilise des objets de stockage plutôt que des tableaux, et une seule base de données peut contenir un nombre quelconque d'objets de stockage. Chaque fois qu'une valeur est stockée dans un objet de stockage, elle est associée à une clé. Il y a différentes manières pour une clé d'être définie, selon que l'objet de stockage utilise un [key path](/en/IndexedDB#gloss_key_path) _(chemin de clé)_ ou un [key generator](/en/IndexedDB#gloss_key_generator) _(générateur de clé)_.
+Maintenant, structurons la base de données. IndexedDB utilise des objets de stockage plutôt que des tableaux, et une seule base de données peut contenir un nombre quelconque d'objets de stockage. Chaque fois qu'une valeur est stockée dans un objet de stockage, elle est associée à une clé. Il y a différentes manières pour une clé d'être définie, selon que l'objet de stockage utilise un [key path](/en/IndexedDB#gloss_key_path) _(chemin de clé)_ ou un [key generator](/en/IndexedDB#gloss_key_generator) _(générateur de clé)_.
 
 Le tableau suivant montre les différentes manières d'attribuer des clés.
 
@@ -152,7 +152,7 @@ Le tableau suivant montre les différentes manières d'attribuer des clés.
 | ------------------------------------ | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Non                                  | Non                                                 | L'objet de stockage peut contenir n'importe quel type de valeur, même des valeurs primitives comme des nombres ou des chaînes de caractères. Vous devez fournir un argument clé séparé chaque fois que vous souhaitez ajouter une nouvelle valeur.                                                                   |
 | Oui                                  | Non                                                 | L'objet de stockage peut contenir des objets JavaScript. Les objets doivent avoir une propriété qui a le même nom que le key path.                                                                                                                                                                                   |
-| Non                                  | Oui                                                 | L'objet de stockage peut contenir n'importe quel type de valeur. La clé est générée pour vous automatiquement, ou vous pouvez fournir un argument  clé séparé si vous voulez utiliser une clé spécifique.                                                                                                            |
+| Non                                  | Oui                                                 | L'objet de stockage peut contenir n'importe quel type de valeur. La clé est générée pour vous automatiquement, ou vous pouvez fournir un argument clé séparé si vous voulez utiliser une clé spécifique.                                                                                                            |
 | Oui                                  | Oui                                                 | L'objet de stockage peut contenir des objets JavaScript. Normalement, une clé est générée, et sa valeur est stockée dans l'objet dans une propriété avec le même nom que le key path. Cependant, si une telle propriété existe, sa valeur est utilisée en tant que clé, plutôt que la génération d'une nouvelle clé. |
 
 Vous pouvez aussi créer des index sur un objet de stockage, à condition que l'objet de stockage contienne des objets, et non des primitives. Un index vous permet de consulter les valeurs stockées dans un objet de stockage en utilisant la valeur d'une propriété de l'objet stocké, plutôt que la clé de l'objet.
@@ -213,7 +213,7 @@ Comme indiqué précédemment, `onupgradeneeded` est le seul endroit où vous po
 
 Les objets de stockage sont créés avec un simple appel à `createObjectStore()`. La méthode prend le nom du stockage et un paramètre de type objet. Même si les paramètres sont optionnels, ils vous laissent définir d'importantes propriétés et redéfinir le type d'un objet de stockage que vous voulez créer. Dans notre cas, nous avons demandé un objet de stockage nommé "customers" et défini un `keyPath`, qui est la propriété rendant unique un objet individuel dans le stockage. Cette propriété dans l'exemple est "ssn" puisqu'un numéro de sécurité sociale est garanti unique. "ssn" doit être présent sur chaque objet stocké dans `objectStore`.
 
-Nous avons aussi demandé un index nommé "name" qui examine la propriété `name` dans les objets stockés. Comme avec` createObjectStore()`, `createIndex()` prend un paramètre de type objet facultatif (`options`) qui définit le type d’index à créer. Ajouter des objets qui n’auront pas de propriété `name` fonctionnera, mais ces objets n'apparaîtront pas dans l'index "name".
+Nous avons aussi demandé un index nommé «&nbsp;<i lang="en">name</i>&nbsp;» qui examine la propriété `name` dans les objets stockés. Comme avec `createObjectStore()`, `createIndex()` prend un paramètre de type objet facultatif (`options`) qui définit le type d'index à créer. Ajouter des objets qui n'auront pas de propriété `name` fonctionnera, mais ces objets n'apparaîtront pas dans l'index «&nbsp;<i lang="en">name</i>&nbsp;».
 
 Nous pouvons récupérer les objets client stockés, en utilisant directement leur `ssn` dans l'objet de stockage, ou en utilisant leur nom via l’index `name`. Pour en savoir plus sur ce fonctionnement, se référer à la section [utiliser un index](/en/IndexedDB/Using_IndexedDB#Using_an_index).
 
@@ -252,11 +252,11 @@ Pour plus de détails sur le générateur de clés, voyez ["W3C Key Generators"]
 
 Avant de faire quoi que ce soit avec votre nouvelle base de données, vous aurez besoin de démarrer une transaction. Les transactions viennent de l'objet base de données, et vous devez spécifier sur quel objet vous souhaitez faire pointer la transaction. Une fois dans la transaction, vous pouvez accéder à l'objet de stockage qui contient vos données et faire vos requêtes. Puis, vous devez décider si vous allez appliquer des changements à la base de données, ou si vous avez juste besoin de la lire. Les transactions disposent de trois modes disponibles: `readonly` _(lecture seule)_, `readwrite` _(lecture/écriture)_, et `versionchange` _(changement de version)_.
 
-Pour changer le "schéma" ou la structure de la base de données — qui implique de créer ou supprimer des objets de stockage ou des index — la transaction doit être en mode `versionchange`. Cette transaction est ouverte en appelant la méthode {{domxref("IDBFactory.open")}}  avec une `version` spécifiée. (Dans les navigateurs WebKit, qui n'ont pas implémenté la dernière spécification, la méthode {{domxref("IDBFactory.open")}} prend seulement un paramètre, le `nom` de la base de données ; Vous devez donc appeler {{domxref("IDBVersionChangeRequest.setVersion")}} pour établir la transaction `versionchange`.)
+Pour changer le "schéma" ou la structure de la base de données — qui implique de créer ou supprimer des objets de stockage ou des index — la transaction doit être en mode `versionchange`. Cette transaction est ouverte en appelant la méthode {{domxref("IDBFactory.open")}}  avec une `version` spécifiée. (Dans les navigateurs WebKit, qui n'ont pas implémenté la dernière spécification, la méthode {{domxref("IDBFactory.open")}} prend seulement un paramètre, le `nom` de la base de données ; Vous devez donc appeler {{domxref("IDBVersionChangeRequest.setVersion")}} pour établir la transaction `versionchange`.)
 
 Pour lire les enregistrements d'un objet de stockage existant, la transaction peut être en mode `readonly`ou `readwrite`. Pour appliquer des changements à un objet de stockage existant, la transaction doit être en mode `readwrite`. Vous démarrez ces transactions avec {{domxref("IDBDatabase.transaction")}}. La méthode accepte deux paramètres : les `storeNames` (la portée, définie comme un tableau des objets de stockage auxquels vous souhaitez accéder) et le `mode` (`readonly` ou `readwrite`) pour la transaction. La méthode retourne un objet de transaction contenant la méthode {{domxref("IDBIndex.objectStore")}}, que vous utilisez pour accéder à votre objet de stockage. Par défaut, lorsqu'aucun mode n'est spécifié, les transactions démarrent en mode `readonly`.
 
-> **Note :** À partir de Firefox 40, les transactions IndexedDB ont des garanties de durabilité relachées afin d'augmenter les performances (voir {{Bug("1112702")}}.) Auparavant, lors d'une transaction `readwrite` {{domxref("IDBTransaction.oncomplete")}} était déclenché seulement lorsque les données étaient garanties pour une écriture sur le disque. Dans Firefox 40+ l'évènement `complete` est déclenché une fois que l'OS a autorisé l'écriture de données, mais potentiellement avant que les données soient réellement écrites sur le disque. L'évènement `complete` peut ainsi être livré plus vite qu'avant, cependant, il existe un petit risque que l'ensemble de la transaction soit perdu si l'OS s'effondre ou si un problème électrique survient avant que les données soient écrites. Comme de tels évènements catastrophiques sont rares, la plupart des utilisateurs n'ont pas à s'en soucier. Si vous devez vous assurer de la durabilité pour quelconque raison que ce soit (par exemple, vous stockez des données critiques qui ne peuvent être recalculées plus tard) vous pouvez forcer une transaction à écrire sur le disque avant que l'évènement `complete` ne soit délivré en créant une transaction utilisant un mode expérimental (non-standard) `readwriteflush`  (se référer à {{domxref("IDBDatabase.transaction")}}.
+> **Note :** À partir de Firefox 40, les transactions IndexedDB ont des garanties de durabilité relachées afin d'augmenter les performances (voir {{Bug("1112702")}}.) Auparavant, lors d'une transaction `readwrite` {{domxref("IDBTransaction.oncomplete")}} était déclenché seulement lorsque les données étaient garanties pour une écriture sur le disque. Dans Firefox 40+ l'évènement `complete` est déclenché une fois que l'OS a autorisé l'écriture de données, mais potentiellement avant que les données soient réellement écrites sur le disque. L'évènement `complete` peut ainsi être livré plus vite qu'avant, cependant, il existe un petit risque que l'ensemble de la transaction soit perdu si l'OS s'effondre ou si un problème électrique survient avant que les données soient écrites. Comme de tels évènements catastrophiques sont rares, la plupart des utilisateurs n'ont pas à s'en soucier. Si vous devez vous assurer de la durabilité pour quelconque raison que ce soit (par exemple, vous stockez des données critiques qui ne peuvent être recalculées plus tard) vous pouvez forcer une transaction à écrire sur le disque avant que l'évènement `complete` ne soit délivré en créant une transaction utilisant un mode expérimental (non-standard) `readwriteflush`  (se référer à {{domxref("IDBDatabase.transaction")}}.
 
 Vous pouvez accélérer l'accès à vos données en utilisant le bon mode et la bonne portée dans la transaction. Voici deux astuces :
 
@@ -301,7 +301,7 @@ for (var i in customerData) {
 }
 ```
 
-La méthode `result` d’une requête venant d'un appel à `add()` est la clé de la valeur qui vient d'être ajoutée. Dans ce cas, ce devrait être équivalent à la propriété `ssn` de l'objet qui vient d'être ajouté, puisque l'objet de stockage utilise la propriété `ssn` pour le key path. Notez que la fonction `add()` requiert qu'aucun objet déjà présent dans la base ait la même clé. Si vous essayez de modifier une entrée existante, ou si vous ne vous en occupez pas, vous pouvez utiliser la fonction `put()`, comme montré plus loin dans la section {{ anch("Updating an entry in the database") }}.
+La méthode `result` d’une requête venant d'un appel à `add()` est la clé de la valeur qui vient d'être ajoutée. Dans ce cas, ce devrait être équivalent à la propriété `ssn` de l'objet qui vient d'être ajouté, puisque l'objet de stockage utilise la propriété `ssn` pour le key path. Notez que la fonction `add()` requiert qu'aucun objet déjà présent dans la base ait la même clé. Si vous essayez de modifier une entrée existante, ou si vous ne vous en occupez pas, vous pouvez utiliser la fonction `put()`, comme montré plus loin dans la section [Mettre à jour une entrée dans la base de données](#mettre_à_jour_une_entrée_dans_la_base_de_données).
 
 ### Supprimer des données dans la base de données
 
@@ -343,7 +343,7 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 
 Vous voyez comment ça fonctionne ? Comme il n'y a qu'un seul objet de stockage, vous pouvez éviter de passer une liste d'objets dont vous avez besoin dans votre transaction, et juste passer le nom comme une chaîne de caractères. Aussi, nous faisons seulement une lecture de la base, donc nous n'avons pas besoin d'une transaction `"readwrite"`. Appeler une `transaction()` sans spécifier de mode nous donne une transaction `"readonly"`. Une autre subtilité ici est que nous n'enregistrons pas l'objet de notre requête dans une variable. Comme l’évènement DOM a la requête comme cible, vous pouvez utiliser l'évènement pour récupérer la propriété `result`.
 
-Vous pouvez accélérer l’accès à vos données  en limitant la portée et le mode de la transaction. Voici deux astuces :
+Vous pouvez accélérer l’accès à vos données en limitant la portée et le mode de la transaction. Voici deux astuces :
 
 - Lors de la définition de la [scope](/fr/docs/IndexedDB/Using_IndexedDB$edit#scope) _(portée)_, spécifiez seulement l’objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu’elles se chevauchent.
 - Spécifier une transaction en mode readwrite uniquement lorsque c’est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu’une transaction "readwrite" _(lecture/écriture)_ sur un objet de stockage. Pour en savoir plus, voir la définition relative aux [transactions in the Basic Concepts article](/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
@@ -399,7 +399,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-La fonction `openCursor()` prend en compte plusieurs arguments. En premier, vous pouvez spécifier une plage de résultats à récupérer en utilisant un objet  "key range" que nous allons voir dans une minute. En deuxième, vous pouvez spécifier la direction vers laquelle vous souhaitez itérer. Dans l’exemple ci-dessus, nous avons itéré tous les objets dans l’ordre ascendant. Le "callback" _(rappel)_ de réussite pour les curseurs est un peu spécial. L'objet cursor lui-même est le `result` _(résutat)_ de la requête (au-dessus, nous utilisons le raccourci `event.target.result`). Puis la clé et valeur courante peuvent être trouvées dans les propriétés `key`*(clé)*  et `value` _(valeur)_ de l’objet cursor. Si vous souhaitez continuer, vous devez appeler `continue()` sur le curseur. Lorsque vous avez atteint la fin des données (ou s’il n’y a plus d’entrées qui correspondent à votre requête `openCursor()` ) , vous aurez toujours votre callback  success, mais la propriété `result` sera `undefined`.
+La fonction `openCursor()` prend en compte plusieurs arguments. En premier, vous pouvez spécifier une plage de résultats à récupérer en utilisant un objet  "key range" que nous allons voir dans une minute. En deuxième, vous pouvez spécifier la direction vers laquelle vous souhaitez itérer. Dans l’exemple ci-dessus, nous avons itéré tous les objets dans l’ordre ascendant. Le "callback" _(rappel)_ de réussite pour les curseurs est un peu spécial. L'objet cursor lui-même est le `result` _(résutat)_ de la requête (au-dessus, nous utilisons le raccourci `event.target.result`). Puis la clé et valeur courante peuvent être trouvées dans les propriétés `key`*(clé)*  et `value` _(valeur)_ de l’objet cursor. Si vous souhaitez continuer, vous devez appeler `continue()` sur le curseur. Lorsque vous avez atteint la fin des données (ou s’il n’y a plus d’entrées qui correspondent à votre requête `openCursor()` ) , vous aurez toujours votre callback success, mais la propriété `result` sera `undefined`.
 
 Une utilisation classique avec les curseurs est de récupérer tous les objets dans un objet de stockage et de les mettre dans un tableau, comme ceci :
 
@@ -418,7 +418,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-> **Note :** Mozilla a aussi implémenté `getAll()` pour gérer ce cas (et `getAllKeys()`, qui est actuellement caché derrière la préférence `dom.indexedDB.experimental`  dans about:config) . ceux-ci ne font pas partie d' IndexedDB standard, et peuvent disparaître dans le futur. Nous les avons inclus partceque nous pensons qu'ils sont utiles. Le code suivant fait exactement la même chose que ci-dessus :
+> **Note :** Mozilla a aussi implémenté `getAll()` pour gérer ce cas (et `getAllKeys()`, qui est actuellement caché derrière la préférence `dom.indexedDB.experimental`  dans about:config) . ceux-ci ne font pas partie d' IndexedDB standard, et peuvent disparaître dans le futur. Nous les avons inclus partceque nous pensons qu'ils sont utiles. Le code suivant fait exactement la même chose que ci-dessus :
 >
 > ```js
 > objectStore.getAll().onsuccess = function(event) {
@@ -444,7 +444,7 @@ index.get("Donna").onsuccess = function(event) {
 };
 ```
 
-Le "name" du curseur n'est pas unique, donc il pourrait y avoir plus d'une entrée avec le `name` attribué à  `"Donna"`. Dans ce cas, vous obtenez toujours celui qui a la valeur clé la plus basse .
+Le "name" du curseur n'est pas unique, donc il pourrait y avoir plus d'une entrée avec le `name` attribué à  `"Donna"`. Dans ce cas, vous obtenez toujours celui qui a la valeur clé la plus basse .
 
 Si vous avez besoin d'accèder à toutes les entrées avec un `name` donné, vous pouvez utiliser un curseur. Vous pouvez ouvrir deux types différents de curseurs sur les index. Un curseur normal situe la propriété index de l'objet dans l'objet de stockage. Un curseur de clés situe la propriété index des clés utilisées pour stocker l'objet dans l'objet de stockage. Les différences sont illustrées ici :
 
@@ -541,7 +541,7 @@ Voyez "[IDBCursor Constants](/en-US/docs/Web/API/IDBCursor?redirectlocale=en-US&
 
 ## La version change alors qu'une application Web est ouverte dans un autre onglet
 
-Lorsque votre application Web change de telle sorte qu'une modification de version est nécessaire pour votre base de données, vous devez considérer ce qui se passe si l'utilisateur a l'ancienne version de votre application ouverte dans un onglet, puis charge la nouvelle version de votre application dans une autre . Lorsque vous appelez `open()` avec une version plus grande que la version actuelle de la base de données, toutes les autres bases de données ouvertes doivent reconnaître explicitement la demande avant de commencer à modifier la base de données (un événement `onblocked`  _(bloqué)_ est déclenché jusqu'à ce qu'elles soient fermées ou rechargées). Voici comment cela fonctionne :
+Lorsque votre application Web change de telle sorte qu'une modification de version est nécessaire pour votre base de données, vous devez considérer ce qui se passe si l'utilisateur a l'ancienne version de votre application ouverte dans un onglet, puis charge la nouvelle version de votre application dans une autre . Lorsque vous appelez `open()` avec une version plus grande que la version actuelle de la base de données, toutes les autres bases de données ouvertes doivent reconnaître explicitement la demande avant de commencer à modifier la base de données (un événement `onblocked`  _(bloqué)_ est déclenché jusqu'à ce qu'elles soient fermées ou rechargées). Voici comment cela fonctionne :
 
 ```js
 var openReq = mozIndexedDB.open("MyTestDatabase", 2);
@@ -592,7 +592,7 @@ Lorsque le navigateur s'arrête (parce que l'utilisateur a choisi l'option Quit 
 
 1.  Chaque transaction sur chaque base de données affectée (ou toutes les bases de données ouvertes, dans le cas de l'arrêt du navigateur) est interrompue avec un `AbortError`. L'effet est le même que si {{domxref("IDBTransaction.abort()")}} est appelé sur chaque transaction.
 2.  Une fois toutes les transactions terminées, la connexion à la base de données est fermée .
-3.  Enfin, l'objet {{domxref("IDBDatabase")}} représentant la connexion à la base de données reçoit un évènement {{event("close")}} . Vous pouvez utiliser un gestionnaire d'évènements  {{domxref("IDBDatabase.onclose")}} pour écouter ces évènements, afin de savoir quand une base de données est fermée de façon inattendue .
+3.  Enfin, l'objet {{domxref("IDBDatabase")}} représentant la connexion à la base de données reçoit un évènement {{event("close")}} . Vous pouvez utiliser un gestionnaire d'évènements  {{domxref("IDBDatabase.onclose")}} pour écouter ces évènements, afin de savoir quand une base de données est fermée de façon inattendue .
 
 Le comportement décrit ci-dessus est nouveau et n'est disponible que pour les versions de navigateur suivantes : Firefox 50, Google Chrome 31 (approximativement).
 
@@ -600,7 +600,7 @@ Avant ces versions de navigateurs, les transactions étaient interrompues silenc
 
 Étant donné que l'utilisateur peut quitter le navigateur à tout moment, cela signifie que vous ne pouvez pas compter sur une transaction particulière à compléter, et sur les navigateurs plus anciens, vous n'êtes même pas informé quand elles ne sont pas terminées. Il y a plusieurs conséquences à ce comportement.
 
-Tout d'abord, vous devez vous occuper de toujours laisser votre base de données dans un état cohérent à la fin de chaque transaction. Par exemple, supposons que vous utilisiez IndexedDB pour stocker une liste d'éléments que l'utilisateur est autorisé à éditer. Vous enregistrez la liste après l'édition en effaçant l'objet de stockage puis en écrivant la nouvelle liste. Si vous effacez l'objet de stockage dans une transaction et que vous écrivez la nouvelle liste dans une autre transaction, il existe un danger : si le navigateur se ferme après l'effacement mais avant l'écriture, votre base de données est  vide. Pour éviter cela, vous devez combiner l'effacement et l'écriture en une seule transaction.
+Tout d'abord, vous devez vous occuper de toujours laisser votre base de données dans un état cohérent à la fin de chaque transaction. Par exemple, supposons que vous utilisiez IndexedDB pour stocker une liste d'éléments que l'utilisateur est autorisé à éditer. Vous enregistrez la liste après l'édition en effaçant l'objet de stockage puis en écrivant la nouvelle liste. Si vous effacez l'objet de stockage dans une transaction et que vous écrivez la nouvelle liste dans une autre transaction, il existe un danger : si le navigateur se ferme après l'effacement mais avant l'écriture, votre base de données est vide. Pour éviter cela, vous devez combiner l'effacement et l'écriture en une seule transaction.
 
 Ensuite, vous ne devez jamais lier les transactions de base de données pour les événements unload _(déchargement_). Si l'événement unload est déclenché par la fermeture du navigateur, toutes les transactions créées dans le gestionnaire d'événements unload ne seront jamais terminées. Une approche intuitive, pour le maintien de certaines informations dans les sessions du navigateur, est de le lire à partir de la base de données, lorsque le navigateur (ou une page particulière) est ouvert, le mettre à jour à mesure que l'utilisateur interagit avec le navigateur, puis l'enregistrer dans la base de données lorsque le navigateur ( ou page) se ferme. Cependant, cela ne fonctionne pas. Les transactions de la base de données sont créées dans le gestionnaire d'événements unload, mais comme elles sont asynchrones, elles sont interrompues avant qu'elles puissent s'exécuter.
 
@@ -610,7 +610,7 @@ Au-moins, avec l'ajout des notifications d'annulation et {{domxref ("IDBDatabase
 
 ## Le tri et les langues
 
-Mozilla a implémenté la capacité d'effectuer un tri des données IndexedDB localisées sur Firefox 43+. Par défaut, IndexedDB n'a pas pris en charge l'internationalisation des chaînes de tri, et était trié comme s'il s'agissait d'un texte anglais. Par exemple, "b", "á", "z", "a" devaient être triés comme suit :
+Mozilla a implémenté la capacité d'effectuer un tri des données IndexedDB localisées sur Firefox 43+. Par défaut, IndexedDB n'a pas pris en charge l'internationalisation des chaînes de tri, et était trié comme s'il s'agissait d'un texte anglais. Par exemple, "b", "á", "z", "a" devaient être triés comme suit :
 
 - a
 - b
@@ -1312,7 +1312,7 @@ input {
 
 Référence :
 
-- [IndexedDB API Reference](/en/IndexedDB)
+- [IndexedDB API Reference](/en/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome)
 - [Using JavaScript generators in Firefox](/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox)
@@ -1321,11 +1321,11 @@ Référence :
 Tutoriels :
 
 - [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
-- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
+- [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)
 
 Bibliothèques :
 
-- [localForage ](http://mozilla.github.io/localForage/): Un Polyfill qui fournit un nom simple : la syntaxe de valeur pour le stockage de données côté client, qui utilise IndexedDB en arrière-plan, mais retourne à WebSQL puis à localStorage pour les navigateurs qui ne prennent pas en charge IndexedDB.
-- [dexie.js ](http://www.dexie.org/): Une enveloppe pour IndexedDB qui permet un développement de code beaucoup plus rapide grâce à une syntaxe simple et agréable.
-- [ZangoDB ](https://github.com/erikolson186/zangodb): Un MongoDB-like interface pour IndexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
+- [localForage](https://localforage.github.io/localForage/)&nbsp;: un polyfill qui fournit un nom simple — la syntaxe de valeur pour le stockage de données côté client, qui utilise IndexedDB en arrière-plan, mais retourne à WebSQL puis à localStorage pour les navigateurs qui ne prennent pas en charge IndexedDB.
+- [dexie.js](https://www.dexie.org/)&nbsp;: une enveloppe pour IndexedDB qui permet un développement de code beaucoup plus rapide grâce à une syntaxe simple et agréable.
+- [ZangoDB](https://github.com/erikolson186/zangodb)&nbsp;: une interface comme MongoDB pour IndexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.
 - [JsStore](http://jsstore.net/) : Une enveloppe d'IndexedDB simple et avancée ayant une syntaxe SQL.

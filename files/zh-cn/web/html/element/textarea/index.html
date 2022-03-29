@@ -3,7 +3,7 @@ title: <textarea>
 slug: Web/HTML/Element/textarea
 tags:
   - HTML
-  - HTML表单
+  - HTML 表单
   - textarea
   - 元素
   - 参考
@@ -32,14 +32,14 @@ translation_of: Web/HTML/Element/textarea
 
 <dl>
  <dt>{{htmlattrdef("autocapitalize")}} {{non-standard_inline}}</dt>
- <dd>iOS的非标准属性（运行在iOS上的Safari、Firefox、Chrome都支持），文本是否自动首字母大写。在iOS5和之后的版本上有效。可能的值为：
+ <dd>iOS 的非标准属性（运行在 iOS 上的 Safari、Firefox、Chrome 都支持），文本是否自动首字母大写。在 iOS5 和之后的版本上有效。可能的值为：
  <ul>
   <li><code>none</code>: 禁用首字母大写。</li>
   <li><code>sentences</code>: 句子的首字母大写。</li>
   <li><code>words</code>: 单词或者字母的首字母大写。</li>
   <li><code>characters</code>: 全部字母大写。</li>
-  <li><code>on</code>: {{deprecated_inline()}} 自iOS 5废弃。</li>
-  <li><code>off</code>: {{deprecated_inline()}} 自iOS 5废弃。</li>
+  <li><code>on</code>: {{deprecated_inline()}} 自 iOS 5 废弃。</li>
+  <li><code>off</code>: {{deprecated_inline()}} 自 iOS 5 废弃。</li>
  </ul>
  </dd>
  <dt>{{htmlattrdef("autocomplete")}}</dt>
@@ -49,24 +49,24 @@ translation_of: Web/HTML/Element/textarea
   <li><code>on</code>: 浏览器根据用户之前输入的内容或者习惯，在用户输入的时候给出相应输入提示。</li>
  </ul>
 
- <p>如果不指明<strong>autocomplete</strong>属性，浏览器会从父级的表单元素上解析是不是开启这个属性。表单元素可以是`textarea`元素的父级{{HTMLElement("form")}}或者`textarea`有跟表单相同的id（参见下面的form属性）。更多请查看{{HTMLElement("form")}}的{{htmlattrxref("autocomplete", "form")}} 属性。</p>
+ <p>如果不指明<strong>autocomplete</strong>属性，浏览器会从父级的表单元素上解析是不是开启这个属性。表单元素可以是`textarea`元素的父级{{HTMLElement("form")}}或者`textarea`有跟表单相同的 id（参见下面的 form 属性）。更多请查看{{HTMLElement("form")}}的{{htmlattrxref("autocomplete", "form")}} 属性。</p>
  </dd>
  <dt>{{ htmlattrdef("autofocus") }}</dt>
  <dd>页面加载完毕之后是否自动给本元素添加焦点。只有跟表格关联的才能使本属性生效。</dd>
  <dt>{{ htmlattrdef("cols") }}</dt>
- <dd>文本域的可视宽度。必须为正数，默认为20 (HTML5)。</dd>
+ <dd>文本域的可视宽度。必须为正数，默认为 20 (HTML5)。</dd>
  <dt>{{ htmlattrdef("disabled") }}</dt>
- <dd>禁用文本域。默认为false。如果未指定，也可以从父级上如{{ HTMLElement("fieldset") }}继承而来。</dd>
+ <dd>禁用文本域。默认为 false。如果未指定，也可以从父级上如{{ HTMLElement("fieldset") }}继承而来。</dd>
  <dt>{{ htmlattrdef("form") }}</dt>
- <dd>指定跟自身相关联的表单。值必须为本文档内的表单的ID，如果未指定，就是跟当前所在的表单元素相关联。这就允许你在文档的任意地方放置文本域元素。</dd>
+ <dd>指定跟自身相关联的表单。值必须为本文档内的表单的 ID，如果未指定，就是跟当前所在的表单元素相关联。这就允许你在文档的任意地方放置文本域元素。</dd>
  <dt>{{ htmlattrdef("maxlength") }}</dt>
  <dd>允许用户输入的最大字符长度 (Unicode) 。未指定表示无限长度。</dd>
  <dt>{{ htmlattrdef("minlength") }}</dt>
- <dd>允许用户输入的最小字符长度(Unicode) </dd>
+ <dd>允许用户输入的最小字符长度 (Unicode) </dd>
  <dt>{{ htmlattrdef("name") }}</dt>
  <dd>元素的名称。</dd>
  <dt>{{ htmlattrdef("placeholder") }}</dt>
- <dd>向用户提示可以在控件中输入的内容。 在渲染提示时，占位符文本中的回车符(\r)或换行符(\n)一定会被作为行断（换行）处理。</dd>
+ <dd>向用户提示可以在控件中输入的内容。 在渲染提示时，占位符文本中的回车符 (\r) 或换行符 (\n) 一定会被作为行断（换行）处理。</dd>
  <dd>
  <div class="note">
  <p><strong>Note:</strong> Placeholders should only be used to show an example of the type of data that should be entered into a form; they are <em>not</em> a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.</p>
@@ -79,11 +79,11 @@ translation_of: Web/HTML/Element/textarea
  <dt>{{ htmlattrdef("rows") }}</dt>
  <dd>元素的输入文本的行数（显示的高度）。</dd>
  <dt>{{ htmlattrdef("spellcheck") }}</dt>
- <dd>该属性设为true时，表明该元素会做拼写和语法检查。属性值为default时，表明元素有默认行为，可能会基于父元素的spellcheck值。属性值为false时，表明元素不做拼写和语法检查。</dd>
+ <dd>该属性设为 true 时，表明该元素会做拼写和语法检查。属性值为 default 时，表明元素有默认行为，可能会基于父元素的 spellcheck 值。属性值为 false 时，表明元素不做拼写和语法检查。</dd>
  <dt>{{ htmlattrdef("wrap") }}</dt>
- <dd>指定文本换行的方式。默认为soft。可能的值为：
+ <dd>指定文本换行的方式。默认为 soft。可能的值为：
  <ul>
-  <li><span style="font-family: courier new;">hard</span>: 在文本到达元素最大宽度的时候，浏览器自动插入换行符(CR+LF) 。比如指定 <code>cols</code>值。</li>
+  <li><span style="font-family: courier new;">hard</span>: 在文本到达元素最大宽度的时候，浏览器自动插入换行符 (CR+LF) 。比如指定 <code>cols</code>值。</li>
   <li><span style="font-family: courier new;">soft</span>: 在到达元素最大宽度的时候，不会自动插入换行符。</li>
  </ul>
  </dd>
@@ -157,11 +157,11 @@ textarea:valid {
 
 <p>This example has a placeholder set. Notice how it disappears when you start typing into the box.</p>
 
-<pre>&lt;textarea name="textarea"
+<pre class="brush: html">&lt;textarea name="textarea"
    rows="5" cols="30"
    placeholder="Comment text."&gt;&lt;/textarea&gt;</pre>
 
-<p>{{ EmbedLiveSample('Placeholder','600','80') }}</p>
+<p>{{ EmbedLiveSample('占位符','600','80') }}</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> Placeholders should only be used to show an example of the type of data that should be entered into a form; they are <em>not</em> a substitute for a proper {{HTMLElement("label")}} element tied to the input. See {{SectionOnPage("/en-US/docs/Web/HTML/Element/input", "Labels and placeholders")}} for a full explanation.</p>

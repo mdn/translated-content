@@ -260,7 +260,7 @@ Les _attributs SVG de présentation_ sont des propriétés CSS pouvant être uti
   - : Définit la longueur des espaces entre les mots d'un texte.
     _Valeur_: [\<length>](/fr/SVG/Content_type#Length "https://developer.mozilla.org/en/SVG/Content_type#Length")|**`inherit`**; _Animation_: **Oui**
 - **{{SVGAttr('writing-mode')}}**
-  - : Spécifie si la direction d'un élément  {{SVGElement('text')}} doit être de gauche-à-droite, droite-à-gauche, ou de haut-en-bas.
+  - : Spécifie si la direction d'un élément  {{SVGElement('text')}} doit être de gauche-à-droite, droite-à-gauche, ou de haut-en-bas.
     _Valeur_: **`lr-tb`**|`rl-tb`|`tb-rl`|`lr`|`rl`|`tb`|`inherit`; _Animation_: **Oui**
 
 ## Compatibilité des navigateurs

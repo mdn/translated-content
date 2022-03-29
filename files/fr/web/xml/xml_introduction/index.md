@@ -12,15 +12,15 @@ XML, pour _e**X**tensible **M**arkup **L**anguage_ (langage de balisage extensib
 
 De nombreux autres langages sont basés sur XML, comme par exemple [XHTML](fr/XHTML), [MathML](fr/MathML), [SVG](fr/SVG), [XUL](fr/XUL), [XBL](fr/XBL), [RSS](fr/RSS) et [RDF](fr/RDF). Vous pouvez créer votre propre langage basé sur XML.
 
-### Du XML « correct » (valide et « bien formé »)
+### Du XML «&nbsp;correct&nbsp;» (valide et «&nbsp;bien formé&nbsp;»)
 
-Pour être correct, un document XML doit être « bien formé », se conformer à toutes les règles de syntaxe du XML, et « valide », se conformer aux règles d'un langage spécifique.
+Pour être correct, un document XML doit être «&nbsp;bien formé&nbsp;», se conformer à toutes les règles de syntaxe du XML, et «&nbsp;valide&nbsp;», se conformer aux règles d'un langage spécifique.
 
 La plupart des navigateurs, dont Mozilla, offrent un outil de validation qui informera souvent lors de la lecture ou de l'affichage de documents mal formés.
 
 #### Exemple
 
-Voici un exemple de document mal formé : un des éléments possédant une balise d'ouverture, `<warning>`, n'a pas de balise de fermeture et ce n'est pas un élément vide (ou auto-fermant comme les balises \<br /> ou \<img /> en XHTML).
+Voici un exemple de document mal formé&nbsp;: un des éléments possédant une balise d'ouverture, `<warning>`, n'a pas de balise de fermeture et ce n'est pas un élément vide (ou auto-fermant comme les balises \<br /> ou \<img /> en XHTML).
 
     <code>
       <message>
@@ -29,7 +29,7 @@ Voici un exemple de document mal formé : un des éléments possédant une bali
       </message>
     </code>
 
-L'exemple qui suit est correct et « bien formé » :
+L'exemple qui suit est correct et «&nbsp;bien formé&nbsp;»&nbsp;:
 
     <code>
       <message>
@@ -43,7 +43,7 @@ Pour être valide, un document doit se conformer à des règles sémantiques qui
 
 ### Entités
 
-Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe « plus grand que » utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux :
+Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) pour se référer à certains caractères spéciaux réservés (tel que le signe «&nbsp;plus grand que&nbsp;» utilisé pour les balises). Il faut connaître 5 de ces caractères spéciaux&nbsp;:
 
 <table class="standard-table">
   <tbody>
@@ -55,12 +55,12 @@ Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) 
     <tr>
       <td><code>&#x26;lt;</code></td>
       <td><code>&#x3C;</code></td>
-      <td>Un signe « plus petit que ».</td>
+      <td>Un signe «&nbsp;plus petit que&nbsp;».</td>
     </tr>
     <tr>
       <td><code>&#x26;gt;</code></td>
       <td><code>></code></td>
-      <td>Un signe « plus grand que ».</td>
+      <td>Un signe «&nbsp;plus grand que&nbsp;».</td>
     </tr>
     <tr>
       <td><code>&#x26;amp;</code></td>
@@ -80,11 +80,11 @@ Comme le [HTML](fr/HTML), le **XML** fournit des méthodes (appelées entités) 
   </tbody>
 </table>
 
-Même s'il n'y a que 5 entités déclarées, il est possible d'en ajouter d'autres grâce à la [Document Type Definition](fr/DTD), comme décrit ci-dessous :
+Même s'il n'y a que 5 entités déclarées, il est possible d'en ajouter d'autres grâce à la [Document Type Definition](fr/DTD), comme décrit ci-dessous&nbsp;:
 
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE body [
-        <!ENTITY warning "Avertissement : Quelque chose ne fonctionne pas correctement…
+        <!ENTITY warning "Avertissement&nbsp;: Quelque chose ne fonctionne pas correctement…
                           Veuillez rafraîchir et réessayer.">
     ]>
     <body>
@@ -107,11 +107,11 @@ L'autre technique utilise la puissance de [XSLT](fr/XSLT), qui est capable de tr
 
 ### Recommandations
 
-Cet article n'est qu'une introduction rapide à XML ; pour plus de détails, parcourez le Web à la recherche d'articles allant plus en profondeur.
+Cet article n'est qu'une introduction rapide à XML&nbsp;; pour plus de détails, parcourez le Web à la recherche d'articles allant plus en profondeur.
 
 L'apprentissage du langage de balisage HTML vous aidera à mieux comprendre XML. Vous trouverez également plus d'informations en explorant le Mozilla Developer Center.
 
-Voici une liste d'articles de référence sur le Web :
+Voici une liste d'articles de référence sur le Web&nbsp;:
 
 - [W3Schools: DTD Tutorial (en)](http://www.w3schools.com/dtd/)
 - [W3Schools: XML Tutorial (en)](http://www.w3schools.com/xml/default.asp)
@@ -124,5 +124,5 @@ L'article [Using XML (en)](http://www.alistapart.com/articles/usingxml/) est une
 
 ### Informations sur le document
 
-- Auteur(s) : [Justin G. Shreve](http://justinshreve.com)
-- Dernière mise à jour : le 4 août 2007
+- Auteur(s)&nbsp;: [Justin G. Shreve](http://justinshreve.com)
+- Dernière mise à jour&nbsp;: le 4 août 2007

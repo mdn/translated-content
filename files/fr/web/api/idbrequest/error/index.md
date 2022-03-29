@@ -33,7 +33,7 @@ Une erreur {{domxref("DOMError")}} qui contient l'erreur pertinente. Pour Chrome
 | `NoError`            | Valeur utilisée lorsque la requête est réussie.                                                                                                                                                                                                                                             |
 | `VersionError`       | Erreur obtenue lorsqu'on essaye d'ouvrir une base de données avec une version inférieure à celle dont elle dispose déjà.                                                                                                                                                                    |
 
-En plus des codes d'erreur envoyés à l'objet {{domxref("IDBRequest")}}, les opérations asynchrones peuvent également déclencher des exceptions. La liste décrit les problèmes qui peuvent se produire lorsque la requête est en cours d'exécution mais d'autres problèmes peuvent apparaître lors de la construction de la requête. Ainsi, si la requête a échoué et que le résultat n'est pas disponible, l'exception `InvalidStateError `sera levée.
+En plus des codes d'erreur envoyés à l'objet [`IDBRequest`](/fr/docs/Web/API/IDBRequest), les opérations asynchrones peuvent également déclencher des exceptions. La liste décrit les problèmes qui peuvent se produire lorsque la requête est en cours d'exécution mais d'autres problèmes peuvent apparaître lors de la construction de la requête. Ainsi, si la requête a échoué et que le résultat n'est pas disponible, l'exception `InvalidStateError` sera levée.
 
 ## Exemples
 
@@ -80,7 +80,7 @@ objectStoreTitleRequest.onerror = function() {
 
 | Spécification                                                                    | État                         | Commentaires |
 | -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBRequest-error', 'error')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBRequest-error', 'error')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

@@ -1,63 +1,75 @@
 ---
 title: Interagir avec le presse-papier
 slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
-tags:
-  - Add-ons
-  - Clip
-  - Clipboard
-  - Cut
-  - Editing
-  - Extensions
-  - Text
-  - WebExtensions
-  - coller
-  - copier
-  - copy
-  - couper
-  - paste
 translation_of: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
 original_slug: Mozilla/Add-ons/WebExtensions/interagir_avec_le_presse_papier
 ---
 {{AddonSidebar}}
 
-ll y a deux façons dont les extensions de navigateur peuvent interagir avec le presse-papiers système : la méthode {{domxref("Document.execCommand()")}}  et l'asynchrone moderne de l'[API Presse-papiers](/fr/docs/Web/API/Clipboard_API).
+La gestion du presse-papier avec les extensions s'effectue avec l'objet [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) (elle s'effectuait avant avec la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) qui est désormais dépréciée).
 
-La méthode {{domxref("Document.execCommand()")}} peut être utilisée, en spécifiant la commande désirée :
+> **Note :** L'API [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) est un ajout relativement récent à la spécification et peut ne pas être complètement implémentée par l'ensemble des navigateurs. Cet article décrit certaines des limitations, mais il est préférable de vérifier les tableaux de compatibilité de chaque méthode avant de les utiliser.
 
-- `document.execCommand("copy")`
-- `document.execCommand("cut")`
-- `document.execCommand("paste")`
+La différence entre les deux API peut se décrire ainsi&nbsp;: [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) est analogue aux actions de copier/coller/couper du clavier en échangeant des données entre une page web et un presse-papier tandis que [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) permet de lire et d'écrire des données arbitraires dans le presse-papier.
 
-L'API Presse-papiers fournit un accès asynchrone pour lire et écrire directement le contenu du presse-papiers. Par exemple, pour lire le texte du presse-papiers :
+[`navigator.clipboard`](/fr/docs/Web/API/Clipboard) fournit des méthodes séparées pour la lecture et l'écriture&nbsp;:
+
+- Pour le contenu textuel simple, on utilisera [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.writeText()`](/fr/docs/Web/API/Clipboard/writeText).
+- Pour les images, le texte riche, du HTML ou d'autre contenu complexe, on utilisera [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write).
+
+On notera cependant que, bien que [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.writeText()`](/fr/docs/Web/API/Clipboard/writeText) fonctionnent pour tous les navigateurs, ce n'est pas le cas de  [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write). Ainsi, au moment où nous écrivons ces lignes, Firefox n'implémente pas complètement [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write). Il faudra alors&nbsp;:
+
+- Pour manipuler des images, utiliser [`browser.clipboard.setImageData()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData) pour écrire des images dans le presse-papier et [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand) pour coller des images sur une page web.
+- Pour écrire du contenu riche (comme du HTML, du texte complexe incluant des images, etc.) dans le presse-papier, utiliser [`document.execCommand("copy")`](/fr/docs/Web/API/Document/execCommand) ou [`document.execCommand("cut")`](/fr/docs/Web/API/Document/execCommand). Pour lire le contenu équivalent depuis le presse-papier, on utilisera [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) (recommandée) ou [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand).
+
+## Écrire dans le presse-papier
+
+Cette section décrit les options permettant d'écrire des données dans le presse-papier.
+
+### Utiliser l'API Clipboard
+
+L'API Clipboard permet d'écrire des données arbitraires dans le presse-papier de votre extension. Pour utiliser cette API, il faut la permission `"clipboardRead"` ou `"clipboardWrite"` dans le fichier `manifest.json`. Cette API étant uniquement disponible [pour les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts), on ne peut pas l'utiliser pour un script de contenu qui s'exécute sur une page servie en HTTP mais uniquement sur des pages servies en HTTPS.
+
+Pour les scripts de page, la permission `"clipboard-write"` doit être demandée via l'API [`navigator.permissions`](/fr/docs/Web/API/Permissions). Cette permission peut ensuite être vérifiée avec [`navigator.permissions.query()`](/fr/docs/Web/API/Permissions/query)&nbsp;:
 
 ```js
-navigator.clipboard.readText().then(text => outputElem.innerText = text);
+navigator.permissions.query({name: "clipboard-write"}).then(result => {
+  if (result.state == "granted" || result.state == "prompt") {
+    /* On peut alors écrire dans le presse-papier */
+  }
+});
 ```
 
-Ceci demande le contenu du presse-papiers et, lorsque la réponse est reçue, stocke le texte du presse-papiers dans le {{domxref("Node.innerText", "innerText")}} d'un élément.
+> **Note :** La permission intitulée `clipboard-write` est uniquement prise en charge pour les navigateurs basés sur Chromium et pas dans Firefox.
 
-> **Note :** Les méthodes asynchrones de l'API Clipboard sont un ajout récent à la spécification et peuvent ne pas être entièrement implémentées dans tous les navigateurs. Assurez-vous de passer en revue les tableaux de compatibilité pour chaque méthode avant de les utiliser, afin de vous assurer que le support est suffisamment large pour vos besoins.
+La fonction qui suit prend en argument une chaîne de caractères et l'écrit dans le presse-papier&nbsp;:
 
-## Ecrire dans le presse-papiers
+```js
+function updateClipboard(newClip) {
+  navigator.clipboard.writeText(newClip).then(function() {
+    /* le presse-papier est correctement paramétré */
+  }, function() {
+    /* l'écriture dans le presse-papier a échoué */
+  });
+}
+```
 
-Il y a deux façons d'écrire dans le presse-papiers. Vous pouvez utiliser les actions {{domxref("Document.execCommand", "document.execCommand()")}} pour déclencher les actions "couper" et "copier", qui remplace le contenu actuel du presse-papiers par les données actuellement sélectionnées. L'autre option est d'utiliser la méthode {{domxref("Clipboard.writeText()")}} ou {{domxref("Clipboard.write()")}} de l'API Presse-papiers pour remplacer le contenu du presse-papiers par des données spécifiques.
+### Utiliser `execCommand()`
 
-### Utiliser execCommand()
+Les commandes `"cut"` et `"copy"`, fournies par la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand), peuvent être utilisées pour remplacer le contenu du presse-papier avec les données voulues. Ces commandes peuvent être utilisées sans permission spéciale préalable dans des gestionnaires d'évènements éphémères (par exemple pour gérer l'évènement d'un clic).
 
-Les commandes {{domxref("Document.execCommand", "document.execCommand()")}} de la méthode `"couper"` et `"copier"` peuvent être utilisées pour remplacer le contenu actuel du presse-papiers par le matériel sélectionné. Ces commandes peuvent être utilisées sans permission spéciale si vous les utilisez dans un gestionnaire d'événements de courte durée pour une action utilisateur (par exemple, un gestionnaire de clics).
-
-Par exemple, supposons que vous ayez un popup qui inclut le HTML suivant :
+Prenons comme exemple une fenêtre contenant le fragment de HTML suivant&nbsp;:
 
 ```html
 <input id="input" type="text"/>
-<button id="copy">Copy</button>
+<button id="copy">Copier</button>
 ```
 
-Pour que le bouton `"copier"` copie le contenu de l'élément {{HTMLElement("input")}}, vous pouvez utiliser du code comme ceci :
+Pour que le bouton `"copy"` copie effectivement le contenu de l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input), on pourra utiliser un code comme celui-ci&nbsp;:
 
 ```js
 function copy() {
-  var copyText = document.querySelector("#input");
+  let copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
 }
@@ -65,13 +77,13 @@ function copy() {
 document.querySelector("#copy").addEventListener("click", copy);
 ```
 
-Parce que l'appel `execCommand()` se trouve à l'intérieur d'un gestionnaire d'événements click, vous n'avez pas besoin de permissions spéciales ici.
+Comme l'appel à `execCommand()` est situé dans un gestionnaire d'évènement pour un clic, il n'est pas nécessaire d'avoir d'autres permissions.
 
-Cependant, disons que vous déclenchez plutôt la copie à partir d'une alarme  :
+Supposons toutefois que l'action soit déclenchée autrement, via une alarme&nbsp;:
 
 ```js
 function copy() {
-  var copyText = document.querySelector("#input");
+  let copyText = document.querySelector("#input");
   copyText.select();
   document.execCommand("copy");
 }
@@ -83,78 +95,55 @@ browser.alarms.create({
 browser.alarms.onAlarm.addListener(copy);
 ```
 
-Selon le navigateur, cela peut ne pas fonctionner. Sur Firefox, cela ne fonctionnera pas, et vous verrez un message comme celui-ci dans votre console :
+Selon le navigateur, le code présenté juste avant pourra ne pas fonctionner. Pour Firefox, ça ne fonctionnera pas et un message analogue à ce qui suit sera affiché dans la console&nbsp;:
 
-    document.execCommand(‘cut’/‘copy’) was denied because it was not called from inside a short running user-generated event handler.
+`La commande document.execCommand('cut'/'copy') a été rejetée parce qu'elle n'a pas été appelée à l'intérieur d'un gestionnaire d'évènement généré par l'utilisateur.`
 
-Pour activer ce cas d'utilisation, vous devez demander [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardWrite"`. Alors :  `"clipboardWrite"` vous permet d'écrire dans le presse-papiers en dehors d'un gestionnaire d'événements de courte durée pour une action utilisateur.
+Pour permettre ce cas d'usage, il faut demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardWrite"`. Cette dernière permettra d'écrire dans le presse-papier en dehors des gestionnaires d'évènements éphémères déclenchés par une action de l'utilisatrice ou de l'utilisateur.
 
-### Utilisation de l'API Presse-papiers
+> **Note :** [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) ne fonctionne pas pour les champs de formulaire avec `type="hidden"`, les éléments avec l'attribut HTML `"hidden"`, ou ceux ciblés par une règle CSS contenant `"display: none;"`.
 
-L'API Presse-papiers ajoute une plus grande flexibilité, en ce sens que vous n'êtes pas limité à copier simplement la sélection courante dans le presse-papiers, mais vous pouvez spécifier directement quelles informations placer dans le presse-papiers.
+### Considérations spécifiques à chaque navigateur
 
-L'utilisation de l'API nécessite que vous ayez les permissons de l'API `"clipboard-write"`. Vous pouvez vérifier cette permission en utilisant {{domxref("Permissions.query", "navigator.permissions.query()")}}:
+Les différentes API évoquées ici évoluent rapidement. Il existe des variations quant à leur fonctionnement selon le navigateur.
+
+Pour Chrome, la permission `"clipboardWrite"` n'est pas nécessaire, même pour écrire dans le presse-papier en dehors d'un gestionnaire d'évènement pour un évènement déclenché par l'utilisatrice ou l'utilisateur.
+
+Pour Firefox, la méthode [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write) n'est pas prise en charge.
+
+Voir [les tableaux de compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'information.
+
+## Lire les données du presse-papier
+
+Cette section décrit les options disponibles pour lire ou copier des données depuis le presse-papier.
+
+### Utiliser l'API Clipboard
+
+Les méthodes de l'API Clipboard [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) permettent de lire du texte ou des données binaires depuis le presse-papier [dans les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts). Cela permet d'accéder aux données du presse-papier sans avoir à les coller au préalable dans un élément éditable.
+
+Une fois que la permission `"clipboard-read"` a été demandée via [l'API Permissions](/fr/docs/Web/API/Permissions_API), il est possible de lire depuis le presse-papier. Ce fragment de code illustre la récupération du texte depuis le presse-papier et remplace le contenu de l'élément ayant l'identifiant `"outbox"` avec ce texte.
 
 ```js
-navigator.permissions.query({name: "clipboard-write"}).then(result => {
-  if (result.state == "granted" || result.state == "prompt") {
-    /* write to the clipboard now */
-  }
-});
+navigator.clipboard.readText().then(clipText =>
+  document.getElementById("outbox").innerText = clipText);
 ```
 
-Cette fonction prend une chaîne de caractères comme entrée et met à jour le presse-papiers pour contenir cette chaîne :
+### Utiliser `execCommand()`
 
-```js
-function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(function() {
-    /* clipboard successfully set */
-  }, function() {
-    /* clipboard write failed */
-  });
-}
-```
+Pour utiliser [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand), l'extension aura besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"`. Cela vaut également lorsqu'on utilise la commande `"paste"` depuis un gestionnaire d'évènement pour un évènement généré par l'utilisatrice ou l'utilisateur (comme [`click`](/fr/docs/Web/API/Element/click_event) ou [`keypress`](/fr/docs/Web/API/Document/keypress_event)).
 
-> **Note :** Le nom de la permission `clipboard-write` n'est pas supporté actuellement dans Firefox - seulement les navigateurs Chromium.
-
-### Considérations spécifiques du navigateur
-
-Le presse-papiers et les autres API impliquées ici évoluent rapidement, de sorte qu'il y a des variations entre les navigateurs quant à leur mode de fonctionnement.
-
-Dans Chrome:
-
-- Vous pouvez écrire dans le presse-papiers comme ceci dans tous les contextes d'exécution - pages d'arrière-plan, scripts de contenu, pages d'options et popups.
-- Vous n'avez pas besoin de `"clipboardWrite"`, même pour écrire dans le presse-papiers en dehors d'un gestionnaire d'événements généré par l'utilisateur.
-
-Dans Firefox:
-
-- Vous pouvez écrire dans le presse-papiers comme ceci dans tous les contextes d'exécution _à l'exception des pages d'arrière-plan_. Dans Firefox, vous ne pouvez pas sélectionner du texte ou mettre au point un champ de saisie dans les pages d'arrière-plan, de sorte que vous ne pouvez pas écrire dans le presse-papiers à partir d'une page d'arrière-plan.
-- A partir de la version 57, vous pouvez copier des images dans le presse-papiers à l'aide de l'API [`clipboard.setImageData()`](/fr/Add-ons/WebExtensions/API/clipboard/setImageData).
-- Le support de l'API Clipboard {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} a été ajouté dans Firefox 63.
-- Lors de l'utilisation de scripts de contenu, l'API Clipboard n'est disponible que pour les pages HTTPS. Comme solution de contournement, utilisez la messagerie entre vos scripts de contenu et le script d'arrière-plan.
-
-> **Note :** L'API `execCommand('copy')` n'est pas supporté dans **Safari**
-
-## Lecture à partir du presse-papiers
-
-La méthode `execCommand()` fournit la commande `"coller"`, qui vous permet de coller le contenu actuel du presse-papiers au point d'insertion dans un contrôle modifiable. Vous pouvez gagner en flexibilité en utilisant les méthodes {{domxref("Clipboard.read()")}} et {{domxref("Clipboard.readText()")}}.
-
-### Utilisation de execCommand()
-
-Tout d'abord, vous devez avoir la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"` établie pour votre extension. C'est le cas même si vous utilisez la commande `"coller"` à partir d'un gestionnaire d'événements généré par l'utilisateur tel que {{event("click")}} ou {{event("keypress")}}.
-
-Considérez le HTML qui inclut quelque chose comme ceci :
+Prenons ce fragment de HTML&nbsp;:
 
 ```html
 <textarea id="output"></textarea>
-<button id="paste">Paste</button>
+<button id="paste">Coller</button>
 ```
 
-Pour définir le contenu de l'élément {{HTMLElement("textarea")}} avec l'ID `"output"` du presse-papiers lorsque l'utilisateur clique sur le {{HTMLElement("button")}} `"coller"`, vous pouvez utiliser du code comme ceci :
+Pour transformer le contenu de l'élément [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) avec l'identifiant `"output"` en utilisant celui du presse-papier lorsque l'utilisateur clique sur le bouton ([`<button>`](/fr/docs/Web/HTML/Element/Button)) `"paste"`, on pourra utiliser le code qui suit&nbsp;:
 
 ```js
 function paste() {
-  var pasteText = document.querySelector("#output");
+  let pasteText = document.querySelector("#output");
   pasteText.focus();
   document.execCommand("paste");
   console.log(pasteText.textContent);
@@ -163,26 +152,23 @@ function paste() {
 document.querySelector("#paste").addEventListener("click", paste);
 ```
 
-### Utilisation de l'API Presse-papiers
+### Considérations spécifiques à chaque navigateur
 
-Les méthodes {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} et {{domxref("Clipboard.read", "navigator.clipboard.read()")}} de l'API Presse-papiers vous permettent de lire du texte arbitraire ou des données binaires à partir du presse-papiers. Cela vous permet d'accéder aux données du presse-papiers sans simplement les coller dans un élément modifiable.
+Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"` à partir de la version 54 mais la prise en charge porte uniquement sur le collage au sein d'éléments [en mode éditable](/fr/docs/Web/Guide/HTML/Editable_content), ce qui limite à [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) pour les scripts de contenu. Pour les scripts d'arrière-plan, tout élément pourra être mis en mode éditable.
 
-Une fois que vous avez la permission `"clipboard-read"` de l'[API permissions](/fr/docs/Web/API/Permissions_API), vous pouvez lire facilement à partir du presse-papiers :
+## Compatibilité des navigateurs
 
-```js
-navigator.clipboard.readText().then(clipText =>
-  document.getElementById("outbox").innerText = clipText);
-```
+### `navigator.clipboard`
 
-Cet extrait de code récupère le texte du presse-papiers et remplace le contenu actuel de l'élément par l'ID `"outbox"` avec ce texte.
+{{Compat("api.Clipboard")}}
 
-### Considérations spécifiques au navigateur
+### `clipboard.setImageData`
 
-Firefox supporte la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead" à partir de la version` 54, mais ne supporte pas que le collage dans les élements en [mode édition de contenu](/fr/docs/Web/Guide/HTML/Editable_content), qui pour les scripts de contenu ne fonctionne qu'avec un {{HTMLElement("textarea")}}. Pour les scripts d'arrière-plan, n'importe quel élément peut être mis en mode contenu modifiable.
+{{Compat("webextensions.api.clipboard")}}
 
 ## Voir aussi
 
-- [Clipboard API](/fr/docs/Web/API/Clipboard_API)
-- [Permissions API](/fr/docs/Web/API/Permissions_API)
-- [Making content editable](/fr/docs/Web/Guide/HTML/Editable_content)
-- {{htmlattrxref("contenteditable")}}
+- [API Clipboard](/fr/docs/Web/API/Clipboard_API)
+- [API Permissions](/fr/docs/Web/API/Permissions_API)
+- [Rendre le contenu éditable](/fr/docs/Web/Guide/HTML/Editable_content)
+- [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-contenteditable)

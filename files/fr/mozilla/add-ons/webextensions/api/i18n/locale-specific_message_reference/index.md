@@ -77,17 +77,17 @@ Le nom peut inclure les caractères suivants :
 
 ### message
 
-Au moins, cette propriété doit être définie pour chaque chaîne. Le membre `"message"` contient une chaîne localisée qui peut contenir {{anch("placeholders")}}. Vous pouvez utiliser :
+Au moins, cette propriété doit être définie pour chaque chaîne. Le membre `"message"` contient une chaîne localisée qui peut contenir [placeholders](#placeholders). Vous pouvez utiliser :
 
 - _$placeholder_name$_ (case insensitive) pour insérer un espace réservé particulier (par exemple $URL$ dans l'exemple ci-dessus) dans votre chaîne.
-- `$1`, `$2`,` $3`, etc. pour insérer directement les valeurs obtenues à partir d'un {{WebExtAPIRef("i18n.getMessage()")}} appel dans votre chaîne.
+- `$1`, `$2`, `$3`, etc. pour insérer directement les valeurs obtenues à partir d'un {{WebExtAPIRef("i18n.getMessage()")}} appel dans votre chaîne.
 
 Autres points à noter :
 
 - Tout nombre de signes dollar consécutifs apparaissant dans les chaînes est remplacé par le même nombre de signes dollar moins un. donc, $$ > $, $$$ > $$, etc.
-- Lorsque le fichier de paramètres régionaux est lu, les jetons correspondant à  `/\$([a-z0-9_@]+)\$/i` sont remplacés par la valeur correspondante de l'objet "placeholders" de la chaîne. Ces substitutions se produisent avant le traitement des  `/\$\d/` jetons dans le message.
+- Lorsque le fichier de paramètres régionaux est lu, les jetons correspondant à  `/\$([a-z0-9_@]+)\$/i` sont remplacés par la valeur correspondante de l'objet "placeholders" de la chaîne. Ces substitutions se produisent avant le traitement des  `/\$\d/` jetons dans le message.
 - Lorsqu'une chaîne locale est utilisée, les jetons correspondant à `/\$\d+/` sont remplacés par les remplacements passés à {{WebExtAPIRef("i18n.getMessage()")}}.
-- `getMessage()` ne traitera pas les appels avec plus de 9  placeholders/substitutions.
+- `getMessage()` ne traitera pas les appels avec plus de 9 placeholders/substitutions.
 
 ### description
 
@@ -112,11 +112,11 @@ Chaque définition de sous-chaîne d'espace réservé possède un certain nombre
 
 #### Nom placeholder
 
-Le nom de l'espace réservé est utilisé pour représenter l'espace réservé dans la chaîne de substitution (par exemple `"url"` devient `$url$`). Il est insensible à la casse et peut contenir les mêmes caractères qu'une chaîne de message {{anch("name")}}.
+Le nom de l'espace réservé est utilisé pour représenter l'espace réservé dans la chaîne de substitution (par exemple `"url"` devient `$url$`). Il est insensible à la casse et peut contenir les mêmes caractères qu'une chaîne de message [name](#name).
 
 #### contenu
 
-L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript).
+L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/Add-ons/WebExtensions/Internationalization#Retrieving_message_strings_from_JavaScript).
 
 #### exemple
 

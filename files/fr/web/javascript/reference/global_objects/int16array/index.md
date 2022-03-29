@@ -27,7 +27,7 @@ Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [t
 ## Propriétés
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int16Array.BYTES_PER_ELEMENT")}}
-  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int16Array`, la propriété vaudra 2.
+  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int16Array`, la propriété vaudra 2.
 - `Int16Array.length`
   - : Une propriété de longueur qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Int16Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Int16Array.name")}}
@@ -38,7 +38,7 @@ Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [t
 ## Méthodes
 
 - {{jsxref("TypedArray.from", "Int16Array.from()")}}
-  - : Crée un nouvel objet `Int16Array` à partir d'un objet semblable à un tableau ou d'un objet itérable. Voir également la page {{jsxref("Array.from()")}}.
+  - : Crée un nouvel objet `Int16Array` à partir d'un objet semblable à un tableau ou d'un objet itérable. Voir également la page {{jsxref("Array.from()")}}.
 - {{jsxref("TypedArray.of", "Int16Array.of()")}}
   - : Crée un nouvel objet `Int16Array` à partir d'un nombre variable d'arguments. Voir également la page {{jsxref("Array.of()")}}.
 
@@ -49,7 +49,7 @@ Tous les objets `Int16Array` héritent de {{jsxref("TypedArray.prototype", "%Typ
 ### Propriétés
 
 - `Int16Array.prototype.constructor`
-  - : Renvoie la fonction qui a créé le prototype de l'instance. Par défaut, ce sera le constructeur natif` Int16Array`.
+  - : Renvoie la fonction qui a créé le prototype de l'instance. Par défaut, ce sera le constructeur natif `Int16Array`.
 - {{jsxref("TypedArray.prototype.buffer", "Int16Array.prototype.buffer")}} {{readonlyInline}}
   - : Renvoie l'{{jsxref("ArrayBuffer")}} référencée par l'objet `Int16Array`. Cette propriété est déterminée lors de la construction de l'objet et n'est accessible qu'en **lecture seule**.
 - {{jsxref("TypedArray.prototype.byteLength", "Int16Array.prototype.byteLength")}} {{readonlyInline}}

@@ -11,7 +11,7 @@ translation_of: Web/API/Event/cancelable
 ---
 {{ ApiRef("DOM") }}
 
-La propriété  _`cancelable`_ (_annulable_) de "Event" Indique si l'événement peut être annulé et donc empêché, comme si l'événement ne s'était jamais produit. Si l'événement n'est pas annulable, alors sa propriété `cancelable` est à `false` (_faux_) et l'écouteur d'événement ne peut pas l'arrêter.
+La propriété _`cancelable`_ (_annulable_) de "Event" Indique si l'événement peut être annulé et donc empêché, comme si l'événement ne s'était jamais produit. Si l'événement n'est pas annulable, alors sa propriété `cancelable` est à `false` (_faux_) et l'écouteur d'événement ne peut pas l'arrêter.
 
 L'appel de {{domxref("event.preventDefault", "preventDefault()")}} sur un évènement qui ne peut être annulé produit une erreur, aussi les écouteurs d'évènement qui gèrent de nombreux types d'évènements peuvent être vérifiés avec `cancelable` avant d'appeler leurs méthodes `preventDefault()`.
 
@@ -25,7 +25,7 @@ La plupart des événements natifs du navigateur qui peuvent être annulés sont
 
 ## Exemple
 
-Par exemple, les vendeurs de navigateurs proposent que l'[évènement wheel ](/fr/docs/Web/Events/wheel)puisse être annulable seulement  [la première fois que l'écouteur est appelé](https://github.com/WICG/interventions/issues/33) (en) ; les évènements  `wheel` suivants ne peuvent être annulés.
+Par exemple, les vendeurs de navigateurs proposent que l'évènement [`wheel`](/fr/docs/Web/API/Document/wheel_event) puisse être annulable seulement [la première fois que l'écouteur est appelé (ressource en anglais)](https://github.com/WICG/interventions/issues/33)&nbsp;; les évènements `wheel` suivants ne peuvent être annulés.
 
 ```js
 function preventScrollWheel(event) {
@@ -55,8 +55,8 @@ Pour annuler un événement, utiliser la méthode {{domxref("event.preventDefaul
 
 | Spécification                                                                                        | Statut                               | Commentaire          |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-cancelable', 'Event.cancelable')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM4', '#dom-event-cancelable', 'Event.cancelable')}}             | {{ Spec2('DOM4') }}             |                      |
+| {{SpecName('DOM WHATWG', '#dom-event-cancelable', 'Event.cancelable')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
+| {{SpecName('DOM4', '#dom-event-cancelable', 'Event.cancelable')}}             | {{ Spec2('DOM4') }}             |                      |
 | {{SpecName('DOM2 Events', '#Events-Event-canCancel', 'Event.cancelable')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
 
 ## Compatibilité des navigateurs

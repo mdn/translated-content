@@ -16,11 +16,11 @@ Ce deuxième exemple est très simple, mais il est essentiel à la compréhensio
 
 {{ EmbedLiveSample('Exemple', '352', '270') }}
 
-Vous pouvez voir que le bloc _DIV #2_ (z-index : 2) est au dessus du bloc _DIV #3_ (z-index : 1), parce qu'ils appartiennent tout les deux au même contexte d'empilement (celui de la racine), donc les valeurs de `z-index` régissent l'empilement des éléments.
+Vous pouvez voir que le bloc _DIV #2_ (z-index&nbsp;: 2) est au dessus du bloc _DIV #3_ (z-index&nbsp;: 1), parce qu'ils appartiennent tout les deux au même contexte d'empilement (celui de la racine), donc les valeurs de `z-index` régissent l'empilement des éléments.
 
-Ce qui peut apparaitre comme étrange, c'est que le bloc _DIV #2_ (z-index : 2) est au dessus du bloc _DIV #4_ (z-index : 10), malgré leurs valeurs de `z-index`. La raison est qu'ils n'appartiennent pas au même contexte d'empilement. Le bloc _DIV #4_ appartient au contexte d'empilement créé par le bloc _DIV #3_, et, comme expliqué précédemment, le bloc _DIV #3_ (et tout son contenu) est au dessous du bloc _DIV #2_.
+Ce qui peut apparaitre comme étrange, c'est que le bloc _DIV #2_ (z-index&nbsp;: 2) est au dessus du bloc _DIV #4_ (z-index&nbsp;: 10), malgré leurs valeurs de `z-index`. La raison est qu'ils n'appartiennent pas au même contexte d'empilement. Le bloc _DIV #4_ appartient au contexte d'empilement créé par le bloc _DIV #3_, et, comme expliqué précédemment, le bloc _DIV #3_ (et tout son contenu) est au dessous du bloc _DIV #2_.
 
-Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilement :
+Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilement&nbsp;:
 
 - Contexte d'empilement racine
 

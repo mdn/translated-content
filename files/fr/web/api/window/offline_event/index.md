@@ -11,7 +11,7 @@ translation_of: Web/API/Window/offline_event
 ---
 {{APIRef}}
 
-L'événement **`offline`** de l'interface {{domxref("Window")}} se déclenche lorsque le navigateur perd la connexion au réseau et la valeur de  {{domxref("Navigator.onLine")}} bascule à `false`.
+L'événement **`offline`** de l'interface {{domxref("Window")}} se déclenche lorsque le navigateur perd la connexion au réseau et la valeur de {{domxref("Navigator.onLine")}} bascule à `false`.
 
 <table class="properties">
   <tbody>

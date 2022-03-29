@@ -7,7 +7,7 @@ translation_of: Web/API/SVGElement
 ---
 ## Interface d'élément SVG
 
-Toutes les interfaces SVG DOM qui correspondent directement à des éléments du langage SVG dérivent de l'interface `SVGElement`.
+Toutes les interfaces SVG DOM qui correspondent directement à des éléments du langage SVG dérivent de l'interface `SVGElement`.
 
 ### Vue d'ensemble de l'interface
 
@@ -41,7 +41,7 @@ Toutes les interfaces SVG DOM qui correspondent directement à des éléments du
       </td>
     </tr>
     <tr>
-      <th scope="row">Normative document</th>
+      <th scope="row">Normative document</th>
       <td>
         <a href="http://www.w3.org/TR/SVG11/types.html#InterfaceSVGElement"
           >SVG 1.1 (2nd Edition)</a
@@ -83,7 +83,7 @@ Toutes les interfaces SVG DOM qui correspondent directement à des éléments du
       <td>
         <p>
           L'élément {{ SVGElement("svg") }} parent le plus près.
-          <code>Null</code> si l'élément est l'élément svg le plus à
+          <code>Null</code> si l'élément est l'élément svg le plus à
           l'extérieur.
         </p>
       </td>
@@ -94,7 +94,7 @@ Toutes les interfaces SVG DOM qui correspondent directement à des éléments du
       <td>
         <p>
           L'élément qui a établi la fenêtre actuelle. Souvent l'élément parent
-          {{ SVGElement("svg") }} le plus prêt. <code>Null</code> si
+          {{ SVGElement("svg") }} le plus prêt. <code>Null</code> si
           l'élément est l'élément svg le plus à l'extérieur.
         </p>
       </td>
@@ -104,7 +104,7 @@ Toutes les interfaces SVG DOM qui correspondent directement à des éléments du
 
 ## Méthodes
 
-L'interface `SVGElement` ne possède aucune méthode spécifique.
+L'interface `SVGElement` ne possède aucune méthode spécifique.
 
 ## Compatibilité des navigateurs
 

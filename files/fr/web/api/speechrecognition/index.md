@@ -14,16 +14,16 @@ translation_of: Web/API/SpeechRecognition
 
 ## Propriétés
 
-_` SpeechRecognition``  `hérite également des propriétés de son interface parente, {{domxref("EventTarget")}}._
+*`SpeechRecognition` hérite également des propriétés de son interface parente, [`EventTarget`](/fr/docs/Web/API/EventTarget).*
 
 - {{domxref("SpeechRecognition.grammars")}}
   - : Retourne et définit une collection d'objets {{domxref("SpeechGrammar")}} représentant les grammaires qui seront comprises par `SpeechRecognition`.
 - {{domxref("SpeechRecognition.lang")}}
-  - : Retourne et définit la langue de  `SpeechRecognition`. Si elle n'est pas spécifiée, prend la valeur par défaut du HTML {{htmlattrxref("lang","html")}} ou le paramètre de langue du user agent si celle-ci n'est pas défini non plus.
+  - : Retourne et définit la langue de  `SpeechRecognition`. Si elle n'est pas spécifiée, prend la valeur par défaut du HTML {{htmlattrxref("lang","html")}} ou le paramètre de langue du user agent si celle-ci n'est pas défini non plus.
 - {{domxref("SpeechRecognition.continuous")}}
   - : Contrôle si la reconnaissance est continue, ou retourne seulement un seul résultat. Par défaut retourne un seul résultat (`false`.)
 - {{domxref("SpeechRecognition.interimResults")}}
-  - : Contrôle si les résultats intermédiaires doivent être retournés (`true`) ou pas (`false`.) Les résultats intermédiaires sont des résultats qui ne sont pas encore définitifs. (e.x. ou la propriété {{domxref("SpeechRecognitionResult.isFinal")}}  est `false`.)
+  - : Contrôle si les résultats intermédiaires doivent être retournés (`true`) ou pas (`false`.) Les résultats intermédiaires sont des résultats qui ne sont pas encore définitifs. (e.x. ou la propriété {{domxref("SpeechRecognitionResult.isFinal")}}  est `false`.)
 - {{domxref("SpeechRecognition.maxAlternatives")}}
   - : Règle le nombre maximum de {{domxref("SpeechRecognitionAlternative")}} (d'alternatives) fourni par résultat. La valeur par défaut est 1.
 - {{domxref("SpeechRecognition.serviceURI")}}
@@ -69,7 +69,7 @@ _`SpeechRecognition` also inherits methods from its parent interface, {{domxref(
 
 In our simple [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, and set it to be the grammar that will be recognised by the `SpeechRecognition` instance using the {{domxref("SpeechRecognition.grammars")}} property.
 
-After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognised, the {{domxref("SpeechRecognition.onresult")}} handler fires,  we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that colour.
+After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognised, the {{domxref("SpeechRecognition.onresult")}} handler fires,  we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that colour.
 
 ```js
 var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'

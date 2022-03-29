@@ -89,7 +89,7 @@ var bigint = 123456789123456789n;
 
 // On utilise un format avec une devise
 console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
-// → 123.456.789.123.456.789,00 €
+// → 123.456.789.123.456.789,00 €
 
 // Le yen japonais n'utilise pas de sous-unité
 console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' }))

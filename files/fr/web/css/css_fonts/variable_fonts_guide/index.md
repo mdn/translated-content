@@ -66,9 +66,9 @@ Cette propriété fut le premier mécanisme implémenté pour tester les premiè
 
 ### La graisse (_weight_)
 
-La graisse (représenté par l'étiquette `wght`) définit l'épaisseur des traits formants les caractères. En CSS, le descripteur {{cssxref("font-weight")}} a depuis longtemps permis d'utiliser différentes graisses avec des valeurs numériques comprises entre 100 et 900 (avec des incréments de 100) ou des mots-clés tels que `normal` ou `bold` qui étaient des alias pour une valeur numérique correspondante (400 et 700 ici). Ces valeurs sont toujours utilisables pour les polices statiques mais il est désormais possible d'utiliser n'importe quel entier entre 1 et 1000 dans le cas de polices variables.
+La graisse (représenté par l'étiquette `wght`) définit l'épaisseur des traits formants les caractères. En CSS, le descripteur {{cssxref("font-weight")}} a depuis longtemps permis d'utiliser différentes graisses avec des valeurs numériques comprises entre 100 et 900 (avec des incréments de 100) ou des mots-clés tels que `normal` ou `bold` qui étaient des alias pour une valeur numérique correspondante (400 et 700 ici). Ces valeurs sont toujours utilisables pour les polices statiques mais il est désormais possible d'utiliser n'importe quel entier entre 1 et 1000 dans le cas de polices variables.
 
-On notera qu'il n'est pas possible d'utiliser la déclaration `@font-face` afin qu'un point donné sur cet axe corresponde au mot-clé `bold` (ou tout autre mot-clé). Cela pourra généralement être résolu simplement mais nécessitera d'écrire plus de CSS :
+On notera qu'il n'est pas possible d'utiliser la déclaration `@font-face` afin qu'un point donné sur cet axe corresponde au mot-clé `bold` (ou tout autre mot-clé). Cela pourra généralement être résolu simplement mais nécessitera d'écrire plus de CSS :
 
 ```css
 font-weight: 375;
@@ -138,7 +138,7 @@ Ainsi, pour les petits corps, on pourra avoir des traits plus épais et pour des
 
 La plupart du temps, les valeurs liées à la taille optique sont appliquées automatiquement avec les valeurs correspondantes de `font-size` mais on peut tout à fait les manipuler avec la syntaxe de bas niveau `font-variation-settings`.
 
-Une nouvelle propriété CSS a été créée afin de prendre en charge cet axe avec une syntaxe haut niveau pour les polices variables : {{cssxref("font-optical-sizing")}}. Le descripteur `font-optical-sizing` permet uniquement d'utiliser les valeurs `auto` ou `none` et ainsi uniquement d'activer ou de désactiver le dimensionnement optique. Toutefois, avec `font-variation-settings: 'opsz' <num>`, on peut fournir une valeur numérique. Dans la plupart des cas, on utilisera la même valeur pour `font-size` et pour `opsz`. Il est ici permis d'utiliser une autre valeur spécifique afin d'améliorer la lisibilité ou d'obtenir un effet esthétique.
+Une nouvelle propriété CSS a été créée afin de prendre en charge cet axe avec une syntaxe haut niveau pour les polices variables : {{cssxref("font-optical-sizing")}}. Le descripteur `font-optical-sizing` permet uniquement d'utiliser les valeurs `auto` ou `none` et ainsi uniquement d'activer ou de désactiver le dimensionnement optique. Toutefois, avec `font-variation-settings: 'opsz' <num>`, on peut fournir une valeur numérique. Dans la plupart des cas, on utilisera la même valeur pour `font-size` et pour `opsz`. Il est ici permis d'utiliser une autre valeur spécifique afin d'améliorer la lisibilité ou d'obtenir un effet esthétique.
 
 ```css
 font-optical-sizing: auto;
@@ -180,7 +180,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
  src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: normal;
+ font-style: normal;
 }
 ```
 
@@ -192,7 +192,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
  src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: oblique 0deg 20deg;
+ font-style: oblique 0deg 20deg;
 }
 ```
 
@@ -206,7 +206,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
  src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: italic;
+ font-style: italic;
 }
 ```
 
@@ -218,7 +218,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
  src: 'path/to/font/file/myvariablefont.woff2' format('woff2-variations');
  font-weight: 125 950;
  font-stretch: 75% 125%;
- font-style: oblique 0deg 12deg;
+ font-style: oblique 0deg 12deg;
 }
 ```
 

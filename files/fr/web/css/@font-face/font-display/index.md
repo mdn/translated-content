@@ -10,7 +10,7 @@ translation_of: Web/CSS/@font-face/font-display
 ---
 {{CSSRef}}
 
-La propriété **`font-display`** détermine la façon dont une fonte est affichée selon qu'elle ait été chargée et prête à être utilisée.
+La propriété **`font-display`** détermine la façon dont une fonte est affichée selon qu'elle ait été chargée et prête à être utilisée.
 
 ## Le déroulement de l'affichage d'une police
 

@@ -117,7 +117,7 @@ border-radius: unset;
     </tr>
     <tr>
       <td><em>右下</em></td>
-      <td><img alt="bottom-rigth.png" src="bottom-rigth.png" /></td>
+      <td><img alt="bottom-right.png" src="bottom-right.png" /></td>
       <td>
         要素ボックスの右下の隅の境界に使用される半径を記述する {{cssxref("&lt;length&gt;")}} または {{cssxref("&lt;percentage&gt;")}} です。3 つまたは 4 つの値の構文でのみ使用されます。
       </td>

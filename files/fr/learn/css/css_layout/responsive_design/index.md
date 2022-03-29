@@ -76,7 +76,7 @@ Zoe Mickley Gillenwater a grandement contribué au travail de description et de 
 Le terme de responsive design a été [inventé par Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), et décrit la combinaison de trois techniques.
 
 1.  La première était l'idée des grilles fluides, une idée déjà explorée par Gillenwater, que l'on peut lire dans l'article de Marcotte, [Fluid Grids](https://alistapart.com/article/fluidgrids/) (publié en 2009 sur A List Apart).
-2.  La deuxième technique était l'idée [d'images fluides](http://unstoppablerobotninja.com/entry/fluid-images). En utilisant une technique très simple de réglage de la propriété `max-width` à `100%`,  les images deviennent plus petites si leur colonne de contenu devient plus étroite que la taille intrinsèque de l'image, mais ne deviennent jamais plus grandes. Cela permet à une image de se réduire pour s'intégrer dans une colonne de taille flexible, plutôt que de la déborder, mais de ne pas s'agrandir et de devenir pixélisée si la colonne devient plus large que l'image.
+2.  La deuxième technique était l'idée [d'images fluides](http://unstoppablerobotninja.com/entry/fluid-images). En utilisant une technique très simple de réglage de la propriété `max-width` à `100%`,  les images deviennent plus petites si leur colonne de contenu devient plus étroite que la taille intrinsèque de l'image, mais ne deviennent jamais plus grandes. Cela permet à une image de se réduire pour s'intégrer dans une colonne de taille flexible, plutôt que de la déborder, mais de ne pas s'agrandir et de devenir pixélisée si la colonne devient plus large que l'image.
 3.  Le troisième élément clé était la [media query](/fr/docs/Web/CSS/Media_Queries). Les Media Queries permettent de changer le type de mise en page que Cameron Adams avait précédemment exploré en utilisant JavaScript, en utilisant uniquement CSS. Au lieu d'avoir une seule mise en page pour toutes les tailles d'écran, la mise en page pouvait être modifiée. Les barres latérales pouvaient être repositionnées pour l'écran plus petit, ou une autre navigation pouvait être affichée.
 
 Il est important de comprendre que **le responsive web design n'est pas une technologie à part** - c'est un terme utilisé pour décrire une approche de la conception web, ou un ensemble de bonnes pratiques, utilisées pour créer une mise en page qui peut correspondre à l'appareil utilisé pour visualiser le contenu. Dans la recherche initiale de Marcotte, cela impliquait des grilles flexibles (en utilisant des flotteurs) et des média queries, mais depuis la rédaction de cet article, il y a presque 10 ans, le concept de responsive design est devenu la norme. Les méthodes modernes de mise en page CSS sont par nature responsives, et nous avons intégré de nouvelles choses à la plateforme Web pour faciliter la conception de sites responsives.
@@ -159,7 +159,7 @@ Si vous spécifiez plutôt une largeur de colonne, vous spécifiez une largeur m
 
 ### Flexbox
 
-Dans Flexbox, les articles flexibles se rétréciront et répartiront l'espace entre les articles en fonction de l'espace dans leur conteneur, en fonction de leur comportement initial. En modifiant les valeurs de `flex-grow` et `flex-shrink`  vous pouvez indiquer comment vous souhaitez que les articles se comportent lorsqu'ils rencontrent plus ou moins d'espace autour d'eux.
+Dans Flexbox, les articles flexibles se rétréciront et répartiront l'espace entre les articles en fonction de l'espace dans leur conteneur, en fonction de leur comportement initial. En modifiant les valeurs de `flex-grow` et `flex-shrink`  vous pouvez indiquer comment vous souhaitez que les articles se comportent lorsqu'ils rencontrent plus ou moins d'espace autour d'eux.
 
 Dans l'exemple ci-dessous, les éléments flex prendront chacun autant d'espace dans le conteneur flex, en utilisant la notation `flex: 1` comme décrit dans la rubrique de mise en page [Flexbox: Taille modulable des éléments flex](/fr/docs/Apprendre/CSS/CSS_layout/Flexbox#Taille_modulable_des_éléments_flex).
 
@@ -200,7 +200,7 @@ img {
 
 Cette approche présente des inconvénients évidents. L'image peut être affichée à une taille beaucoup plus petite que sa taille réelle, ce qui est un gaspillage de bande passante - un utilisateur mobile peut télécharger une image dont la taille est beaucoup plus grande que ce qu'il voit réellement dans la fenêtre du navigateur. De plus, il se peut que vous ne vouliez pas le même rapport hauteur/largeur de l'image sur le mobile que sur le bureau. Par exemple, il peut être agréable d'avoir une image carrée pour le mobile, mais de montrer la même image en format paysage sur le bureau. Ou, en tenant compte de la taille plus petite d'une image sur le mobile, vous pouvez vouloir montrer une image différente, qui est plus facile à comprendre sur un écran de petite taille. Ces choses ne peuvent pas être réalisées par une simple réduction de la taille d'une image.
 
-Les images responsives, en utilisant l'élément {{htmlelement("picture")}}  et les attributs {{htmlelement("img")}} `srcset` et `sizes`  permettent de résoudre ces deux problèmes. Vous pouvez fournir plusieurs tailles ainsi que des " indices " (méta-données qui décrivent la taille de l'écran et la résolution pour lesquelles l'image est la mieux adaptée), et le navigateur choisira l'image la plus appropriée pour chaque dispositif, en s'assurant qu'un utilisateur téléchargera une taille d'image appropriée pour le dispositif qu'il utilise.
+Les images responsives, en utilisant l'élément {{htmlelement("picture")}}  et les attributs {{htmlelement("img")}} `srcset` et `sizes`  permettent de résoudre ces deux problèmes. Vous pouvez fournir plusieurs tailles ainsi que des " indices " (méta-données qui décrivent la taille de l'écran et la résolution pour lesquelles l'image est la mieux adaptée), et le navigateur choisira l'image la plus appropriée pour chaque dispositif, en s'assurant qu'un utilisateur téléchargera une taille d'image appropriée pour le dispositif qu'il utilise.
 
 Vous pouvez également créer des images directes utilisées à différentes tailles, ce qui permet d'obtenir un recadrage différent ou une image complètement différente pour différentes tailles d'écran.
 
@@ -268,7 +268,7 @@ Cela signifie que nous n'avons besoin de spécifier la taille de la police pour 
 
 ## Le méta-tag du viewport
 
-Si vous regardez le code source d'une page HTML responsive, vous verrez généralement la balise suivante {{htmlelement("meta")}} dans la section `<head>` du document.
+Si vous regardez le code source d'une page HTML responsive, vous verrez généralement la balise suivante {{htmlelement("meta")}} dans la section `<head>` du document.
 
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -278,9 +278,9 @@ Cette balise meta dit aux navigateurs mobiles qu'ils doivent ajuster la largeur 
 
 Pourquoi est-ce nécessaire? Parce que les navigateurs mobiles ont tendance à mentir à propos de leur taille de fenêtre.
 
-Cette balise meta existe car lorsque l'Iphone original fut lancé et que les gens commencèrent à regarder des sites web sur un petit écran de téléphone, la plupart des sites n'étaient pas optimisés pour les mobiles. Le navigateur mobile définissait donc la largeur de la fenêtre d'affichage à 960 pixels, affichait la page à cette largeur et affichait le résultat sous la forme d'une version zoomée de la disposition du bureau. Les autres navigateurs mobiles (comme sur Google Android) faisaient la même chose. Les utilisateurs pouvaient zoomer et parcourir le site Web pour voir les éléments qui les intéressaient, mais l'affichage était mauvais. Vous le verrez toujours aujourd'hui si vous avez le malheur de tomber sur un site qui n'est pas responsive.
+Cette balise meta existe car lorsque l'Iphone original fut lancé et que les gens commencèrent à regarder des sites web sur un petit écran de téléphone, la plupart des sites n'étaient pas optimisés pour les mobiles. Le navigateur mobile définissait donc la largeur de la fenêtre d'affichage à 960 pixels, affichait la page à cette largeur et affichait le résultat sous la forme d'une version zoomée de la disposition du bureau. Les autres navigateurs mobiles (comme sur Google Android) faisaient la même chose. Les utilisateurs pouvaient zoomer et parcourir le site Web pour voir les éléments qui les intéressaient, mais l'affichage était mauvais. Vous le verrez toujours aujourd'hui si vous avez le malheur de tomber sur un site qui n'est pas responsive.
 
-Le problème est que votre responsive design avec des points de coupure et des media queries ne fonctionnera pas comme prévu sur les navigateurs mobiles. Si vous avez une disposition pour écran étroit qui démarre à une largeur de fenêtre de 480 pixels ou moins, et que la fenêtre est définie à 960 pixels, vous ne verrez jamais votre disposition pour écran étroit sur mobile. En définissant `width = device-width`, vous remplacez la largeur par défaut d'Apple de `width = 960px `par la largeur réelle de l'appareil, afin que vos requêtes multimédias fonctionnent comme prévu.
+Le problème est que votre responsive design avec des points de coupure et des media queries ne fonctionnera pas comme prévu sur les navigateurs mobiles. Si vous avez une disposition pour écran étroit qui démarre à une largeur de fenêtre de 480 pixels ou moins, et que la fenêtre est définie à 960 pixels, vous ne verrez jamais votre disposition pour écran étroit sur mobile. En définissant `width = device-width`, vous remplacez la largeur par défaut d'Apple de `width = 960px` par la largeur réelle de l'appareil, afin que vos requêtes multimédias fonctionnent comme prévu.
 
 **Vous devriez donc toujours inclure la ligne HTML ci-dessus dans la tête de vos documents.**
 
@@ -289,8 +289,8 @@ Il existe d'autres paramètres que vous pouvez utiliser avec la balise meta view
 - `initial-scale`: Définit le zoom initial de la page, que nous définissons à 1.
 - `height`: Definit une hauteur spécifique pour la fenêtre.
 - `minimum-scale`: Définit le niveau minimal de zoom
-- `maximum-scale`: Définit le niveau maximal de zoom.
-- `user-scalable`: Empêche le zoom si défini à `no`.
+- `maximum-scale`: Définit le niveau maximal de zoom.
+- `user-scalable`: Empêche le zoom si défini à `no`.
 
 Vous devriez éviter d'utiliser `minimum-scale`, `maximum-scale`, et en particulier la définition de `user-scalable` sur `no`. Les utilisateurs devraient être autorisés à zoomer autant ou aussi peu que nécessaire; éviter cela entraîne des problèmes d'accessibilité.
 

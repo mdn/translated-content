@@ -11,20 +11,20 @@ translation_of: Web/API/CloseEvent
 ---
 {{APIRef("Websockets API")}}
 
-Un événement CloseEvent est envoyé au client utilisant une [WebSocket ](/en-US/docs/Glossary/WebSockets)lorsque la connexion est fermée. Cet événement est envoyé au listener indiqué par l'attribut `onclose `de la WebSocket.
+Un évènement `CloseEvent` est envoyé au client utilisant une [WebSocket](/fr/docs/Glossary/WebSockets) lorsque la connexion est fermée. Cet évènement est envoyé au `listener` indiqué par l'attribut `onclose` de la `WebSocket`.
 
 ## Constructeur
 
 - {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}}
-  - : Construit un nouvel événement `CloseEvent`.
+  - : Construit un nouvel événement `CloseEvent`.
 
 ## Propriétés
 
-_Cette interface hérite également des propriétés de sa mère, {{domxref("Event")}}._
+_Cette interface hérite également des propriétés de sa mère, {{domxref("Event")}}._
 
 - {{domxref("CloseEvent.code")}} {{readOnlyInline}}
 
-  - : Retourne un `unsigned short` contenant le code de fermeture envoyé par le serveur. Les valeurs possibles sont données ci-dessous.
+  - : Retourne un `unsigned short` contenant le code de fermeture envoyé par le serveur. Les valeurs possibles sont données ci-dessous.
 
     <table class="standard-table">
       <tbody>
@@ -35,7 +35,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
         </tr>
         <tr>
           <td><code>0</code>–<code>999</code></td>
-          <td> </td>
+          <td></td>
           <td><strong>Reservé et inutilisé.</strong></td>
         </tr>
         <tr>
@@ -72,7 +72,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
         </tr>
         <tr>
           <td><code>1004</code></td>
-          <td> </td>
+          <td></td>
           <td>
             <strong>Réservé.</strong> Une utilisation pourrait être définie dans le
             futur.
@@ -82,7 +82,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
           <td><code>1005</code></td>
           <td><code>CLOSE_NO_STATUS</code></td>
           <td>
-            <strong>Réservé.</strong> Indique qu'aucun code n'est donné bien qu'un
+            <strong>Réservé.</strong> Indique qu'aucun code n'est donné bien qu'un
             code était attendu.
           </td>
         </tr>
@@ -90,13 +90,13 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
           <td><code>1006</code></td>
           <td><code>CLOSE_ABNORMAL</code></td>
           <td>
-            <strong>Réservé.</strong> Utilisé pour indiquer que la connexion a été
+            <strong>Réservé.</strong> Utilisé pour indiquer que la connexion a été
             terminée anormalement (sans paquet indiquant la fermeture).
           </td>
         </tr>
         <tr>
           <td><code>1007</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Le serveur termine la connexion car un message contenant des données
             incohérentes a été reçu (e.g., des données qui ne sont pas au format
@@ -105,7 +105,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
         </tr>
         <tr>
           <td><code>1008</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Le serveur termine la connexion car un message ne respectant pas la
             politique du serveur est reçu. C'est un code d'état générique qui est
@@ -123,7 +123,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
         </tr>
         <tr>
           <td><code>1010</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Le client termine la connexion car il souhaitait négocier une ou
             plusieurs extensions mais le serveur ne l'a pas fait.
@@ -131,7 +131,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
         </tr>
         <tr>
           <td><code>1011</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Le serveur termine la connexion car il a rencontré un problème qui
             l'empêche de traiter la requête.
@@ -139,7 +139,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
         </tr>
         <tr>
           <td>–<code>1014</code></td>
-          <td> </td>
+          <td></td>
           <td>
             <strong
               >Réservé pour une utilisation future par le standard
@@ -149,16 +149,16 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
         </tr>
         <tr>
           <td><code>1015</code></td>
-          <td> </td>
+          <td></td>
           <td>
-            <strong>Réservé.</strong> Indique que la connexion a été fermée à cause
+            <strong>Réservé.</strong> Indique que la connexion a été fermée à cause
             d'une erreur durant le handshake TLS (e.g., le certificat du serveur ne
             peut pas être vérifié).
           </td>
         </tr>
         <tr>
           <td><code>1016</code>–<code>1999</code></td>
-          <td> </td>
+          <td></td>
           <td>
             <strong
               >Réservé pour une utilisation future par le standard
@@ -168,7 +168,7 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
         </tr>
         <tr>
           <td><code>2000</code>–<code>2999</code></td>
-          <td> </td>
+          <td></td>
           <td>
             <strong
               >Réservé pour une utilisation future par le standard
@@ -178,32 +178,32 @@ _Cette interface hérite également des propriétés de sa mère, {{domxref("Ev
         </tr>
         <tr>
           <td><code>3000</code>–<code>3999</code></td>
-          <td> </td>
+          <td></td>
           <td>
             Disponible pour être utilisé par des bibliothèques ou des frameworks.
-            Ces codes <strong>ne doivent pas</strong> être utilisés par des
+            Ces codes <strong>ne doivent pas</strong> être utilisés par des
             applications.
           </td>
         </tr>
         <tr>
           <td><code>4000</code>–<code>4999</code></td>
-          <td> </td>
+          <td></td>
           <td>Disponible pour être utilisés par des applications.</td>
         </tr>
       </tbody>
     </table>
 
 - {{domxref("CloseEvent.reason")}} {{readOnlyInline}}
-  - : Retourne un {{ domxref("DOMString") }} qui indique la raison pour laquelle le serveur a fermé la connexion. Ce message est spécifique au serveur et au sous-protocole utilisé.
+  - : Retourne un {{ domxref("DOMString") }} qui indique la raison pour laquelle le serveur a fermé la connexion. Ce message est spécifique au serveur et au sous-protocole utilisé.
 - {{domxref("CloseEvent.wasClean")}} {{readOnlyInline}}
   - : Retourne un {{jsxref("Boolean")}} qui indique si la connexion a été correctement fermée ou non.
 
 ## Méthodes
 
-_Cette interface hérite également des propriétés de sa mère, {{domxref("Event")}}._
+_Cette interface hérite également des propriétés de sa mère, {{domxref("Event")}}._
 
 - {{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{Obsolete_inline}}
-  - : Initialise la valeur d'un `CloseEvent`. Si l'événement a déjà été envoyé, cette méthode ne fait rien.
+  - : Initialise la valeur d'un `CloseEvent`. Si l'événement a déjà été envoyé, cette méthode ne fait rien.
 
 ## Spécifications
 

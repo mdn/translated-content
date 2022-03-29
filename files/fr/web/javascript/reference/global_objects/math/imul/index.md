@@ -33,7 +33,7 @@ Le résultat de la multiplication sur 32 bits des valeurs passées en argument (
 
 ## Description
 
-`Math.imul()` permet d'effectuer une multiplication rapide pour des entiers sur 32 bits avec une sémantique proche du langage C. Cela est utile pour des aspects de performance, notamment pour des projets comme [Emscripten](/fr/docs/Mozilla/Projects/Emscripten). `imul() `étant une méthode statique de `Math`, il faut utiliser `Math.imul()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Attention à l'utilisation de nombres flottants avec `Math.imul()` car cela implique une opération de conversion des flottants vers les entiers pour la multiplication puis une opération de conversion du résultat en flottant. Dans la pratique, ` Math``.imul() ` est notamment pertinent pour asm.js.
+`Math.imul()` permet d'effectuer une multiplication rapide pour des entiers sur 32 bits avec une sémantique proche du langage C. Cela est utile pour des aspects de performance, notamment pour des projets comme [Emscripten](/fr/docs/Mozilla/Projects/Emscripten). `imul()` étant une méthode statique de `Math`, il faut utiliser `Math.imul()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Attention à l'utilisation de nombres flottants avec `Math.imul()` car cela implique une opération de conversion des flottants vers les entiers pour la multiplication puis une opération de conversion du résultat en flottant. Dans la pratique, ` Math``.imul() ` est notamment pertinent pour asm.js.
 
 ## Exemples
 
@@ -68,7 +68,7 @@ Math.imul = Math.imul || function(a, b) {
 | Spécification                                                            | État                         | Commentaires        |
 | ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES6', '#sec-math.imul', 'Math.imul')}}     | {{Spec2('ES6')}}         | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.imul', 'Math.imul')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-math.imul', 'Math.imul')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

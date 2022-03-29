@@ -15,7 +15,7 @@ translation_of: Web/API/ServiceWorkerGlobalScope/onnotificationclick
 
 La propriété **`ServiceWorkerGlobalScope.onnotificationclick`** est un gestionnaire d'événements appelé chaque fois que l'événement {{Event("notificationclick")}} est envoyé sur l'objet {{domxref ("ServiceWorkerGlobalScope")}}, c'est-à-dire lorsqu'un utilisateur clique sur une notification affichée générée par {{domxref("ServiceWorkerRegistration.showNotification()")}}.
 
-Les notifications créées sur le thread principal ou dans un worker qui ne sont pas des service worker utilisant le constructeur {{domxref ("Notification.Notification", "Notification()")}} recevront à la place un événement {{Event("click")}} sur l'objet `Notification` lui-même.
+Les notifications créées sur le thread principal ou dans un worker qui ne sont pas des service worker utilisant le constructeur {{domxref ("Notification.Notification", "Notification()")}} recevront à la place un événement {{Event("click")}} sur l'objet `Notification` lui-même.
 
 > **Note :** Essayer de créer une notification dans le {{domxref ("ServiceWorkerGlobalScope")}} en utilisant le constructeur {{domxref ("Notification.Notification", "Notification()")}} générera une erreur.
 

@@ -27,15 +27,15 @@ analyseur.connect(distortion);
 
 > **Note :** il n'est pas nécessaire de connecter la sortie de l'analyseur à un noeud pour qu'il fonctionne, il suffit que l'entrée soit connectée à la source, directement ou via un autre noeud.
 
-L'analyseur va alors capturer les données audio en usant une Transformation de Fourier Rapide (fft) à une certaine fréquence, en fonction de ce qui est spécifié dans la propriété {{ domxref("AnalyserNode.fftSize") }} (la valeur par défaut est 2048).
+L'analyseur va alors capturer les données audio en usant une Transformation de Fourier Rapide (fft) à une certaine fréquence, en fonction de ce qui est spécifié dans la propriété {{ domxref("AnalyserNode.fftSize") }} (la valeur par défaut est 2048).
 
 > **Note :** Vous pouvez aussi spécifier des valeurs de puissance minimum et maximum pour la plage de mise à l'échelle fft, en utilisant {{ domxref("AnalyserNode.minDecibels") }} et {{ domxref("AnalyserNode.maxDecibels") }}, et plusieurs valeurs de transition en utilisant {{ domxref("AnalyserNode.smoothingTimeConstant") }}.
 
 Pour capturer des données, il faut utiliser les méthodes {{ domxref("AnalyserNode.getFloatFrequencyData()") }} et {{ domxref("AnalyserNode.getByteFrequencyData()") }} pour la fréquence, et {{ domxref("AnalyserNode.getByteTimeDomainData()") }} et {{ domxref("AnalyserNode.getFloatTimeDomainData()") }} pour la forme d'onde.
 
-Ces méthodes copient les données dans le tableau passé en paramètre, il faut donc créer un tableau avant de les invoquer. La première produit des nombres flottants à simple précision de 32 bits, qui ne peuvent être stockées dans un simple tableau javascript. Vous devez créer un domxref("Float32Array") }} ou un {{ domxref("Uint8Array") }}, en fonction du type de données que vous traitez.
+Ces méthodes copient les données dans le tableau passé en paramètre, il faut donc créer un tableau avant de les invoquer. La première produit des nombres flottants à simple précision de 32 bits, qui ne peuvent être stockées dans un simple tableau javascript. Vous devez créer un domxref("Float32Array") }} ou un {{ domxref("Uint8Array") }}, en fonction du type de données que vous traitez.
 
-Par exemple, disons que nous manipulons une fft de fréquence 2048. Nous retournons la valeur {{ domxref("AnalyserNode.frequencyBinCount") }}, qui correspond à la moitié de la fréquence, puis nous appelons la méthode  Uint8Array() en passant frequencyBinCount comme argument pour la taille — c'est le nombre de points de données qui seront collectées pour cette fréquence.
+Par exemple, disons que nous manipulons une fft de fréquence 2048. Nous retournons la valeur {{ domxref("AnalyserNode.frequencyBinCount") }}, qui correspond à la moitié de la fréquence, puis nous appelons la méthode Uint8Array() en passant frequencyBinCount comme argument pour la taille — c'est le nombre de points de données qui seront collectées pour cette fréquence.
 
 ```js
 analyseur.fftSize = 2048;
@@ -209,4 +209,4 @@ Ce code donne le résultat suivant:
 
 ![Une série de barres rouges dans un barre-graphe qui illustre l'intensité des différentes fréquences d'un signal audio](bar-graph.png)
 
-> **Note :** Les examples de cet article montrent l'utilisation de {{ domxref("AnalyserNode.getByteFrequencyData()") }} et {{ domxref("AnalyserNode.getByteTimeDomainData()") }}. Pour des exemples montrant {{ domxref("AnalyserNode.getFloatFrequencyData()") }} et {{ domxref("AnalyserNode.getFloatTimeDomainData()") }}, voir notre démo [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) (et son [code source](https://github.com/mdn/voice-change-o-matic-float-data)) — elle est identique à la [Voice-change-O-matic ](http://mdn.github.io/voice-change-o-matic/)originale, à ceci près qu'elle utilise des données à virgule flottante, au lieu de données non signées.
+> **Note :** Les exemples de cet article montrent l'utilisation de [`AnalyserNode.getByteFrequencyData()`](/fr/docs/Web/API/AnalyserNode/getByteFrequencyData) et [`AnalyserNode.getByteTimeDomainData()`](/fr/docs/Web/API/AnalyserNode/getByteTimeDomainData). Pour des exemples montrant [`AnalyserNode.getFloatFrequencyData()`](/fr/docs/Web/API/AnalyserNode/getFloatFrequencyData) et [`AnalyserNode.getFloatTimeDomainData()`](/fr/docs/Web/API/AnalyserNode/getFloatTimeDomainData), voir notre démo [<i lang="en">Voice-change-O-matic-float-data</i>](https://mdn.github.io/voice-change-o-matic-float-data/) (et son [code source](https://github.com/mdn/voice-change-o-matic-float-data)) — elle est identique à la [<i lang="en">Voice-change-O-matic</i>](https://mdn.github.io/voice-change-o-matic/) originale, à ceci près qu'elle utilise des données à virgule flottante, au lieu de données non signées.

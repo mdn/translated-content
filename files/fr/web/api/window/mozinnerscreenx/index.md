@@ -10,13 +10,13 @@ tags:
   - Window
 translation_of: Web/API/Window/mozInnerScreenX
 ---
-{{APIRef}}{{gecko_minversion_header("1.9.2")}}
+{{APIRef}}
 
 ## Résumé
 
 Obtient la coordonnée X du coin supérieur gauche de la fenêtre de la fenêtre, en coordonnées d'écran.
 
-> **Note :** Cette coordonnée est indiquée en pixels CSS et non en pixels matériels. Cela signifie qu'il peut être affecté par le niveau de zoom; pour calculer le nombre réel de pixels d'écran physiques, vous devez utiliser la propriété[ `nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/en-US/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils).
+> **Note :** Cette coordonnée est indiquée en pixels CSS et non en pixels matériels. Cela signifie qu'il peut être affecté par le niveau de zoom&nbsp;; pour calculer le nombre réel de pixels d'écran physiques, vous devez utiliser la propriété [`nsIDOMWindowUtils.screenPixelsPerCSSPixel`](/fr/docs/XPCOM_Interface_Reference/nsIDOMWindowUtils).
 
 ## Syntaxe
 

@@ -1,0 +1,131 @@
+---
+title: min()
+slug: Web/CSS/min
+translation_of: Web/CSS/min()
+original_slug: Web/CSS/min()
+---
+<p>{{CSSRef}}</p>
+
+<p><strong><code>min()</code></strong> <a href="/en-US/docs/Web/CSS">CSS</a> 方法允许你从逗号分隔符表达式中选择一个最小值作为 CSS 的属性值。<code>min()</code> 方法可以用于以下任何属性中 {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}},{{CSSxRef("&lt;number&gt;")}}, 或者 {{CSSxRef("&lt;integer&gt;")}}。</p>
+
+<pre class="brush: css; no-line-numbers notranslate">/* property: min(expression [, expression]) */
+width: min(1vw, 4em, 80px);</pre>
+
+<p>在上面的例子中，宽度最多是80px。如果视口的宽度小于800px，或者一个em的宽度小于20px，则会更窄。换句话说，最大宽度是80px，</p>
+
+<h2 id="语法">语法</h2>
+
+<p><code>min()</code> 方法拥有一个或多个逗号分隔符表达式作为参数，表达式的值中最小的值作为参数值。表达式可以是数学函数 (查看 {{CSSxRef("calc", "calc()")}} 了解更多), 字面量，或者其他表达式，比如 {{CSSxRef("attr", "attr()")}}, 可以求得有效值的的类型 (比如 {{CSSxRef("&lt;length&gt;")}})。如果你愿意，你甚至可以在表达式中给每个值一个不同的单位。并且在需要的地方只用圆括号改变计算优先级。</p>
+
+<h3 id="注意">注意</h3>
+
+<ul>
+ <li>Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables <em>may</em> be treated as if <code>auto</code> had been specified.<code>max</code></li>
+ <li>It is permitted to nest <code>max()</code> and other <code>min()</code> functions as expression values. The expressions are full math expressions, so you can use direct addition, subtraction, multiplication and division without using the calc() function itself.</li>
+ <li>The expression can be values combining the addition ( + ), subtraction ( - ), multiplication ( * ) and division ( / ) operators, using standard operator precedence rules. Make sure to put a space on each side of the + and - operands. The operands in the expression may be any <code>&lt;length&gt;</code> syntax value. You can use different units for each value in your expression. You may also use parentheses to establish computation order when needed.</li>
+ <li>Oftentimes you will want to comine <code>min()</code> and <code>max()</code> values, or use <code>min()</code> within a <code>clamp()</code> or <code>calc()</code> function.</li>
+ <li>You can provide more than two arguments, if you have multiple constraints to apply.</li>
+</ul>
+
+<h3 id="Formal_syntax">Formal syntax</h3>
+
+{{CSSSyntax}}
+
+<h2 id="Examples">Examples</h2>
+
+<h3 id="Growing_images_to_a_maximum_size">Growing images to a maximum size</h3>
+
+<p><code>min()</code> 让我们在设置图像的最大宽度时更简单。在下面这个例子中，在小型设备上宽度拉伸为window的一半，但在大型设备上，不超过300px，不使用媒体查询：</p>
+
+<pre class="brush: css; notranslate">.logo {
+  width: min(50vw, 300px);
+}
+</pre>
+
+<pre class="brush: html; notranslate">&lt;img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo"&gt;</pre>
+
+<p>{{EmbedLiveSample("Growing_images_to_a_maximum_size", "100%", "60")}}</p>
+
+<p>在这个例子中，除非视口比 600px 更窄，否则logo的宽会被设置为 300px，到时候，它会随着视口的缩小而缩小，而且总是视口宽度的50%。</p>
+
+<h3 id="给_label_和_input_设置最大值">给 label 和 input 设置最大值</h3>
+
+<p>CSS方法的另一个用途时设置响应式组件（form）的最大尺寸：让 label 和 input 的宽度随着组件的缩小而缩小。</p>
+
+<p>看下面的样式：</p>
+
+<pre class="brush: css; notranslate">input, label {
+  padding: 2px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: min(40%, 400px);
+  background-color: pink;
+}
+
+form {
+  margin: 4px;
+  border: 1px solid black;
+  padding: 4px;
+}
+</pre>
+
+<p>这里，form 的 margin，border，padding 总是它父元素的宽度的100%。我们声明 input 和 label 的宽度比form的40%还小或者400px宽，只要取决于哪一个最小。换句话说，input 和 label 的最大宽度就是400px，最窄就是form的40%。因此看起来会显得很小。</p>
+
+<pre class="brush: html notranslate">&lt;form&gt;
+  &lt;label&gt;Type something:&lt;/label&gt;
+  &lt;input type="text"&gt;
+&lt;/form&gt;
+</pre>
+
+<p>{{EmbedLiveSample("Setting_a_maximum_size_for_an_label_and_input", "100%", "80")}}</p>
+
+<p>Think of the <code>min()</code> function as finding the maximum value allowed for a property.</p>
+
+<h2 id="无障碍问题">无障碍问题</h2>
+
+<p>当<code>min()</code> 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 {{CSSxRef("max", "max()")}} 中， <a href="/en-US/docs/Web/CSS/length#Relative_length_units">relative length unit</a> 这样就可以便于阅读，比如：</p>
+
+<pre class="brush: css; notranslate">small {
+  font-size: max(min(0.5vw, 0.5em), 1rem);
+}</pre>
+
+<p>这用于保证最小值是1rem，这样在页面缩放时文本也会缩放。</p>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">MDN Understanding WCAG, Guideline 1.4 explanations</a></li>
+ <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0</a></li>
+</ul>
+
+<h2 id="说明">说明</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("CSS4 Values", "#calc-notation", "min()")}}</td>
+   <td>{{Spec2("CSS4 Values")}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+
+
+<p>{{Compat("css.types.min")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{CSSxRef("calc", "calc()")}}</li>
+ <li>{{CSSxRef("clamp", "clamp()")}}</li>
+ <li>{{CSSxRef("max", "max()")}}</li>
+ <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS Values</a></li>
+</ul>

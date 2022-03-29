@@ -37,7 +37,7 @@ En plus, vous aurez besoin d'un programme de {{Glossary("FTP", "Protocole de tra
 
 #### Suggestions pour trouver hébergement et domaines
 
-- Nous ne faisons pas la promotion de sociétés commerciales d'hébergement ou de bureaux d'enregistrement particuliers. Pour trouver des hébergeurs et des bureaux d'enregistrement, faites une recherche pour « hébergement web » et « noms de domaine ». Tous les bureaux d'enregistrement auront une fonctionnalité vous permettant de vérifier si le nom de domaine voulu est disponible ou si quelqu'un d'autre l'a déjà enregistré.
+- Nous ne faisons pas la promotion de sociétés commerciales d'hébergement ou de bureaux d'enregistrement particuliers. Pour trouver des hébergeurs et des bureaux d'enregistrement, faites une recherche pour «&nbsp;hébergement web&nbsp;» et «&nbsp;noms de domaine&nbsp;». Tous les bureaux d'enregistrement auront une fonctionnalité vous permettant de vérifier si le nom de domaine voulu est disponible ou si quelqu'un d'autre l'a déjà enregistré.
 - Votre {{Glossary("ISP", "Fournisseur d'Accès Internet (FAI)")}} fournit peut-être un hébergement limité pour un petit site web. L'ensemble des fonctionnalités disponibles sera limité, mais il pourrait être parfait pour vos premières expériences.
 - Il existe quelques services gratuits tels que [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), [Blogger](https://www.blogger.com). À nouveau, vous n'en aurez que pour votre argent, mais ils sont idéaux pour vos expérimentations initiales. Les services gratuits ne nécessitent pour la plupart pas de logiciel FTP pour le téléversement — il suffira de faire un glisser/déposer directement sur leur interface web.
 - Parfois, des sociétés fournissent hébergement et domaine dans un même paquet.
@@ -46,7 +46,7 @@ En plus, vous aurez besoin d'un programme de {{Glossary("FTP", "Protocole de tra
 
 Certains outils vous permettent de publier votre site web en ligne :
 
-- [GitHub](https://github.com/) est un site de « codage collaboratif ». Il vous permet de téléverser des dépôts de code pour stockage dans le **système de gestion de versions** [Git](http://git-scm.com/)**.** Vous pouvez alors collaborer à des projets de code ; le système est open source par défaut, ce qui signifie que n'importe qui dans le monde peut trouver votre code GitHub, l'utiliser, en tirer des leçons, et l'améliorer. GitHub a une fonctionnalité très utile appelée [Pages GitHub](https://pages.github.com/), qui vous permet de présenter du code de site web en direct sur le web.
+- [GitHub](https://github.com/) est un site de «&nbsp;codage collaboratif&nbsp;». Il vous permet de téléverser des dépôts de code pour stockage dans le **système de gestion de versions** [Git](http://git-scm.com/)**.** Vous pouvez alors collaborer à des projets de code ; le système est open source par défaut, ce qui signifie que n'importe qui dans le monde peut trouver votre code GitHub, l'utiliser, en tirer des leçons, et l'améliorer. GitHub a une fonctionnalité très utile appelée [Pages GitHub](https://pages.github.com/), qui vous permet de présenter du code de site web en direct sur le web.
 - [Google App Engine](https://cloud.google.com/appengine/ "App Engine - Build Scalable Web & Mobile Backends in Any Language | Google Cloud Platform") est une plateforme puissante qui vous permet de construire et d'exécuter des applications sur l'infrastructure de Google --- que vous ayez besoin de construire une application web multi‑couche à partir de zéro ou d'héberger un site web statique. Voir [Comment héberger votre site Web sur Google App Engine ?](/fr/docs/Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine) pour plus d'information.
 
 Ces options sont généralement gratuites, mais vous risquez d'être dépassé par les limitations du nombre de fonctionnalités.
@@ -87,7 +87,7 @@ Pour en savoir plus, voyez [GitHub Pages Help](https://docs.github.com/en/github
 - [Qu'est-ce qu'un serveur web](/fr/docs/Learn/Common_questions/What_is_a_web_server)
 - [Comprendre les noms de domaine](/fr/docs/Learn/Common_questions/What_is_a_domain_name)
 - [Combien ça coûte de faire quelque chose sur le Web ?](/fr/docs/Learn/Common_questions/How_much_does_it_cost)
-- [Deploy a Website ](https://www.codecademy.com/learn/deploy-a-website): un bon tutoriel de Codecademy qui va plus un peu plus loin et qui montre quelques techniques supplémentaires.
+- [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website)&nbsp;: un bon tutoriel de Codecademy qui va plus un peu plus loin et qui montre quelques techniques supplémentaires.
 - [Hébergement de sites web statiques gratuit ou peu cher](http://alignedleft.com/resources/cheap-web-hosting), un billet en anglais par Scott Murray qui permet d'avoir une meilleure idée des services disponibles.
 
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}

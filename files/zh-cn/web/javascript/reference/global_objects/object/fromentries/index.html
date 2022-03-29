@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">Object.fromEntries(<var>iterable</var>);</pre>
+<pre class="syntaxbox">Object.fromEntries(<var>iterable</var>);</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 <p>通过 <code>Object.fromEntries</code>， 可以将 {{jsxref("Map")}} 转换为 {{jsxref("Object")}}:</p>
 
-<pre class="brush: js notranslate">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+<pre class="brush: js">const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
 </pre>
@@ -47,7 +47,7 @@ console.log(obj); // { foo: "bar", baz: 42 }
 
 <p>通过 <code>Object.fromEntries</code>， 可以将 {{jsxref("Array")}} 转换为 {{jsxref("Object")}}:</p>
 
-<pre class="brush: js notranslate">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+<pre class="brush: js">const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 </pre>
@@ -56,7 +56,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 <p><code>Object.fromEntries</code> 是与 {{jsxref("Object.entries()")}} 相反的方法，用 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2">数组处理函数</a> 可以像下面这样转换对象：</p>
 
-<pre class="brush: js notranslate">const object1 = { a: 1, b: 2, c: 3 };
+<pre class="brush: js">const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
   Object.entries(object1)

@@ -17,34 +17,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
  <dt><code>obj</code></dt>
  <dd>The object on which to define or modify properties.</dd>
  <dt><code>props</code></dt>
- <dd>An object whose own enumerable properties constitute descriptors for the properties to be defined or modified. Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors (see {{jsxref("Object.defineProperty()")}} for more details). Descriptors have the following keys:</dd>
- <dd>
- <dl>
-  <dt><code>configurable</code></dt>
-  <dd><code>true</code> if and only if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.<br>
-  <strong>預設為 <code>false</code>.</strong></dd>
-  <dt><code>enumerable</code></dt>
-  <dd><code>若該屬性設為 true，則該屬性可被物件所列舉。</code><br>
-  <strong>預設為 <code>false</code>.</strong></dd>
- </dl>
-
- <dl>
-  <dt><code>value</code></dt>
-  <dd>The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).<br>
-  <strong>預設為 {{jsxref("undefined")}}.</strong></dd>
-  <dt><code>writable</code></dt>
-  <dd><code>若該屬性為 true</code>，則該屬性可透過{{jsxref("Operators/Assignment_Operators", "賦予運算子", "", 1)}}所改變<br>
-  <strong>預設為 <code>false</code>.</strong></dd>
- </dl>
-
- <dl>
-  <dt><code>get</code></dt>
-  <dd>A function which serves as a getter for the property, or {{jsxref("undefined")}} if there is no getter. The function return will be used as the value of property.<br>
-  <strong>預設為 {{jsxref("undefined")}}.</strong></dd>
-  <dt><code>set</code></dt>
-  <dd>A function which serves as a setter for the property, or {{jsxref("undefined")}} if there is no setter. The function will receive as only argument the new value being assigned to the property.<br>
-  <strong>預設為 {{jsxref("undefined")}}.</strong></dd>
- </dl>
+ <dd>An object whose own enumerable properties constitute descriptors for the properties to be defined or modified. Property descriptors present in objects come in two main flavors: data descriptors and accessor descriptors (see {{jsxref("Object.defineProperty()")}} for more details). Descriptors have the following keys:
+  <dl>
+    <dt><code>configurable</code></dt>
+    <dd><code>true</code> if and only if the type of this property descriptor may be changed and if the property may be deleted from the corresponding object.<br>
+    <strong>預設為 <code>false</code>.</strong></dd>
+    <dt><code>enumerable</code></dt>
+    <dd><code>若該屬性設為 true，則該屬性可被物件所列舉。</code><br>
+    <strong>預設為 <code>false</code>.</strong></dd>
+    <dt><code>value</code></dt>
+    <dd>The value associated with the property. Can be any valid JavaScript value (number, object, function, etc).<br>
+    <strong>預設為 {{jsxref("undefined")}}.</strong></dd>
+    <dt><code>writable</code></dt>
+    <dd><code>若該屬性為 true</code>，則該屬性可透過{{jsxref("Operators/Assignment_Operators", "賦予運算子", "", 1)}}所改變<br>
+    <strong>預設為 <code>false</code>.</strong></dd>
+    <dt><code>get</code></dt>
+    <dd>A function which serves as a getter for the property, or {{jsxref("undefined")}} if there is no getter. The function return will be used as the value of property.<br>
+    <strong>預設為 {{jsxref("undefined")}}.</strong></dd>
+    <dt><code>set</code></dt>
+    <dd>A function which serves as a setter for the property, or {{jsxref("undefined")}} if there is no setter. The function will receive as only argument the new value being assigned to the property.<br>
+    <strong>預設為 {{jsxref("undefined")}}.</strong></dd>
+  </dl>
  </dd>
 </dl>
 
@@ -76,7 +69,7 @@ Object.defineProperties(obj, {
 
 <p>Assuming a pristine execution environment with all names and properties referring to their initial values, <code>Object.defineProperties</code> is almost completely equivalent (note the comment in <code>isCallable</code>) to the following reimplementation in JavaScript:</p>
 
-<pre class="brush: js;highlight:[8]">function defineProperties(obj, properties) {
+<pre class="brush: js">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -138,82 +131,13 @@ Object.defineProperties(obj, {
 }
 </pre>
 
-<h2 id="規格">規格</h2>
+<h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">註記</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("2")}}</td>
-   <td>{{CompatChrome("5")}}</td>
-   <td>{{CompatIE("9")}}</td>
-   <td>{{CompatOpera("11.60")}}</td>
-   <td>{{CompatSafari("5")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoMobile("2")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatOperaMobile("11.5")}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="參閱">參閱</h2>
 

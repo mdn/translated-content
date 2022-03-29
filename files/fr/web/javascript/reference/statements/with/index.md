@@ -48,7 +48,7 @@ Dès qu'un nom non-qualifié est utilisé, JavaScript cherche dans la chaîne de
     }
     ```
 
-  ce n'est que quand `f` est appelée que `x` est trouvé ou non, s'il est trouvé à partir de `o` ou (si o n'a pas de telle propriété) dans l'objet d'activation de `f `où `x` représente le premier argument de la fonction. Si `x` n'est pas défini dans l'objet passé en second argument, il n'y aura pas d'erreur renvoyée, juste des résultats imprévus.
+  ce n'est que quand `f` est appelée que `x` est trouvé ou non, s'il est trouvé à partir de `o` ou (si o n'a pas de telle propriété) dans l'objet d'activation de `f` où `x` représente le premier argument de la fonction. Si `x` n'est pas défini dans l'objet passé en second argument, il n'y aura pas d'erreur renvoyée, juste des résultats imprévus.
 
 - **Inconvénient :** Du code utilisant l'instruction `with` pourrait ne pas être compatible dans le futur, en particulier lorsqu'il est utilisé avec autre chose qu'un objet simple. Par exemple :
 
@@ -83,10 +83,10 @@ with (Math) {
 
 | Spécification                                                                        | État                         | Commentaires                       |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------- |
-| {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} | {{Spec2('ESDraft')}} |                                    |
-| {{SpecName('ES6', '#sec-with-statement', 'Instruction with')}} | {{Spec2('ES6')}}         |                                    |
+| {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} | {{Spec2('ESDraft')}} |                                    |
+| {{SpecName('ES6', '#sec-with-statement', 'Instruction with')}} | {{Spec2('ES6')}}         |                                    |
 | {{SpecName('ES5.1', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES5.1')}}     | Désormais interdit en mode strict. |
-| {{SpecName('ES3', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES3')}}         |                                    |
+| {{SpecName('ES3', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES3')}}         |                                    |
 | {{SpecName('ES1', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES1')}}         | Définition initiale.               |
 
 ## Compatibilité des navigateurs

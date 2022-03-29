@@ -9,7 +9,7 @@ translation_of: Web/CSS/:focus-within
 ---
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:focus-within`** s'applique à tous les éléments pour lesquels la pseudo-classe {{cssxref(":focus")}} s'applique ainsi qu'à tous leurs éléments descendants, y compris ceux du _Shadow DOM_. Autrement dit, cette pseudo-classe s'applique lorsqu'un élément a reçu le focus via le clavier ou la souris (par exemple lorsqu'on clique sur un champ d'un formulaire).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:focus-within`** s'applique à tous les éléments pour lesquels la pseudo-classe {{cssxref(":focus")}} s'applique ainsi qu'à tous leurs éléments descendants, y compris ceux du _Shadow DOM_. Autrement dit, cette pseudo-classe s'applique lorsqu'un élément a reçu le focus via le clavier ou la souris (par exemple lorsqu'on clique sur un champ d'un formulaire).
 
 ```css
 /* Cible n'importe quel <div> lorsqu'un */

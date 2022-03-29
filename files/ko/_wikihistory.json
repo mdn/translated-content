@@ -13,12 +13,6 @@
       "kom2727"
     ]
   },
-  "Games/Index": {
-    "modified": "2020-12-05T03:39:50.081Z",
-    "contributors": [
-      "movegun1027"
-    ]
-  },
   "Games/Introduction": {
     "modified": "2019-06-03T20:16:02.213Z",
     "contributors": [
@@ -572,12 +566,6 @@
     "contributors": [
       "alattalatta",
       "HyunSeob"
-    ]
-  },
-  "Glossary/Index": {
-    "modified": "2019-05-26T04:17:19.834Z",
-    "contributors": [
-      "alattalatta"
     ]
   },
   "Glossary/Internet": {
@@ -1385,7 +1373,7 @@
       "java2020007"
     ]
   },
-  "Learn/CSS/First_steps/Using_your_new_knowledge": {
+  "Learn/CSS/First_steps/Styling_a_biography_page": {
     "modified": "2020-07-16T22:28:04.551Z",
     "contributors": [
       "java2020007"
@@ -1867,12 +1855,6 @@
       "byoung_hyun"
     ]
   },
-  "Learn/Index": {
-    "modified": "2020-07-16T22:33:40.026Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Learn/JavaScript": {
     "modified": "2020-12-01T10:05:39.249Z",
     "contributors": [
@@ -1888,22 +1870,6 @@
       "Sheppy"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Async_await": {
-    "modified": "2020-11-28T09:53:12.946Z",
-    "contributors": [
-      "HerbertLim",
-      "chupark"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Concepts": {
-    "modified": "2020-11-17T21:41:39.368Z",
-    "contributors": [
-      "mochapoke",
-      "Plut0",
-      "chupark",
-      "eunjungleecub"
-    ]
-  },
   "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-11-17T21:53:14.519Z",
     "contributors": [
@@ -1916,12 +1882,6 @@
     "contributors": [
       "varvir",
       "chupark"
-    ]
-  },
-  "Learn/JavaScript/Asynchronous/Timeouts_and_intervals": {
-    "modified": "2020-07-16T22:33:21.049Z",
-    "contributors": [
-      "cjkcc69"
     ]
   },
   "Learn/JavaScript/Building_blocks": {
@@ -6167,6 +6127,12 @@
       "chansbro"
     ]
   },
+  "Web/API/RTCPeerConnection/connectionstatechange_event": {
+    "modified": "2020-10-15T22:21:46.935Z",
+    "contributors": [
+      "chansbro"
+    ]
+  },
   "Web/API/RTCPeerConnection/createAnswer": {
     "modified": "2020-10-15T22:21:52.646Z",
     "contributors": [
@@ -6187,6 +6153,12 @@
   },
   "Web/API/RTCPeerConnection/currentRemoteDescription": {
     "modified": "2020-10-15T22:21:46.405Z",
+    "contributors": [
+      "chansbro"
+    ]
+  },
+  "Web/API/RTCPeerConnection/datachannel_event": {
+    "modified": "2020-10-15T22:21:38.724Z",
     "contributors": [
       "chansbro"
     ]
@@ -6233,6 +6205,12 @@
       "chansbro"
     ]
   },
+  "Web/API/RTCPeerConnection/icecandidate_event": {
+    "modified": "2020-10-15T22:21:32.954Z",
+    "contributors": [
+      "chansbro"
+    ]
+  },
   "Web/API/RTCPeerConnection/icegatheringstatechange_event": {
     "modified": "2020-10-15T22:21:34.594Z",
     "contributors": [
@@ -6241,36 +6219,6 @@
   },
   "Web/API/RTCPeerConnection/localDescription": {
     "modified": "2020-10-15T22:22:06.987Z",
-    "contributors": [
-      "chansbro"
-    ]
-  },
-  "Web/API/RTCPeerConnection/onconnectionstatechange": {
-    "modified": "2020-10-15T22:21:46.935Z",
-    "contributors": [
-      "chansbro"
-    ]
-  },
-  "Web/API/RTCPeerConnection/ondatachannel": {
-    "modified": "2020-10-15T22:21:38.724Z",
-    "contributors": [
-      "chansbro"
-    ]
-  },
-  "Web/API/RTCPeerConnection/onicecandidate": {
-    "modified": "2020-10-15T22:21:32.954Z",
-    "contributors": [
-      "chansbro"
-    ]
-  },
-  "Web/API/RTCPeerConnection/onicegatheringstatechange": {
-    "modified": "2020-10-15T22:21:36.115Z",
-    "contributors": [
-      "chansbro"
-    ]
-  },
-  "Web/API/RTCPeerConnection/ontrack": {
-    "modified": "2020-10-15T22:22:07.343Z",
     "contributors": [
       "chansbro"
     ]
@@ -6303,6 +6251,12 @@
     "modified": "2020-10-15T22:22:06.674Z",
     "contributors": [
       "ksrae",
+      "chansbro"
+    ]
+  },
+  "Web/API/RTCPeerConnection/track_event": {
+    "modified": "2020-10-15T22:22:07.343Z",
+    "contributors": [
       "chansbro"
     ]
   },
@@ -6403,18 +6357,18 @@
       "junho85"
     ]
   },
-  "Web/API/Screen/onorientationchange": {
-    "modified": "2019-03-23T23:26:53.977Z",
-    "contributors": [
-      "jsx",
-      "teoli",
-      "junho85"
-    ]
-  },
   "Web/API/Screen/orientation": {
     "modified": "2019-03-23T23:27:06.864Z",
     "contributors": [
       "fscholz",
+      "teoli",
+      "junho85"
+    ]
+  },
+  "Web/API/Screen/orientationchange_event": {
+    "modified": "2019-03-23T23:26:53.977Z",
+    "contributors": [
+      "jsx",
       "teoli",
       "junho85"
     ]
@@ -6460,7 +6414,7 @@
       "minias"
     ]
   },
-  "Web/API/ServiceWorker/onstatechange": {
+  "Web/API/ServiceWorker/statechange_event": {
     "modified": "2020-10-15T22:20:48.975Z",
     "contributors": [
       "dragmove"
@@ -9093,7 +9047,7 @@
       "dochoul"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:08:57.096Z",
     "contributors": [
       "chrisdavidmills",
@@ -9188,21 +9142,21 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/filter-function/blur()": {
+  "Web/CSS/filter-function/blur": {
     "modified": "2020-11-05T09:45:44.250Z",
     "contributors": [
       "chrisdavidmills",
       "alattalatta"
     ]
   },
-  "Web/CSS/filter-function/brightness()": {
+  "Web/CSS/filter-function/brightness": {
     "modified": "2020-11-05T09:57:22.993Z",
     "contributors": [
       "chrisdavidmills",
       "alattalatta"
     ]
   },
-  "Web/CSS/filter-function/contrast()": {
+  "Web/CSS/filter-function/contrast": {
     "modified": "2020-11-09T07:21:09.691Z",
     "contributors": [
       "chrisdavidmills",
@@ -9705,14 +9659,14 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/transform-function/matrix()": {
+  "Web/CSS/transform-function/matrix": {
     "modified": "2020-11-16T08:59:50.359Z",
     "contributors": [
       "chrisdavidmills",
       "DeadIntegral"
     ]
   },
-  "Web/CSS/transform-function/scaleX()": {
+  "Web/CSS/transform-function/scaleX": {
     "modified": "2020-11-30T10:20:51.450Z",
     "contributors": [
       "chrisdavidmills",
@@ -9738,7 +9692,7 @@
       "Netaras"
     ]
   },
-  "Web/CSS/url()": {
+  "Web/CSS/url": {
     "modified": "2020-10-15T22:10:55.121Z",
     "contributors": [
       "alattalatta"
@@ -9757,7 +9711,7 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/var()": {
+  "Web/CSS/var": {
     "modified": "2020-11-04T09:10:36.975Z",
     "contributors": [
       "chrisdavidmills",
@@ -9935,13 +9889,6 @@
     "modified": "2019-03-23T22:40:12.545Z",
     "contributors": [
       "gblue1223"
-    ]
-  },
-  "Web/Guide/Index": {
-    "modified": "2020-12-07T13:40:57.143Z",
-    "contributors": [
-      "peterbe",
-      "alattalatta"
     ]
   },
   "Web/Guide/Mobile": {
@@ -11114,12 +11061,6 @@
       "alattalatta"
     ]
   },
-  "Web/HTML/Index": {
-    "modified": "2020-01-19T02:45:39.384Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/HTML/Inline_elements": {
     "modified": "2020-02-12T03:45:21.056Z",
     "contributors": [
@@ -11737,12 +11678,6 @@
     "contributors": [
       "nesez",
       "Simtu"
-    ]
-  },
-  "Web/HTTP/Index": {
-    "modified": "2020-02-05T12:28:02.372Z",
-    "contributors": [
-      "alattalatta"
     ]
   },
   "Web/HTTP/Messages": {
@@ -17364,6 +17299,18 @@
       "limkukhyun"
     ]
   },
+  "conflicting/Games": {
+    "modified": "2020-12-05T03:39:50.081Z",
+    "contributors": [
+      "movegun1027"
+    ]
+  },
+  "conflicting/Glossary": {
+    "modified": "2019-05-26T04:17:19.834Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
   "conflicting/Glossary/TCP": {
     "modified": "2020-01-12T14:32:05.700Z",
     "contributors": [
@@ -17371,10 +17318,9 @@
     ]
   },
   "conflicting/Learn": {
-    "modified": "2020-07-16T22:22:13.258Z",
+    "modified": "2020-07-16T22:33:40.026Z",
     "contributors": [
-      "Netaras",
-      "KwanHong_Lee66"
+      "alattalatta"
     ]
   },
   "conflicting/Learn/CSS/Building_blocks": {
@@ -17457,6 +17403,28 @@
       "Kaben"
     ]
   },
+  "conflicting/Learn/JavaScript/Asynchronous": {
+    "modified": "2020-07-16T22:33:21.049Z",
+    "contributors": [
+      "cjkcc69"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Introducing": {
+    "modified": "2020-11-17T21:41:39.368Z",
+    "contributors": [
+      "mochapoke",
+      "Plut0",
+      "chupark",
+      "eunjungleecub"
+    ]
+  },
+  "conflicting/Learn/JavaScript/Asynchronous/Promises": {
+    "modified": "2020-11-28T09:53:12.946Z",
+    "contributors": [
+      "HerbertLim",
+      "chupark"
+    ]
+  },
   "conflicting/Learn/JavaScript/Objects": {
     "modified": "2019-03-23T23:29:46.029Z",
     "contributors": [
@@ -17528,6 +17496,12 @@
       "chansbro"
     ]
   },
+  "conflicting/Web/API/RTCPeerConnection/icegatheringstatechange_event": {
+    "modified": "2020-10-15T22:21:36.115Z",
+    "contributors": [
+      "chansbro"
+    ]
+  },
   "conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL": {
     "modified": "2019-03-23T22:54:05.275Z",
     "contributors": [
@@ -17581,13 +17555,22 @@
     ]
   },
   "conflicting/Web/Guide": {
-    "modified": "2019-03-23T23:41:47.329Z",
+    "modified": "2020-12-07T13:40:57.143Z",
     "contributors": [
-      "teoli",
-      "Jiyoon",
-      "Unixcruiser",
-      "Netaras",
-      "Sebuls"
+      "peterbe",
+      "alattalatta"
+    ]
+  },
+  "conflicting/Web/HTML": {
+    "modified": "2020-01-19T02:45:39.384Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "conflicting/Web/HTTP": {
+    "modified": "2020-02-05T12:28:02.372Z",
+    "contributors": [
+      "alattalatta"
     ]
   },
   "conflicting/Web/JavaScript/Guide": {

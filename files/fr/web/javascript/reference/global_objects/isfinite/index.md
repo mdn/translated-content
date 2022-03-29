@@ -56,9 +56,9 @@ isFinite("0");       // true ce qui aurait été false
 | Spécification                                                                    | État                         | Commentaires         |
 | -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2')}}                                                         | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}             | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

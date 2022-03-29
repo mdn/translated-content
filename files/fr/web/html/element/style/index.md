@@ -14,7 +14,7 @@ L'élément HTML **`<style>`** contient des informations de mise en forme pour u
 
 {{EmbedInteractiveExample("pages/tabbed/style.html", "tabbed-standard")}}
 
-L'élément `<style>` peut être inclus dans l'élément {{htmlelement("head")}} ou dans l'élément {{htmlelement("body")}} du document et les styles seront appliqués. Toutefois, il est recommandé de placer les styles dans l'élément` <head>` afin de clairement séparer la présentation du contenu autant que possible. La méthode idéale en ce sens consiste à utiliser des feuilles de style dans des fichiers externes et de les appliquer au document grâce à des éléments {{htmlelement("link")}}.
+L'élément `<style>` peut être inclus dans l'élément {{htmlelement("head")}} ou dans l'élément {{htmlelement("body")}} du document et les styles seront appliqués. Toutefois, il est recommandé de placer les styles dans l'élément `<head>` afin de clairement séparer la présentation du contenu autant que possible. La méthode idéale en ce sens consiste à utiliser des feuilles de style dans des fichiers externes et de les appliquer au document grâce à des éléments {{htmlelement("link")}}.
 
 Si plusieurs éléments `<style>` et `<link>` sont appliqués au document, ils seront appliqués dans l'ordre dans lequel ils sont inclus dans le document. Aussi, vérifiez l'ordre afin d'éviter tout problème de cascade.
 
@@ -187,7 +187,7 @@ Dans cet exemple (basé sur le précédent), on ajoute un attribut `media` sur l
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------ |
 | {{SpecName('HTML WHATWG', 'semantics.html#the-style-element', 'style')}}         | {{Spec2('HTML WHATWG')}} | Ajout de l'attribut `nonce`.         |
 | {{SpecName('HTML5 W3C', 'document-metadata.html#the-style-element', 'style')}} | {{Spec2('HTML5 W3C')}}     | L'attribut `type` devient optionnel. |
-| {{SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style')}}                 | {{Spec2('HTML4.01')}}     |                                      |
+| {{SpecName('HTML4.01', 'present/styles.html#h-14.2.3', 'style')}}                 | {{Spec2('HTML4.01')}}     |                                      |
 
 ## Compatibilité des navigateurs
 

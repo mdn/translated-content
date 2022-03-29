@@ -10,7 +10,7 @@ translation_of: Web/API/Headers
 ---
 <p>{{ APIRef("Fetch") }}</p>
 
-<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 的 <strong>Headers </strong>接口允许您对HTTP请求和响应头执行各种操作。 这些操作包括检索，设置，添加和删除。 一个Headers对象具有关联的头列表，它最初为空，由零个或多个键值对组成。你可以使用<span style="line-height: 19.0909080505371px;"> </span>{{domxref("Headers.append","append()")}} <span style="line-height: 19.0909080505371px;">方法添加 </span>之类的方法添加到此(参见 {{anch("Examples")}})。在该接口的所有方法中，标题名称由不区分大小写的字节序列匹配。</p>
+<p><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> 的 <strong>Headers </strong>接口允许您对HTTP请求和响应头执行各种操作。 这些操作包括检索，设置，添加和删除。 一个Headers对象具有关联的头列表，它最初为空，由零个或多个键值对组成。你可以使用<span style="line-height: 19.0909080505371px;"> </span>{{domxref("Headers.append","append()")}} <span style="line-height: 19.0909080505371px;">方法添加 </span>之类的方法添加到此(参见 <a href="#示例">示例</a>)。在该接口的所有方法中，标题名称由不区分大小写的字节序列匹配。</p>
 
 <p>出于安全考虑，某些头只能由用户代理控制。这些头信息包括 {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  和 {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}。</p>
 
@@ -67,7 +67,7 @@ translation_of: Web/API/Headers
  <dd>用于返回具有给定名称的 <code>Headers</code> 对象中所有值的数组; 这个方法现在已经从规范中删除了，{{domxref("Headers.get()")}} 方法现在返回所有的值而不是一个。</dd>
 </dl>
 
-<h2 id="范例">范例</h2>
+<h2 id="示例">示例</h2>
 
 <p>在这个小示例中, 我们将会通过Headers构造函数创建一个新的header, 先使用append()方法添加一个header, 然后通过get()方法返回这个header的值</p>
 
@@ -98,81 +98,7 @@ myHeaders.get('Content-Type');
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(42) }}<br>
-    {{ CompatChrome(41) }} behind pref<br>
-     </td>
-   <td>{{ CompatGeckoDesktop(39)}}<br>
-    34 behind pref</td>
-   <td>{{ CompatNo }}</td>
-   <td>
-    <p>29<br>
-     28 behind pref</p>
-   </td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>entries()</code>, <code>keys()</code>, <code>values()</code>, and support of <code>for...of</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoDesktop(44)}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
-  <tr>
-   <td><code>entries()</code>, <code>keys()</code>, <code>values()</code>, and support of <code>for...of</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{ CompatGeckoMobile(44)}}</td>
-   <td>2.5</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.Headers")}}
 
 <h2 id="相关链接">相关链接</h2>
 

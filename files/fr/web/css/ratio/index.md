@@ -13,7 +13,7 @@ Le type de donnée CSS **`<ratio>`** permet de décrire les proportions [dans le
 
 ## Syntaxe
 
-Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref("&lt;integer&gt;")}}, suivi d'une barre oblique ('/', Unicode` U+002F SOLIDUS`) puis d'un second entier strictement positif (type {{cssxref("&lt;integer&gt;")}}). Il est possible d'avoir des espaces avant et après la barre oblique.
+Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref("&lt;integer&gt;")}}, suivi d'une barre oblique ('/', Unicode `U+002F SOLIDUS`) puis d'un second entier strictement positif (type {{cssxref("&lt;integer&gt;")}}). Il est possible d'avoir des espaces avant et après la barre oblique.
 
 ## Exemples
 
@@ -25,7 +25,7 @@ Une valeur de ce type se compose d'un entier strictement positif (type {{cssxref
 
 ### Ratios fréquemment utilisés
 
-|                      | Ratio                                                                                   | Utilisation                                                                                 |
+|                      | Ratio                                                                                   | Utilisation                                                                                 |
 | -------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | ![](ratio4_3.png)    | `4/3`                                                                                   | Format traditionnel utilisé par les télévisions au XX<sup>e</sup> siècle.                   |
 | ![](ratio16_9.png)   | `16/9`                                                                                  | Format « moderne » des télévisions.                                                         |

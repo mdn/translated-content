@@ -43,12 +43,12 @@ Dans cet article, nous allons commencer le voyage vers la maîtrise des styles d
 
 Comme vous l'avez déjà vu dans votre apprentissage de HTML et CSS, le texte d'un élément est placé à l'intérieur de la boîte de contenu de cet élément. Il débute en haut à gauche de cette zone (ou en haut à droite, dans le cas des contenus en langues s'écrivant de droite à gauche) et se poursuit vers la fin de la ligne. Arrivé en bout de ligne, il descend à la ligne suivante et continue, puis va à la ligne suivante, jusqu'à ce que tout le contenu ait été placé. Les contenus textuels se comportent comme une suite d'éléments en ligne placés les uns à côté des autres. Aucun saut de ligne n'est créé avant que la fin de la ligne soit atteinte, sauf si vous forcez manuellement le saut de ligne avec l'élément {{htmlelement("br")}}.
 
-> **Note :** si le paragraphe ci‑dessus vous paraît confus,  pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
+> **Note :** si le paragraphe ci‑dessus vous paraît confus,  pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
 
 Les propriétés CSS utilisées pour le style de texte appartiennent généralement à deux catégories, que nous verrons séparément dans cet article :
 
-- **Styles de la police de caractères** : ces propriétés concernent la fonte appliquée au  texte, affectant sa police, sa taille, sa graisse, si elle est italique, etc.
-- **Styles de composition du texte** : ces propriétés influent sur les espacements et autres dispositions de mise en page du texte, permettant de modifier, par exemple, l'espacement entre lignes et entre caractères, et la manière de disposer le texte  dans la boîte de contenu.
+- **Styles de la police de caractères** : ces propriétés concernent la fonte appliquée au texte, affectant sa police, sa taille, sa graisse, si elle est italique, etc.
+- **Styles de composition du texte** : ces propriétés influent sur les espacements et autres dispositions de mise en page du texte, permettant de modifier, par exemple, l'espacement entre lignes et entre caractères, et la manière de disposer le texte dans la boîte de contenu.
 
 > **Note :** Gardez à l'esprit que le texte à l'intérieur d'un élément est affecté comme une seule entité. Vous ne pouvez pas sélectionner et mettre en forme des sous-sections de texte, sauf si vous les enveloppez dans un élément approprié (tel que {{htmlelement ("span")}} ou {{htmlelement ("strong")}}, ou utilisez un texte pseudo-élément spécifique comme [::first-letter](/fr/docs/Web/CSS/::first-letter) (sélectionne la première lettre du texte d'un élément), [::first-line](/fr/docs/Web/CSS/::first-line) (sélectionne la première ligne du texte d'un élément) ou [::selection](/fr/docs/Web/CSS/::selection) (sélectionne le texte actuellement mis en surbrillance par le curseur) .
 
@@ -76,7 +76,7 @@ Vous pouvez trouver l'[exemple (en) fini](https://mdn.github.io/learning-area/cs
 
 ### Couleur
 
-La propriété {{cssxref("color")}} définit la couleur du contenu d'avant‑plan des éléments sélectionnés (généralement du texte, mais peut être autre chose, comme un soulignement ou un surlignage créé avec la propriété {{cssxref("text-decoration")}}.
+La propriété {{cssxref("color")}} définit la couleur du contenu d'avant‑plan des éléments sélectionnés (généralement du texte, mais peut être autre chose, comme un soulignement ou un surlignage créé avec la propriété {{cssxref("text-decoration")}}.
 
 `color` accepte toutes les [unités de couleur des CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units#Couleurs), par exemple :
 
@@ -106,7 +106,7 @@ occasions, comme maintenant.</p>
 
 ### Familles de fontes
 
-Pour définir une police de caractères différente pour le texte, utilisez la propriété {{cssxref("font-family")}} — cela vous permet de spécifier une police (ou une liste de polices) que le navigateur doit appliquer aux éléments sélectionnés. Le navigateur n'appliquera une police de caractères que si elle est disponible sur la machine sur laquelle le site est accessible, sinon, il utilisera une  {{anch("Default fonts", "police par défaut")}} . Un exemple simple pour voir cela :
+Pour définir une police de caractères différente pour le texte, utilisez la propriété {{cssxref("font-family")}} — cela vous permet de spécifier une police (ou une liste de polices) que le navigateur doit appliquer aux éléments sélectionnés. Le navigateur n'appliquera une police de caractères que si elle est disponible sur la machine sur laquelle le site est accessible, sinon, il utilisera une [police par défaut](#polices_par_défaut). Un exemple simple pour voir cela :
 
 ```css
 p {
@@ -128,10 +128,10 @@ La liste des polices web vraiment sûres changera à mesure que les systèmes d'
 | --------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Arial           | sans-serif     | Il est de bonne pratique d'ajouter Helvetica en tant qu'alternative préférée d'Arial car, bien que leurs apparences soient presque identiques, Helvetica est considérée comme ayant une forme plus agréable, même si Arial est plus courante. |
 | Courier New     | monospace      | Certains systèmes d'exploitation ont une version alternative (peut-être plus ancienne) de la police _Courier New_ appelée _Courier_. Il est recommandé d'utiliser les deux avec _Courier New_ comme alternative préférée.                     |
-| Georgia         | serif          |                                                                                                                                                                                                                                               |
+| Georgia         | serif          |                                                                                                                                                                                                                                               |
 | Times New Roman | serif          | Certains systèmes d'exploitation ont une version alternative (peut-être plus ancienne) de la police _Times New Roman_ appelée _Times_. Il est recommandé d'utiliser les deux avec _Times New Roman_ comme alternative préférée.               |
 | Trebuchet MS    | sans-serif     | Vous devriez être prudent avec l'utilisation de cette police - elle n'est pas aussi largement disponible sur les systèmes d'exploitation des mobiles.                                                                                         |
-| Verdana         | sans-serif     |                                                                                                                                                                                                                                               |
+| Verdana         | sans-serif     |                                                                                                                                                                                                                                               |
 
 > **Note :** Le site [cssfontstack.com](https://www.cssfontstack.com/) met à votre disposition, entre autres ressources, une liste de polices web sûres disponibles sur les systèmes d'exploitation Windows et Mac OS. Elle peut faciliter votre prise de décision quant à ce que vous considérerez comme sûr pour votre usage.
 
@@ -202,7 +202,7 @@ Dans l'article [Valeurs et unités CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CS
 
 - `px` (pixels) : le nombre de pixels souhaités pour la hauteur du texte. C'est une unité absolue — il en résulte une même valeur finale calculée de la police sur la page dans à peu près n'importe quelle situation.
 - `em` : 1 em est égal à la taille de la police définie sur l'élément parent de l'élément courant que nous composons (plus précisément, la largeur d'un « M » majuscule de l'élément parent). Cette valeur peut devenir difficile à déterminer si vous avez beaucoup d'imbrications avec diverses tailles de police, mais cela reste faisable, comme vous le verrez ci-dessous. Pourquoi s'embêter ? C'est assez naturel, une fois que vous y êtes habitué ; vous pouvez utiliser `em` pour tout dimensionner, pas seulement du texte. Vous pouvez avoir un site web entier dimensionné avec des `em`, la maintenance en sera facilitée.
-- `rem` : il fonctionne comme `em`, excepté que un `rem` est égal à la taille de la police sur l'élément racine du document (c'est-à-dire {{htmlelement("html")}}) et non le parent direct). Le calcul des tailles de police en est facilité, mais malheureusement les `rem` ne sont pas pris en charge dans Internet Explorer 8 et avant. Si vous devez prendre en charge des navigateurs plus anciens dans votre projet, vous devrez vous en tenir aux `em` ou aux `px`, soit utiliser une prothèse d'émulation ({{glossary ("polyfill")}}) telle que [REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill).
+- `rem` : il fonctionne comme `em`, excepté que un `rem` est égal à la taille de la police sur l'élément racine du document (c'est-à-dire {{htmlelement("html")}}) et non le parent direct). Le calcul des tailles de police en est facilité, mais malheureusement les `rem` ne sont pas pris en charge dans Internet Explorer 8 et avant. Si vous devez prendre en charge des navigateurs plus anciens dans votre projet, vous devrez vous en tenir aux `em` ou aux `px`, soit utiliser une prothèse d'émulation ({{glossary ("polyfill")}}) telle que [REM-unit-polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill).
 
 La propriété `font-size` d'un élément est héritée de son parent. Tout commence par l'élément racine de l'ensemble du document — {{htmlelement("html")}} — dont la propriété `font‑size` est normée à 16 px sur les navigateurs. Tout paragraphe (ou tout autre élément dont la taille n'a pas été définie différemment par le navigateur) à l'intérieur de l'élément racine aura une taille finale de 16 px. D'autres éléments peuvent avoir des tailles par défaut différentes, par exemple un élément {{htmlelement ("h1")}} a une taille de 2 `em` définie par défaut, donc aura une taille finale de 32 px.
 
@@ -262,7 +262,7 @@ CSS fournit quatre propriétés communes pour modifier le poids et l'emphase vis
 - {{cssxref("font-style")}} : utilisé pour appliquer ou enlever le style italique. Les valeurs possibles sont les suivantes (vous ne l'utiliserez que rarement, sauf si vous souhaitez désactiver le style italique pour une raison quelconque) :
 
   - `normal` : fige le texte en police normale (suppression du style italique existant).
-  - `italic `: met le texte en  _version italique de la police_ si elle est disponible ; si elle n'existe pas, le style italique sera émulé avec l'option oblique à la place.
+  - `italic`&nbsp;: met le texte en _version italique de la police_ si elle est disponible ; si elle n'existe pas, le style italique sera émulé avec l'option oblique à la place.
   - `oblique` : force le texte à utiliser une version simulée de fonte italique, créée en _inclinant la version normale_.
 
 - {{cssxref("font-weight")}} : définit la graisse du texte. La propriété peut avoir de nombreuses valeurs s'il y a de nombreuses variantes de polices disponibles (comme _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), mais en réalité, vous les utiliserez rarement en dehors de `normal` et `bold` (gras):
@@ -467,7 +467,7 @@ La propriété {{cssxref ("line-height")}} définit la hauteur de chaque ligne d
 line-height: 1.5;
 ```
 
-En appliquant cette règle à l'élément {{htmlelement("p")}}  de l'exemple, nous obtenons :
+En appliquant cette règle à l'élément {{htmlelement("p")}}  de l'exemple, nous obtenons :
 
 ```html hidden
 <h1>Tommy le Chat</h1>
@@ -632,7 +632,7 @@ Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ avec le bouton 
 <div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>Zone de saisie du HTML</h2>
   <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Un peu de texte pour vous délecter !</p></textarea>
+  <p>Un peu de texte pour vous délecter&nbsp;!</p></textarea>
 
   <h2>Zone de saisie de la CSS</h2>
   <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">p {

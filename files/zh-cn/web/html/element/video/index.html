@@ -14,11 +14,11 @@ translation_of: Web/HTML/Element/video
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML <code>&lt;video&gt;</code> 元素</strong> 用于在HTML或者XHTML文档中嵌入媒体播放器，用于支持文档内的视频播放。</span>你也可以将 <code>&lt;video&gt;</code>  标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。</p>
+<p><span class="seoSummary"><strong>HTML <code>&lt;video&gt;</code> 元素</strong> 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器，用于支持文档内的视频播放。</span>你也可以将 <code>&lt;video&gt;</code>  标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/video.html", "tabbed-standard")}}</div>
 
-<div>这个交互式例子的源码储存在GitHub仓库上，如果你想要参与到这个交互式例子的项目中来</div>
+<div>这个交互式例子的源码储存在 GitHub 仓库上，如果你想要参与到这个交互式例子的项目中来</div>
 
 <div>并做出自己的一份贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>并发送给我们一个拉取请求</div>
 
@@ -41,7 +41,7 @@ translation_of: Web/HTML/Element/video
 <ul>
  <li>如果你没有指定 <code>controls</code> 属性，那么视频不会展示浏览器自带的控件，你也可以用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 来创建你自己的控件。详情请见<a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player">Creating a cross-browser video player</a>。</li>
  <li><code>HTMLMediaElement</code> 会激活许多不同的<a href="/zh-CN/docs/Web/Guide/Events/Media_events">事件</a>，以便于让你可以控制视频（和音频）内容。</li>
- <li>你可以用CSS 属性 {{cssxref("object-position")}} 来调整视频在元素内部的位置，它可以控制视频尺寸适应于元素外框的方式。</li>
+ <li>你可以用 CSS 属性 {{cssxref("object-position")}} 来调整视频在元素内部的位置，它可以控制视频尺寸适应于元素外框的方式。</li>
  <li>如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">WebVTT</a> 格式的基础上使用 JavaScript 来实现。详情请见 <a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video">Adding captions and subtitles to HTML5 video</a>。</li>
 </ul>
 
@@ -49,11 +49,11 @@ translation_of: Web/HTML/Element/video
 
 <h2 id="Usage_context" name="Usage_context">属性</h2>
 
-<p>就像其他的HTML元素一样，这个元素也同样支持全局属性。</p>
+<p>就像其他的 HTML 元素一样，这个元素也同样支持全局属性。</p>
 
 <p>{{htmlattrdef("autoplay")}}</p>
 
-<p>如果这个bool数值被指定了autoplay，视频就会开始自动播放，而且无需停止加载任何数据。</p>
+<p>如果这个 bool 数值被指定了 autoplay，视频就会开始自动播放，而且无需停止加载任何数据。</p>
 
 <table class="standard-table">
  <tbody>
@@ -71,21 +71,21 @@ translation_of: Web/HTML/Element/video
   </tr>
   <tr>
    <td>规范文档</td>
-   <td><a class="external" href="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element">HTML5, 4.8.6节</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/html5/embedded-content-0.html#the-video-element">HTML5, 4.8.6 节</a></td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Attributes" name="Attributes">属性</h2>
 
-<p>类似于所有其它HTML元素，video元素支持 <a href="/zh-CN/docs/HTML/Global_attributes" title="HTML/Global attributes">全局属性</a>。</p>
+<p>类似于所有其它 HTML 元素，video 元素支持 <a href="/zh-CN/docs/HTML/Global_attributes" title="HTML/Global attributes">全局属性</a>。</p>
 
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
  <dd>布尔属性；指定后，视频会马上自动开始播放，不会停下来等着数据载入结束。</dd>
  <dt>{{htmlattrdef("autobuffer")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>布尔属性；指定后，视频会自动开始缓存，即使没有设置自动播放。该属性适用于视频被认为可能会播放（比如，用户导航到专门播放视频的页面，而不是那种嵌入视频还有其它内容的页面）。视频会一直缓存到媒体缓存满。
- <div class="note"><strong>实现备注： </strong> 虽然是HTML5规范的早期草案的一部分， <code>autobuffer</code> 属性在稍晚的版本被去掉了。 Gecko 2.0 和其它浏览器中已经移除了这个属性，而且有些浏览器中从未实现。规范定义了一个新的枚举属性， <code>preload</code>， 用不同的语法来取代 <code>autobuffer</code> 属性。 {{bug(548523)}}</div>
+ <div class="note"><strong>实现备注： </strong> 虽然是 HTML5 规范的早期草案的一部分， <code>autobuffer</code> 属性在稍晚的版本被去掉了。 Gecko 2.0 和其它浏览器中已经移除了这个属性，而且有些浏览器中从未实现。规范定义了一个新的枚举属性， <code>preload</code>， 用不同的语法来取代 <code>autobuffer</code> 属性。 {{bug(548523)}}</div>
  </dd>
  <dt>{{htmlattrdef("buffered")}}</dt>
  <dd>这个属性可以读取到哪段时间范围内的媒体被缓存了。该属性包含了一个 {{domxref("TimeRanges")}} 对象。</dd>
@@ -93,44 +93,44 @@ translation_of: Web/HTML/Element/video
  <dd>加上这个属性，Gecko 会提供用户控制，允许用户控制视频的播放，包括音量，跨帧，暂停/恢复播放。</dd>
  <dt>{{htmlattrdef("controlslist")}} {{experimental_inline}}</dt>
  <dd>
- <p>当浏览器显示自己的控件集(例如，当指定了Controls属性时)，Controlslist属性将帮助浏览器选择在媒体元素上显示的控件。</p>
+ <p>当浏览器显示自己的控件集 (例如，当指定了 Controls 属性时)，Controlslist 属性将帮助浏览器选择在媒体元素上显示的控件。</p>
 
- <p>允许接受的value有<code>nodownload</code>,<code>nofullscreen</code>和<code>noremoteplayback</code></p>
+ <p>允许接受的 value 有<code>nodownload</code>,<code>nofullscreen</code>和<code>noremoteplayback</code></p>
 
  <div class="blockIndicator note">
- <p><span>如果要禁用图片模式(和控件)，请使用<code>disablePictureInPicture</code>属性。</span></p>
+ <p><span>如果要禁用图片模式 (和控件)，请使用<code>disablePictureInPicture</code>属性。</span></p>
  </div>
  </dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
- <dd>该枚举属性指明抓取相关图片是否必须用到CORS（跨域资源共享）。 <a href="/zh-CN/docs/CORS_Enabled_Image" title="CORS_Enabled_Image">支持CORS的资源</a> 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被<em>污染</em>。允许的值如下：
+ <dd>该枚举属性指明抓取相关图片是否必须用到 CORS（跨域资源共享）。 <a href="/zh-CN/docs/CORS_Enabled_Image" title="CORS_Enabled_Image">支持 CORS 的资源</a> 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被<em>污染</em>。允许的值如下：
  <dl>
   <dt>anonymous</dt>
-  <dd>跨域请求（即，使用 <code>Origin:</code> 的HTTP头）会被执行。但是不发送凭证（即，不发送cookie， X.509 证书或者 HTTP Basic 授权）。如果服务器不提供证书给源站点 (不设置 <code>Access-Control-Allow-Origin:</code> HTTP头)，图片会被 <em>污染</em> 并且它的使用会受限。</dd>
+  <dd>跨域请求（即，使用 <code>Origin:</code> 的 HTTP 头）会被执行。但是不发送凭证（即，不发送 cookie， X.509 证书或者 HTTP Basic 授权）。如果服务器不提供证书给源站点 (不设置 <code>Access-Control-Allow-Origin:</code> HTTP 头)，图片会被 <em>污染</em> 并且它的使用会受限。</dd>
   <dt>use-credentials</dt>
-  <dd>跨域请求A cross-origin request (i.e. with <code>Origin:</code> HTTP header) 会被执行，且凭证会被发送 (即， 发送一个 cookie, 一个证书和HTTP Basic授权会被执行)。如果服务器不提供证书给源站点 (通过<code>Access-Control-Allow-Credentials:</code> HTTP 头)，图像会被 <em>污染</em> 且它的使用会受限。</dd>
+  <dd>跨域请求 A cross-origin request (i.e. with <code>Origin:</code> HTTP header) 会被执行，且凭证会被发送 (即， 发送一个 cookie，一个证书和 HTTP Basic 授权会被执行)。如果服务器不提供证书给源站点 (通过<code>Access-Control-Allow-Credentials:</code> HTTP 头)，图像会被 <em>污染</em> 且它的使用会受限。</dd>
  </dl>
- 不加这个属性时，抓取资源不会走CORS请求(即，不会发送 <code>Origin:</code> HTTP 头)，保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 <strong>anonymous</strong> 一样使用。 查看 <a href="/zh-CN/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS 设置属性</a> 获取更多信息。</dd>
+ 不加这个属性时，抓取资源不会走 CORS 请求 (即，不会发送 <code>Origin:</code> HTTP 头)，保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 <strong>anonymous</strong> 一样使用。 查看 <a href="/zh-CN/docs/HTML/CORS_settings_attributes" title="CORS settings attributes">CORS 设置属性</a> 获取更多信息。</dd>
  <dt>{{htmlattrdef("currentTime")}}</dt>
  <dd>
- <p>读取<code>CurentTime</code>返回一个双精度浮点值，指示以秒为单位的媒体的当前播放位置。如果video尚未开始播放，则会在开始播放后返回偏移量。通过<code>CurentTime</code>将当前播放位置设置为给定时间，会在加载媒体时将媒体查找到该位置（从指定的位置开始播放）。</p>
+ <p>读取<code>CurentTime</code>返回一个双精度浮点值，指示以秒为单位的媒体的当前播放位置。如果 video 尚未开始播放，则会在开始播放后返回偏移量。通过<code>CurentTime</code>将当前播放位置设置为给定时间，会在加载媒体时将媒体查找到该位置（从指定的位置开始播放）。</p>
 
- <p>媒体正在播放的情况下，如果媒体缓冲区的数据已经过期（视频已经播放完），则 {{Glossary("user agent")}}有可能无法正常拿到数据。有些媒体可能有一个不以0秒开始的媒体时间线（不是从头开始播放的），因此应该将<code>currentTime</code>的时间设置在其数据失效之前。{{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} 这个方法可以用来确定媒体时间线起始的坐标。</p>
+ <p>媒体正在播放的情况下，如果媒体缓冲区的数据已经过期（视频已经播放完），则 {{Glossary("user agent")}}有可能无法正常拿到数据。有些媒体可能有一个不以 0 秒开始的媒体时间线（不是从头开始播放的），因此应该将<code>currentTime</code>的时间设置在其数据失效之前。{{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} 这个方法可以用来确定媒体时间线起始的坐标。</p>
  </dd>
  <dt><code><a href="https://wicg.github.io/picture-in-picture/#disable-pip">disablePictureInPicture</a></code> {{experimental_inline}}</dt>
  <dd>
- <p>防止浏览器建议图片中的上下文菜单或在某些情况下自动请求图片中的图片。该属性可以禁用 <code>video</code> 元素的画中画特性，右键菜单中的“画中画”选项会被禁用</p>
+ <p>防止浏览器建议图片中的上下文菜单或在某些情况下自动请求图片中的图片。该属性可以禁用 <code>video</code> 元素的画中画特性，右键菜单中的 “画中画” 选项会被禁用</p>
  </dd>
  <dt><a href="https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute">{{htmlattrdef("disableRemotePlayback")}} {{experimental_inline}}</a></dt>
- <dd>一个布尔属性，用于禁用使用有线连接的设备(HDMI、DVI等)的远程播放功能。无线技术(Miracast、Chromecast、DLNA、AirPlay等)。</dd>
+ <dd>一个布尔属性，用于禁用使用有线连接的设备 (HDMI、DVI 等) 的远程播放功能。无线技术 (Miracast、Chromecast、DLNA、AirPlay 等)。</dd>
  <dd>
  <div class="blockIndicator note">
- <p>在Safari中，您可以使用x-webkit-airplay=“deny”作为后盾。</p>
+ <p>在 Safari 中，您可以使用 x-webkit-airplay=“deny” 作为后盾。</p>
  </div>
  </dd>
  <dt>{{htmlattrdef("duration")}} {{ReadOnlyInline}}</dt>
- <dd>一个双精度浮点值，它指示媒体的持续时间(总长度)，以秒为单位，在媒体的时间线上。如果元素上没有媒体，或者媒体无效，则返回的值为NaN。如果媒体没有已知终点(例如时间未知的实时流、网络广播、来自WebRTC的媒体等等)，那么这个值就是Infinity。</dd>
+ <dd>一个双精度浮点值，它指示媒体的持续时间 (总长度)，以秒为单位，在媒体的时间线上。如果元素上没有媒体，或者媒体无效，则返回的值为 NaN。如果媒体没有已知终点 (例如时间未知的实时流、网络广播、来自 WebRTC 的媒体等等)，那么这个值就是 Infinity。</dd>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd>视频展示区域的高度，单位是CSS像素。</dd>
+ <dd>视频展示区域的高度，单位是 CSS 像素。</dd>
  <dt>{{htmlattrdef("intrinsicsize")}} {{experimental_inline}}</dt>
  <dd>
  <p>这个属性告诉浏览器忽略图像的实际内在大小，并假装它是属性中指定的大小。具体来说，图像将在这些维度上展开，图像上的<code>naturalWidth</code>/<code>naturalHeight</code> 将返回此属性中指定的值。<a href="https://github.com/WICG/intrinsicsize-attribute">Explainer</a>，<a href="https://googlechrome.github.io/samples/intrinsic-size/index.html">examples</a></p>
@@ -138,10 +138,10 @@ translation_of: Web/HTML/Element/video
  <dt>{{htmlattrdef("loop")}}</dt>
  <dd>布尔属性；指定后，会在视频结尾的地方，自动返回视频开始的地方。</dd>
  <dt>{{htmlattrdef("muted")}}</dt>
- <dd>布尔属性，指明了视频里的音频的默认设置。设置后，音频会初始化为静音。默认值是false,意味着视频播放的时候音频也会播放 。</dd>
+ <dd>布尔属性，指明了视频里的音频的默认设置。设置后，音频会初始化为静音。默认值是 false，意味着视频播放的时候音频也会播放 。</dd>
  <dt>{{htmlattrdef("playsinline")}}</dt>
  <dd>
- <p>一个布尔属性，标志视频将被“inline”播放，即在元素的播放区域内。请注意，没有此属性并不意味着视频始终是全屏播放的。</p>
+ <p>一个布尔属性，标志视频将被 “inline” 播放，即在元素的播放区域内。请注意，没有此属性并不意味着视频始终是全屏播放的。</p>
  </dd>
  <dt>{{htmlattrdef("played")}}</dt>
  <dd>一个 {{domxref("TimeRanges")}} 对象，指明了视频已经播放的所有范围。</dd>
@@ -154,7 +154,7 @@ translation_of: Web/HTML/Element/video
   <li><em>空字符串</em>：也就代指 <span style="font-family: courier new;">auto </span>值。</li>
  </ul>
 
- <p>假如不设置，默认值就是浏览器定义的了 （即，不同浏览器会选择自己的默认值），即使规范建议设置为 <span style="font-family: courier new;">metadata</span>。</p>
+ <p>假如不设置，默认值就是浏览器定义的了（即，不同浏览器会选择自己的默认值），即使规范建议设置为 <span style="font-family: courier new;">metadata</span>。</p>
 
  <div class="note"><strong>使用备注：</strong>
 
@@ -165,14 +165,14 @@ translation_of: Web/HTML/Element/video
  </div>
  </dd>
  <dt>{{htmlattrdef("poster")}}</dt>
- <dd>一个海报帧的URL，用于在用户播放或者跳帧之前展示。如果属性未指定，那么在第一帧可用之前什么都不会展示；之后第一帧就像海报帧一样展示。</dd>
+ <dd>一个海报帧的 URL，用于在用户播放或者跳帧之前展示。如果属性未指定，那么在第一帧可用之前什么都不会展示；之后第一帧就像海报帧一样展示。</dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>要嵌到页面的视频的URL。可选；你也可以使用video块内的 {{HTMLElement("source")}} 元素来指定需要嵌到页面的视频。</dd>
+ <dd>要嵌到页面的视频的 URL。可选；你也可以使用 video 块内的 {{HTMLElement("source")}} 元素来指定需要嵌到页面的视频。</dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd>视频显示区域的宽度，单位是CSS像素。</dd>
+ <dd>视频显示区域的宽度，单位是 CSS 像素。</dd>
 </dl>
 
-<p>时间偏移量目前是指定为float类型的值，表示偏移的秒数。</p>
+<p>时间偏移量目前是指定为 float 类型的值，表示偏移的秒数。</p>
 
 <div class="note"><strong>备注：</strong> HTML 5 规范中，时间偏移量值的定义还没有完成，有可能会变更。</div>
 
@@ -214,15 +214,15 @@ translation_of: Web/HTML/Element/video
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.emptied_event", 'emptied')}}</td>
-   <td>媒体内容为空；例如，当这个media已经加载完成（或者部分加载完成）， <a href="/zh-CN/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> 被用来进行重新加载。</td>
+   <td>媒体内容为空；例如，当这个 media 已经加载完成（或者部分加载完成）， <a href="/zh-CN/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a> 被用来进行重新加载。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.ended_event", 'ended')}}</td>
-   <td>视频停止，因为media已经到达结束点。</td>
+   <td>视频停止，因为 media 已经到达结束点。</td>
   </tr>
   <tr>
    <td>{{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}</td>
-   <td>media中的首帧已经加载。</td>
+   <td>media 中的首帧已经加载。</td>
   </tr>
  </tbody>
 </table>
@@ -232,7 +232,7 @@ translation_of: Web/HTML/Element/video
 <pre class="brush: html notranslate">&lt;!-- Simple video example --&gt;
 &lt;video src="videofile.ogg" autoplay poster="posterimage.jpg"&gt;
   抱歉，您的浏览器不支持内嵌视频，不过不用担心，你可以 &lt;a href="videofile.ogg"&gt;下载&lt;/a&gt;
-  并用你喜欢的播放器观看!
+  并用你喜欢的播放器观看！
 &lt;/video&gt;
 
 &lt;!-- Video with subtitles --&gt;
@@ -248,21 +248,21 @@ translation_of: Web/HTML/Element/video
 
 <h2 id="Server_support" name="Server_support">服务器支持</h2>
 
-<p>如果视频的MIME类型设置不正确，视频可能不会显示，或者显示包含一个X的灰色盒子（如果启用了JavaScript的话）。</p>
+<p>如果视频的 MIME 类型设置不正确，视频可能不会显示，或者显示包含一个 X 的灰色盒子（如果启用了 JavaScript 的话）。</p>
 
-<p>如果你提供的视频是Ogg Theora格式的，在Apache Web 服务器上， 你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在httpd.conf中的“AddType的”配置指令，把视频文件的扩展名(最常见的是".ogm", ".ogv", or ".ogg")添加到 MIME 类型 "video/ogg"， 来解决这个问题。</p>
+<p>如果你提供的视频是 Ogg Theora 格式的，在 Apache Web 服务器上， 你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的 “AddType 的” 配置指令，把视频文件的扩展名 (最常见的是".ogm", ".ogv", or ".ogg") 添加到 MIME 类型 "video/ogg"， 来解决这个问题。</p>
 
 <pre class="notranslate">AddType video/ogg .ogm
 AddType video/ogg .ogv
 AddType video/ogg .ogg
 </pre>
 
-<p>如果你以 WebM 格式提供视频，在Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在httpd.conf中的“AddType的”配置指令，把视频文件的扩展名(最常见的是".webm")添加到 MIME 类型 "video/webm"， 来解决这个问题。</p>
+<p>如果你以 WebM 格式提供视频，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的 “AddType 的” 配置指令，把视频文件的扩展名 (最常见的是".webm") 添加到 MIME 类型 "video/webm"， 来解决这个问题。</p>
 
 <pre class="notranslate">AddType video/webm .webm
 </pre>
 
-<p>你的web主机可能会提供一个简单的接口来修改MIME类型配置，直到服务器全面升级。</p>
+<p>你的 web 主机可能会提供一个简单的接口来修改 MIME 类型配置，直到服务器全面升级。</p>
 
 <h2 id="DOM_interface" name="DOM_interface">DOM 接口</h2>
 
@@ -277,12 +277,12 @@ AddType video/ogg .ogg
 <h2 id="See_also" name="See_also">另请参阅</h2>
 
 <ul>
- <li><a href="/zh-CN/docs/Media_formats_supported_by_the_audio_and_video_elements" title="Media formats supported by the audio and video elements">audio和video元素支持的媒体格式</a></li>
+ <li><a href="/zh-CN/docs/Media_formats_supported_by_the_audio_and_video_elements" title="Media formats supported by the audio and video elements">audio 和 video 元素支持的媒体格式</a></li>
  <li>{{htmlelement("audio")}}</li>
- <li><a href="/zh-CN/docs/Using_HTML5_audio_and_video" title="Using audio and video in Firefox">使用 HTML5 audio 和video</a></li>
- <li><a href="/zh-CN/docs/Manipulating_video_using_canvas" title="Manipulating video using canvas">用canvas操作video</a></li>
+ <li><a href="/zh-CN/docs/Using_HTML5_audio_and_video" title="Using audio and video in Firefox">使用 HTML5 audio 和 video</a></li>
+ <li><a href="/zh-CN/docs/Manipulating_video_using_canvas" title="Manipulating video using canvas">用 canvas 操作 video</a></li>
  <li><a href="/zh-CN/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" title="NsIDOMHTMLMediaElement"><code>nsIDOMHTMLMediaElement</code></a></li>
- <li><a class="external" href="http://tinyvid.tv/">TinyVid</a> - 在HTML5中使用ogg文件的例子。</li>
+ <li><a class="external" href="http://tinyvid.tv/">TinyVid</a> - 在 HTML5 中使用 ogg 文件的例子。</li>
  <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#video"><code>video</code> 元素</a> (HTML5 规范)</li>
  <li><a href="/zh-CN/docs/Configuring_servers_for_Ogg_media" title="Configuring servers for Ogg media">Ogg 格式媒体文件的服务器配置</a></li>
 </ul>

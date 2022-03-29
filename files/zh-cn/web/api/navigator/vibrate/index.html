@@ -48,65 +48,7 @@ window.navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("11.0")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16.0")}} (no prefix) [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}} {{property_prefix("webkit")}}<br>
-    {{CompatVersionUnknown}} (unprefixed) [2][3]</td>
-   <td>{{CompatVersionUnknown}} {{property_prefix("webkit")}}<br>
-    {{CompatVersionUnknown}} (unprefixed) [2][3]</td>
-   <td>{{CompatGeckoMobile("11.0")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoMobile("16.0")}} (no prefix) [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[3]</sup></td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 当震动模式太长或者其中一次震动的时长太长时，截至 Firefox 26，Gecko 将会抛出一个异常，而不是返回 <code>false</code> ({{bug("884935")}})。从 Firefox 32 开始，Gecko 返回 <code>true</code>，但是会将该模式截断 ({{bug(1014581)}})。</p>
-
-<p>[2] 从 Chrome 55 开始，跨域的 iframe 中不支持该 API。</p>
-
-<p>[3] 从 Chrome 60/Opera 47 开始，该方法需要一个用户手势。否则会返回 <code>false</code>。</p>
+{{Compat("api.Navigator.vibrate")}}
 
 <h2 id="更多">更多</h2>
 

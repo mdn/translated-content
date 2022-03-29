@@ -5,14 +5,14 @@ translation_of: Web/JavaScript/Closures
 ---
 <div>{{jsSidebar("Intermediate")}}</div>
 
-<p class="summary">閉包（Closure）是函式以及該函式被宣告時所在的作用域環境（lexical environment）的組合。</p>
+<p>閉包（Closure）是函式以及該函式被宣告時所在的作用域環境（lexical environment）的組合。</p>
 
 <h2 id="語法作用域（Lexical_scoping）">語法作用域（Lexical scoping）</h2>
 
 <p>思考這個例子：</p>
 
 <div>
-<pre class="brush: js notranslate">function init() {
+<pre class="brush: js">function init() {
   var name = "Mozilla"; // name 是個由 init 建立的局部變數
   function displayName() { // displayName() 是內部函式，一個閉包
     alert(name); // 使用了父函式宣告的變數
@@ -32,7 +32,7 @@ init();</pre>
 
 <p>再思考這個例子：</p>
 
-<pre class="brush: js notranslate">function makeFunc() {
+<pre class="brush: js">function makeFunc() {
   var name = "Mozilla";
   function displayName() {
     alert(name);
@@ -52,7 +52,7 @@ myFunc();
 
 <p>這裡有個更有趣的例子：<code>makeAdder</code> 函式：</p>
 
-<pre class="brush: js notranslate">function makeAdder(x) {
+<pre class="brush: js">function makeAdder(x) {
   return function(y) {
     return x + y;
   };
@@ -81,7 +81,7 @@ console.log(add10(2)); // 12
 
 <p>例如，假設我們想在網頁上，加個能調整文字大小的按鈕。其中一個方法是用像素指定 <code>body</code> 元素的 font-size，接著透過相對的 em 單位，設置其他頁面的其他元素（如 headers）個大小：</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
@@ -99,7 +99,7 @@ h2 {
 
 <p>以下是 JavaScript：</p>
 
-<pre class="brush: js notranslate">function makeSizer(size) {
+<pre class="brush: js">function makeSizer(size) {
   return function() {
     document.body.style.fontSize = size + 'px';
   };
@@ -112,12 +112,12 @@ var size16 = makeSizer(16);
 
 <p><code>size12</code>、<code>size14</code>、<code>size16</code> 現在變成能調整字體大小到 12、14、與 16 像素的函式。而我們能如下例一般，把他們附加到按鈕上（本例為連結）：</p>
 
-<pre class="brush: js notranslate">document.getElementById('size-12').onclick = size12;
+<pre class="brush: js">document.getElementById('size-12').onclick = size12;
 document.getElementById('size-14').onclick = size14;
 document.getElementById('size-16').onclick = size16;
 </pre>
 
-<pre class="brush: html notranslate">&lt;a href="#" id="size-12"&gt;12&lt;/a&gt;
+<pre class="brush: html">&lt;a href="#" id="size-12"&gt;12&lt;/a&gt;
 &lt;a href="#" id="size-14"&gt;14&lt;/a&gt;
 &lt;a href="#" id="size-16"&gt;16&lt;/a&gt;
 </pre>
@@ -132,7 +132,7 @@ document.getElementById('size-16').onclick = size16;
 
 <p>以下展示如何使用閉包來定義一個能夠訪問私有函式與變數的公開函式。這種閉包的用法稱為模組設計模式(<a class="external" href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>)。</p>
 
-<pre class="brush: js notranslate">var counter = (function() {
+<pre class="brush: js">var counter = (function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -164,11 +164,11 @@ console.log(counter.value()); // logs 1
 
 <p>這三個公有函式，皆為共享同一個環境的閉包。由於 JavaScript 的語法作用域，它們都能訪問 <code>privateCounter</code> 變數與 <code>changeBy</code> 函式。</p>
 
-<div class="note">
-<p>你應該也發現到我們定義了建立 counter 的匿名函式、而我們接著呼叫它，並給<code>counter</code> 變數指派了回傳值。我們也能在分離的變數 <code>makeCounter</code> 儲存函式並用其建立數個 counter。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>你應該也發現到我們定義了建立 counter 的匿名函式、而我們接著呼叫它，並給<code>counter</code> 變數指派了回傳值。我們也能在分離的變數 <code>makeCounter</code> 儲存函式並用其建立數個 counter。</p>
 </div>
 
-<pre class="brush: js notranslate">var makeCounter = function() {
+<pre class="brush: js">var makeCounter = function() {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
@@ -199,21 +199,21 @@ alert(counter2.value()); /* Alerts 0 */
 
 <p>請注意 <code>counter1</code> 與 <code>counter2</code> 這兩個計數器是如何維護其獨立性的。每個閉包都以各自的閉包，在參照不同版本的 <code>privateCounter</code> 變數。每當呼叫其中一個計數器時，它會透過該變數的數值變更，改變語法作用域的環境。不過，在其中一個閉包的變數值改時，其他閉包的數值並不會受到影響。</p>
 
-<div class="note">
-<p>使用這種方法的閉包，提供了一些與物件導向程式設計的益處，尤其是資料隱藏與封裝。</p>
+<div class="notecard note">
+<p><strong>備註：</strong>使用這種方法的閉包，提供了一些與物件導向程式設計的益處，尤其是資料隱藏與封裝。</p>
 </div>
 
 <h2 id="在迴圈建立閉包：一個常見錯誤">在迴圈建立閉包：一個常見錯誤</h2>
 
 <p>在 ECMAScript 2015 導入 <a href="/zh-TW/docs/Web/JavaScript/Reference/Statements/let" title="let"><code>let</code></a> 前，迴圈內建立的閉包，常會發生問題。請思考以下的範例：</p>
 
-<pre class="brush: html notranslate">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
+<pre class="brush: html">&lt;p id="help"&gt;Helpful notes will appear here&lt;/p&gt;
 &lt;p&gt;E-mail: &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;
 &lt;p&gt;Name: &lt;input type="text" id="name" name="name"&gt;&lt;/p&gt;
 &lt;p&gt;Age: &lt;input type="text" id="age" name="age"&gt;&lt;/p&gt;
 </pre>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -245,7 +245,7 @@ setupHelp();
 
 <p>其中一個解法是使用更多閉包，尤其要使用前述的函式工廠：</p>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -277,7 +277,7 @@ setupHelp();
 
 <p>用匿名閉包來實做的另一種方法是：</p>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -302,7 +302,7 @@ setupHelp();</pre>
 
 <p>如果你不想用更多閉包的話，你可以使用 ES2015 的 <code><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Statements/let">let</a></code> 關鍵字：</p>
 
-<pre class="brush: js notranslate">function showHelp(help) {
+<pre class="brush: js">function showHelp(help) {
   document.getElementById('help').innerHTML = help;
 }
 
@@ -334,7 +334,7 @@ setupHelp();
 
 <p>思考一下這個例子：</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
   this.getName = function() {
@@ -349,7 +349,7 @@ setupHelp();
 
 <p>上面的程式碼並未利用閉包的益處，所以，可以改成這個樣子：</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
@@ -365,7 +365,7 @@ MyObject.prototype = {
 
 <p>但我們不建議重新定義原型，因此這個附加到現有原型的例子更佳：</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
@@ -379,7 +379,7 @@ MyObject.prototype.getMessage = function() {
 
 <p>以上的程式碼，可以寫得如同下例般簡潔：</p>
 
-<pre class="brush: js notranslate">function MyObject(name, message) {
+<pre class="brush: js">function MyObject(name, message) {
     this.name = name.toString();
     this.message = message.toString();
 }

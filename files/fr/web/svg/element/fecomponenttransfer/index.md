@@ -40,7 +40,7 @@ Cet élément implémente l'interface {{domxref("SVGFEComponentTransferElement")
 ### SVG
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
   <defs>
     <linearGradient id="rainbow" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="100%" y2="0">
       <stop offset="0" stop-color="#ff0000"></stop>
@@ -112,7 +112,7 @@ rect {
 
 | Spécification                                                                                                                    | Statut                           | Commentaire                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Filters 1.0', '#feComponentTransferElement', '&lt;feComponentTransfer&gt;')}}         | {{Spec2('Filters 1.0')}} | Spécifie que les fonctions de transfert non définies sont traitées comme si elles avaient été définies avec pour  {{SVGAttr("type")}} `identity`. |
+| {{SpecName('Filters 1.0', '#feComponentTransferElement', '&lt;feComponentTransfer&gt;')}}         | {{Spec2('Filters 1.0')}} | Spécifie que les fonctions de transfert non définies sont traitées comme si elles avaient été définies avec pour  {{SVGAttr("type")}} `identity`. |
 | {{SpecName('SVG1.1', 'filters.html#feComponentTransferElement', '&lt;feComponentTransfer&gt;')}} | {{Spec2('SVG1.1')}}         | Définition initiale                                                                                                                                    |
 
 ## Compatibilité des navigateurs

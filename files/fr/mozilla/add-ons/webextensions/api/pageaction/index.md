@@ -18,11 +18,11 @@ Une [action de page](/fr/Add-ons/WebExtensions/Page_actions) est une icône cliq
 
 ![](page-action.png)
 
-Vous pouvez écouter les clics sur l'icône, ou spécifié une [fenêtre contextuelle ](/fr/Add-ons/WebExtensions/Popups)qui s'ouvre  lorsque l'icone est cliquée.
+Vous pouvez écouter les clics sur l'icône, ou spécifié une [fenêtre contextuelle](/fr/Add-ons/WebExtensions/Popups) qui s'ouvre lorsque l'icone est cliquée.
 
 Si vous spécifiez une fenêtre contextuelle, vous pouvez définir son contenu et son comportement en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. Le JavaScript s'exécutant dans la fenêtre contextuelle accède à toutes les mêmes API WebExtension que vos scripts d'arrière-plan.
 
-Vous pouvez définir la plupart des propriétés d'une action de page de manière déclarative à l'aide de la  [clef page_action](/fr/Add-ons/WebExtensions/manifest.json/page_action) dans votre [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), mais également les redéfinir par programmation en utilisant cette API.
+Vous pouvez définir la plupart des propriétés d'une action de page de manière déclarative à l'aide de la  [clef page_action](/fr/Add-ons/WebExtensions/manifest.json/page_action) dans votre [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), mais également les redéfinir par programmation en utilisant cette API.
 
 Les actions de page sont pour des actions qui ne sont pertinentes que pour des pages particulières (comme "favoris dans l'onglet courrant"). S'ils sont pertinents pour le navigateur dans son ensemble (par exemple, "Afficher tous les favoris"), utilisez plutôt une action du navigateur.
 

@@ -48,7 +48,7 @@ console.log(mapIter.next().value); // [Object, "bidule"]
 | Spécification                                                                                            | État                         | Commentaires        |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-map.prototype.entries', 'Map.prototype.entries')}} | {{Spec2('ES2015')}}     | Défintion initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.entries', 'Map.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-map.prototype.entries', 'Map.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

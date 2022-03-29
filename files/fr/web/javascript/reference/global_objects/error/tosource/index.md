@@ -33,7 +33,7 @@ Appeler la méthode `toSource()` d'une instance {{jsxref("Error")}} ([Erreurs na
 
 où ces attributs correspondent aux propriétés respectives de l'instance `Error`.
 
-> **Note :** Les propriétés utilisées par la méthode `toSource()` dans la création de cette chaine de caractères sont mutables et peuvent ne pas refléter correctement la fonction utilisée pour créer une instance d'erreur ou le nom du fichier ou la ligne à laquelle s'est produite l'erreur originale.
+> **Note :** Les propriétés utilisées par la méthode `toSource()` dans la création de cette chaine de caractères sont mutables et peuvent ne pas refléter correctement la fonction utilisée pour créer une instance d'erreur ou le nom du fichier ou la ligne à laquelle s'est produite l'erreur originale.
 
 ## Spécifications
 

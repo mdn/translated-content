@@ -29,10 +29,10 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 
 | Attribut                       | Description                                                                                               |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| `{{anch("accept")}}`     | Un ou plusieurs identifiants de type de fichier décrivants les types de fichier autorisés.                |
-| `{{anch("capture")}}`     | La source à utiliser pour capturer des images ou des vidéos.                                              |
-| `{{anch("files")}}`     | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                  |
-| `{{anch("multiple")}}` | Un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés. |
+| [`accept`](#accept)     | Un ou plusieurs identifiants de type de fichier décrivants les types de fichier autorisés.                |
+| [`capture`](#capture)     | La source à utiliser pour capturer des images ou des vidéos.                                              |
+| [`files`](#files)     | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                  |
+| [`multiple`](#multiple) | Un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés. |
 
 ### {{htmlattrdef("accept")}}
 
@@ -65,7 +65,7 @@ En complément des attributs précédents, les éléments `<input type="file">` 
 
 | Attribut                               | Description                                                                                                                               |
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("webkitdirectory")}}` | Un attribut booléen qui indique si l'utilisateur peut choisir un répertoire (ou plusieurs si `{{anch("multiple")}}` est présent). |
+| [`webkitdirectory`](#webkitdirectory) | Un attribut booléen qui indique si l'utilisateur peut choisir un répertoire (ou plusieurs si [`multiple`](#multiple) est présent). |
 
 ### {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
 
@@ -80,7 +80,7 @@ Un identifiant de type de fichier est une chaîne de caractères qui décrit le 
 - Une extension de fichier valide, sensible à la casse et qui commence par un point (« . »). Par exemple : `.jpg`, `.pdf` ou `.doc`.
 - Un type MIME valide, sans extension.
 - La chaîne de caractères `audio/*` qui indique « n'importe quel fichier audio »
-- La chaîne de caractères `video/*` qui indique « n'importe quel fichier vidéo »
+- La chaîne de caractères `video/*` qui indique « n'importe quel fichier vidéo&nbsp;»
 - La chaîne de caractères `image/*` qui indique « n'importe quel fichier image ».
 
 L'attribut `accept` prend comme valeur une chaîne de caractères composée d'un ou plusieurs identifiants de type, séparés par des virgules. Ainsi, si un sélecteur de fichier doit permettre de sélectionner des images ou des documents PDF, on pourra écrire :
@@ -125,7 +125,7 @@ Lorsqu'on envoie le formulaire de l'exemple, le nom de chaque fichier sera ajout
 
 ### Obtenir des informations sur les fichiers sélectionnés
 
-Les fichiers sélectionnés peuvent être obtenus sous la forme d'un objet {{domxref("FileList")}} renvoyé par la propriété `HTMLInputElement.files` de l'élement du DOM. Cet objet est une liste d'objets {{domxref("File")}}. Un objet `FileList` se comporte comme un tableau et on peut donc consulter sa longueur (la propriété `length`) afin de connaître le nombre de fichiers sélectionnés.
+Les fichiers sélectionnés peuvent être obtenus sous la forme d'un objet {{domxref("FileList")}} renvoyé par la propriété `HTMLInputElement.files` de l'élement du DOM. Cet objet est une liste d'objets {{domxref("File")}}. Un objet `FileList` se comporte comme un tableau et on peut donc consulter sa longueur (la propriété `length`) afin de connaître le nombre de fichiers sélectionnés.
 
 Chaque objet `File` contient les informations suivantes :
 
@@ -389,7 +389,7 @@ Et voici le résultat :
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Valeur")}}</strong></td>
+      <td><strong><a href="#valeur">Valeur</a></strong></td>
       <td>
         Une chaîne de caractères ({{domxref("DOMString")}}) qui
         représente le chemin du fichier sélectionné.

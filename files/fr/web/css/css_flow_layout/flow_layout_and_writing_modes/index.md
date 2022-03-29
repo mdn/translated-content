@@ -14,7 +14,7 @@ Ce guide n'est pas un guide exhaustif sur l'utilisation des modes d'écriture en
 
 ## La spécification des modes d'écriture
 
-Le module de spécification _CSS Writing Modes_ de niveau 3 définit l'impact du mode d'écriture sur le flux. Voici l'introduction [de la spécification ](https://drafts.csswg.org/css-writing-modes-3/#text-flow)quant aux modes d'écriture :
+Le module de spécification _CSS Writing Modes_ de niveau 3 définit l'impact du mode d'écriture sur le flux. Voici l'introduction [de la spécification](https://drafts.csswg.org/css-writing-modes-3/#text-flow) quant aux modes d'écriture :
 
 > « En CSS, un mode d'écriture est défini par les propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}. Ce mode est principalement défini selon sa direction en ligne (_inline_) et selon sa direction de bloc. »
 

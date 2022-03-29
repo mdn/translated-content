@@ -46,7 +46,7 @@ if (Number.EPSILON === undefined) {
 | Spécification                                                                        | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-number.epsilon', 'Number.EPSILON')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-number.epsilon', 'Number.EPSILON')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -37,59 +37,7 @@ translation_of: Web/API/FileReader/readAsArrayBuffer
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox (Gecko)</th>
-   <th>Chrome</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}<sup>[1]</sup></td>
-   <td>7</td>
-   <td>10<sup>[2]</sup></td>
-   <td>12.02<sup>[3]</sup></td>
-   <td>6.0.2</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Android</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>32</td>
-   <td>3</td>
-   <td>10</td>
-   <td>11.5</td>
-   <td>6.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Gecko 2.0 beta 7 (Firefox 4.0 beta 7)之前，上述方法中所有的 {{domxref("Blob")}} 参数都只能是一个 {{domxref("File")}} 对象。根据最新的 FileAPI 草案，现在的所有的 {{domxref("Blob")}} 参数既可以是<font face="Consolas, Liberation Mono, Courier, monospace"> </font>{{domxref("Blob")}} 对象也可以是一个<font face="Consolas, Liberation Mono, Courier, monospace"> </font>{{domxref("File")}} 对象。在Gecko 13.0 {{geckoRelease("13.0")}} 之前，FileReader.error 属性会返回一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FileError">FileError</a> 对象。根据最新的FileAPI草案，现在的  FileReader.error会返回一个 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/DOMError">DOMError</a> 对象。</p>
-
-<p>[2] IE9有一个 <a href="http://html5labs.interoperabilitybridges.com/prototypes/fileapi/fileapi/info">File API Lab</a>.</p>
-
-<p>[3] Opera从11.10开始 <a href="http://www.opera.com/docs/specs/presto28/file/">部分支持</a> .</p>
+{{Compat("api.FileReader.readAsArrayBuffer")}}
 
 <h2 id="相关链接">相关链接</h2>
 

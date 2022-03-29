@@ -40,19 +40,19 @@ Le widget est dans son état normal :
 
 > **Note :** Déplacer le focus dans la page entre les divers widgets se fait généralement en appuyant sur la touche de tabulation, mais ce n'est pas la norme partout. Par exemple, circuler parmi les liens sur une page se fait dans Safari par défaut en utilisant la [combinaison Option+Tab](http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
 
-Le widget est sans son état actif :
+Le widget est sans son état actif&nbsp;:
 
 - l'utilisateur clique sur lui
 - l'utilisateur presse la touche Tabulation et obtient le focus
 - le widget était dans l'état ouvert et l'utilisateur a cliqué dessus.
 
-Le widget est dans un état ouvert :
+Le widget est dans un état ouvert&nbsp;:
 
 - le widget est dans un état autre que ouvert et l'utilisateur clique dessus.
 
 Maintenant que nous savons comment changer les états du widget, il est important de définir comment changer la valeur du widget :
 
-La valeur change quand :
+La valeur change quand&nbsp;:
 
 - l'utilisateur clique sur une option quand le widget est dans l'état ouvert
 - l'utilisateur presse la touche
@@ -65,14 +65,14 @@ La valeur change quand :
 
   quand le widget est dans l'état actif
 
-Enfin, définissons comment les options du widget doivent se comporter :
+Enfin, définissons comment les options du widget doivent se comporter&nbsp;:
 
 - Quand le widget est ouvert, l'option sélectionnée est mise en valeur
 - Quand la souris est sur une option, l'option est mise en valeur et l'option précédemment mise en valeur revient à l'état normal
 
 Pour les besoins de notre exemple, nous nous arrêterons là ; cependant, si vous êtes un lecteur attentif, vous remarquerez que certains comportements ne sont pas précisés. Par exemple, que pensez-vous qu'il se passe si l'utilisateur appuie sur la touche Tabulation alors que le widget est dans l'état ouvert ? La réponse est… rien. D'accord, le bon comportement semble évident mais le fait est que, comme il n'est pas défini dans nos spécifications, il est très facile de fermer les yeux sur ce comportement. Dans un travail collaboratif, lorsque les personnes concevant le comportement du widget sont différentes de celles qui le mettent en œuvre, cette démarche se vérifiera.
 
-Autre exemple amusant : que se passera-t-il si l'utilisateur presse les touches <kbd>↑</kbd> ou <kbd>↓</kbd> alors que le widget est à l'état ouvert ? Ici, c'est un peu plus délicat. Si vous considérez que l'état actif et l'état ouvert sont totalement différents, la réponse est encore une fois « rien ne se produira » parce que nous n'avons pas défini d'interactions clavier pour l'état ouvert. D'autre part, si vous considérez que l'état actif et l'état ouvert coïncident, la valeur peut changer mais l'option ne sera certainement pas mise en valeur en conséquence, encore une fois parce que nous n'avons pas défini d'interactions clavier sur les options lorsque le widget est dans son état ouvert (nous avons seulement défini ce qui doit se passer lorsque le widget est ouvert, mais rien après).
+Autre exemple amusant : que se passera-t-il si l'utilisateur presse les touches <kbd>↑</kbd> ou <kbd>↓</kbd> alors que le widget est à l'état ouvert ? Ici, c'est un peu plus délicat. Si vous considérez que l'état actif et l'état ouvert sont totalement différents, la réponse est encore une fois «&nbsp;rien ne se produira&nbsp;» parce que nous n'avons pas défini d'interactions clavier pour l'état ouvert. D'autre part, si vous considérez que l'état actif et l'état ouvert coïncident, la valeur peut changer mais l'option ne sera certainement pas mise en valeur en conséquence, encore une fois parce que nous n'avons pas défini d'interactions clavier sur les options lorsque le widget est dans son état ouvert (nous avons seulement défini ce qui doit se passer lorsque le widget est ouvert, mais rien après).
 
 Dans notre exemple, les spécifications manquantes sont évidentes et nous les traiterons, mais cela peut devenir un problème réel sur de nouveaux widgets exotiques, pour lesquels personne n'a la moindre idée de ce qu'est le bon comportement. Il est donc toujours bon de passer du temps à l'étape conception, car si vous définissez pauvrement le comportement, ou si vous oubliez de le définir, il sera très difficile de le redéfinir une fois les utilisateurs habitués. Si vous avez des doutes, demandez l'avis des autres, et si vous avez le budget pour cela, n'hésitez pas à [faire des tests utilisateur](https://fr.wikipedia.org/wiki/Test_utilisateur). Ce processus est appelé UX Design (**U**ser e**X**perience). Si vous voulez en savoir plus sur ce sujet, vous devriez consulter les ressources utiles suivantes :
 
@@ -213,7 +213,7 @@ Maintenant que nous avons mis en place les fonctionnalités de base, le divertis
 }
 
 .select .value {
-  /* Comme la valeur peut être plus large que le widget, nous devons nous
+  /* Comme la valeur peut être plus large que le widget, nous devons nous
      assurer qu'elle ne changera pas la largeur du widget. */
   display  : inline-block;
   width    : 100%;
@@ -353,7 +353,7 @@ Avant de commencer, il est important de se rappeler quelque chose de très impor
 - Le script ne se charge pas. La chose est très courante, en particulier dans le domaine des mobiles pour lesquels le réseau n'est pas sûr.
 - Le script est bogué. Il faut toujours prendre en considération cette éventualité.
 - Le script est en conflit avec un autre script tierce‑partie. Cela peut se produire avec des suites de scripts ou n'importe quel marque page utilisé par l'utilisateur.
-- Le script est en conflit avec, ou est affecté par un extension de navigateur  (comme l'extension « [No script](https://addons.mozilla.org/fr/firefox/addon/noscript/) » de Firefox ou « [Scripts »](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) de Chrome).
+- Le script est en conflit avec, ou est affecté par un extension de navigateur  (comme l'extension « [No script](https://addons.mozilla.org/fr/firefox/addon/noscript/) » de Firefox ou « [Scripts »](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) de Chrome).
 - L'utilisateur utilise un navigateur ancien et l'une des fonctions dont vous avez besoin n'est pas prise en charge. Cela se produira fréquemment lorsque vous utiliserez des API de pointe.s.
 
 
@@ -362,7 +362,7 @@ Avant de commencer, il est important de se rappeler quelque chose de très impor
 
 En raison de ces aléas, il est vraiment important de considérer avec sérieux ce qui se passe si JavaScript ne fonctionne pas. Traiter en détail cette question est hors de la portée de cet article parce qu'elle est étroitement liée à la façon dont vous voulez rendre votre script générique et réutilisable, mais nous prendrons en considération les bases de ce sujet dans notre exemple.
 
-Ainsi, si notre code JavaScript ne s'exécute pas, nous reviendrons à l'affichage d'un élément  {{HTMLElement("select")}} standard. Pour y parvenir, nous avons besoin de deux choses.
+Ainsi, si notre code JavaScript ne s'exécute pas, nous reviendrons à l'affichage d'un élément  {{HTMLElement("select")}} standard. Pour y parvenir, nous avons besoin de deux choses.
 
 Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} régulier avant chaque utilisation de notre widget personnalisé. Ceci est également nécessaire pour pouvoir envoyer les données de notre widget personnalisé avec le reste de nos données du formulaire ; nous reviendrons sur ce point plus tard.
 
@@ -396,7 +396,7 @@ Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} réguli
 
 
 
-Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre de cacher l'élément qui ne sert pas (c'est-à-dire l'élément{{HTMLElement("select")}} « réel »  si notre script ne fonctionne pas, ou le widget personnalisé s'il fonctionne). Notez que par défaut, le code HTML cache le widget personnalisé.
+Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre de cacher l'élément qui ne sert pas (c'est-à-dire l'élément{{HTMLElement("select")}} « réel »  si notre script ne fonctionne pas, ou le widget personnalisé s'il fonctionne). Notez que par défaut, le code HTML cache le widget personnalisé.
 
 ```css
 .widget select,
@@ -414,7 +414,7 @@ Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre d
 
 
 
-Maintenant nous avons juste besoin d'un commutateur JavaScript pour déterminer si le script est en cours d'exécution ou non. Cette bascule  est très simple : si au moment du chargement de la page notre script est en cours d'exécution, il supprime la classe no-widget et ajoute la classe widget, échangeant ainsi la visibilité de l'élément {{HTMLElement("select")}} et du widget personnalisé.
+Maintenant nous avons juste besoin d'un commutateur JavaScript pour déterminer si le script est en cours d'exécution ou non. Cette bascule est très simple : si au moment du chargement de la page notre script est en cours d'exécution, il supprime la classe no-widget et ajoute la classe widget, échangeant ainsi la visibilité de l'élément {{HTMLElement("select")}} et du widget personnalisé.
 
 
 
@@ -472,7 +472,7 @@ Les fonctionnalités que nous prévoyons d'utiliser sont les suivantes (classée
 3.  [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (ce n'est pas du DOM mais du JavaScript moderne)
 4.  {{domxref("element.querySelector","querySelector")}} et {{domxref("element.querySelectorAll","querySelectorAll")}}
 
-Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). C'est important, car les objets  `Array` acceptent la fonction [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach"), mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un `Array` et que `forEach` est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de `forEach à` {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :
+Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). C'est important, car les objets  `Array` acceptent la fonction [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach"), mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un `Array` et que `forEach` est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de `forEach à` {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :
 
 ```js
 NodeList.prototype.forEach = function (callback) {
@@ -773,11 +773,11 @@ Mais attendez, avons‑nous vraiment terminé ?
 
 Nous venons de faire quelque chose qui fonctionne, même si nous sommes loin d'avoir une boîte de sélection avec toutes les fonctionnalités, elle fonctionne parfaitement. Mais ce que nous avons fait n'est rien de plus que de jouer avec les DOM. Elle n'a pas de sémantique réelle, et même si elle ressemble à une boîte de sélection, du point de vue du navigateur, ce n'en est pas une, de sorte que les technologies d'assistance ne pourront pas comprendre que c'est une boîte de sélection. Bref, cette jolie nouvelle boîte de sélection n'est pas accessible !
 
-Heureusement, il existe une solution et elle s'appelle [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA"). ARIA signifie « Accessible Rich Internet Application » et c'est une[ norme W3C ](http://www.w3.org/TR/wai-aria/)spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.
+Heureusement, il existe une solution et elle s'appelle [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA"). ARIA signifie « Accessible Rich Internet Application » et c'est une [norme W3C](http://www.w3.org/TR/wai-aria/) spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.
 
 ### L'attribut `role`
 
-L'attribut clé utilisé par [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") est l'attribut [`role`](/fr/docs/Accessibility/ARIA/ARIA_Techniques "/en-US/docs/Accessibility/ARIA/ARIA_Techniques"). L'attribut [`role `](/fr/docs/Accessibility/ARIA/ARIA_Techniques "/en-US/docs/Accessibility/ARIA/ARIA_Techniques") accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de [`listbox`](/fr/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role"). C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle `option`).
+L'attribut clé utilisé par [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") est l'attribut [`role`](/fr/docs/Accessibility/ARIA/ARIA_Techniques "/en-US/docs/Accessibility/ARIA/ARIA_Techniques"). L'attribut [`role`](/fr/docs/Accessibility/ARIA/ARIA_Techniques "/en-US/docs/Accessibility/ARIA/ARIA_Techniques") accepte une valeur qui définit à quoi sert un élément. Chaque rôle définit ses propres exigences et comportements. Dans notre exemple, nous utiliserons le rôle de [`listbox`](/fr/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role"). C'est un « rôle composite », ce qui signifie que les éléments ayant ce rôle s'attendent à avoir des enfants, chacun avec un rôle spécifique (dans ce cas, au moins un enfant avec le rôle `option`).
 
 Il faut aussi noter qu'ARIA définit les rôles appliqués par défaut aux balises HTML standard. Par exemple, l'élément {{HTMLElement("table")}} correspond au rôle `grid`, et l'élément {{HTMLElement("ul")}} correspond au rôle `list`. Comme nous utilisons un élément {{HTMLElement("ul")}}, nous voulons nous assurer que le rôle `listbox` de notre widget remplacera le rôle `list` de l'élément {{HTMLElement("ul")}}. À cette fin, nous utiliserons le rôle `presentation`. Ce rôle est conçu pour nous permettre d'indiquer qu'un élément n'a pas de signification particulière, et est utilisé uniquement pour présenter de l'information. Nous l'appliquerons à notre élément {{HTMLElement("ul")}}.
 
@@ -801,7 +801,7 @@ Pour prendre en charge le rôle `listbos`, nous n'avons qu'à mettre à jour not
 
 > **Note :** Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/CSS/Attribute_selectors "/en-US/docs/CSS/Attribute_selectors").
 
-### L'attribut  `aria-selected`
+### L'attribut  `aria-selected`
 
 Utiliser l'attribut `role` ne suffit pas. [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") fournit également de nombreux états et attributs de propriété. Plus vous les utiliserez, mieux votre widget sera compris par les techniques d'assistance. Dans notre cas, nous limiterons notre utilisation à un seul attribut : `aria-selected`.
 

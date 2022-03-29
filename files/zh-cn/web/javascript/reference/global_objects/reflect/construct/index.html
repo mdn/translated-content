@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">Reflect.construct(target, argumentsList[, newTarget])
+<pre class="syntaxbox">Reflect.construct(target, argumentsList[, newTarget])
 </pre>
 
 <h3 id="参数">参数</h3>
@@ -35,14 +35,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 
 <p><code>Reflect.construct</code>允许你使用可变的参数来调用构造函数 ，这和使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new">new操作符</a>搭配<a href="https://developer.mozilla.org/ zh-CN/docs/Web/JavaScript/Reference/Operators/new">对象展开符</a>调用一样。</p>
 
-<pre class="brush: js notranslate">var obj = new Foo(...args);
+<pre class="brush: js">var obj = new Foo(...args);
 var obj = Reflect.construct(Foo, args); </pre>
 
 <h3 id="Reflect.construct_vs_Object.create"><code>Reflect.construct()</code> vs <code>Object.create()</code></h3>
 
-<p><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">在新语法</span></font>Reflect</code>出现之前，是通过明确指定构造函数和原型对象（ 使用{{jsxref("Object.create()")}}）来创建一个对象的。</p>
+<p><code>在新语法Reflect</code>出现之前，是通过明确指定构造函数和原型对象（ 使用{{jsxref("Object.create()")}}）来创建一个对象的。</p>
 
-<pre class="brush: js notranslate">function OneClass() {
+<pre class="brush: js">function OneClass() {
     this.name = 'one';
 }
 
@@ -68,11 +68,11 @@ console.log(obj2 instanceof OtherClass); // true</pre>
 
 <p>虽然两种方式结果相同，但在创建对象过程中仍一点不同。 </p>
 
-<p><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">当使用</span></font><code>Object.create()</code>和{{jsxref("Function.prototype.apply()")}}时，如果不使用<code>new</code>操作符调用构造函数，构造函数内部的<code>new.target</code>值会指向<code>undefined</code>。</p>
+<p>当使用<code>Object.create()</code>和{{jsxref("Function.prototype.apply()")}}时，如果不使用<code>new</code>操作符调用构造函数，构造函数内部的<code>new.target</code>值会指向<code>undefined</code>。</p>
 
 <p>当调用<code>Reflect.construct()</code>来创建对象，<code>new.target</code>值会自动指定到<code>target</code>（或者newTarget，前提是newTarget指定了）。</p>
 
-<pre class="brush: js notranslate">function OneClass() {
+<pre class="brush: js">function OneClass() {
     console.log('OneClass');
     console.log(new.target);
 }
@@ -97,11 +97,11 @@ OneClass.apply(obj3, args);
 //     OneClass
 //     undefined</pre>
 
-<h2 id="举例"><font face="x-locale-heading-primary, zillaslab, Palatino, Palatino Linotype, x-locale-heading-secondary, serif"><span style="font-size: 37.33327865600586px;"><strong>举例</strong></span></font></h2>
+<h2 id="举例"><strong>举例</strong></h2>
 
 <h3 id="使用_Reflect.construct">使用 <code>Reflect.construct()</code></h3>
 
-<pre class="brush: js notranslate">var d = Reflect.construct(Date, [1776, 6, 4]);
+<pre class="brush: js">var d = Reflect.construct(Date, [1776, 6, 4]);
 d instanceof Date; // true
 d.getFullYear(); // 1776
 </pre>
@@ -128,57 +128,9 @@ d.getFullYear(); // 1776
  </tbody>
 </table>
 
-<h2 id="浏览器兼容">浏览器兼容</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>49</td>
-   <td>{{CompatGeckoDesktop(42)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile(42)}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

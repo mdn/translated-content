@@ -79,65 +79,7 @@ play.onclick = function() {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(41) }}<sup>[1]</sup><br>
-    {{ CompatChrome(42) }}<br>
-     </td>
-   <td>34<sup>[1]</sup><br>
-    {{ CompatGeckoDesktop(39)}}</td>
-   <td>{{ CompatNo }}</td>
-   <td>
-    <p>28<sup>[1]</sup><br>
-     29</p>
-   </td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] In Chrome 42, Firefox 34 and Opera 28 support for <code>arrayBuffer()</code> was hidden behind a preference.</p>
+{{Compat("api.Response.arrayBuffer")}}
 
 <h2 id="参考">参考</h2>
 

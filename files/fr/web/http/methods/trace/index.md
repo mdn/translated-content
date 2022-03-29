@@ -10,9 +10,9 @@ original_slug: Web/HTTP/Méthode/TRACE
 ---
 {{HTTPSidebar}}
 
-La **méthode** **HTTP `TRACE` **effectue un test de rebouclage des messages le long du chemin vers la ressource cible, fournissant ainsi un mécanisme de débogage utile.
+La **méthode HTTP `TRACE`** effectue un test de rebouclage des messages le long du chemin vers la ressource cible, fournissant ainsi un mécanisme de débogage utile.
 
-Le destinataire final de la demande doit renvoyer au client le message reçu, à l'exclusion de certains champs décrits ci-dessous, en tant que corps de message d'une réponse {{HTTPStatus("200")}}. (OK) avec un {{HTTPHeader("Content-Type")}} de `message/http`. Le destinataire final est soit le serveur d'origine, soit le premier serveur à recevoir une valeur {{HTTPHeader("Max-Forwards")}} de 0 dans la requête.
+Le destinataire final de la demande doit renvoyer au client le message reçu, à l'exclusion de certains champs décrits ci-dessous, en tant que corps de message d'une réponse {{HTTPStatus("200")}}. (OK) avec un {{HTTPHeader("Content-Type")}} de `message/http`. Le destinataire final est soit le serveur d'origine, soit le premier serveur à recevoir une valeur {{HTTPHeader("Max-Forwards")}} de 0 dans la requête.
 
 <table class="properties">
   <tbody>

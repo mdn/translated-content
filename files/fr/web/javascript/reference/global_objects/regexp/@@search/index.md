@@ -82,7 +82,7 @@ console.log(résultat); // 3
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-regexp.prototype-@@search', 'RegExp.prototype[@@search]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype-@@search', 'RegExp.prototype[@@search]')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-regexp.prototype-@@search', 'RegExp.prototype[@@search]')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -4,30 +4,25 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 ---
 <div>
-<p id="JSRef">{{JSRef}}</p>
+<p>{{JSRef}}</p>
 
-<p id="BigInt64Array类型的数组代表由64位有符号整数组成的数组。如果需要控制字节顺序的话，请使用_jsxrefDataView_代替。内容初始化为0n。一旦建立，就可以使用对象的方法或使用标准数组索引语法（即使用中括号表示法）引用数组中的元素。"><strong><code>BigInt64Array</code></strong> 类型的数组代表由64位有符号整数组成的数组。如果需要控制字节顺序的话，请使用 {{jsxref("DataView")}} 代替。内容初始化为 <code>0n</code> 。一旦建立，就可以使用对象的方法或使用标准数组索引语法（即使用中括号表示法）引用数组中的元素。</p>
+<p><strong><code>BigInt64Array</code></strong> 类型的数组代表由64位有符号整数组成的数组。如果需要控制字节顺序的话，请使用 {{jsxref("DataView")}} 代替。内容初始化为 <code>0n</code> 。一旦建立，就可以使用对象的方法或使用标准数组索引语法（即使用中括号表示法）引用数组中的元素。</p>
 </div>
 
 <h2 id="构造函数">构造函数</h2>
 
 <p><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt64Array/BigInt64Array"><code>BigInt64Array()</code></a></p>
 
-<p>     添加一个新的<code>BigInt64Array</code>对象。</p>
+<p>添加一个新的<code>BigInt64Array</code>对象。</p>
 
 <h2 id="静态属性">静态属性</h2>
 
 <dl>
  <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "BigInt64Array.BYTES_PER_ELEMENT")}}</dt>
-</dl>
-
-<p>   返回一个元素大小的数字值，<code>BigInt64Array</code>返回 <code>8</code></p>
-
-<dl>
+ <dd>返回一个元素大小的数字值，<code>BigInt64Array</code>返回 <code>8</code></dd>
  <dt>{{jsxref("TypedArray.name", "BigInt64Array.name")}}</dt>
+ <dd>返回构造函数名字的字符串值，如果是<code>BigInt64Array</code> 的话，就是"BigInt64Array".</dd>
 </dl>
-
-<p>   返回构造函数名字的字符串值，如果是<code>BigInt64Array</code> 的话，就是"BigInt64Array".</p>
 
 <h2 id="实例属性">实例属性</h2>
 
@@ -39,13 +34,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
  <dt>{{jsxref("TypedArray.prototype.byteOffset", "BigInt64Array.prototype.byteOffset")}}</dt>
  <dd>返回 <code>BigInt64Array</code> 从{jsxref（“ArrayBuffer”）}}开始的偏移量（以字节为单位）。这在构造时已被固定的，因此是只读。</dd>
  <dt>{{jsxref("TypedArray.prototype.length", "BigInt64Array.prototype.length")}}</dt>
- <dd><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span>
- <p>返回 <code>BigInt64Array</code> 中被<span class="hidden"> </span>保留的元<span class="hidden"> </span>素个数。这<span class="hidden"> </span><span class="hidden"> </span>在构造时是固定的，因此是只读<span class="hidden"> </span>。<span class="hidden"> </span><span class="hidden"> </span><strong><span class="hidden"> </span></strong></p>
-
- <p><span class="hidden"> </span><span class="hidden"> </span></p>
- <span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span>
-
- <h2 id="sect1"><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span></h2>
+ <dd>
+ <p>返回 <code>BigInt64Array</code> 中被保留的元素个数。这在构造时是固定的，因此是只读。</p>
  </dd>
 </dl>
 
@@ -59,13 +49,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
  <dt>{{jsxref("TypedArray.every", "BigInt64Array.prototype.every()")}}</dt>
  <dd>测试数组中的所有元素是否通过函数提供的测试。另请参见{jsxref（“Array.prototype.every()")}}.</dd>
  <dt>{{jsxref("TypedArray.fill", "BigInt64Array.prototype.fill()")}}</dt>
- <dd>
- <div class="trans-left">
- <div class="trans-input-wrap">
- <div class="input-wrap" dir="ltr" style="height: auto;">用静态值填充从起始索引到结束索引的数组的所有元素。另请参见{jsxref（“Array.prototype.fill()")}}</div>
- </div>
- </div>
- </dd>
+ <dd>用静态值填充从起始索引到结束索引的数组的所有元素。另请参见{jsxref（“Array.prototype.fill()")}}</dd>
  <dt>{{jsxref("TypedArray.filter", "BigInt64Array.prototype.filter()")}}</dt>
  <dd>使用提供的筛选函数为其返回true的数组的所有元素创建一个新数组。另请参见{jsxref（“Array.prototype.filter()")}}</dd>
  <dt>{{jsxref("TypedArray.find", "BigInt64Array.prototype.find()")}}</dt>
@@ -116,7 +100,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 
 <h3 id="不同的方法去创建一个_BigInt64Array">不同的方法去创建一个 <code>BigInt64Array</code></h3>
 
-<pre class="brush: js notranslate">// From a length
+<pre class="brush: js">// From a length
 var bigint64 = new BigInt64Array(2);
 bigint64[0] = 42n;
 console.log(bigint64[0]); // 42n

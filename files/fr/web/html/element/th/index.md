@@ -22,7 +22,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 - {{htmlattrdef("abbr")}}
   - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
 - {{htmlattrdef("colspan")}}
-  - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. La valeur par défaut est 1. Si cet attribut vaut 0, la cellule s'étend jusqu'à la fin du  {{HTMLElement("colgroup")}} auquel appartient la cellule, même si celui-ci est défini implicitement. Des valeurs supérieures à 1000 peuvent être considérées comme incorrectes et seront écrétées à 1000.
+  - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. La valeur par défaut est 1. Si cet attribut vaut 0, la cellule s'étend jusqu'à la fin du  {{HTMLElement("colgroup")}} auquel appartient la cellule, même si celui-ci est défini implicitement. Des valeurs supérieures à 1000 peuvent être considérées comme incorrectes et seront écrétées à 1000.
 - {{htmlattrdef("headers")}}
   - : Cet attribut est une liste de chaînes de caractères séparées par des espace. Chacune correspond à l'attribut `id` de l'élément {{HTMLElement("th")}} qui s'applique à cet élément.
 - {{htmlattrdef("rowspan")}}
@@ -43,11 +43,11 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont :
 
-    - `left `: le contenu de la cellule est alligné à gauche de la cellule (la valeur par défaut de cet attribut)
+    - `left`&nbsp;: le contenu de la cellule est alligné à gauche de la cellule (la valeur par défaut de cet attribut)
     - `center` : le contenu de la cellule est centré horizontalement
     - `right` : le contenu de la cellule est aligné à droite de la cellule
     - `justify` : insert des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié
-    - `char` : aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  {{htmlattrxref("char", "th")}} et {{htmlattrxref("charoff", "th")}} {{unimplemented_inline(2212)}}.
+    - `char` : aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  {{htmlattrxref("char", "th")}} et {{htmlattrxref("charoff", "th")}} {{unimplemented_inline(2212)}}.
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
@@ -176,8 +176,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 | Spécification                                                                                    | État                             | Commentaires |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','tables.html#the-th-element','th element')}}     | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-th-element','th element')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG','tables.html#the-th-element','th element')}}     | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C','tabular-data.html#the-th-element','th element')}} | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

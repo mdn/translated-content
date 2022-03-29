@@ -8,7 +8,7 @@ translation_of: Web/JavaScript/Guide/Using_promises
 ---
 <div>{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}</div>
 
-<p class="summary">{{jsxref("Promise")}}는 비동기 작업의 최종 완료 또는 실패를 나타내는 객체입니다. 대부분 여러분은 이미 만들어진 promise를 사용했었기 때문에 이 가이드에서는 어떻게 promise를 만드는지 설명하기에 앞서 promise의 사용법에 대해 설명합니다.</p>
+<p >{{jsxref("Promise")}}는 비동기 작업의 최종 완료 또는 실패를 나타내는 객체입니다. 대부분 여러분은 이미 만들어진 promise를 사용했었기 때문에 이 가이드에서는 어떻게 promise를 만드는지 설명하기에 앞서 promise의 사용법에 대해 설명합니다.</p>
 
 <p>기본적으로 promise는 함수에 콜백을 전달하는 대신에, 콜백을 첨부하는 방식의 객체입니다.<br>
   </p>
@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Guide/Using_promises
 
 <p>만약 <code>createAudioFileAsync()</code> 함수가 Promise를 반환해주도록 수정해본다면, 다음과 같이 간단하게 사용되어질 수 있습니다.</p>
 
-<pre><code><span style='background-color: rgba(220, 220, 220, 0.5); font-family: consolas,"Liberation Mono",courier,monospace; font-style: inherit; font-weight: inherit;'>createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</span></code></pre>
+<pre><code>createAudioFileAsync(audioSettings).then(successCallback, failureCallback);</code></pre>
 
 <p>…조금 더 간단하게 써보자면:</p>
 

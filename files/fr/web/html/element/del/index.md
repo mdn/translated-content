@@ -14,7 +14,7 @@ browser-compat: html.elements.del
 ---
 {{HTMLRef}}
 
-L'élément HTML **`<del>` **représente une portion de texte ayant été supprimée d'un document. Cet élément est souvent (mais pas nécessairement) affiché rayé. L'élément [`<ins>`](/fr/docs/Web/HTML/Element/ins) est quant à lui utilisé pour représenter des portions de texte ajoutées.
+L'élément HTML **`<del>`** représente une portion de texte ayant été supprimée d'un document. Cet élément est souvent (mais pas nécessairement) affiché rayé. L'élément [`<ins>`](/fr/docs/Web/HTML/Element/ins) est quant à lui utilisé pour représenter des portions de texte ajoutées.
 
 {{EmbedInteractiveExample("pages/tabbed/del.html", "tabbed-standard")}}
 

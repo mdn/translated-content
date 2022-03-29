@@ -11,44 +11,46 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p><strong><code>apply()</code></strong> 方法调用一个具有给定<code>this</code>值的函数，以及以一个数组（或<a href="/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects">类数组对象</a>）的形式提供的参数。</p>
 
-<div class="note"><strong>注意：</strong><span style="line-height: 1.5;">call()方法的作用和 apply() 方法类似，区别就是<code>call()</code>方法接受的是<strong>参数列表</strong>，而<code>apply()</code>方法接受的是<strong>一个参数数组</strong>。</span></div>
+<div class="note">
+<p><strong>备注：</strong>call()方法的作用和 apply() 方法类似，区别就是<code>call()</code>方法接受的是<strong>参数列表</strong>，而<code>apply()</code>方法接受的是<strong>一个参数数组</strong>。</p>
+</div>
 
 <div>{{EmbedInteractiveExample("pages/js/function-apply.html")}}</div>
 
 
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><em>func</em>.apply(<em>thisArg</em><em>, [</em><em>argsArray</em>])</code></pre>
+<pre class="syntaxbox"><code><em>func</em>.apply(<em>thisArg</em><em>, [</em><em>argsArray</em>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>thisArg</code></dt>
  <dd>必选的。在 <em><code>func</code></em> 函数运行时使用的 <code>this</code> 值。请注意，<code>this</code>可能不是该方法看到的实际值：如果这个函数处于{{jsxref("Strict_mode", "非严格模式", "", 1)}}下，则指定为 <code>null</code> 或 <code>undefined</code> 时会自动替换为指向全局对象，原始值会被包装。</dd>
  <dt><code>argsArray</code></dt>
- <dd>可选的。一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 <code>func</code> 函数。如果该参数的值为 {{jsxref("null")}} 或  {{jsxref("undefined")}}，则表示不需要传入任何参数。从ECMAScript 5 开始可以使用类数组对象。 {{anch("Browser_compatibility", "浏览器兼容性")}} 请参阅本文底部内容。</dd>
+ <dd>可选的。一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 <code>func</code> 函数。如果该参数的值为 {{jsxref("null")}} 或  {{jsxref("undefined")}}，则表示不需要传入任何参数。从ECMAScript 5 开始可以使用类数组对象。<a href="#浏览器兼容性">浏览器兼容性</a> 请参阅本文底部内容。</dd>
 </dl>
 
 <h3 id="返回值">返回值</h3>
 
 <p>调用有指定<code><strong>this</strong></code>值和参数的函数的结果。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><span style="line-height: 1.5;">在调用一个存在的函数时，你可以为其指定一个 <code>this</code> 对象。 <code>this</code></span> <span style="line-height: 1.5;">指当前对象，也就是正在调用这个函数的对象。 使用 <code>apply</code>， 你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。</span></p>
+<p>在调用一个存在的函数时，你可以为其指定一个 <code>this</code> 对象。 <code>this</code> 指当前对象，也就是正在调用这个函数的对象。 使用 <code>apply</code>， 你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。</p>
 
-<p><code>apply</code> 与 {{jsxref("Function.call", "call()")}} 非常相似，不同之处在于提供参数的方式。<code style="font-size: 14px;">apply</code> 使用参数数组而不是一组参数列表。<code>apply</code> 可以使用数组字面量（array literal）<span style="line-height: 1.5;">，如 </span><code>fun.apply(this, ['eat', 'bananas'])</code><span style="line-height: 1.5;">，或数组对象，</span><span style="line-height: 1.5;"> 如  </span><code>fun.apply(this, new Array('eat', 'bananas'))</code><span style="line-height: 1.5;">。</span></p>
+<p><code>apply</code> 与 {{jsxref("Function.call", "call()")}} 非常相似，不同之处在于提供参数的方式。<code>apply</code> 使用参数数组而不是一组参数列表。<code>apply</code> 可以使用数组字面量（array literal），如 <code>fun.apply(this, ['eat', 'bananas'])</code>，或数组对象， 如  <code>fun.apply(this, new Array('eat', 'bananas'))</code>。</p>
 
 <p>你也可以使用 {{jsxref("Functions/arguments", "arguments")}}对象作为 <code>argsArray</code> 参数。 <code>arguments</code> 是一个函数的局部变量。 它可以被用作被调用对象的所有未指定的参数。 这样，你在使用apply函数的时候就不需要知道被调用对象的所有参数。 你可以使用arguments来把所有的参数传递给被调用对象。 被调用对象接下来就负责处理这些参数。</p>
 
 <p>从 ECMAScript 第5版开始，可以使用任何种类的类数组对象，就是说只要有一个 <code>length</code> 属性和<code>(0..length-1)</code>范围的整数属性。例如现在可以使用 {{domxref("NodeList")}} 或一个自己定义的类似 <code>{'length': 2, '0': 'eat', '1': 'bananas'}</code> 形式的对象。</p>
 
 <div class="note">
-<p>需要注意：Chrome 14 以及 Internet Explorer 9 仍然不接受类数组对象。如果传入类数组对象，它们会抛出异常。</p>
+<p><strong>备注：</strong> Chrome 14 以及 Internet Explorer 9 仍然不接受类数组对象。如果传入类数组对象，它们会抛出异常。</p>
 </div>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="用_apply_将数组各项添加到另一个数组">用 <code>apply</code> 将数组各项添加到另一个数组</h3>
 
@@ -58,19 +60,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 <p><code>apply</code>正派上用场！</p>
 
-<pre class="brush: js notranslate">var array = ['a', 'b'];
+<pre class="brush: js">var array = ['a', 'b'];
 var elements = [0, 1, 2];
 array.push.apply(array, elements);
 console.info(array); // ["a", "b", 0, 1, 2]
 </pre>
 
-<h3 id="apply_and_built-in_functions" name="apply_and_built-in_functions">使用<code>apply</code>和内置函数</h3>
+<h3 id="apply_and_built-in_functions">使用<code>apply</code>和内置函数</h3>
 
 <p>对于一些需要写循环以遍历数组各项的需求，我们可以用<code>apply</code>完成以避免循环。</p>
 
 <p>下面是示例，我们将用<code>Math.max</code>/<code>Math.min</code>求得数组中的最大/小值。</p>
 
-<pre class="brush: js notranslate">/* 找出数组中最大/小的数字 */
+<pre class="brush: js">/* 找出数组中最大/小的数字 */
 var numbers = [5, 6, 2, 3, 7];
 
 /* 使用Math.min/Math.max以及apply 函数时的代码 */
@@ -91,7 +93,7 @@ for (var i = 0; i &lt; numbers.length; i++) {
 
 <p>如果你的参数数组可能非常大，那么推荐使用下面这种混合策略：将数组切块后循环传入目标方法：</p>
 
-<pre class="brush: js notranslate">function minOfArray(arr) {
+<pre class="brush: js">function minOfArray(arr) {
   var min = Infinity;
   var QUANTUM = 32768;
 
@@ -106,11 +108,11 @@ for (var i = 0; i &lt; numbers.length; i++) {
 var min = minOfArray([5, 6, 2, 3, 7]);
 </pre>
 
-<h3 id="Using_apply_to_chain_constructors" name="Using_apply_to_chain_constructors">使用apply来链接构造器</h3>
+<h3 id="Using_apply_to_chain_constructors">使用apply来链接构造器</h3>
 
-<p>你可以使用apply来链接一个对象<a href="/zh-CN/docs/JavaScript/Reference/Operators/new" title="JavaScript/Reference/Operators/new">构造器</a>，类似于Java。在接下来的例子中我们会创建一个全局<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> <span style="color: #000000; display: inline !important; float: none; font-family: 'microsoft yahei'; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28.8px; text-align: left; text-indent: 0px; text-transform: none; white-space: normal;">对象的</span><span style="color: #000000; font-family: 'microsoft yahei'; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 28.8px; text-align: left; text-indent: 0px; text-transform: none; white-space: normal;">construct</span><span style="color: #000000; font-family: 'microsoft yahei'; font-size: 18px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 1.6; text-align: left; text-indent: 0px; text-transform: none; white-space: normal;">方法</span> ，来使你能够在构造器中使用一个类数组对象而非参数列表。</p>
+<p>你可以使用apply来链接一个对象<a href="/zh-CN/docs/JavaScript/Reference/Operators/new" title="JavaScript/Reference/Operators/new">构造器</a>，类似于Java。在接下来的例子中我们会创建一个全局<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function" title="JavaScript/Reference/Global_Objects/Function"><code>Function</code></a> 对象的construct方法 ，来使你能够在构造器中使用一个类数组对象而非参数列表。</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function (aArgs) {
+<pre class="brush: js">Function.prototype.construct = function (aArgs) {
   var oNew = Object.create(this.prototype);
   this.apply(oNew, aArgs);
   return oNew;
@@ -118,11 +120,11 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> 上面使用的<code>Object.create()</code>方法相对来说比较新。另一种可选的方法，请考虑如下替代方法：</p>
+<p><strong>备注：</strong> 上面使用的<code>Object.create()</code>方法相对来说比较新。另一种可选的方法，请考虑如下替代方法：</p>
 
 <p>Using {{jsxref("Object/__proto__", "Object.__proto__")}}:</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function (aArgs) {
+<pre class="brush: js">Function.prototype.construct = function (aArgs) {
   var oNew = {};
   oNew.__proto__ = this.prototype;
   this.apply(oNew, aArgs);
@@ -131,7 +133,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>使用闭包：</p>
 
-<pre class="brush: js notranslate" style="font-style: normal;">Function.prototype.construct = function(aArgs) {
+<pre class="brush: js">Function.prototype.construct = function(aArgs) {
   var fConstructor = this, fNewConstr = function() {
     fConstructor.apply(this, aArgs);
   };
@@ -139,9 +141,9 @@ var min = minOfArray([5, 6, 2, 3, 7]);
   return new fNewConstr();
 };</pre>
 
-<p class="brush: js" style="font-style: normal;">使用 Function 构造器：</p>
+<p class="brush: js">使用 Function 构造器：</p>
 
-<pre class="brush: js notranslate">Function.prototype.construct = function (aArgs) {
+<pre class="brush: js">Function.prototype.construct = function (aArgs) {
   var fNewConstr = new Function("");
   fNewConstr.prototype = this.prototype;
   var oNew = new fNewConstr();
@@ -152,7 +154,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 <p>使用示例：</p>
 
-<pre class="brush: js notranslate">function MyConstructor (arguments) {
+<pre class="brush: js">function MyConstructor (arguments) {
     for (var nProp = 0; nProp &lt; arguments.length; nProp++) {
         this["property" + nProp] = arguments[nProp];
     }
@@ -166,9 +168,11 @@ console.log(myInstance instanceof MyConstructor); // logs "true"
 console.log(myInstance.constructor);              // logs "MyConstructor"
 </pre>
 
-<div class="note"><strong>注意：</strong> 这个非native的<code>Function.construct</code>方法无法和一些native构造器（例如<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date" title="JavaScript/Reference/Global_Objects/Date"><code>Date</code></a>）一起使用。 在这种情况下你必须使用<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors" title="JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors"><code>Function.bind</code></a>方法（例如，想象有如下一个数组要用在Date构造器中： <code>[2012, 11, 4]</code>；这时你需要这样写： <code>new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()</code> – -无论如何这不是最好的实现方式并且也许不该用在任何生产环境中).</div>
+<div class="note">
+<p><strong>备注：</strong> 这个非native的<code>Function.construct</code>方法无法和一些native构造器（例如<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Date" title="JavaScript/Reference/Global_Objects/Date"><code>Date</code></a>）一起使用。 在这种情况下你必须使用<a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors" title="JavaScript/Reference/Global_Objects/Function/bind#Bound_functions_used_as_constructors"><code>Function.bind</code></a>方法（例如，想象有如下一个数组要用在Date构造器中： <code>[2012, 11, 4]</code>；这时你需要这样写： <code>new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()</code> – -无论如何这不是最好的实现方式并且也许不该用在任何生产环境中).</p>
+</div>
 
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -200,11 +204,11 @@ console.log(myInstance.constructor);              // logs "MyConstructor"
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.builtins.Function.apply")}}</p>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Functions_and_function_scope/arguments", "arguments ")}} object</li>

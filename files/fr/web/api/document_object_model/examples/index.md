@@ -9,9 +9,9 @@ original_slug: Web/API/Document_Object_Model/Exemples
 ---
 Cette page présente quelques exemples plus détaillés de développement Web et XML utilisant le DOM. Partout où c'est possible, les exemples utilisent des API courantes, des astuces et des modèles en JavaScript pour manipuler l'objet de document.
 
-## Exemple 1 : _height_ (hauteur) et width _(largeur)_
+## Exemple 1&nbsp;: _height_ (hauteur) et width _(largeur)_
 
-L'exemple qui suit montre l'utilisation des propriétés `height` et `width` pour dimensionner des images de diverses tailles :
+L'exemple qui suit montre l'utilisation des propriétés `height` et `width` pour dimensionner des images de diverses tailles&nbsp;:
 
 ```html
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ function init() {
 </html>
 ```
 
-## Exemple 2 : attributs d'image
+## Exemple 2&nbsp;: attributs d'image
 
 ```html
 <!DOCTYPE html>
@@ -99,7 +99,7 @@ function setBorderWidth(width) {
 </html>
 ```
 
-## Exemple 3 : manipulation de styles
+## Exemple 3&nbsp;: manipulation de styles
 
 Dans cet exemple simple, on accède à certaines propriétés basiques de style d'un élément de paragraphe HTML à l'aide de son objet style. L'objet style de l'élément et ses propriétés de style CSS peuvent être récupérés et définis depuis le DOM. Dans ce cas-ci, les styles individuels sont manipulés directement. Dans l'exemple suivant (l'exemple 4), on utilisera les feuilles de style et leurs règles pour changer les styles de documents entiers.
 
@@ -130,7 +130,7 @@ function changeText() {
 </html>
 ```
 
-## Exemple 4 : utilisation de feuilles de style
+## Exemple 4&nbsp;: utilisation de feuilles de style
 
 La propriété `styleSheets` de l'objet `document` renvoie une liste des feuilles de style qui ont été chargées pour ce document. On peut accéder à ces feuilles de style et leurs règles individuelles à l'aide des objets `stylesheet`, `style` et `CSSRule`, comme montré dans cet exemple qui affiche tous les sélecteurs de règles de style dans la console.
 
@@ -144,19 +144,19 @@ for(var i = 0; i < ss.length; i++) {
 }
 ```
 
-Pour un document avec une seule feuille de style dans laquelle les trois règles suivantes sont définies :
+Pour un document avec une seule feuille de style dans laquelle les trois règles suivantes sont définies&nbsp;:
 
     BODY { background-color: darkblue; }
     P { font-face: Arial; font-size: 10pt; margin-left: .125in; }
     #lumpy { display: none; }
 
-Ce script affiche les lignes suivantes :
+Ce script affiche les lignes suivantes&nbsp;:
 
     BODY
     P
     #LUMPY
 
-## Exemple 5 : propagation d'évènements
+## Exemple 5&nbsp;: propagation d'évènements
 
 Cet exemple montre comment les évènements se déclenchent et sont gérés dans le DOM d'une manière très simple. Lorsque l'élément BODY de ce document HTML est chargé, un écouteur d'évènement est enregistré sur la ligne supérieure de l'élément TABLE. Celui-ci gère l'évènement en exécutant la fonction `stopEvent`, qui modifie la valeur de la cellule inférieure du tableau.
 
@@ -205,7 +205,7 @@ function load() {
 </html>
 ```
 
-## Exemple 6 : getComputedStyle
+## Exemple 6&nbsp;: getComputedStyle
 
 Cet exemple montre comment la méthode {{domxref("window.getComputedStyle")}} peut être utilisée pour obtenir les styles d'un élément qui ne sont pas définis dans l'attribut `style` ou à l'aide de JavaScript (c'est-à-dire, `elem.style.backgroundColor="rgb(173, 216, 230)"`). Ces derniers types de styles peuvent être récupérés avec la propriété plus directe {{domxref("element.style", "elt.style")}} , dont les propriétés sont listées dans la [liste des propriétés DOM CSS](/fr/docs/Web/CSS/Reference).
 
@@ -266,9 +266,9 @@ function cStyles() {
 </html>
 ```
 
-## Exemple 7 : affichage des propriétés d'un objet `event`
+## Exemple 7&nbsp;: affichage des propriétés d'un objet `event`
 
-Cet exemple utilise des méthodes DOM pour afficher les propriétés d'un objet {{domxref("window.onload")}} {{domxref("event")}}   et leurs valeurs dans un tableau. Il montre également une technique utile utilisant une boucle `for..in` pour parcourir les propriétés d'un objet et obtenir leurs valeurs.
+Cet exemple utilise des méthodes DOM pour afficher les propriétés d'un objet {{domxref("window.onload")}} {{domxref("event")}}   et leurs valeurs dans un tableau. Il montre également une technique utile utilisant une boucle `for..in` pour parcourir les propriétés d'un objet et obtenir leurs valeurs.
 
 Les propriétés des objets `event` diffèrent sensiblement entre les différents navigateurs, la [spécification norme DOM](http://www.w3.org/TR/DOM-Level-2-Events/events.html) liste les propriétés standard, mais beaucoup de navigateurs ont ajouté un bon nombre de propriétés supplémentaires.
 
@@ -338,11 +338,11 @@ window.onload = function(event){
 </html>
 ```
 
-## Exemple 8 : utilisation de l'interface DOM Table
+## Exemple 8&nbsp;: utilisation de l'interface DOM Table
 
 L'interface DOM HTMLTableElement fournit certaines méthodes utilitaires permettant de créer et de manipuler des tableaux. Deux méthodes utilisées fréquemment sont {{domxref("HTMLTableElement.insertRow")}} et {{domxref("tableRow.insertCell")}}
 
-Pour ajouter une ligne et quelques cellules à un tableau existant :
+Pour ajouter une ligne et quelques cellules à un tableau existant&nbsp;:
 
 ```html
 <table id="table0">

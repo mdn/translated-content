@@ -84,7 +84,7 @@ translation_of: Web/HTML/Element/img
   <dt><code>anonymous</code></dt>
   <dd>执行一个跨域请求（比如，有 {{httpheader("Origin")}} {{glossary("HTTP")}} header）。但是没有发送证书（比如，没有 cookie，没有 <a href="https://tools.ietf.org/html/rfc5280">X.509 证书</a>，没有 <a href="/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme">HTTP 基本授权认证</a>）。如果服务器没有把证书给到源站（没有设置 {{httpheader("Access-Control-Allow-Origin")}} HTTP 头），图像会被污染，而且它的使用会被限制。</dd>
   <dt><code>use-credentials</code></dt>
-  <dd>一个有证书的跨域请求（比如，有 <code>Origin</code> HTTP header）被发送 （比如，cookie, 一份证书，或者 HTTP 基本验证信息）。如果服务器没有给源站发送证书（通过 <code>Access-Control-Allow-Credentials</code> HTTP header），图像将会被污染，且它的使用会受限制。</dd>
+  <dd>一个有证书的跨域请求（比如，有 <code>Origin</code> HTTP header）被发送（比如，cookie，一份证书，或者 HTTP 基本验证信息）。如果服务器没有给源站发送证书（通过 <code>Access-Control-Allow-Credentials</code> HTTP header），图像将会被污染，且它的使用会受限制。</dd>
  </dl>
  当用户并未显式使用本属性时，默认不使用 CORS 发起请求（例如，不会向服务器发送<code>原有的</code>HTTP 头部信息），可防止其在 {{HTMLElement('canvas')}} 中的使用。如果无效，默认当做 <code>anonymous</code> 关键字生效。更多信息，请查看 <a href="/zh-CN/docs/Web/HTML/Attributes/crossorigin">CORS 属性设置</a> 。</dd>
  <dt>{{htmlattrdef("decoding")}}</dt>
@@ -167,7 +167,7 @@ translation_of: Web/HTML/Element/img
   <li>指向图像的 {{glossary("URL")}}。</li>
   <li>可选地，再加一个空格之后，附加以下的其一：
    <ul>
-    <li>一个宽度描述符，这是一个正整数，后面紧跟 '<code>w</code>' 符号。该整数宽度除以sizes属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和x描述符等价的值。</li>
+    <li>一个宽度描述符，这是一个正整数，后面紧跟 '<code>w</code>' 符号。该整数宽度除以 sizes 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和 x 描述符等价的值。</li>
     <li>一个像素密度描述符，这是一个正浮点数，后面紧跟 '<code>x</code>' 符号。</li>
    </ul>
   </li>
@@ -272,7 +272,7 @@ translation_of: Web/HTML/Element/img
 
 <h3 id="使用_srcset_和_sizes_属性">使用 <code>srcset</code> 和 <code>sizes</code> 属性</h3>
 
-<p>在支持 <code>srcset</code> 的用户代理中，当使用 <code>w</code> 描述符时，src 属性会被忽略。当匹配了媒体条件 <code>(min-width: 600px)</code> 时，图像将宽 200px，否则宽 50vw（视图宽度的50%）。</p>
+<p>在支持 <code>srcset</code> 的用户代理中，当使用 <code>w</code> 描述符时，src 属性会被忽略。当匹配了媒体条件 <code>(min-width: 600px)</code> 时，图像将宽 200px，否则宽 50vw（视图宽度的 50%）。</p>
 
 <pre class="brush: html notranslate"> &lt;img src="clock-demo-200px.png"
       alt="Clock"
@@ -294,7 +294,7 @@ translation_of: Web/HTML/Element/img
 
 <h3 id="使用有实际意义的备用描述">使用有实际意义的备用描述</h3>
 
-<p><code>alt</code> 属性的值应该清晰、简洁地描述图像的内容。它不应该描述“图像的存在”，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述， <code>alt</code> 属性只得不写或留白，那么可以考虑使用其他方法来呈现图像试图传递的内容。</p>
+<p><code>alt</code> 属性的值应该清晰、简洁地描述图像的内容。它不应该描述 “图像的存在”，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述， <code>alt</code> 属性只得不写或留白，那么可以考虑使用其他方法来呈现图像试图传递的内容。</p>
 
 <h4 id="不要">不要</h4>
 
@@ -322,7 +322,7 @@ translation_of: Web/HTML/Element/img
 
 <p><code>title</code> 属性也不该被用作一幅图片在 <code>alt</code> 之外的补充说明信息。如果一幅图片需要小标题，使用 <code><a href="/zh-CN/docs/Web/HTML/Element/figure">figure</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/figcaption">figcaption</a></code> 元素。</p>
 
-<p><code>title</code> 元素的值一般作为提示条(tooltip)呈现给用户，在光标于图片上停下后显示出来。尽管这<em>确实</em>能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 <code>title</code> 。</p>
+<p><code>title</code> 元素的值一般作为提示条 (tooltip) 呈现给用户，在光标于图片上停下后显示出来。尽管这<em>确实</em>能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 <code>title</code> 。</p>
 
 <ul>
  <li><a class="external" href="https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/">Using the HTML title attribute – updated | The Paciello Group</a></li>

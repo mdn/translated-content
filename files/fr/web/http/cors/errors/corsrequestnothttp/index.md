@@ -19,7 +19,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 ## Raison
 
-    Raison : la requête CORS n’utilise pas http.
+    Raison&nbsp;: la requête CORS n’utilise pas http.
 
 ## Qu'est ce qui n'a pas fonctionné ?
 

@@ -40,13 +40,13 @@ var removing = browser.cookies.remove(
     - `name`
       - : Une `chaîne` représenant le nom du cookie à supprimer.
     - `storeId`{{optional_inline}}
-      - : Une` chaîne` représentant l'ID du cookie store pour trouver le cookie. Si elle n'est pas spécifiée, le cookie est recherché par défaut dans le cookie store du contexte d'exécution actuel.
+      - : Une `chaîne` représentant l'ID du cookie store pour trouver le cookie. Si elle n'est pas spécifiée, le cookie est recherché par défaut dans le cookie store du contexte d'exécution actuel.
     - `url`
       - : Une `chaîne` représentant l'URL associée au cookie. Si l'extension n'a pas de [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour cette URL, l'appel de l'API échouera.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet  {{WebExtAPIRef('cookies.Cookie')}} contenant des détails sur le cookie qui a été supprimé. Si un cookie correspondant au paramètre `details` n'a pas pu être trouvé, la promesse est remplie avec `null`.  Si l'appel échoue pour une raison quelconque, la promesse sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet  {{WebExtAPIRef('cookies.Cookie')}} contenant des détails sur le cookie qui a été supprimé. Si un cookie correspondant au paramètre `details` n'a pas pu être trouvé, la promesse est remplie avec `null`.  Si l'appel échoue pour une raison quelconque, la promesse sera rejetée avec un message d'erreur.
 
 ## Compatibilité du navigateur
 

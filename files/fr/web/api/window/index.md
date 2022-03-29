@@ -35,7 +35,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Renvoie les objets du contrôleur XUL pour la fenêtre chrome en cours.
 - {{domxref("Window.customElements")}}{{ReadOnlyInline}}
-  - : renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux [éléments personnalisés](/fr-FR/docs/Web/Web_Components/Using_custom_elements) et obtenir des informations à propos d'éléments personnalisés précédemment enregistrés.
+  - : renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux [éléments personnalisés](/fr-FR/docs/Web/Web_Components/Using_custom_elements) et obtenir des informations à propos d'éléments personnalisés précédemment enregistrés.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Retourne l'objet crypto du navigateur.
 - {{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}
@@ -48,35 +48,35 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Synonyme de {{domxref("window.personalbar")}}
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Renvoie une référence au document que la fenêtre contient.
-- {{domxref("Window.DOMMatrix")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Renvoie une référence à un objet {{domxref("DOMMatrix")}} représentant des matrices 4x4, adapté aux opérations 2D et 3D.
-- {{domxref("Window.DOMMatrixReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Renvoie une référence à un objet {{domxref("DOMMatrixReadOnly")}} représentant des matrices 4x4, adapté aux opérations 2D et 3D.
-- {{domxref("Window.DOMPoint")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Renvoie une référence à un objet {{domxref("DOMPoint")}} représentant un point 2D ou 3D dans un système de coordonnées.
-- {{domxref("Window.DOMPointReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.DOMMatrix")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Renvoie une référence à un objet {{domxref("DOMMatrix")}} représentant des matrices 4x4, adapté aux opérations 2D et 3D.
+- {{domxref("Window.DOMMatrixReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Renvoie une référence à un objet {{domxref("DOMMatrixReadOnly")}} représentant des matrices 4x4, adapté aux opérations 2D et 3D.
+- {{domxref("Window.DOMPoint")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Renvoie une référence à un objet {{domxref("DOMPoint")}} représentant un point 2D ou 3D dans un système de coordonnées.
+- {{domxref("Window.DOMPointReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
   - : Renvoie une référence à un objet {{domxref("DOMPointReadOnly")}} représentant un point 2D ou 3D dans un système de coordonnées.
-- {{domxref("Window.DOMQuad")}} {{readOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.DOMQuad")}} {{readOnlyInline}} {{experimental_inline}}
   - : Renvoie une référence à un objet {{domxref("DOMQuad")}}, qui fournit un objet quadrilatère, c'est-à-dire, ayant quatre coins et quatre côtés.
-- {{domxref("Window.DOMRect")}} {{readOnlyInline}} {{experimental_inline}}
-  - : Returns a reference to a {{domxref("DOMRect")}} object, which represents a rectangle.
-- {{domxref("Window.DOMRectReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.DOMRect")}} {{readOnlyInline}} {{experimental_inline}}
+  - : Returns a reference to a {{domxref("DOMRect")}} object, which represents a rectangle.
+- {{domxref("Window.DOMRectReadOnly")}} {{readOnlyInline}} {{experimental_inline}}
   - : Renvoie une référence à un objet {{domxref("DOMRectReadOnly")}} représentant un rectangle.
 - {{domxref("Window.frameElement")}} {{readOnlyInline}}
   - : Renvoie l'élément dans lequel la fenêtre est intégrée, ou null si la fenêtre n'est pas intégrée.
 - {{domxref("Window.frames")}} {{readOnlyInline}}
   - : Renvoie un tableau des sous-cadres dans la fenêtre en cours.
-- {{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("Window.fullScreen")}}
   - : Cette propriété indique si la fenêtre est affichée en plein écran ou non.
-- {{domxref("Window.globalStorage")}} {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- {{domxref("Window.globalStorage")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
   - : Non supporté depuis Gecko 13 (Firefox 13). Utilisez {{domxref("Window.localStorage")}} à la place.
     Était : divers objets de stockage utilisés pour stocker des données sur plusieurs pages.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
   - : Retourne une référence à l'objet d'historique.
 - {{domxref("Window.innerHeight")}} {{readOnlyInline}}
-  - : Récupère la hauteur de la zone de contenu de la fenêtre du navigateur, y compris, si affichée, la barre de défilement horizontale.
+  - : Récupère la hauteur de la zone de contenu de la fenêtre du navigateur, y compris, si affichée, la barre de défilement horizontale.
 - {{domxref("Window.innerWidth")}} {{readOnlyInline}}
-  - : Récupère la largeur de la zone de contenu de la fenêtre du navigateur, y compris, si affichée, la barre de défilement verticale.
+  - : Récupère la largeur de la zone de contenu de la fenêtre du navigateur, y compris, si affichée, la barre de défilement verticale.
 - {{domxref("Window.isSecureContext")}} {{readOnlyInline}}
   - : Indique si un contexte est capable d'utiliser des fonctionnalités nécessitant des contextes sécurisés.
 - {{domxref("Window.length")}} {{readOnlyInline}}
@@ -85,25 +85,25 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Récupère/définit l'emplacement, ou l'URL en cours, de l'objet de fenêtre.
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
   - : Renvoie l'objet de la barre d'adresse, dont la visibilité peut être inversée dans la fenêtre.
-- {{domxref("Window.localStorage")}} {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Window.localStorage")}} {{readOnlyInline}}
   - : Renvoie une référence à l'objet de stockage local utilisé pour stocker les données accessibles uniquement par l'origine qui les a créées.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : Renvoie l'objet barre de menus, dont la visibilité peut être inversée dans la fenêtre.
-- {{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}
-  - : Renvoie l'objet [gestionnaire de messages](/fr-FR/docs/The_message_manager) pour cette fenêtre.
-- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}} {{Deprecated_inline}}
-  - : Le temps en millisecondes depuis l'instant auquel le cycle d'animation en cours a commencé.
-- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
-  - : Renvoie la coordonnée horizontale (X) du coin supérieur gauche du point de vue de la fenêtre, en coordonnées d'écran. Cette valeur est restituée en pixels CSS. Voir `mozScreenPixelsPerCSSPixel` dans {{interface("nsIDOMWindowUtils")}} pour un facteur de conversion pour s'adapter aux pixels de l'écran si nécessaire.
-- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Window.messageManager")}}
+  - : Renvoie l'objet [gestionnaire de messages](/fr-FR/docs/The_message_manager) pour cette fenêtre.
+- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}} {{Deprecated_inline}}
+  - : Le temps en millisecondes depuis l'instant auquel le cycle d'animation en cours a commencé.
+- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}
+  - : Renvoie la coordonnée horizontale (X) du coin supérieur gauche du point de vue de la fenêtre, en coordonnées d'écran. Cette valeur est restituée en pixels CSS. Voir `mozScreenPixelsPerCSSPixel` dans {{interface("nsIDOMWindowUtils")}} pour un facteur de conversion pour s'adapter aux pixels de l'écran si nécessaire.
+- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Renvoie la coordonnée verticale (Y) du coin supérieur gauche du point de vue de la fenêtre, en coordonnées d'écran. Cette valeur est indiquée en pixels CSS. Voir `mozScreenPixelsPerCSSPixel` pour un facteur de conversion pour s'adapter aux pixels de l'écran si nécessaire.
-- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Renvoie le nombre de fois où le document en cours a été réaffiché à l'écran dans cette fenêtre. Cela peut être utilisé pour calculer les performances d'affichage.
 - {{domxref("Window.name")}}
   - : Récupère / définit le nom de la fenêtre.
 - {{domxref("Window.navigator")}} {{readOnlyInline}}
   - : Renvoie une référence à l'objet navigateur.
-- {{domxref("Window.NetworkInformation")}} {{readOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.NetworkInformation")}} {{readOnlyInline}} {{experimental_inline}}
   - : Renvoie une référence à l'interface {{domxref("NetworkInformation")}}, qui fournit des informations sur la connexion qu'un périphérique est en train d'utiliser pour communiquer avec le réseau et fournit un moyen pour les scripts d'être notifiés si le type de connexion change.
 - {{domxref("Window.opener")}}
   - : Renvoie une référence à la fenêtre qui a ouvert la fenêtre en cours.
@@ -122,7 +122,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : Renvoie une référence au parent de la fenêtre ou du sous-cadre en cours.
 - {{domxref("Window.performance")}} {{readOnlyInline}}
-  - : Renvoie un objet {{domxref("Performance")}}, qui inclut les attributs {{domxref("Performance.timing", "timing")}} et {{domxref("Performance.navigation", "navigation")}}, dont chacun est un objet fournissant des données liées aux performances. Voir aussi [Utilisation de Chronométrage de Navigation](/fr-FR/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) pour plus d'informations et d'exemples.
+  - : Renvoie un objet {{domxref("Performance")}}, qui inclut les attributs {{domxref("Performance.timing", "timing")}} et {{domxref("Performance.navigation", "navigation")}}, dont chacun est un objet fournissant des données liées aux performances. Voir aussi [Utilisation de Chronométrage de Navigation](/fr-FR/docs/Web/API/Navigation_timing_API/Using_Navigation_Timing) pour plus d'informations et d'exemples.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Renvoie l'objet barre personnelle, dont la visibilité peut être inversée dans la fenêtre.
 - {{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}
@@ -138,11 +138,11 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 - {{domxref("Window.scrollbars")}} {{readOnlyInline}}
   - : Renvoie l'objet barres de défilement, dont la visibilité peut être modifiée dans la fenêtre.
 - {{domxref("Window.scrollMaxX")}}{{non-standard_inline}}{{ReadOnlyInline}}
-  - : Le décalage maximal dont la fenêtre peut étre décalée horizontalement, c'est-à-dire la largeur du document moins la largeur du point de vue.
+  - : Le décalage maximal dont la fenêtre peut étre décalée horizontalement, c'est-à-dire la largeur du document moins la largeur du point de vue.
 - {{domxref("Window.scrollMaxY")}}{{non-standard_inline}}{{ReadOnlyInline}}
-  - : Le décalage maximal dont la fenêtre peut étre décalée verticalement (c'est-à-dire, la hauteur du document moins la hauteur du point de vue).
+  - : Le décalage maximal dont la fenêtre peut étre décalée verticalement (c'est-à-dire, la hauteur du document moins la hauteur du point de vue).
 - {{domxref("Window.scrollX")}} {{readOnlyInline}}
-  - : Renvoie le nombre de pixels dont le document a déjà été décalé horizontalement.
+  - : Renvoie le nombre de pixels dont le document a déjà été décalé horizontalement.
 - {{domxref("Window.scrollY")}} {{readOnlyInline}}
   - : Renvoie le nombre de pixels dont le document a déjà été décalé verticalement.
 - {{domxref("Window.self")}} {{ReadOnlyInline}}
@@ -165,17 +165,17 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
   - : Renvoie un objet {{domxref("VisualViewport")}} représentant le point de vue visuel pour une fenêtre donnée.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
   - : Renvoie une référence à la fenêtre en cours.
-- `window[0]`,` window[1]`, etc.
+- `window[0]`, `window[1]`, etc.
   - : Renvoie une référence à l'objet `window` dans les cadres. Voir {{domxref("Window.frames")}}} pour plus de détails.
 
-### Propriétés implémentées depuis ailleurs
+### Propriétés implémentées depuis ailleurs
 
 - {{domxref("WindowOrWorkerGlobalScope.caches")}} {{readOnlyinline}}
   - : Renvoie l'objet {{domxref("CacheStorage")}} associé au contexte en cours. Cet objet active des fonctionnalités telles que le stockage des ressources pour une utilisation hors connexion, et la génération de réponses personnalisées aux requêtes.
 - {{domxref("WindowOrWorkerGlobalScope.indexedDB")}} {{readonlyInline}}
   - : Fournit un mécanisme permettant aux applications d'accéder de manière asynchrone à des bases de données indexées ; renvoie un objet {{domxref("IDBFactory")}}.
 - {{domxref("WindowOrWorkerGlobalScope.isSecureContext")}} {{readOnlyinline}}
-  - : Renvoie un booléen indiquant si le contexte actuel est sécurisé (`true`) ou non (`false`).
+  - : Renvoie un booléen indiquant si le contexte actuel est sécurisé (`true`) ou non (`false`).
 - {{domxref("WindowOrWorkerGlobalScope.origin")}} {{readOnlyinline}}
   - : Renvoie l'origine de l'objet global, sérialisé comme une chaîne. (Cela ne semble pas encore être implémenté dans aucun navigateur.)
 
@@ -188,15 +188,15 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}
   - : Recule d'une page dans l'historique de la fenêtre.
 - {{domxref("Window.blur()")}}
-  - : Déplace la focalisation hors de la fenêtre.
-- {{domxref("Window.cancelAnimationFrame()")}} {{experimental_inline}}
+  - : Déplace la focalisation hors de la fenêtre.
+- {{domxref("Window.cancelAnimationFrame()")}} {{experimental_inline}}
   - : Vous permet d'annuler un rappel précédemment planifié avec {{domxref("Window.requestAnimationFrame")}}.
-- {{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}
+- {{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}
   - : Vous permet d'annuler un rappel précédemment planifié avec {{domxref("Window.requestIdleCallback")}}.
 - {{domxref("Window.captureEvents()")}} {{Deprecated_inline}}
-  - : Enregistre la fenêtre pour qu'elle capture tous les évènements du type spécifié.
+  - : Enregistre la fenêtre pour qu'elle capture tous les évènements du type spécifié.
 - {{domxref("Window.clearImmediate()")}}
-  - : Annule l'exécution répétée définie en utilisant `setImmediate`.
+  - : Annule l'exécution répétée définie en utilisant `setImmediate`.
 - {{domxref("Window.close()")}}
   - : Ferme la fenêtre en cours.
 - {{domxref("Window.confirm()")}}
@@ -210,9 +210,9 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.find()")}}
-  - : Recherche la chaîne de caractères donnée dans une fenêtre.
+  - : Recherche la chaîne de caractères donnée dans une fenêtre.
 - {{domxref("Window.focus()")}}
-  - : Donne la focalisation à la fenêtre en cours.
+  - : Donne la focalisation à la fenêtre en cours.
 - {{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}
   - : Avance la fenêtre d'un document dans l'historique.
 - {{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{obsolete_inline}}
@@ -220,21 +220,21 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.getAttentionWithCycleCount()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.getComputedStyle()")}}
-  - : Récupère un style calculé pour l'élément donné. Un style calculé indique les valeurs de toutes les propriétés CSS de l'élément.
-- {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_inline}}
+  - : Récupère un style calculé pour l'élément donné. Un style calculé indique les valeurs de toutes les propriétés CSS de l'élément.
+- {{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_inline}}
   - : Récupère le style calculé par défaut pour l'élément indiqué, en ignorant les feuilles de style d'auteur.
 - {{domxref("Window.getSelection()")}}
-  - : Renvoie l'objet de sélection représentant les éléments sélectionnés.
+  - : Renvoie l'objet de sélection représentant les éléments sélectionnés.
 - {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
-  - : Renvoie le navigateur à la page d'accueil.
-- {{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}
+  - : Renvoie le navigateur à la page d'accueil.
+- {{domxref("Window.matchMedia()")}}
   - : Renvoie un objet {{domxref("MediaQueryList")}} représentant la chaîne d'interrogation de média spécifiée.
 - {{domxref("Window.maximize()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimize la fenêtre.
 - {{domxref("Window.moveBy()")}}
-  - : Déplace la fenêtre en cours de la quantité indiquée.
+  - : Déplace la fenêtre en cours de la quantité indiquée.
 - {{domxref("Window.moveTo()")}}
   - : Déplace la fenêtre vers les coordonnées spécifiées.
 - {{domxref("Window.open()")}}
@@ -249,12 +249,12 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Renvoie le texte saisi par l'utilisateur dans une boîte de dialogue à invite.
 - {{domxref("Window.releaseEvents()")}} {{Non-standard_inline}} {{Deprecated_inline}}
   - : Annule la capture des évènements d'un certain type par la fenêtre.
-- {{domxref("Window.requestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.requestAnimationFrame()")}}
   - : Indique au navigateur qu'une animation est en cours, en demandant au navigateur de planifier une redessinage de la fenêtre lors de l'image d'animation suivante.
-- {{domxref("Window.requestIdleCallback()")}}  {{experimental_inline}}
-  - : Active la planification de tâches pendant les périodes d'inactivité du navigateur.
+- {{domxref("Window.requestIdleCallback()")}}  {{experimental_inline}}
+  - : Active la planification de tâches pendant les périodes d'inactivité du navigateur.
 - {{domxref("Window.resizeBy()")}}
-  - : Redimensionne la fenêtre en cours d'une certaine quantité.
+  - : Redimensionne la fenêtre en cours d'une certaine quantité.
 - {{domxref("Window.resizeTo()")}}
   - : Redimensionne dynamiquement la fenêtre.
 - {{domxref("Window.restore()")}} {{Non-standard_inline}} {{obsolete_inline}}
@@ -280,7 +280,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
 - {{domxref("Window.sizeToContent()")}} {{Non-standard_inline}}
   - : Dimensionne la fenêtre en fonction de son contenu.
 - {{domxref("Window.stop()")}}
-  - : Cette méthode arrête le chargement de la fenêtre.
+  - : Cette méthode arrête le chargement de la fenêtre.
 - {{domxref("Window.updateCommands()")}} {{Non-standard_inline}}
   - : Met à jour l'état des commandes de la fenêtre chrome en cours (IU).
 
@@ -318,13 +318,13 @@ Ce sont des propriétés de l'objet window qui peuvent être définies pour éta
 
 _Cette interface hérite des gestionnaires d'événements de l'interface {{domxref("EventTarget")}} et elle implémente les gestionnaires d'événements de {{domxref("WindowEventHandlers")}}._
 
-> **Note :** à partir de {{Gecko ("9.0")}}, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
+> **Note :** à partir de {{Gecko ("9.0")}}, vous pouvez maintenant utiliser la syntaxe `if ("onabort" in window)` pour déterminer si une propriété de gestionnaire d'événements donnée existe ou non. Cela est dû au fait que les interfaces du gestionnaire d'événements ont été mises à jour pour être des interfaces Web IDL correctes. Voir les gestionnaires d'événements DOM pour plus de détails.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
 
 
 
-  - : Appelé quand le chargement d'une ressource a été avorté, comme par le fait qu'un utilisateur annule un chargement alors qu'il était encore en cours.
+  - : Appelé quand le chargement d'une ressource a été avorté, comme par le fait qu'un utilisateur annule un chargement alors qu'il était encore en cours.
 
 <!---->
 
@@ -350,12 +350,12 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 <!---->
 
 - {{domxref("GlobalEventHandlers.onclick")}}
-  - : Appelé après qu'un QUELCONQUE bouton de la souris est pressé & relâché.
+  - : Appelé après qu'un QUELCONQUE bouton de la souris est pressé & relâché.
 
 <!---->
 
 - {domxref("GlobalEventHandlers.ondblclick")}}
-  - : Appelé quand un double clic est fait avec un QUELCONQUE bouton de la souris.
+  - : Appelé quand un double clic est fait avec un QUELCONQUE bouton de la souris.
 - {{domxref("GlobalEventHandlers.onclose")}}
   - : Appelé après la fermeture de la fenêtre.
 
@@ -368,11 +368,11 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 - {{domxref("Window.ondevicelight")}}
   - : Propriété de gestionnaire d'événements pour tous les changements de niveaux de luminosité ambiante.
-- {{domxref("Window.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondevicemotion")}}
   - : Appelé si l'accéléromètre détecte un changement (pour les appareils mobiles).
-- {{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondeviceorientation")}}
   - : Appelé lorsque l'orientation est modifiée (pour les appareils mobiles).
-- {{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}} Chrome only
+- {{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}} Chrome only
   - : Propriété de gestionnaire d'événements pour tout changement d'orientation de l'appareil.
 - {{domxref("Window.ondeviceproximity")}}
   - : Propriété de gestionnaire d'événement pour l'événement de proximité de l'appareil.
@@ -389,12 +389,12 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 <!---->
 
-- {{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("WindowEventHandlers.onhashchange")}}
   - : Propriété de gestionnaire d'événements pour les événements {{event('hashchange')}} dans la fenêtre ; appelé lorsque la partie de l'URL après la marque hash ("#") change.
 - {{domxref("Window.onappinstalled")}}
   - : Appelé lorsque la page est installée en tant que webapp. Voir l'événement {{event('appinstalled')}}.
 - {{domxref("Window.ongamepadconnected")}}
-  - : Représente un gestionnaire d'événements qui sera exécuté lorsqu'une manette de jeu est branchée (lorsque l'événement {{event('gamepadconnected')}} se déclenche).
+  - : Représente un gestionnaire d'événements qui sera exécuté lorsqu'une manette de jeu est branchée (lorsque l'événement {{event('gamepadconnected')}} se déclenche).
 - {{domxref("Window.ongamepaddisconnected")}}
   - : Représente un gestionnaire d'événements qui s'exécutera quand une manette de jeu est débranchée (lorsque l'événement {{event('gamepaddisconnected')}} se déclenche).
 - {{domxref("Window.oninput")}}
@@ -446,7 +446,7 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 <!---->
 
-- {{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.onmozbeforepaint")}}
   - : Propriété de gestionnaire d'événements pour l'événement MozBeforePaint, qui est déclenché avant de repeindre la fenêtre si l'événement a été demandé par un appel à la méthode {{domxref("Window.mozRequestAnimationFrame()")}}.
 - {{domxref("WindowEventHandlers.onoffline")}}
   - : Appelé lorsque la connexion réseau est perdue. Voir l'événement {{event("offline")}}.
@@ -461,7 +461,7 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 <!---->
 
-- {{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("WindowEventHandlers.onpopstate")}}
   - : Appelé quand le bouton arrière est pressé.
 - {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}
   - : Gestionnaire d'événements pour les événements de rejet {{jsxref("Promise")}} gérés.
@@ -522,10 +522,10 @@ _Cette interface hérite des gestionnaires d'événements de l'interface {{domxr
 
 ## Constructeurs
 
-Voir aussi les [Interfaces DOM](/fr-FR/docs/DOM/DOM_Reference).
+Voir aussi les [Interfaces DOM](/fr-FR/docs/DOM/DOM_Reference).
 
 - {{domxref("DOMParser")}}
-  - : `DOMParser` peut analyser un source XML ou HTML stocké dans une chaîne de caractères en un [Document](/fr-FR/docs/DOM/document) DOM. `DOMParser` est spécifié dans [DOM Parsing et Serialization](https://w3c.github.io/DOM-Parsing/).
+  - : `DOMParser` peut analyser un source XML ou HTML stocké dans une chaîne de caractères en un [Document](/fr-FR/docs/DOM/document) DOM. `DOMParser` est spécifié dans [DOM Parsing et Serialization](https://w3c.github.io/DOM-Parsing/).
 - {{domxref("Window.GeckoActiveXObject")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Image")}}
@@ -537,7 +537,7 @@ Voir aussi les [Interfaces DOM](/fr-FR/docs/DOM/DOM_Reference).
 - {{domxref("Window.XMLSerializer")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/en-US/docs/DOM/Using_web_workers)
+  - : Used for creating a [Web worker](/en-US/docs/DOM/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}
@@ -545,7 +545,7 @@ Voir aussi les [Interfaces DOM](/fr-FR/docs/DOM/DOM_Reference).
 
 ## Interfaces
 
-Voir [Référence du DOM](/fr/docs/Web/API/Document_Object_Model)
+Voir [Référence du DOM](/fr/docs/Web/API/Document_Object_Model)
 
 ## Voir aussi
 

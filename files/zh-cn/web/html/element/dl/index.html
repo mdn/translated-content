@@ -11,16 +11,16 @@ translation_of: Web/HTML/Element/dl
 ---
 <h2 id="简介">简介</h2>
 
-<p><strong>HTML <code>&lt;dl&gt;</code> 元素</strong> （或 <em>HTML</em> <em>描述列表元素</em>）是一个包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 (键-值对列表)。</p>
+<p><strong>HTML <code>&lt;dl&gt;</code> 元素</strong> （或 <em>HTML</em> <em>描述列表元素</em>）是一个包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 (键 - 值对列表)。</p>
 
 <p>在 HTML5 之前， &lt;dl&gt; 被大家以定义列表所熟知。</p>
 
 <ul class="htmlelt">
- <li><dfn><a href="/en-US/docs/HTML/Content_categories">内容分类</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>(流体内容), 如果<code>&lt;dl&gt;</code> 元素的子元素包含一个键值对，则显示其中内容.</li>
+ <li><dfn><a href="/en-US/docs/HTML/Content_categories">内容分类</a></dfn> <a href="/en-US/docs/HTML/Content_categories#Flow_content">Flow content</a>(流体内容), 如果<code>&lt;dl&gt;</code> 元素的子元素包含一个键值对，则显示其中内容。</li>
 </ul>
 
 <ol class="htmlelt">
- <li><dfn>允许的内容</dfn>一：零组或多组dom结构，每组dom结构中包含一个或多个{{HTMLElement("dt")}} 元素，以及 一个或多个{{HTMLElement("dd")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素进行混入。二：一组或多组{{HTMLElement("div")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素混入。</li>
+ <li><dfn>允许的内容</dfn>一：零组或多组 dom 结构，每组 dom 结构中包含一个或多个{{HTMLElement("dt")}} 元素，以及 一个或多个{{HTMLElement("dd")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素进行混入。二：一组或多组{{HTMLElement("div")}}元素，可通过{{HTMLElement("script")}}元素和{{HTMLElement("template")}}元素混入。</li>
 </ol>
 
 <ul class="htmlelt">
@@ -91,7 +91,7 @@ translation_of: Web/HTML/Element/dl
 
 <h3 id="元数据">元数据</h3>
 
-<p>描述列表可以很方便的将元数据展示为键-值对列表：</p>
+<p>描述列表可以很方便的将元数据展示为键 - 值对列表：</p>
 
 <pre>&lt;dl&gt;
     &lt;dt&gt;Name&lt;/dt&gt;
@@ -113,7 +113,7 @@ translation_of: Web/HTML/Element/dl
 
 <h3 id="在_HTMLElementdiv_元素中包装名称值组">在 {{HTMLElement("div")}} 元素中包装名称值组</h3>
 
-<p>WHATWG HTML允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 元素中包装每个名称 - 值组。当使用元数据时，或全局属性适用于整个组或用于样式时，这可能很有用。</p>
+<p>WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 元素中包装每个名称 - 值组。当使用元数据时，或全局属性适用于整个组或用于样式时，这可能很有用。</p>
 
 <pre class="brush: html">&lt;dl&gt;
   &lt;div&gt;
@@ -172,53 +172,7 @@ translation_of: Web/HTML/Element/dl
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.dl")}}
 
 <h2 id="相关内容">相关内容</h2>
 

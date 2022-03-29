@@ -7,7 +7,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content
 {{LearnSidebar}}
 {{PreviousNext("Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
 
-Il est essentiel de savoir structurer une page de contenu prête à être mise en forme grâce au CSS. Cette évaluation va vous permettre de vous tester sur votre capacité à réfléchir au rendu visuel final d'une page et à choisir la sémantique structurelle appropriée pour construire une bonne mise en page.
+Il est essentiel de savoir structurer une page de contenu prête à être mise en forme grâce au CSS. Cette évaluation va vous permettre de vous tester sur votre capacité à réfléchir au rendu visuel final d'une page et à choisir la sémantique structurelle appropriée pour construire une bonne mise en page.
 
 <table class="standard-table">
   <tbody>
@@ -34,13 +34,13 @@ Il est essentiel de savoir structurer une page de contenu prête à être mise e
 
 ## Point de départ
 
-Pour commencer cet exercice, vous pouvez télécharger [l'archive contenant les fichiers nécessaires](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true) à cette évaluation. Elle contient :
+Pour commencer cet exercice, vous pouvez télécharger [l'archive contenant les fichiers nécessaires](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true) à cette évaluation. Elle contient :
 
 - le fichier HTML auquel vous allez devoir ajouter le balisage structurel,
 - le fichier CSS pour styliser la page,
 - les images utilisées dans la page.
 
-Décompressez l'archive sur votre ordinateur, ou bien utilisez un site web comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire votre évaluation.
+Décompressez l'archive sur votre ordinateur, ou bien utilisez un site web comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/) pour faire votre évaluation.
 
 ## Aperçu du projet
 
@@ -50,7 +50,7 @@ Dans ce projet, l'objectif est d'ajouter des éléments structurels au contenu d
 - une zone de contenu principal de deux colonnes : un bloc principal avec le texte de bienvenue et une barre latérale avec des vignettes d'images,
 - un pied de page avec les informations de droits d'auteur et les crédits.
 
-Vous devez ajouter les enveloppes appropriées pour :
+Vous devez ajouter les enveloppes appropriées pour&nbsp;:
 
 - l'en-tête
 - le menu de navigation
@@ -65,8 +65,8 @@ Vous devez aussi
 
 ## **Conseils et astuces**
 
-- Utilisez le « [W3C HTML validator »](https://validator.w3.org/) pour valider votre HTML ; vous aurez des points bonus si la validation s'opère autant que possible (la ligne « googleapis » est une ligne utilisée pour importer des polices personnalisées dans la page à partir du service « Google Fonts » ; elle ne sera pas validée, donc ne vous en inquiétez pas).
-- Il n'est pas nécessaire de connaître quoi que ce soit des CSS pour faire cet exercice ; vous avez juste besoin de placer les CSS fournies dans l'élément HTML.
+- Utilisez le «&nbsp;[W3C HTML validator&nbsp;»](https://validator.w3.org/) pour valider votre HTML&nbsp;; vous aurez des points bonus si la validation s'opère autant que possible (la ligne «&nbsp;googleapis&nbsp;» est une ligne utilisée pour importer des polices personnalisées dans la page à partir du service «&nbsp;Google Fonts » ; elle ne sera pas validée, donc ne vous en inquiétez pas).
+- Il n'est pas nécessaire de connaître quoi que ce soit des CSS pour faire cet exercice&nbsp;; vous avez juste besoin de placer les CSS fournies dans l'élément HTML.
 - Les CSS jointes sont conçues de telle sorte que les éléments structuraux adéquats ont été ajoutés dans le balisage, ils apparaîtront en vert dans le rendu de la page.
 - Si vous êtes bloqué et ne voyez pas où mettre tel élément, cela peut vous aider de tracer un diagramme des blocs de disposition de la page et d'écrire sur chaque élément ce qui, à votre avis devrait envelopper chaque bloc.
 
@@ -78,7 +78,7 @@ La capture d'écran suivante montre un exemple de ce à quoi la page d'accueil p
 
 ## Évaluation
 
-Si cette évaluation fait partie d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur/formateur pour notation. Si vous faites de l'auto‑formation vous pouvez obtenir un guide d'auto‑évaluation en le demandant sur le [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez l'exercice d'abord — il n'y a rien à gagner à tricher !
+Si cette évaluation fait partie d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur/formateur pour notation. Si vous faites de l'auto‑formation vous pouvez obtenir un guide d'auto‑évaluation en le demandant sur le [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez l'exercice d'abord — il n'y a rien à gagner à tricher&nbsp;!
 
 {{PreviousMenu("Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
 

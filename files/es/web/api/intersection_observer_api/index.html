@@ -5,7 +5,7 @@ translation_of: Web/API/Intersection_Observer_API
 ---
 <p>{{DefaultAPISidebar("Intersection Observer API")}}</p>
 
-<div></div>
+
 
 <p class="summary"><span class="seoSummary">La API Observador de Intersección provee una vía asíncrona para observar cambios en la intersección de un elemento con un elemento ancestro o con el {{Glossary("viewport")}} del documento de nivel superior.</span></p>
 
@@ -571,63 +571,7 @@ window.addEventListener("load", function(event) {
 
 <h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>15</td>
-   <td>{{CompatGeckoDesktop(55)}}<sup>[1][2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera(38)}}</td>
-   <td>{{WebKitBug(159475)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatChrome(51)}}</td>
-   <td>{{CompatGeckoMobile(55)}}<sup>[1][2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOperaMobile(38)}}</td>
-   <td>{{WebKitBug(159475)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] This feature has been implemented since Gecko 53.0 {{geckoRelease("53.0")}} behind the preference <code>dom.IntersectionObserver.enabled</code>, which was <code>false</code> by default. Enabled by default beginning in Firefox 55. See {{bug(1243846)}}.</p>
-
-<p>[2] Firefox doesn't currently take the {{cssxref("clip-path")}} of ancestor elements into account when computing the visibility of an element within its root. See {{bug(1319140)}} for the status of this issue.</p>
+{{Compat("api.IntersectionObserver")}}
 
 <h2 id="Ver_también">Ver también</h2>
 

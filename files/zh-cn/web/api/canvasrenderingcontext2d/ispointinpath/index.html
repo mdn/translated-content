@@ -126,78 +126,7 @@ window.addEventListener("load", drawCanvas);
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Path parameter</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop(31) }}</td>
-   <td>{{ CompatNo }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatNo }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Path parameter</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile(31) }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Compatibility_注解">Compatibility 注解</h3>
-
-<ul>
- <li>在 Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4)之前，这个方法是错误的，在和路径进行比较前，该方法不会根据当前的变形矩阵增加指定点的坐标。现在，该方法可以正确执行，甚至上下文进行旋转、缩放或其他方式的变形。</li>
-</ul>
+{{Compat("api.CanvasRenderingContext2D.isPointInPath")}}
 
 <h2 id="参见">参见</h2>
 

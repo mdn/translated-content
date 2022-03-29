@@ -13,7 +13,7 @@ translation_of: Web/API/File
 
 <p>文件（<strong><code>File</code></strong>）接口提供有关文件的信息，并允许网页中的 JavaScript 访问其内容。</p>
 
-<p>通常情况下， <code>File</code> 对象是来自用户在一个 {{HTMLElement("input")}} 元素上选择文件后返回的 {{domxref("FileList")}} 对象,也可以是来自由拖放操作生成的 {{domxref("DataTransfer")}} 对象，或者来自 {{domxref("HTMLCanvasElement")}} 上的 <code>mozGetAsFile</code>() API。在Gecko中，特权代码可以创建代表任何本地文件的File对象，而无需用户交互（有关详细信息，请参阅{{anch("注意事项")}}。</p>
+<p>通常情况下， <code>File</code> 对象是来自用户在一个 {{HTMLElement("input")}} 元素上选择文件后返回的 {{domxref("FileList")}} 对象,也可以是来自由拖放操作生成的 {{domxref("DataTransfer")}} 对象，或者来自 {{domxref("HTMLCanvasElement")}} 上的 <code>mozGetAsFile</code>() API。在Gecko中，特权代码可以创建代表任何本地文件的File对象，而无需用户交互（有关详细信息，请参阅<a href="#注意事项">注意事项</a>。</p>
 
 <p><code>File</code> 对象是特殊类型的 {{domxref("Blob")}}，且可以用在任意的 Blob 类型的 context 中。比如说， {{domxref("FileReader")}}, {{domxref("URL.createObjectURL()")}}, {{domxref("ImageBitmapFactories.createImageBitmap()", "createImageBitmap()")}}, 及 {{domxref("XMLHttpRequest", "", "send()")}} 都能处理 <code>Blob</code> 和<code> File</code>。</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/File
 <dl>
  <dt>{{domxref("File.lastModified")}} {{readonlyinline}}</dt>
  <dd>返回当前 <code>File</code> 对象所引用文件最后修改时间，自 UNIX 时间起始值（1970年1月1日 00:00:00 UTC）以来的毫秒数。</dd>
- <dt>{{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}} {{gecko_minversion_inline("15.0")}}</dt>
+ <dt>{{domxref("File.lastModifiedDate")}} {{readonlyinline}} {{deprecated_inline}}</dt>
  <dd>返回当前 <code>File</code> 对象所引用文件最后修改时间的 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></code> 对象。</dd>
  <dt>{{domxref("File.name")}} {{readonlyinline}}</dt>
  <dd>返回当前 <code>File</code> 对象所引用文件的名字。</dd>

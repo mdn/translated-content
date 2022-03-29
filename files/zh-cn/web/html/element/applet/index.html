@@ -12,45 +12,45 @@ translation_of: Web/HTML/Element/applet
 
 <h2 id="概要">概要</h2>
 
-<p>HTML中的Applet元素(<code>&lt;applet&gt;</code>) 标志着包含了Java的applet。</p>
+<p>HTML 中的 Applet 元素 (<code>&lt;applet&gt;</code>) 标志着包含了 Java 的 applet。</p>
 
 <div class="note">
-<p><strong>注解： </strong>这个元素在HTML5中已经废弃了，不能再被使用。网页开发者应该使用更为通用的元素。</p>
+<p><strong>注解： </strong>这个元素在 HTML5 中已经废弃了，不能再被使用。网页开发者应该使用更为通用的元素。</p>
 </div>
 
 <h2 id="Attributes" name="Attributes">属性（Attributes）</h2>
 
 <dl>
  <dt>{{htmlattrdef("align")}}</dt>
- <dd>该属性被用来定义网页上applet相对于周围内容的对齐方式。HTML4.01规范定义了bottom, left, middle, right和 top的值，而Microsoft（微软）和Netscaple（网景）也可能支持<strong>absbottom</strong>, <strong>absmiddle</strong>, <strong>baseline</strong>, <strong>center</strong>和<strong>texttop。</strong></dd>
+ <dd>该属性被用来定义网页上 applet 相对于周围内容的对齐方式。HTML4.01 规范定义了 bottom, left, middle, right 和 top 的值，而 Microsoft（微软）和 Netscaple（网景）也可能支持<strong>absbottom</strong>, <strong>absmiddle</strong>, <strong>baseline</strong>, <strong>center</strong>和<strong>texttop。</strong></dd>
  <dt>{{htmlattrdef("alt")}}</dt>
- <dd>该属性造成在不支持Java的浏览器上显示出一段替代的描述性文字。 页面设计者应该记住在<code>&lt;applet&gt;</code> 元素中封闭的内容也可以呈现为替代性文本。</dd>
+ <dd>该属性造成在不支持 Java 的浏览器上显示出一段替代的描述性文字。 页面设计者应该记住在<code>&lt;applet&gt;</code> 元素中封闭的内容也可以呈现为替代性文本。</dd>
  <dt>{{htmlattrdef("archive")}}</dt>
- <dd>该属性涉及到applet的存档或压缩版本及其相关类文件，这可能会减少下载时间。</dd>
+ <dd>该属性涉及到 applet 的存档或压缩版本及其相关类文件，这可能会减少下载时间。</dd>
  <dt>{{htmlattrdef("code")}}</dt>
- <dd>该属性指定被加载和执行的applet类文件的URL。Applet文件名由一个.class文件扩展名定义。由code指定的URL可能与codebase属性有关。</dd>
+ <dd>该属性指定被加载和执行的 applet 类文件的 URL。Applet 文件名由一个.class 文件扩展名定义。由 code 指定的 URL 可能与 codebase 属性有关。</dd>
  <dt>{{htmlattrdef("codebase")}}</dt>
- <dd>该属性给出绝对或相对的，由code属性引用的applet的.class文件储存的目录的URL。</dd>
+ <dd>该属性给出绝对或相对的，由 code 属性引用的 applet 的.class 文件储存的目录的 URL。</dd>
  <dt>{{htmlattrdef("datafld")}}</dt>
- <dd>该属性支持Internet Explorer4及更高的版本，指定提供边界数据的数据源对象的列名。该属性可以用来指定各种传递到Java的{{HTMLElement("param")}} 元素。</dd>
+ <dd>该属性支持 Internet Explorer4 及更高的版本，指定提供边界数据的数据源对象的列名。该属性可以用来指定各种传递到 Java 的{{HTMLElement("param")}} 元素。</dd>
  <dt>{{htmlattrdef("datasrc")}}</dt>
- <dd>就像datafld，该属性被用于Internet Explorer 4版本以下的数据绑定（data binding）。它指明了数据源对象的id，这个数据对象提供了被与applet有关的元素约束的数据。</dd>
+ <dd>就像 datafld，该属性被用于 Internet Explorer 4 版本以下的数据绑定（data binding）。它指明了数据源对象的 id，这个数据对象提供了被与 applet 有关的元素约束的数据。</dd>
  <dt>{{htmlattrdef("height")}}</dt>
- <dd>该属性提供了applet所需的高度，以像素为单位。</dd>
+ <dd>该属性提供了 applet 所需的高度，以像素为单位。</dd>
  <dt>{{htmlattrdef("hspace")}}</dt>
- <dd>该属性指定了保存在applet两侧的额外横向空间，以像素为单位。</dd>
+ <dd>该属性指定了保存在 applet 两侧的额外横向空间，以像素为单位。</dd>
  <dt>{{htmlattrdef("mayscript")}}</dt>
- <dd>在Netscape中，该属性允许使用在文档中嵌入的脚本语言程序访问applet。</dd>
+ <dd>在 Netscape 中，该属性允许使用在文档中嵌入的脚本语言程序访问 applet。</dd>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>该属性为applet分配一个名称，以便它可以被其他资源识别，尤其是脚本语言。</dd>
+ <dd>该属性为 applet 分配一个名称，以便它可以被其他资源识别，尤其是脚本语言。</dd>
  <dt>{{htmlattrdef("object")}}</dt>
- <dd>该属性指定一个序列化表示的applet的URL。</dd>
+ <dd>该属性指定一个序列化表示的 applet 的 URL。</dd>
  <dt>{{htmlattrdef("src")}}</dt>
- <dd>为Internet Explorer 4 及更高版本制定, 该属性为applet相关文件指定一个URL。 该定义及使用是不明确的，也不属于HTML标准。</dd>
+ <dd>为 Internet Explorer 4 及更高版本制定，该属性为 applet 相关文件指定一个 URL。 该定义及使用是不明确的，也不属于 HTML 标准。</dd>
  <dt>{{htmlattrdef("vspace")}}</dt>
- <dd>该属性指定了保存在applet以上或以下的额外垂直空间，以像素为单位。</dd>
+ <dd>该属性指定了保存在 applet 以上或以下的额外垂直空间，以像素为单位。</dd>
  <dt>{{htmlattrdef("width")}}</dt>
- <dd>该属性指定了applet所需的宽度，以像素为单位。</dd>
+ <dd>该属性指定了 applet 所需的宽度，以像素为单位。</dd>
 </dl>
 
 <h2 id="例子">例子</h2>
@@ -63,58 +63,10 @@ translation_of: Web/HTML/Element/applet
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特征</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特征</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mini</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("html.elements.applet")}}
 
 <h2 id="注意">注意</h2>
 
-<p>W3C规范不鼓励使用<code>&lt;applet&gt;，更</code>倾向于使用{{HTMLElement("object")}}标签。因为HTML 4.01的严格定义，这个元素已经完全过时，在HTML5中不再被使用。</p>
+<p>W3C 规范不鼓励使用<code>&lt;applet&gt;，更</code>倾向于使用{{HTMLElement("object")}}标签。因为 HTML 4.01 的严格定义，这个元素已经完全过时，在 HTML5 中不再被使用。</p>
 
 <div>{{HTMLRef}}</div>

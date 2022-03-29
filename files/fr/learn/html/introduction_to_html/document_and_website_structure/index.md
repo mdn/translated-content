@@ -22,7 +22,7 @@ De même que HTML est utilisé pour définir les diverses parties indépendantes
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Être familiarisé avec les bases du HTML, traitées à la page
         <a
@@ -41,7 +41,7 @@ De même que HTML est utilisé pour définir les diverses parties indépendantes
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         <p>
           Apprendre comment structurer votre document en utilisant des balises
@@ -59,7 +59,7 @@ Les pages web peuvent sembler assez différentes les unes des autres, mais elles
 - En‑tête (header)
   - : Généralement une grande bande placée en travers au haut de la page avec un titre ou un logo. C'est là où les principales informations du site restent d'une page à l'autre.
 - Barre de navigation
-  - : Elle fait le lien vers les principales parties du site ; d'habitude, elle est présentée sous forme de boutons de menu, de liens ou d'onglets. Comme l'en‑tête, la barre de navigation reste souvent cohérente d'une page à l'autre — avoir une navigation destructurée ne peut conduire qu'à de la confusion et la frustation pour le lecteur. Beaucoup de créateurs de site considèrent la barre de navigation partie de l'en‑tête et non comme un composant individuel, mais ce n'est pas une exigence. En fait certains soutiennent également que le fait d'avoir les deux séparés est préférable pour l'accessibilité, car les lecteurs d'écran lisent mieux les deux éléments s'ils sont séparés.
+  - : Elle fait le lien vers les principales parties du site&nbsp;; d'habitude, elle est présentée sous forme de boutons de menu, de liens ou d'onglets. Comme l'en‑tête, la barre de navigation reste souvent cohérente d'une page à l'autre — avoir une navigation destructurée ne peut conduire qu'à de la confusion et la frustation pour le lecteur. Beaucoup de créateurs de site considèrent la barre de navigation partie de l'en‑tête et non comme un composant individuel, mais ce n'est pas une exigence. En fait certains soutiennent également que le fait d'avoir les deux séparés est préférable pour l'accessibilité, car les lecteurs d'écran lisent mieux les deux éléments s'ils sont séparés.
 - Contenu principal
   - : Une grande zone au centre contenant la majeure partie du contenu unique de la dite page web, par ex. la vidéo à regarder, ou le corps de l'article à parcourir, ou la carte à lire, ou les dernières nouvelles etc. C'est la partie du site variable de page en page.
 - Barre latérale
@@ -68,7 +68,7 @@ Les pages web peuvent sembler assez différentes les unes des autres, mais elles
 
   - : Une bande au bas de la page qui contient généralement, en petits caractères, des avis de droit d'auteur ou des coordonnées de contact. C'est un endroit pour mettre de l'information commune (comme l'en-tête), mais il s'agit dans ce cas d'informations non‑critiques, voire secondaires par rapport au site Web lui-même. Le pied de page est aussi parfois utilisé à des fins de {{Glossary("SEO")}}, en fournissant des liens pour un accès rapide à des contenus prisés.
 
-    Un « site web typique » pourrait ressembler à quelque chose comme ceci :
+    Un «&nbsp;site web typique&nbsp;» pourrait ressembler à quelque chose comme ceci&nbsp;:
 
 ![un exemple simple de structure de site Web comportant un titre principal, un menu de navigation, un contenu principal, une barre latérale et un pied de page.](ecran.png)
 
@@ -76,21 +76,21 @@ Les pages web peuvent sembler assez différentes les unes des autres, mais elles
 
 L'exemple simple affiché ci-dessus n'est pas très beau, mais il est parfaitement correct pour illustrer un exemple typique de mise en page d'un site web. Certains sites Web ont plus de colonnes, d'autres sont beaucoup plus complexes, mais vous voyez l'idée. Avec le bon CSS, vous pouvez utiliser à peu près n'importe quel élément pour envelopper les différentes sections et obtenir l'apparence que vous voulez, mais comme nous l'avons déjà dit, nous devons respecter la sémantique et **utiliser le bon élément pour le bon travail**.
 
-C'est parce que le visuel ne raconte pas toute l'histoire. Nous utilisons la couleur et la taille des caractères pour attirer l'attention des utilisateurs malvoyants sur les parties les plus utiles du contenu, comme le menu de navigation et les liens connexes, mais qu'en est-il des personnes malvoyantes par exemple, qui pourraient ne pas trouver très utiles des concepts tels que le « rose » et la « grande police » ?
+C'est parce que le visuel ne raconte pas toute l'histoire. Nous utilisons la couleur et la taille des caractères pour attirer l'attention des utilisateurs malvoyants sur les parties les plus utiles du contenu, comme le menu de navigation et les liens connexes, mais qu'en est-il des personnes malvoyantes par exemple, qui pourraient ne pas trouver très utiles des concepts tels que le «&nbsp;rose&nbsp;» et la «&nbsp;grande police&nbsp;» ?
 
-> **Note :** Les daltoniens représentent environ [8% de la population mondiale](http://www.color-blindness.com/2006/04/28/colorblind-population/) ou, en d'autres termes, environ 1 homme sur 12 et 1 femme sur 200 sont daltoniens. Les personnes aveugles et malvoyantes représentent environ 4 à 5 % de la population mondiale (en 2012, il y avait [285 millions de personnes aveugles et malvoyantes](https://fr.wikipedia.org/wiki/D%C3%A9ficience_visuelle) dans le monde, alors que la population totale était [d'environ 7 milliards ](https://fr.wikipedia.org/wiki/Population_mondiale)d'habitants).
+> **Note :** Les daltoniens représentent environ [8% de la population mondiale](http://www.color-blindness.com/2006/04/28/colorblind-population/) ou, en d'autres termes, environ 1 homme sur 12 et 1 femme sur 200 sont daltoniens. Les personnes aveugles et malvoyantes représentent environ 4 à 5 % de la population mondiale (en 2012, il y avait [285 millions de personnes aveugles et malvoyantes](https://fr.wikipedia.org/wiki/D%C3%A9ficience_visuelle) dans le monde, alors que la population totale était [d'environ 7 milliards](https://fr.wikipedia.org/wiki/Population_mondiale) d'habitants).
 
-Dans votre code HTML, vous pouvez marquer des sections de contenu selon leur fonction — vous pouvez utiliser des éléments qui représentent sans ambiguïté les sections de contenu décrites ci-dessus, et les technologies d'assistance comme les lecteurs d'écran peuvent reconnaître ces éléments et vous aider avec des tâches comme « trouver la navigation principale » ou « trouver le contenu principal ». Comme nous l'avons mentionné plus tôt dans le cours, le fait de [ne pas utiliser la bonne structure d'éléments et la bonne sémantique pour le bon travail a un certain nombre de conséquences](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure).
+Dans votre code HTML, vous pouvez marquer des sections de contenu selon leur fonction — vous pouvez utiliser des éléments qui représentent sans ambiguïté les sections de contenu décrites ci-dessus, et les technologies d'assistance comme les lecteurs d'écran peuvent reconnaître ces éléments et vous aider avec des tâches comme «&nbsp;trouver la navigation principale&nbsp;» ou «&nbsp;trouver le contenu principal ». Comme nous l'avons mentionné plus tôt dans le cours, le fait de [ne pas utiliser la bonne structure d'éléments et la bonne sémantique pour le bon travail a un certain nombre de conséquences](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure).
 
-Pour mettre en œuvre le marquage sémantique, HTML fournit des balises dédiées que vous pourrez utiliser pour représenter ces parties, par exemple :
+Pour mettre en œuvre le marquage sémantique, HTML fournit des balises dédiées que vous pourrez utiliser pour représenter ces parties, par exemple&nbsp;:
 
-- **header :** {{htmlelement("header")}}.
-- **barre de navigation :** {{htmlelement("nav")}}.
-- **contenu principal :** {{htmlelement("main")}}, avec diverses sous‑sections de contenu représentées à l'aide de des éléments {{HTMLElement("article")}}, {{htmlelement("section")}} et {{htmlelement("div")}}.
-- **barre latérale :** {{htmlelement("aside")}} ; souvent mise à l'intérieur de l'élément {{htmlelement("main")}}.
-- **pied de page :** {{htmlelement("footer")}}.
+- **header&nbsp;:** {{htmlelement("header")}}.
+- **barre de navigation&nbsp;:** {{htmlelement("nav")}}.
+- **contenu principal&nbsp;:** {{htmlelement("main")}}, avec diverses sous‑sections de contenu représentées à l'aide de des éléments {{HTMLElement("article")}}, {{htmlelement("section")}} et {{htmlelement("div")}}.
+- **barre latérale&nbsp;:** {{htmlelement("aside")}}&nbsp;; souvent mise à l'intérieur de l'élément {{htmlelement("main")}}.
+- **pied de page&nbsp;:** {{htmlelement("footer")}}.
 
-### Apprentissage actif : exploration du code de l'exemple
+### Apprentissage actif&nbsp;: exploration du code de l'exemple
 
 Notre exemple affiché plus haut est représenté par le code ci‑après (vous le trouverez également [dans le dépôt Github](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). Nous aimerions que vous regardiez cet exemple et que vous recherchiez dans le listing suivant les sections constituant les diverses parties du visuel.
 
@@ -193,7 +193,7 @@ La compréhension détaillée de la signification globale de tous les éléments
 
 Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément sémantique idéal pour regrouper certaines entités ou envelopper certains contenus. D'autres fois, vous souhaitez simplement regrouper un ensemble d'éléments pour en faire une entité unique pour des {{glossary("CSS")}} ou des {{glossary("JavaScript")}}. Pour de tels cas, HTML met à votre disposition les éléments {{HTMLElement("div")}} et {{HTMLElement("span")}}}. Utilisez‑les de préférence avec un attribut {{htmlattrxref('class')}} approprié, en quelque sorte étiquetez‑les pour pouvoir les cibler plus facilement.
 
-{{HTMLElement("span")}} est un élément en ligne non-semantique ; vous l'utiliserez seulement si vous ne trouvez pas de meilleur élément de sémantique textuelle pour envelopper votre contenu, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple :
+{{HTMLElement("span")}} est un élément en ligne non-semantique&nbsp;; vous l'utiliserez seulement si vous ne trouvez pas de meilleur élément de sémantique textuelle pour envelopper votre contenu, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple&nbsp;:
 
 ```html
 <p>Le Roi retourna ivre à sa chambre à une heure, la bière ne l'aidant en rien
@@ -217,7 +217,7 @@ Dans ce cas, la note du rédacteur est simplement supposée fournir une indicati
       ...
     </li>
   </ul>
-  <p>Total des achats : €237,89</p>
+  <p>Total des achats&nbsp;: €237,89</p>
 </div>
 ```
 
@@ -227,9 +227,9 @@ Ce n'est pas vraiment un élément `<aside>` et il n'a pas forcément de relatio
 
 ### Sauts de ligne et traits horizontaux
 
-Les éléments {{htmlelement("br")}} et {{htmlelement("hr")}} sont utilisés à l'occasion et il convient de les connaître :
+Les éléments {{htmlelement("br")}} et {{htmlelement("hr")}} sont utilisés à l'occasion et il convient de les connaître&nbsp;:
 
-`<br>` crée un saut de ligne dans un paragraphe ; c'est le seul moyen de forcer une structure rigide quand vous voulez obtenir une suite de lignes courtes fixes, comme dans une adresse postale ou un poème. Par exemple :
+`<br>` crée un saut de ligne dans un paragraphe&nbsp;; c'est le seul moyen de forcer une structure rigide quand vous voulez obtenir une suite de lignes courtes fixes, comme dans une adresse postale ou un poème. Par exemple&nbsp;:
 
 ```html
 <p>Il y avait une fois une fille nommée Nell<br>
@@ -238,14 +238,14 @@ Mais ses structures et sémantiques affligeantes<br>
 rendaient de ses marquages la lecture inélégante.</p>
 ```
 
-Sans éléments `<br>`, le paragraphe serait rendu par une seule longue ligne (comme précisé plus haut dans ce cours, [HTML ignore la plupart des blancs](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html)) ; avec des \<br> dans le code, voici le rendu de ce qui précède :
+Sans éléments `<br>`, le paragraphe serait rendu par une seule longue ligne (comme précisé plus haut dans ce cours, [HTML ignore la plupart des blancs](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html))&nbsp;; avec des \<br> dans le code, voici le rendu de ce qui précède&nbsp;:
 
 Il y avait une fois une fille nommée Nell
 Qui aimait écrire du HTML
 Mais ses structures et sémantiques affligeantes
 rendaient de ses marquages la lecture inélégante.
 
-`Les éléments <hr>` créent un trait horizontal dans le document marquant un changement thématique dans le texte (comme un changement de sujet ou de scène). Visuallement, c'est juste un trait horizontal, comme dans cet exemple :
+`Les éléments <hr>` créent un trait horizontal dans le document marquant un changement thématique dans le texte (comme un changement de sujet ou de scène). Visuallement, c'est juste un trait horizontal, comme dans cet exemple&nbsp;:
 
 ### Exemple avec hr
 
@@ -255,7 +255,7 @@ rendaient de ses marquages la lecture inélégante.
     <p>Pendant ce temps, Harry était assis à la maison, regardant sa déclaration de redevances et réfléchissant à la sortie du prochaine épisode de la fiction, quand une lettre de détresse enchantée passa par sa fenêtre et atterrit sur ses genoux. Il la lut à la hâte et, se dressant brusquement, « mieux vaut retourner au travail alors » se dit-il.</p>
 ```
 
-sera rendu ainsi :
+sera rendu ainsi&nbsp;:
 
 {{EmbedLiveSample("Exemple_avec_hr")}}
 
@@ -269,7 +269,7 @@ Une fois planifié le contenu d'une simple page Web, l'étape logique suivante e
 4.  Ensuite, essayez de trier tous ces éléments de contenu par groupes, pour vous donner une idée des parties qui pourraient aller ensemble sur diverses pages. C'est très similaire à une technique appelée {{glossary("Card sorting","Tri de cartes")}}.![Les articles qui devraient apparaître sur un site de vacances triés en 5 catégories : Recherche, spéciaux, informations spécifiques au pays, résultats de la recherche et choses à acheter.](fr-tri.png)
 5.  Essayez maintenant d'esquisser un plan de site grossier — entourez d'un cercle chaque page de votre site et tracez des flèches pour montrer les flux de travail typiques entre pages. La page d'accueil sera probablement au centre et en lien vers la plupart sinon la totalité des autres ; la plupart des pages d'un petit site devraient être disponibles à partir de la navigation principale, bien qu'il y ait des exceptions. Vous voudrez peut-être aussi ajouter des notes sur la présentation des choses. ![Une carte du site montrant la page d'accueil, la page du pays, les résultats de recherche, la page spéciale, la page de paiement et la page d'achat.](fr-map.png)
 
-### Apprentissage actif : créez la cartographie de votre propre site
+### Apprentissage actif&nbsp;: créez la cartographie de votre propre site
 
 Essayez d'effectuer l'exercice ci-dessus pour un site web de votre propre création. Sur quel sujet aimeriez-vous faire un site ?
 
@@ -281,7 +281,7 @@ Vous devriez avoir maintenant une meilleure idée de la façon de structurer une
 
 ## Voir aussi
 
-- [Using HTML sections and outlines ](/fr/docs/Web/HTML/Element/Heading_Elements): Guide avancé des éléments de la sémantique et des algorithmes descriptifs du HTML5.
+- [Using HTML sections and outlines](/fr/docs/Web/HTML/Element/Heading_Elements)&nbsp;: Guide avancé des éléments de la sémantique et des algorithmes descriptifs du HTML5.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML")}}
 

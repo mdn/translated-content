@@ -127,23 +127,23 @@ Associée à l'événement [element.onscroll](/fr/docs/DOM/element.onscroll), l'
 <title>MDN Example</title>
 <script type="text/javascript">
 function checkReading () {
-  if (checkReading.read) { return; }
-  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
-  checkReading.noticeBox.innerHTML = checkReading.read ?
-    "Merci." :
-    "Veuillez faire défiler la page et lire le texte qui suit.";
+  if (checkReading.read) { return; }
+  checkReading.read = this.scrollHeight - this.scrollTop === this.clientHeight;
+  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
+  checkReading.noticeBox.innerHTML = checkReading.read ?
+    "Merci." :
+    "Veuillez faire défiler la page et lire le texte qui suit.";
 }
 
 onload = function () {
-  var oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
+  var oToBeRead = document.getElementById("rules");
+  checkReading.noticeBox = document.createElement("span");
+  document.registration.accept.checked = false;
+  checkReading.noticeBox.id = "notice";
+  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
+  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
+  oToBeRead.onscroll = checkReading;
+  checkReading.call(oToBeRead);
 }
 ```
 
@@ -162,7 +162,7 @@ onload = function () {
 | Opera                      | ?                       |
 | Safari \| Chrome \| Webkit | **4.0** \| **4.0** \| ? |
 
-**Dans les versions inférieures à Firefox 21 :** quand le contenu d'un élément ne génère pas de barre de défilement verticale, alors sa propriété `scrollHeight` est égale à sa propriété `clientHeight`. Cela signifie soit que le contenu est trop court pour avoir besoin d'une barre de défilement, soit que la propriété CSS` {{ cssxref("overflow") }}` de l'élément a pour valeur `visible`.
+**Dans les versions inférieures à Firefox 21&nbsp;:** quand le contenu d'un élément ne génère pas de barre de défilement verticale, alors sa propriété `scrollHeight` est égale à sa propriété `clientHeight`. Cela signifie soit que le contenu est trop court pour avoir besoin d'une barre de défilement, soit que la propriété CSS [`overflow`](/fr/docs/Web/CSS/overflow) de l'élément a pour valeur `visible`.
 
 ## Voir aussi
 

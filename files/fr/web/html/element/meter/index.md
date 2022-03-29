@@ -22,15 +22,15 @@ Comme pour les autres éléments HTML, cet élément inclut également [les attr
 - {{htmlattrdef("form")}}
   - : Cet attribut contient l'attribut **`id`** de l'élément {{HTMLElement("form")}} auquel celui-ci est rattaché. Par défaut, il est à l'élément {{HTMLElement("form")}} qui est son plus proche ancêtre.
 - {{htmlattrdef("high")}}
-  - : Cet attribut représente la valeur minimale à partir de laquelle la mesure est considérée comme haute. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min `**et **`max`**. Si l'attribut **`low`** est aussi défini, il doit être plus grand que celui-ci.
+  - : Cet attribut représente la valeur minimale à partir de laquelle la mesure est considérée comme haute. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si l'attribut **`low`** est aussi défini, il doit être plus grand que celui-ci.
 - {{htmlattrdef("low")}}
-  - : Cet attribut représente la valeur maximale à partir de laquelle la mesure est considérée comme basse. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min `**et **`max`**. Si l'attribut **`high`** est aussi défini, il doit être plus petit que celui-ci.
+  - : Cet attribut représente la valeur maximale à partir de laquelle la mesure est considérée comme basse. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si l'attribut **`high`** est aussi défini, il doit être plus petit que celui-ci.
 - {{htmlattrdef("max")}}
   - : Cet attribut représente la valeur maximale que peut prendre la mesure. Il doit s'agir d'un nombre à virgule; s'il est invalide ou si l'attribut n'est pas défini, sa valeur par défaut est 1.0. Il doit être strictement plus grand que la valeur de l'attribut **`min`**.
 - {{htmlattrdef("min")}}
   - : Cet attribut représente la valeur minimale que peut prendre la mesure. Il doit s'agir d'un nombre à virgule; s'il est invalide ou si l'attribut n'est pas défini, sa valeur par défaut est 0.0. Il doit être strictement plus petit que la valeur de l'attribut **`max`**.
 - {{htmlattrdef("optimum")}}
-  - : Cet attribut représente la valeur idéale pour la mesure. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min `**et **`max`**. Si la valeur de **`optimum`** est inférieure à **`low`**, s'il est défini, cela signifie que les valeurs les plus petites sont meilleures; si sa valeur est supérieure à **`high`**, s'il est défini, cela signifie que les valeurs les plus grandes sont meilleures; enfin, s'il est compris entre **`low `**et **`high`**, cela signifie que les extrêmes ne sont pas les meilleures grandeurs.
+  - : Cet attribut représente la valeur idéale pour la mesure. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si la valeur de **`optimum`** est inférieure à **`low`**, s'il est défini, cela signifie que les valeurs les plus petites sont meilleures; si sa valeur est supérieure à **`high`**, s'il est défini, cela signifie que les valeurs les plus grandes sont meilleures; enfin, s'il est compris entre **`low`** et **`high`**, cela signifie que les extrêmes ne sont pas les meilleures grandeurs.
 - {{htmlattrdef("value")}}
 
   - : Cette attribut représente la valeur courante de la mesure. Cet attribut est obligatoire.
@@ -145,7 +145,7 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
 
 | Spécification                                                                                        | État                             | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-meter-element', '&lt;meter&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
+| {{SpecName('HTML WHATWG', 'forms.html#the-meter-element', '&lt;meter&gt;')}} | {{Spec2('HTML WHATWG')}} |                      |
 | {{SpecName('HTML5 W3C', 'forms.html#the-meter-element', '&lt;meter&gt;')}} | {{Spec2('HTML5 W3C')}}     | Définition initiale. |
 
 ## Compatibilité des navigateurs

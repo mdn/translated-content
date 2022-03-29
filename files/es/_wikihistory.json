@@ -2099,7 +2099,7 @@
       "editorUOC"
     ]
   },
-  "Learn/CSS/First_steps/Using_your_new_knowledge": {
+  "Learn/CSS/First_steps/Styling_a_biography_page": {
     "modified": "2020-08-23T19:45:30.596Z",
     "contributors": [
       "capitanzealot",
@@ -2943,7 +2943,7 @@
       "madmaxdios"
     ]
   },
-  "Learn/JavaScript/Asynchronous/Concepts": {
+  "Learn/JavaScript/Asynchronous/Introducing": {
     "modified": "2020-11-19T20:30:13.091Z",
     "contributors": [
       "AndresSalomon1990",
@@ -4743,6 +4743,12 @@
       "IngoBongo"
     ]
   },
+  "Web/API/Animation/cancel_event": {
+    "modified": "2019-03-23T22:05:09.237Z",
+    "contributors": [
+      "IngoBongo"
+    ]
+  },
   "Web/API/Animation/currentTime": {
     "modified": "2019-03-23T22:05:12.506Z",
     "contributors": [
@@ -4761,6 +4767,12 @@
       "IngoBongo"
     ]
   },
+  "Web/API/Animation/finish_event": {
+    "modified": "2019-03-23T22:05:11.188Z",
+    "contributors": [
+      "IngoBongo"
+    ]
+  },
   "Web/API/Animation/finished": {
     "modified": "2019-03-23T22:05:06.573Z",
     "contributors": [
@@ -4769,18 +4781,6 @@
   },
   "Web/API/Animation/id": {
     "modified": "2019-03-18T21:15:30.202Z",
-    "contributors": [
-      "IngoBongo"
-    ]
-  },
-  "Web/API/Animation/oncancel": {
-    "modified": "2019-03-23T22:05:09.237Z",
-    "contributors": [
-      "IngoBongo"
-    ]
-  },
-  "Web/API/Animation/onfinish": {
-    "modified": "2019-03-23T22:05:11.188Z",
     "contributors": [
       "IngoBongo"
     ]
@@ -4899,6 +4899,14 @@
       "palfrei"
     ]
   },
+  "Web/API/BatteryManager/chargingchange_event": {
+    "modified": "2019-03-23T23:25:06.308Z",
+    "contributors": [
+      "fscholz",
+      "Pau_Ilargia",
+      "voylinux"
+    ]
+  },
   "Web/API/BatteryManager/dischargingTime": {
     "modified": "2019-03-23T23:27:15.312Z",
     "contributors": [
@@ -4918,15 +4926,7 @@
       "voylinux"
     ]
   },
-  "Web/API/BatteryManager/onchargingchange": {
-    "modified": "2019-03-23T23:25:06.308Z",
-    "contributors": [
-      "fscholz",
-      "Pau_Ilargia",
-      "voylinux"
-    ]
-  },
-  "Web/API/BatteryManager/onlevelchange": {
+  "Web/API/BatteryManager/levelchange_event": {
     "modified": "2019-03-23T23:25:08.174Z",
     "contributors": [
       "fscholz",
@@ -6474,7 +6474,7 @@
       "Jabi"
     ]
   },
-  "Web/API/EventSource/onopen": {
+  "Web/API/EventSource/open_event": {
     "modified": "2019-03-23T22:03:59.180Z",
     "contributors": [
       "Hoosep"
@@ -6627,7 +6627,7 @@
       "cm_rocanroll"
     ]
   },
-  "Web/API/FileReader/onload": {
+  "Web/API/FileReader/load_event": {
     "modified": "2019-03-23T22:18:25.451Z",
     "contributors": [
       "DaniMartiRamirez"
@@ -9142,7 +9142,7 @@
       "darioperez"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
+  "Web/API/XMLHttpRequest/readystatechange_event": {
     "modified": "2019-03-23T22:20:14.868Z",
     "contributors": [
       "Sheppy",
@@ -11309,7 +11309,7 @@
       "guerratron"
     ]
   },
-  "Web/CSS/attr()": {
+  "Web/CSS/attr": {
     "modified": "2020-11-04T08:51:33.506Z",
     "contributors": [
       "chrisdavidmills",
@@ -11873,7 +11873,7 @@
       "juandiegoles"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:08:00.719Z",
     "contributors": [
       "chrisdavidmills",
@@ -11995,7 +11995,7 @@
       "FranciscoCastle"
     ]
   },
-  "Web/CSS/env()": {
+  "Web/CSS/env": {
     "modified": "2020-11-10T11:09:30.133Z",
     "contributors": [
       "chrisdavidmills",
@@ -12018,14 +12018,14 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/blur()": {
+  "Web/CSS/filter-function/blur": {
     "modified": "2020-11-05T09:45:32.642Z",
     "contributors": [
       "chrisdavidmills",
       "lajaso"
     ]
   },
-  "Web/CSS/filter-function/brightness()": {
+  "Web/CSS/filter-function/brightness": {
     "modified": "2020-11-05T09:57:09.596Z",
     "contributors": [
       "chrisdavidmills",
@@ -12619,7 +12619,7 @@
       "teffcode"
     ]
   },
-  "Web/CSS/min()": {
+  "Web/CSS/min": {
     "modified": "2020-12-03T10:19:50.144Z",
     "contributors": [
       "AlePerez92",
@@ -12658,7 +12658,7 @@
       "Mgjbot"
     ]
   },
-  "Web/CSS/minmax()": {
+  "Web/CSS/minmax": {
     "modified": "2020-11-16T09:05:45.467Z",
     "contributors": [
       "chrisdavidmills",
@@ -12885,7 +12885,7 @@
       "arroutado"
     ]
   },
-  "Web/CSS/repeat()": {
+  "Web/CSS/repeat": {
     "modified": "2020-11-18T14:44:16.857Z",
     "contributors": [
       "chrisdavidmills",
@@ -13053,7 +13053,7 @@
       "limbus"
     ]
   },
-  "Web/CSS/transform-function/rotate()": {
+  "Web/CSS/transform-function/rotate": {
     "modified": "2020-11-19T16:05:17.901Z",
     "contributors": [
       "chrisdavidmills",
@@ -13061,7 +13061,7 @@
       "pekechis"
     ]
   },
-  "Web/CSS/transform-function/rotate3d()": {
+  "Web/CSS/transform-function/rotate3d": {
     "modified": "2020-11-19T16:07:08.348Z",
     "contributors": [
       "chrisdavidmills",
@@ -13069,7 +13069,7 @@
       "jjyepez"
     ]
   },
-  "Web/CSS/transform-function/scale()": {
+  "Web/CSS/transform-function/scale": {
     "modified": "2020-11-30T10:15:28.610Z",
     "contributors": [
       "chrisdavidmills",
@@ -13081,7 +13081,7 @@
       "maramal"
     ]
   },
-  "Web/CSS/transform-function/translate()": {
+  "Web/CSS/transform-function/translate": {
     "modified": "2020-11-30T10:30:15.561Z",
     "contributors": [
       "chrisdavidmills",
@@ -13092,14 +13092,14 @@
       "ShakMR"
     ]
   },
-  "Web/CSS/transform-function/translateY()": {
+  "Web/CSS/transform-function/translateY": {
     "modified": "2020-11-30T13:00:51.105Z",
     "contributors": [
       "chrisdavidmills",
       "israel-munoz"
     ]
   },
-  "Web/CSS/transform-function/translateZ()": {
+  "Web/CSS/transform-function/translateZ": {
     "modified": "2020-11-30T13:02:44.123Z",
     "contributors": [
       "chrisdavidmills",
@@ -13153,7 +13153,7 @@
       "juan-ferrer-toribio"
     ]
   },
-  "Web/CSS/url()": {
+  "Web/CSS/url": {
     "modified": "2020-01-10T13:46:46.404Z",
     "contributors": [
       "roocce"
@@ -13172,7 +13172,7 @@
       "qwerty726"
     ]
   },
-  "Web/CSS/var()": {
+  "Web/CSS/var": {
     "modified": "2020-11-04T09:10:15.439Z",
     "contributors": [
       "chrisdavidmills",
@@ -15036,13 +15036,6 @@
     "modified": "2019-03-18T21:20:44.665Z",
     "contributors": [
       "WriestTavo"
-    ]
-  },
-  "Web/HTML/Index": {
-    "modified": "2019-01-16T22:12:02.767Z",
-    "contributors": [
-      "raecillacastellana",
-      "pekechis"
     ]
   },
   "Web/HTML/Inline_elements": {
@@ -20480,13 +20473,6 @@
       "jorge_castro"
     ]
   },
-  "Web/SVG/Index": {
-    "modified": "2019-01-16T22:36:49.773Z",
-    "contributors": [
-      "jwhitlock",
-      "ComplementosMozilla"
-    ]
-  },
   "Web/SVG/SVG_1.1_Support_in_Firefox": {
     "modified": "2019-03-23T23:43:25.545Z",
     "contributors": [
@@ -21559,6 +21545,13 @@
       "wbamberg"
     ]
   },
+  "conflicting/Web/HTML": {
+    "modified": "2019-01-16T22:12:02.767Z",
+    "contributors": [
+      "raecillacastellana",
+      "pekechis"
+    ]
+  },
   "conflicting/Web/HTML/Element": {
     "modified": "2020-01-21T22:36:54.135Z",
     "contributors": [
@@ -21821,6 +21814,13 @@
     "modified": "2019-11-03T14:52:14.998Z",
     "contributors": [
       "totopizzahn"
+    ]
+  },
+  "conflicting/Web/SVG": {
+    "modified": "2019-01-16T22:36:49.773Z",
+    "contributors": [
+      "jwhitlock",
+      "ComplementosMozilla"
     ]
   },
   "conflicting/Web/Web_Components/Using_custom_elements": {

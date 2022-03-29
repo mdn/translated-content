@@ -31,7 +31,7 @@ Dans la page des devtools, appelez un script qui ajoutera un panneau dans devtoo
 
 ```html
 <body>
-  <script src="devtools.js"></script>
+  <script src="devtools.js"></script>
 </body>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: 'Django Didactique: Site web "Bibliothèque  locale"'
+title: 'Django Didactique: Site web "Bibliothèque locale"'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 tags:
   - Apprentissage
@@ -23,7 +23,7 @@ Le premier article de cette série didactique explique ce que vous apprendrez et
         <a href="/fr/docs/Learn/Server-side/Django/Introduction"
           >l'introduction</a
         >. Pour les articles suivants avoir mis à jour l'environnement comme
-        décrit précédemment. 
+        décrit précédemment.
       </td>
     </tr>
     <tr>
@@ -71,7 +71,7 @@ Même s'il s'agit d'un sujet extensible, son sujet de *Bibliothèque **locale***
 
 Au fur et à mesure, les codes et commandes à écrire seront fournis. Ils peuvent être copiés et collés à chaque étapes. Il y aura aussi des codes que vous pourrez compléter avec quelques conseils.
 
-Si vous êtes coincé, vous pourrez trouver une version totalement développée du site sur[ Github](https://github.com/mdn/django-locallibrary-tutorial) (**Anglais**).
+Si vous êtes coincé, vous pourrez trouver une version totalement développée du site sur [GitHub](https://github.com/mdn/django-locallibrary-tutorial) (**Anglais**).
 
 ## Résumé
 

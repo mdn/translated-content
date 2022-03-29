@@ -70,7 +70,7 @@ Pousser (push) est plus compliqué que de faire des notifications — nous avons
 
 La technologie en est toujours à ses tous débuts — certains exemples fonctionnels utilisent la plateforme Cloud de messagerie de Google, mais elles sont en cours de réécriture pour prendre en charge [VAPID](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) (Voluntary Application Identification) qui offre une couche de sécurité supplémentaire pour votre application. Vous pouvez étudier les [exemples du Cookbook des Service Workers](https://serviceworke.rs/push-payload.html), essayer de mettre en place un serveur d'émission de messages utilisant [Firebase](https://firebase.google.com/) ou construire votre propre serveur (en utilisant Node.js par exemple).
 
-Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un service worker dont les fondamentaux ont déjà été expliqué dans l'article  [Permettre aux PWAs de fonctionner en mode déconnecté grâce aux Service workers](/fr/docs/Web/Apps/Progressive/Offline_Service_workers). A l'intérieur du service worker, un mécanisme de souscription à un service d'émission est créé.
+Comme mentionné précédemment, pour être capable de recevoir des messages poussés, vous devez avoir un service worker dont les fondamentaux ont déjà été expliqué dans l'article  [Permettre aux PWAs de fonctionner en mode déconnecté grâce aux Service workers](/fr/docs/Web/Apps/Progressive/Offline_Service_workers). A l'intérieur du service worker, un mécanisme de souscription à un service d'émission est créé.
 
 ```js
 registration.pushManager.getSubscription() .then( /* ... */ );
@@ -90,7 +90,7 @@ Les données peuvent être récupérées puis affichées immédiatement à l'uti
 
 ### Exemple de Push
 
-Push requiert que la partie serveur fonctionne, donc nous ne pouvons pas l'inclure dans l'exemple js13kPWA hébergé dans les pages GitHub puisqu'elles ne permettent de servir que des fichiers statiques. C'est entièrement expliqué dans le [Service Worker Cookbook](https://serviceworke.rs/) — voir la[ démonstration de charge utile poussée](https://serviceworke.rs/push-payload.html).
+Push requiert que la partie serveur fonctionne, donc nous ne pouvons pas l'inclure dans l'exemple js13kPWA hébergé dans les pages GitHub puisqu'elles ne permettent de servir que des fichiers statiques. C'est entièrement expliqué dans le [Service Worker Cookbook](https://serviceworke.rs/) — voir la [démonstration de charge utile poussée](https://serviceworke.rs/push-payload.html).
 
 Cette démonstration comporte trois fichiers:
 
@@ -137,7 +137,7 @@ const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 
 L'application récupère la clef publique du serveur et convertit la réponse sous forme de texte; puis cette réponse doit être convertie en un tableau de nombre entier non signé (Uint8Array (pour une prise en charge par Chrome). Pour en apprendre davantage sur les clefs VAPID, vous pouvez lire le message de blog [Envoyer des notifications WebPush identitées par VAPID via le service de Push de Mozilla](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/).
 
-L'application peut maintenant utiliser le {{domxref("PushManager")}} pour abonner le nouvel utilisateur. Il y a deux options passées à la méthode {{domxref("PushManager.subscribe()")}}  — la première est `userVisibleOnly: true`, qui signifie que toutes les notifications envoyées à l'utilisateur lui seront visibles et la seconde est `applicationServerKey`, qui contient notre clef VAPID une fois récupérée et convertie avec succès.
+L'application peut maintenant utiliser le {{domxref("PushManager")}} pour abonner le nouvel utilisateur. Il y a deux options passées à la méthode {{domxref("PushManager.subscribe()")}}  — la première est `userVisibleOnly: true`, qui signifie que toutes les notifications envoyées à l'utilisateur lui seront visibles et la seconde est `applicationServerKey`, qui contient notre clef VAPID une fois récupérée et convertie avec succès.
 
 ```js
 return registration.pushManager.subscribe({
@@ -183,7 +183,7 @@ document.getElementById('doIt').onclick = function() {
 };
 ```
 
-Quand le bouton est cliqué,  `fetch` demande au serveur d'envoyer la notification avec les paramètres suivants: `payload` est le contenu que la notification doir afficher, `delay` définit un délai en seconde avant que la notification soit affichée et `ttl` indique en seconde le temps que cette notification doit rester disponible sur le serveur.
+Quand le bouton est cliqué,  `fetch` demande au serveur d'envoyer la notification avec les paramètres suivants: `payload` est le contenu que la notification doir afficher, `delay` définit un délai en seconde avant que la notification soit affichée et `ttl` indique en seconde le temps que cette notification doit rester disponible sur le serveur.
 
 Au tour maintenant du fichier Javascript suivant.
 
@@ -260,7 +260,7 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-Tout ce qu'il est est d'ajouter une écoute sur l'événément {{event("push")}}, créer la variable de charge utile constituée du texte récupéré depuis les données (ou de créer une chaîne de caractères à utiliser si les données sont vides) puis d'attendre jusqu'à ce que la notfication soit montrée à l'utilisateur.
+Tout ce qu'il est est d'ajouter une écoute sur l'évènement {{event("push")}}, créer la variable de charge utile constituée du texte récupéré depuis les données (ou de créer une chaîne de caractères à utiliser si les données sont vides) puis d'attendre jusqu'à ce que la notfication soit montrée à l'utilisateur.
 
 N'hésitez pas à explorer le reste des exemples du [Service Worker Cookbook](https://serviceworke.rs/) si vous voulez savoir comment ils sont gérés — le [code source complet est disponible sur on GitHub](https://github.com/mozilla/serviceworker-cookbook/). Il y a une vaste collection d'exemples fonctionnels démontrant l'usage général ainsi que le push web, les stratégies de mise en cache, la question des performances, le fonctionnement en mode déconnecté et plus encore.
 

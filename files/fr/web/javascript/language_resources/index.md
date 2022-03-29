@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Language_Resources
         >,
         <a href="http://ecma-international.org/ecma-262/9.0/index.html#Title"
           >HTML</a
-        >, <br /><a href="https://tc39.github.io/ecma262/"
+        >, <br /><a href="https://tc39.github.io/ecma262/"
           >Brouillon de travail</a
         >, <a href="https://github.com/tc39/ecma262">dépôt</a>
       </td>
@@ -238,7 +238,7 @@ ES.Next est un nom dynamique qui fait toujours référence à la prochaine versi
 
 Pour plus d'informations sur l'histoire d'ECMAScript, voir [la page Wikipédia sur ECMAScript](https://fr.wikipedia.org/wiki/ECMAScript).
 
-Il est possible de participer ou de suivre les travaux concernant la prochaine révision de la spécification sur le langage ECMAScript, appelée « Harmony », ainsi que pour la spécification de l'API d'internationalisation grâce au wiki public et à la liste de diffusion[ es-discuss](https://mail.mozilla.org/listinfo/es-discuss) accessibles depuis [ecmascript.org](https://www.ecmascript.org/community.php).
+Il est possible de participer ou de suivre les travaux concernant la prochaine révision de la spécification sur le langage ECMAScript, appelée « Harmony », ainsi que pour la spécification de l'API d'internationalisation grâce au wiki public et à la liste de diffusion [es-discuss](https://mail.mozilla.org/listinfo/es-discuss) accessibles depuis [ecmascript.org](https://www.ecmascript.org/community.php).
 
 ## Implémentations
 

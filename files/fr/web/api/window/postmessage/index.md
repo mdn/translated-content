@@ -11,9 +11,9 @@ translation_of: Web/API/Window/postMessage
 ---
 {{ ApiRef() }}
 
-La méthode **`window.postMessage`** permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même [origine](/en-US/docs/Glossary/Origin), c'est-à-dire avec le même protocole (généralement `http` ou `https`), le même numéro de port (`80` étant le port par défaut pour  `http`), et le même nom d'hôte (à condition que [document.domain](/en-US/docs/DOM/document.domain) soit initialisé à la même valeur par les deux pages). `window.postMessage` fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.
+La méthode **`window.postMessage`** permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même [origine](/en-US/docs/Glossary/Origin), c'est-à-dire avec le même protocole (généralement `http` ou `https`), le même numéro de port (`80` étant le port par défaut pour  `http`), et le même nom d'hôte (à condition que [document.domain](/en-US/docs/DOM/document.domain) soit initialisé à la même valeur par les deux pages). `window.postMessage` fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.
 
-La méthode `window.postMessage`, quand elle est appelée, provoque l'envoi d'un {{domxref("MessageEvent")}} à la fenêtre ciblée une fois que tout script en attente a terminé son exécution (par exemple, les gestionnaires d'évènements restants si `window.postMessage` est appelée depuis un gestionnaire d'évènement, des timeouts en attente enregistrées auparavant, etc.) Le {{domxref("MessageEvent")}} est de type `message`, a une propriété `data` qui est initialisée à la valeur du premier argument passé à` window.postMessage`, une propriété `origin` correspondant à l'origine du document principal de la fenêtre appelant `window.postMessage` au moment où `window.postMessage` a été appelée, et une propriété `source` qui est la fenêtre depuis laquelle `window.postMessage` est appelée. (les autres propriétés standard d'évènement sont présentes avec leurs valeurs attendues).
+La méthode `window.postMessage`, quand elle est appelée, provoque l'envoi d'un [`MessageEvent`](/fr/docs/Web/API/MessageEvent) à la fenêtre ciblée une fois que tout script en attente a terminé son exécution (par exemple, les gestionnaires d'évènements restants si `window.postMessage` est appelée depuis un gestionnaire d'évènement, des timeouts en attente enregistrées auparavant, etc.) Le [`MessageEvent`](/fr/docs/Web/API/MessageEvent) est de type `message`, a une propriété `data` qui est initialisée à la valeur du premier argument passé à `window.postMessage`, une propriété `origin` correspondant à l'origine du document principal de la fenêtre appelant `window.postMessage` au moment où `window.postMessage` a été appelée, et une propriété `source` qui est la fenêtre depuis laquelle `window.postMessage` est appelée (les autres propriétés standard d'évènement sont présentes avec leurs valeurs attendues).
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ La méthode `window.postMessage`, quand elle est appelée, provoque l'envoi d'un
 - `message`
   - : La donnée à envoyer à l'autre fenêtre. Elle est sérialisée en utilisant [l'algorithme de clônage structuré](/fr/docs/Web/Guide/API/DOM/The_structured_clone_algorithm). Cela signifie que vous pouvez passer sereinement une large variété d'objets de données à la fenêtre de destination sans avoir à les sérialiser vous-mêmes. \[1]
 - `targetOrigin`
-  - : Indique quelle doit être l'origine de `otherWindow` pour l'évènement à envoyer, soit comme la chaîne littérale `"*"` (signifiant pas de préférence) soit comme une URI. Si, au moment où l'évènement est inscrit pour être envoyé, le protocole, le nom d'hôte ou le port du document de `otherWindow` ne correspond pas à ceux contenus dans `targetOrigin`,  l'évènement ne sera pas envoyé ; il ne le sera que si les trois correspondent. Ce mécanisme permet de contrôler où les messages sont envoyés ; par exemple, si `postMessage` était utilisé pour transmettre un mot de passe, il serait absolument vital que cet argument soit une URI dont l'origine est la même que le récepteur prévu du message contenant le mot de passe, afin de prévenir l'interception du mot de passe par une tierce-partie malicieuse. **Fournissez toujours une `targetOrigin` spécifique, jamais `*`, si vous savez où le document de l'autre fenêtre est censé se trouver. Ne pas fournir une cible spécifique expose les données que vous envoyez à tout site malicieux à l'écoute.**
+  - : Indique quelle doit être l'origine de `otherWindow` pour l'évènement à envoyer, soit comme la chaîne littérale `"*"` (signifiant pas de préférence) soit comme une URI. Si, au moment où l'évènement est inscrit pour être envoyé, le protocole, le nom d'hôte ou le port du document de `otherWindow` ne correspond pas à ceux contenus dans `targetOrigin`,  l'évènement ne sera pas envoyé ; il ne le sera que si les trois correspondent. Ce mécanisme permet de contrôler où les messages sont envoyés ; par exemple, si `postMessage` était utilisé pour transmettre un mot de passe, il serait absolument vital que cet argument soit une URI dont l'origine est la même que le récepteur prévu du message contenant le mot de passe, afin de prévenir l'interception du mot de passe par une tierce-partie malicieuse. **Fournissez toujours une `targetOrigin` spécifique, jamais `*`, si vous savez où le document de l'autre fenêtre est censé se trouver. Ne pas fournir une cible spécifique expose les données que vous envoyez à tout site malicieux à l'écoute.**
 - `transfer` {{optional_Inline}}
   - : Séquence d'objets {{domxref("Transferable")}} qui sera transmise avec le message. La possession de ces objets est cédée à la destination et ils ne sont plus utilisables du côté de l'expéditeur.
 
@@ -37,7 +37,7 @@ window.addEventListener("message", receiveMessage, false);
 
 function receiveMessage(event)
 {
-  if (event.origin !== "http://example.org:8080")
+  if (event.origin&nbsp;!== "http://example.org:8080")
     return;
 
   // ...
@@ -86,7 +86,7 @@ function receiveMessage(event)
 {
   // Faisons-nous confiance à l'expéditeur de ce message ?  (il pourrait être
   // différent de la fenêtre que nous avons ouverte au départ, par exemple).
-  if (event.origin !== "http://example.org")
+  if (event.origin&nbsp;!== "http://example.org")
     return;
 
   // event.source est la popup
@@ -104,7 +104,7 @@ window.addEventListener("message", receiveMessage, false);
 function receiveMessage(event)
 {
   // Faisons-nous confiance à l'expéditeur de ce message ?
-  if (event.origin !== "http://example.com:8080")
+  if (event.origin&nbsp;!== "http://example.com:8080")
     return;
 
   // event.source est window.opener
@@ -136,7 +136,11 @@ La valeur de la propriété `origin` quand la fenêtre expéditrice contient une
 
 ### Utiliser window\.postMessage dans les extensions {{Non-standard_inline}}
 
-`window.postMessage` est disponible depuis le JavaScript exécuté en code chrome (par exemple dans les extensions et le code privilégié), mais la propriété `source` de l'évènement envoyé est toujours `null` par mesure de sécurité. (Les autres propriétés ont leurs valeurs usuelles.) L'argument `targetOrigin` pour un message envoyé à une fenêtre située à une URL` chrome:` est actuellement mal interprété, si bien que la seule valeur qui conduit à l'envoi d'un message est `"*"`. Comme cette valeur n'est pas sûre quand la fenêtre ciblée peut être naviguée n'importe où par un site malicieux, il est recommandé de ne pas utiliser `postMessage` pour communiquer avec des pages `chrome:` pour l'instant ; utilisez une méthode différente (comme une query string quand la fenêtre est ouverte) pour communiquer avec des fenêtres chrome. Enfin, poster un message à une page à une URL `file:` requiert actuellement que l'argument `targetOrigin` soit `"*"`. `file://` ne peut pas être utilisé comme restriction de sécurité ; cette restriction pourrait être modifiée à l'avenir.
+`window.postMessage` est disponible depuis le JavaScript exécuté en code chrome (par exemple, dans les extensions et le code privilégié), mais la propriété `source` de l'évènement envoyé est toujours `null` par mesure de sécurité. (Les autres propriétés ont leurs valeurs usuelles.)
+
+L'argument `targetOrigin` pour un message envoyé à une fenêtre située à une URL `chrome:` est actuellement mal interprété, si bien que la seule valeur qui conduit à l'envoi d'un message est `"*"`. Comme cette valeur n'est pas sûre quand la fenêtre ciblée peut être naviguée n'importe où par un site malicieux, il est recommandé de ne pas utiliser `postMessage` pour communiquer avec des pages `chrome:` pour l'instant&nbsp;; utilisez une méthode différente (comme une chaîne de requête quand la fenêtre est ouverte) pour communiquer avec des fenêtres chrome.
+
+Enfin, poster un message à une page à une URL `file:` requiert actuellement que l'argument `targetOrigin` soit `"*"`. `file://` ne peut pas être utilisé comme restriction de sécurité&nbsp;; cette restriction pourrait être modifiée à l'avenir.
 
 ## Spécifications
 

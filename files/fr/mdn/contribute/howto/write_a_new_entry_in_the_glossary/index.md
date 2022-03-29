@@ -10,11 +10,11 @@ translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
 {{MDNSidebar}}
 
-Le [glossaire](/fr/docs/Glossary) MDN est le lieu privilégié où nous définissons la terminologie, le jargon et les abréviations utilisés dans la documentation et les codes.  Contribuer à ce glossaire est une moyen simple de rendre le Web plus compréhensible pour n'importe qui. Nul besoin de posséder un haut niveau de compétence pour écrire des entrées du glossaire,  elles doivent rester simples et évidentes.
+Le [glossaire](/fr/docs/Glossary) MDN est le lieu privilégié où nous définissons la terminologie, le jargon et les abréviations utilisés dans la documentation et les codes.  Contribuer à ce glossaire est une moyen simple de rendre le Web plus compréhensible pour n'importe qui. Nul besoin de posséder un haut niveau de compétence pour écrire des entrées du glossaire,  elles doivent rester simples et évidentes.
 
 ## Comment créer une entrée
 
-Pour trouver des sujets ayant besoin d'entrées de glossaire, consultez la [liste des termes à documenter ](/fr/docs/Glossary#Contribute_to_the_glossary)à la fin de la page concernant le sujet en question ; cliquez n'importe lequel de ses liens pour commencer une nouvelle page de glossaire, puis suivez les étapes ci-dessous.
+Pour trouver des sujets ayant besoin d'entrées de glossaire, consultez la [liste des termes à documenter](/fr/docs/Glossary#Contribute_to_the_glossary) à la fin de la page concernant le sujet en question ; cliquez n'importe lequel de ses liens pour commencer une nouvelle page de glossaire, puis suivez les étapes ci-dessous.
 
 ### Étape 1: écrire un résumé
 
@@ -61,13 +61,13 @@ Illustrons cela par un exemple. Le terme _signature_ peut avoir différentes sig
 
 ## Utiliser la macro \\{{Glossary}}
 
-Le glossaire devient beaucoup plus utile lorsque le lecteur peut atteindre les définitions depuis un autre document sans avoir à  naviguer hors de ce document. C'est la raison pour laquelle nous vous incitons à créer des liens vers le glossaire dès que vous le pouvez, en utilisant la macro {{TemplateLink("Glossary")}} :
+Le glossaire devient beaucoup plus utile lorsque le lecteur peut atteindre les définitions depuis un autre document sans avoir à naviguer hors de ce document. C'est la raison pour laquelle nous vous incitons à créer des liens vers le glossaire dès que vous le pouvez, en utilisant la macro {{TemplateLink("Glossary")}} :
 
 | Macro                                                      | Result                                               | Note                                                                                                                                                    |
 | ---------------------------------------------------------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \\{{Glossary("browser")}}                         | {{Glossary("browser")}}                     | Quand un terme correspond à un terme à définir, utilisez simplement la macro telle quelle (notez qu'elle est sensible à la casse — minuscule/majuscule) |
 | \\{{Glossary("browser", "Web browser")}}     | {{Glossary("browser","Web browser")}}     | Fournissez en deuxième argument un texte alternatif à afficher.                                                                                         |
-| \\{{Glossary("browser", "Web browser", 1)}} | {{Glossary("browser","Web browser",1)}} | Optionnellement, entrez le chiffre` 1` comme troisième argument pour afficher le lien de façon classique plutôt que comme une mise en exergue subtile.  |
+| \\{{Glossary("browser", "Web browser", 1)}} | {{Glossary("browser","Web browser",1)}} | Optionnellement, entrez le chiffre `1` comme troisième argument pour afficher le lien de façon classique plutôt que comme une mise en exergue subtile.  |
 
 Les liens créés avec la macro \\{{Glossary}} affichent toujours un texte au survol de la souris, qui contient le résumé de l'entrée du glossaire (cf. ci-dessus).
 

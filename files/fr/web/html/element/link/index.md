@@ -10,7 +10,7 @@ translation_of: Web/HTML/Element/link
 ---
 {{HTMLRef}}
 
-L'élément HTML** `<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers [une feuille de style](/fr/docs/Glossaire/CSS), vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
+L'élément HTML **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers [une feuille de style](/fr/docs/Glossaire/CSS), vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
 
 {{EmbedInteractiveExample("pages/tabbed/link.html")}}
 
@@ -20,7 +20,7 @@ Pour lier une feuille de style externe, on inclut un élément `<link>` de la fo
 <link href="main.css" rel="stylesheet">
 ```
 
-Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut  `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Types_de_lien).
+Dans cet exemple, on indique le chemin vers la feuille de style grâce à l'attribut `href`, l'attribut  `rel` possède une valeur `stylesheet` qui indique que c'est une feuille de style. `rel` signifie _relationship_ qui correspond donc à la relation entre la ressource et le document courant. Il existe de [nombreux types de liens possibles](/fr/docs/Web/HTML/Types_de_lien).
 
 Certains types sont assez fréquents. Ainsi, pour l'icône présentant le site dans l'onglet, on trouvera :
 

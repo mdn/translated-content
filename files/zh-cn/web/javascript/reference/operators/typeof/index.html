@@ -19,17 +19,15 @@ translation_of: Web/JavaScript/Reference/Operators/typeof
 
 <p><code>typeof</code> 运算符后接操作数：</p>
 
-<pre class="syntaxbox notranslate">typeof <em>operand
+<pre class="syntaxbox">typeof <em>operand
 typeof(operand)</em>
 </pre>
 
-<h3 id="参数" style="line-height: 24px; font-size: 1.71428571428571rem;">参数</h3>
+<h3 id="参数">参数</h3>
 
 <p><strong><code>operand</code></strong></p>
 
-<dl>
- <dd>一个表示对象或{{Glossary("Primitive", "原始值")}}的表达式，其类型将被返回。</dd>
-</dl>
+<p>一个表示对象或{{Glossary("Primitive", "原始值")}}的表达式，其类型将被返回。</p>
 
 <h2 id="描述">描述</h2>
 
@@ -49,7 +47,7 @@ typeof(operand)</em>
   </tr>
   <tr>
    <td>{{glossary("Null")}}</td>
-   <td><code>"object"</code> (见{{anch("null", "下文")}})</td>
+   <td><code>"object"</code> (见<a href="#typeof_null">下文</a>)</td>
   </tr>
   <tr>
    <td>{{glossary("Boolean")}}</td>
@@ -88,7 +86,7 @@ typeof(operand)</em>
 
 <h2 id="示例">示例</h2>
 
-<pre class="brush: js notranslate">// 数值
+<pre class="brush: js">// 数值
 typeof 37 === 'number';
 typeof 3.14 === 'number';
 typeof(42) === 'number';
@@ -152,7 +150,7 @@ typeof Math.sin === 'function';
 
 <h3 id="typeof_null"><code>typeof null</code></h3>
 
-<pre class="brush: js notranslate"><code>// JavaScript 诞生以来便如此
+<pre class="brush: js"><code>// JavaScript 诞生以来便如此
 typeof null === 'object';</code></pre>
 
 <p>在 JavaScript 最初的实现中，JavaScript 中的值是由一个表示类型的标签和实际数据值表示的。对象的类型标签是 0。由于 <code>null</code> 代表的是空指针（大多数平台下值为 0x00），因此，null 的类型标签是 0，<code>typeof null</code> 也因此返回 <code>"object"</code>。（<a href="http://www.2ality.com/2013/10/typeof-null.html">参考来源</a>）</p>
@@ -161,7 +159,7 @@ typeof null === 'object';</code></pre>
 
 <h3 id="使用_new_操作符">使用 <code>new</code> 操作符</h3>
 
-<pre class="brush: js notranslate">// 除 Function 外的所有构造函数的类型都是 'object'
+<pre class="brush: js">// 除 Function 外的所有构造函数的类型都是 'object'
 var str = new String('String');
 var num = new Number(100);
 
@@ -174,7 +172,7 @@ typeof func; // 返回 'function'</pre>
 
 <h3 id="语法中的括号">语法中的括号</h3>
 
-<pre class="brush: js notranslate">// 括号有无将决定表达式的类型。
+<pre class="brush: js">// 括号有无将决定表达式的类型。
 var iData = 99;
 
 typeof iData + ' Wisen'; // 'number Wisen'
@@ -184,7 +182,7 @@ typeof (iData + ' Wisen'); // 'string'</pre>
 
 <p>对正则表达式字面量的类型判断在某些浏览器中不符合标准：</p>
 
-<pre class="brush: js notranslate">typeof /s/ === 'function'; // Chrome 1-12 , 不符合 ECMAScript 5.1
+<pre class="brush: js">typeof /s/ === 'function'; // Chrome 1-12 , 不符合 ECMAScript 5.1
 typeof /s/ === 'object'; // Firefox 5+ , 符合 ECMAScript 5.1
 </pre>
 
@@ -194,7 +192,7 @@ typeof /s/ === 'object'; // Firefox 5+ , 符合 ECMAScript 5.1
 
 <p>但在加入了块级作用域的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let">let</a> 和 <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/const">const</a> 之后，在其被声明之前对块中的 <code>let</code> 和 <code>const</code> 变量使用 <code>typeof</code> 会抛出一个 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a>。块作用域变量在块的头部处于“<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let">暂存死区</a>”，直至其被初始化，在这期间，访问变量将会引发错误。</p>
 
-<pre class="brush: js notranslate">typeof undeclaredVariable === 'undefined';
+<pre class="brush: js">typeof undeclaredVariable === 'undefined';
 
 typeof newLetVariable; // ReferenceError
 typeof newConstVariable; // ReferenceError
@@ -208,7 +206,7 @@ class newClass{};</pre>
 
 <p>当前所有的浏览器都暴露了一个类型为 <code>undefined</code> 的非标准宿主对象 {{domxref("document.all")}}。</p>
 
-<pre class="brush: js notranslate">typeof document.all === 'undefined';
+<pre class="brush: js">typeof document.all === 'undefined';
 </pre>
 
 <p>尽管规范允许为非标准的外来对象自定义类型标签，但它要求这些类型标签与已有的不同。<code>document.all</code> 的类型标签为 <code>'undefined'</code> 的例子在 Web 领域中被归类为对原 ECMA JavaScript 标准的“故意侵犯”。</p>
@@ -219,7 +217,7 @@ class newClass{};</pre>
 
 <p>For greater specificity in checking types, a <code>typeof</code> wrapper for usage in production-level code would be as follows (provided <code>obj</code> exists):</p>
 
-<pre class="brush: js notranslate">  function type(obj, fullClass) {
+<pre class="brush: js">  function type(obj, fullClass) {
 
     // get toPrototypeString() of obj (handles all types)
     // Early JS environments return '[object Object]' for null, so it's best to directly check for it.
@@ -258,19 +256,17 @@ class newClass{};</pre>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
 
-<div id="compat-desktop">
+<div>
 <p>{{Compat("javascript.operators.typeof")}}</p>
 
 <h2 id="IE_特别提示">IE 特别提示</h2>
 
 <p>在 IE 6, 7 和 8 上，很多宿主对象是对象而不是函数。例如：</p>
 
-<pre class="brush: js notranslate">typeof alert === 'object'</pre>
+<pre class="brush: js">typeof alert === 'object'</pre>
 </div>
 
-<div class="brush:js language-js line-number" style=""></div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a></code></li>
@@ -278,7 +274,3 @@ class newClass{};</pre>
  <li><a href="https://github.com/tc39/ecma262/issues/668">document.all willful violation of the standard</a></li>
  <li><a href="https://2ality.com/2013/10/typeof-null.html">The history of “typeof null”</a></li>
 </ul>
-
-<div id="gtx-trans" style="position: absolute; left: 101px; top: 2989.43px;">
-<div class="gtx-trans-icon"></div>
-</div>

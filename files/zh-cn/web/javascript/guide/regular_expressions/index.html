@@ -21,14 +21,14 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>使用一个正则表达式字面量，其由包含在斜杠之间的模式组成，如下所示：</p>
 
-<pre class="brush: js notranslate">var re = /ab+c/;
+<pre class="brush: js">var re = /ab+c/;
 </pre>
 
 <p>脚本加载后，正则表达式字面量就会被编译。当正则表达式保持不变时，使用此方法可获得更好的性能。</p>
 
 <p>或者调用<code><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp" title="zh-CN/docs/JavaScript/Reference/Global Objects/RegExp">RegExp</a></code>对象的构造函数，如下所示：</p>
 
-<pre class="brush: js notranslate">var re = new RegExp("ab+c");
+<pre class="brush: js">var re = new RegExp("ab+c");
 </pre>
 
 <p>在脚本运行过程中，用构造函数创建的正则表达式会被编译。如果正则表达式将会改变，或者它将会从用户输入等来源中动态地产生，就需要使用构造函数来创建正则表达式。</p>
@@ -70,7 +70,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
  </thead>
  <tbody>
   <tr>
-   <td><a href="#special-backslash" id="special-backslash" name="special-backslash"><code>\</code></a></td>
+   <td><a href="#special-backslash" id="special-backslash"><code>\</code></a></td>
    <td>
     <p>依照下列规则匹配：</p>
 
@@ -82,7 +82,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-caret" id="special-caret" name="special-caret"><code>^</code></a></td>
+   <td><a href="#special-caret" id="special-caret"><code>^</code></a></td>
    <td>
     <p>匹配输入的开始。如果多行标志被设置为 true，那么也匹配换行符后紧跟的位置。</p>
 
@@ -92,7 +92,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-dollar" id="special-dollar" name="special-dollar"><code>$</code></a></td>
+   <td><a href="#special-dollar" id="special-dollar"><code>$</code></a></td>
    <td>
     <p>匹配输入的结束。如果多行标志被设置为 true，那么也匹配换行符前的位置。</p>
 
@@ -100,7 +100,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-asterisk" id="special-asterisk" name="special-asterisk"><code>*</code></a></td>
+   <td><a href="#special-asterisk" id="special-asterisk"><code>*</code></a></td>
    <td>
     <p>匹配前一个表达式 0 次或多次。等价于 <code>{0,}</code>。</p>
 
@@ -108,7 +108,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-plus" id="special-plus" name="special-plus"><code>+</code></a></td>
+   <td><a href="#special-plus" id="special-plus"><code>+</code></a></td>
    <td>
     <p>匹配前面一个表达式 1 次或者多次。等价于 <code>{1,}</code>。</p>
 
@@ -116,7 +116,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-questionmark" id="special-questionmark" name="special-questionmark"><code>?</code></a></td>
+   <td><a href="#special-questionmark" id="special-questionmark"><code>?</code></a></td>
    <td>
     <p>匹配前面一个表达式 0 次或者 1 次。等价于 <code>{0,1}</code>。</p>
 
@@ -128,7 +128,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-dot" id="special-dot" name="special-dot"><code>.</code></a></td>
+   <td><a href="#special-dot" id="special-dot"><code>.</code></a></td>
    <td>
     <p>（小数点）默认匹配除换行符之外的任何单个字符。</p>
 
@@ -138,21 +138,21 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-capturing-parentheses" id="special-capturing-parentheses" name="special-capturing-parentheses"><code>(x)</code></a></td>
+   <td><a href="#special-capturing-parentheses" id="special-capturing-parentheses"><code>(x)</code></a></td>
    <td>
     <p>像下面的例子展示的那样，它会匹配 'x' 并且记住匹配项。其中括号被称为<em>捕获括号</em>。</p>
 
-    <p>模式 <code>/(foo) (bar) \1 \2/</code> 中的 '<code>(foo)</code>' 和 '<code>(bar)</code>' 匹配并记住字符串 "foo bar foo bar" 中前两个单词。模式中的 <code>\1</code> 和 <code>\2</code> 表示第一个和第二个被捕获括号匹配的子字符串，即 <code>foo</code> 和 <code>bar</code>，匹配了原字符串中的后两个单词。注意 <code>\1</code>、<code>\2</code>、...、<code>\n</code> 是用在正则表达式的匹配环节，详情可以参阅后文的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions$edit#special-backreference">\n</a> 条目。而在正则表达式的替换环节，则要使用像 <code>$1</code>、<code>$2</code>、...、<code>$n</code> 这样的语法，例如，<code>'bar foo'.replace(/(...) (...)/, '$2 $1')</code>。<code>$&amp;</code> 表示整个用于匹配的原字符串。</p>
+    <p>模式 <code>/(foo) (bar) \1 \2/</code> 中的 '<code>(foo)</code>' 和 '<code>(bar)</code>' 匹配并记住字符串 "foo bar foo bar" 中前两个单词。模式中的 <code>\1</code> 和 <code>\2</code> 表示第一个和第二个被捕获括号匹配的子字符串，即 <code>foo</code> 和 <code>bar</code>，匹配了原字符串中的后两个单词。注意 <code>\1</code>、<code>\2</code>、...、<code>\n</code> 是用在正则表达式的匹配环节，详情可以参阅后文的 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions#special-backreference">\n</a> 条目。而在正则表达式的替换环节，则要使用像 <code>$1</code>、<code>$2</code>、...、<code>$n</code> 这样的语法，例如，<code>'bar foo'.replace(/(...) (...)/, '$2 $1')</code>。<code>$&amp;</code> 表示整个用于匹配的原字符串。</p>
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-capturing-parentheses" id="special-non-capturing-parentheses" name="special-non-capturing-parentheses"><code>(?:x)</code></a></td>
+   <td><a href="#special-non-capturing-parentheses" id="special-non-capturing-parentheses"><code>(?:x)</code></a></td>
    <td>
     <p>匹配 'x' 但是不记住匹配项。这种括号叫作<em>非捕获括号</em>，使得你能够定义与正则表达式运算符一起使用的子表达式。看看这个例子 <code>/(?:foo){1,2}/</code>。如果表达式是 <code>/foo{1,2}/</code>，<code>{1,2}</code> 将只应用于 'foo' 的最后一个字符 'o'。如果使用非捕获括号，则 <code>{1,2}</code> 会应用于整个 'foo' 单词。更多信息，可以参阅下文的 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_parentheses">Using parentheses</a> 条目.</p>
    </td>
   </tr>
   <tr>
-   <td><a href="#special-lookahead" id="special-lookahead" name="special-lookahead"><code>x(?=y)</code></a></td>
+   <td><a href="#special-lookahead" id="special-lookahead"><code>x(?=y)</code></a></td>
    <td>
     <p>匹配'x'仅仅当'x'后面跟着'y'.这种叫做先行断言。</p>
 
@@ -160,7 +160,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-lookahead" id="special-lookahead" name="special-lookahead"><code>(?&lt;=y)</code></a>x</td>
+   <td><a href="#special-lookahead" id="special-lookahead"><code>(?&lt;=y)</code></a>x</td>
    <td>
     <p>匹配'x'仅当'x'前面是'y'.这种叫做后行断言。</p>
 
@@ -168,7 +168,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-negated-look-ahead" id="special-negated-look-ahead" name="special-negated-look-ahead"><code>x(?!y)</code></a></td>
+   <td><a href="#special-negated-look-ahead" id="special-negated-look-ahead"><code>x(?!y)</code></a></td>
    <td>
     <p>仅仅当'x'后面不跟着'y'时匹配'x'，这被称为正向否定查找。</p>
 
@@ -186,7 +186,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-or" id="special-or" name="special-or"><code>x|y</code></a></td>
+   <td><a href="#special-or" id="special-or"><code>x|y</code></a></td>
    <td>
     <p>匹配‘x’或者‘y’。</p>
 
@@ -194,12 +194,12 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-quantifier" id="special-quantifier" name="special-quantifier"><code>{n}</code></a></td>
+   <td><a href="#special-quantifier" id="special-quantifier"><code>{n}</code></a></td>
    <td>n 是一个正整数，匹配了前面一个字符刚好出现了 n 次。<br>
     比如， /a{2}/ 不会匹配“candy”中的'a',但是会匹配“caandy”中所有的 a，以及“caaandy”中的前两个'a'。</td>
   </tr>
   <tr>
-   <td><a href="#special-quantifier" id="special-quantifier" name="special-quantifier"><code>{n,}</code></a></td>
+   <td><a href="#special-quantifier" id="special-quantifier"><code>{n,}</code></a></td>
    <td>
     <p>n是一个正整数，匹配前一个字符至少出现了n次。</p>
 
@@ -207,7 +207,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-quantifier-range" id="special-quantifier-range" name="special-quantifier-range"><code>{n,m}</code></a></td>
+   <td><a href="#special-quantifier-range" id="special-quantifier-range"><code>{n,m}</code></a></td>
    <td>
     <p>n 和 m 都是整数。匹配前面的字符至少n次，最多m次。如果 n 或者 m 的值是0， 这个值被忽略。</p>
 
@@ -215,12 +215,12 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-character-set" id="special-character-set" name="special-character-set"><code>[xyz]</code></a></td>
+   <td><a href="#special-character-set" id="special-character-set"><code>[xyz]</code></a></td>
    <td>一个字符集合。匹配方括号中的任意字符，包括<a href="/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types">转义序列</a>。你可以使用破折号（-）来指定一个字符范围。对于点（.）和星号（*）这样的特殊符号在一个字符集中没有特殊的意义。他们不必进行转义，不过转义也是起作用的。<br>
     例如，[abcd] 和[a-d]是一样的。他们都匹配"brisket"中的‘b’,也都匹配“city”中的‘c’。/[a-z.]+/ 和/[\w.]+/与字符串“test.i.ng”匹配。</td>
   </tr>
   <tr>
-   <td><a href="#special-negated-character-set" id="special-negated-character-set" name="special-negated-character-set"><code>[^xyz]</code></a></td>
+   <td><a href="#special-negated-character-set" id="special-negated-character-set"><code>[^xyz]</code></a></td>
    <td>
     <p>一个反向字符集。也就是说， 它匹配任何没有包含在方括号中的字符。你可以使用破折号（-）来指定一个字符范围。任何普通字符在这里都是起作用的。</p>
 
@@ -228,13 +228,13 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-backspace" id="special-backspace" name="special-backspace"><code>[\b]</code></a></td>
+   <td><a href="#special-backspace" id="special-backspace"><code>[\b]</code></a></td>
    <td>
     <p>匹配一个退格(U+0008)。（不要和\b混淆了。）</p>
    </td>
   </tr>
   <tr>
-   <td><a href="#special-word-boundary" id="special-word-boundary" name="special-word-boundary"><code>\b</code></a></td>
+   <td><a href="#special-word-boundary" id="special-word-boundary"><code>\b</code></a></td>
    <td>
     <p>匹配一个词的边界。一个词的边界就是一个词不被另外一个“字”字符跟随的位置或者前面跟其他“字”字符的位置，例如在字母和空格之间。注意，匹配中不包括匹配的字边界。换句话说，一个匹配的词的边界的内容的长度是0。（不要和[\b]混淆了）</p>
 
@@ -245,12 +245,12 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
      /\w\b\w/将不能匹配任何字符串，因为在一个单词中间的字符永远也不可能同时满足没有“字”字符跟随和有“字”字符跟随两种情况。</p>
 
     <div class="note">
-    <p><strong>注意:</strong> JavaScript的正则表达式引擎将<a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.6">特定的字符集</a>定义为“字”字符。不在该集合中的任何字符都被认为是一个断词。这组字符相当有限：它只包括大写和小写的罗马字母，十进制数字和下划线字符。不幸的是，重要的字符，例如“<a id="none" name="none"></a>é”或“ü”，被视为断词。</p>
+    <p><strong>备注：</strong> JavaScript的正则表达式引擎将<a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.10.2.6">特定的字符集</a>定义为“字”字符。不在该集合中的任何字符都被认为是一个断词。这组字符相当有限：它只包括大写和小写的罗马字母，十进制数字和下划线字符。不幸的是，重要的字符，例如“é”或“ü”，被视为断词。</p>
     </div>
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-word-boundary" id="special-non-word-boundary" name="special-non-word-boundary"><code>\B</code></a></td>
+   <td><a href="#special-non-word-boundary" id="special-non-word-boundary"><code>\B</code></a></td>
    <td>
     <p>匹配一个非单词边界。匹配如下几种情况：</p>
 
@@ -266,7 +266,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-control" id="special-control" name="special-control"><code>\c<em>X</em></code></a></td>
+   <td><a href="#special-control" id="special-control"><code>\c<em>X</em></code></a></td>
    <td>
     <p>当X是处于A到Z之间的字符的时候，匹配字符串中的一个控制符。</p>
 
@@ -274,7 +274,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-digit" id="special-digit" name="special-digit"><code>\d</code></a></td>
+   <td><a href="#special-digit" id="special-digit"><code>\d</code></a></td>
    <td>
     <p>匹配一个数字<code>。</code><code>等价于[0-9]</code>。</p>
 
@@ -282,7 +282,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-digit" id="special-non-digit" name="special-non-digit"><code>\D</code></a></td>
+   <td><a href="#special-non-digit" id="special-non-digit"><code>\D</code></a></td>
    <td>
     <p>匹配一个非数字字符<code>。</code><code>等价于[^0-9]</code>。</p>
 
@@ -290,19 +290,19 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-form-feed" id="special-form-feed" name="special-form-feed"><code>\f</code></a></td>
+   <td><a href="#special-form-feed" id="special-form-feed"><code>\f</code></a></td>
    <td>匹配一个换页符 (U+000C)。</td>
   </tr>
   <tr>
-   <td><a href="#special-line-feed" id="special-line-feed" name="special-line-feed"><code>\n</code></a></td>
+   <td><a href="#special-line-feed" id="special-line-feed"><code>\n</code></a></td>
    <td>匹配一个换行符 (U+000A)。</td>
   </tr>
   <tr>
-   <td><a href="#special-carriage-return" id="special-carriage-return" name="special-carriage-return"><code>\r</code></a></td>
+   <td><a href="#special-carriage-return" id="special-carriage-return"><code>\r</code></a></td>
    <td>匹配一个回车符 (U+000D)。</td>
   </tr>
   <tr>
-   <td><a href="#special-white-space" id="special-white-space" name="special-white-space"><code>\s</code></a></td>
+   <td><a href="#special-white-space" id="special-white-space"><code>\s</code></a></td>
    <td>
     <p>匹配一个空白字符，包括空格、制表符、换页符和换行符。等价于[ \f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]。</p>
 
@@ -312,7 +312,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-white-space" id="special-non-white-space" name="special-non-white-space"><code>\S</code></a></td>
+   <td><a href="#special-non-white-space" id="special-non-white-space"><code>\S</code></a></td>
    <td>
     <p>匹配一个非空白字符。等价于 <code>[^ </code>\f\n\r\t\v\u00a0\u1680\u180e\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff<code>]</code>。</p>
 
@@ -320,15 +320,15 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-tab" id="special-tab" name="special-tab"><code>\t</code></a></td>
+   <td><a href="#special-tab" id="special-tab"><code>\t</code></a></td>
    <td>匹配一个水平制表符 (U+0009)。</td>
   </tr>
   <tr>
-   <td><a href="#special-vertical-tab" id="special-vertical-tab" name="special-vertical-tab"><code>\v</code></a></td>
+   <td><a href="#special-vertical-tab" id="special-vertical-tab"><code>\v</code></a></td>
    <td>匹配一个垂直制表符 (U+000B)。</td>
   </tr>
   <tr>
-   <td><a href="#special-word" id="special-word" name="special-word"><code>\w</code></a></td>
+   <td><a href="#special-word" id="special-word"><code>\w</code></a></td>
    <td>
     <p>匹配一个单字字符（字母、数字或者下划线）。等价于 <code>[A-Za-z0-9_]</code>。</p>
 
@@ -336,7 +336,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-word" id="special-non-word" name="special-non-word"><code>\W</code></a></td>
+   <td><a href="#special-non-word" id="special-non-word"><code>\W</code></a></td>
    <td>
     <p>匹配一个非单字字符。等价于 <code>[^A-Za-z0-9_]</code>。</p>
 
@@ -344,7 +344,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-backreference" id="special-backreference" name="special-backreference"><code>\<em>n</em></code></a></td>
+   <td><a href="#special-backreference" id="special-backreference"><code>\<em>n</em></code></a></td>
    <td>
     <p>在正则表达式中，它返回最后的第n个子捕获匹配的子字符串(捕获的数目以左括号计数)。</p>
 
@@ -352,20 +352,20 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
    </td>
   </tr>
   <tr>
-   <td><a href="#special-null" id="special-null" name="special-null"><code>\0</code></a></td>
+   <td><a href="#special-null" id="special-null"><code>\0</code></a></td>
    <td>匹配 NULL（U+0000）字符， 不要在这后面跟其它小数，因为 <code>\0&lt;digits&gt;</code> 是一个八进制转义序列。</td>
   </tr>
   <tr>
-   <td><a href="#special-hex-escape" id="special-hex-escape" name="special-hex-escape"><code>\xhh</code></a></td>
+   <td><a href="#special-hex-escape" id="special-hex-escape"><code>\xhh</code></a></td>
    <td>匹配一个两位十六进制数（\x00-\xFF）表示的字符。</td>
   </tr>
   <tr>
-   <td><a href="#special-unicode-escape" id="special-unicode-escape" name="special-unicode-escape"><code>\uhhhh</code></a></td>
+   <td><a href="#special-unicode-escape" id="special-unicode-escape"><code>\uhhhh</code></a></td>
    <td>匹配一个四位十六进制数表示的 UTF-16 代码单元。</td>
   </tr>
   <tr>
    <td>
-    <p><code><a href="#special-unicode-escape-es6" id="special-unicode-escape-es6" name="special-unicode-escape-es6">\u{hhhh}</a>或\u{hhhhh}</code></p>
+    <p><code><a href="#special-unicode-escape-es6" id="special-unicode-escape-es6">\u{hhhh}</a>或\u{hhhhh}</code></p>
    </td>
    <td>（仅当设置了u标志时）匹配一个十六进制数表示的 Unicode 字符。</td>
   </tr>
@@ -384,7 +384,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>将用户输入转义为正则表达式中的一个字面字符串, 可以通过简单的替换来实现：</p>
 
-<pre class="brush: js notranslate">function escapeRegExp(string) {
+<pre class="brush: js">function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&amp;");
   //$&amp;表示整个被匹配的字符串
 }</pre>
@@ -451,13 +451,13 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
 
 <p>在接下来的例子中，脚本将使用exec方法在一个字符串中查找一个匹配。</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec("cdbbdbsbz");
 </pre>
 
 <p>如果你不需要访问正则表达式的属性，这个脚本通过另一个方法来创建myArray：</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+<pre class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
 // 和 "cdbbdbsbz".match(/d(b+)d/g); 相似。
 // 但是 "cdbbdbsbz".match(/d(b+)d/g) 输出数组 [ "dbbd" ]，
 // 而 /d(b+)d/g.exec('cdbbdbsbz') 输出数组 [ "dbbd", "bb", index: 1, input: "cdbbdbsbz" ].
@@ -466,7 +466,7 @@ var myArray = myRe.exec("cdbbdbsbz");
 
 <p>如果你想通过一个字符串构建正则表达式，那么这个脚本还有另一种方法：</p>
 
-<pre class="brush: js notranslate">var myRe = new RegExp("d(b+)d", "g");
+<pre class="brush: js">var myRe = new RegExp("d(b+)d", "g");
 var myArray = myRe.exec("cdbbdbsbz");
 </pre>
 
@@ -520,30 +520,30 @@ var myArray = myRe.exec("cdbbdbsbz");
 
 <p>如这个例子中的第二种形式所示，你可以使用对象初始器创建一个正则表达式实例，但不分配给变量。如果你这样做，那么，每一次使用时都会创建一个新的正则表达式实例。因此，如果你不把正则表达式实例分配给一个变量，你以后将不能访问这个正则表达式实例的属性。例如，假如你有如下脚本：</p>
 
-<pre class="brush: js notranslate">var myRe = /d(b+)d/g;
+<pre class="brush: js">var myRe = /d(b+)d/g;
 var myArray = myRe.exec("cdbbdbsbz");
 console.log("The value of lastIndex is " + myRe.lastIndex);
 </pre>
 
 <p>这个脚本输出如下：</p>
 
-<pre class="notranslate">The value of lastIndex is 5
+<pre>The value of lastIndex is 5
 </pre>
 
 <p>然而，如果你有如下脚本：</p>
 
-<pre class="brush: js notranslate">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
+<pre class="brush: js">var myArray = /d(b+)d/g.exec("cdbbdbsbz");
 console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
 </pre>
 
 <p>它显示为：</p>
 
-<pre class="notranslate">The value of lastIndex is 0
+<pre>The value of lastIndex is 0
 </pre>
 
 <p>当发生/d(b+)d/g使用两个不同状态的正则表达式对象，lastIndex属性会得到不同的值。如果你需要访问一个正则表达式的属性，则需要创建一个对象初始化生成器，你应该首先把它赋值给一个变量。</p>
 
-<h3 id="使用括号的子字符串匹配_2"><a id="使用括号的子字符串匹配" name="使用括号的子字符串匹配">使用括号的子字符串匹配</a></h3>
+<h3 id="使用括号的子字符串匹配_2">使用括号的子字符串匹配</h3>
 
 <p>一个正则表达式模式使用括号，将导致相应的子匹配被记住。例如，/a(b)c /可以匹配字符串“abc”，并且记得“b”。回调这些括号中匹配的子串，使用数组元素[1],……[n]。</p>
 
@@ -551,7 +551,7 @@ console.log("The value of lastIndex is " + /d(b+)d/g.lastIndex);
 
 <p>下面的脚本使用replace()方法来转换字符串中的单词。在匹配到的替换文本中，脚本使用替代的$ 1,$ 2表示第一个和第二个括号的子字符串匹配。</p>
 
-<pre class="brush: js notranslate">var re = /(\w+)\s(\w+)/;
+<pre class="brush: js">var re = /(\w+)\s(\w+)/;
 var str = "John Smith";
 var newstr = str.replace(re, "$2, $1");
 console.log(newstr);
@@ -567,33 +567,33 @@ console.log(newstr);
  <caption>正则表达式标志</caption>
  <thead>
   <tr>
-   <th scope="col" style="white-space: nowrap;">标志</th>
-   <th scope="col" style="white-space: nowrap;">描述</th>
+   <th scope="col">标志</th>
+   <th scope="col">描述</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td style="text-align: center;"><code>g</code></td>
+   <td><code>g</code></td>
    <td>全局搜索。</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><code>i</code></td>
+   <td><code>i</code></td>
    <td>不区分大小写搜索。</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><code>m</code></td>
+   <td><code>m</code></td>
    <td>多行搜索。</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><code>s</code></td>
+   <td><code>s</code></td>
    <td>允许 <code>.</code> 匹配换行符。</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><code>u</code></td>
+   <td><code>u</code></td>
    <td>使用unicode码的模式进行匹配。</td>
   </tr>
   <tr>
-   <td style="text-align: center;"><code>y</code></td>
+   <td><code>y</code></td>
    <td>执行“粘性(<code>sticky</code>)”搜索,匹配从目标字符串的当前位置开始。</td>
   </tr>
  </tbody>
@@ -601,19 +601,19 @@ console.log(newstr);
 
 <p>为了在正则表达式中包含标志，请使用以下语法：</p>
 
-<pre class="brush: js notranslate">var re = /pattern/flags;
+<pre class="brush: js">var re = /pattern/flags;
 </pre>
 
 <p>或者</p>
 
-<pre class="brush: js notranslate">var re = new RegExp("pattern", "flags");
+<pre class="brush: js">var re = new RegExp("pattern", "flags");
 </pre>
 
 <p>值得注意的是，标志是一个正则表达式的一部分，它们在接下来的时间将不能添加或删除。</p>
 
 <p>例如，re = /\w+\s/g 将创建一个查找一个或多个字符后有一个空格的正则表达式，或者组合起来像此要求的字符串。</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 var str = "fee fi fo fum";
 var myArray = str.match(re);
 console.log(myArray);
@@ -623,19 +623,19 @@ console.log(myArray);
 
 <p>这段代码将输出 ["fee ", "fi ", "fo "]。在这个例子中，你可以将：</p>
 
-<pre class="brush: js notranslate">var re = /\w+\s/g;
+<pre class="brush: js">var re = /\w+\s/g;
 </pre>
 
 <p>替换成：</p>
 
-<pre class="brush: js notranslate">var re = new RegExp("\\w+\\s", "g");
+<pre class="brush: js">var re = new RegExp("\\w+\\s", "g");
 </pre>
 
 <p>并且能获取到相同的结果。</p>
 
 <p>使用<code>.exec()</code>方法时，与'<code>g</code>'标志关联的行为是不同的。 （“class”和“argument”的作用相反：在<code>.match()</code>的情况下，字符串类（或数据类型）拥有该方法，而正则表达式只是一个参数，而在<code>.exec()</code>的情况下，它是拥有该方法的正则表达式，其中字符串是参数。对比<em><code>str.match(re)</code></em>与<em><code>re.exec(str)</code></em> ), '<code>g</code>'标志与<code>.exec()</code>方法一起使用获得迭代进展。</p>
 
-<pre class="brush: js notranslate">var xArray; while(xArray = re.exec(str)) console.log(xArray);
+<pre class="brush: js">var xArray; while(xArray = re.exec(str)) console.log(xArray);
 // produces:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
@@ -651,7 +651,7 @@ console.log(myArray);
 
 <p>以下例子解释了正则表达式的构成和 <code>string.split()</code> 以及 <code>string.replace()</code>的用途。它会整理一个只有粗略格式的含有全名（名字首先出现）的输入字符串，这个字符串被空格、换行符和一个分号分隔。最终，它会颠倒名字顺序（姓氏首先出现）和list的类型。</p>
 
-<pre class="brush: js notranslate">// 下面这个姓名字符串包含了多个空格和制表符，
+<pre class="brush: js">// 下面这个姓名字符串包含了多个空格和制表符，
 // 且在姓和名之间可能有多个空格和制表符。
 var names = "Orange Trump ;Fred Barney; Helen Rigby ; Bill Abel ; Chris Hand ";
 
@@ -716,7 +716,7 @@ console.log(output.join("\n"));
 
 <p>当用户按下 Enter 设置 RegExp.input，这些变化也能被激活。</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"&gt;

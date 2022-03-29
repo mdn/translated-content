@@ -5,7 +5,7 @@ translation_of: Web/API/DataTransfer/setDragImage
 ---
 <div>{{APIRef("HTML Drag and Drop API")}}</div>
 
-<div></div>
+
 
 <p>发生拖动时，从拖动目标({{event("dragstart")}}事件触发的元素)生成半透明图像，并在拖动过程中跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果想要设置为自定义图像，那么 <strong><code>DataTransfer.setDragImage()</code></strong> 方法就能派上用场。</p>
 
@@ -130,59 +130,7 @@ function drop_handler(ev) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>4</td>
-   <td>3.5</td>
-   <td>{{CompatNo}}</td>
-   <td>12</td>
-   <td>3.1</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>Firefox OS</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatIE("10")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("api.DataTransfer.setDragImage")}}
 
 <h2 id="See_also" name="See_also">参考链接</h2>
 

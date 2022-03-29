@@ -177,7 +177,7 @@ La méthode la plus générique pour centrer un bloc plutot que de centrer son c
 L'espacement créé entre les mots par la justification du texte peut rendre la lecture difficile pour les personnes dyslexiques ou souffrant de troubles cognitifs.
 
 - [Comprendre les règles WCAG 1.4](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [_Understanding Success Criterion 1.4.8  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
+- [_Understanding Success Criterion 1.4.8  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## Spécifications
 

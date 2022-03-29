@@ -64,7 +64,7 @@ maMap.set('truc', 'toto')
 | Spécification                                                                                | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

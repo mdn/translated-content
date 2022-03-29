@@ -9,7 +9,7 @@ tags:
   - localStorage
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
-L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
+L'API "Web Storage" fournit des mécanismes par lesquels les navigateurs web peuvent stocker des paires de clé-valeur, d'une manière plus intuitive qu'en utilisant des cookies. Cet article décrit pas à pas comment se servir de cette technologie facile d'utilisation.
 
 ## Concepts de base
 
@@ -21,14 +21,14 @@ localStorage['colorSetting'] = '#a4509b';
 localStorage.setItem('colorSetting', '#a4509b');
 ```
 
-> **Note :** Il est recommandé d'utiliser l'API "Web Storage" (`setItem`, `getItem`, `removeItem`, `key`, `length`) pour prévenir les [embûches](http://www.2ality.com/2012/01/objects-as-maps.html) associées à l'utilisation d'objets capable de stocker des couples clé-valeur.
+> **Note :** Il est recommandé d'utiliser l'API "Web Storage" (`setItem`, `getItem`, `removeItem`, `key`, `length`) pour prévenir les [embûches](http://www.2ality.com/2012/01/objects-as-maps.html) associées à l'utilisation d'objets capable de stocker des couples clé-valeur.
 
 Les deux principaux mécanismes internes du Stockage Web sont :
 
 - **`sessionStorage`** qui maintient un espace de stockage, séparé pour chaque origine différente, disponible le temps de la session de la page (tant que le navigateur reste lancé, incluant les rechargements de la page et les restaurations).
 - **`localStorage`** qui tient le même rôle mais persiste même après le redémarrage du navigateur web.
 
-Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}}  (plus précisément, dans les navigateurs web le supportant, l'objet `Window`  implémente les objets `WindowLocalStorage` et `WindowSessionStorage`, sur lesquels les propriétés `localStorage` et `sessionStorage` se basent) — l'appel d'un des deux va créer une instance de l'objet {{domxref("Storage")}}, dans lequel des données pourront être ajoutées, récupérées et supprimées. Pour `sessionStorage` et `localStorage`, un objet de stockage différent est utilisé pour chaque origine — ils fonctionnent et sont contrôlés séparément.
+Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}}  (plus précisément, dans les navigateurs web le supportant, l'objet `Window`  implémente les objets `WindowLocalStorage` et `WindowSessionStorage`, sur lesquels les propriétés `localStorage` et `sessionStorage` se basent) — l'appel d'un des deux va créer une instance de l'objet {{domxref("Storage")}}, dans lequel des données pourront être ajoutées, récupérées et supprimées. Pour `sessionStorage` et `localStorage`, un objet de stockage différent est utilisé pour chaque origine — ils fonctionnent et sont contrôlés séparément.
 
 Donc, par exemple, un appel initial de `localStorage` sur un document va retourner un objet {{domxref("Storage")}} ; un appel de `sessionStorage` sur un document va retourner un objet {{domxref("Storage")}} différent. Les deux peuvent se manipuler de la même façon, mais séparément.
 
@@ -85,7 +85,7 @@ Vous pouvez retrouver ici [une brève histoire de la détection de localStorage]
 
 ## Un exemple simple
 
-Pour illustrer certains usages typiques du Stockage Web, nous avons créé un exemple simple ingénieusement appelé **Web Storage Demo**. La [page de lancement](https://mdn.github.io/dom-examples/web-storage/) fournit des contrôles afin de personnaliser la couleur, la police de caractère et l'image de décoration:
+Pour illustrer certains usages typiques du Stockage Web, nous avons créé un exemple simple ingénieusement appelé **Web Storage Demo**. La [page de lancement](https://mdn.github.io/dom-examples/web-storage/) fournit des contrôles afin de personnaliser la couleur, la police de caractère et l'image de décoration:
 
 ![](landing.png)
 
@@ -137,7 +137,7 @@ Ici, les trois premières lignes vont chercher les valeurs dans le stockage loca
 
 ## Enregistrer une valeur dans le stockage
 
-{{domxref("Storage.setItem()")}} est aussi bien utilisée pour la création d'une donnée,  que pour la modification d'une donnée existante (si cette donnée existe déja). Elle prend deux arguments — la clé de l'élément à créer/modifier, et la valeur associée à stocker.
+{{domxref("Storage.setItem()")}} est aussi bien utilisée pour la création d'une donnée,  que pour la modification d'une donnée existante (si cette donnée existe déja). Elle prend deux arguments — la clé de l'élément à créer/modifier, et la valeur associée à stocker.
 
 ```js
 function populateStorage() {
@@ -177,7 +177,7 @@ window.addEventListener('storage', function(e) {
 });
 ```
 
-Ici nous avons ajouté un event listener à l'objet `window `qui se lance quand l'objet {{domxref("Storage")}}, associée à l'origine courante, est modifié. Comme vous pouvez le voir ci-dessus, l'objet événement associé à cet événement a de nombreuses propriétés contenant des informations utiles: la clé de la donnée qui a changé, l'ancienne valeur avant le changement, la nouvelle valeur après le changement, l'URL du document qui a changé le stockage et l'objet stockage lui-même.
+Ici nous avons ajouté un écouteur d'évènement à l'objet `window` qui se lance quand l'objet [`Storage`](/fr/docs/Web/API/Storage), associé à l'origine courante, est modifié. Comme vous pouvez le voir ci-dessus, l'objet évènement associé à cet évènement a de nombreuses propriétés contenant des informations utiles&nbsp;: la clé de la donnée qui a changé, l'ancienne valeur avant le changement, la nouvelle valeur après le changement, l'URL du document qui a changé le stockage et l'objet stockage lui-même.
 
 ## Supprimer des données
 

@@ -47,67 +47,7 @@ translation_of: Web/API/Blob/slice
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>10 {{property_prefix("webkit")}}‡<br>
-    21</td>
-   <td>5 {{ property_prefix("moz") }}‡<br>
-    13</td>
-   <td>10</td>
-   <td>12</td>
-   <td>5.1 (<a class="external" href="http://trac.webkit.org/changeset/83873">534.29</a>) {{ property_prefix("webkit") }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>功能</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("13.0") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="实现_slice_的一些声明">实现 slice() 的一些声明</h3>
-
-<p><code>slice()</code> 方法第二个参数的默认值将会传入原始 Blob 的长度。 如果你在调用的时候传入的 <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">start + length</span> 超出了原始 <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">Blob</span> 的长度，那么返回的 <span style="font-family: 'Courier New','Andale Mono',monospace; line-height: normal;">Blob </span> 对象将会包含从 start 到原始数据的末尾。</p>
-
-<p>那个版本的 slice() 在 <a class="link-https" href="https://hg.mozilla.org/mozilla-central/rev/1b3947ed93c6" style="line-height: 1.5;">Firefox 4</a>、<span style="line-height: 1.5;"> </span><a class="external" href="http://trac.webkit.org/changeset/55670" style="line-height: 1.5;">WebKit</a> 和 <a class="external" href="http://www.opera.com/docs/specs/presto28/file/#blob" style="line-height: 1.5;">Opera 11.10</a> 中实现了。但是它的语法和 Array.slice() 以及 String.slice() 有所出入，所以 Gecko 和 Webkit 移除掉了它的支持并且加上了新语法的支持 <span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">{{ manch("mozSlice") }}/</span><code style="line-height: 1.5; font-size: 14px;"><a class="external" href="http://trac.webkit.org/changeset/83873" style="line-height: 1.5;">Blob.webkitSlice</a>。</code></p>
-
-<p>从 Gecko 13.0 {{ geckoRelease("13.0") }} 和 Chrome 21 开始, {{ manch("slice") }} 就再也没有浏览器前缀了。</p>
-
-<h3 id="Gecko_notes">Gecko notes</h3>
-
-<p>在先前的 Gecko 12.0 {{ geckoRelease("12.0") }}， 有一个 bug 会影响到 {{ manch("slice") }} 的行为; 他在 <code>start</code> 和 end 位置组成的范围超出 signed 64-bit 值的范围的时候不工作; 这个问题已经被解决，现在支持传入 unsigned 64-bit 值.</p>
+{{Compat("api.Blob.slice")}}
 
 <h2 id="参见">参见</h2>
 

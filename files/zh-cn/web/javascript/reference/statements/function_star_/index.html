@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Statements/function*
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<p><code><strong>function*</strong></code> 这种声明方式(<code style="font-style: normal;">function</code>关键字后跟一个星号）会定义一个<strong><em>生成器函数</em> (</strong><em>generator function</em><strong>)</strong>，它返回一个  {{jsxref("Global_Objects/Generator","Generator")}}  对象。</p>
+<p><code><strong>function*</strong></code> 这种声明方式(<code>function</code>关键字后跟一个星号）会定义一个<strong><em>生成器函数</em> (</strong><em>generator function</em><strong>)</strong>，它返回一个  {{jsxref("Global_Objects/Generator","Generator")}}  对象。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/statement-functionasterisk.html")}}</div>
 
@@ -31,14 +31,8 @@ translation_of: Web/JavaScript/Reference/Statements/function*
 <dl>
  <dt><code>name</code></dt>
  <dd>函数名</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
  <dd>要传递给函数的一个参数的名称，一个函数最多可以有255个参数。</dd>
-</dl>
-
-<dl>
  <dt><code>statements</code></dt>
  <dd>普通JS语句。</dd>
 </dl>
@@ -217,7 +211,7 @@ arr = [...gen];                        // ["a", "b", "c", "d", "e"]</pre>
 
 <h4 id="IteratorResult不再抛出错误"><code>IteratorResult</code>不再抛出错误</h4>
 
-<p>从Gecko 29 {{geckoRelease(29)}}开始，完成的生成器函数不再抛出{{jsxref("TypeError")}} "generator has already finished". 而是返回一个<code>IteratorResult</code>对象：<span style="font-family: consolas,monaco,andale mono,monospace;">{ value: undefined, done: true }</span> ({{bug(958951)}})。</p>
+<p>从Gecko 29 {{geckoRelease(29)}}开始，完成的生成器函数不再抛出{{jsxref("TypeError")}} "generator has already finished". 而是返回一个<code>IteratorResult</code>对象：{ value: undefined, done: true } ({{bug(958951)}})。</p>
 
 <h2 id="相关链接">相关链接</h2>
 

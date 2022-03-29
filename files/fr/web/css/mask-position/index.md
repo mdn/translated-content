@@ -1,16 +1,12 @@
 ---
 title: mask-position
 slug: Web/CSS/mask-position
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/mask-position
+browser-compat: css.properties.mask-position
 ---
 {{CSSRef}}
 
-La propriété **`mask-position`** indique la position initiale pour chaque image de masque utilisée. Cette position est relative à l'origine définie via la propriété {{cssxref("mask-origin")}}.
+La propriété [CSS](/fr/docs/Web/CSS) **`mask-position`** indique la position initiale pour chaque image de masque utilisée. Cette position est relative à l'origine définie via la propriété [`mask-origin`](/fr/docs/Web/CSS/mask-origin).
 
 ```css
 /* Valeurs avec un mot-clé */
@@ -20,94 +16,57 @@ mask-position: left;
 mask-position: right;
 mask-position: center;
 
-/*  Valeurs en pourcentage */
-/* Type <percentage>       */
+/* Valeurs de <position> */
 mask-position: 25% 75%;
-
-/* Valeurs en longueur */
-/* Type <length>       */
 mask-position: 0px 0px;
-mask-position: 1cm 2cm;
-mask-position: 10ch 8em;
+mask-position: 10% 8em;
 
 /* Valeurs multiples */
-mask-position: 0px 0px, center;
+mask-position: top right;
+mask-position: 1rem 1rem, center;
 
 /* Valeurs globales */
 mask-position: inherit;
 mask-position: initial;
+mask-position: revert;
 mask-position: unset;
 ```
 
 ## Syntaxe
 
+Cette propriété s'utilise avec une ou plusieurs valeurs de position, séparées par des virgules.
+
 ### Valeurs
 
 - `<position>`
-  - : Une position CSS (type {{cssxref("&lt;position&gt;")}}) qui représente une position par rapport aux côtés de la boîte de l'élément. Les décalages indiqués peuvent être relatifs ou absolus. On notera que la position obtenue peut être située en dehors de la boîte de l'élément.
+  - : Une position CSS (type [`<position>`](/fr/docs/Web/CSS/position_value)) qui représente une position par rapport aux côtés de la boîte de l'élément. Les décalages indiqués peuvent être relatifs ou absolus. On notera que la position obtenue peut être située en dehors de la boîte de l'élément.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{cssinfo}}
+
+## Syntaxe formelle
 
 {{csssyntax}}
 
 ## Exemples
 
-### CSS
+### Définir la position du masque
 
-```css
-#wrapper {
-  border: 1px solid black;
-  width: 250px;
-  height: 250px;
-}
+Dans le fragment de code qui suit, vous pouvez modifier la valeur de `mask-position` avec une des valeurs autorisées (voir ci-avant) pour observer l'effet de la propriété.
 
-#masked {
-  width: 250px;
-  height: 250px;
-  background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
-  mask-repeat: no-repeat;
-  mask-position: top right; /* Can be changed in the live sample */
-  margin-bottom: 10px;
-}
-```
+Si vous utilisez un navigateur basé sur Chromium, modifiez la valeur de la propriété `-webkit-mask-position`.
 
-```html hidden
-<div id="wrapper">
-  <div id="masked">
-  </div>
-</div>
-<select id="maskPosition">
-  <option value="top">top</option>
-  <option value="center">center</option>
-  <option value="bottom">bottom</option>
-  <option value="top right" selected>top right</option>
-  <option value="center center">center center</option>
-  <option value="bottom left">bottom left</option>
-  <option value="10px 20px">10px 20px</option>
-  <option value="60% 20%">60% 20%</option>
-</select>
-```
-
-```js hidden
-var maskPosition = document.getElementById("maskPosition");
-maskPosition.addEventListener("change", function (evt) {
-  document.getElementById("masked").style.maskPosition = evt.target.value;
-});
-```
-
-### Résultat
-
-{{EmbedLiveSample("Exemples",200,200)}}
+{{EmbedGHLiveSample("css-examples/masking/mask-position.html", '100%', 760)}}
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS Masks", "#the-mask-position", "mask-position")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.mask-position")}}
+{{Compat}}
+
+## Voir aussi
+
+- [Rognage et masquage avec CSS (en anglais)](https://css-tricks.com/clipping-masking-css/)

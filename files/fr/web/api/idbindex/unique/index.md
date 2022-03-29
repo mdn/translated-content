@@ -68,7 +68,7 @@ function displayDataByIndex() {
 
 | Spécification                                                                    | État                         | Commentaires |
 | -------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBIndex-unique', 'unique')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBIndex-unique', 'unique')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

@@ -7,7 +7,7 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <div>El método <strong><code>window.requestAnimationFrame</code></strong> informa al navegador que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación. El método acepta como argumento una función a la que llamar antes de efectuar el repintado.</div>
 
-<div></div>
+
 
 <div class="note"><strong>Nota:</strong> Si no quieres que tu animación se detenga, debes asegurarte de  llamar a su vez a <code>requestAnimationFrame() </code>desde tu callback.</div>
 
@@ -57,85 +57,7 @@ window.requestAnimationFrame(step);</code></pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad entre Navegadores</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>21.0 {{ property_prefix("webkit") }}</td>
-   <td>14.0 {{ property_prefix("moz") }}</td>
-   <td>10.0</td>
-   <td>{{ CompatNo() }}</td>
-   <td>6.0 {{ property_prefix("webkit") }}</td>
-  </tr>
-  <tr>
-   <td><code>requestID</code> return value</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("11.0") }} {{ property_prefix("moz") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>BlackBerry Browser</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>10.0 {{ property_prefix("webkit") }}</td>
-   <td>
-    <p>0.16 {{ property_prefix("webkit") }}</p>
-   </td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>6.0 {{ property_prefix("webkit") }}</td>
-  </tr>
-  <tr>
-   <td><code>requestID</code> return value</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("11.0") }} {{ property_prefix("moz") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Specification" name="Specification">Notas para Gecko</h3>
-
-<p>Antes que Gecko 11.0 {{ geckoRelease("11.0") }}, <code>mozRequestAnimationFrame()</code> se podía llamar sin parámetros. Esta opción ya no está soportada ya que no es probable que se convierta en parte del estándar.</p>
-
-<h3 id="Notas_para_Chrome">Notas para Chrome</h3>
-
-<p>En estos momentos, la llamada correcta en Chrome para cancelar la petición es <code>window.webkitCancelAnimationFrame()</code>. La antigua versión, <code>window.webkitCancelRequestAnimationFrame()</code>, está obsoleta se sigue soportando por ahora.</p>
+{{Compat("api.Window.requestAnimationFrame")}}
 
 <h2 id="Specification" name="Specification">Especificaciones</h2>
 

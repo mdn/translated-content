@@ -56,7 +56,7 @@ Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changeme
 
 ## Voir également
 
-- [Notes de version de Firefox 20](http://www.mozilla.org/en-US/firefox/20.0/releasenotes/)
+- [Notes de version de Firefox 20](http://www.mozilla.org/en-US/firefox/20.0/releasenotes/)
 - [Site Compatibility for Firefox 20](/fr/docs/Site_Compatibility_for_Firefox_20)
 
 ### Anciennes versions

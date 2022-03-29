@@ -21,7 +21,7 @@ La propriété **`length`** définit le nombre de paramètres attendus par la fo
 
 ### Propriété du constructeur `Function`
 
-Le constructeur {{jsxref("Function")}} est lui-même un objet {{jsxref("Function")}}. Sa propriété` length` vaut 1. Les attributs de cette propriété sont : Écrivable : `false`, Énumérable : `false`, Configurable : `true`.
+Le constructeur {{jsxref("Function")}} est lui-même un objet {{jsxref("Function")}}. Sa propriété `length` vaut 1. Les attributs de cette propriété sont : Écrivable : `false`, Énumérable : `false`, Configurable : `true`.
 
 ### Propriété du prototype de `Function`
 
@@ -47,9 +47,9 @@ console.log((function(a, b = 1, c) {}).length);
 | Spécification                                                                                        | État                         | Commentaires                                                        |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1.               |
-| {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}                         | {{Spec2('ES5.1')}}     |                                                                     |
+| {{SpecName('ES5.1', '#sec-15.3.5.1', 'Function.length')}}                         | {{Spec2('ES5.1')}}     |                                                                     |
 | {{SpecName('ES6', '#sec-function-instances-length', 'Function.length')}}     | {{Spec2('ES6')}}         | L'attribut `configurable` de cette propriété vaut `true` désormais. |
-| {{SpecName('ESDraft', '#sec-function-instances-length', 'Function.length')}} | {{Spec2('ESDraft')}} |                                                                     |
+| {{SpecName('ESDraft', '#sec-function-instances-length', 'Function.length')}} | {{Spec2('ESDraft')}} |                                                                     |
 
 ## Compatibilité des navigateurs
 

@@ -57,7 +57,7 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 - `petite-caps`
   - : Ce mot-clé active l'utilisation de toutes petites capitales pour les minuscules. Il correspond à la valeur OpenType `pcap` ; si la fonte ne supporte pas cette option, le moteur utilisera les petites capitales.
 - `all-petite-caps`
-  - : Ce mot-clé active l'utilisation de toutes petites capitales pour les minuscules. Il correspond aux valeurs OpenType `pcap `et `c2pc` ; si la fonte ne supporte pas cette option, le moteur utilisera les petites capitales.
+  - : Ce mot-clé active l'utilisation de toutes petites capitales pour les minuscules. Il correspond aux valeurs OpenType `pcap` et `c2pc` ; si la fonte ne supporte pas cette option, le moteur utilisera les petites capitales.
 - `unicase`
   - : Ce mot-clé active l'utilisation de petites capitales pour les majuscules. Il correspond à la valeur OpenType `unic`.
 - `titling-caps`

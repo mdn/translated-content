@@ -15,7 +15,7 @@
 
 이 문서는 한국(ko) 지역에 대한 번역 지침입니다. 귀하의 로케일에 대한 몇 가지 특정 지침을 문서화하는 페이지를 추가하고 싶은데 아직 여기에 나타나지 않는 경우, 하나를 추가하거나 [Locale Teams](https://github.com/mdn/translated-content#policies-for-active-community-maintenance-teams)에 문의해주세요.
 
-마찬가지로 추가하려는 일반 지침에 대한 좋은 아이디어가 있는 경우 환영합니다. Issue를 열고 문제에대해 이야기해주세요. 다음은 한국어 번역 지침 원칙의 주요 내용입니다.
+마찬가지로 추가하려는 일반 지침에 대한 좋은 아이디어가 있는 경우 환영합니다. Issue를 열고 문제에 대해 이야기해주세요. 다음은 한국어 번역 지침 원칙의 주요 내용입니다.
 
 ## 첫 기여자들을 위한 지침 안내
 
@@ -26,11 +26,12 @@ MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습
 ### PR 규칙
 
 - `ko-locale`에 존재하지 않는 새로운 파일에 대한 번역을 진행할 때, **파일 전체 번역**을 원칙으로 합니다. (단, [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)와 같이 분량이 많은 파일에 대해서는 부분 번역을 허용합니다. 이때, 번역되지 않은 부분은 `en-us locale` 원본으로 대체합니다.)
-- `PR`의 `Merge` 우선 순위는 먼저 PR을 생성한 순서대로 우선권을 갖습니다. 리뷰어는 우선 순위가 있는 PR을 먼저 병합하는것을 원칙으로 합니다. 따라서, 번역을 진행하기 전에, `Draft PR`을 먼저 생성하는 것을 권장합니다. [ko-locale PR 목록](https://github.com/mdn/translated-content/pulls?q=is%3Apr+is%3Aopen+label%3Al10n-ko+)
+- `PR`의 `Merge` 우선 순위는 관련 이슈에서 가장 처음 언급된 `PR`이 병합 우선권을 갖습니다. 리뷰어는 우선 순위가 있는 PR을 먼저 병합하는것을 원칙으로 합니다. 따라서, 번역을 진행하기 전에, `PR`과 관련된 이슈가 없다면 이슈를 생성하는 것을 권장합니다. [ko-locale PR 목록](https://github.com/mdn/translated-content/pulls?q=is%3Apr+is%3Aopen+label%3Al10n-ko+)
+- 위 규칙들로 우선 순위를 정하기 힘든 경우 리뷰어는 기여자에게 충돌 해결을 요청 드릴 수 있습니다. 이 경우에는 충돌 해결 후 병합을 진행합니다.
 
 ### ko-locale 현황판
 
-어디서부터 기여해야될지 모르겠다면 현황판에 등록된 `Level 0`, `Level 1`, `Level 2` 각자 MDN의 이해도에 맞는 이슈를 처리해보세요! 새로운 이슈를 제보하는 것도 기여에 큰 도움이 됩니다.
+어디서부터 기여해야 될지 모르겠다면 현황판에 등록된 `Level 0`, `Level 1`, `Level 2` 각자 MDN의 이해도에 맞는 이슈를 처리해보세요! 새로운 이슈를 제보하는 것도 기여에 큰 도움이 됩니다.
 
 - [ko-locale 현황판](https://github.com/mdn/translated-content/projects/2)
 
@@ -46,8 +47,8 @@ MDN의 모든 로케일은 `en-us`를 기준으로 변역이 진행되고 있습
 
 yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크](https://github.com/mdn/translated-content#making-contributions)를 참고해주세요.
 
-1. [content](https://github.com/mdn/content) 하고 [translated-content](https://github.com/mdn/translated-content) 다운 받습니다. (fork  한뒤)
-2. content 폴더에 들어가서 `yarn install`
+1. [content](https://github.com/mdn/content)와 (Fork된 본인 레포의) [translated-content](https://github.com/mdn/translated-content)를 클론합니다.
+2. content 폴더에 들어가서 `yarn install`을 통해 yari 등 필요한 패키지를 다운받습니다.
 3. content 폴더 root에 .env 파일을 추가합니다. (translated-content/files 경로 추가, vscode editor의 경우 `EDITOR=code` 추가)
 
 ```
@@ -56,14 +57,14 @@ EDITOR=code
 ```
 4. `yarn start`
 
-다음과 같이 진행하면 아래와 같이 실시간으로 반영사항 확인할 수 있고 4가지 편집 버튼으로 편집할 수 있습니다.
+다음과 같이 진행하면 아래와 같이 실시간으로 반영사항을 확인할 수 있고 4가지 편집 버튼으로 편집할 수 있습니다.
 ![image](https://user-images.githubusercontent.com/22424891/117309001-002e0500-aebd-11eb-9842-8f78a99e8873.png)
 
 ## 번역 가이드
 
 ### heading ID 번역
 
-기사 제목에는 거의 항상 ID가 주어지는데, 기사 내에서 네비게이션을 자동으로 생성하고 실시간 샘플을 생성하기위한 코드 블록을 식별하는 등의 이유가 있습니다. 제목을 번역 할 때 ID도 같이 번역 할 필요가 없습니다. 나머지 슬러그는 번역되지 않으므로 모든 것이 일관되게 유지됩니다.
+기사 제목에는 거의 항상 ID가 주어지는데, 기사 내에서 네비게이션을 자동으로 생성하고 실시간 샘플을 생성하기 위한 코드 블록을 식별하는 등의 이유가 있습니다. 제목을 번역 할 때 ID도 같이 번역 할 필요가 없습니다. 나머지 슬러그는 번역되지 않으므로 모든 것이 일관되게 유지됩니다.
 
 예를 들면:
 
@@ -105,7 +106,7 @@ EDITOR=code
 
 ### 역주/역자주 
 
-그동안의 MDN 문서에서는 역주로인한 자의적인 해석이 많았고, 전체적인 문서의 품질을 낮췄습니다. 역주가 꼭 필요한 상황이 아니라면 역주는 남기지 않으며, 남기더라도 따로 역주를 표시하지 않고 본문에 포함합니다.
+그동안의 MDN 문서에서는 역주로 인한 자의적인 해석이 많았고, 전체적인 문서의 품질을 낮췄습니다. 역주가 꼭 필요한 상황이 아니라면 역주는 남기지 않으며, 남기더라도 따로 역주를 표시하지 않고 본문에 포함합니다.
 예시: [다음 링크 참고](https://github.com/mdn/translated-content/pull/1385#discussion_r667509255)
 
 ### 기울임꼴
@@ -167,7 +168,7 @@ The properties of these objects are as follows:
 
 ### `—` 대시 지침
 
-`: 쌍점,  ; 쌍반점 지침`과 같은 맥락에서 `. 온점`으로 치환하는 것을 권장합니다.. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-965500282)
+`: 쌍점,  ; 쌍반점 지침`과 같은 맥락에서 `. 온점`으로 치환하는 것을 권장합니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-965500282)
 
 - 원문
 ```
@@ -347,7 +348,7 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 
 | 용어 | 번역 | 기타 | 참고 링크 |
 | --- | --- | --- | ------ |
-| Argument | 매개변수 | | | 
+| Argument | 전달인자, 인수 | | [참고 링크](https://github.com/mdn/translated-content/pull/3888) | 
 | Blocking operation | 블로킹 연산 | | | 
 | Callback | 콜백 | | | 
 | Fulfilled | 이행(함) | | | 

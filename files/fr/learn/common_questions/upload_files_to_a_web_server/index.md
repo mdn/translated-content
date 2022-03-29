@@ -13,7 +13,7 @@ Cet article illustre comment publier votre site en ligne grâce à des outils {{
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vous devriez au préalable comprendre
         <a href="/fr/Apprendre/Qu_est-ce_qu_un_serveur_web"
@@ -33,7 +33,7 @@ Cet article illustre comment publier votre site en ligne grâce à des outils {{
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectifs :</th>
+      <th scope="row">Objectifs&nbsp;:</th>
       <td>
         Apprendre à envoyer des fichiers vers un serveur en utilisant FTP.
       </td>

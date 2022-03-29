@@ -3,8 +3,6 @@ title: X-Frame-Options 回應標頭
 slug: Web/HTTP/Headers/X-Frame-Options
 translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
-<p>{{ gecko_minversion_header("2.0") }}</p>
-
 <div class="note">
 <div class="syntaxbox"><strong>Note: </strong>CSP Level 2 的 <a href="/en-US/docs/Security/CSP/CSP_policy_directives#frame-ancestors">frame-ancestors</a> 指令標準雖然已經取代了非標準的 X-Frame-Options，而自 {{Gecko("4.0")}} 起也開始支援  frame-ancestors 指令，但因為並非所有瀏覽器都支援 frame-ancestors，所以 支援度較廣的 X-Frame-Options 還是可以和  CSP 一起採用。</div>
 </div>
@@ -74,63 +72,7 @@ translation_of: Web/HTTP/Headers/X-Frame-Options
 
 <h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatChrome(4.1.249.1042) }}</td>
-   <td>{{ CompatGeckoDesktop(1.9.2.9) }}</td>
-   <td>{{ CompatIE(8.0) }}</td>
-   <td>{{ CompatOpera(10.5) }}</td>
-   <td>{{ CompatSafari(4.0) }}</td>
-  </tr>
-  <tr>
-   <td>ALLOW-FROM support</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatGeckoDesktop(18.0) }} {{ bug(690168) }}</td>
-   <td>{{ CompatIE("8.0?") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }} {{webkitbug(94836)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("http.headers.X-Frame-Options")}}
 
 <h2 id="sect2"> </h2>
 
@@ -142,5 +84,3 @@ translation_of: Web/HTTP/Headers/X-Frame-Options
  <li><a href="https://tools.ietf.org/html/rfc7034" title="https://tools.ietf.org/html/rfc7034">HTTP Header Field X-Frame-Options - RFC 7034</a></li>
  <li><a href="https://w3c.github.io/webappsec/specs/content-security-policy/#directive-frame-ancestors" title="https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html#frame-src">CSP Level 2 frame-ancestors directive</a></li>
 </ul>
-
-<p>{{ languages( { "ja": "ja/The_X-FRAME-OPTIONS_response_header"} ) }}</p>

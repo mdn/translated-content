@@ -3,9 +3,9 @@ title: Element.attachShadow()
 slug: Web/API/Element/attachShadow
 translation_of: Web/API/Element/attachShadow
 ---
-{{APIRef('Shadow DOM')}} {{SeeCompatTable}}
+{{APIRef('Shadow DOM')}} {{SeeCompatTable}}
 
-La méthode **`Element.attachShadow()`** attache un arbre Shadow DOM à un élément spécifié et retourne une référence à son [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot).
+La méthode **`Element.attachShadow()`** attache un arbre Shadow DOM à un élément spécifié et retourne une référence à son [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot).
 
 ## Syntaxe
 
@@ -15,16 +15,15 @@ La méthode **`Element.attachShadow()`** attache un arbre Shadow DOM à un él
 
 - `shadowRootInit`
 
-  - : Un dictionnaire `ShadowRootInit`, avec les propriétés suivantes :
+  - : Un dictionnaire `ShadowRootInit`, avec les propriétés suivantes :
 
-    - `mode `: une chaîne de caractères spécifiant le *mode d'encapsulation* de l'arbre du Shadow DOM, parmi les options suivantes :
-
-      - `open : `spécifie une encapsulation ouverte.
-      - `closed` : spécifie une encapsulation fermée.
+    - `mode`&nbsp;: une chaîne de caractères spécifiant le *mode d'encapsulation* de l'arbre du Shadow DOM, parmi les options suivantes&nbsp;:
+      - `open`&nbsp;: spécifie une encapsulation ouverte.
+      - `closed`&nbsp;: spécifie une encapsulation fermée.
 
 ### Retour
 
-Retourne un {{domxref("ShadowRoot")}}.
+Retourne un {{domxref("ShadowRoot")}}.
 
 ## Spécifications
 

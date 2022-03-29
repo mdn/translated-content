@@ -62,9 +62,9 @@ La propriété `outline-color` est définie avec une des valeurs listées ci-apr
 
 ```css
 .exemple {
-  /* Tout d'abord on utiliser outline */
+  /* Tout d'abord on utiliser outline */
   /* pour définir le contour          */
-  outline: 2px solid;
+  outline: 2px solid;
 
   /* Ensuite on précise sa couleur avec */
   /* outline-color                      */
@@ -84,7 +84,7 @@ Le ratio de contraste est déterminé en comparaisant les luminosités des deux 
 
 - [Vérificateur de contraste WebAIM (en anglais)](https://webaim.org/resources/contrastchecker/)
 - [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- _[Understanding Success Criterion 1.4.3 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_[ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
+- _[Understanding Success Criterion 1.4.3 - W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## Spécifications
 

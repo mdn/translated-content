@@ -19,7 +19,7 @@ L'interface :
 
 - Fournit un répertoire principal de tous les caches nommés qui peut être accessible par un {{domxref("ServiceWorker")}} ou un autre type de travailleur ou portée de {{domxref("window")}} (vous n'êtes pas limité à l'utiliser uniquement avec des Service Workers, même si la spécification {{SpecName("Service Workers")}} le définit).
 
-  > **Note :** [Chrome et Safari n'exposent que "CacheStorage" au contexte fenêtré sur HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} sera indéfinie, à moins qu'un certificat SSL ne soit configuré.
+  > **Note :** [Chrome et Safari n'exposent que "CacheStorage" au contexte fenêtré sur HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} sera indéfinie, à moins qu'un certificat SSL ne soit configuré.
 
 - Maintient une correspondance entre les noms des chaînes de caractères et les objets {{domxref("Cache")}} correspondants.
 
@@ -29,34 +29,34 @@ Utilisez {{domxref("CacheStorage.match()")}} pour vérifier si une {{domxref("Re
 
 Vous pouvez accéder à `CacheStorage` via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.
 
-> **Note :** CacheStorage échouera systématiquement avec une `SecurityError` sur les domaines non certifiés (i.e. ceux qui n'utilisent pas HTTPS, bien que cette définition risque de devenir plus complexe dans le future). Pendant vos tests vous pouvez contourner ce comportement en cochant l'option "Enable Service Workers over HTTP (when toolbox is open)" dans les options Firefox Devtools / le menu gear.
+> **Note :** CacheStorage échouera systématiquement avec une `SecurityError` sur les domaines non certifiés (i.e. ceux qui n'utilisent pas HTTPS, bien que cette définition risque de devenir plus complexe dans le future). Pendant vos tests vous pouvez contourner ce comportement en cochant l'option "Enable Service Workers over HTTP (when toolbox is open)" dans les options Firefox Devtools / le menu gear.
 
-> **Note :** {{domxref("CacheStorage.match()")}} est une méthode de convenance. Il est possible d'implémenter une fonctionnalité équivalente pour matcher une entrée de cache en appelant {{domxref("CacheStorage.open()")}}, puis en retournant {{domxref("CacheStorage.keys()")}}, et en matchant les entrées voulues avec {{domxref("CacheStorage.match()")}}.
+> **Note :** {{domxref("CacheStorage.match()")}} est une méthode de convenance. Il est possible d'implémenter une fonctionnalité équivalente pour matcher une entrée de cache en appelant {{domxref("CacheStorage.open()")}}, puis en retournant {{domxref("CacheStorage.keys()")}}, et en matchant les entrées voulues avec {{domxref("CacheStorage.match()")}}.
 
 ## Méthodes
 
 - {{domxref("CacheStorage.match()")}} {{experimental_inline}}
-  - : Cherche si une {{domxref("Request")}} donnée est la clé de n'importe lequel des objets {{domxref("Cache")}} maintenus par le {{domxref("CacheStorage")}}, et retourne une {{jsxref("Promise", "Promesse")}} résolue en cet objet {{domxref("Cache")}}.
+  - : Cherche si une {{domxref("Request")}} donnée est la clé de n'importe lequel des objets {{domxref("Cache")}} maintenus par le {{domxref("CacheStorage")}}, et retourne une {{jsxref("Promise", "Promesse")}} résolue en cet objet {{domxref("Cache")}}.
 - {{domxref("CacheStorage.has()")}} {{experimental_inline}}
-  - : Retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en `true` si un objet {{domxref("Cache")}} qui correspond au `cacheName` existe.
+  - : Retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en `true` si un objet {{domxref("Cache")}} qui correspond au `cacheName` existe.
 - {{domxref("CacheStorage.open()")}} {{experimental_inline}}
-  - : Retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en l'objet {{domxref("Cache")}} qui correspond au `cacheName` (si il n'existe pas, un nouveau cache est créé).
+  - : Retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en l'objet {{domxref("Cache")}} qui correspond au `cacheName` (si il n'existe pas, un nouveau cache est créé).
 - {{domxref("CacheStorage.delete()")}} {{experimental_inline}}
-  - : Trouve l'objet {{domxref("Cache")}} correspondant au `cacheName`, et si il est trouvé, supprime l'objet {{domxref("Cache")}} et retourne une {{jsxref("Promise", "Promesse")}} résolue à `true`. Si aucun objet {{domxref("Cache")}} n'est trouvé, la {{jsxref("Promise", "Promesse")}} est résolue à `false`.
+  - : Trouve l'objet {{domxref("Cache")}} correspondant au `cacheName`, et si il est trouvé, supprime l'objet {{domxref("Cache")}} et retourne une {{jsxref("Promise", "Promesse")}} résolue à `true`. Si aucun objet {{domxref("Cache")}} n'est trouvé, la {{jsxref("Promise", "Promesse")}} est résolue à `false`.
 - {{domxref("CacheStorage.keys()")}} {{experimental_inline}}
-  - : Retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau qui contient toutes les chaînes correspondantes aux objets {{domxref("Cache")}} maintenus par le {{domxref("CacheStorage")}}. Cette méthode peut s'utiliser pour itérer sur une liste de tous les objets {{domxref("Cache")}}.
+  - : Retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau qui contient toutes les chaînes correspondantes aux objets {{domxref("Cache")}} maintenus par le {{domxref("CacheStorage")}}. Cette méthode peut s'utiliser pour itérer sur une liste de tous les objets {{domxref("Cache")}}.
 
 ## Exemples
 
-Cet extrait de code est tiré de l'[exemple MDN sw-test](https://github.com/mdn/sw-test/) (lancer [sw-test dans votre navigateur](https://mdn.github.io/sw-test/)). Ce service worker script attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} pour gérer la phase d'installation de l'app. Cela consiste à appeler {{domxref("CacheStorage.open")}} pour créer un nouveau cache, puis {{domxref("Cache.addAll")}} pour y ajouter une série d'assets.
+Cet extrait de code est tiré de l'[exemple MDN sw-test](https://github.com/mdn/sw-test/) (lancer [sw-test dans votre navigateur](https://mdn.github.io/sw-test/)). Ce service worker script attends le déclenchement d'un {{domxref("InstallEvent")}}, puis lance {{domxref("ExtendableEvent.waitUntil","waitUntil")}} pour gérer la phase d'installation de l'app. Cela consiste à appeler {{domxref("CacheStorage.open")}} pour créer un nouveau cache, puis {{domxref("Cache.addAll")}} pour y ajouter une série d'assets.
 
-Dans le second bloc de code, on attends le déclenchement d'un {{domxref("FetchEvent")}}. On construit ensuite une réponse spéciale comme suit :
+Dans le second bloc de code, on attends le déclenchement d'un {{domxref("FetchEvent")}}. On construit ensuite une réponse spéciale comme suit :
 
-1.  Vérifier si il y a un match pour la requête dans le CacheStorage. Le cas échéant, servir ça.
-2.  Sinon, récupérer la requête sur le réseau, puis ouvrir le cache du premier bloc et y ajouter un clone de la requête grâce à {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
-3.  En cas d'échec (e.g. car le réseau est inaccessible), retourner une réponse par défaut.
+1.  Vérifier si il y a un match pour la requête dans le CacheStorage. Le cas échéant, servir ça.
+2.  Sinon, récupérer la requête sur le réseau, puis ouvrir le cache du premier bloc et y ajouter un clone de la requête grâce à {{domxref("Cache.put")}} (`cache.put(event.request, response.clone())`.)
+3.  En cas d'échec (e.g. car le réseau est inaccessible), retourner une réponse par défaut.
 
-Enfin, on retourne cette réponse en utilisant {{domxref("FetchEvent.respondWith")}}.
+Enfin, on retourne cette réponse en utilisant {{domxref("FetchEvent.respondWith")}}.
 
 ```js
 this.addEventListener('install', function(event) {
@@ -86,9 +86,9 @@ self.addEventListener('fetch', function(event) {
       return response;
     } else {
       return fetch(event.request).then(function (response) {
-        // la réponse ne peut être utilisée qu'une seule fois
-        // nous devons sauvegarder le clone pour mettre
-        // une copie en cache et servir le second
+        // la réponse ne peut être utilisée qu'une seule fois
+        // nous devons sauvegarder le clone pour mettre
+        // une copie en cache et servir le second
         let responseClone = response.clone();
 
         caches.open('v1').then(function (cache) {

@@ -13,7 +13,7 @@ original_slug: Web/CSS/Comprendre_z-index/Empilement_sans_z-index
 
 ## Empilement sans `z-index`
 
-Lorsqu’aucun élément n'a de {{cssxref("z-index")}} définis, tous les éléments sont empilés dans cet ordre (de bas en haut) :
+Lorsqu’aucun élément n'a de {{cssxref("z-index")}} définis, tous les éléments sont empilés dans cet ordre (de bas en haut)&nbsp;:
 
 1.  Arrière-plans et bordures de l'élément racine
 2.  Blocs enfants dans le flux normal, dans leur ordre d'apparition (en HTML)

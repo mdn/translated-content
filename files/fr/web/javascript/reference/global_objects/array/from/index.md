@@ -41,7 +41,7 @@ Une nouvelle instance de {{jsxref("Array")}}.
 - d'objets semblables à des tableaux (qui disposent d'une propriété `length` et d'éléments indexés) ou
 - [d'objets itérables](/fr/docs/Web/JavaScript/Guide/iterable) (des objets dont on peut avoir les éléments comme {{jsxref("Map")}} et {{jsxref("Set")}}).
 
-`Array.from()` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau (ou de l'instance de la classe fille) qui est créé. Autrement dit` Array.from(obj, mapFn, thisArg)` correspond exactement à `Array.from(obj).map(mapFn, thisArg)`, sauf qu'il n'y a pas de tableau intermédiaire de créé. Cet aspect est notamment important pour certaines classes filles, comme les [tableaux typés](/fr/docs/JavaScript/Tableaux_typ%C3%A9s) (en effet, un tableau intermédiaire aurait eu ses valeurs tronquées pour qu'elles soient du type approprié).
+`Array.from()` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau (ou de l'instance de la classe fille) qui est créé. Autrement dit `Array.from(obj, mapFn, thisArg)` correspond exactement à `Array.from(obj).map(mapFn, thisArg)`, sauf qu'il n'y a pas de tableau intermédiaire de créé. Cet aspect est notamment important pour certaines classes filles, comme les [tableaux typés](/fr/docs/JavaScript/Tableaux_typ%C3%A9s) (en effet, un tableau intermédiaire aurait eu ses valeurs tronquées pour qu'elles soient du type approprié).
 
 La propriété `length` de la méthode `from()` est 1.
 

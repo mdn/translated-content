@@ -9,11 +9,9 @@ translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}</div>
 
-<div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
-
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>a</var> &gt;&gt;&gt; <var>b</var></code>
+<pre class="syntaxbox"><code><var>a</var> &gt;&gt;&gt; <var>b</var></code>
 </pre>
 
 <h2 id="描述">描述</h2>
@@ -22,14 +20,14 @@ translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 
 <p>For non-negative numbers, zero-fill right shift and sign-propagating right shift yield the same result. For example, <code>9 &gt;&gt;&gt; 2</code> yields 2, the same as <code>9 &gt;&gt; 2</code>:</p>
 
-<pre class="brush: js notranslate">.     9 (base 10): 00000000000000000000000000001001 (base 2)
+<pre class="brush: js">.     9 (base 10): 00000000000000000000000000001001 (base 2)
                    --------------------------------
 9 &gt;&gt;&gt; 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 </pre>
 
 <p>However, this is not the case for negative numbers. For example, <code>-9 &gt;&gt;&gt; 2</code> yields 1073741821, which is different than <code>-9 &gt;&gt; 2</code> (which yields <code>-3</code>):</p>
 
-<pre class="brush: js notranslate">.     -9 (base 10): 11111111111111111111111111110111 (base 2)
+<pre class="brush: js">.     -9 (base 10): 11111111111111111111111111110111 (base 2)
                     --------------------------------
 -9 &gt;&gt;&gt; 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
 </pre>
@@ -38,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 
 <h3 id="Using_unsigned_right_shift">Using unsigned right shift</h3>
 
-<pre class="brush: js notranslate"> 9 &gt;&gt;&gt; 2; // 2
+<pre class="brush: js"> 9 &gt;&gt;&gt; 2; // 2
 -9 &gt;&gt;&gt; 2; // 1073741821
 </pre>
 

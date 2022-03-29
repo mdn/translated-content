@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/subarray
 ---
 {{JSRef}}
 
-La méthode `subarray()` permet de renvoyer un nouvel objet _TypedArray_ basé sur le même {{jsxref("ArrayBuffer")}} et dont les éléments sont du même type que l'objet _TypedArray_ courant. Le paramètre `début` est à considérer au sens large et le paramètre `end` est à considérer au sens strict. _TypedArray_ est l'un des types de [tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés#Les_objets_TypedArray).
+La méthode `subarray()` permet de renvoyer un nouvel objet _TypedArray_ basé sur le même {{jsxref("ArrayBuffer")}} et dont les éléments sont du même type que l'objet _TypedArray_ courant. Le paramètre `début` est à considérer au sens large et le paramètre `end` est à considérer au sens strict. _TypedArray_ est l'un des types de [tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés#Les_objets_TypedArray).
 
 {{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}
 
@@ -33,7 +33,7 @@ Un nouvel objet {{jsxref("TypedArray")}}.
 
 ## Description
 
-L'intervalle défini par `début` et `fin` est redimensionné si besoin pour être un intervalle valide en regard du tableau courant. Si la longueur du nouveau tableau est négative, elle est ramenée à zéro. Si `début `ou `fin `a une valeur négative, on prendra en compte la position à partir de la fin du tableau et non à partir du début de celui-ci.
+L'intervalle défini par `début` et `fin` est redimensionné si besoin pour être un intervalle valide en regard du tableau courant. Si la longueur du nouveau tableau est négative, elle est ramenée à zéro. Si `début` ou `fin` a une valeur négative, on prendra en compte la position à partir de la fin du tableau et non à partir du début de celui-ci.
 
 On notera que cette méthode permet de créer un nouvelle vue sur le tampon (_buffer_) existant, tous les changements apportés via le nouvel objet impacteront le tableau typé initial et vice versa.
 
@@ -57,7 +57,7 @@ console.log(sub);   // Uint8Array [ 1, 2, 3, 0 ]
 | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                             | {{Spec2('Typed Array')}} | Remplacée par ECMAScript 6.                     |
 | {{SpecName('ES6', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.subarray', 'TypedArray.prototype.subarray')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

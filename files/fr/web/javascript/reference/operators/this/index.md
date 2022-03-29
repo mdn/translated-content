@@ -99,7 +99,7 @@ whatsThis.call(obj);  // "Toto"
 whatsThis.apply(obj); // "Toto"
 ```
 
-Lorsque le mot-clé `this` est utilisé dans le corps d'une fonction, il est possible d'utiliser les méthodes {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} pour lier `this` à un objet donné. Toutes les fonctions héritent de ces méthodes grâce à {{jsxref("Function.prototype")}}.
+Lorsque le mot-clé `this` est utilisé dans le corps d'une fonction, il est possible d'utiliser les méthodes {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} pour lier `this` à un objet donné. Toutes les fonctions héritent de ces méthodes grâce à {{jsxref("Function.prototype")}}.
 
 ```js
 function ajout(c, d){
@@ -383,7 +383,7 @@ montrera le texte `button` lorsqu'on cliquera dessus. Attention, seul le code ex
 </button>
 ```
 
-Ici, on utilise `this `à l'intérieur d'une fonction et il n'est pas défini en amont. Il renvoie donc l'objet global (l'objet `window` pour un navigateur avec du code non-strict).
+Ici, on utilise `this` à l'intérieur d'une fonction et il n'est pas défini en amont. Il renvoie donc l'objet global (l'objet `window` pour un navigateur avec du code non-strict).
 
 ## Spécifications
 

@@ -69,66 +69,7 @@ client.onreadystatechange = function() {//设定侦听器onreadystatechange。
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>浏览器</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatIe('5')}}<sup>[2]</sup><br>
-    {{CompatIe('7')}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatSafari('1.2')}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>
-    <p>浏览器</p>
-   </th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{CompatUnknown}}</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1]从Firefox 49开始，在首选项network.http.keep_empty_response_headers_as_empty_string设置为true的情况下，空响应头将作为空字符串返回，默认为false。 在Firefox 49之前，空响应头已被忽略。从Firefox 50开始，该项默认设置为true。</p>
-
-<p>[2]该功能最开始是通过ActiveXObject()实现的。 直到Internet Explorer 7，标准的XMLHttpRequest才出现。</p>
+{{Compat("api.XMLHttpRequest.getResponseHeader")}}
 
 <h2 id="也请看看">也请看看:</h2>
 

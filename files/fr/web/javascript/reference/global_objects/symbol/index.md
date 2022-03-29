@@ -71,7 +71,7 @@ Lorsqu'on utilise des mécanismes de conversion de types avec les symboles, on a
 
 - Lorsqu'on tente de convertir un symbole en un nombre, cela provoquera une exception {{jsxref("TypeError")}} (par exemple avec `+sym` ou `sym | 0`).
 - L'égalité faible permet d'obtenir `true` avec ` Object(sym) == sym``. `
-- `Symbol("toto") + "truc" `lève une exception {{jsxref("TypeError")}} (le symbole ne peut pas être converti en une chaîne de caractères), cela permet par exemple d'éviter de créer (sans s'en rendre compte) des noms de propriétés basés sur des symboles.
+- `Symbol("toto") + "truc"` lève une exception {{jsxref("TypeError")}} (le symbole ne peut pas être converti en une chaîne de caractères), cela permet par exemple d'éviter de créer (sans s'en rendre compte) des noms de propriétés basés sur des symboles.
 - La méthode utilisant la conversion avec {{jsxref("String","String()")}} fonctionnera comme un appel à {{jsxref("Symbol.prototype.toString()")}}. En revanche, `new String(sym)` renverra une erreur.
 
 ## Propriétés
@@ -110,7 +110,7 @@ En plus des symboles que vous pouvez créer, JavaScript possède certains symbol
 - {{jsxref("Symbol.hasInstance")}}
   - : Une méthode qui permet de déterminer si un constructeur reconnaît un objet comme son instance. Utilisé par {{jsxref("Opérateurs/instanceof", "instanceof")}}.
 - {{jsxref("Symbol.isConcatSpreadable")}}
-  - : Une valeur booléenne qui indique si un objet devrait être réduit à la concaténation des éléments de son tableau via  {{jsxref("Array.prototype.concat()")}}.
+  - : Une valeur booléenne qui indique si un objet devrait être réduit à la concaténation des éléments de son tableau via  {{jsxref("Array.prototype.concat()")}}.
 - {{jsxref("Symbol.unscopables")}}
   - : Un objet dont les noms des propriétés propres et héritées sont exclues de l'objet associé lors de l'utilisation de [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with).
 - {{jsxref("Symbol.species")}}

@@ -15,4 +15,4 @@ original_slug: Glossaire/webm
 
 ### Culture générale
 
-- [WebM ](https://fr.wikipedia.org/wiki/WebM)sur Wikipédia
+- [WebM](https://fr.wikipedia.org/wiki/WebM) sur Wikipédia

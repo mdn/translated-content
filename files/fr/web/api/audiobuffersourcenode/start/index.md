@@ -47,13 +47,13 @@ L'exemple suivant, plus complexe, jouera, après une seconde de pause, un tronç
 source.start(contexteAudio.currentTime + 1,3,10);
 ```
 
-> **Note :** Pour un exemple plus complexe montrant la méthode `start()` en action, consulter l'exemple {{domxref("AudioContext.decodeAudioData")}}. Voir aussi [ l'exemple complet](http://mdn.github.io/decode-audio-data/) et [son code source](https://github.com/mdn/decode-audio-data).
+> **Note :** Pour un exemple plus complexe montrant la méthode `start()` en action, consulter l'exemple [`AudioContext.decodeAudioData`](/fr/docs/Web/API/BaseAudioContext/decodeAudioData). Voir aussi l'exemple complet [en direct](https://mdn.github.io/webaudio-examples/decode-audio-data/) et [son code source](https://github.com/mdn/webaudio-examples/tree/master/decode-audio-data).
 
 ## Spécification
 
 | Spécification                                                                                                                                                        | Statut                               | Commentaire |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-start-void-double-when-double-offset-double-duration', 'start()')}} | {{Spec2('Web Audio API')}} |             |
+| {{SpecName('Web Audio API', '#widl-AudioBufferSourceNode-start-void-double-when-double-offset-double-duration', 'start()')}} | {{Spec2('Web Audio API')}} |             |
 
 ## Compatibilité navigateurs
 

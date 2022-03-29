@@ -32,7 +32,7 @@ Un booléen indiquant si la valeur passée en argument est un nombre fini.
 
 ## Description
 
-Par rapport à la fonction de l'objet global {{jsxref("isFinite","isFinite()")}} qui convertit l'argument donné en un nombre, la fonction `Number.isFinite `ne convertit pas l'argument et ne renvoie pas `true`.
+Par rapport à la fonction de l'objet global {{jsxref("isFinite","isFinite()")}} qui convertit l'argument donné en un nombre, la fonction `Number.isFinite` ne convertit pas l'argument et ne renvoie pas `true`.
 
 ## Exemples
 
@@ -76,7 +76,7 @@ Deuxième version plus concise qui utilise la méthode globale `isFinite`
 
 ```js
 if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === "number" && isFinite(value);
+    return typeof value === "number" && isFinite(value);
 }
 ```
 

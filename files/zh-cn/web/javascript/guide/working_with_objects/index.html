@@ -10,26 +10,24 @@ tags:
   - 比较对象
 translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
-<div><a id="#%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%B1%9E%E6%80%A7" name="#%E5%AF%B9%E8%B1%A1%E5%92%8C%E5%B1%9E%E6%80%A7"></a>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}</div>
+<div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}</div>
 
-<p class="summary"><span style="line-height: 1.5;">JavaScript </span>的设计是<span style="line-height: 1.5;">一个</span>简单的基于对象的范式。<span style="line-height: 1.5;">一个对象就是一系列属性的集合，一个属性包含一个名和一个值。一个属性的值可以是函数，这种情况下属性也被称为</span><em>方法</em><span style="line-height: 1.5;">。除了浏览器里面预定义的那些对象之外，你也可以定义你自己的对象。本章节讲述了怎么使用对象、属性、函数和方法，怎样实现自定义对象。</span></p>
+<p>JavaScript 的设计是一个简单的基于对象的范式。一个对象就是一系列属性的集合，一个属性包含一个名和一个值。一个属性的值可以是函数，这种情况下属性也被称为<em>方法</em>。除了浏览器里面预定义的那些对象之外，你也可以定义你自己的对象。本章节讲述了怎么使用对象、属性、函数和方法，怎样实现自定义对象。</p>
 
 <h2 id="对象概述">对象概述</h2>
 
-<p><span style="line-height: 1.5;">javascript 中的对象(物体)，和其它编程语言中的对象一样，可以比照现实生活中的对象(物体)来理解它。 javascript 中对象(物体)的概念可以比照着现实生活中实实在在的物体来理解。</span></p>
+<p>javascript 中的对象(物体)，和其它编程语言中的对象一样，可以比照现实生活中的对象(物体)来理解它。 javascript 中对象(物体)的概念可以比照着现实生活中实实在在的物体来理解。</p>
 
 <p>在javascript中，一个对象可以是一个单独的拥有属性和类型的实体。我们拿它和一个杯子做下类比。一个杯子是一个对象(物体)，拥有属性。杯子有颜色，图案，重量，由什么材质构成等等。同样，javascript对象也有属性来定义它的特征。</p>
 
 <h2 id="对象和属性">对象和属性</h2>
 
-<p><span style="line-height: 1.5;">一个 javascript 对象有很多属性。一个对象的属性可以被解释成一个附加到对象上的变量。对象的属性和普通的 javascript 变量基本没什么区别，仅仅是属性属于某个对象。属性定义了对象的特征(译注：动态语言面向对象的鸭子类型)。你可以通过点符号来访问一个对象的属性。</span></p>
+<p>一个 javascript 对象有很多属性。一个对象的属性可以被解释成一个附加到对象上的变量。对象的属性和普通的 javascript 变量基本没什么区别，仅仅是属性属于某个对象。属性定义了对象的特征(译注：动态语言面向对象的鸭子类型)。你可以通过点符号来访问一个对象的属性。</p>
 
-<div style="margin-right: 270px;">
 <pre class="brush: js">objectName.propertyName
 </pre>
-</div>
 
-<p><span style="line-height: 1.5;">和其他 javascript 变量一样，对象的名字(可以是普通的变量)和属性的名字都是大小写敏感的。你可以在定义一个属性的时候就给它赋值。例如，我们创建一个myCar的对象然后给他三个属性，make，model，year。具体如下所示：</span></p>
+<p>和其他 javascript 变量一样，对象的名字(可以是普通的变量)和属性的名字都是大小写敏感的。你可以在定义一个属性的时候就给它赋值。例如，我们创建一个myCar的对象然后给他三个属性，make，model，year。具体如下所示：</p>
 
 <pre class="brush: js">var myCar = new Object();
 myCar.make = "Ford";
@@ -66,20 +64,18 @@ myObj[""]               = "Even an empty string";
 console.log(myObj);
 </pre>
 
-<p><span id="result_box" lang="zh-CN"><span>请注意，方括号中的所有键都将转换为字符串类型，因为JavaScript中的对象只能使用String类型作为键类型。</span> <span>例如，在上面的代码中，当将键obj添加到myObj时，JavaScript将调用obj.toString()方法，并将此结果字符串用作新键。</span></span></p>
+<p>请注意，方括号中的所有键都将转换为字符串类型，因为JavaScript中的对象只能使用String类型作为键类型。 例如，在上面的代码中，当将键obj添加到myObj时，JavaScript将调用obj.toString()方法，并将此结果字符串用作新键。</p>
 
 <p>你也可以通过存储在变量中的字符串来访问属性：</p>
 
-<div style="width: auto;">
 <pre class="brush: js">var propertyName = "make";
-myCar[propertyName] = "Ford";
+  myCar[propertyName] = "Ford";
+  
+  propertyName = "model";
+  myCar[propertyName] = "Mustang";
+  </pre>
 
-propertyName = "model";
-myCar[propertyName] = "Mustang";
-</pre>
-</div>
-
-<p><span style="line-height: 1.5;">你可以在 </span><span style="line-height: 1.5;"> </span><a class="internal" href="/zh-CN/docs/JavaScript/Guide/Statements#for...in_Statement" style="line-height: 1.5;" title="zh-CN/docs/JavaScript/Guide/Statements#for...in Statement">for...in</a><span style="line-height: 1.5;"> 语句中使用方括号标记以枚举一个对象的所有属性。为了展示它如何工作，下面的函数当你将对象及其名称作为参数传入时，显示对象的属性：</span></p>
+<p>你可以在  <a href="/zh-CN/docs/JavaScript/Guide/Statements#for...in_Statement">for...in</a> 语句中使用方括号标记以枚举一个对象的所有属性。为了展示它如何工作，下面的函数当你将对象及其名称作为参数传入时，显示对象的属性：</p>
 
 <pre class="brush: js">function showProps(obj, objName) {
   var result = "";
@@ -140,14 +136,14 @@ myCar.year = 1969
 
 <pre class="brush: js">var obj = { property_1:   value_1,   // property_# 可以是一个标识符...
             2:            value_2,   // 或一个数字...
-           <span lang="EN-US">["property" +3]</span>:<span lang="EN-US"> value_3</span>,<span lang="EN-US"><span>  </span></span>//  或<span>一个可计算的<span lang="EN-US">key</span>名<span lang="EN-US">...</span></span>
+           ["property" +3]: value_3,  //  或一个可计算的key名...
             // ...,
             "property n": value_n }; // 或一个字符串
 </pre>
 
 
 
-<p>这里 <code>obj</code> 是新对象的名称，每一个 <code>property_<em>i</em></code> 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 <code>value_<em>i</em></code> 是一个其值将被赋予 <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">property_</span><em>i </em><span style="line-height: 1.5;">的表达式。</span><code style="font-style: normal; line-height: 1.5;">obj</code><span style="line-height: 1.5;"> 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）</span></p>
+<p>这里 <code>obj</code> 是新对象的名称，每一个 <code>property_<em>i</em></code> 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 <code>value_<em>i</em></code> 是一个其值将被赋予 property_<em>i </em>的表达式。<code>obj</code> 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）</p>
 
 <p>如果一个对象是通过在顶级脚本的对象初始化器创建的，则 JavaScript 在每次遇到包含该对象字面量的表达式时都会创建对象。同样的，在函数中的初始化器在每次函数调用时也会被创建。</p>
 
@@ -163,7 +159,7 @@ myCar.year = 1969
 
 <p>你也可以用对象初始化器来创建数组。参见 {{ web.link("Values%2C_variables%2C_and_literals#Array_literals", "array literals") }}.</p>
 
-<p>在 JavaScript 1.1 及更早版本中，你不能使用对象初始化器。你只能通过使用构造函数或其他对象的函数来创建对象。参见 {{ anch("使用构造函数") }}.</p>
+<p>在 JavaScript 1.1 及更早版本中，你不能使用对象初始化器。你只能通过使用构造函数或其他对象的函数来创建对象。参见 <a href="#使用构造函数">使用构造函数</a>.</p>
 
 <h3 id="使用构造函数">使用构造函数</h3>
 
@@ -273,11 +269,11 @@ fish.displayType(); // Output:Fishes
 
 <p>在 JavaScript 1.0 中，你可以通过名称或序号访问一个属性。但是在 JavaScript 1.1 及之后版本中，如果你最初使用名称定义了一个属性，则你必须通过名称来访问它；而如果你最初使用序号来定义一个属性，则你必须通过索引来访问它。</p>
 
-<p>这个限制发生在你通过构造函数创建一个对象和它的属性（就象我们之前通过 <code>Car</code> 对象类型所做的那样）并且显式地定义了单独的属性（如 <code>m</code><span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">yCar.color = "red"）</span><span style="line-height: 1.5;">之时。如果你最初使用索引定义了一个对象属性，例如 <code>myCar[5] = "25"</code>，则你只可能通过 <code>myCar[5]</code> 引用它。</span></p>
+<p>这个限制发生在你通过构造函数创建一个对象和它的属性（就象我们之前通过 <code>Car</code> 对象类型所做的那样）并且显式地定义了单独的属性（如 <code>m</code>yCar.color = "red"）之时。如果你最初使用索引定义了一个对象属性，例如 <code>myCar[5] = "25"</code>，则你只可能通过 <code>myCar[5]</code> 引用它。</p>
 
-<p><span style="line-height: 1.5;">这条规则的例外是从与HTML对应的对象，例如 <code>forms</code> 数组。对于这些数组的元素，你总是既可以通过其序号（依据其在文档中出现的顺序），也可以按照其名称（如果有的话）访问它。举例而言，如果文档中的第二个 <code>&lt;form&gt;</code> 标签有一个 <code>NAME</code> 属性且值为<code> "myForm"，访问该 form 的方式可以是 document.forms[1]，document.forms["myForm"]或 document.myForm。</code></span></p>
+<p>这条规则的例外是从与HTML对应的对象，例如 <code>forms</code> 数组。对于这些数组的元素，你总是既可以通过其序号（依据其在文档中出现的顺序），也可以按照其名称（如果有的话）访问它。举例而言，如果文档中的第二个 <code>&lt;form&gt;</code> 标签有一个 <code>NAME</code> 属性且值为<code> "myForm"，访问该 form 的方式可以是 document.forms[1]，document.forms["myForm"]或 document.myForm。</code></p>
 
-<p><span style="font-size: 1.7142857142857142rem; letter-spacing: -0.5px; line-height: 24px;">为对象类型定义属性</span></p>
+<p>为对象类型定义属性</p>
 
 <p>你可以通过 <code>prototype </code>属性为之前定义的对象类型增加属性。这为该类型的所有对象，而不是仅仅一个对象增加了一个属性。下面的代码为所有类型为 <code>car </code>的对象增加了 <code>color</code> 属性，然后为对象 <code>car1</code> 的 <code>color</code> 属性赋值：</p>
 
@@ -285,7 +281,7 @@ fish.displayType(); // Output:Fishes
 car1.color = "black";
 </pre>
 
-<p>参见<span style="line-height: 1.5;"> </span><a href="/zh-CN/docs/JavaScript/Reference" style="line-height: 1.5; text-decoration: underline;" title="zh-CN/docs/JavaScript/Reference">JavaScript Reference</a><span style="line-height: 1.5;"> 中</span><span style="line-height: 1.5;"> Function 对象的 </span><a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype" style="line-height: 1.5;" title="zh-CN/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code> 属性</a><span style="line-height: 1.5;"> 。</span></p>
+<p>参见 <a href="/zh-CN/docs/JavaScript/Reference" title="zh-CN/docs/JavaScript/Reference">JavaScript Reference</a> 中 Function 对象的 <a href="/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/prototype" title="zh-CN/docs/JavaScript/Reference/Global Objects/Function/prototype"><code>prototype</code> 属性</a> 。</p>
 
 <h2 id="定义方法">定义方法</h2>
 
@@ -306,14 +302,14 @@ var myObj = {
 };
 </pre>
 
-<p>这里 <code>objectName</code> 是一个已经存在的对象，<code>methodname</code> 是方法的名称，而 <code style="font-style: normal; line-height: 1.5;">function_name</code><span style="line-height: 1.5;"> </span><span style="line-height: 1.5;">是函数的名称。</span></p>
+<p>这里 <code>objectName</code> 是一个已经存在的对象，<code>methodname</code> 是方法的名称，而 <code>function_name</code> 是函数的名称。</p>
 
 <p>你可以在对象的上下文中象这样调用方法：</p>
 
 <pre class="brush: js">object.methodname(params);
 </pre>
 
-<p>你可以在对象的构造函数中包含方法定义来<span style="line-height: 1.5;">为某个对象类型定义方法。例如，你可以为之前定义的 <code>car</code> 对象定义一个函数格式化并显示其属性：</span></p>
+<p>你可以在对象的构造函数中包含方法定义来为某个对象类型定义方法。例如，你可以为之前定义的 <code>car</code> 对象定义一个函数格式化并显示其属性：</p>
 
 <pre class="brush: js">function displayCar() {
   var result = `A Beautiful ${this.year} ${this.make} ${this.model}`;
@@ -463,7 +459,7 @@ console.log(o.b) // Runs the getter, which yields a + 1 or 6
 
 <h2 id="删除属性">删除属性</h2>
 
-<p>你可以用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a> 操作符删除一个<strong style="color: red;">不是继承而来</strong>的属性。下面的例子说明如何删除一个属性：</p>
+<p>你可以用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/delete">delete</a> 操作符删除一个<strong>不是继承而来</strong>的属性。下面的例子说明如何删除一个属性：</p>
 
 <pre class="brush: js">//Creates a new object, myobj, with two properties, a and b.
 var myobj = new Object;
@@ -495,7 +491,7 @@ fruit === fruitbear // return false
 </pre>
 
 <div class="note">
-<p><strong>注意:</strong> "===" 运算符用来检查数值是否相等: 1 === "1"返回false，而1 == "1" 返回true</p>
+<p><strong>备注：</strong> "===" 运算符用来检查数值是否相等: 1 === "1"返回false，而1 == "1" 返回true</p>
 </div>
 
 <pre class="brush: js">// 两个变量, 同一个对象
@@ -506,7 +502,7 @@ var fruitbear = fruit;  // 将fruit的对象<strong>引用</strong>(reference)�
 fruit == fruitbear // return true
 fruit === fruitbear // return true</pre>
 
-<p><font face="Consolas, Liberation Mono, Courier, monospace">了解更多关于比较操作符的用法，查看</font> <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison operators</a>.</p>
+<p>了解更多关于比较操作符的用法，查看 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Comparison operators</a>.</p>
 
 <h2 id="附加参考">附加参考</h2>
 
@@ -519,4 +515,4 @@ fruit === fruitbear // return true</pre>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}</p>
 
-<div></div>
+

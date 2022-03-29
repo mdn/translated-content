@@ -1,12 +1,13 @@
 ---
 title: console
-slug: Web/API/Console
+slug: Web/API/console
 tags:
   - API
+  - Debugging
   - Interface
   - Reference
-  - console
-  - 콘솔
+  - web console
+browser-compat: api.console
 translation_of: Web/API/Console
 ---
 {{APIRef("Console API")}}
@@ -22,8 +23,6 @@ console.log("링크를 열 수 없습니다")
 이 문서는 콘솔 객체에서 사용할 수 있는 {{anch("메서드")}}와 몇 가지 {{anch("예제")}}를 다룹니다.
 
 {{AvailableInWorkers}}
-
-> **참고:** 실제 `console` 인터페이스는 역사적 이유로 인해 모두 소문자(즉 `Console`이 아니고 `console`)입니다.
 
 ## 메서드
 
@@ -144,7 +143,7 @@ for (var i=0; i<5; i++) {
 [13:14:13.488] Hello, Bob. You've called me 5 times.
 ```
 
-#### `console` 출력 꾸미기
+#### 콘솔 출력 꾸미기
 
 `"%c"` 명령을 사용해 콘솔 출력에 CSS 스타일을 적용할 수 있습니다.
 
@@ -228,7 +227,8 @@ console.timeEnd("answer time");
 
 시작할 때와 끝낼 때 모두 타이머의 이름이 표시됨을 알 수 있습니다.
 
-> **참고:** 타이머를 네트워크 트래픽 소요시간 측정에 사용하는 경우, 타이머는 총 소요시간을 보여주지만 네트워크 패널에 표시되는 시간은 헤더에 소모한 시간만 나타낸다는 것을 알아야 합니다. 응답 본문 로깅을 활성화한 경우, 응답 헤더와 본문의 시간을 합한 값이 타이머의 콘솔 출력과 비슷해야 합니다.
+> **참고:** 타이머를 네트워크 트래픽 소요시간 측정에 사용하는 경우, 타이머는 총 소요시간을 보여주지만 네트워크 패널에 표시되는 시간은 헤더에 소모한 시간만 나타낸다는 것을 알아야 합니다.
+> 응답 본문 로깅을 활성화한 경우, 응답 헤더와 본문의 시간을 합한 값이 타이머의 콘솔 출력과 비슷해야 합니다.
 
 ### 스택 추적
 

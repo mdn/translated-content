@@ -25,9 +25,9 @@ The **`StorageManager`** interface of the the [Storage API](/en-US/docs/Web/API/
 - {{domxref("StorageManager.estimate()")}} {{securecontext_inline}}
   - : Returns a {{domxref("StorageEstimate")}} object containing usage and quota numbers for your origin.
 - {{domxref("StorageManager.persist()")}} {{securecontext_inline}}
-  - : Returns a {{jsxref('Promise')}} that resolves to `true` if the user agent is able to persist your site's storage.
+  - : Returns a {{jsxref('Promise')}} that resolves to `true` if the user agent is able to persist your site's storage.
 - {{domxref("StorageManager.persisted()")}} {{securecontext_inline}}
-  - : Returns a {{jsxref('Promise')}} that resolves to `true` if persistence has already been granted for your site's storage.
+  - : Returns a {{jsxref('Promise')}} that resolves to `true` if persistence has already been granted for your site's storage.
 
 ## Specifications
 

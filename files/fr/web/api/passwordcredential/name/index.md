@@ -19,7 +19,7 @@ La propriété **`name`** est accessible en lecture seule et est rattachée à l
 
 ### Valeur
 
-A {{domxref("USVString")}} containing a name.
+A {{domxref("USVString")}} containing a name.
 
 ## Spécifications
 

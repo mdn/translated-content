@@ -29,7 +29,7 @@ Vocabulaire
 
 ### Exemples
 
-#### Exemple 1 :
+#### Exemple 1&nbsp;:
 
 L’extrait de code ci-dessous présente un curseur simple orienté verticalement.
 
@@ -48,8 +48,8 @@ L’extrait de code ci-dessous présente un curseur simple orienté verticalemen
 
 ### Utilisé avec les rôles ARIA
 
-- scrollbar ;
-- [slider](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_slider_role) ;
+- scrollbar&nbsp;;
+- [slider](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_slider_role)&nbsp;;
 - separator.
 
 ### Autres ressources

@@ -11,15 +11,15 @@ translation_of: Web/API/Console
 ---
 {{APIRef("Console API")}}
 
-L'objet **`console`** donne accès à la console de débogage du navigateur (par exemple., la[ Console Web](/fr/docs/Outils/Console_Web) dans Firefox). Les spécificités de fonctionnement varient d'un navigateur à l'autre, mais il y a tout de même un ensemble de fonctionnalités qui sont fournies de base.
+L'objet **`console`** donne accès à la console de débogage du navigateur (par exemple, la [Console Web](/fr/docs/Tools/Web_Console) dans Firefox). Les spécificités de fonctionnement varient d'un navigateur à l'autre, mais il y a tout de même un ensemble de fonctionnalités qui sont fournies de base.
 
-La `console` est accessible de n'importe quel objet global, {{domxref("Window")}} du cadre de navigation, {{domxref("WorkerGlobalScope")}} et ses variantes spécifiques pour les workers. Elle est exposée comme {{domxref ("Window.console")}} et peut être référencée simplement comme console. Par exemple :
+La `console` est accessible de n'importe quel objet global, {{domxref("Window")}} du cadre de navigation, {{domxref("WorkerGlobalScope")}} et ses variantes spécifiques pour les workers. Elle est exposée comme {{domxref ("Window.console")}} et peut être référencée simplement comme console. Par exemple :
 
 ```js
 console.log("Failed to open the specified link")
 ```
 
-Cette page documente les {{anch("Methods", "méthodes")}} disponibles pour l'objet `console` et donne quelques {{anch("Usage", "exemples d'utilisation")}}.
+Cette page documente les [méthodes](#méthodes) disponibles pour l'objet `console` et donne quelques [exemples d'utilisation](#exemples_dutilisation).
 
 {{AvailableInWorkers}}
 
@@ -61,7 +61,7 @@ Cette page documente les {{anch("Methods", "méthodes")}} disponibles pour l'obj
 - {{domxref("Console.table()")}}
   - : Affiche des données tabulaires comme un tableau.
 - {{domxref("Console.time()")}}
-  - : Démarre un [chronomètre](/fr/docs/Web/API/console#Timers) que l'on peut nommer en le spécifiant en tant que paramètre. Jusqu'à 10 000 chronomètres simultanés peuvent tourner sur une page.
+  - : Démarre un [chronomètre](/fr/docs/Web/API/console#Timers) que l'on peut nommer en le spécifiant en tant que paramètre. Jusqu'à 10 000 chronomètres simultanés peuvent tourner sur une page.
 - {{domxref("Console.timeEnd()")}}
   - : Arrête le [chronomètre](/fr/docs/Web/API/console#Timers) spécifié et affiche le temps écoulé en millisecondes depuis son démarrage.
 - {{domxref("Console.timeStamp()")}} {{Non-standard_inline}}
@@ -104,7 +104,7 @@ console.info("My first car was a", car, ". The object is: ", someObject);
 
 L'affichage ressemblera à ceci :
 
-    [09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
+    [09:28:22.711] My first car was a Dodge Charger . The object is:  ({str:"Some text", id:5})
 
 #### Utiliser les caractères de substitution
 
@@ -149,7 +149,7 @@ Gecko 9.0 {{geckoRelease("9.0")}} a amené le support des caractères de substit
 Chacun de ceux-ci ira chercher l'argument qui suit la chaîne à formater. Par exemple :
 
     for (var i=0; i<5; i++) {
-      console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
+      console.log("Hello, %s. You've called me %d times.", "Bob", i+1);
     }
 
 L'affichage ressemblera à ceci :
@@ -199,7 +199,7 @@ L'affichage ressemblera à ceci :
 
 {{h3_gecko_minversion("Timers", "10.0")}}
 
-Pour calculer la durée d'une opération spécifique, Gecko 10 a amené le supports des chronomètres dans l'objet `console`.  pour démarrer un chronomètre, appelez la méthode ` console.time``() ` en lui donnant un seul paramètre, son nom. Pour arrêter le chronomètre et obtenir le temps écoulé en millisecondes, utilisez la méthode `console.timeEnd()`, en passant à nouveau le nom du chronomètre comme paramètre. Une seule page peut faire tourner un maximum de 10.000 chronomètres.
+Pour calculer la durée d'une opération spécifique, Gecko 10 a amené le supports des chronomètres dans l'objet `console`.  pour démarrer un chronomètre, appelez la méthode ` console.time``() ` en lui donnant un seul paramètre, son nom. Pour arrêter le chronomètre et obtenir le temps écoulé en millisecondes, utilisez la méthode `console.timeEnd()`, en passant à nouveau le nom du chronomètre comme paramètre. Une seule page peut faire tourner un maximum de 10.000 chronomètres.
 
 Par exemple, voici ce code :
 
@@ -224,10 +224,10 @@ L'objet console supporte aussi l'affichage d'une trace d'appels ; cela montre le
     foo();
 
     function foo() {
-      function bar() {
-        console.trace();
-      }
-      bar();
+      function bar() {
+        console.trace();
+      }
+      bar();
     }
 
 L'affichage dans la console ressemblera à ceci :

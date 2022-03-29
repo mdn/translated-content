@@ -74,7 +74,7 @@ Vous définissez les propriétés de la clé de l'[`action de page`](/fr/docs/Mo
 
 La seule clé obligatoire est `default_icon`.
 
-Il y a deux façons de spécifier une action de page : avec ou sans [popup](/fr/Add-ons/WebExtensions/Popups).
+Il y a deux façons de spécifier une action de page : avec ou sans [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
 
 - **Sans popup:** Lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que l'extension écoute pour utiliser [`pageAction.onClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked):
 - ```js
@@ -88,7 +88,7 @@ Vous pouvez modifier l'une des propriétés d'action de la page de manière prog
 
 ## Icônes
 
-Pour plus de détails sur la création d'icônes à utiliser avec l'action de votre page, voir   [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Photon Design System](https://design.firefox.com/photon/index.html).
+Pour plus de détails sur la création d'icônes à utiliser avec l'action de votre page, voir   [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Photon Design System](https://design.firefox.com/photon/index.html).
 
 ## Exemples
 

@@ -27,7 +27,7 @@ Les éléments définis grâce à `defs` ne sont jamais directement générés (
     </linearGradient>
   </defs>
 
-  <rect x="10" y="10" width="60" height="10"
+  <rect x="10" y="10" width="60" height="10"
         fill="url(#Gradient01)"  />
 </svg>
 ```
@@ -36,10 +36,10 @@ Les éléments définis grâce à `defs` ne sont jamais directement générés (
 
 ### Attributs globaux
 
-- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [Core attributes](/fr/docs/Web/SVG/Attribute#Core) »
-- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation) »
+- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#ConditionalProccessing)&nbsp;»
+- [Core attributes](/fr/docs/Web/SVG/Attribute#Core)&nbsp;»
+- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#GraphicalEvent)&nbsp;»
+- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation)&nbsp;»
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -57,7 +57,7 @@ Cet élément est implémenté par l'interface [`SVGDefsElement`](/fr/docs/Web/A
 
 | Spécification                                                                | Status                   | Commentaire        |
 | ---------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName('SVG2', 'struct.html#Head', '&lt;defs&gt;')}} | {{Spec2('SVG2')}} |                    |
+| {{SpecName('SVG2', 'struct.html#Head', '&lt;defs&gt;')}} | {{Spec2('SVG2')}} |                    |
 | {{SpecName('SVG1.1', 'struct.html#Head', '&lt;defs&gt;')}} | {{Spec2('SVG1.1')}} | Initial definition |
 
 ## Compatibilité des navigateurs

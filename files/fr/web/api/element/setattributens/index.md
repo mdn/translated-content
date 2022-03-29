@@ -34,7 +34,7 @@ value)
 
 {{ DOMAttributeMethods() }}
 
-`setAttributeNS`  est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire `"namespace:localname"`.
+`setAttributeNS`  est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire `"namespace:localname"`.
 
 ## Spécification
 

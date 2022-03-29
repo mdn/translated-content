@@ -2610,198 +2610,6 @@
       "RJ_Hsiao"
     ]
   },
-  "Tools": {
-    "modified": "2020-07-16T22:44:20.103Z",
-    "contributors": [
-      "SphinxKnight",
-      "wbamberg",
-      "iigmir",
-      "irvinfly",
-      "Weicheng",
-      "a0983891582",
-      "kingt_tsai",
-      "RJ_Hsiao",
-      "iinnttoo",
-      "yangshiqiangzy",
-      "Somnlent",
-      "benson.peng",
-      "dinoop.p1"
-    ]
-  },
-  "Tools/3D_View": {
-    "modified": "2020-07-16T22:34:25.840Z",
-    "contributors": [
-      "Sean64",
-      "Seafox"
-    ]
-  },
-  "Tools/Browser_Toolbox": {
-    "modified": "2020-07-16T22:35:56.020Z",
-    "contributors": [
-      "grapherd",
-      "a0983891582",
-      "jan730921"
-    ]
-  },
-  "Tools/Debugger": {
-    "modified": "2020-07-16T22:35:06.897Z",
-    "contributors": [
-      "iigmir",
-      "wbamberg",
-      "stephaniehobson",
-      "yurenju",
-      "MashKao"
-    ]
-  },
-  "Tools/Debugger/How_to": {
-    "modified": "2020-07-16T22:35:08.733Z",
-    "contributors": [
-      "wbamberg"
-    ]
-  },
-  "Tools/Debugger/How_to/Open_the_debugger": {
-    "modified": "2020-07-16T22:35:09.582Z",
-    "contributors": [
-      "marcus7777777"
-    ]
-  },
-  "Tools/Debugger/How_to/Set_a_breakpoint": {
-    "modified": "2020-07-16T22:35:10.325Z",
-    "contributors": [
-      "Kevinwuu"
-    ]
-  },
-  "Tools/Firefox_OS_1.1_Simulator": {
-    "modified": "2020-07-16T22:35:58.639Z",
-    "contributors": [
-      "MashKao"
-    ]
-  },
-  "Tools/Network_Monitor": {
-    "modified": "2020-07-16T22:35:32.529Z",
-    "contributors": [
-      "Fashaun"
-    ]
-  },
-  "Tools/Page_Inspector": {
-    "modified": "2020-07-16T22:34:30.099Z",
-    "contributors": [
-      "Fashaun",
-      "iigmir",
-      "jsx",
-      "zmh_w",
-      "RJ_Hsiao"
-    ]
-  },
-  "Tools/Page_Inspector/How_to": {
-    "modified": "2020-07-16T22:34:32.460Z",
-    "contributors": [
-      "iigmir",
-      "sidgan"
-    ]
-  },
-  "Tools/Page_Inspector/How_to/Examine_grid_layouts": {
-    "modified": "2020-07-16T22:34:47.546Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Tools/Performance": {
-    "modified": "2020-07-16T22:36:14.144Z",
-    "contributors": [
-      "irvinfly"
-    ]
-  },
-  "Tools/Performance/Allocations": {
-    "modified": "2020-07-16T22:36:22.457Z",
-    "contributors": [
-      "johnny801018"
-    ]
-  },
-  "Tools/Performance/Frame_rate": {
-    "modified": "2020-07-16T22:36:19.429Z",
-    "contributors": [
-      "black80887"
-    ]
-  },
-  "Tools/Remote_Debugging": {
-    "modified": "2020-07-16T22:35:38.579Z",
-    "contributors": [
-      "Keung162",
-      "yhn5525"
-    ]
-  },
-  "Tools/Remote_Debugging/Firefox_for_Android": {
-    "modified": "2020-07-16T22:35:39.658Z",
-    "contributors": [
-      "king620707"
-    ]
-  },
-  "Tools/Responsive_Design_Mode": {
-    "modified": "2020-07-16T22:35:22.603Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Tools/Settings": {
-    "modified": "2020-07-16T22:36:35.954Z",
-    "contributors": [
-      "abc52090241"
-    ]
-  },
-  "Tools/Style_Editor": {
-    "modified": "2020-07-16T22:35:02.268Z",
-    "contributors": [
-      "Kashashi",
-      "bassam",
-      "RJ_Hsiao"
-    ]
-  },
-  "Tools/Web_Audio_Editor": {
-    "modified": "2020-07-16T22:36:09.045Z",
-    "contributors": [
-      "Seafox"
-    ]
-  },
-  "Tools/Web_Console": {
-    "modified": "2020-07-16T22:34:10.824Z",
-    "contributors": [
-      "iigmir",
-      "maybe",
-      "bassam",
-      "king_5266"
-    ]
-  },
-  "Tools/Web_Console/Console_messages": {
-    "modified": "2020-07-16T22:34:16.848Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Tools/Web_Console/Rich_output": {
-    "modified": "2020-07-16T22:34:20.675Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Tools/Web_Console/Split_console": {
-    "modified": "2020-07-16T22:34:21.659Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Tools/Web_Console/The_command_line_interpreter": {
-    "modified": "2020-07-16T22:34:19.994Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
-  "Tools/Web_Console/UI_Tour": {
-    "modified": "2020-07-16T22:34:17.831Z",
-    "contributors": [
-      "iigmir"
-    ]
-  },
   "Web": {
     "modified": "2020-04-05T02:12:59.455Z",
     "contributors": [
@@ -4717,18 +4525,18 @@
       "ginszme"
     ]
   },
-  "Web/API/XMLHttpRequest/onreadystatechange": {
-    "modified": "2019-03-23T22:16:06.897Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
   "Web/API/XMLHttpRequest/readyState": {
     "modified": "2019-03-23T22:16:03.865Z",
     "contributors": [
       "jWorker",
       "jackblackevo",
       "ginszme"
+    ]
+  },
+  "Web/API/XMLHttpRequest/readystatechange_event": {
+    "modified": "2019-03-23T22:16:06.897Z",
+    "contributors": [
+      "jackblackevo"
     ]
   },
   "Web/API/XMLHttpRequest/setRequestHeader": {
@@ -5144,7 +4952,7 @@
       "yoonasy"
     ]
   },
-  "Web/CSS/attr()": {
+  "Web/CSS/attr": {
     "modified": "2020-11-04T08:52:16.034Z",
     "contributors": [
       "chrisdavidmills",
@@ -5299,7 +5107,7 @@
       "alk03073135"
     ]
   },
-  "Web/CSS/transform-function/translate3d()": {
+  "Web/CSS/transform-function/translate3d": {
     "modified": "2020-11-30T13:00:00.920Z",
     "contributors": [
       "chrisdavidmills",

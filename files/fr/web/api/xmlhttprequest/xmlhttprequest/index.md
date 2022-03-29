@@ -35,20 +35,20 @@ Un nouvel objet {{domxref("XMLHttpRequest")}}. L'objet doit être au minimum ini
 
 ## La syntaxe de Firefox non-standard
 
-Firefox 16 a ajouté un paramètre non standard au constructeur qui peut activer le mode anonyme (voir {{Bug("692677")}}). Mettre le drapeau `mozAnon` à `true` revient à être identique au constructeur [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) décrit dans de vieilles versions des  specifications de XMLHttpRequest.
+Firefox 16 a ajouté un paramètre non standard au constructeur qui peut activer le mode anonyme (voir {{Bug("692677")}}). Mettre le drapeau `mozAnon` à `true` revient à être identique au constructeur [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) décrit dans de vieilles versions des specifications de XMLHttpRequest.
 
     const request = new XMLHttpRequest(paramsDictionary);
 
 ### Paramètres (non standard)
 
-- `objParameters` {{gecko_minversion_inline("16.0")}}
+- `objParameters`
 
   - : Il y a deux drapeaux qui peuvent être activés
 
     - `mozAnon`
       - : Booléen: Mettre ce drapeau à `true` évitera au navigateur d'exposer le {{Glossary("origin")}} and [credentials de l'utilisateur](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) lors de la récupération des ressources. Plus important, cela signifie que les {{Glossary("Cookie", "cookies")}} ne seront pas envoyés, sauf si ils sont clairement ajoutés en utilisant setRequestHeader.
     - `mozSystem`
-      - : Booléen: Mettre ce drapeau à `true` autorise les connections cross-site sans requérir le serveur à utiliser {{Glossary("CORS")}}. _Paramètre requis_ :_ `mozAnon: true`, i.e. cela ne peut pas être combiné avec l'envoi de cookies ou d'autres identifiants utilisateurs. Cela fonctionne seulement sur les applications autorisées ({{Bug("692677")}}); ne marche pas sur les pages chargées arbitraitement dans Firefox_
+      - : Booléen&nbsp;: mettre ce drapeau à `true` autorise les connexions intersites sans requérir le serveur à utiliser [`CORS`](/fr/docs/Glossary/CORS). *Paramètre requis&nbsp;: `mozAnon: true`, par exemple, cela ne peut pas être combiné avec l'envoi de cookies ou d'autres identifiants utilisateurs. Cela fonctionne seulement sur les applications autorisées ([bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)); ne marche pas sur les pages chargées arbitrairement dans Firefox.*
 
 ## Voir aussi
 
