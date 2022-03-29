@@ -8,16 +8,9 @@ translation_of: Web/API/HTMLMediaElement/controls
 
 La propriété **`HTMLMediaElement.controls`** reflète l'attribut HTML [`controls`](/fr/docs/Web/HTML/Element/video#attr-controls) qui vérifie si les contrôles de l'interface utilisateur pour la lecture de l'élément multimédia sont affichés.
 
-## Syntaxe
-
-```js
-let myControls = video.controls;
-audio.controls = true;
-```
-
 ### Valeur
 
-Une valeur booléenne. La valeur `true` signifie que les contrôles seront affiché.
+Une valeur booléenne. La valeur `true` signifie que les contrôles seront affichés.
 
 ## Exemple
 
