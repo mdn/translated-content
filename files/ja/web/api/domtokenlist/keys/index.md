@@ -2,74 +2,63 @@
 title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
 tags:
-- DOM
-- DOMTokenList
-- Iterable
-- Method
-- Reference
-- Web
-- keys
+- メソッド
+- リファレンス
+browser-compat: api.DOMTokenList.keys
 translation_of: Web/API/DOMTokenList/keys
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>keys()</strong></code> は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを処理することができる{{jsxref("Iteration_protocols","反復子","",1)}}を返します。キーの型は <code>unsigned integer</code> です。
-</p>
+**`keys()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを処理することができる{{jsxref("Iteration_protocols","反復子","",1)}}を返します。キーの型は符号なし整数です。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">tokenList.keys();</pre>
+```js
+keys();
+```
 
-<h3 id="Parameters">引数</h3>
+## 引数
 
-<p>なし</p>
+なし
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>{{jsxref("Iteration_protocols","反復子","",1)}}を返します。</p>
+{{jsxref("Iteration_protocols","反復子","",1)}}を返します。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<p>次の例では、 {{domxref("Element.classList")}} を使用して {{htmlelement("span")}} 要素に設定されたクラスのリストを <code>DOMTokenList</code> として受け取ります。 <code>keys()</code> を使用してキーを含む反復子を取得してから、 <a href="/ja/docs/Web/JavaScript/Reference/Statements/for...of">for ... of</a> ループを使用してそれぞれを反復処理し、それを <code>&lt;span&gt;</code> の {{domxref("Node.textContent")}} に書き込みます。</p>
+次の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るために、 {{domxref("Element.classList")}} を使用しています。 `keys()` を使用してキーを含む反復子を取得してから、 [for...of](/ja/docs/Web/JavaScript/Reference/Statements/for...of) ループを使用してそれぞれを反復処理し、それを `<span>` の {{domxref("Node.textContent")}} に書き込みます。
 
-<p>最初に HTML です。</p>
+最初に HTML です。
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>そして JavaScript です。</p>
+そして JavaScript です。
 
-<pre class="brush: js">var span = document.querySelector("span");
-var classes = span.classList;
-var iterator = classes.keys();
+```js
+const span = document.querySelector("span");
+const classes = span.classList;
+const iterator = classes.keys();
 
-for(var value of iterator) {
-  span.textContent += value + ' ++ ';
-}</pre>
+for(let value of iterator) {
+  span.textContent += `(${value}) `;
+}
+```
 
-<p>出力結果は以下のようになります。</p>
+出力結果は以下のようになります。
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#domtokenlist','keys() (as iterable&lt;Node&gt;)')}}
-      </td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DOMTokenList.keys")}}</p>
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("DOMTokenList.entries()")}}, {{domxref("DOMTokenList.forEach()")}}, {{domxref("DOMTokenList.values")}}
