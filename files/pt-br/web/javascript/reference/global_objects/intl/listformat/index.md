@@ -41,7 +41,7 @@ O objeto **`Intl.ListFormat`** habilita a formatação de lista de acordo com o 
 
 ### Utilizando format
 
-O exemplo a seguir mostra como criar o List formarter utilizando o idioma Português.
+O exemplo a seguir mostra como criar o List formatter utilizando o idioma Português.
 
 ```js
 const list = ["Moto", "Ônibus", "Carro"];
