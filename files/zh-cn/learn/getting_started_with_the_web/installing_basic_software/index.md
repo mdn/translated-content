@@ -9,6 +9,7 @@ tags:
 - 工具
 - WebMechanics
 - 文本编辑器
+translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 ---
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
@@ -32,7 +33,7 @@ tags:
 
 ### 安装文本编辑器
 
-你的电脑上可能已经有一个基本的文本编辑器。默认情况下，Windows 是 [Notepad](https://en.wikipedia.org/wiki/Microsoft_Notepad) ，macOS 则有 [TextEdit](https://en.wikipedia.org/wiki/TextEdit)。Linux 发行版有所不同；Ubuntu 下是 [gedit](https://en.wikipedia.org/wiki/Gedit) 。
+你的电脑上可能已经有一个基本的文本编辑器。默认情况下，Windows 是 [Notepad](https://zh.wikipedia.org/wiki/记事本) ，macOS 则有 [TextEdit](https://zh.wikipedia.org/wiki/文字編輯_(應用程式))。Linux 发行版有所不同；Ubuntu 下是 [gedit](https://zh.wikipedia.org/wiki/Gedit) 。
 
 对于 Web 开发，你可能可以做得比记事本或 TextEdit 更好。我们建议从 [Visual Studio Code](https://code.visualstudio.com/) 开始，它是一个免费的编辑器，提供实时预览和代码提示。
 
@@ -46,7 +47,7 @@ tags:
 
 在继续之前，你应该至少安装两款这样的浏览器，并准备好进行测试。
 
-> **Note:** Internet Explorer 与一些现代网络功能不兼容，它可能无法运行你的项目。你通常不需要为你的 Web 项目与它兼容而操心，因为很少还有人在使用它——至少在你学习的时候不要太担心它。你可能会在以后遇到一个需要支持它的项目。
+> **备注：** Internet Explorer 与一些现代网络功能不兼容，它可能无法运行你的项目。你通常不需要为你的 Web 项目与它兼容而操心，因为很少还有人在使用它——至少在你学习的时候不要太担心它。你可能会在以后遇到一个需要支持它的项目。
 
 ### 安装本地 Web 服务器
 
@@ -54,7 +55,7 @@ tags:
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
-## In this module
+## 本章目录
 
 - [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
 - [你的网站会是什么样子？](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
