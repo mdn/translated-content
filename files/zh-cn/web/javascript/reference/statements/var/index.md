@@ -1,211 +1,246 @@
 ---
-title: var 描述
+title: var
 slug: Web/JavaScript/Reference/Statements/var
 tags:
   - JavaScript
+  - Language feature
+  - Reference
   - Statement
-  - 声明
 translation_of: Web/JavaScript/Reference/Statements/var
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p><strong><code>var</code> 声明语句</strong>声明一个变量，并可选地将其初始化为一个值。</p>
+**`var` 语句** 用于声明一个函数范围或全局范围的变量，并可将其初始化为一个值（可选）。
 
-<p>{{EmbedInteractiveExample("pages/js/statement-var.html")}}</p>
+{{EmbedInteractiveExample("pages/js/statement-var.html")}}
 
+## 语法
 
+```js
+var varname1 [= value1] [, varname2 [= value2] ... [, varnameN [= valueN]]];
+```
 
-<h2 id="语法">语法</h2>
+- `varnameN`
+  - : 变量名。变量名可以定义为任何合法标识符。
+- `valueN` {{optional_inline}}
+  - : 变量的初始化值。该值可以是任何合法的表达式。默认值为 `undefined`。
 
-<pre class="syntaxbox">var <em>varname1 [</em>= <em>value1] [</em>, <em>varname2 [</em>= <em>value2] </em><em>... [</em>, <em>varnameN [</em>= <em>valueN]]]</em>;</pre>
+另外，[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)语法也可用于变量声明。
 
-<dl>
- <dt><code>varnameN</code></dt>
- <dd>变量名。变量名可以定义为任何合法标识符。</dd>
- <dt><code>valueN</code></dt>
- <dd>变量的初始化值。该值可以是任何合法的表达式。默认值为 <code>undefined</code>。</dd>
-</dl>
+```js
+var { bar } = foo; // foo = { bar:10, baz:12 };
+/* 创建一个名为 'bar' 的变量，其值为 10 */
+```
 
-<h2 id="Description">描述</h2>
+## 描述
 
-<p>变量声明，无论发生在何处，都在执行任何代码之前进行处理。用 <code>var</code> 声明的变量的作用域是它当前的执行上下文，它可以是嵌套的函数，或者对于声明在任何函数外的变量来说是全局。如果你重新声明一个 JavaScript 变量，它将不会丢失其值。</p>
+无论在何处声明变量，都会在执行任何代码之前进行处理。这被称为{{Glossary("Hoisting", "变量提升")}}，我们将在下面进一步讨论。
 
-<p>当赋值给未声明的变量, 则执行赋值后, 该变量会被隐式地创建为全局变量（它将成为全局对象的属性）。</p>
+用 `var` 声明的变量的作用域是它当前的执行上下文及其闭包（嵌套函数），或者对于声明在任何函数外的变量来说是全局。使用 `var` 重复声明 JavaScript 变量并不会抛出错误（即使在严格模式(strict mode)下），同时，变量也不会丢失其值，直到调用其它的赋值操作。
 
-<p>声明和未声明变量之间的差异是：</p>
-
-<p>1. 声明变量的作用域限制在其声明位置的上下文中，而非声明变量总是全局的。</p>
-
-<pre class="brush: js">function x() {
-  y = 1;   // 在严格模式（strict mode）下会抛出 ReferenceError 异常
-  var z = 2;
+```js
+'use strict';
+function foo() {
+  var x = 1;
+  function bar() {
+    var y = 2;
+    console.log(x); // 1 (函数 `bar` 包含了 `x`)
+    console.log(y); // 2 (`y` 在作用域内)
+  }
+  bar();
+  console.log(x); // 1 (`x` 在作用域内)
+  console.log(y); // 在严格模式（strict mode）下将抛出 ReferenceError，`y` 仅在 `bar` 函数的作用域内
 }
 
-x();
+foo();
+```
 
-console.log(y); // 打印 "1"
-console.log(z); // 抛出 ReferenceError: z 未在 x 外部声明
-</pre>
+使用 `var` 声明的变量将在任何代码执行前被创建，这被称为变量提升。这些变量的初始值为 `undefined`。
 
-<p>2. 声明变量在任何代码执行前创建，而非声明变量只有在执行赋值操作的时候才会被创建。</p>
+```js
+'use strict';
+console.log(x);                // undefined (注意，不会抛出 ReferenceError)
+console.log('still going...'); // still going...
+var x = 1;
+console.log(x);                // 1
+console.log('still going...'); // still going...
+```
 
-<pre class="brush: js">console.log(a);                // 抛出ReferenceError。
-console.log('still going...'); // 打印"still going..."。</pre>
+在全局上下文中，使用 `var` 声明的变量将作为全局对象的**不可配置**属性被添加。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("Operators/delete", "delete")}} 删除。其对应的名字也将被添加到[全局环境记录（global environment record）](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-global-environment-records)（它构成了全局词法环境(global lexical environment)的一部分）的 `[[VarNames]]` 插槽内的列表中。`[[VarNames]]` 中的命名列表使运行时能够区分“全局变量”和“全局对象的直接属性”。
 
-<pre class="brush: js">var a;
-console.log(a);                // 打印"undefined"或""（不同浏览器实现不同）。
-console.log('still going...'); // 打印"still going..."。</pre>
+全局变量（以全局对象的属性的形式被创建）不可配置的原因是：该标识符被视为一个变量，而不是全局对象的**直接属性**。JavaScript 具有自动化的内存管理机制，因此“能够使用 `delete` 删除全局变量”是没有意义的。
 
-<p>3. 声明变量是它所在上下文环境的不可配置属性，非声明变量是可配置的（如非声明变量可以被删除）。</p>
+```js
+'use strict';
+var x = 1;
+globalThis.hasOwnProperty('x'); // true
+delete globalThis.x; // 在严格模式下，将抛出 TypeError，否则静默失败（fail silently）。
+delete x;  // 在严格模式下，将抛出 SyntaxError，否则静默失败。
+```
 
-<pre class="brush: js">var a = 1;
-b = 2;
+注意，在 Node.js [CommonJS](http://www.commonjs.org/) modules 以及原生 [ECMAScript modules](/zh-CN/docs/Web/JavaScript/Guide/Modules) 中，顶层变量被声明在模块（module）的作用域内，而不是以属性的形式被添加到全局对象中。
 
-delete this.a; // 在严格模式（strict mode）下抛出TypeError，其他情况下执行失败并无任何提示。
-delete this.b;
+### 未限定标识符的赋值
 
-console.log(a, b); // 抛出ReferenceError。
-// 'b'属性已经被删除。
-</pre>
+全局对象位于作用域链的顶部。在尝试将名称解析为值时，将沿着作用域链搜索该名称。这意味着，全局对象中的属性在所有作用域中均可见，而无需使用 `globalThis.`、`window.` 或 `global.` 来限定标识符。
 
-<p>由于这三个差异，未能声明变量将很可能导致意想不到的结果。因此，<strong>建议始终声明变量，无论它们是在函数还是全局作用域内</strong>。 而且，在 ECMAScript 5 <a href="/zh-CN/docs/Web/JavaScript/Reference/Strict_mode">严格模式</a>下，分配给未声明的变量会引发错误。</p>
+所以你可以这样写：
 
-<h3 id="变量提升">变量提升</h3>
+```js
+function foo() {
+  String('s') // 注意，函数 `String` 是隐式可见的
+}
+```
 
-<p>由于变量声明（以及其他声明）总是在任意代码执行之前处理的，所以在代码中的任意位置声明变量总是等效于在代码开头声明。这意味着变量可以在声明之前使用，这个行为叫做“hoisting”。“hoisting”就像是把所有的变量声明移动到函数或者全局代码的开头位置。</p>
+这是因为：
 
-<pre class="brush: js">bla = 2
+```js
+globalThis.hasOwnProperty('String') // true
+```
+
+所以在未限定标识符的情况下，最终也会在全局对象中搜索名称。你无需使用 `globalThis.String`，而只需使用 `String`。在非严格模式下，如果作用域链中没有声明同名的变量，则对未限定标识符的赋值将会在全局对象下创建同名属性（译者注：即作为全局变量被创建）。
+
+```js
+foo = 'f' // 在非严格模式下，假设你想在全局对象下创建名为 `foo` 的属性
+globalThis.hasOwnProperty('foo') // true
+```
+
+在 ECMAScript 5 的[严格模式]((/zh-CN/docs/Web/JavaScript/Reference/Strict_mode))下，此行为具有不同的表现。在严格模式下，对未限定的标识符赋值将抛出 `ReferenceError`，以避免意外创建全局对象属性。
+
+注意，上面的说明意味着：与流行的错误信息相反，JavaScript 并没有隐式变量声明，它只是有一个类似的语法。
+
+### 变量提升
+
+由于变量声明（以及其他声明）总是在任意代码执行之前处理的，所以在代码中的任意位置声明变量总是等效于在代码开头声明。这意味着变量可以在声明之前使用，这个行为叫做“hoisting”。“hoisting”就像是把所有的变量声明移动到函数或者全局代码的开头位置。
+
+```js
+bla = 2
 var bla;
-// ...
 
 // 可以隐式地（implicitly）将以上代码理解为：
 
 var bla;
 bla = 2;
-</pre>
+```
 
-<p>因此，建议始终在作用域顶部声明变量（全局代码的顶部和函数代码的顶部），这可以清楚知道哪些变量是函数作用域（本地），哪些变量在作用域链上解决。</p>
+因此，建议始终在作用域顶部声明变量（全局代码的顶部和函数代码的顶部），这可以清楚知道哪些变量是函数作用域（局部），哪些变量在作用域链上解决。
 
-<p>重要的是，提升将影响变量声明，而不会影响其值的初始化。当到达赋值语句时，该值将确实被分配：</p>
+重要的是，提升将影响变量声明，而不会影响其值的初始化。仅在运行到赋值语句时初始化变量的值。在此之前，变量的值始终为 `undefined`（但已被声明）：
 
-<pre class="brush: js">function do_something() {
+```js
+function do_something() {
   console.log(bar); // undefined
   var bar = 111;
   console.log(bar); // 111
 }
 
-// is implicitly understood as:
+// 可以隐式地将以上代码理解为：
+
 function do_something() {
   var bar;
   console.log(bar); // undefined
   bar = 111;
   console.log(bar); // 111
-}</pre>
+}
+```
 
-<h2 id="Examples">例子</h2>
+## 示例
 
-<h3 id="声明并初始化两个变量：">声明并初始化两个变量：</h3>
+### 声明并初始化两个变量
 
-<pre class="brush: js">var a = 0, b = 0;
-</pre>
+```js
+var a = 0, b = 0;
+```
 
-<h3 id="给两个变量赋值成字符串值：">给两个变量赋值成字符串值：</h3>
+### 给两个变量赋值成字符串值
 
-<pre class="brush: js">var a = "A";
+```js
+var a = 'A';
 var b = a;
 
 // 等效于：
 
-var a, b = a = "A";
-</pre>
+var a, b = a = 'A';
+```
 
-<p>留意其中的顺序：</p>
+留意其中的顺序：
 
-<pre class="brush: js">var x = y, y = 'A';
+```js
+var x = y, y = 'A';
 console.log(x + y); // undefinedA
-</pre>
+```
 
-<p>在这里，<code>x</code> 和 <code>y</code> 在代码执行前就已经创建了，而赋值操作发生在创建之后。当"<code>x = y</code>"执行时，<code>y</code> 已经存在，所以不抛出<code>ReferenceError</code>，并且它的值是'<code>undefined</code>'。所以 <code>x</code> 被赋予 undefined 值。然后，<code>y</code> 被赋予'A'。于是，在执行完第一行之后，<code>x === undefined &amp;&amp; y === 'A'</code> 才出现了这样的结果。</p>
+在这里，`x` 和 `y` 在代码执行前就已经创建了，而赋值操作发生在创建之后。当“`x = y`”执行时，`y` 已经存在，所以不会抛出 `ReferenceError`，并且它的值是 `undefined`。所以，`x` 被赋予 `undefined` 值。然后，`y` 被赋予 `'A'`。于是，在执行完第一行之后，才出现了这样的结果：`x === undefined && y === 'A'`。
 
-<h3 id="多个变量的初始化">多个变量的初始化</h3>
+### 多个变量的初始化
 
-<pre class="brush: js">var x = 0;
-
-function f(){
-  var x = y = 1; // x在函数内部声明，y不是！
+```js
+var x = 0;
+function f() {
+  var x = y = 1; // x 在函数内部声明，y 则在全局作用域下声明
 }
 f();
 
-console.log(x, y); // 0, 1
+console.log(x, y); // 0 1
+
+// 在非严格模式下：
 // x 是全局变量。
-// y 是隐式声明的全局变量。 </pre>
+// y 是隐式声明的全局变量。 
+```
 
-<h3 id="隐式全局变量和外部函数作用域">隐式全局变量和外部函数作用域</h3>
+在严格模式下运行相同的示例：
 
-<p>看起来像是隐式全局作用域的变量也有可能是其外部函数变量的引用。</p>
+```js
+'use strict';
 
-<pre class="brush: js">var x = 0;  // x是全局变量，并且赋值为0。
+var x = 0;
+function f() {
+  var x = y = 1; // 严格模式下将抛出 ReferenceError
+}
+f();
 
-console.log(typeof z); // undefined，因为z还不存在。
+console.log(x, y);
+```
 
-function a() { // 当a被调用时，
-  var y = 2;   // y被声明成函数a作用域的变量，然后赋值成2。
+### 隐式全局变量和外部函数作用域
 
-  console.log(x, y);   // 0 2
+看起来像是隐式全局作用域的变量也有可能是其外部函数变量的引用：
 
-  function b() {       // 当b被调用时，
-    x = 3;  // 全局变量x被赋值为3，不生成全局变量。
-    y = 4;  // 已存在的外部函数的y变量被赋值为4，不生成新的全局变量。
-    z = 5;  // 创建新的全局变量z，并且给z赋值为5。
-  }         // (在严格模式下（strict mode）抛出ReferenceError)
+```js
+var x = 0; // x 是全局变量，并且赋值为 0
 
-  b();     // 调用b时创建了全局变量z。
-  console.log(x, y, z);  // 3 4 5
+console.log(typeof z); // // undefined，因为 z 还不存在
+
+function a() {
+  var y = 2; // y 被声明成函数 a 作用域的变量，并且赋值为 2
+
+  console.log(x, y); // 0 2
+
+  function b() {
+    x = 3; // 全局变量 x 被赋值为 3
+    y = 4; // 已存在的外部函数的 y 变量被赋值为 4
+    z = 5; // 创建新的全局变量 z，并且赋值为 5
+           // (在严格模式下抛出 ReferenceError)
+  }
+
+  b(); // 调用 b 时创建了全局变量 z
+  console.log(x, y, z); // 3 4 5
 }
 
-a();                   // 调用a时同时调用了b。
+a(); // Also calls b.
 console.log(x, z);     // 3 5
-console.log(typeof y); // undefined，因为y是a函数的本地（local）变量。</pre>
+console.log(typeof y); // undefined，因为 y 是 a 函数的局部变量
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.2', 'var statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-variable-statement', 'variable statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-variable-statement', 'variable statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("javascript.statements.var")}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
-</ul>
+- {{jsxref("Statements/let", "let")}}
+- {{jsxref("Statements/const", "const")}}
