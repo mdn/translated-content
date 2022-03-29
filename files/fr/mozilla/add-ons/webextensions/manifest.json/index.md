@@ -1,39 +1,34 @@
 ---
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
-tags:
-  - Add-ons
-  - Extensions
-  - Overview
-  - WebExtensions
-  - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json
+browser-compat: webextensions.manifest
 ---
 {{AddonSidebar}}
 
-> **Note :** Cet article décrit manifest.json pour les extensions web. Si vous cherchez des informations sur le manifeste.json dans les PWAs, consultez l'article [Web App Manifest](/fr/docs/Web/Manifest).
+> **Note :** Cet article décrit le format du fichier `manifest.json` pour les extensions web. Si vous cherchez des informations quant au manifeste des applications web progressives (PWA), consultez plutôt [l'article sur les manifestes d'application web](/fr/docs/Web/Manifest).
 
-Le fichier `manifest.json` est le seul fichier que chaque extension utilisant les API WebExtension doit contenir.
+Le fichier `manifest.json` est le seul fichier que toute extension basée sur les API WebExtension doit contenir.
 
-En utilisant `manifest.json`, vous spécifiez les métadonnées basiques de votre extension comme son nom et sa version, et des fonctionnalités de votre extension comme les scripts en arrière-plan (les scripts de contenu et les actions du navigateur).
+Avec `manifest.json`, on fournit les différentes métadonnées simples de l'extension, comme le nom et la version. On peut également y définir certains aspects des fonctionnalités de l'extension (tels que les scripts d'arrière-plan, les scripts de contenu et les actions du navigateur).
 
-C'est un fichier au format [JSON](/fr/docs/Glossary/JSON) à une exception près : il peut contenir des commentaires de type "`//`".
+Ce fichier est au format [JSON](/fr/docs/Glossary/JSON) avec une exception&nbsp;: il peut contenir des commentaires sous la forme `// toto titi`.
 
-## List of manifest.json keys
+## Liste des clés du fichier `manifest.json`
 
-Les clés `manifest.json` sont listées ci-dessous:
+Les différentes clés utilisées dans le fichier `manifest.json` sont listées ici&nbsp;:
 
-{{ListSubpages("/fr/Add-ons/WebExtensions/manifest.json")}}
+{{ListSubpages("/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
 
-### Notes about manifest.json keys
+### Notes sur les clés du fichier `manifest.json`
 
-- `"manifest_version"`, `"version"`, and `"name"` sont les seules clés obligatoires.
-- `"default_locale"` doit être présent si le répertoire "`_locales`" est présent et sinon doit être absent.
-- `"browser_specific_settings"` n'est pas prise en charge dans Google Chrome
+- `"manifest_version"`, `"version"`, et `"name"` sont les seules clés obligatoires.
+- `"default_locale"` doit être présente si le répertoire "`_locales`" est présent&nbsp;; elle doit être absente sinon.
+- `"browser_specific_settings"` n'est pas prise en charge par Google Chrome.
 
-### Accessing manifest.json keys at runtime
+### Accéder aux clés du fichier `manifest.json` à l'exécution
 
-Vous pouvez accéder au manifest de votre extension depuis le JavaScript de l'extension en utilisant la fonction {{WebExtAPIRef("runtime.getManifest()")}} :
+Il est possible d'accéder au manifeste de l'extension depuis le code de l'extension, à l'aide de la fonction [`runtime.getManifest()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)&nbsp;:
 
 ```js
 browser.runtime.getManifest().version;
@@ -41,11 +36,11 @@ browser.runtime.getManifest().version;
 
 ## Exemple
 
-Le bloc ci-dessous contient la syntaxe de base de certaines clés communes du manifest
+Le bloc qui suit illustre la syntaxe de certaines des clés les plus fréquemment utilisées.
 
-> **Note :** Il ne s'agit pas d'un exemple à copier-coller. Le choix des clés dont vous aurez besoin dépend de l'extension que vous développez.
+> **Note :** Il ne s'agit pas d'un exemple prêt à copier-coller. Lorsque vous développez une extension, sélectionnez avec soin les clés dont vous avez besoin.
 
-Pour des exemples complets d'extensions, voir [Exemple d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples).
+Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples).
 
 ```json
 {
@@ -57,7 +52,7 @@ Pour des exemples complets d'extensions, voir [Exemple d'extensions](/fr/docs/Mo
   },
 
   "background": {
-    "scripts": ["jquery.js", "my-background.js"],
+    "scripts": ["jquery.js", "mon-script-arriere-plan.js"],
   },
 
   "browser_action": {
@@ -65,7 +60,7 @@ Pour des exemples complets d'extensions, voir [Exemple d'extensions](/fr/docs/Mo
       "19": "button/geo-19.png",
       "38": "button/geo-38.png"
     },
-    "default_title": "Whereami?",
+    "default_title": "Oùsuisje?",
     "default_popup": "popup/geo.html"
   },
 
@@ -75,7 +70,7 @@ Pour des exemples complets d'extensions, voir [Exemple d'extensions](/fr/docs/Mo
         "default": "Ctrl+Shift+Y",
         "linux": "Ctrl+Shift+U"
       },
-      "description": "Send a 'toggle-feature' event"
+      "description": "Utiliser un évènement 'toggle-feature'"
     }
   },
 
@@ -107,7 +102,7 @@ Pour des exemples complets d'extensions, voir [Exemple d'extensions](/fr/docs/Mo
       "19": "button/geo-19.png",
       "38": "button/geo-38.png"
     },
-    "default_title": "Whereami?",
+    "default_title": "Oùsuisje?",
     "default_popup": "popup/geo.html"
   },
 
@@ -119,16 +114,16 @@ Pour des exemples complets d'extensions, voir [Exemple d'extensions](/fr/docs/Mo
     "api_script": "apiscript.js",
   },
 
-  "web_accessible_resources": ["images/my-image.png"]
+  "web_accessible_resources": ["images/mon-image.png"]
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-Pour un aperçu complet de toutes les clés de manifeste et de leurs sous-clés, [voir le tableau complet de compatibilité du navigateur manifest.json](/fr/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
+Pour un aperçu complet de l'ensemble des clés de manifeste et des sous-clés correspondantes, voir [le tableau de compatibilité complet pour `manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
 
-{{Compat("webextensions.manifest")}}
+{{Compat}}
 
 ## Voir aussi
 
-{{WebExtAPIRef("permissions")}} JavaScript API
+- L'API JavaScript [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/permissions)
