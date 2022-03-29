@@ -7,66 +7,55 @@ tags:
   - Web Storage
 translation_of: Web/API/Storage/setItem
 ---
-<p>{{APIRef("Web Storage API")}}</p>
+{{APIRef("Web Storage API")}}
 
-<p><strong><code>setItem()</code> </strong>作为 {{domxref("Storage")}} 接口的方法，接受一个键名和值作为参数，将会把键名添加到存储中，如果键名已存在，则更新其对应的值。</p>
+{{domxref("Storage")}} 接口的 **`setItem()`** 方法，接受一个键名和值作为参数，将会把键名添加到给定的 `Storage` 对象中，如果键名已存在，则更新其对应的值。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox notranslate"><em>storage</em>.setItem(<em>keyName</em>, <em>keyValue</em>);</pre>
+```js
+storage.setItem(keyName, keyValue);
+```
 
-<h3 id="参数">参数</h3>
+## 参数
 
-<dl>
- <dt><code><em>keyName</em></code></dt>
- <dd>一个 {{domxref("DOMString")}}，要创建或更新的键名。</dd>
- <dt><code><em>keyValue</em></code></dt>
- <dd>一个 {{domxref("DOMString")}}，要创建或更新的键名对应的值。</dd>
-</dl>
+- `keyName`
+  - : 一个 {{domxref("DOMString")}}，表示要创建或更新的键名。
+- `keyValue`
+  - : 一个 {{domxref("DOMString")}}，表示要创建或更新的键名对应的值。
 
-<h3 id="返回值">返回值</h3>
+### 返回值
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}。
 
-<h2 id="示例">示例</h2>
+### 异常
 
-<p>下面的函数在本地存储中创建三个数据项。</p>
+在存储已满的情况下，调用 `setItem()` 可能会抛出异常。特别地，在移动版 Safari 浏览器（从 IOS 5 开始）中，若用户进入了隐身模式（无痕浏览），这一行为将始终抛出异常。（Safari 在隐身模式下会将存储配额设置为 0 字节，这与其它浏览器不同，后者允许在隐身模式下使用单独的数据容器进行存储。）因此，开发人员应**始终捕获 `setItem()` 可能抛出的异常**。
 
-<pre class="brush: js notranslate">function populateStorage() {
+## 示例
+
+下面的函数在本地存储中创建三个数据项。
+
+```js
+function populateStorage() {
   localStorage.setItem('bgcolor', 'red');
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'myCat.png');
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>备注：</strong>一个实际的例子 <a href="https://mdn.github.io/dom-examples/web-storage/">Web Storage Demo</a>。</p>
-</div>
+> **备注：** 一个实际的例子：[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/)。
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Storage', '#dom-storage-setitem', 'setItem()')}}</td>
-   <td>{{Spec2('Web Storage')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
-<p>{{Compat("api.Storage.setItem")}}</p>
+{{Compat}}
 
-<h2 id="参见">参见</h2>
+## 参见
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/getItem">Storage.getItem()</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage/removeItem">Storage.removeItem()</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API</a></li>
-</ul>
+- [Storage.getItem()](/zh-CN/docs/Web/API/Storage/getItem)
+- [Storage.removeItem()](/zh-CN/docs/Web/API/Storage/removeItem)
+- [使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
