@@ -28,7 +28,7 @@ O objeto **`Intl.ListFormat`** habilita a formatação de lista de acordo com o 
 ## Métodos estáticos
 
 - {{jsxref("Intl/ListFormat/supportedLocalesOf", "Intl.ListFormat.supportedLocalesOf()")}}
-  - : Retorna um array com as localidades fornecidas com suporte sem precisar retornar à localidade padrão do tempo de execução.
+  - : Retorna um array com as localidades fornecidas com suporte sem precisar depender da localidade padrão do tempo de execução.
 
 ## Métodos de instância
 
