@@ -97,3 +97,4 @@ console.log(
 ## Veja também
 
 - {{jsxref("Intl")}}
+- [Um polyfill para `Intl.ListFormat` no FormatJS](https://formatjs.io/docs/polyfills/intl-listformat)
