@@ -286,7 +286,7 @@ Imlémentons le contrôle le plus important — le bouton play/pause.
     media.addEventListener('ended', stopMedia);
     ```
 
-    L'événement {{event("click")}} est explicite — nous voulons stopper la vidéo en appelant la fonction `stopMedia()` quand le bouton stop est cliqué. Cependant, nous voulons également stopper la vidéo quand elle a fini de jouer — signalé par l'événement {{event("ended")}}, nous pouvons donc mettre en place un gestionnaire d'événement pour exécuter la fonction quand cet événément se produit.
+    L'événement {{event("click")}} est explicite — nous voulons stopper la vidéo en appelant la fonction `stopMedia()` quand le bouton stop est cliqué. Cependant, nous voulons également stopper la vidéo quand elle a fini de jouer — signalé par l'événement {{event("ended")}}, nous pouvons donc mettre en place un gestionnaire d'événement pour exécuter la fonction quand cet évènement se produit.
 
 2.  Ensuite, définissons `stopMedia()` — ajoutez ce qui suit après la fonction `playPauseMedia()`:
 
@@ -313,7 +313,7 @@ Il y a différentes manières d'implémenter le retour arrière et l'avance rapi
     fwd.addEventListener('click', mediaForward);
     ```
 
-2.  Maintenant, occupons-nous des fonctions des gestionnaires d'événément — ajoutez le code suivant à la suite des fonctions précédentes pour définir `mediaBackward()` et `mediaForward()`:
+2.  Maintenant, occupons-nous des fonctions des gestionnaires d'évènement — ajoutez le code suivant à la suite des fonctions précédentes pour définir `mediaBackward()` et `mediaForward()`:
 
     ```js
     var intervalFwd;
