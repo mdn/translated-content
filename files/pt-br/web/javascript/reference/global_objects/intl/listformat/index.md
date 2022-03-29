@@ -68,7 +68,7 @@ console.log(
 
 ### Utilizando formatToParts
 
-O exemplo a seguir mostra como criar o List formarter retornando as partes formatadas.
+O exemplo a seguir mostra como criar o List formatter retornando as partes formatadas.
 
 ```js
 const list = ["Moto", "Ônibus", "Carro"];
