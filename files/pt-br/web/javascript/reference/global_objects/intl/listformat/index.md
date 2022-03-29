@@ -35,7 +35,7 @@ O objeto **`Intl.ListFormat`** habilita a formatação de lista de acordo com o 
 - {{jsxref("Intl/ListFormat/format", "Intl.ListFormat.prototype.format()")}}
   - : Retorna uma string formatada especifica do idioma representando os elementos da lista.
 - {{jsxref("Intl/ListFormat/formatToParts", "Intl.ListFormat.prototype.formatToParts()")}}
-  - : Retorna um array de objetos representando os diferentes componentes que podem ser usados para formatar uma lista de valores com reconhecimento de localidade
+  - : Retorna um array de objetos representando os diferentes componentes que podem ser usados para formatar uma lista de valores com reconhecimento de localidade.
 
 ## Exemplos
 
