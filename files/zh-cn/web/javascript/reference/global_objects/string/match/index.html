@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 <p>如上所述，匹配的结果包含如下所述的附加特性。</p>
 
 <ul>
- <li><code>groups</code>: 一个捕获组数组 或 {{jsxref("undefined")}}（如果没有定义命名捕获组）。</li>
+ <li><code>groups</code>: 一个命名捕获组对象，其键是捕获组名称，值是捕获组，如果未定义命名捕获组，则为 {{jsxref("undefined")}}。有关详细信息，请参阅[组合范围](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)。</li>
  <li><code>index</code>: 匹配的结果的开始位置</li>
  <li><code>input</code>: 搜索的字符串.</li>
 </ul>
