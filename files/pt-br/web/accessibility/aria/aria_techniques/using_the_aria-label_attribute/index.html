@@ -1,65 +1,79 @@
 ---
-title: Usando o atributo aria-label
-slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
+title: 'aria-label'
+slug: Web/Accessibility/ARIA/Attributes/aria-label
 tags:
-  - ARIA
   - Acessibilidade
-  - Conteúdo
-  - Referencia
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
+  - ARIA
+  - Atributo ARIA
+  - Propriedade ARIA
+  - aria-label
+  - Referência
 ---
-<p><span class="seoSummary">O atributo <a class="external" href="https://www.w3.org/WAI/PF/aria-1.1/states_and_properties#aria-label" rel="external"><code>aria-label</code></a> é usado para definir uma <em>string</em> na <em>tag</em> do elemento atual. Use nos casos que a <em>tag</em> do texto não seja visível na tela. Se há texto visível na <em>tag</em> do elemento, usa <a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="Using the aria-labelledby attribute">aria-labelledby</a> em vez.</span></p>
 
-<p>Esse atributo pode ser usado em qualquer elemento de HTML; não se limita aos elementos que tem um papel ARIA atribuído.</p>
+O atributo `aria-label` define uma string que rotula um elemento interativo.
 
-<h3 class="editable" id="Valor"><span>Valor</span></h3>
+## Descrição
 
-<p>string</p>
+Às vezes, o [nome acessível](https://w3c.github.io/aria/#dfn-accessible-name) de um elemento não está disponível ou não descreve seus conteúdos e não há conteúdo visível no DOM que possa ser atribuído ao objeto para lhe conferir sentido. Um exemplo comum é um botão contendo um SVG ou [icon font (que, por sua vez, você não deveria estar usando)](https://www.youtube.com/watch?v=9xXBYcWgCHA) sem qualquer texto.
 
-<h3 class="editable" id="Possíveis_efeitos_sobre_os_user_agents_e_Tecnologia_assistiva"><span>Possíveis efeitos sobre os user agents e </span>Tecnologia assistiva<span> </span></h3>
+Se o elemento interativo não tiver nome acessível, ou se seu nome acessível não for preciso e não houver conteúdo visível no DOM que possa ser referenciado via o atributo [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) , o atributo `aria-label` pode ser utilizado para rotular, com uma string, um elementoo interativo. Isso fornecerá um nome acessível para o elemento.
 
-<div class="editIcon">
-<h3 class="editable" id="sect1"><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute?action=edit&amp;sectionId=3" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="/skins/common/icons/icon-trans.gif"></span></a></h3>
-</div>
+> **Nota:** o atributo `aria-label` foi feito para ser usado em elementos interativos, ou elementos que se tornam interativos através de outras declarações ARIA, quando não houver texto visível e apropriado no DOM que possa ser referenciado como uma etiqueta. 
 
-<div class="note"><strong>Nota:</strong> Opiniões podem diferir em como tecnologia assistiva deve lidar com esta técnica. A informação fornecida acima é um desses pareceres e, portanto, não normativo.</div>
+A maior parte do conteúdo tem um nome acessível gerado pelo contexto fornecido pelo texto do elemento que o encapsula. Nomes acessíveis também podem ser criados por certos atributos ou elementos associados.
 
-<h2 id="Exemplos">Exemplos</h2>
+Por padrão, o nome acessível de um botão é o conteúdo entre as tags {{HTMLElement('button')}} de abertura e fechamento. O nome acessível de uma imagem é o conteúdo do atributo [`alt`](/en-US/docs/Web/HTML/Element/Img#attr-alt), e o nome acessível de um campo de entrada em um formulário é o conteúdo do elemento {{HTMLElement('label')}} associado.
 
-<div id="section_5">
-<h4 id="Exemplo_1_Várias_Etiquetas">Exemplo 1: Várias Etiquetas</h4>
+Se essas opções não estiverem disponíveis ou não forem apropriadas, use o atributo `aria-label` para definir o nome acessível do elemento. 
 
-<p>No exemplo abaixo, um botão é denominado para olhar como um botão típico "fechar", com um X no meio. Uma vez que não há nada que indique que a finalidade do botão é para fechar a janela, o atributo <code>aria-label</code> é utilizado para fornecer o rótulo para quaisquer tecnologias assistivas.</p>
-</div>
+O atributo `aria-label` pode ser usado em casos em que o texto que iria rotular o elemento _não_ está visível. Se houver texto visível que rotule o elemento, use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) ao invés. 
 
-<pre class="deki-transform notranslate"><span class="tag">&lt;button aria-label=<span class="str">"Fechar"</span> onclick=<span class="str">"myDialog.close()"</span>&gt;</span>X<span class="tag">&lt;/button&gt;</span>
-</pre>
+O propósito de `aria-label` é o mesmo de `aria-labelledby`. Ambos fornecem um nome acessível para um elemento. Se não houver nome visível que você possa referenciar, use `aria-label` para fornecer um nome reconhecível e acessível para o usuário. 
 
-<h4 id="Working_Examples">Working Examples:</h4>
 
-<h3 id="Notas">Notas</h3>
+O atributo `aria-label` pode ser utilizado com elementos HTML semânticos; ele não é limitado a elementos que têm um [ARIA `role`](/en-US/docs/Web/Accessibility/ARIA/Roles) atribuído.
 
-<ul>
- <li>O mapeamento mais comum da <em>API</em> <em>accessibility </em>para uma <em>label</em> é a propriedade <em>accessible name</em>.</li>
- <li>Atributos, incluindo declarações <code>aria-label</code>, são ignoradas pela maioria dos serviços de tradução automática.</li>
-</ul>
+Não "abuse" do uso de `aria-label`. Por eemplo, use texto visível com `aria-describedby` ou `aria-description`, não `aria-label`, para fornecer instruções adicionais ou esclarecer a interface de usuário. Lembre-se: você não está passando instruções apenas para um leitor de tela; se instruções não necessárias, passe-as para todos (ou, de preferência, deixe sua interface mais intuitiva). 
 
-<h3 id="Usado_por_regras_ARIA">Usado por regras ARIA</h3>
+Nem todos os elementos podem receber um nome acessível. Nem `aria-label` nem `aria-labelledby` devem ser usado em elementos não interativos ou elementos inline de papel estrutural como `code`, `term` e `emphasis`, ou quando a semântica não será mapeada para a API de acessibilidade, como as roles `presentation`, `none` e `hidden`. O atributo `aria-label` deve ser usado apenas em elementos interativos. Use `aria-label` para garantir que um nome acessível é fornecido quando nenhum estiver visível entre os elementos interativos do DOM, como links, vídeos, campos de entrada, [landmark roles](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), e [widget roles](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
 
-<p>todos os elementos da marcação de base</p>
+Se você der títulos (`title`) aos seus {{HTMLElement('iframe')}}s, descrições `alt` para suas imagens e {{HTMLElement('label')}}s associadas aos seus campos de entrada, `aria-label` não será necessário. Porém, quando ele estiver presente, ele terá precedência sobre `title`, `alt` ou `<label>` como o nome acessível do seu `iframe`, imagem ou campo de entrada, respectivamente.
+  
+> **Note:** O atributo `aria-label` só é "visível" para tecnologias assistivas. Se a informação for importante o suficiente para ser adicionada para usuários de tecnologias assistivas, considere torná-la visível para todos os usuários.
 
-<h3 id="Técnicas_ARIA_relacionadas">Técnicas ARIA relacionadas</h3>
+## Valores
 
-<ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" title="en/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">Using the aria-labelledby attribute</a></li>
-</ul>
+- `<string>`
+  - : Uma string de texto que será o nome acessível do elemento.
+  
+## ARIAMixin API
 
-<h3 id="Compatibilidade">Compatibilidade</h3>
+- {{domxref("Element.ariaLabel")}}
+  - : A propriedade [`ariaLabel`](/en-US/docs/Web/API/Element/ariaLabel), parte da interface {{domxref("Element")}}, reflete o valor do atributo `aria-label`.
+- {{domxref("ElementInternals.ariaLabel")}}
+  - : A propriedade [`ariaLabel`](/en-US/docs/Web/API/ElementInternals/ariaLabel), parte da interface {{domxref("ElementInternals")}}, reflete o valro do atributo `aria-label`.
 
-<p class="comment">Ainda por fazer: Adicionar informação de apoio para os combinações de produtos UA e AT mais comuns</p>
+## Roles associados
 
-<h3 id="Recursos_Adicionais">Recursos Adicionais</h3>
+Usado em quase todos os roles **exceto** roles que não podem ter um nome acessível fornecido pelo autor.
+Used in almost all roles **except** roles that can not be provided an accessible name by the author.
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-label">WAI-ARIA specification for aria-label</a></li>
-</ul>
+O atributo `aria-label` **NÃO** é suportado nos elementos [`code`](/en-US/docs/Web/Accessibility/ARIA/Roles/code_role), [`caption`](/en-US/docs/Web/Accessibility/ARIA/Roles/caption_role), [`deletion`](/en-US/docs/Web/Accessibility/ARIA/Roles/deletion_role), [`emphasis`](/en-US/docs/Web/Accessibility/ARIA/Roles/emphasis_role), [`generic`](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role), [`insertion`](/en-US/docs/Web/Accessibility/ARIA/Roles/_role), [`mark`](/en-US/docs/Web/Accessibility/ARIA/Roles/mark_role), [`paragraph`](/en-US/docs/Web/Accessibility/ARIA/Roles/paragraph_role), [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)/[`none`](/en-US/docs/Web/Accessibility/ARIA/Roles/none_role), [`strong`](/en-US/docs/Web/Accessibility/ARIA/Roles/strong_role), [`subscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/supscript_role), [`superscript`](/en-US/docs/Web/Accessibility/ARIA/Roles/superscript_role), [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role), and [`time`](/en-US/docs/Web/Accessibility/ARIA/Roles/time_role)
+
+  > **Nota:** O atributo `aria-label` é feito apenas para elementos interativos. Quando colocado em elementos não interativos, como os listados acima, ele pode não ser lido ou pode confundir seus usuários, sendo um elemento não interativo que se comporta como um elemento interativo.
+  
+  ## Especificações
+
+| Especificação | Status |
+| ------------- | ------  |
+| {{SpecName("ARIA","#aria-label","ARIA: aria-label Attribute")}}  | {{Spec2('ARIA')}} |
+  
+## Ver também
+
+- {{HTMLElement('label')}} element
+- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+
+<section id="Quick_links">
+<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
+{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
+</section>
