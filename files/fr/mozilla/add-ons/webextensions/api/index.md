@@ -36,7 +36,7 @@ function afficherErreur (e) {
 let setCookie = browser.cookies.set(
    {url: "https://developer.mozilla.org/"}
 );
-setCookie.then(logCookie, afficherErreur)
+setCookie.then(afficherCookie, afficherErreur)
 ```
 
 Notez que ceci est différent du système d'extension de Google Chrome, qui utilise l’espace de noms `chrome` à la place de `browser`, et qui utilise des fonctions de rappel (callbacks) plutôt que des promesses pour les fonctions asynchrones. Afin de favoriser la portabilité, l’implémentation Firefox des WebExtensions prend en charge `chrome` et les fonctions de rappel ainsi que `browser` et les promesses. Mozilla a également écrit une prothèse d’émulation (polyfill) permettant au code qui utilise `browser` et les promesses de fonctionner sans modification dans Chrome: <https://github.com/mozilla/webextension-polyfill>.
