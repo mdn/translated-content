@@ -60,7 +60,7 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
 
 ## Valor
 
-Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en {{SectionOnPage("/es/docs/Web/HTML/Date_and_time_formats", Formato válido de una fecha en formato de texto")}} (en inglés).
+Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en {{SectionOnPage("/en-Us/docs/Web/HTML/Date_and_time_formats", Formato válido de una fecha en formato de texto")}}.
 
 Puedes establecer un valor por defecto para la entrada introduciendo una fecha en el atributo {{htmlattrxref("value", "input")}} de la siguiente forma:
 
@@ -89,13 +89,13 @@ Junto con los atributos comunes a todos los elementos {{HTMLElement("input")}}, 
 
 ### max
 
-La última fecha a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/en-US/docs/Web/Guide/HTML/Constraint_validation)(en inglés). Si el valor del atributo `max` es un valor que no es una posible fecha en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
+La última fecha a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/en-US/docs/Web/Guide/HTML/Constraint_validation) (en inglés). Si el valor del atributo `max` es un valor que no es una posible fecha en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto posterior o igual a la fecha establecida en el atributo `min`.
 
 ### min
 
-La fecha más temprana a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/en-US/docs/Web/Guide/HTML/Constraint_validation)(en inglés). Si el valor del atributo `max` es un valor que no es una posible fecha en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
+La fecha más temprana a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/en-US/docs/Web/Guide/HTML/Constraint_validation) (en inglés). Si el valor del atributo `max` es un valor que no es una posible fecha en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto anterior o igual a la fecha establecida en el atributo `max`.
 
@@ -105,7 +105,7 @@ El atributo `step` es un número que especifica la granularidad que un valor deb
 
 Si le damos un valor de cadena de texto `any` significa que ningún salto está marcado y, por lo tanto, cualquier valor está permitido (expecto otras constricciones, como [`min`](#min) y [`max`](#max)).
 
-> **Nota:** Cuando los datos introducidos por el usuario no siguen la configuración del stepping, puede que el {{Glossary("user agent")} lo redondeé al valor válido más cercanos, prefiriendo valores mayores cuando hay dos opciones iguales cercanas.
+> **Nota:** Cuando los datos introducidos por el usuario no siguen la configuración del stepping, puede que el {{Glossary("user agent")}} lo redondeé al valor válido más cercanos, prefiriendo valores mayores cuando hay dos opciones iguales cercanas.
 
 Para entradas de tipo `date`, el valor del `step` es dado en días; y es tratado como el número de milisegundo igual a 86.400.000 veces el valor del `step` (el valor numérico subyacente está definido en milisegundos). El valor por defecto del `step` es 1, indicando 1 día.
 
@@ -136,7 +136,7 @@ El uso más simple de `<input type="date">` consta de una etiqueta `<input>`comb
 
 {{EmbedLiveSample('Basic_uses_of_date', 600, 40)}}
 
-Este HTML envía la fecha indicada bajo la palabra clave `bday` a `https://example.com, siendo la URL resultante `https://example.com/?bday=1955-06-08`.
+Este HTML envía la fecha indicada bajo la palabra clave `bday` a `https://example.com`, siendo la URL resultante `https://example.com/?bday=1955-06-08`.
 
 ### Estipulando valores de fecha máximos y mínimos
 
@@ -216,7 +216,7 @@ input:valid + span::after {
 }
 ```
 
-> **Advertencia:** La validación en el lado del cleinte _no es un sustituto_ de la validación en el servidor. Es fácil para alguien modificar el HTML o sobrepasar tu HTML completamente y mandar datos directamente a tu servidor. Si tu servidor no valida los datos recibidos, un desastre puede ocurrir: datos con un mal formato, demasiado grandes, del tipo equivocado, etc.
+> **Advertencia:** La validación en el lado del cliente _no es un sustituto_ de la validación en el servidor. Es fácil para alguien modificar el HTML o sobrepasar tu HTML completamente y mandar datos directamente a tu servidor. Si tu servidor no valida los datos recibidos, un desastre puede ocurrir: datos con un mal formato, demasiado grandes, del tipo equivocado, etc.
 
 ## Manejando el soporte de los navegadores
 
@@ -476,7 +476,7 @@ daySelect.onchange = function () {
 };
 ```
 
-> **Nota**: Recuerda que algunos años tienen 53 semanas (véase [semanas por año](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)(en inglés))! Ten esto en cuenta cuando desarrolles apps para producción
+> **Nota**: Recuerda que algunos años tienen 53 semanas (véase [semanas por año](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year), en inglés). Ten esto en cuenta cuando desarrolles apps para producción
 
 ## Especificaciones
 
