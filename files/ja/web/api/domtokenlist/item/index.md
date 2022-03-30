@@ -2,73 +2,65 @@
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
 tags:
-- API
-- DOM
-- DOMTokenList
-- Method
-- Reference
-- item
+- メソッド
+- リファレンス
+browser-compat: api.DOMTokenList.item
 translation_of: Web/API/DOMTokenList/item
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>item()</strong></code> は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト内の要素をその位置から取得します。</p>
+**`item()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト内の項目をその位置から取得します。
 
-<h2 id="Syntax">構文</h2>
+> **Note:** このメソッドは `[]` 演算子と等価です。
+> したがって、 `aList.item(i)` は `aList[i]` と同じです。 {{jsxref("Array")}} の [[] 演算子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements)と同様です。
 
-<pre
-  class="brush: js"><var>tokenList</var>.item(<var>index</var>)</pre>
+## 構文
 
-<h3 id="Parameters">引数</h3>
+```js
+tokenList.item(index)
+```
 
-<dl>
-  <dt><code><var>index</var></code></dt>
-  <dd>32 ビット符号なし整数 ({{jsxref("Number")}}) で、返したい要素の位置を表します。
-  </dd>
-</dl>
+### 引数
 
-<h3 id="Return_value">返値</h3>
+- `index`
+  - : 返したい項目の位置を表す数値です。整数でなかった場合は、整数部分のみが使用されます。
 
-<p>{{domxref("DOMString")}} で、返された要素を表します。数値がそのリストの <code>length</code> 以上であった場合は <code>null</code> を返します。</p>
+### 返値
 
-<h2 id="Examples">例</h2>
+返された要素を表す文字列です。数値がそのリストの `length` 以上であった場合は `null` を返します。
 
-<p>次の例は、 {{htmlelement("span")}} 要素に設定されたクラスのリストを {{domxref("Element.classList")}} を使用して <code>DOMTokenList</code> として取得します。それからリスト内の最後の要素を <code>item(<var>tokenList</var>.length - 1)</code> を使用して取得し、 <code>&lt;span&gt;</code> の {{domxref("Node.textContent")}} の中に書き込みます。</p>
+### 例外
 
-<p>最初に HTML です。</p>
+- {{jsxref("TypeError")}}
+  - : `index` が整数に変換できなかった場合に発生します。
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+## 例
 
-<p>そして JavaScript です。</p>
+次の例は、 {{htmlelement("span")}} 要素に設定されたクラスのリストを `DOMTokenList` として取得するのに {{domxref("Element.classList")}} を使用します。それからリスト内の最後の要素を `item(tokenList.length - 1)` を使用して取得し、 `<span>` の {{domxref("Node.textContent")}} の中に書き込みます。
 
-<pre class="brush: js">let span = document.querySelector("span");
-let classes = span.classList;
-let item = classes.item(classes.length-1);
-span.textContent = item;</pre>
+最初に HTML です。
 
-<p>出力結果は以下のようになります。</p>
+```html
+<span class="a b c"></span>
+```
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+そして JavaScript です。
 
-<h2 id="Specifications">仕様書</h2>
+```js
+const span = document.querySelector("span");
+const classes = span.classList;
+const item = classes.item(classes.length-1);
+span.textContent = item;
+```
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-item','item()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+出力結果は以下のようになります。
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<p>{{Compat("api.DOMTokenList.item")}}</p>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
