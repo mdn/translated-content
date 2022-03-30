@@ -256,7 +256,7 @@ Voici un exemple interactif pour essayer&nbsp;:
 
 La valeur renvoyée par ce contrôle est toujours exprimée au format hexadécimal sur 6 chiffres, en minuscules.
 
-## Évaluez vos compétences
+## Testez vos compétences&nbsp;!
 
 Vous avez atteint la fin de cet article. Mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin. [Testez vos compétences&nbsp;: contrôles HTML5](/fr/docs/Learn/Forms/Test_your_skills:_HTML5_controls).
 
