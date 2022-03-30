@@ -14,7 +14,7 @@ La courbure de la bordure s'applique à l'arrière-plan (défini avec la propri�
 
 La propriété `border-radius` ne s'applique pas aux éléments de tableaux lorsque [`border-collapse`](/fr/docs/Web/CSS/border-collapse) vaut `collapse`.
 
-> **Note :** Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple (`border-radius:0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.
+> **Note :** Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple `border-radius: 0 0 inherit inherit` pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.
 
 ## Propriétés détaillées correspondantes
 
@@ -24,8 +24,6 @@ Cette propriété est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_pr
 - [`border-top-right-radius`](/fr/docs/Web/CSS/border-top-right-radius),
 - [`border-bottom-right-radius`](/fr/docs/Web/CSS/border-bottom-right-radius),
 - [`border-bottom-left-radius`](/fr/docs/Web/CSS/border-bottom-left-radius).
-
-
 
 ## Syntaxe
 
@@ -79,10 +77,10 @@ border-radius: revert;
 border-radius: unset;
 ```
 
-La propriété `border-radius` peut être définie avec :
+La propriété `border-radius` peut être définie avec&nbsp;:
 
-- une, deux, trois voire quatre valeurs de longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou de pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Ces valeurs sont utilisées pour désigner un rayon de courbure pour chaque angle.
-- puis éventuellement une barre oblique (`/`) suivie d'une, deux, trois ou quatre valeurs de longueur ou de pourcentage qui permettent de définir un rayon de courbure supplémentaire pour créer des coins elliptiques.
+- Une, deux, trois voire quatre valeurs de longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou de pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Ces valeurs sont utilisées pour désigner un rayon de courbure pour chaque angle&nbsp;;
+- Puis éventuellement une barre oblique (`/`) suivie d'une, deux, trois ou quatre valeurs de longueur ou de pourcentage qui permettent de définir un rayon de courbure supplémentaire pour créer des coins elliptiques.
 
 ### Valeurs
 
@@ -152,7 +150,7 @@ La propriété `border-radius` peut être définie avec :
 Ainsi&nbsp;:
 
 ```css
-border-radius: 1em/5em;
+border-radius: 1em / 5em;
 
 /* est équivalent à : */
 
@@ -184,39 +182,39 @@ border-bottom-left-radius:  3px 4px;
 ## Exemples
 
 ```html hidden
-  <pre id="example-1">
-border: solid 10px;
-border-radius: 10px 40px 40px 10px;
-  </pre>
-  <pre id="example-2">
-border: groove 1em red;
-border-radius: 2em;
-  </pre>
-  <pre id="example-3">
-background: gold;
-border: ridge gold;
-border-radius: 13em/3em;
-  </pre>
-  <pre id="example-4">
-border: none;
-border-radius: 40px 10px;
-background: gold;
-  </pre>
-  <pre id="example-5">
-border: none;
-border-radius: 50%;
-background: burlywood;
-  </pre>
-  <pre id="example-6">
-border: dotted;
-border-width: 10px 4px;
-border-radius: 10px 40px;
-  </pre>
-  <pre id="example-7">
-border: dashed;
-border-width: 2px 4px;
-border-radius: 40px;
-  </pre>
+<pre id="example-1">
+  border: solid 10px;
+  border-radius: 10px 40px 40px 10px;
+</pre>
+<pre id="example-2">
+  border: groove 1em red;
+  border-radius: 2em;
+</pre>
+<pre id="example-3">
+  background: gold;
+  border: ridge gold;
+  border-radius: 13em/3em;
+</pre>
+<pre id="example-4">
+  border: none;
+  border-radius: 40px 10px;
+  background: gold;
+</pre>
+<pre id="example-5">
+  border: none;
+  border-radius: 50%;
+  background: burlywood;
+</pre>
+<pre id="example-6">
+  border: dotted;
+  border-width: 10px 4px;
+  border-radius: 10px 40px;
+</pre>
+<pre id="example-7">
+  border: dashed;
+  border-width: 2px 4px;
+  border-radius: 40px;
+</pre>
 ```
 
 ```css hidden
