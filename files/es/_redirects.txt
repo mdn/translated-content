@@ -1574,6 +1574,7 @@
 /es/docs/Web/API/Node/insertarAntes	/es/docs/Web/API/Node/insertBefore
 /es/docs/Web/API/NonDocumentTypeChildNode/nextElementSibling	/es/docs/Web/API/Element/nextElementSibling
 /es/docs/Web/API/NonDocumentTypeChildNode/previousElementSibling	/es/docs/Web/API/Element/previousElementSibling
+/es/docs/Web/API/Notification/onclick	/es/docs/Web/API/Notification/click_event
 /es/docs/Web/API/Notifications_API/Usando_la_API_de_Notificaciones	/es/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /es/docs/Web/API/ParentNode/childElementCount	/es/docs/Web/API/Element/childElementCount
 /es/docs/Web/API/Position	/es/docs/Web/API/GeolocationPosition

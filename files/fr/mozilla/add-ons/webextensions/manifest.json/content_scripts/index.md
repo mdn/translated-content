@@ -60,7 +60,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
       <td>
         <p>
           <code>true</code>&nbsp;: injecte les scripts spécifiés dans
-          {{ anch("js") }} et {{ anch("css") }} dans tous les cadres
+          <code>js</code> et <code>css</code> dans tous les cadres
           correspondant aux exigences d’URL spécifiées, même s’il n’est pas le
           cadre le plus haut d’un onglet. Cela n’injecte pas dans les cadres
           enfants quand seul leur parent correspond aux exigences d’URL et pas
@@ -101,7 +101,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
       <td>
         <p>
           Un tableau de chaînes contenant des caractères génériques. Voir les
-          {{ anch("Les_modèles_de_correspondance_d’URL", "modèles de correpondance d’URL") }}
+          <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
           ci-dessous.
         </p>
       </td>
@@ -115,7 +115,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
             >modèles de correspondance</a
           >. Voir les
-          {{ anch("Les_modèles_de_correspondance_d’URL", "modèles de correpondance d’URL") }}
+          <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
           ci-dessous.
         </p>
       </td>
@@ -125,7 +125,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
       <td>{{ jsxref("array", "Tableau") }}</td>
       <td>
         Un tableau de chaînes contenant des caractères génériques. Voir les
-        {{ anch("Les_modèles_de_correspondance_d’URL", "modèles de correpondance d’URL") }}
+        <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
         ci-dessous.
       </td>
     </tr>
@@ -149,7 +149,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
         <p>alors <em>my-content-script.js</em> peut utiliser jQuery.</p>
         <p>
           Les fichiers sont injectés au moment spécifié par
-          {{ anch("run_at") }}.
+          <code>run_at</code>.
         </p>
       </td>
     </tr>
@@ -161,7 +161,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           Insère les scripts de contenu dans les pages dont l’URL est
           <code>about:blank</code> ou <code>about:srcdoc</code>, si l’URL de la
           page qui a ouvert ou créé cette page
-          {{ anch("Les_modèles_de_correspondance_d’URL", "correspond aux modèles") }}
+          [correspond aux modèles](#les_modèles_de_correspondance_d'url)
           spécifiés dans le reste de la clé <code>content_scripts</code>.
         </p>
         <p>
@@ -194,7 +194,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           la version 52. Notez que dans Firefox, les scripts de contenu ne
           seront pas injectés dans les iframes vides à
           <code>"document_start"</code> même si vous spécifiez cette valeur dans
-          {{ anch("run_at") }}.
+          <code>run_at</code>.
         </p>
       </td>
     </tr>
@@ -207,7 +207,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
           <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
             >modèles de correspondance</a
           >. Voir les
-          {{ anch("Les_modèles_de_correspondance_d’URL", "modèles de correpondance d’URL") }}
+          <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
           ci-dessous.
         </p>
         <p>C’est la seule clé obligatoire.</p>
@@ -219,7 +219,7 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
       <td>
         <p>
           Cette option détermine quand les scripts spécifiés dans
-          {{ anch("js") }} sont injectés. Vous pouvez fournir une chaîne
+          <code>js</code> sont injectés. Vous pouvez fournir une chaîne
           parmi trois ici, chacune identifiant un état dans le processus de
           chargement d’un document. Les états correspondent directement à
           {{domxref("Document/readyState", "Document.readyState")}}&nbsp;:
@@ -242,22 +242,22 @@ Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez i
         </ul>
         <p>La valeur par défaut est <code>"document_idle"</code>.</p>
         <p>
-          Dans tous les cas, les fichiers dans {{ anch("js") }} sont
-          injectés après les fichiers dans {{ anch("css") }}.
+          Dans tous les cas, les fichiers dans <code>js</code> sont
+          injectés après les fichiers dans <code>css</code>.
         </p>
       </td>
     </tr>
   </tbody>
 </table>
 
-## Les modèles de correspondance d’URL
+## Les modèles de correspondance d'URL
 
 La clé `content_scripts` associe les scripts de contenu aux documents en fonction de la correspondance des URL&nbsp;: si l’URL du document correspond à la spécification de la clé, le script sera joint. Il existe quatre propriétés dans `content_scripts` que vous pouvez utiliser pour cette spécification&nbsp;:
 
 - `matches`&nbsp;: un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) (modèles).
 - `exclude_matches`&nbsp;: un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
-- `include_globs`&nbsp;: un tableau de {{ anch("globs") }} (caractères génériques).
-- `exclude_globs`&nbsp;: un tableau de {{ anch("globs") }}.
+- `include_globs`&nbsp;: un tableau de [globs](#globs) (caractères génériques).
+- `exclude_globs`&nbsp;: un tableau de [globs](#globs).
 
 Pour associer une de ces propriétés, une URL doit correspondre à au moins un des éléments de son tableau. Par exemple, donner une propriété comme&nbsp;:
 

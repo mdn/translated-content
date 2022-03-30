@@ -16001,6 +16001,23 @@
       "Wind1808"
     ]
   },
+  "Web/API/HTMLElement/copy_event": {
+    "modified": "2020-10-15T21:16:02.087Z",
+    "contributors": [
+      "mfuji09",
+      "fscholz",
+      "AshfaqHossain",
+      "Potappo"
+    ]
+  },
+  "Web/API/HTMLElement/cut_event": {
+    "modified": "2019-03-23T23:52:04.625Z",
+    "contributors": [
+      "fscholz",
+      "khalid32",
+      "Potappo"
+    ]
+  },
   "Web/API/HTMLElement/dataset": {
     "modified": "2020-10-15T21:36:48.934Z",
     "contributors": [
@@ -16132,24 +16149,13 @@
       "Wind1808"
     ]
   },
-  "Web/API/HTMLElement/oncopy": {
-    "modified": "2020-10-15T21:16:02.087Z",
+  "Web/API/HTMLElement/outerText": {
+    "modified": "2020-10-15T22:22:45.702Z",
     "contributors": [
-      "mfuji09",
-      "fscholz",
-      "AshfaqHossain",
-      "Potappo"
+      "Wind1808"
     ]
   },
-  "Web/API/HTMLElement/oncut": {
-    "modified": "2019-03-23T23:52:04.625Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Potappo"
-    ]
-  },
-  "Web/API/HTMLElement/onpaste": {
+  "Web/API/HTMLElement/paste_event": {
     "modified": "2020-10-15T21:15:46.943Z",
     "contributors": [
       "mfuji09",
@@ -16157,12 +16163,6 @@
       "fscholz",
       "khalid32",
       "Potappo"
-    ]
-  },
-  "Web/API/HTMLElement/outerText": {
-    "modified": "2020-10-15T22:22:45.702Z",
-    "contributors": [
-      "Wind1808"
     ]
   },
   "Web/API/HTMLElement/pointercancel_event": {
@@ -17611,12 +17611,6 @@
   "Web/API/IDBRequest": {
     "modified": "2020-10-15T22:21:10.055Z"
   },
-  "Web/API/IDBRequest/onsuccess": {
-    "modified": "2020-10-15T22:21:11.208Z",
-    "contributors": [
-      "yuna"
-    ]
-  },
   "Web/API/IDBRequest/success_event": {
     "modified": "2020-10-15T22:21:10.089Z",
     "contributors": [
@@ -18474,13 +18468,13 @@
       "Marsf"
     ]
   },
-  "Web/API/MessagePort/onmessage": {
+  "Web/API/MessagePort/message_event": {
     "modified": "2019-03-23T22:26:45.245Z",
     "contributors": [
       "Marsf"
     ]
   },
-  "Web/API/MessagePort/onmessageerror": {
+  "Web/API/MessagePort/messageerror_event": {
     "modified": "2020-10-15T22:09:56.803Z",
     "contributors": [
       "YuichiNukiyama"
@@ -19399,11 +19393,25 @@
       "mfuji09"
     ]
   },
+  "Web/API/Notification/click_event": {
+    "modified": "2020-10-15T21:38:56.300Z",
+    "contributors": [
+      "mfuji09",
+      "YuichiNukiyama"
+    ]
+  },
   "Web/API/Notification/close": {
     "modified": "2020-10-15T21:38:55.027Z",
     "contributors": [
       "mfuji09",
       "YuichiNukiyama"
+    ]
+  },
+  "Web/API/Notification/close_event": {
+    "modified": "2020-10-15T21:48:49.095Z",
+    "contributors": [
+      "mfuji09",
+      "yoshioms1"
     ]
   },
   "Web/API/Notification/data": {
@@ -19415,6 +19423,13 @@
   },
   "Web/API/Notification/dir": {
     "modified": "2020-10-15T21:39:20.828Z",
+    "contributors": [
+      "mfuji09",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/API/Notification/error_event": {
+    "modified": "2020-10-15T21:38:55.157Z",
     "contributors": [
       "mfuji09",
       "YuichiNukiyama"
@@ -19444,33 +19459,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/Notification/onclick": {
-    "modified": "2020-10-15T21:38:56.300Z",
-    "contributors": [
-      "mfuji09",
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/API/Notification/onclose": {
-    "modified": "2020-10-15T21:48:49.095Z",
-    "contributors": [
-      "mfuji09",
-      "yoshioms1"
-    ]
-  },
-  "Web/API/Notification/onerror": {
-    "modified": "2020-10-15T21:38:55.157Z",
-    "contributors": [
-      "mfuji09",
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/API/Notification/onshow": {
-    "modified": "2020-10-15T22:31:55.590Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/Notification/permission": {
     "modified": "2020-10-15T21:39:21.465Z",
     "contributors": [
@@ -19496,6 +19484,12 @@
   },
   "Web/API/Notification/requireInteraction": {
     "modified": "2020-10-15T22:31:54.968Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/API/Notification/show_event": {
+    "modified": "2020-10-15T22:31:55.590Z",
     "contributors": [
       "mfuji09"
     ]
@@ -20055,7 +20049,7 @@
       "Wind1808"
     ]
   },
-  "Web/API/PermissionStatus/onchange": {
+  "Web/API/PermissionStatus/change_event": {
     "modified": "2020-10-15T22:20:11.513Z",
     "contributors": [
       "Wind1808"
@@ -21222,6 +21216,18 @@
       "Uemmra3"
     ]
   },
+  "Web/API/ServiceWorkerContainer/controllerchange_event": {
+    "modified": "2020-10-15T22:29:14.196Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/ServiceWorkerContainer/error_event": {
+    "modified": "2020-10-15T22:29:16.925Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/API/ServiceWorkerContainer/getRegistration": {
     "modified": "2020-10-15T22:29:13.888Z",
     "contributors": [
@@ -21236,24 +21242,6 @@
   },
   "Web/API/ServiceWorkerContainer/message_event": {
     "modified": "2020-10-15T22:29:18.958Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/ServiceWorkerContainer/oncontrollerchange": {
-    "modified": "2020-10-15T22:29:14.196Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/ServiceWorkerContainer/onerror": {
-    "modified": "2020-10-15T22:29:16.925Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/ServiceWorkerContainer/onmessage": {
-    "modified": "2020-10-15T22:29:17.104Z",
     "contributors": [
       "Wind1808"
     ]
@@ -21330,13 +21318,6 @@
   "Web/API/ServiceWorkerGlobalScope/oninstall": {
     "modified": "2019-03-23T22:19:50.199Z",
     "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
-  "Web/API/ServiceWorkerGlobalScope/onmessage": {
-    "modified": "2020-10-15T21:51:39.149Z",
-    "contributors": [
-      "Wind1808",
       "YuichiNukiyama"
     ]
   },
@@ -24296,6 +24277,12 @@
       "Potappo"
     ]
   },
+  "Web/API/Window/message_event": {
+    "modified": "2020-10-15T22:23:26.767Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/API/Window/messageerror_event": {
     "modified": "2020-10-15T22:28:20.408Z",
     "contributors": [
@@ -25002,18 +24989,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/WindowEventHandlers/onmessage": {
-    "modified": "2020-10-15T22:23:26.767Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onmessageerror": {
-    "modified": "2020-10-15T22:23:26.765Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/WindowEventHandlers/onpopstate": {
     "modified": "2020-10-15T22:03:55.956Z",
     "contributors": [
@@ -25075,7 +25050,7 @@
       "chikoski"
     ]
   },
-  "Web/API/Worker/onmessageerror": {
+  "Web/API/Worker/messageerror_event": {
     "modified": "2020-10-15T22:32:23.209Z",
     "contributors": [
       "eltociear"
@@ -48288,6 +48263,12 @@
       "unarist"
     ]
   },
+  "conflicting/Web/API/IDBRequest/success_event": {
+    "modified": "2020-10-15T22:21:11.208Z",
+    "contributors": [
+      "yuna"
+    ]
+  },
   "conflicting/Web/API/MediaDevices/getUserMedia": {
     "modified": "2019-03-18T21:40:37.855Z",
     "contributors": [
@@ -48333,6 +48314,19 @@
     "modified": "2019-03-18T20:45:32.564Z",
     "contributors": [
       "mfuji09",
+      "YuichiNukiyama"
+    ]
+  },
+  "conflicting/Web/API/ServiceWorkerContainer/message_event": {
+    "modified": "2020-10-15T22:29:17.104Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/ServiceWorkerGlobalScope/message_event": {
+    "modified": "2020-10-15T21:51:39.149Z",
+    "contributors": [
+      "Wind1808",
       "YuichiNukiyama"
     ]
   },
@@ -48432,6 +48426,12 @@
     "contributors": [
       "Potappo",
       "T.Ukegawa"
+    ]
+  },
+  "conflicting/Web/API/Window/messageerror_event": {
+    "modified": "2020-10-15T22:23:26.765Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "conflicting/Web/API/Window/scroll": {

@@ -11,7 +11,7 @@ Obtient ou défini le titre de la page.
 
     var docTitle = document.title;
 
-`title` est la chaîne contenant le titre de la page. Si le titre a déjà été modifié par `document.title`, cela retournera cette valeur. Sinon cela retournera le titre par défaut de la page (voir les {{Anch("Notes")}} ci-dessous).
+`title` est la chaîne contenant le titre de la page. Si le titre a déjà été modifié par `document.title`, cela retournera cette valeur. Sinon cela retournera le titre par défaut de la page (voir les [notes](#notes) ci-dessous).
 
     document.title = newTitle;
 

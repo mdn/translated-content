@@ -62,7 +62,7 @@ Il n'est pas garanti que vous soyez capable de passer en mode plein écran. Par 
 
 ## Sortie du mode plein écran
 
-L'utilisateur peut toujours sortir du mode plein écran quand il le désire ; voir {{ anch("Choses que vos utilisateurs doivent savoir") }}. Vous pouvez également le faire en appelant la méthode  {{domxref("Document.exitFullscreen()")}} .
+L'utilisateur peut toujours sortir du mode plein écran quand il le désire ; voir [Choses que vos utilisateurs doivent savoir](#choses_que_vos_utilisateurs_doivent_savoir). Vous pouvez également le faire en appelant la méthode {{domxref("Document.exitFullscreen()")}} .
 
 ## Autres informations
 

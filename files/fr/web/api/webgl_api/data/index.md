@@ -28,7 +28,7 @@ Les programmes shaders ont accès à trois types de stockage de données, chacun
 
 ## Variables GLSL
 
-Il existe trois types de stockage "variable" ou de stockage de données dans GLSL, chacun ayant son propre but et ses propres cas d'utilisation : **{{anch("Attributes", "attributes")}}**, **{{anch("Varyings", "varyings")}}**, et **{{anch("Uniforms", "uniforms")}}**.
+Il existe trois types de stockage "variable" ou de stockage de données dans GLSL, chacun ayant son propre but et ses propres cas d'utilisation : **[attributes](#attributes)**, **[varyings](#varyings)**, et **[uniforms](#uniforms)**.
 
 ### Attributes
 

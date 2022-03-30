@@ -11559,7 +11559,7 @@
       "iGureEV"
     ]
   },
-  "Web/API/Worker/onmessage": {
+  "Web/API/Worker/message_event": {
     "modified": "2019-03-23T22:42:44.668Z",
     "contributors": [
       "vkorniiko"

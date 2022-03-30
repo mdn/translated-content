@@ -1,39 +1,29 @@
 ---
 title: devtools
 slug: Mozilla/Add-ons/WebExtensions/API/devtools
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.inspectedWindow
-  - devtools.network
-  - devtools.panels
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools
+browser-compat: webextensions.api.devtools
 ---
 {{AddonSidebar}}
 
-Permet aux extensions d'interagir avec le {{Glossary("Developer Tools")}} du navigateur. Vous pouvez utiliser cette API pour créer des pages d'outils de développement, interagir avec la fenêtre qui est inspectée, inspecter l'utilisation du réseau de pages.
+Cette API permet aux extensions d'interagir avec les [outils de développement (<i lang="en">devtools</i>)](/fr/docs/Glossary/Developer_Tools) du navigateur. Elle peut être utilisée pour créer des pages d'outils de développement, interagir avec la fenêtre qui est inspectée, inspecter la page réseau des outils.
 
-Pour utiliser cette API, vous devez disposer de la [permission API](/fr/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) `"devtools"` spécifiée dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Cette permission ne peut pas être facultative.
+Pour utiliser cette API, [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#les_permissions_api) `"devtools"` doit être spécifiée dans le fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Cette permission ne peut pas être facultative.
 
 ## Interfaces
 
-- {{WebExtAPIRef("devtools.inspectedWindow")}}
-  - : Interagir avec la fenêtre à laquelle les outils de développement sont attachés (fenêtre inspectée). Cela inclut l'obtention de l'onglet ID pour la page inspectée, l'évaluation du code dans le contexte de la fenêtre inspectée, le rechargement de la page ou l'obtention de la liste des ressources dans la page.
-- {{WebExtAPIRef("devtools.network")}}
-  - : Obtenir des informations sur les requêtes de réseau associées à la fenêtre à laquelle les outils de développement sont attachés (la fenêtre inspectée).
-- {{WebExtAPIRef("devtools.panels")}}
-  - : Créer des panneaux d'interface utilisateur qui seront affichés dans les outils de développement de l'agent utilisateur.
+- [`devtools.inspectedWindow`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
+  - : Interagit avec la fenêtre sur laquelle les outils de développement sont attachés (il s'agit de la fenêtre inspectée). Cela inclut l'obtention de l'identifiant d'onglet pour la page inspectée, l'évaluation du code dans le contexte de la fenêtre inspectée, le rechargement de la page ou l'obtention de la liste des ressources dans la page.
+- [`devtools.network`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
+  - : Obtenir des informations sur les requêtes de réseau associées à la fenêtre sur laquelle les outils de développement sont attachés (il s'agit de la fenêtre inspectée).
+- [`devtools.panels`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
+  - : Créer des panneaux avec une interface utilisateur qui seront affichés dans les outils de développement de l'agent utilisateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools")}}
+{{Compat}}
 
-> **Note :**
->
-> Cette API est basé sur l'API  [`chrome.downloads`](https://developer.chrome.com/extensions/downloads) de Chromium.
+> **Note :** Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/).
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

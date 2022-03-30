@@ -220,7 +220,7 @@ On voit ici aussi l'absence d'accolade, car il n'y a qu'un seul export par défa
 import {default as randomSquare} from './modules/square.js';
 ```
 
-> **Note :** Pour en savoir plus sur le renommage des objets exportés, voir ci-après {{anch("Renommage des imports et des exports")}}.
+> **Note :** Pour en savoir plus sur le renommage des objets exportés, voir ci-après [Renommage des imports et des exports](#renommage_des_imports_et_des_exports).
 
 ## Gestion des conflits de nommage
 

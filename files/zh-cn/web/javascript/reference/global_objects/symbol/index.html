@@ -159,7 +159,7 @@ typeof Symbol.iterator === 'symbol'
 <ul>
  <li>尝试将一个 symbol 值转换为一个 number 值时，会抛出一个 {{jsxref("TypeError")}} 错误  (e.g. <code>+sym</code> or <code>sym | 0</code>).</li>
  <li>使用宽松相等时， <code>Object(sym) == sym</code> returns <code>true.</code></li>
- <li>这会阻止你从一个 symbol 值隐式地创建一个新的 string 类型的属性名。例如，<code>Symbol("foo") + "bar" 将抛出一个</code> {{jsxref("TypeError")}} (can't convert symbol to string).</li>
+ <li>这会阻止你从一个 symbol 值隐式地创建一个新的 string 类型的属性名。例如，<code>Symbol("foo") + "bar"</code> 将抛出一个 {{jsxref("TypeError")}} (can't convert symbol to string).</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion">"safer" <code>String(sym)</code> conversion</a> 的作用会像symbol类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 <code>new String(sym)</code> 将抛出异常。</li>
 </ul>
 

@@ -73,7 +73,7 @@ Le champ [ne sera pas valide](/fr/docs/Web/Guide/HTML/Constraint_validation) si 
 
 ### `multiple`
 
-Un attribut booléen qui indique, s'il est présent, que plusieurs adresses électroniques peuvent être saisies en étant séparées par des virgules (et éventuellement des espaces). Voir la section sur la saisie de plusieurs adresses ci-après.
+Un attribut booléen qui indique, s'il est présent, que plusieurs adresses électroniques peuvent être saisies en étant séparées par des virgules (et éventuellement des espaces). Voir la section sur [la saisie de plusieurs adresses](#gérer_plusieurs_adresses_mail) ci-après.
 
 > **Note :** Normalement, lorsque l'attribut [`required`](/fr/docs/Web/HTML/Element/Input#attr-required) est indiqué, la personne remplissant le formulaire doit saisir une adresse mail valide pour que le champ soit considéré valide. Toutefois, si l'attribut `multiple` est ajouté, une liste de zéro adresses (une chaîne de caractères vide ou un texte constitué uniquement d'espaces) sera une valeur valide. Autrement dit, la personne remplissant le formulaire n'est pas obligée de saisir une adresse lorsque `multiple` est présent, quelle que soit la valeur de `required`.
 
