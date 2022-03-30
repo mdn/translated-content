@@ -355,7 +355,7 @@ Dans cet article, nous avons abordé les contrôles de formulaire présents depu
 ## Dans ce module
 
 - [Votre premier formulaire](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment structure un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
+- [Comment structurer un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
 - Les contrôles de formulaire natifs de base
 - [Les types de champ de formulaire HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
 - [Les autres contrôles de formulaire](/fr/docs/Learn/Forms/Other_form_controls)
