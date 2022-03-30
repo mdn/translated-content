@@ -29,7 +29,7 @@ translation_of: Learn/HTML
 
 在开始这个主题的学习之前，你至少要基本熟悉使用电脑和被动地使用网络（即单纯地查看内容）。你应该设置好一个基础的工作环境，详细参照 [安装基础软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software), 并且理解如何新建和管理文件，详细参照[文件处理](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)——这两者都在 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web) 的完全新手模块里。
 
-在尝试学习这个主题之前，建议先完成 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web) 不过这并不是绝对必要的。[HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)里大多数的文章在[HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块中也有涉及，不过要详细得多。。
+在尝试学习这个主题之前，建议先完成 [Web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web) 不过这并不是绝对必要的。[HTML 基础](/zh-CN/docs/Learn/Getting_started_with_the_web/HTML_basics)里大多数的文章在[HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)模块中也有涉及，不过要详细得多。
 
 在学习了HTML之后，你可以继续学习更高级的主题，例如：
 
@@ -41,7 +41,7 @@ translation_of: Learn/HTML
 这个主题由包含以下模块，建议按顺序进行学习。很显然，你要从第一个开始。
 
 - [HTML 介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
-  - : 这一模块将为你铺路，帮你习惯一些重要的概念和语法，着眼于如何对文本应用 HTML ，如何创造超链接，以及如何使用 HTML 构造一个网页。
+  - : 这一模块将为你铺路，帮你习惯一些重要的概念和语法，着眼于如何对文本应用 HTML，如何创造超链接，以及如何使用 HTML 构造一个网页。
 - [多媒体和嵌入](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)
   - : 这个模块带你探索如何使用 HTML 在你的网页里如何包含多媒体信息，包含如何用各种方法包含图片，以及如何嵌入视频、音频，甚至是嵌入其他完整的网页。
 - [HTML 表格](/zh-CN/docs/Learn/HTML/Tables)
