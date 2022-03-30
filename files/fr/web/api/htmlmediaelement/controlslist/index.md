@@ -10,7 +10,7 @@ La propriété **`controlsList`** de l'interface [`HTMLMediaElement`](/fr/docs/W
 
 ## Valeur
 
-Une interface [`DOMTokenList`](/fr/docs/Web/API/domtokenlist).
+Une interface [`DOMTokenList`](/fr/docs/Web/API/DOMTokenList).
 
 ## Spécifications
 
