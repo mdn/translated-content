@@ -105,7 +105,7 @@ El atributo `step` es un número que especifica la granularidad que un valor deb
 
 Si le damos un valor de cadena de texto `any` significa que ningún salto está marcado y, por lo tanto, cualquier valor está permitido (expecto otras constricciones, como [`min`](#min) y [`max`](#max)).
 
-> **Nota:** Cuando los datos introducidos por el usuario no siguen la configuración del stepping, puede que el {{Glossary("user agent")} lo redondeé al valor válido más cercanos, prefiriendo valores mayores cuando hay dos opciones iguales cercanas.
+> **Nota:** Cuando los datos introducidos por el usuario no siguen la configuración del stepping, puede que el {{Glossary("user agent")}} lo redondeé al valor válido más cercanos, prefiriendo valores mayores cuando hay dos opciones iguales cercanas.
 
 Para entradas de tipo `date`, el valor del `step` es dado en días; y es tratado como el número de milisegundo igual a 86.400.000 veces el valor del `step` (el valor numérico subyacente está definido en milisegundos). El valor por defecto del `step` es 1, indicando 1 día.
 
