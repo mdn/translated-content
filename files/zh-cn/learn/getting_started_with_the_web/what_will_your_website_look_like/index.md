@@ -28,7 +28,7 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 2. **基于所选主题要展示哪些信息？** 写下标题和几段文字，构思一个用于展示的图像。
 3. **网站采用怎样的外观？** 用高阶术语来说，背景颜色是什么？使用哪种字体比较合适：正式的、卡通的、粗体、瘦体？
 
-> **注意：** 复杂项目需要更详细的指引，深入到颜色、字体、页面上项目之间的间距、适当的书写风格等所有细节。这有时被称为设计指南、设计系统或品牌手册，参见：[Firefox Photon Design System](https://design.firefox.com/photon/)。
+> **备注：** 复杂项目需要更详细的指引，深入到颜色、字体、页面上项目之间的间距、适当的书写风格等所有细节。这有时被称为设计指南、设计系统或品牌手册，参见：[Firefox Photon Design System](https://design.firefox.com/photon/)。
 
 ## 绘制草图
 
@@ -36,7 +36,7 @@ translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_l
 
 ![](website-drawing-scan.png)
 
-> **注意：** 即使在实际的复杂网站中，设计团队通常也是从粗略的草图开始设计的，再使用图形编辑器或 Web 技术建立数字模拟图。
+> **备注：** 即使在实际的复杂网站中，设计团队通常也是从粗略的草图开始设计的，再使用图形编辑器或 Web 技术建立数字模拟图。
 >
 > Web 团队通常包括一个平面设计师和一个{{Glossary("UX", "用户体验")}} (UX) 设计师。平面设计师把网站的视觉效果放在一起。用户体验设计师则以一种更抽象的模式来解决用户如何体验及与网站交互方面的问题。
 
