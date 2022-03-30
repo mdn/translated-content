@@ -2,112 +2,79 @@
 title: DOMTokenList.forEach()
 slug: Web/API/DOMTokenList/forEach
 tags:
-- DOM
-- DOMTokenList
-- Iterable
-- Method
-- Reference
-- Web
-- forEach
+- メソッド
+- リファレンス
+browser-compat: api.DOMTokenList.forEach
 translation_of: Web/API/DOMTokenList/forEach
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><strong><code>forEach()</code></strong> は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト中のそれぞれの値の組に対して挿入順で 1 回ずつ、引数で渡されたコールバックを呼び出します。</p>
+**`forEach()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト中のそれぞれの値の組に対して挿入順で 1 回ずつ、引数で渡されたコールバックを呼び出します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js"><var>tokenList</var>.forEach(<var>callback</var> [, <var>thisArg</var>]);
-</pre>
+```js
+forEach(callback);
+forEach(callback, thisArg);
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<dl>
-  <dt><code><var>callback</var></code></dt>
-  <dd>それぞれの要素に対して呼び出す関数で、 3 つの引数を取ります。
-    <dl>
-      <dt><code><var>currentValue</var></code></dt>
-      <dd>配列内で処理中の現在の要素です。</dd>
-      <dt><code><var>currentIndex</var></code></dt>
-      <dd>配列内で処理中の現在の要素の位置です。</dd>
-      <dt><code><var>listObj</var></code></dt>
-      <dd><code>forEach()</code> を実行中の配列です。</dd>
-    </dl>
-  </dd>
-  <dt><code><var>thisArg</var></code> {{Optional_inline}}</dt>
-  <dd><code><var>callback</var></code> を実行する際に {{jsxref("Operators/this", "this")}} として使用する値です。
-  </dd>
-</dl>
+- `callback`
 
-<h3 id="Return_value">返値</h3>
+  - : それぞれの要素に対して呼び出す関数で、 3 つの引数を取ります。
 
-<p>{{jsxref('undefined')}}.</p>
+    - `currentValue`
+      - : 配列内で処理中の現在の要素です。
+    - `currentIndex`
+      - : 配列内で処理中の現在の要素の位置です。
+    - `listObj`
+      - : `forEach()` を実行中の配列です。
 
-<h2 id="Example">例</h2>
+- `thisArg` {{Optional_inline}}
+  - : `callback` を実行する際に {{jsxref("Operators/this", "this")}} として使用する値です。
 
-<p>次の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを <code>DOMTokenList</code> として受け取るのに {{domxref("Element.classList")}} を使用しています。 <code>forEach()</code> を使用して値を含む反復子を取得し、それぞれの値を <code>&lt;span&gt;</code> の {{domxref("Node.textContent")}} に <code>forEach()</code> の中の関数から書き込みます。</p>
+### 返値
 
-<h3 id="HTML">HTML</h3>
+なし。
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+## 例
 
-<h3 id="JavaScript">JavaScript</h3>
+次の例では、 {{htmlelement("pre")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用しています。 `forEach()` を使用して値を含む反復子を取得し、それぞれの値を `<pre>` の {{domxref("Node.textContent")}} に `forEach()` の中の関数から書き込みます。
 
-<pre class="brush: js">let span = document.querySelector("span");
-let classes = span.classList;
-let iterator = classes.values();
+### HTML
+
+```html
+<pre class="a b c"></pre>
+```
+
+### JavaScript
+
+```js
+const pre = document.querySelector("pre");
+const classes = pre.classList;
+const iterator = classes.values();
 
 classes.forEach(
   function(value, key, listObj) {
-    span.textContent += `${value} ${key}/${this}  ++  `;
+    pre.textContent += `(${value} ${key})/${this}\n`;
   },
   "arg"
-);</pre>
+);
+```
 
-<h3 id="Result">結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('Example', '100%', 60) }}</p>
+{{ EmbedLiveSample('Example', '100%', 100) }}
 
-<h2 id="Polyfill">ポリフィル</h2>
+## 仕様書
 
-<p>この{{Glossary("Polyfill","ポリフィル")}}は、 <a href="https://caniuse.com/#search=es5">ES5</a> に対応しているすべてのブラウザーに互換性を追加します。</p>
+{{Specifications}}
 
-<pre class="brush: js">if (window.DOMTokenList &amp;&amp; !DOMTokenList.prototype.forEach) {
-  DOMTokenList.prototype.forEach = function (callback, thisArg) {
-    thisArg = thisArg || window;
-    for (var i = 0; i &lt; this.length; i++) {
-      callback.call(thisArg, this[i], i, this);
-    }
-  };
-}
-</pre>
+## ブラウザーの互換性
 
-<h2 id="Specifications">仕様書</h2>
+{{Compat}}
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#domtokenlist','forEach() (as iterable&lt;Node&gt;)')}}
-      </td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+## 関連情報
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("api.DOMTokenList.forEach")}}</p>
-
-<h2 id="See_also">関連情報</h2>
-
-<ul>
-  <li>{{domxref("DOMSettableTokenList")}} (DOMTokenList を設定可能な <em>.value</em> プロパティで拡張したオブジェクト)</li>
-</ul>
+- {{domxref("DOMTokenList.entries()")}}, {{domxref("DOMTokenList.keys")}}, {{domxref("DOMTokenList.values")}}
