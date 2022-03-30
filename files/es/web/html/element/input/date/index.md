@@ -60,7 +60,7 @@ La IU de la entrada generalmente varía entre navegadores; véase [Compatibiidad
 
 ## Valor
 
-Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en {{SectionOnPage("/en-Us/docs/Web/HTML/Date_and_time_formats", Formato válido de una fecha en formato de texto")}}.
+Una {{domxref("DOMString")}} representando la fecha introducida en la entrada. La fecha es formateada siguiendo el ISO8601, descrito en {{SectionOnPage("/es/docs/Web/HTML/Date_and_time_formats", "Formato válido de una fecha en formato de texto")}} (en inglés).
 
 Puedes establecer un valor por defecto para la entrada introduciendo una fecha en el atributo {{htmlattrxref("value", "input")}} de la siguiente forma:
 
