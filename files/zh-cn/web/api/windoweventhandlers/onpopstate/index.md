@@ -1,65 +1,63 @@
 ---
-title: window.onpopstate
+title: WindowEventHandlers.onpopstate
 slug: Web/API/WindowEventHandlers/onpopstate
+tags:
+  - API
+  - Event Handler
+  - HTML DOM
+  - HTML5
+  - NeedsSpecTable
+  - Property
+  - Window
+  - events
 translation_of: Web/API/WindowEventHandlers/onpopstate
 original_slug: Web/API/Window/onpopstate
 ---
-<p>{{ ApiRef() }}</p>
+{{ApiRef}}
 
-<h3 id="Summary" name="Summary">概述</h3>
+{{domxref("WindowEventHandlers")}} 混入（mixin）中的 `onpopstate` 属性是用于处理 window 对象上的 [`popstate`](/zh-CN/docs/Web/API/Window/popstate_event) 事件的[事件处理程序](/zh-CN/docs/Web/Events/Event_handlers)。
 
-<p><code>window.onpopstate</code>是<code>popstate</code>事件在window对象上的事件处理程序.</p>
+每当激活同一文档中不同的历史记录条目时，`popstate` 事件就会在对应的 `window` 对象上触发。如果当前处于激活状态的历史记录条目是由 `history.pushState()` 方法创建的或者是由 `history.replaceState()` 方法修改的，则 `popstate` 事件的 `state` 属性包含了这个历史记录条目的 `state` 对象的一个拷贝。
 
-<p><code>每当处于激活状态的历史记录条目发生变化时,popstate</code>事件就会在<code>对应window</code>对象上触发. 如果当前<code>处于激活状态的历史记录条目是由</code><code>history.pushState()</code>方法创建,或者由<code>history.replaceState()方法修改过</code>的, 则<code>popstate事件对象的</code><code>state</code>属性包含了这个历史记录条目的state对象的一个拷贝.</p>
+> **备注：** 调用 `history.pushState()` 或者 `history.replaceState()` 不会触发 `popstate` 事件。`popstate` 事件只会在浏览器某些行为下触发，比如点击后退按钮（或者在 JavaScript 中调用 `history.back()` 方法）。即，在同一文档的两个历史记录条目之间导航会触发该事件。
 
-<p><strong>注意：</strong>调用<code>history.pushState()</code>或者<code>history.replaceState()</code>不会触发popstate事件. <code>popstate</code>事件只会在浏览器某些行为下触发, 比如点击后退、前进按钮(或者在JavaScript中调用<code>history.back()、history.forward()、history.go()</code>方法)，此外，a 标签的锚点也会触发该事件.</p>
+## 语法
 
-<p>当网页加载时,各浏览器对<code>popstate</code>事件是否触发有不同的表现,Chrome 和 Safari会触发<code>popstate</code>事件, 而Firefox不会.</p>
+```js
+window.onpopstate = funcRef;
+```
 
-<h3 id="Syntax" name="Syntax">语法</h3>
+- `funcRef` 是一个处理函数。
 
-<pre class="eval notranslate">window.onpopstate = <em>funcRef</em>;
-</pre>
+## 示例
 
-<ul>
- <li><code>funcRef</code> 是个函数名.</li>
-</ul>
+假如当前网页地址为 `http://example.com/example.html`，则运行下述代码将触发警告对话框：
 
-<h3 id="popstate事件">popstate事件</h3>
-
-<p>假如当前网页地址为http://example.com/example.html,则运行下述代码后:</p>
-
-<pre class="brush: js notranslate">window.onpopstate = function(event) {
+```js
+window.onpopstate = function(event) {
   alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
 };
-//绑定事件处理函数.
-history.pushState({page: 1}, "title 1", "?page=1");    //添加并激活一个历史记录条目 http://example.com/example.html?page=1,条目索引为1
-history.pushState({page: 2}, "title 2", "?page=2");    //添加并激活一个历史记录条目 http://example.com/example.html?page=2,条目索引为2
-history.replaceState({page: 3}, "title 3", "?page=3"); //修改当前激活的历史记录条目 http://ex..?page=2 变为 http://ex..?page=3,条目索引为3
+
+history.pushState({page: 1}, "title 1", "?page=1");
+history.pushState({page: 2}, "title 2", "?page=2");
+history.replaceState({page: 3}, "title 3", "?page=3");
 history.back(); // 弹出 "location: http://example.com/example.html?page=1, state: {"page":1}"
 history.back(); // 弹出 "location: http://example.com/example.html, state: null
 history.go(2);  // 弹出 "location: http://example.com/example.html?page=3, state: {"page":3}
-</pre>
+```
 
-<p>即便进入了那些非pushState和replaceState方法作用过的(比如http://example.com/example.html)没有state对象关联的那些网页, <code>popstate</code>事件也仍然会被触发.</p>
+注意，即便是没有关联 `state` 对象的原始的历史条目（比如 `http://example.com/example.html`），`popstate` 事件也仍会在我们第二次调用 `history.back()`，激活这一历史条目后触发。
 
-<h3 id="Specification" name="Specification">规范</h3>
+## 规范
 
-<ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
-</ul>
+{{Specifications}}
 
-<h3 id="浏览器兼容性">浏览器兼容性</h3>
+## 浏览器兼容性
 
-<div class="hidden">
-<p>本页面的兼容性表格是由结构化数据生成的。如果你愿意为这些数据做点贡献，请在 github <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 检出代码，然后发送 pull request 给我们。</p>
-</div>
+{{Compat}}
 
-<p>{{Compat("api.WindowEventHandlers.onpopstate")}}</p>
+## 参见
 
-<h3 id="相关链接">相关链接</h3>
-
-<ul>
- <li>{{ domxref("window.history") }}</li>
- <li><a href="/zh-cn/DOM/Manipulating_the_browser_history" title="zh-cn/DOM/Manipulating the browser history">Manipulating the browser history</a></li>
-</ul>
+- {{domxref("window.history")}}
+- [Manipulating the browser history](/zh-CN/docs/Web/API/History_API)
+- [Ajax 导航示例](/zh-CN/docs/Web/API/History_API/Example)
