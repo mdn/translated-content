@@ -76,7 +76,7 @@ translation_of: Web/Web_Components/Using_custom_elements
 
 <p>上述代码片段中，类的构造函数{{jsxref("Classes.constructor","constructor")}}总是先调用<code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/super">super()</a></code>来建立正确的原型链继承关系。</p>
 
-<p>在构造函数中，我们会定义元素实例所拥有的全部功能。作为示例，我们首先会将shadow root附加到custom element上，然后通过一系列DOM操作创建custom element的内部阴影DOM结构，再将其附加到 shadow root上，最后再将一些CSS附加到 shadow root的style节点上。</p>
+<p>在构造函数中，我们会定义元素实例所拥有的全部功能。作为示例，我们首先会将shadow root附加到custom element上，然后通过一系列DOM操作创建custom element的内部阴影DOM（shadow DOM）结构，再将其附加到 shadow root上，最后再将一些CSS附加到 shadow root的style节点上。</p>
 
 <pre class="brush: js notranslate">// 创建一个 shadow root
 var shadow = this.attachShadow({mode: 'open'});
