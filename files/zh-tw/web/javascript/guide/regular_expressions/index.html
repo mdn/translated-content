@@ -137,7 +137,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
     <p>在 正則表達示 /(foo) (bar) \1 \2/ 中的 (foo) 與 (bar) 可匹配了 "foo bar foo bar" 這段文字中的前兩個字，而 \1 與 \2 則匹配了後面的兩個字。注意， \1, \2, ..., \n 代表的就是前面的pattern，以本範例來說，/(foo) (bar) \1 \2/  等同於  /(foo) (bar) (foo) (bar)/。</p>
 
     <p>用於取代(replace)的話，則是用 $1, $2,...,$n。如 'bar boo'.replace(/(...) (...)/, '$2 $1').<br>
-     <code>$&amp;</code> means the whole matched string.</p>
+     <code>$&amp;</code> 表示已匹配的字串</p>
    </td>
   </tr>
   <tr>
@@ -314,7 +314,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
   <tr>
    <td><a href="#special-word" id="special-word"><code>\w</code></a></td>
    <td>
-    <p>包含數字字母與底線，等同於<code>[A-Za-z0-9_]。</code></p>
+    <p>包含數字字母與底線，等同於<code>[A-Za-z0-9_]</code>。</p>
 
     <p>例如： <code>/\w/</code> 符合 'apple'中的 'a' 、'$5.28中的 '5' 以及 '3D' 中的 '3'。</p>
 
@@ -324,7 +324,9 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
   <tr>
    <td><a href="#special-non-word" id="special-non-word"><code>\W</code></a></td>
    <td>
-    <p>Matches any non-word character. Equivalent to <code>[^A-Za-z0-9_]</code>.</p>
+    <p>包含"非"數字字母與底線，等同於<code>[^A-Za-z0-9_]</code>。</p>
+
+    <p>例如： <code>/\W/</code> 或是 <code>/[^A-Za-z0-9_]/</code> 符合 "50%." 中的 '%'</p>
 
     <p>For example, <code>/\W/</code> or <code>/[^A-Za-z0-9_]/</code> matches '%' in "50%."</p>
    </td>
@@ -332,8 +334,10 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions
   <tr>
    <td><a href="#special-backreference" id="special-backreference"><code>\<em>n</em></code></a></td>
    <td>
-    <p>Where <em>n</em> is a positive integer, a back reference to the last substring matching the <em>n</em> parenthetical in the regular expression (counting left parentheses).</p>
+    <p>其中 <em>n</em> 是一個正整數，表示第 <em>n</em> 個括號中的子字串匹配（包含括號中的所有的字串匹配）</p>
 
+    <p>例如： <code>/apple(,)\sorange\1/</code> 符合 "apple, orange, cherry, peach." 的 'apple, orange,' 。（ `\1` 表示第一個 partten ，也就是 `(,)`）</p>
+     
     <p>For example, <code>/apple(,)\sorange\1/</code> matches 'apple, orange,' in "apple, orange, cherry, peach."</p>
    </td>
   </tr>
