@@ -12,7 +12,7 @@ tags:
 translation_of: Learn/Forms/Styling_web_forms
 original_slug: Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 > Dans cet article, nous allons apprendre comment utiliser [les CSS](/fr/docs/CSS "/fr/docs/CSS") avec les formulaires [HTML](/fr/docs/HTML "/fr/docs/HTML") pour (espérons-le) améliorer leur apparence. Étonnamment, ceci peut être délicat. Pour des raisons techniques et historiques, les widgets de formulaires ne s'allient pas très bien avec CSS. À cause de ces difficultés, de nombreux développeurs préfèrent [construire leurs propres widgets HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés "/fr/docs/HTML/Formulaires/Comment_créer_des_blocs_de_formulaires_personnalisés") pour avoir plus de maîtrise sur leur apparence. Toutefois, avec les navigateurs modernes, les web designers ont de plus en plus d'emprise sur l'apparence de leurs formulaires. Voyons cela de plus près.
 
@@ -394,7 +394,7 @@ Comme vous pouvez le voir, tant que nous voulons construire des formulaires avec
 
 Dans le [prochain article](/fr/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms), nous verrons comment gérer les widgets des catégories « brutes » et « truands ».
 
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers", "Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms", "Web/Guide/HTML/Formulaires")}}
+{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 ## Dans ce module
 

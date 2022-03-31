@@ -13,7 +13,7 @@ tags:
 translation_of: Learn/Forms/How_to_structure_a_web_form
 original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML", "Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 Les bases vues, nous examinons maintenant plus en détail les éléments utilisés pour structurer et donner un sens aux différentes parties d'un formulaire.
 
@@ -308,7 +308,7 @@ Nous savons maintenant ce qu'il faut faire pour structurer de manière appropri�
 
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
 
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML", "Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs", "Web/Guide/HTML/Formulaires")}}
+{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 ## Dans ce module
 

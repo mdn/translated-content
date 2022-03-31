@@ -4,7 +4,7 @@ slug: Learn/Forms/Form_validation
 translation_of: Learn/Forms/Form_validation
 original_slug: Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Ce n'est pas tout d'envoyer des données — il faut aussi s'assurer que les données mises dans un formulaire par un utilisateur sont dans un format correct pour pouvoir être traitées correctement et qu'elles ne vont pas casser nos applications. Nous voulons également aider les utilisateurs à compléter les formulaires correctement et à ne pas ressentir de frustration en essayant d'utiliser les applications. La validation des données de formulaire vous aide à remplir ces objectifs — cet article indique ce qu'il est nécessaire de savoir.
 
@@ -762,7 +762,7 @@ La validation d'un formulaire ne requiert pas de code JavaScript complexe, mais 
 - Être tolérant sur le format des données à envoyer.
 - Indiquer exactement où est l'erreur (en particulier pour les formulaires longs).
 
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés", "Web/Guide/HTML/Formulaires")}}
+{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 ## Dans ce module
 

@@ -12,7 +12,7 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}
 
 Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
 
@@ -865,8 +865,6 @@ Voici quelques bibliothèques à prendre en considération avant de coder les v�
 - [et beaucoup d'autres…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a "https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a")
 
 Si vous voulez aller plus loin, le code de cet exemple mérite quelques amélioration avant de devenir générique et réutilisable. C'est un exercice que vous pouvez essayer de faire. Deux conseils pour vous aider : le premier argument pour toutes nos fonctions est le même, ce qui signifie que ces fonctions ont besoin du même contexte. Il serait avisé de construire un objet pour partager ce contexte. En outre, vous devrez éprouver ses fonctionnalités, c'est-à-dire qu'il doit pouvoir fonctionner avec les divers navigateurs dont la compatibilité avec les normes Web qu'ils utilisent varie. Amusez-vous bien !
-
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}
 
 ## Dans ce module
 

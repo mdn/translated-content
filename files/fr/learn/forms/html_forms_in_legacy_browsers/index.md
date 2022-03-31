@@ -4,7 +4,7 @@ slug: Learn/Forms/HTML_forms_in_legacy_browsers
 translation_of: Learn/Forms/HTML_forms_in_legacy_browsers
 original_slug: Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}
 
 Tout développeur apprend très rapidement (parfois difficilement) que le Web est un endroit assez inconfortable. Le pire des fléaux est le «&nbsp;navigateur historique&nbsp;». Oui, admettons‑le, si on dit «&nbsp;navigateur historique&nbsp;», nous pensons tous aux anciennes versions d'Internet Explorer ... mais elles sont loin d'être les seules. Les premières versions de Firefox, comme la [version ESR,](http://www.mozilla.org/en-US/firefox/organizations/) sont aussi des «&nbsp;navigateurs historiques&nbsp;». Et dans le monde du mobile ? Quand ni le navigateur ni l'OS ne peut être mis à jour? Oui, il y a beaucoup de vieux smartphones Android ou des iPhones dont le navigateur par défaut n'est pas à jour. Ceux-ci sont aussi des «&nbsp;navigateurs historiques&nbsp;».
 
@@ -211,8 +211,6 @@ Même si des scripts comme Modernizr sont très attentifs aux performances, le c
 Comme vous pouvez le constater, opérer avec des navigateurs historiques n'est pas qu'une question de formulaires. C'est tout un ensemble de techniques&nbsp;; mais les maîtriser toutes dépasserait le cadre de cet article.
 
 Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/Web/Guide/HTML/Forms_in_HTML), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Débuter_sur_MDN).
-
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML", "Web/Guide/HTML/Formulaires")}}
 
 ## Dans ce module
 
