@@ -25,7 +25,7 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 <table>
   <tbody>
     <tr>
-      <th scope="row">선수 과목 :</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
         기본 컴퓨터 활용 능력, HTML 및 CSS에 대한 기본적인 이해,
         JavaScript가 무엇인지 이해합니다.
