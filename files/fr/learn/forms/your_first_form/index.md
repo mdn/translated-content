@@ -64,7 +64,7 @@ Notre formulaire contiendra trois champs de texte et un bouton. Nous demandons s
 
 Très bien, nous sommes maintenant prêts à passer au HTML et à coder notre formulaire. Pour construire notre formulaire, nous aurons besoin des éléments HTML suivants : {{HTMLElement("form")}}, {{HTMLElement("label")}}, {{HTMLElement("input")}}, {{HTMLElement("textarea")}} et {{HTMLElement("button")}}.
 
-Avant de poursuivre, faites une copie locale de notre [simple modèle HTML](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) — vous y incorporerez votre formulaire.
+Avant de poursuivre, faites une copie locale de notre [simple modèle HTML](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) — vous y incorporerez votre formulaire.
 
 ### L'élément {{HTMLElement("form")}}
 
@@ -151,7 +151,7 @@ Nous avons désormais notre formulaire HTML, et si vous le regardez dans votre n
 
 ![](form-no-style.png)
 
-> **Note :** Si vous pensez que vous n'avez pas écrit un code HTML correct, faites la comparaison avec celui de notre exemple terminé — voyez [first-form.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form.html) (ou [également directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
+> **Note :** Si vous pensez que vous n'avez pas écrit un code HTML correct, faites la comparaison avec celui de notre exemple terminé — voyez [first-form.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form.html) (ou [également directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form.html)).
 
 Les formulaires sont notoirement embêtants à présenter joliment. Apprendre la mise en page ou la décoration des formulaires sort du cadre de cet article, donc pour le moment nous allons simplement ajouter quelques indications au CSS pour lui donner un air convenable.
 
@@ -229,7 +229,7 @@ Désormais notre formulaire a une bien meilleure allure.
 
 ![](form-style.png)
 
-> **Note :** Il est sur GitHub dans [first-form-styled.html](https://github.com/mdn/learning-area/blob/master/html/forms/your-first-HTML-form/first-form-styled.html) (à voir aussi [directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
+> **Note :** Il est sur GitHub dans [first-form-styled.html](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html) (à voir aussi [directement](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)).
 
 ## Envoyer les données au serveur Web
 

@@ -386,7 +386,7 @@ button:focus {
 
 Et voilà ! (en français dans le texte)
 
-> **Note :** si cet exemple ne fonctionne pas tout à fait comme vous l'attendez et que vous voulez vérifier votre version, vous la trouverez sur GitHub — voyez‑la [fonctionner en direct](https://mdn.github.io/learning-area/html/forms/postcard-example/) (et revoyez son [code source](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example)).
+> **Note :** si cet exemple ne fonctionne pas tout à fait comme vous l'attendez et que vous voulez vérifier votre version, vous la trouverez sur GitHub — voyez‑la [fonctionner en direct](https://mdn.github.io/learning-area/html/forms/postcard-example/) (et revoyez son [code source](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
 ## Conclusion
 

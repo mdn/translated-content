@@ -82,7 +82,7 @@ Quand un élément est invalide&nbsp;:
 
 Dans cette section, nous examinerons quelques unes des diverses fonctionnalités HTML5 peuvant être utilisées pour valider des éléments d'{{HTMLElement("input")}}.
 
-Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) et un exemple «&nbsp;live&nbsp;» ci-dessous :
+Commençons par un exemple simple — une entrée ouvrant un choix, selon votre préférence, entre banane ou cerise. Il faut un texte {{HTMLElement("input")}} simple avec une étiquette correspondante et un {{htmlelement("button")}} de soumission. Le code source est sur GitHub à l'adresse [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) et un exemple «&nbsp;live&nbsp;» ci-dessous :
 
 ```html hidden
 <form>
@@ -201,7 +201,7 @@ Tous les champs de texte créés avec ({{HTMLElement("input")}} ou {{HTMLElement
 
 Pour les champs numériques (c'est à dire, \<type d'entrée="nombre">), les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max", "input")}} permettent également des contraintes de validité. Si la valeur du champ est inférieure à l'attribut {{htmlattrxref("min", "input")}} ou supérieure à l'attribut {{htmlattrxref("max", "input")}}, le champ ne sera pas valide.
 
-Prenons un autre exemple. Créez une nouvelle copie du fichier [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
+Prenons un autre exemple. Créez une nouvelle copie du fichier [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html).
 
 Supprimez maintenant le contenu de l'élément `<body>` et remplacez-le par le suivant :
 
