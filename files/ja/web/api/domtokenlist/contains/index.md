@@ -2,77 +2,60 @@
 title: DOMTokenList.contains()
 slug: Web/API/DOMTokenList/contains
 tags:
-- API
-- Contains
-- DOM
-- DOMTokenList
-- Method
-- Reference
+- メソッド
+- リファレンス
+browser-compat: api.DOMTokenList.contains
 translation_of: Web/API/DOMTokenList/contains
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p><code><strong>contains()</strong></code> は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、 {{domxref("Boolean")}} を返します。 <code>true</code> は渡された <code><var>token</var></code> がそのリストに含まれていることを表し、そうでなければ <code>false</code> になります。</p>
+**`contains()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、論理値を返します。 `true` は渡されたトークンがそのリストに含まれていることを表し、そうでなければ `false` になります。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre
-  class="brush: js"><var>tokenList</var>.contains(<var>token</var>);</pre>
+```js
+contains(token);
+```
 
-<h3 id="Parameters">引数</h3>
+## 引数
 
-<dl>
-  <dt><code><var>token</var></code></dt>
-  <dd>{{domxref("DOMString")}} で、リストの中に存在するかどうかを調べたいトークンを表します。</dd>
-</dl>
+- `token`
+  - : リストの中に存在するかどうかを調べたいトークンを表す文字列です。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>{{domxref("Boolean")}} で、 <code>true</code> は呼び出し元のリストに
-  <code><var>token</var></code> が含まれていることを表し、そうでなければ <code>false</code> になります。</p>
+論理値で、 `true` は呼び出し元のリストにトークンが含まれていることを表し、そうでなければ `false` になります。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<p>次の例は、 {{htmlelement("span")}} 要素に設定されたクラスのリストを {{domxref("Element.classList")}} を使用して <code>DOMTokenList</code> として返します。 <code>"c"</code> がリスト中に存在することを確認し、その <code>&lt;span&gt;</code> の {{domxref("Node.textContent")}} の中に結果を書き込みます。</p>
+次の例は、 {{htmlelement("span")}} 要素に設定されたクラスのリストを `DOMTokenList` として返すために {{domxref("Element.classList")}} を使用します。 `"c"` がリスト中に存在することを確認し、その `<span>` の {{domxref("Node.textContent")}} の中に結果を書き込みます。
 
-<p>最初に HTML です。</p>
+最初に HTML です。
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+```html
+<span class="a b c"></span>
+```
 
-<p>そして JavaScript です。</p>
+そして JavaScript です。
 
-<pre class="brush: js">let span = document.querySelector("span");
-let classes = span.classList;
-let result = classes.contains("c");
-if (result) {
-  span.textContent = "The classList contains 'c'";
+```js
+const span = document.querySelector("span");
+const classes = span.classList;
+if (classes.contains("c")) {
+  span.textContent = "classList に 'c' が含まれています";
 } else {
-   span.textContent = "The classList does not contain 'c'";
-}</pre>
+  span.textContent = "classList に 'c' が含まれていません";
+}
+```
 
-<p>出力結果は以下のようになります。</p>
+出力結果は以下のようになります。
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-contains','contains()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DOMTokenList.contains")}}</p>
+{{Compat}}
