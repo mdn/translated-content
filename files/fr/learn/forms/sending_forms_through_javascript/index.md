@@ -6,7 +6,7 @@ original_slug: Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript
 ---
 {{LearnSidebar}}
 
-Comme dans le [précédent article](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires), les formulaires HTML peuvent envoyer une requête HTTP par déclaration. Mais des formulaires peuvent aussi préparer une requête HTTP à adresser via JavaScript. Cet article explore comment faire cela.
+Comme dans le [précédent article](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires), les formulaires HTML peuvent envoyer une requête HTTP par déclaration. Mais des formulaires peuvent aussi préparer une requête HTTP à adresser via JavaScript. Cet article explore comment faire cela.
 
 ## Un formulaire n'est pas toujours un \<form>
 
@@ -46,7 +46,7 @@ Il y a 3 façons d'envoyer des données de formulaire, allant des techniques exi
 
 {{domxref("XMLHttpRequest")}} est la manière la plus sûre et la plus fiable de faire des requêtes HTTP. Pour envoyer des données de formulaire avec {{domxref("XMLHttpRequest")}}, préparez les données par encodage URL et suivez les spécificités des requêtes de données de formulaire.
 
-> **Note :** Pour en savoir plus sur `XMLHttpRequest`, ces articles pourraient vous intéresser : un article d'introduction à [AJAX](/fr/docs/Web/Guide/AJAX/Premiers_pas) et un didacticiel plus fouillé à ce propos utilisant [`XMLHttpRequest`](/fr/docs/HTML_in_XMLHttpRequest).
+> **Note :** Pour en savoir plus sur `XMLHttpRequest`, ces articles pourraient vous intéresser : un article d'introduction à [AJAX](/fr/docs/Web/Guide/AJAX/Getting_Started) et un didacticiel plus fouillé à ce propos utilisant [`XMLHttpRequest`](/fr/docs/HTML_in_XMLHttpRequest).
 
 Reconstruisons l'exemple précédent :
 
@@ -430,14 +430,14 @@ Selon le navigateur, l'envoi de données de formulaire par JavaScript peut être
 
 ## Dans ce module
 
-- [Mon premier formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets)
+- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
+- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
+- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
+- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
+- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
+- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
+- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
+- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

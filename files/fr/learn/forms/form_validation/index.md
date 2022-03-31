@@ -67,7 +67,7 @@ Dans le monde réel, les développeurs ont tendance à utiliser une combinaison 
 
 ## Utiliser la validation intégrée au formulaire
 
-Une des caractéristiques de [HTML5](/fr/docs/orphaned/Web/Guide/HTML/HTML5) est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des [attributs de validation](/fr/docs/Web/Guide/HTML/HTML5/Constraint_validation) sur les éléments de formulaire&nbsp;; ils vous permettent de spécifier des règles pour une entrée de formulaire comme&nbsp;: une valeur doit‑elle être remplie&nbsp;? y a-t-il une longueur minimale et/ou maximale des données&nbsp;? doit‑elle être un nombre, une adresse e-mail ou autre chose&nbsp;? doit‑elle correspondre à un modèle&nbsp;? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
+Une des caractéristiques de HTML5 est la possibilité de valider la plupart des données utilisateur sans avoir recours à des scripts. Ceci se fait en utilisant des attributs de validation sur les éléments de formulaire&nbsp;; ils vous permettent de spécifier des règles pour une entrée de formulaire comme&nbsp;: une valeur doit‑elle être remplie&nbsp;? y a-t-il une longueur minimale et/ou maximale des données&nbsp;? doit‑elle être un nombre, une adresse e-mail ou autre chose&nbsp;? doit‑elle correspondre à un modèle&nbsp;? Si les données saisies suivent toutes ces règles, elles sont considérées comme valides ; si ce n'est pas le cas, elles sont considérées comme non valides.
 Quand un élément est valide&nbsp;:
 
 - l'élément correspond à la pseudo‑classe CSS {{cssxref(":valid")}} &nbsp;; cela vous permet d'appliquer une composition de style distinctive.
