@@ -21,7 +21,7 @@ translation_of: Learn/JavaScript/First_steps/Math
 <table>
   <tbody>
     <tr>
-      <th scope="row">필요조건:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
         기본적인 커퓨터 지식, HTML과 CSS에 대한 기본적인 이해, JavaScript의 이해
       </td>
