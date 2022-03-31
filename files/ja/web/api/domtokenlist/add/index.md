@@ -2,79 +2,72 @@
 title: DOMTokenList.add()
 slug: Web/API/DOMTokenList/add
 tags:
-- API
-- Add
-- DOM
-- DOMTokenList
-- Method
-- Reference
 - メソッド
+- リファレンス
+browser-compat: api.DOMTokenList.add
 translation_of: Web/API/DOMTokenList/add
 ---
-<p>{{APIRef("DOM")}}</p>
+{{APIRef("DOM")}}
 
-<p>{{domxref("DOMTokenList")}} インターフェイスの <code><strong>add()</strong></code> メソッドは、指定された<em>トークン</em>をリストに追加します。</p>
+**`add()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、指定されたトークンをリストに追加します。既に存在する場合は何もしません。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre
-  class="brush: js"><var>tokenList</var>.add(<var>token1</var>[, <var>token2</var>[, ...<var>tokenN</var>]]);</pre>
+```js
+add(token0);
+add(token0, token1);
+add(token0, token1, /* ... ,*/ tokenN)
+```
 
-<h3 id="Parameters">引数</h3>
+## 引数
 
-<dl>
-  <dt><code><var>token<em>N</em></var></code></dt>
-  <dd><code><var>tokenList</var></code> に追加したいトークンを表す {{domxref("DOMString")}} です。</dd>
-</dl>
+- `tokenN`
+  - : `DOMTokenList` に追加するトークン（またはトークン群）を表す文字列です。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>なし。</p>
+なし。
 
-<h2 id="Examples">例</h2>
+### 例外
 
-<p>以下の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを <code>DOMTokenList</code> として受け取るのに {{domxref("Element.classList")}} を使用しています。それからリストに新しいトークンを追加し、リストを <code>&lt;span&gt;</code> の {{domxref("Node.textContent")}} に書き込みます。</p>
+- `SyntaxError` {{domxref("DOMException")}}
+  - : 引数のうちの 1 つが空文字列であった場合
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : トークンに ASCII ホワイトスペースが含まれていた場合
 
-<p>最初に HTML です。</p>
+## 例
 
-<pre class="brush: html">&lt;span class="a b c"&gt;&lt;/span&gt;</pre>
+以下の例では、 {{htmlelement("span")}} 要素に設定されたクラスのリストを `DOMTokenList` として受け取るのに {{domxref("Element.classList")}} を使用しています。それからリストに新しいトークンを追加し、リストを `<span>` の {{domxref("Node.textContent")}} に書き込みます。
 
-<p>そして JavaScript です。</p>
+最初に HTML です。
 
-<pre class="brush: js">let span = document.querySelector("span");
-let classes = span.classList;
+```html
+<span class="a b c"></span>
+```
+
+そして JavaScript です。
+
+```js
+const span = document.querySelector("span");
+const classes = span.classList;
 classes.add("d");
 span.textContent = classes;
-</pre>
+```
 
-<p>出力結果は以下のようになります。</p>
+出力結果は以下のようになります。
 
-<p>{{ EmbedLiveSample('Examples', '100%', 60) }}</p>
+{{ EmbedLiveSample('Examples', '100%', 60) }}
 
-<p>同様に、複数のトークンを追加することができます。</p>
+同様に、複数のトークンを追加することができます。
 
-<pre class="brush: js">span.classList.add("d", "e", "f");
-</pre>
+```js
+span.classList.add("d", "e", "f");
+```
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('DOM WHATWG','#dom-domtokenlist-add','add()')}}</td>
-      <td>{{Spec2('DOM WHATWG')}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.DOMTokenList.add")}}</p>
+{{Compat}}
