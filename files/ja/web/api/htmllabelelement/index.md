@@ -2,97 +2,47 @@
 title: HTMLLabelElement
 slug: Web/API/HTMLLabelElement
 tags:
-  - DOM
-  - DOM Reference
+  - API
+  - HTML DOM
+  - HTMLLabelElement
+  - インターフェイス
+  - リファレンス
+browser-compat: api.HTMLLabelElement
 translation_of: Web/API/HTMLLabelElement
 ---
-<div>{{ApiRef}}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><code>HTMLLabelElement</code> インタフェースは {{domxref("HTMLElement")}} インタフェースを継承するインタフェースであり、 HTML {{HTMLElement("label")}} 要素を操作する為の特別なプロパティを提供します。</p>
+**`HTMLLabelElement`** インターフェイスは {{HTMLElement("label")}} 要素を操作するための独自のプロパティへのアクセスを提供します。基底となる {{domxref("HTMLElement")}} インターフェイスからメソッドとプロパティを継承しています。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+{{InheritanceDiagram}}
 
-<p>{{domxref("HTMLElement")}} インタフェースから継承するプロパティ以外に、以下の固有プロパティを持ちます。</p>
+## プロパティ
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">名称</th>
-   <th scope="col">型</th>
-   <th scope="col">説明</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>accessKey</code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>{{htmlattrxref("accesskey", "label")}} HTML 属性を反映</td>
-  </tr>
-  <tr>
-   <td><code>control</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>ラベル付きコントロール</td>
-  </tr>
-  <tr>
-   <td><code>form</code> {{readonlyInline}}</td>
-   <td>{{domxref("HTMLFormElement")}}</td>
-   <td>このラベルのフォームオーナー</td>
-  </tr>
-  <tr>
-   <td><code>htmlFor </code></td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>ラベル付きコントロール (labeled control) の ID 。 {{htmlattrxref("for", "label")}} 属性を反映。</td>
-  </tr>
- </tbody>
-</table>
+_親インターフェイスである {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+- {{domxref("HTMLLabelElement.control")}} {{ReadOnlyInline}}
+  - : {{domxref("HTMLElement")}} で、このラベルが関連付けられているコントロールを表します。
+- {{domxref("HTMLLabelElement.form")}} {{ReadOnlyInline}}
+  - : {{domxref("HTMLFormElement")}} オブジェクトで、このラベル付きコントロールが関連付けられているフォームを表します。関連付けられているコントロールがない場合や、コントロールがフォームに関連付けられていない場合は `null` になります。言い換えれば、これは `HTMLLabelElement.control.form` のショートカットです。
+- {{domxref("HTMLLabelElement.htmlFor")}}
+  - : 文字列で、ラベル付けしたコントロールの ID が入ります。これは {{htmlattrxref("for", "label")}} 属性を反映します。
 
-<p>{{domxref("HTMLElement")}} のメソッドを継承しています。固有のメソッドはありません。</p>
+> **Note:** プログラムから `for` 属性を設定する場合は、 [`htmlFor`](/ja/docs/Web/API/HTMLLabelElement/htmlFor) を使用してください。
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## メソッド
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "forms.html#the-label-element", "HTMLAnchorElement")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName("HTML5 W3C")}} より変更無し</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "forms.html#the-label-element", "HTMLAnchorElement")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>
-    <ul>
-     <li><code>accessKey</code> プロパティは現在、{{domxref("HTMLElement")}} インタフェースのメソッドに定義変更された。</li>
-     <li><code>control</code> プロパティが追加された。</li>
-    </ul>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-13691394', 'HTMLLabelElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>{{SpecName("DOM1")}} より変更無し</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-13691394', 'HTMLLabelElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>最初期の定義</td>
-  </tr>
- </tbody>
-</table>
+_特有のメソッドはありません。親インターフェイスである {{domxref("HTMLElement")}} からメソッドを継承しています。_
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ実装状況</h2>
+## 仕様書
 
-<p>{{Compat("api.HTMLLabelElement")}}</p>
+{{Specifications}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## ブラウザーの互換性
 
-<ul>
- <li>{{HTMLElement("label")}} 要素 - <code>HTMLLabelElement</code> インタフェースを持つ HTML 要素</li>
-</ul>
+{{Compat}}
+
+## 関連情報
+
+- このインターフェイスを実装している HTML 要素: {{HTMLElement("label")}}
+- {{HTMLElement("form")}}
+- {{domxref("HTMLFormElement")}}
