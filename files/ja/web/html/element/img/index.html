@@ -107,7 +107,7 @@ translation_of: Web/HTML/Element/img
 		<dd>CORS リクエストは、資格情報 (つまり、Cookie、X.509 証明書、 <code>Authorization</code> リクエストヘッダー) が含まれた状態で送信されます。サーバーが元のサイトとの資格情報の共有を選択する (<code>Access-Control-Allow-Credentials: true</code> レスポンスヘッダーを送り返す) ことをしなかった場合、ブラウザーは画像を汚染されたものとしてマークし、その画像データへのアクセスを制限します。</dd>
 	</dl>
 
-	<p>この属性がの値が無効である場合は、列挙型のキーワードに <code>anonymous</code> が指定されたものとして扱われます。詳しくは <a href="/ja/docs/Web/HTML/Attributes/crossorigin">CORS 設定属性</a>を参照してください。</p>
+	<p>この属性の値が無効である場合は、列挙型のキーワードに <code>anonymous</code> が指定されたものとして扱われます。詳しくは <a href="/ja/docs/Web/HTML/Attributes/crossorigin">CORS 設定属性</a>を参照してください。</p>
 	</dd>
 	<dt>{{htmlattrdef("decoding")}}</dt>
 	<dd>
@@ -159,7 +159,7 @@ translation_of: Web/HTML/Element/img
 	<dt>{{htmlattrdef("sizes")}}</dt>
 	<dd>ソースのサイズのセットを示す、カンマ区切りの文字列を1個以上並べたリストです。それぞれのソースサイズの構成は以下のとおりです。
 	<ol>
-		<li><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#syntax">メディア条件</a>。リスト内の最後のアイテムでは省略しなければなりません。</li>
+		<li><a href="/ja/docs/Web/CSS/Media_Queries/Using_media_queries#構文">メディア条件</a>。リスト内の最後のアイテムでは省略しなければなりません。</li>
 		<li>ソースサイズ値。</li>
 	</ol>
 
@@ -328,7 +328,7 @@ translation_of: Web/HTML/Element/img
 
 <p>The {{htmlattrxref("title")}} 属性を <code>alt</code> 属性の代わりに利用することはできません。加えて、 <code>alt</code> 属性の値を同じ画像の <code>title</code> 属性に複製して宣言することは避けてください。このようにすると、読み上げソフトが説明を二回読み上げ、操作を混乱させる可能性があります。</p>
 
-<p><code>title</code> 属性は、画像の <code>alt</code> の説明と組み合わせた補助的な説明として使用するべきでもありません。画像にキャプションが必要であれば、 <code><a href="/en-US/docs/Web/HTML/Element/figure">figure</a></code> および <code><a href="/en-US/docs/Web/HTML/Element/figcaption">figcaption</a></code> 要素と組み合わせて使用してください。</p>
+<p><code>title</code> 属性は、画像の <code>alt</code> の説明と組み合わせた補助的な説明として使用するべきでもありません。画像にキャプションが必要であれば、 <code><a href="/ja/docs/Web/HTML/Element/figure">figure</a></code> および <code><a href="/ja/docs/Web/HTML/Element/figcaption">figcaption</a></code> 要素と組み合わせて使用してください。</p>
 
 <p><code>title</code> 属性の値は、よくツールチップとして、画像の上でカーソルを停止させた後で間もなく表示されます。これはユーザーに追加の情報を提供する<em>ことができます</em>が、ユーザーが必ず見ると仮定してはいけません。ユーザーが見ることが特に重要または有益である情報があるのであれば、上記の <code>title</code> を使用するのではなく、何らかの方法で行内に表示するべきです。</p>
 

@@ -5,13 +5,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 ---
 <div>{{JSRef}}</div>
 
-<div></div>
+
 
 <div><code>deref</code>方法返回{{jsxref("WeakRef")}} 实例的目标对象，如果目标对象已被垃圾收集，则返回<code>undefined</code> 。</div>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><code><var>obj</var> = <var>ref</var>.deref();</code>
+<pre class="syntaxbox"><code><var>obj</var> = <var>ref</var>.deref();</code>
 </pre>
 
 <h3 id="返回值">返回值</h3>
@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef/deref
 
 <p>有关<a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#Examples">完整示例</a>，请参阅{{jsxref("WeakRef")}}页面的示例部分。</p>
 
-<pre class="brush: js notranslate">const tick = () =&gt; {
+<pre class="brush: js">const tick = () =&gt; {
   // Get the element from the weak reference, if it still exists
   const element = this.ref.deref();
   if (element) {

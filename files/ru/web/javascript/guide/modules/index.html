@@ -9,15 +9,15 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <h2 id="Модули_история_вопроса">Модули: история вопроса</h2>
 
-<p>Сначала программы на JavaSctipt были небольшими — в прежние времена они использовались для изолированных задач, добавляя при необходимости немного интерактивности веб-страница, так что большие скрипты в основном не требовались. Прошло несколько лет, и вот уже мы видим полномасштабные приложения, работающие в броузерах и содержащие массу кода на JavaScript; кроме того, язык стал использоваться и в других контекстах (например, <a href="/en-US/docs/Glossary/Node.js">Node.js</a>).</p>
+<p>Сначала программы на JavaScript были небольшими — в прежние времена они использовались для изолированных задач, добавляя при необходимости немного интерактивности веб-страницам, так что большие скрипты в основном не требовались. Прошло несколько лет, и вот мы уже видим полномасштабные приложения, работающие в браузерах и содержащие массу кода на JavaScript; кроме того, язык стал использоваться и в других контекстах (например, <a href="/en-US/docs/Glossary/Node.js">Node.js</a>).</p>
 
-<p>Таким образом, в последние годы появились причины на то, чтобы подумать о механизмах деления программ на JavaScript на отдельные модули, которые можно импортировать по мере нужды. Node.js включала такую возможность уже давно, кроме того, некоторые библиотеки и фреймворки JavaSctipt разрешали использование модулей (например, <a href="https://en.wikipedia.org/wiki/CommonJS">CommonJS</a> и основанные на <a href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">AMD</a> системы модулей типа <a href="https://requirejs.org/">RequireJS</a>, а позднее также <a href="https://webpack.github.io/">Webpack</a> и <a href="https://babeljs.io/">Babel</a>).</p>
+<p>Таким образом, в последние годы появились причины на то, чтобы подумать о механизмах деления программ на JavaScript на отдельные модули, которые можно импортировать по мере необходимости. Node.js включал такую возможность уже давно, кроме того, некоторые библиотеки и фреймворки JavaScript разрешали использование модулей (например, <a href="https://en.wikipedia.org/wiki/CommonJS">CommonJS</a> и основанные на <a href="https://github.com/amdjs/amdjs-api/blob/master/AMD.md">AMD</a> системы модулей типа <a href="https://requirejs.org/">RequireJS</a>, а позднее также <a href="https://webpack.github.io/">Webpack</a> и <a href="https://babeljs.io/">Babel</a>).</p>
 
-<p>К счастью, современные броузера стали сами поддерживать функциональность модулей, о чем и рассказывает эта статья. Этому можно только порадоваться — броузеры могут оптимизировать загрузку модулей, что было бы гораздо эффективнее использования библиотеки, и взять на себя обработку на стороне клиента и прочие накладные расходы.</p>
+<p>К счастью, современные браузеры стали сами поддерживать функциональность модулей, о чем и рассказывает эта статья. Этому можно только порадоваться — браузеры могут оптимизировать загрузку модулей, что было бы гораздо эффективнее использования библиотеки, и взять на себя обработку на стороне клиента и прочие накладные расходы.</p>
 
-<h2 id="Поддержка_в_броузерах">Поддержка в броузерах</h2>
+<h2 id="Поддержка_в_браузерах">Поддержка в браузерах</h2>
 
-<p>Встроенная обработка модулей JavaScript связана с функциями {{JSxRef("Statements/import", "import")}} и {{JSxRef("Statements/export", "export")}}, которые поддерживаются броузерами следующим образом:</p>
+<p>Встроенная обработка модулей JavaScript связана с функциями {{JSxRef("Statements/import", "import")}} и {{JSxRef("Statements/export", "export")}}, которые поддерживаются браузерами следующим образом:</p>
 
 <h3 id="import">import</h3>
 
@@ -27,81 +27,86 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <p>{{Compat("javascript.statements.export")}}</p>
 
-<h2 id="Introducing_an_example">Introducing an example</h2>
+<h2 id="Пример_использования_модулей">Пример использования модулей</h2>
 
-<p>To demonstrate usage of modules, we've created a <a href="https://github.com/mdn/js-examples/tree/master/modules">simple set of examples</a> that you can find on GitHub. These examples demonstrate a simple set of modules that create a <a href="/en-US/docs/Web/HTML/Element/canvas" title="Use the HTML &lt;canvas> element with either the canvas scripting API or the WebGL API to draw graphics and animations."><code>&lt;canvas&gt;</code></a> element on a webpage, and then draw (and report information about) different shapes on the canvas.</p>
+<p>Для того, чтобы продемонстрировать использование модулей, мы создали <a href="https://github.com/mdn/js-examples/tree/master/modules">простой набор примеров</a>, который вы можете найти на GitHub.
+  В этих примерах мы создаём элемент <a href="/en-US/docs/Web/HTML/Element/canvas" title="Используйте HTML &lt;canvas> элемент вместе с Canvas API или с WebGL API для отрисовки графики и анимаций."><code>&lt;canvas&gt;</code></a>
+  на веб-странице и затем рисуем различные фигуры на нём (и выводим информацию об этом).</p>
 
-<p>These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.</p>
+<p>Примеры довольно тривиальны, но они намеренно сделаны простыми для ясной демонстрации модулей.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: If you want to download the examples and run them locally, you'll need to run them through a local web server.</p>
+<p><strong>Примечание</strong>: Если вы хотите скачать примеры и запустить их локально, вам нужно будет запустить их через локальный веб-сервер.</p>
 </div>
 
-<h2 id="Basic_example_structure">Basic example structure</h2>
+<h2 id="Базовая_структура_примера">Базовая структура примера</h2>
 
-<p>In our first example (see <a href="https://github.com/mdn/js-examples/tree/master/modules/basic-modules">basic-modules</a>) we have a file structure as follows:</p>
+<p>В первом примере (см. директорию <a href="https://github.com/mdn/js-examples/tree/master/modules/basic-modules">basic-modules</a>) у нас следующая структура файлов:</p>
 
-<pre class="notranslate">index.html
+<pre>index.html
 main.js
 modules/
     canvas.js
     square.js</pre>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: All of the examples in this guide have basically the same structure; the above should start getting pretty familiar.</p>
+<p><strong>Примечание</strong>: Все примеры в этом руководстве в основном имеют одинаковую структуру.</p>
 </div>
 
-<p>The modules directory's two modules are described below:</p>
+<p>Давайте разберём два модуля из директории modules:</p>
 
 <ul>
- <li><code>canvas.js</code> — contains functions related to setting up the canvas:
+ <li><code>canvas.js</code> — содержит функции, связанные с настройкой canvas:
 
   <ul>
-   <li><code>create()</code> — creates a canvas with a specified <code>width</code> and <code>height</code> inside a wrapper <a href="/en-US/docs/Web/HTML/Element/div" title="The HTML Content Division element (&lt;div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a> with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.</li>
-   <li><code>createReportList()</code> — creates an unordered list appended inside a specified wrapper element, which can be used to output report data into. Returns the list's ID.</li>
+   <li><code>create()</code> — создаёт холст заданной ширины <code>width</code> и высоты <code>height</code> внутри <a href="/en-US/docs/Web/HTML/Element/div" title="Элемент разделения контента (&lt;div>) — это общий контейнер для потокового содержимого. Он не влияет на контент или макет, пока не будет стилизован с помощью CSS."><code>&lt;div></code></a>-обертки с указанным <code>id</code> и помещённой в родителя <code>parent</code>. Результатом выполнения функции будет объект, содержащий 2D-контекст холста и id обертки.</li>
+   <li><code>createReportList()</code> — создаёт неупорядоченный список, добавленный внутри указанного элемента-обёртки, который можно использовать для вывода данных отчёта. Возвращает id списка.</li>
   </ul>
  </li>
- <li><code>square.js</code> — contains:
+ <li><code>square.js</code> — содержит:
   <ul>
-   <li><code>name</code> — a constant containing the string 'square'.</li>
-   <li><code>draw()</code> — draws a square on a specified canvas, with a specified size, position, and color. Returns an object containing the square's size, position, and color.</li>
-   <li><code>reportArea()</code> — writes a square's area to a specific report list, given its length.</li>
-   <li><code>reportPerimeter()</code> — writes a square's perimeter to a specific report list, given its length.</li>
+   <li><code>name</code> — переменная со строковым значением 'square'.</li>
+   <li><code>draw()</code> — функция, рисующая квадрат на указанном холсте с заданными размером, положением и цветом. Возвращает объект, содержащий размер, положение и цвет квадрата.</li>
+   <li><code>reportArea()</code> — функция, которая выводит посчитанную площадь квадрата в указанный список отчета.</li>
+   <li><code>reportPerimeter()</code> — функция, которая выводи посчитанный периметр квадрата в указанный список отчета.</li>
   </ul>
  </li>
 </ul>
 
-<h2 id="Aside_—_.mjs_versus_.js">Aside — <code>.mjs</code> versus <code>.js</code></h2>
+<h2 id="Взгляд_со_стороны_—_.mjs_против_.js">Взгляд со стороны — <code>.mjs</code> против <code>.js</code></h2>
 
-<p>Throughout this article, we've used <code>.js</code> extensions for our module files, but in other resources you may see the <code>.mjs</code> extension used instead. <a href="https://v8.dev/features/modules#mjs">V8's documentation recommends this</a>, for example. The reasons given are:</p>
-
-<ul>
- <li>It is good for clarity, i.e. it makes it clear which files are modules, and which are regular JavaScript.</li>
- <li>It ensures that your module files are parsed as a module by runtimes such as <a href="https://nodejs.org/api/esm.html#esm_enabling">Node.js</a>, and build tools such as <a href="https://babeljs.io/docs/en/options#sourcetype">Babel</a>.</li>
-</ul>
-
-<p>However, we decided to keep to using <code>.js</code>, at least for the moment. To get modules to work correctly in a browser, you need to make sure that your server is serving them with a <code>Content-Type</code> header that contains a JavaScript MIME type such as <code>text/javascript</code>. If you don't, you'll get a strict MIME type checking error along the lines of "The server responded with a non-JavaScript MIME type" and the browser won't run your JavaScript. Most servers already set the correct type for <code>.js</code> files, but not yet for <code>.mjs</code> files. Servers that already serve <code>.mjs</code> files correctly include <a href="https://pages.github.com/">GitHub Pages</a> and <code><a href="https://github.com/http-party/http-server#readme">http-server</a></code> for Node.js.</p>
-
-<p>This is OK if you are using such an environment already, or if you aren't but you know what you are doing and have access (i.e. you can configure your server to set the correct <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code> for <code>.mjs</code> files). It could however cause confusion if you don't control the server you are serving files from, or are publishing files for public use, as we are here.</p>
-
-<p>For learning and portability purposes, we decided to keep to <code>.js</code>.</p>
-
-<p>If you really value the clarity of using <code>.mjs</code> for modules versus using <code>.js</code> for "normal" JavaScript files, but don't want to run into the problem described above, you could always use <code>.mjs</code> during development and convert them to <code>.js</code> during your build step.</p>
-
-<p>It is also worth noting that:</p>
+<p>В этой статье мы используем расширение <code>.js</code> для файлов наших модулей, но в других источниках вы можете встретить расширение <code>.mjs</code>. Например, <a href="https://v8.dev/features/modules#mjs">в документации движка V8 используется <code>.mjs</code></a>. Причины следующие:</p>
 
 <ul>
- <li>Some tools may never support <code>.mjs</code>, such as <a href="https://www.typescriptlang.org/">TypeScript</a>.</li>
- <li>The <code>&lt;script type="module"&gt;</code> attribute is used to denote when a module is being pointed to, as you'll see below.</li>
+ <li>Это полезно для ясности, то есть дает понять, какие файлы являются модулями, а какие — обычными JavaScript-файлами.</li>
+ <li>Это гарантирует, что файлы вашего модуля будут проанализированы как модуль средами выполнения, такими как <a href="https://nodejs.org/api/esm.html#esm_enabling">Node.js</a>, и инструментами сборки, такими как <a href="https://babeljs.io/docs/en/options#sourcetype">Babel</a>.</li>
 </ul>
 
-<h2 id="Exporting_module_features">Exporting module features</h2>
+<p>Тем не менее, мы решили продолжать использовать <code>.js</code>, по крайней мере на данным момент. Чтобы модули корректно работали в браузере, вам нужно убедиться, что ваш сервер отдаёт их с заголовком <code>Content-Type</code>, который содержит JavaScript MIME type такой как <code>text/javascript</code>. В противном случае вы получете ошибку проверки MIME type — "The server responded with a non-JavaScript MIME type", и браузер не сможет запустить ваш JavaScript. Большинство серверов уже имеют правильный тип для <code>.js</code>-файлов, но ещё не имеют нужного MIME type для <code>.mjs</code>-файлов. Серверы, которые уже отдают <code>.mjs</code> файлы корректно, включают в себя <a href="https://pages.github.com/">GitHub Pages</a>и <code><a href="https://github.com/http-party/http-server#readme">http-сервер</a></code> для Node.js.</p>
 
-<p>The first thing you do to get access to module features is export them. This is done using the {{JSxRef("Statements/export", "export")}} statement.</p>
+<p>Это нормально, если вы уже используете такую среду или ещё нет, но знаете, что делать, и имеете нужные доступы (то есть вы можете настроить свой сервер, чтобы он устанавливал корректный <code><a href="/en-US/docs/Web/HTTP/Headers/Content-Type">Content-Type</a></code>-заголовок для <code>.mjs</code>-файлов).
+  Однако это может вызвать путаницу, если вы не контролируете сервер, с которого отдаются файлы, или публикуете файлы для общего пользования, как мы здесь.</p>
 
-<p>The easiest way to use it is to place it in front of any items you want exported out of the module, for example:</p>
+<p>В целях обучения и переносимости на разные платформы мы решили остановится на <code>.js</code>.</p>
 
-<pre class="brush: js; notranslate">export const name = 'square';
+<p>Если вы действительно видите ценность и ясность использования <code>.mjs</code> для модулей по сравнению с использованием <code>.js</code> для обычных JavaScript-файлов,
+  но не хотите столкнуться с проблемой описанной выше, вы должны всегда использовать <code>.mjs</code> во время разработки
+  и конвертировать их в <code>.js</code> во время сборки.</p>
+
+<p>Также стоит отметить, что:</p>
+
+<ul>
+ <li>Некоторые инструменты могут никогда не добавить поддержку <code>.mjs</code>, например, <a href="https://www.typescriptlang.org/">TypeScript</a>.</li>
+ <li><code>&lt;script type="module"&gt;</code> атрибут используется для обозначения того, что файл является модулем. Вы увидите примеры использования данного атрибута ниже.</li>
+</ul>
+
+<h2 id="Экспорт_функционала_модуля">Экспорт функционала модуля</h2>
+
+<p>Первое, что нужно сделать, чтобы получить доступ к функционалу модуля, — экспортировать его. Это делается с помощью инструкции {{JSxRef("Statements/export", "export")}}.</p>
+
+<p>Самый простой способ использовать экспорт — поместить конструкцию <code>export</code> перед любыми элементами, которые вы хотите экспортировать из модуля, например:</p>
+
+<pre class="brush: js;">export const name = 'square';
 
 export function draw(ctx, length, x, y, color) {
   ctx.fillStyle = color;
@@ -115,39 +120,42 @@ export function draw(ctx, length, x, y, color) {
   };
 }</pre>
 
-<p>You can export functions, <code>var</code>, <code>let</code>, <code>const</code>, and — as we'll see later — classes. They need to be top-level items; you can't use <code>export</code> inside a function, for example.</p>
+<p>Вы можете экспортировать <code>var</code>-, <code>let</code>-, <code>const</code>-переменные, и — как мы увидим позже — классы.
+  Они должны быть в верхней области видимости, вы не можете использовать <code>export</code> внутри функции, например.</p>
 
-<p>A more convenient way of exporting all the items you want to export is to use a single export statement at the end of your module file, followed by a comma-separated list of the features you want to export wrapped in curly braces. For example:</p>
+<p>Более удобный способ экспорта всех элементов, которые вы хотите экспортировать,— использовать одну конструкцию <code>export</code> в конце файла модуля, где указать переменные, функции, классы, который вы хотите экспортировать, через запятую в фигурных скобках. Например:</p>
 
-<pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
+<pre class="brush: js;">export { name, draw, reportArea, reportPerimeter };</pre>
 
-<h2 id="Importing_features_into_your_script">Importing features into your script</h2>
+<h2 id="Импорт_функционала_в_ваш_скрипт">Импорт функционала в ваш скрипт</h2>
 
-<p>Once you've exported some features out of your module, you need to import them into your script to be able to use them. The simplest way to do this is as follows:</p>
+<p>После того, как вы экспортировали некоторые функции из своего модуля, вам необходимо импортировать их в свой скрипт, чтобы иметь возможность использовать их. Самый простой способ сделать это:</p>
 
-<pre class="brush: js; notranslate">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
+<pre class="brush: js;">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';</pre>
 
-<p>You use the {{JSxRef("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword from, followed by the path to the module file — a path relative to the site root, which for our <code>basic-modules</code> example would be <code>/js-examples/modules/basic-modules</code>.</p>
+<p>Используйте конструкцию {{JSxRef("Statements/import", "import")}}, за которой следует разделенный запятыми список функций, которые вы хотите импортировать, заключённый в фигурные скобки, за которым следует ключевое слово from, за которым следует путь к файлу модуля — путь относительно корня сайта, который для нашего примера <code>basic-modules</code> будет равен <code>/js-examples/modules/basic-modules</code>.</p>
 
-<p>However, we've written the path a bit differently — we are using the dot (<code>.</code>) syntax to mean "the current location", followed by the path beyond that to the file we are trying to find. This is much better than writing out the entire relative path each time, as it is shorter, and it makes the URL portable — the example will still work if you move it to a different location in the site hierarchy.</p>
+<p>Однако, мы написали путь немного иначе — мы используем (<code>.</code>) синтаксис, означающий "текущую директорию", за которым следует путь к файлу, который мы пытаемся найти.
+  Это намного лучше, чем каждый раз записывать весь относительный путь, поскольку он короче и делает URL-адрес переносимым - пример все равно будет работать, если вы переместите его в другое место в иерархии сайта.</p>
 
-<p>So for example:</p>
+<p>Так например:</p>
 
-<pre class="notranslate">/js-examples/modules/basic-modules/modules/square.js</pre>
+<pre>/js-examples/modules/basic-modules/modules/square.js</pre>
 
-<p>becomes</p>
+<p>становится</p>
 
-<pre class="notranslate">./modules/square.js</pre>
+<pre>./modules/square.js</pre>
 
-<p>You can see such lines in action in <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>.</p>
+<p>Вы можете найти подобные строки кода в файле <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.js</a></code>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: In some module systems, you can omit the file extension and the leading <code>/</code>, <code>./</code>, or <code>../</code> (e.g. <code>'modules/square'</code>). This doesn't work in native JavaScript modules.</p>
+<p><strong>Примечание</strong>: В некоторых модульных системах вы можете опустить расширение файла и начальные <code>/</code>, <code>./</code>, or <code>../</code> (например <code>'modules/square'</code>). Это не работает в нативных JavaScript-модулях.</p>
 </div>
 
-<p>Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in <code>main.js</code>, below the import lines:</p>
+<p>После того, как вы импортировали функции в свой скрипт, вы можете использовать их так же, как если бы они были определены в этом же файле. 
+  Следующий пример можно найти в <code>main.js</code>, сразу за строками импорта:</p>
 
-<pre class="brush: js; notranslate">let myCanvas = create('myCanvas', document.body, 480, 320);
+<pre class="brush: js;">let myCanvas = create('myCanvas', document.body, 480, 320);
 let reportList = createReportList(myCanvas.id);
 
 let square1 = draw(myCanvas.ctx, 50, 50, 100, 'blue');
@@ -156,112 +164,129 @@ reportPerimeter(square1.length, reportList);
 </pre>
 
 <div class="blockIndicator note">
-<p><strong>Note: </strong>Although imported features are available in the file, they are read only views of the feature that was exported. You cannot change the variable that was imported, but you can still modify properties similar to <code>const</code>. Additionally, these features are imported as live bindings, meaning that they can change in value even if you cannot modify the binding unlike <code>const</code>.</p>
+<p><strong>Примечание: </strong>
+  Хотя импортированные функции доступны в файле, они доступны только для чтения.
+  Вы не можете изменить импортированную переменную, но вы всё равно можете изменять свойства у <code>const</code>-переменных.
+  Кроме того, переменные импортируется как "live bindings" -
+  это означает, что они могут меняться по значению, даже если вы не можете изменить привязку, в отличие от <code>const</code>.</p>
 </div>
 
-<h2 id="Applying_the_module_to_your_HTML">Applying the module to your HTML</h2>
+<h2 id="Добавление_модуля_на_HTML-страницу">Добавление модуля на HTML-страницу</h2>
 
-<p>Now we just need to apply the <code>main.js</code> module to our HTML page. This is very similar to how we apply a regular script to a page, with a few notable differences.</p>
+<p>Далее нам необходимо подключить модуль <code>main.js</code> на нашу HTML-страницу. Это очень похоже на то, как мы подключаем обычный скрипт на страницу, с некоторыми заметными отличиями.</p>
 
-<p>First of all, you need to include <code>type="module"</code> in the <a href="/en-US/docs/Web/HTML/Element/script" title="The HTML &lt;script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code></a> element, to declare this script as a module. To import the <code>main.js</code> script, we use this:</p>
+<p>Прежде всего, вам нужно добавить <code>type="module"</code> в <a href="/en-US/docs/Web/HTML/Element/script" title="The HTML &lt;script> элемент используется для встраивания исполняемого кода или ссылки на него; обычно используется для встраивания JavaScript кода или ссылки на него."><code>&lt;script&gt;</code></a>-элемент, чтобы объявить, что скрипт является модулем. Чтобы подключить модуль <code>main.js</code>, нужно написать следующее:</p>
 
-<pre class="brush: html; no-line-numbers notranslate">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</pre>
+<pre class="brush: html; no-line-numbers">&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</pre>
 
-<p>You can also embed the module's script directly into the HTML file by placing the JavaScript code within the body of the <code>&lt;script&gt;</code> element:</p>
+<p>Вы также можете встроить скрипт модуля непосредственно в HTML-файл, поместив JavaScript-код внутрь <code>&lt;script&gt;</code>-элемента:</p>
 
-<pre class="brush: js notranslate">&lt;script type="module"&gt;
-  /* JavaScript module code here */
+<pre class="brush: js">&lt;script type="module"&gt;
+  /* код JavaScript модуля */
 &lt;/script&gt;</pre>
 
-<p>The script into which you import the module features basically acts as the top-level module. If you omit it, Firefox for example gives you an error of "SyntaxError: import declarations may only appear at top level of a module".</p>
+<p>Скрипт, в который вы импортируете функционал модуля, в основном действует как модуль верхнего уровня.
+  Если вы упустите это, то Firefox, например, выдаст ошибку "SyntaxError: import declarations may only appear at top level of a module".</p>
 
-<p>You can only use <code>import</code> and <code>export</code> statements inside modules, not regular scripts.</p>
+<p>Вы можете использовать <code>import</code> и <code>export</code> инструкции только внутри модулей, внутри обычных скриптов они работать не будут.</p>
 
-<h2 id="Other_differences_between_modules_and_standard_scripts">Other differences between modules and standard scripts</h2>
+<h2 id="Другие_отличия_модулей_от_обычных_скриптов">Другие отличия модулей от обычных скриптов</h2>
 
 <ul>
- <li>You need to pay attention to local testing — if you try to load the HTML file locally (i.e. with a <code>file://</code> URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.</li>
- <li>Also, note that you might get different behavior from sections of script defined inside modules as opposed to in standard scripts. This is because modules use {{JSxRef("Strict_mode", "strict mode", "", 1)}} automatically.</li>
- <li>There is no need to use the <code>defer</code> attribute (see <a href="/en-US/docs/Web/HTML/Element/script#Attributes" title="The HTML &lt;script> element is used to embed or reference executable code; this is typically used to embed or refer to JavaScript code."><code>&lt;script&gt;</code> attributes</a>) when loading a module script; modules are deferred automatically.</li>
- <li>Modules are only executed once, even if they have been referenced in multiple <code>&lt;script&gt;</code> tags.</li>
- <li>Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.</li>
+ <li>Вы должны быть осторожны во время локального тестирование — если вы попытаетесь загрузить файл HTML локально (то есть по <code>file://</code> URL), вы столкнётесь с ошибками CORS из-за требований безопасности JavaScript-модулей. Вам нужно проводить тестирование через сервер.</li>
+ <li>Также обратите внимание, что вы можете столкнуться с отличным от обычных файлов поведением кода в  модулях. Это происходит из-за того, что модули используют {{JSxRef("Strict_mode", "strict mode", "", 1)}} автоматически.</li>
+ <li>Нет необходимости использовать атрибут <code>defer</code> (см. <a href="/en-US/docs/Web/HTML/Element/script#Attributes" title="The HTML &lt;script> элемент используется для встраивания исполняемого кода или ссылки на него; обычно используется для встраивания JavaScript кода или ссылки на него."> атрибуты <code>&lt;script&gt;</code> элемента</a>) при загрузке модуля, модули являются deferred по умолчанию.</li>
+ <li>Модули выполняются только один раз, даже если на них есть ссылки в нескольких <code>&lt;script&gt;</code> тэгах.</li>
+ <li>И последнее, но не менее важное: давайте проясним это — функции модуля импортируются в область видимости одного скрипта, они недоступны в глобальной области видимости. 
+  Следовательно, вы сможете получить доступ к импортированному функционалу только в скрипте, в который он импортирован, и, например, вы не сможете получить к нему доступ из консоли JavaScript в DevTools.
+  Вы по-прежнему будете получать синтаксические ошибки в DevTools, но вы не сможете использовать некоторые методы отладки, которые, возможно, ожидали использовать.</li>
 </ul>
 
-<h2 id="Default_exports_versus_named_exports">Default exports versus named exports</h2>
+<h2 id="Экпорт_по_умолчанию_против_именнованого_экспорта">Экпорт по умолчанию против именнованого экспорта</h2>
 
-<p>The functionality we've exported so far has been comprised of <strong>named exports</strong> — each item (be it a function, <code>const</code>, etc.) has been referred to by its name upon export, and that name has been used to refer to it on import as well.</p>
+<p>Экспорты функций и переменных, которые мы использовали в примерах выше являются <strong>именованными экспортами</strong> — каждый элемент (будь то функция или <code>const</code>-переменная, например) упоминается по имени при экспорте, и это имя также используется для ссылки на него при импорте.</p>
 
-<p>There is also a type of export called the <strong>default export</strong> — this is designed to make it easy to have a default function provided by a module, and also helps JavaScript modules to interoperate with existing CommonJS and AMD module systems (as explained nicely in <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 In Depth: Modules</a> by Jason Orendorff; search for "Default exports").</p>
+<p>Существует также тип экспорта, который называется <strong>экспорт по умолчанию</strong> — 
+  это сделано для того, чтобы упростить использование экпортируемого функционала сторонним модулем,
+  а также помогает модулям JavaScript взаимодействовать с существующими модульными системами CommonJS и AMD (это хорошо объясняется в статье <a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 в деталях: Модули</a> от Джейсон Орендорфа — ищите по ключевому слову «Default exports»).</p>
 
-<p>Let's look at an example as we explain how it works. In our basic-modules <code>square.js</code> you can find a function called <code>randomSquare()</code> that creates a square with a random color, size, and position. We want to export this as our default, so at the bottom of the file we write this:</p>
+<p>Давайте посмотрим на пример, и мы объясним, как это работает.
+  В модуле <code>square.js</code> из нашего примера вы можете найти функцию <code>randomSquare()</code>, которая создаёт квардрат случайного цвета и размера со случайными координатами. Мы хотим экпортировать эту функции по умолчанию, поэтому в конце файла пишем следующее:</p>
 
-<pre class="brush: js; notranslate">export default randomSquare;</pre>
+<pre class="brush: js;">export default randomSquare;</pre>
 
-<p>Note the lack of curly braces.</p>
+<p>Обратите внимание на отсутствие фигурных скобок.</p>
 
-<p>We could instead prepend <code>export default</code> onto the function and define it as an anonymous function, like this:</p>
+<p>Кстати, можно было бы определить функцию как анонимную и добавить к ней <code>export default</code>:</p>
 
-<pre class="brush: js; notranslate">export default function(ctx) {
+<pre class="brush: js;">export default function(ctx) {
   ...
 }</pre>
 
-<p>Over in our <code>main.js</code> file, we import the default function using this line:</p>
+<p>В нашем файле <code>main.js</code> мы импортируем функцию по умолчанию, используя эту строку:</p>
 
-<pre class="brush: js; notranslate">import randomSquare from './modules/square.js';</pre>
+<pre class="brush: js;">import randomSquare from './modules/square.js';</pre>
 
-<p>Again, note the lack of curly braces. This is because there is only one default export allowed per module, and we know that <code>randomSquare</code> is it. The above line is basically shorthand for:</p>
+<p>Снова обратите внимание на отсутствие фигурных скобок.
+  Такой синтакис допустим, поскольку для каждого модуля разрешен только один экспорт по умолчанию, и мы знаем, что это <code>randomSquare</code>.
+  Вышеупомянутая строка является сокращением для:</p>
 
-<pre class="brush: js; notranslate">import {default as randomSquare} from './modules/square.js';</pre>
+<pre class="brush: js;">import {default as randomSquare} from './modules/square.js';</pre>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: The as syntax for renaming exported items is explained below in the <a href="#Renaming_imports_and_exports">Renaming imports and exports</a> section.</p>
+<p><strong>Примечание</strong>: «as» синтаксис для переименования экспортируемых элементов поясняется ниже в разделе <a href="#Переименование_импорта_и_экмпорта">Переименование импорта и экмпорта</a>.</p>
 </div>
 
-<h2 id="Avoiding_naming_conflicts">Avoiding naming conflicts</h2>
+<h2 id="Как_избежать_конфликтов_имён">Как избежать конфликтов имён</h2>
 
-<p>So far, our canvas shape drawing modules seem to be working OK. But what happens if we try to add a module that deals with drawing another shape, like a circle or triangle? These shapes would probably have associated functions like <code>draw()</code>, <code>reportArea()</code>, etc. too; if we tried to import different functions of the same name into the same top-level module file, we'd end up with conflicts and errors.</p>
+<p>Пока что наши модули для рисования фигур на холсте работают нормально.
+  Но что произойдёт, если мы попытаемся добавить модуль, который занимается рисованием другой фигуры, например круга или треугольника?
+  С этими фигурами, вероятно, тоже будут связаны такие функции, как <code>draw()</code>, <code>reportArea()</code> и т.д.;
+  если бы мы попытались импортировать разные функции с одним и тем же именем в один и тот же файл модуля верхнего уровня, мы бы столкнулись с конфликтами и ошибками.</p>
 
-<p>Fortunately there are a number of ways to get around this. We'll look at these in the following sections.</p>
+<p>К счастью, есть несколько способов обойти это. Мы рассмотрим их в следующих разделах.</p>
 
-<h2 id="Renaming_imports_and_exports">Renaming imports and exports</h2>
+<h2 id="Переименование_импорта_и_экспорта">Переименование импорта и экспорта</h2>
 
-<p>Inside your <code>import</code> and <code>export</code> statement's curly braces, you can use the keyword <code>as</code> along with a new feature name, to change the identifying name you will use for a feature inside the top-level module.</p>
+<p>Внутри фигурных скобок инструкций <code>import</code> и <code>export</code> вы можете использовать ключевое слово <code>as</code> вместе с новым именем функционала, чтобы задать ему новое имя, которое вы будете использовать для него внутри модуля верхнего уровня.</p>
 
-<p>So for example, both of the following would do the same job, albeit in a slightly different way:</p>
+<p>Так, например, оба следующих элемента будут выполнять одну и ту же работу, хотя и немного по-разному:</p>
 
-<pre class="brush: js; notranslate">// inside module.js
+<pre class="brush: js;">// внутри module.js
 export {
   function1 as newFunctionName,
   function2 as anotherNewFunctionName
 };
 
-// inside main.js
+// внутри main.js
 import { newFunctionName, anotherNewFunctionName } from './modules/module.js';</pre>
 
-<pre class="brush: js; notranslate">// inside module.js
+<pre class="brush: js;">// внутри module.js
 export { function1, function2 };
 
-// inside main.js
+// внутри main.js
 import { function1 as newFunctionName,
          function2 as anotherNewFunctionName } from './modules/module.js';</pre>
 
-<p>Let's look at a real example. In our <a href="https://github.com/mdn/js-examples/tree/master/modules/renaming">renaming</a> directory you'll see the same module system as in the previous example, except that we've added <code>circle.js</code> and <code>triangle.js</code> modules to draw and report on circles and triangles.</p>
+<p>Давайте посмотрим на реальный пример. В нашей <a href="https://github.com/mdn/js-examples/tree/master/modules/renaming">renaming</a> директории
+  вы увидите ту же модульную систему, что и в предыдущем примере,
+  за исключением того, что мы добавили модули <code>circle.js</code> и <code>triangle.js</code> для рисования кругов и треугольников и создания отчетов по ним.</p>
 
-<p>Inside each of these modules, we've got features with the same names being exported, and therefore each has the same <code>export</code> statement at the bottom:</p>
+<p>Внутри каждого из этих модулей у нас есть функции с одинаковыми именами, которые экспортируются, и поэтому у каждого из них есть один и тот же оператор <code>export</code> внизу файла:</p>
 
-<pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
+<pre class="brush: js;">export { name, draw, reportArea, reportPerimeter };</pre>
 
-<p>When importing these into <code>main.js</code>, if we tried to use</p>
+<p>Если бы в <code>main.js</code> при их импорте мы попытались использовать</p>
 
-<pre class="brush: js; notranslate">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+<pre class="brush: js;">import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
 import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';</pre>
 
-<p>The browser would throw an error such as "SyntaxError: redeclaration of import name" (Firefox).</p>
+<p>то браузер выдал бы ошибку — "SyntaxError: redeclaration of import name" (Firefox).</p>
 
-<p>Instead we need to rename the imports so that they are unique:</p>
+<p>Вместо этого нам нужно переименовать импорт, чтобы он был уникальным:</p>
 
-<pre class="brush: js; notranslate">import { name as squareName,
+<pre class="brush: js;">import { name as squareName,
          draw as drawSquare,
          reportArea as reportSquareArea,
          reportPerimeter as reportSquarePerimeter } from './modules/square.js';
@@ -276,58 +301,66 @@ import { name as triangleName,
         reportArea as reportTriangleArea,
         reportPerimeter as reportTrianglePerimeter } from './modules/triangle.js';</pre>
 
-<p>Note that you could solve the problem in the module files instead, e.g.</p>
+<p>Обратите внимание, что вместо этого вы можете решить проблему в файлах модуля, например.</p>
 
-<pre class="brush: js; notranslate">// in square.js
+<pre class="brush: js;">// внутри square.js
 export { name as squareName,
          draw as drawSquare,
          reportArea as reportSquareArea,
          reportPerimeter as reportSquarePerimeter };</pre>
 
-<pre class="brush: js; notranslate">// in main.js
+<pre class="brush: js;">// внутри main.js
 import { squareName, drawSquare, reportSquareArea, reportSquarePerimeter } from './modules/square.js';</pre>
 
-<p>And it would work just the same. What style you use is up to you, however it arguably makes more sense to leave your module code alone, and make the changes in the imports. This especially makes sense when you are importing from third party modules that you don't have any control over.</p>
+<p>И это сработало бы точно так же.
+  Какой способ вы будете использовать, зависит от вас, однако, возможно, имеет смысл оставить код модуля в покое и внести изменения в импорт.
+  Это особенно важно, когда вы импортируете из сторонних модулей, над которыми у вас нет никакого контроля.</p>
 
-<h2 id="Creating_a_module_object">Creating a module object</h2>
+<h2 id="Создание_объекта_модуля">Создание объекта модуля</h2>
 
-<p>The above method works OK, but it's a little messy and longwinded. An even better solution is to import each module's features inside a module object. The following syntax form does that:</p>
+<p>Вышеупомянутый способ работает нормально, но он немного запутан и многословен.
+  Существует решение получше — импортировать функции каждого модуля внутри объекта модуля.
+  Для этого используется следующая синтаксическая форма:</p>
 
-<pre class="brush: js; notranslate">import * as Module from './modules/module.js';</pre>
+<pre class="brush: js;">import * as Module from './modules/module.js';</pre>
 
-<p>This grabs all the exports available inside <code>module.js</code>, and makes them available as members of an object <code>Module</code>, effectively giving it its own namespace. So for example:</p>
+<p>Эта конструкция берёт все экспорты, доступные внутри <code>module.js</code> и делает их доступными в качестве свойств объекта <code>Module</code>, фактически давая ему собственное пространство имен. Так например:</p>
 
-<pre class="brush: js; notranslate">Module.function1()
+<pre class="brush: js;">Module.function1()
 Module.function2()
-etc.</pre>
+</pre>
+и т.д.
 
-<p>Again, let's look at a real example. If you go to our <a href="https://github.com/mdn/js-examples/tree/master/modules/module-objects">module-objects</a> directory, you'll see the same example again, but rewritten to take advantage of this new syntax. In the modules, the exports are all in the following simple form:</p>
+<p>Опять же, давайте посмотрим на реальный пример. Если вы посмотрите на нашу директорию <a href="https://github.com/mdn/js-examples/tree/master/modules/module-objects">module-objects</a>,
+  вы снова увидите тот же самый пример, но переписанный с учётом преимуществ этого нового синтаксиса.
+  В модулях все экспорты представлены в следующей простой форме:</p>
 
-<pre class="brush: js; notranslate">export { name, draw, reportArea, reportPerimeter };</pre>
+<pre class="brush: js;">export { name, draw, reportArea, reportPerimeter };</pre>
 
-<p>The imports on the other hand look like this:</p>
+<p>С другой стороны, импорт выглядит так:</p>
 
-<pre class="brush: js; notranslate">import * as Canvas from './modules/canvas.js';
+<pre class="brush: js;">import * as Canvas from './modules/canvas.js';
 
 import * as Square from './modules/square.js';
 import * as Circle from './modules/circle.js';
 import * as Triangle from './modules/triangle.js';</pre>
 
-<p>In each case, you can now access the module's imports underneath the specified object name, for example:</p>
+<p>В каждом случае теперь вы можете получить доступ к импорту модуля под указанным свойством объекта, например:</p>
 
-<pre class="brush: js; notranslate">let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
+<pre class="brush: js;">let square1 = Square.draw(myCanvas.ctx, 50, 50, 100, 'blue');
 Square.reportArea(square1.length, reportList);
 Square.reportPerimeter(square1.length, reportList);</pre>
 
-<p>So you can now write the code just the same as before (as long as you include the object names where needed), and the imports are much neater.</p>
+<p>Таким образом, теперь вы можете написать код точно так же, как и раньше (при условии, что вы включаете имена объектов там, где это необходимо), и импорт будет намного более аккуратным.</p>
 
-<h2 id="Modules_and_classes">Modules and classes</h2>
+<h2 id="Модули_и_классы">Модули и классы</h2>
 
-<p>As we hinted at earlier, you can also export and import classes; this is another option for avoiding conflicts in your code, and is especially useful if you've already got your module code written in an object-oriented style.</p>
+<p>Как мы намекали ранее, вы также можете экспортировать и импортировать классы — это ещё один способ избежать конфликтов в вашем коде, и он особенно полезен, если у вас уже есть код модуля, написанный в объектно-ориентированном стиле.</p>
 
-<p>You can see an example of our shape drawing module rewritten with ES classes in our <a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a> directory. As an example, the <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.js</a></code> file now contains all its functionality in a single class:</p>
+<p>Вы можете увидеть пример нашего модуля для рисования фигур, переписанного с помощью классов ES в нашей <a href="https://github.com/mdn/js-examples/tree/master/modules/classes">classes</a> директории.
+  В качестве примера, файл <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/modules/square.js">square.js</a></code> теперь содержит всю свою функциональность в одном классе:</p>
 
-<pre class="brush: js; notranslate">class Square {
+<pre class="brush: js;">class Square {
   constructor(ctx, listId, length, x, y, color) {
     ...
   }
@@ -339,31 +372,37 @@ Square.reportPerimeter(square1.length, reportList);</pre>
   ...
 }</pre>
 
-<p>which we then export:</p>
+<p>который мы затем экспортируем:</p>
 
-<pre class="brush: js; notranslate">export { Square };</pre>
+<pre class="brush: js;">export { Square };</pre>
 
-<p>Over in <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/main.js">main.js</a></code>, we import it like this:</p>
+<p>Далее в <code><a href="https://github.com/mdn/js-examples/blob/master/modules/classes/main.js">main.js</a></code>, мы импортируем его так:</p>
 
-<pre class="brush: js; notranslate">import { Square } from './modules/square.js';</pre>
+<pre class="brush: js;">import { Square } from './modules/square.js';</pre>
 
-<p>And then use the class to draw our square:</p>
+<p>А затем используем импортированный класс, чтобы нарисовать наш квадрат:</p>
 
-<pre class="brush: js; notranslate">let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
+<pre class="brush: js;">let square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
 square1.draw();
 square1.reportArea();
 square1.reportPerimeter();</pre>
 
-<h2 id="Aggregating_modules">Aggregating modules</h2>
+<h2 id="Агрегирующие_модули">Агрегирующие модули</h2>
 
-<p>There will be times where you'll want to aggregate modules together. You might have multiple levels of dependencies, where you want to simplify things, combining several submodules into one parent module. This is possible using export syntax of the following forms in the parent module:</p>
+<p>Возможны случаи, когда вы захотите объединить модули вместе.
+  У вас может быть несколько уровней зависимостей, где вы хотите упростить вещи, объединив несколько подмодулей в один родительский модуль.
+  Это возможно с использованием следующего синтаксиса экспорта в родительском модуле:</p>
 
-<pre class="brush: js; notranslate">export * from 'x.js'
+<pre class="brush: js;">export * from 'x.js'
 export { name } from 'x.js'</pre>
 
-<p>For an example, see our <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a> directory. In this example (based on our earlier classes example) we've got an extra module called <code>shapes.js</code>, which aggregates all the functionality from <code>circle.js</code>, <code>square.js</code>, and <code>triangle.js</code> together. We've also moved our submodules inside a subdirectory inside the <code>modules</code> directory called <code>shapes</code>. So the module structure in this example is:</p>
+<p>Для примера посмотрите на нашу директорию <a href="https://github.com/mdn/js-examples/tree/master/modules/module-aggregation">module-aggregation</a>.
+  В этом примере (на основе нашего предыдущего примера с классами) у нас есть дополнительный модуль с именем <code>shapes.js</code>,
+  который собирает функциональность <code>circle.js</code>, <code>square.js</code> и <code>triangle.js</code> вместе.
+  Мы также переместили наши подмодули в дочернюю директорию внутри директории <code>modules</code> под названием <code>shape</code>.
+  Итак, структура модуля в этом примере:</p>
 
-<pre class="notranslate">modules/
+<pre>modules/
   canvas.js
   shapes.js
   shapes/
@@ -371,54 +410,61 @@ export { name } from 'x.js'</pre>
     square.js
     triangle.js</pre>
 
-<p>In each of the submodules, the export is of the same form, e.g.</p>
+<p>В каждом из подмодулей экспорт имеет одинаковую форму, например:</p>
 
-<pre class="brush: js; notranslate">export { Square };</pre>
+<pre class="brush: js;">export { Square };</pre>
 
-<p>Next up comes the aggregation part. Inside <code><a href="https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js">shapes.js</a></code>, we include the following lines:</p>
+<p>Далее идет агрегирование.
+  Внутри <code><a href="https://github.com/mdn/js-examples/blob/master/modules/module-aggregation/modules/shapes.js">shapes.js</a></code>, мы добавляем следующие строки:</p>
 
-<pre class="brush: js; notranslate">export { Square } from './shapes/square.js';
+<pre class="brush: js;">export { Square } from './shapes/square.js';
 export { Triangle } from './shapes/triangle.js';
 export { Circle } from './shapes/circle.js';</pre>
 
-<p>These grab the exports from the individual submodules and effectively make them available from the <code>shapes.js</code> module.</p>
+<p>Они берут экспорт из отдельных подмодулей и фактически делают их доступными из модуля <code>shape.js</code>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: The exports referenced in <code>shapes.js</code> basically get redirected through the file and don't really exist there, so you won't be able to write any useful related code inside the same file.</p>
+<p><strong>Примечание</strong>: Экспорты, указанные в <code>shape.js</code>, по сути перенаправляются через файл и на самом деле там не существуют, поэтому вы не сможете написать какой-либо полезный связанный код внутри того же файла.</p>
 </div>
 
-<p>So now in the <code>main.js</code> file, we can get access to all three module classes by replacing</p>
+<p>Итак, теперь в файле <code>main.js</code> мы можем получить доступ ко всем трём классам модулей, заменив:</p>
 
-<pre class="brush: js; notranslate">import { Square } from './modules/square.js';
+<pre class="brush: js;">import { Square } from './modules/square.js';
 import { Circle } from './modules/circle.js';
 import { Triangle } from './modules/triangle.js';</pre>
 
-<p>with the following single line:</p>
+<p>на единственную строку кода:</p>
 
-<pre class="brush: js; notranslate">import { Square, Circle, Triangle } from './modules/shapes.js';</pre>
+<pre class="brush: js;">import { Square, Circle, Triangle } from './modules/shapes.js';</pre>
 
-<h2 id="Dynamic_module_loading">Dynamic module loading</h2>
+<h2 id="Динамическая_загрузка_модулей">Динамическая загрузка модулей</h2>
 
-<p>The newest part of the JavaScript modules functionality to be available in browsers is dynamic module loading. This allows you to dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.</p>
+<p>Самая свежая возмжность JavaScript-модулей доступная в браузерах,— это динамическая загрузка модулей.
+  Это позволяет вам динамически загружать модули только тогда, когда они необходимы, вместо того, чтобы загружать всё заранее.
+  Это даёт очевидные преимущества в производительности — давайте продолжим читать и посмотрим, как это работает.</p>
 
-<p>This new functionality allows you to call {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} as a function, passing it the path to the module as a parameter. It returns a {{JSxRef("Promise")}}, which fulfills with a module object (see <a href="#Creating_a_module_object">Creating a module object</a>) giving you access to that object's exports, e.g.</p>
+<p>Поддержка динамической загрузки модулей позволяет вызывать {{JSxRef("Statements/import", "import()", "#Dynamic_Imports")}} в качестве функции, передав ей аргументом путь к модулю.
+ Данный вызов возвращает {{JSxRef("Promise")}}, который резолвится объектом модуля (см. <a href="#Создание_объекта_модуля">Создание объекта модуля</a>), предоставляя вам доступ к экспорту указанного модуля, например:</p>
 
-<pre class="brush: js; notranslate">import('./modules/myModule.js')
+<pre class="brush: js;">import('./modules/myModule.js')
   .then((module) =&gt; {
-    // Do something with the module.
+    // делаем что-то с функционалом из импортированного модуля
   });</pre>
 
-<p>Let's look at an example. In the <a href="https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports">dynamic-module-imports</a> directory we've got another example based on our classes example. This time however we are not drawing anything on the canvas when the example loads. Instead, we include three buttons — "Circle", "Square", and "Triangle" — that, when pressed, dynamically load the required module and then use it to draw the associated shape.</p>
+<p>Давайте посмотрим на пример.
+  В директории <a href="https://github.com/mdn/js-examples/tree/master/modules/dynamic-module-imports">dynamic-module-imports</a> у нас есть ещё один пример, основанный на примере наших классов.
+  Однако на этот раз мы ничего не рисуем на холсте при загрузке страницы.
+  Вместо этого мы добавляем на страницу три кнопки — «Circle», «Square» и «Triangle», которые при нажатии динамически загружают требуемый модуль, а затем используют его для рисования указанной фигуры.</p>
 
-<p>In this example we've only made changes to our <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a></code> and <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.mjs">main.js</a></code> files — the module exports remain the same as before.</p>
+<p>В этом примере мы внесли изменения только в наши <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/index.html">index.html</a></code> и <code><a href="https://github.com/mdn/js-examples/blob/master/modules/dynamic-module-imports/main.mjs">main.js</a></code> — экспорт модуля остается таким же, как и раньше.</p>
 
-<p>Over in <code>main.js</code> we've grabbed a reference to each button using a <a href="/en-US/docs/Web/API/Document/querySelector"><code>Document.querySelector()</code></a> call, for example:</p>
+<p>Далее в <code>main.js</code> мы взяли ссылку на каждую кнопку, используя вызов <a href="/en-US/docs/Web/API/Document/querySelector"><code>document.querySelector()</code></a>:</p>
 
-<pre class="brush: js; notranslate">let squareBtn = document.querySelector('.square');</pre>
+<pre class="brush: js;">let squareBtn = document.querySelector('.square');</pre>
 
-<p>We then attach an event listener to each button so that when pressed, the relevant module is dynamically loaded and used to draw the shape:</p>
+<p>Затем мы добавляем обработчик событий на каждую кнопку, чтобы при нажатии соответствующий модуль динамически загружался и использовался для рисования фигуры:</p>
 
-<pre class="brush: js; notranslate">squareBtn.addEventListener('click', () =&gt; {
+<pre class="brush: js;">squareBtn.addEventListener('click', () =&gt; {
   import('./modules/square.js').then((Module) =&gt; {
     let square1 = new Module.Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, 'blue');
     square1.draw();
@@ -427,25 +473,34 @@ import { Triangle } from './modules/triangle.js';</pre>
   })
 });</pre>
 
-<p>Note that, because the promise fulfillment returns a module object, the class is then made a subfeature of the object, hence we now need to access the constructor with <code>Module.</code> prepended to it, e.g. <code>Module.Square( ... )</code>.</p>
+<p>Обратите внимание: поскольку выполнение Promise возвращает объект модуля, класс затем становится подкомпонентом объекта, поэтому теперь для получения доступа к конструктору нам нужно добавить к нему <code>Module.</code>, например <code>Module.Square(...)</code>.</p>
 
-<h2 id="Troubleshooting">Troubleshooting</h2>
+<h2 id="Устранение_проблем">Устранение проблем</h2>
 
-<p>Here are a few tips that may help you if you are having trouble getting your modules to work. Feel free to add to the list if you discover more!</p>
+<p>Вот несколько советов, которые могут помочь вам, если вам не удаётся заставить ваши модули работать.
+  Не стесняйтесь дополнять список, если найдете что-то ещё!</p>
 
 <ul>
- <li>We mentioned this before, but to reiterate: <code>.js</code> files need to be loaded with a MIME-type of <code>text/javascript</code> (or another JavaScript-compatible MIME-type, but <code>text/javascript</code> is recommended), otherwise you'll get a strict MIME type checking error like "The server responded with a non-JavaScript MIME type".</li>
- <li>If you try to load the HTML file locally (i.e. with a <code>file://</code> URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server. GitHub pages is ideal as it also serves <code>.js</code> files with the correct MIME type.</li>
- <li>Because <code>.mjs</code> is a non-standard file extension, some operating systems might not recognise it, or try to replace it with something else. For example, we found that macOS was silently adding on <code>.js</code> to the end of <code>.mjs</code> files and then automatically hiding the file extension. So all of our files were actually coming out as <code>x.mjs.js</code>. Once we turned off automatically hiding file extensions, and trained it to accept <code>.mjs</code>, it was OK.</li>
+ <li>Мы упоминали об этом раньше, но повторяем:<code>.js</code>-файлы должны быть загружены с MIME-type равным <code>text/javascript</code>
+  (или любым другим JavaScript-совместимым MIME-type, но <code>text/javascript</code> является рекомендованным),
+  в противном случае вы получите ошибку проверки MIME-type, например — "The server responded with a non-JavaScript MIME type".</li>
+ <li>Если вы попытаетесь загрузить HTML-файл локально (то есть по ссылке <code>file://</code>), вы столкнетесь с ошибками CORS из-за требований безопасности JavaScript-модулей.
+  Вам нужно проводить тестирование через сервер.
+  GitHub pages идеально для этого подходят, так как отдают <code>.js</code>-файлы с нужным MIME-type.</li>
+ <li>Поскольку <code>.mjs</code> — нестандартное расширение файла, некоторые операционные системы могут его не распознать или попытаться заменить на что-то другое.
+  Например, мы обнаружили, что macOS незаметно добавляла <code>.js</code> в конец файлов <code>.mjs</code>, а затем автоматически скрывала расширение файла.
+  Таким образом, все наши файлы на самом деле имели название типа <code>x.mjs.js</code>.
+  Когда мы отключили автоматическое скрытие расширений файлов и научили macOS принимать <code>.mjs</code>, всё стало в порядке.</li>
 </ul>
 
-<h2 id="See_also">See also</h2>
+<h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a href="https://developers.google.com/web/fundamentals/primers/modules#mjs">Using JavaScript modules on the web</a>, by Addy Osmani and Mathias Bynens</li>
- <li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">ES modules: A cartoon deep-dive</a>, Hacks blog post by Lin Clark</li>
- <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 in Depth: Modules</a>, Hacks blog post by Jason Orendorff</li>
- <li>Axel Rauschmayer's book <a href="http://exploringjs.com/es6/ch_modules.html">Exploring JS: Modules</a></li>
+ <li><a href="https://developers.google.com/web/fundamentals/primers/modules#mjs">Ипользование JavaScript-модулей в вебе</a>, от Эдди Османи и Матиаса Байненса (англ.)</li>
+ <li><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">Глубокое погружение в ES-модули в картинках</a>, от Лина Кларка на Hacks blog (англ.)</li>
+ <li><a href="https://medium.com/web-standards/es-modules-cartoon-dive-71f42c1e851a">Глубокое погружение в ES-модули в картинках</a>, перевод на русский язык от «Веб-стандартов»</li>
+ <li><a href="https://hacks.mozilla.org/2015/08/es6-in-depth-modules/">ES6 в деталях: Модули</a>, статья от Джейсона Орендорфа на Hacks blog (англ.)</li>
+ <li><a href="http://exploringjs.com/es6/ch_modules.html">Изучаем JS: Модули (англ)</a>, книга Акселя Раушмайера (англ.)</li>
 </ul>
 
 <p>{{Previous("Web/JavaScript/Guide/Meta_programming")}}</p>

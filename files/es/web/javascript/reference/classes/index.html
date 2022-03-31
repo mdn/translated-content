@@ -218,7 +218,10 @@ p.hablar();</pre>
 
 <pre class="notranslate"><code>var Animal = {
   hablar() {
-    console.log(this.nombre + 'hace ruido.');
+    console.log(this.nombre + ' hace ruido.');
+  },
+  comer() {
+    console.log(this.nombre + ' se alimenta.');
   }
 };
 
@@ -231,10 +234,12 @@ class Perro {
   }
 }
 
+// Solo adjunta los métodos aún no definidos
 Object.setPrototypeOf(Perro.prototype, Animal);
 
 var d = new Perro('Mitzie');
-d.hablar();</code></pre>
+d.hablar(); // Mitzie ladra.
+d.comer(); // Mitzie se alimenta.</code></pre>
 
 <h2 id="Especies">Especies</h2>
 
@@ -243,7 +248,7 @@ d.hablar();</code></pre>
 <p>Por ejemplo, cuando se usan metodos del tipo {{jsxref("Array.map", "map()")}} que devuelven el constructor por defecto, se quiere que esos métodos devuelvan un objeto padre Array, en vez de MyArray. El símbolo {{jsxref("Symbol.species")}} permite hacer:</p>
 
 <pre class="brush: js notranslate"><code>class MyArray extends Array {
-  // Sobre escribe species sobre el constructor padre Array
+  // Sobreescribe species sobre el constructor padre Array
   static get [Symbol.species]() { return Array; }
 }
 
@@ -313,55 +318,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }</code></pre>
 
 <h2 id="Compatibilidad_entre_navegadores">Compatibilidad entre navegadores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(42.0)}}</td>
-   <td>Available in the Nightly channel only (since February 2015)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>Available in the Nightly channel only (since February 2015)</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatChrome(42.0)}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("javascript.classes")}}
 
 <h2 id="Ver_también">Ver también</h2>
 

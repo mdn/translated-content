@@ -32,16 +32,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 <p>每个对象都有一个 <code>toString()</code> 方法，当该对象被表示为一个文本值时，或者一个对象以预期的字符串方式引用时自动调用。默认情况下，<code>toString()</code> 方法被每个 <code>Object</code> 对象继承。如果此方法在自定义对象中未被覆盖，<code>toString()</code> 返回 "[object <em>type</em>]"，其中 <code>type</code> 是对象的类型。以下代码说明了这一点：</p>
 
 <pre class="brush: js">var o = new Object();
-o.toString(); // returns [object Object]
+o.toString(); // 返回 [object Object]
 </pre>
 
-<div class="note"><strong>注意：</strong>如的ECMAScript 5 和随后的 Errata 中所定义，从 JavaScript 1.8.5 开始，<code>toString()</code> 调用 {{jsxref("null")}} 返回<code>[object <em>Null</em>]</code>，{{jsxref("undefined")}} 返回 <code>[object Undefined]</code>。请参阅下面的{{anch("Using_toString()_to_detect_object_class", "使用 <code>toString()</code> 检测对象类型")}}。</div>
+<div class="note">
+<p><strong>备注：</strong>如 ECMAScript 5 和随后的 Errata 中所定义，从 JavaScript 1.8.5 开始，<code>toString()</code> 调用 {{jsxref("null")}} 返回<code>[object <em>Null</em>]</code>，{{jsxref("undefined")}} 返回 <code>[object Undefined]</code>。请参阅下面的<a href="#使用_tostring()_检测对象类型">使用 <code>toString()</code> 检测对象类型</a>。</p>
+</div>
 
 <h2 id="示例">示例</h2>
 
 <h3 id="覆盖默认的_toString_方法">覆盖默认的 <code>toString</code> 方法</h3>
 
-<p>可以自定义一个方法，来取代默认的 <code>toString()</code> 方法。该 <code>toString()</code> 方法不能传入参数，并且必须返回一个字符串。自定义的 <code>toString()</code><span> 方法可以是任何我们需要的值，但如果它附带有关对象的信息，它将变得非常有用。</span></p>
+<p>可以自定义一个方法，来取代默认的 <code>toString()</code> 方法。该 <code>toString()</code> 方法不能传入参数，并且必须返回一个字符串。自定义的 <code>toString()</code> 方法可以是任何我们需要的值，但如果它附带有关对象的信息，它将变得非常有用。</p>
 
 <p>以下代码定义了 <code>Dog</code> 对象类型，并创建了一个 <code>Dog</code> 类型的 <code>theDog</code> 对象：</p>
 

@@ -61,7 +61,7 @@ original_slug: Learn/Server-side/Django/Аутентификация
 
 <p>Соответствующие настройки сделаны в параметрах <code>INSTALLED_APPS</code> и <code>MIDDLEWARE</code> файла проекта (<strong>locallibrary/locallibrary/settings.py</strong>), как показано ниже:</p>
 
-<pre class="brush: python notranslate">INSTALLED_APPS = [
+<pre class="brush: python">INSTALLED_APPS = [
     ...
 <strong>    'django.contrib.auth',  </strong># Фреймворк аутентификации и моделей по умолчанию.
 <strong>    'django.contrib.contenttypes',  # </strong>Django контент-типовая система (даёт разрешения, связанные с моделями).
@@ -82,7 +82,7 @@ MIDDLEWARE = [
 <div class="note">
 <p><strong>Примечание</strong>: вы можете создавать пользователей программно, как показано ниже. Например, вам мог бы подойти данный способ в том случае, если вы разрабатываете интерфейс, который позволяет пользователям создавать их собственные аккаунты (вы не должны предоставлять доступ пользователям к административной панели вашего сайта).</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.models import User
+<pre class="brush: python">from django.contrib.auth.models import User
 
 # Создайте пользователя и сохраните его в базе данных
 user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
@@ -144,7 +144,7 @@ user.save()
 
 <p>Добавьте следующее в нижней части проекта urls.py файл (<strong>locallibrary/locallibrary/urls.py</strong>) файл:</p>
 
-<pre class="brush: python notranslate">#Add Django site authentication urls (for login, logout, password management)
+<pre class="brush: python">#Add Django site authentication urls (for login, logout, password management)
 urlpatterns += [
     path('accounts/', include('django.contrib.auth.urls')),
 ]
@@ -157,7 +157,7 @@ urlpatterns += [
 </div>
 
 <div class="note">
-<pre class="brush: python notranslate">accounts/ login/ [name='login']
+<pre class="brush: python">accounts/ login/ [name='login']
 accounts/ logout/ [name='logout']
 accounts/ password_change/ [name='password_change']
 accounts/ password_change/done/ [name='password_change_done']
@@ -169,7 +169,7 @@ accounts/ reset/done/ [name='password_reset_complete']</pre>
 
 <p><span id="result_box" lang="ru"><span>Теперь попробуйте перейти к URL-адресу входа (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>).</span> <span>Это приведёт к сбою снова, но с ошибкой, сообщающей вам, что нам не хватает требуемого шаблона (registration / login.html) в пути поиска шаблона.</span> <span>Вы увидите следующие строки, перечисленные в жёлтом разделе вверху:</span></span></p>
 
-<pre class="brush: python notranslate">Exception Type:    TemplateDoesNotExist
+<pre class="brush: python">Exception Type:    TemplateDoesNotExist
 Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p><span id="result_box" lang="ru"><span>Следующий шаг - создать каталог регистрации в пути поиска, а затем добавить файл login.html.</span></span></p>
@@ -191,7 +191,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>Чтобы сделать эти директории видимыми для загрузчика шаблонов   (<span id="result_box" lang="ru"><span>т. е. помещать этот каталог в путь поиска шаблона</span></span>) откройте настройки проекта (<strong>/locallibrary/locallibrary/settings.py</strong>), и обновите в секции <code>TEMPLATES</code> строку <code>'DIRS'</code> как показано.</p>
 
-<pre class="brush: python notranslate">TEMPLATES = [
+<pre class="brush: python">TEMPLATES = [
     {
         ...
 <strong>        </strong><strong>'DIRS': [os.path.join(BASE_DIR, 'templates')],</strong>
@@ -207,7 +207,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 
 <p>Создайте новый HTML файл, названный /<strong>locallibrary/templates/registration/login.html</strong>. <span class="short_text" id="result_box" lang="ru"><span>дайте ему следующее содержание</span></span>:</p>
 
-<pre class="brush: html line-numbers language-html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html line-numbers language-html">{% extends "base_generic.html" %}
 
 {% block content %}
 
@@ -258,7 +258,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
  <br>
  <span>Откройте настройки проекта (<strong>/locallibrary/locallibrary/settings.py</strong>) и добавьте текст ниже.</span> <span>Теперь, когда вы входите в систему, вы по умолчанию должны перенаправляться на домашнюю страницу сайта.</span></span></p>
 
-<pre class="brush: python notranslate"># Redirect to home URL after login (Default redirects to /accounts/profile/)
+<pre class="brush: python"># Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
 </pre>
 
@@ -268,7 +268,7 @@ LOGIN_REDIRECT_URL = '/'
  <br>
  <span>Создайте и откройте <strong>/locallibrary/templates/registration/logged_out.html</strong>.</span> <span>Скопируйте текст ниже:</span></span></p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
 &lt;p&gt;Logged out!&lt;/p&gt;
@@ -290,7 +290,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p><span id="result_box" lang="ru"><span>Это форма, используемая для получения адреса электронной почты пользователя (для отправки пароля для сброса пароля).</span> <span>Создайте <strong>/locallibrary/templates/registration/password_reset_form.html</strong> и дайте ему следующее содержание:</span></span></p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 {% block content %}
 
 &lt;form action="" method="post"&gt;{% csrf_token %}
@@ -306,7 +306,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>Эта форма отображается после того, как ваш адрес электронной почты будет собран. Создайте <strong>/locallibrary/templates/registration/password_reset_done.html</strong>, и дайте ему следующее содержание:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 {% block content %}
 &lt;p&gt;We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.&lt;/p&gt;
 {% endblock %}
@@ -316,7 +316,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>Этот шаблон предоставляет текст электронной почты HTML, содержащий ссылку на сброс, которую мы отправим пользователям. Создайте /locallibrary/templates/registration/password_reset_email.html и дайте ему следующее содержание:</p>
 
-<pre class="brush: html notranslate">Someone asked for password reset for email \{{ email }}. Follow the link below:
+<pre class="brush: html">Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 </pre>
 
@@ -324,7 +324,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>На этой странице вы вводите новый пароль после нажатия ссылки в электронном письме с возвратом пароля. Создайте /locallibrary/templates/registration/password_reset_confirm.html и дайте ему следующее содержание:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 
 {% block content %}
 
@@ -361,7 +361,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>Это последний шаблон сброса пароля, который отображается, чтобы уведомить вас о завершении сброса пароля. Создайте /locallibrary/templates/registration/password_reset_complete.html и дайте ему следующее содержание:</p>
 
-<pre class="brush: html notranslate">{% extends "base_generic.html" %}
+<pre class="brush: html">{% extends "base_generic.html" %}
 {% block content %}
 
 &lt;h1&gt;The password has been changed!&lt;/h1&gt;
@@ -383,7 +383,7 @@ LOGIN_REDIRECT_URL = '/'
 <div class="note">
 <p><strong>Примечание</strong>: Система сброса пароля требует, чтобы ваш сайт поддерживал электронную почту, что выходит за рамки этой статьи, поэтому эта часть <strong>ещё не будет работать.</strong> Чтобы разрешить тестирование, поместите следующую строку в конец файла settings.py. Это регистрирует любые письма, отправленные на консоль (чтобы вы могли скопировать ссылку на сброс пароля с консоли).</p>
 
-<pre class="brush: python notranslate">EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+<pre class="brush: python">EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 </pre>
 
 <p>Для получения дополнительной информации см. <a href="https://docs.djangoproject.com/en/2.0/topics/email/">Отправка email</a> (Django docs).</p>
@@ -401,7 +401,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>Откройте базовый шаблон (/locallibrary/catalog/templates/base_generic.html) и скопируйте следующий текст в sidebar блок непосредственно перед тегом шаблона endblock.</p>
 
-<pre class="brush: python notranslate">  &lt;ul class="sidebar-nav"&gt;
+<pre class="brush: python">  &lt;ul class="sidebar-nav"&gt;
 
     ...
 
@@ -425,7 +425,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <p>Если вы используете функциональные представления, самым простым способом ограничить доступ к вашим функциям является применение <code>login_required</code> декоратор к вашей функции просмотра, как показано ниже. Если пользователь вошёл в систему, ваш код просмотра будет выполняться как обычно. Если пользователь не вошёл в систему, это перенаправит URL-адрес входа, определённый в настройках проекта. (<code>settings.LOGIN_URL</code>), передав текущий абсолютный путь в качестве <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">next</span></font> параметра URL. Если пользователю удастся войти в систему, они будут возвращены на эту страницу, но на этот раз аутентифицированы.</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.decorators import login_required
+<pre class="brush: python">from django.contrib.auth.decorators import login_required
 
 @login_required
 def my_view(request):
@@ -437,14 +437,14 @@ def my_view(request):
 
 <p>Аналогичным образом, самый простой способ ограничить доступ к зарегистрированным пользователям в ваших представлениях на основе классов - это производные от <code>LoginRequiredMixin</code>. Вы должны объявить этот mixin сначала в списке суперкласса, перед классом основного представления.</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.mixins import LoginRequiredMixin
+<pre class="brush: python">from django.contrib.auth.mixins import LoginRequiredMixin
 
 class MyView(LoginRequiredMixin, View):
     ...</pre>
 
 <p>Это имеет такое же поведение при переадресации, что и  <code>login_required</code> декоратор. Вы также можете указать альтернативное местоположение для перенаправления пользователя, если он не аутентифицирован (<code>login_url</code>), и имя параметра URL вместо "<code>next</code>" , чтобы вставить текущий абсолютный путь (<code>redirect_field_name</code>).</p>
 
-<pre class="brush: python notranslate">class MyView(LoginRequiredMixin, View):
+<pre class="brush: python">class MyView(LoginRequiredMixin, View):
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
 </pre>
@@ -463,21 +463,21 @@ class MyView(LoginRequiredMixin, View):
 
 <p>Откройте <strong>catalog/models.py</strong>, и импортируйте модель <code>User</code> из <code>django.contrib.auth.models</code> (добавьте это чуть ниже предыдущей строки импорта в верхней части файла, так <code>User</code> доступен для последующего кода, что позволяет использовать его):</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.models import User
+<pre class="brush: python">from django.contrib.auth.models import User
 </pre>
 
 <p>Затем добавьте поле <code>borrower</code> в модель <code>BookInstance</code>:</p>
 
-<pre class="brush: python notranslate">borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+<pre class="brush: python">borrower = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 </pre>
 
 <p>Пока мы здесь, давайте добавим свойство, которое мы можем вызвать из наших шаблонов, чтобы указать, просрочен ли конкретный экземпляр книги. Хотя мы могли бы рассчитать это в самом шаблоне, использование свойства, как показано ниже, будет намного более эффективным. Добавьте это где-нибудь в верхней части файла:</p>
 
-<pre class="syntaxbox notranslate">from datetime import date</pre>
+<pre class="syntaxbox">from datetime import date</pre>
 
 <p>Теперь добавьте следующее определение свойства внутри класса BookInstance:</p>
 
-<pre class="brush: python notranslate">@property
+<pre class="brush: python">@property
 def is_overdue(self):
     if self.due_back and date.today() &gt; self.due_back:
         return True
@@ -489,7 +489,7 @@ def is_overdue(self):
 
 <p>Теперь, когда мы обновили наши модели, нам нужно будет внести новые изменения в проект, а затем применить эти миграции:</p>
 
-<pre class="brush: bash notranslate">python3 manage.py makemigrations
+<pre class="brush: bash">python3 manage.py makemigrations
 python3 manage.py migrate
 </pre>
 
@@ -497,7 +497,7 @@ python3 manage.py migrate
 
 <p>Теперь откройте каталог <strong>catalog/admin.py</strong>, и добавьте поле <code>borrower</code> в класс <code>BookInstanceAdmin</code> , как в <code>list_display</code> , так и в полях <code>fieldsets</code> , как показано ниже. Это сделает поле видимым в разделе Admin, так что мы можем при необходимости назначить <code>User</code> в <code>BookInstance</code>.</p>
 
-<pre class="brush: python notranslate">@admin.register(BookInstance)
+<pre class="brush: python">@admin.register(BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
     list_display = ('book', 'status'<strong>, 'borrower'</strong>, 'due_back', 'id')
     list_filter = ('status', 'due_back')
@@ -525,7 +525,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 <p>Добавьте следующее в catalog/views.py:</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.mixins import LoginRequiredMixin
+<pre class="brush: python">from django.contrib.auth.mixins import LoginRequiredMixin
 
 class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     """
@@ -544,7 +544,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Теперь откройте <strong>/catalog/urls.py</strong> и добавьте <code>url()</code> , указывая на приведённое выше представление (вы можете просто скопировать текст ниже в конец файла).</p>
 
-<pre class="brush: python notranslate">urlpatterns += [
+<pre class="brush: python">urlpatterns += [
     url(r'^mybooks/$', views.LoanedBooksByUserListView.as_view(), name='my-borrowed'),
 ]</pre>
 
@@ -552,7 +552,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Теперь все, что нам нужно сделать для этой страницы, - это добавить шаблон. Сначала создайте файл шаблона <strong>/catalog/templates/catalog/bookinstance_list_borrowed_user.html</strong> и дайте ему следующее содержание:</p>
 
-<pre class="brush: python notranslate">{% extends "base_generic.html" %}
+<pre class="brush: python">{% extends "base_generic.html" %}
 
 {% block content %}
     &lt;h1&gt;Borrowed books&lt;/h1&gt;
@@ -582,7 +582,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Откройте базовый шаблон (<strong>/locallibrary/catalog/templates/base_generic.html</strong>) и добавьте выделенную строку из sidebar, как показано на рисунке.</p>
 
-<pre class="brush: python notranslate"> &lt;ul class="sidebar-nav"&gt;
+<pre class="brush: python"> &lt;ul class="sidebar-nav"&gt;
    {% if user.is_authenticated %}
    &lt;li&gt;User: \{{ user.get_username }}&lt;/li&gt;
 <strong>   &lt;li&gt;&lt;a href="{% url 'my-borrowed' %}"&gt;My Borrowed&lt;/a&gt;&lt;/li&gt;</strong>
@@ -607,7 +607,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Определение разрешений выполняется в разделе моделей "<code>class Meta</code>" , используется <code>permissions</code> поле. Вы можете указать столько разрешений, сколько необходимо в кортеже, причём каждое разрешение определяется во вложенном кортеже, содержащем имя разрешения и отображаемое значение разрешения. Например, мы можем определить разрешение, позволяющее пользователю отметить, что книга была возвращена, как показано здесь:</p>
 
-<pre class="brush: python notranslate">class BookInstance(models.Model):
+<pre class="brush: python">class BookInstance(models.Model):
     ...
     class Meta:
         ...
@@ -621,7 +621,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Разрешения текущего пользователя хранятся в переменной шаблона, называемой  <code>\{{ perms }}</code>. Вы можете проверить, имеет ли текущий пользователь определённое разрешение, используя конкретное имя переменной в соответствующем приложении «Django» - например, <code>\{{ perms.catalog.can_mark_returned }}</code> будет <code>True</code> если у пользователя есть это разрешение, а <code>False</code> - в противном случае. Обычно мы проверяем разрешение с использованием шаблона <code>{% if %}</code>, как показано в:</p>
 
-<pre class="brush: python notranslate">{% if perms.catalog.<code>can_mark_returned</code> %}
+<pre class="brush: python">{% if perms.catalog.<code>can_mark_returned</code> %}
     &lt;!-- We can mark a BookInstance as returned. --&gt;
     &lt;!-- Perhaps add code to link to a "book return" view here. --&gt;
 {% endif %}
@@ -633,7 +633,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
 
 <p>Функция в представлении с декоратором:</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.decorators import permission_required
+<pre class="brush: python">from django.contrib.auth.decorators import permission_required
 
 @permission_required('catalog.<code>can_mark_returned</code>')
 @permission_required('catalog.<code>can_edit</code>')
@@ -642,7 +642,7 @@ def my_view(request):
 
 <p>Требуется разрешение mixin для представлений на основе классов.</p>
 
-<pre class="brush: python notranslate">from django.contrib.auth.mixins import PermissionRequiredMixin
+<pre class="brush: python">from django.contrib.auth.mixins import PermissionRequiredMixin
 
 class MyView(PermissionRequiredMixin, View):
     permission_required = 'catalog.<code>can_mark_returned</code>'

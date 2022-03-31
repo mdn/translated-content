@@ -14,22 +14,20 @@ original_slug: Web/HTML/Element/Input/月份
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}</div>
 
-
-
 <p>这个控件在各个浏览器支持都不同，目前是支持部分浏览器。在桌面上支持情况为 Chrome/Opera 和 Edge 。在移动端支持大部分现代浏览器。在其他浏览器中，这个控件会被优雅的降级到<code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code>.</p>
 
-<p>对于那些使用不支持的浏览器的用户，Chrome / Opera月份控制如下图所示。单击右侧的向下箭头会显示日期选择器，以便您选择日期;你必须手动输入时间。</p>
+<p>对于那些使用不支持的浏览器的用户，Chrome / Opera 月份控制如下图所示。单击右侧的向下箭头会显示日期选择器，以便您选择日期;你必须手动输入时间。</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15391/month-control-chrome.png" style="display: block; height: 216px; margin: 0px auto; width: 273px;"></p>
 
-<p>Edge的 <code>month</code> 看起来像这样的:</p>
+<p>Edge 的 <code>month</code> 看起来像这样的：</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15393/month-control-edge.png" style="display: block; height: 389px; margin: 0px auto; width: 227px;"></p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#value">Value</a></strong></td>
    <td>一个 {{domxref("DOMString")}} 代表一个月，一年，或者是空。</td>
   </tr>
   <tr>
@@ -53,20 +51,20 @@ original_slug: Web/HTML/Element/Input/月份
 
 <h2 id="Value">Value</h2>
 
-<p>{{domxref("DOMString")}} 表示输入输入的月份和年份的值, in the form YYYY-MM (four or more digit year, then a hyphen ("<code>-</code>"), followed by the two-digit month). The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.</p>
+<p>{{domxref("DOMString")}} 表示输入输入的月份和年份的值，in the form YYYY-MM (four or more digit year, then a hyphen ("<code>-</code>"), followed by the two-digit month). The format of the month string used by this input type is described in {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local month string")}}.</p>
 
-<p>你可以设置一个默认的属性值插入到 {{htmlattrxref("value", "input")}} 里, 像这样:</p>
+<p>你可以设置一个默认的属性值插入到 {{htmlattrxref("value", "input")}} 里，像这样：</p>
 
 <pre class="brush: html">&lt;label for="bday-month"&gt;What month were you both in?&lt;/label&gt;
 &lt;input id="bday-month" type="month" name="bday-month" value="2017-06"&gt;</pre>
 
 <p>{{EmbedLiveSample('value-example-1', 600, 60)}}</p>
 
-<p>需要注意的是显示的如期格式不同于实际的<code>value</code> — 日期显示的格式将根据用户的操作系统的时区设置, 而时间的格式通常会格式化为 <code>yyyy-MM</code>。</p>
+<p>需要注意的是显示的如期格式不同于实际的<code>value</code> — 日期显示的格式将根据用户的操作系统的时区设置，而时间的格式通常会格式化为 <code>yyyy-MM</code>。</p>
 
 <p>在向服务器提交上述值的时候他们看起来像这样：<code>bday-month=1978-06</code>.</p>
 
-<p>你也可以使用JavaScript 的 {{domxref("HTMLInputElement.value")}} 来设置日期的值 。例如：</p>
+<p>你也可以使用 JavaScript 的 {{domxref("HTMLInputElement.value")}} 来设置日期的值 。例如：</p>
 
 <pre class="brush: js">var monthControl = document.querySelector('input[type="month"]');
 monthControl.value = '1978-06';</pre>
@@ -88,19 +86,19 @@ monthControl.value = '1978-06';</pre>
  </thead>
  <tbody>
   <tr>
-   <td><code>{{anch("max")}}</code></td>
+   <td><code><a href="#attr-max">max</a></code></td>
    <td>The latest year and month to accept as a valid input</td>
   </tr>
   <tr>
-   <td><code>{{anch("min")}}</code></td>
+   <td><code><a href="#attr-min">min</a></code></td>
    <td>The earliest year and month to accept as a valid input</td>
   </tr>
   <tr>
-   <td><code>{{anch("readonly")}}</code></td>
+   <td><code><a href="#attr-readonly">readonly</a></code></td>
    <td>A Boolean which, if present, indicates that the input's value can't be edited</td>
   </tr>
   <tr>
-   <td><code>{{anch("step")}}</code></td>
+   <td><code><a href="#attr-step">step</a></code></td>
    <td>A stepping interval to use when incrementing and decrementing the value of the input field</td>
   </tr>
  </tbody>
@@ -108,7 +106,7 @@ monthControl.value = '1978-06';</pre>
 
 <h3 id="htmlattrdef(max)">{{htmlattrdef("max")}}</h3>
 
-<p>The latest year and month, in the string format discussed in the {{anch("Value")}} section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string in "<code>yyyy-MM</code>" format, then the element has no maximum value.</p>
+<p>The latest year and month, in the string format discussed in the <a href="#value">Value</a> section above, to accept. If the {{htmlattrxref("value", "input")}} entered into the element exceeds this, the element fails <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a>. If the value of the <code>max</code> attribute isn't a valid string in "<code>yyyy-MM</code>" format, then the element has no maximum value.</p>
 
 <p>This value must specify a year-month pairing later than or equal to the one specified by the <code>min</code> attribute.</p>
 
@@ -136,15 +134,15 @@ monthControl.value = '1978-06';</pre>
 
 <h2 id="Using_month_inputs">Using month inputs</h2>
 
-<p>与日期相关的输入乍一看很方便，它们提供了一个简单的用户界面来选择日期，并且它们将发送到服务器的数据格式规范化，而不考虑用户的本地环境。但是, 由于浏览器支持有限，所以这个 <code>&lt;input type="month"&gt;</code>还是存在兼容性问题。</p>
+<p>与日期相关的输入乍一看很方便，它们提供了一个简单的用户界面来选择日期，并且它们将发送到服务器的数据格式规范化，而不考虑用户的本地环境。但是，由于浏览器支持有限，所以这个 <code>&lt;input type="month"&gt;</code>还是存在兼容性问题。</p>
 
 <p>我们在往下看更多关于<code>&lt;input type="month"&gt;</code>基础和更多的高级的用法</p>
 
-<p>, 下面将讲有关缓解浏览器支持问题的建议 (请参阅{{anch("Handling browser support")}}).</p>
+<p>, 下面将讲有关缓解浏览器支持问题的建议 (请参阅<a href="#handling_browser_support">Handling browser support</a>).</p>
 
 <h3 id="Basic_uses_of_month">Basic uses of month</h3>
 
-<p>最简单的<code>&lt;input type="month"&gt;</code> 涉及到基础的 <code>&lt;input&gt;</code> 和 {{htmlelement("label")}} 的元素组合, 像下面这样:</p>
+<p>最简单的<code>&lt;input type="month"&gt;</code> 涉及到基础的 <code>&lt;input&gt;</code> 和 {{htmlelement("label")}} 的元素组合，像下面这样：</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;label for="bday-month"&gt;What month were you both in?&lt;/label&gt;
@@ -155,7 +153,7 @@ monthControl.value = '1978-06';</pre>
 
 <h3 id="设置最长和最短日期">设置最长和最短日期</h3>
 
-<p>你可以使用{{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性 来限制用户选择日期. 在下列的例子中我们设置最小月份<code>1900-01</code> 最大月份到 <code>2017-08</code>:</p>
+<p>你可以使用{{htmlattrxref("min", "input")}} 和 {{htmlattrxref("max", "input")}} 属性 来限制用户选择日期。在下列的例子中我们设置最小月份<code>1900-01</code> 最大月份到 <code>2017-08</code>:</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;label for="bday-month"&gt;What month were you both in?&lt;/label&gt;
@@ -165,11 +163,11 @@ monthControl.value = '1978-06';</pre>
 
 <p>{{ EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40) }}</p>
 
-<p>结果是这样:</p>
+<p>结果是这样：</p>
 
 <ul>
- <li>月份只有在2017年八月份到1900年一月可以选择 — 在这个控件里这个范围以外的月份不能滚动选择。</li>
- <li>Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see {{anch("Validation")}}) but still available (e.g. Chrome).</li>
+ <li>月份只有在 2017 年八月份到 1900 年一月可以选择 — 在这个控件里这个范围以外的月份不能滚动选择。</li>
+ <li>Depending on what browser you are using, you might find that times outside the specified values might not be selectable in the time picker (e.g. Edge), or invalid (see <a href="#validation">Validation</a>) but still available (e.g. Chrome).</li>
 </ul>
 
 <div class="note">
@@ -184,7 +182,7 @@ monthControl.value = '1978-06';</pre>
 
 <p>By default, <code>&lt;input type="month"&gt;</code> does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still not fill in a date and submit, or enter an invalid date (e.g. the 32th of April).</p>
 
-<p>You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see anch("Setting maximum and minimum dates")), and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.</p>
+<p>You can use {{htmlattrxref("min", "input")}} and {{htmlattrxref("max", "input")}} to restrict the available dates (see <a href="#设置最长和最短日期">Setting maximum and minimum dates</a>, and in addition use the {{htmlattrxref("required", "input")}} attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.</p>
 
 <p>Let's look at an example — here we've set minimum and maximum dates, and also made the field required:</p>
 

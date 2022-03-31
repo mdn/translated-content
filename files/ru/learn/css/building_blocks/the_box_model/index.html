@@ -16,7 +16,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <div>Каждый элемент в CSS заключён в блок, и понимание поведения этих блоков — это ключ к умению задавать раскладку с помощью CSS, то есть выстраивать одни элементы относительно других элементов. В этом уроке мы надлежащим образом рассмотрим <em>блочную модель</em> CSS, чтобы вы могли создавать более сложные раскладки, понимая принцип ее работы и терминологию, которая к ней относится.</div>
 
-<div></div>
+
 
 <table class="learn-box standard-table" style="height: 364px; width: 510px;">
  <tbody>
@@ -128,7 +128,7 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>Предположим, что в элементе есть следующий CSS определяющий <code>width</code>, <code>height</code>, <code>margin</code>, <code>border</code>, и <code>padding</code>:</p>
 
-<pre class="brush: css notranslate">.box {
+<pre class="brush: css">.box {
   width: 350px;
   height: 150px;
   margin: 10px;
@@ -153,13 +153,13 @@ translation_of: Learn/CSS/Building_blocks/The_box_model
 
 <p>По умолчанию браузеры используют стандартную блочную модель. Если вы хотите использовать альтернативную блочную модель для элемента, установите для него свойство <code>box-sizing: border-box</code>. С помощью этого вы говорите браузеру о том, что рамка элемента определяется любыми размерами, которые вы устанавливаете.</p>
 
-<pre class="brush: css notranslate"><code>.box {
+<pre class="brush: css"><code>.box {
   box-sizing: border-box;
 } </code></pre>
 
 <p>Если вы хотите, чтобы все ваши элементы использовали альтернативную блочную модель, что является распространённым выбором среди разработчиков, установите свойство <code>box-sizing</code> для элемента <code>&lt;html&gt;</code>, затем задайте всем элементам наследование этого значения (inherit), как показано в примере ниже. Если вы хотите понять ход мыслей, стоящий за этим решением, читайте статью <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">the CSS Tricks article on box-sizing</a>.</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   box-sizing: border-box;
 }
 *, *::before, *::after {

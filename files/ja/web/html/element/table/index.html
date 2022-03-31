@@ -91,7 +91,7 @@ translation_of: Web/HTML/Element/table
  </dd>
  <dt>{{htmlattrdef("bgcolor")}} {{Deprecated_inline}}</dt>
  <dd>
- <p>表の背景色です。値は<a href="/ja/docs/Web/CSS/color_value#RGB_colors">6桁の16進 RGB コード</a>で、その前に「<code>#</code>」が付きます。定義済みの<a href="/en-US/docs/Web/CSS/color_value#Color_keywords">色キーワード</a>のうちの1つを使用することもできます。
+ <p>表の背景色です。値は<a href="/ja/docs/Web/CSS/color_value#RGB_colors">6桁の16進 RGB コード</a>で、その前に「<code>#</code>」が付きます。定義済みの<a href="/ja/docs/Web/CSS/color_value#Color_keywords">色キーワード</a>のうちの1つを使用することもできます。
 
  </p><p>同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
  </p></dd>
@@ -109,7 +109,7 @@ translation_of: Web/HTML/Element/table
  </p></dd>
  <dt>{{htmlattrdef("cellspacing")}} {{Deprecated_inline}}</dt>
  <dd>
- <p>この属性は、2つのセルの間の四悪の寸法を、パーセント値またはピクセル値で定義します。この属性は水平方向と垂直方向の両方に適用され、表の上端と最初の行におけるセルの間、表の左端と最初の列の間、表の右端と最後の列の間、表の荷担と最後の行の間に適用されます。</p>
+ <p>この属性は、2つのセルの間の空間の寸法を、パーセント値またはピクセル値で定義します。この属性は水平方向と垂直方向の両方に適用され、表の上端と最初の行におけるセルの間、表の左端と最初の列の間、表の右端と最後の列の間、表の下端と最後の行の間に適用されます。</p>
 
  <p>同様の効果を得るには、 {{cssxref("border-spacing")}} プロパティを <code>&lt;table&gt;</code> 要素に適用してください。 <code>border-spacing</code> は、 {{cssxref("border-collapse")}} が collapse に設定されていると何の効果もありません。
  </p></dd>
@@ -618,7 +618,7 @@ tr:last-child td {
 
 <h3 id="Scoping_rows_and_columns" name="Scoping_rows_and_columns">行と列のスコープ付け</h3>
 
-<p>ヘッダー要素の {{htmlattrxref("scope", "th")}} 属性は、単純な内容の場合はスコープが推測できるので冗長になります。しかし、支援技術によっては正しく推測することに失敗する事があるため、ヘッダーにスコープを設定すると使い勝手が向上する可能性ことがあります。複雑な表では、スコープを指定するとセルとヘッダーの関係に関する必要な情報を提供することができます。</p>
+<p>ヘッダー要素の {{htmlattrxref("scope", "th")}} 属性は、単純な内容の場合はスコープが推測できるので冗長になります。しかし、支援技術によっては正しく推測することに失敗する事があるため、ヘッダーにスコープを設定すると使い勝手が向上することがあります。複雑な表では、スコープを指定するとセルとヘッダーの関係に関する必要な情報を提供することができます。</p>
 
 <h4 id="Example" name="Example">例</h4>
 
@@ -658,7 +658,7 @@ tr:last-child td {
 
 <h3 id="Complicated_tables" name="Complicated_tables">複雑な表</h3>
 
-<p>読み上げソフトのような支援技術は、ヘッダーのセルを厳密に水平又は垂直濃厚に関連付けすることができない表を解析するのが困難な場合があります。これはつまり、 {{htmlattrxref("colspan", "td")}} に {{htmlattrxref("rowspan", "td")}} 属性がある場合のことです。</p>
+<p>読み上げソフトのような支援技術は、ヘッダーのセルを厳密に水平又は垂直方向に関連付けすることができない表を解析するのが困難な場合があります。これはつまり、 {{htmlattrxref("colspan", "td")}} に {{htmlattrxref("rowspan", "td")}} 属性がある場合のことです。</p>
 
 <p>できれば、テーブルの内容を表現するための別な方法、例えばより小さい表の集合に分解するなどで、 <code>colspan</code> 及び <code>rowspan</code> 属性に依存する必要がないようにすることを考慮してください。これは支援技術を使用している人が表の内容を理解しやすくするのに加えて、表のレイアウトの関連を理解することが難しい認識障碍を持った人にも利益になります。</p>
 

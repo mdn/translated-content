@@ -10,13 +10,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedL
 ---
 <div>{{JSRef("Global_Objects", "Collator", "Intl,DateTimeFormat,NumberFormat")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>Intl.Collator.supportedLocalesOf()</code></strong> возвращает массив, содержащий те из предоставленных локалей, что поддерживаются при сравнении строк без отката к локали по умолчанию среды выполнения.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code>Intl.Collator.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>locales</code></dt>
  <dd>Строка с языковой меткой BCP 47, либо массив таких строк. Описание общей формы и интерпретации аргумента <code>locales</code> смотрите на {{jsxref("Global_Objects/Intl", "странице, посвящённой объекту Intl", "#Locale_identification_and_negotiation", 1)}}.</dd>
@@ -30,12 +30,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedL
  </dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Возвращает массив с подмножеством языковых меток, предоставленных в аргументе <code>locales</code>. Возвращаются те языковые метки, для которых среда выполнения поддерживает сравнение строк без отката к локали по умолчанию; при поиске используется предоставленный алгоритм сопоставления локалей.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_supportedLocalesOf" name="Example:_Using_supportedLocalesOf">Пример: использование <code>supportedLocalesOf</code></h3>
+<h3 id="Example_Using_supportedLocalesOf">Пример: использование <code>supportedLocalesOf</code></h3>
 <p>Предполагая, что среда выполнения поддерживает индонезийское и немецкое, но на балийское сравнение строк, метод <code>supportedLocalesOf</code> вернёт неизменными индонезийскую и немецкую языковые метки, даже несмотря на то, что сортировка <code>pinyin</code> не используется с индонезийским языком и вряд ли будет поддерживаться в немецком языке для Индонезии. Обратите внимание на используемую здесь спецификацию алгоритма <code>"lookup"</code> — сопоставление <code>"best fit"</code> может решить, что индонезийский язык является адекватным сопоставлением с балийским, поскольку большинство людей, говорящих на балийском, также понимают индонезийский, и поэтому может возвратиться ещё и языковая метка балийского языка.</p>
 <pre class="brush: js">var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
 var options = { localeMatcher: 'lookup' };
@@ -43,7 +43,7 @@ console.log(Intl.Collator.supportedLocalesOf(locales, options).join(', '));
 // → "id-u-co-pinyin, de-ID"
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -59,10 +59,10 @@ console.log(Intl.Collator.supportedLocalesOf(locales, options).join(', '));
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Global_Objects/Collator", "Intl.Collator")}}</li>
 </ul>

@@ -11,9 +11,9 @@ translation_of: 'Web/CSS/:where'
 
 <div><a href="/ru/docs/Web/CSS">CSS</a> <a href="/ru/docs/Web/CSS/Псевдо-классы">псевдокласс </a><strong><code>:where()</code> </strong>в качестве аргумента принимает список селекторов и выбирает только те элементы, которые могут быть выбраны из переданного списка.</div>
 
-<div></div>
 
-<pre class="brush: css notranslate"><code>/* Выбирает любой параграф внутри header, main
+
+<pre class="brush: css"><code>/* Выбирает любой параграф внутри header, main
    или footer на который наведён курсор мыши */
 :where(header, main, footer) p:hover {
   color: red;
@@ -36,13 +36,13 @@ footer p:hover {
 
 <p>При использовании списка селекторов в CSS, если один из селекторов невалидный, то весь список селекторов будет считаться невалидным. В то же время при использовании <code>:is()</code> или <code>:where()</code> действует другое правило: если среди переданных аргументов будет некорректный или неподдерживаемый селектор, то он будет проигнорирован, для всех же остальных селекторов будут применены CSS-правила.</p>
 
-<pre class="brush: css notranslate">:where(:valid, :unsupported) {
+<pre class="brush: css">:where(:valid, :unsupported) {
   ...
 }</pre>
 
 <p>Пример выше будет успешно распарсен и для <code>:valid</code> будут применены CSS-правила, даже если в браузере не поддерживается <code>:unsupported</code>, в то время как:</p>
 
-<pre class="brush: css notranslate">:valid, :unsupported {
+<pre class="brush: css">:valid, :unsupported {
   ...
 }</pre>
 
@@ -56,7 +56,7 @@ footer p:hover {
 
 <p>Возьмём следующий HTML-код:</p>
 
-<pre class="brush: html notranslate">&lt;article&gt;
+<pre class="brush: html">&lt;article&gt;
   &lt;h2&gt;:is()-styled links&lt;/h2&gt;
   &lt;section class="is-styling"&gt;
     &lt;p&gt;Here is my main content. This &lt;a href="https://mozilla.org"&gt;contains a link&lt;/a&gt;.
@@ -90,7 +90,7 @@ footer p:hover {
 
 <p>Теперь при помощи псевдоклассов <code>:is()</code> и <code>:where()</code> зададим цвет для ссылок в простой форме, как в примере ниже:</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
   font-size: 150%;
 }
@@ -105,7 +105,7 @@ footer p:hover {
 
 <p>Что если позже мы захотим переопределить цвет ссылок в <code>footer</code>'ах используя простой селектор?</p>
 
-<pre class="brush: css notranslate">footer a {
+<pre class="brush: css">footer a {
   color: blue;
 }</pre>
 
@@ -115,7 +115,7 @@ footer p:hover {
 
 <p><strong>Примечание</strong>: вы так же можете найти этот пример на Github; смотрите <a href="https://mdn.github.io/css-examples/is-where/">is-where</a>.</p>
 
-<p>{{EmbedLiveSample('Examples', '100%', 600)}}</p>
+<p>{{EmbedLiveSample('Примеры', '100%', 600)}}</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -123,27 +123,12 @@ footer p:hover {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#zero-matches", ":where()")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <div>
-<p>{{Compat("css.selectors.where")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>

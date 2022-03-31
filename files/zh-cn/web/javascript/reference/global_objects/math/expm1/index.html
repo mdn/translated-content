@@ -5,28 +5,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
-<p><code><strong>Math.expm1()</strong></code> 函数返回 <code>E<sup>x</sup> - 1</code>, 其中 <code>x</code> 是该函数的参数, <code>E</code> 是自然对数的底数 <code>2.718281828459045.</code></p>
+<p><code><strong>Math.expm1()</strong></code> 函数返回 <code>E^x - 1</code>, 其中 <code>x</code> 是该函数的参数, <code>E</code> 是自然对数的底数 <code>2.718281828459045.</code></p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Math.expm1(<em>x</em>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>x</code></dt>
  <dd>任意数字.</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
-<p><code><span style="color: #4d4e53; font-family: 'Open Sans',sans-serif; line-height: 21px;">参数 </span><code style="font-size: 14px; line-height: inherit; margin: 0px; padding: 0px; border: 0px; color: rgb(77, 78, 83);">x</code><span style="color: #4d4e53; font-family: 'Open Sans',sans-serif; line-height: 21px;"> 会被自动类型转换成 </span><code style="font-size: 14px; line-height: inherit; margin: 0px; padding: 0px; border: 0px; color: rgb(77, 78, 83);">number </code><span style="color: #4d4e53; font-family: 'Open Sans',sans-serif; line-height: 21px;">类型.</span></code></p>
+<p><code>参数 <code>x</code> 会被自动类型转换成 <code>number </code>类型.</code></p>
 
 <p><code>expm1 是 "exponent minus 1" 的缩写.</code></p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush:js">Math.expm1(1)     // 1.7182818284590453
 Math.expm1(-38)   // -1
@@ -62,57 +62,9 @@ Math.expm1("foo") // NaN
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoDesktop("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatGeckoMobile("25")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Global_Objects/Math", "Math")}} 对象.</li>

@@ -7,10 +7,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 <p><code>Метод Promise.any()</code> принимает итерируемый объект содержащий объекты промисов {{JSxRef("Promise")}}. Как только один из промисов (<code>Promise)</code> выполнится успешно (<code>fullfill</code>), метод возвратит единственный объект <code>Promise</code> со значением выполненного промиса. Если ни один из промисов не завершится успешно (если все промисы завершатся с ошибкой, т.е. <code>rejected</code>), тогда возвращённый объект Promise будет отклонён (<code>rejected</code>) с одним из значений: массив содержащий причины ошибки (отклонения), или {{JSxRef("AggregateError")}} — подкласс {{JSxRef("Error")}}, который объединяет выброшенные ошибки вместе. По существу, метод <code>Promise.any()</code> является противоположностью для {{JSxRef("Promise.all()")}}.</p>
 
-<div class="blockIndicator warning">
-<p><strong>Warning!</strong> The <code>Promise.any()</code> method is experimental and not fully supported by all browsers. It is currently in the <a href="https://github.com/tc39/proposal-promise-any" rel="external">TC39 Candidate stage (Stage 3)</a>.</p>
-</div>
-
 <h2 id="Синтаксис">Синтаксис</h2>
 
 <pre>Promise.any(<var>iterable</var>);</pre>
@@ -54,22 +50,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.es/proposal-promise-any/#sec-promise.any">ESNext Promise.any Proposal</a></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("javascript.builtins.Promise.any")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

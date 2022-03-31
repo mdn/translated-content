@@ -19,7 +19,7 @@ Il peut être utile de commencer avec un aperçu de l'histoire de ce langage. Ja
 
 Quelques mois plus tard, Microsoft a lancé avec Internet Explorer 3 une version du langage globalement compatible, appelée JScript. Quelques mois après, Netscape a soumis le langage à l'[Ecma International](https://www.ecma-international.org/), une organisation de normalisation européenne, ce qui a permis d'aboutir à la première édition du standard [ECMAScript](/fr/docs/Glossary/ECMAScript) en 1997. Ce standard a reçu une mise à jour importante appelée [ECMAScript edition 3](https://www.ecma-international.org/publications/standards/Ecma-262.htm) en 1999, et est resté relativement stable depuis. La quatrième édition a été abandonnée suite à des différends portants sur la complexité du langage. De nombreuses sections de la quatrième édition ont été utilisées pour servir de fondation à la cinquième édition d'ECMAScript, publiée en décembre 2009. La sixième édition, qui apporte des nouveautés majeures, a été publiée en juin 2015.
 
-> **Note :** Dans la suite de cet article et à des fins de simplicité, nous utiliserons les termes « JavaScript » et « ECMAScript » pour désigner la même chose.
+> **Note :** Dans la suite de cet article et à des fins de simplicité, nous utiliserons les termes «&nbsp;JavaScript&nbsp;» et «&nbsp;ECMAScript&nbsp;» pour désigner la même chose.
 
 Contrairement à la plupart des langages de programmation, JavaScript n'a pas de concept d'entrée ou de sortie. Il est conçu pour s'exécuter comme un langage de script dans un environnement hôte, et c'est à cet environnement de fournir des mécanismes de communication avec le monde extérieur. L'environnement hôte le plus commun est un navigateur, mais des interpréteurs JavaScript existent également dans Adobe Acrobat, Photoshop, les images SVG, le moteur de widgets de Yahoo!, et même au sein d'environnements côté serveur tels que [Node.js](https://nodejs.org/). Cette liste ne se limite pas qu'à ces éléments et on retrouve également JavaScript dans les bases de données NoSQL telles que [Apache CouchDB](https://couchdb.apache.org/), les ordinateurs embarqués ou encore des environnements de bureaux comme [GNOME](https://www.gnome.org/) (l'une des interfaces graphiques les plus populaires des systèmes d'exploitation GNU/Linux), etc.
 
@@ -151,7 +151,7 @@ isNaN([1]) // false
 isNaN([1,2]) // true
 ```
 
-JavaScript dispose également de valeur spéciales pour l'infini [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) et l'infini négatif (`-Infinity`) :
+JavaScript dispose également de valeur spéciales pour l'infini [`Infinity`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity) et l'infini négatif (`-Infinity`)&nbsp;:
 
 ```js
 1 / 0; // Infinity
@@ -259,7 +259,7 @@ for (var variableVar = 0; variableVar < 5; variableVar++) {
 
 Si on déclare une variable sans lui affecter aucune valeur, son type sera alors `undefined`.
 
-JavaScript possède une différence importante quant aux autres langages de programmation comme Java : en JavaScript, les blocs ne créent pas de portées pour les variables déclarées avec `var`, c'est la fonction qui gère la portée d'une variable déclarée avec `var`. Aussi, si une variable est définie avec `var` au sein d'une instruction conditionnelle avec `if`, cette variable sera visible depuis l'ensemble de la fonction. Avec ECMAScript 2015, les instructions de déclarations, [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) permettent de créer des variables dont la portée est limitée à celle du bloc qui l'englobe.
+JavaScript possède une différence importante quant aux autres langages de programmation comme Java&nbsp;: en JavaScript, les blocs ne créent pas de portées pour les variables déclarées avec `var`, c'est la fonction qui gère la portée d'une variable déclarée avec `var`. Aussi, si une variable est définie avec `var` au sein d'une instruction conditionnelle avec `if`, cette variable sera visible depuis l'ensemble de la fonction. Avec ECMAScript 2015, les instructions de déclarations, [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) permettent de créer des variables dont la portée est limitée à celle du bloc qui l'englobe.
 
 ## Les opérateurs
 
@@ -272,7 +272,7 @@ x = x + 5;
 
 Vous pouvez utiliser `++` et `--` respectivement pour incrémenter et pour décrémenter. Ils peuvent être utilisés comme opérateurs préfixes ou suffixes.
 
-L'[opérateur `+` ](</fr/docs/conflicting/Web/JavaScript/Reference/Operators#addition_(.2b)>)permet également de concaténer des chaînes :
+L'[opérateur `+`](/fr/docs/conflicting/Web/JavaScript/Reference/Operators#addition_(.2b)) permet également de concaténer des chaînes :
 
 ```js
 "coucou" + " monde"; // "coucou monde"
@@ -990,7 +990,7 @@ function parentFunc() {
 
 Cela peut s'avérer très utile dans l'écriture de code plus facilement maintenable. Si une fonction A dépend d'une ou deux autres fonctions B et C qui ne sont utiles à aucun autre endroit de votre code, on peut imbriquer ces fonctions utilitaires B et C à l'intérieur de la fonction A. Cela diminue le nombre de fonctions se trouvant dans la portée globale, ce qui est toujours une bonne chose.
 
-C'est également un bon moyen de se préserver de l'attrait trompeur des variables globales. Lorsqu'on écrit du code complexe, il est souvent tentant d'utiliser des variables globales pour partager des valeurs entre différentes fonctions, ce qui mène à du code difficile à maintenir. Les fonctions internes peuvent partager des variables avec leur parent, de sorte que vous pouvez utiliser ce mécanisme pour coupler des fonctions ensemble lorsque cela a un sens, sans pour autant polluer l'espace de noms global. Ce sont ainsi des « globales locales ». Cette technique doit être utilisée parcimonieusement, mais il est utile de s'en souvenir.
+C'est également un bon moyen de se préserver de l'attrait trompeur des variables globales. Lorsqu'on écrit du code complexe, il est souvent tentant d'utiliser des variables globales pour partager des valeurs entre différentes fonctions, ce qui mène à du code difficile à maintenir. Les fonctions internes peuvent partager des variables avec leur parent, de sorte que vous pouvez utiliser ce mécanisme pour coupler des fonctions ensemble lorsque cela a un sens, sans pour autant polluer l'espace de noms global. Ce sont ainsi des «&nbsp;globales locales&nbsp;». Cette technique doit être utilisée parcimonieusement, mais il est utile de s'en souvenir.
 
 ## Les fermetures (_Closures_)
 

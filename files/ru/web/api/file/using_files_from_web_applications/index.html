@@ -11,7 +11,7 @@ translation_of: Web/API/File/Using_files_from_web_applications
 
 <p>Рассмотрим следующий код:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="input" multiple&gt;</pre>
+<pre class="brush: html">&lt;input type="file" id="input" multiple&gt;</pre>
 
 <p>File API делает возможным доступ к {{ domxref("FileList") }}, который содержит объекты {{ domxref("File") }}, которым соответствуют файлы, выбранные пользователем.</p>
 
@@ -19,11 +19,11 @@ translation_of: Web/API/File/Using_files_from_web_applications
 
 <p>Обращение к одному выбранному файлу с использованием классической DOM-модели:</p>
 
-<pre class="brush: js notranslate">const selectedFile = document.getElementById('input').files[0];</pre>
+<pre class="brush: js">const selectedFile = document.getElementById('input').files[0];</pre>
 
 <p>Обращение к одному выбранному файлу через <a href="http://jquery.com/">jQuery</a>:</p>
 
-<pre class="brush: js notranslate">var selectedFile = $('#input').get(0).files[0];
+<pre class="brush: js">var selectedFile = $('#input').get(0).files[0];
 
 var selectedFile = $('#input')[0].files[0];</pre>
 
@@ -35,7 +35,7 @@ var selectedFile = $('#input')[0].files[0];</pre>
 
 <p>Также возможно (но не обязательно) получить доступ к {{DOMxRef("FileList")}} через событие <code>change</code>. Нужно использовать {{DOMxRef("EventTarget.addEventListener()")}} чтобы добавить обработчик события <code>change</code>, как показано здесь:</p>
 
-<pre class="brush: js notranslate">const inputElement = document.getElementById("input");
+<pre class="brush: js">const inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 function handleFiles() {
   const fileList = this.files; /* now you can work with the file list */
@@ -43,7 +43,7 @@ function handleFiles() {
 
 <p>Обработчик события <code>change</code> можно назначить атрибутом элемента:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="input" onchange="handleFiles(this.files)"&gt;</pre>
+<pre class="brush: html">&lt;input type="file" id="input" onchange="handleFiles(this.files)"&gt;</pre>
 
 <p>Когда пользователь выбирает файл, функция <span style="font-family: consolas,monaco,andale mono,monospace;">handleFiles() будет вызвана с объектом </span>{{ domxref("FileList") }}, который состоит из объектов {{ domxref("File") }}, представляющих файлы, выбранные пользователем.</p>
 
@@ -51,11 +51,11 @@ function handleFiles() {
 
 <p>Объект {{ domxref("FileList") }} предоставляемый классическим DOM содержит все файлы выбранные пользователем, каждый из которых представляет собой объект {{ domxref("File") }}. Вы можете определить сколько файлов выбрал пользователь проверяя значение атрибута длины (<code>length</code>) списка файлов:</p>
 
-<pre class="brush: js notranslate"><code>var numFiles = files.length;</code></pre>
+<pre class="brush: js"><code>var numFiles = files.length;</code></pre>
 
 <p>Конкретные объекты {{ domxref("File") }} могут быть получены обращением к списку файлов как к массиву:</p>
 
-<pre class="brush: js notranslate">for (var i = 0, numFiles = files.length; i &lt; numFiles; i++) {
+<pre class="brush: js">for (var i = 0, numFiles = files.length; i &lt; numFiles; i++) {
   var file = files[i];
   ..
 }
@@ -78,7 +78,7 @@ function handleFiles() {
 
 <p>Следующий пример показывает возможное использование свойства <code>size</code>:</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8"&gt;
@@ -118,12 +118,12 @@ function updateSize() {
 
 <p>Рассмотрим следующую разметку HTML:</p>
 
-<pre class="brush: html notranslate"><code>&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
+<pre class="brush: html"><code>&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
 &lt;a href="#" id="fileSelect"&gt;Select some files&lt;/a&gt;</code></pre>
 
 <p>Код, обрабатывающий событие click, может выглядеть следующим образом:</p>
 
-<pre class="brush: js notranslate">var fileSelect = document.getElementById("fileSelect"),
+<pre class="brush: js">var fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
 
 fileSelect.addEventListener("click", function (e) {
@@ -142,7 +142,7 @@ fileSelect.addEventListener("click", function (e) {
 
 <p>Рассмотрим следующую разметку HTML:</p>
 
-<pre class="brush: html notranslate"><code>&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
+<pre class="brush: html"><code>&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
 &lt;label for="fileElem"&gt;Select some files&lt;/label&gt;</code></pre>
 
 <p>В данном случае нет необходимости добавлять код JavaScript для того, чтобы вызвать <code>fileElem.click()</code>. Также в данном случае вы можете стилизовать элемент label так, как пожелаете.</p>
@@ -153,7 +153,7 @@ fileSelect.addEventListener("click", function (e) {
 
 <p>На первом шаге необходимо определить зону, в которую будут перетаскиваться файлы. В каждом конкретном случае часть содержимого вашей страницы, ответственная за приёмку перетаскиваемых файлов, может варьироваться в зависимости от дизайна приложения, тем не менее, заставить элемент воспринимать события перетаскивания достаточно просто:</p>
 
-<pre class="brush: js notranslate">var dropbox;
+<pre class="brush: js">var dropbox;
 
 dropbox = document.getElementById("dropbox");
 dropbox.addEventListener("dragenter", dragenter, false);
@@ -165,7 +165,7 @@ dropbox.addEventListener("drop", drop, false);
 
 <p>В нашем случае нет необходимости делать что-то особенное при обработке событий <code>dragenter</code> и <code>dragover</code>, таким образом, обе функции, ответственные за обработку данных событий, довольно просты. Они останавливают распространение события и предотвращают возникновение действия по умолчанию:</p>
 
-<pre class="brush: js notranslate">function dragenter(e) {
+<pre class="brush: js">function dragenter(e) {
   e.stopPropagation();
   e.preventDefault();
 }
@@ -178,7 +178,7 @@ function dragover(e) {
 
 <p>Вся настоящая магия происходит в функции <code>drop()</code>:</p>
 
-<pre class="brush: js notranslate">function drop(e) {
+<pre class="brush: js">function drop(e) {
   e.stopPropagation();
   e.preventDefault();
 
@@ -195,7 +195,7 @@ function dragover(e) {
 
 <p>Представим, что вы разрабатываете очередной веб-сайт для обмена фотографиями и вы хотите использовать возможности HTML5 для предварительного просмотра изображений перед тем, как пользователь загрузит их. Вы можете создать <code>input</code> элемент или зону перетаскивания, как обсуждалось ранее, и вызвать такую функцию, как <code>handleFiles()</code> ниже.</p>
 
-<pre class="brush: js notranslate">function handleFiles(files) {
+<pre class="brush: js">function handleFiles(files) {
   for (var i = 0; i &lt; files.length; i++) {
     var file = files[i];
 
@@ -225,11 +225,11 @@ function dragover(e) {
 
 <p>Когда у вас есть объект {{ domxref("File") }}, на который вы хотите ссылаться по URL из HTML, вы можете создать для этого объект URL, такой как этот:</p>
 
-<pre class="brush: js notranslate"><code>var objectURL = window.URL.createObjectURL(fileObj);</code></pre>
+<pre class="brush: js"><code>var objectURL = window.URL.createObjectURL(fileObj);</code></pre>
 
 <p>URL объекта <span lang="EN-US" style='font-family: "Calibri",sans-serif; font-size: 11.0pt; line-height: 107%;'>–</span> это строка, идентифицирующая объект файла {{ domxref("File") }}. Каждый раз при вызове {{ domxref("window.URL.createObjectURL()") }}, создаётся новый уникальный объект URL, даже если вы уже создали объект URL для этого файла. Каждый из них должен быть освобождён. В то время как они освобождаются автоматически когда документ выгружается, если ваша страница использует их динамически, вы должны освободить их явно вызовом {{ domxref("window.URL.revokeObjectURL()") }}:</p>
 
-<pre class="brush: js notranslate"><code>window.URL.revokeObjectURL(objectURL);</code></pre>
+<pre class="brush: js"><code>window.URL.revokeObjectURL(objectURL);</code></pre>
 
 <h2 id="Пример_Использование_URL_объектов_для_отображения_изображений">Пример: Использование URL объектов для отображения изображений</h2>
 
@@ -237,7 +237,7 @@ function dragover(e) {
 
 <p>HTML, который представляет интерфейс, выглядит так:</p>
 
-<pre class="brush: html notranslate">&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
+<pre class="brush: html">&lt;input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"&gt;
 &lt;a href="#" id="fileSelect"&gt;Select some files&lt;/a&gt;
 &lt;div id="fileList"&gt;
   &lt;p&gt;No files selected!&lt;/p&gt;
@@ -248,7 +248,7 @@ function dragover(e) {
 
 <p>Метод <code>handleFiles()</code> может быть реализован таким образом:</p>
 
-<pre class="brush: js notranslate">window.URL = window.URL || window.webkitURL;
+<pre class="brush: js">window.URL = window.URL || window.webkitURL;
 
 var fileSelect = document.getElementById("fileSelect"),
     fileElem = document.getElementById("fileElem"),
@@ -312,7 +312,7 @@ function handleFiles(files) {
 
 <p>Продолжая пример с кодом, который строил эскизы в предыдущем примере, напомним, что каждому изображению эскиза присвоен класс CSS class <code>obj</code>, с соответствующим {{ domxref("File") }}, прикреплённым в атрибут <code>file</code>. Это позволяет нам очень просто выбрать все изображения, которые пользователь выбрал для загрузки используя {{ domxref("Document.querySelectorAll()") }}, как показано здесь:</p>
 
-<pre class="brush: js notranslate">function sendFiles() {
+<pre class="brush: js">function sendFiles() {
   var imgs = document.querySelectorAll(".obj");
 
   for (var i = 0; i &lt; imgs.length; i++) {
@@ -327,7 +327,7 @@ function handleFiles(files) {
 
 <p>Функция <code>FileUpload</code> принимает на вход 2 параметра: элемент изображения и файл, из которого нужно читать данные изображения.</p>
 
-<pre class="brush: js notranslate">function FileUpload(img, file) {
+<pre class="brush: js">function FileUpload(img, file) {
   const reader = new FileReader();
   this.ctrl = createThrobber(img);
   const xhr = new XMLHttpRequest();
@@ -369,7 +369,7 @@ function handleFiles(files) {
 
 <h3 id="Асинхронная_обработка_процесса_загрузки">Асинхронная обработка процесса загрузки</h3>
 
-<pre class="brush: js notranslate">&lt;?php
+<pre class="brush: js">&lt;?php
 if (isset($_FILES['myFile'])) {
     // Example:
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
@@ -431,12 +431,12 @@ if (isset($_FILES['myFile'])) {
 
 <p>В Firefox, для того чтобы файл PDF появился в iframe и не предлагался для загрузки, нужно установить <code>pdfjs.disabled</code> в значение <code>false</code> {{non-standard_inline()}}.</p>
 
-<pre class="brush: html notranslate">&lt;iframe id="viewer"&gt;
+<pre class="brush: html">&lt;iframe id="viewer"&gt;
 </pre>
 
 <p>А здесь изменение атрибута <code>src</code>:</p>
 
-<pre class="brush: js notranslate">var obj_url = window.URL.createObjectURL(blob);
+<pre class="brush: js">var obj_url = window.URL.createObjectURL(blob);
 var iframe = document.getElementById('viewer');
 iframe.setAttribute('src', obj_url);
 window.URL.revokeObjectURL(obj_url);</pre>
@@ -445,13 +445,13 @@ window.URL.revokeObjectURL(obj_url);</pre>
 
 <p>Вы можете таким же образом работать с файлами в других форматах. Ниже приведён пример как загружается видео:</p>
 
-<pre class="brush: js notranslate">var video = document.getElementById('video');
+<pre class="brush: js">var video = document.getElementById('video');
 var obj_url = window.URL.createObjectURL(blob);
 video.src = obj_url;
 video.play()
 window.URL.revokeObjectURL(obj_url);</pre>
 
-<h2 id="Specification" name="Specification">Спецификации</h2>
+<h2 id="Specification">Спецификации</h2>
 
 <ul>
  <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#file-upload-state-%28type=file%29" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#concept-input-type-file-selected">File upload state</a> (Рабочие материалы HTML 5)</li>

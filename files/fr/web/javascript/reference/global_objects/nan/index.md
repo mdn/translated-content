@@ -10,7 +10,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/NaN
 ---
 {{jsSidebar("Objects")}}
 
-La propriété globale **`NaN`** est une valeur utilisée pour représenter une quantité qui n'est pas un nombre (**\*N**ot **a** **N**umber\* en anglais).
+La propriété globale **`NaN`** est une valeur utilisée pour représenter une quantité qui n'est pas un nombre (**N**ot **a** **N**umber en anglais).
 
 {{js_property_attributes(0,0,0)}}
 
@@ -51,9 +51,9 @@ Number.isNaN('coucou monde'); // renvoie false
 | Spécification                                                                                                | État                         | Commentaires                                         |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3 |
-| {{SpecName('ES5.1', '#sec-15.1.1.1', 'NaN')}}                                                 | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-nan', 'NaN')}}         | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-value-properties-of-the-global-object-nan', 'NaN')}} | {{Spec2('ESDraft')}} |                                                      |
+| {{SpecName('ES5.1', '#sec-15.1.1.1', 'NaN')}}                                                 | {{Spec2('ES5.1')}}     |                                                      |
+| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-nan', 'NaN')}}         | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-value-properties-of-the-global-object-nan', 'NaN')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilité des navigateurs
 

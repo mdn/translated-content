@@ -16,11 +16,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 
 
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Number.isInteger(<var>value</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>value</code></dt>
@@ -31,11 +31,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 
 <p>{{jsxref("Boolean")}} сообщающий о том, является ли переданное значение целочисленным числом.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если целевое значение является целым числом, возвращает <code>true</code>. Если значение {{jsxref("NaN")}} или {{jsxref("Infinity")}}, то возвращает <code>false</code>. Метод также возвращает <code>true</code>, если это вещественное число с точкой, которое может быть представлено в целочисленном виде.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <pre class="brush: js">Number.isInteger(0);         // true
 Number.isInteger(1);         // true
@@ -57,7 +57,7 @@ Number.isInteger(5.0);       // true
 Number.isInteger(5.000000000000001); // false
 Number.isInteger(5.0000000000000001); // true</pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <pre class="brush: js">Number.isInteger = Number.isInteger || function(value) {
   return typeof value === 'number' &amp;&amp;
@@ -65,30 +65,19 @@ Number.isInteger(5.0000000000000001); // true</pre>
     Math.floor(value) === value;
 };</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-  </tr>
-  <tr>
-   <td>
-    <p>{{SpecName('ESDraft', '#sec-number.isinteger', 'Number.isInteger')}}</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 
 
-<div></div>
 
-<div>{{Compat("javascript.builtins.Number.isInteger")}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<div>{{Compat}}</div>
+
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>Объект {{jsxref("Number")}}, которому принадлежит этот метод.</li>

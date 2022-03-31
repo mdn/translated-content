@@ -11,13 +11,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 <div>{{JSRef("Global_Objects", "JSON")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>JSON.parse()</code></strong> разбирает строку JSON, возможно с преобразованием получаемого в процессе разбора значения.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code>JSON.parse(<var>text</var>[, <var>reviver</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>text</code></dt>
  <dd>Разбираемая строка JSON. Смотрите документацию по объекту {{jsxref("JSON")}} для описания синтаксиса JSON.</dd>
@@ -25,15 +25,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
  <dd>Если параметр является функцией, определяет преобразование полученного в процессе разбора значения, прежде, чем оно будет возвращено вызывающей стороне.</dd>
 </dl>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 <p>Возвращает объект {{jsxref("Object")}}, соответствующий переданной строке JSON <code>text</code>.</p>
 
-<h3 id="Throws" name="Throws">Выбрасываемые исключения</h3>
+<h3 id="Throws">Выбрасываемые исключения</h3>
 <p>Выбрасывает исключение {{jsxref("SyntaxError")}}, если разбираемая строка не является правильным JSON.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_JSON.parse" name="Example:_Using_JSON.parse">Пример: использование метода <code>JSON.parse()</code></h3>
+<h3 id="Example:_Using_JSON.parse">Пример: использование метода <code>JSON.parse()</code></h3>
 <pre class="brush: js">JSON.parse('{}');              // {}
 JSON.parse('true');            // true
 JSON.parse('"foo"');           // "foo"
@@ -41,7 +41,7 @@ JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
 </pre>
 
-<h3 id="Example:_Using_the_reviver_parameter" name="Example:_Using_the_reviver_parameter">Пример: использование параметра <code>reviver</code></h3>
+<h3 id="Example:_Using_the_reviver_parameter">Пример: использование параметра <code>reviver</code></h3>
 <p>Если определён параметр <code>reviver</code>, значение, вычисляемое при разборе строки, будет <em>преобразовано</em> перед его возвратом. В частности, вычисленное значение и все его свойства (начиная с самых вложенных свойств и кончая самим значением), каждое проходят через функцию <code>reviver</code>, которая вызывается с контекстом <code>this</code>, содержащим объект в виде обрабатываемого свойства, и с аргументами: именем свойства в виде строки и значением свойства. Если функция <code>reviver</code> вернёт {{jsxref("undefined")}} (либо вообще не вернёт никакого значения, например, если выполнение достигнет конца функции), свойство будет удалено из объекта. В противном случае свойство будет переопределено возвращаемым значением.</p>
 <p>В конечном итоге, функция <code>reviver</code> вызывается с пустой строкой и самым верхним значением, чтобы обеспечить преобразование самого верхнего значения. Убедитесь, что вы правильно обрабатываете этот случай — обычно для этого нужно просто вернуть само значение — или метод <code>JSON.parse()</code> вернёт {{jsxref("undefined")}}.</p>
 <pre class="brush: js">JSON.parse('{"p": 5}', function(k, v) {
@@ -63,7 +63,7 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function(k, v) {
 // ""
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -84,10 +84,10 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function(k, v) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li><a href="/ru/docs/Web/JavaScript/Guide/Using_native_JSON">Использование родного объекта <code>JSON</code></a></li>
  <li>{{jsxref("JSON.stringify()")}}</li>

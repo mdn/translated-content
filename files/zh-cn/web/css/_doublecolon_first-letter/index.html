@@ -5,7 +5,7 @@ translation_of: 'Web/CSS/::first-letter'
 ---
 <p>{{ CSSRef() }}</p>
 
-<p id="概述"><a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/Pseudo-elements" title="Pseudo-elements">伪元素</a> <code>::first-letter会</code>选中某 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">block-level element</a>（块级元素）第一行的第一个字母，并且文字所处的行之前没有其他内容（如图片和内联的表格） 。</p>
+<p id="概述"><a href="/en/CSS" title="CSS">CSS</a> <a href="/en/CSS/Pseudo-elements" title="Pseudo-elements">伪元素</a> <code>::first-letter</code>会选中某 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes">block-level element</a>（块级元素）第一行的第一个字母，并且文字所处的行之前没有其他内容（如图片和内联的表格） 。</p>
 
 <pre><code>/* Selects the first letter of a &lt;p&gt; */
 p::first-letter {
@@ -30,7 +30,7 @@ p::first-letter {
 
 <p> </p>
 
-<p>只有一小部分CSS可以在包含<code>使用了::first-letter</code> 伪元素选择器的CSS规则集声明块内运用:</p>
+<p>只有一小部分CSS可以在包含使用了<code>::first-letter</code> 伪元素选择器的CSS规则集声明块内运用:</p>
 
 <ul>
  <li>所有的字体属性 : {{ Cssxref("font") }}, {{ Cssxref("font-style") }}, {{cssxref("font-feature-settings")}}, {{cssxref("font-kerning")}}, {{cssxref("font-language-override")}}, {{cssxref("font-stretch")}}, {{cssxref("font-synthesis")}}, {{ Cssxref("font-variant") }}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{ Cssxref("font-weight") }}, {{ Cssxref("font-size") }}, {{cssxref("font-size-adjust")}}, {{ Cssxref("line-height") }} 以及 {{ Cssxref("font-family") }}.</li>
@@ -103,85 +103,7 @@ p::first-letter {  /* 使用:first来兼容IE8- */
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>9.0</td>
-   <td>7.0</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>Old one-colon syntax (<code>:first-letter</code>)</td>
-   <td>1.0</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>5.5</td>
-   <td>3.5</td>
-   <td>1.0 (85)</td>
-  </tr>
-  <tr>
-   <td>Support for the Dutch digraph <code>IJ</code></td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }} {{ bug("92176") }} </td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Old one-colon syntax (<code>:first-letter</code>)</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Support for the Dutch digraph <code>IJ</code></td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.first-letter")}}
 
 <h2 id="参见">参见</h2>
 

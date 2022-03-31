@@ -11,13 +11,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>setUTCMinutes()</code></strong> устанавливает минуты указанной даты по всемирному координированному времени.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>dateObj</var>.setUTCMinutes(<var>minutesValue</var>[, <var>secondsValue</var>[, <var>msValue</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>minutesValue</code></dt>
  <dd>Целое число от 0 до 59, представляющее минуты.</dd>
@@ -27,18 +27,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes
  <dd>Необязательный параметр. Целое число от 0 до 999, представляющее миллисекунды. Если вы определите параметр <code>msValue</code>, вы также должны определить параметры <code>minutesValue</code> и <code>secondsValue</code>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Если вы не определите значения параметров <code>secondsValue</code> и <code>msValue</code>, будут использоваться значения, возвращаемые методами {{jsxref("Date.prototype.getUTCSeconds()", "getUTCSeconds()")}} и {{jsxref("Date.prototype.getUTCMilliseconds()", "getUTCMilliseconds()")}}.</p>
 <p>Если значение определяемого параметра будет выходить за пределы ожидаемого диапазона, метод <code>setUTCMinutes()</code> попытается соответственно обновить другие параметры и информацию о дате в объекте {{jsxref("Global_Objects/Date", "Date")}}. Например, если в качестве <code>secondsValue</code> передать значение 100, минуты увеличатся на 1 (<code>minutesValue + 1</code>), а в качестве секунд будет использоваться значение 40.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_setUTCMinutes" name="Example:_Using_setUTCMinutes">Пример: использование метода <code>setUTCMinutes()</code></h3>
+<h3 id="Example:_Using_setUTCMinutes">Пример: использование метода <code>setUTCMinutes()</code></h3>
 <pre class="brush: js">var theBigDay = new Date();
 theBigDay.setUTCMinutes(43);
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -64,10 +64,10 @@ theBigDay.setUTCMinutes(43);
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Date.prototype.getUTCMinutes()")}}</li>
  <li>{{jsxref("Date.prototype.setMinutes()")}}</li>

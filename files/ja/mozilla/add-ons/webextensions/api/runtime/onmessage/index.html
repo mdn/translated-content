@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 
 <div>このイベントを使って、拡張機能の別の部品からのメッセージを受け取ることができます。例えば、次のような場面で使います。</div>
 
-<div></div>
+
 
 <ul>
  <li><a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts">コンテンツスクリプト</a>の中で、 <a href="/ja/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts">バックグラウンドスクリプト</a>からのメッセージを受け取る。</li>
@@ -39,13 +39,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
  <li><code>sendResponse</code> 関数。送信側への返信を送るために使います。</li>
 </ul>
 
-<p>メッセージに対して同期的に返信するには、<code>sendResponse</code> 関数をリスナーの中で実行します。<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response">例を参照してください</a>。</p>
+<p>メッセージに対して同期的に返信するには、<code>sendResponse</code> 関数をリスナーの中で実行します。<a href="/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_a_synchronous_response">例を参照してください</a>。</p>
 
 <p>非同期的に返信するには、二つの方法があります。</p>
 
 <ul>
- <li>イベントリスナーから <code>true</code> を返す。こうすることで、リスナーから復帰した後でも <code>sendResponse</code> 関数が有効なままになるため、後で実行することができます。<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse">例を参照してください</a>。</li>
- <li>イベントリスナーから <code>Promise</code> を返して、返信が準備できた後にそれを解決する (またはエラーの場合は拒否する)。<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise">例を参照してください</a>。</li>
+ <li>イベントリスナーから <code>true</code> を返す。こうすることで、リスナーから復帰した後でも <code>sendResponse</code> 関数が有効なままになるため、後で実行することができます。<a href="/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_sendResponse">例を参照してください</a>。</li>
+ <li>イベントリスナーから <code>Promise</code> を返して、返信が準備できた後にそれを解決する (またはエラーの場合は拒否する)。<a href="/ja/Add-ons/WebExtensions/API/runtime/onMessage#Sending_an_asynchronous_response_using_a_Promise">例を参照してください</a>。</li>
 </ul>
 
 <div class="warning">
@@ -153,7 +153,7 @@ window<span class="punctuation token">.</span><span class="function token">addEv
 }</span></code>
 </pre>
 
-<p>バックグラウンドスクリプトはこのメッセージが送信されるまで待ち、<code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API を使って通知を表示します。</p>
+<p>バックグラウンドスクリプトはこのメッセージが送信されるまで待ち、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/API/notifications">notifications</a></code> API を使って通知を表示します。</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// background-script.js</span>
 

@@ -16,7 +16,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 <h2 id="문법">문법</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.slice(<var>beginIndex</var>[, <var>endIndex</var>])</code></pre>
+<pre class="syntaxbox "><code><var>str</var>.slice(<var>beginIndex</var>[, <var>endIndex</var>])</code></pre>
 
 <h3 id="매개변수">매개변수</h3>
 
@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 <p>아래 예시는 새 문자열을 생성하기 위해 <code>slice()</code>를 사용합니다.</p>
 
-<pre class="brush: js notranslate">var str1 = 'The morning is upon us.', // the length of str1 is 23.
+<pre class="brush: js ">var str1 = 'The morning is upon us.', // the length of str1 is 23.
     str2 = str1.slice(1, 8),
     str3 = str1.slice(4, -2),
     str4 = str1.slice(12),
@@ -62,7 +62,7 @@ console.log(str5); // OUTPUT: ""
 
 <p>아래 예시는 <code>slice()</code>에 음수 인덱스를 사용합니다.</p>
 
-<pre class="brush: js notranslate">var str = 'The morning is upon us.';
+<pre class="brush: js ">var str = 'The morning is upon us.';
 str.slice(-3);     // returns 'us.'
 str.slice(-3, -1); // returns 'us'
 str.slice(0, -1);  // returns 'The morning is upon us'
@@ -70,16 +70,16 @@ str.slice(0, -1);  // returns 'The morning is upon us'
 
 <p>아래의 예시는 시작 인덱스를 찾기 위해 문자열의 끝에서부터 역방향으로 <code>11</code>개를 세고 끝 인덱스를 찾기 위해 문자열의 시작에서부터 정방향으로 <code>16</code>개를 셉니다.</p>
 
-<pre class="brush: js notranslate"><code>console.log(str.slice(-11, 16)) // =&gt; "is u";</code></pre>
+<pre class="brush: js "><code>console.log(str.slice(-11, 16)) // =&gt; "is u";</code></pre>
 
 <p>아래에서는 시작 인덱스를 찾기 위해 문자열의 처음부터 정방향으로 <code>11</code>개를 세고 끝 인덱스를 찾기 위해 끝에서부터 <code>7</code>개를 셉니다.</p>
 
-<pre class="brush: js notranslate"><code>console.log(str.slice(11, -7)) // =&gt; "is u";</code>
+<pre class="brush: js "><code>console.log(str.slice(11, -7)) // =&gt; "is u";</code>
 </pre>
 
 <p>이 인수는 끝에서부터 5로 역순으로 계산하여 시작 인덱스를 찾은 다음 끝에서부터 1을 거쳐 끝 인덱스를 찾습니다.</p>
 
-<pre class="brush: js notranslate"><code>console.log(str.slice(-5, -1)) // =&gt; "n us";</code>
+<pre class="brush: js "><code>console.log(str.slice(-5, -1)) // =&gt; "n us";</code>
 </pre>
 
 <h2 id="Specifications">Specifications</h2>

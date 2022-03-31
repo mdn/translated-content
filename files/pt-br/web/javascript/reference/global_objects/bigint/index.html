@@ -136,7 +136,7 @@ const rounded = 5n / 2n;
 2n &gt;= 2
 // ↪ true</pre>
 
-<p>Eles podem ser misturados em <em>arrays</em> e sorteados.</p>
+<p>Eles podem ser misturados em <em>arrays</em> e ordenados.</p>
 
 <pre class="brush: js">const mixed = [4n, 6, -12n, 10, 4, 0, 0n];
 // ↪  [4n, 6, -12n, 10, 4, 0, 0n]
@@ -154,17 +154,17 @@ const o = Object(0n);
 o === o // true
 </pre>
 
-<h3 id="Conditionals">Conditionals</h3>
+<h3 id="Conditionals">Condicionais</h3>
 
-<p>A <code>BigInt</code> behaves like a {{jsxref("Global_Objects/Number", "Number")}} in cases where it is converted to a {{jsxref("Global_Objects/Boolean", "Boolean")}}: via the {{jsxref("Global_Objects/Boolean", "Boolean")}} function; when used with logical operators {{jsxref("Operators/Logical_Operators", "Logical Operators")}}  <code>||</code>, `<code>&amp;&amp;</code>`, and <code>!</code>; or within a conditional test like an {{jsxref("Statements/if...else", "if statement")}}.</p>
+<p>A <code>BigInt</code> comporta-se como {{jsxref("Global_Objects/Number", "Number")}} nos casos onde ele é convertido para um {{jsxref("Global_Objects/Boolean", "Boolean")}}: através da função {{jsxref("Global_Objects/Boolean", "Boolean")}}; quando usado com operadores lógicos {{jsxref("Operators/Logical_Operators", "Logical Operators")}}  <code>||</code>, `<code>&amp;&amp;</code>`, e <code>!</code>; ou dentro de um teste condicional como um {{jsxref("Statements/if...else", "if statement")}}.</p>
 
 <pre class="brush: js">if (0n) {
-  console.log('Hello from the if!');
+  console.log('Olá de um if!');
 } else {
-  console.log('Hello from the else!');
+  console.log('Olá de um else!');
 }
 
-// ↪ "Hello from the else!"
+// ↪ "Olá de um else!"
 
 0n || 12n
 // ↪ 12n
@@ -185,33 +185,33 @@ Boolean(12n)
 // ↪ true
 </pre>
 
-<h2 id="Methods">Methods</h2>
+<h2 id="Methods">Métodos</h2>
 
 <dl>
  <dt><strong><code>BigInt.asIntN()</code></strong></dt>
- <dd>Wraps a BigInt between -2<sup>width-1</sup> and 2<sup>width-1</sup>-1</dd>
+ <dd>Limita um BigInt entre -2<sup>expoente-1</sup> e 2<sup>expoente-1</sup>-1</dd>
  <dt><code>BigInt.asUintN()</code></dt>
- <dd>Wraps a BigInt between 0 and 2<sup>width</sup>-1</dd>
+ <dd>Limita um BigInt entre 0 e 2<sup>expoente</sup>-1</dd>
 </dl>
 
-<h2 id="Properties">Properties</h2>
+<h2 id="Properties">Propriedades</h2>
 
 <dl>
  <dt>{{jsxref("BigInt.prototype")}}</dt>
- <dd><span style="letter-spacing: -0.00278rem;">Allows the addition of properties to a </span><code style="letter-spacing: -0.00278rem;">BigInt</code><span style="letter-spacing: -0.00278rem;"> object.</span></dd>
+ <dd><span style="letter-spacing: -0.00278rem;">Permite a adição de propriedades a um objeto </span><code style="letter-spacing: -0.00278rem;">BigInt</code><span style="letter-spacing: -0.00278rem;">.</span></dd>
 </dl>
 
-<h2 id="BigInt_instances"><code>BigInt</code> instances</h2>
+<h2 id="BigInt_instances">Instâncias <code>BigInt</code></h2>
 
-<p>All <code>BigInt</code> instances inherit from <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt.prototype</span></font>. The prototype object of the <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt</span></font> constructor can be modified to affect all <code>BigInt</code> instances.</p>
+<p>Todas as instâncias <code>BigInt</code> são herdades de <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt.prototype</span></font>. O protótipo do objeto do construtor do <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt</span></font> pode ser modificado para afetar todas as instâncias de <code>BigInt</code>.</p>
 
-<h3 id="Methods_2">Methods</h3>
+<h3 id="Methods_2">Métodos</h3>
 
 <p>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype', 'Methods')}}</p>
 
-<h2 id="Examples">Examples </h2>
+<h2 id="Examples">Examplos </h2>
 
-<h3 id="Calculating_Primes">Calculating Primes</h3>
+<h3 id="Calculating_Primes">Calculando números primos</h3>
 
 <pre class="brush: js">function isPrime(p) {
   for (let i = 2n; i * i &lt;= p; i++) {
@@ -220,7 +220,7 @@ Boolean(12n)
   return true;
 }
 
-// Takes a BigInt as an argument and returns a BigInt
+// Toma um BigInt como argumento e retorna um BigInt
 function nthPrime(nth) {
   let maybePrime = 2n;
   let prime = 0n;

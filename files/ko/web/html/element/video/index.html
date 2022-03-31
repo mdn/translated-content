@@ -31,7 +31,10 @@ translation_of: Web/HTML/Element/video
 
 <dl>
  <dt>{{htmlattrdef("autoplay")}}</dt>
- <dd>부울(boolean) 속성. 이 값이 설정되면, 데이터 로딩이 완료되지 않더라도 재생 가능한 시점에 자동으로 재생이 시작됩니다.</dd>
+ <dd>부울 속성(boolean); 해당 속성이 지정된 경우 비디오가 데이터 로드를 완료하기 위해 중지하지 않고 재생할 수 있는 가장 빠른 시점에 재생되기 시작합니다.<br/>
+autoplay를 비활성화시킬 때 autoplay="false"는 동작하지 않습니다. <code>&lt;video&gt;</code>태그 내부에 autoplay 속성이 존재한다면 비디오가 자동재생 됩니다. autoplay를 비활성화하려면 해당 속성을 완전히 제거해야 합니다.
+</dd>
+ 
  <dt>{{htmlattrdef("buffered")}}</dt>
  <dd>미디어의 어느 시간대가 버퍼에 들어 있는지 확인할 수 있는 속성입니다. 이 속성은 {{domxref("TimeRanges")}} 객체를 포함합니다.</dd>
  <dt>{{htmlattrdef("controls")}}</dt>

@@ -51,14 +51,7 @@ Intl.NumberFormat.call(<var>this</var>[, <var>locales</var>[, <var>options</var>
   <dt><code>unit</code>{{Experimental_inline}}</dt>
   <dd><code>unit</code> 格式中使用的单位，可能的值为在 <a href="http://unicode.org/reports/tr35/tr35-general.html#Unit_Elements" rel="nofollow">UTS #35, Part 2, Section 6</a> 定义的核心单元标识符。已从<a href="https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml">完整列表</a>中选择了一个<a href="https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier">单位子集</a>以用于ECMAScript。可以将成对的简单单位与 <code>“ -per-”</code> 连接以组成一个复合单位。没有默认值；如果 <code>style</code> 为 <code>“unit”</code>，必须提供<code>unit</code> 属性。</dd>
   <dt><code>unitDisplay</code>{{Experimental_inline}}</dt>
-  <dd><code>unit</code> 格式化中使用的单位格式化样式，默认值为“ short”。</dd>
-  <dd>
-  <ul>
-   <li><code>“long”</code> (e.g., <code>16 litres</code>)</li>
-   <li><code>“short“</code> (e.g., <code>16 l</code>)</li>
-   <li><code>”narrow“</code> (e.g., <code>16l</code>)</li>
-  </ul>
-  </dd>
+  <dd><code>unit</code> 格式化中使用的单位格式化样式，默认值为“ short”。<code>“long”</code> (e.g., <code>16 litres</code>)、<code>“short“</code> (e.g., <code>16 l</code>)、<code>”narrow“</code> (e.g., <code>16l</code>)</dd>
   <dt><code>currency</code></dt>
   <dd>在货币格式化中使用的货币符号. 可能的值是<em>ISO</em>的货币代码 (the ISO 4217 currency codes,) 例如 <code>"USD"</code> 表示美元, <code>"EUR"</code> 表示欧元, 或者 <code>"CNY"是人民币</code> — 更多请参考 <a href="http://www.currency-iso.org/en/home/tables/table-a1.html">Current currency &amp; funds code list</a>。没有默认值，如果 <code>style</code> 是 <code>“currency”</code>，必须提 <code>currency</code> 属性.</dd>
   <dt><code>currencyDisplay</code></dt>
@@ -186,7 +179,7 @@ console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).form
 
 </pre>
 
-<h3 id="Using_notation">Using <font face="consolas, Liberation Mono, courier, monospace">notation</font></h3>
+<h3 id="Using_notation">Using <code>notation</code></h3>
 
 <pre><code>console.log(new Intl.NumberFormat('en-US', { notation: "scientific" }).format(987654321));
 // → 9.877E8
@@ -238,9 +231,9 @@ console.log(new Intl.NumberFormat('en-GB', { notation: "compact" , compactDispla
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div></div>
 
-<div id="compat-mobile">{{Compat("javascript.builtins.Intl.NumberFormat")}}</div>
+
+<div>{{Compat("javascript.builtins.Intl.NumberFormat")}}</div>
 
 <h2 id="参见">参见</h2>
 

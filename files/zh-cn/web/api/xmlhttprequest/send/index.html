@@ -18,7 +18,7 @@ translation_of: Web/API/XMLHttpRequest/send
 <p>如果没有使用 {{domxref("XMLHttpRequest.setRequestHeader", "setRequestHeader()")}} 方法设置 {{HTTPHeader("Accept")}} 头部信息，则会发送带有 <code>"* / *"</code> 的{{HTTPHeader("Accept")}} 头部。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 请注意不要使用一个简单的AarryBuffer对象作为参数，ArrayBuffer已经不再是ajax规范的一部分，请改用ArrayBufferView（有关信息请参考兼容性列表。）</p>
+<p><strong>Note:</strong> 请注意不要使用一个简单的ArrayBuffer对象作为参数，ArrayBuffer已经不再是ajax规范的一部分，请改用ArrayBufferView（有关信息请参考兼容性列表。）</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -92,7 +92,6 @@ xhr.send(null);
 // xhr.send('string');
 </code>// <code>xhr.send(new Blob());
 // xhr.send(new Int8Array());
-// xhr.send({ form: 'data' });
 // xhr.send(document);</code>
 </pre>
 
@@ -111,7 +110,6 @@ xhr.send("foo=bar&amp;lorem=ipsum");
 // xhr.send('string');
 </code>// <code>xhr.send(new Blob());
 // xhr.send(new Int8Array());
-// xhr.send({ form: 'data' });
 // xhr.send(document);</code>
 </pre>
 
@@ -134,124 +132,7 @@ xhr.send("foo=bar&amp;lorem=ipsum");
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特点</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatChrome(1)}}</td>
-   <td>{{CompatGeckoDesktop("1.0")}}</td>
-   <td>{{CompatIe('5')}}<sup>[2]</sup><br>
-    {{CompatIe('7')}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatSafari('1.2')}}</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBuffer)</code></td>
-   <td>{{CompatChrome(9)}}</td>
-   <td>{{CompatGeckoDesktop("9.0")}}<sup>[1]</sup></td>
-   <td>{{CompatIe('10')}}</td>
-   <td>{{CompatOpera('11.60')}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBufferView)</code></td>
-   <td>{{CompatChrome(22)}}</td>
-   <td>{{CompatGeckoDesktop("20.0")}}</td>
-   <td>{{compatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(Blob)</code></td>
-   <td>{{CompatChrome(7)}}</td>
-   <td>{{CompatGeckoDesktop("1.9.2")}}</td>
-   <td>{{CompatIe('10')}}</td>
-   <td>{{CompatOpera('12')}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(FormData)</code></td>
-   <td>{{CompatChrome(6)}}</td>
-   <td>{{CompatGeckoDesktop("2.0")}}</td>
-   <td>{{CompatIe('10')}}</td>
-   <td>{{CompatOpera('12')}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>特点</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatUnknown}}</td>
-   <td>1.0</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBuffer)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(ArrayBufferView)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(Blob)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
-  <tr>
-   <td><code>send(FormData)</code></td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{compatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 发送一个简单的<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer">ArrayBuffer</a></code>对象已不再是ajax规范一部分,也已经被弃用了。请使用 已被加入Gecko 20.0 {{geckoRelease("20.0")}}的<a href="/en-US/docs/Web/API/ArrayBufferView"><code>ArrayBufferView</code></a></p>
-
-<p>[2] 由于 Internet Explorer 7实现了标准的XMLHttpRequest，此功能通过ActiveXObject（）实现。</p>
+{{Compat("api.XMLHttpRequest.send")}}
 
 <h2 id="参见">参见</h2>
 

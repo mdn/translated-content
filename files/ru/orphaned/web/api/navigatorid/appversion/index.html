@@ -10,21 +10,21 @@ original_slug: Web/API/NavigatorID/appVersion
 
 <div class="note"><span id="result_box" lang="ru"><strong><span class="hps">Примечание</span></strong><span>:</span> <span class="hps">Не полагайтесь</span> <span class="hps">на это свойство для </span>получения <span class="hps">правильной версии</span> <span class="hps">браузера. </span></span>В браузерах на основе Geko (таких как Firefox), и основанных на WebKit (таких как Chrome и Safari) возвращаемое значение начинается с "5.0" с последующей информацией о платформе. <span id="result_box" lang="ru"><span class="hps">В Opera</span> <span class="hps">10 и/или</span> <span class="hps">более новой</span> <span class="hps">версии</span>, <span class="hps">возвращаемое значение</span> <span class="hps">не соответствует</span> <span class="hps">актуальной версии</span> <span class="hps">браузера</span><span>.</span></span></div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">window.navigator.appVersion
 </pre>
 
-<h3 id="Returned_value" name="Returned_value">Значение</h3>
+<h3 id="Returned_value">Значение</h3>
 
 <p><code>ver</code> номер версии браузера в виде {{domxref("DOMString")}}.</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush: js">alert("Your browser version is reported as " + navigator.appVersion);
 </pre>
 
-<h2 id="Notes" name="Notes">Примечание</h2>
+<h2 id="Notes">Примечание</h2>
 
 <p><code>Свойство window.navigator.userAgent</code> может содержать номер версии (например  "<code>Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.2) Gecko/20010725 Netscape 6/6.1</code>"), но вы должны быть в курсе того как легко изменить строку пользовательского агента (user agent) и "обмануть" другие браузеры, платформы или пользовательские агенты, а также опрометчивых вендоров браузеров самими этими свойствами.</p>
 

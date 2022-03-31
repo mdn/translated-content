@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/The_performance_hazards_of__[[Prototype]]_mutation
 ---
 <p>{{draft}}</p>
 
-<p><span>{{jsSidebar("Advanced")}}</span></p>
+<p>{{jsSidebar("Advanced")}}</p>
 
 <p>每个JavaScript对象都拥有一个<code>[[Prototype]]</code>对象。  获取一个对象的属性时首先会搜索其自身, 然后就是它的 <code>[[Prototype]]</code>对象, 之后再搜索此<code>[[Prototype]]</code>对象的 <code>[[Prototype]]</code>对象, 直到找到这个属性或者搜索链条达到终点. 这个类似链条的查找过程被称为原型链。  原型链在<a href="/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">对象继承</a>中非常重要。</p>
 
@@ -70,8 +70,7 @@ p.sum(); // Pair.prototype.sum</pre>
 
 <dl>
  <dt>The shape of the <em>ultimate</em> object containing the inherited can be checked.</dt>
- <dd>In this case, a shape match must imply that no intervening object's <code>[[Prototype]]</code> has been modified.  Therefore, when an object's <code>[[Prototype]]</code> is mutated, every object along its <code>[[Prototype]]</code> chain must also have its shape changed.</dd>
- <dd>
+ <dd>In this case, a shape match must imply that no intervening object's <code>[[Prototype]]</code> has been modified.  Therefore, when an object's <code>[[Prototype]]</code> is mutated, every object along its <code>[[Prototype]]</code> chain must also have its shape changed.
  <pre class="brush: js">var obj1 = {};
 var obj2 = Object.create(obj1);
 var obj3 = Object.create(obj2);
@@ -80,8 +79,7 @@ var obj3 = Object.create(obj2);
 obj3.__proto__ = {};</pre>
  </dd>
  <dt>The shape of the object initially accessed can be checked.</dt>
- <dd>Every object that might inherit through a changed-<code>[[Prototype]]</code> object must change, reflecting the <code>[[Prototype]]</code> mutation having happened</dd>
- <dd>
+ <dd>Every object that might inherit through a changed-<code>[[Prototype]]</code> object must change, reflecting the <code>[[Prototype]]</code> mutation having happened
  <pre class="brush: js">var obj1 = {};
 var obj2 = Object.create(obj1);
 var obj3 = Object.create(obj2);

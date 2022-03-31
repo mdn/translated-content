@@ -96,7 +96,7 @@ var vue    = new Int32Array(tampon);
 
 ## Notes de compatibilité
 
-À partir d'ECMAScript 2015 (ES6),` ArrayBuffer` doit être utilisée avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `ArrayBuffer` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
+À partir d'ECMAScript 2015 (ES6), `ArrayBuffer` doit être utilisée avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `ArrayBuffer` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
 
 ```js example-bad
 var dv = ArrayBuffer(10);

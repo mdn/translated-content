@@ -32,7 +32,7 @@ translation_of: Web/HTML/CORS_enabled_image
 
 <p>这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。</p>
 
-<h2 id="示例_存储一张外部域中的图片">示例: 存储一张外部域中的图片</h2>
+<h2 id="示例_存储一张外部域中的图片">示例：存储一张外部域中的图片</h2>
 
 <p>在以下例子中，将实现允许检索来自外部的图像，并将其保存在本地存储。要实现这一点，我们需要配置服务器以及网站本身的编码。</p>
 
@@ -59,7 +59,7 @@ translation_of: Web/HTML/CORS_enabled_image
 
 <h4 id="开始下载图片">开始下载图片</h4>
 
-<p>以下代码将在用户点击 "<code>Download</code>" 按钮时开始下载:</p>
+<p>以下代码将在用户点击 "<code>Download</code>" 按钮时开始下载：</p>
 
 <pre><code>function startDownload() {
   let imageURL = "https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189";
@@ -73,7 +73,7 @@ translation_of: Web/HTML/CORS_enabled_image
 
 <p>使用 "硬编码" 图片网址可以很方便的允许图片来自任何地址。当开始下载图片时，我们使用 <code>{{domxref("HTMLImageElement.Image", "Image()")}}</code> 构造器创建新的 <code>{{domxref("HTMLImageElement")}}</code> 对象，将图片的 <code>crossOrigin</code> 属性设置为"<code>匿名</code>"（即，允许对未经过验证的图像进行跨域下载）。添加图片的 <code>{{event("load")}}</code>事件的监听来判断图片数据是否已接收。</p>
 
-<p>最后，将图片的 <code>{{domxref("HTMLImageElement.src", "src")}}</code>属性设置为图片的URL以触发图片下载。</p>
+<p>最后，将图片的 <code>{{domxref("HTMLImageElement.src", "src")}}</code>属性设置为图片的 URL 以触发图片下载。</p>
 
 <h4 id="接收和保存图片">接收和保存图片</h4>
 
@@ -97,7 +97,7 @@ translation_of: Web/HTML/CORS_enabled_image
   }
 }</code></pre>
 
-<p>在 <code>HTMLImageElement</code> 调用 <code>imageReceived()</code>来处理"<code>load</code>" 事件以接收下载图片。一旦下载完成全部有效的数据即可触发该事件。从创建新 <code>{{HTMLElement("canvas")}}</code> 元素将图像转换为数据URL，到访问画布的变量 <code>context</code> 中的2D绘图上下文 <code>({{domxref("CanvasRenderingContext2D")}})</code>.</p>
+<p>在 <code>HTMLImageElement</code> 调用 <code>imageReceived()</code>来处理"<code>load</code>" 事件以接收下载图片。一旦下载完成全部有效的数据即可触发该事件。从创建新 <code>{{HTMLElement("canvas")}}</code> 元素将图像转换为数据 URL，到访问画布的变量 <code>context</code> 中的 2D 绘图上下文 <code>({{domxref("CanvasRenderingContext2D")}})</code>.</p>
 
 <p>调整画布大小以匹配接收到的图像，然后使用 <code>{{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}</code> 将图像绘制到画布中。画布之后被插入到文档中显示。</p>
 
@@ -105,55 +105,7 @@ translation_of: Web/HTML/CORS_enabled_image
 
 <p>您可以在 Glitch 上<a href="https://cors-image-example.glitch.me">尝试</a>或<a href="https://glitch.com/edit/#!/remix/cors-image-example">重写</a>此例子。</p>
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>13</td>
-   <td>8</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>基础支持</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
 <h2 id="另请参阅">另请参阅</h2>
 

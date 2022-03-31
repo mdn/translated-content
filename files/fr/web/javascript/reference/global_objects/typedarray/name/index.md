@@ -22,7 +22,7 @@ La propriété **`TypedArray.name`** est une chaîne de caractères représentan
 
 ## Description
 
-Les objets `TypedArray` varient en fonction du nombre d'octets correspondant pour chaque élément du tableau et de la façon dont les octets sont interprétés. La propriété `name` permet de décrire le type de données du tableau. La première partie du nom peut être `Int` pour les tableaux d'entiers (**Int\***eger\*) ou `Uint` pour les tableaux d'entiers non signés (**U**nsigned **Int**eger) ou `Float` pour les nombres décimaux (**float**ing). La deuxième partie correspond au nombre de bits de chaque élément. Enfin, la troisième composante du nom est `Array`, `ClampedArray` étant un cas spécifique. Voir la page {{jsxref("Uint8ClampedArray")}} pour plus d'informations sur ce tableau typé.
+Les objets `TypedArray` varient en fonction du nombre d'octets correspondant pour chaque élément du tableau et de la façon dont les octets sont interprétés. La propriété `name` permet de décrire le type de données du tableau. La première partie du nom peut être `Int` pour les tableaux d'entiers (**Int**eger) ou `Uint` pour les tableaux d'entiers non signés (**U**nsigned **Int**eger) ou `Float` pour les nombres décimaux (**float**ing). La deuxième partie correspond au nombre de bits de chaque élément. Enfin, la troisième composante du nom est `Array`, `ClampedArray` étant un cas spécifique. Voir la page {{jsxref("Uint8ClampedArray")}} pour plus d'informations sur ce tableau typé.
 
 ## Exemples
 
@@ -43,7 +43,7 @@ Float64Array.name;      // "Float64Array"
 | Spécification                                                                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/input
 ---
 <p id="概述">{{HTMLRef}}</p>
 
-<p><strong>HTML <code>&lt;input&gt;</code> 元素</strong>用于为基于Web的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent")}}。</p>
+<p><strong>HTML <code>&lt;input&gt;</code> 元素</strong>用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent")}}。</p>
 
 <p>{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}</p>
 
@@ -82,7 +82,7 @@ translation_of: Web/HTML/Element/input
  <tbody>
   <tr>
    <td>{{HTMLElement("input/button", "button")}}</td>
-   <td>没有默认行为的按钮，上面显示 {{anch('value')}} 属性的值，默认为空。</td>
+   <td>没有默认行为的按钮，上面显示 <a href="#attr-value">value</a> 属性的值，默认为空。</td>
    <td id="examplebutton">
     <pre class="brush: html hidden">
 &lt;input  type="button" name="button" /&gt;</pre>
@@ -136,7 +136,7 @@ translation_of: Web/HTML/Element/input
   </tr>
   <tr>
    <td>{{HTMLElement("input/file", "file")}}</td>
-   <td>让用户选择文件的控件。使用{{anch('accept')}}属性规定控件能选择的文件类型。</td>
+   <td>让用户选择文件的控件。使用 <a href="#attr-accept">accept</a> 属性规定控件能选择的文件类型。</td>
    <td id="examplefile">
     <pre class="brush: html hidden">
 &lt;input type="file" accept="image/*, text/*" name="file"/&gt;</pre>
@@ -151,7 +151,7 @@ translation_of: Web/HTML/Element/input
   </tr>
   <tr>
    <td>{{HTMLElement("input/image", "image")}}</td>
-   <td>带图像的 <code>submit</code> 按钮。显示的图像由 <code>src</code> 属性规定。如果 {{anch('src')}} 缺失，{{anch('alt')}} 属性就会显示。</td>
+   <td>带图像的 <code>submit</code> 按钮。显示的图像由 <code>src</code> 属性规定。如果 <a href="#attr-src">src</a> 缺失，<a href="#attr-alt">alt</a> 属性就会显示。</td>
    <td id="exampleimage">
     <pre class="brush: html hidden">
 &lt;input type="image" name="image" src="" alt="image input"/&gt;</pre>
@@ -187,7 +187,7 @@ translation_of: Web/HTML/Element/input
   </tr>
   <tr>
    <td>{{HTMLElement("input/radio", "radio")}}</td>
-   <td>单选按钮，允许在多个拥有相同 {{anch('name')}} 值的选项中选中其中一个。</td>
+   <td>单选按钮，允许在多个拥有相同 <a href="#attr-name">name</a> 值的选项中选中其中一个。</td>
    <td id="exampleradio">
     <pre class="brush: html hidden">
 &lt;input type="radio" name="radio"/&gt;</pre>
@@ -196,7 +196,7 @@ translation_of: Web/HTML/Element/input
   </tr>
   <tr>
    <td>{{HTMLElement("input/range", "range")}}</td>
-   <td>此控件用于输入不需要精确的数字。控件是一个范围组件，默认值为正中间的值。同时使用{{anch('htmlattrdefmin')}}   和 {{anch('htmlattrdefmax')}}来规定值的范围。</td>
+   <td>此控件用于输入不需要精确的数字。控件是一个范围组件，默认值为正中间的值。同时使用 <a href="#attr-min">min</a> 和 <a href="#attr-max">max</a> 来规定值的范围。</td>
    <td id="examplerange">
     <pre class="brush: html hidden">
 &lt;input type="range" name="range" min="0" max="25"/&gt;</pre>
@@ -282,7 +282,7 @@ translation_of: Web/HTML/Element/input
   </tr>
   <tr>
    <td>{{HTMLElement("input/datetime", "datetime")}}</td>
-   <td>{{deprecated_inline}} {{obsolete_inline}} 用于输入基于UTC时区的日期和时间（时、分、秒及秒的小数部分）。</td>
+   <td>{{deprecated_inline}} {{obsolete_inline}} 用于输入基于 UTC 时区的日期和时间（时、分、秒及秒的小数部分）。</td>
    <td id="exampledatetime">
     <pre class="brush: html hidden">
 &lt;input type="datetime" name="datetime"/&gt;</pre>
@@ -300,7 +300,7 @@ translation_of: Web/HTML/Element/input
 
 <table>
  <caption>
- <p>{{htmlelement('input')}}元素的属性包括<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局HTML属性</a>和以下属性：</p>
+ <p>{{htmlelement('input')}}元素的属性包括<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局 HTML 属性</a>和以下属性：</p>
 
  <table>
   <thead>
@@ -312,124 +312,124 @@ translation_of: Web/HTML/Element/input
   </thead>
   <tbody>
    <tr>
-    <td>{{anch('htmlattrdefaccept', 'accept')}}</td>
+    <td><a href="#attr-accept">accept</a></td>
     <td>file</td>
     <td>用于规定文件上传控件中期望的文件类型</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefalt', 'alt')}}</td>
+    <td><a href="#attr-alt">alt</a></td>
     <td>image</td>
-    <td>image type的alt属性，是可访问性的要求。</td>
+    <td>image type 的 alt 属性，是可访问性的要求。</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefautocomplete', 'autocomplete')}}</td>
+    <td><a href="#attr-autocomplete">autocomplete</a></td>
     <td>所有</td>
     <td>用于表单的自动填充功能</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefautofocus', 'autofocus')}}</td>
+    <td><a href="#attr-autofocus">autofocus</a></td>
     <td>所有</td>
     <td>页面加载时自动聚焦到此表单控件</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefcapture', 'capture')}}</td>
+    <td><a href="#attr-capture">capture</a></td>
     <td>file</td>
     <td>文件上传控件中媒体拍摄的方式</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefchecked', 'checked')}}</td>
+    <td><a href="#attr-checked">checked</a></td>
     <td>radio, checkbox</td>
     <td>用于控制控件是否被选中</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefdirname', 'dirname')}}</td>
+    <td><a href="#attr-dirname">dirname</a></td>
     <td>text, search</td>
     <td>表单区域的一个名字，用于在提交表单时发送元素的方向性</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefdisabled', 'disabled')}}</td>
+    <td><a href="#attr-disabled">disabled</a></td>
     <td>所有</td>
     <td>表单控件是否被禁用</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefform', 'form')}}</td>
+    <td><a href="#attr-form">form</a></td>
     <td>所有</td>
-    <td>将控件和一个form元素联系在一起</td>
+    <td>将控件和一个 form 元素联系在一起</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefformaction', 'formaction')}}</td>
+    <td><a href="#attr-formaction">formaction</a></td>
     <td>image, submit</td>
-    <td>用于提交表单的URL</td>
+    <td>用于提交表单的 URL</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefformenctype', 'formenctype')}}</td>
+    <td><a href="#attr-formenctype">formenctype</a></td>
     <td>image, submit</td>
     <td>表单数据集的编码方式，用于表单提交</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefformmethod', 'formmethod')}}</td>
+    <td><a href="#attr-formmethod">formmethod</a></td>
     <td>image, submit</td>
-    <td>用于表单提交的HTTP方法 </td>
+    <td>用于表单提交的 HTTP 方法 </td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefformnovalidate', 'formnovalidate')}}</td>
+    <td><a href="#attr-formnovalidate">formnovalidate</a></td>
     <td>image, submit</td>
     <td>提交表单时绕过对表单控件的验证</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefformtarget', 'formtarget')}}</td>
+    <td><a href="#attr-formtarget">formtarget</a></td>
     <td>image, submit</td>
     <td>表单提交的浏览上下文</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefheight', 'height')}}</td>
+    <td><a href="#attr-height">height</a></td>
     <td>image</td>
     <td>
      <p>和 {{htmlelement('img')}} 的 <code>height</code> 属性相同；垂直方向</p>
     </td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdeflist', 'list')}}</td>
+    <td><a href="#attr-list">list</a></td>
     <td>绝大部分</td>
-    <td>自动填充选项的{{htmlelement('datalist')}} 的id值</td>
+    <td>自动填充选项的{{htmlelement('datalist')}} 的 id 值</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefmax', 'max')}}</td>
+    <td><a href="#attr-max">max</a></td>
     <td>数字 type</td>
     <td>最大值</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefmaxlength', 'maxlength')}}</td>
+    <td><a href="#attr-maxlength">maxlength</a></td>
     <td>password, search, tel, text, url</td>
     <td><code>value</code> 的最大长度（最多字符数目）</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefmin', 'min')}}</td>
+    <td><a href="#attr-min">min</a></td>
     <td>数字 type</td>
     <td>最小值</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefminlength', 'minlength')}}</td>
+    <td><a href="#attr-minlength">minlength</a></td>
     <td>password, search, tel, text, url</td>
     <td><code>value</code> 的最小长度（最少字符数目）</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefmultiple', 'multiple')}}</td>
+    <td><a href="#attr-multiple">multiple</a></td>
     <td>email, file</td>
     <td>布尔值。 是否允许多个值</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefname', 'name')}}</td>
+    <td><a href="#attr-name">name</a></td>
     <td>所有</td>
-    <td>input表单控件的名字。以名字/值对的形式随表单一起提交</td>
+    <td>input 表单控件的名字。以名字/值对的形式随表单一起提交</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefpattern', 'pattern')}}</td>
+    <td><a href="#attr-pattern">pattern</a></td>
     <td>password, text, tel</td>
-    <td>匹配有效 <code>value</code> 的模式（pattern）</td>
+    <td>匹配有效 <code>value</code> 的模式（pattern）</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefplaceholder', 'placeholder')}}</td>
+    <td><a href="#attr-placeholder">placeholder</a></td>
     <td>password, search, tel, text, url</td>
     <td>当表单控件为空时，控件中显示的内容</td>
    </tr>
@@ -444,32 +444,32 @@ translation_of: Web/HTML/Element/input
     <td>布尔值。表示此值为必填项或者提交表单前必须先检查该值</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefsize', 'size')}}</td>
+    <td><a href="#attr-size">size</a></td>
     <td>email, password, tel, text</td>
     <td>控件的大小</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefsrc', 'src')}}</td>
+    <td><a href="#attr-src">src</a></td>
     <td>image</td>
     <td>和{{htmlelement('img')}} 的 <code>src</code> 属性一样；图像资源的地址</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefstep', 'step')}}</td>
-    <td>数字type</td>
+    <td><a href="#attr-step">step</a></td>
+    <td>数字 type</td>
     <td>有效的递增值</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdeftype', 'type')}}</td>
+    <td><a href="#attr-type">type</a></td>
     <td>所有</td>
-    <td>input表单控件的type</td>
+    <td>input 表单控件的 type</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefvalue', 'value')}}</td>
+    <td><a href="#attr-value">value</a></td>
     <td>所有</td>
     <td>表单控件的值。以名字/值对的形式随表单一起提交</td>
    </tr>
    <tr>
-    <td>{{anch('htmlattrdefwidth', 'width')}}</td>
+    <td><a href="#attr-width">width</a></td>
     <td>image</td>
     <td>与 {{htmlelement('img')}} 的 <code>width</code> 属性一样</td>
    </tr>
@@ -484,7 +484,7 @@ translation_of: Web/HTML/Element/input
 
 <dl>
  <dt>{{ htmlattrdef("accept") }}</dt>
- <dd>如果该元素的 <strong>type</strong> 属性的值<code>是file</code>,则该属性表明了服务器端可接受的文件类型；否则它将被忽略。该属性的值必须为一个逗号分割的列表,包含了多个唯一的内容类型声明：
+ <dd>如果该元素的 <strong>type</strong> 属性的值<code>是 file</code>,则该属性表明了服务器端可接受的文件类型；否则它将被忽略。该属性的值必须为一个逗号分割的列表，包含了多个唯一的内容类型声明：
  <ul>
   <li>以 STOP 字符 (U+002E) 开始的文件扩展名。（例如：".jpg,.png,.doc"）</li>
   <li>一个有效的 MIME 类型，但没有扩展名</li>
@@ -496,7 +496,7 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("accesskey") }} {{ HTMLVersionInline(4) }} only, {{ obsoleteGeneric("inline", "HTML5") }}</dt>
  <dd>用户按下后可以获得此控件焦点的单个字符。这是 HTML5 全局属性。</dd>
  <dt>{{ htmlattrdef("autocomplete") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>这个属性表示这个控件的值是否可被浏览器自动填充。如果<strong>type</strong>属性的值是hidden、checkbox、radio、file，或为按钮类型（button、submit、reset、image），则本属性被忽略。可用的值是:
+ <dd>这个属性表示这个控件的值是否可被浏览器自动填充。如果<strong>type</strong>属性的值是 hidden、checkbox、radio、file，或为按钮类型（button、submit、reset、image），则本属性被忽略。可用的值是：
  <ul>
   <li><code>off</code>: 用户必须手动填值，或者该页面提供了自己的自动补全方法。浏览器不对此字段自动填充。</li>
   <li><code>on</code>: 浏览器可以根据用户先前的填表情况对此字段自动填值。</li>
@@ -544,18 +544,18 @@ translation_of: Web/HTML/Element/input
   </li>
  </ul>
 
- <p>如果<code>&lt;input&gt;</code>元素上没有<strong>autocomplete</strong>属性，浏览器可使用包含该input元素的表单（<code>&lt;form&gt;</code>）或通过input的<strong>form</strong>属性指定的表单的<strong>autocomplete</strong>属性值。更多信息请参见{{ HTMLElement("form") }}的<code>autocomplete</code>属性。</p>
+ <p>如果<code>&lt;input&gt;</code>元素上没有<strong>autocomplete</strong>属性，浏览器可使用包含该 input 元素的表单（<code>&lt;form&gt;</code>）或通过 input 的<strong>form</strong>属性指定的表单的<strong>autocomplete</strong>属性值。更多信息请参见{{ HTMLElement("form") }}的<code>autocomplete</code>属性。</p>
 
- <p>与其他浏览器不同，<strong>autocomplete </strong>还控制着Firefox浏览器 对 &lt;input&gt; 持久化动态禁用状态和（如果适用）跨页面加载的动态检查。持久化特性默认是开启的。设置<strong>autocomplete</strong>的值为<strong>off </strong>可以关闭该特性<strong>。</strong>即使autocomplete属性通常不应用于&lt;input&gt;的type，它也可以工作。具体可以查看{{bug(654072)}}。</p>
+ <p>与其他浏览器不同，<strong>autocomplete </strong>还控制着 Firefox 浏览器 对 &lt;input&gt; 持久化动态禁用状态和（如果适用）跨页面加载的动态检查。持久化特性默认是开启的。设置<strong>autocomplete</strong>的值为<strong>off </strong>可以关闭该特性<strong>。</strong>即使 autocomplete 属性通常不应用于&lt;input&gt;的 type，它也可以工作。具体可以查看{{bug(654072)}}。</p>
  </dd>
  <dt>{{ htmlattrdef("autofocus") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>这个布尔属性允许您指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。文档中只有一个表单元素可以具有autofocus属性，它是一个布尔值。 如果type属性设置为隐藏则不能应用（即您不能自动获得焦点的属性设置为隐藏的控件）。</dd>
+ <dd>这个布尔属性允许您指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。文档中只有一个表单元素可以具有 autofocus 属性，它是一个布尔值。 如果 type 属性设置为隐藏则不能应用（即您不能自动获得焦点的属性设置为隐藏的控件）。</dd>
  <dt id="htmlattrdefcapture">{{htmlattrdef("capture")}}</dt>
  <dd>
  <p>Introduced in the HTML Media Capture specification and valid for the <code>file</code> input type only, the <code>capture</code> attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with <code>file</code> upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.</p>
  </dd>
  <dt>{{ htmlattrdef("checked") }}</dt>
- <dd>如果该元素的<strong>type</strong>属性的值为<span style="font-family: courier new;">radio或者</span><span style="font-family: courier new;">checkbox</span>,则该布尔属性的存在与否表明了该控件是否是默认选择状态。
+ <dd>如果该元素的<strong>type</strong>属性的值为<span style="font-family: courier new;">radio 或者</span><span style="font-family: courier new;">checkbox</span>,则该布尔属性的存在与否表明了该控件是否是默认选择状态。
  <p>If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="/zh-CN/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
 
  <div class="note">
@@ -566,7 +566,7 @@ translation_of: Web/HTML/Element/input
  </dd>
  <dt id="htmlattrdefdirname">{{htmlattrdef("dirname")}}</dt>
  <dd>
- <p>Valid for <code>text</code> and <code>search</code> input types only, the <code>dirname</code> attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the {{anch('name')}} and {{anch('value')}}, the second being the value of the <code>dirname</code> as the name with the value of <code>ltr</code> or <code>rtl</code> being set by the browser.</p>
+ <p>Valid for <code>text</code> and <code>search</code> input types only, the <code>dirname</code> attribute enables the submission of the directionality of the element. When included, the form control will submit with two name/value pairs: the first being the <a href="#attr-name">name</a> and <a href="#attr-value">value</a>, the second being the value of the <code>dirname</code> as the name with the value of <code>ltr</code> or <code>rtl</code> being set by the browser.</p>
 
  <pre><code>&lt;form action="page.html" method="post"&gt;
   &lt;label&gt;Fruit: &lt;input type="text" name="fruit" dirname="fruit.dir" value="cherry"&gt;&lt;/label&gt;
@@ -617,7 +617,7 @@ translation_of: Web/HTML/Element/input
  <dd>如果<strong>type</strong>属性的值是<span style="font-family: courier new;">image，这个属性定义了按钮图片的高度。</span></dd>
  <dt id="htmlattrdefheight">{{htmlattrdef("id")}}</dt>
  <dd>
- <p>Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s <code>for</code> attribute to link the label with the form control. See the {{anch('the label element')}} below.</p>
+ <p>Global attribute valid for all elements, including all the input types, it defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking. The value is used as the value of the {{htmlelement('label')}}'s <code>for</code> attribute to link the label with the form control. See the <a href="#labels">the label element</a> below.</p>
  </dd>
  <dt id="htmlattrdefheight">{{htmlattrdef("inputmode")}}</dt>
  <dd>
@@ -629,7 +629,7 @@ translation_of: Web/HTML/Element/input
 
 <p>The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The <code>&lt;datalist&gt;</code>  provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the {{htmlattrxref("type", "input")}} are not included in the suggested options.  The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.</p>
 
-<pre>&lt;datalist id="colorsxx"&gt;
+<pre class="brush: html">&lt;datalist id="colorsxx"&gt;
   &lt;option&gt;#ff0000&lt;/option&gt;
   &lt;option&gt;#ee0000&lt;/option&gt;
   &lt;option&gt;#dd0000&lt;/option&gt;
@@ -680,53 +680,53 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("max") }} {{ HTMLVersionInline(5) }} </dt>
  <dd>此项目的最大（数字或日期时间）值，且不得小于其最小值（<strong>min</strong>属性）值。</dd>
  <dt>{{ htmlattrdef("maxlength") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>如果 <strong>type</strong> 的值是  <span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">email</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">password</span>, <span style="font-family: courier new;">tel</span>, 或 <span style="font-family: courier new;">url，那么这个属性指明了用户最多可以输入的字符个数（按照Unicode编码方式计数）；对于其他类型的输入框，该属性被忽略。它可以大于 </span><strong>size</strong> 属性的值。如果不指定这个属性，那么用户可以输入任意多的字符。如果指定为一个负值，那么元素表现出默认行为，即用户可以输入任意多的字符。本属性的约束规则，仅在元素的 value 属性发生变化时才会执行。译者注:ie10+</dd>
+ <dd>如果 <strong>type</strong> 的值是  <span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">email</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">password</span>, <span style="font-family: courier new;">tel</span>, 或 <span style="font-family: courier new;">url，那么这个属性指明了用户最多可以输入的字符个数（按照 Unicode 编码方式计数）；对于其他类型的输入框，该属性被忽略。它可以大于 </span><strong>size</strong> 属性的值。如果不指定这个属性，那么用户可以输入任意多的字符。如果指定为一个负值，那么元素表现出默认行为，即用户可以输入任意多的字符。本属性的约束规则，仅在元素的 value 属性发生变化时才会执行。译者注:ie10+</dd>
  <dt>{{ htmlattrdef("min") }} {{ HTMLVersionInline(5) }} </dt>
  <dd>此项目的最小（数字或日期时间）值，且不得大于其最大值（最大属性）值。</dd>
  <dt id="htmlattrdefminlength">{{htmlattrdef("minlength")}}</dt>
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the input has no minimum length.</p>
 
- <p>The input will fail <a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.</p>
+ <p>The input will fail <a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See <a href="#client-side_validation">Client-side validation</a> for more information.</p>
  </dd>
  <dt>{{ htmlattrdef("multiple") }}{{ HTMLVersionInline(5) }}</dt>
- <dd>This Boolean attribute indicates whether the user can enter more than one value.这个属性指示用户能否输入多个值。这个属性仅在<strong>type</strong>属性为email或file的时候生效 ; 否则被忽视.</dd>
+ <dd>This Boolean attribute indicates whether the user can enter more than one value.这个属性指示用户能否输入多个值。这个属性仅在<strong>type</strong>属性为 email 或 file 的时候生效 ; 否则被忽视。</dd>
  <dt>{{ htmlattrdef("name") }}</dt>
  <dd>控件的名称，与表单数据一起提交。</dd>
  <dt>{{ htmlattrdef("pattern") }}{{ HTMLVersionInline(5) }}</dt>
- <dd>检查控件值的正则表达式.。pattern必须匹配整个值，而不仅仅是某些子集.。使用title属性来描述帮助用户的模式.。当类型属性的值为<span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span> 或 <span style="font-family: courier new;">email</span>时，此属性适用，否则将被忽略。译者注:ie10+</dd>
+ <dd>检查控件值的正则表达式.。pattern 必须匹配整个值，而不仅仅是某些子集.。使用 title 属性来描述帮助用户的模式.。当类型属性的值为<span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span> 或 <span style="font-family: courier new;">email</span>时，此属性适用，否则将被忽略。译者注:ie10+</dd>
  <dt>{{ htmlattrdef("placeholder") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅适用于当<strong>type</strong> 属性为<span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span> or <span style="font-family: courier new;">email时</span>; 否则会被忽略。
- <div class="note"><strong>Note:</strong> 请不要用<code>placeholder</code> 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同:  {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而<code>placeholder</code> 属性是提示用户内容的输入格式。某些情况下 <code>placeholder</code> 属性对用户不可见, 所以当没有它时也需要保证form能被理解。</div>
+ <dd>提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅适用于当<strong>type</strong> 属性为<span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span> or <span style="font-family: courier new;">email 时</span>; 否则会被忽略。
+ <div class="note"><strong>Note:</strong> 请不要用<code>placeholder</code> 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同:  {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而<code>placeholder</code> 属性是提示用户内容的输入格式。某些情况下 <code>placeholder</code> 属性对用户不可见， 所以当没有它时也需要保证 form 能被理解。</div>
  </dd>
  <dt>{{ htmlattrdef("readonly") }}</dt>
  <dd>这个布尔属性用于指明用户无法修改控件的值。
- <p>{{ HTMLVersionInline(5) }} 如果控件的 <strong>type</strong> 属性为<span style="font-family: courier new;">hidden</span>, <span style="font-family: courier new;">range</span>, <span style="font-family: courier new;">color</span>, <span style="font-family: courier new;">checkbox</span>, <span style="font-family: courier new;">radio</span>, <span style="font-family: courier new;">file 或 </span>type时，此属性会被忽略。</p>
+ <p>{{ HTMLVersionInline(5) }} 如果控件的 <strong>type</strong> 属性为<span style="font-family: courier new;">hidden</span>, <span style="font-family: courier new;">range</span>, <span style="font-family: courier new;">color</span>, <span style="font-family: courier new;">checkbox</span>, <span style="font-family: courier new;">radio</span>, <span style="font-family: courier new;">file 或 </span>type 时，此属性会被忽略。</p>
  </dd>
  <dt>{{ htmlattrdef("required") }} {{ HTMLVersionInline(5) }}</dt>
- <dd>这个属性指定用户在提交表单之前必须为该元素填充值. 当type属性是hidden,image或者按钮类型(submit,reset,button)时不可使用. {{ cssxref(":optional") }} 和 {{ cssxref(":required") }} CSS 伪元素的样式将可以被该字段应用作外观.</dd>
+ <dd>这个属性指定用户在提交表单之前必须为该元素填充值。当 type 属性是 hidden,image 或者按钮类型 (submit,reset,button) 时不可使用. {{ cssxref(":optional") }} 和 {{ cssxref(":required") }} CSS 伪元素的样式将可以被该字段应用作外观。</dd>
  <dt>{{ htmlattrdef("selectionDirection") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>The direction in which selection occurred. This is "forward" if the selection was made from left-to-right in an LTR locale or right-to-left in an RTL locale, or "backward" if the selection was made in the opposite direction. This can be "none" if the selection direction is unknown.</dd>
  <dt>{{ htmlattrdef("size") }}</dt>
- <dd>控件的初始大小。以像素为单位。但当<strong>type</strong>  属性为<span style="font-family: courier new;">text</span> 或 <span style="font-family: courier new;">password时</span>, 它表示输入的字符的长度。从HTML5开始, 此属性仅适用于当 <strong>type</strong> 属性为 <span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span>, <span style="font-family: courier new;">email</span>,或 <span style="font-family: courier new;">password；</span>否则会被忽略。 此外，它的值必须大于0。 如果未指定大小，则使用默认值20。 HTML5 概述 "用户代理应该确保至少大部分字符是可见的", 但是不同的字符的用不同的字体表示可能会导致宽度不同。在某些浏览器中，一串带有x的字符即使定义了到x的大小也将显示不完整。 。</dd>
+ <dd>控件的初始大小。以像素为单位。但当<strong>type</strong>  属性为<span style="font-family: courier new;">text</span> 或 <span style="font-family: courier new;">password 时</span>, 它表示输入的字符的长度。从 HTML5 开始， 此属性仅适用于当 <strong>type</strong> 属性为 <span style="font-family: courier new;">text</span>, <span style="font-family: courier new;">search</span>, <span style="font-family: courier new;">tel</span>, <span style="font-family: courier new;">url</span>, <span style="font-family: courier new;">email</span>,或 <span style="font-family: courier new;">password；</span>否则会被忽略。 此外，它的值必须大于 0。 如果未指定大小，则使用默认值 20。 HTML5 概述 "用户代理应该确保至少大部分字符是可见的", 但是不同的字符的用不同的字体表示可能会导致宽度不同。在某些浏览器中，一串带有 x 的字符即使定义了到 x 的大小也将显示不完整。 。</dd>
  <dt>{{ htmlattrdef("spellcheck") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>将此属性的值设置为<code>true</code>表示元素需要检查其拼写和语法。值<code>default</code> 表示该元素将根据默认行为进行操作，可能基于父元素自己的<code>spellcheck</code>值。值<code>false</code>表示不应该检查元素</dd>
  <dt>{{ htmlattrdef("src") }}</dt>
- <dd>如果<strong>type</strong>属性的值是<span style="font-family: courier new;">image</span>, 这个属性指定了按钮图片的路径; 否则它被忽视.</dd>
+ <dd>如果<strong>type</strong>属性的值是<span style="font-family: courier new;">image</span>, 这个属性指定了按钮图片的路径; 否则它被忽视。</dd>
  <dt>{{ htmlattrdef("step") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>使用<strong>min</strong>和<strong>max</strong> 属性来限制可以设置数字或日期时间值的增量。它可以是任意字符串或是正浮点数。如果此属性未设置为任何，则控件仅接受大于最小步长值的倍数的值。</dd>
  <dt>{{ htmlattrdef("tabindex") }} element-specific in {{ HTMLVersionInline(4) }}, global in {{ HTMLVersionInline(5) }}</dt>
- <dd>元素在当前文档的Tab导航顺序中的位置。</dd>
+ <dd>元素在当前文档的 Tab 导航顺序中的位置。</dd>
  <dt id="htmlattrdefformenctype">{{htmlattrdef('title')}}</dt>
  <dd>
- <p>Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a <code>for</code> attribute set to the form control's {{htmlattrdef('id')}} attribute. See {{anch("Labels")}} below.</p>
+ <p>Global attribute valid for all elements, including all input types, containing a text representing advisory information related to the element it belongs to. Such information can typically, but not necessarily, be presented to the user as a tooltip. The title should NOT be used as the primary explanation of the purpose of the form control. Instead, use the {{htmlelement('label')}} element with a <code>for</code> attribute set to the form control's {{htmlattrdef('id')}} attribute. See <a href="#labels">Labels</a> below.</p>
  </dd>
  <dt>{{ htmlattrdef("type") }}</dt>
- <dd>要呈现的控件类型。有关各个类型的信息，请参阅 {{anch("Form &lt;input&gt; types")}}，其中包含指向每个类型的更多信息的链接。</dd>
+ <dd>要呈现的控件类型。有关各个类型的信息，请参阅 <a href="#&lt;input&gt;_types">Form &lt;input&gt; types</a>，其中包含指向每个类型的更多信息的链接。</dd>
  <dt>{{ htmlattrdef("usemap") }} {{ HTMLVersionInline(4) }} only, {{ obsoleteGeneric("inline", "HTML5") }}</dt>
- <dd>作为图像映射的{{ HTMLElement("map") }}元素的名称.</dd>
+ <dd>作为图像映射的{{ HTMLElement("map") }}元素的名称。</dd>
  <dt>{{ htmlattrdef("value") }}</dt>
- <dd>控件的初始值. 此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code><span style="font-family: courier new;">。</span>注意，当重新加载页面时，如果在重新加载之前更改了值，<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko和IE将忽略HTML源代码中指定的值</a>。</dd>
+ <dd>控件的初始值。此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code><span style="font-family: courier new;">。</span>注意，当重新加载页面时，如果在重新加载之前更改了值，<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko 和 IE 将忽略 HTML 源代码中指定的值</a>。</dd>
  <dt>{{ htmlattrdef("width") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>如果<strong>type</strong>属性的值是<span style="font-family: courier new;">image，这个属性定义了按钮图片的宽度。</span></dd>
  <dt>

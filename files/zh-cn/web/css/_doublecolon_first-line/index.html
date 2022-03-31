@@ -9,7 +9,7 @@ translation_of: 'Web/CSS/::first-line'
 
 <p>和其他所有的 伪元素一样，::first-line 不能匹配任何真实存在的html元素。</p>
 
-<p> ::first-line 伪元素只能在块容器中,所以,<code>::first-line伪元素</code>只能在一个display值为block, <code>inline-block</code>, <code>table-cell</code> 或者 <code>table-caption中有用</code>.。在其他的类型中，<code>::first-line</code> 是不起作用的.</p>
+<p> ::first-line 伪元素只能在块容器中,所以,<code>::first-line</code>伪元素只能在一个display值为block, <code>inline-block</code>, <code>table-cell</code> 或者 <code>table-caption</code>中有用.。在其他的类型中，<code>::first-line</code> 是不起作用的.</p>
 
 <p> </p>
 
@@ -17,7 +17,7 @@ translation_of: 'Web/CSS/::first-line'
 
 <p> </p>
 
-<p>在一个使用了 <code>::first-line 伪元素的选择器中，</code>只有很小的一部分css属性能被使用：</p>
+<p>在一个使用了 <code>::first-line</code> 伪元素的选择器中，只有很小的一部分css属性能被使用：</p>
 
 <ul>
  <li>所有和字体有关的属性：{{Cssxref("font")}}, {{cssxref("font-kerning")}}, {{Cssxref("font-style")}}, {{Cssxref("font-variant")}}, {{cssxref("font-variant-numeric")}}, {{cssxref("font-variant-position")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-ligatures")}}, {{cssxref("font-synthesis")}}, {{cssxref("font-feature-settings")}}, {{cssxref("font-language-override")}}, {{Cssxref("font-weight")}}, {{Cssxref("font-size")}}, {{cssxref("font-size-adjust")}}, {{cssxref("font-stretch")}}, and {{Cssxref("font-family")}}</li>
@@ -137,69 +137,7 @@ sed do eiusmod tempor incididunt ut labore.&lt;/p&gt;</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0 (buggy when using <code>text-transform</code>: <a href="//code.google.com/p/chromium/issues/detail?id=129669">issue 129669</a>)</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>9.0</td>
-   <td>7.0</td>
-   <td>1.0 (85) (buggy when using <code>text-transform</code>: <a href="//bugs.webkit.org/show_bug.cgi?id=3409">issue 3409</a>)</td>
-  </tr>
-  <tr>
-   <td>Old one-colon syntax (<code>:first-line</code>)</td>
-   <td>1.0 (buggy when using <code>text-transform</code>: <a href="//code.google.com/p/chromium/issues/detail?id=129669">issue 129669</a>)</td>
-   <td>{{ CompatGeckoDesktop("1") }}</td>
-   <td>5.5</td>
-   <td>3.5</td>
-   <td>1.0 (85) (buggy when using <code>text-transform</code>: <a href="//bugs.webkit.org/show_bug.cgi?id=3409">issue 3409</a>)</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>{{ CompatNo() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
-  <tr>
-   <td>Old one-colon syntax (<code>:first-line</code>)</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1") }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-   <td>{{ CompatUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat("css.selectors.first-line")}}
 
 <h2 id="参见">参见</h2>
 

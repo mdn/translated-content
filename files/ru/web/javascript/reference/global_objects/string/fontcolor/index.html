@@ -13,27 +13,27 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 ---
 <div>{{JSRef("Global_Objects", "String")}} {{deprecated_header}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Метод <strong><code>fontcolor()</code></strong> создаёт HTML-элемент {{HTMLElement("font")}}, заставляющий строку отображаться шрифтом указанного цвета.</p>
 <div class="note">
  <p><strong>Примечание по использованию:</strong> элемент &lt;font&gt; был удалён из <a href="/ru/docs/Web/Guide/HTML/HTML5">HTML5</a> и больше не должен использоваться. Вместо него веб-разработчикам следует использовать свойства <a href="/ru/docs/Web/CSS">CSS</a>.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code><var>str</var>.fontcolor(<var>color</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>color</code></dt>
  <dd>Строка, выражающая цвет в виде шестнадцатеричного триплета RGB, либо в виде названия цвета. Названия цветов перечислены в <a href="/ru/docs/Web/CSS/color_value">справочнике по значению цвета в CSS</a>.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Если вы выразили цвет в виде шестнадцатеричного триплета RGB, вы должны использовать формат <code>rrggbb</code>. Например, шестнадцатеричные значения RGB для оранжево-розового цвета такие: красный=FA, зелёный=80 и синий=72, так что RGB-триплет для оранжево-розового цвета будет следующим <code>"FA8072"</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_fontcolor" name="Example:_Using_fontcolor">Пример: использование метода <code>fontcolor()</code></h3>
+<h3 id="Example:_Using_fontcolor">Пример: использование метода <code>fontcolor()</code></h3>
 <p>В следующем примере метод <code>fontcolor()</code> используется для изменения цвета строки путём генерирования строки с HTML-тегом <code>&lt;font&gt;</code>.</p>
 <pre class="brush: js">var worldString = 'Привет, мир';
 
@@ -47,7 +47,7 @@ console.log(worldString.fontcolor('FF00') + ' на этой строке кра�
 <pre class="brush: js">document.getElementById('yourElemId').style.color = 'red';
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -64,10 +64,10 @@ console.log(worldString.fontcolor('FF00') + ' на этой строке кра�
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("String.prototype.fontsize()")}}</li>
 </ul>

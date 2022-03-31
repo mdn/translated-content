@@ -7,7 +7,7 @@ tags:
 translation_of: Web/SVG/Namespaces_Crash_Course
 ---
 <h3 id=".E5.B0.8E.E5.85.A5" name=".E5.B0.8E.E5.85.A5">導入</h3>
-<p><a href="ja/XML">XML</a> の派生言語として、 <a href="ja/SVG">SVG</a> は名前空間付けられています。もしあなたが SVG コンテンツを作成する予定なら名前空間の概念と使い方を理解することは重要です。 Firefox 1.5 リリースより前の幾つかのバージョンの SVG ビューワは残念ながら名前空間に対して十分な注意を払いませんが、 とても厳格でなくてならない <a href="ja/Gecko">Gecko</a> ベースのブラウザのようなユーザエージェントが複数の XML 派生言語をサポートするために不可欠です。今、名前空間を理解するためにいくらかの時間をとり、将来頭を悩ませる時間を節約しましょう。</p>
+<p><a href="/ja/docs/Glossary/XML">XML</a> の派生言語として、 <a href="/ja/docs/Web/SVG">SVG</a> は名前空間付けられています。もしあなたが SVG コンテンツを作成する予定なら名前空間の概念と使い方を理解することは重要です。 Firefox 1.5 リリースより前の幾つかのバージョンの SVG ビューワは残念ながら名前空間に対して十分な注意を払いませんが、 とても厳格でなくてならない <a href="/ja/docs/Glossary/Gecko">Gecko</a> ベースのブラウザのようなユーザエージェントが複数の XML 派生言語をサポートするために不可欠です。今、名前空間を理解するためにいくらかの時間をとり、将来頭を悩ませる時間を節約しましょう。</p>
 <h3 id=".E8.83.8C.E6.99.AF" name=".E8.83.8C.E6.99.AF">背景</h3>
 <p>異なった種類の XML ベースのコンテンツが同じ XML ファイルの中で一緒に混ざるのを可能にするのことは W3C の長年の目標です。 例えば、SVG と MathML は直接 XHTML ベースの科学ドキュメントに組み込まれるかもしれません。このようなコンテンツ タイプを混ぜることが可能にすることは、多くの利点がありますが、解決するために非常に大問題を要しました。</p>
 <p>当然、それぞれのXML 派生言語は仕様で述べたマークアップタグ名の意味を定義します。 1つの XML ドキュメントに異なった XML 派生言語のコンテンツを混ぜることによる問題は 別の派生言語が 1つの派生言語によって定義されたタグと同じ名前のタグを定義するかもしれないということです。 例えば、XHTMLとSVGの両方には、<code>&lt;title&gt;</code> タグがあります。 事実、ユーザエージェントはどうやって XML コンテンツが(あらかじめ)知っているものであるとき時に、単なる未知の任意のタグ名を含む無意味な XML ファイルでないと言えますか?</p>
@@ -113,7 +113,7 @@ translation_of: Web/SVG/Namespaces_Crash_Course
     </tr>
     <tr>
       <td><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setNamedItem">setNamedItem</a></td>
-      <td>[<a class="external" href="http://w" rel="freelink">http://w</a> ww.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS setNamedItemNS]</td>
+      <td><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-setNamedItemNS">setNamedItemNS</a></td>
     </tr>
   </tbody>
 </table>
@@ -148,4 +148,4 @@ image.setAttributeNS(XLink_NS, 'xlink:href', 'flower.png');
 </pre>
 <p>あなたが特定のドキュメントでそれら全ての名前空間を使用しなくても、名前空間宣言を含んで全く害はありません。 後日、未使用の名前空間の1つをコンテンツに結局加えるなら、それはいくつかの煩わしいエラーから救ってくれるかもしれません。</p>
 <h3 id=".E5.AE.8C.E5.85.A8.E3.81.AA.E4.BE.8B" name=".E5.AE.8C.E5.85.A8.E3.81.AA.E4.BE.8B">完全な例</h3>
-<p>完全な例は <a href="ja/SVG/Namespaces_Crash_Course/Example">SVG:Namespaces Crash Course:Example</a> を参照してください。</p>
+<p>完全な例は <a href="/ja/docs/Web/SVG/Namespaces_Crash_Course/Example">SVG:Namespaces Crash Course:Example</a> を参照してください。</p>

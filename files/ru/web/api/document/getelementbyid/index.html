@@ -9,7 +9,7 @@ translation_of: Web/API/Document/getElementById
 
 <p>Возвращает ссылку на элемент по его идентификатору (<a href="/en-US/docs/DOM/element.id" title="en-US/docs/DOM/element.id">ID</a>); идентификатор является строкой, которая может быть использована для идентификации элемента; она может быть определена при помощи атрибута <code>id</code> в HTML или из скрипта.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval"><em>element</em> = document.getElementById(<em>id</em>);
 </pre>
@@ -29,7 +29,7 @@ translation_of: Web/API/Document/getElementById
  </dd>
 </dl>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -50,7 +50,7 @@ translation_of: Web/API/Document/getElementById
 &lt;/html&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">Замечания</h2>
+<h2 id="Notes">Замечания</h2>
 
 <p>Начинающим следует знать, что верхний регистр в части имени метода 'Id' <em>должен </em>быть точным для корректного вызова функции; "getElementByID" будет <em>не корректно</em>, как бы естественно это ни казалось.</p>
 
@@ -65,7 +65,7 @@ var el = document.getElementById('testqq'); // el will be null!
 
 <p><strong>Не-HTML документы</strong>. Релизация DOM должна содержать информацию, сообщающую о том, какие атрибуты являются идентификаторами. Атрибуты с именем "id" не являются идентификаторами только если это не указано в описании типа документа (DTD). Атрибут "id" определён в качестве идентификатора в общих случаях <a href="/en-US/docs/XHTML" title="en-US/docs/XHTML">XHTML</a>, <a href="/en-US/docs/XUL" title="en-US/docs/XUL">XUL</a>, и других. От реализаций, которые не знают, какой атрибут является идентификатором, ожидается возврат null.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="standard-table">
  <tbody>
@@ -97,11 +97,11 @@ var el = document.getElementById('testqq'); // el will be null!
  </tbody>
 </table>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость в браузерах</h2>
+<h2 id="Browser_Compatibility">Совместимость в браузерах</h2>
 
-<p>{{Compat("api.Document.getElementById")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("Document")}} ссылка для иных методов и свойств которые вы можете использовать для получения ссылок на иные элементы.</li>

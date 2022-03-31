@@ -46,13 +46,13 @@ translation_of: Learn/Server-side/Express_Nodejs/Introduction
  <li>Создайте папку, куда вы хотите сохранить программу, к примеру <code>test-node</code> и перейдите в неё с помощью следующей команды:</li>
 </ol>
 
-<pre class="notranslate"><code>cd test-node</code></pre>
+<pre><code>cd test-node</code></pre>
 
 <ol start="3">
  <li>Используя любимый текстовый редактор, создайте файл <code>hello.js</code> и вставьте в него код:</li>
 </ol>
 
-<pre class="brush: js notranslate">// Загружаем HTTP модуль
+<pre class="brush: js">// Загружаем HTTP модуль
 const http = require("http");
 
 const hostname = "127.0.0.1";
@@ -79,7 +79,7 @@ server.listen(port, hostname, () =&gt; {
  <li>Вернитесь в терминал и выполните следующую команду:</li>
 </ol>
 
-<pre class="notranslate"><code>node hello.js</code></pre>
+<pre><code>node hello.js</code></pre>
 
 <p>В итоге, перейдите по ссылке <code>http://localhost:8000</code> в вашем браузере; вы должны увидеть текст "<strong>Hello World</strong>" в верху слева на чистой странице.</p>
 
@@ -144,7 +144,7 @@ server.listen(port, hostname, () =&gt; {
 <p><span class="tlid-translation translation" lang="ru"><span title="">Совет: Если у вас уже установлены Node и Express (или если вы устанавливаете их, как показано в следующей статье), вы можете сохранить этот код в файле с именем app.js и запустить его в командной строке, вызвав узел app.js.</span> <span title="">отражения</span><span title="">)</span><span title="">.</span></span></p>
 </div>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var app = express();
 
 <strong>app.get('/', function(req, res) {
@@ -168,7 +168,7 @@ app.listen(3000, function() {
  <br>
  <span title="">Приведённый ниже код показывает, как мы импортируем модуль по имени, используя в качестве примера платформу Express.</span> <span title="">Сначала мы вызываем функцию require (), определяя имя модуля в виде строки («express») и вызывая возвращённый объект для создания приложения Express.</span> <span title="">Затем мы можем получить доступ к свойствам и функциям объекта приложения.</span></span></p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var app = express();
 </pre>
 
@@ -180,13 +180,13 @@ var app = express();
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Чтобы сделать объекты доступными вне модуля, вам просто нужно назначить их объекту экспорта.</span> <span title="">Например, модуль square.js ниже представляет собой файл, который экспортирует методы area () и perimeter ():</span></span></p>
 
-<pre class="brush: js notranslate">exports.area = function(width) { return width * width; };
+<pre class="brush: js">exports.area = function(width) { return width * width; };
 exports.perimeter = function(width) { return 4 * width; };
 </pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Мы можем импортировать этот модуль, используя require (), а затем вызвать экспортированные методы, как показано:</span></span></p>
 
-<pre class="brush: js notranslate">var square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
+<pre class="brush: js">var square = require('./square'); // Here we require() the name of the file without the (optional) .js file extension
 console.log('The area of a square with a width of 4 is ' + square.area(4));</pre>
 
 <div class="note">
@@ -195,7 +195,7 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Если вы хотите экспортировать полный объект в одном назначении, а не создавать его по одному свойству за раз, назначьте его для module.exports, как показано ниже (вы также можете сделать это, чтобы сделать корень объекта экспорта конструктором или другой функцией)</span> <span title="">:</span></span></p>
 
-<pre class="brush: js notranslate">module.exports = {
+<pre class="brush: js">module.exports = {
   area: function(width) {
     return width * width;
   },
@@ -212,13 +212,13 @@ console.log('The area of a square with a width of 4 is ' + square.area(4));</pre
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Код JavaScript часто использует асинхронные, а не синхронные API для операций, выполнение которых может занять некоторое время.</span> <span title="">Синхронный API - это тот, в котором каждая операция должна завершиться до начала следующей операции.</span> <span title="">Например, следующие функции журнала являются синхронными и выводят текст на консоль по порядку (первый, второй).</span></span></p>
 
-<pre class="brush: js notranslate">console.log('First');
+<pre class="brush: js">console.log('First');
 console.log('Second');
 </pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">В отличие от этого, асинхронный API - это тот, в котором API начнёт операцию и сразу же вернётся (до завершения операции).</span> <span title="">После завершения операции API будет использовать некоторый механизм для выполнения дополнительных операций.</span> <span title="">Например, приведённый ниже код выведет «Second, First», потому что хотя метод setTimeout () вызывается первым и возвращается немедленно, операция не завершается в течение нескольких секунд.</span></span></p>
 
-<pre class="brush: js notranslate">setTimeout(function() {
+<pre class="brush: js">setTimeout(function() {
    console.log('First');
    }, 3000);
 console.log('Second');
@@ -240,7 +240,7 @@ console.log('Second');
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">В нашем примере Hello World Express (см. Выше) мы определили функцию обработчика маршрута (колбэка) для HTTP-запросов GET к корню сайта ('/').</span></span></p>
 
-<pre class="brush: js notranslate">app.<strong>get</strong>('/', function(req, res) {
+<pre class="brush: js">app.<strong>get</strong>('/', function(req, res) {
   res.send('Hello World!');
 });
 </pre>
@@ -255,7 +255,7 @@ console.log('Second');
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Существует специальный метод маршрутизации app.all (), который будет вызываться в ответ на любой метод HTTP.</span> <span title="">Это используется для загрузки функций промежуточного программного обеспечения по определённому пути для всех методов запроса.</span> <span title="">В следующем примере (из документации Express) показан обработчик, который будет выполняться для запросов к / secret независимо от используемого глагола HTTP (при условии, что он поддерживается модулем http).</span></span></p>
 
-<pre class="brush: js notranslate">app.all('/secret', function(req, res, next) {
+<pre class="brush: js">app.all('/secret', function(req, res, next) {
   console.log('Accessing the secret section ...');
   next(); // pass control to the next handler
 });</pre>
@@ -264,7 +264,7 @@ console.log('Second');
  <br>
  <span title="">Часто полезно группировать обработчики маршрутов для определённой части сайта и получать к ним доступ с помощью общего префикса маршрута (например, сайт с вики может иметь все связанные с вики маршруты в одном файле и иметь к ним доступ с префиксом маршрута</span> <span title="">из / вики /).</span> <span title="">В Express это достигается с помощью объекта express.Router.</span> <span title="">Например, мы можем создать наш вики-маршрут в модуле с именем wiki.js, а затем экспортировать объект Router, как показано ниже:</span></span></p>
 
-<pre class="brush: js notranslate">// wiki.js - Wiki route module
+<pre class="brush: js">// wiki.js - Wiki route module
 
 var express = require('express');
 var router = express.Router();
@@ -288,7 +288,7 @@ module.exports = router;
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Чтобы использовать маршрутизатор в нашем главном файле приложения, нам потребуется () модуль route (wiki.js), а затем вызовите use () в приложении Express, чтобы добавить маршрутизатор в путь обработки промежуточного программного обеспечения.</span> <span title="">Эти два маршрута будут доступны из / wiki / и / wiki / about /.</span></span></p>
 
-<pre class="brush: js notranslate">var wiki = require('./wiki.js');
+<pre class="brush: js">var wiki = require('./wiki.js');
 // ...
 app.use('/wiki', wiki);</pre>
 
@@ -306,12 +306,12 @@ app.use('/wiki', wiki);</pre>
  <br>
  <span title="">Для использования стороннего промежуточного программного обеспечения сначала необходимо установить его в своё приложение с помощью NPM.</span> <span title="">Например, чтобы установить промежуточное программное обеспечение средства регистрации HTTP-запросов morgan, вы должны сделать следующее:</span></span></p>
 
-<pre class="brush: bash notranslate"><code>$ npm install morgan
+<pre class="brush: bash"><code>$ npm install morgan
 </code></pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Затем вы можете вызвать use () для объекта приложения Express, чтобы добавить промежуточное программное обеспечение в стек:</span></span></p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 <strong>var logger = require('morgan');</strong>
 var app = express();
 <strong>app.use(logger('dev'));</strong>
@@ -327,7 +327,7 @@ var app = express();
  <br>
  <span title="">В приведённом ниже примере показано, как можно добавить функцию промежуточного программного обеспечения, используя оба метода, а также с / без маршрута.</span></span></p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var app = express();
 
 // An example middleware function
@@ -357,12 +357,12 @@ app.listen(3000);</pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете использовать промежуточное программное обеспечение express.static для обслуживания статических файлов, включая ваши изображения, CSS и JavaScript (static () - единственная функция промежуточного программного обеспечения, которая фактически является частью Express).</span> <span title="">Например, вы должны использовать строку ниже для обслуживания изображений, файлов CSS и файлов JavaScript из каталога с именем public на том же уровне, где вы вызываете узел:</span></span></p>
 
-<pre class="brush: js notranslate">app.use(express.static('public'));
+<pre class="brush: js">app.use(express.static('public'));
 </pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Любые файлы в публичном каталоге обслуживаются путём добавления их имени файла (относительно базового «публичного» каталога) к базовому URL.</span> <span title="">Так, например:</span></span></p>
 
-<pre class="notranslate"><code>http://localhost:3000/images/dog.jpg
+<pre><code>http://localhost:3000/images/dog.jpg
 http://localhost:3000/css/style.css
 http://localhost:3000/js/app.js
 http://localhost:3000/about.html
@@ -370,18 +370,18 @@ http://localhost:3000/about.html
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете вызывать static () несколько раз для обслуживания нескольких каталогов.</span> <span title="">Если файл не может быть найден одной функцией промежуточного программного обеспечения, он будет просто передан последующему промежуточному программному обеспечению (порядок вызова промежуточного программного обеспечения основан на вашем порядке объявления).</span></span></p>
 
-<pre class="brush: js notranslate">app.use(express.static('public'));
+<pre class="brush: js">app.use(express.static('public'));
 app.use(express.static('media'));
 </pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы также можете создать виртуальный префикс для ваших статических URL-адресов, вместо добавления файлов к базовому URL-адресу.</span> <span title="">Например, здесь мы указываем путь монтирования, чтобы файлы загружались с префиксом "/ media":</span></span></p>
 
-<pre class="brush: js notranslate">app.use('/media', express.static('public'));
+<pre class="brush: js">app.use('/media', express.static('public'));
 </pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Теперь вы можете загружать файлы, находящиеся в публичном каталоге, из префикса / media path.</span></span></p>
 
-<pre class="notranslate"><code>http://localhost:3000/media/images/dog.jpg
+<pre><code>http://localhost:3000/media/images/dog.jpg
 http://localhost:3000/media/video/cat.mp4
 http://localhost:3000/media/cry.mp3</code>
 </pre>
@@ -392,7 +392,7 @@ http://localhost:3000/media/cry.mp3</code>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Ошибки обрабатываются одной или несколькими специальными функциями промежуточного программного обеспечения, которые имеют четыре аргумента вместо обычных трёх: (err, req, res, next).</span> <span title="">Например:</span></span></p>
 
-<pre class="brush: js notranslate">app.use(function(err, req, res, next) {
+<pre class="brush: js">app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
@@ -418,12 +418,12 @@ http://localhost:3000/media/cry.mp3</code>
  <br>
  <span title="">Чтобы использовать их, вы должны сначала установить драйвер базы данных, используя NPM.</span> <span title="">Например, чтобы установить драйвер для популярной NoSQL MongoDB, вы должны использовать команду:</span></span></p>
 
-<pre class="brush: bash notranslate"><code>$ npm install mongodb
+<pre class="brush: bash"><code>$ npm install mongodb
 </code></pre>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Сама база данных может быть установлена локально или на облачном сервере.</span> <span title="">В вашем экспресс-коде вам требуется драйвер, подключиться к базе данных, а затем выполнить операции создания, чтения, обновления и удаления (CRUD).</span> <span title="">Пример ниже (из документации Express) показывает, как вы можете найти записи «млекопитающих», используя MongoDB.</span></span></p>
 
-<pre class="brush: js notranslate">var MongoClient = require('mongodb').MongoClient;
+<pre class="brush: js">var MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
   if (err) throw err;
@@ -445,7 +445,7 @@ MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
  <br>
  <span title="">В своём коде настроек приложения вы задаёте механизм шаблонов для использования и место, где Express должен искать шаблоны, используя настройки «views» и «engine», как показано ниже (вам также нужно будет установить пакет, содержащий вашу библиотеку шаблонов).</span> <span title="">!</span><span title="">)</span></span></p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var app = express();
 
 // Set directory to contain the templates ('views')
@@ -457,7 +457,7 @@ app.set('view engine', 'some_template_engine_name');
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Внешний вид шаблона будет зависеть от того, какой движок вы используете.</span> <span title="">Предполагая, что у вас есть файл шаблона с именем «index. &lt;Template_extension&gt;», который содержит заполнители для переменных данных с именами «title» и «message», вы должны вызвать Response.render () в функции обработчика маршрута для создания и отправки ответа HTML.</span> <span title="">:</span></span></p>
 
-<pre class="brush: js notranslate">app.get('/', function(req, res) {
+<pre class="brush: js">app.get('/', function(req, res) {
   res.render('index', { title: 'About dogs', message: 'Dogs rock!' });
 });</pre>
 

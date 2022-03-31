@@ -48,9 +48,9 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <h3 id="Ajax_の登場">Ajax の登場</h3>
 
-<p>上述の問題を解決すべく、Web ページから細かいデータ (<a href="/docs/Web/HTML">HTML</a>、{{glossary("XML")}}、<a href="/docs/Learn/JavaScript/Objects/JSON">JSON</a> やプレーンテキストのような) をリクエストし、それを必要な時だけ表示するという技術の誕生へと繋がりました。</p>
+<p>上述の問題を解決すべく、Web ページから細かいデータ (<a href="/ja/docs/Web/HTML">HTML</a>、{{glossary("XML")}}、<a href="/ja/docs/Learn/JavaScript/Objects/JSON">JSON</a> やプレーンテキストのような) をリクエストし、それを必要な時だけ表示するという技術の誕生へと繋がりました。</p>
 
-<p>これは {{domxref("XMLHttpRequest")}} や、最近では <a href="/docs/Web/API/Fetch_API">Fetch API</a> の利用によって実現されます。これらの技術は、Web ページがサーバにある特定のリソースを直接 <a href="/docs/Web/HTTP">HTTP</a> リクエストし、必要があれば結果のデータを表示する前に整形する事を可能にしました。</p>
+<p>これは {{domxref("XMLHttpRequest")}} や、最近では <a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> の利用によって実現されます。これらの技術は、Web ページがサーバにある特定のリソースを直接 <a href="/ja/docs/Web/HTTP">HTTP</a> リクエストし、必要があれば結果のデータを表示する前に整形する事を可能にしました。</p>
 
 <div class="note">
 <p><strong>注記</strong>: これらのテクニック一般はかつて Ajax (Asynchronous JavaScript and XML)と呼ばれていましたが、これは {{domxref("XMLHttpRequest")}} を使って XML データを要求するものが多かったためです。今日ではそういうものばかりではありませんが (<code>XMLHttpRequest</code> や Fetch を使って JSON を要求する場合の方が多いでしょう)、結果としては同じであり、"Ajax" という用語はしばしば今でもこのテクニックを説明するのに使われます。</p>
@@ -78,7 +78,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 <h2 id="基本的な_Ajax_リクエスト">基本的な Ajax リクエスト</h2>
 
-<p>{{domxref("XMLHttpRequest")}} と <a href="/docs/Web/API/Fetch_API">Fetch</a> それぞれを使って、そのようなリクエストをどうやるのか見ていきましょう。それらの例では、いくつかの異なるテキストファイルから取り出したデータをリクエストし、コンテンツ領域に埋め込みます。</p>
+<p>{{domxref("XMLHttpRequest")}} と <a href="/ja/docs/Web/API/Fetch_API">Fetch</a> それぞれを使って、そのようなリクエストをどうやるのか見ていきましょう。それらの例では、いくつかの異なるテキストファイルから取り出したデータをリクエストし、コンテンツ領域に埋め込みます。</p>
 
 <p>この一連のファイルは疑似データベースとして働きます。実際のアプリケーションでは、PHP や Python、Node のようなサーバサイド言語を使ってデータベースから取り出したデータをリクエストする場合が多いでしょう。ですがここでは簡単にしておき、クライアント側のパートに集中します。</p>
 
@@ -156,9 +156,9 @@ verseChoose.value = 'Verse 1';</pre>
 
 <h3 id="サーバからあなたの例題を送らせる">サーバからあなたの例題を送らせる</h3>
 
-<p>今時のブラウザ (Chrome も含まれます) は、ローカルファイルとして例題を実行しても XHR リクエストを行ないません。これはセキュリティの制限によるものです (Web のセキュリティにより詳しくは <a href="/docs/Learn/Server-side/First_steps/Website_security">Webサイトのセキュリティ</a>を読んで下さい)。</p>
+<p>今時のブラウザ (Chrome も含まれます) は、ローカルファイルとして例題を実行しても XHR リクエストを行ないません。これはセキュリティの制限によるものです (Web のセキュリティにより詳しくは <a href="/ja/docs/Learn/Server-side/First_steps/Website_security">Webサイトのセキュリティ</a>を読んで下さい)。</p>
 
-<p>これをどうにかするため、例題をローカルの Web サーバを使って実行しなければなりません。どうやるのかは、 <a href="/docs/Learn/Common_questions/set_up_a_local_testing_server">テスト用のローカルサーバを設定するにはどうすればいい?</a> を読んで下さい。</p>
+<p>これをどうにかするため、例題をローカルの Web サーバを使って実行しなければなりません。どうやるのかは、 <a href="/ja/docs/Learn/Common_questions/set_up_a_local_testing_server">テスト用のローカルサーバを設定するにはどうすればいい?</a> を読んで下さい。</p>
 
 <h3 id="Fetch">Fetch</h3>
 
@@ -199,7 +199,7 @@ request.send();</pre>
 
 <h4 id="Fetch_のコードでは何が起きている">Fetch のコードでは何が起きている?</h4>
 
-<p>まず最初に、{{domxref("WorkerOrWindowGlobalScope.fetch()","fetch()")}} メソッドが呼ばれ、取得したいリソースの URL が渡されています。これは XHR の {{domxref("XMLHttpRequest.open","request.open()")}} の今時な同等品で、さらに言えば <code>.send()</code> に相当するものは必要ありません。</p>
+<p>まず最初に、{{domxref("fetch()")}} メソッドが呼ばれ、取得したいリソースの URL が渡されています。これは XHR の {{domxref("XMLHttpRequest.open","request.open()")}} の今時な同等品で、さらに言えば <code>.send()</code> に相当するものは必要ありません。</p>
 
 <p>その後に、{{jsxref("Promise.then",".then()")}} メソッドが <code>fetch()</code> の後に連鎖されているのがわかるでしょう — このメソッドは {{jsxref("Promise","Promises")}} の一部で、非同期処理を行なうための今風な JavaScript に備わる機能です。<code>fetch()</code> はプロミスを返し、これはサーバから送られたレスポンスによって解決されます — <code>.then()</code> を使ってプロミスが解決された後にある種後始末のコードを走らせるようにし、そのコードとは内側で定義した関数にあたります。これは XHR 版の <code>onload</code> イベントハンドラに相当します。</p>
 
@@ -251,7 +251,7 @@ myFetch.then(function(response) {
   });
 }</pre>
 
-<p>レスポンスオブジェクトには {{domxref("Body.text","text()")}} メソッドがあって、これはレスポンスボディにある生データを受けて、プレインテキスト(これが私たちの必要とする形式です)、に変換します。このメソッドもプロミス(これは結果となるテキスト文字列で解決します)を返すので、ここでまた別の {{jsxref("Promise.then",".then()")}} を使い、この内部で、テキスト文字列を使って私たちがやりたい事を行うための別の関数を定義します。私たちがやるのは、ただ詩用の {{htmlelement("pre")}} 要素の <code><a href="/docs/Web/API/Node/textContent">textContent</a></code> プロパティをテキスト文字列と同じに設定だけなので、これはとても単純です。</p>
+<p>レスポンスオブジェクトには {{domxref("Body.text","text()")}} メソッドがあって、これはレスポンスボディにある生データを受けて、プレインテキスト(これが私たちの必要とする形式です)、に変換します。このメソッドもプロミス(これは結果となるテキスト文字列で解決します)を返すので、ここでまた別の {{jsxref("Promise.then",".then()")}} を使い、この内部で、テキスト文字列を使って私たちがやりたい事を行うための別の関数を定義します。私たちがやるのは、ただ詩用の {{htmlelement("pre")}} 要素の <code><a href="/ja/docs/Web/API/Node/textContent">textContent</a></code> プロパティをテキスト文字列と同じに設定だけなので、これはとても単純です。</p>
 
 <p>これも覚えておく価値があります、それぞれのブロックの結果を次のブロックに渡していくように、直接複数のプロミスブロック(<code>.then()</code>ブロック以外の種類もあります)を次から次へと連鎖する事ができます、あたかも鎖を下にたどっていくように。このおかげで、プロミスはとても強力なのです。</p>
 
@@ -263,7 +263,7 @@ myFetch.then(function(response) {
   poemDisplay.textContent = text;
 });</pre>
 
-<p>多くの開発者はこの書き方の方が好きです、なぜなら平らで、間違いなく長大なプロミス連鎖も読みやすいからです — それぞれのプロミスが、前のやつの内側に来る(これは扱いづらくなる場合があります)のではなく、前のやつから順々に続いています。違うのは <code><a href="/docs/Learn/JavaScript/Building_blocks/Return_values">return</a></code> 文を response.text() の前に書いて、それが出した結果を次の鎖に渡すようにしなければならないところだけです。</p>
+<p>多くの開発者はこの書き方の方が好きです、なぜなら平らで、間違いなく長大なプロミス連鎖も読みやすいからです — それぞれのプロミスが、前のやつの内側に来る(これは扱いづらくなる場合があります)のではなく、前のやつから順々に続いています。違うのは <code><a href="/ja/docs/Learn/JavaScript/Building_blocks/Return_values">return</a></code> 文を response.text() の前に書いて、それが出した結果を次の鎖に渡すようにしなければならないところだけです。</p>
 
 <h3 id="どっちの機構を使うべき">どっちの機構を使うべき?</h3>
 

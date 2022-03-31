@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/store
 ---
 {{JSRef}}
 
-La méthode statique **`Atomics`\*\***`.store()`\*\* enregistre une valeur donnée à un emplacement donné du tableau partagé et renvoie cette valeur.
+La méthode statique **`Atomics.store()`** enregistre une valeur donnée à un emplacement donné du tableau partagé et renvoie cette valeur.
 
 {{EmbedInteractiveExample("pages/js/atomics-store.html")}}
 
@@ -35,7 +35,7 @@ La valeur qui a été enregistrée.
 
 ### Exceptions
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 

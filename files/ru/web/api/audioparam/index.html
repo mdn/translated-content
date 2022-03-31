@@ -65,7 +65,7 @@ translation_of: Web/API/AudioParam
 
 <p>First, a basic example showing a {{domxref("GainNode")}} having its <code>gain</code> value set. <code>gain</code> is an example of an a-rate AudioParam, as the value can potentially be set differently for each sample frame of the audio.</p>
 
-<pre class="brush: js notranslate">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var gainNode = audioCtx.createGain();
@@ -73,7 +73,7 @@ gainNode.gain.value = 0;</pre>
 
 <p>Next, an example showing a {{ domxref("DynamicsCompressorNode") }} having some param values maniuplated. These are examples of k-rate AudioParam's, as the values are set for the entire audio block at once.</p>
 
-<pre class="brush: js notranslate">var compressor = audioCtx.createDynamicsCompressor();
+<pre class="brush: js">var compressor = audioCtx.createDynamicsCompressor();
 compressor.threshold.setValueAtTime(-50, audioCtx.currentTime);
 compressor.knee.setValueAtTime(40, audioCtx.currentTime);
 compressor.ratio.setValueAtTime(12, audioCtx.currentTime);
@@ -102,7 +102,7 @@ compressor.release.setValueAtTime(0.25, audioCtx.currentTime);</pre>
 <div>
 
 
-<p>{{Compat("api.AudioParam")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="See_also">See also</h2>

@@ -11,7 +11,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 
 <h2 id="Элемент_&lt;canvas>">Элемент <code>&lt;canvas&gt;</code></h2>
 
-<pre class="brush: html notranslate">&lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="tutorial" width="150" height="150"&gt;&lt;/canvas&gt;
 </pre>
 
 <p>Он выглядит как элемент <code>&lt;img&gt;</code>, но его отличие в том, что он не имеет атрибутов <code>src</code> и <code>alt</code>. Элемент <code>&lt;canvas&gt;</code> имеет только два атрибута - <strong>ширину</strong> и <strong>высоту</strong>. Оба они не обязательны и могут быть выставлены с использованием свойств <a href="/en-US/docs/DOM" rel="internal" title="en/DOM">DOM</a>. Если атрибуты высоты и ширины не установлены, canvas будет по умолчанию шириной <strong>300 пикселей</strong> и в высоту <strong>150 пикселей</strong>. Вы так же можете выставить размеры произвольно в <a href="/en-US/docs/Web/CSS" rel="internal" title="en/CSS">CSS</a>, но во время рендеринга изображение будет масштабироваться в соответствии с его размером и ориентацией.</p>
@@ -33,7 +33,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 
 <p>Например, мы можем предоставить текстовое описание содержимого canvas или предоставить статичное изображение динамически отображаемого содержимого. Это может выглядеть как-то так:</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="stockGraph" width="150" height="150"&gt;
+<pre class="brush: html">&lt;canvas id="stockGraph" width="150" height="150"&gt;
   current stock price: $3.15 +0.15
 &lt;/canvas&gt;
 
@@ -56,7 +56,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 
 <p>Холст изначально пустой и прозрачный. Первым делом скрипт получает доступ к контексту и отрисовывает его. Элемент {{HTMLElement("canvas")}} имеет <a href="/en-US/docs/Web/API/HTMLCanvasElement#Method">метод</a> <code>getContext()</code>, используется для получения контекста визуализации и её функции рисования. <code>getContext()</code> принимает один параметр, тип контекста. Для 2D графики, которая охвачена этим руководством будем использовать метку "2d".</p>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('tutorial');
+<pre class="brush: js">var canvas = document.getElementById('tutorial');
 var ctx = canvas.getContext('2d');
 </pre>
 
@@ -67,7 +67,7 @@ var ctx = canvas.getContext('2d');
 
 <p>Ранее уже упоминалось, что в браузерах, которые не поддерживают {{HTMLElement("canvas")}} отображается запасное содержимое. Но помимо этого, определить, поддерживает ли браузер <code>canvas</code>, можно прямо из кода, проверив наличие метода <code>getContext()</code>. Код с запасным содержимым, который мы приводили Выше, становится следующим:</p>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('tutorial');
+<pre class="brush: js">var canvas = document.getElementById('tutorial');
 
 if (canvas.getContext){
   var ctx = canvas.getContext('2d');
@@ -87,7 +87,7 @@ if (canvas.getContext){
 <p><strong>Примечание:</strong> вставка скрипта внутрь HTML не является хорошей практикой. Мы делаем это здесь, чтобы сделать пример короче.</p>
 </div>
 
-<pre class="notranslate"><code>&lt;!DOCTYPE html&gt;</code>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Canvas tutorial&lt;/title&gt;
@@ -119,7 +119,7 @@ if (canvas.getContext){
 
 <p>Для начала, давайте посмотрим на простой пример, который рисует два пересекающихся прямоугольника, один из которых имеет прозрачность alpha. Мы изучим, как это работает более детально в последующих примерах.</p>
 
-<pre class="notranslate"><code>&lt;!DOCTYPE html&gt;</code>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
  &lt;head&gt;
   &lt;script type="application/javascript"&gt;

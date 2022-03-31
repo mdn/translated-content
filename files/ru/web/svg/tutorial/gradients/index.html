@@ -9,13 +9,13 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>Есть два типа градиентов: линейный и радиальный. Вы должны присвоить градиенту атрибут <code><strong>id</strong>, </code>в противном случае на него не смогут ссылаться другие элементы внутри файла. Градиенты определяются в секции <code>defs, </code>а не в самой фигуре. Это позволяет их использовать многократно.</p>
 
-<h2 id="SVGLinearGradient" name="SVGLinearGradient">Линейный градиент (Linear Gradient)</h2>
+<h2 id="SVGLinearGradient">Линейный градиент (Linear Gradient)</h2>
 
 <p>Линейные градиенты изменяются вдоль прямой линии. Чтобы вставить градиент, нужно создать ноду {{SVGElement('linearGradient')}} внутри секции <code>&lt;defs&gt; </code>SVG файла.</p>
 
 <h3 id="Basic_example">Basic example</h3>
 
-<pre class="brush: html notranslate">&lt;svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: html">&lt;svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
       &lt;linearGradient id="Gradient1"&gt;
         &lt;stop class="stop1" offset="0%"/&gt;
@@ -44,20 +44,20 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>Выше находится пример линейного градиента, который применён к элементу <code>&lt;rect&gt;. </code>Внутри линейного градиента есть несколько {{SVGElement('stop')}} нод.. Эти ноды сообщают градиенту, какой цвет он должен использовать в позициях, определённых атрибутом <code>offset </code>для позиции и атрибутом <code>stop-color. </code>Это может быть задано прямо в SVG или через CSS. В целях этого примера оба метода были смешаны. Например, <em>Gradient1</em> начинается с красного цвета, изменяется до прозрачно-чёрного в середине и заканчивается синим цветом. Вы можете вставить столько стоп-цветов, сколько нужно, чтобы создать смесь, которая будет красивой или ужасной, как вам нужно. Границы всегда должны изменяться от 0% (или от 0, если вы хотите опустить знак %) до 100% (или 1). Повторяющиеся значения будут использовать стоп, который будет находится дальше всех по XML-дереву. Также, подобно заливке и обводке, вы можете определить атрибут <code>stop-opacity, </code>чтобы задать прозрачность в этой позиции (опять же, в FF3+ можно также использовать rgba-значения для этого).</p>
 
-<pre class="eval notranslate"> &lt;stop offset="100%" stop-color="yellow" stop-opacity="0.5"/&gt;
+<pre class="eval"> &lt;stop offset="100%" stop-color="yellow" stop-opacity="0.5"/&gt;
 </pre>
 
 <p>Чтобы использовать градиент, мы должны сослаться на него из атрибутов объекта <code>fill/stroke</code>. Это делается таким же образом, как вы ссылаетесь на элементы в CSS, используя <code>url</code>. В этом случае, url - это просто ссылка на наш градиент, которому задан уникальный ID, "<em>Gradient". </em>Чтобы добавить его, установим <code>fill="url(#Gradient)"</code>. Наш объект теперь многоцветный. То же самое можно сделать с атрибутом <code>stroke</code>.</p>
 
 <p>Элемент <code>&lt;linearGradient&gt;</code> также принимает некоторые другие атрибуты, который определяют размер и внешний вид градиента. Направление градиента контролируется двумя точками, обозначенными атрибутами <code>x1, x2, y1, y2</code>. Эти атрибуты определяют линию, вдоль которой двигается градиент. По умолчанию градиент имеет горизонтальную ориентацию, но это может быть изменено с помощью этих атрибутов. Gradient2 в примере выше предназначен для создания вертикального градиента.</p>
 
-<pre class="eval notranslate"> &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
+<pre class="eval"> &lt;linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"&gt;
 </pre>
 
 <div class="note">
 <p><strong>Замечание: </strong>Вы также можете использовать атрибут <code>xlink:href </code>для градиентов. Когда он использован, атрибуты и стопы из одного градиента могут быть включены в другой. В примере выше можно было бы не пересоздавать все точки остановки в Gradient2<strong>.</strong></p>
 
-<pre class="eval notranslate"> &lt;linearGradient id="Gradient1"&gt;
+<pre class="eval"> &lt;linearGradient id="Gradient1"&gt;
    &lt;stop id="stop1" offset="0%"/&gt;
    &lt;stop id="stop2" offset="50%"/&gt;
    &lt;stop id="stop3" offset="100%"/&gt;
@@ -69,13 +69,13 @@ translation_of: Web/SVG/Tutorial/Gradients
 <p>Я включил пространство имён xlink прямо в ноду, хотя обычно вы хотели бы определить его в верхней части вашего документа. Подробнее об этом мы <a href="https://developer.mozilla.org/en-US/Web/SVG/Tutorial/Other_content_in_SVG">поговорим в разделе изображений</a>.</p>
 </div>
 
-<h2 id="Radial_Gradient" name="Radial_Gradient">Радиальные градиенты</h2>
+<h2 id="Radial_Gradient">Радиальные градиенты</h2>
 
 <p>Радиальные градиенты похожи на линейные, но рисуют градиент, который "излучается" из точки. Для создания градиента вам необходимо добавить элемент {{SVGElement('radialGradient')}} в секцию <strong>defs</strong>.</p>
 
 <h3 id="Basic_example_2">Basic example</h3>
 
-<pre class="brush: html notranslate">&lt;?xml version="1.0" standalone="no"?&gt;
+<pre class="brush: html">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
       &lt;radialGradient id="RadialGradient1"&gt;
@@ -101,7 +101,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <h3 id="Center_and_focal_point">Center and focal point</h3>
 
-<pre class="brush: html notranslate">&lt;?xml version="1.0" standalone="no"?&gt;
+<pre class="brush: html">&lt;?xml version="1.0" standalone="no"?&gt;
 
 &lt;svg width="120" height="120" version="1.1"
   xmlns="http://www.w3.org/2000/svg"&gt;
@@ -132,7 +132,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <h3 id="spreadMethod">spreadMethod</h3>
 
-<pre class="brush: html notranslate">&lt;?xml version="1.0" standalone="no"?&gt;
+<pre class="brush: html">&lt;?xml version="1.0" standalone="no"?&gt;
 
 &lt;svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;defs&gt;
@@ -170,7 +170,7 @@ translation_of: Web/SVG/Tutorial/Gradients
 
 <p>У обоих типов градиентов также есть атрибут <code><strong>gradientUnits</strong></code>, который описывает систему измерений, которую вы собираетесь использовать, когда описываете размеры или ориентацию или градиент. Данный атрибут принимает 2 возможных значения: <strong><code>userSpaceOnUse</code></strong><code> </code>или <strong><code>objectBoundingBox </code></strong>(дефолтное, показывалось во всех примерах выше). <strong><code>objectBoundingBox </code></strong>автоматически адаптирует градиент к размеру объекта, так что вы можете указать координаты в виде значений от 0 до 1, и браузер автоматически их отпозиционирует. <strong><code>userSpaceOnUse </code></strong>позиционирует градиент в абсолютных единицах измерения, так что вам необходимо знать где находится целевой объект, чтобы правильно применить к нему градиент. radialGradient  выше может быть переписан:</p>
 
-<pre class="eval notranslate"> &lt;radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse"&gt;
+<pre class="eval"> &lt;radialGradient id="Gradient" cx="60" cy="60" r="50" fx="35" fy="35" gradientUnits="userSpaceOnUse"&gt;
 </pre>
 
 <p>Вы также можете применить иную трансформацию к градиенту, используя атрибут <strong><code>gradientTransform</code></strong>, но мы пока что <a href="/en-US/Web/SVG/Tutorial/Basic_Transformations">его не изучали</a>, я оставлю это на потом.<br>

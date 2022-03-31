@@ -42,9 +42,9 @@ L'instruction **`switch`** évalue une expression et, selon le résultat obtenu 
 
 - `expression`
   - : Une expression à comparer avec chacune des clause `case`.
-- `case expressionN `{{optional_inline}}
+- `case expressionN` {{optional_inline}}
   - : Une clause qu'on compare avec `expression`.
-- `default `{{optional_inline}}
+- `default` {{optional_inline}}
   - : Une clause exécutée si aucune correspondance n'est trouvée avec les clause `case` (et/ou s'il n'y a pas de `break` pour les clauses `case` précédentes).
 - `instructionsN`
   - : Les instructions à exécuter lorsque l'`expression` correspond au cas présenté pour cette clause.
@@ -63,7 +63,7 @@ L'instruction {{jsxref("Instructions/break","break")}} peut optionnellement êtr
 
 ### Utiliser `switch`
 
-Dans l'exemple suivant, si l'expression `expr` vaut "Bananes", le programme trouve la correspondance et exécute l'instruction associée. Lorsque l'instruction `break` est trouvée, le programme « sort » de l'instruction `switch` et continue l'exécution avec les instructions  suivantes. Si `break` n'avait pas été utilisé, l'instruction du cas "Cerises" aurait également été exécutée.
+Dans l'exemple suivant, si l'expression `expr` vaut "Bananes", le programme trouve la correspondance et exécute l'instruction associée. Lorsque l'instruction `break` est trouvée, le programme « sort » de l'instruction `switch` et continue l'exécution avec les instructions suivantes. Si `break` n'avait pas été utilisé, l'instruction du cas "Cerises" aurait également été exécutée.
 
 ```js
 switch (expr) {
@@ -258,9 +258,9 @@ Cette nouvelle version, exécutée, produira `"bonjour"` dans la console, sans c
 | Spécification                                                                                | État                         | Commentaires                                         |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-12.11', 'instruction switch')}}                 | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-switch-statement', 'instruction switch')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ESDraft')}} |                                                      |
+| {{SpecName('ES5.1', '#sec-12.11', 'instruction switch')}}                 | {{Spec2('ES5.1')}}     |                                                      |
+| {{SpecName('ES6', '#sec-switch-statement', 'instruction switch')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilité des navigateurs
 

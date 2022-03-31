@@ -12,15 +12,15 @@ translation_of: Web/HTML/Global_attributes/data-*
 
 <div>{{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}</div>
 
-<p>所有这些自定义数据属性都可以通过所属元素的 {{domxref("HTMLElement")}} 接口来访问。  {{domxref("HTMLElement.dataset")}} 属性可以访问它们。 <code>*</code> 可以使用遵循 <a class="external" href="http://www.w3.org/TR/REC-xml/#NT-Name">xml名称生产规则</a> 的任何名称来被替换，并具有以下限制：</p>
+<p>所有这些自定义数据属性都可以通过所属元素的 {{domxref("HTMLElement")}} 接口来访问。  {{domxref("HTMLElement.dataset")}} 属性可以访问它们。 <code>*</code> 可以使用遵循 <a class="external" href="http://www.w3.org/TR/REC-xml/#NT-Name">xml 名称生产规则</a> 的任何名称来被替换，并具有以下限制：</p>
 
 <ul>
  <li>该名称不能以<code>xml</code>开头，无论这些字母是大写还是小写；</li>
  <li>该名称不能包含任何分号 (<code>U+003A</code>)；</li>
- <li>该名称不能包含A至Z的大写字母。</li>
+ <li>该名称不能包含 A 至 Z 的大写字母。</li>
 </ul>
 
-<p>注意，{{domxref("HTMLElement.dataset")}} 属性是一个{{domxref("DOMStringMap")}}，并且自定义数据属性 <em> data-test-value</em> 可以通过 <code>HTMLElement.dataset.testValue</code> ( 或者是<code> HTMLElement.dataset["<em>testValue</em>"] </code>)  来访问，任何破折号(<code>U+002D</code>) 都会被下个字母的大写替代(驼峰拼写)。</p>
+<p>注意，{{domxref("HTMLElement.dataset")}} 属性是一个{{domxref("DOMStringMap")}}，并且自定义数据属性 <em> data-test-value</em> 可以通过 <code>HTMLElement.dataset.testValue</code> ( 或者是<code> HTMLElement.dataset["<em>testValue</em>"] </code>)  来访问，任何破折号 (<code>U+002D</code>) 都会被下个字母的大写替代 (驼峰拼写)。</p>
 
 <h3 id="用法">用法</h3>
 

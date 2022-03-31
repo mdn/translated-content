@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 ---
 <div>{{JSRef}}</div>
 
-<div></div>
+
 
 <p>WeakRef对象允许您保留对另一个对象的弱引用，而不会阻止被弱引用对象被GC回收</p>
 
@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 <p>WeakRef对象包含对对象的弱引用，这个弱引用被称为该WeakRef对象的target或者是referent。对对象的弱引用是指当该对象应该被GC回收时不会阻止GC的回收行为。而与此相反的，一个普通的引用（默认是强引用）会将与之对应的对象保存在内存中。只有当该对象没有任何的强引用时，JavaScript引擎GC才会销毁该对象并且回收该对象所占的内存空间。如果上述情况发生了，那么你就无法通过任何的弱引用来获取该对象。</p>
 
 <div class="note">
-<p><strong>Note:</strong> 在使用前请阅读<a href="#Avoid_where_possible">Avoid where possible</a>，对于WeakRef对象的使用要慎重考虑，<strong>能不使用就尽量不要使用</strong></p>
+<p><strong>备注：</strong> 在使用前请阅读<a href="#Avoid_where_possible">Avoid where possible</a>，对于WeakRef对象的使用要慎重考虑，<strong>能不使用就尽量不要使用</strong></p>
 </div>
 
 <h2 id="构造函数">构造函数</h2>
@@ -68,7 +68,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
 
 <p>这个例子演示了在一个DOM元素中启动一个计数器，当这个元素不存在时停止:</p>
 
-<pre class="brush: js notranslate">class Counter {
+<pre class="brush: js">class Counter {
   constructor(element) {
     // Remember a weak reference to the DOM element
     this.ref = new WeakRef(element);

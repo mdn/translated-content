@@ -32,7 +32,7 @@ original_slug: Games/Анатомия
 
 <p>Некоторый код должен выполняться кадр за кадром, так зачем же прикреплять эту функцию к чему-то другому, кроме графика перерисовки браузера? В Web, <code>{{ domxref("window.requestAnimationFrame()") }}</code> будет основой большинства хорошо запрограммированных покадровых основных циклов.  Callback функция должна быть передана ему при вызове. Callback функция будет выполнена в подходящее время перед следующей перерисовкой. Вот пример простого основного цикла:</p>
 
-<pre class="brush: js notranslate">window.main = function () {
+<pre class="brush: js">window.main = function () {
   window.requestAnimationFrame( main );
 
   // Код, который цикл должен выполнить
@@ -56,7 +56,7 @@ main(); // Start the cycle</pre>
 
 <p>У нашего цикла есть две очевидные проблемы: <code>main()</code> загрязняет <code>{{ domxref("window") }}</code> объект (в нем хранятся все глобальные переменные) и код не оставляет нам возможность остановить цикл, если только вся вкладка не будет закрыта или обновлена. Для решения первой проблемы, если нужно, чтобы основной цикл просто выполнялся и вам не нужен лёгкий (прямой) доступ к нему, вы можете поместить его внутрь самовызывающейся Function Expression (IIFE).</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Начинаем с точки с запятой в случае, если какая-либо строка кода выше данного примера
 * полагается на автоматическую вставку точки с запятой (ASI). Браузер может случайно решить,
 * что весь этот код начинается с предыдущей строки. Первая точка с запятой отмечает начало
@@ -81,7 +81,7 @@ main(); // Start the cycle</pre>
 
 <p>Чтобы остановить основной цикл, вам понадобиться отменить вызов <code>main()</code> с помощью <code>{{ domxref("window.cancelAnimationFrame()") }}</code>. Необходимо передать в <code>cancelAnimationFrame()</code> идентификатор последнего вызова <code>requestAnimationFrame()</code>. Давайте предположим, что функции и переменные вашей игры были определены в пространстве имён, которое вы назвали <code>MyGame</code>.  В таком случае, основной цикл будет выглядеть следующим образом:</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Начинаем с точки с запятой в случае, если какая-либо строка кода выше данного примера
 * полагается на автоматическую вставку точки с запятой (ASI). Браузер может случайно решить,
 * что весь этот код начинается с предыдущей строки. Первая точка с запятой отмечает начало
@@ -102,7 +102,7 @@ main(); // Start the cycle</pre>
 
 <p>Теперь у нас есть переменная <code>stopMain</code>, объявленная в нашем пространстве имён <code>MyGame</code>, которая содержит идентификатор последнего вызова <code>requestAnimationFrame()</code> нашего основного цикла.  В любой момент мы может остановить основной цикл, сказав браузеру, чтобы тот отменил запрос, соответствующий последнему маркеру.</p>
 
-<pre class="brush: js notranslate">window.cancelAnimationFrame( MyGame.stopMain );</pre>
+<pre class="brush: js">window.cancelAnimationFrame( MyGame.stopMain );</pre>
 
 <p>Ключ к программированию основного цикла в JavaScript заключается в том, чтобы прикрепить его к любому событию, которое должно управлять вашими действиями, и обращать внимание на то, как различные системы участвуют во взаимодействии. У вас может быть несколько компонентов, управляемых несколькими различными типами событий. Это может показаться излишним усложнением, но также может быть просто хорошей оптимизацией (не обязательно, конечно). Проблема в том, что вы не выстраиваете типичный основной цикл. В JavaScript вы используйте основной цикл браузера и стараетесь сделать это эффективно. </p>
 
@@ -131,12 +131,12 @@ main(); // Start the cycle</pre>
 
 <p>Это значение нельзя использовать само по себе, потому что оно относиться к неинтересному событию, но его можно вычесть из другой временной ветки, чтобы чётко и точно определить, сколько времени прошло между этими двумя точками. Чтобы получить одну из этих временных меток, вы можете вызвать <code>window.performance.now()</code> и сохранить результат в переменную. </p>
 
-<pre class="brush: js notranslate">var tNow = window.performance.now();
+<pre class="brush: js">var tNow = window.performance.now();
 </pre>
 
 <p>Возвращаемся к основному циклу. Часто вам понадобиться узнать, когда ваша основная функция  была вызвана. Это обычное дело, <code>window.requestAnimationFrame()</code> при выполнении всегда предоставляет метку <code>DOMHighResTimeStamp</code> в качестве аргумента для колбэк-функций. Это приводит к очередному улучшению нашего основного цикла. </p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Начинаем с точки с запятой в случае, если какая-либо строка кода выше данного примера
 * полагается на автоматическую вставку точки с запятой (ASI). Браузер может случайно решить,
 * что весь этот код начинается с предыдущей строки. Первая точка с запятой отмечает начало
@@ -172,7 +172,7 @@ main(); // Start the cycle</pre>
 
 <p>If your game can hit the maximum refresh rate of any hardware you support then your job is fairly easy. You can simply update, render, and then do nothing until VSync.</p>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon
@@ -244,7 +244,7 @@ main(); // Start the cycle</pre>
 <p><strong>Note:</strong> This example, specifically, is in need of technical review.</p>
 </div>
 
-<pre class="brush: js notranslate">/*
+<pre class="brush: js">/*
 * Starting with the semicolon is in case whatever line of code above this example
 * relied on automatic semicolon insertion (ASI). The browser could accidentally
 * think this whole example continues from the previous line. The leading semicolon

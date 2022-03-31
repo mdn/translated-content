@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Instructions/for...of
 ---
 {{jsSidebar("Statements")}}
 
-L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui parcourt un {{jsxref("Les_protocoles_iteration","objet itérable","#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB",1)}} (ce qui inclut les objets {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, l'objet {{jsxref("Fonctions/arguments","arguments")}}, etc.) et qui permet d'exécuter une ou plusieurs instructions pour la valeur de chaque propriété.
+L'**instruction `for...of`** permet de créer une boucle {{jsxref("Array")}} qui parcourt un {{jsxref("Les_protocoles_iteration","objet itérable","#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB",1)}} (ce qui inclut les objets {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("String")}}, {{jsxref("TypedArray")}}, l'objet {{jsxref("Fonctions/arguments","arguments")}}, etc.) et qui permet d'exécuter une ou plusieurs instructions pour la valeur de chaque propriété.
 
 {{EmbedInteractiveExample("pages/js/statement-forof.html")}}
 
@@ -280,7 +280,7 @@ for (let i of iterable) {
 }
 ```
 
-Cette boucle parcourt les valeurs définies comme itérables par [l'objet itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB)\*\* \*\*et dans ce cas ce sont les éléments du tableau `3`, `5`, `7` et pas les propriétés de l'objet.
+Cette boucle parcourt les valeurs définies comme itérables par [l'objet itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB) et dans ce cas ce sont les éléments du tableau `3`, `5`, `7` et pas les propriétés de l'objet.
 
 ### Attention à ne pas réutiliser les générateurs
 
@@ -308,7 +308,7 @@ for (let o of gen){
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'instruction for...of')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

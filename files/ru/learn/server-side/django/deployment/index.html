@@ -115,7 +115,7 @@ original_slug: Learn/Server-side/Django/Разворачивание
 <ul>
  <li><code>DEBUG</code>. При развёртывании сайта должен быть установлен в <code>False</code> (<code>DEBUG = False</code>). Тем самым, прекратится вывод  важной отладочной информации.</li>
  <li><code>SECRET_KEY</code>. Это большое случайное число, применяемое для защиты от CRSF. Важно, чтобы ключ, используемый в продакшене, не указывался в исходном коде, и/или не запрашивался с другого сервера. Django рекомендует размещать значение ключа либо в переменной окружения, или в файле с доступом только на чтение.
-  <pre class="notranslate"># Чтение SECRET_KEY из переменной окружения
+  <pre># Чтение SECRET_KEY из переменной окружения
 import os
 SECRET_KEY = os.environ['SECRET_KEY']
 
@@ -131,7 +131,7 @@ with open('/etc/secret_key.txt') as f:
 
 <p>Откройте <strong>/locallibrary/settings.py</strong>, закомментируйте исходное значение <code>SECRET_KEY</code> и добавьте новые строки, как указано ниже <strong>жирным</strong>. В течении разработки, никаких переменных окружения определено не было, таким образом будут использоваться значения по умолчанию (не имеет значения какой ключ вы используете в процессе разработки, поскольку при развёртывании проекта вы будете использовать другой).</p>
 
-<pre class="brush: python notranslate"># SECURITY WARNING: keep the secret key used in production secret!
+<pre class="brush: python"># SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'cg#p$g+j9tax!#a3cup@1$8obt2_+&amp;k3q+pmu)5%asj6yjpkag'
 <strong>import os</strong>
 <strong>SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&amp;k3q+pmu)5%asj6yjpkag')</strong>
@@ -139,7 +139,7 @@ with open('/etc/secret_key.txt') as f:
 
 <p>Затем закомментируйте строку с настройкой <code>DEBUG</code>, а затем, добавьте новую, указанную ниже.</p>
 
-<pre class="brush: python notranslate"># SECURITY WARNING: don't run with debug turned on in production!
+<pre class="brush: python"># SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 <strong>DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )</strong>
 </pre>
@@ -152,7 +152,7 @@ with open('/etc/secret_key.txt') as f:
 
 <p>Весь перечень настроек для разворачивания вашего сайта находится по ссылке <a href="https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/">Deployment checklist</a> (Django docs). Кроме того, вы можете получить список настроек, выполнив в терминале команду:</p>
 
-<pre class="brush: python notranslate">python3 manage.py check --deploy
+<pre class="brush: python">python3 manage.py check --deploy
 </pre>
 
 <h2 id="Пример_Установка_LocalLibrary_на_Heroku">Пример: Установка LocalLibrary на Heroku</h2>
@@ -247,11 +247,11 @@ with open('/etc/secret_key.txt') as f:
 <ol>
  <li>Установите git себе на компьютер (Вы можете найти версию для своей платформы <a href="https://git-scm.com/downloads">здесь</a>).</li>
  <li>Откройте командную строку (или терминал) и выполните в нём следующую команду, используя ссылку, которую вы получили с github:
-  <pre class="brush: bash notranslate">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/django_local_library.git
+  <pre class="brush: bash">git clone https://github.com/<strong><em>&lt;your_git_user_id&gt;</em></strong>/django_local_library.git
 </pre>
   Это создаст подпапку (с содержанием вашего репозитория и именем вашего репозитория) внутри папки, в которой выполнялась команда.</li>
  <li>Перейдите в эту папку:
-  <pre class="brush: bash notranslate">cd django_local_library.git</pre>
+  <pre class="brush: bash">cd django_local_library.git</pre>
  </li>
 </ol>
 
@@ -260,7 +260,7 @@ with open('/etc/secret_key.txt') as f:
 <ol>
  <li>Скопируйте ваше приложение в папку репозитория (все файлы с таким же уровнем, как у <strong>manage.py,</strong> <u><strong>БЕЗ </strong>папки проекта, в которой эти файлы находятся</u>).</li>
  <li>Откройте файл с расширением <strong>.gitignore </strong>в текстовом редакторе, вставьте в самый его конец строки, приведённые ниже, а затем сохраните (этот файл "говорит" о файлах, которые не должны быть  загружены в git по умолчанию).
-  <pre class="notranslate"># Text backup files
+  <pre># Text backup files
 *.bak
 
 #Database
@@ -269,10 +269,10 @@ with open('/etc/secret_key.txt') as f:
  <li>
   <p>Откройте командную строку или терминал и используйте <code>add</code> команду с флагом <code>-A</code>. Эта команда сохранит изменения в репозиторий:</p>
 
-  <pre class="brush: bash notranslate"><code>git add -A</code></pre>
+  <pre class="brush: bash"><code>git add -A</code></pre>
  </li>
  <li>Используйте команду <code>status</code>,  что бы убедиться, что все файлы, которые вы собираетесь добавить верны (вы хотите включить исходные файлы, а не бинарные файлы, временные файлы и т. д.). В консоль выведется что то вроде этого:
-  <pre class="notranslate">&gt; git status
+  <pre>&gt; git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 Changes to be committed:
@@ -286,10 +286,10 @@ Changes to be committed:
         new file:   templates/registration/password_reset_form.html</pre>
  </li>
  <li>Теперь, зафиксируйте файлы в локальном репозитории:
-  <pre class="brush: bash notranslate">git commit -m "First version of application moved into github"</pre>
+  <pre class="brush: bash">git commit -m "First version of application moved into github"</pre>
  </li>
  <li>Синхронизируете свой локальный репозиторий с сайтом Github:
-  <pre class="notranslate">git push origin master</pre>
+  <pre>git push origin master</pre>
  </li>
 </ol>
 
@@ -309,7 +309,7 @@ Changes to be committed:
 
 <p> Создайте файл с именем <code>Procfile</code> (без расширения) в корне нашего GitHub репозитории объявить типы процессов и точки входа приложения. Скопируйте в него следующий текст:</p>
 
-<pre class="notranslate">web: gunicorn locallibrary.wsgi --log-file -</pre>
+<pre>web: gunicorn locallibrary.wsgi --log-file -</pre>
 
 <p>«web:» сообщает Heroku, что это веб динамический и может быть отправлен HTTP-трафик. Процесс, который начнётся в этом динамически, - это gunicorn, который является популярным сервером веб-приложений, который рекомендует Heroku. Мы запускаем Gunicorn, используя конфигурационную информацию в модуле locallibrary.wsgi (созданный с помощью нашего скелета приложения: /locallibrary/wsgi.py).</p>
 
@@ -321,7 +321,7 @@ Changes to be committed:
 
 <p>Установка <em>Gunicorn</em> локально в командной строке используя пакетный менеджер <em>pip</em> (которые мы установили когда <a href="/en-US/docs/Learn/Server-side/Django/development_environment">настраивали среду разработки</a>):</p>
 
-<pre class="brush: bash notranslate">pip3 install gunicorn
+<pre class="brush: bash">pip3 install gunicorn
 </pre>
 
 <h4 id="Настройка_Базы_Данных">Настройка Базы Данных</h4>
@@ -336,14 +336,14 @@ Changes to be committed:
 
 <p>Установите dj-database-url локально, чтобы он стал частью наших требований к настройке Heroku на удалённом сервере:</p>
 
-<pre class="notranslate">$ pip3 install dj-database-url
+<pre>$ pip3 install dj-database-url
 </pre>
 
 <h5 id="settings.py">settings.py</h5>
 
 <p>Откройте /locallibrary/settings.py и скопируйте следующую конфигурацию в нижнюю часть файла:</p>
 
-<pre class="notranslate"># Heroku: Update database configuration from $DATABASE_URL.
+<pre># Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)</pre>
@@ -363,7 +363,7 @@ DATABASES['default'].update(db_from_env)</pre>
 
 <p>Django будет использовать нашу базу данных SQLite локально по умолчанию, поскольку переменная среды DATABASE_URL не задана в нашей локальной среде. Если вы хотите полностью перейти на Postgres и использовать нашу бесплатную базу данных Heroku для разработки и производства, то вы можете. Например, чтобы установить psycopg2 и его зависимости локально в системе на базе Linux, вы должны использовать следующие команды bash / terminal:</p>
 
-<pre class="brush: bash notranslate"><code>sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib</code>
+<pre class="brush: bash"><code>sudo apt-get install python-pip python-dev libpq-dev postgresql postgresql-contrib</code>
 pip3 install psycopg2
 </pre>
 
@@ -392,7 +392,7 @@ pip3 install psycopg2
 
 <p>Откройте /locallibrary/settings.py и скопируйте следующую конфигурацию в нижнюю часть файла. BASE_DIR уже должен быть определён в вашем файле (STATIC_URL, возможно, уже был определён в файле, когда он был создан. В то время как это не причинит вреда, вы также можете удалить дублируемую предыдущую ссылку).</p>
 
-<pre class="notranslate"># Static files (CSS, JavaScript, Images)
+<pre># Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
@@ -419,14 +419,14 @@ STATIC_URL = '/static/'
 
 <p>Установите <em>WhiteNoise</em> локально, используя следующую команду:</p>
 
-<pre class="notranslate">$ pip3 install whitenoise
+<pre>$ pip3 install whitenoise
 </pre>
 
 <h5 id="settings.py_3">settings.py</h5>
 
 <p>Чтобы установить WhiteNoise в приложение Django, откройте /locallibrary/settings.py, найдите параметр MIDDLEWARE и добавьте WhiteNoiseMiddleware в верхней части списка, чуть ниже SecurityMiddleware:</p>
 
-<pre class="notranslate">MIDDLEWARE = [
+<pre>MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     <strong>'whitenoise.middleware.WhiteNoiseMiddleware',</strong>
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -440,7 +440,7 @@ STATIC_URL = '/static/'
 
 <p>При желании вы можете уменьшить размер статических файлов при их обслуживании (это более эффективно). Просто добавьте следующее в конец /locallibrary/settings.py:</p>
 
-<pre class="notranslate"># Simplified static file serving.
+<pre># Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 </pre>
@@ -449,11 +449,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 <p>Требования Python вашего веб-приложения должны храниться в файле requirements.txt в корневом каталоге вашего репозитория. После этого Heroku автоматически установит их при восстановлении вашей среды. Вы можете создать этот файл с помощью pip в командной строке (запустите в корне repo):</p>
 
-<pre class="brush: bash notranslate">pip3 freeze &gt; requirements.txt</pre>
+<pre class="brush: bash">pip3 freeze &gt; requirements.txt</pre>
 
 <p>После установки всех разных зависимостей выше, файл requirements.txt должен иметь <em>по меньшей мере</em> эти перечисленные элементы (хотя номера версий могут отличаться). Удалите любые другие зависимости, не перечисленные ниже, если вы явно не добавили их для этого приложения.</p>
 
-<pre class="notranslate">dj-database-url==0.4.1
+<pre>dj-database-url==0.4.1
 Django==1.10.2
 gunicorn==19.6.0
 <strong>psycopg2==2.6.2</strong>
@@ -468,7 +468,7 @@ whitenoise==3.2.2
 
 <p>Файл <strong>runtime.txt</strong>, если определён, говорит Heroku, какой язык программирования использовать. Создайте файл в корне репо и добавьте следующий текст:</p>
 
-<pre class="notranslate">python-3.5.2</pre>
+<pre>python-3.5.2</pre>
 
 <div class="note">
 <p><strong>Примечание:</strong> Heroku поддерживает только небольшое количество <a href="https://devcenter.heroku.com/articles/python-support#supported-python-runtimes">Python runtimes</a>. (на момент написания статьи, в том числе и выше). Heroku будет использовать поддерживаемую среду выполнения независимо от значения, указанного в этом файле.</p>
@@ -478,13 +478,13 @@ whitenoise==3.2.2
 
 <p>Далее мы сохраним все наши изменения в Github. В терминале (whist внутри нашего репозитория) введите следующие команды:</p>
 
-<pre class="brush: python notranslate">git add -A
+<pre class="brush: python">git add -A
 git commit -m "Added files and changes required for deployment to heroku"
 git push origin master</pre>
 
 <p>Прежде чем продолжить, дайте возможность проверить сайт снова локально и убедиться, что это не повлияло ни на одно из наших изменений выше. Запустите веб-сервер разработки как обычно, а затем проверьте, работает ли сайт, как вы ожидаете в своём браузере.</p>
 
-<pre class="brush: bash notranslate">python3 manage.py runserver</pre>
+<pre class="brush: bash">python3 manage.py runserver</pre>
 
 <p>Теперь мы должны быть готовы начать развёртывание LocalLibrary на Heroku.</p>
 
@@ -506,14 +506,14 @@ git push origin master</pre>
 
 <p>После установки клиента вам будут доступны команды. Например, чтобы получить справку о клиенте:</p>
 
-<pre class="brush: bash notranslate">heroku help
+<pre class="brush: bash">heroku help
 </pre>
 
 <h3 id="Создание_и_загрузка_веб-сайта">Создание и загрузка веб-сайта</h3>
 
 <p>Чтобы создать приложение, мы запускаем команду «create» в корневом каталоге нашего репозитория. Это создаёт git remote («указатель на удалённый репозиторий»), названный heroku в нашей локальной среде git.</p>
 
-<pre class="brush: bash notranslate">heroku create</pre>
+<pre class="brush: bash">heroku create</pre>
 
 <div class="note">
 <p><strong>Примечание:</strong> вы можете назвать удалённый, если хотите, указав значение после «create». Если вы этого не сделаете, вы получите случайное имя. Имя используется в URL-адресе по умолчанию.</p>
@@ -521,19 +521,19 @@ git push origin master</pre>
 
 <p>Затем мы можем подтолкнуть наше приложение в репозиторий heroku как показано ниже. Это позволит загрузить приложение, упаковать его в dyno, запустить collectstatic, и запустить сам сайт.</p>
 
-<pre class="brush: bash notranslate">git push heroku master</pre>
+<pre class="brush: bash">git push heroku master</pre>
 
 <p>Если нам повезёт, приложение «заработает» на сайте, но оно не будет работать должным образом, потому что мы не настроили таблицы базы данных для использования нашим приложением. Для этого нам нужно использовать команду  <code>heroku run</code> и запустить "<a href="https://devcenter.heroku.com/articles/deploying-python#one-off-dynos">one off dyno</a>" для выполнения операции переноса. Введите в терминал следующую команду:</p>
 
-<pre class="brush: bash notranslate">heroku run python manage.py migrate</pre>
+<pre class="brush: bash">heroku run python manage.py migrate</pre>
 
 <p>Мы также должны будем иметь возможность добавлять книги и авторов, поэтому давайте также создадим суперпользователя, снова используя одноразовый динамический режим:</p>
 
-<pre class="brush: bash notranslate">heroku run python manage.py createsuperuser</pre>
+<pre class="brush: bash">heroku run python manage.py createsuperuser</pre>
 
 <p>Как только это будет завершено, мы можем посмотреть сайт. Он должен работать, хотя в нем ещё нет книг. Чтобы открыть браузер на новом веб-сайте, используйте команду:</p>
 
-<pre class="brush: bash notranslate">heroku open</pre>
+<pre class="brush: bash">heroku open</pre>
 
 <p>Создайте несколько книг на сайте администратора и проверьте, работает ли сайт, как вы ожидаете.</p>
 
@@ -541,7 +541,7 @@ git push origin master</pre>
 
 <p>Вы можете проверить дополнения в своём приложении, используя <code>heroku addons</code> команду. Это будет список всех аддонов, их ценовая категория и состояние.</p>
 
-<pre class="brush: bash notranslate">&gt;heroku addons
+<pre class="brush: bash">&gt;heroku addons
 
 Add-on                                     Plan       Price  State
 ─────────────────────────────────────────  ─────────  ─────  ───────
@@ -550,7 +550,7 @@ heroku-postgresql (postgresql-flat-26536)  hobby-dev  free   created
 
 <p>Здесь мы видим, что у нас есть только одна надстройка, база данных postgres SQL. Это бесплатно и автоматически создаётся при создании приложения. Вы можете открыть веб-страницу, чтобы более подробно изучить надстройку базы данных (или любое другое дополнение), используя следующую команду:</p>
 
-<pre class="brush: bash notranslate">heroku addons:open heroku-postgresql
+<pre class="brush: bash">heroku addons:open heroku-postgresql
 </pre>
 
 <p>Другие команды позволяют создавать, уничтожать, обновлять и понижать аддоны (используя аналогичный синтаксис для открытия). Для получения дополнительной информации см.  <a href="https://devcenter.heroku.com/articles/managing-add-ons">Managing Add-ons</a> (Heroku docs).</p>
@@ -559,7 +559,7 @@ heroku-postgresql (postgresql-flat-26536)  hobby-dev  free   created
 
 <p>Вы можете проверить конфигурационные переменные для сайта, используя команду  <code>heroku config</code>. Ниже вы можете видеть, что у нас есть только одна переменная <code>DATABASE_URL</code> , используемая для настройки нашей базы данных.</p>
 
-<pre class="brush: bash notranslate">&gt;heroku config
+<pre class="brush: bash">&gt;heroku config
 
 === locallibrary Config Vars
 DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-201-144.compute-1.amazonaws.com:5432/dbftm4qgh3kda3</pre>
@@ -572,7 +572,7 @@ DATABASE_URL: postgres://uzfnbcyxidzgrl:j2jkUFDF6OGGqxkgg7Hk3ilbZI@ec2-54-243-20
 
 <p>Мы устанавливаем  <code>DJANGO_SECRET_KEY</code> используя команду <code>config:set</code> (как показано ниже). Не забудьте использовать свой секретный ключ!</p>
 
-<pre class="brush: bash notranslate">&gt;heroku config:set DJANGO_SECRET_KEY=eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh&amp;=
+<pre class="brush: bash">&gt;heroku config:set DJANGO_SECRET_KEY=eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh&amp;=
 
 Setting DJANGO_SECRET_KEY and restarting locallibrary... done, v7
 DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
@@ -580,20 +580,20 @@ DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
 
 <p>Аналогично мы устанавливаем  <code>DJANGO_DEBUG</code>:</p>
 
-<pre class="brush: bash notranslate">&gt;heroku config:set <code>DJANGO_DEBUG=''
+<pre class="brush: bash">&gt;heroku config:set <code>DJANGO_DEBUG=''
 
 Setting DJANGO_DEBUG and restarting locallibrary... done, v8</code></pre>
 
 <p>Если вы посетите веб-сайт сейчас, вы получите ошибку "Bad request" , потому что в  <a href="https://docs.djangoproject.com/en/1.10/ref/settings/#allowed-hosts">ALLOWED_HOSTS</a> надо внести параметры, если у вас <code>DEBUG=False</code> (в качестве меры безопасности). Откройте <strong>/locallibrary/settings.py</strong> и измените <code>ALLOWED_HOSTS</code> для включения вашего базового URL-адреса приложения (например, 'locallibrary1234.herokuapp.com') URL, который вы обычно используете на локальном сервере разработки.</p>
 
-<pre class="brush: python notranslate">ALLOWED_HOSTS = ['&lt;your app URL without the https:// prefix&gt;.herokuapp.com','127.0.0.1']
+<pre class="brush: python">ALLOWED_HOSTS = ['&lt;your app URL without the https:// prefix&gt;.herokuapp.com','127.0.0.1']
 # For example:
 # ALLOWED_HOSTS = ['fathomless-scrubland-30645.herokuapp.com','127.0.0.1']
 </pre>
 
 <p>Затем сохраните настройки и передайте их в репозиторий Github и в Heroku:</p>
 
-<pre class="brush: bash notranslate">git add -A
+<pre class="brush: bash">git add -A
 git commit -m 'Update ALLOWED_HOSTS with site and development server URL'
 git push origin master
 git push heroku master</pre>
@@ -606,7 +606,7 @@ git push heroku master</pre>
 
 <p>Клиент Heroku предоставляет несколько инструментов для отладки:</p>
 
-<pre class="brush: bash notranslate">heroku logs  # Show current logs
+<pre class="brush: bash">heroku logs  # Show current logs
 heroku logs --tail # Show current logs and keep updating with any new results
 heroku config:set DEBUG_COLLECTSTATIC=1 # Add additional logging for collectstatic (this tool is run automatically during a build)
 heroku ps   #Display dyno status

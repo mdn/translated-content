@@ -36,12 +36,12 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>Вы уже должны были установить <code>express-generator</code>, читая статью <a>установка среды разработки Node</a>. Напомним, что генератор установлен с помощью менеджера пакетов NPM, при выполнении команды:</p>
 
-<pre class="brush: bash notranslate"><code>npm install express-generator -g</code>
+<pre class="brush: bash"><code>npm install express-generator -g</code>
 </pre>
 
 <p><code>E</code><code>xpress-generator </code>имеет ряд параметров, которые можно увидеть, выполнив команду express --help (или express -h):</p>
 
-<pre class="brush: bash notranslate">&gt; express --help
+<pre class="brush: bash">&gt; express --help
 
   Usage: express [options] [dir]
 
@@ -63,7 +63,7 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>Команда <code>express</code> создаст проект в <em>текущем</em> каталоге с использованием (устаревшего) движка представления <em>Jade</em> и обычного CSS. Если указать <font face="Courier New, monospace">express </font><font face="Courier New, monospace">name</font>, проект будет создан в подкаталоге name текущего каталога. </p>
 
-<pre class="brush: bash notranslate"><code>express</code></pre>
+<pre class="brush: bash"><code>express</code></pre>
 
 <p>Можно выбрать движок представления (шаблон), используя --<code>view; </code><code><font face="Times New Roman, serif">параметр</font></code><code> --</code><code>css </code> позволяет выбрать движок для создания CSS.</p>
 
@@ -127,12 +127,12 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 
 <p>Выберем место для нового проекта — каталог <font face="Courier New, monospace">express-locallibrary-tutorial - </font><font face="Times New Roman, serif">и выполним</font><font face="Courier New, monospace"> </font>команду:</p>
 
-<pre class="brush: bash notranslate">express express-locallibrary-tutorial --view=pug
+<pre class="brush: bash">express express-locallibrary-tutorial --view=pug
 </pre>
 
 <p>Будет создан каталог <font face="Courier New, monospace">express-locallibrary-tutorial </font><font face="Times New Roman, serif">и выведен список созданных внутри каталога проектных файлов</font>.</p>
 
-<pre class="brush: bash notranslate">   create : express-locallibrary-tutorial
+<pre class="brush: bash">   create : express-locallibrary-tutorial
    create : express-locallibrary-tutorial/package.json
    create : express-locallibrary-tutorial/app.js
    create : express-locallibrary-tutorial/public/images
@@ -169,16 +169,16 @@ translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 <ol>
  <li>Прежде всего установим зависимости (команда <code>install</code> запросит все пакеты зависимостей, указанные в файле<strong> package.json</strong>).
 
-  <pre class="brush: bash notranslate">cd express-locallibrary-tutorial
+  <pre class="brush: bash">cd express-locallibrary-tutorial
 npm install</pre>
  </li>
  <li>Затем запустим приложение.
   <ul>
    <li>В Windows используйте команду:
-    <pre class="brush: bash notranslate">SET DEBUG=express-locallibrary-tutorial:* &amp; npm start</pre>
+    <pre class="brush: bash">SET DEBUG=express-locallibrary-tutorial:* &amp; npm start</pre>
    </li>
    <li>В Mac OS X или Linux используйте команду:
-    <pre class="brush: bash notranslate">DEBUG=express-locallibrary-tutorial:* npm start
+    <pre class="brush: bash">DEBUG=express-locallibrary-tutorial:* npm start
 </pre>
    </li>
   </ul>
@@ -193,7 +193,7 @@ npm install</pre>
 <div class="note">
 <p><strong>Примечание:</strong> Можно также запустить приложение командой <code>npm start</code>. Переменная DEBUG, указанная в примере, включает логирование в консоль для дальнейшей отладки. Так, при посещении страницы веб-приложения, вы увидите похожий вывод в консоль:</p>
 
-<pre class="brush: bash notranslate">&gt;SET DEBUG=express-locallibrary-tutorial:* &amp; npm start
+<pre class="brush: bash">&gt;SET DEBUG=express-locallibrary-tutorial:* &amp; npm start
 
 &gt; express-locallibrary-tutorial@0.0.0 start D:\express-locallibrary-tutorial
 &gt; node ./bin/www
@@ -212,7 +212,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 <p>Одно из самых простых средств для этого --<br>
  <a href="https://github.com/remy/nodemon">nodemon</a>. Его обычно устанавливают глобально (так как это "инструмент"), но  сейчас мы установим его и будем применять локально как зависимость разработки, так что любые разработчики проекта получат его автоматически при установке приложения. Выполним следующую команду (предполагаем, что мы находимся в корневом каталоге):</p>
 
-<pre class="brush: bash notranslate">npm install --save-dev nodemon</pre>
+<pre class="brush: bash">npm install --save-dev nodemon</pre>
 
 
 
@@ -220,20 +220,20 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 
 
-<pre class="notranslate"><code><font color="#333333"><font face="Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace"><font size="3">npm install -g nodemon</font></font></font></code></pre>
+<pre><code><font color="#333333"><font face="Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace"><font size="3">npm install -g nodemon</font></font></font></code></pre>
 
 
 
 <p>В файле <strong>package.json </strong>проекта появится  новый раздел с этой зависимостью (на вашей машине номер версии nodemon может быть другим) :</p>
 
-<pre class="brush: json notranslate">  "devDependencies": {
+<pre class="brush: json">  "devDependencies": {
     "nodemon": "^1.11.0"
   }
 </pre>
 
 <p>Поскольку nodemon не установлен глобально, его нельзя запустить из командной строки (пока мы не добавим его в путь), но его можно вызвать из сценария NPM, так как NPM знает все об установленных пакетах.  Раздел  <code>scripts</code> в файле package.json исходно будет содержать одну строку, которая начинается с  <code>"start"</code>. Обновите его, поставив запятую в конце строки, и добавьте строку <code>"devstart",</code>  показанную ниже:</p>
 
-<pre class="brush: json notranslate">  "scripts": {
+<pre class="brush: json">  "scripts": {
     "start": "node ./bin/www"<strong>,</strong>
 <strong>    "devstart": "nodemon ./bin/www"</strong>
   },
@@ -245,13 +245,13 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
  <li>В Windows:</li>
 </ul>
 
-<pre class="brush: bash notranslate">SET DEBUG=express-locallibrary-tutorial:* &amp; npm <strong>run devstart</strong></pre>
+<pre class="brush: bash">SET DEBUG=express-locallibrary-tutorial:* &amp; npm <strong>run devstart</strong></pre>
 
 <ul>
  <li>Для macOS или Linux:</li>
 </ul>
 
-<pre class="notranslate"><code>DEBUG=express-locallibrary-tutorial:* npm <strong>run devstart</strong></code></pre>
+<pre><code>DEBUG=express-locallibrary-tutorial:* npm <strong>run devstart</strong></code></pre>
 
 <div class="note">
 <p><strong>Примечание:</strong> Сейчас после изменения любого файла проекта сервер будет перезапускаться (или можно самостоятельно перезапустить его, введя <code>rs</code> в командной строке). Вам всё равно придётся обновить страницу в браузере .</p>
@@ -267,7 +267,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p>После установки зависимостей проект имеет такую структуру файлов (файлы - это элементы <strong>без </strong>префикса"/"). Файл <strong>package.json</strong> определяет имя файла с приложением, сценарии запуска, зависимости и др.  Сценарий запуска задаёт точку входа приложения, у нас -- файл JavaScript <strong>/bin/www</strong>. Этот файл настраивает некоторые обработчики ошибок приложения, а затем загружает  <strong>app.js </strong>для выполнения остальной работы. Пути приложения хранятся в отдельных модулях каталога <strong>routes/</strong>.  Шаблоны хранятся в каталоге /<strong>views</strong>.</p>
 
-<pre class="notranslate">/express-locallibrary-tutorial
+<pre>/express-locallibrary-tutorial
     <strong>app.js</strong>
     /bin
         <strong>www</strong>
@@ -295,7 +295,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p>Файл <strong>package.json </strong>указывает зависимости приложения и содержит другие данные:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "name": "express-locallibrary-tutorial",
   "version": "0.0.0",
   "private": true,
@@ -329,7 +329,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p>Раздел "scripts" определяет скрипт" start", выполняемый при запуске сервера командой <code>npm start</code>.  Можно видеть, что самом деле выполняется команда node <strong>./bin/www</strong>.  Кроме того, определяется script "<em>devstart</em>", который вызывается командой <code>npm run devstart</code>. Запускается тот же файл <strong>./bin/www</strong> ,но командой <em>nodemon</em> вместо <em>node</em>.</p>
 
-<pre class="notranslate"><code>"scripts": {
+<pre><code>"scripts": {
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www"
   },</code></pre>
@@ -338,7 +338,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p>Файл <strong>/bin/www</strong> – это входная точка приложения. Сначала в файле создаётся объект основного приложения, расположенного в app.js — выполняется app=<code>require(./</code><code>app</code><code>).</code></p>
 
-<pre class="brush: js notranslate">#!/usr/bin/env node
+<pre class="brush: js">#!/usr/bin/env node
 
 /**
  * Module dependencies.
@@ -357,7 +357,7 @@ GET /favicon.ico 404 34.134 ms - 1335</pre>
 
 <p>Этот файл создаёт объект приложения  <code>express </code>(с именем<code>app</code>, по соглашению), настраивает приложение и промежуточное ПО, а затем экспортирует приложение из модуля. В приведённом ниже коде показаны только те части файла, которые создают и экспортируют объект приложения:</p>
 
-<pre class="brush: js notranslate"><code>var express = require('express');
+<pre class="brush: js"><code>var express = require('express');
 var app = express();
 ...
 </code>module.exports = app;
@@ -367,7 +367,7 @@ var app = express();
 
 <p>Рассмотрим детали файла app.js. Сначала при помощи require(...) выполняется импорт некоторых полезных библиотек node: <em>express,</em> s<em>erve-favicon</em>, <em>morgan</em>, <em>cookie-parse, body-parser </em>(они ранее были загружены для нашего приложения командой npm install), а также path из основной библиотеки node (применяется для разбора путей каталогов и файлов).</p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -377,7 +377,7 @@ var bodyParser = require('body-parser');
 
 <p>Затем require запрашивает модули из каталога путей route. Эти модули и файлы содержат код для обработки конкретного набора соответствующих путей (URL маршрутов). Если мы расширим каркас приложения, например, чтобы получить список книг библиотеки, нам следует добавить новый файл для обработки пути, связанного с книгами.</p>
 
-<pre class="brush: js notranslate">var index = require('./routes/index');
+<pre class="brush: js">var index = require('./routes/index');
 var users = require('./routes/users');
 </pre>
 
@@ -387,7 +387,7 @@ var users = require('./routes/users');
 
 <p>Далее, импортированные модули express применяются для создания объекта app, который потом устанавливает движки-шаблоны представления. Установка движков состоит их двух частей. В первой мы задаём значение 'view', указывая папку, в которой будут размещаться шаблоны (у нас это /views). Во второй мы задаём значение движка 'view engine', указывая на библиотеку шаблона (у нас — "pug").</p>
 
-<pre class="brush: js notranslate">var app = express();
+<pre class="brush: js">var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -396,7 +396,7 @@ app.set('view engine', 'pug');
 
 <p>Следующие строки вызывают app.use(...), чтобы добавить промежуточные (middleware) библиотеки в цепочку обработки запросов. Кроме сторонних библиотек, импортированных ранее, используем библиотеку Express.static, что позволит обрабатывать статические файлы из папки <strong>/public </strong>корня проекта.</p>
 
-<pre class="brush: js notranslate">// uncomment after placing your favicon in /public
+<pre class="brush: js">// uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -407,7 +407,7 @@ app.use(cookieParser());
 
 <p>Теперь, когда промежуточные библиотеки настроены, мы добавляем (импортированный ранее) код обработки путей в цепочку обработки запросов. Импортированный код будет задавать отдельные пути для разных частей сайта:</p>
 
-<pre class="brush: js notranslate">app.use('/', index);
+<pre class="brush: js">app.use('/', index);
 app.use('/users', users);
 </pre>
 
@@ -417,7 +417,7 @@ app.use('/users', users);
 
 <p>Последняя в файле промежуточная библиотека добавляет методы обработки ошибок и ответов 404 от HTTP.</p>
 
-<pre class="brush: js notranslate">// catch 404 and forward to error handler
+<pre class="brush: js">// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
@@ -438,13 +438,13 @@ app.use(function(err, req, res, next) {
 
 <p>Объект app приложения Express теперь полностью настроен. Остался последний шаг - добавить его к экспортируемым элементам модуля (это позволит импортировать его в файле <strong>/bin/www</strong>).</p>
 
-<pre class="brush: js notranslate">module.exports = app;</pre>
+<pre class="brush: js">module.exports = app;</pre>
 
 <h3 id="Пути_Routes">Пути (Routes)</h3>
 
 <p>Файл путей /routes/users.js приведён ниже (файлы путей имеют сходную структуру, поэтому нет необходимости приводить также index.js). Сначала загружается модуль Express, затем он используется для получения объекта express.Router. После этого для этого объекта задаётся путь, и, наконец, объект-роутер экспортируется из модуля (именно это позволяет импортировать файл в app.js):.</p>
 
-<pre class="brush: js notranslate">var express = require('express');
+<pre class="brush: js">var express = require('express');
 var router = express.Router();
 
 /* GET users listing. */
@@ -467,7 +467,7 @@ module.exports = router;
 
 <p>Файлы преставлений (шаблонов) хранятся в каталоге <strong><font color="#333333"><font face="Arial, x-locale-body, sans-serif"><font size="3">/views </font></font></font></strong><font color="#333333"><font face="Times New Roman, serif"><font size="3">(это указано в </font></font><font face="Courier New, monospace"><font size="3">app.js</font></font><font face="Times New Roman, serif"><font size="3">) и имеют расширение</font></font></font><strong><font color="#333333"><font face="Times New Roman, serif"><font size="3"> </font></font></font></strong><strong>.pug</strong>. Метод <code><a href="http://expressjs.com/en/4x/api.html#res.render">Response.render()</a></code> выполняет указанный шаблон, передавая объекту значение именованной переменной, и затем посылает результат как ответ. В коде из <strong>/routes/index.js</strong> (приводится ниже) можно увидеть, что роут отвечает, используя шаблон "index" с переданным значением переменной "title" из шаблона.</p>
 
-<pre class="brush: js notranslate">/* GET home page. */
+<pre class="brush: js">/* GET home page. */
 router.get('/', function(req, res) {
   res.render('index', { title: 'Express' });
 });
@@ -475,7 +475,7 @@ router.get('/', function(req, res) {
 
 <p>Шаблон для пути '/' приведён ниже (файл <strong>index.pug</strong>). О синтаксисе мы поговорим позже. Сейчас важно знать, что переменная title со значением 'Express' помещена в определённое место шаблона.</p>
 
-<pre class="notranslate">extends layout
+<pre>extends layout
 
 block content
   h1= title

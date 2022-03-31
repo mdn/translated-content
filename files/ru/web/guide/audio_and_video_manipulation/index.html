@@ -41,7 +41,7 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 <p>We can set up our video player and <code>&lt;canvas&gt;</code> element like this:</p>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
+<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -52,7 +52,7 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 <p>This code handles altering the frames.</p>
 
-<pre class="brush: js notranslate">var processor = {
+<pre class="brush: js">var processor = {
   timerCallback: function() {
     if (this.video.paused || this.video.ended) {
       return;
@@ -97,11 +97,11 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 <p>Когда страница загрузилась осуществите вызов:</p>
 
-<pre class="brush: js notranslate">processor.doLoad()</pre>
+<pre class="brush: js">processor.doLoad()</pre>
 
 <h4 id="Результат">Результат</h4>
 
-<p>{{EmbedLiveSample("Video_and_canvas", '100%', 580)}}</p>
+<p>{{EmbedLiveSample("Видео_и_холст_canvas", '100%', 580)}}</p>
 
 <p>This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of <code>setTimeout()</code> when running on browsers that support it.</p>
 
@@ -127,19 +127,19 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls
+<pre class="brush: html">&lt;video id="my-video" controls
        src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"&gt;
 &lt;/video&gt;</pre>
 
 <h4 id="JavaScript_2">JavaScript</h4>
 
-<pre class="brush: js notranslate">var myVideo = document.getElementById('my-video');
+<pre class="brush: js">var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;</pre>
 
 <div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
+<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -152,7 +152,7 @@ var myVideo = document.getElementById('my-video');
 myVideo.playbackRate = 2;&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById('code');
+<pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var edit = document.getElementById('edit');
 var code = textarea.value;
@@ -222,13 +222,13 @@ window.addEventListener('load', setPlaybackRate);
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls
+<pre class="brush: html">&lt;video id="my-video" controls
        src="myvideo.mp4" type="video/mp4"&gt;
 &lt;/video&gt;</pre>
 
 <h4 id="JavaScript_3">JavaScript</h4>
 
-<pre class="brush: js notranslate">var context = new AudioContext(),
+<pre class="brush: js">var context = new AudioContext(),
     audioSource = context.createMediaElementSource(document.getElementById("my-video")),
     filter = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -240,9 +240,9 @@ filter.frequency.value = 1000;
 filter.gain.value = 25;</pre>
 
 <div class="hidden">
-<h6 id="Playable_code_2" name="Playable_code_2">Playable code</h6>
+<h6 id="Playable_code_2">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
+<pre class="brush: html">&lt;video id="my-video" controls="true" width="480" height="270" crossorigin="anonymous"&gt;
   &lt;source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type="video/webm"&gt;
   &lt;source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type="video/mp4"&gt;
 &lt;/video&gt;
@@ -255,7 +255,7 @@ filter.type = "lowshelf";
 filter.frequency.value = 1000;
 filter.gain.value = 25;&lt;/textarea&gt;</pre>
 
-<pre class="brush: js notranslate">var context     = new AudioContext(),
+<pre class="brush: js">var context     = new AudioContext(),
     audioSource = context.createMediaElementSource(document.getElementById("my-video")),
     filter      = context.createBiquadFilter();
 audioSource.connect(filter);
@@ -315,7 +315,7 @@ window.addEventListener('load', setFilter);
 
 <h4 id="Пример">Пример</h4>
 
-<pre class="brush: js notranslate">var convolver = context.createConvolver();
+<pre class="brush: js">var convolver = context.createConvolver();
 convolver.buffer = this.impulseResponseBuffer;
 // Connect the graph.
 source.connect(convolver);
@@ -330,7 +330,7 @@ convolver.connect(context.destination);
 
 <h4 id="Пример_2">Пример</h4>
 
-<pre class="brush: js notranslate">var panner = context.createPanner();
+<pre class="brush: js">var panner = context.createPanner();
 panner.coneOuterGain = 0.2;
 panner.coneOuterAngle = 120;
 panner.coneInnerAngle = 0;
@@ -401,4 +401,4 @@ context.listener.setPosition(0, 0, 0);</pre>
 
 <div>{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Fundamentals/")}}</div>
 
-<div></div>
+

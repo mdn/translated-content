@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
 <div>{{JSRef}}</div>
 
-<div></div>
+
 
 <div><code><strong>finally()</strong></code> 方法返回一个{{jsxref("Promise")}}。在promise结束时，无论结果是fulfilled或者是rejected，都会执行指定的回调函数。这为在<code>Promise</code>是否成功完成后都需要执行的代码提供了一种方式。</div>
 
@@ -49,7 +49,7 @@ p.finally(function() {
 </ul>
 
 <div class="note">
-<p><strong>注意:</strong> 在<code>finally</code>回调中 <code>throw</code>（或返回被拒绝的promise）将以 <code>throw()</code> 指定的原因拒绝新的promise.</p>
+<p><strong>备注：</strong> 在<code>finally</code>回调中 <code>throw</code>（或返回被拒绝的promise）将以 <code>throw()</code> 指定的原因拒绝新的promise.</p>
 </div>
 
 <h2 id="示例">示例</h2>

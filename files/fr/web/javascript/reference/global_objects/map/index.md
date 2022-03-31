@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Map
 ---
 {{JSRef}}
 
-L'objet **`Map`** représente un dictionnaire, autrement dit une carte de clés/valeurs. N'importe quelle valeur valable en JavaScript (que ce soit les objets ou les valeurs de types primitifs) peut être utilisée comme clé ou comme valeur.
+L'objet **`Map`** représente un dictionnaire, autrement dit une carte de clés/valeurs. N'importe quelle valeur valable en JavaScript (que ce soit les objets ou les valeurs de types primitifs) peut être utilisée comme clé ou comme valeur.
 
 L'ordre d'insertion des clés est mémorisé dans l'objet et les boucles sur les `Map` parcourent les clés dans cet ordre.
 
@@ -35,15 +35,15 @@ On notera qu'un objet `Map` contenant des objets ne sera parcouru que dans l'ord
 L'égalité des clés est testée avec l'algorithme basé sur [l'égalité de valeurs](/fr/docs/JavaScript/Les_différents_tests_d_Égalité_comment_les_utiliser#.C3.89galit.C3.A9_de_valeurs) :
 
 - {{jsxref("NaN")}} est considéré égal à `NaN` (bien que, pour l'égalité stricte `NaN !== NaN`)
-- les autres valeurs sont considérées égales au sens de l'égalité stricte (l'opérateur  `===`).
+- les autres valeurs sont considérées égales au sens de l'égalité stricte (l'opérateur  `===`).
 
 Dans les versions précédentes des brouillons ECMAScript 2015 (ES6) `-0` et `+0` étaient considérés différents (bien que `-0 === +0`), ceci a été changé dans les versions ultérieures et a été adapté avec Gecko 29 {{geckoRelease("29")}} ({{bug("952870")}}) et une version nocturne de [Chrome](https://code.google.com/p/v8/issues/detail?id=3069).
 
 ### Comparaison entre objets et maps
 
-Les {{jsxref("Object", "objets","",1)}} sont similaires aux `Maps`, chacun manipulant des clés associées à des valeurs, récupérant ces valeurs, supprimant des clés... Il n'y avait auparavant pas d'alternatives natives et c'est pourquoi, historiquement, les objets JavaScript ont été utilisés comme des `Maps`. Malgré tout, il y a des différences importantes entre` Objects` et `Maps` qui permettent de distinguer une utilisation des objets `Map` plus efficace :
+Les {{jsxref("Object", "objets","",1)}} sont similaires aux `Maps`, chacun manipulant des clés associées à des valeurs, récupérant ces valeurs, supprimant des clés... Il n'y avait auparavant pas d'alternatives natives et c'est pourquoi, historiquement, les objets JavaScript ont été utilisés comme des `Maps`. Malgré tout, il y a des différences importantes entre `Objects` et `Maps` qui permettent de distinguer une utilisation des objets `Map` plus efficace :
 
-- Un `Object` possède un prototype, certaines clés par défaut peuvent donc entrer en collision avec les clés qu'on souhaite créer. À partir d'ES5, on peut écrire `map = `{{jsxref("Object.create", "Object.create(null)")}} mais cette formulation est rarement utilisée.
+- Un `Object` possède un prototype, certaines clés par défaut peuvent donc entrer en collision avec les clés qu'on souhaite créer. À partir d'ES5, on peut écrire `map =` {{jsxref("Object.create", "Object.create(null)")}} mais cette formulation est rarement utilisée.
 - Les clés d'une `Map` sont ordonnées tandis que les clés d'un objet n'ont pas d'ordre particulier. Ainsi, quand on parcourt une `Map`, on obtient les clés selon leur ordre d'insertion. On notera qu'à partir d'ECMAScript 2015, la spécification pour les objets indique de conserver l'ordre de création pour les clés qui sont des chaînes et des symboles.
 - Les clés d'un `Object` sont des {{jsxref("String", "chaînes de caractères","",1)}} ou des symboles (cf. {{jsxref("Symbol")}}), alors que pour une `Map` ça peut être n'importe quelle valeur.
 - Il est possible d'obtenir facilement la taille d'une `Map` avec `size`. En revanche, pour un `Object` il faudra compter « manuellement ».
@@ -103,7 +103,7 @@ myMap.get(function() {}); // indéfini car fonctionClé !== function () {}
 
 ### Utiliser `NaN` comme clé
 
-{{jsxref("NaN")}} peut être utilisé comme une clé. Bien que `NaN` ne soit pas strictement égal à lui-même (`NaN !== NaN` est vérifié), on peut bâtir l'exemple suivant car on ne peut pas distinguer deux valeurs `NaN `:
+{{jsxref("NaN")}} peut être utilisé comme une clé. Bien que `NaN` ne soit pas strictement égal à lui-même (`NaN !== NaN` est vérifié), on peut bâtir l'exemple suivant car on ne peut pas distinguer deux valeurs `NaN`&nbsp;:
 
 ```js
 const myMap = new Map();
@@ -117,7 +117,7 @@ myMap.get(otherNaN); // "not a number"
 
 ### Parcourir des objets `Maps` avec `for..of`
 
-Il est possible de parcourir les objets `Map `grâce à des boucles `for..of` :
+Il est possible de parcourir les objets `Map` grâce à des boucles `for..of` :
 
 ```js
 const myMap = new Map();

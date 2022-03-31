@@ -80,7 +80,7 @@ new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
 | Spécification                                                                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.every', 'TypedArray.prototype.every')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.every', 'TypedArray.prototype.every')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.every', 'TypedArray.prototype.every')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

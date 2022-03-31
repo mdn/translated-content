@@ -23,7 +23,7 @@ translation_of: Web/API/Intersection_Observer_API/Timing_element_visibility
 <div id="fullpage_example">
 <h2 id="サイト構造：HTML">サイト構造：HTML</h2>
 
-<p>The site's structure is not too complicated. We'll be using <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> to style and lay out the site, so we can be pretty straightforward here:</p>
+<p>The site's structure is not too complicated. We'll be using <a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS Grid</a> to style and lay out the site, so we can be pretty straightforward here:</p>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header&gt;
@@ -249,7 +249,7 @@ function startup() {
 
 <h3 id="ドキュメントの可視性の変更の処理">ドキュメントの可視性の変更の処理</h3>
 
-<p>Let's take a look at the handler for the {{event("visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the <a href="/en-US/docs/Web/API/Page_Visibility_API">Page Visibility API</a> to detect these tab switches and disable our timers for the duration.</p>
+<p>Let's take a look at the handler for the {{event("visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the <a href="/ja/docs/Web/API/Page_Visibility_API">Page Visibility API</a> to detect these tab switches and disable our timers for the duration.</p>
 
 <pre class="brush: js">function handleVisibilityChange() {
   if (document.hidden) {

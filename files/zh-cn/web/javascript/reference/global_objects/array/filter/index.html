@@ -20,22 +20,21 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate"><var>var newArray = arr</var>.filter(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
+<pre class="syntaxbox"><var>var newArray = arr</var>.filter(<var>callback(element[, index[, array]])</var>[, <var>thisArg</var>])</pre>
 
 <h3 id="参数">参数</h3>
 
 <dl>
  <dt><code>callback</code></dt>
- <dd>用来测试数组的每个元素的函数。返回 <code>true</code> 表示该元素通过测试，保留该元素，<code>false</code> 则不保留。它接受以下三个参数：</dd>
- <dd>
- <dl>
-  <dt><code>element</code></dt>
-  <dd>数组中当前正在处理的元素。</dd>
-  <dt><code>index</code>{{optional_inline}}</dt>
-  <dd>正在处理的元素在数组中的索引。</dd>
-  <dt><code>array</code>{{optional_inline}}</dt>
-  <dd>调用了 <code>filter</code> 的数组本身。</dd>
- </dl>
+ <dd>用来测试数组的每个元素的函数。返回 <code>true</code> 表示该元素通过测试，保留该元素，<code>false</code> 则不保留。它接受以下三个参数：
+  <dl>
+    <dt><code>element</code></dt>
+    <dd>数组中当前正在处理的元素。</dd>
+    <dt><code>index</code>{{optional_inline}}</dt>
+    <dd>正在处理的元素在数组中的索引。</dd>
+    <dt><code>array</code>{{optional_inline}}</dt>
+    <dd>调用了 <code>filter</code> 的数组本身。</dd>
+  </dl>
  </dd>
  <dt><code>thisArg</code>{{optional_inline}}</dt>
  <dd>执行 <code>callback</code> 时，用于 <code>this</code> 的值。</dd>
@@ -69,7 +68,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
 
 <p>下例使用 <code>filter</code> 创建了一个新数组，该数组的元素由原数组中值大于 10 的元素组成。</p>
 
-<pre class="brush: js notranslate">function isBigEnough(element) {
+<pre class="brush: js">function isBigEnough(element) {
   return element &gt;= 10;
 }
 var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
@@ -80,7 +79,7 @@ var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
 
 <p>以下示例使用 <code>filter()</code> 创建具有非零 <code>id</code> 的元素的 json。</p>
 
-<pre class="brush: js notranslate">var arr = [
+<pre class="brush: js">var arr = [
   { id: 15 },
   { id: -1 },
   { id: 0 },
@@ -120,7 +119,7 @@ console.log('Number of Invalid Entries = ', invalidEntries);
 
 <p>下例使用 <code>filter()</code> 根据搜索条件来过滤数组内容。</p>
 
-<pre class="brush: js notranslate">var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+<pre class="brush: js">var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * Array filters items based on search criteria (query)
@@ -136,7 +135,7 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']</pre>
 
 <h4 id="ES2015_实现">ES2015 实现</h4>
 
-<pre class="brush: js notranslate">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+<pre class="brush: js">const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
 
 /**
  * Array filters items based on search criteria (query)
@@ -156,7 +155,7 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']
 
 <p><code>filter</code> 被添加到 ECMA-262 标准第 5 版中，因此在某些实现环境中不被支持。可以把下面的代码插入到脚本的开头来解决此问题，该代码允许在那些没有原生支持 <code>filter</code> 的实现环境中使用它。该算法是 ECMA-262 第 5 版中指定的算法，假定 <code>fn.call</code> 等价于 {{jsxref("Function.prototype.call")}} 的初始值，且 {{jsxref("Array.prototype.push")}} 拥有它的初始值。</p>
 
-<pre class="brush: js notranslate">if (!Array.prototype.filter){
+<pre class="brush: js">if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
     'use strict';
     if ( ! ((typeof func === 'Function' || typeof func === 'function') &amp;&amp; this) )

@@ -39,7 +39,7 @@ translation_of: Web/API/HTMLMediaElement
  <dt>{{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}</dt>
  <dd>ユーザーエージェントが独自のコントロールセットを表示するたびに、メディア要素に表示するコントロールをユーザーエージェントが選択するのに役立つ{{domxref("DOMTokenList")}}を返します。 <code>DOMTokenList</code>は、<code>nodownload</code>、<code>nofullscreen</code>、<code>noremoteplayback</code>の3つの値のうち1つ以上を取ります。</dd>
  <dt>{{domxref("HTMLMediaElement.crossOrigin")}}</dt>
- <dd>このメディア要素の <a href="/docs/Web/HTML/CORS_settings_attributes">CORS 設定</a> を {{domxref("DOMString")}} で参照できます。</dd>
+ <dd>このメディア要素の <a href="/ja/docs/Web/HTML/CORS_settings_attributes">CORS 設定</a> を {{domxref("DOMString")}} で参照できます。</dd>
  <dt>{{domxref("HTMLMediaElement.currentSrc")}}{{readonlyinline}}</dt>
  <dd>選択されたメディアリソースの絶対 URL を {{domxref("DOMString")}} で返します。</dd>
  <dt>{{domxref("HTMLMediaElement.currentTime")}}</dt>
@@ -70,7 +70,7 @@ translation_of: Web/API/HTMLMediaElement
  <dd>
  <p>Is a <code>unsigned long</code> that indicates the number of samples that will be returned in the framebuffer of each <code>MozAudioAvailable</code> event. This number is a total for all channels, and by default is set to be the number of channels * 1024 (e.g., 2 channels * 1024 samples = 2048 total).</p>
 
- <p>The <code>mozFrameBufferLength</code> property can be set to a new value for lower latency, larger amounts of data, etc. The size given <em>must</em> be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the <a href="/en-US/docs/Web/Events/loadedmetadata">loadedmetadata</a> event fires, when the audio info is known, but before the audio has started or <code>MozAudioAvailable</code> events have begun firing.</p>
+ <p>The <code>mozFrameBufferLength</code> property can be set to a new value for lower latency, larger amounts of data, etc. The size given <em>must</em> be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the <a href="/ja/docs/Web/Events/loadedmetadata">loadedmetadata</a> event fires, when the audio info is known, but before the audio has started or <code>MozAudioAvailable</code> events have begun firing.</p>
  </dd>
  <dt>{{domxref("HTMLMediaElement.mozSampleRate")}} {{readonlyinline}} {{non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Returns a <code>double</code> representing the number of samples per second that will be played. For example, 44100 samples per second is the sample rate used by CD audio.</dd>
@@ -161,7 +161,7 @@ translation_of: Web/API/HTMLMediaElement
  <dt>{{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}</dt>
  <dd>[enter description]</dd>
  <dt>{{domxref("HTMLMediaElement.mozGetMetadata()")}} {{non-standard_inline}}</dt>
- <dd>再生中のメディアデータに対するメタデータを {{jsxref('Object')}} として返します。呼び出すたびに、オブジェクトのコピーが新しく作られます。このメソッドを呼び出すには、<a href="/en-US/docs/Web/Events/loadedmetadata">loadedmetadata</a> イベント発火している必要があります。</dd>
+ <dd>再生中のメディアデータに対するメタデータを {{jsxref('Object')}} として返します。呼び出すたびに、オブジェクトのコピーが新しく作られます。このメソッドを呼び出すには、<a href="/ja/docs/Web/Events/loadedmetadata">loadedmetadata</a> イベント発火している必要があります。</dd>
  <dt>{{domxref("HTMLMediaElement.pause()")}}</dt>
  <dd>再生を一時停止します。</dd>
  <dt>{{domxref("HTMLMediaElement.play()")}}</dt>
@@ -185,7 +185,7 @@ translation_of: Web/API/HTMLMediaElement
 
 <h2 id="Events" name="Events">イベント</h2>
 
-<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}} </em>, defined in the {{domxref('GlobalEventHandlers')}} mixin. Listen to these events using <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
+<p><em>Inherits methods from its parent, {{domxref("HTMLElement")}} </em>, defined in the {{domxref('GlobalEventHandlers')}} mixin. Listen to these events using <code><a href="/ja/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> or by assigning an event listener to the <code>on<em>eventname</em></code> property of this interface.</p>
 
 <dl>
  <dt>{{domxref("HTMLMediaElement.abort_event", 'abort')}}</dt>
@@ -283,7 +283,7 @@ translation_of: Web/API/HTMLMediaElement
  </li>
  <li>記事
   <ul>
-   <li><a class="internal" href="/docs/Using_HTML5_audio_and_video">HTML5 での音声と動画の利用</a></li>
+   <li><a class="internal" href="/ja/docs/Using_HTML5_audio_and_video">HTML5 での音声と動画の利用</a></li>
    <li><a class="internal" href="/ja/docs/Media_formats_supported_by_the_audio_and_video_elements">audio 要素と video 要素が対応しているメディア形式</a></li>
    <li><a href="/ja/docs/Web_Audio_API">Web Audio API</a></li>
   </ul>

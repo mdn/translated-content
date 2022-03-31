@@ -91,61 +91,7 @@ tears.forEach(function(el) {
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome(39.0)}} [1]</td>
-   <td>{{CompatGeckoDesktop(48)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(39.0)}} [1]</td>
-   <td>{{CompatChrome(39.0)}} [1]</td>
-   <td>{{CompatGeckoMobile(48)}}<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Chrome 50之前, <code>idle</code> 这项属性只用在还没开始的动画上，而在Chrome 50之后, 以 <code>paused显示</code>.</p>
-
-<p>[2] 默认情况下，Web Animations API 只在Firefox Developer Edition 和 Nightly builds可用。您可以在测试版和公开版的设置里通过配置偏好来启用，将<code>dom.animations-api.core.enabled</code> 设为 <code>true</code>, 然后也可在任何版本的Firefox上通过设置为<code>false来</code>禁用它。</p>
+{{Compat("api.Animation.playState")}}
 
 <h2 id="参见">参见</h2>
 

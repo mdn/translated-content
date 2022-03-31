@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/defineProperty
 ---
 {{JSRef}}
 
-La méthode statique **`Reflect`\*\***`.defineProperty()`\*\* est semblable à {{jsxref("Object.defineProperty()")}} mais renvoie un {{jsxref("Boolean")}}.
+La méthode statique **`Reflect.defineProperty()`** est semblable à {{jsxref("Object.defineProperty()")}} mais renvoie un {{jsxref("Boolean")}}.
 
 {{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 
@@ -68,7 +68,7 @@ if (Reflect.defineProperty(cible, propriété, attributs)) {
 | Spécification                                                                                                | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.defineproperty', 'Reflect.defineProperty')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

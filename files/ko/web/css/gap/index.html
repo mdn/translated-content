@@ -16,11 +16,7 @@ translation_of: Web/CSS/gap
 
 <div class="hidden">The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</div>
 
-<div>{{EmbedInteractiveExample("pages/css/grid-gap.html")}}</div>
-
-<div class="note">
-<p>원래 <a href="/ko/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>은 접두사를 붙인 <code>grid-gap</code> 속성을 정의했었으며, 현재 <code>gap</code>으로 대체하는 과정 중에 있습니다. 그러나 <code>grid-gap</code>만 구현하고 그리드 레이아웃용 <code>gap</code>은 구연하지 않은 브라우저를 지원하려면 위의 대화형 예제처럼 접두사 속성을 사용해야 합니다.</p>
-</div>
+<div>{{EmbedInteractiveExample("pages/css/gap.html")}}</div>
 
 <h2 id="구문">구문</h2>
 
@@ -66,6 +62,9 @@ gap: unset;
  <dt>{{CSSxRef("&lt;percentage&gt;")}}</dt>
  <dd>그리드 선을 분할하는 간격의 너비. 요소 크기에 상대적입니다.</dd>
 </dl>
+
+<h3 id="formal_definition">형식 정의</h3>
+{{cssinfo}}
 
 <h3 id="형식_구문">형식 구문</h3>
 
@@ -176,45 +175,16 @@ gap: unset;
 <p>{{EmbedLiveSample("다열_레이아웃", "auto", "120px")}}</p>
 
 <h2 id="명세">명세</h2>
+{{Specifications("css.properties.gap.grid_context")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-gap", "gap")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{CSSInfo}}</p>
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
+{{Compat}}
 
-
-
-<h3 id="플렉스_레이아웃_지원">플렉스 레이아웃 지원</h3>
-
-<p>{{Compat("css.properties.gap.flex_context")}}</p>
-
-<h3 id="그리드_레이아웃_지원">그리드 레이아웃 지원</h3>
-
-<p>{{Compat("css.properties.gap.grid_context")}}</p>
-
-<h3 id="다열_레이아웃_지원">다열 레이아웃 지원</h3>
-
-<p>{{Compat("css.properties.gap.multicol_context")}}</p>
 
 <h2 id="같이_보기">같이 보기</h2>
 
 <ul>
  <li>관련 CSS 속성: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}</li>
- <li>그리드 레이아웃 안내서: <a href="/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters">Basic concepts of grid layout - Gutters</a></li>
+ <li>그리드 레이아웃 안내서: <em><a href="/ko/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters">Basic concepts of grid layout - Gutters</a></em></li>
 </ul>

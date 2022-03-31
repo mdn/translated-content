@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/const
 
 <div>Значение констант не может быть изменено новым присваиванием, а также не может быть переопределено. Константы (<code>const</code>) подчиняются области видимости уровня блока так же, как переменные, объявленные с использованием ключевого слова <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/let">let</a></code>.</div>
 
-<div></div>
+
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Statements/const
  <dd>Значение константы. Может быть любым из тех типов, которые могут быть для переменных, включая функцию.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Это объявление создаёт константу, чья область действия может быть как глобальной, так и локальной внутри блока, в котором она объявлена. Глобальные константы не становятся свойствами объекта window, в отличие от <code><a href="/ru/docs/Web/JavaScript/Reference/Statements/var">var</a></code>-переменных. Инициализация константы обязательна; необходимо указать значение одновременно с объявлением (смысл в том, что потом это значение изменить уже нельзя).</p>
 
@@ -35,7 +35,7 @@ translation_of: Web/JavaScript/Reference/Statements/const
 
 <p>Имена констант не могут совпадать с именами функций или переменных той же области видимости.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <p>Ниже описаны примеры, демонстрирующие поведение <strong><code>const</code>. </strong>Попробуйте их выполнить в <a href="/ru/docs/Tools/Черновик">простом JavaScript-редакторе</a> или в консоли браузера.</p>
 
@@ -100,31 +100,13 @@ MY_ARRAY = ["B"]
 
 <h2 id="Спецификация">Спецификация</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Первоначальное определение</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Нет изменений</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
 
 
 
-<p>{{Compat("javascript.statements.const")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

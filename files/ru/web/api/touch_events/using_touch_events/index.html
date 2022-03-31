@@ -54,7 +54,7 @@ translation_of: Web/API/Touch_events/Using_Touch_Events
 
 <p>Назначьте обработчик событий для каждого типа события касания.</p>
 
-<pre class="brush: js notranslate">// Назначение обработчика событий касания
+<pre class="brush: js">// Назначение обработчика событий касания
 someElement.addEventListener('touchstart', process_touchstart, false);
 someElement.addEventListener('touchmove', process_touchmove, false);
 someElement.addEventListener('touchcancel', process_touchcancel, false);
@@ -63,7 +63,7 @@ someElement.addEventListener('touchend', process_touchend, false);
 
 <p>Обработчик события, реализующий семантику жестов приложения</p>
 
-<pre class="notranslate">// Обработчик touchstart
+<pre>// Обработчик touchstart
 function process_touchstart(ev) {
   // Используется данные события, чтобы вызвать соответствующие обработчики жестов
   switch (ev.touches.length) {
@@ -77,7 +77,7 @@ function process_touchstart(ev) {
 
 <p>Доступ к атрибутам точки касания.</p>
 
-<pre class="brush: js notranslate">// Создание обработчика события "touchstart"
+<pre class="brush: js">// Создание обработчика события "touchstart"
 someElement.addEventListener('touchstart', function(ev) {
   // Перебор точек события, которые были активированы
   // для этого элемента и обработка каждого целевого элемента события
@@ -89,7 +89,7 @@ someElement.addEventListener('touchstart', function(ev) {
 
 <p>Предотвращение эмуляции событий мыши</p>
 
-<pre class="brush: js notranslate">// Обработчик события "touchmove"
+<pre class="brush: js">// Обработчик события "touchmove"
 function process_touchmove(ev) {
   // Вызов "preventDefault()"
   ev.preventDefault();

@@ -13,15 +13,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
 <div>{{JSRef("Global_Objects", "Array")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>indexOf()</strong></code> возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>arr</var>.indexOf(<var>searchElement</var>[, <var>fromIndex</var> = 0])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>searchElement</code></dt>
@@ -30,13 +30,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
  <dd>Индекс, с которого начинать поиск. Если индекс больше или равен длине массива, возвращается -1, что означает, что массив даже не просматривается. Если индекс является отрицательным числом, он трактуется как смещение с конца массива. Обратите внимание: если индекс отрицателен, массив всё равно просматривается от начала к концу. Если рассчитанный индекс оказывается меньше 0, поиск ведётся по всему массиву. Значение по умолчанию равно 0, что означает, что просматривается весь массив.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>indexOf()</code> сравнивает искомый элемент <code>searchElement</code> с элементами в массиве, используя <a href="/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators">строгое сравнение</a> (тот же метод используется оператором <code>===</code>, тройное равно).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_indexOf" name="Example:_Using_indexOf">Пример: использование <code>indexOf()</code></h3>
+<h3 id="Example:_Using_indexOf">Пример: использование <code>indexOf()</code></h3>
 
 <p>В следующем примере <code>indexOf()</code> используется для поиска значений в массиве.</p>
 
@@ -48,7 +48,7 @@ array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 </pre>
 
-<h3 id="Example:_Finding_all_the_occurrences_of_an_element" name="Example:_Finding_all_the_occurrences_of_an_element">Пример: нахождение всех вхождений элемента</h3>
+<h3 id="Example:_Finding_all_the_occurrences_of_an_element">Пример: нахождение всех вхождений элемента</h3>
 
 <p>В следующем примере <code>indexOf()</code> используется для поиска всех индексов элемента в указанном массиве, которые с помощью {{jsxref("Array.prototype.push()", "push()")}} добавляются в другой массив.</p>
 
@@ -65,7 +65,7 @@ console.log(indices);
 // [0, 2, 4]
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Метод <code>indexOf()</code> был добавлен к стандарту ECMA-262 в 5-м издании; поэтому он может отсутствовать в других реализациях стандарта. Вы можете работать с ним, добавив следующий код в начало ваших скриптов, он позволяет использовать <code>indexOf()</code> в реализациях, которые не поддерживают этот метод. Этот алгоритм является точно тем, что описан в ECMA-262 5-го издания; он предполагает, что {{jsxref("Global_Objects/TypeError", "TypeError")}} и {{jsxref("Math.abs()")}} имеют свои первоначальные значения.</p>
 
@@ -136,38 +136,15 @@ if (!Array.prototype.indexOf) {
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.14', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.indexof', 'Array.prototype.indexOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Array.indexOf")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Array.prototype.lastIndexOf()")}}</li>

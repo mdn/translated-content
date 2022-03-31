@@ -77,7 +77,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Интернационализац�
 
 <p>Давайте рассмотрим структуру одного из этих файлов (<a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json">_locales/en/messages.json</a>):</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
   "extensionName": {
     "message": "Notify link clicks i18n",
     "description": "Name of the extension."
@@ -121,7 +121,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Интернационализац�
 
 <p>Чтобы интернационализировать строки, их нужно указывать следующим образом:</p>
 
-<pre class="brush: json notranslate">"name": "__MSG_extensionName__",
+<pre class="brush: json">"name": "__MSG_extensionName__",
 "description": "__MSG_extensionDescription__",</pre>
 
 <p>Здесь мы получаем сообщения, зависящие от локализации браузера, а не просто статические строки.</p>
@@ -136,13 +136,13 @@ original_slug: Mozilla/Add-ons/WebExtensions/Интернационализац�
  <li>Два подчёркивания</li>
 </ol>
 
-<pre class="notranslate"><strong>__MSG_</strong> + <em>messageName</em> + <strong>__</strong></pre>
+<pre><strong>__MSG_</strong> + <em>messageName</em> + <strong>__</strong></pre>
 
 <h3 id="Локализация_по_умолчанию">Локализация по умолчанию</h3>
 
 <p>Ещё одно поле. которое нужно указать в manifest.json — это <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale">default_locale</a>:</p>
 
-<pre class="brush: json notranslate">"default_locale": "en"</pre>
+<pre class="brush: json">"default_locale": "en"</pre>
 
 <p>Этот параметр устанавливает локализацию по умолчанию, используемую, если расширение не поддерживает локализацию браузера пользователя. Любые сообщения, недоступные в текущей локализации, будут браться из той локализации, которая установлена по умолчанию. There are some more details to be aware of in terms of how the browser selects strings — see {{anch("Выбор локализованной строки")}}.</p>
 
@@ -150,7 +150,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Интернационализац�
 
 <p>Локализованные строки также можно получить из CSS-файлов расширения. Например, вы можете создать поля CSS, зависящие от локализации, так:</p>
 
-<pre class="brush: css notranslate">header {
+<pre class="brush: css">header {
   background-image: url(../images/__MSG_extensionName__/header.png);
 }</pre>
 
@@ -168,12 +168,12 @@ original_slug: Mozilla/Add-ons/WebExtensions/Интернационализац�
 
 <p>В нашем примере <a href="https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n">notify-link-clicks-i18n</a> , <a href="https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js">фоновый скрипт</a> содержит следующие строки:</p>
 
-<pre class="brush: js notranslate">var title = browser.i18n.getMessage("notificationTitle");
+<pre class="brush: js">var title = browser.i18n.getMessage("notificationTitle");
 var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Первая из них получает поле <code>notificationTitle message</code> из доступного файла <code>messages.json</code>, соответствующее наиболее подходящей локализации . Вторая строка похожа на первую, но в ней метод принимает URL в качестве второго параметра. Зачем? С помощью этого параметра мы указываем, на что нужно заменить заполнитель <code>$URL$</code> в поле <code>notificationContent message</code>:</p>
 
-<pre class="brush: json notranslate">"notificationContent": {
+<pre class="brush: json">"notificationContent": {
   "message": "You clicked $URL$.",
   "description": "Tells the user which link they clicked.",
   "placeholders": {
@@ -189,17 +189,17 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Давайте посмотрим на пример: изначально сообщение <code>notificationContent</code> в файле <code>en/messages.json</code> такое:</p>
 
-<pre class="notranslate">You clicked $URL$.</pre>
+<pre>You clicked $URL$.</pre>
 
 <p>Пусть эта ссылка указывает на <code>https://developer.mozilla.org</code>. После вызова {{WebExtAPIRef("i18n.getMessage()")}}, содержание второго параметра становится доступно в messages.json в качестве значения <code>$1</code>, замещающего <code>$URL$</code>, так как это указано в заполнителе  <code>"url"</code>. Таким образом, итоговое значение строки:</p>
 
-<pre class="notranslate">You clicked https://developer.mozilla.org.</pre>
+<pre>You clicked https://developer.mozilla.org.</pre>
 
 <h3 id="Прямое_использование_заполнителей">Прямое использование заполнителей</h3>
 
 <p>Переменные (<code>$1</code>, <code>$2</code>, <code>$3</code>, и т. д.) можно вставлять напрямую в сообщения. Например, можно переписать объект <code>"notificationContent"</code> следующим образом:</p>
 
-<pre class="brush: json notranslate">"notificationContent": {
+<pre class="brush: json">"notificationContent": {
   "message": "You clicked $1.",
   "description": "Tells the user which link they clicked."
 }</pre>
@@ -210,7 +210,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Значения заполнителей можно задавать вручную, если вы хотите, чтобы каждый раз это значение было одним и тем же, а не определялось переменной в коде. Например:</p>
 
-<pre class="brush: json notranslate">"mdn_banner": {
+<pre class="brush: json">"mdn_banner": {
   "message": "For more information on web technologies, go to $MDN$.",
   "description": "Tell the user about MDN",
   "placeholders": {
@@ -286,11 +286,11 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Модуль i18n module предоставляет заранее определённые сообщения, которые можно вызвать таким же образом, как мы это делали в разделе {{anch("Интернационализация manifest.json")}}. Например:</p>
 
-<pre class="notranslate">__MSG_extensionName__</pre>
+<pre>__MSG_extensionName__</pre>
 
 <p>Заранее определённые сообщения используют такой же синтаксис, за исключением <code>@@</code> перед именем сообщения, например:</p>
 
-<pre class="notranslate">__MSG_@@ui_locale__</pre>
+<pre>__MSG_@@ui_locale__</pre>
 
 <p>Следующая таблица содержит различные заранее определённые сообщения:</p>
 
@@ -337,7 +337,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Возвращаясь к нашему примеру, лучше было бы написать:</p>
 
-<pre class="brush: css notranslate">header {
+<pre class="brush: css">header {
   background-image: url(../images/__MSG_@@ui_locale__/header.png);
 }</pre>
 
@@ -345,7 +345,7 @@ var content = browser.i18n.getMessage("notificationContent", message.url);</pre>
 
 <p>Давайте рассмотрим пример использования сообщений <code>@@bidi_*</code> в файле CSS:</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   direction: __MSG_@@bidi_dir__;
 }
 
@@ -360,14 +360,14 @@ div#header {
 
 <p>Для языков, в которых текст читается слева направо, таких как английский, правила CSS, использующие заранее определённые сообщения, сверху задают такие значения:</p>
 
-<pre class="brush: css notranslate">direction: ltr;
+<pre class="brush: css">direction: ltr;
 padding-left: 0;
 padding-right: 1.5em;
 </pre>
 
 <p>Для языков, читающихся справа налево, значения будут следующими:</p>
 
-<pre class="brush: css notranslate">direction: rtl;
+<pre class="brush: css">direction: rtl;
 padding-right: 0;
 padding-left: 1.5em;</pre>
 

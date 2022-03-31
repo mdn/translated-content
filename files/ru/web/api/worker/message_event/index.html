@@ -1,0 +1,59 @@
+---
+title: Worker.onmessage
+slug: Web/API/Worker/message_event
+translation_of: Web/API/Worker/onmessage
+original_slug: Web/API/Worker/onmessage
+---
+<p>{{APIRef("Web Workers API")}}</p>
+
+<p>Свойство <strong><code>onmessage</code></strong>  интерфейса {{domxref("Worker")}} представляет собой обработчик {{event("Event_handlers", "event handler")}}, который будет вызван когда произойдёт событие {{event("message")}}. Тип этого события {{domxref("MessageEvent")}} и оно будет вызвано когда worker-объект получит сообщение из выполняемого им кода (т.е из метода {{domxref("DedicatedWorkerGlobalScope.postMessage")}} .</p>
+
+<div class="note">
+<p><span style="font-size: 14px; line-height: 21px;"><strong>Примечание</strong></span>: Данные события доступны в свойстве data события {{event("message")}}.</p>
+</div>
+
+<h2 id="Синтаксис">Синтаксис</h2>
+
+<pre class="brush: js">myWorker.onmessage = function(e) { ... }</pre>
+
+<h2 id="Пример">Пример</h2>
+
+<p>Следующий пример кода показывает создание объекта {{domxref("Worker")}} используя конструктор {{domxref("Worker.Worker", "Worker()")}}. События попадают в объект, когда значение внутри поля ввода формы <code>first</code> изменяется. Обработчик onmessage указан для обработки сообщений, которые приходят назад из кода объекта в текущий контекст выполнения.</p>
+
+<pre class="brush: js">var myWorker = new Worker("worker.js");
+
+first.onchange = function() {
+  myWorker.postMessage([first.value,second.value]);
+  console.log('Сообщение, отправленное в worker-объект');
+}
+
+myWorker.onmessage = function(e) {
+  result.textContent = e.data;
+  console.log('Сообщение полученное из worker-объекта');
+}
+</pre>
+
+<p>В скрипте <code>worker.js</code>, обработчик <code>onmessage</code> используется для обработки событий, полученных из главного скрипта:</p>
+
+<pre class="brush: js">onmessage = function(e) {
+  console.log('Сообщение полученное из главного скрипта');
+  var workerResult = 'Результат: ' + (e.data[0] * e.data[1]);
+  console.log('Отправка сообщения назад в главный скрипт');
+  postMessage(workerResult);
+}</pre>
+
+<p>Посмотрите как в скрипте <code>worker.js</code> вызывается обработчик <code>onmessage</code><code>.</code> В нем присутствует только глобальное свойство <code>onmessage,</code> потому что worker-объект фактически является областью видимости ({{domxref("DedicatedWorkerGlobalScope")}}).</p>
+
+<p>Для полного примера смотрите наш <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Basic dedicated worker example</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">run dedicated worker</a>).</p>
+
+<h2 id="Спецификации">Спецификации</h2>
+
+{{Specifications}}
+
+<h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="Смотрите_также">Смотрите также</h2>
+
+<p>Интерфейс {{domxref("Worker")}}, которому принадлежит этот обработчик.</p>

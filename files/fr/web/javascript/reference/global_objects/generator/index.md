@@ -57,13 +57,13 @@ Firefox (SpiderMonkey) implémente également une version antérieure pour les g
 
 ### Méthodes pour les générateurs historiques
 
-- `Generator.prototype.next() `{{non-standard_inline}}
+- `Generator.prototype.next()` {{non-standard_inline}}
   - : Renvoie une valeur générée par l'expression {{jsxref("Opérateurs/yield", "yield")}}. Cette méthode correspond à `next()` pour les générateurs ES2015.
 - `Generator.prototype.close()` {{non-standard_inline}}
   - : Clôture le générateur, tout appel ultérieur à `next()` renverra une exception {{jsxref("StopIteration")}}. Cela correspond à la méthode `return()` pour les générateurs ES2015.
 - `Generator.prototype.send()` {{non-standard_inline}}
   - : Utilisée pour envoyer une valeur à un générateur. La valeur est renvoyée avec une expression {{jsxref("Opérateurs/yield", "yield")}} et renvoie une valeur générée par la prochaine expression {{jsxref("Opérateurs/yield", "yield")}}. `send(x)` correspond à `next(x)` pour les générateurs ES2015.
-- **`Generator.`**`prototype.`**`throw()` **{{non-standard_inline}}
+- **`Generator.`**`prototype.`**`throw()`** {{non-standard_inline}}
   - : Lève une exception au sein d'un générateur. Cela correspond à la méthode `throw()` pour les générateurs ES2015.
 
 ### Exemple utilisant un générateur historique

@@ -33,11 +33,11 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Например, если ваше изображение называется <code>dinosaur.jpg</code>, и оно находится в той же директории что и ваша HTML страница, вы можете встроить это изображение как:</p>
 
-<pre class="brush: html notranslate">&lt;img src="dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="dinosaur.jpg"&gt;</pre>
 
 <p>Если изображение было в поддиректории <code>images</code> , находящаяся внутри той же директории, что и HTML страница (что рекомендует Google для индексации и целей SEO), тогда вы можете встроить его так:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"&gt;</pre>
 
 <p>И так далее.</p>
 
@@ -47,7 +47,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Вы можете встроить изображение используя абсолютный URL, например:</p>
 
-<pre class="brush: html notranslate">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
+<pre class="brush: html">&lt;img src="https://www.example.com/images/dinosaur.jpg"&gt;</pre>
 
 <p>Но это бессмысленно, так как он просто заставляет браузер делать больше работы, запрашивая каждый раз IP-адрес от DNS-сервера.  Вы почти всегда будете держать свои изображения для сайта на том же сервере, что и ваш HTML.</p>
 
@@ -79,7 +79,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Следующий атрибут, который мы рассмотрим — <code>alt</code>. Его значением должно быть текстовое описание изображения для использования в ситуациях, когда изображение не может быть просмотрено / отображено или отрисовка занимает много времени из-за медленного интернет-соединения. Чтобы продемонстрировать использование атрибута <code>alt</code> на практике, внесём изменения в код из предыдущего примера:</p>
 
-<pre class="notranslate">&lt;img src="images/dinosaur.jpg"
+<pre>&lt;img src="images/dinosaur.jpg"
      alt="Голова и туловище скелета динозавра;
          у него большая голова с длинными острыми зубами"&gt;</pre>
 
@@ -114,7 +114,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Вы можете использовать атрибуты <code>width</code> и <code>height</code>, чтобы указать ширину и высоту вашего изображения. Ширину и высоту вашего изображение можете найти различными способами. Например, на Mac можно использовать  <kbd>Cmd</kbd> + <kbd>I</kbd>  чтобы  получить информацию по изображению. Повторяя наш пример, мы можем сделать так:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
      width="400"
@@ -136,7 +136,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 <p>Как и для <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">ссылок</a>, вы также можете добавить атрибут <code>title</code> для изображений, чтобы при необходимости предоставить дополнительную информацию. В нашем примере мы могли бы сделать это так:</p>
 
-<pre class="brush: html notranslate">&lt;img src="images/dinosaur.jpg"
+<pre class="brush: html">&lt;img src="images/dinosaur.jpg"
      alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
      width="400"
@@ -170,7 +170,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 <div class="hidden">
 <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Input&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
 &lt;textarea id="code" class="input"&gt;
 &lt;img&gt;&lt;/textarea&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
@@ -181,7 +181,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -198,7 +198,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById("code");
+<pre class="brush: js">var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -229,7 +229,7 @@ window.addEventListener("load", drawOutput);
 
 <p>Начиная разговор о заголовках, есть множество путей как вы можете добавить заголовок к своему изображению. Для примера, нет ничего, что может вас остановить сделать это таким образом:</p>
 
-<pre class="brush: html notranslate">&lt;div class="figure"&gt;
+<pre class="brush: html">&lt;div class="figure"&gt;
   &lt;img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
@@ -243,7 +243,7 @@ window.addEventListener("load", drawOutput);
 
 <p>Лучшим решением будет использование элементов HTML5 {{htmlelement("figure")}} и {{htmlelement("figcaption")}}. Они были созданы исключительно для этой цели: предоставить семантический контейнер для рисунков и чётко связать рисунок с заголовком. Наш пример выше мог бы быть переписан так:</p>
 
-<pre class="notranslate">&lt;figure&gt;
+<pre>&lt;figure&gt;
   &lt;img src="images/dinosaur.jpg"
        alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
@@ -283,7 +283,7 @@ window.addEventListener("load", drawOutput);
 <div class="hidden">
 <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html notranslate">&lt;h2&gt;Input&lt;/h2&gt;
+<pre class="brush: html">&lt;h2&gt;Input&lt;/h2&gt;
 &lt;textarea id="code" class="input"&gt;
 &lt;/textarea&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
@@ -294,7 +294,7 @@ window.addEventListener("load", drawOutput);
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
 }
 
@@ -311,7 +311,7 @@ button {
 }
 </pre>
 
-<pre class="brush: js notranslate">var textarea = document.getElementById("code");
+<pre class="brush: js">var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
 var code = textarea.value;
 var output = document.querySelector(".output");
@@ -342,7 +342,7 @@ window.addEventListener("load", drawOutput);
 
 <p>Вы можете использовать CSS для встраивания изображений в веб-страницы (или JavaScript, но это совсем другая история). Параметры CSS {{cssxref("background-image")}} и другие <code>background-*</code> применяются для контроля размещения фонового изображения. К примеру, чтобы залить фон каждого параграфа страницы, необходимо сделать следующее:</p>
 
-<pre class="brush: css notranslate">p {
+<pre class="brush: css">p {
   background-image: url("images/dinosaur.jpg");
 }</pre>
 

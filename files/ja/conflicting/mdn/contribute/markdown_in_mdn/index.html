@@ -1,0 +1,862 @@
+---
+title: MDN のコンテンツで使われるクラスとスタイルのガイド
+slug: conflicting/MDN/Contribute/Markdown_in_MDN
+tags:
+  - Guide
+  - MDN
+  - MDN Meta
+  - ガイド
+  - ガイドライン
+  - クラス
+  - スタイル
+translation_of: MDN/Guidelines/CSS_style_guide
+original_slug: MDN/Guidelines/CSS_style_guide
+---
+<p>{{MDNSidebar}}</p>
+
+<p class="summary"><span class="seoSummary">MDN には数多くの組み込みのグローバルスタイルがあって、記事のスタイル付けやレイアウトの際に使用することができ、この記事では利用可能なクラスとその使用方法を説明します。</span></p>
+
+<p>これらのスタイルの一部は、 MDN エディタのツールバーからアクセスできます。このような場合、スタイルの見出しの下に「ツールバーで編集」という表示と、関連するツールバーのボタンの画像を含めます。</p>
+
+<p>これらのスタイルは、記事内容のスタイリング中に発生する最も一般的な状況をカバーするように開発されているので、可能な限り使用可能なクラスを使用するようにしてください。標準的なコンテンツのルックアンドフィールからの分岐が多すぎると、一貫性や可読性を損ないます。あなたのページが絶対に特別なカスタムスタイリングを必要としていると感じたら、まず <a href="https://discourse.mozilla.org/c/mdn">MDN Discourse フォーラム</a>でその話題を切り出す必要があります。</p>
+
+<div class="blockIndicator note">
+<p><strong>注</strong>: 特定のクラスが MDN で使用されている場所を検索する場合は、<code>https://developer.mozilla.org/ja/search?locale=en-US&amp;css_classnames=<var>desired-css-class</var></code> という形式の URL を使用して検索できます。たとえば、 Google のカードグリッドレイアウトを使用するページを見つけるには、URL <a href="/ja/search?locale=*&amp;css_classnames=card-grid">https://developer.mozilla.org/ja/search?locale=*&amp;css_classnames=card-grid</a> を試してください。</p>
+</div>
+
+<div class="blockIndicator warning">
+<p><strong>重要</strong>: このガイドは不完全です。完成させるための手助けをする方法については、{{anch("Updating this guide", "このガイドの更新")}}を参照してください。</p>
+</div>
+
+<h2 id="Inline_styles" name="Inline_styles">インラインスタイル</h2>
+
+<p>この節では、 MDN のスタイルコンテンツブロックで使用できるインラインスタイルを示します。</p>
+
+<h3 id=".button"><code>.button</code></h3>
+
+<p>任意の要素に MDN のボタンとしてスタイル付けします。通常はリンクをスタイル付けするために使用されます (セキュリティ上の理由で、 {{HTMLElement("button")}} 要素は記事のソースコードから削除されます)。</p>
+
+<p><a class="button" href="https://github.com/mdn/simple-web-worker/archive/gh-pages.zip">Download source code</a></p>
+
+<details>
+<h4 id="構文例">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;a href="https://github.com/mdn/simple-web-worker/archive/gh-pages.zip" class="button"&gt;Download source code&lt;/a&gt;</pre>
+</details>
+
+<h3 id=".external-icon_and_.ignore-external" name=".external-icon_and_.ignore-external"><code style="white-space: nowrap;">.external-icon</code> および <code style="white-space: nowrap;">.ignore-external</code></h3>
+
+<p>MDN の外部にあるコンテンツへのリンクは、 <code style="white-space: nowrap;">external-icon</code> クラスが追加されるように自動的に構成され、サイトから離れることを示すアイコンが作成されます。しかし、このアイコンが望ましくなく、他のスタイルと干渉することがあります。これはリンクに <code style="white-space: nowrap;">ignore-external</code> クラスを追加することで削除できます。</p>
+
+<div class="blockIndicator note">
+<p><strong>注:</strong> ほとんどの場合、これらを使用することは望ましくありません。 <code style="white-space: nowrap;">.external-icon</code> が自動的に追加されるのは、ユーザーが知らずに MDN から離れるのを防ぐためです。一般的に受け入れられる利用例は唯一、サンプルコードやその他のサービスに使用するもののような、 MDN に固有のドメインやサブドメインへリンクする場合のみです。</p>
+</div>
+
+<p><a href="/">MDN 内部へのリンク</a><br>
+ <a href="http://wikipedia.org">MDN から離れるリンク</a><br>
+ <a class="ignore-external" href="http://wikipedia.org">MDN から離れるリンクに <code style="white-space: nowrap;">ignore-external</code></a> を付けたもの</p>
+
+<details>
+<h4 id="Example_syntax_2" name="Example_syntax_2">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;a href="/"&gt;Link to MDN&lt;/a&gt;
+&lt;a href="http://wikipedia.org"&gt;Link away from MDN&lt;/a&gt;
+&lt;a href="http://wikipedia.org" class="ignore-external"&gt;Link away from MDN with &lt;code&gt;ignore-external&lt;/code&gt;&lt;/a&gt;</pre>
+</details>
+
+<h3 id=".glossaryLink"><code>.glossaryLink</code></h3>
+
+<p>これは用語集へのリンクをスタイル付けするためのもので、ページ上であまり目立たなくするためのものです。このクラスは、<a href="/ja/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros#Creating_a_single_hyperlink">よく使われるマクロ</a>で説明したように、 KumaScript マクロを使用して追加されるため、手動では挿入されません。</p>
+
+<p>{{Glossary("HTML")}}</p>
+
+<details>
+<h4 id="Example_macro_syntax" name="Example_macro_syntax">マクロの構文例</h4>
+
+<p>\{{Glossary("HTML")}}</p>
+</details>
+
+<h3 id=".hidden"><code>.hidden</code></h3>
+
+<p>コンテンツを Wiki の記事内では非表示にし、エディター内では表示するようにすることができます。これは HTML, CSS, JavaScript を使用してライブコードサンプルを提供しつつ、読者には関連する言語のみを表示するようにするようにすることができます。</p>
+
+<details>
+<h4 id="Example_syntax_3" name="Example_syntax_3">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;h4 id="Hidden_Code_Sample" name="Hidden_Code_Sample"&gt;Hidden code Sample&lt;/h4&gt;
+
+&lt;div class="hidden"&gt;
+&lt;h5 id="HTML"&gt;HTML&lt;/h5&gt;
+
+&lt;pre class="brush: html;"&gt;
+&amp;lt;button id="test"&amp;gt; Click me &amp;lt;/button&amp;gt;
+
+&lt;h5 id="CSS"&gt;CSS&lt;/h5&gt;
+
+&lt;pre class="brush: css;"&gt;
+button {
+    background-color: #a00;
+    color:#fff;
+    font-size: 20px;
+}
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h5 id="JavaScript_Content"&gt;JavaScript Content&lt;/h5&gt;
+
+&lt;pre class="brush: js;"&gt;
+document.getElementById("test").addEventListener("click", works);
+function works() {
+    window.alert("you clicked it!");
+}
+&lt;/pre&gt;
+
+&lt;p&gt;\{{EmbedLiveSample("Hidden_Code_Sample")}}&lt;/p&gt;
+</pre>
+
+<h4 id="Hidden_Code_Sample" name="Hidden_Code_Sample">非表示コードサンプル</h4>
+
+<div class="hidden">
+<h5 id="HTML">HTML</h5>
+
+<pre class="brush: html notranslate">&lt;button id="test"&gt;Click Me&lt;/button&gt;
+</pre>
+
+<h5 id="CSS">CSS</h5>
+
+<pre class="brush: css notranslate">button{
+    background-color: #a00;
+    color:#fff;
+    font-size: 20px;
+}
+</pre>
+</div>
+
+<h5 id="JavaScript">JavaScript</h5>
+
+<pre class="brush: js notranslate">document.getElementById("test").addEventListener("click", works);
+function works(){
+    window.alert("you clicked it!");
+}
+</pre>
+
+<p>{{EmbedLiveSample("Hidden_Code_Sample", "100%", 150)}}</p>
+</details>
+
+<h3 id=".seoSummary"><code>.seoSummary</code></h3>
+
+<p>これはページ上のコンテンツに目に見える効果を与えないクラスですが、しかし、クラスが要素 (通常は {{HTMLElement("span")}}) に適用されている場合、 KumaScript は要素のコンテンツを使用して <code>description</code> の {{HTMLElement("meta")}} タグを生成します。これらは短い説明を提供し、これは検索エンジン、 Facebook や Twitter のような共有サイトなどで使用されます。このクラスは、 MDN エディターの WYSIWYG スタイルドロップダウンメニューの [SEO Summary] オプションで利用できます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11859/seosummary-menu-option.png" style="border: 1px solid black; display: block; height: 58px; margin: 0px auto; width: 235px;"></p>
+
+<details>
+<div class="blockIndicator note">
+<p><strong>注</strong>: <code>.seoSummary</code> がページに明示的に指定されていない場合、最初の段落が自動的に SEO の要約として設定されます。ほとんどのページでは、これを使用する必要はありません。</p>
+</div>
+
+<p>最後のページの画面にはスタイルの変更は表示されませんが、 SEO サマリーとして設定されたテキストには次のように点線のアウトラインと "SEO Summary" ラベルが表示されます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11861/seosummary-editor-representation.png" style="display: block; margin: 0 auto;"></p>
+
+<p>以下の例は、 <a href="/ja/docs/Mozilla/Add-ons">Mozilla のアドオン</a>ページから抜粋したものです。</p>
+
+<h3 id="Example_syntax_4" name="Example_syntax_4">構文例</h3>
+
+<pre class="brush: html notranslate">&lt;p&gt;
+  &lt;span class="seoSummary"&gt;Add-ons add new functionality to &lt;a href="/en-US/docs/Mozilla/Gecko"&gt;Gecko&lt;/a&gt;-based applications such as Firefox, SeaMonkey, and Thunderbird.&lt;/span&gt;
+  There are two main types of add-on: &lt;a href="#Extensions"&gt;Extensions&lt;/a&gt; add new features to the application, while &lt;a href="#Themes"&gt;Themes&lt;/a&gt; modify the application's user interface.
+&lt;/p&gt;</pre>
+
+<h4 id="Example_of_the_generated_HTMLElementmeta_elements" name="Example_of_the_generated_HTMLElementmeta_elements">生成された {{HTMLElement("meta")}} 要素の例</h4>
+
+<pre class="brush: html; notranslate">&lt;meta property="og:description" content="Add-ons add new functionality to Gecko -based applications such as Firefox, SeaMonkey, and Thunderbird."&gt;
+&lt;meta name="description" content="Add-ons add new functionality to Gecko -based applications such as Firefox, SeaMonkey, and Thunderbird."&gt;
+&lt;meta name="twitter:description" content="Add-ons add new functionality to Gecko -based applications such as Firefox, SeaMonkey, and Thunderbird."&gt;</pre>
+
+<h4 id="Example_of_how_Facebook_uses_it" name="Example_of_how_Facebook_uses_it">Facebook の使い方の例</h4>
+
+<p><img alt="SEOSummary as it is used by Facebook" src="https://mdn.mozillademos.org/files/11857/seosummary.jpg" style="display: block; height: 338px; margin: 0px auto; width: 500px;"></p>
+</details>
+
+<div class="blockIndicator note">
+<p><strong>注:</strong> これは特別な "About this page" スタイルの blurb ボックスを作成する <code>{{anch(".summary")}}</code> クラスと同じではありません。そのクラスは、検索エンジンで使用される SEO サマリーや、MDN がツールチップを生成するために使用するマクロ、およびサブページをリストするメニューを自動的に生成するマクロを設定しません。</p>
+</div>
+
+<h2 id="Block_level_styles" name="Block_level_styles">ブロックレベルスタイル</h2>
+
+<p>このセクションでは、MDN のスタイルコンテンツブロックで使用可能なブロックレベルのスタイルを示します。</p>
+
+<h3 id=".callout-box"><code style="white-space: nowrap;">.callout-box</code></h3>
+
+<p>コールアウト、またはハイライトしたい関連情報を格納するための右浮動ボックスを作成できます。</p>
+
+<div class="callout-box">
+<p>これはエキサイティングな吹き出しです</p>
+</div>
+
+<p>浮遊するコンテンツの例</p>
+
+<p>Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.</p>
+
+<details>
+<h4 id="Example_syntax_5" name="Example_syntax_5">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;div class="callout-box"&gt;
+  &lt;p&gt;This is an exciting callout&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Example content to float around&lt;/p&gt;
+&lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
+</pre>
+</details>
+
+<h3 id=".card-grid"><code style="white-space: nowrap;">.card-grid</code></h3>
+
+<p>複数のカードを並べて配置すると、特定のコンテンツを呼び出すことや、複数ステップの行動を促すことができます。カードは、利用可能な水平スペース内で均等に配置されています。2〜3個くらいが最適です。</p>
+
+<ul class="card-grid">
+ <li><span>CSS リファレンス</span>
+
+  <p>An <a href="/ja/docs/Web/CSS/Reference" title="en-US/docs/CSS/CSS_Reference">exhaustive reference</a> for <u>seasoned Web developers</u> describing every property and concept of CSS.</p>
+ </li>
+ <li><span>CSS チュートリアル</span>
+  <p>A <a href="/ja/docs/CSS/Getting_Started" title="en-US/docs/CSS/Getting_Started">step-by-step introduction</a> to help <u>complete beginners</u> get started. It presents all the needed fundamentals.</p>
+ </li>
+ <li><span>CSS3 デモ</span>
+  <p>A <a href="/ja/demos/tag/tech:css3" title="/en-US/demos/tag/tech:css3">collection of demos</a> showing the <u>latest CSS technologies</u> in action: a boost for the creativity.</p>
+ </li>
+</ul>
+
+<details>
+<h4 id="Example_syntax_6" name="Example_syntax_6">構文例</h4>
+
+<pre class="brush: html; notranslate">&lt;ul class="card-grid"&gt;
+  &lt;li&gt;My card content&lt;/li&gt;
+  &lt;li&gt;My second card content&lt;/li&gt;
+  &lt;li&gt;My third card content&lt;/li&gt;
+&lt;/ul&gt;</pre>
+</details>
+
+<h3 id=".column-container"><code style="white-space: nowrap;">.column-container</code></h3>
+
+<p>特定の幅の列のコンテナを示します。通常、以下に示すように他のクラスと組み合わせて使用されます。</p>
+
+<div class="column-container">
+<div class="column-4">
+<p>１つ目の列</p>
+</div>
+
+<div class="column-4">
+<p>２つ目の列</p>
+</div>
+
+<div class="column-4">
+<p>３つ目の列</p>
+</div>
+</div>
+
+<details>
+<h4 id="Example_syntax_7" name="Example_syntax_7">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;div class="column-container"&gt;
+  &lt;div class="column-4"&gt;
+    &lt;p&gt;My first equal width column.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="column-4"&gt;
+    &lt;p&gt;My second equal width column.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="column-4"&gt;
+    &lt;p&gt;My third equal width column.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</details>
+
+<h3 id=".column-1_.column-2_.column-3_..._all_the_way_up_to_.column-11" name=".column-1_.column-2_.column-3_..._all_the_way_up_to_.column-11"><code style="white-space: nowrap;">.column-1</code>, <code style="white-space: nowrap;">.column-2</code>, <code style="white-space: nowrap;">.column-3</code> ... のように上がって <code style="white-space: nowrap;">.column-11</code> まで</h3>
+
+<p><code style="white-space: nowrap;">.column-container</code> に格納される特定の幅の列を指定します。これは、列コンテナの幅の12分の1 (12列のグリッドレイアウトに基づいています) です。各列のペアの間に溝が残されます。</p>
+
+<div class="column-container">
+<div class="column-1" style="background-color: yellow;">1/12</div>
+
+<div class="column-11" style="background-color: lime;">11/12</div>
+</div>
+
+<div class="column-container">
+<div class="column-5" style="background-color: yellow;">5/12</div>
+
+<div class="column-7" style="background-color: lime;">7/12</div>
+</div>
+
+<div class="column-container">
+<div class="column-6" style="background-color: yellow;">6/12</div>
+
+<div class="column-4" style="background-color: lime;">4/12</div>
+
+<div class="column-2" style="background-color: pink;">2/12</div>
+</div>
+
+<details>
+<h4 id="Example_syntax_8" name="Example_syntax_8">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;div class="column-container"&gt;
+  &lt;div class="column-1" style="background-color: yellow;"&gt;1/12&lt;/div&gt;
+  &lt;div class="column-11" style="background-color: lime;"&gt;11/12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="column-container"&gt;
+  &lt;div class="column-5" style="background-color: yellow;"&gt;5/12&lt;/div&gt;
+  &lt;div class="column-7" style="background-color: lime;"&gt;7/12&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="column-container"&gt;
+  &lt;div class="column-6" style="background-color: yellow;"&gt;6/12&lt;/div&gt;
+  &lt;div class="column-4" style="background-color: lime;"&gt;4/12&lt;/div&gt;
+  &lt;div class="column-2" style="background-color: pink;"&gt;2/12&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</details>
+
+<h3 id=".column-quarter_.column-third_.column-half"><code style="white-space: nowrap;">.column-quarter</code>, <code style="white-space: nowrap;">.column-third</code>, <code style="white-space: nowrap;">.column-half</code></h3>
+
+<p><code style="white-space: nowrap;">.column-container</code> によって保持される特定の幅の列を指定します。これは、列コンテナの幅広い部分です。それぞれの列のペアの間にガターが残されます。</p>
+
+<div class="column-container">
+<div class="column-half" style="background-color: yellow;">Half</div>
+
+<div class="column-half" style="background-color: lime;">Half</div>
+</div>
+
+<div class="column-container">
+<div class="column-third" style="background-color: yellow;">Third</div>
+
+<div class="column-third" style="background-color: lime;">Third</div>
+
+<div class="column-third" style="background-color: pink;">Third</div>
+</div>
+
+<div class="column-container">
+<div class="column-quarter" style="background-color: yellow;">Quarter</div>
+
+<div class="column-quarter" style="background-color: lime;">Quarter</div>
+
+<div class="column-quarter" style="background-color: pink;">Quarter</div>
+
+<div class="column-quarter" style="background-color: cyan;">Quarter</div>
+</div>
+
+<details>
+<p>これらのクラスは、次のようなよく使われる数値の幅のクラスと等価なものです。</p>
+
+<ul>
+ <li><code style="white-space: nowrap;">.column-quarter</code> — <code style="white-space: nowrap;">.column-3</code> と等価</li>
+ <li><code style="white-space: nowrap;">.column-third</code> — <code style="white-space: nowrap;">.column-4</code> と等価</li>
+ <li><code style="white-space: nowrap;">.column-half</code> — <code style="white-space: nowrap;">.column-6</code> と等価</li>
+</ul>
+
+<h4 id="Example_syntax_9" name="Example_syntax_9">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;div class="column-container"&gt;
+  &lt;div class="column-half" style="background-color: yellow;"&gt;Half&lt;/div&gt;
+  &lt;div class="column-half" style="background-color: lime;"&gt;Half&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="column-container"&gt;
+  &lt;div class="column-third" style="background-color: yellow;"&gt;Third&lt;/div&gt;
+  &lt;div class="column-third" style="background-color: lime;"&gt;Third&lt;/div&gt;
+  &lt;div class="column-third" style="background-color: pink;"&gt;Third&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="column-container"&gt;
+  &lt;div class="column-quarter" style="background-color: yellow;"&gt;Quarter&lt;/div&gt;
+  &lt;div class="column-quarter" style="background-color: lime;"&gt;Quarter&lt;/div&gt;
+  &lt;div class="column-quarter" style="background-color: pink;"&gt;Quarter&lt;/div&gt;
+  &lt;div class="column-quarter" style="background-color: cyan;"&gt;Quarter&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</details>
+
+<h3 id="&lt;details>"><code>&lt;details&gt;</code></h3>
+
+<p>そのコンテンツを隠すためにコンテンツのブロックを囲むことができ、その中に含まれるコンテンツを展開/折りたたむためにクリックすることができる「+詳細」リンクを表示することができます。 あなたはこの記事全体を通して使用されているのを見ることができます。</p>
+
+<details open>
+<h4 id="Example_syntax_10" name="Example_syntax_10">構文例</h4>
+
+<p>これは、 {{HTMLElement("details")}} で隠された {{HTMLElement("details")}} の構文セクションの例です。おぉ、なんとメタなんでしょう。</p>
+
+<pre class="brush: html; notranslate">&lt;details&gt;
+&lt;h4&gt;Example syntax&lt;/h4&gt;
+&lt;p&gt;This is an example syntax section for &lt;code&gt;.detail&lt;/code&gt; that was hidden with &lt;code&gt;.detail&lt;/code&gt;. Ooooooh, how meta.&lt;/p&gt;
+&lt;/details&gt;</pre>
+</details>
+
+<h3 id=".example-bad_and_.example-good"><code style="white-space: nowrap;">.example-bad</code> and <code style="white-space: nowrap;">.example-good</code></h3>
+
+<p>Good と bad の例は、<code>.example-good</code> クラスと <code>.example-bad</code> クラスを使ってハイライトすることができます。これらは通常、サンプルコードスニペットを示す <code>&lt;pre&gt;</code> ブロックで使用されますが、他のブロックでも使用できます。</p>
+
+<h5 id="Good_code_example" name="Good_code_example">良いコード例</h5>
+
+<pre class="brush: html example-good notranslate">&lt;label for="test"&gt;Form label:&lt;/label&gt;
+&lt;input type="text" id="test"&gt;
+</pre>
+
+<h5 id="Bad_code_example" name="Bad_code_example">悪いコード例</h5>
+
+<pre class="brush: html example-bad notranslate">&lt;input type="text"&gt;
+</pre>
+
+<details>
+<p><strong>以下に示すように、これらのクラスでは見出しを常に使用する必要があります。</strong> — CSS はページのローカライズされた言語をページに追加することができないため、スクリーンリーダーを使用するユーザーや文化的背景の異なるユーザーにとって重要です(緑と赤は普遍的に良いと悪いを意味するわけではありません。)</p>
+
+<h4 id="Example_syntax_11" name="Example_syntax_11">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;h5 id="Good_code_example"&gt;Good code example&lt;/h5&gt;
+
+&lt;pre class="brush: html example-good"&gt;
+  &amp;lt;label for="test"&amp;gt;Form label:&amp;lt;/label&amp;gt;
+  &amp;lt;input type="text" id="test"&amp;gt;
+&lt;/pre&gt;
+
+&lt;h5 id="Bad_code_example"&gt;Bad code example&lt;/h5&gt;
+
+&lt;pre class="brush: html example-bad"&gt;
+  &amp;lt;input type="text"&amp;gt;
+&lt;/pre&gt;</pre>
+</details>
+
+<h3 id=".moreinfo"><code>.moreinfo</code></h3>
+
+<p>このクラスはもともと、さらなる読み上げのためのリンクのリストを表示するように設計されていましたが、現在のページから離れていくあらゆる情報に使用できます。</p>
+
+<div class="moreinfo">
+<h4 id="Tools_to_build_on_your_JavaScript_knowledge" name="Tools_to_build_on_your_JavaScript_knowledge">JavaScript の知識を基に構築するツール</h4>
+
+<dl>
+ <dt>JavaScript フレームワーク</dt>
+ <dd>Developed by Google <a href="https://angularjs.org/">Angular.js</a> is one of the best known frameworks.</dd>
+ <dd><a href="http://emberjs.com/">Ember.js</a> is open source and community driven.</dd>
+ <dt>JavaScript コンパイラ</dt>
+ <dd><a href="https://babeljs.io/">Babel</a> lets you write ES2015 and compiles to more backwards compatible code.</dd>
+</dl>
+</div>
+
+<details>
+<h4 id="Example_syntax_12" name="Example_syntax_12">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;div class="moreinfo"&gt;
+  &lt;!-- content goes here --&gt;
+&lt;/div&gt;</pre>
+</details>
+
+<h3 id=".blockIndicator.note"><code>.blockIndicator.note</code></h3>
+
+<p>コンテンツのセクションをノートボックスに変換します。これは通常、現在の主題に直接関連する有用なメモであるものの、情報の流れに直接会わないものです。</p>
+
+<div class="blockIndicator note">
+<p><strong>注</strong>: これは通常、 MDN の記事にメモを表示する方法です。</p>
+</div>
+
+<details>
+<p>これは MDN エディタの WYSIWYG スタイルドロップダウンメニューの "Note box" オプションで利用できます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11677/Screen%20Shot%202015-10-05%20at%2006.56.01.png" style="border: 1px solid black; display: block; margin: 0px auto;"></p>
+
+<h4 id="Example_syntax_13" name="Example_syntax_13">構文例</h4>
+
+<pre class="brush: html; notranslate">&lt;div class="blockIndicator note" role="complementary"&gt;
+  &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: This is how we usually present a note in an MDN article.&lt;/p&gt;
+&lt;/div&gt;</pre>
+</details>
+
+<h3 id=".pull-aside"><code>.pull-aside</code></h3>
+
+<p>コンテンツを側面に引き出します。</p>
+
+<div class="pull-aside">側面に移動するいくつかのコンテンツ。</div>
+
+<p>側面に出てこないコンテンツもあります。</p>
+
+<details>
+<h4 id="Example_Syntax" name="Example_Syntax">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;div class="pull-right"&gt;Some content that goes off to the side.&lt;/div&gt;
+&lt;p&gt;Some content that does not go off to the side.&lt;/p&gt;</pre>
+
+<h4 id="Other_uses" name="Other_uses">その他の利用</h4>
+
+<div class="pull-aside">
+<div class="moreinfo">側面に移動するいくつかのコンテンツ。</div>
+</div>
+
+<p>側面に出てこないコンテンツもあります。</p>
+
+<pre class="brush: html notranslate">&lt;div class="pull-aside"&gt;&lt;div class="moreinfo"&gt;Some content that goes off to the side.&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Some content that does not go off to the side.&lt;/p&gt;
+&lt;p&gt;Some content that does not go off to the side.&lt;/p&gt;
+</pre>
+</details>
+
+<h3 id=".summary" name=".summary"><code>.summary</code> {{Obsolete_Inline}}</h3>
+
+<p>追加のパディング付きの灰色のボックスとして視覚的に明示的に表示されるページの要約ボックスを作成します。ページの重要性を高めるため、記事の開始段落 (参照記事は除く) に使用する必要があります。</p>
+
+<div class="blockIndicator warning">
+<p><strong>重要:</strong> これは検索エンジンによる検索結果リストのページの要約や MDN によって、ページタイトルとその要約のツールチップとメニューを作成するのに使用されるテキストのセクションを設定する {{anch(".seoSummary")}} クラスと同じではありません。このクラスは、厳密には視覚効果です。ページの可視性および有効な要約の両方を確立するために、両方のクラスを一緒に使用することができます。</p>
+</div>
+
+<p class="summary">これはこの記事の始まりです。以下では、子犬、キリン、ジュゴンについて説明します。</p>
+
+<details>
+<p>これは MDN エディタの WYSIWYG スタイルドロップダウンメニューの "Article Summary" オプションで利用できます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11863/article-summary-menu-option.png" style="display: block; height: 238px; margin: 0px auto; width: 254px;"></p>
+
+<h4 id="Example_syntax_14" name="Example_syntax_14">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;p class="summary"&gt;This is the start of this article. Below we will talk about puppies, giraffes, and dugongs.&lt;/p&gt;</pre>
+</details>
+
+<h3 id=".topicpage-table"><code>.topicpage-table</code></h3>
+
+<p>太い灰色の境界線で区切られた2つの列を作成します。ランディングページでよく使用されます。これは通常、ネストされた {{HTMLElement("div")}} で最も効果的です。2つの子要素に <code>.section</code> クラスを与えなければならないことに注意してください。</p>
+
+<div class="topicpage-table">
+<div class="section">Column 1</div>
+
+<div class="section">Column 2</div>
+</div>
+
+<details>
+<h4 id="Example_syntax_15" name="Example_syntax_15">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;div class="topicpage-table"&gt;
+  &lt;div class="section"&gt;Column 1&lt;/div&gt;
+  &lt;div class="section"&gt;Column 2&lt;/div&gt;
+&lt;/div&gt;</pre>
+</details>
+
+<h3 id=".threecolumns"><code>.threecolumns</code></h3>
+
+<p>コンテンツのブロックが3つの等幅の列に表示されます。</p>
+
+<div class="threecolumns">
+<p>Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.</p>
+
+<p>Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.</p>
+</div>
+
+<details>
+<p>これは MDN エディターの WYSIWYG スタイルドロップダウンメニューの [3列] オプションで利用できます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
+
+<div class="blockIndicator note">
+<p><strong>注</strong>: これをリストに適用する場合は、外側のラッパー {{HTMLElement("div")}} に適用する必要があります。そうでなければ、 {{HTMLElement("ul")}} 要素に適用されます。 リストの箇条書きが Chrome に表示されなくなります。</p>
+</div>
+
+<h4 id="Example_syntax_16" name="Example_syntax_16">構文例</h4>
+
+<pre class="notranslate">&lt;div class="threecolumns"&gt;
+  &lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
+
+  &lt;p&gt;Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.&lt;/p&gt;
+&lt;/div&gt;</pre>
+</details>
+
+<h3 id=".twocolumns"><code>.twocolumns</code></h3>
+
+<p>コンテンツのブロックが2つの等幅の列に表示されます。</p>
+
+<div class="twocolumns">
+<p>Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.</p>
+
+<p>Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.</p>
+</div>
+
+<details>
+<p>これは MDN エディターの WYSIWYG スタイルドロップダウンメニューの [2列] オプションで利用できます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
+
+<div class="blockIndicator note">
+<p><strong>注</strong>: これをリストに適用する場合は、外側のラッパー {{HTMLElement("div")}} に適用する必要があります。そうでなければ、{{HTMLElement("ul")}} 要素に適用されます。 リストの箇条書きが Chrome に表示されなくなります。</p>
+</div>
+
+<h4 id="Example_syntax_17" name="Example_syntax_17">構文例</h4>
+
+<pre class="notranslate">&lt;div class="twocolumns"&gt;
+  &lt;p&gt;Mixtape distillery biodiesel pop-up Austin chambray. Fingerstache YOLO tousled, meditation four loko squid brunch single-origin coffee stumptown ethical asymmetrical polaroid Neutra hashtag beard. Mustache Godard Bushwick, Tumblr salvia +1 fixie cornhole beard wayfarers stumptown aesthetic keffiyeh lomo. Meggings lumbersexual keytar Shoreditch.&lt;/p&gt;
+
+  &lt;p&gt;Street art PBR YOLO pug, before they sold out fixie artisan blog bicycle rights beard direct trade chillwave. Fanny pack cornhole whatever, Austin single-origin coffee ethical church-key distillery fashion axe tofu farm-to-table irony tattooed Tumblr. Craft beer Thundercats Austin gentrify, wolf Echo Park asymmetrical hella sartorial.&lt;/p&gt;
+&lt;/div&gt;</pre>
+</details>
+
+<h3 id=".blockIndicator.warning"><code>.blockIndicator.warning</code></h3>
+
+<p>コンテンツの一部を警告ボックスに変換します。警告ボックスは通常、読者が本当に注意する必要があるという重要な事実を伝えます (例えば、何かをする必要がある、あるいは重大な問題を避けるために何かを避けるなど)。</p>
+
+<div class="blockIndicator warning">
+<p><strong>警告</strong>: ここにはドラゴンがいます！</p>
+</div>
+
+<details>
+<p>これは MDN エディタの WYSIWYG スタイルドロップダウンメニューの [警告ボックス] オプションで利用できます。</p>
+
+<p><img alt="" src="https://mdn.mozillademos.org/files/11779/twocolumn-threecolumn.png" style="border: 1px solid black; display: block; height: 167px; margin: 0px auto; width: 253px;"></p>
+
+<h4 id="Example_syntax_18" name="Example_syntax_18">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;div class="blockIndicator warning"&gt;
+  &lt;p&gt;&lt;strong&gt;警告&lt;/strong&gt;:ここにはドラゴンがいます！&lt;/p&gt;
+&lt;/div&gt;</pre>
+</details>
+
+<h2 id="Table_styles" name="Table_styles">表のスタイル</h2>
+
+<p>MDN は、 HTML {{HTMLElement("table")}} 要素を表示するための特定のスタイルを提供します。このセクションでは、これらについて説明します。</p>
+
+<p>追加クラスなし:</p>
+
+<table>
+ <caption>Favorite teas, December 2015</caption>
+ <thead>
+  <tr>
+   <th scope="row">種類</th>
+   <th scope="col">カフェイン</th>
+   <th scope="col">抽出時間</th>
+   <th scope="col">湯温</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">紅茶</th>
+   <td>高</td>
+   <td>2-3 分</td>
+   <td>99 °C</td>
+  </tr>
+  <tr>
+   <th scope="row">緑茶</th>
+   <td>低-中</td>
+   <td>1-2 分</td>
+   <td>75-80 °C</td>
+  </tr>
+  <tr>
+   <th colspan="4">カフェインフリー</th>
+  </tr>
+  <tr>
+   <th scope="row">ハーブティー</th>
+   <td>なし</td>
+   <td>3-6 分</td>
+   <td>99 °C</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id=".standard-table"><code style="white-space: nowrap;">.standard-table</code></h3>
+
+<table class="standard-table">
+ <caption>Favorite teas, December 2015</caption>
+ <thead>
+  <tr>
+   <th scope="row">種類</th>
+   <th scope="col">カフェイン</th>
+   <th scope="col">抽出時間</th>
+   <th scope="col">湯温</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">紅茶</th>
+   <td>高</td>
+   <td>2-3 分</td>
+   <td>99 °C</td>
+  </tr>
+  <tr>
+   <th scope="row">緑茶</th>
+   <td>低-中</td>
+   <td>1-2 分</td>
+   <td>75-80 °C</td>
+  </tr>
+  <tr>
+   <th colspan="4">カフェインフリー</th>
+  </tr>
+  <tr>
+   <th scope="row">ハーブティー</th>
+   <td>なし</td>
+   <td>3-6 分</td>
+   <td>99 °C</td>
+  </tr>
+ </tbody>
+</table>
+
+<details>
+<p>MDN エディターの WYSIWYG ツールバーにある <em>Table</em> ボタンを使用して、標準の表を作成することができます。これを押すといくつもの機能を含む表のプロパティダイアログボックスが表示されます。一般には行と列の数、どのセルが表の見出し ({{HTMLElement("th")}}) なのか、表示される {{HTMLElement("caption")}}、必要に応じて読み上げソフトにもっと詳細な情報を提供する {{HTMLAttrxRef("summary", "table")}} 属性などを設定するために使用します。</p>
+
+<p><img alt="A diagram showing the Table button in the MDN edit interface, which has a picture of a table on it, and the dialog box that it brings up, which has options on it to set row number, column number, which cells are headings, and more." src="https://mdn.mozillademos.org/files/11997/table-styles-interface-flat.png" style="display: block; margin: 0 auto;"></p>
+
+<h4 id="Style_notes" name="Style_notes">スタイルのメモ</h4>
+
+<ul>
+ <li>Note the different styling applied to the headers ({{HTMLElement("th")}}), and the fact that they have {{HTMLAttrxRef("scope", "th")}} attributes applied for accessibility purposes.</li>
+ <li>By default, alternating rows have zebra stripes applied, but these can be removed by adding the <code>.no-stripe</code> class to them.</li>
+ <li>You can force a table to span the full width of the content area (or other immediate containing box, if it is not the content area) by adding the <code>.fullwidth</code> class to the {{HTMLElement("table")}} element.</li>
+</ul>
+
+<h4 id="Example_syntax_19" name="Example_syntax_19">構文例</h4>
+
+<pre class="brush: html notranslate">&lt;table class="standard-table" summary="This table details what tea we liked to drink back in the heady month of December 2015"&gt;
+ &lt;caption&gt;Favorite teas, December 2015&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th scope="row"&gt;種類&lt;/th&gt;
+   &lt;th scope="col"&gt;カフェイン&lt;/th&gt;
+   &lt;th scope="col"&gt;抽出時間&lt;/th&gt;
+   &lt;th scope="col"&gt;湯温&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;th scope="row"&gt;紅茶&lt;/th&gt;
+   &lt;td&gt;High&lt;/td&gt;
+   &lt;td&gt;2-3 minutes&lt;/td&gt;
+   &lt;td&gt;99&amp;nbsp;°C&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th scope="row"&gt;緑茶&lt;/th&gt;
+   &lt;td&gt;低 - 中&lt;/td&gt;
+   &lt;td&gt;1-2 minutes&lt;/td&gt;
+   &lt;td&gt;75 - 80&amp;nbsp;°C&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;th scope="row"&gt;ハーブティー&lt;/th&gt;
+   &lt;td&gt;None&lt;/td&gt;
+   &lt;td&gt;3-6 minutes&lt;/td&gt;
+   &lt;td&gt;99&amp;nbsp;°C&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+</details>
+
+<h3 id=".standard-table.nostripe"><code><span style="white-space: nowrap;">.standard-table</span>.nostripe</code></h3>
+
+<table class="nostripe standard-table">
+ <caption>Favorite teas, December 2015</caption>
+ <thead>
+  <tr>
+   <th scope="row">種類</th>
+   <th scope="col">カフェイン</th>
+   <th scope="col">抽出時間</th>
+   <th scope="col">湯温</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">紅茶</th>
+   <td>高</td>
+   <td>2-3 分</td>
+   <td>99 °C</td>
+  </tr>
+  <tr>
+   <th scope="row">緑茶</th>
+   <td>低-中</td>
+   <td>1-2 分</td>
+   <td>75-80 °C</td>
+  </tr>
+  <tr>
+   <th colspan="4">カフェインフリー</th>
+  </tr>
+  <tr>
+   <th scope="row">ハーブティー</th>
+   <td>なし</td>
+   <td>3-6 分</td>
+   <td>99 °C</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id=".standard-table.fullwidth"><code>.<span style="white-space: nowrap;">standard-table</span>.fullwidth</code></h3>
+
+<table class="fullwidth standard-table">
+ <caption>Favorite teas, December 2015</caption>
+ <thead>
+  <tr>
+   <th scope="row">種類</th>
+   <th scope="col">カフェイン</th>
+   <th scope="col">抽出時間</th>
+   <th scope="col">湯温</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">紅茶</th>
+   <td>高</td>
+   <td>2-3 分</td>
+   <td>99 °C</td>
+  </tr>
+  <tr>
+   <th scope="row">緑茶</th>
+   <td>低-中</td>
+   <td>1-2 分</td>
+   <td>75-80 °C</td>
+  </tr>
+  <tr>
+   <th colspan="4">カフェインフリー</th>
+  </tr>
+  <tr>
+   <th scope="row">ハーブティー</th>
+   <td>なし</td>
+   <td>3-6 分</td>
+   <td>99 °C</td>
+  </tr>
+ </tbody>
+</table>
+
+<h3 id=".fullwidth-table"><code style="white-space: nowrap;">.fullwidth-table</code></h3>
+
+<table class="fullwidth-table">
+ <caption>Favorite teas, December 2015</caption>
+ <thead>
+  <tr>
+   <th scope="row">種類</th>
+   <th scope="col">カフェイン</th>
+   <th scope="col">抽出時間</th>
+   <th scope="col">湯温</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th scope="row">紅茶</th>
+   <td>高</td>
+   <td>2-3 分</td>
+   <td>99 °C</td>
+  </tr>
+  <tr>
+   <th scope="row">緑茶</th>
+   <td>低-中</td>
+   <td>1-2 分</td>
+   <td>75-80 °C</td>
+  </tr>
+  <tr>
+   <th colspan="4">カフェインフリー</th>
+  </tr>
+  <tr>
+   <th scope="row">ハーブティー</th>
+   <td>なし</td>
+   <td>3-6 分</td>
+   <td>99 °C</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Updating_this_guide" name="Updating_this_guide">このガイドの更新</h2>
+
+<p>このガイドは未完成のものであり、時間をかけて徐々に更新されています。このガイドの更新や追加を手伝ってくださる方は、気軽に行ってください。質問がある場合や、この記事を改善するための議論やアイデアをご希望の場合、または MDN Web Docs のスタイルやレイアウトを改善する方法についての提案がある場合は、いくつかの選択肢があります。</p>
+
+<p>完成させることを手伝いたい場合や、抜けているものや正しくない記述のスタイルがある場合は、 (Discourse では chrisdavidmills、 <a href="https://wiki.mozilla.org/IRC">Mozilla IRC</a> では chrismills) に連絡してください。</p>
+
+<dl>
+ <dt><a href="https://discourse.mozilla.org/c/mdn">MDN Web Docs Discourse フォーラムの議論を開始する</a></dt>
+ <dd>MDN Web Docs コミュニティやスタッフと議論したいという考えがある場合は、Mozilla Discourse のディスカッションサイトにある MDN Web Docs フォーラムでトピックを開始してください。</dd>
+ <dt><a href="https://github.com/mdn/sprints/issues/new?template=issue-template.md">提案を GitHub で提出</a></dt>
+ <dd>あなたが私たちの公式問題追跡システムにあなたの提案を記録したいのであれば、そうすることをお勧めします。最初に上記のチャンネルの1つを使って議論することをお勧めしますが、必須ではありません。</dd>
+ <dt><a href="irc://irc.mozilla.org/mdn">IRC チャンネルで質問する</a></dt>
+ <dd>私たちの執筆スタッフと寄稿者のコミュニティは、<a href="https://wiki.mozilla.org/IRC">Mozilla の IRC サーバ</a>の #mdn チャンネルを使って議論し、アイデアを共有しています。私たちのチャンネルに参加して質問をしたり、提案をすることは大歓迎です！ (なお、 IRC は参加者が少なく、2020年内に終了する可能性があります。 Discourse のほうが回答が得られやすいです。)</dd>
+</dl>

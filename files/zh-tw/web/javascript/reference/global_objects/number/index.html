@@ -39,11 +39,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
  <dt>{{jsxref("Number.EPSILON")}}</dt>
  <dd>介於1和大於1的最小值之可表示的差。</dd>
  <dt>{{jsxref("Number.MAX_SAFE_INTEGER")}}</dt>
- <dd>JavaScript 中 IEEE-754 雙精度範圍間的最大整數 (<code>2<sup>53</sup> - 1</code>) 。</dd>
+ <dd>JavaScript 中 IEEE-754 雙精度範圍間的最大整數 (<code>2^53 - 1</code>) 。</dd>
  <dt>{{jsxref("Number.MAX_VALUE")}}</dt>
  <dd>可表示的最大正整數。</dd>
  <dt>{{jsxref("Number.MIN_SAFE_INTEGER")}}</dt>
- <dd>JavaScript 中 IEEE-754 雙精度範圍間的最小整數 (<code>-(2<sup>53</sup> - 1)</code>) 。</dd>
+ <dd>JavaScript 中 IEEE-754 雙精度範圍間的最小整數 (<code>-(2^53 - 1)</code>) 。</dd>
  <dt>{{jsxref("Number.MIN_VALUE")}}</dt>
  <dd>可表示的最小值，即最靠近0的正整數?(<code><math><semantics><mrow><mn>5.00</mn><mo>×</mo><msup><mn>10</mn><mn>324</mn></msup></mrow><annotation encoding="TeX">5.00\times10^{324}</annotation></semantics></math></code>)。</dd>
  <dt>{{jsxref("Number.NaN")}}</dt>
@@ -66,9 +66,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
  <dt>{{jsxref("Number.isInteger()")}}</dt>
  <dd>判斷傳入的值是不是一個整數。</dd>
  <dt>{{jsxref("Number.isSafeInteger()")}}</dt>
- <dd>判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 <code>-(2<sup>53</sup> - 1)</code> 和 <code>2<sup>53</sup> - 1</code>之前)。</dd>
- <dt><s class="obsoleteElement">{{jsxref("Number.toInteger()")}} {{obsolete_inline}}</s></dt>
- <dd><s class="obsoleteElement">被用來評估傳入的值且將其轉換成整數 (或 {{jsxref("Global_Objects/Infinity", "Infinity")}}) 但已被移除。</s></dd>
+ <dd>判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 <code>-(2^53 - 1)</code> 和 <code>2^53 - 1</code>之前)。</dd>
  <dt>{{jsxref("Number.parseFloat()")}}</dt>
  <dd>這個方法和全域物件的 {{jsxref("parseFloat", "parseFloat()")}} 相同。</dd>
  <dt>{{jsxref("Number.parseInt()")}}</dt>
@@ -129,87 +127,11 @@ Number("100a")    // NaN
 
 <h2 id="規範">規範</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">規範</th>
-   <th scope="col">狀態</th>
-   <th scope="col">註記</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7', 'Number')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number-objects', 'Number')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>New methods and properties added: {{jsxref("Number.EPSILON", "EPSILON")}}, {{jsxref("Number.isFinite", "isFinite")}}, {{jsxref("Number.isInteger", "isInteger")}}, {{jsxref("Number.isNaN", "isNaN")}}, {{jsxref("Number.parseFloat", "parseFloat")}}, {{jsxref("Number.parseInt", "parseInt")}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number-objects', 'Number')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="瀏覽器相容">瀏覽器相容</h2>
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="參見">參見</h2>
 

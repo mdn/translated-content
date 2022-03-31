@@ -17,12 +17,12 @@ translation_of: Web/API/Node/previousSibling
 
 <p>Свойство <code><strong>Node.previousSibling</strong></code> используется только для чтения, оно возвращает узел предшествующий указанному в родительском элементе {{domxref("Node.childNodes", "childNodes")}}, или <code>null</code>,  если указанный узел первый в своём родителе.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><var>previousNode</var> = <em>node</em>.previousSibling;
 </pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:js">// &lt;a&gt;&lt;b1 id="b1"/&gt;&lt;b2 id="b2"/&gt;&lt;/a&gt;
 
@@ -30,7 +30,7 @@ alert(document.getElementById("b1").previousSibling); // null
 alert(document.getElementById("b2").previousSibling.id); // "b1"
 </pre>
 
-<h2 id="Notes" name="Notes">Примечание</h2>
+<h2 id="Notes">Примечание</h2>
 
 <div><p>Браузеры, основанные на Gecko, вставляют текстовые узлы в документ для представления пробелов в разметке.
     Поэтому узел, полученный, например, при использовании <a href="/ru/docs/Web/API/Node/firstChild" title="Свойство Node.firstChild только для чтения, возвращающее первый потомок узла в древе или null, если узел является бездетным. Если узел это документ, он возвращает первый узел в списке своих прямых детей."><code>Node.firstChild</code></a> или <a href="/ru/docs/Web/API/Node/previousSibling" title="Свойство Node.previousSibling используется только для чтения, оно возвращает узел предшествующий указанному в родительском элементе childNodes, или null,  если указанный узел первый в своём родителе."><code>Node.previousSibling</code></a> может относиться к
@@ -42,7 +42,7 @@ alert(document.getElementById("b2").previousSibling.id); // "b1"
 
 <p>Для навигации через список дочерних узлов в обратном порядке используйте <a href="/en-US/docs/Web/API/Node.nextSibling" title="DOM/Node.nextSibling">Node.nextSibling</a>.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">DOM Level 1 Core: previousSibling</a></li>

@@ -7,11 +7,11 @@ translation_of: Web/API/Range/commonAncestorContainer
 
 <div><code><strong>Range.commonAncestorContainer</strong></code> は読み込み専用のプロパティで、{{domxref("Range")}}の中の <a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/ranges.html#Level-2-Range-Position-h3">境界点</a> で最も深いもしくはドキュメントツリーから最も遠い両方を含む {{domxref("Node")}} を返します。つまり、{{domxref("Range.startContainer")}} と {{domxref("Range.endContainer")}} 両方が同じノードを参照する場合は、このノードは<strong>共通の祖先コンテナ</strong>です。</div>
 
-<div></div>
+
 
 <div><code>Range</code> は連続している必要はなく、ノードを部分的に選択する場合もあり、これは <code>Range</code> を囲っている <code>Node</code> を見つけるときに便利な方法です。</div>
 
-<div></div>
+
 
 <div>これは読み取り専用プロパティです。 <code>Node</code> の共通祖先コンテナを変更するため、<code>Range</code> の開始位置と終了位置をセットするため {{domxref("Range.setStart()")}} と {{domxref("Range.setEnd()")}} のような利用可能な様々なメソッドを利用することを検討します。</div>
 
@@ -123,5 +123,5 @@ function playAnimation(el) {
 <h2 id="関連情報">関連情報</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
+ <li><a href="/ja/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">The DOM interfaces index</a></li>
 </ul>

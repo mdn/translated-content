@@ -12,15 +12,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 
 <p><code><strong>SyntaxError</strong></code> 对象代表尝试解析语法上不合法的代码的错误。</p>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>当Javascript语言解析代码时,Javascript引擎发现了不符合语法规范的tokens或token顺序时抛出<code>SyntaxError</code>.</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>new SyntaxError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>message</code></dt>
@@ -28,33 +28,33 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
  <dt><code>fileName</code> {{non-standard_inline}}</dt>
  <dd>可选的. 包含引发异常的代码的文件名</dd>
  <dt><code>lineNumber</code> {{non-standard_inline}}</dt>
- <dd><span style="line-height: 19.0909080505371px;">可选的</span>. <span style="line-height: 19.0909080505371px;">包含引发异常的代码</span><span style="line-height: 19.0909080505371px;">的行号</span></dd>
+ <dd>可选的. 包含引发异常的代码的行号</dd>
 </dl>
 
-<h2 id="Properties" name="Properties">属性</h2>
+<h2 id="Properties">属性</h2>
 
 <dl>
  <dt>{{jsxref("SyntaxError.prototype")}}</dt>
- <dd><code><font face="Open Sans, sans-serif">允许</font>SyntaxError</code>对象添加属性.</dd>
+ <dd><code>允许SyntaxError</code>对象添加属性.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">方法</h2>
+<h2 id="Methods">方法</h2>
 
 <p>全局 <code>SyntaxError</code> 自身不包含任何方法, 但从原型链中继承了一些方法.</p>
 
-<h2 id="SyntaxError_instances" name="SyntaxError_instances"><code>SyntaxError</code> 实例</h2>
+<h2 id="SyntaxError_instances"><code>SyntaxError</code> 实例</h2>
 
-<h3 id="Properties_of_SyntaxError_instances" name="Properties_of_SyntaxError_instances">属性</h3>
+<h3 id="Properties_of_SyntaxError_instances">属性</h3>
 
 <div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', '属性')}}</div>
 
-<h3 id="Methods_of_SyntaxError_instances" name="Methods_of_SyntaxError_instances">方法</h3>
+<h3 id="Methods_of_SyntaxError_instances">方法</h3>
 
-<div>{{page('/<span style="line-height: 19.0909080505371px;">zh-CN</span>/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', '方法')}}</div>
+<div>{{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError/prototype', '方法')}}</div>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
-<h3 id="Example:_Catch_an_SyntaxError" name="Example:_Catch_an_SyntaxError">捕获 <code>SyntaxError</code></h3>
+<h3 id="Example:_Catch_an_SyntaxError">捕获 <code>SyntaxError</code></h3>
 
 <pre class="brush: js">try {
   eval('hoo bar');
@@ -69,7 +69,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 }
 </pre>
 
-<h3 id="Example:_Create_an_SyntaxError" name="Example:_Create_an_SyntaxError">创建 <code>SyntaxError</code></h3>
+<h3 id="Example:_Create_an_SyntaxError">创建 <code>SyntaxError</code></h3>
 
 <pre class="brush: js">try {
   throw new SyntaxError('Hello', 'someFile.js', 10);
@@ -113,55 +113,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

@@ -31,7 +31,7 @@ translation_of: Web/JavaScript/Memory_Management
 
 <p>為了不讓開發者對配置感到困擾，JavaScript 會在宣告值的同時完成記憶體配置</p>
 
-<pre class="brush: js notranslate">var n = 123; // 配置一記憶體空間給數字
+<pre class="brush: js">var n = 123; // 配置一記憶體空間給數字
 var s = 'azerty'; // 配置記憶體空間給字串
 
 var o = {
@@ -57,13 +57,13 @@ someElement.addEventListener('click', function() {
 
 <p>有些函式呼叫後產生物件配置。</p>
 
-<pre class="brush: js notranslate">var d = new Date(); // 配置一個日期物件
+<pre class="brush: js">var d = new Date(); // 配置一個日期物件
 
 var e = document.createElement('div'); // 配置一個 DOM 物件</pre>
 
 <p>有些方法配置新的值或物件：</p>
 
-<pre class="brush: js notranslate">var s = 'azerty';
+<pre class="brush: js">var s = 'azerty';
 var s2 = s.substr(0, 3); // s2 是一個新字串
 // 因為字串是一種不可變的值，
 // JavaScript 會決定不分配新的記憶體，
@@ -84,7 +84,7 @@ var a3 = a.concat(a2);
 
 <p>當我們談論到記憶體管理，問題通常出現在這個階段。最困難的工作是尋找「已不再被使用的記憶體配置空間」。</p>
 
-<p>Low-level languages require the developer to manually determine at which point in the program the allocated memory is no longer needed and to release it.</p>
+<p>低階語言需要開發者自己決定，當程序執行道某個地方時，是否有已被分配的記憶體不再需要。並手動將其釋放。</p>
 
 <p>高階的語言 (e.g. JavaScript) 有一個叫作垃圾回收器(garbage collector) 的系統，他的工作是追蹤記憶體分配的使用情況，以便自動釋放一些不再使用的記憶體空間。但這個垃圾回收器只是「儘量」做到自動釋放記憶體空間，因為判斷記憶體空間是否要繼續使用，這件事是「不可判定(<a href="https://en.wikipedia.org/wiki/Decidability_%28logic%29">undecidable</a>)」的（不能用演算法來解決）。</p>
 
@@ -104,7 +104,7 @@ var a3 = a.concat(a2);
 
 <h4 id="範例">範例</h4>
 
-<pre class="brush: js notranslate">var o = {
+<pre class="brush: js">var o = {
   a: {
     b: 2
   }
@@ -133,9 +133,9 @@ oa = null; // 現在把 oa 變成 null
 
 <h4 id="限制：循環">限制：循環</h4>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>當涉及到循環時有一個限制。在下面的例子中，創造兩個物件並相互參考，從而製作一個循環。當呼叫函式時，他們應該超出作用範圍，因此他們實際上是無用且可釋放。但垃圾回收參考計數演算法會認為，兩個物件都至少被參考一次，因此兩個都是不能被回收的。</span></p>
+<p>當涉及到循環時有一個限制。在下面的例子中，創造兩個物件並相互參考，從而製作一個循環。當呼叫函式時，他們應該超出作用範圍，因此他們實際上是無用且可釋放。但垃圾回收參考計數演算法會認為，兩個物件都至少被參考一次，因此兩個都是不能被回收的。</p>
 
-<pre class="brush: js notranslate">function f() {
+<pre class="brush: js">function f() {
   var o = {};
   var o2 = {};
   o.a = o2; // o 參考 o2
@@ -149,9 +149,9 @@ f();
 
 <h4 id="真實案例">真實案例</h4>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>Internet Explorer 6和7有一個DOM物件的垃圾回收參考計數。循環是一個造成記憶體洩漏(memory leaks)的常見問題：</span></p>
+<p>Internet Explorer 6和7有一個DOM物件的垃圾回收參考計數。循環是一個造成記憶體洩漏(memory leaks)的常見問題：</p>
 
-<pre class="brush: js notranslate">var div;
+<pre class="brush: js">var div;
 window.onload = function() {
   div = document.getElementById('myDivElement');
   div.circularReference = div;
@@ -159,23 +159,23 @@ window.onload = function() {
 };
 </pre>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>在上面的例子中，DOM 元素「myDivElement」在「circularReference」屬性中有一個循環參考。如果該屬性未被直接刪除或為零，垃圾回收參考計數將視其始終至少有一個參考保持不變，並將 DOM 元素保存在記憶體裡，即使它已從DOM 樹中移除。如果該 DOM 元素擁有大量資料（如同上面的例子中的 lotsOfData 屬性），則此資料所佔用的記憶體將永遠不會釋放。</span></p>
+<p>在上面的例子中，DOM 元素「myDivElement」在「circularReference」屬性中有一個循環參考。如果該屬性未被直接刪除或為零，垃圾回收參考計數將視其始終至少有一個參考保持不變，並將 DOM 元素保存在記憶體裡，即使它已從DOM 樹中移除。如果該 DOM 元素擁有大量資料（如同上面的例子中的 lotsOfData 屬性），則此資料所佔用的記憶體將永遠不會釋放。</p>
 
 <h3 id="標記和清理演算法">標記和清理演算法</h3>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>這個演算法將「這個物件再也不會被使用」的定義縮減到「這個物件不可到達」。</span></p>
+<p>這個演算法將「這個物件再也不會被使用」的定義縮減到「這個物件不可到達」。</p>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>這個演算法假設一組物件，其名為「根 (roots)」（在 JavaScript 中，根(roots)是全局物件）。垃圾回收器定期從這些根開始，尋訪所有被根參考的物件與那些物件參考的物件。垃圾回收器會回收那些沒有被尋訪的到物件。</span></p>
+<p>這個演算法假設一組物件，其名為「根 (roots)」（在 JavaScript 中，根(roots)是全局物件）。垃圾回收器定期從這些根開始，尋訪所有被根參考的物件與那些物件參考的物件。垃圾回收器會回收那些沒有被尋訪的到物件。</p>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>這個演算法比前一個演算法更好，因為一個不被任何物件參考的物件，一定無法從根被尋訪到。然而，一個無法從根被尋訪到的物件，不一定不被任何物件參考，可以在循環的例子中發現這件事。</span></p>
+<p>這個演算法比前一個演算法更好，因為一個不被任何物件參考的物件，一定無法從根被尋訪到。然而，一個無法從根被尋訪到的物件，不一定不被任何物件參考，可以在循環的例子中發現這件事。</p>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>截至2012年，所有現代瀏覽器都使用標記和清理的垃圾回收器。 在過去的幾年裡，JavaScript 垃圾回收領域的所有改進都是對這個演算法的實作與改進，但並未改進垃圾回收演算法本身，也沒有縮減垃圾的定義 「這個物件再也不會被使用」。</span></p>
+<p>截至2012年，所有現代瀏覽器都使用標記和清理的垃圾回收器。 在過去的幾年裡，JavaScript 垃圾回收領域的所有改進都是對這個演算法的實作與改進，但並未改進垃圾回收演算法本身，也沒有縮減垃圾的定義 「這個物件再也不會被使用」。</p>
 
 <h4 id="循環不再是一個問題">循環不再是一個問題</h4>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>在上面的第一個範例中，函式呼叫返回後，那兩個物件不再被全局物件可以尋訪到的物件參考。 因此，它們將被垃圾回收器發現，視為不可達到的。</span></p>
+<p>在上面的第一個範例中，函式呼叫返回後，那兩個物件不再被全局物件可以尋訪到的物件參考。 因此，它們將被垃圾回收器發現，視為不可達到的。</p>
 
-<p><span style='background-color: #ffffff; color: #333333; display: inline !important; float: none; font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px; font-style: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-decoration-style: initial; text-indent: 0px; text-transform: none; white-space: pre-wrap;'>第二個範例也是一樣的。 一旦 div 和它的處理程序從根本上無法尋訪，它們都會被垃圾回收掉，儘管他們自身相互參考。</span></p>
+<p>第二個範例也是一樣的。 一旦 div 和它的處理程序從根本上無法尋訪，它們都會被垃圾回收掉，儘管他們自身相互參考。</p>
 
 <h4 id="限制：物件必須明顯的不可達到">限制：物件必須明顯的不可達到</h4>
 
@@ -193,7 +193,7 @@ window.onload = function() {
 
 <p>We can also expose the garbage collector for debugging memory issues using a flag and the <a href="https://nodejs.org/en/docs/guides/debugging-getting-started/">Chrome Debugger</a>:</p>
 
-<pre class="notranslate">node --expose-gc --inspect index.js</pre>
+<pre>node --expose-gc --inspect index.js</pre>
 
 <h2 id="可以參考">可以參考</h2>
 

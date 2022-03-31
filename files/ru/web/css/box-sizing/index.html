@@ -15,7 +15,7 @@ translation_of: Web/CSS/box-sizing
 
 <div>{{EmbedInteractiveExample("pages/css/box-sizing.html")}}</div>
 
-<div></div>
+
 
 <p>По умолчанию в <a href="/ru/docs/Web/CSS/box_model" title="CSS/Box_model">блоковой модели CSS</a> ширина и высота, которую вы задаёте элементу применяется только для контента элемента. Если у элемента есть граница или внутренний отступ, то они добавляются к ширине и высоте, чтобы получить отображаемый на экране размер. Это значит, что когда вы выставляете ширину и высоту, вам придётся изменять значение, при добавлении границ и отступов. Например, если у вас есть четыре блока с <code>width: 25%;</code> , и у какого-нибудь из них есть граница или внутренний отступ слева или справа, то по умолчанию они не поместятся на одной строке.</p>
 
@@ -30,11 +30,11 @@ translation_of: Web/CSS/box-sizing
 <p><strong>Примечание: </strong>Часто выставление <code>box-sizing: border-box</code> полезно для размещения элементов. Оно сильно упрощает работу с размерами элементов, и как правило устраняет ряд подводных камней, на которые вы можете наткнуться, размещая контент. С другой стороны, используя <code>position-relative</code> или <code>position: absolute</code>, <code>box-sizing: content-box</code> позволяет позиционным значениям быть зависимыми только от контента, а не от границ и отступов, что иногда желательно.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <p>Для свойства <code>box-sizing</code>  устанавливается единственное ключевое слово из списка значений ниже.</p>
 
-<h3 id="Values" name="Values">Значения</h3>
+<h3 id="Values">Значения</h3>
 
 <dl>
  <dt><code>content-box</code></dt>
@@ -56,19 +56,19 @@ translation_of: Web/CSS/box-sizing
 <p><strong>Примечание:</strong> Значение <code>padding-box</code> устарело</p>
 </div>
 
-<h2 id="Пример" name="Пример">Пример</h2>
+<h2 id="Пример">Пример</h2>
 
 <p>Этот пример показывает как разные значения <code>box-sizing</code> изменяют видимый размер двух идентичных элементов.</p>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;div class="content-box"&gt;Content box&lt;/div&gt;
+<pre class="brush: html">&lt;div class="content-box"&gt;Content box&lt;/div&gt;
 &lt;br&gt;
 &lt;div class="border-box"&gt;Border box&lt;/div&gt;</pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">div {
+<pre class="brush: css">div {
   width: 160px;
   height: 80px;
   padding: 20px;
@@ -96,32 +96,17 @@ translation_of: Web/CSS/box-sizing
 
 <p>{{EmbedLiveSample('Пример', 'auto', 300)}}</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#box-sizing', 'box-sizing')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("css.properties.box-sizing")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li><a href="/ru/docs/Web/CSS/box_model" title="CSS/Box model">Блоковая модель CSS</a></li>

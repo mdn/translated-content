@@ -13,7 +13,7 @@ translation_of: Web/API/Attr
 
 <p>{{InheritanceDiagram}}</p>
 
-<div class="warning"><strong>警告：</strong>从Gecko 7.0开始{{geckoRelease("7.0")}}，控制台会输出这些方法和属性将会被移除的警告信息。你应该对代码进行相应的修正。点击{{anch("Deprecated properties and methods")}}查看完整的列表。</div>
+<div class="warning"><strong>警告：</strong>从Gecko 7.0开始{{geckoRelease("7.0")}}，控制台会输出这些方法和属性将会被移除的警告信息。你应该对代码进行相应的修正。点击<a href="#废弃的属性和方法">废弃的属性和方法</a>查看完整的列表。</div>
 
 <div class="warning">在<a href="https://www.w3.org/standards/history/dom">DOM4[REC]</a>中，为了规范化Attr的实现，它不再继承自{{domxref("Node")}}。在目前<a href="https://www.w3.org/standards/history/dom41">DOM4.1[WD]</a>中又有变动，因此不建议使用Attr对象上有关{{domxref("Node")}}的属性和方法。</div>
 
@@ -172,63 +172,7 @@ translation_of: Web/API/Attr
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Edge</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Edge</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] As of Chrome 45, this property no longer inherits from Node.</p>
+{{Compat("api.Attr")}}
 
 <h2 id="参考">参考</h2>
 

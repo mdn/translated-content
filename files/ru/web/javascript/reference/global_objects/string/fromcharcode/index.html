@@ -11,32 +11,32 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Статический метод <strong><code>String.fromCharCode()</code></strong> возвращает строку, созданную из указанной последовательности значений единиц кода UTF-16.</p>
 
 <p>. </p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>String.fromCharCode(<var>num1</var>[, ...[, <var>numN</var>]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>num1, ..., num<em>N</em></code></dt>
  <dd>Последовательность чисел, являющихся значениями единиц кода UTF-16. <span style="font-size: 1rem; letter-spacing: -0.00278rem;">Диапазон составляет от 0 до 65535 (0xFFFF). Числа больше 0xFFFF усекаются. Проверка достоверности не производится.</span></dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Этот метод возвращает примитивную строку, а не объект {{jsxref("Global_Objects/String", "String")}}.</p>
 
 <p>Поскольку метод <code>fromCharCode()</code> является статическим методом объекта {{jsxref("Global_Objects/String", "String")}}, вы всегда должны использовать его как <code>String.fromCharCode()</code>, а не как метод созданного вами экземпляра {{jsxref("Global_Objects/String", "String")}}.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_fromCharCode" name="Example:_Using_fromCharCode">Пример: использование метода <code>fromCharCode()</code></h3>
+<h3 id="Example_Using_fromCharCode">Пример: использование метода <code>fromCharCode()</code></h3>
 
 <p>Следующий пример вернёт строку "ABC".</p>
 
@@ -45,42 +45,19 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 <p dir="ltr" id="tw-target-text"><a href="https://asecuritysite.com/coding/asc2">Полная таблица UTF-16</a></p>
 
-<h2 id="Getting_it_to_work_with_higher_values" name="Getting_it_to_work_with_higher_values">Как заставить его работать с большими значениями</h2>
+<h2 id="Getting_it_to_work_with_higher_values">Как заставить его работать с большими значениями</h2>
 
 <p>Хотя большинство распространённых значений Юникода может быть представлено одним 16-битным числом (как ожидалось на ранней стадии стандартизации JavaScript) и метод <code>fromCharCode()</code> может использоваться для возврата одного символа для самых распространённых значений (точнее, значений UCS-2, которые являются подмножеством самых распространённых символов UTF-16), для работы со ВСЕМИ допустимыми значениями Юникода (занимающими до 21 бита) одного метода <code>fromCharCode()</code> недостаточно. Поскольку большие кодовые точки используют (самое меньшее) два «суррогатных» числа для представления одного символа, для возврата таких пар можно использовать метод {{jsxref("String.fromCodePoint()")}} (являющийся частью черновика ES6) и, таким образом, адекватно представлять эти символы.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.fromCodePoint()")}}</li>

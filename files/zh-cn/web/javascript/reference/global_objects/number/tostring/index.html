@@ -11,16 +11,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 
 <p><strong><code>toString()</code></strong> 方法返回指定 {{jsxref("Number")}} 对象的字符串表示形式。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre><code><var>numObj</var>.toString([<var>radix</var>])</code>
 </pre>
 
-<h3 id="Parameter" name="Parameter">参数</h3>
+<h3 id="Parameter">参数</h3>
 
 <dl>
  <dt>radix</dt>
- <dd>指定要用于数字到字符串的转换的基数(从2到36)。如果未指定 <samp>radix</samp> 参数，则默认值为 10。</dd>
+ <dd>指定要用于数字到字符串的转换的基数(从2到36)。如果未指定 <code>radix</code> 参数，则默认值为 10。</dd>
 </dl>
 
 <h3 id="异常信息">异常信息</h3>
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
  </dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p>{{jsxref("Number")}} 对象覆盖了 {{jsxref("Object")}} 对象上的 <code>toString()</code> 方法，它不是继承的 {{jsxref("Object.prototype.toString()")}}。对于 {{jsxref( "Number")}} 对象，<code>toString()</code> 方法以指定的基数返回该对象的字符串表示。</p>
 
@@ -44,7 +44,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toString
 
 <p>进行数字到字符串的转换时，建议<strong>用小括号将要转换的目标括起来</strong>，防止出错。</p>
 
-<h2 id="Examples" name="Examples">例子</h2>
+<h2 id="Examples">例子</h2>
 
 <pre class="brush: js"><code>var count = 10;
 
@@ -90,55 +90,7 @@ console.log((-0xff).toString(2)); // 输出 '-11111111'</code>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+{{Compat}}
 
 <h2 id="相关链接">相关链接</h2>
 

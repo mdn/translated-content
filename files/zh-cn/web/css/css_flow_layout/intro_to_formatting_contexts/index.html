@@ -18,12 +18,12 @@ translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 
 <h3 id="创建新的块格式上下文">创建新的块格式上下文</h3>
 
-<p>{{HTMLElement("html")}} 元素不是唯一能够创建块格式上下文的元素。默认为块布局的任何元素也会为其后代元素创建块格式上下文。此外，还有一些CSS属性可以使元素创建一个BFC，即使默认情况下它不这样做。</p>
+<p>{{HTMLElement("html")}} 元素不是唯一能够创建块格式上下文的元素。任何块级元素都可以通过应用某些CSS属性来创建一个BFC</p>
 
 <p>除了文档的根元素({{HTMLElement("html")}}) 之外，还将在以下情况下创建一个新的BFC：</p>
 
 <ul>
- <li>使用{{cssxref("float")}} 时其浮动的元素</li>
+ <li>使用{{cssxref("float")}} 使其浮动的元素</li>
  <li>绝对定位的元素 (包含 {{cssxref("position", "position: fixed", "#fixed")}} 或{{cssxref("position", "position: sticky", "#sticky")}}</li>
  <li>使用以下属性的元素 {{cssxref("display", "display: inline-block", "#inline-block")}}</li>
  <li>表格单元格或使用 <code>display: table-cell</code>, 包括使用 <code>display: table-*</code> 属性的所有表格单元格</li>

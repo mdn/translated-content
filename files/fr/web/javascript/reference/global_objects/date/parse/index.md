@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Date/parse
 ---
 {{JSRef}}
 
-La méthode **`Date.parse()`\*\*** \*\*analyse la représentation textuelle d'une date, et renvoie le nombre de millisecondes depuis le 1er janvier 1970, 00:00:00 UTC jusqu'à cette date ou `NaN` si la chaîne n'est pas reconnue ou décrit une date invalide (par exemple 2015-02-31).
+La méthode **`Date.parse()`** analyse la représentation textuelle d'une date, et renvoie le nombre de millisecondes depuis le 1er janvier 1970, 00:00:00 UTC jusqu'à cette date ou `NaN` si la chaîne n'est pas reconnue ou décrit une date invalide (par exemple 2015-02-31).
 
 > **Note :** Pour les anciennes implémentations (avant ES5), le résultat de ` Date.``parse ` variait d'une implémentation à l'autre. Attention donc à la compatibilité avec ces anciennes versions.
 
@@ -73,7 +73,7 @@ Date('2014-25-23').toISOString();
 // renvoie "RangeError: invalid date" pour les navigateurs ES5
 ```
 
-L'implémentation spécifique de SpiderMonkey peut être trouvée dans le fichier [`jsdate.cpp`](https://dxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889). La chaîne `"10 06 2014"` est un exemple de chaîne non ISO, utiliser parse() sur cette chaîne entraînera le moteur JavaScript à utiliser son implémentation de recours. Voir ce [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) pour une explication rapide de la façon dont est faite l'analyse de la chaîne.
+L'implémentation spécifique de SpiderMonkey peut être trouvée dans le fichier [`jsdate.cpp`](https://dxr.mozilla.org/mozilla-central/source/js/src/jsdate.cpp?rev=64553c483cd1#889). La chaîne `"10 06 2014"` est un exemple de chaîne non ISO, utiliser parse() sur cette chaîne entraînera le moteur JavaScript à utiliser son implémentation de recours. Voir ce [bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1023155#c6) pour une explication rapide de la façon dont est faite l'analyse de la chaîne.
 
 ```js
 new Date('10 06 2014');

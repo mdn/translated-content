@@ -14,7 +14,7 @@ translation_of: Web/API/BeforeInstallPromptEvent
 
 <div><span style="line-height: 19.0909080505371px;">Этот интерфейс наследуется от интерфейса </span>{{domxref("Event")}}<span style="line-height: 19.0909080505371px;">.</span> </div>
 
-<div></div>
+
 
 <p>{{InheritanceDiagram(700, 60, 20)}}</p>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/BeforeInstallPromptEvent
 
 <h2 id="Пример">Пример</h2>
 
-<pre class="brush: js notranslate">window.addEventListener("beforeinstallprompt", function(e) {
+<pre class="brush: js">window.addEventListener("beforeinstallprompt", function(e) {
   // Зарегистрируйте платформы, указанные в качестве параметров, в запросе на установку
   console.log(e.platforms); // e.g., ["web", "android", "windows"]
   e.userChoice.then(function(choiceResult) {
@@ -58,4 +58,4 @@ translation_of: Web/API/BeforeInstallPromptEvent
 
 
 
-<p>{{Compat("api.BeforeInstallPromptEvent")}}</p>
+<p>{{Compat}}</p>

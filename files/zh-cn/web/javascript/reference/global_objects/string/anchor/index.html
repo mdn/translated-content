@@ -13,14 +13,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 
 <h2 id="概述">概述</h2>
 
-<div class="blockIndicator warning">
-<p>已废弃<br>
- 该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。</p>
+<div class="warning">
+<p><strong>警告：</strong>该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。</p>
 </div>
 
 <p><code><strong>anchor()</strong></code> 方法创建一个 {{HTMLElement("a")}} HTML 锚元素，被用作超文本靶标（hypertext target）。</p>
 
-<p id="Syntax">语法</p>
+<h2>语法</h2>
 
 <pre class="syntaxbox"><code>str.anchor(<em>name</em>) </code></pre>
 
@@ -75,61 +74,9 @@ document.body.innerHTML = myString.anchor("contents_anchor");</pre>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoDesktop("1.0") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatGeckoMobile("1.0") }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h3 id="Gecko-specific_notes">Gecko-specific notes</h3>
-
-<p>从{{gecko("17")}}开始  <strong>"</strong> (引号) 被 HTML引用字符 <code>&amp;quot所替代</code>；在字符串中申请<code>命名参数</code>.</p>
-
-<h2 id="See_Also" name="See_Also">相关链接</h2>
+<h2 id="See_Also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.link()")}}</li>

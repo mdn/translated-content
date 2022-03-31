@@ -47,7 +47,7 @@ L'objet `Number` est principalement utilisé dans les cas de figure suivants :
 - {{jsxref("Number.MIN_VALUE")}}
   - : La plus petite valeur qu'on peut représenter en JavaScript, c'est-à-dire le plus petit nombre positif (le nombre le plus près de zéro qui n'est pas égal à zéro et qu'on peut représenter en JavaScript).
 - {{jsxref("Number.NaN")}}
-  - : Une valeur spéciale pour représenter les valeurs non-numériques (**NaN** correspond à « **\*n**ot **a** **n**umber\* » en anglais, qui signifie « n'est pas un nombre »).
+  - : Une valeur spéciale pour représenter les valeurs non-numériques (**NaN** correspond à «&nbsp;<i lang="en">**N**ot **a** **N**umber</i>&nbsp;» en anglais, qui signifie «&nbsp;n'est pas un nombre&nbsp;»).
 - {{jsxref("Number.NEGATIVE_INFINITY")}}
   - : Une valeur spéciale pour représenter l'infini négatif.
 - {{jsxref("Number.POSITIVE_INFINITY")}}
@@ -74,22 +74,22 @@ L'objet `Number` est principalement utilisé dans les cas de figure suivants :
 
 ## Les instances de `Number`
 
-Toutes les instances de `Number` héritent de {{jsxref("Number.prototype")}}. Il est possible de modifier le prototype du constructeur `Number` pour affecter toutes les instances de `Number`.
+Toutes les instances de `Number` héritent de {{jsxref("Number.prototype")}}. Il est possible de modifier le prototype du constructeur `Number` pour affecter toutes les instances de `Number`.
 
 ### Méthodes
 
 - {{jsxref("Number.prototype.toExponential()" ,"Number.prototype.toExponential(<var>fractionDigits</var>)")}}
-  - : Retourne une chaîne représentant le nombre en notation exponentielle.
+  - : Retourne une chaîne représentant le nombre en notation exponentielle.
 - {{jsxref("Number.prototype.toFixed()", "Number.prototype.toFixed(<var>digits</var>)")}}
-  - : Retourne une chaîne représentant le nombre avec la notation virgule fixe.
-- {{jsxref("Number.prototype.toLocaleString()", "Number.prototype.toLocaleString([<var>locales</var> [, <var>options</var>]])")}}
-  - : Retourne une chaîne avec une représentation sensible à la langue de ce nombre. Surcharge la méthode {{jsxref("Object.prototype.toLocaleString()")}}.
+  - : Retourne une chaîne représentant le nombre avec la notation virgule fixe.
+- {{jsxref("Number.prototype.toLocaleString()", "Number.prototype.toLocaleString([<var>locales</var> [, <var>options</var>]])")}}
+  - : Retourne une chaîne avec une représentation sensible à la langue de ce nombre. Surcharge la méthode {{jsxref("Object.prototype.toLocaleString()")}}.
 - {{jsxref("Number.prototype.toPrecision()", "Number.prototype.toPrecision(<var>precision</var>)")}}
   - : Retourne une chaîne représentant le nombre avec une précision donnée en notation virgule fixe ou exponentielle.
 - {{jsxref("Number.prototype.toString()", "Number.prototype.toString([<var>radix</var>])")}}
-  - : Retourne une chaîne représentant le nombre dans une base numérique (radix) donnée. Surcharge la méthode {{jsxref("Object.prototype.toString()")}}.
+  - : Retourne une chaîne représentant le nombre dans une base numérique (radix) donnée. Surcharge la méthode {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Number.prototype.valueOf()")}}
-  - : Retourne la valeur primitive de l'objet spécifié. Surcharge la méthode {{jsxref("Object.prototype.valueOf()")}}.
+  - : Retourne la valeur primitive de l'objet spécifié. Surcharge la méthode {{jsxref("Object.prototype.valueOf()")}}.
 
 ## Exemples
 
@@ -140,7 +140,7 @@ Number("0b11");      // 3
 Number("0o11");      // 9
 Number("toto");      // NaN
 Number("100a");      // NaN
-Number("-Infinity";) // -Infinity
+Number("-Infinity"); // -Infinity
 ```
 
 > **Note :** On pourra également convertir `null` en `0` grâce à `Number` : `Number(null)` donnera `0`.

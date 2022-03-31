@@ -13,12 +13,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 <p>静态方法 <code><strong>Atomics</strong></code><strong><code>.notify()</code></strong> 提醒一些在等待队列中休眠的代理。</p>
 
 <div class="note">
-<p><strong>注意：</strong>本操作仅在共享的 {{jsxref("Int32Array")}} 下可用。</p>
+<p><strong>备注：</strong>本操作仅在共享的 {{jsxref("Int32Array")}} 下可用。</p>
 </div>
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox notranslate">Atomics.notify(typedArray, index, count)
+<pre class="syntaxbox">Atomics.notify(typedArray, index, count)
 </pre>
 
 <h3 id="参数">参数</h3>
@@ -47,18 +47,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 
 <p>分配一个共享的 <code>Int32Array</code>：</p>
 
-<pre class="brush: js notranslate">var sab = new SharedArrayBuffer(1024);
+<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
 var int32 = new Int32Array(sab);
 </pre>
 
 <p>一个读线程会进入休眠并监视索引0处的值（默认为0）。只要索引0处的值不为0，读进程就会唤醒。但是，一旦写进程存储了一个新的值，写进程就会产生一个提醒并返回写入后的新值（123）。（这里示例有问题或者说对初学者不友好，如果直接在浏览器控制台运行下面代码会报错，因为我们不能尝试睡眠主线程，可以见 <a href="https://github.com/lizhongzhen11/lizz-blog/issues/125#notice">重学js —— 结构化数据之Atomics对象</a>，同时我在 <strong>codepen </strong>写了一个示例：<a href="https://codepen.io/lizhongzhen11/project/editor/AmzyaY#">Atomics.wait使用示例</a>）</p>
 
-<pre class="brush: js notranslate">Atomics.wait(int32, 0, 0);
+<pre class="brush: js">Atomics.wait(int32, 0, 0);
 console.log(int32[0]); // 123</pre>
 
 <p>写进程写入一个新值并告知等待进程已经写入成功了：</p>
 
-<pre class="brush: js notranslate">console.log(int32[0]); // 0;
+<pre class="brush: js">console.log(int32[0]); // 0;
 Atomics.store(int32, 0, 123);
 Atomics.notify(int32, 0, 1);</pre>
 

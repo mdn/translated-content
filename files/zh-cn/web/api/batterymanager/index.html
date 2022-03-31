@@ -62,63 +62,7 @@ translation_of: Web/API/BatteryManager
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatChrome(39.0)}}</td>
-   <td>{{CompatGeckoDesktop("10")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoDesktop("16")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25</td>
-   <td>{{CompatNo}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Android Webview</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-   <th>Chrome for Android</th>
-  </tr>
-  <tr>
-   <td>基本支持</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(40.0)}}</td>
-   <td>{{CompatGeckoMobile("10")}} {{property_prefix("moz")}}<br>
-    {{CompatGeckoMobile("16")}}<sup>[1]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>25<sup>[2]</sup></td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatChrome(42.0)}}<sup>[2]</sup></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 在Firefox 10.0中默认无效，但可设定preference <code>dom.battery.enabled</code>为<code>true从而使其有效化。</code>自Firefox 11.0起，<code>mozBattery默认有效。</code>Battery API现能被支持与Android，Windows，和安装了UPower的Linux。自Gecko 18.0 {{geckoRelease("18.0")}}也能支持MacOS。Firefox还为被弃用的{{domxref("navigator.battery")}}提供支持。</p>
-
-<p>[2] {{domxref("BatteryManager.chargingTime")}}和{{domxref("BatteryManager.dischargingTime")}}的值总是等于无穷。</p>
+{{Compat("api.BatteryManager")}}
 
 <h2 id="其他">其他</h2>
 

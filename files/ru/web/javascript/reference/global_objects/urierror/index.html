@@ -11,13 +11,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 ---
 <div>{{JSRef("Global_Objects", "Error", "EvalError,InternalError,RangeError,ReferenceError,SyntaxError,TypeError,URIError")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 <p>Объект <code><strong>URIError</strong></code> представляет ошибку, возникающую при неправильном использовании глобальных функций обработки URI.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 <pre class="syntaxbox"><code>new URIError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 <dl>
  <dt><code>message</code></dt>
  <dd>Необязательный параметр. Человеко-читаемое описание ошибки.</dd>
@@ -27,29 +27,29 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
  <dd>Необязательный параметр. Номер строки кода, вызвавшей исключение.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 <p>Исключение <code>URIError</code> выбрасывается при передаче некорректного URI в глобальные функции обработки URI.</p>
 
-<h2 id="Properties" name="Properties">Свойства</h2>
+<h2 id="Properties">Свойства</h2>
 <dl>
  <dt>{{jsxref("URIError.prototype")}}</dt>
  <dd>Позволяет добавлять свойства в объект <code>URIError</code>.</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">Методы</h2>
+<h2 id="Methods">Методы</h2>
 <p>Глобальный объект <code>URIError</code> не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов.</p>
 
-<h2 id="URIError_instances" name="URIError_instances">Экземпляры объекта <code>URIError</code></h2>
+<h2 id="URIError_instances">Экземпляры объекта <code>URIError</code></h2>
 
-<h3 id="Properties_of_URIError_instances" name="Properties_of_URIError_instances">Свойства</h3>
+<h3 id="Properties_of_URIError_instances">Свойства</h3>
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Properties')}}</div>
 
-<h3 id="Methods_of_URIError_instances" name="Methods_of_URIError_instances">Методы</h3>
+<h3 id="Methods_of_URIError_instances">Методы</h3>
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/URIError/prototype', 'Methods')}}</div>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Catch_an_URIError" name="Example:_Catch_an_URIError">Пример: перехват исключения <code>URIError</code></h3>
+<h3 id="Example:_Catch_an_URIError">Пример: перехват исключения <code>URIError</code></h3>
 <pre class="brush: js">try {
   decodeURIComponent('%');
 } catch (e) {
@@ -63,7 +63,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 }
 </pre>
 
-<h3 id="Example:_Create_an_URIError" name="Example:_Create_an_URIError">Пример: возбуждение исключения <code>URIError</code></h3>
+<h3 id="Example:_Create_an_URIError">Пример: возбуждение исключения <code>URIError</code></h3>
 <pre class="brush: js">try {
   throw new URIError('Привет', 'someFile.js', 10);
 } catch (e) {
@@ -77,7 +77,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
 }
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 <table class="standard-table">
  <tbody>
   <tr>
@@ -103,10 +103,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/URIError
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 <ul>
  <li>{{jsxref("Error")}}</li>
  <li>{{jsxref("URIError.prototype")}}</li>

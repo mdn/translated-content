@@ -17,12 +17,12 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 <p>{{EmbedInteractiveExample("pages/js/json-stringify.html")}}</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
-<pre class="syntaxbox notranslate"><code>JSON.stringify(<em>value</em>[, <em>replacer</em> [, <em>space</em>]])</code>
+<pre class="syntaxbox"><code>JSON.stringify(<em>value</em>[, <em>replacer</em> [, <em>space</em>]])</code>
 </pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>value</code></dt>
@@ -31,11 +31,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
  <dd>如果该参数是一个函数，则在序列化过程中，被序列化的值的每个属性都会经过该函数的转换和处理；如果该参数是一个数组，则只有包含在这个数组中的属性名才会被序列化到最终的 JSON 字符串中；如果该参数为 null 或者未提供，则对象所有的属性都会被序列化。</dd>
  <dt><code>space</code> {{optional_inline}}</dt>
  <dd>指定缩进用的空白字符串，用于美化输出（pretty-print）；如果参数是个数字，它代表有多少的空格；上限为10。该值若小于1，则意味着没有空格；如果该参数为字符串（当字符串长度超过10个字母，取其前10个字母），该字符串将被作为空格；如果该参数没有提供（或者为 null），将没有空格。</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
- </dt>
- <dd>一个表示给定值的JSON字符串。</dd>
 </dl>
+
+<h3 id="返回值">返回值</h3>
+
+<p>一个表示给定值的JSON字符串。</p>
 
 <h3 id="异常">异常</h3>
 
@@ -64,7 +64,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 <h3 id="使用_JSON.stringify">使用 JSON.stringify</h3>
 
-<pre class="brush: js notranslate">JSON.stringify({});                        // '{}'
+<pre class="brush: js">JSON.stringify({});                        // '{}'
 JSON.stringify(true);                      // 'true'
 JSON.stringify("foo");                     // '"foo"'
 JSON.stringify([1, "false", false]);       // '[1,"false",false]'
@@ -134,7 +134,7 @@ JSON.stringify(
 
 <h4 id="例子function">例子(function)</h4>
 
-<pre class="notranslate"><code>function replacer(key, value) {
+<pre><code>function replacer(key, value) {
   if (typeof value === "string") {
     return undefined;
   }
@@ -150,18 +150,18 @@ var jsonString = JSON.stringify(foo, replacer);</code></pre>
 
 <p>如果 <code>replacer</code> 是一个数组，数组的值代表将被序列化成 JSON 字符串的属性名。</p>
 
-<pre class="notranslate"><code>JSON.stringify(foo, ['week', 'month']);
+<pre><code>JSON.stringify(foo, ['week', 'month']);
 // '{"week":45,"month":7}', 只保留 “week” 和 “month” 属性值。</code></pre>
 
 <h3 id="space_参数"><code>space</code> 参数</h3>
 
 <p><code>space </code>参数用来控制结果字符串里面的间距。如果是一个数字, 则在字符串化时每一级别会比上一级别缩进多这个数字值的空格（最多10个空格）；如果是一个字符串，则每一级别会比上一级别多缩进该字符串（或该字符串的前10个字符）。</p>
 
-<pre class="brush: js notranslate">JSON.stringify({ a: 2 }, null, " ");   // '{\n "a": 2\n}'</pre>
+<pre class="brush: js">JSON.stringify({ a: 2 }, null, " ");   // '{\n "a": 2\n}'</pre>
 
 <p>使用制表符（\t）来缩进：</p>
 
-<pre class="brush: js notranslate">JSON.stringify({ uno: 1, dos : 2 }, null, '\t')
+<pre class="brush: js">JSON.stringify({ uno: 1, dos : 2 }, null, '\t')
 // '{            \
 //     "uno": 1, \
 //     "dos": 2  \
@@ -172,7 +172,7 @@ var jsonString = JSON.stringify(foo, replacer);</code></pre>
 
 <p>如果一个被序列化的对象拥有 <code>toJSON</code> 方法，那么该 <code>toJSON</code> 方法就会覆盖该对象默认的序列化行为：不是该对象被序列化，而是调用 <code>toJSON</code> 方法后的返回值会被序列化，例如：</p>
 
-<pre class="brush: js notranslate">var obj = {
+<pre class="brush: js">var obj = {
   foo: 'foo',
   toJSON: function () {
     return 'bar';
@@ -186,7 +186,7 @@ JSON.stringify({x: obj}); // <code>'{"x":"bar"}'</code>
 
 <p>注意 JSON 不是 JavaScript 严格意义上的子集，在 JSON 中不需要省略两条终线（Line separator 和 Paragraph separator），但在 JavaScript 中需要被省略。因此，如果 JSON 被用作 JSONP 时，下面方法可以使用：</p>
 
-<pre class="notranslate"><code>function jsFriendlyJSONStringify (s) {
+<pre><code>function jsFriendlyJSONStringify (s) {
     return JSON.stringify(s).
         replace(/\u2028/g, '\\u2028').
         replace(/\u2029/g, '\\u2029');
@@ -213,7 +213,7 @@ alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}</code></pre>
 
 <p>一些时候，你想存储用户创建的一个对象，并且，即使在浏览器被关闭后仍能恢复该对象。下面的例子是 <code>JSON.stringify</code> 适用于这种情形的一个样板：</p>
 
-<pre class="brush: js notranslate">// 创建一个示例数据
+<pre class="brush: js">// 创建一个示例数据
 var session = {
     'screens' : [],
     'state' : true

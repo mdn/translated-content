@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/or
 ---
 {{JSRef}}
 
-La méthode statique **`Atomics`\*\***`.or()`\*\* calcule le résultat d'un OU binaire entre une valeur donnée et une valeur du tableau typé et y place le résultat obtenu. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+La méthode statique **`Atomics.or()`** calcule le résultat d'un OU binaire entre une valeur donnée et une valeur du tableau typé et y place le résultat obtenu. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
 {{EmbedInteractiveExample("pages/js/atomics-or.html")}}
 
@@ -35,7 +35,7 @@ L'ancienne valeur contenue à l'emplacement du tableau (`typedArray[index]`).
 
 ### Exceptions levées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 

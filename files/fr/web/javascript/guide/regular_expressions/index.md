@@ -35,7 +35,7 @@ Il est possible de construire une expression rationnelle de deux façons :
 
 ## Écrire une expression rationnelle
 
-Le motif d'une expression rationnelle est composé de caractères simples (comme `/abc/`), ou de caractères simples et spéciaux, comme `/ab*c/` ou `/Chapitre (\d+)\.\d*/ `. Le dernier exemple utilise des parenthèses qui permettent d'avoir une « mémoire ». La correspondance avec le motif contenu entre parenthèses pourra être utilisée par la suite. Ceci est décrit avec [ce paragraphe](#parentheses).
+Le motif d'une expression rationnelle est composé de caractères simples (comme `/abc/`), ou de caractères simples et spéciaux, comme `/ab*c/` ou `/Chapitre (\d+)\.\d*/`. Le dernier exemple utilise des parenthèses qui permettent d'avoir une « mémoire ». La correspondance avec le motif contenu entre parenthèses pourra être utilisée par la suite. Ceci est décrit avec [ce paragraphe](#parentheses).
 
 ### Utiliser des motifs simples
 
@@ -631,7 +631,7 @@ Afin d'échapper les informations saisies par l'utilisateur et de traîter les c
 function escapeRegExp(string){
   // $& correspond à la chaîne correspondante
   // dans son intégralité
-  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 ```
 
@@ -645,13 +645,13 @@ Les parenthèses encadrant une partie du motif de l'expression régulière peuve
 
 Ainsi, le motif `/Chapitre (\d+)\.\d*/` utilise des caractères échappés et spéciaux et indique une partie du motif à garder en mémoire. Ce motif correspond aux caractères 'Chapitre ' suivi par un ou plusieurs caractères numériques (`\d` correspond à un chiffre et `+` indiquant que une série de 1 ou plusieurs chiffres), suivis par un point (qu'il est nécessaire d'échapper car c'est un caractère spécial, on utilise donc '\\' pour indiquer qu'on souhaite reconnaître le caractère '.'), suivi par 0 ou plusieurs chiffres (`\d` correspondant à un chiffre et l'astérisque indiquant que le caractère est présent 0 ou plusieurs fois). Les parenthèses sont utilisées pour garder en mémoire les premiers chiffres correspondant.
 
-Ce motif est trouvé dans "Ouvrir le Chapitre 4.3 au paragraphe 6" et le chiffre '4' est gardé en mémoire. Le motif n'est pas trouvé dans  "Chapitre 3 et 4", car la chaîne de caractères ne comporte pas de point après le '3'.
+Ce motif est trouvé dans "Ouvrir le Chapitre 4.3 au paragraphe 6" et le chiffre '4' est gardé en mémoire. Le motif n'est pas trouvé dans  "Chapitre 3 et 4", car la chaîne de caractères ne comporte pas de point après le '3'.
 
 Pour qu'une partie de la chaîne de caractère corresponde mais que la correspondance ne soit pas gardée en mémoire, on pourra utiliser `?:`. Ainsi, `(?:\d+)` correspondra pour une séquence de chiffres (1 ou plusieurs chiffres) mais on ne gardera pas en mémoire les caractères correspondants.
 
 ## Utiliser les expressions rationnelles
 
-Les expresssions régulières sont utilisées avec les méthodes ` test``  `et` exec` de l'objet` RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+Les expresssions régulières sont utilisées avec les méthodes `test` et `exec` de l'objet `RegExp` et avec les méthodes `match`, `replace`, `search`, et `split` de l'objet `String`. Ces méthodes sont expliquées en détail dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
 | Méthode                                                  | Description                                                                                                                                                                                        |
 | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -663,7 +663,7 @@ Les expresssions régulières sont utilisées avec les méthodes ` test``  `et` 
 | {{jsxref("String.replace", "replace")}}     | Une méthode de l'objet `String` qui recherche une correspondance dans une chaîne de caractères et qui remplace la correspondance par une chaîne de substitution.                                   |
 | {{jsxref("String.split", "split")}}         | Une méthode de l'objet `String` qui utilise une expression régulière ou une chaîne de caractères pour découper une chaîne de caractères en un tableau comprenant les fragments résultants.         |
 
-Pour savoir si un motif est présent au sein d'une chaîne de caractères, utiliser les méthodes` test` ou `search`. Pour obtenir plus d'informations (moins rapidement) on utilisera les méthodes `exec` ou `match`. Si on utilise `exec` ou `match` et qu'une correspondance est trouvée, ces méthodes renverront un tableau et mettront à jour des propriétés de l'objet global `RegExp` et aussi de l'instance de `RegExp` associée à l'expression rationnelle. Si aucune correspondance n'est trouvée, la méthode `exec` renverra `null` (qui est automatiquement converti à `false` lors d'un test conditionnel).
+Pour savoir si un motif est présent au sein d'une chaîne de caractères, utiliser les méthodes `test` ou `search`. Pour obtenir plus d'informations (moins rapidement) on utilisera les méthodes `exec` ou `match`. Si on utilise `exec` ou `match` et qu'une correspondance est trouvée, ces méthodes renverront un tableau et mettront à jour des propriétés de l'objet global `RegExp` et aussi de l'instance de `RegExp` associée à l'expression rationnelle. Si aucune correspondance n'est trouvée, la méthode `exec` renverra `null` (qui est automatiquement converti à `false` lors d'un test conditionnel).
 
 Dans l'exemple qui suit, le script utilise la méthode `exec` pour trouver une correspondance dans une chaîne de caractères.
 
@@ -843,7 +843,7 @@ pour obtenir le même résultat.
 
 Le comportement du marqueur `'g'` est différent selon qu'il est utilisé avec [`exec()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/RegExp/exec) ou avec [`match()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/match). Pour `match()`, c'est la chaîne de caractères qui invoque la méthode et l'expression rationnelle est alors un argument. Pour `exec()`, c'est l'expression rationnelle qui invoque la méthode et c'est la chaîne de caractères qui est passée en argument. Dans l'appel à `exec()`, le marqueur `'g'` permet d'avoir une progression itérative.
 
-Le marqueur `m` pourra être utilisé pour traiter une chaîne de caractères de plusieurs lignes comme plusieurs lignes distinctes. Si ce marqueur est utilisé, les caractères spéciaux `^` et `$` correspondront au début ou à la fin de n'importe quelle ligne appartenant à la chaîne de caractères au lieu de correspondre simplement au début ou à la fin de la chaîne.
+Le marqueur `m` pourra être utilisé pour traiter une chaîne de caractères de plusieurs lignes comme plusieurs lignes distinctes. Si ce marqueur est utilisé, les caractères spéciaux `^` et `$` correspondront au début ou à la fin de n'importe quelle ligne appartenant à la chaîne de caractères au lieu de correspondre simplement au début ou à la fin de la chaîne.
 
 ## Exemples
 

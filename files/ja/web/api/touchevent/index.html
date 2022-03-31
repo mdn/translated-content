@@ -89,7 +89,7 @@ translation_of: Web/API/TouchEvent
 
 <p>重要なのは多くの場合、タッチイベントとマウスイベントの両方が送られることです (タッチに特化していないコードがユーザーと対話するため)。タッチイベントを使用する場合は、 {{domxref("Event.preventDefault","preventDefault()")}} を呼び出してマウスイベントが送信されないようにしてください。</p>
 
-<p>Chrome のバージョン 56 以降 (デスクトップ版, Android 版 Chrome, Android WebView) は例外で、 <code>passive</code> オプションの {{domxref("Element/touchstart_event", "touchstart")}} および {{domxref("Element/touchmove_event", "touchmove")}} における既定値は <code>true</code> であり、 {{domxref("Event.preventDefault","preventDefault()")}} の呼び出しは効果がありません。この動作を変更するためには、下記の例にあるように {{domxref("Event.preventDefault","preventDefault()")}} の呼び出しの後で <code>passive</code> オプションを <code>false</code> に設定すると、仕様書通りに動作します。リスナーを既定で <code>passive</code> と扱うことで、ユーザーがスクロール中にページのレンダリングがブロックされることを防いでいます。デモが <a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a> サイトにあります。</p>
+<p>Chrome のバージョン 56 以降 (デスクトップ版, Android 版 Chrome, Android WebView) は例外で、 <code>passive</code> オプションの {{domxref("Element/touchstart_event", "touchstart")}} および {{domxref("Element/touchmove_event", "touchmove")}} における既定値は <code>true</code> であり、 {{domxref("Event.preventDefault","preventDefault()")}} の呼び出しは効果がありません。この動作を変更するためには、<code>passive</code> オプションを <code>false</code> に設定します。そうすると {{domxref("Event.preventDefault","preventDefault()")}} が仕様書通りに動作します。リスナーを既定で <code>passive</code> と扱うことで、ユーザーがスクロール中にページのレンダリングがブロックされることを防いでいます。デモが <a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a> サイトにあります。</p>
 
 <h2 id="GlobalEventHandlers">GlobalEventHandlers</h2>
 

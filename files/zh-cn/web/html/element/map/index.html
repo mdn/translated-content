@@ -7,7 +7,7 @@ translation_of: Web/HTML/Element/map
 <p>这篇文章翻译不完整</p>
 </div>
 
-<p><strong>HTML <code>&lt;map&gt;</code> 属性</strong> 与 {{HTMLElement("area")}} 属性一起使用来定义一个图像映射(一个可点击的链接区域).</p>
+<p><strong>HTML <code>&lt;map&gt;</code> 属性</strong> 与 {{HTMLElement("area")}} 属性一起使用来定义一个图像映射 (一个可点击的链接区域).</p>
 
 <table class="properties">
  <tbody>
@@ -40,7 +40,7 @@ translation_of: Web/HTML/Element/map
 
 <dl>
  <dt>{{htmlattrdef("name")}}</dt>
- <dd>name属性 给map一个名字用来查询，这个属性是必须的，值必须不能为空并且不能带空格。name属性不准与同文档中其他map元素的值相同，如果id属性也被添加，name属性和id属性的值必须相同。</dd>
+ <dd>name 属性 给 map 一个名字用来查询，这个属性是必须的，值必须不能为空并且不能带空格。name 属性不准与同文档中其他 map 元素的值相同，如果 id 属性也被添加，name 属性和 id 属性的值必须相同。</dd>
 </dl>
 
 <h2 id="示例">示例</h2>
@@ -97,70 +97,7 @@ translation_of: Web/HTML/Element/map
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoDesktop(1.0)}}<sup>[1]</sup><br>
-    {{CompatGeckoDesktop(5.0)}}<sup>[2]</sup><br>
-    {{CompatGeckoDesktop(17.0)}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>1.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>1.0</td>
-   <td>{{CompatGeckoMobile(1.0)}}<sup>[1]</sup><br>
-    {{CompatGeckoMobile(5.0)}}<sup>[2]</sup><br>
-    {{CompatGeckoMobile(17.0)}}<sup>[3]</sup></td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>1.0</td>
-   <td>1.0</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] 从 Gecko 5.0 {{geckoRelease("5.0")}} 起，空的映射不再略过，以支持兼容模式匹配时的非空映射。例如，考虑下面的 HTML： </p>
-
-<pre class="brush: html notranslate">&lt;map&gt;&lt;/map&gt;
-&lt;map&gt;
-  &lt;area shape="rect" coords="25,25,75,75" href="#fail"&gt;
-&lt;/map&gt;
-&lt;img usemap="#a" src="image.png"&gt;
-</pre>
-
-<p>[2] Gecko 5.0 之前， {{HTMLElement("img")}} 元素会匹配第二个非空映射。现在它匹配第一个，即使它是空的。</p>
-
-<p>[3] 从 Firefox 17 起， <code>&lt;map&gt;</code> HTML 元素的默认样式是 <code>display: inline;</code> 并且不再是 <code>display: block;</code>。这和其它浏览器行为一致，并且已经在兼容模式中这样做了。</p>
+{{Compat("html.elements.map")}}
 
 <h2 id="另见">另见</h2>
 

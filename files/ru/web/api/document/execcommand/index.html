@@ -11,13 +11,13 @@ translation_of: Web/API/Document/execCommand
 <div>{{ApiRef("DOM")}}{{Obsolete_header}}</div>
 
 <div>
-<h2 id="Summary" name="Summary">Обзор</h2>
+<h2 id="Summary">Обзор</h2>
 
 <p>Когда HTML документ переключён в режим редактирования ({{domxref("document.designMode")}}), для него будет доступен метод <code>execCommand</code>, который предоставляет команды для работы с контентом в редактируемой области. Большинство команд влияют на выделение (bold, italics, и т. п.), другие вставляют новые элементы (createLink) или влияют на всю строку (<span style="font-family: segoe ui;">indenting</span>). При использовании <code>contentEditable</code>, вызов <code>execCommand</code> влияет на активный редактируемый элемент.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="brush: js notranslate">execCommand(String aCommandName, Boolean aShowDefaultUI, String aValueArgument)
+<pre class="brush: js">execCommand(String aCommandName, Boolean aShowDefaultUI, String aValueArgument)
 </pre>
 
 <h3 id="Аргументы">Аргументы</h3>
@@ -265,18 +265,18 @@ translation_of: Web/API/Document/execCommand
 </blockquote>
 </div>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
-<pre class="notranslate"><code>iframeNode</code>.execCommand("bold"); // Жирный текст
+<pre><code>iframeNode</code>.execCommand("bold"); // Жирный текст
 <code>iframeNode</code>.execCommand("undo"); // Отмена последнего действия
 <code>iframeNode</code>.execCommand("insertText", false, "Lorem ipsum dolor sit amet, consectetur adipisicing elit."); // Вставка текста
 </pre>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_Compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.Document.execCommand")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="spectable standard-table">
  <tbody>
@@ -293,7 +293,7 @@ translation_of: Web/API/Document/execCommand
  </tbody>
 </table>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{domxref("document.contentEditable")}}</li>

@@ -11,7 +11,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</div>
 
 <div class="summary">
-<p>前の章では、いくつかの<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">基本的なアニメーション</a>を作成して、物の動かし方を学びました。このパートでは、 運動そのものをより詳細に見て、 アニメーションをより高度にするための物理を追加していきましょう。</p>
+<p>前の章では、いくつかの<a href="/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations">基本的なアニメーション</a>を作成して、物の動かし方を学びました。このパートでは、 運動そのものをより詳細に見て、 アニメーションをより高度にするための物理を追加していきましょう。</p>
 </div>
 
 <h2 id="ボールを描く">ボールを描く</h2>
@@ -46,7 +46,7 @@ ball.draw();</pre>
 
 <h2 id="速度の追加">速度の追加</h2>
 
-<p>ボールが手に入りましたので、このチュートリアルの<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations">前の章</a>で習ったように、基本的なアニメーションを加えていきましょう。また {{domxref("window.requestAnimationFrame()")}} がアニメーションの制御を手助けしてくれます。The ball gets moving by adding a velocity vector to the position. For each frame, we also {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} the canvas to remove old circles from prior frames.</p>
+<p>ボールが手に入りましたので、このチュートリアルの<a href="/ja/docs/Web/API/Canvas_API/Tutorial/Basic_animations">前の章</a>で習ったように、基本的なアニメーションを加えていきましょう。また {{domxref("window.requestAnimationFrame()")}} がアニメーションの制御を手助けしてくれます。The ball gets moving by adding a velocity vector to the position. For each frame, we also {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} the canvas to remove old circles from prior frames.</p>
 
 <pre class="brush: js; highlight:[8,9,24,25] notranslate">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
@@ -291,7 +291,7 @@ ball.draw();</pre>
 
 <h2 id="マウスコントロールの追加">マウスコントロールの追加</h2>
 
-<p>ボールに対するちょっとした制御をするために、たとえば <code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code> イベントを使用してボールをマウスの動きに従わせる。といったことができます。<code><a href="/en-US/docs/Web/Events/click">click </a></code>イベントでボールを開放して、またバウンドさせる。といったことも可能です。</p>
+<p>ボールに対するちょっとした制御をするために、たとえば <code><a href="/ja/docs/Web/Reference/Events/mousemove">mousemove</a></code> イベントを使用してボールをマウスの動きに従わせる。といったことができます。<code><a href="/ja/docs/Web/Events/click">click </a></code>イベントでボールを開放して、またバウンドさせる。といったことも可能です。</p>
 
 <div class="hidden">
 <pre class="brush: html notranslate">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
@@ -369,13 +369,13 @@ ball.draw();
 
 <h2 id="ブロック崩し">ブロック崩し</h2>
 
-<p>This short chapter only explains some techniques to create more advanced animations. There are many more! How about adding a paddle, some bricks, and turn this demo into a <a href="http://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a> game? Checkout our <a href="/en-US/docs/Games">Game development</a> area for more gaming related articles.</p>
+<p>This short chapter only explains some techniques to create more advanced animations. There are many more! How about adding a paddle, some bricks, and turn this demo into a <a href="http://en.wikipedia.org/wiki/Breakout_%28video_game%29">Breakout</a> game? Checkout our <a href="/ja/docs/Games">Game development</a> area for more gaming related articles.</p>
 
 <h2 id="関連項目">関連項目</h2>
 
 <ul>
  <li>{{domxref("window.requestAnimationFrame()")}}</li>
- <li><a href="/en-US/docs/Games/Techniques/Efficient_animation_for_web_games">Efficient animation for web games</a></li>
+ <li><a href="/ja/docs/Games/Techniques/Efficient_animation_for_web_games">Efficient animation for web games</a></li>
 </ul>
 
 <p>{{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}</p>

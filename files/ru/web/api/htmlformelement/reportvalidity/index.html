@@ -7,12 +7,12 @@ translation_of: Web/API/HTMLFormElement/reportValidity
 
 <p>Метод <strong><code>HTMLFormElement.reportValidity()</code></strong> возвращает<span style="line-height: 1.5;"> </span><strong><code style="font-style: normal; line-height: 1.5;">true</code></strong><span style="line-height: 1.5;"> если все дочерние элементы прошли проверку. Когда возвращается </span><strong><code style="font-style: normal; line-height: 1.5;">false</code></strong><span style="line-height: 1.5;">, по каждому дочернему элементу не прошедшему проверку генерируется событие</span><span style="line-height: 1.5;"> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid" title="/en-US/docs/Web/Events/invalid">invalid</a></code> и пользователю сообщаются проблемы проверки.</span></p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="eval"><em>HTMLFormElement</em>.reportValidity()
 </pre>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="eval">document.forms["myform"].addEventListener('invalid', function() {
   //Опциональный ответ здесь.
@@ -22,10 +22,10 @@ document.forms["myform"].addEventListener('submit', function() {
   document.forms["myform"].reportValidity();
 }, false);</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификация</h2>
+<h2 id="Specifications">Спецификация</h2>
 
 <p><a class="external" href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-constraint-validation-api">HTML 5.1 Forms: The Constraint Validation API</a></p>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("api.HTMLFormElement.reportValidity")}}</p>
+<p>{{Compat}}</p>

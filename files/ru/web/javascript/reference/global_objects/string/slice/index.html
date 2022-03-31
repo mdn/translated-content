@@ -11,17 +11,17 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
 <div>{{JSRef("Global_Objects", "String")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>slice()</code></strong> извлекает часть строки и возвращает новую строку без изменения оригинальной строки.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>str</var>.slice(<var>beginIndex</var>[, <var>endIndex</var>])</code></pre>
+<pre class="syntaxbox"><code><var>str</var>.slice(<var>beginIndex</var>[, <var>endIndex</var>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><em><code>beginIndex</code></em></dt>
@@ -37,7 +37,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 <p>Новая строка, содержащая извлечённую часть строки.</p>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>slice()</code> извлекает текст из одной строки и возвращает новую строку. Изменения текста в одной строке не влияют на другую строку.</p>
 
@@ -45,13 +45,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 <p>К примеру, вызов <code>str.slice(2, -1)</code> извлечёт символы с третьего по второй с конца строки.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_slice_to_create_a_new_string" name="Example:_Using_slice_to_create_a_new_string">Пример: использование метода <code>slice()</code> для создания новой строки</h3>
+<h3 id="Example_Using_slice_to_create_a_new_string">Пример: использование метода <code>slice()</code> для создания новой строки</h3>
 
 <p>В следующем примере метод <code>slice()</code> используется для создания новой строки.</p>
 
-<pre class="brush: js notranslate">let str1 = 'Приближается утро.';
+<pre class="brush: js">let str1 = 'Приближается утро.';
 let str2 = str1.slice(1, 8);
 let str3 = str1.slice(4, -2);
 let str4 = str1.slice(12);
@@ -63,11 +63,11 @@ console.log(str4); // ВЫВОД:  утро.
 console.log(str5); // ВЫВОД: ""
 </pre>
 
-<h3 id="Example_Using_slice_with_negative_indexes" name="Example:_Using_slice_with_negative_indexes">Пример: использование метода <code>slice()</code> с отрицательными индексами</h3>
+<h3 id="Example_Using_slice_with_negative_indexes">Пример: использование метода <code>slice()</code> с отрицательными индексами</h3>
 
 <p>В следующем примере метод <code>slice()</code> используется вместе с отрицательными индексами.</p>
 
-<pre class="brush: js notranslate">let str = 'Приближается утро.';
+<pre class="brush: js">let str = 'Приближается утро.';
 str.slice(-3);     // вернёт 'ро.'
 str.slice(-3, -1); // вернёт 'ро'
 str.slice(0, -1);  // вернёт 'Приближается утро'
@@ -75,48 +75,25 @@ str.slice(0, -1);  // вернёт 'Приближается утро'
 
 <p>В этом примере начальным индексом считается <code>11</code>-й символ с конца строки, а конечным - <code>16</code>-й с начала.</p>
 
-<pre class="brush: js notranslate">str.slice(-11, 16); // вернёт 'ается утр'</pre>
+<pre class="brush: js">str.slice(-11, 16); // вернёт 'ается утр'</pre>
 
 <p>Здесь начальным индексом считается <code>6</code>-й символ от начала строки, а конечным - <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">7</span></font>-й с конца.</p>
 
-<pre class="brush: js notranslate">str.slice(6, -7); // вернёт 'жаетс'</pre>
+<pre class="brush: js">str.slice(6, -7); // вернёт 'жаетс'</pre>
 
 <p>В этом примере оба индекса считаются с конца строки: <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">5</span></font>-й для начального индекса, <code>1</code>-й для конечного.</p>
 
-<pre class="brush: js notranslate">str.slice(-5, -1); // вернёт 'утро'</pre>
+<pre class="brush: js">str.slice(-5, -1); // вернёт 'утро'</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 3-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.13', 'String.prototype.slice')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.slice', 'String.prototype.slice')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.substr()")}}</li>

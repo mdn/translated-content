@@ -31,7 +31,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/модификация_веб_ст�
 
 <p>Прежде всего создадим новую директорию, назовём её "modify-page". В этой директории, создадим файл "manifest.json", со следующим содержимым:</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
 
   "manifest_version": 2,
   "name": "modify-page",
@@ -58,7 +58,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/модификация_веб_ст�
 
 <p>Далее, создадим файл "page-eater.js", внутри директории "modify-page":</p>
 
-<pre class="brush: js notranslate">document.body.textContent = "";
+<pre class="brush: js">document.body.textContent = "";
 
 var header = document.createElement('h1');
 header.textContent = "Эта страница была съедена";
@@ -78,7 +78,7 @@ document.body.appendChild(header);</pre>
 
 <p>Для начала обновим "manifest.json":</p>
 
-<pre class="brush: json notranslate">{
+<pre class="brush: json">{
 
   "manifest_version": 2,
   "name": "modify-page",
@@ -104,7 +104,7 @@ document.body.appendChild(header);</pre>
 
 <p>Давайте создадим этот файл. Создадим новый файл "background.js" в директории "modify-page" и поместим в него следующий код:</p>
 
-<pre class="brush: js notranslate">browser.contextMenus.create({
+<pre class="brush: js">browser.contextMenus.create({
   id: "eat-page",
   title: "Съесть эту страницу"
 });
@@ -122,7 +122,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>На данном этапе расширение должно иметь следующий вид:</p>
 
-<pre class="line-numbers  language-html notranslate"><code class="language-html">modify-page/
+<pre class="line-numbers  language-html"><code class="language-html">modify-page/
     background.js
     manifest.json
     page-eater.js</code></pre>
@@ -163,7 +163,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>Изменим "background.js" :</p>
 
-<pre class="brush: js notranslate">browser.contextMenus.create({
+<pre class="brush: js">browser.contextMenus.create({
   id: "eat-page",
   title: "Съесть эту страницу"
 });
@@ -193,7 +193,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 
 <p>Далее, обновим "page-eater.js":</p>
 
-<pre class="brush: js notranslate">function eatPage(request, sender, sendResponse) {
+<pre class="brush: js">function eatPage(request, sender, sendResponse) {
   document.body.textContent = "";
 
   var header = document.createElement('h1');

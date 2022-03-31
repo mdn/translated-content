@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/input/radio
 <p><span class="seoSummary">Атрибут<strong> type</strong> тега <code>&lt;input&gt;</code> со значением <strong><code>radio</code></strong> обычно используется для создания группы радиокнопок (переключателей), описывающих набор взаимосвязанных параметров.</span> Одновременно пользователь может выбрать лишь одну радиокнопку из предложенных. Радиокнопки обычно отображаются как небольшие кружки, которые заполняются или подсвечиваются при наведении.</p>
 
 <div id="Basic_example">
-<pre class="brush: html notranslate">&lt;input type="radio" id="radioButton"&gt;</pre>
+<pre class="brush: html">&lt;input type="radio" id="radioButton"&gt;</pre>
 
 <p>{{ EmbedLiveSample('Basic_example', 600, 30) }}</p>
 
@@ -73,7 +73,7 @@ translation_of: Web/HTML/Element/input/radio
 
 <p>HTML будет выглядеть следующим образом:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;Please select your preferred contact method:&lt;/p&gt;
   &lt;div&gt;
     &lt;input type="radio" id="contactChoice1"
@@ -97,7 +97,7 @@ translation_of: Web/HTML/Element/input/radio
 
 <p>Вы можете опробовать этот код здесь: </p>
 
-<p>{{ EmbedLiveSample('Defining_a_radio_group', 600, 130) }}</p>
+<p>{{ EmbedLiveSample('Создание_группы_радиокнопок', 600, 130) }}</p>
 
 <h3 id="Представление_данных_группы_радиокнопок">Представление данных группы радиокнопок</h3>
 
@@ -113,7 +113,7 @@ translation_of: Web/HTML/Element/input/radio
 
 <p>Давайте добавим немного кода в наш пример для того, чтобы изучить данные, полученные из этой формы. HTML изменяется путём добавления блока {{HTMLElement("pre")}} для вывода данных формы. </p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;Please select your preferred contact method:&lt;/p&gt;
   &lt;div&gt;
     &lt;input type="radio" id="contactChoice1"
@@ -136,7 +136,7 @@ translation_of: Web/HTML/Element/input/radio
 
 <p>Затем добавим немного <a href="/en-US/docs/Web/JavaScript">JavaScript</a>. Установим обработчик события {{event("submit")}}, которая будет отправляться при клике пользователя на кнопку "Отправить":</p>
 
-<pre class="brush: js notranslate">var form = document.querySelector("form");
+<pre class="brush: js">var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
 form.addEventListener("submit", function(event) {
@@ -151,7 +151,7 @@ form.addEventListener("submit", function(event) {
 
 <p>Опробуйте этот пример и убедитесь, что для группы радиокнопок  <code>"contact"</code>  будет только один результат.</p>
 
-<p>{{EmbedLiveSample("Data_representation_of_a_radio_group", 600, 130)}}</p>
+<p>{{EmbedLiveSample("Представление_данных_группы_радиокнопок", 600, 130)}}</p>
 
 <h2 id="Использование_радиокнопок">Использование радиокнопок</h2>
 
@@ -161,7 +161,7 @@ form.addEventListener("submit", function(event) {
 
 <p>Чтобы установить радиокнопку как выбранную по умолчанию, вам необходимо подключить атрибут <code>checked</code>, как показано ниже в немного изменённой версии предыдущего примера.</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;Please select your preferred contact method:&lt;/p&gt;
   &lt;div&gt;
     &lt;input type="radio" id="contactChoice1"
@@ -181,7 +181,7 @@ form.addEventListener("submit", function(event) {
   &lt;/div&gt;
 &lt;/form&gt;</pre>
 
-<p>{{ EmbedLiveSample('Selecting_a_radio_button_by_default', 600, 130) }}</p>
+<p>{{ EmbedLiveSample('Выбор_радиокнопки_по_умолчанию', 600, 130) }}</p>
 
 <p>В данном случае первая радиокнопка будет выбрана по умолчанию.</p>
 
@@ -203,7 +203,7 @@ form.addEventListener("submit", function(event) {
 
 <p>HTML будет выглядеть следующим образом:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Please select your preferred contact method:&lt;/legend&gt;
     &lt;div&gt;
@@ -229,7 +229,7 @@ form.addEventListener("submit", function(event) {
 
 <p>CSS будет выглядеть так:</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-family: sans-serif;
 }
 
@@ -291,37 +291,17 @@ button:active {
 
 <p>Стоит иметь в виду, что свойство  <code>appearance</code> неплохо работает для создания простых стилей, но имеет тенденцию вести себя несколько непоследовательно в некоторых браузерах и полностью не работает в Internet Explorer. Тщательно проверяйте как работает ваш сайт в каждом браузере! </p>
 
-<p>{{ EmbedLiveSample('Styling_radio_inputs', 600, 120) }}</p>
+<p>{{ EmbedLiveSample('Установка_стилей_радиокнопок', 600, 120) }}</p>
 
 <p>Обратите внимание, что при клике на радиокнопку, на предыдущей выбранной кнопке появляется мягкий эффект угасания. Кроме того, стиль и окраска легенды и кнопки "Submit" имеет сильный контраст с остальным текстом. Возможно, это не совсем тот эффект, который вы хотели бы видеть в своём реальном веб-приложении, но этот пример хорошо отображает возможности CSS.</p>
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th></th>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#radio-button-state-(type=radio)', '&lt;input type="radio"&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<p>{{Compat("html.elements.input.input-radio")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

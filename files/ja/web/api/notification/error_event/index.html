@@ -1,0 +1,54 @@
+---
+title: Notification.onerror
+slug: Web/API/Notification/error_event
+tags:
+  - API
+  - DOM
+  - Notification
+  - Notifications
+  - Notifications API
+  - Property
+  - Reference
+  - onerror
+  - プロパティ
+  - 通知
+translation_of: Web/API/Notification/onerror
+original_slug: Web/API/Notification/onerror
+---
+<p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
+
+<p><strong><code>onerror</code></strong> は {{domxref("Notification")}} インターフェイスのプロパティで、 {{domxref("HTMLElement/error_event", "error")}} イベントを受信するイベントリスナーを指定します。これらのイベントは {{domxref("Notification")}} が失敗したとき (多くの場合は通知の表示が阻止されたというエラーの場合) に発生します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox notranslate"><var>Notification</var>.onerror = function() { ... };</pre>
+
+<h2 id="Specifications" name="Specifications">仕様書</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">状態</th>
+   <th scope="col">備考</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Web Notifications','#dom-notification-onerror','onerror')}}</td>
+   <td>{{Spec2('Web Notifications')}}</td>
+   <td>初回定義</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat("api.Notification.onerror")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("Notification")}}</li>
+ <li><a href="/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API">通知 API の使用</a></li>
+</ul>

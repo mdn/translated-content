@@ -1454,18 +1454,18 @@
       "22tcp"
     ]
   },
+  "Learn/JavaScript/Objects/Classes_in_JavaScript": {
+    "modified": "2020-07-16T22:32:04.669Z",
+    "contributors": [
+      "Timbuktu1982",
+      "bluefor2"
+    ]
+  },
   "Learn/JavaScript/Objects/JSON": {
     "modified": "2020-07-16T22:32:24.377Z",
     "contributors": [
       "MuellerRi",
       "DirkMassmann"
-    ]
-  },
-  "Learn/JavaScript/Objects/Object-oriented_JS": {
-    "modified": "2020-07-16T22:32:04.669Z",
-    "contributors": [
-      "Timbuktu1982",
-      "bluefor2"
     ]
   },
   "Learn/JavaScript/Objects/Object_prototypes": {
@@ -2007,13 +2007,6 @@
       "AngelSankturio"
     ]
   },
-  "Tools/Index": {
-    "modified": "2020-07-16T22:36:02.468Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz"
-    ]
-  },
   "Tools/JSON_viewer": {
     "modified": "2020-07-16T22:36:31.343Z",
     "contributors": [
@@ -2243,6 +2236,13 @@
       "manni66",
       "omniskop",
       "fscholz"
+    ]
+  },
+  "Web/API/Blob/size": {
+    "modified": "2019-03-23T23:33:53.208Z",
+    "contributors": [
+      "fscholz",
+      "nothine"
     ]
   },
   "Web/API/CSS": {
@@ -3008,20 +3008,6 @@
       "matschu"
     ]
   },
-  "Web/API/File/fileName": {
-    "modified": "2019-03-23T23:33:53.570Z",
-    "contributors": [
-      "fscholz",
-      "nothine"
-    ]
-  },
-  "Web/API/File/fileSize": {
-    "modified": "2019-03-23T23:33:53.208Z",
-    "contributors": [
-      "fscholz",
-      "nothine"
-    ]
-  },
   "Web/API/File/name": {
     "modified": "2019-03-23T23:33:48.935Z",
     "contributors": [
@@ -3045,7 +3031,7 @@
       "MatthiasRubin"
     ]
   },
-  "Web/API/FileReader/onload": {
+  "Web/API/FileReader/load_event": {
     "modified": "2019-03-23T22:41:15.437Z",
     "contributors": [
       "rehne93",
@@ -3905,14 +3891,14 @@
       "axelrindle"
     ]
   },
-  "Web/API/WebSocket/extensions": {
-    "modified": "2020-10-15T22:23:14.946Z",
+  "Web/API/WebSocket/close_event": {
+    "modified": "2019-10-02T19:24:05.254Z",
     "contributors": [
       "axelrindle"
     ]
   },
-  "Web/API/WebSocket/onclose": {
-    "modified": "2019-10-02T19:24:05.254Z",
+  "Web/API/WebSocket/extensions": {
+    "modified": "2020-10-15T22:23:14.946Z",
     "contributors": [
       "axelrindle"
     ]
@@ -4032,6 +4018,13 @@
       "AndreasWebdev"
     ]
   },
+  "Web/API/Window/devicemotion_event": {
+    "modified": "2019-03-18T21:15:10.920Z",
+    "contributors": [
+      "clepsydra",
+      "m9898"
+    ]
+  },
   "Web/API/Window/dump": {
     "modified": "2019-03-23T23:34:35.263Z",
     "contributors": [
@@ -4082,13 +4075,6 @@
       "AdamNiezielinski"
     ]
   },
-  "Web/API/Window/ondevicemotion": {
-    "modified": "2019-03-18T21:15:10.920Z",
-    "contributors": [
-      "clepsydra",
-      "m9898"
-    ]
-  },
   "Web/API/Window/openDialog": {
     "modified": "2020-11-15T17:34:16.679Z",
     "contributors": [
@@ -4104,12 +4090,6 @@
     "modified": "2019-03-23T22:31:18.645Z",
     "contributors": [
       "frickth"
-    ]
-  },
-  "Web/API/Window/performance": {
-    "modified": "2019-03-23T22:07:15.480Z",
-    "contributors": [
-      "amelzer"
     ]
   },
   "Web/API/Window/print": {
@@ -4231,6 +4211,12 @@
     "contributors": [
       "schlagi123",
       "mwsh2005"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2019-03-23T22:07:15.480Z",
+    "contributors": [
+      "amelzer"
     ]
   },
   "Web/API/setTimeout": {
@@ -4434,12 +4420,6 @@
     "modified": "2019-03-23T22:42:43.885Z",
     "contributors": [
       "teoli",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/-webkit-print-color-adjust": {
-    "modified": "2019-03-23T22:42:45.125Z",
-    "contributors": [
       "Sebastianz"
     ]
   },
@@ -5220,6 +5200,12 @@
       "Sebastianz"
     ]
   },
+  "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
+    "modified": "2019-03-23T22:41:18.157Z",
+    "contributors": [
+      "Sebastianz"
+    ]
+  },
   "Web/CSS/CSS_Device_Adaptation": {
     "modified": "2019-03-23T22:30:44.810Z",
     "contributors": [
@@ -5310,12 +5296,6 @@
   },
   "Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation": {
     "modified": "2019-03-23T22:42:20.521Z",
-    "contributors": [
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters": {
-    "modified": "2019-03-23T22:41:18.157Z",
     "contributors": [
       "Sebastianz"
     ]
@@ -5796,7 +5776,7 @@
       "bee8bit"
     ]
   },
-  "Web/CSS/attr()": {
+  "Web/CSS/attr": {
     "modified": "2020-11-04T08:51:28.043Z",
     "contributors": [
       "chrisdavidmills",
@@ -6289,7 +6269,7 @@
       "tonra"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:07:46.370Z",
     "contributors": [
       "chrisdavidmills",
@@ -7180,6 +7160,12 @@
       "Sebastianz"
     ]
   },
+  "Web/CSS/print-color-adjust": {
+    "modified": "2019-03-23T22:42:45.125Z",
+    "contributors": [
+      "Sebastianz"
+    ]
+  },
   "Web/CSS/quotes": {
     "modified": "2020-10-15T21:28:32.529Z",
     "contributors": [
@@ -7416,19 +7402,19 @@
       "ramiy"
     ]
   },
-  "Web/CSS/transform-function/translate3d()": {
+  "Web/CSS/transform-function/translate3d": {
     "modified": "2020-12-11T16:32:16.509Z",
     "contributors": [
       "Johuspect"
     ]
   },
-  "Web/CSS/transform-function/translateY()": {
+  "Web/CSS/transform-function/translateY": {
     "modified": "2020-12-11T16:48:39.299Z",
     "contributors": [
       "Johuspect"
     ]
   },
-  "Web/CSS/transform-function/translateZ()": {
+  "Web/CSS/transform-function/translateZ": {
     "modified": "2020-12-11T16:58:23.802Z",
     "contributors": [
       "Johuspect"
@@ -7479,7 +7465,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/url()": {
+  "Web/CSS/url": {
     "modified": "2020-10-15T22:01:29.787Z",
     "contributors": [
       "valentinprotiuc"
@@ -13545,6 +13531,13 @@
       "Dria"
     ]
   },
+  "conflicting/Tools": {
+    "modified": "2020-07-16T22:36:02.468Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz"
+    ]
+  },
   "conflicting/Web/API": {
     "modified": "2019-03-23T23:21:31.048Z",
     "contributors": [
@@ -13567,6 +13560,13 @@
     "modified": "2019-03-23T23:28:11.671Z",
     "contributors": [
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/API/File/name": {
+    "modified": "2019-03-23T23:33:53.570Z",
+    "contributors": [
+      "fscholz",
+      "nothine"
     ]
   },
   "conflicting/Web/API/WindowOrWorkerGlobalScope": {

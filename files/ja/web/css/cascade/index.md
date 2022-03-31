@@ -112,7 +112,6 @@ li { margin-left: 0 } /* これは初期化 */
 **HTML:**
 
 ```html
-<ul>
   <li class="specific">1<sup>st</sup></li>
   <li>2<sup>nd</sup></li>
 </ul>

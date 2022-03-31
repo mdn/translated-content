@@ -5,14 +5,14 @@ tags:
   - JavaScript
   - メソッド
   - プロミス
-  - Reference
-  - Polyfill
+  - リファレンス
+  - ポリフィル
 browser-compat: javascript.builtins.Promise.any
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 ---
 {{JSRef}}
 
-`Promise.any()` は {{JSxRef("Promise")}} オブジェクトの集合の反復可能オブジェクトを受け取り、反復可能オブジェクトの中にあるプロミスの一つが履行されるとすぐに、そのプロミスの値で解決される単一のプロミスを返します。反復可能オブジェクトの中に履行されたプロミスがない場合 (与えられたプロミスがすべて拒否された場合)、返されたプロミスは {{JSxRef("AggregateError")}} という、個々のエラーをグループ化した {{JSxRef("Error")}} の新しいサブクラスで拒否されます。
+`Promise.any()` は {{JSxRef("Promise")}} オブジェクトの集合の反復可能オブジェクトを取ります。そして、反復可能オブジェクトの中にあるいずれかのプロミスが履行されるとすぐに、履行されたプロミスの値で解決される単一のプロミスを返します。反復可能オブジェクトの中に履行されたプロミスがない場合 (与えられたプロミスがすべて拒否された場合)、返されたプロミスは {{JSxRef("AggregateError")}} という、個々のエラーをグループ化した {{JSxRef("Error")}} の新しいサブクラスで拒否されます。
 
 {{EmbedInteractiveExample("pages/js/promise-any.html")}}
 
@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 ### 引数
 
 - `iterable`
-  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)オブジェクト、例えば {{JSxRef("Array")}} です。
+  - : [反復可能](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)オブジェクト、例えば {{JSxRef("Array")}} です。
 
 ### 返値
 

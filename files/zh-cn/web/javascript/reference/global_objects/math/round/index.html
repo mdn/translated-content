@@ -10,29 +10,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 
 <p><code><strong>Math.round()</strong></code> 函数返回一个数字四舍五入后最接近的整数。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code>Math.round(<em>x</em>) </code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>x</code></dt>
  <dd>一个数值。</dd>
- <dt>
- <h3 id="返回值">返回值</h3>
-
- <p>给定数字的值四舍五入到最接近的整数。</p>
- </dt>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h3 id="返回值">返回值</h3>
+
+<p>给定数字的值四舍五入到最接近的整数。</p>
+
+<h2 id="Description">描述</h2>
 
 <p>如果参数的小数部分大于 0.5，则舍入到相邻的绝对值更大的整数。 如果参数的小数部分小于 0.5，则舍入到相邻的绝对值更小的整数。如果参数的小数部分恰好等于0.5，则舍入到相邻的在正无穷（+∞）方向上的整数。<strong>注意，与很多其他语言中的<code>round()函数</code>不同，<code>Math.round()并不总是舍入到远离0的方向（尤其是在负数的小数部分恰好等于0.5的情况下）。</code></strong></p>
 
 <p>因为 <code>round()</code> 是 <code>Math</code> 的静态方法，你应该直接使用 <code>Math.round()</code>，而不是作为你创建的 <code>Math</code> 对象的一个实例方法来使用（<code>Math</code>没有构造函数）。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <pre class="brush:js">x = Math.round(20.49);   //20
 x = Math.round(20.5);    //21
@@ -40,7 +39,7 @@ x = Math.round(-20.5);   //-20
 x = Math.round(-20.51);  //-21
 </pre>
 
-<h3 id="Example:_Decimal_rounding" name="Example:_Decimal_rounding" style="line-height: 24px;">小数舍入</h3>
+<h3 id="Example:_Decimal_rounding">小数舍入</h3>
 
 <pre class="brush: js">// 闭包
 (function(){
@@ -126,149 +125,7 @@ Math.ceil10(-59, 1); // -50
 round(1.005, 2);    //1.01
 </pre>
 
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 0px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 19px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 38px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 57px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 76px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 95px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 114px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 133px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 152px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 171px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 190px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 209px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 228px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 247px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 266px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 285px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 304px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 323px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 342px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 361px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 380px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 399px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 418px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 437px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 456px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 475px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 494px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 513px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 532px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 551px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 570px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 589px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 608px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 627px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 646px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 665px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 684px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 703px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 722px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 741px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 760px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 779px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 798px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 817px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 836px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 855px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 874px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 893px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 912px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 931px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 950px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 969px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 988px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1007px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1026px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1045px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1064px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1083px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1102px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1121px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1140px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1159px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1178px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1197px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1216px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1235px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1254px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1273px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1292px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1311px; background: 0px 0px;"> </div>
-
-<div class="line-number" style="margin-top: 1em; position: absolute; left: 0px; right: 0px; line-height: inherit; top: 1330px; background: 0px 0px;"> </div>
-
-<h2 id="规范" style="margin-bottom: 20px; line-height: 30px;">规范</h2>
+<h2 id="规范">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -295,59 +152,13 @@ round(1.005, 2);    //1.01
  </tbody>
 </table>
 
-<h2 id="浏览器兼容性" style="margin-bottom: 20px; line-height: 30px;">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Chrome</th>
-   <th style="line-height: 16px;">Firefox (Gecko)</th>
-   <th style="line-height: 16px;">Internet Explorer</th>
-   <th style="line-height: 16px;">Opera</th>
-   <th style="line-height: 16px;">Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
+<h2 id="See_also">相关链接</h2>
 
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th style="line-height: 16px;">Feature</th>
-   <th style="line-height: 16px;">Android</th>
-   <th style="line-height: 16px;">Firefox Mobile (Gecko)</th>
-   <th style="line-height: 16px;">IE Phone</th>
-   <th style="line-height: 16px;">Opera Mobile</th>
-   <th style="line-height: 16px;">Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
-<h2 id="See_also" name="See_also" style="margin-bottom: 20px; line-height: 30px;">相关链接</h2>
-
-<p></p>
 
 <ul>
  <li>{{jsxref("Math.abs()")}}</li>

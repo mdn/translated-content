@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/add
 ---
 {{JSRef}}
 
-La méthode statique **`Atomics`\*\***`.add()`\*\* ajoute une valeur donnée à un élément du tableau à une position donnée. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
+La méthode statique **`Atomics.add()`** ajoute une valeur donnée à un élément du tableau à une position donnée. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
 {{EmbedInteractiveExample("pages/js/atomics-add.html")}}
 
@@ -35,7 +35,7 @@ L'ancienne valeur qui était contenue à (`typedArray[index]`).
 
 ### Exceptions levées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 

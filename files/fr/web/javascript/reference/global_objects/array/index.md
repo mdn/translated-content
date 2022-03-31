@@ -1,21 +1,25 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array
 ---
 {{JSRef}}
 
-L'objet global **`Array`** est utilisé pour créer des tableaux. Les tableaux sont des objets de haut-niveau (en termes de complexité homme-machine) semblables à des listes.
+L'objet global **`Array`** est utilisé pour créer des tableaux. Les tableaux sont des objets de haut-niveau (en termes de complexité homme-machine) semblables à des listes.
+
+## Description
+
+Les tableaux sont des objets semblables à des listes dont le prototype possède des méthodes qui permettent de parcourir et de modifier le tableau. Ni la longueur ni le type des éléments d'un tableau JavaScript sont fixés. Comme la longueur d'un tableau peut varier à tout moment et que les données peuvent être stockées à des emplacements qui ne sont pas nécessairement contigus, les tableaux JavaScript ne sont pas forcément «&nbsp;pleins&nbsp;» / denses. Généralement, ces particularités sont appréciables mais si elles ne correspondent pas à votre usage, vous pourriez vouloir utiliser les tableaux typés.
+
+Les tableaux ne peuvent pas utiliser de chaînes de caractères comme indices pour les éléments (à la façon des [tableaux associatifs](https://fr.wikipedia.org/wiki/Tableau_associatif)) mais doivent utiliser des entiers. Définir une valeur ou tenter d'y accéder avec un indice non-entier via [la notation entre crochet](/fr/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties) (ou [la notation avec le point](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors)) ne définira ou ne récupèrera pas la valeur mais définira ou récupèrera une variable associée [aux propriétés de l'objet](/fr/docs/Web/JavaScript/Data_structures#properties) formé par le tableau. Les propriétés et les éléments d'un tableau sont distincts et [les opérations de parcours et de modification du tableau](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_methods) ne peuvent pas être appliquées à ces propriétés.
+
+### Opérations fréquentes
 
 **Créer un tableau**
 
 ```js
-var fruits = ['Apple', 'Banana'];
+let fruits = ['Apple', 'Banana'];
 
 console.log(fruits.length);
 // 2
@@ -24,10 +28,10 @@ console.log(fruits.length);
 **Accéder (via son index) à un élément du tableau**
 
 ```js
-var first = fruits[0];
+let first = fruits[0];
 // Apple
 
-var last = fruits[fruits.length - 1];
+let last = fruits[fruits.length - 1];
 // Banana
 ```
 
@@ -44,28 +48,28 @@ fruits.forEach(function(item, index, array) {
 **Ajouter à la fin du tableau**
 
 ```js
-var newLength = fruits.push('Orange');
+let newLength = fruits.push('Orange');
 // ["Apple", "Banana", "Orange"]
 ```
 
 **Supprimer le dernier élément du tableau**
 
 ```js
-var last = fruits.pop(); // supprime Orange (à la fin)
+let last = fruits.pop(); // supprime Orange (à la fin)
 // ["Apple", "Banana"];
 ```
 
 **Supprimer le premier élément du tableau**
 
 ```js
-var first = fruits.shift(); // supprime Apple (au début)
+let first = fruits.shift(); // supprime Apple (au début)
 // ["Banana"];
 ```
 
 **Ajouter au début du tableau**
 
 ```js
-var newLength = fruits.unshift('Strawberry') // ajoute au début
+let newLength = fruits.unshift('Strawberry') // ajoute au début
 // ["Strawberry", "Banana"];
 ```
 
@@ -75,14 +79,14 @@ var newLength = fruits.unshift('Strawberry') // ajoute au début
 fruits.push('Mango');
 // ["Strawberry", "Banana", "Mango"]
 
-var pos = fruits.indexOf('Banana');
+let pos = fruits.indexOf('Banana');
 // 1
 ```
 
 **Supprimer un élément par son index**
 
 ```js
-var removedItem = fruits.splice(pos, 1); // supprime 1 élément à la position pos
+let removedItem = fruits.splice(pos, 1); // supprime 1 élément à la position pos
 
 // ["Strawberry", "Mango"]
 ```
@@ -90,13 +94,13 @@ var removedItem = fruits.splice(pos, 1); // supprime 1 élément à la position 
 **Supprimer des éléments à partir d'un index**
 
 ```js
-var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
+let vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
 console.log(vegetables);
 // ["Cabbage", "Turnip", "Radish", "Carrot"]
 
-var pos = 1, n = 2;
+let pos = 1, n = 2;
 
-var removedItems = vegetables.splice(pos, n);
+let removedItems = vegetables.splice(pos, n);
 // n définit le nombre d'éléments à supprimer,
 // à partir de la position pos
 
@@ -110,43 +114,22 @@ console.log(removedItems);
 **Copier un tableau**
 
 ```js
-var shallowCopy = fruits.slice(); // crée un nouveau tableau qui contient les éléments de fruits
+let shallowCopy = fruits.slice(); // crée un nouveau tableau qui contient les éléments de fruits
 // ["Strawberry", "Mango"]
 ```
 
-## Syntaxe
-
-    [element0, element1, ..., elementN]
-    new Array(element0, element1[, ...[, elementN]])
-    new Array(arrayLength)
-
-### Paramètres
-
-- `element0, element1, ..., elementN`
-  - : Un tableau est initialisé avec les éléments donnés, sauf dans le cas où un seul argument est passé au constructeur `Array` et que cet argument est un nombre. (Voir ci-après.) Notez que ce cas spécial s'applique aux tableaux créés avec le constructeur `Array`, et non aux tableaux créés avec la syntaxe crochets.
-- `arrayLength`
-  - : Si le seul argument passé au constructeur `Array` est un entier entre 0 et 2^32-1 (inclus), un nouveau tableau sera créé avec ce nombre d'éléments (note : le tableau sera créé avec `arrayLength` emplacements vides, et non avec de véritables valeurs `undefined`). Si l'argument est un nombre en dehors de la plage autorisée, une exception {{jsxref("RangeError")}} est levée.
-
-## Description
-
-Les tableaux sont des objets qui servent de liste et possèdent plusieurs méthodes incorporées pour exécuter des opérations de parcours et de modification.
-
-Ni la taille d'un tableau ni le types de ses éléments n'est fixé. Puisque la dimension d'un tableau peut augmenter ou diminuer à tout moment, et que les éléments du tableau peuvent être stockés à des emplacements non contigus, les tableaux ne sont pas garantis d'être compacts. En général, ce sont des caractéristiques pratiques, mais si ces fonctionnalités ne sont pas souhaitables pour votre cas d'utilisation, vous pouvez envisager d'utiliser des tableaux typés.
-
-Les tableaux ne peuvent pas utiliser de chaîne de caractères comme indice (comme dans un [tableau associatif](https://fr.wikipedia.org/wiki/Tableau_associatif)) mais des entiers. Utiliser ou accéder à des index non entiers, en utilisant la [notation avec crochets](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#Les_objets_et_les_propri%C3%A9t%C3%A9s) (ou [avec point](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_de_membres)) ne va pas définir ou récupérer un élément sur le tableau lui-même, mais une variable associée à la  [collection de propriétés d'objet](https://developer.mozilla.org/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es#Propri%C3%A9t%C3%A9s) de ce tableau.  Les propriétés du tableau et la liste de ses éléments sont séparées, et les [opérations de parcours et de modification](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Collections_index%C3%A9es#M%C3%A9thodes_des_tableaux) ne s'appliquent pas à ces propriétés.
-
 ### Accéder aux éléments d'un tableau
 
-Les tableaux sont indexés à partir de zéro: le premier élément d'un tableau a pour indice `0`, et la position du dernier élément est donnée par {{jsxref("Array.length", "length")}} moins 1. Si on utilise un indice en dehors de cet intervalle, le résultat sera {{jsxref("undefined")}} (sous réserve qu'aucune propriété n'ait été ajoutée au préalable avec cet indice).
+Les tableaux sont indexés à partir de zéro: le premier élément d'un tableau a pour indice `0`, et la position du dernier élément est donnée par [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length) moins 1. Si on utilise un indice en dehors de cet intervalle, le résultat sera [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) (sous réserve qu'aucune propriété n'ait été ajoutée au préalable avec cet indice).
 
 ```js
-var arr = ["le premier élément", "le deuxième élément", "le dernier élément"];
+let arr = ["le premier élément", "le deuxième élément", "le dernier élément"];
 console.log(arr[0]);             // affiche "le premier élément"
 console.log(arr[1]);             // affiche "le deuxième élément"
 console.log(arr[arr.length - 1]);// affiche "le dernier élément"
 ```
 
-Les éléments d'un tableau sont des propriétés d'objets de la même manière que `toString` est une propriété. Cependant, essayer d'accéder à un élément du tableau comme suit renverra une erreur car le nom de la propriété utilisé est invalide :
+Les éléments d'un tableau sont des propriétés d'objets de la même manière que `toString` est une propriété. Cependant, essayer d'accéder à un élément du tableau comme suit renverra une erreur, car le nom de la propriété utilisé est invalide :
 
 ```js
 console.log(arr.0); // erreur de syntaxe
@@ -155,7 +138,7 @@ console.log(arr.0); // erreur de syntaxe
 Ce comportement est tout à fait normal. En effet, il n'est pas possible d'accéder aux propriétés dont le nom commence par un chiffre avec cette notation (le point). Il est nécessaire d'utiliser la syntaxe avec les crochets pour accéder à ces propriétés. Ainsi, si pour un objet quelconque, on avait une propriété nommée '`3d`', on ne pourra y faire référence qu'en utilisant les crochets. Exemple :
 
 ```js
-var années = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
+let années = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
 
 console.log(années.0);  // erreur de syntaxe
 console.log(années[0]); // fonctionne correctement
@@ -175,7 +158,7 @@ console.log(années["2"] != années["02"]);
 De manière similaire, les propriétés nommées avec des mots-clés réservés ne peuvent être consultées qu'en utilisant la syntaxe avec crochets :
 
 ```js
-var promise = {
+let promise = {
   'var' : 'text',
   'array': [1, 2, 3, 4]
 };
@@ -183,20 +166,18 @@ var promise = {
 console.log(promise['var']);
 ```
 
-> **Note :** Depuis Firefox 40.0a2, il est possible d'utiliser la notation avec le point pour accéder aux propriétés dont les noms ne sont pas des identifiants valides.
-
 ### Relation entre `length` et les propriétés numériques
 
-La propriété {{jsxref("Array.length", "length")}} d'un tableau est liée aux propriétés numériques du tableau. Plusieurs méthodes natives utilisent cette propriété : {{jsxref("Array.join", "join()")}}, {{jsxref("Array.slice", "slice()")}}, {{jsxref("Array.indexOf", "indexOf()")}}, etc. D'autres méthodes comme {{jsxref("Array.push", "push()")}} et {{jsxref("Array.splice", "splice()")}} modifient le tableau et la propriété {{jsxref("Array.length", "length")}}.
+La propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length) d'un tableau est liée aux propriétés numériques du tableau. Plusieurs méthodes natives utilisent cette propriété : [`join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join), [`slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf), etc. D'autres méthodes comme [`push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push) et [`splice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) modifient le tableau et la propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
 
 ```js
-var fruits = [];
+let fruits = [];
 fruits.push("banane", "pomme", "pêche");
 
 console.log(fruits.length); // 3
 ```
 
-Lorsqu'on définit une nouvelle propriété numérique pour un tableau, que l'index utilisé est valide et que celui-ci est dehors des limites actuelles du tableau, le moteur JavaScript mettra à jour la propriété {{jsxref("Array.length", "length")}} :
+Lorsqu'on définit une nouvelle propriété numérique pour un tableau, que l'index utilisé est valide et que celui-ci est dehors des limites actuelles du tableau, le moteur JavaScript mettra à jour la propriété [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length) :
 
 ```js
 fruits[5] = "mangue";
@@ -213,7 +194,7 @@ console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length);  // 10
 ```
 
-En revanche, si on diminue la valeur de {{jsxref("Array.length", "length")}}, cela supprimera des éléments :
+En revanche, si on diminue la valeur de [`length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length), cela supprimera des éléments :
 
 ```js
 fruits.length = 2;
@@ -221,19 +202,19 @@ console.log(Object.keys(fruits)); // ['0', '1']
 console.log(fruits.length); // 2
 ```
 
-Pour plus d'informations sur le comportement de cette propriété, voir la page {{jsxref("Array.length")}}.
+Pour plus d'informations sur le comportement de cette propriété, voir la page [`Array.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length).
 
 ### Création d'un tableau utilisant le résultat d'une correspondance
 
-Le résultat d'une correspondance entre une expression rationnelle et une chaîne peut créer un tableau. Ce tableau possède des propriétés et des éléments qui fournissent des informations sur cette correspondance. Il est possible d'obtenir un tableau grâce aux méthodes {{jsxref("RegExp.exec")}}, {{jsxref("String.match")}}, and {{jsxref("String.replace")}}. Pour mieux comprendre le fonctionnement de ces propriétés et de ces éléments, on pourra utiliser l'exemple et le tableau qui suivent :
+Le résultat d'une correspondance entre une expression rationnelle et une chaîne peut créer un tableau. Ce tableau possède des propriétés et des éléments qui fournissent des informations sur cette correspondance. Il est possible d'obtenir un tableau grâce aux méthodes [`RegExp.exec()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec), [`String.match()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/match), et [`String.replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace). Pour mieux comprendre le fonctionnement de ces propriétés et de ces éléments, on pourra utiliser l'exemple et le tableau qui suivent :
 
 ```js
 // Matche un "d" suivit par un ou plusieurs "b" et suivit d'un "d"
 // Capture les "b" et le "d" qui suit
 // Ignore la casse
 
-var maRegexp = /d(b+)(d)/i;
-var monTableau = maRegexp.exec("cdbBdbsbz");
+let maRegexp = /d(b+)(d)/i;
+let monTableau = maRegexp.exec("cdbBdbsbz");
 
 console.log(monTableau);
 // [ 0:"dbBd", 1:"bB", 2:"d", index:1, input:"cdbBdbsbz", length:3 ]
@@ -241,13 +222,15 @@ console.log(monTableau);
 
 Les propriétés et les éléments retournés depuis cette correspondance sont les suivants :
 
-<table class="fullwidth-table">
-  <tbody>
+<table class="fullwidth-table standard-table">
+  <thead>
     <tr>
-      <td class="header">Propriété/Élément</td>
-      <td class="header">Description</td>
-      <td class="header">Exemple</td>
+      <th class="header" scope="col">Propriété/Élément</th>
+      <th class="header" scope="col">Description</th>
+      <th class="header" scope="col">Exemple</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><code>input</code></td>
       <td>
@@ -284,80 +267,99 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
   </tbody>
 </table>
 
-## Propriétés
+## Constructeur
 
-- {{jsxref("Array.prototype.length")}}
-  - : La propriété de longueur pour le constructeur `Array`, elle vaut 1.
-- {{jsxref("Array.@@species", "get Array[@@species]")}}
+- [`Array()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
+  - : Crée un nouvel objet `Array`.
+## Propriétés statiques
+
+- [`get Array[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species)
   - : La fonction de construction utilisée pour créer les objets dérivés.
-- {{jsxref("Array.prototype")}}
-  - : Cette propriété permet d'ajouter des propriétés à tous les tableaux.
 
-## Méthodes
+## Méthodes statiques
 
-- {{jsxref("Array.from()")}}
+- [`Array.from()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
   - : Cette méthode permet de créer une nouvelle instance d'`Array` à partir d'un objet semblable à un tableau ou d'un itérable.
-- {{jsxref("Array.isArray()")}}
+- [`Array.isArray()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
   - : Cette méthode renvoie `true` si la variable est un tableau, `false` sinon.
-- {{jsxref("Array.of()")}}
+- [`Array.of()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/of)
   - : Cette méthode permet de créer une nouvelle instance d'`Array` à partir d'un nombre variable d'arguments (peu importe la quantité ou le type des arguments utilisés).
 
-## Instances d'`Array`
+## Propriétés des instances
 
-Toutes les instances d'`Array` héritent de {{jsxref("Array.prototype")}}. Le prototype du constructeur `Array` peut être modifié afin d'affecter l'ensemble des instances grâce à l'héritage.
+- [`Array.prototype.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+  - : La propriété de longueur pour le constructeur `Array`, elle vaut 1.
+- [`Array.prototype[@@unscopables]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables)
+  - : Un symbole contenant les noms des propriétés à exclure d'une portée de liaison avec [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with).
 
-### Les propriétés
+## Méthodes des instances
 
-{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/prototype', 'Propriétés')}}
-
-### Les méthodes
-
-#### Les mutateurs
-
-{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/prototype', 'Mutateurs')}}
-
-#### Les accesseurs
-
-{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/prototype', 'Accesseurs')}}
-
-#### Les méthodes d'itération
-
-{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/prototype', 'Méthodes_itératives')}}
-
-## Les méthodes génériques de manipulation de tableaux
-
-> **Attention :** Ces méthodes génériques ne sont pas standard. Elles sont dépréciées et seront retirées dans un avenir proche. Celles-ci ne peuvent être utilisées sur tous les navigateurs. Toutefois, il existe [un _shim_ disponible sur GitHub](https://github.com/plusdude/array-generics).
-
-Parfois, on peut vouloir appliquer des méthodes pour les tableaux sur des chaînes ou d'autres objets semblables aux tableaux (ex. : l'objet {{jsxref("Fonctions/arguments", "arguments", "", 1)}}). Une chaîne sera donc traitée comme un tableau de caractères. Ainsi, si on souhaite vérifier que chaque caractère d'une chaîne `str` est bien une lettre comprise entre 'a' et 'z', on pourra utiliser :
-
-```js
-function estUneLettre(caractère) {
-  return caractère >= 'a' && caractère <= 'z';
-}
-
-if (Array.prototype.every.call(str, estUneLettre)) {
-  console.log("La chaîne '" + str + "' ne contient que des lettres entre a et z!");
-}
-```
-
-Cette notation étant plutôt verbeuse, une notation raccourcie a été introduite avec JavaScript 1.6 :
-
-```js
-if (Array.every(str,estUneLettre)) {
-  console.log("La chaîne '" + str + "' ne contient que des lettres entre a et z !");
-}
-```
-
-Des {{jsxref("Objets_globaux/String", "méthodes génériques", "#Méthodes_génériques_de_String", 1)}} sont également disponibles pour les {{jsxref("Objets_globaux/String", "String")}}.
-
-Cette fonctionnalité ne fait pas partie du standard ECMAScript et n'est pas prise en charge par les navigateurs qui ne sont pas basés sur Gecko. Comme alternative standard, vous pouvez convertir votre objet en véritable tableau grâce à la méthode {{jsxref("Array.from()")}} (attention, cette méthode n'est pas supportée dans les anciens navigateurs) :
-
-```js
-if (Array.from(str).every(estUneLettre)) {
-  console.log("La chaîne '" + str + "' contient uniquement des lettres !");
-}
-```
-
+- [`Array.prototype.at()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/at){{Experimental_Inline}}
+  - : REnvoie l'élément du tableau à l'indice indiqué. Les entiers négatifs sont acceptés en argument et, dans ce cas, la recherche de l'élément se fait depuis la fin du tableau.
+- [`Array.prototype.concat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
+  - : Renvoie un nouveau tableau qui est le tableau courant, joint avec d'autres tableaux ou valeurs.
+- [`Array.prototype.copyWithin()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/copyWithin)
+  - : Copie une séquence d'élément d'un tableau au sein du tableau courant.
+- [`Array.prototype.entries()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/entries)
+  - : Renvoie un nouvel _itérateur de tableau_ qui contient les paires de clés/valeurs pour chaque indice dans le tableau.
+- [`Array.prototype.every()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+  - : Renvoie `true` si chaque élément du tableau vérifie la condition fixée par la fonction passée en argument.
+- [`Array.prototype.fill()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/fill)
+  - : Remplit tous les éléments d'un tableau à partir d'un indice de début jusqu'à un indice de fin avec une valeur statique.
+- [`Array.prototype.filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+  - : Renvoie un nouveau tableau qui contient tous les éléments du tableau courant pour lesquels la fonction de filtre passée en argument a renvoyé `true`.
+- [`Array.prototype.find()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+  - : Renvoie l'élément trouvé dans le tableau si un des éléments satisfait la condition fixée par la fonction passée en paramètre. Renvoie `undefined` si aucun élément correspondant n'est trouvé.
+- [`Array.prototype.findIndex()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
+  - : Renvoie l'indice de l'élément trouvé dans le tableau si un élément du tableau satisfait la condition fixée par la fonction passée en argument ou `-1` si aucun élément n'est trouvé.
+- [`Array.prototype.flat()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flat)
+  - : Renvoie un nouveau tableau avec l'ensemble des sous-éléments concaténés récursivement dans le tableau jusqu'à une profondeur indiquée. 
+- [`Array.prototype.flatMap()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap)
+  - : Renvoie un nouveau tableau formé en appliquant une fonction de rappel donnée à chaque élément du tableau puis en «&nbsp;aplatissant&nbsp;» le tableau d'un niveau.
+- [`Array.prototype.forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+  - : Appelle une fonction pour chaque élément du tableau.
+- [`Array.prototype.includes()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/includes)
+  - : Détermine si le tableau contient une valeur et renvoie `true` ou `false` selon le cas de figure.
+- [`Array.prototype.indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+  - : Renvoie l'indice le plus petit d'un élément du tableau égal à la valeur passée en argument ou `-1` si aucun élément n'est trouvé.
+- [`Array.prototype.join()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
+  - : Fusionne tous les éléments du tableau en une chaîne de caractères.
+- [`Array.prototype.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/keys)
+  - : Renvoie un nouvel _itérateur de tableau_ qui contient les clés de chaque indice du tableau.
+- [`Array.prototype.lastIndexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf)
+  - : Renvoie le plus grand indice d'un élément du tableau égal à la valeur passée en argument ou `-1` si aucun élément n'est trouvé.
+- [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+  - : Renvoie un nouveau tableau contenant les résultats de l'appel de la fonction passée en argument sur chaque élément du tableau.
+- [`Array.prototype.pop()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+  - : Retire le dernier élément du tableau et renvoie cet élément.
+- [`Array.prototype.push()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+  - : Ajoute un ou plusieurs éléments à la fin du tableau et renvoie la nouvelle longueur (`length`) du tableau.
+- [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+  - : Applique une fonction sur un accumulateur et chaque valeur du tableau (de gauche à droite) afin de réduire le tableau à une seule valeur.
+- [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight)
+  - : Applique une fonction sur un accumulateur et chaque valeur du tableau (de droite à gauche) afin de réduire le tableau à une seule valeur.
+- [`Array.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+  - : Inverse l'ordre des éléments du tableau _à même le tableau_ (le premier élément devient le dernier, le dernier devient le premier, etc.).
+- [`Array.prototype.shift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+  - : Retire le premier élément du tableau et renvoie cet élément.
+- [`Array.prototype.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+  - : Extrait une section du tableau courant et renvoie un nouveau tableau.
+- [`Array.prototype.some()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+  - : Renvoie `true` si au moins un des éléments du tableau satisfait la condition fournie par la fonction passée en paramètre.
+- [`Array.prototype.sort()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+  - : Trie les éléments du tableau à même le tableau et renvoie le tableau.
+- [`Array.prototype.splice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+  - : Ajoute et/ou retire des éléments du tableau.
+- [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString)
+  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Cette méthode surcharge la méthode [`Object.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toLocaleString).
+- [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString)
+  - : Renvoie une chaîne de caractères qui représente le tableau et ses éléments. Cette méthode surcharge la méthode [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString).
+- [`Array.prototype.unshift()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
+  - : Ajoute un ou plusieurs éléments à l'avant du tableau et renvoie la nouvelle longueur du tableau.
+- [`Array.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
+  - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
+- <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator()"><code>Array.prototype[@@iterator]()</code></a>
+  - : Renvoie un nouvel _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
 ## Exemples
 
 ### Créer un tableau
@@ -365,7 +367,7 @@ if (Array.from(str).every(estUneLettre)) {
 Dans l'exemple suivant, on crée un tableau `tableauMsg`, d'une longueur nulle. Ensuite, on lui affecte des valeurs pour `tableauMsg[0]` et `tableauMsg[99]`, ce qui aura pour effet de modifier la propriété `length` (qui vaudra alors 100).
 
 ```js
-var tableauMsg = [];
+let tableauMsg = [];
 tableauMsg[0] = 'Coucou';
 tableauMsg[99] = 'monde';
 
@@ -379,7 +381,7 @@ if (tableauMsg.length === 100) {
 Dans l'exemple qui suit, on crée un plateau d'échec grâce à un tableau en deux dimensions qui contient des caractères. Le premier mouvement est effectué en copiant 'p' de (6,4) vers (4,4). La position anciennement occupée par le pion (6,4) devient vide.
 
 ```js
-var plateau = [
+let plateau = [
   ['T','C','F','R','K','F','C','T'],
   ['P','P','P','P','P','P','P','P'],
   [' ',' ',' ',' ',' ',' ',' ',' '],
@@ -421,7 +423,7 @@ Voici le résultat affiché :
 
 ```js
 values = [];
-for (var x = 0; x < 10; x++){
+for (let x = 0; x < 10; x++){
  values.push([
   2 ** x,
   2 * x ** 2
@@ -449,22 +451,15 @@ Résulte en
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| {{SpecName('ES5.1', '#sec-15.4', 'Array')}}                 | {{Spec2('ES5.1')}}     | Ajout de nouvelles méthodes : {{jsxref("Array.isArray")}}, {{jsxref("Array.prototype.indexOf", "indexOf")}}, {{jsxref("Array.prototype.lastIndexOf", "lastIndexOf")}}, {{jsxref("Array.prototype.every", "every")}}, {{jsxref("Array.prototype.some", "some")}}, {{jsxref("Array.prototype.forEach", "forEach")}}, {{jsxref("Array.prototype.map", "map")}}, {{jsxref("Array.prototype.filter", "filter")}}, {{jsxref("Array.prototype.reduce", "reduce")}}, {{jsxref("Array.prototype.reduceRight", "reduceRight")}} |
-| {{SpecName('ES6', '#sec-array-objects', 'Array')}}     | {{Spec2('ES6')}}         | Ajout de nouvelles méthodes : {{jsxref("Array.from")}}, {{jsxref("Array.of")}}, {{jsxref("Array.prototype.find", "find")}}, {{jsxref("Array.prototype.findIndex", "findIndex")}}, {{jsxref("Array.prototype.fill", "fill")}}, {{jsxref("Array.prototype.copyWithin", "copyWithin")}}                                                                                                                                                                                                                                                                                                             |
-| {{SpecName('ES7', '#sec-array-objects', 'Array')}}     | {{Spec2('ES7')}}         | Ajout de la méthode {{jsxref("Array.prototype.includes()")}}.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName('ESDraft', '#sec-array-objects', 'Array')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-
+{{Specifications}}
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array")}}
+{{Compat}}
 
 ## Voir aussi
 
-- [Guide JavaScript : indexer les propriétés d'un objet](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#Indexer_les_propri.C3.A9t.C3.A9s_d'un_objet)
-- [Guide JavaScript : Les objets natifs : l'objet `Array`](/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Les_tableaux_.3A_objet_Array)
-- [Les compréhensions de tableau](/fr/docs/Web/JavaScript/Reference/Opérateurs/Compréhensions_de_tableau)
-- [Émulation pour les méthodes génériques et autres fonctionnalités ECMAScript 5 pour les tableaux](https://github.com/plusdude/array-generics) (en anglais)
-- [Les tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés)
+- Chapitres du guide JavaScript
+  - [Guide JavaScript : indexer les propriétés d'un objet](/fr/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties)
+  - [Guide JavaScript : Les objets natifs : l'objet `Array`](/fr/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
+- [Les tableaux typés](/fr/docs/Web/JavaScript/Typed_arrays)
+- [RangeError: invalid array length](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

@@ -19,7 +19,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
   <tr>
    <th scope="row">必須</th>
    <td>
-    <p>通常は不要です (<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"> いつ Add-on ID が必要か？</a>を参考に) 。Firefox 48 より前と Android版Firefox では必須です。</p>
+    <p>通常は不要です (<a href="/ja/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"> いつ Add-on ID が必要か？</a>を参考に) 。Firefox 48 より前と Android版Firefox では必須です。</p>
    </td>
   </tr>
   <tr>
@@ -46,7 +46,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_set
 <p>現在、4 つの文字列属性を含む <code>gecko</code> キーのみが存在します。</p>
 
 <ul>
- <li><code>id</code> は <a href="https://developer.mozilla.org/ja/Add-ons/Install_Manifests#id">拡張機能ID</a> です。Firefox 48 からオプションですが、Firefox 48 より前では必須です。いつ特定の add-on ID が必要になるかについては、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">拡張機能と Add-on ID</a> を見てください。</li>
+ <li><code>id</code> は <a href="/ja/Add-ons/Install_Manifests#id">拡張機能ID</a> です。Firefox 48 からオプションですが、Firefox 48 より前では必須です。いつ特定の add-on ID が必要になるかについては、<a href="/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID">拡張機能と Add-on ID</a> を見てください。</li>
  <li><code>strict_min_version</code>: サポートする Gecko の最小バージョンです。"*" を含むバージョンは、このフィールドでは無効です。既定は "42a1" です。</li>
  <li><code>strict_max_version</code>: サポートする Gecko の最大バージョンです。拡張機能がこのバージョンを超えた Firefox のバージョンにインストールや実行された場合、拡張機能は無効または、インストールが許可されません。既定は "*" で、最大バージョンのチェックは無効です。</li>
  <li><code>update_url</code> は <a href="/ja/Add-ons/Updates">add-on update manifest</a> へのリンクです。リンクは "https" で始まっている必要があることに注意してください。このキーは拡張機能が自分自身で更新を管理するためのものです(つまり AMO以外で)。</li>

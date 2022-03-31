@@ -63,7 +63,7 @@ console.log(encodeURIComponent('\uD800'));
 console.log(encodeURIComponent('\uDFFF'));
 ```
 
-Afin d'éviter des requêtes inattendues vers le serveur, il est conseillé d'utiliser la fonction `encodeURIComponent()` pour n'importe quel paramètre qui aurait été saisi par l'utilisateur et qui ferait partie d'un URI. Ainsi, si un utilisateur peut saisir "`Thym &access=admin`" dans une variable `commentaire` et qu'on n'utilise pas `encodeURIComponent()`, on obtiendra la chaîne `commentaire=Thym%20&access=admin`. On voit ici que l'esperluette (&) et le signe égal forment une nouvelle paire clé/valeur. Au lieu d'avoir une clé POST `commentaire` égale à "`Thym &access=admin`", on aura deux clés POST, l'une égale à "`Thym `" et une seconde (`access`) égale à `admin`.
+Afin d'éviter des requêtes inattendues vers le serveur, il est conseillé d'utiliser la fonction `encodeURIComponent()` pour n'importe quel paramètre qui aurait été saisi par l'utilisateur et qui ferait partie d'un URI. Ainsi, si un utilisateur peut saisir "`Thym &access=admin`" dans une variable `commentaire` et qu'on n'utilise pas `encodeURIComponent()`, on obtiendra la chaîne `commentaire=Thym%20&access=admin`. On voit ici que l'esperluette (&) et le signe égal forment une nouvelle paire clé/valeur. Au lieu d'avoir une clé POST `commentaire` égale à "`Thym &access=admin`", on aura deux clés POST, l'une égale à "`Thym`" et une seconde (`access`) égale à `admin`.
 
 Pour [`application/x-www-form-urlencoded`](https://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#application/x-www-form-urlencoded-encoding-algorithm), les espaces sont remplacés par un '+', aussi, dans ce cas, on pourra ajouter un remplacement supplémentaire après `encodeURIComponent()` pour remplacer "%20" par "+".
 
@@ -121,9 +121,9 @@ function encodeRFC5987ValueChars2(str) {
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}                                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.1.3.4', 'encodeURIComponent')}}                                 | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-encodeuricomponent-uricomponent', 'encodeURIComponent')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

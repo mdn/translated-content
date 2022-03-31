@@ -13,9 +13,9 @@ translation_of: Web/API/Element/closest
 
 <p>Метод <code><strong>Element.closest()</strong></code> возвращает ближайший родительский элемент (или сам элемент), который соответствует заданному CSS-селектору или null, если таковых элементов вообще нет.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">var <em>elt =</em><em> element</em>.closest(<em>selectors</em>);
+<pre class="syntaxbox">var <em>elt =</em><em> element</em>.closest(<em>selectors</em>);
 </pre>
 
 <ul>
@@ -30,9 +30,9 @@ translation_of: Web/API/Element/closest
  <dd>Указанный css-селектор не является допустимым<em> ("/=21=1", "&amp;@*#", "%'54523" и т.п. приведут к ошибке).</em></dd>
 </dl>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
-<pre class="notranslate">&lt;div id="block" title="Я - блок"&gt;
+<pre>&lt;div id="block" title="Я - блок"&gt;
     &lt;a href="#"&gt;Я ссылка в никуда&lt;/a&gt;
     &lt;a href="http://site.ru"&gt;Я ссылка на сайт&lt;/a&gt;
     &lt;div&gt;
@@ -43,7 +43,7 @@ translation_of: Web/API/Element/closest
 
 <p>Думаю, стоит рассмотреть несколько примеров:</p>
 
-<pre class="brush: js notranslate">var div = document.querySelector("#too"); //Это элемент от которого мы начнём поиск
+<pre class="brush: js">var div = document.querySelector("#too"); //Это элемент от которого мы начнём поиск
 
 div.closest("#block"); //Результат - самый первый блок древа выше
 div.closest("div"); //Сам блок #too и будет результатом, так как он подходит под селектор "div"
@@ -56,7 +56,7 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
 
 <p>Для браузеров не поддерживающих Element.closest(), но позволяющих использовать element.matches() (или префиксный эквивалент) есть полифил:</p>
 
-<pre class="brush: js notranslate">(function(ELEMENT) {
+<pre class="brush: js">(function(ELEMENT) {
     ELEMENT.matches = ELEMENT.matches || ELEMENT.mozMatchesSelector || ELEMENT.msMatchesSelector || ELEMENT.oMatchesSelector || ELEMENT.webkitMatchesSelector;
     ELEMENT.closest = ELEMENT.closest || function closest(selector) {
         if (!this) return null;
@@ -66,11 +66,11 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
       };
 }(Element.prototype));</pre>
 
-<h2 id="Specification" name="Specification">Полифил #2 (через цикл)</h2>
+<h2 id="Specification">Полифил #2 (через цикл)</h2>
 
 <p>Тем не менее, если вам требуется поддержка IE 8, вы можете использовать следующий полифил. Имейте ввиду - этот способ позволяет использовать CSS селекторы только уровня 2.1 и может жутко тормозить.</p>
 
-<pre class="brush: js notranslate">(function(e){
+<pre class="brush: js">(function(e){
  e.closest = e.closest || function(css){
    var node = this;
  <code class="language-javascript"><span class="keyword token">
@@ -82,7 +82,7 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
  }
 })(Element.prototype);</pre>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="standard-table">
  <tbody>
@@ -99,9 +99,9 @@ div.closest("div[title]") //#block - так как ближе нет блоко�
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("api.Element.closest")}}</div>
+<div>{{Compat}}</div>
 
 <div>
 <h3 id="Примечания_совместимости">Примечания совместимости</h3>

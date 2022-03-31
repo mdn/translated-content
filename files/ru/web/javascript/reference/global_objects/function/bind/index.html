@@ -13,15 +13,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 <div>{{JSRef("Global_Objects", "Function")}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <code><strong>bind()</strong></code> создаёт новую функцию, которая при вызове устанавливает в качестве контекста выполнения <code>this</code> предоставленное значение. В метод также передаётся набор аргументов, которые будут установлены перед переданными в привязанную функцию аргументами при её вызове.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>fun</var>.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...]]])</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>thisArg</code></dt>
@@ -30,7 +30,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
  <dd>Аргументы целевой функции, передаваемые перед аргументами привязанной функции при вызове целевой функции.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Метод <code>bind()</code> создаёт новую "<strong>привязанную функцию</strong>" (<strong>ПФ</strong>).  <strong>ПФ</strong> <span class="translation-chunk">- это "необычный </span> <span class="translation-chunk">функциональный объект" ( термин из </span> <strong>ECMAScript 6</strong> <span class="translation-chunk"> ), который является обёрткой над исходным </span> <span class="translation-chunk">функциональным объектом. Вызов </span> <strong>ПФ</strong> <span class="translation-chunk">  приводит к исполнению кода обёрнутой функции.</span></p>
 
@@ -53,9 +53,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <p>Привязанная функция также может быть сконструирована с помощью оператора {{jsxref("Operators/new", "new")}}: это работает так, как если бы вместо неё конструировалась целевая функция. Предоставляемое значение <code>this</code> в этом случае игнорируется, хотя ведущие аргументы всё ещё передаются в эмулируемую функцию.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Creating_a_bound_function" name="Example:_Creating_a_bound_function">Пример: создание привязанной функции</h3>
+<h3 id="Example:_Creating_a_bound_function">Пример: создание привязанной функции</h3>
 
 <p>Простейшим способом использования <code>bind()</code> является создание функции, которая, вне зависимости от способа её вызова, вызывается с определённым значением <code>this</code>. Обычным заблуждением для новичков в JavaScript является извлечение метода из объекта с целью его дальнейшего вызова в качестве функции и ожидание того, что он будет использовать оригинальный объект в качестве своего значения <code>this</code> (например, такое может случиться при использовании метода как колбэк-функции). Однако, без специальной обработки, оригинальный объект зачастую теряется. Создание привязанной функции из функции, использующей оригинальный объект, изящно решает эту проблему:</p>
 
@@ -75,7 +75,7 @@ var boundGetX = getX.bind(module);
 boundGetX(); // 81
 </pre>
 
-<h3 id="Example:_Partial_Functions" name="Example:_Partial_Functions">Пример: частичные функции</h3>
+<h3 id="Example:_Partial_Functions">Пример: частичные функции</h3>
 
 <p>Следующим простейшим способом использования <code>bind()</code> является создание функции с предопределёнными аргументами. Эти аргументы (если они есть) передаются после значения <code>this</code> и вставляются перед аргументами, передаваемыми в целевую функцию при вызове привязанной функции.</p>
 
@@ -92,7 +92,7 @@ var list2 = leadingThirtysevenList(); // [37]
 var list3 = leadingThirtysevenList(1, 2, 3); // [37, 1, 2, 3]
 </pre>
 
-<h3 id="Example:_With_setTimeout" name="Example:_With_setTimeout">Пример: с <code>setTimeout</code></h3>
+<h3 id="Example:_With_setTimeout">Пример: с <code>setTimeout</code></h3>
 
 <p>По умолчанию, внутри {{domxref("window.setTimeout()")}} контекст <code>this</code> устанавливается в объект {{domxref("window")}} (или <code>global</code>). При работе с методами класса, требующими <code>this</code> для ссылки на экземпляры класса, вы можете явно привязать <code>this</code> к колбэк-функции для сохранения экземпляра.</p>
 
@@ -111,7 +111,7 @@ LateBloomer.prototype.declare = function() {
 };
 </pre>
 
-<h3 id="Example:_Bound_functions_used_as_constructors" name="Example:_Bound_functions_used_as_constructors">Пример: привязывание функций, используемых в качестве конструкторов</h3>
+<h3 id="Example:_Bound_functions_used_as_constructors">Пример: привязывание функций, используемых в качестве конструкторов</h3>
 
 <div class="warning">
 <p><strong>Предупреждение:</strong> этот раздел демонстрирует возможности JavaScript и документирует некоторые граничные случаи использования метода <code>bind()</code>. Показанные ниже методы не являются лучшей практикой и, вероятно, их не следует использовать в рабочем окружении.</p>
@@ -161,7 +161,7 @@ emptyObj.x + ',' + emptyObj.y;
 
 <p>Если вы хотите поддерживать использование привязанной функции только с помощью оператора {{jsxref("Operators/new", "new")}}, либо только с помощью прямого вызова, целевая функция должна предусматривать такие ограничения.</p>
 
-<h3 id="Example:_Creating_shortcuts" name="Example:_Creating_shortcuts">Пример: создание сокращений</h3>
+<h3 id="Example:_Creating_shortcuts">Пример: создание сокращений</h3>
 
 <p>Метод <code>bind()</code> также полезен в случаях, если вы хотите создать сокращение для функции, требующей определённое значение <code>this</code>.</p>
 
@@ -185,7 +185,7 @@ var slice = Function.prototype.call.bind(unboundSlice);
 slice(arguments);
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <p>Функция <code>bind</code> является дополнением к стандарту ECMA-262 5-го издания; поэтому она может присутствовать не во всех браузерах. Вы можете частично обойти это ограничение, вставив следующий код в начало ваших скриптов, он позволяет использовать большую часть возможностей <code>bind()</code> в реализациях, не имеющих его родной поддержки.</p>
 
@@ -226,33 +226,15 @@ slice(arguments);
 
 <p>Если вы решили использовать частичную реализацию, <strong>не рассчитывайте на корректную работу в тех случаях, когда реализация отклоняется от спецификации ECMA-262 5-го издания!</strong> Однако, в определённых случаях (и, возможно, с дополнительными модификациями для отдельных нужд), применение данной частичной реализации может быть вполне оправданным до тех пор, пока <code>bind()</code> не станет широко реализован в соответствии со спецификацией.</p>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function.prototype.bind', 'Function.prototype.bind')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Function.prototype.apply()")}}</li>

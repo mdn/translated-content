@@ -10,7 +10,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><em>var intervalID</em> = scope.setInterval(<em>func</em>, <em>delay</em>[, <em>param1</em>, <em>param2</em>, ...]);
+<pre class="syntaxbox"><em>var intervalID</em> = scope.setInterval(<em>func</em>, <em>delay</em>[, <em>param1</em>, <em>param2</em>, ...]);
 <em>var intervalID</em> = scope.setInterval(<em>code</em>, <em>delay</em>);
 </pre>
 
@@ -45,7 +45,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 
 <p>The following example demonstrates <code>setInterval()</code>'s basic syntax.</p>
 
-<pre class="brush:js notranslate">var intervalID = window.setInterval(myCallback, 500);
+<pre class="brush:js">var intervalID = window.setInterval(myCallback, 500);
 
 function myCallback() {
   // Your code here
@@ -56,7 +56,7 @@ function myCallback() {
 
 <p>В следующем примере вызывается функция <code>flashtext()</code> раз в секунду, до того момента, как будет нажата кнопка Stop.</p>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8" /&gt;
@@ -95,7 +95,7 @@ function myCallback() {
 
 <p>The following example simulates typewriter by first clearing and then slowly typing content into the <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a> that matches a specified group of selectors.</p>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 &lt;meta charset="UTF-8" /&gt;
@@ -258,7 +258,7 @@ Vivamus blandit massa ut metus mattis in fringilla lectus imperdiet. Proin ac an
 
 <p>As previously discussed, Internet Explorer versions 9 and below do not support the passing of arguments to the callback function in either <code>setTimeout()</code> or <code>setInterval()</code>. The following <strong>IE-specific</strong> code demonstrates a method for overcoming this limitation.  To use, simply add the following code to the top of your script.</p>
 
-<pre class="brush:js notranslate">/*\
+<pre class="brush:js">/*\
 |*|
 |*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
 |*|  callback functions of javascript timers (HTML5 standard syntax).
@@ -299,11 +299,11 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <p>Another possibility is to use an anonymous function to call your callback, although this solution is a bit more expensive. Example:</p>
 
-<pre class="brush:js notranslate">var intervalID = setInterval(function() { myFunc('one', 'two', 'three'); }, 1000);</pre>
+<pre class="brush:js">var intervalID = setInterval(function() { myFunc('one', 'two', 'three'); }, 1000);</pre>
 
 <p>Another possibility is to use <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">function's bind</a>. Example:</p>
 
-<pre class="brush:js notranslate">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
+<pre class="brush:js">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
 
 <p>{{h3_gecko_minversion("Inactive tabs", "5.0")}}</p>
 
@@ -317,7 +317,7 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <p>Code executed by <code>setInterval()</code> runs in a separate execution context than the function from which it was called. As a consequence, the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/this"><code>this</code></a> keyword for the called function is set to the <code>window</code> (or <code>global</code>) object, it is not the same as the <code>this</code> value for the function that called <code>setTimeout</code>. See the following example (which uses <code>setTimeout()</code> instead of <code>setInterval()</code> – the problem, in fact, is the same for both timers):</p>
 
-<pre class="brush:js notranslate">myArray = ['zero', 'one', 'two'];
+<pre class="brush:js">myArray = ['zero', 'one', 'two'];
 
 myArray.myMethod = function (sProperty) {
     alert(arguments.length &gt; 0 ? this[sProperty] : this);
@@ -341,7 +341,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 <p>A possible way to solve the "<code>this</code>" problem is to replace the two native <code>setTimeout()</code> or <code>setInterval()</code> global functions with two <em>non-native</em> ones that enable their invocation through the <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call</code></a> method. The following example shows a possible replacement:</p>
 
-<pre class="brush:js notranslate">// Enable the passage of the 'this' object through the JavaScript timers
+<pre class="brush:js">// Enable the passage of the 'this' object through the JavaScript timers
 
 var __nativeST__ = window.setTimeout, __nativeSI__ = window.setInterval;
 
@@ -363,7 +363,7 @@ window.setInterval = function (vCallback, nDelay /*, argumentToPass1, argumentTo
 
 <p>Новое тестируемое свойство:</p>
 
-<pre class="brush:js notranslate">myArray = ['zero', 'one', 'two'];
+<pre class="brush:js">myArray = ['zero', 'one', 'two'];
 
 myArray.myMethod = function (sProperty) {
     alert(arguments.length &gt; 0 ? this[sProperty] : this);
@@ -386,7 +386,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 <h3 id="minidaemon.js">minidaemon.js</h3>
 
-<pre class="brush:js notranslate">/*\
+<pre class="brush:js">/*\
 |*|
 |*|  :: MiniDaemon ::
 |*|
@@ -516,7 +516,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>Ваша HTML страница:</p>
 
-<pre class="brush:html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8" /&gt;
@@ -567,7 +567,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <p>In these cases, a recursive <code>setTimeout()</code> pattern is preferred:</p>
 
-<pre class="brush:js notranslate">(function loop(){
+<pre class="brush:js">(function loop(){
    setTimeout(function() {
       // Your logic here
 
@@ -584,32 +584,14 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-setinterval', 'WindowOrWorkerGlobalScope.setInterval()')}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Method moved to the <code>WindowOrWorkerGlobalScope</code> mixin in the latest spec.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "webappapis.html#dom-setinterval", "WindowTimers.setInterval()")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Initial definition (DOM Level 0)</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 <div>
 
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.setInterval")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>

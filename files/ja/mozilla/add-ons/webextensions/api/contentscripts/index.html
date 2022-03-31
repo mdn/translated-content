@@ -18,11 +18,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 <p>このAPIは<code>manifest.json</code>にある"content_scripts"キーと似ていますが、"content_scripts"ではコンテントスクリプトとURLのパターンは<strong>インストールタイム</strong>に固定されます。<span class="seoSummary">一方<code>content_scripts</code> APIは、<strong>ランタイム（実行時）</strong>でスクリプトを登録・登録解除することが可能です。</span></p>
 
-<p>このAPIは、{{WebExtAPIRef("contentScripts.register()")}} メソッドを呼び出して使用していただけます。その際は、登録するコンテントスクリプト、URLのマッチングパターン、またその他のオプションを実引数(arguments)として渡してください。このメソッドは{{WebExtAPIRef("contentScripts.RegisteredContentScript")}} オブジェクトがresolveされた <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。</p>
+<p>このAPIは、{{WebExtAPIRef("contentScripts.register()")}} メソッドを呼び出して使用していただけます。その際は、登録するコンテントスクリプト、URLのマッチングパターン、またその他のオプションを実引数(arguments)として渡してください。このメソッドは{{WebExtAPIRef("contentScripts.RegisteredContentScript")}} オブジェクトがresolveされた <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返します。</p>
 
 <p><code>RegisteredContentScript</code> オブジェクトは <code>register()</code> で登録されたスクリプトを保持し、<code>unregister()</code>でそのスクリプトを登録解除(unregister)できます。また、コンテントスクリプトはそれらを作ったページが消された際にも自動的に登録解除されます。例えば、backgroundページによって登録されたコンテントスクリプトは、backgroundページが消去された際に自動的に登録解除されます。</p>
 
-<p><code>contentScripts</code> API にパーミッションは存在しませんが、拡張機能はregister()でマッチさせるURLにおいては適切な<a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a>を持っている必要があります。</p>
+<p><code>contentScripts</code> API にパーミッションは存在しませんが、拡張機能はregister()でマッチさせるURLにおいては適切な<a href="/ja/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions">host permissions</a>を持っている必要があります。</p>
 
 <h2 id="Types">Types</h2>
 

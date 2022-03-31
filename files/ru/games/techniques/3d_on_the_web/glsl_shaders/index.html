@@ -17,23 +17,23 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 
 <p>Как вы помните из статьи о <a href="/en-US/docs/Games/Techniques/3D_on_the_web/Basic_theory">теоретических основах</a>, вертекс или вершина это точка в системе 3D координат. Также вершины могут иметь дополнительные свойства. Система 3D координат определяет пространство, а вертексы позволяют определять формы в этом пространстве.</p>
 
-<h2 id="shader_types" name="shader_types">Типы шейдеров</h2>
+<h2 id="shader_types">Типы шейдеров</h2>
 
 <p>Шейдер, по сути, это функция, которая требуется для отображения чего-либо на экране. Шейдер запускается в <a href="https://en.wikipedia.org/wiki/GPU">GPU</a> (graphics processing unit), который оптимизирован для выполнения подобных операций. Using a GPU to deal with shaders offloads some of the number crunching from the CPU. This allows the CPU to focus its processing power on other tasks, like executing code.</p>
 
-<h3 id="vertex_shader" name="vertex_shader">Вершинный шейдер</h3>
+<h3 id="vertex_shader">Вершинный шейдер</h3>
 
 <p>Vertex shaders manipulate coordinates in a 3D space and are called once per vertex. The purpose of the vertex shader is to set up the <code>gl_Position</code> variable — this is a special, global, and built-in GLSL variable. <code>gl_Position</code> is used to store the position of the current vertex.</p>
 
 <p>The <code>void main()</code> function is a standard way of defining the <code>gl_Position</code> variable. Everything inside  <code>void main()</code> will be executed by the vertex shader.  A vertex shader yields a variable containing how to project a vertex's position in 3D space onto a 2D screen.</p>
 
-<h3 id="fragment_shader" name="fragment_shader">Фрагментный шейдер</h3>
+<h3 id="fragment_shader">Фрагментный шейдер</h3>
 
 <p>Fragment (or texture) shaders define RGBA (red, blue, green, alpha) colors for each pixel being processed — a single fragment shader is called once per pixel. The purpose of the fragment shader is to set up the <code>gl_FragColor</code> variable. <code>gl_FragColor</code> is a built-in GLSL variable like <code>gl_Position</code>.</p>
 
 <p>The calculations result in a variable containing the information about the RGBA color.</p>
 
-<h2 id="demo" name="demo">Демо</h2>
+<h2 id="demo">Демо</h2>
 
 <p>Let's build a simple demo to explain those shaders in action. Be sure to read <a href="https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js">Three.js tutorial</a> first to grasp the concept of the scene, its objects, and materials.</p>
 
@@ -41,7 +41,7 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
 <p><strong>Note</strong>: Remember that you don't have to use Three.js or any other library to write your shaders — pure <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API">WebGL</a> (Web Graphics Library) is more than enough. We've used Three.js here to make the background code a lot simpler and clearer to understand, so you can just focus on the shader code. Three.js and other 3D libraries abstract a lot of things for you — if you wanted to create such an example in raw WebGL, you'd have to write a lot of extra code to actually make it work.</p>
 </div>
 
-<h3 id="Environment_setup" name="Environment_setup">Настройка окружения</h3>
+<h3 id="Environment_setup">Настройка окружения</h3>
 
 <p>Чтобы приступить к работе с шейдерами WebGL вам потребуется:</p>
 
@@ -51,7 +51,7 @@ translation_of: Games/Techniques/3D_on_the_web/GLSL_Shaders
  <li>Сохранить копию <a href="https://threejs.org/build/three.min.js">последней минимизированной версии библиотеки Three.js</a> в созданную папку.</li>
 </ul>
 
-<h3 id="HTML_structure" name="HTML_structure">Структура HTML кода</h3>
+<h3 id="HTML_structure">Структура HTML кода</h3>
 
 <p>Мы будем использовать следующую структуру HTML кода.</p>
 
@@ -215,7 +215,7 @@ canvas { width: 100%; height: 100%; }
 
 <h3 id="Результат">Результат</h3>
 
-<p>{{ EmbedLiveSample('Final_code', '100%', '400', '', 'Games/Techniques/3D_on_the_web/GLSL_Shaders') }}</p>
+<p>{{ EmbedLiveSample('Финальный_вариант', '100%', '400', '', 'Games/Techniques/3D_on_the_web/GLSL_Shaders') }}</p>
 
 <h2 id="Заключение">Заключение</h2>
 

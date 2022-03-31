@@ -24,7 +24,7 @@ L'instruction **`for`** crée une boucle composée de trois expressions optionne
 - `initialisation`
   - : Une expression (pouvant être une expression d'affectation) ou une déclaration de variable. Cette expression est évaluée une fois avant que la boucle démarre. On utilise généralement une variable qui agit comme un compteur. Cette expression peut éventuellement déclarer de nouvelles variables avec le mot-clé `var` ou `let`. Les variables déclarées avec `var` se situent dans la même portée que la boucle `for` (elles ne sont pas locales au sein de la boucle), les variables déclarées avec `let` sont locales à la boucle. Le résultat de l'expression n'est pas utilisé.
 - `condition`
-  - : Une expression qui est évaluée avant chaque itération de la boucle. Si cette expression est vérifiée, l'`instruction `est exécutée. Ce test est optionnel. S'il n'est pas présent, la condition sera toujours vérifiée. Si l'expression n'est pas vérifiée (i.e. vaut `false`), l'exécution se poursuivra à la première expression qui suit la boucle `for`.
+  - : Une expression qui est évaluée avant chaque itération de la boucle. Si cette expression est vérifiée, l'`instruction` est exécutée. Ce test est optionnel. S'il n'est pas présent, la condition sera toujours vérifiée. Si l'expression n'est pas vérifiée (i.e. vaut `false`), l'exécution se poursuivra à la première expression qui suit la boucle `for`.
 - `expression_finale`
   - : Une expression qui est évaluée à la fin de chaque itération. Cela se produit avant l'évaluation de l'expression `condition`. Cette expression est généralement utilisée pour mettre à jour ou incrémenter le compteur qu'est la variable d'initialisation.
 - `instruction`
@@ -34,7 +34,7 @@ L'instruction **`for`** crée une boucle composée de trois expressions optionne
 
 ### Utiliser `for`
 
-L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initialisant à 0. Elle vérifie que `i` est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente `i` de 1, ce qui sera fait à chaque passage dans la boucle.
+L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initialisant à 0. Elle vérifie que `i` est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente `i` de 1, ce qui sera fait à chaque passage dans la boucle.
 
 ```js
 for (var i = 0; i < 9; i++) {
@@ -99,10 +99,10 @@ function showOffsetPos (sId) {
 
 | Spécification                                                                        | État                         | Commentaires        |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-for-statement', 'for statement')}} | {{Spec2('ESDraft')}} |                     |
-| {{SpecName('ES6', '#sec-for-statement', 'instruction for')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ES5.1', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES3', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES3')}}         |                     |
+| {{SpecName('ESDraft', '#sec-for-statement', 'for statement')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ES6', '#sec-for-statement', 'instruction for')}}     | {{Spec2('ES6')}}         |                     |
+| {{SpecName('ES5.1', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES5.1')}}     |                     |
+| {{SpecName('ES3', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES3')}}         |                     |
 | {{SpecName('ES1', '#sec-12.6.2', 'instruction for')}}             | {{Spec2('ES1')}}         | Définition initiale |
 
 ## Compatibilité des navigateurs

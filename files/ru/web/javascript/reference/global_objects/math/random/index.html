@@ -19,15 +19,15 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 <p><strong>Примечание:</strong> метод <code>Math.random()</code> <em>не предоставляет</em> криптографически стойкие случайные числа. Не используйте его ни для чего, связанного с безопасностью. Вместо него используйте Web Crypto API (API криптографии в вебе) и более точный метод {{domxref("RandomSource.getRandomValues()", "window.crypto.getRandomValues()")}}.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code>Math.random()</code></pre>
 
-<h3 id="Parameters" name="Parameters">Возвращаемое значение</h3>
+<h3 id="Parameters">Возвращаемое значение</h3>
 
 <p>Псевдослучайное число с плавающей запятой от <code>0</code> (включительно) до 1 (не считая).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
 <p>Обратите внимание, что поскольку числа в JavaScript являются числами с плавающей запятой стандарта IEEE 754 с поведением при округлении к ближайшему чётному, все эти диапазоны (исключая диапазон с простым вызовом <code>Math.random()</code>), не точны. Если заданы очень большие границы (2<sup>53</sup> или выше), возможен <em>крайне</em> редкий случай вычисления обычно исключённой верхней границы.</p>
 
@@ -69,42 +69,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
   return Math.floor(Math.random() * (max - min + 1)) + min; //Максимум и минимум включаются
 }</pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Изначальное определение. JavaScript 1.0 (только UNIX) / JavaScript 1.1 (все платформы).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.14', 'Math.random')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.random', 'Math.random')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.random', 'Math.random')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<p>{{Compat("javascript.builtins.Math.random")}}</p>
+<p>{{Compat}}</p>
 
-<div></div>
+
 
 <div id="compat-mobile"></div>

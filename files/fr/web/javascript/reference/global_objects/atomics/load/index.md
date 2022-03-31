@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/load
 ---
 {{JSRef}}
 
-La méthode statique **`Atomics`\*\***`.load()`\*\* renvoie une valeur située à une position donnée du tableau.
+La méthode statique **`Atomics.load()`** renvoie une valeur située à une position donnée du tableau.
 
 {{EmbedInteractiveExample("pages/js/atomics-load.html")}}
 
@@ -33,7 +33,7 @@ La valeur à la position indiquée (`typedArray[index]`).
 
 ### Exceptions levées
 
-- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
 - Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
 - Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 

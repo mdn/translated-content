@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/has
 ---
 {{JSRef}}
 
-La méthode statique **`Reflect`\*\***`.has()`\*\* fonctionne comme [l'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in) mais sous forme d'une fonction.
+La méthode statique **`Reflect.has()`** fonctionne comme [l'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in) mais sous forme d'une fonction.
 
 {{EmbedInteractiveExample("pages/js/reflect-has.html")}}
 
@@ -62,7 +62,7 @@ Reflect.has(obj, "bonbon");  // false
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.has', 'Reflect.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.has', 'Reflect.has')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.has', 'Reflect.has')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

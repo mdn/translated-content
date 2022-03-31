@@ -33,7 +33,7 @@ Une nouvelle chaîne de caractères dont certains caractères ont été échapp�
 
 ## Description
 
-La fonction `escape` est une propriété de l'_objet global_. Les caractères spéciaux, sauf @\*\_+-./, seront encodés.
+La fonction `escape` est une propriété de l'_objet global_. Les caractères spéciaux, sauf `@*_+-./`, seront encodés.
 
 La forme hexadécimale des caractères dont la valeur du codet est inférieure à 0xFF sera représentée sur deux chiffres : %xx. Pour les caractères avec un code supérieur, quatre chiffres seront utilisés avec le format suivant %**u**xxxx.
 

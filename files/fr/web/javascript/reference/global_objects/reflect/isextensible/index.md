@@ -80,7 +80,7 @@ Object.isExtensible(1);
 | Spécification                                                                                        | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

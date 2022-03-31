@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/getPrototypeOf
 ---
 {{JSRef}}
 
-La méthode statique **`Reflect`\*\***`.getPrototypeOf()`\*\* est semblable à la méthode {{jsxref("Object.getPrototypeOf()")}}. Elle renvoie le prototype (c'est-à-dire la valeur de la propriété interne `[[Prototype]]`) de l'objet donné.
+La méthode statique **`Reflect.getPrototypeOf()`** est semblable à la méthode {{jsxref("Object.getPrototypeOf()")}}. Elle renvoie le prototype (c'est-à-dire la valeur de la propriété interne `[[Prototype]]`) de l'objet donné.
 
 {{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
 
@@ -73,7 +73,7 @@ Reflect.getPrototypeOf(Object('toto')); // String.prototype
 | Spécification                                                                                                | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

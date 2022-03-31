@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Statements/throw
 
 <p><strong>Инструкция <code>throw</code></strong> позволяет генерировать исключения, определяемые пользователем. При этом выполнение текущей функции будет остановлено (инструкции после <code>throw</code> не будут выполнены), и управление будет передано в первый блок <a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>catch</code></a> в стеке вызовов. Если <code>catch</code> блоков среди вызванных функций нет, выполнение программы будет остановлено.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox">throw <em>выражение</em>; </pre>
 
@@ -21,7 +21,7 @@ translation_of: Web/JavaScript/Reference/Statements/throw
  <dd>Определяемое пользователем исключение.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Используйте инструкцию throw для генерирования исключения. Когда вы генерируете исключение (throw), <em>выражение</em> задаёт значение исключения. Каждое из следующих throw создаёт исключение:</p>
 
@@ -31,9 +31,9 @@ throw true;     // генерирует исключение, значением
 
 <p>Также стоит отметить, что на инструкцию <code>throw</code> влияет <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion">автоматическая вставка точки с запятой (ASI)</a>. Поэтому не допускаются разрывы строк между инструкцией <code>throw</code> и <code>выражением</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Throw_an_object" name="Example:_Throw_an_object">Пример: Генерирование объекта в качестве исключения</h3>
+<h3 id="Example:_Throw_an_object">Пример: Генерирование объекта в качестве исключения</h3>
 
 <p>Можно указать объект в качестве исключения. Затем можно получить ссылку на этот объект и доступ ко всем его свойствам в блоке catch. Следующий пример создаёт объект ошибки, который имеет тип UserException, и используется для генерации исключения.</p>
 
@@ -62,7 +62,7 @@ try {
 }
 </pre>
 
-<h3 id="Example:_Another_example_of_throwing_an_object" name="Example:_Another_example_of_throwing_an_object">Пример: Другой пример генерации объекта в виде исключения</h3>
+<h3 id="Example:_Another_example_of_throwing_an_object">Пример: Другой пример генерации объекта в виде исключения</h3>
 
 <p>Следующий пример проверяет, является ли строка, переданная в функцию, почтовым индексом США. Если индекс имеет недопустимый формат, будет сгенерировано исключение посредством создания объекта, имеющего тип <code>ZipCodeFormatException</code>.</p>
 
@@ -132,7 +132,7 @@ d = verifyZipCode("95060");       // вернёт 95060
 e = verifyZipCode("95060 1234");  // вернёт 95060 1234
 </pre>
 
-<h3 id="Example:_Rethrow_an_exception" name="Example:_Rethrow_an_exception">Пример: Повторный выброс исключения</h3>
+<h3 id="Example:_Rethrow_an_exception">Пример: Повторный выброс исключения</h3>
 
 <p>Можно использовать throw для повторного выброса исключения после того, как оно было поймано. В следующем примере ловится исключение с числовым значением и делается повторный выброс, если его значение больше 50.  Повторно выброшенное исключение передаётся далее в вызывающую функцию или до верхнего уровня, который видит пользователь.</p>
 
@@ -185,7 +185,7 @@ e = verifyZipCode("95060 1234");  // вернёт 95060 1234
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also" name="See_also"><span class="short_text" id="result_box" lang="ru"><span class="hps">Смотрите также</span></span></h2>
+<h2 id="See_also"><span class="short_text" id="result_box" lang="ru"><span class="hps">Смотрите также</span></span></h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"><code>try...catch</code></a></li>

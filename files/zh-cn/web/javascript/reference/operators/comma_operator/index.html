@@ -31,9 +31,9 @@ translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 
 <h2 id="示例">示例</h2>
 
-<p>假设 <code>a</code> 是一个二维数组，每一维度包含10个元素，则下面的代码使用逗号操作符一次递增/递减两个变量。需要注意的是，<code>var</code> 语句中的逗号<em><strong>不是</strong></em>逗号操作符，因为它不是存在于一个表达式中。尽管从实际效果来看，那个逗号同逗号运算符的表现很相似。但确切地说，它是 <code style="font-style: normal;">var</code> 语句中的一个特殊符号，用于把多个变量声明结合成一个。下面的代码打印一个二维数组中斜线方向的元素：</p>
+<p>假设 <code>a</code> 是一个二维数组，每一维度包含10个元素，则下面的代码使用逗号操作符一次递增/递减两个变量。需要注意的是，<code>var</code> 语句中的逗号<em><strong>不是</strong></em>逗号操作符，因为它不是存在于一个表达式中。尽管从实际效果来看，那个逗号同逗号运算符的表现很相似。但确切地说，它是 <code>var</code> 语句中的一个特殊符号，用于把多个变量声明结合成一个。下面的代码打印一个二维数组中斜线方向的元素：</p>
 
-<pre class="brush:js;highlight:[1]">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
+<pre class="brush:js">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
   document.writeln("a[" + i + "][" + j + "] = " + a[i][j]);</pre>
 
 <h3 id="处理后返回">处理后返回</h3>
@@ -77,7 +77,7 @@ translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 
 <p>{{Compat("javascript.operators.comma")}}</p>
 
-<h2 id="See_also" name="See_also">参见</h2>
+<h2 id="See_also">参见</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/JavaScript/Reference/Statements/for">for loop</a></li>

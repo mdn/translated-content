@@ -7,9 +7,9 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>Есть несколько способов раскрасить фигуры SVG (в т.ч. с указанием атрибутов объекта), используя инлайн-CSS, встроенную CSS-секцию, или внешний файл CSS. Большая часть SVG, которую вы встретите в интернете, использует встроенный CSS, однако преимущества и недостатки есть у каждого типа.</p>
 
-<h2 id="Fill_and_Stroke_Attributes" name="Fill_and_Stroke_Attributes">Атрибуты заливки и обводки (Fill and Stroke Attributes)</h2>
+<h2 id="Fill_and_Stroke_Attributes">Атрибуты заливки и обводки (Fill and Stroke Attributes)</h2>
 
-<h3 id="Painting" name="Painting">Раскраска (Painting)</h3>
+<h3 id="Painting">Раскраска (Painting)</h3>
 
 <p>Основная раскраска может быть сделана установкой двух свойств на ноде - <em>fill </em>и <em>stroke. Fill - </em>устанавливает цвет внутри объекта, а <em>stroke </em>задаёт цвет линии, которая рисуется вокруг объекта. Вы можете использовать CSS-наименования цветов, что и в HTML - названия цветов (например,<em> red)</em>, rgb-значения, hex-значения, rgba-значения и т.д.</p>
 
@@ -21,7 +21,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <div class="note style-wrap">Замечание: в Firefox 3+ допустимы rgba-значения и это даёт такой же эффект прозрачности, но для совместимости с другими просмотрщиками часто лучше определить прозрачность обводки/заливки отдельно. Если вы укажете и rgba-значение и значение <em>fill-opacity/stroke-opacity - </em>будут применены оба.</div>
 
-<h3 id="Stroke" name="Stroke">Обводка (Stroke)</h3>
+<h3 id="Stroke">Обводка (Stroke)</h3>
 
 <p>Кроме цветовых свойств обводки, есть несколько атрибутов, управляющих способом обводки.</p>
 
@@ -92,7 +92,7 @@ translation_of: Web/SVG/Tutorial/Fills_and_Strokes
 
 <p>Также есть дополнительные <strong>stroke </strong>и <strong>fill </strong>свойства: <code><a href="/en-US/docs/Web/SVG/Attribute/fill-rule">fill-rule</a>, которое определяет как будут заливаться сложные фигуры, которые имеют пересечения внутри себя;</code> <code><a href="/en-US/docs/Web/SVG/Attribute/stroke-miterlimit">stroke-miterlimit</a>, </code>which determines if a stroke should draw miters<code> и </code><a href="/en-US/docs/Web/SVG/Attribute/stroke-dashoffset">stroke-dashoffset</a>, который указывает где начинается dash-array в линии (позволяет задать смещение пунктирной обводки относительно первоначального положения)</p>
 
-<h2 id="Using_CSS" name="Using_CSS">Использование CSS (Using CSS)</h2>
+<h2 id="Using_CSS">Использование CSS (Using CSS)</h2>
 
 <p>В дополнение к установке атрибутов объектов, вы также можете использовать CSS для стилизации заливки и обводки. Не все атрибуты могут быть установлены через CSS. Но атрибуты взаимодействия с раскраской и заливкой обычно доступны, так что <code>fill, stroke, stroke-dasharray </code>и т.д. могут быть заданы этим способом, также как и градиенты, и паттерны, что показано ниже. Атрибуты вроде <code>width, height </code>или команд для путей SVG не могут быть установлены через CSS. Проще всего просто протестировать и узнать, что доступно, а что нет.</p>
 

@@ -34,7 +34,7 @@ Le sinus hyperbolique de la valeur passée en argument.
 
 ## Description
 
-`sinh()` est une méthode statique de `Math`, il faut utiliser la syntaxe `Math.sinh()`. Cette méthode ne doit pas être appelée depuis un autre objet qui aurait été créé (`Math `n'est pas un constructeur).
+`sinh()` est une méthode statique de `Math`, il faut utiliser la syntaxe `Math.sinh()`. Cette méthode ne doit pas être appelée depuis un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
 ## Exemples
 
@@ -45,7 +45,7 @@ Math.sinh(1) // 1.1752011936438014
 
 ## Prothèse d'émulation (_polyfill_)
 
-Si cette fonction n'est pas disponible, elle peut être émulée en utilisant la fonction {{jsxref("Math.exp()")}}` :`
+Si cette fonction n'est pas disponible, elle peut être émulée en utilisant la fonction {{jsxref("Math.exp()")}}&nbsp;:
 
 ```js
 Math.sinh = Math.sinh || function(x){
@@ -67,7 +67,7 @@ Math.sinh = Math.sinh || function(x){
 | Spécification                                                            | État                         | Commentaires        |
 | ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-math.sinh', 'Math.sinh')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

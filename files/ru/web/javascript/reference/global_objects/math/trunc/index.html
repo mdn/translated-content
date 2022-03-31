@@ -23,26 +23,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 </div>
 
 <p>
- </p><h2 id="Syntax" name="Syntax">Синтаксис</h2>
-<p></p>
+ </p><h2 id="Syntax">Синтаксис</h2>
+
 
 <pre class="syntaxbox"><code>Math.trunc(<var>x</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>x</code></dt>
  <dd>Число.</dd>
 </dl>
 
-<h3 id="Parameters" name="Parameters">Возвращаемое значение</h3>
+<h3 id="Parameters">Возвращаемое значение</h3>
 
 <dl>
  <dt><code>x</code></dt>
  <dd>Целая часть данного числа.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>В отличие от других трёх методов объекта <code>Math</code> — {{jsxref("Math.floor()")}}, {{jsxref("Math.ceil()")}} и {{jsxref("Math.round()")}} — метод <code>Math.trunc()</code> работает очень просто. Отбрасывается запятая и все цифры после неё, не обращая внимания на знак аргумента.</p>
 
@@ -50,9 +50,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
 
 <p>Поскольку <code>trunc()</code> является статическим методом объекта <code>Math</code>, вы всегда должны использовать его как <code>Math.trunc()</code>, а не пытаться вызывать метод на созданном экземпляре объекта <code>Math</code> ( <code>Math</code> не является конструктором).</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_Math.trunc" name="Example:_Using_Math.trunc">Использование <code>Math.trunc()</code></h3>
+<h3 id="Example:_Using_Math.trunc">Использование <code>Math.trunc()</code></h3>
 
 <pre class="brush: js">Math.trunc(13.37);    // 13
 Math.trunc(42.84);    // 42
@@ -64,7 +64,7 @@ Math.trunc('foo');    // NaN
 Math.trunc();         // NaN
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Полифил</h2>
+<h2 id="Polyfill">Полифил</h2>
 
 <pre class="brush: js">if (!Math.trunc) {
 	Math.trunc = function(v) {
@@ -100,28 +100,10 @@ Math.trunc();         // NaN
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарий</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-math.trunc', 'Math.trunc')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Первое определение</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Поддержка_браузерами">Поддержка браузерами</h2>
-<p>{{Compat("javascript.builtins.Math.trunc")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

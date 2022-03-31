@@ -16,16 +16,16 @@ translation_of: Web/HTML/Element/input/reset
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}</div>
 
-<p class="hidden">该交互式示例的源代码存储在GitHub存储库中。 如果您想为交互式示例项目做出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>，并发起拉取请求。</p>
+<p class="hidden">该交互式示例的源代码存储在 GitHub 存储库中。 如果您想为交互式示例项目做出贡献，请克隆 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a>，并发起拉取请求。</p>
 
 <div class="note">
-<p>您通常应该尽量避免在表单中包含重置按钮。 它们很少有实用性，事实上更有可能使用户误点而感到沮丧（通常是在尝试单击“<a href="/zh-CN/docs/Web/HTML/Element/Input/submit">提交</a>”按钮时）。</p>
+<p>您通常应该尽量避免在表单中包含重置按钮。 它们很少有实用性，事实上更有可能使用户误点而感到沮丧（通常是在尝试单击 “<a href="/zh-CN/docs/Web/HTML/Element/Input/submit">提交</a>” 按钮时）。</p>
 </div>
 
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("值")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td><code>{{domxref("DOMString")}}</code>用做按钮标签</td>
   </tr>
   <tr>
@@ -49,7 +49,7 @@ translation_of: Web/HTML/Element/input/reset
 
 <h2 id="值">值</h2>
 
-<p><code>&lt;input type="reset"&gt;</code> 元素的 <code>{{htmlattrxref("value", "input")}}</code> 属性包含一个用做按钮标签的 <code>{{domxref("DOMString")}}</code>，诸如 <code>reset</code>之类的按钮没有其他值.</p>
+<p><code>&lt;input type="reset"&gt;</code> 元素的 <code>{{htmlattrxref("value", "input")}}</code> 属性包含一个用做按钮标签的 <code>{{domxref("DOMString")}}</code>，诸如 <code>reset</code>之类的按钮没有其他值。</p>
 
 <div id="summary-example3">
 <pre class="brush: html">&lt;input type="reset" value="Reset the form"&gt;</pre>
@@ -57,7 +57,7 @@ translation_of: Web/HTML/Element/input/reset
 
 <p>{{EmbedLiveSample("summary-example3", 650, 30)}}</p>
 
-<p>如果您未指定 <code>value</code>，则会获得一个带有默认标签的按钮（通常为“重置”，但这将根据 {{Glossary("user agent")}} 而有所不同：</p>
+<p>如果您未指定 <code>value</code>，则会获得一个带有默认标签的按钮（通常为 “重置”，但这将根据 {{Glossary("user agent")}} 而有所不同：</p>
 
 <div id="summary-example1">
 <pre class="brush: html">&lt;input type="reset"&gt;</pre>
@@ -67,7 +67,7 @@ translation_of: Web/HTML/Element/input/reset
 
 <h2 id="使用重置按钮">使用重置按钮</h2>
 
-<p><code>&lt;input type =“ reset”&gt;</code> 按钮用于重置表单。 如果您要创建自定义按钮，则使用JavaScript自定义行为，您需要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/Input/button">&lt;input type="button"&gt;</a></code>，或者最好使用 <code>{{htmlelement("button")}}</code> 元素。</p>
+<p><code>&lt;input type =“ reset”&gt;</code> 按钮用于重置表单。 如果您要创建自定义按钮，则使用 JavaScript 自定义行为，您需要使用 <code><a href="/zh-CN/docs/Web/HTML/Element/Input/button">&lt;input type="button"&gt;</a></code>，或者最好使用 <code>{{htmlelement("button")}}</code> 元素。</p>
 
 <h3 id="一个简单的重置按钮">一个简单的重置按钮</h3>
 
@@ -84,7 +84,7 @@ translation_of: Web/HTML/Element/input/reset
 &lt;/form&gt;
 </pre>
 
-<p>如下所示:</p>
+<p>如下所示：</p>
 
 <p>{{EmbedLiveSample("A_simple_reset_button", 650, 100)}}</p>
 
@@ -94,7 +94,7 @@ translation_of: Web/HTML/Element/input/reset
 
 <p>添加键盘快捷键到提交按钮 — 就像您使用 <code>{{HTMLElement("input")}}</code> 一样做一些事情 — 请使用 <code>{{htmlattrxref("accesskey")}}</code> 全局属性。</p>
 
-<p>在这个例子中， <kbd>r</kbd> 被指定为访问键 （您需要按 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合； 关于这些命令请参见 <code>{{htmlattrxref("accesskey")}}</code> ）。</p>
+<p>在这个例子中， <kbd>r</kbd> 被指定为访问键（您需要按 <kbd>r</kbd> 键与浏览器或操作系统的特定键相组合； 关于这些命令请参见 <code>{{htmlattrxref("accesskey")}}</code> ）。</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;

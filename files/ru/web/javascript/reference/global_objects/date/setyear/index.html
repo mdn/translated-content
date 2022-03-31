@@ -12,28 +12,28 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
 <div>{{JSRef("Global_Objects", "Date")}} {{deprecated_header}}</div>
 
-<h2 id="Summary" name="Summary">Сводка</h2>
+<h2 id="Summary">Сводка</h2>
 
 <p>Метод <strong><code>setYear()</code></strong> устанавливает год указанной даты по местному времени. Поскольку метод <code>setYear()</code> не устанавливает полный год («проблема 2000 года»), он больше не используется и был заменён методом {{jsxref("Date.prototype.setFullYear", "setFullYear()")}}.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><code><var>dateObj</var>.setYear(<var>yearValue</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <dl>
  <dt><code>yearValue</code></dt>
  <dd>Целое число.</dd>
 </dl>
 
-<h2 id="Description" name="Description">Описание</h2>
+<h2 id="Description">Описание</h2>
 
 <p>Если параметр <code>yearValue</code> является числом в диапазоне от 0 до 99 (включительно), год объекта <code>dateObj</code> устанавливается в <code>1900 + yearValue</code>. В противном случае год объекта <code>dateObj</code> устанавливается в <code>yearValue</code>.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example:_Using_setYear" name="Example:_Using_setYear">Пример: использование метода <code>setYear()</code></h3>
+<h3 id="Example:_Using_setYear">Пример: использование метода <code>setYear()</code></h3>
 
 <p>Первые две строки устанавливают год в 1996. Третья строка устанавливает год в 2000.</p>
 
@@ -44,40 +44,17 @@ theBigDay.setYear(1996);
 theBigDay.setYear(2000);
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-B.2.5', 'Date.prototype.getYear')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Определён в (информативном) приложении по совместимости.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setyear', 'Date.prototype.getYear')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Определён в (нормативном) приложении по дополнительным возможностям веб-браузеров.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Date.setYear")}}</div>
+<div>{{Compat}}</div>
 
 <div id="compat-mobile"> </div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.getFullYear()")}}</li>

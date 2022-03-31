@@ -13,7 +13,7 @@ original_slug: Web/HTML/Elemento/content
 ---
 <p>{{Deprecated_header}}</p>
 
-<p>El elemento <a href="/en-US/docs/Web/HTML">HTML</a> <code>&lt;content&gt; es usado dentro de un </code> <a href="/en-US/docs/Web/Web_Components/Shadow_DOM">Shadow DOM</a> como un {{glossary("insertion point")}} . No está pensado para ser usado en HTML ordinario . Es usado con <a href="/en-US/docs/Web/Web_Components">Web Components</a>.</p>
+<p>El elemento <a href="/en-US/docs/Web/HTML">HTML</a> <code>&lt;content&gt; es usado dentro de un </code> <a href="/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> como un {{glossary("insertion point")}} . No está pensado para ser usado en HTML ordinario . Es usado con <a href="/en-US/docs/Web/Web_Components">Web Components</a>.</p>
 
 <div class="note">
 <p><strong>Nota: </strong>Aunque está presente en un draft inicial de las especificaciones e implementado en varios exploradores , este elemento ha sido removido en versiones posteriores a la especificación .</p>
@@ -22,8 +22,8 @@ original_slug: Web/HTML/Elemento/content
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/es/docs/Web/Guide/HTML/categorias_de_contenido" title="HTML/Content_categories">Categorías de contenido</a></th>
-   <td>Modelo de contenido transpatente</td>
+   <th scope="row"><a href="/es/docs/Web/Guide/HTML/Content_categories" title="HTML/Content_categories">Categorías de contenido</a></th>
+   <td>Modelo de contenido transparente</td>
   </tr>
   <tr>
    <th scope="row">Contenido permitido</th>
@@ -46,7 +46,7 @@ original_slug: Web/HTML/Elemento/content
 
 <h2 id="Attributes" name="Attributes">Atributos</h2>
 
-<p>Este elemento incluye los <a href="/es/docs/Web/HTML/Atributos_Globales">atributos globales </a>.</p>
+<p>Este elemento incluye los <a href="/es/docs/Web/HTML/Global_attributes">atributos globales </a>.</p>
 
 <dl>
  <dt>select</dt>
@@ -58,7 +58,7 @@ original_slug: Web/HTML/Elemento/content
 <p>Aquí hay un ejemplo simple del uso del elemento &lt;content&gt; . Es un archivo HTML con todo lo necesario en el .</p>
 
 <div class="note">
-<p><strong>Nota: </strong>Para que este código funcione , el explorador en el que se muestre debe de soportar Web Components . Ver <a href="/en-US/docs/Web/Web_Components#Enabling_Web_Components_in_Firefox">Enabling Web Components in Firefox</a> .</p>
+<p><strong>Nota: </strong>Para que este código funcione , el explorador en el que se muestre debe de soportar Web Components . Ver <a href="/en-US/docs/Web/Web_Components#enabling_web_components_in_firefox">Enabling Web Components in Firefox</a> .</p>
 </div>
 
 <pre class="brush: html">&lt;html&gt;
@@ -87,7 +87,7 @@ original_slug: Web/HTML/Elemento/content
 
 <p>Si muestras esto en un explorador web , debe de verse como lo siguiente .</p>
 
-<p><img alt="content example" src="https://mdn.mozillademos.org/files/10077/content-example.png" style="height: 383px; width: 716px;"></p>
+<p><img alt="content example" src="content-example.png"></p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -108,55 +108,7 @@ original_slug: Web/HTML/Elemento/content
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad con exploradores</h2>
 
-<p>{{CompatibilityTable}}</p>
-
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Caracterísitica</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari (WebKit)</th>
-  </tr>
-  <tr>
-   <td>Soporte básico</td>
-   <td>35</td>
-   <td><span style="font-size: 12px; line-height: 18px;">{{CompatGeckoDesktop("28")}}</span> [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>26</td>
-   <td><span style="font-size: 12px; line-height: 18px;">{{CompatNo}}</span></td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Catacterística</th>
-   <th>Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Phone</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Soporte básico </td>
-   <td>37</td>
-   <td>{{CompatGeckoMobile("28")}} [1]</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p>[1] Si el Shadow DOM no está habilidado en Firefox , los elementos de &lt;content&gt; se comportarán como  {{domxref("HTMLUnknownElement")}} . Shadow DOM fue implementado por primera vez en Firefox33 y está detras de una preferencia , <code>dom.webcomponents.enabled</code>, el cual está deshabilitado por default .</p>
+{{Compat("html.elements.content")}}
 
 <h2 id="See_also" name="See_also">Ver también</h2>
 

@@ -6,9 +6,9 @@ tags:
   - ECMAScript 2015
   - JavaScript
   - Promise
-  - Reference
+  - リファレンス
   - promise.all
-  - Polyfill
+  - ポリフィル
 browser-compat: javascript.builtins.Promise
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 ---
@@ -36,9 +36,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 ![](promises.png)
 
-> **Note:** Scheme に代表される一部の言語では、遅延評価や計算を延期する機構を持っており、これらも「プロミス」と呼ばれます。 JavaScript におけるプロミスは、すでに起きつつある処理を表し、この処理はコールバックを使うことで連鎖させることができます。式を遅延評価する方法を探しているのであれば、引数なしの<a href="/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions">アロー関数</a>を検討してください。 `f = () => expression` で遅延評価される式が作成でき、 `f()` を実行することで評価を実行することができます。
+> **Note:** Scheme に代表される一部の言語では、遅延評価や計算を延期する機構を持っており、これらも「プロミス」と呼ばれます。 JavaScript におけるプロミスは、すでに起きつつある処理を表し、この処理はコールバック関数を使うことで連鎖させることができます。式を遅延評価する方法を探しているのであれば、引数なしの関数を使用するを検討してください。 `f = () => expression` で遅延評価される式が作成でき、 `f()` でその式を直ちに評価することができます。
 
-> **Note:** プロミスは履行状態または拒否状態になった場合は、待機ではなく決定 (_settled_) と呼ばれます。また解決 (_resolved_) という用語も見かけるでしょう。これはプロミスが決定したか、他のプロミスの状態に一致させるために「ロックイン」したことを表します。 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) には、プロミスの用語についての詳細説明があります。
+> **Note:** プロミスは履行状態または拒否状態になった場合は、待機ではなく決定 (_settled_) と呼ばれます。また解決 (_resolved_) という用語も見かけるでしょう。これはプロミスが決定したか、他のプロミスの状態に一致させるために「ロックイン」したことを表します。 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) には、プロミスの用語についての詳細な説明があります。
 
 ### 複数のプロミスの連鎖
 
@@ -112,7 +112,7 @@ const promiseA = new Promise( (resolutionFunc,rejectionFunc) => {
     resolutionFunc(777);
 });
 // この時点で、 "promiseA" はすでに解決されています。
-promiseA.then( (val) =&gt; console.log("asynchronous logging has val:",val) );
+promiseA.then( (val) => console.log("asynchronous logging has val:",val) );
 console.log("immediate logging");
 
 // 以下の順序で出力が行われます。
@@ -130,15 +130,15 @@ console.log("immediate logging");
 
 ```html
 <!DOCTYPE html>
-<iframe></iframe> <!-- we have a realm here -->
-<script> // we have a realm here as well
+<iframe></iframe> <!-- ここが領域です -->
+<script> // ここも同様に領域です
   const bound = frames[0].postMessage.bind(
     frames[0], "some data", "*");
-    // bound is a built-in function -- there is no user
-    // code on the stack, so which realm do we use?
+    // bound は組み込み関数です -- スタック上にはユーザー
+    // コードがありません -- が、どの領域を使うのでしょうか？
   window.setTimeout(bound);
-  // this still works, because we use the youngest
-  // realm (the incumbent) on the stack
+  // これでも動作します。スタック上の最も若い（現行の）
+  // 領域を使用するからです。
 </script>
 ```
 
@@ -146,15 +146,15 @@ console.log("immediate logging");
 
 ```html
 <!DOCTYPE html>
-<iframe></iframe> <!-- we have a realm here -->
-<script> // we have a realm here as well
+<iframe></iframe> <!-- ここが領域です -->
+<script> // ここも同様に領域です
   const bound = frames[0].postMessage.bind(
     frames[0], "some data", "*");
-    // bound is a built in function -- there is no user
-    // code on the stack -- which realm do we use?
+    // bound は組み込み関数です -- スタック上にはユーザー
+    // コードがありません -- が、どの領域を使うのでしょうか？
   Promise.resolve(undefined).then(bound);
-  // this still works, because we use the youngest
-  // realm (the incumbent) on the stack
+  // これでも動作します。スタック上の最も若い（現行の）
+  // 領域を使用するからです。
 </script>
 ```
 
@@ -176,15 +176,15 @@ console.log("immediate logging");
 <script>
 window.addEventListener("message", (event) => {
   document.querySelector("#text").textContent = "hello";
-  // this code will only run in browsers that track the incumbent settings object
+  // このコードは現行の設定オブジェクトを追跡するブラウザーでしか動作しません
   console.log(event);
 }, false);
 </script>
 ```
 
-上記の例では、現行の設定オブジェクトが追跡されたときのみ `<iframe>` の内部のテキストが更新されます。これは、現職のものを追跡しないと、メッセージを送る環境を間違えてしまう可能性があるからです。
+上記の例では、現行の設定オブジェクトが追跡されたときのみ `<iframe>` の内部のテキストが更新されます。これは、現行のものを追跡しないと、メッセージを送る環境を間違えてしまう可能性があるからです。
 
-> **Note:** 現在のところ、現役の領域の追跡は Firefox では完全に実装されており、 Chrome と Safari では部分的に実装されています。
+> **Note:** 現在のところ、現行の領域の追跡は Firefox では完全に実装されており、 Chrome と Safari では部分的に実装されています。
 
 ## コンストラクター
 
@@ -227,7 +227,7 @@ window.addEventListener("message", (event) => {
 
 ## インスタンスメソッド
 
-マイクロタスクのキューやサービスを使用する方法については、[マイクロタスクのガイド](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide "Microtask_guide")を参照してください。
+マイクロタスクのキューやサービスを使用する方法については、[マイクロタスクのガイド](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)を参照してください。
 
 - {{jsxref("Promise.prototype.catch()")}}
   - : プロミスに拒否ハンドラーコールバックを追加し、コールバックが呼び出されたときの返値で解決する、または、プロミスが履行された場合は、元の履行結果で解決する
@@ -343,9 +343,9 @@ function promiseGetWord(parityInfo) {
   .finally((info) => console.log("All done"));
 ```
 
-<h3 id="Advanced_Example">高度な例</h3>
+### 高度な例
 
-以下の例は `Promise` の仕組みを示したものです。 `testPromise()` メソッドは {{HTMLElement("button")}} をクリックする度に呼び出されます。`testPromise()` メソッドは、 {{domxref("WindowOrWorkerGlobalScope.setTimeout")}} を用いて、 1 秒から 3 秒のランダムな時間の後、メソッドがこれまでに呼ばれた回数で履行されるプロミスを作成します。 `Promise()` コンストラクターを使用してプロミスを生成します。
+以下の例は `Promise` の仕組みを示したものです。 `testPromise()` メソッドは {{HTMLElement("button")}} をクリックする度に呼び出されます。`testPromise()` メソッドは、 {{domxref("setTimeout()")}} を用いて、 1 秒から 3 秒のランダムな時間の後、メソッドがこれまでに呼ばれた回数で履行されるプロミスを作成します。 `Promise()` コンストラクターを使用してプロミスを生成します。
 
 プロミスが履行されたことは、 {{JSxRef("Promise.prototype.then()","p1.then()")}} で設定されたコールバックによって記録されます。この記録から、メソッドの同期処理部分が、プロミスによる非同期処理からどのように分離されているかがわかります。
 
@@ -406,9 +406,9 @@ if ("Promise" in window) {
 
 {{EmbedLiveSample("Advanced_Example", "500", "200")}}
 
-<h3 id="Loading_an_image_with_XHR" name="Loading_an_image_with_XHR">XHR による画像の読み込み</h3>
+### XHR による画像の読み込み
 
-`Promise` と {{domxref("XMLHttpRequest")}} で画像を読み込む別の例は、 MDN GitHub <a href="https://github.com/mdn/js-examples/tree/master/promises-test">js-examples</a> リポジトリにあり、<a href="https://mdn.github.io/js-examples/promises-test/">動作を確認する</a>ことができます。それぞれの行のコメントで Promise と XHR の構造がよくわかるはずです。
+`Promise` と {{domxref("XMLHttpRequest")}} で画像を読み込む別の例は、 MDN GitHub の [js-examples](https://github.com/mdn/js-examples/tree/master/promises-test) リポジトリーにあり、[動作を確認する](https://mdn.github.io/js-examples/promises-test/)ことができます。それぞれの行のコメントで Promise と XHR の構造がよくわかるはずです。
 
 ## 仕様書
 
@@ -423,13 +423,5 @@ if ("Promise" in window) {
 - `Promise` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise) で利用できます
 - [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ specification](https://promisesaplus.com/)
-- [Venkatraman.R - JS Promise (Part 1, Basics)](https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53)
-- [Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)](https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski)
-- [Venkatraman.R - Tools for Promises Unit Testing](https://tech.io/playgrounds/11107/tools-for-promises-unittesting/introduction)
-- [Jake Archibald: JavaScript Promises: There and Back Again](https://www.html5rocks.com/en/tutorials/es6/promises/)
-- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://de.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
-- [Matt Greer: JavaScript Promises ... In Wicked Detail](https://www.mattgreer.org/articles/promises-in-wicked-detail/)
-- [Forbes Lindesay: promisejs.org](https://www.promisejs.org/)
-- [Speed-polyfill to polyfill both promise availability and promise performance.](https://github.com/anonyco/SPromiseMeSpeedJS/blob/master/README.md)
-- [Promise polyfill](https://github.com/jakearchibald/es6-promise/)
-- [Udacity: JavaScript Promises](https://www.udacity.com/course/javascript-promises--ud898)
+- [JavaScript Promises: an introduction](https://web.dev/promises/)
+- [Domenic Denicola: Callbacks, Promises, and Coroutines – Asynchronous Programming Patterns in JavaScript](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)

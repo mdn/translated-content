@@ -5,26 +5,26 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 ---
 <div>{{JSRef("Global_Objects", "Math")}}</div>
 
-<h2 id="Summary" name="Summary">概述</h2>
+<h2 id="Summary">概述</h2>
 
 <p><strong><code>Math.fround()</code></strong> 可以将任意的数字转换为离它最近的<a class="external" href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format" title="link to the wikipedia page on single-precision floating-point format">单精度浮点数</a>形式的数字。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="brush: js"><code>Math.fround(<var>doubleFloat</var>)</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>doubleFloat</code></dt>
  <dd>一个 {{jsxref("Number")}}。若参数为非数字类型，则会被转投成数字。无法转换时，设置成{{jsxref("NaN")}}。</dd>
 </dl>
 
-<h3 id="Parameters" name="Parameters">返回值</h3>
+<h3 id="Parameters">返回值</h3>
 
 <p>指定数字最接近的<a href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format">32位单精度</a>浮点数表示。</p>
 
-<h2 id="Examples" name="Examples">描述</h2>
+<h2 id="Examples">描述</h2>
 
 <p>JavaScript 内部使用64位的双浮点数字，支持很高的精度。但是，有时你需要用32位浮点数字，比如你从一个{{jsxref("Float32Array")}} 读取值时。这时会产生混乱：检查一个64位浮点数和一个32位浮点数是否相等会失败，即使二个数字几乎一模一样。</p>
 
@@ -32,7 +32,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 
 <p>因为<code>fround()</code> 是<code>Math</code> 的静态方法，你必须通过 <code>Math.fround()</code> 来使用，而不是调用你创建的<code>Math</code> 对象的一个实例方法（<code>Math</code>不是一个构造函数）。</p>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="使用_Math.fround()">使用 Math.fround()</h3>
 
@@ -47,7 +47,7 @@ Math.fround(1.5) === 1.5; // true</pre>
 Math.fround(1.337) === 1.337; // false
 </pre>
 
-<p>2<sup>150</sup> 超出32位浮点，所以返回<code>Infinity</code>：</p>
+<p>2^150 超出32位浮点，所以返回<code>Infinity</code>：</p>
 
 <pre class="brush: js">2 ** 150; // 1.42724769270596e+45
 Math.fround(2 ** 150); // Infinity
@@ -70,7 +70,7 @@ function equal(v1, v2) {
 equal(0.1 + 0.2, 0.3);   //true
 </pre>
 
-<h2 id="Polyfill" name="Polyfill">Polyfill</h2>
+<h2 id="Polyfill">Polyfill</h2>
 
 <p>下面的函数可以模拟这个 API，前提是浏览器必须已经支持 {{jsxref("Float32Array")}}：</p>
 
@@ -80,7 +80,7 @@ equal(0.1 + 0.2, 0.3);   //true
   };
 })(new Float32Array(1));</pre>
 
-<h2 id="Specifications" name="Specifications">规范</h2>
+<h2 id="Specifications">规范</h2>
 
 <table class="standard-table">
  <tbody>
@@ -95,59 +95,11 @@ equal(0.1 + 0.2, 0.3);   //true
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">浏览器兼容性</h2>
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{CompatibilityTable}}</div>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatChrome("38")}}</td>
-   <td>{{CompatGeckoDesktop("26")}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatOpera("25")}}</td>
-   <td>{{CompatSafari("7.1")}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatNo}}</td>
-   <td>{{CompatNo}}</td>
-   <td>iOS 8</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("Math.round()")}}</li>

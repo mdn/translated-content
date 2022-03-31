@@ -7,27 +7,24 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
 <p>{{JSRef}}</p>
 
-<div class="warning">警告： 尽管 <code>String.prototype.substr(…)</code> 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非JavaScript核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring()</a></code> 替代它.</div>
+<div class="warning"><p><strong>警告：</strong>尽管 <code>String.prototype.substr(…)</code> 没有严格被废弃 (as in "removed from the Web standards"), 但它被认作是遗留的函数并且可以的话应该避免使用。它并非JavaScript核心语言的一部分，未来将可能会被移除掉。如果可以的话，使用 <code><a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring">substring()</a></code> 替代它.</p></div>
 
 <p><code><strong>substr()</strong></code> 方法返回一个字符串中从指定位置开始到指定字符数的字符。</p>
 
-<h2 id="Syntax" name="Syntax">语法</h2>
+<h2 id="Syntax">语法</h2>
 
 <pre class="syntaxbox"><code><em>str</em>.substr(<em>start</em>[, <em>length</em>])</code></pre>
 
-<h3 id="Parameters" name="Parameters">参数</h3>
+<h3 id="Parameters">参数</h3>
 
 <dl>
  <dt><code>start</code></dt>
- <dd>开始提取字符的位置。如果为负值，则被看作 <code style="font-style: normal; line-height: 1.5;">strLength + </code><code style="font-style: normal; line-height: 1.5;">start，其中</code><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">strLength</code><span style="line-height: 1.5;"> 为字符串的长度（例如，如果 <code>start</code> 为 <code>-3，则被看作</code> <code>strLength + (-3)）。</code></span></dd>
-</dl>
-
-<dl>
+ <dd>开始提取字符的位置。如果为负值，则被看作 <code>strLength + </code><code>start，其中</code> <code>strLength</code> 为字符串的长度（例如，如果 <code>start</code> 为 <code>-3，则被看作</code> <code>strLength + (-3)）。</code></dd>
  <dt><code>length</code></dt>
  <dd>可选。提取的字符数。</dd>
 </dl>
 
-<h2 id="Description" name="Description">描述</h2>
+<h2 id="Description">描述</h2>
 
 <p><code>start</code> 是一个字符的索引。首字符的索引为 0，最后一个字符的索引为 字符串的长度减去1。<code>substr</code> 从 <code>start</code> 位置开始提取字符，提取 <code>length</code> 个字符（或直到字符串的末尾）。</p>
 
@@ -39,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 
 <h2 id="示例">示例</h2>
 
-<h3 id="Example:_Using_substr" name="Example:_Using_substr">例子：使用 <code>substr</code></h3>
+<h3 id="Example:_Using_substr">例子：使用 <code>substr</code></h3>
 
 <pre class="brush: js">var str = "abcdefghij";
 
@@ -51,7 +48,7 @@ console.log("(-20, 2): " + str.substr(-20,2)); // (-20, 2): ab
 console.log("(20, 2): "  + str.substr(20,2));  // (20, 2):
 </pre>
 
-<h2 id="Description" name="Description">兼容旧环境（Polyfill）</h2>
+<h2 id="Description">兼容旧环境（Polyfill）</h2>
 
 <p>Microsoft's JScript 不支持负的 start 索引。如果你想充分利用该方法的功能，则需要使用下面的兼容性代码修复此 bug：</p>
 
@@ -106,59 +103,9 @@ if ('ab'.substr(-1) != 'b')
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<p>{{ CompatibilityTable() }}</p>
+{{Compat}}
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-   <td>{{ CompatVersionUnknown() }}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<p><strong>Note</strong>: Up to version 3.6, Firefox had a bug which caused <code>substr</code> to return empty result when an explicit <code>undefined</code> value was passed in as the <code>length</code>.</p>
-
-<h2 id="See_also" name="See_also">相关链接</h2>
+<h2 id="See_also">相关链接</h2>
 
 <ul>
  <li>{{jsxref("String.prototype.slice()")}}</li>

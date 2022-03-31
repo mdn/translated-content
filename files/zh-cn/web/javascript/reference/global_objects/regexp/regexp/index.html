@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 <p>可以使用字面量、构造函数和工厂方法来创建正则表达式</p>
 
-<pre class="syntaxbox notranslate">/<var>pattern</var>/<var>flags</var>
+<pre class="syntaxbox">/<var>pattern</var>/<var>flags</var>
 new RegExp(<var>pattern</var>[, <var>flags</var>])
 RegExp(<var>pattern</var>[, <var>flags</var>])
 </pre>
@@ -26,8 +26,7 @@ RegExp(<var>pattern</var>[, <var>flags</var>])
 
 <dl>
  <dt><code><var>pattern</var></code></dt>
- <dd>正则表达式的文本。</dd>
- <dd>从ES5开始，这也可以是另一个<code>RegExp</code>对象或文字(仅用于两个RegExp构造函数符号)。模式可以包含特殊字符<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">special characters</a>来匹配比字面值字符串更广泛的值范围 。 </dd>
+ <dd>正则表达式的文本。从ES5开始，这也可以是另一个<code>RegExp</code>对象或文字(仅用于两个RegExp构造函数符号)。模式可以包含特殊字符<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#Using_special_characters">special characters</a>来匹配比字面值字符串更广泛的值范围。</dd>
  <dt><code><var>flags</var></code></dt>
  <dd>
  <p>如果指定, <code><var>flags</var></code> 是包含要添加的标志的字符串。</p>
@@ -68,7 +67,7 @@ RegExp(<var>pattern</var>[, <var>flags</var>])
 
 <p>以下三个表达式创建相同的正则表达式:</p>
 
-<pre class="brush: js notranslate">/ab+c/i
+<pre class="brush: js">/ab+c/i
 new RegExp(/ab+c/, 'i') // 字面量
 new RegExp('ab+c', 'i') // 构造函数
 </pre>
@@ -103,7 +102,8 @@ new RegExp('ab+c', 'i') // 构造函数
 <h2 id="参见">参见</h2>
 
 <ul>
-<a href="/zh-CN/docs/Web/JavaScript/Guide" title="JavaScript/Guide">JavaScript指南</a>中的<a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions" title="JavaScript/Guide/Regular_Expressions">正则表达式</a>一节
+<li><a href="/zh-CN/docs/Web/JavaScript/Guide">JavaScript指南中的</a></li>
+<li><a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions">正则表达式一节</a></li>
  <li>{{jsxref("String.prototype.match()")}}</li>
  <li>{{jsxref("String.prototype.replace()")}}</li>
 </ul>

@@ -5,7 +5,7 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<div></div>
+
 
 <div><span class="seoSummary">Свойство только для чтения <code><strong>canTrickleIceCandidates</strong></code> , объекта <strong>{{domxref("RTCPeerConnection")}}</strong>, возвращает значение типа {{jsxref("Boolean")}} , которое указывает на то, может ли удалённый пир принимать кандидаты, согласно спецификации  <a href="https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice">trickled ICE candidates</a>.</span></div>
 
@@ -17,7 +17,7 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"> var <em>canTrickle</em> = <em>RTCPeerConnection</em>.canTrickleIceCandidates;</pre>
+<pre class="syntaxbox"> var <em>canTrickle</em> = <em>RTCPeerConnection</em>.canTrickleIceCandidates;</pre>
 
 <h3 id="Значение">Значение</h3>
 
@@ -29,7 +29,7 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 <h2 id="Пример">Пример</h2>
 
-<pre class="brush: js notranslate">var pc = new RTCPeerConnection();
+<pre class="brush: js">var pc = new RTCPeerConnection();
 // Следующий код может быть использован для обработки предложения от пира, когда
 // он не знает поддерживает ли он просачивание
 pc.setRemoteDescription(remoteOffer)
@@ -59,28 +59,13 @@ pc.addEventListener('icecandidate', e =&gt; {
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('WebRTC 1.0', '#dom-rtcpeerconnection-cantrickleicecandidates', 'RTCPeerConnection.canTrickleIceCandidates') }}</td>
-   <td>{{ Spec2('WebRTC 1.0') }}</td>
-   <td>Initial specification.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("api.RTCPeerConnection.canTrickleIceCandidates")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

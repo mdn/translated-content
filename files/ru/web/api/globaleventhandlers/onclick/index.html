@@ -7,13 +7,13 @@ translation_of: Web/API/GlobalEventHandlers/onclick
 <div>{{ ApiRef("HTML DOM") }}</div>
 </div>
 
-<div></div>
+
 
 <p>Свойство <strong>onclick</strong> возвращает обработчик события <code>click</code> на текущем элементе.</p>
 
 <div class="note"><strong>Note:</strong> При использовании обработчика события <code>click</code> для вызова любого действия, убедитесь, что событие <code>keydown</code> имеет такое же действие. Это нужно для того, чтобы пользователи, которые не используют мышь или тачскрин могли использовать то же действие.</div>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
 <pre class="syntaxbox"><var>element</var>.onclick = <var>functionRef</var>;
 </pre>
@@ -22,7 +22,7 @@ translation_of: Web/API/GlobalEventHandlers/onclick
 
 <p>Единственный аргумент, переданный в определённую функцию обработчик события это {{domxref("MouseEvent")}} объект. <code>this</code> внутри обработчика будет указывать на элемент, на котором было вызвано событие.</p>
 
-<h2 id="Example" name="Example">Пример</h2>
+<h2 id="Example">Пример</h2>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -59,13 +59,13 @@ translation_of: Web/API/GlobalEventHandlers/onclick
 <pre class="brush:js">p.onclick = function(event) { alert("moot!"); };
 </pre>
 
-<h2 id="Notes" name="Notes">Примечания</h2>
+<h2 id="Notes">Примечания</h2>
 
 <p>Событие <code>click</code> возникает, когда пользователь кликает на элемент. Событие <code>click</code> возникнет после событий <code>mousedown</code> и <code>mouseup</code>.</p>
 
 <p>С данным свойством только один обработчик события <code>click</code> может быть назначен объекту. Возможно, вместо данного метода, вам стоит обратить внимание на метод {{domxref("EventTarget.addEventListener()")}}, т.к. он более гибкий и является частью спецификации DOM Events.</p>
 
-<h2 id="Specification" name="Specification">Спецификация</h2>
+<h2 id="Specification">Спецификация</h2>
 
 <table class="spectable standard-table">
  <tbody>
@@ -84,7 +84,7 @@ translation_of: Web/API/GlobalEventHandlers/onclick
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div>{{Compat("api.GlobalEventHandlers.onclick")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 

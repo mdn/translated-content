@@ -26,7 +26,7 @@ La méthode **`indexOf()`** renvoie l'indice de la première occurence de la val
 ### Paramètres
 
 - `valeurRecherchée`
-  - : Une chaîne représentant la valeur qu'on cherche dans la chaîne courante. Si aucune valeur n'est fournie explicitement,[ `valeurRecherchée` sera convertie en `"undefined"` et c'est cette chaîne qui sera recherchée](https://tc39.github.io/ecma262/#sec-tostring).
+  - : Une chaîne représentant la valeur qu'on cherche dans la chaîne courante. Si aucune valeur n'est fournie explicitement, [`valeurRecherchée` sera convertie en `"undefined"` et c'est cette chaîne qui sera recherchée](https://tc39.github.io/ecma262/#sec-tostring).
 - `indexDébut`
   - : Paramètre optionnel. L'indice à partir duquel commencer la recherche, effectuée du début vers la fin de la liste. Cela peut être n'importe quel entier. La valeur par défaut est 0. Si `indexDébut < 0` la chaîne sera parcourue en entier (ce qui équivaut à utiliser 0). Si `indexDébut >= str.length`, la méthode renverra -1 sauf si `valeurRecherchée` est la chaîne vide, auquel cas, la méthode renverra `str.length`.
 
@@ -39,12 +39,12 @@ L'indice de la première occurrence de la valeur indiquée, `-1` si elle n'est p
 Les caractères dans une chaîne de caractères sont indexés de la gauche à la droite. L'indice du premier caractère est 0, celui du dernier caractère (d'une chaîne `str`) est `str.length - 1.`
 
 ```js
-"Blue Whale".indexOf("Blue");     // retourne  0
+"Blue Whale".indexOf("Blue");     // retourne 0
 "Blue Whale".indexOf("Blute");    // retourne -1
-"Blue Whale".indexOf("Whale", 0); // retourne  5
-"Blue Whale".indexOf("Whale", 5); // retourne  5
-"Blue Whale".indexOf("");         // retourne  0
-"Blue Whale".indexOf("", 9);      // retourne  9
+"Blue Whale".indexOf("Whale", 0); // retourne 5
+"Blue Whale".indexOf("Whale", 5); // retourne 5
+"Blue Whale".indexOf("");         // retourne 0
+"Blue Whale".indexOf("", 9);      // retourne 9
 "Blue Whale".indexOf("", 10);     // retourne 10
 "Blue Whale".indexOf("", 11);     // retourne 10
 ```
@@ -119,9 +119,9 @@ console.log(count); // Affiche 2
 | Spécification                                                                                                    | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}                         | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.5.4.7', 'String.prototype.indexOf')}}                         | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-string.prototype.indexof', 'String.prototype.indexOf')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

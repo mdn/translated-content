@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
 <div>{{JSRef("Global_Objects", "Date")}}</div>
 
-<div></div>
+
 
 <p>Метод <strong><code>getTime()</code></strong> возвращает числовое значение, соответствующее указанной дате по всемирному координированному времени.</p>
 
@@ -21,36 +21,36 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 
 <p class="hidden">Исходный код этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, клонируйте <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> и отправьте нам запрос на перенос.</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Syntax">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate"><code><var>dateObj</var>.getTime()</code></pre>
+<pre class="syntaxbox"><code><var>dateObj</var>.getTime()</code></pre>
 
-<h3 id="Parameters" name="Parameters">Параметры</h3>
+<h3 id="Parameters">Параметры</h3>
 
 <p>Нет.</p>
 
-<h3 id="Returns" name="Returns">Возвращаемое значение</h3>
+<h3 id="Returns">Возвращаемое значение</h3>
 
 <p>Значение, возвращённое методом <code>getTime()</code>, является количеством миллисекунд, прошедших с 1 января 1970 года 00:00:00 по UTC.</p>
 
-<h2 id="Examples" name="Examples">Примеры</h2>
+<h2 id="Examples">Примеры</h2>
 
-<h3 id="Example_Using_getTime_for_copying_dates" name="Example:_Using_getTime_for_copying_dates">Пример: использование метода <code>getTime()</code> для копирования дат</h3>
+<h3 id="Example_Using_getTime_for_copying_dates">Пример: использование метода <code>getTime()</code> для копирования дат</h3>
 
 <p>Конструирует новый объект даты с идентичным значением времени.</p>
 
-<pre class="brush: js notranslate">let birthday = new Date(2020, 12, 20);
+<pre class="brush: js">let birthday = new Date(2020, 12, 20);
 let copy = new Date();
 copy.setTime(birthday.getTime());
 
 console.log(copy.setTime(birthday.getTime())); // 1611090000000
 </pre>
 
-<h3 id="Example_Measuring_execution_time" name="Example:_Measuring_execution_time">Пример: замер времени выполнения</h3>
+<h3 id="Example_Measuring_execution_time">Пример: замер времени выполнения</h3>
 
 <p>Вычитанием двух последовательных вызовов метода <code>getTime()</code> на заново сконструированных объектах {{jsxref("Global_Objects/Date", "Date")}} можно замерить промежуток времени, произошедший между двумя этими вызовами. Это можно использовать для вычисления времени выполнения неких операций.</p>
 
-<pre class="brush: js notranslate">let end, start;
+<pre class="brush: js">let end, start;
 
 start = new Date();
 for (let i = 0; i &lt; 1000; i++) {
@@ -61,38 +61,15 @@ end = new Date();
 console.log('Операция заняла ' + (end.getTime() - start.getTime()) + ' мсек');
 </pre>
 
-<h2 id="Specifications" name="Specifications">Спецификации</h2>
+<h2 id="Specifications">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Спецификация</th>
-   <th scope="col">Статус</th>
-   <th scope="col">Комментарии</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1-е издание.</td>
-   <td>Стандарт</td>
-   <td>Изначальное определение. Реализована в JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.9', 'Date.prototype.getTime')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.gettime', 'Date.prototype.getTime')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Совместимость с браузерами</h2>
+<h2 id="Browser_compatibility">Совместимость с браузерами</h2>
 
-<div>{{Compat("javascript.builtins.Date.getTime")}}</div>
+<div>{{Compat}}</div>
 
-<h2 id="See_also" name="See_also">Смотрите также</h2>
+<h2 id="See_also">Смотрите также</h2>
 
 <ul>
  <li>{{jsxref("Date.prototype.setTime()")}}</li>

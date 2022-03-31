@@ -60,7 +60,7 @@ Il existe trois types de déclarations de variable en JavaScript.
 Les variables sont utilisées comme des noms symboliques désignant les valeurs utilisées dans l'application. Les noms des variables sont appelés _identifiants_. Ces identifiants doivent respecter certaines règles.
 
 Un identifiant JavaScript doit commencer par une lettre, un tiret bas (\_) ou un symbole dollar ($). Les caractères qui suivent peuvent être des chiffres (0 à 9).
-À noter : puisque Javascript est sensible aux majuscules et minuscules: les lettres peuvent comprendre les caractères de « A » à « Z » (en majuscule) mais aussi les caractères  de « a » à « z » (en minuscule).
+À noter : puisque Javascript est sensible aux majuscules et minuscules: les lettres peuvent comprendre les caractères de « A » à « Z » (en majuscule) mais aussi les caractères de « a » à « z » (en minuscule).
 
 On peut aussi utiliser la plupart lettres Unicode ou ISO 8859-1 (comme å et ü, pour plus de détails, voir [ce billet de blog, en anglais](https://mathiasbynens.be/notes/javascript-identifiers-es6)) au sein des identifiants. Il est également possible d'utiliser les \uXXXX [séquences d'échappement Unicode](<#littéraux chaînes>) comme caractères dans les identifiants.
 
@@ -295,7 +295,7 @@ Bien que cette description couvre peu de types de données, ceux-ci vous permett
 
 ### Conversion de types de données
 
-JavaScript est un langage à typage dynamique. Cela signifie qu'il n'est pas nécessaire de spécifier le type de données d'une variable lors de sa déclaration. Les types de données sont convertis automatiquement durant l'exécution du script. Ainsi, il est possible de définir une variable de cette façon :
+JavaScript est un langage à typage dynamique. Cela signifie qu'il n'est pas nécessaire de spécifier le type de données d'une variable lors de sa déclaration. Les types de données sont convertis automatiquement durant l'exécution du script. Ainsi, il est possible de définir une variable de cette façon :
 
 ```js
 var réponse = 42;
@@ -409,7 +409,7 @@ Comprendre le fonctionnement des virgules supplémentaires est important. Cepend
 
 Le type booléen possède deux valeurs littérales : `true` et `false`.
 
-Il ne faut pas confondre les valeurs `true` et `false` du type primitif booléen et les valeurs true et false de l'objet `Boolean`. L'objet `Boolean` permet de créer un objet autour du type de donnée booléen. Voir la page sur l'objet[ `Boolean`](/fr/docs/JavaScript/Reference/Objets_globaux/Boolean) pour plus d'informations.
+Il ne faut pas confondre les valeurs `true` et `false` du type primitif booléen et les valeurs true et false de l'objet `Boolean`. L'objet `Boolean` permet de créer un objet autour du type de donnée booléen. Voir la page sur l'objet [`Boolean`](/fr/docs/JavaScript/Reference/Objets_globaux/Boolean) pour plus d'informations.
 
 ### Les littéraux numériques
 
@@ -607,14 +607,14 @@ Voici un tableau listant les caractères spéciaux qu'il est possible d'utiliser
 |             |                                                                                                                                                                                                      |
 | `\xXX`      | Le caractère dont l'encodage Latin-1 est spécifié par deux chiffres hexadécimaux entre 00 et FF. Ainsi, \xA9 correspond à la séquence hexadécimale pour le caractère copyright.                      |
 |             |                                                                                                                                                                                                      |
-| `\uXXXX`    | Le caractère Unicode spécifié par quatre chiffres hexadécimaux _XXXX_. Ainsi, \u00A9 correspondra à la séquence Unicode du symbole copyright. Voir {{anch("Unicode escape sequences")}}. |
+| `\uXXXX`    | Le caractère Unicode spécifié par quatre chiffres hexadécimaux _XXXX_. Ainsi, \u00A9 correspondra à la séquence Unicode du symbole copyright. Voir [Les caractères d'échappement Unicode](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#littéraux_de_chaînes_de_caractères). |
 | `\u{XXXXX}` | Échappement de codes Unicode. Par exemple, \u{2F804} est équivalent à la combinaison d'échappements « simples » \uD87E\uDC04.                                                                        |
 
 #### Les caractères d'échappement
 
 Pour les caractères qui ne font pas partie du tableau précédent, les barres obliques inversées (_backslash_) les précédant sont ignorées. Cependant, cet usage est obsolète et devrait être évité.
 
-En précédant d'une barre oblique inversée les guillemets droits doubles, on _échappe_ ces caractères. Voici un exemple :
+En précédant d'une barre oblique inversée les guillemets droits doubles, on _échappe_ ces caractères. Voici un exemple :
 
 ```js
 var citation = "Il lit \"Bug Jargal\" de V. Hugo.";

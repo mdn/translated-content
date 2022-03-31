@@ -12,7 +12,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox notranslate">var <em>myCacheStorage</em> = self.caches; // or just caches
+<pre class="syntaxbox">var <em>myCacheStorage</em> = self.caches; // or just caches
 </pre>
 
 <h3 id="Значение">Значение</h3>
@@ -23,7 +23,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 
 <p>Данный пример показывает как надо использовать кеш в контексте <a href="/en-US/docs/Web/API/Service_Worker_API">service worker</a> для хранения в автономном режиме</p>
 
-<pre class="brush: js notranslate">this.addEventListener('install', function(event) {
+<pre class="brush: js">this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -44,31 +44,13 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 
 <h2 id="Спецификации">Спецификации</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#self-caches', 'caches')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Объявлена частичная поддержка в новейшей спецификации <code>WindowOrWorkerGlobalScope</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>Начальное определение.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
 
 
-<p>{{Compat("api.WindowOrWorkerGlobalScope.caches")}}</p>
+<p>{{Compat}}</p>
 
 <h2 id="Также_смотрите">Также смотрите</h2>
 
