@@ -1580,7 +1580,7 @@
 /pl/docs/Web/CSS/Uzycie_zmiennych_CSS	/pl/docs/Web/CSS/Using_CSS_custom_properties
 /pl/docs/Web/CSS/Wartość_początkowa	/pl/docs/Web/CSS/initial_value
 /pl/docs/Web/CSS/cursor/Użycie_wartości_URL_dla_własności_cursor	/pl/docs/conflicting/Web/CSS/cursor
-/pl/docs/Web/CSS/transform-function/matrix	/pl/docs/Web/CSS/transform-function/matrix()
+/pl/docs/Web/CSS/transform-function/matrix()	/pl/docs/Web/CSS/transform-function/matrix
 /pl/docs/Web/Dostępność	/pl/docs/Web/Accessibility
 /pl/docs/Web/Dostępność/An_overview_of_accessible_web_applications_and_widgets	/pl/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 /pl/docs/Web/Events/drag	/pl/docs/Web/API/Document/drag_event

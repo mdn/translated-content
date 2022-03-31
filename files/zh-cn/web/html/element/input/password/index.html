@@ -9,11 +9,7 @@ translation_of: Web/HTML/Element/input/password
 
 <div>{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}</div>
 
-
-
 <p>入门过程的具体细节可能因浏览器而异; 例如，移动设备经常在隐藏它之前显示键入的字符一段时间，以允许用户确定他们按下了他们意图按下的键; 考虑到按键的小尺寸以及可以轻松按下错误的按键（特别是在虚拟键盘上），这是有帮助的。</p>
-
-
 
 <div class="note">
 <p>任何涉及密码等敏感信息的表格（例如登录表格）都应通过 HTTPS 提供; 许多浏览器现在都实现了警告不安全登录表单的机制; 请参阅<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Insecure_passwords">Insecure passwords</a>。</p>
@@ -22,7 +18,7 @@ translation_of: Web/HTML/Element/input/password
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("Value")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>A {{domxref("DOMString")}} representing a password, or empty</td>
   </tr>
   <tr>
@@ -48,7 +44,7 @@ translation_of: Web/HTML/Element/input/password
 
 <p>The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} whose value is the current contents of the text editing control being used to enter the password. 如果用户还没有输入任何内容，则此值为空字符串（“”）。 If the {{htmlattrxref("required")}} property is specified, then the password edit box must contain a value other than an empty string to be valid.</p>
 
-<p>If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a <code>"password"</code> control is only considered valid if the value passes validation; see {{anch("Validation")}} for more information.</p>
+<p>If the {{htmlattrxref("pattern", "input")}} attribute is specified, the content of a <code>"password"</code> control is only considered valid if the value passes validation; see <a href="#验证">Validation</a> for more information.</p>
 
 <div class="note">
 <p>The line feed (U+000A) and carriage return (U+000D) characters are not permitted in a <code>"password"</code> value. When setting the value of a password control, line feed and carriage return characters are stripped out of the value.</p>

@@ -260,7 +260,7 @@ self.addEventListener('push', function(event) {
 });
 ```
 
-Tout ce qu'il est est d'ajouter une écoute sur l'événément {{event("push")}}, créer la variable de charge utile constituée du texte récupéré depuis les données (ou de créer une chaîne de caractères à utiliser si les données sont vides) puis d'attendre jusqu'à ce que la notfication soit montrée à l'utilisateur.
+Tout ce qu'il est est d'ajouter une écoute sur l'évènement {{event("push")}}, créer la variable de charge utile constituée du texte récupéré depuis les données (ou de créer une chaîne de caractères à utiliser si les données sont vides) puis d'attendre jusqu'à ce que la notfication soit montrée à l'utilisateur.
 
 N'hésitez pas à explorer le reste des exemples du [Service Worker Cookbook](https://serviceworke.rs/) si vous voulez savoir comment ils sont gérés — le [code source complet est disponible sur on GitHub](https://github.com/mozilla/serviceworker-cookbook/). Il y a une vaste collection d'exemples fonctionnels démontrant l'usage général ainsi que le push web, les stratégies de mise en cache, la question des performances, le fonctionnement en mode déconnecté et plus encore.
 

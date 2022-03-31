@@ -1,41 +1,49 @@
 ---
-title: 'Reason: CORS request not HTTP'
+title: "Raison : la requête CORS n'utilise pas HTTP"
 slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
-tags:
-  - CORS
-  - CORSRequestNotHttp
-  - Cross-Origin
-  - Dépannage
-  - Erreur
-  - HTTP
-  - HTTPS
-  - Messages
-  - Raisons
-  - Sécurité
-  - console
 translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
 {{HTTPSidebar}}
 
-## Raison
+## Message
 
-    Raison&nbsp;: la requête CORS n’utilise pas http.
+```http
+Raison : la requête CORS n'utilise pas HTTP
+```
 
-## Qu'est ce qui n'a pas fonctionné ?
+En anglais&nbsp;:
 
-Les requêtes {{Glossary("CORS")}} ne peuvent utiliser que les URL HTTPS, mais l'URL spécifiée par la requête est d'un type différent. Cela se produit souvent si l'URL spécifie un fichier local, en utilisant un URL de la forme `file:///`.
+```http
+Reason: CORS request not HTTP
+```
 
-Pour résoudre ce problème, assurez-vous simplement d'utiliser les URL HTTPS lorsque vous émettez des requêtes impliquant CORS , comme {{domxref("XMLHttpRequest")}}, [Fetch](/fr/docs/Web/API/Fetch_API) APIs, Web Fonts (`@font-face`), [WebGL textures](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL), et des stylesheets XSL.
+## Quel est le problème&nbsp;?
 
-### Sécurité des fichiers locaux dans Firefox 68
+Les requêtes [CORS](/fr/docs/Glossary/CORS) peuvent uniquement utiliser les schémas d'URL HTTP ou HTTPS et l'URL indiquée dans la requête est d'un type différent.
 
-Lorsqu'un utilisateur ouvrait une page en utilisant un URI `file:///` dans Firefox 67 et antérieur, l'origine de la page était définie comme le répertoire à partir duquel la page était ouverte. Les ressources du même répertoire et de ses sous-répertoires étaient traitées comme ayant la même origine aux fins de la règle de la même origine de la CORS.
+Cela se produit généralement lorsque l'URL pointe vers un fichier local et utilise le schéma `file:///`.
 
-En réponse au [CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730), Firefox 68 et les versions ultérieures définissent l'origine d'une page ouverte à l'aide d'un URI `file:///` comme unique. Par conséquent, les autres ressources du même répertoire ou de ses sous-répertoires ne satisfont plus à la règle de la même origine de la COROS. Ce nouveau comportement est activé par défaut en utilisant la préférence `privacy.file_unique_origin`.
+Pour corriger ce problème, assurez-vous d'utiliser des URL HTTPS lors de requêtes impliquant du CORS (comme les requêtes [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), [`fetch()`](/fr/docs/Web/API/Fetch_API), celles pour les polices de caractères (`@font-face`), [les textures WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL), et les feuilles de style XSL).
+
+### Chargement d'un fichier local
+
+Les fichiers locaux appartenant au même répertoire et aux sous-répertoires étaient, par le passé, considérés comme provenant de la [même origine](/fr/docs/Web/Security/Same-origin_policy).
+
+Cela signifiait qu'un fichier et l'ensemble de ses ressources attachées pouvaient être chargés depuis un répertoire local (et les sous-répertoires associés) lors des tests, sans déclencher d'erreur CORS.
+
+Toutefois, cela a eu des conséquences en termes de sécurité (voir ce bulletin d'alerte&nbsp;: [CVE-2019-11730](https://www.mozilla.org/fr/security/advisories/mfsa2019-21/#CVE-2019-11730)).
+
+De nombreux navigateurs, comme Firefox et Chrome, considèrent désormais que les fichiers locaux ont, par défaut, _des origines opaques_.
+Par conséquent, le chargement d'un fichier local utilisant des ressources locales entraînera désormais des erreurs CORS.
+
+Les développeuses et développeurs qui doivent réaliser des tests en local doivent désormais [mettre en place un serveur local](/fr/docs/Learn/Common_questions/set_up_a_local_testing_server).
+
+De cette façon, l'ensemble des fichiers est servi depuis le même domaine (`localhost`) et avec le même schéma&nbsp;: ils ont la même origine et ne déclenchent plus d'erreurs liées à la multiplicité des origines.
+
+> **Note :** Ce changement est en accord avec [la spécification sur les URL](https://url.spec.whatwg.org/#origin), qui laisse l'implémentation libre du comportement quant à l'origine des fichiers, mais qui recommande, en cas de doute, de considérer les origines des fichiers comme opaques.
 
 ## Voir aussi
 
-- [Erreurs liées à CORS](/fr/docs/Web/HTTP/CORS/Errors)
-- Glossaire: {{Glossary("CORS")}}
-- [Introduction à CORS](/fr/docs/Web/HTTP/CORS)
-- [C'est quoi une URL?](/fr/docs/Learn/Common_questions/What_is_a_URL)
+- [Les erreurs relatives au CORS](/fr/docs/Web/HTTP/CORS/Errors)
+- [Introduction au CORS](/fr/docs/Web/HTTP/CORS)
+- [Qu'est-ce qu'une URL&nbsp;?](/fr/docs/Learn/Common_questions/What_is_a_URL)

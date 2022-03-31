@@ -97,8 +97,8 @@ var jsonString = JSON.stringify(foo, replacer);
 
 <p>Se <code>replacer</code> é usado em uma array, os valores da array indicam os nomes das propriedades no objeto, que devem ser incluídas na sequência JSON resultante.</p>
 
-<pre class="brush: js notranslate">JSON.stringify(foo, ['week', 'month']);
-// '{"week":45,"month":7}', only keep "week" and "month" properties
+<pre class="brush: js notranslate">JSON.stringify(foo, ['semana', 'mês']);
+// '{"semana":45,"mês":7}', apenas mantém as propriedades "semana" e "mês"
 </pre>
 
 <h3 id="space_argument" name="space_argument">O argumento <code>space</code> </h3>
@@ -113,11 +113,11 @@ var jsonString = JSON.stringify(foo, replacer);
 
 <p>O uso de um caractere de tabulação imita a aparência padrão de impressão pretty-print.</p>
 
-<pre class="brush: js notranslate">JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+<pre class="brush: js notranslate">JSON.stringify({ um: 1, dois: 2 }, null, '\t');
 // r:
 // '{
-//     "uno": 1,
-//     "dos": 2
+//     "um": 1,
+//     "dois": 2
 // }'
 </pre>
 

@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/checkbox
 ---
 <div>{{HTMLRef}}</div>
 
-<p>{{htmlelement ("input")}} elementos do tipo <strong><code>checkbox</code></strong>são renderizados por padrão como caixas quadradas que são marcadas (com uma marca de verificação) quando ativadas, como você pode ver em um formulário de papel oficial do governo. A aparência exata depende de da configuração de sistema operacional sobre o qual o navegador está sendo executado. Eles permitem que você selecione valores únicos para envio em um formulário (ou não).</p>
+<p>{{htmlelement ("input")}} elementos do tipo <strong><code>checkbox</code></strong>são renderizados por padrão como caixas quadradas que são marcadas (com uma marca de verificação) quando ativadas, como as que você veria em um formulário do governo. A aparência exata depende de da configuração de sistema operacional sobre o qual o navegador está sendo executado. Caixas de seleção permitem que você selecione valores únicos para envio em um formulário (ou não).</p>
 
 <div>{{EmbedInteractiveExample ("pages/tabbed/input-checkbox.html", "tabbed-standard")}}</div>
 
@@ -42,7 +42,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <h2 id="Valor">Valor</h2>
 
-<p>Um {{domxref ("DOMString")}} representando o valor da caixa de seleção. Isso nunca é visto no lado do cliente, mas no servidor esse é o <code>value</code>  atribuído aos dados enviados com o <code>name</code> da caixa de seleção. Tome o seguinte exemplo:</p>
+<p>Um {{domxref ("DOMString")}} representando o valor da caixa de seleção. Isso nunca é visto no lado do cliente, mas no servidor esse é o <code>value</code>  atribuído aos dados enviados com o <code>name</code> da caixa de seleção. Tome o seguinte exemplo:</p>
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
@@ -58,7 +58,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <p>Neste exemplo, temos um nome <code>subscribe</code>e um valor de <code>newsletter</code>. Quando o formulário é enviado, o par de nome / valor de dados será <code>subscribe=newsletter</code>.</p>
 
-<p>Se o atributo <code>value</code> for omitido, o valor padrão da caixa de seleção é <code>on</code> , portanto, os dados enviados nesse caso seriam <code>subscribe=on</code>.</p>
+<p>Se o atributo <code>value</code> for omitido, o valor padrão da caixa de seleção é <code>on</code> , portanto, os dados enviados nesse caso seriam <code>subscribe=on</code>.</p>
 
 <div class="note">
 <p><strong>Nota</strong> : Se uma caixa de seleção estiver desmarcada quando seu formulário for enviado, não haverá nenhum valor enviado ao servidor para representar seu estado desmarcado (por exemplo <code>value=unchecked</code>); o valor não é submetido ao servidor.</p>
@@ -116,7 +116,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <h3 id="Caixas_de_seleção_de_estado_indeterminado">Caixas de seleção de estado indeterminado</h3>
 
-<p>Além dos estados marcado e não marcado, há um terceiro estado em que uma caixa de seleção pode estar: <strong>indeterminada</strong>. Este é um estado em que é impossível dizer se o item está ativado ou desativado. Isso é definido usando a propriedade <code>indeterminate</code> do objeto {{domxref ("HTMLInputElement")}} via JavaScript (não pode ser definido usando um atributo HTML):</p>
+<p>Além dos estados marcado e não marcado, há um terceiro estado em que uma caixa de seleção pode estar: <strong>indeterminada</strong>. Este é um estado em que é impossível dizer se o item está ativado ou desativado. Isso é definido usando a propriedade <code>indeterminate</code> do objeto {{domxref ("HTMLInputElement")}} via JavaScript (não pode ser definido usando um atributo HTML):</p>
 
 <pre class="brush: js">inputInstance.indeterminate = true;</pre>
 
@@ -173,7 +173,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <h2 id="Validação">Validação</h2>
 
-<p>As caixas de seleção suportam <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validação</a> (oferecidas para todos os  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="O elemento HTML &lt;input> é usado para criar controles interativos para formulários baseados na web, a fim de aceitar dados do usuário."><code>&lt;input&gt;</code></a>s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será <code>false</code>. Se a caixa de seleção tiver o <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-required">required</a></code> atributo, mas não estiver marcada, ela  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/valueMissing" title="The documentation about this has not yet been written; please consider contributing!">ValidityState.valueMissing</a></code> será <code>true</code>.</p>
+<p>As caixas de seleção suportam <a href="/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">validação</a> (oferecidas para todos os  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="O elemento HTML &lt;input> é usado para criar controles interativos para formulários baseados na web, a fim de aceitar dados do usuário."><code>&lt;input&gt;</code></a>s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será <code>false</code>. Se a caixa de seleção tiver o <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-required">required</a></code> atributo, mas não estiver marcada, ela  <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ValidityState/valueMissing" title="The documentation about this has not yet been written; please consider contributing!">ValidityState.valueMissing</a></code> será <code>true</code>.</p>
 
 <h2 id="Exemplos">Exemplos</h2>
 
@@ -221,7 +221,7 @@ translation_of: Web/HTML/Element/input/checkbox
   font-family: sem serifa;
 }
 
-Formato {
+form {
   largura: 600px;
   margem: 0 auto;
 }
@@ -235,7 +235,7 @@ fieldset {
   borda: 5px azul sólido;
 }
 
-lenda {
+legend {
   preenchimento: 10px;
   fundo: azul;
   cor: ciano;

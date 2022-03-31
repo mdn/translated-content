@@ -88,7 +88,7 @@ Vous en apprendrez plus sur ces APIs ci-dessous.
 
 Certains navigateurs modernes prennent en charge la nouvelle API {{domxref("Cache")}}. Cette API a été conçue pour stocker les réponses HTTP de requêtes données et est très utile pour stocker des ressources du site afin qu'il soit accessible sans connexion réseau par exemple. Le cache est généralement utilisé avec l'[API Service Worker](/fr/docs/Web/API/Service_Worker_API), mais ce n'est pas obligatoire.
 
-L'utilisation du Cache et des Service Workers est un sujet avancé, nous ne le traiterons pas en détail dans cet article, nous ne montrerons qu'un simple exemple dans la section {{anch("Stockage hors-ligne de ressources")}} plus bas.
+L'utilisation du Cache et des Service Workers est un sujet avancé, nous ne le traiterons pas en détail dans cet article, nous ne montrerons qu'un simple exemple dans la section [Stockage hors-ligne de ressources](#stockage_hors-ligne_de_ressources) plus bas.
 
 ## Stocker des données simples — web storage
 
@@ -743,7 +743,7 @@ self.addEventListener('install', function(e) {
 });
 ```
 
-1.  Le gestionnaire d'événément `install` est enregistré sur `self`. Le mot-clé `self` est un moyen de faire référence au service worker de la portée globale à partir de son fichier.
+1.  Le gestionnaire d'évènement `install` est enregistré sur `self`. Le mot-clé `self` est un moyen de faire référence au service worker de la portée globale à partir de son fichier.
 2.  À l'intérieur du gestionnaire d'installation, on utilise la méthode {{domxref("ExtendableEvent.waitUntil()")}}, disponible sur l'objet événement, pour signaler que le navigateur ne doit pas terminer l'installation du service worker avant que la promesse qu'il contient ne soit résolue avec succès.
 3.  Ici, on voit l'API Cache en action: on utilise la méthode {{domxref("CacheStorage.open()")}} pour ouvrir un nouvel objet cache dans lequel les réponses seront stockées (similaire à un object store IndexedDB). Cette promesse se résout avec un objet {{domxref("Cache")}} représentant le cache du `video-store`.
 4.  On utilise la méthode {{domxref("Cache.addAll()")}} pour récupérer une série de ressources et ajouter leur réponse au cache.

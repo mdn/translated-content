@@ -8027,7 +8027,7 @@
       "daliannyvieira"
     ]
   },
-  "Web/CSS/attr()": {
+  "Web/CSS/attr": {
     "modified": "2020-11-04T08:51:55.092Z",
     "contributors": [
       "chrisdavidmills",
@@ -8173,7 +8173,7 @@
       "renatobalbino"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:08:50.767Z",
     "contributors": [
       "chrisdavidmills",
@@ -8283,14 +8283,14 @@
       "brasmon8351"
     ]
   },
-  "Web/CSS/element()": {
+  "Web/CSS/element": {
     "modified": "2020-11-10T11:06:23.872Z",
     "contributors": [
       "chrisdavidmills",
       "JonatasAmaral"
     ]
   },
-  "Web/CSS/env()": {
+  "Web/CSS/env": {
     "modified": "2020-11-10T11:11:50.127Z",
     "contributors": [
       "chrisdavidmills",
@@ -8303,21 +8303,21 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/filter-function/grayscale()": {
+  "Web/CSS/filter-function/grayscale": {
     "modified": "2020-11-10T11:19:23.773Z",
     "contributors": [
       "chrisdavidmills",
       "BrunaGil"
     ]
   },
-  "Web/CSS/filter-function/opacity()": {
+  "Web/CSS/filter-function/opacity": {
     "modified": "2020-11-16T09:08:08.691Z",
     "contributors": [
       "chrisdavidmills",
       "larimaza"
     ]
   },
-  "Web/CSS/filter-function/sepia()": {
+  "Web/CSS/filter-function/sepia": {
     "modified": "2020-11-30T10:24:47.934Z",
     "contributors": [
       "chrisdavidmills",
@@ -8754,42 +8754,42 @@
       "mfluehr"
     ]
   },
-  "Web/CSS/transform-function/matrix()": {
+  "Web/CSS/transform-function/matrix": {
     "modified": "2020-11-16T09:00:13.847Z",
     "contributors": [
       "chrisdavidmills",
       "MarcosNakamine"
     ]
   },
-  "Web/CSS/transform-function/perspective()": {
+  "Web/CSS/transform-function/perspective": {
     "modified": "2020-11-16T09:10:49.924Z",
     "contributors": [
       "chrisdavidmills",
       "larimaza"
     ]
   },
-  "Web/CSS/transform-function/rotate()": {
+  "Web/CSS/transform-function/rotate": {
     "modified": "2020-11-19T16:06:09.849Z",
     "contributors": [
       "chrisdavidmills",
       "YurePereira"
     ]
   },
-  "Web/CSS/transform-function/rotate3d()": {
+  "Web/CSS/transform-function/rotate3d": {
     "modified": "2020-11-19T16:07:35.157Z",
     "contributors": [
       "chrisdavidmills",
       "larimaza"
     ]
   },
-  "Web/CSS/transform-function/scale()": {
+  "Web/CSS/transform-function/scale": {
     "modified": "2020-11-30T10:15:54.148Z",
     "contributors": [
       "chrisdavidmills",
       "larimaza"
     ]
   },
-  "Web/CSS/transform-function/translate()": {
+  "Web/CSS/transform-function/translate": {
     "modified": "2020-11-30T10:30:42.247Z",
     "contributors": [
       "chrisdavidmills",
@@ -8830,7 +8830,7 @@
       "Fernandolrs"
     ]
   },
-  "Web/CSS/var()": {
+  "Web/CSS/var": {
     "modified": "2020-11-04T09:10:42.127Z",
     "contributors": [
       "chrisdavidmills",

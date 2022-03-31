@@ -540,7 +540,7 @@ var n3 = !'Cat'; // !t は false を返す
 
 <p>論理的なルールにより、これらの評価が常に正確であることが保証されます。上記の式で <em>anything</em> の部分は評価されないため、どのようにしても副作用が生じないことに注意してください。</p>
 
-<p>なお、 2 番目のケースについては、新しいコードでにおいて新しい <a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Null 合体演算子</a> (<code>??</code>) が使用できますが、これは最初の式が "<a href="/ja/docs/Glossary/Nullish">nullish</a>"、つまり <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/null" title="null という値は、いかなるオブジェクトの値も意図的に存在しないことを表します。これは、 JavaScriptのプリミティブな値のひとつで、論理演算では偽値として扱われます。"><code>null</code></a> または <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="グローバル undefined プロパティは、プリミティブ値 undefined を表します。これは、 JavaScript のプリミティブ型のひとつです。"><code>undefined</code></a> である場合のみ 2 番目の式を返します。したがって、 1 番目の式で <code>''</code> や <code>0</code> などを有効な値として扱う場合に、既定値を提供する代替策とすることをお勧めします。</p>
+<p>なお、 2 番目のケースについては、最新のコードでは新しい <a href="/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">Null 合体演算子</a> (<code>??</code>) が使用できますが、これは最初の式が "<a href="/ja/docs/Glossary/Nullish">nullish</a>"、つまり <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/null" title="null という値は、いかなるオブジェクトの値も意図的に存在しないことを表します。これは、 JavaScriptのプリミティブな値のひとつで、論理演算では偽値として扱われます。"><code>null</code></a> または <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined" title="グローバル undefined プロパティは、プリミティブ値 undefined を表します。これは、 JavaScript のプリミティブ型のひとつです。"><code>undefined</code></a> である場合のみ 2 番目の式を返します。したがって、 1 番目の式で <code>''</code> や <code>0</code> などを有効な値として扱う場合に、既定値を提供する代替策とすることをお勧めします。</p>
 
 <h3 id="String_operators">文字列演算子</h3>
 

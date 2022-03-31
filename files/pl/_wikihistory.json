@@ -5167,7 +5167,7 @@
       "draccicgeb"
     ]
   },
-  "Web/CSS/transform-function/matrix()": {
+  "Web/CSS/transform-function/matrix": {
     "modified": "2020-11-16T09:00:02.174Z",
     "contributors": [
       "chrisdavidmills",

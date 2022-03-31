@@ -19,7 +19,7 @@ La propriété **`nodeType`** peut être utilisée pour distinguer les uns des a
 
     Type = node .nodeType
 
-Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possibles sont listées dans {{anch("Constantes")}}.
+Renvoie un entier (_integer_) qui spécifie le type du noeud ; les valeurs possibles sont listées dans [Constantes](#constantes).
 
 ## Constantes
 

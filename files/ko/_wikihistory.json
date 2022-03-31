@@ -9047,7 +9047,7 @@
       "dochoul"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:08:57.096Z",
     "contributors": [
       "chrisdavidmills",
@@ -9142,21 +9142,21 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/filter-function/blur()": {
+  "Web/CSS/filter-function/blur": {
     "modified": "2020-11-05T09:45:44.250Z",
     "contributors": [
       "chrisdavidmills",
       "alattalatta"
     ]
   },
-  "Web/CSS/filter-function/brightness()": {
+  "Web/CSS/filter-function/brightness": {
     "modified": "2020-11-05T09:57:22.993Z",
     "contributors": [
       "chrisdavidmills",
       "alattalatta"
     ]
   },
-  "Web/CSS/filter-function/contrast()": {
+  "Web/CSS/filter-function/contrast": {
     "modified": "2020-11-09T07:21:09.691Z",
     "contributors": [
       "chrisdavidmills",
@@ -9659,14 +9659,14 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/transform-function/matrix()": {
+  "Web/CSS/transform-function/matrix": {
     "modified": "2020-11-16T08:59:50.359Z",
     "contributors": [
       "chrisdavidmills",
       "DeadIntegral"
     ]
   },
-  "Web/CSS/transform-function/scaleX()": {
+  "Web/CSS/transform-function/scaleX": {
     "modified": "2020-11-30T10:20:51.450Z",
     "contributors": [
       "chrisdavidmills",
@@ -9692,7 +9692,7 @@
       "Netaras"
     ]
   },
-  "Web/CSS/url()": {
+  "Web/CSS/url": {
     "modified": "2020-10-15T22:10:55.121Z",
     "contributors": [
       "alattalatta"
@@ -9711,7 +9711,7 @@
       "alattalatta"
     ]
   },
-  "Web/CSS/var()": {
+  "Web/CSS/var": {
     "modified": "2020-11-04T09:10:36.975Z",
     "contributors": [
       "chrisdavidmills",

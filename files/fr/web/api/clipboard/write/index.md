@@ -9,7 +9,7 @@ La methode **`write()`** de {{domxref("Clipboard")}} écrie des données arbitra
 
 Avant de pouvoir écrire dans le presse-papier, vous devez utiliser [Permissions API](/en-US/docs/Web/API/Permissions_API) pour avoir l'autorisation `"clipboard-write"`.
 
-> **Note :** Browser support for the asynchronous clipboard APIs is still in the process of being implemented. Be sure to check the {{anch("Browser compatibility", "compatibility table")}} as well as {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} for more information.
+> **Note :** Les API Presse-papiers (<i lang="en">clipboard</i>) asynchrones sont toujours en cours d'implémentation. Consultez le [tableau de compatibilité](#compatibilité_des_navigateurs) et la section [Disponibilité du presse-papiers](/fr/docs/Web/API/clipboard#disponibilité_du_presse-papiers) sur la page [`Clipboard`](https://developer.mozilla.org/fr/docs/Web/API/clipboard) pour plus d'informations.
 
 ## Syntax
 
@@ -49,6 +49,6 @@ Le code commence par la creation d'un nouveau objet {{domxref("DataTransfer")}} 
 | ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
 | {{SpecName('Clipboard API','#h-clipboard-write-data','write()')}} | {{Spec2('Clipboard API')}} | Initial definition. |
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
 {{Compat("api.Clipboard.write")}}
