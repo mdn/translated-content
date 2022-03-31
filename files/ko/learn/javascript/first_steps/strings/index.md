@@ -21,7 +21,7 @@ translation_of: Learn/JavaScript/First_steps/Strings
 <table>
   <tbody>
     <tr>
-      <th scope="row">선결요건:</th>
+      <th scope="row">필요한 사전 지식:</th>
       <td>
         기본 컴퓨터 활용능력, HTML 및 CSS에 대한 기본적인 이해, JavaScript에
         대한 기초적인 이해.
