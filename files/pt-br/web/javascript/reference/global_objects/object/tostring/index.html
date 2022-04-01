@@ -1,17 +1,27 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
+tags:
+ - JavaScript
+ - Method
+ - Object
+ - Prototype
+browser-compat: javascript.builtins.Object.toString
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
 <div>{{JSRef("Global_Objects", "Object")}}</div>
 
 <h2 id="Summary" name="Summary">Sumário</h2>
 
-<p>O método <code><strong>toString()</strong></code> retorna uma string representando o objeto.</p>
+<p>O método <code>toString()</code> retorna uma string representando o objeto.</p>
+
+{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
 <h2 id="Syntax" name="Syntax">Sintaxe</h2>
 
-<pre class="syntaxbox"><code><var>obj</var>.toString()</code></pre>
+<pre class="brush: js">
+toString()
+</pre>
 
 <h2 id="Description" name="Description">Descrição</h2>
 
@@ -63,7 +73,7 @@ theDog = new Dog('Gabby', 'Lab', 'chocolate', 'female');
 
 <h3 id="Example:_Using_toString_to_detect_object_type" name="Example:_Using_toString_to_detect_object_type">Exemplo: Usando <code>toString()</code> para detectar a classe do objeto</h3>
 
-<p><code>toString()</code> pode ser usado com qualquer objeto e permite que você pegue sua classe. Para usar <code>Object.prototype.toString()</code> com qualquer objeto, deverá chamar {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} nele, passando o objeto que quer inspecionar como o primeiro parâmetro, chamado <code>thisArg</code>.</p>
+<p><code>toString()</code> pode ser usado com qualquer objeto e permite que você determine sua classe. Para usar <code>Object.prototype.toString()</code> com qualquer objeto, deverá chamar {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} nele, passando o objeto que quer inspecionar como o primeiro parâmetro, chamado <code>thisArg</code>.</p>
 
 <pre class="brush: js">var toString = Object.prototype.toString;
 
@@ -78,82 +88,12 @@ toString.call(null);        // [object Null]
 
 <h2 id="Especificações">Especificações</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>ECMAScript 1st Edition.</td>
-   <td>Standard</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.2', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Call on {{jsxref("Global_Objects/null", "null")}} returns <code>[object <em>Null</em>]</code>, and {{jsxref("Global_Objects/undefined", "undefined")}} returns <code>[object <em>Undefined</em>]</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.tostring', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+<div>{{Specifications}}</div>
 
 <h2 id="Compatibilidade">Compatibilidade</h2>
 
-<div>{{CompatibilityTable}}</div>
+<div>{{Compat}}</div>
 
-<div id="compat-desktop">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Chrome</th>
-   <th>Firefox (Gecko)</th>
-   <th>Internet Explorer</th>
-   <th>Opera</th>
-   <th>Safari</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
-
-<div id="compat-mobile">
-<table class="compat-table">
- <tbody>
-  <tr>
-   <th>Feature</th>
-   <th>Android</th>
-   <th>Chrome for Android</th>
-   <th>Firefox Mobile (Gecko)</th>
-   <th>IE Mobile</th>
-   <th>Opera Mobile</th>
-   <th>Safari Mobile</th>
-  </tr>
-  <tr>
-   <td>Basic support</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-   <td>{{CompatVersionUnknown}}</td>
-  </tr>
- </tbody>
-</table>
-</div>
 
 <h2 id="See_also" name="See_also">Veja também</h2>
 
