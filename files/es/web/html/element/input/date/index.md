@@ -195,7 +195,7 @@ Si tu intentas enviar el formulario con una fecha incomplenta (o una fecha por f
 
 {{EmbedLiveSample('Validation', 600, 100)}}
 
-Este es el CSS usado en el ejemplo de arriba. Hacemos uso de los [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements) {{cssxref(":valid")}} y {{cssxref(":invalid")}} para añadir un icono al lado de la entrada, basándonos en si el valor es válido o no. Tuvimos que poner el icono en un {htmlelement("span")}} y no dentro de la propia entrada, porque, al menos en Chrome, el contenido generado por las entradas está dentro del control del form y no puede ser puede ser mostrardo o dársele estilos correctamente.
+Este es el CSS usado en el ejemplo de arriba. Hacemos uso de los [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements) {{cssxref(":valid")}} y {{cssxref(":invalid")}} para añadir un icono al lado de la entrada, basándonos en si el valor es válido o no. Tuvimos que poner el icono en un {{htmlelement("span")}} y no dentro de la propia entrada, porque, al menos en Chrome, el contenido generado por las entradas está dentro del control del form y no puede ser puede ser mostrardo o dársele estilos correctamente.
 
 ```css
 label {
