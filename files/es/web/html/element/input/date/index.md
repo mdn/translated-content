@@ -89,7 +89,7 @@ Junto con los atributos comunes a todos los elementos {{HTMLElement("input")}}, 
 
 ### max
 
-La última fecha a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/en-US/docs/Web/Guide/HTML/Constraint_validation) (en inglés). Si el valor del atributo `max` es un valor que no es una posible fecha en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
+La última fecha a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es posterior, el elemento no pasa la [validación de restricción](/es/docs/Web/Guide/HTML/Constraint_validation) (en inglés). Si el valor del atributo `max` es un valor que no es una posible fecha en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor máximo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto posterior o igual a la fecha establecida en el atributo `min`.
 
