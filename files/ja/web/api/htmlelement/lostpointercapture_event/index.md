@@ -2,102 +2,98 @@
 title: 'HTMLElement: lostpointercapture イベント'
 slug: Web/API/HTMLElement/lostpointercapture_event
 tags:
-  - DOM
-  - Event
+  - イベント
+  - HTML DOM
+  - HTMLElement
+  - NeedsSpecTable
   - PointerEvent
-  - Reference
+  - リファレンス
+browser-compat: api.HTMLElement.lostpointercapture_event
 translation_of: Web/API/HTMLElement/lostpointercapture_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><span class="seoSummary"><strong><code>lostpointercapture</code></strong> イベントは、<a href="/ja/docs/Web/API/Pointer_events#Pointer_capture">キャプチャされたポインタ</a>が解放されたときに発生します。</span></p>
+**`lostpointercapture`** イベントは、[キャプチャされたポインター](/ja/docs/Web/API/Pointer_events#pointer_capture)が解放されましたときに発行されます。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("PointerEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラプロパティ</th>
-   <td><code><a href="/ja/docs/Web/API/Element/onlostpointercapture">onlostpointercapture</a></code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("PointerEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        <code
+          ><a
+            href="/ja/docs/Web/API/GlobalEventHandlers/onlostpointercapture"
+            >onlostpointercapture</a
+          ></code
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>この例では、要素の <code>lostpointercapture</code> イベントをリッスンし、<code>pointerdown</code> で要素のポインタをキャプチャします。 その後ユーザーがポインタを離すと、<code>lostpointercapture</code> イベントが発生します。</p>
+この例では、要素の `lostpointercapture` イベントを待ち受けし、`pointerdown` で要素のポインターをキャプチャします。 その後ユーザーがポインターを離すと、`lostpointercapture` イベントが発行されます。
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.addEventListener('lostpointercapture', () =&gt; {
-  console.log('解放された！')
+para.addEventListener('lostpointercapture', () => {
+  console.log('解放されました！')
 });
 
-para.addEventListener('pointerdown', (event) =&gt; {
+para.addEventListener('pointerdown', (event) => {
   para.setPointerCapture(event.pointerId);
 });
-</pre>
+```
 
-<p>同じ例ですが、<code>onlostpointercapture</code> イベントハンドラプロパティを使用します。</p>
+同じ例ですが、 `onlostpointercapture` イベントハンドラープロパティを使用した例です。
 
-<pre class="brush: js">const para = document.querySelector('p');
+```js
+const para = document.querySelector('p');
 
-para.onlostpointercapture = () =&gt; {
-  console.log('解放された！')
+para.onlostpointercapture = () => {
+  console.log('解放されました！')
 };
 
-para.addEventListener('pointerdown', (event) =&gt; {
+para.addEventListener('pointerdown', (event) => {
   para.setPointerCapture(event.pointerId);
 });
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#the-lostpointercapture-event')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLElement.lostpointercapture_event")}}</p>
+- 関連イベント
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+  - [`gotpointercapture`](/ja/docs/Web/API/HTMLElement/gotpointercapture_event)
+  - [`pointerover`](/ja/docs/Web/API/HTMLElement/pointerover_event)
+  - [`pointerenter`](/ja/docs/Web/API/HTMLElement/pointerenter_event)
+  - [`pointerdown`](/ja/docs/Web/API/HTMLElement/pointerdown_event)
+  - [`pointermove`](/ja/docs/Web/API/HTMLElement/pointermove_event)
+  - [`pointerup`](/ja/docs/Web/API/HTMLElement/pointerup_event)
+  - [`pointercancel`](/ja/docs/Web/API/HTMLElement/pointercancel_event)
+  - [`pointerout`](/ja/docs/Web/API/HTMLElement/pointerout_event)
+  - [`pointerleave`](/ja/docs/Web/API/HTMLElement/pointerleave_event)
 
-<ul>
- <li>関連イベント
-  <ul>
-   <li><code><a href="/ja/docs/Web/API/HTMLElement/gotpointercapture_event">gotpointercapture</a></code></li>
-   <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerover_event">pointerover</a></code></li>
-   <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerenter_event">pointerenter</a></code></li>
-   <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerdown_event">pointerdown</a></code></li>
-   <li><code><a href="/ja/docs/Web/API/HTMLElement/pointermove_event">pointermove</a></code></li>
-   <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerup_event">pointerup</a></code></li>
-   <li><code><a href="/ja/docs/Web/API/HTMLElement/pointercancel_event">pointercancel</a></code></li>
-   <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerout_event">pointerout</a></code></li>
-   <li><code><a href="/ja/docs/Web/API/HTMLElement/pointerleave_event">pointerleave</a></code></li>
-  </ul>
- </li>
- <li><code><a href="/ja/docs/Web/API/GlobalEventHandlers/onlostpointercapture">onlostpointercapture</a></code> イベントハンドラプロパティ</li>
- <li><code>Document</code> でのこのイベント: <code><a href="/ja/docs/Web/API/Document/lostpointercapture_event">lostpointercapture</a></code> イベント</li>
-</ul>
+- [`onlostpointercapture`](/ja/docs/Web/API/GlobalEventHandlers/onlostpointercapture) イベントハンドラープロパティ
+- `Document` を対象とするこのイベント: [`lostpointercapture`](/ja/docs/Web/API/Document/lostpointercapture_event) イベント
