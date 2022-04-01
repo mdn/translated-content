@@ -159,7 +159,7 @@ Como resultado, obtenemos que solo los días del mes de abril de 2017 pueden ser
 
 ### Controlando el tamaño del input
 
-`<input type="date">`no soporta los atribuos de tamaño como por {{htmlattrxref("size", "input")}}. Mejor usa [CSS](/es/docs/Web/CSS) para adaptar su tamaño.
+`<input type="date">`no soporta los atributos de tamaño como lo es {{htmlattrxref("size", "input")}}. Mejor usa [CSS](/es/docs/Web/CSS) para adaptar su tamaño.
 
 ## Validación
 
