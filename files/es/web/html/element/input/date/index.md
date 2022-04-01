@@ -95,7 +95,7 @@ Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fe
 
 ### min
 
-La fecha más temprana a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/en-US/docs/Web/Guide/HTML/Constraint_validation) (en inglés). Si el valor del atributo `max` es un valor que no es una posible fecha en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
+La fecha más temprana a aceptar. Si el {{htmlattrxref("value", "input")}} introducido en el elemento es anterior, el elemento no pasa la [validación de restricció](/es/docs/Web/Guide/HTML/Constraint_validation) (en inglés). Si el valor del atributo `max` es un valor que no es una posible fecha en el formato de cadena de texto `aaaa-mm-dd`, el elemento no tendrá un valor mínimo.
 
 Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fecha en formtato cadena de texto anterior o igual a la fecha establecida en el atributo `max`.
 
