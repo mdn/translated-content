@@ -339,7 +339,7 @@ input:valid + span::after {
 
 La otra parte del código que puede ser de interés es el código que sirve para detectar características (para detectar si el navegador soporta `<input type="date">`).
 
-Para este ejemplo, creamos un nuevo elemento {{htmlelement("input")}} e intentamos establecer su `type`a `date`, entonces inmediatamente comprobamos cuál es si tipo (los navegadores sin soporte retornarán `text`, ya que el tipo `fecha` retrocede al tipo `text`). Si `<input type="date">` no es soportada, ocultamos el menu de selección nativo y mostramos el elemento ({{htmlelement("select")}}).
+Para este ejemplo, creamos un nuevo elemento {{htmlelement("input")}} e intentamos establecer su `type` a `date`, entonces inmediatamente comprobamos cuál es su tipo (los navegadores sin soporte retornarán `text`, ya que el tipo `fecha` regresa el tipo `text`). Si `<input type="date">` no es soportada, ocultamos el menu de selección nativo y mostramos el elemento ({{htmlelement("select")}}).
 
 ```js
 // definimos variables
