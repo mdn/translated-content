@@ -15,6 +15,8 @@ Il a été créé par Guido van Rossum entre 1985 et 1990 pour succéder à un a
 
 Python est développé sous une licence Open Source approuvée OSI, ce qui le rend librement utilisable et distribuable, même pour un usage commercial. La licence de Python est administrée par la [Python Software Foundation](https://www.python.org/psf) .
 
+Pour commencer à programmer sur python vous avez besoin d'installer python sur votre ordinateur, télécharger python sur [le site officiel](https://www.python.org/downloads/) actuellement la version 3.10.
+
 ## Pour approfondir
 
 - {{interwiki('wikipedia', 'Python (langage)', 'Python')}} sur Wikipédia
