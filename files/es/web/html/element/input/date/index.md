@@ -163,7 +163,7 @@ Como resultado, obtenemos que solo los días del mes de abril de 2017 pueden ser
 
 ## Validación
 
-Por defecto, `<input type="date">` no valida su valor más allá de su formato. Generalmente, las interfaces no te dejean introducir nada que no sea una fecha (lo que es de ayuda), pero tu puedes dejar el campo vacío o entrar una fecha inválida (como 32 de abril) en los navegadores que no soprtan el tipo `date`, cuando el tipo `date` retrocede a `text`.
+Por defecto, `<input type="date">` no valida su valor más allá de su formato. Generalmente, las interfaces no te dejean introducir nada que no sea una fecha (lo que es de ayuda), pero tu puedes dejar el campo vacío o entrar una fecha inválida (como 32 de abril) en los navegadores que no soportan el tipo `date`, cuando el tipo `date` retrocede a `text`.
 
 Si tu usas {{htmlattrxref("min", "input")}} y {htmlattrxref("max", "input")}} para limitar la disponibilidad de las fechas (véase [Estipulando valores de fecha máximos y mínimos](#estipulando_valores_de_fecha_máximos_y_mínimos)), los navegadores que lo soporten mostrarán un error si tu tratas de enviar una fecha que está por fuera de los límietes. A pesar de esto, tú necesitarás comprobar de nuevo el resultado enviado para asegurarte que el valor está entre esas fechas, si el menú de selección de fechas no está completamente soportado en el dispositivo del usuario.
 
