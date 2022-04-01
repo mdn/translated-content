@@ -250,7 +250,7 @@ Una manera de darle solución a este problema es usar el atributo {{htmlattrxref
 
 {{EmbedLiveSample('Handling_browser_support', 600, 100)}}
 
-Si lo intentas mandar, verás que el navegador muestra un error y destaca la entrada como inválida si tu entrada no sigue el patrón ` ####-##-##` (donde `#`son digitos del 0 al 9). Por supuesto, esto no impide a los usuarios de introducir fechas inválidas o formatos incorrectos. Así que seguimos teniendo un problema.
+Si lo intentas mandar, verás que el navegador muestra un error y destaca la entrada como inválida si tu entrada no sigue el patrón `####-##-##` (donde `#`son digitos del 0 al 9). Por supuesto, esto no impide a los usuarios de introducir fechas inválidas o formatos incorrectos. Así que seguimos teniendo un problema.
 
 ```css hidden
 span {
