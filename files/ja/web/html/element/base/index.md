@@ -21,7 +21,7 @@ translation_of: Web/HTML/Element/base
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>メタデータコンテンツ</td>
     </tr>
