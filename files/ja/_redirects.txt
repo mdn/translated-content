@@ -3309,6 +3309,7 @@
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/conflicting/Web/API/ServiceWorkerContainer/message_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/conflicting/Web/API/caches
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onmessage	/ja/docs/conflicting/Web/API/ServiceWorkerGlobalScope/message_event
+/ja/docs/Web/API/ServiceWorkerRegistration/onupdatefound	/ja/docs/Web/API/ServiceWorkerRegistration/updatefound_event
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
