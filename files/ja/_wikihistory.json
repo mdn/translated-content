@@ -21409,12 +21409,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/ServiceWorkerRegistration/onupdatefound": {
-    "modified": "2020-10-15T22:29:08.998Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/ServiceWorkerRegistration/periodicSync": {
     "modified": "2020-10-15T22:29:07.996Z",
     "contributors": [
@@ -21458,6 +21452,12 @@
     "contributors": [
       "Wind1808",
       "YuichiNukiyama"
+    ]
+  },
+  "Web/API/ServiceWorkerRegistration/updatefound_event": {
+    "modified": "2020-10-15T22:29:08.998Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "Web/API/ServiceWorkerRegistration/waiting": {
