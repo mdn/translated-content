@@ -2,88 +2,84 @@
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
 tags:
-  - '@media'
-  - CSS
-  - Reference
-  - Web
-  - prefers-color-scheme
+- '@media'
+- CSS
+- Reference
+- Web
+- media feature
+- prefers-color-scheme
+browser-compat: css.at-rules.media.prefers-color-scheme
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
-<p><strong><code>prefers-color-scheme</code></strong> <a href="/ko/docs/CSS">CSS</a> <a href="/ko/docs/Web/CSS/@media#Media_features">미디어 특성</a>은 사용자의 시스템이 라이트 테마나 다크 테마를 사용하는지 탐지하는 데에 사용됩니다.</p>
+**`prefers-color-scheme`** [CSS](/ko/docs/Web/CSS) [미디어 특성](/ko/docs/Web/CSS/@media#media_features)은 사용자의 시스템이 라이트 테마나 다크 테마를 사용하는지 탐지하는 데에 사용됩니다.
 
-<h2 id="구문">구문</h2>
+사용자는 운영체제 설정(라이트 모드 또는 다크 모드)이나 사용자 에이전트 설정에서 선호하는 테마를 나타낼 수 있습니다.
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>사용자가 시스템에 선호하는 테마를 알리지 않았음을 나타냅니다. 이 키워드는 <a href="https://drafts.csswg.org/mediaqueries-5/#boolean-context" id="ref-for-boolean-context④">boolean context</a>에서 <code>false</code>로 판정됩니다.</dd>
- <dt><code><dfn>light</dfn></code></dt>
- <dd>사용자가 시스템에 라이트 테마를 사용하는 것을 선호한다고 알렸음을 나타냅니다.</dd>
- <dt><code><dfn>dark</dfn></code></dt>
- <dd>사용자가 시스템에 다크 테마를 사용하는 것을 선호한다고 알렸음을 나타냅니다.</dd>
-</dl>
+## 구문
 
-<h2 id="예제">예제</h2>
+- `light`
+    - : 사용자가 시스템에 라이트 테마를 사용하는 것을 선호하거나 선호하는 테마를 알리지 않았음을 나타냅니다.
+- `dark`
+    - : 사용자가 시스템에 다크 테마를 사용하는 것을 선호한다고 알렸음을 나타냅니다.
 
-<p>이 예제는 검은 배경에 흰 텍스트를 가진 요소를 라이트 테마를 사용하는 사용자가 볼 경우 색을 반대로 해서 나타냅니다.</p>
+## 예제
 
-<h3 id="HTML">HTML</h3>
+요소들에게 초기 색상을 설정합니다. 이 요소들이 사용자의 선호 테마에 따라 다른 스타일로 나타나도록 할 수 있습니다.
 
-<pre class="brush: html">&lt;div class="themed"&gt;Theme&lt;/div&gt;
-</pre>
+### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<div class="day">Day (initial)</div>
+<div class="day light-scheme">Day (changes in light scheme)</div>
+<div class="day dark-scheme">Day (changes in dark scheme)</div> <br>
 
-<pre class="brush: css">.themed {
-  display: block;
-  width: 10em;
-  height: 10em;
-  background: black;
-  color: white;
+<div class="night">Night (initial)</div>
+<div class="night light-scheme">Night (changes in light scheme)</div>
+<div class="night dark-scheme">Night (changes in dark scheme)</div>
+```
+
+### CSS
+
+```css
+.day   { background: #eee; color: black; }
+.night { background: #333; color: white; }
+
+@media (prefers-color-scheme: dark) {
+  .day.dark-scheme   { background:  #333; color: white; }
+  .night.dark-scheme { background: black; color:  #ddd; }
 }
 
 @media (prefers-color-scheme: light) {
-  .themed {
-    background: white;
-    color: black;
-  }
+  .day.light-scheme   { background: white; color:  #555; }
+  .night.light-scheme { background:  #eee; color: black; }
 }
-</pre>
 
-<h3 id="Result">Result</h3>
+.day, .night {
+  display: inline-block;
+  padding: 1em;
+  width: 7em;
+  height: 2em;
+  vertical-align: middle;
+}
+```
 
-<p>{{EmbedLiveSample("예제")}}</p>
+### 결과
 
-<h2 id="명세">명세</h2>
+{{EmbedLiveSample("Examples")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>
-    <p>{{SpecName('CSS5 Media Queries', '#descdef-media-prefers-color-scheme', 'prefers-color-scheme')}}</p>
-   </td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td>초기 정의.</td>
-  </tr>
- </tbody>
-</table>
+## 명세서
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+{{Specifications}}
 
+## 브라우저 호환성
 
+{{Compat}}
 
-<p>{{Compat("css.at-rules.media.prefers-color-scheme")}}</p>
+## 같이 보기
 
-<h2 id="같이_보기">같이 보기</h2>
+- [Simulate prefers-color-scheme in Firefox](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html#view_media_rules_for_prefers-color-scheme) (Firefox Page Inspector > Examine and edit CSS)
+- [Video tutorial: Coding a Dark Mode for your Website](https://www.youtube.com/watch?v=jmepqJ5UbuM)
+- [Redesigning your product and website for dark mode](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
+- [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/), [Android](https://www.theverge.com/2019/5/7/18530599/google-android-q-features-hands-on-dark-mode-gestures-accessibility-io-2019), or [다른 플랫폼](https://support.mozilla.org/en-US/questions/1271928)에서 색상 변경하기
 
-<ul>
- <li><a href="https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode">Redesigning your product and website for dark mode</a></li>
-</ul>
-
-<div>{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}</div>
+{{QuickLinksWithSubpages("/ko/docs/Web/CSS/@media/")}}
