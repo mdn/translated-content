@@ -4,77 +4,133 @@ slug: 'Web/CSS/::-webkit-scrollbar'
 tags:
   - '::-webkit-scrollbar'
   - CSS
-  - 'CSS:WebKit Extensions'
+  - CSS Selectors
+  - CSS:WebKit Extensions
+  - Non-standard
+  - Pseudo-element
+  - Reference
+  - Selector
 translation_of: 'Web/CSS/::-webkit-scrollbar'
 ---
-<p>{{Draft()}}{{CSSRef}}{{Non-standard_header}}</p>
+{{CSSRef}}{{Non-standard_Header}}
 
-<h2 id="描述">描述</h2>
+`::-webkit-scrollbar` CSS 伪类元素会影响设置了 `overflow:scroll;` 的元素的滚动条样式。
 
-<p>这个 <font face="Consolas, Liberation Mono, Courier, monospace">::-webkit-scrollbar</font> CSS伪类选择器影响了一个元素的滚动条的样式</p>
+> **备注：** 如果没有设置 `overflow:scroll;`，元素的滚动条将不会显示。
 
-<div class="note">
-<p><code>::-webkit-scrollbar</code> 仅仅在支持<a class="external external-icon" href="https://webkit.org">WebKit</a>的浏览器<span style="font-size: 85%;"> (例如, 谷歌Chrome, 苹果Safari)可以使用</span>.</p>
-</div>
+> **备注：** `::-webkit-scrollbar` 仅在基于 [Blink](https://www.chromium.org/blink) 或 [WebKit](https://webkit.org) 的浏览器（例如, Chrome、Edge、Opera、Safari、iOS 上所有的浏览器，以及[其它基于 WebKit 的浏览器](https://zh.wikipedia.org/wiki/网页浏览器列表#基於WebKit排版引擎)）上可用。滚动条样式的标准方法可用于 {{cssxref("scrollbar-color")}} 和 {{cssxref("scrollbar-width")}}。
 
-<h2 id="CSS滚动条选择器">CSS滚动条选择器</h2>
+## CSS 滚动条选择器
 
-<p>你可以使用以下伪元素选择器去修改各式webkit浏览器的滚动条样式:</p>
+你可以使用以下伪元素选择器去修改基于 webkit 的浏览器的滚动条样式：
 
-<ul>
- <li><code>::-webkit-scrollbar</code> — 整个滚动条.</li>
- <li><code>::-webkit-scrollbar-button</code> — 滚动条上的按钮 (上下箭头).</li>
- <li><code>::-webkit-scrollbar-thumb</code> — 滚动条上的滚动滑块.</li>
- <li><code>::-webkit-scrollbar-track</code> — 滚动条轨道.</li>
- <li><code>::-webkit-scrollbar-track-piece</code> — 滚动条没有滑块的轨道部分.</li>
- <li><code>::-webkit-scrollbar-corner</code> — 当同时有垂直滚动条和水平滚动条时交汇的部分.</li>
- <li><code>::-webkit-resizer</code> — 某些元素的corner部分的部分样式(例:textarea的可拖动按钮).</li>
-</ul>
+- `::-webkit-scrollbar`——整个滚动条。
+- `::-webkit-scrollbar-button`——滚动条上的按钮（上下箭头）。
+- `::-webkit-scrollbar-thumb`——滚动条上的滚动滑块。
+- `::-webkit-scrollbar-track`——滚动条轨道。
+- `::-webkit-scrollbar-track-piece`——滚动条没有滑块的轨道部分。
+- `::-webkit-scrollbar-corner`——当同时有垂直滚动条和水平滚动条时交汇的部分。通常是浏览器窗口的右下角。
+- `::-webkit-resizer`——出现在某些元素底角的可拖动调整大小的滑块。
 
-<h2 id="语法">语法</h2>
+## 示例
 
-<pre><font face="Consolas, Liberation Mono, Courier, monospace">::-webkit-scrollbar { <em>styles here</em> }</font>
-</pre>
+### CSS
 
-<h2 id="例子">例子</h2>
-
-<pre class="brush: css">.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
-  display: block;
-  width: 10em;
-  overflow: auto;
-  height: 2em;
+```css
+.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
+  display: block;
+  width: 10em;
+  overflow: auto;
+  height: 2em;
 }
+
 .invisible-scrollbar::-webkit-scrollbar {
-  display: none;
+  display: none;
 }
 
 /* Demonstrate a "mostly customized" scrollbar
- * (won't be visible otherwise if width/height is specified) */
+ * (won't be visible otherwise if width/height is specified) */
 .mostly-customized-scrollbar::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  background-color: #aaa; /* or add it to the track */
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
 }
+
 /* Add a thumb */
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
-    background: #000;
+  background: #000;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="visible-scrollbar"&gt;Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;/div&gt;
-&lt;div class="invisible-scrollbar"&gt;Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;/div&gt;
-&lt;div class="mostly-customized-scrollbar"&gt;Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;br&gt;
-And pretty tall&lt;br&gt;
-thing with weird scrollbars.&lt;br&gt;
-Who thought scrollbars could be made weeeeird?&lt;/div&gt;
-</pre>
+### HTML
 
-<p>{{EmbedLiveSample('Example')}}</p>
+```html
+<div class="visible-scrollbar">
+  Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor.
+  Proin at nulla elementum, consectetur ex eget, commodo ante.
+  Sed eros mi, bibendum ut dignissim et, maximus eget nibh. Phasellus
+  blandit quam turpis, at mollis velit pretium ut. Nunc consequat
+  efficitur ultrices. Nullam hendrerit posuere est. Nulla libero
+  sapien, egestas ac felis porta, cursus ultricies quam. Vestibulum
+  tincidunt accumsan sapien, a fringilla dui semper in. Vivamus
+  consectetur ipsum a ornare blandit. Aenean tempus at lorem sit
+  amet faucibus. Curabitur nibh justo, faucibus sed velit cursus,
+  mattis cursus dolor. Pellentesque id pretium est. Quisque
+  convallis nisi a diam malesuada mollis. Aliquam at enim ligula.
+</div>
 
-<h2 id="参见">参见</h2>
+<div class="invisible-scrollbar">
+Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword
+</div>
 
-<ul>
- <li>WebKit论坛 <a href="https://webkit.org/blog/363/styling-scrollbars/">Styling Scrollbars</a></li>
- <li><a href="https://trac.webkit.org/export/41842/trunk/LayoutTests/scrollbars/overflow-scrollbar-combinations.html">WebKit test</a> for scrollbar styles mentioned above</li>
- <li>{{cssxref('-ms-overflow-style')}}</li>
-</ul>
+<div class="mostly-customized-scrollbar">
+Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br>
+And pretty tall<br>
+thing with weird scrollbars.<br>
+Who thought scrollbars could be made weeeeird?
+</div>
+```
+
+### 结果
+
+{{EmbedLiveSample("示例")}}
+
+## 规范
+
+不属于任何标准。
+
+## 浏览器兼容性
+
+### `::-webkit-scrollbar`
+
+{{Compat("css.selectors.-webkit-scrollbar")}}
+
+### `::-webkit-scrollbar-button`
+
+{{Compat("css.selectors.-webkit-scrollbar-button")}}
+
+### `::-webkit-scrollbar-thumb`
+
+{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
+
+### `::-webkit-scrollbar-track`
+
+{{Compat("css.selectors.-webkit-scrollbar-track")}}
+
+### `::-webkit-scrollbar-track-piece`
+
+{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
+
+### `::-webkit-scrollbar-corner`
+
+{{Compat("css.selectors.-webkit-scrollbar-corner")}}
+
+### `::-webkit-resizer`
+
+{{Compat("css.selectors.-webkit-resizer")}}
+
+## 参见
+
+- WebKit 论坛[设置滚动条样式](https://webkit.org/blog/363/styling-scrollbars/)
+- {{CSSxRef("scrollbar-width")}}
+- {{CSSxRef("scrollbar-color")}}
