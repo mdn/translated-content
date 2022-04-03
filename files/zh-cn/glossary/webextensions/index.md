@@ -11,4 +11,4 @@ WebExtensions 是一种跨浏览器系统，用于开发 Firefox 的浏览器扩
 
 ## 参见
 
-- MDN 上的[浏览器插件](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)。
+- MDN 上的[浏览器扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions)。
