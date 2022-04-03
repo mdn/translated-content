@@ -14,13 +14,13 @@ JavaScript est un langage dont le typage est _faible_ et _dynamique_. Cela signi
 
 ```js
 let toto = 42;     // toto est un nombre
-toto     = 'truc'; // toto est désormais une chaîne de caractères
-toto     = true;   // toto est désormais un booléen
+    toto = 'truc'; // toto est désormais une chaîne de caractères
+    toto = true;   // toto est désormais un booléen
 ```
 
 ## Les types de données JavaScript
 
-L'ensemble des types disponible en JavaScript se compose [_des valeurs primitives_](#les_valeurs_primitives) et [_des objets_](#es_objects).
+L'ensemble des types disponible en JavaScript se compose [_des valeurs primitives_](#les_valeurs_primitives) et [_des objets_](#les_objects).
 
 - [Les valeurs primitives](#les_valeurs_primitives) (des données immuables, représentées au niveau le plus bas du langage)
   - [Le type booléen](#le_type_booléen)
@@ -55,11 +55,11 @@ ECMAScript possède deux types numériques natifs&nbsp;: [`Number`](#le_type_nom
 
 ### Le type nombre
 
-Le type `Number` est géré pour représenter les nombres&nbsp;: [les nombres flottants à précision double, représentés sur 64 bits, selon le format IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754). Cette représentation permet de stocker des nombres décimaux entre 2^-1074 et 2^1024, mais ne permet de représenter des entiers de façon sûre qu'au sein de l'intervalle allant de -(2^53 − 1) à 2^53 − 1. Les valeurs en dehors de l'intervalle compris entre [`Number.MIN_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE) et [`Number.MAX_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE) sont automatiquement converties en `+Infinity` ou `-Infinity`, qui se comporteront de façon analogue à l'infini mathématique (voir la page sur [`Number.POSITIVE_INFINITY`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY) pour les détails et les quelques différences).
+Le type `Number` est géré pour représenter les nombres&nbsp;: [les nombres flottants à précision double, représentés sur 64 bits, selon le format IEEE 754](https://fr.wikipedia.org/wiki/IEEE_754). Cette représentation permet de stocker des nombres décimaux entre `2^-1074` et `2^1024`, mais ne permet de représenter des entiers de façon sûre qu'au sein de l'intervalle allant de `-(2^53 − 1)` à `2^53 − 1`. Les valeurs en dehors de l'intervalle compris entre [`Number.MIN_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE) et [`Number.MAX_VALUE`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE) sont automatiquement converties en `+Infinity` ou `-Infinity`, qui se comporteront de façon analogue à l'infini mathématique (voir la page sur [`Number.POSITIVE_INFINITY`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY) pour les détails et les quelques différences).
 
 > **Note :** Vous pouvez vérifier si un nombre est un nombre entier représentable de façon exacte avec une représentation en nombre flottant à double précision avec la méthode [`Number.isSafeInteger()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger). En dehors de l'intervalle entre [`Number.MIN_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) et [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER), JavaScript ne peut plus représenter un entier de façon exacte et ce sera une approximation avec un nombre flottant à double précision.
 
-Pour le type `Number`, il n'y a qu'un seul nombre qui possède plusieurs représentations&nbsp;: `0` qui est représenté comme `-0` et `+0` (avec `0` étant un synonyme pour alias for `+0`). En pratique, il n'y a presque pas de différences entre ces représentations et `+0 === -0` vaut `true`. Toutefois, on pourra remarquer la nuance lors de la division par zéro&nbsp;:
+Pour le type `Number`, il n'y a qu'un seul nombre qui possède plusieurs représentations&nbsp;: `0` qui est représenté comme `-0` et `+0` (avec `0` étant un synonyme pour `+0`). En pratique, il n'y a presque pas de différences entre ces représentations et `+0 === -0` vaut `true`. Toutefois, on pourra remarquer la nuance lors de la division par zéro&nbsp;:
 
 ```js
 > 42 / +0
@@ -70,13 +70,13 @@ Infinity
 
 Dans la plupart des cas, un nombre représente sa propre valeur et JavaScript fournit des [opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Operators).
 
-> **Note :** Bien que les opérateurs binaires _puissent_ être utilisés afin de représenter plusieurs valeurs booléennes avec un seul nombre en utilisant [un masque de bits](https://fr.wikipedia.org/wiki/Masquage)). C'est généralement une mauvaise pratique. En effet JavaScript fournit d'autres moyens pour représenter un ensemble de valeurs booléennes comme les tableaux ou l'utilisation de propriétés nommées pour stocker ces valeurs. L'utilisation d'un masque de bit dégrade également la lisibilité, la clarté et la maintenabilité du code.
+> **Note :** Bien que les opérateurs binaires _puissent_ être utilisés afin de représenter plusieurs valeurs booléennes avec un seul nombre en utilisant [un masque de bits](https://fr.wikipedia.org/wiki/Masquage), c'est généralement une mauvaise pratique. En effet, JavaScript fournit d'autres moyens pour représenter un ensemble de valeurs booléennes comme les tableaux ou l'utilisation de propriétés nommées pour stocker ces valeurs. L'utilisation d'un masque de bit dégrade également la lisibilité, la clarté et la maintenabilité du code.
 
 Il peut être nécessaire d'utiliser de telles techniques dans des environnements extrêmement contraints, pour gérer des limites de stockage local ou lorsque chaque bit transmis sur le réseau compte. Cette technique devrait uniquement être considérée comme dernière mesure pour réduire la taille.
 
 ### Le type `BigInt`
 
-Le type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) est un type numérique qui permet de représenter des entiers avec une précision arbitraire. Avec ce type, on peut donc manipuler des entiers plus grands que ceux représentables avec _Number_.
+Le type [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt) est un type numérique qui permet de représenter des entiers avec une précision arbitraire. Avec ce type, on peut donc manipuler des entiers plus grands que ceux représentables avec `Number`.
 
 Pour créer un grand entier, on ajoutera un `n` après l'entier ou on appellera le constructeur [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
 
@@ -106,9 +106,9 @@ Il n'est pas possible d'utiliser des grands entiers et des nombres de façon int
 
 [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) (pour <i lang="en">Not A Number</i> en anglais, qui signifie «&nbsp;qui n'est pas un nombre&nbsp;») est utilisée lorsque le résultat d'une opération arithmétique ne peut pas être exprimée comme un nombre. Il s'agit également de la seule valeur JavaScript qui n'est pas égale à elle-même (du fait de la norme IEEE 754).
 
-### Le type chaîne de caractères (_String_)
+### Le type chaîne de caractères (`String`)
 
-Ce type JavaScript est utilisé afin de représenter des données de texte. C'est un ensemble d'«&nbsp;éléments&nbsp;» de valeurs entières non-signées représentées sur 16 bits. Chaque élément occupe une position au sein de cette chaîne de caractères. Le premier élément est situé à l'indice 0, le deuxième à l'indice 1 et ainsi de suite. La longueur d'une chaîne de caractères correspond au nombre d'éléments qu'elle contient.
+Ce type JavaScript est utilisé afin de représenter des données de texte. C'est un ensemble d'«&nbsp;éléments&nbsp;» de valeurs entières non-signées représentées sur 16 bits. Chaque élément occupe une position au sein de cette chaîne de caractères. Le premier élément est situé à l'indice `0`, le deuxième à l'indice `1` et ainsi de suite. La longueur d'une chaîne de caractères correspond au nombre d'éléments qu'elle contient.
 
 À la différence d'autres langages (comme le C), les chaînes de caractères JavaScript sont immuables. Cela signifie qu'une fois une chaîne créée, il est impossible de la modifier.
 
@@ -125,13 +125,13 @@ En revanche, il est toujours possible de créer une autre chaîne basée sur la 
 - On peut déboguer rapidement le contenu des chaînes de caractères.
 - Les chaînes de caractères sont utilisées à de multiples endroits dans beaucoup d'API ([champs de saisie](/fr/docs/Web/API/HTMLInputElement), valeurs en [stockage local](/fr/docs/Web/API/Web_Storage_API), réponses [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) avec `responseText`, etc.).
 
-En utilisant des conventions, il peut être possible de représenter n'importe quelle donnée sous forme d'une chaîne de caractères, en revanche cela n'est souvent pas la meilleure façon. Par exemple, avec un séparateur, on pourrait émuler le comportement d'un tableau en «&nbsp;interdisant&nbsp;» que ce séparateur soit utilisé pour éléments, etc. on pourrait ensuite définir un caractère d'échappement, qui serait à son tour inutilisable dans les chaînes&nbsp;: toutes ces pseudo-conventions entraîneront de lourdes conséquences en termes de maintenance.
+En utilisant des conventions, il peut être possible de représenter n'importe quelle donnée sous forme d'une chaîne de caractères, en revanche cela n'est souvent pas la meilleure façon. Par exemple, avec un séparateur, on pourrait émuler le comportement d'un tableau en «&nbsp;interdisant&nbsp;» que ce séparateur soit utilisé pour éléments, etc. On pourrait ensuite définir un caractère d'échappement, qui serait à son tour inutilisable dans les chaînes&nbsp;: toutes ces pseudo-conventions entraîneront de lourdes conséquences en termes de maintenance.
 
 En résumé, les chaînes doivent être utilisées pour les données de texte. Pour des données plus complexes, utilisez une abstraction adéquate et analysez/parsez les chaînes que vous recevez d'autres API.
 
 ### Le type symbole
 
-Un symbole est une valeur primitive **unique** et **immuable** pouvant être utilisée comme clé pour propriété d'un objet (voir ci-après). Dans d'autres langages de programmation, les symboles sont appelés atomes. 
+Un symbole est une valeur primitive **unique** et **immuable** pouvant être utilisée comme clé pour propriété d'un objet (voir ci-après). Dans d'autres langages de programmation, les symboles sont appelés atomes.
 
 Pour plus de détails, voir les pages [du glossaire](/fr/docs/Glossary/Symbol) et de [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) JavaScript.
 
@@ -141,9 +141,9 @@ En informatique, un objet est une valeur conservée en mémoire à laquelle on f
 
 ### Propriétés
 
-En JavaScript, les objets peuvent être considérés comme des collections de propriétés. En utilisant [un littéral objet](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), il est possible d'initialiser un ensemble limité de propriétés&nbsp;; d'autres propriétés peuvent ensuite être ajoutées et/ou retirées. Les valeurs des propriétés peuvent être de n'importe quel type, y compris des objets. Cela permet de construire des structures de données complexes. Les propriétés sont identifiées grâce à une «&nbsp;clé&nbsp;». Une clé peut être une chaîne de caractères ou un symbole.
+En JavaScript, les objets peuvent être considérés comme des collections de propriétés. En utilisant [un littéral objet](/fr/docs/Web/JavaScript/Guide/Grammar_and_types#les_littéraux_dobjets), il est possible d'initialiser un ensemble limité de propriétés&nbsp;; d'autres propriétés peuvent ensuite être ajoutées et/ou retirées. Les valeurs des propriétés peuvent être de n'importe quel type, y compris des objets. Cela permet de construire des structures de données complexes. Les propriétés sont identifiées grâce à une «&nbsp;clé&nbsp;». Une clé peut être une chaîne de caractères ou un symbole.
 
-Il existe deux types de propriétés qui ont certains attributs : des propriétés de données (_data property_) et des propriétés d'accesseur.
+Il existe deux types de propriétés qui ont certains attributs&nbsp;: des [propriétés de _données_](#propriétés_de_données) (<i lang="en">data property</i>) et des [propriétés d'_accesseur_](#propriétés_daccesseur).
 
 > **Note :** Chaque propriété est décrite par des *attributs* correspondants. Ceux-ci sont utilisés par le moteur JavaScript et ne peuvent pas être manipulés depuis le code. Pour les identifier, les attributs sont indiqués entre double crochets.
 >
@@ -152,7 +152,6 @@ Il existe deux types de propriétés qui ont certains attributs : des propriét�
 #### Propriétés de données
 
 Elles associent une clé avec une valeur et possèdent les attributs suivants&nbsp;:
-
 
 <table class="standard-table">
   <caption>
@@ -168,45 +167,45 @@ Elles associent une clé avec une valeur et possèdent les attributs suivants&nb
   </thead>
   <tbody>
     <tr>
-      <td>[[Value]]</td>
+      <td><code>[[Value]]</code></td>
       <td>N'importe quel type JavaScript</td>
       <td>La valeur obtenue lorsqu'on accède à la propriété.</td>
       <td><code>undefined</code></td>
     </tr>
     <tr>
-      <td>[[Writable]]</td>
+      <td><code>[[Writable]]</code></td>
       <td>Booléen</td>
       <td>
-        Si cet attribut vaut <code>false</code>, l'attribut [[Value]] de la propriété ne pourra pas être changé.
+        Si cet attribut vaut <code>false</code>, l'attribut <code>[[Value]]</code> de la propriété ne pourra pas être changé.
       </td>
       <td><code>false</code></td>
     </tr>
     <tr>
-      <td>[[Enumerable]]</td>
+      <td><code>[[Enumerable]]</code></td>
       <td>Booléen</td>
       <td>
         <p>
-          Si cet attribut vaut <code>true</code>, la propriété sera énumérée dans les boucles <a href="/fr/docs/Web/JavaScript/Reference/Statements/for...in"><code>for...in</code></a>. Voir aussi <a href="/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">rattachement et caractère énumérable des propriétés</a>.
+          Si cet attribut vaut <code>true</code>, la propriété sera énumérée dans les boucles <a href="/fr/docs/Web/JavaScript/Reference/Statements/for...in"><code>for…in</code></a>. Voir aussi <a href="/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Rattachement et caractère énumérable des propriétés</a>.
         </p>
       </td>
       <td><code>false</code></td>
     </tr>
     <tr>
-      <td>[[Configurable]]</td>
+      <td><code>[[Configurable]]</code></td>
       <td>Booléen</td>
       <td>
-        Si cet attribut vaut <code>false</code>, la propriété ne peut pas être supprimée, ne peut pas être changée en propriété d'accesseur et les attributs en dehors de [[Value]] et [[Writable]] ne pourront pas être changés.
+        Si cet attribut vaut <code>false</code>, la propriété ne peut pas être supprimée, ne peut pas être changée en propriété d'accesseur et les attributs en dehors de <code>[[Value]]</code> et <code>[[Writable]]</code> ne pourront pas être changés.
       </td>
       <td><code>false</code></td>
     </tr>
   </tbody>
 </table>
 
-| Attribut   | Type    | Description                                           |
-| ---------- | ------- | ----------------------------------------------------- |
-| Read-only  | Booléen | État symétrique pour l'attribut ES5 [[Writable]].     |
-| DontEnum   | Booléen | État symétrique pour l'attribut ES5 [[Enumerable]].   |
-| DontDelete | Booléen | État symétrique pour l'attribut ES5 [[Configurable]]. |
+| Attribut     | Type    | Description                                             |
+| ------------ | ------- | ------------------------------------------------------- |
+| `Read-only`  | Booléen | État symétrique pour l'attribut ES5 `[[Writable]]`.     |
+| `DontEnum`   | Booléen | État symétrique pour l'attribut ES5 `[[Enumerable]]`.   |
+| `DontDelete` | Booléen | État symétrique pour l'attribut ES5 `[[Configurable]]`. |
 
 #### Propriétés d'accesseur
 
@@ -216,14 +215,14 @@ Ces propriétés associent une clé avec une ou deux fonctions accesseur et muta
 
 Elles possèdent les attributs suivants&nbsp;:
 
-| Attribut         | Type                               | Description                                                                                                                                                                                                                                            | Valeur par défaut |
-| ---------------- | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
-| [[Get]]          | Un objet `Function` ou `undefined` | La fonction qui est appelée sans argument afin de récupérer la valeur de la propriété quand on souhaite y accéder. Voir aussi la page sur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get).                                                    | `undefined`       |
-| [[Set]]          | Un objet `Function` ou `undefined` | La fonction, appelée avec un argument qui contient la valeur qu'on souhaite affecter à la valeur et qui est exécutée à chaque fois qu'on souhaite modifier la valeur. Voir aussi la page sur [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set). | `undefined`       |
-| [[Enumerable]]   | Booléen                            | S'il vaut `true`, la propriété sera listée dans les boucles [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in).                                                                                                                     | `false`           |
-| [[Configurable]] | Booléen                            | S'il vaut `false`, la propriété ne pourra pas être supprimée et ne pourra pas être transformée en une propriété de données.                                                                                                                            | `false`           |
+| Attribut           | Type                               | Description                                                                                                                                                                                                                                            | Valeur par défaut |
+| ------------------ | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- |
+| `[[Get]]`          | Un objet `Function` ou `undefined` | La fonction qui est appelée sans argument afin de récupérer la valeur de la propriété quand on souhaite y accéder. Voir aussi la page sur [`get`](/fr/docs/Web/JavaScript/Reference/Functions/get).                                                    | `undefined`       |
+| `[[Set]]`          | Un objet `Function` ou `undefined` | La fonction, appelée avec un argument qui contient la valeur qu'on souhaite affecter à la valeur et qui est exécutée à chaque fois qu'on souhaite modifier la valeur. Voir aussi la page sur [`set`](/fr/docs/Web/JavaScript/Reference/Functions/set). | `undefined`       |
+| `[[Enumerable]]`   | Booléen                            | S'il vaut `true`, la propriété sera listée dans les boucles [`for…in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in).                                                                                                                     | `false`           |
+| `[[Configurable]]` | Booléen                            | S'il vaut `false`, la propriété ne pourra pas être supprimée et ne pourra pas être transformée en une propriété de données.                                                                                                                            | `false`           |
 
-### Les objets « normaux » et les fonctions
+### Les objets «&nbsp;normaux&nbsp;» et les fonctions
 
 Un objet JavaScript est un ensemble de correspondances entre des _clés_ et des _valeurs_. Les clés sont représentées par des chaînes ou des symboles ([`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol)). Les valeurs peuvent être de n'importe quel type. Grâce à cela, les objets peuvent, naturellement, être utilisés comme [tables de hachage](https://fr.wikipedia.org/wiki/Table_de_hachage).
 
@@ -233,7 +232,7 @@ Les fonctions sont des objets classiques à la seule différence qu'on peut les 
 
 Lorsqu'on souhaite représenter des dates, il est tout indiqué d'utiliser le type utilitaire natif [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) de JavaScript.
 
-### Les collections indexées&nbsp;: les tableaux (_Arrays_) et les tableaux typés (_Typed Arrays_)
+### Les collections indexées&nbsp;: les tableaux (<i lang="en">Arrays</i>) et les tableaux typés (<i lang="en">Typed Arrays</i>)
 
 [Les tableaux](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) (ou <i lang="en">Arrays</i> en anglais) sont des objets natifs qui permettent d'organiser des valeurs numérotées et qui ont une relation particulière avec la propriété `length`.
 
@@ -347,20 +346,19 @@ De plus, les tableaux héritent de `Array.prototype` qui permet de bénéficier 
   </tbody>
 </table>
 
-
-### Les collections avec clés&nbsp;: Maps, Sets, WeakMaps, WeakSets
+### Les collections avec clés&nbsp;: `Map`, `Set`, `WeakMap`, `WeakSet`
 
 Ces structures de données utilisent des clés pour référencer des objets. Elles ont été introduites avec ECMAScript 2015. [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) et [`WeakSet`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) représentent des ensembles d'objets, [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) et [`WeakMap`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) associent une valeur à un objet.
 
 Il est possible d'énumérer les valeurs contenues dans un objet `Map` mais pas dans un objet `WeakMap`. Les `WeakMap` quant à eux permettent certaines optimisations dans la gestion de la mémoire et le travail du ramasse-miettes.
 
-Il est possible d'implémenter des objets `Map` et `Set` grâce à ECMAScript 5. Cependant, comme les objets ne peuvent pas être comparés (avec une relation d'ordre par exemple), la complexité obtenue pour rechercher un élément serait nécessairement linéaire. Les implémentations natives (y compris celle des WeakMaps) permettent d'obtenir des performances logarithmiques voire constantes.
+Il est possible d'implémenter des objets `Map` et `Set` grâce à ECMAScript 5. Cependant, comme les objets ne peuvent pas être comparés (avec une relation d'ordre par exemple), la complexité obtenue pour rechercher un élément serait nécessairement linéaire. Les implémentations natives (y compris celle des `WeakMap`) permettent d'obtenir des performances logarithmiques voire constantes.
 
 Généralement, si on voulait lier des données à un nœud DOM, on pouvait utiliser les attributs `data-*` ou définir les propriétés à un même l'objet. Malheureusement, cela rendait les données disponibles à n'importe quel script fonctionnant dans le même contexte. Les objets `Map` et `WeakMap` permettent de gérer plus simplement une liaison «&nbsp;privée&nbsp;» entre des données et un objet.
 
 ### Les données structurées&nbsp;: JSON
 
-JSON (JavaScript Object Notation) est un format d'échange de données léger, dérivé de JavaScript et utilisé par plusieurs langages de programmation. JSON permet ainsi de construire des structures de données universelles pouvant être échangées entre programmes.
+JSON (<i lang="en">JavaScript Object Notation</i>) est un format d'échange de données léger, dérivé de JavaScript et utilisé par plusieurs langages de programmation. JSON permet ainsi de construire des structures de données universelles pouvant être échangées entre programmes.
 
 Pour plus d'informations, voir [la page du glossaire](/fr/docs/Glossary/JSON) et [la page sur `JSON`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON).
 
@@ -370,7 +368,7 @@ JavaScript possède une bibliothèque standard d'objets natifs. Veuillez lire la
 
 ## Déterminer le type des objets grâce à l'opérateur `typeof`
 
-L'opérateur `typeof` peut vous aider à déterminer le type d'une variable. Pour plus d'informations et sur les cas particuliers, voir la page de la référence sur [cet opérateur](/fr/docs/Web/JavaScript/Reference/Operators/typeof).
+L'opérateur `typeof` peut vous aider à déterminer le type d'une variable. Pour plus d'informations et sur les cas particuliers, voir la page de référence sur [cet opérateur](/fr/docs/Web/JavaScript/Reference/Operators/typeof).
 
 ## Voir aussi
 
