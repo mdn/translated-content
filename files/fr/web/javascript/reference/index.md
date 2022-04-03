@@ -134,7 +134,7 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 ## Instructions
 
-[Instructions et déclarations JavaScript](/fr/docs/Web/JavaScript/Reference/Statements)
+[Instructions et déclarations JavaScript](/fr/docs/Web/JavaScript/Reference/Statements).
 
 ### Contrôle du flux d'exécution
 
@@ -206,7 +206,7 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 - [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new%2Etarget)
 - [`import.meta`](/fr/docs/Web/JavaScript/Reference/Statements/import%2Emeta)
 - [`super`](/fr/docs/Web/JavaScript/Reference/Operators/super)
-- [`...obj`](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [`…obj`](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 
 ### Incrément & décrément
 
@@ -238,10 +238,10 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 - [`in`](/fr/docs/Web/JavaScript/Reference/Operators/in)
 - [`instanceof`](/fr/docs/Web/JavaScript/Reference/Operators/instanceof)
-- [`&lt;`](/fr/docs/Web/JavaScript/Reference/Operators/Less_than)
-- [`&gt;`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [`&lt;=`](/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
-- [`&gt;=`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [`<`](/fr/docs/Web/JavaScript/Reference/Operators/Less_than)
+- [`>`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [`<=`](/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [`>=`](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
 
 ### Opérateurs d'égalité
 
@@ -252,19 +252,19 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 
 ### Opérateurs de décalage binaire
 
-- [`&lt;&lt;`](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift)
-- [`&gt;&gt;`](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift)
-- [`&gt;&gt;&gt;`](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+- [`<<`](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift)
+- [`>>`](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift)
+- [`>>>`](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
 
 ### Opérateurs logiques binaires
 
-- [`&amp;`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
+- [`&`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
 - [`|`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
 - [`^`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
 
 ### Opérateurs logiques
 
-- [`&amp;&amp;`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+- [`&&`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND)
 - [`||`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR)
 - [`??`](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 
@@ -281,13 +281,13 @@ Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le l
 - [`%=`](/fr/docs/Web/JavaScript/Reference/Operators/Remainder_assignment)
 - [`+=`](/fr/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
 - [`-=`](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment)
-- [`&lt;&lt;=`](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
-- [`&gt;&gt;=`](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
-- [`&gt;&gt;&gt;=`](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
-- [`&amp;=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [`<<=`](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
+- [`>>=`](/fr/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)
+- [`>>>=`](/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)
+- [`&=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
 - [`^=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment)
 - [`|=`](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
-- [`&amp;&amp;=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
+- [`&&=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
 - [`||=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
 - [`??=`](/fr/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)
 - [`[a, b] = [1, 2]`](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
