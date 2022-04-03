@@ -98,7 +98,7 @@ Une réponse est normalement mise en cache par le navigateur si
 - `no-cache`
   - : Indique de renvoyer systématiquement la requête au serveur et ne servir une éventuelle version en cache que dans le cas où le serveur le demande.
 - `no-store`
-  - : La réponse **ne** peut être stockée dans _aucune_ mémoire cache. Bien que d'autres directives puissent être définies, C'est la seule directive dont vous avez besoin pour empêcher le réponses en cache sur les navigateurs modernes. `max-age=0` **est déjà implicite**. **La définition de la directive** `must-revalidate` **n'a pas de sens** car pour passer la revalidation, vous devez stocker la réponse dans un cache, ce que n'empêche `no-store`.**Ne pas copier-coller les spécifications Internet-Explorer** `pre-check=0,post-check=0` Si vous le voyez en ligne car il est entièrement ignoré, ce que confirme le [tweet du développeur Edge](https://twitter.com/ericlaw/status/685201170260819968).
+  - : La réponse **ne** peut être stockée dans _aucune_ mémoire cache. Bien que d'autres directives puissent être définies, c'est la seule directive dont vous avez besoin pour empêcher les réponses en cache sur les navigateurs modernes. `max-age=0` **est déjà implicite**. **La définition de la directive** `must-revalidate` **n'a pas de sens**, car pour passer la revalidation, vous devez stocker la réponse dans un cache, ce qu'empêche `no-store`. **Ne pas copier-coller les spécifications d'Internet Explorer** `pre-check=0,post-check=0` si vous le voyez en ligne, car il est entièrement ignoré, ce que confirme le [tweet du développeur Edge](https://twitter.com/ericlaw/status/685201170260819968).
 
 ### Expiration
 
