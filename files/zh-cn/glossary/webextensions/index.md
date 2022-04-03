@@ -1,5 +1,5 @@
 ---
-title: WebExtensions
+title: 浏览器扩展
 slug: Glossary/WebExtensions
 tags:
   - CodingScripting
