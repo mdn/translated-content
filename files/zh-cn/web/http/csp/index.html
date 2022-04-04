@@ -84,7 +84,7 @@ translation_of: Web/HTTP/CSP
 
 <pre>Content-Security-Policy: default-src https://onlinebanking.jumbobank.com</pre>
 
-<p>该服务器仅允许通过HTTPS方式并仅从onlinebanking.jumbobank.com域名来访问文档。</p>
+<p>该服务器仅允许通过HTTPS方式并仅从<code>onlinebanking.jumbobank.com</code>域名来访问文档。</p>
 
 <h3 id="示例_5">示例 5</h3>
 
@@ -133,7 +133,7 @@ translation_of: Web/HTTP/CSP
 
 <h2 id="违例报告样本">违例报告样本</h2>
 
-<p>我们假设页面位于 <code><a href="http://example.com/signup.html" rel="freelink">http://example.com/signup.html</a>。</code>它使用如下策略，该策略禁止任何资源的加载，除了来自<code>cdn.example.com的样式表。</code></p>
+<p>我们假设页面位于 <code>http://example.com/signup.html</code>。它使用如下策略，该策略禁止任何资源的加载，除了来自<code>cdn.example.com的样式表。</code></p>
 
 <pre>Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
 
@@ -150,7 +150,7 @@ translation_of: Web/HTTP/CSP
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<p>你能看出其中错误吗？样式表仅允许加载自<code>cdn.example.com，</code>然而该页面企图从自己的源 (<code>http://example.com</code>)加载。当该文档被访问时，一个兼容CSP的浏览器将以POST请求的形式发送违规报告到 <code><a href="http://example.com/_/csp-reports" rel="freelink">http://example.com/_/csp-reports</a></code>，内容如下：</p>
+<p>你能看出其中错误吗？样式表仅允许加载自<code>cdn.example.com，</code>然而该页面企图从自己的源 (<code>http://example.com</code>)加载。当该文档被访问时，一个兼容CSP的浏览器将以POST请求的形式发送违规报告到 <code>http://example.com/_/csp-reports</code>，内容如下：</p>
 
 <pre><code>{
   "csp-report": {
@@ -162,7 +162,7 @@ translation_of: Web/HTTP/CSP
   }
 }</code></pre>
 
-<p>如你所见，该报告在<code>blocked-uri字段</code>中包含了违规资源的完整路径 ，但情况并非总是如此。比如，当signup.html试图从   <a href="http://anothercdn.example.com/stylesheet.css"><code>http://anothercdn.example.com/stylesheet.css</code></a>加载CSS时，浏览器将不会包含完整路径，而只会保留源路径 (<code>http://anothercdn.example.com</code>)。CSP技术规范对此古怪行为<a href="http://www.w3.org/TR/CSP/#violation-reports">给出了解释</a>。大体上说，这样是为了防止泄露跨域资源的敏感信息。</p>
+<p>如你所见，该报告在<code>blocked-uri字段</code>中包含了违规资源的完整路径 ，但情况并非总是如此。比如，当signup.html试图从   <a href="http://anothercdn.example.com/stylesheet.css"><code>http://anothercdn.example.com/stylesheet.css</code></a>加载CSS时，浏览器将不会包含完整路径，而只会保留源路径 (<code>http://anothercdn.example.com</code>)。CSP技术规范小组对此古怪行为给出了<a href="http://www.w3.org/TR/CSP/#violation-reports">解释</a>。大体上说，这样是为了防止泄露跨域资源的敏感信息。</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
@@ -174,7 +174,5 @@ translation_of: Web/HTTP/CSP
  <li>{{HTTPHeader("Content-Security-Policy")}}</li>
  <li>{{HTTPHeader("Content-Security-Policy-Report-Only")}}</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security in WebExtensions</a></li>
- <li>
-  <p><a href="https://developer.mozilla.org/en-US/docs/Tools/GCLI/Display_security_and_privacy_policies">Display security and privacy policies In Firefox Developer Tools</a></p>
- </li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Tools/GCLI/Display_security_and_privacy_policies">Display security and privacy policies In Firefox Developer Tools</a></li>
 </ul>
