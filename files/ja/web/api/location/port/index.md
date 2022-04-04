@@ -23,7 +23,7 @@ object.port = string;
 ## 例
 
 ```js
-// Let's an <a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/Location.port"> element be in the document
+// Let's an <a id="myAnchor" href="https://developer.mozilla.org:443/ja/docs/Location.port"> element be in the document
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.port; // Returns:'443'
 ```

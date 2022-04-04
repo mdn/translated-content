@@ -23,7 +23,7 @@ object.protocol = string;
 ## 例
 
 ```js
-// Let's an <a id="myAnchor" href="https://developer.mozilla.org/en-US/Location.protocol"> element be in the document
+// Let's an <a id="myAnchor" href="https://developer.mozilla.org/ja/Location.protocol"> element be in the document
 var anchor = document.getElementById("myAnchor");
 var result = anchor.protocol; // Returns:'https:'
 ```

@@ -25,7 +25,7 @@ object.password = string;
 ## 例
 
 ```js
-// Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/location.username"> be in the document
+// Let's <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/ja/docs/location.username"> be in the document
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.password; // Returns:'flabada'
 ```

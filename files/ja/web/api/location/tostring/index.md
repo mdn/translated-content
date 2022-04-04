@@ -23,9 +23,9 @@ string = object.toString();
 ## 例
 
 ```js
-// 文書内に <a id="myAnchor" href="/en-US/docs/Location/toString"> 要素があると想像してください
+// 文書内に <a id="myAnchor" href="/ja/docs/Location/toString"> 要素があると想像してください
 var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // 返値: 'https://developer.mozilla.org/en-US/docs/Location/toString'
+var result = anchor.toString(); // 返値: 'https://developer.mozilla.org/ja/docs/Location/toString'
 ```
 
 ## 仕様書
