@@ -49,7 +49,7 @@ let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.secon
 
 <p>Você pode usar o encadeamento opcional ao tentar chamar um método que pode não existir. Isso pode auxiliar, por exemplo, ao utilizar uma API em que o método está indisponível, seja pela época da implementação ou por causa de uma funcionalidade que ainda não está disponível no dispositivo do usuário.</p>
 
-<p>Usar encadeamento opcional com chamadas de função faz com que a expressão automaticamente retorne <code>undefined</code> ai invés de lançar uma exceção se o método não é encontrado:</p>
+<p>Usar encadeamento opcional com chamadas de função faz com que a expressão automaticamente retorne <code>undefined</code> ao invés de lançar uma exceção se o método não é encontrado:</p>
 
 <pre class="brush: js notranslate">let result = someInterface.customMethod?.();</pre>
 
