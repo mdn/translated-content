@@ -1,75 +1,72 @@
 ---
-title: window.crypto
+title: self.crypto
 slug: Web/API/crypto_property
 tags:
   - API
+  - Crypto
+  - 暗号技術
+  - エンコーディング
+  - 暗号化
   - HTML DOM
-  - Property
-  - Reference
-  - Window
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+  - セキュリティ
+browser-compat: api.crypto
 translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>Window.crypto</code> 読み取り専用プロパティは、グローバルオブジェクトに関連付けられた {{domxref("Crypto")}} オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。 {{domxref("Window.crypto")}} プロパティ自体は読み取り専用ですが、そのメソッドすべて(加えて子オブジェクトのメソッドと {{domxref("SubtleCrypto")}} )は読み取り専用では有りません。故に polyfill による攻撃に対し脆弱です。</p>
+グローバルの **`crypto`** プロパティは読み取り専用で、グローバルオブジェクトに関連付けられた {{domxref("Crypto")}} オブジェクトを返します。このオブジェクトは、ウェブページが暗号に関連したサービスにアクセスできるようにします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+このプロパティ自体は読み取り専用ですが、そのメソッドすべて（加えて子オブジェクトのメソッドと {{domxref("SubtleCrypto")}}）は読み取り専用ではありません。そのため{{glossary("polyfill", "ポリフィル")}}による攻撃には脆弱です。
 
-<pre class="syntaxbox">var <em>cryptoObj</em> = window.crypto || window.msCrypto; // for IE 11
-</pre>
+`crypto` はすべてのウィンドウで使用できますが、返される `Crypto` オブジェクトは安全でないコンテキストで使用できる機能は 1 つしかありません。 {{domxref("Crypto.getRandomValues", "getRandomValues()")}} メソッドです。一般的に、この API は安全なコンテキストでのみ使用する必要があります。
 
-<h2 id="Example" name="Example">例</h2>
+## 構文
 
-<h4 id="domxref(Window.crypto)_プロパティを使用して_getRandomValues()_メソッドにアクセスする">{{domxref("Window.crypto")}} プロパティを使用して <a href="/ja/docs/Web/API/RandomSource/getRandomValues">getRandomValues()</a> メソッドにアクセスする</h4>
+{{domxref("Crypto")}} インターフェイスのインスタンスで、一般用途の暗号技術と強力な乱数生成器を提供します。
 
-<h3 id="JavaScript" name="JavaScript">JavaScript</h3>
+## 例
 
-<pre class="brush: js">genRandomNumbers = function getRandomNumbers() {
-  var array = new Uint32Array(10);
-  window.crypto.getRandomValues(array);
+この例では、 `crypto` プロパティを使用して {{domxref("Crypto.getRandomValues", "getRandomValues()")}} メソッドへアクセスします。
 
-  var randText = document.getElementById("myRandText");
-  randText.innerHTML = "The random numbers are: "
-  for (var i = 0; i &lt; array.length; i++) {
-    randText.innerHTML += array[i] + " ";
+### JavaScript
+
+```js
+genRandomNumbers = function getRandomNumbers() {
+  const array = new Uint32Array(10);
+  crypto.getRandomValues(array);
+
+  const randText = document.getElementById("myRandText");
+  randText.textContent = "乱数: "
+  for (let i = 0; i < array.length; i++) {
+    randText.textContent += array[i] + " ";
   }
-}</pre>
+}
+```
 
-<h3 id="HTML" name="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="myRandText"&gt;The random numbers are: &lt;/p&gt;
-&lt;button type="button" onClick='genRandomNumbers()'&gt;Generate 10 random numbers&lt;/button&gt;</pre>
+```html
+<p id="myRandText">乱数: </p>
+<button type="button" onClick='genRandomNumbers()'>10 個の乱数を生成</button>
+```
 
-<h3 id="Result" name="Result">実行結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{EmbedLiveSample('Example')}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">策定状況</th>
-   <th scope="col">備考</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Web Crypto API", "#dfn-GlobalCrypto", "Window.crypto")}}</td>
-   <td>{{Spec2("Web Crypto API")}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.Window.crypto")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{domxref("Window")}} グローバルオブジェクト</li>
-</ul>
+- {{domxref("Window")}} グローバルオブジェクト
+- {{domxref("Crypto")}} インターフェイス
