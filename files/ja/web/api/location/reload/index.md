@@ -1,57 +1,46 @@
 ---
-title: Location.reload()
+title: location.reload()
 slug: Web/API/Location/reload
 tags:
   - API
   - HTML DOM
   - Location
-  - Method
-  - Reference
   - メソッド
+  - リファレンス
+browser-compat: api.Location.reload
 translation_of: Web/API/Location/reload
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><span class="seoSummary"><code><strong>Location.reload()</strong></code> メソッドは、再読み込みボタンのように現在の URL を再読み込みします。</span></p>
+**`location.reload()`** メソッドは、再読み込みボタンのように現在の URL を再読み込みします。
 
-<p>再読み込みがブロックされ、 <code>SECURITY_ERROR</code> {{domxref("DOMException")}} が発生する可能性があります。これは、<code>Location.reload()</code> を呼び出すスクリプトの{{Glossary("origin", "オリジン")}}が、 {{domxref("Location")}} オブジェクトを保持するページのオリジンと異なる場合に発生します。詳細については、<a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a>を参照してください。</p>
+再読み込みはブロックされ、 `SECURITY_ERROR` の {{domxref("DOMException")}} が発生する可能性があります。これは、 `location.reload()` を呼び出すスクリプトの{{Glossary("origin", "オリジン")}}が、 {{domxref("Location")}} オブジェクトを保持するページのオリジンと異なる場合に発生します。詳細については、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>location</em>.reload();
-</pre>
+```js
+location.reload();
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## location.reload() には引数がない
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#dom-location-reload", "Location.reload()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName("HTML5 W3C")}} からの変更はありません。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#dom-location-reload", "Location.reload()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+Firefox は標準外の[論理値の `forceGet` 引数](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551) を `location.reload()` で対応しており、 Firefox にキャッシュをバイパスして現在の文書を強制的に再読み込みするように指示することができます。しかし、他のすべてのブラウザーでは、`location.reload()` の呼び出しで指定した引数は無視され、いかなる効果も持ちません。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+しかし、すべてのブラウザーで強制再読み込みの効果が発生することを前提に書かれた既存のコードで `location.reload(true)` のインスタンスに出会うことがあるかもしれません。 GitHub で "`location.reload(true)`" を検索すると、[数十万件の結果](https://github.com/search?q=%22location.reload%28true%29%22&type=code)が得られます。ということは、既存のコードの中にもそれがあるものがたくさんあるのです。
 
-<p>{{Compat("api.Location.reload")}}</p>
+その歴史は、 Netscape Navigator のある版で対応が追加され、それが最終的に Firefox で取り上げられたようです。そして、あるとき W3C Web APIs Working Group が `location.reload()` の仕様に追加することを検討するための[課題を取り上げました](https://www.w3.org/2005/06/tracker/webapi/issues/69)。しかし、実際に追加されることはありませんでした。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+つまり、論理値の引数は現在の `location.reload()` の仕様には含まれていませんし、実際、これまでに発表された `location.reload()` の仕様には含まれていません。
 
-<ul>
- <li>所属する {{domxref("Location")}} インターフェイス</li>
- <li>同様のメソッド: {{domxref("Location.assign()")}} と {{domxref("Location.replace()")}}</li>
-</ul>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- 所属先の {{domxref("Location")}} インターフェイス
+- 同様のメソッド: {{domxref("Location.assign()")}} および {{domxref("Location.replace()")}}
