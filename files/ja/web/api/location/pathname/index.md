@@ -23,9 +23,9 @@ object.pathname = string;
 ## 例
 
 ```js
-// Let's an <a id="myAnchor" href="/en-US/docs/Location.pathname"> element be in the document
+// Let's an <a id="myAnchor" href="/ja/docs/Location.pathname"> element be in the document
 var anchor = document.getElementById("myAnchor");
-var result = anchor.pathname; // Returns:'/en-US/docs/Location.pathname'
+var result = anchor.pathname; // Returns:'/ja/docs/Location.pathname'
 ```
 
 ## 仕様書

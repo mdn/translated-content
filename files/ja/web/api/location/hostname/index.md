@@ -24,7 +24,7 @@ object.hostname = string;
 
 ```js
 var anchor = document.createElement("a");
-anchor.href = "https://developer.mozilla.org:4097/en-US/docs/Location.hostname";
+anchor.href = "https://developer.mozilla.org:4097/ja/docs/Location.hostname";
 
 console.log(anchor.hostname);  // developer.mozilla.org
 ```
