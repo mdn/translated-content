@@ -11517,12 +11517,6 @@
       "rtf-const"
     ]
   },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2019-03-23T22:58:29.697Z",
-    "contributors": [
-      "alexismaster"
-    ]
-  },
   "Web/API/WindowEventHandlers/onpopstate": {
     "modified": "2020-10-15T21:34:09.985Z",
     "contributors": [
@@ -24239,6 +24233,12 @@
     "modified": "2020-11-17T12:45:18.585Z",
     "contributors": [
       "venanen"
+    ]
+  },
+  "conflicting/Web/API/Window/hashchange_event": {
+    "modified": "2019-03-23T22:58:29.697Z",
+    "contributors": [
+      "alexismaster"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {

@@ -1,47 +1,41 @@
 ---
 title: WindowEventHandlers.onhashchange
-slug: Web/API/WindowEventHandlers/onhashchange
-tags:
-  - HTML-DOM
-  - JavaScript
-  - Propiedades
-  - Referencia
-  - WindowEventHandlers
-  - eventos
+slug: conflicting/Web/API/Window/hashchange_event
 translation_of: Web/API/WindowEventHandlers/onhashchange
+original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
 <div>
 <div>{{APIRef("HTML DOM")}}</div>
 </div>
 
-<p>El evento <strong>hashchange</strong> se dispara cuando la almohadilla ha cambiado (ver {{domxref("Window.location", "location.hash")}}).</p>
+<p>Событие <strong>hashchange</strong> происходит когда изменяется hash (смотри {{domxref("Window.location", "location.hash")}}).</p>
 
-<h2 id="Sintaxis">Sintaxis</h2>
+<h2 id="Синтаксис">Синтаксис</h2>
 
 <pre class="syntaxbox">window.onhashchange = funcRef;
 </pre>
 
-<p><strong>ó</strong></p>
+<p><strong>или</strong></p>
 
 <pre class="syntaxbox">&lt;body onhashchange="funcRef();"&gt;
 </pre>
 
-<p><strong>ó</strong></p>
+<p><strong>или</strong></p>
 
 <pre class="syntaxbox">window.addEventListener("hashchange", funcRef, false);
 </pre>
 
-<h3 id="Parámetros">Parámetros</h3>
+<h3 id="Параметры">Параметры</h3>
 
 <dl>
  <dt><code>funcRef</code></dt>
- <dd>Una referencia a una función.</dd>
+ <dd>Ссылка на функцию.</dd>
 </dl>
 
-<h2 id="Ejemplo">Ejemplo</h2>
+<h2 id="Пример">Пример</h2>
 
 <pre class="brush:js">if ("onhashchange" in window) {
-    alert("¡El navegador soporta el evento hashchange!");
+    alert("The browser supports the hashchange event!");
 }
 
 function locationHashChanged() {
@@ -53,38 +47,38 @@ function locationHashChanged() {
 window.onhashchange = locationHashChanged;
 </pre>
 
-<h2 id="El_evento_hashchange">El evento hashchange</h2>
+<h2 id="The_hashchange_event">The hashchange event</h2>
 
-<p>El evento <code>hashchange</code> enviado, tiene los siguientes campos:</p>
+<p>The dispatched <code>hashchange</code> event has the following fields:</p>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <td class="header">Campo</td>
-   <td class="header">Tipo</td>
-   <td class="header">Descripción</td>
+   <td class="header">Field</td>
+   <td class="header">Type</td>
+   <td class="header">Description</td>
   </tr>
   <tr>
    <td><code>newURL</code> {{gecko_minversion_inline("6.0")}}</td>
    <td><code>DOMString</code></td>
-   <td>La URL nueva hacia la cual la ventana está navegando.</td>
+   <td>The new URL to which the window is navigating.</td>
   </tr>
   <tr>
    <td><code>oldURL</code> {{gecko_minversion_inline("6.0")}}</td>
    <td><code>DOMString</code></td>
-   <td>La URL anterior desde la cual la ventana navegó.</td>
+   <td>The previous URL from which the window was navigated.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Especificaciones">Especificaciones</h2>
+<h2 id="Specifications">Specifications</h2>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Especificacion</th>
-   <th scope="col">Estado</th>
-   <th scope="col">Comentario</th>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
   </tr>
  </thead>
  <tbody>
@@ -106,6 +100,6 @@ window.onhashchange = locationHashChanged;
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidad en navegadores</h2>
+<h2 id="Browser_compatibility">Поддержка браузерами</h2>
 
-{{Compat("api.WindowEventHandlers.onhashchange")}}
+<p>{{Compat}}</p>

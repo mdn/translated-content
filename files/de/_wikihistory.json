@@ -4033,6 +4033,13 @@
       "Jon_Deo"
     ]
   },
+  "Web/API/Window/hashchange_event": {
+    "modified": "2019-03-23T22:49:53.661Z",
+    "contributors": [
+      "flosommerfeld",
+      "ulrobin"
+    ]
+  },
   "Web/API/Window/history": {
     "modified": "2019-03-23T22:06:44.422Z",
     "contributors": [
@@ -4152,13 +4159,6 @@
     "modified": "2019-03-23T22:23:55.422Z",
     "contributors": [
       "maxx-dev"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2019-03-23T22:49:53.661Z",
-    "contributors": [
-      "flosommerfeld",
-      "ulrobin"
     ]
   },
   "Web/API/WindowEventHandlers/onpopstate": {

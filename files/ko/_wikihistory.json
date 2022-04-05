@@ -7178,6 +7178,14 @@
       "WonbaeLee"
     ]
   },
+  "Web/API/Window/hashchange_event": {
+    "modified": "2020-10-15T21:48:40.089Z",
+    "contributors": [
+      "limkukhyun",
+      "cs09g",
+      "TimeExplore"
+    ]
+  },
   "Web/API/Window/history": {
     "modified": "2020-10-15T22:00:33.418Z",
     "contributors": [
@@ -7413,14 +7421,6 @@
     "contributors": [
       "alattalatta",
       "fscholz"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2020-10-15T21:48:40.089Z",
-    "contributors": [
-      "limkukhyun",
-      "cs09g",
-      "TimeExplore"
     ]
   },
   "Web/API/WindowEventHandlers/onpopstate": {
