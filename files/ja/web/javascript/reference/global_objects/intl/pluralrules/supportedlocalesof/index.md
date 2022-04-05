@@ -32,7 +32,7 @@ Intl.PluralRules.supportedLocalesOf(locales, options)
   - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
 
     - `localeMatcher`
-      - : 使用するロケールの一致アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。
+      - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。
 
 ### 返値
 
