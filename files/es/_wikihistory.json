@@ -9056,13 +9056,6 @@
       "jota1410"
     ]
   },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2019-03-23T22:49:36.790Z",
-    "contributors": [
-      "AlePerez92",
-      "daesnorey"
-    ]
-  },
   "Web/API/WindowEventHandlers/onpopstate": {
     "modified": "2020-10-15T22:19:35.746Z",
     "contributors": [
@@ -21395,6 +21388,13 @@
       "Mgjbot",
       "Superruzafa",
       "Nukeador"
+    ]
+  },
+  "conflicting/Web/API/Window/hashchange_event": {
+    "modified": "2019-03-23T22:49:36.790Z",
+    "contributors": [
+      "AlePerez92",
+      "daesnorey"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {

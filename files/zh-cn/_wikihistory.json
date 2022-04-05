@@ -23666,18 +23666,6 @@
       "WenbingZheng"
     ]
   },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2020-10-15T21:06:52.013Z",
-    "contributors": [
-      "Arnie97",
-      "xgqfrms-GitHub",
-      "Ende93",
-      "vuji",
-      "teoli",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
   "Web/API/WindowEventHandlers/onlanguagechange": {
     "modified": "2019-03-23T22:16:38.614Z",
     "contributors": [
@@ -47227,6 +47215,18 @@
     "modified": "2020-10-15T22:22:28.465Z",
     "contributors": [
       "VoidRain"
+    ]
+  },
+  "conflicting/Web/API/Window/hashchange_event": {
+    "modified": "2020-10-15T21:06:52.013Z",
+    "contributors": [
+      "Arnie97",
+      "xgqfrms-GitHub",
+      "Ende93",
+      "vuji",
+      "teoli",
+      "khalid32",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {

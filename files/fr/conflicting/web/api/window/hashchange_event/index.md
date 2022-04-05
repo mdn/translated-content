@@ -1,7 +1,8 @@
 ---
 title: WindowEventHandlers.onhashchange
-slug: Web/API/WindowEventHandlers/onhashchange
+slug: conflicting/Web/API/Window/hashchange_event
 translation_of: Web/API/WindowEventHandlers/onhashchange
+original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
 {{APIRef("HTML DOM")}}L'événement **hashchange** est déclenché lorsque le hash de l'url change (cf. {{domxref("Window.location", "location.hash")}}).
 
@@ -76,9 +77,9 @@ if(!window.HashChangeEvent)(function(){
 }());
 ```
 
-###  
+###
 
-## Spécifications 
+## Spécifications
 
 | Spécifications                                                                                       | Statut                           | Commentaires |
 | ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |

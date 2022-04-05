@@ -21379,14 +21379,6 @@
       "Jacqhal"
     ]
   },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2019-03-23T22:29:53.876Z",
-    "contributors": [
-      "romuleald",
-      "Restimel",
-      "electrotiti"
-    ]
-  },
   "Web/API/WindowEventHandlers/onlanguagechange": {
     "modified": "2020-10-15T22:33:47.473Z",
     "contributors": [
@@ -43066,6 +43058,14 @@
     "modified": "2019-03-23T23:02:10.788Z",
     "contributors": [
       "jean-pierre.gay"
+    ]
+  },
+  "conflicting/Web/API/Window/hashchange_event": {
+    "modified": "2019-03-23T22:29:53.876Z",
+    "contributors": [
+      "romuleald",
+      "Restimel",
+      "electrotiti"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {

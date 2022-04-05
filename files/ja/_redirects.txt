@@ -1521,7 +1521,7 @@
 /ja/docs/DOM/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/DOM/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/DOM/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
-/ja/docs/DOM/window.onhashchange	/ja/docs/Web/API/WindowEventHandlers/onhashchange
+/ja/docs/DOM/window.onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
 /ja/docs/DOM/window.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/DOM/window.onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
 /ja/docs/DOM/window.open	/ja/docs/Web/API/Window/open
@@ -3406,6 +3406,7 @@
 /ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ja/docs/Glossary/Base64
 /ja/docs/Web/API/WindowBase64/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowBase64/btoa	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/WindowEventHandlers/onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
 /ja/docs/Web/API/WindowEventHandlers/onmessage	/ja/docs/Web/API/Window/message_event
 /ja/docs/Web/API/WindowEventHandlers/onmessageerror	/ja/docs/conflicting/Web/API/Window/messageerror_event
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/atob
@@ -3612,7 +3613,7 @@
 /ja/docs/Web/API/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/Web/API/window.onclose	/ja/docs/Web/API/GlobalEventHandlers/onclose
 /ja/docs/Web/API/window.onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
-/ja/docs/Web/API/window.onhashchange	/ja/docs/Web/API/WindowEventHandlers/onhashchange
+/ja/docs/Web/API/window.onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
 /ja/docs/Web/API/window.onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
 /ja/docs/Web/API/window.onkeyup	/ja/docs/Web/API/GlobalEventHandlers/onkeyup
 /ja/docs/Web/API/window.onload	/ja/docs/Web/API/GlobalEventHandlers/onload

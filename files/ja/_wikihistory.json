@@ -24973,16 +24973,6 @@
       "ethertank"
     ]
   },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2020-10-15T21:22:09.270Z",
-    "contributors": [
-      "Wind1808",
-      "teoli",
-      "khalid32",
-      "ethertank",
-      "yoheiMune"
-    ]
-  },
   "Web/API/WindowEventHandlers/onlanguagechange": {
     "modified": "2020-10-15T22:23:25.951Z",
     "contributors": [
@@ -48426,6 +48416,16 @@
     "contributors": [
       "Potappo",
       "T.Ukegawa"
+    ]
+  },
+  "conflicting/Web/API/Window/hashchange_event": {
+    "modified": "2020-10-15T21:22:09.270Z",
+    "contributors": [
+      "Wind1808",
+      "teoli",
+      "khalid32",
+      "ethertank",
+      "yoheiMune"
     ]
   },
   "conflicting/Web/API/Window/messageerror_event": {

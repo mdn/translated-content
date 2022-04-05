@@ -3828,6 +3828,7 @@
 /fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Web/API/WindowBase64/atob	/fr/docs/Web/API/atob
 /fr/docs/Web/API/WindowBase64/btoa	/fr/docs/Web/API/btoa
+/fr/docs/Web/API/WindowEventHandlers/onhashchange	/fr/docs/conflicting/Web/API/Window/hashchange_event
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/atob	/fr/docs/Web/API/atob
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/fr/docs/Web/API/btoa
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/caches	/fr/docs/Web/API/caches

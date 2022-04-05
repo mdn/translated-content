@@ -6629,6 +6629,13 @@
       "fernandosouza"
     ]
   },
+  "Web/API/Window/hashchange_event": {
+    "modified": "2019-03-23T22:56:05.373Z",
+    "contributors": [
+      "cleydsonjr",
+      "abensur"
+    ]
+  },
   "Web/API/Window/history": {
     "modified": "2019-03-23T22:21:53.007Z",
     "contributors": [
@@ -6798,13 +6805,6 @@
     "contributors": [
       "kudnx",
       "teoli"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2019-03-23T22:56:05.373Z",
-    "contributors": [
-      "cleydsonjr",
-      "abensur"
     ]
   },
   "Web/API/WindowEventHandlers/onpopstate": {

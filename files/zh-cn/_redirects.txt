@@ -457,7 +457,7 @@
 /zh-CN/docs/DOM/window.navigator.vendorSub	/zh-CN/docs/Web/API/Navigator/vendorSub
 /zh-CN/docs/DOM/window.onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
 /zh-CN/docs/DOM/window.oncontextmenu	/zh-CN/docs/Web/API/GlobalEventHandlers/oncontextmenu
-/zh-CN/docs/DOM/window.onhashchange	/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange
+/zh-CN/docs/DOM/window.onhashchange	/zh-CN/docs/conflicting/Web/API/Window/hashchange_event
 /zh-CN/docs/DOM/window.oninput	/zh-CN/docs/Web/API/GlobalEventHandlers/oninput
 /zh-CN/docs/DOM/window.onpopstate	/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate
 /zh-CN/docs/DOM/window.onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
@@ -1587,7 +1587,7 @@
 /zh-CN/docs/Web/API/Window.name	/zh-CN/docs/Web/API/Window/name
 /zh-CN/docs/Web/API/Window.navigator	/zh-CN/docs/Web/API/Window/navigator
 /zh-CN/docs/Web/API/Window.onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
-/zh-CN/docs/Web/API/Window.onhashchange	/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange
+/zh-CN/docs/Web/API/Window.onhashchange	/zh-CN/docs/conflicting/Web/API/Window/hashchange_event
 /zh-CN/docs/Web/API/Window.onpopstate	/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate
 /zh-CN/docs/Web/API/Window.onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
 /zh-CN/docs/Web/API/Window.onunload	/zh-CN/docs/Web/API/WindowEventHandlers/onunload
@@ -1627,7 +1627,7 @@
 /zh-CN/docs/Web/API/Window/ondeviceorientationabsolute	/zh-CN/docs/Web/API/Window/deviceorientationabsolute_event
 /zh-CN/docs/Web/API/Window/ongamepadconnected	/zh-CN/docs/conflicting/Web/API/Window/gamepadconnected_event
 /zh-CN/docs/Web/API/Window/ongamepaddisconnected	/zh-CN/docs/Web/API/Window/gamepaddisconnected_event
-/zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange
+/zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/conflicting/Web/API/Window/hashchange_event
 /zh-CN/docs/Web/API/Window/onpopstate	/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate
 /zh-CN/docs/Web/API/Window/onresize	/zh-CN/docs/Web/API/GlobalEventHandlers/onresize
 /zh-CN/docs/Web/API/Window/onunload	/zh-CN/docs/Web/API/WindowEventHandlers/onunload
@@ -1638,6 +1638,7 @@
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
 /zh-CN/docs/Web/API/WindowBase64/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/WindowBase64/btoa	/zh-CN/docs/Web/API/btoa
+/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange	/zh-CN/docs/conflicting/Web/API/Window/hashchange_event
 /zh-CN/docs/Web/API/WindowEventHandlers/onmessage	/zh-CN/docs/Web/API/Window/message_event
 /zh-CN/docs/Web/API/WindowEventHandlers/onmessageerror	/zh-CN/docs/Web/API/Window/messageerror_event
 /zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/atob	/zh-CN/docs/Web/API/atob
