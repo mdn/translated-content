@@ -49,17 +49,19 @@ O evento `submit` é disparado quando a pessoa usuária clica um botão ({{HtmlE
 
 > **Nota:** Tentar submeter um formulário que não passa na [validação](/pt-BR/docs/Learn/Forms/Form_validation) dispara um evento {{domxref("HTMLInputElement/invalid_event", "invalid")}}. Nesse caso, a validação previne a submissão do formulário, e por isso não é disparado o evento `submit`.
 
-## Examples
+## Exemplos
 
-This example uses {{domxref("EventTarget.addEventListener()")}} to listen for form submit, and logs the current {{domxref("Event.timeStamp")}} whenever that occurs, then prevents the default action of submitting the form.
+<!-- This example uses {{domxref("EventTarget.addEventListener()")}} to listen for form submit, and logs the current {{domxref("Event.timeStamp")}} whenever that occurs, then prevents the default action of submitting the form. -->
+
+Este exemplo usa {{domxref("EventTarget.addEventListener()")}} para escutar por um submit do formulário, e escreve o {{domxref("Event.timeStamp")}} do momento em que ele é disparado. Após isso, previne a ação padrão de submeter o formulário utilizando {{domxref("Event.preventDefault()")}}.
 
 ### HTML
 
 ```html
 <form id="form">
-  <label>Test field: <input type="text" /></label>
+  <label>Campo de teste: <input type="text" /></label>
   <br /><br />
-  <button type="submit">Submit form</button>
+  <button type="submit">Submeter formulário</button>
 </form>
 <p id="log"></p>
 ```
@@ -68,7 +70,7 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 
 ```js
 function logSubmit(event) {
-  log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+  log.textContent = `Formulário Submetido! Time stamp: ${event.timeStamp}`;
   event.preventDefault();
 }
 
@@ -77,19 +79,19 @@ const log = document.getElementById('log');
 form.addEventListener('submit', logSubmit);
 ```
 
-### Result
+### Resultado
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("Exemplos")}}
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com os navegadores
 
 {{Compat}}
 
-## See also
+## Ver também
 
-- HTML {{HtmlElement("form")}} element
-- Related event: {{domxref("HTMLInputElement/invalid_event", "invalid")}}
+- Elemento HTML {{HtmlElement("form")}}
+- Evento relacionado : {{domxref("HTMLInputElement/invalid_event", "invalid")}}
