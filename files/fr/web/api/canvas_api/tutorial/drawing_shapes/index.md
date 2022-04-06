@@ -11,7 +11,9 @@ tags:
   - Tutoriel
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
+
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
 
 Maintenant que nous avons défini notre [environnement de canevas](/fr/docs/Tutoriel_canvas/Utilisation_de_base), nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.
@@ -206,20 +208,20 @@ function dessiner() {
   if (canevas.getContext) {
     var ctx = canevas.getContext('2d');
     
-    // Triangle plei
+	// Triangle plein
     ctx.beginPath();
     ctx.moveTo(25, 25);
-    ctx.lineTo(1
-    ctx.lineTo(2
+    ctx.lineTo(105, 25);
+    ctx.lineTo(25, 105);
     ctx.fill();
     
-    // Triangle filaire
-    ctx.beginPath();
-    ctx.moveTo(125, 125)
-       ctx.lineTo(125, 
-       ctx.lineTo(45, 125);
-    ctx.closePath();
-    ctx.stroke();
+	// Triangle filaire
+	ctx.beginPath();
+	ctx.moveTo(125, 125)
+	ctx.lineTo(125, 45);
+	ctx.lineTo(45, 125);
+	ctx.closePath();
+	ctx.stroke();
   }
 }
 ```
@@ -256,7 +258,7 @@ L'instruction pour le paramètre `antihoraire` a pour résultat que la première
 ```html hidden
 <html>
  <body onload="dessiner();">
-   <canvas id="canevas" width="150" height="200"></canvas>
+   <canvas id="canevas" width="150px" height="200px"></canvas>
  </body>
 </html>
 ```
@@ -318,7 +320,7 @@ Cet exemple utilise plusieurs courbes quadratiques de Bézier pour rendre une bu
 ```html hidden
 <html>
  <body onload="dessiner();">
-   <canvas id="canevas" width="150" height="150"></canvas>
+   <canvas id="canevas" width="150px" height="150px"></canvas>
  </body>
 </html>
 ```
@@ -329,15 +331,15 @@ function dessiner() {
   if (canevas.getContext) {
     var ctx = canevas.getContext('2d');
     
-    // Exemples de c
+    // Exemples de courbes de Bezier cubiques
     ctx.beginPath();
     ctx.moveTo(75, 25);
     ctx.quadraticCurveTo(25, 25, 25, 62.5);
     ctx.quadraticCurveTo(25, 100, 50, 100);
     ctx.quadraticCurveTo(50, 120, 30, 125);
-    ctx.quadraticCurveTo(60, 120, 65, 100)
-    ctx.quadraticCurveTo(125, 100, 125, 62
-       ctx.quadraticCurveTo(125, 25, 75, 25);
+    ctx.quadraticCurveTo(60, 120, 65, 100);
+    ctx.quadraticCurveTo(125, 100, 125, 62);
+    ctx.quadraticCurveTo(125, 25, 75, 25);
     ctx.stroke();
   }
 }
@@ -395,7 +397,7 @@ Jusqu'à présent, chaque exemple de cette page a utilisé un seul type de fonct
 ```html hidden
 <html>
  <body onload="dessiner();">
-   <canvas id="canevas" width="150" height="150"></canvas>
+   <canvas id="canevas" width="150px" height="150px"></canvas>
  </body>
 </html>
 ```
@@ -406,84 +408,79 @@ function dessiner() {
   if (canevas.getContext) {
     var ctx = canevas.getContext('2d');
     
-    rectArrondi(ctx, 12, 12, 150, 150, 15
-    rectArrondi(ctx, 19, 19, 150, 150, 9)
-    rectArrondi(ctx, 53, 53, 49, 33, 10);
-    rectArrondi(ctx, 53, 119, 49, 16, 6);
-    rectArrondi(ctx, 1
-    rectArrondi(ctx,
-    
+    arrondiRect(ctx, 12, 12, 150, 150, 15);
+    arrondiRect(ctx, 19, 19, 150, 150, 9);
+    arrondiRect(ctx, 53, 53, 49, 33, 10);
+    arrondiRect(ctx, 53, 119, 49, 16, 6);
+    arrondiRect(ctx, 135, 53, 49, 33, 10);
+    arrondiRect(ctx, 135, 119, 25, 49, 10);
+
     ctx.beginPath();
-    ctx.arc(37, 
+    ctx.arc(37, 37, 13, Math.PI / 7, -Math.PI / 7, false);
     ctx.lineTo(31, 37);
     ctx.fill();
-    
-    for(var i = 0; i< 8; i++
-      
+
+    for (var i = 0; i < 8; i++) {
+    	ctx.fillRect(51 + i * 16, 35, 4, 4);
     }
-    
-    for(i = 0; i < 6; i++) {
-    
+
+    for (i = 0; i < 6; i++) {
+    	ctx.fillRect(115, 51 + i * 16, 4, 4);
     }
-    
-    for(i = 0; i < 8; i+
-    ctx.fillRect(51 + i * 
+
+    for (i = 0; i < 8; i++) {
+    	ctx.fillRect(51 + i * 16, 99, 4, 4);
     }
-    
-    ctx.beginPat
+
+    ctx.beginPath();
     ctx.moveTo(83, 116);
-    ctx.lineTo(83, 1
-    ctx.bezierCurveTo(8
-    ctx.bezierCurveTo(105, 88, 1
-    ctx.lineTo(111, 116)
-    ctx.lineTo(1
-    ctx.lineTo(101.666, 
-    ctx.lineTo(97, 1
-    ctx.lineTo(92.333, 
+    ctx.lineTo(83, 102);
+    ctx.bezierCurveTo(83, 94, 89, 88, 97, 88);
+    ctx.bezierCurveTo(105, 88, 111, 94, 111, 102);
+    ctx.lineTo(111, 116);
+    ctx.lineTo(106.333, 111.333);
+    ctx.lineTo(101.666, 116);
+    ctx.lineTo(97, 111.333);
+    ctx.lineTo(92.333, 116);
     ctx.lineTo(87.666, 111.333);
     ctx.lineTo(83, 116);
     ctx.fill();
-    
-    ctx.fillStyle = 
+
+    ctx.fillStyle = 'white';
     ctx.beginPath();
-    ctx.moveTo(9
-    ctx.bezierCurveT
-    ctx.bezierCurveTo(87, 103, 88, 106, 91, 10
-    ctx.bezierCu
-       ctx.bezierCurveTo(95, 99
-       ctx.moveTo(103, 
-       ctx.bezierCurveTo(100, 96, 99, 99, 99, 101)
-       ctx.bezierCu
-       ctx.bezierCurveT
-       ctx.bezierCurveTo(107, 99, 106, 96, 103, 9
-       ctx.fill();
-       
-    ctx.fillStyle = 
-    ctx.beginPath();
-    ctx.arc(101,
+    ctx.moveTo(91, 96);
+    ctx.bezierCurveTo(88, 96, 87, 99, 87, 101);
+    ctx.bezierCurveTo(87, 103, 88, 106, 91, 106);
+    ctx.bezierCurveTo(94, 106, 95, 103, 95, 101);
+    ctx.bezierCurveTo(95, 99, 94, 96, 91, 96);
+    ctx.moveTo(103, 96);
+    ctx.bezierCurveTo(100, 96, 99, 99, 99, 101);
+    ctx.bezierCurveTo(99, 103, 100, 106, 103, 106);
+    ctx.bezierCurveTo(106, 106, 107, 103, 107, 101);
+    ctx.bezierCurveTo(107, 99, 106, 96, 103, 96);
     ctx.fill();
-       
-       ctx.beginPath();
+
+    ctx.fillStyle = 'black';
+    ctx.beginPath();
+    ctx.arc(101, 102, 2, 0, Math.PI * 2, true);
+    ctx.fill();
+
+    ctx.beginPath();
     ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
     ctx.fill();
   }
 }
 
-// Une fonction utilitaire pour tracer des rectangles avec des coins arrondis
+// Une fonction utilitaire permettant de tracer des rectangles arrondis
 
-function rectArrondi(ctx, x, y, largeur, hauteur, rayon) {
+function arrondiRect(ctx, x, y, width, height, radius) {
   ctx.beginPath();
-  ctx.moveTo(x, y + rayon);
-  ctx.lineTo(x, y + hauteur - rayon);
-  ctx.quadraticCurveTo(x, y + hauteur, x + rayon, y + hauteur);
-  ctx.lineTo(x + largeur - rayon, y + hauteur);
-  ctx.quadraticCurveTo(x + largeur, y + hauteur, x + largeur, y + hauteur - rayon);
-  ctx.lineTo(x + largeur, y + rayon);
-  ctx.quadraticCurveTo(x + largeur, y, x + largeur - rayon, y);
-  ctx.lineTo(x + rayon,y);
-  ctx.quadraticCurveTo(x, y, x, y + rayon);
-  ctx.stroke();
-}
+  ctx.moveTo(x, y + radius);
+  ctx.arcTo(x, y + height, x + radius, y + height, radius);
+  ctx.arcTo(x + width, y + height, x + width, y + height - radius, radius);
+  ctx.arcTo(x + width, y, x + width - radius, y, radius);
+  ctx.arcTo(x, y, x, y + radius, radius);
+  ctx.
 ```
 
 L'image résultante ressemble à ce qui suit&nbsp;:
@@ -503,9 +500,11 @@ Comme nous l'avons vu dans le dernier exemple, il peut y avoir une série de tra
 
 <!---->
 
-    new Path2D();     // objet trajet vide
-    new Path2D(trajet); // copie depuis un autre objet Path2D
-    new Path2D(d);    // trajet depuis des données de trajet SVG
+```javascript
+new Path2D();     // objet trajet vide
+new Path2D(trajet); // copie depuis un autre objet Path2D
+new Path2D(d);    // trajet depuis des données de trajet SVG
+```
 
 Toutes les [méthodes de trajet](/en-US/docs/Web/API/CanvasRenderingContext2D#Paths) telles que `moveTo`, `rect`, `arc` ou `quadraticCurveTo`, etc., que nous avons appris à connaître ci-dessus, sont disponibles sur les objets `Path2D`.
 
@@ -553,6 +552,8 @@ Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l
 
 Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur P`ath2D`](/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
 
-    var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
+```javascript
+var p = new Path2D("M10 10 h 80 v 80 h -80 Z");
+```
 
 {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
