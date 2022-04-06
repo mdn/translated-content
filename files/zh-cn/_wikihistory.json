@@ -23052,19 +23052,6 @@
       "fscholz"
     ]
   },
-  "Web/API/WindowEventHandlers/onafterprint": {
-    "modified": "2019-09-27T06:08:53.846Z",
-    "contributors": [
-      "cwc",
-      "shockw4ver"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onbeforeprint": {
-    "modified": "2020-10-15T22:30:28.485Z",
-    "contributors": [
-      "wuyouhuaz"
-    ]
-  },
   "Web/API/WindowEventHandlers/onbeforeunload": {
     "modified": "2019-05-09T03:05:32.709Z",
     "contributors": [
@@ -46614,6 +46601,19 @@
     "contributors": [
       "teoli",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/Window/afterprint_event": {
+    "modified": "2019-09-27T06:08:53.846Z",
+    "contributors": [
+      "cwc",
+      "shockw4ver"
+    ]
+  },
+  "conflicting/Web/API/Window/beforeprint_event": {
+    "modified": "2020-10-15T22:30:28.485Z",
+    "contributors": [
+      "wuyouhuaz"
     ]
   },
   "conflicting/Web/API/Window/deviceorientation_event": {

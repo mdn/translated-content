@@ -1,12 +1,13 @@
 ---
 title: WindowEventHandlers.onbeforeprint
-slug: Web/API/WindowEventHandlers/onbeforeprint
+slug: conflicting/Web/API/Window/beforeprint_event
 tags:
   - API
   - DOM
   - Propriété
   - impression
 translation_of: Web/API/WindowEventHandlers/onbeforeprint
+original_slug: Web/API/WindowEventHandlers/onbeforeprint
 ---
 {{ApiRef}}
 

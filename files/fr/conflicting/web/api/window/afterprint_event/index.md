@@ -1,6 +1,6 @@
 ---
 title: WindowEventHandlers.onafterprint
-slug: Web/API/WindowEventHandlers/onafterprint
+slug: conflicting/Web/API/Window/afterprint_event
 tags:
   - API
   - DOM
@@ -11,6 +11,7 @@ tags:
   - impression
   - évènements
 translation_of: Web/API/WindowEventHandlers/onafterprint
+original_slug: Web/API/WindowEventHandlers/onafterprint
 ---
 {{ApiRef}}
 

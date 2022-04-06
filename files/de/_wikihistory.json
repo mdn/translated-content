@@ -3979,6 +3979,12 @@
       "horlabs"
     ]
   },
+  "Web/API/Window/afterprint_event": {
+    "modified": "2019-03-23T22:23:55.422Z",
+    "contributors": [
+      "maxx-dev"
+    ]
+  },
   "Web/API/Window/alert": {
     "modified": "2019-03-23T23:14:26.063Z",
     "contributors": [
@@ -4153,12 +4159,6 @@
     "modified": "2019-03-23T22:50:03.877Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onafterprint": {
-    "modified": "2019-03-23T22:23:55.422Z",
-    "contributors": [
-      "maxx-dev"
     ]
   },
   "Web/API/WindowEventHandlers/onpopstate": {
