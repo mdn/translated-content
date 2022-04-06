@@ -1638,6 +1638,8 @@
 /zh-CN/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/zh-CN/docs/Glossary/Base64
 /zh-CN/docs/Web/API/WindowBase64/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/WindowBase64/btoa	/zh-CN/docs/Web/API/btoa
+/zh-CN/docs/Web/API/WindowEventHandlers/onafterprint	/zh-CN/docs/conflicting/Web/API/Window/afterprint_event
+/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeprint	/zh-CN/docs/conflicting/Web/API/Window/beforeprint_event
 /zh-CN/docs/Web/API/WindowEventHandlers/onhashchange	/zh-CN/docs/conflicting/Web/API/Window/hashchange_event
 /zh-CN/docs/Web/API/WindowEventHandlers/onmessage	/zh-CN/docs/Web/API/Window/message_event
 /zh-CN/docs/Web/API/WindowEventHandlers/onmessageerror	/zh-CN/docs/Web/API/Window/messageerror_event

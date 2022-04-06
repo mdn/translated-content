@@ -21351,18 +21351,6 @@
       "fscholz"
     ]
   },
-  "Web/API/WindowEventHandlers/onafterprint": {
-    "modified": "2020-10-15T22:10:57.103Z",
-    "contributors": [
-      "velkro"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onbeforeprint": {
-    "modified": "2020-10-15T22:10:57.975Z",
-    "contributors": [
-      "velkro"
-    ]
-  },
   "Web/API/WindowEventHandlers/onbeforeunload": {
     "modified": "2019-04-18T06:36:38.075Z",
     "contributors": [
@@ -43058,6 +43046,18 @@
     "modified": "2019-03-23T23:02:10.788Z",
     "contributors": [
       "jean-pierre.gay"
+    ]
+  },
+  "conflicting/Web/API/Window/afterprint_event": {
+    "modified": "2020-10-15T22:10:57.103Z",
+    "contributors": [
+      "velkro"
+    ]
+  },
+  "conflicting/Web/API/Window/beforeprint_event": {
+    "modified": "2020-10-15T22:10:57.975Z",
+    "contributors": [
+      "velkro"
     ]
   },
   "conflicting/Web/API/Window/hashchange_event": {

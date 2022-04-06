@@ -24946,22 +24946,6 @@
       "teoli"
     ]
   },
-  "Web/API/WindowEventHandlers/onafterprint": {
-    "modified": "2020-10-15T21:27:41.445Z",
-    "contributors": [
-      "Wind1808",
-      "teoli",
-      "jsx",
-      "abechiyo"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onbeforeprint": {
-    "modified": "2020-10-15T22:09:32.822Z",
-    "contributors": [
-      "Wind1808",
-      "mfuji09"
-    ]
-  },
   "Web/API/WindowEventHandlers/onbeforeunload": {
     "modified": "2020-10-15T21:23:43.857Z",
     "contributors": [
@@ -48392,11 +48376,27 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/API/Window/afterprint_event": {
+    "modified": "2020-10-15T21:27:41.445Z",
+    "contributors": [
+      "Wind1808",
+      "teoli",
+      "jsx",
+      "abechiyo"
+    ]
+  },
   "conflicting/Web/API/Window/appinstalled_event": {
     "modified": "2020-10-15T21:49:27.262Z",
     "contributors": [
       "Marsf",
       "YuichiNukiyama"
+    ]
+  },
+  "conflicting/Web/API/Window/beforeprint_event": {
+    "modified": "2020-10-15T22:09:32.822Z",
+    "contributors": [
+      "Wind1808",
+      "mfuji09"
     ]
   },
   "conflicting/Web/API/Window/devicemotion_event": {

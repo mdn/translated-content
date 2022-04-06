@@ -3372,14 +3372,14 @@
 /ja/docs/Web/API/WebVR_API/WebVR_concepts	/ja/docs/Web/API/WebVR_API/Concepts
 /ja/docs/Web/API/Web_Video_Text_Tracks_Format	/ja/docs/Web/API/WebVTT_API
 /ja/docs/Web/API/Window.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
-/ja/docs/Web/API/Window.onafterprint	/ja/docs/Web/API/WindowEventHandlers/onafterprint
+/ja/docs/Web/API/Window.onafterprint	/ja/docs/conflicting/Web/API/Window/afterprint_event
 /ja/docs/Web/API/Window/URL	/ja/docs/Web/API/URL
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/Window/getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
-/ja/docs/Web/API/Window/onafterprint	/ja/docs/Web/API/WindowEventHandlers/onafterprint
+/ja/docs/Web/API/Window/onafterprint	/ja/docs/conflicting/Web/API/Window/afterprint_event
 /ja/docs/Web/API/Window/onappinstalled	/ja/docs/conflicting/Web/API/Window/appinstalled_event
 /ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/Web/API/Window/onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
@@ -3406,6 +3406,8 @@
 /ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ja/docs/Glossary/Base64
 /ja/docs/Web/API/WindowBase64/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowBase64/btoa	/ja/docs/Web/API/btoa
+/ja/docs/Web/API/WindowEventHandlers/onafterprint	/ja/docs/conflicting/Web/API/Window/afterprint_event
+/ja/docs/Web/API/WindowEventHandlers/onbeforeprint	/ja/docs/conflicting/Web/API/Window/beforeprint_event
 /ja/docs/Web/API/WindowEventHandlers/onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
 /ja/docs/Web/API/WindowEventHandlers/onmessage	/ja/docs/Web/API/Window/message_event
 /ja/docs/Web/API/WindowEventHandlers/onmessageerror	/ja/docs/conflicting/Web/API/Window/messageerror_event

@@ -11075,6 +11075,12 @@
       "e-h-h"
     ]
   },
+  "Web/API/Window/afterprint_event": {
+    "modified": "2020-10-15T22:06:05.874Z",
+    "contributors": [
+      "Khich"
+    ]
+  },
   "Web/API/Window/alert": {
     "modified": "2020-10-15T21:48:09.472Z",
     "contributors": [
@@ -11495,12 +11501,6 @@
     "modified": "2019-03-23T22:58:25.582Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onafterprint": {
-    "modified": "2020-10-15T22:06:05.874Z",
-    "contributors": [
-      "Khich"
     ]
   },
   "Web/API/WindowEventHandlers/onbeforeunload": {

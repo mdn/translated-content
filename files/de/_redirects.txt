@@ -458,6 +458,7 @@
 /de/docs/Web/API/Window/setTimeout	/de/docs/Web/API/setTimeout
 /de/docs/Web/API/WindowBase64	/de/docs/Web/API/WindowOrWorkerGlobalScope
 /de/docs/Web/API/WindowBase64/btoa	/de/docs/Web/API/btoa
+/de/docs/Web/API/WindowEventHandlers/onafterprint	/de/docs/Web/API/Window/afterprint_event
 /de/docs/Web/API/WindowEventHandlers/onhashchange	/de/docs/Web/API/Window/hashchange_event
 /de/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/de/docs/Web/API/btoa
 /de/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/de/docs/Web/API/setTimeout
