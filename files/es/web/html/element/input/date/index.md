@@ -113,7 +113,7 @@ Para entradas de tipo `date`, el valor del `step` es dado en días; y es tratado
 
 ## Usando entradas de tipo fecha
 
-Las entradas de tipo fecha son convenientes, ya que proveen una interfaz simple para elegit fechas y normalizan la fecha que le mandamos al servidor independientemetn de la localización idiomática del usuario. A pesar de esto, existen actualmente algunos problemas con `<input type="date">` producto del soporte limitado que ofrecen los diferentes navegadores.
+Las entradas de tipo fecha son convenientes, ya que proveen una interfaz simple para elegir fechas y normalizan la fecha que le mandamos al servidor independientemente de la región del usuario. A pesar de esto, existen actualmente algunos problemas con `<input type="date">` producto del soporte limitado que ofrecen los diferentes navegadores.
 
 En esta sección, veremos los usos más básicos y más complejos de `<input type="date">` y, luego, ofreceremos consejos para mitigar los problemas derivados por la falta de soporte de algunos navegadores.
 
