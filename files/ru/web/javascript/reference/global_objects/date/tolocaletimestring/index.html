@@ -23,7 +23,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters')}}</div>
 <p>Значением по умолчанию для каждой компоненты даты-времени является {{jsxref("Global_Objects/undefined", "undefined")}}, однако, если все свойства <code>hour</code>, <code>minute</code> и <code>second</code> равны {{jsxref("Global_Objects/undefined", "undefined")}}, то их значения предполагаются равными <code>"numeric"</code>.</p>
 <p>При создании <code>minute</code> и <code>second</code> как отдельные переменные в браузере Chrome, параметр <code>"2-digit"</code> не работает.</p>
-<pre class="brush: js">const date = new Date('December 1, 1995 03:01:03');
+<pre class="brush: js">const date = new Date('December 1, 1995 03:01:02');
 
     const hour = date.toLocaleTimeString('ru', { hour:'2-digit',});
     const minute = date.toLocaleTimeString('ru', { minute:'2-digit'});
