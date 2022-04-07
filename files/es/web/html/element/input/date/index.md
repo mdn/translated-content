@@ -191,7 +191,7 @@ Veamos un ejemplo con fecha mínima y máxima y, también, estableciendo el camp
 </form>
 ```
 
-Si tu intentas enviar el formulario con una fecha incomplenta (o una fecha por fuera de los límites), el navegador mostrará un error. Intenta probar con el ejemplo:
+Si intentas enviar el formulario con una fecha incompleta (o una fecha por fuera de los límites), el navegador mostrará un error. Intenta probar con el ejemplo:
 
 {{EmbedLiveSample('Validation', 600, 100)}}
 
