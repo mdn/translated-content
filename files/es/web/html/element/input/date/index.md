@@ -70,7 +70,7 @@ Puedes establecer un valor por defecto para la entrada introduciendo una fecha e
 
 {{EmbedLiveSample('Value', 600, 40)}}
 
-> **Nota:** El formato mostrado puede ser diferente del `valor` real, ya que la fecha mostrada es formateada _según el idioma del navegador del usuario_, pero el valor analizado es siempre formateado a `aaaa-mm-dd`.
+> **Nota:** El formato mostrado puede ser diferente del `value` real, ya que la fecha mostrada es formateada _según el idioma del navegador del usuario_, pero el valor analizado es siempre formateado a `aaaa-mm-dd`.
 
 Tu puedes obtener y establecer el valor fecha en JavaScript con las propiedades `value` y `valueAsNumber` de {{domxref("HTMLInputElement")}}. Por ejemplo:
 
