@@ -224,7 +224,7 @@ Como hemos mencionadao, el mayor problema con las entradas de tipo fecha es la [
 
 Los navegadores que no la soportan, degradan al tipo texto, creando un problema de consistencia en la interfaz de usuario (los controles mostrados son diferentes) y en el manejo de los datos.
 
-El segundo problema es uno más serio: con la entrada de tipo fecha, el valor es normalizado al formato `yyyy-mm-dd`. Pero con la entrada de tipo texto, el navegador no sabe reconocer en qué formato debe estar la fecha, y existen diferentes formantos en que las personas escriben fechas, como:
+El segundo problema es uno más serio: con la entrada de tipo fecha, el valor es normalizado al formato `aaaa-mm-dd`. Pero con la entrada de tipo texto, el navegador no sabe reconocer en qué formato debe estar la fecha, y existen diferentes formantos en que las personas escriben fechas, como:
 
 - `ddmmyyyy`
 - `dd/mm/yyyy`
