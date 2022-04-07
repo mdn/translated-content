@@ -216,7 +216,7 @@ input:valid + span::after {
 }
 ```
 
-> **Advertencia:** La validación en el lado del cliente _no es un sustituto_ de la validación en el servidor. Es fácil para alguien modificar el HTML o sobrepasar tu HTML completamente y mandar datos directamente a tu servidor. Si tu servidor no valida los datos recibidos, un desastre puede ocurrir: datos con un mal formato, demasiado grandes, del tipo equivocado, etc.
+> **Advertencia:** La validación en el lado del cliente _no es un sustituto_ de la validación en el servidor. Es fácil para alguien modificar el HTML o sobrepasar tu HTML completamente y mandar datos directamente a tu servidor. Si tu servidor no valida los datos recibidos, puede ocurrir un desastre: datos con un mal formato, demasiado grandes, del tipo equivocado, etc.
 
 ## Manejando el soporte de los navegadores
 
