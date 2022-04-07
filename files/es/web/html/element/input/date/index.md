@@ -226,12 +226,12 @@ Los navegadores que no la soportan, degradan al tipo texto, creando un problema 
 
 El segundo problema es uno más serio: con la entrada de tipo fecha, el valor es normalizado al formato `aaaa-mm-dd`. Pero con la entrada de tipo texto, el navegador no sabe reconocer en qué formato debe estar la fecha, y existen diferentes formantos en que las personas escriben fechas, como:
 
-- `ddmmyyyy`
-- `dd/mm/yyyy`
-- `mm/dd/yyyy`
-- `dd-mm-yyyy`
-- `mm-dd-yyyy`
-- `Mes dd, yyyy`
+- `ddmmaaaa`
+- `dd/mm/aaaa`
+- `mm/dd/aaaa`
+- `dd-mm-aaaa`
+- `mm-dd-aaaa`
+- `Mes dd, aaaa`
 
 Una manera de darle solución a este problema es usar el atributo {{htmlattrxref("pattern", "input")}} en la entrada de tipo fecha. Aunque el menú de selección no lo use, si que lo hará la entrada de tipo texto. Por ejemplo, trata de ver el siguiente ejemplo en un navegador sin soporte:
 
