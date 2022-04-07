@@ -167,7 +167,7 @@ Por defecto, `<input type="date">` no valida su valor más allá de su formato. 
 
 Si tu usas {{htmlattrxref("min", "input")}} y {{htmlattrxref("max", "input")}} para limitar la disponibilidad de las fechas (véase [Estipulando valores de fecha máximos y mínimos](#estipulando_valores_de_fecha_máximos_y_mínimos)), los navegadores que lo soporten mostrarán un error si tu tratas de enviar una fecha que está por fuera de los límietes. A pesar de esto, tú necesitarás comprobar de nuevo el resultado enviado para asegurarte que el valor está entre esas fechas, si el menú de selección de fechas no está completamente soportado en el dispositivo del usuario.
 
-Tú también puedes usar el atributo {{htmlattrxref("required", "input")}} para que completar la fecha sea obligatorio (un error se mostrará si queremos mandar una fecha vacía). Esto debería funcionar en casi todos los navegadores, incluso si la entrada termina retrocediendo a una entrada de tipo `text`.
+Tú también puedes usar el atributo {{htmlattrxref("required", "input")}} para que completar la fecha sea obligatorio (se mostrará un error si queremos mandar una fecha vacía). Esto debería funcionar en casi todos los navegadores, incluso si la entrada termina regresando un tipo `text`.
 
 Veamos un ejemplo con fecha mínima y máxima y, también, estableciendo el campo como requerido.
 
