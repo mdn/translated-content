@@ -22,16 +22,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 <p>Проверьте раздел <a href="#Browser_compatibility">Совместимость с браузерами</a>, чтобы увидеть, какие браузеры поддерживают аргументы <code>locales</code> и <code>options</code>, и <a href="#Example:_Checking_for_support_for_locales_and_options_arguments">Пример: проверка поддержки аргументов <code>locales</code> и <code>options</code></a> для определения этой возможности.</p>
 <div>{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters')}}</div>
 <p>Значением по умолчанию для каждой компоненты даты-времени является {{jsxref("Global_Objects/undefined", "undefined")}}, однако, если все свойства <code>hour</code>, <code>minute</code> и <code>second</code> равны {{jsxref("Global_Objects/undefined", "undefined")}}, то их значения предполагаются равными <code>"numeric"</code>.</p>
-<p>При создании <code>minute</code> и <code>second</code> как отдельные переменные в браузере Chrome, параметр <code>"2-digit"</code> не работает.</p>
-<pre class="brush: js">const date = new Date('December 1, 1995 03:01:02');
-
-    const hour = date.toLocaleTimeString('ru', { hour:'2-digit',});
-    const minute = date.toLocaleTimeString('ru', { minute:'2-digit'});
-    const second = date.toLocaleTimeString('ru', { second:'2-digit'});
-
-    //В браузере Chrome не работает '2-digit' для minute и second
-    console.log(hour, minute, second); //03 1 2 , в Firefox проблем нет и выведет 03 01 02
-</pre>
 
 <h2 id="Examples">Примеры</h2>
 
