@@ -101,7 +101,7 @@ Si los atributos `max` y `min` son establecidos, este valor tiene que ser una fe
 
 ### step
 
-El atributo `step` es un número que especifica la granularidad que un valor debe seguir o el valor especial `any`, el cuál está descrito más abajo. Solo los valores que son iguales a la base para hacer stepping ([`min`](#min) si está especificado, sino {{htmlattrxref("value", "input")}}, o un valor por defecto apropiado si ninguno de estos dos es especificado) son válidos.
+El atributo `step` es un número que especifica la granularidad que un valor debe seguir o el valor especial `any`, el cuál está descrito más abajo. Solo los valores que son iguales a la base para ir avanzando ([`min`](#min) si está especificado, sino {{htmlattrxref("value", "input")}}, o un valor por defecto apropiado si ninguno de estos dos es especificado) son válidos.
 
 Si le damos un valor de cadena de texto `any` significa que ningún salto está marcado y, por lo tanto, cualquier valor está permitido (expecto otras constricciones, como [`min`](#min) y [`max`](#max)).
 
