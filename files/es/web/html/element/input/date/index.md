@@ -81,7 +81,7 @@ console.log(dateControl.value); // imprime "2017-06-01"
 console.log(dateControl.valueAsNumber); // imprime 1496275200000, una marca de fecha (en ms) en JavaScript.
 ```
 
-Este código encuentra el primer elmento {{HTMLElement("input")}} el `type` del cuál es `date` y establece su valor a `2017-06-01` (1 de junio de 2017). Entonces, lee el valor de vuelta en formato cadena de texto y número.
+Este código encuentra el primer elmento {{HTMLElement("input")}} donde `type` es `date` y establece su valor a `2017-06-01` (1 de junio de 2017). Entonces, lee el valor de vuelta en formato cadena de texto y número.
 
 ## Atributos adicionales
 
