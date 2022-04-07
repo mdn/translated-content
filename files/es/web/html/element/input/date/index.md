@@ -482,7 +482,7 @@ daySelect.onchange = function () {
 
 {{Specifications}}
 
-## Compatibilidad en los navegadores
+## Compatibilidad con navegadores
 
 {{Compat}}
 
