@@ -283,7 +283,7 @@ function alertContents() {
 Le fichier `test.php` devrait contenir ce qui suit&nbsp;:
 
 ```php
-$name = (isset($_POST['userName'])) ? $_POST['userName'] : 'anonyme';
+$name = $_POST['userName'] ?? 'anonyme';
 $computedString = 'Bonjour, ' . $name . ' !';
 $array = ['userName' => $name, 'computedString' => $computedString];
 echo json_encode($array);
