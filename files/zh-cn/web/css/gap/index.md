@@ -5,39 +5,39 @@ tags:
   - CSS
   - CSS Flexible Boxes
   - CSS Grid
+  - CSS Multi-column Layout
+  - CSS Property
+  - Reference
+  - gap
+  - recipe:css-property
 translation_of: Web/CSS/gap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>gap</code></strong> 属性是用来设置网格行与列之间的间隙（{{glossary("gutters")}}），该属性是{{cssxref("row-gap")}} and {{cssxref("column-gap")}}的简写形式。</p>
+[CSS](/zh-CN/docs/Web/CSS) **`gap`** 属性是用来设置网格行与列之间的间隙（{{glossary("gutters")}}），该属性是 {{cssxref("row-gap")}} 和 {{cssxref("column-gap")}} 的简写形式。
 
-<div>{{EmbedInteractiveExample("pages/css/gap.html")}}</div>
+{{EmbedInteractiveExample("pages/css/gap.html")}}
 
+## 语法
 
-
-<div class="note">
-<p><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a> 起初是用 {{cssxref('grid-gap')}} 属性来定义的，目前逐渐被 <code>gap</code> 替代。但是，为了兼容那些不支持 <code>gap</code> 属性的浏览器，你需要像上面的例子一样，使用带有前缀的属性。</p>
-</div>
-
-<h2 id="语法">语法</h2>
-
-<pre class="brush: css no-line-numbers notranslate">/* One &lt;length&gt; value */
+```css
+/* One <length> value */
 gap: 20px;
 gap: 1em;
 gap: 3vmin;
 gap: 0.5cm;
 
-/* One &lt;percentage&gt; value */
+/* One <percentage> value */
 gap: 16%;
 gap: 100%;
 
-/* Two &lt;length&gt; values */
+/* Two <length> values */
 gap: 20px 10px;
 gap: 1em 0.5em;
 gap: 3vmin 2vmax;
 gap: 0.5cm 2mm;
 
-/* One or two &lt;percentage&gt; values */
+/* One or two <percentage> values */
 gap: 16% 100%;
 gap: 21px 82%;
 
@@ -48,54 +48,58 @@ gap: calc(20px + 10%) calc(10% - 5px);
 /* Global values */
 gap: inherit;
 gap: initial;
+gap: revert;
+gap: revert-layer;
 gap: unset;
-</pre>
+```
 
-<p>该属性用来表示 <code>&lt;'row-gap'&gt;</code> 和 <code>&lt;'column-gap'&gt;</code>的值，而<code>&lt;'column-gap'&gt;</code>是可选的，假如 <code>&lt;'column-gap'&gt;</code> 缺失的话，则会被设置成跟<code>&lt;'row-gap'&gt;</code>一样的的值。</p>
+该属性用来表示 `<'row-gap'>` 和 `<'column-gap'>` 的值（`<'column-gap'>` 是可选的）。假如 `<'column-gap'>` 缺失的话，则会被设置成跟 `<'row-gap'>` 一样的的值。
 
-<p><code>&lt;'row-gap'&gt;</code> and <code>&lt;'column-gap'&gt;</code> 都可以用  <code>&lt;length&gt;</code> 或者 <code>&lt;percentage&gt;</code> 来表示。</p>
+`<'row-gap'>` 和 `<'column-gap'>` 都可以用 `<length>` 或者 `<percentage>` 来表示。
 
-<h3 id="值">值</h3>
+### 值
 
-<dl>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>网格线之间的间隙宽度。</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>网格线直接的间隙宽度，相对网格容器的百分比。</dd>
-</dl>
+- {{cssxref("&lt;length&gt;")}}
+  - : 网格线之间的间隙宽度。
+- {{cssxref("&lt;percentage&gt;")}}
+  - : 网格线直接的间隙宽度，相对网格容器的百分比。
 
-<h3 id="正式语法">正式语法</h3>
+## 形式定义
+
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
 
-<h2 id="示例">示例</h2>
+## 示例
 
-<h3 id="Flex布局">Flex布局</h3>
+### Flex 布局
 
-<p>{{SeeCompatTable}}</p>
+#### HTML
 
-<h4 id="HTML">HTML</h4>
+```html
+<div id="flexbox">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<pre class="brush: html; notranslate">&lt;div id="flexbox"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+#### CSS
 
-<h4 id="CSS">CSS</h4>
-
-<pre class="brush: css; highlight[5] notranslate">#flexbox {
+```css
+#flexbox {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
   gap: 20px 5px;
 }
 
-#flexbox &gt; div {
+#flexbox > div {
   border: 1px solid green;
   background-color: lime;
   flex: 1 1 auto;
@@ -103,109 +107,84 @@ gap: unset;
   height: 50px;
 
 }
-</pre>
+```
 
-<h4 id="Result">Result</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Flex布局', "auto", "120px")}}</p>
+{{EmbedLiveSample('Flex_布局', "auto", "120px")}}
 
-<h3 id="Grid布局">Grid布局</h3>
+### Grid 布局
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;div id="grid"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[5] notranslate">#grid {
+```css
+#grid {
   display: grid;
   height: 200px;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 20px 5px;
 }
 
-#grid &gt; div {
+#grid > div {
+  border: 1px solid green;
   background-color: lime;
 }
-</pre>
+```
 
-<h4 id="Result_2">Result</h4>
+#### 结果
 
-<p>{{EmbedLiveSample('Grid布局', 'auto', 120)}}</p>
+{{EmbedLiveSample('Grid_布局', 'auto', 120)}}
 
-<h3 id="多列布局">多列布局</h3>
+### 多列布局
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html; notranslate">&lt;p class="content-box"&gt;
+```html
+<p class="content-box">
   This is some multi-column text with a 40px column
-  gap created with the CSS &lt;code&gt;gap&lt;/code&gt; property.
+  gap created with the CSS <code>gap</code> property.
   Don't you think that's fun and exciting? I sure do!
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css; highlight[3] notranslate">.content-box {
+```css
+.content-box {
   column-count: 3;
   gap: 40px;
 }
-</pre>
+```
 
-<h4 id="Result_3">Result</h4>
+#### Result
 
-<p>{{EmbedLiveSample("多列布局", "auto", "120px")}}</p>
+{{EmbedLiveSample("多列布局", "auto", "120px")}}
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">备注</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-gap", "gap")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("css.properties.gap.grid_context")}}
 
-<p>{{cssinfo}}</p>
+## 浏览器兼容性
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+{{Compat}}
 
+## 参见
 
-
-<h3 id="在Flex_布局的兼容性">在Flex 布局的兼容性</h3>
-
-<p>{{Compat("css.properties.gap.flex_context")}}</p>
-
-<h3 id="在Grid_layout的兼容性">在Grid layout的兼容性</h3>
-
-<p>{{Compat("css.properties.gap.grid_context")}}</p>
-
-<h3 id="多列布局的兼容性">多列布局的兼容性</h3>
-
-<p>{{Compat("css.properties.gap.multicol_context")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li>Related CSS properties: {{cssxref("row-gap")}}, {{cssxref("column-gap")}}</li>
- <li>Grid Layout Guide: <em><a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters">Basic concepts of grid layout - Gutters</a></em></li>
-</ul>
+- 相关 CSS 属性: {{cssxref("row-gap")}}、{{cssxref("column-gap")}}
+- 网格布局指南：_[网格布局基本概念 - 网格间距](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#网格间距)_
