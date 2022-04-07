@@ -140,7 +140,7 @@ Este HTML envía la fecha indicada bajo la palabra clave `bday` a `https://examp
 
 ### Estipulando valores de fecha máximos y mínimos
 
-Tu puedes usar los atributos {{htmlattrxref("min", "input")}} y {htmlattrxref("max", "input")}} para restringir qué fechas puede introducir el usuario. En el siguiente ejemplo, establecemos la fecha mínima a `2017-04-01` y la fecha máxima a `2017-04-30`:
+Tu puedes usar los atributos {{htmlattrxref("min", "input")}} y {{htmlattrxref("max", "input")}} para restringir qué fechas puede introducir el usuario. En el siguiente ejemplo, establecemos la fecha mínima a `2017-04-01` y la fecha máxima a `2017-04-30`:
 
 ```html
 <form>
