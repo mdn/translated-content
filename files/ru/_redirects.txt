@@ -289,6 +289,7 @@
 /ru/docs/Quirks_Mode_and_Standards_Mode	/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ru/docs/SVG_In_HTML_Introduction	/ru/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ru/docs/Sample_.htaccess_file	/ru/docs/Learn/Server-side/Apache_Configuration_htaccess
+/ru/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ru/docs/Tools/3D_View	https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html
 /ru/docs/Tools/Accessibility_inspector	https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html
 /ru/docs/Tools/Application	https://firefox-source-docs.mozilla.org/devtools-user/application/index.html
