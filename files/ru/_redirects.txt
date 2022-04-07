@@ -302,7 +302,7 @@
 /ru/docs/Tools/Debugger/How_to/Работа_с_минифицированным_кодом	https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/pretty-print_a_minified_file/index.html
 /ru/docs/Tools/Debugger/Source_map_errors	https://firefox-source-docs.mozilla.org/devtools-user/debugger/source_map_errors/index.html
 /ru/docs/Tools/Eyedropper	https://firefox-source-docs.mozilla.org/devtools-user/eyedropper/index.html
-/ru/docs/Tools/Index	/ru/docs/conflicting/Tools
+/ru/docs/Tools/Index	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ru/docs/Tools/Keyboard_shortcuts	https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html
 /ru/docs/Tools/Memory	https://firefox-source-docs.mozilla.org/devtools-user/memory/index.html
 /ru/docs/Tools/Memory/Tree_map_view	https://firefox-source-docs.mozilla.org/devtools-user/memory/tree_map_view/index.html
@@ -785,6 +785,7 @@
 /ru/docs/XPath/Funkcje	/ru/docs/Web/XPath/Functions
 /ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
+/ru/docs/conflicting/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ru/docs/en	/en-US/
 /ru/docs/Заглавная_страница	/ru/docs/Web
 /ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript
