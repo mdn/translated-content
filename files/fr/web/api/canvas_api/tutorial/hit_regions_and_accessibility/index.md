@@ -10,7 +10,7 @@ L'élément {{HTMLElement("canvas")}} lui-même est juste un bitmap et ne fourni
 
 ## Moyen de repli
 
-Le contenu à l'intérieur d'un tag `<canvas> ... </canvas>` peut être utilisé comme moyen de secours pour les navigteurs qui ne supportent pas le rendu de canvas. C'est aussi très utile pour les utilisateurs qui utilisent des technologies adaptées (comme les lecteurs d'écran) qui peuvent lire et interpréter les éléments du DOM. Un bon exemple sur [html5accessibility.com](http://www.html5accessibility.com/tests/canvas.html) demontre comment cela peut être fait.
+Le contenu à l'intérieur d'un tag `<canvas> ... </canvas>` peut être utilisé comme moyen de secours pour les navigateurs qui ne supportent pas le rendu de canvas. C'est aussi très utile pour les utilisateurs qui utilisent des technologies adaptées (comme les lecteurs d'écran) qui peuvent lire et interpréter les éléments du DOM. Un bon exemple sur [html5accessibility.com](http://www.html5accessibility.com/tests/canvas.html) demontre comment cela peut être fait.
 
 ```html
 <canvas>
