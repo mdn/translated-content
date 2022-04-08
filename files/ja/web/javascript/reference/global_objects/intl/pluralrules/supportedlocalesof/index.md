@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/support
 ---
 {{JSRef}}
 
-**`Intl.PluralRules.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールのうち、代替する必要なく複数形の書式で対応されているものをが入った配列を返します。
+**`Intl.PluralRules.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールのうち、代替する必要なく複数形の書式で対応されているものが入った配列を返します。
 
 ## 構文
 
