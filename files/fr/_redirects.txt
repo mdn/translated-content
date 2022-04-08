@@ -3001,10 +3001,10 @@
 /fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens	/fr/docs/Learn/CSS/Styling_text/Styling_links
 /fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Learn/Index	/fr/docs/conflicting/Learn
-/fr/docs/Learn/JavaScript/Asynchronous/Async_await	/fr/docs/conflicting/Learn/JavaScript/Asynchronous/Promises
-/fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/fr/docs/conflicting/Learn/JavaScript/Asynchronous
-/fr/docs/Learn/JavaScript/Asynchronous/Concepts	/fr/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing
-/fr/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/fr/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df
+/fr/docs/Learn/JavaScript/Asynchronous/Async_await	/fr/docs/Learn/JavaScript/Asynchronous/Promises
+/fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/fr/docs/Learn/JavaScript/Asynchronous
+/fr/docs/Learn/JavaScript/Asynchronous/Concepts	/fr/docs/Learn/JavaScript/Asynchronous/Introducing
+/fr/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals	/fr/docs/Learn/JavaScript/Asynchronous
 /fr/docs/Learn/JavaScript/First_steps/Testes_vos_competence:_Tableaux	/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 /fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile	/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods
 /fr/docs/Learn/JavaScript/First_steps/tableaux	/fr/docs/Learn/JavaScript/First_steps/Arrays
