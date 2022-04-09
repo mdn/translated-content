@@ -1,41 +1,39 @@
 ---
 title: MediaStream.clone()
 slug: Web/API/MediaStream/clone
+tags:
+  - API
+  - メディアキャプチャとストリーム API
+  - メディアストリーム API
+  - MediaStream
+  - メソッド
+  - リファレンス
+  - clone
+browser-compat: api.MediaStream.clone
 translation_of: Web/API/MediaStream/clone
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>{{domxref("MediaStream")}}インタフェースの<strong><code>clone()</code></strong>メソッドは、その<code>MediaStream</code>の複製を作成します。この新しい<code>MediaStream</code>オブジェクトは、新しい固有の{{domxref("MediaStream.id", "id")}}を持ち、<code>MediaStream</code>に含まれる{{domxref("MediaStreamTrack")}}もそれぞれ<code>clone()</code>を呼び出して得られたものになります。</p>
+**`clone()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、この `MediaStream` の複製を作成します。この新しい `MediaStream` オブジェクトは、新しい固有の {{domxref("MediaStream.id", "id")}} を持ち、 MediaStream に含まれる {{domxref("MediaStreamTrack")}} もそれぞれ `clone()` を呼び出して得られたものになります。
 
-<h2 id="文法">文法</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>stream</em> = <em>MediaStream</em>.clone();</pre>
+```js
+var stream = MediaStream.clone();
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<p>新しい{{domxref("MediaStream")}}インスタンスを返します。このインスタンスは新しい固有IDを持ち、<code>MediaStream</code>に含まれる全ての{{domxref("MediaStreamTrack")}}を含みます。この{{domxref("MediaStreamTrack")}}はそれぞれ<code>clone()</code>によって呼び出されたものになります。</p>
+新しい {{domxref("MediaStream")}} インスタンスを返します。このインスタンスは新しい固有の ID を持ち、 `MediaStream` に含まれるすべての {{domxref("MediaStreamTrack")}} を含みます。この {{domxref("MediaStreamTrack")}} はそれぞれ `clone()` によって呼び出されたものになります。
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#widl-MediaStream-clone-MediaStream', 'MediaStream.clone()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStream.clone")}}</p>
+{{Compat}}
