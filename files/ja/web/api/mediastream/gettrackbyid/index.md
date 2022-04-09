@@ -1,61 +1,54 @@
 ---
 title: MediaStream.getTrackById()
 slug: Web/API/MediaStream/getTrackById
+tags:
+  - Media
+  - MediaStream
+  - メディアストリーム API
+  - メソッド
+  - リファレンス
+  - WebRTC
+  - getTrackById
+browser-compat: api.MediaStream.getTrackById
 translation_of: Web/API/MediaStream/getTrackById
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p><strong><code>MediaStream.getTrackById()</code></strong>メソッドは、指定されたID文字列を持つトラックを表現する{{domxref("MediaStreamTrack")}}オブジェクトを返します。指定したIDを持つトラックが存在しない場合は、<code>null</code>を返します。</p>
+**`MediaStream.getTrackById()`** メソッドは、指定された ID 文字列を持つトラックを表現する {{domxref("MediaStreamTrack")}} オブジェクトを返します。指定した ID を持つトラックが存在しない場合は、 `null` を返します。
 
-<h2 id="文法">文法</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>track</em> = <em>MediaStream</em>.getTrackById(<em>id</em>);
-</pre>
+```js
+var track = MediaStream.getTrackById(id);
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### 引数
 
-<dl>
- <dt><code>id</code></dt>
- <dd>取得したいトラックを識別する{{domxref("DOMString")}}です。</dd>
-</dl>
+- `id`
+  - : 取得したいトラックを識別する {{domxref("DOMString")}} です。
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<p>パラメータで指定した<code>id</code>の文字列と同じ{{domxref("MediaStreamTrack.id")}}を持つトラックが見つかった場合は、その{{domxref("MediaStreamTrack")}}オブジェクトを返します。それ以外の場合は、<code>null</code>を返します。</p>
+引数で指定した `id` の文字列と同じ {{domxref("MediaStreamTrack.id")}} を持つトラックが見つかった場合は、その {{domxref("MediaStreamTrack")}} オブジェクトを返します。それ以外の場合は、 `null` を返します。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例では、ビデオに含まれるコメンタリートラックを有効にしています。メインのオーディオトラックの音量を50%にしてから、コメンタリートラックを有効にしています。</p>
+この例では、動画に含まれるコメンタリートラックを有効にしています。メインのオーディオトラックの音量を 50% にしてから、コメンタリートラックを有効にしています。
 
-<pre class="brush: js">stream.getTrackById("primary-audio-track").applyConstraints({ volume: 0.5 });
-stream.getTrackById("commentary-track").enabled = true;</pre>
+```js
+stream.getTrackById("primary-audio-track").applyConstraints({ volume: 0.5 });
+stream.getTrackById("commentary-track").enabled = true;
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture','#widl-MediaStream-getTrackById-MediaStreamTrack-DOMString-trackId','getTrackById()') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStream.getTrackById")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("MediaStream")}}</li>
- <li>{{domxref("MediaStreamTrack.id")}}</li>
-</ul>
+- {{domxref("MediaStream")}}
+- {{domxref("MediaStreamTrack.id")}}
