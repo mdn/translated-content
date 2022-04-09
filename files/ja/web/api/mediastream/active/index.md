@@ -1,51 +1,45 @@
 ---
-title: active
+title: MediaStream.active
 slug: Web/API/MediaStream/active
+tags:
+  - API
+  - メディアキャプチャとストリーム
+  - メディアストリーム API
+  - MediaStream
+  - プロパティ
+  - リファレンス
+  - active
+browser-compat: api.MediaStream.active
 translation_of: Web/API/MediaStream/active
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>{{domxref("MediaStream")}}インタフェースの<strong><code>active</code></strong>は読み取り専用のプロパティであり、ストリームが現在アクティブであれば<code>true</code>を返し、それ以外の場合は<code>false</code>を返します。少なくとも一つのトラックの状態が{{domxref("MediaStreamTrack.ended")}}でない場合、ストリームがアクティブであるとみなされます。すべでのトラックが終了すると、このストリームの<code>active</code>プロパティは<code>false</code>になります。</p>
+**`active`** は {{domxref("MediaStream")}} インターフェイスの読み取り専用プロパティで、ストリームが現在アクティブであれば `true` を返し、それ以外の場合は `false` を返します。トラックの状態が {{domxref("MediaStreamTrack.ended")}} でないトラックが 1 本でもある場合は、ストリームがアクティブであるとみなされます。すべでのトラックが終了すると、このストリームの `active` プロパティは `false` になります。
 
-<h2 id="文法">文法</h2>
+## 値
 
-<pre class="syntaxbox">var <em>isActive</em> = <em>MediaStream</em>.active;</pre>
+論理値で、このストリームが現在アクティブな場合は `true` を返します。それ以外は `false` を返します。
 
-<h3 id="値">値</h3>
+## 例
 
-<p>このストリームが現在アクティブな場合は<code>true</code>を返します。それ以外は<code>false</code>を返します。</p>
+この例では、 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を用いて、要求されたユーザーのローカルのカメラとマイクをソースとする新しいストリームを取得します。ストリームが有効になると（ここでは、{{jsxref("Promise")}} が履行状態になった時）、ストリームが現在アクティブであるかどうかに応じてページにあるボタンの状態が更新されます。
 
-<h2 id="例">例</h2>
-
-<p>この例では、{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}を用いて、要求されたユーザーのローカルのカメラとマイクロフォンをソースとする新しいストリームを取得しています。ストリームが有効になると(ここでは、{{jsxref("Promise")}}がfulfilledの状態になった時)、ストリームが現在アクティブであるかどうかに応じてページにあるボタンの状態が更新されます。</p>
-
-<pre class="brush: js">var promise = navigator.mediaDevices.getUserMedia({
-  audio: true,
-  video: true
+```js
+const promise = navigator.mediaDevices.getUserMedia({
+  audio: true,
+  video: true
 });
 
-promise.then(function(stream) {
-  var startBtn = document.querySelector('#startBtn');
-  startBtn.disabled = stream.active;
-});</pre>
+promise.then((stream) => {
+  const startBtn = document.querySelector('#startBtn');
+  startBtn.disabled = stream.active;
+});
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#widl-MediaStream-active', 'active')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStream.active")}}</p>
+{{Compat}}
