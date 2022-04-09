@@ -1,61 +1,47 @@
 ---
 title: MediaStream.addTrack()
 slug: Web/API/MediaStream/addTrack
+tags:
+  - API
+  - メディアストリーム API
+  - メソッド
+  - NeedsExample
+  - リファレンス
+  - addTrack
+browser-compat: api.MediaStream.addTrack
 translation_of: Web/API/MediaStream/addTrack
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p><strong><code>MediaStream.addTrack()</code></strong>メソッドはストリームへ新しいトラックを追加するメソッドです。パラメータとして渡されるこのトラックの型は{{domxref("MediaStreamTrack")}}です。</p>
+**`MediaStream.addTrack()`** メソッドは、ストリームへ新しいトラックを追加します。このトラックは {{domxref("MediaStreamTrack")}} 型の引数して指定します。
 
-<div class="note">
-<p>If the specified track is already in the stream's track set, this method has no effect.</p>
-</div>
+> **Note:** 指定されたトラックが既にストリームのトラックセットにあった場合、このメソッドは何もしません。
 
-<h2 id="文法">文法</h2>
+## 構文
 
-<pre class="syntaxbox"><em>stream</em>.addTrack(<em>track</em>);
-</pre>
+```js
+stream.addTrack(track);
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### 引数
 
-<dl>
- <dt><code>track</code></dt>
- <dd>このストリームへ追加する{{domxref("MediaStreamTrack")}}です。</dd>
-</dl>
+- `track`
+  - : このストリームへ追加する {{domxref("MediaStreamTrack")}} です。
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="例">例</h2>
+## 例
 
-<p> </p>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+{{Specifications}}
 
-<table class="standard-table" style="height: 49px; width: 1000px;">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture','#widl-MediaStream-addTrack-void-MediaStreamTrack-track','addTrack()') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+{{Compat}}
 
-<p>{{Compat("api.MediaStream.addTrack")}}</p>
+## 関連情報
 
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>{{domxref("MediaStream")}}インタフェース</li>
-</ul>
+- {{domxref("MediaStream")}} （所属先のインターフェイス）
