@@ -9,9 +9,9 @@ translation_of: Web/HTML/Applying_color
 
 <p>Felizmente, adicionar cor no seu HTML é muito fácil, e você pode colorir praticamente qualquer coisa.</p>
 
-<p>Vamos passar pela maior parte de tudo que você precisará saber quando usar cor, incluindo uma {{anch("Things that can have color", "lista do que pode ser colorido e quais propriedades CSS estão envolvidas")}}, {{anch("How to describe a color", "como descrever uma cor")}}, e como de fato {{anch("Using color", "usar cores em folhas de estilo e scripts")}}. Também daremos uma olhada em como {{anch("Letting the user picka color", "permitir que o usuário escolha uma cor")}}.</p>
+<p>Vamos passar pela maior parte de tudo que você precisará saber quando usar cor, incluindo uma <a href="#things_that_can_have_color">lista do que pode ser colorido e quais propriedades CSS estão envolvidas</a>, <a href="#how_to_describe_a_color">como descrever uma cor</a>, e como de fato <a href="#using_color">usar cores em folhas de estilo e scripts</a>. Também daremos uma olhada em como <a href="#letting_the_user_picka_color">permitir que o usuário escolha uma cor</a>.</p>
 
-<p>Então, encerraremos o assunto com uma breve discussão de como {{anch("Using color wisely", "usar cores sabiamente")}}: como selecionar cores apropriadas, tendo em mente as necessidades de pessoas com diferentes capacidades visuais.</p>
+<p>Então, encerraremos o assunto com uma breve discussão de como <a href="#using_color_wisely">usar cores sabiamente</a>: como selecionar cores apropriadas, tendo em mente as necessidades de pessoas com diferentes capacidades visuais.</p>
 
 <h2 id="Coisas_que_podem_ter_cor">Coisas que podem ter cor</h2>
 
@@ -43,8 +43,8 @@ translation_of: Web/HTML/Applying_color
 <p>Todo elemento é uma caixa com algum tipo de conteúdo, e tem um plano de fundo e uma borda em adição a qualquer conteúdo que a caixa possa ter.</p>
 
 <dl>
- <dt>{{anch("Borders")}}</dt>
- <dd>Veja a seção {{anch("Borders")}} com uma lista das propriedades CSS que você pode usar para configurar as cores das bordas de uma caixa.</dd>
+ <dt><a href="#borders">Borders</a></dt>
+ <dd>Veja a seção <a href="#borders">Borders</a> com uma lista das propriedades CSS que você pode usar para configurar as cores das bordas de uma caixa.</dd>
  <dt>{{cssxref("background-color")}}</dt>
  <dd>A cor de plano de fundo para usar em áreas do elemento que não têm conteúdo de primeiro plano.</dd>
  <dt>{{cssxref("column-rule-color")}}</dt>
@@ -223,7 +223,7 @@ th {
 
 <h2 id="Usando_cor">Usando cor</h2>
 
-<p>Agora que você sabe quais propriedades CSS existentes permitem que você aplique cor a elementos, e quais formatos pode usar para descrever cores, você pode unir ambos para começar a fazer uso delas. Como você pode ter visto na lista em {{anch("Things that can have color")}}, há muitas coisas que podem ser coloridas com CSS. Vejamos este tema por dois lados: usando cor dentro de uma {{Glossary("stylesheet")}}, e adicionando e mudando cor usando código {{Glossary("JavaScript")}} para alterar os estilos dos elementos.</p>
+<p>Agora que você sabe quais propriedades CSS existentes permitem que você aplique cor a elementos, e quais formatos pode usar para descrever cores, você pode unir ambos para começar a fazer uso delas. Como você pode ter visto na lista em <a href="#things_that_can_have_color">Things that can have color</a>, há muitas coisas que podem ser coloridas com CSS. Vejamos este tema por dois lados: usando cor dentro de uma {{Glossary("stylesheet")}}, e adicionando e mudando cor usando código {{Glossary("JavaScript")}} para alterar os estilos dos elementos.</p>
 
 <h3 id="Especificando_cores_em_folhas_de_estilo">Especificando cores em folhas de estilo</h3>
 
@@ -322,7 +322,7 @@ th {
 
 <p>Há muitas situações em que o seu website pode precisar permitir que o usuário selecione uma cor. Talvez você tenha uma interface de usuário customizável, ou você está implementando um app de desenho. Talvez você tenha texto editável e precise deixar o usuário escolher a cor do texto. Ou talvez seu app permita que o usuário defina cores para pastas ou itens. Apesar de historicamente ter sido necessário implementar o seu próprio {{interwiki("wikipedia", "color picker")}}, o HTML agora suporta que os navegadores forneçam um seletor de cor para seu uso através do elemento {{HTMLElement("input")}}, usando <code>"color"</code> como o valor do seu atributo  {{htmlattrxref("type", "input")}}.</p>
 
-<p>O elemento <code>&lt;input&gt;</code> representa uma cor apenas na {{anch("Hexadecimal string notation", "notação hexadecimal em string")}} explicada acima.</p>
+<p>O elemento <code>&lt;input&gt;</code> representa uma cor apenas na <a href="#hexadecimal_string_notation">notação hexadecimal em string</a> explicada acima.</p>
 
 <h3 id="Exemplo_Selecionando_uma_cor">Exemplo: Selecionando uma cor</h3>
 
@@ -404,7 +404,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <h4 id="Fleshing_out_the_palette">Fleshing out the palette</h4>
 
-<p>Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See {{anch("Color and accessibility")}} for a brief explanation of why this matters.</p>
+<p>Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See <a href="#color_and_accessibility">Color and accessibility</a> for a brief explanation of why this matters.</p>
 
 <p>A few examples (all free to use as of the time this list was last revised):</p>
 
