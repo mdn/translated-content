@@ -1,61 +1,66 @@
 ---
 title: MediaStream.getVideoTracks()
 slug: Web/API/MediaStream/getVideoTracks
+tags:
+  - API
+  - Media
+  - メディアキャプチャとストリーム API
+  - メディアストリーム API
+  - MediaStream
+  - メソッド
+  - リファレンス
+  - 動画
+  - getVideoTracks
+  - ストリーム
+  - トラック
+browser-compat: api.MediaStream.getVideoTracks
 translation_of: Web/API/MediaStream/getVideoTracks
 ---
-<p>{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>{{domxref("MediaStream")}}インタフェースの<strong><code>getVideoTracks()</code></strong>は、このストリームに含まれるビデオトラックを表現する{{domxref("MediaStreamTrack")}}オブジェクトの配列を返します。</p>
+**`getVideoTracks()`** は {{domxref("MediaStream")}} インタフェースのメソッドで、このストリームに含まれる動画トラックを表す {{domxref("MediaStreamTrack")}} オブジェクトの配列を返します。
 
-<h2 id="文法">文法</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>mediaStreamTracks[]</em> = <em>mediaStream</em>.getVideoTracks()</pre>
+```js
+var mediaStreamTracks[] = mediaStream.getVideoTracks();
+```
 
-<h3 id="パラメータ">パラメータ</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="戻り値"><span style='font-family: x-locale-heading-primary,zillaslab,Palatino,"Palatino Linotype",x-locale-heading-secondary,serif; font-size: 1.375rem;'>戻り値</span></h3>
+### 返値
 
-<p>{{domxref("MediaStreamTrack")}}の配列。</p>
+{{domxref("MediaStreamTrack")}} オブジェクトの配列で、それぞれがメディアストリームに含まれるそれぞれの動画トラックを表します。動画トラックは {{domxref("MediaStreamTrack.kind", "kind")}} プロパティが `video` であるトラックです。ストリームに動画トラックが含まれていない場合、配列は空となります。
 
-<h3 id="例外">例外</h3>
+> **Note:** トラックの順序は仕様で定義されておらず、 `getVideoTracks()` の呼び出しごとに同じ順序になるとは限りません。
 
-<h2 id="例">例</h2>
+この API の初期の版では、特別な `VideoStreamTrack` インターフェイスがあり、動画ストリームのリストに含まれる各項目の型として使用されていましたが、これはその後でメインの {{domxref("MediaStreamTrack")}} インターフェイスに統合されました。
 
-<p>次の例は、<a href="https://googlechrome.github.io/samples/image-capture/photo-resolution.html">Chrome's Image Capture / Photo Resolution Sample</a> (英語)から抜粋したものであり、<code>getVideoTracks()</code>を用いて取得したトラックを{{domxref("ImageCapture.ImageCapture", "ImageCapture()")}}コンストラクタへ渡しています。</p>
+## 例
 
-<pre class="brush: js"><code>const input = document.querySelector('input[type="range"]');
+次の例は、 [Chrome's
+Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html) (英語)から抜粋したものであり、 `getVideoTracks()` を用いて取得したトラックを {{domxref("ImageCapture.ImageCapture", "ImageCapture()")}} コンストラクターへ渡しています。
 
+```js
 var imageCapture;
 
 navigator.mediaDevices.getUserMedia({video: true})
-.then(mediaStream =&gt; {
+.then(mediaStream => {
   document.querySelector('video').srcObject = mediaStream;
 
   const track = mediaStream.getVideoTracks()[0];
   imageCapture = new ImageCapture(track);
 
   return imageCapture.getPhotoCapabilities();
-})</code></pre>
+})
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture','#dom-mediastream-getvideotracks','getVideoTracks()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStream.getVideoTracks")}}</p>
+{{Compat}}
