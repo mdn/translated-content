@@ -1,64 +1,64 @@
 ---
 title: MediaStream.getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
+tags:
+  - API
+  - Audio
+  - 実験的
+  - Media
+  - メディアキャプチャとストリーム API
+  - メディアストリーム API
+  - MediaStream
+  - MediaStreamTrack
+  - メソッド
+  - リファレンス
+  - getAudioTracks
+  - トラック
+browser-compat: api.MediaStream.getAudioTracks
 translation_of: Web/API/MediaStream/getAudioTracks
 ---
-<p>{{APIRef("Media Capture and Streams")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p>{{domxref("MediaStream")}} インタフェースの<strong><dfn><code>getAudioTracks()</code></dfn></strong> メソッドは、そのストリームの<code><a href="https://www.w3.org/TR/mediacapture-streams/#track-set">track set</a></code>の中から、{{domxref("MediaStreamTrack.kind")}}が<code>audio</code>である{{domxref("MediaStreamTrack")}} を表すオブジェクトの配列を返します。</p>
+**`getAudioTracks()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、そのストリームの [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) の中から、 {{domxref("MediaStreamTrack.kind")}} が `audio` である {{domxref("MediaStreamTrack")}} を表すオブジェクトの配列を返します。
 
-<h2 id="文法">文法</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">var <em>mediaStreamTracks</em> = <em>mediaStream</em>.getAudioTracks()</pre>
+```js
+var mediaStreamTracks = mediaStream.getAudioTracks()
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="戻り値">戻り値</h3>
+### 返値
 
-<p>ストリームに含まれるオーディオトラックである{{domxref("MediaStreamTrack")}}オブジェクトの配列。オーディオトラックとは{{domxref("MediaStreamTrack.kind", "kind")}}プロパティが <code>audio</code>のトラックです。ストリーム内にオーディオトラックがない場合はこの配列は空になります。</p>
+ストリームに含まれる音声トラックである {{domxref("MediaStreamTrack")}} オブジェクトの配列です。音声トラックとは {{domxref("MediaStreamTrack.kind", "kind")}} プロパティが `audio` のトラックです。ストリーム内に音声トラックがない場合は、この配列は空になります。
 
-<div class="note">
-<p><strong>注意:</strong> トラックの順番は仕様では定義されておらず、実際、<code>getAudioTracks()</code>を呼び出すたびに変わりえます。</p>
-</div>
+> **Note:** 返されるトラックの順序は仕様書では定義されておらず、実際、 `getAudioTracks()` を呼び出すごとに変わる可能性があります。
 
-<p>このAPIの初期バージョンでは、オーディオストリーム内の要素の型として使われていた特別な<code>AudioStreamTrack</code>インタフェースを含んでいました。しかし、こちらは後ほど、{{domxref("MediaStreamTrack")}}インタフェース内に統合されました。</p>
+この API の初期の版では、特別な `AudioStreamTrack` インターフェイスがあり、音声ストリームのリストに含まれる各項目の型として使用されていましたが、これはその後でメインの {{domxref("MediaStreamTrack")}} インターフェイスに統合されました。
 
-<h2 id="例">例</h2>
+## 例
 
-<p>この例では、Webカメラの音声とビデオを{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}を使ってストリームとして取得し、そのストリームを{{HTMLElement("video")}}要素に設定します。その後、終了時にストリーム内の最初のオーディオトラックを停止するタイマーを設定します。</p>
+この例では、ウェブカメラの音声と動画を {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} を使ってストリームとして取得し、そのストリームを {{HTMLElement("video")}} 要素に設定します。その後、終了時にストリーム内の最初の音声トラックを停止するタイマーを設定します。
 
-<pre class="brush: js notranslate">navigator.mediaDevices.getUserMedia({audio: true, video: true})
-.then(mediaStream =&gt; {
+```js
+navigator.mediaDevices.getUserMedia({audio: true, video: true})
+.then(mediaStream => {
   document.querySelector('video').srcObject = mediaStream;
   // Stop the audio stream after 5 seconds
-  setTimeout(() =&gt; {
+  setTimeout(() => {
     const tracks = mediaStream.getAudioTracks()
     tracks[0].stop()
   }, 5000)
 })
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture','#dom-mediastream-getaudiotracks','getAudioTracks()')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStream.getAudioTracks")}}</p>
+{{Compat}}
