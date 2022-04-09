@@ -1,62 +1,75 @@
 ---
-title: MediaStream.onaddtrack
+title: 'MediaStream: addtrack イベント'
 slug: Web/API/MediaStream/addtrack_event
-translation_of: Web/API/MediaStream/onaddtrack
+tags:
+  - イベント
+browser-compat: api.MediaStream.addtrack_event
+translation_of: Web/API/MediaStream/addtrack_event
 original_slug: Web/API/MediaStream/onaddtrack
 ---
-<p>{{APIRef("Media Streams API")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p><span class="seoSummary"><strong><code>MediaStream.onaddtrack</code></strong> プロパティは、{{event("Event_handlers", "event handler")}}であり、{{domxref("MediaStream")}}インスタンスで{{event("addtrack")}}イベントが発生した時に呼び出される関数です。このイベントは、メディアストリームへ新しいトラックが追加された時に発生します。</span>このイベントはブラウザがストリームへ新しいトラックを追加した時に発生します。たとえば、{{domxref("RTCPeerConnection")}}が再交渉された時や、{{domxref("HTMLMediaElement.captureStream()")}}を用いてキャプチャーが開始されたストリームが、新しいトラックを取得した時です。</p>
+`addtrack` イベントは、新しい [`MediaStreamTrack`](/ja/docs/Web/API/MediaStreamTrack) オブジェクトが [`MediaStream`](/ja/docs/Web/API/MediaStream) に追加されたときに発行されます。
 
-<p>JavaScriptのコードによって明示的にストリームへトラックを追加した場合({{domxref("MediaStream.addTrack", "addTrack()")}}の呼び出しによるもの)は、<code>addtrack</code>イベントは発生しません。</p>
+このイベントはキャンセル不可で、バブリングしません。
 
-<h2 id="文法">文法</h2>
+## 構文
 
-<pre class="syntaxbox"><em>MediaStream</em>.onaddtrack = <em>eventHandler</em>;
-</pre>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<h3 id="値">値</h3>
+```js
+addEventListener('addtrack', event => { });
 
-<p>どのトラックで{{event("addtrack")}}イベントが発生したのかを表現するための{{domxref("MediaStreamTrackEvent")}}オブジェクトを引数として受け取る関数を設定してください。追加されたトラックは、イベントの{{domxref("MediaStreamTrackEvent.track", "track")}}プロパティで表されます。</p>
+onaddtrack = event => { };
+```
 
-<h2 id="例">例</h2>
+## イベント型
 
-<p>この例では、新しいトラックがストリームへ追加された時に、トラックのリストへ新しいアイテムを追加しています。新しいアイテムには、トラックの<code>kind</code>(<code>"audio"<font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">または</span></font></code><code>"video"</code>)と<code>label</code>が表示されます。</p>
+{{domxref("MediaStreamTrackEvent")}} です。 {{domxref("Event")}} から継承しています。
 
-<pre class="brush: js">stream.onaddtrack = function(event) {
-  let trackList = document.getElementById("tracks");
-  let label = document.createElement("li");
+{{InheritanceDiagram("MediaStreamTrackEvent")}}
 
-  label.innerHTML = event.track.kind + ": " + event.track.label;
-  trackList.appendChild(label);
+## イベントプロパティ
+
+_親インターフェイスである {{domxref("Event")}} から継承したプロパティもあります。_
+
+- `track` {{ReadOnlyInline}}
+  - : {{domxref("MediaStreamTrack")}} オブジェクトで、このストリームに追加されたトラックを表します。
+
+## 例
+
+`addEventListener()` を使用すると次にようになります。
+
+```js
+let stream = new MediaStream();
+
+stream.addEventListener('addtrack', (event) => {
+  console.log(`New ${event.track.kind} track added`);
+});
+```
+
+`onaddtrack` イベントハンドラープロパティを使用すると次にようになります。
+
+```js
+let stream = new MediaStream();
+
+stream.onaddtrack = (event) => {
+  console.log(`New ${event.track.kind} track added`);
 };
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{ SpecName('Media Capture', '#event-mediastream-addtrack', 'MediaStream.onaddtrack') }}</td>
-   <td>{{ Spec2('Media Capture') }}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStream.onaddtrack")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li>{{event("addtrack")}}イベントおよび、その型である{{domxref("MediaStreamTrackEvent")}}</li>
-</ul>
+- 関連イベント: [`removetrack`](/ja/docs/Web/API/MediaStream/removetrack_event)
+- [`AudioTrackList`](/ja/docs/Web/API/AudioTrackList) をターゲットとしたこのイベント: [`addtrack`](/ja/docs/Web/API/AudioTrackList/addtrack_event)
+- [`VideoTrackList`](/ja/docs/Web/API/VideoTrackList) をターゲットとしたこのイベント: [`addtrack`](/ja/docs/Web/API/VideoTrackList/addtrack_event)
+- [メディアストリーム API](/ja/docs/Web/API/Media_Streams_API)
+- [WebRTC](/ja/docs/Web/API/WebRTC_API)
