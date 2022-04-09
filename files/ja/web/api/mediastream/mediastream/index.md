@@ -4,68 +4,53 @@ slug: Web/API/MediaStream/MediaStream
 tags:
   - API
   - Audio
-  - Constructor
+  - コンストラクター
   - Media
-  - Media Capture and Streams
-  - Media Capture and Streams API
+  - メディアキャプチャとストリーム
+  - メディアキャプチャとストリーム API
   - MediaStream
-  - Reference
-  - Streams
-  - Tracks
+  - リファレンス
+  - ストリーム
+  - トラック
   - Video
   - WebRTC
-  - streaming
+  - ストリーミング
+browser-compat: api.MediaStream.MediaStream
 translation_of: Web/API/MediaStream/MediaStream
 ---
-<div>{{APIRef("Media Capture and Streams")}}</div>
+{{APIRef("Media Capture and Streams")}}
 
-<p><span class="seoSummary"><strong><code>MediaStream()</code></strong> はコンストラクターで、新しく生成された {{domxref("MediaStream")}} を返し、これはそれぞれが {{domxref("MediaStreamTrack")}} オブジェクトで表されるメディアトラックのコレクションとして機能します。</span>何か引数が与えられた場合は、指定されたトラックが新しいストリームに追加されます。そうでなければ、ストリームはトラックを持ちません。</p>
+**`MediaStream()`** コンストラクターは、新しく生成された {{domxref("MediaStream")}} を返し、これはそれぞれが {{domxref("MediaStreamTrack")}} オブジェクトで表されるメディアトラックのコレクションとして機能します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+何か引数が与えられた場合は、指定されたトラックが新しいストリームに追加されます。そうでなければ、ストリームはトラックを持ちません。
 
-<pre class="syntaxbox"><var>newStream</var> = new MediaStream();
-<var>newStream</var> = new MediaStream(<var>stream</var>);
-<var>newStream</var> = new MediaStream(<var>tracks[]</var>);
-</pre>
+## 構文
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+```js
+new MediaStream();
+new MediaStream(stream);
+new MediaStream(tracks);
+```
 
-<dl>
- <dt><code><var>stream</var></code></dt>
- <dd>様々な {{domxref("MediaStream")}} オブジェクトで、そのトラックが新しく生成されたストリームに自動的に追加されます。トラックは元のストリームから除去されないので、二つのストリームで強要されることになります。</dd>
- <dt><code><var>tracks</var></code></dt>
- <dd>{{domxref("MediaStreamTrack")}} オブジェクトの {{jsxref("Array")}} で、それぞれがストリームに追加するトラックです。</dd>
-</dl>
+### 引数
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+- `stream`
+  - : 様々な {{domxref("MediaStream")}} オブジェクトで、そのトラックが新しく生成されたストリームに自動的に追加されます。トラックは元のストリームから除去されないので、 2 つのストリームで共用されることになります。
+- `tracks`
+  - : {{domxref("MediaStreamTrack")}} オブジェクトの {{jsxref("Array")}} で、それぞれがストリームに追加するトラックです。
 
-<p>生成された {{domxref("MediaStream")}} オブジェクトで、空のトラック、もしくは指定されたトラックを持つ。</p>
+### 返値
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+生成された {{domxref("MediaStream")}} オブジェクトで、空のトラック、もしくは指定されたトラックを持つ。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Media Capture', '#mediastream', 'MediaStream')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+{{Specifications}}
 
-<p>{{Compat("api.MediaStream.MediaStream")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("MediaStream")}}</li>
-</ul>
+## 関連情報
+
+- {{domxref("MediaStream")}}
