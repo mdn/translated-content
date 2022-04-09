@@ -1,49 +1,43 @@
 ---
 title: MediaStream.id
 slug: Web/API/MediaStream/id
+tags:
+  - MediaStream
+  - プロパティ
+  - 読み取り専用
+  - リファレンス
+  - ウェブ
+browser-compat: api.MediaStream.id
 translation_of: Web/API/MediaStream/id
 ---
-<p>{{APIRef("WebRTC")}}</p>
+{{APIRef("Media Capture and Streams")}}
 
-<p><code><strong>MediaStream.id</strong></code>は読み取り専用プロパティであり、このオブジェクトの固有識別子(GUID)である36文字で表現される{{domxref("DOMString")}}を返します。</p>
+**`MediaStream.id()`** は読み取り専用プロパティであり、このオブジェクトの固有識別子 (GUID) である 36 文字で表現される {{domxref("DOMString")}} を返します。
 
-<h2 id="Syntax" name="Syntax">文法</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>id</em> = <em>mediaStream</em>.id;
-</pre>
+```js
+var id = mediaStream.id;
+```
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js"><code class="language-html">var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+```js
+var p = navigator.mediaDevices.getUserMedia({ audio: true, video: true });
 
 p.then(function(stream) {
    console.log(stream.id);
-};)
-</code></pre>
+})
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Media Capture', '#widl-MediaStream-id', 'MediaStream.id')}}</td>
-   <td>{{Spec2('Media Capture')}}</td>
-   <td>初版</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.MediaStream.id")}}</p>
+{{Compat}}
 
-<h2 id="関連項目">関連項目</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("MediaStream")}}インタフェース</li>
-</ul>
+- このプロパティが所属する {{domxref("MediaStream")}} インターフェイス
