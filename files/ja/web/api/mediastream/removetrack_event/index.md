@@ -8,7 +8,7 @@ translation_of: Web/API/MediaStream/removetrack_event
 ---
 {{APIRef("Media Capture and Streams")}}
 
-`removetrack` イベントは、新しい [`MediaStreamTrack`](/ja/docs/Web/API/MediaStreamTrack) オブジェクトが [`MediaStream`](/ja/docs/Web/API/MediaStream) から取り除かれたときに発生します。
+`removetrack` イベントは、新しい [`MediaStreamTrack`](/ja/docs/Web/API/MediaStreamTrack) オブジェクトが [`MediaStream`](/ja/docs/Web/API/MediaStream) から取り除かれたときに発行されます。
 
 このイベントはキャンセル不可で、バブリングしません。
 
@@ -17,9 +17,9 @@ translation_of: Web/API/MediaStream/removetrack_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('addtrack', event => { });
+addEventListener('removetrack', event => { });
 
-onaddtrack = event => { };
+onremovetrack = event => { };
 ```
 
 ## イベント型
@@ -33,7 +33,7 @@ onaddtrack = event => { };
 _親インターフェイスである {{domxref("Event")}} から継承したプロパティもあります。_
 
 - `track` {{ReadOnlyInline}}
-  - : {{domxref("MediaStreamTrack")}} オブジェクトで、このストリームに追加されたトラックを表します。
+  - : {{domxref("MediaStreamTrack")}} オブジェクトで、このストリームから削除されたトラックを表します。
 
 ## 例
 
