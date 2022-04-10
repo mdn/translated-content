@@ -31,7 +31,7 @@ O evento **`submit`** é disparado quando é feita a submissão de um {{HtmlElem
       <td>{{DOMxRef("SubmitEvent")}}</td>
     </tr>
     <tr>
-      <th>Propriedade de event handler</th>
+      <th>Propriedade para manipular o evento</th>
       <td>{{domxref("GlobalEventHandlers.onsubmit")}}</td>
     </tr>
   </tbody>
