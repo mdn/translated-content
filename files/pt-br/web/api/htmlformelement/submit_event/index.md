@@ -14,7 +14,7 @@ translation_of: Web/API/HTMLFormElement/submit_event
 
 {{APIRef}}
 
-O evento **`submit`** é disparado quando é feito o submit de um {{HtmlElement("form")}}.
+O evento **`submit`** é disparado quando é feita a submissão de um {{HtmlElement("form")}}.
 
 <table class="properties">
   <tbody>
