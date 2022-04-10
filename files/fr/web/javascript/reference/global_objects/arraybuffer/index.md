@@ -1,114 +1,66 @@
 ---
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
-tags:
-  - ArrayBuffer
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer
+browser-compat: javascript.builtins.ArrayBuffer
 ---
 {{JSRef}}
 
-L'objet **`ArrayBuffer`** est utilisé afin de représenter un tampon (_buffer_) de données binaires de longueur fixe de façon générique. C'est un tableau d'octets. La manipulation du contenu d'un `ArrayBuffer` se fait de façon indirecte en créant un [tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou un objet {{jsxref("DataView")}} qui permet de représenter le tampon dans un format donné qui permet de lire/écrire des contenus dans le tampon de mémoire.
+L'objet **`ArrayBuffer`** est utilisé afin de représenter un tampon (_buffer_) de données binaires de longueur fixe de façon générique.
 
-{{EmbedInteractiveExample("pages/js/arraybuffer-constructor.html")}}
+Il s'agit d'un tableau d'octets. Il n'est pas possible de manipuler directement le contenu d'un `ArrayBuffer`, la manipulation se fait de façon indirecte en créant un [tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou un objet [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) qui permet de représenter le tampon dans un format donné qui permet de lire/écrire des contenus dans le tampon de mémoire.
 
-## Syntaxe
+Le constructeur [`ArrayBuffer()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) permet de créer un nouvel objet `ArrayBuffer` dont la longueur, en octets, est fournie par l'argument. Il est aussi possible d'obtenir un tableau typé à partir de données existantes, par exemple depuis une chaîne en [Base64](/fr/docs/Glossary/Base64) ou [depuis un fichier local](/fr/docs/Web/API/FileReader/readAsArrayBuffer).
 
-    new ArrayBuffer(longueur)
 
-### Paramètres
+## Constructeur
 
-- `longueur`
-  - : La taille, exprimée en octets, du tableau représentant le tampon.
+- [`ArrayBuffer()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer)
+  - : Crée un nouvel objet `ArrayBuffer`.
 
-### Valeur de retour
+## Propriétés statiques
 
-Un nouvel objet `ArrayBuffer` de la taille donnée. Ses éléments sont initialisés à 0.
+- [`get ArrayBuffer[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species)
+  - : La fonction de construction utilisée pour créer des objets dérivés.
 
-### Exceptions
+## Méthodes statiques
 
-Une exception {{jsxref("RangeError")}} est levée lorsque l'argument `longueur` est supérieur à {{jsxref("Number.MAX_SAFE_INTEGER")}} (soit 2^53) ou s'il est négatif.
+- [`ArrayBuffer.isView(arg)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView)
+  - : Renvoie `true` si `arg` est une des vues sur le tableau typé sous la forme d'un [objet de tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView) et `false` sinon.
 
-## Description
+## Propriétés des instances
 
-Le constructeur `ArrayBuffer` crée une nouvelle instance d'`ArrayBuffer` dont la longueur est celle donnée lors de la construction.
+- [`ArrayBuffer.prototype.byteLength`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength)
+  - : La taille exprimée en octets, et en lecture seule, de l'objet `ArrayBuffer`. Elle est établie à la construction du tableau et ne peut pas être changée.
 
-### Obtenir un tampon mémoire depuis des données existantes
+## Méthodes des instances
 
-- [À partir d'une chaîne de caractères en Base 64](/fr/docs/Décoder_encoder_en_base64#Annexe_.3A_D.C3.A9coder_une_cha.C3.AEne_en_base64_en_un_objet_Uint8Array_ou_ArrayBuffer)
-- [À partir d'un fichier local](/fr/docs/Web/API/FileReader)
+- [`ArrayBuffer.prototype.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice)
+  - : Renvoie un nouvel objet `ArrayBuffer` dont le contenu est une copie des octets de l'objet `ArrayBuffer` courant entre l'indice de début (inclus) et l'indice de fin (exclus), passés en argument. Si les valeurs fournies pour l'indice de début ou de fin sont négatives, elles expriment un indice compté depuis la fin du tableau (plutôt que depuis le début).
 
-## Propriétés
+## Exemples
 
-- `ArrayBuffer.length`
-  - : La longueur du constructeur `ArrayBuffer`. Elle vaut 1.
-- {{jsxref("ArrayBuffer.@@species", "get ArrayBuffer[@@species]")}}
-  - : La fonction de construction utilisée pour créer les objets dérivés.
-- {{jsxref("ArrayBuffer.prototype")}}
-  - : Cette propriété permet d'ajouter des propriétés à tous les objets `ArrayBuffer`.
+### Créer un objet `ArrayBuffer`
 
-## Méthodes
-
-- {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}
-  - : Cette méthode renvoie `true` si `arg` est une des vues sur l'`ArrayBuffer` telle qu'un [tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou un objet {{jsxref("DataView")}}, sinon elle renvoie `false`.
-- {{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(ancienTampon [, nouvelleLongueur])")}} {{experimental_inline}}
-  - : Cette méthode renvoie un nouvel objet `ArrayBuffer` dont le contenu est transféré depuis les données de `ancienTampon` et qui est ensuite tronqué ou rallongé avec des zéros pour que la taille du nouveau tampon soit `nouvelleLongueur`.
-
-## Les instances d'`ArrayBuffer`
-
-Toutes les instances d'`ArrayBuffer` héritent de {{jsxref("ArrayBuffer.prototype")}}.
-
-### Propriétés
-
-{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/prototype','Propri.C3.A9t.C3.A9s')}}
-
-### Méthodes
-
-{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/prototype','M.C3.A9thodes')}}
-
-- {{jsxref("ArrayBuffer.slice()")}} {{non-standard_inline}}
-  - : Cette méthode fournit la même fonctionnalité que {{jsxref("ArrayBuffer.prototype.slice()")}}.
-
-## Exemple
-
-Dans cet exemple, on crée un tampon sur 8 octets avec une vue {{jsxref("Int32Array")}} qui fait référence à ce tampon :
+Dans cet exemple, on crée un tampon de mémoire sur 8 octets avec une vue [`Int32Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Int32Array) qui porte sur le tampon&nbsp;:
 
 ```js
-var tampon = new ArrayBuffer(8);
-var vue    = new Int32Array(tampon);
+const buffer = new ArrayBuffer(8);
+const view = new Int32Array(buffer);
 ```
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires                                                                                        |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                         | {{Spec2('Typed Array')}} | Remplacée par ECMAScript 6.                                                                         |
-| {{SpecName('ES6', '#sec-arraybuffer-constructor', 'ArrayBuffer')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. `new` est obligaoire pour utiliser le constructeur. |
-| {{SpecName('ESDraft', '#sec-arraybuffer-constructor', 'ArrayBuffer')}} | {{Spec2('ESDraft')}}     |                                                                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.ArrayBuffer")}}
-
-## Notes de compatibilité
-
-À partir d'ECMAScript 2015 (ES6), `ArrayBuffer` doit être utilisée avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `ArrayBuffer` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
-
-```js example-bad
-var dv = ArrayBuffer(10);
-// TypeError: calling a builtin ArrayBuffer constructor
-// without new is forbidden
-```
-
-```js example-good
-var dv = new ArrayBuffer(10);
-```
+{{Compat}}
 
 ## Voir aussi
 
-- [Les tableaux typés JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
-- {{jsxref("SharedArrayBuffer")}}
+- [Une prothèse d'émulation (<i lang="en">polyfill</i>) pour `ArrayBuffer` dans la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)
+- [<i lang="en">RangeError: invalid array length</i>](/fr/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)
