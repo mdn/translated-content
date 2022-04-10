@@ -3,40 +3,42 @@ title: DOM ツリーの作成方法
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
 tags:
   - AJAX
-  - Add-ons
+  - アドオン
   - DOM
-  - Extensions
+  - 拡張機能
   - JXON
   - NeedsUpdate
   - XML
 translation_of: Web/API/Document_object_model/How_to_create_a_DOM_tree
 ---
-<p>{{draft}}</p>
+{{DefaultAPISidebar("DOM")}}
 
-<p>このページでは JavaScript において <a href="https://www.w3.org/TR/DOM-Level-3-Core/core.html">DOM Core</a> API を用いて DOM オブジェクトを作成したり変更したりする方法を解説します。これはすべての Gecko ベースのアプリケーション (Firefox など) で特権付きコード (拡張機能) でも特権なしコード (ウェブページ) でも利用できます。</p>
+このページでは JavaScript において [DOM コア](https://www.w3.org/TR/DOM-Level-3-Core/core.html) API を用いて DOM オブジェクトを作成したり変更したりする方法を解説します。これはすべての Gecko ベースのアプリケーション（Firefox など）で特権付きコード（拡張機能）でも特権なしコード（ウェブページ）でも利用できます。
 
-<h3 id="Dynamically_creating_a_DOM_tree">DOM ツリーの動的作成</h3>
+### DOM ツリーの動的作成
 
-<p>次の XML 文書を見てください。</p>
+次の XML 文書を見てください。
 
-<pre class="brush: xml">&lt;?xml version="1.0"?&gt;
-&lt;people&gt;
-  &lt;person first-name="eric" middle-initial="H" last-name="jung"&gt;
-    &lt;address street="321 south st" city="denver" state="co" country="usa"/&gt;
-    &lt;address street="123 main st" city="arlington" state="ma" country="usa"/&gt;
-  &lt;/person&gt;
+```xml
+<?xml version="1.0"?>
+<people>
+  <person first-name="eric" middle-initial="H" last-name="jung">
+    <address street="321 south st" city="denver" state="co" country="usa"/>
+    <address street="123 main st" city="arlington" state="ma" country="usa"/>
+  </person>
 
-  &lt;person first-name="jed" last-name="brown"&gt;
-    &lt;address street="321 north st" city="atlanta" state="ga" country="usa"/&gt;
-    &lt;address street="123 west st" city="seattle" state="wa" country="usa"/&gt;
-    &lt;address street="321 south avenue" city="denver" state="co" country="usa"/&gt;
-  &lt;/person&gt;
-&lt;/people&gt;
-</pre>
+  <person first-name="jed" last-name="brown">
+    <address street="321 north st" city="atlanta" state="ga" country="usa"/>
+    <address street="123 west st" city="seattle" state="wa" country="usa"/>
+    <address street="321 south avenue" city="denver" state="co" country="usa"/>
+  </person>
+</people>
+```
 
-<p>次のように W3C DOM API を使うことでこの文書のメモリー内の表現を作成することができます。Mozilla はこの API に対応しています。</p>
+Mozilla が対応している W3C DOM API を次のように使うことで、この文書のメモリー内の表現を作成することができます。
 
-<pre class="brush: js">var doc = document.implementation.createDocument("", "", null);
+```js
+var doc = document.implementation.createDocument("", "", null);
 var peopleElem = doc.createElement("people");
 
 var personElem1 = doc.createElement("person");
@@ -86,66 +88,64 @@ personElem2.appendChild(addressElem5);
 peopleElem.appendChild(personElem1);
 peopleElem.appendChild(personElem2);
 doc.appendChild(peopleElem);
-</pre>
+```
 
-<p><a href="/ja/docs/XUL_Tutorial/Document_Object_Model">XUL チュートリアルの DOM の章</a> も参照してください。</p>
+[XUL チュートリアルの DOM の章](/ja/docs/XUL_Tutorial/Document_Object_Model) も参照してください。
 
-<p>DOM ツリーの生成は、 <a href="/ja/docs/JXON#JXON_reverse_algorithms">JXON 逆引きアリゴリズム</a>に次の JSON 表現を関連付けることで自動化できます。</p>
+DOM ツリーの生成は、 [JXON 逆引きアリゴリズム](/ja/docs/JXON#JXON_reverse_algorithms)に次の JSON 表現を関連付けることで自動化できます。
 
-<pre class="brush: js">{
-  "people": {
-    "person": [{
-      "address": [{
-        "@street": "321 south st",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }, {
-        "@street": "123 main st",
-        "@city": "arlington",
-        "@state": "ma",
-        "@country": "usa"
-      }],
-      "@first-name": "eric",
-      "@middle-initial": "H",
-      "@last-name": "jung"
-    }, {
-      "address": [{
-        "@street": "321 north st",
-        "@city": "atlanta",
-        "@state": "ga",
-        "@country": "usa"
-      }, {
-        "@street": "123 west st",
-        "@city": "seattle",
-        "@state": "wa",
-        "@country": "usa"
-      }, {
-        "@street": "321 south avenue",
-        "@city": "denver",
-        "@state": "co",
-        "@country": "usa"
-      }],
-      "@first-name": "jed",
-      "@last-name": "brown"
-    }]
-  }
+```js
+{
+  "people": {
+    "person": [{
+      "address": [{
+        "@street": "321 south st",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }, {
+        "@street": "123 main st",
+        "@city": "arlington",
+        "@state": "ma",
+        "@country": "usa"
+      }],
+      "@first-name": "eric",
+      "@middle-initial": "H",
+      "@last-name": "jung"
+    }, {
+      "address": [{
+        "@street": "321 north st",
+        "@city": "atlanta",
+        "@state": "ga",
+        "@country": "usa"
+      }, {
+        "@street": "123 west st",
+        "@city": "seattle",
+        "@state": "wa",
+        "@country": "usa"
+      }, {
+        "@street": "321 south avenue",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }],
+      "@first-name": "jed",
+      "@last-name": "brown"
+    }]
+  }
 }
-</pre>
+```
 
-<h3 id="So_what.3F">つまり ?</h3>
+### 要するに
 
-<p>DOM ツリーは <a href="/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript">XPath 式を用いて検索</a>したり、文字列に変換したり、 <a href="/ja/docs/Web/Guide/Parsing_and_serializing_XML"> XMLSerializer</a> を用いてローカルあるいはリモートのファイルに書き出したり (あらかじめ文字列に変換しておく必要はない)、<a href="/ja/docs/Web/API/XMLHttpRequest">ウェブサーバーに POST したり</a> (<code>XMLHttpRequest</code> 経由で)、 <a href="/ja/docs/Web/XSLT">XSLT</a> で変換したり、<a href="/ja/docs/Glossary/XLink">XLink</a> したり、 <a href="/ja/docs/JXON">JXON アルゴリズム</a>で JavaScript オブジェクトに変換したりと、さまざまな利用法があります。</p>
+DOM ツリーは [XPath 式を用いて問い合わせ](/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)したり、文字列に変換したり、 [ XMLSerializer](/ja/docs/Web/Guide/Parsing_and_serializing_XML) を用いてローカルあるいはリモートのファイルに書き出したり（あらかじめ文字列に変換しておく必要はない）、[ウェブサーバーに POST したり](/ja/docs/Web/API/XMLHttpRequest) (`XMLHttpRequest` で)、 [XSLT](/ja/docs/Web/XSLT) で変換したり、[XLink](/ja/docs/Glossary/XLink) を利用したり、 [JXON アルゴリズム](/ja/docs/JXON)で JavaScript オブジェクトに変換したりと、さまざまな利用法があります。
 
-<p>RDF には適さないデータを (あるいは RDF が嫌いなだけという場合でも) DOM ツリーを用いて作ることができます。別の応用例として、XUL は XML であるため、アプリケーションの UI を動的に操作したり、ダウンロードやアップロードをしたり、保存や読み込みをしたり、変換したりといったことがかなり簡単にできます。</p>
+RDF には適さないデータを（あるいは RDF が嫌いなだけという場合でも）DOM ツリーを用いて作ることができます。別の応用例として、XUL は XML であるため、アプリケーションの UI を動的に操作したり、ダウンロードやアップロードをしたり、保存や読み込みをしたり、変換したりといったことがかなり簡単にできます。
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a class="internal" href="/ja/docs/Web/XML">XML</a></li>
- <li><a class="internal" href="/ja/docs/JXON">JXON</a></li>
- <li><a class="internal" href="/ja/docs/Web/XPath">XPath</a></li>
- <li><a class="internal" href="/ja/docs/E4X">E4X (ECMAScript for XML)</a></li>
- <li><a class="internal" href="/ja/docs/Web/Guide/Parsing_and_serializing_XML">Parsing and serializing XML</a></li>
- <li><a class="internal" href="/ja/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></li>
-</ul>
+- [XML](/ja/docs/Web/XML)
+- [JXON](/ja/docs/JXON)
+- [XPath](/ja/docs/Web/XPath)
+- [XML の解釈とシリアライズ](/ja/docs/Web/Guide/Parsing_and_serializing_XML)
+- [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest)
