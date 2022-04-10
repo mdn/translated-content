@@ -306,29 +306,28 @@ Donc, voici le résultat avec les trois états :
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Basic state</th>
-      <th scope="col" style="text-align: center">Active state</th>
-      <th scope="col" style="text-align: center">Open state</th>
+      <th scope="col">État initial</th>
+      <th scope="col">État actif</th>
+      <th scope="col">État ouvert</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample('Basic_state',120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample('État_initial',120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample("État_actif",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample("État_ouvert",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
-      <td colspan="3" style="text-align: center">
+      <td colspan="3">
         <a
-          href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          >Check out the source code</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -430,25 +429,24 @@ window.addEventListener("load", function () {
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Sans JavaScript</th>
-      <th scope="col" style="text-align: center">Avec JavaScript</th>
+      <th scope="col">Sans JavaScript</th>
+      <th scope="col">Avec JavaScript</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2")}}
+        {{EmbedLiveSample("Sans_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2")}}
+        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
-      <td colspan="2" style="text-align: center">
+      <td colspan="2">
         <a
-          href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          >Testez le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -620,21 +618,20 @@ A ce stade, notre widget change d'état comme nous l'avons conçu, mais sa valeu
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_3")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_3"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -744,21 +741,20 @@ Et voilà, nous avons terminé ! Voici le résultat :
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_4")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_4"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -832,21 +828,20 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_5")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_5"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5"
+          >Voir le code source</a
         >
       </td>
     </tr>
