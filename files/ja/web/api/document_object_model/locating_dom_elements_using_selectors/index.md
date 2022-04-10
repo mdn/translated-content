@@ -2,49 +2,57 @@
 title: セレクターを使用した DOM 要素の特定
 slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 tags:
-  - Beginner
+  - 初心者向け
   - DOM
   - NeedsBeginnerUpdate
 translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 ---
-<p>セレクター API により提供されるメソッドを用いると、一連のセレクターに一致する {{domxref("Element")}} (要素) ノードを DOM から簡単かつ素早く取り出すことができます。これは過去の技術よりもはるかに速く、必要な場所で、例えば、 JavaScript コードでループを使用して検索する必要があるアイテムを特定するために使います。</p>
+{{DefaultAPISidebar("DOM")}}
 
-<h2 id="The_NodeSelector_interface" name="The_NodeSelector_interface">NodeSelector インターフェース</h2>
+セレクター API により提供されるメソッドを用いると、一連の[セレクター](/ja/docs/Web/CSS/CSS_Selectors)に一致する要素 ({{domxref("Element")}}) ノードを DOM から簡単かつ素早く取り出すことができます。これは過去の技術よりもはるかに速く、必要な場所で、例えば、 JavaScript コードでループを使用して検索する必要があるアイテムを特定するために使います。
 
-<p>この仕様書では、 {{domxref("Document")}}, {{domxref("DocumentFragment")}}, {{domxref("Element")}} インターフェースを実装しているすべてのオブジェクトに対して二つの新しいメソッドを追加します。</p>
+## NodeSelector インターフェース
 
-<dl>
- <dt>{{domxref("Element.querySelector", "querySelector()")}}</dt>
- <dd>ノードのサブツリー内で最初に一致した {{domxref("Element")}} ノードを返します。一致する要素がなかった場合は <code>null</code> を返します。</dd>
- <dt>{{domxref("Element.querySelectorAll", "querySelectorAll()")}}</dt>
- <dd>ノードのサブツリー内で一致するすべての <code>Element</code> ノードを含む {{domxref("NodeList")}} を返すか、一致するものが見つからなかった場合は空の <code>NodeList</code> を返します。</dd>
-</dl>
+この仕様書では、 {{domxref("Document")}}, {{domxref("DocumentFragment")}}, {{domxref("Element")}} インターフェースを実装しているすべてのオブジェクトに対して 2 つの新しいメソッドを追加しています。
 
-<div class="note"><strong>注:</strong> {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、 DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリメソッドがライブのノードリストを返すのと異なります。</div>
+- {{domxref("Element.querySelector", "querySelector()")}}
+  - : ノードのサブツリー内で最初に一致した {{domxref("Element")}} ノードを返します。一致する要素がなかった場合は `null` を返します。
+- {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
+  - : ノードのサブツリー内で一致するすべての `Element` ノードを含む {{domxref("NodeList")}} を返すか、一致するものが見つからなかった場合は空の `NodeList` を返します。
 
-<p>例や詳細については、 {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}} メソッドの文書や、 <a href="/ja/docs/Code_snippets/QuerySelector" title="Code snippets/QuerySelector">querySelector のコードスニペット</a>などにあります。</p>
+> **Note:** {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、 DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリメソッドがライブのノードリストを返すのと異なります。
 
-<h2 id="Selectors" name="Selectors">セレクター</h2>
+例や詳細については、 {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}} メソッドの記事を参照してください。
 
-<p>セレクターのメソッドには、カンマで区切られた一つ以上の抽出対象の要素を指定します。例えば、文書中で CSS のクラスが <code>warning</code> または <code>note</code> に指定されている全ての段落要素 (<code>p</code>) を抽出するには、次のようにします。</p>
+## セレクター
 
-<pre class="notranslate"><code>var special = document.querySelectorAll( "p.warning, p.note" );</code></pre>
+セレクターのメソッドは[セレクター](/ja/docs/Web/CSS/CSS_Selectors)を受け入れて、どの要素または要素群を返すかを判断します。これは[セレクターリスト](/ja/docs/Web/CSS/Selector_list)を含みますので、単一の問い合わせで複数のセレクターをグループ化することができます。
 
-<p>もちろん、 ID による指定も可能です。例えば:</p>
+ユーザーのプライバシーを保護するために、一部の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)には対応していなかったり、異なる動作をしたりすることがあります。例えば {{cssxref(":visited")}} に一致するものは返されなかったり、 {{cssxref(":link")}} は {{cssxref(":any-link")}} と同様に扱われたりします。
 
-<pre class="notranslate"><code>var el = document.querySelector( "#main, #basic, #exclamation" );</code></pre>
+要素のみが選択できますので、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)には対応していません。
 
-<p>上記のコードが実行されると、<code>el</code> には ID が <code>main</code>、 <code>basic</code>、 <code>exclamation</code> である要素の内、最初の要素だけが格納されます。</p>
+## 例
 
-<p>例で示したように、 <code>querySelector()</code> や <code>querySelectorAll()</code> メソッドではどの CSS セレクタでも用いることができます。</p>
+文書中ですべての段落要素 (`p`) のうち、 CSS のクラスが `warning` または `note` に指定されているものを抽出するには、次のようにします。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+```js
+const special = document.querySelectorAll("p.warning, p.note");
+```
 
-<ul>
- <li><a class="external" href="http://www.w3.org/TR/selectors-api/">Selectors API</a></li>
- <li>{{domxref("Element.querySelector()")}}</li>
- <li>{{domxref("Element.querySelectorAll()")}}</li>
- <li>{{domxref("Document.querySelector()")}}</li>
- <li>{{domxref("Document.querySelectorAll()")}}</li>
- <li><a href="/ja/docs/Code_snippets/QuerySelector">Code snippets for querySelector</a></li>
-</ul>
+もちろん、次のように ID による指定も可能です。
+
+```js
+const el = document.querySelector("#main, #basic, #exclamation");
+```
+
+上記のコードが実行されると、`el` には ID が `main`、 `basic`、 `exclamation` である要素の内、最初の要素だけが格納されます。
+
+## 関連情報
+
+- [セレクター仕様書](https://drafts.csswg.org/selectors/)
+- [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)
+- {{domxref("Element.querySelector()")}}
+- {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}}
+- {{domxref("Document.querySelectorAll()")}}
