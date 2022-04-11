@@ -184,10 +184,10 @@ console.log(sequence.next().value);     // 1
 console.log(sequence.next().value);     // 2
 </pre>
 
-<p>You can force a generator to throw an exception by calling its {{jsxref("Global_Objects/Generator/throw","throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the <code>yield</code> that is currently suspended were instead a <code>throw<em>value</em></code> statement.</p>
+<p>제너레이터의 {{jsxref("Global_Objects/Generator/throw","throw()")}} 메서드를 호출하고 throw해야 하는 예외 값을 전달하여 생성자가 예외를 throw하도록 할 수 있습니다. 이 예외는 생성기의 현재 일시 중단된 컨텍스트에서 throw됩니다. 마치 현재 일시 중단된 <code>yield</code> 가 대신 <code>throw<em>value</em></code> 문인 것처럼 말입니다.</p>
+  
+<p>예외가 생성기 내에서 포착되지 않으면 <code>throw()</code> 호출을 통해 전파되고 이후의 <code>next()</code> 호출은 <code>done</code> 속성이 <code>true</code> 가 됩니다.</p>
 
-<p>If the exception is not caught from within the generator,  it will propagate up through the call to <code>throw()</code>, and subsequent calls to <code>next()</code> will result in the <code>done</code> property being <code>true</code>.</p>
-
-<p>Generators have a {{jsxref("Global_Objects/Generator/return","return(value)")}} method that returns the given value and finishes the generator itself.</p>
+<p>제너레이터에는 주어진 값을 반환하고 제너레이터 자체를 완료하는 {{jsxref("Global_Objects/Generator/return","return(value)")}} 메서드가 있습니다.</p>
 
 <p>{{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}</p>
