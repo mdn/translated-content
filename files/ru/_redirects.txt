@@ -85,6 +85,7 @@
 /ru/docs/Games/Инструменты	/ru/docs/Games/Tools
 /ru/docs/Games/Инструменты/asm.js	/ru/docs/Games/Tools/asm.js
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
+/ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Empty_element
 /ru/docs/HTML	/ru/docs/Web/HTML
 /ru/docs/HTML/Canvas	/ru/docs/Web/API/Canvas_API
@@ -769,7 +770,7 @@
 /ru/docs/Словарь/Bootstrap	/ru/docs/Glossary/Bootstrap
 /ru/docs/Словарь/Browser	/ru/docs/Glossary/Browser
 /ru/docs/Словарь/Browsing_context	/ru/docs/Glossary/Browsing_context
-/ru/docs/Словарь/Bézier_curve	/ru/docs/Glossary/Bézier_curve
+/ru/docs/Словарь/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Словарь/CDN	/ru/docs/Glossary/CDN
 /ru/docs/Словарь/CMS	/ru/docs/Glossary/CMS
 /ru/docs/Словарь/CORS	/ru/docs/Glossary/CORS

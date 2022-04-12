@@ -492,6 +492,13 @@
       "daisuke-f"
     ]
   },
+  "Glossary/Bezier_curve": {
+    "modified": "2020-08-10T13:51:05.629Z",
+    "contributors": [
+      "mfuji09",
+      "nelsadeki"
+    ]
+  },
   "Glossary/BiDi": {
     "modified": "2019-03-18T21:27:00.954Z",
     "contributors": [
@@ -590,13 +597,6 @@
       "Uemmra3",
       "hamasaki",
       "momdo"
-    ]
-  },
-  "Glossary/Bézier_curve": {
-    "modified": "2020-08-10T13:51:05.629Z",
-    "contributors": [
-      "mfuji09",
-      "nelsadeki"
     ]
   },
   "Glossary/CDN": {

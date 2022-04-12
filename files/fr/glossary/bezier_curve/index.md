@@ -1,13 +1,13 @@
 ---
 title: Courbe de Bézier
-slug: Glossary/Bézier_curve
+slug: Glossary/Bezier_curve
 tags:
   - Courbe de Bézier
   - Glossaire
   - Reference
   - graphique
 translation_of: Glossary/Bézier_curve
-original_slug: Glossaire/Bézier_curve
+original_slug: Glossary/Bézier_curve
 ---
 Une **courbe de Bézier** est une courbe décrite mathématiquement utilisée en infographie et en animation. Dans {{Glossary("vector image", "vector images")}}, elles sont utilisées pour modéliser des courbes lisses qui peuvent être redimensionnées indéfiniment.
 
