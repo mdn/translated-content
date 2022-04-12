@@ -15,9 +15,9 @@ Na especificação, Flexbox é descrito como um modelo de layout usado na criaç
 
 Flexbox também permite o alinhamento de itens tanto no {{Glossary("Main_Axis", "Eixo Principal")}} quanto no {{Glossary("Cross_Axis", "Eixo Transversal")}}, provendo um alto nível de controle sobre o tamanho e alinhamento de grupos de itens.
 
-## See also
+## Ver também
 
-### Property reference
+### Referência de propriedades
 
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
@@ -32,13 +32,13 @@ Flexbox também permite o alinhamento de itens tanto no {{Glossary("Main_Axis", 
 - {{cssxref("justify-content")}}
 - {{cssxref("order")}}
 
-### Further reading
+### Leitura adicional
 
 - _[CSS Flexible Box Layout Module Level 1 Specification](https://www.w3.org/TR/css-flexbox-1/)_
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS Flexbox Guide: _[Ordering flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
-- CSS Flexbox Guide: _[Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
-- CSS Flexbox Guide: _[Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox)_
+- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox", "Conceitos básicos de flexbox")}}_
+- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods", "Relação entre flexbox e outros métodos de layout")}}_
+- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container", "Alinhando itens em um container Flex")}}_
+- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Ordering_Flex_Items", "Ordenando itens flex")}}_
+- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax", "Controlando proporções de itens flex ao longo do eixo principal")}}_
+- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items", "Dominando o uso da propriedade wrap")}}_
+- Guia CSS Flexbox: _{{CSSxRef("CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox", "Casos típicos de uso do Flexbox")}}_
