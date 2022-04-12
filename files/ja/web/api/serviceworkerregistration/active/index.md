@@ -3,68 +3,40 @@ title: ServiceWorkerRegistration.active
 slug: Web/API/ServiceWorkerRegistration/active
 tags:
   - API
-  - Property
-  - Reference
-  - Service Workers
+  - プロパティ
+  - リファレンス
+  - サービスワーカー
   - ServiceWorkerRegistration
   - active
+browser-compat: api.ServiceWorkerRegistration.active
 translation_of: Web/API/ServiceWorkerRegistration/active
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("ServiceWorkerRegistration")}} インターフェイスの <strong><code>active</code></strong> プロパティは、{{domxref("ServiceWorker.state")}} がアクティブ化中（<code>activating</code>）またはアクティブ化済み（<code>activated</code>）のサービスワーカーを返します。 このプロパティは、最初は <code>null</code> に設定されています。</span></p>
+**`active`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、{{domxref("ServiceWorker.state")}} がアクティブ化中 (`activating`) またはアクティブ化済み (`activated`) のサービスワーカーを返します。 このプロパティは、最初は `null` に設定されています。
 
-<p>クライアントの URL が登録のスコープ内にある場合、アクティブワーカーは {{domxref("ServiceWorkerClient")}} を制御します（{{domxref("ServiceWorkerContainer.register")}} が最初に呼び出されたときに設定された <code>scope</code> オプション）。</p>
+クライアントの URL が登録のスコープ内にある場合、アクティブワーカーは {{domxref("Client")}} を制御します（{{domxref("ServiceWorkerContainer.register")}} が最初に呼び出されたときに設定された `scope` オプション）。
 
-<div class="note">
-<p><strong>注</strong>: この機能は <a href="/ja/docs/Web/API/Web_Workers_API">Web Worker</a> で使用できます。</p>
-</div>
+> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
-<div class="note">
-<p><strong>注</strong>: アクティブワーカーが <code>activating</code> になると、ランタイムスクリプトエラーもアクティブワーカーの強制終了もアクティブワーカーが <code>activated</code> になることを妨げません。</p>
-</div>
+> **Note:** アクティブワーカーが `activating` になると、ランタイムスクリプトエラーやアクティブワーカーの強制終了でもアクティブワーカーが `activated` になります。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate">var <em>serviceWorker</em> = <em>serviceWorkerRegistration</em>.active;
-</pre>
+{{domxref("ServiceWorker")}} オブジェクトのプロパティ（現在アクティブ化中 (`activating`) またはアクティブ化済み (`activated`) の状態の場合）。
 
-<h3 id="Value" name="Value">値</h3>
+## 仕様書
 
-<p>{{domxref("ServiceWorker")}} オブジェクトのプロパティ（現在アクティブ化中（<code>activating</code>）またはアクティブ化済み（<code>activated</code>）の状態の場合）。</p>
+{{Specifications}}
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#dom-serviceworkerregistration-active', 'ServiceWorkerRegistration.active')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義<br>
-     </td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-
-
-<p>{{Compat("api.ServiceWorkerRegistration.active")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service worker の使用</a></li>
- <li><a href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">Web worker の使用</a></li>
-</ul>
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test) (英語)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
+- {{jsxref("Promise")}}
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
