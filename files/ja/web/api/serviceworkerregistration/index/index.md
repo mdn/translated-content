@@ -6,29 +6,26 @@ tags:
   - Content Index API
   - Index
   - PWA
-  - Property
+  - プロパティ
   - ServiceWorker
   - ServiceWorkerRegistration
   - content index
   - content indexing
 browser-compat: api.ServiceWorkerRegistration.index
 ---
-{{DefaultAPISidebar("Service Worker API")}}
+{{APIRef("Service Workers API")}}
 
-The **`index`** read-only property of the
-{{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
-{{domxref('ContentIndex')}} interface, which allows for indexing of offline content.
+**`index`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、オフラインコンテンツの索引付けができる {{domxref('ContentIndex')}} インターフェイスへの参照を返します。
 
-## Value
+## 値
 
-A ContentIndex {{jsxref('Object')}}
+{{domxref('ContentIndex')}} オブジェクトです。
 
-## Examples
+## 例
 
-You can access the property from either your main script or the registered service
-worker.
+このプロパティはメインスクリプトと登録済みサービスワーカーのどちらからでもアクセスできます。
 
-Here is an example from the main script:
+ここでは、メインスクリプトからアクセスする例を示します。
 
 ```js
 // reference registration
@@ -43,7 +40,7 @@ if ('index' in registration) {
 }
 ```
 
-From the {{domxref('ServiceWorker','service worker')}}:
+[サービスワーカー](/ja/docs/Web/API/ServiceWorker)からの呼び出し例です。
 
 ```js
 // service worker script
@@ -51,18 +48,16 @@ From the {{domxref('ServiceWorker','service worker')}}:
 const contentIndex = self.registration.index;
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
 - {{domxref("Content Index API")}}
-- [An introductory article on the
-  Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list
-  and remove 'save for later' content](https://contentindex.dev/)
+- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/) (英語)
+- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/) (英語)
