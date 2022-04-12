@@ -3,39 +3,41 @@ title: ServiceWorkerRegistration.unregister()
 slug: Web/API/ServiceWorkerRegistration/unregister
 tags:
   - API
-  - Method
-  - Reference
-  - Service Workers
+  - メソッド
+  - リファレンス
+  - サービスワーカー
   - ServiceWorkerRegistration
   - unregister
+browser-compat: api.ServiceWorkerRegistration.unregister
 translation_of: Web/API/ServiceWorkerRegistration/unregister
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("ServiceWorkerRegistration")}} インターフェイスの <strong><code>unregister()</code></strong> メソッドは、サービスワーカー登録を登録解除し、{{jsxref("Promise")}} を返します。 登録が見つからなかった場合、Promise は <code>false</code> に解決されます。 それ以外の場合は、登録解除したかどうかに関係なく、<code>true</code> に解決されます（誰かが同じスコープで {{domxref("ServiceWorkerContainer.register()")}} をちょうど呼び出した場合は登録解除されない場合があります）。 サービスワーカーは、登録解除される前に進行中の操作を完了します。</span></p>
+**`unregister()`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、サービスワーカーの登録を解除し、プロミス ({{jsxref("Promise")}}) を返します。 登録が見つからなかった場合、プロミスは `false` に解決されます。 それ以外の場合は、登録解除したかどうかに関係なく、`true` に解決されます（誰かが同じスコープで {{domxref("ServiceWorkerContainer.register()")}} を同時に呼び出した場合は、登録解除されない場合があります）。 サービスワーカーは、登録解除される前に進行中の操作を完了します。
 
-<div class="note">
-<p><strong>注</strong>: この機能は <a href="/ja/docs/Web/API/Web_Workers_API">Web Worker</a> で使用できます。</p>
-</div>
+> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>serviceWorkerRegistration</em>.unregister().then(function(<em>boolean</em>) {
-});</pre>
+```js
+serviceWorkerRegistration.unregister().then(function(boolean) {
+});
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 返値
 
-<p>{{jsxref("Promise")}} は、サービスワーカーが登録解除されているかどうかを示すブール値で解決します。</p>
+{{jsxref("Promise")}} で、サービスワーカーが登録解除されたかどうかを示す論理値で解決します。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>次の簡単な例では、サービスワーカーの例を登録していますが、すぐに再び登録を解除しています。</p>
+次の簡単な例では、サービスワーカーの例を登録していますが、すぐに録を解除しています。
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
     // 登録しました
     console.log('登録に成功しました。');
@@ -46,37 +48,21 @@ translation_of: Web/API/ServiceWorkerRegistration/unregister
     // 登録に失敗しました
     console.log('登録に失敗しました:' + error);
   });
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', 'navigator-service-worker-unregister', 'ServiceWorkerRegistration.unregister()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.ServiceWorkerRegistration.unregister")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service worker の使用</a></li>
- <li><a href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">Web worker の使用</a></li>
-</ul>
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test) (英語)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
+- {{jsxref("Promise")}}
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
