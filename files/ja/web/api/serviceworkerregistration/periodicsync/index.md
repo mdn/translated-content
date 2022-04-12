@@ -3,42 +3,60 @@ title: ServiceWorkerRegistration.periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
 tags:
   - API
-  - Experimental
+  - 実験的
   - PeriodicSyncManager
-  - Property
-  - Reference
-  - Service Workers
+  - プロパティ
+  - リファレンス
+  - サービスワーカー
   - ServiceWorkerRegistration
   - periodicSync
+browser-compat: api.ServiceWorkerRegistration.periodicSync
 translation_of: Web/API/ServiceWorkerRegistration/periodicSync
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<div class="blockIndicator note">
-<p><strong>注</strong>: この機能は、ある時点でサービスワーカーの説明でアイデアとして言及されましたが、まだどこにも実装されていません。</p>
-</div>
+**`periodicSync`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、定期的なバックグラウンド同期プロセスを管理する {{domxref('PeriodicSyncManager')}} インターフェイスへの参照を返します。
 
-<p><span class="seoSummary">{{domxref("ServiceWorkerRegistration")}} インターフェイスの <strong><code>periodSync</code></strong> 読み取り専用プロパティは、定期的なバックグラウンド同期プロセスを管理する {{domxref("PeriodicSyncManager")}} インターフェイスへの参照を返します。</span></p>
+## 値
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+{{domxref("PeriodicSyncManager")}} オブジェクトです。
 
-<pre class="syntaxbox">var <em>periodicSyncManager</em> = <em>serviceWorkerRegistration</em>.periodicSync;
-</pre>
+## 例
 
-<h3 id="Value" name="Value">値</h3>
+このプロパティはメインスクリプトと登録済みサービスワーカーのどちらからでもアクセスできます。
 
-<p>{{domxref("PeriodicSyncManager")}} オブジェクト。</p>
+ここでは、メインスクリプトからアクセスする例を示します。
 
-<h2 id="Examples" name="Examples">例</h2>
+```js
+// reference registration
+const registration = await navigator.serviceWorker.ready;
 
-<pre class="brush: js">// 未定</pre>
+// feature detection
+if ('periodicSync' in registration) {
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+  // Background Periodic Sync functionality
+  const periodicSync = registration.periodicSync;
 
-<p>現在、どの仕様にも含まれていません。</p>
+}
+```
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)からの呼び出し例です。
 
+```js
+// service worker script
 
+const periodicSync = self.registration.periodicSync;
+```
 
-<p>{{Compat("api.ServiceWorkerRegistration.periodicSync")}}</p>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/) (英語)
+- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html) (英語)
