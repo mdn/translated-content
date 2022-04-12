@@ -3,38 +3,40 @@ title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
 tags:
   - API
-  - Method
-  - Reference
-  - Service Worker
+  - メソッド
+  - リファレンス
+  - サービスワーカー
   - ServiceWorkerRegistration
   - Update
+browser-compat: api.ServiceWorkerRegistration.update
 translation_of: Web/API/ServiceWorkerRegistration/update
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p>{{domxref("ServiceWorkerRegistration")}} インターフェイスの <strong><code>update()</code></strong> メソッドは、サービスワーカーの更新を試みます。 ワーカーのスクリプト URL をフェッチし、新しいワーカーが現在のワーカーとバイト単位で同一でない場合は、新しいワーカーをインストールします。 前回のフェッチが24時間以上前に行われた場合、ワーカーのフェッチはブラウザーキャッシュをバイパスします。</p>
+**`update()`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、サービスワーカーの更新を試みます。 ワーカーのスクリプト URL を読み取り、新しいワーカーが現在のワーカーとバイト単位で同一でない場合は、新しいワーカーをインストールします。 前回の読み取りが 24 時間以上前であった場合、ワーカーの読み取り時にブラウザーのキャッシュをバイパスします。
 
-<div class="note">
-<p><strong>注</strong>: この機能は <a href="/ja/docs/Web/API/Web_Workers_API">Web Worker</a> で使用できます。</p>
-</div>
+> **Note:** この機能は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で利用できます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>serviceWorkerRegistration</em>.update();</pre>
+```js
+serviceWorkerRegistration.update();
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### 引数
 
-<p>なし。</p>
+なし。
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+### 返値
 
-<p>{{domxref("ServiceWorkerRegistration")}} オブジェクトで解決する {{jsxref("Promise")}}。</p>
+{{domxref("ServiceWorkerRegistration")}} オブジェクトで解決する {{jsxref("Promise")}} です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<p>次の簡単な例では、サービスワーカーの例を登録し、次にイベントハンドラーをボタンに追加して、必要に応じてサービスワーカーを明示的に更新できるようにします。</p>
+次の簡単な例では、サービスワーカーの例を登録し、次にイベントハンドラーをボタンに追加して、必要に応じてサービスワーカーを明示的に更新できるようにします。
 
-<pre class="brush: js">if ('serviceWorker' in navigator) {
+```js
+if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
     // 登録しました
     console.log('登録に成功しました。');
@@ -45,37 +47,21 @@ translation_of: Web/API/ServiceWorkerRegistration/update
     // 登録に失敗しました
     console.log('登録に失敗しました:' + error);
   });
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers', '#service-worker-registration-update', 'ServiceWorkerRegistration.update()')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.ServiceWorkerRegistration.update")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service worker の使用</a></li>
- <li><a href="https://github.com/mdn/sw-test">サービスワーカーの基本的なコード例</a>（英語）</li>
- <li><a href="https://jakearchibald.github.io/isserviceworkerready/">ServiceWorker の準備はできていますか？</a>（英語）</li>
- <li>{{jsxref("Promise")}}</li>
- <li><a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">Web worker の使用</a></li>
-</ul>
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test) (英語)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
+- {{jsxref("Promise")}}
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
