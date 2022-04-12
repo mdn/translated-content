@@ -3,32 +3,30 @@ title: ServiceWorkerRegistration.updateViaCache
 slug: Web/API/ServiceWorkerRegistration/updateViaCache
 tags:
   - API
-  - Property
-  - Reference
-  - Service Workers
+  - プロパティ
+  - リファレンス
+  - サービスワーカー
   - ServiceWorkerRegistration
   - updateViaCache
 browser-compat: api.ServiceWorkerRegistration.updateViaCache
+translation_of: Web/API/ServiceWorkerRegistration/updateViaCache
 ---
 {{APIRef("Service Workers API")}}
 
-The **`updateViaCache`** read-only property of the
-{{domxref("ServiceWorkerRegistration")}} interface updates the cache using
-the mode specified in the call to {{domxref('ServiceWorkerContainer.register')}}.
-Requests for \`importScripts\` still go via the HTTP cache. \`updateViaCache\` offers
-control over this behavior.
+**`updateViaCache`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、 {{domxref('ServiceWorkerContainer.register')}} の呼び出しで指定されたモードを使用してキャッシュを更新します。
+\`importScripts\` のリクエストは HTTP キャッシュで行われます。 \`updateViaCache\` はこの動作を制御します。
 
-## Value
+## 値
 
-Returns one of the following values:
+以下の値の何れかを返します。
 
-- `imports`, meaning the HTTP cache is not consulted for update of the service worker, but is consulted for `importScripts`.
-- `all`, meaning the HTTP cache is consulted in both cases
-- `none`, meaning the HTTP cache is never consulted.
+- `imports`: サービスワーカーの更新のために HTTP キャッシュは参照されませんが、 `importScripts` では参照されることを意味します。
+- `all`: 両方の場合で HTTP キャッシュが参照されることを意味します。
+- `none`: HTTP キャッシュが参照されないことを意味します。
 
-## Examples
+## 例
 
-The following example shows the use of updateViaCache.
+次の例は、 updateViaCache の使用例です。
 
 ```js
 if ('serviceWorker' in navigator) {
@@ -47,18 +45,18 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/sw-test) (英語)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/) (英語)
 - {{jsxref("Promise")}}
-- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
