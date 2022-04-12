@@ -3,30 +3,26 @@ title: ServiceWorkerRegistration.pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 tags:
   - API
-  - Property
-  - Push
+  - プロパティ
+  - プッシュ
   - PushManager
-  - Reference
-  - Service Workers
+  - リファレンス
+  - サービスワーカー
   - ServiceWorkerRegistration
 translation_of: Web/API/ServiceWorkerRegistration/pushManager
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("ServiceWorkerRegistration")}} インターフェイスの <strong><code>pushManager</code></strong> プロパティは、プッシュ購読を管理するための {{domxref("PushManager")}} インターフェイスへの参照を返します。 これには、購読申し込み、アクティブな購読の取得、プッシュ許可状況へのアクセスのサポートが含まれます。</span></p>
+**`pushManager`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、プッシュ購読を管理するための {{domxref("PushManager")}} インターフェイスへの参照を返します。 これには、購読申し込み、アクティブな購読の取得、プッシュ通知の許可状況へのアクセスの対応が含まれます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox">var <em>pushManager</em> = <em>serviceWorkerRegistration</em>.pushManager;
-</pre>
+{{domxref("PushManager")}} オブジェクトです。
 
-<h3 id="Value" name="Value">値</h3>
+## 例
 
-<p>{{domxref("PushManager")}} オブジェクト。</p>
-
-<h2 id="Examples" name="Examples">例</h2>
-
-<pre class="brush: js">this.onpush = function(event) {
+```js
+this.onpush = function(event) {
   console.log(event.data);
   // ここから、IndexedDB にデータを書き込んだり、いずれかのウィンドウに
   // それを送信したり、通知を表示したりできます。
@@ -48,31 +44,17 @@ navigator.serviceWorker.register('serviceworker.js').then(
         console.log(error);
       }
     );
-  });</pre>
+  });
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Push API', '#pushmanager-interface', 'PushManager')}}</td>
-   <td>{{Spec2('Push API')}}</td>
-   <td>初期定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.ServiceWorkerRegistration.pushManager")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連項目</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Push_API">Push API</a></li>
-</ul>
+- [プッシュ API](/ja/docs/Web/API/Push_API)
