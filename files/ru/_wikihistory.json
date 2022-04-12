@@ -478,6 +478,12 @@
       "kerosan"
     ]
   },
+  "Glossary/Bezier_curve": {
+    "modified": "2019-08-19T18:48:29.930Z",
+    "contributors": [
+      "regeneratorl"
+    ]
+  },
   "Glossary/BiDi": {
     "modified": "2019-03-18T21:25:00.810Z",
     "contributors": [
@@ -548,12 +554,6 @@
     "modified": "2019-03-23T22:17:49.487Z",
     "contributors": [
       "anastasiya-solodkaya"
-    ]
-  },
-  "Glossary/Bézier_curve": {
-    "modified": "2019-08-19T18:48:29.930Z",
-    "contributors": [
-      "regeneratorl"
     ]
   },
   "Glossary/CDN": {

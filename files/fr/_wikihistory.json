@@ -484,6 +484,12 @@
       "fscholz"
     ]
   },
+  "Glossary/Bezier_curve": {
+    "modified": "2020-10-05T03:57:01.254Z",
+    "contributors": [
+      "Voulto"
+    ]
+  },
   "Glossary/BiDi": {
     "modified": "2019-03-23T22:41:59.861Z",
     "contributors": [
@@ -578,12 +584,6 @@
       "tomderudder",
       "loella16",
       "xdelatour"
-    ]
-  },
-  "Glossary/Bézier_curve": {
-    "modified": "2020-10-05T03:57:01.254Z",
-    "contributors": [
-      "Voulto"
     ]
   },
   "Glossary/CDN": {

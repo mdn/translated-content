@@ -586,6 +586,12 @@
       "ahcheqiu"
     ]
   },
+  "Glossary/Bezier_curve": {
+    "modified": "2020-11-06T23:22:34.372Z",
+    "contributors": [
+      "liguorain"
+    ]
+  },
   "Glossary/BiDi": {
     "modified": "2020-03-15T11:45:20.503Z",
     "contributors": [
@@ -651,12 +657,6 @@
     "modified": "2020-12-03T02:19:51.826Z",
     "contributors": [
       "LucioLu"
-    ]
-  },
-  "Glossary/Bézier_curve": {
-    "modified": "2020-11-06T23:22:34.372Z",
-    "contributors": [
-      "liguorain"
     ]
   },
   "Glossary/CDN": {
