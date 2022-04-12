@@ -3,47 +3,44 @@ title: ServiceWorkerRegistration.getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
 tags:
   - API
-  - Experimental
-  - Method
-  - Notification
-  - Notifications
-  - Reference
-  - Service Worker
-  - Service Workers
-  - Service worker API
+  - 実験的
+  - メソッド
+  - 通知
+  - リファレンス
+  - サービスワーカー
+  - サービスワーカー API
   - ServiceWorker
   - ServiceWorkerRegistration
   - getNotifications
 translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 ---
-<div>{{APIRef("Service Workers API")}}</div>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("ServiceWorkerRegistration")}} インターフェイスの <code>getNotifications()</code> メソッドは、現在のサービスワーカー登録を介して現在のオリジンから作成された順序で通知のリストを返します。 オリジンには、アクティブではあるがスコープが異なるサービスワーカー登録が多数あります。 同じオリジンの1つのサービスワーカーによって作成された通知は、同じオリジンの他のアクティブなサービスワーカーでは利用できません。</span></p>
+**`getNotifications()`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのメソッドで、現在のサービスワーカー登録を介して現在のオリジンから作成された順序で通知のリストを返します。オリジンには、アクティブではあるがスコープが異なるサービスワーカー登録が多数あります。 同じオリジンの 1 つのサービスワーカーによって作成された通知は、同じオリジンの他のアクティブなサービスワーカーでは利用できません。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>s​erviceWorkerRegistration</em>.getNotifications(<em>options</em>)
-.then(function(<em>notificationsList</em>) { ... });</pre>
+```js
+serviceWorkerRegistration.getNotifications(options)
+.then(function(notificationsList) { /* ... */ });
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### 引数
 
-<dl>
- <dt>options {{optional_inline}}</dt>
- <dd>返される通知をフィルタするオプションを含むオブジェクト。 使用可能なオプションは次のとおりです。
- <ul>
-  <li><code>tag</code>: 通知タグを表す {{domxref("DOMString")}}。 指定した場合、このタグを持つ通知のみが返されます。</li>
- </ul>
- </dd>
-</dl>
+- options {{optional_inline}}
 
-<h3 id="Return_value" name="Return_value">戻り値</h3>
+  - : 返される通知を絞り込むオプションを含むオブジェクト。 使用可能なオプションは次のとおりです。
 
-<p>{{domxref("Notification")}} オブジェクトのリストに解決される {{jsxref("Promise")}}。<br>
-  </p>
+    - `tag`: 通知タグを表す {{domxref("DOMString")}}。 指定した場合、このタグを持つ通知のみが返されます。
 
-<h2 id="Example" name="Example">例</h2>
+### 返値
 
-<pre class="brush: js">navigator.serviceWorker.register('sw.js');
+{{jsxref("Promise")}} で、 {{domxref("Notification")}} オブジェクトのリストに解決されます。
+
+## 例
+
+```js
+navigator.serviceWorker.register('sw.js');
 
 var options = { tag : 'user_alerts' };
 
@@ -51,27 +48,13 @@ navigator.serviceWorker.ready.then(function(registration) {
   registration.getNotifications(options).then(function(notifications) {
     // notifications で何かをします
   })
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Notifications', '#dom-serviceworkerregistration-getnotifications', 'ServiceWorkerRegistration.getNotifications()')}}</td>
-   <td>{{Spec2('Web Notifications')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.ServiceWorkerRegistration.getNotifications")}}</p>
+{{Compat}}
