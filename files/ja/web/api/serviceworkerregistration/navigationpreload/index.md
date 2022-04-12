@@ -4,45 +4,26 @@ slug: Web/API/ServiceWorkerRegistration/navigationPreload
 tags:
   - API
   - NavigationPreloadManager
-  - Offline
-  - Property
-  - Service Workers
-  - ServiceWorkerRegistration
-  - Workers
-  - navigationPreload
+  - プロパティ
+  - サービスワーカー
+  - ワーカー
+browser-compat: api.ServiceWorkerRegistration.navigationPreload
 translation_of: Web/API/ServiceWorkerRegistration/navigationPreload
 ---
-<p>{{APIRef("Service Workers API")}}</p>
+{{APIRef("Service Workers API")}}
 
-<p><span class="seoSummary">{{domxref("ServiceWorkerRegistration")}} インターフェイスの <strong><code>navigationPreload</code></strong> 読み取り専用プロパティは、現在のサービスワーカー登録に関連する {{domxref("NavigationPreloadManager")}} を返します。</span></p>
+**`navigationPreload`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、現在のサービスワーカー登録に関連する {{domxref("NavigationPreloadManager")}} を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+返されるオブジェクトは、サービスワーカーによって管理されるリソースが、サービスワーカーの起動と並行して優先的にダウンロードできるようにします。
 
-<pre class="syntaxbox">var <em>navigationPreloadManager</em> = <em>serviceWorkerRegistration</em>.navigationPreload;</pre>
+## 値
 
-<h3 id="Value" name="Value">値</h3>
+{{domxref("NavigationPreloadManager")}} のインスタンスです。
 
-<p>{{domxref("NavigationPreloadManager")}} のインスタンス。</p>
+## 仕様書
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+{{Specifications}}
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Service Workers','#service-worker-registration-navigationpreload','navigationPreload')}}</td>
-   <td>{{Spec2('Service Workers')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">ブラウザーの互換性</h2>
-
-
-
-<p>{{Compat("api.ServiceWorkerRegistration.navigationPreload")}}</p>
+{{Compat}}
