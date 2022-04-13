@@ -65,7 +65,7 @@ console.assert(clone.itself === clone); // and the circular reference is preserv
 使用可选参数 `transfer` 里的值，可以使{{Glossary("Transferable objects")}} (仅) 被传递，不被克隆 .
 传输导致原始对象(里的属性,译者注)无法继续使用.
 
-> **注意:** 一个可能有用的场景是在保存buffer之前先异步的校验里面的数据.
+> **备注：** 一个可能有用的场景是在保存buffer之前先异步的校验里面的数据.
 > 为了避免buffer在保存之前有其他修改，你可以先克隆这个buffer然后校验数据.
 > 为了防止意外的错误引用，在传输数据时，任何修改buffer的尝试都会失败.
 
