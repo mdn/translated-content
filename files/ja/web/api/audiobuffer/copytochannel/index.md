@@ -1,62 +1,55 @@
 ---
 title: AudioBuffer.copyToChannel()
 slug: Web/API/AudioBuffer/copyToChannel
+tags:
+  - API
+  - 音声
+  - AudioBuffer
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+  - copyToChannel
+browser-compat: api.AudioBuffer.copyToChannel
 translation_of: Web/API/AudioBuffer/copyToChannel
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p><span class="seoSummary">{{ domxref("AudioBuffer") }}インターフェースの<code>copyToChannel()メソッドは、配列から指定のAudioBufferのチャンネルへと</code></span>コピーします。</p>
-</div>
+`copyToChannel()` は {{ domxref("AudioBuffer") }} インターフェイスのメソッドで、元の配列から指定の `AudioBuffer` のチャンネルへとコピーします。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>myArrayBuffer</em>.copyToChannel(<em>source</em>, <em>channelNumber</em>, <em>startInChannel</em>);</pre>
+```js
+copyToChannel(source, channelNumber, startInChannel);
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><em>source</em></dt>
- <dd>コピー元の{{jsxref("Float32Array")}}</dd>
- <dt><em>channelNumber</em></dt>
- <dd>コピー先のチャンネル番号。もし、<em>channelNumber</em>が{{domxref("AudioBuffer.numberOfChannels")}}以上ならば、<code>INDEX_SIZE_ERR例外が発生する。</code></dd>
- <dt><em>startInChannel {{optional_inline}}</em></dt>
- <dd>(任意) コピー先のオフセット位置。もし、<em>startInChannel</em>が{{domxref("AudioBuffer.length")}}を超えていれば、<code>INDEX_SIZE_ERR例外が発生する。</code></dd>
-</dl>
+- source
+  - : コピー元となるチャンネルデータの {{jsxref("Float32Array")}} です。
+- channelNumber
+  - : チャンネルデータのコピー先となる現在の {{domxref("AudioBuffer")}} のチャンネル番号です。 _channelNumber_ が {{domxref("AudioBuffer.numberOfChannels")}} 以上の場合は `INDEX_SIZE_ERR` 例外が発生します。
+- startInChannel {{optional_inline}}
+  - : オプションで、データをコピーする先のオフセット位置です。 _startInChannel_ が {{domxref("AudioBuffer.length")}} より大きければ、 `INDEX_SIZE_ERR` 例外が発生します。
 
-<h2 id="例">例</h2>
+## 例
 
-<pre class="brush: js">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+```js
+var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 var anotherArray = new Float32Array;
-// myArrayBufferの2番目のチャンネルからコピーする
+// myArrayBuffer の 2 番目のチャンネルからコピーする
 myArrayBuffer.copyFromChannel(anotherArray,1,0);
-// anotherArrayから、myArrayBufferの1番目のチャンネルにコピーする。これで2つのチャンネルのデータは同じになる
+// anotherArray から、 myArrayBuffer の 1 番目のチャンネルにコピーする。これで 2 つのチャンネルのデータは同じになる
 myArrayBuffer.copyToChannel (anotherArray,0,0);
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBuffer-copyToChannel-void-Float32Array-source-long-channelNumber-unsigned-long-startInChannel', 'copyToChannel')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.AudioBuffer.copyToChannel")}}</p>
+{{Compat}}
 
-<h2 id="参考">参考</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
