@@ -19,36 +19,36 @@ translation_of: Web/HTML/Element/Heading_Elements
 このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>, 見出しコンテンツ, 知覚可能コンテンツ</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Phrasing_content">記述コンテンツ</a></td>
-  </tr>
-  <tr>
-   <th scope="row">タグの省略</th>
-   <td>{{no_tag_omission}}</td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素。 {{HTMLElement("hgroup")}} は非推奨になったので、見出し要素をその子要素として使用しないでください。</td>
-  </tr>
-  <tr>
-   <th scope="row">暗黙の ARIA ロール</th>
-   <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/heading_role">heading</a></td>
-  </tr>
-  <tr>
-   <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}} または {{ARIARole("none")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM インターフェイス</th>
-   <td>{{domxref("HTMLHeadingElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
+      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>, 見出しコンテンツ, 知覚可能コンテンツ</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Phrasing_content">記述コンテンツ</a></td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素。 {{HTMLElement("hgroup")}} は非推奨になったので、見出し要素をその子要素として使用しないでください。</td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/heading_role">heading</a></td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>{{ARIARole("tab")}}, {{ARIARole("presentation")}} または {{ARIARole("none")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLHeadingElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
 ## 属性
@@ -135,41 +135,23 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 ヘッダーはページのコンテンツの構造を反映して、節として入れ子になることがあります。多くの読み上げソフトはページのすべての見出しの順序付きリストを生成し、利用者がコンテンツの階層構造を手早く特定することもできます。
 
-<ol>
- <li><code>h1</code> Beetles
-
-  <ol>
-   <li><code>h2</code> Etymology</li>
-   <li><code>h2</code> Distribution and Diversity</li>
-   <li><code>h2</code> Evolution
-    <ol>
-     <li><code>h3</code> Late Paleozoic</li>
-     <li><code>h3</code> Jurassic</li>
-     <li><code>h3</code> Cretaceous</li>
-     <li><code>h3</code> Cenozoic</li>
-    </ol>
-   </li>
-   <li><code>h2</code> External Morphology
-    <ol>
-     <li><code>h3</code> Head
-      <ol>
-       <li><code>h4</code> Mouthparts</li>
-      </ol>
-     </li>
-     <li><code>h3</code> Thorax
-      <ol>
-       <li><code>h4</code> Prothorax</li>
-       <li><code>h4</code> Pterothorax</li>
-      </ol>
-     </li>
-     <li><code>h3</code> Legs</li>
-     <li><code>h3</code> Wings</li>
-     <li><code>h3</code> Abdomen</li>
-    </ol>
-   </li>
-  </ol>
- </li>
-</ol>
+1. <code>h1</code> Beetles
+    1. <code>h2</code> Etymology
+    2. <code>h2</code> Distribution and Diversity
+    3. <code>h2</code> Evolution
+        1. <code>h3</code> Late Paleozoic
+        2. <code>h3</code> Jurassic
+        3. <code>h3</code> Cretaceous
+        4. <code>h3</code> Cenozoic
+    4. <code>h2</code> External Morphology
+        1. <code>h3</code> Head
+            1. <code>h4</code> Mouthparts
+        2. <code>h3</code> Thorax
+            1. <code>h4</code> Prothorax
+            2. <code>h4</code> Pterothorax
+        3. <code>h3</code> Legs
+        4. <code>h3</code> Wings
+        5. <code>h3</code> Abdomen
 
 見出しが入れ子になった場合、見出しレベルは節が閉じる際に「飛ばされる」ことがあります。
 
