@@ -97,9 +97,9 @@ const transferred = structuredClone(
 
 ## 浏览器兼容性
 
-{{参见}}
+{{Compat}}
 
-## See also
+## 参见
 
 -   [`core-js`](https://github.com/zloirock/core-js) 已经支持 [`structuredClone`的polyfill](https://github.com/zloirock/core-js#structuredclone)
 - [结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
