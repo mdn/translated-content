@@ -12,11 +12,11 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 {{HTMLRef}}
 
-<span class="seoSummary"><strong>HTML の <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> 要素</strong>は、セクションの見出しを6段階で表します。 <code>&lt;h1&gt;</code> が最上位で、 <code>&lt;h6&gt;</code> が最下位です。</span>
+**HTML の `<h1>`–`<h6>` 要素**は、セクションの見出しを6段階で表します。 `<h1>` が最上位で、 `<h6>` が最下位です。
 
 {{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
 
-このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。
+このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。
 
 <table class="properties">
   <tbody>
@@ -53,7 +53,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 ## 属性
 
-見出し要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。
+見出し要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
 > **Note:** `align` 属性は廃止されたので、使用しないでください。
 
@@ -61,10 +61,10 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 - 見出し情報は、ユーザーエージェントが自動的に文書の目次を作成するために使用することがあります。
 - テキストの大きさを変えるために見出し要素を使用しないでください。代わりに {{glossary("CSS")}} の {{cssxref("font-size")}} プロパティを使用してください。
-- 見出しレベルを飛ばすことは避けてください。常に <code>&lt;h1&gt;</code> から始め、次に <code>&lt;h2&gt;</code>、以下も同様にしてください。
-- <code>&lt;h1&gt;</code> はページまたはビューにつき1つだけ使用してください。内容の全体的な目的を簡潔に記載しなければなりません。
-- 複数の <code>&lt;h1&gt;</code> を使用してもエラーにはなりませんが、これは最善の方法とは見なされていません。これは読み上げソフトや {{glossary("SEO")}} で有利です。
-- 1つのページで <code>&lt;h1&gt;</code> を2回以上使用することは避けてください。詳しくは<a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5">区分化要素</a>を参照してください。
+- 見出しレベルを飛ばすことは避けてください。常に `<h1>` から始め、次に `<h2>`、以下も同様にしてください。
+- `<h1>` はページまたはビューにつき1つだけ使用してください。内容の全体的な目的を簡潔に記載しなければなりません。
+- 複数の `<h1>` を使用してもエラーにはなりませんが、これは最善の方法とは見なされていません。これは読み上げソフトや {{glossary("SEO")}} で有利です。
+- 1つのページで `<h1>` を2回以上使用することは避けてください。詳しくは[区分化要素](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5)を参照してください。
 
 ## 例
 
@@ -135,39 +135,39 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 ヘッダーはページのコンテンツの構造を反映して、節として入れ子になることがあります。多くの読み上げソフトはページのすべての見出しの順序付きリストを生成し、利用者がコンテンツの階層構造を手早く特定することもできます。
 
-1. <code>h1</code> Beetles
-    1. <code>h2</code> Etymology
-    2. <code>h2</code> Distribution and Diversity
-    3. <code>h2</code> Evolution
-        1. <code>h3</code> Late Paleozoic
-        2. <code>h3</code> Jurassic
-        3. <code>h3</code> Cretaceous
-        4. <code>h3</code> Cenozoic
-    4. <code>h2</code> External Morphology
-        1. <code>h3</code> Head
-            1. <code>h4</code> Mouthparts
-        2. <code>h3</code> Thorax
-            1. <code>h4</code> Prothorax
-            2. <code>h4</code> Pterothorax
-        3. <code>h3</code> Legs
-        4. <code>h3</code> Wings
-        5. <code>h3</code> Abdomen
+1. `h1` Beetles
+    1. `h2` Etymology
+    2. `h2` Distribution and Diversity
+    3. `h2` Evolution
+        1. `h3` Late Paleozoic
+        2. `h3` Jurassic
+        3. `h3` Cretaceous
+        4. `h3` Cenozoic
+    4. `h2` External Morphology
+        1. `h3` Head
+            1. `h4` Mouthparts
+        2. `h3` Thorax
+            1. `h4` Prothorax
+            2. `h4` Pterothorax
+        3. `h3` Legs
+        4. `h3` Wings
+        5. `h3` Abdomen
 
 見出しが入れ子になった場合、見出しレベルは節が閉じる際に「飛ばされる」ことがあります。
 
-- <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">Headings • Page Structure • WAI Web Accessibility Tutorials</a>
-- <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways">MDN "WCAG を理解する ― ガイドライン 1.3 の解説"</a>
-- <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a>
-- <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN "WCAG を理解する ― ガイドライン 2.4 の解説"</a>
-- <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0</a>
-- <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html">Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0</a>
-- <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html">Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0</a>
+- [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
+- [MDN "WCAG を理解する ― ガイドライン 1.3 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+- [MDN "WCAG を理解する ― ガイドライン 2.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
+- [Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html)
+- [Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html)
 
 ### 区分コンテンツのラベル付け
 
-読み上げソフト利用者のための他のナビゲーションテクニックとして、<a href="/ja/docs/Web/HTML/Element#Content_sectioning">区分コンテンツ</a>の一覧を作成して、ページのレイアウトを特定するために使用するものがあります。
+読み上げソフト利用者のための他のナビゲーションテクニックとして、[区分コンテンツ](/ja/docs/Web/HTML/Element#Content_sectioning)の一覧を作成して、ページのレイアウトを特定するために使用するものがあります。
 
-区分コンテンツは <code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> および {{htmlattrxref("id")}} 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに二つ以上の区分要素がある場合に有用です。
+区分コンテンツは [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) および {{htmlattrxref("id")}} 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに二つ以上の区分要素がある場合に有用です。
 
 #### Example
 
@@ -189,10 +189,10 @@ translation_of: Web/HTML/Element/Heading_Elements
 </footer>
 ```
 
-この例では、読み上げ技術は二つの {{HTMLElement("nav")}} セクションがあり、一つが "Primary navigation" でもう一つが "Footer navigation" であるとアナウンスするでしょう。ラベルが提供されていない場合は、読み上げソフトを使用している人がそれぞれの <code>nav</code> 要素の中身を調べて、それぞれの用途を確かめなければならないかもしれません。
+この例では、読み上げ技術は二つの {{HTMLElement("nav")}} セクションがあり、一つが "Primary navigation" でもう一つが "Footer navigation" であるとアナウンスするでしょう。ラベルが提供されていない場合は、読み上げソフトを使用している人がそれぞれの `nav` 要素の中身を調べて、それぞれの用途を確かめなければならないかもしれません。
 
-- <a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby 属性の利用</a>
-- <a href="https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby">Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials</a>
+- [aria-labelledby 属性の利用](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby)
 
 ## 仕様書
 
