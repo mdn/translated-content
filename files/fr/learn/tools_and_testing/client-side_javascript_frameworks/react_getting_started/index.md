@@ -33,7 +33,7 @@ Dans cet article, nous aurons un premier contact avec React. Nous découvrirons 
           >.
         </p>
         <p>
-          React utilise une syntaxe HTML-dans-Javascript appelée JSX (JavaScript et XML).
+          React utilise une syntaxe embarquant du HTML dans du JavaScript appelée JSX (JavaScript et XML).
           Une familiarité avec HTML et Javascript vous aidera à apprendre JSX, et a mieux
           identififier si les bugs de votre application sont liés à JavaScript ou au domaine
           plus spécifique de React.
