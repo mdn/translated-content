@@ -12,11 +12,9 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 {{HTMLRef}}
 
-**HTML の `<h1>`–`<h6>` 要素**は、セクションの見出しを6段階で表します。 `<h1>` が最上位で、 `<h6>` が最下位です。
+**HTML の `<h1>`–`<h6>` 要素**は、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。
 
 {{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
-
-このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) をクローンしてプルリクエストを送信してください。
 
 <table class="properties">
   <tbody>
@@ -34,7 +32,7 @@ translation_of: Web/HTML/Element/Heading_Elements
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
-      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素。 {{HTMLElement("hgroup")}} は非推奨になったので、見出し要素をその子要素として使用しないでください。</td>
+      <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素。{{HTMLElement("hgroup")}} は非推奨になったので、見出し要素をその子要素として使用しないでください。</td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
@@ -62,9 +60,18 @@ translation_of: Web/HTML/Element/Heading_Elements
 - 見出し情報は、ユーザーエージェントが自動的に文書の目次を作成するために使用することがあります。
 - テキストの大きさを変えるために見出し要素を使用しないでください。代わりに {{glossary("CSS")}} の {{cssxref("font-size")}} プロパティを使用してください。
 - 見出しレベルを飛ばすことは避けてください。常に `<h1>` から始め、次に `<h2>`、以下も同様にしてください。
-- `<h1>` はページまたはビューにつき1つだけ使用してください。内容の全体的な目的を簡潔に記載しなければなりません。
-- 複数の `<h1>` を使用してもエラーにはなりませんが、これは最善の方法とは見なされていません。これは読み上げソフトや {{glossary("SEO")}} で有利です。
-- 1つのページで `<h1>` を2回以上使用することは避けてください。詳しくは[区分化要素](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5)を参照してください。
+- `<h1>` はページまたはビューにつき 1 つだけ使用してください。コンテンツの全体的な目的を簡潔に記載すべきです。
+
+### 複数の `<h1>` 要素の使用
+
+複数の `<h1>` を使用することは HTML の仕様では認められていますが、ベストプラクティスとは見なされていません。`<h1>` を 1 つだけ使用することは、スクリーンリーダーの利用者にとって有益です。
+
+HTML の仕様には、`<section>` 要素で形成されるアウトラインという概念があります。もしこれが実装されれば、複数の `<h1>` 要素の使用が可能になり、スクリーンリーダーを含むユーザーエージェントが、セクションの中にネストされた `<h1>` が小見出しであると理解することができるようになります。しかし、この機能はまだ実装されていません。したがって、見出し要素を適切に使用して文書の概要を記述することが重要です。
+
+アウトラインの状況については、以下の記事で詳しく解説しています。
+
+- [Computer says NO to HTML5 document outline | HTML5 Doctor](https://html5doctor.com/computer-says-no-to-html5-document-outline/)
+- [A decade + a year of heading backwards – HTML Accessibility](https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/)
 
 ## 例
 
@@ -133,7 +140,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 #### 入れ子
 
-ヘッダーはページのコンテンツの構造を反映して、節として入れ子になることがあります。多くの読み上げソフトはページのすべての見出しの順序付きリストを生成し、利用者がコンテンツの階層構造を手早く特定することもできます。
+見出しはページのコンテンツの構造を反映して、節として入れ子になることがあります。多くの読み上げソフトはページのすべての見出しの順序付きリストを生成し、利用者がコンテンツの階層構造を手早く特定することもできます。
 
 1. `h1` Beetles
     1. `h2` Etymology
