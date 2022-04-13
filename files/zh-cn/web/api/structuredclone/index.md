@@ -13,7 +13,7 @@ browser-compat: api.structuredClone
 ---
 {{APIRef("HTML DOM")}}
 
-全局的 **`structuredClone()`** 方法使用[结构化克隆算法](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 将给定的值进行[深拷贝](/en-US/docs/Glossary/Deep_copy).
+全局的 **`structuredClone()`** 方法使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) 将给定的值进行[深拷贝](/zh-CN/docs/Glossary/Deep_copy).
 
 该方法还支持把原始值中的 {{Glossary("transferable objects")}} (可转移对象,译者注)  转移到新对象， 而不是把属性引用拷贝过去.
 可转移对象与原始对象分离并附加到新对象;，它们不可以在原始对象中访问被访问到.
@@ -29,13 +29,13 @@ structuredClone(value, { transfer })
 
 - `value`
   - : 被克隆的对象.
-    可以是任何 [结构化算法类型](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+    可以是任何 [结构化算法类型](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 - `transfer` {{optional_inline}}
   - :是一个 {{Glossary("transferable objects")}} (可转移对象：译者注)的数组，里面的 `值` 并没有被克隆，而是被转移到被拷贝对象上.
 
 ### 返回值
 
-返回值是原始 `值` 的 [深拷贝](/en-US/docs/Glossary/Deep_copy).
+返回值是原始 `值` 的 [深拷贝](/zh-CN/docs/Glossary/Deep_copy).
 
 ### 异常
 
@@ -44,7 +44,7 @@ structuredClone(value, { transfer })
 
 ## 附注
 
-这个函数可以用来进行[深拷贝](/en-US/docs/Glossary/Deep_copy) JavaScript 变量.
+这个函数可以用来进行[深拷贝](/zh-CN/docs/Glossary/Deep_copy) JavaScript 变量.
 也支持循环引用, 如下所示:
 
 ```js
@@ -91,16 +91,16 @@ const transferred = structuredClone(
    { transfer: [arrayBuffer1] });
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
-{{Compat}}
+{{参见}}
 
 ## See also
 
-- [A polyfill of `structuredClone`](https://github.com/zloirock/core-js#structuredclone) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [Structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
-- [Structured clone polyfill](https://github.com/ungap/structured-clone)
+-   [`core-js`](https://github.com/zloirock/core-js) 已经支持 [`structuredClone`的polyfill](https://github.com/zloirock/core-js#structuredclone)
+- [结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
+- [结构化克隆的 polyfill](https://github.com/ungap/structured-clone)
