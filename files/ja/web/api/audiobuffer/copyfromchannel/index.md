@@ -3,91 +3,71 @@ title: AudioBuffer.copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
 tags:
   - API
-  - Audio
+  - 音声
   - AudioBuffer
-  - Copying
-  - Frames
-  - Method
-  - Reference
+  - コピー
+  - フレーム
+  - メソッド
+  - リファレンス
   - Samples
-  - Web Audio
-  - Web Audio API
+  - ウェブ音声
+  - ウェブ音声 API
   - copy
   - copyFromChannel
-  - sound
+  - 音
+browser-compat: api.AudioBuffer.copyFromChannel
 translation_of: Web/API/AudioBuffer/copyFromChannel
 ---
-<div>{{APIRef("Web Audio API")}}</div>
+{{APIRef("Web Audio API")}}
 
-<p><span class="seoSummary">{{domxref("AudioBuffer")}} インターフェイスの <strong><code>copyFromChannel()</code></strong> メソッドは、 <code>AudioBuffer</code> の指定されたチャンネルから音声サンプルデータを指定された {{domxref("Float32Array")}} へコピーします。</span></p>
+**`copyFromChannel()`** は {{domxref("AudioBuffer")}} インターフェイスのメソッドで、 `AudioBuffer` の指定されたチャンネルから音声サンプルデータを指定された {{jsxref("Float32Array")}} へコピーします。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>myArrayBuffer</var>.copyFromChannel(<var>destination</var>, <var>channelNumber</var>, <var>startInChannel</var>);</pre>
+```js
+copyFromChannel(destination, channelNumber, startInChannel);
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>destination</var></code></dt>
- <dd>チャンネルのサンプルのコピー先となる {{domxref("Float32Array")}} です。</dd>
- <dt><code><var>channelNumber</var></code></dt>
- <dd>チャンネルデータをコピーする現在の <code>AudioBuffer</code> のチャンネル数です。</dd>
- <dt><code><var>startInChannel</var></code> {{optional_inline}}</dt>
- <dd>(任意) ソースチャンネルバッファー内でサンプルのコピーを始める位置のオフセットです。指定されていない場合は、既定で0の値 (バッファーの先頭) とみなされます。</dd>
-</dl>
+- `destination`
+  - : チャンネルのサンプルのコピー先となる {{jsxref("Float32Array")}} です。
+- `channelNumber`
+  - : チャンネルデータをコピーする現在の `AudioBuffer` のチャンネル数です。
+- `startInChannel` {{optional_inline}}
+  - : オプションで、ソースチャンネルバッファー内でサンプルのコピーを始める位置のオフセットです。指定されていない場合は、既定で 0 の値（バッファーの先頭）とみなされます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+### 返値
 
-<p><code>undefined</code> です。</p>
+`undefined` です。
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+### 例外
 
-<dl>
- <dt><code>indexSizeError</code></dt>
- <dd>入力引数のうちの一つが、受付可能な範囲の外にある場合。
- <ul>
-  <li><code><var>channelNumber</var></code> の値が存在しないチャンネル番号を指定している場合 (つまり、チャンネルの {{domxref("AudioBuffer.numberOfChannels", "numberOfChannels")}} 以上である場合)。</li>
-  <li><code><var>startInChannel</var></code> の値がソースバッファーの中に既に存在するサンプルの現在の範囲の外にある場合。つまり、現在の {{domxref("AudioBuffer.length", "length")}} より大きい場合。</li>
- </ul>
- </dd>
-</dl>
+- `indexSizeError`
 
-<h2 id="Example" name="Example">例</h2>
+  - : 入力引数のうちの一つが、受付可能な範囲の外にある場合。
 
-<p>この例では新しい音声バッファーを生成し、他のチャンネルからサンプルをコピーします。</p>
+    - `channelNumber` の値が存在しないチャンネル番号を指定している場合（つまり、チャンネルの {{domxref("AudioBuffer.numberOfChannels", "numberOfChannels")}} 以上である場合）。
+    - `startInChannel` の値がソースバッファーの中に既に存在するサンプルの現在の範囲の外にある場合。つまり、現在の {{domxref("AudioBuffer.length", "length")}} より大きい場合。
 
-<pre class="brush: js">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+## 例
+
+この例では新しい音声バッファーを生成し、他のチャンネルからサンプルをコピーします。
+
+```js
+var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 var anotherArray = new Float32Array(length);
 myArrayBuffer.copyFromChannel(anotherArray, 1, 0);
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBuffer-copyFromChannel-void-Float32Array-destination-long-channelNumber-unsigned-long-startInChannel', 'copyFromChannel')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの対応</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.AudioBuffer.copyFromChannel")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API の使用</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
