@@ -23,7 +23,7 @@ Dans cet article, nous aurons un premier contact avec React. Nous découvrirons 
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         <p>
-          Familiarité avec les languages <a href="/fr/docs/Learn/HTML">HTML</a>,
+          Familiarité avec les langages <a href="/fr/docs/Learn/HTML">HTML</a>,
           <a href="/fr/docs/Learn/CSS">CSS</a>, et
           <a href="/fr/docs/Learn/JavaScript">JavaScript</a>,
           connaissances des
