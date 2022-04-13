@@ -9,13 +9,14 @@ tags:
   - Web
 translation_of: Web/HTML/Element/Heading_Elements
 ---
-<div>{{HTMLRef}}</div>
 
-<p id="Summary"><span class="seoSummary"><strong>HTML の <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> 要素</strong>は、セクションの見出しを6段階で表します。 <code>&lt;h1&gt;</code> が最上位で、 <code>&lt;h6&gt;</code> が最下位です。</span></p>
+{{HTMLRef}}
 
-<div>{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}</div>
+<span class="seoSummary"><strong>HTML の <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code> 要素</strong>は、セクションの見出しを6段階で表します。 <code>&lt;h1&gt;</code> が最上位で、 <code>&lt;h6&gt;</code> が最下位です。</span>
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+{{EmbedInteractiveExample("pages/tabbed/h1-h6.html", "tabbed-standard")}}
+
+このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。
 
 <table class="properties">
  <tbody>
@@ -50,89 +51,89 @@ translation_of: Web/HTML/Element/Heading_Elements
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+## 属性
 
-<p>見出し要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
+見出し要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。
 
-<div class="note">
-<p><code>align</code> 属性は廃止されたので、使用しないでください。</p>
-</div>
+> **Note:** `align` 属性は廃止されたので、使用しないでください。
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+## 使用上の注意
 
-<ul>
- <li>見出し情報は、ユーザーエージェントが自動的に文書の目次を作成するために使用することがあります。</li>
- <li>テキストの大きさを変えるために見出し要素を使用しないでください。代わりに {{glossary("CSS")}} の {{cssxref("font-size")}} プロパティを使用してください。</li>
- <li>見出しレベルを飛ばすことは避けてください。常に <code>&lt;h1&gt;</code> から始め、次に <code>&lt;h2&gt;</code>、以下も同様にしてください。</li>
- <li><code>&lt;h1&gt;</code> はページまたはビューにつき1つだけ使用してください。内容の全体的な目的を簡潔に記載しなければなりません。</li>
- <li>複数の <code>&lt;h1&gt;</code> を使用してもエラーにはなりませんが、これは最善の方法とは見なされていません。これは読み上げソフトや {{glossary("SEO")}} で有利です。</li>
- <li>1つのページで <code>&lt;h1&gt;</code> を2回以上使用することは避けてください。詳しくは<a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5">区分化要素</a>を参照してください。</li>
-</ul>
+- 見出し情報は、ユーザーエージェントが自動的に文書の目次を作成するために使用することがあります。
+- テキストの大きさを変えるために見出し要素を使用しないでください。代わりに {{glossary("CSS")}} の {{cssxref("font-size")}} プロパティを使用してください。
+- 見出しレベルを飛ばすことは避けてください。常に <code>&lt;h1&gt;</code> から始め、次に <code>&lt;h2&gt;</code>、以下も同様にしてください。
+- <code>&lt;h1&gt;</code> はページまたはビューにつき1つだけ使用してください。内容の全体的な目的を簡潔に記載しなければなりません。
+- 複数の <code>&lt;h1&gt;</code> を使用してもエラーにはなりませんが、これは最善の方法とは見なされていません。これは読み上げソフトや {{glossary("SEO")}} で有利です。
+- 1つのページで <code>&lt;h1&gt;</code> を2回以上使用することは避けてください。詳しくは<a href="/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Section_Elements_in_HTML5">区分化要素</a>を参照してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="All_headings" name="All_headings">すべての見出し</h3>
+### すべての見出し
 
-<p>以下のコードでは、すべての見出しレベルを示しています。</p>
+以下のコードでは、すべての見出しレベルを示しています。
 
-<pre class="brush: html notranslate">&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h2&gt;Heading level 2&lt;/h2&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-&lt;h4&gt;Heading level 4&lt;/h4&gt;
-&lt;h5&gt;Heading level 5&lt;/h5&gt;
-&lt;h6&gt;Heading level 6&lt;/h6&gt;
-</pre>
+```html
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
+```
 
-<p>以下の様に出力されます。</p>
+以下の様に出力されます。
 
-<p>{{ EmbedLiveSample('All_headings', '280', '300', '') }}</p>
+{{ EmbedLiveSample('All_headings', '280', '300', '') }}
 
-<h3 id="Example_page" name="Example_page">ページの例</h3>
+### ページの例
 
-<p>以下のコードでは、いくつかの見出しとその配下のコンテンツを示しています。</p>
+以下のコードでは、いくつかの見出しとその配下のコンテンツを示しています。
 
-<pre class="brush: html notranslate">&lt;h1&gt;Heading elements&lt;/h1&gt;
-&lt;h2&gt;Summary&lt;/h2&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+```html
+<h1>Heading elements</h1>
+<h2>Summary</h2>
+<p>Some text here...</p>
 
-&lt;h2&gt;Examples&lt;/h2&gt;
-&lt;h3&gt;Example 1&lt;/h3&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+<h2>Examples</h2>
+<h3>Example 1</h3>
+<p>Some text here...</p>
 
-&lt;h3&gt;Example 2&lt;/h3&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
+<h3>Example 2</h3>
+<p>Some text here...</p>
 
-&lt;h2&gt;See also&lt;/h2&gt;
-&lt;p&gt;Some text here...&lt;/p&gt;
-</pre>
+<h2>See also</h2>
+<p>Some text here...</p>
+```
 
-<p>以下の様に出力されます。</p>
+以下の様に出力されます。
 
-<p>{{ EmbedLiveSample('Example_page', '280', '480', '') }}</p>
+{{ EmbedLiveSample('Example_page', '280', '480', '') }}
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮</h2>
+## アクセシビリティの考慮
 
-<h3 id="Navigation" name="Navigation">ナビゲーション</h3>
+### ナビゲーション
 
-<p>読み上げソフトの利用者のよくあるナビゲーションテクニックとして、ページの内容を手早く特定するために、見出しから見出しへとジャンプすることがあります。このため、見出しレベルを飛ばさないようにすることが重要です。飛ばすとこのようにナビゲーションしている人が、ヘッダーがないと疑問を残すことになり、混乱を生じさせます。</p>
+読み上げソフトの利用者のよくあるナビゲーションテクニックとして、ページの内容を手早く特定するために、見出しから見出しへとジャンプすることがあります。このため、見出しレベルを飛ばさないようにすることが重要です。飛ばすとこのようにナビゲーションしている人が、ヘッダーがないと疑問を残すことになり、混乱を生じさせます。
 
-<h4 id="Dont" name="Don't">悪い例</h4>
+#### 悪い例
 
-<pre class="brush: html example-bad notranslate">&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-&lt;h4&gt;Heading level 4&lt;/h4&gt;
-</pre>
+```html
+<h1>Heading level 1</h1>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+```
 
-<h4 id="Do" name="Do">良い例</h4>
+#### 良い例
 
-<pre class="brush: html example-good notranslate">&lt;h1&gt;Heading level 1&lt;/h1&gt;
-&lt;h2&gt;Heading level 2&lt;/h2&gt;
-&lt;h3&gt;Heading level 3&lt;/h3&gt;
-</pre>
+```html
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+```
 
-<h4 id="Nesting" name="Nesting">入れ子</h4>
+#### 入れ子
 
-<p>ヘッダーはページのコンテンツの構造を反映して、節として入れ子になることがあります。多くの読み上げソフトはページのすべての見出しの順序付きリストを生成し、利用者がコンテンツの階層構造を手早く特定することもできます。</p>
+ヘッダーはページのコンテンツの構造を反映して、節として入れ子になることがあります。多くの読み上げソフトはページのすべての見出しの順序付きリストを生成し、利用者がコンテンツの階層構造を手早く特定することもできます。
 
 <ol>
  <li><code>h1</code> Beetles
@@ -170,87 +171,57 @@ translation_of: Web/HTML/Element/Heading_Elements
  </li>
 </ol>
 
-<p>見出しが入れ子になった場合、見出しレベルは節が閉じる際に「飛ばされる」ことがあります。</p>
+見出しが入れ子になった場合、見出しレベルは節が閉じる際に「飛ばされる」ことがあります。
 
-<ul>
- <li><a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">Headings • Page Structure • WAI Web Accessibility Tutorials</a></li>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways">MDN "WCAG を理解する ― ガイドライン 1.3 の解説"</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN "WCAG を理解する ― ガイドライン 2.4 の解説"</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html">Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html">Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+- <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">Headings • Page Structure • WAI Web Accessibility Tutorials</a>
+- <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways">MDN "WCAG を理解する ― ガイドライン 1.3 の解説"</a>
+- <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a>
+- <a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_—_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">MDN "WCAG を理解する ― ガイドライン 2.4 の解説"</a>
+- <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html">Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0</a>
+- <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html">Understanding Success Criterion 2.4.6 | W3C Understanding WCAG 2.0</a>
+- <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html">Understanding Success Criterion 2.4.10 | W3C Understanding WCAG 2.0</a>
 
-<h3 id="Labeling_section_content" name="Labeling_section_content">区分コンテンツのラベル付け</h3>
+### 区分コンテンツのラベル付け
 
-<p>読み上げソフト利用者のための他のナビゲーションテクニックとして、<a href="/ja/docs/Web/HTML/Element#Content_sectioning">区分コンテンツ</a>の一覧を作成して、ページのレイアウトを特定するために使用するものがあります。</p>
+読み上げソフト利用者のための他のナビゲーションテクニックとして、<a href="/ja/docs/Web/HTML/Element#Content_sectioning">区分コンテンツ</a>の一覧を作成して、ページのレイアウトを特定するために使用するものがあります。
 
-<p>区分コンテンツは <code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> および {{htmlattrxref("id")}} 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに二つ以上の区分要素がある場合に有用です。</p>
+区分コンテンツは <code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> および {{htmlattrxref("id")}} 属性の組み合わせで、セクションの目的を詳細に記述するラベルを付けることができます。このテクニックは、同一ページに二つ以上の区分要素がある場合に有用です。
 
-<h4 id="Example">Example</h4>
+#### Example
 
-<pre class="brush: html notranslate">&lt;header&gt;
-  &lt;nav aria-labelledby="primary-navigation"&gt;
-    &lt;h2 id="primary-navigation"&gt;Primary navigation&lt;/h2&gt;
-    &lt;!-- navigation items --&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
+```html
+<header>
+  <nav aria-labelledby="primary-navigation">
+    <h2 id="primary-navigation">Primary navigation</h2>
+    <!-- navigation items -->
+  </nav>
+</header>
 
-&lt;!-- ページコンテンツ --&gt;
+<!-- ページコンテンツ -->
 
-&lt;footer&gt;
-  &lt;nav aria-labelledby="footer-navigation"&gt;
-    &lt;h2 id="footer-navigation"&gt;Footer navigation&lt;/h2&gt;
-    &lt;!-- navigation items --&gt;
-  &lt;/nav&gt;
-&lt;/footer&gt;
-</pre>
+<footer>
+  <nav aria-labelledby="footer-navigation">
+    <h2 id="footer-navigation">Footer navigation</h2>
+    <!-- navigation items -->
+  </nav>
+</footer>
+```
 
-<p>この例では、読み上げ技術は二つの {{HTMLElement("nav")}} セクションがあり、一つが "Primary navigation" でもう一つが "Footer navigation" であるとアナウンスするでしょう。ラベルが提供されていない場合は、読み上げソフトを使用している人がそれぞれの <code>nav</code> 要素の中身を調べて、それぞれの用途を確かめなければならないかもしれません。</p>
+この例では、読み上げ技術は二つの {{HTMLElement("nav")}} セクションがあり、一つが "Primary navigation" でもう一つが "Footer navigation" であるとアナウンスするでしょう。ラベルが提供されていない場合は、読み上げソフトを使用している人がそれぞれの <code>nav</code> 要素の中身を調べて、それぞれの用途を確かめなければならないかもしれません。
 
-<ul>
- <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby 属性の利用</a></li>
- <li><a href="https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby">Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials</a></li>
-</ul>
+- <a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby 属性の利用</a>
+- <a href="https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby">Labeling Regions • Page Structure • W3C WAI Web Accessibility Tutorials</a>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'sections.html#the-h1-h2-h3-h4-h5-and-h6-elements', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'struct/global.html#h-7.5.5', '&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, &lt;h5&gt;, and &lt;h6&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("html.elements.h1")}}</p>
+{{Compat("html.elements.h1")}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{HTMLElement("p")}}</li>
- <li>{{HTMLElement("div")}}</li>
- <li>{{HTMLElement("section")}}</li>
-</ul>
+- {{HTMLElement("p")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("section")}}
