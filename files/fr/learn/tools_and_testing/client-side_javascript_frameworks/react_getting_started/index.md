@@ -2,14 +2,6 @@
 title: Démarrer avec React
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-tags:
-  - Apprendre
-  - Débutant
-  - Frameworks
-  - JavaScript
-  - React
-  - jsx
-  - props
 translation_of: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 ---
@@ -131,7 +123,7 @@ Gardez également à l'esprit que React et ReactDOM produisent des applications 
 Consultez également ces liens pour plus d'informations&nbsp;:
 
 - [Qu'est-ce que npm&nbsp;? (en anglais) sur nodejs.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
-- [Introduction à npx (en anglais) sur le blog npm]https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
+- [Introduction à npx (en anglais) sur le blog npm](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
 - [La documentation de l'outil create-react-app](https://create-react-app.dev/)
 
 ### Initialisation de de votre application
@@ -174,7 +166,10 @@ create-react-app prépare tout ce dont nous avons besoin pour développer une ap
     ├── public
     │   ├── favicon.ico
     │   ├── index.html
-    │   └── manifest.json
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
     └── src
         ├── App.css
         ├── App.js
@@ -182,7 +177,8 @@ create-react-app prépare tout ce dont nous avons besoin pour développer une ap
         ├── index.css
         ├── index.js
         ├── logo.svg
-        └── serviceWorker.js
+        ├── reportWebVitals.js
+        └── setupTests.js
 
 Le répertoire **`src`** est l'endroit où nous passerons la plupart de notre temps, car c'est là que réside le code source de notre application.
 
@@ -312,7 +308,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -501,3 +502,23 @@ Dans React&nbsp;:
   - [Rendu conditionnel&nbsp;: éditer une liste de tâches existante](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
   - [Gestion du focus avec les références Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
   - [Ressources Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
+
+- Svelte
+
+  - [Getting started with Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Starting our Svelte Todo list app](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Dynamic behavior in Svelte: working with variables and props](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Componentizing our Svelte app](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Working with Svelte stores](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [TypeScript support in Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Deployment and next steps](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  
+- Angular
+  
+  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
