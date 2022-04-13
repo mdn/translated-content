@@ -20,7 +20,7 @@ Dans cet article, nous aurons un premier contact avec React. Nous découvrirons 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis:</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         <p>
           Familiarité avec les languages <a href="/fr/docs/Learn/HTML">HTML</a>,
