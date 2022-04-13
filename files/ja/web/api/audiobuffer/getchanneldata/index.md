@@ -1,28 +1,40 @@
 ---
 title: AudioBuffer.getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
+tags:
+  - API
+  - AudioBuffer
+  - メソッド
+  - リファレンス
+  - ウェブ音声 API
+browser-compat: api.AudioBuffer.getChannelData
 translation_of: Web/API/AudioBuffer/getChannelData
 ---
-<p>{{ APIRef("Web Audio API") }}</p>
+{{ APIRef("Web Audio API") }}
 
-<div>
-<p>{{ domxref("AudioBuffer") }}インターフェースの<code>getChannelData()メソッドは、引数channel(0が最初のチャンネル)に結び付けられたPCMデータを</code>{{domxref("Float32Array")}}で返します。</p>
-</div>
+**`getChannelData()`** は {{ domxref("AudioBuffer") }} インターフェイスのメソッドで、 channel 引数（0 が最初のチャンネル）で定義されたチャンネルに結び付けられた PCM データを {{jsxref("Float32Array")}} で返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="brush: js;highlight[22]">var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
-var nowBuffering = myArrayBuffer.getChannelData(channel);</pre>
+```js
+getChannelData(channel);
+```
 
-<h3 id="戻り値">戻り値</h3>
+### 引数
 
-<p>{{domxref("Float32Array")}}</p>
+- channel
+  - : channel プロパティで、データを取得する特定のチャンネルを表すインデックスです。インデックス値 0 は、最初のチャンネルを表します。もし `channel` インデックスの値が {{domxref("AudioBuffer.numberOfChannels")}} よりも大きいか等しい場合は、`INDEX_SIZE_ERR` 例外が発生します。
 
-<h2 id="例">例</h2>
+### 返値
 
-<p>次の例は、2秒間のバッファを生成し、ホワイトノイズを書き込み、{{ domxref("AudioBufferSourceNode") }}で再生します。コメントは何をしているかを簡単に説明しています。<a href="http://mdn.github.io/audio-buffer/">コードをすぐに実行する</a>ことや、<a href="https://github.com/mdn/audio-buffer">ソースコードを閲覧する</a>こともできます。</p>
+{{jsxref("Float32Array")}} です。
 
-<pre class="brush: js;highlight[21]">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+## 例
+
+次の例は、 2 秒間のバッファーを生成し、ホワイトノイズを書き込み、 {{ domxref("AudioBufferSourceNode") }} で再生します。コメントは何をしているかを簡単に説明しています。[コードをすぐに実行する](https://mdn.github.io/audio-buffer/)ことや、[ソースコードを閲覧する](https://github.com/mdn/audio-buffer)こともできます。
+
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var button = document.querySelector('button');
 var pre = document.querySelector('pre');
 var myScript = document.querySelector('script');
@@ -31,65 +43,44 @@ pre.innerHTML = myScript.innerHTML;
 
 // ステレオ
 var channels = 2;
-// AudioContextのサンプルレートで2秒間の空のステレオバッファを生成する
+// AudioContext のサンプルレートで 2 秒間の空のステレオバッファーを生成する
 var frameCount = audioCtx.sampleRate * 2.0;
 
 var myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
 
 button.onclick = function() {
-  // バッファにホワイトノイズを書き込む;
-  // 単なる-1.0から1.0の間の乱数の値である
-  for (var channel = 0; channel &lt; channels; channel++) {
+  // バッファーにホワイトノイズを書き込む;
+  // 単なる -1.0 から 1.0 の間の乱数の値である
+  for (var channel = 0; channel < channels; channel++) {
    // 実際のデータの配列を得る
    var nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (var i = 0; i &lt; frameCount; i++) {
-     // Math.random()は[0; 1.0]である
-     // 音声は[-1.0; 1.0]である必要がある
+   for (var i = 0; i < frameCount; i++) {
+     // Math.random() は [0; 1.0] である
+     // 音声は [-1.0; 1.0] である必要がある
      nowBuffering[i] = Math.random() * 2 - 1;
    }
   }
 
-  // AudioBufferSourceNodeを得る
-  // これはAudioBufferを再生するときに使うAudioNodeである
+  // AudioBufferSourceNode を得る
+  // これは AudioBuffer を再生するときに使う AudioNode である
   var source = audioCtx.createBufferSource();
-  // AudioBufferSourceNodeにバッファを設定する
+  // AudioBufferSourceNode にバッファーを設定する
   source.buffer = myArrayBuffer;
-  // AudioBufferSourceNodeを出力先に接続すると音声が聞こえるようになる
+  // AudioBufferSourceNode を出力先に接続すると音声が聞こえるようになる
   source.connect(audioCtx.destination);
   // 音源の再生を始める
   source.start();
-}</pre>
+}
+```
 
-<h2 id="引数">引数</h2>
+## 仕様書
 
-<dl>
- <dt>channel</dt>
- <dd>channelプロパティはデータを得るチャンネルの番号である。0が最初のチャンネルを表す。<code>channel</code>が{{domxref("AudioBuffer.numberOfChannels")}}以上ならば、<code>INDEX_SIZE_ERR例外が発生する。</code></dd>
-</dl>
+{{Specifications}}
 
-<h2 id="使用">使用</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#widl-AudioBuffer-getChannelData-Float32Array-unsigned-long-channel', 'getChannelData')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## 関連情報
 
-<p>{{Compat("api.AudioBuffer.getChannelData")}}</p>
-
-<h2 id="参考">参考</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
