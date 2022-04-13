@@ -3961,6 +3961,7 @@
 /fr/docs/Web/CSS/:after_|_::after	/fr/docs/Web/CSS/::after
 /fr/docs/Web/CSS/:any	/fr/docs/conflicting/Web/CSS/:is
 /fr/docs/Web/CSS/:before	/fr/docs/Web/CSS/::before
+/fr/docs/Web/CSS/:current	/fr/docs/conflicting/Web/API/WebVTT_API
 /fr/docs/Web/CSS/:host()	/fr/docs/Web/CSS/:host_function
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector

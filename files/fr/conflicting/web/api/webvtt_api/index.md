@@ -1,7 +1,8 @@
 ---
 title: ':current'
-slug: Web/CSS/:current
+slug: conflicting/Web/API/WebVTT_API
 translation_of: Web/CSS/:current
+original_slug: Web/CSS/:current
 browser-compat: css.selectors.current
 ---
 {{CSSRef}}
