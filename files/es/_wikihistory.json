@@ -6461,13 +6461,6 @@
       "Chacho"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2019-03-23T22:49:37.176Z",
-    "contributors": [
-      "gdlm91",
-      "japho"
-    ]
-  },
   "Web/API/EventSource": {
     "modified": "2019-03-23T22:10:23.912Z",
     "contributors": [
@@ -21308,6 +21301,13 @@
     "modified": "2019-03-23T22:08:52.990Z",
     "contributors": [
       "tureey"
+    ]
+  },
+  "conflicting/Web/API/EventTarget/addEventListener": {
+    "modified": "2019-03-23T22:49:37.176Z",
+    "contributors": [
+      "gdlm91",
+      "japho"
     ]
   },
   "conflicting/Web/API/File/name": {

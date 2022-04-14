@@ -1335,6 +1335,8 @@
 /zh-CN/docs/Web/API/Event/isChar	/zh-CN/docs/Web/API/UIEvent/isChar
 /zh-CN/docs/Web/API/Event/pageY	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/Event/禁用时间冒泡	/zh-CN/docs/Web/API/Event/cancelBubble
+/zh-CN/docs/Web/API/EventListener	/zh-CN/docs/conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98
+/zh-CN/docs/Web/API/EventListener/handleEvent	/zh-CN/docs/conflicting/Web/API/EventTarget/addEventListener
 /zh-CN/docs/Web/API/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/error_event
 /zh-CN/docs/Web/API/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/open_event
 /zh-CN/docs/Web/API/EventTarget.dispatchEvent	/zh-CN/docs/Web/API/EventTarget/dispatchEvent
@@ -1472,6 +1474,8 @@
 /zh-CN/docs/Web/API/Node/childNodes_temp	/zh-CN/docs/Web/API/Node/childNodes
 /zh-CN/docs/Web/API/Node/hasAttributes	/zh-CN/docs/Web/API/Element/hasAttributes
 /zh-CN/docs/Web/API/Node/innerText	/zh-CN/docs/Web/API/HTMLElement/innerText
+/zh-CN/docs/Web/API/NodeFilter	/zh-CN/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada
+/zh-CN/docs/Web/API/NodeFilter/acceptNode	/zh-CN/docs/conflicting/Web/API/Document/createNodeIterator
 /zh-CN/docs/Web/API/NodeList.item	/zh-CN/docs/Web/API/NodeList/item
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode.nextElementSibling	/zh-CN/docs/Web/API/Element/nextElementSibling
 /zh-CN/docs/Web/API/NonDocumentTypeChildNode.previousElementSibling	/zh-CN/docs/Web/API/Element/previousElementSibling

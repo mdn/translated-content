@@ -7730,17 +7730,6 @@
       "ahtohbi4"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2020-08-18T17:11:27.001Z",
-    "contributors": [
-      "proshka",
-      "Bargamut",
-      "m-kon",
-      "daydarkln",
-      "insafski",
-      "einperegrin"
-    ]
-  },
   "Web/API/EventSource": {
     "modified": "2020-10-15T21:38:17.102Z",
     "contributors": [
@@ -24114,11 +24103,14 @@
     ]
   },
   "conflicting/Web/API/EventTarget/addEventListener": {
-    "modified": "2020-12-08T04:43:39.858Z",
+    "modified": "2020-08-18T17:11:27.001Z",
     "contributors": [
-      "bershanskiy",
-      "akrom123",
-      "paulvoloschuk"
+      "proshka",
+      "Bargamut",
+      "m-kon",
+      "daydarkln",
+      "insafski",
+      "einperegrin"
     ]
   },
   "conflicting/Web/API/EventTarget/removeEventListener": {

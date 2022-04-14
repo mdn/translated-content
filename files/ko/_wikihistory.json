@@ -4083,6 +4083,13 @@
       "agakt"
     ]
   },
+  "Web/API/Document/createNodeIterator": {
+    "modified": "2020-10-15T22:00:37.168Z",
+    "contributors": [
+      "alattalatta",
+      "kewlbear"
+    ]
+  },
   "Web/API/Document/createRange": {
     "modified": "2019-03-18T21:17:12.932Z",
     "contributors": [
@@ -4698,12 +4705,6 @@
       "zx6658"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2020-10-15T22:08:23.074Z",
-    "contributors": [
-      "whdckszxxx"
-    ]
-  },
   "Web/API/EventSource": {
     "modified": "2020-10-15T22:15:01.771Z",
     "contributors": [
@@ -4732,12 +4733,9 @@
     ]
   },
   "Web/API/EventTarget/addEventListener": {
-    "modified": "2020-10-15T21:43:23.962Z",
+    "modified": "2020-10-15T22:08:23.074Z",
     "contributors": [
-      "AHNJAEHA",
-      "alattalatta",
-      "DeadIntegral",
-      "cs09g"
+      "whdckszxxx"
     ]
   },
   "Web/API/EventTarget/dispatchEvent": {
@@ -5862,13 +5860,6 @@
       "marieee",
       "alattalatta",
       "kooljay82"
-    ]
-  },
-  "Web/API/NodeFilter": {
-    "modified": "2020-10-15T22:00:37.168Z",
-    "contributors": [
-      "alattalatta",
-      "kewlbear"
     ]
   },
   "Web/API/NodeList": {

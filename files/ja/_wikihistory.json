@@ -14381,13 +14381,6 @@
       "Shunter1112"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2020-02-11T06:17:04.429Z",
-    "contributors": [
-      "tyankatsu",
-      "Marsf"
-    ]
-  },
   "Web/API/EventSource": {
     "modified": "2020-10-15T21:41:41.782Z",
     "contributors": [
@@ -14429,24 +14422,10 @@
     ]
   },
   "Web/API/EventTarget/addEventListener": {
-    "modified": "2020-10-15T21:11:01.093Z",
+    "modified": "2020-02-11T06:17:04.429Z",
     "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "woodmix",
-      "kei-itof",
-      ".Hiroya",
-      "shuuji3",
-      "dskmori",
-      "lv7777",
-      "blp1526",
-      "regepan",
-      "fscholz",
-      "AshfaqHossain",
-      "ethertank",
-      "dextra",
-      "kohei.yoshino",
-      "Potappo"
+      "tyankatsu",
+      "Marsf"
     ]
   },
   "Web/API/EventTarget/dispatchEvent": {

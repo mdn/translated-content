@@ -3653,6 +3653,7 @@
 /fr/docs/Web/API/Event.stopPropagation	/fr/docs/Web/API/Event/stopPropagation
 /fr/docs/Web/API/Event/Comparaison_des_cibles_d_évènements	/fr/docs/Web/API/Event/Comparison_of_Event_Targets
 /fr/docs/Web/API/Event/createEvent	/fr/docs/conflicting/Web/API/Document/createEvent
+/fr/docs/Web/API/EventListener	/fr/docs/conflicting/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventSource/onopen	/fr/docs/Web/API/EventSource/open_event
 /fr/docs/Web/API/EventTarget/attachEvent	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventTarget/detachEvent	/fr/docs/Web/API/EventTarget/removeEventListener
@@ -3713,6 +3714,8 @@
 /fr/docs/Web/API/Node/prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
 /fr/docs/Web/API/Node/setUserData	/fr/docs/orphaned/Web/API/Node/setUserData
+/fr/docs/Web/API/NodeFilter	/fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada
+/fr/docs/Web/API/NodeFilter/acceptNode	/fr/docs/conflicting/Web/API/Document/createNodeIterator
 /fr/docs/Web/API/Notation	/fr/docs/orphaned/Web/API/Notation
 /fr/docs/Web/API/ParentNode	/fr/docs/orphaned/Web/API/ParentNode
 /fr/docs/Web/API/ParentNode/append	/fr/docs/orphaned/Web/API/ParentNode/append
