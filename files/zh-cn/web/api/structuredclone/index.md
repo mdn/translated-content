@@ -28,7 +28,7 @@ structuredClone(value, { transfer })
 ### 参数
 
 - `value`
-  - : 被克隆的对象。可以是任何 [结构化算法类型](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
+  - : 被克隆的对象。可以是任何[结构化克隆支持的类型](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#支持的类型)。
 - `transfer` {{optional_inline}}
   - : 是一个 {{Glossary("transferable objects")}} (可转移对象)的数组，里面的 `值` 并没有被克隆，而是被转移到被拷贝对象上。
 
