@@ -1,103 +1,90 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
+tags:
+  - API
+  - AudioBuffer
+  - インターフェイス
+  - リファレンス
+  - ウェブ音声 API
+browser-compat: api.AudioBuffer
 translation_of: Web/API/AudioBuffer
 ---
-<p>{{APIRef("Web Audio API")}}</p>
+{{APIRef("Web Audio API")}}
 
-<div>
-<p><code>AudioBuffer</code>インターフェースはメモリ上の短い音声を表すもので、それは{{ domxref("AudioContext.decodeAudioData()") }}メソッドを使ってオーディオファイルから、または{{ domxref("AudioContext.createBuffer()") }}を使って生のデータから生成されます。AudioBufferに入れた後は、その音声は{{ domxref("AudioBufferSourceNode") }}に渡せば再生できます。</p>
-</div>
+**`AudioBuffer`** インターフェイスはメモリー上の短い音声を表すもので、 {{ domxref("AudioContext.decodeAudioData()") }} メソッドで音声ファイルから生成されたり、 {{ domxref("AudioContext.createBuffer()") }} を使って生のデータから生成されたりします。 AudioBuffer に入れた後、その音声は {{ domxref("AudioBufferSourceNode") }} に渡せば再生できます。
 
-<p>これらのオブジェクトは短い、一般的には45秒未満の、断片的な音声を保持するために設計されています。それよりも長い音声は、{{domxref("MediaElementAudioSourceNode")}}のオブジェクトが適しています。バッファには次の形式でデータが書き込まれます: ノンインターリーブ IEEE754 32bit リニア PCMで、-1から+1の範囲で正規化されています。つまり、32bit 浮動小数点バッファで、それぞれのサンプルは-1.0から1.0の間です。AudioBufferに複数のチャンネルがある場合は、それぞれ分かれたバッファに格納されます。</p>
+これらのオブジェクトは短い、一般的には 45 秒未満の、断片的な音声を保持するために設計されています。それよりも長い音声は、 {{domxref("MediaElementAudioSourceNode")}} のオブジェクトが適しています。バッファーには、ノンインターリーブ IEEE754 32bit リニア PCM で、 `-1` から `+1` の範囲に正規化された形式で格納されます。。つまり、 32 ビット浮動小数点バッファーで、それぞれのサンプルは -1.0 から 1.0 の間です。 AudioBuffer に複数のチャンネルがある場合は、それぞれ分かれたバッファーに格納されます。
 
-<h2 id="プロパティ">プロパティ</h2>
+## コンストラクター
 
-<dl>
- <dt>{{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}</dt>
- <dd>バッファに格納されたPCMデータの1秒あたりのサンプル数をfloatで返す</dd>
- <dt>{{domxref("AudioBuffer.length")}} {{readonlyInline}}</dt>
- <dd>バッファに格納されたPCMデータの長さをintegerで返す</dd>
- <dt>{{domxref("AudioBuffer.duration")}} {{readonlyInline}}</dt>
- <dd>バッファに格納されたPCMデータの時間(秒)をdoubleで返す</dd>
- <dt>{{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}</dt>
- <dd>バッファに格納されたPCMデータのチャンネルの数をintegerで返す</dd>
-</dl>
+- {{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}
+  - : 新しい `AudioBuffer` オブジェクトのインスタンスを生成して返します。
 
-<h2 id="メソッド">メソッド</h2>
+## プロパティ
 
-<dl>
- <dt>{{domxref("AudioBuffer.getChannelData()")}}</dt>
- <dd>引数channel(0が最初のチャンネルを表す)のチャンネルに結び付けられたPCMデータを{{jsxref("Float32Array")}}で返す</dd>
- <dt>{{domxref("AudioBuffer.copyFromChannel()")}}</dt>
- <dd>サンプルを、AudioBufferの指定のチャンネルから、コピー先の配列へコピーする</dd>
- <dt>{{domxref("AudioBuffer.copyToChannel()")}}</dt>
- <dd>サンプルを、コピー元の配列から、AudioBufferの指定のチャンネルへコピーする</dd>
-</dl>
+- {{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}
+  - : バッファーに格納された PCM データの 1 秒あたりのサンプル数であるサンプリングレートを表す float を返します。
+- {{domxref("AudioBuffer.length")}} {{readonlyInline}}
+  - : バッファーに格納された PCM データの秒数で長さを表す整数を返します。
+- {{domxref("AudioBuffer.duration")}} {{readonlyInline}}
+  - : バッファーに格納された PCM データの時間を秒単位で表す double 値を返します。
+- {{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}
+  - : バッファーに格納された PCM データによって記述されるディスクリート音声チャンネルの数を表す整数を返します。
 
-<h2 id="例">例</h2>
+## メソッド
 
-<p>次の簡単な例では、AudioBufferの生成し、バッファにランダムなホワイトノイズを書き込む方法を示しています。<a href="https://github.com/mdn/audio-buffer">audio-buffer demo</a> リポジトリには完全なソースコードと、<a href="http://mdn.github.io/audio-buffer/">すぐに実行できるバージョン</a>があります。</p>
+- {{domxref("AudioBuffer.getChannelData()")}}
+  - : 引数 `channel` で定義されたチャンネルに関連付けられた PCM データを含む {{jsxref("Float32Array")}} を返します（`0` は最初のチャンネルを表します）。
+- {{domxref("AudioBuffer.copyFromChannel()")}}
+  - : `AudioBuffer` の指定されたチャンネルから、サンプルを配列 `destination` にコピーします。
+- {{domxref("AudioBuffer.copyToChannel()")}}
+  - : 音声バッファー `AudioBuffer` の指定されたチャンネルに、配列 `source` からサンプルをコピーします。
 
-<pre class="brush: js;highlight:[7,14,27]">// ステレオ
-var channels = 2;
+## 例
 
-// AudioContextのサンプルレートで2秒間の空のステレオバッファを生成する
-var frameCount = audioCtx.sampleRate * 2.0;
-var myArrayBuffer = audioCtx.createBuffer(channels, frameCount, audioCtx.sampleRate);
+次の簡単な例では、 `AudioBuffer` の生成し、バッファーにランダムなホワイトノイズを書き込む方法を示しています。 [webaudio-examples](https://github.com/mdn/webaudio-examples) リポジトリーには完全なソースコードと、[ライブ実行](https://mdn.github.io/webaudio-examples/audio-buffer/)版があります。
 
-button.onclick = function() {
-  // バッファにホワイトノイズを書き込む;
-  // 単なる-1.0から1.0の間の乱数の値である
-  for (var channel = 0; channel &lt; channels; channel++) {
-    // 実際のデータの配列を得る
-    var nowBuffering = myArrayBuffer.getChannelData(channel);
-    for (var i = 0; i &lt; frameCount; i++) {
-      // Math.random()は[0; 1.0]である
-      // 音声は[-1.0; 1.0]である必要がある
-      nowBuffering[i] = Math.random() * 2 - 1;
-    }
+```js
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+// AudioContextのサンプルレートで 3 秒間の空のステレオバッファーを生成する
+var myArrayBuffer = audioCtx.createBuffer(2, audioCtx.sampleRate * 3, audioCtx.sampleRate);
+
+// バッファにホワイトノイズを書き込む
+// -1.0 から 1.0 の間の乱数の値で埋めるだけ
+for (var channel = 0; channel < myArrayBuffer.numberOfChannels; channel++) {
+  // 実際のデータの配列を得る
+  var nowBuffering = myArrayBuffer.getChannelData(channel);
+  for (var i = 0; i < myArrayBuffer.length; i++) {
+    // Math.random() は [0; 1.0] である
+    // 音声は [-1.0; 1.0] である必要がある
+    nowBuffering[i] = Math.random() * 2 - 1;
   }
-
-  // AudioBufferSourceNodeを得る
-  // これはAudioBufferを再生するときに使うAudioNodeである
-  var source = audioCtx.createBufferSource();
-
-  // AudioBufferSourceNodeにバッファを設定する
-  source.buffer = myArrayBuffer;
-
-  // AudioBufferSourceNodeを出力先に接続すると音声が聞こえるようになる
-  source.connect(audioCtx.destination);
-
-  // 音源の再生を始める
-  source.start();
-
 }
-</pre>
 
-<h2 id="仕様">仕様</h2>
+// AudioBufferSourceNode を得る
+// これは AudioBuffer を再生するときに使う AudioNode である
+var source = audioCtx.createBufferSource();
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-audiobuffer-interface', 'AudioBuffer')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+  // AudioBufferSourceNode にバッファーを設定する
+source.buffer = myArrayBuffer;
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+// AudioBufferSourceNode を出力先に接続すると音声が聞こえるようになる
+source.connect(audioCtx.destination);
 
-<p>{{Compat("api.AudioBuffer")}}</p>
+// 音源の再生を始める
+source.start();
+```
 
-<h2 id="参考">参考</h2>
+## 仕様書
 
-<ul>
- <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
