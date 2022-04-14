@@ -2,163 +2,144 @@
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
 tags:
+  - Gecko
+  - HAProxy
   - HTTP
-  - 响应头
-  - 响应头部
-  - 安全性
+  - Response Header
+  - Security
+  - nginx
 translation_of: Web/HTTP/Headers/X-Frame-Options
 original_slug: Web/HTTP/X-Frame-Options
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p><strong><code>X-Frame-Options</code></strong> <a href="/zh-CN/docs/Web/HTTP">HTTP</a> 响应头是用来给浏览器指示允许一个页面 可否在 {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} 或者 {{HTMLElement("object")}} 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免 {{interwiki("wikipedia", "点击劫持")}} 攻击。</p>
+**`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头是用来给浏览器指示允许一个页面可否在 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或者 {{HTMLElement("object")}} 中展现的标记。站点可以通过确保网站没有被嵌入到别人的站点里面，从而避免[点击劫持](/en-US/docs/Web/Security/Types_of_attacks#click-jacking)攻击。
 
-<p>仅当访问文档的用户使用支持 <code>X-Frame-Options</code> 的浏览器时，此附加的安全性才会被提供。{{HTTPHeader("Content-Security-Policy")}} HTTP 头中的 <a href="/en-US/docs/Security/CSP/CSP_policy_directives#frame-ancestors">frame-ancestors</a> 指令会<a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">替代</a>这个非标准的 header。CSP 的 frame-ancestors 会在 {{Gecko("4.0")}} 中支持，但是并不会被所有浏览器支持。然而 <code>X-Frame-Options</code> 是个已广泛支持的非官方标准，可以和 CSP 结合使用。</p>
+仅当访问文档的用户使用支持 `X-Frame-Options` 的浏览器时，此附加的安全性才会被提供。
 
-<div class="notecard">
- <p><strong>备注：</strong>{{HTTPHeader("Content-Security-Policy")}} HTTP 响应头有一个 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令，其已被支持 <code>X-Frame-Options</code> 的浏览器废弃。</p>
-</div>
+> **备注：** {{HTTPHeader("Content-Security-Policy")}} HTTP 响应头有一个 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令，支持这一指令的浏览器已经[废弃](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options)了 `X-Frame-Options` 响应头。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">首部类型</th>
+      <td>{{Glossary("Response header", "响应首部")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的消息首部")}}</th>
+      <td>否</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<p><code>X-Frame-Options</code> 有三个可能的值：</p>
+`X-Frame-Options` 有两个可能的值：
 
-<pre class="syntaxbox">X-Frame-Options: deny
-X-Frame-Options: sameorigin
-X-Frame-Options: allow-from https://example.com/
-</pre>
+```
+X-Frame-Options: DENY
+X-Frame-Options: SAMEORIGIN
+```
 
-<h3 id="指南">指南</h3>
+### 指南
 
-<p>换一句话说，如果设置为 <code>deny</code>，不光在别人的网站 frame 嵌入时会无法加载，在同域名页面中同样会无法加载。另一方面，如果设置为<code>sameorigin</code>，那么页面就可以在同域名页面的 frame 中嵌套。</p>
+如果设置为 `DENY`，不光在别人的网站 frame 嵌入时会无法加载，在同域名页面中同样会无法加载。另一方面，如果设置为 `SAMEORIGIN`，那么页面就可以在同域名页面的 frame 中嵌套。
 
-<dl>
- <dt><code>deny</code></dt>
- <dd>表示该页面不允许在 frame 中展示，即便是在相同域名的页面中嵌套也不允许。</dd>
- <dt><code>sameorigin</code></dt>
- <dd>表示该页面可以在相同域名页面的 frame 中展示。</dd>
- <dt><code>allow-from <em>uri</em></code></dt>
- <dd>表示该页面可以在指定来源的 frame 中展示。</dd>
-</dl>
+- `DENY`
+  - : 表示该页面不允许在 frame 中展示，即便是在相同域名的页面中嵌套也不允许。
+- `SAMEORIGIN`
+  - : 表示该页面可以在相同域名页面的 frame 中展示。规范让浏览器厂商决定此选项是否应用于顶层、父级或整个链，有人认为该选项不是很有用，除非所有的祖先页面都属于同一来源（origin）（见 {{bug(725490)}}）。参见[浏览器兼容性](#浏览器兼容性)以获取详细的兼容性信息。
+- `ALLOW-FROM uri` {{deprecated_inline}}
+  - : 这是一个被弃用的指令，不再适用于现代浏览器，请不要使用它。在支持旧版浏览器时，页面可以在指定来源的 frame 中展示。请注意，在旧版 Firefox 上，它会遇到与 `SAMEORIGIN` 相同的问题——它不会检查 frame 所有的祖先页面来确定他们是否是同一来源。{{HTTPHeader("Content-Security-Policy")}} HTTP 首部有一个 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令，你可以使用这一指令来代替。
 
-<h2 id="例子">例子</h2>
+## 示例
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> 设置 meta 标签是无效的！例如 <code>&lt;meta http-equiv="X-Frame-Options" content="deny"&gt;</code> 没有任何效果。不要这样用！只有当像下面示例那样设置 HTTP 头 <code>X-Frame-Options</code> 才会生效。</p>
-</div>
+> **备注：** 使用 {{HTMLElement("meta")}} 标签来设置 `X-Frame-Options` 是无效的！例如 `<meta http-equiv="X-Frame-Options" content="deny">` 没有任何效果。不要这样用！只有当像下面示例那样设置 HTTP 头 `X-Frame-Options` 才会生效。
 
-<h3 id="配置_Apache">配置 Apache</h3>
+### 配置 Apache
 
-<p>配置 Apache 在所有页面上发送 X-Frame-Options 响应头，需要把下面这行添加到 'site' 的配置中:</p>
+配置 Apache 在所有页面上发送 `X-Frame-Options` 响应头，需要把下面这行添加到 'site' 的配置中：
 
-<pre>Header always set X-Frame-Options "sameorigin"
-</pre>
+```
+Header always set X-Frame-Options "SAMEORIGIN"
+```
 
-<p>要将 Apache 的配置 <code>X-Frame-Options</code> 设置成 deny , 按如下配置去设置你的站点：</p>
+要将 Apache 的配置 `X-Frame-Options` 设置成 `DENY`，按如下配置去设置你的站点：
 
-<pre>Header set X-Frame-Options "deny"
-</pre>
+```
+Header set X-Frame-Options "DENY"
+```
 
-<p>要将 Apache 的配置 <code>X-Frame-Options</code> 设置成 <code>allow-from</code>，在配置里添加：</p>
+### 配置 Nginx
 
-<pre>Header set X-Frame-Options "allow-from https://example.com/"
-</pre>
+配置 Nginx 发送 `X-Frame-Options` 响应头，把下面这行添加到 'http', 'server' 或者 'location' 的配置中：
 
-<h3 id="配置_nginx">配置 nginx</h3>
+```
+add_header X-Frame-Options SAMEORIGIN always;
+```
 
-<p>配置 nginx 发送 X-Frame-Options 响应头，把下面这行添加到 'http', 'server' 或者 'location' 的配置中:</p>
+### 配置 IIS
 
-<pre>add_header X-Frame-Options sameorigin always;
-</pre>
+配置 IIS 发送 `X-Frame-Options` 响应头，添加下面的配置到 `Web.config` 文件中：
 
-<h3 id="配置_IIS">配置 IIS</h3>
-
-<p>配置 IIS 发送 <code>X-Frame-Options</code> 响应头，添加下面的配置到 Web.config 文件中：</p>
-
-<pre class="brush: xml">&lt;system.webServer&gt;
+```xml
+<system.webServer>
   ...
 
-  &lt;httpProtocol&gt;
-    &lt;customHeaders&gt;
-      &lt;add name="X-Frame-Options" value="sameorigin" /&gt;
-    &lt;/customHeaders&gt;
-  &lt;/httpProtocol&gt;
+  <httpProtocol>
+    <customHeaders>
+      <add name="X-Frame-Options" value="SAMEORIGIN" />
+    </customHeaders>
+  </httpProtocol>
 
   ...
-&lt;/system.webServer&gt;
-</pre>
+</system.webServer>
+```
 
-<h3 id="配置_HAProxy">配置 HAProxy</h3>
+参见 [Microsoft 关于使用 IIS Manager 来修改这一配置的支持文章](https://support.microsoft.com/zh-cn/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79)用户界面。
 
-<p>配置 HAProxy 发送 <code>X-Frame-Options</code> 头，添加这些到你的前端、监听 listen，或者后端的配置里面：</p>
+### 配置 HAProxy
 
-<pre>rspadd X-Frame-Options:\ sameorigin
-</pre>
+配置 HAProxy 发送 `X-Frame-Options` 响应头，添加这些到你的前端、监听（listen），或者后端的配置里面：
 
-<p>或者，在更加新的版本中：</p>
+```
+rspadd X-Frame-Options:\ SAMEORIGIN
+```
 
-<pre>http-response set-header X-Frame-Options sameorigin
-</pre>
+或者，在较新的版本中：
 
-<h3 id="配置_Express">配置 Express</h3>
+```
+http-response set-header X-Frame-Options SAMEORIGIN
+```
 
-<p>要配置 Express 可以发送 <code>X-Frame-Options</code> header，你可以用借助了 <a href="https://helmetjs.github.io/docs/frameguard/">frameguard</a> 来设置头部的 <a href="https://helmetjs.github.io/">helmet</a>。在你的服务器配置里面添加：</p>
+### 配置 Express
 
-<pre class="brush: js">const helmet = require('helmet');
+要配置 Express 以发送 `X-Frame-Options` 响应头，你可以使用借助了 [frameguard](https://helmetjs.github.io/docs/frameguard/) 的 [helmet](https://helmetjs.github.io/) 来设置首部。在你的服务器配置里面添加：
+
+```js
+const helmet = require('helmet');
 const app = express();
-app.use(helmet.frameguard({ action: "sameorigin" }));
-</pre>
+app.use(helmet.frameguard({ action: 'SAMEORIGIN' }));
+```
 
-<p>或者，你也可以直接用 <a href="https://helmetjs.github.io/docs/frameguard/">frameguard</a>：</p>
+或者，你也可以直接用 frameguard：
 
-<pre class="brush: js">const frameguard = require('frameguard')
-app.use(frameguard({ action: 'sameorigin' }))
-</pre>
+```js
+const frameguard = require('frameguard')
+app.use(frameguard({ action: 'SAMEORIGIN' }))
+```
 
-<h2 id="结果">结果</h2>
+## 规范
 
-<p>在 Firefox 尝试加载 frame 的内容时，如果 X-Frame-Options 响应头设置为禁止访问了，那么 Firefox 会用 about:blank 展现到 frame 中。也许从某种方面来讲的话，展示为错误消息会更好一点。</p>
+{{Specifications}}
 
-<h2 id="规范">规范</h2>
+## 浏览器兼容性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">标题</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("7034")}}</td>
-   <td>HTTP Header Field X-Frame-Options</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 参见
 
-<p>{{Compat("http.headers.X-Frame-Options")}}</p>
-
-<h2 id="参见">参见</h2>
-
-<ul>
- <li><a href="/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors"><code>frame-ancestors</code> (CSP)</a></li>
- <li><a href="https://tools.ietf.org/html/rfc7034">HTTP Header Field X-Frame-Options - RFC 7034</a></li>
- <li><a class="external" href="http://blogs.msdn.com/b/ie/archive/2009/01/27/ie8-security-part-vii-clickjacking-defenses.aspx">ClickJacking Defenses - IEBlog</a></li>
- <li><a href="http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx">Combating ClickJacking with X-Frame-Options - IEInternals</a></li>
- <li><a href="https://w3c.github.io/webappsec/specs/content-security-policy/#directive-frame-ancestors">CSP Level 2 frame-ancestors directive</a></li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}} 的 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令
+- [HTTP Header Field X-Frame-Options - RFC 7034](https://datatracker.ietf.org/doc/html/rfc7034)
+- [ClickJacking Defenses - IEBlog](https://docs.microsoft.com/archive/blogs/ie/ie8-security-part-vii-clickjacking-defenses)
+- [Combating ClickJacking with X-Frame-Options - IEInternals](https://docs.microsoft.com/archive/blogs/ieinternals/combating-clickjacking-with-x-frame-options)
