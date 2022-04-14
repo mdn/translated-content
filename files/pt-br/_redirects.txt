@@ -519,6 +519,7 @@
 /pt-BR/docs/Web/API/Element/accessKey	/pt-BR/docs/Web/API/HTMLElement/accessKey
 /pt-BR/docs/Web/API/Element/addEventListener	/pt-BR/docs/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/Event/Comparativo_entre_Event_Targets	/pt-BR/docs/Web/API/Event/Comparison_of_Event_Targets
+/pt-BR/docs/Web/API/EventListener	/pt-BR/docs/conflicting/Web/API/EventTarget/addEventListener
 /pt-BR/docs/Web/API/EventSource/onerror	/pt-BR/docs/Web/API/EventSource/error_event
 /pt-BR/docs/Web/API/Fetch_API/Uso_de_busca_Cross-global	/pt-BR/docs/Web/API/Fetch_API/Cross-global_fetch_usage
 /pt-BR/docs/Web/API/FileReader/onload	/pt-BR/docs/Web/API/FileReader/load_event
@@ -536,6 +537,7 @@
 /pt-BR/docs/Web/API/Node.removeChild	/pt-BR/docs/Web/API/Node/removeChild
 /pt-BR/docs/Web/API/Node.replaceChild	/pt-BR/docs/Web/API/Node/replaceChild
 /pt-BR/docs/Web/API/Node/innerText	/pt-BR/docs/Web/API/HTMLElement/innerText
+/pt-BR/docs/Web/API/NodeFilter	/pt-BR/docs/Web/API/Document/createNodeIterator
 /pt-BR/docs/Web/API/ParentNode/childElementCount	/pt-BR/docs/Web/API/Element/childElementCount
 /pt-BR/docs/Web/API/Position	/pt-BR/docs/Web/API/GeolocationPosition
 /pt-BR/docs/Web/API/Position/coords	/pt-BR/docs/Web/API/GeolocationPosition/coords

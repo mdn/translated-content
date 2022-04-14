@@ -14381,13 +14381,6 @@
       "Shunter1112"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2020-02-11T06:17:04.429Z",
-    "contributors": [
-      "tyankatsu",
-      "Marsf"
-    ]
-  },
   "Web/API/EventSource": {
     "modified": "2020-10-15T21:41:41.782Z",
     "contributors": [
@@ -48201,6 +48194,13 @@
     "modified": "2020-10-15T22:27:05.707Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98": {
+    "modified": "2020-02-11T06:17:04.429Z",
+    "contributors": [
+      "tyankatsu",
+      "Marsf"
     ]
   },
   "conflicting/Web/API/File/name": {

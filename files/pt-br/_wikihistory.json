@@ -4330,6 +4330,12 @@
       "LinuxPowerBR"
     ]
   },
+  "Web/API/Document/createNodeIterator": {
+    "modified": "2019-03-23T22:03:52.772Z",
+    "contributors": [
+      "oirodolfo"
+    ]
+  },
   "Web/API/Document/currentScript": {
     "modified": "2019-03-23T22:50:44.919Z",
     "contributors": [
@@ -4973,12 +4979,6 @@
     "contributors": [
       "teoli",
       "mateuspv"
-    ]
-  },
-  "Web/API/EventListener": {
-    "modified": "2019-03-23T22:20:33.890Z",
-    "contributors": [
-      "cezaraugusto"
     ]
   },
   "Web/API/EventSource": {
@@ -5937,12 +5937,6 @@
     "contributors": [
       "EduardoDaSilva",
       "marlonveiga-santos"
-    ]
-  },
-  "Web/API/NodeFilter": {
-    "modified": "2019-03-23T22:03:52.772Z",
-    "contributors": [
-      "oirodolfo"
     ]
   },
   "Web/API/NodeList": {
@@ -16378,6 +16372,12 @@
     "modified": "2019-03-23T23:35:40.503Z",
     "contributors": [
       "teoli"
+    ]
+  },
+  "conflicting/Web/API/EventTarget/addEventListener": {
+    "modified": "2019-03-23T22:20:33.890Z",
+    "contributors": [
+      "cezaraugusto"
     ]
   },
   "conflicting/Web/API/Geolocation/getCurrentPosition": {

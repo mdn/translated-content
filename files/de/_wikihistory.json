@@ -2963,19 +2963,19 @@
       "Sharian"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2019-03-23T22:39:43.594Z",
-    "contributors": [
-      "skanne",
-      "StevenS77",
-      "Ctwx"
-    ]
-  },
   "Web/API/EventSource": {
     "modified": "2019-09-20T07:55:13.564Z",
     "contributors": [
       "Locour",
       "nexus511"
+    ]
+  },
+  "Web/API/EventTarget/addEventListener": {
+    "modified": "2019-03-23T22:39:43.594Z",
+    "contributors": [
+      "skanne",
+      "StevenS77",
+      "Ctwx"
     ]
   },
   "Web/API/FederatedCredential": {

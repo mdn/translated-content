@@ -464,6 +464,7 @@
 /ko/docs/Web/API/Element/childNodes	/ko/docs/Web/API/Node/childNodes
 /ko/docs/Web/API/Element/firstChild	/ko/docs/Web/API/Node/firstChild
 /ko/docs/Web/API/Event/createEvent	/ko/docs/Web/API/Document/createEvent
+/ko/docs/Web/API/EventListener	/ko/docs/Web/API/EventTarget/addEventListener
 /ko/docs/Web/API/Fetch_API/Fetch의_사용법	/ko/docs/Web/API/Fetch_API/Using_Fetch
 /ko/docs/Web/API/File/size	/ko/docs/Web/API/Blob/size
 /ko/docs/Web/API/FileReader.result	/ko/docs/Web/API/FileReader/result
@@ -483,6 +484,7 @@
 /ko/docs/Web/API/NetworkInformation.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/NetworkInformation/connection	/ko/docs/Web/API/Navigator/connection
 /ko/docs/Web/API/Node/innerText	/ko/docs/Web/API/HTMLElement/innerText
+/ko/docs/Web/API/NodeFilter	/ko/docs/Web/API/Document/createNodeIterator
 /ko/docs/Web/API/Notification.permission	/ko/docs/Web/API/Notification/permission
 /ko/docs/Web/API/ParentNode/childElementCount	/ko/docs/Web/API/Element/childElementCount
 /ko/docs/Web/API/PhotoCapabilities	/ko/docs/Web/API/ImageCapture/getPhotoCapabilities
