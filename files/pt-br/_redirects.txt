@@ -495,7 +495,6 @@
 /pt-BR/docs/Tools/Rulers	https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html
 /pt-BR/docs/Tools/Settings	https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html
 /pt-BR/docs/Tools/Shader_Editor	https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html
-/pt-BR/docs/Tools/Simulador_Firefox_OS_1.1	/pt-BR/docs/Tools/Firefox_OS_1.1_Simulator
 /pt-BR/docs/Tools/Storage_Inspector	https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html
 /pt-BR/docs/Tools/Style_Editor	https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html
 /pt-BR/docs/Tools/Web_Console	https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html
