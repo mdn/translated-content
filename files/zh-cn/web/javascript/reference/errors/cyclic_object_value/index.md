@@ -3,74 +3,75 @@ title: 'TypeError: cyclic object value'
 slug: Web/JavaScript/Reference/Errors/Cyclic_object_value
 tags:
   - Error
+  - Errors
   - JavaScript
-  - 类型错误
-  - 错误提示
+  - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 ---
-<div>{{jsSidebar("Errors")}}</div>
 
-<div>当一段JSON中出现循环引用，使用{{jsxref("JSON.stringify()")}}这个方法去处理JSON时会报这个"cyclic object value"错误。</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="提示信息">提示信息</h2>
+在[JSON](https://www.json.org/)中出现循环引用时，JavaScript 会抛出 "cyclic object value" 的异常。{{jsxref("JSON.stringify()")}}并不会尝试解决这个问题，因此导致运行失败。
 
-<pre>TypeError: cyclic object value (Firefox)
+## 提示信息
+
+```js
+TypeError: cyclic object value (Firefox)
 TypeError: Converting circular structure to JSON (Chrome and Opera)
-TypeError: Circular reference in value argument not supported (Edge)</pre>
+TypeError: Circular reference in value argument not supported (Edge)
+```
 
-<h2 id="错误类型">错误类型</h2>
+## 错误类型
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="哪里出错了？">哪里出错了？</h2>
+## 哪里出错了？
 
-<p>当调用 {{jsxref("JSON.stringify()")}} 方法去处理循环引用结构的JSON会失败。</p>
+[JSON 格式](https://www.json.org/)本身不支持循环引用对象（尽管存在[IETF 草案](https://datatracker.ietf.org/doc/html/draft-pbryan-zyp-json-ref-03))，因此 {{jsxref("JSON.stringify()")}} 并不会尝试解决这个问题而是直接运行失败。
 
-<p>JSON标准参考链接:<a href="https://www.json.org/json-zh.html">JSON format</a></p>
+## 示例
 
-<h2 id="示例">示例</h2>
+### 循环引用
 
-<h3 id="循环引用">循环引用</h3>
+在如下循环结构中：
 
-<p>在如下循环结构中：</p>
+```js
+var circularReference = { otherData: 123 };
+circularReference.myself = circularReference;
+```
 
-<pre class="brush: js">var a = {};
-var b = {};
-a.child = b;
-b.child = a;
-</pre>
+{{jsxref("JSON.stringify()")}} 将会报错
 
-<p>{{jsxref("JSON.stringify()")}} 将会报错</p>
-
-<pre class="brush: js example-bad">JSON.stringify(a);
+```js example-bad
+JSON.stringify(circularReference);
 // TypeError: cyclic object value
-</pre>
+```
 
-<p>要处理循环引用的JSON，可以使用支持这种结构的库(例如<a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a>))，或者自己实现。</p>
+要处理循环引用的 JSON，可以使用支持这种结构的库(例如[cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)))，或者自己实现，需要通过可序列化值查找、替换或者移除循环引用。
 
-<p>下面代码展示了，可以通过指定替换函数({{jsxref("JSON.stringify()")}} 方法的第二个参数) 来检查转换成字符串之前是否有循环对象引用的存在。</p>
+下面的代码片段演示了如何使用{{jsxref("JSON.stringify()")}}的 `replacer` 参数查找和过滤（会导致数据丢失）循环引用。
 
-<p>注意：以下代码并不会保存循环引用的值。</p>
-
-<pre class="brush: js example-good">var seen = [];
-
-var replacer = function(key, value) {
-  if (typeof value === "object" &amp;&amp; value !== null) {
-    if (seen.indexOf(value) &gt;= 0) {
-      return;
+```js
+const getCircularReplacer = () => {
+  const seen = new WeakSet();
+  return (key, value) => {
+    if (typeof value === 'object' && value !== null) {
+      if (seen.has(value)) {
+        return;
+      }
+      seen.add(value);
     }
-    seen.push(value);
-  }
-  return value;
+    return value;
+  };
 };
 
-JSON.stringify(a, replacer);
-// "{"child":{}}"
-</pre>
+JSON.stringify(circularReference, getCircularReplacer());
+// {"otherData":123}
+```
 
-<h2 id="相关内容">相关内容</h2>
+## 参见
 
-<ul>
- <li>{{jsxref("JSON.stringify")}}</li>
- <li><a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> –  提出了两个方法<code>JSON.decycle</code> 和 <code>JSON.retrocycle</code>，这两个方法能够对循环对象引用结构进行编码和解码，并且使之成为一种扩展的且向下兼容的JSON格式。</li>
-</ul>
+- {{jsxref("JSON.stringify")}}
+- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js)
+  – 介绍两个方法, `JSON.decycle` 和
+  `JSON.retrocycle`，这两个方法能够对循环对象引用结构进行编码和解码，并且使之成为一种扩展的且向下兼容的 JSON 格式。
