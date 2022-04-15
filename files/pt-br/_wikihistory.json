@@ -7597,6 +7597,12 @@
       "Fernandolrs"
     ]
   },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2019-03-18T21:43:53.570Z",
+    "contributors": [
+      "larimaza"
+    ]
+  },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
     "modified": "2020-07-01T01:27:34.385Z",
     "contributors": [
@@ -9058,12 +9064,6 @@
       "eufaloserio",
       "dancasttro",
       "mcpelegrin"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2019-03-18T21:43:53.570Z",
-    "contributors": [
-      "larimaza"
     ]
   },
   "Web/HTML/Attributes": {

@@ -695,6 +695,7 @@
 /pt-BR/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data
 /pt-BR/docs/Web/Guide/HTML/Using_data_attributes	/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes
 /pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/Web/Guide/Introduction_to_Web_development
+/pt-BR/docs/Web/HTML/Applying_color	/pt-BR/docs/Web/CSS/CSS_Colors/Applying_color
 /pt-BR/docs/Web/HTML/CORS_imagens_habilitadas	/pt-BR/docs/Web/HTML/CORS_enabled_image
 /pt-BR/docs/Web/HTML/Canvas	/pt-BR/docs/Web/API/Canvas_API
 /pt-BR/docs/Web/HTML/Canvas/A_basic_ray-caster	/pt-BR/docs/Web/API/Canvas_API/A_basic_ray-caster

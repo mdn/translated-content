@@ -509,7 +509,7 @@
 /de/docs/Web/CSS/CSS_Boxmodell/Box-shadow_generator	/de/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /de/docs/Web/CSS/CSS_Boxmodell/Einführung_in_das_CSS_Boxmodell	/de/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /de/docs/Web/CSS/CSS_Boxmodell/Zusammenfallen_von_Außenabständen_meistern	/de/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-/de/docs/Web/CSS/CSS_Colors	/de/docs/Web/CSS/CSS_Color
+/de/docs/Web/CSS/CSS_Color	/de/docs/Web/CSS/CSS_Colors
 /de/docs/Web/CSS/CSS_Colors/farbauswahl_werkzeug	/de/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /de/docs/Web/CSS/CSS_Compositing_and_Blending	/de/docs/Web/CSS/Compositing_and_Blending
 /de/docs/Web/CSS/CSS_Flexible_Box_Layout/Flex_Elemente_Sortieren	/de/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
