@@ -25826,10 +25826,17 @@
       "yan"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2020-11-28T00:06:47.995Z",
     "contributors": [
       "xusy"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2020-07-22T05:27:42.410Z",
+    "contributors": [
+      "WinterCicada",
+      "Dorence"
     ]
   },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
@@ -30751,13 +30758,6 @@
       "TimZhao",
       "jessiecaisme",
       "Futao.Gao"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2020-07-22T05:27:42.410Z",
-    "contributors": [
-      "WinterCicada",
-      "Dorence"
     ]
   },
   "Web/HTML/Attributes": {

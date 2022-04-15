@@ -596,7 +596,7 @@
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /zh-TW/docs/Web/CSS/CSS_Box_Model/理解邊界重疊的原因	/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-/zh-TW/docs/Web/CSS/CSS_Colors	/zh-TW/docs/Web/CSS/CSS_Color
+/zh-TW/docs/Web/CSS/CSS_Color	/zh-TW/docs/Web/CSS/CSS_Colors
 /zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/zh-TW/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /zh-TW/docs/Web/CSS/CSS_一般問題	/zh-TW/docs/Learn/CSS/Howto/CSS_FAQ
 /zh-TW/docs/Web/CSS/CSS_網格_布局	/zh-TW/docs/Web/CSS/CSS_Grid_Layout
@@ -662,6 +662,7 @@
 /zh-TW/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/zh-TW/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /zh-TW/docs/Web/Guide/Performance/Using_web_workers	/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers
 /zh-TW/docs/Web/Guide/圖像	/zh-TW/docs/Web/Guide/Graphics
+/zh-TW/docs/Web/HTML/Applying_color	/zh-TW/docs/Web/CSS/CSS_Colors/Applying_color
 /zh-TW/docs/Web/HTML/Canvas	/zh-TW/docs/Web/API/Canvas_API
 /zh-TW/docs/Web/HTML/Canvas/Drawing_graphics_with_canvas	/zh-TW/docs/conflicting/Web/API/Canvas_API/Tutorial
 /zh-TW/docs/Web/HTML/Element/HTML_元素	/zh-TW/docs/Web/HTML/Element

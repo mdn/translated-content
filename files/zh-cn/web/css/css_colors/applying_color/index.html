@@ -1,25 +1,31 @@
 ---
-title: Applying color to HTML elements using CSS
-slug: Web/HTML/Applying_color
+title: 使用 CSS 为 HTML 元素应用颜色
+slug: Web/CSS/CSS_Colors/Applying_color
+tags:
+  - HTML
+  - 入门
+  - 指南
+  - 颜色
 translation_of: Web/HTML/Applying_color
+original_slug: Web/HTML/Applying_color
 ---
 <div>{{HTMLRef}}</div>
 
-<p>The use of color is a fundamental form of human expression. Children experiment with color before they even have the manual dexterity to draw. Maybe that's why color is one of the first things people often want to experiment with when learning to develop web sites. <span class="seoSummary">With <a href="/en-US/docs/Web/CSS">CSS</a>, there are lots of ways to add color to your <a href="/en-US/docs/Web/HTML">HTML</a> <a href="/en-US/docs/Web/HTML/Element">elements</a> to create just the look you want. This article is a primer introducing each of the ways CSS color can be used in HTML.</span></p>
+<p>色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。<span class="seoSummary">借助 <a href="/en-US/docs/Web/CSS">CSS</a>，有很多方法可以为 <a href="/en-US/docs/Web/HTML">HTML</a> <a href="/en-US/docs/Web/HTML/Element">元素</a> 添加颜色，以创建所需的外观。本文是一篇入门文章，介绍了 CSS 颜色在 HTML 中的各种使用方法。</span></p>
 
-<p>Fortunately, adding color to your HTML is actually really easy to do, and you can add color to nearly anything.</p>
+<p>幸运的是，在 HTML 中添加颜色非常容易，而且几乎可以加在任何地方。</p>
 
-<p>We're going to touch on most of what you'll need to know when using color, including a {{anch("Things that can have color", "list of what you can color and what CSS properties are involved")}}, {{anch("How to describe a color", "how you describe colors")}}, and how to actually {{anch("Using color", "use colors both in stylesheets and in scripts")}}. We'll also take a look at how to {{anch("Letting the user picka color", "let the user pick a color")}}.</p>
+<p>我们将会谈及添加颜色所需要的大部分内容，包括 {{anch("可设置颜色的内容", "一系列可以着色的元素与相关的 CSS 属性")}}，{{anch("如何描述颜色", "如何描述颜色")}}，以及{{anch("使用颜色", "在样式表与脚本中使用颜色的方法")}}。同时我们还会了解如何{{anch("让用户选择颜色", "让用户选择颜色")}}。</p>
 
-<p>Then we'll wrap things up with a brief discussion of how to {{anch("Using color wisely", "use color wisely")}}: how to select appropriate colors, keeping in mind the needs of people with differing visual capabilities.</p>
+<p>然后我们会通过简短的讨论总结如何 {{anch("机智地运用颜色", "机智地运用颜色")}}：如何选择合适的颜色，同时考虑不同视力水平的人的需求。</p>
 
-<h2 id="Things_that_can_have_color">Things that can have color</h2>
+<h2 id="可设置颜色的内容">可设置颜色的内容</h2>
 
-<p>At the element level, everything in HTML can have color applied to it. Instead, let's look at things in terms of the kinds of things that are drawn in the elements, such as text and borders and so forth. For each, we'll see a list of the CSS properties that apply color to them.</p>
+<p>从 HTML 元素层面来看，所有的元素都可设置颜色。但除了元素本身之外，元素中所绘制的事物也可设置颜色，如文本，边框等等。我们将会看到一系列用于设置颜色的 CSS 属性。</p>
 
-<p>At a fundamental level, the {{cssxref("color")}} property defines the foreground color of an HTML element's content and the {{cssxref("background-color")}} property defines the element's background color. These can be used on just about any element.</p>
+<p>在这些设置颜色的 CSS 属性中，最基础的就是 {{cssxref("color")}} 属性和 {{cssxref("background-color")}} 属性了。分别用于设置 HTML 元素内容的前景色和背景色。这两个属性几乎可用用于所有的 HTML 元素。</p>
 
-<h3 id="Text">Text</h3>
+<h3 id="文本">文本</h3>
 
 <p>Whenever an element is rendered, these properties are used to determine the color of the text, its background, and any decorations on the text.</p>
 
@@ -38,7 +44,7 @@ translation_of: Web/HTML/Applying_color
  <dd>The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML {{htmlattrxref("contenteditable")}} attribute is set.</dd>
 </dl>
 
-<h3 id="Boxes">Boxes</h3>
+<h3 id="盒">盒</h3>
 
 <p>Every element is a box with some sort of content, and has a background and a border in addition to whatever contents the box may have.</p>
 
@@ -53,7 +59,7 @@ translation_of: Web/HTML/Applying_color
  <dd>The color to use when drawing an outline around the outside of the element. This outline is different from the border in that it doesn't get space set aside for it in the document (so it may overlap other content). It's generally used as a focus indicator, to show which element will receive input events.</dd>
 </dl>
 
-<h3 id="Borders">Borders</h3>
+<h3 id="边框">边框</h3>
 
 <p>Any element can have a <a href="/en-US/docs/Learn/CSS/Styling_boxes/Borders">border</a> drawn around it. A basic element border is a line drawn around the edges of the element's content. See {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}} to learn about the relationship between elements and their borders, and the article <a href="/en-US/docs/Learn/CSS/Styling_boxes/Borders">Styling borders using CSS</a> to learn more about applying styles to borders.</p>
 
@@ -70,36 +76,36 @@ translation_of: Web/HTML/Applying_color
  <dd>These let you color the edges of the border closest to to the beginning and the end of the start of lines of text within the box. Which side this is will vary depending on the {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}} properties, which are typically (but not always) used to adjust text directionality based on the language being displayed. For example, if the box's text is being rendered right-to-left, then the <code>border-inline-start-color</code> is applied to the right side of the border.</dd>
 </dl>
 
-<h3 id="Other_ways_to_use_color">Other ways to use color</h3>
+<h3 id="其它方式">其它方式</h3>
 
-<p>CSS isn't the only web technology that supports color. There are graphics technologies that are available on the web which also support color.</p>
+<p>CSS 并不是唯一支持颜色的 web 技术。同时还有其它支持颜色的图形技术。</p>
 
 <dl>
- <dt>The HTML <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a></dt>
+ <dt>HTML <a href="/en-US/docs/Web/API/Canvas_API">Canvas API</a></dt>
  <dd>Lets you draw 2D bitmapped graphics in a {{HTMLElement("canvas")}} element. See our <a href="/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas tutorial</a> to learn more.</dd>
- <dt><a href="/en-US/docs/Web/SVG">SVG</a> (Scalable Vector Graphics)</dt>
+ <dt><a href="/en-US/docs/Web/SVG">SVG</a> (可缩放矢量图形)</dt>
  <dd>Lets you draw images using commands that draw specific shapes, patterns, and lines to produce an image. SVG commands are formatted as XML, and can be embedded directly into a web page or can be placed in he page using the {{HTMLElement("img")}} element, just like any other type of image.</dd>
  <dt><a href="/en-US/docs/Web/API/WebGL_API">WebGL</a></dt>
- <dd>The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See <a href="/en-US/docs/Learn/WebGL">Learn WebGL for 2D and 3D</a> graphics to find out more.</dd>
+ <dd>The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See our <a href="/en-US/docs/Web/API/WebGL_API/Tutorial">WebGL tutorial</a> to find out more.</dd>
 </dl>
 
-<h2 id="How_to_describe_a_color">How to describe a color</h2>
+<h2 id="如何描述颜色">如何描述颜色</h2>
 
 <p>In order to represent a color in CSS, you have to find a way to translate the analog concept of "color" into a digital form that a computer can use. This is typically done by breaking down the color into components, such as how much of each of a set of primary colors to mix together, or how bright to make the color. As such, there are several ways you can describe color in CSS.</p>
 
 <p>For more detailed discussion of each of the color value types, see the reference for the CSS {{cssxref("&lt;color&gt;")}} unit.</p>
 
-<h3 id="Keywords">Keywords</h3>
+<h3 id="颜色名称">颜色名称</h3>
 
 <p>A set of standard color names have been defined, letting you use these keywords instead of numeric representations of colors if you choose to do so and there's a keyword representing the exact color you want to use. Color keywords include the standard primary and secondary colors (such as <code>red</code>, <code>blue</code>, or <code>orange</code>), shades of gray (from <code>black</code> to <code>white</code>, including colors like <code>darkgray</code> and <code>lightgrey</code>), and a variety of other blended colors including <code>lightseagreen</code>, <code>cornflowerblue</code>, and <code>rebeccapurple</code>.</p>
 
 <p>See {{SectionOnPage("/en-US/docs/Web/CSS/color_value", "Color keywords", "code")}} for a list of all available color keywords.</p>
 
-<h3 id="RGB_values">RGB values</h3>
+<h3 id="RGB_值">RGB 值</h3>
 
 <p>There are three ways to represent an RGB color in CSS.</p>
 
-<h4 id="Hexadecimal_string_notation">Hexadecimal string notation</h4>
+<h4 id="十六进制颜色码">十六进制颜色码</h4>
 
 <p>Hexadecimal string notation represents a color using hexadecimal digits to represent each of the color components (red, green, and blue). It may also include a fourth component: the alpha channel (or opacity). Each color component can be represented as a number between 0 and 255 (0x00 and 0xFF) or, optionally, as a number between 0 and 15 (0x0 and 0xF). All components <em>must</em> be specified using the same number of digits. If you use the single-digit notation, the final color is computed by using each component's digit twice; that is, <code>"#D"</code> becomes <code>"#DD"</code> when drawing.</p>
 
@@ -118,7 +124,7 @@ translation_of: Web/HTML/Applying_color
 
 <p>As an example, you can represent the opaque color bright blue as <code>"#0000ff"</code> or <code>"#00f"</code>. To make it 25% opaque, you can use <code>"#0000ff44"</code> or <code>"#00f4"</code>.</p>
 
-<h4 id="RGB_functional_notation">RGB functional notation</h4>
+<h4 id="RGB_函数表示法">RGB 函数表示法</h4>
 
 <p>RGB (Red/Green/Blue) functional notation, like hexadecimal string notation, represents colors using their red, green, and blue components (as well as, optionally, an alpha channel component for opacity). However, instead of using a string, the color is defined using the CSS function {{cssxref("color_value", "rgb()", "#rgb()")}}. This function accepts as its input parameters the values of the red, green, and blue components and an optional fourth parameter, the value for the alpha channel.</p>
 
@@ -133,7 +139,7 @@ translation_of: Web/HTML/Applying_color
 
 <p>For example, a bright red that's 50% opaque can be represented as <code>rgb(255, 0, 0, 0.5)</code> or <code>rgb(100%, 0, 0, 50%)</code>.</p>
 
-<h3 id="HSL_functional_notation">HSL functional notation</h3>
+<h3 id="HSL_函数表示法">HSL 函数表示法</h3>
 
 <p>Designers and artists often prefer to work using the {{interwiki("wikipedia", "HSL and HSV", "HSL")}} (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The <code>hsl()</code> CSS function is very similar to the <code>rgb()</code> function in usage otherwise.</p>
 
@@ -150,7 +156,7 @@ translation_of: Web/HTML/Applying_color
 <p>Think of it like creating the perfect paint color:</p>
 
 <ol>
- <li>You start with base paint that's the maximum intensity possible for a given color, such as  the most intense blue that can be represented by the user's screen. This is the <strong>hue</strong> (H) component: a value representing the angle around the color wheel for the vivid hue we want to use as our base.</li>
+ <li>You start with base paint that's the maximum intensity possible for a given color, such as the most intense blue that can be represented by the user's screen. This is the <strong>hue</strong> (H) component: a value representing the angle around the color wheel for the vivid hue we want to use as our base.</li>
  <li>Then select a greyscale paint that corresponds how bright you want the color to be; this is the luminance. Do you want it to be very bright and nearly white, or very dark and closer to black, or somewhere in between? This is specified using a percentage, where 0% is perfectly black and 100% is perfectly white. (regardless of the saturation or hue). In between values are a literal grey area.</li>
  <li>Now that you have a grey paint and a perfectly vivid color, you need to mix them together. The saturation (S) component of the color indicates what percentage of the final color should be comprised of that perfectly vivid color. The rest of the final color is made up of the grey paint that represents the saturation.</li>
 </ol>
@@ -161,7 +167,7 @@ translation_of: Web/HTML/Applying_color
 
 <div id="hsl-swatches">
 <div class="hidden">
-<pre class="brush: css">table {
+<pre class="brush: css notranslate">table {
   border: 1px solid black;
   font: 16px "Open Sans", Helvetica, Arial, sans-serif;
   border-spacing: 0;
@@ -178,7 +184,7 @@ th {
   background-color: hsl(0, 0%, 75%);
 }</pre>
 
-<pre class="brush: html">&lt;table&gt;
+<pre class="brush: html notranslate">&lt;table&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th scope="col"&gt;Color in HSL notation&lt;/th&gt;
@@ -221,11 +227,11 @@ th {
 <p>Note that when you omit the hue's unit, it's assumed to be in degrees (<code>deg</code>).</p>
 </div>
 
-<h2 id="Using_color">Using color</h2>
+<h2 id="使用颜色">使用颜色</h2>
 
 <p>Now that you know what CSS properties exist that let you apply color to elements and the formats you can use to describe colors, you can put this together to begin to make use of color. As you may have seen from the list under {{anch("Things that can have color")}}, there are plenty of things you can color with CSS. Let's look at this from two sides: using color within a {{Glossary("stylesheet")}}, and adding and changing color using {{Glossary("JavaScript")}} code to alter the styles of elements.</p>
 
-<h3 id="Specifying_colors_in_stylesheets">Specifying colors in stylesheets</h3>
+<h3 id="在样式表中指定颜色">在样式表中指定颜色</h3>
 
 <p>The easiest way to apply color to elements—and the way you'll usually do it—is to simply specify colors in the CSS that's used when rendering elements. While we won't use every single property mentioned previously, we'll look at a couple of examples. The concept is the same anywhere you use color.</p>
 
@@ -237,7 +243,7 @@ th {
 
 <p>The HTML responsible for creating the above example is shown here:</p>
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html notranslate">&lt;div class="wrapper"&gt;
   &lt;div class="box boxLeft"&gt;
     &lt;p&gt;
       This is the first box.
@@ -258,7 +264,7 @@ th {
 
 <p>We'll look at the CSS to create the above results a piece at a time, so we can review the interesting parts one by one.</p>
 
-<pre class="brush: css">.wrapper {
+<pre class="brush: css notranslate">.wrapper {
   width: 620px;
   height: 110px;
   margin: 0;
@@ -266,13 +272,13 @@ th {
   border: 6px solid mediumturquoise;
 }</pre>
 
-<p>The <code>.wrapper</code> class is used to assign styles to the {{HTMLElement("div")}} that encloses all of our other content. This establishes thesize of the container using {{cssxref("width")}} and {{cssxref("height")}} as well as its {{cssxref("margin")}} and {{cssxref("padding")}}.</p>
+<p>The <code>.wrapper</code> class is used to assign styles to the {{HTMLElement("div")}} that encloses all of our other content. This establishes the size of the container using {{cssxref("width")}} and {{cssxref("height")}} as well as its {{cssxref("margin")}} and {{cssxref("padding")}}.</p>
 
 <p>Of more interest to our discussion here is the use of the {{cssxref("border")}} property to establish a border around the outside edge of the element. This border is a solid line, 6 pixels wide, in the color <code>mediumturquoise</code>.</p>
 
 <p>Our two colored boxes share a number of properties in common, so next we establish a class, <code>.box</code>, that defines those shared properties:</p>
 
-<pre class="brush: css">.box {
+<pre class="brush: css notranslate">.box {
   width: 290px;
   height: 100px;
   margin: 0;
@@ -283,9 +289,9 @@ th {
   align-items: center;
 }</pre>
 
-<p>In brief, <code>.box</code> establishes the size of each box, as well as the configuration of the font used within. We also take advantage of <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexbox</a> to easily center the contents of each box. We enable <code>flex</code> mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to <code>center</code>. Then we can create a class for each of the two boxes that defines the propeties that differ between the two.</p>
+<p>In brief, <code>.box</code> establishes the size of each box, as well as the configuration of the font used within. We also take advantage of <a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">CSS Flexbox</a> to easily center the contents of each box. We enable <code>flex</code> mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to <code>center</code>. Then we can create a class for each of the two boxes that defines the properties that differ between the two.</p>
 
-<pre class="brush: css">.boxLeft {
+<pre class="brush: css notranslate">.boxLeft {
   float: left;
   background-color: rgb(245, 130, 130);
   outline: 2px solid darkred;
@@ -299,7 +305,7 @@ th {
  <li>Notice that we're not explicitly setting the text color. That means the value of {{cssxref("color")}} will be inherited from the nearest containing element that defines it. By default, that's black.</li>
 </ul>
 
-<pre class="brush: css">.boxRight {
+<pre class="brush: css notranslate">.boxRight {
   float: right;
   background-color: hsl(270deg, 50%, 75%);
   outline: 4px dashed rgb(110, 20, 120);
@@ -318,13 +324,13 @@ th {
  <li>Finally, a bit of a shadow is added to the text using {{cssxref("text-shadow")}}. Its <code>color</code> parameter is set to <code>black</code>.</li>
 </ul>
 
-<h2 id="Letting_the_user_pick_a_color">Letting the user pick a color</h2>
+<h2 id="让用户选择颜色">让用户选择颜色</h2>
 
-<p>There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own {{interwiki("wikipedia", "color picker")}}, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using <code>"color"</code> as the value of its {{htmlattrxref("type", "input")}} attribute.</p>
+<p>There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own {{interwiki("wikipedia", "color picker")}}, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using <code>"color"</code> as the value of its {{htmlattrxref("type", "input")}} attribute.</p>
 
 <p>The <code>&lt;input&gt;</code> element represents a color only in the {{anch("Hexadecimal string notation", "hexadecimal string notation")}} covered above.</p>
 
-<h3 id="Example_Picking_a_color">Example: Picking a color</h3>
+<h3 id="示例：选择一个颜色">示例：选择一个颜色</h3>
 
 <p>Let's look at a simple example, in which the user can choose a color. As the user adjusts the color, the border around the example changes to reflect the new color. After finishing up and picking the final color, the color picker's value is displayed.</p>
 
@@ -338,7 +344,7 @@ th {
 
 <p>The HTML here creates a box that contains a color picker control (with a label created using the {{HTMLElement("label")}} element) and an empty paragraph element ({{HTMLElement("p")}}) into which we'll output some text from our JavaScript code.</p>
 
-<pre class="brush: html">&lt;div id="box"&gt;
+<pre class="brush: html notranslate">&lt;div id="box"&gt;
   &lt;label for="colorPicker"&gt;Border color:&lt;/label&gt;
   &lt;input type="color" value="#8888ff" id="colorPicker"&gt;
   &lt;p id="output"&gt;&lt;/p&gt;
@@ -348,7 +354,7 @@ th {
 
 <p>The CSS simply establishes a size for the box and some basic styling for appearances. The border is also established with a 2-pixel width and a border color that won't last, courtesy of the JavaScript below...</p>
 
-<pre class="brush: css">#box {
+<pre class="brush: css notranslate">#box {
   width: 500px;
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
@@ -360,7 +366,7 @@ th {
 
 <p>The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the <code><a href="/en-US/docs/Web/HTML/Element/input/color">&lt;input type="color"&gt;</a></code> element.</p>
 
-<pre class="brush: js">let colorPicker = document.getElementById("colorPicker");
+<pre class="brush: js notranslate">let colorPicker = document.getElementById("colorPicker");
 let box = document.getElementById("box");
 let output = document.getElementById("output");
 
@@ -378,31 +384,31 @@ colorPicker.addEventListener("change", function(event) {
 
 <p>The {{event("change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the <code>&lt;p&gt;</code> element with the ID <code>"output"</code> to a string describing the finally selected color.</p>
 
-<h2 id="Using_color_wisely">Using color wisely</h2>
+<h2 id="机智地运用颜色">机智地运用颜色</h2>
 
-<p>Making the right choices when selecting colors when designing a web site can be a tricky process, especially if you aren't well-grounded in art, design, or at least basic color theory. The wrong color choice can render your site unattractive, or even worse, leave the content unreadable due to problems with contrast or conflicting colors. Worse still, if using the wrong colors can result in your content being outright unusable by people withcertain vision problems, particularly color blindness.</p>
+<p>Making the right choices when selecting colors when designing a website can be a tricky process, especially if you aren't well-grounded in art, design, or at least basic color theory. The wrong color choice can render your site unattractive, or even worse, leave the content unreadable due to problems with contrast or conflicting colors. Worse still, if using the wrong colors can result in your content being outright unusable by people withcertain vision problems, particularly color blindness.</p>
 
-<h3 id="Finding_the_right_colors">Finding the right colors</h3>
+<h3 id="找到正确的颜色">找到正确的颜色</h3>
 
 <p>Coming up with just the right colors can be tricky, especially without training in art or design. Fortunately, there are tools available that can help you. While they can't replace having a good designer helping you make these decisions, they can definitely get you started.</p>
 
-<h4 id="Base_color">Base color</h4>
+<h4 id="基本色">基本色</h4>
 
-<p>The first step is to choose your <strong>base color</strong>. This is the color that in some way defines your web site or the subject matter of the site. Just as we associate green with the beverage {{interwiki("wikipedia", "Mountain Dew")}} and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:</p>
+<p>The first step is to choose your <strong>base color</strong>. This is the color that in some way defines your website or the subject matter of the site. Just as we associate green with the beverage {{interwiki("wikipedia", "Mountain Dew")}} and one might think of the color blue in relationship with the sky or the ocean, choosing an appropriate base color to represent your site is a good place to start. There are plenty of ways to select a base color; a few ideas include:</p>
 
 <ul>
  <li>A color that is naturally associated with the topic of your content, such as the existing color identified with a product or idea or a color representative of the emotion you wish to convey.</li>
- <li>A color that comes from imagery associated with what your content is about. If you're creating a web site about a given item or product, choose a color that's physically present on that item.</li>
- <li>Browse web sites that let you look at lots of existing color palettes and images to find inspiration.</li>
+ <li>A color that comes from imagery associated with what your content is about. If you're creating a website about a given item or product, choose a color that's physically present on that item.</li>
+ <li>Browse websites that let you look at lots of existing color palettes and images to find inspiration.</li>
 </ul>
 
-<p>When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the web site <a href="http://www.colorzilla.com/">ColorZilla</a> offers an extension (<a href="http://www.colorzilla.com/chrome">Chrome</a> / <a href="http://www.colorzilla.com/firefox">Firefox</a>) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.</p>
+<p>When trying to decide upon a base color, you may find that browser extensions that let you select colors from web content can be particularly handy. Some of these are even specifically designed to help with this sort of work. For example, the website <a href="http://www.colorzilla.com/">ColorZilla</a> offers an extension (<a href="http://www.colorzilla.com/chrome">Chrome</a> / <a href="http://www.colorzilla.com/firefox">Firefox</a>) that offers an eyedropper tool for picking colors from the web. It can also take averages of the colors of pixels in various sized areas or even a selected area of the page.</p>
 
 <div class="note">
 <p>The advantage to averaging colors can be that often what looks like a solid color is actually a surprisingly varied number of related colors all used in concert, blending to create a desired effect. Picking just one of these pixels can result in getting a color that on its own looks very out of place.</p>
 </div>
 
-<h4 id="Fleshing_out_the_palette">Fleshing out the palette</h4>
+<h4 id="填满调色板">填满调色板</h4>
 
 <p>Once you have decided on your base color, there are plenty of online tools that can help you build out a palette of appropriate colors to use along with your base color by applying color theory to your base color to determine appropriate added colors. Many of these tools also support viewing the colors filtered so you can see what they would look like to people with various forms of color blindness. See {{anch("Color and accessibility")}} for a brief explanation of why this matters.</p>
 
@@ -420,7 +426,7 @@ colorPicker.addEventListener("change", function(event) {
 <p>Usually, you are far better off using the smallest number of colors possible. By using color to accentuate rather than adding color to everything on the page, you keep your content easy to read and the colors you do use have far more impact.</p>
 </div>
 
-<h3 id="Color_theory_resources">Color theory resources</h3>
+<h3 id="色彩理论的资源">色彩理论的资源</h3>
 
 <p>A full review of color theory is beyond the scope of this article, but there are plenty of articles about color theory available, as well as courses you can find at nearby schools and universities. A couple of useful resources about color theory:</p>
 
@@ -431,9 +437,9 @@ colorPicker.addEventListener("change", function(event) {
  <dd>Wikipedia's entry on color theory, which has a lot of great information from a technical perspective. It's not really a resource for helping you with the color sleection process, but is still full of useful information.</dd>
 </dl>
 
-<h3 id="Color_and_accessibility">Color and accessibility</h3>
+<h3 id="颜色与可访问性">颜色与可访问性</h3>
 
-<p>There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a web site or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.</p>
+<p>There are several ways color can be an {{Glossary("accessibility")}} problem. Improper or careless use of color can result in a website or app that a percentage of your target audience may not be able to use adequately, resulting in lost traffic, lost business, and possibly even a public relations problem. So it's important to consider your use of color carefully.</p>
 
 <p>You should do at least basic research into {{interwiki("wikipedia", "color blindness")}}. There are several kinds; the most common is red-green color blindness, which causes people to be unable to differentiate between the colors red and green. There are others, too, ranging from inabilities to tell the difference between certain colors to total inability to see color at all.</p>
 
@@ -449,9 +455,9 @@ colorPicker.addEventListener("change", function(event) {
  <li><a href="https://www.usability.gov/get-involved/blog/2010/02/color-blindness.html">Color Blindness &amp; Web Design</a> (Usability.gov: United States Department of Health and Human Services)</li>
 </ul>
 
-<h3 id="Palette_design_example">Palette design example</h3>
+<h3 id="调色板设计示例">调色板设计示例</h3>
 
-<p>Let's consider a quick example of selecting an appropriate color palette for a site. Imagine that you're building a web site for a new game that takes place on the planet Mars. So let's do a <a href="https://www.google.com/search?q=Mars&amp;tbm=isch">Google search for photos of Mars</a>. Lots of good examples of Martian coloration there. We carefully avoid the mockups and the photos from movies. And we decide to use a photo taken by one of the Mars landers humanity has parked on the surface over the last few decades, since the game takes place on the planet's surface. We use a color picker tool to select a sample of the color we choose.</p>
+<p>Let's consider a quick example of selecting an appropriate color palette for a site. Imagine that you're building a website for a new game that takes place on the planet Mars. So let's do a <a href="https://www.google.com/search?q=Mars&amp;tbm=isch">Google search for photos of Mars</a>. Lots of good examples of Martian coloration there. We carefully avoid the mockups and the photos from movies. And we decide to use a photo taken by one of the Mars landers humanity has parked on the surface over the last few decades, since the game takes place on the planet's surface. We use a color picker tool to select a sample of the color we choose.</p>
 
 <p>Using an eyedropper tool, we identify a color we like and determine that the color in question is <code>#D79C7A</code>, which is an appropriate rusty orange-red color that's so stereotypical of the Martian surface.</p>
 
@@ -479,7 +485,7 @@ colorPicker.addEventListener("change", function(event) {
 
 <p>Once you have these colors, you will probably still need to select appropriate neutral colors. Common design practice is to try to find the sweet spot where there's just enough contrast that the text is crisp and readable but not enough contrast to become harsh for the eyes. It's easy to go too far in one way or another so be sure to get feedback on your colors once you've selected them and have examples of them in use available. If the contrast is too low, your text will tend to be washed out by the background, leaving it unreadable, but if your contrast is too high, the user may find your site garish and unpleasant to look at.</p>
 
-<h3 id="Color_backgrounds_contrast_and_printing">Color, backgrounds, contrast, and printing</h3>
+<h3 id="颜色、背景、对比和印刷">颜色、背景、对比和印刷</h3>
 
 <p>What looks good on screen may look very different on paper. In addition, ink can be expensive, and if a user is printing your page, they don't necessarily need all the backgrounds and such using up their precious ink when all that matters is the text itself. Most browsers, by default, remove background images when printing documents.</p>
 
@@ -493,10 +499,10 @@ colorPicker.addEventListener("change", function(event) {
 <p><strong>Note:</strong> There is no guarantee, though, that <code>color-adjust: exact</code> will result in your CSS being used exactly as given. If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of <code>color-adjust</code>.</p>
 </div>
 
-<h2 id="See_also">See also</h2>
+<h2 id="相关链接">相关链接</h2>
 
 <ul>
  <li><a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics">Drawing graphics</a></li>
  <li><a href="/en-US/docs/Web/Guide/Graphics">Graphics on the web</a></li>
- <li><a href="/en-US/docs/Tools/DevToolsColors">MDN's color picker tool</a></li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool">MDN's color picker tool</a></li>
 </ul>

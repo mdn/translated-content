@@ -4020,7 +4020,7 @@
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_colonnes	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 /fr/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
-/fr/docs/Web/CSS/CSS_Colors	/fr/docs/conflicting/Web/CSS/CSS_Color
+/fr/docs/Web/CSS/CSS_Color	/fr/docs/Web/CSS/CSS_Colors
 /fr/docs/Web/CSS/CSS_Columns/Concepts_base_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 /fr/docs/Web/CSS/CSS_Columns/Gestion_dépassement_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 /fr/docs/Web/CSS/CSS_Columns/Gérer_rupture_contenu_entre_colonnes	/fr/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
@@ -4449,7 +4449,8 @@
 /fr/docs/Web/Guide/HTML/Liens_email	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks_10fd94f15ce1a469a3483e0478cb5d85
 /fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/conflicting/Web/API/FormData/Using_FormData_Objects
-/fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/HTML/Applying_color
+/fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/CSS/CSS_Colors/Applying_color
+/fr/docs/Web/HTML/Applying_color	/fr/docs/Web/CSS/CSS_Colors/Applying_color
 /fr/docs/Web/HTML/Attributs	/fr/docs/Web/HTML/Attributes
 /fr/docs/Web/HTML/Attributs/autocomplete	/fr/docs/Web/HTML/Attributes/autocomplete
 /fr/docs/Web/HTML/Attributs/pattern	/fr/docs/Web/HTML/Attributes/pattern

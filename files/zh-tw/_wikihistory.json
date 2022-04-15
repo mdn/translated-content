@@ -4954,11 +4954,17 @@
       "MOSapeizer"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2019-03-23T22:44:44.114Z",
     "contributors": [
       "Sebastianz",
       "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2019-03-18T21:29:53.605Z",
+    "contributors": [
+      "WuBingHsuan"
     ]
   },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
@@ -5477,12 +5483,6 @@
       "irvinfly",
       "stingyong",
       "sailplaneTW"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2019-03-18T21:29:53.605Z",
-    "contributors": [
-      "WuBingHsuan"
     ]
   },
   "Web/HTML/Attributes": {

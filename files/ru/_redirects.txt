@@ -432,7 +432,7 @@
 /ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
-/ru/docs/Web/CSS/CSS_Colors	/ru/docs/Web/CSS/CSS_Color
+/ru/docs/Web/CSS/CSS_Color	/ru/docs/Web/CSS/CSS_Colors
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере	/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси	/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 /ru/docs/Web/CSS/CSS_Flow_Layout/Введение_в_контексты_форматирования	/ru/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
@@ -516,6 +516,7 @@
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn/HTML/Howto/Use_data_attributes
 /ru/docs/Web/Guide/Графика	/ru/docs/Web/Guide/Graphics
 /ru/docs/Web/Guide/Производительность	/ru/docs/Web/Guide/Performance
+/ru/docs/Web/HTML/Applying_color	/ru/docs/Web/CSS/CSS_Colors/Applying_color
 /ru/docs/Web/HTML/CORS_settings_attributes	/ru/docs/Web/HTML/Attributes/crossorigin
 /ru/docs/Web/HTML/Canvas	/ru/docs/Web/API/Canvas_API
 /ru/docs/Web/HTML/Canvas/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial

@@ -24304,8 +24304,14 @@
       "xdelatour"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2020-10-15T22:02:12.684Z",
+    "contributors": [
+      "SphinxKnight"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2019-05-09T08:27:28.339Z",
     "contributors": [
       "SphinxKnight"
     ]
@@ -30239,12 +30245,6 @@
       "Chbok",
       "Planche",
       "Takenbot"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2019-05-09T08:27:28.339Z",
-    "contributors": [
-      "SphinxKnight"
     ]
   },
   "Web/HTML/Attributes": {

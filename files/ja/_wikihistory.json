@@ -27790,10 +27790,20 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2020-10-15T22:04:14.476Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2020-12-08T11:01:26.496Z",
+    "contributors": [
+      "MikuroXina",
+      "mizukichandayo",
+      "mfuji09",
+      "piza_suki",
+      "karaage-kun"
     ]
   },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
@@ -33316,16 +33326,6 @@
       "Taken Bot",
       "julionc",
       "Shimono"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2020-12-08T11:01:26.496Z",
-    "contributors": [
-      "MikuroXina",
-      "mizukichandayo",
-      "mfuji09",
-      "piza_suki",
-      "karaage-kun"
     ]
   },
   "Web/HTML/Attributes": {

@@ -1548,7 +1548,7 @@
 /pl/docs/Web/CSS/:last-node	/pl/docs/Web/CSS/:-moz-last-node
 /pl/docs/Web/CSS/@-moz-document	/pl/docs/Web/CSS/@document
 /pl/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/pl/docs/conflicting/Web/CSS/cursor
-/pl/docs/Web/CSS/CSS_Colors	/pl/docs/Web/CSS/CSS_Color
+/pl/docs/Web/CSS/CSS_Color	/pl/docs/Web/CSS/CSS_Colors
 /pl/docs/Web/CSS/CSS_Colors/Narzedzie_doboru_kolorow	/pl/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /pl/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/pl/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /pl/docs/Web/CSS/CSS_Reference	/pl/docs/Web/CSS/Reference

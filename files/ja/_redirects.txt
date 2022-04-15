@@ -3748,7 +3748,7 @@
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
-/ja/docs/Web/CSS/CSS_Colors	/ja/docs/Web/CSS/CSS_Color
+/ja/docs/Web/CSS/CSS_Color	/ja/docs/Web/CSS/CSS_Colors
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
@@ -4081,6 +4081,7 @@
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
 /ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/Web/API/FormData/Using_FormData_Objects
+/ja/docs/Web/HTML/Applying_color	/ja/docs/Web/CSS/CSS_Colors/Applying_color
 /ja/docs/Web/HTML/CORS_settings_attributes	/ja/docs/Web/HTML/Attributes/crossorigin
 /ja/docs/Web/HTML/Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial

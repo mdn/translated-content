@@ -1660,7 +1660,7 @@
 /es/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /es/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /es/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/es/docs/conflicting/Web/CSS/cursor
-/es/docs/Web/CSS/CSS_Colors	/es/docs/Web/CSS/CSS_Color
+/es/docs/Web/CSS/CSS_Color	/es/docs/Web/CSS/CSS_Colors
 /es/docs/Web/CSS/CSS_Colors/Herramienta_para_seleccionar_color	/es/docs/Web/CSS/CSS_Colors/Color_picker_tool
 /es/docs/Web/CSS/CSS_Flexible_Box_Layout/Casos_de_uso_tipicos_de_Flexbox.	/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /es/docs/Web/CSS/CSS_Flexible_Box_Layout/Conceptos_Basicos_de_Flexbox	/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox

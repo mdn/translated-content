@@ -8019,11 +8019,17 @@
       "Netaras"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2020-10-15T22:04:24.231Z",
     "contributors": [
       "alattalatta",
       "hyeran2"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2020-01-20T08:56:57.750Z",
+    "contributors": [
+      "alattalatta"
     ]
   },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
@@ -9920,12 +9926,6 @@
       "moolow",
       "duke.L",
       "jongho"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2020-01-20T08:56:57.750Z",
-    "contributors": [
-      "alattalatta"
     ]
   },
   "Web/HTML/Attributes": {

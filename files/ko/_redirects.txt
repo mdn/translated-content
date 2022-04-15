@@ -536,7 +536,7 @@
 /ko/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ko/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ko/docs/Web/CSS/cursor
-/ko/docs/Web/CSS/CSS_Colors	/ko/docs/Web/CSS/CSS_Color
+/ko/docs/Web/CSS/CSS_Color	/ko/docs/Web/CSS/CSS_Colors
 /ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox의_기본_개념	/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /ko/docs/Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사용례	/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /ko/docs/Web/CSS/CSS_Flow_Layout/대열과_탈대열	/ko/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow
@@ -628,6 +628,7 @@
 /ko/docs/Web/Guide/Index	/ko/docs/conflicting/Web/Guide
 /ko/docs/Web/Guide/XML_파싱_및_직렬화	/ko/docs/Web/Guide/Parsing_and_serializing_XML
 /ko/docs/Web/Guide/그래픽	/ko/docs/Web/Guide/Graphics
+/ko/docs/Web/HTML/Applying_color	/ko/docs/Web/CSS/CSS_Colors/Applying_color
 /ko/docs/Web/HTML/Canvas	/ko/docs/Web/API/Canvas_API
 /ko/docs/Web/HTML/Canvas/Manipulating_video_using_canvas	/ko/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
 /ko/docs/Web/HTML/Canvas/Tutorial	/ko/docs/Web/API/Canvas_API/Tutorial

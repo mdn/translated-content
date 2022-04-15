@@ -12702,11 +12702,19 @@
       "hinduCoder"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2019-03-23T22:34:30.410Z",
     "contributors": [
       "BychekRU",
       "Krenair"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2019-03-18T21:45:50.255Z",
+    "contributors": [
+      "ChristinaKrapivina",
+      "warsan",
+      "kasperyan"
     ]
   },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
@@ -14973,14 +14981,6 @@
       "Defolter",
       "irmatov",
       "Elrow"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2019-03-18T21:45:50.255Z",
-    "contributors": [
-      "ChristinaKrapivina",
-      "warsan",
-      "kasperyan"
     ]
   },
   "Web/HTML/Attributes": {

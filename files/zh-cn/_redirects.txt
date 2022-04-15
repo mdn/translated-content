@@ -1791,6 +1791,7 @@
 /zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /zh-CN/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/zh-CN/docs/conflicting/Web/CSS/cursor
 /zh-CN/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
+/zh-CN/docs/Web/CSS/CSS_Color	/zh-CN/docs/Web/CSS/CSS_Colors
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
@@ -2028,6 +2029,7 @@
 /zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes
 /zh-CN/docs/Web/Guide/Performance/Using_web_workers	/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers
 /zh-CN/docs/Web/Guide/Using_FormData_Objects	/zh-CN/docs/Web/API/FormData/Using_FormData_Objects
+/zh-CN/docs/Web/HTML/Applying_color	/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color
 /zh-CN/docs/Web/HTML/Attributes/自动完成属性	/zh-CN/docs/Web/HTML/Attributes/autocomplete
 /zh-CN/docs/Web/HTML/CORS_settings_attributes	/zh-CN/docs/Web/HTML/Attributes/crossorigin
 /zh-CN/docs/Web/HTML/Canvas	/zh-CN/docs/Web/API/Canvas_API
