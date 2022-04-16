@@ -15702,14 +15702,6 @@
       "caio"
     ]
   },
-  "Web/SVG/Element/animateColor": {
-    "modified": "2019-03-23T22:57:25.579Z",
-    "contributors": [
-      "wbamberg",
-      "Sebastianz",
-      "caio"
-    ]
-  },
   "Web/SVG/Element/animateMotion": {
     "modified": "2019-03-23T22:57:26.608Z",
     "contributors": [
@@ -16645,6 +16637,14 @@
     "contributors": [
       "bermarques",
       "clebermatheus1"
+    ]
+  },
+  "conflicting/Web/SVG/Element/animate": {
+    "modified": "2019-03-23T22:57:25.579Z",
+    "contributors": [
+      "wbamberg",
+      "Sebastianz",
+      "caio"
     ]
   },
   "orphaned/Glossary/Tratando_Formulários_com_PHP": {

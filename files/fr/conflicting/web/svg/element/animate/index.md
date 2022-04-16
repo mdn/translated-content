@@ -1,11 +1,12 @@
 ---
 title: animateColor
-slug: Web/SVG/Element/animateColor
+slug: conflicting/Web/SVG/Element/animate
 tags:
   - Animation SVG
   - Element
   - SVG
 translation_of: Web/SVG/Element/animateColor
+original_slug: Web/SVG/Element/animateColor
 ---
 {{SVGRef}}{{deprecated_header}}
 
