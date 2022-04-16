@@ -4,9 +4,9 @@ slug: Web/API/CharacterData/after
 tags:
   - API
   - DOM
-  - Method
+  - メソッド
   - Node
-  - Reference
+  - リファレンス
 browser-compat: api.CharacterData.after
 translation_of: Web/API/CharacterData/after
 ---

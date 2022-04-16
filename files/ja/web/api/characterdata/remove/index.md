@@ -5,7 +5,7 @@ tags:
   - API
   - CharacterData
   - DOM
-  - Method
+  - メソッド
 browser-compat: api.CharacterData.remove
 translation_of: Web/API/CharacterData/remove
 ---
