@@ -34,7 +34,7 @@ class Carré extends Polygone {
   constructor(longueur) {
     // On utilise le constructeur de la classe parente
     // avec le mot-clé super
-    super(longueur, longueur);
+    super(hauteur, largeur);
     // Pour les classes dérivées, super() doit être appelé avant de
     // pouvoir utiliser 'this' sinon cela provoque une exception
     // ReferenceError
