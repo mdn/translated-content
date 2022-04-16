@@ -320,7 +320,7 @@ doSomething().then(function(result) {
 
 <p>세 번째 실수는 <code>catch</code>로 체인을 종료하는 것을 잊는 것입니다. 종료되지 않은 promise 체인은 대부분의 브라우저에서 예상하지 못한 promise rejection을 초래합니다.</p>
 
-<p>좋은 경험 법칙은 항상 promise 체인을 반환하거나 종결하는 것이며, 새로운 promise를 얻자마자 즉시 반환하여 평평하게 만드는 것입니다.</p>
+<p>좋은 경험 법칙은 항상 promise 체인을 반환하거나 종결하는 것이며, 새로운 promise를 얻자마자 즉시 반환하여 복잡도를 낮추는 것입니다.</p>
 
 <pre class="brush: js"><code>doSomething()
 .then(function(result) {
