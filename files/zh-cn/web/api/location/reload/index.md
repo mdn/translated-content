@@ -1,61 +1,45 @@
 ---
-title: Location.reload()
+title: location.reload()
 slug: Web/API/Location/reload
-translation_of: Web/API/Location/reload
+tags:
+  - API
+  - HTML DOM
+  - Location
+  - Method
+  - Reference
+browser-compat: api.Location.reload
 ---
-<p>{{ APIRef("HTML DOM") }}</p>
+{{ APIRef("HTML DOM") }}
 
-<p><code><strong>Location.reload()</strong></code> 方法用来刷新当前页面。该方法只有一个参数，当值为 <code>true</code> 时，将强制浏览器从服务器加载页面资源，当值为 <code>false</code> 或者未传参时，浏览器则可能从缓存中读取页面。</p>
+ **`location.reload()`** 方法用来刷新当前页面，就像刷新按钮一样。
 
-<p>该方法在跨域调用（执行该方法的脚本文件的域和 {{domxref("Location")}} 对象所在页面的跨不同）时，将会抛出 {{domxref("DOMException")}} 异常。</p>
+该方法在跨域调用（执行该方法的脚本文件的域和 {{domxref("Location")}} 对象所在页面的域不同）时，将会抛出  `SECURITY_ERROR` {{domxref("DOMException")}} 异常。有关更多信息，请参阅[浏览器的同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)。
 
-<h2 id="语法">语法</h2>
+## 语法
 
-<pre class="syntaxbox"><em>object</em>.reload(<em>forcedReload</em>);
-</pre>
+```js
+location.reload();
+```
 
-<h3 id="参数">参数</h3>
+## location.reload() 没有参数
 
-<dl>
- <dt><em>forcedReload </em>{{optional_inline}}</dt>
- <dd>该参数要求为 {{domxref("Boolean","布尔")}} 类型，当取值为 <code>true</code> 时，将强制浏览器从服务器重新获取当前页面资源，而不是从浏览器的缓存中读取，如果取值为 <code>false</code> 或不传该参数时，浏览器则可能会从缓存中读取当前页面。</dd>
-</dl>
+Firefox 对于该方法支持一个非标准的 [` forceGet` boolean 参数](https://searchfox.org/mozilla-central/source/dom/base/Location.cpp#551) ，当值为 `true` 时，将强制 Firefox 从服务器加载页面资源。但是在其他浏览器中任何参数都是无效的，`location.reload()`  执行时将会忽略它们并且不会有任何效果。
 
-<h2 id="示例">示例</h2>
+不过你可能会看到在现有的代码中写入 `location.reload(true)` 并假装硬性重新加载在所有浏览器中均生效的使用方式。在 GitHub 中搜索 "`location.reload(true)`" 将会得到 [成千上万个结果](https://github.com/search?q=%22location.reload%28true%29%22&type=code)。所以现在有大量的现有代码中包含它。
 
-<pre class="brush: js">// 无缓存刷新页面（但页面引用的资源还是可能使用缓存，
-// 大多数浏览器可以通过设置在打开开发者工具时禁用缓存实现无缓存需求）
-window.location.reload(true);</pre>
+由于一些历史的原因，网景浏览器的一些版本添加了对它的支持，显然被继承到了 Firefox 中。并且一度被 W3C Web APIs 工作组作为一个[提案](https://www.w3.org/2005/06/tracker/webapi/issues/69)来考虑添加到 `location.reload()` 中。但是它从未实际实现过。
 
-<h2 id="规范">规范</h2>
+因此 boolean 参数当前不符合 `location.reload()` 的规范。— 实际上它*从未*成为 `location.reload()` 的规范。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "history.html#dom-location-reload", "Location.reload()")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>No change from {{SpecName("HTML5 W3C")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "browsers.html#dom-location-reload", "Location.reload()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+## 规范
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+{{Specifications}}
 
-{{Compat("api.Location.reload")}}
+## 浏览器兼容性
 
-<h2 id="相关链接">相关链接</h2>
+{{Compat}}
 
-<ul>
- <li>{{domxref("Location")}} 接口。</li>
- <li>类似功能的方法：{{domxref("Location.assign()")}} 和 {{domxref("Location.replace()")}}.</li>
-</ul>
+## 相关链接
+
+- {{domxref("Location")}} 接口。
+- 类似功能的方法：{{domxref("Location.assign()")}} 和 {{domxref("Location.replace()")}}。
