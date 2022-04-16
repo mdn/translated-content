@@ -71,8 +71,8 @@ HTML の仕様には、`<section>` 要素で形成されるアウトラインと
 
 アウトラインの状況については、以下の記事で詳しく解説しています。
 
-- [Computer says NO to HTML5 document outline | HTML5 Doctor](https://html5doctor.com/computer-says-no-to-html5-document-outline/)
-- [A decade + a year of heading backwards – HTML Accessibility](https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/)
+- [Computer says no to the HTML5 outline](https://html5doctor.com/computer-says-no-to-html5-document-outline/)
+- [A decade + a year of heading backwards](https://html5accessibility.com/stuff/2021/03/21/a-decade-a-year-of-heading-backwards/)
 
 ## 例
 
