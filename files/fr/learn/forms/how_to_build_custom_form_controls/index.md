@@ -12,9 +12,9 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}
 
-Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
+Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
 
 Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous allons travailler avec un exemple : reconstruire l'élément {{HTMLElement("select")}}.
 
@@ -306,29 +306,28 @@ Donc, voici le résultat avec les trois états :
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Basic state</th>
-      <th scope="col" style="text-align: center">Active state</th>
-      <th scope="col" style="text-align: center">Open state</th>
+      <th scope="col">État initial</th>
+      <th scope="col">État actif</th>
+      <th scope="col">État ouvert</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample('Basic_state',120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample('État_initial',120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample("État_actif",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample("État_ouvert",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
-      <td colspan="3" style="text-align: center">
+      <td colspan="3">
         <a
-          href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          >Check out the source code</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -430,25 +429,24 @@ window.addEventListener("load", function () {
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Sans JavaScript</th>
-      <th scope="col" style="text-align: center">Avec JavaScript</th>
+      <th scope="col">Sans JavaScript</th>
+      <th scope="col">Avec JavaScript</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2")}}
+        {{EmbedLiveSample("Sans_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2")}}
+        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
-      <td colspan="2" style="text-align: center">
+      <td colspan="2">
         <a
-          href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          >Testez le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -620,21 +618,20 @@ A ce stade, notre widget change d'état comme nous l'avons conçu, mais sa valeu
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_3")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_3"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -744,21 +741,20 @@ Et voilà, nous avons terminé ! Voici le résultat :
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_4")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_4"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -832,21 +828,20 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_5")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_5"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -866,18 +861,16 @@ Voici quelques bibliothèques à prendre en considération avant de coder les v�
 
 Si vous voulez aller plus loin, le code de cet exemple mérite quelques amélioration avant de devenir générique et réutilisable. C'est un exercice que vous pouvez essayer de faire. Deux conseils pour vous aider : le premier argument pour toutes nos fonctions est le même, ce qui signifie que ces fonctions ont besoin du même contexte. Il serait avisé de construire un objet pour partager ce contexte. En outre, vous devrez éprouver ses fonctionnalités, c'est-à-dire qu'il doit pouvoir fonctionner avec les divers navigateurs dont la compatibilité avec les normes Web qu'ils utilisent varie. Amusez-vous bien !
 
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}
-
 ## Dans ce module
 
-- [Mon premier formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets)
+- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
+- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
+- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
+- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
+- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
+- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
+- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
+- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)
