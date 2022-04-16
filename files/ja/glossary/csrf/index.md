@@ -2,25 +2,23 @@
 title: CSRF
 slug: Glossary/CSRF
 tags:
-  - Glossary
-  - Security
+  - 用語集
+  - セキュリティ
 translation_of: Glossary/CSRF
 ---
-<p><span class="seoSummary"><strong>CSRF</strong> (クロスサイトリクエストフォージェリ Cross-Site Request Forgery) は、信頼されたユーザーになりすまし、ウェブサイトに対して不正なコマンドを送信する攻撃です。</span>例えば、どこかへ移動すると称したリンクの {{glossary("URL")}} 内に、悪意のある引数を含めたりすることで実行されます。</p>
+**CSRF** (クロスサイトリクエストフォージェリー、Cross-Site Request Forgery) は、信頼されたユーザーになりすまし、ウェブサイトに対して不正なコマンドを送信する攻撃です。
 
-<pre>&lt;img src="https://www.example.com/index.php?action=delete&amp;id=123"&gt;
-</pre>
+例えば、どこかへ移動すると称したリンクの {{glossary("URL")}} 内に、悪意のある引数を含めたりすることで実行されます。
 
-<p><code>https://www.example.com</code> で何らかの権限を持ったユーザーでは、 <code>&lt;img&gt;</code> 要素が <code>https://www.example.com</code> の中になくても、気づかないうちに <code>https://www.example.com</code> への操作を実行してしまいます。</p>
+```html
+<img src="https://www.example.com/index.php?action=delete&id=123">
+```
 
-<p>CSRF を防止するには、 {{glossary("REST", "RESTful API")}} を使用する、セキュリティトークンを追加するなど、様々な方法があります。</p>
+`https://www.example.com` で何らかの権限を持ったユーザーでは、 `<img>` 要素が `https://www.example.com` の中になくても、気づかないうちに `https://www.example.com` への操作を実行してしまいます。
 
-<h2 id="Learn_more" name="Learn_more">詳細情報</h2>
+CSRF を防止するには、 {{glossary("REST", "RESTful API")}} を使用する、セキュリティトークンを追加するなど、様々な方法があります。
 
-<h3 id="General_knowledge" name="General_knowledge">一般知識</h3>
+## 関連情報
 
-<ul>
- <li>Wikipedia 上の記事: {{Interwiki("wikipedia", "クロスサイトリクエストフォージェリ")}}</li>
- <li><a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet">Prevention measures</a></li>
- <li><a href="/ja/docs/Web/Security/Information_Security_Basics">MDN セキュリティチュートリアル</a></li>
-</ul>
+- {{Interwiki("wikipedia", "クロスサイトリクエストフォージェリ")}} (Wikipedia)
+- [Prevention measures](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
