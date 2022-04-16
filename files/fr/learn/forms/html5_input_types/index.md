@@ -72,7 +72,7 @@ Les champs de recherche permettent de créer des boîtes de recherches pour les 
 <input type="search" id="search" name="search">
 ```
 
-La différence principale entre un champ `text` et un champ `search` porte notamment sur la mise en forme appliquée par le navigateur. Souvent, les champs de recherche sont affichés avec des coins arrondis et ils contiennent parfois une icône "Ⓧ" qui permet de réinitialiser la valeur saisie lorsqu'on clique dessus. De plus, pour les appareils avec des claviers logiciels, la touche Entrée pourra avoir un libellé adapté comme "**rechercher**", ou afficher une icône en forme de loupe.
+La différence principale entre un champ `text` et un champ `search` porte notamment sur la mise en forme appliquée par le navigateur. Souvent, les champs de recherche sont affichés avec des coins arrondis et ils contiennent parfois une icône «&nbsp;Ⓧ&nbsp;» qui permet de réinitialiser la valeur saisie lorsqu'on clique dessus. De plus, pour les appareils avec des claviers logiciels, la touche Entrée pourra avoir un libellé adapté comme «&nbsp;**rechercher**&nbsp;», ou afficher une icône en forme de loupe.
 
 Les captures d'écran qui suivent montrent l'aspect d'un champ de recherche non vide pour Firefox 71, Safari 13, et Chrome 79 sur macOS, et pour Edge 18 et Chrome 79 sur Windows 10. On notera que l'icône de réinitialisation apparaît uniquement lorsque l'une valeur est présente dans le champ et qu'à l'exception de Safari, elle s'affiche uniquement lorsque le champ a le focus.
 
@@ -183,7 +183,7 @@ Ici, on a deux variables qui référencent le contrôle `range` et l'élément `
 
 ## Sélecteurs de date et d'heure
 
-La récupération de valeurs temporelles a longtemps été un cauchemar de développement web. Pour de telles valeurs, il est important de fournir une interface utilisateur qui permette de sélectionner des dates sans que la personne ait à ouvrir une autre application de calendrier et sans imposer un format de saisie qui soit délicat à expliquer et à analyser (par exemple, devrait-on écrire 1999/12/31, 23:59 ou 12/31/99T11:59PM&nbsp;?).
+La récupération de valeurs temporelles a longtemps été un cauchemar de développement web. Pour de telles valeurs, il est important de fournir une interface utilisateur qui permette de sélectionner des dates sans que la personne ait à ouvrir une autre application de calendrier et sans imposer un format de saisie qui soit délicat à expliquer et à analyser (par exemple, devrait-on écrire `1999/12/31, 23:59` ou `12/31/99T11:59PM`&nbsp;?).
 
 Les contrôles de date HTML permettent de gérer ce type de données en fournissant des interfaces graphiques adaptées et en utilisant un format de données normalisé.
 
@@ -195,7 +195,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 
 ### `datetime-local`
 
-[`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/Input/datetime-local) crée un contrôle permettant d'afficher et de sélectionner une date avec une heure sans information sur le fuseau horaire.
+[`<input type="datetime-local">`](/fr/docs/Web/HTML/Element/input/datetime-local) crée un contrôle permettant d'afficher et de sélectionner une date avec une heure sans information sur le fuseau horaire.
 
 ```html
 <input type="datetime-local" name="datetime" id="datetime">
@@ -203,7 +203,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 
 ### `month`
 
-[`<input type="month">`](/fr/docs/Web/HTML/Element/Input/month) crée un contrôle permettant d'afficher et de sélectionner un mois d'une année.
+[`<input type="month">`](/fr/docs/Web/HTML/Element/input/month) crée un contrôle permettant d'afficher et de sélectionner un mois d'une année.
 
 ```html
 <input type="month" name="month" id="month">
@@ -211,7 +211,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 
 ### `time`
 
-[`<input type="time">`](/fr/docs/Web/HTML/Element/Input/time) crée un contrôle permettant d'afficher et de sélectionner une heure (avec des minutes). Bien que la valeur puisse être _affichée_ au format sur 12 heures, la _valeur sous-jacente_ est représentée dans un format sur 24 heures.
+[`<input type="time">`](/fr/docs/Web/HTML/Element/input/time) crée un contrôle permettant d'afficher et de sélectionner une heure (avec des minutes). Bien que la valeur puisse être _affichée_ au format sur 12 heures, la _valeur sous-jacente_ est représentée dans un format sur 24 heures.
 
 ```html
 <input type="time" name="time" id="time">
@@ -219,7 +219,7 @@ Voyons rapidement les différents types disponibles. On notera que l'utilisation
 
 ### `week`
 
-[`<input type="week">`](/fr/docs/Web/HTML/Element/Input/week) crée un contrôle permettant d'afficher et de sélectionner une semaine dans une année.
+[`<input type="week">`](/fr/docs/Web/HTML/Element/input/week) crée un contrôle permettant d'afficher et de sélectionner une semaine dans une année.
 
 Les semaines commencent le lundi et vont jusqu'au dimanche. De plus, la première semaine de chaque année contient le premier jeudi de cette année (la première semaine peut donc ne pas inclure le premier jour de l'année ou inclure les derniers jours de l'année précédente).
 
@@ -258,11 +258,11 @@ La valeur renvoyée par ce contrôle est toujours exprimée au format hexadécim
 
 ## Testez vos compétences&nbsp;!
 
-Vous avez atteint la fin de cet article. Mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin. [Testez vos compétences&nbsp;: contrôles HTML5](/fr/docs/Learn/Forms/Test_your_skills:_HTML5_controls).
+Vous avez atteint la fin de cet article, mais avez-vous retenu les informations les plus importantes&nbsp;? Vous pouvez vous évaluer et vérifier que vous avez mémorisé ces informations avant d'aller plus loin — voir l'évaluation [Testez vos compétences&nbsp;: contrôles HTML5](/fr/docs/Learn/Forms/Test_your_skills:_HTML5_controls).
 
 ## Résumé
 
-That brings us to the end of our tour of the HTML5 form input types. There are a few other control types that cannot be easily grouped together due to their very specific behaviors, but which are still essential to know about. We cover those in the next article.
+Cela marque la fin de notre tour des types de champs de formulaire HTML5. Il existe certains types de contrôle qui sont difficilement utilisables en combinaison en raison de leur comportement très spécifique, mais que vous devriez connaître — nous les détaillerons dans l'article suivant.
 
 {{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
@@ -271,7 +271,7 @@ That brings us to the end of our tour of the HTML5 form input types. There are a
 - [Votre premier formulaire](/fr/docs/Learn/Forms/Your_first_form)
 - [Comment structurer un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
 - [Les contrôles de formulaire natifs de base](/fr/docs/Learn/Forms/Basic_native_form_controls)
-- Les types de champ de formulaire HTML5
+- **Les types de champs de formulaire HTML5**
 - [Les autres contrôles de formulaire](/fr/docs/Learn/Forms/Other_form_controls)
 - [Mettre en forme les formulaires web](/fr/docs/Learn/Forms/Styling_web_forms)
 - [Mise en forme avancée des formulaires](/fr/docs/Learn/Forms/Advanced_form_styling)

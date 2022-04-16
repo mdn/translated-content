@@ -73,7 +73,7 @@ La capacité à redimensionner un élément `<textarea>` se contrôle grâce à 
 
 - `both`
   - : C'est la valeur par défaut. Le contrôle peut être redimensionné sur l'axe horizontal et l'axe vertical.
-- `horizontal`:
+- `horizontal`
   - : Le redimensionnement est uniquement possible sur l'axe horizontal.
 - `vertical`
   - : Le redimensionnement est uniquement possible sur l'axe vertical.
@@ -88,7 +88,7 @@ Vous pouvez manipuler l'exemple interactif situé en haut de la page de référe
 
 Les contrôles de listes déroulantes sont un outil pratique pour permettre de sélectionner une valeur parmi différentes options, sans occuper trop d'espace sur l'interface utilisateur. HTML dispose de deux formes de listes déroulantes&nbsp;: **la boîte de sélection avec `<select>`**, et **la boîte d'autocomplétion avec `<datalist>`**. Dans les deux cas, l'interaction est la même, une fois que le contrôle est activé, le navigateur affiche une liste de valeurs parmi lesquelles la personne peut choisir.
 
-> **Note :** Vous pouvez trouver des exemples des différents types de contrôles correspondants sur GitHub sur [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([voir le résultat de la démonstration](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
+> **Note :** Vous pouvez trouver des exemples des différents types de contrôles correspondants sur GitHub sur [`drop-down-content.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([voir le résultat de la démonstration](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
 
 ### Boîte de sélection
 
@@ -238,7 +238,7 @@ Si vous utilisez cette méthode alternative, il faudra vous assurer que les donn
 
 Selon [la spécification HTML](https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) et l'élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) peuvent être utilisés pour n'importe quel type de contrôle nécessitant une saisie de l'utilisatrice ou de l'utilisateur. Cela amène à certains cas d'usage qui peuvent sembler moins évidents au premier regard.
 
-Ainsi, pour les navigateurs qui prennent en charge [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) pour les champs de type `range`, une graduation sera affichée au-dessus de l'intervalle pour chaque option (fournie par [`<option>`](/fr/docs/Web/HTML/Element/Option)) de la liste de données. Vous pouvez en voir une implémentation [sur l'exemple de la page de référence pour `<input type="range">`](/fr/docs/Web/HTML/Element/Input/range#un_contrôle_avec_des_marques).
+Ainsi, pour les navigateurs qui prennent en charge [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) pour les champs de type `range`, une graduation sera affichée au-dessus de l'intervalle pour chaque option (fournie par [`<option>`](/fr/docs/Web/HTML/Element/Option)) de la liste de données. Vous pouvez en voir une implémentation [sur l'exemple de la page de référence pour `<input type="range">`](/fr/docs/Web/HTML/Element/input/range#un_contrôle_avec_des_marques).
 
 Pour les navigateurs qui prennent en charge [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) et [`<input type="color">`](/fr/docs/Web/HTML/Element/Input/color), ils devraient afficher une palette de couleurs personnalisée par défaut, tout en gardant la palette complète disponible.
 
@@ -248,7 +248,7 @@ Pour ces cas, les différents navigateurs se comportent de façon hétérogène 
 
 Il existe d'autres fonctionnalités relatives aux formulaires qui ne sont pas aussi évidentes que celles déjà abordées, mais qui s'avèrent utiles dans certaines situations. Voyons donc ces fonctionnalités rapidement.
 
-> **Note :** Les exemples de cette section [peuvent être retrouvés sur GitHub avec le fichier other-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
+> **Note :** Les exemples de cette section [peuvent être retrouvés sur GitHub avec le fichier `other-examples.html`](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([voir le résultat correspondant](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
 
 ### Jauges et barres de progression
 
@@ -256,7 +256,7 @@ Les jauges et les barres de progression sont des représentations visuelles de v
 
 #### Barres de progression
 
-Une barre de progression représente une valeur qui change au cours du temps jusqu'à atteindre une valeur maximale (indiquée  par l'attribut [`max`](/fr/docs/Web/HTML/Element/Progress#attr-max)). Pour créer une telle barre, on utilisera l'élément [`<progress>`](/fr/docs/Web/HTML/Element/Progress).
+Une barre de progression représente une valeur qui change au cours du temps jusqu'à atteindre une valeur maximale (indiquée par l'attribut [`max`](/fr/docs/Web/HTML/Element/Progress#attr-max)). Pour créer une telle barre, on utilisera l'élément [`<progress>`](/fr/docs/Web/HTML/Element/Progress).
 
 ```html
 <progress max="100" value="75">75/100</progress>
@@ -320,7 +320,7 @@ Maintenant que vous en savez un peu plus sur le HTML derrière les différents c
 - [Comment structurer un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
 - [Les contrôles de formulaire natifs de base](/fr/docs/Learn/Forms/Basic_native_form_controls)
 - [Les types de champ de formulaire HTML5](/fr/docs/Learn/Forms/HTML5_input_types)
-- Les autres contrôles de formulaire
+- **Les autres contrôles de formulaire**
 - [Mettre en forme les formulaires web](/fr/docs/Learn/Forms/Styling_web_forms)
 - [Mise en forme avancée des formulaires](/fr/docs/Learn/Forms/Advanced_form_styling)
 - [Pseudo-classes CSS liées à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
