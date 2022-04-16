@@ -2,47 +2,51 @@
 title: CharacterData.remove()
 slug: Web/API/CharacterData/remove
 tags:
-  - API
-  - CharacterData
-  - DOM
   - メソッド
+  - リファレンス
 browser-compat: api.CharacterData.remove
 translation_of: Web/API/CharacterData/remove
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>CharacterData.remove()</strong></code> メソッドは、テキストを削除します。</p>
+**`remove()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、このノードに含まれるテキストを削除します。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="brush: js">remove()</pre>
+```js
+remove();
+```
 
-<h2 id="Example">例</h2>
+### 引数
 
-<h3 id="Using_remove"><code>remove()</code> の使用</h3>
+なし。
 
-<pre class="brush: html">
-&lt;p id="myText"&gt;Some text&lt;/p&gt;
-</pre>
+## 例
 
-<pre class="brush: js">let text = document.getElementById('myText').firstChild;
-text.remove(); // テキストを削除
-</pre>
+### `remove()` の使用
 
-<pre class="brush: html">
-&lt;p id="myText"&gt;&lt;/p&gt;
-</pre>
+```html
+<span>Result: </span>A long string.
+```
 
-<h2 id="Specifications">仕様書</h2>
+```js
+let span = document.getElementsByTagName("span")[0];
+let textnode = span.nextSibling;
+
+textnode.remove(); // Removes the text
+```
+
+{{EmbedLiveSample("Example", "100%", 50)}}
+
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("Element.remove()")}}</li>
-</ul>
+- {{domxref("Element.remove()")}}
+- {{domxref("CharacterData.deleteData()")}}
