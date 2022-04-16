@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 <table class="properties">
   <tbody>
     <tr>
-      <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
+      <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
       <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#Flow_content">フローコンテンツ</a>, 見出しコンテンツ, 知覚可能コンテンツ</td>
     </tr>
     <tr>
