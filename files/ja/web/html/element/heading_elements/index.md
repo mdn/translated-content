@@ -124,7 +124,7 @@ HTML の仕様には、`<section>` 要素で形成されるアウトラインと
 
 #### 悪い例
 
-```html
+```html example-bad
 <h1>Heading level 1</h1>
 <h3>Heading level 3</h3>
 <h4>Heading level 4</h4>
@@ -132,7 +132,7 @@ HTML の仕様には、`<section>` 要素で形成されるアウトラインと
 
 #### 良い例
 
-```html
+```html example-good
 <h1>Heading level 1</h1>
 <h2>Heading level 2</h2>
 <h3>Heading level 3</h3>
