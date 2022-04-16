@@ -7,6 +7,7 @@ tags:
   - HTML sections
   - Reference
   - Web
+browser-compat: html.elements.h1
 translation_of: Web/HTML/Element/Heading_Elements
 ---
 
@@ -207,7 +208,7 @@ HTML の仕様には、`<section>` 要素で形成されるアウトラインと
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.h1")}}
+{{Compat}}
 
 ## 関連情報
 
