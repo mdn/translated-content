@@ -131,8 +131,98 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 </dl>
 
 <h3 id="实例方法">实例方法</h3>
-
-<p>{{ page("/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}</p>
+- {{jsxref("Date.prototype.getDate()")}}
+  - : 根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象为一个月中的哪一日（`1`-`31`）。
+- {{jsxref("Date.prototype.getDay()")}}
+  - : 根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象是在一周中的第几天（`0`-`6`），0 表示星期天。
+- {{jsxref("Date.prototype.getFullYear()")}}
+  - : 根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的完整年份（四位数年份）。
+- {{jsxref("Date.prototype.getHours()")}}
+  - : 根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的小时（`0`–`23`）。
+- {{jsxref("Date.prototype.getMilliseconds()")}}
+  - : 根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的毫秒数（`0`–`999`）。
+- {{jsxref("Date.prototype.getMinutes()")}}
+  - : 根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的分钟数（`0`–`59`）。
+- {{jsxref("Date.prototype.getMonth()")}}
+  - : 根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的月份（`0`–`11`），0 表示一年中的第一月。
+- {{jsxref("Date.prototype.getSeconds()")}}
+  - : 根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的秒数（`0`–`59`）。
+- {{jsxref("Date.prototype.getTime()")}}
+  - : 返回一个数值，表示从 1970 年 1 月 1 日 0 时 0 分 0 秒（UTC，即协调世界时）距离该 {{jsxref("Date")}} 对象所代表时间的毫秒数。（更早的时间会用负数表示）
+- {{jsxref("Date.prototype.getTimezoneOffset()")}}
+  - : 返回协调世界时（UTC）相对于当前时区的时间差值，单位为分钟。
+- {{jsxref("Date.prototype.getUTCDate()")}}
+  - : 以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象为一个月中的哪一日（`1`-`31`）。
+- {{jsxref("Date.prototype.getUTCDay()")}}
+  - : 以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象是在一周中的第几天（`0`-`6`），0 表示星期天。
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+  - : 以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的完整年份（四位数年份）。
+- {{jsxref("Date.prototype.getUTCHours()")}}
+  - : 以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的小时（`0`–`23`）。
+- {{jsxref("Date.prototype.getUTCMilliseconds()")}}
+  - : 以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的毫秒数（`0`–`999`）。
+- {{jsxref("Date.prototype.getUTCMinutes()")}}
+  - : 以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的分钟数（`0`–`59`）。
+- {{jsxref("Date.prototype.getUTCMonth()")}}
+  - : 以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的月份（`0`–`11`），0 表示一年中的第一月。
+- {{jsxref("Date.prototype.getUTCSeconds()")}}
+  - : 以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的秒数（`0`–`59`）。
+- {{jsxref("Date.prototype.getYear()")}}
+  - : 根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的相对年份（相对1900年，通常是 2 到 3 位数字）。请改用 {{jsxref("Date.getFullYear", "getFullYear")}} 。
+- {{jsxref("Date.prototype.setDate()")}}
+  - : 根据本地时间，设置一个 {{jsxref("Date")}} 对象在所属月份中的天数。
+- {{jsxref("Date.prototype.setFullYear()")}}
+  - : 根据本地时间，设置一个 {{jsxref("Date")}} 对象的完整年份（四位数年份）。
+- {{jsxref("Date.prototype.setHours()")}}
+  - : 根据本地时间，设置一个 {{jsxref("Date")}} 对象的小时数。
+- {{jsxref("Date.prototype.setMilliseconds()")}}
+  - : 根据本地时间，设置一个 {{jsxref("Date")}} 对象的豪秒数。
+- {{jsxref("Date.prototype.setMinutes()")}}
+  - : 根据本地时间，设置一个 {{jsxref("Date")}} 对象的分钟数。
+- {{jsxref("Date.prototype.setMonth()")}}
+  - : 根据本地时间，设置一个 {{jsxref("Date")}} 对象的月份。
+- {{jsxref("Date.prototype.setSeconds()")}}
+  - : 根据本地时间，设置一个 {{jsxref("Date")}} 对象的秒数。
+- {{jsxref("Date.prototype.setTime()")}}
+  - : 用一个从1970-1-1 00:00:00 UTC计时的毫秒数来为一个 {{jsxref("Date")}} 对象设置时间。用负数来设置更早的时间。
+- {{jsxref("Date.prototype.setUTCDate()")}}
+  - : 以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象在所属月份中的天数。
+- {{jsxref("Date.prototype.setUTCFullYear()")}}
+  - : 以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的完整年份（四位数年份）。
+- {{jsxref("Date.prototype.setUTCHours()")}}
+  - : 以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的小时数。
+- {{jsxref("Date.prototype.setUTCMilliseconds()")}}
+  - : 以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的豪秒数。
+- {{jsxref("Date.prototype.setUTCMinutes()")}}
+  - : 以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的分钟数。
+- {{jsxref("Date.prototype.setUTCMonth()")}}
+  - : 以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的月份。
+- {{jsxref("Date.prototype.setUTCSeconds()")}}
+  - : 以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的秒数。
+- {{jsxref("Date.prototype.setYear()")}}
+  - : 根据本地时间，设置一个 {{jsxref("Date")}} 对象的相对年份（相对1900年，通常是 2 到 3 位数字）。请改用 {{jsxref("Date.setFullYear", "setFullYear")}} 。
+- {{jsxref("Date.prototype.toDateString()")}}
+  - : 以美式英语和人类易读的表述形式返回一个 {{jsxref("Date")}} 对象日期部分的字符串。
+- {{jsxref("Date.prototype.toISOString()")}}
+  - : 将指定 {{jsxref("Date")}} 对象转换成 ISO 格式表述的字符串并返回。
+- {{jsxref("Date.prototype.toJSON()")}}
+  - : 返回指定 {{jsxref("Date")}} 对象调用 {{jsxref("Date.prototype.toISOString()", "toISOString()")}} 方法的返回值。在 {{jsxref("JSON.stringify()")}} 中使用。
+- {{jsxref("Date.prototype.toGMTString()")}}
+  - : 基于 GMT (UTC) 时区来返回一个表述指定 {{jsxref("Date")}} 对象的字符串形式。请改用 {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}。
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+  - : 返回一个表述指定 {{jsxref("Date")}} 对象的日期部分字符串。该字符串格式因不同语言而不同。
+- {{jsxref("Date.prototype.toLocaleString()")}}
+  - : 返回一个表述指定 {{jsxref("Date")}} 对象的字符串。该字符串格式因不同语言而不同。
+- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+  - : 返回一个表述指定 {{jsxref("Date")}} 对象时间部分的的字符串。该字符串格式因不同语言而不同。
+- {{jsxref("Date.prototype.toString()")}}
+  - : 返回一个字符串，表示该 {{jsxref("Date")}} 对象。覆盖了 {{jsxref("Object.prototype.toString()")}} 方法。
+- {{jsxref("Date.prototype.toTimeString()")}}
+  - : 以人类易读形式返回一个 {{jsxref("Date")}} 对象时间部分的字符串，该字符串以美式英语格式化。
+- {{jsxref("Date.prototype.toUTCString()")}}
+  - : 使用UTC时区，把一个 {{jsxref("Date")}} 对象转换为一个字符串。
+- {{jsxref("Date.prototype.valueOf()")}}
+  - : 返回一个 {{jsxref("Date")}} 对象的原始值。覆盖了 {{jsxref("Object.prototype.valueOf()")}} 方法。
 
 <h2 id="例子">例子</h2>
 
