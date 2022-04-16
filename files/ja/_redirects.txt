@@ -2832,7 +2832,7 @@
 /ja/docs/SVG/Element-redirect-1	/ja/docs/Web/SVG/Element
 /ja/docs/SVG/Element/a	/ja/docs/Web/SVG/Element/a
 /ja/docs/SVG/Element/animate	/ja/docs/Web/SVG/Element/animate
-/ja/docs/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animateColor
+/ja/docs/SVG/Element/animateColor	/ja/docs/conflicting/Web/SVG/Element/animate
 /ja/docs/SVG/Element/animateMotion	/ja/docs/Web/SVG/Element/animateMotion
 /ja/docs/SVG/Element/animateTransform	/ja/docs/Web/SVG/Element/animateTransform
 /ja/docs/SVG/Element/circle	/ja/docs/Web/SVG/Element/circle
@@ -4510,6 +4510,7 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
+/ja/docs/Web/SVG/Element/animateColor	/ja/docs/conflicting/Web/SVG/Element/animate
 /ja/docs/Web/SVG/Index	/ja/docs/conflicting/Web/SVG
 /ja/docs/Web/Security/CSP	/ja/docs/Web/HTTP/CSP
 /ja/docs/Web/Security/CSP/CSP_policy_directives	/ja/docs/Web/HTTP/Headers/Content-Security-Policy

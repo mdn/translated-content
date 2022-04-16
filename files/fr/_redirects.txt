@@ -5553,6 +5553,7 @@
 /fr/docs/Web/Reference	/fr/docs/orphaned/Web/Reference
 /fr/docs/Web/Reference/API	/fr/docs/orphaned/Web/Reference/API
 /fr/docs/Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML	/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
+/fr/docs/Web/SVG/Element/animateColor	/fr/docs/conflicting/Web/SVG/Element/animate
 /fr/docs/Web/SVG/Element/cercle	/fr/docs/Web/SVG/Element/circle
 /fr/docs/Web/SVG/Index	/fr/docs/conflicting/Web/SVG
 /fr/docs/Web/SVG/SVG_en_tant_qu_image	/fr/docs/Web/SVG/SVG_as_an_Image

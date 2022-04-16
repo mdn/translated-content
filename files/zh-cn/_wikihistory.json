@@ -45029,14 +45029,6 @@
       "lunix01"
     ]
   },
-  "Web/SVG/Element/animateColor": {
-    "modified": "2019-03-23T22:46:35.027Z",
-    "contributors": [
-      "xgqfrms-GitHub",
-      "Sebastianz",
-      "fanxiaojie"
-    ]
-  },
   "Web/SVG/Element/animateMotion": {
     "modified": "2020-10-15T21:39:29.124Z",
     "contributors": [
@@ -48002,6 +47994,14 @@
     "contributors": [
       "chrisdavidmills",
       "liminjun"
+    ]
+  },
+  "conflicting/Web/SVG/Element/animate": {
+    "modified": "2019-03-23T22:46:35.027Z",
+    "contributors": [
+      "xgqfrms-GitHub",
+      "Sebastianz",
+      "fanxiaojie"
     ]
   },
   "conflicting/Web/Web_Components": {

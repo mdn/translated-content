@@ -40472,15 +40472,6 @@
       "Barbrousse"
     ]
   },
-  "Web/SVG/Element/animateColor": {
-    "modified": "2020-10-15T21:31:44.928Z",
-    "contributors": [
-      "a-mt",
-      "Sebastianz",
-      "SphinxKnight",
-      "Barbrousse"
-    ]
-  },
   "Web/SVG/Element/animateMotion": {
     "modified": "2020-10-15T21:31:47.363Z",
     "contributors": [
@@ -43921,6 +43912,15 @@
     "modified": "2019-01-16T21:57:35.980Z",
     "contributors": [
       "xdelatour"
+    ]
+  },
+  "conflicting/Web/SVG/Element/animate": {
+    "modified": "2020-10-15T21:31:44.928Z",
+    "contributors": [
+      "a-mt",
+      "Sebastianz",
+      "SphinxKnight",
+      "Barbrousse"
     ]
   },
   "conflicting/Web/Web_Components": {

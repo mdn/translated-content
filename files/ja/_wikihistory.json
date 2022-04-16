@@ -46376,16 +46376,6 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/animateColor": {
-    "modified": "2020-10-15T21:27:02.463Z",
-    "contributors": [
-      "takenspc",
-      "wbamberg",
-      "Sebastianz",
-      "teoli",
-      "manzyun"
-    ]
-  },
   "Web/SVG/Element/animateMotion": {
     "modified": "2020-11-12T07:13:36.041Z",
     "contributors": [
@@ -48538,6 +48528,16 @@
     "modified": "2019-01-16T21:55:52.943Z",
     "contributors": [
       "Marsf"
+    ]
+  },
+  "conflicting/Web/SVG/Element/animate": {
+    "modified": "2020-10-15T21:27:02.463Z",
+    "contributors": [
+      "takenspc",
+      "wbamberg",
+      "Sebastianz",
+      "teoli",
+      "manzyun"
     ]
   },
   "conflicting/Web/Web_Components": {
