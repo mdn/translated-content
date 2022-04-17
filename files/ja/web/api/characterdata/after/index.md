@@ -2,44 +2,42 @@
 title: CharacterData.after()
 slug: Web/API/CharacterData/after
 tags:
-  - API
-  - DOM
   - メソッド
-  - Node
   - リファレンス
 browser-compat: api.CharacterData.after
 translation_of: Web/API/CharacterData/after
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p><code><strong>CharacterData.after()</strong></code> は、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトをこの <code>CharacterData</code> の親ノードの子リストの、この <code>CharacterData</code> の直後に挿入します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。</p>
+**`after()`** は {{domxref("CharacterData")}} インターフェイスのメソッドで、一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `CharacterData` の親ノードの子リストの、この `CharacterData` の直後に挿入します。
 
-<h2 id="Syntax">構文</h2>
+文字列は {{domxref("Text")}} ノードとして挿入されます。文字列は {{domxref("Text/Text", "Text()")}} コンストラクターの引数として挿入されます。
 
-<pre class="brush: js">
+## 構文
+
+```js
 after(... nodes)
-</pre>
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<dl>
-  <dt><code>nodes</code></dt>
-  <dd>挿入する一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトです。</dd>
-</dl>
+- `nodes`
+  - : 挿入する一連の {{domxref("Node")}} または文字列です。
 
-<h3 id="Exceptions">例外</h3>
+### 例外
 
-<ul>
- <li>{{domxref("HierarchyRequestError")}}: ノードを階層内の指定の位置に挿入できません。</li>
-</ul>
+- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+  - : 階層内の指定された位置に新しいノードを挿入できない場合，つまり以下の条件のいずれかに該当する場合に発生します。
+    - 追加されたノードの 1 つを挿入すると循環参照なる場合、つまり、そのノードの 1 つがこの {{domxref("CharacterData")}} ノードの祖先である場合です。
+    - 追加されたノードのいずれかが {{domxref("DocumentFragment")}}, {{domxref("DocumentType")}}, {{domxref("Element")}}, {{domxref("CharacterData")}} のいずれでもない場合。
+    - この {{domxref("CharacterData")}} ノードが実際には {{domxref("Text")}} ノードであり、その親が {{domxref("Document")}} である場合。
+    - この {{domxref("CharacterData")}} ノードの親が {{domxref("Document")}} で、挿入するノードの一つが {{domxref("DocumentFragment")}} であり、その中に 1 つ以上の {{domxref("Element")}} がある場合、または {{domxref("Text")}} 子を持つ場合。
 
-<h2 id="Examples">例</h2>
+## 例
 
-<h3>新しいノードでテキストを挿入</h3>
+`after()` メソッドを使うと、新しいノードをこの `CharacterData` ノードの後に挿入することができます。
 
-<p><code>after()</code> メソッドで、 <code>CharacterData</code> ノードの後に新しいノードを挿入することができます。</p>
-
-<pre class="brush: js">
+```js
 const h1TextNode = document.getElementsByTagName('h1')[0].firstChild;
 h1TextNode.after(" #h1");
 
@@ -48,38 +46,22 @@ h1TextNode.parentElement.childNodes
 
 h1TextNode.data;
 // "CharacterData.after()"
-</pre>
+```
 
-<h3>現在のノードにテキストを追加</h3>
+> **Note:** 現在のノードにテキストを追加したい場合は、 [`appendData()`](/ja/docs/Web/API/CharacterData/appendData) メソッドを使用すると現在のノードにデータを追加することができます。
 
-<p>現在のノードにテキストを追加したいのであれば、 <a href="/ja/docs/Web/API/CharacterData/appendData"><code>appendData()</code></a> メソッドで現在のノードのデータに追加することができます。</p>
-
-<pre class="brush: js">
-const h1TextNode = document.getElementsByTagName('h1')[0].firstChild;
-h1TextNode.appendData(" #h1");
-
-h1TextNode.parentElement.childNodes;
-// NodeList [#text "CharacterData.after() #h1"]
-
-h1TextNode.data;
-// "CharacterData.after() #h1"
-</pre>
-
-<h2 id="Specification">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li>{{domxref("CharacterData.appendData()")}}</li>
-  <li>{{domxref("CharacterData.before()")}}</li>
-  <li>{{domxref("Element.append()")}}</li>
-  <li>{{domxref("Node.appendChild()")}}</li>
-  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
-  <li>{{domxref("NodeList")}}</li>
- </ul>
+- {{domxref("CharacterData.appendData()")}}
+- {{domxref("CharacterData.before()")}}
+- {{domxref("Element.append()")}}
+- {{domxref("Node.appendChild()")}}
+- {{domxref("Element.insertAdjacentElement()")}}
