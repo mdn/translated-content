@@ -4,74 +4,54 @@ slug: Web/API/WebSocket/error_event
 tags:
   - API
   - Error
-  - Event
-  - Reference
-  - Web
-  - WebSocket
   - イベント
+  - リファレンス
+  - ウェブ
+  - WebSocket
+browser-compat: api.WebSocket.error_event
 translation_of: Web/API/WebSocket/error_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>error</code> イベントは、 <code>WebSocket</code> のコネクションがエラーによって閉じられた (例えば一部のデータを送信できなかった) ときに発生します。</p>
+`error` イベントは、 `WebSocket` の接続がエラーによって閉じられた（例えば一部のデータを送信できなかった）ときに発生します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{ domxref("WebSocket.onerror","onerror")}}</td>
-  </tr>
- </tbody>
-</table>
+## 構文
 
-<h2 id="Examples" name="Examples">例</h2>
+イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<pre class="brush: js notranslate">// Create WebSocket connection
+```js
+addEventListener('error', event => { })
+
+onerror = event => { }
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
+
+## 例
+
+```js
+// WebSocket の接続を生成
 const socket = new WebSocket('ws://localhost:8080');
 
-// Listen for possible errors
+// 発生しうるエラーを待ち受けする
 socket.addEventListener('error', function (event) {
   console.log('WebSocket error: ', event);
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "web-sockets.html#event-open", "WebSocket open")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.WebSocket.error_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebSocket/close_event">WebSocket: close イベント</a></li>
- <li><a href="/ja/docs/Web/API/WebSocket/message_event">WebSocket: message イベント</a></li>
- <li><a href="/ja/docs/Web/API/WebSocket/open_event">WebSocket: open イベント</a></li>
- <li><a href="/ja/docs/WebSockets/Writing_WebSocket_client_applications">WebSocket クライアントアプリケーションを書く</a></li>
-</ul>
+- [WebSocket: close イベント](/ja/docs/Web/API/WebSocket/close_event)
+- [WebSocket: message イベント](/ja/docs/Web/API/WebSocket/message_event)
+- [WebSocket: open イベント](/ja/docs/Web/API/WebSocket/open_event)
+- [WebSocket クライアントアプリケーションを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
