@@ -1,56 +1,53 @@
 ---
 title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
+tags:
+  - API
+  - コンストラクター
+  - リファレンス
+  - Web API
+  - WebSocket
+browser-compat: api.WebSocket.WebSocket
 translation_of: Web/API/WebSocket/WebSocket
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p><code><strong>WebSocket()</strong></code><strong> </strong>コンストラクタは新しい{{domxref("WebSocket")}} オブジェクトを返します。</p>
+**`WebSocket()`** コンストラクターは、新しい {{domxref("WebSocket")}} オブジェクトを返します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="notranslate">var <em>aWebSocket</em> = new WebSocket(<em>url</em> [, protocols]);</pre>
+```js
+new WebSocket(url)
+new WebSocket(url, protocols)
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>url</code></dt>
- <dd>接続先のURL。WebSocketサーバが応答するURLでなければならない。</dd>
- <dt><code>protocols</code> {{optional_inline}}</dt>
- <dd>プロトコル文字列ひとつもしくはその配列。サーバは複数のWebSocketサブプロトコルを実装することもでき、その文字列はサブプロトコルを指定するために使われる（例えば、一つのサーバが指定された<code>protocol</code>に応じて異なるタイプのやりとりを扱うようにしたい場合）。プロトコル文字列を指定しない場合は空文字列と見なされる。</dd>
-</dl>
+- `url`
+  - : 接続先の URL です。この URL は WebSocket サーバーが応答するものでなければなりません。
+- `protocols` {{optional_inline}}
 
-<h3 id="投げられる例外">投げられる例外</h3>
+  - : 単一のプロトコル文字列、またはプロトコル文字列の配列のいずれか。これらの文字列はサブプロトコルを示すために使用され、単一のサーバーで複数の WebSocket サブプロトコルを実装することもできます（たとえば、単一のサーバーで指定した `protocol` に応じて異なる種類のやりとりを処理できるようにしたい場合があります）。
 
-<dl>
- <dt><code>SECURITY_ERR</code></dt>
- <dd>接続が試みられているポートがブロックされている場合</dd>
-</dl>
+    省略された場合は、空配列、すなわち `[]` が既定で使用されます。
 
-<dl>
- <dt><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></dt>
- <dd>URLが無効だった場合</dd>
-</dl>
+### 例外
 
-<h2 id="仕様書">仕様書</h2>
+- [`SyntaxError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+  - : 次のような場合に発生します。
+    - [`url`](#url) の解釈に失敗した場合
+    - [`url`](#url) のスキームが `ws` または `wss` 以外であった場合
+    - [`url`](#url) に[フラグメント](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#fragment)があった場合
+    - [`protocols`](#protocols) の何れかの値が複数回現れている、または WebSocket プロトコル仕様で定義された [`Sec-WebSocket-Protocol`](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism#sec-websocket-protocol) フィールドの値を構成する要素の要件に一致しない場合。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状況</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-websocket', 'the WebSocket constructor')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+{{Specifications}}
 
+## ブラウザーの互換性
 
+{{Compat}}
 
-<p>{{Compat("api.WebSocket.WebSocket")}}</p>
+## 関連情報
+
+- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) （WebSocket プロトコル仕様書）
