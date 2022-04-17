@@ -1,71 +1,50 @@
 ---
 title: WebSocket.send()
 slug: Web/API/WebSocket/send
+tags:
+  - API
+  - メソッド
+  - リファレンス
+  - Web API
+  - WebSocket
+browser-compat: api.WebSocket.send
 translation_of: Web/API/WebSocket/send
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p><strong><code>WebSocket.send()</code></strong> は WebSocket 接続を介してサーバーに送るために指定されたデータを、格納するために必要なバイト数だけ <code>bufferedAmount</code> の値を増加させながら、キューに入れるメソッドです。もしデータが送信できなかった場合（例えば、バッファリングが必要ですが、バッファが一杯であるなどの理由で）、ソケットは自動的に閉じられます。</p>
+**`WebSocket.send()`** メソッドは、 WebSocket 接続を介してサーバーに送るために指定されたデータを、格納するために必要なバイト数だけ `bufferedAmount` の値を増加させながらキューに入れます。もしデータが送信できなかった場合（例えば、バッファリングが必要だが、バッファが一杯であるなどの理由で）、ソケットは自動的に閉じられます。
+接続が `CONNECTING` 状態のときに `send()` を呼び出すと、ブラウザーは例外を発生させます。接続が `CLOSING` または `CLOSED` の状態のときに `send()` を呼び出すと、ブラウザーはデータを暗黙に破棄します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">WebSocket.send("Hello server!");</pre>
+```js
+WebSocket.send("Hello server!");
+```
 
-<h3 id="引数">引数</h3>
+### 引数
 
-<dl>
- <dt><code>data</code></dt>
- <dd>サーバーに送信するデータです。以下のいづれかのタイプのデータを指定します。</dd>
- <dd>
- <dl>
-  <dt>{{domxref("USVString")}}</dt>
-  <dd>テキスト文字列。文字列は、UTF-8 形式でバッファに追加され、<code>bufferedAmount</code> の値は UTF-8 の文字列を表すのに必要とされるバイト数だけ増えます。</dd>
-  <dt>{{domxref("ArrayBuffer")}}</dt>
-  <dd>型付きの配列オブジェクトで使用される基本的なバイナリデータを送信することができます。このバイナリデータのコンテンツは，必要なバイト数だけ <code>bufferedAmount</code> の値を増やして、バッファのキューに入れられます。</dd>
-  <dt>{{domxref("Blob")}}</dt>
-  <dd>Blob を指定すると、バイナリフレームで送信される blob の生データをキューに入れます。<code>bufferedAmount</code> の値は、その生データのバイトサイズだけ増えます。</dd>
-  <dt>{{domxref("ArrayBufferView")}}</dt>
-  <dd><a href="/ja/docs/Web/JavaScript/Typed_arrays">JavaScriptで型付けされた配列</a>オブジェクトをバイナリフレームとして送信することができます。このバイナリデータのコンテンツは，必要なバイト数だけ <code>bufferedAmount</code> の値を増やして、バッファのキューに入れられます。</dd>
- </dl>
- </dd>
-</dl>
+- `data`
 
-<h3 id="投げられる例外">投げられる例外</h3>
+  - : サーバーに送信するデータです。以下の何れかの型のデータを指定します。
 
-<dl>
- <dt><code>INVALID_STATE_ERR</code></dt>
- <dd>接続が <code>OPEN</code> になっていない場合</dd>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd>データが、ペアリングされていないサロゲートを持つ文字列の場合</dd>
-</dl>
+    - {{domxref("USVString")}}
+      - : テキスト文字列。文字列は UTF-8 形式でバッファーに追加され、 `bufferedAmount` の値は UTF-8 の文字列を表すのに必要とされるバイト数だけ増えます。
+    - {{jsxref("ArrayBuffer")}}
+      - : 型付きの配列オブジェクトで使用される基本的なバイナリーデータを送信することができます。このバイナリーデータのコンテンツは，必要なバイト数だけ `bufferedAmount` の値を増やして、バッファーのキューに入れられます。
+    - {{domxref("Blob")}}
+      - : `Blob` を指定すると、バイナリーフレームで送信される blob の生データをキューに入れます。`bufferedAmount` の値は、その生データのバイトサイズだけ増えます。
+    - {{domxref("ArrayBufferView")}}
+      - : [JavaScript の型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)オブジェクトをバイナリーフレームとして送信することができます。このバイナリーデータのコンテンツは，必要なバイト数だけ `bufferedAmount` の値を増やして、バッファのキューに入れられます。
 
-<div class="note">
-<p><strong>注意:</strong> Gecko の <code>send()</code> メソッドの実装は、{{Gecko("6.0")}} の仕様とは多少異なります。 Geckoは、接続がまだ開いているかどうか（さらに、extension によって、データが正常にキューに入れられたか、もしくは送信されたかどうか）を示す <code>boolean</code> を返します。これは {{Gecko("8.0")}} で修正されています。</p>
+### 例外
 
-<p>{{Gecko("11.0")}} では、{{jsxref("ArrayBuffer")}} のサポートは実装されていますが、{{domxref("Blob")}} データ型はサポートされていません。</p>
-</div>
+- `InvalidStateError`
+  - : {{domxref("WebSocket/readyState", "WebSocket.readyState")}} が `CONNECTING` である場合に発生します。
 
-<h2 id="仕様書">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-websocket-send', 'WebSocket: send')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.WebSocket.send")}}</p>
+{{Compat}}
