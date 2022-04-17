@@ -3,72 +3,70 @@ title: 'WebSocket: message イベント'
 slug: Web/API/WebSocket/message_event
 tags:
   - Event
-  - Reference
+  - リファレンス
   - WebSocket
   - message
+browser-compat: api.WebSocket.message_event
 translation_of: Web/API/WebSocket/message_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>message</code> ハンドラーは、 <code>WebSocket</code> を通してデータを受け取ったときに発生します。</p>
+`message` イベントは、 `WebSocket` を通してデータを受け取ったときに発生します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("MessageEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{ domxref("WebSocket.onmessage","onmessage")}}</td>
-  </tr>
- </tbody>
-</table>
+## 構文
 
-<h2 id="Examples" name="Examples">例</h2>
+イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<pre class="brush: js line-numbers language-js">// Create WebSocket connection.
+```js
+addEventListener('message', event => { })
+
+onmessage = event => { }
+```
+
+## イベント型
+
+{{domxref("MessageEvent")}} です。 {{domxref("Event")}} から継承しています。
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## イベントプロパティ
+
+_以下に示したプロパティに加え、親インターフェイスである {{domxref("Event")}} から継承したプロパティも利用できます。_
+
+- {{domxref("MessageEvent.data", "data")}} {{readonlyInline}}
+  - : メッセージ送信者から送信されたデータです。
+- {{domxref("MessageEvent.origin", "origin")}} {{readonlyInline}}
+  - : {{domxref("USVString")}} で、メッセージ送信者のオリジンを表します。
+- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{readonlyInline}}
+  - : {{domxref("DOMString")}} で、このイベントの固有の ID を表します。
+- {{domxref("MessageEvent.source", "source")}} {{readonlyInline}}
+  - : `MessageEventSource` （{{domxref("Window")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトが成ることができる）で、メッセージ送信者を表します。
+- {{domxref("MessageEvent.ports", "ports")}} {{readonlyInline}}
+  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャネルに関連するポートを表します（チャネルメッセージングや共有ワーカーにメッセージを送信する場合など、適切な場合）。
+
+## 例
+
+```js
+// Create WebSocket connection.
 const socket = new WebSocket('ws://localhost:8080');
 
 // Listen for messages
 socket.addEventListener('message', function (event) {
     console.log('Message from server ', event.data);
-});</pre>
+});
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "web-sockets.html#event-message", "WebSocket message")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.WebSocket.message_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebSocket/close_event">WebSocket: close イベント</a></li>
- <li><a href="/ja/docs/Web/API/WebSocket/error_event">WebSocket: error イベント</a></li>
- <li><a href="/ja/docs/Web/API/WebSocket/open_event">WebSocket: open イベント</a></li>
- <li><a href="/ja/docs/WebSockets/Writing_WebSocket_client_applications">WebSocket クライアントアプリケーションを書く</a></li>
-</ul>
+- [WebSocket: close イベント](/ja/docs/Web/API/WebSocket/close_event)
+- [WebSocket: error イベント](/ja/docs/Web/API/WebSocket/error_event)
+- [WebSocket: open イベント](/ja/docs/Web/API/WebSocket/open_event)
+- [WebSocket クライアントアプリケーションを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
