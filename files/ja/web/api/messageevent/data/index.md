@@ -5,22 +5,22 @@ tags:
   - API
   - DOM
   - MessageEvent
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
   - data
   - messaging
 browser-compat: api.MessageEvent.data
+translation_of: Web/API/MessageEvent/data
 ---
 {{APIRef("HTML DOM")}}
 
-The **`data`** read-only property of the
-{{domxref("MessageEvent")}} interface represents the data sent by the message emitter.
+**`data`** は {{domxref("MessageEvent")}} インターフェイスのプロパティで、このメッセージの送信元が送信するデータを表します。
 
-## Value
+## 値
 
-The data sent by the message emitter; this can be any data type.
+このメッセージの送信元が送信するデータです。これはどの型でも構いません。
 
-## Examples
+## 例
 
 ```js
 myWorker.onmessage = function(e) {
@@ -29,15 +29,14 @@ myWorker.onmessage = function(e) {
 };
 ```
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- {{domxref("ExtendableMessageEvent")}} — similar to this interface but used in
-  interfaces that needs to give more flexibility to authors.
+- {{domxref("ExtendableMessageEvent")}} — このインターフェイスに似ていますが、もっと柔軟性が必要なインターフェイスで使用されます。
