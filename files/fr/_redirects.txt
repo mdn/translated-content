@@ -1322,7 +1322,7 @@
 /fr/docs/Glossaire/Bootstrap	/fr/docs/Glossary/Bootstrap
 /fr/docs/Glossaire/Breadcrumb	/fr/docs/Glossary/Breadcrumb
 /fr/docs/Glossaire/Browsing_context	/fr/docs/Glossary/Browsing_context
-/fr/docs/Glossaire/Bézier_curve	/fr/docs/Glossary/Bézier_curve
+/fr/docs/Glossaire/Bézier_curve	/fr/docs/Glossary/Bezier_curve
 /fr/docs/Glossaire/CDN	/fr/docs/Glossary/CDN
 /fr/docs/Glossaire/CMS	/fr/docs/Glossary/CMS
 /fr/docs/Glossaire/CORS	/fr/docs/Glossary/CORS
@@ -1745,6 +1745,7 @@
 /fr/docs/Glossary/Accessibilité	/fr/docs/Glossary/Accessibility
 /fr/docs/Glossary/Attribut	/fr/docs/Glossary/Attribute
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
+/fr/docs/Glossary/Bézier_curve	/fr/docs/Glossary/Bezier_curve
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
 /fr/docs/Glossary/Gaia	/fr/docs/orphaned/Glossary/Gaia
 /fr/docs/Glossary/Gonk	/fr/docs/orphaned/Glossary/Gonk
@@ -3764,6 +3765,7 @@
 /fr/docs/Web/API/Event.stopPropagation	/fr/docs/Web/API/Event/stopPropagation
 /fr/docs/Web/API/Event/Comparaison_des_cibles_d_évènements	/fr/docs/Web/API/Event/Comparison_of_Event_Targets
 /fr/docs/Web/API/Event/createEvent	/fr/docs/conflicting/Web/API/Document/createEvent
+/fr/docs/Web/API/EventListener	/fr/docs/conflicting/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventSource/onopen	/fr/docs/Web/API/EventSource/open_event
 /fr/docs/Web/API/EventTarget/attachEvent	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventTarget/detachEvent	/fr/docs/Web/API/EventTarget/removeEventListener
@@ -3824,6 +3826,8 @@
 /fr/docs/Web/API/Node/prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
 /fr/docs/Web/API/Node/setUserData	/fr/docs/orphaned/Web/API/Node/setUserData
+/fr/docs/Web/API/NodeFilter	/fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada
+/fr/docs/Web/API/NodeFilter/acceptNode	/fr/docs/conflicting/Web/API/Document/createNodeIterator
 /fr/docs/Web/API/Notation	/fr/docs/orphaned/Web/API/Notation
 /fr/docs/Web/API/ParentNode	/fr/docs/orphaned/Web/API/ParentNode
 /fr/docs/Web/API/ParentNode/append	/fr/docs/orphaned/Web/API/ParentNode/append
@@ -4072,6 +4076,7 @@
 /fr/docs/Web/CSS/:after_|_::after	/fr/docs/Web/CSS/::after
 /fr/docs/Web/CSS/:any	/fr/docs/conflicting/Web/CSS/:is
 /fr/docs/Web/CSS/:before	/fr/docs/Web/CSS/::before
+/fr/docs/Web/CSS/:current	/fr/docs/conflicting/Web/API/WebVTT_API
 /fr/docs/Web/CSS/:host()	/fr/docs/Web/CSS/:host_function
 /fr/docs/Web/CSS/:matches	/fr/docs/Web/CSS/:is
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/Privacy_and_the_:visited_selector
@@ -4127,7 +4132,7 @@
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_colonnes	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
 /fr/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
-/fr/docs/Web/CSS/CSS_Colors	/fr/docs/conflicting/Web/CSS/CSS_Color
+/fr/docs/Web/CSS/CSS_Color	/fr/docs/Web/CSS/CSS_Colors
 /fr/docs/Web/CSS/CSS_Columns/Concepts_base_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 /fr/docs/Web/CSS/CSS_Columns/Gestion_dépassement_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 /fr/docs/Web/CSS/CSS_Columns/Gérer_rupture_contenu_entre_colonnes	/fr/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol
@@ -4556,7 +4561,8 @@
 /fr/docs/Web/Guide/HTML/Liens_email	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks_10fd94f15ce1a469a3483e0478cb5d85
 /fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/conflicting/Web/API/FormData/Using_FormData_Objects
-/fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/HTML/Applying_color
+/fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/CSS/CSS_Colors/Applying_color
+/fr/docs/Web/HTML/Applying_color	/fr/docs/Web/CSS/CSS_Colors/Applying_color
 /fr/docs/Web/HTML/Attributs	/fr/docs/Web/HTML/Attributes
 /fr/docs/Web/HTML/Attributs/autocomplete	/fr/docs/Web/HTML/Attributes/autocomplete
 /fr/docs/Web/HTML/Attributs/pattern	/fr/docs/Web/HTML/Attributes/pattern
@@ -5659,6 +5665,7 @@
 /fr/docs/Web/Reference	/fr/docs/orphaned/Web/Reference
 /fr/docs/Web/Reference/API	/fr/docs/orphaned/Web/Reference/API
 /fr/docs/Web/SVG/Application_d_effets_SVG_a_du_contenu_HTML	/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content
+/fr/docs/Web/SVG/Element/animateColor	/fr/docs/conflicting/Web/SVG/Element/animate
 /fr/docs/Web/SVG/Element/cercle	/fr/docs/Web/SVG/Element/circle
 /fr/docs/Web/SVG/Index	/fr/docs/conflicting/Web/SVG
 /fr/docs/Web/SVG/SVG_en_tant_qu_image	/fr/docs/Web/SVG/SVG_as_an_Image

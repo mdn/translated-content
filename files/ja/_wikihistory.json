@@ -492,6 +492,13 @@
       "daisuke-f"
     ]
   },
+  "Glossary/Bezier_curve": {
+    "modified": "2020-08-10T13:51:05.629Z",
+    "contributors": [
+      "mfuji09",
+      "nelsadeki"
+    ]
+  },
   "Glossary/BiDi": {
     "modified": "2019-03-18T21:27:00.954Z",
     "contributors": [
@@ -590,13 +597,6 @@
       "Uemmra3",
       "hamasaki",
       "momdo"
-    ]
-  },
-  "Glossary/Bézier_curve": {
-    "modified": "2020-08-10T13:51:05.629Z",
-    "contributors": [
-      "mfuji09",
-      "nelsadeki"
     ]
   },
   "Glossary/CDN": {
@@ -14381,13 +14381,6 @@
       "Shunter1112"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2020-02-11T06:17:04.429Z",
-    "contributors": [
-      "tyankatsu",
-      "Marsf"
-    ]
-  },
   "Web/API/EventSource": {
     "modified": "2020-10-15T21:41:41.782Z",
     "contributors": [
@@ -27811,10 +27804,20 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2020-10-15T22:04:14.476Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2020-12-08T11:01:26.496Z",
+    "contributors": [
+      "MikuroXina",
+      "mizukichandayo",
+      "mfuji09",
+      "piza_suki",
+      "karaage-kun"
     ]
   },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
@@ -33337,16 +33340,6 @@
       "Taken Bot",
       "julionc",
       "Shimono"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2020-12-08T11:01:26.496Z",
-    "contributors": [
-      "MikuroXina",
-      "mizukichandayo",
-      "mfuji09",
-      "piza_suki",
-      "karaage-kun"
     ]
   },
   "Web/HTML/Attributes": {
@@ -46397,16 +46390,6 @@
       "manzyun"
     ]
   },
-  "Web/SVG/Element/animateColor": {
-    "modified": "2020-10-15T21:27:02.463Z",
-    "contributors": [
-      "takenspc",
-      "wbamberg",
-      "Sebastianz",
-      "teoli",
-      "manzyun"
-    ]
-  },
   "Web/SVG/Element/animateMotion": {
     "modified": "2020-11-12T07:13:36.041Z",
     "contributors": [
@@ -48203,6 +48186,13 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98": {
+    "modified": "2020-02-11T06:17:04.429Z",
+    "contributors": [
+      "tyankatsu",
+      "Marsf"
+    ]
+  },
   "conflicting/Web/API/File/name": {
     "modified": "2020-09-25T16:45:23.436Z",
     "contributors": [
@@ -48559,6 +48549,16 @@
     "modified": "2019-01-16T21:55:52.943Z",
     "contributors": [
       "Marsf"
+    ]
+  },
+  "conflicting/Web/SVG/Element/animate": {
+    "modified": "2020-10-15T21:27:02.463Z",
+    "contributors": [
+      "takenspc",
+      "wbamberg",
+      "Sebastianz",
+      "teoli",
+      "manzyun"
     ]
   },
   "conflicting/Web/Web_Components": {

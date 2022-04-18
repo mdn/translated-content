@@ -1886,6 +1886,7 @@
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser
 /ja/docs/Games/Workflows/2D_breakout_game_Phaser/Physics	/ja/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics
 /ja/docs/Glossary/AOM	/ja/docs/Glossary/Accessibility_tree
+/ja/docs/Glossary/Bézier_curve	/ja/docs/Glossary/Bezier_curve
 /ja/docs/Glossary/Client_hints	/ja/docs/Web/HTTP/Client_hints
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
@@ -2831,7 +2832,7 @@
 /ja/docs/SVG/Element-redirect-1	/ja/docs/Web/SVG/Element
 /ja/docs/SVG/Element/a	/ja/docs/Web/SVG/Element/a
 /ja/docs/SVG/Element/animate	/ja/docs/Web/SVG/Element/animate
-/ja/docs/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animateColor
+/ja/docs/SVG/Element/animateColor	/ja/docs/conflicting/Web/SVG/Element/animate
 /ja/docs/SVG/Element/animateMotion	/ja/docs/Web/SVG/Element/animateMotion
 /ja/docs/SVG/Element/animateTransform	/ja/docs/Web/SVG/Element/animateTransform
 /ja/docs/SVG/Element/circle	/ja/docs/Web/SVG/Element/circle
@@ -3106,6 +3107,8 @@
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/Web/Events/Event_handlers
+/ja/docs/Web/API/EventListener	/ja/docs/conflicting/Web/API/EventTarget/addEventListener_380cb5f366307beb2c072f74e561ee98
+/ja/docs/Web/API/EventListener/handleEvent	/ja/docs/conflicting/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/EventSource/onerror	/ja/docs/Web/API/EventSource/error_event
 /ja/docs/Web/API/EventSource/onmessage	/ja/docs/Web/API/EventSource/message_event
 /ja/docs/Web/API/EventTarget.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
@@ -3747,7 +3750,7 @@
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ja/docs/conflicting/Web/CSS/cursor
-/ja/docs/Web/CSS/CSS_Colors	/ja/docs/Web/CSS/CSS_Color
+/ja/docs/Web/CSS/CSS_Color	/ja/docs/Web/CSS/CSS_Colors
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
@@ -4080,6 +4083,7 @@
 /ja/docs/Web/Guide/Performance/Using_web_workers	/ja/docs/Web/API/Web_Workers_API/Using_web_workers
 /ja/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API	/ja/docs/Web/API/Page_Visibility_API
 /ja/docs/Web/Guide/Using_FormData_Objects	/ja/docs/Web/API/FormData/Using_FormData_Objects
+/ja/docs/Web/HTML/Applying_color	/ja/docs/Web/CSS/CSS_Colors/Applying_color
 /ja/docs/Web/HTML/CORS_settings_attributes	/ja/docs/Web/HTML/Attributes/crossorigin
 /ja/docs/Web/HTML/Canvas	/ja/docs/Web/API/Canvas_API
 /ja/docs/Web/HTML/Canvas/Drawing_Graphics_with_Canvas	/ja/docs/Web/API/Canvas_API/Tutorial
@@ -4508,6 +4512,7 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
+/ja/docs/Web/SVG/Element/animateColor	/ja/docs/conflicting/Web/SVG/Element/animate
 /ja/docs/Web/SVG/Index	/ja/docs/conflicting/Web/SVG
 /ja/docs/Web/Security/CSP	/ja/docs/Web/HTTP/CSP
 /ja/docs/Web/Security/CSP/CSP_policy_directives	/ja/docs/Web/HTTP/Headers/Content-Security-Policy

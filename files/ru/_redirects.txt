@@ -85,6 +85,7 @@
 /ru/docs/Games/Инструменты	/ru/docs/Games/Tools
 /ru/docs/Games/Инструменты/asm.js	/ru/docs/Games/Tools/asm.js
 /ru/docs/Glossary/Block/Скриптинг	/ru/docs/Glossary/Block/Scripting
+/ru/docs/Glossary/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Glossary/пустой_элемент	/ru/docs/Glossary/Empty_element
 /ru/docs/HTML	/ru/docs/Web/HTML
 /ru/docs/HTML/Canvas	/ru/docs/Web/API/Canvas_API
@@ -380,6 +381,7 @@
 /ru/docs/Web/API/Element.getBoundingClientRect	/ru/docs/Web/API/Element/getBoundingClientRect
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
+/ru/docs/Web/API/EventListener	/ru/docs/conflicting/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
 /ru/docs/Web/API/File/fileName	/ru/docs/conflicting/Web/API/File/name
 /ru/docs/Web/API/FileReader/onabort	/ru/docs/Web/API/FileReader/abort_event
@@ -478,7 +480,7 @@
 /ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
-/ru/docs/Web/CSS/CSS_Colors	/ru/docs/Web/CSS/CSS_Color
+/ru/docs/Web/CSS/CSS_Color	/ru/docs/Web/CSS/CSS_Colors
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере	/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси	/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 /ru/docs/Web/CSS/CSS_Flow_Layout/Введение_в_контексты_форматирования	/ru/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
@@ -563,6 +565,7 @@
 /ru/docs/Web/Guide/HTML/Using_data_attributes	/ru/docs/Learn/HTML/Howto/Use_data_attributes
 /ru/docs/Web/Guide/Графика	/ru/docs/Web/Guide/Graphics
 /ru/docs/Web/Guide/Производительность	/ru/docs/Web/Guide/Performance
+/ru/docs/Web/HTML/Applying_color	/ru/docs/Web/CSS/CSS_Colors/Applying_color
 /ru/docs/Web/HTML/CORS_settings_attributes	/ru/docs/Web/HTML/Attributes/crossorigin
 /ru/docs/Web/HTML/Canvas	/ru/docs/Web/API/Canvas_API
 /ru/docs/Web/HTML/Canvas/Рисование_графики_с_помощью_Canvas	/ru/docs/Web/API/Canvas_API/Tutorial
@@ -819,7 +822,7 @@
 /ru/docs/Словарь/Bootstrap	/ru/docs/Glossary/Bootstrap
 /ru/docs/Словарь/Browser	/ru/docs/Glossary/Browser
 /ru/docs/Словарь/Browsing_context	/ru/docs/Glossary/Browsing_context
-/ru/docs/Словарь/Bézier_curve	/ru/docs/Glossary/Bézier_curve
+/ru/docs/Словарь/Bézier_curve	/ru/docs/Glossary/Bezier_curve
 /ru/docs/Словарь/CDN	/ru/docs/Glossary/CDN
 /ru/docs/Словарь/CMS	/ru/docs/Glossary/CMS
 /ru/docs/Словарь/CORS	/ru/docs/Glossary/CORS

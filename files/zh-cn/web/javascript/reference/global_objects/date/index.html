@@ -131,8 +131,100 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hours<
 </dl>
 
 <h3 id="实例方法">实例方法</h3>
-
-<p>{{ page("/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}</p>
+<dl>
+  <dt>{{jsxref("Date.prototype.getDate()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象为一个月中的哪一日（<code>1</code>-<code>31</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getDay()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象是在一周中的第几天（<code>0</code>-<code>6</code>），0 表示星期天。</dd>
+  <dt>{{jsxref("Date.prototype.getFullYear()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的完整年份（四位数年份）。</dd>
+  <dt>{{jsxref("Date.prototype.getHours()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的小时（<code>0</code>–<code>23</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getMilliseconds()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的毫秒数（<code>0</code>–<code>999</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getMinutes()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的分钟数（<code>0</code>–<code>59</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getMonth()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的月份（<code>0</code>–<code>11</code>），0 表示一年中的第一月。</dd>
+  <dt>{{jsxref("Date.prototype.getSeconds()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的秒数（<code>0</code>–<code>59</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getTime()")}}</dt>
+  <dd>返回一个数值，表示从 1970 年 1 月 1 日 0 时 0 分 0 秒（UTC，即协调世界时）距离该 {{jsxref("Date")}} 对象所代表时间的毫秒数。（更早的时间会用负数表示）</dd>
+  <dt>{{jsxref("Date.prototype.getTimezoneOffset()")}}</dt>
+  <dd>返回协调世界时（UTC）相对于当前时区的时间差值，单位为分钟。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCDate()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象为一个月中的哪一日（<code>1</code>-<code>31</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCDay()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象是在一周中的第几天（<code>0</code>-<code>6</code>），0 表示星期天。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCFullYear()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的完整年份（四位数年份）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCHours()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的小时（<code>0</code>–<code>23</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCMilliseconds()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的毫秒数（<code>0</code>–<code>999</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCMinutes()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的分钟数（<code>0</code>–<code>59</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCMonth()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的月份（<code>0</code>–<code>11</code>），0 表示一年中的第一月。</dd>
+  <dt>{{jsxref("Date.prototype.getUTCSeconds()")}}</dt>
+  <dd>以协调世界时为标准，返回一个指定的 {{jsxref("Date")}} 对象的秒数（<code>0</code>–<code>59</code>）。</dd>
+  <dt>{{jsxref("Date.prototype.getYear()")}}</dt>
+  <dd>根据本地时间，返回一个指定的 {{jsxref("Date")}} 对象的相对年份（相对1900年，通常是 2 到 3 位数字）。请改用 {{jsxref("Date.getFullYear", "getFullYear")}} 。</dd>
+  <dt>{{jsxref("Date.prototype.setDate()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象在所属月份中的天数。</dd>
+  <dt>{{jsxref("Date.prototype.setFullYear()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的完整年份（四位数年份）。</dd>
+  <dt>{{jsxref("Date.prototype.setHours()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的小时数。</dd>
+  <dt>{{jsxref("Date.prototype.setMilliseconds()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的豪秒数。</dd>
+  <dt>{{jsxref("Date.prototype.setMinutes()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的分钟数。</dd>
+  <dt>{{jsxref("Date.prototype.setMonth()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的月份。</dd>
+  <dt>{{jsxref("Date.prototype.setSeconds()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的秒数。</dd>
+  <dt>{{jsxref("Date.prototype.setTime()")}}</dt>
+  <dd>用一个从1970-1-1 00:00:00 UTC计时的毫秒数来为一个 {{jsxref("Date")}} 对象设置时间。用负数来设置更早的时间。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCDate()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象在所属月份中的天数。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCFullYear()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的完整年份（四位数年份）。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCHours()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的小时数。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCMilliseconds()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的豪秒数。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCMinutes()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的分钟数。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCMonth()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的月份。</dd>
+  <dt>{{jsxref("Date.prototype.setUTCSeconds()")}}</dt>
+  <dd>以协调世界时为标准，设置一个 {{jsxref("Date")}} 对象的秒数。</dd>
+  <dt>{{jsxref("Date.prototype.setYear()")}}</dt>
+  <dd>根据本地时间，设置一个 {{jsxref("Date")}} 对象的相对年份（相对1900年，通常是 2 到 3 位数字）。请改用 {{jsxref("Date.setFullYear", "setFullYear")}} 。</dd>
+  <dt>{{jsxref("Date.prototype.toDateString()")}}</dt>
+  <dd>以美式英语和人类易读的表述形式返回一个 {{jsxref("Date")}} 对象日期部分的字符串。</dd>
+  <dt>{{jsxref("Date.prototype.toISOString()")}}</dt>
+  <dd>将指定 {{jsxref("Date")}} 对象转换成 ISO 格式表述的字符串并返回。</dd>
+  <dt>{{jsxref("Date.prototype.toJSON()")}}</dt>
+  <dd>返回指定 {{jsxref("Date")}} 对象调用 {{jsxref("Date.prototype.toISOString()", "toISOString()")}} 方法的返回值。在 {{jsxref("JSON.stringify()")}} 中使用。</dd>
+  <dt>{{jsxref("Date.prototype.toGMTString()")}}</dt>
+  <dd>基于 GMT (UTC) 时区来返回一个表述指定 {{jsxref("Date")}} 对象的字符串形式。请改用 {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}。</dd>
+  <dt>{{jsxref("Date.prototype.toLocaleDateString()")}}</dt>
+  <dd>返回一个表述指定 {{jsxref("Date")}} 对象的日期部分字符串。该字符串格式因不同语言而不同。</dd>
+  <dt>{{jsxref("Date.prototype.toLocaleString()")}}</dt>
+  <dd>返回一个表述指定 {{jsxref("Date")}} 对象的字符串。该字符串格式因不同语言而不同。</dd>
+  <dt>{{jsxref("Date.prototype.toLocaleTimeString()")}}</dt>
+  <dd>返回一个表述指定 {{jsxref("Date")}} 对象时间部分的的字符串。该字符串格式因不同语言而不同。</dd>
+  <dt>{{jsxref("Date.prototype.toString()")}}</dt>
+  <dd>返回一个字符串，表示该 {{jsxref("Date")}} 对象。覆盖了 {{jsxref("Object.prototype.toString()")}} 方法。</dd>
+  <dt>{{jsxref("Date.prototype.toTimeString()")}}</dt>
+  <dd>以人类易读形式返回一个 {{jsxref("Date")}} 对象时间部分的字符串，该字符串以美式英语格式化。</dd>
+  <dt>{{jsxref("Date.prototype.toUTCString()")}}</dt>
+  <dd>使用UTC时区，把一个 {{jsxref("Date")}} 对象转换为一个字符串。</dd>
+  <dt>{{jsxref("Date.prototype.valueOf()")}}</dt>
+  <dd>返回一个 {{jsxref("Date")}} 对象的原始值。覆盖了 {{jsxref("Object.prototype.valueOf()")}} 方法。</dd>
+</dl>
 
 <h2 id="例子">例子</h2>
 

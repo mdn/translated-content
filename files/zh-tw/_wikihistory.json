@@ -3373,14 +3373,6 @@
       "jackblackevo"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2020-10-15T21:47:11.807Z",
-    "contributors": [
-      "t7yang",
-      "tigercosmos",
-      "jackblackevo"
-    ]
-  },
   "Web/API/EventTarget": {
     "modified": "2019-03-23T22:55:39.329Z",
     "contributors": [
@@ -3388,6 +3380,14 @@
       "Shiyou",
       "alk03073135",
       "teoli"
+    ]
+  },
+  "Web/API/EventTarget/addEventListener": {
+    "modified": "2020-10-15T21:47:11.807Z",
+    "contributors": [
+      "t7yang",
+      "tigercosmos",
+      "jackblackevo"
     ]
   },
   "Web/API/EventTarget/dispatchEvent": {
@@ -4762,11 +4762,17 @@
       "MOSapeizer"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2019-03-23T22:44:44.114Z",
     "contributors": [
       "Sebastianz",
       "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Colors/Applying_color": {
+    "modified": "2019-03-18T21:29:53.605Z",
+    "contributors": [
+      "WuBingHsuan"
     ]
   },
   "Web/CSS/CSS_Colors/Color_picker_tool": {
@@ -5285,12 +5291,6 @@
       "irvinfly",
       "stingyong",
       "sailplaneTW"
-    ]
-  },
-  "Web/HTML/Applying_color": {
-    "modified": "2019-03-18T21:29:53.605Z",
-    "contributors": [
-      "WuBingHsuan"
     ]
   },
   "Web/HTML/Attributes": {
