@@ -98,7 +98,7 @@ translation_of: Web/API/Web_Authentication_API
   <ol>
    <li>Relying Party IDがこのサービスで想定しているものか</li>
    <li>認証器によって署名されたチャレンジ、サーバによって生成されたものと一致しているか</li>
-   <li>登録要求の際に保管した、認証器による署名を検証するための公開鍵が用いられているか</li>
+   <li>登録要求の際に保管した公開鍵を用いた認証器による署名の検証</li>
   </ol>
   これらは<a href="https://w3c.github.io/webauthn/#verifying-assertion">WebAuthnの仕様で規定されているAssertionの検証手順</a>のすべてです。検証が成功した場合、ユーザは認証済であると記録します。WebAuthnによる規定の対象範囲外ですが、ひとつの選択肢として新しいCookieをユーザのセッションに対して発行することが考えられます。</li>
 </ol>
