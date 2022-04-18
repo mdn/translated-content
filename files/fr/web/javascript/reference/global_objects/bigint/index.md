@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.BigInt
 ---
 {{JSRef}}
 
-**`BigInt`** est [une enveloppe objet](/fr/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript) utilisée pour représenter et manipuler les valeurs [primitives](/fr/docs/Glossary/Primitive) `bigint` (grands entiers) qui permettent de représenter des valeurs [plus grandes que celles correctement représentables](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) par une valeur primitive numérique (`number`).
+**`BigInt`** est [une enveloppe objet](/fr/docs/Glossary/Primitive#primitives_javascript_encapsulées_dans_des_objets) utilisée pour représenter et manipuler les valeurs [primitives](/fr/docs/Glossary/Primitive) `bigint` (grands entiers) qui permettent de représenter des valeurs [plus grandes que celles correctement représentables](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) par une valeur primitive numérique (`number`).
 
 ## Description
 
@@ -22,13 +22,13 @@ const grandNombre = BigInt(9007199254740991);
 const grandNombreEnChaîne = BigInt('9007199254740991');
 // ↪ 9007199254740991n
 
-const grandeNombreHexa = BigInt("0x1fffffffffffff");
+const grandeNombreHexa = BigInt('0x1fffffffffffff');
 // ↪ 9007199254740991n
 
-const grandNombreOctal = BigInt("0o377777777777777777");
+const grandNombreOctal = BigInt('0o377777777777777777');
 // ↪ 9007199254740991n
 
-const grandeNombreBinaire = BigInt("0b11111111111111111111111111111111111111111111111111111");
+const grandeNombreBinaire = BigInt('0b11111111111111111111111111111111111111111111111111111');
 // ↪ 9007199254740991n
 ```
 
@@ -46,7 +46,7 @@ typeof BigInt('1') === 'bigint';  // true
 Lorsqu'on «&nbsp;enveloppe&nbsp;» la valeur primitive dans un objet, on aura alors un type `"object"` (comme pour les autres valeurs primitives lorsqu'on les enveloppe dans le constructeur objet)&nbsp;:
 
 ```js
-typeof Object(1n) === "object"; // true
+typeof Object(1n) === 'object'; // true
 ```
 
 ### Opérateurs
@@ -57,9 +57,9 @@ On peut utiliser les opérateurs suivants avec les objets `BigInt`&nbsp;:
 + * - % **
 ```
 
-[Les opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires) sont également pris en charge (à l'exception de `>>>` / décalage à droite avec des zéros) car les grands entiers sont signés.
+[Les opérateurs binaires](/fr/docs/Web/JavaScript/Reference/Operators) sont également pris en charge (à l'exception de `>>>` / décalage à droite avec des zéros) car les grands entiers sont signés.
 
-Le `+` unaire n'est pas non plus pris en charge (afin de [ne pas casser asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)).
+Le `+` unaire n'est pas non plus pris en charge (afin de [ne pas casser `asm.js`](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs)).
 
 ```js
 const nombreSain = BigInt(Number.MAX_SAFE_INTEGER);
@@ -74,16 +74,16 @@ const leFutur = nombreSain + 2n;
 const multi = nombreSain * 2n;
 // ↪ 18014398509481982n
 
-const subtr = multi - 10n
+const subtr = multi - 10n;
 // ↪ 18014398509481972n
 
-const mod = multi % 10n
+const mod = multi % 10n;
 // ↪ 2n
 
-const bigN = 2n ** 54n
+const bigN = 2n ** 54n;
 // ↪ 18014398509481984n
 
-bigN * -1n
+bigN * -1n;
 // ↪ -18014398509481984n
 ```
 
@@ -142,13 +142,12 @@ mixed.sort((a, b) => a - b);
 // fonctionne pas sur des types mixtes
 // TypeError: can't convert BigInt value to Number value
 
-// On peut trier avec un comparateur numérique
-// approprié
+// On peut trier avec un comparateur numérique approprié
 mixed.sort((a, b) => (a < b) ? -1 : ((a > b) ? 1 : 0));
-// ↪  [ -12n, 0, 0n, 4n, 4, 6, 10 ]
+// ↪ [ -12n, 0, 0n, 4n, 4, 6, 10 ]
 ```
 
-On notera que les comparaisons entre les valeurs `BigInt` et les mêmes valeurs, passées dans le constructeur `Object()` ne seront pas équivalentes au sens strict&nbsp;:
+On notera que les comparaisons entre les valeurs `BigInt` et les mêmes valeurs, passées dans le constructeur `Object()`, ne seront pas équivalentes au sens strict&nbsp;:
 
 ```js
 0n === Object(0n);          // false
@@ -160,7 +159,7 @@ o === o;                    // true
 
 ### Opérations conditionnelles
 
-Une valeur `BigInt` se comporte comme une valeur [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) lorsqu'elle est utilisée dans un contexte booléen&nbsp;: comme argument pour le constructeur [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean), comme opérandes pour les opérateurs logiques `||`, \``&&`\` et `!` ou avec les instructions conditionnelles telles que [`if`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else).
+Une valeur `BigInt` se comporte comme une valeur [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) lorsqu'elle est utilisée dans un contexte booléen&nbsp;: comme argument pour le constructeur [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean), comme opérandes pour les [opérateurs logiques](/fr/docs/Web/JavaScript/Reference/Operators) `||`, `&&` et `!` ou avec les instructions conditionnelles telles que [`if`](/fr/docs/Web/JavaScript/Reference/Statements/if...else).
 
 ```js
 if (0n) {
@@ -215,9 +214,9 @@ Boolean(12n)
 
 ### Coercition en `Number`
 
-Lorsqu'on convertit une valeur `BigInt` en [`Number`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number), on perd en précision. Si on effectue des allers-retours entre ces deux types, on ne conservera pas la même valeur. Aussi, il est recommandé&nbsp;:
+Lorsqu'on convertit une valeur `BigInt` en [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), on perd en précision. Si on effectue des allers-retours entre ces deux types, on ne conservera pas la même valeur. Aussi, il est recommandé&nbsp;:
 
-- D'utiliser uniquement `BigInt` lorsque les valeurs qu'on manipule seront supérieures à 2^53 et qu'il ne sera pas nécessaire de passer d'un type à l'autre
+- D'utiliser uniquement `BigInt` lorsque les valeurs qu'on manipule seront supérieures à `2^53` et qu'il ne sera pas nécessaire de passer d'un type à l'autre
 - De ne pas passer d'un type à l'autre (`BigInt` à `Number` et vice versa)
 
 ### Cryptographie
@@ -246,7 +245,7 @@ console.log(chaine);
 // ↪ '{"number":1,"big":"18014398509481982"}'
 ```
 
-Si vous avez des données JSON contenant des valeurs dont vous savez qu'il s'agit de grands entiers, vous pouvez utiliser [le paramètre "reviver"](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) de la méthode `JSON.parse()` pour les désérialiser&nbsp;:
+Si vous avez des données JSON contenant des valeurs dont vous savez qu'il s'agit de grands entiers, vous pouvez utiliser [le paramètre `reviver`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#utiliser_le_paramètre_reviver) de la méthode `JSON.parse()` pour les désérialiser&nbsp;:
 
 ```js
 function reviver(cle, value) {
@@ -308,4 +307,3 @@ nthPrime(20n);
 
 - [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)
 - [`Number.MAX_SAFE_INTEGER`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
-
