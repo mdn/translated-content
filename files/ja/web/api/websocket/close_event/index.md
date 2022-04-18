@@ -2,79 +2,76 @@
 title: 'WebSocket: close イベント'
 slug: Web/API/WebSocket/close_event
 tags:
-  - Reference
-  - Web
+  - API
+  - Event
+  - リファレンス
+  - ウェブ
   - WebSocket
   - close
-  - events
   - イベント
+browser-compat: api.WebSocket.close_event
 translation_of: Web/API/WebSocket/close_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>close</code> イベントは、 <code>WebSocket</code> のコネクションが閉じられたときに発生します。</p>
+`close` イベントは、 `WebSocket` の接続が閉じられたときに発生します。
 
-<table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{ domxref("WebSocket.onclose","onclose")}}</td>
-  </tr>
- </tbody>
-</table>
+## 構文
 
-<h2 id="Examples" name="Examples">例</h2>
+イベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<p>コネクションが閉じられる時が分かれば、 UI を更新させたり、閉じたコネクションについてのデータを保存したりすることができます。以下の例では <code>exampleSocket</code> と呼ばれる変数が開かれた <code>WebSocket</code> を参照しており、このハンドラーが、ソケットが閉じられた場面を扱います。</p>
+```js
+addEventListener('close', event => { })
 
-<pre class="brush: js">exampleSocket.addEventListener('close', (event) =&gt; {
+onclose = event => { }
+```
+
+## イベント型
+
+{{domxref("CloseEvent")}} です。 {{domxref("Event")}} から継承しています。
+
+{{InheritanceDiagram("CloseEvent")}}
+
+## イベントプロパティ
+
+_下記に示したプロパティに加えて、親インターフェイスである {{domxref("Event")}} からのプロパティが利用できます。_
+
+- {{domxref("CloseEvent.code", "code")}}{{readOnlyInline}}
+  - : サーバーが送信したクローズコードを `unsigned short` で返します。
+- {{domxref("CloseEvent.reason", "reason")}}{{readOnlyInline}}
+  - : サーバーが接続を閉じた理由を示す {{domxref("DOMString")}} を返します。これは、特定のサーバーとサブプロトコルに固有のものです。
+- {{domxref("CloseEvent.wasClean", "wasClean")}}{{readOnlyInline}}
+  - : 接続がきれいに閉じられたか否かを示す論理値を返します。
+
+## 例
+
+接続が閉じられる時が分かれば、 UI を更新させたり、閉じた接続についてのデータを保存したりすることができます。以下の例では `exampleSocket` と呼ばれる変数が開かれた `WebSocket` を参照しており、このハンドラーが、ソケットが閉じられた場面を扱います。
+
+```js
+exampleSocket.addEventListener('close', (event) => {
   console.log('The connection has been closed successfully.');
-)};</pre>
+});
+```
 
-<p>同じことを、イベントハンドラープロパティを用いて行うこともできます。</p>
+同じことを、イベントハンドラープロパティを用いて行うこともできます。
 
-<pre class="brush: js">exampleSocket.onclose = function (event) {
+```js
+exampleSocket.onclose = function (event) {
   console.log('The connection has been closed successfully.');
-};</pre>
+};
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "web-sockets.html#event-close", "WebSocket close")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.WebSocket.close_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/WebSocket/error_event">WebSocket: error イベント</a></li>
- <li><a href="/ja/docs/Web/API/WebSocket/message_event">WebSocket: message イベント</a></li>
- <li><a href="/ja/docs/Web/API/WebSocket/open_event">WebSocket: open イベント</a></li>
- <li><a href="/ja/docs/WebSockets/Writing_WebSocket_client_applications">WebSocket クライアントアプリケーションを書く</a></li>
-</ul>
+- [WebSocket: error イベント](/ja/docs/Web/API/WebSocket/error_event)
+- [WebSocket: message イベント](/ja/docs/Web/API/WebSocket/message_event)
+- [WebSocket: open イベント](/ja/docs/Web/API/WebSocket/open_event)
+- [WebSocket クライアントアプリケーションを書く](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
