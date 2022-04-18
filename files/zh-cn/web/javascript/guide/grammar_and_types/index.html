@@ -109,7 +109,7 @@ if(input === undefined){
 }
 </pre>
 
-<p><code>The following is related to "Variables" section as potential values in assignment.undefined</code> 值在布尔类型环境中会被当作 <code>false</code> 。例如，下面的代码将会执行函数 <code>myFunction</code>，因为数组 <code>myArray</code> 中的元素未被赋值：</p>
+<p><code>undefined</code> 值在布尔类型环境中会被当作 <code>false</code> 。例如，下面的代码将会执行函数 <code>myFunction</code>，因为数组 <code>myArray</code> 中的元素未被赋值：</p>
 
 <pre class="brush: js">var myArray = [];
 if (!myArray[0])   myFunction();
@@ -219,7 +219,7 @@ var baz = function() {
 
 <h3 id="全局变量">全局变量</h3>
 
-<p>need links to pages discussing scope chains and the global object 实际上，全局变量是<em>全局对象</em>的属性。在网页中，（译注：缺省的）全局对象是 <code>window</code> ，所以你可以用形如 <code>window.</code><em><code>variable</code> </em>的语法来设置和访问全局变量。</p>
+<p>实际上，全局变量是<em>全局对象</em>的属性。在网页中，（译注：缺省的）全局对象是 <code>window</code> ，所以你可以用形如 <code>window.</code><em><code>variable</code> </em>的语法来设置和访问全局变量。</p>
 
 <p>因此，你可以通过指定 window 或 frame 的名字，在当前 window 或 frame 访问另一个 window 或 frame 中声明的变量。例如，在文档里声明一个叫 <code>phoneNumber</code> 的变量，那么你就可以在子框架里使用 <code>parent.phoneNumber</code> 的方式来引用它。</p>
 
