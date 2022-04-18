@@ -1,58 +1,65 @@
 ---
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
+tags:
+  - API
+  - メソッド
+  - リファレンス
+  - Web API
+  - WebSocket
+browser-compat: api.WebSocket.close
 translation_of: Web/API/WebSocket/close
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p><strong><code>WebSocket.close()</code></strong> メソッドは、{{domxref("WebSocket")}} の接続、もしくは接続試行（存在した場合）を閉じます。接続がすでに <code>CLOSED</code> だった場合、このメソッドは何もしません。</p>
+**`WebSocket.close()`** メソッドは、 {{domxref("WebSocket")}} の接続、もしくは接続試行（存在した場合）を閉じます。接続がすでに `CLOSED` だった場合、このメソッドは何もしません。
 
-<h2 id="構文">構文</h2>
+> **Note:** 接続を閉じるプロセスは[クロージングハンドシェイク](https://www.rfc-editor.org/rfc/rfc6455.html#section-1.4)で始まり、 `close()` メソッドはそのクロージングハンドシェイクを開始する前に以前に送信したメッセージを破棄しません。たとえユーザーエージェントがまだそれらのメッセージを送信するのに忙しい場合でも、ハンドシェイクはメッセージが送信されてから開始されます。
 
-<pre class="syntaxbox notranslate">WebSocket.close();</pre>
+## 構文
 
-<h3 id="引数">引数</h3>
+```js
+WebSocket.close();
+```
 
-<dl>
- <dt><code>code</code> {{optional_inline}}</dt>
- <dd>接続が閉じられている理由を説明するためのステータスコードを示す数値を指定します。このパラメータを指定しない場合、デフォルト値として 1005 が指定されます。許可されている値については{{domxref("CloseEvent")}}の<a href="/ja/docs/Web/API/CloseEvent">ステータスコードの一覧</a>を参照してください。</dd>
- <dt><code>reason</code> {{optional_inline}}</dt>
- <dd>接続が閉じられている理由を説明するための人間が読める文字列を指定します。この文字列は UTF-8 テキスト (文字<strong>ではありません</strong>) で 123 バイトを超えていけません。</dd>
-</dl>
+```js
+WebSocket.close(code);
+```
 
-<h3 id="投げられる例外">投げられる例外</h3>
+```js
+WebSocket.close(code, reason);
+```
 
-<dl>
- <dt><code>INVALID_ACCESS_ERR</code></dt>
- <dd>無効な <code>code</code> が指定された場合</dd>
- <dt><code>SYNTAX_ERR</code></dt>
- <dd><code>reason</code> に指定した文字列が長すぎるか、ペアリングされていないサロゲートを含んでいる場合</dd>
-</dl>
+### 引数
 
-<div class="note">
-<p><strong>注意:</strong> Gecko において、Gecko 8.0 {{geckoRelease("8.0")}} 以前は、このメソッドはいづれのパラメータもサポートしていませんでした。</p>
-</div>
+- `code` {{optional_inline}}
+  - : 整数の [WebSocket 接続クローズコード](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)の値で、閉じられた理由を示します。
+    - 指定されていない場合、接続のクローズコードが自動的に設定されます。通常のクローズの場合は `1000` に、そうでなければ [`1001`-`1015` の範囲の他の標準値](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.4.1)に、接続が閉じられた実際の理由を示すコードが設定されます。
+    - 指定された場合、この `code` 引数の値は、接続のためのクローズコードの自動設定を上書きし、代わりにカスタムコードを設定します。
+    この値は整数でなければなりません。 `1000` か、あるいは `3000` から `4999` までの範囲で選択したカスタムコードでなければなりません。 `code` 値を指定する場合は、 [`reason`](#reason) 値も指定しなければなりません。
 
-<h2 id="仕様書">仕様書</h2>
+- `reason` {{optional_inline}}
+  - : 独自の [WebSocket 接続が閉じた理由](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.6)を提供する文字列（閉じたことについて簡潔で人間が読める散文的な説明）。この値は 123 バイト以下でなければなりません（UTF-8 でエンコードされます）。
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>仕様書</th>
-   <th>状態</th>
-   <th>備考</th>
-  </tr>
-  <tr>
-   <td><a class="external external-icon" href="https://html.spec.whatwg.org/multipage/web-sockets.html#dom-websocket-close" hreflang="en" lang="en">HTML Living Standard<br>
-    <small lang="en-US">The definition of 'WebSocket.close()' in that specification.</small></a></td>
-   <td><span class="spec-Living">Living Standard</span></td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+    > **Note:** [UTF-8 は 2 から 4 バイトを使用する](/ja/docs/Glossary/UTF-8)ため、 [ASCII](/ja/docs/Glossary/ASCII) 以外の文字をエンコードすると、 123 文字の `reason` 値に ASCII 以外の文字が入っていると、 123 バイトの制限を超える可能性があります。
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+    `reason` の値を指定する場合は、 [`code`](#code) の値も指定してください。
 
+### 例外
 
+- `InvalidAccessError`
+  - : [`code`](#code) が `1000` と等しい整数化、 `3000`–`4999` の範囲の整数でない場合に発生します。
+- `SyntaxError`
+  - : UTF-8 でエンコードされた [`reason`](#reason) が 123 バイトよりも長かった場合。
 
-<p>{{Compat("api.WebSocket.close")}}</p>
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) （WebSocket プロトコル仕様書）
