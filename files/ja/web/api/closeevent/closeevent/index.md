@@ -20,7 +20,7 @@ new CloseEvent(typeArg);
 new CloseEvent(typeArg, closeEventInit);
 ```
 
-### 値s
+### 値
 
 - `typeArg`
   - : {{domxref("DOMString")}} で、このイベントの名前を表します。
