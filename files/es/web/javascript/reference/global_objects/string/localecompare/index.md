@@ -29,9 +29,7 @@ localeCompare(compareString, locales, options);
 ### Parámetros
 
 - `compareString`
-
   - : La cadena de caracteres contra la cual se compara la `referenceStr`.
-
 - `locales` y `options`
 
   - : Estos argumentos configuran el comportamiento de la función y le permiten
