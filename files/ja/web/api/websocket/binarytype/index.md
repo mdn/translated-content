@@ -1,50 +1,53 @@
 ---
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
+tags:
+  - API
+  - プロパティ
+  - リファレンス
+  - Web API
+  - WebSocket
+browser-compat: api.WebSocket.binaryType
 translation_of: Web/API/WebSocket/binaryType
 ---
-<p>{{APIRef("Web Sockets API")}}</p>
+{{APIRef("Web Sockets API")}}
 
-<p><strong><code>WebSocket.binaryType</code></strong> は、コネクションによって送信されているバイナリデータの型を返すプロパティです。</p>
+**`WebSocket.binaryType`** プロパティは、この WebSocke 接続によって受信されているバイナリーデータの型を制御します。
 
-<h2 id="構文">構文</h2>
+## 値
 
-<pre class="syntaxbox notranslate"><em>var binaryType</em> = aWebSocket.binaryType;</pre>
+{{DOMXref("DOMString")}} です。
 
-<h2 id="値">値</h2>
+- `"blob"`
+  - : バイナリーデータに {{domxref("Blob")}} オブジェクトを使用します。これが既定値です。
+- `"arraybuffer"`
+  - : バイナリーデータに {{jsxref("ArrayBuffer")}} オブジェクトを使用します。
 
-<p>{{DOMXref("DOMString")}}:</p>
+## 例
 
-<dl>
- <dt><code>"blob"</code></dt>
- <dd>{{domxref("Blob")}} オブジェクトが使われている場合</dd>
- <dt><code>"arraybuffer"</code></dt>
- <dd>{{jsxref("ArrayBuffer")}} オブジェクトが使われている場合
+```js
+// WebSocket 接続を作成
+const socket = new WebSocket("ws://localhost:8080");
+// バイナリーの型を "blob" から "arraybuffer" に変更
+socket.binaryType = "arraybuffer";
 
- </dd>
-</dl>
+// メッセージを待ち受け
+socket.addEventListener("message", function (event) {
+    if(event.data instanceof ArrayBuffer) {
+        // バイナリーフレーム
+        const view = new DataView(event.data);
+        console.log(view.getInt32(0));
+    } else {
+        // テキストフレーム
+        console.log(event.data);
+    }
+});
+```
 
-<h2 id="仕様書">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-websocket-binarytype', 'WebSocket: binaryType')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ互換性">ブラウザ互換性</h2>
+## ブラウザーの互換性
 
-
-
-<p>{{Compat("api.WebSocket.binaryType")}}</p>
+{{Compat}}
