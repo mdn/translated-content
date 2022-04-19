@@ -22,7 +22,7 @@ tags:
 | {{Glossary("null")}}        | [null](/ru/docs/Web/JavaScript/Reference/Global_Objects/null) — отсутствие какого-либо значения.                                                                                                                                       |
 | {{Glossary("undefined")}}   | [undefined](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined) — примитивное значение.                                                                                                                                  |
 | {{Glossary("NaN")}}         | [NaN](/ru/docs/Web/JavaScript/Reference/Global_Objects/NaN) — значение, не являющиеся числом.                                                                                                                                                     |
-| {{domxref("document.all")}} | Объекты считаются ложноподобными тогда и только тогда, когда у них есть внутренний слот [\[\[IsHTMLDDA\]\]](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot). Этот слот есть только в объекте {{domxref("document.all")}}, и его задать через JavaScript. |
+| {{domxref("document.all")}} | Объекты считаются ложноподобными тогда и только тогда, когда у них есть внутренний слот [\[\[IsHTMLDDA\]\]](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot). Этот слот есть только в объекте {{domxref("document.all")}}, и его нельзя задать через JavaScript. |
 
 ## Примеры
 
