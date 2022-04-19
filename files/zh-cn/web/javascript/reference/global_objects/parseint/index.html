@@ -60,7 +60,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 <p>如果 <code>radix</code> 是 <code>undefined</code>、<code>0</code>或未指定的，JavaScript会假定以下情况：</p>
 
 <ol>
- <li>如果输入的 <code>string</code>以 "<code>0x</code>"或 "<code>0x</code>"（一个0，后面是小写或大写的X）开头，那么radix被假定为16，字符串的其余部分被当做十六进制数去解析。</li>
+ <li>如果输入的 <code>string</code>以 "<code>0x</code>"或 "<code>0X</code>"（一个0，后面是小写或大写的X）开头，那么radix被假定为16，字符串的其余部分被当做十六进制数去解析。</li>
  <li>如果输入的 <code>string</code>以 "<code>0</code>"（0）开头， <code>radix</code>被假定为<code>8</code>（八进制）或<code>10</code>（十进制）。具体选择哪一个radix取决于实现。ECMAScript 5 澄清了应该使用 10 (十进制)，但不是所有的浏览器都支持。<strong>因此，在使用 <code>parseInt</code> 时，一定要指定一个 radix</strong>。</li>
  <li>如果输入的 <code>string</code> 以任何其他值开头， <code>radix</code> 是 <code>10</code> (十进制)。</li>
 </ol>
