@@ -5,7 +5,7 @@ translation_of: Web/API/Payment_Request_API
 ---
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
-L'API *Payment Request* fournit une expérience utilisateur cohérente à la fois pour les acheteurs et pour les vendeurs. Ce n'est pas une nouvelle façon de payer ses achats, c'est plutôt une façon pour les utilisateurs de sélectionner leur moyen de paiement privilégié et de rendre cete information disponible pour le marchand.
+L'API *Payment Request* fournit une expérience utilisateur cohérente à la fois pour les acheteurs et pour les vendeurs. Ce n'est pas une nouvelle façon de payer ses achats, c'est plutôt une façon pour les utilisateurs de sélectionner leur moyen de paiement privilégié et de rendre cette information disponible pour le marchand.
 
 ## Concepts et usages de l'API _Payment Request_
 
