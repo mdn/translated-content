@@ -171,6 +171,6 @@ p {
 ## Смотрите также
 
 - Тип данных {{cssxref("&lt;color&gt;")}}
-- Другие, связанные с color, свойства: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
+- Другие свойства, относящиеся к цвету: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("caret-color")}} и {{cssxref("column-rule-color")}}
 - {{cssxref("text-shadow")}}
 - [Применение цвета к HTML-элементам с помощью CSS](/ru/docs/Web/HTML/Applying_color)
