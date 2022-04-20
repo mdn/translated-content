@@ -41174,13 +41174,6 @@
       "dattaz"
     ]
   },
-  "conflicting/Games": {
-    "modified": "2019-01-16T21:55:43.323Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "conflicting/Glossary": {
     "modified": "2019-01-16T21:55:44.075Z",
     "contributors": [
@@ -41317,14 +41310,6 @@
       "BenoitL"
     ]
   },
-  "conflicting/Learn/CSS/First_steps/How_CSS_works": {
-    "modified": "2020-07-16T22:25:39.949Z",
-    "contributors": [
-      "Loliwe",
-      "SphinxKnight",
-      "Oliviermoz"
-    ]
-  },
   "conflicting/Learn/CSS/First_steps/How_CSS_works_cdccf923f6bd040e8d243ee03d223ddc": {
     "modified": "2019-03-23T23:43:30.663Z",
     "contributors": [
@@ -41365,12 +41350,6 @@
       "Gorrk"
     ]
   },
-  "conflicting/Learn/CSS/Styling_text/Fundamentals": {
-    "modified": "2020-07-16T22:25:49.005Z",
-    "contributors": [
-      "SphinxKnight"
-    ]
-  },
   "conflicting/Learn/CSS/Styling_text/Fundamentals_8249b1bf53d09b06ed51f43697880b5b": {
     "modified": "2019-03-24T00:11:21.618Z",
     "contributors": [
@@ -41380,15 +41359,6 @@
       "BenoitL",
       "Loveuzz59",
       "Indigo"
-    ]
-  },
-  "conflicting/Learn/CSS/Styling_text/Fundamentals_9e7ba587262abbb02304cbc099c1f0d8": {
-    "modified": "2020-07-16T22:25:39.378Z",
-    "contributors": [
-      "teoli",
-      "SphinxKnight",
-      "Mozinet",
-      "Oliviermoz"
     ]
   },
   "conflicting/Learn/CSS/Styling_text/Styling_lists": {

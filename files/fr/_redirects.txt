@@ -105,7 +105,7 @@
 /fr/docs/Apprendre/CSS/Comment	/fr/docs/Learn/CSS/Howto
 /fr/docs/Apprendre/CSS/Comment/Créer_de_belles_boîtes	/fr/docs/Learn/CSS/Howto/create_fancy_boxes
 /fr/docs/Apprendre/CSS/Comment/Generated_content	/fr/docs/Learn/CSS/Howto/Generated_content
-/fr/docs/Apprendre/CSS/Comment/Mettre_en_forme_du_texte	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals
+/fr/docs/Apprendre/CSS/Comment/Mettre_en_forme_du_texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Apprendre/CSS/Comment/personnaliser_une_liste	/fr/docs/conflicting/Learn/CSS/Styling_text/Styling_lists
 /fr/docs/Apprendre/CSS/Introduction_à_CSS	/en-US/docs/Learn/CSS/First_steps
 /fr/docs/Apprendre/CSS/Introduction_à_CSS/Attribute_selectors	/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors
@@ -129,8 +129,8 @@
 /fr/docs/Apprendre/CSS/Les_bases/Le_modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 /fr/docs/Apprendre/CSS/Les_bases/Les_sélecteurs	/en-US/docs/Learn/CSS/Building_blocks/Selectors
 /fr/docs/Apprendre/CSS/Les_propriétés_CSS	/fr/docs/Learn/CSS/Building_blocks/Selectors
-/fr/docs/Apprendre/CSS/Utiliser_CSS_dans_une_page_web	/fr/docs/conflicting/Learn/CSS/First_steps/How_CSS_works
-/fr/docs/Apprendre/CSS/formatage_texte_CSS	/fr/docs/conflicting/Learn/CSS/Styling_text/Fundamentals_9e7ba587262abbb02304cbc099c1f0d8
+/fr/docs/Apprendre/CSS/Utiliser_CSS_dans_une_page_web	/fr/docs/Learn/CSS/First_steps/How_CSS_works
+/fr/docs/Apprendre/CSS/formatage_texte_CSS	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Apprendre/CSS/styliser_boites	/en-US/docs/Learn/CSS/Building_blocks
 /fr/docs/Apprendre/CSS/styliser_boites/A_cool_looking_box	/fr/docs/Learn/CSS/Building_blocks/A_cool_looking_box
 /fr/docs/Apprendre/CSS/styliser_boites/Advanced_box_effects	/fr/docs/Learn/CSS/Building_blocks/Advanced_styling_effects
@@ -1262,7 +1262,7 @@
 /fr/docs/Firefox_8_for_developers	/fr/docs/Mozilla/Firefox/Releases/8
 /fr/docs/Firefox_9_for_developers	/fr/docs/Mozilla/Firefox/Releases/9
 /fr/docs/Firefox_pour_les_développeurs	/fr/docs/Mozilla/Firefox/Releases
-/fr/docs/Games/Index	/fr/docs/conflicting/Games
+/fr/docs/Games/Index	/fr/docs/Games
 /fr/docs/Games/Workflows	/fr/docs/Games/Tutorials
 /fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
 /fr/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field	/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
@@ -2967,7 +2967,7 @@
 /fr/docs/Jeux	/fr/docs/Games
 /fr/docs/Jeux/Anatomie	/fr/docs/Games/Anatomy
 /fr/docs/Jeux/Exemples	/fr/docs/Games/Examples
-/fr/docs/Jeux/Index	/fr/docs/conflicting/Games
+/fr/docs/Jeux/Index	/fr/docs/Games
 /fr/docs/Jeux/Introduction	/fr/docs/Games/Introduction
 /fr/docs/Jeux/Introduction_to_HTML5_Game_Gevelopment_(summary)	/fr/docs/Games/Introduction_to_HTML5_Game_Development
 /fr/docs/Jeux/Publier_jeux	/fr/docs/Games/Publishing_games
@@ -2997,10 +2997,13 @@
 /fr/docs/Le_principe_de_fermeture_en_JavaScript:La_résolution_des_noms_de_propriété_sur_les_objets	/fr/docs/Web/JavaScript/Closures
 /fr/docs/Le_principe_de_fermeture_en_JavaScript:Résolution_d'identifiants,_contextes_d'exécution_et_visibilité_des_variables	/fr/docs/Web/JavaScript/Closures
 /fr/docs/Le_principe_de_fermeture_en_JavaScript:Utilisation_des_fermetures	/fr/docs/Web/JavaScript/Closures
+/fr/docs/Learn/CSS/Basic_text_styling_in_CSS	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Learn/CSS/First_steps/Qu_est_ce_que_CSS	/fr/docs/Learn/CSS/First_steps/What_is_CSS
 /fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge	/fr/docs/Learn/CSS/First_steps/Styling_a_biography_page
+/fr/docs/Learn/CSS/Howto/style_text	/fr/docs/Learn/CSS/Styling_text/Fundamentals
 /fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens	/fr/docs/Learn/CSS/Styling_text/Styling_links
 /fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte	/fr/docs/Learn/CSS/Styling_text/Fundamentals
+/fr/docs/Learn/CSS/Using_CSS_in_a_web_page	/fr/docs/Learn/CSS/First_steps/How_CSS_works
 /fr/docs/Learn/Index	/fr/docs/conflicting/Learn
 /fr/docs/Learn/JavaScript/Asynchronous/Async_await	/fr/docs/Learn/JavaScript/Asynchronous/Promises
 /fr/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach	/fr/docs/Learn/JavaScript/Asynchronous
