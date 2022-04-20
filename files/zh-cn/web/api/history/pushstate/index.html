@@ -25,7 +25,7 @@ translation_of: Web/API/History/pushState
 <dl>
  <dt><code>state</code></dt>
  <dd>状态对象是一个JavaScript对象，它与<code>pushState()</code>创建的新历史记录条目相关联。 每当用户导航到新状态时，都会触发{{event("popstate")}}事件，并且该事件的状态属性包含历史记录条目的状态对象的副本。</dd>
- <dd>状态对象可以是任何可以序列化的对象。 因为Firefox将状态对象保存到用户的磁盘上，以便用户重新启动浏览器后可以将其还原，所以我们对状态对象的序列化表示施加了640k个字符的大小限制。 如果将序列化表示形式大于此状态的状态对象传递给<code>pushState()</code>，则该方法将引发异常。 如果您需要更多空间，建议您使用 {{domxref("Window.sessionStorage", "sessionStorage")}}或者{{domxref("Window.localStorage", "localStorage")}}。</dd>
+ <dd>状态对象可以是任何可以序列化的对象。 因为Firefox将状态对象保存到用户的磁盘上，以便用户重新启动浏览器后可以将其还原，所以我们对状态对象的序列化表示施加了2MiB的大小限制。 如果将序列化表示形式大于此状态的状态对象传递给<code>pushState()</code>，则该方法将引发异常。 如果您需要更多空间，建议您使用 {{domxref("Window.sessionStorage", "sessionStorage")}}或者{{domxref("Window.localStorage", "localStorage")}}。</dd>
  <dt><code>title</code></dt>
  <dd><a href="https://github.com/whatwg/html/issues/2174">当前大多数浏览器都忽略此参数</a>，尽管将来可能会使用它。 在此处传递空字符串应该可以防止将来对方法的更改。 或者，您可以为要移动的状态传递简短的标题。</dd>
  <dt><code>url</code> {{optional_inline}}</dt>
