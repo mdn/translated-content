@@ -27,7 +27,7 @@ Dans cet article, nous aurons un premier contact avec React. Nous découvrirons 
         <p>
           React utilise une syntaxe embarquant du HTML dans du JavaScript appelée JSX (JavaScript et XML).
           Une familiarité avec HTML et JavaScript vous aidera à apprendre JSX, et a mieux
-          identififier si les bugs de votre application sont liés à JavaScript ou au domaine
+          identifier si les bugs de votre application sont liés à JavaScript ou au domaine
           plus spécifique de React.
         </p>
       </td>
@@ -98,7 +98,7 @@ const header = React.createElement("header", null,
 );
 ```
 
-Il est _possible_ d'ignorer l'étape de compilation et d'utiliser [`React.createElement()`](https://reactjs.org/docs/react-api.html#createelement) pour écrire vous-même votre interface utilisateur. En faisant cela, cependant, vous perdez l'avantage déclaratif de JSX et votre code devient moins lisible. La compilation est une étape supplémentaire dans le processus de développement, mais de nombreux personnes de la communauté React pensent que la lisibilité de JSX en vaut la peine. De plus, des outils populaires intègrent la compilation JSX vers JavaScript à leur processus de configuration. Vous n'avez pas à configurer la compilation vous-même, sauf si vous le souhaitez.
+Il est _possible_ d'ignorer l'étape de compilation et d'utiliser [`React.createElement()`](https://reactjs.org/docs/react-api.html#createelement) pour écrire vous-même votre interface utilisateur. En faisant cela, cependant, vous perdez l'avantage déclaratif de JSX et votre code devient moins lisible. La compilation est une étape supplémentaire dans le processus de développement, mais de nombreuses personnes de la communauté React pensent que la lisibilité de JSX en vaut la peine. De plus, des outils populaires intègrent la compilation JSX vers JavaScript à leur processus de configuration. Vous n'avez pas à configurer la compilation vous-même, sauf si vous le souhaitez.
 
 Étant donné que JSX est un mélange de HTML et de JavaScript, certaines personnes le trouvent intuitif. D'autres disent que sa nature mixte le rend déroutant. Cependant, une fois que vous serez à l'aise avec cela, vous pourrez créer des interfaces utilisateur plus rapidement et de manière intuitive, permettant aux autres de mieux comprendre votre code d'un coup d'œil.
 
@@ -126,7 +126,7 @@ Consultez également ces liens pour plus d'informations&nbsp;:
 - [Introduction à npx (en anglais) sur le blog npm](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
 - [La documentation de l'outil create-react-app](https://create-react-app.dev/)
 
-### Initialisation de de votre application
+### Initialisation de votre application
 
 create-react-app demande un argument&nbsp;: le nom que vous souhaitez donner à votre application. create-react-app utilise ce nom pour créer un nouveau répertoire, puis y crée les fichiers nécessaires. Assurez-vous que votre terminal soit ouvert à l'emplacement souhaité pour votre application sur votre disque dur, puis exécutez la commande suivante dans votre terminal&nbsp;:
 
@@ -496,7 +496,7 @@ Dans React&nbsp;:
   - [Démarrer avec Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - [Créer votre premier composant Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - [Afficher une liste de composants Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Ajouter un formulaire de tâches&nbsp;: événements Vue, méthodes, modèles](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
+  - [Ajouter un formulaire de tâches&nbsp;: évènements Vue, méthodes, modèles](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
   - [Donner du style aux composants Vue avec CSS](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
   - [Utiliser les propriétés calculées de Vue](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
   - [Rendu conditionnel&nbsp;: éditer une liste de tâches existante](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
@@ -505,20 +505,20 @@ Dans React&nbsp;:
 
 - Svelte
 
-  - [Getting started with Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
+  - [Démarrer avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
+  - [Débuter notre application Svelte de liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
+  - [Comportement dynamique de Svelte&nbsp;: manipuler les variables et les props](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
+  - [Organiser notre application Svelte en composants](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
+  - [Utilisation avancée de Svelte&nbsp;: réactivité, cycle de vie, accessibilité](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
+  - [Utiliser les <i lang="en">stores</i> Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
+  - [Prise en charge de TypeScript avec Svelte](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
+  - [Déploiement et prochaines étapes](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
   
 - Angular
   
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Démarrer avec Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Débuter notre application Angular de liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - [Mettre en forme notre application Angular](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - [Créer un composant pour un élément](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - [Filtrer les éléments de notre liste de tâches](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - [Compiler des applications Angular et autres ressources](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
