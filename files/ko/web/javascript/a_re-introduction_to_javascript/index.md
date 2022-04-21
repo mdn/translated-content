@@ -30,17 +30,17 @@ JavaScript는 유형 및 연산자, 표준 내장 객체 및 메서드가 있는
 어떤 언어에서라도 기초가 되는 부분인 타입을 살펴보는 것부터 시작해봅시다. JavaScript 프로그램은 값을 다루고 해당 값은 모두 타입을 가지고 있습니다. JavaScript의 타입은 다음과 같습니다.
 
 - [수 (Number)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number)
-- [BigInt](/ko/docs/docs/Web/JavaScript/Data_structures#bigint_type)
+- [BigInt](/ko/docs/Web/JavaScript/Data_structures#bigint_type)
 - [문자열 (String)](/ko/docs/Web/JavaScript/Reference/Global_Objects/String)
 - [부울 (Boolean)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [함수 (Function)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - [객체 (Object)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)
 - [기호 (Symbol)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (ES2015에 새롭게 추가)
 
-그리고 약간 특별한 타입인 [undefined](/ko/docs/docs/Web/JavaScript/Data_structures#undefined_type)와 [null](/ko/docs/docs/Web/JavaScript/Data_structures#null_type)이 있습니다. 또한 객체의 특별한 종류인 [배열(Array) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array). 그리고 자유롭게 사용할 수 있는 [날짜(Date) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date) 와 [정규식(RegExp) 객체](ko/Web/JavaScript/Reference/Global_Objects/RegExp)가 있습니다. 그리고 기술적으로 정확히 말해 함수(Function)는 단지 객체의 특별한 타입으로 취급됩니다. 따라서 타입 구조도를 정리해보면 다음과 같습니다.
+그리고 약간 특별한 타입인 [undefined](/ko/docs/Web/JavaScript/Data_structures#undefined_type)와 [null](/ko/docs/Web/JavaScript/Data_structures#null_type)이 있습니다. 또한 객체의 특별한 종류인 [배열(Array) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array). 그리고 자유롭게 사용할 수 있는 [날짜(Date) 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date) 와 [정규식(RegExp) 객체](ko/Web/JavaScript/Reference/Global_Objects/RegExp)가 있습니다. 그리고 기술적으로 정확히 말해 함수(Function)는 단지 객체의 특별한 타입으로 취급됩니다. 따라서 타입 구조도를 정리해보면 다음과 같습니다.
 
 - [수 (Number)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number)
-- [BigInt](/ko/docs/docs/Web/JavaScript/Data_structures#bigint_type)
+- [BigInt](/ko/docs/Web/JavaScript/Data_structures#bigint_type)
 - [문자열 (String)](/ko/docs/Web/JavaScript/Reference/Global_Objects/String)
 - [부울 (Boolean)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [기호 (Symbol)](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
