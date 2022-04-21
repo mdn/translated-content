@@ -24,7 +24,7 @@ translation_of: Mozilla/Firefox/Releases/11
  <li>Calling {{domxref("document.mozCancelFullScreen()")}} now restores the previously full-screen element if some other element was in full-screen mode when the current element's {{domxref("element.mozRequestFullScreen()")}} method was called.</li>
  <li>The {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} method no longer supports a no-argument form. This form was not used much and is unlikely to become part of the standard.</li>
  <li>SVG-as-an-image can now be drawn into a canvas without <a href="/en-US/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F" title="en-US/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F">tainting the canvas</a>.</li>
- <li>The non-standard <code>countryCode</code> property of the <code>GeoPositionAddress</code> interface has been removed; see {{interface("nsIDOMGeoPositionAddress")}}.</li>
+ <li>The non-standard <code>countryCode</code> property of the <code>GeoPositionAddress</code> interface has been removed; see <code>nsIDOMGeoPositionAddress</code>.</li>
  <li><a href="/en-US/docs/Server-sent_events" title="Server-sent events">Server-sent events</a> now support <a href="/en-US/docs/HTTP_access_control" title="HTTP access control (CORS)">CORS</a>.</li>
  <li>In the past, when the user followed a link, the values set on the {{domxref("window.navigator")}} object were retained by the new page. Now a new <code>navigator</code> object is created for the new page. This makes Firefox behave like all other browsers.</li>
 </ul>
@@ -76,16 +76,16 @@ translation_of: Mozilla/Firefox/Releases/11
 </dl>
 <h3 id="Interface_changes">Interface changes</h3>
 <ul>
- <li>The {{interface("mozIAsyncHistory")}} interface has a new method {{ifmethod("mozIAsyncHistory","isURIVisited")}} to check if a URI has been visited.</li>
- <li>A new interface {{interface("mozIVisitStatusCallback")}} has been added to provide callback handling functionality for {{ifmethod("mozIAsyncHistory","isURIVisited")}}.</li>
- <li>The {{interface("nsIMacDockSupport")}} interface now supports adding a text badge to the application's icon in the Dock using its new <code>badgeText</code> attribute.</li>
- <li>In the {{interface("nsINavHistoryResultObserver")}} interface, you now need to implement {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} instead of the obsolete <code>containerOpened()</code> and <code>containerClosed()</code> methods.</li>
+ <li>The <code>mozIAsyncHistory</code> interface has a new method {{ifmethod("mozIAsyncHistory","isURIVisited")}} to check if a URI has been visited.</li>
+ <li>A new interface <code>mozIVisitStatusCallback</code> has been added to provide callback handling functionality for {{ifmethod("mozIAsyncHistory","isURIVisited")}}.</li>
+ <li>The <code>nsIMacDockSupport</code> interface now supports adding a text badge to the application's icon in the Dock using its new <code>badgeText</code> attribute.</li>
+ <li>In the <code>nsINavHistoryResultObserver</code> interface, you now need to implement {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} instead of the obsolete <code>containerOpened()</code> and <code>containerClosed()</code> methods.</li>
 </ul>
 <h4 id="Removed_interfaces">Removed interfaces</h4>
 <p>The following interfaces were implementation details that are no longer needed:</p>
 <ul>
- <li>{{interface("nsICharsetResolver")}}</li>
- <li>{{interface("nsIDOMNSElement")}}, see <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=707576" title="https://bugzilla.mozilla.org/show_bug.cgi?id=707576">bug707576</a>, use {{interface("nsIDOMElement")}} instead.</li>
+ <li><code>nsICharsetResolver</code></li>
+ <li><code>nsIDOMNSElement</code>, see <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=707576" title="https://bugzilla.mozilla.org/show_bug.cgi?id=707576">bug707576</a>, use <code>nsIDOMElement</code> instead.</li>
 </ul>
 <h3 id="Theme-related_changes">Theme-related changes</h3>
 <ul>
