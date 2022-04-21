@@ -47,7 +47,7 @@ translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
  <li>协议版本信息现在会随着每个请求发送（<code>HTTP/1.0</code>被追加到了<code>GET</code>行）。</li>
  <li>状态码会在响应开始时发送，使浏览器能了解请求执行成功或失败，并相应调整行为（如更新或使用本地缓存）。</li>
  <li>引入了HTTP头的概念，无论是对于请求还是响应，允许传输元数据，使协议变得非常灵活，更具扩展性。</li>
- <li>在新HTTP头的帮助下，具备了传输除纯文本HTML文件以外其他类型文档的能力（感谢{{HTTPHeader("Content-Type")}}头）。</li>
+ <li>在新HTTP头的帮助下，具备了传输除纯文本HTML文件以外其他类型文档的能力（凭借{{HTTPHeader("Content-Type")}}头）。</li>
 </ul>
 
 <p>一个典型的请求看起来就像这样：</p>
@@ -89,7 +89,7 @@ Content-Type: text/gif
  <li>支持响应分块。</li>
  <li>引入额外的缓存控制机制。</li>
  <li>引入内容协商机制，包括语言，编码，类型等，并允许客户端和服务器之间约定以最合适的内容进行交换。</li>
- <li>感谢{{HTTPHeader("Host")}}头，能够使不同域名配置在同一个IP地址的服务器上。</li>
+ <li>凭借{{HTTPHeader("Host")}}头，能够使不同域名配置在同一个IP地址的服务器上。</li>
 </ul>
 
 <p>一个典型的请求流程， 所有请求都通过一个连接实现，看起来就像这样：</p>
