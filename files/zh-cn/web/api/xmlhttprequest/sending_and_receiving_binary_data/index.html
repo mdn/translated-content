@@ -126,7 +126,7 @@ req.sendAsBinary(aBody);
 
 <p>第五行使用<code>sendAsBinary()</code>方法发送这个请求.</p>
 
-<p>你也可以通过将一个{{ interface("nsIFileInputStream") }}对象实例传给<a class="internal" href="/zh-cn/DOM/XMLHttpRequest#send()" title="/zh-cn/XMLHttpRequest#send()"><code>send()</code></a>方法来发送二进制内容,这样的话,你不需要自己去设置<code>Content-Length请求头</code>的大小,程序会自动设置:</p>
+<p>你也可以通过将一个<code>nsIFileInputStream</code>对象实例传给<a class="internal" href="/zh-cn/DOM/XMLHttpRequest#send()" title="/zh-cn/XMLHttpRequest#send()"><code>send()</code></a>方法来发送二进制内容,这样的话,你不需要自己去设置<code>Content-Length请求头</code>的大小,程序会自动设置:</p>
 
 <pre class="brush: js notranslate">// 新建一个文件流.
 var stream = Components.classes["@mozilla.org/network/file-input-stream;1"]
