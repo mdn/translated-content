@@ -181,7 +181,7 @@ _Méthodes héritées de son parent,_ _{{domxref("HTMLElement")}}._
       <td>
         <code
           >void mozFetchAsStream(in
-          {{interface("nsIInputStreamCallback")}} callback,
+          `nsIInputStreamCallback` callback,
           [optional] in DOMString type)</code
         >
         {{non-standard_inline}}

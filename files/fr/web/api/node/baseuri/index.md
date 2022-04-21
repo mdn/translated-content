@@ -57,4 +57,4 @@ Vous pouvez utiliser `{{domxref("element")}}.baseURI` pour obtenir l'URL de base
 
 - l'élément {{HTMLElement("base")}} (HTML)
 - l'attribut [`xml:base`](/fr/docs/Introduction_%C3%A0_XML/xml:base) (documents XML).
-- {{domxref("Node.baseURIObject")}} - une variante de cette API pour les add-ons Mozilla et le code interne. Renvoie l'URL de base en tant que {{interface("nsIURI")}}.
+- {{domxref("Node.baseURIObject")}} - une variante de cette API pour les add-ons Mozilla et le code interne. Renvoie l'URL de base en tant que `nsIURI`.

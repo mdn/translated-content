@@ -15,7 +15,7 @@ original_slug: Web/API/DOMUserData
 
 <p>Notez que bien qu'il puisse s'agir d'un objet, dans Mozilla, elle peut être renvoyée comme chaîne de caractères ou un autre type, si elle a été définie ainsi (par exemple, <code><a href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData">Node.setUserData</a>()</code> et <code><a href="/En/DOM/Node.getUserData" title="En/DOM/Node.getUserData">Node.getUserData</a>()</code>).</p>
 
-<p><code>DOMUserData</code> n'est pas persistante ni sérialisée et ne peut être présente après un redémarrage de l'application ou un plantage. Si vous êtes intéressé par la persistance des données, vous devriez plutôt utiliser {{interface("nsISessionStore")}}.</p>
+<p><code>DOMUserData</code> n'est pas persistante ni sérialisée et ne peut être présente après un redémarrage de l'application ou un plantage. Si vous êtes intéressé par la persistance des données, vous devriez plutôt utiliser <code>nsISessionStore</code>.</p>
 
 <h2 id="Specifications" name="Specifications">Spécifications</h2>
 
@@ -41,5 +41,5 @@ original_slug: Web/API/DOMUserData
 <ul>
  <li>Autres API obsolètes pour userData : <a href="/En/DOM/UserDataHandler" title="En/DOM/UserDataHandler"><code>UserDataHandler</code></a>, <a href="/En/DOM/Node.getUserData" title="En/DOM/Node.getUserData"><code>node.getUserData</code></a>, <a href="/En/DOM/Node.setUserData" title="En/DOM/Node.setUserData"><code>node.setUserData</code></a></li>
  <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Comment/Utiliser_attributs_donnes">Utiliser les attributs de données</a>  est l'alternative moderne (voir attributs {{htmlattrxref("data-*")}}, {{domxref("HTMLElement.dataset")}})</li>
- <li>{{ interface("nsISessionStore") }}</li>
+ <li><code>nsISessionStore</code></li>
 </ul>

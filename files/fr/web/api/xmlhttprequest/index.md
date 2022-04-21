@@ -65,7 +65,7 @@ _Cette interface hérite également des propriétés de {{domxref("XMLHttpReques
 ### Propriétés non-standard
 
 - {{domxref("XMLHttpRequest.channel")}}{{ReadOnlyInline}}
-  - : Un objet {{Interface("nsIChannel")}}. Le canal à utiliser par l'objet lorsqu'il effectue la requête.
+  - : Un objet `nsIChannel`. Le canal à utiliser par l'objet lorsqu'il effectue la requête.
 - {{domxref("XMLHttpRequest.mozAnon")}}{{ReadOnlyInline}}
   - : Un booléen. S'il est vrai, la requête sera envoyée sans cookie ou en-tête d'autorisation.
 - {{domxref("XMLHttpRequest.mozSystem")}}{{ReadOnlyInline}}
