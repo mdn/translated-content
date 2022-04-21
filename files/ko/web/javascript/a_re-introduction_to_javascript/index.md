@@ -918,8 +918,6 @@ function trivialNew(constructor, ...args) {
 }
 ```
 
-This isn't an exact replica of new as it doesn't set up the prototype chain (it would be difficult to illustrate). This is not something you use very often, but it's useful to know about. In this snippet, ...args (including the ellipsis) is called the "rest arguments" — as the name implies, this contains the rest of the arguments.
-
 이 구현은, 설명하긴 어렵지만, 프로토타입 체인을 설정하지 않았으므로 `new`의 완벽한 대체물은 아닙니다. 자주 사용하진 않겠지만, 알아놓으면 좋은 내용입니다. 이 스니펫(snippet)에서 생략 부호를 포함한 매개변수 `...args`는 "[나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)"입니다. 이름과 같이 잔여 전달인자를 포함합니다.
 
 그러므로 이렇게 호출하는 것은
