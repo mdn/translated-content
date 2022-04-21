@@ -38,7 +38,7 @@ Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui on
 
 ## Changements pour les développeurs Mozilla et développeurs d'add-on
 
-- Le paramètre `properties` a été supprimé des méthodes {{ifmethod('nsITreeView','getCellProperties')}}, {{ifmethod('nsITreeView','getColumnProperties')}} et {{ifmethod('nsITreeView','getRowProperties')}} de l'interface {{interface('nsITreeView')}}. Ces méthodes retourneront maintenant un string de noms de propriétés séparées par des espaces. ({{bug('407956')}})
+- Le paramètre `properties` a été supprimé des méthodes {{ifmethod('nsITreeView','getCellProperties')}}, {{ifmethod('nsITreeView','getColumnProperties')}} et {{ifmethod('nsITreeView','getRowProperties')}} de l'interface `nsITreeView`. Ces méthodes retourneront maintenant un string de noms de propriétés séparées par des espaces. ({{bug('407956')}})
 - La méthode {{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} a été implémentée et retourne le nom de toutes les [propriétés CSS](/fr/docs/CSS/CSS_Reference) supportées.
 - Voir [tous les changements](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/).
 

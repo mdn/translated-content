@@ -71,26 +71,26 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 
 ### Changements dans les interfaces
 
-- {{interface("nsIDOMWindowUtils")}}
+- `nsIDOMWindowUtils`
   - : `aModifiers` de `sendMouseEvent()`, `sendTouchEvent()`, `sendMouseEventToWindow()`, `sendMouseScrollEvent()` et `sendKeyEvent()` supporte toutes les touches de modification qui sont supportées par [`KeyboardEvent.getModifierState()`](/fr/docs/DOM/KeyboardEvent#getModifierState%28%29). Utiliser les valeurs `MODIFIER_*`. Et désormais le 5ème paramètre de `sendKeyEvent()` est changé d'un `boolean` vers un `unsigned long`. Pour la compatibilité ascendante, si l'appelant passe `true` ou `false`, le comportement n'est pas changé. Ce changement permet aux appelants d'indiquer l'emplacement de la touche.
-- {{interface("nsIBrowserHistory")}}
+- `nsIBrowserHistory`
   - : La méthode `hidePage()` n'a jamais été implémentée, et a été entièrement supprimée dans cette version. La méthode `addPageWithDetails()` a également été supprimée dans le cadre des travaux pour faire une API [Places](/fr/docs/Places) asynchrone ; à la place, utilisez plutôt {{ifmethod("mozIAsyncHistory", "updatePlaces")}}. De plus, l'attribut `count` a été retiré, il ne renvoyé pas un comptage réel à certain moment (à la place, il indiqué simplement si les entrées existées). Vous pouvez utiliser à la place {{ifattribute("nsINavHistoryService", "hasHistoryEntries")}}.
 
 <!---->
 
-- {{interface("inIDOMUtils")}}
+- `inIDOMUtils`
   - : La méthode `parseStyleSheet()` permet d'ajouter et d'analyser des feuilles de style.
 
 #### Nouvelles interfaces
 
-- {{interface("nsISpeculativeConnect")}}
+- `nsISpeculativeConnect`
   - : Fournit un moyen de suggérer la couche réseau que vous allez être susceptibles de demander l'ouverture d'une connexion à un URI donné dans un futur proche. Cela permet à la couche réseau d'entamer le processus, qui a parfois une forte latence, d'ouvrir une nouvelle connexion réseau à l'avance.
 
 #### Interfaces supprimées
 
 Les interfaces suivantes ont été supprimées.
 
-- {{interface("nsIGlobalHistory")}}
+- `nsIGlobalHistory`
 
 ## Voir également
 

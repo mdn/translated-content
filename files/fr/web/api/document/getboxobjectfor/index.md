@@ -19,7 +19,7 @@ Renvoie un `boxObject` (x, y, largeur, hauteur) pour un élément spécifié.
 
     boxObject = document.getBoxObjectFor(element);
 
-- `boxObject` est un {{interface("nsIBoxObject")}}.
+- `boxObject` est un `nsIBoxObject`.
 - `element` est un {{domxref("element","DOMElement")}}
 
 ## Exemple

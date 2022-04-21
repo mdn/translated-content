@@ -10,7 +10,7 @@ translation_of: Web/API/Document/documentURIObject
 ---
 {{ ApiRef("DOM") }}
 
-La propriété en lecture seule **`Document.documentURIObject`** renvoie un objet {{ Interface("nsIURI") }} représentant l'URI du [document](/fr/docs/Web/API/document).
+La propriété en lecture seule **`Document.documentURIObject`** renvoie un objet `nsIURI` représentant l'URI du [document](/fr/docs/Web/API/document).
 
 Cette propriété fonctionne uniquement pour les scripts privilégiés (UniversalXPConnect), comme le code des extensions. Pour le contenu Web, elle n'a aucune signification particulière et peut être utilisée comme n'importe quelle propriété personnalisée.
 
