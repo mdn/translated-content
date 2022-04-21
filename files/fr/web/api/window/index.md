@@ -43,7 +43,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Renvoie le rapport entre les pixels physiques et les pixels indépendants du périphérique dans l'affichage en cours.
 - {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
-  - : Récupère les arguments passés à la fenêtre (si c'est une boîte de dialogue) au moment où {{domxref ("window.showModalDialog()")}} a été appelé. C'est un {{Interface("nsIArray")}}.
+  - : Récupère les arguments passés à la fenêtre (si c'est une boîte de dialogue) au moment où {{domxref ("window.showModalDialog()")}} a été appelé. C'est un `nsIArray`.
 - {{domxref("Window.directories")}} {{obsolete_inline}}
   - : Synonyme de {{domxref("window.personalbar")}}
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
@@ -94,7 +94,7 @@ Notez que les propriétés qui sont des objets (par exemple, pour redéfinir le 
 - {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}} {{Deprecated_inline}}
   - : Le temps en millisecondes depuis l'instant auquel le cycle d'animation en cours a commencé.
 - {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}
-  - : Renvoie la coordonnée horizontale (X) du coin supérieur gauche du point de vue de la fenêtre, en coordonnées d'écran. Cette valeur est restituée en pixels CSS. Voir `mozScreenPixelsPerCSSPixel` dans {{interface("nsIDOMWindowUtils")}} pour un facteur de conversion pour s'adapter aux pixels de l'écran si nécessaire.
+  - : Renvoie la coordonnée horizontale (X) du coin supérieur gauche du point de vue de la fenêtre, en coordonnées d'écran. Cette valeur est restituée en pixels CSS. Voir `mozScreenPixelsPerCSSPixel` dans `nsIDOMWindowUtils` pour un facteur de conversion pour s'adapter aux pixels de l'écran si nécessaire.
 - {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Renvoie la coordonnée verticale (Y) du coin supérieur gauche du point de vue de la fenêtre, en coordonnées d'écran. Cette valeur est indiquée en pixels CSS. Voir `mozScreenPixelsPerCSSPixel` pour un facteur de conversion pour s'adapter aux pixels de l'écran si nécessaire.
 - {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}}

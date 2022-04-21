@@ -30,7 +30,7 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.baseURI")}} {{readonlyInline}}
   - : Retourne une {{domxref("DOMString")}} (_chaine de caractères_) représentant l'URL de base du document contenant le `Node`. En HTML, il correspond au protocole, au nom de domaine et à la structure du répertoire, jusqu'au dernier `/`.
 - {{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline()}}
-  - : (Non disponible pour le contenu Web). L'objet en lecture seule {{Interface ("nsIURI")}} représentant l'URI de base pour l'élément.
+  - : (Non disponible pour le contenu Web). L'objet en lecture seule `nsIURI` représentant l'URI de base pour l'élément.
 - {{DOMxRef("Node.childNodes")}} {{readonlyInline}}
   - : Renvoie un {{domxref ("NodeList")}} contenant tous les enfants de ce nœud. {{domxref ("NodeList")}} signifie que si les enfants du `Node` changent, l'objet {{domxref ("NodeList")}} est automatiquement mis à jour.
 - {{DOMxRef("Node.firstChild")}} {{readonlyInline}}
@@ -89,7 +89,7 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
   - : Est une {{domxref("DOMString")}} représentant le préfixe de l'espace de nom du nœud ou `null`  si aucun préfixe n'est spécifié.
 - {{DOMxRef("Node.nodePrincipal")}} {{Non-standard_inline}}{{Obsolete_Inline("gecko46")}}
-  - : Un {{Interface("nsIPrincipal")}} représentant le nœud principal.
+  - : Un `nsIPrincipal` représentant le nœud principal.
 - {{DOMxRef("Node.rootNode")}} {{Obsolete_Inline}}{{ReadOnlyInline}}
   - : Retourne un objet {{DOMxRef("Node")}} représentant le noeud le plus haut dans l'arbre ou le noeud en cours s'il est le noeud le plus haut de l'arbre. Cette propriété a été remplacée par {{DOMxRef("Node.getRootNode()")}}.
 
