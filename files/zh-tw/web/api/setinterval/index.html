@@ -309,7 +309,7 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 
 <pre class="brush:js">var intervalID = setInterval(function(arg1) {}.bind(undefined, 10), 1000);</pre>
 
-<p>{{h3_gecko_minversion("Inactive tabs", "5.0")}}</p>
+<h3 id="inactive_tabs">Inactive tabs</h3>
 
 <p>Starting in Gecko 5.0 {{geckoRelease("5.0")}}, intervals are clamped to fire no more often than once per second in inactive tabs.</p>
 
@@ -610,11 +610,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<div>
-
-
 <p>{{Compat("api.WindowOrWorkerGlobalScope.setInterval")}}</p>
-</div>
 
 <h2 id="See_also">See also</h2>
 
