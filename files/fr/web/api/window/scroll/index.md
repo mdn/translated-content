@@ -23,7 +23,7 @@ Fait glisser la fenêtre vers une position particulière du document
 
 ### Notes
 
-[window.scrollTo](en/Window.scrollTo) a un effet identique à cette méthode. Pour se déplacer par pas dans la page, utilisez [window.scrollBy](en/Window.scrollBy). Jetez aussi un œil à [window.scrollByLines](en/Window.scrollByLines) et [window.scrollByPages](en/Window.scrollByPages).
+[window.scrollTo](scrollTo) a un effet identique à cette méthode. Pour se déplacer par pas dans la page, utilisez [window.scrollBy](scrollBy). Jetez aussi un œil à [window.scrollByLines](scrollByLines) et [window.scrollByPages](scrollByPages).
 
 ### Specification
 
