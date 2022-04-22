@@ -1,82 +1,54 @@
 ---
-title: accessKeyLabel
+title: HTMLElement.accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
+browser-compat: api.HTMLElement.accessKeyLabel
 translation_of: Web/API/HTMLElement/accessKeyLabel
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLElement.accessKeyLabel</code></strong> は読み取り専用プロパティで、 {{jsxref("String")}} で要素に割り当てられたアクセスキーを (あれば) 返します。それ以外の場合は空文字列を返します。</p>
+**`HTMLElement.accessKeyLabel`** は読み取り専用プロパティで、要素に割り当てられたアクセスキーを（あれば）文字列で返します。それ以外の場合は空文字列を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate"><var>label</var> = <var>element</var>.accessKeyLabel
-</pre>
+```js
+label = element.accessKeyLabel
+```
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">var node = document.getElementById('btn1');
-if (node.accessKeyLabel) {
-  node.title += ' [' + node.accessKeyLabel + ']';
-} else {
-  node.title += ' [' + node.accessKey + ']';
-}
+```js
+var btn = document.getElementById('btn1');
+var shortcutLabel = btn.accessKeyLabel || btn.accessKey;
+btn.title += ' [' + shortcutLabel.toUpperCase() + ']';
 
-node.onclick = function () {
-  var p = document.createElement('p');
-  p.textContent = 'Clicked!';
-  node.parentNode.appendChild(p);
+btn.onclick = function () {
+  var feedback = document.createElement('output');
+  feedback.textContent = '押されました';
+  btn.insertAdjacentElement('afterend', feedback);
 };
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;button accesskey="h" title="Caption" id="btn1"&gt;Hover me&lt;/button&gt;
-</pre>
+```html
+<button accesskey="h" title="キャプション" id="btn1">マウスを当ててください</button>
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "interaction.html#dom-accesskeylabel", "HTMLElement.accessKeyLabel")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義から変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>削除。 <a href="https://github.com/w3c/html/pull/144">pull w3c/html#144</a>, <a href="https://github.com/w3c/html/issues/99">issue w3c/html#99</a>, <a href="https://discourse.wicg.io/t/accesskeylabel-author-accessible-info-about-shortcuts/1392/3">WICG discussion</a>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#dom-accesskeylabel", "HTMLElement.accessKeyLabel")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>{{SpecName('HTML WHATWG')}} のスナップショット、初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("api.HTMLElement.accessKeyLabel")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("element.accessKey")}}</li>
- <li><a href="/ja/docs/Web/HTML/Global_attributes/accesskey">accesskey</a> グローバル属性</li>
-</ul>
+- {{domxref("HTMLElement.accessKey")}}
+- [accesskey](/ja/docs/Web/HTML/Global_attributes/accesskey) グローバル属性
