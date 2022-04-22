@@ -3,109 +3,103 @@ title: 'HTMLElement: beforeinput イベント'
 slug: Web/API/HTMLElement/beforeinput_event
 tags:
   - API
-  - Event
+  - イベント
   - HTML DOM
   - HTMLElement
   - InputEvent
-  - Reference
+  - リファレンス
   - beforeinput
 translation_of: Web/API/HTMLElement/beforeinput_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p>DOM の <strong><code>beforeinput</code></strong> イベントは、{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} 要素の値が変更されようとしているときに発生します。 このイベントは、{{domxref("HTMLElement.contentEditable", "contenteditable")}} が有効になっている要素、および {{domxref("Document.designMode", "designMode")}} がオンになっている要素にも適用されます。</p>
+DOM の **`beforeinput`** イベントは、{{HTMLElement("input")}}、{{HTMLElement("select")}}、{{HTMLElement("textarea")}} 要素の値が変更されようとしているときに発生します。 このイベントは、{{domxref("HTMLElement.contentEditable", "contenteditable")}} が有効になっている要素、および {{domxref("Document.designMode", "designMode")}} がオンになっている要素にも適用されます。
 
-<p><code>contenteditable</code> や <code>designMode</code> の場合、イベントのターゲットは<strong>編集ホスト</strong>です。 これらのプロパティが複数の要素に適用された場合、編集ホストは、親が編集可能ではない直近の先祖要素になります。</p>
+これにより、ブラウザーが DOM ツリーを変更する前に、ウェブアプリケーションがテキスト編集の動作を上書きすることができ、入力イベントをより詳細に制御してパフォーマンスを向上させることができます。
+
+`contenteditable` や `designMode` の場合、イベントのターゲットは**編集ホスト**です。これらのプロパティが複数の要素に適用された場合、編集ホストは、親が編集可能ではない直近の先祖要素になります。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th>バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th>キャンセル</th>
-   <td>可</td>
-  </tr>
-  <tr>
-   <th>インターフェイス</th>
-   <td>{{DOMxRef("InputEvent")}}</td>
-  </tr>
-  <tr>
-   <th>イベントハンドラプロパティ</th>
-   <td>なし</td>
-  </tr>
-  <tr>
-   <th>同期 / 非同期</th>
-   <td>同期</td>
-  </tr>
-  <tr>
-   <th>Composed</th>
-   <td>はい</td>
-  </tr>
-  <tr>
-   <th>既定のアクション</th>
-   <td>DOM 要素の更新</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th>キャンセル</th>
+      <td>可</td>
+    </tr>
+    <tr>
+      <th>インターフェイス</th>
+      <td>{{DOMxRef("InputEvent")}}</td>
+    </tr>
+    <tr>
+      <th>イベントハンドラプロパティ</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th>同期 / 非同期</th>
+      <td>同期</td>
+    </tr>
+    <tr>
+      <th>Composed</th>
+      <td>はい</td>
+    </tr>
+    <tr>
+      <th>既定のアクション</th>
+      <td>DOM 要素の更新</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="機能の検出">機能の検出</h3>
+### 機能の検出
 
-<p>以下の関数は、 <code>beforeinput</code> に対応していれば true を返します。</p>
+以下の関数は、 `beforeinput` に対応していれば true を返します。
 
-<pre class="brush: js notranslate">function isBeforeInputEventAvailable() {
-  return typeof InputEvent.prototype.getTargetRanges === "function";
+```js
+function isBeforeInputEventAvailable() {
+  return window.InputEvent && typeof InputEvent.prototype.getTargetRanges === "function";
 }
-</pre>
+```
 
-<h3 id="Simple_logger" name="Simple_logger">単純なロガー</h3>
+### 単純なロガー
 
-<p>この例では、 {{HtmlElement("input")}} 要素に適用された新しい値に置き換える直前に、要素の現在の値をログに記録しています。</p>
+この例では、 {{HtmlElement("input")}} 要素に適用された新しい値に置き換える直前に、要素の現在の値をログに記録します。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;input placeholder="テキストを入力" name="name"/&gt;
-&lt;p id="values"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="テキストを入力" name="name"/>
+<p id="values"></p>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('values');
 
 input.addEventListener('beforeinput', updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample("Simple_logger")}}</p>
+{{EmbedLiveSample("Simple_logger")}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('UI Events', "#event-type-beforeinput", "beforeinput event")}}</td>
-   <td>{{Spec2('UI Events')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLElement.beforeinput_event")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>関連イベント: <code><a href="/ja/docs/Web/API/HTMLElement/input_event">input</a></code></li>
-</ul>
+- 関連イベント: [`input`](/ja/docs/Web/API/HTMLElement/input_event)
