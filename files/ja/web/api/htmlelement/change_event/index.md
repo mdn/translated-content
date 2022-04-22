@@ -3,69 +3,71 @@ title: 'HTMLElement: change イベント'
 slug: Web/API/HTMLElement/change_event
 tags:
   - Change
-  - Event
+  - イベント
   - HTML
   - HTML DOM
   - HTMLElement
-  - Reference
+  - リファレンス
   - Web
 translation_of: Web/API/HTMLElement/change_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-<p><code>change</code> イベントは {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素において、ユーザーによる要素の値の変更が確定したときに発生します。 {{domxref("HTMLElement/input_event", "input")}} イベントとは異なり、 <code>change</code> イベントは要素の値 (<code>value</code>) が変更されるたびに発生するとは限りません。</p>
+`change` イベントは {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素において、ユーザーによる要素の値の変更が確定したときに発行されます。 {{domxref("HTMLElement/input_event", "input")}} イベントとは異なり、 `change` イベントは要素の値 (`value`) が変更されるたびに発生するとは限りません。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("Event")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers/onchange", "onchange")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("Event")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers/onchange", "onchange")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<p>変更される要素の種類やユーザーが要素を操作する方法によって、 <code>change</code> イベントは異なる時点で発生します。</p>
+変更される要素の種類やユーザーが要素を操作する方法によって、 `change` イベントは異なる時点で発行されます。
 
-<ul>
- <li><code>{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}</code> および <code>{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}</code> の場合は、 (クリックまたはキーボードを使用して) 要素が <code>:checked</code> になったとき。</li>
- <li>ユーザが明示的に変更を確定したとき (たとえば、 {{HTMLElement("select")}} のドロップダウンの値をマウスクリックで選択した場合、 <code>{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}</code> の日付ピッカーで日付を選択した場合、 <code>{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}</code> のファイル選択ダイアログでファイルを選択した場合など)。</li>
- <li>要素の値が変更されたが、確定しないうちに要素がフォーカスを失ったとき (たとえば、 {{HTMLElement("textarea")}} または <code>{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}</code> の値を編集した後に、要素がフォーカスを失った場合)。</li>
-</ul>
+- `{{HTMLElement('input/checkbox', '&lt;input type="checkbox"&gt;')}}` 要素が（クリックやキーボードを使用して）チェックされたり解除されたりした場合
+- `{{HTMLElement('input/radio', '&lt;input type="radio"&gt;')}}` 要素がチェックされた場合（ただし介助された場合は発行されない）
+- ユーザが明示的に変更を確定したとき（たとえば、 {{HTMLElement("select")}} のドロップダウンの値をマウスクリックで選択した場合、 `{{HTMLElement('input/date', '&lt;input type="date"&gt;')}}` の日付ピッカーで日付を選択した場合、 `{{HTMLElement('input/file', '&lt;input type="file"&gt;')}}` のファイル選択ダイアログでファイルを選択した場合など）。
+- 要素の値が変更されたが、確定しないうちに要素がフォーカスを失ったとき（たとえば、 {{HTMLElement("textarea")}} または `{{HTMLElement('input/text', '&lt;input type="text"&gt;')}}` の値を編集した後に、要素がフォーカスを失った場合）。
 
-<p>HTML 仕様書には、 <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply"><code>change</code> イベントを発生させる <code>&lt;input&gt;</code> 型</a>の一覧があります。</p>
+HTML 仕様書には、 [`change` イベントを発生させる `<input>` 型](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)の一覧があります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="&lt;select>_element" name="&lt;select>_element">&lt;select&gt; 要素</h3>
+### \<select> 要素
 
-<div id="select-example">
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;label&gt;アイスクリームの味:
-  &lt;select class="ice-cream" name="ice-cream"&gt;
-    &lt;option value=""&gt;1つ選択してください …&lt;/option&gt;
-    &lt;option value="chocolate"&gt;チョコレート&lt;/option&gt;
-    &lt;option value="sardine"&gt;イワシ&lt;/option&gt;
-    &lt;option value="vanilla"&gt;バニラ&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/label&gt;
+```html
+<label>アイスクリームの味を選択してください。
+  <select class="ice-cream" name="ice-cream">
+    <option value="">1 つ選択してください …</option>
+    <option value="chocolate">チョコレート</option>
+    <option value="sardine">イワシ</option>
+    <option value="vanilla">バニラ</option>
+  </select>
+</label>
 
-&lt;div class="result"&gt;&lt;/div&gt;</pre>
+<div class="result"></div>
+```
 
-<div class="hidden">
-<pre class="brush: css notranslate">body {
+```css hidden
+body {
   display: grid;
   grid-template-areas: "select result";
 }
@@ -77,69 +79,57 @@ select {
 .result {
   grid-area: result;
 }
-</pre>
-</div>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">const selectElement = document.querySelector('.ice-cream');
+```js
+const selectElement = document.querySelector('.ice-cream');
 
-selectElement.addEventListener('change', (event) =&gt; {
+selectElement.addEventListener('change', (event) => {
   const result = document.querySelector('.result');
-  result.textContent = `You like ${event.target.value}`;
+  result.textContent = `${event.target.value}が好きですね`;
 });
-</pre>
-</div>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('select-example', '100%', '75px') }}</p>
+{{ EmbedLiveSample('select_element', '100%', '75px') }}
 
-<h3 id="Text_input_element" name="Text_input_element">テキスト入力要素</h3>
+### テキスト入力要素
 
-<p><code>&lt;input type="text"&gt;</code> など一部の要素では、コントロールがフォーカスを失うまで <code>change</code> イベントが発生しません。以下のフィールドに何かを入力してから、他の部分をクリックするとイベントが発生します。</p>
+`<input type="text">` など一部の要素では、コントロールがフォーカスを失うまで `change` イベントが発生しません。以下のフィールドに何かを入力してから、他の部分をクリックするとイベントが発行されます。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html notranslate">&lt;input placeholder="何かテキストを入力" name="name"/&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+```html
+<input placeholder="何かテキストを入力" name="name"/>
+<p id="log"></p>
+```
 
-<h4 id="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js notranslate">const input = document.querySelector('input');
+```js
+const input = document.querySelector('input');
 const log = document.getElementById('log');
 
 input.addEventListener('change', updateValue);
 
 function updateValue(e) {
-  log.textContent = e.srcElement.value;
-}</pre>
+  log.textContent = e.target.value;
+}
+```
 
 <h4 id="Result_2" name="Result_2">結果</h4>
 
-<p>{{ EmbedLiveSample('Text_input_element', '100%', '75px') }}</p>
+{{ EmbedLiveSample('Text_input_element', '100%', '90px') }}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "indices.html#event-change", "change")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications("api.GlobalEventHandlers.onchange")}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLElement.change_event")}}</p>
+{{Compat("api.GlobalEventHandlers.onchange")}}
 
-<p>すべてのブラウザーにおいて、特定の操作で <code>change</code> イベントが発生するかどうかが同じであるとは限りません。例えば、 Gecko では {{HTMLElement("select")}} 要素をキーボードで操作すると、 <code>change</code> イベントは Enter を押すか <code>&lt;select&gt;</code> からフォーカスが離れるまで発生しませんでした ({{bug("126379")}} を参照)。ただし、 Firefox 63 (Quantum) からは、すべての主要なブラウザーと同じ動作になりました。</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+すべてのブラウザーにおいて、特定の操作で `change` イベントが発生するかどうかが同じであるとは限りません。例えば、 Gecko では {{HTMLElement("select")}} 要素をキーボードで操作すると、 `change` イベントは Enter を押すか `<select>` からフォーカスが離れるまで発生しませんでした（{{bug("126379")}} を参照）。ただし、 Firefox 63 (Quantum) からは、すべての主要なブラウザーと同じ動作になりました。
