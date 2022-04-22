@@ -1,48 +1,63 @@
 ---
-title: HTMLElement.oncut
+title: 'HTMLElement: cut イベント'
 slug: Web/API/HTMLElement/cut_event
 tags:
   - API
-  - Event Handler
-  - Experimental
+  - クリップボード API
   - HTMLElement
-  - NeedsSpecTable
-  - Property
-  - Reference
-translation_of: Web/API/HTMLElement/oncut
+  - イベント
+  - リファレンス
+  - ウェブ
+  - cut
+browser-compat: api.HTMLElement.cut_event
+translation_of: Web/API/HTMLElement/cut_event
 original_slug: Web/API/HTMLElement/oncut
-browser-compat: api.HTMLElement.oncut
 ---
-<div>{{ APIRef("HTML DOM") }} {{SeeCompatTable}}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><code><strong>HTMLElement.oncut</strong></code> は {{domxref("HTMLElement")}} インターフェイスのプロパティで、 {{event("cut")}} イベントを処理する<a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー</a>です。</p>
+**`cut`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を行おうとした時に発行されます。
 
-<p><code>cut</code> イベントは、ユーザーがテキストを切り取りしようとしたときに発行されます。</p>
+## 構文
 
-<h2 id="Syntax">構文</h2>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<pre class="brush: js"><em>target</em>.oncut = <em>functionRef</em>;
-</pre>
+```js
+addEventListener('cut', event => { });
 
-<h3 id="Value">値</h3>
+oncut = event => { };
+```
 
-<p><code>functionRef</code> は関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は唯一の引数として {{domxref("ClipboardEvent")}} オブジェクトを受け取ります。</p>
+## イベント型
 
-<h2 id="Example">例</h2>
+{{domxref("ClipboardEvent")}} です。 {{domxref("Event")}} を継承しています。
 
-<p>この例では、テキストを {{htmlElement("textarea")}} からコピーすることはできますが、テキストを切り取りすることはできません。また、コピーと切り取りを仕様としたことをそれぞれ記録します。</p>
+{{InheritanceDiagram("ClipboardEvent")}}
 
-<h3 id="HTML">HTML</h3>
+## イベントプロパティ
 
-<pre class="brush: html">&lt;h3&gt;このテキストエリアで実行しましょう。&lt;/h3&gt;
-&lt;textarea id="editor" rows="3"&gt;このフィールド内のテキストをコピーしたり切り取りしたりしてみましょう。&lt;/textarea&gt;
+_親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-&lt;h3&gt;ログ:&lt;/h3&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
 
-<h3 id="JavaScript">JavaScript</h3>
+## 例
 
-<pre class="brush: js">function logCopy(event) {
+この例では、テキストを {{htmlElement("textarea")}} からコピーすることはできますが、テキストを切り取りすることはできません。また、コピーと切り取りをしようとしたことをそれぞれ記録します。
+
+### HTML
+
+```html
+<h3>このテキストエリアで実行しましょう。</h3>
+<textarea id="editor" rows="3">このフィールド内のテキストをコピーしたり切り取りしたりしてみましょう。</textarea>
+
+<h3>ログ:</h3>
+<p id="log"></p>
+```
+
+### JavaScript
+
+```js
+function logCopy(event) {
   log.innerText = 'Copied!\n' + log.innerText;
 }
 
@@ -55,31 +70,23 @@ const editor = document.getElementById('editor');
 const log = document.getElementById('log');
 
 editor.oncopy = logCopy;
-editor.oncut = preventCut;</pre>
+editor.oncut = preventCut;
+```
 
-<h3 id="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 700, 300)}}</p>
+{{EmbedLiveSample("Example", 700, 300)}}
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
-<p><a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncut">WHATWG
-    標準</a></p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<p>Firefox 13 以降では、設定項目 <code>dom.event.clipboardevents.enabled</code> でこの機能を制御できます。既定では <code>true</code> になっていますが、無効にすることができます。</p>
+## 関連情報
 
-<h2 id="See_also">関連情報</h2>
-
-<ul>
-  <li>クリップボード API イベント {{event("cut")}}</li>
-  <li>関連するイベントハンドラー
-    <ul>
-      <li>{{domxref("HTMLElement.oncopy")}}</li>
-      <li>{{domxref("HTMLElement.onpaste")}}</li>
-    </ul>
-  </li>
-</ul>
+- 関連イベント
+  - {{domxref("HTMLElement.copy_event")}}
+  - {{domxref("HTMLElement.paste_event")}}
