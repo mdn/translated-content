@@ -22614,18 +22614,16 @@
     ]
   },
   "Web/API/Window/popstate_event": {
-    "modified": "2020-05-14T02:46:36.204Z",
+    "modified": "2020-10-15T21:07:15.381Z",
     "contributors": [
-      "igblee",
-      "chrisdavidmills",
-      "acelibin",
-      "irenesmith",
-      "mengxiaoixao",
-      "fscholz",
-      "xgqfrms-GitHub",
-      "HuarenYu",
-      "saviroyu",
-      "monjer",
+      "SUCHMOKUO",
+      "wuyou",
+      "ReedSun",
+      "wenshin",
+      "xiaomingming",
+      "vose2008",
+      "teoli",
+      "Hasilt",
       "ziyunfei"
     ]
   },
@@ -23033,33 +23031,6 @@
       "khalid32",
       "ziyunfei",
       "WenbingZheng"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onlanguagechange": {
-    "modified": "2019-03-23T22:16:38.614Z",
-    "contributors": [
-      "micblo"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2020-10-15T21:07:15.381Z",
-    "contributors": [
-      "SUCHMOKUO",
-      "wuyou",
-      "ReedSun",
-      "wenshin",
-      "xiaomingming",
-      "vose2008",
-      "teoli",
-      "Hasilt",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onstorage": {
-    "modified": "2020-01-09T03:11:34.593Z",
-    "contributors": [
-      "Yangfan",
-      "lynnic26"
     ]
   },
   "Web/API/WindowEventHandlers/onunload": {
@@ -46573,6 +46544,12 @@
       "ziyunfei"
     ]
   },
+  "conflicting/Web/API/Window/languagechange_event": {
+    "modified": "2019-03-23T22:16:38.614Z",
+    "contributors": [
+      "micblo"
+    ]
+  },
   "conflicting/Web/API/Window/localStorage": {
     "modified": "2019-03-23T22:25:01.381Z",
     "contributors": [
@@ -46595,6 +46572,13 @@
     "modified": "2020-10-15T22:21:27.337Z",
     "contributors": [
       "AlexChao"
+    ]
+  },
+  "conflicting/Web/API/Window/storage_event": {
+    "modified": "2020-01-09T03:11:34.593Z",
+    "contributors": [
+      "Yangfan",
+      "lynnic26"
     ]
   },
   "conflicting/Web/API/Worker/message_event": {

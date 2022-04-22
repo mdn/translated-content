@@ -24950,31 +24950,10 @@
       "ethertank"
     ]
   },
-  "Web/API/WindowEventHandlers/onlanguagechange": {
-    "modified": "2020-10-15T22:23:25.951Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2020-10-15T22:03:55.956Z",
-    "contributors": [
-      "Wind1808",
-      "mfuji09",
-      "YuichiNukiyama"
-    ]
-  },
   "Web/API/WindowEventHandlers/onrejectionhandled": {
     "modified": "2020-10-15T22:23:28.081Z",
     "contributors": [
       "Wind1808"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onstorage": {
-    "modified": "2020-10-15T21:50:13.052Z",
-    "contributors": [
-      "Wind1808",
-      "YuichiNukiyama"
     ]
   },
   "Web/API/WindowEventHandlers/onunhandledrejection": {
@@ -48418,16 +48397,37 @@
       "yoheiMune"
     ]
   },
+  "conflicting/Web/API/Window/languagechange_event": {
+    "modified": "2020-10-15T22:23:25.951Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "conflicting/Web/API/Window/messageerror_event": {
     "modified": "2020-10-15T22:23:26.765Z",
     "contributors": [
       "Wind1808"
     ]
   },
+  "conflicting/Web/API/Window/popstate_event": {
+    "modified": "2020-10-15T22:03:55.956Z",
+    "contributors": [
+      "Wind1808",
+      "mfuji09",
+      "YuichiNukiyama"
+    ]
+  },
   "conflicting/Web/API/Window/scroll": {
     "modified": "2020-10-15T22:32:16.096Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Window/storage_event": {
+    "modified": "2020-10-15T21:50:13.052Z",
+    "contributors": [
+      "Wind1808",
+      "YuichiNukiyama"
     ]
   },
   "conflicting/Web/API/XRInputSource/handedness": {

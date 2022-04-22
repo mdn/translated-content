@@ -11027,14 +11027,6 @@
       "rtf-const"
     ]
   },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2020-10-15T21:34:09.985Z",
-    "contributors": [
-      "hisbvdis",
-      "stary71",
-      "alexismaster"
-    ]
-  },
   "Web/API/WindowEventHandlers/onunload": {
     "modified": "2019-03-23T22:58:38.393Z",
     "contributors": [
@@ -23750,6 +23742,14 @@
     "modified": "2019-03-23T22:05:00.067Z",
     "contributors": [
       "ZVanoZ"
+    ]
+  },
+  "conflicting/Web/API/Window/popstate_event": {
+    "modified": "2020-10-15T21:34:09.985Z",
+    "contributors": [
+      "hisbvdis",
+      "stary71",
+      "alexismaster"
     ]
   },
   "conflicting/Web/API/WindowOrWorkerGlobalScope": {
