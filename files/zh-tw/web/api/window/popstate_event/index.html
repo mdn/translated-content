@@ -1,0 +1,58 @@
+---
+title: window.onpopstate
+slug: Web/API/Window/popstate_event
+translation_of: Web/API/WindowEventHandlers/onpopstate
+original_slug: Web/API/WindowEventHandlers/onpopstate
+---
+<div>{{ApiRef}} {{gecko_minversion_header("2")}}</div>
+
+<h2 id="Summary" name="Summary">摘要</h2>
+
+<p>視窗上 popstate 事件的事件處理器。</p>
+
+<p>在同一文件的當前歷史紀錄變動時，如果其變動介於兩個歷史紀錄間，<code>popstate</code> 就會被呼叫。如果當前的歷史紀錄是藉由呼叫 <code>history.pushState() </code>建立，或曾被 <code>history.replaceState() 修改過，popstate </code>事件的 <code>state</code> 屬性，將包含一份歷史紀錄的 state 物件。</p>
+
+<p>請注意：直接呼叫 <code>history.pushState()</code> 或 <code>history.replaceState()</code> 不會驅動 <code>popstate</code> 事件。<code>popstate</code> 事件只會被瀏覽器的行為驅動，例如點擊上一頁按鈕（或透過 JavaScript 呼叫 <code>history.back()</code>）。且此事件只會在用戶於同文件的兩個歷史紀錄間瀏覽時作動。</p>
+
+<p>在頁面載入時，不同瀏覽器具有不同的 <code>popstate</code> 行為。Chrome 與 Safari 會在頁面載入時觸發 <code>popstate</code> 事件，但 Firefox 則不會。</p>
+
+<h2 id="Syntax" name="Syntax">語法</h2>
+
+<pre class="syntaxbox">window.onpopstate = <var>funcRef</var>;
+</pre>
+
+<ul>
+ <li><var>funcRef</var> 是一個事件處理函數</li>
+</ul>
+
+<h2 id="The_popstate_event" name="The_popstate_event">popstate 事件</h2>
+
+<p>以下範例，位於 <code><var>http://example.com/example.html</var></code> 並執行下列程式的頁面，將會產生如標示的對話框：</p>
+
+<pre class="brush: js">window.onpopstate = function(event) {
+  alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+};
+
+history.pushState({page: 1}, "title 1", "?page=1");
+history.pushState({page: 2}, "title 2", "?page=2");
+history.replaceState({page: 3}, "title 3", "?page=3");
+history.back(); // 跳出 "location: http://example.com/example.html?page=1, state: {"page":1}"
+history.back(); // 跳出 "location: http://example.com/example.html, state: null
+history.go(2);  // 跳出 "location: http://example.com/example.html?page=3, state: {"page":3}
+</pre>
+
+<p><span style="line-height: inherit;">請注意，</span><span style="line-height: inherit;">雖然原始的歷史紀錄（</span><code><var>http://example.com/example.html</var></code><span style="line-height: inherit;">）沒有關聯的 state 物件，在我們第二次呼叫 </span><code style="font-size: 14px; line-height: inherit;">hitsory.back() 時仍然會觸發</code><code style="font-size: 14px; line-height: inherit;"> </code><code style="font-size: 14px; line-height: inherit;">popstate</code><span style="line-height: inherit;"> 事件</span><span style="line-height: inherit;">。</span></p>
+
+<h2 id="Specification" name="Specification">標準</h2>
+
+<ul>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
+</ul>
+
+<h2 id="See_also" name="See_also">請參照</h2>
+
+<ul>
+ <li>{{domxref("window.history")}}</li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history">Manipulating the browser history</a></li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example">Ajax navigation example</a></li>
+</ul>

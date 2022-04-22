@@ -7381,6 +7381,12 @@
       "BANIP"
     ]
   },
+  "Web/API/Window/storage_event": {
+    "modified": "2020-10-15T22:33:23.208Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
   "Web/API/Window/toolbar": {
     "modified": "2019-03-23T22:31:57.987Z",
     "contributors": [
@@ -7412,19 +7418,6 @@
     "contributors": [
       "alattalatta",
       "fscholz"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2019-03-23T22:33:09.328Z",
-    "contributors": [
-      "joeunha",
-      "joshua1988"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onstorage": {
-    "modified": "2020-10-15T22:33:23.208Z",
-    "contributors": [
-      "alattalatta"
     ]
   },
   "Web/API/Worker": {
@@ -17498,6 +17491,13 @@
     "contributors": [
       "fscholz",
       "hanmomhanda"
+    ]
+  },
+  "conflicting/Web/API/Window/popstate_event": {
+    "modified": "2019-03-23T22:33:09.328Z",
+    "contributors": [
+      "joeunha",
+      "joshua1988"
     ]
   },
   "conflicting/Web/CSS/@viewport": {

@@ -4631,6 +4631,14 @@
       "BwayCer"
     ]
   },
+  "Web/API/Window/popstate_event": {
+    "modified": "2019-03-23T23:27:28.070Z",
+    "contributors": [
+      "irvinfly",
+      "khalid32",
+      "ChiLiJung"
+    ]
+  },
   "Web/API/Window/print": {
     "modified": "2019-03-18T21:45:25.421Z",
     "contributors": [
@@ -4667,14 +4675,6 @@
     "modified": "2019-03-23T22:27:46.116Z",
     "contributors": [
       "hstarorg"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2019-03-23T23:27:28.070Z",
-    "contributors": [
-      "irvinfly",
-      "khalid32",
-      "ChiLiJung"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {

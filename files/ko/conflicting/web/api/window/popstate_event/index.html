@@ -1,0 +1,58 @@
+---
+title: WindowEventHandlers.onpopstate
+slug: conflicting/Web/API/Window/popstate_event
+translation_of: Web/API/WindowEventHandlers/onpopstate
+original_slug: Web/API/WindowEventHandlers/onpopstate
+---
+<div>{{APIRef}} {{gecko_minversion_header("2")}}</div>
+
+<h2 id="Summary" name="Summary">요약</h2>
+
+<p>window의 popstate 이벤트 핸들러</p>
+
+<p>같은 document에 관한 두개의 히스토리 엔트리에 변화가 일어날 때마다, popstate event가 window 객체에 붙게 된다. 만약 활성화된 엔트리가 history.pushState() 메서드나 history.replaceState() 메서드에 의해 생성되면, popstate 이벤트의 state 속성은 히스토리 엔트리 state 객체의 복사본을 갖게 된다.</p>
+
+<p>history.pushState() 또는 history.replaceState()는 popstate 이벤트를 발생시키지 않는 것에 유의한다.popstate 이벤트는 브라우저의 백 버튼이나 (history.back() 호출) 등을 통해서만 발생된다. 그리고 그 이벤트는 같은 document에서 두 히스토리 엔트리 간의 이동이 있을 때만 발생이 된다.</p>
+
+<p>브라우저는 popstate 이벤트를 페이지 로딩시에 다르게 처리한다. Chrome(v34 이전버전) 와 Safari는 popstate 이벤트를 페이지 로딩시에 발생시킨다. 하지만 Firefox 는 그렇지 않다.</p>
+
+<h2 id="Syntax" name="Syntax">문법</h2>
+
+<pre class="syntaxbox">window.onpopstate = <var>funcRef</var>;
+</pre>
+
+<ul>
+ <li><var>funcRef는 이벤트 핸들러 함수다.</var></li>
+</ul>
+
+<h2 id="The_popstate_event" name="The_popstate_event">popstate 이벤트</h2>
+
+<p>예시를 보자, 다음의 코드를 실행하는 <code><var>http://example.com/example.html</var></code>의 한 페이지는 주석에 쓰여있는 경고들을 발생시킨다.</p>
+
+<pre class="brush:js">window.onpopstate = function(event) {
+  alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+};
+
+history.pushState({page: 1}, "title 1", "?page=1");
+history.pushState({page: 2}, "title 2", "?page=2");
+history.replaceState({page: 3}, "title 3", "?page=3");
+history.back(); // alerts "location: http://example.com/example.html?page=1, state: {"page":1}"
+history.back(); // alerts "location: http://example.com/example.html, state: null
+history.go(2);  // alerts "location: http://example.com/example.html?page=3, state: {"page":3}
+</pre>
+
+<p>원래의 히스토리 엔트리인 (<code><var>http://example.com/example.html</var></code>) 에 이와 연관된 state 객체가 없더라도, 두번째 history.back() API 호출 후 엔트리를 활성화 시키면 popstate 이벤트는 여전히 발생된다.</p>
+
+<h2 id="Specification" name="Specification">Specification</h2>
+
+<ul>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
+</ul>
+
+<h2 id="See_also" name="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("window.history")}}</li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history">Manipulating the browser history</a></li>
+ <li><a href="/en-US/docs/Web/Guide/DOM/Manipulating_the_browser_history/Example">Ajax navigation example</a></li>
+</ul>

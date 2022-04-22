@@ -21348,24 +21348,6 @@
       "Jacqhal"
     ]
   },
-  "Web/API/WindowEventHandlers/onlanguagechange": {
-    "modified": "2020-10-15T22:33:47.473Z",
-    "contributors": [
-      "Voulto"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2020-03-22T20:22:18.860Z",
-    "contributors": [
-      "noelmace",
-      "JouxRose",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "gudoy",
-      "matteodelabre"
-    ]
-  },
   "Web/API/WindowEventHandlers/onunload": {
     "modified": "2020-10-15T21:34:36.558Z",
     "contributors": [
@@ -43059,6 +43041,12 @@
       "electrotiti"
     ]
   },
+  "conflicting/Web/API/Window/languagechange_event": {
+    "modified": "2020-10-15T22:33:47.473Z",
+    "contributors": [
+      "Voulto"
+    ]
+  },
   "conflicting/Web/API/Window/localStorage": {
     "modified": "2019-03-18T20:41:23.924Z",
     "contributors": [
@@ -43067,6 +43055,18 @@
       "lulu5239",
       "Fredloub",
       "CoolSnow04"
+    ]
+  },
+  "conflicting/Web/API/Window/popstate_event": {
+    "modified": "2020-03-22T20:22:18.860Z",
+    "contributors": [
+      "noelmace",
+      "JouxRose",
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "gudoy",
+      "matteodelabre"
     ]
   },
   "conflicting/Web/API/XSLTProcessor": {

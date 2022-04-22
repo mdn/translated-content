@@ -8950,6 +8950,13 @@
       "shadairafael"
     ]
   },
+  "Web/API/Window/popstate_event": {
+    "modified": "2020-10-15T22:19:35.746Z",
+    "contributors": [
+      "borxdev",
+      "jccuevas"
+    ]
+  },
   "Web/API/Window/print": {
     "modified": "2019-07-11T23:43:54.339Z",
     "contributors": [
@@ -9047,13 +9054,6 @@
       "fscholz",
       "AshfaqHossain",
       "jota1410"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2020-10-15T22:19:35.746Z",
-    "contributors": [
-      "borxdev",
-      "jccuevas"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {

@@ -1026,7 +1026,7 @@
 /fr/docs/DOM/window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/DOM/window.onbeforeunload	/fr/docs/Web/API/WindowEventHandlers/onbeforeunload
 /fr/docs/DOM/window.onload	/fr/docs/Web/API/GlobalEventHandlers/onload
-/fr/docs/DOM/window.onpopstate	/fr/docs/Web/API/WindowEventHandlers/onpopstate
+/fr/docs/DOM/window.onpopstate	/fr/docs/conflicting/Web/API/Window/popstate_event
 /fr/docs/DOM/window.open	/fr/docs/Web/API/Window/open
 /fr/docs/DOM/window.openDialog	/fr/docs/Web/API/Window/openDialog
 /fr/docs/DOM/window.opener	/fr/docs/Web/API/Window/opener
@@ -3812,7 +3812,7 @@
 /fr/docs/Web/API/Window.navigator	/fr/docs/Web/API/Window/navigator
 /fr/docs/Web/API/Window.onbeforeunload	/fr/docs/Web/API/WindowEventHandlers/onbeforeunload
 /fr/docs/Web/API/Window.onload	/fr/docs/Web/API/GlobalEventHandlers/onload
-/fr/docs/Web/API/Window.onpopstate	/fr/docs/Web/API/WindowEventHandlers/onpopstate
+/fr/docs/Web/API/Window.onpopstate	/fr/docs/conflicting/Web/API/Window/popstate_event
 /fr/docs/Web/API/Window.onresize	/fr/docs/conflicting/Web/API/GlobalEventHandlers/onresize
 /fr/docs/Web/API/Window.openDialog	/fr/docs/Web/API/Window/openDialog
 /fr/docs/Web/API/Window.opener	/fr/docs/Web/API/Window/opener
@@ -3835,6 +3835,8 @@
 /fr/docs/Web/API/WindowEventHandlers/onafterprint	/fr/docs/conflicting/Web/API/Window/afterprint_event
 /fr/docs/Web/API/WindowEventHandlers/onbeforeprint	/fr/docs/conflicting/Web/API/Window/beforeprint_event
 /fr/docs/Web/API/WindowEventHandlers/onhashchange	/fr/docs/conflicting/Web/API/Window/hashchange_event
+/fr/docs/Web/API/WindowEventHandlers/onlanguagechange	/fr/docs/conflicting/Web/API/Window/languagechange_event
+/fr/docs/Web/API/WindowEventHandlers/onpopstate	/fr/docs/conflicting/Web/API/Window/popstate_event
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/atob	/fr/docs/Web/API/atob
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/fr/docs/Web/API/btoa
 /fr/docs/Web/API/WindowOrWorkerGlobalScope/caches	/fr/docs/Web/API/caches

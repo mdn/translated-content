@@ -3411,8 +3411,11 @@
 /ja/docs/Web/API/WindowEventHandlers/onafterprint	/ja/docs/conflicting/Web/API/Window/afterprint_event
 /ja/docs/Web/API/WindowEventHandlers/onbeforeprint	/ja/docs/conflicting/Web/API/Window/beforeprint_event
 /ja/docs/Web/API/WindowEventHandlers/onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
+/ja/docs/Web/API/WindowEventHandlers/onlanguagechange	/ja/docs/conflicting/Web/API/Window/languagechange_event
 /ja/docs/Web/API/WindowEventHandlers/onmessage	/ja/docs/Web/API/Window/message_event
 /ja/docs/Web/API/WindowEventHandlers/onmessageerror	/ja/docs/conflicting/Web/API/Window/messageerror_event
+/ja/docs/Web/API/WindowEventHandlers/onpopstate	/ja/docs/Web/API/Window/popstate_event
+/ja/docs/Web/API/WindowEventHandlers/onstorage	/ja/docs/conflicting/Web/API/Window/storage_event
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ja/docs/Web/API/btoa
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/caches

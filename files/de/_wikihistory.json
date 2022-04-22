@@ -4105,6 +4105,13 @@
       "frickth"
     ]
   },
+  "Web/API/Window/popstate_event": {
+    "modified": "2019-03-23T22:35:53.667Z",
+    "contributors": [
+      "checkdotdot",
+      "Oliver_Schafeld"
+    ]
+  },
   "Web/API/Window/print": {
     "modified": "2020-10-15T21:39:45.899Z",
     "contributors": [
@@ -4159,13 +4166,6 @@
     "modified": "2019-03-23T22:50:03.877Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2019-03-23T22:35:53.667Z",
-    "contributors": [
-      "checkdotdot",
-      "Oliver_Schafeld"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {

@@ -579,10 +579,11 @@
 /zh-TW/docs/Web/API/WebGL_API/Tutorial/WebGL入門	/zh-TW/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /zh-TW/docs/Web/API/Web_Video_Text_Tracks_Format	/zh-TW/docs/Web/API/WebVTT_API
 /zh-TW/docs/Web/API/Window.history	/zh-TW/docs/Web/API/Window/history
-/zh-TW/docs/Web/API/Window.onpopstate	/zh-TW/docs/Web/API/WindowEventHandlers/onpopstate
+/zh-TW/docs/Web/API/Window.onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/Window.requestAnimationFrame	/zh-TW/docs/Web/API/window/requestAnimationFrame
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/conflicting/Web/OpenSearch
 /zh-TW/docs/Web/API/WindowBase64	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
+/zh-TW/docs/Web/API/WindowEventHandlers/onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-TW/docs/Web/API/btoa
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval
 /zh-TW/docs/Web/API/WindowTimers	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a

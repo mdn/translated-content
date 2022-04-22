@@ -1,0 +1,69 @@
+---
+title: window.onpopstate
+slug: conflicting/Web/API/Window/popstate_event
+translation_of: Web/API/WindowEventHandlers/onpopstate
+original_slug: Web/API/WindowEventHandlers/onpopstate
+---
+<p>{{ ApiRef() }}</p>
+
+<p>{{ gecko_minversion_header("2") }}</p>
+
+<h3 id="Summary" name="Summary">概述</h3>
+
+<p><code>window.onpopstate</code>是<code>popstate</code>事件在window对象上的事件处理程序.</p>
+
+<p><code>每当处于激活状态的历史记录条目发生变化时,popstate</code>事件就会在<code>对应window</code>对象上触发. 如果当前<code>处于激活状态的历史记录条目是由</code><code>history.pushState()</code>方法创建,或者由<code>history.replaceState()方法修改过</code>的, 则<code>popstate事件对象的</code><code>state</code>属性包含了这个历史记录条目的state对象的一个拷贝.</p>
+
+<p><strong>注意：</strong>调用<code>history.pushState()</code>或者<code>history.replaceState()</code>不会触发popstate事件. <code>popstate</code>事件只会在浏览器某些行为下触发, 比如点击后退、前进按钮(或者在JavaScript中调用<code>history.back()、history.forward()、history.go()</code>方法)，此外，a 标签的锚点也会触发该事件.</p>
+
+<p>当网页加载时,各浏览器对<code>popstate</code>事件是否触发有不同的表现,Chrome 和 Safari会触发<code>popstate</code>事件, 而Firefox不会.</p>
+
+<h3 id="Syntax" name="Syntax">语法</h3>
+
+<pre class="eval notranslate">window.onpopstate = <em>funcRef</em>;
+</pre>
+
+<ul>
+ <li><code>funcRef</code> 是个函数名.</li>
+</ul>
+
+<h3 id="popstate事件">popstate事件</h3>
+
+<p>假如当前网页地址为http://example.com/example.html,则运行下述代码后:</p>
+
+<pre class="brush: js notranslate">window.onpopstate = function(event) {
+  alert("location: " + document.location + ", state: " + JSON.stringify(event.state));
+};
+//绑定事件处理函数.
+history.pushState({page: 1}, "title 1", "?page=1");    //添加并激活一个历史记录条目 http://example.com/example.html?page=1,条目索引为1
+history.pushState({page: 2}, "title 2", "?page=2");    //添加并激活一个历史记录条目 http://example.com/example.html?page=2,条目索引为2
+history.replaceState({page: 3}, "title 3", "?page=3"); //修改当前激活的历史记录条目 http://ex..?page=2 变为 http://ex..?page=3,条目索引为3
+history.back(); // 弹出 "location: http://example.com/example.html?page=1, state: {"page":1}"
+history.back(); // 弹出 "location: http://example.com/example.html, state: null
+history.go(2);  // 弹出 "location: http://example.com/example.html?page=3, state: {"page":3}
+</pre>
+
+<p>即便进入了那些非pushState和replaceState方法作用过的(比如http://example.com/example.html)没有state对象关联的那些网页, <code>popstate</code>事件也仍然会被触发.</p>
+
+<h3 id="Specification" name="Specification">规范</h3>
+
+<ul>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
+</ul>
+
+<h3 id="浏览器兼容性">浏览器兼容性</h3>
+
+<div class="hidden">
+<p>本页面的兼容性表格是由结构化数据生成的。如果你愿意为这些数据做点贡献，请在 github <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> 检出代码，然后发送 pull request 给我们。</p>
+</div>
+
+<p>{{Compat("api.WindowEventHandlers.onpopstate")}}</p>
+
+<h3 id="相关链接">相关链接</h3>
+
+<ul>
+ <li>{{ domxref("window.history") }}</li>
+ <li><a href="/zh-cn/DOM/Manipulating_the_browser_history" title="zh-cn/DOM/Manipulating the browser history">Manipulating the browser history</a></li>
+</ul>
+
+<p>{{ languages( {"en": "en/DOM/window.onpopstate" } ) }}</p>

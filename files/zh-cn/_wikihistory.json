@@ -23624,33 +23624,6 @@
       "WenbingZheng"
     ]
   },
-  "Web/API/WindowEventHandlers/onlanguagechange": {
-    "modified": "2019-03-23T22:16:38.614Z",
-    "contributors": [
-      "micblo"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2020-10-15T21:07:15.381Z",
-    "contributors": [
-      "SUCHMOKUO",
-      "wuyou",
-      "ReedSun",
-      "wenshin",
-      "xiaomingming",
-      "vose2008",
-      "teoli",
-      "Hasilt",
-      "ziyunfei"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onstorage": {
-    "modified": "2020-01-09T03:11:34.593Z",
-    "contributors": [
-      "Yangfan",
-      "lynnic26"
-    ]
-  },
   "Web/API/WindowEventHandlers/onunload": {
     "modified": "2020-10-23T06:31:44.836Z",
     "contributors": [
@@ -47212,6 +47185,12 @@
       "ziyunfei"
     ]
   },
+  "conflicting/Web/API/Window/languagechange_event": {
+    "modified": "2019-03-23T22:16:38.614Z",
+    "contributors": [
+      "micblo"
+    ]
+  },
   "conflicting/Web/API/Window/localStorage": {
     "modified": "2019-03-23T22:25:01.381Z",
     "contributors": [
@@ -47230,10 +47209,31 @@
       "Bayes"
     ]
   },
+  "conflicting/Web/API/Window/popstate_event": {
+    "modified": "2020-10-15T21:07:15.381Z",
+    "contributors": [
+      "SUCHMOKUO",
+      "wuyou",
+      "ReedSun",
+      "wenshin",
+      "xiaomingming",
+      "vose2008",
+      "teoli",
+      "Hasilt",
+      "ziyunfei"
+    ]
+  },
   "conflicting/Web/API/Window/scroll": {
     "modified": "2020-10-15T22:21:27.337Z",
     "contributors": [
       "AlexChao"
+    ]
+  },
+  "conflicting/Web/API/Window/storage_event": {
+    "modified": "2020-01-09T03:11:34.593Z",
+    "contributors": [
+      "Yangfan",
+      "lynnic26"
     ]
   },
   "conflicting/Web/API/Worker/message_event": {
