@@ -35,8 +35,10 @@ Dans cet article, nous aurons un premier contact avec React. Nous découvrirons 
     <tr>
       <th scope="row">Objectifs&nbsp;:</th>
       <td>
-        Configurer un environnement de développement React local, créer une application de
-        démarrage, et comprendre les bases de son fonctionnement.
+        <p>
+          Configurer un environnement de développement React local, créer une application de
+          démarrage, et comprendre les bases de son fonctionnement.
+        </p>
       </td>
     </tr>
   </tbody>
