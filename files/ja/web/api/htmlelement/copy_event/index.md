@@ -1,84 +1,93 @@
 ---
-title: HTMLElement.oncopy
+title: 'HTMLElement: copy イベント'
 slug: Web/API/HTMLElement/copy_event
 tags:
   - API
-  - Event Handler
-  - Experimental
+  - クリップボード API
   - HTMLElement
-  - NeedsSpecTable
-  - Property
-  - Reference
+  - イベント
+  - リファレンス
+  - ウェブ
+  - copy
+browser-compat: api.HTMLElement.copy_event
 translation_of: Web/API/HTMLElement/oncopy
-original_slug: Web/API/HTMLElement/oncopy
 ---
-<div>{{ APIRef("HTML DOM") }}{{SeeCompatTable}}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>oncopy</code></strong> プロパティは  {{domxref("HTMLElement")}}  インターフェイスのプロパティで、 {{domxref("Element/copy_event", "copy")}} イベントを処理するイベントハンドラー ({{event("Event_handlers", "event handler")}}) です。</p>
+**`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を行おうとした時に発行されます。
 
-<p><code>copy</code> イベントはユーザーがテキストをコピーしようとしたときに発生します。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-<pre class="syntaxbox notranslate"><var>target</var>.oncopy = <var>functionRef</var>;</pre>
+```js
+addEventListener('copy', event => { });
 
-<h3 id="Value" name="Value">値</h3>
+oncopy = event => { };
+```
 
-<p><code><var>functionRef</var></code> は関数名または<a href="/ja/docs/Web/JavaScript/Reference/Operators/function">関数式</a>です。この関数は {{domxref("ClipboardEvent")}} オブジェクトを唯一の引数として受け取ります。</p>
+## イベント型
 
-<h2 id="Example" name="Example">例</h2>
+{{domxref("ClipboardEvent")}} です。 {{domxref("Event")}} を継承しています。
 
-<p>この例では、 {{htmlElement("textarea")}} からのすべてのコピーと貼り付けをブロックします。</p>
+{{InheritanceDiagram("ClipboardEvent")}}
 
-<h3 id="HTML">HTML</h3>
+## イベントプロパティ
 
-<pre class="brush: html notranslate">&lt;h3&gt;Play with this text area:&lt;/h3&gt;
-&lt;textarea id="editor" rows="3"&gt;Try copying and pasting text into this field!&lt;/textarea&gt;
+_親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-&lt;h3&gt;Log:&lt;/h3&gt;
-&lt;p id="log"&gt;&lt;/p&gt;</pre>
+- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+  - : {{domxref("DataTransfer")}} オブジェクトで、ユーザーが行った {{domxref("HTMLElement/cut_event", "cut")}}, {{domxref("HTMLElement/copy_event", "copy")}}, {{domxref("HTMLElement/paste_event", "paste")}} 操作によって影響されたデータと MIME タイプが入ります。
 
-<h3 id="JavaScript">JavaScript</h3>
+## 例
 
-<pre class="brush: js notranslate">const log = document.getElementById('log');
+この例では、 {{htmlElement("textarea")}} からのすべてのコピーと貼り付けをブロックします。
+
+### HTML
+
+```html
+<h3>このテキストエリアで実行してみる</h3>
+<textarea id="editor" rows="3">このフィールドにテキストをコピー＆ペーストしてみてください。</textarea>
+
+<h3>ログ:</h3>
+<p id="log"></p>
+```
+
+### JavaScript
+
+```js
+const log = document.getElementById('log');
 
 function logCopy(event) {
-  log.innerText = 'Copy blocked!\n' + log.innerText;
+  log.innerText = 'コピーがブロックされました。\n' + log.innerText;
   event.preventDefault();
 }
 
 function logPaste(event) {
-  log.innerText = 'Paste blocked!\n' + log.innerText;
+  log.innerText = '貼り付けがブロックされました。\n' + log.innerText;
   event.preventDefault();
 }
 
 const editor = document.getElementById('editor');
 
 editor.oncopy = logCopy;
-editor.onpaste = logPaste;</pre>
+editor.onpaste = logPaste;
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{EmbedLiveSample("Example", 700, 300)}}</p>
+{{EmbedLiveSample("Example", 700, 300)}}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<p><a href="https://html.spec.whatwg.org/multipage/webappapis.html#handler-oncopy">WHATWG Standard</a></p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLElement.oncopy")}}</p>
+{{Compat}}
 
-<p>Firefox 13 から、この機能は設定 <code>dom.event.clipboardevents.enabled</code> で制御されます。既定値は <code>true</code> ですが無効化できます。</p>
+## 関連情報
 
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>Clipboard API のイベント {{domxref("Element/copy_event", "copy")}}</li>
- <li>関連するイベントハンドラー
-  <ul>
-   <li>{{domxref("HTMLElement.oncut")}}</li>
-   <li>{{domxref("HTMLElement.onpaste")}}</li>
-  </ul>
- </li>
-</ul>
+- 関連イベント
+  - {{domxref("HTMLElement.cut_event")}}
+  - {{domxref("HTMLElement.paste_event")}}
