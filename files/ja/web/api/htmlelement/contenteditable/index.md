@@ -5,57 +5,39 @@ tags:
   - API
   - HTML DOM
   - HTMLElement
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLElement.contentEditable
 translation_of: Web/API/HTMLElement/contentEditable
 ---
-<p>{{APIRef("HTML DOM")}}</p>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary">{{domxref("HTMLElement")}} インターフェイスの <strong><code>contentEditable</code></strong> プロパティは、要素が編集可能かどうかを指定します。</span> この列挙属性には、次の値を設定できます。</p>
+**`contentEditable`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、要素が編集可能かどうかを指定します。
 
-<ul>
- <li>'<code>true</code>' は、要素の内容が編集可能 (<code>contenteditable</code>) であることを示します。</li>
- <li>'<code>false</code>' は、要素が編集できないことを示します。</li>
- <li>'<code>inherit</code>' は、要素がその親の編集可能状態を継承することを示します。</li>
-</ul>
+これは列挙属性で、次の値を設定できます。
 
-<p>{{domxref("HTMLElement.isContentEditable")}} プロパティを使用して、このプロパティの計算された {{jsxref("Boolean")}} 値をテストできます。</p>
+- '`true`' は、要素の内容が編集可能 (`contenteditable`) であることを示します。
+- '`false`' は、要素が編集できないことを示します。
+- '`inherit`' は、要素がその親の編集可能状態を継承することを示します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+{{domxref("HTMLElement.isContentEditable")}} プロパティを使用すると、このプロパティの計算済みの論理値をテストできます。
 
-<pre class="syntaxbox notranslate"><var>editable</var> = <var>element</var>.contentEditable
-<var>element</var>.contentEditable = 'true'
-</pre>
+## 値
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+文字列。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'interaction.html#contenteditable', 'contenteditable')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("api.HTMLElement.contentEditable")}}</p>
+## ブラウザーの互換性
 
-<p>Internet Explorer では、<code>contenteditable</code> を {{htmlelement("table")}}、{{htmlelement("col")}}、{{htmlelement("colgroup")}}、{{htmlelement("tbody")}}、{{htmlelement("td")}}、{{htmlelement("tfoot")}}、{{htmlelement("th")}}、{{htmlelement("thead")}}、および {{htmlelement("tr")}} 要素に直接適用することはできません。 コンテンツを編集可能な {{htmlelement("span")}} または {{htmlelement("div")}} 要素を、表の個々のセル内に配置できます。</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+Internet Explorer では、`contenteditable` を {{htmlelement("table")}}、{{htmlelement("col")}}、{{htmlelement("colgroup")}}、{{htmlelement("tbody")}}、{{htmlelement("td")}}、{{htmlelement("tfoot")}}、{{htmlelement("th")}}、{{htmlelement("thead")}}、{{htmlelement("tr")}} 要素に直接適用することはできません。コンテンツを編集可能な {{htmlelement("span")}} または {{htmlelement("div")}} 要素を、表の個々のセル内に配置できます。
 
-<ul>
- <li><a href="/ja/docs/Web/Guide/HTML/Editable_content">コンテンツを編集可能にする</a></li>
- <li>{{domxref("HTMLElement.isContentEditable")}}</li>
- <li>{{htmlattrxref("contenteditable")}} グローバル属性</li>
-</ul>
+## 関連情報
+
+- [コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)
+- {{domxref("HTMLElement.isContentEditable")}}
+- {{htmlattrxref("contenteditable")}} グローバル属性
