@@ -8,6 +8,6 @@ El clickjacking puede ser evitado implementando una [Política de Seguridad de C
 
 ## Aprende más
 
-- [Seguridad web: protección contra clickjacking](/en-US/docs/Web/Security#clickjacking_protection)
+- [Seguridad web: protección contra clickjacking](/es/docs/Web/Security#clickjacking_protection)
 - [Clickjacking](https://es.wikipedia.org/wiki/Clickjacking) en Wikipedia
 - [Clickjacking](https://owasp.org/www-community/attacks/Clickjacking) en OWASP
