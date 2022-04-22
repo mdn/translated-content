@@ -43,16 +43,16 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
  <dt><em>init</em> {{optional_inline}}</dt>
  <dd>一个配置项对象，包括所有对请求的设置。可选的参数有：
  <ul>
-  <li><code>method</code>: 请求使用的方法，如 <code>GET<font face="Open Sans, Arial, sans-serif">、</font></code><code>POST。</code></li>
+  <li><code>method</code>: 请求使用的方法，如 <code>GET</code>、<code>POST</code>。</li>
   <li><code>headers</code>: 请求的头信息，形式为 {{domxref("Headers")}} 的对象或包含 {{domxref("ByteString")}} 值的对象字面量。</li>
   <li><code>body</code>: 请求的 body 信息：可能是一个 {{domxref("Blob")}}、{{domxref("BufferSource")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}} 或者 {{domxref("USVString")}} 对象。注意 GET 或 HEAD 方法的请求不能包含 body 信息。</li>
-  <li><code>mode</code>: 请求的模式，如 <code>cors、</code> <code>no-cors 或者</code> <code>same-origin。</code></li>
-  <li><code>credentials</code>: 请求的 credentials，如 <code>omit<font face="Open Sans, Arial, sans-serif">、</font></code><code>same-origin 或者</code> <code>include</code>。为了在当前域名内自动发送 cookie ， 必须提供这个选项， 从 Chrome 50 开始， 这个属性也可以接受 {{domxref("FederatedCredential")}} 实例或是一个 {{domxref("PasswordCredential")}} 实例。</li>
-  <li><code>cache</code>:  请求的 cache 模式: <code>default</code>、 <code>no-store</code>、 <code>reload</code> 、 <code>no-cache </code>、 <code>force-cache </code>或者 <code>only-if-cached</code> 。</li>
-  <li><code>redirect</code>: 可用的 redirect 模式: <code>follow</code> (自动重定向), <code>error</code> (如果产生重定向将自动终止并且抛出一个错误）, 或者 <code>manual</code> (手动处理重定向). 在Chrome中默认使用<code>follow（</code>Chrome 47之前的默认值是<code>manual</code>）。</li>
-  <li><code>referrer</code>: 一个 {{domxref("USVString")}} 可以是 <code>no-referrer<font face="Open Sans, Arial, sans-serif">、</font></code><code>client</code>或一个 URL。默认是 <code>client。</code></li>
-  <li><code>referrerPolicy</code>: 指定了HTTP头部referer字段的值。可能为以下值之一： <code>no-referrer、</code> <code>no-referrer-when-downgrade、</code> <code>origin、</code> <code>origin-when-cross-origin、</code> <code>unsafe-url 。</code></li>
-  <li><code>integrity</code>: 包括请求的  <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> 值 （ 例如： <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=）。</code></li>
+  <li><code>mode</code>: 请求的模式，如 <code>cors</code>、<code>no-cors</code> 或者 <code>same-origin</code>。</li>
+  <li><code>credentials</code>: 请求的 credentials，如 <code>omit</code>、<code>same-origin</code> 或者 <code>include</code>。为了在当前域名内自动发送 cookie， 必须提供这个选项， 从 Chrome 50 开始， 这个属性也可以接受 {{domxref("FederatedCredential")}} 实例或是一个 {{domxref("PasswordCredential")}} 实例。</li>
+  <li><code>cache</code>:  请求的 cache 模式: <code>default</code>、 <code>no-store</code>、 <code>reload</code> 、 <code>no-cache</code>、 <code>force-cache</code> 或者 <code>only-if-cached</code>。</li>
+  <li><code>redirect</code>: 可用的 redirect 模式: <code>follow</code> (自动重定向), <code>error</code> (如果产生重定向将自动终止并且抛出一个错误）, 或者 <code>manual</code> (手动处理重定向)。在 Chrome 中默认使用 <code>follow（</code>Chrome 47之前的默认值是 <code>manual</code>）。</li>
+  <li><code>referrer</code>: 一个 {{domxref("USVString")}} 可以是 <code>no-referrer</code>、<code>client</code> 或一个 URL。默认是 <code>client</code>。</li>
+  <li><code>referrerPolicy</code>: 指定了 HTTP 头部 referer 字段的值。可能为以下值之一：<code>no-referrer</code>、 <code>no-referrer-when-downgrade</code>、<code>origin</code>、<code>origin-when-cross-origin</code>、 <code>unsafe-url</code>。</li>
+  <li><code>integrity</code>: 包括请求的 <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> 值（例如： <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>）。</li>
  </ul>
  </dd>
 </dl>
