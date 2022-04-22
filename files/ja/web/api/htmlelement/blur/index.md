@@ -5,85 +5,57 @@ tags:
   - API
   - HTML DOM
   - HTMLElement
-  - Method
-  - Reference
+  - メソッド
+  - リファレンス
+browser-compat: api.HTMLElement.blur
 translation_of: Web/API/HTMLElement/blur
-original_slug: Web/API/HTMLElement/blur
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{APIRef("HTML DOM")}}
 
-<p><span class="seoSummary"><code><strong>HTMLElement.blur()</strong></code> メソッドは、現在の要素からキーボードフォーカスを取り除きます。</span></p>
+**`HTMLElement.blur()`** メソッドは、現在の要素からキーボードフォーカスを取り除きます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>element</em>.blur();</pre>
+```js
+element.blur();
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Remove_focus_from_a_text_input" name="Remove_focus_from_a_text_input">テキスト入力からフォーカスを取り除く</h3>
+### テキスト入力からフォーカスを取り除く
 
-<h4 id="HTML" name="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="text" id="myText" value="サンプルテキスト"&gt;
-&lt;br&gt;&lt;br&gt;
-&lt;button type="button" onclick="focusInput()"&gt;クリックするとフォーカスを得ます&lt;/button&gt;
-&lt;button type="button" onclick="blurInput()"&gt;クリックするとフォーカスを失います&lt;/button&gt;</pre>
+```html
+<input type="text" id="myText" value="サンプルテキスト">
+<br><br>
+<button type="button" onclick="focusInput()">クリックするとフォーカスを得ます</button>
+<button type="button" onclick="blurInput()">クリックするとフォーカスを失います</button>
+```
 
-<h4 id="JavaScript" name="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">function focusInput() {
+```js
+function focusInput() {
   document.getElementById('myText').focus();
 }
 function blurInput() {
   document.getElementById('myText').blur();
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Remove_focus_from_a_text_input') }}</p>
+{{ EmbedLiveSample('Remove_focus_from_a_text_input') }}
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'editing.html#dom-blur', 'blur')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#blur()-0', 'blur')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'editing.html#dom-blur', 'blur')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-28216144', 'blur')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("api.HTMLElement.blur")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>DOM メソッドの {{domxref("HTMLElement.focus()")}}</li>
-</ul>
+- {{domxref("HTMLElement.focus")}}
