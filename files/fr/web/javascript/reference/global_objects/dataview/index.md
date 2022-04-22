@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.DataView
 ---
 {{JSRef}}
 
-La vue **`DataView`** fournit une interface de bas niveau pour lire et écrire des données de différents types numériques dans un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), quel que soit le [«&nbsp;boutisme&nbsp;» (<i lang="en">endianness</i>)](https://fr.wikipedia.org/wiki/Endianness) de la plate-forme.
+La vue **`DataView`** fournit une interface de bas niveau pour lire et écrire des données de différents types numériques dans un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), quel que soit le [«&nbsp;boutisme&nbsp;» (<i lang="en">endianness</i>)](https://fr.wikipedia.org/wiki/Boutisme) de la plateforme.
 
 
 ## Description
@@ -118,7 +118,7 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 
 ## Exemples
 
-### Utiliser DataView
+### Utiliser `DataView`
 
 ```js
 let buffer = new ArrayBuffer(16);
