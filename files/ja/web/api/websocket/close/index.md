@@ -48,7 +48,7 @@ WebSocket.close(code, reason);
 ### 例外
 
 - `InvalidAccessError`
-  - : [`code`](#code) が `1000` と等しい整数化、 `3000`–`4999` の範囲の整数でない場合に発生します。
+  - : [`code`](#code) が `1000` と等しい整数でも、 `3000`–`4999` の範囲の整数でもない場合に発生します。
 - `SyntaxError`
   - : UTF-8 でエンコードされた [`reason`](#reason) が 123 バイトよりも長かった場合。
 
