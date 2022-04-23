@@ -6,156 +6,126 @@ tags:
   - Focus
   - HTML DOM
   - HTMLElement
-  - Method
-  - Reference
-  - Scroll
-  - View
+  - メソッド
+  - リファレンス
+  - スクロール
+  - ビュー
   - activate
+browser-compat: api.HTMLElement.focus
 translation_of: Web/API/HTMLElement/focus
 original_slug: Web/API/HTMLElement/focus
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><span class="seoSummary"><strong><code>HTMLElement.focus()</code></strong> メソッドは、指定された要素にフォーカスを設定できる場合、フォーカスを設定します。 フォーカスされた要素は、デフォルトでキーボードや同様のイベントを受け取る要素です。</span></p>
+**`HTMLElement.focus()`** メソッドは、指定された要素にフォーカスを設定できる場合、フォーカスを設定します。 フォーカスされた要素は、既定でキーボードや同様のイベントを受け取る要素です。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><em>element</em>.focus(<em>options</em>); // Object parameter</pre>
+```js
+focus()
+focus(options)
+```
 
-<h3 id="Parameters" name="Parameters">パラメーター</h3>
+### 引数
 
-<dl>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>フォーカスプロセスの側面を制御するオプションを提供するオプションのオブジェクト。 このオブジェクトには、次のプロパティが含まれる場合があります。</dd>
- <dd>
- <dl>
-  <dt><code>preventScroll</code> {{optional_inline}}</dt>
-  <dd>ブラウザーがドキュメントをスクロールして、新しくフォーカスされた要素を表示するかどうかを示す <code>Boolean</code> の値。 <code>preventScroll</code> の値が <code>false</code>（デフォルト）の場合、ブラウザーは要素をフォーカスした後、その要素をスクロールして表示します。 <code>preventScroll</code> が <code>true</code> に設定されている場合、スクロールしません。</dd>
- </dl>
- </dd>
-</dl>
+- `options` {{optional_inline}}
 
-<h2 id="Examples" name="Examples">例</h2>
+  - : フォーカスプロセスの側面を制御するオプションを提供するオプションのオブジェクト。
+    このオブジェクトには、次のプロパティが含まれる場合があります。
 
-<h3 id="Focus_on_a_text_field" name="Focus_on_a_text_field">テキストフィールドにフォーカスする</h3>
+ - `preventScroll` {{optional_inline}}
+   - : 論理値で、ブラウザーが文書をスクロールして、新しくフォーカスされた要素を表示するかどうかを示します。 `preventScroll` の値が `false`（既定値）の場合、ブラウザーは要素をフォーカスした後、その要素をスクロールして表示します。 `preventScroll` が `true` に設定されている場合、スクロールしません。
 
-<h4 id="JavaScript" name="JavaScript">JavaScript</h4>
+## 例
 
-<pre class="brush: js">focusMethod = function getFocus() {
+### テキストフィールドにフォーカスする
+
+#### JavaScript
+
+```js
+focusMethod = function getFocus() {
   document.getElementById("myTextField").focus();
-}</pre>
+}
+```
 
-<h4 id="HTML" name="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="text" id="myTextField" value="テキストフィールド"&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;button type="button" onclick="focusMethod()"&gt;クリックしてテキストフィールドにフォーカスしてください！&lt;/button&gt;
-</pre>
+```html
+<input type="text" id="myTextField" value="テキストフィールド">
+<p></p>
+<button type="button" onclick="focusMethod()">クリックしてテキストフィールドにフォーカスしてください。</button>
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Focus_on_a_text_field') }}</p>
+{{ EmbedLiveSample('Focus_on_a_text_field') }}
 
-<h3 id="Focus_on_a_button" name="Focus_on_a_button">ボタンにフォーカスする</h3>
+### ボタンにフォーカスする
 
-<h4 id="JavaScript_2" name="JavaScript_2">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">focusMethod = function getFocus() {
+```js
+focusMethod = function getFocus() {
   document.getElementById("myButton").focus();
 }
-</pre>
+```
 
-<h4 id="HTML_2" name="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;button type="button" id="myButton"&gt;クリックしてください！&lt;/button&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;button type="button" onclick="focusMethod()"&gt;クリックしてボタンにフォーカスしてください！&lt;/button&gt;
-</pre>
+```html
+<button type="button" id="myButton">クリックしてください</button>
+<p></p>
+<button type="button" onclick="focusMethod()">クリックするとボタンにフォーカスします。</button>
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{ EmbedLiveSample('Focus_on_a_button') }}</p>
+{{ EmbedLiveSample('Focus_on_a_button') }}
 
-<h3 id="Focus_prevent_scroll" name="Focus_prevent_scroll">focusOption でフォーカスする</h3>
+### focusOption でフォーカスする
 
-<h4 id="JavaScript_3" name="JavaScript_3">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">focusScrollMethod = function getFocus() {
+```js
+focusScrollMethod = function getFocus() {
   document.getElementById("myButton").focus({preventScroll:false});
 }
 focusNoScrollMethod = function getFocusWithoutScrolling() {
   document.getElementById("myButton").focus({preventScroll:true});
 }
+```
 
-</pre>
+#### HTML
 
-<h4 id="HTML_3" name="HTML_3">HTML</h4>
+```html
+<button type="button" onclick="focusScrollMethod()">クリックするとボタンにフォーカスします。</button>
+<button type="button" onclick="focusNoScrollMethod()">クリックするとスクロールせずにボタンにフォーカスします。</button>
 
-<pre class="brush: html">&lt;button type="button" onclick="focusScrollMethod()"&gt;クリックしてボタンにフォーカスしてください！&lt;/button&gt;
-&lt;button type="button" onclick="focusNoScrollMethod()"&gt;クリックしてスクロールせずにボタンにフォーカスしてください！&lt;/button&gt;
+<div id="container" style="height: 1000px; width: 1000px;">
+<button type="button" id="myButton" style="margin-top: 500px;">クリックしてください</button>
+</div>
+```
 
-&lt;div id="container" style="height: 1000px; width: 1000px;"&gt;
-&lt;button type="button" id="myButton" style="margin-top: 500px;"&gt;クリックしてください！&lt;/button&gt;
-&lt;/div&gt;
+#### 結果
 
-</pre>
+{{ EmbedLiveSample('Focus_with_focusOption') }}
 
-<h4 id="Result_3" name="Result_3">結果</h4>
+## 仕様書
 
-<p>{{ EmbedLiveSample('Focus_prevent_scroll') }}</p>
+{{Specifications}}
 
-<h2 id="Specification" name="Specification">仕様</h2>
+## メモ
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">状態</th>
-   <th scope="col">コメント</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'editing.html#dom-focus', 'focus')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', 'editing.html#focus()-0', 'focus')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'editing.html#dom-focus', 'focus')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-32130014', 'focus')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#method-focus', 'focus')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+-  `HTMLElement.focus()` をmousedown イベントハンドラーから呼び出した場合、 `HTMLElement` からフォーカスが外れないように `event.preventDefault()` を呼び出す必要があります。
+- {{HTMLAttrxRef("tabindex")}} や{{Glossary("shadow tree", "シャドウ DOM", 1)}} など、これまで仕様が定まらないままだった様々な HTML 機能に関するフォーカスの挙動が、最近（2019 年 10 月に）更新されました。詳しくは [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) をチェックしてみてください。
 
-<h2 id="Notes" name="Notes">ノート</h2>
+## ブラウザーの互換性
 
-<p><code>mousedown</code> イベントハンドラから <code>HTMLElement.focus()</code> を呼び出す場合は、<code>event.preventDefault()</code> を呼び出して、フォーカスがその <code>HTMLElement</code> から離れないようにする必要があります。</p>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 関連情報
 
-
-
-<p>{{Compat("api.HTMLElement.focus")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>要素からフォーカスを取り除く DOM メソッド {{domxref("HTMLElement.blur()")}}。</li>
- <li>現在フォーカスされている要素がどれであるかを知るための {{ domxref("document.activeElement") }}。</li>
-</ul>
+- {{domxref("HTMLElement.blur")}} で要素からフォーカスを取り除きます。
+- {{domxref("document.activeElement")}} で現在フォーカスされている要素を知ることができます。
+- {{domxref("Element/focusin_event", "focusin")}} イベント: 要素がフォーカスを得ようとしているときに発行されます。
+- {{domxref("Element/focusout_event", "focusout")}} イベント: 要素がフォーカスを失おうとしているときに発行されます。
