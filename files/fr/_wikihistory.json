@@ -14176,18 +14176,6 @@
       "loella16"
     ]
   },
-  "Web/API/Document/onoffline": {
-    "modified": "2019-03-18T21:39:15.173Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "Web/API/Document/ononline": {
-    "modified": "2019-03-18T21:39:26.555Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "Web/API/Document/open": {
     "modified": "2019-03-23T23:45:31.773Z",
     "contributors": [
@@ -21330,30 +21318,6 @@
     "contributors": [
       "a-mt",
       "fscholz"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onbeforeunload": {
-    "modified": "2019-04-18T06:36:38.075Z",
-    "contributors": [
-      "ocommeng",
-      "Chocobozzz",
-      "Yves_ASTIER",
-      "teoli",
-      "fscholz",
-      "Ender-events",
-      "Jeremie",
-      "Delapouite",
-      "souen",
-      "matteodelabre",
-      "Jacqhal"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onunload": {
-    "modified": "2020-10-15T21:34:36.558Z",
-    "contributors": [
-      "Sibian2019",
-      "SphinxKnight",
-      "regzd"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {
@@ -43033,6 +42997,22 @@
       "velkro"
     ]
   },
+  "conflicting/Web/API/Window/beforeunload_event": {
+    "modified": "2019-04-18T06:36:38.075Z",
+    "contributors": [
+      "ocommeng",
+      "Chocobozzz",
+      "Yves_ASTIER",
+      "teoli",
+      "fscholz",
+      "Ender-events",
+      "Jeremie",
+      "Delapouite",
+      "souen",
+      "matteodelabre",
+      "Jacqhal"
+    ]
+  },
   "conflicting/Web/API/Window/hashchange_event": {
     "modified": "2019-03-23T22:29:53.876Z",
     "contributors": [
@@ -43057,6 +43037,18 @@
       "CoolSnow04"
     ]
   },
+  "conflicting/Web/API/Window/offline_event": {
+    "modified": "2019-03-18T21:39:15.173Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
+  "conflicting/Web/API/Window/online_event": {
+    "modified": "2019-03-18T21:39:26.555Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
   "conflicting/Web/API/Window/popstate_event": {
     "modified": "2020-03-22T20:22:18.860Z",
     "contributors": [
@@ -43067,6 +43059,14 @@
       "khalid32",
       "gudoy",
       "matteodelabre"
+    ]
+  },
+  "conflicting/Web/API/Window/unload_event": {
+    "modified": "2020-10-15T21:34:36.558Z",
+    "contributors": [
+      "Sibian2019",
+      "SphinxKnight",
+      "regzd"
     ]
   },
   "conflicting/Web/API/XSLTProcessor": {

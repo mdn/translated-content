@@ -11480,6 +11480,13 @@
       "colmer"
     ]
   },
+  "Web/API/Window/unload_event": {
+    "modified": "2019-03-23T22:58:38.393Z",
+    "contributors": [
+      "AlexChuev",
+      "alexismaster"
+    ]
+  },
   "Web/API/WindowClient": {
     "modified": "2020-10-15T22:34:56.308Z",
     "contributors": [
@@ -11490,27 +11497,6 @@
     "modified": "2019-03-23T22:58:25.582Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onbeforeunload": {
-    "modified": "2020-10-15T21:52:01.565Z",
-    "contributors": [
-      "bershanskiy",
-      "Khich",
-      "mcmimik",
-      "R.A.S.",
-      "sumthief",
-      "WispProxy",
-      "vitalyzhakov",
-      "artemderzkiy",
-      "rtf-const"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onunload": {
-    "modified": "2019-03-23T22:58:38.393Z",
-    "contributors": [
-      "AlexChuev",
-      "alexismaster"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {
@@ -24199,6 +24185,20 @@
     "contributors": [
       "Steln",
       "akhabibullina"
+    ]
+  },
+  "conflicting/Web/API/Window/beforeunload_event": {
+    "modified": "2020-10-15T21:52:01.565Z",
+    "contributors": [
+      "bershanskiy",
+      "Khich",
+      "mcmimik",
+      "R.A.S.",
+      "sumthief",
+      "WispProxy",
+      "vitalyzhakov",
+      "artemderzkiy",
+      "rtf-const"
     ]
   },
   "conflicting/Web/API/Window/deviceorientation_event": {

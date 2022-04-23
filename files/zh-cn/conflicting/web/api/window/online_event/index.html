@@ -1,0 +1,41 @@
+---
+title: Document.ononline
+slug: conflicting/Web/API/Window/online_event
+tags:
+  - API
+  - 原型
+  - 文档
+  - 文档说明
+  - 方法
+  - 页面文档
+translation_of: Web/API/Document/ononline
+original_slug: Web/API/Document/ononline
+---
+<p>{{APIRef("DOM")}}</p>
+
+<p><font><font>当浏览器在联机和脱机模式之间切换时，会在每个页面的&lt;body&gt;触发</font></font><code>online</code><font><font>事件</font></font><font><font>。</font><font>此外，这些事件从</font></font><code>document.body</code><font><font>，到</font></font><code>document</code><font><font>结束于</font></font><code>window</code><font><font>。这两个事件（在线状态或离线状态）都是不可取消的（您无法阻止用户进入在线状态或离线状态）。</font></font></p>
+
+<p><font><font>如果浏览器处于联机状态，</font><font>window.navigator.onLine将返回布尔值</font></font><em><font><font>true</font></font></em><font><font>，如果它 处于脱机状态（从网络断开连接），则</font><font>返回</font><font>false。</font><font>当此属性的值更改时，会触发联机和脱机事件。</font></font></p>
+
+<div class="note">
+<p><font>重要的是要注意，这个事件和属性本质上是不可靠的。</font><font>计算机可以连接到网络而无需访问Internet。</font></p>
+</div>
+
+<p>您可以用几种常见的方法监听这些事件：</p>
+
+<ul>
+ <li><code><font face="Open Sans, arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">使用</span></font>window</code><font><font>，</font></font><code>document</code><font><font>或</font></font><code>document.body的</code><code><a href="https://developer.mozilla.org/en/DOM/element.addEventListener" title="en/DOM/element.addEventListener">addEventListener</a>方法</code></li>
+ <li><font><font>通过设置</font></font><code>document</code><font><font>或</font></font><code>document.body</code><font><font>的</font></font><code>.ononline</code><font><font>或</font></font><code>.onoffline</code><font><font>属性</font></font><font><font>到一个JavaScript </font></font><code>Function</code><font><font>对象。</font><font>（</font></font><strong><font><font>注意：</font></font></strong><font><font>使用</font></font><code>window.ononline</code><font><font>或</font></font><code>window.onoffline</code><font><font>有兼容性问题。）</font></font></li>
+ <li><font><font>通过指定</font><font>HTML的</font></font><code>&lt;body&gt;</code><font><font>标签中的属性</font></font><code>ononline="..."</code><font><font>或</font></font><code>onoffline="..."</code></li>
+</ul>
+
+<h2 id="Example" name="Example">例子</h2>
+
+<p><font><font>有</font></font><a href="https://bugzilla.mozilla.org/attachment.cgi?id=220609" rel="noopener"><font><font>一个简单的测试用例</font></font></a><font><font>，你可以运行，以验证该事件工作。</font></font></p>
+
+<h2 id="Example" name="Example"><font><font>参考</font></font></h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Online_and_offline_events"><font><font>Online和offline事件[en-US]</font></font></a></li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#event-online" rel="noopener"><font><font>WHATWG Web App规范</font></font></a></li>
+</ul>

@@ -11239,19 +11239,6 @@
       "lxcyha"
     ]
   },
-  "Web/API/Document/onoffline": {
-    "modified": "2019-03-23T22:24:33.524Z",
-    "contributors": [
-      "caoruiy"
-    ]
-  },
-  "Web/API/Document/ononline": {
-    "modified": "2019-03-18T21:38:43.642Z",
-    "contributors": [
-      "wanderzhang",
-      "githubyangwei"
-    ]
-  },
   "Web/API/Document/open": {
     "modified": "2020-10-15T21:52:24.168Z",
     "contributors": [
@@ -23610,28 +23597,6 @@
     "contributors": [
       "fanerge",
       "fscholz"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onbeforeunload": {
-    "modified": "2019-05-09T03:05:32.709Z",
-    "contributors": [
-      "johnlin0207",
-      "Etoile984816138",
-      "1Cr18Ni9",
-      "teoli",
-      "khalid32",
-      "ziyunfei",
-      "WenbingZheng"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onunload": {
-    "modified": "2020-10-23T06:31:44.836Z",
-    "contributors": [
-      "liguorain",
-      "lon",
-      "teoli",
-      "AshfaqHossain",
-      "ziyunfei"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {
@@ -47161,6 +47126,18 @@
       "wuyouhuaz"
     ]
   },
+  "conflicting/Web/API/Window/beforeunload_event": {
+    "modified": "2019-05-09T03:05:32.709Z",
+    "contributors": [
+      "johnlin0207",
+      "Etoile984816138",
+      "1Cr18Ni9",
+      "teoli",
+      "khalid32",
+      "ziyunfei",
+      "WenbingZheng"
+    ]
+  },
   "conflicting/Web/API/Window/deviceorientation_event": {
     "modified": "2019-03-18T21:38:06.143Z",
     "contributors": [
@@ -47209,6 +47186,19 @@
       "Bayes"
     ]
   },
+  "conflicting/Web/API/Window/offline_event": {
+    "modified": "2019-03-23T22:24:33.524Z",
+    "contributors": [
+      "caoruiy"
+    ]
+  },
+  "conflicting/Web/API/Window/online_event": {
+    "modified": "2019-03-18T21:38:43.642Z",
+    "contributors": [
+      "wanderzhang",
+      "githubyangwei"
+    ]
+  },
   "conflicting/Web/API/Window/popstate_event": {
     "modified": "2020-10-15T21:07:15.381Z",
     "contributors": [
@@ -47234,6 +47224,16 @@
     "contributors": [
       "Yangfan",
       "lynnic26"
+    ]
+  },
+  "conflicting/Web/API/Window/unload_event": {
+    "modified": "2020-10-23T06:31:44.836Z",
+    "contributors": [
+      "liguorain",
+      "lon",
+      "teoli",
+      "AshfaqHossain",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/API/Worker/message_event": {

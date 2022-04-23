@@ -583,6 +583,7 @@
 /zh-TW/docs/Web/API/Window.requestAnimationFrame	/zh-TW/docs/Web/API/window/requestAnimationFrame
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/conflicting/Web/OpenSearch
 /zh-TW/docs/Web/API/WindowBase64	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
+/zh-TW/docs/Web/API/WindowEventHandlers/onbeforeunload	/zh-TW/docs/Web/API/Window/beforeunload_event
 /zh-TW/docs/Web/API/WindowEventHandlers/onpopstate	/zh-TW/docs/Web/API/Window/popstate_event
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-TW/docs/Web/API/btoa
 /zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval

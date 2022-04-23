@@ -1,0 +1,66 @@
+---
+title: window.onunload
+slug: conflicting/Web/API/Window/unload_event
+translation_of: Web/API/WindowEventHandlers/onunload
+original_slug: Web/API/WindowEventHandlers/onunload
+---
+<p>{{ ApiRef("HTML DOM") }}</p>
+
+<h3 id="Summary" name="Summary">概述</h3>
+
+<p>{{domxref("WindowEventHandlers")}} 的混入特性 <strong><code>onunload</code></strong> 是 {{event("Event_handlers", "event handler")}}  处理 {{Event("unload")}} 事件的方法。该事件在关闭窗口资源和内容的时候触发。页面资源的清除工作会在 <code>unload</code>  事件之后进行。</p>
+
+<div class="blockIndicator note">
+<p><strong>注意事项：</strong> 具备弹窗阻止功能的浏览器会忽略 <code>onunload</code>  事件回调中调用的 {{domxref("Window.open()")}} 方法。</p>
+</div>
+
+<div class="blockIndicator warning">
+<p><code>onunload</code> 特性(乃至 <code><a href="/zh-CN/docs/Web/API/Window/unload_event">unload</a></code> 事件本身) 并非使用 <code><a href="/zh-CN/docs/Web/API/Navigator/sendBeacon">sendBeacon()</a></code>的正确途径，要调用 <code><a href="/zh-CN/docs/Web/API/Navigator/sendBeacon">sendBeacon()</a></code> 接口，应当使用 <code><a href="/zh-CN/docs/Web/API/Document/visibilitychange_event">visibilitychange</a></code> 和 <code><a href="/zh-CN/docs/Web/API/Window/pagehide_event">pagehide</a></code> 事件。 参见 <a href="https://volument.com/blog/sendbeacon-is-broken#comments">Beacon API is broken</a>。</p>
+</div>
+
+<h3 id="Syntax" name="Syntax">语法</h3>
+
+<pre class="notranslate">window.addEventListener("unload", function(event) { ... });
+window.onunload = function(event) { ... };</pre>
+
+<p>通常而言，我们推荐使用 {{domxref("EventTarget.addEventListener", "window.addEventListener()")}} 来监听 {{event("unload")}} 事件，而不是直接给 <code>onunload</code> 赋值。</p>
+
+<h3 id="Example" name="Example">例子</h3>
+
+<pre class="notranslate">&lt;html&gt;
+&lt;head&gt;
+
+&lt;title&gt;onunload test&lt;/title&gt;
+
+&lt;script type="text/javascript"&gt;
+
+window.onunload = unloadPage;
+
+function unloadPage()
+{
+ alert("unload event detected!");
+}
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p&gt;Reload a new page into the browser&lt;br /&gt;
+ to fire the unload event for this page.&lt;/p&gt;
+&lt;p&gt;You can also use the back or forward buttons&lt;br /&gt;
+ to load a new page and fire this event.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+
+<h3 id="Specification" name="Specification">规范</h3>
+
+<p>{{ DOM0() }}</p>
+
+<p>{{ languages( {"en": "en/DOM/window.onunload" } ) }}</p>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+<p>{{Compat("api.WindowEventHandlers.onunload")}}</p>
+
+<p>在 Firefox 1.5 中，页面使用此事件处理程序会阻止浏览器在 bfcache 内存中缓存页面(译者注：翻译可能没有达意，请对照英文原文)。详细信息<a href="https://developer.mozilla.org/en-US/Firefox/Releases/1.5/Using_Firefox_1.5_caching">请参阅使用 Firefox 1.5：缓存</a>。</p>

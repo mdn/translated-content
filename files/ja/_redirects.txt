@@ -3081,6 +3081,8 @@
 /ja/docs/Web/API/Document/onbeforescriptexecute	/ja/docs/Web/API/Document/beforescriptexecute_event
 /ja/docs/Web/API/Document/onfullscreenchange	/ja/docs/conflicting/Web/API/Document/fullscreenchange_event
 /ja/docs/Web/API/Document/onfullscreenerror	/ja/docs/conflicting/Web/API/Document/fullscreenerror_event
+/ja/docs/Web/API/Document/onoffline	/ja/docs/Web/API/Window/offline_event
+/ja/docs/Web/API/Document/ononline	/ja/docs/Web/API/Window/online_event
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
 /ja/docs/Web/API/DocumentOrShadowRoot/activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint	/ja/docs/Web/API/Document/caretPositionFromPoint
@@ -3410,12 +3412,16 @@
 /ja/docs/Web/API/WindowBase64/btoa	/ja/docs/Web/API/btoa
 /ja/docs/Web/API/WindowEventHandlers/onafterprint	/ja/docs/conflicting/Web/API/Window/afterprint_event
 /ja/docs/Web/API/WindowEventHandlers/onbeforeprint	/ja/docs/conflicting/Web/API/Window/beforeprint_event
+/ja/docs/Web/API/WindowEventHandlers/onbeforeunload	/ja/docs/conflicting/Web/API/Window/beforeunload_event
 /ja/docs/Web/API/WindowEventHandlers/onhashchange	/ja/docs/conflicting/Web/API/Window/hashchange_event
 /ja/docs/Web/API/WindowEventHandlers/onlanguagechange	/ja/docs/conflicting/Web/API/Window/languagechange_event
 /ja/docs/Web/API/WindowEventHandlers/onmessage	/ja/docs/Web/API/Window/message_event
 /ja/docs/Web/API/WindowEventHandlers/onmessageerror	/ja/docs/conflicting/Web/API/Window/messageerror_event
 /ja/docs/Web/API/WindowEventHandlers/onpopstate	/ja/docs/Web/API/Window/popstate_event
+/ja/docs/Web/API/WindowEventHandlers/onrejectionhandled	/ja/docs/conflicting/Web/API/Window/rejectionhandled_event
 /ja/docs/Web/API/WindowEventHandlers/onstorage	/ja/docs/conflicting/Web/API/Window/storage_event
+/ja/docs/Web/API/WindowEventHandlers/onunhandledrejection	/ja/docs/conflicting/Web/API/Window/unhandledrejection_event
+/ja/docs/Web/API/WindowEventHandlers/onunload	/ja/docs/conflicting/Web/API/Window/unload_event
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ja/docs/Web/API/atob
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ja/docs/Web/API/btoa
 /ja/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ja/docs/Web/API/caches
@@ -3614,7 +3620,7 @@
 /ja/docs/Web/API/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/Web/API/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
 /ja/docs/Web/API/window.onabort	/ja/docs/Web/API/GlobalEventHandlers/onabort
-/ja/docs/Web/API/window.onbeforeunload	/ja/docs/Web/API/WindowEventHandlers/onbeforeunload
+/ja/docs/Web/API/window.onbeforeunload	/ja/docs/conflicting/Web/API/Window/beforeunload_event
 /ja/docs/Web/API/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/Web/API/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/Web/API/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick

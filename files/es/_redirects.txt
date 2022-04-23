@@ -1592,12 +1592,13 @@
 /es/docs/Web/API/Web_Speech_API/Uso_de_la_Web_Speech_API	/es/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API
 /es/docs/Web/API/Window.clearTimeout	/es/docs/Web/API/clearTimeout
 /es/docs/Web/API/Window.navigator	/es/docs/Web/API/Window/navigator
-/es/docs/Web/API/Window.onbeforeunload	/es/docs/Web/API/WindowEventHandlers/onbeforeunload
+/es/docs/Web/API/Window.onbeforeunload	/es/docs/conflicting/Web/API/Window/beforeunload_event
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/Window/crypto	/es/docs/Web/API/crypto_property
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
 /es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/atob
+/es/docs/Web/API/WindowEventHandlers/onbeforeunload	/es/docs/conflicting/Web/API/Window/beforeunload_event
 /es/docs/Web/API/WindowEventHandlers/onhashchange	/es/docs/conflicting/Web/API/Window/hashchange_event
 /es/docs/Web/API/WindowEventHandlers/onpopstate	/es/docs/Web/API/Window/popstate_event
 /es/docs/Web/API/WindowOrWorkerGlobalScope/atob	/es/docs/Web/API/atob

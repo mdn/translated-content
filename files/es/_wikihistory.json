@@ -9048,14 +9048,6 @@
       "fscholz"
     ]
   },
-  "Web/API/WindowEventHandlers/onbeforeunload": {
-    "modified": "2019-03-23T23:22:06.132Z",
-    "contributors": [
-      "fscholz",
-      "AshfaqHossain",
-      "jota1410"
-    ]
-  },
   "Web/API/WindowOrWorkerGlobalScope": {
     "modified": "2019-03-23T22:16:40.400Z",
     "contributors": [
@@ -21388,6 +21380,14 @@
       "Mgjbot",
       "Superruzafa",
       "Nukeador"
+    ]
+  },
+  "conflicting/Web/API/Window/beforeunload_event": {
+    "modified": "2019-03-23T23:22:06.132Z",
+    "contributors": [
+      "fscholz",
+      "AshfaqHossain",
+      "jota1410"
     ]
   },
   "conflicting/Web/API/Window/hashchange_event": {

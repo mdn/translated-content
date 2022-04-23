@@ -1,0 +1,154 @@
+---
+title: WindowEventHandlers.onbeforeunload
+slug: Web/API/Window/beforeunload_event
+translation_of: Web/API/WindowEventHandlers/onbeforeunload
+original_slug: Web/API/WindowEventHandlers/onbeforeunload
+---
+<div>
+<div>{{APIRef("HTML DOM")}}</div>
+</div>
+
+<div> </div>
+
+<p><code><strong>WindowEventHandlers.onbeforeunload</strong></code> 事件处理函数包含的代码将在 {{event("beforeunload")}} 发出时被执行。当 window 准备释放它的资源时，该事件被触发。此时 document 仍然可见，且事件是仍然可被取消的。</p>
+
+<div class="note">
+<p><strong>注意:</strong> 为了避免不必要的弹出窗口，除非页面已经有过互动，否则可能不会显示beforeunload创建的询问窗口。对于特定的浏览器列表，请参阅浏览器兼容性部分。</p>
+</div>
+
+<h2 id="Syntax" name="Syntax">语法</h2>
+
+<pre class="syntaxbox">window.onbeforeunload = <var>funcRef</var></pre>
+
+<ul>
+ <li><code>funcRef</code> 是函数或函数表达式的引用。</li>
+ <li>这个函数应该设置一个字符串到事件对象的 returnValue 属性上，且返回该字符串。</li>
+</ul>
+
+<h2 id="Example" name="Example">示例</h2>
+
+<pre class="brush:js">window.onbeforeunload = function(e) {
+  var dialogText = 'Dialog text here';
+  e.returnValue = dialogText;
+  return dialogText;
+};
+</pre>
+
+<h2 id="注意">注意</h2>
+
+<p>当事件返回了一个非空值时，将需要用户确认是否 unload 页面。在大部分浏览器中，事件的返回值将在对话框中显示。在 Firefox 4 及以后，返回值将不会显示给用户。作为替代，Firefox将会显示"This page is asking you to confirm that you want to leave - data you have entered may not be saved." 请查看{{bug("588292")}}.</p>
+
+<p>Since 25 May 2011, the HTML5 specification states that calls to {{domxref("window.alert()")}}, {{domxref("window.confirm()")}}, and {{domxref("window.prompt()")}} methods may be ignored during this event. See the <a href="http://www.w3.org/TR/html5/webappapis.html#user-prompts">HTML5 specification</a> for more details.</p>
+
+<p>Note also that various mobile browsers ignore the result of the event (that is, they do not ask the user for confirmation). Firefox has a hidden preference in about:config to do the same. In essence this means the user always confirms that the document may be unloaded.</p>
+
+<p>You <em>can</em> and <em>should</em> handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the {{event("beforeunload")}} event. More documentation is available there.</p>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>The event was originally introduced by Microsoft in Internet Explorer 4 and standardized in the HTML5 specification.</p>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5.1', '#windoweventhandlers', 'GlobalEventHandlers')}}</td>
+   <td>{{Spec2('HTML5.1')}}</td>
+   <td> </td>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML5 W3C", "#windoweventhandlers", "GlobalEventHandlers")}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<div>{{CompatibilityTable}}</div>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatChrome(1.0)}}</td>
+   <td>1</td>
+   <td>4</td>
+   <td>12</td>
+   <td>3</td>
+  </tr>
+  <tr>
+   <td>Custom text support removed</td>
+   <td>{{CompatChrome(51.0)}}</td>
+   <td>{{CompatGeckoMobile("44.0")}}</td>
+   <td> </td>
+   <td>38</td>
+   <td><a href="https://developer.apple.com/library/mac/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_1.html">9.1</a></td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Android Webview</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>Chrome for Android</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>(no) <a href="https://bugs.webkit.org/show_bug.cgi?id=19324">defect</a></td>
+   <td>{{CompatVersionUnknown}}</td>
+  </tr>
+  <tr>
+   <td>Custom text support removed</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatChrome(51.0)}}</td>
+   <td>{{CompatGeckoMobile("44.0")}}</td>
+   <td> </td>
+   <td> </td>
+   <td> </td>
+   <td>{{CompatChrome(51.0)}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<h2 id="See also" name="See also">See also</h2>
+
+<ul>
+ <li><a href="http://msdn.microsoft.com/en-us/library/ms536907(VS.85).aspx">MSDN: onbeforeunload event</a></li>
+</ul>

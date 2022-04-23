@@ -4574,6 +4574,12 @@
       "CarterTsai"
     ]
   },
+  "Web/API/Window/beforeunload_event": {
+    "modified": "2019-03-23T22:27:46.116Z",
+    "contributors": [
+      "hstarorg"
+    ]
+  },
   "Web/API/Window/getComputedStyle": {
     "modified": "2019-03-23T22:10:08.484Z",
     "contributors": [
@@ -4669,12 +4675,6 @@
     "modified": "2019-03-23T22:30:52.273Z",
     "contributors": [
       "jackblackevo"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onbeforeunload": {
-    "modified": "2019-03-23T22:27:46.116Z",
-    "contributors": [
-      "hstarorg"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {

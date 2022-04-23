@@ -396,8 +396,10 @@
 /ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ru/docs/Glossary/Base64
 /ru/docs/Web/API/WindowBase64/btoa	/ru/docs/Web/API/btoa
 /ru/docs/Web/API/WindowEventHandlers/onafterprint	/ru/docs/Web/API/Window/afterprint_event
+/ru/docs/Web/API/WindowEventHandlers/onbeforeunload	/ru/docs/conflicting/Web/API/Window/beforeunload_event
 /ru/docs/Web/API/WindowEventHandlers/onhashchange	/ru/docs/conflicting/Web/API/Window/hashchange_event
 /ru/docs/Web/API/WindowEventHandlers/onpopstate	/ru/docs/conflicting/Web/API/Window/popstate_event
+/ru/docs/Web/API/WindowEventHandlers/onunload	/ru/docs/Web/API/Window/unload_event
 /ru/docs/Web/API/WindowOrWorkerGlobalScope/atob	/ru/docs/Web/API/atob
 /ru/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/ru/docs/Web/API/btoa
 /ru/docs/Web/API/WindowOrWorkerGlobalScope/caches	/ru/docs/Web/API/caches
