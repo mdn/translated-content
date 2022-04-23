@@ -5,80 +5,52 @@ tags:
   - API
   - HTML DOM
   - HTMLElement
-  - Property
-  - Reference
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLElement.dir
 translation_of: Web/API/HTMLElement/dir
 ---
-<div>{{ApiRef("HTML DOM")}}</div>
+{{ApiRef("HTML DOM")}}
 
-<p><code><strong>HTMLElement.dir</strong></code> プロパティは、現在の要素のコンテンツのテキストを書く書字方向を取得または設定します。</p>
+**`HTMLElement.dir`** プロパティは、現在の要素のコンテンツのテキストを書く書字方向を取得または設定します。
 
-<p>要素のテキストを書く書字方向 (text writing directionality) は、テキストが向かう方向です (異なる言語体系のサポートのため)。 アラビア語とヘブライ語は、 RTL 書字方向を使用する典型的な言語です。</p>
+要素のテキストを書く書字方向（text writing directionality）は、テキストが向かう方向です (異なる言語体系のサポートのため)。 アラビア語とヘブライ語は、 RTL 書字方向を使用する典型的な言語です。
 
-<p>画像の <code>dir</code> プロパティを "<code>rtl</code>" に設定できます。 この場合、HTML 属性の <code>title</code> と <code>alt</code> は、 "<code>rtl</code>" としてフォーマットされ、定義されます。</p>
+画像の `dir` プロパティを "`rtl`" に設定できます。 この場合、 HTML 属性の `title` と `alt` は、 "`rtl`" としてフォーマットされ、定義されます。
 
-<p>表の <code>dir</code> が "<code>rtl</code>" に設定されている場合、列の順序は右から左に配置されます。</p>
+表の `dir` が "`rtl`" に設定されている場合、列の順序は右から左に配置されます。
 
-<p>要素の <code>dir</code> が "<code>auto</code>" に設定されている場合、要素の方向は、最初の明確な書字方向文字 (strong directionality character)、または既定で親要素の書字方向に基づいて決定されます。</p>
+要素の `dir` が "`auto`" に設定されている場合、要素の方向は、最初の強い書字方向文字 (strong directionality character)、または既定では親要素の書字方向に基づいて決定されます。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+> **Note:** ブラウザーは、コンテンツの作成を支援するために、ユーザーが {{ HTMLElement("input") }} と {{ HTMLElement("textarea") }} の書字方向を変更することを許可する場合があります。 Chrome と Safari は入力フィールドのコンテキストメニューで書字方向のオプションを提供しており、 Internet Explorer と Edge は <kbd>Ctrl</kbd> + <kbd>左 Shift</kbd> と <kbd>Ctrl</kbd> + <kbd>右 Shift</kbd> のキーバインドを使用しています。 Firefox は <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> を使用しますが、 **`dir`** 属性の値は更新しません。
 
-<pre class="syntaxbox">var <em><var>currentWritingDirection</var></em> = <em>elementNodeReference</em>.dir;
-<em>elementNodeReference</em>.dir = <em><var>newWritingDirection</var></em>;
-</pre>
+## 値
 
-<ul>
- <li><code><var>currentWritingDirection</var></code> は、現在の要素のテキストを書く方向を表す文字列変数です。</li>
- <li><code><var>newWritingDirection</var></code> は、テキストを書く方向の値を表す文字列変数です。</li>
-</ul>
+以下のうちの何れかです。
 
-<p><code>dir</code> が取り得る値は、左から右への <code>ltr</code>、右から左への <code>rtl</code>、および要素の内容に基づいて要素の方向を決定する必要があることを指定する <code>auto</code> です。</p>
+- `ltr`: 左書き（左から右へ）
+- `rtl`: 右書き（右から左へ）
+- `auto`: 要素の内容に基づいて方向を決定しなければならないことを指定するためのものです。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<pre class="brush: js">var parg = document.getElementById("para1");
+```js
+var parg = document.getElementById("para1");
 parg.dir = "rtl";
 // "para1" として識別される段落のテキストの方向を変更します
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-dir', 'dir')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>{{SpecName('DOM2 HTML')}} からの変更はありません。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-52460740', 'dir')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>{{SpecName('DOM1')}} からの変更はありません。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-52460740', 'dir')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>初期定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLElement.dir")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("document.dir")}}</li>
- <li>HTML の <a href="/ja/docs/Web/HTML/Global_attributes/dir"><code>dir</code></a> グローバル属性</li>
- <li>CSS の {{cssxref("direction")}} プロパティ</li>
- <li>CSS の {{cssxref(":dir")}} 擬似クラス</li>
-</ul>
+- {{domxref("document.dir")}}
+- HTML の [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) グローバル属性
+- CSS の {{cssxref("direction")}} プロパティ
+- CSS の {{cssxref(":dir")}} 擬似クラス
