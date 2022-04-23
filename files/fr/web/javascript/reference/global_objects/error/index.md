@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Error
 ---
 {{JSRef}}
 
-Les objets `Error` sont déclenchés lorsque des erreurs d'exécution surviennent. L'objet `Error` peut aussi être utilisé comme objet de base pour des exceptions spécifiques. Voir ci-dessous pour les types d'erreur natifs standard.
+Les objets `Error` sont déclenchés lorsque des erreurs d'exécution surviennent. L'objet `Error` peut aussi être utilisé comme objet de base pour des exceptions spécifiques. Voir ci-dessous pour les types d'erreur natifs standards.
 
 ## Description
 
@@ -32,7 +32,7 @@ En plus du constructeur `Error` générique, il existe d'autres constructeurs d'
 - [`AggregateError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AggregateError)
   - : Crée une instance représentant différentes erreurs agrégées en une seule lorsque plusieurs erreurs sont rapportées par une opération, par exemple avec [`Promise.any()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/any).
 - [`InternalError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/InternalError) {{non-standard_inline}}
-  - : Crée une instance représentant une erreur se produisant quand une erreur interne dans le moteur JavaScript est déclenchée. Par exemple, "too much recursion".
+  - : Crée une instance représentant une erreur se produisant quand une erreur interne dans le moteur JavaScript est déclenchée. Par exemple, «&nbsp;<i lang="en">too much recursion</i>&nbsp;».
 
 ## Constructeur
 
@@ -76,9 +76,9 @@ On crée habituellement un objet `Error` dans l'intention de le déclencher en u
 
 ```js
 try {
-  throw new Error("Ouups !");
+  throw new Error("Oups !");
 } catch (e) {
-  console.log(e.name + ": " + e.message);
+  console.log(e.name + " : " + e.message);
 }
 ```
 
@@ -172,28 +172,28 @@ class ErreurSpecifique extends Error {
   constructor(toto = 'truc', ...params) {
     // On passe les arguments restants (y compris ceux
     // de l'éditeur tiers) au constructeur parent
-    super(...params)
+    super(...params);
 
     // On garde la pile d'appels de l'erreur
     // Uniquement disponible pour V8
     if (Error.captureStackTrace) {
-      Error.captureStackTrace(this, ErreurSpecifique)
+      Error.captureStackTrace(this, ErreurSpecifique);
     }
 
-    this.name = 'ErreurSpecifique'
+    this.name = 'ErreurSpecifique';
     // Les informations de débogage spécifiques
-    this.toto = toto
-    this.date = new Date()
+    this.toto = toto;
+    this.date = new Date();
   }
 }
 
 try {
   throw new ErreurSpecifique('truc', 'trucMessage');
 } catch(e) {
-  console.error(e.name);    //ErreurSpecifique
-  console.error(e.toto);    //truc
-  console.error(e.message); //trucMessage
-  console.error(e.stack);   //stacktrace
+  console.error(e.name);    // ErreurSpecifique
+  console.error(e.toto);    // truc
+  console.error(e.message); // trucMessage
+  console.error(e.stack);   // stacktrace
 }
 ```
 
@@ -231,9 +231,9 @@ if (Object.setPrototypeOf){
 try {
   throw new ErreurSpecifique('truc', 'trucMessage');
 } catch(e){
-  console.error(e.name); //ErreurSpecifique
-  console.error(e.toto); //truc
-  console.error(e.message); //trucMessage
+  console.error(e.name); // ErreurSpecifique
+  console.error(e.toto); // truc
+  console.error(e.message); // trucMessage
 }
 ```
 
