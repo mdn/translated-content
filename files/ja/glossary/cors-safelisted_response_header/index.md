@@ -8,7 +8,9 @@ tags:
   - 用語集
 translation_of: Glossary/CORS-safelisted_response_header
 ---
-_CORS セーフリストレスポンスヘッダー_ は、セーフリストに掲載されている [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)であり、レスポンスが CORS によって処理されたときに、 ({{HTTPHeader("Access-Control-Expose-Headers")}} に掲載された場合と同様に) _安全_ であると見なされ、フィルタリングされないものです。既定でセーフリストには、以下のレスポンスヘッダーが含まれています。
+_CORS セーフリストレスポンスヘッダー_ は、[CORS](/en-US/docs/Web/HTTP/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
+
+既定では以下のレスポンスヘッダーがセーフリストに含まれます。
 
 - {{HTTPHeader("Cache-Control")}}
 - {{HTTPHeader("Content-Language")}}
@@ -17,6 +19,10 @@ _CORS セーフリストレスポンスヘッダー_ は、セーフリストに
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Last-Modified")}}
 - {{HTTPHeader("Pragma")}}
+
+{{HTTPHeader("Access-Control-Expose-Headers")}} ヘッダーを使用して追加のヘッダーをセーフリストに追加することができます。
+
+> **Note:** {{HTTPHeader("Content-Length")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/whatwg/fetch/pull/626)]
 
 ## 例
 
@@ -33,7 +39,7 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 - [HTTP](/ja/docs/Web/HTTP)
 - [HTTP headers](/ja/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
-- [Glossary](/en-US/docs/Glossary)
+- [用語集](/ja/docs/Glossary)
 
    - {{Glossary("CORS")}}
    - {{Glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}
