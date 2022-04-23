@@ -58,4 +58,4 @@ console.log(car.special); // BMW
 
 ## 関連情報
 
-- {{interwiki("wikipedia", "Literal (computer programming)", "Literal")}} on Wikipedia
+- Wikipedia 上の記事 「{{interwiki("wikipedia", "Literal (computer programming)", "Literal")}}」
