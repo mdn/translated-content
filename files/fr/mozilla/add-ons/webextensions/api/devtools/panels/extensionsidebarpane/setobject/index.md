@@ -35,7 +35,7 @@ var setting = browser.devtools.panels.setObject(
 ### Paramètres
 
 - `jsonObject`
-  - : `String` ou `Array` ou `Object`. L'objet à afficher. S'il s'agit d'un objet JSON-serialized, donc les propriétés comme les fonctions seront omises.
+  - : `String` ou `Array` ou `Object`. L'objet à afficher. S'il s'agit d'un objet JSON-serialized, donc les propriétés comme les fonctions seront omises.
 - `rootTitle` {{optional_inline}}
   - : `String`. Le titre de la racine de l'arbre dans lequel l'objet est affiché.
 

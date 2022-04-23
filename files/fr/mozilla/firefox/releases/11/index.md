@@ -32,7 +32,7 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 - L'appel {{domxref("document.mozCancelFullScreen()")}} restaure à présent l'élément précédemment en plein-écran, si un autre élément était en mode plein-écran lorsque la méthode {{domxref("element.mozRequestFullScreen()")}} a été appelée.
 - La méthode {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} ne supporte plus une forme sans argument. Cela n'est pas beaucoup utilisé et il est peu probable que ça fasse partie de la norme.
 - Les images SVG peuvent à présent être dessinées dans un canvas sans [entacher le canvas](/fr/docs/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
-- La propriété non-standard `countryCode` de l'interface `GeoPositionAddress` a été supprimée, voir {{interface("nsIDOMGeoPositionAddress")}}.
+- La propriété non-standard `countryCode` de l'interface `GeoPositionAddress` a été supprimée, voir `nsIDOMGeoPositionAddress`.
 - [Les évènements Server-sent](/fr/docs/Server-sent_events) supportent désormais [CORS](/fr/docs/HTTP_access_control).
 - Dans le passé, lorsque l'utilisateur suivait un lien, les valeurs définies sur l'objet {{domxref("window.navigator")}} été retenus par la nouvelle page. Maintenant un nouvel objet `navigator` est crée pour la nouvelle page. Cela rend le comportement de Firefox identique aux autres navigateurs.
 
@@ -81,17 +81,17 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 
 ### Changements dans les interfaces
 
-- L'interface {{interface("mozIAsyncHistory")}} a une nouvelle méthode {{ifmethod("mozIAsyncHistory","isURIVisited")}} pour vérifier si une URI a été visitée.
-- Une nouvelle interface {{interface("mozIVisitStatusCallback")}} a été ajoutée pour fournir une fonctionnalité de traitement des rappels pour {{ifmethod("mozIAsyncHistory","isURIVisited")}}.
-- L'interface {{interface("nsIMacDockSupport")}} interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
-- Dans l'interface {{interface("nsINavHistoryResultObserver")}}, vous devez à présent implémenter {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} au lieu des anciennes méthodes `containerOpened()` et `containerClosed()`.
+- L'interface `mozIAsyncHistory` a une nouvelle méthode {{ifmethod("mozIAsyncHistory","isURIVisited")}} pour vérifier si une URI a été visitée.
+- Une nouvelle interface `mozIVisitStatusCallback` a été ajoutée pour fournir une fonctionnalité de traitement des rappels pour {{ifmethod("mozIAsyncHistory","isURIVisited")}}.
+- L'interface `nsIMacDockSupport` interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
+- Dans l'interface `nsINavHistoryResultObserver`, vous devez à présent implémenter {{ifmethod("nsINavHistoryResultObserver", "containerStateChanged")}} au lieu des anciennes méthodes `containerOpened()` et `containerClosed()`.
 
 #### Interface supprimées
 
 Les interfaces suivantes ont été supprimées car elles n'étaient plus indispensables :
 
-- {{interface("nsICharsetResolver")}}
-- {{interface("nsIDOMNSElement")}}, voir {{bug("707576")}} ; utilisez {{interface("nsIDOMElement")}} à la place.
+- `nsICharsetResolver`
+- `nsIDOMNSElement`, voir {{bug("707576")}} ; utilisez `nsIDOMElement` à la place.
 
 ### Changement lié au thème
 

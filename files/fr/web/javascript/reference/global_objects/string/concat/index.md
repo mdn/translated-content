@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/concat
 ---
 {{JSRef}}
 
-La méthode **`concat()`** combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.
+La méthode **`concat()`** combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.
 
 {{EmbedInteractiveExample("pages/js/string-concat.html")}}
 
@@ -31,7 +31,7 @@ Une nouvelle chaîne de caractères qui contient la concaténation des chaînes 
 
 ## Description
 
-La fonction `concat()` renvoie une nouvelle chaîne correspondant à la concaténation des différents arguments avec la chaîne courante. La chaîne courante est celle sur laquelle a été appelée la méthode `concat()`. Si les valeurs passées en arguments ne sont pas des chaînes de caractères, elles sont automatiquement converties en chaînes (grâce à leur méthode `toString()` avant la concaténation).
+La fonction `concat()` renvoie une nouvelle chaîne correspondant à la concaténation des différents arguments avec la chaîne courante. La chaîne courante est celle sur laquelle a été appelée la méthode `concat()`. Si les valeurs passées en arguments ne sont pas des chaînes de caractères, elles sont automatiquement converties en chaînes (grâce à leur méthode `toString()` avant la concaténation).
 
 ## Exemples
 
@@ -55,7 +55,7 @@ var salutation = ['Bonjour', ' ', 'Alfred', ' ', '!'];
 
 ## Performance
 
-Il est fortement recommandé d'utiliser les {{jsxref("Opérateurs/Opérateurs_d_affectation", "opérateurs d'affectation", "", 1)}} (+, +=) plutôt que la méthode `concat()` pour des raisons de performance.
+Il est fortement recommandé d'utiliser les {{jsxref("Opérateurs/Opérateurs_d_affectation", "opérateurs d'affectation", "", 1)}} (+, +=) plutôt que la méthode `concat()` pour des raisons de performance.
 
 ## Spécifications
 

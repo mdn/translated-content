@@ -36,8 +36,8 @@ Aucun.
 - `level`
 
   - : Définit la manière dont les niveaux de l'arbre source doivent pris en compte lors de la génération des
-    nombres séquentiels. Les trois valeurs possibles sont : `single`, `multiple` et
-    `any`. La valeur par défaut est `single` :
+    nombres séquentiels. Les trois valeurs possibles sont&nbsp;: `single`, `multiple` et
+    `any`. La valeur par défaut est `single`&nbsp;:
 
     - `single`
       - : Numérote de façon séquentielle les nœuds descendants d'un même parent, à la manière des éléments d'une
@@ -71,7 +71,7 @@ Aucun.
     un des formats standards de `<xsl:number>`.
 - format
 
-  - : Définit le format du nombre généré :
+  - : Définit le format du nombre généré&nbsp;:
 
     - format="1"
       - : \<tt>1 2 3 …\</tt> (C'est le seul format supporté à ce jour)

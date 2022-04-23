@@ -79,7 +79,7 @@ Cette propriété peut être définie selon trois formes différentes :
 - `start`
   - : L'élément est aligné vers le début du conteneur pour l'axe en ligne.
 - `end`
-  - : L'élément est aligné vers la fin du conteneur pour l'axe en ligne.
+  - : L'élément est aligné vers la fin du conteneur pour l'axe en ligne.
 - `flex-start`
   - : L'élément est aligné vers le début du conteneur flexible pour l'axe en ligne.
     Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à `start`.
@@ -87,7 +87,7 @@ Cette propriété peut être définie selon trois formes différentes :
   - : L'élément est aligné vers la fin du conteneur flexible pour l'axe en ligne.
     Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à `end`.
 - `self-start`
-  - : L'élément est aligné sur le bord du conteneur au début de l'axe en ligne.
+  - : L'élément est aligné sur le bord du conteneur au début de l'axe en ligne.
 - `self-end`
   - : L'élément est aligné sur le bord du conteneur à la fin de l'axe en ligne.
 - `center`
@@ -95,7 +95,7 @@ Cette propriété peut être définie selon trois formes différentes :
 - `left`
   - : L'élément est aligné vers la gauche du conteneur dans le sens de l'axe en ligne.
 - `right`
-  - : L'élément est aligné vers la droite du conteneur dans le sens de l'axe en ligne.
+  - : L'élément est aligné vers la droite du conteneur dans le sens de l'axe en ligne.
 - `baseline first baseline`
   `last baseline`
   - : Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse.

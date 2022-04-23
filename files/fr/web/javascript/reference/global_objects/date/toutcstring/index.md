@@ -45,10 +45,10 @@ var UTCstring = aujourdhui.toUTCString();
 | Spécification                                                                                                        | État                         | Commentaires                                                                                |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. Le format dépend de l'implémentation. |
-| {{SpecName('ES5.1', '#sec-15.9.5.42', 'Date.prototype.toUTCString')}}                         | {{Spec2('ES5.1')}}     |                                                                                             |
-| {{SpecName('ES6', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}}     | {{Spec2('ES6')}}         |                                                                                             |
+| {{SpecName('ES5.1', '#sec-15.9.5.42', 'Date.prototype.toUTCString')}}                         | {{Spec2('ES5.1')}}     |                                                                                             |
+| {{SpecName('ES6', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}}     | {{Spec2('ES6')}}         |                                                                                             |
 | {{SpecName('ES2018', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} | {{Spec2('ES2018')}}     | Première standardisation du format                                                          |
-| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} | {{Spec2('ESDraft')}} |                                                                                             |
+| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} | {{Spec2('ESDraft')}} |                                                                                             |
 
 ## Compatibilité des navigateurs
 

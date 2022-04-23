@@ -20,14 +20,14 @@ translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 
 <p>For non-negative numbers, zero-fill right shift and sign-propagating right shift yield the same result. For example, <code>9 &gt;&gt;&gt; 2</code> yields 2, the same as <code>9 &gt;&gt; 2</code>:</p>
 
-<pre class="brush: js">.     9 (base 10): 00000000000000000000000000001001 (base 2)
+<pre class="brush: js">      9 (base 10): 00000000000000000000000000001001 (base 2)
                    --------------------------------
 9 &gt;&gt;&gt; 2 (base 10): 00000000000000000000000000000010 (base 2) = 2 (base 10)
 </pre>
 
 <p>However, this is not the case for negative numbers. For example, <code>-9 &gt;&gt;&gt; 2</code> yields 1073741821, which is different than <code>-9 &gt;&gt; 2</code> (which yields <code>-3</code>):</p>
 
-<pre class="brush: js">.     -9 (base 10): 11111111111111111111111111110111 (base 2)
+<pre class="brush: js">      -9 (base 10): 11111111111111111111111111110111 (base 2)
                     --------------------------------
 -9 &gt;&gt;&gt; 2 (base 10): 00111111111111111111111111111101 (base 2) = 1073741821 (base 10)
 </pre>

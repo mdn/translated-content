@@ -57,4 +57,4 @@ Si le point spécifié est en dehors de la portion visible du document ou que l'
 
 ### Spécification
 
-- Spécification préliminaire : [`elementFromPoint`](http://dev.w3.org/csswg/cssom/#documentlayout-elementfrompoint)
+- Spécification préliminaire&nbsp;: [`elementFromPoint`](http://dev.w3.org/csswg/cssom/#documentlayout-elementfrompoint)

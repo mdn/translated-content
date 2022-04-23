@@ -12,7 +12,7 @@ translation_of: Web/CSS/font
 
 La propriété **`font`** est :
 
-- une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}},  {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}
+- une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}},  {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}
 - ou une propriété permettant d'utiliser une police système pour la police de caractères d'un élément grâce à certains mots-clés spécifiques.
 
 {{EmbedInteractiveExample("pages/css/font.html")}}
@@ -67,7 +67,7 @@ Si `font` est définie comme une propriété raccourcie :
 - Les valeurs pour `font-style`, `font-variant` et `font-weight` doivent précéder la valeur pour `font-size`
 - La valeur de `font-variant` ne peut utiliser que les valeurs définies en CSS 2.1 : `normal` et `small-caps`
 - La valeur de `font-stretch` ne peut être qu'un mot-clé.
-- La valeur pour `line-height` doit immédiatement suivre la valeur pour `font-size`, séparée par une barre oblique (par exemple "`16px/3`")
+- La valeur pour `line-height` doit immédiatement suivre la valeur pour `font-size`, séparée par une barre oblique (par exemple "`16px/3`")
 - La valeur pour `font-family` doit être la dernière fournie.
 
 ### Valeurs
@@ -140,7 +140,7 @@ Si `font` est définie comme une propriété raccourcie :
 ### CSS
 
 ```css
-/* La corps de la police sera  12px */
+/* La corps de la police sera 12px */
 /* La hauteur de ligne 14px et la   */
 /* famille de polices sans-serif    */
 

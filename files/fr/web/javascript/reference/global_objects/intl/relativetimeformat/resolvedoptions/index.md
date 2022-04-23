@@ -27,7 +27,7 @@ La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un
 
 ### Valeur de retour
 
-Un nouvel objet dont les propriétés reflètent les options de locale et de formatage calculées lors de l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.
+Un nouvel objet dont les propriétés reflètent les options de locale et de formatage calculées lors de l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.
 
 ## Description
 
@@ -47,7 +47,7 @@ L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
 
   - : Le format du message produit. Les valeurs possibles sont :
 
-    - `"always"` : la valeur par défaut (par exemple  `1 day ago`),
+    - `"always"` : la valeur par défaut (par exemple  `1 day ago`),
     - `"auto"` : cette valeur indique qu'il n'est pas nécessaire d'utiliser de valeur numérique dans le message produit (par exemple `yesterday`).
 
 - `numberingSystem`
@@ -70,7 +70,7 @@ usedOptions.numberingSystem; // "latn"
 | Spécification                                                                                                                                     | État                    | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
 |                                                                                                                                                   |                         |              |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-intl.relativetimeformat.prototype.resolvedoptions) | Proposition de niveau 3 |              |
+| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-intl.relativetimeformat.prototype.resolvedoptions) | Proposition de niveau 3 |              |
 
 ## Compatibilité des navigateurs
 

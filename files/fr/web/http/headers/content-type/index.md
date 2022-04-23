@@ -60,7 +60,7 @@ Dans une requête {{HTTPMethod("POST")}}, qui vient d'une soumission d'un formul
 </form>
 ```
 
-La requête ressemble à peu près à ceci (les en-têtes moins intéressants ont été ici volontairement omis) :
+La requête ressemble à peu près à ceci (les en-têtes moins intéressants ont été ici volontairement omis)&nbsp;:
 
     POST /toto HTTP/1.1
     Content-Length: 68137

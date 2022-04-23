@@ -26,9 +26,9 @@ La valeur primitive de l'objet appelant.
 
 ## Description
 
-JavaScript appelle la méthode `valueOf` pour convertir un objet en une valeur primitive. Il est rarement nécessaire d'appeler soi-même la méthode `valueOf` ; JavaScript l'invoque automatiquement lorsqu'il rencontre un objet alors qu'il attend une valeur primitive.
+JavaScript appelle la méthode `valueOf` pour convertir un objet en une valeur primitive. Il est rarement nécessaire d'appeler soi-même la méthode `valueOf`&nbsp;; JavaScript l'invoque automatiquement lorsqu'il rencontre un objet alors qu'il attend une valeur primitive.
 
-Par défaut, la méthode `valueOf` est héritée par tout objet descendant d'{{jsxref("Object")}}. Tous les objets globaux natifs redéfinissent cette méthode pour renvoyer une valeur appropriée. Si un objet n'a pas de valeur primitive, `valueOf` renvoie l'objet lui-même, ce qui sera affiché comme :
+Par défaut, la méthode `valueOf` est héritée par tout objet descendant d'{{jsxref("Object")}}. Tous les objets globaux natifs redéfinissent cette méthode pour renvoyer une valeur appropriée. Si un objet n'a pas de valeur primitive, `valueOf` renvoie l'objet lui-même, ce qui sera affiché comme&nbsp;:
 
 ```js
 [object Object]
@@ -78,9 +78,9 @@ console.log(monObj + 3); // 7 car l'opération a implicitement utilisé valueOf
 | Spécification                                                                                                    | État                         | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.2.4.4', 'Object.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-object.prototype.valueof', 'Object.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

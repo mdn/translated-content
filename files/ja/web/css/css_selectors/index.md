@@ -57,7 +57,7 @@ translation_of: Web/CSS/CSS_Selectors
     **例:** `div span` は {{HTMLElement("div")}} 要素の中にある {{HTMLElement("span")}} 要素をすべて選択します。  
 
 - [子結合子](/ja/docs/Web/CSS/Child_combinator)
-  - : `&gt;` 結合子は、第 1 の要素の直接の子に当たるノードを選択します。  
+  - : `>` 結合子は、第 1 の要素の直接の子に当たるノードを選択します。  
     **構文:** `A > B`  
     **例:** `ul > li` は {{HTMLElement("ul")}} 要素の内側に直接ネストされた {{HTMLElement("li")}} 要素をすべて選択します。  
 

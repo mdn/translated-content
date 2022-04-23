@@ -25,11 +25,11 @@ translation_of: Web/EXSLT/str/split
 
 Un ensemble de nœuds d'éléments `token`, contenant chacun un `token` provenant de `chaîne`.
 
-Par exemple :
+Par exemple&nbsp;:
 
     str:split('livre, téléphone, ordinateur, chaise', ', ')
 
-Retourne l'ensemble de nœuds suivant :
+Retourne l'ensemble de nœuds suivant&nbsp;:
 
     <token>livre</token>
     <token>téléphone</token>

@@ -9,7 +9,7 @@ La propriété **`CanvasRenderingContext2D.lineJoin`** de l'API Canvas 2D déter
 
 Cette propriété n'a aucun effet quand deux segments connectés ont la même direction, car aucune zone de jonction ne sera ajoutée dans ce cas. Les segments dégénérés d'une longueur de zéro (c'est à dire avec les extrémités à la même position) seront ignorés.
 
-> **Note :** Les lignes peuvent être dessinées aves les méthodes  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
+> **Note :** Les lignes peuvent être dessinées aves les méthodes  {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}, {{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} et {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}}.
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ Il y a trois valeurs possibles pour cette propriété: `"round"`, `"bevel"` et `
 - `"bevel"` (biseau)
   - : Remplit une zone triangulaire supplémentaire entre les extrémités des segments connectés.
 - `"miter"` (onglet)
-  - : Les segments raccordés  sont reliés entre eux en prolongeant leurs bors extérieurs en un seul point, ce qui a pour effet de remplir uen zone supplémentaire en forme de losange. Ce paramètre est affecté par la proriété {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}. Valeur par dafaut.
+  - : Les segments raccordés sont reliés entre eux en prolongeant leurs bors extérieurs en un seul point, ce qui a pour effet de remplir uen zone supplémentaire en forme de losange. Ce paramètre est affecté par la proriété {{domxref("CanvasRenderingContext2D.miterLimit", "miterLimit")}}. Valeur par dafaut.
 
 ## Exemples
 

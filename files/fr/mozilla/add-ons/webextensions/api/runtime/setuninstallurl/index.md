@@ -30,7 +30,7 @@ var settingUrl = browser.runtime.setUninstallURL(
 ### Paramètres
 
 - `url`
-  - : `string`. L'URL à ouvrir après la désinstallation de l'extension. Cette URL doit avoir un schéma `http` ou `https`.  Définissez-le sur une chaîne vide pour ne pas ouvrir un nouvel onglet lors de la désinstallation.
+  - : `string`. L'URL à ouvrir après la désinstallation de l'extension. Cette URL doit avoir un schéma `http` ou `https`.  Définissez-le sur une chaîne vide pour ne pas ouvrir un nouvel onglet lors de la désinstallation.
 
 ### Valeur retournée
 

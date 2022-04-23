@@ -21,7 +21,7 @@ L'élément `<xsl:value-of>` évalue une expression XPath, la convertit en chaî
 
 ### Attributs optionnels
 
-- `disable-output-escaping` (Netscape ne sérialise pas le résultat de la transformation - la « sortie » ci-dessous - aussi cet attribut importe peu dans ce contexte. Pour sortir des entités HTML, employez leurs valeurs numériques à la place, par exemple `&#160` pour `&nbsp`).
+- `disable-output-escaping` (Netscape ne sérialise pas le résultat de la transformation - la «&nbsp;sortie&nbsp;» ci-dessous - aussi cet attribut importe peu dans ce contexte. Pour sortir des entités HTML, employez leurs valeurs numériques à la place, par exemple `&#160` pour `&nbsp`).
   - : Définit si les caractères spéciaux sont échappés quand ils sont écrits sur la sortie. Les valeurs autorisées sont `yes` ou `no`. Par exemple, s'il est définit à `yes`, le caractère \<tt>>\</tt> est transmis brut ( `>` ). Dans le cas contraire, c'est `&gt` qui serait envoyée à la sortie.
 
 ### Type

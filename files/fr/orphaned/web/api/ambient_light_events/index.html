@@ -11,7 +11,7 @@ original_slug: Web/API/Ambient_Light_Events
 <p>Les événements concernant la lumière environnante permettent à une application de percevoir simplement les changements de luminosité dans l'environnement de l'appareil. L'application peut donc ainsi réagir aux changements de luminosité : par exemple changer le contraste de l'interface ou changer l'exposition lors de la prise d'une photo.</p>
 <h2 id="Les_événements_liés_à_la_lumière">Les événements liés à la lumière</h2>
 <p>Lorsque le capteur de lumière détecte un changement de luminosité, il envoie une notification au navigateur. Lorsque le navigateur reçoit une notification, il déclenche un événement {{domxref("DeviceLightEvent")}} qui fournit des informations sur la valeur exacte de l'intensité lumineuse.</p>
-<p>Cet événement peut être capturé au niveau de l'objet <code>window</code> en utilisant la méthode {{domxref("EventTarget.addEventListener","addEventListener")}} (en utilisant le nom d'événement {{event("devicelight")}}) ou en attachant le gestionnaire d'événément à la propriété {{domxref("window.ondevicelight")}}.</p>
+<p>Cet événement peut être capturé au niveau de l'objet <code>window</code> en utilisant la méthode {{domxref("EventTarget.addEventListener","addEventListener")}} (en utilisant le nom d'événement {{event("devicelight")}}) ou en attachant le gestionnaire d'évènement à la propriété {{domxref("window.ondevicelight")}}.</p>
 <p>Une fois qu'il a été capturé, l'événement permet un accès à la valeur de l'intensité lumineuse, exprimée en <a href="http://fr.wikipedia.org/wiki/Lux_%28unit%C3%A9%29">lux</a> avec la propriété {{domxref("DeviceLightEvent.value")}}.</p>
 <h2 id="Exemple">Exemple</h2>
 <pre class="brush: js">window.addEventListener('devicelight', function(event) {

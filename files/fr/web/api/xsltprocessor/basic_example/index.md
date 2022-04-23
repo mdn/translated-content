@@ -18,9 +18,9 @@ La figure 1 montre le code source de l'exemple XSLT. Le document XML (exemple.xm
 
 Une feuille de style XSLT débute par l'élément `xsl:stylesheet`, qui contient tous les modèles utilisés pour créer le résultat final. L'exemple de la figure 1 possède deux modèles - un qui s'applique au nœud racine et un aux nœuds `Author`. Le modèle correspondant au nœud racine produit en sortie le titre de l'article puis déclenche le traitement de tous les autres modèles (via `apply-templates`) correspondant aux nœuds `Author` qui sont les descendants du nœud `Authors`.
 
-Figure 1 : exemple XSLT simple
+Figure 1&nbsp;: exemple XSLT simple
 
-Document XML (exemple.xml) :
+Document XML (exemple.xml)&nbsp;:
 
       <?xml version="1.0"?>
       <?xml-stylesheet type="text/xsl" href="exemple.xsl"?>
@@ -33,7 +33,7 @@ Document XML (exemple.xml) :
         <Body>Ceci est le texte de mon article.</Body>
       </Article>
 
-Feuille de style XSL (exemple.xsl) :
+Feuille de style XSL (exemple.xsl)&nbsp;:
 
       <?xml version="1.0"?>
       <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -42,7 +42,7 @@ Feuille de style XSL (exemple.xsl) :
 
         <xsl:template match="/">
           Article - <xsl:value-of select="/Article/Title"/>
-          Auteurs : <xsl:apply-templates select="/Article/Authors/Author"/>
+          Auteurs&nbsp;: <xsl:apply-templates select="/Article/Authors/Author"/>
         </xsl:template>
 
         <xsl:template match="Author">
@@ -51,10 +51,10 @@ Feuille de style XSL (exemple.xsl) :
 
       </xsl:stylesheet>
 
-Sortie dans le navigateur :
+Sortie dans le navigateur&nbsp;:
 
       Article - Mon article
-      Auteurs :
+      Auteurs&nbsp;:
       - M. Foo
       - M. Bar
 

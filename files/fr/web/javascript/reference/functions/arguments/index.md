@@ -30,7 +30,7 @@ L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant
 
 L'objet `arguments` est une variable locale (intrinsèque et inhérente aux fonctions) disponible dans toutes les fonctions (qui ne sont pas [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)).
 
-Vous pouvez accéder aux arguments d'une fonction à l'intérieur de celle-ci en utilisant l'objet `arguments`. Cet objet contient une entrée pour chaque argument passé à la fonction, l'indice de la première entrée commençant à 0. Par exemple, si une fonction est appelée avec trois arguments, on accède à ceux-ci comme suit :
+Vous pouvez accéder aux arguments d'une fonction à l'intérieur de celle-ci en utilisant l'objet `arguments`. Cet objet contient une entrée pour chaque argument passé à la fonction, l'indice de la première entrée commençant à 0. Par exemple, si une fonction est appelée avec trois arguments, on accède à ceux-ci comme suit&nbsp;:
 
 ```js
 arguments[0]
@@ -38,7 +38,7 @@ arguments[1]
 arguments[2]
 ```
 
-Les arguments peuvent aussi être modifiés :
+Les arguments peuvent aussi être modifiés&nbsp;:
 
 ```js
 arguments[1] = 'nouvelle valeur';
@@ -46,7 +46,7 @@ arguments[1] = 'nouvelle valeur';
 
 ### Type de l'objet `arguments` et liens avec `Array`
 
-L'objet `arguments` n'est pas un {{jsxref("Array")}}. Il est similaire à un `Array`, mais il n'a pas les propriétés d'un `Array,` exceptée la propriété {{jsxref("Array.length", "length")}}. Par exemple, il n'a pas la méthode {{jsxref("Array.pop", "pop()")}}. Néanmoins, il peut être converti en un vrai objet de type `Array` :
+L'objet `arguments` n'est pas un {{jsxref("Array")}}. Il est similaire à un `Array`, mais il n'a pas les propriétés d'un `Array,` exceptée la propriété {{jsxref("Array.length", "length")}}. Par exemple, il n'a pas la méthode {{jsxref("Array.pop", "pop()")}}. Néanmoins, il peut être converti en un vrai objet de type `Array`&nbsp;:
 
 ```js
 console.log(typeof arguments); // 'object'
@@ -73,7 +73,7 @@ var args = [...arguments];
 
 L'objet `arguments` est disponible uniquement dans le corps d'une fonction. Tenter d'accéder à l'objet `arguments` en dehors de la déclaration d'une fonction renvoie une erreur.
 
-Vous pouvez utiliser l'objet `arguments` si vous appelez une fonction avec plus de paramètres que ceux déclarés dans sa signature. Cette technique est utile pour les fonctions qui acceptent un nombre variable d'arguments. Vous pouvez utiliser  {{jsxref("Fonctions/arguments/length", "arguments.length")}} pour déterminer le nombre de paramètres passés à la fonction, puis utiliser chaque argument en utilisant l'objet `arguments`. (Pour déterminer le nombre d'arguments déclarés à la définition de la fonction, il faut utiliser la propriété {{jsxref("Function.length", "length")}}.)
+Vous pouvez utiliser l'objet `arguments` si vous appelez une fonction avec plus de paramètres que ceux déclarés dans sa signature. Cette technique est utile pour les fonctions qui acceptent un nombre variable d'arguments. Vous pouvez utiliser  {{jsxref("Fonctions/arguments/length", "arguments.length")}} pour déterminer le nombre de paramètres passés à la fonction, puis utiliser chaque argument en utilisant l'objet `arguments`. (Pour déterminer le nombre d'arguments déclarés à la définition de la fonction, il faut utiliser la propriété {{jsxref("Function.length", "length")}}.)
 
 ### Utiliser `typeof` sur `arguments`
 
@@ -104,7 +104,7 @@ console.log(typeof arguments[0]); // renvoie le type du premier argument
 
 ### Définir une fonction de concaténation d'un nombre variable de chaînes
 
-Cet exemple définit une fonction qui concatène un nombre variable de chaînes. Le seul argument formel de la fonction est une chaîne spécifiant un séparateur inséré entre les chaînes concaténées. La fonction est définie comme suit :
+Cet exemple définit une fonction qui concatène un nombre variable de chaînes. Le seul argument formel de la fonction est une chaîne spécifiant un séparateur inséré entre les chaînes concaténées. La fonction est définie comme suit&nbsp;:
 
 ```js
 function myConcat(separateur) {
@@ -113,7 +113,7 @@ function myConcat(separateur) {
 }
 ```
 
-Vous pouvez passer n'importe quel nombre d'arguments à cette fonction ; elle créera une liste en utilisant chaque argument comme un élément de la liste.
+Vous pouvez passer n'importe quel nombre d'arguments à cette fonction&nbsp;; elle créera une liste en utilisant chaque argument comme un élément de la liste.
 
 ```js
 // renvoie "rouge, orange, bleu"
@@ -125,7 +125,7 @@ myConcat(" ; ", "elephant", "giraffe", "lion", "guépard");
 
 ### Définir une fonction de création de listes HTML
 
-Cet exemple définit une fonction qui crée des chaînes définissant des listes HTML. Le seul argument formel de la fonction est une chaîne pouvant valoir "`u`" (unordered), si la liste doit être sans numérotation (avec des puces), ou "`o`" (ordered), si la liste doit être numérotée. La fonction est définie comme suit :
+Cet exemple définit une fonction qui crée des chaînes définissant des listes HTML. Le seul argument formel de la fonction est une chaîne pouvant valoir "`u`" (unordered), si la liste doit être sans numérotation (avec des puces), ou "`o`" (ordered), si la liste doit être numérotée. La fonction est définie comme suit&nbsp;:
 
 ```js
 function liste(type) {
@@ -138,12 +138,12 @@ function liste(type) {
 }
 ```
 
-Vous pouvez passer n'importe quel nombre d'arguments à cette fonction ; elle créera une liste du type indiqué en ajoutant chaque argument comme élément dans la liste. Exemple :
+Vous pouvez passer n'importe quel nombre d'arguments à cette fonction&nbsp;; elle créera une liste du type indiqué en ajoutant chaque argument comme élément dans la liste. Exemple&nbsp;:
 
 ```js
 var listeHTML = liste("u", "Un", "Deux", "Trois");
 
-/* listeHTML vaut  :
+/* listeHTML vaut &nbsp;:
 
 "<ul><li>Un</li><li>Deux</li><li>Trois</li></ul>"
 
@@ -222,9 +222,9 @@ func(3, 4); // 3 4
 | Spécification                                                                                                    | État                         | Commentaires                                        |
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
 | {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée par JavaScript 1.1 |
-| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES2015', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ES2015')}}     |                                                     |
-| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                     |
+| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES2015', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ES2015')}}     |                                                     |
+| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                     |
 
 ## Compatibilité des navigateurs
 

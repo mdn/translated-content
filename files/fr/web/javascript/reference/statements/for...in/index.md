@@ -28,7 +28,7 @@ L'**instruction `for...in`** permet d'itérer sur les [propriétés énumérable
 
 ## Description
 
-Une boucle `for...in` ne parcourt que les propriétés énumérables et qui ne sont pas des symboles. Les objets qui ont été créés par des constructeurs intégrés comme Array et Object ont hérité de propriétés non énumérables de `Object.prototype` et `String.prototype` comme les méthodes {{jsxref("String.prototype.indexOf","indexOf()")}} du type {{jsxref("String")}} ou {{jsxref("Object.prototype.toString","toString()")}} depuis {{jsxref("Object")}}. La boucle parcourera toutes les propriétés énumérables de l'objet et aussi celles dont il hérite du prototype du constructeur (les propriétés les plus proches de l'objet dans la chaîne des prototypes primeront sur les propriétés des prototypes).
+Une boucle `for...in` ne parcourt que les propriétés énumérables et qui ne sont pas des symboles. Les objets qui ont été créés par des constructeurs intégrés comme Array et Object ont hérité de propriétés non énumérables de `Object.prototype` et `String.prototype` comme les méthodes {{jsxref("String.prototype.indexOf","indexOf()")}} du type {{jsxref("String")}} ou {{jsxref("Object.prototype.toString","toString()")}} depuis {{jsxref("Object")}}. La boucle parcourera toutes les propriétés énumérables de l'objet et aussi celles dont il hérite du prototype du constructeur (les propriétés les plus proches de l'objet dans la chaîne des prototypes primeront sur les propriétés des prototypes).
 
 ### Les propriétés ajoutées, modifiées ou supprimées
 

@@ -341,27 +341,27 @@ function invite(evt) {
 
 <dl>
  <dd>
- <p>当需要你通过信令服务器将一个ICE候选发送给另一个对等端时，本地ICE层将会调用你的 {{event("icecandidate")}} 事件处理程序。有关更多信息，请参阅{{anch("Sending ICE candidates")}} 以查看此示例的代码。</p>
+ <p>当需要你通过信令服务器将一个ICE候选发送给另一个对等端时，本地ICE层将会调用你的 {{event("icecandidate")}} 事件处理程序。有关更多信息，请参阅<a href="#交换_ice_候选">交换 ICE 候选</a> 以查看此示例的代码。</p>
  </dd>
  <dt>{{domxref("RTCPeerConnection.ontrack")}}</dt>
- <dd>当向连接中添加磁道时，{{event("track")}} 事件的此处理程序由本地WebRTC层调用。例如，可以将传入媒体连接到元素以显示它。详见 {{anch("Receiving new streams")}} 。</dd>
+ <dd>当向连接中添加磁道时，{{event("track")}} 事件的此处理程序由本地WebRTC层调用。例如，可以将传入媒体连接到元素以显示它。详见<a href="#接收新的流数据">接收新的流数据</a> 。</dd>
  <dt>{{domxref("RTCPeerConnection.onnegotiationneeded")}}</dt>
- <dd>每当WebRTC基础结构需要你重新启动会话协商过程时，都会调用此函数。它的工作是创建和发送一个请求，给被叫方，要求它与我们联系。参见{{anch("Starting negotiation")}} 了解我们如何处理这一问题。</dd>
+ <dd>每当WebRTC基础结构需要你重新启动会话协商过程时，都会调用此函数。它的工作是创建和发送一个请求，给被叫方，要求它与我们联系。参见<a href="#开始协商">开始协商</a>了解我们如何处理这一问题。</dd>
  <dt>{{domxref("RTCPeerConnection.onremovetrack")}}</dt>
- <dd>调用与 <code>ontrack</code>相对应的对象来处理 {{event("removetrack")}} 事件；当远程对等端从正在发送的媒体中删除磁道时，它将发送到<code>RTCPeerConnection</code> 。参见 {{anch("Handling the removal of tracks")}} 。</dd>
+ <dd>调用与 <code>ontrack</code>相对应的对象来处理 {{event("removetrack")}} 事件；当远程对等端从正在发送的媒体中删除磁道时，它将发送到<code>RTCPeerConnection</code>。参见 <a href="#处理流的移除">处理流的移除</a> 。</dd>
  <dt>{{domxref("RTCPeerConnection.oniceconnectionstatechange")}}</dt>
- <dd>ICE层发送{{event("iceconnectionstatechange")}} 事件，让你了解ICE连接状态的更改。这可以帮助你了解连接何时失败或丢失。我们将在下面的{{anch("ICE connection state")}} 中查看此示例的代码。</dd>
+ <dd>ICE层发送{{event("iceconnectionstatechange")}} 事件，让你了解ICE连接状态的更改。这可以帮助你了解连接何时失败或丢失。我们将在下面的<a href="#ice_连接状态">ICE 连接状态</a>中查看此示例的代码。</dd>
  <dt>{{domxref("RTCPeerConnection.onicegatheringstatechange")}}</dt>
- <dd>当ICE代理收集候选对象的过程从一个状态切换到另一个状态（例如开始收集候选对象或完成协商）时，ICE层将向你发送事件（“ICegulatingStateChange”）事件。见下文 {{anch("ICE gathering state")}}。</dd>
+ <dd>当ICE代理收集候选对象的过程从一个状态切换到另一个状态（例如开始收集候选对象或完成协商）时，ICE层将向你发送事件（“ICegulatingStateChange”）事件。见下文 <a href="#ice_收集状态">ICE 收集状态</a>。</dd>
  <dt>{{domxref("RTCPeerConnection.onsignalingstatechange")}}</dt>
  <dd>
- <p>当信令进程的状态更改时（或如果到信令服务器的连接更改时），WebRTC架构将向你发送 {{event("signalingstatechange")}} 消息。参见{{anch("Signaling state")}} 查看我们的代码。</p>
+ <p>当信令进程的状态更改时（或如果到信令服务器的连接更改时），WebRTC架构将向你发送 {{event("signalingstatechange")}} 消息。参见<a href="#ice_信令状态">ICE 信令状态</a>查看我们的代码。</p>
  </dd>
 </dl>
 
 <h4 id="开始协商">开始协商</h4>
 
-<p>一旦调用者创建了其 {{domxref("RTCPeerConnection")}} ，创建了媒体流，并将其磁道添加到连接中，如 {{anch("Starting a call")}} 所示，浏览器将向{{domxref("RTCPeerConnection")}} 传递一个 {{event("negotiationneeded")}} 事件，以指示它已准备好开始与其他对等方协商。以下是我们处理 {{event("negotiationneeded")}} 事件的代码：</p>
+<p>一旦调用者创建了其 {{domxref("RTCPeerConnection")}} ，创建了媒体流，并将其磁道添加到连接中，如 <a href="#开始通话的交互">开始通话的交互</a> 所示，浏览器将向 {{domxref("RTCPeerConnection")}} 传递一个 {{event("negotiationneeded")}} 事件，以指示它已准备好开始与其他对等方协商。以下是我们处理 {{event("negotiationneeded")}} 事件的代码：</p>
 
 <pre class="brush: js">function handleNegotiationNeededEvent() {
   myPeerConnection.createOffer().then(function(offer) {
@@ -447,13 +447,13 @@ function invite(evt) {
   .catch(handleGetUserMediaError);
 }</code></pre>
 
-<p class="brush: js">此代码与我们在 {{anch("Starting a call")}} 中在 <code>invite()</code> 函数中所做的非常相似。它首先使用 <code>createPeerConnection()</code> 函数创建和配置{{domxref("RTCPeerConnection")}} 。然后，它从收到的 <code>"video-offer"</code> 消息中获取SDP请求，并使用它创建一个表示调用方会话描述的新 {{domxref("RTCSessionDescription")}} 对象。</p>
+<p class="brush: js">此代码与我们在<a href="#开始通话的交互">开始通话的交互</a>中在 <code>invite()</code> 函数中所做的非常相似。它首先使用 <code>createPeerConnection()</code> 函数创建和配置{{domxref("RTCPeerConnection")}} 。然后，它从收到的 <code>"video-offer"</code> 消息中获取SDP请求，并使用它创建一个表示调用方会话描述的新 {{domxref("RTCSessionDescription")}} 对象。</p>
 
 <p class="brush: js">然后将该会话描述传递到 {{domxref("RTCPeerConnection.setRemoteDescription", "myPeerConnection.setRemoteDescription()")}}。这将把接收到的请求建立为连接的远程（调用方）端的描述。如果成功，promise成功处理程序（在then()子句中）将使用 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}，将磁道添加到连接，以此类推，如前面在 <code>invite()</code>中看到的那样。</p>
 
 <p class="brush: js">一旦使用 {{domxref("RTCPeerConnection.createAnswer", "myPeerConnection.createAnswer()")}} 创建了应答，通过调用{{domxref("RTCPeerConnection.setLocalDescription", "myPeerConnection.setLocalDescription()")}} 连接本地端的描述被设置为应答的SDP，则通过信令服务器将应答发送给调用者，让他们知道应答是什么。</p>
 
-<p>捕捉到的任何错误都会被传递给 <code>handleGetUserMediaError()</code>，详见 {{anch("Handling getUserMedia() errors")}} 。</p>
+<p>捕捉到的任何错误都会被传递给 <code>handleGetUserMediaError()</code>，详见 <a href="#处理_getusermedia()_错误">处理 getUserMedia() 错误</a> 。</p>
 
 <div class="note">
 <p>注意：与调用者的情况一样，一旦 <code>setLocalDescription()</code>实现处理程序运行完毕，浏览器将开始触发被调用者必须处理的{{event("icecandidate")}} 事件，每个需要传输到远程对等方的候选事件对应一个事件。</p>
@@ -475,7 +475,7 @@ function invite(evt) {
   }
 }</pre>
 
-<p>这将构建一个包含候选对象的对象，然后使用前面在 {{anch("Sending messages to the signaling server")}} 中描述的<code>sendToServer()</code> 函数将其发送给另一个对等方。消息属性为：</p>
+<p>这将构建一个包含候选对象的对象，然后使用前面在 <a href="#向信令服务器发送信息">向信令服务器发送信息</a> 中描述的<code>sendToServer()</code> 函数将其发送给另一个对等方。消息属性为：</p>
 
 <p><strong><span style='background-color: rgba(220, 220, 220, 0.5); font-family: consolas,"Liberation Mono",courier,monospace; font-size: 1rem; font-style: inherit; font-weight: inherit; letter-spacing: -0.00278rem;'>type</span></strong></p>
 
@@ -546,9 +546,9 @@ function invite(evt) {
   }
 }</code></pre>
 
-<p>此代码从<code>"received_video"</code> {{HTMLElement("video")}}元素的{{htmlattrxref("srcObject", "video")}} 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。</p>
+<p>此代码从<code>"received_video"</code> {{HTMLElement("video")}}元素的 {{htmlattrxref("srcObject", "video")}} 属性获取传入视频 {{domxref("MediaStream.getTracks", "getTracks()")}} 方法获取流的磁道数组。</p>
 
-<p>如果数组的长度为零，意味着流中没有剩余的磁道，则通过调用 <code>closeVideoCall()</code>结束调用。这样就可以将我们的应用程序恢复到可以启动或接收另一个呼叫的状态。请参阅 {{anch("Ending the call")}} 了解 <code>closeVideoCall()</code> 的工作原理。</p>
+<p>如果数组的长度为零，意味着流中没有剩余的磁道，则通过调用 <code>closeVideoCall()</code>结束调用。这样就可以将我们的应用程序恢复到可以启动或接收另一个呼叫的状态。请参阅 <a href="#结束通话">结束通话</a> 了解 <code>closeVideoCall()</code> 的工作原理。</p>
 
 <h4 id="结束通话">结束通话</h4>
 

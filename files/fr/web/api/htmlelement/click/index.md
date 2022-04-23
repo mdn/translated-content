@@ -44,7 +44,7 @@ D'autres implémentations du DOM peuvent se comporter différemment.
 
 | Spécification                                                                                                                                                                 | Statut                       | Commentaires |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-2651361) (non normative) | {{Spec2('DOM2 HTML')}} |              |
+| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-2651361) (non normative) | {{Spec2('DOM2 HTML')}} |              |
 
 ## Compatibilité des navigateurs
 

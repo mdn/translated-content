@@ -5,7 +5,7 @@ translation_of: Web/API/Document/URL
 ---
 {{APIRef("DOM")}}
 
-Retourne l'**`URL`** du {{domxref("Document")}} sous forme de string (lecture seule).
+Retourne l'**`URL`** du {{domxref("Document")}} sous forme de string (lecture seule).
 
 ## Syntaxe
 

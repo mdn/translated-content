@@ -21,7 +21,7 @@ Depuis 10 ans, la communauté MDN documente le Web. Qu'il s'agisse de corriger q
 
 [En savoir plus](/fr/docs/MDN_a_dix_ans/Contribuer_à_MDN)
 
-> Quand je souhaite comprendre « pourquoi » plutôt que « comment », j'utilise MDN.
+> Quand je souhaite comprendre «&nbsp;pourquoi&nbsp;» plutôt que «&nbsp;comment&nbsp;», j'utilise MDN.
 
 — [Christian Heilmann](https://twitter.com/codepo8/status/621009648875868160)
 

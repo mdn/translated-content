@@ -72,7 +72,7 @@ Math.cosh = Math.cosh || function(x) {
 | Spécification                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES6', '#sec-math.cosh', 'Math.cosh')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

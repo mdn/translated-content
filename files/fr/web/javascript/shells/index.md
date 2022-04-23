@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Shells
 ---
 {{JsSidebar}}
 
-Un _shell_ (ou une interface système) JavaScript permet de tester rapidement des fragments de code [JavaScript](/fr/docs/Web/JavaScript) sans devoir recharger constamment une page web. Ce type d'outil est très utile pour développer et déboguer du code.
+Un _shell_ (ou une interface système) JavaScript permet de tester rapidement des fragments de code [JavaScript](/fr/docs/Web/JavaScript) sans devoir recharger constamment une page web. Ce type d'outil est très utile pour développer et déboguer du code.
 
 ## Des shells JavaScript autonomes
 
@@ -30,7 +30,7 @@ Les shells suivants fonctionnent avec Mozilla.
 - [JavaScript Shell](/fr/docs/Introduction_au_shell_JavaScript) (`js`) - Un interpréteur JavaScript en ligne de commande.
 - [xpcshell](/fr/docs/xpcshell) est un shell qui peut utiliser [XPConnect](/fr/docs/XPConnect), ce qui est parfois utile pour du développement Mozilla.
 - [jsconsole.com](http://jsconsole.com/) est une console JavaScript open-source, qui permet notamment de créer facilement des liens vers les expressions saisies précédemment.
-- [JavaScript Shell (page web)](http://www.squarefree.com/shell/)  est aussi disponible avec l'extension [Developer Assistant](https://addons.mozilla.org/fr/firefox/addon/extension-developer/).
+- [JavaScript Shell (page web)](http://www.squarefree.com/shell/)  est aussi disponible avec l'extension [Developer Assistant](https://addons.mozilla.org/fr/firefox/addon/extension-developer/).
 - [Jash: JavaScript Shell](http://billyreisinger.com/jash/) est un shell DHTML qui donne un accès en ligne de commande à une page web.
 - [MozRepl](https://github.com/bard/mozrepl) permet de se connecter à Firefox et à d'autres applications Mozilla, de les explorer, et de les modifier depuis l'intérieur pendant leur exécution.
 - [Execute JS](https://addons.mozilla.org/fr/firefox/addon/execute-js/) est une extension Firefox qui propose une console JavaScript améliorée, où il est possible d'exécuter facilement du code JavaScript et de modifier des fonctions. Cette extension n'est plus maintenue.

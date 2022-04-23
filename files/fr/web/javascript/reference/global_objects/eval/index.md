@@ -53,7 +53,7 @@ var expression = new String("2 + 2");
 eval(expression.toString());
 ```
 
-Si la fonction  `eval` est utilisée de manière indirecte, en l'invoquant par une référence autre que `eval`, cela fonctionnera avec une portée globale plutôt que locale (d'après ECMASCript 5). Par exemple, les déclarations de fonctions vont créer des fonctions globales et le code en cours d'évaluation n'aura pas accès aux variables locales déclarées avec la même portée que là où la fonction `eval` est appelée.
+Si la fonction  `eval` est utilisée de manière indirecte, en l'invoquant par une référence autre que `eval`, cela fonctionnera avec une portée globale plutôt que locale (d'après ECMASCript 5). Par exemple, les déclarations de fonctions vont créer des fonctions globales et le code en cours d'évaluation n'aura pas accès aux variables locales déclarées avec la même portée que là où la fonction `eval` est appelée.
 
 ```js
 function test() {
@@ -135,7 +135,7 @@ console.log(runCodeWithDateFunction(
 
 2\. Le surcoût lié à un appel de fonction est léger
 
-3\. `Function()` permet d'utiliser  `"use strict";` (qui peut également aider à améliorer les performances).
+3\. `Function()` permet d'utiliser  `"use strict";` (qui peut également aider à améliorer les performances).
 
 Enfin, pour la plupart des cas, on doit pouvoir éviter de passer par
 

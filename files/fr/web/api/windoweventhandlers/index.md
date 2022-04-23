@@ -20,7 +20,7 @@ _Les propriétés d'événement, de la forme `onXYZ`, sont définis sur {{domxre
 - {{domxref("WindowEventHandlers.onbeforeunload")}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("beforeunload")}} est déclenché.
 - {{domxref("WindowEventHandlers.onhashchange")}}
-  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("hashchange")}} est déclenché.
+  - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("hashchange")}} est déclenché.
 - {{domxref("WindowEventHandlers.onlanguagechange")}} {{experimental_inline}}
   - : Est un {{event("Event_handlers", "event handler")}} représentant le code à appeler lorsque l'événement {{event("languagechange")}} est déclenché.
 - {{domxref("WindowEventHandlers.onmessage")}}

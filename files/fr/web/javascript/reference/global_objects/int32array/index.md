@@ -27,7 +27,7 @@ Pour plus d'informations sur la syntaxe du constructeur, voir la page sur les [t
 ## Propriétés
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Int32Array.BYTES_PER_ELEMENT")}}
-  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int32Array`, la propriété vaudra 4.
+  - : Renvoie un nombre représentant la taille d'un élément du tableau en termes d'octets. Dans le cas de `Int32Array`, la propriété vaudra 4.
 - `Int32Array.length`
   - : Une propriété de longueur statique qui vaut 3. Pour connaître le nombre d'éléments, voir {{jsxref("TypedArray.prototype.length", "Int32Array.prototype.length")}}.
 - {{jsxref("TypedArray.name", "Int32Array.name")}}

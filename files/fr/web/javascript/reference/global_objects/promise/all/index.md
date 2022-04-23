@@ -192,7 +192,7 @@ setTimeout(function() {
 | Spécification                                                                | État                         | Commentaires                               |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------ |
 | {{SpecName('ES2015', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ES2015')}}     | Définition initiale dans un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ESDraft')}} |                                            |
+| {{SpecName('ESDraft', '#sec-promise.all', 'Promise.all')}} | {{Spec2('ESDraft')}} |                                            |
 
 ## Compatibilité des navigateurs
 

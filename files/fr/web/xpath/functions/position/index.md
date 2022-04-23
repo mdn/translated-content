@@ -24,7 +24,7 @@ Un nombre entier égal à la position du contenu dans le contexte d'évaluation 
 
 <!---->
 
-- Le contexte est déterminé par le reste du chemin :
+- Le contexte est déterminé par le reste du chemin&nbsp;:
 
 <!---->
 

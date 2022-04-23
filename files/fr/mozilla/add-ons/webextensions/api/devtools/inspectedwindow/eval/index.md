@@ -56,7 +56,7 @@ var evaluating = browser.devtools.inspectedWindow.eval(
   - : `string`. L'expression JavaScript à évaluer. La chaîne doit évaluer un objet qui peut être représenté comme JSON, ou une exception sera lancée. Par exemple, l'expression ne doit pas évaluer une fonction.
 - `options`{{optional_inline}}
 
-  - : `object`. Options pour la fonction  (Notez que Firefox ne supporte pas encore cette option), comme suit :
+  - : `object`. Options pour la fonction (Notez que Firefox ne supporte pas encore cette option), comme suit :
 
     - `frameURL`{{optional_inline}}
       - : `string`. L'URL du cadre dans lequel à évaluer l'expression. Si cela est supprimé, l'expression est évaluée dans la trame principale de la fenêtre.

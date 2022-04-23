@@ -11,7 +11,7 @@ translation_of: Web/API/Storage/clear
 ---
 {{APIRef("Web Storage API")}}
 
-La méthode `clear()` de l'interface {{domxref("Storage")}},  lorsqu'elle est invoquée, vide toutes les clés stockées.
+La méthode `clear()` de l'interface {{domxref("Storage")}},  lorsqu'elle est invoquée, vide toutes les clés stockées.
 
 ## Syntaxe
 
@@ -37,7 +37,7 @@ function peuplerLeStockage() {
 }
 ```
 
-> **Note :** Pour voir un exemple réel, vous pouvez visitez notre [Démo de stockage web](https://mdn.github.io/dom-examples/web-storage/). Les modifications sont visibles dans la console, vous pouvez actualiser la page et conserver les modifications.
+> **Note :** Pour voir un exemple réel, vous pouvez visitez notre [Démo de stockage web](https://mdn.github.io/dom-examples/web-storage/). Les modifications sont visibles dans la console, vous pouvez actualiser la page et conserver les modifications.
 
 ## Spécifications
 
@@ -51,4 +51,4 @@ function peuplerLeStockage() {
 
 ## Voir aussi
 
-- [Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+- [Utilisation de l'API de stockage web](/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

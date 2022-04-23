@@ -64,7 +64,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                     >hasOwnProperty()</a
                   >
                   - </code
-                >en utilisant <code
+                >en utilisant <code
                   ><a
                     href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
                     >propertyIsEnumerable()</a
@@ -166,11 +166,11 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                   ></code
                 >
                 <code
-                  >- <a
+                  >- <a
                     href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
                     >getOwnPropertySymbols()</a
                   > </code
-                >en utilisant <code
+                >en utilisant <code
                   ><a
                     href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
                     >propertyIsEnumerable()</a
@@ -257,7 +257,7 @@ Le rattachement des propriétés est détérminé selon que la propriété est d
                     href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols"
                     >getOwnPropertySymbols()</a
                   ></code
-                >en utilisant <code
+                >en utilisant <code
                   ><a
                     href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable"
                     >propertyIsEnumerable()</a

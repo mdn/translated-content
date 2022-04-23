@@ -9,7 +9,7 @@ translation_of: Web/API/Console
 
 <p>O objeto <code>console</code> fornece acesso ao console de debug do navegador (por exemplo, o <a href="/en-US/docs/Tools/Web_Console">Web Console</a> do Firefox). O seu funcionamento específico varia de navegador para navegador, mas existe um conjunto de ferramentas que na prática são fornecidas normalmente.</p>
 
-<p>Esta página documenta os {{anch("Métodos")}} disponíveis no objeto <code>console</code> e fornece alguns exemplos de {{anch("Uso")}}.</p>
+<p>Esta página documenta os <a href="#métodos">Métodos</a> disponíveis no objeto <code>console</code> e fornece alguns exemplos de <a href="#uso">Uso</a>.</p>
 
 <h2 id="Métodos">Métodos</h2>
 
@@ -23,19 +23,19 @@ translation_of: Web/API/Console
  <dt>{{domxref("console.dir()", "console.dir(object)")}}</dt>
  <dd>Exibe uma listagem interativa das propriedades de um objeto JavaScript especificado. Esta listagem permite a você expandir o objeto para visualizar o conteúdo de objetos filhos.</dd>
  <dt>{{domxref("console.error()", "console.error(object[, object...])")}}</dt>
- <dd>Emite uma mensagem de erro<span>.</span> Você pode usar substituição de string e outros argumentos adicionais com este método. Consulte {{anch("Uso de substituição de string")}}.</dd>
+ <dd>Emite uma mensagem de erro<span>.</span> Você pode usar substituição de string e outros argumentos adicionais com este método. Consulte <a href="#uso_de_substituição_de_string">Uso de substituição de string</a>.</dd>
  <dt>{{domxref("console.error()", "console.exception(object[, object...])")}}</dt>
  <dd>Um atalho para <code>error();</code></dd>
  <dt>{{domxref("console.group()", "console.group(object[, object...])")}}</dt>
- <dd>Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize <code>groupEnd()</code>. Consulte {{anch("Uso de grupos no console")}}.</dd>
+ <dd>Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior. Para voltar um nível, utilize <code>groupEnd()</code>. Consulte <a href="#uso_de_grupos_no_console">Uso de grupos no console</a>.</dd>
  <dt>{{domxref("console.groupCollapsed()", "console.groupCollapsed(object[, object...])")}}</dt>
- <dd>Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de <code>group()</code>, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize <code>groupEnd().</code> Consulte {{anch("Uso de grupos no console")}}.</dd>
+ <dd>Cria um novo grupo em linha e recua todas as mensagens seguintes para um nível de indentação superior; ao contrário de <code>group()</code>, o grupo em linha começa recolhido. Para revelar seu conteúdo, basta clicar no botão de revelação para expandí-lo. Para recuar um nível, utilize <code>groupEnd().</code> Consulte <a href="#uso_de_grupos_no_console">Uso de grupos no console</a>.</dd>
  <dt>{{domxref("console.groupEnd()")}}</dt>
- <dd>Sai do grupo em linha atual. Veja {{anch("Uso de grupos no console")}}.</dd>
+ <dd>Sai do grupo em linha atual. Veja <a href="#uso_de_grupos_no_console">Uso de grupos no console</a>.</dd>
  <dt>{{domxref("console.info()", "console.info(object[, object...])")}}</dt>
- <dd>Informações de registro. Você pode utilizar substituição de string e outros argumentos com este método. Consulte {{anch("Uso de substituição de string")}}.</dd>
+ <dd>Informações de registro. Você pode utilizar substituição de string e outros argumentos com este método. Consulte <a href="#uso_de_substituição_de_string">Uso de substituição de string</a>.</dd>
  <dt>{{domxref("console.log()", "console.log(object[, object...])")}}</dt>
- <dd>Utilizado para a emissão de informações de registro em geral. Você pode utilizar substituição de string e outros argumentos com este método. Consulte {{anch("Uso de substituição de string")}}.</dd>
+ <dd>Utilizado para a emissão de informações de registro em geral. Você pode utilizar substituição de string e outros argumentos com este método. Consulte <a href="#uso_de_substituição_de_string">Uso de substituição de string</a>.</dd>
  <dt>{{domxref("console.profile()", "console.profile( [profileLabel] )")}}</dt>
  <dd>Inicia o <a href="/en-US/docs/Tools/Profiler">JavaScript profiler</a>. Você pode especificar qualquer label opcional para o perfil.</dd>
  <dt>{{domxref("console.profileEnd()")}}</dt>
@@ -55,11 +55,11 @@ translation_of: Web/API/Console
  <dt>{{domxref("console.time()", "console.time(label)")}}</dt>
  <dd>Inicia um contador de tempo com o nome especificado no parâmetro <em>label</em>. Até 10.000 contadores de tempo podem ser rodados por página.</dd>
  <dt>{{domxref("console.timeEnd()", "console.timeEnd(label)")}}</dt>
- <dd>Interrompe o contador de tempo especificado e emite o tempo e registros do contador de tempo em milisegundos desde o seu início. Veja {{anch("Contadores de Tempo")}}.</dd>
+ <dd>Interrompe o contador de tempo especificado e emite o tempo e registros do contador de tempo em milisegundos desde o seu início. Veja <a href="#contadores_de_tempo">Contadores de Tempo</a>.</dd>
  <dt>{{domxref("console.trace()")}}</dt>
- <dd>Emite um traçado de pilha. See {{anch("Traçados de pilha")}}.</dd>
+ <dd>Emite um traçado de pilha. See <a href="#traçados_de_pilha">Traçados de pilha</a>.</dd>
  <dt>{{domxref("console.warn()", "console.warn(object[, object...])")}}</dt>
- <dd>Emite uma mensagem de alerta. Você pode utilizar substituição de string e argumentos adicionais com este método. Veja {{anch("Uso de substituição de string")}}.</dd>
+ <dd>Emite uma mensagem de alerta. Você pode utilizar substituição de string e argumentos adicionais com este método. Veja <a href="#uso_de_substituição_de_string">Uso de substituição de string</a>.</dd>
 </dl>
 
 

@@ -43,7 +43,7 @@ Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 
 ## Exemple
 
-Effacer le paramètre `webRTCIPHandlingPolicy`  :
+Effacer le paramètre `webRTCIPHandlingPolicy`  :
 
 ```js
 function onCleared(result) {

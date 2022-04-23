@@ -13,9 +13,9 @@ original_slug: Web/JavaScript/Reference/Opérateurs/Nullish_coalescing_operator
 ---
 {{JSSidebar("Operators")}}
 
-L'**opérateur de coalescence des nuls** (`??`), est un opérateur logique qui renvoie son opérande de droite lorsque son opérande de gauche vaut `{{jsxref("null")}}` ou `{{jsxref("undefined")}}` et qui renvoie son opérande de gauche sinon.
+L'**opérateur de coalescence des nuls** (`??`), est un opérateur logique qui renvoie son opérande de droite lorsque son opérande de gauche vaut `{{jsxref("null")}}` ou `{{jsxref("undefined")}}` et qui renvoie son opérande de gauche sinon.
 
-Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques), l'opérande de gauche sera renvoyé s'il s'agit d'une [valeur équivalente à `false`](/fr/docs/Glossaire/Falsy) **qui n'est ni** `null`**, ni** `undefined`. En d'autres termes, si vous utilisez `||` pour fournir une valeur par défaut à une variable `foo`, vous pourriez rencontrer des comportements inattendus si vous considérez certaines valeurs _falsy_ comme utilisables (par exemple une chaine vide `''` ou `0`). Voir ci-dessous pour plus d'exemples.
+Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques), l'opérande de gauche sera renvoyé s'il s'agit d'une [valeur équivalente à `false`](/fr/docs/Glossaire/Falsy) **qui n'est ni** `null`**, ni** `undefined`. En d'autres termes, si vous utilisez `||` pour fournir une valeur par défaut à une variable `foo`, vous pourriez rencontrer des comportements inattendus si vous considérez certaines valeurs _falsy_ comme utilisables (par exemple une chaine vide `''` ou `0`). Voir ci-dessous pour plus d'exemples.
 
 {{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
 
@@ -27,7 +27,7 @@ Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Refere
 
 ### Utilisation de l'opérateur de coalescence des nuls
 
-Dans cet exemple, nous fournirons des valeurs par défaut mais conserverons des valeurs autres que `null` ou `undefined`.
+Dans cet exemple, nous fournirons des valeurs par défaut mais conserverons des valeurs autres que `null` ou `undefined`.
 
 ```js
 const valeurNulle = null;
@@ -54,7 +54,7 @@ let toto;
 let unTexteBateau = toto || 'Coucou !';
 ```
 
-Cependant, parce que `||` est un opérateur logique booléen, l'opérande de gauche a été converti en un booléen pour l'évaluation et aucune valeur _falsy_ (`0`, `''`, `NaN`, `null`, `undefined`) n'a été renvoyée. Ce comportement peut entraîner des conséquences inattendues si on souhaite considérer `0`, `''` ou `NaN` comme des valeurs valides.
+Cependant, parce que `||` est un opérateur logique booléen, l'opérande de gauche a été converti en un booléen pour l'évaluation et aucune valeur _falsy_ (`0`, `''`, `NaN`, `null`, `undefined`) n'a été renvoyée. Ce comportement peut entraîner des conséquences inattendues si on souhaite considérer `0`, `''` ou `NaN` comme des valeurs valides.
 
 ```js
 let compteur = 0;
@@ -66,7 +66,7 @@ console.log(qté);     // 42 et non 0
 console.log(message); // "Coucou !" et non ""
 ```
 
-L'opérateur de coalescence des nuls évite ce risque en ne renvoyant le deuxième opérande que lorsque le premier vaut `null` ou `undefined` (mais pas d'autres valeurs _falsy_) :
+L'opérateur de coalescence des nuls évite ce risque en ne renvoyant le deuxième opérande que lorsque le premier vaut `null` ou `undefined` (mais pas d'autres valeurs _falsy_) :
 
 ```js
 let monTexte = ''; // Un chaine vide (qui est donc une valeur falsy)
@@ -80,7 +80,7 @@ console.log(preservingFalsy); // '' (car monTexte n'est ni null ni undefined)
 
 ### Court-circuitage
 
-À l'instar des opérateurs logiques OR (`||`) et AND (`&&`), l'expression de droite n'est pas évaluée si celle de gauche ne vaut ni `null` ni `undefined`.
+À l'instar des opérateurs logiques OR (`||`) et AND (`&&`), l'expression de droite n'est pas évaluée si celle de gauche ne vaut ni `null` ni `undefined`.
 
 ```js
 function A() { console.log('A a été appelée'); return undefined; }
@@ -99,7 +99,7 @@ console.log( B() ?? C() );
 
 ### Pas de chaînage possible avec les opérateurs AND ou OR
 
-Il n'est pas possible de combiner les opérateurs AND (`&&`) ou OR (`||`) directement avec l'opérateur de coalescence des nuls (`??`). Un tel cas lèverait une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError).
+Il n'est pas possible de combiner les opérateurs AND (`&&`) ou OR (`||`) directement avec l'opérateur de coalescence des nuls (`??`). Un tel cas lèverait une exception [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError).
 
 ```js example-bad
 null || undefined ?? "toto"; // soulève une SyntaxError
@@ -114,7 +114,7 @@ Cependant, fournir des parenthèses pour indiquer explicitement la priorité est
 
 ### Relation avec l'opérateur de chaînage optionnel (`?.`)
 
-Tout comme l'opérateur de coalescence des nuls, l'[opérateur de chaînage optionnel (?.)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Optional_chaining) traite les valeurs `null` et `undefined` comme des valeurs spécifiques. Ce qui permet d'accéder à une propriété d'un objet qui peut être `null` ou `undefined`.
+Tout comme l'opérateur de coalescence des nuls, l'[opérateur de chaînage optionnel (?.)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Optional_chaining) traite les valeurs `null` et `undefined` comme des valeurs spécifiques. Ce qui permet d'accéder à une propriété d'un objet qui peut être `null` ou `undefined`.
 
 ```js
 let toto = { uneProprieteToto: "coucou" };
@@ -137,5 +137,5 @@ console.log(toto.uneProprieteTiti?.toUpperCase()); // undefined
 
 - [_Falsy values_ (Valeurs équivalentes à `false` dans un contexte booléen)](/fr/docs/Glossaire/Falsy)
 - [Opérateur de chaînage optionnel (_optional chaining_)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Optional_chaining)
-- [Opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques#Logical_OR)
+- [Opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques#Logical_OR)
 - [Valeurs par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments)

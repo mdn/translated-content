@@ -16,7 +16,7 @@ original_slug: Web/API/ParentNode/childElementCount
 La propriété **`ParentNode.childElementCount`** en lecture seule renvoie un `unsigned long` (_long non signé_) représentant le nombre d'élèments fils de l'élément donné.
 
 > **Note :** Cette propriété a été définie dans la pure interface {{domxref("ElementTraversal")}}.
-> Comme cette interface contenait deux différents jeux de propriétés, l'un visant les  {{domxref("Node")}} (_noeuds_) qui ont des enfants, l'autre les enfants, ils ont été déplacés dans deux interfaces pures, {{domxref("ParentNode")}} et {{domxref("ChildNode")}}. Dans ce cas, `childElementCount` a été rattaché à {{domxref("ParentNode")}}. C'est un changement assez technique qui ne devrait pas affecter la compatibilité.
+> Comme cette interface contenait deux différents jeux de propriétés, l'un visant les  {{domxref("Node")}} (_noeuds_) qui ont des enfants, l'autre les enfants, ils ont été déplacés dans deux interfaces pures, {{domxref("ParentNode")}} et {{domxref("ChildNode")}}. Dans ce cas, `childElementCount` a été rattaché à {{domxref("ParentNode")}}. C'est un changement assez technique qui ne devrait pas affecter la compatibilité.
 
 ## Syntaxe
 

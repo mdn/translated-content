@@ -33,7 +33,7 @@ Un tableau qui contient les propriétés énumérables propres de l'objet sous l
 
 ## Description
 
-`Object.entries()` renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments)  `[clé, valeur]` qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.
+`Object.entries()` renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments)  `[clé, valeur]` qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.
 
 ## Exemples
 
@@ -122,7 +122,7 @@ if (!Object.entries) {
 
 | Spécification                                                                        | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}} | {{Spec2('ESDraft')}} |                      |
 | {{SpecName('ES8', '#sec-object.entries', 'Object.entries')}}     | {{Spec2('ES8')}}         | Définition initiale. |
 
 ## Compatibilité des navigateurs

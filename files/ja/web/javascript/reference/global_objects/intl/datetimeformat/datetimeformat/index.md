@@ -31,7 +31,7 @@ new Intl.DateTimeFormat(locales, options)
 ### 引数
 
 - `locales` {{optional_inline}}
-  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。ブラウザーの既定のロケールを使用するには、空の配列を渡してください。。 Unicode 拡張に対応しています (例えば "`en-US-u-ca-buddhist`" など)。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} のページをご覧ください。次の Unicode 拡張キーが利用できます。
+  - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。ブラウザーの既定のロケールを使用するには、空の配列を渡してください。。 Unicode 拡張に対応しています (例えば "`en-US-u-ca-buddhist`" など)。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページをご覧ください。次の Unicode 拡張キーが利用できます。
 
     - `nu`
       - : 番号方式。使用できる値は "`arab`", "`arabext`", "`bali`", "`beng`", "`deva`", "`fullwide`", "`gujr`", "`guru`", "`hanidec`", "`khmr`", "`knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", "`mong`", "`mymr`", "`orya`", "`tamldec`", "`telu`", "`thai`", "`tibt`" です。

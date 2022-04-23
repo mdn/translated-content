@@ -33,9 +33,9 @@ hyphens: unset;
  <dt><code>none</code></dt>
  <dd>换行时单词不会被打断，甚至在单词内的字符建议有换行点时。行只会在空白符处换行。</dd>
  <dt><code>manual</code></dt>
- <dd>Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See {{anch("Suggesting line break opportunities")}} for details.</dd>
+ <dd>Words are broken for line-wrapping only where characters inside the word suggest line break opportunities. See <a href="#suggesting_line_break_opportunities">Suggesting line break opportunities</a> for details.</dd>
  <dt><code>auto</code></dt>
- <dd>The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use. Suggested line break opportunities, as covered in {{anch("Suggesting line break opportunities")}}, should be preferred over automatically selecting break points whenever possible.</dd>
+ <dd>The browser is free to automatically break words at appropriate hyphenation points, following whatever rules it chooses to use. Suggested line break opportunities, as covered in <a href="#suggesting_line_break_opportunities">Suggesting line break opportunities</a>, should be preferred over automatically selecting break points whenever possible.</dd>
 </dl>
 
 <div class="note"><strong>Note:</strong> The <code>auto</code> setting's behavior depends on the language being properly tagged so that the appropriate hyphenation rules can be selected. You must specify a language using the <code>lang</code> HTML attribute in order to guarantee that automatic hyphenation is applied in the language of your choice.</div>

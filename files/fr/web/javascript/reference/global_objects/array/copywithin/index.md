@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/copyWithin
 ---
 {{JSRef}}
 
-La méthode **`copyWithin()`** effectue une copie superficielle (_shallow copy_) d'une partie d'un tableau sur ce même tableau et le renvoie, sans modifier sa taille.
+La méthode **`copyWithin()`** effectue une copie superficielle (_shallow copy_) d'une partie d'un tableau sur ce même tableau et le renvoie, sans modifier sa taille.
 
 {{EmbedInteractiveExample("pages/js/array-copywithin.html")}}
 
@@ -35,7 +35,7 @@ La méthode **`copyWithin()`** effectue une copie superficielle (_shallow copy_)
 - `début` {{optional_inline}}
   - : Indice de début de la séquence a copier. Si la valeur est négative, `début` sera compté à partir de la fin du tableau. Si `début` est omis, `copyWithin` copiera à partir du début du tableau (par défaut 0).
 - `fin` {{optional_inline}}
-  - : Indice de fin de la séquence a copier. `copyWithin` copie jusqu'à `fin` (non-inclusif). Si la valeur est négative, `end` sera compté à partir de la fin du tableau. Si `end` est omis, `copyWithin` copiera jusqu'à la fin du tableau (par défaut `arr.length`).
+  - : Indice de fin de la séquence a copier. `copyWithin` copie jusqu'à `fin` (non-inclusif). Si la valeur est négative, `end` sera compté à partir de la fin du tableau. Si `end` est omis, `copyWithin` copiera jusqu'à la fin du tableau (par défaut `arr.length`).
 
 ### Valeur de retour
 
@@ -43,11 +43,11 @@ Le tableau modifié par la méthode.
 
 ## Description
 
-La fonction `copyWithin()` fonctionne de la même façon que `memmove` en C/C++. C'est une méthode très performante pour décaler les données d'un {{jsxref("Array")}} ou d'un {{jsxref("TypedArray")}} (dans ce cas, on pourra utiliser {{jsxref("TypedArray/copyWithin", "TypedArray.copyWithin()")}}). La séquence est copiée et collée en une opération. La séquence collée aura les valeurs copiées même si les zones de copiage et de collage se chevauchent.
+La fonction `copyWithin()` fonctionne de la même façon que `memmove` en C/C++. C'est une méthode très performante pour décaler les données d'un {{jsxref("Array")}} ou d'un {{jsxref("TypedArray")}} (dans ce cas, on pourra utiliser {{jsxref("TypedArray/copyWithin", "TypedArray.copyWithin()")}}). La séquence est copiée et collée en une opération. La séquence collée aura les valeurs copiées même si les zones de copiage et de collage se chevauchent.
 
-La fonction `copyWithin()` est intentionnellement générique, il n'est pas nécessaire que `this` soit un objet {{jsxref("Array", "Array")}}.
+La fonction `copyWithin()` est intentionnellement générique, il n'est pas nécessaire que `this` soit un objet {{jsxref("Array", "Array")}}.
 
-De plus, `copyWithin()` est une méthode qui modifie l'objet courant. Elle ne modifie pas la longueur de `this`, mais change son contenu et créé de nouvelles propriétés si nécessaire.
+De plus, `copyWithin()` est une méthode qui modifie l'objet courant. Elle ne modifie pas la longueur de `this`, mais change son contenu et créé de nouvelles propriétés si nécessaire.
 
 ## Exemples
 
@@ -157,8 +157,8 @@ if (!Array.prototype.copyWithin) {
 | Spécification                                                                                                        | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ES2016', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ES2016')}}     |                      |
-| {{SpecName('ESDraft', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES2016', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ES2016')}}     |                      |
+| {{SpecName('ESDraft', '#sec-array.prototype.copywithin', 'Array.prototype.copyWithin')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

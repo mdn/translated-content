@@ -65,7 +65,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
 
 | Spécification                                                                                                | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-onversionchange', 'onversionchange')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBDatabase-onversionchange', 'onversionchange')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

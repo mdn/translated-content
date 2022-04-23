@@ -27,13 +27,13 @@ Les service workers devraient finalement résoudre ces problèmes. La syntaxe du
 
 ## Préparatifs aux Service Workers
 
-De nombreuses fonctionnalités des service workers sont désormais disponibles par défaut dans les plus récentes versions des navigateurs qui les supportent. Cependant, si vous constatez que le code de la démo ne fonctionne pas dans votre version actuelle, vous pourriez avoir besoin d'activer une configuration :
+De nombreuses fonctionnalités des service workers sont désormais disponibles par défaut dans les plus récentes versions des navigateurs qui les supportent. Cependant, si vous constatez que le code de la démo ne fonctionne pas dans votre version actuelle, vous pourriez avoir besoin d'activer une configuration :
 
-- **Firefox Nightly** : rendez-vous sur `about:config` et configurer  `dom.serviceWorkers.enabled` à true; redémarrer le navigateur.
+- **Firefox Nightly** : rendez-vous sur `about:config` et configurer  `dom.serviceWorkers.enabled` à true; redémarrer le navigateur.
 - **Chrome Canary** : rendez-vous sur `chrome://flags` et activer `experimental-web-platform-features`; redémarrer le navigateur (à noter que certaines fonctionnalités sont désormais activées par défaut dans Chrome.)
 - **Opera** : rendez-vous sur `opera://flags` et activer `Support for ServiceWorker`; redémarrer le navigateur.
 
-Vous aurez aussi besoin de servir votre code via HTTPS — les Service Workers sont contraints à s'exécuter au travers d'HTTPS pour des raisons de sécurité. GitHub est donc un bon endroit pour héberger des expérimentations, puisqu'il supporte HTTPS. Et pour faciliter le développement en local, le **localhost** est considéré comme une origine sécurisée.
+Vous aurez aussi besoin de servir votre code via HTTPS — les Service Workers sont contraints à s'exécuter au travers d'HTTPS pour des raisons de sécurité. GitHub est donc un bon endroit pour héberger des expérimentations, puisqu'il supporte HTTPS. Et pour faciliter le développement en local, le **localhost** est considéré comme une origine sécurisée.
 
 ## Architecture de base
 
@@ -80,7 +80,7 @@ myFunction().then(function(value) {
 
 Dans le premier exemple, on doit attendre que l'exécution de `myFunction()` retourne `value` avant de poursuivre l'exécution de tout autre code. Dans le second exemple, `myFunction()` retourne une promesse pour `value`, ainsi le reste du code peut continuer à s'exécuter. Lorsque la promesse est résolue, le code à l'intérieur de `then` s'exécutera, de manière asynchrone.
 
-Qu'en est-il sur un exemple concret — qu'en est-il si, lors d'un chargement dynamique d'images, on veut être sûre qu'elles soient bien chargées avant de les afficher ? C'est une démarche standard à adopter, mais parfois problématique. On peut utiliser `.onload` pour n'afficher l'image qu'après qu'elle soit chargée, mais qu'en est-il des événements qui démarrent avant qu'on ne commence à les écouter ? On pourrait essayer un contournement en utilisant `.complete`, mais ce n'est toujours pas infaillible, et que faire en cas d'images multiples ? Et, ummm, tout cela reste synchrone, et bloque donc le fil d'exécution principal.
+Qu'en est-il sur un exemple concret — qu'en est-il si, lors d'un chargement dynamique d'images, on veut être sûre qu'elles soient bien chargées avant de les afficher ? C'est une démarche standard à adopter, mais parfois problématique. On peut utiliser `.onload` pour n'afficher l'image qu'après qu'elle soit chargée, mais qu'en est-il des événements qui démarrent avant qu'on ne commence à les écouter ? On pourrait essayer un contournement en utilisant `.complete`, mais ce n'est toujours pas infaillible, et que faire en cas d'images multiples ? Et, ummm, tout cela reste synchrone, et bloque donc le fil d'exécution principal.
 
 Alternativement, on pourrait faire notre propre promesse pour gérer ce genre de cas. (Voir l'exemple du [test de promesses](https://github.com/mdn/promises-test) pour le code source, ou [le voir fonctionner en direct](https://mdn.github.io/promises-test/).)
 
@@ -127,18 +127,18 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 });
 ```
 
-A la fin de l'appel de la fonction, on ajoute la méthode `then()` de la promesse, qui contient deux fonctions — la première est exécutée lorsque la promesse est résolue avec succès, et la seconde est appelée lorsque la promesse est rejetée. Dans le cas d'une résolution, on affiche l'image dans : `myImage` et on l'ajoute au `body` (son argument est la valeur `request.response` contenue dans la méthode `resolve` de la promesse); en cas de rejet, on retourne une erreur dans la console.
+A la fin de l'appel de la fonction, on ajoute la méthode `then()` de la promesse, qui contient deux fonctions — la première est exécutée lorsque la promesse est résolue avec succès, et la seconde est appelée lorsque la promesse est rejetée. Dans le cas d'une résolution, on affiche l'image dans : `myImage` et on l'ajoute au `body` (son argument est la valeur `request.response` contenue dans la méthode `resolve` de la promesse); en cas de rejet, on retourne une erreur dans la console.
 
 Le tout se déroule de manière asynchrone.
 
-> **Note :** il est possible d'assembler des appels de promesse, par exemple:
+> **Note :** il est possible d'assembler des appels de promesse, par exemple:
 > `myPromise().then(success, failure).then(success).catch(failure);`
 
 > **Note :** pour en savoir plus sur les promesses, consulter l'excellent article de Jake Archibald [JavaScript Promises: there and back again](http://www.html5rocks.com/en/tutorials/es6/promises/).
 
 ## Démo de service workers
 
-Pour illustrer quelques principes de base de l'enregistrement et de l'installation d'un service worker, voici une simple démo appelée [sw-test](https://github.com/mdn/sw-test), qui présente juste une galerie d'images Star wars Lego. Elle utilise une fonction pilotée par une promesse pour lire les données d'une image à partir d'un objet JSON et charger les images en utilisant Ajax, avant d'afficher les images en bas de page. Les choses restent statiques et simples pour le moment. Elle enregistre aussi, installe et active un service worker, et lorsque la spécification est davantage supportée par les navigateurs, elle met en cache tous les fichiers requis pour un fonctionnement déconnecté !
+Pour illustrer quelques principes de base de l'enregistrement et de l'installation d'un service worker, voici une simple démo appelée [sw-test](https://github.com/mdn/sw-test), qui présente juste une galerie d'images Star wars Lego. Elle utilise une fonction pilotée par une promesse pour lire les données d'une image à partir d'un objet JSON et charger les images en utilisant Ajax, avant d'afficher les images en bas de page. Les choses restent statiques et simples pour le moment. Elle enregistre aussi, installe et active un service worker, et lorsque la spécification est davantage supportée par les navigateurs, elle met en cache tous les fichiers requis pour un fonctionnement déconnecté !
 
 ![](demo-screenshot.png)
 
@@ -196,35 +196,35 @@ Après l'enregistrement du service worker, le navigateur tente d'installer puis 
 
 L'événement install est déclenché lorsqu'une installation se termine avec succès. L'événement install est généralement utilisé pour remplir le cache local du navigateur avec les ressources nécessaires pour faire fonctionner l'application en mode déconnecté. A cet effet, la toute nouvelle API de stockage est utilisée — {{domxref("cache")}} — un espace global au niveau du service worker qui permet de stocker les ressources fournies par les réponses, et indexées par leurs requêtes. Cette API fonctionne d'une manière similaire au cache standard du navigateur, mais le cache demeure spécifique au domaine. Il persiste jusqu'à ce qu'il en soit décidé autrement — de nouveau, le contrôle reste total.
 
-> **Note :** L'API Cache n'est pas supportée par tous les navigateurs. (Voir la section {{anch("Compatibilité des navigateurs")}} pour plus d'informations.) Pour l'utiliser à l'heure actuelle, on peut envisager un polyfill comme celui fournit par la [démo Topeka de Google](https://github.com/Polymer/topeka/blob/master/sw.js), ou peut-être stocker les ressources dans [IndexedDB](/en-US/docs/Web/API/IndexedDB_API).
+> **Note :** L'API Cache n'est pas supportée par tous les navigateurs. Pour l'utiliser à l'heure actuelle, on peut envisager un polyfill comme celui fournit par la [démo Topeka de Google](https://github.com/Polymer/topeka/blob/master/sw.js), ou peut-être stocker les ressources dans [IndexedDB](/en-US/docs/Web/API/IndexedDB_API).
 
 Commençons cette section par l'examen d'un exemple de code — c'est le [premier bloc présent dans le service worker](https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18):
 
 ```js
 this.addEventListener('install', function(event) {
-  event.waitUntil(
-    caches.open('v1').then(function(cache) {
-      return cache.addAll([
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
-      ]);
-    })
-  );
+  event.waitUntil(
+    caches.open('v1').then(function(cache) {
+      return cache.addAll([
+        '/sw-test/',
+        '/sw-test/index.html',
+        '/sw-test/style.css',
+        '/sw-test/app.js',
+        '/sw-test/image-list.js',
+        '/sw-test/star-wars-logo.jpg',
+        '/sw-test/gallery/',
+        '/sw-test/gallery/bountyHunters.jpg',
+        '/sw-test/gallery/myLittleVader.jpg',
+        '/sw-test/gallery/snowTroopers.jpg'
+      ]);
+    })
+  );
 });
 ```
 
-1.  Un écouteur d'événement `install` est d'abord ajouté au service worker (d'où le  `this`), puis une méthode {{domxref("ExtendableEvent.waitUntil()") }} est chaînée à l'événement — cela garantit que le Service Worker ne s'installera pas tant que le code à l'intérieur de `waitUntil()` n'a pas été exécuté avec succès.
+1.  Un écouteur d'événement `install` est d'abord ajouté au service worker (d'où le  `this`), puis une méthode {{domxref("ExtendableEvent.waitUntil()") }} est chaînée à l'événement — cela garantit que le Service Worker ne s'installera pas tant que le code à l'intérieur de `waitUntil()` n'a pas été exécuté avec succès.
 2.  A l'intérieur de `waitUntil()` la méthode [`caches.open()`](/en-US/docs/Web/API/CacheStorage/open) est utilisée pour créer un nouveau cache appelé `v1`, ce qui constitue la version 1 du cache de ressources de notre site. Cette fonction retourne une promesse lorsque le cache est créé; une fois résolue, est appelée une fonction qui appelle elle-même `addAll()` sur le cache créé, avec pour paramètre un tableau d'URLs relatives à l'origine correspondant aux ressources à mettre en cache.
 3.  Si la promesse est rejetée, l'installation échoue, et le worker ne fait rien de plus. Le code peut être alors corrigé et l'opération retentée la prochaine fois que l'enregistrement survient.
-4.  Après une installation couronnée de succès, le service worker est activé. Cela ne fait pas une grande différence  la première fois que le service worker est installé/activé, mais cela fait plus sens lorsque le service worker est mis à jour (voir la section {{anch("Updating your service worker") }} plus bas.)
+4. Après une installation couronnée de succès, le service worker est activé. Cela ne fait pas une grande différence la première fois que le service worker est installé/activé, mais cela fait plus sens lorsque le service worker est mis à jour (voir la section [Mettre à jour le service worker](#mettre_à_jour_le_service_worker) plus bas).
 
 > **Note :** [localStorage](/fr/docs/Web/API/Web_Storage_API) fonctionne de la même façon que le cache du service worker, mais de manière synchrone, et il n'est donc pas autorisé dans les service workers.
 
@@ -256,7 +256,7 @@ this.addEventListener('fetch', function(event) {
 });
 ```
 
-`caches.match(event.request)` permet de mettre en correspondance chaque ressource demandée sur le réseau avec la ressource équivalente en cache, si elle se trouve être disponible. La comparaison est effectuée via l'url et diverses en-têtes, comme habituellement avec des requêtes HTTP normales.
+`caches.match(event.request)` permet de mettre en correspondance chaque ressource demandée sur le réseau avec la ressource équivalente en cache, si elle se trouve être disponible. La comparaison est effectuée via l'url et diverses en-têtes, comme habituellement avec des requêtes HTTP normales.
 
 Voici quelques autres options disponibles pour que la magie opère (voir la [documentation de l'API Fetch](/fr/docs/Web/API/Fetch_API) pour plus d'informations sur les objets [`Request`](/fr/docs/Web/API/Request) et [`Response`](/fr/docs/Web/API/Response)).
 
@@ -332,7 +332,7 @@ this.addEventListener('fetch', function(event) {
 
 Ici on retourne la requête réseau par défaut au moyen de `return fetch(event.request)`, qui retourne lui-même une promesse. Lorsque cette promesse est résolue, on exécute une fonction qui sollicite le cache en utilisant `caches.open('v1')`; une promesse est de nouveau retournée. Lorsque cette promesse est résolue, `cache.put()` est utilisée pour ajouter la ressource au cache. La ressource est récupérée à partir de `event.request`, et la réponse est alors clonée avec `response.clone()` et ajoutée au cache. Le clone est placé dans le cache, et la réponse originale est retournée au navigateur et délivrée à la page qui la requiert.
 
-Pourquoi un clone ? Il se trouve que les flux de requête et de réponse peuvent seulement être lus une fois.  Afin de retourner la réponse au navigateur et de la mettre en cache, elle doit être clonée. Aussi, l'original est retourné au navigateur tandis que le clone est envoyé dans le cache. Ils sont chacun lus une seule fois.
+Pourquoi un clone ? Il se trouve que les flux de requête et de réponse peuvent seulement être lus une fois.  Afin de retourner la réponse au navigateur et de la mettre en cache, elle doit être clonée. Aussi, l'original est retourné au navigateur tandis que le clone est envoyé dans le cache. Ils sont chacun lus une seule fois.
 
 Le dernier problème qui demeure alors est l'échec de la requête au cas où elle n'a aucune correspondance dans le cache et que le réseau n'est pas disponible. Fournir un document de rechange par défaut permet quoiqu'il arrive, à l'utilisateur de récupérer quelque chose :
 
@@ -347,8 +347,8 @@ this.addEventListener('fetch', function(event) {
         });
       });
     }).catch(function() {
-      return caches.match('/sw-test/gallery/myLittleVader.jpg');
-    })
+      return caches.match('/sw-test/gallery/myLittleVader.jpg');
+    })
   );
 });
 ```
@@ -361,18 +361,18 @@ Ce code utilise un chaînage de promesses plus standard et retourne la réponse 
 
 ```js
 this.addEventListener('fetch', function(event) {
-  var response;
-  event.respondWith(caches.match(event.request).catch(function() {
-    return fetch(event.request);
-  }).then(function(r) {
-    response = r;
-    caches.open('v1').then(function(cache) {
-      cache.put(event.request, response);
-    });
-    return response.clone();
-  }).catch(function() {
-    return caches.match('/sw-test/gallery/myLittleVader.jpg');
-  }));
+  var response;
+  event.respondWith(caches.match(event.request).catch(function() {
+    return fetch(event.request);
+    .then(functio
+    response = r;
+    cac
+    c
+    });
+       return response.clone();
+        }).catch(function() {
+    return caches.match('/sw-test/gallery/myLittleVader.jpg');
+  }));
 });
 ```
 

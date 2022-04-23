@@ -30,7 +30,7 @@ L'objet {{jsxref("String")}} surcharge la méthode `toString()` de l'objet {{jsx
 
 ## Exemples
 
-L'exemple suivant affiche la valeur textuelle d'un objet  {{jsxref("String")}} :
+L'exemple suivant affiche la valeur textuelle d'un objet  {{jsxref("String")}} :
 
 ```js
 var x = new String("coucou monde");
@@ -42,9 +42,9 @@ console.log(x.toString()); // affiche "coucou monde"
 | Spécification                                                                                                        | État                         | Commentaires                                          |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
-| {{SpecName('ES5.1', '#sec-15.5.4.2', 'String.prototype.toString')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.tostring', 'String.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.5.4.2', 'String.prototype.toString')}}                             | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-string.prototype.tostring', 'String.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-string.prototype.tostring', 'String.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

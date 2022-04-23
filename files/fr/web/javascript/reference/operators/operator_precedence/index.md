@@ -44,7 +44,7 @@ avec le résultat attendu que `a` et `b` obtiennent la même valeur de 5. C'est 
 
 ## Tableau
 
-Le tableau suivant est classé de la plus haute (0) à la plus basse (19) précédence.
+Le tableau suivant est classé de la plus haute (19) à la plus basse (1) précédence.
 
 <table class="fullwidth-table">
   <tbody>
@@ -55,9 +55,9 @@ Le tableau suivant est classé de la plus haute (0) à la plus basse (19) préc�
       <th>Opérateurs individuels</th>
     </tr>
     <tr>
-      <td>0</td>
+      <td>19</td>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Groupement"
+        <a href="/fr/docs/Web/JavaScript/Reference/Operators/Grouping"
           >Groupement</a
         >
       </td>
@@ -65,31 +65,30 @@ Le tableau suivant est classé de la plus haute (0) à la plus basse (19) préc�
       <td><code>( … )</code></td>
     </tr>
     <tr>
-      <td colspan="1" rowspan="5">1</td>
+      <td colspan="1" rowspan="5">18</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_point"
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors#notation_avec_point"
           >Accès à un membre</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td rowspan="2">Gauche à droite</td>
       <td><code>… . …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_crochets"
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors#notation_avec_crochets"
           >Accès à un membre calculé</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… [ … ]</code></td>
     </tr>
     <tr>
       <td>
         <code
           ><a
-            href="/fr/docs/JavaScript/Reference/R%C3%A9f%C3%A9rence_JavaScript/Op%C3%A9rateurs/Op%C3%A9rateurs_sp%C3%A9ciaux/L&#x27;op%C3%A9rateur_new"
+            href="/fr/docs/Web/JavaScript/Reference/Operators/new"
             >new</a
           ></code
         >
@@ -100,9 +99,9 @@ Le tableau suivant est classé de la plus haute (0) à la plus basse (19) préc�
     </tr>
     <tr>
       <td>
-        <a href="/fr/docs/Web/JavaScript/Guide/Fonctions">Appel de fonction</a>
+        <a href="/fr/docs/Web/JavaScript/Guide/Functions">Appel de fonction</a>
       </td>
-      <td>Gauche à droite</td>
+      <td rowspan="2">Gauche à droite</td>
       <td>
         <code>… ( <var>… </var>)</code>
       </td>
@@ -113,15 +112,14 @@ Le tableau suivant est classé de la plus haute (0) à la plus basse (19) préc�
           >Chaînage optionnel</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>?.</code></td>
     </tr>
     <tr>
-      <td>2</td>
+      <td>17</td>
       <td>
         <code
           ><a
-            href="/fr/docs/JavaScript/Reference/R%C3%A9f%C3%A9rence_JavaScript/Op%C3%A9rateurs/Op%C3%A9rateurs_sp%C3%A9ciaux/L&#x27;op%C3%A9rateur_new"
+            href="/fr/docs/Web/JavaScript/Reference/Operators/new"
             >new</a
           ></code
         >
@@ -131,393 +129,379 @@ Le tableau suivant est classé de la plus haute (0) à la plus basse (19) préc�
       <td><code>new …</code></td>
     </tr>
     <tr>
-      <td rowspan="2">3</td>
+      <td rowspan="2">16</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Incr.C3.A9ment_(.2B.2B)"
+          href="/fr/docs/Web/JavaScript/Reference/Operators#incrémentation_et_décrémentation"
           >Incrémentation suffixe</a
         >
       </td>
-      <td>Non applicable</td>
+      <td rowspan="2">Non applicable</td>
       <td><code>… ++</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#D.C3.A9cr.C3.A9ment_(--)"
+          href="/fr/docs/Web/JavaScript/Reference/Operators#incrémentation_et_décrémentation"
           >Décrémentation suffixe</a
         >
       </td>
-      <td>Non applicable</td>
       <td><code>… --</code></td>
     </tr>
     <tr>
-      <td colspan="1" rowspan="10">4</td>
+      <td colspan="1" rowspan="10">15</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques#Logical_NOT_.28.21.29"
-          >NON logique</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT"
+          >NON logique (!)</a
         >
       </td>
-      <td>Droite à gauche</td>
+      <td rowspan="10">Droite à gauche</td>
       <td><code>! …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.7E_.28NON_binaire.29"
-          >NON binaire</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT"
+          >NON binaire (~)</a
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>~ …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Plus_unaire_(.2B)"
-          >Plus unaire</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus"
+          >Plus unaire (+)</a
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>+ …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#N.C3.A9gation_unaire_(-)"
-          >Négation unaire</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation"
+          >Négation unaire (-)</a
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>- …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Incr.C3.A9ment_(.2B.2B)"
+          href="/fr/docs/Web/JavaScript/Reference/Operators#incrémentation_et_décrémentation"
           >Incrémentation préfixe</a
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>++ …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#D.C3.A9cr.C3.A9ment_(--)"
+          href="/fr/docs/Web/JavaScript/Reference/Operators#incrémentation_et_décrémentation"
           >Décrémentation préfixe</a
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>-- …</code></td>
     </tr>
     <tr>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof"
+            href="/fr/docs/Web/JavaScript/Reference/Operators/typeof"
             >typeof</a
           ></code
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>typeof …</code></td>
     </tr>
     <tr>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_void"
+            href="/fr/docs/Web/JavaScript/Reference/Operators/void"
             >void</a
           ></code
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>void …</code></td>
     </tr>
     <tr>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete"
+            href="/fr/docs/Web/JavaScript/Reference/Operators/delete"
             >delete</a
           ></code
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>delete …</code></td>
     </tr>
     <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/await"
+          ><a href="/fr/docs/Web/JavaScript/Reference/Operators/await"
             >await</a
           ></code
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>await …</code></td>
     </tr>
     <tr>
-      <td rowspan="4">5</td>
+      <td>14</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Exponentiation_(**)"
-          >Exponentiation</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation"
+          >Exponentiation (**)</a
         >
       </td>
       <td>Droite à gauche</td>
       <td><code>… ** …</code></td>
     </tr>
     <tr>
+    <td rowspan="3">13</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Multiplication_(*)"
-          >Multiplication</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Multiplication"
+          >Multiplication (*)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td rowspan="3">Gauche à droite</td>
       <td><code>… * …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Division_(.2F)"
-          >Division</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Division"
+          >Division (/)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… / …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Reste_(.25)"
-          >Reste</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Remainder"
+          >Reste (%)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… % …</code></td>
     </tr>
     <tr>
-      <td rowspan="2">6</td>
+      <td rowspan="2">12</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Addition_(.2B)"
-          >Addition</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Addition"
+          >Addition (+)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td rowspan="2">Gauche à droite</td>
       <td><code>… + …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_arithmétiques#Soustraction_(-)"
-          >Soustraction</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Subtraction"
+          >Soustraction (-)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… - …</code></td>
     </tr>
     <tr>
-      <td rowspan="3">7</td>
+      <td rowspan="3">11</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.3C.3C_.28d.C3.A9calage_.C3.A0_gauche.29"
-          >Décalage binaire à gauche</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Left_shift"
+          >Décalage binaire à gauche (&#x3C;&#x3C;)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td rowspan="3">Gauche à droite</td>
       <td><code>… &#x3C;&#x3C; …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.3E.3E_.28d.C3.A9calage_.C3.A0_droite_avec_propagation_du_signe.29"
-          >Décalage binaire à droite</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Right_shift"
+          >Décalage binaire à droite (>>)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… >> …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.3E.3E.3E_.28d.C3.A9calage_.C3.A0_droite_avec_insertion_de_z.C3.A9ros.29"
-          >Décalage binaire à droite non-signé</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift"
+          >Décalage binaire à droite non-signé (>>>)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… >>> …</code></td>
     </tr>
     <tr>
-      <td rowspan="6">8</td>
+      <td rowspan="6">10</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#Inf.C3.A9rieur_strict_(<)"
-          >Inférieur strict</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than"
+          >Inférieur strict (&#x3C;)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td rowspan="6">Gauche à droite</td>
       <td><code>… &#x3C; …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#Inf.C3.A9rieur_ou_.C3.A9gal_(<.3D)"
-          >Inférieur ou égal</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal"
+          >Inférieur ou égal (&#x3C;=)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… &#x3C;= …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#Sup.C3.A9rieur_strict_(>)"
-          >Supérieur strict</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than"
+          >Supérieur strict (>)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… > …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#Sup.C3.A9rieur_ou_.C3.A9gal_(>.3D)"
-          >Supérieur ou égal</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal"
+          >Supérieur ou égal (>=)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… >= …</code></td>
     </tr>
     <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_in"
+          ><a href="/fr/docs/Web/JavaScript/Reference/Operators/in"
             >in</a
           ></code
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… in …</code></td>
     </tr>
     <tr>
       <td>
         <code
           ><a
-            href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/instanceof"
+            href="/fr/docs/Web/JavaScript/Reference/Operators/instanceof"
             >instanceof</a
           ></code
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… instanceof …</code></td>
     </tr>
     <tr>
       <td rowspan="4">9</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_simple_(.3D.3D)"
-          >Égalité faible</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Equality"
+          >Égalité faible (==)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td rowspan="4">Gauche à droite</td>
       <td><code>… == …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#In.C3.A9galit.C3.A9_simple_(!.3D)"
-          >Inégalité faible</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Inequality"
+          >Inégalité faible (!=)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… != …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)"
-          >Égalité stricte</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality"
+          >Égalité stricte (===)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… === …</code></td>
     </tr>
     <tr>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#In.C3.A9galit.C3.A9_stricte_(!.3D.3D)"
-          >Inégalité stricte</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality"
+          >Inégalité stricte (!==)</a
         >
       </td>
-      <td>Gauche à droite</td>
       <td><code>… !== …</code></td>
     </tr>
     <tr>
-      <td>10</td>
+      <td>8</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#&#x26;_.28ET_binaire.29"
-          >ET binaire</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND"
+          >ET binaire (&#x26;)</a
         >
       </td>
       <td>Gauche à droite</td>
       <td><code>… &#x26; …</code></td>
     </tr>
     <tr>
-      <td>11</td>
+      <td>7</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#.5E_.28XOR_binaire.29"
-          >OU exclusif (<em>XOR</em>) binaire</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR"
+          >OU exclusif / XOR binaire (^)</a
         >
       </td>
       <td>Gauche à droite</td>
       <td><code>… ^ …</code></td>
     </tr>
     <tr>
-      <td>12</td>
+      <td>6</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_binaires#(OU_binaire)"
-          title="JavaScript/Reference/Operators/Bitwise_Operators"
-          >OU binaire</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_OR"
+          >OU binaire (|)</a
         >
       </td>
       <td>Gauche à droite</td>
       <td><code>… | …</code></td>
     </tr>
     <tr>
-      <td>13</td>
+      <td>5</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques#Logical_AND_.28&#x26;&#x26;.29"
-          >ET logique</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND"
+          >ET logique (&#x26;&#x26;)</a
         >
       </td>
       <td>Gauche à droite</td>
       <td><code>… &#x26;&#x26; …</code></td>
     </tr>
     <tr>
-      <td>14</td>
+      <td rowspan="2">4</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques#OU_logique_(.7C.7C)"
-          >OU logique</a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_OR"
+          >OU logique (||)</a
         >
       </td>
-      <td>Gauche à droite</td>
+      <td rowspan="2">Gauche à droite</td>
       <td><code>… || …</code></td>
     </tr>
     <tr>
-      <td>15</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_conditionnel"
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
+          >Coalescence des nuls (??)</a
+        >
+      </td>
+      <td><code>… ?? …</code></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>
+        <a
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Conditional_Operator"
           >Opérateur conditionnel ternaire</a
         >
       </td>
@@ -525,14 +509,14 @@ Le tableau suivant est classé de la plus haute (0) à la plus basse (19) préc�
       <td><code>… ? … : …</code></td>
     </tr>
     <tr>
-      <td rowspan="13">16</td>
-      <td rowspan="13">
+      <td rowspan="18">2</td>
+      <td rowspan="16">
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_d_affectation"
+          href="/fr/docs/Web/JavaScript/Reference/Operators#opérateurs_daffectation"
           >Affectation</a
         >
       </td>
-      <td rowspan="13">Droite à gauche</td>
+      <td rowspan="16">Droite à gauche</td>
       <td><code>… = …</code></td>
     </tr>
     <tr>
@@ -542,13 +526,13 @@ Le tableau suivant est classé de la plus haute (0) à la plus basse (19) préc�
       <td><code>… -= …</code></td>
     </tr>
     <tr>
+      <td><code>… **= …</code></td>
+    </tr>
+    <tr>
       <td><code>… *= …</code></td>
     </tr>
     <tr>
       <td><code>… /= …</code></td>
-    </tr>
-    <tr>
-      <td><code>… **= …</code></td>
     </tr>
     <tr>
       <td><code>… %= …</code></td>
@@ -572,44 +556,40 @@ Le tableau suivant est classé de la plus haute (0) à la plus basse (19) préc�
       <td><code>… |= …</code></td>
     </tr>
     <tr>
-      <td colspan="1" rowspan="2">17</td>
+      <td><code>… &#x26;&#x26;= …</code></td>
+    </tr>
+    <tr>
+      <td><code>… ||= …</code></td>
+    </tr>
+    <tr>
+      <td><code>… ??= …</code></td>
+    </tr>
+    <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/yield"
+          ><a href="/fr/docs/Web/JavaScript/Reference/Operators/yield"
             >yield</a
           ></code
         >
       </td>
-      <td>Droite à gauche</td>
+      <td rowspan="2">Droite à gauche</td>
       <td><code>yield …</code></td>
     </tr>
     <tr>
       <td>
         <code
-          ><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/yield*"
+          ><a href="/fr/docs/Web/JavaScript/Reference/Operators/yield*"
             >yield*</a
           ></code
         >
       </td>
-      <td>Droite à gauche</td>
       <td><code>yield* …</code></td>
     </tr>
     <tr>
-      <td>18</td>
+      <td>1</td>
       <td>
         <a
-          href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition"
-          >Décomposition</a
-        >
-      </td>
-      <td>Non applicable</td>
-      <td><code>...</code> …</td>
-    </tr>
-    <tr>
-      <td>19</td>
-      <td>
-        <a
-          href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_virgule"
+          href="/fr/docs/Web/JavaScript/Reference/Operators/Comma_Operator"
           >Virgule</a
         >
       </td>

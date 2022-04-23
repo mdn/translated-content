@@ -64,7 +64,7 @@ function acosh(x) {
 | Spécification                                                                | État                         | Commentaires        |
 | ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES6', '#sec-math.acosh', 'Math.acosh')}}         | {{Spec2('ES6')}}         | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

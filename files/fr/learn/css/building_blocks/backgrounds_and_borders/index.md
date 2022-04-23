@@ -11,7 +11,7 @@ Dans cette leçon, nous verrons quelques-unes des mises en forme créatives auto
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Compétences informatique basiques,
         <a
@@ -28,7 +28,7 @@ Dans cette leçon, nous verrons quelques-unes des mises en forme créatives auto
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Apprendre comment mettre en forme l'arrière-plan et les bordures.</td>
     </tr>
   </tbody>
@@ -107,7 +107,7 @@ La propriété [`background-position`](/fr/docs/Web/CSS/background-position) per
 
 Les valeurs les plus communes pour `background-position` se présentent sous la forme d'un couple — une valeur horizontale suivie d'une valeur verticale.
 
-Vous pouvez utiliser les mots-clé tels que `top` et `right` (vous trouverez les autres valeurs possibles sur la page [`background-image`](/fr/docs/Web/CSS/background-image)) :
+Vous pouvez utiliser les mots-clé tels que `top` et `right` (vous trouverez les autres valeurs possibles sur la page [`background-image`](/fr/docs/Web/CSS/background-image))&nbsp;:
 
 ```css
 .box {
@@ -117,7 +117,7 @@ Vous pouvez utiliser les mots-clé tels que `top` et `right` (vous trouverez les
 }
 ```
 
-Ainsi que des valeurs de [longueurs](/fr/docs/Web/CSS/length), ou des [pourcentages](/fr/docs/Web/CSS/percentage) :
+Ainsi que des valeurs de [longueurs](/fr/docs/Web/CSS/length), ou des [pourcentages](/fr/docs/Web/CSS/percentage)&nbsp;:
 
 ```css
 .box {
@@ -127,7 +127,7 @@ Ainsi que des valeurs de [longueurs](/fr/docs/Web/CSS/length), ou des [pourcenta
 }
 ```
 
-On peut utiliser simultanément mots-clé, dimensions et pourcentages, par exemple :
+On peut utiliser simultanément mots-clé, dimensions et pourcentages, par exemple&nbsp;:
 
 ```css
 .box {
@@ -189,14 +189,14 @@ Chaque valeur des différentes propriétés va correspondre aux valeurs placées
 
 Une autre option que nous avons à notre disposition pour les arrières-plans est de spécifier comment ils défilent quand le contenu défile lui-même. Ce comportement est contrôlé grâce à la propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) , qui peut prendre ces valeurs:
 
-- `scroll` : L'arrière-plan de l'élément défile lorsqu'on fait défiler la page. Si le contenu de l'élément défile, l'arrière-plan ne bouge pas. Dans la pratique, l'effet obtenu est que l'arrière-plan est fixé à la position de la page et défile comme elle.
-- `fixed` : L'arrière-plan de l'élément est fixe dans la zone d'affichage (
+- `scroll`&nbsp;: L'arrière-plan de l'élément défile lorsqu'on fait défiler la page. Si le contenu de l'élément défile, l'arrière-plan ne bouge pas. Dans la pratique, l'effet obtenu est que l'arrière-plan est fixé à la position de la page et défile comme elle.
+- `fixed`&nbsp;: L'arrière-plan de l'élément est fixe dans la zone d'affichage (
 
   <i lang="en">viewport</i>
 
   ) et il ne défile pas lorsqu'on fait défiler ou la page ou le contenu de l'élément. L'arrière-plan reste toujours à la même position sur l'écran.
 
-- `local` : Cette valeur fut ajoutée plus tard en raison de la confusion engendrée par la valeur `scroll` et son comportement qui ne correspond pas aux cas d'usage. `local` permet de fixer l'arrière-plan sur l'élément sur lequel il est défini afin que, lorsqu'on fait défiler l'élément, l'arrière-plan défile avec lui.
+- `local`&nbsp;: Cette valeur fut ajoutée plus tard en raison de la confusion engendrée par la valeur `scroll` et son comportement qui ne correspond pas aux cas d'usage. `local` permet de fixer l'arrière-plan sur l'élément sur lequel il est défini afin que, lorsqu'on fait défiler l'élément, l'arrière-plan défile avec lui.
 
 La propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) n'a d'effet que lorsque le contenu défile. Pour observer cet effet, nous avons construit une démo afin d'illustrer les différences entre les trois valeurs : [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (vous pouvez également consulter [le code source de cette démo](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds)).
 
@@ -225,7 +225,7 @@ Les lecteurs d'écran ne traitent pas les images de fond, elles ne doivent donc 
 
 Lors de l'apprentissage du modèle de boîte, on a pu voir comment les bordures jouaient un rôle sur la taille de la boîte. Dans cette leçon, nous allons voir comment créer des bordures. Généralement, lorsqu'on ajoute des bordures à un élément avec CSS, on utilise une propriété raccourcie qui définit la couleur, l'épaisseur et le style de la bordure.
 
-On peut définir une bordure pour les quatre côtés d'une boîte avec la propriété [`border`](/fr/docs/Web/CSS/border) :
+On peut définir une bordure pour les quatre côtés d'une boîte avec la propriété [`border`](/fr/docs/Web/CSS/border)&nbsp;:
 
 ```css
 *.box {
@@ -233,7 +233,7 @@ On peut définir une bordure pour les quatre côtés d'une boîte avec la propri
 }*
 ```
 
-On peut aussi cibler un seul des côtés de la boîte, par exemple :
+On peut aussi cibler un seul des côtés de la boîte, par exemple&nbsp;:
 
 ```css
 .box {
@@ -241,7 +241,7 @@ On peut aussi cibler un seul des côtés de la boîte, par exemple :
 }
 ```
 
-Les propriétés individuelles équivalentes pour ces notations raccourcies seraient :
+Les propriétés individuelles équivalentes pour ces notations raccourcies seraient&nbsp;:
 
 ```css
 .box {
@@ -251,7 +251,7 @@ Les propriétés individuelles équivalentes pour ces notations raccourcies sera
 }
 ```
 
-Pour la propriété qui concerne un des côtés :
+Pour la propriété qui concerne un des côtés&nbsp;:
 
 ```css
 .box {
@@ -291,7 +291,7 @@ Dans l'exemple ci-dessus, nous avons d'abord fixé la valeur pour les quatre coi
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 750)}}
 
-## Testez vos compétences !
+## Testez vos compétences&nbsp;!
 
 Testons vos nouvelles connaissances : en partant de l'exemple fourni plus bas :
 

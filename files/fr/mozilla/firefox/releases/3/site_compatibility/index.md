@@ -19,11 +19,11 @@ Consultez également [Firefox 3 pour les développeurs](fr/Firefox_3_pour_les_d%
 
 Dans Gecko 1.8, il n'était pas possible de définir des gestionnaires d'évènements `load` capturants sur les images. Dans Gecko 1.9, cela devient possible avec la résolution du {{ Bug(234455) }}. Cela peut cependant causer des problèmes sur les sites Web qui ont incorrectement défini leurs gestionnaires d'évènements sur l'évènement `load`. Consultez la discussion dans le {{ Bug(335251) }}. Pour résoudre ce problème, les pages en question ne doivent pas définir de gestionnaires d'évènements capturants pour l'évènement `load`.
 
-Par exemple, ceci :
+Par exemple, ceci&nbsp;:
 
     window.addEventListener('load', votreFonction, true);
 
-devrait être remplacé par ceci :
+devrait être remplacé par ceci&nbsp;:
 
     window.addEventListener('load', votreFonction, false);
 

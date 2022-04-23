@@ -38,15 +38,15 @@ Un site web contient plusieurs types de fichiers (texte, code, feuilles de style
 
 ### [Les bases de HTML](/fr/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
 
-Hypertext Markup Language (HTML) correspond au code que vous utiliserez pour structurer les différents contenus en ligne. Par exemple, le contenu sera‑t‑il un ensemble de paragraphes, ou une liste à puces ? Y aura‑t‑il des images insérées ? Aurai‑je une table de données ? Sans vous submerger, [Les bases du HTML](/fr/Apprendre/Commencer_avec_le_web/Les_bases_HTML) vous donne assez d'informations pour que vous soyez un familier du HTML.
+Hypertext Markup Language (HTML) correspond au code que vous utiliserez pour structurer les différents contenus en ligne. Par exemple, le contenu sera‑t‑il un ensemble de paragraphes, ou une liste à puces ? Y aura‑t‑il des images insérées&nbsp;? Aurai‑je une table de données&nbsp;? Sans vous submerger, [Les bases du HTML](/fr/Apprendre/Commencer_avec_le_web/Les_bases_HTML) vous donne assez d'informations pour que vous soyez un familier du HTML.
 
 ### [Les bases des CSS](/fr/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
 
-Les _Cascading Stylesheets_ (CSS) (« feuilles de styles en cascade ») reçoivent le code à utiliser pour mettre en forme votre site Web. Par exemple, voulez‑vous que le texte soit en noir ou en rouge ? Où le contenu doit‑il être placé sur l'écran ? Quelles devront être les images de fond et les couleurs utilisées pour décorer votre site web ? [« Les bases des CSS »](/fr/Apprendre/Commencer_avec_le_web/Les_bases_CSS) vous apprendra tout ce dont vous avez besoin pour commencer.
+Les _Cascading Stylesheets_ (CSS) (« feuilles de styles en cascade ») reçoivent le code à utiliser pour mettre en forme votre site Web. Par exemple, voulez‑vous que le texte soit en noir ou en rouge&nbsp;? Où le contenu doit‑il être placé sur l'écran&nbsp;? Quelles devront être les images de fond et les couleurs utilisées pour décorer votre site web&nbsp;? [«&nbsp;Les bases des CSS&nbsp;»](/fr/Apprendre/Commencer_avec_le_web/Les_bases_CSS) vous apprendra tout ce dont vous avez besoin pour commencer.
 
 ### [Les bases de JavaScript](/fr/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
 
-JavaScript est le langage de programmation à utiliser pour ajouter des fonctionnalités interactives dans vos sites Web, par exemple des jeux, les événements déclenchés lorsqu'un bouton est pressé ou lorsque des données sont entrées dans un formulaire, des effets de style dynamiques, des animations, etc. [Les bases de JavaScript](/fr/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript) vous offrent un aperçu des possibilités de ce puissant langage et vous montre comment commencer à l'utiliser.
+JavaScript est le langage de programmation à utiliser pour ajouter des fonctionnalités interactives dans vos sites Web, par exemple des jeux, les événements déclenchés lorsqu'un bouton est pressé ou lorsque des données sont entrées dans un formulaire, des effets de style dynamiques, des animations, etc. [Les bases de JavaScript](/fr/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript) vous offrent un aperçu des possibilités de ce puissant langage et vous montre comment commencer à l'utiliser.
 
 ### [Publier votre site web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
 

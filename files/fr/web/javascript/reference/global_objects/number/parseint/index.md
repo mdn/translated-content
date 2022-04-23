@@ -54,7 +54,7 @@ if(Number.parseInt === undefined) {
 | Spécification                                                                            | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-number.parseint', 'Number.parseInt')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

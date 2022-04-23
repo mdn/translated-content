@@ -1,0 +1,102 @@
+---
+title: element
+slug: Web/CSS/element
+tags:
+  - Background
+  - CSS
+  - CSS4-images
+  - Função CSS
+  - Layout
+  - Web
+translation_of: Web/CSS/element()
+original_slug: Web/CSS/element()
+---
+<div>{{CSSRef}}{{SeeCompatTable}}</div>
+
+<p>A função <a href="/en-US/docs/CSS" title="CSS">CSS</a> <strong><code>element()</code></strong> define uma {{cssxref("&lt;image&gt;")}} gerada de um elemento HTML qualquer. Essa imagem é <strong><em>dinamica</em></strong>, significando que se o elemento HTML for mudado, a propriedade CSS usando este valor será atualizada automaticamente.</p>
+
+<p>Um cenario particularmente util para usar esta função seria colocar uma imagem em um elemento {{HTMLElement("canvas")}}, e então usar-lo como um <em>background</em>.</p>
+
+<p>Em navegadores Gecko, você pode usar o metodo não padronizado {{domxref("document.mozSetImageElement()")}} para mudar o elemento sendo usado como <em>background</em> por um elemento de <em>background </em>selecionado por CSS.</p>
+
+<h2 id="Syntax" name="Syntax">Sintaxe</h2>
+
+<pre class="syntaxbox notranslate">element( <em>id</em> )</pre>
+
+<p>Onde:</p>
+
+<dl>
+ <dt><code>id</code></dt>
+ <dd>É o ID de um elemento para usar como background, especificado usando o atributo HTML #<em>id</em> no elemento.</dd>
+</dl>
+
+<h2 id="Examples" name="Examples">Exemplos</h2>
+
+<p>Esses exemplos podem ser <a href="/samples/cssref/moz-element.html" title="https://developer.mozilla.org/samples/cssref/moz-element.html">vistos em tempo real</a> em versões do Firefox que suportam <code>-moz-element()</code>.</p>
+
+<h3 id="Um_exemplo_de_alguma_maneira_real">Um exemplo de alguma maneira real</h3>
+
+<p>Esse exemplo usa uma {{HTMLElement("div")}} escondida como <em>background</em>. O elemento de <em>background</em> tem um gradiente, mas tambem um texto que é usado como parte do <em>background</em>.</p>
+
+<pre class="notranslate"><code>&lt;div style="width:400px; height:400px; background:-moz-element(#myBackground1) no-repeat;"&gt;
+  &lt;p&gt;This box uses the element with the #myBackground1 ID as its background!&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div style="overflow:hidden; height:0;"&gt;
+  &lt;div id="myBackground1" style="width:1024px; height:1024px; background-image: linear-gradient(to right, red, orange, yellow, white);"&gt;
+  &lt;p style="transform-origin:0 0; transform: rotate(45deg); color:white;"&gt;This text is part of the background. Cool, huh?&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+<p>A {{HTMLElement("div")}} com ID "myBackground1" é usada como <em>background</em>, mantendo o paragrafo "This box uses the element with the #myBackground1 ID as its background!".</p>
+
+<p><img alt="example1.png" class="default internal" src="/@api/deki/files/4624/=example1.png"></p>
+
+<h3 id="Um_exemplo_ainda_mais_bizarro">Um exemplo ainda mais bizarro</h3>
+
+<p>Esse exemplo usa um elemento {{HTMLElement("button")}} se repetindo como <em>background</em>. Isso mostra que você pode usar qualquer elemento como background, mas não mostra necessariamente boas praticas de design.</p>
+
+<pre class="brush: html notranslate">&lt;div style="width:400px; height:100px; background:-moz-element(#myBackground2);"&gt;
+&lt;/div&gt;
+
+&lt;div style="overflow:hidden; height:0;"&gt;
+  &lt;button id="myBackground2" type="button"&gt;Evil button!&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+<p><img alt="example2.png" class="default internal" src="/@api/deki/files/4625/=example2.png"></p>
+
+<h2 id="Especificações">Especificações</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th>Especificação</th>
+   <th>Estatus</th>
+   <th>Comentário</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}}</td>
+   <td>{{Spec2('CSS4 Images')}}</td>
+   <td>Actualmente adiado para o CSS4.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilidade dos navegadores</h2>
+
+<p> </p>
+
+
+
+<p>{{Compat("css.types.image.element")}}</p>
+
+<p> </p>
+
+<h2 id="See_also" name="See_also">Veja tambem</h2>
+
+<ul>
+ <li>{{domxref("document.mozSetImageElement()")}}</li>
+</ul>

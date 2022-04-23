@@ -144,7 +144,7 @@ Promise.resolve()
 });
 ```
 
-Dans tous les autres cas, un promesse de résolution est renvoyée. Dans l'exemple qui suit, le premier `then()` renvoie `42` même si la promesse précédente a été rompue :
+Dans tous les autres cas, un promesse de résolution est renvoyée. Dans l'exemple qui suit, le premier `then()` renvoie `42` même si la promesse précédente a été rompue :
 
 ```js
 Promise.reject()

@@ -10,7 +10,7 @@ translation_of: Web/API/Node/nextSibling
 ---
 {{APIRef("DOM")}}
 
-La propriété en lecture seule  **`Node.nextSibling`** renvoie le nœud (`node`) suivant immédiatement le nœud spécifié dans la liste des enfants ( {{domxref("Node.childNodes","childNodes")}}) de son nœud parent, ou `null` si le nœud spécifié est le dernier dans cette liste.
+La propriété en lecture seule  **`Node.nextSibling`** renvoie le nœud (`node`) suivant immédiatement le nœud spécifié dans la liste des enfants ( {{domxref("Node.childNodes","childNodes")}}) de son nœud parent, ou `null` si le nœud spécifié est le dernier dans cette liste.
 
 ## Syntaxe
 

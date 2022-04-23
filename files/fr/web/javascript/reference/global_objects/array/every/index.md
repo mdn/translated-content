@@ -159,8 +159,8 @@ if (!Array.prototype.every) {
 | Spécification                                                                                            | État                         | Commentaires                                          |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.4.4.16', 'Array.prototype.every')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.every', 'Array.prototype.every')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.every', 'Array.prototype.every')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-array.prototype.every', 'Array.prototype.every')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-array.prototype.every', 'Array.prototype.every')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

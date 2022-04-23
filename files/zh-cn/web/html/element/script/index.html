@@ -56,7 +56,7 @@ translation_of: Web/HTML/Element/script
  <dd>对于<a href="/zh-CN/docs/Web/JavaScript/Guide/Modules">模块脚本</a>，如果存在 <code>async</code> 属性，那么脚本及其所有依赖都会在延缓队列中执行，因此它们会被并行请求，并尽快解析和执行。</dd>
  <dd>该属性能够消除解析阻塞的 Javascript。解析阻塞的 Javascript 会导致浏览器必须加载并且执行脚本，之后才能继续解析。<code>defer</code> 在这一点上也有类似的作用。</dd>
  <dd>这是个布尔属性：布尔属性的存在意味着 true 值，布尔属性的缺失意味着 false 值。</dd>
- <dd>关于浏览器支持请参见{{anch("浏览器兼容性")}}。另可参见文章<a href="/en-US/docs/Games/Techniques/Async_scripts">asm.js 的异步脚本</a>。</dd>
+ <dd>关于浏览器支持请参见<a href="#浏览器兼容性">浏览器兼容性</a>。另可参见文章<a href="/en-US/docs/Games/Techniques/Async_scripts">asm.js 的异步脚本</a>。</dd>
  <dt>{{htmlattrdef("crossorigin")}}</dt>
  <dd>那些没有通过标准<a href="/zh-CN/docs/HTTP_access_control">CORS</a>检查的正常<code>script</code> 元素传递最少的信息到 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。可以使用本属性来使那些将静态资源放在另外一个域名的站点打印错误信息。参考 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes">CORS 设置属性</a>了解<span class="short_text" id="result_box" lang="zh-CN"><span>对有效参数的更具描述性的解释。</span></span></dd>
  <dt>

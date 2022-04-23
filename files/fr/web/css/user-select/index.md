@@ -50,8 +50,8 @@ user-select: unset;
 
     - Pour les pseudo-éléments `::before` et `::after`, la valeur calculée sera `none`
     - Si l'élément est un élément éditable, la valeur calculée est `contain`
-    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
-    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `none`
+    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
+    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `none`
     - Sinon, la valeur calculée est `text`
 
 - `text`

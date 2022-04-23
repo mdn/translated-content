@@ -13,7 +13,7 @@ original_slug: Web/CSS/Valeur_utilisée
 
 La **valeur utilisée** de n'importe quelle propriété CSS est la valeur finale d'une propriété après que tous les calculs aient été réalisés.
 
-Une fois qu'un agent utilisateur a terminé les calculs, chaque propriété CSS possède une valeur utilisée. Les valeurs utilisées des dimensions (par exemple `width`, `height`) sont exprimées en pixels et les propriétés raccourcies (comme `background`) sont cohérentes avec leurs propriétés composantes (par exemple `background-color`), `display` est cohérente avec `position` et `float`.
+Une fois qu'un agent utilisateur a terminé les calculs, chaque propriété CSS possède une valeur utilisée. Les valeurs utilisées des dimensions (par exemple `width`, `height`) sont exprimées en pixels et les propriétés raccourcies (comme `background`) sont cohérentes avec leurs propriétés composantes (par exemple `background-color`), `display` est cohérente avec `position` et `float`.
 
 Les valeurs utilisées pour certaines propriétés peuvent être retrouvées en appelant la méthode JavaScript [`window.getComputedStyle()`](/fr/docs/DOM/window.getComputedStyle).
 
@@ -24,7 +24,7 @@ Quatre étapes permettent de déterminer la valeur finale de n'importe quelle pr
 1.  Tout d'abord, la [valeur spécifiée](/fr/docs/CSS/Valeur_spécifiée) est le résultat de la cascade (on choisit la règle la plus spécifique qui change la propriété), de l'[héritage](/fr/docs/CSS/Héritage) (on utilise la valeur calculée d'un parent si la propriété peut être héritée) ou alors c'est la valeur par défaut est utilisée.
 2.  Ensuite, la [valeur calculée](/fr/docs/CSS/Valeur_calculée) est déterminée selon la spécification (par exemple, un `span` avec `position: absolute` aura `display` qui passera à `block` pour la valeur calculée).
 3.  Ensuite, la mise en page est calculée (les dimensions qui ont pour valeur `auto` ou des pourcentages relatifs à des parents sont remplacées par des valeurs en pixels), et le résultat est la **valeur utilisée**.
-4.  Enfin, la valeur est transformée selon les limites de l'environnement actuel, le résultat est [la valeur réelle](/fr/docs/Web/CSS/valeur_reelle). La valeur finalement utilisée est la valeur réelle, éventuellement approximée en fonction des contraintes de l'agent utilisateur. Ces valeurs sont calculées de manière interne ; un script peut seulement lire les valeurs utilisées finales grâce à [`window.getComputedStyle`](/fr/docs/DOM/window.getComputedStyle)  (bien que cette méthode peut renvoyer la valeur calculée selon la propriété, la valeur renvoyée par cette méthode est généralement appelée [valeur résolue](/fr/docs/Web/CSS/valeur_r%C3%A9solue)).
+4.  Enfin, la valeur est transformée selon les limites de l'environnement actuel, le résultat est [la valeur réelle](/fr/docs/Web/CSS/valeur_reelle). La valeur finalement utilisée est la valeur réelle, éventuellement approximée en fonction des contraintes de l'agent utilisateur. Ces valeurs sont calculées de manière interne ; un script peut seulement lire les valeurs utilisées finales grâce à [`window.getComputedStyle`](/fr/docs/DOM/window.getComputedStyle)  (bien que cette méthode peut renvoyer la valeur calculée selon la propriété, la valeur renvoyée par cette méthode est généralement appelée [valeur résolue](/fr/docs/Web/CSS/valeur_r%C3%A9solue)).
 
 ## Différence avec les valeurs calculées
 

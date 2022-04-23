@@ -10,7 +10,7 @@ translation_of: Web/API/Window/screenX
 ---
 {{APIRef}}
 
-La propriété  **`Window.screenX`** retourne la distance honrizontale, in CSS pixels, of the left border of the user's browser from the left side of the screen.
+La propriété  **`Window.screenX`** retourne la distance honrizontale, in CSS pixels, of the left border of the user's browser from the left side of the screen.
 
 ## Syntax
 

@@ -20,7 +20,7 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
    <td><code>void <a href="#close()">close</a>(in optional unsigned long code, in optional DOMString reason);</code></td>
   </tr>
   <tr>
-   <td><code>void <a href="#send()">send</a>(in DOMString data);</code></td>
+   <td><code>void <a href="#send">send</a>(in DOMString data);</code></td>
   </tr>
  </tbody>
 </table>
@@ -42,7 +42,7 @@ original_slug: WebSockets/WebSockets_reference/WebSocket
   <tr>
    <td><code>bufferedAmount</code></td>
    <td><code><a href="/en/unsigned_long" title="en/unsigned long">unsigned long</a></code></td>
-   <td>呼叫 {{ manch("send") }} 隊列但尚未傳輸至網路上資料的位元數。連線關閉時此值不會重設為零。連續呼叫 {{ manch("send") }} 會讓此值不斷上升。<strong>唯讀</strong></td>
+   <td>呼叫 <a href="#send"><code>send()</code></a> 隊列但尚未傳輸至網路上資料的位元數。連線關閉時此值不會重設為零。連續呼叫 <a href="#send"><code>send()</code></a> 會讓此值不斷上升。<strong>唯讀</strong></td>
   </tr>
   <tr>
    <td><code>extensions</code></td>

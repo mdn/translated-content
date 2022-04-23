@@ -12,9 +12,9 @@ translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: >-
   Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}
+{{LearnSidebar}}
 
-Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
+Dans de nombreux cas les [widgets de formulaires HTML disponibles](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs) ne suffisent pas. Si vous voulez composer certains widgets dans un [style avancé](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms) tels que l'élément {{HTMLElement("select")}} ou si vous voulez leur donner des comportements personnalisés, vous n'avez pas d'autre choix que de créer vos propres widgets.
 
 Dans cet article, nous verrons comment construire un tel widget. Pour cela, nous allons travailler avec un exemple : reconstruire l'élément {{HTMLElement("select")}}.
 
@@ -40,19 +40,19 @@ Le widget est dans son état normal :
 
 > **Note :** Déplacer le focus dans la page entre les divers widgets se fait généralement en appuyant sur la touche de tabulation, mais ce n'est pas la norme partout. Par exemple, circuler parmi les liens sur une page se fait dans Safari par défaut en utilisant la [combinaison Option+Tab](http://www.456bereastreet.com/archive/200906/enabling_keyboard_navigation_in_mac_os_x_web_browsers/).
 
-Le widget est sans son état actif :
+Le widget est sans son état actif&nbsp;:
 
 - l'utilisateur clique sur lui
 - l'utilisateur presse la touche Tabulation et obtient le focus
 - le widget était dans l'état ouvert et l'utilisateur a cliqué dessus.
 
-Le widget est dans un état ouvert :
+Le widget est dans un état ouvert&nbsp;:
 
 - le widget est dans un état autre que ouvert et l'utilisateur clique dessus.
 
 Maintenant que nous savons comment changer les états du widget, il est important de définir comment changer la valeur du widget :
 
-La valeur change quand :
+La valeur change quand&nbsp;:
 
 - l'utilisateur clique sur une option quand le widget est dans l'état ouvert
 - l'utilisateur presse la touche
@@ -65,14 +65,14 @@ La valeur change quand :
 
   quand le widget est dans l'état actif
 
-Enfin, définissons comment les options du widget doivent se comporter :
+Enfin, définissons comment les options du widget doivent se comporter&nbsp;:
 
 - Quand le widget est ouvert, l'option sélectionnée est mise en valeur
 - Quand la souris est sur une option, l'option est mise en valeur et l'option précédemment mise en valeur revient à l'état normal
 
 Pour les besoins de notre exemple, nous nous arrêterons là ; cependant, si vous êtes un lecteur attentif, vous remarquerez que certains comportements ne sont pas précisés. Par exemple, que pensez-vous qu'il se passe si l'utilisateur appuie sur la touche Tabulation alors que le widget est dans l'état ouvert ? La réponse est… rien. D'accord, le bon comportement semble évident mais le fait est que, comme il n'est pas défini dans nos spécifications, il est très facile de fermer les yeux sur ce comportement. Dans un travail collaboratif, lorsque les personnes concevant le comportement du widget sont différentes de celles qui le mettent en œuvre, cette démarche se vérifiera.
 
-Autre exemple amusant : que se passera-t-il si l'utilisateur presse les touches <kbd>↑</kbd> ou <kbd>↓</kbd> alors que le widget est à l'état ouvert ? Ici, c'est un peu plus délicat. Si vous considérez que l'état actif et l'état ouvert sont totalement différents, la réponse est encore une fois « rien ne se produira » parce que nous n'avons pas défini d'interactions clavier pour l'état ouvert. D'autre part, si vous considérez que l'état actif et l'état ouvert coïncident, la valeur peut changer mais l'option ne sera certainement pas mise en valeur en conséquence, encore une fois parce que nous n'avons pas défini d'interactions clavier sur les options lorsque le widget est dans son état ouvert (nous avons seulement défini ce qui doit se passer lorsque le widget est ouvert, mais rien après).
+Autre exemple amusant : que se passera-t-il si l'utilisateur presse les touches <kbd>↑</kbd> ou <kbd>↓</kbd> alors que le widget est à l'état ouvert ? Ici, c'est un peu plus délicat. Si vous considérez que l'état actif et l'état ouvert sont totalement différents, la réponse est encore une fois «&nbsp;rien ne se produira&nbsp;» parce que nous n'avons pas défini d'interactions clavier pour l'état ouvert. D'autre part, si vous considérez que l'état actif et l'état ouvert coïncident, la valeur peut changer mais l'option ne sera certainement pas mise en valeur en conséquence, encore une fois parce que nous n'avons pas défini d'interactions clavier sur les options lorsque le widget est dans son état ouvert (nous avons seulement défini ce qui doit se passer lorsque le widget est ouvert, mais rien après).
 
 Dans notre exemple, les spécifications manquantes sont évidentes et nous les traiterons, mais cela peut devenir un problème réel sur de nouveaux widgets exotiques, pour lesquels personne n'a la moindre idée de ce qu'est le bon comportement. Il est donc toujours bon de passer du temps à l'étape conception, car si vous définissez pauvrement le comportement, ou si vous oubliez de le définir, il sera très difficile de le redéfinir une fois les utilisateurs habitués. Si vous avez des doutes, demandez l'avis des autres, et si vous avez le budget pour cela, n'hésitez pas à [faire des tests utilisateur](https://fr.wikipedia.org/wiki/Test_utilisateur). Ce processus est appelé UX Design (**U**ser e**X**perience). Si vous voulez en savoir plus sur ce sujet, vous devriez consulter les ressources utiles suivantes :
 
@@ -213,7 +213,7 @@ Maintenant que nous avons mis en place les fonctionnalités de base, le divertis
 }
 
 .select .value {
-  /* Comme la valeur peut être plus large que le widget, nous devons nous
+  /* Comme la valeur peut être plus large que le widget, nous devons nous
      assurer qu'elle ne changera pas la largeur du widget. */
   display  : inline-block;
   width    : 100%;
@@ -306,29 +306,28 @@ Donc, voici le résultat avec les trois états :
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Basic state</th>
-      <th scope="col" style="text-align: center">Active state</th>
-      <th scope="col" style="text-align: center">Open state</th>
+      <th scope="col">État initial</th>
+      <th scope="col">État actif</th>
+      <th scope="col">État ouvert</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample('Basic_state',120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample('État_initial',120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample("État_actif",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_1")}}
+        {{EmbedLiveSample("État_ouvert",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
-      <td colspan="3" style="text-align: center">
+      <td colspan="3">
         <a
-          href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          >Check out the source code</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -353,7 +352,7 @@ Avant de commencer, il est important de se rappeler quelque chose de très impor
 - Le script ne se charge pas. La chose est très courante, en particulier dans le domaine des mobiles pour lesquels le réseau n'est pas sûr.
 - Le script est bogué. Il faut toujours prendre en considération cette éventualité.
 - Le script est en conflit avec un autre script tierce‑partie. Cela peut se produire avec des suites de scripts ou n'importe quel marque page utilisé par l'utilisateur.
-- Le script est en conflit avec, ou est affecté par un extension de navigateur  (comme l'extension « [No script](https://addons.mozilla.org/fr/firefox/addon/noscript/) » de Firefox ou « [Scripts »](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) de Chrome).
+- Le script est en conflit avec, ou est affecté par un extension de navigateur  (comme l'extension « [No script](https://addons.mozilla.org/fr/firefox/addon/noscript/) » de Firefox ou « [Scripts »](https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn) de Chrome).
 - L'utilisateur utilise un navigateur ancien et l'une des fonctions dont vous avez besoin n'est pas prise en charge. Cela se produira fréquemment lorsque vous utiliserez des API de pointe.s.
 
 
@@ -362,7 +361,7 @@ Avant de commencer, il est important de se rappeler quelque chose de très impor
 
 En raison de ces aléas, il est vraiment important de considérer avec sérieux ce qui se passe si JavaScript ne fonctionne pas. Traiter en détail cette question est hors de la portée de cet article parce qu'elle est étroitement liée à la façon dont vous voulez rendre votre script générique et réutilisable, mais nous prendrons en considération les bases de ce sujet dans notre exemple.
 
-Ainsi, si notre code JavaScript ne s'exécute pas, nous reviendrons à l'affichage d'un élément  {{HTMLElement("select")}} standard. Pour y parvenir, nous avons besoin de deux choses.
+Ainsi, si notre code JavaScript ne s'exécute pas, nous reviendrons à l'affichage d'un élément  {{HTMLElement("select")}} standard. Pour y parvenir, nous avons besoin de deux choses.
 
 Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} régulier avant chaque utilisation de notre widget personnalisé. Ceci est également nécessaire pour pouvoir envoyer les données de notre widget personnalisé avec le reste de nos données du formulaire ; nous reviendrons sur ce point plus tard.
 
@@ -396,7 +395,7 @@ Tout d'abord, nous devons ajouter un élément {{HTMLElement("select")}} réguli
 
 
 
-Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre de cacher l'élément qui ne sert pas (c'est-à-dire l'élément{{HTMLElement("select")}} « réel »  si notre script ne fonctionne pas, ou le widget personnalisé s'il fonctionne). Notez que par défaut, le code HTML cache le widget personnalisé.
+Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre de cacher l'élément qui ne sert pas (c'est-à-dire l'élément{{HTMLElement("select")}} « réel »  si notre script ne fonctionne pas, ou le widget personnalisé s'il fonctionne). Notez que par défaut, le code HTML cache le widget personnalisé.
 
 ```css
 .widget select,
@@ -414,7 +413,7 @@ Deuxièmement, nous avons besoin de deux nouvelles classes pour nous permettre d
 
 
 
-Maintenant nous avons juste besoin d'un commutateur JavaScript pour déterminer si le script est en cours d'exécution ou non. Cette bascule  est très simple : si au moment du chargement de la page notre script est en cours d'exécution, il supprime la classe no-widget et ajoute la classe widget, échangeant ainsi la visibilité de l'élément {{HTMLElement("select")}} et du widget personnalisé.
+Maintenant nous avons juste besoin d'un commutateur JavaScript pour déterminer si le script est en cours d'exécution ou non. Cette bascule est très simple : si au moment du chargement de la page notre script est en cours d'exécution, il supprime la classe no-widget et ajoute la classe widget, échangeant ainsi la visibilité de l'élément {{HTMLElement("select")}} et du widget personnalisé.
 
 
 
@@ -430,25 +429,24 @@ window.addEventListener("load", function () {
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Sans JavaScript</th>
-      <th scope="col" style="text-align: center">Avec JavaScript</th>
+      <th scope="col">Sans JavaScript</th>
+      <th scope="col">Avec JavaScript</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2")}}
+        {{EmbedLiveSample("Sans_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2")}}
+        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
-      <td colspan="2" style="text-align: center">
+      <td colspan="2">
         <a
-          href="/fr/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          >Testez le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -472,7 +470,7 @@ Les fonctionnalités que nous prévoyons d'utiliser sont les suivantes (classée
 3.  [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (ce n'est pas du DOM mais du JavaScript moderne)
 4.  {{domxref("element.querySelector","querySelector")}} et {{domxref("element.querySelectorAll","querySelectorAll")}}
 
-Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). C'est important, car les objets  `Array` acceptent la fonction [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach"), mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un `Array` et que `forEach` est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de `forEach à` {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :
+Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). C'est important, car les objets  `Array` acceptent la fonction [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach"), mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un `Array` et que `forEach` est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de `forEach à` {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :
 
 ```js
 NodeList.prototype.forEach = function (callback) {
@@ -620,21 +618,20 @@ A ce stade, notre widget change d'état comme nous l'avons conçu, mais sa valeu
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_3")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_3"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -744,21 +741,20 @@ Et voilà, nous avons terminé ! Voici le résultat :
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_4")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_4"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -801,7 +797,7 @@ Pour prendre en charge le rôle `listbos`, nous n'avons qu'à mettre à jour not
 
 > **Note :** Inclure à la fois l'attribut `role` et l'attribut `class` n'est nécessaire que si vous souhaitez prendre en charge les navigateurs anciens qui n'acceptent pas les [selecteurs d'attribut CSS](/fr/docs/CSS/Attribute_selectors "/en-US/docs/CSS/Attribute_selectors").
 
-### L'attribut  `aria-selected`
+### L'attribut  `aria-selected`
 
 Utiliser l'attribut `role` ne suffit pas. [ARIA](/fr/docs/Accessibility/ARIA "/en-US/docs/Accessibility/ARIA") fournit également de nombreux états et attributs de propriété. Plus vous les utiliserez, mieux votre widget sera compris par les techniques d'assistance. Dans notre cas, nous limiterons notre utilisation à un seul attribut : `aria-selected`.
 
@@ -832,21 +828,20 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">Exemple en direct</th>
+      <th scope="col">Exemple en direct</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_5")}}
+        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
       </td>
     </tr>
     <tr>
-      <td style="text-align: center">
+      <td>
         <a
-          href="/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_5"
-          title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Revoir le code source</a
+          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5"
+          >Voir le code source</a
         >
       </td>
     </tr>
@@ -866,18 +861,16 @@ Voici quelques bibliothèques à prendre en considération avant de coder les v�
 
 Si vous voulez aller plus loin, le code de cet exemple mérite quelques amélioration avant de devenir générique et réutilisable. C'est un exercice que vous pouvez essayer de faire. Deux conseils pour vous aider : le premier argument pour toutes nos fonctions est le même, ce qui signifie que ces fonctions ont besoin du même contexte. Il serait avisé de construire un objet pour partager ce contexte. En outre, vous devrez éprouver ses fonctionnalités, c'est-à-dire qu'il doit pouvoir fonctionner avec les divers navigateurs dont la compatibilité avec les normes Web qu'ils utilisent varie. Amusez-vous bien !
 
-{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Validation_donnees_formulaire", "Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires")}}
-
 ## Dans ce module
 
-- [Mon premier formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Web/Guide/HTML/Formulaires/Property_compatibility_table_for_form_widgets)
+- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
+- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
+- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
+- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
+- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
+- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
+- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
+- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
+- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

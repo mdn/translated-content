@@ -20,12 +20,12 @@ Cette propriété est en lecture seule.
 ### Valeur renvoyée
 
 - `isClosed`
-  - : Un booléen. Les valeurs possibles sont :
+  - : Un booléen. Les valeurs possibles sont&nbsp;:
 
 <!---->
 
-- `false` : La fenêtre est ouverte.
-- `true` : La fenêtre a été fermée.
+- `false`&nbsp;: La fenêtre est ouverte.
+- `true`&nbsp;: La fenêtre a été fermée.
 
 ### Exemples
 
@@ -46,7 +46,7 @@ Dans cette exemple, la fonction `refreshPopupWindow()` appelle une fonction dans
     var popupWindow = null;
 
     function refreshPopupWindow() {
-      if (popupWindow && !popupWindow.closed) {
+      if (popupWindow &&&nbsp;!popupWindow.closed) {
         // Le popup a déjà été ouvert et il l'est encore.
         // On peut donc appeler sa fonction doRefresh().
         popupWindow.doRefresh();

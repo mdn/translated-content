@@ -87,9 +87,9 @@ Grâce à ces noms, on peut créer l'organisation. Cette fois, plutôt que de pl
 ```html
 <div class="wrapper">
   <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+  <div class="sidebar">Barre latérale</div>
+  <div class="content">Contenu</div>
+  <div class="footer">Pied de page</div>
 </div>
 ```
 
@@ -151,9 +151,9 @@ Dans l'exemple précédent, toute la grille est occupée… On peut également u
 ```html
 <div class="wrapper">
   <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+  <div class="sidebar">Barre latérale</div>
+  <div class="content">Contenu</div>
+  <div class="footer">Pied de page</div>
 </div>
 ```
 
@@ -217,9 +217,9 @@ La zone qu'on crée avec les noms doit être rectangulaires. Actuellement, il n'
 ```html hidden
 <div class="wrapper">
   <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+  <div class="sidebar">Barre latérale</div>
+  <div class="content">Contenu</div>
+  <div class="footer">Pied de page</div>
 </div>
 ```
 
@@ -305,9 +305,9 @@ On peut ensuite redéfinir la disposition à l'intérieur des différentes _medi
 ```html hidden
 <div class="wrapper">
   <div class="header">En-tête</div>
-  <div class="sidebar">Barre latérale</div>
-  <div class="content">Contenu</div>
-  <div class="footer">Pied de page</div>
+  <div class="sidebar">Barre latérale</div>
+  <div class="content">Contenu</div>
+  <div class="footer">Pied de page</div>
 </div>
 ```
 
@@ -359,9 +359,9 @@ Pour la zone dédiée à l'image, on crée une zone de grille intitulée `img` e
   <div class="image"></div>
   <div class="text">
     Dans cet exemple, on peut utiliser
-    grid-template-areas pour échanger les
+    grid-template-areas pour échanger les
     places du texte et du media.
-  </div>
+  </div>
 </div>
 ```
 
@@ -410,7 +410,7 @@ Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une 
     Dans cet exemple, on peut utiliser
     grid-template-areas pour échanger les
     places du texte et du media.
-  </div>
+  </div>
 </div>
 ```
 

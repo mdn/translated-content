@@ -102,8 +102,8 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 | Spécification                                                                                                | État                             | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;')}}             | {{Spec2('HTML WHATWG')}} |                      |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-q-element', '&lt;q&gt;')}} | {{Spec2('HTML5 W3C')}}     |                      |
+| {{SpecName('HTML WHATWG', 'semantics.html#the-q-element', '&lt;q&gt;')}}             | {{Spec2('HTML WHATWG')}} |                      |
+| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-q-element', '&lt;q&gt;')}} | {{Spec2('HTML5 W3C')}}     |                      |
 | {{SpecName('HTML4.01', 'struct/text.html#h-9.2.2', '&lt;q&gt;')}}                     | {{Spec2('HTML4.01')}}     | Définition initiale. |
 
 ## Compatibilité des navigateurs

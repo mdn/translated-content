@@ -10,7 +10,7 @@ translation_of: Web/API/Document/title
 <h2 id="Syntax" name="Syntax">语法</h2>
 <pre class="syntaxbox"><em>var docTitle</em> = <em>document</em>.title;
 </pre>
-<p><code>title</code> 是一个包含 <code>document</code> 标题的字符串。如果通过设置 <code>document.title</code> 将标题覆盖，则返回覆盖后的值。否则返回标签里指定的标题（参见下面的 {{Anch("Notes")}}）。</p>
+<p><code>title</code> 是一个包含 <code>document</code> 标题的字符串。如果通过设置 <code>document.title</code> 将标题覆盖，则返回覆盖后的值。否则返回标签里指定的标题（参见下面的 <a href="#notes">Notes</a>）。</p>
 <pre class="syntaxbox"><em>document</em>.title = <em>newTitle</em>;
 </pre>
 <p><code>newTitle</code> 是文档的新标题。赋值操作影响 <code>document.title</code> 的返回值，<span style="line-height: 1.5;">文档的显示标题（即窗口或标签页顶部的标题栏），另外还会影响文档的 DOM，即改变 HTML 文档中 </span><code style="font-style: normal; line-height: 1.5;">&lt;title&gt;</code><span style="line-height: 1.5;"> 元素的内容。</span></p>

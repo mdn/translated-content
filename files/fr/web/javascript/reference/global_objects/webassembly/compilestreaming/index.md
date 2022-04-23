@@ -34,7 +34,7 @@ Un objet `Promise` dont la valeur de résolution est un objet {{jsxref("WebAssem
 
 ## Exemples
 
-Dans l'exemple suivant (également disponible sur GitHub : [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) et avec [le résultat _live_](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)), on récupère un flux dedpuis un module .wasm puis on le compile en un objet {{jsxref("WebAssembly.Module")}}. La fonction `compileStreaming()`  acceptant une promesse pour un objet {{domxref("Response")}}, on peut directement passer l'appel à  {{domxref("WindowOrWorkerGlobalScope.fetch()")}} qui transfèrera la réponse dès que la promesse sera tenue.
+Dans l'exemple suivant (également disponible sur GitHub : [compile-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/compile-streaming.html) et avec [le résultat _live_](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)), on récupère un flux dedpuis un module .wasm puis on le compile en un objet {{jsxref("WebAssembly.Module")}}. La fonction `compileStreaming()`  acceptant une promesse pour un objet {{domxref("Response")}}, on peut directement passer l'appel à  {{domxref("WindowOrWorkerGlobalScope.fetch()")}} qui transfèrera la réponse dès que la promesse sera tenue.
 
 ```js
 var importObject = { imports: { imported_func: arg => console.log(arg) } };

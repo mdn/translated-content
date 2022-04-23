@@ -305,7 +305,7 @@ removedItem;</pre>
 <ol>
  <li>在 <code>// number 1</code> 注释下面是一些字符串，每个字符串包含一个产品名称和一个冒号分隔的价格。 我们希望您将其转换为一个数组，并将其存储在名为 <code>products</code> 的数组中。</li>
  <li>与 <code>// number 2</code> 注释同一行的是 for 循环的开头。 在这行中，我们目前有 <code>i &lt;= 0</code>，这是一个条件测试，导致 <a href="/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash#循环（Loop）">for循环</a> 立即停止，因为它说“当 <code>i</code> 不再小于或等于0”时停止，而 <code>i</code> 从0开始。 我们希望您使用条件测试来替换它，当 <code>i</code> 不再小于 <code>products</code> 数组的长度时，该条件测试会停止循环。</li>
- <li>就在 <code>// number 3</code> 注释的下方，我们希望您编写一行代码，将当前数组项目（名称：价格）分成两个独立的项目，一个只包含该名称，一个只包含该价格。 如果您不确定如何执行此操作，请参阅<a href="/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods">有用的字符串方法</a>文章以获得一些帮助，甚至更好的看看本文中的{{anch("转换字符串和数组")}}部分。</li>
+ <li>就在 <code>// number 3</code> 注释的下方，我们希望您编写一行代码，将当前数组项目（名称：价格）分成两个独立的项目，一个只包含该名称，一个只包含该价格。 如果您不确定如何执行此操作，请参阅<a href="/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods">有用的字符串方法</a>文章以获得一些帮助，甚至更好的看看本文中的<a href="#字符串和数组之间的转换">字符串和数组之间的转换</a>部分。</li>
  <li>作为上述代码行的一部分，您还需要将价格从字符串转换为数字。 如果你不记得如何做，请查看<a href="/zh-CN/docs/Learn/JavaScript/First_steps/Strings#创建一个字符串">第一个字符串</a>文章。</li>
  <li>有一个名为 <code>total</code> 的变量被创建，并在代码的顶部赋值为 0。 在循环内（在 <code>// number 4</code> 注释下面），我们希望您添加一行，将当前项目价格添加到循环中的迭代变量，以便在代码结尾处将正确的总数打印到发票上。 您可能需要一个赋值运算符来执行此操作。</li>
  <li>我们希望您改变 <code>// number 5</code> 注释的行，以便使  <code>itemText</code> 变量等于“当前项目名称 - $ 当前项目价格”，例如“Shoes - $ 23.99”，以此将每个项目的正确信息都印在发票上。 这只是简单的字符串连接，您应该对此很熟悉。</li>

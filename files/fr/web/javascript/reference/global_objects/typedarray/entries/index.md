@@ -74,7 +74,7 @@ console.log(eArr.next().value); // [4, 50]
         {{SpecName('ESDraft', '#sec-%typedarray%.prototype.entries', '%TypedArray%.prototype.entries()')}}
       </td>
       <td>{{Spec2('ESDraft')}}</td>
-      <td> </td>
+      <td></td>
     </tr>
   </tbody>
 </table>

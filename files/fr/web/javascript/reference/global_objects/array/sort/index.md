@@ -38,14 +38,14 @@ Si le paramètre `fonctionComparaison` n'est pas fourni, les éléments qui ne v
 
 > **Note :** En UTF-16, les caractères Unicode situés après `\uFFFF` sont encodés avec deux unités de code _surrogates_ sur l'intervalle `\uD800`-`\uDFFF`. Pour comparer les chaînes de caractères entre elles, ce sont les unités de code séparées qui sont prises en compte. Ainsi, le caractère formé par la paire _surrogate_ `\uD655 \uDE55` sera trié avant le caractère `\uFF3A`.
 
-Si le paramètre `fonctionComparaison` est fourni, les éléments du tableau (qui ne valent pas `undefined`) sont triés selon la valeur de retour de la fonction de comparaison. Si `a` et `b` sont deux éléments à comparer, alors :
+Si le paramètre `fonctionComparaison` est fourni, les éléments du tableau (qui ne valent pas `undefined`) sont triés selon la valeur de retour de la fonction de comparaison. Si `a` et `b` sont deux éléments à comparer, alors&nbsp;:
 
 - Si `fonctionComparaison(a, b)` est inférieur à 0, on trie `a` avec un indice inférieur à `b` (`a` sera classé avant `b`)
-- Si `fonctionComparaison(a, b)` renvoie 0, on laisse `a` et `b` inchangés l'un par rapport à l'autre, mais triés par rapport à tous les autres éléments. Note : la norme ECMAScript ne garantit pas ce comportement, par conséquent tous les navigateurs (par exemple les versions de Mozilla antérieures à 2003) ne respectent pas ceci.
+- Si `fonctionComparaison(a, b)` renvoie 0, on laisse `a` et `b` inchangés l'un par rapport à l'autre, mais triés par rapport à tous les autres éléments. Note&nbsp;: la norme ECMAScript ne garantit pas ce comportement, par conséquent tous les navigateurs (par exemple les versions de Mozilla antérieures à 2003) ne respectent pas ceci.
 - Si `fonctionComparaison(a, b)` est supérieur à 0, on trie `b` avec un indice inférieur à `a`.
 - `fonctionComparaison(a, b)` doit toujours renvoyer le même résultat à partir de la même paire d'arguments. Si la fonction renvoie des résultats incohérents, alors l’ordre dans lequel sont triés les éléments n’est pas défini.
 
-Une fonction de comparaison aura donc généralement la forme suivante :
+Une fonction de comparaison aura donc généralement la forme suivante&nbsp;:
 
 ```js
 function compare(a, b) {
@@ -103,7 +103,7 @@ items.sort(function (a, b) {
 
 ### Différences d'implémentation
 
-Certaines implémentations de JavaScript utilisent un tri stable : l'ordre partiel de `a` et `b` ne change pas si `a` et `b` sont égaux. Si l'indice de `a` était inférieur à celui de `b` avant le tri, il le sera toujours après, quels que soient les mouvements de `a` et `b` dus au tri.
+Certaines implémentations de JavaScript utilisent un tri stable&nbsp;: l'ordre partiel de `a` et `b` ne change pas si `a` et `b` sont égaux. Si l'indice de `a` était inférieur à celui de `b` avant le tri, il le sera toujours après, quels que soient les mouvements de `a` et `b` dus au tri.
 
 Le tri est stable dans [SpiderMonkey](/fr/docs/SpiderMonkey) et tous les navigateurs basés sur Mozilla à partir de [Gecko](/fr/docs/Gecko) 1.9 (voir le {{ Bug(224128) }}).
 
@@ -111,7 +111,7 @@ Le comportement de la méthode `sort()` a changé entre JavaScript 1.1 et JavaSc
 
 En JavaScript 1.1, sur certaines plateformes, la méthode `sort` ne fonctionnait pas. Le tri fonctionne sur toutes les plateformes à partir de JavaScript 1.2.
 
-En JavaScript 1.2, cette méthode ne convertit plus les éléments non définis (`undefined`) en `null` ; elle les place en fin de tableau. Par exemple, supposons que vous ayez ce script :
+En JavaScript 1.2, cette méthode ne convertit plus les éléments non définis (`undefined`) en `null`&nbsp;; elle les place en fin de tableau. Par exemple, supposons que vous ayez ce script&nbsp;:
 
 ```js
 var a = [];
@@ -132,12 +132,12 @@ console.log("\n");
 writeArray(a);
 ```
 
-En JavaScript 1.1, cette fonction affichait :
+En JavaScript 1.1, cette fonction affichait&nbsp;:
 
     araignée, null, null, null, null, zèbre
     araignée, null, null, null, null, zèbre
 
-En JavaScript 1.2, elle affichera :
+En JavaScript 1.2, elle affichera&nbsp;:
 
     araignée, undefined, undefined, undefined, undefined, zèbre
     araignée, zèbre, undefined, undefined, undefined, undefined
@@ -158,38 +158,38 @@ function compareNombres(a, b) {
   return a - b;
 }
 
-console.log("Chaînes : " + stringArray.join() +"\n");
-console.log("Triées : " + stringArray.sort() +"\n\n");
+console.log("Chaînes&nbsp;: " + stringArray.join() +"\n");
+console.log("Triées&nbsp;: " + stringArray.sort() +"\n\n");
 
-console.log("Nombres : " + numberArray.join() +"\n");
-console.log("Triés sans fonction de comparaison : " + numberArray.sort() +"\n");
-console.log("Triés avec compareNombres : " + numberArray.sort(compareNombres) +"\n\n");
+console.log("Nombres&nbsp;: " + numberArray.join() +"\n");
+console.log("Triés sans fonction de comparaison&nbsp;: " + numberArray.sort() +"\n");
+console.log("Triés avec compareNombres&nbsp;: " + numberArray.sort(compareNombres) +"\n\n");
 
-console.log("Chaînes numériques : " + numericStringArray.join() +"\n");
-console.log("Triées sans fonction de comparaison : " + numericStringArray.sort() +"\n");
-console.log("Triées avec compareNombres : " + numericStringArray.sort(compareNombres) +"\n\n");
+console.log("Chaînes numériques&nbsp;: " + numericStringArray.join() +"\n");
+console.log("Triées sans fonction de comparaison&nbsp;: " + numericStringArray.sort() +"\n");
+console.log("Triées avec compareNombres&nbsp;: " + numericStringArray.sort(compareNombres) +"\n\n");
 
-console.log("Nombres et chaînes numériques : " + mixedNumericArray.join() +"\n");
-console.log("Triés sans fonction de comparaison : " + mixedNumericArray.sort() +"\n");
-console.log("Triés avec compareNombres : " + mixedNumericArray.sort(compareNombres) +"\n\n");
+console.log("Nombres et chaînes numériques&nbsp;: " + mixedNumericArray.join() +"\n");
+console.log("Triés sans fonction de comparaison&nbsp;: " + mixedNumericArray.sort() +"\n");
+console.log("Triés avec compareNombres&nbsp;: " + mixedNumericArray.sort(compareNombres) +"\n\n");
 ```
 
 Cet exemple produit la sortie suivante. Comme on peut le voir, lorsqu'on utilise la fonction de comparaison, les nombres sont triés correctement qu'ils soient des nombres ou des chaînes numériques.
 
-    Chaînes : Bosse,Bleue,Béluga
-    Triées : Bleue,Bosse,Béluga
+    Chaînes&nbsp;: Bosse,Bleue,Béluga
+    Triées&nbsp;: Bleue,Bosse,Béluga
 
-    Nombres : 40,1,5,200
-    Triés sans fonction de comparaison : 1,200,40,5
-    Triés avec compareNombres : 1,5,40,200
+    Nombres&nbsp;: 40,1,5,200
+    Triés sans fonction de comparaison&nbsp;: 1,200,40,5
+    Triés avec compareNombres&nbsp;: 1,5,40,200
 
-    Chaînes numériques : 80,9,700
-    Triées sans fonction de comparaison : 700,80,9
-    Triées avec compareNombres : 9,80,700
+    Chaînes numériques&nbsp;: 80,9,700
+    Triées sans fonction de comparaison&nbsp;: 700,80,9
+    Triées avec compareNombres&nbsp;: 9,80,700
 
-    Nombres et chaînes numériques : 80,9,700,40,1,5,200
-    Triés sans fonction de comparaison : 1,200,40,5,700,80,9
-    Triés avec compareNombres : 1,5,9,40,80,200,700
+    Nombres et chaînes numériques&nbsp;: 80,9,700,40,1,5,200
+    Triés sans fonction de comparaison&nbsp;: 1,200,40,5,700,80,9
+    Triés avec compareNombres&nbsp;: 1,5,9,40,80,200,700
 
 ### Trier des caractères non-ASCII
 

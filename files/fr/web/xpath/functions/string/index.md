@@ -26,7 +26,7 @@ Une chaîne.
 ### Notes
 
 - Si l'objet est un ensemble de nœuds, la valeur de la chaîne du premier nœud de l'ensemble est retournée.
-- Un nombre est converti comme suit :
+- Un nombre est converti comme suit&nbsp;:
 
   - NaN est converti en la chaîne `NaN`.
   - Zéro positif est converti en `0`.

@@ -25,7 +25,7 @@ Un nombre représentant l'année de la date indiquée, selon l'heure locale, auq
 
 ## Description
 
-La méthode `getYear()` renvoie l'année moins 1900 ; par conséquent :
+La méthode `getYear()` renvoie l'année moins 1900&nbsp;; par conséquent&nbsp;:
 
 - Pour les années supérieures ou égales à 2000, la valeur renvoyée par `getYear()` est supérieure ou égale à 100. Par exemple, si l'année est 2026, `getYear()` renvoie 126.
 - Pour les années entre 1900 et 1999 incluses, la valeur renvoyée par `getYear()` est comprise entre 0 et 99. Par exemple, si l'année est 1976, `getYear()` renvoie 76.
@@ -37,7 +37,7 @@ Pour prendre en compte les années avant et après 2000, il vaut mieux utiliser 
 
 ### Comportement dans JavaScript 1.2 et versions antérieures
 
-La méthode `getYear()` renvoyait soit une année en deux chiffres, soit une année en quatre chiffres :
+La méthode `getYear()` renvoyait soit une année en deux chiffres, soit une année en quatre chiffres&nbsp;:
 
 - Pour les années entre 1900 et 1999 incluses, la valeur renvoyée par `getYear()` était l'année moins 1900. Par exemple, si l'année était 1976, la valeur renvoyée était 76.
 - Pour les années inférieures à 1900 ou supérieures à 1999, la valeur renvoyée par `getYear` était l'année en quatre chiffres. Par exemple, si l'année était 1856, la valeur renvoyée était 1856. Si l'année était 2026, la valeur renvoyée était 2026.

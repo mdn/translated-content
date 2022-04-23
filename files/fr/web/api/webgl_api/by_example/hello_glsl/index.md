@@ -10,8 +10,6 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
-{{IncludeSubnav("/fr/Apprendre")}}
-
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Une_pluie_de_rectangle","Apprendre/WebGL/Par_exemple/Introduction_aux_attributs_vertex")}}
 
 Dans cet article, on décrit un programme de manipulation de _shaders_ qui dessine un carré de couleur.

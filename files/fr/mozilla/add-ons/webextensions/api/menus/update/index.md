@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
 
 Met à jour un élément de menu précédemment créé.
 
-Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
+Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -36,7 +36,7 @@ var updating = browser.menus.update(
   - : `integer` ou `string`. L'ID de l'article à mettre à jour.
 - `updateProperties`
 
-  - : `object`. Les propriétés à mettre à jour. Identique à l'objet `createProperties` passé à  {{WebExtAPIRef("menus.create()", "menus.create()")}}, sauf que l'`id` ne peut être défini. En outre, les `icônes` ne peuvent être modifiées que dans les commandes de menu, et non dans le menu contextuel de niveau supérieur. L'icône de niveau supérieur correspond à l'icône principale de l'extension telle que déclarée dans le fichier manifeste de l'extension.
+  - : `object`. Les propriétés à mettre à jour. Identique à l'objet `createProperties` passé à  {{WebExtAPIRef("menus.create()", "menus.create()")}}, sauf que l'`id` ne peut être défini. En outre, les `icônes` ne peuvent être modifiées que dans les commandes de menu, et non dans le menu contextuel de niveau supérieur. L'icône de niveau supérieur correspond à l'icône principale de l'extension telle que déclarée dans le fichier manifeste de l'extension.
 
     - `checked` {{optional_inline}}
       - : `boolean`. L'état initial d'une case à cocher ou d'un élément radio : `true` fpour sélectionné et `false` pour non sélectionné. Un seul élément radio peut être sélectionné à la fois dans un groupe donné d'éléments radio.
@@ -48,7 +48,7 @@ var updating = browser.menus.update(
         - `"_execute_page_action"`: simuler un clic sur l'action de la page de l'extension, en ouvrant son popup si elle en a une
         - `"_execute_sidebar_action"`: ouvre la barre latérale de l'extension
 
-        Cliquer sur l'élément déclenchera toujours l'événement  {{WebExtAPIRef("menus.onClicked")}}, mais rien ne garantit l'ordre ici: la commande peut être exécutée avant le lancement de `onClicked`.
+        Cliquer sur l'élément déclenchera toujours l'événement  {{WebExtAPIRef("menus.onClicked")}}, mais rien ne garantit l'ordre ici: la commande peut être exécutée avant le lancement de `onClicked`.
 
     - `contexts` {{optional_inline}}
 
@@ -89,7 +89,7 @@ var updating = browser.menus.update(
     - `parentId` {{optional_inline}}
       - : `integer` ou `string`. L'ID d'un élément de menu parent ; ceci fait de l'élément un enfant d'un élément précédemment ajouté. Remarque : Si vous avez créé plus d'un élément de menu, les éléments seront placés dans un sous-menu. Le parent du sous-menu sera étiqueté avec le nom de l'extension.
     - `targetUrlPatterns` {{optional_inline}}
-      - : `array` de `string`. Similairer à `documentUrlPatterns`, mais vous permet de filtrer en fonction de la `href` des balises d'ancre et l'attribut `src` des balises  img/audio/video. Ce paramètre prend en charge n'importe quel schéma d'URL, même ceux qui ne sont généralement pas autorisés dans un modèle de correspondance.
+      - : `array` de `string`. Similairer à `documentUrlPatterns`, mais vous permet de filtrer en fonction de la `href` des balises d'ancre et l'attribut `src` des balises img/audio/video. Ce paramètre prend en charge n'importe quel schéma d'URL, même ceux qui ne sont généralement pas autorisés dans un modèle de correspondance.
     - `title` {{optional_inline}}
 
       - : `string`. Le texte à afficher dans le poste. Obligatoire sauf si le `type` est "separateur".

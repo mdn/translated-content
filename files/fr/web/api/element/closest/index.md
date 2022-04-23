@@ -86,7 +86,7 @@ if (!Element.prototype.closest)
     };
 ```
 
-Cependant, si vous avez besoin de supporter IE 8, vous pouvez utiliser la prothèse suivante qui marchera, mais beaucoup plus lentement. Elle ne supporte que les sélecteurs CSS 2.1 dans IE 8, et peut causer de gros pics de latence dans les sites web :
+Cependant, si vous avez besoin de supporter IE 8, vous pouvez utiliser la prothèse suivante qui marchera, mais beaucoup plus lentement. Elle ne supporte que les sélecteurs CSS 2.1 dans IE 8, et peut causer de gros pics de latence dans les sites web :
 
 ```js
 if (window.Element && !Element.prototype.closest) {

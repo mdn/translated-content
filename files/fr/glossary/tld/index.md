@@ -13,7 +13,7 @@ Un domaine de premier niveau ou TLD (_top-level domain_) est le {{Glossary("doma
 L'{{Glossary("ICANN")}} (Internet Corporation for Assigned Names and Numbers) désigne des organisations pour gérer chaque TLD. En fonction des contraintes que peuvent imposer ces organisations d'administration, le TLD apporte souvent une indication sur le but, le propriétaire ou la nationalité d'un site web.
 
 Considérons par exemple l'adresse Internet : `https://developer.mozilla.org`
-Ici,  org est le TLD ; mozilla.org est le nom de domaine de deuxième niveau ; et developer est un nom de sous-domaine. Ensemble, ces éléments constituent un nom de domaine pleinement qualifié ; l'ajout de https\:// permet d'obtenir une URL complète.
+Ici,  org est le TLD ; mozilla.org est le nom de domaine de deuxième niveau ; et developer est un nom de sous-domaine. Ensemble, ces éléments constituent un nom de domaine pleinement qualifié ; l'ajout de https\:// permet d'obtenir une URL complète.
 
 De nos jours, {{Glossary("IANA")}} divise les domaines de premier niveau en plusieurs groupes :
 

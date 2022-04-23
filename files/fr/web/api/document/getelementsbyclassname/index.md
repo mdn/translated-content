@@ -23,15 +23,15 @@ Renvoie un objet de type tableau de tous les éléments enfants qui ont tous les
 
 ## Exemples
 
-Trouve tous les éléments ayant la classe « test » :
+Trouve tous les éléments ayant la classe «&nbsp;test&nbsp;»&nbsp;:
 
      document.getElementsByClassName('test')
 
-Trouve tous les éléments ayant les classes « rouge » et « test » :
+Trouve tous les éléments ayant les classes «&nbsp;rouge&nbsp;» et «&nbsp;test&nbsp;»&nbsp;:
 
      document.getElementsByClassName('rouge test')
 
-Trouve tous les éléments qui ont la classe « test » à l'intérieur d'un élément ayant l'ID « main » :
+Trouve tous les éléments qui ont la classe «&nbsp;test&nbsp;» à l'intérieur d'un élément ayant l'ID «&nbsp;main&nbsp;»&nbsp;:
 
      document.getElementById('main').getElementsByClassName('test')
 
@@ -46,7 +46,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 XXX writeme == Notes == Une méthode semblable existe pour \<code>Element\</code>
 
-## Obtenir la classe  des éléments test
+## Obtenir la classe des éléments test
 
 C'est la méthode d'opération la plus couramment utilisée.
 

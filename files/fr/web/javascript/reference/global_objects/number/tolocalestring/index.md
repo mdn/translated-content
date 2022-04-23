@@ -28,7 +28,7 @@ Les arguments `locales` et `options` permettent à l'application de spécifier l
 
 Voir la section [compatibilité des navigateurs](#compat "#Browser_Compatibility") afin de voir quels navigateurs supportent les arguments `locales` et `options`. L'exemple [Vérifier le support des arguments `locales` et `options`](#check) permet de détecter cette fonctionnalité.
 
-> **Note :** L'API ECMAScript Internationalization, implémentée avec Firefox 29, a ajouté l'argument `locales` à la méthode [`Number.toLocaleString`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number/toLocaleString). Si l'argument vaut `undefined`,cette méthode renvoie les nombres selon la locale du système d'exploitation, les versions antérieures de Firefox renvoyaient un résultat correspondant à la locale anglaise. Ce changement a été rapporté comme une régression, avec un risque de manque de rétrocompatibilité, avant d'être corrigé avec Firefox 55, voir le bug ({{bug(999003)}}).
+> **Note :** L'API ECMAScript Internationalization, implémentée avec Firefox 29, a ajouté l'argument `locales` à la méthode [`Number.toLocaleString`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Number/toLocaleString). Si l'argument vaut `undefined`,cette méthode renvoie les nombres selon la locale du système d'exploitation, les versions antérieures de Firefox renvoyaient un résultat correspondant à la locale anglaise. Ce changement a été rapporté comme une régression, avec un risque de manque de rétrocompatibilité, avant d'être corrigé avec Firefox 55, voir le bug ({{bug(999003)}}).
 
 {{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/NumberFormat','Paramètres')}}
 
@@ -58,7 +58,7 @@ function testSupporttoLocaleString() {
     try {
         nombre.toLocaleString("i");
     } catch (e) {
-        return e​.name === "RangeError";
+        return e.name === "RangeError";
     }
     return false;
 }
@@ -116,7 +116,7 @@ var nombre = 123456.789;
 
 // on formate selon une devise
 console.log(nombre.toLocaleString("de-DE", {style: "currency", currency: "EUR"}));
-// → 123.456,79 €
+// → 123.456,79 €
 
 // le yen japonais ne possède pas de centimes
 console.log(nombre.toLocaleString("ja-JP", {style: "currency", currency: "JPY"}))
@@ -144,12 +144,12 @@ Lors du formatage de beaucoup de nombres, il est préférable de créer un objet
 | Spécification                                                                                                                            | État                             | Commentaires                                          |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                                                 | {{Spec2('ES3')}}             | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}                                         | {{Spec2('ES5.1')}}         |                                                       |
-| {{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}             | {{Spec2('ES6')}}             |                                                       |
-| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     | {{Spec2('ESDraft')}}     |                                                       |
-| {{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 1.0')}} |                                                       |
-| {{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 2.0')}} |                                                       |
-| {{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.7.4.3', 'Number.prototype.toLocaleString')}}                                         | {{Spec2('ES5.1')}}         |                                                       |
+| {{SpecName('ES6', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}             | {{Spec2('ES6')}}             |                                                       |
+| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     | {{Spec2('ESDraft')}}     |                                                       |
+| {{SpecName('ES Int 1.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 1.0')}} |                                                       |
+| {{SpecName('ES Int 2.0', '#sec-13.2.1', 'Number.prototype.toLocaleString')}}                                     | {{Spec2('ES Int 2.0')}} |                                                       |
+| {{SpecName('ES Int Draft', '#sec-Number.prototype.toLocaleString', 'Number.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

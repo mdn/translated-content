@@ -44,7 +44,7 @@ Float64Array.BYTES_PER_ELEMENT;      // 8
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------- |
 | {{SpecName('Typed Array')}}                                                                                         | {{Spec2('Typed Array')}} | Spécification englobée par ECMAScript 6.        |
 | {{SpecName('ES6', '#sec-typedarray.bytes_per_element', 'TypedArray.BYTES_PER_ELEMENT')}}         | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-typedarray.bytes_per_element', 'TypedArray.BYTES_PER_ELEMENT')}} | {{Spec2('ESDraft')}}     |                                                 |
+| {{SpecName('ESDraft', '#sec-typedarray.bytes_per_element', 'TypedArray.BYTES_PER_ELEMENT')}} | {{Spec2('ESDraft')}}     |                                                 |
 
 ## Compatibilité des navigateurs
 

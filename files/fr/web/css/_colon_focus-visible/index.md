@@ -14,7 +14,7 @@ La pseudo-classe **`:focus-visible`** s'applique lorsqu'un élément correspond 
 
 Ce sélecteur peut être utile afin de fournir un indicateur de focus différent selon le mode de navigation de l'utilisateur (souris ou clavier).
 
-On notera que Firefox prend en charge cette fonctionnalité via une ancienne pseudo-classe préfixée  `:-moz-focusring`. Voir la page {{cssxref(":-moz-focusring")}} pour plus d'informations.
+On notera que Firefox prend en charge cette fonctionnalité via une ancienne pseudo-classe préfixée  `:-moz-focusring`. Voir la page {{cssxref(":-moz-focusring")}} pour plus d'informations.
 
 ## Syntaxe
 

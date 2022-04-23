@@ -17,7 +17,7 @@ Firefox 26 est sorti le 10 Décembre 2013. Cet article répertorie les modificat
 - La propriété {{cssxref("text-decoration-line")}}, toujours préfixée, considère désormais `'blink'` comme une valeur valide, bien qu'elle ne fasse pas du tout clignoter le contenu ({{bug("812995")}}).
 - La propriété `non standard` {{cssxref("-moz-text-blink")}} a été supprimée ({{bug("812995")}}).
 - Le support de la propriété {{cssxref("image-orientation")}}, dans sa version CSS Images & Values Level 4, c'est-à-dire avec le mot clé `from-image` et le support EXIF, a été ajouté ({{bug(825771)}}).
-- Le support expérimental `position: sticky` a été implémenté et peut être activé par pref `layout.css.sticky.enabled` ({{bug(886646)}}).
+- Le support expérimental `position: sticky` a été implémenté et peut être activé par pref `layout.css.sticky.enabled` ({{bug(886646)}}).
 - La propriété {{cssxref("text-align")}} s'applique désormais au pseudo-élément {{cssxref("::-moz-placeholder")}} ({{bug(915551)}}).
 
 ### HTML
@@ -57,7 +57,7 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 
 ### MathML
 
-- Les rendus incohérents de {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}} ont été unifiés et la gestion des erreurs de ces éléments a été améliorée ({{bug("827713")}}).
+- Les rendus incohérents de {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}} ont été unifiés et la gestion des erreurs de ces éléments a été améliorée ({{bug("827713")}}).
 
 ### SVG
 

@@ -113,7 +113,7 @@ console.log(résultat);          // "toto"
 | Spécification                                                                                                                        | État                         | Commentaires        |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-generator-function-definitions-runtime-semantics-evaluation', 'Yield')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions-runtime-semantics-evaluation', 'Yield')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-generator-function-definitions-runtime-semantics-evaluation', 'Yield')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

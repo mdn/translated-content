@@ -11,7 +11,7 @@ translation_of: Web/API/ExtendableMessageEvent/ExtendableMessageEvent
 ---
 {{APIRef("Service Workers API")}}{{ SeeCompatTable() }}
 
-Le constructeur **`Extendable.MessageEvent()`** crée une nouvelle instance d'un {{domxref("ExtendableMessageEvent")}}.
+Le constructeur **`Extendable.MessageEvent()`** crée une nouvelle instance d'un {{domxref("ExtendableMessageEvent")}}.
 
 ## Syntaxe
 
@@ -25,11 +25,11 @@ Le constructeur **`Extendable.MessageEvent()`** crée une nouvelle instance d'u
 
   - : Un objet d'initialisation, qui doit contenir les paramètres suivant:
 
-    - `data`: Les données de l'évènement — peut être de n'importe quel type.
+    - `data`: Les données de l'évènement — peut être de n'importe quel type.
     - `origin`: Une {{domxref("DOMString")}} qui définie l'origine de l'environnement du service worker correspondant.
     - `lastEventId`: Une {{domxref("DOMString")}} qui définie le dernier l'id du dernier évènement de l'évènement source.
-    - `source`: Le {{domxref("Client")}}, {{domxref("ServiceWorker")}} ou {{domxref("MessagePort")}} qui a envoyé un message.
-    - `ports`: Un tableau contenant les objets  {{domxref("MessagePort")}} connectés au canal d'envoie des messages.
+    - `source`: Le {{domxref("Client")}}, {{domxref("ServiceWorker")}} ou {{domxref("MessagePort")}} qui a envoyé un message.
+    - `ports`: Un tableau contenant les objets  {{domxref("MessagePort")}} connectés au canal d'envoie des messages.
 
 ## Exemples
 
@@ -55,7 +55,7 @@ var myEME = new ExtendableMessageEvent('message', init);
 
 ## Voir aussi
 
-- [Utiliser les Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [Utiliser les Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
 - [Exemple simple de service workers](https://github.com/mdn/sw-test)
-- [Les Services Workers sont-ils prêts ?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Les Services Workers sont-ils prêts ?](https://jakearchibald.github.io/isserviceworkerready/)
 - [Canal de messages](/en-US/docs/Web/API/Channel_Messaging_API)

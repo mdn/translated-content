@@ -39,7 +39,7 @@ Un nouveau tableau contenant les éléments extraits.
 
 ## Description
 
-`slice()` ne modifie pas le tableau original, mais renvoie une nouvelle copie du tableau (_shallow copy_ — copie superficielle) dont les éléments sont des copies des éléments extraits du tableau original. Les éléments du tableau original sont copiés dans le nouveau tableau de la manière suivante :
+`slice()` ne modifie pas le tableau original, mais renvoie une nouvelle copie du tableau (_shallow copy_ — copie superficielle) dont les éléments sont des copies des éléments extraits du tableau original. Les éléments du tableau original sont copiés dans le nouveau tableau de la manière suivante&nbsp;:
 
 - Pour les références à des objets (et non les objets eux-mêmes), `slice()` copie ces références dans le nouveau tableau. Tant l'original que le nouveau tableau font référence au même objet. Si un objet référencé est modifié, ces changements sont visibles tant pour le nouveau que pour l'ancien tableau.
 - Pour les chaines de caractères, les nombres et les booléens, `slice()` copie ces chaines de caractères, ces nombres et ces valeurs booléennes dans le nouveau tableau. Les modifications sur ces chaînes, nombres ou booléens dans l'un des tableaux n'affectent pas l'autre tableau (NB : lorsque l'on parle de chaine de caractères, de nombre ou de booléen ici, on parle exclusivement de leur _type primitif_, pas des _objets_ {{jsxref("String")}}, {{jsxref("Number")}} ou {{jsxref("Boolean")}} — voir par exemple [différences entre objet String et type primitif pour les chaines de caractères](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String#Les_différences_entre_les_objets_String_et_le_type_primitif_pour_les_chaînes_de_caractères)).
@@ -64,7 +64,7 @@ Dans l'exemple qui suit, `slice()` crée un nouveau tableau, `nouvelleVoiture`, 
 
 ```js
 // Avec slice, crée nouvelleVoiture depuis maVoiture
-var maHonda = { couleur : "rouge", roues : 4, moteur : { cylindres : 4, capacité : 2.2 } };
+var maHonda = { couleur&nbsp;: "rouge", roues&nbsp;: 4, moteur&nbsp;: { cylindres&nbsp;: 4, capacité&nbsp;: 2.2 } };
 var maVoiture = [maHonda, 2, "excellente condition", "achetée en 1997"];
 var nouvelleVoiture = maVoiture.slice(0, 2);
 
@@ -84,7 +84,7 @@ console.log("maVoiture[0].couleur = " + maVoiture[0].couleur);
 console.log("nouvelleVoiture[0].couleur = " + nouvelleVoiture[0].couleur);
 ```
 
-Ce script affichera :
+Ce script affichera&nbsp;:
 
 ```js
 maVoiture = [{couleur:"rouge", roues:4, moteur:{cylindres:4, capacité:2.2}}, 2,

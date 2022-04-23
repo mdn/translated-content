@@ -17,7 +17,7 @@ Renvoie le numéro de version comme spécifié dans la déclaration XML (par exe
 Cet attribut n'a jamais été réellement utile, parce qu'il a toujours renvoyé 1.0, et a été supprimé dans la spécification DOM Niveau 4. En conséquence, Firefox 10 ne l'implémente plus. Son utilisation principale dans le passé consistait à détecter si le document était rendu en XML plutôt qu'en HTML. Pour ce faire, vous pouvez créer un élément avec son nom en minuscule, puis vérifier s'il est converti en majuscules (auquel cas le document est en mode HTML non XML) :
 
     if (document.createElement("foo").tagName == "FOO") {
-      /* le document n'est pas XML */
+      /* le document n'est pas XML */
     }
 
 ## Spécifications

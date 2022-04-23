@@ -25,9 +25,9 @@ Une chaîne de caractères qui représente le code source du tableau.
 
 ## Description
 
-La méthode `toSource()` renvoie les valeurs suivantes :
+La méthode `toSource()` renvoie les valeurs suivantes&nbsp;:
 
-- Pour l'objet {{jsxref("Array")}} natif, `toSource()` renvoie la chaîne de caractères suivante indiquant que le code source n'est pas disponible :
+- Pour l'objet {{jsxref("Array")}} natif, `toSource()` renvoie la chaîne de caractères suivante indiquant que le code source n'est pas disponible&nbsp;:
 
   ```js
     function Array() {
@@ -43,7 +43,7 @@ Cette méthode est habituellement appelée en interne par le moteur JavaScript e
 
 ### Examiner le code source d'un tableau
 
-Pour examiner le code source d'un tableau :
+Pour examiner le code source d'un tableau&nbsp;:
 
 ```js
 var alpha = new Array("a", "b", "c");

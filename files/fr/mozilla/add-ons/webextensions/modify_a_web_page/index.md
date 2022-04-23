@@ -43,7 +43,7 @@ Tout d'abord, créez un nouveau répertoire intitulé "modify-page". Dans ce ré
 }
 ```
 
-La clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)  est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions `content_scripts demandent au navigateur de charger un script appelé`  "page-eater.js" dans toutes les pages sous [https://developer.mozilla.org/](/).
+La clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)  est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions `content_scripts demandent au navigateur de charger un script appelé`  "page-eater.js" dans toutes les pages sous [https://developer.mozilla.org/](/).
 
 > **Note :** Puisque la propriété "js" de content_scripts est un tableau, vous pouvez l'utiliser pour injecter plus d'un script dans des pages correspondantes. Si vous faites cela, les pages partagent la même portée, tout comme les scripts multiples chargés par une page, et ils sont chargés dans l'ordre dans lequel ils sont répertoriés dans le tableau.
 
@@ -95,7 +95,7 @@ Ici, nous avons supprimé la clé content_scripts et ajouté deux nouvelles clé
 - [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): Pour injecter dans des pages, nous avons besoin de permissions pour la page que nous modifions. La [`permission activeTab`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) est un moyen d'obtenir ceci temporaiement pour l'onglet actuellement actif. Nous avons également besoin de la permission contextMenus pour pouvoir ajouter des éléments du menu contextuel.
 - [`background`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): Nous utilisons ceci pour charger un ["script de fond"](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) persistant appelé "background.js", dans lequel nous configurons le menu contextuel et injectons le script de contenu.
 
-Créons ce fichier, pour cela nous créons un fichier appelé "background.js" dans le dossier "modify-page", et donnez-lui le contenu suivant :
+Créons ce fichier, pour cela nous créons un fichier appelé "background.js" dans le dossier "modify-page", et donnez-lui le contenu suivant :
 
 ```js
 browser.contextMenus.create({
@@ -127,7 +127,7 @@ Maintenant [rechargeons la WebExtension](/fr/Add-ons/WebExtensions/Temporary_Ins
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
-> **Note :** Bien que cette vidéo montre le script de contenu fonctionnant dans  [addons.mozilla.org](/fr/firefox/), les scripts de contenu sont actuellement bloqués pour ce site.
+> **Note :** Bien que cette vidéo montre le script de contenu fonctionnant dans  [addons.mozilla.org](/fr/firefox/), les scripts de contenu sont actuellement bloqués pour ce site.
 
 ## Messagerie
 

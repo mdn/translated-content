@@ -63,7 +63,7 @@ L'instruction {{jsxref("Instructions/break","break")}} peut optionnellement êtr
 
 ### Utiliser `switch`
 
-Dans l'exemple suivant, si l'expression `expr` vaut "Bananes", le programme trouve la correspondance et exécute l'instruction associée. Lorsque l'instruction `break` est trouvée, le programme « sort » de l'instruction `switch` et continue l'exécution avec les instructions  suivantes. Si `break` n'avait pas été utilisé, l'instruction du cas "Cerises" aurait également été exécutée.
+Dans l'exemple suivant, si l'expression `expr` vaut "Bananes", le programme trouve la correspondance et exécute l'instruction associée. Lorsque l'instruction `break` est trouvée, le programme « sort » de l'instruction `switch` et continue l'exécution avec les instructions suivantes. Si `break` n'avait pas été utilisé, l'instruction du cas "Cerises" aurait également été exécutée.
 
 ```js
 switch (expr) {
@@ -258,9 +258,9 @@ Cette nouvelle version, exécutée, produira `"bonjour"` dans la console, sans c
 | Spécification                                                                                | État                         | Commentaires                                         |
 | -------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-12.11', 'instruction switch')}}                 | {{Spec2('ES5.1')}}     |                                                      |
-| {{SpecName('ES6', '#sec-switch-statement', 'instruction switch')}}     | {{Spec2('ES6')}}         |                                                      |
-| {{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ESDraft')}} |                                                      |
+| {{SpecName('ES5.1', '#sec-12.11', 'instruction switch')}}                 | {{Spec2('ES5.1')}}     |                                                      |
+| {{SpecName('ES6', '#sec-switch-statement', 'instruction switch')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}} | {{Spec2('ESDraft')}} |                                                      |
 
 ## Compatibilité des navigateurs
 

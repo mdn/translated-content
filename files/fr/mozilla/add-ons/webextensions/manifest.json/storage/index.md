@@ -38,7 +38,7 @@ Utilisez la clé `storage` pour spécifier le nom du fichier de schéma qui déf
 
 Les données gérées déclarent les politiques d'entreprise soutenues par l'application. Les politiques sont analogues aux options mais sont configurées par un administrateur système au lieu de l'utilisateur, ce qui permet à l'application d'être configurée pour tous les utilisateurs d'une organisation.
 
-Après avoir déclaré les politiques, elles sont lues à partir de l'API  {{WebExtAPIRef("storage.managed")}}. Cependant, si une valeur de politique n'est pas conforme au schéma, elle n'est pas publiée par l'API `storage.managed`. Il appartient à l'application d'appliquer les politiques configurées par l'administrateur.
+Après avoir déclaré les politiques, elles sont lues à partir de l'API  {{WebExtAPIRef("storage.managed")}}. Cependant, si une valeur de politique n'est pas conforme au schéma, elle n'est pas publiée par l'API `storage.managed`. Il appartient à l'application d'appliquer les politiques configurées par l'administrateur.
 
 > **Note :** Firefox ne définit pas de schéma pour le stockage géré, soir {{WebExtAPIRef("storage.managed")}} pour plus de détails.
 

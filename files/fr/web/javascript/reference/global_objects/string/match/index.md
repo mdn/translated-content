@@ -87,7 +87,7 @@ console.log(tableau_correspondances);
 
 ### Utiliser un paramètre qui n'est pas une `RegExp`
 
-Lorsque le paramètre passé à la fonction est une chaîne de caractères ou un nombre, il est converti de façon implicite en un objet  {{jsxref("RegExp")}} grâce à `new RegExp(obj)`. Si c'est un nombre positif avec le signe +, la méthode `RegExp()` ignorera ce signe.
+Lorsque le paramètre passé à la fonction est une chaîne de caractères ou un nombre, il est converti de façon implicite en un objet  {{jsxref("RegExp")}} grâce à `new RegExp(obj)`. Si c'est un nombre positif avec le signe +, la méthode `RegExp()` ignorera ce signe.
 
 ```js
 var str1 = "NaN signifie : qui n'est pas un nombre.";
@@ -103,9 +103,9 @@ str2.match(+65);        // Renvoie également ["65"]
 | Spécification                                                                                                | État                         | Commentaires                                          |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.match', 'String.prototype.match')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES5.1', '#sec-15.5.4.10', 'String.prototype.match')}}                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-string.prototype.match', 'String.prototype.match')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-string.prototype.match', 'String.prototype.match')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

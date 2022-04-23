@@ -393,47 +393,4 @@ catch (e) {
   console.log(e.message); // logs 'The message' or a JavaScript error message)
 }</pre>
 
-<h2 id="Promises">Promises</h2>
-
-<p>从 ECMAScript 6 开始，JavaScript 增加了对 {{jsxref("Promise")}} 对象的支持，它允许你对延时和异步操作流进行控制。</p>
-
-<p><code>Promise</code> 对象有以下几种状态：</p>
-
-<ul>
- <li><em>pending：</em>初始的状态，即正在执行，不处于 fulfilled 或 rejected 状态。</li>
- <li><em>fulfilled：</em>成功的完成了操作。</li>
- <li><em>rejected：</em>失败，没有完成操作。</li>
- <li><em>settled：</em>Promise 处于 fulfilled 或 rejected 二者中的任意一个状态, 不会是 pending。</li>
-</ul>
-
-<p><img alt="" src="https://mdn.mozillademos.org/files/8633/promises.png"></p>
-
-<h3 id="通过_XHR_加载图片">通过 XHR 加载图片</h3>
-
-<p>你可以在 MDN GitHub <a href="https://github.com/mdn/js-examples/tree/master/promises-test">promise-test</a> 中找到这个简单的例子，它使用了 Promise 和 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> 来加载一张图片，你也可以直接在<a href="https://mdn.github.io/js-examples/promises-test/">这个页面</a>查看他的效果。同时为了让你更清楚的了解 Promise 和 XHR 的结构，代码中每一个步骤后都附带了注释。</p>
-
-<p>这里有一个未注释的版本，展现了 <code>Promise</code> 的工作流，希望可以对你的理解有所帮助。</p>
-
-<pre class="brush: js">function imgLoad(url) {
-  return new Promise(function(resolve, reject) {
-    var request = new XMLHttpRequest();
-    request.open('GET', url);
-    request.responseType = 'blob';
-    request.onload = function() {
-      if (request.status === 200) {
-        resolve(request.response);
-      } else {
-        reject(Error('Image didn\'t load successfully; error code:'
-                     + request.statusText));
-      }
-    };
-    request.onerror = function() {
-      reject(Error('There was a network error.'));
-    };
-    request.send();
-  });
-}</pre>
-
-<p>若想了解更详细的信息，请参阅 {{jsxref("Promise")}} 页面。</p>
-
 <div>{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}</div>

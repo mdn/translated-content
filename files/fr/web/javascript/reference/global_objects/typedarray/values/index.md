@@ -59,7 +59,7 @@ console.log(eArr.next().value); // 50
 | Spécification                                                                                                                    | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -35,12 +35,12 @@ La limitation des variables statiques ne pouvant être appelées que par des mé
 
 ```js
 class ClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD
 
-  static publicStaticMethod() {
-    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
-    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
-  }
+  static publicStaticMethod() {
+    ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD = 42
+    return ClassWithPrivateStaticField.#PRIVATE_STATIC_FIELD
+  }
 }
 
 console.assert(ClassWithPrivateStaticField.publicStaticMethod() === 42)
@@ -54,12 +54,12 @@ Ceci peut conduire à un comportement inattendu lors de l'utilisation de **`this
 
 ```js
 class BaseClassWithPrivateStaticField {
-  static #PRIVATE_STATIC_FIELD
+  static #PRIVATE_STATIC_FIELD
 
-  static basePublicStaticMethod() {
-    this.#PRIVATE_STATIC_FIELD = 42
-    return this.#PRIVATE_STATIC_FIELD
-  }
+  static basePublicStaticMethod() {
+    this.#PRIVATE_STATIC_FIELD = 42
+    return this.#PRIVATE_STATIC_FIELD
+  }
 }
 
 class SubClass extends BaseClassWithPrivateStaticField { }
@@ -75,18 +75,18 @@ console.assert(error instanceof TypeError)
 
 ### Champs d'instance privés
 
-Les champs d'instance privés sont déclarés avec des **noms** à **#** (prononcés "_noms à hash_", "_hash names_" en anglais), qui sont des identifieurs préfixés par `#`. Le `#` fait partie du nom lui-même. Il est utilisé tant pour la déclaration que pour l'accès.
+Les champs d'instance privés sont déclarés avec des **noms** à **#** (prononcés "_noms à hash_", "_hash names_" en anglais), qui sont des identifieurs préfixés par `#`. Le `#` fait partie du nom lui-même. Il est utilisé tant pour la déclaration que pour l'accès.
 
 L'encapsulation est forcée par le langage. C'est une erreur de syntaxe que de faire référence aux noms à `#` en dehors de leur portée.
 
 ```js
 class ClassWithPrivateField {
-  #privateField
+  #privateField
 
-  constructor() {
-    this.#privateField = 42
-    this.#randomField = 666 // Erreur de syntaxe
-  }
+  constructor() {
+    this.#privateField = 42
+    this.#randomField = 666 // Erreur de syntaxe
+  }
 }
 
 const instance = new ClassWithPrivateField()
@@ -103,17 +103,17 @@ Les méthodes statiques privées peuvent être des fonctions génératrices, asy
 
 ```js
 class ClassWithPrivateStaticMethod {
-    static #privateStaticMethod() {
-        return 42
-    }
+    static #privateStaticMethod() {
+        return 42
+    }
 
-    static publicStaticMethod1() {
-        return ClassWithPrivateStaticMethod.#privateStaticMethod();
-    }
+    static publicStaticMethod1() {
+        return ClassWithPrivateStaticMethod.#privateStaticMethod();
+    }
 
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+    static publicStaticMethod2() {
+        return this.#privateStaticMethod();
+    }
 }
 
 console.assert(ClassWithPrivateStaticMethod.publicStaticMethod1() === 42);
@@ -124,15 +124,15 @@ Cela peut conduire à un comportement inattendu lors de l'utilisation de **`this
 
 ```js
 class Base {
-    static #privateStaticMethod() {
-        return 42;
-    }
-    static publicStaticMethod1() {
-        return Base.#privateStaticMethod();
-    }
-    static publicStaticMethod2() {
-        return this.#privateStaticMethod();
-    }
+    static #privateStaticMethod() {
+        return 42;
+    }
+    static publicStaticMethod1() {
+        return Base.#privateStaticMethod();
+    }
+    static publicStaticMethod2() {
+        return this.#privateStaticMethod();
+    }
 }
 
 class Derived extends Base {}
@@ -147,41 +147,41 @@ Les méthodes d'instance privées sont des méthodes disponibles dans les instan
 
 ```js
 class ClassWithPrivateMethod {
-  #privateMethod() {
-    return 'hello world'
-  }
+  #privateMethod() {
+    return 'hello world'
+  }
 
-  getPrivateMessage() {
-      return this.#privateMethod()
-  }
+  getPrivateMessage() {
+      return this.#privateMethod()
+  }
 }
 
 const instance = new ClassWithPrivateMethod()
 console.log(instance.getPrivateMessage())
-// expected output: "hello worl​d"
+// expected output: "hello world"
 ```
 
 Les méthodes d'instance privées peuvent être des fonctions génératrices, asynchones ou génératrices asynchrones. Des accesseurs (getters) et des mutateurs (setters) privés sont aussi posibles :
 
 ```js
 class ClassWithPrivateAccessor {
-  #message
+  #message
 
-  get #decoratedMessage() {
-    return `✨${this.#message}✨`
-  }
-  set #decoratedMessage(msg) {
-    this.#message = msg
-  }
+  get #decoratedMessage() {
+    return `✨${this.#message}✨`
+  }
+  set #decoratedMessage(msg) {
+    this.#message = msg
+  }
 
-  constructor() {
-    this.#decoratedMessage = 'hello world'
-    console.log(this.#decoratedMessage)
-  }
+  constructor() {
+    this.#decoratedMessage = 'hello world'
+    console.log(this.#decoratedMessage)
+  }
 }
 
 new ClassWithPrivateAccessor();
-// expected output: "✨hello worl​d✨"
+// expected output: "✨hello world✨"
 ```
 
 ## Spécifications

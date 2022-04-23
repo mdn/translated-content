@@ -191,7 +191,7 @@ Ici il faut:
 
 - Appeler `Event.preventDefault()` pour empêcher Chrome 67 et les versions antérieures d'appeler automatiquement l'invite d'installation (ce comportement a été modifié dans Chrome 68).
 - Stocker l'objet événement dans la variable `deferredPrompt` afin qu'il puisse être utilisé ultérieurement pour effectuer l'installation réelle.
-- Configurer le bouton  `display: block` afin qu'il apparaisse dans l'interface utilisateur sur laquelle l'utilisateur peut cliquer.
+- Configurer le bouton  `display: block` afin qu'il apparaisse dans l'interface utilisateur sur laquelle l'utilisateur peut cliquer.
 - Définir un gestionnaire de `click` pour le bouton.
 
 Le gestionnaire de clics contient les étapes suivantes:

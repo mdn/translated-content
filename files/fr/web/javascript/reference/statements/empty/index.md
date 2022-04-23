@@ -62,10 +62,10 @@ else
 
 | Spécification                                                                            | État                         | Commentaires         |
 | ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-empty-statement', 'Instruction vide')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES6', '#sec-empty-statement', 'instruction vide')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ES5.1', '#sec-12.3', 'instruction vide')}}                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES3', '#sec-12.3', 'instruction vide')}}                     | {{Spec2('ES3')}}         |                      |
+| {{SpecName('ESDraft', '#sec-empty-statement', 'Instruction vide')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES6', '#sec-empty-statement', 'instruction vide')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ES5.1', '#sec-12.3', 'instruction vide')}}                 | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES3', '#sec-12.3', 'instruction vide')}}                     | {{Spec2('ES3')}}         |                      |
 | {{SpecName('ES1', '#sec-12.3', 'instruction vide')}}                     | {{Spec2('ES1')}}         | Définition initiale. |
 
 ## Compatibilité des navigateurs

@@ -19,7 +19,7 @@ Les valeurs autorisées pour cet attribut sont :
 
 - `ltr` : qui signifie _left to right_ (gauche à droite), utilisé pour les langages écrits de gauche à droite (comme le français ou l'anglais par exemple)
 - `rtl` : qui signifie _right to left_ (droite à gauche), utilisé pour les langages écrits de droite à gauche (comme l'arabe par exemple)
-- `auto` : qui délègue la décision à l'agent utilisateur. L'algorithme utilisé est relativement simple : le contenu textuel est analysé et lorsque le premier caractère possédant une direction « forte » est rencontré, cette direction est prise pour l'ensemble de l'élément.
+- `auto` : qui délègue la décision à l'agent utilisateur. L'algorithme utilisé est relativement simple : le contenu textuel est analysé et lorsque le premier caractère possédant une direction « forte » est rencontré, cette direction est prise pour l'ensemble de l'élément.
 
 > **Note :** Cet attribut est obligatoire pour l'élément {{HTMLElement("bdo")}}, pour lequel l'attribut a une sémantique différente.
 >

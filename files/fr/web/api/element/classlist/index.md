@@ -12,7 +12,7 @@ translation_of: Web/API/Element/classList
 ---
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Element.classList`** retourne une collection directe  {{domxref("DOMTokenList")}} des attributs de classe de l'élément.
+La propriété en lecture seule **`Element.classList`** retourne une collection directe  {{domxref("DOMTokenList")}} des attributs de classe de l'élément.
 
 L'utilisation de `classList` est une alternative à la propriété {{domxref("element.className")}} qui renvoie une chaine composée de la liste des classes, séparées par des espaces.
 
@@ -26,12 +26,12 @@ _elementClasses_ est une [DOMTokenList](/en-US/docs/DOM/DOMTokenList) représent
 
 - add( String \[, String] )
   - : Ajoute les classes spécifiées. Si une classe est déjà assignée en attribut de cet élément, elle est ignorée.
-- remove( String \[, String] )
+- remove( String \[, String] )
   - : Supprime les classes spécifiées.
     **Note:** Supprimer une classe qui n'existe pas NE génère PAS d'erreurs.
 - **item**( Number )
   - : Renvoie la position d'une classe dans une collection.
-- **toggle**( String \[, force] )
+- **toggle**( String \[, force] )
   - : Si un seul argument est présent : change la présence d'une classe dans la liste. Si la classe existe, alors la supprime et renvoie `false`, dans le cas inverse, ajoute cette classe et retourne `true`.
     Si le second argument est présent : Si l'argument `force` est à `true`, ajoute cette classe, si l'argument est à `false`, la supprime.
 - contains( String )
@@ -86,7 +86,7 @@ La polyfill suivante pour `classList` et `DOMTokenList` garantit une conformité
 
 ```js
 // 1. String.prototype.trim polyfill
-if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s﻿]+|[\s﻿]+$/g, ''); };
+if (!"".trim) String.prototype.trim = function(){ return this.replace(/^[\s]+|[\s]+$/g, ''); };
 (function(window){"use strict"; // prevent global namespace pollution
 if(!window.DOMException) (DOMException = function(reason){this.message = reason}).prototype = new Error;
 var wsRE = /[\11\12\14\15\40]/, wsIndex = 0, checkIfValidClassListEntry = function(O, V) {

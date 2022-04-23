@@ -88,7 +88,7 @@ second.onchange = function() {
 
 <div class="note"><strong>Note</strong>: 在主執行緒中存取 <code>onmessage</code> <code>與 postMessage</code> 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。</div>
 
-<div class="note"><strong>Note</strong>: 和 worker 傳送的資料並非共享而是複製一份後傳送，詳細請參照 {{anch("Transferring data to and from workers: further details")}}。</div>
+<div class="note"><strong>Note</strong>: 和 worker 傳送的資料並非共享而是複製一份後傳送，詳細請參照 <a href="#和_workers_傳遞資料：更多細節">和 workers 傳遞資料：更多細節</a>。</div>
 
 <h3 id="結束_worker">結束 worker</h3>
 

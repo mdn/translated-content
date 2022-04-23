@@ -15,7 +15,7 @@ var navigatorObj = self.navigator;
 
 ### Valeur de retour
 
-Un objet  {{domxref("WorkerNavigator")}}.
+Un objet  {{domxref("WorkerNavigator")}}.
 
 ## Exemple
 

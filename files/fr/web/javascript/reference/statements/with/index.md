@@ -83,10 +83,10 @@ with (Math) {
 
 | Spécification                                                                        | État                         | Commentaires                       |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------- |
-| {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} | {{Spec2('ESDraft')}} |                                    |
-| {{SpecName('ES6', '#sec-with-statement', 'Instruction with')}} | {{Spec2('ES6')}}         |                                    |
+| {{SpecName('ESDraft', '#sec-with-statement', 'with statement')}} | {{Spec2('ESDraft')}} |                                    |
+| {{SpecName('ES6', '#sec-with-statement', 'Instruction with')}} | {{Spec2('ES6')}}         |                                    |
 | {{SpecName('ES5.1', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES5.1')}}     | Désormais interdit en mode strict. |
-| {{SpecName('ES3', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES3')}}         |                                    |
+| {{SpecName('ES3', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES3')}}         |                                    |
 | {{SpecName('ES1', '#sec-12.10', 'Instruction with')}}             | {{Spec2('ES1')}}         | Définition initiale.               |
 
 ## Compatibilité des navigateurs

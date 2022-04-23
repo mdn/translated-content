@@ -44,7 +44,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 | Spécification                                                                            | État                             | Commentaires |
 | ---------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG', "custom-elements.html#attr-is", "is")}} | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML WHATWG', "custom-elements.html#attr-is", "is")}} | {{Spec2('HTML WHATWG')}} |              |
 
 ## Compatibilité des navigateurs
 

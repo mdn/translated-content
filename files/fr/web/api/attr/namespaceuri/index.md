@@ -10,7 +10,7 @@ translation_of: Web/API/Attr/namespaceURI
 ---
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace de nom de l'attribut, ou `null` si l'élément  n'est pas dans un espace de noms.
+La propriété en lecture seule **`Attr.namespaceURI`** retourne l'URI d'espace de nom de l'attribut, ou `null` si l'élément n'est pas dans un espace de noms.
 
 > **Note :** Avant DOM4 cet API était défini dans l'interface {{domxref("Node")}}.
 
@@ -33,7 +33,7 @@ if (attribute.localName == "value" &&
 
 Ce n'est pas une valeur calculée, mais le résultat d'une recherche d'espace de noms basée sur un examen des déclarations d'espace de noms dans la portée. L'URI de l'espace de noms d'un attribut est figé à l'heure de création de l'attribut.
 
-Dans Firefox 3.5 et précédents, l'URI d'espace de nom pour les attributs HTML dans les documents HTML est `null`. Dans les versions ultérieures, en conformité avec HTML5, il est [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) comme dans XHTML. {{gecko_minversion_inline("1.9.2")}}
+Dans Firefox 3.5 et précédents, l'URI d'espace de nom pour les attributs HTML dans les documents HTML est `null`. Dans les versions ultérieures, en conformité avec HTML5, il est [`https://www.w3.org/1999/xhtml`](https://www.w3.org/1999/xhtml) comme dans XHTML.
 
 Vous pouvez créer un attribut avec le `namespaceURI` spécifié en utilisant la méthode de DOM niveau 2 {{domxref("Element.setAttributeNS")}}.
 

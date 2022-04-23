@@ -10,7 +10,7 @@ translation_of: Web/API/IDBKeyRange/lowerBound
 ---
 {{APIRef("IndexedDB")}}
 
-La méthode **`lowerBound()`**, rattachée à l'interface  {{domxref("IDBKeyRange")}}, crée un intervalle de clé avec une borne inférieure.
+La méthode **`lowerBound()`**, rattachée à l'interface  {{domxref("IDBKeyRange")}}, crée un intervalle de clé avec une borne inférieure.
 
 Par défaut, la borne est inclue dans l'intervalle (autrement dit, il est fermé à gauche).
 
@@ -72,7 +72,7 @@ function displayData() {
 
 | Spécification                                                                                                                                    | État                         | Commentaires |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
-| {{SpecName('IndexedDB', '#widl-IDBKeyRange-lowerBound-IDBKeyRange-any-lower-boolean-open', 'lowerBound()')}} | {{Spec2('IndexedDB')}} |              |
+| {{SpecName('IndexedDB', '#widl-IDBKeyRange-lowerBound-IDBKeyRange-any-lower-boolean-open', 'lowerBound()')}} | {{Spec2('IndexedDB')}} |              |
 
 ## Compatibilité des navigateurs
 

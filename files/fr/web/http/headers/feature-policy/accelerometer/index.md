@@ -1,43 +1,36 @@
 ---
 title: 'Feature-Policy: accelerometer'
 slug: Web/HTTP/Headers/Feature-Policy/accelerometer
-tags:
-  - Accéléromètre
-  - Directive
-  - Feature Policy
-  - Feature-Policy
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Headers/Feature-Policy/accelerometer
+browser-compat: http.headers.Feature-Policy.accelerometer
 ---
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
-La directive `accelerometer` de l'en-tête HTTP {{HTTPHeader('Feature-Policy')}} contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface {{domxref('Accelerometer')}}.
+La directive `accelerometer` de l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Feature-Policy) contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface [`Accelerometer`](/fr/docs/Web/API/Accelerometer).
 
 ## Syntaxe
 
-    Feature-Policy: accelerometer <listePermissions>;
+```http
+Feature-Policy: accelerometer <allowlist>;
+```
 
-- \<listePermissions>
-  - : {{page('fr/Web/HTTP/Feature_Policy/Using_Feature_Policy', 'allowlist')}}
+- `<allowlist>`
+  - : Une liste d'origines pour lesquelles la fonctionnalité est autorisée. Voir [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Feature-Policy#syntaxe).
 
-## Valeur par défaut
+## Règle par défaut
 
-La valeur par défaut est `'self'`.
+Pour cette fonctionnalité, la valeur par défaut pour `allowlist` est `'self'`.
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaire          |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('Feature Policy')}}                                                         | {{Spec2('Feature Policy')}} | Définition initiale. |
-| {{SpecName('Accelerometer','#accelerometer-interface','Accelerometer')}} | {{Spec2('Accelerometer')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat('http.headers.Feature-Policy.accelerometer')}}
+{{Compat}}
 
 ## Voir aussi
 
-- en-tête {{HTTPHeader('Feature-Policy')}}
-- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
-- [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- L'en-tête [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Feature-Policy)
+- [Règles de gestion pour les fonctionnalités (<i lang="en">Feature Policy</i>)](/fr/docs/Web/HTTP/Feature_Policy)
+- [Utiliser `Feature-Policy`](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

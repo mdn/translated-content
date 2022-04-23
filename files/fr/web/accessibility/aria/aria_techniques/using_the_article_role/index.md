@@ -34,17 +34,17 @@ Les technologies d'assistance **doivent** fournit une fonctionnalité permettant
 ```html
 <div role="article">
 
-  <h1>Une titre de billet de blog</h1>
-  <p>contenu du billet...</p>
+  <h1>Une titre de billet de blog</h1>
+  <p>contenu du billet...</p>
 
-  <div class="comments">
-    <div role="article">
-      <p>Un premier commentaire</p>
-    </div>
-    <div role="article">
-      <p>Un deuxième commentaire</p>
-    </div>
-  </div>
+  <div class="comments">
+    <div role="article">
+      <p>Un premier commentaire</p>
+    </div>
+    <div role="article">
+      <p>Un deuxième commentaire</p>
+    </div>
+  </div>
 
 </div>
 ```

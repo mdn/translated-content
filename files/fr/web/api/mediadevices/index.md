@@ -22,7 +22,7 @@ L'interface **`MediaDevices`** permet d'accéder aux périphériques d'entrée m
 
 _Hérite des propriétés de son interface parente, {{domxref("EventTarget")}}._
 
-## Événéments
+## Évènements
 
 - {{domxref("MediaDevices/devicechange_event", "devicechange")}}
   - : Déclenché lorsqu'un périphérique d'entrée ou de sortie multimédia est connecté ou retiré de l'ordinateur de l'utilisateur.

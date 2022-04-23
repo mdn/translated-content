@@ -5,18 +5,18 @@ translation_of: Web/HTTP/Headers/Location
 ---
 {{HTTPSidebar}}
 
-L'en-tête de réponse `Location` indique l'URL vers laquelle rediriger une page. Il a un sens seulement lorsqu'il est servi avec une réponse d'état `3xx` (redirection) ou `201` (créé).
+L'en-tête de réponse `Location` indique l'URL vers laquelle rediriger une page. Il a un sens seulement lorsqu'il est servi avec une réponse d'état `3xx` (redirection) ou `201` (créé).
 
-En cas de redirection, la méthode HTTP utilisée pour la nouvelle requête de récupération de la page pointée par `Location` dépend la méthode d'origine et du type de redirection :
+En cas de redirection, la méthode HTTP utilisée pour la nouvelle requête de récupération de la page pointée par `Location` dépend la méthode d'origine et du type de redirection :
 
-- Si les réponses {{HTTPStatus("303")}} (Voir Aussi) conduisent toujours à l'utilisation d'une méthode {{HTTPMethod("GET")}}, {{HTTPStatus("307")}} (Redirection Temporaire) et {{HTTPStatus("308")}} (Redirection Permanente) ne modifient pas la méthode utilisée dans la demande d'origine;
-- {{HTTPStatus("301")}} (Redirection permanente) et {{HTTPStatus("302")}} (Trouvé) ne change pas la méthode la plupart du temps, bien que les user-agents plus anciens puissent.
+- Si les réponses {{HTTPStatus("303")}} (Voir Aussi) conduisent toujours à l'utilisation d'une méthode {{HTTPMethod("GET")}}, {{HTTPStatus("307")}} (Redirection Temporaire) et {{HTTPStatus("308")}} (Redirection Permanente) ne modifient pas la méthode utilisée dans la demande d'origine;
+- {{HTTPStatus("301")}} (Redirection permanente) et {{HTTPStatus("302")}} (Trouvé) ne change pas la méthode la plupart du temps, bien que les user-agents plus anciens puissent.
 
 Toutes les réponses avec l'un de ces codes d'état envoient un en-tête `Location`.
 
 En cas de création de ressource, il indique l'URL de la ressource nouvellement créée.
 
-`Location` et {{HTTPHeader("Content-Location")}} sont différents : `Location` indique la cible d'une redirection (ou l'URL d'une ressource nouvellement créée), tandis que {{HTTPHeader("Content-Location")}} indique l'URL directe à utiliser pour accéder à la ressource lorsque la négociation de contenu a eu lieu, sans qu'il soit nécessaire de poursuivre la négociation de contenu. L'emplacement est un en-tête associé à la réponse, tandis que {{HTTPHeader("Content-Location")}} est associé à l'entité renvoyée.
+`Location` et {{HTTPHeader("Content-Location")}} sont différents : `Location` indique la cible d'une redirection (ou l'URL d'une ressource nouvellement créée), tandis que {{HTTPHeader("Content-Location")}} indique l'URL directe à utiliser pour accéder à la ressource lorsque la négociation de contenu a eu lieu, sans qu'il soit nécessaire de poursuivre la négociation de contenu. L'emplacement est un en-tête associé à la réponse, tandis que {{HTTPHeader("Content-Location")}} est associé à l'entité renvoyée.
 
 <table class="properties">
   <tbody>

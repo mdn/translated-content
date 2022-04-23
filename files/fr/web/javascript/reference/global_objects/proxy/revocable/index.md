@@ -61,7 +61,7 @@ typeof proxy             // "object", typeof ne déclenche aucune trappe
 | Spécification                                                                                            | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-proxy.revocable', 'Proxy Revocation Functions')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy.revocable', 'Proxy Revocation Functions')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-proxy.revocable', 'Proxy Revocation Functions')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

@@ -39,7 +39,7 @@ Un entier correctement représentable en JavaScript :
 - peut exactement être représenté avec un nombre à précision double selon IEEE-754
 - la réprésentation IEEE-754 du nombre ne permet pas de l'arrondir à un autre entier pouvant être représenté avec le format décrit par IEEE-754.
 
-Ainsi, par exemple, `2^53 - 1` peut être représenté correctement, aucun autre entier ne peut être arrondi en cette valeur selon IEEE-754. En revanche, `2^53` ne peut pas être représenté correctement car `2^53 + 1` sera arrondi en `2^53` selon les règles IEEE-754 (arrondi à l'entier le plus proche).
+Ainsi, par exemple, `2^53 - 1` peut être représenté correctement, aucun autre entier ne peut être arrondi en cette valeur selon IEEE-754. En revanche, `2^53` ne peut pas être représenté correctement car `2^53 + 1` sera arrondi en `2^53` selon les règles IEEE-754 (arrondi à l'entier le plus proche).
 
 L'intervalle des entiers qui peuvent être correctement représentés est `[-(2^53 - 1),2^53 - 1` ].
 

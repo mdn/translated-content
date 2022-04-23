@@ -14,14 +14,14 @@ original_slug: Web/JavaScript/Reference/Classes/Class_fields
 >
 > Les déclarations de champs, tant publics que privés, sont [une fonctionnalité expérimentale (étape 3)](https://github.com/tc39/proposal-class-fields) proposée au [TC39](https://tc39.github.io/beta/), le comité des standards JavaScript.
 >
-> La prise en charge dans les navigateurs est limitée, mais cette fonctionnalité peut être utilisée à travers une étape de contruction avec des systèmes tels que [Babel](https://babeljs.io/). Voir [l'information de compatibilité](/fr/docs/Web/JavaScript/Reference/Classes/Class_fields$edit#Browser_compatibility) ci-dessous.
+> La prise en charge dans les navigateurs est limitée, mais cette fonctionnalité peut être utilisée à travers une étape de contruction avec des systèmes tels que [Babel](https://babeljs.io/). Voir [l'information de compatibilité](/fr/docs/Web/JavaScript/Reference/Classes/Class_fields$edit#Browser_compatibility) ci-dessous.
 
 Les champs publics, tant statiques que d'instance, sont des propriétés qui peuvent être écrites, et qui sont énumérables et configurables. En tant que telles, à la différence de leurs contreparties privées, elles participent à l'héritage du prototype.
 
 ## Syntaxe
 
     class ClasseAvecChampDInstance {
-      champDInstance = 'champ d\'instance'
+      champDInstance = 'champ d\'instance'
     }
 
     class ClasseAvecChampStatique {
@@ -29,9 +29,9 @@ Les champs publics, tant statiques que d'instance, sont des propriétés qui peu
     }
 
     class ClasseAvecMethodeDInstancePublique {
-      methodePublique() {
-        return 'hello world'
-      }
+      methodePublique() {
+        return 'hello world'
+      }
     }
 
 ## Exemples
@@ -44,18 +44,18 @@ Les champs statiques publics sont déclarés en utilisant le mot-clé `static`. 
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatique = 'champ statique'
+  static champStatique = 'champ statique'
 }
 
 console.log(ClasseAvecChampStatique.champStatique)
-// affichage attendu : "champ statique"​
+// affichage attendu : "champ statique"
 ```
 
 Les champs sans initialiseur sont initialisés à `undefined`.
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatique
+  static champStatique
 }
 
 console.assert(ClasseAvecChampStatique.hasOwnProperty('champStatique'))
@@ -67,11 +67,11 @@ Les champs statiques publics ne sont pas réinitialisés dans les sous-classes, 
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatiqueDeBase = 'champ de base'
+  static champStatiqueDeBase = 'champ de base'
 }
 
 class SousClasseAvecChampStatique extends ClasseAvecChampStatique {
-  static sousChampStatique = 'champ de la sous-classe'
+  static sousChampStatique = 'champ de la sous-classe'
 }
 
 console.log(SousClasseAvecChampStatique.sousChampStatique)
@@ -85,14 +85,14 @@ Lors de l'initialisation des champs, `this` fait référence au constructeur de 
 
 ```js
 class ClasseAvecChampStatique {
-  static champStatiqueDeBase = 'champ statique de base'
-  static autreChampStatiqueDeBase = this.champStatiqueDeBase
+  static champStatiqueDeBase = 'champ statique de base'
+  static autreChampStatiqueDeBase = this.champStatiqueDeBase
 
-  static methodeStatiqueDeBase() { return 'affichage de la méthode statique de base' }
+  static methodeStatiqueDeBase() { return 'affichage de la méthode statique de base' }
 }
 
 class SousClasseAvecChampStatique extends ClasseAvecChampStatique {
-  static sousChampStatique = super.methodeStatiqueDeBase()
+  static sousChampStatique = super.methodeStatiqueDeBase()
 }
 
 console.log(ClasseAvecChampStatique.autreChampStatiqueDeBase)
@@ -122,7 +122,7 @@ Les champs sans initialiseur sont initialisés à `undefined`.
 
 ```js
 class ClasseAvecChampDInstance {
-  champdDInstance
+  champdDInstance
 }
 
 const instance = new ClasseAvecChampDInstance()
@@ -137,7 +137,7 @@ console.log(instance.champDInstance);
 const PREFIXE = 'prefixe';
 
 class ClasseAvecNomDeChampCalcule {
-    [`${PREFIXE}Champ`] = 'champ préfixé'
+    [`${PREFIXE}Champ`] = 'champ préfixé'
 }
 
 const instance = new ClasseAvecNomDeChampCalcule()
@@ -149,13 +149,13 @@ Lors de l'initialisation des champs, `this` fait référence à l'instance en co
 
 ```js
 class ClasseAvecChampDInstance {
-  champDInstanceDeBase = 'champ de base'
-  autreChampDInstanceDeBase = this.champDInstanceDeBase
-  methodeDInstanceDeBase() { return 'affichage de la méthode de base' }
+  champDInstanceDeBase = 'champ de base'
+  autreChampDInstanceDeBase = this.champDInstanceDeBase
+  methodeDInstanceDeBase() { return 'affichage de la méthode de base' }
 }
 
 class SousClasseAvecChampDInstance extends ClasseAvecChampDInstance {
-  sousChampDInstance = super.methodeDInstanceDeBase()
+  sousChampDInstance = super.methodeDInstanceDeBase()
 }
 
 const base = new ClasseAvecChampDInstance()
@@ -200,7 +200,7 @@ class ClasseAvecMethodeDInstancePublique {
 
 const instance = new ClasseAvecMethodeDInstancePublique()
 console.log(instance.methodePublique())
-// affichage attendu : "hello worl​d"
+// affichage attendu : "hello world"
 ```
 
 Les méthodes d'instance publiques sont ajoutées au prototype au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Elles peuvent être écrites, ne sont pas énumérables et sont configurables.
@@ -219,39 +219,39 @@ A l'intérieur des méthodes d'instance, `this` fait référence à l'instance e
 
 ```js
 class ClasseDeBase {
-  msg = 'hello world'
-  methodePubliqueDeBase() {
-    return this.msg
-  }
+  msg = 'hello world'
+  methodePubliqueDeBase() {
+    return this.msg
+  }
 }
 
 class SousClasse extends ClasseDeBase {
-  sousMethodePublique() {
-    return super.methodePubliqueDeBase()
-  }
+  sousMethodePublique() {
+    return super.methodePubliqueDeBase()
+  }
 }
 
 const instance = new SousClasse()
 console.log(instance.sousMethodePublique())
-// affichage attendu : "hello worl​d"
+// affichage attendu : "hello world"
 ```
 
 Les accesseurs et les mutateurs sont des méthodes spéciales qui sont liées à une propriété de classe, et sont appelées lorsqu'on accède à cette propriété ou qu'on la définit. Utilisez la syntaxe [get](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/get) et [set](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/set) pour déclarer un accesseur ou un mutateur publique d'une instance.
 
 ```js
 class ClasseAvecGetSet {
-  #msg = 'hello world'
-  get msg() {
-    return this.#msg
-  }
-  set msg(x) {
-    this.#msg = `hello ${x}`
-  }
+  #msg = 'hello world'
+  get msg() {
+    return this.#msg
+  }
+  set msg(x) {
+    this.#msg = `hello ${x}`
+  }
 }
 
 const instance = new ClasseAvecGetSet();
 console.log(instance.msg);
-// affichage attendu : "hello worl​d"
+// affichage attendu : "hello world"
 
 instance.msg = 'gâteau';
 console.log(instance.msg);

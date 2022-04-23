@@ -34,7 +34,7 @@ L'instruction **`for`** crée une boucle composée de trois expressions optionne
 
 ### Utiliser `for`
 
-L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initialisant à 0. Elle vérifie que `i` est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente `i` de 1, ce qui sera fait à chaque passage dans la boucle.
+L'instruction `for` qui suit débute en déclarant la variable `i` et en l'initialisant à 0. Elle vérifie que `i` est inférieur (strictement) à 9 et exécute ensuite les deux instructions contenues dans la boucle, ensuite elle incrémente `i` de 1, ce qui sera fait à chaque passage dans la boucle.
 
 ```js
 for (var i = 0; i < 9; i++) {
@@ -99,10 +99,10 @@ function showOffsetPos (sId) {
 
 | Spécification                                                                        | État                         | Commentaires        |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ESDraft', '#sec-for-statement', 'for statement')}} | {{Spec2('ESDraft')}} |                     |
-| {{SpecName('ES6', '#sec-for-statement', 'instruction for')}}     | {{Spec2('ES6')}}         |                     |
-| {{SpecName('ES5.1', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES5.1')}}     |                     |
-| {{SpecName('ES3', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES3')}}         |                     |
+| {{SpecName('ESDraft', '#sec-for-statement', 'for statement')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ES6', '#sec-for-statement', 'instruction for')}}     | {{Spec2('ES6')}}         |                     |
+| {{SpecName('ES5.1', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES5.1')}}     |                     |
+| {{SpecName('ES3', '#sec-12.6.3', 'instruction for')}}             | {{Spec2('ES3')}}         |                     |
 | {{SpecName('ES1', '#sec-12.6.2', 'instruction for')}}             | {{Spec2('ES1')}}         | Définition initiale |
 
 ## Compatibilité des navigateurs

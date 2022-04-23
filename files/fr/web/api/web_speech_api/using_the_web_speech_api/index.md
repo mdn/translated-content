@@ -18,13 +18,13 @@ L'API Web Speech fournit deux fonctionnalités différentes — la reconnaissanc
 
 La reconnaissance vocale implique de recevoir de la voix à travers un dispositif de capture du son, tel qu'un microphone, qui est ensuite vérifiée par un service de reconnaissance vocale utilisant une "grammaire" (le vocabulaire que vous voulez faire reconnaître par une application donnée). Quand un mot ou une phrase sont reconnus avec succès, ils sont retournés comme résultat (ou une liste de résultats) sous la forme d'une chaîne de caractères, et d'autres actions peuvent être initiées à la suite de ce résultat.
 
-L'API Web Speech a une interface principale de contrôle  — {{domxref("SpeechRecognition")}} — plus un nombre d'interfaces inter-reliées pour représenter une grammaire, des résultats, etc. Généralement, le système de reconnaissance vocale par défaut disponible sur le dispositif matériel sera utilisé pour la reconnaissance vocale  — la plupart des systèmes d'exploitation modernes ont un système de reonnaissance vocale pour transmettre des commandes vocales. On pense à Dictation sur macOS, Siri sur iOS, Cortana sur Windows 10, Android Speech, etc.
+L'API Web Speech a une interface principale de contrôle  — {{domxref("SpeechRecognition")}} — plus un nombre d'interfaces inter-reliées pour représenter une grammaire, des résultats, etc. Généralement, le système de reconnaissance vocale par défaut disponible sur le dispositif matériel sera utilisé pour la reconnaissance vocale  — la plupart des systèmes d'exploitation modernes ont un système de reonnaissance vocale pour transmettre des commandes vocales. On pense à Dictation sur macOS, Siri sur iOS, Cortana sur Windows 10, Android Speech, etc.
 
 > **Note :** Sur certains navigateurs, comme Chrome, utiliser la reconnaissance vocale sur une page web implique de disposer d'un moteur de reconnaissance basé sur un serveur. Votre flux audio est envoyé à un service web pour traitement, le moteur ne fonctionnera donc pas hors ligne.
 
 ### Demo
 
-Pour montrer une simple utilisation de la reconnaissance vocale Web speech, nous avons écrit une demo appelée  [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer). Quand l'écran est touché ou cliqué, vous pouvez dire un mot clé de couleur HTML et la couleur d'arrière plan de l'application sera modifié par la couleur choisie.
+Pour montrer une simple utilisation de la reconnaissance vocale Web speech, nous avons écrit une demo appelée  [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer). Quand l'écran est touché ou cliqué, vous pouvez dire un mot clé de couleur HTML et la couleur d'arrière plan de l'application sera modifié par la couleur choisie.
 
 Pour lancer la demo, vous pouvez cloner (ou [directement télécharger](https://github.com/mdn/web-speech-api/archive/master.zip)) le dépôt Github dont elle fait partie, ouvrir le fichier d'index HTML dans un navigateur pour ordinateur de bureau le supportant comme Chrome, ou naviguer vers [l'URL de démonstration live](https://mdn.github.io/web-speech-api/speech-color-changer/), sur un navigateur pour mobile le supportant comme Chrome.
 
@@ -134,10 +134,10 @@ Once the speech recognition is started, there are many event handlers that can b
 
 ```js
 recognition.onresult = function(event) {
-  var color = event.results[0][0].transcript;
-  diagnostic.textContent = 'Result received: ' + color + '.';
-  bg.style.backgroundColor = color;
-  console.log('Confidence: ' + event.results[0][0].confidence);
+  var color = event.results[0][0].transcript;
+  diagnostic.textContent = 'Result received: ' + color + '.';
+  bg.style.backgroundColor = color;
+  console.log('Confidence: ' + event.results[0][0].confidence);
 }
 ```
 
@@ -179,13 +179,13 @@ The Web Speech API has a main controller interface for this — {{domxref("Speec
 
 To show simple usage of Web speech synthesis, we've provided a demo called [Speak easy synthesis](https://mdn.github.io/web-speech-api/speak-easy-synthesis/). This includes a set of form controls for entering text to be synthesised, and setting the pitch, rate, and voice to use when the text is uttered. After you have entered your text, you can press <kbd>Enter</kbd>/<kbd>Return</kbd> to hear it spoken.
 
-To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
+To run the demo, you can clone (or [directly download](https://github.com/mdn/web-speech-api/archive/master.zip)) the Github repo it is part of, open the HTML index file in a supporting desktop browser, or navigate to the [live demo URL](https://mdn.github.io/web-speech-api/speak-easy-synthesis/) in a supporting mobile browser like Chrome, or Firefox OS.
 
 ### Browser support
 
 Support for Web Speech API speech synthesis is still getting there across mainstream browsers, and is currently limited to the following:
 
-- Firefox desktop and mobile support it in Gecko 42+ (Windows)/44+, without prefixes, and it can be turned on by flipping the `media.webspeech.synth.enabled` flag to `true` in `about:config`.
+- Firefox desktop and mobile support it in Gecko 42+ (Windows)/44+, without prefixes, and it can be turned on by flipping the `media.webspeech.synth.enabled` flag to `true` in `about:config`.
 - Firefox OS 2.5+ supports it, by default, and without the need for any permissions.
 - Chrome for Desktop and Android have supported it since around version 33, without prefixes.
 

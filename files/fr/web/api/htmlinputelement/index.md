@@ -571,7 +571,7 @@ The **`HTMLInputElement`** interface provides special properties and methods for
         <code><em>string</em></code
         ><em>:</em> <strong>Returns / Sets</strong> the element's
         {{ htmlattrxref("step", "input") }} attribute, which works
-        with<strong> </strong>{{htmlattrxref("min","input")}} and
+        with {{htmlattrxref("min","input")}} and
         {{htmlattrxref("max","input")}} to limit the increments at
         which a numeric or date-time value can be set. It can be the string
         <code>any</code> or a positive floating point number. If this is not set

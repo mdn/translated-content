@@ -226,7 +226,7 @@ if __name__ == "__main__":
 <p>以上代码中引用的两个模板如下：</p>
 
 <ul>
- <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html">form.html</a>: 与我们在{{anch("The POST method")}}小节中看到的相同的表单，但是将<code>action</code>设置为<code>\{{ url_for('hello') }}</code>。(这是一个<a href="http://jinja.pocoo.org/docs/2.9/">Jinja2</a>模板，它基本上是HTML，但是可以包含对运行包含在花括号中的web服务器的Python代码的调用。<code>url_for('hello')</code>基本上是在“提交表单时重定向到<code>/hello</code>”。</li>
+ <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html">form.html</a>: 与我们在 <a href="#post_方法">POST 方法</a> 小节中看到的相同的表单，但是将<code>action</code>设置为<code>\{{ url_for('hello') }}</code>。(这是一个<a href="http://jinja.pocoo.org/docs/2.9/">Jinja2</a>模板，它基本上是HTML，但是可以包含对运行包含在花括号中的web服务器的Python代码的调用。<code>url_for('hello')</code>基本上是在“提交表单时重定向到<code>/hello</code>”。</li>
  <li><a href="https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html">greeting.html</a>: 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。<br>
   这是通过前面所见的<code>hello()</code>函数完成的，该函数在<code>/hello</code>URL被导向时运行。</li>
 </ul>

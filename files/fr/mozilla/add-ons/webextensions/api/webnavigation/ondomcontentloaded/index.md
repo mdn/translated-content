@@ -49,7 +49,7 @@ Les événements ont trois fonctions :
       - : [`object`](#details). Détails sur l'événement de navigation
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets  {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans un tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
 
 ## Objets supplémentaires
 
@@ -60,7 +60,7 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. L'URL à laquelle le cadre donné a navigué.
 - `processId`
-  - : `integer`.  L'ID du processus dans lequel cet onglet est rendu.
+  - : `integer`.  L'ID du processus dans lequel cet onglet est rendu.
 - `frameId`
   - : `integer`. Frame dans lequel la navigation est en cours. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation se déroule dans un iframe imbriqué. Les ID _frames_ sont uniques pour un onglet et un processus donnés.
 - `timeStamp`

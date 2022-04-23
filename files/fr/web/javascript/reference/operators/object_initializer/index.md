@@ -287,7 +287,7 @@ La notation utilisant un littéral objet n'est pas identique à celle utilisée 
 | {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}         | Définition initiale.                                                                                                                                       |
 | {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | [Ajout des _getter_ et](/fr/docs/Web/JavaScript/Reference/Functions/get) _[setter](/fr/docs/Web/JavaScript/Reference/Functions/set)_ (accesseur/mutateur). |
 | {{SpecName('ES2015', '#sec-object-initializer', 'Object Initializer')}} | {{Spec2('ES2015')}}     | Ajout des raccourcis pour les noms de méthodes et propriétés et des noms de propriétés calculés.                                                           |
-| {{SpecName('ESDraft', '#sec-object-initializer', 'Object Initializer')}} | {{Spec2('ESDraft')}} |                                                                                                                                                            |
+| {{SpecName('ESDraft', '#sec-object-initializer', 'Object Initializer')}} | {{Spec2('ESDraft')}} |                                                                                                                                                            |
 
 ## Compatibilité des navigateurs
 

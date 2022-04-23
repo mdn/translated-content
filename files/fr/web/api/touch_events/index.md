@@ -27,7 +27,7 @@ Afin de fournir un support de qualité pour les interfaces tactiles, les événe
 - {{ domxref("TouchList") }}
   - : Représente un groupe de plusieurs interactions tactiles. Cela peut par exemple être le cas quand l'utilisateur utilise plusieurs doigts pour toucher simultanément la même surface.
 - {{ domxref("DocumentTouch") }}
-  - : Contient des méthodes permettant de créer les objets  {{ domxref("Touch") }} et {{ domxref("TouchList") }}.
+  - : Contient des méthodes permettant de créer les objets  {{ domxref("Touch") }} et {{ domxref("TouchList") }}.
 
 ## Exemple
 
@@ -198,7 +198,7 @@ Cette section fournit quelques astuces supplémentaires pour gérer les événem
 
 ### Gérer les clics
 
-Étant donné que l'appel de la méthode `preventDefault()` sur l'événement  `touchstart` ou le premier événement `touchmove` de la série empêche la saisie d'événements en provenance de la souris, on appelle souvent  `preventDefault()` sur `touchmove` plutôt que sur `touchstart`. Ainsi, les événements de la souris peuvent continuer à se déclencher et le reste du site fonctionnera de manière habituelle. Une autre méthode parfois utilisée est de déclencher des événements de souris à partir des événements tactiles. (L'exemple qui suit représente seulement une indication. La logique a été simplifiée et ce code, tel quel, aura un comportement étrange.)
+Étant donné que l'appel de la méthode `preventDefault()` sur l'événement  `touchstart` ou le premier événement `touchmove` de la série empêche la saisie d'événements en provenance de la souris, on appelle souvent  `preventDefault()` sur `touchmove` plutôt que sur `touchstart`. Ainsi, les événements de la souris peuvent continuer à se déclencher et le reste du site fonctionnera de manière habituelle. Une autre méthode parfois utilisée est de déclencher des événements de souris à partir des événements tactiles. (L'exemple qui suit représente seulement une indication. La logique a été simplifiée et ce code, tel quel, aura un comportement étrange.)
 
 ```js
 function onTouch(evt) {

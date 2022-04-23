@@ -48,7 +48,7 @@ Un nombre représentant le nombre de millisecondes écoulées entre la date indi
 
 La méthode `UTC` prend des paramètres de date et d'heure séparés par des virgules et renvoie le nombre de millièmes de seconde entre le 1er janvier 1970, 00:00:00, temps universel et la date et l'heure spécifiées.
 
-Il faut spécifier l'année entière pour le premier paramètre ; par exemple 1998. Si l'année spécifiée est entre 0 et 99, la méthode la convertira en une année du XXe siècle (1900 + année) ; par exemple si vous indiquez 95, l'année 1995 sera utilisée.
+Il faut spécifier l'année entière pour le premier paramètre&nbsp;; par exemple 1998. Si l'année spécifiée est entre 0 et 99, la méthode la convertira en une année du XXe siècle (1900 + année)&nbsp;; par exemple si vous indiquez 95, l'année 1995 sera utilisée.
 
 La méthode `UTC` diffère du constructeur {{jsxref("Date")}} pour deux raisons :
 
@@ -63,7 +63,7 @@ Comme `UTC` est une méthode statique de `Date`, on l'utilise toujours sous la f
 
 ### Utiliser `Date.UTC()`
 
-L'instruction qui suit crée un objet `Date` en utilisant l'heure UTC plutôt que l'heure locale :
+L'instruction qui suit crée un objet `Date` en utilisant l'heure UTC plutôt que l'heure locale&nbsp;:
 
 ```js
 var utcDate = new Date(Date.UTC(96, 11, 1, 0, 0, 0));

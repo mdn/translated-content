@@ -18,13 +18,13 @@ Cet article fournit un exemple intéressant concret d'utilisation de l'élément
 
 **[Ouvrir une nouvelle fenêtre](http://mdn.github.io/canvas-raycaster/)**
 
-## Pourquoi ?
+## Pourquoi&nbsp;?
 
 Après avoir réalisé, à mon plus grand plaisir, que le sympathique élément `<canvas>` dont j'avais [entendu parler (en)](http://www.whatwg.org/specs/web-apps/current-work/#dynamic), non seulement allait être supporté par Firefox, mais était **déjà** supporté dans la version actuelle de Safari, je me devais de tenter une petite expérience.
 
 La [présentation](/fr/docs/Web/API/Canvas_API) et le [tutoriel](/fr/docs/Web/API/Canvas_API/Tutorial) `canvas` que j'ai trouvé ici sur MDN sont excellents, mais personne n'a encore rien écrit sur l'animation. J'ai donc pensé porter un «&nbsp;raycaster&nbsp;» basique sur lequel j'avais travaillé il y a quelque temps, et voir quelle sorte de performance nous pouvions attendre d'un tampon de pixel écrit en JavaScript.
 
-## Comment ?
+## Comment&nbsp;?
 
 L'idée de base est d'employer {{domxref("window.setInterval","setInterval()")}} à intervalle régulier, correspondant au taux de trame désiré. Après chaque intervalle, une fonction de mise à jour redessine le canvas, affichant la vue actuelle. Je sais que j'aurais pu commencer avec un exemple plus simple, mais je suis sûr que le tutoriel canvas va [y conduire](/fr/docs/Tutoriel_canvas/Animations_basiques), et je voulais voir si je pouvais y arriver.
 

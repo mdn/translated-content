@@ -1,0 +1,70 @@
+---
+title: WindowEventHandlers.onbeforeprint
+slug: conflicting/Web/API/Window/beforeprint_event
+tags:
+  - API
+  - DOM
+  - Event Handler
+  - HTML DOM
+  - Reference
+  - onbeforeprint
+  - プロパティ
+  - 印刷
+translation_of: Web/API/WindowEventHandlers/onbeforeprint
+original_slug: Web/API/WindowEventHandlers/onbeforeprint
+---
+<div>{{ApiRef}}</div>
+
+<p>{{domxref("WindowEventHandlers")}} ミックスインの <strong><code>onbeforeprint</code></strong> プロパティは、現在のウィンドウの {{event("beforeprint")}} イベントを処理するための {{event("Event_handlers", "event handler")}} です。 このイベントは、印刷ダイアログウィンドウが開く前に発生します。</p>
+
+<p><code>beforeprint</code> イベントと {{event("afterprint")}} イベントを使用すると、印刷を開始する前にページでコンテンツを変更し（例えば、バナーを削除するなど）、印刷の完了後にそれらの変更を元に戻すことができます。 一般に、<code><a href="/ja/docs/Web/CSS/@media#メディア種別">@media print</a></code> CSS @-規則の使用を好むはずですが、場合によってはこれらのイベントを使用する必要があるかもしれません。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">window.addEventListener("beforeprint", function(event) { ... });
+window.onbeforeprint = function(event) { ... };
+</pre>
+
+<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+
+<p>Safari はこれらのイベントを実装していませんが、{{domxref("window.matchMedia")}}<code>('print')</code> を使用して <code>beforeprint</code> イベントと同等の結果を作成できます。</p>
+
+<pre class="brush: js">var mediaQueryList = window.matchMedia('print');
+mediaQueryList.addListener(function(mql) {
+  if(mql.matches) {
+    console.log('onbeforeprint に相当する webkit');
+  }
+});</pre>
+
+<h2 id="Specification" name="Specification">仕様</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">仕様</th>
+   <th scope="col">状態</th>
+   <th scope="col">コメント</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#handler-window-onbeforeprint', 'onbeforeprint')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+
+
+
+<p>{{Compat("api.WindowEventHandlers.onbeforeprint")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li>{{domxref("Window.print()")}}</li>
+ <li>{{domxref("WindowEventHandlers.onafterprint")}}</li>
+ <li><a href="/ja/docs/Web/Guide/Printing">印刷</a></li>
+</ul>

@@ -19,19 +19,19 @@ original_slug: Learn/JavaScript/First_steps/methode_chaine_utile
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées : trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.
+À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées&nbsp;: trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.
 
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Vocabulaire courant de l'informatique, bases de HTML et CSS,
         compréhension de ce que fait JavaScript.
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>
         Comprendre que les chaînes de caractères sont des objets, et apprendre à
         utiliser certaines méthodes basiques disponibles sur ces objets pour
@@ -49,9 +49,9 @@ Nous l'avons déjà dit, et nous le redirons — _tout_ est objet en JavaScript.
 let string = 'Ceci est une chaîne';
 ```
 
-votre variable devient une instance de l'objet `String`, et par conséquent possède un grand nombre de propriétés et de méthodes associées. Allez sur la page de l'objet {{jsxref("String")}} et regardez la liste sur le côté de la page !
+votre variable devient une instance de l'objet `String`, et par conséquent possède un grand nombre de propriétés et de méthodes associées. Allez sur la page de l'objet {{jsxref("String")}} et regardez la liste sur le côté de la page&nbsp;!
 
-**Avant que votre cervelle ne commence à bouillir, pas de panique !** Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous en utiliserez certaines assez souvent. Nous allons les voir maintenant.
+**Avant que votre cervelle ne commence à bouillir, pas de panique !** Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous en utiliserez certaines assez souvent. Nous allons les voir maintenant.
 
 Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés, ou utiliser la [console de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
 
@@ -163,50 +163,50 @@ Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous 
 
 ### Trouver la longueur d'une chaîne
 
-C'est facile — il suffit d'utiliser la propriété {{jsxref("String.prototype.length", "length")}}. Entrez ceci :
+C'est facile — il suffit d'utiliser la propriété {{jsxref("String.prototype.length", "length")}}. Entrez ceci&nbsp;:
 
 ```js
 let browserType = 'mozilla';
 browserType.length;
 ```
 
-Cette commande doit renvoyer le nombre 7, parce que « mozilla » comporte 7 caractères. C'est utile pour de nombreuses raisons ; par exemple, vous pourriez avoir besoin de trouver les longueurs d'une série de noms pour les afficher par taille ou faire savoir à un utilisateur qu'il a entré un nom trop long dans un champ de formulaire à partir du moment où il dépasse une certaine taille.
+Cette commande doit renvoyer le nombre 7, parce que «&nbsp;mozilla&nbsp;» comporte 7 caractères. C'est utile pour de nombreuses raisons ; par exemple, vous pourriez avoir besoin de trouver les longueurs d'une série de noms pour les afficher par taille ou faire savoir à un utilisateur qu'il a entré un nom trop long dans un champ de formulaire à partir du moment où il dépasse une certaine taille.
 
 ### Retrouver un caractère donné dans une chaîne
 
-Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver ; par exemple, pour retrouver le premier caractère, vous devez  écrire ceci :
+Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver&nbsp;; par exemple, pour retrouver le premier caractère, vous devez écrire ceci&nbsp;:
 
 ```js
 browserType[0];
 ```
 
-Les ordinateurs décomptent à partir de 0, pas de 1 ! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit ; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut :
+Les ordinateurs décomptent à partir de 0, pas de 1&nbsp;! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit&nbsp;; elle combine cette technique avec la propriété `length`  que nous avons vue plus haut&nbsp;:
 
 ```js
 browserType[browserType.length-1];
 ```
 
-La longueur de « mozilla » est de 7 caractères, mais comme le décompte se fait à partir de 0, la position du caractère est 6, d'où la nécessité d'écrire `length-1`. Vous pourrez utiliser cette propriété pour, par exemple, trouver la première lettre d'une série de chaînes et les trier alphabétiquement.
+La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le décompte se fait à partir de 0, la position du caractère est 6, d'où la nécessité d'écrire `length-1`. Vous pourrez utiliser cette propriété pour, par exemple, trouver la première lettre d'une série de chaînes et les trier alphabétiquement.
 
 ### Trouver une sous-chaîne à l'intérieur d'une chaîne et l'extraire
 
-1.  Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire ; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez :
+1.  Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire&nbsp;; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez&nbsp;:
 
     ```js
     browserType.indexOf('zilla');
     ```
 
-    La commande donne 2 comme résultat, car la sous-chaîne « zilla » commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans « mozilla ». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent « mozilla ».
+    La commande donne 2 comme résultat, car la sous-chaîne «&nbsp;zilla&nbsp;» commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans «&nbsp;mozilla&nbsp;». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent «&nbsp;mozilla ».
 
-2.  On peut faire cela autrement, peut-être plus efficacement encore. Écrivez :
+2.  On peut faire cela autrement, peut-être plus efficacement encore. Écrivez&nbsp;:
 
     ```js
     browserType.indexOf('vanilla');
     ```
 
-    Cela doit vous donner `-1` comme résultat — renvoyé quand la sous-chaîne, en l'occurence « vanilla », n'est pas trouvée dans la chaîne principale.
+    Cela doit vous donner `-1` comme résultat — renvoyé quand la sous-chaîne, en l'occurence «&nbsp;vanilla&nbsp;», n'est pas trouvée dans la chaîne principale.
 
-    Vous pouvez utiliser cette propriété pour trouver tous les cas de chaînes **ne** **contenant** **pas** la sous-chaîne « mozilla », ou bien **la contenant**, si vous utilisez l'opérateur négation logique, tel que montré ci-dessous. Vous pourriez faire quelque chose comme :
+    Vous pouvez utiliser cette propriété pour trouver tous les cas de chaînes **ne** **contenant** **pas** la sous-chaîne «&nbsp;mozilla&nbsp;», ou bien **la contenant**, si vous utilisez l'opérateur négation logique, tel que montré ci-dessous. Vous pourriez faire quelque chose comme :
 
     ```js
     if(browserType.indexOf('mozilla') !== -1) {
@@ -214,23 +214,23 @@ La longueur de « mozilla » est de 7 caractères, mais comme le décompte s
     }
     ```
 
-3.  Lorsque vous savez où la sous-chaîne commence à l'intérieur de la chaîne, et savez à quel caractère elle prend fin, vous pouvez utiliser {{jsxref("String.prototype.slice()", "slice()")}} pour l'extraire. Voyez ce code :
+3.  Lorsque vous savez où la sous-chaîne commence à l'intérieur de la chaîne, et savez à quel caractère elle prend fin, vous pouvez utiliser {{jsxref("String.prototype.slice()", "slice()")}} pour l'extraire. Voyez ce code&nbsp;:
 
     ```js
     browserType.slice(0,3);
     ```
 
-    Il renvoie « moz » — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
+    Il renvoie «&nbsp;moz&nbsp;» — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
 
-4.  Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre ! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande :
+4.  Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre&nbsp;! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande&nbsp;:
 
     ```js
     browserType.slice(2);
     ```
 
-    Elle renvoie « zilla » — le caractère à la position 2 est « z » et comme nous n'avons pas mis de second paramètre, la sous-chaîne retournée comporte tous les caractères restants de la chaîne.
+    Elle renvoie «&nbsp;zilla&nbsp;» — le caractère à la position 2 est «&nbsp;z&nbsp;» et comme nous n'avons pas mis de second paramètre, la sous-chaîne retournée comporte tous les caractères restants de la chaîne.
 
-> **Note :** Le second paramètre de `slice()` est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.
+> **Note :** Le second paramètre de `slice()` est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.
 
 ### Changer la casse
 
@@ -254,13 +254,13 @@ La méthode prend deux paramètres — la chaîne que vous voulez remplacer et l
 browserType.replace('moz','van');
 ```
 
-À noter : pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire : `browserType = browserType.replace('moz','van');`.
+À noter&nbsp;: pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire&nbsp;: `browserType = browserType.replace('moz','van');`.
 
 ## Apprendre en pratiquant
 
-Dans cette section, vous allez pouvoir vous entraîner à écrire du code de manipulation de chaîne. Dans chacun des exercices ci-dessous, nous avons un tableau de chaînes, une boucle qui traîte chaque valeur dans le tableau et l'affiche dans une liste à puces. Vous n'avez pas besoin de comprendre comment fonctionnent les tableaux ou les boucles dès maintenant — cela vous sera expliqué dans de prochains articles. Tout ce dont vous avez besoin dans chaque cas est d'écrire le code qui va renvoyer les chaînes dans le format souhaité.
+Dans cette section, vous allez pouvoir vous entraîner à écrire du code de manipulation de chaîne. Dans chacun des exercices ci-dessous, nous avons un tableau de chaînes, une boucle qui traîte chaque valeur dans le tableau et l'affiche dans une liste à puces. Vous n'avez pas besoin de comprendre comment fonctionnent les tableaux ou les boucles dès maintenant — cela vous sera expliqué dans de prochains articles. Tout ce dont vous avez besoin dans chaque cas est d'écrire le code qui va renvoyer les chaînes dans le format souhaité.
 
-Chaque exemple est accompagné d'un bouton « Réinitialiser », que vous pouvez utiliser pour réinitialiser le code si vous faites une erreur et que vous ne parvenez pas à la corriger, et un bouton « Montrer la solution » sur lequel vous pouvez cliquer pour afficher une réponse possible si jamais vous êtes vraiment bloqué.
+Chaque exemple est accompagné d'un bouton «&nbsp;Réinitialiser&nbsp;», que vous pouvez utiliser pour réinitialiser le code si vous faites une erreur et que vous ne parvenez pas à la corriger, et un bouton «&nbsp;Montrer la solution&nbsp;» sur lequel vous pouvez cliquer pour afficher une réponse possible si jamais vous êtes vraiment bloqué.
 
 ### Filtrer des messages de vœux
 
@@ -327,7 +327,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n                 \'Merry Christmas my love\',\n                 \'A happy Christmas to all the family\',\n                 \'You\\\'re all I want for Christmas\',\n                 \'Get well soon\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n  var input = greetings[i];\n  if(greetings[i].indexOf(\'Christmas\') !== -1) {\n    var result = input;\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar greetings = [\'Happy Birthday!\',\n                 \'Merry Christmas my love\',\n                 \'A happy Christmas to all the family\',\n                 \'You\\\'re all I want for Christmas\',\n                 \'Get well soon\'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf(\'Christmas\') !== -1) {\n    var result = input;\n    var listItem = document.createElement(\'li\');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}';
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -396,7 +396,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i < cities.length; i++) {\n  var input = cities[i];\n  var lower = input.toLowerCase();\n  var firstLetter = lower.slice(0,1);\n  var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n  var result = capitalized;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar cities = [\'lonDon\', \'ManCHESTer\', \'BiRmiNGHAM\', \'liVERpoOL\'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}';
 
 textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
@@ -477,7 +477,7 @@ solution.addEventListener('click', function() {
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n  var input = stations[i];\n  var code = input.slice(0,3);\n  var semiC = input.indexOf(\';\');\n  var name = input.slice(semiC + 1);\n  var result = code + \': \' + name;\n  var listItem = document.createElement(\'li\');\n  listItem.textContent = result;\n  list.appendChild(listItem);\n}';
+var jsSolution = 'var list = document.querySelector(\'.output ul\');\nlist.innerHTML = \'\';\nvar stations = [\'MAN675847583748sjt567654;Manchester Piccadilly\',\n                \'GNF576746573fhdg4737dh4;Greenfield\',\n                \'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street\',\n                \'SYB4f65hf75f736463;Stalybridge\',\n                \'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield\'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(\';\');\n var name = input.slice(semiC + 1);\n var result = code + \': \' + name;\n var listItem = document.createElement(\'li\');\n listItem.textContent = result;\n list.appendChild(listItem);\n}';
 
 
 textarea.addEventListener('input', updateCode);

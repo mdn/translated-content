@@ -18,7 +18,7 @@ Obtient le titre de la barre latérale.
 
 Tout comme vous pouvez définir le titre par tabulation à l'aide de {{WebExtAPIRef("sidebarAction.setTitle()")}},vous pouvez ainsi récupérer un titre spécifique à un onglet en lui transmettant l'ID de l'onglet.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
 ## Syntaxe
 
@@ -41,7 +41,7 @@ var gettingTitle = browser.sidebarAction.getTitle(
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
+- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
 - SI `windowId` et `tabId` sont tous les deux omis, le titre global est renvoyé.
 
 ### Valeur retournée

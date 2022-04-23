@@ -59,8 +59,8 @@ console.log(Intl.NumberFormat.supportedLocalesOf(locales, options).join(", "));
 | Spécification                                                                                                                                            | État                             | Commentaires        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
 | {{SpecName('ES Int 1.0', '#sec-11.2.2', 'Intl.NumberFormat.supportedLocalesOf')}}                                             | {{Spec2('ES Int 1.0')}} | Définition initiale |
-| {{SpecName('ES Int 2.0', '#sec-11.2.2', 'Intl.NumberFormat.supportedLocalesOf')}}                                             | {{Spec2('ES Int 2.0')}} |                     |
-| {{SpecName('ES Int Draft', '#sec-Intl.NumberFormat.supportedLocalesOf', 'Intl.NumberFormat.supportedLocalesOf')}} | {{Spec2('ES Int Draft')}} |                     |
+| {{SpecName('ES Int 2.0', '#sec-11.2.2', 'Intl.NumberFormat.supportedLocalesOf')}}                                             | {{Spec2('ES Int 2.0')}} |                     |
+| {{SpecName('ES Int Draft', '#sec-Intl.NumberFormat.supportedLocalesOf', 'Intl.NumberFormat.supportedLocalesOf')}} | {{Spec2('ES Int Draft')}} |                     |
 
 ## Compatibilité des navigateurs
 

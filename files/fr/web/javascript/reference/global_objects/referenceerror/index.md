@@ -89,9 +89,9 @@ try {
 | Spécification                                                                                                                                | Statut                       | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES3')}}                                                                                                                     | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.11.6.3', 'ReferenceError')}}                                                                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.11.6.3', 'ReferenceError')}}                                                                 | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

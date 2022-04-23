@@ -33,7 +33,7 @@ L'objet sur lequel on a défini le prototype.
 
 ## Description
 
-Cette méthode renvoie une exception {{jsxref("TypeError")}} si l'objet dont on souhaite modifier le `[[Prototype]]` est non-extensible selon {{jsxref("Object.isExtensible")}}.  Cette méthode ne fait rien si le paramètre prototype n'est ni un objet ni {{jsxref("null")}} (par exemple : un nombre, une chaîne, un booléen ou {{jsxref("undefined")}}).  Dans les autres cas, cette méthode substitue le `[[Prototype]]` de `obj` avec un nouvel objet.
+Cette méthode renvoie une exception {{jsxref("TypeError")}} si l'objet dont on souhaite modifier le `[[Prototype]]` est non-extensible selon {{jsxref("Object.isExtensible")}}.  Cette méthode ne fait rien si le paramètre prototype n'est ni un objet ni {{jsxref("null")}} (par exemple : un nombre, une chaîne, un booléen ou {{jsxref("undefined")}}).  Dans les autres cas, cette méthode substitue le `[[Prototype]]` de `obj` avec un nouvel objet.
 
 `Object.setPrototypeOf()` fait partie de la spécification ECMAScript 2015. L'utilisation de cette méthode est considérée comme la façon correcte pour modifier le prototype d'un objet (contrairement à la propriété {{jsxref("Object/proto","Object.prototype.__proto__")}} plus controversée).
 
@@ -178,7 +178,7 @@ george(); // "Salut !!"
 | Spécification                                                                                            | État                         | Commentaires        |
 | -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}} | {{Spec2('ES2015')}}     | Initial definition. |
-| {{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

@@ -8,7 +8,7 @@ translation_of: Web/API/XMLHttpRequest/timeout
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p><code><strong>XMLHttpRequest.timeout</strong></code> 是一个无符号长整型数，代表着一个请求在被自动终止前所消耗的毫秒数。默认值为 0，意味着没有超时。超时并不应该用在一个 {{Glossary('document environment')}} 中的同步 XMLHttpRequests  请求中，否则将会抛出一个 <code>InvalidAccessError</code> 类型的错误。当超时发生， <a href="/zh-CN/docs/Web/Events/timeout">timeout</a> 事件将会被触发。{{gecko_minversion_inline("12.0")}}</p>
+<p><code><strong>XMLHttpRequest.timeout</strong></code> 是一个无符号长整型数，代表着一个请求在被自动终止前所消耗的毫秒数。默认值为 0，意味着没有超时。超时并不应该用在一个 {{Glossary('document environment')}} 中的同步 XMLHttpRequests  请求中，否则将会抛出一个 <code>InvalidAccessError</code> 类型的错误。当超时发生， <a href="/zh-CN/docs/Web/Events/timeout">timeout</a> 事件将会被触发。</p>
 
 <div class="note">
 <p><strong>注意</strong>：你不能在拥有的window中，给同步请求使用超时。</p>

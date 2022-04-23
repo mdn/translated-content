@@ -1,72 +1,45 @@
 ---
 title: CustomEvent
 slug: Web/API/CustomEvent
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-  - évènements
 translation_of: Web/API/CustomEvent
+browser-compat: api.CustomEvent
 ---
 {{APIRef("DOM")}}
 
-Les interfaces `CustomEvent` DOM sont des évènements initialisés par une application pour n'importe quel usage.
+L'interface **`CustomEvent`** représente un évènement initialisé par une application dans un but quelconque.
 
 {{AvailableInWorkers}}
 
+{{InheritanceDiagram}}
+
 ## Constructeur
 
-- {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}
-  - : Crée un `CustomEvent.`
+- [`CustomEvent()`](/fr/docs/Web/API/CustomEvent/CustomEvent)
+  - : Crée un nouvel objet `CustomEvent`.
 
 ## Propriétés
 
-- {{domxref("CustomEvent.detail")}} {{readonlyinline}}
-  - : Toute donnée transmise lors de l'initialisation de l'événement.
+_Cette interface hérite des propriétés de son parent, [`Event`](/fr/docs/Web/API/Event)._
 
-Cette interface hérite des propriétés de son parent {{domxref("Event")}}:
-
-{{Page("/fr/docs/Web/API/Event", "Propriétés")}}
+- [`CustomEvent.detail`](/fr/docs/Web/API/CustomEvent/detail) {{readonlyinline}}
+  - : Renvoie toutes les données passées lor de l'initialisation de l'évènement.
 
 ## Méthodes
 
-- {{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}
-  - : Initialise un objet CustomEvent. Si l'événement a déjà été distribué, cette méthode ne fait rien.
+_Cette interface hérite des propriétés de son parent, [`Event`](/fr/docs/Web/API/Event)._
 
-Cette interface hérite les méthodes de son parent {{domxref("Event")}}:
-
-{{Page("/fr/docs/Web/API/Event", "Méthodes")}}
+- [`CustomEvent.initCustomEvent()`](/fr/docs/Web/API/CustomEvent/initCustomEvent) {{deprecated_inline}}
+  - : Initialise un objet `CustomEvent`. Si l'évènement a déjà été diffusé, cette méthode n'a aucun effet.
 
 ## Spécifications
 
-| Spécification                                                                            | Statut                           | Commentaire        |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM WHATWG','#interface-customevent','CustomEvent')}} | {{Spec2('DOM WHATWG')}} | Définition initial |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.CustomEvent")}}
-
-## Déclenchement à partir de code privilégié vers du code non-privilégié
-
-Lors du déclenchement d'un CustomEvent depuis du code privilégié (une extension, par exemple) vers du code non-privilégié (une page web par exemple), vous devez prendre en considération la sécurité. Firefox et les autres applications Gecko empêchent qu'un objet créé dans un contexte soit utilisé dans un autre, ce qui empêchera généralement les failles de sécurité, mais ces restrictions peuvent aussi empêcher votre code de s'executer comme prévu.
-
-Lors de la création d'un objet CustomEvent, vous devez créer l'objet à partir de la même [fenêtre](/fr/docs/Mozilla/Tech/XUL/window) que celle où vous déclencherez l'évenement.
-
-```js
-// doc est une référence au contenu du document
-function dispatchCustomEvent(doc) {
-  var eventDetail = Components.utils.cloneInto({foo: 'bar'}, doc.defaultView);
-  var myEvent = doc.defaultView.CustomEvent("mytype", eventDetail);
-  doc.dispatchEvent(myEvent);
-}
-```
-
-Notez qu'exposer une fonction permettra au script de l'exécuter avec les privilèges qu'accorde Chrome ce qui peut ouvrir une faille de sécurité.
+{{Compat}}
 
 ## Voir aussi
 
-- [Interaction entre pages privilégiées et non-privilégiées](/fr/docs/Extraits_de_code/Interaction_entre_des_pages_%C3%A0_privil%C3%A8ges_et_sans_privil%C3%A8ges)
-- [Window.postMessage](/fr/docs/Web/API/Window/postMessage)
-- [Création et déclenchement d'événements](/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events)
+- [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage)
+- [Créer et déclencher des évènements](/fr/docs/Web/Events/Creating_and_triggering_events)

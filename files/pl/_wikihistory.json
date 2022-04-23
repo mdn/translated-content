@@ -4191,7 +4191,7 @@
       "P0lip"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2019-03-23T22:10:25.437Z",
     "contributors": [
       "Krenair"
@@ -5167,7 +5167,7 @@
       "draccicgeb"
     ]
   },
-  "Web/CSS/transform-function/matrix()": {
+  "Web/CSS/transform-function/matrix": {
     "modified": "2020-11-16T09:00:02.174Z",
     "contributors": [
       "chrisdavidmills",

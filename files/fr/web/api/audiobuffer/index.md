@@ -24,7 +24,7 @@ Ce type d'objet est conçu pour contenir de petit extraits audio, durant génér
 - {{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}
   - : Retourne un nombre flottant qui représente la fréquence d'échantillonnage, en échantillons par seconde, des données PCM stockées dans la mémoire tampon.
 - {{domxref("AudioBuffer.length")}} {{readonlyInline}}
-  - : Retourne un nombre entier qui représente la longueur, en trames d'échantillonnage , des données PCM stockées dans la mémoire tampon.
+  - : Retourne un nombre entier qui représente la longueur, en trames d'échantillonnage , des données PCM stockées dans la mémoire tampon.
 - {{domxref("AudioBuffer.duration")}} {{readonlyInline}}
   - : Retourne un nombre à virgule flottante de double précision qui représente la durée, exprimée en secondes, des données PCM stockées dans la mémoire tampon.
 - {{domxref("AudioBuffer.numberOfChannels")}} {{readonlyInline}}
@@ -41,7 +41,7 @@ Ce type d'objet est conçu pour contenir de petit extraits audio, durant génér
 
 ## Exemple
 
-L'exemple suivant montre comment créer un  `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](http://mdn.github.io/audio-buffer/) est également consultable.
+L'exemple suivant montre comment créer un  `AudioBuffer` et le remplir avec du bruit blanc. Le code source est disponible sur notre repo [audio-buffer demo](https://github.com/mdn/audio-buffer); une [version live](http://mdn.github.io/audio-buffer/) est également consultable.
 
 ```js
 // Stéréo

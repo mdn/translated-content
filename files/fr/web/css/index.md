@@ -25,12 +25,12 @@ CSS est l'un des langages principaux du **Web ouvert** et a été standardisé [
 
 ## Tutoriels
 
-La section [Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modules qui permettent d'apprendre CSS sans connaissance particulière préalable.
+La section [Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modules qui permettent d'apprendre CSS sans connaissance particulière préalable.
 
 - [Introduction à CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics)
   - : Dans ce module, on commence avec les bases du fonctionnement de CSS : les sélecteurs, les propriétés, écrire des règles CSS, appliquer du CSS à un document HTML, utiliser des longueurs, des couleurs et d'autres unités. On voit également la cascade et l'héritage en CSS, les bases du modèle de boîtes et comment déboguer du code CSS.
 - [Mettre en forme le texte](/fr/docs/Learn/CSS/Styling_text)
-  - : Dans ce chapitre, on voit comment mettre en forme du texte : changer la police, mettre en gras, mettre en italique, gérer les espaces entre les lignes et les lettres, ajouter des ombres portées, etc. En fin de chapitre, on voit comment appliquer des polices personnalisées sur une page et comment mettre en forme les listes et les liens.
+  - : Dans ce chapitre, on voit comment mettre en forme du texte : changer la police, mettre en gras, mettre en italique, gérer les espaces entre les lignes et les lettres, ajouter des ombres portées, etc. En fin de chapitre, on voit comment appliquer des polices personnalisées sur une page et comment mettre en forme les listes et les liens.
 - [Mettre en forme les boîtes](/fr/docs/Learn/CSS/Styling_boxes)
   - : Ensuite, on voit comment mettre en forme les boîtes CSS qui sont un composant clé de la mise en page d'une page web. Dans ce module, on revoit le modèle de boîtes, comment régler les propriétés de remplissage, bordures et marges, comment définir des couleurs d'arrière-plan, des images et aussi comment appliquer des ombres et des filtres sur les boîtes.
 - [La disposition en CSS](/fr/docs/Learn/CSS/CSS_layout)
@@ -47,7 +47,7 @@ La section [Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modules q
     - [la syntaxe et les formes du langage](/en-US/docs/Learn/CSS/First_steps/How_CSS_is_structured)
     - [la spécificité](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) et [l'héritage](/fr/docs/Web/CSS/inheritance)
     - [les unités et valeurs CSS](/fr/docs/Web/CSS/Valeurs_et_unit%C3%A9s_CSS)
-    - [le modèle de boîtes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) et [la fusion des marges](/fr/docs/CSS/margin_collapsing)
+    - [le modèle de boîtes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) et [la fusion des marges](/fr/docs/CSS/margin_collapsing)
     - [le bloc conteneur](/fr/docs/Web/CSS/All_About_The_Containing_Block)
     - [l'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) et [le contexte de formatage de blocs](/fr/docs/Web/Guide/CSS/Block_formatting_context)
     - les concepts de [valeur initiale](/fr/docs/Web/CSS/initial_value), [valeur calculée](/fr/docs/Web/CSS/computed_value), [valeur utilisée](/fr/docs/Web/CSS/used_value) et [valeur réelle](/fr/docs/Web/CSS/actual_value)

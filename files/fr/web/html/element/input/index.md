@@ -25,7 +25,7 @@ Les types de champs disponibles sont :
 - `{{HTMLElement("input/button", "button")}}` : un bouton sans comportement défini.
 - `{{HTMLElement("input/checkbox", "checkbox")}}` : une case à cocher qui permet de sélectionner/déselectionner une valeur
 - `{{HTMLElement("input/color", "color")}}` : {{HTMLVersionInline("5")}} un contrôle qui permet de définir une couleur.
-- `{{HTMLElement("input/date", "date")}}` : {{HTMLVersionInline("5")}} un contrôle qui permet de saisir une date (composé d'un jour,  d'un mois et d'une année).
+- `{{HTMLElement("input/date", "date")}}` : {{HTMLVersionInline("5")}} un contrôle qui permet de saisir une date (composé d'un jour,  d'un mois et d'une année).
 - `{{HTMLElement("input/datetime-local", "datetime-local")}}` : {{HTMLVersionInline("5")}} un contrôle qui permet de saisir une date et une heure (sans fuseau horaire).
 - `{{HTMLElement("input/email", "email")}}` : {{HTMLVersionInline("5")}} un champ qui permet de saisir une adresse éléctronique.
 - `{{HTMLElement("input/file", "file")}}` : un contrôle qui permet de sélectionner un fichier. L'attribut **`accept`** définit les types de fichiers qui peuvent être sélectionnés.
@@ -66,17 +66,17 @@ This section lists the attributes which are used by all form `<input>` types. At
 
 | Attribut                           | Description                                                                                                                                                                                                                                         |
 | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{anch("autocomplete")}}` | Une chaîne de caractères qui indique le type d'autocomplétion à utiliser.                                                                                                                                                                           |
-| `{{anch("autofocus")}}`     | Un attribut booléen qui passe le focus sur le champ lorsque le formulaire est affiché.                                                                                                                                                              |
-| `{{anch("disabled")}}`     | Un attribut booléen qui indique si le champ doit être désactivé.                                                                                                                                                                                    |
-| `{{anch("form")}}`             | L'identifiant du formulaire (la valeur de l'attribut `id` de l'élément {{HTMLElement("form")}}) auquel le champ est rattaché. Si cet attribut est absent, le champ sera rattaché au formulaire le plus proche qui le contient s'il existe. |
-| `{{anch("list")}}`             | L'identifiant (valeur de l'attribut `id`) d'un élément {{HTMLElement("datalist")}} qui fournit une liste de suggestions.                                                                                                                   |
-| `{{anch("name")}}`             | Le nom du champ qui sera rattaché à la donnée envoyée via le formulaire.                                                                                                                                                                            |
-| `{{anch("readonly")}}`     | Un attribut booléen qui indique si le champ peut être édité ou non.                                                                                                                                                                                 |
-| `{{anch("required")}}`     | Un attribut booléen qui indique que le champ doit être renseigné avant de pouvoir envoyer le formulaire.                                                                                                                                            |
-| `{{anch("tabindex")}}`     | Une valeur numérique qui indique à l'agent utilisateur l'ordre selon lequel naviguer au clavier grâce à la touche <kbd>Tab</kbd>.                                                                                                                   |
-| `{{anch("type")}}`             | Une chaîne de caractère qui indique l[e type de champ représenté par l'élément `<input>`](#types).                                                                                                                                                  |
-| `{{anch("value")}}`         | La valeur du champ.                                                                                                                                                                                                                                 |
+| [`autocomplete`](#autocomplete) | Une chaîne de caractères qui indique le type d'autocomplétion à utiliser.                                                                                                                                                                           |
+| [`autofocus`](#autofocus)     | Un attribut booléen qui passe le focus sur le champ lorsque le formulaire est affiché.                                                                                                                                                              |
+| [`disabled`](#disabled)     | Un attribut booléen qui indique si le champ doit être désactivé.                                                                                                                                                                                    |
+| [`form`](#form)             | L'identifiant du formulaire (la valeur de l'attribut `id` de l'élément {{HTMLElement("form")}}) auquel le champ est rattaché. Si cet attribut est absent, le champ sera rattaché au formulaire le plus proche qui le contient s'il existe. |
+| [`list`](#list)             | L'identifiant (valeur de l'attribut `id`) d'un élément {{HTMLElement("datalist")}} qui fournit une liste de suggestions.                                                                                                                   |
+| [`name`](#name)             | Le nom du champ qui sera rattaché à la donnée envoyée via le formulaire.                                                                                                                                                                            |
+| [`readonly`](#readonly)     | Un attribut booléen qui indique si le champ peut être édité ou non.                                                                                                                                                                                 |
+| [`required`](#required)     | Un attribut booléen qui indique que le champ doit être renseigné avant de pouvoir envoyer le formulaire.                                                                                                                                            |
+| [`tabindex`](#tabindex)     | Une valeur numérique qui indique à l'agent utilisateur l'ordre selon lequel naviguer au clavier grâce à la touche <kbd>Tab</kbd>.                                                                                                                   |
+| [`type`](#type)             | Une chaîne de caractère qui indique l[e type de champ représenté par l'élément `<input>`](#types).                                                                                                                                                  |
+| [`value`](#value)         | La valeur du champ.                                                                                                                                                                                                                                 |
 
 #### {{htmlattrdef("autocomplete")}}
 
@@ -122,7 +122,7 @@ L'attribut `list` n'est pas pris en charge pour les types `hidden`, `password`, 
 
 Une chaîne de caractères qui définit le nom associé au champ. Ce nom sera envoyé avec la valeur lors de l'envoi du formulaire.
 
-Lorsqu'un champ a un nom, cette valeur devient une propriété de  {{domxref("HTMLFormElement.elements")}} qu'on pourra utiliser en JavaScript (ex. si on a un attribut `name` qui vaut `hat-size` :
+Lorsqu'un champ a un nom, cette valeur devient une propriété de  {{domxref("HTMLFormElement.elements")}} qu'on pourra utiliser en JavaScript (ex. si on a un attribut `name` qui vaut `hat-size` :
 
 ```js
 let form = document.querySelector("form");

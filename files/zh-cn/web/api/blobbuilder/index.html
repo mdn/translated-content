@@ -5,7 +5,7 @@ translation_of: Web/API/BlobBuilder
 ---
 <p>{{ deprecated_header() }}</p>
 <p>{{ SeeCompatTable() }}</p>
-<p>The <code>BlobBuilder</code> interface provides an easy way to construct {{ domxref("Blob") }} objects. Just create a <code>BlobBuilder</code> and append chunks of data to it by calling the {{ manch("append") }} method. When you're done building your blob, call {{ manch("getBlob") }} to retrieve a {{ domxref("Blob") }} containing the data you sent into the blob builder.</p>
+<p>The <code>BlobBuilder</code> interface provides an easy way to construct {{ domxref("Blob") }} objects. Just create a <code>BlobBuilder</code> and append chunks of data to it by calling the <a href="#append()"><code>append()</code></a> method. When you're done building your blob, call <a href="#getBlob()"><code>getBlob()</code></a> to retrieve a {{ domxref("Blob") }} containing the data you sent into the blob builder.</p>
 <div class="note">
   <strong>注:</strong><code>BlobBuilder</code>接口已经废弃,请使用新版草案中引入的 {{domxref('Blob') }}构造函数.</div>
 <h2 id="Method_overview" name="Method_overview">方法概述</h2>
@@ -57,7 +57,7 @@ void append(
     Specifies how strings containing <code>\n</code> are to be written out. This can be <code>"transparent"</code> (endings unchanged) or <code>"native"</code> (endings changed to match host OS filesystem convention). The default value is <code>"transparent"</code>.</dd>
 </dl>
 <h3 id="getBlob()">getBlob()</h3>
-<p>Returns the {{ domxref("Blob") }} object that has been constructed using the data passed through calls to {{ manch("append") }}.</p>
+<p>Returns the {{ domxref("Blob") }} object that has been constructed using the data passed through calls to <a href="#append()"><code>append()</code></a>.</p>
 <pre class="eval">Blob getBlob(
   in DOMString contentType {{ optional_inline() }}
 );
@@ -70,7 +70,7 @@ void append(
     The MIME type of the data to be returned in the {{ domxref("Blob") }}. This will be the value of the <code>Blob</code> object's type property.</dd>
 </dl>
 <h6 id="返回值">返回值</h6>
-<p>A {{ domxref("Blob") }} object containing all of the data passed to any calls to {{ manch("append") }} made since the <code>BlobBuilder</code> was created. This also resets the <code>BlobBuilder</code> so that the next call to {{ manch("append") }} is starting a new, empty blob.</p>
+<p>A {{ domxref("Blob") }} object containing all of the data passed to any calls to <a href="#append()"><code>append()</code></a> made since the <code>BlobBuilder</code> was created. This also resets the <code>BlobBuilder</code> so that the next call to <a href="#append()"><code>append()</code></a> is starting a new, empty blob.</p>
 <h3 id="getFile()_non-standard_inline()">getFile() {{ non-standard_inline() }}</h3>
 <p>返回一个{{ domxref("File") }}对象.</p>
 <pre class="eval">File getFile(

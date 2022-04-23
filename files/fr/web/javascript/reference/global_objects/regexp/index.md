@@ -14,13 +14,13 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp
 
 Le constructeur **RegExp** crée un objet expression rationnelle pour la reconnaissance d'un modèle dans un texte.
 
-Pour une introduction aux expressions rationnelles, lire le [chapitre Expressions rationnelles dans le Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res).
+Pour une introduction aux expressions rationnelles, lire le [chapitre Expressions rationnelles dans le Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res).
 
 {{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
 
 ## Syntaxe
 
-Les notations littérales, par constructeur ou de base sont possibles :
+Les notations littérales, par constructeur ou de base sont possibles :
 
     /modèle/marqueurs
     new RegExp(modèle[, marqueurs])
@@ -39,9 +39,9 @@ Les notations littérales, par constructeur ou de base sont possibles :
     - `i`
       - : la casse est ignorée. Si le marqueur `u` est également activé, les caractères Unicode équivalents pour la casse correspondent.
     - `m`
-      - : multiligne : les caractères de début et de fin (^ et $) sont traités comme travaillant sur des lignes multiples (i.e, ils correspondent au début et à la fin de _chaque_ ligne (délimitée par \n ou \r), pas seulement au début ou à la fin de la chaîne d'entrée complète).
+      - : multiligne : les caractères de début et de fin (^ et $) sont traités comme travaillant sur des lignes multiples (i.e, ils correspondent au début et à la fin de _chaque_ ligne (délimitée par \n ou \r), pas seulement au début ou à la fin de la chaîne d'entrée complète).
     - `u`
-      - : unicode : traite le modèle comme une séquence de points de code Unicode (voir également [les chaînes binaires](/fr/docs/Web/API/DOMString/Binary)).
+      - : unicode : traite le modèle comme une séquence de points de code Unicode (voir également [les chaînes binaires](/fr/docs/Web/API/DOMString/Binary)).
     - `y`
       - : adhérence : n'établit de correspondance qu'à partir de l'indice dans la chaîne cible indiqué par la propriété `lastIndex` de l'expression rationnelle (et ne cherche pas à établir de correspondance à partir d'indices au delà).
     - `s`
@@ -57,11 +57,11 @@ new RegExp('ab+c', 'i');   // constructeur
 new RegExp(/ab+c/, 'i');   // notation littérale dans un constructeur
 ```
 
-La notation littérale effectue la compilation de l'expression rationnelle lorsque l'expression est évaluée. Utilisez la notation littérale lorsque l'expression rationnelle reste constante. Par exemple, si vous utilisez la notation littérale pour construire une expression rationnelle utilisée dans une boucle, l'expression rationnelle ne sera pas recompilée à chaque itération.
+La notation littérale effectue la compilation de l'expression rationnelle lorsque l'expression est évaluée. Utilisez la notation littérale lorsque l'expression rationnelle reste constante. Par exemple, si vous utilisez la notation littérale pour construire une expression rationnelle utilisée dans une boucle, l'expression rationnelle ne sera pas recompilée à chaque itération.
 
-Le constructeur de l'objet expression rationnelle, par exemple `new RegExp('ab+c')`, effectue la compilation de l'expression rationnelle au moment de l'exécution. Utilisez la fonction constructeur quand vous savez que le modèle d'une expression rationnelle sera variable, ou si vous ne connaissez pas le modèle et que vous l'obtiendrez d'une autre source, telle qu'une saisie utilisateur.
+Le constructeur de l'objet expression rationnelle, par exemple `new RegExp('ab+c')`, effectue la compilation de l'expression rationnelle au moment de l'exécution. Utilisez la fonction constructeur quand vous savez que le modèle d'une expression rationnelle sera variable, ou si vous ne connaissez pas le modèle et que vous l'obtiendrez d'une autre source, telle qu'une saisie utilisateur.
 
-À partir d'ECMAScript 6, `new RegExp(/ab+c/, 'i')` ne déclenche plus d'exception {{jsxref("TypeError")}} ("can't supply flags when constructing one RegExp from another") lorsque le premier argument est une RegExp et que le second argument `marqueurs` est présent. Une nouvelle `RegExp` sera créée à la place à partir des arguments.
+À partir d'ECMAScript 6, `new RegExp(/ab+c/, 'i')` ne déclenche plus d'exception {{jsxref("TypeError")}} ("can't supply flags when constructing one RegExp from another") lorsque le premier argument est une RegExp et que le second argument `marqueurs` est présent. Une nouvelle `RegExp` sera créée à la place à partir des arguments.
 
 Lorsqu'on utilise le constructeur, les règles normales d'échappement de chaîne (le fait de faire précéder d'un \ les caractères spéciaux à l'intérieur d'une chaîne) sont requises. Par exemple, les définitions suivantes sont équivalentes :
 
@@ -132,7 +132,7 @@ s.match(/voici[^]*ligne/);
 // Renvoie ['voici\nune autre ligne']
 ```
 
-### Utiliser une expression rationnelle avec le marqueur d'adhérence
+### Utiliser une expression rationnelle avec le marqueur d'adhérence
 
 Cet exemple illustre comment on peut utiliser ce marqueur qui recherche une correspondance après {{jsxref("RegExp.prototype.lastIndex")}}.
 

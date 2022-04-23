@@ -16,9 +16,9 @@ translation_of: Web/API/Document/registerElement
 
 {{draft}}
 
-La méthode **`Document.registerElement()`** permet d'enregistrer un nouvel [élément personnalisé](/fr/docs/Web/Web_Components/Custom_Elements) dans le navigateur, et retourne un constructeur pour ce nouvel élément.
+La méthode **`Document.registerElement()`** permet d'enregistrer un nouvel [élément personnalisé](/fr/docs/Web/Web_Components/Custom_Elements) dans le navigateur, et retourne un constructeur pour ce nouvel élément.
 
-> **Note :** Il s'agit d'une technologie expérimentale. Le navigateur dans lequel vous l'utilisez doit être compatible avec les Composants Web. Voir [Activer les Composants Web dans Firefox](/fr/docs/Web/Web_Components#Activer_les_Web_Components_dans_Firefox).
+> **Note :** Il s'agit d'une technologie expérimentale. Le navigateur dans lequel vous l'utilisez doit être compatible avec les Composants Web. Voir [Activer les Composants Web dans Firefox](/fr/docs/Web/Web_Components#Activer_les_Web_Components_dans_Firefox).
 
 ## Syntaxe
 
@@ -27,7 +27,7 @@ La méthode **`Document.registerElement()`** permet d'enregistrer un nouvel [�
 ### Paramètres
 
 - _nom-tag_
-  - : Le nom de l'élément personnalisé. Le nom doit contenir un tiret (-), par exemple `mon-tag`.
+  - : Le nom de l'élément personnalisé. Le nom doit contenir un tiret (-), par exemple `mon-tag`.
 - _options {{optional_inline}}_
   - : Un objet définissant le prototype sur lequel se base l'élément personnalisé, ainsi qu'un tag existant à étendre.
 

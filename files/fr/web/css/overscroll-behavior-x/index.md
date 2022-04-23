@@ -65,7 +65,7 @@ main > div {
 
 | Spécification                                                                                                                | État                                         | Commentaires |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ |
-| {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior-x', 'overscroll-behavior-x')}} | {{Spec2('Overscroll Behavior')}} |              |
+| {{SpecName('Overscroll Behavior', '#propdef-overscroll-behavior-x', 'overscroll-behavior-x')}} | {{Spec2('Overscroll Behavior')}} |              |
 
 {{cssinfo}}
 

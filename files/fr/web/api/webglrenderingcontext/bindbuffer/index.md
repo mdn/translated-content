@@ -24,7 +24,7 @@ La méthode **`WebGLRenderingContext.bindBuffer()`** de l'[API WebGL](/fr-FR/doc
 
 <!---->
 
-- `gl.ARRAY_BUFFER` : tampon contenant des attributs de sommet, tels que des coordonnées de vertex, des données de coordonnées de texture ou des données de couleurs de sommet ;
+- `gl.ARRAY_BUFFER` : tampon contenant des attributs de sommet, tels que des coordonnées de vertex, des données de coordonnées de texture ou des données de couleurs de sommet ;
 - `gl.ELEMENT_ARRAY_BUFFER` : tampon utilisé pour les indices d'éléments ;
 - Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL context 2", "", 1)}}, les valeurs suivantes sont disponibles en plus :
 
@@ -38,7 +38,7 @@ La méthode **`WebGLRenderingContext.bindBuffer()`** de l'[API WebGL](/fr-FR/doc
 <!---->
 
 - tampon
-  - : Un {{domxref ("WebGLBuffer")}} à lier.
+  - : Un {{domxref ("WebGLBuffer")}} à lier.
 
 ### Valeur retournée
 
@@ -46,7 +46,7 @@ Aucune.
 
 ### Exceptions
 
-Une seule cible peut être liée à un {{domxref ("WebGLBuffer")}} donné. Une tentative de lier le tampon à une autre cible déclenchera une erreur `INVALID_OPERATION` et la liaison du tampon en cours restera la même.
+Une seule cible peut être liée à un {{domxref ("WebGLBuffer")}} donné. Une tentative de lier le tampon à une autre cible déclenchera une erreur `INVALID_OPERATION` et la liaison du tampon en cours restera la même.
 
 ## Exemples
 
@@ -81,7 +81,7 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
     <tr>
       <td>{{SpecName('WebGL', "#5.14.5", "bindBuffer")}}</td>
       <td>{{Spec2('WebGL')}}</td>
-      <td><p>Définition initiale pour WebGL.</p></td>
+      <td><p>Définition initiale pour WebGL.</p></td>
     </tr>
     <tr>
       <td>
@@ -94,9 +94,9 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
       <td>{{SpecName('WebGL2', "#3.7.1", "bindBuffer")}}</td>
       <td>{{Spec2('WebGL2')}}</td>
       <td>
-        <p>Définition mise à jour pour WebGL 2.</p>
+        <p>Définition mise à jour pour WebGL 2.</p>
         <p>
-          Ajoute de nouveaux tampons <code>cible</code> :<br /><code
+          Ajoute de nouveaux tampons <code>cible</code> :<br /><code
             >gl.COPY_READ_BUFFER</code
           >,<br /><code>gl.COPY_WRITE_BUFFER</code>,<br /><code
             >gl.TRANSFORM_FEEDBACK_BUFFER</code

@@ -36,7 +36,7 @@ fetch('http://example.com/movies.json')
 
 当然它只是一个 HTTP 响应，而不是真的 JSON。为了获取JSON的内容，我们需要使用 {{domxref("Response.json()", "json()")}} 方法（该方法返回一个将响应 body 解析成 JSON 的 promise）。
 
-> **备注：** {{anch("Body")}} 还有其他相似的方法，用于获取其他类型的内容。
+> **备注：** [Body](#Body) 还有其他相似的方法，用于获取其他类型的内容。
 
 最好使用符合[内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)的链接而不是使用直接指向资源地址的方式来进行 fetch 的请求。
 
@@ -320,7 +320,7 @@ console.log(myHeaders.get('X-Custom-Header')); // null
 
 虽然一些操作只能在 {{domxref("Service_Worker_API","ServiceWorkers")}} 中使用，但是它提供了更方便的操作 Headers 的 API。
 
-如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（{{anch("Guard", "见下方")}}），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
+如果使用了一个不合法的 HTTP Header 属性名，那么 Headers 的方法通常都抛出 TypeError 异常。如果不小心写入了一个不可写的属性（[见下方](#Guard)），也会抛出一个 TypeError 异常。除此以外的情况，失败了并不抛出异常。例如：
 
 ```js
 const myResponse = Response.error();

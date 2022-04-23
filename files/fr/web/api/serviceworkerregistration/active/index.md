@@ -25,7 +25,7 @@ Un objet {{domxref("ServiceWorker")}}, si le _worker_ est actuellement dans un �
 
 | Spécification                                                                                                                                                | Statut                               | Commentaire            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------- |
-| {{SpecName('Service Workers', '#service-worker-registration-active-attribute', 'ServiceWorkerRegistration.active')}} | {{Spec2('Service Workers')}} | Définition initiale.   |
+| {{SpecName('Service Workers', '#service-worker-registration-active-attribute', 'ServiceWorkerRegistration.active')}} | {{Spec2('Service Workers')}} | Définition initiale.   |
 
 ## Compatibilité des navigateurs
 

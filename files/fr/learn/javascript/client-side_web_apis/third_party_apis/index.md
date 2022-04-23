@@ -142,7 +142,7 @@ D'autres types de contrôle sont disponibles comme [`mapquest.searchControl()`](
 
 ### Ajouter un marqueur personnalisé
 
-Pour ajouter une icône sur un point de la carte, on pourra utiliser la méthode [`L.marker()`](https://leafletjs.com/reference-1.3.0.html#marker)  (documentée dans la documentation de Leaflet.js). Dans `window.onload`, vous pouvez ajouter le fragment de code suivante `window.onload` :
+Pour ajouter une icône sur un point de la carte, on pourra utiliser la méthode [`L.marker()`](https://leafletjs.com/reference-1.3.0.html#marker)  (documentée dans la documentation de Leaflet.js). Dans `window.onload`, vous pouvez ajouter le fragment de code suivante `window.onload` :
 
 ```js
 L.marker([53.480759, -2.242631], {
@@ -252,7 +252,7 @@ Tout d'abord, vous devrez créer une connexion entre l'API et votre application.
 `submitSearch()` commence par réinitialiser le nombre de page à 0 puis appelle `fetchResults()`. Cette fonction commence par appeler [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) sur l'évènement afin d'empêcher l'envoi du formulaire vers notre serveur (ce qui casserait l'exemple). Ensuite, on assemble la chaîne de caractères qui formera l'URL sur laquelle on fera la requête. Dans cette URL, on commence par mettre les fragments « obligatoires » (en tout cas pour cette démonstration) :
 
 - L'URL de base (telle que fournie par la variable `baseURL`).
-- La clé d'API qui a été passée au paramètre d'URL  `api-key` et dont la valeur dans notre script est fournie par la variable `key`.
+- La clé d'API qui a été passée au paramètre d'URL  `api-key` et dont la valeur dans notre script est fournie par la variable `key`.
 - Le nombre de pages est fourni dans l'URL avec le paramètre `page` et provient de la variable `pageNumber` dans notre script.
 - Le terme de la recherche est fourni dans l'URL avec le paramètre `q` et provient du texte `searchTerm` fourni par l'élément {{htmlelement("input")}}.
 - Le type de document qu'on souhaite obtenir dans les résultats est une expression passée via le paramètre `fq` de l'URL. Ici, on souhaite obtenir les articles.
@@ -353,7 +353,7 @@ Il y a pas mal de code ici. Reprenons étape par étape pour l'expliquer :
 
 - La boucle [`while`](/fr/docs/Web/JavaScript/Reference/Instructions/while) est utilisée afin de supprimer tout le contenu d'un élément du DOM. Dans ce cas, on enlève ce qu'il y a dans l'élément {{htmlelement("section")}}. On teste si la `<section>` possède un élément fils et si c'est le cas, on retire le premier, ainsi de suite jusqu'à ce que l'élément `<section>` n'ait plus d'éléments fils.
 - Ensuite, on renseigne la variable `articles` avec `json.response.docs` : le tableau contenant les objets qui représentent les articles renvoyés par la recherche. Ce renommage sert uniquement à rendre le code plus simple.
-- Le premier bloc [`if()`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) vérifie si 10 ont été renvoyés par l'API  (cette dernière envoie les articles par bloc de 10 à chaque appel). Dans ce cas, on affiche l'élément {{htmlelement("nav")}} qui contient des boutons de pagination _10 articles précédents_/_10 articles suivants_. S'il y a moins de 10 articles, tout le contenu tiendra sur une page et il ne sera pas nécessaire d'avoir les boutons. Nous verrons comment « câbler » ces boutons pour qu'ils fonctionnent dans la prochaine section.
+- Le premier bloc [`if()`](/fr/docs/Web/JavaScript/Reference/Instructions/if...else) vérifie si 10 ont été renvoyés par l'API  (cette dernière envoie les articles par bloc de 10 à chaque appel). Dans ce cas, on affiche l'élément {{htmlelement("nav")}} qui contient des boutons de pagination _10 articles précédents_/_10 articles suivants_. S'il y a moins de 10 articles, tout le contenu tiendra sur une page et il ne sera pas nécessaire d'avoir les boutons. Nous verrons comment « câbler » ces boutons pour qu'ils fonctionnent dans la prochaine section.
 - Le bloc `if()` suivant sert à vérifier si aucun article n'a été renvoyé. Lorsqu'il n'y a aucun résultat, on crée un élément {{htmlelement("p")}} qui affiche le texte "Aucun résultat reçu" puis on insère ce paragraphe dans l'élément `<section>`.
 - Si des articles sont renvoyés, on commence par créer les éléments qu'on souhaite utiliser afin de les afficher puis on insère le contenu dans chaque puis on insère ces éléments dans le DOM. Pour connaître les propriétés des objets obtenues via l'API, nous avons consulté la référence de l'API _Article Search_ (voir [les API NYTimes](https://developer.nytimes.com/apis)). La plupart de ces opérations sont assez parlantes mais voici quelques-unes qui sont notables :
 

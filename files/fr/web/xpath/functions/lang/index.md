@@ -31,20 +31,20 @@ La fonction `lang` détermine si le nœud de contexte correspond à la langue in
 
 - Si la `chaîne` donnée ne spécifie pas de code de pays, cette fonction sélectionnera les nœuds dans la langue spécifiée, suivie éventuellement de n'importe quel code de pays. La réciproque n'est pas vraie.
 
-Regardons le code XML suivant :
+Regardons le code XML suivant&nbsp;:
 
     <p xml:lang="en">I went up a floor.</p>
     <p xml:lang="en-GB">I took the lift.</p>
     <p xsl:lang="en-US">I rode the elevator.</p>
 
-et ce modèle XSL :
+et ce modèle XSL&nbsp;:
 
     <xsl:value-of select="count(//p[lang('en')])" />
     <xsl:value-of select="count(//p[lang('en-GB')])" />
     <xsl:value-of select="count(//p[lang('en-US')])" />
     <xsl:value-of select="count(//p[lang('de')])" />
 
-La sortie sera :
+La sortie sera&nbsp;:
 
     3
     1

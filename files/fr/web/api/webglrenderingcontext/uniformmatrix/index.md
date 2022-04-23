@@ -31,11 +31,11 @@ Les trois versions de cette méthode (`uniformMatrix2fv()`, `uniformMatrix3fv()`
 ### Paramètres
 
 - `emplacement`
-  - : Un objet {{domxref("WebGLUniformLocation")}} contenant l'emplacement de l'attribut uniform à modifier. L'emplacement est obtenu en utilisant {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
+  - : Un objet {{domxref("WebGLUniformLocation")}} contenant l'emplacement de l'attribut uniform à modifier. L'emplacement est obtenu en utilisant {{domxref("WebGLRenderingContext.getAttribLocation", "getAttribLocation()")}}.
 - `transposer`
-  - : Un {{domxref("GLboolean")}} indiquant si la matrice doit être transposée. Doit être `false`.
+  - : Un {{domxref("GLboolean")}} indiquant si la matrice doit être transposée. Doit être `false`.
 - `valeur`
-  - : Un {{jsxref("Float32Array")}} ou une suite de valeurs `GLfloat`.
+  - : Un {{jsxref("Float32Array")}} ou une suite de valeurs `GLfloat`.
 
 ### Valeur retournée
 
@@ -80,4 +80,4 @@ gl.uniformMatrix2fv(loc, false, [2.1, 2.2]);
 ## Voir aussi
 
 - {{domxref("WebGLRenderingContext.uniform()")}}
-- {{domxref("WebGL2RenderingContext.uniformMatrix()")}} – versions WebGL 2 de ces méthodes.
+- {{domxref("WebGL2RenderingContext.uniformMatrix()")}} – versions WebGL 2 de ces méthodes.

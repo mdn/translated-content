@@ -50,7 +50,7 @@ Par exemple, cette événement pourrait être déclanché quand un utilisateur s
 body {
   padding: .2rem;
   display: grid;
-  grid-template-areas: "control  log";
+  grid-template-areas: "control log";
 }
 
 .control {

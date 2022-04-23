@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 ---
 {{APIRef()}}{{SeeCompatTable}}
 
-La propriété **`isSecureContext`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne un booleen indiquant si le contexte actuel est sécurisé (`true`) ou pas (`false`).
+La propriété **`isSecureContext`** de l'interface {{domxref("WindowOrWorkerGlobalScope")}} retourne un booleen indiquant si le contexte actuel est sécurisé (`true`) ou pas (`false`).
 
 ## Syntaxe
 
@@ -14,7 +14,7 @@ La propriété **`isSecureContext`** de l'interface {{domxref("WindowOrWorkerG
 
 ### Valeur
 
-Un {{domxref("Boolean")}}.
+Un {{domxref("Boolean")}}.
 
 ## Spécifications
 

@@ -17,17 +17,17 @@ Cette propriété indique si la fenêtre est affichée en mode plein écran ou n
 
     var isInFullScreen = windowRef.fullScreen;
 
-Avec les privilèges chrome, la propriété est modifiable ; autrement elle est en lecture seule. Souvenez-vous que si vous essayez de définir cette propriété sans les privilèges chrome, aucune exception ne sera déclenchée et l'appel échouera juste silencieusement. Cela permet d'empêcher que des scripts conçus pour utiliser cette propriété dans Internet Explorer cessent de fonctionner.
+Avec les privilèges chrome, la propriété est modifiable&nbsp;; autrement elle est en lecture seule. Souvenez-vous que si vous essayez de définir cette propriété sans les privilèges chrome, aucune exception ne sera déclenchée et l'appel échouera juste silencieusement. Cela permet d'empêcher que des scripts conçus pour utiliser cette propriété dans Internet Explorer cessent de fonctionner.
 
 ### Valeur de retour
 
 - `isInFullScreen`
-  - : Une valeur booléenne. Signification des valeurs :
+  - : Une valeur booléenne. Signification des valeurs&nbsp;:
 
 <!---->
 
-- `true` : La fenêtre est en mode plein écran.
-- `false` : La fenêtre n'est pas en mode plein écran.
+- `true`&nbsp;: La fenêtre est en mode plein écran.
+- `false`&nbsp;: La fenêtre n'est pas en mode plein écran.
 
 ### Exemples
 

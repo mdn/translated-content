@@ -72,7 +72,7 @@ try {
 | {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Définition initiale                                                              |
 | {{SpecName('ES5.1', '#sec-15.11.6.1', 'EvalError')}}                                                             | {{Spec2('ES5.1')}}     | Non utilisé dans cette spécificaition. Présent à des fins de rétrocompatibilité. |
 | {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}}         | {{Spec2('ES6')}}         | Non utilisé dans cette spécificaition. Présent à des fins de rétrocompatibilité. |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ESDraft')}} |                                                                                  |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-evalerror', 'EvalError')}} | {{Spec2('ESDraft')}} |                                                                                  |
 
 ## Compatibilité des navigateurs
 

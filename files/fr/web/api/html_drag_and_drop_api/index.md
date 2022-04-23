@@ -56,7 +56,7 @@ Les objets {{domxref("DataTransfer")}} incluent l'état du glisser-déposer, le 
 
 Les interfaces {{domxref("DragEvent")}} et {{domxref("DataTransfer")}} sont standard et suffisent à apporter des fonctionnalités de glisser/déposer. Toutefois, Firefox prend en charge quelques extensions spécifiques à Gecko (cf. ci-après) pour l'objet {{domxref("DataTransfer")}} (bien entendu, ces extensions ne fonctionneront que dans Firefox et pas dans les autres navigateurs).
 
-Chaque objet {{domxref("DataTransfer")}} possède une propriété  {{domxref("DataTransfer.items","items")}} qui est une liste ({{domxref("DataTransferItemList","list")}}) d'objets {{domxref("DataTransferItem")}}. Un objet {{domxref("DataTransferItem")}} représente un seul objet déplacé, avec une propriété {{domxref("DataTransferItem.kind","kind")}} qui indique s'il s'agit d'un texte (`string`) ou d'un fichier (`file`) et une propriété {{domxref("DataTransferItem.type","type")}} qui correspond au type MIME de la donnée déplacée. L'objet {{domxref("DataTransferItem")}} possède également des méthodes pour consulter les données de l'objet déplacé.
+Chaque objet {{domxref("DataTransfer")}} possède une propriété  {{domxref("DataTransfer.items","items")}} qui est une liste ({{domxref("DataTransferItemList","list")}}) d'objets {{domxref("DataTransferItem")}}. Un objet {{domxref("DataTransferItem")}} représente un seul objet déplacé, avec une propriété {{domxref("DataTransferItem.kind","kind")}} qui indique s'il s'agit d'un texte (`string`) ou d'un fichier (`file`) et une propriété {{domxref("DataTransferItem.type","type")}} qui correspond au type MIME de la donnée déplacée. L'objet {{domxref("DataTransferItem")}} possède également des méthodes pour consulter les données de l'objet déplacé.
 
 L'objet {{domxref("DataTransferItemList")}} est une liste d'objets {{domxref("DataTransferItem")}}. La liste possède des méthodes pour ajouter un objet en déplacement à la liste, pour retirer un objet de la liste ou pour vider la liste de tout ses objets.
 
@@ -93,7 +93,7 @@ Voir [la page de référence sur l'attribut `draggable`](/fr/docs/Web/HTML/Globa
 
 Une application peut inclure plusieurs objets dans une opération de glisser/déposer. Chaque objet est une chaîne de caractères ({{domxref("DOMString")}}) ayant un type MIME particulier (indiqué par son attribut `type`) tel que `text/html`.
 
-Chaque {{domxref("DragEvent")}} possède une propriété  {{domxref("DragEvent.dataTransfer","dataTransfer")}} contenant les données transportées. Cette propriété (un objet {{domxref("DataTransfer")}}) possède des méthodes pour gérer les données transportées. La méthode {{domxref("DataTransfer.setData","setData()")}} permet d'ajouter un objet aux données transportées :
+Chaque {{domxref("DragEvent")}} possède une propriété  {{domxref("DragEvent.dataTransfer","dataTransfer")}} contenant les données transportées. Cette propriété (un objet {{domxref("DataTransfer")}}) possède des méthodes pour gérer les données transportées. La méthode {{domxref("DataTransfer.setData","setData()")}} permet d'ajouter un objet aux données transportées :
 
 ```js
 function dragstart_handler(ev) {

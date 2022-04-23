@@ -46,8 +46,8 @@ Vous pouvez utiliser l'événement `vrdisplaydisconnect` dans une méthode [`add
 
 ```js
 window.addEventListener('vrdisplaydisconnect', function() {
-  info.textContent = 'Affichage déconnecté';
-  reportDisplays();
+  info.textContent = 'Affichage déconnecté';
+  reportDisplays();
 });
 ```
 

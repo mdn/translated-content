@@ -10,8 +10,6 @@ translation_of: MDN/Structures/Compatibility_tables
 ---
 <div>{{MDNSidebar}}</div>
 
-<div>{{IncludeSubnav("/zh-CN/docs/MDN")}}</div>
-
 <p class="summary"><span class="seoSummary">MDN 为我们的开放网页文档提供了兼容性表格的标准格式; 它是对比所有浏览器之间，包含 DOM，HTML，CSS，JavaScript，SVG 等技术的文档。</span>本文将介绍如何使用我们的功能将兼容性数据添加到MDN页面。</p>
 
 <div class="warning syntaxbox">
@@ -156,7 +154,7 @@ translation_of: MDN/Structures/Compatibility_tables
 </ul>
 
 <div>
-<p>在一个HTML、CSS和JS页面中，通常您只需要有一个特性。API则有些不同——它们总是包含多个子特性 （参见下边的 {{anch("Sub-features")}}）。</p>
+<p>在一个HTML、CSS和JS页面中，通常您只需要有一个特性。API则有些不同——它们总是包含多个子特性 （参见下边的 <a href="#子特性">子特性</a>）。</p>
 
 <h3 id="一个特性中的基础结构">一个特性中的基础结构</h3>
 
@@ -170,7 +168,7 @@ translation_of: MDN/Structures/Compatibility_tables
 
 <p>浏览器成员名称在架构里被定义（参见 <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#browser-identifiers">浏览器标识符</a>）。你应该使用现有定义的标识符的完整列表。如果你希望添加其他浏览器，请先联系我们，因为这可能会产生广泛的影响，不应该在未经认真考虑就这么做。</p>
 
-<p>在一个基本的浏览器兼容数据文件中，你只需要在浏览器标识符成员仲包含"version_added" （以下我们会说到{{anch("Advanced cases")}}）。其他你可能使用的值还包括： </p>
+<p>在一个基本的浏览器兼容数据文件中，你只需要在浏览器标识符成员仲包含"version_added" （以下我们会说到<a href="#添加数据：高级场景">高级场景</a>）。其他你可能使用的值还包括： </p>
 
 <ul>
  <li>一个版本号：如果你知道一个浏览器开始支持这个特性的准确版本，用一个字符串表述版本号，例如“47”。 </li>

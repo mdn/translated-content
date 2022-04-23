@@ -23,7 +23,7 @@ translation_of: Web/API/Clipboard
 <p>如果用户没有适时使用 <a href="/en-US/docs/Web/API/Permissions_API">Permissions API</a> 授予相应权限和<code>"clipboard-read"</code> 或 <code>"clipboard-write"</code> 权限，调用 <code>Clipboard</code> 对象的方法不会成功。</p>
 
 <div class="note">
-<p><strong>注意：</strong>实际上，现在浏览器对于访问剪贴板权限的索取各有不同，在章节 {{anch("剪贴板可用性")}} 查看更多细节。</p>
+<p><strong>注意：</strong>实际上，现在浏览器对于访问剪贴板权限的索取各有不同，在章节 <a href="#剪贴板可用性">剪贴板可用性</a> 查看更多细节。</p>
 </div>
 
 <p>所有剪贴板 API 方法都是异步的；它们返回一个 {{jsxref("Promise")}} 对象，在剪贴板访问完成后被执行。如果剪贴板访问被拒绝，promise 也会被拒绝。</p>

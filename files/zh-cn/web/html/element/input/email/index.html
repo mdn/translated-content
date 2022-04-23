@@ -26,7 +26,7 @@ translation_of: Web/HTML/Element/input/email
 <table class="properties">
  <tbody>
   <tr>
-   <td><strong>{{anch("值")}}</strong></td>
+   <td><strong><a href="#值">值</a></strong></td>
    <td>一个邮箱地址格式的{{domxref("DOMString")}} 或空值</td>
   </tr>
   <tr>
@@ -59,14 +59,14 @@ translation_of: Web/HTML/Element/input/email
 <ol>
  <li>一个空字符串（“”），表示用户未输入值或该值已被删除。</li>
  <li>
-  <p>单个符合格式的电子邮件地址。并不代表该邮件地址存在，而是说它至少在格式上是正确的，简单地讲就是 <code>"username@domain"</code> 或者 <code>"username@domain.tld"</code>，当然并不局限于此。关于匹配电子邮件地址验证算法的 {{Glossary("regular expression")}}，参见 {{anch("Validation")}}。</p>
+  <p>单个符合格式的电子邮件地址。并不代表该邮件地址存在，而是说它至少在格式上是正确的，简单地讲就是 <code>"username@domain"</code> 或者 <code>"username@domain.tld"</code>，当然并不局限于此。关于匹配电子邮件地址验证算法的 {{Glossary("regular expression")}}，参见 <a href="#validation">Validation</a>。</p>
  </li>
  <li>
   <p>当且仅当明确 {{htmlattrxref("multiple", "input")}} 属性时，值可以是一个列表，该列表包含一串符合格式的电子邮件地址，且每个地址之间用逗号分隔。列表中，位于每个地址之前和之后的任何空白字符都会被移除。</p>
  </li>
 </ol>
 
-<p>关于如何验证电子邮件地址以保证其格式正确的细节，参见 {{anch("Validation")}}。</p>
+<p>关于如何验证电子邮件地址以保证其格式正确的细节，参见 <a href="#validation">Validation</a>。</p>
 
 <h2 id="Using_email_inputs">Using email inputs</h2>
 
@@ -282,7 +282,7 @@ label::after {
 
 <h2 id="Examples">Examples</h2>
 
-<p>Here we have an email input with the ID <code>"emailAddress"</code> which is allowed to be up to a maximum of 256 characters long. The input box itself is physically 64 characters wide, and displays the text <code>"user@example.gov"</code> as a placeholder anytime the field is empty. In addition, by using the {{htmlattrxref("multiple", "input")}} attribute, the box is configured to allow the user to enter zero or more email addresses, separated by commas, as described in {{anch("Allowing multiple email addresses")}}. As a final touch, the {{htmlattrxref("list", "input")}} attribute contains the ID of a {{HTMLElement("datalist")}} whose {{HTMLElement("option")}}s specify a set of suggested values the user can choose from.</p>
+<p>Here we have an email input with the ID <code>"emailAddress"</code> which is allowed to be up to a maximum of 256 characters long. The input box itself is physically 64 characters wide, and displays the text <code>"user@example.gov"</code> as a placeholder anytime the field is empty. In addition, by using the {{htmlattrxref("multiple", "input")}} attribute, the box is configured to allow the user to enter zero or more email addresses, separated by commas, as described in <a href="#allowing_multiple_email_addresses">Allowing multiple email addresses</a>. As a final touch, the {{htmlattrxref("list", "input")}} attribute contains the ID of a {{HTMLElement("datalist")}} whose {{HTMLElement("option")}}s specify a set of suggested values the user can choose from.</p>
 
 <p>As an added touch, the {{HTMLElement("label")}} element is used to establish a label for the email entry box, with its {{htmlattrxref("for", "label")}} attribute referencing the <code>"emailAddress"</code> ID of the {{HTMLElement("input")}} element. By associating the two elements in this way, clicking on the label will focus the input element.</p>
 

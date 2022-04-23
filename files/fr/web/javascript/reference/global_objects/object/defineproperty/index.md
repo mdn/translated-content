@@ -161,7 +161,7 @@ Object.defineProperty(o, "conflit", { value: 0x9f91102,
 
 ### Modifier une propriété existante
 
-Quand une propriété existe d'ores et déjà pour un objet, `Object.defineProperty()` tentera de modifier la propriété pour qu'elle corresponde aux valeurs indiquées dans le descripteur et à la configuration de l'objet courant. Si l'ancien descripteur avait `configurable` à  `false` (la propriété est dite non-configurable), aucun attribut, à l'exception de `writable`, ne peut être changé. Dans ce cas, il n'est pas possible de changer entre les types de descripteur.
+Quand une propriété existe d'ores et déjà pour un objet, `Object.defineProperty()` tentera de modifier la propriété pour qu'elle corresponde aux valeurs indiquées dans le descripteur et à la configuration de l'objet courant. Si l'ancien descripteur avait `configurable` à  `false` (la propriété est dite non-configurable), aucun attribut, à l'exception de `writable`, ne peut être changé. Dans ce cas, il n'est pas possible de changer entre les types de descripteur.
 
 Si une propriété est non-configurable, son attribut `writable` ne peut être mis qu'à `false`.
 
@@ -318,18 +318,18 @@ function Archiviste() {
   var température = null;
   var archive = [];
 
-  Object.defineProperty(this, "température",{
-    get: function() {
+  Object.defineProperty(this, "température",{
+    get: function() {
       console.log("accès !");
       return température;
     },
-    set: function(value) {
+    set: function(value) {
       température = value;
       archive.push({val: température});
     }
-  });
+  });
 
-  this.getArchive = function() {return archive;};
+  this.getArchive = function() {return archive;};
 }
 
 var arc = new Archiviste();
@@ -384,11 +384,11 @@ arc.getArchive(); // [{val: 11}, {val: 13}]
 
 ### Redéfinir la propriété `length` d'un tableau (`Array`)
 
-Il est possible de redéfinir la propriété {{jsxref("Array.length", "length")}} utilisée pour les tableaux, avec les restrictions vues. (La propriété `length` est initialement non-configurable, non-enumérable et accessible en écriture (`writable` vaut `true`)). Ainsi, sur un tableau, si rien n'a été fait, on peut modifier la valeur de la propriété `length` ou la rendre non accessible en écriture. Il n'est pas permis de changer son caractère énumérable ou configurable. Cependant, tous les navigateurs n'autorisent pas cette redéfinition.
+Il est possible de redéfinir la propriété {{jsxref("Array.length", "length")}} utilisée pour les tableaux, avec les restrictions vues. (La propriété `length` est initialement non-configurable, non-enumérable et accessible en écriture (`writable` vaut `true`)). Ainsi, sur un tableau, si rien n'a été fait, on peut modifier la valeur de la propriété `length` ou la rendre non accessible en écriture. Il n'est pas permis de changer son caractère énumérable ou configurable. Cependant, tous les navigateurs n'autorisent pas cette redéfinition.
 
 Les versions de Firefox 4 à 22 renverront une exception {{jsxref("TypeError")}} pour chaque tentative (licite ou non) de modification de la propriété `length` d'un tableau.
 
-Pour les versions de Chrome qui implémentent `Object.defineProperty()`, elles ignorent, dans certaines circonstances, une redéfinition de la propriété utilisant une valeur différente de la valeur courante de `length`. Sous certaines circonstances, le changement de l'accès en écriture n'aura aucun effet (et ne renverra aucune exception). Les méthodes relatives comme  {{jsxref("Array.prototype.push")}} ne respectent pas le non accès en écriture.
+Pour les versions de Chrome qui implémentent `Object.defineProperty()`, elles ignorent, dans certaines circonstances, une redéfinition de la propriété utilisant une valeur différente de la valeur courante de `length`. Sous certaines circonstances, le changement de l'accès en écriture n'aura aucun effet (et ne renverra aucune exception). Les méthodes relatives comme  {{jsxref("Array.prototype.push")}} ne respectent pas le non accès en écriture.
 
 Pour les versions de Safari qui implémentent `Object.defineProperty()` elles ignorent la redéfinition d'une valeur différente de la valeur courante. Toute tentative de modifier l'accès en écriture échouera silencieusement (aucune modification effective, aucune exception renvoyée).
 

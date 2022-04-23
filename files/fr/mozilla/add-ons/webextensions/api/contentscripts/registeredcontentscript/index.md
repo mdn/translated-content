@@ -14,7 +14,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredConte
 ---
 {{AddonSidebar()}}
 
-Un `RegisteredContentScript` est renvoyé par un appel à  {{WebExtAPIRef("contentScripts.register()")}} et représente les scripts de contenu enregistrés dans cet appel.
+Un `RegisteredContentScript` est renvoyé par un appel à  {{WebExtAPIRef("contentScripts.register()")}} et représente les scripts de contenu enregistrés dans cet appel.
 
 Il définit une seule fonction {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister()", "unregister()")}}, qui peut être utilisée pour annuler l'enregistrement des scripts de contenu.
 

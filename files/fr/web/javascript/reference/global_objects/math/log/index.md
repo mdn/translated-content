@@ -34,7 +34,7 @@ Le logarithme naturelle de la valeur passée en argument. Si cette valeur est n�
 
 Si la valeur de l'argument est négative, la valeur renvoyée sera {{jsxref("NaN")}}. Si la valeur de l'argument est `0`, la valeur de retour sera {{jsxref("Number.NEGATIVE_INFINITY", "-Infinity")}}.
 
-`log()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.log()`, elle ne doit pas être utilisée à partir d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Si on veut utiliser les constantes données par les logarithmes naturels de 2 ou 10, on pourra utiliser les constantes {{jsxref("Math.LN2")}} ou {{jsxref("Math.LN10")}}. De même pour les logarithmes en base 2 ou en base 10, on pourra utiliser {{jsxref("Math.log2()")}} or {{jsxref("Math.log10()")}}.
+`log()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.log()`, elle ne doit pas être utilisée à partir d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Si on veut utiliser les constantes données par les logarithmes naturels de 2 ou 10, on pourra utiliser les constantes {{jsxref("Math.LN2")}} ou {{jsxref("Math.LN10")}}. De même pour les logarithmes en base 2 ou en base 10, on pourra utiliser {{jsxref("Math.log2()")}} or {{jsxref("Math.log10()")}}.
 
 ## Exemples
 

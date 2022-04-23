@@ -38,19 +38,19 @@ Une nouvelle chaîne contenant la partie indiquée de la chaîne donnée.
 
 `substr()` extrait `longueur` caractères d'une `string`, en comptant à partir de l'indice `début`.
 
-Si `début` est un nombre positif, l'indice commence à compter du début de la chaîne. Sa valeur est limitée à `chn.length`.
+Si `début` est un nombre positif, l'indice commence à compter du début de la chaîne. Sa valeur est limitée à `chn.length`.
 
-Si `début` est un nombre négatif, l'indice commence à compter de la fin de la chaîne. Sa valeur est limitée à `-chn.length`.
+Si `début` est un nombre négatif, l'indice commence à compter de la fin de la chaîne. Sa valeur est limitée à `-chn.length`.
 
 Note : dans JScript de Microsoft, les valeurs négatives de l'argument `début` ne sont pas considérées comme faisant référence à la fin de la chaîne.
 
-Si `longueur` est omise, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
+Si `longueur` est omise, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
 
-Si `longueur` est {{jsxref("undefined")}}, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
+Si `longueur` est {{jsxref("undefined")}}, `substr()` extrait les caractères jusqu'à la fin de la chaîne.
 
-Si `longueur` est négative, elle est traitée comme 0.
+Si `longueur` est négative, elle est traitée comme 0.
 
-Pour `début` comme pour `longueur`, NaN est traité comme 0.
+Pour `début` comme pour `longueur`, NaN est traité comme 0.
 
 ## Exemples
 
@@ -77,14 +77,14 @@ if ('ab'.substr(-1) != 'b') {
   /**
    *  Obtenir la sous-chaîne d'une chaîne
    *  @param  {entier}  début     où démarrer la sous-chaîne
-   *  @param  {entier}  longueur  combien de caractères à retourner
+   *  @param  {entier}  longueur combien de caractères à retourner
    *  @return {chaîne}
    */
   String.prototype.substr = function(substr) {
     return function(début, longueur) {
       // Appel de la méthode originale
       return substr.call(this,
-        // Si on a un début négatif, calculer combien il vaut à partir du début de la chaîne
+        // Si on a un début négatif, calculer combien il vaut à partir du début de la chaîne
         // Ajuster le paramètre pour une valeur négative
         début < 0 ? this.length + début : début,
         longueur)

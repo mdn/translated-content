@@ -53,7 +53,7 @@ Il est aussi préférable que vous ayiez quelques connaissances fondamentales su
 
 ## Guides
 
-Notez que les liens ci-après vous amènent à des ressources sur des sites externes. Nous envisageons la possibilité d'avoir notre cours  consacré à Git/GitHub, mais pour l'instant, ceux-ci vous aideront à mieux appréhender le sujet.
+Notez que les liens ci-après vous amènent à des ressources sur des sites externes. Nous envisageons la possibilité d'avoir notre cours consacré à Git/GitHub, mais pour l'instant, ceux-ci vous aideront à mieux appréhender le sujet.
 
 - [Hello World (de GitHub)](https://guides.github.com/activities/hello-world/)
   - : C'est un bon point pour commencer — ce guide pratique vous fera entrer dans l'utilisation de GitHub en vous apprenant les fondements de Git tels que la création de dépôts et de branches, la créations de _commits_ ainsi qu'à l'ouverture et à la fusion de _pull requests_.

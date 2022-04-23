@@ -10,7 +10,7 @@ translation_of: Web/API/HTMLContentElement/getDistributedNodes
 ---
 {{ APIRef("Web Components") }}
 
-La méthode **`HTMLContentElement.getDistributedNodes()`** retourne un {{domxref("NodeList")}} statique du {{glossary("distributed nodes")}} associé avec l'élément `<content>`.
+La méthode **`HTMLContentElement.getDistributedNodes()`** retourne un {{domxref("NodeList")}} statique du {{glossary("distributed nodes")}} associé avec l'élément `<content>`.
 
 ## Syntaxe
 
@@ -27,7 +27,7 @@ var nodes = myContentObject.getDistributedNodes();
 
 | Spécification                                                                    | Status                           | Commentaire |
 | -------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
+| {{SpecName('Shadow DOM', '#the-content-element', 'content')}} | {{Spec2('Shadow DOM')}} |             |
 
 ## Compatibilité des navigateurs
 

@@ -16,7 +16,7 @@ original_slug: Apprendre/JavaScript
 
 ## Parcours d'apprentissage
 
-JavaScript est sans doute plus difficile à apprendre que les technologies connexes telles que [HTML](/fr/Apprendre/HTML) et [CSS](/fr/Apprendre/CSS). Avant d'essayer d'apprendre le JavaScript, il est fortement conseillé de se familiariser d'abord avec au moins ces deux technologies, et peut-être aussi avec d'autres. Commencez par travailler sur les modules suivants :
+JavaScript est sans doute plus difficile à apprendre que les technologies connexes telles que [HTML](/fr/Apprendre/HTML) et [CSS](/fr/Apprendre/CSS). Avant d'essayer d'apprendre le JavaScript, il est fortement conseillé de se familiariser d'abord avec au moins ces deux technologies, et peut-être aussi avec d'autres. Commencez par travailler sur les modules suivants&nbsp;:
 
 - [Commencer avec le Web](/fr/Apprendre/Commencer_avec_le_web)
 - [Introduction au HTML](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML)
@@ -24,14 +24,14 @@ JavaScript est sans doute plus difficile à apprendre que les technologies conne
 
 Avoir une expérience antérieure avec d'autres langages de programmation peut également aider.
 
-Après vous être familiarisé avec les bases de JavaScript, vous devriez être en mesure d'en apprendre davantage sur des sujets plus avancés, par exemple :
+Après vous être familiarisé avec les bases de JavaScript, vous devriez être en mesure d'en apprendre davantage sur des sujets plus avancés, par exemple&nbsp;:
 
 - JavaScript en profondeur, comme enseigné dans notre [guide JavaScript](/fr/docs/Web/JavaScript/Guide)
 - [API web](/fr/docs/Web/API)
 
 ## Modules
 
-Cette rubrique contient les modules suivants, dans l'ordre suggéré pour les aborder :
+Cette rubrique contient les modules suivants, dans l'ordre suggéré pour les aborder&nbsp;:
 
 - [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps)
   - : Dans notre premier module JavaScript, nous répondons d'abord à des questions fondamentales telles que «qu'est-ce que le JavaScript ?», «à quoi cela ressemble-t-il ?» et «que peut-il faire ?», avant de passer à votre première expérience pratique d'écriture de JavaScript. Après cela, nous discutons en détail de certaines fonctionnalités clés de JavaScript, telles que les variables, les chaînes, les nombres et les tableaux.

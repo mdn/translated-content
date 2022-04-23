@@ -9,7 +9,7 @@ translation_of: Web/SVG/Element/rect
 ---
 {{SVGRef}}{{Draft("Cette version n'est pas à jour relativement à la version anglaise de référence, merci d'en tenir compte.")}}
 
-L'élément `rect` est un élément de Formes basiques, utilisé pour dessiner des rectangles à partir de la  position d'un angle, de largeur et de la hauteur. Il peut aussi être utilisé avec des arrondis.
+L'élément `rect` est un élément de Formes basiques, utilisé pour dessiner des rectangles à partir de la position d'un angle, de largeur et de la hauteur. Il peut aussi être utilisé avec des arrondis.
 
 ## Usage
 

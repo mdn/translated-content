@@ -13,7 +13,7 @@ tags:
   - Window
 translation_of: Web/API/Window/mozPaintCount
 ---
-{{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}{{Obsolete_Header("Gecko72")}}{{Gecko_MinVersion_Header("2.0")}}
+{{APIRef("Mozilla Extensions")}}{{Non-standard_Header}}{{Obsolete_Header("Gecko72")}}
 
 Renvoie le nombre de fois où le document actuel a été peint à l'écran dans cette fenêtre.
 

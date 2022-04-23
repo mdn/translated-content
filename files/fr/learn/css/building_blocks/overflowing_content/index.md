@@ -11,7 +11,7 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
 <table class="standard-table">
   <tbody>
     <tr>
-      <th scope="row">Prérequis :</th>
+      <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Connaissances élémentaires en informatique,
         <a
@@ -31,7 +31,7 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
       </td>
     </tr>
     <tr>
-      <th scope="row">Objectif :</th>
+      <th scope="row">Objectif&nbsp;:</th>
       <td>Comprendre le principe des débordements et comment les gérer.</td>
     </tr>
   </tbody>
@@ -59,7 +59,7 @@ Dans la mesure du possible, le CSS ne masque pas votre contenu ; le faire entra�
 
 Si vous avez défini une boîte avec des valeurs `width` ou `height`, CSS part du principe que vous savez ce que vous faites et que vous gérez le risque de débordement. En général, contraindre la dimension du bloc est problématique lorsque du texte va être mis dans une boîte, car il peut y avoir plus de texte que prévu lors de la conception du site ou que le texte peut être plus gros - par exemple si l'utilisateur a augmenté la taille de sa police.
 
-Dans les deux prochaines leçons, nous examinerons différentes façons de contrôler la taille des éléments afin de limiter le dépassement. Cependant, si vous avez besoin d'une taille fixe, vous pouvez également contrôler le comportement du trop-plein. Voyons maintenant !
+Dans les deux prochaines leçons, nous examinerons différentes façons de contrôler la taille des éléments afin de limiter le dépassement. Cependant, si vous avez besoin d'une taille fixe, vous pouvez également contrôler le comportement du trop-plein. Voyons maintenant&nbsp;!
 
 ## La propriété overflow
 
@@ -103,7 +103,7 @@ Les méthodes de mise en page modernes (comme étudiées dans le module [La mise
 
 Lorsque vous développez un site, vous devez toujours garder à l'esprit les problèmes de débordement. Vous devez tester des conceptions avec des quantités de contenu importantes et réduites, augmenter la taille de la police et vous assurer que votre CSS peut s'en sortir de manière efficace. La modification de la valeur d'`overflow` pour masquer le contenu ou ajouter des barres de défilement ne sera probablement réservée qu'à quelques rares cas particuliers - par exemple lorsque vous voulez spécifiquement une barre de défilement.
 
-## Testez vos compétences !
+## Testez vos compétences&nbsp;!
 
 Nous avons couvert beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien retenu ces informations avant de partir - voir (en anglais) [Testez vos compétences: overflow](/fr/docs/Learn/CSS/Building_blocks/Overflow_Tasks).
 

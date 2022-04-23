@@ -45,8 +45,8 @@ Editer le code en dessous et voir vos modifications mises à jour en direct dans
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
 <div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
+  <input id="edit" type="button" value="Edit" />
+  <input id="reset" type="button" value="Reset" />
 </div>
 <textarea id="code" class="playable-code">
 ctx.rect(10, 10, 100, 100);
@@ -85,7 +85,7 @@ window.addEventListener("load", drawCanvas);
 
 | Spécification                                                                                                                            | Statut                           | Commentaire |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroke", "CanvasRenderingContext2D.stroke")}} | {{Spec2('HTML WHATWG')}} |             |
+| {{SpecName('HTML WHATWG', "scripting.html#dom-context-2d-stroke", "CanvasRenderingContext2D.stroke")}} | {{Spec2('HTML WHATWG')}} |             |
 
 ## Compatibilité avec les navigateurs
 

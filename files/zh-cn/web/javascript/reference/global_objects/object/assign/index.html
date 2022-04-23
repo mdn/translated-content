@@ -251,39 +251,6 @@ console.log(copy);
 // { foo:1, get bar() { return 2 } }
 </pre>
 
-<h2 id="Polyfill">Polyfill</h2>
-
-<p>此{{Glossary("Polyfill","polyfill")}}不支持 symbol 属性，因为ES5 中根本没有 symbol ：</p>
-
-<pre class="brush: js">if (typeof Object.assign != 'function') {
-  // Must be writable: true, enumerable: false, configurable: true
-  Object.defineProperty(Object, "assign", {
-    value: function assign(target, varArgs) { // .length of function is 2
-      'use strict';
-      if (target == null) { // TypeError if undefined or null
-        throw new TypeError('Cannot convert undefined or null to object');
-      }
-
-      let to = Object(target);
-
-      for (var index = 1; index &lt; arguments.length; index++) {
-        var nextSource = arguments[index];
-
-        if (nextSource != null) { // Skip over if undefined or null
-          for (let nextKey in nextSource) {
-            // Avoid bugs when hasOwnProperty is shadowed
-            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
-              to[nextKey] = nextSource[nextKey];
-            }
-          }
-        }
-      }
-      return to;
-    },
-    writable: true,
-    configurable: true
-  });
-}</pre>
 
 <h2 id="Specifications">规范</h2>
 

@@ -14,11 +14,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/close
 
 Ferme la demande. Après cet appel, aucune autre donnée de réponse ne sera transmise au moteur de rendu du navigateur et aucun autre événement de filtrage ne sera donné à l'extension.
 
-Notez la différence entre cette fonction et  {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}. Avec  `disconnect()`, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec `close()`, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.
+Notez la différence entre cette fonction et  {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}. Avec  `disconnect()`, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec `close()`, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.
 
 Vous devriez toujours appeler `close()` ou `disconnect()` une fois que vous n'avez plus besoin d'interagir avec la réponse.
 
-Vous ne pouvez pas appeler cette fonction avant que l'événement  {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
+Vous ne pouvez pas appeler cette fonction avant que l'événement  {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
 
 ## Syntaxe
 
@@ -40,7 +40,7 @@ None.
 
 ## Exemples
 
-Cet exemple remplacera le contenu de la page par "texte de remplacement"  :
+Cet exemple remplacera le contenu de la page par "texte de remplacement"  :
 
 ```js
 function listener(details) {

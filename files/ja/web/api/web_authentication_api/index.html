@@ -93,12 +93,12 @@ translation_of: Web/API/Web_Authentication_API
  <li><strong>ブラウザによる認証器のauthenticatorGetCredential()の呼び出し</strong> - 内部的にブラウザはパラメータを検証し、デフォルト値を埋めて {{domxref("AuthenticatorResponse.clientDataJSON")}}を作成します。最も重要なパラメータの一つがoriginであり、これはclientDataの一部として記録され、後ほどサーバによって検証されます。get()呼び出し時のパラメータは、clientDataJSONのSHA-256ハッシュと一緒に認証器に渡されます。(認証器への接続が低帯域幅の NFC または Bluetooth である可能性があり、認証器は単にハッシュに署名して改ざんされていないことを保証することが目的のため、ハッシュのみを送信します)</li>
  <li><strong>認証器によるAssertionの生成</strong> - 認証器がこのサービスの認証情報がRelying Party IDと一致することを確認し、ユーザに認証の同意を促します。この二つのステップが成功した場合、認証器は登録時に生成された秘密鍵を用いてclientDataHashとauthenticatorDataに署名を行うことで新しいAssertionを生成します。</li>
  <li><strong>認証器がブラウザにデータを返す</strong> - 認証器がauthenticatorDataとassertionの署名をブラウザに返します。</li>
- <li><strong>ブラウザが最終的なデータを生成し、アプリケーションがサーバにレスポンスを送信するBrowser Creates Final Data, Application sends response to Server</strong> - ブラウザが{{domxref("AuthenticatorAssertionResponse")}}を含む{{domxref("PublicKeyCredential.response")}}と一緒に<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>を {{domxref("PublicKeyCredential")}}に解決しようとします。サーバに対してどのようなプロトコル、フォーマットでこのデータを戻すのかについてはJavaScriptアプリケーションに委ねられています。</li>
+ <li><strong>ブラウザが最終的なデータを生成し、アプリケーションがサーバにレスポンスを送信する</strong> - ブラウザが{{domxref("AuthenticatorAssertionResponse")}}を含む{{domxref("PublicKeyCredential.response")}}と一緒に<a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a>を {{domxref("PublicKeyCredential")}}に解決しようとします。サーバに対してどのようなプロトコル、フォーマットでこのデータを戻すのかについてはJavaScriptアプリケーションに委ねられています。</li>
  <li><strong>サーバによる検証と認証の完了</strong> - 認証要求の結果を受け取り次第、サーバはレスポンスの検証を行います。この検証は以下のようなものです。
   <ol>
    <li>Relying Party IDがこのサービスで想定しているものか</li>
    <li>認証器によって署名されたチャレンジ、サーバによって生成されたものと一致しているか</li>
-   <li>登録要求の際に保管した、認証器による署名を検証するための公開鍵が用いられているか</li>
+   <li>登録要求の際に保管した公開鍵を用いた認証器による署名の検証</li>
   </ol>
   これらは<a href="https://w3c.github.io/webauthn/#verifying-assertion">WebAuthnの仕様で規定されているAssertionの検証手順</a>のすべてです。検証が成功した場合、ユーザは認証済であると記録します。WebAuthnによる規定の対象範囲外ですが、ひとつの選択肢として新しいCookieをユーザのセッションに対して発行することが考えられます。</li>
 </ol>

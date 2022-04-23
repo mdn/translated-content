@@ -46,7 +46,7 @@ var settingIcon = browser.sidebarAction.setIcon(
 
 - `details`
 
-  - : `object`. Un Objet contenant des propriétés `imageData` ou `path`, et éventuellement une propriété `tabId`.
+  - : `object`. Un Objet contenant des propriétés `imageData` ou `path`, et éventuellement une propriété `tabId`.
 
     - `imageData`{{optional_inline}}
 

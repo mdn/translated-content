@@ -11,7 +11,7 @@ translation_of: Web/API/Event/cancelable
 ---
 {{ ApiRef("DOM") }}
 
-La propriété  _`cancelable`_ (_annulable_) de "Event" Indique si l'événement peut être annulé et donc empêché, comme si l'événement ne s'était jamais produit. Si l'événement n'est pas annulable, alors sa propriété `cancelable` est à `false` (_faux_) et l'écouteur d'événement ne peut pas l'arrêter.
+La propriété _`cancelable`_ (_annulable_) de "Event" Indique si l'événement peut être annulé et donc empêché, comme si l'événement ne s'était jamais produit. Si l'événement n'est pas annulable, alors sa propriété `cancelable` est à `false` (_faux_) et l'écouteur d'événement ne peut pas l'arrêter.
 
 L'appel de {{domxref("event.preventDefault", "preventDefault()")}} sur un évènement qui ne peut être annulé produit une erreur, aussi les écouteurs d'évènement qui gèrent de nombreux types d'évènements peuvent être vérifiés avec `cancelable` avant d'appeler leurs méthodes `preventDefault()`.
 
@@ -55,8 +55,8 @@ Pour annuler un événement, utiliser la méthode {{domxref("event.preventDefaul
 
 | Spécification                                                                                        | Statut                               | Commentaire          |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('DOM WHATWG', '#dom-event-cancelable', 'Event.cancelable')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
-| {{SpecName('DOM4', '#dom-event-cancelable', 'Event.cancelable')}}             | {{ Spec2('DOM4') }}             |                      |
+| {{SpecName('DOM WHATWG', '#dom-event-cancelable', 'Event.cancelable')}}     | {{ Spec2('DOM WHATWG') }}     |                      |
+| {{SpecName('DOM4', '#dom-event-cancelable', 'Event.cancelable')}}             | {{ Spec2('DOM4') }}             |                      |
 | {{SpecName('DOM2 Events', '#Events-Event-canCancel', 'Event.cancelable')}} | {{ Spec2('DOM2 Events') }} | Définition initiale. |
 
 ## Compatibilité des navigateurs

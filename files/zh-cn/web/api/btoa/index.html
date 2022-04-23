@@ -18,7 +18,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 <p><strong><code>WindowOrWorkerGlobalScope.btoa()</code> </strong> 从 {{jsxref("String")}} 对象中创建一个 base-64 编码的 ASCII 字符串，其中字符串中的每个字符都被视为一个二进制数据字节。</p>
 
 <div class="note">
-<p><strong>Note</strong>: 由于这个函数将每个字符视为二进制数据的字节，而不管实际组成字符的字节数是多少，所以如果任何字符的{{Glossary("code point", "码位")}}超出 <code>0x00</code> ~ <code>0xFF</code> 这个范围，则会引发 <code>InvalidCharacterError</code> 异常。请参阅 {{anch("Unicode_字符串")}} ，该示例演示如何编码含有码位超出 <code>0x00</code> ~ <code>0xFF</code> 范围的字符的字符串。</p>
+<p><strong>Note</strong>: 由于这个函数将每个字符视为二进制数据的字节，而不管实际组成字符的字节数是多少，所以如果任何字符的{{Glossary("code point", "码位")}}超出 <code>0x00</code> ~ <code>0xFF</code> 这个范围，则会引发 <code>InvalidCharacterError</code> 异常。请参阅 <a href="#unicode_字符串">Unicode_字符串</a> ，该示例演示如何编码含有码位超出 <code>0x00</code> ~ <code>0xFF</code> 范围的字符的字符串。</p>
 </div>
 
 <h2 id="语法">语法</h2>

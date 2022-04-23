@@ -88,7 +88,7 @@ Firefox offre également des fonctionnalités uniques que vous pouvez utiliser p
     <tr>
       <td>
         <p>
-          Ajoutez une dimension supplémentaire à vos thèmes en 
+          Ajoutez une dimension supplémentaire à vos thèmes en
           <a href="/fr/Add-ons/WebExtensions/API/theme"
             >mettant à jour le thème du navigateur au moment de l'exécution</a
           >. Avec cette fonction, vous pouvez alterner les thèmes par heure de
@@ -103,7 +103,7 @@ Firefox offre également des fonctionnalités uniques que vous pouvez utiliser p
       <td>
         <p>
           Effectuez des recherches directement à partir de votre extension, avec
-          des fonctions pour obtenir les détails avec la <a
+          des fonctions pour obtenir les détails avec la <a
             href="/fr/Add-ons/WebExtensions/API/browserSettings"
             >possibilité de modifier (certains) paramètres globaux du
             navigateur</a
@@ -117,7 +117,7 @@ Firefox offre également des fonctionnalités uniques que vous pouvez utiliser p
         <p>
           Permettez aux utilisateurs d'ajouter de manière fiable les
           fonctionnalités de votre extension à de nouvelles pages et de nouveaux
-          sites, avec la possibilité <a
+          sites, avec la possibilité <a
             href="/fr/Add-ons/WebExtensions/API/contentScripts"
             >enregistrer et de désinscrire des scripts de contenu au moment de
             l'exécution</a
@@ -130,7 +130,7 @@ Firefox offre également des fonctionnalités uniques que vous pouvez utiliser p
       <td>
         <p>
           Profitez des services externes pour gérer les protocoles ou les types
-          de contenu en enregistrant les <a
+          de contenu en enregistrant les <a
             href="/fr/Add-ons/WebExtensions/manifest.json/protocol_handlers"
             >gestionnaires de protocole</a
           >

@@ -385,7 +385,7 @@ Modifiers are special keys which are used to generate special characters or caus
   </tbody>
 </table>
 
-\[1] Older browsers may return "Spacebar" instead of " " for the <kbd>Space Bar</kbd> key. Firefox did so until version 37, as did Internet Explorer 9, 10, and 11.
+\[1] Older browsers may return "Spacebar" instead of " " for the <kbd>Space Bar</kbd> key. Firefox did so until version 37, as did Internet Explorer 9, 10, and 11.
 
 ## Navigation keys
 
@@ -616,7 +616,7 @@ Modifiers are special keys which are used to generate special characters or caus
     <tr>
       <td><code>"Insert"</code></td>
       <td>
-        The Insert key, <kbd>Ins</kbd>. Toggles  between inserting and
+        The Insert key, <kbd>Ins</kbd>. Toggles between inserting and
         overwriting text.
       </td>
       <td><code>VK_INSERT</code> (0x2D)</td>
@@ -1191,12 +1191,12 @@ Some keys are common across multiple languages, while others exist only on keybo
         identify which specific dead key was pressed (in cases where more than
         one exists), you can do so by examining the
         {{domxref("KeyboardEvent")}}'s associated
-        {{event("compositionupdate")}} event's 
+        {{event("compositionupdate")}} event's
         {{domxref("CompositionEvent.data", "data")}} property.
       </td>
       <td></td>
       <td></td>
-      <td>See {{anch("Dead keycodes for Linux")}} below</td>
+      <td>See <a href="#dead_keycodes_for_linux">Dead keycodes for Linux</a> below</td>
       <td></td>
     </tr>
     <tr>
@@ -1301,7 +1301,7 @@ Some keys are common across multiple languages, while others exist only on keybo
         <code>GDK_KEY_Muhenkan</code> (0xFF22)<br /><code
           >Qt::Key_Muhenkan</code
         >
-        (0x01001122)<br /> 
+        (0x01001122)<br />
       </td>
       <td><code>KEYCODE_MUHENKAN</code> (213)</td>
     </tr>
@@ -1598,11 +1598,11 @@ These keys are only available on Japanese keyboards.
 
 ### Dead keycodes for Linux
 
-Linux generates accented characters using special **dead keys**; these are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the  {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's  {{domxref("CompositionEvent.data", "data")}} property.
+Linux generates accented characters using special **dead keys**; these are keys which are pressed in combination with character keys to generate accented forms of those characters. You can identify which specific dead key was used (if more than one exists) by examining the  {{domxref("KeyboardEvent")}}'s associated {{event("compositionupdate")}} event's  {{domxref("CompositionEvent.data", "data")}} property.
 
 You can find a table of the dead keys and the characters they can be used with to generate accented or otherwise special characters on Linux using GTK
 
-The value of {{domxref("CompositionEvent.data", "data")}} will be one of the following:
+The value of {{domxref("CompositionEvent.data", "data")}} will be one of the following:
 
 <table class="standard-table">
   <tbody>
@@ -1655,7 +1655,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_perispomeni</code> (0xFE53)</td>
-      <td> ͂</td>
+      <td> ͂</td>
       <td></td>
     </tr>
     <tr>
@@ -1755,7 +1755,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
         >
         (0x0100125D)
       </td>
-      <td> ͅ</td>
+      <td> ͅ</td>
       <td>Iota subscript.</td>
     </tr>
     <tr>
@@ -1795,7 +1795,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
         >
         (0x01001261)
       </td>
-      <td>  ̡</td>
+      <td>  ̡</td>
       <td></td>
     </tr>
     <tr>
@@ -1805,22 +1805,22 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
         >
         (0x01001262)
       </td>
-      <td> ̛</td>
+      <td> ̛</td>
       <td></td>
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_stroke</code> (0xFE63)</td>
-      <td> ̶̶</td>
+      <td> ̶̶</td>
       <td></td>
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_abovecomma</code> (0xFE64)</td>
-      <td> ̓̓</td>
+      <td> ̓̓</td>
       <td></td>
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_psili</code> (0xFE64)</td>
-      <td> ᾿</td>
+      <td> ᾿</td>
       <td></td>
     </tr>
     <tr>
@@ -1835,7 +1835,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_doublegrave</code> (0xFE66)</td>
-      <td> ̏</td>
+      <td> ̏</td>
       <td></td>
     </tr>
     <tr>
@@ -1845,7 +1845,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_belowmacron</code> (0xFE68)</td>
-      <td> ̱</td>
+      <td> ̱</td>
       <td></td>
     </tr>
     <tr>
@@ -1865,7 +1865,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fo
     </tr>
     <tr>
       <td><code>GDK_KEY_dead_belowdiaeresis</code> (0xFE6C)</td>
-      <td> ̤</td>
+      <td> ̤</td>
       <td></td>
     </tr>
     <tr>
@@ -2524,7 +2524,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
   </thead>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"MediaNextTrack"` and `"MediaPreviousTrack"` instead of `"MediaTrackNext"` and `"MediaTrackPrevious"`.
+\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"MediaNextTrack"` and `"MediaPreviousTrack"` instead of `"MediaTrackNext"` and `"MediaTrackPrevious"`.
 
 \[2] Prior to Firefox 37, Firefox generated the key code `"FastFwd"` on some platforms and `"Unidentified"` on others instead of `"MediaFastForward"`.
 
@@ -2736,7 +2736,7 @@ These media keys are used specifically for controlling audio.
   </thead>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/en-US/docs/Mozilla/B2G_OS).
+\[1] Internet Explorer, Edge, and Firefox (48 and earlier) use `"VolumeUp"`, `"VolumeDown"`, and `"VolumeMute"` instead of `"AudioVolumeUp"`, `"AudioVolumeDown"`, and `"AudioVolumeMute"`. In Firefox 49 they were updated to match the latest specification. The old names are still used on [Boot to Gecko](/en-US/docs/Mozilla/B2G_OS).
 
 ## TV control keys
 
@@ -3029,7 +3029,7 @@ The values below are derived in part form a number of consumer electronics techn
 - [ANSI/CEA-2014-B](http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx): Web-based Protocol and Framework for Remote User Interface on UPnP™ Networks and the Internet
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
 
-> **Note :** Remote controls typically include keys whose values are already defined elsewhere, such as under {{anch("Multimedia keys")}} or {{anch("Audio control keys")}}. Those keys' values will match what's documented in those tables.
+> **Note :** Remote controls typically include keys whose values are already defined elsewhere, such as under [Multimedia keys](#multimedia_keys) or [Audio control keys](#audio_control_keys). Those keys' values will match what's documented in those tables.
 
 <table class="standard-table">
   <thead>
@@ -4333,7 +4333,7 @@ Some keyboards offer special keys for launching or switching to certain common a
   </thead>
 </table>
 
-\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"SelectMedia"` instead of `"LaunchMediaPlayer"`. Firefox 37 through Firefox 48 use `"MediaSelect"`. Firefox 49 has been updated to match the latest specification, and to return `"LaunchMediaPlayer"`.
+\[1] Internet Explorer, Edge, and Firefox (36 and earlier) use `"SelectMedia"` instead of `"LaunchMediaPlayer"`. Firefox 37 through Firefox 48 use `"MediaSelect"`. Firefox 49 has been updated to match the latest specification, and to return `"LaunchMediaPlayer"`.
 
 \[2] Google Chrome 57 and earlier returned `"LaunchMyComputer"` instead of `"LaunchApplication1"`. See [Chrome Bug 612743](https://bugs.chromium.org/p/chromium/issues/detail?id=612743) for more information.
 
@@ -4516,7 +4516,7 @@ These keys are found on the keyboard's numeric keypad. However, not all are pres
       </td>
       <td><code>VK_DECIMAL</code> (0x6E)</td>
       <td><code>kVK_ANSI_KeypadDecimal</code> (0x41)</td>
-      <td><code>GDK_KEY_KP_Decimal</code> (0xFFAE)<br /> </td>
+      <td><code>GDK_KEY_KP_Decimal</code> (0xFFAE)<br /> </td>
       <td><code>KEYCODE_NUMPAD_DOT</code> (158)</td>
     </tr>
     <tr>
@@ -4594,7 +4594,7 @@ These keys are found on the keyboard's numeric keypad. However, not all are pres
       </td>
       <td><code>VK_SEPARATOR</code> (0x6C)</td>
       <td><code>kVK_JIS_KeypadComma</code> (0x5F)</td>
-      <td><code>GDK_KEY_KP_Separator</code> (0xFFAC)<br /> </td>
+      <td><code>GDK_KEY_KP_Separator</code> (0xFFAC)<br /> </td>
       <td><code>KEYCODE_NUMPAD_COMMA</code> (159)</td>
     </tr>
     <tr>

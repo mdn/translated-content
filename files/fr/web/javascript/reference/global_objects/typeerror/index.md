@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/TypeError
 ---
 {{JSRef}}
 
-L'objet **`TypeError`** représente une erreur qui intervient lorsque la valeur n'est pas du type attendu.
+L'objet **`TypeError`** représente une erreur qui intervient lorsque la valeur n'est pas du type attendu.
 
 ## Syntaxe
 
@@ -29,7 +29,7 @@ L'objet **`TypeError`** représente une erreur qui intervient lorsque la valeu
 
 ## Description
 
-Une exception `TypeError` est levée lorsque qu'un argument ou un opérande est utilisé avec une fonction ou un opérateur incompatible avec le type attendu.
+Une exception `TypeError` est levée lorsque qu'un argument ou un opérande est utilisé avec une fonction ou un opérateur incompatible avec le type attendu.
 
 ## Propriétés
 
@@ -38,7 +38,7 @@ Une exception `TypeError` est levée lorsque qu'un argument ou un opérande est
 
 ## Méthodes
 
-L'objet global `TypeError` ne contient pas de méthodes qui lui sont propres. Il possède malgré tout des méthodes héritées via sa chaîne de prototypes.
+L'objet global `TypeError` ne contient pas de méthodes qui lui sont propres. Il possède malgré tout des méthodes héritées via sa chaîne de prototypes.
 
 ## Instances de TypeError
 
@@ -89,9 +89,9 @@ try {
 | Spécification                                                                                                                    | Statut                       | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES3', '#sec-15.11.6.5', 'TypeError')}}                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.11.6.5', 'TypeError')}}                                                             | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES5.1', '#sec-15.11.6.5', 'TypeError')}}                                                             | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

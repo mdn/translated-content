@@ -49,7 +49,7 @@ uint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 | Spécification                                                                                                                                    | État                         | Commentaires         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-%typedarray%.prototype.tolocalestring', 'TypedArray.prototype.toLocaleString')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tolocalestring', 'TypedArray.prototype.toLocaleString')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tolocalestring', 'TypedArray.prototype.toLocaleString')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

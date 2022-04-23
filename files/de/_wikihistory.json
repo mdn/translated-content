@@ -2007,13 +2007,6 @@
       "AngelSankturio"
     ]
   },
-  "Tools/Index": {
-    "modified": "2020-07-16T22:36:02.468Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz"
-    ]
-  },
   "Tools/JSON_viewer": {
     "modified": "2020-07-16T22:36:31.343Z",
     "contributors": [
@@ -2970,19 +2963,19 @@
       "Sharian"
     ]
   },
-  "Web/API/EventListener": {
-    "modified": "2019-03-23T22:39:43.594Z",
-    "contributors": [
-      "skanne",
-      "StevenS77",
-      "Ctwx"
-    ]
-  },
   "Web/API/EventSource": {
     "modified": "2019-09-20T07:55:13.564Z",
     "contributors": [
       "Locour",
       "nexus511"
+    ]
+  },
+  "Web/API/EventTarget/addEventListener": {
+    "modified": "2019-03-23T22:39:43.594Z",
+    "contributors": [
+      "skanne",
+      "StevenS77",
+      "Ctwx"
     ]
   },
   "Web/API/FederatedCredential": {
@@ -3986,6 +3979,12 @@
       "horlabs"
     ]
   },
+  "Web/API/Window/afterprint_event": {
+    "modified": "2019-03-23T22:23:55.422Z",
+    "contributors": [
+      "maxx-dev"
+    ]
+  },
   "Web/API/Window/alert": {
     "modified": "2019-03-23T23:14:26.063Z",
     "contributors": [
@@ -4025,12 +4024,26 @@
       "AndreasWebdev"
     ]
   },
+  "Web/API/Window/devicemotion_event": {
+    "modified": "2019-03-18T21:15:10.920Z",
+    "contributors": [
+      "clepsydra",
+      "m9898"
+    ]
+  },
   "Web/API/Window/dump": {
     "modified": "2019-03-23T23:34:35.263Z",
     "contributors": [
       "fscholz",
       "jsx",
       "Jon_Deo"
+    ]
+  },
+  "Web/API/Window/hashchange_event": {
+    "modified": "2019-03-23T22:49:53.661Z",
+    "contributors": [
+      "flosommerfeld",
+      "ulrobin"
     ]
   },
   "Web/API/Window/history": {
@@ -4075,13 +4088,6 @@
       "AdamNiezielinski"
     ]
   },
-  "Web/API/Window/ondevicemotion": {
-    "modified": "2019-03-18T21:15:10.920Z",
-    "contributors": [
-      "clepsydra",
-      "m9898"
-    ]
-  },
   "Web/API/Window/openDialog": {
     "modified": "2020-11-15T17:34:16.679Z",
     "contributors": [
@@ -4097,6 +4103,13 @@
     "modified": "2019-03-23T22:31:18.645Z",
     "contributors": [
       "frickth"
+    ]
+  },
+  "Web/API/Window/popstate_event": {
+    "modified": "2019-03-23T22:35:53.667Z",
+    "contributors": [
+      "checkdotdot",
+      "Oliver_Schafeld"
     ]
   },
   "Web/API/Window/print": {
@@ -4153,26 +4166,6 @@
     "modified": "2019-03-23T22:50:03.877Z",
     "contributors": [
       "teoli"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onafterprint": {
-    "modified": "2019-03-23T22:23:55.422Z",
-    "contributors": [
-      "maxx-dev"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onhashchange": {
-    "modified": "2019-03-23T22:49:53.661Z",
-    "contributors": [
-      "flosommerfeld",
-      "ulrobin"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2019-03-23T22:35:53.667Z",
-    "contributors": [
-      "checkdotdot",
-      "Oliver_Schafeld"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {
@@ -5173,7 +5166,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/CSS_Color": {
+  "Web/CSS/CSS_Colors": {
     "modified": "2019-03-23T22:45:11.820Z",
     "contributors": [
       "Sebastianz",
@@ -5783,7 +5776,7 @@
       "bee8bit"
     ]
   },
-  "Web/CSS/attr()": {
+  "Web/CSS/attr": {
     "modified": "2020-11-04T08:51:28.043Z",
     "contributors": [
       "chrisdavidmills",
@@ -6276,7 +6269,7 @@
       "tonra"
     ]
   },
-  "Web/CSS/calc()": {
+  "Web/CSS/calc": {
     "modified": "2020-11-04T09:07:46.370Z",
     "contributors": [
       "chrisdavidmills",
@@ -7409,19 +7402,19 @@
       "ramiy"
     ]
   },
-  "Web/CSS/transform-function/translate3d()": {
+  "Web/CSS/transform-function/translate3d": {
     "modified": "2020-12-11T16:32:16.509Z",
     "contributors": [
       "Johuspect"
     ]
   },
-  "Web/CSS/transform-function/translateY()": {
+  "Web/CSS/transform-function/translateY": {
     "modified": "2020-12-11T16:48:39.299Z",
     "contributors": [
       "Johuspect"
     ]
   },
-  "Web/CSS/transform-function/translateZ()": {
+  "Web/CSS/transform-function/translateZ": {
     "modified": "2020-12-11T16:58:23.802Z",
     "contributors": [
       "Johuspect"
@@ -7472,7 +7465,7 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/url()": {
+  "Web/CSS/url": {
     "modified": "2020-10-15T22:01:29.787Z",
     "contributors": [
       "valentinprotiuc"
@@ -13536,6 +13529,13 @@
       "Ar-sch.de",
       "DDSD",
       "Dria"
+    ]
+  },
+  "conflicting/Tools": {
+    "modified": "2020-07-16T22:36:02.468Z",
+    "contributors": [
+      "wbamberg",
+      "fscholz"
     ]
   },
   "conflicting/Web/API": {

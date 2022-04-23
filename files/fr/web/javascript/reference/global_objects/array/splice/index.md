@@ -23,7 +23,7 @@ La méthode **`splice()`** modifie le contenu d'un tableau en retirant des élé
 ### Paramètres
 
 - `début`
-  - : L'indice à partir duquel commencer à changer le tableau (l'indice du premier élement étant `0`). Si sa valeur est supérieure à la longueur du tableau `array.length`, `début` est ramené à la longueur du tableau `array.length`. S'il est négatif, le changement commencera d'autant d'éléments à partir de la fin du tableau, c'est à dire à partir de l'index  `array.length + début`. Si `array.length + début` est inférieur à `0`, le changement commencera à l'index `0`.
+  - : L'indice à partir duquel commencer à changer le tableau (l'indice du premier élement étant `0`). Si sa valeur est supérieure à la longueur du tableau `array.length`, `début` est ramené à la longueur du tableau `array.length`. S'il est négatif, le changement commencera d'autant d'éléments à partir de la fin du tableau, c'est à dire à partir de l'index  `array.length + début`. Si `array.length + début` est inférieur à `0`, le changement commencera à l'index `0`.
 - `nbASupprimer`
   - : Un entier indiquant le nombre d'anciens éléments à remplacer.
     Si ce paramètre est absent ou si sa valeur est supérieure ou égale à `array.length - début`, alors les éléments entre `début` et la fin du tableau seront supprimés. Si `nbASupprimer` vaut 0, aucun élément ne sera supprimé. Dans ce cas, il est nécessaire de spécifier au moins un nouvel élément.

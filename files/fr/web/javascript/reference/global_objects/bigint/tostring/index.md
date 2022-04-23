@@ -52,7 +52,7 @@ Si `bigIntObj` est négatif, le signe est conservé, y compris lorsque la base e
 17n.toString();      // '17'
 66n.toString(2);     // '1000010'
 254n.toString(16);   // 'fe'
--10n.toString(2);    // -1010'
+-10n.toString(2);    // -1010'
 -0xffn.toString(2);  // '-11111111'
 ```
 

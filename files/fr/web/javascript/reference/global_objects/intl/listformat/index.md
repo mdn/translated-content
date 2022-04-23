@@ -24,10 +24,10 @@ L'objet **`Intl.ListFormat`** est un constructeur d'objets qui permettent de for
 ### Paramètres
 
 - `locales`{{optional_inline}}
-  - : Paramètre optionnel. Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`, voir la page {{jsxref("Intl","Intl","#L'identification_et_le_choix_de_la_locale")}}.
+  - : Paramètre optionnel. Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`, voir la page {{jsxref("Intl","Intl","#L'identification_et_le_choix_de_la_locale")}}.
 - `options`{{optional_inline}}
 
-  - : Paramètre optionnel. Un objet avec certaines ou toutes les propriétés suivantes :
+  - : Paramètre optionnel. Un objet avec certaines ou toutes les propriétés suivantes :
 
     - `localeMatcher`
       - : L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont `"lookup"` et `"best fit"` ; le défaut est `"best fit"`. Pour des informations sur cette option, voir la page {{jsxref("Intl","Intl","##Choix_de_la_locale")}}.

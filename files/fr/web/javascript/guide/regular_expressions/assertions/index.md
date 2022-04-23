@@ -85,7 +85,7 @@ Les assertions indiquent les conditions selon lesquelles il est possible d'avoir
           seulement si celui-ci n'est pas précédé d'un signe moins.<br /><code
             >/(?&#x3C;!-)\d+/.exec('3')</code
           >
-          cible "3".<br /> <code>/(?&#x3C;!-)\d+/.exec('-3')</code>  ne trouve
+          cible "3".<br /> <code>/(?&#x3C;!-)\d+/.exec('-3')</code>  ne trouve
           aucune correspondance car le nombre est précédé d'un signe
         </p>
       </td>

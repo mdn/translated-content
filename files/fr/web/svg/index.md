@@ -20,7 +20,7 @@ translation_of: Web/SVG
 
 **[Premiers pas](/fr/SVG/Tutoriel "fr/SVG/Tutoriel")** ce tutoriel vous aidera à débuter en SVG.
 
-SVG est une [recommandation du W3C](http://www.w3.org/Graphics/SVG/) et est basé sur XML. Il est explicitement conçu pour fonctionner avec d'autres standards du [W3C](http://www.w3.org/) comme [CSS](/fr/CSS "fr/CSS"), [DOM](/fr/DOM "fr/DOM") et [SMIL](http://www.w3.org/AudioVideo/).
+SVG est une [recommandation du W3C](http://www.w3.org/Graphics/SVG/) et est basé sur XML. Il est explicitement conçu pour fonctionner avec d'autres standards du [W3C](http://www.w3.org/) comme [CSS](/fr/CSS "fr/CSS"), [DOM](/fr/DOM "fr/DOM") et [SMIL](http://www.w3.org/AudioVideo/).
 
 SVG est un format d'images vectorielles. Les images vectorielles peuvent être redimensionnées sans perte de qualité, tandis que ce n'est pas possible avec des images matricielles (bitmap).
 
@@ -46,7 +46,7 @@ SVG est une norme développée par le [World Wide Web Consortium (W3C)](https://
   - : Cette FAQ est le résultat de recherches au sein du groupe mozilla.dev.tech.svg et des forums de MozillaZine pour connaître les questions les plus souvent posées à propos de SVG dans Mozilla.
 - Autres ressources
 
-  - : Voici d'autres articles à propos de SVG sur MDN :
+  - : Voici d'autres articles à propos de SVG sur MDN&nbsp;:
 
     - [Un tutoriel](/fr/docs/Web/SVG/Tutoriel "/fr/docs/Web/SVG/Tutoriel")
     - [Une introduction à SVG dans HTML](/fr/docs/Introduction_à_SVG_dans_HTML "/fr/docs/Introduction_à_SVG_dans_HTML")

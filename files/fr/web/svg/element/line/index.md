@@ -39,13 +39,13 @@ html,body,svg { height:100% }
 
 ### Attributs globaux
 
-- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "en/SVG/Attribute#ConditionalProccessing") ;
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core") ;
-- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d'.C3.A9v.C3.A9nement_graphique "en/SVG/Attribute#GraphicalEvent") ;
+- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#Attributs_de_traitement_conditionnel "en/SVG/Attribute#ConditionalProccessing")&nbsp;;
+- [Attributs centraux](/fr/docs/Web/SVG/Attribute#Attributs_de_base "en/SVG/Attribute#Core")&nbsp;;
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#Attributs_d'.C3.A9v.C3.A9nement_graphique "en/SVG/Attribute#GraphicalEvent")&nbsp;;
 - [Attributs de présentation](/fr/docs/Web/SVG/Attribute#Attributs_de_pr.C3.A9sentation "en/SVG/Attribute#Presentation")&nbsp;;
-- {{ SVGAttr("class") }} ;
-- {{ SVGAttr("style") }} ;
-- {{ SVGAttr("externalResourcesRequired") }} ;
+- {{ SVGAttr("class") }}&nbsp;;
+- {{ SVGAttr("style") }}&nbsp;;
+- {{ SVGAttr("externalResourcesRequired") }}&nbsp;;
 - {{ SVGAttr("transform") }}.
 
 ### Attributs spécifiques
@@ -65,5 +65,5 @@ Cet élément implémente l'interface [`SVGLineElement`](/fr/DOM/SVGLineElement 
 
 ## Voir aussi
 
-- {{ SVGElement("polygon") }} ;
+- {{ SVGElement("polygon") }}&nbsp;;
 - {{ SVGElement("path") }}.

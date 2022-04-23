@@ -88,7 +88,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - {{htmlattrdef("itemref")}}
   - : Les propriétés d'un objet qui ne sont pas les éléments descendants de l'élément courant peuvent être associée via l'attribut `itemscope` contenant une référence vers un `itemref`. `itemref` fournit une liste d'identifiants d'éléments qui correspondent aux propriétés supplémentaires définies autre part dans le document. Cet attribut est lié [aux microdonnées](https://html.spec.whatwg.org/multipage/#toc-microdata).
 - {{htmlattrdef("itemscope")}}
-  - : `itemscope` fonctionne généralement avec `itemtype` afin d'indiquer que le coded HTML contenu dans un bloc donné concerne un objet en particulier. `itemscope` crée l'objet et définit la portée de l'`itemtype` associée. `itemtype` est une URL valide construite à partir d'un vocabulaire (par exemple [schema.org](https://schema.org/)) qui décrit les objets et leurs propriétés. Cet attribut est lié [aux microdonnées](https://html.spec.whatwg.org/multipage/#toc-microdata).
+  - : `itemscope` fonctionne généralement avec `itemtype` afin d'indiquer que le coded HTML contenu dans un bloc donné concerne un objet en particulier. `itemscope` crée l'objet et définit la portée de l'`itemtype` associée. `itemtype` est une URL valide construite à partir d'un vocabulaire (par exemple [schema.org](https://schema.org/)) qui décrit les objets et leurs propriétés. Cet attribut est lié [aux microdonnées](https://html.spec.whatwg.org/multipage/#toc-microdata).
 - {{htmlattrdef("itemtype")}}
   - : Cet attribut indique l'URL du vocabulaire utilisé pour définir les propriétés d'un objet. Cet attribut est lié [aux microdonnées](https://html.spec.whatwg.org/multipage/#toc-microdata).
 - {{htmlattrdef("lang")}}

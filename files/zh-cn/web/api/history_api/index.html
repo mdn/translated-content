@@ -54,9 +54,7 @@ translation_of: Web/API/History_API
 
 <h2 id="添加和修改历史记录中的条目">添加和修改历史记录中的条目</h2>
 
-<p>{{ gecko_minversion_header("2") }}</p>
-
-<p>HTML5引入了 <a href="/en-US/docs/Web/API/History/pushState">history.pushState()</a> 和 <a href="/en-US/docs/Web/API/History_API#The_replaceState()_method">history.replaceState()</a> 方法，它们分别可以添加和修改历史记录条目。这些方法通常与{{ domxref("window.onpopstate") }} 配合使用。</p>
+<p>HTML5 引入了 <a href="/en-US/docs/Web/API/History/pushState">history.pushState()</a> 和 <a href="/en-US/docs/Web/API/History_API#The_replaceState()_method">history.replaceState()</a> 方法，它们分别可以添加和修改历史记录条目。这些方法通常与{{ domxref("window.onpopstate") }} 配合使用。</p>
 
 <p>使用 <code>history.pushState()</code> 可以改变referrer，它在用户发送 <a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a> 请求时在HTTP头部使用，改变state后创建的 <a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a> 对象的referrer都会被改变。因为referrer是标识创建  <code><a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest">XMLHttpRequest</a></code> 对象时 <code>this</code> 所代表的window对象中document的URL。</p>
 

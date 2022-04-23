@@ -27,13 +27,13 @@ var<em> </em>timeoutID = <em>scope</em>.setTimeout(<em>code</em>[, <em>delay</em
  <dt><code>code</code></dt>
  <dd>这是一个可选语法，你可以使用字符串而不是{{jsxref("function")}} ，在<code>delay</code>毫秒之后编译和执行字符串 (使用该语法是<strong>不推荐的,</strong> 原因和使用 {{jsxref("Global_Objects/eval", "eval()")}}一样，有安全风险)。</dd>
  <dt><code>delay</code> {{optional_inline}}</dt>
- <dd>延迟的毫秒数 (一秒等于1000毫秒)，函数的调用会在该延迟之后发生。如果省略该参数，delay取默认值0，意味着“马上”执行，或者尽快执行。不管是哪种情况，实际的延迟时间可能会比期待的(delay毫秒数) 值长，原因请查看{{anch("实际延时比设定值更久的原因：最小延迟时间")}}。</dd>
+ <dd>延迟的毫秒数 (一秒等于1000毫秒)，函数的调用会在该延迟之后发生。如果省略该参数，delay取默认值0，意味着“马上”执行，或者尽快执行。不管是哪种情况，实际的延迟时间可能会比期待的(delay毫秒数) 值长，原因请查看<a href="#实际延时比设定值更久的原因：最小延迟时间">实际延时比设定值更久的原因：最小延迟时间</a>。</dd>
  <dt><code>arg1, ..., argN</code> {{optional_inline}}</dt>
  <dd>附加参数，一旦定时器到期，它们会作为参数传递给{{jsxref("function")}} </dd>
 </dl>
 
 <div class="note">
-<p><strong>备注</strong>：需要注意的是，IE9 及更早的 IE 浏览器不支持向回调函数传递额外参数(第一种语法)。如果你想要在IE中达到同样的功能,你必须使用一种兼容代码 (查看  {{anch("兼容旧环境（polyfill）")}} 一段).</p>
+<p><strong>备注</strong>：需要注意的是，IE9 及更早的 IE 浏览器不支持向回调函数传递额外参数(第一种语法)。如果你想要在IE中达到同样的功能,你必须使用一种兼容代码 (查看  <a href="#兼容旧环境（polyfill）">兼容旧环境（polyfill）</a> 一段).</p>
 </div>
 
 <h3 id="Examples" name="Examples">返回值</h3>

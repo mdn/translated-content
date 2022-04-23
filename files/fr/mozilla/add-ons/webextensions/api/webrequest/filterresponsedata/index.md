@@ -38,7 +38,7 @@ Un objet {{WebExtAPIRef("webRequest.StreamFilter")}} que vous pouvez utiliser po
 
 ## Exemples
 
-Cet exemple, tiré de l'extension [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response), crée un filtre dans  {{WebExtAPIRef("webRequest.onBeforeRequest")}} et l'utilise pour modifier la réponse :
+Cet exemple, tiré de l'extension [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response), crée un filtre dans  {{WebExtAPIRef("webRequest.onBeforeRequest")}} et l'utilise pour modifier la réponse :
 
 ```js
 function listener(details) {

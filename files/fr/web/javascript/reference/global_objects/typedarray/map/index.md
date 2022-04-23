@@ -36,7 +36,7 @@ La méthode **`map()`** crée un nouveau tableau typé dont les éléments sont 
       - : Le tableau typé sur lequel `map()` a été appelée.
 
 - `thisArg`
-  - : Paramètre optionnel. La valeur à utiliser pour `this` lors de l'appel à `callback`.
+  - : Paramètre optionnel. La valeur à utiliser pour `this` lors de l'appel à `callback`.
 
 ### Valeur de retour
 
@@ -48,7 +48,7 @@ La méthode `map()` appelle la fonction `callback()` passée en argument une foi
 
 `callback()` est appelée avec trois arguments : la valeur de l'élément, l'indice de cet élément et enfin le tableau typé courant.
 
-Si un paramètre `thisArg` est fourni pour `map()`, il sera passé à `callback` pour les différents appels et servira de valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée à la fonction pour la valeur `this`. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si un paramètre `thisArg` est fourni pour `map()`, il sera passé à `callback` pour les différents appels et servira de valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée à la fonction pour la valeur `this`. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 
 `map()` ne modifie pas le tableau typé sur lequel elle a été appelée (indirectement, c'est la fonction `callback` qui pourra éventuellement modifier le tableau).
 

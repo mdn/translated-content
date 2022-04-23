@@ -11,7 +11,7 @@ translation_of: Web/API/WebGLRenderingContext/deleteShader
 ---
 {{APIRef("WebGL")}}
 
-La méthode **`WebGLRenderingContext.deleteShader()`** de l'API WebGL marque l'objet {{domxref("WebGLShader")}} indiqué pour suppression. Il sera ensuite supprimé dès que le shader ne sera plus utilisé. Cette méthode n'a aucun effet si le shader a déjà été supprimé, et le {{domxref ("WebGLShader")}} est automatiquement marqué pour la suppression lorsqu'il est détruit par le garbage collector.
+La méthode **`WebGLRenderingContext.deleteShader()`** de l'API WebGL marque l'objet {{domxref("WebGLShader")}} indiqué pour suppression. Il sera ensuite supprimé dès que le shader ne sera plus utilisé. Cette méthode n'a aucun effet si le shader a déjà été supprimé, et le {{domxref ("WebGLShader")}} est automatiquement marqué pour la suppression lorsqu'il est détruit par le garbage collector.
 
 ## Syntaxe
 

@@ -55,6 +55,6 @@ function init() {
 
 ## Voir aussi
 
-- Événément [`resourcetimingbufferfull`](/fr/docs/Web/API/Performance/resourcetimingbufferfull_event)
+- Évènement [`resourcetimingbufferfull`](/fr/docs/Web/API/Performance/resourcetimingbufferfull_event)
 - {{domxref("Performance.clearResourceTimings","Performance.clearResourceTimings()")}}
 - {{domxref("Performance.setResourceTimingBufferSize","Performance.setResourceTimingBufferSize()")}}

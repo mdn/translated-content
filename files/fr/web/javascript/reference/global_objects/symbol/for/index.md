@@ -69,7 +69,7 @@ Symbol.for("mdn.machin");
 | Spécification                                                                | État                         | Commentaires         |
 | ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-symbol.for', 'Symbol.for')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.for', 'Symbol.for')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-symbol.for', 'Symbol.for')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

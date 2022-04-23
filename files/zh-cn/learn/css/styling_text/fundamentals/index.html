@@ -34,7 +34,7 @@ original_slug: Learn/CSS/为文本添加样式/Fundamentals
 <p>正如你已经在你使用 HTML 和 CSS 完成工作时所经历的一样，元素中的文本是布置在元素的内容框中。以内容区域的左上角作为起点 (或者是右上角，是在 RTL 语言的情况下)，一直延续到行的结束部分。一旦达到行的尽头，它就会进到下一行，然后继续，再接着下一行，直到所有内容都放入了盒子中。文本内容表现地像一些内联元素，被布置到相邻的行上，除非到达了行的尽头，否则不会换行，或者你想强制地，手动地造成换行的话，你可以使用 {{htmlelement("br")}} 元素。</p>
 
 <div class="note">
-<p><strong>注意</strong>: 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model">Box model</a> 文件，复习框模型的理论。</p>
+<p><strong>注意</strong>: 如果上面的段落让你感到困惑，没关系，在继续之前，可以重新看看我们的 <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model">Box model</a> 文件，复习盒模型的理论。</p>
 </div>
 
 <p>用于样式文本的 CSS 属性通常可以分为两类，我们将在本文中分别观察。</p>
@@ -94,7 +94,7 @@ occasion such as this that he did.&lt;/p&gt;</pre>
 
 <h3 id="字体种类">字体种类</h3>
 
-<p>要在你的文本上设置一个不同的字体，你可以使用 {{cssxref("font-family")}}  属性，这个允许你为浏览器指定一个字体 (或者一个字体的列表)，然后浏览器可以将这种字体应用到选中的元素上。浏览器只会把在当前机器上可用的字体应用到当前正在访问的网站上；如果字体不可用，那么就会用浏览器默认的字体代替 {{anch("Default fonts", "default font")}}. 下面是一个简单的例子:</p>
+<p>要在你的文本上设置一个不同的字体，你可以使用 {{cssxref("font-family")}}  属性，这个允许你为浏览器指定一个字体 (或者一个字体的列表)，然后浏览器可以将这种字体应用到选中的元素上。浏览器只会把在当前机器上可用的字体应用到当前正在访问的网站上；如果字体不可用，那么就会用浏览器默认的字体代替 <a href="#默认字体">default font</a>. 下面是一个简单的例子:</p>
 
 <pre class="brush: css">p {
   font-family: arial;

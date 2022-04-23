@@ -38,7 +38,7 @@ Un nouvel objet `SharedArrayBuffer` de la taille donnée, dont les éléments so
 
 Pour partager une zone mémoire entre plusieurs objets {{jsxref("SharedArrayBuffer")}} d'un agent à un autre (ici un agent correspond au programme principal de la page web ou à l'un de ses _web workers_), on utilise [`postMessage`](/fr/docs/Web/API/Worker/postMessage) et [le clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
-L'algorithme de clonage structuré permet d'envoyer des objets `SharedArrayBuffers` et `TypedArrays` vers `SharedArrayBuffers`. Dans les deux cas, l'objet `SharedArrayBuffer` est transmis au récepteur, ce qui crée un nouvel objet `SharedArrayBuffer`, privé, au sein de l'agent qui reçoit (comme avec  {{jsxref("ArrayBuffer")}}). Cependant, le bloc de mémoire référencé par les deux objets ` Shared``ArrayBuffer ` est bien le même bloc. Aussi, si un agent interagit avec cette zone, l'autre agent pourra voir les modifications.
+L'algorithme de clonage structuré permet d'envoyer des objets `SharedArrayBuffers` et `TypedArrays` vers `SharedArrayBuffers`. Dans les deux cas, l'objet `SharedArrayBuffer` est transmis au récepteur, ce qui crée un nouvel objet `SharedArrayBuffer`, privé, au sein de l'agent qui reçoit (comme avec  {{jsxref("ArrayBuffer")}}). Cependant, le bloc de mémoire référencé par les deux objets ` Shared``ArrayBuffer ` est bien le même bloc. Aussi, si un agent interagit avec cette zone, l'autre agent pourra voir les modifications.
 
 ```js
 var sab = new SharedArrayBuffer(1024);

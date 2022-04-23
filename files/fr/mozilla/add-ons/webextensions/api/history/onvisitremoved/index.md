@@ -51,7 +51,7 @@ Les événements ont trois fonctions:
       - : `object`. Détails de l'enlèvement. C'est un objet contenant deux propriétés: un booléen `allHistory` et un tableau `urls`.
 
         - Si cet événement se déclenche parce qu'il est clair, `allHistory` sera `true` et `urls` sera un tableau vide.
-        - Dans le cas contraire,  `allHistory` sera `false` et `urls` contiendront un qui est l'URL de la page supprimée.
+        - Dans le cas contraire,  `allHistory` sera `false` et `urls` contiendront un qui est l'URL de la page supprimée.
 
 ## Compatibilité du navigateur
 

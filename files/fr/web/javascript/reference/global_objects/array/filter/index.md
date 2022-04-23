@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/filter
 ---
 {{JSRef}}
 
-La méthode **`filter()`** crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction `callback`.
+La méthode **`filter()`** crée et retourne un nouveau tableau contenant tous les éléments du tableau d'origine qui remplissent une condition déterminée par la fonction `callback`.
 
 {{EmbedInteractiveExample("pages/js/array-filter.html")}}
 
@@ -39,7 +39,7 @@ La méthode **`filter()`** crée et retourne un nouveau tableau contenant tous 
     Cette fonction renvoie `true` — ou une valeur équivalente — si l'élément doit être conservé pour le tableau résultat et `false` dans le cas contraire.
 
 - `thisArg` {{optional_inline}}
-  - : Objet à utiliser en tant que `this` quand la fonction `callback` est exécutée.
+  - : Objet à utiliser en tant que `this` quand la fonction `callback` est exécutée.
 
 ### Valeur de retour
 
@@ -47,7 +47,7 @@ Un nouveau tableau contenant les éléments qui respectent la condition du filtr
 
 ## Description
 
-`filter()` appelle la fonction `callback` fournie pour chacun des éléments d'un tableau, et construit un nouveau tableau contenant tous les éléments pour lesquels l'appel de `callback` retourne `true` ou une valeur équivalente à `true` dans un contexte booléen. La fonction `callback` n'est utilisée que pour les éléments du tableau ayant une valeur assignée — les index supprimés ou pour lesquels il n'y a jamais eu de valeur ne sont pas pris en compte. Les éléments du tableau qui ne passent pas le test effectué par la fonction `callback` sont ignorés, ils ne sont pas inclus dans le nouveau tableau.
+`filter()` appelle la fonction `callback` fournie pour chacun des éléments d'un tableau, et construit un nouveau tableau contenant tous les éléments pour lesquels l'appel de `callback` retourne `true` ou une valeur équivalente à `true` dans un contexte booléen. La fonction `callback` n'est utilisée que pour les éléments du tableau ayant une valeur assignée — les index supprimés ou pour lesquels il n'y a jamais eu de valeur ne sont pas pris en compte. Les éléments du tableau qui ne passent pas le test effectué par la fonction `callback` sont ignorés, ils ne sont pas inclus dans le nouveau tableau.
 
 La fonction `callback` est appelée avec trois arguments :
 
@@ -55,7 +55,7 @@ La fonction `callback` est appelée avec trois arguments :
 2.  l'index de l'élément courant,
 3.  l'objet `Array` parcouru.
 
-Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 
 Noter que `filter()` ne modifie pas le tableau d'origine.
 
@@ -95,7 +95,7 @@ var arr = [
 var elementsInvalides = 0;
 
 function filtrerParID(obj) {
-  // Si c'est un nombre
+  // Si c'est un nombre
   if (obj.id !== undefined && typeof(obj.id) === 'number' && !isNaN(obj.id)) {
     return true;
   } else {
@@ -139,7 +139,7 @@ L'exemple suivant utilise [les fonctions fléchées](/fr/docs/Web/JavaScript/Ref
 const fruits = ['pomme', 'banane', 'raisin', 'mangue'];
 
 const filtreTexte = (arr, requete) => {
-  return arr.filter(el =>  el.toLowerCase().indexOf(requete.toLowerCase()) !== -1);
+  return arr.filter(el =>  el.toLowerCase().indexOf(requete.toLowerCase()) !== -1);
 }
 
 console.log(filtreTexte(fruits, 'an')); // ['banane', 'mangue'];
@@ -192,8 +192,8 @@ if (!Array.prototype.filter){
 | Spécification                                                                                                | État                         | Commentaires                                          |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
 | {{SpecName('ES5.1', '#sec-15.4.4.20', 'Array.prototype.filter')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.6. |
-| {{SpecName('ES2015', '#sec-array.prototype.filter', 'Array.prototype.filter')}}     | {{Spec2('ES2015')}}     |                                                       |
-| {{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES2015', '#sec-array.prototype.filter', 'Array.prototype.filter')}}     | {{Spec2('ES2015')}}     |                                                       |
+| {{SpecName('ESDraft', '#sec-array.prototype.filter', 'Array.prototype.filter')}} | {{Spec2('ESDraft')}} |                                                       |
 
 ## Compatibilité des navigateurs
 

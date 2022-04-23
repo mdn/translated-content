@@ -29,7 +29,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
     - `center` : le contenu de la cellule est centré horizontalement
     - `right` : le contenu de la cellule est aligné à droite de la cellule
     - `justify` : insert des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié
-    - `char` : aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  {{htmlattrxref("char", "tfoot")}} et {{htmlattrxref("charoff", "tfoot")}} {{unimplemented_inline(2212)}}.
+    - `char` : aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  {{htmlattrxref("char", "tfoot")}} et {{htmlattrxref("charoff", "tfoot")}} {{unimplemented_inline(2212)}}.
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 
@@ -79,7 +79,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
       </tbody>
     </table>
 
-    > **Note :** Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("tfoot")}} doit être mis en forme grâce au [CSS](/fr/docs/CSS). Pour fournir un effet semblable à celui achevé par l'attribut **`bgcolor`**, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} sur les éléments  {{HTMLElement("td")}} ou {{HTMLElement("th")}} souhaités.
+    > **Note :** Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci n'est pas un attribut standard et n'a été implémentée que sous certaines versions d'Internet Explorer. L'élément {{HTMLElement("tfoot")}} doit être mis en forme grâce au [CSS](/fr/docs/CSS). Pour fournir un effet semblable à celui achevé par l'attribut **`bgcolor`**, il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} sur les éléments  {{HTMLElement("td")}} ou {{HTMLElement("th")}} souhaités.
 
 - {{htmlattrdef("char")}} {{Deprecated_inline}} en {{HTMLVersionInline("4")}}, {{obsolete_inline}} en {{HTMLVersionInline("5")}}
 
@@ -193,8 +193,8 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
 | Spécification                                                                                            | État                             | Commentaires |
 | -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('HTML WHATWG','tables.html#the-tfoot-element','tfoot element')}}     | {{Spec2('HTML WHATWG')}} |              |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-tfoot-element','tfoot element')}} | {{Spec2('HTML5 W3C')}}     |              |
+| {{SpecName('HTML WHATWG','tables.html#the-tfoot-element','tfoot element')}}     | {{Spec2('HTML WHATWG')}} |              |
+| {{SpecName('HTML5 W3C','tabular-data.html#the-tfoot-element','tfoot element')}} | {{Spec2('HTML5 W3C')}}     |              |
 
 ## Compatibilité des navigateurs
 

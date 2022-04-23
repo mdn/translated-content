@@ -86,8 +86,8 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 | Spécification                                                                                                                            | État                             | Commentaires         |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
 | {{SpecName('ES Int 1.0', '#sec-12.3.2', 'Intl.DateTimeFormat.format')}}                                         | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-12.3.2', 'Intl.DateTimeFormat.format')}}                                         | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.format', 'Intl.DateTimeFormat.format')}} | {{Spec2('ES Int Draft')}} |                      |
+| {{SpecName('ES Int 2.0', '#sec-12.3.2', 'Intl.DateTimeFormat.format')}}                                         | {{Spec2('ES Int 2.0')}} |                      |
+| {{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.format', 'Intl.DateTimeFormat.format')}} | {{Spec2('ES Int Draft')}} |                      |
 
 ## Compatibilité des navigateurs
 

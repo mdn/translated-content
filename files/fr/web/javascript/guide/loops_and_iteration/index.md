@@ -27,14 +27,14 @@ Il y a différents types de boucles mais elles se ressemblent toutes au sens où
 
 Voici les différentes boucles fournies par JavaScript :
 
-- {{anch("Linstruction for")}}
-- {{anch("Linstruction do...while")}}
-- {{anch("Linstruction while")}}
-- {{anch("Linstruction label")}}
-- {{anch("Linstruction break")}}
-- {{anch("Linstruction continue")}}
-- {{anch("Linstruction for...in")}}
-- {{anch("Linstruction for...of")}}
+- [L'instruction for](#linstruction_for)
+- [L'instruction do...while](#linstruction_do...while)
+- [L'instruction while](#linstruction_while)
+- [L'instruction label](#linstruction_label)
+- [L'instruction break](#linstruction_break)
+- [L'instruction continue](#linstruction_continue)
+- [L'instruction for...in](#linstruction_for...in)
+- [L'instruction for...of](#linstruction_for...of)
 
 ## L'instruction for
 
@@ -327,7 +327,7 @@ L'instruction {{jsxref("statements/for...of","for...of")}} crée une boucle qui 
       instruction
     }
 
-Dans l'exemple suivant, on illustre la différence entre une boucle `for...of` et une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in).  `for...in` parcourt les noms des propriétés d'un objet alors que `for...of` parcourt les **valeurs** des propriétés :
+Dans l'exemple suivant, on illustre la différence entre une boucle `for...of` et une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in).  `for...in` parcourt les noms des propriétés d'un objet alors que `for...of` parcourt les **valeurs** des propriétés :
 
 ```js
 let arr = [3, 5, 7];

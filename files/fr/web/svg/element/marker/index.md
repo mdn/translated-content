@@ -20,28 +20,28 @@ html,body,svg { height:100% }
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <defs>
+  <defs>
     <!-- Définit une pointe de flèche -->
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
-        markerWidth="6" markerHeight="6"
-        orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" />
-    </marker>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+        markerWidth="6" markerHeight="6"
+        tart-reverse">
+                         <path d="M 0 0 L 10 5 L 0 10 z" />
+    </marker>
 
     <!-- Définit un simple point -->
-    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
-        markerWidth="5" markerHeight="5">
-      <circle cx="5" cy="5" r="5" fill="red" />
-    </marker>
-  </defs>
+    <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5"
+        markerWidth="5" markerHeight="5">
+      <circle cx="5" cy="5" r="5" fill="red" />
+    </marker>
+  </defs>
 
   <!-- Dessine les axes des coordonnées avec des pointes de flèche à chaque bout -->
-  <polyline points="10,10 10,90 90,90" fill="none" stroke="black"
-   marker-start="url(#arrow)" marker-end="url(#arrow)"  />
+  <polyline points="10,10 10,90 90,90" fill="none" stroke="black"
+   marker-start="url(#arrow)" marker-end="url(#arrow)"  />
 
   <!-- Dessine une ligne avec un simple point entre chaque segment -->
-  <polyline points="15,80 29,50 43,60 57,30 71,40 85,15" fill="none" stroke="grey"
-   marker-start="url(#dot)" marker-mid="url(#dot)"  marker-end="url(#dot)" />
+  <polyline points="15,80 29,50 43,60 57,30 71,40 85,15" fill="none" stroke="grey"
+   marker-start="url(#dot)" marker-mid="url(#dot)"  marker-end="url(#dot)" />
 </svg>
 ```
 
@@ -54,7 +54,7 @@ html,body,svg { height:100% }
     _Valeur_: **[\<length>](/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
 - {{SVGAttr("markerUnits")}}
   - : Définit le système de coordnnées pour les attributs `markerWidth`, `markerHeight` et le contenu du `<marker>`.
-    _Valeur_: `userSpaceOnUse`|`strokeWidth` ; _Valeur par défaut_: `strokeWidth`; _Animation_: **oui**
+    _Valeur_: `userSpaceOnUse`|`strokeWidth` ; _Valeur par défaut_: `strokeWidth`; _Animation_: **oui**
 - {{SVGAttr("markerWidth")}}
   - : Définit la largeur du viewport du marqueur.
     _Valeur_: **[\<length>](/docs/Web/SVG/Content_type#Length)** ; _Valeur par défaut_: `3`; _Animation_: **oui**
@@ -95,8 +95,8 @@ html,body,svg { height:100% }
 
 | Sp"cification                                                                                    | Statut                           | Commentaire         |
 | ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName("SVG Markers", "#MarkerElement", "&lt;marker&gt;")}}             | {{Spec2("SVG Markers")}} |                     |
-| {{SpecName("SVG2", "painting.html#MarkerElement", "&lt;marker&gt;")}}     | {{Spec2("SVG2")}}         |                     |
+| {{SpecName("SVG Markers", "#MarkerElement", "&lt;marker&gt;")}}             | {{Spec2("SVG Markers")}} |                     |
+| {{SpecName("SVG2", "painting.html#MarkerElement", "&lt;marker&gt;")}}     | {{Spec2("SVG2")}}         |                     |
 | {{SpecName("SVG1.1", "painting.html#MarkerElement", "&lt;marker&gt;")}} | {{Spec2("SVG1.1")}}         | Définition initiale |
 
 ## Compatibilité des navigateurs

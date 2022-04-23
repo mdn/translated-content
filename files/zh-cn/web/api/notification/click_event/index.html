@@ -1,0 +1,59 @@
+---
+title: Notification.onclick
+slug: Web/API/Notification/click_event
+tags:
+  - Notification.onclick
+translation_of: Web/API/Notification/onclick
+original_slug: Web/API/notification/onclick
+---
+<p>{{APIRef("Web Notifications")}}</p>
+
+<p>{{domxref("Notification")}} 接口的 onclick属性指定一个事件侦听器来接收 {{event("click")}} 事件。</p>
+
+<p>当用户点击一个显示的{{domxref("Notification")}}时，会发生这些事件。</p>
+
+<h2 id="Syntax" name="Syntax">Syntax</h2>
+
+<pre class="eval">Notification.onclick = function(event) { ... };
+</pre>
+
+<p>该方法的默认行为是将焦点移到与该通知相关联的 <a href="https://html.spec.whatwg.org/multipage/browsers.html#browsing-context">browsing context</a> 的窗口. 如果你不希望这样, 可以在 event 对象上调用 <code><a href="/en-US/docs/Web/API/Event/preventDefault">preventDefault()</a></code>.</p>
+
+<h2 id="Examples">Examples</h2>
+
+<p>在下面这个例子中，我们使用 onclick 处理程序来监听点击通知的事件, 并在新窗口(通过包含一个参数<code>'_blank'</code>)打开一个页面:</p>
+
+<pre class="brush: js">notification.onclick = function(event) {
+  event.preventDefault(); // prevent the browser from focusing the Notification's tab
+  window.open('http://www.mozilla.org', '_blank');
+}</pre>
+
+<h2 id="Specifications">Specifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('Web Notifications','#dom-notification-onclick','onclick')}}</td>
+   <td>{{Spec2('Web Notifications')}}</td>
+   <td>Living standard.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Page("/en-US/docs/Web/API/Notification","Browser compatibility")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("Notification")}}</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">Using the Notifications API</a></li>
+</ul>

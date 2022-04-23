@@ -55,7 +55,7 @@ Enregistrez les noms des extensions lorsqu'ils sont activés :
 
 ```js
 browser.management.onEnabled.addListener((info) => {
-  console.log(info.name + " was enabled");
+  console.log(info.name + " was enabled");
 });
 ```
 

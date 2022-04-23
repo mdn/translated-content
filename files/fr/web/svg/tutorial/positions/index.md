@@ -47,7 +47,3 @@ Pour illustrer cette explication, rien de tel qu'une petite citation tirée des 
 > \[…] imaginons que le user agent peut déterminer à partir de son environnement que "1px" correspond à "0.2822222mm" (c'est-à-dire 90dpi). Ainsi, pour le traitement de chaque élément SVG : \[…] "1cm" équivaut à "35.43307px" (et donc à 35.43307 unités utilisateur)
 
 {{ PreviousNext("SVG/Tutoriel/Premiers_pas", "SVG/Tutoriel/Formes_de_base") }}
-
-Interwiki Languages Links
-
-{{ languages( { "en": "en/SVG/Tutorial/Positions"} ) }}

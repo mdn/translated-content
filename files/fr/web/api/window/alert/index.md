@@ -21,9 +21,9 @@ Affiche un dialogue d'alerte contenant le texte spécifié.
 
 ### Exemple
 
-    window.alert("Bonjour !");
+    window.alert("Bonjour&nbsp;!");
 
-produira :
+produira&nbsp;:
 
 ![](alerthelloworld.png)
 
@@ -31,7 +31,7 @@ produira :
 
 Le dialogue d'alerte doit être utilisé pour les messages qui ne demandent aucune réponse de la part de l'utilisateur, à part son acceptation du message.
 
-Le texte suivant est commun à cet article, `DOM:window.prompt` et `DOM:window.confirm` Les boîtes de dialogue sont des fenêtres modales : elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant qu'elles ne sont pas fermées. C'est pourquoi il ne faut pas abuser des fonctions créant une boîte de dialogue (ou fenêtre modale).
+Le texte suivant est commun à cet article, `DOM:window.prompt` et `DOM:window.confirm` Les boîtes de dialogue sont des fenêtres modales&nbsp;: elles empêchent l'utilisateur d'accéder au reste de l'interface du programme tant qu'elles ne sont pas fermées. C'est pourquoi il ne faut pas abuser des fonctions créant une boîte de dialogue (ou fenêtre modale).
 
 Les applications utilisant le chrome (par exemple les extensions) devront plutôt utiliser les méthodes de [nsIPromptService](fr/NsIPromptService).
 

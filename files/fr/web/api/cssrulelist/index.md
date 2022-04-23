@@ -10,7 +10,7 @@ A `CSSRuleList` est un objet de type tableau contenant une collection ordonnée 
 
 ## Description
 
-Chaque règle `CSSRule` peut être atteinte via `rules.item(index),` ou simplement `rules[index]`, où `rules` est un objet implementant l'interface  `CSSRuleList`, et `index` est l'index de la règle (commence à zéro comme les tableaux), dans l'ordre dans lequel elle apparait dans la feuille de style CSS. Le nombre d'objets est `rules.length`.
+Chaque règle `CSSRule` peut être atteinte via `rules.item(index),` ou simplement `rules[index]`, où `rules` est un objet implementant l'interface  `CSSRuleList`, et `index` est l'index de la règle (commence à zéro comme les tableaux), dans l'ordre dans lequel elle apparait dans la feuille de style CSS. Le nombre d'objets est `rules.length`.
 
 ## Exemple
 

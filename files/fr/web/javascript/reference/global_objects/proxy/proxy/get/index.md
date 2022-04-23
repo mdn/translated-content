@@ -100,7 +100,7 @@ p.a; // exception TypeError levée
 | Spécification                                                                                                                                | État                         | Commentaires         |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatiblité des navigateurs
 

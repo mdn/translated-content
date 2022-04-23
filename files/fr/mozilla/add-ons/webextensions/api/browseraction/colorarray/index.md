@@ -24,7 +24,7 @@ Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA. Les 
 3.  Bleu
 4.  Alpha (opacité).
 
-Par exemple , le rouge opaque est  `[255, 0, 0, 255]`.
+Par exemple , le rouge opaque est  `[255, 0, 0, 255]`.
 
 ## Compatibilité du navigateur
 

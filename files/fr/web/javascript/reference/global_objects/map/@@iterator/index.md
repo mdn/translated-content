@@ -61,7 +61,7 @@ for (var v of maMap) {
 | Spécification                                                                                                        | État                         | Commentaires        |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
 | {{SpecName('ES2015', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ESDraft', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                     |
 
 ## Compatibilité des navigateurs
 

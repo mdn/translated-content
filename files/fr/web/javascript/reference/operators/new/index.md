@@ -34,7 +34,7 @@ Le mot-clé `new`, utilisé avec une fonction, applique les 4 étapes suivantes 
 
 ## Description
 
-La création d'un objet personnalisé se fait en deux étapes :
+La création d'un objet personnalisé se fait en deux étapes&nbsp;:
 
 1.  Définition du type d'objet en écrivant une fonction.
 2.  Création d'une instance de l'objet avec `new`.
@@ -74,9 +74,9 @@ console.log(voiture2.couleur);            // couleur standard
 
 ## Exemples
 
-### Exemple : type d'objet et instance d'objet
+### Exemple&nbsp;: type d'objet et instance d'objet
 
-Supposons que vous vouliez créer un type d'objet pour les voitures. Vous voulez que ce type d'objet s'appelle `Voiture`, et qu'il ait des propriétés pour la marque, le modèle et l'année. Pour ce faire, vous écririez la fonction suivante :
+Supposons que vous vouliez créer un type d'objet pour les voitures. Vous voulez que ce type d'objet s'appelle `Voiture`, et qu'il ait des propriétés pour la marque, le modèle et l'année. Pour ce faire, vous écririez la fonction suivante&nbsp;:
 
 ```js
 function Voiture(marque, modèle, année) {
@@ -86,7 +86,7 @@ function Voiture(marque, modèle, année) {
 }
 ```
 
-À présent, vous pouvez créer un objet appelé `ma_voiture` de la manière suivante :
+À présent, vous pouvez créer un objet appelé `ma_voiture` de la manière suivante&nbsp;:
 
 ```js
 ma_voiture = new Voiture("Volkswagen", "Golf TDi", 1997);
@@ -94,15 +94,15 @@ ma_voiture = new Voiture("Volkswagen", "Golf TDi", 1997);
 
 Cette instruction crée l'objet `ma_voiture` et assigne les valeurs spécifiées à ses propriétés. La valeur de `ma_voiture.marque` est alors la chaîne `"Volkswagen"`, celle de `ma_voiture.année` est l'entier 1997, et ainsi de suite.
 
-Il est possible de créer un nombre illimité d'objets `Voiture` en appelant `new`. Par exemple :
+Il est possible de créer un nombre illimité d'objets `Voiture` en appelant `new`. Par exemple&nbsp;:
 
 ```js
 voiture_de_ken = new Voiture("Nissan", "300ZX", 1992);
 ```
 
-### Exemple : propriété d'objet qui est elle-même un autre objet
+### Exemple&nbsp;: propriété d'objet qui est elle-même un autre objet
 
-Supposons que vous ayez défini un objet appelé `Personne` de la manière suivante :
+Supposons que vous ayez défini un objet appelé `Personne` de la manière suivante&nbsp;:
 
 ```js
 function Personne(nom, age, surnom) {
@@ -112,14 +112,14 @@ function Personne(nom, age, surnom) {
 }
 ```
 
-Et que vous avez ensuite instancié deux nouveaux objets `Personne` de la manière suivante :
+Et que vous avez ensuite instancié deux nouveaux objets `Personne` de la manière suivante&nbsp;:
 
 ```js
 rand = new Personne("Rand McNally", 33, "Randy");
 ken = new Personne("Ken Jones", 39, "Kenny");
 ```
 
-Vous pouvez alors réécrire la définition de `Voiture` pour contenir une propriété `propriétaire` qui reçoit un objet `Personne`, comme ceci :
+Vous pouvez alors réécrire la définition de `Voiture` pour contenir une propriété `propriétaire` qui reçoit un objet `Personne`, comme ceci&nbsp;:
 
 ```js
 function Voiture(marque, modèle, année, propriétaire) {
@@ -130,14 +130,14 @@ function Voiture(marque, modèle, année, propriétaire) {
 }
 ```
 
-Pour instancier les nouveaux objets, vous utiliserez ensuite :
+Pour instancier les nouveaux objets, vous utiliserez ensuite&nbsp;:
 
 ```js
 voiture1 = new Voiture("Volkswagen", "Golf TDi", 1997, rand);
 voiture2 = new Voiture("Nissan", "300ZX", 1992, ken);
 ```
 
-Plutôt que de passer une chaîne littérale ou une valeur entière lors de la création des nouveaux objets, les instructions ci-dessus utilisent les objets `rand` et `ken` comme paramètres pour les propriétaires. Pour connaître le nom du propriétaire de `voiture2`, on peut alors accéder à la propriété suivante :
+Plutôt que de passer une chaîne littérale ou une valeur entière lors de la création des nouveaux objets, les instructions ci-dessus utilisent les objets `rand` et `ken` comme paramètres pour les propriétaires. Pour connaître le nom du propriétaire de `voiture2`, on peut alors accéder à la propriété suivante&nbsp;:
 
 ```js
 voiture2.propriétaire.nom
@@ -147,10 +147,10 @@ voiture2.propriétaire.nom
 
 | Spécification                                                                        | Statut                       | Commentaires                                          |
 | ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-new-operator', 'Opérateur new')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-new-operator', 'Opérateur new')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.2.2', 'Opérateur new')}}             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3', '#sec-11.2.2', 'Opérateur new')}}                 | {{Spec2('ES3')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-new-operator', 'Opérateur new')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-new-operator', 'Opérateur new')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ES5.1', '#sec-11.2.2', 'Opérateur new')}}             | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES3', '#sec-11.2.2', 'Opérateur new')}}                 | {{Spec2('ES3')}}         |                                                       |
 | {{SpecName('ES1', '#sec-11.2.2', 'Opérateur new')}}                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
 
 ## Compatibilité des navigateurs

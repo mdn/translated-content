@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Math/tanh
 ---
 {{JSRef}}
 
-La fonction **`Math.tanh()`** renvoie la tangente hyperbolique d'un nombre définie par :
+La fonction **`Math.tanh()`** renvoie la tangente hyperbolique d'un nombre définie par&nbsp;:
 
 <math><semantics><mrow><mo lspace="0em" rspace="0em">tanh</mo><mi>x</mi><mo>=</mo><mfrac><mrow><mo lspace="0em" rspace="0em">sinh</mo><mi>x</mi></mrow><mrow><mo lspace="0em" rspace="0em">cosh</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><msup><mi>e</mi><mrow><mn>2</mn><mi>x</mi></mrow></msup><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="TeX">\tanh x = \frac{\sinh x}{\cosh x} = \frac {e^x - e^{-x}} {e^x + e^{-x}} = \frac{e^{2x} - 1}{e^{2x}+1}</annotation></semantics></math>
 
@@ -52,8 +52,8 @@ Cette méthode peut être émulée grâce à la fonction {{jsxref("Objets_globau
 
 ```js
 Math.tanh = Math.tanh || function(x){
-  var a = Math.exp(+x), b = Math.exp(-x);
-  return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
+  var a = Math.exp(+x), b = Math.exp(-x);
+  return a == Infinity ? 1 : b == Infinity ? -1 : (a - b) / (a + b);
 }
 ```
 
@@ -77,7 +77,7 @@ Math.tanhx = Math.tanhx || function(x) {
 | Spécification                                                            | État                         | Commentaires         |
 | ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
 | {{SpecName('ES2015', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-math.tanh', 'Math.tanh')}} | {{Spec2('ESDraft')}} |                      |
 
 ## Compatibilité des navigateurs
 

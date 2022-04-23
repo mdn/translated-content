@@ -9,8 +9,6 @@ translation_of: Games/Techniques
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/fr/docs/Jeux")}}
-
 Cette page liste un ensemble de techniques utiles à toute personne qui voudrait développer un jeu vidéo à l'aide des technologies du web.
 
 - [Utiliser des scripts asynchrones pour asm.js](/fr/docs/Games/Techniques/Async_scripts "/fr/docs/Games/Techniques/Async_scripts")

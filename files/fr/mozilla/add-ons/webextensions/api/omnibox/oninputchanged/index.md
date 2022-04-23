@@ -36,7 +36,7 @@ Les événements ont trois fonctions :
 - `removeListener(listener)`
   - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
 - `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon  `false`.
+  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon  `false`.
 
 ## syntaxe addListener
 
@@ -47,7 +47,7 @@ The listener function will be passed two parameters: a string `text`, and a call
 - `text`
   - : `String`. L'entrée actuelle de l'utilisateur dans la barre d'adresse, n'incluant pas le mot-clé de l'extension lui-même ou l'espace après le mot-clé. Utilisez-le pour décider quelles suggestions afficher dans la liste déroulante.
 - `suggest`
-  - : `Function`. Une fonction de rappel que l'écouteur d'événement peut appeler pour fournir des suggestions pour la liste déroulante de la barre d'adresse. La fonction de rappel s'attend à recevoir un tableau d'objets  {{WebExtAPIRef("omnibox.SuggestResult")}} un pour chaque suggestion. Seules les six premières suggestions seront affichées.
+  - : `Function`. Une fonction de rappel que l'écouteur d'événement peut appeler pour fournir des suggestions pour la liste déroulante de la barre d'adresse. La fonction de rappel s'attend à recevoir un tableau d'objets  {{WebExtAPIRef("omnibox.SuggestResult")}} un pour chaque suggestion. Seules les six premières suggestions seront affichées.
 
 ## Compatibilité du navigateur
 
@@ -57,7 +57,7 @@ The listener function will be passed two parameters: a string `text`, and a call
 
 Cet exemple interprète l'entrée de l'utilisateur en tant que nom de propriété CSS et remplit la liste déroulante avec un objet {{WebExtAPIRef("omnibox.SuggestResult")}} pour chaque propriété CSS correspondant à l'entrée. La `description SuggestResult` est le nom complet de la propriété et le `contenu` est la page MDN de cette propriété.
 
-L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument   {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
+L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument   {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
 
 ```js
 browser.omnibox.setDefaultSuggestion({

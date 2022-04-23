@@ -37,7 +37,7 @@ translation_of: Web/API/Element/setAttribute
 
 <p>尽管对于不存在的属性，<code><a href="/en-US/docs/DOM/element.getAttribute" title="DOM/element.getAttribute">getAttribute()</a></code> 返回 <code>null</code>，你还是应该使用 <code><a href="/en-US/docs/DOM/element.removeAttribute" title="DOM/element.removeAttribute">removeAttribute()</a></code> 代替 <code><em>elt</em>.setAttribute(<em>attr</em>, null)</code> 来删除属性。</p>
 
-<p>布尔属性（原文是Boolean attributes）只要出现在元素上就会被认为是 <code>true</code> ，无论它的值是什么; 一般来说, 你应该将 <code>value</code> 设置为空字符串 (<code>""</code>) 。(一些人使用这个属性的名称作为值; 这不会出现什么问题，但这是不规范的). See the {{anch("Example", "example")}} below for a practical demonstration.</p>
+<p>布尔属性（原文是Boolean attributes）只要出现在元素上就会被认为是 <code>true</code> ，无论它的值是什么; 一般来说, 你应该将 <code>value</code> 设置为空字符串 (<code>""</code>) 。(一些人使用这个属性的名称作为值; 这不会出现什么问题，但这是不规范的). See the <a href="#示例">example</a> below for a practical demonstration.</p>
 
 <p>由于将指定的值转换为字符串，因此指定null不一定能达到您的期望。 而不是删除属性或将其值设置为{{jsxref("null")}}，而是将属性的值设置为字符串“ null”。 如果要删除属性，请调用{{domxref("Element.removeAttribute”，“ removeAttribute（）")}}}。</p>
 
@@ -52,7 +52,7 @@ translation_of: Web/API/Element/setAttribute
  <dd>指定的属性名称包含一个或多个在属性名称中无效的字符。</dd>
 </dl>
 
-<h2 id="例子">例子</h2>
+<h2 id="示例">示例</h2>
 
 <p>在下面的例子中，<code>setAttribute()</code> 被用于设置 {{HTMLElement("button")}} 上的属性。</p>
 

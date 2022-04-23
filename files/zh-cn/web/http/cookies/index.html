@@ -147,7 +147,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <h4 id="Cookie_prefixes">Cookie prefixes</h4>
 
-<p>cookie 机制的使得服务器无法确认 cookie 是在安全来源上设置的，甚至无法确定 cookie 最初是在哪里设置的。</p>
+<p>cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置的，甚至无法确定 cookie 最初是在哪里设置的。</p>
 
 <p>子域上的易受攻击的应用程序可以使用 Domain 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。会话固定攻击中可能会滥用此机制。有关主要缓解方法，请参阅<a href="/zh-CN/docs/Web/Security/Types_of_attacks#Session_fixation">会话劫持（ session fixation）</a>。</p>
 
@@ -184,7 +184,7 @@ console.log(document.cookie);
 <h2 id="安全">安全</h2>
 
 <div class="note">
-<p>信息被存在 Cookie 中时，需要明白 cookie 的值时可以被访问，且可以被终端用户所修改的。根据应用程序的不同，可能需要使用服务器查找的不透明标识符，或者研究诸如 JSON Web Tokens 之类的替代身份验证/机密机制。</p>
+<p>信息被存在 Cookie 中时，需要明白 cookie 的值是可以被访问，且可以被终端用户所修改的。根据应用程序的不同，可能需要使用服务器查找的不透明标识符，或者研究诸如 JSON Web Tokens 之类的替代身份验证/机密机制。</p>
 
 <p>当机器处于不安全环境时，切记<em>不能</em>通过 HTTP Cookie 存储、传输敏感信息。</p>
 </div>
@@ -237,7 +237,7 @@ console.log(document.cookie);
  <li>加州消费者隐私法</li>
 </ul>
 
-<p>这些规定具有全球影响力，因为它们适用于这些司法管辖区（欧盟和加利福尼亚）的用户访问的万维网上的任何站点，但请注意，加利福尼亚州的法律仅适用于总收入超过2500万美元的实体其他事情。）</p>
+<p>这些规定具有全球影响力，因为它们适用于这些司法管辖区（欧盟和加利福尼亚）的用户访问的万维网上的任何站点，但请注意，加利福尼亚州的法律仅适用于总收入超过2500万美元的实体。）</p>
 
 <p>这些法规包括以下要求：</p>
 

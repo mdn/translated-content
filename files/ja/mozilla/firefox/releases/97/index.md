@@ -22,14 +22,13 @@ tags:
 - CSS の {{cssxref("&lt;length&gt;")}} および {{cssxref("&lt;length-percentage&gt;")}} データ型で使用する単位 `cap` および `ic` をサポートしました。
   詳しくは {{bug(1702924)}} および {{bug(1531223)}} をご覧ください。
 
-- {{cssxref('@scroll-timeline')}} アットルールおよび {{cssxref('animation-timeline')}} プロパティをサポートしました。これは [`AnimationTimeline`](/ja/docs/Web/API/AnimationTimeline) を定義できるようにするもので、この時間の値は分や秒ではなく、スクロールコンテナー内のスクロールの進捗度によって決められます。一度指定すると、スクロールタイムラインは `animation-timeline` プロパティを使用して [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations) に関連づけられます。
-  詳しくは {{bug(1676791)}} および {{bug(1676782)}} をご覧ください。
-
 - CSS の `color-adjust` プロパティを、関連がある仕様書に合わせて {{cssxref("print-color-adjust")}} へ改名しました。
   短縮名の `color-adjust` は非推奨になります。
   詳しくは {{bug(747595)}} をご覧ください。
 
-- CSS カスケードレイヤーをデフォルトで有効にしました。[`@layer`](ja/docs/Web/CSS/@layer) ルールでカスケードレイヤーを宣言します。カスケードレイヤーではスタイルの宣言や、`layer()` 関数を使用して [`@import`](/ja/docs/Web/CSS/@import) ルールでインポートすることができます。詳しくは {{bug(1699217)}} をご覧ください。
+- CSS カスケードレイヤーをデフォルトで有効にしました。[`@layer`](/ja/docs/Web/CSS/@layer) ルールでカスケードレイヤーを宣言します。カスケードレイヤーではスタイルの宣言や、`layer()` 関数を使用して [`@import`](/ja/docs/Web/CSS/@import) ルールでインポートすることができます。詳しくは {{bug(1699217)}} をご覧ください。
+
+- カスケードレイヤーのプロパティの値を前のカスケードレイヤーでマッチする規則にロールバックできる、{{cssxref("revert-layer")}} グローバル CSS キーワードを追加しました。このキーワードは CSS のショートハンドプロパティ {{cssxref("all")}} を含む、任意のプロパティで適用できます。詳しくは {{bug(1699220)}} をご覧ください。
 
 - CSS の [`scrollbar-gutter`](/ja/docs/Web/CSS/scrollbar-gutter) プロパティをサポートしました。これはスクロールバーのために予約された領域を開発者が制御できるようにして、コンテンツの増加による不必要なレイアウトの変化を防ぐことができます。
   詳しくは {{bug(1715112)}} をご覧ください。

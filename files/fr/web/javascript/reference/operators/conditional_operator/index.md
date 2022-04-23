@@ -9,7 +9,7 @@ original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_conditionnel
 ---
 {{jsSidebar("Operators")}}
 
-L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui comporte trois opérandes. Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de {{jsxref("Instructions/if...else")}}.
+L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui comporte trois opérandes. Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de {{jsxref("Instructions/if...else")}}.
 
 {{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
 
@@ -28,7 +28,7 @@ L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui c
 
 ## Description
 
-SI `condition` vaut `true`, l'opérateur renverra la valeur d'`exprSiVrai;` dans le cas contraire, il renverra la valeur de `exprSiFaux`. Par exemple, on peut afficher un message différent en fonction d'une variable `estMembre` avec cette déclaration :
+SI `condition` vaut `true`, l'opérateur renverra la valeur d'`exprSiVrai;` dans le cas contraire, il renverra la valeur de `exprSiFaux`. Par exemple, on peut afficher un message différent en fonction d'une variable `estMembre` avec cette déclaration :
 
 ```js
 "Le prix est : " + (estMembre ? "15 €" : "30 €")

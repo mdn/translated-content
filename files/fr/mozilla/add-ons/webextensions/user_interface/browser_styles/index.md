@@ -5,7 +5,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 {{AddonSidebar}}
 
-Certains composants de l'interface utilisateur - les [fenêtres contextuelles](/fr/Add-ons/WebExtensions/user_interface/Popups), [fenêtres latérales](/fr/Add-ons/WebExtensions/user_interface/Sidebars), et les [pages d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages) du navigateur et de la page - sont spécifiés par votre extension de la même manière  :
+Certains composants de l'interface utilisateur - les [fenêtres contextuelles](/fr/Add-ons/WebExtensions/user_interface/Popups), [fenêtres latérales](/fr/Add-ons/WebExtensions/user_interface/Sidebars), et les [pages d'options](/fr/Add-ons/WebExtensions/user_interface/Options_pages) du navigateur et de la page - sont spécifiés par votre extension de la même manière  :
 
 1.  créer un fichier HTML définissant la structure de l'élément d'interface utilisateur
 2.  ajoutez une clé manifest.json ([`browser_action`](/fr/Add-ons/WebExtensions/manifest.json/browser_action), [`page_action`](/fr/Add-ons/WebExtensions/manifest.json/page_action), [`sidebar_action`](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action), ou [`options_ui`](/fr/Add-ons/WebExtensions/manifest.json/options_ui)) pointant vers ce fichier HTML.
@@ -20,9 +20,9 @@ Lorsque vous envisagez d'utiliser le `browser_style: true`, vous devez tester vo
 
 > **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
 
-Dans Firefox, la feuille de style peut être vue sur `chrome://browser/content/extension.css`. La feuille de style peut être vue sur `chrome://browser/content/extension-mac.css` est également incluse sur OS X.
+Dans Firefox, la feuille de style peut être vue sur `chrome://browser/content/extension.css`. La feuille de style peut être vue sur `chrome://browser/content/extension-mac.css` est également incluse sur OS X.
 
-La plupart des styles sont automatiquement appliqués, mais certains éléments nécessitent que vous ajoutiez la classe  `browser-style` non standard pour obtenir leur style, comme indiqué dans le tableau ci-dessous :
+La plupart des styles sont automatiquement appliqués, mais certains éléments nécessitent que vous ajoutiez la classe  `browser-style` non standard pour obtenir leur style, comme indiqué dans le tableau ci-dessous :
 
 <table class="standard-table">
   <thead>
