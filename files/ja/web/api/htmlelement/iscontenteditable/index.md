@@ -3,81 +3,55 @@ title: HTMLElement.isContentEditable
 slug: Web/API/HTMLElement/isContentEditable
 tags:
   - API
-  - Editing
+  - 編集
   - HTML DOM
   - HTMLElement
-  - Property
-  - Read-only
-  - Reference
   - プロパティ
-  - 編集
-  - 読取専用
+  - 読み取り専用
+  - リファレンス
+browser-compat: api.HTMLElement.isContentEditable
 translation_of: Web/API/HTMLElement/isContentEditable
 ---
-<div>{{ APIRef("HTML DOM") }}</div>
+{{ APIRef("HTML DOM") }}
 
-<p><strong><code>HTMLElement.isContentEditable</code></strong> は読み取り専用のプロパティで、 {{jsxref("Boolean")}} 型で、要素の内容が編集可能な場合は <code>true</code> を返します。それ以外の場合は <code>false</code> を返します。</p>
+**`HTMLElement.isContentEditable`** は読み取り専用のプロパティで、論理型であり、要素の内容が編集可能な場合は `true` を返します。それ以外の場合は `false` を返します。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 値
 
-<pre class="syntaxbox"><em>editable</em> = <em>element</em>.isContentEditable
-</pre>
+論理値です。
 
-<h2 id="Example" name="Example">例</h2>
+## 例
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="myText1"&gt;編集不可能な段落&lt;/p&gt;
-&lt;p id="myText2" contentEditable="true"&gt;編集可能な段落&lt;/p&gt;
+```html
+<p id="myText1">編集不可能な段落</p>
+<p id="myText2" contentEditable="true">編集可能な段落</p>
 
-&lt;p id="infoText1"&gt;最初の段落を編集できますか？&lt;/p&gt;
-&lt;p id="infoText2"&gt;2番目の段落を編集できますか？&lt;/p&gt;</pre>
+<p id="infoText1">最初の段落を編集できますか？</p>
+<p id="infoText2">2 番目の段落を編集できますか？</p>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.getElementById('infoText1').innerHTML += document.getElementById('myText1').isContentEditable;
-document.getElementById('infoText2').innerHTML += document.getElementById('myText2').isContentEditable;</pre>
+```js
+document.getElementById('infoText1').innerHTML += document.getElementById('myText1').isContentEditable;
+document.getElementById('infoText2').innerHTML += document.getElementById('myText2').isContentEditable;
+```
 
-<h3 id="Result" name="Result">結果</h3>
+### 結果
 
-<p>{{ EmbedLiveSample('Example') }}</p>
+{{ EmbedLiveSample('Example') }}
 
-<h2 id="Specification" name="Specification">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>{{SpecName('HTML WHATWG')}} のスナップショット、 {{SpecName('HTML5 W3C')}} から変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', "editing.html#dom-iscontenteditable", "HTMLElement.contenteditable")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>{{SpecName('HTML WHATWG')}} のスナップショット、初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.HTMLElement.isContentEditable")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{domxref("HTMLElement/contentEditable")}}</li>
- <li>{{htmlattrxref("contenteditable")}} グローバル属性</li>
-</ul>
+- {{domxref("HTMLElement/contentEditable")}}
+- {{htmlattrxref("contenteditable")}} グローバル属性
