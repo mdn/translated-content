@@ -1,45 +1,46 @@
 ---
-title: Hexadecimal color syntax
+title: 16 進カラー構文
 slug: Web/CSS/color_value/hexadecimal_rgb
 tags:
   - Reference
   - color
 browser-compat: css.types.color.rgb_hexadecimal_notation
+translation_of: Web/CSS/color_value/hexadecimal_rgb
 ---
 {{CSSRef}}
 
-The **hexadecimal color syntax** is a notation for describing an [sRGB](/en-US/docs/Glossary/RGB) color using its primary color components (red, green, blue) written as hexadecimal numbers, as well as its transparency. It can be used everywhere a [`<color>`](/en-US/docs/Web/CSS/color_value) type is allowed.
+**16進カラー構文**は [sRGB](/ja/docs/Glossary/RGB) カラーを 16 進数で記述するための記法で、その原色成分（赤、緑、青）と透明度を記述します。[`<color>`](/ja/docs/Web/CSS/color_value) 型が許容される箇所であればどこでも使うことができます。
 
-## Syntax
+## 構文
 
 ```
-#RGB        // The three-value syntax
-#RGBA       // The four-value syntax
-#RRGGBB     // The six-value syntax
-#RRGGBBAA   // The eight-value syntax
+#RGB        // 3 桁の構文
+#RGBA       // 4 桁の構文
+#RRGGBB     // 6 桁の構文
+#RRGGBBAA   // 8 桁の構文
 ```
 
-### Value
+### 値
 
-- `R` or `RR`
-  - : The _red_ component of the color, as a case-insensitive hexadecimal number between `0` and `ff` (255)). If there is only one number, it is duplicated: `1` means `11`.
-- `G` or `GG`
-  - : The _green_ component of the color, as a case-insensitive hexadecimal number between `0` and `ff` (255)). If there is only one number, it is duplicated: `c` means `cc`.
-- `B` or `BB`
-  - : The _blue_ component of the color, as a case-insensitive hexadecimal number between `0` and `ff` (255)). If there is only one number, it is duplicated: `9` means `99`.
-- `A` or `AA` {{optional_inline}}
-  - : The _alpha_ component of the color, indicating its transparency, as a case-insensitive hexadecimal number between `0` and `ff` (255)). If there is only one number, it is duplicated: `e` means `ee`. `0` represents a fully transparent color, and `ff`a fully opaque one.
+- `R` または `RR`
+  - : 色の**赤**成分を `0` から `ff` (255) までの 16 進数（大文字と小文字を区別しない）で指定します。数字が 1 桁の場合は同じ数字 2 桁と解釈されます。`1` は `11` を意味します。
+- `G` または `GG`
+  - : 色の**緑**成分を `0` から `ff` (255) までの 16 進数（大文字と小文字を区別しない）で指定します。数字が 1 桁の場合は同じ数字 2 桁と解釈されます。`c` は `cc` を意味します。
+- `B` または `BB`
+  - : 色の**青**成分を `0` から `ff` (255) までの 16 進数（大文字と小文字を区別しない）で指定します。数字が 1 桁の場合は同じ数字 2 桁と解釈されます。`9` は `99` を意味します。
+- `A` または `AA` {{optional_inline}}
+  - : 色の透明度を示す**アルファ**成分を `0` から `ff` (255) までの 16 進数（大文字と小文字を区別しない）で指定します。数字が 1 桁の場合は同じ数字 2 桁と解釈されます。`e` は `ee` を意味します。`0` は完全な透明色を、`ff` は完全な不透明色を表します。
 
-> **Note:** The syntax is case-insensitive `#00ff00` is the same as `#00FF00`.
+> **Note:** この構文は大文字と小文字を区別しないため `#00ff00` は `#00FF00` と同値です。
 
-## Examples
+## 例
 
 ```html
-/* Hexadecimal syntax for a fully opaque hot pink */
+/* 不透明な濃いピンク色の 16 進構文 */
 #f09 <div class="c1"></div>
 #F09 <div class="c2"></div>
 #ff0099 <div class="c3"></div>
-#FF0099 <div class="c4"></div> 
+#FF0099 <div class="c4"></div>
 ```
 
 ```css
@@ -52,15 +53,15 @@ div {width: 40px; height: 40px;}
 
 {{EmbedLiveSample("Examples", "100%", "450")}}
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザー互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [`<color>`](/en-US/docs/Web/CSS/color_value) the data type these keywords belong to.
-- [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), the function allowing to set the three components of the color, as well as its transparency, using decimal values.
+- [`<color>`](/ja/docs/Web/CSS/color_value) これらのキーワードが属するデータ型
+- [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 色の三成分および透明度を 10 進数で設定する関数
