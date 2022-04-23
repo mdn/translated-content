@@ -1,28 +1,28 @@
 ---
-title: Literal
+title: リテラル
 slug: Glossary/Literal
 tags:
   - Literal
   - JavaScript
   - Glossary
 ---
-**Literals** represent values in JavaScript. These are fixed values—not variables—that you _literally_ provide in your script.
+**リテラル**は、JavaScript の値を表現します。これはスクリプト中に直接記述される固定値であり、変数ではありません。
 
-- [Array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)
-- [Boolean literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#boolean_literals)
-- [Floating-point literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#floating-point_literals)
-- [Numeric literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#numeric_literals)
-- [Object literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals)
-- [RegExp literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#regexp_literals)
-- [String literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)
+- [配列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)
+- [真偽値リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#boolean_literals)
+- [浮動小数点リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#floating-point_literals)
+- [数値リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#numeric_literals)
+- [オブジェクトリテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals)
+- [正規表現リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#regexp_literals)
+- [文字列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals)
 
-## Examples
+## 例
 
-### String literals
+### 文字列リテラル
 
-A string literal is zero or more characters enclosed in double (`"`) or single quotation marks (`'`). A string must be delimited by quotation marks of the same type (that is, either both single quotation marks, or both double quotation marks).
+文字列リテラルとは、0 文字以上の文字を二重引用符 (`"`) または単一引用符 (`'`) で括ったものです。文字列は同じ種類の引用符で括らなければなりません (つまり、どちらも単一引用符にするか、またはどちらも二重引用符にするかです)。
 
-The following are examples of string literals:
+以下が文字列リテラルの例です。
 
 ```js
 'foo'
@@ -32,11 +32,11 @@ The following are examples of string literals:
 "John's cat"
 ```
 
-### Object literals
+### オブジェクトリテラル
 
-An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces (`{}`).
+オブジェクトリテラルとは、プロパティ名とそれに関連付けられたオブジェクトの値とのペアを 0 個以上集めたリストです。波括弧 (`{}`) で囲んで表します。
 
-The following is an example of an object literal. The first element of the `car` object defines a property, `myCar`, and assigns to it a new string, "`Toyota`"; the second element, the `getCar` property, is immediately assigned the result of invoking the function `carTypes('Honda')`; the third element, the `special` property, uses an existing variable (`sales`).
+以下にオブジェクトリテラルの例を示します。`car` オブジェクトの最初の要素には `myCar` プロパティが定義され、新規文字列 "`Toyota`" が割り当てられています。2 番目の要素、`getCar` プロパティには関数 `carTypes('Honda')` によって呼び出された結果が即座に割り当てられます。3 番目の要素、`special` プロパティには既存の変数 (`sales`) が使われています。
 
 ```js
 var sales = 'BMW';
@@ -56,6 +56,6 @@ console.log(car.getCar);  // Honda
 console.log(car.special); // BMW
 ```
 
-## See also
+## 関連情報
 
 - {{interwiki("wikipedia", "Literal (computer programming)", "Literal")}} on Wikipedia
