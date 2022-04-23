@@ -860,7 +860,7 @@
 /fr/docs/DOM/DataTransfer	/fr/docs/Web/API/DataTransfer
 /fr/docs/DOM/Document.evaluate	/fr/docs/Web/API/Document/evaluate
 /fr/docs/DOM/Document.implementation	/fr/docs/Web/API/Document/implementation
-/fr/docs/DOM/Element.firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
+/fr/docs/DOM/Element.firstElementChild	/fr/docs/Web/API/Element/firstElementChild
 /fr/docs/DOM/File	/fr/docs/Web/API/File
 /fr/docs/DOM/FileReader	/fr/docs/Web/API/FileReader
 /fr/docs/DOM/FileReader/FileList	/fr/docs/Web/API/FileList
@@ -938,7 +938,7 @@
 /fr/docs/DOM/element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/DOM/element.localName	/fr/docs/conflicting/Web/API/Element/localName
 /fr/docs/DOM/element.name	/fr/docs/conflicting/Web/API
-/fr/docs/DOM/element.namespaceURI	/fr/docs/conflicting/Web/API/Element/namespaceURI
+/fr/docs/DOM/element.namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/DOM/element.nextSibling	/fr/docs/Web/API/Node/nextSibling
 /fr/docs/DOM/element.nodeName	/fr/docs/Web/API/Node/nodeName
 /fr/docs/DOM/element.nodeType	/fr/docs/Web/API/Node/nodeType
@@ -1096,7 +1096,7 @@
 /fr/docs/DOM:element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/DOM:element.localName	/fr/docs/conflicting/Web/API/Element/localName
 /fr/docs/DOM:element.name	/fr/docs/conflicting/Web/API
-/fr/docs/DOM:element.namespaceURI	/fr/docs/conflicting/Web/API/Element/namespaceURI
+/fr/docs/DOM:element.namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/DOM:element.nextSibling	/fr/docs/Web/API/Node/nextSibling
 /fr/docs/DOM:element.nodeName	/fr/docs/Web/API/Node/nodeName
 /fr/docs/DOM:element.nodeType	/fr/docs/Web/API/Node/nodeType
@@ -2167,9 +2167,9 @@
 /fr/docs/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
 /fr/docs/JavaScript/Reference/A_propos/Conventions_d_écriture	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Reference/Annexes	/fr/docs/Web/JavaScript/Reference
-/fr/docs/JavaScript/Reference/Annexes/Annexe_-_Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/fr/docs/JavaScript/Reference/Annexes/Annexe_-_Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/JavaScript/Reference/Annexes/Fonctionnalités_dépréciées	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/fr/docs/JavaScript/Reference/Annexes/Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/fr/docs/JavaScript/Reference/Annexes/Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/JavaScript/Reference/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/JavaScript/Reference/Fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
@@ -2233,7 +2233,7 @@
 /fr/docs/JavaScript/Reference/Instructions/var	/fr/docs/Web/JavaScript/Reference/Statements/var
 /fr/docs/JavaScript/Reference/Instructions/while	/fr/docs/Web/JavaScript/Reference/Statements/while
 /fr/docs/JavaScript/Reference/Instructions/with	/fr/docs/Web/JavaScript/Reference/Statements/with
-/fr/docs/JavaScript/Reference/Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/fr/docs/JavaScript/Reference/Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/JavaScript/Reference/Objets_Globaux/Date	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date
 /fr/docs/JavaScript/Reference/Objets_Globaux/Date/now	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/now
 /fr/docs/JavaScript/Reference/Objets_Globaux/Date/valueOF	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
@@ -2524,7 +2524,7 @@
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Instructions/var	/fr/docs/Web/JavaScript/Reference/Statements/var
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Instructions/while	/fr/docs/Web/JavaScript/Reference/Statements/while
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Instructions/with	/fr/docs/Web/JavaScript/Reference/Statements/with
-/fr/docs/JavaScript/Reference/Référence_JavaScript/Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/fr/docs/JavaScript/Reference/Référence_JavaScript/Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux	/fr/docs/Web/JavaScript/Reference/Global_Objects
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Array	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Array/concat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -2658,9 +2658,9 @@
 /fr/docs/JavaScript/Référence_JavaScript	/fr/docs/Web/JavaScript/Reference
 /fr/docs/JavaScript/Référence_JavaScript/A_propos	/fr/docs/Web/JavaScript/Reference/About
 /fr/docs/JavaScript/Référence_JavaScript/Annexes	/fr/docs/Web/JavaScript/Reference
-/fr/docs/JavaScript/Référence_JavaScript/Annexes/Annexe_-_Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/fr/docs/JavaScript/Référence_JavaScript/Annexes/Annexe_-_Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/JavaScript/Référence_JavaScript/Annexes/Fonctionnalités_dépréciées	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/fr/docs/JavaScript/Référence_JavaScript/Annexes/Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/fr/docs/JavaScript/Référence_JavaScript/Annexes/Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/JavaScript/Référence_JavaScript/Fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/JavaScript/Référence_JavaScript/Fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
 /fr/docs/JavaScript/Référence_JavaScript/Instructions	/fr/docs/Web/JavaScript/Reference/Statements
@@ -2746,7 +2746,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Instructions/var	/fr/docs/Web/JavaScript/Reference/Statements/var
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Instructions/while	/fr/docs/Web/JavaScript/Reference/Statements/while
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Instructions/with	/fr/docs/Web/JavaScript/Reference/Statements/with
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux	/fr/docs/Web/JavaScript/Reference/Global_Objects
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Array	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Objets_globaux/Array/concat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -3561,7 +3561,7 @@
 /fr/docs/Using_files_from_web_applications	/fr/docs/Web/API/File/Using_files_from_web_applications
 /fr/docs/Using_geolocation	/fr/docs/Web/API/Geolocation_API
 /fr/docs/Utilisation_d'URL_pour_la_propriété_cursor	/fr/docs/conflicting/Web/CSS/cursor
-/fr/docs/Utilisation_d'audio_et_video_dans_Firefox	/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content_040b1c36f4218ba488ffb0284dfe52bf
+/fr/docs/Utilisation_daudio_et_video_dans_Firefox	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /fr/docs/Utilisation_de_XPath	/fr/docs/conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /fr/docs/Utilisation_de_dégradés	/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /fr/docs/Utilisation_de_dégradés_(gradients)	/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients
@@ -3686,7 +3686,7 @@
 /fr/docs/Web/API/Element.clientWidth	/fr/docs/Web/API/Element/clientWidth
 /fr/docs/Web/API/Element.cloneNode	/fr/docs/Web/API/Node/cloneNode
 /fr/docs/Web/API/Element.dir	/fr/docs/Web/API/HTMLElement/dir
-/fr/docs/Web/API/Element.firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
+/fr/docs/Web/API/Element.firstElementChild	/fr/docs/Web/API/Element/firstElementChild
 /fr/docs/Web/API/Element.focus	/fr/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /fr/docs/Web/API/Element.getAttribute	/fr/docs/Web/API/Element/getAttribute
 /fr/docs/Web/API/Element.getAttributeNS	/fr/docs/Web/API/Element/getAttributeNS
@@ -3709,7 +3709,7 @@
 /fr/docs/Web/API/Element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/Web/API/Element.localName	/fr/docs/conflicting/Web/API/Element/localName
 /fr/docs/Web/API/Element.name	/fr/docs/conflicting/Web/API
-/fr/docs/Web/API/Element.namespaceURI	/fr/docs/conflicting/Web/API/Element/namespaceURI
+/fr/docs/Web/API/Element.namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/Web/API/Element.nodeName	/fr/docs/Web/API/Node/nodeName
 /fr/docs/Web/API/Element.nodeType	/fr/docs/Web/API/Node/nodeType
 /fr/docs/Web/API/Element.normalize	/fr/docs/Web/API/Node/normalize
@@ -3826,7 +3826,7 @@
 /fr/docs/Web/API/Node/getUserData	/fr/docs/orphaned/Web/API/Node/getUserData
 /fr/docs/Web/API/Node/innerText	/fr/docs/Web/API/HTMLElement/innerText
 /fr/docs/Web/API/Node/localName	/fr/docs/conflicting/Web/API/Element/localName
-/fr/docs/Web/API/Node/namespaceURI	/fr/docs/conflicting/Web/API/Element/namespaceURI
+/fr/docs/Web/API/Node/namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/Web/API/Node/nodePrincipal	/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
 /fr/docs/Web/API/Node/prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
@@ -3838,7 +3838,7 @@
 /fr/docs/Web/API/ParentNode/append	/fr/docs/orphaned/Web/API/ParentNode/append
 /fr/docs/Web/API/ParentNode/childElementCount	/fr/docs/Web/API/Element/childElementCount
 /fr/docs/Web/API/ParentNode/children	/fr/docs/orphaned/Web/API/ParentNode/children
-/fr/docs/Web/API/ParentNode/firstElementChild	/fr/docs/orphaned/Web/API/ParentNode/firstElementChild
+/fr/docs/Web/API/ParentNode/firstElementChild	/fr/docs/Web/API/Element/firstElementChild
 /fr/docs/Web/API/ParentNode/lastElementChild	/fr/docs/orphaned/Web/API/ParentNode/lastElementChild
 /fr/docs/Web/API/ParentNode/prepend	/fr/docs/orphaned/Web/API/ParentNode/prepend
 /fr/docs/Web/API/ParentNode/querySelector	/fr/docs/orphaned/Web/API/ParentNode/querySelector
@@ -4568,6 +4568,7 @@
 /fr/docs/Web/Guide/HTML/HTML5/Liste_des_éléments_HTML5	/fr/docs/conflicting/Web/HTML/Element
 /fr/docs/Web/Guide/HTML/Introduction	/fr/docs/Learn/HTML/Introduction_to_HTML
 /fr/docs/Web/Guide/HTML/Liens_email	/fr/docs/conflicting/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks_10fd94f15ce1a469a3483e0478cb5d85
+/fr/docs/Web/Guide/HTML/Using_HTML5_audio_and_video	/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines	/fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /fr/docs/Web/Guide/Using_FormData_Objects	/fr/docs/conflicting/Web/API/FormData/Using_FormData_Objects
 /fr/docs/Web/HTML/Appliquer_des_couleurs	/fr/docs/Web/CSS/CSS_Colors/Applying_color
@@ -4671,7 +4672,6 @@
 /fr/docs/Web/HTML/Reglages_des_attributs_CORS	/fr/docs/Web/HTML/Attributes/crossorigin
 /fr/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document	/fr/docs/orphaned/Web/Guide/HTML/Using_HTML_sections_and_outlines
 /fr/docs/Web/HTML/Types_de_lien	/fr/docs/Web/HTML/Link_types
-/fr/docs/Web/HTML/Utilisation_d'audio_et_video_en_HTML5	/fr/docs/conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content_040b1c36f4218ba488ffb0284dfe52bf
 /fr/docs/Web/HTML/Utiliser_DASH_avec_les_vidéos_en_HTML	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /fr/docs/Web/HTML/formats_media_support	/fr/docs/Web/Media/Formats
 /fr/docs/Web/HTML/Éléments_en_bloc	/fr/docs/Web/HTML/Block-level_elements
@@ -4898,7 +4898,7 @@
 /fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration	/fr/docs/Web/JavaScript/Reference/Iteration_protocols
 /fr/docs/Web/JavaScript/Reference/Littéraux_gabarits	/fr/docs/Web/JavaScript/Reference/Template_literals
 /fr/docs/Web/JavaScript/Reference/Methods_Index	/fr/docs/Web/JavaScript/Reference
-/fr/docs/Web/JavaScript/Reference/Mots_réservés	/fr/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/fr/docs/Web/JavaScript/Reference/Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/Web/JavaScript/Reference/Objets_globaux	/fr/docs/Web/JavaScript/Reference/Global_Objects
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/AggregateError	/fr/docs/Web/JavaScript/Reference/Global_Objects/AggregateError
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Array	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -5641,6 +5641,7 @@
 /fr/docs/Web/JavaScript/Reference/Opérateurs/super	/fr/docs/Web/JavaScript/Reference/Operators/super
 /fr/docs/Web/JavaScript/Reference/Opérateurs/yield	/fr/docs/Web/JavaScript/Reference/Operators/yield
 /fr/docs/Web/JavaScript/Reference/Opérateurs/yield*	/fr/docs/Web/JavaScript/Reference/Operators/yield*
+/fr/docs/Web/JavaScript/Reference/Reserved_Words	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict	/fr/docs/Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 /fr/docs/Web/JavaScript/Reference/Valeurs_par_défaut_des_arguments	/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters
 /fr/docs/Web/JavaScript/Reference/Virgules_finales	/fr/docs/Web/JavaScript/Reference/Trailing_commas

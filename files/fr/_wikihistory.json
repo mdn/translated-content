@@ -41446,18 +41446,6 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content_040b1c36f4218ba488ffb0284dfe52bf": {
-    "modified": "2019-03-24T00:01:44.822Z",
-    "contributors": [
-      "nhoizey",
-      "SphinxKnight",
-      "emersion",
-      "tregagnon",
-      "Nigel_Sheldon",
-      "BenoitL",
-      "Nukeador"
-    ]
-  },
   "conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents": {
     "modified": "2019-03-23T23:43:36.441Z",
     "contributors": [
@@ -41642,16 +41630,6 @@
   },
   "conflicting/Web/API/Element/localName": {
     "modified": "2020-10-15T21:17:55.986Z",
-    "contributors": [
-      "loella16",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "BenoitL"
-    ]
-  },
-  "conflicting/Web/API/Element/namespaceURI": {
-    "modified": "2020-10-15T21:17:54.747Z",
     "contributors": [
       "loella16",
       "fscholz",
@@ -42716,15 +42694,6 @@
       "SphinxKnight"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Lexical_grammar": {
-    "modified": "2019-03-24T00:10:19.603Z",
-    "contributors": [
-      "06Minazuki",
-      "teoli",
-      "SphinxKnight",
-      "matteodelabre"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Statements/switch": {
     "modified": "2020-10-15T21:39:25.638Z",
     "contributors": [
@@ -43120,17 +43089,6 @@
       "loella16",
       "NemoNobobyPersonne",
       "xavierartot"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/firstElementChild": {
-    "modified": "2019-03-23T23:35:50.443Z",
-    "contributors": [
-      "pdonias",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "Delapouite",
-      "Beaver"
     ]
   },
   "orphaned/Web/API/ParentNode/lastElementChild": {
