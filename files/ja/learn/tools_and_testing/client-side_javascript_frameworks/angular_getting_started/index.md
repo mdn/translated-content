@@ -52,11 +52,11 @@ Angular は、[TypeScript](https://www.typescriptlang.org/) でビルドする�
 - コードの開発、ビルド、テスト、更新を支援する一連の開発者ツール
 
 <p>
-Angular を使用してアプリケーションを構築する場合、単一の開発者プロジェクトからエンタープライズレベルのアプリケーションまで拡張できるプラットフォームを利用しています。 Angularは、更新を可能な限り簡単にするように設計されているため、最小限の労力で最新の開発を利用できます。 何よりも、Angularエコシステムは、170万人を超える開発者、ライブラリ作成者、コンテンツ作成者からなる多様なグループで構成されています。 
+Angular を使用してアプリケーションを構築する場合、単一の開発者プロジェクトからエンタープライズレベルのアプリケーションまで拡張できるプラットフォームを利用しています。 Angular は、更新を可能な限り簡単にするように設計されているため、最小限の労力で最新の開発を利用できます。 何よりも、 Angular エコシステムは、170万人を超える開発者、ライブラリ作成者、コンテンツ作成者からなる多様なグループで構成されています。 
 </p>
 
 <p>
-Angular プラットフォームの探索を開始する前に、AngularCLIについて知っておく必要があります。 Angular CLI は、Angular アプリケーションを開発するための最も速く、最も簡単で、推奨される方法です。 Angular CLI を使用すると、多くのタスクを簡単に実行できます。 ここではいくつかの例を示します。 
+Angular プラットフォームの探索を開始する前に、 Angular CLI について知っておく必要があります。 Angular CLI は、Angular アプリケーションを開発するための最も速く、最も簡単で、推奨される方法です。 Angular CLI を使用すると、多くのタスクを簡単に実行できます。 ここではいくつかの例を示します。 
 </p>
 
 <table class="standard-table">
@@ -112,94 +112,94 @@ Angular CLI は、アプリケーションを構築するための大事なツ�
   Node.js のインストールの詳細については、[nodejs.org](https://nodejs.org) を参照してください。
   システムで実行されている Node.js のバージョンがわからない場合は、ターミナルウィンドウで、 `node-v` を実行してください。
 
-- **npm package manager**
+- **npm パッケージマネージャー**
 
   Angular、Angular CLI、および Angular アプリケーションは、多くの機能を[npm パッケージ](https://docs.npmjs.com/getting-started/what-is-npm)に依存しています。
   npm パッケージをダウンロードしてインストールするには、npm パッケージマネージャーが必要です。
   このガイドでは、[npm client](https://docs.npmjs.com/cli/install) コマンドラインインターフェイスを使用します。このコマンドラインインターフェイスは、デフォルトで `Node.js` とともにインストールされます。
   npm クライアントがインストールされていることを確認するには、ターミナルウィンドウで `npm-v` を実行します。
 
-## Set up your application
+## アプリケーションをセットアップする
 
-You can use the Angular CLI to run commands in your terminal for generating, building, testing, and deploying Angular applications.
-To install the Angular CLI, run the following command in your terminal:
+Angular CLI を使用して、Angular アプリケーションを生成、構築、テスト、およびデプロイするためのコマンドをターミナルで実行できます。
+Angular CLI をインストールするには、ターミナルで次のコマンドを実行します。
 
 ```js
 npm install -g @angular/cli
 ```
 
-Angular CLI commands all start with `ng`, followed by what you'd like the CLI to do.
-In the Desktop directory, use the following `ng new` command to create a new application called `todo`:
+Angular CLI コマンドはすべて `ng` で始まり、その後に CLI で実行する操作が続きます。
+デスクトップディレクトリで、次の `ng new` コマンドを使用して、`todo`と いう名前の新しいアプリケーションを作成します。
 
 ```js
 ng new todo --routing=false --style=css
 ```
 
-The `ng new` command creates a minimal starter Angular application on your Desktop.
-The additional flags, `--routing` and `--style`, define how to handle navigation and styles in the application.
-This tutorial describes these features later in more detail.
+`ng new` コマンドは、デスクトップ上に最小限のスターター Angular アプリケーションを作成します。
+追加のフラグ `--routing` と `--style` は、アプリケーションでナビゲーションとスタイルを処理する方法を定義します。
+このチュートリアルでは、これらの機能について後で詳しく説明します。
 
-If you are prompted to enforce stricter type checking, you can respond with yes.
+より厳密なタイプチェックを実施するように求められた場合は、yes で応答できます。
 
-Navigate into your new project with the following `cd` command:
+次の `cd` コマンドを使用して新しいプロジェクトに移動します。
 
 ```js
 cd todo
 ```
 
-To run your `todo` application, use `ng serve`:
+`todo` アプリケーションを実行するには、`ng serve` を使用します。
 
 ```js
 ng serve
 ```
 
-When the CLI prompts you about analytics, answer `no`.
+CLI が analytics についてプロンプトを表示したら、`no` と答えます。
 
-In the browser, navigate to `http://localhost:4200/` to see your new starter application.
-If you change any of the source files, the application automatically reloads.
+ブラウザで、 ``http://localhost:4200/` に移動して、新しいスターターアプリケーションを表示します。
+ソースファイルのいずれかを変更すると、アプリケーションは自動的にリロードされます。
 
-While `ng serve` is running, you might want to open a second terminal tab or window in order to run commands.
-If at any point you would like to stop serving your application, press `Ctrl+c` while in the terminal.
+`ng serve` の実行中に、コマンドを実行するために 2 番目のターミナルタブまたはウィンドウを開くことができます。
+アプリケーションの実行を停止したい場合は、ターミナルで `Ctrl+c` を押してください。
 
-## Get familiar with your Angular application
+## Angular アプリケーションに慣れてください
 
-The application source files that this tutorial focuses on are in `src/app`.
-Key files that the CLI generates automatically include the following:
+このチュートリアルで焦点を当てているアプリケーションソースファイルは、 `src/app` にあります。
+CLI が自動的に生成するキーファイルには、次のものが含まれます。
 
-1. `app.module.ts`: Specifies the files that the application uses.
-   This file acts as a central hub for the other files in your application.
-2. `app.component.ts`: Also known as the class, contains the logic for the application's main page.
-3. `app.component.html`: Contains the HTML for `AppComponent`. The contents of this file are also known as the template.
-   The template determines the view or what you see in the browser.
-4. `app.component.css`: Contains the styles for `AppComponent`. You use this file when you want to define styles that only apply to a specific component, as opposed to your application overall.
+1. `app.module.ts`: アプリケーションが使用するファイルを指定します。
+   このファイルは、アプリケーション内の他のファイルの中央ハブとして機能します。
+2. `app.component.ts`: クラスとも呼ばれ、アプリケーションのメインページのロジックが含まれています。
+3. `app.component.html`: `AppComponent` の HTML が含まれています。 このファイルの内容は、テンプレートとも呼ばれます。
+   テンプレートは、ブラウザに表示されるビューまたは内容を決定します。
+4. `app.component.css`: `AppComponent` のスタイルが含まれています。 このファイルは、アプリケーション全体ではなく、特定のコンポーネントにのみ適用されるスタイルを定義する場合に使用します。
 
-A component in Angular is made up of three main parts—the template, styles, and the class.
-For example, `app.component.ts`, `app.component.html`, and `app.component.css` together constitute the `AppComponent`.
-This structure separates the logic, view, and styles so that the application is more maintainable and scalable.
+Angular のコンポーネントは、テンプレート、スタイル、クラスの 3 つの主要部分で構成されています。
+たとえば、 `app.component.ts` 、 ` app.component.html` 、および `app.component.css` は一緒に `AppComponent` を構成します。
+この構造により、ロジック、ビュー、およびスタイルが分離され、アプリケーションの保守性と拡張性が向上します。
 
-In this way, you are using the best practices from the very beginning.
+このようにして、最初からベストプラクティスを使用しています。
 
-The Angular CLI also generates a file for component testing called `app.component.spec.ts`, but this tutorial doesn't go into testing, so you can ignore that file.
+Angular CLI は `app.component.spec.ts` と呼ばれるコンポーネントテスト用のファイルも生成しますが、このチュートリアルではテストに入らないため、そのファイルは無視してかまいません。
 
-Whenever you generate a component, the CLI creates these four files in a directory with the name you specify.
+コンポーネントを生成するたびに、CLI は指定した名前のディレクトリにこれらの 4 つのファイルを作成します。
 
-## The structure of an Angular application
+## Angular アプリケーションの構造
 
-Angular is built with TypeScript.
-TypeScript is a superset of JavaScript meaning that any valid JavaScript is valid TypeScript.
-TypeScript offers typing and a more concise syntax than plain JavaScript, which gives you a tool for creating more maintainable code and minimizing bugs.
+Angular は TypeScript で構築されています。
+TypeScript は JavaScript のスーパーセットであり、有効な JavaScript が有効な TypeScript であることを意味します。
+TypeScript は、単純な JavaScript よりもタイピングとより簡潔な構文を提供します。これにより、より保守しやすいコードを作成し、バグを最小限に抑えるためのツールが提供されます。
 
-Components are the building blocks of an Angular application.
-A component includes a TypeScript class that has a `@Component()` decorator, an HTML template, and styles.
+コンポーネントは、Angular アプリケーションの構成要素です。
+コンポーネントには、 `@Component()` デコレータ、HTML テンプレート、およびスタイルを持つ TypeScript クラスが含まれます。
 
-### The class
+### クラス
 
-The class is where you put any logic your component needs.
-This code can include functions, event listeners, properties, and references to services to name a few.
-The class is in a file with a name such as `feature.component.ts`, where `feature` is the name of your component.
-So, you could have files with names such as `header.component.ts`, `signup.component.ts`, or `feed.component.ts`.
-You create a component with a `@Component()` decorator that has metadata that tells Angular where to find the HTML and CSS.
-A typical component is as follows:
+このクラスは、コンポーネントに必要なロジックを配置する場所です。
+このコードには、関数、イベントリスナー、プロパティ、サービスへの参照などを含めることができます。
+クラスは、 `feature.component.ts` などの名前のファイルにあります。ここで、`feature` はコンポーネントの名前です。
+したがって、 `header.component.ts` 、` signup.component.ts` 、または `feed.component.ts` などの名前のファイルを作成できます。
+HTML と CSS の場所を Angular に指示するメタデータを持つ `@Component()` デコレータを使用してコンポーネントを作成します。
+一般的なコンポーネントは次のとおりです。
 
 ```js
 import { Component } from "@angular/core";
@@ -215,20 +215,20 @@ export class ItemComponent {
 }
 ```
 
-This component is called `ItemComponent`, and its selector is `app-item`.
-You use a selector just like regular HTML tags by placing it within other templates.
-When a selector is in a template, the browser renders the template of that component.
-This tutorial guides you through creating two components and using one within the other.
+このコンポーネントは `ItemComponent` と呼ばれ、そのセレクターは `app-item` です。
+セレクターは、他のテンプレート内に配置することで、通常の HTML タグと同じように使用できます。
+セレクターがテンプレート内にある場合、ブラウザーはそのコンポーネントのテンプレートをレンダリングします。
+このチュートリアルでは、2 つのコンポーネントを作成し、一方を他方のコンポーネント内で使用する方法について説明します。
 
-Angular's component model offers strong encapsulation and an intuitive application structure.
-Components also make your application easier to unit test and can improve the overall readability of your code.
+Angular のコンポーネントモデルは、強力なカプセル化と直感的なアプリケーション構造を提供します。
+コンポーネントを使用すると、アプリケーションの単体テストが容易になり、コードの全体的な可読性が向上します。
 
-### The HTML template
+### HTML テンプレート
 
-Every component has an HTML template that declares how that component renders.
-You can define this template either inline or by file path.
+すべてのコンポーネントには、そのコンポーネントのレンダリング方法を宣言する HTML テンプレートがあります。
+このテンプレートは、インラインまたはファイルパスで定義できます。
 
-To refer to an external HTML file, use the `templateUrl` property:
+外部 HTML ファイルを参照するには、`templateUrl` プロパティを使用します。
 
 ```js
 @Component({
@@ -238,7 +238,7 @@ To refer to an external HTML file, use the `templateUrl` property:
 export class AppComponent {}
 ```
 
-To write inline HTML, use the `template` property and write your HTML within backticks:
+インライン HTML を作成するには、 `template` プロパティを使用して、バッククォート内に HTML を作成します。
 
 ```js
 @Component({
@@ -248,16 +248,16 @@ To write inline HTML, use the `template` property and write your HTML within bac
 export class AppComponent {}
 ```
 
-Angular extends HTML with additional syntax that lets you insert dynamic values from your component.
-Angular automatically updates the rendered DOM when your component's state changes.
-One use of this feature is inserting dynamic text, as shown in the following example.
+Angular は、コンポーネントから動的な値を挿入できる追加の構文で HTML を拡張します。
+Angular は、コンポーネントの状態が変化すると、レンダリングされた DOM を自動的に更新します。
+この機能の使用法の 1 つは、次の例に示すように、動的テキストを挿入することです。
 
 ```html
 <h1>\{{ title }}</h1>
 ```
 
-The double curly braces instruct Angular to interpolate the contents within them.
-The value for `title` comes from the component class:
+二重中括弧は、Angular にその中のコンテンツを補間するように指示します。
+`title` の値は、コンポーネントクラスから取得されます。
 
 ```js
 import { Component } from "@angular/core";
@@ -272,18 +272,18 @@ export class AppComponent {
 }
 ```
 
-When the application loads the component and its template, the browser sees the following:
+アプリケーションがコンポーネントとそのテンプレートをロードすると、ブラウザには次のように表示されます。
 
 ```html
 <h1>To do application</h1>
 ```
 
-### Styles
+### スタイル
 
-A component can inherit global styles from the application's `styles.css` file and augment or override them with its own styles.
-You can write component-specific styles directly in the `@Component()` decorator or specify the path to a CSS file.
+コンポーネントは、アプリケーションの `styles.css` ファイルからグローバルスタイルを継承し、それらを独自のスタイルで拡張またはオーバーライドできます。
+コンポーネント固有のスタイルを `@Component()` デコレータに直接書き込むか、CSS ファイルへのパスを指定できます。
 
-To include the styles directly in the component decorator, use the `styles` property:
+コンポーネントデコレータにスタイルを直接含めるには、`styles` プロパティを使用します。
 
 ```js
 @Component({
@@ -293,7 +293,7 @@ To include the styles directly in the component decorator, use the `styles` prop
 })
 ```
 
-Typically, a component uses styles in a separate file using the `styleUrls` property:
+通常、コンポーネントは、`styleUrls` プロパティを使用して別のファイルのスタイルを使用します。
 
 ```js
 @Component({
@@ -303,27 +303,27 @@ Typically, a component uses styles in a separate file using the `styleUrls` prop
 })
 ```
 
-With component-specific styles, you can organize your CSS so that it is easily maintainable and portable.
+コンポーネント固有のスタイルを使用すると、CSS を整理して、保守と移植が容易になります。
 
-## Summary
+## まとめ
 
-That's it for your first introduction to Angular. At this point you should be set up and ready to build an Angular app, and have a basic understanding of how Angular works. In the next article we'll deepen that knowledge and start to build up the structure of our to-do list application.
+Angular の最初の紹介は以上です。 この時点で、Angular アプリをセットアップして構築する準備ができており、Angular がどのように機能するかについての基本的な理解が必要です。 次の記事では、その知識を深め、やることリストアプリケーションの構造を構築し始めます。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-## In this module
+## このモジュール内
 
 - [Introduction to client-side frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
 - [Framework main features](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Getting started with React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+  - [Getting started with React](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Beginning our React todo list](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+  - [Componentizing our React app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [React interactivity: Events and state](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - [React interactivity: Editing, filtering, conditional rendering](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - [Accessibility in React](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+  - [React resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
 
 - Ember
 
@@ -336,7 +336,7 @@ That's it for your first introduction to Angular. At this point you should be se
 
 - Vue
 
-  - [Getting started with Vue](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
+  - [Getting started with Vue](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
   - [Creating our first Vue component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - [Rendering a list of Vue components](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
   - [Adding a new todo form: Vue events, methods, and models](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
@@ -359,7 +359,7 @@ That's it for your first introduction to Angular. At this point you should be se
 
 - Angular
 
-  - [Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - [Getting started with Angular](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - [Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
   - [Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
   - [Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
