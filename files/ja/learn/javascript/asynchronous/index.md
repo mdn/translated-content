@@ -52,4 +52,4 @@ tags:
 
 ## 関連情報
 
-- [Asynchronous Programming](https://eloquentjavascript.net/11_async.html) : Marijn Haverbeke による素晴らしいオンラインブック [Eloquent JavaScript](https://eloquentjavascript.net/) より。
+- [Asynchronous Programming](https://eloquentjavascript.net/11_async.html) (Marijn Haverbeke 氏の非常に優れたオンライン書籍 [Eloquent JavaScript](https://eloquentjavascript.net/) より)
