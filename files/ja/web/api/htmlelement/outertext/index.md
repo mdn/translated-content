@@ -3,33 +3,67 @@ title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
 tags:
   - API
-  - DOM
-  - Non-standard
-  - Property
-  - Reference
+  - HTML DOM
+  - HTMLElement
+  - プロパティ
+  - リファレンス
+browser-compat: api.HTMLElement.outerText
 translation_of: Web/API/HTMLElement/outerText
 ---
-<div>{{APIRef("DOM")}} {{ Non-standard_header() }}</div>
+{{APIRef("DOM")}}
 
-<p><span class="seoSummary"><strong><code>HTMLElement.outerText</code></strong> は非標準のプロパティです。 取得するときは、{{domxref("Node.innerText")}} と同じ値を返します。 設定するときは、現在のノードを取り除き、指定されたテキストに置き換えます。</span></p>
+**`outerText`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、 {{domxref("HTMLElement.innerText")}} と同じ値を返します。
+セッターとして使用するときは、現在のノード全体を指定されたテキストに置き換えます（これは現在のノードの*内部*のコンテンツを置き換える `innerText` と異なります）。
 
-<h2 id="Example" name="Example">例</h2>
+詳しい情報や、両プロパティをゲッターとして使用する方法を示した例は {{domxref("HTMLElement.innerText")}} を参照してください。
 
-<p><a href="http://stackoverflow.com/a/18481435">StackOverflow の回答</a>（英語）をご覧ください。</p>
+## 値
 
-<h2 id="Specification" name="Specification">仕様</h2>
+{{domxref("DOMString")}} で、この要素とその配下で表示されるテキストコンテンツを表します。
 
-<p>仕様の一部ではありません。 標準化への議論: <a href="https://github.com/whatwg/html/issues/668">whatwg/html#668</a>。</p>
+要素自身が[表示されていない場合](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)（例えば、文書から切り離されていた場合や表示から隠されていた場合）、返値は {{domxref("Node.textContent")}} プロパティのものと同じになります。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+セッターとして使用された場合、この要素の子要素を指定された値で置き換え、すべての改行を {{HTMLElement("br")}} 要素に変換します。
 
+## 例
 
+この例では、 `outerText` と `innerText` をセッターとして使用した場合の根本的な違いを強調しています（ゲッターで使用した場合は同じです）。
 
-<p>{{Compat("api.HTMLElement.outerText")}}</p>
+> **Note:** この例は [What is the difference between innerText and outerText?](https://stackoverflow.com/questions/18481382/what-is-the-difference-between-innertext-and-outertext/18481435#18481435) (Stack overflow) の記事で [codingintrigue](https://stackoverflow.com/users/571194/codingintrigue) が作成し、 [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) のライセンスで配布されているものを変更したものです。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+以下のような HTML が入っているページがあるとします。
 
-<ul>
- <li>{{domxref("Node.innerText")}}</li>
- <li>{{domxref("Element.outerHTML")}}</li>
-</ul>
+```html
+<div>
+  <p>元の内容</p>
+</div>
+```
+
+`outerText` は選択された要素全体を置き換えますので、 JavaScript で `p.outerText = "要素全体を置換"` を実行すると、選択された `p` 要素全体を置き換えます。
+
+```html
+<div>
+   要素全体を置換
+</div>
+```
+
+一方 `p.innerText = "要素内のコンテンツを置換"` を実行すると、選択された `p` 要素の*内部の*コンテンツを置き換えます。
+
+```html
+<div>
+  <p>要素内のコンテンツを置換</p>
+</div>
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("HTMLElement.innerText")}}
+- {{domxref("Element.outerHTML")}}
