@@ -11,6 +11,7 @@ tags:
   - client-side
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
+
 {{LearnSidebar}}
 
 JavaScript フレームワークは、最新のフロントエンドウェブ開発に欠かせないものであり、開発者にスケーラブルでインタラクティブなウェブアプリケーションを構築するための試行錯誤されたツールを提供しています。現代の多くの企業では、フレームワークをツールの標準的な一部として使用しているため、多くのフロントエンド開発の仕事でフレームワークの経験が必要とされています。
@@ -37,6 +38,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 ## 入門ガイド
 
 - [1. Introduction to client-side frameworks](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
+
   - : We begin our look at frameworks with a general overview of the area, looking at a brief history of JavaScript and frameworks, why frameworks exist and what they give us, how to start thinking about choosing a framework to learn, and what alternatives there are to client-side frameworks.
 
 - [2. Framework main features](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
@@ -44,8 +46,8 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## React チュートリアル
 
-> **Note:** この React チュートリアルは React/ReactDOM 16.13.1 と create-react-app 3.4.1 で、2020年5月に動作確認を行いました。
-> 
+> **Note:** この React チュートリアルは React/ReactDOM 16.13.1 と create-react-app 3.4.1 で、2020 年 5 月に動作確認を行いました。
+>
 > もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、[todo-react repository](https://github.com/mdn/todo-react) で最新版を見ることができます。実行中のライブバージョンについては、[https://mdn.github.io/todo-react-build/](https://mdn.github.io/todo-react-build/) から確認ができます。
 
 - [1. React をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
@@ -65,9 +67,9 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Ember チュートリアル
 
-> **Note:** この Ember チュートリアルは Ember/Ember CLI version 3.18.0 で、2020年5月に動作確認を行いました。
-> 
->もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、[ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) で最新版を見ることができます。実行中のライブバージョンについては [https://nullvoxpopuli.github.io/ember-todomvc-tutorial/](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/) から確認ができます(ただしチュートリアルで取り扱っていない機能も含まれています)。
+> **Note:** この Ember チュートリアルは Ember/Ember CLI version 3.18.0 で、2020 年 5 月に動作確認を行いました。
+>
+> もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、[ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) で最新版を見ることができます。実行中のライブバージョンについては [https://nullvoxpopuli.github.io/ember-todomvc-tutorial/](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/) から確認ができます(ただしチュートリアルで取り扱っていない機能も含まれています)。
 
 - [1. Getting started with Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
   - : In our first Ember article we will look at how Ember works and what it's useful for, install the Ember toolchain locally, create a sample app, and then do some initial setup to get it ready for development.
@@ -84,8 +86,8 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Vue チュートリアル
 
-> **Note:** この Vue チュートリアルは Vue 2.6.11 で、2020年5月に動作確認を行いました。
-> 
+> **Note:** この Vue チュートリアルは Vue 2.6.11 で、2020 年 5 月に動作確認を行いました。
+>
 > もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、 [todo-vue repository](https://github.com/mdn/todo-vue) で最新版を見ることができます。実行中のライブバージョンについては [https://mdn.github.io/todo-vue/dist/](https://mdn.github.io/todo-vue/dist/) から確認ができます。
 
 - [1. Getting started with Vue](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
@@ -106,6 +108,25 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
   - : We are nearly done with Vue. The last bit of functionality to look at is focus management, or put another way, how we can improve our app's keyboard accessibility. We'll look at using Vue refs to handle this — an advanced feature that allows you to have direct access to the underlying DOM nodes below the virtual DOM, or direct access from one component to the internal DOM structure of a child component.
 - [9. Vue resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
   - : Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.
+
+## Angular チュートリアル
+
+> **Note:** この Angular チュートリアルは Angular CLI (NG) 11.2.5 で、 2021 年 4 月に動作確認を行いました。
+>
+> もし、コードをこのバージョンと照合する必要がある場合は、サンプルの Angular アプリコードの完成版を [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) で確認ができます。
+
+- [1. Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
+  - : In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
+- [2. Beginning our Angular todo list app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
+  - : At this point, we are ready to start creating our to-do list application using Angular. The finished application will display a list of to-do items and includes editing, deleting, and adding features. In this article you will get to know your application structure, and work up to displaying a basic list of to-do items.
+- [3. Styling our Angular app](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
+  - : Now that we've got our basic application structure set up and started displaying something useful, let's switch gears and spend an article looking at how Angular handles styling of applications.
+- [4. Creating an item component](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
+  - : Components provide a way for you to organize your application. This article walks you through creating a component to handle the individual items in the list, and adding check, edit, and delete functionality. the Angular event model is covered here.
+- [5. Filtering our to-do items](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
+  - : Now let's move on to adding functionality to allow users to filter their to-do items, so they can view active, completed, or all items.
+- [6. Building Angular applications and further resources](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - : This final Angular article covers how to build an app ready for production, and provides further resources for you to continue your learning journey.
 
 ## どのフレームワークを選ぶべきか？
 

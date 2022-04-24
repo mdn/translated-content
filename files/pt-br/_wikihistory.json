@@ -6794,24 +6794,18 @@
       "jika"
     ]
   },
+  "Web/API/Window/storage_event": {
+    "modified": "2019-03-23T22:03:39.969Z",
+    "contributors": [
+      "GPrimola",
+      "gustavoverasmorais"
+    ]
+  },
   "Web/API/WindowEventHandlers": {
     "modified": "2020-03-01T23:25:36.916Z",
     "contributors": [
       "kudnx",
       "teoli"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onpopstate": {
-    "modified": "2019-03-23T22:46:07.205Z",
-    "contributors": [
-      "brunoeduardo"
-    ]
-  },
-  "Web/API/WindowEventHandlers/onstorage": {
-    "modified": "2019-03-23T22:03:39.969Z",
-    "contributors": [
-      "GPrimola",
-      "gustavoverasmorais"
     ]
   },
   "Web/API/WindowOrWorkerGlobalScope": {
@@ -16403,6 +16397,12 @@
     "contributors": [
       "Fernandolrs",
       "Sheppy"
+    ]
+  },
+  "conflicting/Web/API/Window/popstate_event": {
+    "modified": "2019-03-23T22:46:07.205Z",
+    "contributors": [
+      "brunoeduardo"
     ]
   },
   "conflicting/Web/API/WindowOrWorkerGlobalScope": {
