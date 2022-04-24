@@ -9,7 +9,7 @@ translation_of: Web/CSS/color_value/hexadecimal_rgb
 ---
 {{CSSRef}}
 
-**16進カラー構文**は [sRGB](/ja/docs/Glossary/RGB) カラーを 16 進数で記述するための記法で、その原色成分（赤、緑、青）と透明度を記述します。[`<color>`](/ja/docs/Web/CSS/color_value) 型が許容される箇所であればどこでも使うことができます。
+**16 進カラー構文**は [sRGB](/ja/docs/Glossary/RGB) カラーを 16 進数で記述するための記法で、その原色成分（赤、緑、青）と透明度を記述します。[`<color>`](/ja/docs/Web/CSS/color_value) 型が許容される箇所であればどこでも使うことができます。
 
 ## 構文
 
