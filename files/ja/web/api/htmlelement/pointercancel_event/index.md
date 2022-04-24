@@ -95,4 +95,3 @@ para.onpointercancel = (event) => {
 
 - [`onpointercancel`](/ja/docs/Web/API/GlobalEventHandlers/onpointercancel) イベントハンドラープロパティ
 - `Document` をターゲットとしたのこのイベント: [`pointercancel`](/ja/docs/Web/API/Document/pointercancel_event) イベント
-</ul>
