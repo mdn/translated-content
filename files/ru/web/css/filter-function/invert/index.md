@@ -11,7 +11,7 @@ browser-compat: css.types.filter-function.invert
 ---
 {{CSSRef}}
 
-[Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`invert()`** инвертирует цвета на изображении. Его результатом является {{cssxref("&lt;filter-function&gt;")}}.
+[Функция](/ru/docs/Web/CSS/CSS_Functions) [CSS](/ru/docs/Web/CSS) **`invert()`** инвертирует цвета изображения. Его результатом является {{cssxref("&lt;filter-function&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/function-invert.html")}}
 
@@ -24,7 +24,7 @@ invert(amount)
 ### Parameters
 
 - `amount`
-  - : Степень преобразования, заданная в виде целого числа ({{cssxref("&lt;number&gt;")}}) или процента ({{cssxref("&lt;percentage&gt;")}}). Значение `100%` полностью инвертирует цвета, соответственно `0%` ничего не делает. Значения между `0%` и `100%` является линейными множителями эффектами. The lacuna value for interpolation is `0`.
+  - : Степень преобразования, заданная в виде целого числа ({{cssxref("&lt;number&gt;")}}) или процента ({{cssxref("&lt;percentage&gt;")}}). Значение `100%` полностью инвертирует цвета, соответственно `0%` ничего не делает. Значения между `0%` и `100%` является линейными множителями эффектами. Начальное занчение для интерполяции — `0`.
 
 ## Примеры
 
@@ -44,7 +44,7 @@ invert(100%)  /* Полностью инвертированный цвет */
 
 {{Compat}}
 
-## See also
+## Смотрите также
 
 - {{cssxref("&lt;filter-function&gt;")}}
 - {{cssxref("filter-function/blur", "blur()")}}
