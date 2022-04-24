@@ -3,93 +3,135 @@ title: 'HTMLElement: transitioncancel イベント'
 slug: Web/API/HTMLElement/transitioncancel_event
 tags:
   - CSS Transitions
-  - CSS トランジション
-  - DOM
-  - Event
-  - HTMLElement
-  - Reference
-  - TransitionEvent
-  - events
-  - transitioncancel
   - イベント
+  - HTML DOM
+  - HTMLElement
+  - リファレンス
+  - TransitionEvent
+  - transitioncancel
+browser-compat: api.HTMLElement.transitioncancel_event
 translation_of: Web/API/HTMLElement/transitioncancel_event
 ---
-<div>{{APIRef}}{{SeeCompatTable}}</div>
+{{APIRef}}{{SeeCompatTable}}
 
-<p><strong><code>transitioncancel</code></strong> イベントは、 <a href="/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS トランジション</a>がキャンセルされたときに発生します。</p>
+**`transitioncancel`** イベントは、 [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)がキャンセルされたときに発生します。
 
-<p>詳しくは {{domxref("GlobalEventHandlers.ontransitioncancel")}} をご覧ください。</p>
+詳しくは {{domxref("GlobalEventHandlers.ontransitioncancel")}} をご覧ください。
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">バブリング</th>
-   <td>あり</td>
-  </tr>
-  <tr>
-   <th scope="row">キャンセル</th>
-   <td>不可</td>
-  </tr>
-  <tr>
-   <th scope="row">インターフェイス</th>
-   <td>{{domxref("TransitionEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">イベントハンドラープロパティ</th>
-   <td>{{domxref("GlobalEventHandlers.ontransitioncancel")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">バブリング</th>
+      <td>あり</td>
+    </tr>
+    <tr>
+      <th scope="row">キャンセル</th>
+      <td>不可</td>
+    </tr>
+    <tr>
+      <th scope="row">インターフェイス</th>
+      <td>{{domxref("TransitionEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">イベントハンドラープロパティ</th>
+      <td>
+        {{domxref("GlobalEventHandlers.ontransitioncancel")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<p>このコードは、トランジションが定義され、 <code>transitioncancel</code> イベントにリスナーを追加した要素を取得します。</p>
+このコードは、トランジションが定義され、 `transitioncancel` イベントにリスナーを追加した要素を取得します。
 
-<pre class="brush: js">const transition = document.querySelector('.transition');
+```js
+const transition = document.querySelector('.transition');
 
-transition.addEventListener('transitioncancel', () =&gt; {
-  console.log('Transition canceled');
-});</pre>
+transition.addEventListener('transitioncancel', () => {
+  console.log('トランジションがキャンセルされました');
+});
+```
 
-<p>同様に、 {{domxref("GlobalEventHandlers.ontransitioncancel", "ontransitioncancel")}} プロパティを <code>addEventListener()</code> の代わりに使用すると以下のようになります。</p>
+同様に、 {{domxref("GlobalEventHandlers.ontransitioncancel", "ontransitioncancel")}} プロパティを `addEventListener()` の代わりに使用すると以下のようになります。
 
-<pre class="brush: js">const transition = document.querySelector('.transition');
+```js
+const transition = document.querySelector('.transition');
 
-transition.ontransitioncancel = () =&gt; {
-  console.log('Transition canceled');
+transition.ontransitioncancel = () => {
+  console.log('トランジションがキャンセルされました');
 };
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+### ライブデモ
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transitioncancel', 'transitioncancel')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+このデモででは、単純な {{htmlelement("div")}} 要素を配置し、 delay を含むトランジションをスタイル付けしています。
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+```html
+<div class="transition"></div>
+<div class="message"></div>
+```
 
-<p>{{Compat("api.HTMLElement.transitioncancel_event")}}</p>
+```css
+.transition {
+  width: 100px;
+  height: 100px;
+  background: rgba(255,0,0,1);
+  transition-property: transform, background;
+  transition-duration: 2s;
+  transition-delay: 2s;
+}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+.transition:hover {
+  transform: rotate(90deg);
+  background: rgba(255,0,0,0);
+}
+```
 
-<ul>
- <li>{{domxref("GlobalEventHandlers.ontransitioncancel")}} イベントハンドラー</li>
- <li>{{domxref("TransitionEvent")}} インターフェイス</li>
- <li>CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}</li>
- <li>関連イベント: {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitionend_event", "transitionend")}}</li>
- <li>{{domxref("Document")}} を対象としたこのイベント: {{domxref("Document/transitioncancel_event", "transitioncancel")}}</li>
- <li>{{domxref("Window")}} を対象としたこのイベント: {{domxref("Window/transitioncancel_event", "transitioncancel")}}</li>
-</ul>
+このため、いくらかの JavaScript を追加して [`transitionstart`](/ja/docs/Web/API/HTMLElement/transitionstart_event), [`transitionrun`](/ja/docs/Web/API/HTMLElement/transitionrun_event), [`transitioncancel`](/ja/docs/Web/API/Window/transitioncancel_event), [`transitionend`](/ja/docs/Web/API/Window/transitionend_event) の各イベントの発生を示します。 この例では、トランジションをキャンセルするには、トランジションが終了する前に、トランジションするボックスへのホバーを停止します。トランジションの終了イベントを発生させるには、トランジションが終了するまでホバーしたままにしておきます。
+
+```js
+const message = document.querySelector('.message');
+const el = document.querySelector('.transition');
+
+el.addEventListener('transitionrun', function() {
+  message.textContent = 'transitionrun が発生';
+});
+
+el.addEventListener('transitionstart', function() {
+  message.textContent = 'transitionstart が発生';
+});
+
+el.addEventListener('transitioncancel', function() {
+  message.textContent = 'transitioncancel が発生';
+});
+
+el.addEventListener('transitionend', function() {
+  message.textContent = 'transitionend が発生';
+});
+```
+
+{{ EmbedLiveSample('Live_example', '100%', '150px') }}
+
+`transitioncancel` イベントは `transitionrun` イベントが発生した後、 `transitionend` が発生する前に、どちらかの方向にトランジションがキャンセルされた場合に発生します。
+
+トランジションの遅延や継続時間がない場合、両方が 0 であったり、どちらも宣言されていない場合は、トランジションは発生せず、トランジションイベントは何も発行されません。
+
+`transitioncancel` イベントが発生した場合、`transitionend` イベントは発行されません。
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{domxref("GlobalEventHandlers.ontransitioncancel")}} イベントハンドラー
+- {{domxref("TransitionEvent")}} インターフェイス
+- CSS プロパティ: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}
+- 関連イベント: {{domxref("HTMLElement/transitionrun_event", "transitionrun")}}, {{domxref("HTMLElement/transitionstart_event", "transitionstart")}}, {{domxref("HTMLElement/transitionend_event", "transitionend")}}
+- {{domxref("Document")}} をターゲットとしたこのイベント: {{domxref("Document/transitioncancel_event", "transitioncancel")}}
+- {{domxref("Window")}} をターゲットとしたこのイベント: {{domxref("Window/transitioncancel_event", "transitioncancel")}}
