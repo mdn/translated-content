@@ -77,7 +77,7 @@ Angular プラットフォームの探索を開始する前に、 Angular CLI �
       <td>
         <code><a href="https://angular.io/cli/generate">ng generate</a></code>
       </td>
-      <td>schematic に基づいてファイルを生成または変更します。</td>
+      <td>セマンティックに基づいてファイルを生成または変更します。</td>
     </tr>
     <tr>
       <td>
