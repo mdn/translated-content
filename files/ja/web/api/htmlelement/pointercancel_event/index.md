@@ -32,7 +32,7 @@ translation_of: Web/API/HTMLElement/pointercancel_event
       <td>{{domxref("PointerEvent")}}</td>
     </tr>
     <tr>
-      <th scope="row">イベントハンドラプロパティ</th>
+      <th scope="row">イベントハンドラープロパティ</th>
       <td>
         <code><a href="/ja/docs/Web/API/GlobalEventHandlers/onpointercancel">onpointercancel</a></code>
       </td>
@@ -57,17 +57,17 @@ translation_of: Web/API/HTMLElement/pointercancel_event
 const para = document.querySelector('p');
 
 para.addEventListener('pointercancel', (event) => {
-  console.log('ポインタイベントがキャンセルされた');
+  console.log('ポインターイベントがキャンセルされた');
 });
 ```
 
-`onpointercancel` イベントハンドラプロパティを使用する場合
+`onpointercancel` イベントハンドラープロパティを使用する場合
 
 ```js
 const para = document.querySelector('p');
 
 para.onpointercancel = (event) => {
-  console.log('ポインタイベントがキャンセルされた');
+  console.log('ポインターイベントがキャンセルされた');
 };
 ```
 
