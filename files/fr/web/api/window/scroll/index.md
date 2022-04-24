@@ -22,7 +22,7 @@ window.scroll(options)
 - `y`
   - : Le numéro de pixel sur l'axe vertical du document qu'on souhaite avoir affiché dans le coin supérieur gauche.
 
-ou
+Ou avec `options`&nbsp;:
 
 - `options`
   - : Un dictionnaire qui contient les paramètres suivants&nbsp;:
