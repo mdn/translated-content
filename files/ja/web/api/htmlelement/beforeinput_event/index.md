@@ -34,7 +34,7 @@ DOM の **`beforeinput`** イベントは、{{HTMLElement("input")}}、{{HTMLEle
       <td>{{DOMxRef("InputEvent")}}</td>
     </tr>
     <tr>
-      <th>イベントハンドラプロパティ</th>
+      <th>イベントハンドラープロパティ</th>
       <td>なし</td>
     </tr>
     <tr>
