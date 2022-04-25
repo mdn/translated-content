@@ -32,7 +32,7 @@ tags:
 
 非同期 JavaScript はとても高度なトピックなので、事前に [JavaScript の第一歩](/ja/docs/Learn/JavaScript/First_steps)と [JavaScript の構成要素](/ja/docs/Learn/JavaScript/Building_blocks)のモジュールに取り組んでおくことをおすすめします。
 
-> **注記:** ファイルを作成する手段のないコンピュータ・タブレット・その他のデバイスをお使いの場合、（ほとんどの）コード例は [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com) などのオンラインエディタでも試すことができます。
+> **Note:** ファイルを作成する手段のないコンピュータ・タブレット・その他のデバイスをお使いの場合、（ほとんどの）コード例は [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com) などのオンラインエディタでも試すことができます。
 
 ## ガイド
 
