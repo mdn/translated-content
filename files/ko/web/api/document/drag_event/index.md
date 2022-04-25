@@ -1,5 +1,5 @@
 ---
-title: drag
+title: 'Document: drag 이벤트'
 slug: Web/API/Document/drag_event
 tags:
   - API
@@ -11,6 +11,7 @@ tags:
   - Reference
   - Web
   - drag and drop
+browser-compat: api.Document.drag_event
 translation_of: Web/API/Document/drag_event
 ---
 {{APIRef}}
@@ -44,7 +45,7 @@ translation_of: Web/API/Document/drag_event
   </tbody>
 </table>
 
-## Examples
+## 예제
 
 [JSFiddle demo](http://jsfiddle.net/zfnj5rv4/)에서 이 코드를 보거나 아래에서 상호작용 하십시오.
 
@@ -104,7 +105,7 @@ document.addEventListener("dragend", function(event) {
 
 /* 드롭 대상에서 이벤트 발생 */
 document.addEventListener("dragover", function(event) {
-  // 드롭을 허용하도록 prevetDefault() 호출
+  // 드롭을 허용하도록 preventDefault() 호출
   event.preventDefault();
 }, false);
 
@@ -136,19 +137,17 @@ document.addEventListener("drop", function(event) {
 }, false);
 ```
 
-{{EmbedLiveSample('Examples', '300', '200', '')}}
+{{EmbedLiveSample('예제', '300', '200', '')}}
 
-## 사양
+## 명세
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "drag event")}} | {{Spec2("HTML WHATWG")}} |         |
+{{Specifications}}
 
 ## 브라우저 호환성
 
-{{Compat("api.Document.drag_event")}}
+{{Compat}}
 
-## 더보기
+## 같이 보기
 
 - 다른 드래그 앤 드롭 이벤트:
 
