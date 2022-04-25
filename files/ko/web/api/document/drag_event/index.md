@@ -13,56 +13,58 @@ tags:
   - drag and drop
 translation_of: Web/API/Document/drag_event
 ---
-<div>{{APIRef}}</div>
+{{APIRef}}
 
-
-
-<p><code>drag</code> 이벤트는 사용자가 요소 또는 텍스트를 드래그할 때 수백 밀리초마다 발생합니다.</p>
+`drag` 이벤트는 사용자가 요소 또는 텍스트를 드래그할 때 수백 밀리초마다 발생합니다.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">이벤트 버블링</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">이벤트 취소</th>
-   <td>Yes</td>
-  </tr>
-  <tr>
-   <th scope="row">기본 액션</th>
-   <td>드래그 앤 드롭을 계속한다.</td>
-  </tr>
-  <tr>
-   <th scope="row">인터페이스</th>
-   <td>{{domxref("DragEvent")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">이벤트 핸들러 속성</th>
-   <td>{{domxref("GlobalEventHandlers/ondrag", "ondrag")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">이벤트 버블링</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">이벤트 취소</th>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th scope="row">기본 액션</th>
+      <td>드래그 앤 드롭을 계속한다.</td>
+    </tr>
+    <tr>
+      <th scope="row">인터페이스</th>
+      <td>{{domxref("DragEvent")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">이벤트 핸들러 속성</th>
+      <td>
+        {{domxref("GlobalEventHandlers/ondrag", "ondrag")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p><a href="http://jsfiddle.net/zfnj5rv4/">JSFiddle demo</a>에서 이 코드를 보거나 아래에서 상호작용 하십시오.</p>
+[JSFiddle demo](http://jsfiddle.net/zfnj5rv4/)에서 이 코드를 보거나 아래에서 상호작용 하십시오.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html notranslate">&lt;div class="dropzone"&gt;
-  &lt;div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"&gt;
+```html
+<div class="dropzone">
+  <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
     This div is draggable
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="dropzone"&gt;&lt;/div&gt;
-&lt;div class="dropzone"&gt;&lt;/div&gt;
-&lt;div class="dropzone"&gt;&lt;/div&gt;
-</pre>
+  </div>
+</div>
+<div class="dropzone"></div>
+<div class="dropzone"></div>
+<div class="dropzone"></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css notranslate">#draggable {
+```css
+#draggable {
   width: 200px;
   height: 20px;
   text-align: center;
@@ -76,11 +78,12 @@ translation_of: Web/API/Document/drag_event
   margin-bottom: 10px;
   padding: 10px;
 }
-</pre>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js notranslate">var dragged;
+```js
+var dragged;
 
 /* 드래그 가능한 대상에서 이벤트 발생 */
 document.addEventListener("drag", function(event) {
@@ -130,52 +133,35 @@ document.addEventListener("drop", function(event) {
     dragged.parentNode.removeChild( dragged );
     event.target.appendChild( dragged );
   }
-}, false);</pre>
+}, false);
+```
 
-<p>{{EmbedLiveSample('Examples', '300', '200', '')}}</p>
+{{EmbedLiveSample('Examples', '300', '200', '')}}
 
-<h2 id="사양">사양</h2>
+## 사양
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "interaction.html#dndevents", "drag event")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                    | Status                           | Comment |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
+| {{SpecName("HTML WHATWG", "interaction.html#dndevents", "drag event")}} | {{Spec2("HTML WHATWG")}} |         |
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("api.Document.drag_event")}}</p>
+{{Compat("api.Document.drag_event")}}
 
-<h2 id="더보기">더보기</h2>
+## 더보기
 
-<ul>
- <li>다른 드래그 앤 드롭 이벤트:
-  <ul>
-   <li>{{domxref("Document/dragstart_event", "dragstart")}}</li>
-   <li>{{domxref("Document/dragend_event", "dragend")}}</li>
-   <li>{{domxref("Document/dragover_event", "dragover")}}</li>
-   <li>{{domxref("Document/dragenter_event", "dragenter")}}</li>
-   <li>{{domxref("Document/dragleave_event", "dragleave")}}</li>
-   <li>{{domxref("Document/dragexit_event", "dragexit")}}</li>
-   <li>{{domxref("Document/drop_event", "drop")}}</li>
-  </ul>
- </li>
- <li>다른 대상의 <code>drag</code> 이벤트:
-  <ul>
-   <li>{{domxref("Window")}}: {{domxref("Window/drag_event", "drag")}} event</li>
-   <li>{{domxref("HTMLElement")}}: {{domxref("HTMLElement/drag_event", "drag")}} event</li>
-   <li>{{domxref("SVGElement")}}: {{domxref("SVGElement/drag_event", "drag")}} event</li>
-  </ul>
- </li>
-</ul>
+- 다른 드래그 앤 드롭 이벤트:
+
+  - {{domxref("Document/dragstart_event", "dragstart")}}
+  - {{domxref("Document/dragend_event", "dragend")}}
+  - {{domxref("Document/dragover_event", "dragover")}}
+  - {{domxref("Document/dragenter_event", "dragenter")}}
+  - {{domxref("Document/dragleave_event", "dragleave")}}
+  - {{domxref("Document/dragexit_event", "dragexit")}}
+  - {{domxref("Document/drop_event", "drop")}}
+
+- 다른 대상의 `drag` 이벤트:
+
+  - {{domxref("Window")}}: {{domxref("Window/drag_event", "drag")}} event
+  - {{domxref("HTMLElement")}}: {{domxref("HTMLElement/drag_event", "drag")}} event
+  - {{domxref("SVGElement")}}: {{domxref("SVGElement/drag_event", "drag")}} event
