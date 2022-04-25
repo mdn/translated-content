@@ -8725,12 +8725,6 @@
       "ice-i-snow"
     ]
   },
-  "Web/API/CanvasRenderingContext2D/currentTransform": {
-    "modified": "2019-03-23T22:58:40.595Z",
-    "contributors": [
-      "ice-i-snow"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D/direction": {
     "modified": "2020-10-15T21:34:10.593Z",
     "contributors": [
@@ -46590,6 +46584,12 @@
     "modified": "2020-10-15T22:26:22.343Z",
     "contributors": [
       "Spikef"
+    ]
+  },
+  "conflicting/Web/API/CanvasRenderingContext2D": {
+    "modified": "2019-03-23T22:58:40.595Z",
+    "contributors": [
+      "ice-i-snow"
     ]
   },
   "conflicting/Web/API/Canvas_API/Tutorial": {

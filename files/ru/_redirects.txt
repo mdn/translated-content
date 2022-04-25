@@ -313,6 +313,7 @@
 /ru/docs/Web/API/AudioContext/decodeAudioData	/ru/docs/Web/API/BaseAudioContext/decodeAudioData
 /ru/docs/Web/API/ByteString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /ru/docs/Web/API/CSS_Object_Model/ориентация_экрана	/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
+/ru/docs/Web/API/CanvasRenderingContext2D/currentTransform	/ru/docs/conflicting/Web/API/CanvasRenderingContext2D
 /ru/docs/Web/API/Canvas_API/Tutorial/Использование_изображений	/ru/docs/Web/API/Canvas_API/Tutorial/Using_images
 /ru/docs/Web/API/Canvas_API/Tutorial/Композиции	/ru/docs/Web/API/Canvas_API/Tutorial/Compositing
 /ru/docs/Web/API/Canvas_API/Tutorial/Основы_анимации	/ru/docs/Web/API/Canvas_API/Tutorial/Basic_animations

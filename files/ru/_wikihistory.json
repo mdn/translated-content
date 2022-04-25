@@ -5912,13 +5912,6 @@
       "Zilfaron"
     ]
   },
-  "Web/API/CanvasRenderingContext2D/currentTransform": {
-    "modified": "2020-10-15T21:39:04.221Z",
-    "contributors": [
-      "boxa6",
-      "ows-nightwolf"
-    ]
-  },
   "Web/API/CanvasRenderingContext2D/drawImage": {
     "modified": "2019-03-18T21:45:52.644Z",
     "contributors": [
@@ -24029,6 +24022,13 @@
     "modified": "2020-10-15T22:16:51.482Z",
     "contributors": [
       "VerZsuT"
+    ]
+  },
+  "conflicting/Web/API/CanvasRenderingContext2D": {
+    "modified": "2020-10-15T21:39:04.221Z",
+    "contributors": [
+      "boxa6",
+      "ows-nightwolf"
     ]
   },
   "conflicting/Web/API/Canvas_API/A_basic_ray-caster": {
