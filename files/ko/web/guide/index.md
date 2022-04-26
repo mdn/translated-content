@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/Guide
 ---
-<p><strong>이 문서는 어떻게 상세기술들과 API들을  이용할수 있는지에 대한 정보를 제공합니다.</strong></p>
+<p><strong>이 문서는 어떻게 상세기술들과 API들을  이용할수 있는지에 대한 정보를 제공합니다.</strong></p>
 
 <div class="note">
 <p><strong>노트:</strong> 이 페이지는 컨텐츠를 정리하는 것을 마무리 할 때 까지 조금은 복잡한 상태로 유지됩니다. 이점 사과드립니다!</p>
