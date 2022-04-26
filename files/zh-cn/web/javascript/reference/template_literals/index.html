@@ -108,8 +108,7 @@ classes += (isLargeScreen() ?
 
 <p>更高级的形式的模板字符串是带标签的模板字符串。标签使您可以用函数解析模板字符串。标签函数的第一个参数包含一个字符串值的数组。其余的参数与表达式相关。最后，你的函数可以返回处理好的的字符串（或者它可以返回完全不同的东西 , 如下个例子所述）。用于该标签的函数的名称可以被命名为任何名字。</p>
 
-```js
-let person = 'Mike';
+<pre class="brush: js">let person = 'Mike';
 let age = 28;
 
 function myTag(strings, personExp, ageExp) {
@@ -131,8 +130,7 @@ function myTag(strings, personExp, ageExp) {
 let output = myTag`That ${ person } is a ${ age }.`;
 
 console.log(output);
-// That Mike is a youngster.
-```
+// That Mike is a youngster.</pre>
 
 <p class="brush: js">正如下面例子所展示的，标签函数并不一定需要返回一个字符串。</p>
 
