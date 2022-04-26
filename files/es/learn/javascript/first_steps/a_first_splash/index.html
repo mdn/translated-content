@@ -237,7 +237,7 @@ const guessField = document.querySelector('.guessField');
 let guessCount = 1;
 let resetButton;</pre>
 
-<p>Esta sección del código establece las variables y constantes que necesitamos para almacenar los datos que nuestro programa utilizará. Las variables básicamente son contenedores de valores (como números o cadenas de texto). Creas una variable con la palabra clave <code>let</code> (o <code>var</code>) seguida de un nombre para tu variable (leerás más sobre la diferencia entre las palabras clave en el <a href="/es/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">siguiente artículo</a>). Las constantes se utilizan para almacenar valores que no deseas modificar y se crean con la palabra clave <code>const</code>. En este caso, estamos usando constantes para almacenar referencias a partes de nuestra interfaz de usuario; el texto dentro de algunas de ellas puede cambiar, pero los elementos HTML a los que se hace referencia permanecer iguales.</p>
+<p>Esta sección del código establece las variables y constantes que necesitamos para almacenar los datos que nuestro programa utilizará. Las variables básicamente son contenedores de valores (como números o cadenas de texto). Creas una variable con la palabra clave <code>let</code> (o <code>var</code>) seguida de un nombre para tu variable (leerás más sobre la diferencia entre las palabras clave en el <a href="/es/docs/Learn/JavaScript/First_steps/Variables#The_difference_between_var_and_let">siguiente artículo</a>). Las constantes se utilizan para almacenar valores que no deseas modificar y se crean con la palabra clave <code>const</code>. En este caso, estamos usando constantes para almacenar referencias a partes de nuestra interfaz de usuario; el texto dentro de algunas de ellas puede cambiar, pero los elementos HTML a los que se hace referencia permanecen iguales.</p>
 
 <p>Puedes asignar un valor a tu variable o constante con un signo igual (<code>=</code>) seguido del valor que deseas darle.</p>
 
@@ -416,7 +416,7 @@ greeting;</pre>
     lowOrHi.textContent = '';
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = '!!!Fin del juego!!!';
+    lastResult.textContent = '¡¡¡Fin del juego!!!';
     setGameOver();
   } else {
     lastResult.textContent = '¡Incorrecto!';
