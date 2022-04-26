@@ -16,7 +16,7 @@ original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
 
 <h2 id="层叠上下文">层叠上下文</h2>
 
-<p>在本篇之前的部分——<a href="/en-US/docs/CSS/Understanding_z-index/Adding_z-index" style="line-height: 1.5;" title="Adding z-index">运用 z-index</a><span style="line-height: 1.5;">，（我们认识到）某些元素</span><span style="line-height: 1.5;">的渲染顺序是由其 <code>z-index</code> 的值影响的。</span>这是因为这些元素具有能够使他们形成一个<em>层叠上下文</em>的特殊属性<em>。</em></p>
+<p>在本篇之前的部分——<a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index" style="line-height: 1.5;" title="Adding z-index">运用 z-index</a><span style="line-height: 1.5;">，（我们认识到）某些元素</span><span style="line-height: 1.5;">的渲染顺序是由其 <code>z-index</code> 的值影响的。</span>这是因为这些元素具有能够使他们形成一个<em>层叠上下文</em>的特殊属性<em>。</em></p>
 
 <p>文档中的层叠上下文由满足以下任意一个条件的元素形成：</p>
 
@@ -24,22 +24,22 @@ original_slug: Web/Guide/CSS/Understanding_z_index/The_stacking_context
  <li>文档根元素（<code>&lt;html&gt;</code>）；</li>
  <li>{{cssxref("position")}} 值为 <code>absolute</code>（绝对定位）或  <code>relative</code>（相对定位）且 {{cssxref("z-index")}} 值不为 <code>auto</code> 的元素；</li>
  <li>{{cssxref("position")}} 值为 <code>fixed</code>（固定定位）或 <code>sticky</code>（粘滞定位）的元素（沾滞定位适配所有移动设备上的浏览器，但老的桌面浏览器不支持）；</li>
- <li>flex ({{cssxref("flexbox")}}) 容器的子元素，且 {{cssxref("z-index")}} 值不为 <code>auto</code>；</li>
+ <li>flex ({{cssxref("flex")}}) 容器的子元素，且 {{cssxref("z-index")}} 值不为 <code>auto</code>；</li>
  <li>grid ({{cssxref("grid")}}) 容器的子元素，且 {{cssxref("z-index")}} 值不为 <code>auto</code>；</li>
- <li>{{cssxref("opacity")}} 属性值小于 <code>1</code> 的元素（参见 <a href="http://www.w3.org/TR/css3-color/#transparency">the specification for opacity</a>）；</li>
+ <li>{{cssxref("opacity")}} 属性值小于 <code>1</code> 的元素（参见 <a href="https://www.w3.org/TR/css3-color/#transparency">the specification for opacity</a>）；</li>
  <li>{{cssxref("mix-blend-mode")}} 属性值不为 <code>normal</code> 的元素；</li>
  <li>以下任意属性值不为 <code>none</code> 的元素：
   <ul>
    <li>{{cssxref("transform")}}</li>
    <li>{{cssxref("filter")}}</li>
+   <li>{{cssxref("backdrop-filter")}}</li> 
    <li>{{cssxref("perspective")}}</li>
    <li>{{cssxref("clip-path")}}</li>
    <li>{{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}</li>
   </ul>
  </li>
  <li>{{cssxref("isolation")}} 属性值为 <code>isolate</code> 的元素；</li>
- <li>{{cssxref("-webkit-overflow-scrolling")}} 属性值为 <code>touch</code> 的元素；</li>
- <li>{{cssxref("will-change")}} 值设定了任一属性而该属性在 non-initial 值时会创建层叠上下文的元素（参考<a href="http://dev.opera.com/articles/css-will-change-property/">这篇文章</a>）；</li>
+ <li>{{cssxref("will-change")}} 值设定了任一属性而该属性在 non-initial 值时会创建层叠上下文的元素（参考<a href="https://dev.opera.com/articles/css-will-change-property/">这篇文章</a>）；</li>
  <li>{{cssxref("contain")}} 属性值为 <code>layout</code>、<code>paint</code> 或包含它们其中之一的合成值（比如 <code>contain: strict</code>、<code>contain: content</code>）的元素。</li>
 </ul>
 
@@ -222,12 +222,12 @@ h1 {
 <h2 id="参考">参考</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
- <li><a href="/en-US/docs/CSS/Understanding_z-index/Stacking_context_example_1" title="CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
- <li><a href="/en-US/docs/CSS/Understanding_z-index/Stacking_context_example_2" title="CSS/Understanding_z-index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
- <li><a href="/en-US/docs/CSS/Understanding_z-index/Stacking_context_example_3" title="CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">Stacking without the z-index property</a>: The stacking rules that apply when <code>z-index</code> is not used.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float">Stacking with floated blocks</a>: How floating elements are handled with stacking.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Using z-index</a>: How to use <code>z-index</code> to change default stacking.</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1" title="CSS/Understanding_z-index/Stacking_context_example_1">Stacking context example 1</a> : 2-level HTML hierarchy, z-index on the last level</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2" title="CSS/Understanding_z-index/Stacking_context_example_2">Stacking context example 2</a> : 2-level HTML hierarchy, z-index on all levels</li>
+ <li><a href="/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3" title="CSS/Understanding_z-index/Stacking_context_example_3">Stacking context example 3</a> : 3-level HTML hierarchy, z-index on the second level</li>
 </ul>
 
 <div class="originaldocinfo">
