@@ -18,20 +18,20 @@ Cada vez que usaría normalmente `max-height` o `max-width`, debería usar `max-
 ## Sintaxis
 
 ```css
-/* <length> values */
+/* Valores de longitud <length> */
 max-block-size: 300px;
 max-block-size: 25em;
 
-/* <percentage> values */
+/* Valores de porcentaje <percent> */
 max-block-size: 75%;
 
-/* Keyword values */
+/* Valores de palabras clave */
 max-block-size: none;
 max-block-size: max-content;
 max-block-size: min-content;
 max-block-size: fit-content(20em);
 
-/* Global values */
+/* Valores globales */
 max-block-size: inherit;
 max-block-size: initial;
 max-block-size: revert;
