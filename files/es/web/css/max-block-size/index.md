@@ -46,7 +46,7 @@ El valor de la propiedad `max-block-size` puede ser cualquier valor que sea lega
 - {{cssxref("&lt;length&gt;")}}
   - : Define el `max-block-size` como un valor absoluto.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Define el `max-block-size` como un porcentaje del tamaño del contenedor en el eje de bloque.
+  - : Define `max-block-size` como un porcentaje del tamaño del contenedor en el eje de bloque.
 - `none`
   - : Sin límite en el tamaño del elemento.
 - `max-content`
