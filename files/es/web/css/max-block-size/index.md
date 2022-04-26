@@ -50,9 +50,9 @@ El valor de la propiedad `max-block-size` puede ser cualquier valor que sea lega
 - `none`
   - : Sin límite en el tamaño del elemento.
 - `max-content`
-  - : El preferido intrínseco para el `max-block-size`.
+  - : El preferido intrínseco para `max-block-size`.
 - `min-content`
-  - : El mínimo intrínseco para el `max-block-size`.
+  - : El mínimo intrínseco para `max-block-size`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Usa la fórmula `fit-content` con el espacio disponible reemplazado por el argumento especificado, es decir, `min(max-content, max(min-content, argument))`.
 
