@@ -58,7 +58,7 @@ El valor de la propiedad `max-block-size` puede ser cualquier valor que sea lega
 
 ### Cómo afecta el writing-mode a la direccionalidad
 
-Los valores de `writing-mode` afectan al mapeo de `max-block-size` a `max-width` o `max-height` como sigue:
+Los valores de `writing-mode` afectan al mapeo de `max-block-size` a `max-width` o `max-height` como a continuación:
 
 | Valores de `writing-mode`                                                                                                                                              | `max-block-size` es equivalente a |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
