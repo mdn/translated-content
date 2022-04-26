@@ -96,7 +96,7 @@ El HTML establece dos bloques {{HTMLElement("div")}} que se presentarán con su 
   expulsar el bazo y regular la circulación.
 </div>
 
-<p>Modo de escritura <code>vertical-rl</code> (el valor predeterminado):</p>
+<p>Modo de escritura <code>vertical-rl</code>:</p>
 <div class="standard-box vertical">
   Llámame Ishmael. Hace algunos años, no importa cuántos años exactamente,
   sin dinero en mi bolsillo ni nada de interés particular, Pensé en navegar
