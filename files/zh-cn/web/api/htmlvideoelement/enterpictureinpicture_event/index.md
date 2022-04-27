@@ -14,13 +14,13 @@ browser-compat: api.HTMLVideoElement.enterpictureinpicture_event
 ---
 {{APIRef("HTMLVideoElement")}}
 
-当 {{DOMxRef("HTMLVideoElement")}} 成功进入画中画模式的时候，触发 **`enterpictureinpicture`** 事件。
+**`enterpictureinpicture`** 事件会在 {{DOMxRef("HTMLVideoElement")}} 成功进入画中画模式时触发。
 
 此事件不可取消，也不会冒泡
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}使用事件的名称， 或者设置事件处理程序。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}使用事件的名称， 或者设置事件处理器属性。
 
 ```js
 addEventListener('enterpictureinpicture', event => { });
@@ -30,7 +30,7 @@ onenterpictureinpicture = event => { };
 
 ## 事件类型
 
- {{domxref("PictureInPictureEvent")}} 继承自 {{domxref("Event")}}。
+{{domxref("PictureInPictureEvent")}} 继承自 {{domxref("Event")}} 。
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
