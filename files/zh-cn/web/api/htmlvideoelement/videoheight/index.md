@@ -23,7 +23,7 @@ browser-compat: api.HTMLVideoElement.videoHeight
 ---
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLVideoElement")}} 接口提供只读的 **`videoHeight`** 属性 ，指示视频的 [固有高度](#about_intrinsic_width_and_height) ，使用CSS的像素值表示。
+{{domxref("HTMLVideoElement")}} 接口提供只读的 **`videoHeight`** 属性 ，指示视频的 [固有高度](#关于固定的宽高) ，使用CSS的像素值表示。
 简单来说，这是媒体的初始高度。
 
 ## 属性
@@ -47,7 +47,7 @@ browser-compat: api.HTMLVideoElement.videoHeight
 
 ## 示例
 
-此事例为 {{domxref("HTMLVideoElement.resize", "resize")}} 事件创建的处理程序， 该事件调整 {{HTMLElement("video")}} 元素的大小以匹配其内容的固定大小。
+此示例为 {{domxref("HTMLVideoElement.resize", "resize")}} 事件创建的处理程序， 该事件调整 {{HTMLElement("video")}} 元素的大小以匹配其内容的固定大小。
 
 ```js
 let v = document.getElementById("myVideo");
