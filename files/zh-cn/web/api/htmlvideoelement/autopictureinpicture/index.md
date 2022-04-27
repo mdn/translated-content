@@ -33,8 +33,4 @@ browser-compat: api.HTMLVideoElement.autoPictureInPicture
 
 ## 参见
 
-<<<<<<< HEAD
 - [`HTMLVideoElement`](/zh-CN/docs/Web/API/HTMLVideoElement)
-=======
-- [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement)
->>>>>>> b1117aa846 (translate(zh-cn): translate about HTMLVideoElemnt content)
