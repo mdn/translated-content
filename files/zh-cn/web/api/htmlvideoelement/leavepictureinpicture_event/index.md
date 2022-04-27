@@ -14,13 +14,13 @@ browser-compat: api.HTMLVideoElement.leavepictureinpicture_event
 ---
 {{APIRef("HTMLVideoElement")}}
 
-当 {{DOMxRef("HTMLVideoElement")}}成功离开画中画模式时，会触发 **`leavepictureinpicture`** 事件。
+**`leavepictureinpicture`** 事件会在 {{DOMxRef("HTMLVideoElement")}} 成功离开画中画模式时触发。
 
 此事件不可取消，也不会冒泡。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}等方法中使用事件方法名，或者设置事件处理程序。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}}等方法中使用事件方法名，或者设置事件处理器属性。
 
 ```js
 addEventListener('leavepictureinpicture', event => { });
@@ -36,7 +36,7 @@ onleavepictureinpicture = event => { };
 
 ## 事件属性
 
-此接口还继承其父 {{domxref("Event")}} 的属性。
+继承自 {{domxref("Event")}} 的 {{domxref("PictureInPictureEvent")}}。
 
 ## 示例
 
