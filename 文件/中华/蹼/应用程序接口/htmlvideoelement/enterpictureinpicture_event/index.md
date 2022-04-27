@@ -36,7 +36,7 @@ onenterpictureinpicture = event => { };
 
 ## 事件属性
 
-此接口还继承他的父事件 {{domxref("Event")}} 的属性。
+此接口继承他的父类 {{domxref("Event")}} 的属性。
 
 ## 示例
 
