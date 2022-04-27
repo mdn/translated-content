@@ -14,6 +14,7 @@ browser-compat: api.HTMLVideoElement.enterpictureinpicture_event
 ---
 {{APIRef("HTMLVideoElement")}}
 
+
 **`enterpictureinpicture`** 事件会在 {{DOMxRef("HTMLVideoElement")}} 成功进入画中画模式时触发。
 
 此事件不可取消，也不会冒泡
