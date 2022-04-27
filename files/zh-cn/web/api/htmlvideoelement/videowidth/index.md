@@ -22,7 +22,7 @@ browser-compat: api.HTMLVideoElement.videoWidth
 {{domxref("HTMLVideoElement")}} 接口提供只读的 **`videoWidth`** 属性，指示视频的 [固有宽度](/en-US/docs/Web/API/HTMLVideoElement/videoHeight"#about_intrinsic_width_and_height)，使用css的像素值表示。
 简单来说，这是媒体的初始宽度。
 
-见 [`HTMLVideoElement.videoHeight` > About intrinsic width and height](/en-US/docs/Web/API/HTMLVideoElement/videoHeight"#about_intrinsic_width_and_height) 查看更多细节。
+参见 [`HTMLVideoElement.videoHeight` > About intrinsic width and height](/en-US/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height) 查看更多细节。
 
 ## 属性
 
