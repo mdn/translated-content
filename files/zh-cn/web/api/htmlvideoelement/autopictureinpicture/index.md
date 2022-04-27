@@ -21,7 +21,7 @@ browser-compat: api.HTMLVideoElement.autoPictureInPicture
 
 ## 属性
 
-布尔值，表示视频在更改选项卡或者影城程序是应该自动进入或者离开画中画。
+一个布尔值，如果为 `true`，则表示视频应该在切换标签页或离开应用程序时自动进入/离开画中画模式。
 
 ## 规范
 
@@ -33,4 +33,4 @@ browser-compat: api.HTMLVideoElement.autoPictureInPicture
 
 ## 参见
 
-- [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement)
+- [`HTMLVideoElement`](/zh-CN/docs/Web/API/HTMLVideoElement)
