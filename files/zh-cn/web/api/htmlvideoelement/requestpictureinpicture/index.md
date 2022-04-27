@@ -17,9 +17,9 @@ browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
 {{ APIRef("HTML DOM") }}
 
- **{{domxref("HTMLVideoElement")}}** 接口提供的方法 **`requestPictureInPicture()`** ，该方法会发出异步请求，以画中画的模式显示视频。
+ **{{domxref("HTMLVideoElement")}}** 接口提供的 **`requestPictureInPicture()`** 方法会发出异步请求，并以画中画的模式显示视频。
 
-不能保证视频进入画中画。 如果授予进入画中画的权力， 则将返回一个 {{jsxref("Promise")}}， 解析后将收到一个 {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} 事件， 让它知道它现在处于画中画状态。
+该方法不能保证视频进入画中画。 如果授予了进入画中画的权限， 则将返回一个 {{jsxref("Promise")}}，最终完成后将收到一个 {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} 事件， 来表示它现在处于画中画状态。
 
 ## 语法
 
@@ -29,7 +29,7 @@ requestPictureInPicture()
 
 ### 返回值
 
-{{domxref("PictureInPictureWindow")}} 对象将由 {{jsxref("Promise")}}解析活得.可以用于监听用户何时调整该浮动窗口的大小。
+{{domxref("PictureInPictureWindow")}} 对象将由 {{jsxref("Promise")}} 最终完成后获得。可以用于监听用户何时调整该浮动窗口的大小。
 
 ## 示例
 
@@ -54,7 +54,7 @@ function enterPictureInPicture() {
 
 ## 参见
 
-- The {{HTMLElement("video")}} element
+- {{HTMLElement("video")}} 元素
 - {{DOMxRef("HTMLVideoElement.autoPictureInPicture")}}
 - {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
 - {{DOMxRef("Document.pictureInPictureEnabled")}}
