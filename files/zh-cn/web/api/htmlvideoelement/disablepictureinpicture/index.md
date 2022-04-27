@@ -17,7 +17,7 @@ browser-compat: api.HTMLVideoElement.disablePictureInPicture
 ---
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLVideoElement")}}提供的 **`disablePictureInPicture`** 属性为HTML属性，指示是否应该向用户建议画中画的功能，或者自动请求该功能。
+{{domxref("HTMLVideoElement")}} 提供的 **`disablePictureInPicture`** HTML 属性用于指示是否应该向用户建议画中画的功能，或者自动请求该功能。
 
 ## 属性
 
