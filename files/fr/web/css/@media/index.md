@@ -55,15 +55,15 @@ _Les caractéristiques de média_ (<i lang="en">media features</i> en anglais) d
 Les expressions de caractéristique de média testent la présence ou la valeur de ces caractéristiques et sont optionnelles. Chaque expression de caractéristique de média doit être entourée de parenthèses.
 
 - [`any-hover`](/fr/docs/Web/CSS/@media/any-hover)
-  - : Indique si le mécanisme d'entrée permet de survoler les éléments. Ajoutée dans le module de spécification sur les requêtes media de niveau 4.
+  - : Indique si le mécanisme d'entrée permet de survoler les éléments. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
 - [`any-pointer`](/fr/docs/Web/CSS/@media/any-pointer)
-  - : Indique si un dispositif de pointage est disponible et, le cas échéant, sa précision. Ajoutée dans le module de spécification sur les requêtes media de niveau 4.
+  - : Indique si un dispositif de pointage est disponible et, le cas échéant, sa précision. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
 - [`aspect-ratio`](/fr/docs/Web/CSS/@media/aspect-ratio)
   - : Le facteur de forme largeur/hauteur de la zone d'affichage (<i lang="en">viewport</i>)
 - [`color`](/fr/docs/Web/CSS/@media/color)
   - : Le nombre de bits pour chaque composante de couleur sur l'appareil de sortie, ou zéro si l'appareil n'a pas de couleur.
 - [`color-gamut`](/fr/docs/Web/CSS/@media/color-gamut)
-  - : L'intervalle de couleurs approximatif pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes media de niveau 4.
+  - : L'intervalle de couleurs approximatif pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
 - [`color-index`](/fr/docs/Web/CSS/@media/color-index)
   - : Le nombre d'éléments dans le tableau des couleurs de l'appareil de sortie, ou zéro si l'appareil ne dispose pas d'un tel tableau.
 - [`device-aspect-ratio`](/fr/docs/Web/CSS/@media/device-aspect-ratio) {{deprecated_inline}}
@@ -74,38 +74,42 @@ Les expressions de caractéristique de média testent la présence ou la valeur 
   - : La largeur de la surface de rendu de l'appareil de sortie. Dépréciée avec le module de spécification sur les requêtes média de niveau 4.
 - [`display-mode`](/fr/docs/Web/CSS/@media/display-mode)
   - : Le mode d'affichage de l'application, tel qu'indiqué par la propriété [`display`](/fr/docs/Web/Manifest#display) du manifeste de l'application. Définie par [la spécification du manifeste des applications web](https://w3c.github.io/manifest/#the-display-mode-media-feature).
+- [`dynamic-range`](/fr/docs/Web/CSS/@media/dynamic-range)
+  - : Une combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
 - [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors)
-  - : Indique si l'agent utilisateur restreint la palette de couleur utilisée. Ajoutée dans le module de spécification sur les requêtes media de niveau 5.
+  - : Indique si l'agent utilisateur restreint la palette de couleur utilisée. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
 - [`grid`](/fr/docs/Web/CSS/@media/grid)
   - : Indique si l'appareil utilise un écran matriciel ou avec une grille.
 - [`height`](/fr/docs/Web/CSS/@media/height)
   - : La hauteur de la zone d'affichage (<i lang="en">viewport</i>).
 - [`hover`](/fr/docs/Web/CSS/@media/hover)
-  - : Indique si le mécanisme de saisie primaire permet de survoler les éléments. Ajoutée dans le module de spécification sur les requêtes media de niveau 4.
+  - : Indique si le mécanisme de saisie primaire permet de survoler les éléments. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
 - [`inverted-colors`](/fr/docs/Web/CSS/@media/inverted-colors)
-  - : Indique si l'agent utilisateur ou si le système d'exploitation sous-jacent inverse les couleurs. Ajoutée dans le module de spécification sur les requêtes media de niveau 5.
+  - : Indique si l'agent utilisateur ou si le système d'exploitation sous-jacent inverse les couleurs. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
 - [`monochrome`](/fr/docs/Web/CSS/@media/monochrome)
   - : Le nombre de bits par pixel pour le tampon d'affichage de l'appareil de sortie s'il est monochrome, zéro sinon.
 - [`orientation`](/fr/docs/Web/CSS/@media/orientation)
   - : L'orientation de la zone d'affichage (<i lang="en">viewport</i>).
 - [`overflow-block`](/fr/docs/Web/CSS/@media/overflow-block)
-  - : Indique s'il est possible de faire défiler le contenu qui dépasse de la zone d'affichage sur l'axe de bloc. Ajoutée dans le module de spécification sur les requêtes media de niveau 4.
+  - : Indique s'il est possible de faire défiler le contenu qui dépasse de la zone d'affichage sur l'axe de bloc. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
 - [`overflow-inline`](/fr/docs/Web/CSS/@media/overflow-inline)
-  - : Indique s'il est possible de faire défiler le contenu qui dépasse de la zone d'affichage sur l'axe en ligne. Ajoutée dans le module de spécification sur les requêtes media de niveau 4.
+  - : Indique s'il est possible de faire défiler le contenu qui dépasse de la zone d'affichage sur l'axe en ligne. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
 - [`pointer`](/fr/docs/Web/CSS/@media/pointer)
-  - : Indique si le mécanisme de saisie principal est un appareil de pointage et, le cas échéant, sa précision. Ajoutée dans le module de spécification sur les requêtes media de niveau 4.
+  - : Indique si le mécanisme de saisie principal est un appareil de pointage et, le cas échéant, sa précision. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
 - [`prefers-color-scheme`](/fr/docs/Web/CSS/@media/prefers-color-scheme)
-  - : Indique si la personne préfère utiliser un thème clair ou un thème sombre. Ajoutée dans le module de spécification sur les requêtes media de niveau 5.
+  - : Indique si la personne préfère utiliser un thème clair ou un thème sombre. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
 - [`prefers-contrast`](/fr/docs/Web/CSS/@media/prefers-contrast)
-  - : Détecte si la personne a demandé une augmentation ou une réduction du contraste entre les couleurs adjacentes. Ajoutée dans le module de spécification sur les requêtes media de niveau 5.
+  - : Détecte si la personne a demandé une augmentation ou une réduction du contraste entre les couleurs adjacentes. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
 - [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion)
-  - : Indique la préférence de la personne pour utiliser moins de mouvement sur la page. Ajoutée dans le module de spécification sur les requêtes media de niveau 5.
+  - : Indique la préférence de la personne pour utiliser moins de mouvement sur la page. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
 - [`resolution`](/fr/docs/Web/CSS/@media/resolution)
   - : La densité de pixel de l'appareil de sortie.
 - [`scripting`](/fr/docs/Web/CSS/@media/scripting)
-  - : Indique la disponibilité d'un moteur de script (par exemple JavaScript). Ajoutée dans le module de spécification sur les requêtes media de niveau 5.
-- [`update-frequency`](/fr/docs/Web/CSS/@media/update-frequency)
-  - : Indique la fréquence à laquelle l'appareil de sortie peut modifier l'apparence du contenu. Ajoutée dans le module de spécification sur les requêtes media de niveau 4.
+  - : Indique la disponibilité d'un moteur de script (par exemple JavaScript). Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
+- [`update`](/fr/docs/Web/CSS/@media/update-frequency)
+  - : Indique la fréquence à laquelle l'appareil de sortie peut modifier l'apparence du contenu. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
+- [`video-dynamic-range`](/fr/docs/Web/CSS/@media/video-dynamic-range)
+  - : Une combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
 - [`width`](/fr/docs/Web/CSS/@media/width)
   - : La largeur de la zone d'affichage (<i lang="en">viewport</i>) en incluant la largeur de la barre de défilement.
 
