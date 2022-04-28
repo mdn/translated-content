@@ -16,11 +16,11 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
 
 <p>使用该API就像使用{{domxref("window.performance")}}获取{{domxref("Performance")}}对象并在返回的对象中查找所需内容一样简单。比如，为了测量页面的感知到的加载时间：</p>
 
-<pre>window.addEventListener("load", function() {
-  let now = new Date().getTime();
-  let loadingTime = now - performance.timing.navigationStart;
+<pre class="brush: js">window.addEventListener("load", function() {
+  let now = new Date().getTime();
+  let loadingTime = now - performance.timing.navigationStart;
 
-  document.querySelector(".output").innerText =
+  document.querySelector(".output").innerText =
         loadingTime + " ms";
 }, false);</pre>
 
@@ -29,12 +29,12 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
 <div class="hidden">
 <h4 id="HTML">HTML</h4>
 
-<pre>&lt;div class="output"&gt;
+<pre class="brush: html">&lt;div class="output"&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre>.output {
+<pre class="brush: css">.output {
   border: 1px solid #bbb;
   font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
 }</pre>
@@ -42,7 +42,7 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
 
 <p>结合适当的HTML和CSS，结果就是：</p>
 
-<p>{{EmbedLiveSample("Collecting_timing_information", 500, 80)}}</p>
+<p>{{EmbedLiveSample("收集计时信息", 500, 80)}}</p>
 
 <p>列出的值适用于上面展示了示例的{{HTMLElement("iframe")}}。</p>
 
@@ -62,7 +62,7 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
 
 <p>让我们将此信息添加到上面的示例中。 新代码如下所示：</p>
 
-<pre>window.addEventListener("load", function() {
+<pre class="brush: js">window.addEventListener("load", function() {
   let now = new Date().getTime();
   let loadingTime = now - performance.timing.navigationStart;
 
@@ -94,12 +94,12 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
 <div class="hidden">
 <h4 id="HTML_2">HTML</h4>
 
-<pre>&lt;div class="output"&gt;
+<pre class="brush: html">&lt;div class="output"&gt;
 &lt;/div&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre>.output {
+<pre class="brush: css">.output {
   border: 1px solid #bbb;
   font: 16px "Open Sans", "Helvetica", "Arial", sans-serif;
 }</pre>
@@ -107,7 +107,7 @@ translation_of: Web/API/Navigation_timing_API/Using_Navigation_Timing
 
 <p>使用此代码后，结果如下所示：</p>
 
-<p>{{EmbedLiveSample("Determining_navigation_type", 500, 120)}}</p>
+<p>{{EmbedLiveSample("确定导航类型", 500, 120)}}</p>
 
 <p>列出的值适用于展示示例的 {{HTMLElement("iframe")}} 。</p>
 
