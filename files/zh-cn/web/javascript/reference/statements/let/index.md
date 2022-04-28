@@ -3,83 +3,93 @@ title: let
 slug: Web/JavaScript/Reference/Statements/let
 tags:
   - ECMAScript 2015
-  - ECMAScript6
   - JavaScript
+  - Language feature
+  - Statement
+  - Variable declaration
+  - Variables
   - let
-  - 变量
-  - 变量声明
-  - 声明
+browser-compat: javascript.statements.let
 translation_of: Web/JavaScript/Reference/Statements/let
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
+
+**`let`** 语句声明一个块级作用域的局部变量，并可以初始化为一个值（可选）。
+
+{{EmbedInteractiveExample("pages/js/statement-let.html")}}
 
 
+## 语法
 
-<div><strong>let</strong> 语句声明一个块级作用域的本地变量，并且可选的将其初始化为一个值。</div>
+```js
+let name1 [= value1] [, name2 [= value2]] [, ..., nameN [= valueN];
+```
 
-<div>{{EmbedInteractiveExample("pages/js/statement-let.html")}}</div>
+### 参数
 
+- `nameN`
+  - : 变量名，必须是合法的标识符。
+- `valueN` {{optional_inline}}
+  - : 变量的初始值，可以是任意合法的表达式。
 
+另外，也可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)语法来声明变量。
 
-<h2 id="语法">语法</h2>
+```js
+let { bar } = foo; // where foo = { bar:10, baz:12 };
+/* 创建一个名为 'bar' 的变量，其值为 10 */
+```
 
-<pre class="syntaxbox">let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];</pre>
+## 描述
 
-<h3 id="参数">参数</h3>
+**`let`** 允许你声明一个作用域被限制在{{jsxref("statements/block", "块")}}作用域中的变量、语句或者表达式。与 {{jsxref("statements/var", "var")}} 关键字不同的是，`var` 声明的变量作用域是全局或者整个函数块的。 `var` 和 `let` 的另一个重要区别，`let` 声明的变量不会在作用域中被提升，它是在编译时才初始化（参考下面[暂时性死区](#暂时性死区)）。
 
-<dl>
- <dt><code>var1</code>, <code>var2</code>, …, <code>varN</code></dt>
- <dd>变量名。必须是合法的标识符。</dd>
- <dt><code>value1</code>, <code>value2</code>, …, <code>valueN</code> </dt>
- <dd>变量的初始值。可以是任意合法的表达式。</dd>
-</dl>
+就像 {{jsxref("statements/const", "const", "描述")}} 一样，`let` 不会在全局声明时（在最顶部的范围）创建 {{domxref('window')}} 对象的属性。
 
-<h2 id="描述">描述</h2>
+可以从[这里](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri)了解我们为什么使用 `let`。
 
-<p><strong><code>let</code></strong>允许你声明一个作用域被限制在 {{jsxref("statements/block", "块")}}级中的变量、语句或者表达式。与 {{jsxref("statements/var", "var")}} 关键字不同的是， {{jsxref("statements/var", "var")}}声明的变量只能是全局或者整个函数块的。 {{jsxref("statements/var", "var")}} 和 <code>let</code> 的不同之处在于后者是在编译时才初始化（<a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/let#暂存死区">见下面</a>）。</p>
+> **备注：** 通过在使用 `let` 变量的作用域顶部声明它们，可以避免很多问题，但这样做可能会影响可读性。
 
-<p>就像{{jsxref("statements/const", "const", "Description")}} 一样，<code>let</code>不会在全局声明时（在最顶部的范围）创建{{domxref('window')}} 对象的属性。</p>
+## 示例
 
-<p>可以从<a href="https://stackoverflow.com/questions/37916940/js-why-let-have-this-name">这里</a>了解我们为什么使用“<strong>let</strong>”。</p>
+### 作用域规则
 
-<h3 id="作用域规则">作用域规则</h3>
+**`let`** 声明的变量作用域只在其声明的块或子块内部，这一点，与 **`var`** 相似。二者之间最主要的区别在于 **`var`** 声明的变量的作用域是整个封闭函数。
 
-<p><code><strong>let</strong></code>声明的变量只在其声明的块或子块中可用，这一点，与<code><strong>var</strong></code>相似。二者之间最主要的区别在于<code><strong>var</strong></code>声明的变量的作用域是整个封闭函数。</p>
-
-<pre class="brush: js">function varTest() {
+```js
+function varTest() {
   var x = 1;
   {
-    var x = 2;  // 同样的变量!
-    console.log(x);  // 2
+    var x = 2; // same variable!
+    console.log(x); // 2
   }
-  console.log(x);  // 2
+  console.log(x); // 2
 }
 
 function letTest() {
   let x = 1;
   {
-    let x = 2;  // 不同的变量
-    console.log(x);  // 2
+    let x = 2; // different variable
+    console.log(x); // 2
   }
-  console.log(x);  // 1
+  console.log(x); // 1
 }
-</pre>
+```
 
-<p>在程序和方法的最顶端，<strong><code>let</code></strong>不像 <strong><code>var</code></strong> 一样，<strong><code>let</code></strong>不会在全局对象里新建一个属性。比如：</p>
+在全局作用域中，**`let`** 和 **`var`** 不一样，它不会在顶层对象上创建属性。例如：
 
-<p>位于函数或代码顶部的<strong><code>var</code></strong>声明会给全局对象新增属性, 而<strong><code>let</code></strong>不会。例如:</p>
-
-<pre class="brush: js">var x = 'global';
+```js
+var x = 'global';
 let y = 'global';
 console.log(this.x); // "global"
 console.log(this.y); // undefined
-</pre>
+```
 
-<h3 id="模仿私有成员">模仿私有成员</h3>
+### 模仿私有成员
 
-<p>在处理<a href="https://developer.mozilla.org/en-US/docs/Glossary/Constructor">构造函数</a>的时候，可以通过<code><strong>let</strong></code>声明而不是闭包来创建一个或多个私有成员。</p>
+在处理 {{Glossary("Constructor", "构造函数")}} 的时候，可以通过 `let` 声明而不是[闭包](/zh-CN/docs/Web/JavaScript/Closures)来创建一个或多个私有成员。
 
-<pre class="brush: js">var Thing;
+```js
+var Thing;
 
 {
   let privateScope = new WeakMap();
@@ -102,49 +112,49 @@ console.log(this.y); // undefined
   };
 }
 
-console.log(typeof privateScope);
-// "undefined"
+console.log(typeof privateScope); // "undefined"
 
 var thing = new Thing();
 
-console.log(thing);
-// Thing {someProperty: "foo"}
+console.log(thing); // Thing {someProperty: "foo"}
 
-thing.showPublic();
-// "foo"
+thing.showPublic(); // "foo"
 
-thing.showPrivate();
-// 1</pre>
+thing.showPrivate(); // 1
+```
 
-<p>可以使用<code>var</code>创建和闭包具有相同隐私模式的局部变量，但是它们需要函数作用域（通常是模块模式中的IIFE），而不仅仅是上面示例中的块作用域。</p>
+可以使用 `var` 创建和闭包具有相同隐私模式的局部变量，但是它们需要函数作用域（通常使用模块模式中的 {{Glossary("IIFE")}}），而不仅仅是上面示例中的块作用域。
 
-<h3 id="重复声明">重复声明</h3>
+### 重复声明
 
-<p>在同一个函数或块作用域中重复声明同一个变量会引起{{jsxref("SyntaxError")}}。</p>
+在同一个函数或块作用域中重复声明同一个变量会抛出 {{jsxref("SyntaxError")}}。
 
-<pre class="brush: js example-bad">if (x) {
+```js example-bad
+if (x) {
   let foo;
   let foo; // SyntaxError thrown.
 }
-</pre>
+```
 
-<p>在 <a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Statements/switch"><code>switch</code></a> 语句中只有一个块，你可能因此而遇到错误。</p>
+在 {{jsxref("Statements/switch", "switch")}} 语句中也会触发这个错误，因为它是同一个块作用域。
 
-<pre class="brush: js example-bad">let x = 1;
+```js example-bad
+let x = 1;
+
 switch(x) {
   case 0:
     let foo;
     break;
-
   case 1:
     let foo; // SyntaxError for redeclaration.
     break;
 }
-</pre>
+```
 
-<p>然而，需要特别指出的是，一个嵌套在 case 子句中的块会创建一个新的块作用域的词法环境，就不会产生上诉重复声明的错误。</p>
+然而，需要特别指出的是，一个嵌套在 case 子句中的块会创建一个新的块作用域的词法环境，就不会产生上诉重复声明的错误。
 
-<pre>let x = 1;
+```js
+let x = 1;
 
 switch(x) {
   case 0: {
@@ -156,52 +166,78 @@ switch(x) {
     break;
   }
 }
-</pre>
+```
 
-<h3 id="暂存死区">暂存死区</h3>
+### 暂时性死区
 
-<p>与通过  <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting">var</a></code> 声明的有初始化值 <code>undefined</code> 的变量不同，通过 <code>let</code> 声明的变量直到它们的定义被执行时才初始化。在变量初始化前访问该变量会导致 <code><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError">ReferenceError</a></code>。该变量处在一个自块顶部到初始化处理的“暂存死区”中。</p>
+`let` 变量在声明之前，不能够读写。如果声明中未指定初始值，则变量将使用 `undefined` 值初始化，在声明之前访问变量会导致 {{jsxref("ReferenceError")}}。
 
-<pre class="brush: js">function do_something() {
+> **备注：**  与 {{jsxref("Statements/var", "var", "变量提升")}} 变量不同，如果在声明前使用 `var`，变量将会被初始化为`undefined`。
+
+从块作用域的顶部一直到变量声明完成之前，这个变量处在暂时性死区（TDZ，temporal dead zone）。
+
+```js example-bad
+{ // TDZ starts at beginning of scope
   console.log(bar); // undefined
   console.log(foo); // ReferenceError
   var bar = 1;
-  let foo = 2;
-}</pre>
+  let foo = 2; // End of TDZ (for foo)
+}
+```
 
-<h3 id="暂存死区与_typeof">暂存死区与 <code>typeof</code></h3>
+使用术语 “temporal” 是因为区域取决于执行顺序（时间），而不是编写代码的顺序（位置）。例如，下面的代码会生效，是因为即使使用 `let` 变量的函数出现在变量声明之前，但函数的执行是在 TDZ 的外面。
 
-<p>与通过<code>var</code>声明的变量, 有初始化值 <code>undefined</code>和只是未声明的变量不同的是，如果使用<code>typeof</code>检测在暂存死区中的变量, 会抛出<code>ReferenceError</code>异常:</p>
+```js
+{
+  // TDZ starts at beginning of scope
+  const func = () => console.log(letVar); // OK
 
-<pre><code>// prints out 'undefined'
-console.log(typeof undeclaredVariable);
+  // Within the TDZ letVar access throws `ReferenceError`
 
+  let letVar = 3; // End of TDZ (for letVar)
+  func(); // Called outside TDZ!
+}
+```
+
+#### 暂时性死区与 `typeof`
+
+如果使用 `typeof` 检测在暂时性死区中的变量, 会抛出 `ReferenceError` 异常:
+
+```js example-bad
 // results in a 'ReferenceError'
 console.log(typeof i);
-let i = 10;</code>
-</pre>
+let i = 10;
+```
 
-<h3 id="暂存死区和静态作用域词法作用域的相关例子">暂存死区和静态作用域/词法作用域的相关例子</h3>
+这与使用 `typeof` 检测值为 `undefined` 的未声明变量不同：
+```js
+// prints out 'undefined'
+console.log(typeof undeclaredVariable);
+```
 
-<p>由于词法作用域，表达式<code>(foo + 55)</code>内的标识符<code>foo</code>被认为是if块的foo变量，而不是值为33的块外面的变量foo。</p>
+#### 暂时性死区和词法作用域
 
-<p>在同一行，这个if块中的<code>foo</code>已经在词法环境中被创建了，但是还没有到达（或者终止）它的初始化（这是语句本身的一部分）。</p>
+以下代码会导致 `ReferenceError`：
 
-<p>这个if块里的<code>foo</code>还依旧在暂存死区里。</p>
 
-<pre class="brush: js example-bad">function test(){
-   var foo = 33;
-   if (foo) {
-      let foo = (foo + 55); // ReferenceError
-   }
+```js example-bad
+function test() {
+  var foo = 33;
+  if(foo) {
+    let foo = (foo + 55); // ReferenceError
+  }
 }
-test();</pre>
+test();
+```
 
-<p>在以下情况下，这种现象可能会使您感到困惑。 <code>let n of n.a</code>已经在for循环块的私有范围内。因此，标识符<code>n.a</code>被解析为位于指令本身("let n")中的“ n”对象的属性“ a”。</p>
+由于外部变量 `foo` 有值，因此会执行 `if` 语句块，但是由于词法作用域，该值在块内不可用：`if` 快内的标识符 `foo` 是 `let foo`。表达式 `(foo + 55)` 会抛出异常，是因为 `let foo` 还没完成初始化，它仍然在暂时性死区里。
 
-<p>在没有执行到它的初始化语句之前，它仍旧存在于暂存死区中。</p>
+在以下情况下，这种现象可能会使您感到困惑。`let n of n.a` 已经在for循环块的私有范围内，因此，标识符 `n.a` 被解析为位于指令本身（`let n`）中的“ `n` ”对象的属性“ `a` ”。
 
-<pre class="brush: js example-bad">function go(n) {
+在没有执行到它的初始化语句之前，它仍旧存在于暂时性死区中。
+
+```js example-bad
+function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
@@ -210,13 +246,15 @@ test();</pre>
   }
 }
 
-go({a: [1, 2, 3]});</pre>
+go({a: [1, 2, 3]});
+```
 
-<h2 id="其他情况">其他情况</h2>
+### 其他情况
 
-<p>用在块级作用域中时, <strong><code>let</code></strong>将变量的作用域限制在块内, 而<code><strong>var</strong></code>声明的变量的作用域是在函数内.</p>
+用在块级作用域中， **`let`** 将变量的作用域限制在块内， 而 `var` 声明的变量的作用域是在函数内。
 
-<pre class="brush: js">var a = 1;
+```js
+var a = 1;
 var b = 2;
 
 if (a === 1) {
@@ -228,52 +266,33 @@ if (a === 1) {
 }
 
 console.log(a); // 11
-console.log(b); // 2</pre>
+console.log(b); // 2
+```
 
-<p>而这种<code><strong>var</strong></code> 与 <strong><code>let</code></strong>合并的声明方式会报<code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError">SyntaxError</a></code>错误, 因为<code><strong>var</strong></code>会将变量提升至块的顶部, 这会导致隐式地重复声明变量.</p>
+然而，`var` 与 `let` 合并的声明方式会抛出 {{jsxref("SyntaxError")}} 错误, 因为 `var` 会将变量提升至块的顶部, 这会导致隐式地重复声明变量。
 
-<pre class="brush: js example-bad">let x = 1;
+```js example-bad
+let x = 1;
 
 {
   var x = 2; // SyntaxError for re-declaration
-}</pre>
+}
+```
 
-<h2 id="规范">规范</h2>
+## 规范
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Initial definition. Does not specify let expressions or let blocks.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="浏览器兼容性">浏览器兼容性</h2>
+## 浏览器兼容性
 
+{{Compat}}
 
+## 参见
 
-<p>{{Compat("javascript.statements.let")}}</p>
-
-<h2 id="相关链接">相关链接</h2>
-
-<ul>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a></li>
- <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a></li>
- <li><a href="https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/">ES6 In Depth: <code>let</code> and <code>const</code></a></li>
- <li><a href="https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/">Breaking changes in <code>let</code> and <code>const</code> in Firefox 44.</a></li>
- <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch3.md">You Don't Know JS: Scope &amp; Closures: Chapter 3: Function vs. Block Scope</a></li>
- <li><a href="https://stackoverflow.com/a/33198850/1125029">StackOverflow: What is the Temporal Dead Zone.</a></li>
- <li><a href="https://stackoverflow.com/questions/762011/whats-the-difference-between-using-let-and-var-to-declare-a-variable">StackOverflow: What is the difference between using let and var?</a></li>
-</ul>
+- {{jsxref("Statements/var", "var")}}
+- {{jsxref("Statements/const", "const")}}
+- [ES6 In Depth: `let` and `const`](https://hacks.mozilla.org/2015/07/es6-in-depth-let-and-const/)
+- [Breaking changes in `let` and `const` in Firefox 44](https://blog.mozilla.org/addons/2015/10/14/breaking-changes-let-const-firefox-nightly-44/)
+- [You Don't Know JS: Scope & Closures: Chapter 3: Function vs. Block Scope](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/scope%20%26%20closures/ch3.md)
+- [StackOverflow: What is the Temporal Dead Zone](https://stackoverflow.com/a/33198850/1125029)?
+- [StackOverflow: What is the difference between using `let` and `var`?](https://stackoverflow.com/questions/762011/whats-the-difference-betwezh-CNing-let-and-var-to-declare-a-variable)
