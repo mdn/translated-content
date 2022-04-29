@@ -43073,12 +43073,6 @@
       "fscholz"
     ]
   },
-  "orphaned/Web/API/ParentNode/querySelector": {
-    "modified": "2020-10-15T22:30:52.578Z",
-    "contributors": [
-      "NeaVy"
-    ]
-  },
   "orphaned/Web/API/ParentNode/querySelectorAll": {
     "modified": "2020-10-15T22:02:32.472Z",
     "contributors": [
