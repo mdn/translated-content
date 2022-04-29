@@ -42991,18 +42991,6 @@
       "julienw"
     ]
   },
-  "orphaned/Web/API/Node/getUserData": {
-    "modified": "2019-03-18T21:40:10.400Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "orphaned/Web/API/Node/setUserData": {
-    "modified": "2019-03-18T21:39:40.470Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
   "orphaned/Web/API/Notation": {
     "modified": "2019-03-18T21:40:13.820Z",
     "contributors": [

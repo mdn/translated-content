@@ -3823,14 +3823,12 @@
 /fr/docs/Web/API/NavigatorStorage/storage	/fr/docs/Web/API/Navigator/storage
 /fr/docs/Web/API/Node.contains	/fr/docs/Web/API/Node/contains
 /fr/docs/Web/API/Node/baseURIObject	/fr/docs/conflicting/Web/API/Node
-/fr/docs/Web/API/Node/getUserData	/fr/docs/orphaned/Web/API/Node/getUserData
 /fr/docs/Web/API/Node/innerText	/fr/docs/Web/API/HTMLElement/innerText
 /fr/docs/Web/API/Node/localName	/fr/docs/conflicting/Web/API/Element/localName
 /fr/docs/Web/API/Node/namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/Web/API/Node/nodePrincipal	/fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556
 /fr/docs/Web/API/Node/prefix	/fr/docs/conflicting/Web/API/Element/prefix
 /fr/docs/Web/API/Node/rootNode	/fr/docs/conflicting/Web/API/Node/getRootNode
-/fr/docs/Web/API/Node/setUserData	/fr/docs/orphaned/Web/API/Node/setUserData
 /fr/docs/Web/API/NodeFilter	/fr/docs/conflicting/Web/API/Document/createNodeIterator_313cb22e529a804ace2f1dbb1e813ada
 /fr/docs/Web/API/NodeFilter/acceptNode	/fr/docs/conflicting/Web/API/Document/createNodeIterator
 /fr/docs/Web/API/Notation	/fr/docs/orphaned/Web/API/Notation
